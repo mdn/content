@@ -10,7 +10,8 @@ browser-compat: api.HTMLMediaElement.loadeddata_event
 
 The **`loadeddata`** event is fired when the frame at the current playback position of the media has finished loading; often the first frame.
 
-> **Note:** This event will not fire in mobile/tablet devices if data-saver is on in browser settings.
+> [!NOTE]
+> This event will not fire in mobile/tablet devices if data-saver is on in browser settings.
 
 ## Syntax
 
@@ -72,7 +73,6 @@ video.onloadeddata = (event) => {
 - The HTMLMediaElement {{domxref("HTMLMediaElement.seeked_event", 'seeked')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.ended_event", 'ended')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}} event
-- The HTMLMediaElement {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.canplay_event", 'canplay')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}} event

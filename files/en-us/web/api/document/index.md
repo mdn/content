@@ -59,7 +59,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Returns the {{DOMxRef("FontFaceSet")}} interface of the current document.
 - {{DOMxRef("Document.forms")}} {{ReadOnlyInline}}
   - : Returns an {{DOMxRef("HTMLCollection")}} of the {{HTMLElement("form")}} elements in the document.
-- {{DOMxRef("Document.fragmentDirective")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{DOMxRef("Document.fragmentDirective")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("FragmentDirective")}} for the current document.
 - {{DOMxRef("Document.fullscreenElement")}} {{ReadOnlyInline}}
   - : The element that's currently in full screen mode for this document.
@@ -173,7 +173,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 - {{DOMxRef("Document.adoptNode()")}}
   - : Adopt node from an external document.
 - {{DOMxRef("Document.append()")}}
-  - : Inserts a set of {{domxref("Node")}} objects or string objects after the last child of the document.
+  - : Inserts a set of {{domxref("Node")}} objects or strings after the last child of the document.
 - {{DOMxRef("Document.browsingTopics()")}} {{Experimental_Inline}} {{non-standard_inline}}
   - : Returns a promise that fulfills with an array of objects representing the top topics for the user, one from each of the last three epochs. By default, the method also causes the browser to record the current page visit as observed by the caller, so the page's hostname can later be used in topics calculation. See the [Topics API](/en-US/docs/Web/API/Topics_API) for more details.
 - {{DOMxRef("Document.captureEvents()")}} {{Deprecated_Inline}}
@@ -247,7 +247,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 - {{DOMxRef("Document.mozSetImageElement()")}} {{Non-standard_Inline}}
   - : Allows you to change the element being used as the background image for a specified element ID.
 - {{DOMxRef("Document.prepend()")}}
-  - : Inserts a set of {{domxref("Node")}} objects or string objects before the first child of the document.
+  - : Inserts a set of {{domxref("Node")}} objects or strings before the first child of the document.
 - {{DOMxRef("Document.querySelector()")}}
   - : Returns the first Element node within the document, in document order, that matches the specified selectors.
 - {{DOMxRef("Document.querySelectorAll()")}}
@@ -262,15 +262,15 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Allows a document loaded in a third-party context (i.e. embedded in an {{htmlelement("iframe")}}) to request access to unpartitioned cookies, in cases where user agents by default block access to unpartitioned cookies by sites loaded in a third-party context to improve privacy.
 - {{DOMxRef("Document.requestStorageAccessFor()")}} {{experimental_inline}}
   - : Allows top-level sites to request third-party cookie access on behalf of embedded content originating from another site in the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets).
-- {{domxref("Document.startViewTransition()")}} {{Experimental_Inline}}
+- {{domxref("Document.startViewTransition()")}}
   - : Starts a new {{domxref("View Transitions API", "view transition", "", "nocode")}} and returns a {{domxref("ViewTransition")}} object to represent it.
 
 The `Document` interface is extended with the {{DOMxRef("XPathEvaluator")}} interface:
 
 - {{DOMxRef("Document.createExpression()")}}
   - : Compiles an [`XPathExpression`](/en-US/docs/Web/API/XPathExpression) which can then be used for (repeated) evaluations.
-- {{DOMxRef("Document.createNSResolver()")}}
-  - : Creates an {{DOMxRef("XPathNSResolver")}} object.
+- {{DOMxRef("Document.createNSResolver()")}} {{deprecated_inline}}
+  - : Returns the input node as-is.
 - {{DOMxRef("Document.evaluate()")}}
   - : Evaluates an XPath expression.
 
@@ -304,6 +304,14 @@ The `Document` interface for HTML documents inherit from the {{DOMxRef("HTMLDocu
   - : Writes text in a document.
 - {{DOMxRef("Document.writeln()")}}
   - : Writes a line of text in a document.
+
+## Static methods
+
+_This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventTarget")}} interfaces._
+
+- {{domxref("Document/parseHTMLUnsafe_static", "Document.parseHTMLUnsafe()")}}
+  - : Creates a new `Document` object from a string of HTML without performing sanitization.
+    The string may contain declarative shadow roots.
 
 ## Events
 

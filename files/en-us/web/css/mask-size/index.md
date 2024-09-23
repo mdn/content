@@ -9,7 +9,8 @@ browser-compat: css.properties.mask-size
 
 The **`mask-size`** [CSS](/en-US/docs/Web/CSS) property specifies the sizes of the mask images. The size of the image can be fully or partially constrained in order to preserve its intrinsic ratio.
 
-> **Note:** If the value of this property is not set in a {{cssxref("mask")}} shorthand property that is applied to the element after the `mask-size` CSS property, the value of this property is then reset to its initial value by the shorthand property.
+> [!NOTE]
+> If the value of this property is not set in a {{cssxref("mask")}} shorthand property that is applied to the element after the `mask-size` CSS property, the value of this property is then reset to its initial value by the shorthand property.
 
 ## Syntax
 
@@ -64,7 +65,7 @@ Each value can be a `<length>`, a `<percentage>`, or `auto`.
 ### Values
 
 - `<length>`
-  - : A `{{cssxref("&lt;length&gt;")}}` value scales the mask image to the specified length in the corresponding dimension. Negative lengths are not allowed.
+  - : A {{cssxref("&lt;length&gt;")}} value scales the mask image to the specified length in the corresponding dimension. Negative lengths are not allowed.
 - `<percentage>`
   - : A {{cssxref("&lt;percentage&gt;")}} value scales the mask image in the corresponding dimension to the specified percentage of the mask positioning area, which is determined by the value of {{cssxref("mask-origin")}}. The mask positioning area is, by default, the area containing the content of the box and its padding; the area may also be changed to just the content or to the area containing borders, padding and content. Negative percentages are not allowed.
 - `auto`

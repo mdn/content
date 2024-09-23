@@ -12,7 +12,8 @@ method verifies that a shared memory location still contains a
 given value and if so sleeps, awaiting a wake-up notification or times out. It returns a string which
 is either `"ok"`, `"not-equal"`, or `"timed-out"`.
 
-> **Note:** This operation only works with an {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} that views a {{jsxref("SharedArrayBuffer")}}, and may not be allowed on the main thread.
+> [!NOTE]
+> This operation only works with an {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} that views a {{jsxref("SharedArrayBuffer")}}, and may not be allowed on the main thread.
 > For a non-blocking, asynchronous version of this method, see {{jsxref("Atomics.waitAsync()")}}.
 
 ## Syntax

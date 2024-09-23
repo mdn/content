@@ -9,7 +9,7 @@ browser-compat: javascript.operators.this
 
 The **`this`** keyword refers to the context where a piece of code, such as a function's body, is supposed to run. Most typically, it is used in object methods, where `this` refers to the object that the method is attached to, thus allowing the same method to be reused on different objects.
 
-The value of `this` in JavaScript depends on how a function is invoked (runtime {{glossary("binding")}}), not how it is defined. When a regular function is invoked as a method of an object (`obj.method()`), `this` points to that object. When invoked as a standalone function (not attached to an object: `func()`), `this` typically refers to the [global object](/en-US/docs/Glossary/Global_object) (in non-strict mode) or `undefined` (in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)). The {{jsxref("Function.prototype.bind()")}} method can create a function whose `this` binding doesn't change, and methods `apply()` and `call()` can also set the `this` value for a particular call.
+The value of `this` in JavaScript depends on how a function is invoked (runtime {{glossary("binding")}}), not how it is defined. When a regular function is invoked as a method of an object (`obj.method()`), `this` points to that object. When invoked as a standalone function (not attached to an object: `func()`), `this` typically refers to the [global object](/en-US/docs/Glossary/Global_object) (in non-strict mode) or `undefined` (in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)). The {{jsxref("Function.prototype.bind()")}} method can create a function whose `this` binding doesn't change, and methods {{jsxref("Function.prototype.apply()")}} and {{jsxref("Function.prototype.call()")}} can also set the `this` value for a particular call.
 
 [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) differ in their handling of `this`: they inherit `this` from the parent scope at the time they are defined. This behavior makes arrow functions particularly useful for callbacks and preserving context. However, arrow functions do not have their own `this` binding. Therefore, their `this` value cannot be set by `bind()`, `apply()` or `call()` methods, nor does it point to the current object in object methods.
 
@@ -221,7 +221,8 @@ Unlike base class constructors, derived constructors have no initial `this` bind
 this = new Base();
 ```
 
-> **Warning:** Referring to `this` before calling `super()` will throw an error.
+> [!WARNING]
+> Referring to `this` before calling `super()` will throw an error.
 
 Derived classes must not return before calling `super()`, unless the constructor returns an object (so the `this` value is overridden) or the class has no constructor at all.
 
@@ -503,7 +504,8 @@ bird.sayBye = car.sayBye;
 bird.sayBye(); // Bye from Ferrari
 ```
 
-> **Note:** Classes are always in strict mode. Calling methods with an undefined `this` will throw an error if the method tries to access properties on `this`.
+> [!NOTE]
+> Classes are always in strict mode. Calling methods with an undefined `this` will throw an error if the method tries to access properties on `this`.
 >
 > ```js example-bad
 > const carSayHi = car.sayHi;

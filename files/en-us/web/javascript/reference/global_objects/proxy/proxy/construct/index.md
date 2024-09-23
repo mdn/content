@@ -17,7 +17,7 @@ The **`handler.construct()`** method is a trap for the `[[Construct]]` [object i
 new Proxy(target, {
   construct(target, argumentsList, newTarget) {
   }
-});
+})
 ```
 
 ### Parameters
@@ -25,15 +25,15 @@ new Proxy(target, {
 The following parameters are passed to the `construct()` method. `this` is bound to the handler.
 
 - `target`
-  - : The target object.
+  - : The target constructor object.
 - `argumentsList`
-  - : The list of arguments for the constructor.
+  - : An {{jsxref("Array")}} containing the arguments passed to the constructor.
 - `newTarget`
   - : The constructor that was originally called.
 
 ### Return value
 
-The `construct` method must return an object.
+The `construct()` method must return an object, representing the newly created object.
 
 ## Description
 
@@ -48,9 +48,10 @@ Or any other operation that invokes the `[[Construct]]` [internal method](/en-US
 
 ### Invariants
 
-If the following invariants are violated, the trap throws a {{jsxref("TypeError")}} when invoked.
+The proxy's `[[Construct]]` internal method throws a {{jsxref("TypeError")}} if the handler definition violates one of the following invariants:
 
-- The result must be an `Object`.
+- The `target` must be a constructor itself.
+- The result must be an {{jsxref("Object")}}.
 
 ## Examples
 

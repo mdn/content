@@ -7,7 +7,7 @@ browser-compat: webextensions.api.declarativeNetRequest.getAvailableStaticRuleCo
 
 {{AddonSidebar}}
 
-Returns the number of static rules that can be activated before the global static rule limit is reached.
+Returns the number of static rules that can be activated before the global static rule limit is reached. See [static ruleset limits](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#static_ruleset_limits) for more information on the static ruleset and rule limits.
 
 ## Syntax
 

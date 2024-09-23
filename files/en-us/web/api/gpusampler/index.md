@@ -35,7 +35,7 @@ const sampler = device.createSampler({
 });
 ```
 
-The WebGPU samples [Shadow Mapping sample](https://webgpu.github.io/webgpu-samples/samples/shadowMapping) uses comparison samplers to sample from a depth texture to render shadows.
+The WebGPU samples [Shadow Mapping sample](https://webgpu.github.io/webgpu-samples/samples/shadowMapping/) uses comparison samplers to sample from a depth texture to render shadows.
 
 ## Specifications
 

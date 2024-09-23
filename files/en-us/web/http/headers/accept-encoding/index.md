@@ -16,7 +16,7 @@ Even if both the client and the server support the same compression algorithms, 
 
 As long as the `identity;q=0` or `*;q=0` directives do not explicitly forbid the `identity` value that means no encoding, the server must never return a {{HTTPStatus("406")}} `Not Acceptable` error.
 
-> **Note:**
+> [!NOTE]
 >
 > - An IANA registry maintains [a list of official content encodings](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#content-coding).
 > - The `bzip` and `bzip2` encodings are non-standard, but may be used in some cases, including legacy support.

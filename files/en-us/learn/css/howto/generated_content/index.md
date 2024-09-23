@@ -10,7 +10,8 @@ This article describes some ways in which you can use CSS to add content when a 
 
 One of the important advantages of CSS is that it helps you to separate a document's style from its content. However, there are situations where it makes sense to specify certain content as part of the stylesheet, not as part of the document. You can specify text or image content within a stylesheet when that content is closely linked to the document's structure.
 
-> **Note:** Content specified in a stylesheet does not become part of the DOM.
+> [!NOTE]
+> Content specified in a stylesheet does not become part of the DOM.
 
 Specifying content in a stylesheet can cause complications. For example, you might have different language versions of your document that share a stylesheet. If you specify content in your stylesheet that requires translation, you have to put those parts of your stylesheet in different files and arrange for them to be linked with the appropriate language versions of your document.
 

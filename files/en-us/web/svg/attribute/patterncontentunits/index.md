@@ -9,7 +9,8 @@ browser-compat: svg.elements.pattern.patternContentUnits
 
 The **`patternContentUnits`** attribute indicates which coordinate system to use for the contents of the {{ SVGElement("pattern") }} element.
 
-> **Note:** That this attribute has no effect if attribute {{ SVGAttr("viewBox") }} is specified on the {{ SVGElement("pattern") }} element.
+> [!NOTE]
+> That this attribute has no effect if attribute {{ SVGAttr("viewBox") }} is specified on the {{ SVGElement("pattern") }} element.
 
 You can use this attribute with the following SVG elements:
 

@@ -38,7 +38,8 @@ The header therefore allows the server to customize its response based on both s
 The header may include "fake" brands in any position and with any name.
 This is a feature designed to prevent servers from rejecting unknown user agents outright, forcing user agents to lie about their brand identity.
 
-> **Note:** This is similar to {{HTTPHeader("Sec-CH-UA")}}, but includes the full version number instead of the significant version number for each brand.
+> [!NOTE]
+> This is similar to {{HTTPHeader("Sec-CH-UA")}}, but includes the full version number instead of the significant version number for each brand.
 
 ## Syntax
 

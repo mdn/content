@@ -31,7 +31,7 @@ new CloseEvent(type, options)
     - `reason` {{optional_inline}}
       - : A string containing a human-readable reason describing why the server closed the connection. It defaults to `''`
 
-## Return value
+### Return value
 
 A new {{domxref("CloseEvent")}} object.
 

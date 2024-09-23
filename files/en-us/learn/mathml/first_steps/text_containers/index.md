@@ -139,7 +139,7 @@ tokenElements.forEach((token) => {
 });
 document.getElementById("clearOutput").addEventListener("click", () => {
   clearHighlight();
-  outputDiv.innerHTML = "";
+  outputDiv.textContent = "";
 });
 ```
 
@@ -167,7 +167,8 @@ Finally, read the MathML source to verify whether that corresponds to your expec
 </math>
 ```
 
-> **Note:** It is sometimes difficult to decide the token element to use for a given text content. In practice, choosing the wrong element should not cause major issues because all token elements are generally rendered the same by browser implementations (for visual display and for assistive technologies). However, the `<mi>` and `<mo>` elements have special distinguishing features that one should be aware of. They are explained in the following sections.
+> [!NOTE]
+> It is sometimes difficult to decide the token element to use for a given text content. In practice, choosing the wrong element should not cause major issues because all token elements are generally rendered the same by browser implementations (for visual display and for assistive technologies). However, the `<mi>` and `<mo>` elements have special distinguishing features that one should be aware of. They are explained in the following sections.
 
 ## Automatic italicization of \<mi>
 
@@ -198,7 +199,8 @@ Compare the rendering of the uppercase gamma letters in the following formula:
 
 {{ EmbedLiveSample('Reverting automatic italicization of <mi>', 700, 50) }}
 
-> **Note:** Although you can apply this transformation, normally you'd just use the desired [Mathematical Alphanumeric Symbols](https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols).
+> [!NOTE]
+> Although you can apply this transformation, normally you'd just use the desired [Mathematical Alphanumeric Symbols](https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols).
 
 ## Operator properties of \<mo>
 
@@ -317,7 +319,8 @@ document.getElementById("showSolution").addEventListener(
 
 {{ EmbedLiveSample('active_learning_spot_the_difference', 700, 500, "", "") }}
 
-> **Note:** An obvious difference is that the source code became much more verbose with MathML. Recall that this tutorial is about learning the language but in practice MathML content is generally not written manually. See the [Authoring MathML](/en-US/docs/Web/MathML/Authoring) page for more information.
+> [!NOTE]
+> An obvious difference is that the source code became much more verbose with MathML. Recall that this tutorial is about learning the language but in practice MathML content is generally not written manually. See the [Authoring MathML](/en-US/docs/Web/MathML/Authoring) page for more information.
 
 ### Active learning: stretchy operators
 
@@ -413,7 +416,7 @@ tokenElements.forEach((token) => {
 });
 document.getElementById("clearOutput").addEventListener("click", () => {
   clearHighlight();
-  outputDiv.innerHTML = "";
+  outputDiv.textContent = "";
 });
 ```
 
@@ -456,7 +459,8 @@ As usual, you are invited to read the source code when you are done:
 </math>
 ```
 
-> **Warning:** Special [math fonts](/en-US/docs/Web/MathML/Fonts) are generally required to make that stretching possible, the previous example relies on [web fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts).
+> [!WARNING]
+> Special [math fonts](/en-US/docs/Web/MathML/Fonts) are generally required to make that stretching possible, the previous example relies on [web fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts).
 
 ## Summary
 

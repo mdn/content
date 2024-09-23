@@ -444,7 +444,7 @@ _Modifiers_ are special keys which are used to generate special characters or ca
     <tr>
       <td><code>"ArrowUp"</code> [1]</td>
       <td>The up arrow key.</td>
-      <td><code>VK_UP</code><code> (0x26)</code></td>
+      <td><code>VK_UP</code> (0x26)</td>
       <td><code>kVK_UpArrow</code> (0x7E)</td>
       <td>
         <code>GDK_KEY_Up</code> (0xFF52)<br /><code>GDK_KEY_KP_Up</code>
@@ -481,7 +481,7 @@ _Modifiers_ are special keys which are used to generate special characters or ca
         displays the next page of content.
       </td>
       <td><code>VK_NEXT</code> (0x22)</td>
-      <td><code>kVK_PageDown</code><code> (0x79)</code></td>
+      <td><code>kVK_PageDown</code> (0x79)</td>
       <td>
         <code>GDK_KEY_Page_Down</code> (0xFF56)<br /><code
           >GDK_KEY_KP_Page_Down</code
@@ -2135,7 +2135,7 @@ If more function keys are available, their names continue the pattern here by co
       <td><code>VK_F14</code> (0x7D)</td>
       <td><code>kVK_F14</code> (0x6B)</td>
       <td>
-        <code>GDK_KEY_F14</code> (0xFFCB)<br /><code>Qt::Key_F1</code>4
+        <code>GDK_KEY_F14</code> (0xFFCB)<br /><code>Qt::Key_F14</code>
         (0x0100003D)
       </td>
       <td><code>KEYCODE_F14</code></td>
@@ -2146,7 +2146,7 @@ If more function keys are available, their names continue the pattern here by co
       <td><code>VK_F15</code> (0x7E)</td>
       <td><code>kVK_F15</code> (0x71)</td>
       <td>
-        <code>GDK_KEY_F15</code> (0xFFCC)<br /><code>Qt::Key_F1</code>5
+        <code>GDK_KEY_F15</code> (0xFFCC)<br /><code>Qt::Key_F15</code>
         (0x0100003E)
       </td>
       <td><code>KEYCODE_F15</code></td>
@@ -2157,7 +2157,7 @@ If more function keys are available, their names continue the pattern here by co
       <td><code>VK_F16</code> (0x7F)</td>
       <td><code>kVK_F16</code> (0x6A)</td>
       <td>
-        <code>GDK_KEY_F16</code> (0xFFCD)<br /><code>Qt::Key_F1</code>6
+        <code>GDK_KEY_F16</code> (0xFFCD)<br /><code>Qt::Key_F16</code>
         (0x0100003F)
       </td>
       <td><code>KEYCODE_F16</code></td>
@@ -2168,7 +2168,7 @@ If more function keys are available, their names continue the pattern here by co
       <td><code>VK_F17</code> (0x80)</td>
       <td><code>kVK_F17</code> (0x40)</td>
       <td>
-        <code>GDK_KEY_F17</code> (0xFFCE)<br /><code>Qt::Key_F1</code>7
+        <code>GDK_KEY_F17</code> (0xFFCE)<br /><code>Qt::Key_F17</code>
         (0x01000040)
       </td>
       <td><code>KEYCODE_F17</code></td>
@@ -2179,7 +2179,7 @@ If more function keys are available, their names continue the pattern here by co
       <td><code>VK_F18</code> (0x81)</td>
       <td><code>kVK_F18</code> (0x4F)</td>
       <td>
-        <code>GDK_KEY_F18</code> (0xFFCF)<br /><code>Qt::Key_F1</code>8
+        <code>GDK_KEY_F18</code> (0xFFCF)<br /><code>Qt::Key_F18</code>
         (0x01000041)
       </td>
       <td><code>KEYCODE_F18</code></td>
@@ -2190,7 +2190,7 @@ If more function keys are available, their names continue the pattern here by co
       <td><code>VK_F19</code> (0x82)</td>
       <td><code>kVK_F19</code> (0x50)</td>
       <td>
-        <code>GDK_KEY_F19</code> (0xFFD0)<br /><code>Qt::Key_F1</code>9
+        <code>GDK_KEY_F19</code> (0xFFD0)<br /><code>Qt::Key_F19</code>
         (0x01000042)
       </td>
       <td><code>KEYCODE_F19</code></td>
@@ -2451,7 +2451,7 @@ The multimedia keys are extra buttons or keys for controlling media devices, fou
       <td><code>APPCOMMAND_MEDIA_PLAY</code></td>
       <td></td>
       <td><code>GDK_KEY_AudioPlay</code> (0x1008FF14)</td>
-      <td><code>KEYCODE_MEDIA_PLAY</code><code> (126)</code></td>
+      <td><code>KEYCODE_MEDIA_PLAY</code> (126)</td>
     </tr>
     <tr>
       <td><code>"MediaPlayPause"</code></td>
@@ -2476,7 +2476,7 @@ The multimedia keys are extra buttons or keys for controlling media devices, fou
         >
         (0x01000084)
       </td>
-      <td><code>KEYCODE_MEDIA_RECORD</code><code> (130)</code></td>
+      <td><code>KEYCODE_MEDIA_RECORD</code> (130)</td>
     </tr>
     <tr>
       <td><code>"MediaRewind"</code></td>
@@ -2489,7 +2489,7 @@ The multimedia keys are extra buttons or keys for controlling media devices, fou
         >
         (0x010000C5)
       </td>
-      <td><code>KEYCODE_MEDIA_REWIND</code><code> (89)</code></td>
+      <td><code>KEYCODE_MEDIA_REWIND</code> (89)</td>
     </tr>
     <tr>
       <td><code>"MediaStop"</code></td>
@@ -3058,7 +3058,8 @@ The values below are derived in part from a number of consumer electronics techn
 - [ANSI/CEA-2014-B](https://shop.cta.tech/products/web-based-protocol-and-framework-for-remote-user-interface-on-upnp-networks-and-the-internet): Web-based Protocol and Framework for Remote User Interface on UPnP™ Networks and the Internet
 - [Android KeyEvent key code values](https://developer.android.com/reference/android/view/KeyEvent.html)
 
-> **Note:** Remote controls typically include keys whose values are already defined elsewhere, such as under [Multimedia keys](#multimedia_keys) or [Audio control keys](#audio_control_keys). Those keys' values will match what's documented in those tables.
+> [!NOTE]
+> Remote controls typically include keys whose values are already defined elsewhere, such as under [Multimedia keys](#multimedia_keys) or [Audio control keys](#audio_control_keys). Those keys' values will match what's documented in those tables.
 
 <table class="no-markdown">
   <thead>
@@ -3694,7 +3695,7 @@ The values below are derived in part from a number of consumer electronics techn
       <td><code>VK_SPLIT_SCREEN_TOGGLE</code></td>
       <td></td>
       <td>
-        <code>GDK_KEY_SplitScreen (</code>0x1008FF7D)<br /><code
+        <code>GDK_KEY_SplitScreen</code> (0x1008FF7D)<br /><code
           >Qt::Key_SplitScreen</code
         >
         (0x010000ED)
@@ -3728,7 +3729,7 @@ The values below are derived in part from a number of consumer electronics techn
     <tr>
       <td><code>"Teletext"</code></td>
       <td>
-        Toggles display of [teletext](https://en.wikipedia.org/wiki/Teletext),
+        Toggles display of <a href="https://en.wikipedia.org/wiki/Teletext">teletext</a>,
         if available.
       </td>
       <td><code>VK_TELETEXT</code></td>
@@ -4529,7 +4530,8 @@ Some keyboards include special keys for controlling Web browsers. Those keys fol
 
 These keys are found on the keyboard's numeric keypad. However, not all are present on every keyboard. Although typical numeric keypads have numeric keys from <kbd>0</kbd> to <kbd>9</kbd> (encoded as `"0"` through `"9"`), some multimedia keyboards include additional number keys for higher numbers.
 
-> **Note:** The <kbd>10</kbd> key, if present, generates events with the `key` value of `"0"`.
+> [!NOTE]
+> The <kbd>10</kbd> key, if present, generates events with the `key` value of `"0"`.
 
 <table class="no-markdown">
   <thead>

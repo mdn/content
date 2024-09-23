@@ -22,7 +22,7 @@ There are 6 categories of ARIA roles:
 
 ### 1. Document structure roles
 
-Document Structure roles are used to provide a structural description for a section of content. Most of these roles should no longer be used as browsers now support semantic HTML element with the same meaning. The roles without HTML equivalents, such as presentation, toolbar and tooltip roles, provide information on the document structure to assistive technologies such as screen readers as equivalent native HTML tags are not available.
+Document Structure roles are used to provide a structural description for a section of content. Most of these roles should no longer be used as browsers now support semantic HTML elements with the same meaning. The roles without HTML equivalents, such as presentation, toolbar and tooltip roles, provide information on the document structure to assistive technologies such as screen readers as equivalent native HTML tags are not available.
 
 - [toolbar](/en-US/docs/Web/Accessibility/ARIA/Roles/toolbar_role)
 - [tooltip](/en-US/docs/Web/Accessibility/ARIA/Roles/tooltip_role)
@@ -73,7 +73,7 @@ These are included for completeness, but in most cases are rarely, if ever, usef
 
 ### 2. Widget roles
 
-The various widget role are used to define common interactive patterns. Similar to the document structure roles, some of these roles duplicate the semantics of native HTML elements that are well supported, and should not be used. The difference between the two lists is that, generally, the widget roles require JavaScript interaction and the document structure roles don't necessarily.
+Widget roles are used to define common interactive patterns. Like document structure roles, some widget roles have the same semantics as well-supported native HTML elements, and therefore should be avoided. The key difference is that widget roles typically require JavaScript for interaction, while document structure roles often do not.
 
 - [scrollbar](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role)
 - [searchbox](/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role)
@@ -136,9 +136,11 @@ Abstract roles are only intended for use by browsers to help organize and stream
 
 Avoid using [command](/en-US/docs/Web/Accessibility/ARIA/Roles/command_role), [composite](/en-US/docs/Web/Accessibility/ARIA/Roles/composite_role), [input](/en-US/docs/Web/Accessibility/ARIA/Roles/input_role), [landmark](/en-US/docs/Web/Accessibility/ARIA/Roles/landmark_role), [range](/en-US/docs/Web/Accessibility/ARIA/Roles/range_role), [roletype](/en-US/docs/Web/Accessibility/ARIA/Roles/roletype_role), [section](/en-US/docs/Web/Accessibility/ARIA/Roles/section_role), [sectionhead](/en-US/docs/Web/Accessibility/ARIA/Roles/sectionhead_role), [select](/en-US/docs/Web/Accessibility/ARIA/Roles/select_role), [structure](/en-US/docs/Web/Accessibility/ARIA/Roles/structure_role), [widget](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_role),and [window](/en-US/docs/Web/Accessibility/ARIA/Roles/window_role).
 
-> **Note:** Don't use abstract roles in your sites and applications. They are for use by browsers. They are included for reference only.
+> [!NOTE]
+> Don't use abstract roles in your sites and applications. They are for use by browsers. They are included for reference only.
 
-> **Warning:** "Abstract roles are used for the ontology. Authors **MUST NOT** use abstract roles in content." - The <abbr>WAI-ARIA</abbr> specification
+> [!WARNING]
+> "Abstract roles are used for the ontology. Authors **MUST NOT** use abstract roles in content." - The <abbr>WAI-ARIA</abbr> specification
 
 ## Roles defined on MDN
 

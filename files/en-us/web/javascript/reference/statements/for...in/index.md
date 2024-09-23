@@ -129,7 +129,8 @@ for (const prop in obj) {
 
 ### Concurrent modification
 
-> **Warning:** You should not write code like this yourself. It is only included here to illustrate the behavior of `for...in` in some corner cases.
+> [!WARNING]
+> You should not write code like this yourself. It is only included here to illustrate the behavior of `for...in` in some corner cases.
 
 Properties added to the current object during iteration are never visited:
 

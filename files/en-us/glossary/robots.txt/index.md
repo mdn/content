@@ -13,6 +13,6 @@ For example, the site admin can forbid crawlers to visit a certain folder (and a
 ## See also
 
 - [Robots.txt](https://en.wikipedia.org/wiki/Robots.txt) on Wikipedia
-- <https://developers.google.com/search/reference/robots_txt>
+- <https://developers.google.com/search/docs/crawling-indexing/robots/robots_txt>
 - Standard specification: [RFC9309](https://www.rfc-editor.org/rfc/rfc9309.html)
 - <https://www.robotstxt.org/>

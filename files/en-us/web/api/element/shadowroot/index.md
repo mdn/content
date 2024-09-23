@@ -46,7 +46,7 @@ class Square extends HTMLElement {
 ```
 
 In the `updateStyle()` function itself, we get a reference to the shadow DOM
-using {{domxref("Element.shadowRoot")}}. From here we use standard DOM traversal
+using `Element.shadowRoot`. From here we use standard DOM traversal
 techniques to find the {{htmlelement("style")}} element inside the shadow DOM and then
 update the CSS found inside it:
 

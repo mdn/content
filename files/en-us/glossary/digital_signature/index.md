@@ -24,6 +24,7 @@ Verifiers often use {{glossary("digital certificate", "digital certificates")}} 
 
 ## See also
 
-- {{glossary("Digital certificate")}}
-- {{glossary("Hash")}}
-- {{glossary("Public-key cryptography")}}
+- Related glossary terms:
+  - {{glossary("Digital certificate")}}
+  - {{glossary("Hash")}}
+  - {{glossary("Public-key cryptography")}}

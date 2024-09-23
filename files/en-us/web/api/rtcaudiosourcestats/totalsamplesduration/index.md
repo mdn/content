@@ -15,7 +15,8 @@ It does not include samples dropped before reaching this media source. <!-- Drop
 
 This can be used with {{domxref("RTCAudioSourceStats.totalAudioEnergy", "totalAudioEnergy")}} to compute an [average audio level over different intervals](/en-US/docs/Web/API/RTCAudioSourceStats#description).
 
-> **Note:** For audio duration of remotely sourced tracks, see {{domxref("RTCInboundRtpStreamStats.totalSamplesDuration")}}.
+> [!NOTE]
+> For audio duration of remotely sourced tracks, see {{domxref("RTCInboundRtpStreamStats.totalSamplesDuration")}}.
 
 ## Value
 

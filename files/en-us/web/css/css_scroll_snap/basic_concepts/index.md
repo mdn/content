@@ -34,7 +34,8 @@ You can also pass in the keywords `mandatory` or `proximity`. The `mandatory` ke
 
 Using `mandatory` creates a very consistent scrolling experience — you know the browser will always snap to each defined point. This means that you can be confident that something you expect to be at the top of the screen will be there when scrolling finishes. However, it can cause problems if the content is larger than you expect — users may find themselves in the frustrating position of never being able to scroll and view a certain point in the content. Therefore, the use of `mandatory` should be carefully considered and only used in situations where you know how much content is on the screen or scrollable section at any time.
 
-> **Note:** Never use `mandatory` if the content inside one of your child elements will overflow the parent container because user will not be able to scroll the overflowing content into view.
+> [!NOTE]
+> Never use `mandatory` if the content inside one of your child elements will overflow the parent container because user will not be able to scroll the overflowing content into view.
 
 The `proximity` value only snaps child elements to a position when it is close by, with the browsers determining the exact distance.
 

@@ -68,7 +68,7 @@ for (let i = 0; i < str.length; i++) {
 // '1f40e', 'dc0e', '1f471', 'dc71', '2764'
 ```
 
-Instead, use a [`for...of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) statement or [spread the string](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), both of which invoke the string's [`@@iterator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator), which iterates by code points. Then, use `codePointAt(0)` to get the code point of each element.
+Instead, use a [`for...of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) statement or [spread the string](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), both of which invoke the string's [`[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator), which iterates by code points. Then, use `codePointAt(0)` to get the code point of each element.
 
 ```js
 for (const codePoint of str) {

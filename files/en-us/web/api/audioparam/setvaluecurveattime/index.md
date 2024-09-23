@@ -62,7 +62,8 @@ When the parameter's value finishes following the curve, its value is guaranteed
 match the last value in the set of values specified in the `values`
 parameter.
 
-> **Note:** Some early implementations of the Web Audio API did not ensure
+> [!NOTE]
+> Some early implementations of the Web Audio API did not ensure
 > this to be the case, causing unexpected results.
 
 ## Examples

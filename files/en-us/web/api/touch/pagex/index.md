@@ -19,8 +19,8 @@ relative to the viewport, including any scroll offset.
 ## Examples
 
 This example illustrates how to access the {{domxref("Touch")}} object's
-{{domxref("Touch.pageX")}} and {{domxref("Touch.pageY")}} properties. The
-{{domxref("Touch.pageX")}} property is the horizontal coordinate of a touch point
+`Touch.pageX` and {{domxref("Touch.pageY")}} properties. The
+`Touch.pageX` property is the horizontal coordinate of a touch point
 relative to the viewport (in CSS pixels), including any scroll offset. The
 {{domxref("Touch.pageY")}} property is the vertical coordinate of a touch point relative
 to the viewport (in CSS pixels), including any scroll offset.
@@ -28,7 +28,7 @@ to the viewport (in CSS pixels), including any scroll offset.
 In following simple code snippet, we assume the user initiates one or more touch
 contacts on the `source` element, moves the touch points and then releases
 all contacts with the surface. When the {{domxref("Element/touchmove_event", "touchmove")}} event handler is invoked,
-each touch point's {{domxref("Touch.pageX")}} and {{domxref("Touch.pageY")}} coordinates
+each touch point's `Touch.pageX` and {{domxref("Touch.pageY")}} coordinates
 are accessed via the event's {{domxref("TouchEvent.changedTouches")}} list.
 
 ```js

@@ -49,6 +49,8 @@ The following attributes are deprecated and should not be used. They are documen
 
 See {{HTMLElement("table")}} for a complete table example introducing common standards and best practices.
 
+### Table with footer
+
 This example demonstrates a table divided into a head section with column headers, a body section with the table's main data, and a foot section summarizing data of one column.
 
 #### HTML
@@ -177,11 +179,11 @@ tr > td:last-of-type {
       <th scope="row">Permitted parents</th>
       <td>
         A {{HTMLElement("table")}} element. The
-        {{HTMLElement("tfoot")}} must appear after any
+        <code>&lt;tfoot&gt;</code> must appear after any
         {{HTMLElement("caption")}},
         {{HTMLElement("colgroup")}}, {{HTMLElement("thead")}},
         {{HTMLElement("tbody")}}, and {{HTMLElement("tr")}}
-        elements. Note that this is the requirement in HTML.<br />Originally, in HTML4, the opposite was true: the {{HTMLElement("tfoot")}} element could not be placed after any
+        elements. Note that this is the requirement in HTML.<br />Originally, in HTML4, the opposite was true: the <code>&lt;tfoot&gt;</code> element could not be placed after any
         {{HTMLElement("tbody")}} and {{HTMLElement("tr")}}
         elements.
       </td>

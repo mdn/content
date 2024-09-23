@@ -22,7 +22,8 @@ The `firstInterimResponseStart` property can have the following values:
 - `0` if the resource sent no interim response
 - `0` if the resource is a cross-origin request and no {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header is used.
 
-**Note:** As Early Hints are typically only supported on the main navigation request, which is by definition same-origin, a `0` typically indicates Early Hints were **not** used.
+> [!NOTE]
+> As Early Hints are typically only supported on the main navigation request, which is by definition same-origin, a `0` typically indicates Early Hints were **not** used.
 
 ## Examples
 

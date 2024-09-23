@@ -25,6 +25,8 @@ In order to set an element's contents from an HTML string that includes declarat
 A string containing the HTML serialization of the element's descendants.
 Setting the value of `innerHTML` removes all of the element's descendants and replaces them with nodes constructed by parsing the HTML given in the string _htmlString_.
 
+When set to the `null` value, that `null` value is converted to the empty string (`""`), so `elt.innerHTML = null` is equivalent to `elt.innerHTML = ""`.
+
 ### Exceptions
 
 - `SyntaxError` {{domxref("DOMException")}}
@@ -45,22 +47,24 @@ let contents = myElement.innerHTML;
 
 This lets you look at the HTML markup of the element's content nodes.
 
-> **Note:** The returned HTML or XML fragment is generated based on the current contents of the element, so the markup and formatting of the returned fragment is likely not to match the original page markup.
+> [!NOTE]
+> The returned HTML or XML fragment is generated based on the current contents of the element, so the markup and formatting of the returned fragment is likely not to match the original page markup.
 
 ### Replacing the contents of an element
 
 Setting the value of `innerHTML` lets you easily replace the existing contents of an element with new content.
 
-> **Warning:** This is a [security risk](#security_considerations) if the string to be inserted might contain potentially malicious content.
+> [!WARNING]
+> This is a [security risk](#security_considerations) if the string to be inserted might contain potentially malicious content.
 > When inserting user-supplied data you should always consider using a sanitizer library, in order to sanitize the content before it is inserted.
 
 For example, you can erase the entire contents of a document by clearing the contents of the document's {{domxref("Document.body", "body")}} attribute:
 
 ```js
-document.body.innerHTML = "";
+document.body.textContent = "";
 ```
 
-This example fetches the document's current HTML markup and replaces the `"<"` characters with the HTML entity `"&lt;"`, thereby essentially converting the HTML into raw text.
+This example fetches the document's current HTML markup and replaces the `"<"` characters with the {{glossary("character reference")}} `"&lt;"`, thereby essentially converting the HTML into raw text.
 This is then wrapped in a {{HTMLElement("pre")}} element.
 Then the value of `innerHTML` is changed to this new string.
 As a result, the document contents are replaced with a display of the page's entire source code.
@@ -138,7 +142,8 @@ For that reason, it is recommended that instead of `innerHTML` you use:
 
 - {{domxref("Node.textContent")}} when inserting plain text, as this inserts it as raw text rather than parsing it as HTML.
 
-> **Warning:** If your project is one that will undergo any form of security review, using `innerHTML` most likely will result in your code being rejected.
+> [!WARNING]
+> If your project is one that will undergo any form of security review, using `innerHTML` most likely will result in your code being rejected.
 > For example, [if you use `innerHTML`](https://wiki.mozilla.org/Add-ons/Reviewers/Guide/Reviewing#Step_2:_Automatic_validation) in a [browser extension](/en-US/docs/Mozilla/Add-ons/WebExtensions) and submit
 > the extension to [addons.mozilla.org](https://addons.mozilla.org/), it may be rejected in the review process.
 > Please see [Safely inserting external content into a page](/en-US/docs/Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page) for alternative methods.

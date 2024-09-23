@@ -21,7 +21,7 @@ exsl:node-set(object)
 - `object`
   - : The object for which to return the corresponding node-set.
 
-### Returns
+### Return value
 
 The node-set corresponding to the specified `object`.
 

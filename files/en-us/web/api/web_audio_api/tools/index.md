@@ -10,7 +10,7 @@ While working on your Web Audio API code, you may find that you need tools to an
 
 ## Chrome
 
-A handy web audio inspector can be found in the [Chrome Web Store](https://chrome.google.com/webstore/detail/audion/cmhomipkklckpomafalojobppmmidlgl).
+A handy web audio inspector can be found in the [Chrome Web Store](https://chromewebstore.google.com/detail/audion/cmhomipkklckpomafalojobppmmidlgl).
 
 ## Edge
 

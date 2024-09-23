@@ -75,7 +75,7 @@ Highlights:
 
 ### Interfaces/APIs/DOM
 
-- The Fetch API {{domxref("fetch()")}} method has been implemented ([Firefox bug 1039846](https://bugzil.la/1039846)).
+- The Fetch API {{domxref("Window/fetch", "fetch()")}} method has been implemented ([Firefox bug 1039846](https://bugzil.la/1039846)).
 - {{domxref("BroadcastChannel")}} API has been implemented and is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) ([Firefox bug 966439](https://bugzil.la/966439) and [Firefox bug 1121420](https://bugzil.la/1121420)).
 - The Console API is now available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 - {{domxref("CanvasRenderingContext2D.clearHitRegions()")}} has been implemented ([Firefox bug 1119527](https://bugzil.la/1119527)).

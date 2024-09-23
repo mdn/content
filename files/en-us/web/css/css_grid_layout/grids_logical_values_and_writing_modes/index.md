@@ -35,7 +35,7 @@ We call these keywords and properties _physical_ because they relate to the scre
 
 ### Issues with physical properties
 
-This can become an issue when developing a site that has to work in multiple languages, including languages that have text starting on the right, rather than the left. Browsers are pretty good at dealing with text direction, and you don't even need to be working in a {{glossary("rtl")}} language to take a look. In the example below, I have two paragraphs. The first paragraph has {{cssxref("text-align")}} set to `left`, the second has no `text-align` property set. I have added `dir="rtl"` to the `html` element, which switches the writing mode from the default for an English language document of `ltr`. You can see that the first paragraph remains left to right, due to the `text-align` value being `left`. The second however, switches direction and the text runs from right to left .
+This can become an issue when developing a site that has to work in multiple languages, including languages that have text starting on the right, rather than the left. Browsers are pretty good at dealing with text direction, and you don't even need to be working in a {{glossary("rtl")}} language to take a look. In the example below, I have two paragraphs. The first paragraph has {{cssxref("text-align")}} set to `left`, the second has no `text-align` property set. I have added `dir="rtl"` to the `html` element, which switches the writing mode from the default for an English language document of `ltr`. You can see that the first paragraph remains left to right, due to the `text-align` value being `left`. The second however, switches direction and the text runs from right to left.
 
 ```html hidden
 <p class="left">
@@ -71,7 +71,7 @@ This is a very simple example of the problem with physical values and properties
 
 ### Logical properties and values
 
-Logical properties and values do not make an assumption about text direction. Which is why in Grid Layout we use the keyword `start` when aligning something to the start of the container. For me, working in English, `start` may well be on the left, however it doesn't have to be, and the word `start` infers no physical location.
+Logical properties and values do not make an assumption about text direction. Which is why in grid layout we use the keyword `start` when aligning something to the start of the container. For me, working in English, `start` may well be on the left, however it doesn't have to be, and the word `start` infers no physical location.
 
 ## Block and Inline
 
@@ -467,9 +467,9 @@ In addition to displaying documents, using the correct writing mode for the lang
     <p>
       Nori grape silver beet broccoli kombu beet greens fava bean potato
       quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil
-      turnip greens parsnip. Sea lettuce lettuce water chestnut eggplant winter
-      purslane fennel azuki bean earthnut pea sierra leone bologi leek soko
-      chicory celtuce parsley jícama salsify.
+      turnip greens parsnip. Sea lettuce water chestnut eggplant winter purslane
+      fennel azuki bean earthnut pea sierra leone bologi leek soko chicory
+      celtuce parsley jícama salsify.
     </p>
   </div>
   <nav>
@@ -486,7 +486,7 @@ In addition to displaying documents, using the correct writing mode for the lang
 
 ## Physical values and grid layout
 
-We encounter physical properties frequently when building websites, and while the grid placement and alignment properties and values respect writing modes, there are things you may want to do with Grid that force you to use physical properties and values. In the guide to [Box alignment and grids](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout), I demonstrated how auto margins work in a grid area. Using an auto margin to push one item away from the others is a common flexbox trick too, however this also ties the layout to the physical space.
+We encounter physical properties frequently when building websites, and while the grid placement and alignment properties and values respect writing modes, there are things you may want to do with grid that force you to use physical properties and values. In the guide to [Box alignment and grids](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout), I demonstrated how auto margins work in a grid area. Using an auto margin to push one item away from the others is a common flexbox trick too, however this also ties the layout to the physical space.
 
 If you use absolute positioning within a grid area, then you will again be using physical offsets to push the item around inside the grid area. The key thing is to be aware of, is the tension between physical and logical properties and values. For example, be aware that you may need to make changes to your CSS to cope with a switch from `ltr` to `rtl`.
 

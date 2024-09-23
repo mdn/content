@@ -55,7 +55,7 @@ button {
 }
 ```
 
-### Javascript
+### JavaScript
 
 ```js
 // Obtain relevant interface elements

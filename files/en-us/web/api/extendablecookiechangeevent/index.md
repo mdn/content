@@ -15,7 +15,8 @@ Cookie changes that cause the `ExtendableCookieChangeEvent` to be dispatched are
 - A cookie is newly created and immediately removed. In this case `type` is "deleted"
 - A cookie is removed. In this case `type` is "deleted".
 
-> **Note:** A cookie that is replaced due to the insertion of another cookie with the same name, domain, and path, is ignored and does not trigger a change event.
+> [!NOTE]
+> A cookie that is replaced due to the insertion of another cookie with the same name, domain, and path, is ignored and does not trigger a change event.
 
 {{InheritanceDiagram}}
 

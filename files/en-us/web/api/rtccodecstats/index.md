@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.RTCStatsReport.type_codec
 ---
 
-{{DefaultAPISidebar("WebRTC")}}
+{{APIRef("WebRTC")}}
 
 The **`RTCCodecStats`** dictionary of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) provides statistics about a codec used by {{Glossary("RTP")}} streams that are being sent or received by the associated {{domxref("RTCPeerConnection")}} object.
 
@@ -75,4 +75,5 @@ stats.forEach((report) => {
 ## See also
 
 - {{domxref("RTCStatsReport")}}
-- {{domxref("RTCRtpCodecParameters")}}
+- `codecs` option in parameter passed to {{domxref("RTCRtpTransceiver.setCodecPreferences()")}} and {{domxref("RTCRtpSender.setParameters()()")}}.
+- `codecs` property in object returned by {{domxref("RTCRtpSender.getParameters()")}} and {{domxref("RTCRtpReceiver.getParameters()")}}.

@@ -22,7 +22,8 @@ A Boolean value which is `true` if the connection described by this
 candidate pair has received at least one valid ICE request, and is therefore ready to be
 read from.
 
-> **Note:** This property was removed from the specification in early 2017
+> [!NOTE]
+> This property was removed from the specification in early 2017
 > because you can determine whether or not the connection is readable by checking to see
 > if {{domxref("RTCIceCandidatePairStats.requestsReceived", "requestsReceived")}} is
 > greater than 0:

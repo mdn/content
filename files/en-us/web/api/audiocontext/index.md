@@ -23,7 +23,7 @@ An audio context controls both the creation of the nodes it contains and the exe
 _Also inherits properties from its parent interface, {{domxref("BaseAudioContext")}}._
 
 - {{domxref("AudioContext.baseLatency")}} {{ReadOnlyInline}}
-  - : Returns the number of seconds of processing latency incurred by the {{domxref("AudioContext")}} passing the audio from the {{domxref("AudioDestinationNode")}} to the audio subsystem.
+  - : Returns the number of seconds of processing latency incurred by the `AudioContext` passing the audio from the {{domxref("AudioDestinationNode")}} to the audio subsystem.
 - {{domxref("AudioContext.outputLatency")}} {{ReadOnlyInline}}
   - : Returns an estimation of the output latency of the current audio context.
 - {{domxref("AudioContext.sinkId")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}

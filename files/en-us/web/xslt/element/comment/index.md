@@ -8,7 +8,7 @@ page-type: xslt-element
 
 The `<xsl:comment>` element writes a comment to the output document. It must include only text.
 
-### Syntax
+## Syntax
 
 ```xml
 <xsl:comment>
@@ -28,10 +28,10 @@ None.
 
 Instruction, appears within a template.
 
-### Defined
+## Specifications
 
 XSLT, section 7.4.
 
-### Gecko support
+## Gecko support
 
 Supported.

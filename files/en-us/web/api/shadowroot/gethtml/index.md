@@ -3,12 +3,10 @@ title: "ShadowRoot: getHTML() method"
 short-title: getHTML()
 slug: Web/API/ShadowRoot/getHTML
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.ShadowRoot.getHTML
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("DOM")}}
 
 The **`getHTML()`** method of the {{domxref("ShadowRoot")}} interface is used to serialize a shadow root's DOM to an HTML string.
 

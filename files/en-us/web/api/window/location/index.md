@@ -137,14 +137,14 @@ The current URL with "?Some%20data" appended is sent to the server (if no action
     <p>
       Duis lobortis sapien quis nisl luctus porttitor. In tempor semper libero,
       eu tincidunt dolor eleifend sit amet. Ut nec velit in dolor tincidunt
-      rhoncus non non diam. Morbi auctor ornare orci, non euismod felis gravida
-      nec. Curabitur elementum nisi a eros rutrum nec blandit diam placerat.
-      Aenean tincidunt risus ut nisi consectetur cursus. Ut vitae quam elit.
-      Donec dignissim est in quam tempor consequat. Aliquam aliquam diam non
-      felis convallis suscipit. Nulla facilisi. Donec lacus risus, dignissim et
-      fringilla et, egestas vel eros. Duis malesuada accumsan dui, at fringilla
-      mauris bibendum quis. Cras adipiscing ultricies fermentum. Praesent
-      bibendum condimentum feugiat.
+      rhoncus non diam. Morbi auctor ornare orci, non euismod felis gravida nec.
+      Curabitur elementum nisi a eros rutrum nec blandit diam placerat. Aenean
+      tincidunt risus ut nisi consectetur cursus. Ut vitae quam elit. Donec
+      dignissim est in quam tempor consequat. Aliquam diam non felis convallis
+      suscipit. Nulla facilisi. Donec lacus risus, dignissim et fringilla et,
+      egestas vel eros. Duis malesuada accumsan dui, at fringilla mauris
+      bibendum quis. Cras adipiscing ultricies fermentum. Praesent bibendum
+      condimentum feugiat.
     </p>
     <p id="myBookmark1">
       [&nbsp;<span class="intLink" onclick="showBookmark('#myBookmark2');"

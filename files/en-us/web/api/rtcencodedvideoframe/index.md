@@ -9,13 +9,14 @@ browser-compat: api.RTCEncodedVideoFrame
 
 The **`RTCEncodedVideoFrame`** of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) represents an encoded video frame in the WebRTC receiver or sender pipeline, which may be modified using a [WebRTC Encoded Transform](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms).
 
-> **Note:** This feature is available in [_Dedicated_ Web Workers](/en-US/docs/Web/API/Web_Workers_API#worker_types).
+> [!NOTE]
+> This feature is available in [_Dedicated_ Web Workers](/en-US/docs/Web/API/Web_Workers_API#worker_types).
 
 ## Instance properties
 
 - {{domxref("RTCEncodedVideoFrame.type")}} {{ReadOnlyInline}}
   - : Returns whether the current frame is a key frame, delta frame, or empty frame.
-- {{domxref("RTCEncodedVideoFrame.timestamp")}} {{ReadOnlyInline}}
+- {{domxref("RTCEncodedVideoFrame.timestamp")}} {{ReadOnlyInline}} {{deprecated_inline}} {{non-standard_inline}}
   - : Returns the timestamp at which sampling of the frame started.
 - {{domxref("RTCEncodedVideoFrame.data")}}
   - : Return a buffer containing the encoded frame data.

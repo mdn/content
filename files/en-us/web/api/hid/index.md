@@ -43,4 +43,4 @@ _This interface also inherits methods of its parent, {{domxref("EventTarget")}}.
 
 ## See also
 
-- {{domxref("WebHID API")}}
+- [WebHID API](/en-US/docs/Web/API/WebHID_API)

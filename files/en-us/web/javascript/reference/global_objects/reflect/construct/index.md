@@ -38,7 +38,7 @@ A new instance of `target` (or `newTarget`, if present), initialized by `target`
 
 ## Description
 
-`Reflect.apply()` provides the reflective semantic of a constructor call. That is, `Reflect.construct(target, argumentsList, newTarget)` is semantically equivalent to:
+`Reflect.construct()` provides the reflective semantic of a constructor call. That is, `Reflect.construct(target, argumentsList, newTarget)` is semantically equivalent to:
 
 ```js
 new target(...argumentsList);

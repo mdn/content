@@ -13,7 +13,8 @@ APIs that use match patterns usually accept a list of match patterns, and will p
 
 ## Match pattern structure
 
-> **Note:** Some browsers don't support certain schemes.
+> [!NOTE]
+> Some browsers don't support certain schemes.
 > Check the [Browser compatibility table](#browser_compatibility) for details.
 
 All match patterns are specified as strings. Apart from the special [`<all_urls>`](#all_urls) pattern, match patterns consist of three parts: _scheme_, _host_, and _path_. The scheme and host are separated by `://`.
@@ -95,7 +96,8 @@ The value for the _path_ matches against the string which is the URL path plus t
 
 Neither the [URL fragment identifier](https://en.wikipedia.org/wiki/Fragment_identifier), nor the `#` which precedes it, are considered as part of the _path_.
 
-> **Note:** The path pattern string should not include a port number. Adding a port, as in: `http://localhost:1234/*` causes the match pattern to be ignored. However, `http://localhost:1234` will match with `http://localhost/*`.
+> [!NOTE]
+> The path pattern string should not include a port number. Adding a port, as in: `http://localhost:1234/*` causes the match pattern to be ignored. However, `http://localhost:1234` will match with `http://localhost/*`.
 
 ### \<all_urls>
 

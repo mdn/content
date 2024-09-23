@@ -19,7 +19,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : This Boolean attribute hints that the list should be rendered in a compact style. The interpretation of this attribute depends on the {{glossary("user agent")}}, and it doesn't work in all browsers.
 
-    > **Warning:** Do not use this attribute, as it has been deprecated: use [CSS](/en-US/docs/Web/CSS) instead. To give a similar effect as the `compact` attribute, the CSS property {{cssxref("line-height")}} can be used with a value of `80%`.
+    > [!WARNING]
+    > Do not use this attribute, as it has been deprecated: use [CSS](/en-US/docs/Web/CSS) instead. To give a similar effect as the `compact` attribute, the CSS property {{cssxref("line-height")}} can be used with a value of `80%`.
 
 - `type` {{Deprecated_inline}}
 
@@ -33,7 +34,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     If not present and if no [CSS](/en-US/docs/Web/CSS) {{ cssxref("list-style-type") }} property applies to the element, the user agent selects a bullet type depending on the nesting level of the list.
 
-    > **Warning:** Do not use this attribute, as it has been deprecated; use the [CSS](/en-US/docs/Web/CSS) {{ cssxref("list-style-type") }} property instead.
+    > [!WARNING]
+    > Do not use this attribute, as it has been deprecated; use the [CSS](/en-US/docs/Web/CSS) {{ cssxref("list-style-type") }} property instead.
 
 ## Usage notes
 

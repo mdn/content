@@ -23,7 +23,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
   - : A Boolean attribute: if specified, the audio will automatically begin playback as soon as it can do so, without waiting for the entire audio file to finish downloading.
 
-    > **Note:** Sites that automatically play audio (or videos with an audio track) can be an unpleasant experience for users, so should be avoided when possible. If you must offer autoplay functionality, you should make it opt-in (requiring a user to specifically enable it). However, this can be useful when creating media elements whose source will be set at a later time, under user control. See our [autoplay guide](/en-US/docs/Web/Media/Autoplay_guide) for additional information about how to properly use autoplay.
+    > [!NOTE]
+    > Sites that automatically play audio (or videos with an audio track) can be an unpleasant experience for users, so should be avoided when possible. If you must offer autoplay functionality, you should make it opt-in (requiring a user to specifically enable it). However, this can be useful when creating media elements whose source will be set at a later time, under user control. See our [autoplay guide](/en-US/docs/Web/Media/Autoplay_guide) for additional information about how to properly use autoplay.
 
 - `controls`
 
@@ -35,7 +36,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
     The allowed values are `nodownload`, `nofullscreen` and `noremoteplayback`.
 
-- `crossorigin`
+- [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin)
 
   - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicates whether to use CORS to fetch the related audio file. [CORS-enabled resources](/en-US/docs/Web/HTML/CORS_enabled_image) can be reused in the {{HTMLElement("canvas")}} element without being _tainted_. The allowed values are:
 
@@ -67,7 +68,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
     The default value is different for each browser. The spec advises it to be set to `metadata`.
 
-    > **Note:**
+    > [!NOTE]
     >
     > - The `autoplay` attribute has precedence over `preload`. If `autoplay` is specified, the browser would obviously need to start downloading the audio for playback.
     > - The browser is not forced by the specification to follow the value of this attribute; it is a mere hint.
@@ -287,7 +288,8 @@ You can detect when tracks are added to and removed from an `<audio>` element us
 - {{domxref("HTMLMediaElement.textTracks")}}
   - : Add an `addtrack` event listener to this {{domxref("TextTrackList")}} to be notified when new text tracks are added to the element.
 
-> **Note:** Even though it's an `<audio>` element, it still has video and text track lists, and can in fact be used to present video, although the user interface implications can be odd.
+> [!NOTE]
+> Even though it's an `<audio>` element, it still has video and text track lists, and can in fact be used to present video, although the user interface implications can be odd.
 
 For example, to detect when audio tracks are added to or removed from an `<audio>` element, you can use code like this:
 
@@ -307,45 +309,7 @@ This code watches for audio tracks to be added to and removed from the element, 
 
 You can also use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to listen for the {{domxref("AudioTrackList/addtrack_event", "addtrack")}} and {{domxref("AudioTrackList/removetrack_event", "removetrack")}} events.
 
-## Examples
-
-### Basic usage
-
-The following example shows simple usage of the `<audio>` element to play an OGG file. It will autoplay due to the `autoplay` attribute—if the page has permission to do so—and also includes fallback content.
-
-```html
-<!-- Simple audio playback -->
-<audio src="AudioTest.ogg" autoplay>
-  <a href="AudioTest.ogg" download="AudioTest.ogg">Download OGG audio</a>.
-</audio>
-```
-
-For details on when autoplay works, how to get permission to use autoplay, and how and when it's appropriate to use autoplay, see our [autoplay guide](/en-US/docs/Web/Media/Autoplay_guide).
-
-### \<audio> element with \<source> element
-
-This example specifies which audio track to embed using the `src` attribute on a nested `<source>` element rather than directly on the `<audio>` element. It is always useful to include the file's MIME type inside the `type` attribute, as the browser is able to instantly tell if it can play that file, and not waste time on it if not.
-
-```html
-<audio controls>
-  <source src="foo.wav" type="audio/wav" />
-  <a href="foo.wav" download="foo.wav">Download WAV audio</a>.
-</audio>
-```
-
-### \<audio> with multiple \<source> elements
-
-This example includes multiple `<source>` elements. The browser tries to load the first source element (Opus) if it is able to play it; if not it falls back to the second (Vorbis) and finally back to MP3:
-
-```html
-<audio controls>
-  <source src="foo.opus" type="audio/ogg; codecs=opus" />
-  <source src="foo.ogg" type="audio/ogg; codecs=vorbis" />
-  <source src="foo.mp3" type="audio/mpeg" />
-</audio>
-```
-
-## Accessibility concerns
+## Accessibility
 
 Audio with spoken dialog should provide both captions and transcripts that accurately describe its content. Captions, which are specified using [WebVTT](/en-US/docs/Web/API/WebVTT_API), allow people who are hearing impaired to understand an audio recording's content as the recording is being played, while transcripts allow people who need additional time to be able to review the recording's content at a pace and format that is comfortable for them.
 
@@ -388,6 +352,44 @@ Also it's a good practice to provide some content (such as the direct download l
 - [Understanding Success Criterion 1.2.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
 - [Understanding Success Criterion 1.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html)
 
+## Examples
+
+### Basic usage
+
+The following example shows simple usage of the `<audio>` element to play an OGG file. It will autoplay due to the `autoplay` attribute—if the page has permission to do so—and also includes fallback content.
+
+```html
+<!-- Simple audio playback -->
+<audio src="AudioTest.ogg" autoplay>
+  <a href="AudioTest.ogg" download="AudioTest.ogg">Download OGG audio</a>.
+</audio>
+```
+
+For details on when autoplay works, how to get permission to use autoplay, and how and when it's appropriate to use autoplay, see our [autoplay guide](/en-US/docs/Web/Media/Autoplay_guide).
+
+### \<audio> element with \<source> element
+
+This example specifies which audio track to embed using the `src` attribute on a nested `<source>` element rather than directly on the `<audio>` element. It is always useful to include the file's MIME type inside the `type` attribute, as the browser is able to instantly tell if it can play that file, and not waste time on it if not.
+
+```html
+<audio controls>
+  <source src="foo.wav" type="audio/wav" />
+  <a href="foo.wav" download="foo.wav">Download WAV audio</a>.
+</audio>
+```
+
+### \<audio> with multiple \<source> elements
+
+This example includes multiple `<source>` elements. The browser tries to load the first source element (Opus) if it is able to play it; if not it falls back to the second (Vorbis) and finally back to MP3:
+
+```html
+<audio controls>
+  <source src="foo.opus" type="audio/ogg; codecs=opus" />
+  <source src="foo.ogg" type="audio/ogg; codecs=vorbis" />
+  <source src="foo.mp3" type="audio/mpeg" />
+</audio>
+```
+
 ## Technical summary
 
 <table class="properties">
@@ -412,11 +414,11 @@ Also it's a good practice to provide some content (such as the direct download l
         If the element has a <a href="#src"><code>src</code></a>
         attribute: zero or more {{HTMLElement("track")}} elements
         followed by transparent content that contains no
-        {{HTMLElement("audio")}} or {{HTMLElement("video")}}
+        <code>&lt;audio&gt;</code> or {{HTMLElement("video")}}
         media elements.<br />Else: zero or more {{HTMLElement("source")}}
         elements followed by zero or more {{HTMLElement("track")}}
         elements followed by transparent content that contains no
-        {{HTMLElement("audio")}} or {{HTMLElement("video")}}
+        <code>&lt;audio&gt;</code> or {{HTMLElement("video")}}
         media elements.
       </td>
     </tr>

@@ -19,7 +19,8 @@ Some values of the property re-determine all three values. Others only re-establ
 
 If there is no baseline table in the nominal font, or if the baseline table lacks an entry for the desired baseline, then the browser may use heuristics to determine the position of the desired baseline.
 
-> **Note:** As a presentation attribute, `dominant-baseline` can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute, `dominant-baseline` can be used as a CSS property. See {{cssxref('dominant-baseline')}} for more.
 
 You can use this attribute with the following SVG elements:
 
@@ -175,3 +176,7 @@ text {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- CSS {{cssxref('dominant-baseline')}} property

@@ -14,7 +14,7 @@
     "url": "git+https://github.com/mdn/content.git"
   },
   "engines": {
-    "node": ">=18.16.0"
+    "node": ">=18.20.0"
   },
   "type": "module",
   "scripts": {
@@ -41,24 +41,25 @@
   "dependencies": {
     "@apideck/better-ajv-errors": "^0.3.6",
     "@caporal/core": "^2.0.7",
-    "@mdn/yari": "2.54.0",
-    "ajv": "^8.16.0",
+    "@mdn/yari": "2.63.1",
+    "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
-    "async": "^3.2.5",
+    "async": "^3.2.6",
     "caporal": "^1.4.0",
     "cli-progress": "^3.12.0",
     "cross-env": "7.0.3",
     "env-cmd": "10.1.0",
-    "fdir": "^6.1.1",
+    "fdir": "^6.3.0",
     "gray-matter": "^4.0.3",
-    "husky": "9.0.11",
+    "husky": "9.1.6",
     "js-yaml": "^4.1.0",
-    "lint-staged": "15.2.5",
-    "markdownlint-cli2": "0.13.0",
+    "lint-staged": "15.2.10",
+    "markdownlint-cli2": "0.14.0",
     "markdownlint-rule-search-replace": "1.2.0",
-    "prettier": "3.3.1"
+    "prettier": "3.3.3"
   },
   "devDependencies": {
     "jest": "^29.7.0"
-  }
+  },
+  "packageManager": "yarn@1.22.22"
 }

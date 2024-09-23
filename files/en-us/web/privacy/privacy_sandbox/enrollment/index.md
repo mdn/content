@@ -31,7 +31,7 @@ The documentation of each feature includes more details on exactly which sub-fea
 
 ## See also
 
-- [The Privacy Sandbox](https://developer.chrome.com/en/docs/privacy-sandbox/) on developer.chrome.com
+- [The Privacy Sandbox](https://developers.google.com/privacy-sandbox) on developers.google.com
 
 <section id="Quick_links">
 {{ListSubpages("/en-US/docs/Web/Privacy", "2", "0", "0")}}

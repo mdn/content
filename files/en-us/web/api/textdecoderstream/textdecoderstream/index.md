@@ -42,7 +42,7 @@ new TextDecoderStream(label, options)
 
 ## Examples
 
-The following example demonstrates how to decode binary data retrieved from a {{domxref("fetch()")}} call.
+The following example demonstrates how to decode binary data retrieved from a {{domxref("Window/fetch", "fetch()")}} call.
 The data will be interpreted as UTF-8, as no `label` has been passed.
 
 ```js

@@ -37,7 +37,8 @@ new WebAssembly.Memory(memoryDescriptor)
       - : A boolean value that defines whether the memory is a shared memory or not. If
         set to `true`, it is a shared memory. The default is `false`.
 
-> **Note:** A WebAssembly page has a constant size of 65,536 bytes, i.e., 64KiB.
+> [!NOTE]
+> A WebAssembly page has a constant size of 65,536 bytes, i.e., 64KiB.
 
 ### Exceptions
 
@@ -69,9 +70,9 @@ const memory = new WebAssembly.Memory({
 WebAssembly.instantiateStreaming(fetch("memory.wasm"), {
   js: { mem: memory },
 }).then((obj) => {
-  const summands = new Uint32Array(memory.buffer);
+  const summands = new DataView(memory.buffer);
   for (let i = 0; i < 10; i++) {
-    summands[i] = i;
+    summands.setUint32(i * 4, i, true); // WebAssembly is little endian
   }
   const sum = obj.instance.exports.accumulate(0, 10);
   console.log(sum);

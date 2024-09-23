@@ -59,7 +59,7 @@ function loadBinaryResource(url) {
 }
 ```
 
-The magic happens in line 5, which overrides the MIME type, forcing the browser to treat it as plain text, using a user-defined character set. This tells the browser not to parse it, and to let the bytes pass through unprocessed.
+The magic happens in the `overrideMimeType` function, which forces the browser to treat it as plain text, using a user-defined character set. This tells the browser not to parse it, and to let the bytes pass through unprocessed.
 
 ```js
 const filestream = loadBinaryResource(url);

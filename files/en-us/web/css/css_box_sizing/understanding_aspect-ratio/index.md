@@ -9,7 +9,7 @@ spec-urls: https://drafts.csswg.org/css-sizing/#aspect-ratio
 
 Every element rendered to the page has a height and a width, and, therefore, an {{glossary("aspect ratio")}}, which is the ratio between the width and height. The natural dimensions of a media object, which are its size without any sizing, scaling, zooming, or borders applied, are known as its natural or {{glossary("intrinsic size")}}. An element's intrinsic size is determined by the element itself, not by applying formatting such as [box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) or setting border, margin, or padding widths.
 
-When developing sites, you often want to be able to set the width of an element to a percentage of the viewport or parent container size and have the height change size proportionally, thereby maintaining a specific aspect ratio depending on the size of the viewport. For replaced elements, like images and videos, maintaining a specific aspect ratio is not only necessary for creating {{glossary("responsive web design")}}, but also a vital component of providing good user experience. Setting an asset's aspect ratio prevents loading [jank](<(/en-US/docs/Learn/Performance/Multimedia#rendering_strategy_preventing_jank_when_loading_images)>)—the layout shift that occurs when media loads after the page has already been painted, causing a reflow because the space for the asset has not been reserved.
+When developing sites, you often want to be able to set the width of an element to a percentage of the viewport or parent container size and have the height change size proportionally, thereby maintaining a specific aspect ratio depending on the size of the viewport. For replaced elements, like images and videos, maintaining a specific aspect ratio is not only necessary for creating {{glossary("responsive web design")}}, but also a vital component of providing good user experience. Setting an asset's aspect ratio prevents loading [jank](/en-US/docs/Learn/Performance/Multimedia#rendering_strategy_preventing_jank_when_loading_images)—the layout shift that occurs when media loads after the page has already been painted, causing a reflow because the space for the asset has not been reserved.
 
 Using CSS, you can adjust the size of replaced and non-replaced elements based on their aspect ratio. In this guide, we will learn about the `aspect-ratio` property, discuss aspect ratios for replaced and non-replaced elements, and then examine some common aspect ratio use cases.
 
@@ -89,7 +89,9 @@ Replaced elements like {{htmlelement("img")}} and {{htmlelement("video")}} are r
 <!-- temporarily ignore these images. Testing preview -->
 
 ```html hidden live-sample___original
-<img src="flag.jpg?image=good" alt="220 pixel square pride flag" />
+<img
+  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg?image=good"
+  alt="220 pixel square pride flag" />
 ```
 
 {{EmbedLiveSample("original", "100", "230")}}
@@ -101,9 +103,15 @@ If replaced content is auto-sized or you provide a size for only one dimension, 
 In this example, only the {{cssxref("width")}} is set on the image, so the user agent preserves its aspect ratio. The same image is repeated three times, displayed at different widths: `55px`, `110px`, and at its natural size of `220px` via the [`width: auto`](/en-US/docs/Web/CSS/width) value.
 
 ```html hidden live-sample___image
-<img src="flag.jpg" alt="Pride flag" />
-<img src="flag.jpg" alt="Pride flag" />
-<img src="flag.jpg" alt="Pride flag" />
+<img
+  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+  alt="Pride flag" />
+<img
+  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+  alt="Pride flag" />
+<img
+  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+  alt="Pride flag" />
 ```
 
 ```css hidden live-sample___image
@@ -128,9 +136,15 @@ Only when you provide sizes for both dimensions is there a risk of distorting th
 In this example, the same image is repeated three times, explicitly sized with the same {{cssxref("height")}} value (`110px`) but different {{cssxref("width")}} values (`55px`, `110px`, and `220px`).
 
 ```html hidden live-sample___imagebad
-<img src="flag.jpg" alt="Pride flag" />
-<img src="flag.jpg" alt="Pride flag" />
-<img src="flag.jpg" alt="Pride flag" />
+<img
+  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+  alt="Pride flag" />
+<img
+  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+  alt="Pride flag" />
+<img
+  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+  alt="Pride flag" />
 ```
 
 ```css hidden live-sample___imagebad
@@ -155,7 +169,9 @@ We have distorted the images intentionally by setting both a `height` and `width
 We could have created this same distorted effect using the CSS {{cssxref("aspect-ratio")}} property, by setting a single dimension (not both or neither) and providing a value other than `1` (or `1 / 1`). You likely don't want to do this, but it's good to know that it's possible.
 
 ```html hidden live-sample___stretch
-<img src="flag.jpg" alt="Pride flag" />
+<img
+  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+  alt="Pride flag" />
 ```
 
 ```css live-sample___stretch
@@ -180,13 +196,21 @@ To begin with, we create a container with three items, each containing one image
 ```html live-sample___imagegrid
 <div class="grid">
   <div>
-    <img src="flag.jpg" alt="Pride flag" />
+    <img
+      src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+      alt="Pride flag" />
   </div>
   <div>
-    <img class="cover" src="flag.jpg" alt="Pride flag" />
+    <img
+      class="cover"
+      src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+      alt="Pride flag" />
   </div>
   <div>
-    <img class="contain" src="flag.jpg" alt="Pride flag" />
+    <img
+      class="contain"
+      src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+      alt="Pride flag" />
   </div>
 </div>
 ```
@@ -341,7 +365,7 @@ blockquote {
 
 {{EmbedLiveSample("words", "100", "400")}}
 
-Each box has one dimension defined: the {{cssxref("inline-size")}}, which is the width in horizontal languages, is set to {{cssxref("max-content")}}, which sets the size to be as wide as it needs to be to fit the content without wrapping. The second dimension, in this case, the {{cssxref("block-size")}} or {{cssxref("height")}}, is set to be the same length as the first dimension. This is accomplished with the {{cssxref("aspect-ratio")}} property. We defined the desired width-to-height ratio of the element's box to be `1`, which is the same as `1 / 1`, a square. This sets the the block direction to match the width of the element, without using the {{cssxref("height")}} or {{cssxref("block-size")}} properties.
+Each box has one dimension defined: the {{cssxref("inline-size")}}, which is the width in horizontal languages, is set to {{cssxref("max-content")}}, which sets the size to be as wide as it needs to be to fit the content without wrapping. The second dimension, in this case, the {{cssxref("block-size")}} or {{cssxref("height")}}, is set to be the same length as the first dimension. This is accomplished with the {{cssxref("aspect-ratio")}} property. We defined the desired width-to-height ratio of the element's box to be `1`, which is the same as `1 / 1`, a square. This sets the block direction to match the width of the element, without using the {{cssxref("height")}} or {{cssxref("block-size")}} properties.
 
 In these examples, a size was explicitly set on the element itself. When working with non-replaced elements, aspect ratio comes into play when no size dimension is explicitly set.
 
@@ -487,7 +511,7 @@ iframe.tiktok {
 
 ### Making grid cells square
 
-A grid of square cells can be created by defining fixed {{cssxref("grid-template-columns", "column track sizes")}}, ensuring each row matches the size of the column track. However, when creating responsive grids using `auto-fill` to fit as many column tracks as possible within the container, the width of each item becomes uncertain. This makes it challenging to determine the appropriate height for creating square items.
+A grid of square cells can be created by defining fixed [column track sizes](/en-US/docs/Web/CSS/grid-template-columns), ensuring each row matches the size of the column track. However, when creating responsive grids using `auto-fill` to fit as many column tracks as possible within the container, the width of each item becomes uncertain. This makes it challenging to determine the appropriate height for creating square items.
 
 By setting an aspect ratio on the items, we can ensure when the grid items are laid out, each grid item will be as tall as it is wide, creating square grid items regardless of the container's dimensions.
 
@@ -538,7 +562,11 @@ div div::after {
   <div></div>
   <div></div>
   <div></div>
-  <div class="item"><img src="flag.jpg" alt="Pride flag" /></div>
+  <div class="item">
+    <img
+      src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+      alt="Pride flag" />
+  </div>
   <div></div>
   <div></div>
   <div></div>

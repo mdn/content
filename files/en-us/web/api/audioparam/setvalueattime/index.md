@@ -43,7 +43,6 @@ to set the gain value equal to `currGain`, one second from now
 
 ```js
 // create audio context
-const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();
 
 // set basic variables for example
@@ -51,7 +50,7 @@ const myAudio = document.querySelector("audio");
 const pre = document.querySelector("pre");
 const myScript = document.querySelector("script");
 
-pre.innerHTML = myScript.innerHTML;
+pre.textContent = myScript.textContent;
 
 const targetAtTimePlus = document.querySelector(".set-target-at-time-plus");
 const targetAtTimeMinus = document.querySelector(".set-target-at-time-minus");

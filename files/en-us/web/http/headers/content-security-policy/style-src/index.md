@@ -99,7 +99,8 @@ These types of manipulations can be prevented by disallowing JavaScript via the 
 
 ### Unsafe inline styles
 
-> **Note:** Disallowing inline styles and inline scripts is one of the biggest security wins CSP provides. However, if you absolutely have to use it, there are a few mechanisms that will allow them.
+> [!NOTE]
+> Disallowing inline styles and inline scripts is one of the biggest security wins CSP provides. However, if you absolutely have to use it, there are a few mechanisms that will allow them.
 
 To allow inline styles, `'unsafe-inline'`, a nonce-source or a hash-source that matches the inline block can be specified.
 The following Content Security Policy will allow inline styles like the {{HTMLElement("style")}} element, and the `style` attribute on any element:

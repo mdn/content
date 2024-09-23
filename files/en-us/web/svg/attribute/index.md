@@ -49,7 +49,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("color")}}
 - {{SVGAttr("color-interpolation")}}
 - {{SVGAttr("color-interpolation-filters")}}
-- {{SVGAttr("color-profile")}}
 - {{SVGAttr("color-rendering")}}
 - {{SVGAttr("crossorigin")}}
 - {{SVGAttr("cursor")}}
@@ -59,7 +58,9 @@ Below is a list of all of the attributes available in SVG along with links to re
 ### D
 
 - {{SVGAttr("d")}}
+- {{SVGAttr("data-*")}}
 - {{SVGAttr("decelerate")}}
+- {{SVGAttr("decoding")}}
 - {{SVGAttr("descent")}}
 - {{SVGAttr("diffuseConstant")}}
 - {{SVGAttr("direction")}}
@@ -74,7 +75,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 
 - {{SVGAttr("edgeMode")}}
 - {{SVGAttr("elevation")}}
-- {{SVGAttr("enable-background")}}
 - {{SVGAttr("end")}}
 - {{SVGAttr("exponent")}}
 
@@ -119,6 +119,7 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("hreflang")}}
 - {{SVGAttr("horiz-adv-x")}}
 - {{SVGAttr("horiz-origin-x")}}
+- {{SVGAttr("horiz-origin-y")}}
 
 ### I
 
@@ -138,7 +139,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("k4")}}
 - {{SVGAttr("kernelMatrix")}}
 - {{SVGAttr("kernelUnitLength")}}
-- {{SVGAttr("kerning")}}
 - {{SVGAttr("keyPoints")}}
 - {{SVGAttr("keySplines")}}
 - {{SVGAttr("keyTimes")}}
@@ -231,6 +231,7 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("scale")}}
 - {{SVGAttr("seed")}}
 - {{SVGAttr("shape-rendering")}}
+- {{SVGAttr("side")}}
 - {{SVGAttr("slope")}}
 - {{SVGAttr("spacing")}}
 - {{SVGAttr("specularConstant")}}
@@ -322,7 +323,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("xlink:show")}}
 - {{SVGAttr("xlink:title")}}
 - {{SVGAttr("xlink:type")}}
-- {{SVGAttr("xml:base")}}
 - {{SVGAttr("xml:lang")}}
 - {{SVGAttr("xml:space")}}
 
@@ -349,7 +349,6 @@ Below is a list of all of the attributes available in SVG along with links to re
   - {{SVGAttr("style")}}
   - {{SVGAttr("lang")}}
   - {{SVGAttr("tabindex")}}
-  - {{SVGAttr("xml:base")}}
   - {{SVGAttr("xml:lang")}}
   - {{SVGAttr("xml:space")}}
 
@@ -370,7 +369,8 @@ Below is a list of all of the attributes available in SVG along with links to re
 
 ### Presentation attributes
 
-> **Note:** All SVG presentation attributes can be used as CSS properties.
+> [!NOTE]
+> All SVG presentation attributes can be used as CSS properties.
 
 - {{SVGAttr("alignment-baseline")}}
 - {{SVGAttr("baseline-shift")}}
@@ -380,14 +380,12 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("color")}}
 - {{SVGAttr("color-interpolation")}}
 - {{SVGAttr("color-interpolation-filters")}}
-- {{SVGAttr("color-profile")}}
 - {{SVGAttr("color-rendering")}}
 - {{SVGAttr("cursor")}}
 - {{SVGAttr("d")}}
 - {{SVGAttr("direction")}}
 - {{SVGAttr("display")}}
 - {{SVGAttr("dominant-baseline")}}
-- {{SVGAttr("enable-background")}}
 - {{SVGAttr("fill")}}
 - {{SVGAttr("fill-opacity")}}
 - {{SVGAttr("fill-rule")}}
@@ -404,7 +402,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("glyph-orientation-horizontal")}}
 - {{SVGAttr("glyph-orientation-vertical")}}
 - {{SVGAttr("image-rendering")}}
-- {{SVGAttr("kerning")}}
 - {{SVGAttr("letter-spacing")}}
 - {{SVGAttr("lighting-color")}}
 - {{SVGAttr("marker-end")}}

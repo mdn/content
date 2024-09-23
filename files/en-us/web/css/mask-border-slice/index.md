@@ -57,7 +57,7 @@ The optional `fill` value, if used, can be placed anywhere in the declaration.
 
 The slicing process creates nine regions in total: four corners, four edges, and a middle region. Four slice lines, set a given distance from their respective sides, control the size of the regions.
 
-[![The nine regions defined by the border-image or border-image-slice properties](border-image-slice.png)](border-image-slice.png)
+![The nine regions defined by the border-image or border-image-slice properties](border-image-slice.png)
 
 The above diagram illustrates the location of each region.
 
@@ -91,9 +91,11 @@ Chromium-based browsers support an outdated version of this property — `mask-b
 -webkit-mask-box-image-slice: 30 fill;
 ```
 
-> **Note:** The [`mask-border`](/en-US/docs/Web/CSS/mask-border) page features a working example (using the out-of-date prefixed border mask properties supported in Chromium), so you can get an idea of the effect.
+> [!NOTE]
+> The [`mask-border`](/en-US/docs/Web/CSS/mask-border) page features a working example (using the out-of-date prefixed border mask properties supported in Chromium), so you can get an idea of the effect.
 
-> **Note:** The fill keyword needs to be included if you want the element's content to be visible.
+> [!NOTE]
+> The fill keyword needs to be included if you want the element's content to be visible.
 
 ## Specifications
 

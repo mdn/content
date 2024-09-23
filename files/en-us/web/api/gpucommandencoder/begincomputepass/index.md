@@ -38,7 +38,8 @@ beginComputePass(descriptor)
         - `queryIndex`: A number specifying the index position in the `querySet` that the timestamp will be written to.
         - `querySet`: The {{domxref("GPUQuerySet")}} that the timestamp will be written to.
 
-        > **Note:** To use timestamp queries, the `timestamp-query` {{domxref("GPUSupportedFeatures", "feature", "", "nocode")}} must be enabled in the {{domxref("GPUDevice")}}.
+        > [!NOTE]
+        > To use timestamp queries, the `timestamp-query` {{domxref("GPUSupportedFeatures", "feature", "", "nocode")}} must be enabled in the {{domxref("GPUDevice")}}.
 
 ### Return value
 

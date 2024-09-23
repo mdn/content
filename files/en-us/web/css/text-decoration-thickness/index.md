@@ -94,7 +94,8 @@ text-decoration-thickness: unset;
 
 {{Specifications}}
 
-> **Note:** The property used to be called `text-decoration-width`, but was updated in 2019 to `text-decoration-thickness`.
+> [!NOTE]
+> The property used to be called `text-decoration-width`, but was updated in 2019 to `text-decoration-thickness`.
 
 ## Browser compatibility
 

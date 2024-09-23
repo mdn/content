@@ -40,7 +40,8 @@ The `counters()` function accepts two or three parameters. The first parameter i
 
 The return value is a string containing all the values of all the counters in the element's CSS counters set named `<counter-name>` in the counter style defined by `<counter-style>` (or decimal, if omitted). The return string is sorted in outermost-first to innermost-last order, joined by the `<string>` specified.
 
-> **Note:** For information about non-concatenated counters, see the {{cssxref("counter", "counter()")}} function, which omits the `<string>` as a parameter.
+> [!NOTE]
+> For information about non-concatenated counters, see the {{cssxref("counter", "counter()")}} function, which omits the `<string>` as a parameter.
 
 ### Formal syntax
 

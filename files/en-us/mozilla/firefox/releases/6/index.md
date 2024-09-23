@@ -84,7 +84,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 ### SVG
 
 - The {{ SVGAttr("pathLength") }} attribute is now supported.
-- SVG patterns, gradients, and filters now work correctly when loaded from [`data:` URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs).
+- SVG patterns, gradients, and filters now work correctly when loaded from [`data:` URLs](/en-US/docs/Web/URI/Schemes/data).
 
 ### MathML
 
@@ -109,7 +109,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 ### Other changes
 
 - Support for microsummaries has been removed; these were never widely used, were not very discoverable, and continuing to support them was making improvements to the Places (bookmark and history) architecture difficult.
-- WebGL now supports the [`OES_texture_float`](https://www.khronos.org/registry/OpenGL/extensions/OES/OES_texture_float.txt) extension.
+- WebGL now supports the [`OES_texture_float`](https://registry.khronos.org/OpenGL/extensions/OES/OES_texture_float.txt) extension.
 - The new _Scratchpad_ tool provides a handy place to experiment with JavaScript code.
 - The `console.trace()` method has been added to the [Console API](/en-US/docs/Web/API/Console_API) ([Firefox bug 585956](https://bugzil.la/585956)).
 
@@ -117,7 +117,8 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 
 For an overview of the changes you may need to make in order to make your add-on compatible with Firefox 6, see [Updating add-ons for Firefox 6](/en-US/docs/Mozilla/Firefox/Updating_add-ons_for_Firefox_6).
 
-> **Note:** Firefox 6 requires that binary components be recompiled, as do all major releases of Firefox. See [Binary Interfaces](/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces) for details.
+> [!NOTE]
+> Firefox 6 requires that binary components be recompiled, as do all major releases of Firefox. See [Binary Interfaces](/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces) for details.
 
 ### JavaScript code modules
 

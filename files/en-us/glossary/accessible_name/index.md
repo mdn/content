@@ -22,11 +22,22 @@ To create an association between visible content and an element or multiple text
 
 Many elements, such as sections of textual content, don't need an accessible name. All controls should have an accessible name. All images that convey information and aren't purely presentational do too.
 
-Assistive technologies will provide the user with the accessibility name property, which is the accessible name along with the element's role. While many elements don't need an accessible name, some content [roles](/en-US/docs/Web/Accessibility/ARIA/Roles) can benefit from having an accessible name. For example, a [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role) is a section of content that appears after a user activates the associated element with a [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) role. This role can be set on an element with no needed name, like the {{HTMLElement("div")}} element. The `tab` is the control and must have an accessible name. The `tabpanel` is the child (content section) of the `tab`. Adding `aria-labelledby` to the `tabpanel` is a best practice.
+Assistive technologies provide users with the accessibility name property, which includes the accessible name along with the element's role. While many elements don't need an accessible name, it's necessary to provide an accessible name to override or supplement the content of elements with specified [roles](/en-US/docs/Web/Accessibility/ARIA/Roles). For example, a [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role) is a section of content that appears after a user activates the associated element with a [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) role. This role can be set on an element with no needed name, like the {{HTMLElement("div")}} element. The `tab` is the control and must have an accessible name. The `tabpanel` is the child (content section) of the `tab`. Adding `aria-labelledby` to the `tabpanel` is a best practice.
 
 ## See also
 
 - [ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Roles)
 - [ARIA attribute](/en-US/docs/Web/Accessibility/ARIA/Attributes)
+- [Accessible Name and Description Computation 1.2 (accname)](https://w3c.github.io/accname/#mapping_additional_nd_description)
 - [Accessibility](/en-US/docs/Web/Accessibility)
 - [Learn accessibility](/en-US/docs/Learn/Accessibility)
+- [Web accessibility](https://en.wikipedia.org/wiki/Web_accessibility) on Wikipedia
+- [Web Accessibility In Mind](https://webaim.org/)
+- [ARIA](/en-US/docs/Web/Accessibility/ARIA)
+- [The W3C Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/)
+- [Accessible Rich Internet Applications (WAI-ARIA)](https://w3c.github.io/aria/)
+- Related glossary terms:
+  - {{Glossary("Accessibility")}}
+  - {{Glossary("Accessibility tree")}}
+  - {{Glossary("Accessible description")}}
+  - {{Glossary("ARIA")}}

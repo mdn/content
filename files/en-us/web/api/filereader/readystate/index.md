@@ -13,13 +13,13 @@ This will be one of the states: `EMPTY`, `LOADING`, or `DONE`.
 
 ## Value
 
-A number which is one of the three possible state constants define for the {{domxref("FileReader")}} API.
+A number which is one of the three possible state constants defined on the {{domxref("FileReader")}} interface:
 
-- `FileReader.EMPTY`
+- `FileReader.EMPTY` (0)
   - : Reader has been created, but none of the read methods have been called yet.
-- `FileReader.LOADING`
+- `FileReader.LOADING` (1)
   - : A read method has been called. A {{domxref("File")}} or {{domxref("Blob")}} is being read, and no error has occurred yet.
-- `FileReader.DONE`
+- `FileReader.DONE` (2)
   - : The read operation is complete. This could mean that: the entire {{domxref("File")}} or {{domxref("Blob")}} has been read into memory, a file read error occurred, or {{domxref("FileReader.abort()", "abort()")}} was called and the read was cancelled.
 
 ## Examples

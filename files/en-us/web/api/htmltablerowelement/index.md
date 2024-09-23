@@ -33,7 +33,8 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}_.
 
 ## Deprecated properties
 
-> **Warning:** These properties have been deprecated and should no longer be used. They are documented primarily to help understand older code bases.
+> [!WARNING]
+> These properties have been deprecated and should no longer be used. They are documented primarily to help understand older code bases.
 
 - {{domxref("HTMLTableRowElement.align")}} {{deprecated_inline}}
   - : A string containing an enumerated value reflecting the [`align`](/en-US/docs/Web/HTML/Element/tr#align) attribute. It indicates the alignment of the element's contents to the surrounding context. The possible values are `"left"`, `"right"`, and `"center"`.

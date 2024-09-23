@@ -9,7 +9,8 @@ browser-compat: css.at-rules.media.-webkit-transform-2d
 
 {{CSSRef}} {{ Non-standard_header }}
 
-> **Note:** All browsers support the [`transform`](/en-US/docs/Web/CSS/transform#browser_compatibility) property without vendor prefixes. Only WebKit (Safari), and not Chromium, based browsers supports the `-webkit-transform-2d` media feature. No browsers support `transform`, without the prefix or `2d` extension, as a media query. Use the [`@supports (transform)`](/en-US/docs/Web/CSS/@supports) feature query instead.
+> [!NOTE]
+> All browsers support the [`transform`](/en-US/docs/Web/CSS/transform#browser_compatibility) property without vendor prefixes. Only WebKit (Safari), and not Chromium, based browsers supports the `-webkit-transform-2d` media feature. No browsers support `transform`, without the prefix or `2d` extension, as a media query. Use the [`@supports (transform)`](/en-US/docs/Web/CSS/@supports) feature query instead.
 
 The **`-webkit-transform-2d`** Boolean [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) is a [WebKit extension](/en-US/docs/Web/CSS/WebKit_Extensions) whose value is `true` if vendor-prefixed CSS 2D {{cssxref("transform")}}s and non-standard vendor-prefixed media queries are supported.
 

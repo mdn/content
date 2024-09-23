@@ -143,7 +143,7 @@ This example demonstrates using the `:scope` pseudo-class in JavaScript. This ca
 const context = document.getElementById("context");
 const selected = context.querySelectorAll(":scope > div");
 
-document.getElementById("results").innerHTML = Array.prototype.map
+document.getElementById("results").textContent = Array.prototype.map
   .call(selected, (element) => `#${element.getAttribute("id")}`)
   .join(", ");
 ```

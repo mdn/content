@@ -21,12 +21,12 @@ A good example is VR rendering. Recording the rendering as a render bundle and t
 
 ## Instance properties
 
-- {{domxref("GPUComputePassEncoder.label", "label")}} {{Experimental_Inline}} {{SecureContext_Inline}}
+- {{domxref("GPURenderBundle.label", "label")}} {{Experimental_Inline}}
   - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
 
 ## Examples
 
-In the WebGPU Samples [Animometer example](https://webgpu.github.io/webgpu-samples/samples/animometer), a lot of like operations are done on many different objects simultaneously. A render bundle is encoded using the following function:
+In the WebGPU Samples [Animometer example](https://webgpu.github.io/webgpu-samples/samples/animometer/), a lot of like operations are done on many different objects simultaneously. A render bundle is encoded using the following function:
 
 ```js
 function recordRenderPass(

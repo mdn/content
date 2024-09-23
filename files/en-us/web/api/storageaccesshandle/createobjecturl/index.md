@@ -8,7 +8,8 @@ browser-compat: api.StorageAccessHandle.createObjectURL
 
 {{APIRef("Storage Access API")}}
 
-> **Note:** See {{domxref("URL.createObjectURL_static", "createObjectURL()")}} to understand usage.
+> [!NOTE]
+> See {{domxref("URL.createObjectURL_static", "createObjectURL()")}} to understand usage.
 
 ## Syntax
 
@@ -29,7 +30,8 @@ A string containing an unpartitioned object URL that can be used to reference th
 
 - `SecurityError` {{domxref("DomException")}}
   - : Thrown if access was not granted.
-- See {{domxref("URL.createObjectURL_static", "createObjectURL()")}}
+
+See {{domxref("URL.createObjectURL_static", "createObjectURL()")}}
 
 ## Examples
 
@@ -45,7 +47,8 @@ document.requestStorageAccess({ createObjectURL: true }).then(
 );
 ```
 
-> **Note:** See [Using the Storage Access API](/en-US/docs/Web/API/Storage_Access_API/Using) for a more complete example.
+> [!NOTE]
+> See [Using the Storage Access API](/en-US/docs/Web/API/Storage_Access_API/Using) for a more complete example.
 
 ## Specifications
 

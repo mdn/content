@@ -143,7 +143,7 @@ Here's some more information about the metadata we're using:
 
 - [`standalone`](https://angular.io/api/core/Component#standalone): Describe whether the component requires a [NgModule](https://angular.io/guide/ngmodules#the-basic-ngmodule) or not.
   Your app will directly manage template dependencies (components, directives, etc.) using imports when it's a standalone.
-- [`selector`](https://angular.io/api/core/Directive#selector): Tells you the the CSS selector that you use in a template to place this component. Here it is `'app-root'`.
+- [`selector`](https://angular.io/api/core/Directive#selector): Tells you the CSS selector that you use in a template to place this component. Here it is `'app-root'`.
   In the `index.html`, within the `body` tag, the Angular CLI added `<app-root></app-root>` when generating your application.
   You use all component selectors in the same way by adding them to other component HTML templates.
 - [`templateUrl`](https://angular.io/api/core/Component#templateurl): Specifies the HTML file to associate with this component.

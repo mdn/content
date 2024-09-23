@@ -19,27 +19,27 @@ The primary uses for the `WebAssembly` object are:
 - Creating new memory and table instances via the [`WebAssembly.Memory()`](/en-US/docs/WebAssembly/JavaScript_interface/Memory)/[`WebAssembly.Table()`](/en-US/docs/WebAssembly/JavaScript_interface/Table) constructors.
 - Providing facilities to handle errors that occur in WebAssembly via the [`WebAssembly.CompileError()`](/en-US/docs/WebAssembly/JavaScript_interface/CompileError)/[`WebAssembly.LinkError()`](/en-US/docs/WebAssembly/JavaScript_interface/LinkError)/[`WebAssembly.RuntimeError()`](/en-US/docs/WebAssembly/JavaScript_interface/RuntimeError) constructors.
 
-## Constructor properties
+## Interfaces
 
-- [`WebAssembly.CompileError()`](/en-US/docs/WebAssembly/JavaScript_interface/CompileError/CompileError)
+- [`WebAssembly.CompileError`](/en-US/docs/WebAssembly/JavaScript_interface/CompileError)
   - : Indicates an error during WebAssembly decoding or validation.
-- [`WebAssembly.Global()`](/en-US/docs/WebAssembly/JavaScript_interface/Global/Global)
+- [`WebAssembly.Global`](/en-US/docs/WebAssembly/JavaScript_interface/Global)
   - : Represents a global variable instance, accessible from both JavaScript and importable/exportable across one or more [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) instances. This allows dynamic linking of multiple modules.
-- [`WebAssembly.Instance()`](/en-US/docs/WebAssembly/JavaScript_interface/Instance/Instance)
+- [`WebAssembly.Instance`](/en-US/docs/WebAssembly/JavaScript_interface/Instance)
   - : Is a stateful, executable instance of a [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module)
-- [`WebAssembly.LinkError()`](/en-US/docs/WebAssembly/JavaScript_interface/LinkError/LinkError)
+- [`WebAssembly.LinkError`](/en-US/docs/WebAssembly/JavaScript_interface/LinkError)
   - : Indicates an error during module instantiation (besides [traps](https://webassembly.github.io/simd/core/intro/overview.html#trap) from the start function).
-- [`WebAssembly.Memory()`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/Memory)
+- [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory)
   - : An object whose [`buffer`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/buffer) property is a resizable {{jsxref("ArrayBuffer")}} that holds the raw bytes of memory accessed by a WebAssembly `Instance`.
-- [`WebAssembly.Module()`](/en-US/docs/WebAssembly/JavaScript_interface/Module/Module)
+- [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module)
   - : Contains stateless WebAssembly code that has already been compiled by the browser and can be efficiently [shared with Workers](/en-US/docs/Web/API/Worker/postMessage), and instantiated multiple times.
-- [`WebAssembly.RuntimeError()`](/en-US/docs/WebAssembly/JavaScript_interface/RuntimeError/RuntimeError)
+- [`WebAssembly.RuntimeError`](/en-US/docs/WebAssembly/JavaScript_interface/RuntimeError)
   - : Error type that is thrown whenever WebAssembly specifies a [trap](https://webassembly.github.io/simd/core/intro/overview.html#trap).
-- [`WebAssembly.Table()`](/en-US/docs/WebAssembly/JavaScript_interface/Table/Table)
+- [`WebAssembly.Table`](/en-US/docs/WebAssembly/JavaScript_interface/Table)
   - : An array-like structure representing a WebAssembly Table, which stores [references](https://webassembly.github.io/spec/core/syntax/types.html#syntax-reftype), such as function references.
-- [`WebAssembly.Tag()`](/en-US/docs/WebAssembly/JavaScript_interface/Tag/Tag)
+- [`WebAssembly.Tag`](/en-US/docs/WebAssembly/JavaScript_interface/Tag)
   - : An object that represents a type of WebAssembly exception.
-- [`WebAssembly.Exception()`](/en-US/docs/WebAssembly/JavaScript_interface/Exception/Exception)
+- [`WebAssembly.Exception`](/en-US/docs/WebAssembly/JavaScript_interface/Exception)
   - : A WebAssembly exception object that can be thrown, caught, and rethrown both within and across WebAssembly/JavaScript boundaries.
 
 ## Static methods
@@ -59,10 +59,12 @@ The primary uses for the `WebAssembly` object are:
 
 ### Stream a Wasm module then compile and instantiate it
 
-The following example (see our [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/instantiate-streaming.html) demo on GitHub, and [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html) also) directly streams a Wasm module from an underlying source then compiles and instantiates it, the promise fulfilling with a `ResultObject`. Because the `instantiateStreaming()` function accepts a promise for a [`Response`](/en-US/docs/Web/API/Response) object, you can directly pass it a [`fetch()`](/en-US/docs/Web/API/fetch) call, and it will pass the response into the function when it fulfills.
+The following example (see our [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/instantiate-streaming.html) demo on GitHub, and [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html) also) directly streams a Wasm module from an underlying source then compiles and instantiates it, the promise fulfilling with a `ResultObject`. Because the `instantiateStreaming()` function accepts a promise for a [`Response`](/en-US/docs/Web/API/Response) object, you can directly pass it a [`fetch()`](/en-US/docs/Web/API/Window/fetch) call, and it will pass the response into the function when it fulfills.
 
 ```js
-const importObject = { imports: { imported_func: (arg) => console.log(arg) } };
+const importObject = {
+  my_namespace: { imported_func: (arg) => console.log(arg) },
+};
 
 WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
   (obj) => obj.instance.exports.exported_func(),

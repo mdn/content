@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.ServiceWorker.error_event
 ---
 
-{{APIRef("Service Workers API")}}{{SecureContext_Header}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The `error` event fires whenever an error occurs in the service worker.
 

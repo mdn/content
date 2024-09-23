@@ -35,7 +35,7 @@ font-palette: palette-mix(in hsl shorter hue, --blues, --yellows)
 
 Functional notation:
 
-```text
+```plain
 palette-mix(method, palette1 [p1], palette2 [p2])
 ```
 

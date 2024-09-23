@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.HTMLDialogElement.close_event
 ---
 
-{{ APIRef() }}
+{{APIRef}}
 
 The `close` event is fired on an `HTMLDialogElement` object when the {{htmlelement("dialog")}} it represents has been closed.
 
@@ -90,3 +90,4 @@ closeButton.addEventListener("click", () => {
 ## See also
 
 - HTML [`<dialog>`](/en-US/docs/Web/HTML/Element/dialog) element
+- The [`Event`](/en-US/docs/Web/API/Event) interface

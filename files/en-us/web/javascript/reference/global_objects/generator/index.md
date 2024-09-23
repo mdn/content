@@ -15,7 +15,7 @@ The **`Generator`** object is returned by a {{jsxref("Statements/function*", "ge
 
 ## Constructor
 
-The `Generator` constructor is not available globally. Instances of `Generator` must be returned from [generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*):
+There's no JavaScript entity that corresponds to the `Generator` constructor. Instances of `Generator` must be returned from [generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*):
 
 ```js
 function* generator() {
@@ -31,7 +31,7 @@ console.log(gen.next().value); // 2
 console.log(gen.next().value); // 3
 ```
 
-In fact, there's no JavaScript entity that corresponds to the `Generator` constructor. There's only a hidden object which is the prototype object shared by all objects created by generator functions. This object is often stylized as `Generator.prototype` to make it look like a class, but it should be more appropriately called [`GeneratorFunction.prototype.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction), because `GeneratorFunction` is an actual JavaScript entity.
+There's only a hidden object which is the prototype object shared by all objects created by generator functions. This object is often stylized as `Generator.prototype` to make it look like a class, but it should be more appropriately called {{jsxref("GeneratorFunction.prototype.prototype")}}, because `GeneratorFunction` is an actual JavaScript entity. To understand the prototype chain of `Generator` instances, see {{jsxref("GeneratorFunction.prototype.prototype")}}.
 
 ## Instance properties
 
@@ -43,8 +43,8 @@ These properties are defined on `Generator.prototype` and shared by all `Generat
 
     > **Note:** `Generator` objects do not store a reference to the generator function that created them.
 
-- `Generator.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Generator"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `Generator.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Generator"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 

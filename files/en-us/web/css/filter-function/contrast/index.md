@@ -165,10 +165,16 @@ This example shows three images: the image with a `contrast()` filter function a
   <tbody>
     <tr>
       <td>
-        <img style="filter: contrast(200%)" src="flag.jpg" alt="Pride flag" />
+        <img
+          style="filter: contrast(200%)"
+          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+          alt="Pride flag" />
       </td>
       <td>
-        <img class="svgFilterLive" src="flag.jpg" alt="Pride flag" />
+        <img
+          class="svgFilterLive"
+          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+          alt="Pride flag" />
         <svg
           xmlns="http://www.w3.org/2000/svg"
           id="svg"
@@ -187,7 +193,9 @@ This example shows three images: the image with a `contrast()` filter function a
         </svg>
       </td>
       <td>
-        <img src="flag.jpg" alt="Pride flag" />
+        <img
+          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+          alt="Pride flag" />
       </td>
     </tr>
   </tbody>

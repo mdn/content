@@ -43,7 +43,8 @@ absolute units (such as `px` or `cm`), or the `vw`
 unit, which lets you specify the width as a percentage of the viewport width
 (`1vw` being 1% of the viewport width).
 
-> **Note:** The source size value must _not_ be specified as a
+> [!NOTE]
+> The source size value must _not_ be specified as a
 > percentage of the container size; that is, lengths such as `50%` or
 > `100%` are not allowed, as there would be uncertainty as to what the
 > specified value is a percentage of.
@@ -127,7 +128,7 @@ article img {
 
 The JavaScript code handles the two buttons that let you toggle the third width option
 between 40em and 50em; this is done by handling the {{domxref("Element.click_event", "click")}}
-event, using the JavaScript string object {{jsxref("String.replace", "replace()")}} method to replace the relevant portion of the `sizes` string.
+event, using the JavaScript string {{jsxref("String.replace", "replace()")}} method to replace the relevant portion of the `sizes` string.
 
 ```js
 const image = document.querySelector("article img");

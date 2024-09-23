@@ -16,6 +16,7 @@ The most prominent `.arpa` domains include `in-addr.arpa` and `ip6.arpa`, which 
 
 ## See also
 
-- {{Glossary("ARPANET")}}
+- Related glossary terms:
+  - {{Glossary("ARPANET")}}
 - [Official website](https://www.iana.org/domains/arpa)
 - [.arpa](https://en.wikipedia.org/wiki/.arpa) on Wikipedia

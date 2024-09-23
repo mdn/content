@@ -65,4 +65,5 @@ In summary, then, we start with an empty Call Stack. Whenever we invoke a functi
 ## See also
 
 - [Call stack](https://en.wikipedia.org/wiki/Call_stack) on Wikipedia
-- {{Glossary("Function")}}
+- Related glossary terms:
+  - {{Glossary("Function")}}

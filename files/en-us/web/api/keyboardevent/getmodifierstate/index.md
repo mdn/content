@@ -186,7 +186,8 @@ When `getModifierState()` returns true on Firefox?
 
 ## `"Accel"` virtual modifier
 
-> **Note:** The `"Accel"` virtual modifier has
+> [!NOTE]
+> The `"Accel"` virtual modifier has
 > been effectively **deprecated** in current drafts of the DOM3 Events
 > specification.
 
@@ -280,7 +281,8 @@ function handleKeyboardEvent(event) {
 }
 ```
 
-> **Note:** Although this example uses `.getModifierState()` with `"Alt"`,
+> [!NOTE]
+> Although this example uses `.getModifierState()` with `"Alt"`,
 > `"Control"`, `"Meta"` and `"Shift"`, using
 > `event.altKey`, `event.ctrlKey`, `event.metaKey` and
 > `event.shiftKey` may be more preferable.

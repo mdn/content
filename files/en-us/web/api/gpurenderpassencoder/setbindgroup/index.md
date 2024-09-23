@@ -22,7 +22,7 @@ setBindGroup(index, bindGroup, dynamicOffsets, dynamicOffsetsStart,
              dynamicOffsetsLength)
 ```
 
-#### Parameters
+### Parameters
 
 - `index`
   - : The index to set the bind group at. This matches the `n` index value of the corresponding [`@group(n)`](https://gpuweb.github.io/gpuweb/wgsl/#attribute-group) attribute in the shader code ({{domxref("GPUShaderModule")}}) used in the related pipeline.
@@ -63,7 +63,7 @@ The following criteria must be met when calling **`setBindGroup()`**, otherwise 
 
 ## Examples
 
-In the WebGPU Samples [Textured Cube example](https://webgpu.github.io/webgpu-samples/samples/texturedCube), `setBindGroup()` is used to bind the `uniformBindGroup` to index position 0. Check out the example for the full context.
+In the WebGPU Samples [Textured Cube example](https://webgpu.github.io/webgpu-samples/samples/texturedCube/), `setBindGroup()` is used to bind the `uniformBindGroup` to index position 0. Check out the example for the full context.
 
 ```js
 // ...
@@ -80,7 +80,8 @@ device.queue.submit([commandEncoder.finish()]);
 // ...
 ```
 
-> **Note:** Study the other [WebGPU Samples](https://webgpu.github.io/webgpu-samples) for more examples of `setBindGroup()` usage.
+> [!NOTE]
+> Study the other [WebGPU Samples](https://webgpu.github.io/webgpu-samples/) for more examples of `setBindGroup()` usage.
 
 ## Specifications
 

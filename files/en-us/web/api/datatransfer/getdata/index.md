@@ -44,7 +44,7 @@ A string representing the drag data for the specified `format`. If the drag oper
 ## Examples
 
 This example shows the use of the {{domxref("DataTransfer")}} object's
-{{domxref("DataTransfer.getData()","getData()")}} and
+`getData()` and
 {{domxref("DataTransfer.setData()","setData()")}} methods.
 
 ### HTML

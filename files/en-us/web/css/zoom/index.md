@@ -148,7 +148,7 @@ div#c {
 
 ### Creating a zoom control
 
-In this example a `select` field is used to change the zoom level of the .
+In this example a `select` field is used to change the zoom level of the element.
 
 #### HTML
 

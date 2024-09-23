@@ -419,7 +419,7 @@ over [iterable objects](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols
 iteration hook with statements to be executed for the value of each distinct property.
 
 ```js-nolint
-for (variable of object)
+for (variable of iterable)
   statement
 ```
 

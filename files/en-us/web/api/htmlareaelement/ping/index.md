@@ -12,7 +12,8 @@ The **`ping`** property of the {{domxref("HTMLAreaElement")}} interface is a spa
 
 It reflects the `ping` attribute of the {{HTMLElement("area")}} element.
 
-> **Note:** This property is not effective in Firefox and its usage may be limited due to privacy and security concerns.
+> [!NOTE]
+> This property is not effective in Firefox and its usage may be limited due to privacy and security concerns.
 
 ## Example
 

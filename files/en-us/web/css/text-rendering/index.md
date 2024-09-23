@@ -7,11 +7,12 @@ browser-compat: css.properties.text-rendering
 
 {{CSSRef}}
 
-The **`text-rendering`** CSS property provides information to the rendering engine about what to optimize for when rendering text.
+The **`text-rendering`** [CSS](/en-US/docs/Web/CSS) property provides information to the rendering engine about what to optimize for when rendering text.
 
 The browser makes trade-offs among speed, legibility, and geometric precision.
 
-> **Note:** The `text-rendering` property is an SVG property that is not defined in any CSS standard. However, Gecko and WebKit browsers let you apply this property to HTML and XML content on Windows, macOS, and Linux.
+> [!NOTE]
+> The `text-rendering` property is an SVG property that is not defined in any CSS standard. However, Gecko and WebKit browsers let you apply this property to HTML and XML content on Windows, macOS, and Linux.
 
 One very visible effect is `optimizeLegibility`, which enables ligatures (ff, fi, fl, etc.) in text smaller than 20px for some fonts (for example, Microsoft's _Calibri_, _Candara_, _Constantia_, and _Corbel_, or the _DejaVu_ font family).
 
@@ -48,7 +49,8 @@ text-rendering: unset;
 
     But the `geometricPrecision` property — when fully supported by the rendering engine — lets you scale your text fluidly. For large scale factors, you might see less-than-beautiful text rendering, but the size is what you would expect—neither rounded up nor down to the nearest font size supported by Windows or Linux.
 
-    > **Note:** WebKit precisely applies the specified value, but Gecko treats the value the same as `optimizeLegibility`.
+    > [!NOTE]
+    > WebKit precisely applies the specified value, but Gecko treats the value the same as `optimizeLegibility`.
 
 ## Formal definition
 

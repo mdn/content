@@ -20,7 +20,8 @@ In the example the transition takes 1 second, you can try changing this to see t
 
 {{EmbedGHLiveSample("css-examples/howto/transition-button.html", '100%', 720)}}
 
-> **Note:** The {{cssxref("transition")}} property is a shorthand for {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, and {{cssxref("transition-timing-function")}}. See the pages for these properties on MDN to find ways to tweak your transitions.
+> [!NOTE]
+> The {{cssxref("transition")}} property is a shorthand for {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, and {{cssxref("transition-timing-function")}}. See the pages for these properties on MDN to find ways to tweak your transitions.
 
 ## See also
 

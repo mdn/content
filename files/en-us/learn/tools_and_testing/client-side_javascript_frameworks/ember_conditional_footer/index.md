@@ -73,11 +73,11 @@ To get the footer working, we need to implement the following three areas of fun
 
    ```js
    get incomplete() {
-     return this.todos.filterBy('isCompleted', false);
+     return this.todos.filter((todo) => !todo.isCompleted);
    }
    ```
 
-   Using Ember's [`ArrayProxy.filterBy()`](https://api.emberjs.com/ember/4.2/classes/ArrayProxy/methods/filterBy?anchor=filterBy) method, we're able to easily filter Objects in our array based on simple equals conditions. Here we're asking for all the todo items where the `isCompleted` property is equal to `false`, and because `isCompleted` is `@tracked` in our `Todo` object, this getter will re-compute when the value changes on an Object in the array.
+   Using the [`filter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) method, we're asking for all the todo items where the `isCompleted` property is equal to `false`, and because `isCompleted` is `@tracked` in our `Todo` object, this getter will re-compute when the value changes on an Object in the array.
 
 4. Next, add the following action underneath the existing `add(text)` action:
 
@@ -239,13 +239,14 @@ Finally, we will edit the `todo.hbs` template such that the checkbox's value is 
    >
    ```
 
-   > **Note:** The above snippet uses a new Ember-specific keyword — `fn`. `fn` allows for [partial application](https://en.wikipedia.org/wiki/Partial_application), which is similar to [`bind`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind), but it never changes the invocation context; this is equivalent to using `bind` with a `null` first argument.
+   > [!NOTE]
+   > The above snippet uses a new Ember-specific keyword — `fn`. `fn` allows for [partial application](https://en.wikipedia.org/wiki/Partial_application), which is similar to [`bind`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind), but it never changes the invocation context; this is equivalent to using `bind` with a `null` first argument.
 
 Try restarting the dev server and going to `localhost:4200` again, and you'll now see that we have a fully-operational "todos left" counter and Clear button:
 
 ![todos being marked as complete, and cleared](todos-being-marked-completed-and-cleared.gif)
 
-If you're asking yourself why we're not just doing the toggle on the component, since the function is entirely self-contained and not at all needing anything from the service, then you are 100% right to ask that question! However, because \*eventually\*, we'll want to persist or sync all changes to the todos list to [local storage](/en-US/docs/Web/API/Window/localStorage) (see the [final version of the app](https://nullvoxpopuli.github.io/ember-todomvc-tutorial/)), it makes sense to have all persistent-state-changing operations be in the same place.
+If you're asking yourself why we're not just doing the toggle on the component, since the function is entirely self-contained and not at all needing anything from the service, then you are 100% right to ask that question! However, because _eventually_, we'll want to persist or sync all changes to the todos list to [local storage](/en-US/docs/Web/API/Window/localStorage) (see the [final version of the app](https://nullvoxpopuli.github.io/ember-todomvc-tutorial/)), it makes sense to have all persistent-state-changing operations be in the same place.
 
 ## Summary
 

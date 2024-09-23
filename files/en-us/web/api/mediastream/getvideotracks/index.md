@@ -29,7 +29,8 @@ in the media stream. Video tracks are those tracks whose
 {{domxref("MediaStreamTrack.kind", "kind")}} property is `video`. The array
 is empty if the stream contains no video tracks.
 
-> **Note:** The order of the tracks is not defined by the specification,
+> [!NOTE]
+> The order of the tracks is not defined by the specification,
 > and may not be the same from one call to `getVideoTracks()` to another.
 
 ## Examples

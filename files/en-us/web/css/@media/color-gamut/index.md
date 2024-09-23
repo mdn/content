@@ -14,7 +14,7 @@ The **`color-gamut`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web
 The `color-gamut` feature is specified as one of the following {{glossary("color space", "color spaces")}} as keyword values:
 
 - `srgb`
-  - : The user agent and the output device can support approximately the [sRGB](/en-US/docs/Glossary/Color_space#srgb_color_spaces) gamut or more. This includes the vast majority of color displays.
+  - : The user agent and the output device can support approximately the [sRGB](/en-US/docs/Glossary/Color_space#srgb) gamut or more. This includes the vast majority of color displays.
 - `p3`
   - : The user agent and the output device can support approximately the gamut specified by the [Display P3](https://www.color.org/chardata/rgb/DisplayP3.xalter) color space or more. The P3 gamut is larger than and includes the sRGB gamut.
 - `rec2020`

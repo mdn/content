@@ -20,7 +20,7 @@ Typically, the pagination component will be centered horizontally underneath the
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/pagination.html", '100%', 720)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/pagination--download.html)
 

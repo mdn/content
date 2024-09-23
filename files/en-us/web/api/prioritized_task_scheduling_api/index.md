@@ -204,7 +204,8 @@ This allows you to avoid blocking the main thread when the user is actively inte
 - {{domxref("TaskPriorityChangeEvent")}}
   - : The interface for the {{domxref("TaskSignal/prioritychange_event","prioritychange")}} event, which is sent when the priority for a task is changed.
 
-> **Note:** If the [task priority](#task_priorities) never needs to be changed, you can use an {{domxref("AbortController")}} and its associated {{domxref("AbortSignal")}} instead of {{domxref("TaskController")}} and {{domxref("TaskSignal")}}.
+> [!NOTE]
+> If the [task priority](#task_priorities) never needs to be changed, you can use an {{domxref("AbortController")}} and its associated {{domxref("AbortSignal")}} instead of {{domxref("TaskController")}} and {{domxref("TaskSignal")}}.
 
 ### Extensions to other interfaces
 
@@ -213,7 +214,7 @@ This allows you to avoid blocking the main thread when the user is actively inte
 - {{domxref("Window.scheduler")}} and {{domxref("WorkerGlobalScope.scheduler")}}
   - : These properties are the entry points for using the `Scheduler.postTask()` method in a window or a worker scope, respectively.
 
-## Task scheduling examples
+## Examples
 
 Note that the examples below use `mylog()` to write to a text area.
 The code for the log area and method is generally hidden to not distract from more relevant code.
@@ -375,7 +376,8 @@ The output below shows that the tasks are executed in priority order, and then d
 [Task priorities](#task_priorities) can also take their initial value from a {{domxref("TaskSignal")}} passed to `postTask()` in the optional second argument.
 If set in this way, the priority of the task [can then be changed](#mutable_and_immutable_task_priority) using the controller associated with the signal.
 
-> **Note:** Setting and changing task priorities using a signal only works when the `options.priority` argument to `postTask()` is not set, and when the `options.signal` is a {{domxref("TaskSignal")}} (and not an {{domxref("AbortSignal")}}).
+> [!NOTE]
+> Setting and changing task priorities using a signal only works when the `options.priority` argument to `postTask()` is not set, and when the `options.signal` is a {{domxref("TaskSignal")}} (and not an {{domxref("AbortSignal")}}).
 
 The code below first shows how to create a {{domxref("TaskController")}}, setting the initial priority of its signal to `user-blocking` in the {{domxref("TaskController.TaskController", "TaskController()")}} constructor.
 

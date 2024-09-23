@@ -9,7 +9,8 @@ browser-compat: html.global_attributes.lang
 
 The **`lang`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) helps define the language of an element: the language that non-editable elements are written in, or the language that the editable elements should be written in by the user. The attribute contains a single "language tag" in the format defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
 
-> **Note:** The default value of `lang` is the empty string, which means that the language is unknown. Therefore, it is recommended to always specify an appropriate value for this attribute.
+> [!NOTE]
+> The default value of `lang` is the empty string, which means that the language is unknown. Therefore, it is recommended to always specify an appropriate value for this attribute.
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-lang.html","tabbed-shorter")}}
 
@@ -130,6 +131,10 @@ For example, the language menu on this site (MDN) includes a **`lang`** attribut
   </ul>
 </div>
 ```
+
+## Inheritance
+
+If an element has no `lang` attribute, it will inherit the `lang` value set on its [parent node](/en-US/docs/Glossary/Node/DOM), which in turn may inherit it from its parent, and so on.
 
 ## Specifications
 

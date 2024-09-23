@@ -45,7 +45,7 @@ speak-as: <counter-style-name>;
 - `<counter-style-name>`
   - : The name of another counter style, specified as a {{cssxref("&lt;custom-ident&gt;")}}. If included, the counter will be spoken out in the form specified in that counter style, kind of like specifying the {{cssxref("@counter-style/fallback", "fallback")}} descriptor. If the specified style does not exist, `speak-as` defaults to `auto`.
 
-## Accessibility concerns
+## Accessibility
 
 Assistive technology support is very limited for the `speak-as` property. Do not rely on it to convey information critical to understanding the page's purpose.
 

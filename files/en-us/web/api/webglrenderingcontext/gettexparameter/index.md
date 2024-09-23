@@ -64,7 +64,7 @@ getTexParameter(target, pname)
             <code>gl.LINEAR</code>, <code>gl.NEAREST</code>,
             <code>gl.NEAREST_MIPMAP_NEAREST</code>,
             <code>gl.LINEAR_MIPMAP_NEAREST</code>,
-            <code>gl.NEAREST</code>_MIPMAP_LINEAR (default value),
+            <code>gl.NEAREST_MIPMAP_LINEAR</code> (default value),
             <code>gl.LINEAR_MIPMAP_LINEAR</code>.
           </td>
         </tr>

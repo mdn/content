@@ -15,7 +15,8 @@ A [cookie](/en-US/docs/Web/HTTP/Cookies) is associated with a particular domain 
 - If the cookie domain and scheme match the current page the user is looking at (the URL shown in the browser's address bar), the cookie is considered to be from the same site as the page, and is referred to as a _first-party cookie_.
 - If the domain and scheme are different, the cookie is not considered to be from the same site, and is referred to as a _third-party cookie_.
 
-> **Note:** Third-party cookies are sometimes referred to as _cross-site cookies_. This is arguably a more accurate name, as _third-party cookies_ imply ownership by a third-party company or organization. However, the behavior and potential issues are the same whether or not you own all the involved sites. For example, a site might access resources such as images from a different domain that they own.
+> [!NOTE]
+> Third-party cookies are sometimes referred to as _cross-site cookies_. This is arguably a more accurate name, as _third-party cookies_ imply ownership by a third-party company or organization. However, the behavior and potential issues are the same whether or not you own all the involved sites. For example, a site might access resources such as images from a different domain that they own.
 
 A first-party cookie may be set when a user first visits a page, follows an internal link to another page on the same site, or requests a resource residing on the same site (for example, an embedded image, web font, or JavaScript file).
 
@@ -56,7 +57,8 @@ Individually, such cases are bad enough, but it gets worse. Third-party servers 
 
 In such cases, third-party cookies are referred to as _tracking cookies_.
 
-> **Note:** User information gained through illegitimate means is also often sold to other third parties, multiplying the problem further.
+> [!NOTE]
+> User information gained through illegitimate means is also often sold to other third parties, multiplying the problem further.
 
 Legislation such as the [General Data Privacy Regulation](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation) (GDPR) in the European Union and the [California Consumer Privacy Act](https://www.oag.ca.gov/privacy/ccpa) (CCPA) have helped by making it a legal requirement for companies to be transparent about the cookies they set and the information they collect. Examples include asking customers to opt into such data collection, allowing them to see what data a company holds on them, and delete the data if they wish. However, it is still not always clear to customers how their data is used.
 
@@ -72,7 +74,8 @@ Browser vendors know that users don't like the behavior described above, and as 
 
 It is possible to allow usage of third-party cookies on a case-by-case basis in Firefox via browser settings. In Safari however, control is more limited — you can turn off cross-site tracking prevention, but allowing access to third-party cookies per frame can only be done at the code level, via the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
 
-> **Note:** Third-party cookies (or just tracking cookies) may also be blocked by browser extensions.
+> [!NOTE]
+> Third-party cookies (or just tracking cookies) may also be blocked by browser extensions.
 
 Cookie blocking can cause some third-party components (such as social media widgets) not to function as intended. As browsers impose further restrictions on third-party cookies, developers should start to look at ways to reduce their reliance on them: see [Replacing third-party cookies](#replacing_third-party_cookies).
 
@@ -88,15 +91,16 @@ However, it is no good if you want to embed cross-site content across multiple s
 Set-Cookie: widget_session=7yjgj57e4n3d; SameSite=None; Secure; HttpOnly
 ```
 
-Note that if `SameSite=None` is set then the `Secure` attribute must also be set — `SameSite=None` requires a _secure context_. In the above example we have also set the `HttpOnly` attribute, to disable JavaScript access to the cookie (e.g. via {{domxref("Document.cookie")}}). Cookies that persist sensitive information should always have the `HttpOnly` attribute set — it would be really insecure to make them available to JavaScript. This precaution helps mitigate cross-site scripting ([XSS](</en-US/docs/Web/Security/Types_of_attacks#cross-site_scripting_(xss)>)) attacks.
+Note that if `SameSite=None` is set then the `Secure` attribute must also be set — `SameSite=None` requires a _secure context_. In the above example we have also set the `HttpOnly` attribute, to disable JavaScript access to the cookie (e.g. via {{domxref("Document.cookie")}}). Cookies that persist sensitive information should always have the `HttpOnly` attribute set — it would be really insecure to make them available to JavaScript. This precaution helps mitigate cross-site scripting ([XSS](/en-US/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss)) attacks.
 
-> **Note:** Cookies that are used for sensitive information should also have a short [lifetime](/en-US/docs/Web/HTTP/Cookies#removal_defining_the_lifetime_of_a_cookie).
+> [!NOTE]
+> Cookies that are used for sensitive information should also have a short [lifetime](/en-US/docs/Web/HTTP/Cookies#removal_defining_the_lifetime_of_a_cookie).
 
 ### Transitioning from third-party cookies
 
 There are multiple strategies to help sites minimise breakage in browsers where third-party cookies are blocked:
 
-1. Audit your third-party cookie usage. Cookies must have the `SameSite=None` attribute set to be used in a cross-site context. You can therefore identify third-party cookies by searching for `SameSite=None` in your code, or checking for stored `SameSite=None` cookies in your browser DevTools, for example in the [Firefox Storage Inspector](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/). Chrome's [Issues panel](https://developer.chrome.com/docs/devtools/issues/) also [reports issues with third-party cookie blocking](https://developers.google.com/privacy-sandbox/3pcd/prepare/audit-cookies#chrome-dev-tools) along with a list of affected cookies.
+1. Audit your third-party cookie usage. Cookies must have the `SameSite=None` attribute set to be used in a cross-site context. You can therefore identify third-party cookies by searching for `SameSite=None` in your code, or checking for stored `SameSite=None` cookies in your browser DevTools, for example in the [Firefox Storage Inspector](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/). Chrome's [Issues panel](https://developer.chrome.com/docs/devtools/issues/) also [reports issues with third-party cookie blocking](https://developers.google.com/privacy-sandbox/cookies/prepare/audit-cookies#chrome-dev-tools) along with a list of affected cookies.
 2. Test your functionality with third-party cookies blocked, to see what breaks. You might find that some cookies are no longer needed.
 3. Initially, at least, you could make your code more resilient so that it provides a less personalized experience when third-party cookie data is not available rather than breaking it altogether. Follow the principles of [graceful degradation](/en-US/docs/Glossary/Graceful_degradation).
 4. Gather data via alternative means such as user surveys or quizzes, or look at data you already have to infer trends (for example, product order histories).
@@ -113,10 +117,10 @@ Several features are available to developers who wish to stop using third-party 
 You can start to explore the different features available in Google's [Privacy Sandbox](/en-US/docs/Web/Privacy/Privacy_sandbox) project to see if they fit your use case (these are currently experimental, and Chromium-only):
 
 - [Federated Credential Management](/en-US/docs/Web/API/FedCM_API) (FedCM) API: Enables federated identity services allowing users to sign in to multiple sites and services.
-- [Private State Tokens](https://developer.chrome.com/docs/privacy-sandbox/private-state-tokens/): Enables anti-fraud and anti-spam by exchanging limited, non-identifying information across sites.
+- [Private State Tokens](https://developers.google.com/privacy-sandbox/protections/private-state-tokens): Enables anti-fraud and anti-spam by exchanging limited, non-identifying information across sites.
 - [Topics API](/en-US/docs/Web/API/Topics_API): Enables interest-based advertising and content personalization.
-- [Protected Audience API](https://developer.chrome.com/docs/privacy-sandbox/protected-audience/): Use data from one app or site to help select an ad when the user is visiting another app or site.
-- [Attribution Reporting API](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/): Enables measurement of ad impressions and conversions.
+- [Protected Audience API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience): Use data from one app or site to help select an ad when the user is visiting another app or site.
+- [Attribution Reporting API](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting): Enables measurement of ad impressions and conversions.
 
 ## See also
 

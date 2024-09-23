@@ -8,13 +8,14 @@ browser-compat: api.HTMLTableColElement.span
 
 {{ APIRef("HTML DOM") }}
 
-The **`span`** read-only property of the {{domxref("HTMLTableColElement")}} interface represents the number of columns this {{htmlelement("col")}} or {{htmlelement("colgroup")}} must span; this lets the column occupy space across multiple columns of the table. It reflects the [`span`](/en-US/docs/Web/HTML/Element/col#colspan) attribute.
+The **`span`** read-only property of the {{domxref("HTMLTableColElement")}} interface represents the number of columns this {{htmlelement("col")}} or {{htmlelement("colgroup")}} must span; this lets the column occupy space across multiple columns of the table. It reflects the [`span`](/en-US/docs/Web/HTML/Element/col#span) attribute.
 
 ## Value
 
 A positive number representing the number of columns.
 
-> **Note:** When setting a new value, the value is _clamped_ to the nearest strictly positive number (up to 1000).
+> [!NOTE]
+> When setting a new value, the value is _clamped_ to the nearest strictly positive number (up to 1000).
 
 ## Examples
 
@@ -74,7 +75,7 @@ button {
 }
 ```
 
-### Javascript
+### JavaScript
 
 ```js
 // Obtain relevant interface elements

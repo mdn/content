@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("Touch Events")}}
 
-Today, most Web content is designed for keyboard and mouse input. However, devices with touch screens (especially portable devices) are mainstream and Web applications can either directly process touch-based input by using {{domxref("Touch_events","Touch Events")}} or the application can use _interpreted mouse events_ for the application input. A disadvantage to using mouse events is that they do not support concurrent user input, whereas touch events support multiple simultaneous inputs (possibly at different locations on the touch surface), thus enhancing user experiences.
+Today, most Web content is designed for keyboard and mouse input. However, devices with touch screens (especially portable devices) are mainstream and Web applications can either directly process touch-based input by using [touch events](/en-US/docs/Web/API/TouchEvent) or the application can use _interpreted mouse events_ for the application input. A disadvantage to using mouse events is that they do not support concurrent user input, whereas touch events support multiple simultaneous inputs (possibly at different locations on the touch surface), thus enhancing user experiences.
 
 The touch events interfaces support application specific single and multi-touch interactions such as a two-finger gesture. A multi-touch interaction starts when a finger (or stylus) first touches the contact surface. Other fingers may subsequently touch the surface and optionally move across the touch surface. The interaction ends when the fingers are removed from the surface. During this interaction, an application receives touch events during the start, move, and end phases. The application may apply its own semantics to the touch inputs.
 
@@ -45,7 +45,7 @@ Browsers typically dispatch _emulated_ mouse and click events when there is only
 
 ## Basic steps
 
-This section contains a basic usage of using the above interfaces. See the {{domxref("Touch_events","Touch Events Overview")}} for a more detailed example.
+This section contains a basic usage of using the above interfaces. See the [touch events overview](/en-US/docs/Web/API/Touch_events) for a more detailed example.
 
 Register an event handler for each touch event type.
 
@@ -134,7 +134,7 @@ The implementation status of pointer events in browsers is [relatively high](htt
 
 The following documents describe how to use touch events and include example code:
 
-- {{domxref("Touch_events","Touch Events Overview")}}
+- [Touch events overview](/en-US/docs/Web/API/Touch_events)
 - [Implement Custom Gestures](https://web.dev/articles/add-touch-to-your-site)
 - [Add touch screen support to your website (The easy way)](https://www.codicode.com/art/easy_way_to_add_touch_support_to_your_website.aspx)
 

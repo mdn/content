@@ -44,7 +44,8 @@ When the browser seeks through Ogg media to a specified time, it has to seek to 
 
 By default, [`ffmpeg2theora`](https://gitlab.xiph.org/xiph/ffmpeg2theora) uses one key frame every 64 frames (or about every 2 seconds at 30 frames per second), which works pretty well.
 
-> **Note:** Of course, the more key frames you use, the larger your video file is, so you may need to experiment a bit to get the right balance between file size and seek performance.
+> [!NOTE]
+> Of course, the more key frames you use, the larger your video file is, so you may need to experiment a bit to get the right balance between file size and seek performance.
 
 ## Consider using the preload attribute
 
@@ -56,7 +57,8 @@ The HTML {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements provide 
 
 ### Serve X-Content-Duration headers
 
-> **Note:** As of [Firefox 41](/en-US/docs/Mozilla/Firefox/Releases/41), the `X-Content-Duration` header is no longer supported. See [Firefox bug 1160695](https://bugzil.la/1160695) for more details.
+> [!NOTE]
+> As of [Firefox 41](/en-US/docs/Mozilla/Firefox/Releases/41), the `X-Content-Duration` header is no longer supported. See [Firefox bug 1160695](https://bugzil.la/1160695) for more details.
 
 The Ogg format doesn't encapsulate the duration of media, so for the progress bar on the video controls to display the duration of the video, Gecko needs to determine the length of the media using other means.
 

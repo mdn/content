@@ -29,7 +29,7 @@ switch (expression) {
 
 - `expression`
   - : An expression whose result is matched against each `case` clause.
-- `case caseExpressionN` {{optional_inline}}
+- `caseExpressionN` {{optional_inline}}
   - : A `case` clause used to match against `expression`. If the value of `expression` matches the value of any `caseExpressionN`, execution starts from the first statement after that `case` clause until either the end of the `switch` statement or the first encountered `break`.
 - `default` {{optional_inline}}
   - : A `default` clause; if provided, this clause is executed if the value of `expression` doesn't match any of the `case` clauses. A `switch` statement can only have one `default` clause.

@@ -2,7 +2,6 @@
 title: API property subpage template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_property_subpage_template
 page-type: mdn-writing-guide
-browser-compat: path.to.feature.NameOfTheProperty
 ---
 
 {{MDNSidebar}}
@@ -93,6 +92,7 @@ Include a description of the property's value, including data type and what it r
 > A string representing...
 
 Note that some property pages are written in the form "Returns a [name of the property type] representing..." but this is not the recommended form.
+Also, some WebIDL extended attributes with specific meanings can be associated with the type. There are standard ways to document them; consult [Information contained in a WebIDL file](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file#type_of_the_property) for more information.
 
 ## Examples
 
@@ -104,7 +104,8 @@ Each example must have an H3 heading (`###`) naming the example. The heading sho
 
 See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples) for more information.
 
-> **Note:** Sometimes you will want to link to examples given on another page.
+> [!NOTE]
+> Sometimes you will want to link to examples given on another page.
 >
 > **Scenario 1:** If you have some examples on this page and some more examples on another page:
 >
@@ -129,7 +130,7 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 > ```md
 > ## Examples
 >
-> For examples of this API, see [the page on fetch()](https://example.org).
+> For examples of this API, see [the page on fetch()](https://example.org/).
 > ```
 
 ## Specifications

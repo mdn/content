@@ -30,7 +30,8 @@ With a promise-based API, the asynchronous function starts the operation and ret
 
 ## Using the fetch() API
 
-> **Note:** In this article, we will explore promises by copying code samples from the page into your browser's JavaScript console. To set this up:
+> [!NOTE]
+> In this article, we will explore promises by copying code samples from the page into your browser's JavaScript console. To set this up:
 >
 > 1. open a browser tab and visit <https://example.org>
 > 2. in that tab, open the JavaScript console in your [browser's developer tools](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)
@@ -38,7 +39,7 @@ With a promise-based API, the asynchronous function starts the operation and ret
 
 In this example, we'll download the JSON file from <https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json>, and log some information about it.
 
-To do this, we'll make an **HTTP request** to the server. In an HTTP request, we send a request message to a remote server, and it sends us back a response. In this case, we'll send a request to get a JSON file from the server. Remember in the last article, where we made HTTP requests using the {{domxref("XMLHttpRequest")}} API? Well, in this article, we'll use the {{domxref("fetch", "fetch()")}} API, which is the modern, promise-based replacement for `XMLHttpRequest`.
+To do this, we'll make an **HTTP request** to the server. In an HTTP request, we send a request message to a remote server, and it sends us back a response. In this case, we'll send a request to get a JSON file from the server. Remember in the last article, where we made HTTP requests using the {{domxref("XMLHttpRequest")}} API? Well, in this article, we'll use the {{domxref("Window/fetch", "fetch()")}} API, which is the modern, promise-based replacement for `XMLHttpRequest`.
 
 Copy this into your browser's JavaScript console:
 

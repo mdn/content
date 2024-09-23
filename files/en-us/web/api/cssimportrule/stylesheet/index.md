@@ -1,7 +1,7 @@
 ---
-title: "CSSImportRule: stylesheet property"
-short-title: stylesheet
-slug: Web/API/CSSImportRule/stylesheet
+title: "CSSImportRule: styleSheet property"
+short-title: styleSheet
+slug: Web/API/CSSImportRule/styleSheet
 page-type: web-api-instance-property
 browser-compat: api.CSSImportRule.styleSheet
 ---

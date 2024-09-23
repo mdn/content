@@ -45,7 +45,8 @@ Web performance is the objective measurement and perceived user experience of a 
 
 To summarize, many features impact performance including latency, application size, the number of DOM nodes, the number of resource requests made, JavaScript performance, CPU load, and more. It is important to minimize the loading and response times, and add additional features to conceal latency by making the experience as available and interactive as possible, as soon as possible, while asynchronously loading in the longer tail parts of the experience.
 
-> **Note:** Web performance includes both objective measurements like time to load, frames per second, and [time to interactive](/en-US/docs/Glossary/Time_to_interactive), and subjective experiences of how long it felt like it took the content to load.
+> [!NOTE]
+> Web performance includes both objective measurements like time to load, frames per second, and [time to interactive](/en-US/docs/Glossary/Time_to_interactive), and subjective experiences of how long it felt like it took the content to load.
 
 ## How content is rendered
 

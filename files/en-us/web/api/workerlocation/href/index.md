@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.WorkerLocation.href
 ---
 
-{{ApiRef("WorkerLocation")}}
+{{ApiRef("WorkerLocation")}}{{AvailableInWorkers("worker")}}
 
 The **`href`** property of a {{domxref("WorkerLocation")}} object returns a string containing the serialized {{domxref("URL")}} for the worker's location.
 

@@ -34,7 +34,7 @@ let myString = "Hello world";
 console.log(myString);
 ```
 
-See the [console](/en-US/docs/Web/API/console#usage) reference page for more examples.
+See the [console](/en-US/docs/Web/API/console) reference page for more examples.
 
 ## Specifications
 

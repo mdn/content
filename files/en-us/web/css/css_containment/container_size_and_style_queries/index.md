@@ -12,7 +12,7 @@ browser-compat: css.at-rules.container
 Container queries are similar to [media queries](/en-US/docs/Web/CSS/CSS_media_queries). The {{cssxref("@media")}} at-rule enables applying styles to elements based on viewport size or other device characteristics. Similarly, the {{cssxref("@container")}} at-rule enables applying styles to elements based on a containing element's size or other style features, rather than the viewport's. Container queries have the same syntax rules and logical operators as media queries.
 
 ```css
-@container <container-condition> {
+@container <container-condition># {
   /* <stylesheet> */
 }
 ```
@@ -28,7 +28,7 @@ There are two types of container queries: _container size queries_ and _containe
 
 In this guide, we learn the basics of container queries by looking at:
 
-1. [container size queries](#container-size-queries),
+1. [container size queries](#container_size_queries_2),
 2. [naming containers](#naming_containers) to limit their scope, and
 3. using the `style()` functional notation within the {{cssxref("@container")}} at rule's `<container-condition>` to create [style queries with custom properties](#style_queries_for_custom_properties).
 
@@ -66,38 +66,38 @@ The `<container-condition>` in this example contains a single `<size-query>` —
 
 ## Naming containers
 
-A `<container-condition>` can include an optional case-sensitive {{cssxref("container-name")}}. In the form example, we could have limited the elements matched by the query by adding a name to the `<container-condition>` and then setting the {{cssxref("container-name")}} property with its value equal to the same name on the form elements we want to match.
+A `<container-condition>` can include an optional case-sensitive {{cssxref("container-name")}}. A container name makes the container condition more specific — it is evaluated only against elements that have that name set in the `container-name` property.
 
-The optional `<container-name>` set within the query condition filters the set of query containers considered to just those with a matching query container name. The {{cssxref("container-name")}} property specifies a list of query container names that can be used by `@container` rules to filter which query containers are targeted. Names enable querying aspects of a specific container, even if the container is not a direct parent.
+The {{cssxref("container-name")}} property specifies a list of query `<container-name>` values that can be used in `@container` rules; these are case-sensitive {{cssxref("ident")}} values. The container names enable targeting any container ancestor of the element. Without a container name, the query matches only the nearest container ancestor.
 
 ```css
-@container <container-name> <container-query> {
+@container [ [ <container-name> ]? <container-query> ]# {
   /* <stylesheet> */
 }
 ```
 
-Once you've added names to your `@container` at rules, you can use the {{cssxref("container-name")}} property or the {{cssxref("container")}} shorthand to apply a space-separated list of names to container elements. Styles contained inside the named `@container` at rules will only be applied to matching elements inside size query containers with the same names set on them. The `<container-name>` is a case-sensitive {{cssxref("ident")}}.
+After you add names to your `@container` at rules, you can use the {{cssxref("container-name")}} property or the {{cssxref("container")}} shorthand to target specific container elements. Styles inside the named `@container` at rules will be applied only to matching elements inside containers with those names set, which satisfy the container queries.
 
 ```css
 @container card (orientation: landscape) {
   /* styles */
 }
 
-.cards li {
+.todo-panel > li {
   container-type: inline-size;
   container-name: card;
 }
 ```
 
-This example size query is limited to elements with a `container-name` of `card` applied to them. In this example, the styles within the container query style block will apply to the descendants of all {{htmlelement("li")}} elements nested within an element with a class of `cards` with a width that is greater than their height. Note that if there are other elements with `container-name: card` applied to them that match the size query, the styles will also be applied to those elements' descendants.
+In the above example, the styles within the container query block will apply to the descendants of all {{htmlelement("li")}} elements with a width that is greater than their height. Note that other elements with `container-name: card` applied to them that match the size query will also have these styles applied to their elements' descendants.
 
 ```css
-@container wide (orientation: landscape) and (min-width: 20em) {
-  /* styles applied to descendants of .sizeContainer if size features match */
+@container wide (min-width: 20em) {
+  /* styles applied to descendants of wide .sizeContainer */
 }
 
-@container narrow (orientation: portrait) or (max-width: 20em) {
-  /* styles applied to descendants of .sizeContainer if size features match */
+@container narrow (max-width: 20em) {
+  /* styles applied to descendants of narrow .sizeContainer */
 }
 
 .sizeContainer {
@@ -106,29 +106,9 @@ This example size query is limited to elements with a `container-name` of `card`
 }
 ```
 
-In this container size query example, the element has two container names. The descendants of any elements with `class="sizeContainer"` will get the styles from the `wide` or `narrow` query applied (or both if that element is exactly a 20em square).
+In the above example, the element has two container names, `wide` and `narrow`. The descendants of any elements with `class="sizeContainer"` will get the styles from the `wide` or `narrow` query applied (or both if an element is precisely 20em wide).
 
-Container names also enable querying styles from elements that aren't a direct parent. When a containment context is given a name, it can be specifically targeted using the `@container` at-rule instead of the nearest ancestor with containment.
-
-Set `container-name: none` to prevent the container from matching any named container queries. That removes all associated container query names, but does not prevent the element from matching unnamed queries.
-
-To prevent an element from being a size container, set `container-type: normal`. This removes containment, meaning the element isn't a size container (it can still be a [style container](#container_style_queries).
-
-To prevent an element from being matched by any container queries, provide it with an unused `container-name`.
-
-```css
-article {
-  container-name: none;
-  container-type: size;
-}
-
-main {
-  container-name: neverUsedName;
-  container-type: normal;
-}
-```
-
-In the above example, the {{htmlelement("article")}} element can match any unnamed container query. In other words, it will be tested by each `@container` query that doesn't include a name in the `<container-condition>`. On the other hand, assuming the `neverUsedName` is never used as a container query name, the {{htmlelement("main")}} element will never be queried. Even if that name was removed, it would still not be tested against any size queries as the `container-type` value of `normal` means it is not a size query container.
+The default value `container-type: normal` prevents the container from being a size container, but it can still be a [style container](#container_style_queries). The default value `container-name: none` states the container has no name, but it does not prevent the element from matching unnamed queries.
 
 With container queries, we are not limited to size queries! You can also query a container's style features.
 
@@ -286,7 +266,7 @@ In this example, we have a {{htmlelement("fieldset")}} with four radio buttons. 
 <output>I change colors</output>
 ```
 
-JavaScript updates the value of the CSS `--theme` variable on the {{htmlelement("body")}} element, which is an ancestor of the {{htmlelement("fieldset")}} and {{htmlelement("output")}} elements, whenever a radio button is selected. When the text `<input>` is updated, the {{domxref("HTMLInputElement.value", "value")}} of the `other` radio button is updated only if the `other` radio button is {{domxref("HTMLInputElement.checked", "checked")}}, which in turn updates the value of `--theme`.
+JavaScript updates the value of the CSS `--theme` variable on the {{htmlelement("body")}} element, which is an ancestor of the {{htmlelement("fieldset")}} and {{htmlelement("output")}} elements, whenever a radio button is selected. When the text `<input>` is updated, the {{domxref("HTMLInputElement.value", "value")}} of the `other` radio button is updated only if the `other` radio button is checked, which in turn updates the value of `--theme`.
 
 ```js
 const radios = document.querySelectorAll('input[name="selection"]');
@@ -324,7 +304,7 @@ output {
 }
 ```
 
-The first style feature query is a custom property with no value. This query type returns true when the computed value for the custom property value is different from the `initial-value` for that property. In this case, it will be true when the value of `--theme` is any value other than any syntax equivalent value of`#f00` ( such as `red`). When true, the {{htmlelement("output")}} will have a 5px dotted outline. The outline color is the current value of `--theme`. The default text {{cssxref("color")}} is grey.
+The first style feature query is a custom property with no value. This query type returns true when the computed value for the custom property value is different from the `initial-value` for that property. In this case, it will be true when the value of `--theme` is any value other than any syntax equivalent value of `#f00` ( such as `red`). When true, the {{htmlelement("output")}} will have a 5px dotted outline. The outline color is the current value of `--theme`. The default text {{cssxref("color")}} is grey.
 
 ```css
 @container style(--theme) {
@@ -361,7 +341,8 @@ Because we set `syntax: "<color>";`, the CSS variable can only be assigned valid
 
 If you enter `unset` or `gibberish`, the JavaScript updates the `style` on the {{HTMLElement("body")}} to `--theme: unset` or `--theme: gibberish`. Neither of these are colors. Both are invalid and ignored. This means the initial value is inherited and unchanged, with `style(--theme)` returning false and `style(--theme: red)` returning true.
 
-> **Note:** When declaring custom properties, consider using `@property` with the {{cssxref("@property/syntax","syntax")}} descriptor so the browser can properly compare computed values.
+> [!NOTE]
+> When declaring custom properties, consider using `@property` with the {{cssxref("@property/syntax","syntax")}} descriptor so the browser can properly compare computed values.
 
 ### Nested queries
 

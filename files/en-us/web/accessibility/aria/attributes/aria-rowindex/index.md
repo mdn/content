@@ -23,7 +23,8 @@ If all of the rows are loaded and in the DOM, you don't need to include `aria-ro
 
 If the table with only a subset of rows has a cell that spans more than one row, both the row and cell need to have the `aria-rowspan` set. If a cell spans more than one row－when a cell role includes the `aria-rowspan` attribute or HTML cell has a `rowspan` attribute set to a value greater than 1－include the row's `aria-rowindex` value on the spanning cell in addition to the appropriate row spanning attribute. The value should be the row index of the row where the span starts.
 
-> **Note:** The `aria-rowindex` must be added to each row, but is optional on the cells, except for cells that span rows: the `aria-rowindex` attribute is required on all spanning cells.
+> [!NOTE]
+> The `aria-rowindex` must be added to each row, but is optional on the cells, except for cells that span rows: the `aria-rowindex` attribute is required on all spanning cells.
 
 ## Examples
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.MediaKeyStatusMap.forEach
 ---
 
-{{APIRef("EncryptedMediaExtensions API")}}
+{{APIRef("Encrypted Media Extensions")}}
 
 The **`forEach()`** method of the
 {{domxref("MediaKeyStatusMap")}} interface calls callback once for each key-value pair

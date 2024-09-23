@@ -1,28 +1,28 @@
 ---
-title: CSS Grid Layout and progressive enhancement
+title: CSS grid layout and progressive enhancement
 slug: Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement
 page-type: guide
 ---
 
 {{CSSRef}}
 
-In Spring of 2017, we saw for the first time a major specification like Grid being shipped into browsers almost simultaneously, and we now have CSS Grid Layout support in the public versions of Firefox, Chrome, Opera, Safari and Edge. However, while evergreen browsers mean that many of us are going to see the majority of users having Grid Layout support very quickly, there are also old or non-supporting browsers to contend with. In this guide we will walk through a variety of strategies for support.
+In Spring of 2017, we saw for the first time a major specification like grid being shipped into browsers almost simultaneously, and we now have CSS grid layout support in the public versions of Firefox, Chrome, Opera, Safari and Edge. However, while evergreen browsers mean that many of us are going to see the majority of users having grid layout support very quickly, there are also old or non-supporting browsers to contend with. In this guide we will walk through a variety of strategies for support.
 
 ## The supporting browsers
 
-CSS Grid Layout is unprefixed in all modern browsers. Support for all the properties and values detailed in these guides is interoperable across browsers. This means that if you write some Grid Layout code in Firefox, it should work in the same way in Chrome. This is no longer an experimental specification, and you are safe to use it in production.
+CSS grid layout is unprefixed in all modern browsers. Support for all the properties and values detailed in these guides is interoperable across browsers. This means that if you write some grid layout code in Firefox, it should work in the same way in Chrome. This is no longer an experimental specification, and you are safe to use it in production.
 
 ## Is it safe to use CSS grids for my layout?
 
-Yes. As with any front-end technology choice, the decision to use CSS Grid Layout will come down to the browsers your site visitors are typically using.
+Yes. As with any front-end technology choice, the decision to use CSS grid layout will come down to the browsers your site visitors are typically using.
 
-## Starting to use Grid in production
+## Starting to use grid in production
 
 It is worth noting that you do not have to use grid in an _all or nothing_ way. Start by enhancing elements in your design with grid, that could otherwise display using an older method. Overwriting of legacy methods with grid layout works surprisingly well, due to the way grid interacts with these other methods.
 
 ### Floats
 
-[Floats](/en-US/docs/Learn/CSS/CSS_layout/Floats) used to be used to create multiple column layouts. If you're supporting an old codebase with floated layouts, there will be no conflict. Grid items ignore the float property; the fact is that _a grid item takes precedence._ In the example below, I have a simple media object. If the {{cssxref("float")}} is not removed from legacy CSS, as the container is a grid container, it's OK. We can use the alignment properties that are implemented in CSS Grids.
+[Floats](/en-US/docs/Learn/CSS/CSS_layout/Floats) used to be used to create multiple column layouts. If you're supporting an old codebase with floated layouts, there will be no conflict. Grid items ignore the float property; the fact is that _a grid item takes precedence._ In the example below, I have a simple media object. If the {{cssxref("float")}} is not removed from legacy CSS, as the container is a grid container, it's OK. We can use the alignment properties that are implemented in CSS grids.
 
 The {{cssxref("float")}} no longer applies, and I can use the CSS Box Alignment property {{cssxref("align-self")}} to align my content to the end of the container:
 
@@ -65,7 +65,7 @@ img {
 ```html
 <div class="media">
   <div class="image">
-    <img src="https://via.placeholder.com/150x150" alt="placeholder" />
+    <img src="https://dummyimage.com/150x150" alt="placeholder" />
   </div>
   <div class="text">
     This is a media object example. I am using floats for older browsers and
@@ -128,27 +128,27 @@ In this next example, I have a set of floated cards. I have given the cards a {{
   <ul>
     <li class="card">
       <h2>One</h2>
-      <p>We can use CSS Grid to overwrite older methods.</p>
+      <p>We can use CSS grid to overwrite older methods.</p>
     </li>
     <li class="card">
       <h2>Two</h2>
-      <p>We can use CSS Grid to overwrite older methods.</p>
+      <p>We can use CSS grid to overwrite older methods.</p>
     </li>
     <li class="card">
       <h2>Three</h2>
-      <p>We can use CSS Grid to overwrite older methods.</p>
+      <p>We can use CSS grid to overwrite older methods.</p>
     </li>
     <li class="card">
       <h2>Four</h2>
-      <p>We can use CSS Grid to overwrite older methods.</p>
+      <p>We can use CSS grid to overwrite older methods.</p>
     </li>
     <li class="card">
       <h2>Five</h2>
-      <p>We can use CSS Grid to overwrite older methods.</p>
+      <p>We can use CSS grid to overwrite older methods.</p>
     </li>
     <li class="card">
       <h2>Six</h2>
-      <p>We can use CSS Grid to overwrite older methods.</p>
+      <p>We can use CSS grid to overwrite older methods.</p>
     </li>
   </ul>
 </div>
@@ -237,28 +237,28 @@ I use an `@supports` rule to check for support of `display: grid`. I then do my 
   <ul>
     <li class="card">
       <h2>One</h2>
-      <p>We can use CSS Grid to overwrite older methods.</p>
+      <p>We can use CSS grid to overwrite older methods.</p>
     </li>
     <li class="card">
       <h2>Two</h2>
-      <p>We can use CSS Grid to overwrite older methods.</p>
-      <p>We can use CSS Grid to overwrite older methods.</p>
+      <p>We can use CSS grid to overwrite older methods.</p>
+      <p>We can use CSS grid to overwrite older methods.</p>
     </li>
     <li class="card">
       <h2>Three</h2>
-      <p>We can use CSS Grid to overwrite older methods.</p>
+      <p>We can use CSS grid to overwrite older methods.</p>
     </li>
     <li class="card">
       <h2>Four</h2>
-      <p>We can use CSS Grid to overwrite older methods.</p>
+      <p>We can use CSS grid to overwrite older methods.</p>
     </li>
     <li class="card">
       <h2>Five</h2>
-      <p>We can use CSS Grid to overwrite older methods.</p>
+      <p>We can use CSS grid to overwrite older methods.</p>
     </li>
     <li class="card">
       <h2>Six</h2>
-      <p>We can use CSS Grid to overwrite older methods.</p>
+      <p>We can use CSS grid to overwrite older methods.</p>
     </li>
   </ul>
 </div>
@@ -326,28 +326,28 @@ Once again I can use feature queries to overwrite a layout that uses `display: i
   <ul>
     <li class="card">
       <h2>One</h2>
-      <p>We can use CSS Grid to overwrite older methods.</p>
+      <p>We can use CSS grid to overwrite older methods.</p>
     </li>
     <li class="card">
       <h2>Two</h2>
-      <p>We can use CSS Grid to overwrite older methods.</p>
-      <p>We can use CSS Grid to overwrite older methods.</p>
+      <p>We can use CSS grid to overwrite older methods.</p>
+      <p>We can use CSS grid to overwrite older methods.</p>
     </li>
     <li class="card">
       <h2>Three</h2>
-      <p>We can use CSS Grid to overwrite older methods.</p>
+      <p>We can use CSS grid to overwrite older methods.</p>
     </li>
     <li class="card">
       <h2>Four</h2>
-      <p>We can use CSS Grid to overwrite older methods.</p>
+      <p>We can use CSS grid to overwrite older methods.</p>
     </li>
     <li class="card">
       <h2>Five</h2>
-      <p>We can use CSS Grid to overwrite older methods.</p>
+      <p>We can use CSS grid to overwrite older methods.</p>
     </li>
     <li class="card">
       <h2>Six</h2>
-      <p>We can use CSS Grid to overwrite older methods.</p>
+      <p>We can use CSS grid to overwrite older methods.</p>
     </li>
   </ul>
 </div>
@@ -359,11 +359,11 @@ Once again it is the width on the item we need to address, and then any other pr
 
 ## How does the specification define these overrides?
 
-The CSS Grid Layout specification details why we can overwrite the behavior of certain properties when something becomes a grid item. The key sections of the specification are:
+The CSS grid layout specification details why we can overwrite the behavior of certain properties when something becomes a grid item. The key sections of the specification are:
 
-- [Establishing Grid Containers](https://drafts.csswg.org/css-grid/#grid-containers)
-- [Grid Items](https://drafts.csswg.org/css-grid/#grid-items)
-- [Grid Item Display](https://drafts.csswg.org/css-grid/#grid-item-display)
+- [Establishing grid containers](https://drafts.csswg.org/css-grid/#grid-containers)
+- [Grid items](https://drafts.csswg.org/css-grid/#grid-items)
+- [Grid item display](https://drafts.csswg.org/css-grid/#grid-item-display)
 
 As this behavior is detailed in the specification, you are safe to rely on using these overrides in your support for older browsers. Nothing described here should be seen as a "hack". Rather, we are taking advantage of the fact that the grid specification details the interaction between different layout methods.
 
@@ -384,8 +384,3 @@ The alignment property {{cssxref("vertical-align")}} has no effect on a grid ite
 ### Multiple-column layout
 
 You can also use multiple column layout as your legacy browser plan, as the `column-*` properties do not apply when applied to a grid container.
-
-## Further reading
-
-- For an excellent explanation of feature queries, and how to use them well, see [Using Feature Queries in CSS (2016)](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/).
-- [CSS Grid and the New Autoprefixer (2018)](https://css-tricks.com/css-grid-in-ie-css-grid-and-the-new-autoprefixer/)

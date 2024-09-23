@@ -41,7 +41,8 @@ subscribe(options)
         NOT_** the same ECDH key that you use to encrypt the data. For more
         information, see "[Using VAPID with WebPush](https://blog.mozilla.org/services/2016/04/04/using-vapid-with-webpush/)".
 
-    > **Note:** This parameter is required in some browsers like
+    > [!NOTE]
+    > This parameter is required in some browsers like
     > Chrome and Edge. They will reject the Promise if `userVisibleOnly` is not set to `true`.
 
 ### Return value

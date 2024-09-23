@@ -32,7 +32,7 @@ Another essential concept in coding is **functions**, which allow you to store a
 
 In JavaScript, you'll find functions everywhere. In fact, we've been using functions all the way through the course so far; we've just not been talking about them very much. Now is the time, however, for us to start talking about functions explicitly, and really exploring their syntax.
 
-Pretty much anytime you make use of a JavaScript structure that features a pair of parentheses — `()` — and you're **not** using a common built-in language structure like a [for loop](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#the_standard_for_loop), [while or do...while loop](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while), or [if...else statement](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#if...else_statements), you are making use of a function.
+Pretty much anytime you make use of a JavaScript structure that features a pair of parentheses — `()` — and you're **not** using a common built-in language structure like a [for loop](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#the_standard_for_loop), [while or do...while loop](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#while_and_do...while), or [if...else statement](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#if...else_statements), you are making use of a function.
 
 ## Built-in browser functions
 
@@ -70,7 +70,8 @@ const myNumber = Math.random();
 
 We were using a _function_!
 
-> **Note:** Feel free to enter these lines into your browser's JavaScript console to re-familiarize yourself with their functionality, if needed.
+> [!NOTE]
+> Feel free to enter these lines into your browser's JavaScript console to re-familiarize yourself with their functionality, if needed.
 
 The JavaScript language has many built-in functions to allow you to do useful things without having to write all that code yourself. In fact, some of the code you are calling when you **invoke** (a fancy word for run, or execute) a built-in browser function couldn't be written in JavaScript — many of these functions are calling parts of the background browser code, which is written largely in low-level system languages like C++, not web languages like JavaScript.
 
@@ -125,13 +126,15 @@ myFunction();
 // calls the function once
 ```
 
-> **Note:** This form of creating a function is also known as _function declaration_. It is always hoisted so that you can call the function above the function definition and it will work fine.
+> [!NOTE]
+> This form of creating a function is also known as _function declaration_. It is always hoisted so that you can call the function above the function definition and it will work fine.
 
 ## Function parameters
 
 Some functions require **parameters** to be specified when you are invoking them — these are values that need to be included inside the function parentheses, which it needs to do its job properly.
 
-> **Note:** Parameters are sometimes called arguments, properties, or even attributes.
+> [!NOTE]
+> Parameters are sometimes called arguments, properties, or even attributes.
 
 As an example, the browser's built-in [Math.random()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random) function doesn't require any parameters. When called, it always returns a random number between 0 and 1:
 
@@ -146,7 +149,8 @@ const myText = "I am a string";
 const newString = myText.replace("string", "sausage");
 ```
 
-> **Note:** When you need to specify multiple parameters, they are separated by commas.
+> [!NOTE]
+> When you need to specify multiple parameters, they are separated by commas.
 
 ### Optional parameters
 
@@ -198,7 +202,8 @@ But you can also create a function that doesn't have a name:
 
 This is called an **anonymous function**, because it has no name. You'll often see anonymous functions when a function expects to receive another function as a parameter. In this case, the function parameter is often passed as an anonymous function.
 
-> **Note:** This form of creating a function is also known as _function expression_. Unlike function declarations, function expressions are not hoisted.
+> [!NOTE]
+> This form of creating a function is also known as _function expression_. Unlike function declarations, function expressions are not hoisted.
 
 ### Anonymous function example
 
@@ -275,7 +280,8 @@ In this case, the value of `console.log()`, which is `undefined`, is implicitly 
 
 We recommend that you use arrow functions, as they can make your code shorter and more readable. To learn more, see the [section on arrow functions in the JavaScript guide](/en-US/docs/Web/JavaScript/Guide/Functions#arrow_functions), and our [reference page on arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
-> **Note:** There are some subtle differences between arrow functions and normal functions. They're outside the scope of this introductory guide and are unlikely to make a difference in the cases we've discussed here. To learn more, see the [arrow function reference documentation](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+> [!NOTE]
+> There are some subtle differences between arrow functions and normal functions. They're outside the scope of this introductory guide and are unlikely to make a difference in the cases we've discussed here. To learn more, see the [arrow function reference documentation](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 ### Arrow function live sample
 
@@ -346,7 +352,8 @@ function greeting() {
 
 Both functions you want to call are called `greeting()`, but you can only ever access the `first.js` file's `greeting()` function (the second one is ignored). In addition, an error results when attempting (in the `second.js` file) to assign a new value to the `name` variable — because it was already declared with `const`, and so can't be reassigned.
 
-> **Note:** You can see this example [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html) (see also the [source code](https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/functions)).
+> [!NOTE]
+> You can see this example [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html) (see also the [source code](https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/functions)).
 
 Keeping parts of your code locked away in functions avoids such problems, and is considered the best practice.
 
@@ -448,9 +455,11 @@ Let's look at a real example to demonstrate scoping.
 
    This time the `a()` and `b()` calls will throw that annoying [ReferenceError: _variable name_ is not defined](/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined) error into the console — this is because the `output()` calls and the variables they are trying to print are not in the same function scopes — the variables are effectively invisible to those function calls.
 
-> **Note:** The same scoping rules do not apply to loop (e.g. `for() { }`) and conditional blocks (e.g. `if () { }`) — they look very similar, but they are not the same thing! Take care not to get these confused.
+> [!NOTE]
+> The same scoping rules do not apply to loop (e.g. `for() { }`) and conditional blocks (e.g. `if () { }`) — they look very similar, but they are not the same thing! Take care not to get these confused.
 
-> **Note:** The [ReferenceError: "x" is not defined](/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined) error is one of the most common you'll encounter. If you get this error and you are sure that you have defined the variable in question, check what scope it is in.
+> [!NOTE]
+> The [ReferenceError: "x" is not defined](/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined) error is one of the most common you'll encounter. If you get this error and you are sure that you have defined the variable in question, check what scope it is in.
 
 ## Test your skills!
 

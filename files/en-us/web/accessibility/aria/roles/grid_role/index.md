@@ -74,7 +74,8 @@ If the grid is used as an interactive widget, [keyboard interactions](#keyboard_
 - [aria-readonly](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly)
   - : If the user can navigate the grid but not change the value or values of the grid, the [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) should be set to `true`. The default value is `false`.
 
-> **Note:** For many use cases, an HTML {{HTMLElement('table')}} element is sufficient as it and the various table elements already include many ARIA roles.
+> [!NOTE]
+> For many use cases, an HTML {{HTMLElement('table')}} element is sufficient as it and the various table elements already include many ARIA roles.
 
 ### Keyboard interactions
 

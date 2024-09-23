@@ -69,7 +69,7 @@ The appropriate macro to use depends on the [page type](/en-US/docs/MDN/Writing_
 
 ### Creating new sidebars
 
-You should use existing sidebar macros, without adding any content to them. If you are creating a whole new section of content, create a [macro for your sidebar](https://github.com/mdn/yari/blob/main/kumascript/macros/) in Yari.
+You should use existing sidebar macros, without adding any content to them. If you are creating a whole new section of content, create a [macro for your sidebar](https://github.com/mdn/yari/tree/main/kumascript/macros) in Yari.
 
 In the unlikely event that you need to create a temporary sidebar, this section explains how that can be done. Do not submit your temporary sidebar for PR review as it will not be approved.
 
@@ -103,9 +103,10 @@ If listed as the last content in the page, Yari, the engine that renders MDN, re
 
 The `\{{ListSubpagesForSidebar(<parameters>)}}` macro inserts the tree of subpages for the page whose slug is specified as the first parameter. The above creates a sidebar containing a link to all the Accessibility documents, followed by the ARIA roles and attributes.
 
-Once you have determined the links to include in your sidebar, submit a pull request to [Yari with your proposed sidebar macro](https://github.com/mdn/yari/blob/main/kumascript/macros/).
+Once you have determined the links to include in your sidebar, submit a pull request to [Yari with your proposed sidebar macro](https://github.com/mdn/yari/tree/main/kumascript/macros).
 
-> **Note:** This `<section>` must be appended to the end of the document, instead of between the frontmatter and the page content. Only one sidebar is created per page, so any macro listed after the frontmatter must be removed.
+> [!NOTE]
+> This `<section>` must be appended to the end of the document, instead of between the frontmatter and the page content. Only one sidebar is created per page, so any macro listed after the frontmatter must be removed.
 
 The [macro source code](https://github.com/mdn/yari/tree/main/kumascript/macros) is on GitHub. Each macro includes the documentation for itself, including parameters, if any.
 

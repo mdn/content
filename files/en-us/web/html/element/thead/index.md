@@ -245,7 +245,7 @@ tbody > tr > td:last-of-type {
       <th scope="row">Tag omission</th>
       <td>
         The start tag is mandatory. The end tag may be omitted if the
-        {{HTMLElement("thead")}} element is immediately followed by a
+        <code>&lt;thead&gt;</code> element is immediately followed by a
         {{HTMLElement("tbody")}} or {{HTMLElement("tfoot")}}
         element.
       </td>
@@ -254,7 +254,7 @@ tbody > tr > td:last-of-type {
       <th scope="row">Permitted parents</th>
       <td>
         A {{HTMLElement("table")}} element. The
-        {{HTMLElement("thead")}} must appear after any
+        <code>&lt;thead&gt;</code> must appear after any
         {{HTMLElement("caption")}} and
         {{HTMLElement("colgroup")}} elements, even implicitly defined,
         but before any {{HTMLElement("tbody")}},

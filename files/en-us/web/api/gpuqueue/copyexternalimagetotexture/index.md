@@ -72,7 +72,8 @@ copyExternalImageToTexture(source, destination, copySize)
 
       - : An enumerated value describing the color space and encoding used to encode data into the destination texture. Possible values are `"srgb"` and `"display-p3"`. If omitted, `colorSpace` defaults to `"srgb"`.
 
-        > **Note:** The encoding may result in values outside of the range `[0, 1]` being written to the target texture, if its format can represent them. Otherwise, the results are clamped to the target texture format's range. Conversion may not be necessary if `colorSpace` matches the source image color space.
+        > [!NOTE]
+        > The encoding may result in values outside of the range `[0, 1]` being written to the target texture, if its format can represent them. Otherwise, the results are clamped to the target texture format's range. Conversion may not be necessary if `colorSpace` matches the source image color space.
 
     - `mipLevel` {{optional_inline}}
       - : A number representing the mip-map level of the texture to write the image to. If omitted, `mipLevel` defaults to 0.
@@ -100,7 +101,8 @@ copyExternalImageToTexture(source, destination, copySize)
 
       - : A boolean. If set to `true`, the image data written into the texture will have its RGB channels premultiplied by the alpha channel. If omitted, `premultipliedAlpha` defaults to `false`.
 
-        > **Note:** If this option is set to `true` and the `source` is also premultiplied, the source RGB values must be preserved even if they exceed their corresponding alpha values.
+        > [!NOTE]
+        > If this option is set to `true` and the `source` is also premultiplied, the source RGB values must be preserved even if they exceed their corresponding alpha values.
 
     - `texture`
       - : A {{domxref("GPUTexture")}} object representing the texture to write the data to.
@@ -176,7 +178,7 @@ The following criteria must be met when calling **`writeTexture()`**, otherwise 
 
 ## Examples
 
-In the WebGPU Samples [Textured Cube example](https://webgpu.github.io/webgpu-samples/samples/texturedCube), the following snippet is used to fetch an image and upload it into a {{domxref("GPUTexture")}}:
+In the WebGPU Samples [Textured Cube example](https://webgpu.github.io/webgpu-samples/samples/texturedCube/), the following snippet is used to fetch an image and upload it into a {{domxref("GPUTexture")}}:
 
 ```js
 let cubeTexture;

@@ -32,7 +32,7 @@ You can control the gaps between columns with the {{cssxref("column-gap")}} or {
 
 In this example, we used the {{cssxref("column-width")}} property to set a minimum width that the columns need to be before the browser adds an additional column. The {{cssxref("columns")}} shorthand property can be used to set the `column-width` and {{cssxref("column-count")}} properties, either of which can define the maximum number of columns allowed.
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/columns-multicol--download.html)
 
@@ -50,7 +50,7 @@ Margins or the `gap` property can be used to create gaps between items, but ther
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/columns-flexbox.html", '100%', 720)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/columns-flexbox--download.html)
 
@@ -58,7 +58,7 @@ To create a layout with flex items that wrap onto new rows, set the {{cssxref("f
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/columns-flexbox-wrapping.html", '100%', 720)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/columns-flexbox-wrapping--download.html)
 
@@ -70,15 +70,15 @@ Use flexbox:
 
 ### Lining items up in rows and columns — grid layout
 
-If you want a two-dimensional grid where items line up in rows _and_ columns, then you should choose CSS Grid Layout. Similar to how flexbox works on the direct children of the flex container, grid layout works on the direct children of the grid container. Just set {{cssxref("display", "display: grid;")}} on the container. Properties set on this container — like {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} — define how the items are distributed along rows and columns.
+If you want a two-dimensional grid where items line up in rows _and_ columns, then you should choose CSS grid layout. Similar to how flexbox works on the direct children of the flex container, grid layout works on the direct children of the grid container. Just set {{cssxref("display", "display: grid;")}} on the container. Properties set on this container — like {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} — define how the items are distributed along rows and columns.
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/columns-grid.html", '100%', 720)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/columns-grid--download.html)
 
-Use Grid:
+Use grid:
 
 - For multiple rows or columns of items.
 - When you want to be able to align the items on the block and inline axes.
@@ -87,5 +87,5 @@ Use Grid:
 ## Resources on MDN
 
 - [Guide to Multi-column Layout](/en-US/docs/Web/CSS/CSS_multicol_layout)
-- [Guide to Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout)
-- [Guide to CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout)
+- [Guide to flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout)
+- [Guide to CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout)

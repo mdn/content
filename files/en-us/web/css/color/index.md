@@ -7,7 +7,7 @@ browser-compat: css.properties.color
 
 {{CSSRef}}
 
-The **`color`** CSS property sets the foreground [color value](/en-US/docs/Web/CSS/color_value) of an element's text and [text decorations](/en-US/docs/Web/CSS/text-decoration), and sets the [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) value. `currentcolor` may be used as an indirect value on _other_ properties and is the default for other color properties, such as {{cssxref("border-color")}}.
+The **`color`** [CSS](/en-US/docs/Web/CSS) property sets the foreground [color value](/en-US/docs/Web/CSS/color_value) of an element's text and [text decorations](/en-US/docs/Web/CSS/text-decoration), and sets the [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) value. `currentcolor` may be used as an indirect value on _other_ properties and is the default for other color properties, such as {{cssxref("border-color")}}.
 
 {{EmbedInteractiveExample("pages/css/color.html")}}
 
@@ -32,6 +32,7 @@ color: #090a;
 color: #009900aa;
 
 /* <rgb()> values and legacy <rgba()> values*/
+color: rgb(34, 12, 64);
 color: rgb(34, 12, 64, 0.6);
 color: rgba(34, 12, 64, 0.6);
 color: rgb(34 12 64 / 0.6);
@@ -40,6 +41,7 @@ color: rgb(34.6 12 64 / 60%);
 color: rgba(34.6 12 64 / 60%);
 
 /* <hsl()> values and legacy <hsla()> values */
+color: hsl(30, 100%, 50%);
 color: hsl(30, 100%, 50%, 0.6);
 color: hsla(30, 100%, 50%, 0.6);
 color: hsl(30 100% 50% / 0.6);
@@ -64,7 +66,7 @@ color: unset;
 
 The `color` property is specified as a single {{cssxref("&lt;color&gt;")}} value.
 
-Note that the value must be a uniform {{cssxref("color")}}. It can't be a {{cssxref("&lt;gradient&gt;")}}, which is actually a type of {{cssxref("&lt;image&gt;")}}.
+Note that the value must be a uniform color. It can't be a {{cssxref("&lt;gradient&gt;")}}, which is actually a type of {{cssxref("&lt;image&gt;")}}.
 
 ### Values
 
@@ -73,7 +75,7 @@ Note that the value must be a uniform {{cssxref("color")}}. It can't be a {{cssx
 - [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword)
   - : Sets the color to the element's `color` property value. However, if set as the value of `color`, `currentcolor` is treated as `inherit`.
 
-## Accessibility concerns
+## Accessibility
 
 It is important to ensure that the contrast ratio between the color of the text and the background the text is placed over is high enough that people experiencing low vision conditions will be able to read the content of the page.
 

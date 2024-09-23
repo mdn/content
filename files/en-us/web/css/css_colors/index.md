@@ -40,8 +40,8 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
 ### Functions
 
 - Color functions:
-  - [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) and its `rgba()` alias
-  - [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) and its `hsla()` alias
+  - [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb)
+  - [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl)
   - [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb)
   - [`lab()`](/en-US/docs/Web/CSS/color_value/lab)
   - [`lch()`](/en-US/docs/Web/CSS/color_value/lch)

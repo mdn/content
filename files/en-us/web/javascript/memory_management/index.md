@@ -101,7 +101,8 @@ In this context, the notion of an "object" is extended to something broader than
 
 ### Reference-counting garbage collection
 
-> **Note:** no modern JavaScript engine uses reference-counting for garbage collection anymore.
+> [!NOTE]
+> No modern JavaScript engine uses reference-counting for garbage collection anymore.
 
 This is the most naïve garbage collection algorithm. This algorithm reduces the problem from determining whether or not an object is still needed to determining if an object still has any other objects referencing it. An object is said to be "garbage", or collectible if there are zero references pointing to it.
 
@@ -179,7 +180,7 @@ The max amount of available heap memory can be increased with a flag:
 node --max-old-space-size=6000 index.js
 ```
 
-We can also expose the garbage collector for debugging memory issues using a flag and the [Chrome Debugger](https://nodejs.org/en/docs/guides/debugging-getting-started/):
+We can also expose the garbage collector for debugging memory issues using a flag and the [Chrome Debugger](https://nodejs.org/en/learn/getting-started/debugging):
 
 ```bash
 node --expose-gc --inspect index.js
@@ -215,7 +216,8 @@ If `key` is stored as an actual reference, it would create a cyclic reference an
 
 As a rough mental model, think of a `WeakMap` as the following implementation:
 
-> **Warning:** This is not a polyfill nor is anywhere close to how it's implemented in the engine (which hooks into the garbage collection mechanism).
+> [!WARNING]
+> This is not a polyfill nor is anywhere close to how it's implemented in the engine (which hooks into the garbage collection mechanism).
 
 ```js
 class MyWeakMap {

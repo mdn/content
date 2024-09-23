@@ -18,7 +18,8 @@ connection described by this pair of candidates.
 An integer value indicating the number of times a response has been sent to a
 {{Glossary("STUN")}} connectivity check request.
 
-> **Note:** Since it isn't possible to tell the difference between
+> [!NOTE]
+> Since it isn't possible to tell the difference between
 > connectivity check requests and consent requests, this value includes both.
 
 ## Specifications

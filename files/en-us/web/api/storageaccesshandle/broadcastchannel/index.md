@@ -8,7 +8,8 @@ browser-compat: api.StorageAccessHandle.BroadcastChannel
 
 {{APIRef("Storage Access API")}}
 
-> **Note:** See {{domxref("BroadcastChannel.BroadcastChannel", "BroadcastChannel()")}} to understand usage.
+> [!NOTE]
+> See {{domxref("BroadcastChannel.BroadcastChannel", "BroadcastChannel()")}} to understand usage.
 
 ## Syntax
 
@@ -29,7 +30,8 @@ An unpartitioned {{domxref("BroadcastChannel")}} object.
 
 - `SecurityError` {{domxref("DomException")}}
   - : Thrown if access was not granted.
-- See {{domxref("BroadcastChannel.BroadcastChannel", "BroadcastChannel()")}}
+
+See {{domxref("BroadcastChannel.BroadcastChannel", "BroadcastChannel()")}}
 
 ## Examples
 
@@ -45,7 +47,8 @@ document.requestStorageAccess({ BroadcastChannel: true }).then(
 );
 ```
 
-> **Note:** See [Using the Storage Access API](/en-US/docs/Web/API/Storage_Access_API/Using) for a more complete example.
+> [!NOTE]
+> See [Using the Storage Access API](/en-US/docs/Web/API/Storage_Access_API/Using) for a more complete example.
 
 ## Specifications
 

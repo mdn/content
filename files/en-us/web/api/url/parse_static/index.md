@@ -3,12 +3,10 @@ title: "URL: parse() static method"
 short-title: parse()
 slug: Web/API/URL/parse_static
 page-type: web-api-static-method
-status:
-  - experimental
 browser-compat: api.URL.parse_static
 ---
 
-{{ApiRef("URL API")}}{{SeeCompatTable}}
+{{ApiRef("URL API")}}
 
 The **`URL.parse()`** static method of the {{domxref("URL")}} interface returns a newly created {{domxref("URL")}} object representing the URL defined by the parameters.
 
@@ -38,7 +36,8 @@ URL.parse(url, base)
     Relative references to the root are resolved relative to the base origin.
     For more information see [Resolving relative references to a URL](/en-US/docs/Web/API/URL_API/Resolving_relative_references).
 
-> **Note:** The `url` and `base` arguments will each be stringified from whatever value you pass, such as an {{domxref("HTMLAnchorElement")}} or {{domxref("HTMLAreaElement")}} element, just like with other Web APIs that accept a string.
+> [!NOTE]
+> The `url` and `base` arguments will each be stringified from whatever value you pass, such as an {{domxref("HTMLAnchorElement")}} or {{domxref("HTMLAreaElement")}} element, just like with other Web APIs that accept a string.
 > In particular, you can use an existing {{domxref("URL")}} object for either argument, and it will be stringified from the object's {{domxref("URL.href", "href")}} property.
 
 ### Return value

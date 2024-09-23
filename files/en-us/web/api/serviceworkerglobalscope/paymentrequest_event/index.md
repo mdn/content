@@ -30,7 +30,7 @@ A {{domxref("PaymentRequestEvent")}}. Inherits from {{domxref("ExtendableEvent")
 
 ## Examples
 
-When the {{domxref("PaymentRequest.show()")}} method is invoked, a {{domxref("ServiceWorkerGlobalScope.paymentrequest_event", "paymentrequest")}} event is fired on the service worker of the payment app. This event is listened for inside the payment app's service worker to begin the next stage of the payment process.
+When the {{domxref("PaymentRequest.show()")}} method is invoked, a `paymentrequest` event is fired on the service worker of the payment app. This event is listened for inside the payment app's service worker to begin the next stage of the payment process.
 
 ```js
 let payment_request_event;

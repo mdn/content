@@ -8,7 +8,8 @@ page-type: firefox-release-notes
 
 This article provides information about the changes in Firefox 82 that will affect developers. Firefox 82 was released on October 20, 2020.
 
-> **Note:** See also [Coming through with Firefox 82](https://hacks.mozilla.org/2020/10/coming-through-with-firefox-82/) on Mozilla Hacks.
+> [!NOTE]
+> See also [Coming through with Firefox 82](https://hacks.mozilla.org/2020/10/coming-through-with-firefox-82/) on Mozilla Hacks.
 
 ## Changes for web developers
 

@@ -31,7 +31,8 @@ The following renders a button that will open a popover element when activated.
 
 {{EmbedLiveSample('Examples', 600, 200)}}
 
-> **Note:** See our [Popover API examples landing page](https://mdn.github.io/dom-examples/popover-api/) to access the full collection of MDN popover examples.
+> [!NOTE]
+> See our [Popover API examples landing page](https://mdn.github.io/dom-examples/popover-api/) to access the full collection of MDN popover examples.
 
 ## Specifications
 

@@ -16,7 +16,8 @@ if no response has been received.
 If a network error happened, an empty string
 is returned.
 
-> **Note:** For multipart requests, this returns the headers from the
+> [!NOTE]
+> For multipart requests, this returns the headers from the
 > _current_ part of the request, not from the original channel.
 
 ## Syntax
@@ -55,7 +56,8 @@ x-xss-protection: 1; mode=block\r\n
 Each line is terminated by both carriage return and line feed characters
 (`\r\n`). These are essentially delimiters separating each of the headers.
 
-> **Note:** In modern browsers, the header names are returned in all lower
+> [!NOTE]
+> In modern browsers, the header names are returned in all lower
 > case, as per the latest spec.
 
 ## Examples

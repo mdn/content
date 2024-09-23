@@ -11,7 +11,8 @@ spec-urls:
 
 The `aria-checked` attribute indicates the current "checked" state of checkboxes, radio buttons, and other widgets.
 
-> **Note:** Where possible use an HTML {{htmlelement("input")}} element with `type="checkbox"` and `type="radio"` as these have built in semantics and do not require ARIA attributes.
+> [!NOTE]
+> Where possible use an HTML {{htmlelement("input")}} element with `type="checkbox"` and `type="radio"` as these have built in semantics and do not require ARIA attributes.
 
 ## Description
 
@@ -28,8 +29,6 @@ The `mixed` value is not supported on [`radio`](/en-US/docs/Web/Accessibility/AR
   aria-labelledby="chk15-label"></span>
 <label id="chk15-label">Subscribe to the newsletter</label>
 ```
-
-> **Note:** Where possible use an HTML {{htmlelement("input")}} element with `type="checkbox"` as this element has built in semantics and does not require ARIA attributes.
 
 The `tabindex` attribute is required to enable focus. JavaScript is required to toggle the `aria-checked` state. And, if this checkbox is part of a submittable form, more JavaScript is required to set a name and a value.
 

@@ -41,8 +41,10 @@ No notable changes.
   The data in this file system is origin-specific: permission prompts are not required to access files, and clearing data for the site/origin deletes the storage.
   The OPFS is accessed with the {{domxref("StorageManager.getDirectory()")}} method, by calling `navigator.storage.getDirectory()` in a worker or the main thread.
   See [Firefox bug 1785123](https://bugzil.la/1785123) for more details.
-- The HTTP [`Authorization`](/en-US/docs/Web/HTTP/Headers/Authorization) header is removed from [`fetch()`](/en-US/docs/Web/API/fetch) and [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) requests that are redirected cross-origin (`fetch()` headers may be added by developers using the [`option.headers`](/en-US/docs/Web/API/fetch#headers) argument).
+- The HTTP [`Authorization`](/en-US/docs/Web/HTTP/Headers/Authorization) header is removed from [`fetch()`](/en-US/docs/Web/API/Window/fetch) and [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) requests that are redirected cross-origin (`fetch()` headers may be added by developers using the [`option.headers`](/en-US/docs/Web/API/Window/fetch#headers) argument).
   See [Firefox bug 1802086](https://bugzil.la/1802086) for more details.
+- The `none` value of the `options.imageOrientation` parameter passed to [`createImageBitmap()`](/en-US/docs/Web/API/createImageBitmap) has been renamed to [`from-image`](/en-US/docs/Web/API/createImageBitmap#from-image).
+  This is to better match the meaning of the equivalent CSS [`image-orientation`](/en-US/docs/Web/CSS/image-orientation) property. ([Firefox bug 1809740](https://bugzil.la/1809740)).
 
 #### DOM
 

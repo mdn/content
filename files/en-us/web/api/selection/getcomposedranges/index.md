@@ -20,7 +20,8 @@ The returned ranges represent the range at the time that `getComposedRanges()` w
 If the DOM or a shadow DOM is mutated, the selected range is likely to be incorrect.
 Application code might use a {{domxref("MutationObserver")}} to monitor for DOM mutations and then call {{domxref("Selection.setBaseAndExtent()")}} to update the selection.
 
-> **Note:** This method should be used instead of {{domxref("Selection.getRangeAt()")}} when selecting ranges that can potentially cross shadow root boundaries.
+> [!NOTE]
+> This method should be used instead of {{domxref("Selection.getRangeAt()")}} when selecting ranges that can potentially cross shadow root boundaries.
 > {{domxref("Selection.getRangeAt()")}} is not aware of shadow roots.
 > The returned range is not specified, and varies between browsers.
 
@@ -35,7 +36,7 @@ getComposedRanges(shadowRoot1, shadowRoot2, /* …, */ shadowRootN)
 
 ### Parameters
 
-- `shadowRoot1, …, shadowRootN`
+- `shadowRoot1`, …, `shadowRootN`
   - : Zero or more {{domxref("ShadowRoot")}} arguments.
     If a selection endpoint is within one of the provided shadow roots, the range will be able to return nodes within its corresponding Shadow DOM tree.
     Otherwise, if the selection crosses a shadow boundary and the corresponding `ShadowRoot` is not provided, the returned range will be adjusted to include the entire host element for the shadow root.

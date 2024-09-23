@@ -18,12 +18,12 @@ To properly discuss microtasks, it's first useful to know what a JavaScript task
 
 ### Tasks
 
-A **task** is any JavaScript code which is scheduled to be run by the standard mechanisms such as initially starting to run a program, an event callback being run, or an interval or timeout being fired. These all get scheduled on the **task queue**.
+A **task** is anything which is scheduled to be run by the standard mechanisms such as initially starting to run a program, an event being dispatched asynchronously, or an interval or timeout being fired. These all get scheduled on the **task queue**.
 
-Tasks get added to the task queue when:
+For example, tasks get added to the task queue when:
 
 - A new JavaScript program or subprogram is executed (such as from a console, or by running the code in a {{HTMLElement("script")}} element) directly.
-- An event fires, adding the event's callback function to the task queue.
+- The user clicks an element. A task is then created and executes all event callbacks.
 - A timeout or interval created with {{domxref("setTimeout()")}} or {{domxref("setInterval()")}} is reached, causing the corresponding callback to be added to the task queue.
 
 The event loop driving your code handles these tasks one after another, in the order in which they were enqueued. The oldest runnable task in the task queue will be executed during a single iteration of the event loop. After that, microtasks will be executed until the microtask queue is empty, and then the browser may choose to update rendering. Then the browser moves on to the next iteration of event loop.
@@ -38,7 +38,8 @@ First, each time a task exits, the event loop checks to see if the task is retur
 
 Second, if a microtask adds more microtasks to the queue by calling {{domxref("queueMicrotask()")}}, those newly-added microtasks _execute before the next task is run_. That's because the event loop will keep calling microtasks until there are none left in the queue, even if more keep getting added.
 
-> **Warning:** Since microtasks can themselves enqueue more microtasks, and the event loop continues processing microtasks until the queue is empty, there's a real risk of getting the event loop endlessly processing microtasks. Be cautious with how you go about recursively adding microtasks.
+> [!WARNING]
+> Since microtasks can themselves enqueue more microtasks, and the event loop continues processing microtasks until the queue is empty, there's a real risk of getting the event loop endlessly processing microtasks. Be cautious with how you go about recursively adding microtasks.
 
 ## Using microtasks
 
@@ -139,7 +140,7 @@ customElement.prototype.getData = (url) => {
 };
 ```
 
-This balances the clauses by having both situations handle the setting of `data` and firing of the `load` event within a microtask (using `queueMicrotask()` in the `if` clause and using the promises used by {{domxref("fetch()")}} in the `else` clause).
+This balances the clauses by having both situations handle the setting of `data` and firing of the `load` event within a microtask (using `queueMicrotask()` in the `if` clause and using the promises used by {{domxref("Window/fetch", "fetch()")}} in the `else` clause).
 
 #### Batching operations
 
@@ -167,7 +168,7 @@ When `sendMessage()` gets called, the specified message is first pushed onto the
 
 If the message we just added to the array is the first one, we enqueue a microtask that will send a batch. The microtask will execute, as always, when the JavaScript execution path reaches the top level, just before running callbacks. That means that any further calls to `sendMessage()` made in the interim will push their messages onto the message queue, but because of the array length check before adding a microtask, no new microtask is enqueued.
 
-When the microtask runs, then, it has an array of potentially many messages waiting for it. It starts by encoding it as JSON using the {{jsxref("JSON.stringify()")}} method. After that, the array's contents aren't needed anymore, so we empty the `messageQueue` array. Finally, we use the {{domxref("fetch()")}} method to send the JSON string to the server.
+When the microtask runs, then, it has an array of potentially many messages waiting for it. It starts by encoding it as JSON using the {{jsxref("JSON.stringify()")}} method. After that, the array's contents aren't needed anymore, so we empty the `messageQueue` array. Finally, we use the {{domxref("Window/fetch", "fetch()")}} method to send the JSON string to the server.
 
 This lets every call to `sendMessage()` made during the same iteration of the event loop add their messages to the same `fetch()` operation, without potentially having other tasks such as timeouts or the like delay the transmission.
 
@@ -186,8 +187,8 @@ In this simple example, we see that enqueueing a microtask causes the microtask'
 #### JavaScript
 
 ```js hidden
-let logElem = document.getElementById("log");
-let log = (s) => (logElem.innerHTML += `${s}<br>`);
+const logElem = document.getElementById("log");
+const log = (s) => (logElem.innerText += `${s}\n`);
 ```
 
 In the following code, we see a call to {{domxref("queueMicrotask()")}} used to schedule a microtask to run. This call is bracketed by calls to `log()`, a custom function that outputs text to the screen.
@@ -215,8 +216,8 @@ In this example, a timeout is scheduled to fire after zero milliseconds (or "as 
 #### JavaScript
 
 ```js hidden
-let logElem = document.getElementById("log");
-let log = (s) => (logElem.innerHTML += `${s}<br>`);
+const logElem = document.getElementById("log");
+const log = (s) => (logElem.innerText += `${s}\n`);
 ```
 
 In the following code, we see a call to {{domxref("queueMicrotask()")}} used to schedule a microtask to run. This call is bracketed by calls to `log()`, a custom function that outputs text to the screen.
@@ -224,9 +225,9 @@ In the following code, we see a call to {{domxref("queueMicrotask()")}} used to 
 The code below schedules a timeout to occur in zero milliseconds, then enqueues a microtask. This is bracketed by calls to `log()` to output additional messages.
 
 ```js
-let callback = () => log("Regular timeout callback has run");
+const callback = () => log("Regular timeout callback has run");
 
-let urgentCallback = () => log("*** Oh noes! An urgent callback has run!");
+const urgentCallback = () => log("*** Oh noes! An urgent callback has run!");
 
 log("Main program started");
 setTimeout(callback, 0);
@@ -251,18 +252,18 @@ This example expands slightly on the previous one by adding a function that does
 #### JavaScript
 
 ```js hidden
-let logElem = document.getElementById("log");
-let log = (s) => (logElem.innerHTML += `${s}<br>`);
+const logElem = document.getElementById("log");
+const log = (s) => (logElem.innerText += `${s}\n`);
 ```
 
 The main program code follows. The `doWork()` function here calls `queueMicrotask()`, yet the microtask still doesn't fire until the entire program exits, since that's when the task exits and there's nothing else on the execution stack.
 
 ```js
-let callback = () => log("Regular timeout callback has run");
+const callback = () => log("Regular timeout callback has run");
 
-let urgentCallback = () => log("*** Oh noes! An urgent callback has run!");
+const urgentCallback = () => log("*** Oh noes! An urgent callback has run!");
 
-let doWork = () => {
+const doWork = () => {
   let result = 1;
 
   queueMicrotask(urgentCallback);

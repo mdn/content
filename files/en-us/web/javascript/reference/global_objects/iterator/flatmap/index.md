@@ -2,12 +2,10 @@
 title: Iterator.prototype.flatMap()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/flatMap
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Iterator.flatMap
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{JSRef}}
 
 The **`flatMap()`** method of {{jsxref("Iterator")}} instances returns a new [iterator helper](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helpers) that takes each element in the original iterator, runs it through a mapping function, and yields elements returned by the mapping function (which are contained in another iterator or iterable).
 
@@ -37,7 +35,7 @@ A new [iterator helper](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iter
 
 ## Description
 
-`flatMap` accepts two kinds of return values from `callbackFn`: an iterator or iterable. They are handled in the same way as {{jsxref("Iterator.from()")}}: if the return value is iterable, the `@@iterator` method is called and the return value is used; otherwise, the return value is treated as an iterator and its `next()` method is called.
+`flatMap` accepts two kinds of return values from `callbackFn`: an iterator or iterable. They are handled in the same way as {{jsxref("Iterator.from()")}}: if the return value is iterable, the `[Symbol.iterator]()` method is called and the return value is used; otherwise, the return value is treated as an iterator and its `next()` method is called.
 
 ```js
 [1, 2, 3]
@@ -65,14 +63,14 @@ A new [iterator helper](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iter
         return {
           ...it,
           [Symbol.iterator]() {
-            console.log("@@iterator called");
+            console.log("Symbol.iterator called");
             return it;
           },
         };
     }
   })
   .toArray();
-// Logs "@@iterator called"
+// Logs "Symbol.iterator called"
 // Returns [1, 2, 3]
 ```
 

@@ -50,7 +50,8 @@ svg {
 
 > **Note:** `width`, and `height` have no effect on `use` elements, unless the element referenced has a [viewBox](/en-US/docs/Web/SVG/Attribute/viewBox) - i.e. they only have an effect when `use` refers to a `svg` or `symbol` element.
 
-> **Note:** Starting with SVG2, `x`, `y`, `width`, and `height` are _Geometry Properties_, meaning those attributes can also be used as CSS properties for that element.
+> [!NOTE]
+> Starting with SVG2, `x`, `y`, `width`, and `height` are _Geometry Properties_, meaning those attributes can also be used as CSS properties for that element.
 
 ## Usage notes
 
@@ -61,11 +62,13 @@ Since the cloned nodes are not exposed, care must be taken when using [CSS](/en-
 
 For security reasons, browsers may apply the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) on `use` elements and may refuse to load a cross-origin URL in the {{SVGAttr("href")}} attribute. There is currently no defined way to set a cross-origin policy for `use` elements.
 
-> **Warning:** Loading resources with data URIs in the `href` attribute is deprecated for security reasons.
+> [!WARNING]
+> Loading resources with data URIs in the `href` attribute is deprecated for security reasons.
 > This applies to `<use href="data:...` and also when setting `href` by using the [`set`](/en-US/docs/Web/SVG/Element/set) or [`setAttribute`](/en-US/docs/Web/API/Element/setAttribute) method.
 > See "Load from data: URI" in the [Browser compatibility](#browser_compatibility) table to check support in different browser versions.
 
-> **Warning:** Since SVG 2, the {{SVGAttr("xlink:href")}} attribute is deprecated in favor of {{SVGAttr("href")}}. See {{SVGAttr("xlink:href")}} page for more information.
+> [!WARNING]
+> Since SVG 2, the {{SVGAttr("xlink:href")}} attribute is deprecated in favor of {{SVGAttr("href")}}. See {{SVGAttr("xlink:href")}} page for more information.
 
 ## Usage context
 

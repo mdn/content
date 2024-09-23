@@ -286,7 +286,7 @@ event.transformer.options.port.onmessage = (event) => {
 - {{domxref("RTCRtpScriptTransform")}}
 - {{domxref("RTCRtpReceiver.transform")}}
 - {{domxref("RTCRtpSender.transform")}}
-- {{domxref("DedicatedWorkerGlobalScope.rtctransform_event")}}
+- {{domxref("DedicatedWorkerGlobalScope.rtctransform_event", "rtctransform")}} event
 - {{domxref("RTCTransformEvent")}}
 - {{domxref("RTCRtpScriptTransformer")}}
 - {{domxref("RTCEncodedVideoFrame")}}

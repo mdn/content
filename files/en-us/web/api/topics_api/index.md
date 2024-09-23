@@ -10,9 +10,11 @@ browser-compat: api.Document.browsingTopics
 
 {{DefaultAPISidebar("Topics API")}}{{SeeCompatTable}}{{non-standard_header}}
 
-> **Warning:** This feature is currently opposed by two browser vendors. See the [Standards positions](#standards_positions) section below for details of opposition.
+> [!WARNING]
+> This feature is currently opposed by two browser vendors. See the [Standards positions](#standards_positions) section below for details of opposition.
 
-> **Note:** An [Enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment) is required to use the Topics API in your applications. See the [Enrollment](#enrollment) section for details of what sub-features are gated by enrollment.
+> [!NOTE]
+> An [Enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment) is required to use the Topics API in your applications. See the [Enrollment](#enrollment) section for details of what sub-features are gated by enrollment.
 
 The **Topics API** provides a mechanism for developers to implement use cases such as **interest-based advertising (IBA)** based on topics collected by the browser as the user navigates different pages, rather than collected by the developer by tracking the user's journey around different sites with [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies).
 
@@ -20,11 +22,12 @@ The **Topics API** provides a mechanism for developers to implement use cases su
 
 A typical mechanism for advertising on the web involves a user visiting **publisher** sites that use an advertising technology (ad tech) platform to publish ads for an **advertiser**'s products or services. The publisher is paid to display the ads, which helps to fund their content, and more business is driven to advertiser sites.
 
-The above process can be made more effective using interest-based advertising (IBA). The idea is that when users visit the publisher sites, they are served a **personalized** selection of ads based on their interests. Their interests are inferred from sites they have previously visited. In the past, third-party cookies have been used to collect information on user interests, but all browsers are phasing out the use of third-party cookies. The Topics API provides part of the path towards this goal — a mechanism to implement IBA that does not depend on third-party cookies.
+The above process can be made more effective using interest-based advertising (IBA). The idea is that when users visit the publisher sites, they are served a **personalized** selection of ads based on their interests. Their interests are inferred from sites they have previously visited. In the past, third-party tracking cookies have been used to collect information on user interests, but browsers are phasing out the availability of third-party cookies for an increasing proportion of users. The Topics API provides part of the path towards this goal — a mechanism to implement IBA that does not depend on user tracking.
 
 First of all, the browser infers a user's interests from the URLs of sites they visit that have ad tech `<iframe>`s embedded. These interests are mapped to specific **topics of interest**, and the browser calculates and records the users' top topic (i.e. the topic that their interests mapped to most often) at the end of each **epoch**. An epoch is a week by default. The top topic is updated each week so that interests are kept current and users don't start to see ads for topics that they are no longer interested in.
 
-> **Note:** This process only happens on sites where a Topics API feature is used (see [What API features observe and return topics?](#what_api_features_observe_and_return_topics)).
+> [!NOTE]
+> This process only happens on sites where a Topics API feature is used (see [What API features enable the Topics API?](/en-US/docs/Web/API/Topics_API/Using#what_api_features_enable_the_topics_api)).
 
 Once the browser has observed one or more topics for a user, the Topics API can retrieve them and send them to an ad tech platform. The platform can then use those topics to personalize the ads they serve to the user. The API helps to preserve privacy by _only returning topics to an API caller that have been observed by them_ on pages visited by the current user.
 
@@ -42,7 +45,7 @@ The Topics API has no distinct interfaces of its own.
 
 - {{domxref("Document.browsingTopics()")}}
   - : Returns a promise that fulfills with an array of objects representing the top topics for the user, one from each of the last three epochs. By default, the method also causes the browser to record the current page visit as observed by the caller, so the page's hostname can later be used in topics calculation.
-- {{domxref("fetch()")}} / {{domxref("Request.Request", "Request()")}}, the `browsingTopics` option
+- {{domxref("Window/fetch", "fetch()")}} / {{domxref("Request.Request", "Request()")}}, the `browsingTopics` option
   - : A boolean specifying that the selected topics for the current user should be sent in a {{httpheader("Sec-Browsing-Topics")}} header with the associated request.
 - {{domxref("HTMLIFrameElement.browsingTopics")}}
   - : A boolean property specifying that the selected topics for the current user should be sent with the request for the associated {{htmlelement("iframe")}}'s source. This reflects the `browsingtopics` content attribute value.
@@ -92,5 +95,5 @@ Two browser vendors [oppose](/en-US/docs/Glossary/Web_standards#opposing_standar
 
 ## See also
 
-- [Topics API](https://developer.chrome.com/docs/privacy-sandbox/topics/overview/) on developer.chrome.com (2023)
-- [The Privacy Sandbox](https://developer.chrome.com/docs/privacy-sandbox/) on developer.chrome.com (2023)
+- [Topics API](https://developers.google.com/privacy-sandbox/private-advertising/topics) on developers.google.com (2023)
+- [The Privacy Sandbox](https://developers.google.com/privacy-sandbox) on developers.google.com (2023)

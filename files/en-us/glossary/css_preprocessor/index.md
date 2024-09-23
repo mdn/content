@@ -19,8 +19,6 @@ To use a CSS preprocessor, you must install a CSS compiler on your web {{Glossar
   - [Sass](https://sass-lang.com/)
   - [LESS](https://lesscss.org/)
   - [Stylus](https://stylus-lang.com/)
-  - [PostCSS](https://postcss.org/)
 
-- [MDN Web Docs Glossary](/en-US/docs/Glossary)
-
+- Related glossary terms:
   - {{Glossary("CSS")}}

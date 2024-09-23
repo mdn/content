@@ -104,7 +104,8 @@ After the user selects a device to pair in the current origin, it is only allowe
 It is therefore important to list the required services.
 In particular, when filtering with just [`name`](#name) you must remember to also specify the desired services in [`optionalServices`](#optionalservices).
 
-> **Note:** Even though the `options` argument is technically optional, in order to return any results you must either set a value for `filters` or set `acceptAllDevices` to `true`.
+> [!NOTE]
+> Even though the `options` argument is technically optional, in order to return any results you must either set a value for `filters` or set `acceptAllDevices` to `true`.
 
 ### Return value
 
@@ -124,11 +125,11 @@ A {{jsxref("Promise")}} to a {{domxref("BluetoothDevice")}} object.
 
 ```js
 // Discovery options match any devices advertising:
-// . The standard heart rate service.
-// . Both 16-bit service IDs 0x1802 and 0x1803.
-// . A proprietary 128-bit UUID service c48e6067-5295-48d3-8d5c-0395f61792b1.
-// . Devices with name "ExampleName".
-// . Devices with name starting with "Prefix".
+// - The standard heart rate service.
+// - Both 16-bit service IDs 0x1802 and 0x1803.
+// - A proprietary 128-bit UUID service c48e6067-5295-48d3-8d5c-0395f61792b1.
+// - Devices with name "ExampleName".
+// - Devices with name starting with "Prefix".
 //
 // And enables access to the battery service if devices
 // include it, even if devices do not advertise that service.

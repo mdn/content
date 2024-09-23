@@ -10,7 +10,8 @@ page-type: glossary-definition
 
 All modern browsers support the TLS protocol, requiring the server to provide a valid {{Glossary("Digital certificate", "digital certificate")}} confirming its identity in order to establish a secure connection. It is possible for both the client and server to mutually authenticate each other, if both parties provide their own individual digital certificates.
 
-> **Note:** All major browsers began removing support for TLS 1.0 and 1.1 in early 2020; you'll need to make sure your web server supports TLS 1.2 or 1.3 going forward. From version 74 onwards, Firefox will return a [Secure Connection Failed](https://support.mozilla.org/en-US/kb/secure-connection-failed-firefox-did-not-connect) error when connecting to servers using the older TLS versions ([Firefox bug 1606734](https://bugzil.la/1606734)).
+> [!NOTE]
+> All major browsers began removing support for TLS 1.0 and 1.1 in early 2020; you'll need to make sure your web server supports TLS 1.2 or 1.3 going forward. From version 74 onwards, Firefox will return a [Secure Connection Failed](https://support.mozilla.org/en-US/kb/secure-connection-failed-firefox-did-not-connect) error when connecting to servers using the older TLS versions ([Firefox bug 1606734](https://bugzil.la/1606734)).
 
 ## See also
 
@@ -19,6 +20,6 @@ All modern browsers support the TLS protocol, requiring the server to provide a 
 - [RFC 5246](https://datatracker.ietf.org/doc/html/rfc5246) (The Transport Layer Security Protocol, Version 1.2)
 - [Transport Layer Security](/en-US/docs/Web/Security/Transport_Layer_Security)
 - [Transport Layer Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Security_Cheat_Sheet.html) (OWASP)
-- [Glossary](/en-US/docs/Glossary)
+- Related glossary terms:
   - {{Glossary("HTTPS")}}
   - {{Glossary("SSL")}}

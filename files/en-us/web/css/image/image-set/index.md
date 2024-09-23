@@ -55,6 +55,13 @@ image-set(
 
 {{csssyntax}}
 
+## Accessibility
+
+Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
+
+- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+
 ## Examples
 
 ### Using image-set() to provide alternative background-image options
@@ -63,7 +70,8 @@ This example shows how to use [`image-set()`](https://drafts.csswg.org/css-image
 
 {{EmbedGHLiveSample("css-examples/images/image-set.html", '100%', 600)}}
 
-> **Note:** In the above example, the `-webkit` prefixed version is also used to support Chrome and Safari. In Firefox 90, support was added for `-webkit-image-set()` as an alias to `image-set()` (in order to provide compat where developers had not added the standard property).
+> [!NOTE]
+> In the above example, the `-webkit` prefixed version is also used to support Chrome and Safari. In Firefox 90, support was added for `-webkit-image-set()` as an alias to `image-set()` (in order to provide compat where developers had not added the standard property).
 
 ### Using image-set() to provide alternative image formats
 
@@ -85,13 +93,6 @@ There is no inbuilt fallback for `image-set()`; therefore to include a {{cssxref
 }
 ```
 
-## Accessibility concerns
-
-Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
-
-- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
-- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
-
 ## Specifications
 
 {{Specifications}}
@@ -105,6 +106,6 @@ Browsers do not provide any special information on background images to assistiv
 - {{cssxref("image")}}
 - {{cssxref("image/image", "image()")}}
 - {{cssxref("element", "element()")}}
-- {{cssxref("url", "url()")}}
+- {{cssxref("url_value", "&lt;url&gt;")}}
 - {{cssxref("&lt;gradient&gt;")}}
 - {{cssxref("cross-fade", "cross-fade()")}}

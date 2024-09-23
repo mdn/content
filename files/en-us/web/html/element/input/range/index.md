@@ -41,7 +41,8 @@ If an attempt is made to set the value lower than the minimum, it is set to the 
 
 In addition to the attributes shared by all {{HTMLElement("input")}} elements, range inputs offer the following attributes.
 
-> **Note:** The following input attributes do not apply to the input range: `accept`, `alt`, `checked`, `dirname`, `formaction`, `formenctype`, `formmethod`, `formnovalidate`, `formtarget`, `height`, `maxlength`, `minlength`, `multiple`, `pattern`, `placeholder`, `readonly`, `required`, `size`, and `src`. Any of these attributes, if included, will be ignored.
+> [!NOTE]
+> The following input attributes do not apply to the input range: `accept`, `alt`, `checked`, `dirname`, `formaction`, `formenctype`, `formmethod`, `formnovalidate`, `formtarget`, `height`, `maxlength`, `minlength`, `multiple`, `pattern`, `placeholder`, `readonly`, `required`, `size`, and `src`. Any of these attributes, if included, will be ignored.
 
 ### list
 
@@ -61,7 +62,8 @@ The lowest value in the range of permitted values. If the [`value`](/en-US/docs/
 
 This value must be less than or equal to the value of the [`max`](/en-US/docs/Web/HTML/Attributes/max) attribute. See the HTML [`min`](/en-US/docs/Web/HTML/Attributes/min) attribute.
 
-> **Note:** If the `min` and `max` values are equal or the `max` value is lower than the `min` value the user will not be able to interact with the range.
+> [!NOTE]
+> If the `min` and `max` values are equal or the `max` value is lower than the `min` value the user will not be able to interact with the range.
 
 ### step
 
@@ -69,7 +71,8 @@ The `step` attribute is a number that specifies the granularity that the value m
 
 The `step` attribute can also be set to the `any` string value. This `step` value means that no stepping interval is implied and any value is allowed in the specified range (barring other constraints, such as [`min`](#min) and [`max`](#max)). See the [Setting step to the `any` value](#setting_step_to_any) example for how this works in supported browsers.
 
-> **Note:** When the value entered by a user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round off the value to the nearest valid value, preferring to round numbers up when there are two equally close options.
+> [!NOTE]
+> When the value entered by a user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round off the value to the nearest valid value, preferring to round numbers up when there are two equally close options.
 
 The default stepping value for `range` inputs is 1, allowing only integers to be entered, _unless_ the stepping base is not an integer; for example, if you set `min` to -10 and `value` to 1.5, then a `step` of 1 will allow only values such as 1.5, 2.5, 3.5,… in the positive direction and -0.5, -1.5, -2.5,… in the negative direction. See the [HTML `step` attribute](/en-US/docs/Web/HTML/Attributes/step).
 
@@ -169,7 +172,8 @@ To add tick marks to a range control, include the `list` attribute, giving it th
 
 To help you from repeating code you can reuse that same {{HTMLElement("datalist")}} for multiple `<input type="range">` elements, and other {{HTMLElement("input")}} types.
 
-> **Note:** If you also want to [show the labels](#adding_labels) as in the example below then you would need a `datalist` for each range input.
+> [!NOTE]
+> If you also want to [show the labels](#adding_labels) as in the example below then you would need a `datalist` for each range input.
 
 #### HTML
 
@@ -295,14 +299,16 @@ See [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vert
         <a href="/en-US/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
         <a href="/en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>,
         <a href="/en-US/docs/Web/HTML/Element/input#max"><code>max</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#min"><code>min</code></a>, and
+        <a href="/en-US/docs/Web/HTML/Element/input#min"><code>min</code></a>,
         <a href="/en-US/docs/Web/HTML/Element/input#step"><code>step</code></a>
       </td>
     </tr>
     <tr>
       <td><strong>IDL attributes</strong></td>
       <td>
-        <code>list</code>, <code>value</code>, and <code>valueAsNumber</code>
+        <a href="/en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#value"><code>value</code></a>,
+        <code>valueAsNumber</code>
       </td>
     </tr>
     <tr>

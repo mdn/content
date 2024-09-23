@@ -43,17 +43,7 @@ moves towards the value given by the `target` parameter. The decay rate as
 defined by the `timeConstant` parameter is exponential; therefore the value
 will never reach `target` completely, but after each timestep of length
 `timeConstant`, the value will have approached `target` by
-another <math>
-<semantics><mrow><mn>1</mn>
-<mo>-</mo>
-<msup><mi>e</mi>
-<mrow><mo>-</mo>
-<mn>1</mn>
-</mrow></msup><mo>≈</mo>
-<mn>63.2</mn>
-<mtext>%</mtext>
-</mrow><annotation encoding="TeX">1 - e^{-1} \approx 63.2%</annotation>
-</semantics></math>. For the complete formula (which uses a first-order linear continuous
+another <math><semantics><mrow><mn>1</mn><mo>-</mo><msup><mi>e</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>≈</mo><mn>63.2</mn><mtext>%</mtext></mrow><annotation encoding="TeX">1 - e^{-1} \approx 63.2%</annotation></semantics></math>. For the complete formula (which uses a first-order linear continuous
 time-invariant system), check the [Web Audio specification](https://webaudio.github.io/web-audio-api/#dom-audioparam-settargetattime).
 
 If you absolutely need to reach the target value by a specific time, you can use
@@ -75,23 +65,22 @@ duration.
 For more details, check the following table on how the value changes from 0% to 100% as
 the time progresses.
 
-| Time since `startTime` | Value                             |
-| ---------------------- | --------------------------------- |
-| `0 * timeConstant`     | 0%                                |
-| `0.5 * timeConstant`   | 39.3%                             |
-| `1 * timeConstant`     | 63.2%                             |
-| `2 * timeConstant`     | 86.5%                             |
-| `3 * timeConstant`     | 95.0%                             |
-| `4 * timeConstant`     | 98.2%                             |
-| `5 * timeConstant`     | 99.3%                             |
-| `n * timeConstant`     | <math><semantics><mrow><mn>1</mn> |
+| Time since `startTime` | Value                                                       |
+| ---------------------- | ----------------------------------------------------------- |
+| `0 * timeConstant`     | 0%                                                          |
+| `0.5 * timeConstant`   | 39.3%                                                       |
+| `1 * timeConstant`     | 63.2%                                                       |
+| `2 * timeConstant`     | 86.5%                                                       |
+| `3 * timeConstant`     | 95.0%                                                       |
+| `4 * timeConstant`     | 98.2%                                                       |
+| `5 * timeConstant`     | 99.3%                                                       |
+| `n * timeConstant`     | <math><semantics><mrow><mn>1</mn></mrow></semantics></math> |
 
-<math><semantics><mrow><mn>1</mn>
-<mo>-</mo>
-<msup><mi>e</mi>
-<mrow><mo>-</mo>
-<mi>n</mi>
-</mrow></msup></mrow><annotation encoding="TeX">1 - e^{-n}</annotation></semantics></math>
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mrow><mn>1</mn><mo>-</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="TeX">1 - e^{-n}</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
 
 ## Examples
 

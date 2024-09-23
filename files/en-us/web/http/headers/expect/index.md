@@ -2,7 +2,7 @@
 title: Expect
 slug: Web/HTTP/Headers/Expect
 page-type: http-header
-browser-compat: http.headers.Expect
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110#field.expect
 ---
 
 {{HTTPSidebar}}
@@ -74,10 +74,6 @@ The server sends {{HTTPStatus("100")}} (Continue), which instructs the client to
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

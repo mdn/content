@@ -14,7 +14,7 @@ For example, clicking on the left edge of the viewport will always result in a m
 
 ## Value
 
-A `double` floating point value.
+A `double` floating point value in pixels.
 
 ## Examples
 

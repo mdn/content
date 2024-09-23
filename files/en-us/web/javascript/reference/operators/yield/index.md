@@ -27,7 +27,8 @@ yield expression
 
 Returns the optional value passed to the generator's `next()` method to resume its execution.
 
-> **Note:** This means `next()` is asymmetric: it always sends a value to the currently suspended `yield`, but returns the operand of the next `yield`. The argument passed to the first `next()` call cannot be retrieved because there's no currently suspended `yield`.
+> [!NOTE]
+> This means `next()` is asymmetric: it always sends a value to the currently suspended `yield`, but returns the operand of the next `yield`. The argument passed to the first `next()` call cannot be retrieved because there's no currently suspended `yield`.
 
 ## Description
 

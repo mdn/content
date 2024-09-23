@@ -12,11 +12,13 @@ The `createAnalyser()` method of the
 {{domxref("BaseAudioContext")}} interface creates an {{domxref("AnalyserNode")}}, which
 can be used to expose audio time and frequency data and create data visualizations.
 
-> **Note:** The {{domxref("AnalyserNode.AnalyserNode", "AnalyserNode()")}} constructor is the
+> [!NOTE]
+> The {{domxref("AnalyserNode.AnalyserNode", "AnalyserNode()")}} constructor is the
 > recommended way to create an {{domxref("AnalyserNode")}}; see
 > [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 
-> **Note:** For more on using this node, see the
+> [!NOTE]
+> For more on using this node, see the
 > {{domxref("AnalyserNode")}} page.
 
 ## Syntax
@@ -39,10 +41,10 @@ The following example shows basic usage of an AudioContext to create an Analyser
 then use requestAnimationFrame() to collect time domain data repeatedly and draw an
 "oscilloscope style" output of the current audio input. For more complete applied
 examples/information, check out our [Voice-change-O-matic](https://mdn.github.io/webaudio-examples/voice-change-o-matic/) demo (see
-[app.js lines 108-193](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic/scripts/app.js#L108-L193) for relevant code).
+[app.js lines 108-193](https://github.com/mdn/webaudio-examples/blob/main/voice-change-o-matic/scripts/app.js#L108-L193) for relevant code).
 
 ```js
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new AudioContext();
 const analyser = audioCtx.createAnalyser();
 
 // …

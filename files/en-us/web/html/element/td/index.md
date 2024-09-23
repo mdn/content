@@ -73,7 +73,8 @@ The following attributes are deprecated and should not be used. They are documen
 
   ![Illustration demonstrating column and row spanning of table cells: cells 1, 3, and 4 spanning two rows; cell 2 spanning two columns; cells 5 and 6 fitting into the available cells that are the second and third columns in the second row](column-row-span.png)
 
-  > **Note:** These attributes must not be used to overlap cells.
+  > [!NOTE]
+  > These attributes must not be used to overlap cells.
 
 ## Examples
 
@@ -87,7 +88,8 @@ This example uses `<td>` elements along with other table-related elements to int
 
 Some table rows ({{HTMLElement("tr")}} elements) contain both header cells ({{HTMLElement("th")}} elements) and data cell `<td>` elements. The {{HTMLElement("th")}} element that is the first child of each row forms the first column of the table, with each `<th>` providing the row header for the data cells within that row. Each corresponding `<td>` element contains data aligned with its respective column header and row header cell.
 
-> **Note:** Normally, a table head group with column headers would be implemented to make it easier to understand the information in the columns. The {{HTMLElement("thead")}} and {{HTMLElement("tbody")}} elements would be used to group such rows of headers and data into the respective table head and body sections. This is not implemented in this example to focus on the data cells and reduce the complexity of this example.
+> [!NOTE]
+> Normally, a table head group with column headers would be implemented to make it easier to understand the information in the columns. The {{HTMLElement("thead")}} and {{HTMLElement("tbody")}} elements would be used to group such rows of headers and data into the respective table head and body sections. This is not implemented in this example to focus on the data cells and reduce the complexity of this example.
 
 ```html
 <table>
@@ -239,7 +241,8 @@ For more complex relationships between data cells (`<td>` elements) and header c
 
 To improve the {{Glossary("accessibility", "accessibility")}} of the [previous example](#column_and_row_spanning) and to allow screen readers, for example, to speak the headers associated with each data cell, the [`headers`](#headers) attribute can be introduced along with [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attributes. Each row header cell ({{HTMLElement("th")}} element) associated with the "ABC" data cell, i.e., the letters "A", "B", and "C", is given a unique identifier with the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute. The "ABC" data cell (`<td>` element) then uses these `id` values in a space-separated list for the [`headers`](#headers) attribute.
 
-> **Note:** It's recommended to use more descriptive and useful values for the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute. Each `id` in a document must be unique to that document. In this example, the `id` values are single characters to maintain focus on the concept of the [`headers`](#headers) attribute.
+> [!NOTE]
+> It's recommended to use more descriptive and useful values for the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute. Each `id` in a document must be unique to that document. In this example, the `id` values are single characters to maintain focus on the concept of the [`headers`](#headers) attribute.
 
 ```html
 <table>
@@ -301,7 +304,7 @@ While the [visual result](#result_2) is unchanged from the [previous example tab
       <td>
         The start tag is mandatory.<br />The end tag may be omitted, if it is
         immediately followed by a {{HTMLElement("th")}} or
-        {{HTMLElement("td")}} element or if there are no more data in its
+        <code>&lt;td&gt;</code> element or if there are no more data in its
         parent element.
       </td>
     </tr>

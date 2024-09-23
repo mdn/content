@@ -115,8 +115,9 @@ Like HTML redirections, this can't work on all resources, and obviously, this wi
 With three ways to trigger redirections, several ways can be used at the same time. But which is applied first?
 
 1. HTTP redirects always execute first — they exist when there is not even a transmitted page.
-2. HTML redirects ({{HTMLElement("meta")}}) execute if there weren't any HTTP redirects.
-3. JavaScript redirects execute last, and only if JavaScript is enabled.
+2. Somewhat surprisingly, JavaScript redirects execute next, before HTML redirects. This is because the `<meta>` redirect happens after the page is _completely loaded_, which is after all scripts have executed.
+3. HTML redirects ({{HTMLElement("meta")}}) execute if there weren't any HTTP redirects or JavaScript redirects that were executed before the page was loaded.
+4. If there is any JavaScript redirect that happens after the page is loaded (for example, on a button click), it will execute last if the page isn't already redirected by the previous methods.
 
 When possible, use HTTP redirects and don't add {{HTMLElement("meta")}} element redirects. If someone changes the HTTP redirects but forgets to change the HTML redirects, the redirects will no longer be identical, which could cause an infinite loop or other nightmares.
 
@@ -141,7 +142,8 @@ When you restructure websites, URLs change. Even if you update your site's links
 
 You don't want to break these links, as they bring valuable users and help your SEO, so you set up redirects from the old URLs to the new ones.
 
-> **Note:** This technique does work for internal links, but try to avoid having internal redirects. A redirect has a significant performance cost (as an extra HTTP request occurs). If you can avoid it by correcting internal links, you should fix those links instead.
+> [!NOTE]
+> This technique does work for internal links, but try to avoid having internal redirects. A redirect has a significant performance cost (as an extra HTTP request occurs). If you can avoid it by correcting internal links, you should fix those links instead.
 
 ### Temporary responses to unsafe requests
 
@@ -211,7 +213,7 @@ rewrite ^/images/(.*)$ https://images.example.com/$1 permanent;
 
 ### IIS
 
-In IIS, you use the [`<httpRedirect>`](https://docs.microsoft.com/iis/configuration/system.webServer/httpRedirect/) element to configure redirections.
+In IIS, you use the [`<httpRedirect>`](https://learn.microsoft.com/en-us/iis/configuration/system.webServer/httpRedirect/) element to configure redirections.
 
 ## Redirection loops
 

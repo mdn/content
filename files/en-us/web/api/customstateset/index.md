@@ -46,7 +46,7 @@ These states can then be used as custom state pseudo-class selectors in a simila
 
 ### Setting custom element states
 
-To make the {{domxref("CustomStateSet")}} available, a custom element must first call {{domxref("HTMLElement.attachInternals()")}} in order to attach an {{domxref("ElementInternals")}} object.
+To make the `CustomStateSet` available, a custom element must first call {{domxref("HTMLElement.attachInternals()")}} in order to attach an {{domxref("ElementInternals")}} object.
 `CustomStateSet` is then returned by {{domxref("ElementInternals.states")}}.
 Note that `ElementInternals` cannot be attached to a custom element based on a built-in element, so this feature only works for autonomous custom elements (see [github.com/whatwg/html/issues/5166](https://github.com/whatwg/html/issues/5166)).
 
@@ -77,7 +77,8 @@ CSS can also be used to match a custom state [within a custom element's shadow D
 
 Additionally, the `:state()` pseudo-class can be used after the [`::part()`](/en-US/docs/Web/CSS/::part) pseudo-element to match the [shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) of a custom element that are in a particular state.
 
-> **Warning:** Browsers that do not yet support [`:state()`](/en-US/docs/Web/CSS/:state) will use a CSS `<dashed-ident>` for selecting custom states, which is now deprecated.
+> [!WARNING]
+> Browsers that do not yet support [`:state()`](/en-US/docs/Web/CSS/:state) will use a CSS `<dashed-ident>` for selecting custom states, which is now deprecated.
 > For information about how to support both approaches see the [Compatibility with `<dashed-ident>` syntax](#compability_with_dashed-ident_syntax) section below.
 
 ## Examples
@@ -111,17 +112,20 @@ class LabeledCheckbox extends HTMLElement {
   connectedCallback() {
     const shadowRoot = this.attachShadow({ mode: "open" });
     shadowRoot.innerHTML = `<style>
-        :host {
-          display: block;
-        }
-       :host::before {
-         content: '[ ]';
-         white-space: pre;
-         font-family: monospace;
-       }
-       :host(:state(checked))::before { content: '[x]'; }
-       </style>
-       <slot>Label</slot>`;
+  :host {
+    display: block;
+  }
+  :host::before {
+    content: "[ ]";
+    white-space: pre;
+    font-family: monospace;
+  }
+  :host(:state(checked))::before {
+    content: "[x]";
+  }
+</style>
+<slot>Label</slot>
+`;
   }
 
   get checked() {
@@ -226,17 +230,20 @@ class LabeledCheckbox extends HTMLElement {
   connectedCallback() {
     const shadowRoot = this.attachShadow({ mode: "open" });
     shadowRoot.innerHTML = `<style>
-        :host {
-          display: block;
-        }
-       :host::before {
-         content: '[ ]';
-         white-space: pre;
-         font-family: monospace;
-       }
-       :host(:state(checked))::before { content: '[x]'; }
-       </style>
-       <slot>Label</slot>`;
+  :host {
+    display: block;
+  }
+  :host::before {
+    content: "[ ]";
+    white-space: pre;
+    font-family: monospace;
+  }
+  :host(:state(checked))::before {
+    content: "[x]";
+  }
+</style>
+<slot>Label</slot>
+`;
   }
 
   get checked() {
@@ -286,7 +293,8 @@ class QuestionBox extends HTMLElement {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
     shadowRoot.innerHTML = `<div><slot>Question</slot></div>
-       <labeled-checkbox part='checkbox'>Yes</labeled-checkbox>`;
+<labeled-checkbox part="checkbox">Yes</labeled-checkbox>
+`;
   }
 }
 ```
@@ -367,16 +375,26 @@ class ManyStateElement extends HTMLElement {
 
     const shadowRoot = this.attachShadow({ mode: "open" });
     shadowRoot.innerHTML = `<style>
-        :host {
-          display: block;
-          font-family: monospace;
-        }
-       :host::before { content: '[ unknown ]'; white-space: pre; }
-       :host(:state(loading))::before { content: '[ loading ]' }
-       :host(:state(interactive))::before { content: '[ interactive ]' }
-       :host(:state(complete))::before { content: '[ complete ]' }
-       </style>
-       <slot>Click me</slot>`;
+  :host {
+    display: block;
+    font-family: monospace;
+  }
+  :host::before {
+    content: "[ unknown ]";
+    white-space: pre;
+  }
+  :host(:state(loading))::before {
+    content: "[ loading ]";
+  }
+  :host(:state(interactive))::before {
+    content: "[ interactive ]";
+  }
+  :host(:state(complete))::before {
+    content: "[ complete ]";
+  }
+</style>
+<slot>Click me</slot>
+`;
   }
 
   get state() {

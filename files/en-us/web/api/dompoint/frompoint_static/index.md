@@ -8,12 +8,10 @@ browser-compat: api.DOMPoint.fromPoint_static
 
 {{APIRef("DOM")}}
 
-The **{{domxref("DOMPoint")}}** static method
-`fromPoint()` creates and returns a new mutable `DOMPoint`
-object given a source point.
+The **`fromPoint()`** static method of the {{domxref("DOMPoint")}} interface creates and returns a new mutable `DOMPoint` object given a source point.
 
 You can also create a new `DOMPoint` object using the
-{{domxref("DOMPoint.DOMPoint", "new DOMPoint()")}} constructor.
+{{domxref("DOMPoint.DOMPoint", "DOMPoint()")}} constructor.
 
 Although this interface is based on `DOMPointReadOnly`, it is not read-only;
 the properties within may be changed at will.

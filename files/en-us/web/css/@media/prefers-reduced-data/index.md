@@ -9,7 +9,8 @@ browser-compat: css.at-rules.media.prefers-reduced-data
 
 {{CSSRef}}{{SeeCompatTable}}
 
-> **Note:** This feature is not supported by any user agent and its specifics are subject to change.
+> [!NOTE]
+> This feature is not supported by any user agent and its specifics are subject to change.
 
 The **`prefers-reduced-data`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) is used to detect if the user has requested the web content that consumes less internet traffic.
 
@@ -26,7 +27,8 @@ Currently no user agent implements this feature, although various operating syst
 
 ## Examples
 
-> **Note:** No browser currently implements this feature so the following example will not work.
+> [!NOTE]
+> No browser currently implements this feature so the following example will not work.
 
 In this example the `montserrat-regular.woff2` font file will neither be preloaded nor downloaded if the user prefers reduced data, in this case the "[system font stack](https://css-tricks.com/snippets/css/system-font-stack/)" will serve as the fallback font:
 

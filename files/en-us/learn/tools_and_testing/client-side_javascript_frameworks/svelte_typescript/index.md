@@ -81,7 +81,8 @@ Best of all, JavaScript code is valid TypeScript code; TypeScript is a superset 
 
 Our TypeScript code will be able to run everywhere JavaScript can run. How is that possible? TypeScript "transpiles" our code to vanilla JavaScript. That means that it parses TypeScript code and produces the equivalent vanilla JavaScript code for browsers to run.
 
-> **Note:** If you are curious about how TypeScript transpiles our code to JavaScript, you can have a look at the [TypeScript Playground](https://www.typescriptlang.org/play/?target=1&e=4#example/hello-world).
+> [!NOTE]
+> If you are curious about how TypeScript transpiles our code to JavaScript, you can have a look at the [TypeScript Playground](https://www.typescriptlang.org/play/?target=1&e=4#example/hello-world).
 
 First-class TypeScript support has been Svelte's most requested feature for quite some time. Thanks to the hard work of the Svelte team, together with many contributors, we have an [official solution](https://svelte.dev/blog/svelte-and-typescript) ready to be put to the test. In this section we'll show you how to set up a Svelte project with TypeScript support to give it a try.
 
@@ -136,7 +137,8 @@ To add TypeScript support to an existing Svelte project, you can [follow these i
 
 You can even use `degit` to download the script. That's what we will do to start porting our application to TypeScript.
 
-> **Note:** Remember that you can run `npx degit opensas/mdn-svelte-tutorial/07-typescript-support svelte-todo-typescript` to get the complete to-do list application in JavaScript before you start porting it to TypeScript.
+> [!NOTE]
+> Remember that you can run `npx degit opensas/mdn-svelte-tutorial/07-typescript-support svelte-todo-typescript` to get the complete to-do list application in JavaScript before you start porting it to TypeScript.
 
 Go to the root directory of the project and enter these commands:
 
@@ -157,16 +159,19 @@ npm run dev                                       # start the app in development
 
 These instructions apply to any Svelte project you'd like to convert to TypeScript. Just take into account that the Svelte community is constantly improving Svelte TypeScript support, so you should run `npm update` regularly to take advantage of the latest changes.
 
-> **Note:** if you find any trouble working with TypeScript inside a Svelte application, have a look at this [troubleshooting/FAQ section about TypeScript support](https://github.com/sveltejs/language-tools/blob/master/docs/preprocessors/typescript.md#troubleshooting--faq).
+> [!NOTE]
+> If you find any trouble working with TypeScript inside a Svelte application, have a look at this [troubleshooting/FAQ section about TypeScript support](https://github.com/sveltejs/language-tools/blob/master/docs/preprocessors/typescript.md#troubleshooting--faq).
 
 As we said before, TypeScript is a superset of JavaScript, so your application will run without modifications. Currently you will be running a regular JavaScript application with TypeScript support enabled, without taking advantage of any of the features that TypeScript provides. You can now start adding types progressively.
 
 Once you have TypeScript configured, you can start using it from a Svelte component by just adding a `<script lang='ts'>` at the beginning of the script section. To use it from regular JavaScript files, just change the file extension from `.js` to `.ts`. You'll also have to update any corresponding import statements to remove the `.ts` file extension from all `import` statements.
 
-> **Note:** TypeScript will throw an error if you use the `.ts` file extension in an `import` statement, so you if you have a file `./foo.ts`, you must import it as "./foo".
+> [!NOTE]
+> TypeScript will throw an error if you use the `.ts` file extension in an `import` statement, so you if you have a file `./foo.ts`, you must import it as "./foo".
 > See the [Module resolution for bundlers, TypeScript runtimes, and Node.js loaders](https://www.typescriptlang.org/docs/handbook/modules/theory.html#module-resolution-for-bundlers-typescript-runtimes-and-nodejs-loaders) section of the TypeScript manual for more information.
 
-> **Note:** Using TypeScript in component markup sections is [not supported yet](https://github.com/sveltejs/svelte/issues/4701). You'll have to use JavaScript from the markup, and TypeScript in the `<script lang='ts'>` section.
+> [!NOTE]
+> Using TypeScript in component markup sections is [not supported yet](https://github.com/sveltejs/svelte/issues/4701). You'll have to use JavaScript from the markup, and TypeScript in the `<script lang='ts'>` section.
 
 ## Improved developer experience with TypeScript
 
@@ -174,11 +179,13 @@ TypeScript provides code editors and IDEs with lots of information to allow them
 
 We'll use [Visual Studio Code](https://code.visualstudio.com/) to do a quick test and see how we can get autocompletion hints and type-checking as we're writing components.
 
-> **Note:** If you don't wish to use VS Code, we also provide instructions for using TypeScript error checking from the terminal instead, slightly later on.
+> [!NOTE]
+> If you don't wish to use VS Code, we also provide instructions for using TypeScript error checking from the terminal instead, slightly later on.
 
 There is work in progress to support TypeScript in Svelte projects in several code editors; the most complete support so far is available in the [Svelte for VS Code extension](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode), which is developed and maintained by the Svelte team. This extension offers type checking, inspecting, refactoring, intellisense, hover-information, auto-completion, and other features. This kind of developer assistance is another good reason to start using TypeScript in your projects.
 
-> **Note:** Make sure you are using [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) and NOT the old "Svelte" by James Birtles, which has been discontinued. In case you have it installed, you should uninstall it and install the official Svelte extension instead.
+> [!NOTE]
+> Make sure you are using [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) and NOT the old "Svelte" by James Birtles, which has been discontinued. In case you have it installed, you should uninstall it and install the official Svelte extension instead.
 
 Assuming you are inside the VS Code application, from the root of your project's folder, type `code .` (the trailing dot tells VS Code to open the current folder) to open the code editor. VS Code will tell you that there are recommended extensions to install.
 
@@ -232,7 +239,8 @@ We'll define a `TodoType` type to see how TypeScript enforces that anything pass
    };
    ```
 
-   > **Note:** The Svelte template uses [svelte-preprocess](https://github.com/sveltejs/svelte-preprocess) 4.0.0 to support TypeScript. From that version onward you have to use `export`/`import` type syntax to import types and interfaces. Check [this section of the troubleshooting guide](https://github.com/sveltejs/language-tools/blob/master/docs/preprocessors/typescript.md#how-do-i-import-interfaces-into-my-svelte-components-i-get-errors-after-transpilation) for more information.
+   > [!NOTE]
+   > The Svelte template uses [svelte-preprocess](https://github.com/sveltejs/svelte-preprocess) 4.0.0 to support TypeScript. From that version onward you have to use `export`/`import` type syntax to import types and interfaces. Check [this section of the troubleshooting guide](https://github.com/sveltejs/language-tools/blob/master/docs/preprocessors/typescript.md#how-do-i-import-interfaces-into-my-svelte-components-i-get-errors-after-transpilation) for more information.
 
 4. Now we'll use `TodoType` from our `Todo.svelte` component. First add the `lang="ts"` to our `<script>` tag.
 5. Let's `import` the type and use it to declare the `todo` property. Replace the `export let todo` line with the following:
@@ -343,7 +351,8 @@ Let's start with our `Alert.svelte` component.
        if (!message) {               // hide Alert if message is empty
    ```
 
-   > **Note:** There's no need to specify the `ms` type with `export let ms:number = 3000`, because TypeScript is already inferring it from its default value.
+   > [!NOTE]
+   > There's no need to specify the `ms` type with `export let ms:number = 3000`, because TypeScript is already inferring it from its default value.
 
 ### MoreActions.svelte
 

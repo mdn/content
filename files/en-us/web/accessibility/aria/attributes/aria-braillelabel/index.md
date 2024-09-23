@@ -23,7 +23,8 @@ When using `aria-braillelabel`, ensure that:
 - The `aria-braillelabel` values are localized to align with the document language.
 - Communicate to the user that this attribute is available, especially if the content contains unicode braille patterns, so the user knows to set the settings to apply user specific braille translations
 
-> **Note:** Assistive technologies with braille support can convert the accessible names to braille.
+> [!NOTE]
+> Assistive technologies with braille support can convert the accessible names to braille.
 > Therefore, only use `aria-braillelabel` when the accessible name is not the user experience you want.
 
 Using only the accessible name, e.g., from content or via `aria-label` is almost always the better user experience, so don't use aria-braillelabel to replicate aria-label. Only use `aria-braillelabel` if the accessible name cannot provide an adequate braille representation.

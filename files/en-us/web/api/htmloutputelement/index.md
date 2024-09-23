@@ -34,7 +34,7 @@ _This interface also inherits properties from its parent, {{domxref("HTMLElement
 - {{domxref("HTMLOutputElement.value")}}
   - : A string representing the value of the contents of the elements. Behaves like the {{domxref("Node.textContent")}} property.
 - {{domxref("HTMLOutputElement.willValidate")}} {{ReadOnlyInline}}
-  - : A boolean value indicating whether the element is a candidate for constraint validation.
+  - : Returns a boolean value that indicates whether the element is a candidate for constraint validation. Always `false` for `HTMLOutputElement` objects.
 
 ## Instance methods
 

@@ -48,7 +48,8 @@ where `<policy-directive>` consists of:
   - : Defines the valid sources for [web workers](/en-US/docs/Web/API/Web_Workers_API) and nested browsing contexts loaded using elements such as
     {{HTMLElement("frame")}} and {{HTMLElement("iframe")}}.
 
-    > **Warning:** Instead of **`child-src`**,
+    > [!WARNING]
+    > Instead of **`child-src`**,
     > if you want to regulate nested browsing contexts and workers,
     > you should use the {{CSP("frame-src")}} and {{CSP("worker-src")}} directives, respectively.
 
@@ -68,13 +69,14 @@ where `<policy-directive>` consists of:
 - {{CSP("manifest-src")}}
   - : Specifies valid sources of application manifest files.
 - {{CSP("media-src")}}
-  - : Specifies valid sources for loading media using the {{HTMLElement("audio")}} ,
+  - : Specifies valid sources for loading media using the {{HTMLElement("audio")}},
     {{HTMLElement("video")}} and {{HTMLElement("track")}} elements.
 - {{CSP("object-src")}}
 
   - : Specifies valid sources for the {{HTMLElement("object")}} and {{HTMLElement("embed")}} elements.
 
-    > **Note:** Elements controlled by `object-src` are perhaps
+    > [!NOTE]
+    > Elements controlled by `object-src` are perhaps
     > coincidentally considered legacy HTML elements and are not receiving new standardized
     > features (such as the security attributes `sandbox` or `allow`
     > for `<iframe>`). Therefore it is **recommended** to
@@ -126,31 +128,20 @@ for example.
 
 ### Reporting directives
 
-Reporting directives control the reporting process of CSP violations. See also the
-{{HTTPHeader("Content-Security-Policy-Report-Only")}} header.
-
-- {{CSP("report-uri")}} {{deprecated_inline}}
-
-  - : Instructs the user agent to report attempts to violate the Content Security Policy.
-    These violation reports consist of {{Glossary("JSON")}} documents sent via an HTTP
-    `POST` request to the specified URI.
-
-    > **Warning:** Though the {{CSP("report-to")}} directive is intended
-    > to replace the deprecated **`report-uri`** directive,
-    > {{CSP("report-to")}} is not supported in most browsers yet.
-    > So for compatibility with current browsers
-    > while also adding forward compatibility when browsers get {{CSP("report-to")}} support,
-    > you can specify both **`report-uri`** and {{CSP("report-to")}}:
-    >
-    > ```http
-    > Content-Security-Policy: …; report-uri https://endpoint.example.com; report-to groupname
-    > ```
-    >
-    > In browsers that support {{CSP("report-to")}},
-    > the **`report-uri`** directive will be ignored.
+Reporting directives control the destination URL for CSP violation reports in `Content-Security-Policy` and {{HTTPHeader("Content-Security-Policy-Report-Only")}}.
 
 - {{CSP("report-to")}}
-  - : Fires a `SecurityPolicyViolationEvent`.
+
+  - : Provides the browser with a token identifying the reporting endpoint or group of endpoints to send CSP violation information to.
+    The endpoints that the token represents are provided through other HTTP headers, such as {{HTTPHeader("Reporting-Endpoints")}} and {{HTTPHeader("Report-To")}} {{deprecated_inline}}.
+
+    > [!WARNING]
+    > This directive is intended to replace [`report-uri`](#report-uri); in browsers that support `report-to`, the `report-uri` directive is ignored.
+    > However until `report-to` is broadly supported you should specify both headers as shown (where `endpoint_name` is the name of a separately provided endpoint):
+    >
+    > ```http
+    > Content-Security-Policy: …; report-uri https://endpoint.example.com; report-to endpoint_name
+    > ```
 
 ### Other directives
 
@@ -169,13 +160,12 @@ Reporting directives control the reporting process of CSP violations. See also t
 ### Deprecated directives
 
 - {{CSP("block-all-mixed-content")}} {{deprecated_inline}}
+
   - : Prevents loading any assets using HTTP when the page is loaded using HTTPS.
-- {{CSP("plugin-types")}} {{deprecated_inline}} {{Non-standard_Inline}}
-  - : Restricts the set of plugins that can be embedded into a document by limiting the
-    types of resources which can be loaded.
-- {{CSP("referrer")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : Used to specify information in the [Referer](/en-US/docs/Web/HTTP/Headers/Referer) (sic) header for links away
-    from a page. Use the {{HTTPHeader("Referrer-Policy")}} header instead.
+
+- {{CSP("report-uri")}} {{deprecated_inline}}
+  - : Provides the browser with a URL where CSP violation reports should be sent.
+    This has been superseded by the [`report-to`](#report-to) directive.
 
 ## Values
 
@@ -261,36 +251,49 @@ Content-Security-Policy: connect-src http://example.com/;
 
 ## Examples
 
-Example: Disable unsafe inline/eval, only allow loading of resources (images, fonts,
-scripts, etc.) over http:
+### Disable unsafe inline code and only allow HTTPS resources
 
-### Using the HTTP header
+This HTTP header sets the default policy to only allow resource loading (images, fonts, scripts, etc.) over HTTPS.
+Because the `unsafe-inline` and `unsafe-eval` directives are not set, inline scripts will be blocked.
 
 ```http
 Content-Security-Policy: default-src https:
 ```
 
-### Using the HTML meta element
+The same restrictions can be applied using the HTML {{htmlelement("meta")}} element.
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="default-src https:" />
 ```
 
-Example: Pre-existing site that uses too much inline code to fix but wants to ensure
-resources are loaded only over HTTPS and to disable plugins:
+### Allow inline code and HTTPS resources, but disable plugins
+
+This policy could be used on a pre-existing site that uses too much inline code to fix, to ensure resources are loaded only over HTTPS and disable plugins:
 
 ```http
 Content-Security-Policy: default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'
 ```
 
-Example: Do not implement the above policy yet; instead just report violations that
-would have occurred:
+### Report but don't enforce violations when testing
+
+This example sets the same restrictions as the previous example, but using the {{httpheader("Content-Security-Policy-Report-Only")}} header and the {{CSP("report-to")}} directive.
+This approach is used during testing to report violations but not block code from executing.
+
+Endpoints (URLs) to send reports to are defined using the {{HTTPHeader("Reporting-Endpoints")}} HTTP response header.
 
 ```http
-Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/
+Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports"
 ```
 
-See [Mozilla Web Security Guidelines](https://infosec.mozilla.org/guidelines/web_security#examples-3) for more examples.
+A particular endpoint is then selected as the report target in the CSP policy using the {{CSP("report-to")}} directive.
+
+```http
+Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-url/; report-to csp-endpoint
+```
+
+Note that the {{CSP("report-uri")}} {{deprecated_inline}} directive is also specified above because `report-to` is not yet broadly supported by browsers.
+
+See [Content Security Policy (CSP) implementation](/en-US/docs/Web/Security/Practical_implementation_guides/CSP) for more examples.
 
 ## Specifications
 

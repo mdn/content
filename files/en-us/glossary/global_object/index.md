@@ -6,9 +6,11 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-A global object is an {{glossary("object")}} that always exists in the {{glossary("global scope")}}.
+The **global object** in JavaScript is an {{glossary("object")}} which represents the {{glossary("global scope")}}.
 
-In JavaScript, there's always a global object defined. In a web browser, when scripts create global variables defined with the [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var) keyword, they're created as members of the global object. (In {{Glossary("Node.js")}} this is not the case.) The global object's {{Glossary("interface")}} depends on the execution context in which the script is running. For example:
+> **Note:** _Globally available objects_, which are objects in the {{glossary("global scope")}}, are sometimes also referred to as global objects, but strictly speaking, there is only one global object per environment.
+
+In each JavaScript environment, there's always a global object defined. The global object's interface depends on the execution context in which the script is running. For example:
 
 - In a web browser, any code which the script doesn't specifically start up as a background task has a {{domxref("Window")}} as its global object. This is the vast majority of JavaScript code on the Web.
 - Code running in a {{domxref("Worker")}} has a {{domxref("WorkerGlobalScope")}} object as its global object.
@@ -16,7 +18,7 @@ In JavaScript, there's always a global object defined. In a web browser, when sc
 
 The [`globalThis`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis) global property allows one to access the global object regardless of the current environment.
 
-[`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var) statements and [function declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function) at the top level create properties of the global object. On the other hand, {{jsxref("Statements/let", "let")}} and {{jsxref("Statements/const", "const")}} declarations never create properties of the global object.
+[`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var) statements and [function declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function) at the top level of a script create properties of the global object. On the other hand, {{jsxref("Statements/let", "let")}} and {{jsxref("Statements/const", "const")}} declarations never create properties of the global object.
 
 The properties of the global object are automatically added to the {{glossary("global scope")}}.
 
@@ -32,11 +34,14 @@ console.log(global === global.global); // true (in Node.js)
 
 ## See also
 
-- [MDN Web Docs Glossary](/en-US/docs/Glossary)
-
+- Related glossary terms:
   - {{glossary("global scope")}}
   - {{glossary("object")}}
-
+- {{jsxref("globalThis")}}
 - {{domxref("Window")}}
 - {{domxref("WorkerGlobalScope")}}
+- {{domxref("Window.window")}}
+- {{domxref("Window.self")}}
+- {{domxref("Window.frames")}}
+- {{domxref("WorkerGlobalScope.self")}}
 - [`global`](https://nodejs.org/api/globals.html#globals_global)

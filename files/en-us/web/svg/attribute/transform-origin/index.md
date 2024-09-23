@@ -11,7 +11,8 @@ The **`transform-origin`** SVG attribute sets the origin for an item's transform
 
 You can use this attribute with any SVG element.
 
-> **Note:** As a presentation attribute in SVG, `transform-origin` corresponds in syntax and behavior to the `transform-origin` property in CSS, and can be used as CSS property to style SVG. See the [CSS transform-origin](/en-US/docs/Web/CSS/transform-origin) property for more information.
+> [!NOTE]
+> As a presentation attribute in SVG, `transform-origin` corresponds in syntax and behavior to the `transform-origin` property in CSS, and can be used as CSS property to style SVG. See the [CSS transform-origin](/en-US/docs/Web/CSS/transform-origin) property for more information.
 
 ## Usage notes
 
@@ -32,7 +33,8 @@ You can use this attribute with any SVG element.
   </tbody>
 </table>
 
-> **Note:** The default value of `transform-origin` is `0 0` for all SVG elements except for root `<svg>` elements and `<svg>` elements that are a direct child of a [foreignObject](/en-US/docs/Web/SVG/Element/foreignObject), and whose transform-origin is `50% 50%`, like other CSS elements.
+> [!NOTE]
+> The default value of `transform-origin` is `0 0` for all SVG elements except for root `<svg>` elements and `<svg>` elements that are a direct child of a [foreignObject](/en-US/docs/Web/SVG/Element/foreignObject), and whose transform-origin is `50% 50%`, like other CSS elements.
 
 The `transform-origin` property may be specified using one, two, or three values, where each value represents an offset. Offsets that are not explicitly defined are reset to their corresponding [initial values](/en-US/docs/Web/CSS/initial_value).
 
@@ -65,7 +67,8 @@ This example shows the code for one PNG image and three SVG images:
 
 The fourth image shows how to do the transformation in browsers that don't support `transform-origin` — because the code for the fourth image does the same transformation as the third image's `transform-origin`-based code, but by only using `transform`, without `transform-origin`.
 
-> **Note:** These examples use a modified version of a code snippet in a Stack Overflow [question](https://stackoverflow.com/questions/67057190/safari-doesnt-respect-transform-origin-svg-attribute) from [Maxim Kulikov](https://stackoverflow.com/users/1033939/maxim-kulikov), as well as a modified version of a code snippet in an [answer](https://stackoverflow.com/questions/67057190/safari-doesnt-respect-transform-origin-svg-attribute/67057754) from [Michael Mullany](https://stackoverflow.com/users/271353/michael-mullany) that accompanies the question. Both code snippets are used under the terms of the [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/) license.)
+> [!NOTE]
+> These examples use a modified version of a code snippet in a Stack Overflow [question](https://stackoverflow.com/questions/67057190/safari-doesnt-respect-transform-origin-svg-attribute) from [Maxim Kulikov](https://stackoverflow.com/users/1033939/maxim-kulikov), as well as a modified version of a code snippet in an [answer](https://stackoverflow.com/questions/67057190/safari-doesnt-respect-transform-origin-svg-attribute/67057754) from [Michael Mullany](https://stackoverflow.com/users/271353/michael-mullany) that accompanies the question. Both code snippets are used under the terms of the [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/) license.)
 
 ### HTML
 

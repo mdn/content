@@ -2,12 +2,10 @@
 title: Iterator.prototype.drop()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/drop
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Iterator.drop
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{JSRef}}
 
 The **`drop()`** method of {{jsxref("Iterator")}} instances returns a new [iterator helper](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helpers) that skips the given number of elements at the start of this iterator.
 

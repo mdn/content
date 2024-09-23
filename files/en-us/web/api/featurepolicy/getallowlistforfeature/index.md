@@ -19,7 +19,7 @@ method of the {{DOMxRef("FeaturePolicy")}} interface enables querying of the all
 getAllowlistForFeature(feature)
 ```
 
-### Parameter
+### Parameters
 
 - `feature`
   - : The specific feature name to get its allowlist.
@@ -28,7 +28,7 @@ getAllowlistForFeature(feature)
 
 An array of strings containing the serialized list of allowed origins for the feature. If a wildcard (`*`) is used, the array will contain `*`.
 
-## Errors
+### Exceptions
 
 The function will raise a warning if the specified Permissions Policy directive name is not
 known. However, it will also return empty array, indicating that no origin is allowed to

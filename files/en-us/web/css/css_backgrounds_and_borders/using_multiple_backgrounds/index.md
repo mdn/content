@@ -49,8 +49,6 @@ In this example, three backgrounds are stacked: the Firefox logo, an image of bu
 
 ### Result
 
-(If image does not appear in CodePen, click the 'Tidy' button in the CSS section)
-
 {{EmbedLiveSample('Example','600','400')}}
 
 As you can see here, the Firefox logo (listed first within {{ cssxref("background-image") }}) is on top, directly above the bubbles graphic, followed by the gradient (listed last) sitting underneath all previous 'images'. Each subsequent sub-property ({{ cssxref("background-repeat") }} and {{ cssxref("background-position") }}) applies to the corresponding backgrounds. So the first listed value for {{ cssxref("background-repeat") }} applies to the first (frontmost) background, and so forth.
@@ -58,3 +56,4 @@ As you can see here, the Firefox logo (listed first within {{ cssxref("backgroun
 ## See also
 
 - [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module

@@ -3,12 +3,10 @@ title: "Element: currentCSSZoom property"
 short-title: currentCSSZoom
 slug: Web/API/Element/currentCSSZoom
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.Element.currentCSSZoom
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("DOM")}}
 
 The **`currentCSSZoom`** read-only property of the {{domxref("Element")}} interface provides the "effective" [CSS `zoom`](/en-US/docs/Web/CSS/zoom) of an element, taking into account the zoom applied to the element and all its parent elements.
 

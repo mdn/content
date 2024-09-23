@@ -30,7 +30,8 @@ setScissorRect(x, y, width, height)
 - `height`
   - : A number representing the height of the scissor rectangle, in pixels.
 
-> **Note:** If a `setScissorRect()` call is not made, the default values are `(0, 0, attachment width, attachment height)` for each render pass.
+> [!NOTE]
+> If a `setScissorRect()` call is not made, the default values are `(0, 0, attachment width, attachment height)` for each render pass.
 
 ### Return value
 
@@ -43,7 +44,8 @@ The following criteria must be met when calling **`setViewport()`**, otherwise a
 - `x` + `width` is less than or equal to the width of the render pass's render attachments (see note below).
 - `y` + `height` is less than or equal to the height of the render pass's render attachments (see note below).
 
-> **Note:** See the color and depth/stencil attachments specified in the descriptor of {{domxref("GPUCommandEncoder.beginRenderPass()")}}; the width and height are based on that of the {{domxref("GPUTexture")}} that their `view`s originate from.
+> [!NOTE]
+> See the color and depth/stencil attachments specified in the descriptor of {{domxref("GPUCommandEncoder.beginRenderPass()")}}; the width and height are based on that of the {{domxref("GPUTexture")}} that their `view`s originate from.
 
 ## Examples
 

@@ -31,7 +31,8 @@ requestWindow(options)
     - `width`
       - : A non-negative number representing the width to set for the Picture-in-Picture window's viewport, in pixels. If `options` is not specified, the default value 0 is used.
 
-> **Note:** If one of the options is specified, the other one must be too, otherwise an error is thrown. If both values are not specified, specified as 0, or set too large, the browser will clamp or ignore the values as appropriate to provide a reasonable user experience. The clamped size will vary depending on implementation, display size, and other factors.
+> [!NOTE]
+> If one of the options is specified, the other one must be too, otherwise an error is thrown. If both values are not specified, specified as 0, or set too large, the browser will clamp or ignore the values as appropriate to provide a reasonable user experience. The clamped size will vary depending on implementation, display size, and other factors.
 
 ### Return value
 

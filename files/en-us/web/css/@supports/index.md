@@ -9,7 +9,7 @@ browser-compat: css.at-rules.supports
 
 The **`@supports`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) lets you specify CSS declarations that depend on a browser's support for CSS features.
 Using this at-rule is commonly called a _feature query_.
-The rule must be placed at the top level of your code or nested inside any other [conditional group at-rule](/en-US/docs/Web/CSS/At-rule#conditional_group_rules).
+The rule must be placed at the top level of your code or nested inside any other conditional group at-rule.
 
 {{EmbedInteractiveExample("pages/tabbed/at-rule-supports.html", "tabbed-standard")}}
 
@@ -87,7 +87,7 @@ The table below describes the font technologies (`<font-tech>`), including color
 | **`<font-features-tech>`**     |                                                                                               |
 | `features-opentype`            | OpenType `GSUB` and `GPOS` tables                                                             |
 | `features-aat`                 | TrueType `morx` and `kerx` tables                                                             |
-| `features-graphite`            | Graphite features, namely `Silf`, `Glat` , `Gloc` , `Feat`, and `Sill` tables                 |
+| `features-graphite`            | Graphite features, namely `Silf`, `Glat`, `Gloc`, `Feat`, and `Sill` tables                   |
 | **Other `<font-tech>` values** |                                                                                               |
 | `incremental-patch`            | Incremental font loading using the patch subset method                                        |
 | `incremental-range`            | Incremental font loading using the range request method                                       |
@@ -137,7 +137,8 @@ The following examples are both valid:
 }
 ```
 
-> **Note:** There is no need to enclose the `not` operator between two parentheses at the top level.
+> [!NOTE]
+> There is no need to enclose the `not` operator between two parentheses at the top level.
 > To combine it with other operators, like `and` and `or`, the parentheses are required.
 
 ### The and operator
@@ -176,7 +177,8 @@ Multiple disjunctions can be juxtaposed without the need of more parentheses. Th
 @supports (transform-style: preserve-3d) or ((-moz-transform-style: preserve-3d) or (-webkit-transform-style: preserve-3d))) {}
 ```
 
-> **Note:** When using both `and` and `or` operators, the parentheses must be used to define the order in which they apply. Otherwise, the condition is invalid and the whole rule is ignored.
+> [!NOTE]
+> When using both `and` and `or` operators, the parentheses must be used to define the order in which they apply. Otherwise, the condition is invalid and the whole rule is ignored.
 
 ## Formal syntax
 

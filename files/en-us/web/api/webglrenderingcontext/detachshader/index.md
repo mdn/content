@@ -42,7 +42,6 @@ detachShader(program, shader)
 - {{domxref("WebGLRenderingContext.createShader()")}}
 - {{domxref("WebGLRenderingContext.deleteProgram()")}}
 - {{domxref("WebGLRenderingContext.deleteShader()")}}
-- {{domxref("WebGLRenderingContext.detachShader()")}}
 - {{domxref("WebGLRenderingContext.getAttachedShaders()")}}
 - {{domxref("WebGLRenderingContext.getProgramParameter()")}}
 - {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}

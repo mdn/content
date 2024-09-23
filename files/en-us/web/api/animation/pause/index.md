@@ -77,7 +77,6 @@ bottle.addEventListener("mouseup", stopPlayingAlice, false);
 
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
 - {{domxref("Animation")}} for other methods and properties you can use to control web page animation.
-- {{domxref("Animation.pause()")}} to pause an animation.
 - {{domxref("Animation.reverse()")}} to play an animation backwards.
 - {{domxref("Animation.finish()")}} to finish an animation.
 - {{domxref("Animation.cancel()")}} to cancel an animation.

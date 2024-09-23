@@ -45,7 +45,8 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
   - : A string that joins and returns the contents of all {{domxref("Text")}} nodes inside the {{HTMLElement("script")}} element (ignoring other nodes like comments) in tree order. On setting, it acts the same way as the {{domxref("Node.textContent")}} property.
 
-    > **Note:** When inserted using the {{domxref("Document.write()")}} method, {{HTMLElement("script")}} elements execute (typically synchronously), but when inserted using {{domxref("Element.innerHTML")}} or {{domxref("Element.outerHTML")}}, they do not execute at all.
+    > [!NOTE]
+    > When inserted using the {{domxref("Document.write()")}} method, {{HTMLElement("script")}} elements execute (typically synchronously), but when inserted using {{domxref("Element.innerHTML")}} or {{domxref("Element.outerHTML")}}, they do not execute at all.
 
 - {{domxref("HTMLScriptElement.type")}}
   - : A string representing the type of the script. It reflects the `type` attribute of the {{HTMLElement("script")}} element.
@@ -70,7 +71,7 @@ _No specific events; inherits events from its parent, {{domxref("HTMLElement")}}
 
 Let's create a function that imports new scripts within a document creating a {{HTMLElement("script")}} node _immediately before_ the {{HTMLElement("script")}} that hosts the following code (through {{domxref("document.currentScript")}}).
 These scripts will be **asynchronously** executed.
-For more details, see the [`defer`](#defer_property) and [`async`](#async_property) properties.
+For more details, see the [`defer`](/en-US/docs/Web/API/HTMLScriptElement/defer) and [`async`](/en-US/docs/Web/API/HTMLScriptElement/async) properties.
 
 ```js
 function loadError(oError) {

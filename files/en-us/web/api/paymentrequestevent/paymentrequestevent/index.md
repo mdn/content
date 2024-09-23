@@ -40,7 +40,7 @@ new PaymentRequestEvent(type, options)
     - `total`
       - : The total amount being requested for payment.
 
-## Return value
+### Return value
 
 A new {{domxref("PaymentRequestEvent")}} object.
 

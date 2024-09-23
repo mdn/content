@@ -1,5 +1,5 @@
 ---
-title: "StorageAccessHandle: SharedWorker() property"
+title: "StorageAccessHandle: SharedWorker() method"
 short-title: SharedWorker()
 slug: Web/API/StorageAccessHandle/SharedWorker
 page-type: web-api-instance-method
@@ -8,7 +8,8 @@ browser-compat: api.StorageAccessHandle.SharedWorker
 
 {{APIRef("Storage Access API")}}
 
-> **Note:** See {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} to understand usage.
+> [!NOTE]
+> See {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} to understand usage.
 
 ## Syntax
 
@@ -37,7 +38,8 @@ An unpartitioned {{domxref("SharedWorker")}} object.
 
 - `SecurityError` {{domxref("DomException")}}
   - : Thrown if access was not granted.
-- See {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}}
+
+See {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}}
 
 ## Examples
 
@@ -53,7 +55,8 @@ document.requestStorageAccess({ SharedWorker: true }).then(
 );
 ```
 
-> **Note:** See [Using the Storage Access API](/en-US/docs/Web/API/Storage_Access_API/Using) for a more complete example.
+> [!NOTE]
+> See [Using the Storage Access API](/en-US/docs/Web/API/Storage_Access_API/Using) for a more complete example.
 
 ## Specifications
 

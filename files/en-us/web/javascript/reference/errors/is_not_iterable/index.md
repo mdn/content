@@ -6,18 +6,24 @@ page-type: javascript-error
 
 {{jsSidebar("Errors")}}
 
-The JavaScript exception "is not iterable" occurs when the value which is given as the
+The JavaScript exception "is not iterable" occurs when the value which is [spread](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) into an array or function call, given as the
 right-hand side of [`for...of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement),
-as argument of a function such as {{jsxref("Promise.all")}} or {{jsxref("TypedArray.from")}},
+as argument of a function such as {{jsxref("Promise.all")}} or {{jsxref("Set/Set", "Set()")}},
 or as the right-hand side of an array [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment),
-is not an [iterable object](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
+is not an [iterable object](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols). This error is also encountered when {{jsxref("Array.fromAsync()")}} or {{jsxref("Statements/for-await...of", "for await...of")}} is used with a [non-async iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols).
 
 ## Message
 
 ```plain
+TypeError: Spread syntax requires ...iterable[Symbol.iterator] to be a function (V8-based & Safari)
+TypeError: %Array%.from requires that the property of the first argument, items[Symbol.iterator], when exists, be a function (V8-based & Safari)
+TypeError: Array.fromAsync requires that the property of the first argument, items[Symbol.asyncIterator], when exists, be a function (V8-based & Safari)
 TypeError: object is not iterable (cannot read property Symbol(Symbol.iterator)) (V8-based)
-TypeError: x is not iterable (Firefox)
-TypeError: undefined is not a function (near '...[x]...') (Safari)
+TypeError: x is not async iterable (V8-based)
+TypeError: x is not iterable (V8-based & Firefox)
+TypeError: undefined is not a function (near '...y of x...') (Safari)
+TypeError: Array.from: no function (Safari)
+TypeError: Type error (Safari)
 ```
 
 ## Error type
@@ -26,13 +32,26 @@ TypeError: undefined is not a function (near '...[x]...') (Safari)
 
 ## What went wrong?
 
-The value which is given as the right-hand side of [`for...of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement),
-or as argument of a function such as {{jsxref("Promise.all")}} or {{jsxref("TypedArray.from")}},
+The value which is [spread](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) into an array or function call, given as the right-hand side of [`for...of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement),
+or as argument of a function such as {{jsxref("Promise.all")}} or {{jsxref("Set/Set", "Set()")}},
 or as the right-hand side of an array [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment),
 is not an [iterable object](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
 An iterable can be a built-in iterable type such as
 {{jsxref("Array")}}, {{jsxref("String")}} or {{jsxref("Map")}}, a generator result, or
 an object implementing the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol).
+
+```js
+const nonIterable1 = {};
+const nonIterable2 = { [Symbol.iterator]: 1 };
+
+[...nonIterable1];
+Math.max(...nonIterable1);
+for (const x of nonIterable1);
+new Set(nonIterable1);
+Array.from(nonIterable2);
+new Int8Array(nonIterable2);
+const [] = nonIterable1;
+```
 
 ## Examples
 

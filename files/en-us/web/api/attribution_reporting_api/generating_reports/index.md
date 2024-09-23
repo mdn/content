@@ -30,7 +30,7 @@ If neither of these fields are specified, the report window falls back to the fo
 - For [event-based sources](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#event-based_attribution_sources), the default report window ends at the source's expiry, which is set in the `Attribution-Reporting-Register-Source` [`"expiry"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#expiry) field. This defaults to 30 days after registration if not explicitly set.
 - For [navigation-based sources](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources), the default report windows are 2 days, 7 days, and the source's `"expiry"`.
 
-See [Custom report windows](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/custom-report-windows) for more details.
+See [Custom report windows](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/custom-report-windows) for more details.
 
 Once an event-level report is received at the appropriate endpoint, how the data is processed, stored, and displayed is completely up to the developer. A typical event-level report might look like this:
 
@@ -61,7 +61,7 @@ The properties are as follows:
 - `"source_type"`
   - : A string equal to either `"navigation"` or `"event"`, which respectively indicate whether the associated attribution source is [navigation-based](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources), or [event-based](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#event-based_attribution_sources).
 - `"randomized_trigger_rate"`
-  - : A random number between 0 and 1 indicating how often [noise](#how_noise_is_added_to_reports) is applied for this particular source configuration.
+  - : A random number between 0 and 1 indicating how often [noise](#adding_noise_to_reports) is applied for this particular source configuration.
 - `"scheduled_report_time"`
   - : A string representing the number of seconds from the Unix Epoch until the browser initially scheduled the report to be sent (to avoid inaccuracies as a result of offline devices reporting late).
 - `"source_debug_key"` {{optional_inline}}
@@ -71,13 +71,14 @@ The properties are as follows:
 
 ## Summary reports
 
-A summary report is created from several aggregatable reports received at the appropriate endpoint and then [batched](https://developer.chrome.com/docs/privacy-sandbox/summary-reports/#batching) to prepare them to be processed by an [aggregation service](https://developer.chrome.com/docs/privacy-sandbox/aggregation-service/). When this has occurred, how the data is processed, stored, and displayed is completely up to the developer.
+A summary report is created from several aggregatable reports received at the appropriate endpoint and then [batched](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/summary-reports-intro#batching) to prepare them to be processed by an [aggregation service](https://developers.google.com/privacy-sandbox/private-advertising/aggregation-service). When this has occurred, how the data is processed, stored, and displayed is completely up to the developer.
 
 An aggregatable report by default is generated and scheduled to be sent after a trigger is interacted with, with a random delay to help fuzz the timings and improve privacy. For a given registered attribution source, attribution source events will be recorded from registration up until the source expires - this is referred to as the **report window**.
 
-The expiry time is defined by the `expiry` value set in the associated {{httpheader("Attribution-Reporting-Register-Source")}} header, which defaults to 30 days after registration if not explicitly set. Bear in mind that the length of the report window can be further modified by setting an `aggregatable_report_window` value in the `Attribution-Reporting-Register-Source` header. See [Custom report windows](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/custom-report-windows) for more details.
+The expiry time is defined by the `expiry` value set in the associated {{httpheader("Attribution-Reporting-Register-Source")}} header, which defaults to 30 days after registration if not explicitly set. Bear in mind that the length of the report window can be further modified by setting an `aggregatable_report_window` value in the `Attribution-Reporting-Register-Source` header. See [Custom report windows](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/custom-report-windows) for more details.
 
-> **Note:** To further protect user privacy, the summary report values associated with each attribution source have a finite total value — this is called the **contribution budget**. This value may very across different implementations of the API; in Chrome it is 65,536. Any conversions that would generate reports adding values over that limit are not recorded. Make sure you keep track of the budget and share it between the different metrics you are trying to measure.
+> [!NOTE]
+> To further protect user privacy, the summary report values associated with each attribution source have a finite total value — this is called the **contribution budget**. This value may very across different implementations of the API; in Chrome it is 65,536. Any conversions that would generate reports adding values over that limit are not recorded. Make sure you keep track of the budget and share it between the different metrics you are trying to measure.
 
 A typical aggregatable report might look like this:
 
@@ -190,9 +191,9 @@ Noise is added to reports in order to obscure the output associated with a parti
 
 For information on how noise works in attribution reporting, see:
 
-- [Understanding noise in summary reports](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/understanding-noise/).
+- [Understanding noise in summary reports](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/understanding-noise).
 - [Data limits and noise](https://github.com/WICG/attribution-reporting-api/blob/main/EVENT.md#data-limits-and-noise)
-- [Working with noise](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/working-with-noise/)
+- [Working with noise](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/working-with-noise)
 
 ## Report priorities and limits
 
@@ -205,7 +206,8 @@ Different source types have different default limits:
 - [Navigation-based attribution sources](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources) have a three-report limit by default. For example, say a user clicks an ad and converts four times: they visit the advertiser site homepage, then visit a product page, sign up to the newsletter, and finally make a purchase. The purchase report would be dropped, as it comes from the fourth conversion.
 - [Event-based attribution sources](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#event-based_attribution_sources) have a one-report limit by default.
 
-> **Note:** The report limit can be adjusted by setting a different number of `"end_times"` in the [`"event_report_windows"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#event_report_windows) fields of the associated `Attribution-Reporting-Register-Source` header.
+> [!NOTE]
+> The report limit can be adjusted by setting a different number of `"end_times"` in the [`"event_report_windows"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#event_report_windows) fields of the associated `Attribution-Reporting-Register-Source` header.
 
 When an attribution is triggered for a given source event, if the maximum number of attributions (three for clicks, one for images/scripts) has been reached for this source the browser will:
 
@@ -298,7 +300,8 @@ There are two different types of debug report:
 - **Success debug reports** track successful generation of a specific attribution report. Success debug reports are generated and sent as soon as the corresponding trigger is registered.
 - **Verbose debug reports** give you more visibility into the attribution source and attribution trigger events associated with an attribution report. They enable you to ensure that sources were registered successfully, or track missing reports and determine why they're missing (for example due to failure in source or trigger event registration or failure when sending or generating the report). Verbose debug reports are sent immediately upon source or trigger registration.
 
-> **Note:** To use debug reports, the reporting origin needs to set a cookie. If the origin configured to receive reports is a third party, this cookie will be a [third-party cookie](/en-US/docs/Web/Privacy/Third-party_cookies), which means that debug reports will not be available in browsers where third-party cookies are disabled/not available.
+> [!NOTE]
+> To use debug reports, the reporting origin needs to set a cookie. If the origin configured to receive reports is a third party, this cookie will be a [third-party cookie](/en-US/docs/Web/Privacy/Third-party_cookies), which means that debug reports will not be available in browsers where third-party cookies are disabled/not available.
 
 ### Using debug reports
 
@@ -318,7 +321,8 @@ To use debug reports, you need to:
    }
    ```
 
-   > **Note:** Make the source-side debug key different from the `source_event_id`, so that you can differentiate individual reports that have the same source event ID.
+   > [!NOTE]
+   > Make the source-side debug key different from the `source_event_id`, so that you can differentiate individual reports that have the same source event ID.
 
 3. Optionally, set the `debug_reporting` field to `true`, in both the `Attribution-Reporting-Register-Source` and `Attribution-Reporting-Register-Trigger` headers. If you do this, a verbose debug report will be generated. If you don't do this, a success debug report will be generated that mirrors the type of attribution report you are generating (event-level or aggregatable).
 
@@ -339,6 +343,6 @@ Generated success debug reports are identical to attribution reports, and contai
 
 For further information and examples, see:
 
-- [Introduction to debug reports](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting-debugging/part-1/) on developer.chrome.com (2023)
-- [Set up debug reports](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting-debugging/part-2/) on developer.chrome.com (2023)
-- [Debugging cookbook](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting-debugging/part-3/) on developer.chrome.com (2023)
+- [Introduction to debug reports](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/attribution-reporting-debugging/) on developers.google.com (2023)
+- [Set up debug reports](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/attribution-reporting-debugging/part-2/) on developers.google.com (2023)
+- [Debugging cookbook](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/attribution-reporting-debugging/part-3/) on developers.google.com (2023)

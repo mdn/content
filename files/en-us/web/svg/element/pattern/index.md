@@ -55,7 +55,8 @@ svg {
   - : This attribute defines the coordinate system for the contents of the {{SVGElement("pattern")}}.
     _Value type_: `userSpaceOnUse`|`objectBoundingBox`; _Default value_: `userSpaceOnUse`; _Animatable_: **yes**
 
-    > **Note:** This attribute has no effect if a `viewBox` attribute is specified on the `<pattern>` element.
+    > [!NOTE]
+    > This attribute has no effect if a `viewBox` attribute is specified on the `<pattern>` element.
 
 - {{SVGAttr("patternTransform")}}
   - : This attribute contains the definition of an optional additional transformation from the pattern coordinate system onto the target coordinate system.
@@ -80,7 +81,8 @@ svg {
   - : This attribute references a template pattern that provides default values for the `<pattern>` attributes.
     _Value type_: [**\<URL>**](/en-US/docs/Web/SVG/Content_type#url); _Default value_: _none_; _Animatable_: **yes**
 
-    > **Note:** For browsers implementing `href`, if both `href` and `xlink:href` are set, `xlink:href` will be ignored and only `href` will be used.
+    > [!NOTE]
+    > For browsers implementing `href`, if both `href` and `xlink:href` are set, `xlink:href` will be ignored and only `href` will be used.
 
 - {{SVGAttr("y")}}
   - : This attribute determines the y coordinate shift of the pattern tile.

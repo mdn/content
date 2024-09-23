@@ -59,7 +59,8 @@ So what do we mean by permissive? Well, generally when you do something wrong in
 
 HTML itself doesn't suffer from syntax errors because browsers parse it permissively, meaning that the page still displays even if there are syntax errors. Browsers have built-in rules to state how to interpret incorrectly written markup, so you'll get something running, even if it is not what you expected. This, of course, can still be a problem!
 
-> **Note:** HTML is parsed permissively because when the web was first created, it was decided that allowing people to get their content published was more important than making sure the syntax was absolutely correct. The web would probably not be as popular as it is today, if it had been more strict from the very beginning.
+> [!NOTE]
+> HTML is parsed permissively because when the web was first created, it was decided that allowing people to get their content published was more important than making sure the syntax was absolutely correct. The web would probably not be as popular as it is today, if it had been more strict from the very beginning.
 
 ### Active learning: Studying permissive code
 
@@ -159,7 +160,8 @@ The error messages are usually helpful, but sometimes they are not so helpful; w
   example: <a href="https://www.mozilla.org/>link to Mozilla homepage</a> ↩ </ul>↩ </body>↩</html>
   ```
 
-  > **Note:** An attribute missing a closing quote can result in an open element because the rest of the document is interpreted as the attribute's content.
+  > [!NOTE]
+  > An attribute missing a closing quote can result in an open element because the rest of the document is interpreted as the attribute's content.
 
 - "Unclosed element `ul`": This is not very helpful, as the {{htmlelement("ul")}} element _is_ closed correctly. This error comes up because the {{htmlelement("a")}} element is not closed, due to the missing closing quote mark.
 

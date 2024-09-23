@@ -6,7 +6,7 @@ page-type: webassembly-instruction
 
 {{WebAssemblySidebar}}
 
-The **`if`** statement executes a statement if the last item on the stack is true (1). If the condition is false (0), another statement can be executed.
+The **`if`** statement executes a statement if the last item on the stack is true (non-zero). If the condition is false (0), another statement can be executed.
 
 {{EmbedInteractiveExample("pages/wat/if...else.html", "tabbed-taller")}}
 

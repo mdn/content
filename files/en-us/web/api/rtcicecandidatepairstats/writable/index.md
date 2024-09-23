@@ -21,7 +21,8 @@ A Boolean value which is `true` if the connection described by this
 candidate pair has received acknowledgement of receipt (ACK) for at least one ICE
 request _and_ that {{Glossary("STUN")}} consent hasn't expired.
 
-> **Note:** This property was removed from the specification in early 2017
+> [!NOTE]
+> This property was removed from the specification in early 2017
 > because you can determine whether or not an incoming ICE request is available to read
 > by checking to see if {{domxref("RTCIceCandidatePairStats.responsesReceived", "responsesReceived")}} is greater than 0 and that the time specified by
 > {{domxref("RTCIceCandidatePairStats.consentExpiredTimestamp", "consentExpiredTimestamp")}} has not passed:

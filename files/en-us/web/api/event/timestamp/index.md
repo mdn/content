@@ -46,20 +46,27 @@ document.body.addEventListener("keypress", getTime);
 
 ## Reduced time precision
 
-To offer protection against timing attacks and fingerprinting, the precision of `Event.timeStamp` might get rounded depending on browser settings.
+To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of `event.timeStamp` might get rounded depending on browser settings. In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 2ms. You can also enable `privacy.resistFingerprinting`, in which case the precision will be 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.
 
-In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 2ms.
+For example, with reduced time precision, the result of `event.timeStamp` will always be a multiple of 2, or a multiple of 100 (or `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`) with `privacy.resistFingerprinting` enabled.
 
 ```js
-// reduced time precision in Firefox (default: 2ms)
+// reduced time precision (2ms) in Firefox 60
 event.timeStamp;
+// Might be:
 // 9934
 // 10362
 // 11670
 // …
-```
 
-In Firefox, if you also enable `privacy.resistFingerprinting`, the precision will be 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.
+// reduced time precision with `privacy.resistFingerprinting` enabled
+event.timeStamp;
+// Might be:
+// 53500
+// 58900
+// 64400
+// …
+```
 
 ## Specifications
 

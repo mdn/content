@@ -17,7 +17,8 @@ To elaborate over these steps, we're going to start by creating a half-highlight
 
 ![Text reading 'My Cool Header' with a solid yellow background image block on the bottom left two thirds of the header](mycoolheader.png)
 
-> **Note:** The complete source for all the examples in this article can be found at [https://github.com/mdn/dom-examples/tree/main/css-painting](https://github.com/mdn/dom-examples/tree/main/css-painting), and the examples are running live at [https://mdn.github.io/dom-examples/css-painting/](https://mdn.github.io/dom-examples/css-painting/).
+> [!NOTE]
+> The complete source for all the examples in this article can be found at [https://github.com/mdn/dom-examples/tree/main/css-painting](https://github.com/mdn/dom-examples/tree/main/css-painting), and the examples are running live at [https://mdn.github.io/dom-examples/css-painting/](https://mdn.github.io/dom-examples/css-painting/).
 
 ## CSS paint worklet
 
@@ -419,7 +420,8 @@ You could try making the background images above without the CSS Paint API. It i
 
 ## Passing parameters
 
-> **Note:** The following example requires the Experimental Web Platform features flag to be enabled in Chrome or Edge by visiting `about://flags`.
+> [!NOTE]
+> The following example requires the Experimental Web Platform features flag to be enabled in Chrome or Edge by visiting `about://flags`.
 
 With the CSS Paint API, we not only have access to custom properties and regular properties, but we can pass custom arguments to the `paint()` function as well.
 

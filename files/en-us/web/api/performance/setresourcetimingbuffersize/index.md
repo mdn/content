@@ -26,7 +26,7 @@ setResourceTimingBufferSize(maxSize)
 ### Parameters
 
 - `maxSize`
-  - : A `number` representing the maximum number of {{domxref("PerformanceEntry","performance entry")}} objects the browser should hold in its performance entry buffer.
+  - : A `number` representing the maximum number of {{domxref("PerformanceEntry")}} objects the browser should hold in its performance entry buffer.
 
 ### Return value
 

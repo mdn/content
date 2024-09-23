@@ -10,7 +10,8 @@ browser-compat: api.EventTarget.EventTarget
 
 The **`EventTarget()`** constructor creates a new {{domxref("EventTarget")}} object instance.
 
-> **Note:** It is fairly rare to explicitly call this constructor. Most of the time, this constructor is used inside the constructor of an object extending the {{domxref("EventTarget")}} interface, using the [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super) keyword.
+> [!NOTE]
+> It is fairly rare to explicitly call this constructor. Most of the time, this constructor is used inside the constructor of an object extending the {{domxref("EventTarget")}} interface, using the [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super) keyword.
 
 ## Syntax
 

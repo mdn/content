@@ -50,7 +50,8 @@ Content-Security-Policy: fenced-frame-src <source> <source>;
 - The host-source `"https://*:*"`
 - The string `"*"`
 
-> **Note:** See the full list of [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
+> [!NOTE]
+> See the full list of [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
 
 ## Examples
 

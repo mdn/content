@@ -8,7 +8,8 @@ page-type: firefox-release-notes
 
 This article provides information about the changes in Firefox 93 that will affect developers. Firefox 93 was released on October 5, 2021.
 
-> **Note:** See also [Lots to see in Firefox 93](https://hacks.mozilla.org/2021/10/lots-to-see-in-firefox-93/) on Mozilla Hacks.
+> [!NOTE]
+> See also [Lots to see in Firefox 93](https://hacks.mozilla.org/2021/10/lots-to-see-in-firefox-93/) on Mozilla Hacks.
 
 ## Changes for web developers
 

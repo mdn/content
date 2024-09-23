@@ -10,23 +10,28 @@ This article documents the default values for the HTTP [`Accept`](/en-US/docs/We
 
 ## Default values
 
-These are the values sent when the context doesn't give better information. Note that all browsers add the `*/*` MIME Type to cover all cases. This is typically used for requests initiated via the address bar of a browser, or via an HTML {{HTMLElement("a")}} element.
+These are the values sent when the context doesn't give better information.
+Note that all browsers add the `*/*` MIME Type to cover all cases.
+This is typically used for requests initiated via the address bar of a browser, or via an HTML {{HTMLElement("a")}} element.
 
 | User Agent                 | Value                                                                                                                               |
 | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Firefox 92 and later [1]   | `text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8`                                             |
-| Firefox 72 to 91 [1]       | `text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8`                                                        |
-| Firefox 66 to 71 [1]       | `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`                                                                   |
-| Firefox 65 [1]             | `text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8`                                                        |
-| Firefox 64 and earlier [1] | `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`                                                                   |
+| Firefox 128 and later [1]  | `text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8`                     |
+| Firefox 92 to 127 [1]      | `text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8`                                             |
+| Firefox 72 to 91 [2]       | `text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8`                                                        |
+| Firefox 66 to 71 [2]       | `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`                                                                   |
+| Firefox 65 [2]             | `text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8`                                                        |
+| Firefox 64 and earlier [2] | `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`                                                                   |
 | Safari, Chrome             | `text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8`                                             |
-| Safari 5 [2]               | `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`                                                                   |
+| Safari 5 [3]               | `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`                                                                   |
 | Edge                       | `text/html, application/xhtml+xml, image/jxr, */*`                                                                                  |
 | Opera                      | `text/html, application/xml;q=0.9, application/xhtml+xml, image/png, image/webp, image/jpeg, image/gif, image/x-xbitmap, */*;q=0.1` |
 
-\[1] This value can be modified using the [`network.http.accept.default`](https://kb.mozillazine.org/Network.http.accept.default) parameter.
+\[1] The value can be set to an arbitrary string using the `network.http.accept` preference (`about:config`).
 
-\[2] This is an improvement over earlier `Accept` headers as it no longer ranks `image/png` above `text/html`.
+\[2] The value can be set to an arbitrary string using the [`network.http.accept.default`](https://kb.mozillazine.org/Network.http.accept.default) preference (`about:config`).
+
+\[3] This is an improvement over earlier `Accept` headers as it no longer ranks `image/png` above `text/html`.
 
 ## Values for an image
 
@@ -34,7 +39,8 @@ When requesting an image, like through an HTML {{HTMLElement("img")}} element, u
 
 | User Agent                     | Value                                                                      |
 | ------------------------------ | -------------------------------------------------------------------------- |
-| Firefox 92 and later [1]       | `image/avif,image/webp,*/*`                                                |
+| Firefox 128 and later [1]      | `image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5`    |
+| Firefox 92 to 127 [1]          | `image/avif,image/webp,*/*`                                                |
 | Firefox 65 to 91 [1]           | `image/webp,*/*`                                                           |
 | Firefox 47 to 63 [1]           | `*/*`                                                                      |
 | Firefox prior to 47 [1]        | `image/png,image/*;q=0.8,*/*;q=0.5`                                        |
@@ -42,7 +48,7 @@ When requesting an image, like through an HTML {{HTMLElement("img")}} element, u
 | Safari (before Mac OS Big Sur) | `image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5`            |
 | Chrome and Edge 121 and later  | `image/avif,image/webp,image/apng,image/*,*/*;q=0.8`                       |
 
-\[1] This value can be modified using the `image.http.accept` parameter (_[source](https://searchfox.org/mozilla-central/search?q=image.http.accept)_).
+\[1] The value can be set to an arbitrary string using the `image.http.accept` parameter (_[source](https://searchfox.org/mozilla-central/search?q=image.http.accept)_).
 
 ## Values for a video
 

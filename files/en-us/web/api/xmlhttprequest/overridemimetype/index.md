@@ -39,7 +39,8 @@ None ({{jsxref("undefined")}}).
 This example specifies a MIME type of `"text/plain"`, overriding the
 server's stated type for the data being received.
 
-> **Note:** If the server doesn't provide a
+> [!NOTE]
+> If the server doesn't provide a
 > [`Content-Type`](/en-US/docs/Web/HTTP/Headers/Content-Type)
 > header, {{domxref("XMLHttpRequest")}} assumes that the MIME type is
 > `"text/xml"`. If the content isn't valid XML, an "XML Parsing Error: not

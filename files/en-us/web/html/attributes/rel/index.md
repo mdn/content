@@ -1,11 +1,13 @@
 ---
 title: "HTML attribute: rel"
+short-title: rel
 slug: Web/HTML/Attributes/rel
 page-type: html-attribute
 browser-compat:
   - html.elements.link.rel
   - html.elements.a.rel
   - html.elements.area.rel
+  - html.elements.form.rel
 ---
 
 {{HTMLSidebar}}
@@ -24,6 +26,7 @@ The following table lists some of the most important existing keywords. Every ke
 | [`canonical`](#canonical)                                            | Preferred URL for the current document.                                                                                                                                                                                                                                                 | Link                    | Not allowed                                      | Not allowed             |
 | [`dns-prefetch`](/en-US/docs/Web/HTML/Attributes/rel/dns-prefetch)   | Tells the browser to preemptively perform DNS resolution for the target resource's origin.                                                                                                                                                                                              | External Resource       | Not allowed                                      | Not allowed             |
 | [`external`](#external)                                              | The referenced document is not part of the same site as the current document.                                                                                                                                                                                                           | Not allowed             | Annotation                                       | Annotation              |
+| [`expect`](#expect)                                                  | Allows the page to be [render-blocked](/en-US/docs/Glossary/Render_blocking) until the essential parts of the document are parsed so it will render consistently.                                                                                                                       | Link                    | Not allowed                                      | Not allowed             |
 | [`help`](#help)                                                      | Link to context-sensitive help.                                                                                                                                                                                                                                                         | Link                    | Link                                             | Link                    |
 | [`icon`](#icon)                                                      | An icon representing the current document.                                                                                                                                                                                                                                              | External Resource       | Not allowed                                      | Not allowed             |
 | [`license`](#license)                                                | Indicates that the main content of the current document is covered by the copyright license described by the referenced document.                                                                                                                                                       | Link                    | Link                                             | Link                    |
@@ -70,7 +73,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
       ```
 
     - With an [`hreflang`](/en-US/docs/Web/HTML/Element/link#hreflang) attribute that differs from the document language, it indicates a translation.
-    - With the [`type`](/en-US/docs/Web/HTML/Element/link#type) attribute value of `"application/rss+xml"`or `"application/atom+xml"`, it creates a hyperlink referencing a syndication feed.
+    - With the [`type`](/en-US/docs/Web/HTML/Element/link#type) attribute value of `"application/rss+xml"` or `"application/atom+xml"`, it creates a hyperlink referencing a syndication feed.
 
       ```html
       <link
@@ -110,7 +113,8 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 
     With {{htmlelement('link')}}, it represents the author of the entire document.
 
-    > **Note:** For historical reasons, the obsolete attribute value `rev="made"` is treated as `rel="author"`.
+    > [!NOTE]
+    > For historical reasons, the obsolete attribute value `rev="made"` is treated as `rel="author"`.
 
 - `bookmark`
   - : Relevant as the `rel` attribute value for the {{htmlelement('a')}} and {{htmlelement('area')}} elements. Gives a permalink for the nearest ancestor {{htmlelement('article')}} element, if there is one. If there is no ancestor `<article>` element, gives a permalink for the section the linking element is most closely associated with.
@@ -120,6 +124,13 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
   - : Relevant for the {{htmlelement('link')}} element both in the {{htmlelement('body')}} and {{htmlelement('head')}}, it tells the browser to preemptively perform DNS resolution for the target resource's origin. Useful for resources the user will likely need, it helps reduce latency and thereby improves performance when the user does access the resources as the browser preemptively performed DNS resolution for the origin of the specified resource. See [dns-prefetch](/en-US/docs/Web/Performance/dns-prefetch) described in [resource hints](https://w3c.github.io/resource-hints/).
 - `external`
   - : Relevant to {{htmlelement('form')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, it indicates the referenced document is not part of the current site. This can be used with attribute selectors to style external links in a way that indicates to the user that they will be leaving the current site.
+- `expect` {{experimental_inline}}
+
+  - : Allows the page to be [render-blocked](/en-US/docs/Glossary/Render_blocking) until the essential parts of the document are parsed so it will render consistently. Note that render-blocking occurs only when supplemented with the [`blocking="render"`](/en-US/docs/Web/HTML/Element/link#blocking) attribute.
+
+    > [!NOTE]
+    > See [Stabilizing page state to make cross-document transitions consistent](/en-US/docs/Web/API/View_Transitions_API/Using#stabilizing_page_state_to_make_cross-document_transitions_consistent) for more information on its use.
+
 - `help`
   - : Relevant to {{htmlelement('form')}}, {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, the `help` keyword indicates that the linked to content provides context-sensitive help, providing information for the parent of the element defining the hyperlink, and its children. When used within `<link>`, the help is for the whole document. When included with {{htmlelement('a')}} and {{htmlelement('area')}} and supported, the default {{cssxref('cursor')}} will be `help` instead of `pointer`.
 - `icon`
@@ -134,12 +145,15 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 
     If there are multiple `<link rel="icon">`s, the browser uses their [`media`](/en-US/docs/Web/HTML/Element/link#media), [`type`](/en-US/docs/Web/HTML/Element/link#type), and [`sizes`](/en-US/docs/Web/HTML/Element/link#sizes) attributes to select the most appropriate icon. If several icons are equally appropriate, the last one is used. If the most appropriate icon is later found to be inappropriate, for example because it uses an unsupported format, the browser proceeds to the next-most appropriate, and so on.
 
-    > **Note:** The [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute is not supported for `rel="icon"` in Chromium-based browsers. See the [open Chromium issue](https://crbug.com/1121645).
+    > [!NOTE]
+    > The [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute is not supported for `rel="icon"` in Chromium-based browsers. See the [open Chromium issue](https://crbug.com/1121645).
 
-    > **Note:** Apple's iOS does not use this link type, nor the [`sizes`](/en-US/docs/Web/HTML/Element/link#sizes) attribute, like others mobile browsers do, to select a webpage icon for Web Clip or a start-up placeholder.
+    > [!NOTE]
+    > Apple's iOS does not use this link type, nor the [`sizes`](/en-US/docs/Web/HTML/Element/link#sizes) attribute, like others mobile browsers do, to select a webpage icon for Web Clip or a start-up placeholder.
     > Instead it uses the non-standard [`apple-touch-icon`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) and [`apple-touch-startup-image`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6) respectively.
 
-    > **Note:** The `shortcut` link type is often seen before `icon`, but this link type is non-conforming, ignored and **web authors must not use it anymore**.
+    > [!NOTE]
+    > The `shortcut` link type is often seen before `icon`, but this link type is non-conforming, ignored and **web authors must not use it anymore**.
 
 - `license`
 
@@ -149,9 +163,10 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
     <link rel="license" href="#license" />
     ```
 
-    > **Note:** Although recognized, the synonym `copyright` is incorrect and must be avoided.
+    > [!NOTE]
+    > Although recognized, the synonym `copyright` is incorrect and must be avoided.
 
-- `manifest` {{Experimental_Inline}}
+- `manifest`
   - : [Web app manifest](/en-US/docs/Web/Manifest). Requires the use of the CORS protocol for cross-origin fetching.
 - `modulepreload`
   - : Useful for improved performance, and relevant to the {{htmlelement('link')}} anywhere in the document, setting `rel="modulepreload"` tells the browser to preemptively fetch the script (and dependencies) and store it in the document's module map for later evaluation. `modulepreload` links can ensure network fetching is done with the module ready (but not evaluated) in the module map before it is necessarily needed. See also [`modulepreload`](/en-US/docs/Web/HTML/Attributes/rel/modulepreload).
@@ -198,7 +213,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 
 - `stylesheet`
 
-  - : Valid for the {{htmlelement('link')}} element, it imports an external resource to be used as a stylesheet. The [`type`](/en-US/docs/Web/HTML/Element/link#type) attribute is not needed as it's a `text/css` stylesheet, as that is the default value. If it's not a stylesheet of type `text/css` it is best to declare the type.
+  - : Valid for the {{htmlelement('link')}} element, it imports an external resource to be used as a stylesheet. The [`type`](/en-US/docs/Web/HTML/Element/link#type) attribute is not needed if it's a `text/css` stylesheet, as that is the default value. If it's not a stylesheet of type `text/css` it is best to declare the type.
 
     While this attribute defines the link as being a stylesheet, the interaction with other attributes and other key terms within the rel value impact whether the stylesheet is downloaded and/or used.
 
@@ -218,7 +233,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 
 ### Non-standard values
 
-- `apple-touch-icon`
+- [`apple-touch-icon`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4)
   - : Specifies the icon for a web application on an iOS device.
 
 ## Specifications

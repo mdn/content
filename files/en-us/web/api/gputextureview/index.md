@@ -22,7 +22,7 @@ A `GPUTextureView` object instance is created using the {{domxref("GPUTexture.cr
 
 ## Examples
 
-In the WebGPU Samples [Cubemap demo](https://webgpu.github.io/webgpu-samples/samples/cubemap), you will see multiple examples of how `GPUTextureView`s (created by {{domxref("GPUTexture.createView()")}} calls) are used, both as a `resource` in a {{domxref("GPUDevice.createBindGroup()")}} call, and as a provided `view` in the `depthStencilAttachment` object of a {{domxref("GPUCommandEncoder.beginRenderPass()")}} descriptor.
+In the WebGPU Samples [Cubemap demo](https://webgpu.github.io/webgpu-samples/samples/cubemap/), you will see multiple examples of how `GPUTextureView`s (created by {{domxref("GPUTexture.createView()")}} calls) are used, both as a `resource` in a {{domxref("GPUDevice.createBindGroup()")}} call, and as a provided `view` in the `depthStencilAttachment` object of a {{domxref("GPUCommandEncoder.beginRenderPass()")}} descriptor.
 
 ```js
 const uniformBindGroup = device.createBindGroup({

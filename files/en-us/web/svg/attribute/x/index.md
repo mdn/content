@@ -867,11 +867,13 @@ For {{SVGElement('foreignObject')}}, `x` defines the x coordinate of the upper l
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `x` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for `<foreignObject>`.
+> [!NOTE]
+> The x-axis coordinate of the `<foreignObject>` can also be defined with the {{cssxref("x")}} _geometry property_. If set in CSS, the `x` property value overrides the `x` attribute value.
 
 ### `<glyphRef>`
 
-> **Warning:** As of SVG2 {{SVGElement('glyphRef')}} is deprecated and shouldn't be used.
+> [!WARNING]
+> As of SVG2 {{SVGElement('glyphRef')}} is deprecated and shouldn't be used.
 
 For {{SVGElement('glyphRef')}}, `x` defines the x-axis coordinate of the glyph.
 
@@ -935,7 +937,8 @@ For {{SVGElement('image')}}, `x` defines the x coordinate of the upper left corn
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `x` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for images.
+> [!NOTE]
+> The x-axis coordinate of the `<image>` can also be defined with the {{cssxref("x")}} _geometry property_. If set in CSS, the `x` property value overrides the `x` attribute value.
 
 ### `<mask>`
 
@@ -1030,7 +1033,8 @@ For {{SVGElement('rect')}}, `x` defines the x coordinate of the upper left corne
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `x` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for rectangles.
+> [!NOTE]
+> The x-axis coordinate of the `<rect>` can also be defined with the {{cssxref("x")}} _geometry property_. If set in CSS, the `x` property value overrides the `x` attribute value.
 
 ### `<svg>`
 
@@ -1065,7 +1069,8 @@ For {{SVGElement('svg')}}, `x` defines the x coordinate of the upper left corner
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `x` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for `<svg>`.
+> [!NOTE]
+> The x-axis coordinate of the `<svg>` can also be defined with the {{cssxref("x")}} _geometry property_. If set in CSS, the `x` property value overrides the `x` attribute value.
 
 ### `<text>`
 
@@ -1146,7 +1151,8 @@ line {
 
 ### `<tref>`
 
-> **Warning:** As of SVG2 {{SVGElement('tref')}} is deprecated and shouldn't be used.
+> [!WARNING]
+> As of SVG2 {{SVGElement('tref')}} is deprecated and shouldn't be used.
 
 For {{SVGElement('tref')}}, if it contains a single value, `x` defines the x coordinate where the _content text position_ must be placed. The _content text position_ is usually a point on the baseline of the first line of text. The exact _content text position_ is influenced by other properties, such as {{SVGAttr('text-anchor')}} or {{cssxref('direction')}}.
 
@@ -1293,7 +1299,9 @@ For {{SVGElement('use')}}, `x` defines the x coordinate of the upper left corner
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `x` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for used elements.
+> [!NOTE]
+> Declaring a `<length>` or `<percentage>` value in CSS using the {{cssxref("x")}} _geometry property_ overrides the x-axis coordinate of the `<use>` set by the `x` attribute in some browsers.
+> This behavior is non-standard, deprecated, and likely to be removed in future browser versions.
 
 ## Examples
 

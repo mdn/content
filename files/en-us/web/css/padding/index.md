@@ -13,7 +13,8 @@ The **`padding`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/We
 
 An element's padding area is the space between its content and its border.
 
-> **Note:** Padding creates extra space within an element. In contrast, {{cssxref("margin")}} creates extra space _around_ an element.
+> [!NOTE]
+> Padding creates extra space within an element. In contrast, {{cssxref("margin")}} creates extra space _around_ an element.
 
 ## Constituent properties
 

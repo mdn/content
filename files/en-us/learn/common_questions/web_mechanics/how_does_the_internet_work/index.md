@@ -47,7 +47,8 @@ The **Internet** is the backbone of the Web, the technical infrastructure that m
 
 When two computers need to communicate, you have to link them, either physically (usually with an [Ethernet cable](https://en.wikipedia.org/wiki/Ethernet_crossover_cable)) or wirelessly (for example with [Wi-Fi](https://en.wikipedia.org/wiki/WiFi) or [Bluetooth](https://en.wikipedia.org/wiki/Bluetooth) systems). All modern computers can sustain any of those connections.
 
-> **Note:** For the rest of this article, we will only talk about physical cables, but wireless networks work the same.
+> [!NOTE]
+> For the rest of this article, we will only talk about physical cables, but wireless networks work the same.
 
 ![Two computers linked together](internet-schema-1.png)
 

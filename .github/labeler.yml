@@ -174,7 +174,7 @@ Content:Other:
           - files/en-us/web/exslt/**
           - files/en-us/web/opensearch/**
           - files/en-us/web/privacy/**
-          - files/en-us/web/text_fragments/**
+          - files/en-us/web/uri/**
           - files/en-us/web/xml/**
           - files/en-us/web/xpath/**
           - files/en-us/web/xslt/**

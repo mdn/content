@@ -41,7 +41,8 @@ As a note on learning paths — starting with pure JavaScript is the best way to
 
 After that, you can pick any framework you like and use it for your projects; we have chosen Phaser as it is a good solid framework, with a good support and community available, and a good set of plugins. Frameworks speed up development time and help take care of the boring parts, allowing you to concentrate on the fun stuff. However, frameworks are not always perfect, so if something unexpected happens or you want to write some functionality that the framework does not provide, you will need some pure JavaScript knowledge.
 
-> **Note:** This series of articles can be used as material for hands-on game development workshops. You can also make use of the [Gamedev Phaser Content Kit](https://github.com/end3r/Gamedev-Phaser-Content-Kit) based on this tutorial if you want to give a talk about game development with Phaser.
+> [!NOTE]
+> This series of articles can be used as material for hands-on game development workshops. You can also make use of the [Gamedev Phaser Content Kit](https://github.com/end3r/Gamedev-Phaser-Content-Kit) based on this tutorial if you want to give a talk about game development with Phaser.
 
 ## Next steps
 

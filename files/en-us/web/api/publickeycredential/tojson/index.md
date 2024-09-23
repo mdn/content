@@ -3,12 +3,10 @@ title: "PublicKeyCredential: toJSON() method"
 short-title: toJSON()
 slug: Web/API/PublicKeyCredential/toJSON
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.PublicKeyCredential.toJSON
 ---
 
-{{APIRef("Web Authentication API")}} {{SeeCompatTable}}{{securecontext_header}}
+{{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 The **`toJSON()`** method of the {{domxref("PublicKeyCredential")}} interface returns a {{glossary("JSON type representation")}} of a {{domxref("PublicKeyCredential")}}.
 

@@ -1,5 +1,6 @@
 ---
 title: "HTML: HyperText Markup Language"
+short-title: HTML
 slug: Web/HTML
 page-type: landing-page
 ---
@@ -61,6 +62,8 @@ Our [HTML Learning Area](/en-US/docs/Learn/HTML) features multiple modules that 
   - : Global attributes may be specified on all [HTML elements](/en-US/docs/Web/HTML/Element), _even those not specified in the standard_. This means that any non-standard elements must still permit these attributes, even though those elements make the document HTML5-noncompliant.
 - [Inline-level elements](/en-US/docs/Glossary/Inline-level_content) and [block-level elements](/en-US/docs/Glossary/Block-level_content)
   - : HTML elements are usually "inline-level" or "block-level" elements. An inline-level element occupies only the space bounded by the tags that define it. A block-level element occupies the entire space of its parent element (container), thereby creating a "block box".
+- [HTML comments](/en-US/docs/Web/HTML/Comments)
+  - : HTML comments are used to add explanatory notes to the markup or to prevent the browser from interpreting specific parts of the document.
 - [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
   - : The {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements allow you to play audio and video media natively within your content without the need for external software support.
 - [HTML content categories](/en-US/docs/Web/HTML/Content_categories)

@@ -20,7 +20,7 @@ rtcIceCandidateStats.candidateType
 
 ### Value
 
-A string whose value is one of the strings found in [`RTCIceCandidate.type`](/en-US/docs/Web/API/RTCIceCandidate/type#values).
+A string whose value is one of the strings found in [`RTCIceCandidate.type`](/en-US/docs/Web/API/RTCIceCandidate/type#value).
 
 ## Specifications
 

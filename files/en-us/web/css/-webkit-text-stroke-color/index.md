@@ -7,7 +7,7 @@ browser-compat: css.properties.-webkit-text-stroke-color
 
 {{CSSRef}}
 
-The **`-webkit-text-stroke-color`** CSS property specifies the stroke [color](/en-US/docs/Web/CSS/color_value) of characters of text. If this property is not set, the value of the {{cssxref("color")}} property is used.
+The **`-webkit-text-stroke-color`** [CSS](/en-US/docs/Web/CSS) property specifies the stroke [color](/en-US/docs/Web/CSS/color_value) of characters of text. If this property is not set, the value of the {{cssxref("color")}} property is used.
 
 ## Syntax
 

@@ -34,6 +34,10 @@ in hexadecimal).
 
 Another alternative is `document.body.text`, although this is [deprecated in HTML 4.01](https://www.w3.org/TR/html401/struct/global.html#adef-text) in favor of the CSS alternative above.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

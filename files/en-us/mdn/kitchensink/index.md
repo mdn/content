@@ -5,7 +5,8 @@ page-type: guide
 browser-compat: html.elements.video
 ---
 
-> **Warning:** Don't delete this page. It's used by [mdn/yari](https://github.com/mdn/yari) for its automation.
+> [!WARNING]
+> Don't delete this page. It's used by [mdn/yari](https://github.com/mdn/yari) for its automation.
 
 ## About this page
 
@@ -16,9 +17,11 @@ Let's start with some notes…
 
 Text that uses the `<kbd>` tag: <kbd>Shift</kbd>
 
-> **Note:** Here's a block indicator note.
+> [!NOTE]
+> Here's a block indicator note.
 
-> **Warning:** Here's a block indicator warning.
+> [!WARNING]
+> Here's a block indicator warning.
 
 ## Prev/Next buttons
 

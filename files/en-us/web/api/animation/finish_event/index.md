@@ -12,7 +12,8 @@ The **`finish`** event of the {{domxref("Animation")}} interface is fired when t
 when the {{domxref("Animation.finish()")}} method is called to immediately cause the
 animation to finish up.
 
-> **Note:** The `"paused"` play state supersedes the `"finished"` play
+> [!NOTE]
+> The `"paused"` play state supersedes the `"finished"` play
 > state; if the animation is both paused and finished, the `"paused"` state
 > is the one that will be reported. You can force the animation into the
 > `"finished"` state by setting its {{domxref("Animation.startTime", "startTime")}} to

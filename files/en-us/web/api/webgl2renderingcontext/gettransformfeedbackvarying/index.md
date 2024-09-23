@@ -24,7 +24,7 @@ getTransformFeedbackVarying(program, index)
   - : A {{domxref("WebGLProgram")}}.
 - `index`
   - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the varying variable whose
-    information to retrieve`.`
+    information to retrieve.
 
 ### Return value
 

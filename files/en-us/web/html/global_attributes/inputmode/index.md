@@ -12,7 +12,7 @@ This allows a browser to display an appropriate virtual keyboard.
 
 It is used primarily on {{HTMLElement("input")}} elements, but is usable on any element in [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) mode.
 
-It's important to understand that the `inputmode` attribute doesn't cause any validity requirements to be enforced on input. To require that input conforms to a particular data type, choose an appropriate [`<input> element type`](/en-US/docs/Web/HTML/Element/input#input_types). For specific guidance on choosing {{HTMLElement("input")}} types, see the [Values](#values) section.
+It's important to understand that the `inputmode` attribute doesn't cause any validity requirements to be enforced on input. To require that input conforms to a particular data type, choose an appropriate [`<input>`](/en-US/docs/Web/HTML/Element/input#input_types) element type. For specific guidance on choosing {{HTMLElement("input")}} types, see the [Values](#values) section.
 
 ## Values
 
@@ -30,8 +30,8 @@ The attribute can have any of the following values:
   - : Numeric input keyboard, but only requires the digits 0–9.
     Devices may or may not show a minus key.
 - `tel`
-  - : A telephone keypad input, including the digits 0–9, the asterisk (<kbd>*</kbd>), and the pound (<kbd>#</kbd>) key.
-    Inputs that *require\* a telephone number should typically use `{{HTMLElement("input/tel", '&lt;input type="tel"&gt;')}}` instead.
+  - : A telephone keypad input, including the digits 0–9, the asterisk (<kbd>\*</kbd>), and the pound (<kbd>#</kbd>) key.
+    Inputs that _require_ a telephone number should typically use `{{HTMLElement("input/tel", '&lt;input type="tel"&gt;')}}` instead.
 - `search`
   - : A virtual keyboard optimized for search input.
     For instance, the [return/submit key](https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-enterkeyhint-attribute) may be labeled "Search", along with possible other optimizations.

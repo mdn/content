@@ -59,7 +59,7 @@ For examples, see the [examples provided for the `<dl>` element](/en-US/docs/Web
         {{Glossary("W3C")}} HTML 5.2 and later) a
         {{HTMLElement("div")}} that is a child of a
         {{HTMLElement("dl")}}.<br />This element can be used before a
-        {{HTMLElement("dd")}} or another {{HTMLElement("dt")}}
+        {{HTMLElement("dd")}} or another <code>&lt;dt&gt;</code>
         element.
       </td>
     </tr>

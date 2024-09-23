@@ -9,7 +9,8 @@ browser-compat: svg.global_attributes.flood-opacity
 
 The **`flood-opacity`** attribute indicates the opacity value to use across the current filter primitive subregion.
 
-> **Note:** As a presentation attribute, `flood-opacity` can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute, `flood-opacity` can be used as a CSS property.
 
 You can use this attribute with the following SVG elements:
 

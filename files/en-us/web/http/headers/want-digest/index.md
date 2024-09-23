@@ -10,7 +10,8 @@ browser-compat: http.headers.Want-Digest
 
 {{HTTPSidebar}}{{Deprecated_Header}}{{non-standard_header}}
 
-> **Note:** This header was removed from the specification in [draft 8](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-digest-headers-08).
+> [!NOTE]
+> This header was removed from the specification in [draft 8](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-digest-headers-08).
 > Use {{HTTPHeader("Want-Content-Digest")}} instead.
 > For `id-*` digest algorithms, use {{HTTPHeader("Want-Repr-Digest")}}.
 

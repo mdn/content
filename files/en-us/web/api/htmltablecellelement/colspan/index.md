@@ -14,7 +14,8 @@ The **`colSpan`** read-only property of the {{domxref("HTMLTableCellElement")}} 
 
 A positive number representing the number of columns.
 
-> **Note:** When setting a new value, the value is _clamped_ to the nearest strictly positive number.
+> [!NOTE]
+> When setting a new value, the value is _clamped_ to the nearest strictly positive number.
 
 ## Examples
 
@@ -70,7 +71,7 @@ button {
 }
 ```
 
-### Javascript
+### JavaScript
 
 ```js
 // Obtain relevant interface elements

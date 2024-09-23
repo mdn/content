@@ -21,7 +21,6 @@ To make our example application installable, the following things are needed:
 - A web application manifest, with the [correct members filled in](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#the_web_app_manifest).
 - The website to be served from a secure (HTTPS) domain.
 - An icon to represent the app on the device.
-- A [service worker](/en-US/docs/Web/API/Service_Worker_API) registered, to allow the app to work offline.
 
 ### The web app manifest file
 
@@ -35,7 +34,8 @@ The `js13kpwa.webmanifest` file of the [js13kPWA](https://mdn.github.io/pwa-exam
 <link rel="manifest" href="js13kpwa.webmanifest" />
 ```
 
-> **Note:** many use `manifest.json` for web app manifests as the contents are organized in a JSON structure. However, the `.webmanifest` file format is explicitly mentioned in the [W3C manifest specification](https://w3c.github.io/manifest/), so that's what we'll use here.
+> [!NOTE]
+> Many use `manifest.json` for web app manifests as the contents are organized in a JSON structure. However, the `.webmanifest` file format is explicitly mentioned in the [W3C manifest specification](https://w3c.github.io/manifest/), so that's what we'll use here.
 
 The content of the file looks like this:
 

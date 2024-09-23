@@ -18,6 +18,7 @@ Camel case is the most popular convention in JavaScript, Java, and various other
 
 ## See also
 
-- {{Glossary("Snake case")}}
-- {{Glossary("Kebab case")}}
+- Related glossary terms:
+  - {{Glossary("Snake case")}}
+  - {{Glossary("Kebab case")}}
 - [typescript-eslint rule: `naming-convention`](https://typescript-eslint.io/rules/naming-convention/)

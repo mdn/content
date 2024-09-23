@@ -61,7 +61,8 @@ console.assert(clone.itself === clone); // and the circular reference is preserv
 
 [Transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) (only) can be transferred rather than duplicated in the cloned object, using the `transfer` property of the `options` parameter. Transferring makes the original object unusable.
 
-> **Note:** A scenario where this might be useful is when asynchronously validating some data in a buffer before saving it.
+> [!NOTE]
+> A scenario where this might be useful is when asynchronously validating some data in a buffer before saving it.
 > To avoid the buffer being modified before the data is saved, you can clone the buffer and validate that data.
 > If you also _transfer_ the data, any attempts to modify the original buffer will fail, preventing its accidental misuse.
 

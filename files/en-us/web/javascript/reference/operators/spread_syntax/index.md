@@ -179,7 +179,8 @@ arr1 = [...arr2, ...arr1];
 console.log(arr1); // [3, 4, 5, 0, 1, 2]
 ```
 
-> **Note:** Unlike `unshift()`, this creates a new `arr1`, instead of modifying the original `arr1` array in-place.
+> [!NOTE]
+> Unlike `unshift()`, this creates a new `arr1`, instead of modifying the original `arr1` array in-place.
 
 #### Conditionally adding values to an array
 

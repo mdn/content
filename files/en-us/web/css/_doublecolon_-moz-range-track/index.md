@@ -11,7 +11,8 @@ browser-compat: css.selectors.-moz-range-track
 
 The **`::-moz-range-track`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that represents the _track_ (i.e., groove) in which the indicator slides in an {{HTMLElement("input")}} of `type="range"`.
 
-> **Note:** Using `::-moz-range-track` with anything but an `<input type="range">` doesn't match anything and has no effect.
+> [!NOTE]
+> Using `::-moz-range-track` with anything but an `<input type="range">` doesn't match anything and has no effect.
 
 ## Syntax
 

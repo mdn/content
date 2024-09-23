@@ -16,7 +16,8 @@ WebRTC doesn't send DTMF codes as audio data. Instead, they're sent out-of-band,
 - Entry of credit card or other payment information
 - Passcode entry
 
-> **Note:** While the DTMF is not sent to the remote peer as audio, browsers may choose to play the corresponding tone to the local user as part of their user experience, since users are typically used to hearing their phone play the tones audibly.
+> [!NOTE]
+> While the DTMF is not sent to the remote peer as audio, browsers may choose to play the corresponding tone to the local user as part of their user experience, since users are typically used to hearing their phone play the tones audibly.
 
 ## Sending DTMF on an RTCPeerConnection
 
@@ -32,7 +33,8 @@ If you'd like to know more about how this works, read {{RFC(3550, "RTP: A Transp
 
 This simple example constructs two {{domxref("RTCPeerConnection")}}s, establishes a connection between them, then waits for the user to click a "Dial" button. When the button is clicked, a DTMF string is sent over the connection using {{domxref("RTCDTMFSender.insertDTMF()")}}. Once the tones finish transmitting, the connection is closed.
 
-> **Note:** This example is obviously somewhat contrived, since normally the two `RTCPeerConnection` objects would exist on different devices, and signaling would be done over the network instead of it all being linked up inline as it is here.
+> [!NOTE]
+> This example is obviously somewhat contrived, since normally the two `RTCPeerConnection` objects would exist on different devices, and signaling would be done over the network instead of it all being linked up inline as it is here.
 
 ### HTML
 
@@ -387,11 +389,11 @@ The `addstream` event includes a {{domxref("MediaStreamEvent.stream", "stream")}
 
 #### Logging
 
-A simple `log()` function is used throughout the code to append HTML to a {{HTMLElement("div")}} box for displaying status and errors to the user.
+A simple `log()` function is used throughout the code to append text to a {{HTMLElement("div")}} box for displaying status and errors to the user.
 
 ```js
 function log(msg) {
-  logElement.innerHTML += `${msg}<br/>`;
+  logElement.innerText += `${msg}\n`;
 }
 ```
 

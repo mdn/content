@@ -54,7 +54,7 @@ For examples, see the [examples provided for the `<dl>` element](/en-US/docs/Web
         A {{HTMLElement("dl")}} or a
         {{HTMLElement("div")}} that is a child of a
         {{HTMLElement("dl")}}.<br />This element can be used after a
-        {{HTMLElement("dt")}} or another {{HTMLElement("dd")}}
+        {{HTMLElement("dt")}} or another <code>&lt;dd&gt;</code>
         element.
       </td>
     </tr>

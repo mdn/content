@@ -25,7 +25,8 @@ An unsigned 64-bit integer value which indicates the sum of the quantization par
 indicate higher compression factors, the larger this sum is, the more heavily compressed
 the stream generally has been.
 
-> **Note:** This value is only available for video media.
+> [!NOTE]
+> This value is only available for video media.
 
 ## Usage notes
 

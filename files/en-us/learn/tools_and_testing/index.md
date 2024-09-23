@@ -12,7 +12,8 @@ On top of that, we still need to keep cross-browser support in the forefront of 
 
 Working out what tools you should be using can be a difficult process, so we have written this set of articles to inform you of what types of tool are available, what they can do for you, and how to make use of the current industry favorites.
 
-> **Note:** We have referenced a number of tools in this topic, not because we endorse them or think they are the best, but because we know they work and have good industry support. In most cases there are other tools available, old ones will go out of fashion, and new ones will no doubt appear.
+> [!NOTE]
+> We have referenced a number of tools in this topic, not because we endorse them or think they are the best, but because we know they work and have good industry support. In most cases there are other tools available, old ones will go out of fashion, and new ones will no doubt appear.
 
 ## Prerequisites
 

@@ -60,7 +60,8 @@ memory.copy (memory $memoryName) ;; Copy memory with memory named "$memoryName"
 
 ## Browser compatibility
 
-> **Note:** Memory support in Wasm modules matches the [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) JavaScript API.
+> [!NOTE]
+> Memory support in Wasm modules matches the [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) JavaScript API.
 > The [multiMemory](#webassembly.multimemory) key indicates versions in which `copy` can be used with a specified memory.
 
 {{Compat}}

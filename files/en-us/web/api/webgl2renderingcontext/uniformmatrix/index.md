@@ -12,7 +12,8 @@ The **`WebGL2RenderingContext.uniformMatrix[234]x[234]fv()`**
 methods of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) specify matrix
 values for uniform variables.
 
-> **Note:** There are no `2x2`, `3x3`, and `4x4` versions of
+> [!NOTE]
+> There are no `2x2`, `3x3`, and `4x4` versions of
 > this method. They are abbreviated in `2`, `3`, and
 > `4`, respectively. See the syntax below.
 

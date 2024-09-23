@@ -57,7 +57,8 @@ admin.site.register(BookInstance)
 admin.site.register(Language)
 ```
 
-> **Note:** The lines above assume that you accepted the challenge to create a model to represent the natural language of a book ([see the models tutorial article](/en-US/docs/Learn/Server-side/Django/Models))!
+> [!NOTE]
+> The lines above assume that you accepted the challenge to create a model to represent the natural language of a book ([see the models tutorial article](/en-US/docs/Learn/Server-side/Django/Models))!
 
 This is the simplest way of registering a model, or models, with the site. The admin site is highly customizable, and we'll talk more about the other ways of registering your models further down.
 
@@ -91,7 +92,8 @@ Enter values for the fields. You can create new authors or genres by pressing th
 
 ![Admin Site - Book Add](admin_book_add.png)
 
-> **Note:** At this point we'd like you to spend some time adding a few books, authors, languages, and genres (e.g. Fantasy) to your application. Make sure that each author and genre includes a couple of different books (this will make your list and detail views more interesting when we implement them later on in the article series).
+> [!NOTE]
+> At this point we'd like you to spend some time adding a few books, authors, languages, and genres (e.g. Fantasy) to your application. Make sure that each author and genre includes a couple of different books (this will make your list and detail views more interesting when we implement them later on in the article series).
 
 When you've finished adding books, click on the **Home** link in the top bookmark to be taken back to the main admin page. Then click on the **Books** link to display the current list of books (or on one of the other links to see other model lists). Now that you've added a few books, the list might look similar to the screenshot below. The title of each book is displayed; this is the value returned in the Book model's `__str__()` method that we specified in the last article.
 
@@ -101,7 +103,8 @@ From this list you can delete books by selecting the checkbox next to the book y
 
 You can edit a book by selecting its name in the link. The edit page for a book, shown below, is almost identical to the "Add" page. The main differences are the page title (_Change book_) and the addition of **Delete**, **HISTORY** and **VIEW ON SITE** buttons (this last button appears because we defined the `get_absolute_url()` method in our model).
 
-> **Note:** Clicking the **VIEW ON SITE** button raises a `NoReverseMatch` exception because the `get_absolute_url()` method attempts to `reverse()` a named URL mapping ('book-detail') that has not yet been defined.
+> [!NOTE]
+> Clicking the **VIEW ON SITE** button raises a `NoReverseMatch` exception because the `get_absolute_url()` method attempts to `reverse()` a named URL mapping ('book-detail') that has not yet been defined.
 > We'll define a URL mapping and associated view in [Django Tutorial Part 6: Generic list and detail views](/en-US/docs/Learn/Server-side/Django/Generic_views).
 
 ![Admin Site - Book Edit](admin_book_modify.png)
@@ -208,7 +211,8 @@ class BookAdmin(admin.ModelAdmin):
 
 Unfortunately we can't directly specify the `genre` field in `list_display` because it is a `ManyToManyField` (Django prevents this because there would be a large database access "cost" in doing so). Instead we'll define a `display_genre` function to get the information as a string (this is the function we've called above; we'll define it below).
 
-> **Note:** Getting the `genre` may not be a good idea here, because of the "cost" of the database operation. We're showing you how because calling functions in your models can be very useful for other reasons — for example to add a _Delete_ link next to every item in the list.
+> [!NOTE]
+> Getting the `genre` may not be a good idea here, because of the "cost" of the database operation. We're showing you how because calling functions in your models can be very useful for other reasons — for example to add a _Delete_ link next to every item in the list.
 
 Add the following code into your `Book` model (**models.py**). This creates a string from the first three values of the `genre` field (if they exist) and creates a `short_description` that can be used in the admin site for this method.
 
@@ -226,7 +230,8 @@ After saving the model and updated admin, open your website and go to the _Books
 
 The `Genre` model (and the `Language` model, if you defined one) both have a single field, so there is no point creating an additional model for them to display additional fields.
 
-> **Note:** It is worth updating the `BookInstance` model list to show at least the status and the expected return date. We've added that as a challenge at the end of this article!
+> [!NOTE]
+> It is worth updating the `BookInstance` model list to show at least the status and the expected return date. We've added that as a challenge at the end of this article!
 
 ### Add list filters
 
@@ -247,7 +252,8 @@ The list view will now include a filter box to the right. Note how you can choos
 
 By default, the detail views lay out all fields vertically, in their order of declaration in the model. You can change the order of declaration, which fields are displayed (or excluded), whether sections are used to organize the information, whether fields are displayed horizontally or vertically, and even what edit widgets are used in the admin forms.
 
-> **Note:** The _LocalLibrary_ models are relatively simple so there isn't a huge need for us to change the layout; we'll make some changes anyway however, just to show you how.
+> [!NOTE]
+> The _LocalLibrary_ models are relatively simple so there isn't a huge need for us to change the layout; we'll make some changes anyway however, just to show you how.
 
 #### Controlling which fields are displayed and laid out
 
@@ -266,7 +272,8 @@ In your website go to the author detail view — it should now appear as shown b
 
 ![Admin Site - Improved Author Detail](admin_improved_author_detail.png)
 
-> **Note:** You can also use the `exclude` attribute to declare a list of attributes to be excluded from the form (all other attributes in the model will be displayed).
+> [!NOTE]
+> You can also use the `exclude` attribute to declare a list of attributes to be excluded from the form (all other attributes in the model will be displayed).
 
 #### Sectioning the detail view
 
@@ -318,7 +325,8 @@ Now navigate to a view for a `Book` in your website — at the bottom you should
 
 In this case all we've done is declare our tabular inline class, which just adds all fields from the _inlined_ model. You can specify all sorts of additional information for the layout, including the fields to display, their order, whether they are read only or not, etc. (see [TabularInline](https://docs.djangoproject.com/en/5.0/ref/contrib/admin/#django.contrib.admin.TabularInline) for more information).
 
-> **Note:** There are some painful limits in this functionality! In the screenshot above we have three existing book instances, followed by three placeholders for new book instances (which look very similar!). It would be better to have NO spare book instances by default and just add them with the **Add another Book instance** link, or to be able to just list the `BookInstance`s as non-readable links from here. The first option can be done by setting the `extra` attribute to `0` in `BooksInstanceInline` model, try it by yourself.
+> [!NOTE]
+> There are some painful limits in this functionality! In the screenshot above we have three existing book instances, followed by three placeholders for new book instances (which look very similar!). It would be better to have NO spare book instances by default and just add them with the **Add another Book instance** link, or to be able to just list the `BookInstance`s as non-readable links from here. The first option can be done by setting the `extra` attribute to `0` in `BooksInstanceInline` model, try it by yourself.
 
 ## Challenge yourself
 

@@ -14,7 +14,8 @@ The value of the **`Navigator.appCodeName`** property is
 always "`Mozilla`", in any browser. This property is kept only for
 compatibility purposes.
 
-> **Note:** Do not rely on this property to return a real
+> [!NOTE]
+> Do not rely on this property to return a real
 > product name. All browsers return "`Mozilla`" as the value of this property.
 
 ## Value

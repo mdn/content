@@ -41,7 +41,7 @@ A new string representing the provided `uriComponent` encoded as a URI component
 A–Z a–z 0–9 - _ . ! ~ * ' ( )
 ```
 
-Compared to {{jsxref("encodeURI()")}}, `encodeURIComponent()` escapes a larger set of characters. Use `encodeURIComponent()` on user-entered fields from forms {{HTTPMethod("POST")}}'d to the server — this will encode `&` symbols that may inadvertently be generated during data entry for special HTML entities or other characters that require encoding/decoding. For example, if a user writes `Jack & Jill`, without `encodeURIComponent()`, the ampersand could be interpreted on the server as the start of a new field and jeopardize the integrity of the data.
+Compared to {{jsxref("encodeURI()")}}, `encodeURIComponent()` escapes a larger set of characters. Use `encodeURIComponent()` on user-entered fields from forms {{HTTPMethod("POST")}}'d to the server — this will encode `&` symbols that may inadvertently be generated during data entry for {{glossary("character reference", "character references")}} or other characters that require encoding/decoding. For example, if a user writes `Jack & Jill`, without `encodeURIComponent()`, the ampersand could be interpreted on the server as the start of a new field and jeopardize the integrity of the data.
 
 For [`application/x-www-form-urlencoded`](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#application/x-www-form-urlencoded-encoding-algorithm), spaces are to be replaced by `+`, so one may wish to follow a `encodeURIComponent()` replacement with an additional replacement of `%20` with `+`.
 

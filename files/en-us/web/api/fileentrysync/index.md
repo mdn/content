@@ -12,7 +12,8 @@ browser-compat: api.FileEntrySync
 
 The `FileEntrySync` interface represents a file in a file system. It lets you write content to a file.
 
-> **Warning:** This interface is deprecated and is no more on the standard track.
+> [!WARNING]
+> This interface is deprecated and is no more on the standard track.
 > _Do not use it anymore._ Use the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) instead.
 
 ## Basic concepts
@@ -44,15 +45,15 @@ To write content to file, create a FileWriter object by calling [`createWriter()
 
 Creates a new `FileWriter` associated with the file that the `FileEntry` represents.
 
-```webidl
-void createWriter();
+```js-nolint
+createWriter()
 ```
 
-#### Parameter
+#### Parameters
 
 None.
 
-#### Returns
+#### Return value
 
 A `FileWriterSync` object.
 
@@ -69,15 +70,15 @@ This method can raise a [DOMException](/en-US/docs/Web/API/DOMException) with th
 
 Returns a File that represents the current state of the file that this `FileEntry` represents.
 
-```webidl
-void file();
+```js-nolint
+file()
 ```
 
-#### Parameter
+#### Parameters
 
 None.
 
-#### Returns
+#### Return value
 
 A `File` object.
 

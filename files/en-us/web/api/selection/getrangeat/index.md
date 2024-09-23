@@ -13,7 +13,8 @@ The **`getRangeAt()`** method of the {{domxref("Selection")}} interface returns 
 If the endpoints of the selected range are within a {{glossary("shadow tree")}} then JavaScript does not have visibility of the shadow nodes, and the method should re-scope the range to include the host element that contains the end point.
 In practice most browsers do not yet implement this behavior, and the returned range is unpredictable.
 
-> **Note:** When selecting within nodes that might contain a shadow root, you can use {{domxref("Selection.getComposedRanges()")}} (if supported) to get a selection range inside a shadow tree, or to reliably re-scope the selection to the host node.
+> [!NOTE]
+> When selecting within nodes that might contain a shadow root, you can use {{domxref("Selection.getComposedRanges()")}} (if supported) to get a selection range inside a shadow tree, or to reliably re-scope the selection to the host node.
 
 ## Syntax
 

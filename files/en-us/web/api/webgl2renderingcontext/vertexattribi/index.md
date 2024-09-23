@@ -26,7 +26,7 @@ vertexAttribI4uiv(index, value)
 - `index`
   - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the position of the vertex attribute to be
     modified.
-- `v0, v1, v2, v3`
+- `v0`, `v1`, `v2`, `v3`
   - : An integer {{jsxref("Number")}} for the vertex attribute value.
 - `value`
   - : A {{jsxref("Uint32Array")}}/{{jsxref("Int32Array")}} or sequences of

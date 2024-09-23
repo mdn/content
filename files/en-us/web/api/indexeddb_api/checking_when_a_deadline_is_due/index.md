@@ -35,7 +35,7 @@ function addData(e) {
   e.preventDefault();
 
   if (!title.value || !hours.value || !minutes.value || !day.value || !month.value || !year.value) {
-    note.innerHTML += '<li>Data not submitted — form incomplete.</li>';
+    note.appendChild(document.createElement("li")).textContent = "Data not submitted — form incomplete.";
     return;
   }
 ```
@@ -61,11 +61,13 @@ In this segment, we check to see if the form fields have all been filled in. If 
 
     // report on the success of opening the transaction
     transaction.oncomplete = (event) => {
-      note.innerHTML += '<li>Transaction opened for task addition.</li>';
+      note.appendChild(document.createElement("li")).textContent =
+        "Transaction opened for task addition.";
     };
 
     transaction.onerror = (event) => {
-      note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
+      note.appendChild(document.createElement("li")).textContent =
+        "Transaction not opened due to error. Duplicate items not allowed.";
     };
 
     // create an object store on the transaction
@@ -77,18 +79,19 @@ In this segment, we check to see if the form fields have all been filled in. If 
 
 In this section we create an object called `newItem` that stores the data in the format required to insert it into the database. The next few lines open the database transaction and provide messages to notify the user if this was successful or failed. Then an `objectStore` is created into which the new item is added. The `notified` property of the data object indicates that the to-do list item's deadline has not yet come up and been notified - more on this later!
 
-> **Note:** The `db` variable stores a reference to the IndexedDB database instance; we can then use various properties of this variable to manipulate the data.
+> [!NOTE]
+> The `db` variable stores a reference to the IndexedDB database instance; we can then use various properties of this variable to manipulate the data.
 
 ```js
     request.onsuccess = (event) => {
 
-      note.innerHTML += '<li>New item added to database.</li>';
+      note.appendChild(document.createElement("li")).textContent = "New item added to database.";
 
-      title.value = '';
+      title.value = "";
       hours.value = null;
       minutes.value = null;
-      day.value = '01';
-      month.value = 'January';
+      day.value = "01";
+      month.value = "January";
       year.value = 2020;
     };
   }

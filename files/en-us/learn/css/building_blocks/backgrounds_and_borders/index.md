@@ -112,7 +112,8 @@ Try the following.
 
 The {{cssxref("background-position")}} property allows you to choose the position in which the background image appears on the box it is applied to. This uses a coordinate system in which the top-left-hand corner of the box is `(0,0)`, and the box is positioned along the horizontal (`x`) and vertical (`y`) axes.
 
-> **Note:** The default `background-position` value is `(0,0)`.
+> [!NOTE]
+> The default `background-position` value is `(0,0)`.
 
 The most common `background-position` values take two individual values — a horizontal value followed by a vertical value.
 
@@ -178,7 +179,8 @@ It is also possible to have multiple background images — you specify multiple 
 
 When you do this you may end up with background images overlapping each other. The backgrounds will layer with the last listed background image at the bottom of the stack, and each previous image stacking on top of the one that follows it in the code.
 
-> **Note:** Gradients can be happily mixed with regular background images.
+> [!NOTE]
+> Gradients can be happily mixed with regular background images.
 
 The other `background-*` properties can also have comma-separated values in the same way as `background-image`:
 
@@ -268,7 +270,8 @@ There are longhand properities for width, style, and color for each of the four 
 }
 ```
 
-> **Note:** These top, right, bottom, and left border properties also have mapped [_logical_ border properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values#properties) that relate to the writing mode of the document (e.g. left-to-right or right-to-left text, or top-to-bottom). We'll be exploring these in the next lesson, which covers [handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
+> [!NOTE]
+> These top, right, bottom, and left border properties also have mapped [_logical_ border properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values#properties) that relate to the writing mode of the document (e.g. left-to-right or right-to-left text, or top-to-bottom). We'll be exploring these in the next lesson, which covers [handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
 
 There are a variety of styles that you can use for borders. In the example below, we have used two different border styles for the box and two different border styles for the heading. Play with the border style, width, and color to see how borders work.
 
@@ -294,7 +297,8 @@ Or to make the top right corner have a horizontal radius of `1em`, and a vertica
 }
 ```
 
-> **Note:** Like with the border properties above, these border-radius properties also have mapped [_logical_ border-radius properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values#properties).
+> [!NOTE]
+> Like with the border properties above, these border-radius properties also have mapped [_logical_ border-radius properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values#properties).
 
 We have set all four corners in the example below and then changed the values for the top right corner to make it different. You can play with the values to change the corners. Take a look at the property page for {{cssxref("border-radius")}} to see the available syntax options. The [border-radius generator](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator) can be used to output rounded corner values for you.
 

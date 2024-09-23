@@ -4,6 +4,8 @@ slug: Learn/Forms/How_to_structure_a_web_form/Example
 page-type: learn-module-chapter
 ---
 
+{{LearnSidebar}}
+
 This the example for a basic payment form for the article [How to structure an HTML form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form).
 
 ## A payment form
@@ -168,18 +170,11 @@ button {
 }
 
 label {
-  position: relative;
   display: inline-block;
 }
 
 p label {
   width: 100%;
-}
-
-label em {
-  position: absolute;
-  right: 5px;
-  top: 20px;
 }
 ```
 

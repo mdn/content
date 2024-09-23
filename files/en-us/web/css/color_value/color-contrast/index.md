@@ -49,4 +49,4 @@ Functional notation: `color-contrast(color vs color-list)`
 - [`prefers-contrast`](/en-US/docs/Web/CSS/@media/prefers-contrast) and [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) {{cssxref("@media")}} features
 - [`contrast()`](/en-US/docs/Web/CSS/filter-function/contrast)
 - [WCAG: color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)
-- {{cssxref('--*', 'CSS custom properties')}} and {{cssxref("var")}}
+- [CSS custom properties](/en-US/docs/Web/CSS/--*) and {{cssxref("var")}}

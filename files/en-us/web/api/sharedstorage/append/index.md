@@ -25,7 +25,8 @@ append(key, value)
 - `value`
   - : A string that you want to append to the existing value of the key-value pair.
 
-> **Note:** If the specified `key` isn't found in the shared storage, the `append()` operation is equivalent to {{domxref("SharedStorage.set", "set()")}}, that is, a new key-value pair with the specified `key` is added to the shared storage.
+> [!NOTE]
+> If the specified `key` isn't found in the shared storage, the `append()` operation is equivalent to {{domxref("SharedStorage.set", "set()")}}, that is, a new key-value pair with the specified `key` is added to the shared storage.
 
 ### Return value
 
@@ -39,7 +40,8 @@ A {{jsxref("Promise")}} that fulfills with `undefined`.
   - The calling site does not have the Shared Storage API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment).
 - In the case of {{domxref("WorkletSharedStorage")}}, the `Promise` rejects with a {{jsxref("TypeError")}} if the worklet module has not been added with {{domxref("Worklet.addModule", "SharedStorageWorklet.addModule()")}}.
 
-> **Note:** In the case of {{domxref("WindowSharedStorage")}}, if the `append()` operation doesn't successfully write to the database for a reason other than shared storage not being available, no error is thrown — the operation still fulfills with `undefined`.
+> [!NOTE]
+> In the case of {{domxref("WindowSharedStorage")}}, if the `append()` operation doesn't successfully write to the database for a reason other than shared storage not being available, no error is thrown — the operation still fulfills with `undefined`.
 
 ## Examples
 

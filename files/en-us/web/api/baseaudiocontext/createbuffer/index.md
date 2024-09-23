@@ -24,6 +24,8 @@ reference page.
 > then play via an {{ domxref("AudioBufferSourceNode") }}. For simple use cases
 > like playing an MP3, `decodeAudioData()` is what you should be using.
 
+For an in-depth explanation of how audio buffers work, including what the parameters do, read [Audio buffers: frames, samples and channels](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_buffers_frames_samples_and_channels) from our Basic concepts guide.
+
 ## Syntax
 
 ```js-nolint
@@ -31,9 +33,6 @@ createBuffer(numOfChannels, length, sampleRate)
 ```
 
 ### Parameters
-
-> **Note:** For an in-depth explanation of how audio buffers work, and
-> what these parameters mean, read [Audio buffers: frames, samples and channels](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_buffers.3a_frames.2c_samples_and_channels) from our Basic concepts guide.
 
 - `numOfChannels`
   - : An integer representing the number of channels this buffer should have. The default
@@ -80,11 +79,12 @@ const buffer = audioCtx.createBuffer(1, 22050, 22050);
 ```
 
 If you use this call, you will get a mono buffer (one channel), that, when played back
-on an `AudioContext` running at 44100Hz, will be automatically \*resampled\* to
+on an `AudioContext` running at 44100Hz, will be automatically _resampled_ to
 44100Hz (and therefore yield 44100 frames), and last for 1.0 second: 44100 frames /
 44100Hz = 1 second.
 
-> **Note:** audio resampling is very similar to image resizing: say you've
+> [!NOTE]
+> Audio resampling is very similar to image resizing: say you've
 > got a 16 x 16 image, but you want it to fill a 32x32 area: you resize (resample) it.
 > the result has less quality (it can be blurry or edgy, depending on the resizing
 > algorithm), but it works, and the resized image takes up less space. Resampled audio
@@ -96,7 +96,7 @@ create a three-second buffer, fill it with white noise, and then play it via an 
 You can also [run the code live](https://mdn.github.io/webaudio-examples/audio-buffer/), or [view the source](https://github.com/mdn/webaudio-examples/blob/main/audio-buffer/index.html).
 
 ```js
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new AudioContext();
 
 // Create an empty three-second stereo buffer at the sample rate of the AudioContext
 const myArrayBuffer = audioCtx.createBuffer(

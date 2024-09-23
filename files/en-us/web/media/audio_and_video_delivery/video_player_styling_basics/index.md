@@ -54,7 +54,8 @@ As mentioned above, a `data-state` attribute is used in various places for styli
 
 The resultant video player style used here is rather basic — this is intentional, as the purpose is to show how such a video player could be styled and be made responsive.
 
-> **Note:** in some cases some basic CSS is omitted from the code examples here as its use is either obvious or not specifically relevant to styling the video player.
+> [!NOTE]
+> In some cases some basic CSS is omitted from the code examples here as its use is either obvious or not specifically relevant to styling the video player.
 
 ### Basic styling
 

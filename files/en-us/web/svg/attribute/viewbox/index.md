@@ -263,7 +263,8 @@ The code snippet below includes three {{SVGElement("svg")}}s with different `vie
 
 The user units of `r="4"` are resolved against the `viewBox` sizes, creating dramatically different circle sizes. The exact effect of the `viewbox` attribute is influenced by the {{ SVGAttr("preserveAspectRatio") }} attribute.
 
-> **Note:** Values for `width` or `height` lower or equal to `0` disable rendering of the element.
+> [!NOTE]
+> Values for `width` or `height` lower or equal to `0` disable rendering of the element.
 
 ## Specifications
 

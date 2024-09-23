@@ -15,7 +15,8 @@ Object-oriented access to the attributes of the `<glyph>` element via the SVG DO
 
 {{InheritanceDiagram}}
 
-> **Warning:** This interface was removed in the SVG 2 specification.
+> [!WARNING]
+> This interface was removed in the SVG 2 specification.
 
 ## Instance properties
 

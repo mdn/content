@@ -31,7 +31,7 @@ _The `PictureInPictureWindow` interface doesn't inherit any methods._
 _The `PictureInPictureWindow` interface doesn't inherit any events._
 
 - {{domxref("PictureInPictureWindow.resize_event", "resize")}}
-  - : Sent to a {{DOMxRef("PictureInPictureWindow")}} when the floating video window is resized.
+  - : Sent to a `PictureInPictureWindow` when the floating video window is resized.
 
 ## Examples
 
@@ -67,4 +67,4 @@ button.onclick = () => {
 
 ## See also
 
-- {{DOMxRef("Picture-in-Picture_API", "Picture-in-Picture API")}}
+- [Picture-in-Picture API](/en-US/docs/Web/API/Picture-in-Picture_API)

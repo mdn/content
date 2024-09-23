@@ -8,7 +8,8 @@ browser-compat: api.StorageAccessHandle.getDirectory
 
 {{APIRef("Storage Access API")}}
 
-> **Note:** See {{domxref("StorageManager.getDirectory()")}} to understand usage.
+> [!NOTE]
+> See {{domxref("StorageManager.getDirectory()")}} to understand usage.
 
 ## Syntax
 
@@ -28,7 +29,8 @@ A {{jsxref("Promise")}} that fulfills with an unpartitioned {{domxref("FileSyste
 
 - `SecurityError` {{domxref("DomException")}}
   - : Thrown if access was not granted.
-- See {{domxref("StorageManager.getDirectory()")}}
+
+See {{domxref("StorageManager.getDirectory()")}}
 
 ## Examples
 
@@ -44,7 +46,8 @@ document.requestStorageAccess({ getDirectory: true }).then(
 );
 ```
 
-> **Note:** See [Using the Storage Access API](/en-US/docs/Web/API/Storage_Access_API/Using) for a more complete example.
+> [!NOTE]
+> See [Using the Storage Access API](/en-US/docs/Web/API/Storage_Access_API/Using) for a more complete example.
 
 ## Specifications
 

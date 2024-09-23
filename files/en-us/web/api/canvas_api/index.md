@@ -52,7 +52,8 @@ ctx.fillRect(10, 10, 150, 100);
 - {{domxref("Path2D")}} {{experimental_inline}}
 - {{domxref("ImageBitmapRenderingContext")}} {{experimental_inline}}
 
-> **Note:** The interfaces related to the `WebGLRenderingContext` are referenced under [WebGL](/en-US/docs/Web/API/WebGL_API).
+> [!NOTE]
+> The interfaces related to the `WebGLRenderingContext` are referenced under [WebGL](/en-US/docs/Web/API/WebGL_API).
 
 > **Note:** {{domxref("OffscreenCanvas")}} is also available in web workers.
 
@@ -73,21 +74,22 @@ ctx.fillRect(10, 10, 150, 100);
 
 The Canvas API is extremely powerful, but not always simple to use. The libraries listed below can make the creation of canvas-based projects faster and easier.
 
-- [EaselJS](https://www.createjs.com/easeljs) is an open-source canvas library that makes creating games, generative art, and other highly graphical experiences easy.
-- [Fabric.js](http://fabricjs.com) is an open-source canvas library with SVG parsing capabilities.
+- [EaselJS](https://createjs.com/easeljs) is an open-source canvas library that makes creating games, generative art, and other highly graphical experiences easy.
+- [Fabric.js](http://fabricjs.com/) is an open-source canvas library with SVG parsing capabilities.
 - [heatmap.js](https://www.patrick-wied.at/static/heatmapjs/) is an open-source library for creating canvas-based data heat maps.
 - [JavaScript InfoVis Toolkit](https://philogb.github.io/jit/) creates interactive data visualizations.
 - [Konva.js](https://konvajs.org/) is a 2D canvas library for desktop and mobile applications.
 - [p5.js](https://p5js.org/) has a full set of canvas drawing functionality for artists, designers, educators, and beginners.
 - [Paper.js](http://paperjs.org/) is an open-source vector graphics scripting framework that runs on top of the HTML Canvas.
 - [Phaser](https://phaser.io/) is a fast, free and fun open source framework for Canvas and WebGL powered browser games.
-- [Pts.js](https://ptsjs.org) is a library for creative coding and visualization in canvas and SVG.
+- [Pts.js](https://ptsjs.org/) is a library for creative coding and visualization in canvas and SVG.
 - [Rekapi](https://github.com/jeremyckahn/rekapi) is an animation key-framing API for Canvas.
 - [Scrawl-canvas](https://scrawl.rikweb.org.uk/) is an open-source JavaScript library for creating and manipulating 2D canvas elements.
-- The [ZIM](https://zimjs.com) framework provides conveniences, components, and controls for coding creativity on the canvas — includes accessibility and hundreds of colorful tutorials.
+- The [ZIM](https://zimjs.com/) framework provides conveniences, components, and controls for coding creativity on the canvas — includes accessibility and hundreds of colorful tutorials.
 - [Sprig](https://github.com/hackclub/sprig) is a beginner-friendly, open-source, tile-based game development library that uses Canvas.
 
-> **Note:** See the [WebGL API](/en-US/docs/Web/API/WebGL_API) for 2D and 3D libraries that use WebGL.
+> [!NOTE]
+> See the [WebGL API](/en-US/docs/Web/API/WebGL_API) for 2D and 3D libraries that use WebGL.
 
 ## Specifications
 

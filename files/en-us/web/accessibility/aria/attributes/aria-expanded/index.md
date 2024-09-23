@@ -56,11 +56,12 @@ By default, some roles are hidden or collapsed and other roles are open or expan
 </p>
 ```
 
-> **Note:** The presence of the `aria-expanded` attribute indicates control. Avoid including it on elements that do not control the expanded state of other elements.
+> [!NOTE]
+> The presence of the `aria-expanded` attribute indicates control. Avoid including it on elements that do not control the expanded state of other elements.
 
 ### Treeitems
 
-Each element with role [`treeitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role) that serves as a parent node has `aria-expanded="false"` when the node is in a closed state and `aria-expanded="true"`when the node is in an open state. End nodes, nodes with no descendant nodes, should not have the `aria-expanded` attribute because, if they were to have it, they would be incorrectly described to assistive technologies as parent nodes.
+Each element with role [`treeitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role) that serves as a parent node has `aria-expanded="false"` when the node is in a closed state and `aria-expanded="true"` when the node is in an open state. End nodes, nodes with no descendant nodes, should not have the `aria-expanded` attribute because, if they were to have it, they would be incorrectly described to assistive technologies as parent nodes.
 
 ### Rows
 

@@ -35,28 +35,32 @@ You've already met some form elements, including {{HTMLelement('form')}}, {{HTML
 - The common input types {{HTMLelement('input/button', 'button')}}, {{HTMLelement('input/checkbox', 'checkbox')}}, {{HTMLelement('input/file', 'file')}}, {{HTMLelement('input/hidden', 'hidden')}}, {{HTMLelement('input/image', 'image')}}, {{HTMLelement('input/password', 'password')}}, {{HTMLelement('input/radio', 'radio')}}, {{HTMLelement('input/reset', 'reset')}}, {{HTMLelement('input/submit', 'submit')}}, and {{HTMLelement('input/text', 'text')}}.
 - Some of the attributes that are common to all form controls.
 
-> **Note:** We cover additional, more powerful form controls in the next two articles. If you want a more advanced reference, you should consult our [HTML forms element reference](/en-US/docs/Web/HTML/Element#forms), and in particular our extensive [`<input>` types](/en-US/docs/Web/HTML/Element/input) reference.
+> [!NOTE]
+> We cover additional, more powerful form controls in the next two articles. If you want a more advanced reference, you should consult our [HTML forms element reference](/en-US/docs/Web/HTML/Element#forms), and in particular our extensive [`<input>` types](/en-US/docs/Web/HTML/Element/input) reference.
 
 ## Text input fields
 
 Text {{htmlelement("input")}} fields are the most basic form widgets. They are a very convenient way to let the user enter any kind of data, and we've already seen a few simple examples.
 
-> **Note:** HTML form text fields are simple plain text input controls. This means that you cannot use them to perform rich text editing (bold, italic, etc.). All rich text editors you'll encounter are custom widgets created with HTML, CSS, and JavaScript.
+> [!NOTE]
+> HTML form text fields are simple plain text input controls. This means that you cannot use them to perform rich text editing (bold, italic, etc.). All rich text editors you'll encounter are custom widgets created with HTML, CSS, and JavaScript.
 
 All basic text controls share some common behaviors:
 
 - They can be marked as [`readonly`](/en-US/docs/Web/HTML/Element/input#readonly) (the user cannot modify the input value but it is still sent with the rest of the form data) or [`disabled`](/en-US/docs/Web/HTML/Element/input#disabled) (the input value can't be modified and is never sent with the rest of the form data).
 - They can have a [`placeholder`](/en-US/docs/Web/HTML/Element/input#placeholder); this is the text that appears inside the text input box that should be used to briefly describe the purpose of the box.
 - They can be constrained in [`size`](/en-US/docs/Web/HTML/Attributes/size) (the physical size of the box) and [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength) (the maximum number of characters that can be entered into the box).
-- They can benefit from spell checking (using the [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck) attribute), if the browser supports it.
+- They can benefit from spell-checking (using the [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck) attribute).
 
-> **Note:** The {{htmlelement("input")}} element is unique amongst HTML elements because it can take many forms depending on its [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute value. It is used for creating most types of form widgets including single line text fields, time and date controls, controls without text input like checkboxes, radio buttons, and color pickers, and buttons.
+> [!NOTE]
+> The {{htmlelement("input")}} element is unique amongst HTML elements because it can take many forms depending on its [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute value. It is used for creating most types of form widgets including single line text fields, time and date controls, controls without text input like checkboxes, radio buttons, and color pickers, and buttons.
 
 ### Single line text fields
 
 A single line text field is created using an {{HTMLElement("input")}} element whose [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute value is set to `text`, or by omitting the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute altogether (`text` is the default value). The value `text` for this attribute is also the fallback value if the value you specify for the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute is unknown by the browser (for example if you specify `type="color"` and the browser doesn't support native color pickers).
 
-> **Note:** You can find examples of all the single line text field types on GitHub at [single-line-text-fields.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/single-line-text-fields.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/single-line-text-fields.html)).
+> [!NOTE]
+> You can find examples of all the single line text field types on GitHub at [single-line-text-fields.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/single-line-text-fields.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/single-line-text-fields.html)).
 
 Here is a basic single line text field example:
 
@@ -72,7 +76,8 @@ The screenshot below shows a text input in default, focused, and disabled states
 
 The screenshots used in this document were taken in the Chrome browser on macOS. There may be minor variations in these fields/buttons across different browsers, but the basic highlighting technique remains similar.
 
-> **Note:** We discuss values for the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute that enforce specific validation constraints including color, email, and url input types, in the next article, [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types).
+> [!NOTE]
+> We discuss values for the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute that enforce specific validation constraints including color, email, and url input types, in the next article, [The HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types).
 
 #### Password field
 
@@ -110,7 +115,8 @@ Checkable items are controls whose state you can change by clicking on them or t
 
 It's worth noting that these widgets do not behave exactly like other form widgets. For most form widgets, once the form is submitted all widgets that have a [`name`](/en-US/docs/Web/HTML/Element/input#name) attribute are sent, even if no value has been filled out. In the case of checkable items, their values are sent only if they are checked. If they are not checked, nothing is sent, not even their name. If they are checked but have no value, the name is sent with a value of _on._
 
-> **Note:** You can find the examples from this section on GitHub as [checkable-items.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/checkable-items.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/checkable-items.html)).
+> [!NOTE]
+> You can find the examples from this section on GitHub as [checkable-items.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/checkable-items.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/checkable-items.html)).
 
 For maximum usability/accessibility, you are advised to surround each list of related items in a {{htmlelement("fieldset")}}, with a {{htmlelement("legend")}} providing an overall description of the list. Each individual pair of {{htmlelement("label")}}/{{htmlelement("input")}} elements should be contained in its own list item (or similar). The associated {{htmlelement('label')}} is generally placed immediately before or after the radio button or checkbox, with the instructions for the group of radio button or checkboxes generally being the content of the {{htmlelement("legend")}}. See the examples linked above for structural examples.
 
@@ -153,7 +159,8 @@ The following screenshot shows checkboxes in the default, focused, and disabled 
 
 ![Default, focused and disabled Checkboxes in chrome 115 on macOS](checkboxes.png)
 
-> **Note:** Any checkboxes and radio buttons with the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#checked) attribute on load match the {{cssxref(':default')}} pseudo-class, even if they are no longer checked. Any that are currently checked match the {{cssxref(':checked')}} pseudo-class.
+> [!NOTE]
+> Any checkboxes and radio buttons with the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#checked) attribute on load match the {{cssxref(':default')}} pseudo-class, even if they are no longer checked. Any that are currently checked match the {{cssxref(':checked')}} pseudo-class.
 
 Due to the on-off nature of checkboxes, the checkbox is considered a toggle button, with many developers and designers expanding on the default checkbox styling to create buttons that look like toggle switches. You can [see an example in action here](https://mdn.github.io/learning-area/html/forms/toggle-switch-example/) (also see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/toggle-switch-example/index.html)).
 
@@ -244,9 +251,11 @@ input {
 
 {{ EmbedLiveSample('Actual_buttons', '500', '250') }}
 
-> **Note:** The `image` input type also renders as a button. We'll cover that later too.
+> [!NOTE]
+> The `image` input type also renders as a button. We'll cover that later too.
 
-> **Note:** You can find the examples from this section on GitHub as [button-examples.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/button-examples.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/button-examples.html)).
+> [!NOTE]
+> You can find the examples from this section on GitHub as [button-examples.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/button-examples.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/button-examples.html)).
 
 Below you can find examples of each button `<input>` type, along with the equivalent `<button>` type.
 
@@ -352,9 +361,8 @@ Many of the elements used to define form controls have some of their own specifi
       </td>
       <td>false</td>
       <td>
-        This Boolean attribute lets you specify that the element should
-        automatically have input focus when the page loads. Only one
-        form-associated element in a document can have this attribute specified.
+        This Boolean attribute lets you specify that the element should automatically have input focus when the page loads.
+        Only one form-associated element in a document can have this attribute specified.
       </td>
     </tr>
     <tr>
@@ -365,26 +373,20 @@ Many of the elements used to define form controls have some of their own specifi
       </td>
       <td>false</td>
       <td>
-        This Boolean attribute indicates that the user cannot interact with the
-        element. If this attribute is not specified, the element inherits its
-        setting from the containing element, for example,
-        {{HTMLElement("fieldset")}}; if there is no containing element
-        with the <code>disabled</code> attribute set, then the element is
-        enabled.
+        This Boolean attribute indicates that the user cannot interact with the element.
+        If this attribute is not specified, the element inherits its setting from the containing element, for example, {{HTMLElement("fieldset")}};
+        if there is no containing element with the <code>disabled</code> attribute set, then the element is enabled.
       </td>
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/form">form</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Element/input#form">form</a></code>
       </td>
       <td></td>
       <td>
-        The <code>&#x3C;form></code> element that the widget is associated with,
-        used if it is not nested within that form. The value of the attribute
-        must be the <code>id</code> attribute of a
-        {{HTMLElement("form")}} element in the same document. This lets
-        you associate a form control with a form it is outside of, even if it is
-        inside a different form element.
+        The <code>&#x3C;form></code> element that the widget is associated with, used if it is not nested within that form.
+        The value of the attribute must be the <code>id</code> attribute of a {{HTMLElement("form")}} element in the same document.
+        This lets you associate a form control with a form it is outside of, even if it is inside a different form element.
       </td>
     </tr>
     <tr>

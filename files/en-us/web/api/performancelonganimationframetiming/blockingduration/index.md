@@ -24,7 +24,8 @@ There are three options to consider here in how the script might end up being pr
 2. Alternatively, the browser could run the rest of the script first, and then render the frame.
 3. We could also decide **not** to yield and let the browser process the entire script as a single task.
 
-> **Note:** The browser generally tries to prioritize important tasks, such as user interactions and rendering new frames, over less important tasks it might have queued. The browser _tries_ to render a new frame every 16ms.
+> [!NOTE]
+> The browser generally tries to prioritize important tasks, such as user interactions and rendering new frames, over less important tasks it might have queued. The browser _tries_ to render a new frame every 16ms.
 
 We mentioned earlier that the total processing time for the script is 145ms. Assuming the time for rendering the UI update is 10ms, the timings for the LoAFs in each of the three options are as follows:
 

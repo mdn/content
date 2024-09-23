@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.WorkerLocation.pathname
 ---
 
-{{ApiRef("WorkerLocation")}}
+{{ApiRef("WorkerLocation")}}{{AvailableInWorkers("worker")}}
 
 The **`pathname`** property of a {{domxref("WorkerLocation")}} object returns the {{domxref("URL.pathname", "pathname")}} part of the worker's location.
 

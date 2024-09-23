@@ -314,7 +314,8 @@ function Form(props) {
 export default Form;
 ```
 
-> **Note:** You'll notice that you are able to submit empty tasks by just pressing the `Add` button without entering a task name. Can you think of a way to prevent this? As a hint, you probably need to add some kind of check into the `handleSubmit()` function.
+> [!NOTE]
+> You'll notice that you are able to submit empty tasks by just pressing the `Add` button without entering a task name. Can you think of a way to prevent this? As a hint, you probably need to add some kind of check into the `handleSubmit()` function.
 
 ## Putting it all together: Adding a task
 
@@ -353,7 +354,7 @@ We've now got a `setTasks` hook that we can use in our `addTask()` function to u
 
 First of all, we need to put `name` into an object that has the same structure as our existing tasks. Inside of the `addTask()` function, we will make a `newTask` object to add to the array.
 
-We then need to make a new array with this new task added to it and then update the state of the tasks data to this new state. To do this, we can use spread syntax to [copy the existing array](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#copy_an_array), and add our object at the end. We then pass this array into `setTasks()` to update the state.
+We then need to make a new array with this new task added to it and then update the state of the tasks data to this new state. To do this, we can use spread syntax to [copy the existing array](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#copying_an_array), and add our object at the end. We then pass this array into `setTasks()` to update the state.
 
 Putting that all together, your `addTask()` function should read like so:
 
@@ -376,7 +377,8 @@ Make sure you're in the root directory of your application and run the following
 npm install nanoid
 ```
 
-> **Note:** If you're using yarn, you'll need the following instead: `yarn add nanoid`.
+> [!NOTE]
+> If you're using yarn, you'll need the following instead: `yarn add nanoid`.
 
 Now we can use `nanoid` to create unique IDs for our new tasks. First of all, import it by including the following line at the top of `App.jsx`:
 

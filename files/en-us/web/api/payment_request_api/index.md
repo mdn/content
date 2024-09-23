@@ -17,7 +17,8 @@ To request a payment, a web page creates a {{domxref("PaymentRequest")}} object 
 
 You can find a complete guide in [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API).
 
-> **Note:** The API is available inside cross-origin {{htmlelement("iframe")}} elements only if they have had the [`allowpaymentrequest`](/en-US/docs/Web/HTML/Element/iframe#allowpaymentrequest) attribute set on them.
+> [!NOTE]
+> The API is available inside cross-origin {{htmlelement("iframe")}} elements only if they have had the [`allowpaymentrequest`](/en-US/docs/Web/HTML/Element/iframe#allowpaymentrequest) attribute set on them.
 
 ## Interfaces
 

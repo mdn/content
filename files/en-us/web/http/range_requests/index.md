@@ -90,7 +90,7 @@ Content-Length: 282
 Content-Type: text/html
 Content-Range: bytes 0-50/1270
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
 <head>
     <title>Example Do

@@ -23,7 +23,8 @@ property, are a crucial component in designing responsive websites, as they
 can be used together to make pages that use appropriate images for the rendering
 situation.
 
-> **Note:** If the [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute uses width descriptors, the `sizes` attribute must also be present, or the `srcset` itself will be ignored.
+> [!NOTE]
+> If the [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute uses width descriptors, the `sizes` attribute must also be present, or the `srcset` itself will be ignored.
 
 ## Value
 
@@ -132,11 +133,13 @@ the URL selected by the browser from the `srcset`.
 
 ```js
 window.addEventListener("load", () => {
-  let box = document.querySelector(".box");
-  let image = box.querySelector("img");
+  const box = document.querySelector(".box");
+  const image = box.querySelector("img");
 
-  let newElem = document.createElement("p");
-  newElem.innerHTML = `Image: <code>${image.currentSrc}</code>`;
+  const newElem = document.createElement("p");
+  newElem.textContent = "Image: ";
+  newElem.appendChild(document.createElement("code")).textContent =
+    image.currentSrc;
   box.appendChild(newElem);
 });
 ```

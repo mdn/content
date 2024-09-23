@@ -29,7 +29,7 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("BackgroundFetchRegistrat
 
 ## Examples
 
-The following examples shows how to use `get()` to retrieve a {{domxref("BackgroundFetchRegistration")}}. With an active {{domxref('ServiceWorker', 'service worker')}}, use the {{domxref('ServiceWorkerRegistration.backgroundFetch')}} to access the `BackgroundFetchManager` object and call its `get()` method.
+The following examples shows how to use `get()` to retrieve a {{domxref("BackgroundFetchRegistration")}}. With an active [service worker](/en-US/docs/Web/API/ServiceWorker), use the {{domxref('ServiceWorkerRegistration.backgroundFetch')}} to access the `BackgroundFetchManager` object and call its `get()` method.
 
 ```js
 navigator.serviceWorker.ready.then(async (swReg) => {

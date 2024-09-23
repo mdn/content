@@ -33,7 +33,7 @@ You can use different units for each value in your expression, if you wish. You 
 
 {{CSSSyntax}}
 
-## Accessibility concerns
+## Accessibility
 
 When using `min()` to set a maximum font size, ensure that the font can still be scaled at least 200% for readability (without assistive technology like a zoom function).
 

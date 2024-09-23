@@ -20,10 +20,10 @@ blendFunc(sfactor, dfactor)
 ### Parameters
 
 - `sfactor`
-  - : A {{domxref("WebGL_API.Types")}} specifying a multiplier for the source blending factors. The
+  - : A {{domxref("WebGL_API.Types", "GLenum")}} specifying a multiplier for the source blending factors. The
     default value is `gl.ONE`. For possible values, see below.
 - `dfactor`
-  - : A {{domxref("WebGL_API.Types")}} specifying a multiplier for the destination blending
+  - : A {{domxref("WebGL_API.Types", "GLenum")}} specifying a multiplier for the destination blending
     factors. The default value is `gl.ZERO`. For possible values, see below.
 
 ### Return value

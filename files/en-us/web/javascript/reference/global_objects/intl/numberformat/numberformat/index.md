@@ -205,7 +205,8 @@ The above properties fall into two groups: `minimumIntegerDigits`, `minimumFract
 
 A new `Intl.NumberFormat` object.
 
-> **Note:** The text below describes behavior that is marked by the specification as "optional". It may not work in all environments. Check the [browser compatibility table](#browser_compatibility).
+> [!NOTE]
+> The text below describes behavior that is marked by the specification as "optional". It may not work in all environments. Check the [browser compatibility table](#browser_compatibility).
 
 Normally, `Intl.NumberFormat()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new), and a new `Intl.NumberFormat` instance is returned in both cases. However, if the [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) value is an object that is [`instanceof`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) `Intl.NumberFormat` (doesn't necessarily mean it's created via `new Intl.NumberFormat`; just that it has `Intl.NumberFormat.prototype` in its prototype chain), then the value of `this` is returned instead, with the newly created `Intl.NumberFormat` object hidden in a `[Symbol(IntlLegacyConstructedSymbol)]` property (a unique symbol that's reused between instances).
 
@@ -384,7 +385,8 @@ new Intl.NumberFormat("bn", {
 
 You can specify the minimum or maximum number of fractional, integer or significant digits to display when formatting a number.
 
-> **Note:** If both significant and fractional digit limits are specified, then the actual formatting depends on the [`roundingPriority`](#roundingpriority).
+> [!NOTE]
+> If both significant and fractional digit limits are specified, then the actual formatting depends on the [`roundingPriority`](#roundingpriority).
 
 #### Using FractionDigits and IntegerDigits
 
@@ -430,7 +432,8 @@ console.log(
 // "4.331"
 ```
 
-> **Warning:** Watch out for default values as they may affect formatting even if not specified in your code.
+> [!WARNING]
+> Watch out for default values as they may affect formatting even if not specified in your code.
 > The default maximum digit value is `3` for plain values, `2` for currency, and may have different values for other predefined types.
 
 The formatted value above is rounded to 3 digits, even though we didn't specify the maximum digits!
@@ -512,7 +515,8 @@ console.log(
 // "54.33145000"
 ```
 
-> **Warning:** Watch out for default values as they may affect formatting.
+> [!WARNING]
+> Watch out for default values as they may affect formatting.
 > If only one `SignificantDigits` property is used, then its counterpart will automatically be applied with the default value.
 > The default maximum and minimum significant digit values are 20 and 1, respectively.
 
@@ -646,7 +650,8 @@ console.log(`morePrecision - ${bothMore.format(1)}`);
 
 The reason for this is that only the "maximum precision" values are used for the calculation, and the default value of `maximumSignificantDigits` is much higher than `maximumFractionDigits`.
 
-> **Note:** The working group have proposed a modification of the algorithm where the formatter should evaluate the result of using the specified fractional and significant digits independently (taking account of both minimum and maximum values).
+> [!NOTE]
+> The working group have proposed a modification of the algorithm where the formatter should evaluate the result of using the specified fractional and significant digits independently (taking account of both minimum and maximum values).
 > It will then select the option that displays more fractional digits if `morePrecision` is set, and fewer if `lessPrecision` is set.
 > This will result in more intuitive behavior for this case.
 

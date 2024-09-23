@@ -15,7 +15,8 @@ The **`scroll-timeline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US
 
 The name is then referenced in an [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline) declaration to indicate the container's element that is used to drive the progress of the animation through the scrolling action.
 
-> **Note:** If the scroller does not overflow its container in the axis dimension or if the overflow is hidden or clipped, no timeline will be created.
+> [!NOTE]
+> If the scroller does not overflow its container in the axis dimension or if the overflow is hidden or clipped, no timeline will be created.
 
 ## Constituent properties
 

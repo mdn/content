@@ -552,6 +552,10 @@
       "inh": "CSSRule",
       "impl": []
     },
+    "CSSFunctionRule": {
+      "inh": "CSSGroupingRule",
+      "impl": []
+    },
     "CSSGroupingRule": {
       "inh": "CSSRule",
       "impl": []
@@ -648,8 +652,8 @@
       "inh": "CSSRule",
       "impl": []
     },
-    "CSSNestRule": {
-      "inh": "CSSGroupingRule",
+    "CSSNestedDeclarations": {
+      "inh": "CSSRule",
       "impl": []
     },
     "CSSNumericArray": {
@@ -858,6 +862,10 @@
     },
     "DelayNode": {
       "inh": "AudioNode",
+      "impl": []
+    },
+    "DelegatedInkTrailPresenter": {
+      "inh": "",
       "impl": []
     },
     "DeprecationReportBody": {
@@ -1448,6 +1456,18 @@
       "inh": "Sensor",
       "impl": []
     },
+    "HandwritingDrawing": {
+      "inh": "",
+      "impl": []
+    },
+    "HandwritingRecognizer": {
+      "inh": "",
+      "impl": []
+    },
+    "HandwritingStroke": {
+      "inh": "",
+      "impl": []
+    },
     "HashChangeEvent": {
       "inh": "Event",
       "impl": []
@@ -1892,10 +1912,6 @@
       "inh": "",
       "impl": []
     },
-    "InkPresenter": {
-      "inh": "",
-      "impl": []
-    },
     "InputDeviceCapabilities": {
       "inh": "",
       "impl": []
@@ -2220,10 +2236,6 @@
       "inh": "",
       "impl": []
     },
-    "MLActivation": {
-      "inh": "",
-      "impl": []
-    },
     "MLContext": {
       "inh": "",
       "impl": []
@@ -2246,10 +2258,6 @@
     },
     "MouseEvent": {
       "inh": "UIEvent",
-      "impl": []
-    },
-    "MutationEvent": {
-      "inh": "Event",
       "impl": []
     },
     "MutationObserver": {
@@ -2312,10 +2320,6 @@
       "inh": "",
       "impl": []
     },
-    "NavigatorLogin": {
-      "inh": "",
-      "impl": []
-    },
     "NavigatorManagedData": {
       "inh": "EventTarget",
       "impl": []
@@ -2369,6 +2373,10 @@
       "impl": []
     },
     "NotRestoredReasons": {
+      "inh": "",
+      "impl": []
+    },
+    "Observable": {
       "inh": "",
       "impl": []
     },
@@ -2672,6 +2680,10 @@
       "inh": "",
       "impl": []
     },
+    "PrivateAggregation": {
+      "inh": "",
+      "impl": []
+    },
     "ProcessingInstruction": {
       "inh": "CharacterData",
       "impl": []
@@ -2772,6 +2784,10 @@
       "inh": "",
       "impl": []
     },
+    "RealTimeReporting": {
+      "inh": "",
+      "impl": []
+    },
     "RelativeOrientationSensor": {
       "inh": "OrientationSensor",
       "impl": []
@@ -2861,6 +2877,10 @@
       "impl": []
     },
     "RTCIceCandidate": {
+      "inh": "",
+      "impl": []
+    },
+    "RTCIceCandidatePair": {
       "inh": "",
       "impl": []
     },
@@ -3128,6 +3148,10 @@
       "inh": "",
       "impl": []
     },
+    "StorageAccessHandle": {
+      "inh": "",
+      "impl": []
+    },
     "StorageBucket": {
       "inh": "",
       "impl": []
@@ -3162,6 +3186,10 @@
     },
     "SubmitEvent": {
       "inh": "Event",
+      "impl": []
+    },
+    "Subscriber": {
+      "inh": "",
       "impl": []
     },
     "SubtleCrypto": {
@@ -3824,6 +3852,10 @@
       "inh": "EventTarget",
       "impl": []
     },
+    "Viewport": {
+      "inh": "",
+      "impl": []
+    },
     "ViewTimeline": {
       "inh": "ScrollTimeline",
       "impl": []
@@ -4080,10 +4112,6 @@
       "inh": "Event",
       "impl": []
     },
-    "WindowSharedStorage": {
-      "inh": "SharedStorage",
-      "impl": []
-    },
     "Worker": {
       "inh": "EventTarget",
       "impl": []
@@ -4118,10 +4146,6 @@
     },
     "WorkletGroupEffect": {
       "inh": "",
-      "impl": []
-    },
-    "WorkletSharedStorage": {
-      "inh": "SharedStorage",
       "impl": []
     },
     "WritableStream": {

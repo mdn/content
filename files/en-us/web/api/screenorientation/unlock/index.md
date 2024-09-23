@@ -8,7 +8,7 @@ browser-compat: api.ScreenOrientation.unlock
 
 {{APIRef("Screen Orientation")}}
 
-The **`unlock()`** property of the
+The **`unlock()`** method of the
 {{domxref("ScreenOrientation")}} interface unlocks the orientation of the containing
 document from its default orientation.
 

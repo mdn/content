@@ -78,16 +78,7 @@ _Also implements methods from the interface_ {{domxref("EventTarget")}}.
 
 ## Examples
 
-Basic audio context declaration:
-
 ```js
-const audioContext = new AudioContext();
-```
-
-Cross browser variant:
-
-```js
-const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioContext = new AudioContext();
 
 const oscillatorNode = audioContext.createOscillator();

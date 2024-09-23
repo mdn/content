@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.scheduler
 ---
 
-{{APIRef("Prioritized Task Scheduling API")}}
+{{APIRef("Prioritized Task Scheduling API")}}{{AvailableInWorkers("worker")}}
 
 The **`scheduler`** read-only property of the {{domxref("WorkerGlobalScope")}} interface is the entry point for using the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API).
 

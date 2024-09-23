@@ -52,9 +52,9 @@ Carousels can be created using this tab pattern: A slide picker controls can be 
 - [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
   - : Should be used on the necessary `tab` elements if a multi-selectable `tablist` is used.
 
-### Keyboard interaction
+### Keyboard interactions
 
-See the [`tablist` keyboard interactions](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role#keyboard_interaction) in the [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role) role definition.
+See the [`tablist` keyboard interactions](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role#keyboard_interactions) in the [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role) role definition.
 
 ## Example
 

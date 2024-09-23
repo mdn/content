@@ -41,7 +41,8 @@ setBaseAndExtent(anchorNode, anchorOffset, focusNode, focusOffset)
 
     If `focusNode` is a {{domxref("Text")}} node, the offset refers to the number of characters from the start of the {{domxref("Node.textContent")}} that should be included in the selection.
 
-> **Note:** If the focus position appears before the anchor position in the document, the direction of the selection is reversed — the caret is placed at the beginning of the text rather the end, which matters for any keyboard command that might follow.
+> [!NOTE]
+> If the focus position appears before the anchor position in the document, the direction of the selection is reversed — the caret is placed at the beginning of the text rather the end, which matters for any keyboard command that might follow.
 > For example, <kbd>Shift</kbd> + <kbd>➡︎</kbd> would cause the selection to narrow from the beginning rather than grow at the end.
 
 ### Return value
@@ -90,7 +91,8 @@ We also have a button that when pressed invokes a function that runs the `setBas
 <p><strong>Output</strong>: <span class="output"></span></p>
 ```
 
-> **Note:** There is intentionally no [whitespace](/en-US/docs/Web/API/Document_Object_Model/Whitespace) between the `<p class="one">` and `<p class="two">` start tags and the `<span>` start tags which follow them — to avoid the presence of text nodes that would affect the number of child nodes expected. (Even though those text nodes would be whitespace-only, they would still be additional child nodes; find out more from the [`Node.firstChild` example](/en-US/docs/Web/API/Node/firstChild#example)).
+> [!NOTE]
+> There is intentionally no [whitespace](/en-US/docs/Web/API/Document_Object_Model/Whitespace) between the `<p class="one">` and `<p class="two">` start tags and the `<span>` start tags which follow them — to avoid the presence of text nodes that would affect the number of child nodes expected. (Even though those text nodes would be whitespace-only, they would still be additional child nodes; find out more from the [`Node.firstChild` example](/en-US/docs/Web/API/Node/firstChild#example)).
 
 The JavaScript looks like so:
 
@@ -123,7 +125,8 @@ Play with the live example below, setting different offset values to see how thi
 
 {{ EmbedLiveSample('Examples', '100%', 370) }}
 
-> **Note:** You can find this [example on GitHub](https://github.com/chrisdavidmills/selection-api-examples/blob/master/setBaseAndExtent.html) ([see it live also](https://chrisdavidmills.github.io/selection-api-examples/setBaseAndExtent.html).)
+> [!NOTE]
+> You can find this [example on GitHub](https://github.com/chrisdavidmills/selection-api-examples/blob/master/setBaseAndExtent.html) ([see it live also](https://chrisdavidmills.github.io/selection-api-examples/setBaseAndExtent.html).)
 
 ## Specifications
 

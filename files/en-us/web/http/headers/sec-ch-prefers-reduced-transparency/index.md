@@ -62,7 +62,8 @@ Vary: Sec-CH-Prefers-Reduced-Transparency
 Critical-CH: Sec-CH-Prefers-Reduced-Transparency
 ```
 
-> **Note:** We've also specified `Sec-CH-Prefers-Reduced-Transparency` in the {{httpheader("Vary")}} header, to indicate to the browser that the served content will differ based on this header value — even if the URL stays the same — so the browser shouldn't just use an existing cached response and instead should cache this response separately. Each header listed in the `Critical-CH` header should also be present in the `Accept-CH` and `Vary` headers.
+> [!NOTE]
+> We've also specified `Sec-CH-Prefers-Reduced-Transparency` in the {{httpheader("Vary")}} header, to indicate to the browser that the served content will differ based on this header value — even if the URL stays the same — so the browser shouldn't just use an existing cached response and instead should cache this response separately. Each header listed in the `Critical-CH` header should also be present in the `Accept-CH` and `Vary` headers.
 
 The client automatically retries the request (due to `Critical-CH` being specified above), telling the server via `Sec-CH-Prefers-Reduced-Transparency` that it has a user preference for reduced transparency:
 

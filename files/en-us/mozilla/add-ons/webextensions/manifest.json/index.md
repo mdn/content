@@ -7,7 +7,8 @@ browser-compat: webextensions.manifest
 
 {{AddonSidebar}}
 
-> **Note:** This article describes manifest.json for web extensions. If you are looking for information about the manifest.json in PWAs, check out the [Web App Manifest](/en-US/docs/Web/Manifest) article.
+> [!NOTE]
+> This article describes manifest.json for web extensions. If you are looking for information about the manifest.json in PWAs, check out the [Web App Manifest](/en-US/docs/Web/Manifest) article.
 
 The `manifest.json` file is the only file that every extension using WebExtension APIs must contain.
 
@@ -44,6 +45,7 @@ These are the `manifest.json` keys; these keys are available in Manifest V2 and 
 - [name](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name)
 - [offline_enabled](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/offline_enabled)
 - [omnibox](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/omnibox)
+- [optional_host_permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_host_permissions) (Manifest V3 and above)
 - [optional_permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions)
 - [options_page](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_page)
 - [options_ui](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui)
@@ -78,7 +80,8 @@ browser.runtime.getManifest().version;
 
 The block below shows the basic syntax for some common manifest keys.
 
-> **Note:** This is not intended to be used as a copy-paste-ready example. Selecting the keys you'll need depends on the extension you are developing.
+> [!NOTE]
+> This is not intended to be used as a copy-paste-ready example. Selecting the keys you'll need depends on the extension you are developing.
 
 For complete example extensions, see [Example extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples).
 

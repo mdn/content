@@ -32,7 +32,7 @@ jobs:
         run: |
           # Use the GitHub API to get the list of changed files
           # documentation: https://docs.github.com/rest/commits/commits#compare-two-commits
-          DIFF_DOCUMENTS=$(gh api repos/{owner}/{repo}/compare/${{ env.BASE_SHA }}...${{ env.HEAD_SHA }} \
+          DIFF_DOCUMENTS=$(gh api repos/{owner}/{repo}/compare/${BASE_SHA}...${HEAD_SHA} \
             --jq '.files | .[] | select(.status|IN("added", "modified", "renamed", "copied", "changed")) | .filename')
           # filter out files that are not markdown
           DIFF_DOCUMENTS=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.md$" | xargs)
@@ -82,7 +82,7 @@ jobs:
           # https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#multiline-strings
           EOF="$(openssl rand -hex 8)"
 
-          files_to_lint="${{ env.DIFF_DOCUMENTS }}"
+          files_to_lint="$DIFF_DOCUMENTS"
 
           echo "Running markdownlint --fix"
           MD_LINT_FAILED=false
@@ -130,6 +130,7 @@ jobs:
             -name="mdn-linter" \
             -f=diff \
             -f.diff.strip=1 \
+            -filter-mode=diff_context \
             -reporter=github-pr-review < "${TMPFILE}"
 
       - name: Add reviews for markdownlint errors
@@ -137,7 +138,7 @@ jobs:
         env:
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "${{ env.MD_LINT_LOG }}" | \
+          echo "${MD_LINT_LOG}" | \
             reviewdog \
             -efm="%f:%l:%c %m" \
             -efm="%f:%l %m" \
@@ -149,8 +150,8 @@ jobs:
         if: env.FILES_MODIFIED == 'true' || env.MD_LINT_FAILED == 'true' || env.FM_LINT_FAILED == 'true'
         run: |
           echo -e "\nLogs from markdownlint:"
-          echo "${{ env.MD_LINT_LOG }}"
+          echo "${MD_LINT_LOG}"
           echo -e "\nLogs from front-matter linter:"
-          echo "${{ env.FM_LINT_LOG }}"
+          echo "${FM_LINT_LOG}"
           echo -e "\nPlease fix all the linting issues mentioned in above logs and in the review comments."
           exit 1

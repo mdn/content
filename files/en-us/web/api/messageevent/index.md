@@ -11,15 +11,16 @@ The **`MessageEvent`** interface represents a message received by a target objec
 
 This is used to represent messages in:
 
-- [Server-sent events](/en-US/docs/Web/API/Server-sent_events) (see {{domxref("EventSource.message_event")}}).
-- [Web sockets](/en-US/docs/Web/API/WebSockets_API) (see the `onmessage` property of the [WebSocket](/en-US/docs/Web/API/WebSocket) interface).
-- Cross-document messaging (see {{domxref("Window.postMessage()")}} and {{domxref("Window.message_event")}}).
-- [Channel messaging](/en-US/docs/Web/API/Channel_Messaging_API) (see {{domxref("MessagePort.postMessage()")}} and {{domxref("MessagePort.message_event")}}).
-- Cross-worker/document messaging (see the above two entries, but also {{domxref("Worker.postMessage()")}}, {{domxref("Worker.message_event")}}, {{domxref("ServiceWorkerGlobalScope.message_event")}}, etc.)
-- [Broadcast channels](/en-US/docs/Web/API/Broadcast_Channel_API) (see {{domxref("BroadcastChannel.postMessage()")}}) and {{domxref("BroadcastChannel.message_event")}}).
-- WebRTC data channels (see {{domxref("RTCDataChannel.message_event", "onmessage")}}).
+- [Server-sent events](/en-US/docs/Web/API/Server-sent_events) (see the {{domxref("EventSource.message_event", "message")}} event of {{domxref("EventSource")}}).
+- [Web sockets](/en-US/docs/Web/API/WebSockets_API) (see the {{domxref("WebSocket.message_event", "message")}} event of {{domxref("WebSocket")}}).
+- Cross-document messaging (see {{domxref("Window.postMessage()")}} and the {{domxref("Window.message_event", "message")}} event of {{domxref("Window")}}).
+- [Channel messaging](/en-US/docs/Web/API/Channel_Messaging_API) (see {{domxref("MessagePort.postMessage()")}} and the {{domxref("MessagePort.message_event", "message")}} event of {{domxref("MessagePort")}}).
+- Cross-worker/document messaging (see the above two entries, but also {{domxref("Worker.postMessage()")}}, the {{domxref("Worker.message_event", "message")}} event of {{domxref("Worker")}}, the {{domxref("ServiceWorkerGlobalScope.message_event", "message")}} event of {{domxref("ServiceWorkerGlobalScope")}}, etc.)
+- [Broadcast channels](/en-US/docs/Web/API/Broadcast_Channel_API) (see {{domxref("BroadcastChannel.postMessage()")}} and the {{domxref("BroadcastChannel.message_event", "message")}} event of {{domxref("BroadcastChannel")}}).
+- WebRTC data channels (see the {{domxref("RTCDataChannel.message_event", "message")}} event of {{domxref("RTCDataChannel")}}).
 
-The action triggered by this event is defined in a function set as the event handler for the relevant `message` event (e.g. using an `onmessage` handler as listed above).
+The action triggered by this event is defined in a function set as the event handler for the relevant `message` event.
+
 {{InheritanceDiagram}}
 
 ## Constructor

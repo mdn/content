@@ -18,7 +18,8 @@ The relying party (RP) sends the token to its server to validate the certificate
 
 If the user has never signed into the IdP or is logged out, the associated {{domxref("CredentialsContainer.get", "get()")}} call rejects with an error and the RP can direct the user to the IdP login page to sign in or create an account.
 
-> **Note:** The exact structure and content of the validation token token is opaque to the FedCM API, and to the browser. The IdP decides on the syntax and usage of it, and the RP needs to follow the instructions provided by the IdP (see [Verify the Google ID token on your server side](https://developers.google.com/identity/gsi/web/guides/verify-google-id-token), for example) to make sure they are using it correctly.
+> [!NOTE]
+> The exact structure and content of the validation token is opaque to the FedCM API, and to the browser. The IdP decides on the syntax and usage of it, and the RP needs to follow the instructions provided by the IdP (see [Verify the Google ID token on your server side](https://developers.google.com/identity/gsi/web/guides/verify-google-id-token), for example) to make sure they are using it correctly.
 
 ## Value
 
@@ -60,4 +61,4 @@ Check out [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedC
 
 ## See also
 
-- [Federated Credential Management API](https://developer.chrome.com/docs/privacy-sandbox/fedcm/)
+- [Federated Credential Management API](https://developers.google.com/privacy-sandbox/cookies/fedcm)

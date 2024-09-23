@@ -23,6 +23,8 @@ Any time you would normally use `max-height` or `max-width`, you should instead 
 /* <length> values */
 max-block-size: 300px;
 max-block-size: 25em;
+max-block-size: anchor-size(--myAnchor self-inline, 250px);
+max-block-size: calc(anchor-size(width) / 2);
 
 /* <percentage> values */
 max-block-size: 75%;
@@ -57,7 +59,7 @@ The `max-block-size` property's value can be any value that's legal for the {{cs
 - `min-content`
   - : The intrinsic minimum `max-block-size`.
 - `fit-content`
-  - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e `min(max-content, max(min-content, stretch))`.
+  - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e. `min(max-content, max(min-content, stretch))`.
 - `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
   - : Uses the `fit-content` formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, argument))`.
 
@@ -70,9 +72,11 @@ The values of `writing-mode` affect the mapping of `max-block-size` to `max-widt
 | `horizontal-tb`, `lr`, `lr-tb`, `rl`, `rb`, `rb-rl`                       | {{cssxref("max-height")}}         |
 | `vertical-rl`, `vertical-lr`, `sideways-rl`, `sideways-lr`, `tb`, `tb-rl` | {{cssxref("max-width")}}          |
 
-> **Note:** The `writing-mode` values `sideways-lr` and `sideways-rl` were removed from the CSS Writing Modes Level 3 specification late in its design process. They may be restored in Level 4.
+> [!NOTE]
+> The `writing-mode` values `sideways-lr` and `sideways-rl` were removed from the CSS Writing Modes Level 3 specification late in its design process. They may be restored in Level 4.
 
-> **Note:** The writing modes `lr`, `lr-tb`, `rl`, `rb`, and `rb-tl` are no longer allowed in {{Glossary("HTML")}} contexts; they may only be used in {{Glossary("SVG")}} 1.x contexts.
+> [!NOTE]
+> The writing modes `lr`, `lr-tb`, `rl`, `rb`, and `rb-tl` are no longer allowed in {{Glossary("HTML")}} contexts; they may only be used in {{Glossary("SVG")}} 1.x contexts.
 
 ## Formal definition
 
@@ -88,7 +92,7 @@ The values of `writing-mode` affect the mapping of `max-block-size` to `max-widt
 
 In this example, the same text (the opening sentences from [Herman Melville's](https://en.wikipedia.org/wiki/Herman_Melville) novel _[Moby-Dick](https://en.wikipedia.org/wiki/Moby-Dick)_) is presented in both the `horizontal-tb` and `vertical-rl` writing modes.
 
-Everything else about the two boxes is identical, including the values used for {{cssxref("max-block-size")}}.
+Everything else about the two boxes is identical, including the values used for `max-block-size`.
 
 #### HTML
 

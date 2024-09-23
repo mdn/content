@@ -20,7 +20,7 @@ Using `XRRigidTransform` in these places rather than bare arrays that provide th
 
 ## Constructor
 
-- {{domxref("XRRigidTransform.XRRigidTransform", "new XRRigidTransform()")}}
+- {{domxref("XRRigidTransform.XRRigidTransform", "XRRigidTransform()")}}
   - : Creates a new `XRRigidTransform` object which represents a transform that applies a specified position and/or orientation.
 
 ## Instance properties
