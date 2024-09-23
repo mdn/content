@@ -45,7 +45,7 @@ It is quite difficult to have a unique identifier for strong validation with {{H
 
 ### Weak validation
 
-Weak validation differs from strong validation, as it considers two versions of the document as identical if the content is equivalent. For example, a page that would differ from another only by a different date in its footer, or different advertising, would be considered _identical_ to the other with weak validation. These same two versions are considered _different_ when using strong validation. Building a system of ETags that creates weak validation may be complex, as it involves knowing the importance of the different elements of a page, but is very useful towards optimizing cache performance.
+Weak validation differs from strong validation, as it considers two versions of the document as identical if the content is equivalent. For example, a page that would differ from another only by a different date in its footer, or different advertising, would be considered _identical_ to the other with weak validation. These same two versions are considered _different_ when using strong validation. Building a system of ETags that uses weak validation is very useful for optimizing cache performance, but may be complex, as it involves knowing the importance of the different elements of a page.
 
 ## Conditional headers
 
