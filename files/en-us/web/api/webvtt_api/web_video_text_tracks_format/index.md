@@ -26,7 +26,7 @@ The content must be encoded using {{Glossary("UTF-8")}}.
 
 The structure of a WebVTT consists of the following components, some of them optional, in this order:
 
-- A header, consisting of an optional byte order mark (BOM) — the string "`WEBVTT`" — followed by an optional text header separated by one or more space or tab characters (in WebVTT files, tabs and spaces are interchangeable).
+- A header, consisting of an optional byte order mark (BOM) — the string `WEBVTT` — followed by an optional text header separated by one or more space or tab characters (in WebVTT files, tabs and spaces are interchangeable).
 - One or more blank lines, each which is equivalent to two consecutive newlines.
 - Zero or more `STYLE`, `REGION`, or `NOTE` blocks, separated by one or more blank lines.
 - Zero or more cue or `NOTE` blocks, separated by one or more blank lines.
@@ -56,12 +56,12 @@ The following sections explain the parts of the file, including those not used i
 WebVTT files start with a header block containing the following:
 
 - An optional byte order mark (BOM), which is Unicode character `U+FEFF`.
-- The string "`WEBVTT`".
+- The string `WEBVTT`.
 - An optional text header to the right of `WEBVTT`.
 
   - There must be at least one space after `WEBVTT`.
   - You could use this header to add a description to the file.
-  - You may use anything in the text header except newlines or the string "`-->`".
+  - You may use anything in the text header except newlines or the string `-->`.
 
 The `WEBVTT` string is the only required part of the WebVTT file, so the simplest possible WebVTT file would look like this:
 
@@ -88,7 +88,7 @@ Each cue consists of three or more lines:
 - The cue payload text, which may span multiple lines, and will be terminated by an empty line.
 
 Here is an example of a simple cue.
-The first line specifies the cue's display start and end times, separated using the string "`-->`".
+The first line specifies the cue's display start and end times, separated using the string `-->`.
 The second line defines the text to be displayed.
 
 ```plain
@@ -97,7 +97,7 @@ Never drink liquid nitrogen.
 ```
 
 The next cue is slightly more complicated.
-It starts with a cue identifier — "`1 - Title Crawl`" — which may be used to reference the cue in JavaScript and CSS.
+It starts with a cue identifier — `1 - Title Crawl` — which may be used to reference the cue in JavaScript and CSS.
 It also has cue settings after the cue timings to set the cue position.
 
 ```plain
@@ -118,7 +118,7 @@ Each part of the cue is explained in more detail in the following sections.
 
 ### Cue identifier
 
-The identifier is a name that identifies the cue. It can be used to reference the cue from JavaScript or CSS. It must not contain a newline and cannot contain the string "`-->`". It must end with a single new line. Identifiers do not have to be unique, although it is common to number them (e.g., 1, 2, 3).
+The identifier is a name that identifies the cue. It can be used to reference the cue from JavaScript or CSS. It must not contain a newline and cannot contain the string `-->`. It must end with a single new line. Identifiers do not have to be unique, although it is common to number them (e.g., 1, 2, 3).
 
 The example below shows a file with several cues that include identifiers:
 
@@ -148,7 +148,7 @@ Each cue timing contains five components:
 
 - A timestamp for the start time.
 - At least one space.
-- The string "`-->`".
+- The string `-->`.
 - At least one space.
 - A timestamp for the end time, which must be greater than the start time.
 
