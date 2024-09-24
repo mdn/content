@@ -221,31 +221,35 @@ Responses with a status code that answers the request without the need to includ
 
 ## HTTP/2 messages
 
-HTTP/1.x uses text-based messages that are easy to read and construct, but there are a few downsides to this:
+HTTP/1.x uses text-based messages that are straightforward to read and construct, but there are a few downsides to this.
+You can compress message bodies using `gzip` or other compression algorithms, but not headers.
+Headers are often similar or identical in a client-server interaction, but they are repeated in successive messages on a connection.
+There are many known methods to compress repetitive text that are very efficient, which leaves a large amount of bandwidth savings unutilized.
 
-1. You can compress message bodies using `gzip` or other compression algorithms, but not headers.
-2. Headers are often similar or identical in a client-server interaction, but they are repeated in successive messages on a connection.
-   Existing methods that compress repetitive text are very efficient, leaving a large amount of potential for savings unutilized.
-3. HTTP/1.x has a problem called Head-of-Line blocking (HOL blocking) on the TCP connection, where a client has to wait for a response from the server before sending the next request.
-   HTTP [pipelining](/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x#http_pipelining) tried to work around this, but poor support and complexity means it's rarely used and difficult to get right.
-   Several connections need to be opened to send requests concurrently; and warm (existing and busy) connections are more efficient than cold ones due to TCP slow start.
+HTTP/1.x also has a problem called Head-of-Line blocking (HOL blocking) on the TCP connection, where a client has to wait for a response from the server before sending the next request.
+HTTP [pipelining](/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x#http_pipelining) tried to work around this, but poor support and complexity means it's rarely used and difficult to get right.
+Several connections need to be opened to send requests concurrently; and warm (established and busy) connections are more efficient than cold ones due to TCP slow start.
 
 In HTTP/1.1 if you want to make two requests in parallel, you have to open two connections:
 
-<!-- ![TODO](./http-1-connection.svg) -->
+![Making two HTTP requests to a server in parallel](https://mdn.github.io/shared-assets/images/diagrams/http/messages/http-1-connection.png)
 
-This usually means that browsers are limited in the number of resources that they can download and render at the same time (typically 6 parallel TCP connections).
+This means that browsers are limited in the number of resources that they can download and render at the same time, which has typically been limited to 6 parallel connections in browsers.
 
 HTTP/2 allows you to use a single TCP connection for multiple requests and responses at the same time.
 This is done by wrapping messages into a binary frame and sending the requests and responses in a numbered **stream** on a connection.
 Data and header frames are handled separately, which allows headers to be compressed via an algorithm called HPACK.
 Using the same TCP connection to handle multiple requests at the same time is called _multiplexing_.
 
-<!-- ![TODO](./http-2-connection.svg) -->
+![Multiplexing requests and responses in HTTP/2 using a single TCP connection.](https://mdn.github.io/shared-assets/images/diagrams/http/messages/http-2-connection.png)
 
-One important thing to note about the diagram above is that it's not strictly sequential: stream 9 is not blocked by stream 7, and the data from multiple streams is interleaved on the connection.
+Requests are not necessarily sequential: stream 9 doesn't have to wait for stream 7 to finish, for instance.
+The data from multiple streams may be interleaved on the connection, so stream 9 and 7 can be received by the client at the same time:
+
+<!-- TODO: show data interleaved on streams -->
+
 Because one connection has several logical streams of data flowing in both directions at the same time, the protocol can decide in which order or in priority each stream or resource should have.
-Low-priority resources take up less bandwidth as higher-priority resources when they're being sent in different streams in parallel, or they could be sent sequentially on the same connection if there are critical resources that should be handled first.
+Low-priority resources take up less bandwidth as higher-priority resources when they're being sent in different streams in parallel, or they could effectively be sent sequentially on the same connection if there are critical resources that should be handled first.
 
 In general, despite all of the improvements and abstractions added over HTTP/1.x, virtually no changes are needed in the APIs used by developers to make use of HTTP/2 over HTTP/1.x.
 When HTTP/2 is available in both the browser and the server, it is switched on and used automatically.
