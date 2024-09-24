@@ -201,9 +201,9 @@ img {
 #### Result
 
 The result is shown below.
-First click on the blue square, and then select the text "Paste here" and use your OS-specific keyboard combinatations to paste from the clipboard (such as `Ctrl+V` on Windows).
+First click on the blue square, and then select the text "Paste here" and use your OS-specific keyboard combinations to paste from the clipboard (such as `Ctrl+V` on Windows).
 
-{{embedlivesample("write_canvas_contents_to_the_clipboard", "", "400")}}
+{{embedlivesample("write_canvas_contents_to_the_clipboard", "", "420", "", "", "", "clipboard-write")}}
 
 ## Specifications
 

@@ -147,7 +147,7 @@ The first parameter to the logging methods can be a string containing zero or mo
 - `%c`
   - : Applies CSS style rules to all following text. See [Styling console output](#styling_console_output).
 
-Some browsers may implement additional format specifiers. For example, Safari and Firefox support the C-style precision formating `%.<precision>f`. For example `console.log("Foo %.2f", 1.1)` will output the number to 2 decimal places: `Foo 1.10`, while `console.log("Foo %.2d", 1.1)` will output the number as two significant figures with a leading 0: `Foo 01`.
+Some browsers may implement additional format specifiers. For example, Safari and Firefox support the C-style precision formatting `%.<precision>f`. For example `console.log("Foo %.2f", 1.1)` will output the number to 2 decimal places: `Foo 1.10`, while `console.log("Foo %.2d", 1.1)` will output the number as two significant figures with a leading 0: `Foo 01`.
 
 Each of these pulls the next argument after the format string off the parameter list. For example:
 

@@ -28,7 +28,7 @@ allowsFeature(feature, origin)
 - `feature`
   - : The specific feature name to check its availability.
 - `origin` {{Optional_inline}}
-  - : The specific origin name to check its availability. If not specificed, the default origin will be used.
+  - : The specific origin name to check its availability. If not specified, the default origin will be used.
 
 ### Return value
 

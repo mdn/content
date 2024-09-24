@@ -235,7 +235,7 @@ urlpatterns += [
 The URL configuration will redirect URLs with the format **/catalog/book/_\<bookinstance_id>_/renew/** to the function named `renew_book_librarian()` in **views.py**, and send the `BookInstance` id as the parameter named `pk`. The pattern only matches if `pk` is a correctly formatted `uuid`.
 
 > [!NOTE]
-> We can name our captured URL data "`pk`" anything we like, because we have complete control over the view function (we're not using a generic detail view class that expects parameters with a certain name). However, `pk` short for "primary key", is a reasonable convention to use!
+> We can name our captured URL data anything we like, because we have complete control over the view function (we're not using a generic detail view class that expects parameters with a certain name). However, `pk` short for "primary key", is a reasonable convention to use!
 
 ### View
 
@@ -351,9 +351,9 @@ If the form is valid, then we can start to use the data, accessing it through th
 > [!WARNING]
 > While you can also access the form data directly through the request (for example, `request.POST['renewal_date']` or `request.GET['renewal_date']` if using a GET request), this is NOT recommended. The cleaned data is sanitized, validated, and converted into Python-friendly types.
 
-The final step in the form-handling part of the view is to redirect to another page, usually a "success" page. In this case, we use `HttpResponseRedirect` and `reverse()` to redirect to the view named `'all-borrowed'` (this was created as the "challenge" in [Django Tutorial Part 8: User authentication and permissions](/en-US/docs/Learn/Server-side/Django/Authentication#challenge_yourself)). If you didn't create that page consider redirecting to the home page at URL '`/`').
+The final step in the form-handling part of the view is to redirect to another page, usually a "success" page. In this case, we use `HttpResponseRedirect` and `reverse()` to redirect to the view named `'all-borrowed'` (this was created as the "challenge" in [Django Tutorial Part 8: User authentication and permissions](/en-US/docs/Learn/Server-side/Django/Authentication#challenge_yourself)). If you didn't create that page consider redirecting to the home page at URL `/`).
 
-That's everything needed for the form handling itself, but we still need to restrict access to the view to just logged-in librarians who have permission to renew books. We use `@login_required` to require that the user is logged in, and the `@permission_required` function decorator with our existing `can_mark_returned` permission to allow access (decorators are processed in order). Note that we probably should have created a new permission setting in `BookInstance` ("`can_renew`"), but we will reuse the existing one to keep the example simple.
+That's everything needed for the form handling itself, but we still need to restrict access to the view to just logged-in librarians who have permission to renew books. We use `@login_required` to require that the user is logged in, and the `@permission_required` function decorator with our existing `can_mark_returned` permission to allow access (decorators are processed in order). Note that we probably should have created a new permission setting in `BookInstance` (`can_renew`), but we will reuse the existing one to keep the example simple.
 
 The final view is therefore as shown below. Please copy this into the bottom of **django-locallibrary-tutorial/catalog/views.py**.
 
@@ -427,7 +427,7 @@ Most of this will be completely familiar from previous tutorials.
 
 We extend the base template and then redefine the content block. We are able to reference `\{{ book_instance }}` (and its variables) because it was passed into the context object in the `render()` function, and we use these to list the book title, borrower, and the original due date.
 
-The form code is relatively simple. First, we declare the `form` tags, specifying where the form is to be submitted (`action`) and the `method` for submitting the data (in this case an "HTTP `POST`") — if you recall the [HTML Forms](#html_forms) overview at the top of the page, an empty `action` as shown, means that the form data will be posted back to the current URL of the page (which is what we want). Inside the tags, we define the `submit` input, which a user can press to submit the data. The `{% csrf_token %}` added just inside the form tags is part of Django's cross-site forgery protection.
+The form code is relatively simple. First, we declare the `form` tags, specifying where the form is to be submitted (`action`) and the `method` for submitting the data (in this case a `POST`) — if you recall the [HTML Forms](#html_forms) overview at the top of the page, an empty `action` as shown, means that the form data will be posted back to the current URL of the page (which is what we want). Inside the tags, we define the `submit` input, which a user can press to submit the data. The `{% csrf_token %}` added just inside the form tags is part of Django's cross-site forgery protection.
 
 > [!NOTE]
 > Add the `{% csrf_token %}` to every Django template you create that uses `POST` to submit data. This will reduce the chance of forms being hijacked by malicious users.
@@ -527,7 +527,7 @@ Note that this template code can only run inside the `{% for %}` loop, because t
 ```
 
 > [!NOTE]
-> Remember that your test login will need to have the permission "`catalog.can_mark_returned`" in order to see the new "Renew" link added above, and to access the linked page (perhaps use your superuser account).
+> Remember that your test login will need to have the permission `catalog.can_mark_returned` in order to see the new "Renew" link added above, and to access the linked page (perhaps use your superuser account).
 
 You can alternatively manually construct a test URL like this — `http://127.0.0.1:8000/catalog/book/<bookinstance_id>/renew/` (a valid `bookinstance_id` can be obtained by navigating to a book detail page in your library, and copying the `id` field).
 
@@ -584,7 +584,7 @@ class Meta:
 ```
 
 To add validation you can use the same approach as for a normal `Form` — you define a function named `clean_<field_name>()` and raise `ValidationError` exceptions for invalid values.
-The only difference with respect to our original form is that the model field is named `due_back` and not "`renewal_date`".
+The only difference with respect to our original form is that the model field is named `due_back` and not `renewal_date`.
 This change is necessary since the corresponding field in `BookInstance` is called `due_back`.
 
 ```python

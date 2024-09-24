@@ -14,7 +14,7 @@
     "url": "git+https://github.com/mdn/content.git"
   },
   "engines": {
-    "node": ">=18.18.0"
+    "node": ">=18.20.0"
   },
   "type": "module",
   "scripts": {

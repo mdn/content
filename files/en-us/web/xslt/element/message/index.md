@@ -23,7 +23,7 @@ None.
 ### Optional Attributes
 
 - `terminate`
-  - : Set to "`yes`", indicates that execution should be terminated. The default value is "`no`", in which case the message is output and execution continues.
+  - : Set to `yes`, indicates that execution should be terminated. The default value is `no`, in which case the message is output and execution continues.
 
 ### Type
 
