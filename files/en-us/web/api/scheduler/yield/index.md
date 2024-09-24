@@ -10,7 +10,7 @@ browser-compat: api.Scheduler.yield
 
 The **`yield()`** method of the {{domxref('Scheduler')}} interface is used for yielding the {{Glossary('main thread')}} during a task and continuing execution later, with the continuation [scheduled as a prioritized task](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API). This allows long-running work to be broken up so the browser stays responsive.
 
-The task can continue when the promise returned by the method is resolved. The priority for when the promise is resolved defaults to [`'user-visible'`](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#user-visible), but can inherit a different priority if the `yield()` occurs within a {{domxref('Scheduler.postTask')}}.
+The task can continue when the promise returned by the method is resolved. The priority for when the promise is resolved defaults to [`"user-visible"`](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#user-visible), but can inherit a different priority if the `yield()` occurs within a {{domxref('Scheduler.postTask')}}.
 
 Similarly, the continuation of work after the `yield()` can be aborted if it occurs within a `postTask()` callback, and the [task is aborted](/en-US/docs/Web/API/Scheduler/postTask#aborting_tasks).
 
@@ -34,7 +34,7 @@ Returns a {{jsxref('Promise')}} that is fulfilled with {{jsxref('undefined')}}, 
 
 Check whether prioritized task scheduling is supported by testing for `scheduler.yield` on {{jsxref('globalThis')}}, either in a window or worker scope.
 
-For example, the code below logs `'scheduler.yield: Supported'` if the API is supported in this browser.
+For example, the code below logs `"scheduler.yield: Supported"` if the API is supported in this browser.
 
 ```js
 // Check for support before using.
@@ -47,7 +47,7 @@ if (globalThis.scheduler?.yield) {
 
 ### Basic usage
 
-Long tasks can be broken up by awaiting `scheduler.yield()`. The function returns a promise, yielding the main thread to allow the browser to execute other pending work—like responding to user input—if needed. The browser schedules a follow-up task that resovles the promise, at which point execution of the code can continue where it left off.
+Long tasks can be broken up by awaiting `scheduler.yield()`. The function returns a promise, yielding to the main thread to allow the browser to execute other pending work—like responding to user input—if needed. The browser schedules a follow-up task that resovles the promise, at which point execution of the code can continue where it left off.
 
 For instance, if a `click` event listener on a button results in a lot of work to load and display new page content, this means there will be no visual feedback to the user that their button click was even registered by the page until that work is complete. A `scheduler.yield()` can be inserted into the event listener so that quick feedback can be shown (like a spinner), and then the remainder of the work can be done when execution continues after the yield.
 
@@ -89,9 +89,9 @@ for (const work of workList) {
 
 The order in which the promise returned by `scheduler.yield()` is resolved relative to other tasks is based on an implicit [task priority](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities).
 
-By default, `scheduler.yield()` is run with a [`'user-visible'`](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#user-visible) priority. However, the continuation from a `scheduler.yield()` has a slightly different behavior than `scheduler.postTask()` tasks of the same `priority`.
+By default, `scheduler.yield()` is run with a [`"user-visible"`](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#user-visible) priority. However, the continuation from a `scheduler.yield()` has a slightly different behavior than `scheduler.postTask()` tasks of the same `priority`.
 
-`scheduler.yield()` enqueues its task in a boosted task queue compared to a `scheduler.postTask()` of the same prioritiy level. So, for instance, a `scheduler.yield()` continuation with `'user-visible'` priority will be prioritized after `scheduler.postTask()` tasks of the higher `'user-blocking'` priority level, but before `scheduler.postTask()` tasks of the same `'user-visible'` priority (in the spec, this is defined by a task queue's [effective priority](https://wicg.github.io/scheduling-apis/#scheduler-task-queue-effective-priority)).
+`scheduler.yield()` enqueues its task in a boosted task queue compared to a `scheduler.postTask()` of the same prioritiy level. So, for instance, a `scheduler.yield()` continuation with `"user-visible"` priority will be prioritized after `scheduler.postTask()` tasks of the higher `"user-blocking"` priority level, but before `scheduler.postTask()` tasks of the same `"user-visible"` priority (in the spec, this is defined by a task queue's [effective priority](https://wicg.github.io/scheduling-apis/#scheduler-task-queue-effective-priority)).
 
 This is sometimes described as `scheduler.yield()` enqueuing its task at the front of a priority level's queue, while `scheduler.postTask()` tasks go at the end. This can be a useful mental model. In situations with just a few tasks, this means that with the same priority, the `scheduler.yield()` continuation will come first, allowing additional flexibility in how tasks can be scheduled.
 
@@ -128,6 +128,9 @@ async function second() {
   await scheduler.yield();
   console.log("ending second function");
 }
+
+first();
+second();
 ```
 
 will log
@@ -141,7 +144,7 @@ ending second function
 
 ### Inheriting task priorities
 
-A `scheduler.yield()` within a `scheduler.postTask()` task will inherit the task's priority. For example, work after a `scheduler.yield()` within a [`'background'`](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#user-blocking) low-priority task will also be scheduled as `'background'` by default (but, again, inserted in the boosted `'background'` priority queue, so running before any `'background'` `postTask` tasks).
+A `scheduler.yield()` within a `scheduler.postTask()` task will inherit the task's priority. For example, work after a `scheduler.yield()` within a [`"background"`](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#user-blocking) low-priority task will also be scheduled as `"background"` by default (but, again, inserted in the boosted `"background"` priority queue, so running before any `"background"` `postTask` tasks).
 
 ```js
 async function backgroundWork() {
@@ -151,7 +154,7 @@ async function backgroundWork() {
   scheduler.postTask(() => console.log("user-visible postTask"), {
     priority: "user-visible",
   });
-  // yield() inherits 'background' priority from surrounding task.
+  // yield() inherits "background" priority from surrounding task.
   await scheduler.yield();
   console.log("default-background yield");
 }
@@ -171,7 +174,7 @@ background postTask
 
 #### Within `requestIdleCallback`
 
-Similar to a `scheduler.yield()` inheriting a priority from a surrounding `scheduler.postTask()`, it will also inherit priority if called within a {{domxref("Window.requestIdleCallback()")}} callback, with [`'background'`](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#background) priority. The `scheduler.yield()` will not be abortable, however.
+Similar to a `scheduler.yield()` inheriting a priority from a surrounding `scheduler.postTask()`, it will also inherit priority if called within a {{domxref("Window.requestIdleCallback()")}} callback, with [`"background"`](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#background) priority. The `scheduler.yield()` will not be abortable, however.
 
 ### Aborting a yield
 
@@ -204,7 +207,7 @@ scheduler.postTask(
 
 The example is somewhat contrived to always trigger the `taskController.abort()` call within the task itself, but the `abort()` call could come from anywhere, like a 'Cancel' button available for the user to press at any time.
 
-In this case the `abort()` occurs after the `scheduler.postTask()` task has already started (`'first half of work'` is logged), but the yield call inherits the {{domxref('AbortSignal')}} and so the `await scheduler.yield()` will throw with abort reason `'cancel work'`.
+In this case the `abort()` occurs after the `scheduler.postTask()` task has already started (`"first half of work"` is logged), but the yield call inherits the {{domxref('AbortSignal')}} and so the `await scheduler.yield()` will throw with abort reason `"cancel work"`.
 
 ## Specifications
 
