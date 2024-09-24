@@ -34,4 +34,4 @@ The `categories` member is an array of strings defining the names of categories 
 
 ## Browser compatibility
 
-The feature is not implemented by any browser yet.
+This manifest member is used by app stores and catalogs when publishing and listing web apps, so browser compatibility is not applicable. Browsers may parse this information, but it's optional and doesn't affect the core functionality of a web app.
