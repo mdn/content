@@ -9,18 +9,9 @@ spec-urls: https://w3c.github.io/manifest-app-info/#screenshots-member
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Type</th>
-      <td><code>Array</code></td>
-    </tr>
-  </tbody>
-</table>
-
 The `screenshots` member defines an array of screenshots intended to showcase the application. These images are intended to be used by progressive web app stores.
 
-## Properties
+### Values
 
 The `screenshots` member is an array of objects each representing a screenshot. Each screenshot object may contain the following properties:
 
