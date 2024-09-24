@@ -10,7 +10,7 @@ browser-compat: mathml.elements.annotation
 The **`<annotation>`** [MathML](/en-US/docs/Web/MathML) element contaiting an annotation to the MathML expression in a textual format, for example [LaTeX](https://www.latex-project.org/).
 
 > [!NOTE]
-> Annotations are not supposed to be rendered by browsers and are hidden by default. Although Firefox and Safari render some annotation formats if the first child of the {{mathmlelement("semantics")}} element contains errors or missing.
+> Annotations are not supposed to be rendered by browsers and are hidden by default. However, Firefox and Safari render some annotation formats if the first child of the {{mathmlelement("semantics")}} element contains errors or is missing.
 
 ## Attributes
 
