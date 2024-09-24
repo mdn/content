@@ -73,13 +73,13 @@ The following examples are slightly simplified versions of the live examples pro
 
 ### Feature checking
 
-Check whether prioritized task scheduling is supported by testing for the `scheduler` property in the global "`this`" (such as {{domxref("Window.scheduler")}} in window's scope or {{domxref("WorkerGlobalScope.scheduler")}} in worker's scope).
+Check whether prioritized task scheduling is supported by testing for the `scheduler` property in the global scope (such as {{domxref("Window.scheduler")}} in window's scope or {{domxref("WorkerGlobalScope.scheduler")}} in worker's scope).
 
 For example, the code below logs "Feature: Supported" if the API is supported on this browser.
 
 ```js
 // Check that feature is supported
-if ("scheduler" in this) {
+if ("scheduler" in globalThis) {
   console.log("Feature: Supported");
 } else {
   console.error("Feature: NOT Supported");

@@ -99,7 +99,7 @@ We'll step through the options in the initialization steps below.
 To explore various features of Vue, we will be building up a sample todo list app. We'll begin by using `create-vue` to build a new scaffold for our app.
 In terminal, `cd` to where you'd like to create your sample app, then run `npm create vue@latest` (or `yarn create vue@latest` if you prefer Yarn).
 
-The interactive tool let's you choose some options and you can procees by pressing <kbd>Enter</kbd>.
+The interactive tool let's you choose some options and you can proceed by pressing <kbd>Enter</kbd>.
 For this project, we'll use the following configuration:
 
 ```plain

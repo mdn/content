@@ -17,7 +17,7 @@ The **`TextEncoderStream`** interface of the {{domxref('Encoding API','','',' ')
 ## Instance properties
 
 - {{DOMxRef("TextEncoderStream.encoding")}} {{ReadOnlyInline}}
-  - : Always returns "`utf-8`".
+  - : Always returns `"utf-8"`.
 - {{DOMxRef("TextEncoderStream.readable")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("ReadableStream")}} instance controlled by this object.
 - {{DOMxRef("TextEncoderStream.writable")}} {{ReadOnlyInline}}

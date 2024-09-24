@@ -186,7 +186,7 @@ Some of these states can be set as attributes using HTML or JavaScript, while ot
 Whether external or internal, commonly these states have corresponding CSS [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) that can be used to select and style the element when it is in a particular state.
 
 Autonomous custom elements (but not elements based on built-in elements) also allow you to define states and select against them using the [`:state()`](/en-US/docs/Web/CSS/:state) pseudo-class function.
-The code below shows how this works using the example of an autonomous custom element that has an internal state "`collapsed`".
+The code below shows how this works using the example of an autonomous custom element that has an internal state `"collapsed"`.
 
 The `collapsed` state is represented as a boolean property (with setter and getter methods) that is not visible outside of the element.
 To make this state selectable in CSS the custom element first calls {{domxref("HTMLElement.attachInternals()")}} in its constructor in order to attach an {{domxref("ElementInternals")}} object, which in turn provides access to a {{domxref("CustomStateSet")}} through the {{domxref("ElementInternals.states")}} property.

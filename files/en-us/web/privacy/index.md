@@ -126,7 +126,7 @@ The ethics of data collection can be broken down into three simple principles:
 - Delete the data once you have finished with it
 
 > [!NOTE]
-> The tips provided below make for a better, more privacy-aware user experience, but many of them are required by law to comply with regulations, for example the [GDPR](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679&from=EN) in the EU. You should make sure to find out what regulations apply to you in your locale, and what you need to do to comply with them.
+> The tips provided below make for a better, more privacy-aware user experience, but many of them are required by law to comply with regulations, for example the [GDPR](https://gdpr.eu/) in the EU. You should make sure to find out what regulations apply to you in your locale, and what you need to do to comply with them.
 
 ### Don't collect more data than you need
 

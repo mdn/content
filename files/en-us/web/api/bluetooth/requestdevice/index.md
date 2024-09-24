@@ -54,7 +54,7 @@ requestDevice(options)
             - `companyIdentifier`
               - : A mandatory number identifying the manufacturer of the device.
                 Company identifiers are listed in the Bluetooth specification [Assigned numbers](https://www.bluetooth.com/specifications/assigned-numbers/), Section 7.
-                For example, to match against devices manufacturered by "Digianswer A/S", with assigned hex number `0x000C`, you would specify `12`.
+                For example, to match against devices manufactured by "Digianswer A/S", with assigned hex number `0x000C`, you would specify `12`.
             - `dataPrefix` {{optional_inline}}
               - : The data prefix.
                 A buffer containing values to match against the values at the start of the advertising manufacturer data.

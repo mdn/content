@@ -453,7 +453,7 @@ Open the base template (**/django-locallibrary-tutorial/catalog/templates/base_g
 
 As you can see, we use `if` / `else` / `endif` template tags to conditionally display text based on whether `\{{ user.is_authenticated }}` is true. If the user is authenticated then we know that we have a valid user, so we call `\{{ user.get_username }}` to display their name.
 
-We create the login link URL using the `url` template tag and the name of the `login` URL configuration. Note also how we have appended `?next=\{{ request.path }}` to the end of the URL. What this does is add a URL parameter `next` containing the address (URL) of the _current_ page, to the end of the linked URL. After the user has successfully logged in, the view will use this "`next`" value to redirect the user back to the page where they first clicked the login link.
+We create the login link URL using the `url` template tag and the name of the `login` URL configuration. Note also how we have appended `?next=\{{ request.path }}` to the end of the URL. What this does is add a URL parameter `next` containing the address (URL) of the _current_ page, to the end of the linked URL. After the user has successfully logged in, the view will use this `next` value to redirect the user back to the page where they first clicked the login link.
 
 The logout template code is different, because from Django 5 to logout you must `POST` to the `admin:logout` URL, using a form with a button.
 By default this would render as a button, but you can style the button to display as a link.
@@ -497,7 +497,7 @@ class MyView(LoginRequiredMixin, View):
     # …
 ```
 
-This has exactly the same redirect behavior as the `login_required` decorator. You can also specify an alternative location to redirect the user to if they are not authenticated (`login_url`), and a URL parameter name instead of "`next`" to insert the current absolute path (`redirect_field_name`).
+This has exactly the same redirect behavior as the `login_required` decorator. You can also specify an alternative location to redirect the user to if they are not authenticated (`login_url`), and a URL parameter name instead of `next` to insert the current absolute path (`redirect_field_name`).
 
 ```python
 class MyView(LoginRequiredMixin, View):
@@ -707,7 +707,7 @@ Testing on permissions in views and templates is then very similar to testing on
 
 ### Models
 
-Defining permissions is done on the model "`class Meta`" section, using the `permissions` field.
+Defining permissions is done on the model `class Meta` section, using the `permissions` field.
 You can specify as many permissions as you need in a tuple, each permission itself being defined in a nested tuple containing the permission name and permission display value.
 For example, we might define a permission to allow a user to mark that a book has been returned as shown:
 
