@@ -7,52 +7,186 @@ browser-compat: html.manifest.shortcuts
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
-The `shortcuts` member defines an array of shortcuts or links to key tasks or pages within a web app. A user agent can use these values to assemble a context menu to be displayed by the operating system when a user engages with the web app's icon. When user invokes a shortcut, the user agent will navigate to the address given by shortcut's `url` member.
+The `shortcuts` manifest member is used to specify one or more links to key tasks or pages within your web application.
+Browsers can use these values to assemble a context menu to be displayed by the operating system when a user interacts with the web app's icon.
+
+## Syntax
+
+```json-nolint
+/* Single shortcut with all properties */
+"shortcuts": [
+  {
+    "name": "Today's agenda",
+    "short_name": "Agenda",
+    "description": "View your agenda for today",
+    "url": "/today",
+    "icons": [
+      {
+        "src": "today.png",
+        "sizes": "192x192"
+        }
+    ]
+  }
+]
+
+/* Two shortcuts with the required properties */
+"shortcuts": [
+  {
+    "name": "Today's agenda",
+    "url": "/today"
+  },
+  {
+    "name": "Tomorrow's agenda",
+    "url": "/tomorrow"
+  }
+]
+
+/* Shortcut with a relative URL */
+"shortcuts": [
+  {
+    "name": "This week's agenda",
+    "url": "../agenda"
+  }
+]
+```
 
 ### Values
 
-Shortcut objects may contain the following values (only `name` and `url` are required):
+- `shortcuts`
 
-- `name`
+  - : An array of objects. Each object represents a key task or page in the web app.
 
-  - : A string that can be displayed to the user in a context menu.</td>
+    Each object can have one or more properties. Of these, only `name` and `url` are required.
+    The possible properties include:
 
-- `short_name` {{Optional_Inline}}
+    - `name`
 
-  - : A string that can be displayed where there is insufficient space to display the full name of the shortcut.
+      - : A string that represents the name of the shortcut, which is displayed to users in a context menu.
 
-- `description` {{Optional_Inline}}
+    - `short_name` {{Optional_Inline}}
 
-  - : A string that describes the purpose of the shortcut. It may be exposed to assistive technology.
+      - : A string that represents a short version of the shortcut's name.
+        It can be used where space to display the full name of the shortcut is insufficient.
 
-- `url`
+    - `description` {{Optional_Inline}}
 
-  - : A URL within the application that opens when the shortcut is activated.
+      - : A string that describes the purpose of the shortcut.
+        Browsers may expose this information to assistive technology, such as screen readers, which can help users understand the purpose of the shortcut.
 
-- `icons` {{Optional_Inline}}
-  - : A set of icons that represent the shortcut.
-    They can be used, e.g., in the context menu. When included, the icon set must include a 96x96 pixel icon.
+    - `url`
+
+      - : An app URL that opens when the associated shortcut is activated.
+        The URL must be within the scope of the web app manifest.
+        If the value is absolute, it should be same-origin with the page that links to the manifest file.
+        If the value is relative, it is resolved against the manifest file's URL.
+
+    - [`icons`](/en-US/docs/Web/Manifest/icons) {{Optional_Inline}}
+
+      - : An array of icon objects representing the shortcut in various contexts.
+        Similar to the [`icons`](/en-US/docs/Web/Manifest/icons) manifest member, each shortcut icon object must specify the [`src`](/en-US/docs/Web/Manifest/icons#src) property.
+
+## Description
+
+The `shortcuts` member allows you to define quick access points to key functionalities within your web app.
+Shortcuts are typically presented to users in a context menu when they interact with the web app's icon, such as by right-clicking or long-pressing it.
+Browsers typically render shortcuts in the same order as they are provided in the app's manifest file.
+When users activate a shortcut from this menu, browsers navigate them to the address specified in the `url` of the shortcut.
+
+> [!NOTE]
+> The presentation and the number of shortcuts shown to users is at the discretion of browsers and/or the operating system. For example, browsers may truncate the list of declared shortcuts to remain consistent with the conventions or limitations of the host operating system.
+
+### Benefits of adding shortcuts
+
+Shortcuts can enhance user experience by:
+
+- Providing quick navigation to frequently used features or pages within the web app
+- Making users more productive by allowing direct access to main actions from their home screen.
+- Making your web app feel more platform-native and familiar to users.
+
+For example, shortcuts can be used to link directly to a user's timeline within a social media app or provide fast access to a user's recent orders in an e-commerce context.
+
+### Best practices for adding shortcuts
+
+When creating shortcuts for your web app, keep the following guidelines in mind:
+
+- Keep the shortcut names short but descriptive enough to clearly convey their purpose to users.
+- Order the shortcuts by priority, with the most critical shortcut first in the list.
+- Ensure that shortcut URLs are within the scope of your web app.
+- Include icons for shortcuts to improve visual recognition. Provide icons in multiple sizes to ensure quality display across different devices and contexts.
+- Avoid adding too many shortcuts.
 
 ## Examples
 
-The following is a list of shortcuts a calendar app might have:
+### Defining shortcuts for a task management web app
+
+Consider a task management app. This example shows how to add two shortcuts. The "New Task" shortcut will take users directly to the task creation page, and the "Today's Tasks" shortcut will provide quick access to their list of tasks for the current day.
 
 ```json
-"shortcuts" : [
-  {
-    "name": "Today's agenda",
-    "url": "/today",
-    "description": "List of events planned for today"
-  },
-  {
-    "name": "New event",
-    "url": "/create/event"
-  },
-  {
-    "name": "New reminder",
-    "url": "/create/reminder"
-  }
-]
+{
+  "name": "TaskPro",
+  "short_name": "Tasks",
+  "start_url": "/dashboard",
+  "display": "standalone",
+  "shortcuts": [
+    {
+      "name": "New Task",
+      "short_name": "Add",
+      "description": "Quickly add a new task",
+      "url": "/tasks/new"
+    },
+    {
+      "name": "Today's Tasks",
+      "short_name": "Today",
+      "description": "View your tasks for today",
+      "url": "/tasks/today"
+    }
+  ]
+}
+```
+
+### Adding shortcut icons and using relative URLs
+
+Building on the previous example, the code below adds icons to the two shortcuts and demonstrates the use of a relative URL in an additional third shortcut. The `../projects` URL will be resolved relative to the app manifest's URL. For example, if the app manifest file is located at `/dashboard/manifest.json`, this shortcut would navigate to `/projects`.
+
+```json
+{
+  "name": "TaskPro",
+  "short_name": "Tasks",
+  "start_url": "/dashboard",
+  "display": "standalone",
+  "shortcuts": [
+    {
+      "name": "New Task",
+      "short_name": "Add",
+      "description": "Quickly add a new task",
+      "url": "/tasks/new",
+      "icons": [
+        {
+          "src": "/images/add.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Today's Tasks",
+      "short_name": "Today",
+      "description": "View your tasks for today",
+      "url": "/tasks/today",
+      "icons": [
+        {
+          "src": "/images/calendar.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "All Projects",
+      "short_name": "Projects",
+      "description": "View all your projects",
+      "url": "../projects"
+    }
+  ]
+}
 ```
 
 ## Specifications
@@ -65,4 +199,8 @@ The following is a list of shortcuts a calendar app might have:
 
 ## See also
 
-- [Creating shortcut action menus for PWAs](/en-US/docs/Web/Progressive_web_apps/How_to/Expose_common_actions_as_shortcuts)
+- [`icons`](/en-US/docs/Web/Manifest/icons) manifest member
+- [`scope`](/en-US/docs/Web/Manifest/scope) manifest member
+- [`start_url`](/en-US/docs/Web/Manifest/start_url) manifest member
+- [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)
+- How to [expose common actions as shortcuts](/en-US/docs/Web/Progressive_web_apps/How_to/Expose_common_actions_as_shortcuts) in PWAs
