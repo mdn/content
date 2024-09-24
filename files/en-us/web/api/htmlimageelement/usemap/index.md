@@ -16,7 +16,7 @@ providing the name of the client-side image map to apply to the image.
 ## Value
 
 A string providing the page-local URL (that is, a URL that begins
-with the hash or pound symbol, "`#`") of the {{HTMLElement("map")}} element
+with the hash or pound symbol, `#`) of the {{HTMLElement("map")}} element
 which defines the image map to apply to the image.
 
 You can learn more about client-side image maps in our learning article [Add a hitmap on top of an image](/en-US/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image).

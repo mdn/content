@@ -69,7 +69,7 @@ An object containing the following properties:
 
 - `fill`
 
-  - : `"none"`, `"forwards"`, `"backwards"`, "`both`", or `"auto"`.
+  - : `"none"`, `"forwards"`, `"backwards"`, `"both"`, or `"auto"`.
 
     Indicates whether the effect is reflected by its target(s) prior to playing
     (`"backwards"`), retained after the effect has completed (`"forwards"`), `"both"`, or

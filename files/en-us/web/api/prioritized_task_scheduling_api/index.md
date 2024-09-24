@@ -233,7 +233,7 @@ function mylog(text) {
 
 ### Feature checking
 
-Check whether prioritized task scheduling is supported by testing for the `scheduler` property in the global "`this`" exposed to the current scope.
+Check whether prioritized task scheduling is supported by testing for the `scheduler` property in the global scope.
 
 The code below prints "Feature: Supported" if the API is supported on this browser.
 
@@ -251,7 +251,7 @@ function mylog(text) {
 
 ```js
 // Check that feature is supported
-if ("scheduler" in this) {
+if ("scheduler" in globalThis) {
   mylog("Feature: Supported");
 } else {
   mylog("Feature: NOT Supported");
