@@ -7,8 +7,8 @@ browser-compat: html.manifest.shortcuts
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
-The `shortcuts` manifest member is used to specify one or more links to key tasks or pages within your web application.
-Browsers can use these values to assemble a context menu to be displayed by the operating system when a user interacts with the web app's icon.
+The `shortcuts` manifest member is used to specify links to key tasks or pages within your web application.
+Browsers can use this information to create a context menu, which is typically displayed when a user interacts with the web app's icon.
 
 ## Syntax
 
