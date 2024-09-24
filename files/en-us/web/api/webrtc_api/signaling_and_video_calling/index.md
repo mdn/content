@@ -10,7 +10,7 @@ page-type: guide
 
 [WebRTC](/en-US/docs/Web/API/WebRTC_API) is a fully peer-to-peer technology for the real-time exchange of audio, video, and data, with one central caveat. A form of discovery and media format negotiation must take place, [as discussed elsewhere](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#establishing_the_connection), in order for two devices on different networks to locate one another. This process is called **signaling** and involves both devices connecting to a third, mutually agreed-upon server. Through this third server, the two devices can locate one another, and exchange negotiation messages.
 
-In this article, we will further enhance the [WebSocket chat](https://webrtc-from-chat.glitch.me/) first created as part of our WebSocket documentation (this article link is forthcoming; it isn't actually online yet) to support opening a two-way video call between users. You can [try out this example on Glitch](https://webrtc-from-chat.glitch.me/), and you can [remix the example](https://glitch.com/edit/#!/remix/webrtc-from-chat) to experiment with it as well. You can also [look at the full project](https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat) on GitHub.
+In this article, we will further enhance the [WebSocket chat](https://webrtc-from-chat-v1-4.glitch.me/) first created as part of our WebSocket documentation (this article link is forthcoming; it isn't actually online yet) to support opening a two-way video call between users. You can [try out this example on Glitch](https://webrtc-from-chat-v1-4.glitch.me/), and you can [remix the example](https://glitch.com/edit/#!/remix/webrtc-from-chat-v1-4) to experiment with it as well. You can also [look at the full project](https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat) on GitHub.
 
 > [!NOTE]
 > If you try out the example on Glitch, please note that any changes made to the code will immediately reset any connections. In addition, there is a short timeout period; the Glitch instance is for quick experiments and testing only.
@@ -681,7 +681,7 @@ function handleICEGatheringStateChangeEvent(event) {
 
 ## Next steps
 
-You can now [try out this example on Glitch](https://webrtc-from-chat.glitch.me/) to see it in action. Open the Web console on both devices and look at the logged output—although you don't see it in the code as shown above, the code on the server (and on [GitHub](https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat)) has a lot of console output so you can see the signaling and connection processes at work.
+You can now [try out this example on Glitch](https://webrtc-from-chat-v1-4.glitch.me/) to see it in action. Open the Web console on both devices and look at the logged output—although you don't see it in the code as shown above, the code on the server (and on [GitHub](https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat)) has a lot of console output so you can see the signaling and connection processes at work.
 
 Another obvious improvement would be to add a "ringing" feature, so that instead of just asking the user for permission to use the camera and microphone, a "User X is calling. Would you like to answer?" prompt appears first.
 

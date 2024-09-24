@@ -41,7 +41,7 @@ The start-line and headers of the HTTP message are collectively known as the _he
 
 ## HTTP requests
 
-Let's look at the following example HTTP request that can be sent during form submission:
+Let's look at the following example HTTP POST request that's sent after a user submits a form on a web page:
 
 ```http
 POST /users HTTP/1.1

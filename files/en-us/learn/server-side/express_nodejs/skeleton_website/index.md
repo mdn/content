@@ -284,7 +284,7 @@ We can now start the server in almost exactly the same way as previously, but us
 > [!NOTE]
 > Now if you edit any file in the project the server will restart (or you can restart it by typing `rs` on the command prompt at any time). You will still need to reload the browser to refresh the page.
 >
-> We now have to call "`npm run <scriptname>`" rather than just `npm start`, because "start" is actually an npm command that is mapped to the named script. We could have replaced the command in the _start_ script but we only want to use _nodemon_ during development, so it makes sense to create a new script command.
+> We now have to call `npm run <scriptname>` rather than just `npm start`, because "start" is actually an npm command that is mapped to the named script. We could have replaced the command in the _start_ script but we only want to use _nodemon_ during development, so it makes sense to create a new script command.
 >
 > The `serverstart` command added to the scripts in the **package.json** above is a very good example. Using this approach means you no longer have to type a long command to start the server. Note that the particular command added to the script works for macOS or Linux only.
 
@@ -462,7 +462,7 @@ const usersRouter = require("./routes/users");
 > [!NOTE]
 > At this point, we have just _imported_ the module; we haven't actually used its routes yet (this happens just a little bit further down the file).
 
-Next, we create the `app` object using our imported _express_ module, and then use it to set up the view (template) engine. There are two parts to setting up the engine. First, we set the '`views`' value to specify the folder where the templates will be stored (in this case the subfolder **/views**). Then we set the '`view engine`' value to specify the template library (in this case "pug").
+Next, we create the `app` object using our imported _express_ module, and then use it to set up the view (template) engine. There are two parts to setting up the engine. First, we set the `"views"` value to specify the folder where the templates will be stored (in this case the subfolder **/views**). Then we set the `"view engine"` value to specify the template library (in this case "pug").
 
 ```js
 const app = express();
@@ -493,7 +493,7 @@ app.use("/users", usersRouter);
 ```
 
 > [!NOTE]
-> The paths specified above (`'/'` and '`/users'`) are treated as a prefix to routes defined in the imported files.
+> The paths specified above (`"/"` and `"/users"`) are treated as a prefix to routes defined in the imported files.
 > So for example, if the imported **users** module defines a route for `/profile`, you would access that route at `/users/profile`. We'll talk more about routes in a later article.
 
 The last middleware in the file adds handler methods for errors and HTTP 404 responses.
@@ -540,12 +540,12 @@ router.get("/", (req, res, next) => {
 module.exports = router;
 ```
 
-The route defines a callback that will be invoked whenever an HTTP `GET` request with the correct pattern is detected. The matching pattern is the route specified when the module is imported ('`/users`') plus whatever is defined in this file ('`/`'). In other words, this route will be used when a URL of `/users/` is received.
+The route defines a callback that will be invoked whenever an HTTP `GET` request with the correct pattern is detected. The matching pattern is the route specified when the module is imported (`"/users"`) plus whatever is defined in this file (`"/"`). In other words, this route will be used when a URL of `/users/` is received.
 
 > [!NOTE]
 > Try this out by running the server with node and visiting the URL in your browser: `http://localhost:3000/users/`. You should see a message: 'respond with a resource'.
 
-One thing of interest above is that the callback function has the third argument '`next`', and is hence a middleware function rather than a simple route callback. While the code doesn't currently use the `next` argument, it may be useful in the future if you want to add multiple route handlers to the `'/'` route path.
+One thing of interest above is that the callback function has the third argument `next`, and is hence a middleware function rather than a simple route callback. While the code doesn't currently use the `next` argument, it may be useful in the future if you want to add multiple route handlers to the `'/'` route path.
 
 ### Views (templates)
 

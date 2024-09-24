@@ -140,6 +140,10 @@ A number of other concrete steps you can take are:
 - Keep track of the most popular threats (the [current OWASP list is here](https://owasp.org/www-project-top-ten/)) and address the most common vulnerabilities first.
 - Use [vulnerability scanning tools](https://owasp.org/www-community/Vulnerability_Scanning_Tools) to perform automated security testing on your site. Later on, your very successful website may also find bugs by offering a bug bounty [like Mozilla does here](https://www.mozilla.org/en-US/security/bug-bounty/faq-webapp/).
 - Only store and display data that you need. For example, if your users must store sensitive information like credit card details, only display enough of the card number that it can be identified by the user, and not enough that it can be copied by an attacker and used on another site. The most common pattern at this time is to only display the last 4 digits of a credit card number.
+- Keep software up-to-date.
+  Most servers have regular security updates that fix or mitigate known vulnerabilities.
+  If possible, schedule regular automated updates, and ideally, schedule updates during times when your website has the lowest amount of traffic.
+  It's best to back up your data before updating and test new software versions to make sure there's no compatibility issues on your server.
 
 Web frameworks can help mitigate many of the more common vulnerabilities.
 

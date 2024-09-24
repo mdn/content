@@ -96,7 +96,7 @@ In the example below we have added a `shape-margin` to a basic shape. Change the
 
 In the examples above, we have used images or a visible element to define the shape, meaning that you can see the shape on the page. Instead, you might want to flow some text along a non-rectangular invisible line. We could, for example, add an empty floated {{htmlelement("div")}} or {{htmlelement("span")}} element to our DOM and make it invisible. However, we can create a shape with only CSS using [generated content](/en-US/docs/Learn/CSS/Howto/Generated_content) and keep all our styling functionality inside the CSS.
 
-In this example, we use generated content to insert an element with a height and width of 150px. We can then use basic Sshapes, box values, or even the alpha channel of an image to create a shape for the text to wrap around.
+In this example, we use generated content to insert an element with a height and width of 150px. We can then use basic shapes, box values, or even the alpha channel of an image to create a shape for the text to wrap around.
 
 {{EmbedGHLiveSample("css-examples/shapes/overview/generated-content.html", '100%', 850)}}
 

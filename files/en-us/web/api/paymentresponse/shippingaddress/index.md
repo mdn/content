@@ -79,6 +79,10 @@ function updateDetails(details, shippingAddress, resolve) {
 }
 ```
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}
