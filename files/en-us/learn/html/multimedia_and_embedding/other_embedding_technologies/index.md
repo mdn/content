@@ -325,7 +325,7 @@ If you find yourself needing to embed plugin content, this is the kind of inform
     </tr>
     <tr>
       <td>
-        <em>accurate </em>{{glossary("MIME type", 'media type')}}
+        <em>Accurate </em>{{glossary("MIME type", "media type")}}
         of the embedded content
       </td>
       <td><a href="/en-US/docs/Web/HTML/Element/embed#type"><code>type</code></a></td>
@@ -333,7 +333,7 @@ If you find yourself needing to embed plugin content, this is the kind of inform
     </tr>
     <tr>
       <td>
-        height and width (in CSS pixels) of the box controlled by the plugin
+        Height and width (in CSS pixels) of the box controlled by the plugin
       </td>
       <td>
          <a href="/en-US/docs/Web/HTML/Element/embed#height"><code>height</code></a><br /><a href="/en-US/docs/Web/HTML/Element/embed#width"><code>width</code></a>
@@ -343,10 +343,10 @@ If you find yourself needing to embed plugin content, this is the kind of inform
       </td>
     </tr>
     <tr>
-      <td>names and values, to feed the plugin as parameters</td>
-      <td>ad hoc attributes with those names and values</td>
+      <td>Independent HTML content as a fallback for an unavailable resource</td>
+      <td>Not supported (<code>&#x3C;noembed></code> is obsolete)</td>
       <td>
-        contained within opening and closing
+        Contained within the opening and closing
         <code>&#x3C;object></code> tags
       </td>
     </tr>
