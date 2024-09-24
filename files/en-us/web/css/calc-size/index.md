@@ -11,7 +11,7 @@ browser-compat: css.types.calc-size
 
 The **`calc-size()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) allows you to perform calculations on [intrinsic size values](/en-US/docs/Glossary/Intrinsic_Size) such as `auto`, [`fit-content`](/en-US/docs/Web/CSS/fit-content), and [`max-content`](/en-US/docs/Web/CSS/max-content); this is not supported by the regular {{cssxref("calc()")}} function.
 
-`calc-size()` return values can also be interpolated, enabling their use in [animations](/en-US/docs/Web/CSS/CSS_animations) and [transitions](/en-US/docs/Web/CSS/CSS_transitions). In effect, they have [`interpolate-size: allow-keywords`](/en-US/docs/Web/CSS/interpolate-size) applied to them automatically.
+`calc-size()` return values can also be interpolated, enabling their use in [animations](/en-US/docs/Web/CSS/CSS_animations) and [transitions](/en-US/docs/Web/CSS/CSS_transitions). In effect, they have [`interpolate-size: allow-keywords`](/en-US/docs/Web/CSS/interpolate-size) applied to them automatically. Note that `interpolate-size` is the preferred solution for enabling intrinsic size animations, as it is simpler to implement than `calc-size()`. You should only use `calc-size()` to enable animations if they also require calculations.
 
 ## Syntax
 
@@ -121,7 +121,7 @@ section:focus {
 }
 ```
 
-However, in the above case we are not calculating anything — we are putting `auto` into the `calc-size()` function and returning it unchanged. the {{cssxref("interpolate-size")}} property can also be used to enable animations like the above, and it is simpler to implement in most cases, especially when there are multiple animations to consider (it only needs to be declared once). `calc-size()` should only be used to enable intrinsic size animations if they also require calculations.
+However, in the above case we are not calculating anything — we are putting `auto` into the `calc-size()` function and returning it unchanged. The {{cssxref("interpolate-size")}} property can also be used to enable animations like the above, and it is simpler to implement in most cases, especially when there are multiple animations to consider (it only needs to be declared once). `calc-size()` should only be used to enable intrinsic size animations if they also require calculations.
 
 For example, in the following case we are animating the `width` _and_ applying a calculation to the intrinsic size end state:
 
@@ -214,7 +214,7 @@ In the CSS, we set `width` and `height` of the `<section>` to `calc-size()` func
 ```css
 section {
   width: calc-size(fit-content, size + 4rem);
-  height: calc-size(auto, size * 1.40;
+  height: calc-size(auto, size * 1.4);
 }
 ```
 

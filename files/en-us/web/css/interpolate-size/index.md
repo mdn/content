@@ -64,7 +64,7 @@ main {
 
 ### Values that can be interpolated
 
-At the time of writing, the following intrinsic values can be opted-in to animations:
+The following intrinsic values can currently be opted-in to animations:
 
 - `auto`
 - {{cssxref("min-content")}}
