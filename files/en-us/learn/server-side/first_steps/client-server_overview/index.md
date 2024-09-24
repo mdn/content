@@ -50,9 +50,9 @@ This request includes:
   - `POST` data. `POST` requests add new resources, the data for which is encoded within the request body.
   - Client-side cookies. Cookies contain session data about the client, including keys that the server can use to determine their login status and permissions/accesses to resources.
 
-Web servers wait for client request messages, process them when they arrive, and reply to the web browser with an HTTP Response message. The response contains an [HTTP Response status code](/en-US/docs/Web/HTTP/Status) indicating whether or not the request succeeded (e.g. "`200 OK`" for success, "`404 Not Found`" if the resource cannot be found, "`403 Forbidden`" if the user isn't authorized to see the resource, etc.). The body of a successful response to a `GET` request would contain the requested resource.
+Web servers wait for client request messages, process them when they arrive, and reply to the web browser with an HTTP response message. The response contains an [HTTP Response status code](/en-US/docs/Web/HTTP/Status) indicating whether or not the request succeeded (e.g., {{HTTPStatus("200", "200 OK")}} for success, {{HTTPStatus("404", "404 Not Found")}} if the resource cannot be found, {{HTTPStatus("403", "403 Forbidden")}} if the user isn't authorized to see the resource, etc.). The body of the response to a successful `GET` request contains the requested resource.
 
-When an HTML page is returned it is rendered by the web browser. As part of processing, the browser may discover links to other resources (e.g. an HTML page usually references JavaScript and CSS files), and will send separate HTTP Requests to download these files.
+When an HTML page is returned, it is rendered by the web browser. As part of processing, the browser may discover links to other resources (e.g. an HTML page usually references JavaScript and CSS files), and will send separate HTTP Requests to download these files.
 
 Both static and dynamic websites (discussed in the following sections) use exactly the same communication protocol/patterns.
 
@@ -171,7 +171,7 @@ The main difference is that the URL doesn't have any parameters. As you can see,
 
 #### The response
 
-The response from the request is shown below. The status code of "`302 Found`" tells the browser that the post succeeded, and that it must issue a second HTTP request to load the page specified in the `Location` field. The information is otherwise similar to that for the response to a `GET` request.
+The response from the request is shown below. The status code of `302 Found` tells the browser that the post succeeded, and that it must issue a second HTTP request to load the page specified in the `Location` field. The information is otherwise similar to that for the response to a `GET` request.
 
 ```http
 HTTP/1.1 302 FOUND
@@ -203,7 +203,7 @@ Let's recap on how this works, by looking again at the static site architecture 
 
 ![A simplified diagram of a static web server.](basic_static_app_server.png)
 
-When a user wants to navigate to a page, the browser sends an HTTP `GET` request specifying the URL of its HTML page. The server retrieves the requested document from its file system and returns an HTTP response containing the document and an [HTTP Response status code](/en-US/docs/Web/HTTP/Status) of "`200 OK`" (indicating success). The server might return a different status code, for example "`404 Not Found`" if the file is not present on the server, or "`301 Moved Permanently`" if the file exists but has been redirected to a different location.
+When a user wants to navigate to a page, the browser sends an HTTP `GET` request specifying the URL of its HTML page. The server retrieves the requested document from its file system and returns an HTTP response containing the document and an [HTTP Response status code](/en-US/docs/Web/HTTP/Status) of `200 OK` (indicating success). The server might return a different status code, for example `404 Not Found` if the file is not present on the server, or `301 Moved Permanently` if the file exists but has been redirected to a different location.
 
 The server for a static site will only ever need to process GET requests, because the server doesn't store any modifiable data. It also doesn't change its responses based on HTTP Request data (e.g. URL parameters or cookies).
 
@@ -255,7 +255,7 @@ Server-side web frameworks make writing code to handle the operations described 
 
 One of the most important operations they perform is providing simple mechanisms to map URLs for different resources/pages to specific handler functions. This makes it easier to keep the code associated with each type of resource separate. It also has benefits in terms of maintenance, because you can change the URL used to deliver a particular feature in one place, without having to change the handler function.
 
-For example, consider the following Django (Python) code that maps two URL patterns to two view functions. The first pattern ensures that an HTTP request with a resource URL of `/best` will be passed to a function named `index()` in the `views` module. A request that has the pattern "`/best/junior`", will instead be passed to the `junior()` view function.
+For example, consider the following Django (Python) code that maps two URL patterns to two view functions. The first pattern ensures that an HTTP request with a resource URL of `/best` will be passed to a function named `index()` in the `views` module. A request that has the pattern `/best/junior`, will instead be passed to the `junior()` view function.
 
 ```python
 # file: best/urls.py

@@ -38,7 +38,7 @@ stroke-dashoffset: unset;
 
 - {{cssxref("&lt;length&gt;")}}
 
-  - : Pixel units are handled the same as SVG units (see `<number>`, above) and font-based lengths such as `em` are calculated with repect to the element's SVG value for the text size; the effects of other length units may depend on the browser. The shifting effect for any value is the same as for `<number>` values (see above).
+  - : Pixel units are handled the same as SVG units (see `<number>`, above) and font-based lengths such as `em` are calculated with respect to the element's SVG value for the text size; the effects of other length units may depend on the browser. The shifting effect for any value is the same as for `<number>` values (see above).
 
 - {{cssxref("&lt;percentage&gt;")}}
 
