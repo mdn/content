@@ -36,7 +36,7 @@ browser-compat: api.AudioDecoder
 You need to add the following macros manually:
 
 - `\{{SecureContext_Header}}` — this generates a **Secure context** banner that indicates the technology is only available in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
-- `\{{AvailableInWorkers}}` — this generates a note that indicates that the technology is available [web workers](/en-US/docs/Web/API/Web_Workers_API).
+- `\{{AvailableInWorkers}}` — this generates a note that indicates that the technology is available in [worker](/en-US/docs/Web/API/Web_Workers_API) context.
 
 ## Banners that are added automatically
 
