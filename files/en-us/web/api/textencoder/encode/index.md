@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.TextEncoder.encode
 ---
 
-{{APIRef("Encoding API")}}
+{{APIRef("Encoding API")}}{{AvailableInWorkers}}
 
 The **`TextEncoder.encode()`** method takes a string as input, and returns a {{jsxref("Global_Objects/Uint8Array", "Uint8Array")}} containing the text given in parameters encoded with the specific method for that {{domxref("TextEncoder")}} object.
 
