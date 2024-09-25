@@ -8,7 +8,7 @@ status:
 browser-compat: api.WebSocketStream.WebSocketStream
 ---
 
-{{APIRef("WebSockets API")}}{{SeeCompatTable}}
+{{APIRef("WebSockets API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`WebSocketStream()`** constructor creates a new
 {{domxref("WebSocketStream")}} object instance.
