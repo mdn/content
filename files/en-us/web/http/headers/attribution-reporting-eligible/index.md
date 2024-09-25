@@ -9,9 +9,10 @@ browser-compat: http.headers.Attribution-Reporting-Eligible
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-The **`Attribution-Reporting-Eligible`** request header indicates that the corresponding response is eligible to register an attribution source or trigger.
+The HTTP **`Attribution-Reporting-Eligible`** request header indicates that the corresponding response is eligible to register an attribution source or trigger.
 
-This header is never set manually and is instead sent by the browser in response to various HTML element or JavaScript request settings. Depending on the allowed registrations specified in the `Attribution-Reporting-Eligible` value, the server would be expected to respond with an {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header to complete registration of an attribution source or trigger, respectively.
+This header is never set manually and is instead sent by the browser in response to various HTML element or JavaScript request settings.
+Depending on the allowed registrations specified in the `Attribution-Reporting-Eligible` value, the server would be expected to respond with an {{HTTPHeader("Attribution-Reporting-Register-Source")}} or {{HTTPHeader("Attribution-Reporting-Register-Trigger")}} header to complete registration of an attribution source or trigger, respectively.
 
 See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 
@@ -23,7 +24,7 @@ See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_AP
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -37,7 +38,8 @@ Attribution-Reporting-Eligible: <allowed-registrations>
 ## Directives
 
 - `<allowed-registrations>`
-  - : A structured-header dictionary representing the registrations allowed in the corresponding response. Possible keys are:
+  - : A structured-header dictionary representing the registrations allowed in the corresponding response.
+    Possible keys are:
     - `event-source`
       - : An [event-based attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#event-based_attribution_sources) can be registered.
     - `navigation-source`
@@ -63,6 +65,6 @@ Attribution-Reporting-Eligible: trigger
 
 ## See also
 
-- {{httpheader("Attribution-Reporting-Register-Source")}}
-- {{httpheader("Attribution-Reporting-Register-Trigger")}}
+- {{HTTPHeader("Attribution-Reporting-Register-Source")}}
+- {{HTTPHeader("Attribution-Reporting-Register-Trigger")}}
 - [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API)

@@ -7,7 +7,8 @@ browser-compat: http.headers.Clear-Site-Data
 
 {{securecontext_header}}{{HTTPSidebar}}
 
-The **`Clear-Site-Data`** header clears browsing data (cookies, storage, cache) associated with the requesting website. It allows web developers to have more control over the data stored by a client browser for their origins.
+The HTTP **`Clear-Site-Data`** response header clears browsing data (cookies, storage, cache) associated with the requesting website.
+It allows web developers to have more control over the data stored by a client browser for their origins.
 
 <table class="properties">
   <tbody>
@@ -17,14 +18,15 @@ The **`Clear-Site-Data`** header clears browsing data (cookies, storage, cache) 
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
 
 ## Syntax
 
-The `Clear-Site-Data` header accepts one or more directives. If all types of data should be cleared, the wildcard directive (`"*"`) can be used.
+The `Clear-Site-Data` header accepts one or more directives.
+If all types of data should be cleared, the wildcard directive (`"*"`) can be used.
 
 ```http
 // Single directive
@@ -40,24 +42,29 @@ Clear-Site-Data: "*"
 ## Directives
 
 > [!NOTE]
-> All directives must comply with the [quoted-string grammar](https://datatracker.ietf.org/doc/html/rfc7230#section-3.2.6). A directive that does not include the double quotes is invalid.
+> All directives must comply with the [quoted-string grammar](https://datatracker.ietf.org/doc/html/rfc7230#section-3.2.6).
+> A directive that does not include the double quotes is invalid.
 
 - `"cache"` {{Experimental_Inline}}
 
-  - : Indicates that the server wishes to remove locally cached data (the browser cache, see [HTTP caching](/en-US/docs/Web/HTTP/Caching)) for the origin of the response URL. Depending on the browser, this might also clear out things like pre-rendered pages, script caches, WebGL shader caches, or address bar suggestions.
+  - : Indicates that the server wishes to remove locally cached data (the browser cache, see [HTTP caching](/en-US/docs/Web/HTTP/Caching)) for the origin of the response URL.
+    Depending on the browser, this might also clear out things like pre-rendered pages, script caches, WebGL shader caches, or address bar suggestions.
 
 - `"clientHints"` {{Experimental_Inline}}
 
-  - : Indicates that the server wishes to remove all [client hints](/en-US/docs/Web/HTTP/Client_hints) (requested via {{httpheader("Accept-CH")}}) stored for the origin of the response URL.
+  - : Indicates that the server wishes to remove all [client hints](/en-US/docs/Web/HTTP/Client_hints) (requested via {{HTTPHeader("Accept-CH")}}) stored for the origin of the response URL.
 
     > [!NOTE]
     > In browsers that support the `"clientHints"` data type, client hints are also cleared when the `"cache"`, `"cookies"`, or `"*"` types are specified. `"clientHints"` is therefore only needed when none of those other types are specified.
 
 - `"cookies"`
-  - : Indicates that the server wishes to remove all cookies for the origin of the response URL. HTTP authentication credentials are also cleared out. This affects the entire registered domain, including subdomains. So `https://example.com` as well as `https://stage.example.com`, will have cookies cleared.
+  - : Indicates that the server wishes to remove all cookies for the origin of the response URL.
+    HTTP authentication credentials are also cleared out.
+    This affects the entire registered domain, including subdomains. So `https://example.com` as well as `https://stage.example.com`, will have cookies cleared.
 - `"storage"`
 
-  - : Indicates that the server wishes to remove all DOM storage for the origin of the response URL. This includes storage mechanisms such as:
+  - : Indicates that the server wishes to remove all DOM storage for the origin of the response URL.
+    This includes storage mechanisms such as:
 
     - localStorage (executes `localStorage.clear`),
     - sessionStorage (executes `sessionStorage.clear`),
@@ -76,7 +83,8 @@ Clear-Site-Data: "*"
 
 ### Sign out of a website
 
-If a user signs out of your website or service, you might want to remove locally stored data. To do this, add the `Clear-Site-Data` header to the page that confirms the logging out from the site has been accomplished successfully (`https://example.com/logout`, for example):
+If a user signs out of your website or service, you might want to remove locally stored data.
+To do this, add the `Clear-Site-Data` header to the page that confirms the logging out from the site has been accomplished successfully (`https://example.com/logout`, for example):
 
 ```http
 Clear-Site-Data: "cache", "cookies", "storage", "executionContexts"

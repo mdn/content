@@ -7,16 +7,13 @@ browser-compat: http.headers.Content-Location
 
 {{HTTPSidebar}}
 
-The **`Content-Location`** header indicates an alternate
-location for the returned data. The principal use is to indicate the URL of a resource
-transmitted as the result of [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation).
+The HTTP **`Content-Location`** header indicates an alternate location for the returned data.
+The principal use is to indicate the URL of a resource transmitted as the result of [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation).
 
 {{HTTPHeader("Location")}} and `Content-Location` are different.
-`Location` indicates the URL of a redirect, while
-`Content-Location` indicates the direct URL to use to access the resource,
-without further content negotiation in the future. `Location` is a header
-associated with the response, while `Content-Location` is associated with the
-data returned. This distinction may seem abstract without [examples](#examples).
+`Location` indicates the URL of a redirect, while `Content-Location` indicates the direct URL to use to access the resource, without further content negotiation in the future.
+`Location` is a header associated with the response, while `Content-Location` is associated with the data returned.
+This distinction may seem abstract without [examples](#examples).
 
 <table class="properties">
   <tbody>
@@ -26,7 +23,7 @@ data returned. This distinction may seem abstract without [examples](#examples).
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -39,7 +36,7 @@ Content-Location: <url>
 
 ## Directives
 
-- \<url>
+- `<url>`
   - : A [relative](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#absolute_urls_vs._relative_urls)
     (to the request URL) or [absolute](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#absolute_urls_vs._relative_urls)
     URL.

@@ -7,7 +7,7 @@ browser-compat: http.headers.Content-Type
 
 {{HTTPSidebar}}
 
-The **`Content-Type`** {{Glossary("representation header")}} is used to indicate the original {{Glossary("MIME type", "media type")}} of the resource prior to any content encoding applied before transmission.
+The HTTP **`Content-Type`** {{Glossary("Representation header")}} is used to indicate the original {{Glossary("MIME type", "media type")}} of the resource prior to any content encoding applied before transmission.
 
 In responses, the `Content-Type` header informs the client about the media type of the returned data.
 In requests such as {{HTTPMethod("POST")}} or {{HTTPMethod("PUT")}}, the client uses the `Content-Type` header to specify the type of content being sent to the server.
@@ -41,12 +41,14 @@ The `Content-Type` header differs from {{HTTPHeader("Content-Encoding")}} in tha
         {{Glossary("CORS-safelisted request header")}}
       </th>
       <td>
-        Yes, but values can't contain a <em>CORS-unsafe request header byte</em>: <code>0x00</code>-<code>0x1F</code> (except <code>0x09</code> (HT)), <code>"():&#x3C;>?@[\]{}</code>, and <code>0x7F</code> (DEL).
-        <br /><br />It also needs to have a media type of its parsed value (ignoring parameters) of either <code>application/x-www-form-urlencoded</code>, <code>multipart/form-data</code>, or <code>text/plain</code>.
+        Yes*
       </td>
     </tr>
   </tbody>
 </table>
+
+\* Values can't contain a [CORS-unsafe request header byte](https://fetch.spec.whatwg.org/#cors-unsafe-request-header-byte): `"():<>?@[\]{},`, Delete `0x7F`, and control characters `0x00` to `0x19` except for Tab `0x09`.
+It also needs to have a media type of its parsed value (ignoring parameters) of either `application/x-www-form-urlencoded`, `multipart/form-data`, or `text/plain`.
 
 ## Syntax
 
@@ -68,7 +70,8 @@ Content-Type: multipart/form-data; boundary=ExampleBoundaryString
   - : The [media type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) of the resource or data.
     May contain the following parameters:
 
-    - **`charset`**: Indicates the {{Glossary("character encoding")}} standard used. The value is case insensitive, but lowercase is preferred.
+    - **`charset`**: Indicates the {{Glossary("character encoding")}} standard used.
+      The value is case insensitive, but lowercase is preferred.
     - **`boundary`**: For multipart entities, the `boundary` parameter is required.
       It is used to demarcate the boundaries of the multiple parts of the message.
       The value consists of 1 to 70 characters (not ending with white space) known to be robust in the context of different systems (e.g., email gateways).
@@ -187,7 +190,7 @@ Content-Type: application/json
 
 ## See also
 
-- {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}
+- {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}} headers
 - {{HTTPHeader("Vary")}}
 - {{HTTPHeader("Content-Encoding")}}
 - {{HTTPHeader("Content-Disposition")}}

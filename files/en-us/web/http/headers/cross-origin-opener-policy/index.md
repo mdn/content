@@ -11,7 +11,8 @@ The HTTP **`Cross-Origin-Opener-Policy`** (COOP) response header allows you to e
 
 COOP will process-isolate your document and potential attackers can't access your global object if they were to open it in a popup, preventing a set of cross-origin attacks dubbed [XS-Leaks](https://github.com/xsleaks/xsleaks).
 
-If a cross-origin document with COOP is opened in a new window, the opening document will not have a reference to it, and the [`window.opener`](/en-US/docs/Web/API/Window/opener) property of the new window will be `null`. This allows you to have more control over references to a window than [`rel=noopener`](/en-US/docs/Web/HTML/Attributes/rel/noopener), which only affects outgoing navigations.
+If a cross-origin document with COOP is opened in a new window, the opening document will not have a reference to it, and the [`window.opener`](/en-US/docs/Web/API/Window/opener) property of the new window will be `null`.
+This allows you to have more control over references to a window than [`rel=noopener`](/en-US/docs/Web/HTML/Attributes/rel/noopener), which only affects outgoing navigations.
 
 <table class="properties">
   <tbody>
@@ -21,7 +22,7 @@ If a cross-origin document with COOP is opened in a new window, the opening docu
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -37,11 +38,13 @@ Cross-Origin-Opener-Policy: same-origin
 ### Directives
 
 - `unsafe-none`
-  - : This is the default value. Allows the document to be added to its opener's browsing context group unless the opener itself has a COOP of `same-origin` or `same-origin-allow-popups`.
+  - : This is the default value.
+    Allows the document to be added to its opener's browsing context group unless the opener itself has a COOP of `same-origin` or `same-origin-allow-popups`.
 - `same-origin-allow-popups`
   - : Retains references to newly opened windows or tabs that either don't set COOP or that opt out of isolation by setting a COOP of `unsafe-none`.
 - `same-origin`
-  - : Isolates the browsing context exclusively to same-origin documents. Cross-origin documents are not loaded in the same browsing context.
+  - : Isolates the browsing context exclusively to same-origin documents.
+    Cross-origin documents are not loaded in the same browsing context.
 
 ## Examples
 
@@ -80,4 +83,4 @@ if (crossOriginIsolated) {
 
 ## See also
 
-- {{httpheader("Cross-Origin-Embedder-Policy")}}
+- {{HTTPHeader("Cross-Origin-Embedder-Policy")}}

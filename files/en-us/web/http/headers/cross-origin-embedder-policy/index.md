@@ -7,8 +7,7 @@ browser-compat: http.headers.Cross-Origin-Embedder-Policy
 
 {{HTTPSidebar}}
 
-The HTTP **`Cross-Origin-Embedder-Policy`** (COEP) response header configures
-embedding cross-origin resources into the document.
+The HTTP **`Cross-Origin-Embedder-Policy`** (COEP) response header configures embedding cross-origin resources into the document.
 
 <table class="properties">
   <tbody>
@@ -18,7 +17,7 @@ embedding cross-origin resources into the document.
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -32,12 +31,16 @@ Cross-Origin-Embedder-Policy: unsafe-none | require-corp | credentialless
 ### Directives
 
 - `unsafe-none`
-  - : This is the default value. Allows the document to fetch cross-origin resources without giving explicit permission through the CORS protocol or the {{HTTPHeader("Cross-Origin-Resource-Policy")}} header.
+  - : This is the default value.
+    Allows the document to fetch cross-origin resources without giving explicit permission through the CORS protocol or the {{HTTPHeader("Cross-Origin-Resource-Policy")}} header.
 - `require-corp`
   - : A document can only load resources from the same origin, or resources explicitly marked as loadable from another origin.
     If a cross origin resource supports CORS, the [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute or the {{HTTPHeader("Cross-Origin-Resource-Policy")}} header must be used to load it without being blocked by COEP.
 - `credentialless`
-  - : [no-cors](/en-US/docs/Web/API/Request/mode) cross-origin requests are sent without credentials. In particular, it means Cookies are omitted from the request, and ignored from the response. The responses are allowed **without** an explicit permission via the {{HTTPHeader("Cross-Origin-Resource-Policy")}} header. [Navigate](/en-US/docs/Web/API/Request/mode) responses behave similarly as the `require-corp` mode: They require {{HTTPHeader("Cross-Origin-Resource-Policy")}} response header.
+  - : [no-cors](/en-US/docs/Web/API/Request/mode) cross-origin requests are sent without credentials.
+    In particular, it means Cookies are omitted from the request, and ignored from the response.
+    The responses are allowed **without** an explicit permission via the {{HTTPHeader("Cross-Origin-Resource-Policy")}} header.
+    [Navigate](/en-US/docs/Web/API/Request/mode) responses behave similarly as the `require-corp` mode: They require {{HTTPHeader("Cross-Origin-Resource-Policy")}} response header.
 
 ## Examples
 
@@ -86,4 +89,4 @@ If CORS is not supported for some images, a COEP value of `credentialless` can b
 
 ## See also
 
-- {{httpheader("Cross-Origin-Opener-Policy")}}
+- {{HTTPHeader("Cross-Origin-Opener-Policy")}}

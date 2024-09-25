@@ -10,7 +10,7 @@ spec-urls: https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-digest-heade
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-The **`Content-Digest`** response or request header provides a {{Glossary("digest")}} of the actual message content, the stream of octets framed in an HTTP message.
+The HTTP **`Content-Digest`** header provides a {{Glossary("digest")}} of the message content in an HTTP message.
 As such, `Content-Digest` is dependent on among other things {{HTTPHeader("Content-Encoding")}} and {{HTTPHeader("Content-Range")}}, but not dependent on, for example, HTTP/1.1's {{HTTPHeader("Transfer-Encoding")}}.
 `Content-Digest` may coincide with {{HTTPHeader("Repr-Digest")}} if a representation was sent in a single message.
 
@@ -26,7 +26,7 @@ A client can request that a server emit a `Content-Digest` by issuing {{HTTPHead
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>

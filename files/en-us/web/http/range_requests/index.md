@@ -6,11 +6,13 @@ page-type: guide
 
 {{HTTPSidebar}}
 
-An HTTP {{HTTPHeader("Range")}} request asks the server to send only a portion of an HTTP message back to a client. Range requests are useful for clients like media players that support random access, data tools that know they need only part of a large file, and download managers that let the user pause and resume the download.
+An HTTP {{HTTPHeader("Range")}} request asks the server to send a portion of a resource back to a client instead of the complete resource.
+Range requests are useful for clients like media players that support random access, data tools that know they need only part of a large file, and download managers that let the user pause and resume a download.
 
 ## Checking if a server supports partial requests
 
-If an HTTP response includes the {{HTTPHeader("Accept-Ranges")}} header and its value is anything other than "`none`", then the server supports range requests. You can perform a manual check by issuing a {{HTTPMethod("HEAD")}} request with a tool like cURL.
+If an HTTP response includes the {{HTTPHeader("Accept-Ranges")}} header and its value is anything other than `none`, then the server supports range requests.
+You can perform a manual check by issuing a {{HTTPMethod("HEAD")}} request with a tool like cURL.
 
 ```bash
 curl -I http://i.imgur.com/z4d4kWk.jpg
@@ -23,9 +25,11 @@ Accept-Ranges: bytes
 Content-Length: 146515
 ```
 
-In this response, `Accept-Ranges: bytes` indicates that bytes can be used as units to define a range. Here the {{HTTPHeader("Content-Length")}} header is also useful as it indicates the full size of the image to retrieve.
+In this response, `Accept-Ranges: bytes` indicates that bytes can be used as units to define a range.
+Here, the {{HTTPHeader("Content-Length")}} header is useful as it indicates the full size of the image to retrieve.
 
-If sites omit the `Accept-Ranges` header, they likely don't support partial requests. Some sites include the header but give it the explicit value "`none`" to indicate they lack support:
+If sites omit the `Accept-Ranges` header, they likely don't support partial requests.
+Some sites include the header but give it the explicit value `none` to indicate they lack support:
 
 ```bash
 curl -I https://www.youtube.com/watch?v=EwTZ2xpQwpA
