@@ -744,7 +744,7 @@ JavaScript is single-threaded by nature. There's no [paralleling](https://en.wik
 
 There are three idiomatic ways to write asynchronous code in JavaScript:
 
-- Callback-based (such as [`setTimeout()`](/en-US/docs/Web/API/setTimeout))
+- Callback-based (such as [`setTimeout()`](/en-US/docs/Web/API/Window/setTimeout))
 - [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)-based
 - [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)/[`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await), which is a syntactic sugar for Promises
 

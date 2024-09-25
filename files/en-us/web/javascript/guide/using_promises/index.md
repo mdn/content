@@ -434,7 +434,7 @@ However, before you compose promises sequentially, consider if it's really neces
 
 A {{jsxref("Promise")}} can be created from scratch using its [constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise). This should be needed only to wrap old APIs.
 
-In an ideal world, all asynchronous functions would already return promises. Unfortunately, some APIs still expect success and/or failure callbacks to be passed in the old way. The most obvious example is the [`setTimeout()`](/en-US/docs/Web/API/setTimeout) function:
+In an ideal world, all asynchronous functions would already return promises. Unfortunately, some APIs still expect success and/or failure callbacks to be passed in the old way. The most obvious example is the [`setTimeout()`](/en-US/docs/Web/API/Window/setTimeout) function:
 
 ```js
 setTimeout(() => saySomething("10 seconds passed"), 10 * 1000);
@@ -510,7 +510,7 @@ console.log(1); // 1, 2, 3, 4
 
 ### Task queues vs. microtasks
 
-Promise callbacks are handled as a [microtask](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) whereas [`setTimeout()`](/en-US/docs/Web/API/setTimeout) callbacks are handled as task queues.
+Promise callbacks are handled as a [microtask](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) whereas [`setTimeout()`](/en-US/docs/Web/API/Window/setTimeout) callbacks are handled as task queues.
 
 ```js
 const promise = new Promise((resolve, reject) => {
