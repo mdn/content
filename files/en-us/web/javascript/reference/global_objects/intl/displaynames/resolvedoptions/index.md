@@ -54,7 +54,6 @@ The object returned by `resolvedOptions()` has the following properties:
     the default value (`"dialect"`). Its value is either `"dialect"`
     or `"standard"`.
 
-
 ## Examples
 
 ### Using resolvedOptions
