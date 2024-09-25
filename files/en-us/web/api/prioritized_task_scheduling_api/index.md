@@ -23,13 +23,13 @@ In this page, we also include information about the {{domxref("Scheduling.isInpu
 
 The Prioritized Task Scheduling API is available in both window and worker threads using the `scheduler` property on the global object.
 
-The main API methods are {{domxref('scheduler.postTask()')}} and {{domxref('scheduler.yield()')}}. `scheduler.postTask()` takes a callback function (the task) and returns a promise that resolves with the return value of the function, or rejects with an error. `scheduler.yield()` turns any async function into a task by yielding the main thread to the browser for other work, with execution continuing when the returned promise is resolved.
+The main API methods are {{domxref('scheduler.postTask()')}} and {{domxref('scheduler.yield()')}}. `scheduler.postTask()` takes a callback function (the task) and returns a promise that resolves with the return value of the function or rejects with an error. `scheduler.yield()` turns any [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) function into a task by yielding the main thread to the browser for other work, with execution continuing when the returned promise is resolved.
 
-`scheduler.postTask()` is more configurable, like explicitly setting its task priority or `AbortSignal` to cancel the task. `scheduler.yield()` is simpler and can be `await`ed in any async function without having to provide the followup task in another function.
+The two methods have similar functionality but different levels of control. `scheduler.postTask()` is more configurable — for example, it allows task priority to be explicitly set and task cancellation via an [`AbortSignal`](/en-US/docs/Web/API/AbortSignal). `scheduler.yield()` on the other hand is simpler and can be `await`ed in any `async` function without having to provide a followup task in another function.
 
 #### `scheduler.yield()`
 
-To break up long-running JavaScript tasks so they don't block the main thread, a call to `scheduler.yield()` can be inserted to temporarily yield the main thread back to the browser, which creates a task to continue execution where it left off.
+To break up long-running JavaScript tasks so they don't block the main thread, insert a `scheduler.yield()` call to temporarily yield the main thread back to the browser, which creates a task to continue execution where it left off.
 
 ```js
 async function slowTask() {
@@ -39,19 +39,19 @@ async function slowTask() {
 }
 ```
 
-`scheduler.yield()` returns a promise that can be awaited for when execution can continue. This allows work that belongs in the same function to stay in the same function, but without blocking the main thread the entire time the function runs.
+`scheduler.yield()` returns a promise that can be awaited to continue execution. This allows work belonging to the same function to be included there, without blocking the main thread when the function runs.
 
-`scheduler.yield()` takes no arguments. The task that triggers its continuation has a default [`user-visible`](#user-visible) priority, but if `scheduler.yield()` is called within a `scheduler.postTask()` callback, it will [inherit the priority of the surrounding task](/en-US/docs/Web/API/Scheduler/yield#inheriting_task_priorities).
+`scheduler.yield()` takes no arguments. The task that triggers its continuation has a default [`user-visible`](#user-visible) priority; however, if `scheduler.yield()` is called within a `scheduler.postTask()` callback, it will [inherit the priority of the surrounding task](/en-US/docs/Web/API/Scheduler/yield#inheriting_task_priorities).
 
 #### `scheduler.postTask()`
 
-`scheduler.postTask()` called with no arguments creates a task with a default [`user-visible`](#user-visible) priority that cannot be aborted or have its priority changed.
+When `scheduler.postTask()` is called with no arguments, it creates a task with a default [`user-visible`](#user-visible) priority that cannot be aborted or have its priority changed.
 
 ```js
 const promise = scheduler.postTask(myTask);
 ```
 
-Because the method returns a promise, you can wait on its resolution asynchronously using `then`, and catch errors thrown by the task callback function (or when the task is aborted) using `catch`. The callback function can be any kind of function (below we demonstrate an arrow function).
+Because the method returns a promise, you can wait on its resolution asynchronously using [`then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then), and catch errors thrown by the task callback function (or when the task is aborted) using [`catch`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch). The callback function can be any kind of function (below we demonstrate an arrow function).
 
 ```js
 scheduler

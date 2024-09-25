@@ -24,7 +24,7 @@ None.
 
 ## Examples
 
-If the feature is defined, an instance of this object is returned by the {{jsxref("globalThis")}} in both workers and the main thread.
+If the feature is defined, an instance of this object is returned by the {{jsxref("globalThis")}} property in both workers and the main thread.
 
 The code below shows a simple task that resolves with the text 'Task executing'.
 This text is logged on success.
