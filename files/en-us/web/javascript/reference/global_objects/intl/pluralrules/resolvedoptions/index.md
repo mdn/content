@@ -29,12 +29,10 @@ The object has the following properties:
 
 - `locale`
   - : The BCP 47 language tag for the locale actually used. If any Unicode extension values were requested in the input BCP 47 language tag that led to this locale, the key-value pairs that were requested and are supported for this locale are included in `locale`.
+- `type`
+  - : The type used (`cardinal` or `ordinal`).
 - `pluralCategories`
   - : An {{jsxref("Array")}} of plural categories used by the given locale, selected from the list `"zero"`, `"one"`, `"two"`, `"few"`, `"many"` and `"other"`.
-- `type`
-
-  - : The type used (`cardinal` or `ordinal`).
-
 - `roundingIncrement` {{experimental_inline}}
   - : The rounding-increment precision (the increment used when rounding numbers).
     This is the value specified in the `options.roundingIncrement` argument in the constructor.
