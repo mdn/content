@@ -31,7 +31,7 @@ User-Agent: curl/8.7.1
 Accept: */*
 ```
 
-The server response contains headers and no response body:
+The response only contains headers and doesn't include a response body:
 
 ```http
 HTTP/2 200

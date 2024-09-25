@@ -37,6 +37,9 @@ rgb(0, 255, 255)
 rgb(0, 255, 255, 50%)
 ```
 
+> [!NOTE]
+> For compatibility reasons, [Web API](/en-US/docs/Web/API/Window/getComputedStyle)-serialized color values are expressed as `rgb()` colors if the alpha channel value is exactly 1, and `rgba()` colors otherwise. In both cases, legacy syntax is used, with commas as separators (for example `rgb(255, 0, 0)`).
+
 ### Values
 
 Below are descriptions of the allowed values for both absolute and [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors).

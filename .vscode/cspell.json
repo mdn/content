@@ -64,7 +64,6 @@
     "favourite-colour",
     "ucaf:.*\""
   ],
-  "allowCompoundWords": true,
   "dictionaryDefinitions": [
     {
       "name": "terms-abbreviations",

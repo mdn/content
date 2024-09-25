@@ -20,7 +20,7 @@ _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 - {{domxref("CSSPositionTryRule.name")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Represents the name of the position try option specified by the `@position-try` at-rule's {{cssxref("dashed-ident")}}.
 - {{domxref("CSSPositionTryRule.style")}} {{ReadOnlyInline}} {{experimental_inline}}
-  - : Returns a {{domxref("CSSPositionTryDescriptors")}} object representing the declarations set in the body of the `@position-try` at-rule.
+  - : A {{domxref("CSSPositionTryDescriptors")}} object that represents the declarations set in the body of the `@position-try` at-rule.
 
 ## Instance methods
 

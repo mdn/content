@@ -25,7 +25,7 @@ By default, only the first child of the `<semantics>` element is rendered while 
 >   - `"SVG1.1"`
 >   - `"text/html"`
 >   - `"image/svg+xml"`
->   - `"application/xml`".
+>   - `"application/xml"`
 >
 > Note that `"application/mathml+xml"` is _not_ mentioned here as it does not distinguish between Content or Presentation MathML.
 

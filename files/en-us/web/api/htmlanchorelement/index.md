@@ -20,7 +20,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLAnchorElement.download")}}
   - : A string indicating that the linked resource is intended to be downloaded rather than displayed in the browser. The value represents the proposed name of the file. If the name is not a valid filename of the underlying OS, the browser will adapt it.
 - {{domxref("HTMLAnchorElement.hash")}}
-  - : A string representing the fragment identifier, including the leading hash mark ('`#`'), if any, in the referenced URL.
+  - : A string representing the fragment identifier, including the leading hash mark (`#`), if any, in the referenced URL.
 - {{domxref("HTMLAnchorElement.host")}}
   - : A string representing the hostname and port (if it's not the default port) in the referenced URL.
 - {{domxref("HTMLAnchorElement.hostname")}}
@@ -34,13 +34,13 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLAnchorElement.password")}}
   - : A string containing the password specified before the domain name.
 - {{domxref("HTMLAnchorElement.pathname")}}
-  - : A string containing an initial `'/'` followed by the path of the URL, not including the query string or fragment.
+  - : A string containing an initial `/` followed by the path of the URL, not including the query string or fragment.
 - {{domxref("HTMLAnchorElement.ping")}}
   - : A space-separated list of URLs. When the link is followed, the browser will send {{HTTPMethod("POST")}} requests with the body PING to the URLs.
 - {{domxref("HTMLAnchorElement.port")}}
   - : A string representing the port component, if any, of the referenced URL.
 - {{domxref("HTMLAnchorElement.protocol")}}
-  - : A string representing the protocol component, including trailing colon ('`:`'), of the referenced URL.
+  - : A string representing the protocol component, including trailing colon (`:`), of the referenced URL.
 - {{domxref("HTMLAnchorElement.referrerPolicy")}}
   - : A string that reflects the [`referrerpolicy`](/en-US/docs/Web/HTML/Element/a#referrerpolicy) HTML attribute indicating which referrer to use.
 - {{domxref("HTMLAnchorElement.rel")}}
@@ -48,7 +48,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLAnchorElement.relList")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMTokenList")}} that reflects the [`rel`](/en-US/docs/Web/HTML/Element/a#rel) HTML attribute, as a list of tokens.
 - {{domxref("HTMLAnchorElement.search")}}
-  - : A string representing the search element, including leading question mark ('`?`'), if any, of the referenced URL.
+  - : A string representing the search element, including leading question mark (`?`), if any, of the referenced URL.
 - {{domxref("HTMLAnchorElement.target")}}
   - : A string that reflects the [`target`](/en-US/docs/Web/HTML/Element/a#target) HTML attribute, indicating where to display the linked resource.
 - {{domxref("HTMLAnchorElement.text")}}

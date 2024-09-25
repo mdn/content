@@ -23,7 +23,7 @@ Content-Security-Policy: trusted-types <policyName> <policyName> 'allow-duplicat
 ```
 
 - \<policyName>
-  - : A valid policy name consists only of alphanumeric characters, or one of "`-#=_/@.%`". A star (`*`) as a policy name instructs the user agent to allow any unique policy name ('`allow-duplicates`' may relax that further).
+  - : A valid policy name consists only of alphanumeric characters, or one of `-#=_/@.%`. A star (`*`) as a policy name instructs the user agent to allow any unique policy name (`allow-duplicates` may relax that further).
 - `'none'`
   - : Disallows creating any Trusted Type policy (same as not specifying any _\<policyName>_).
 - `'allow-duplicates'`

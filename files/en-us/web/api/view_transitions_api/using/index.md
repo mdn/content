@@ -496,7 +496,7 @@ Styles are render blocked by default, and scripts can be render blocked using th
 To ensure that your initial HTML has been parsed and will always render consistently before the transition animation runs, you can use [`<link rel="expect">`](/en-US/docs/Web/HTML/Attributes/rel#expect). In this element, you include the following attributes:
 
 - `rel="expect"` to indicate that you want to use this `<link>` element to render block some HTML on the page.
-- `href="#element-id"` to indicate the ID of the elment you want to render block.
+- `href="#element-id"` to indicate the ID of the element you want to render block.
 - `blocking="render"` to render block the specified HTML.
 
 Let's explore what this looks like with a simple example HTML document:

@@ -54,7 +54,7 @@ The server retrieves the requested document from its file system and returns an 
 
 ### Dynamic sites
 
-A dynamic website is one where some of the response content is generated _dynamically_, only when needed. On a dynamic website HTML pages are normally created by inserting data from a database into placeholders in HTML templates (this is a much more efficient way of storing large amounts of content than using static websites).
+A dynamic website is one where some of the response content is generated _dynamically_, only when needed. On a dynamic website, HTML pages are normally created by inserting data from a database into placeholders in HTML templates (this is a much more efficient way of storing large amounts of content than using static websites).
 
 A dynamic site can return different data for a URL based on information provided by the user or stored preferences and can perform other operations as part of returning a response (e.g. sending notifications).
 

@@ -7,7 +7,7 @@ status:
 browser-compat: api.GPUSampler
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPUSampler`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents an object that can control how shaders transform and filter texture resource data.
 

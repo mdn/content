@@ -12,7 +12,7 @@ Use the identity API to get an [OAuth2](https://oauth.net/2/) authorization code
 OAuth2 flows vary between service provider so, to use this API with a particular service provider, consult their documentation. For example:
 
 - [Google](https://developers.google.com/identity/protocols/oauth2/javascript-implicit-flow)
-- [GitHub](https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth-apps)
+- [GitHub](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps)
 
 The identity API provides the {{WebExtAPIRef("identity.launchWebAuthFlow()")}} function. This authenticates the user with the service, if necessary, and asks the user to authorize the extension to access data, if necessary. The function completes with an access token or authorization code, depending on the provider.
 
