@@ -17,11 +17,11 @@ After registering a web app as a protocol handler, when a user clicks on a hyper
 
 Protocol handlers objects may contain the following values:
 
-- `protocol`
+- `protocol` {{experimental_inline}}
 
   - : A required string containing the protocol to be handled; e.g.: `mailto`, `ms-word`, `web+jngl`.
 
-- `url`
+- `url` {{experimental_inline}}
   - : Required HTTPS URL within the application [`scope`](/en-US/docs/Web/Manifest/scope) that will handle the
     protocol.
     The `%s` token will be replaced by the URL starting with the protocol handler's scheme. If `url` is a relative

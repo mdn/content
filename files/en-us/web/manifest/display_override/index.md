@@ -37,12 +37,12 @@ Display override objects are display-mode strings, the possible values are:
     This can include the application having a different window, its own icon in the application launcher, etc.
     In this mode, the user agent will exclude UI elements for controlling navigation, but can include other UI elements such as a status bar.
 
-- `tabbed`
+- `tabbed` {{experimental_inline}}
 
   - : The application can contain multiple application contexts inside a single OS-level window.
     Supporting browsers can choose how to display these contexts, but a common approach is to provide a tab bar to switch between them.
 
-- `window-controls-overlay`
+- `window-controls-overlay` {{experimental_inline}}
 
   - : This display mode only applies when the application is in a separate PWA window and on a desktop operating system.
     The application will opt-in to the Window Controls Overlay feature, where the full window surface area will be available for the app's web content and the window control buttons (maximize, minimize, close, and other PWA-specific buttons) will appear as an overlay above the web content.
