@@ -133,7 +133,7 @@ If the priority is not set with `options.priority` or by passing a {{domxref("Ta
 Note that a task that needs to be aborted must set `options.signal` to either {{domxref("TaskSignal")}} or {{domxref("AbortSignal")}}.
 However for a task with an immutable priority, {{domxref("AbortSignal")}} more clearly indicates that the task priority cannot be changed using the signal.
 
-### isInputPending()
+### `isInputPending()`
 
 The {{domxref("Scheduling.isInputPending", "isInputPending()")}} API is intended to help with task execution, enabling you to make task runners more efficient by yielding to the main thread only when the user is trying to interact with your app, rather than having to do it at arbitrary intervals.
 
