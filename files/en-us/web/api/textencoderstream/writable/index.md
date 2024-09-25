@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.TextEncoderStream.writable
 ---
 
-{{APIRef("Encoding API")}}
+{{APIRef("Encoding API")}}{{AvailableInWorkers}}
 
 The **`writable`** read-only property of the {{domxref("TextEncoderStream")}} interface returns a {{domxref("WritableStream")}}.
 

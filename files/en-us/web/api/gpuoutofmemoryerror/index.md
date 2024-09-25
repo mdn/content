@@ -7,7 +7,7 @@ status:
 browser-compat: api.GPUOutOfMemoryError
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPUOutOfMemoryError`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} describes an out-of-memory (oom) error indicating that there was not enough free memory to complete the requested operation.
 

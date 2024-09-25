@@ -7,7 +7,7 @@ status:
 browser-compat: api.GPUComputePassEncoder
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPUComputePassEncoder`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} encodes commands related to controlling the compute shader stage, as issued by a {{domxref("GPUComputePipeline")}}. It forms part of the overall encoding activity of a {{domxref("GPUCommandEncoder")}}.
 

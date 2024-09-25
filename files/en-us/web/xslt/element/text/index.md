@@ -22,8 +22,12 @@ None.
 
 ### Optional Attributes
 
-- `disable-output-escaping` (Netscape does not serialize the result of transformation - the "output" below - so this attribute is essentially irrelevant in context. To output html-entities, use numerical values instead, eg `&#160;` for `&nbsp;`)
-  - : Specifies whether special characters are escaped when written to the output. The available values are "`yes`" or "`no`". If "`yes`" is set, for example, the character `>` is output as `>`, not as `&gt;`.
+- `disable-output-escaping`
+
+  - : Specifies whether special characters are escaped when written to the output. The available values are `yes` or `no`. If `yes` is set, for example, the character `>` is output as `>`, not as `&gt;`.
+
+    > [!NOTE]
+    > Older browsers may not serialize the result of transformation (the "output" below), making this attribute irrelevant in such contexts. To output HTML entities, use numerical values instead, e.g., `&#160;` for `&nbsp;`.
 
 ### Type
 

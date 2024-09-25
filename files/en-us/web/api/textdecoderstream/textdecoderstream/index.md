@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.TextDecoderStream.TextDecoderStream
 ---
 
-{{APIRef("Encoding API")}}
+{{APIRef("Encoding API")}}{{AvailableInWorkers}}
 
 The **`TextDecoderStream()`** constructor creates a new {{domxref("TextDecoderStream")}} object which is used to convert a stream of text in a binary encoding into strings.
 

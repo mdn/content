@@ -66,7 +66,7 @@ This session attribute represents the specific connection to the current user (o
 
 The `session` attribute is a dictionary-like object that you can read and write as many times as you like in your view, modifying it as wished. You can do all the normal dictionary operations, including clearing all data, testing if a key is present, looping through data, etc. Most of the time though, you'll just use the standard "dictionary" API to get and set values.
 
-The code fragments below show how you can get, set, and delete some data with the key "`my_car`", associated with the current session (browser).
+The code fragments below show how you can get, set, and delete some data with the key `my_car`, associated with the current session (browser).
 
 > [!NOTE]
 > One of the great things about Django is that you don't need to think about the mechanisms that tie the session to your current request in your view. If we were to use the fragments below in our view, we'd know that the information about `my_car` is associated only with the browser that sent the current request.
@@ -96,7 +96,7 @@ By default, Django only saves to the session database and sends the session cook
 request.session['my_car'] = 'mini'
 ```
 
-If you're updating some information _within_ session data, then Django will not recognize that you've made a change to the session and save the data (for example, if you were to change "`wheels`" data inside your "`my_car`" data, as shown below). In this case you will need to explicitly mark the session as having been modified.
+If you're updating some information _within_ session data, then Django will not recognize that you've made a change to the session and save the data (for example, if you were to change `wheels` data inside your `my_car` data, as shown below). In this case you will need to explicitly mark the session as having been modified.
 
 ```python
 # Session object not directly modified, only data within the session. Session changes not saved!

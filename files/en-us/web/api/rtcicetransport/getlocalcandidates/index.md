@@ -36,7 +36,7 @@ This simple example gets the local candidate list from the {{domxref("RTCIceTran
 ```js
 const localCandidates = pc
   .getSenders()[0]
-  .transport.transport.getLocalCandidates();
+  .transport.iceTransport.getLocalCandidates();
 
 localCandidates.forEach((candidate, index) => {
   console.log(`Candidate ${index}: ${candidate.candidate}`);

@@ -56,7 +56,7 @@ The older approach to creating events uses APIs inspired by Java. The following 
 const event = document.createEvent("Event");
 
 // Define that the event name is 'build'.
-event.initEvent("build", true, true);
+event.initEvent("build");
 
 // Listen for the event.
 elem.addEventListener(
