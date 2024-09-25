@@ -133,7 +133,7 @@ first();
 second();
 ```
 
-will log the following messages: 
+will log the following:
 
 ```plain
 starting first function
@@ -174,10 +174,6 @@ background postTask
 
 `scheduler.yield()` continuations will inherit whatever priority the containing `scheduler.postTask()` task has, including whether the task's priority was [changed dynamically](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#changing_task_priorities).
 
-#### Using `yield()` within `requestIdleCallback()`
-
-`scheduler.yield()` calls also inherit their priority from {{domxref("Window.requestIdleCallback()")}}, when called from inside the callback function. In this case, the [`"background"`](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#background) priority value is inherited. Note however that `scheduler.yield()` calls inside `requestIdleCallback()` callbacks are not abortable.
-
 ### Aborting a yield
 
 Similar to setting priority, a `scheduler.yield()` call can't be aborted directly, but it will inherit the abort signal from a surrounding `scheduler.postTask()` task. Aborting the task will also abort any pending yields within it.
@@ -210,6 +206,10 @@ scheduler.postTask(
 The example is somewhat contrived in that it always triggers the `taskController.abort()` call within the task itself, but the `abort()` call could come from anywhere. For example, it could be triggered by the user pressing a 'Cancel' button.
 
 In this case, the `abort()` occurs after the `scheduler.postTask()` task has already started (`"first half of work"` is logged), but the yield call inherits the [abort signal](/en-US/docs/Web/API/AbortSignal) therefore the `await scheduler.yield()` call will throw with an abort reason of `"cancel work"`.
+
+### Using `yield()` within `requestIdleCallback()`
+
+`scheduler.yield()` calls also inherit their priority from {{domxref("Window.requestIdleCallback()")}}, when called from inside the callback function. In this case, the [`"background"`](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#background) priority value is inherited. Note however that `scheduler.yield()` calls inside `requestIdleCallback()` callbacks are not abortable.
 
 ## Specifications
 

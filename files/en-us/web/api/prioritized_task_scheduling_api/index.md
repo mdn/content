@@ -19,15 +19,13 @@ In this page, we also include information about the {{domxref("Scheduling.isInpu
 
 ## Concepts and usage
 
-### Prioritized task scheduling
-
 The Prioritized Task Scheduling API is available in both window and worker threads using the `scheduler` property on the global object.
 
 The main API methods are {{domxref('scheduler.postTask()')}} and {{domxref('scheduler.yield()')}}. `scheduler.postTask()` takes a callback function (the task) and returns a promise that resolves with the return value of the function or rejects with an error. `scheduler.yield()` turns any [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) function into a task by yielding the main thread to the browser for other work, with execution continuing when the returned promise is resolved.
 
 The two methods have similar functionality but different levels of control. `scheduler.postTask()` is more configurable — for example, it allows task priority to be explicitly set and task cancellation via an [`AbortSignal`](/en-US/docs/Web/API/AbortSignal). `scheduler.yield()` on the other hand is simpler and can be `await`ed in any `async` function without having to provide a followup task in another function.
 
-#### `scheduler.yield()`
+### `scheduler.yield()`
 
 To break up long-running JavaScript tasks so they don't block the main thread, insert a `scheduler.yield()` call to temporarily yield the main thread back to the browser, which creates a task to continue execution where it left off.
 
@@ -43,7 +41,7 @@ async function slowTask() {
 
 `scheduler.yield()` takes no arguments. The task that triggers its continuation has a default [`user-visible`](#user-visible) priority; however, if `scheduler.yield()` is called within a `scheduler.postTask()` callback, it will [inherit the priority of the surrounding task](/en-US/docs/Web/API/Scheduler/yield#inheriting_task_priorities).
 
-#### `scheduler.postTask()`
+### `scheduler.postTask()`
 
 When `scheduler.postTask()` is called with no arguments, it creates a task with a default [`user-visible`](#user-visible) priority that cannot be aborted or have its priority changed.
 
@@ -95,7 +93,7 @@ scheduler
   .catch((error) => console.error(`Error: ${error}`)); // Log any errors
 ```
 
-#### Task priorities
+### Task priorities
 
 Scheduled tasks are run in priority order, followed by the order that they were added to the scheduler queue.
 
@@ -117,7 +115,7 @@ There are just three priorities, which are listed below (ordered from highest to
   - : Tasks that are not time-critical.
     This might include log processing or initializing third party libraries that aren't required for rendering.
 
-#### Mutable and immutable task priority
+### Mutable and immutable task priority
 
 There are many use cases where the task priority never needs to change, while for others it does.
 For example fetching an image might change from a `background` task to `user-visible` as a carousel is scrolled into the viewing area.
