@@ -7,8 +7,7 @@ browser-compat: http.headers.Content-Location
 
 {{HTTPSidebar}}
 
-The HTTP **`Content-Location`** header indicates an alternate location for the returned data.
-The principal use is to indicate the URL of a resource transmitted as the result of [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation).
+The HTTP **`Content-Location`** header indicates an alternate location for the returned data. The principal use is to indicate the URL of a resource transmitted as the result of [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation).
 
 {{HTTPHeader("Location")}} and `Content-Location` are different.
 `Location` indicates the URL of a redirect, while

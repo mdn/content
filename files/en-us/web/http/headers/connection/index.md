@@ -11,10 +11,19 @@ The HTTP **`Connection`** header controls whether the network connection stays o
 If the value sent is `keep-alive`, the connection is persistent and not closed, allowing for subsequent requests to the same server to be done.
 
 > [!WARNING]
-> Connection-specific header fields such as `Connection` and {{HTTPHeader("Keep-Alive")}} are prohibited in [HTTP/2](https://httpwg.org/specs/rfc9113.html#ConnectionSpecific) and [HTTP/3](https://httpwg.org/specs/rfc9114.html#header-formatting).
-> Chrome and Firefox ignore them in HTTP/2 responses, but Safari conforms to the HTTP/2 spec requirements and does not load any response that contains them.
+> Connection-specific header fields such as
+> `Connection` and {{HTTPHeader("Keep-Alive")}} are prohibited
+> in [HTTP/2](https://httpwg.org/specs/rfc9113.html#ConnectionSpecific) and
+> [HTTP/3](https://httpwg.org/specs/rfc9114.html#header-formatting). Chrome and
+> Firefox ignore them in HTTP/2 responses, but Safari conforms to the HTTP/2
+> spec requirements and does not load any response that contains them.
 
-All [hop-by-hop headers](/en-US/docs/Web/HTTP/Compression#hop-by-hop_compression) used by the message, including standard hop-by-hop headers ({{HTTPHeader("Keep-Alive")}}, {{HTTPHeader("Transfer-Encoding")}}, {{HTTPHeader("TE")}}, `Connection`, {{HTTPHeader("Trailer")}}, {{HTTPHeader("Upgrade")}}, {{HTTPHeader("Proxy-Authorization")}} and {{HTTPHeader("Proxy-Authenticate")}}) must be listed in the `Connection` header, so that the first proxy knows it has to consume them and not forward them further.
+All [hop-by-hop headers](/en-US/docs/Web/HTTP/Compression#hop-by-hop_compression), including standard hop-by-hop headers ({{HTTPHeader("Keep-Alive")}},
+{{HTTPHeader("Transfer-Encoding")}}, {{HTTPHeader("TE")}}, `Connection`,
+{{HTTPHeader("Trailer")}}, {{HTTPHeader("Upgrade")}},
+{{HTTPHeader("Proxy-Authorization")}} and {{HTTPHeader("Proxy-Authenticate")}}) must be listed in the `Connection`
+header, so that the first proxy knows it has to consume them and not forward them
+further.
 
 The default value of `Connection` changed between HTTP/1.0 and HTTP/1.1.
 Therefore, to ensure backwards compatibility, browsers often send `Connection: keep-alive` explicitly despite that being the default in HTTP/1.1.
@@ -48,9 +57,11 @@ Connection: close
   - : Indicates that either the client or the server would like to close the connection.
     This is the default on HTTP/1.0 requests.
 - any comma-separated list of HTTP headers (usually `keep-alive` only)
-  - : Indicates that the client would like to keep the connection open.
-    Keeping a connection open is the default on HTTP/1.1 requests.
-    The list of headers are the name of the header to be removed by the first non-transparent proxy or cache in-between: these headers define the connection between the emitter and the first entity, not the destination node.
+  - : Indicates that the client would like to keep the connection open. Keeping a connection open
+    is the default on HTTP/1.1 requests. The list of headers are the
+    name of the header to be removed by the first non-transparent proxy or cache
+    in-between: these headers define the connection between the emitter and the first
+    entity, not the destination node.
 
 ## Specifications
 

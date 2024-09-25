@@ -59,8 +59,7 @@ Limiting the possible `Access-Control-Allow-Origin` values to a set of allowed o
 
 ### CORS and caching
 
-Suppose the server sends a response with an `Access-Control-Allow-Origin` value with an explicit origin (rather than the `*` wildcard).
-In that case, the response should also include a {{HTTPHeader("Vary")}} response header with the value `Origin` — to indicate to browsers that server responses can differ based on the value of the `Origin` request header.
+Suppose the server sends a response with an `Access-Control-Allow-Origin` value with an explicit origin (rather than the `*` wildcard). In that case, the response should also include a {{HTTPHeader("Vary")}} response header with the value `Origin` — to indicate to browsers that server responses can differ based on the value of the `Origin` request header.
 
 ```http
 Access-Control-Allow-Origin: https://developer.mozilla.org

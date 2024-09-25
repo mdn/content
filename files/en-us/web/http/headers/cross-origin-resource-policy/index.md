@@ -7,7 +7,9 @@ browser-compat: http.headers.Cross-Origin-Resource-Policy
 
 {{HTTPSidebar}}
 
-The HTTP **`Cross-Origin-Resource-Policy`** response header conveys a desire that the browser blocks no-cors cross-origin or cross-site requests to the given resource.
+The HTTP **`Cross-Origin-Resource-Policy`** response header
+conveys a desire that the browser blocks no-cors cross-origin or cross-site requests to the
+given resource.
 
 <table class="properties">
   <tbody>

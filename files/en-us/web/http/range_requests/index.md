@@ -11,8 +11,7 @@ Range requests are useful for clients like media players that support random acc
 
 ## Checking if a server supports partial requests
 
-If an HTTP response includes the {{HTTPHeader("Accept-Ranges")}} header and its value is anything other than `none`, then the server supports range requests.
-You can perform a manual check by issuing a {{HTTPMethod("HEAD")}} request with a tool like cURL.
+If an HTTP response includes the {{HTTPHeader("Accept-Ranges")}} header and its value is anything other than `none`, then the server supports range requests. You can perform a manual check by issuing a {{HTTPMethod("HEAD")}} request with a tool like [curl](https://curl.se/).
 
 ```bash
 curl -I http://i.imgur.com/z4d4kWk.jpg

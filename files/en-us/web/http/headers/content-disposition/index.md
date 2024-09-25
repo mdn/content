@@ -11,8 +11,7 @@ The HTTP **`Content-Disposition`** response header indicates if the content is e
 
 In a `multipart/form-data` body, the `Content-Disposition` header must be used on each subpart of a multipart body to provide information about the field it applies to. The subpart is delimited by the _boundary_ defined in the {{HTTPHeader("Content-Type")}} header. Used on the body itself, `Content-Disposition` has no effect.
 
-The `Content-Disposition` header is defined in the larger context of MIME messages for email, but only a subset of the possible parameters apply to HTTP forms and {{HTTPMethod("POST")}} requests.
-Only the value `form-data`, as well as the optional directive `name` and `filename`, can be used in the HTTP context.
+The `Content-Disposition` header is defined in the larger context of MIME messages for email, but only a subset of the possible parameters apply to HTTP forms and {{HTTPMethod("POST")}} requests. Only the value `form-data`, as well as the optional directive `name` and `filename`, can be used in the HTTP context.
 
 <table class="properties">
   <tbody>
@@ -54,8 +53,7 @@ Browsers may apply transformations to conform to the file system requirements, s
 
 ### As a header for a multipart body
 
-A `multipart/form-data` body requires a `Content-Disposition` header to provide information for each subpart of the form (e.g. for every form field and any files that are part of field data). The first directive is always `form-data`, and the header _must_ also include a `name` parameter to identify the relevant field. Additional directives are case-insensitive and have arguments that use quoted-string syntax after the `'='` sign.
-Multiple parameters are separated by a semicolon (`';'`).
+A `multipart/form-data` body requires a `Content-Disposition` header to provide information about each subpart of the form (e.g., for every form field and any files that are part of field data). The first directive is always `form-data`, and the header must also include a `name` parameter to identify the relevant field. Additional directives are case-insensitive and have arguments that use quoted-string syntax after the `=` sign. Multiple parameters are separated by a semicolon (`;`).
 
 ```http
 Content-Disposition: form-data; name="fieldName"
