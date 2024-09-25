@@ -38,19 +38,15 @@ Access-Control-Allow-Headers: *
 ## Directives
 
 - `<header-name>`
-  - : The name of a supported request header.
-    The header may list any number of headers, separated by commas.
+  - : The name of a supported request header. The header may list any number of headers, separated by commas.
 - `*` (wildcard)
-  - : The value `*` only counts as a special wildcard value for requests without credentials (requests without [HTTP cookies](/en-US/docs/Web/HTTP/Cookies) or HTTP authentication information).
-    In requests with credentials, it is treated as the literal header name `*` without special semantics.
-    Note that the {{HTTPHeader("Authorization")}} header can't be wildcarded and always needs to be listed explicitly.
+  - : The value `*` only counts as a special wildcard value for requests without credentials (requests without [HTTP cookies](/en-US/docs/Web/HTTP/Cookies) or HTTP authentication information). In requests with credentials, it is treated as the literal header name `*` without special semantics. Note that the {{HTTPHeader("Authorization")}} header can't be wildcarded and always needs to be listed explicitly.
 
 ## Examples
 
 ### A custom header
 
-Here's an example of what an `Access-Control-Allow-Headers` header might look like.
-It indicates that a custom header named `X-Custom-Header` is supported by CORS requests to the server in addition to the {{Glossary("CORS-safelisted_request_header", "CORS-safelisted request headers")}}.
+Here's an example of what an `Access-Control-Allow-Headers` header might look like. It indicates that a custom header named `X-Custom-Header` is supported by CORS requests to the server in addition to the {{Glossary("CORS-safelisted_request_header", "CORS-safelisted request headers")}}.
 
 ```http
 Access-Control-Allow-Headers: X-Custom-Header
@@ -91,8 +87,7 @@ Origin: https://foo.bar.org
 
 #### Response
 
-If the CORS request indicated by the preflight request is authorized, the server will respond to the preflight request with a message that indicates the allowed origin, methods, and headers.
-Below, we see that `Access-Control-Allow-Headers` includes the headers that were requested.
+If the CORS request indicated by the preflight request is authorized, the server will respond to the preflight request with a message that indicates the allowed origin, methods, and headers. Below, we see that `Access-Control-Allow-Headers` includes the headers that were requested.
 
 ```http
 HTTP/1.1 200 OK

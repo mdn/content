@@ -9,10 +9,7 @@ browser-compat: http.headers.Attribution-Reporting-Register-Source
 
 {{HTTPSidebar}}{{seecompattable}}
 
-The HTTP **`Attribution-Reporting-Register-Source`** response header registers a page feature as an [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources).
-This is included as part of a response to a request that included an {{HTTPHeader("Attribution-Reporting-Eligible")}} header.
-It provides the information that the browser should store when the attribution source is interacted with.
-The information you include in this header also determines which types of reports the browser can generate.
+The HTTP **`Attribution-Reporting-Register-Source`** response header registers a page feature as an [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources). This is included as part of a response to a request that included an {{HTTPHeader("Attribution-Reporting-Eligible")}} header. It provides the information that the browser should store when the attribution source is interacted with. The information you include in this header also determines which types of reports the browser can generate.
 
 See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 

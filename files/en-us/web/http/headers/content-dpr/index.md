@@ -38,8 +38,7 @@ The HTTP **`Content-DPR`** response header is used to confirm the _image_ device
   </tbody>
 </table>
 
-If the {{HTTPHeader("DPR")}} client hint is used to select an image the server must specify `Content-DPR` in the response.
-If the value in `Content-DPR` is different from the {{HTTPHeader("DPR")}} value in the request (i.e., image DPR is not the same as screen DPR) then the client must use the `Content-DPR` for determining intrinsic image size and scaling the image.
+If the {{HTTPHeader("DPR")}} client hint is used to select an image the server must specify `Content-DPR` in the response. If the value in `Content-DPR` is different from the {{HTTPHeader("DPR")}} value in the request (i.e., image DPR is not the same as screen DPR) then the client must use the `Content-DPR` for determining intrinsic image size and scaling the image.
 
 If the `Content-DPR` header appears more than once in a message the last occurrence is used.
 

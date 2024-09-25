@@ -65,8 +65,7 @@ Content-Encoding: deflate, gzip
 
 ### Compressing with gzip
 
-On the client side, you can advertise a list of compression schemes that will be sent along in an HTTP request.
-The {{HTTPHeader("Accept-Encoding")}} header is used for negotiating content encoding.
+On the client side, you can advertise a list of compression schemes that will be sent along in an HTTP request. The {{HTTPHeader("Accept-Encoding")}} header is used for negotiating content encoding.
 
 ```http
 Accept-Encoding: gzip, deflate

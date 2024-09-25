@@ -9,9 +9,7 @@ browser-compat: http.headers.Content-Disposition
 
 The HTTP **`Content-Disposition`** response header indicates if the content is expected to be displayed _inline_ in the browser as a Web page or as part of a Web page, or as an _attachment_ that may be downloaded and saved client-side.
 
-In a `multipart/form-data` body, the `Content-Disposition` header must be used on each subpart of a multipart body to provide information about the field it applies to.
-The subpart is delimited by the _boundary_ defined in the {{HTTPHeader("Content-Type")}} header.
-Used on the body itself, `Content-Disposition` has no effect.
+In a `multipart/form-data` body, the `Content-Disposition` header must be used on each subpart of a multipart body to provide information about the field it applies to. The subpart is delimited by the _boundary_ defined in the {{HTTPHeader("Content-Type")}} header. Used on the body itself, `Content-Disposition` has no effect.
 
 The `Content-Disposition` header is defined in the larger context of MIME messages for email, but only a subset of the possible parameters apply to HTTP forms and {{HTTPMethod("POST")}} requests.
 Only the value `form-data`, as well as the optional directive `name` and `filename`, can be used in the HTTP context.
@@ -47,10 +45,7 @@ Content-Disposition: attachment; filename*="filename.jpg"
 
 The quotes around the filename are optional, but are necessary if you use special characters in the filename, such as spaces.
 
-The parameters `filename` and `filename*` differ only in that `filename*` uses the encoding defined in [RFC 5987](https://datatracker.ietf.org/doc/html/rfc5987).
-When both `filename` and `filename*` are present in a single header field value, `filename*` is preferred over `filename` when both are understood.
-It's recommended to include both for maximum compatibility, and you can convert `filename*` to `filename` by substituting non-ASCII characters with ASCII equivalents (such as converting `é` to `e`).
-You may want to avoid percent escape sequences in `filename`, because they are handled inconsistently across browsers. (Firefox and Chrome decode them, while Safari does not.)
+The parameters `filename` and `filename*` differ only in that `filename*` uses the encoding defined in [RFC 5987](https://datatracker.ietf.org/doc/html/rfc5987). When both `filename` and `filename*` are present in a single header field value, `filename*` is preferred over `filename` when both are understood. It's recommended to include both for maximum compatibility, and you can convert `filename*` to `filename` by substituting non-ASCII characters with ASCII equivalents (such as converting `é` to `e`). You may want to avoid percent escape sequences in `filename`, because they are handled inconsistently across browsers. (Firefox and Chrome decode them, while Safari does not.)
 
 Browsers may apply transformations to conform to the file system requirements, such as converting path separators (`/` and `\`) to underscores (`_`).
 
@@ -59,9 +54,7 @@ Browsers may apply transformations to conform to the file system requirements, s
 
 ### As a header for a multipart body
 
-A `multipart/form-data` body requires a `Content-Disposition` header to provide information for each subpart of the form (e.g. for every form field and any files that are part of field data).
-The first directive is always `form-data`, and the header _must_ also include a `name` parameter to identify the relevant field.
-Additional directives are case-insensitive and have arguments that use quoted-string syntax after the `'='` sign.
+A `multipart/form-data` body requires a `Content-Disposition` header to provide information for each subpart of the form (e.g. for every form field and any files that are part of field data). The first directive is always `form-data`, and the header _must_ also include a `name` parameter to identify the relevant field. Additional directives are case-insensitive and have arguments that use quoted-string syntax after the `'='` sign.
 Multiple parameters are separated by a semicolon (`';'`).
 
 ```http
