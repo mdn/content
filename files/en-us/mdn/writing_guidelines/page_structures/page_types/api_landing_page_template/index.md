@@ -45,6 +45,7 @@ page-type: mdn-writing-guide
 > **Top-of-page macros**
 >
 > A number of macro calls appear at the top of the content section (immediately below the page front matter).
+>
 > These macros are automatically added by the toolchain (there is no need to add/remove):
 >
 > - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
@@ -59,7 +60,7 @@ page-type: mdn-writing-guide
 >   If it is, then you should also fill in an entry for it in the [Features restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts) page.
 > - `\{{AvailableInWorkers}}` — this generates a **Available in workers** banner that indicates the technology is also or only available in [worker](/en-US/docs/Web/API/Web_Workers_API) scope.
 >   If it is only available in window scope, then you can remove the macro call.
->   If it is also or only available in worker scope, then you may also need to passing an parameter to it due to its availability (see [AvailableInWorkers macros source code](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) for all available values), you may also need to fill in an entry for it in the [Web APIs available in workers](/en-US/docs/Web/API/Web_Workers_API#supported_web_apis) page.
+>   If it is also or only available in worker scope, then you may also need to passing an parameter to it due to its availability (see [\{{AvailableInWorkers}} macros source code](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) for all available values), you may also need to fill in an entry for it in the [Web APIs available in workers](/en-US/docs/Web/API/Web_Workers_API#supported_web_apis) page.
 > - `\{{APIRef("GroupDataName")}}` — this generates the left-hand reference sidebar showing quick reference links related to the current page.
 >   For example, every page in the [WebVR API](/en-US/docs/Web/API/WebVR_API) has the same sidebar, which points to the other pages in the API.
 >   To generate the correct sidebar for your API, you need to add a `GroupData` entry to our GitHub repo, and include the entry's name inside the macro call in place of _GroupDataName_.
