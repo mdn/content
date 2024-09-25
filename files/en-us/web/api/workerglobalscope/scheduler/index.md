@@ -10,7 +10,7 @@ browser-compat: api.scheduler
 
 The **`scheduler`** read-only property of the {{domxref("WorkerGlobalScope")}} interface is the entry point for using the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API).
 
-The object has instance methods {{domxref('Scheduler.postTask()')}} and {{domxref('Scheduler.yield()')}} that are used to schedule prioritized tasks.
+It returns a {{domxref("Scheduler")}} object instance containing {{domxref('Scheduler.postTask', 'postTask()')}} and {{domxref('Scheduler.yield()', 'yield()')}} methods that can be used to schedule prioritized tasks.
 
 ## Value
 
