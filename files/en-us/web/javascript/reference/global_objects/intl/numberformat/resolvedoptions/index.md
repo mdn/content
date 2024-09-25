@@ -27,10 +27,14 @@ A new object with properties reflecting the [locale and number formatting option
 
 The resulting object has the following properties:
 
-- `compactDisplay`
-  - : Whether to use short or long form when using compact notation.
-    This is the value provided in the [`options.compactDisplay`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#compactdisplay) argument of the constructor, or the default value: `"short"`.
-    The value is only present if `notation` is set to "compact", and otherwise is `undefined`.
+- `locale`
+  - : The BCP 47 language tag for the locale that was actually used.
+    Matches one of the locales that were requested in the constructor [`locales`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#locales).
+- `numberingSystem`
+  - : The numbering system.
+    This is the value provided in the [`options.numberingSystem`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#numberingsystem) argument of the constructor, if present, or the value set using the Unicode extension key [`nu`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#nu), or filled in as a default.
+- `style`
+  - : This is the value provided in the [`options.style`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#style) argument of the constructor, if present, or filled in as a default. 
 - `currency`
   - : The currency to use in currency formatting.
     The value is defined if `style` is `"currency"`, and is otherwise `undefined`.
@@ -43,15 +47,27 @@ The resulting object has the following properties:
   - : The method used to specify the sign of the currency value: `standard` or `accounting`.
     The value is present if `style` is `"currency"`, and otherwise is `undefined`.
     This is the value provided in the [`options.currencySign`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#currencysign) argument of the constructor, or the default value: `"standard"`.
-- `locale`
-  - : The BCP 47 language tag for the locale that was actually used.
-    Matches one of the locales that were requested in the constructor [`locales`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#locales).
+- `unit`
+  - : The unit to use in unit formatting.
+    The value is only present if `style` is `"unit"`, and is otherwise `undefined`.
+    This is the value specified in the [`options.unit`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#unit) argument in the constructor.
+- `unitDisplay`
+  - : The display format to use for units in unit formatting, such as "long", "short" or "narrow".
+    The value is only present if `style` is `"unit"`, and is otherwise `undefined`.
+    This is the value specified in the [`options.unitDisplay`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#unitdisplay) argument in the constructor, or the default value: `short`.
+- `useGrouping`
+  - : Whether or not to use grouping separators to indicate "thousands", "millions" and son on.
+    This is the value specified in the [`options.useGrouping`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#usegrouping) argument in the constructor, or the default value: `"auto"`.
 - `notation`
   - : The formatting that should be applied to the number, such as `standard` or `engineering`.
     This is the value provided in the [`options.notation`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#notation) argument of the constructor, or the default value: `"standard"`.
-- `numberingSystem`
-  - : The numbering system.
-    This is the value provided in the [`options.numberingSystem`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#numberingsystem) argument of the constructor, if present, or the value set using the Unicode extension key [`nu`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#nu), or filled in as a default.
+- `compactDisplay`
+  - : Whether to use short or long form when using compact notation.
+    This is the value provided in the [`options.compactDisplay`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#compactdisplay) argument of the constructor, or the default value: `"short"`.
+    The value is only present if `notation` is set to "compact", and otherwise is `undefined`.
+- `signDisplay`
+  - : Whether or not to display the positive/negative sign.
+    This is the value specified in the [`options.signDisplay`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#signdisplay) argument in the constructor, or the default value: `"auto"`.
 - `roundingIncrement`
   - : The rounding-increment precision (the increment used when rounding numbers).
     This is the value specified in the [`options.roundingIncrement`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#roundingincrement) argument in the constructor.
@@ -61,22 +77,6 @@ The resulting object has the following properties:
 - `roundingPriority`
   - : The priority for resolving rounding conflicts if both "FractionDigits" and "SignificantDigits" are specified.
     This is the value provided for the [`options.roundingPriority`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#roundingpriority) argument in the constructor, or the default value: `auto`.
-- `signDisplay`
-  - : Whether or not to display the positive/negative sign.
-    This is the value specified in the [`options.signDisplay`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#signdisplay) argument in the constructor, or the default value: `"auto"`.
-- `unit`
-  - : The unit to use in unit formatting.
-    The value is only present if `style` is `"unit"`, and is otherwise `undefined`.
-    This is the value specified in the [`options.unit`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#unit) argument in the constructor.
-- `unitDisplay`
-
-  - : The display format to use for units in unit formatting, such as "long", "short" or "narrow".
-    The value is only present if `style` is `"unit"`, and is otherwise `undefined`.
-    This is the value specified in the [`options.unitDisplay`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#unitdisplay) argument in the constructor, or the default value: `short`.
-
-- `useGrouping`
-  - : Whether or not to use grouping separators to indicate "thousands", "millions" and son on.
-    This is the value specified in the [`options.useGrouping`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#usegrouping) argument in the constructor, or the default value: `"auto"`.
 - `trailingZeroDisplay`
   - : The strategy for displaying trailing zeros on whole numbers.
     This is the value specified in the [`options.trailingZeroDisplay`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#trailingzerodisplay) argument in the constructor, or the default value: `"auto"`.
