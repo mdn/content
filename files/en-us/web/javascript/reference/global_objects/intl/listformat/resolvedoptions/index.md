@@ -46,7 +46,6 @@ The object returned by `resolvedOptions()` has the following properties:
     constructor or the default value (`"long"`). Its value is either
     `"long"`, `"short"`, or `"narrow"`.
 
-
 ## Examples
 
 ### Using resolvedOptions
