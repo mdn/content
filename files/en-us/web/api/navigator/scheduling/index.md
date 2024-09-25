@@ -12,6 +12,9 @@ browser-compat: api.Navigator.scheduling
 
 The **`scheduling`** read-only property of the {{domxref("Navigator")}} interface returns a {{domxref("Scheduling")}} object for the current document, which provides methods and properties to control scheduling tasks.
 
+> [!WARNING]
+> This is an older interface and newer scheduling APIs are available using the {{domxref("Scheduler")}} interface. Some [no longer recommend using `isInputPending()`](https://web.dev/articles/optimize-long-tasks#isinputpending).
+
 ## Value
 
 A {{domxref("Scheduling")}} object.
@@ -30,6 +33,8 @@ See the {{domxref("Scheduling.isInputPending()")}} page for a full example.
 
 ## See also
 
+- {{domxref("Scheduler")}} interface
+- {{domxref("Prioritized_task_scheduling_api", "Prioritized Task Scheduling API")}}
 - [Faster input events with Facebook's first browser API contribution](https://engineering.fb.com/2019/04/22/developer-tools/isinputpending-api/) on engineering.fb.com (2019)
 - [Better JS scheduling with isInputPending()](https://developer.chrome.com/docs/capabilities/web-apis/isinputpending) on developer.chrome.com (2020)
-- [Optimizing long tasks](https://web.dev/articles/optimize-long-tasks#yield_only_when_necessary) on web.dev (2022)
+- [Optimizing long tasks](https://web.dev/articles/optimize-long-tasks) on web.dev (2022)
