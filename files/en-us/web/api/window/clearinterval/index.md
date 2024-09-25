@@ -1,7 +1,7 @@
 ---
 title: clearInterval() global function
 short-title: clearInterval()
-slug: Web/API/clearInterval
+slug: Web/API/Window/clearInterval
 page-type: web-api-global-function
 browser-compat: api.clearInterval
 ---
@@ -38,7 +38,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-See the [`setInterval()` examples](/en-US/docs/Web/API/setInterval#examples).
+See the [`setInterval()` examples](/en-US/docs/Web/API/Window/setInterval#examples).
 
 ## Specifications
 

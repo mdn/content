@@ -83,7 +83,7 @@ Looking for the [`Document`](/en-US/docs/Web/API/Document) object, [`Window`](/e
 
 ## Other notable APIs
 
-- The [`setTimeout`](/en-US/docs/Web/API/setTimeout) and [`setInterval`](/en-US/docs/Web/API/setInterval) functions were first specified on the [`Window`](/en-US/docs/Web/API/Window) interface in HTML Standard.
+- The [`setTimeout`](/en-US/docs/Web/API/setTimeout) and [`setInterval`](/en-US/docs/Web/API/Window/setInterval) functions were first specified on the [`Window`](/en-US/docs/Web/API/Window) interface in HTML Standard.
 - [XMLHttpRequest](https://xhr.spec.whatwg.org/) makes it possible to send asynchronous HTTP requests.
 - The [Fetch API](https://fetch.spec.whatwg.org/) provides a more ergonomic abstraction for network requests.
 - The [CSS Object Model](https://drafts.csswg.org/cssom/) abstract CSS rules as objects.

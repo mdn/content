@@ -1,7 +1,7 @@
 ---
 title: setInterval() global function
 short-title: setInterval()
-slug: Web/API/setInterval
+slug: Web/API/Window/setInterval
 page-type: web-api-global-function
 browser-compat: api.setInterval
 ---
@@ -124,7 +124,7 @@ document.getElementById("stop").addEventListener("click", stopTextColor);
 
 {{EmbedLiveSample("Example_2:_Alternating_two_colors")}}
 
-See also: [`clearInterval()`](/en-US/docs/Web/API/clearInterval).
+See also: [`clearInterval()`](/en-US/docs/Web/API/Window/clearInterval).
 
 ## The "this" problem
 

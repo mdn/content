@@ -205,7 +205,7 @@ We then add a {{jsxref("Promise.catch", "catch()")}} handler to the promise. Thi
 
 Any other errors are handled as appropriate.
 
-If you want to start playing the video after the first interaction with the page, [`setInterval()`](/en-US/docs/Web/API/setInterval) might be used to achieve this:
+If you want to start playing the video after the first interaction with the page, [`setInterval()`](/en-US/docs/Web/API/Window/setInterval) might be used to achieve this:
 
 ```js
 let playAttempt = setInterval(() => {

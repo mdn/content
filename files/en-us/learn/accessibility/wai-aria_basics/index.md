@@ -220,7 +220,7 @@ Let's look at a quick example — see [`aria-no-live.html`](https://github.com/m
 </section>
 ```
 
-Our JavaScript uses the {{domxref("Window/fetch", "fetch()")}} API to load a JSON file via containing a series of random quotes and their authors. Once that is done, we start up a [`setInterval()`](/en-US/docs/Web/API/setInterval) loop that loads a new random quote into the quote box every 10 seconds:
+Our JavaScript uses the {{domxref("Window/fetch", "fetch()")}} API to load a JSON file via containing a series of random quotes and their authors. Once that is done, we start up a [`setInterval()`](/en-US/docs/Web/API/Window/setInterval) loop that loads a new random quote into the quote box every 10 seconds:
 
 ```js
 const intervalID = setInterval(showQuote, 10000);
