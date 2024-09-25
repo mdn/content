@@ -7,7 +7,7 @@ status:
 browser-compat: api.GPUBindGroup
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPUBindGroup`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} is based on a {{domxref("GPUBindGroupLayout")}} and defines a set of resources to be bound together in a group and how those resources are used in shader stages.
 

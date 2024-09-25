@@ -15,7 +15,7 @@ the current document.
 
 ## Value
 
-A string representing the color as a word (e.g., "red") or hexadecimal value (e.g., "`#ff0000`").
+A string representing the color as a word (e.g., `"red"`) or hexadecimal value (e.g., `"#ff0000"`).
 
 ## Examples
 
