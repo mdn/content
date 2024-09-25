@@ -12,7 +12,14 @@ The `id` manifest member is used to specify a unique identifier for your web app
 ## Syntax
 
 ```json-nolint
-"id": "com.example.myapp"
+/* Absolute URL */
+"id": "https://example.com/myapp"
+
+/* Relative URL */
+"id": "myapp/v2"
+
+/* URL with query parameters */
+"id": "myapp?version=2&mode=trial"
 ```
 
 ### Values
