@@ -1,14 +1,14 @@
 ---
-title: "Window: clearInterval() method"
+title: "WorkerGlobalScope: clearInterval() method"
 short-title: clearInterval()
-slug: Web/API/Window/clearInterval
+slug: Web/API/WorkerGlobalScope/clearInterval
 page-type: web-api-instance-method
 browser-compat: api.clearInterval
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers("worker")}}
 
-The **`clearInterval()`** method of the {{domxref("Window")}} interface cancels a timed, repeating action which was previously established by a call to {{domxref("Window.setInterval", "setInterval()")}}. If the parameter provided does not identify a previously established action, this method does nothing.
+The **`clearInterval()`** method of the {{domxref("WorkerGlobalScope")}} interface cancels a timed, repeating action which was previously established by a call to {{domxref("WorkerGlobalScope.setInterval", "setInterval()")}}. If the parameter provided does not identify a previously established action, this method does nothing.
 
 ## Syntax
 
@@ -49,5 +49,5 @@ See {{domxref("Window.setInterval", "setInterval()")}} for examples.
 
 - {{domxref("setTimeout()")}}
 - {{domxref("clearTimeout()")}}
-- {{domxref("Window.setInterval()")}}
+- {{domxref("WorkerGlobalScope.setInterval()")}}
 - {{domxref("Window.requestAnimationFrame()")}}

@@ -1,14 +1,14 @@
 ---
-title: setInterval() global function
+title: "Window: setInterval() method"
 short-title: setInterval()
 slug: Web/API/Window/setInterval
-page-type: web-api-global-function
+page-type: web-api-instance-method
 browser-compat: api.setInterval
 ---
 
-{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
+{{APIRef("HTML DOM")}}
 
-The **`setInterval()`** method, offered on the {{domxref("Window")}} and {{domxref("WorkerGlobalScope")}} interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
+The **`setInterval()`** method of the {{domxref("Window")}} interface repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
 
 This method returns an interval ID which uniquely identifies the interval, so you can remove it later by calling {{domxref("clearInterval", "clearInterval()")}}.
 
@@ -236,5 +236,5 @@ interval has completed before recursing.
 - [Polyfill of `setInterval` which allows passing arguments to the callback in `core-js`](https://github.com/zloirock/core-js#settimeout-and-setinterval)
 - {{domxref("setTimeout()")}}
 - {{domxref("clearTimeout()")}}
-- {{domxref("clearInterval()")}}
-- {{domxref("window.requestAnimationFrame()")}}
+- {{domxref("Window.clearInterval()")}}
+- {{domxref("Window.requestAnimationFrame()")}}
