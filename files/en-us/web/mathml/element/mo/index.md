@@ -18,7 +18,7 @@ In addition to the [global MathML attributes](/en-US/docs/Web/MathML/Global_attr
 - `fence`
   - : A [`<boolean>`](/en-US/docs/Web/MathML/Values#mathml-specific_types) indicating whether the operator is a fence (such as parentheses). There is no visual effect for this attribute.
 - `form`
-  - : An [enumerated](/en-US/docs/Glossary/Enumerated) attribute specifying how the operator is to be presented: depending on the value, a different amount of space is rendered on either side of the operator. It can have one of the following values:
+  - : An [enumerated](/en-US/docs/Glossary/Enumerated) attribute specifying how the operator is to be presented. For example, depending on the value, a different amount of space might be rendered on either side of the operator. It can have one of the following values:
     - `prefix`: The operator appears before its operands. For example, in the expression `+ a`, the `+` is a prefix operator.
     - `infix`: The operator appears between its operands. In the expression `a + b`, the `+` is an infix operator.
     - `postfix`: The operator appears after its operands. For example, in the expression `a +`, the `+` is a postfix operator.
