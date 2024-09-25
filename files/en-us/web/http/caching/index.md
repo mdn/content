@@ -165,7 +165,7 @@ The way that responses are distinguished from one another is essentially based o
 
 But the contents of responses are not always the same, even if they have the same URL. Especially when content negotiation is performed, the response from the server can depend on the values of the `Accept`, `Accept-Language`, and `Accept-Encoding` request headers.
 
-For example, for English content returned with an `Accept-Language: en` header and cached, it is undesirable to then reuse that cached response for requests that have an `Accept-Language: ja` request header. In this case, you can cause the responses to be cached separately — based on language — by adding "`Accept-Language`" to the value of the `Vary` header.
+For example, for English content returned with an `Accept-Language: en` header and cached, it is undesirable to then reuse that cached response for requests that have an `Accept-Language: ja` request header. In this case, you can cause the responses to be cached separately — based on language — by adding `Accept-Language` to the value of the `Vary` header.
 
 ```http
 Vary: Accept-Language
@@ -180,7 +180,7 @@ That causes the cache to be keyed based on a composite of the response URL and t
 | `https://example.com/style.css`  | `ja-JP`           | `body { ...`             |
 | `https://example.com/script.js`  | `ja-JP`           | `function main () { ...` |
 
-Also, if you are providing content optimization (for example, for responsive design) based on the user agent, you may be tempted to include "`User-Agent`" in the value of the `Vary` header. However, the `User-Agent` request header generally has a very large number of variations, which drastically reduces the chance that the cache will be reused. So if possible, instead consider a way to vary behavior based on feature detection rather than based on the `User-Agent` request header.
+Also, if you are providing content optimization (for example, for responsive design) based on the user agent, you may be tempted to include `User-Agent` in the value of the `Vary` header. However, the `User-Agent` request header generally has a very large number of variations, which drastically reduces the chance that the cache will be reused. So if possible, instead consider a way to vary behavior based on feature detection rather than based on the `User-Agent` request header.
 
 For applications that employ cookies to prevent others from reusing cached personalized content, you should specify `Cache-Control: private` instead of specifying a cookie for `Vary`.
 

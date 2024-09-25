@@ -48,7 +48,7 @@ If the server supports range requests, then by including the {{HTTPHeader("Range
 
 ### Single part ranges
 
-We can request a single range from a resource. Again, we can test a request by using cURL. The "`-H`" option will append a header line to the request, which in this case is the `Range` header requesting the first 1024 bytes.
+We can request a single range from a resource. Again, we can test a request by using cURL. The `-H` option will append a header line to the request, which in this case is the `Range` header requesting the first 1024 bytes.
 
 ```bash
 curl http://i.imgur.com/z4d4kWk.jpg -i -H "Range: bytes=0-1023"
