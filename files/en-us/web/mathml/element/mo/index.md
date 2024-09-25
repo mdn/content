@@ -15,13 +15,13 @@ In addition to the [global MathML attributes](/en-US/docs/Web/MathML/Global_attr
 
 - `accent` {{Non-standard_Inline}}
   - : A [`<boolean>`](/en-US/docs/Web/MathML/Values#mathml-specific_types) indicating whether the operator should be treated as an accent when used as an [under](/en-US/docs/Web/MathML/Element/munder)- or [overscript](/en-US/docs/Web/MathML/Element/mover) (i.e. drawn bigger and closer to the base expression).
+- `fence`
+  - : A [`<boolean>`](/en-US/docs/Web/MathML/Values#mathml-specific_types) indicating whether the operator is a fence (such as parentheses). There is no visual effect for this attribute.
 - `form`
   - : An [enumerated](/en-US/docs/Glossary/Enumerated) attribute specifying how the operator is to be presented: depending on the value, a different amount of space is rendered on either side of the operator. It can have one of the following values:
     - `prefix`: The operator appears before its operands. For example, in the expression `+ a`, the `+` is a prefix operator.
     - `infix`: The operator appears between its operands. In the expression `a + b`, the `+` is an infix operator.
     - `postfix`: The operator appears after its operands. For example, in the expression `a +`, the `+` is a postfix operator.
-- `fence`
-  - : A [`<boolean>`](/en-US/docs/Web/MathML/Values#mathml-specific_types) indicating whether the operator is a fence (such as parentheses). There is no visual effect for this attribute.
 - `largeop`
   - : A [`<boolean>`](/en-US/docs/Web/MathML/Values#mathml-specific_types) indicating whether the operator should be drawn bigger when [`math-style`](/en-US/docs/Web/CSS/math-style) is set to `normal`.
 - `lspace`
