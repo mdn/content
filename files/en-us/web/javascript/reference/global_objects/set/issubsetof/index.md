@@ -36,7 +36,7 @@ In mathematical notation, _subset_ is defined as:
 
 And using Venn diagram:
 
-![A Venn diragram with two circles. A is a subset of B because A is completely contained in B.](diagram.svg)
+![A Venn diagram with two circles. A is a subset of B because A is completely contained in B.](diagram.svg)
 
 > [!NOTE]
 > The _subset_ relationship is not _proper subset_, which means `isSubsetOf()` returns `true` if `this` and `other` contain the same elements.

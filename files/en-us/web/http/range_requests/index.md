@@ -10,7 +10,7 @@ An HTTP {{HTTPHeader("Range")}} request asks the server to send only a portion o
 
 ## Checking if a server supports partial requests
 
-If an HTTP response includes the {{HTTPHeader("Accept-Ranges")}} header and its value is anything other than "`none`", then the server supports range requests. You can perform a manual check by issuing a {{HTTPMethod("HEAD")}} request with a tool like cURL.
+If an HTTP response includes the {{HTTPHeader("Accept-Ranges")}} header and its value is anything other than `none`, then the server supports range requests. You can perform a manual check by issuing a {{HTTPMethod("HEAD")}} request with a tool like cURL.
 
 ```bash
 curl -I http://i.imgur.com/z4d4kWk.jpg
@@ -25,7 +25,7 @@ Content-Length: 146515
 
 In this response, `Accept-Ranges: bytes` indicates that bytes can be used as units to define a range. Here the {{HTTPHeader("Content-Length")}} header is also useful as it indicates the full size of the image to retrieve.
 
-If sites omit the `Accept-Ranges` header, they likely don't support partial requests. Some sites include the header but give it the explicit value "`none`" to indicate they lack support:
+If sites omit the `Accept-Ranges` header, they likely don't support partial requests. Some sites include the header but give it the explicit value `none` to indicate they lack support:
 
 ```bash
 curl -I https://www.youtube.com/watch?v=EwTZ2xpQwpA
@@ -45,7 +45,7 @@ If the server supports range requests, then by including the {{HTTPHeader("Range
 
 ### Single part ranges
 
-We can request a single range from a resource. Again, we can test a request by using cURL. The "`-H`" option will append a header line to the request, which in this case is the `Range` header requesting the first 1024 bytes.
+We can request a single range from a resource. Again, we can test a request by using cURL. The `-H` option will append a header line to the request, which in this case is the `Range` header requesting the first 1024 bytes.
 
 ```bash
 curl http://i.imgur.com/z4d4kWk.jpg -i -H "Range: bytes=0-1023"

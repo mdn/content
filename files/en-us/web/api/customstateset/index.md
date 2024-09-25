@@ -79,7 +79,7 @@ Additionally, the `:state()` pseudo-class can be used after the [`::part()`](/en
 
 > [!WARNING]
 > Browsers that do not yet support [`:state()`](/en-US/docs/Web/CSS/:state) will use a CSS `<dashed-ident>` for selecting custom states, which is now deprecated.
-> For information about how to support both approaches see the [Compatibility with `<dashed-ident>` syntax](#compability_with_dashed-ident_syntax) section below.
+> For information about how to support both approaches see the [Compatibility with `<dashed-ident>` syntax](#compatibility_with_dashed-ident_syntax) section below.
 
 ## Examples
 
@@ -485,7 +485,7 @@ Click the element to see a different border being applied as the state changes.
 
 {{EmbedLiveSample("Non-boolean internal states", "100%", 50)}}
 
-## Compability with `<dashed-ident>` syntax
+## Comptability with `<dashed-ident>` syntax
 
 Previously custom elements with custom states were selected using a `<dashed-ident>` instead of the [`:state()`](/en-US/docs/Web/CSS/:state) function.
 Browser versions that don't support `:state()` will throw an error when supplied with an ident that is not prefixed with the double dash.

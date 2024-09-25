@@ -2,12 +2,10 @@
 title: AudioData
 slug: Web/API/AudioData
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.AudioData
 ---
 
-{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`AudioData`** interface of the [WebCodecs API](/en-US/docs/Web/API/WebCodecs_API) represents an audio sample.
 
@@ -32,33 +30,33 @@ In planar format, the number of planes is equal to {{domxref("AudioData.numberOf
 
 ## Constructor
 
-- {{domxref("AudioData.AudioData", "AudioData()")}} {{Experimental_Inline}}
+- {{domxref("AudioData.AudioData", "AudioData()")}}
   - : Creates a new `AudioData` object.
 
 ## Instance properties
 
-- {{domxref("AudioData.format")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("AudioData.format")}} {{ReadOnlyInline}}
   - : Returns the sample format of the audio.
-- {{domxref("AudioData.sampleRate")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("AudioData.sampleRate")}} {{ReadOnlyInline}}
   - : Returns the sample rate of the audio in Hz.
-- {{domxref("AudioData.numberOfFrames")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("AudioData.numberOfFrames")}} {{ReadOnlyInline}}
   - : Returns the number of frames.
-- {{domxref("AudioData.numberOfChannels")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("AudioData.numberOfChannels")}} {{ReadOnlyInline}}
   - : Returns the number of audio channels.
-- {{domxref("AudioData.duration")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("AudioData.duration")}} {{ReadOnlyInline}}
   - : Returns the duration of the audio in microseconds.
-- {{domxref("AudioData.timestamp")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("AudioData.timestamp")}} {{ReadOnlyInline}}
   - : Returns the timestamp of the audio in microseconds.
 
 ## Instance methods
 
-- {{domxref("AudioData.allocationSize()")}} {{Experimental_Inline}}
+- {{domxref("AudioData.allocationSize()")}}
   - : Returns the number of bytes required to hold the sample as filtered by options passed into the method.
-- {{domxref("AudioData.copyTo()")}} {{Experimental_Inline}}
+- {{domxref("AudioData.copyTo()")}}
   - : Copies the samples from the specified plane of the `AudioData` object to the destination.
-- {{domxref("AudioData.clone()")}} {{Experimental_Inline}}
+- {{domxref("AudioData.clone()")}}
   - : Creates a new `AudioData` object with reference to the same media resource as the original.
-- {{domxref("AudioData.close()")}} {{Experimental_Inline}}
+- {{domxref("AudioData.close()")}}
   - : Clears all states and releases the reference to the media resource.
 
 ## Specifications

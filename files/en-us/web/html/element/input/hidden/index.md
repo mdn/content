@@ -117,7 +117,7 @@ textarea {
 }
 ```
 
-The server would set the value of the hidden input with the ID "`postID`" to the ID of the post in its database before sending the form to the user's browser and would use that information when the form is returned to know which database record to update with modified information. No scripting is needed in the content to handle this.
+The server would set the value of the hidden input with the ID `postID` to the ID of the post in its database before sending the form to the user's browser and would use that information when the form is returned to know which database record to update with modified information. No scripting is needed in the content to handle this.
 
 The output looks like this:
 

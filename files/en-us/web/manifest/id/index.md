@@ -7,15 +7,6 @@ browser-compat: html.manifest.id
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Type</th>
-      <td><code>String</code></td>
-    </tr>
-  </tbody>
-</table>
-
 The `id` member is a string that represents the _identity of the web application_ — the unique identifier for the web application. If the web application ID does not match an existing ID, the application will be treated as a unique identity even if it is from the same URL.
 
 A valid `id` needs to be same-origin with `start_url`. If the `id` is a relative URL, it is resolved using the origin of [`start_url`](/en-US/docs/Web/Manifest/start_url). The fragment is always ignored.

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.TextEncoder.encodeInto
 ---
 
-{{APIRef("Encoding API")}}
+{{APIRef("Encoding API")}}{{AvailableInWorkers}}
 
 The **`TextEncoder.encodeInto()`** method takes a
 string to encode and a destination {{jsxref("Uint8Array")}} to put resulting UTF-8 encoded text into, and returns a dictionary object indicating the

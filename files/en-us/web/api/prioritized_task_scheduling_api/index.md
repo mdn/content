@@ -7,7 +7,7 @@ browser-compat:
   - api.Scheduling
 ---
 
-{{DefaultAPISidebar("Prioritized Task Scheduling API")}} {{AvailableInWorkers}}
+{{DefaultAPISidebar("Prioritized Task Scheduling API")}}{{AvailableInWorkers}}
 
 The **Prioritized Task Scheduling API** provides a standardized way to prioritize all tasks belonging to an application, whether they are defined in a website developer's code or in third-party libraries and frameworks.
 
@@ -233,7 +233,7 @@ function mylog(text) {
 
 ### Feature checking
 
-Check whether prioritized task scheduling is supported by testing for the `scheduler` property in the global "`this`" exposed to the current scope.
+Check whether prioritized task scheduling is supported by testing for the `scheduler` property in the global scope.
 
 The code below prints "Feature: Supported" if the API is supported on this browser.
 
@@ -251,7 +251,7 @@ function mylog(text) {
 
 ```js
 // Check that feature is supported
-if ("scheduler" in this) {
+if ("scheduler" in globalThis) {
   mylog("Feature: Supported");
 } else {
   mylog("Feature: NOT Supported");

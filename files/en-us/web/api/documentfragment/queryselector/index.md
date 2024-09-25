@@ -41,7 +41,7 @@ that matches the specified set of [CSS selectors](/en-US/docs/Web/CSS/CSS_select
 ### Basic example
 
 In this basic example, the first element in the {{domxref("DocumentFragment")}} with
-the class "`myclass`" is returned:
+the class `myclass` is returned:
 
 ```js
 const el = documentfragment.querySelector(".myclass");

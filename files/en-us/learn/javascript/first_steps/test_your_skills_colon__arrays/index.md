@@ -50,7 +50,7 @@ For this array task, we provide you with a starting array, and you will work in 
 1. Remove the last item in the array.
 2. Add two new names to the end of the array.
 3. Go over each item in the array and add its index number after the name inside parentheses, for example `Ryu (0)`. Note that we don't teach how to do this in the Arrays article, so you'll have to do some research.
-4. Finally, join the array items together in a single string called `myString`, with a separator of "`-`".
+4. Finally, join the array items together in a single string called `myString`, with a separator of `"-"`.
 
 Try updating the live code below to recreate the finished example:
 

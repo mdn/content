@@ -208,6 +208,10 @@ A typical object might look like this:
 You need to set up a server to receive reports with the given JSON format and content type.
 The server handling these requests can then store or process the incoming reports in a way that best suits your needs.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

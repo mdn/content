@@ -194,23 +194,6 @@ Here are some popular editors:
     </tr>
     <tr>
       <td>
-        <a href="https://www.activestate.com/products/komodo-edit/" rel="external"
-          >Komodo Edit</a
-        >
-      </td>
-      <td>MPL</td>
-      <td>Free</td>
-      <td>Windows, Mac, Linux</td>
-      <td><a href="https://community.komodoide.com/" rel="external">Forum</a></td>
-      <td>
-        <a href="https://docs.activestate.com/komodo" rel="external"
-          >Online Manual</a
-        >
-      </td>
-      <td><a href="https://docs.activestate.com/komodo/12/manual/extensions.html">Yes</a></td>
-    </tr>
-    <tr>
-      <td>
         <a href="https://www.notepad-plus-plus.org/" rel="external"
           >Notepad++</a
         >
@@ -277,7 +260,7 @@ Here are some popular editors:
       <td>$50</td>
       <td>Mac</td>
       <td>
-        <a href="https://twitter.com/macromates">Twitter</a>,
+        <a href="https://x.com/macromates">Twitter</a>,
         <a href="https://webchat.freenode.net/?channels=textmate">IRC</a>,
         <a href="https://lists.macromates.com/postorius/lists/textmate.lists.macromates.com/" rel="external"
           >Mailing list</a

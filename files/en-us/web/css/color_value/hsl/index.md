@@ -10,6 +10,9 @@ spec-urls:
 
 {{CSSRef}}
 
+> [!NOTE]
+> The `hsla()` functional notation is an alias for `hsl()`. They are exactly equivalent. It is recommended to use `hsl()`.
+
 The **`hsl()`** functional notation expresses a color in the {{glossary("RGB", "sRGB")}} {{glossary("color space")}} according to its _hue_, _saturation_, and _lightness_ components. An optional _alpha_ component represents the color's transparency.
 
 {{EmbedInteractiveExample("pages/css/function-hsl.html")}}
@@ -29,9 +32,14 @@ hsl(none 75% 25%)
 hsl(from green h s l / 0.5)
 hsl(from #0000FF h s calc(l + 20))
 hsl(from rgb(200 0 0) calc(h + 30) s calc(l + 30))
-```
 
-The `hsla()` function can also be used to express sRGB colors. This is an alias for `hsl()` that accepts the same parameters.
+/* Legacy 'hsla()' alias */
+hsla(120deg 75% 25% / 60%)
+
+/* Legacy format */
+hsl(120, 75%, 25%)
+hsl(120deg, 75%, 25%, 0.8)
+```
 
 > **Note:** `hsl()`/`hsla()` can also be written in a legacy form in which all values are separated with commas, for example `hsl(120, 75%, 25%)` or `hsla(120deg, 75%, 25%, 0.8)`. The `none` value is not permitted in the comma-separated legacy syntax, the `deg` on the hue value is optional, and the `%` units are required for the saturation and lightness values.
 
@@ -85,9 +93,6 @@ The parameters are as follows:
   - : A {{CSSXref("&lt;percentage&gt;")}} or the keyword `none` (equivalent to `0%` in this case). This represents the lightness of the output color. Here `100%` is white, `0%` is black, and `50%` is "normal".
 - `A` {{optional_inline}}
   - : An {{CSSXref("&lt;alpha-value&gt;")}} representing the alpha channel value of the output color, where the number `0` corresponds to `0%` (fully transparent) and `1` corresponds to `100%` (fully opaque). Additionally, the keyword `none` can be used to explicitly specify no alpha channel. If the `A` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color. If included, the value is preceded by a slash (`/`).
-
-> [!NOTE]
-> The `hsla()` alias can also be used to output relative colors, and to specify origin colors. When using `hsla()` to output a relative color, you must use the comma-less modern syntax.
 
 > [!NOTE]
 > To fully enable the representation of the full spectrum of visible colors, the output of relative `hsl()` color functions is serialized to `color(srgb)`. That means that querying the output color value via the {{DOMxRef("HTMLElement.style")}} property or the {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} method returns the output color as a [`color(srgb ...)`](/en-US/docs/Web/CSS/color_value/color) value.

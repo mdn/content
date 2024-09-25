@@ -12,7 +12,7 @@ SVG allows us to use similar tools as the bitmap description language such as th
 
 Filters act like layers. When creating them, try applying and testing the effect step by step.
 
-This element has different attributes that help us create the clipping region. Between the filter tags, we can define the _primitives_ that allow us to implement the desired effect. One of these primitives is the [feGaussianBlur](https://www.w3.org/TR/SVG/filters.html#feGaussianBlurElement). The keyword [SourceAlpha](https://www.w3.org/TR/SVG/filters.html#SourceAlpha) identifies the input for this primitive, is in this case input '`in`'. The amount of blur to be applied is done using the `stdDeviation` attribute.
+This element has different attributes that help us create the clipping region. Between the filter tags, we can define the _primitives_ that allow us to implement the desired effect. One of these primitives is the [feGaussianBlur](https://www.w3.org/TR/SVG/filters.html#feGaussianBlurElement). The keyword [SourceAlpha](https://www.w3.org/TR/SVG/filters.html#SourceAlpha) identifies the input for this primitive, is in this case input `in`. The amount of blur to be applied is done using the `stdDeviation` attribute.
 
 ### SVG filter example
 

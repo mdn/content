@@ -2,6 +2,8 @@
 title: Expect-CT
 slug: Web/HTTP/Headers/Expect-CT
 page-type: http-header
+status:
+  - deprecated
 browser-compat: http.headers.Expect-CT
 ---
 

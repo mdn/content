@@ -14,10 +14,10 @@ Standards mode.
 
 ## Value
 
-An enumerated value that can be:
+A string that is one of the following:
 
-- "`BackCompat`" if the document is in quirks mode.
-- "`CSS1Compat`" if the document is in no-quirks (also known as
+- `"BackCompat"` if the document is in quirks mode.
+- `"CSS1Compat"` if the document is in no-quirks (also known as
   "standards") mode or limited-quirks (also known as "almost standards") mode.
 
 > [!NOTE]
