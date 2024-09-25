@@ -89,10 +89,10 @@ _Also inherits properties from its parent interface, `\{{DOMxRef("NameOfParentIn
 
 Include one term and definition for each property.
 
-- `\{{DOMxRef("NameOfTheInterface.staticProperty1")}}` {{ReadOnlyInline}} {{Experimental_Inline}} {{Deprecated_Inline}}
-  - : Include a brief description of the property and what it does here. If the property is not readonly/experimental/deprecated, remove the related macro calls.
+- `\{{DOMxRef("NameOfTheInterface.staticProperty1")}}` {{ReadOnlyInline}} {{Experimental_Inline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Include a brief description of the property and what it does here. If the property is not readonly/experimental/deprecated/non-standard, remove the related macro calls.
 - `\{{DOMxRef("NameOfTheInterface.staticProperty2")}}`
-  - : Include a brief description of the property and what it does here. If the property is not readonly/experimental/deprecated, remove the related macro calls.
+  - : Include a brief description of the property and what it does here. If the property is not readonly/experimental/deprecated/non-standard, remove the related macro calls.
 
 ## Instance properties
 
@@ -100,10 +100,10 @@ _Also inherits properties from its parent interface, `\{{DOMxRef("NameOfParentIn
 
 Include one term and definition for each property.
 
-- `\{{DOMxRef("NameOfTheInterface.property1")}}` {{ReadOnlyInline}} {{Experimental_Inline}} {{Deprecated_Inline}}
-  - : Include a brief description of the property and what it does here. If the property is not readonly/experimental/deprecated, remove the related macro calls.
+- `\{{DOMxRef("NameOfTheInterface.property1")}}` {{ReadOnlyInline}} {{Experimental_Inline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Include a brief description of the property and what it does here. If the property is not readonly/experimental/deprecated/non-standard, remove the related macro calls.
 - `\{{DOMxRef("NameOfTheInterface.property2")}}`
-  - : Include a brief description of the property and what it does here. If the property is not readonly/experimental/deprecated, remove the related macro calls.
+  - : Include a brief description of the property and what it does here. If the property is not readonly/experimental/deprecated/non-standard, remove the related macro calls.
 
 ## Static methods
 
@@ -111,10 +111,10 @@ _Also inherits methods from its parent interface, `\{{DOMxRef("NameOfParentInter
 
 Include one term and definition for each method.
 
-- `\{{DOMxRef("NameOfTheInterface.staticMethod1()")}}` {{Experimental_Inline}} {{Deprecated_Inline}}
-  - : Include a brief description of the method and what it does here. If the method is not experimental/deprecated, remove the related macro calls.
+- `\{{DOMxRef("NameOfTheInterface.staticMethod1()")}}` {{Experimental_Inline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Include a brief description of the method and what it does here. If the method is not experimental/deprecated/non-standard, remove the related macro calls.
 - `\{{DOMxRef("NameOfTheInterface.staticMethod2()")}}`
-  - : Include a brief description of the method and what it does here. If the method is not experimental/deprecated, remove the related macro calls.
+  - : Include a brief description of the method and what it does here. If the method is not experimental/deprecated/non-standard, remove the related macro calls.
 
 ## Instance methods
 
@@ -122,10 +122,10 @@ _Also inherits methods from its parent interface, `\{{DOMxRef("NameOfParentInter
 
 Include one term and definition for each method.
 
-- `\{{DOMxRef("NameOfTheInterface.method1()")}}` {{Experimental_Inline}} {{Deprecated_Inline}}
-  - : Include a brief description of the method and what it does here. If the method is not experimental/deprecated, remove the related macro calls.
+- `\{{DOMxRef("NameOfTheInterface.method1()")}}` {{Experimental_Inline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Include a brief description of the method and what it does here. If the method is not experimental/deprecated/non-standard, remove the related macro calls.
 - `\{{DOMxRef("NameOfTheInterface.method2()")}}`
-  - : Include a brief description of the method and what it does here. If the method is not experimental/deprecated, remove the related macro calls.
+  - : Include a brief description of the method and what it does here. If the method is not experimental/deprecated/non-standard, remove the related macro calls.
 
 ## Events
 
@@ -133,12 +133,14 @@ _Also inherits events from its parent interface, `\{{DOMxRef("NameOfParentInterf
 
 Listen to these events using {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
 
-- `\{{DOMxRef("NameOfTheInterface.event1", "event1")}}` {{Experimental_Inline}} {{Deprecated_Inline}}
+- `\{{DOMxRef("NameOfTheInterface.event1", "event1")}}` {{Experimental_Inline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Fired when (include the description of when the event fires).
     Also available via the `oneventname1` property.
+    If the event is not experimental/deprecated/non-standard, remove the related macro calls.
 - `\{{DOMxRef("NameOfTheInterface.event2", "event2")}}`
   - : Fired when (include the description of when the event fires).
     Also available via the `oneventname2` property.
+    If the event is not experimental/deprecated/non-standard, remove the related macro calls.
 
 ## Examples
 
