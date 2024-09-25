@@ -49,6 +49,10 @@ The object returned by `resolvedOptions()` has the following properties:
   - : The value provided for this property in the options argument of the constructor or
     the default value (`"code"`). Its value is either `"code"`
     or `"none"`.
+- `languageDisplay`
+  - : The value provided for this property in the options argument of the constructor or
+    the default value (`"dialect"`). Its value is either `"dialect"`
+    or `"standard"`.
 
 ## Examples
 
