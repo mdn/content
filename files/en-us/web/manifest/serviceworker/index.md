@@ -16,15 +16,15 @@ The `serviceworker` member specifies a serviceworker that is Just-In-Time (JIT)-
 
 `serviceworker` objects may contain the following values:
 
-- `scope`
+- `scope` {{experimental_inline}}
 
   - : A string representing the service worker's registration scope.
 
-- `src`
+- `src` {{experimental_inline}}
 
   - : A string representing the URL to download the service worker script from.
 
-- `use_cache`
+- `use_cache` {{experimental_inline}}
 
   - : A boolean that sets how the HTTP cache is used for service worker script resources during updates.
     It provides equivalent functionality to certain values of the `updateViaCache` option provided when a service worker is registered via JavaScript using {{domxref("ServiceWorkerContainer.register()")}}.
