@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUQuerySet.destroy
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`destroy()`** method of the
 {{domxref("GPUQuerySet")}} interface destroys the `GPUQuerySet`.

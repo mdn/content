@@ -7,7 +7,7 @@ status:
 browser-compat: api.WebSocketStream
 ---
 
-{{APIRef("WebSockets API")}}{{SeeCompatTable}}
+{{APIRef("WebSockets API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`WebSocketStream`** interface of the {{domxref("WebSockets API", "WebSockets API", "", "nocode")}} is a promise-based API for connecting to a WebSocket server. It uses [streams](/en-US/docs/Web/API/Streams_API) to send and receive data on the connection, and can therefore take advantage of stream [backpressure](/en-US/docs/Web/API/Streams_API/Concepts#backpressure) automatically, regulating the speed of reading or writing to avoid bottlenecks in the application.
 

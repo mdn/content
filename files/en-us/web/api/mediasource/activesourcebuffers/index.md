@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.MediaSource.activeSourceBuffers
 ---
 
-{{APIRef("Media Source Extensions")}}
+{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`activeSourceBuffers`** read-only property of the
 {{domxref("MediaSource")}} interface returns a {{domxref("SourceBufferList")}} object

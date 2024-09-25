@@ -21,7 +21,7 @@ To enable monitoring bfcache blocking reasons, the [`PerformanceNavigationTiming
 - Details such as frame `id` and `name`, to help identify `<iframe>`s in the HTML.
 
 > [!NOTE]
-> Historically, the deprecated {{domxref("PerformanceNavigation.type")}} property was used to monitor the bfcache, with developers testing for a `type` of "`TYPE_BACK_FORWARD`" to get an indication of the bfcache hit rate. This however did not provide any reasons for bfcache blocking, or any other data. The `notRestoredReasons` property should be used to monitor bfcache blocking, going forward.
+> Historically, the deprecated {{domxref("PerformanceNavigation.type")}} property was used to monitor the bfcache, with developers testing for a `type` of `"TYPE_BACK_FORWARD"` to get an indication of the bfcache hit rate. This however did not provide any reasons for bfcache blocking, or any other data. The `notRestoredReasons` property should be used to monitor bfcache blocking, going forward.
 
 ## Logging bfcache blocking reasons
 
