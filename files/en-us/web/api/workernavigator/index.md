@@ -29,6 +29,8 @@ _The `WorkerNavigator` interface doesn't inherit any property._
   - : Returns the {{domxref("GPU")}} object for the current worker context. The entry point for the {{domxref("WebGPU_API", "WebGPU API", "", "nocode")}}.
 - {{DOMxRef("WorkerNavigator.hardwareConcurrency")}} {{ReadOnlyInline}}
   - : Returns the number of logical processor cores available.
+- {{domxref("WorkerNavigator.hid")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
+  - : Returns an {{domxref("HID")}} object providing methods for connecting to HID devices, listing attached HID devices, and event handlers for connected HID devices.
 - {{DOMxRef("WorkerNavigator.language")}} {{ReadOnlyInline}}
   - : Returns a string representing the preferred language of the user, usually the language of the browser UI. The `null` value is returned when this is unknown.
 - {{DOMxRef("WorkerNavigator.languages")}} {{ReadOnlyInline}}

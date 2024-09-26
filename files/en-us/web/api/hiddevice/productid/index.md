@@ -8,7 +8,7 @@ status:
 browser-compat: api.HIDDevice.productId
 ---
 
-{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`productId`** read-only property of the {{domxref("HIDDevice")}} interface returns the product ID of the connected HID device.
 

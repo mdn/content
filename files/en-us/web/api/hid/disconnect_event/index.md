@@ -8,7 +8,7 @@ status:
 browser-compat: api.HID.disconnect_event
 ---
 
-{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`disconnect`** event of the {{domxref("HID")}} interface fires when the user agent disconnects a HID device.
 

@@ -8,7 +8,7 @@ status:
 browser-compat: api.HID.requestDevice
 ---
 
-{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`requestDevice()`** method of the {{domxref("HID")}} interface requests access to a HID device.
 
