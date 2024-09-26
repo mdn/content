@@ -1,15 +1,14 @@
 ---
-title: setTimeout() global function
+title: "Window: setTimeout() method"
 short-title: setTimeout()
 slug: Web/API/Window/setTimeout
-page-type: web-api-global-function
+page-type: web-api-instance-method
 browser-compat: api.setTimeout
 ---
 
-{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
+{{APIRef("HTML DOM")}}
 
-The global **`setTimeout()`** method sets a timer which executes a function or specified
-piece of code once the timer expires.
+The **`setTimeout()`** method of the {{domxref("Window")}} interface sets a timer which executes a function or specified piece of code once the timer expires.
 
 ## Syntax
 
@@ -45,8 +44,7 @@ setTimeout(functionRef, delay, param1, param2, /* …, */ paramN)
 
 - `param1`, …, `paramN` {{optional_inline}}
 
-  - : Additional arguments which are passed through to the function specified by
-    `functionRef`.
+  - : Additional arguments which are passed through to the function specified by `functionRef`.
 
 ### Return value
 
@@ -462,7 +460,8 @@ See also the [`clearTimeout()` example](/en-US/docs/Web/API/Window/clearTimeout#
 ## See also
 
 - [Polyfill of `setTimeout` which allows passing arguments to the callback in `core-js`](https://github.com/zloirock/core-js#settimeout-and-setinterval)
-- {{domxref("clearTimeout")}}
+- {{domxref("Window.clearTimeout()")}}
 - {{domxref("setInterval()")}}
-- {{domxref("window.requestAnimationFrame")}}
+- {{domxref("clearInterval()")}}
+- {{domxref("Window.requestAnimationFrame()")}}
 - {{domxref("queueMicrotask()")}}

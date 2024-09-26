@@ -1,14 +1,14 @@
 ---
-title: "Window: clearTimeout() method"
+title: "WorkerGlobalScope: clearTimeout() method"
 short-title: clearTimeout()
-slug: Web/API/Window/clearTimeout
+slug: Web/API/WorkerGlobalScope/clearTimeout
 page-type: web-api-instance-method
 browser-compat: api.clearTimeout
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers("worker")}}
 
-The **`clearTimeout()`** method of the {{domxref("Window")}} interface cancels a timeout previously established by calling {{domxref("Window.setTimeout()")}}.
+The **`clearTimeout()`** method of the {{domxref("WorkerGlobalScope")}} interface cancels a timeout previously established by calling {{domxref("WorkerGlobalScope.setTimeout()")}}.
 
 If the parameter provided does not identify a previously established action,
 this method does nothing.
@@ -38,37 +38,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-Run the script below in the context of a web page and click on the page once. You'll
-see a message popping up in a second. If you click the page multiple times in
-one second, the alert only appears once.
-
-```js
-const alarm = {
-  remind(aMessage) {
-    alert(aMessage);
-    this.timeoutID = undefined;
-  },
-
-  setup() {
-    if (typeof this.timeoutID === "number") {
-      this.cancel();
-    }
-
-    this.timeoutID = setTimeout(
-      (msg) => {
-        this.remind(msg);
-      },
-      1000,
-      "Wake up!",
-    );
-  },
-
-  cancel() {
-    clearTimeout(this.timeoutID);
-  },
-};
-window.addEventListener("click", () => alarm.setup());
-```
+See {{domxref("Window.clearTimeout()")}} for examples.
 
 ## Notes
 
