@@ -15,8 +15,6 @@ The [task priorities](#task_priorities) are very coarse-grained and based around
 
 The API is promise-based and supports the ability to set and change task priorities, to delay tasks being added to the scheduler, to abort tasks, and to monitor for priority change and abort events.
 
-In this page, we also include information about the {{domxref("Scheduling.isInputPending", "navigator.scheduling.isInputPending()")}} method, which was defined in a different API specification but is very closely related to task scheduling. This method allows you to check whether there are pending input events in the event queue, and therefore handle task queues efficiently, only yielding to the main thread when it is needed.
-
 ## Concepts and usage
 
 The Prioritized Task Scheduling API is available in both window and worker threads using the `scheduler` property on the global object.
@@ -133,10 +131,6 @@ If the priority is not set with `options.priority` or by passing a {{domxref("Ta
 Note that a task that needs to be aborted must set `options.signal` to either {{domxref("TaskSignal")}} or {{domxref("AbortSignal")}}.
 However for a task with an immutable priority, {{domxref("AbortSignal")}} more clearly indicates that the task priority cannot be changed using the signal.
 
-### `isInputPending()`
-
-The {{domxref("Scheduling.isInputPending", "isInputPending()")}} API is intended to help with task execution, enabling you to make task runners more efficient by yielding to the main thread only when the user is trying to interact with your app, rather than having to do it at arbitrary intervals.
-
 Let's run through an example to demonstrate what we mean by this. When you have several tasks that are of roughly the same priority, it makes sense to break them down into separate functions to aid with maintenance, debugging, and many other reasons.
 
 For example:
@@ -184,37 +178,27 @@ async function main() {
 }
 ```
 
-This helps with the main thread-blocking problem, but it could be better — we can use {{domxref("Scheduling.isInputPending", "navigator.scheduling.isInputPending()")}} to run the `yield()` function only when the user is attempting to interact with the page:
+To improve this further, we can use {{domxref("Scheduler.yield")}} when available to allow this code to continue executing ahead of other less critical tasks in the queue:
 
 ```js
-async function main() {
-  // Create an array of functions to run
-  const tasks = [a, b, c, d, e];
-
-  while (tasks.length > 0) {
-    // Yield to a pending user input
-    if (navigator.scheduling.isInputPending()) {
-      await yield();
-    } else {
-      // Shift the first task off the tasks array
-      const task = tasks.shift();
-
-      // Run the task
-      task();
-    }
+function yield() {
+  // Use scheduler.yield if it exists:
+  if ("scheduler" in window && "yield" in scheduler) {
+    return scheduler.yield();
   }
+
+  // Fall back to setTimeout:
+  return new Promise((resolve) => {
+    setTimeout(resolve, 0);
+  });
 }
 ```
-
-This allows you to avoid blocking the main thread when the user is actively interacting with the page, potentially providing a smoother user experience. However, by only yielding when necessary, we can continue running the current task when there are no user inputs to process. This also avoids tasks being placed at the back of the queue behind other non-essential browser-initiated tasks that were scheduled after the current one.
 
 ## Interfaces
 
 - {{domxref("Scheduler")}}
   - : Contains the {{domxref('Scheduler.postTask', 'postTask()')}} and {{domxref('Scheduler.yield', 'yield()')}} methods for adding prioritized tasks to be scheduled.
     An instance of this interface is available on the {{domxref("Window")}} or {{domxref("WorkerGlobalScope")}} global objects (`globalThis.scheduler`).
-- {{domxref("Scheduling")}}
-  - : Contains the {{domxref('Scheduling.isInputPending', 'isInputPending()')}} method for checking whether there are pending input events in the event queue.
 - {{domxref("TaskController")}}
   - : Supports both aborting a task and changing its priority.
 - {{domxref("TaskSignal")}}
@@ -227,8 +211,6 @@ This allows you to avoid blocking the main thread when the user is actively inte
 
 ### Extensions to other interfaces
 
-- {{domxref("Navigator.scheduling")}}
-  - : This property is the entry point for using the `Scheduling.isInputPending()` method.
 - {{domxref("Window.scheduler")}} and {{domxref("WorkerGlobalScope.scheduler")}}
   - : These properties are the entry points for using the `Scheduler.postTask()` method in a window or a worker scope, respectively.
 
@@ -530,4 +512,4 @@ Note that the second string appears in log after about 2 seconds.
 ## See also
 
 - [Building a Faster Web Experience with the postTask Scheduler](https://medium.com/airbnb-engineering/building-a-faster-web-experience-with-the-posttask-scheduler-276b83454e91) on the Airbnb blog (2021)
-- [Optimizing long tasks](https://web.dev/articles/optimize-long-tasks#yield_only_when_necessary) on web.dev (2022)
+- [Optimizing long tasks](https://web.dev/articles/optimize-long-tasks) on web.dev (2022)
