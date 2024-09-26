@@ -73,4 +73,4 @@ try {
 
 ## See also
 
-- [`Number.isSafeInteger()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger)
+- [`Number.isSafeInteger()`](/en-US/docs/web/javascript/reference/global_objects/number/issafeinteger)
