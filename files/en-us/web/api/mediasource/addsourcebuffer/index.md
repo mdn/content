@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.MediaSource.addSourceBuffer
 ---
 
-{{APIRef("Media Source Extensions")}}
+{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`addSourceBuffer()`** method of the
 {{domxref("MediaSource")}} interface creates a new {{domxref("SourceBuffer")}} of the

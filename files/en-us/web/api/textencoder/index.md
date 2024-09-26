@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.TextEncoder
 ---
 
-{{APIRef("Encoding API")}} {{AvailableInWorkers}}
+{{APIRef("Encoding API")}}{{AvailableInWorkers}}
 
 The **`TextEncoder`** interface takes a stream of code points as input and emits a stream of UTF-8 bytes.
 

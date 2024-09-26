@@ -9,7 +9,7 @@ status:
 browser-compat: api.SourceBuffer.appendBufferAsync
 ---
 
-{{APIRef("Media Source Extensions")}}{{Non-standard_Header}}{{SeeCompatTable}}
+{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}{{Non-standard_Header}}{{SeeCompatTable}}
 
 The **`appendBufferAsync()`** method
 of the {{domxref("SourceBuffer")}} interface begins the process of asynchronously

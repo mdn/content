@@ -86,7 +86,7 @@ the {{HTMLElement("meta")}} element, like this:
 <meta http-equiv="x-dns-prefetch-control" content="off" />
 ```
 
-You can reverse this setting by setting `content` to "`on`".
+You can reverse this setting by setting `content` to `"on"`.
 
 ### Forcing lookup of specific hostnames
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.SecurityPolicyViolationEvent.referrer
 ---
 
-{{APIRef("Reporting API")}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}
 
 The **`referrer`** read-only property of the {{domxref("SecurityPolicyViolationEvent")}} interface is a string representing the referrer for the resources whose [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) was violated.
 This will be a URL or `null`.

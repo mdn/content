@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.SourceBuffer.updating
 ---
 
-{{APIRef("Media Source Extensions")}}
+{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`updating`** read-only property of the
 {{domxref("SourceBuffer")}} interface indicates whether the `SourceBuffer` is

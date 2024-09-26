@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUCompilationMessage.offset
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`offset`** read-only property of the
 {{domxref("GPUCompilationMessage")}} interface is a number representing the offset from the start of the shader code to the exact point, or the start of the relevant substring, that the message corresponds to.

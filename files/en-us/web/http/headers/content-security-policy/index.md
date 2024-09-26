@@ -206,7 +206,7 @@ For detailed reference see [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Cont
   - Other path parts in the CSP are matched exactly; for example, `example.com/file.js` will match `http://example.com/file.js` and `https://example.com/file.js`, but not `https://example.com/file.js/file2.js`.
 
 - Scheme
-  - Only allow loading of resources over a specific scheme, should always end with "`:`". For example, `https:`, `http:`, `data:`, etc.
+  - Only allow loading of resources over a specific scheme, should always end with `:`. For example, `https:`, `http:`, `data:`, etc.
 
 ### Other values
 
