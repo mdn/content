@@ -10741,6 +10741,7 @@
 /en-US/docs/Web/API/range.startOffset	/en-US/docs/Web/API/range/startOffset
 /en-US/docs/Web/API/range.surroundContents	/en-US/docs/Web/API/range/surroundContents
 /en-US/docs/Web/API/range.toString	/en-US/docs/Web/API/range/toString
+/en-US/docs/Web/API/reportError	/en-US/docs/Web/API/Window/reportError
 /en-US/docs/Web/API/scheduler_property	/en-US/docs/Web/API/Window/scheduler
 /en-US/docs/Web/API/select.type	/en-US/docs/Web/API/HTMLSelectElement/type
 /en-US/docs/Web/API/sessionStorage	/en-US/docs/Web/API/Window/sessionStorage

@@ -221,7 +221,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Returns a {{jsxref("Promise")}} that fulfills with an array of {{domxref("FontData")}} objects representing the font faces available locally.
 - {{domxref("Window.queueMicrotask()")}}
   - : Queues a microtask to be executed at a safe time prior to control returning to the browser's event loop.
-- {{domxref("reportError", "Window.reportError()")}}
+- {{domxref("Window.reportError()")}}
   - : Reports an error in a script, emulating an unhandled exception.
 - {{domxref("Window.requestAnimationFrame()")}}
   - : Tells the browser that an animation is in progress, requesting that the browser schedule a repaint of the window for the next animation frame.

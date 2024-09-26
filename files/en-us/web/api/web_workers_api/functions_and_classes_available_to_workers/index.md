@@ -26,7 +26,7 @@ Some of the functions (a subset) that are common to all workers and to the main 
 - {{domxref("WorkerGlobalScope.dump()", "dump()")}} {{non-standard_inline}}
 - {{domxref("WorkerGlobalScope.fetch()", "fetch()")}}
 - {{domxref("WorkerGlobalScope.queueMicrotask()", "queueMicrotask()")}}
-- {{domxref("reportError()")}}
+- {{domxref("WorkerGlobalScope.reportError()", "reportError()")}}
 - {{domxref("setInterval()")}}
 - {{domxref("setTimeout()")}}
 - {{domxref("structuredClone()")}}
