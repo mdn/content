@@ -392,6 +392,13 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 - {{domxref("Window/unhandledrejection_event", "unhandledrejection")}}
   - : Sent when a JavaScript {{jsxref("Promise")}} is rejected but there is no handler in place to catch the rejection.
 
+### Scroll events
+
+- {{domxref("Window/scrollsnapchange_event", "scrollsnapchange")}} {{experimental_inline}}
+  - : Fired at the end of a scrolling operation when a new scroll snap target (as implemented using features of the [CSS scroll snap module](/en-US/docs/Web/CSS/CSS_scroll_snap)) is selected.
+- {{domxref("Window/scrollsnapchanging_event", "scrollsnapchanging")}} {{experimental_inline}}
+  - : Fired when the browser determines that a new scroll snap target is pending (i.e., it will be selected when the current scroll gesture ends).
+
 ### Deprecated events
 
 - {{domxref("Window/orientationchange_event", "orientationchange")}} {{Deprecated_Inline}}

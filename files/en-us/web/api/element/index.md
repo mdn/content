@@ -311,6 +311,10 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when the document view or an element has been scrolled.
 - {{domxref("Element/scrollend_event", "scrollend")}}
   - : Fires when the document view has completed scrolling.
+- {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} {{experimental_inline}}
+  - : Fired at the end of a scrolling operation when a new scroll snap target (as implemented using features of the [CSS scroll snap module](/en-US/docs/Web/CSS/CSS_scroll_snap)) is selected.
+- {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} {{experimental_inline}}
+  - : Fired when the browser determines that a new scroll snap target is pending (i.e., it will be selected when the current scroll gesture ends).
 - {{domxref("Element/securitypolicyviolation_event","securitypolicyviolation")}}
   - : Fired when a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) is violated.
 - {{domxref("Element/wheel_event","wheel")}}
