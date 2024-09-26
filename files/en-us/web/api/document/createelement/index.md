@@ -38,7 +38,7 @@ The new {{domxref("Element")}}.
 
 ### Basic example
 
-This creates a new `<div>` and inserts it before the element with the ID "`div1`".
+This creates a new `<div>` and inserts it before the element with the ID `div1`.
 
 #### HTML
 

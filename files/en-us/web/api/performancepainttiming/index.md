@@ -29,7 +29,7 @@ Like other Performance APIs, this API extends {{domxref("PerformanceEntry")}}.
 This interface has no properties but it extends the following {{domxref("PerformanceEntry")}} properties by qualifying and constraining the properties as follows:
 
 - {{domxref("PerformanceEntry.entryType")}}
-  - : Returns "`paint`".
+  - : Returns `"paint"`.
 - {{domxref("PerformanceEntry.name")}}
   - : Returns either `"first-paint"` or `"first-contentful-paint"`.
 - {{domxref("PerformanceEntry.startTime")}}

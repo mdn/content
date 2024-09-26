@@ -18,6 +18,8 @@ This article provides information about the changes in Firefox 131 that affect d
 
 ### CSS
 
+- The `inset-area` CSS property has been renamed to {{CSSXRef("position-area")}} in preparation for further implementation of [Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning), so at present this property is only used internally for parsing values. The set of Anchor Positioning features are being progressively rolled out behind a preference. See [Experimental features in Firefox: CSS Anchor Positioning](/en-US/docs/Mozilla/Firefox/Experimental_features#css_anchor_positioning) for more information. ([Firefox bug 1909358](https://bugzil.la/1909358) and [Firefox bug 1838746](https://bugzil.la/1838746)).
+
 #### Removals
 
 ### JavaScript
@@ -63,9 +65,16 @@ This article provides information about the changes in Firefox 131 that affect d
 
 #### General
 
+- For both WebDriver Classic and BiDi the `keyUp` and `keyDown` actions will no longer accept multiple characters for the `value` ([Firefox bug 1910352](https://bugzil.la/1910352)).
+
 #### WebDriver BiDi
 
-#### Marionette
+- Added support for remaining arguments of `network.continueResponse` command:
+  - The cookies and headers arguments ([Firefox bug 1853887](https://bugzil.la/1853887)).
+  - The `statusCode` (e.g., 200, 304) and `reasonPhrase` (e.g., "OK", "Not modified") arguments ([Firefox bug 1913737](https://bugzil.la/1913737)).
+- The `browsingContext.navigate` command will now return if the `wait` argument is `none` and a beforeunload prompt is triggered ([Firefox bug 1763134](https://bugzil.la/1763134)).
+- The `browsingContext.navigate` command will return an `unknown error` in all cases where a navigation failure occurs, as required by the specification ([Firefox bug 1905083](https://bugzil.la/1905083)).
+- The `session.new` command will no longer include the `unhandledPromptBehavior` capability in its response if it was not specified by the client as an argument ([Firefox bug 1909455](https://bugzil.la/1909455)).
 
 ## Changes for add-on developers
 

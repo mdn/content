@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.Crypto
 ---
 
-{{APIRef("Web Crypto API")}} {{AvailableInWorkers}}
+{{APIRef("Web Crypto API")}}{{AvailableInWorkers}}
 
 The **`Crypto`** interface represents basic cryptography features available in the current context.
 It allows access to a cryptographically strong random number generator and to cryptographic primitives.

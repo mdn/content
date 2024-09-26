@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUDevice.createCommandEncoder
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`createCommandEncoder()`** method of the
 {{domxref("GPUDevice")}} interface creates a {{domxref("GPUCommandEncoder")}}, used to encode commands to be issued to the GPU.

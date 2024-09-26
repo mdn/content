@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.SecurityPolicyViolationEvent
 ---
 
-{{APIRef("Reporting API")}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}
 
 The **`SecurityPolicyViolationEvent`** interface inherits from {{domxref("Event")}}, and represents the event object of a `securitypolicyviolation` event sent on an {{domxref("Element/securitypolicyviolation_event", "Element")}}, {{domxref("Document/securitypolicyviolation_event", "Document")}}, or {{domxref("WorkerGlobalScope/securitypolicyviolation_event", "worker","","nocode")}} when its [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) is violated.
 

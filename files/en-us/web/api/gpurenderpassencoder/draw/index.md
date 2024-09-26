@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPURenderPassEncoder.draw
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`draw()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface draws primitives based on the vertex buffers provided by {{domxref("GPURenderPassEncoder.setVertexBuffer", "setVertexBuffer()")}}.

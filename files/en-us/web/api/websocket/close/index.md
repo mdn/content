@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebSocket.close
 ---
 
-{{APIRef("WebSockets API")}}
+{{APIRef("WebSockets API")}}{{AvailableInWorkers}}
 
 The **`WebSocket.close()`** method closes the
 {{domxref("WebSocket")}} connection or connection attempt, if any. If the connection is

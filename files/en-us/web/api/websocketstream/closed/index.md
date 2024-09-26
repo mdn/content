@@ -8,7 +8,7 @@ status:
 browser-compat: api.WebSocketStream.closed
 ---
 
-{{APIRef("WebSockets API")}}{{SeeCompatTable}}
+{{APIRef("WebSockets API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`closed`** read-only property of the
 {{domxref("WebSocketStream")}} interface returns a {{jsxref("Promise")}} that fulfills with an object once the socket connection is closed. The object contains the closing code and reason.
