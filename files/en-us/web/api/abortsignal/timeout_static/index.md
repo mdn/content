@@ -70,7 +70,3 @@ try {
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [`Number.isSafeInteger()`](/en-US/docs/web/javascript/reference/global_objects/number/issafeinteger)
