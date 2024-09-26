@@ -296,7 +296,7 @@ An `alt` attribute's value should provide a clear and concise text replacement f
 <img alt="A Rockhopper Penguin on a beach." src="penguin.jpg" />
 ```
 
-In terms of accessibility, if you prepend the phrase "Something I saw on my travels:" to the examples above, a screen reader could read the *Don't* example as "Something I saw on my travels: image", which does not convey the same meaning a sighted person might get combining the text with what they see in the image.
+In terms of accessibility, if you prepend the phrase "Something I saw on my travels:" to the examples above, a screen reader could read the _Don't_ example as "Something I saw on my travels: image", which does not convey the same meaning a sighted person might get combining the text with what they see in the image.
 
 For images used to trigger an action, like inside an `<a>` tag or a `<button>` tag, consider using the triggered action as `alt` attribute value (like `alt="next page"` instead of `alt="arrow right"`), optionally adding a description to a `title` attribute, which might be read by screen readers upon user request.
 
