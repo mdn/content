@@ -5,11 +5,10 @@ slug: Web/API/WebSocketStream/opened
 page-type: web-api-instance-property
 status:
   - experimental
-  - non-standard
 browser-compat: api.WebSocketStream.opened
 ---
 
-{{APIRef("WebSockets API")}}{{non-standard_header}}
+{{APIRef("WebSockets API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`opened`** read-only property of the
 {{domxref("WebSocketStream")}} interface returns a {{jsxref("Promise")}} that fulfills with an object once the socket connection is successfully opened. Among other features, this object contains a {{domxref("ReadableStream")}} and a {{domxref("WritableStream")}} instance for receiving and sending data on the connection.

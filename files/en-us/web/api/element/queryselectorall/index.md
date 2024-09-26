@@ -68,14 +68,14 @@ const refs = [
 ### Obtaining a list of matches
 
 To obtain a {{domxref("NodeList")}} of all of the {{HTMLElement("p")}} elements
-contained within the element `"myBox"`:
+contained within the element `myBox`:
 
 ```js
 const matches = myBox.querySelectorAll("p");
 ```
 
 This example returns a list of all {{HTMLElement("div")}} elements within
-`"myBox"` with a class of either "`note`" or "`alert`":
+`myBox` with a class of either `note` or `alert`:
 
 ```js
 const matches = myBox.querySelectorAll("div.note, div.alert");

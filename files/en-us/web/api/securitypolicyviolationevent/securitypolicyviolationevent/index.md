@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.SecurityPolicyViolationEvent.SecurityPolicyViolationEvent
 ---
 
-{{APIRef("Reporting API")}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}
 
 The **`SecurityPolicyViolationEvent()`** constructor creates a new {{domxref("SecurityPolicyViolationEvent")}} object.
 

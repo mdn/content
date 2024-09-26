@@ -34,25 +34,25 @@ None.
 - `name`
   - : Specifies a name for this format.
 - `decimal-separator`
-  - : Specifies the decimal point character. The default is (`.`).
+  - : Specifies the decimal point character. The default is `.`.
 - `grouping-separator`
-  - : Specifies the thousands separator character. The default is (`,`).
+  - : Specifies the thousands separator character. The default is `,`.
 - `infinity`
-  - : Specifies the string used to represent infinity. The default is the string "`Infinity`".
+  - : Specifies the string used to represent infinity. The default is the string `Infinity`.
 - `minus-sign`
-  - : Specifies the minus sign character. The default is the hyphen (`-`).
+  - : Specifies the minus sign character. The default is the hyphen `-`.
 - `NaN`
-  - : Specifies the string used when the value is not a number. The default is the string "`NaN`".
+  - : Specifies the string used when the value is not a number. The default is the string `NaN`.
 - `percent`
-  - : Specifies the percentage sign character. The default is (`%`).
+  - : Specifies the percentage sign character. The default is `%`.
 - `per-mille`
-  - : Specifies the per thousand character. The default is (`‰`).
+  - : Specifies the per thousand character. The default is `‰`.
 - `zero-digit`
-  - : Specifies the digit zero character. The default is (`0`).
+  - : Specifies the digit zero character. The default is `0`.
 - `digit`
-  - : Specifies the character used in the format pattern to stand for a digit. The default is (`#`).
+  - : Specifies the character used in the format pattern to stand for a digit. The default is `#`.
 - `pattern-separator`
-  - : Specifies the character separating positive and negative subpatterns in a format pattern. The default is the semicolon (`;`).
+  - : Specifies the character separating positive and negative subpatterns in a format pattern. The default is the semicolon `;`.
 
 ### Type
 

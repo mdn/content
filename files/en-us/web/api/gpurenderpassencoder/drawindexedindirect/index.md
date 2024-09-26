@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPURenderPassEncoder.drawIndexedIndirect
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`drawIndexedIndirect()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface draws indexed primitives using parameters read from a {{domxref("GPUBuffer")}}.

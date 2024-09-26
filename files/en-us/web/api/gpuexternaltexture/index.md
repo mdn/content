@@ -7,7 +7,7 @@ status:
 browser-compat: api.GPUExternalTexture
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPUExternalTexture`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents a wrapper object containing an {{domxref("HTMLVideoElement")}} snapshot that can be used as a texture in GPU rendering operations.
 

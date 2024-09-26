@@ -68,8 +68,8 @@ The {{domxref("PerformanceMeasure")}} entry that was created.
 
 The returned _measure_ will have the following property values:
 
-- {{domxref("PerformanceEntry.entryType","entryType")}} - set to "`measure`".
-- {{domxref("PerformanceEntry.name","name")}} - set to the "`name`" argument.
+- {{domxref("PerformanceEntry.entryType","entryType")}} - set to `"measure"`.
+- {{domxref("PerformanceEntry.name","name")}} - set to the `name` argument.
 - {{domxref("PerformanceEntry.startTime","startTime")}} - set to:
 
   - a {{domxref("DOMHighResTimeStamp","timestamp")}}, if specified in `measureOptions.start`.

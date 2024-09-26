@@ -72,31 +72,31 @@ f1();
 [Thenable objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) are resolved just the same as actual `Promise` objects.
 
 ```js
-async function f() {
+async function f2() {
   const thenable = {
-    then(resolve, _reject) {
+    then(resolve) {
       resolve("resolved!");
     },
   };
   console.log(await thenable); // "resolved!"
 }
 
-f();
+f2();
 ```
 
 They can also be rejected:
 
 ```js
-async function f() {
+async function f2() {
   const thenable = {
-    then(resolve, reject) {
+    then(_, reject) {
       reject(new Error("rejected!"));
     },
   };
   await thenable; // Throws Error: rejected!
 }
 
-f();
+f2();
 ```
 
 ### Conversion to promise
@@ -237,7 +237,7 @@ function foo(name) {
 
 While the extra `then()` handler is not necessary, and the handler can be merged with the executor passed to the constructor, the `then()` handler's existence means the code will take one extra tick to complete. The same happens for `await`. Therefore, make sure to use `await` only when necessary (to unwrap promises into their values).
 
-Other microtasks can execute before the async function resumes. This example uses [`queueMicrotask()`](/en-US/docs/Web/API/queueMicrotask) to demonstrate how the microtask queue is processed when each `await` expression is encountered.
+Other microtasks can execute before the async function resumes. This example uses {{domxref("Window.queueMicrotask()", "queueMicrotask()")}} to demonstrate how the microtask queue is processed when each `await` expression is encountered.
 
 ```js
 let i = 0;

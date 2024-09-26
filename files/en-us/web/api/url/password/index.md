@@ -11,9 +11,6 @@ browser-compat: api.URL.password
 The **`password`** property of the {{domxref("URL")}} interface
 is a string containing the password specified before the domain name.
 
-If it is set without first setting the {{domxref("URL.username", "username")}}
-property, it silently fails.
-
 ## Value
 
 A string.

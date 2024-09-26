@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.SubtleCrypto.verify
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{APIRef("Web Crypto API")}}{{SecureContext_header}}{{AvailableInWorkers}}
 
 The **`verify()`** method of the {{domxref("SubtleCrypto")}}
 interface verifies a digital {{glossary("signature")}}.

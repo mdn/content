@@ -14,7 +14,7 @@ The **`ProcessingInstruction`** interface represents a [processing instruction](
 A processing instruction may be different than the [XML declaration](/en-US/docs/Web/XML/XML_introduction#xml_declaration).
 
 > [!NOTE]
-> User-defined processing instructions cannot begin with "`xml`", as `xml`-prefixed processing-instruction target names are reserved by the XML specification for particular, standard uses (see, for example, `<?xml-stylesheet ?>`.
+> User-defined processing instructions cannot begin with `"xml"`, as `xml`-prefixed processing-instruction target names are reserved by the XML specification for particular, standard uses (see, for example, `<?xml-stylesheet ?>`.
 
 For example:
 

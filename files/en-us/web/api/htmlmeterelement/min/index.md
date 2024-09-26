@@ -8,7 +8,7 @@ browser-compat: api.HTMLMeterElement.min
 
 {{ APIRef("HTML DOM") }}
 
-The **`min`** property of the {{DOMxRef("HTMLMeterElement")}} interface represents the mimimum value of the {{htmlelement("meter")}} element as a floating-point number. It reflects the element's [`min`](/en-US/docs/Web/HTML/Element/meter#min) attribute, or `0` if no `min` is defined.
+The **`min`** property of the {{DOMxRef("HTMLMeterElement")}} interface represents the minimum value of the {{htmlelement("meter")}} element as a floating-point number. It reflects the element's [`min`](/en-US/docs/Web/HTML/Element/meter#min) attribute, or `0` if no `min` is defined.
 
 This property can also be set directly, for example to set a default value based on some condition.
 

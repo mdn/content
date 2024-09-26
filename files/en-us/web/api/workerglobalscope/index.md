@@ -66,7 +66,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Starts the process of fetching a resource from the network.
 - {{domxref("WorkerGlobalScope.importScripts()")}}
   - : Imports one or more scripts into the worker's scope. You can specify as many as you'd like, separated by commas. For example: `importScripts('foo.js', 'bar.js');`.
-- {{domxref("queueMicrotask()", "WorkerGlobalScope.queueMicrotask()")}}
+- {{domxref("WorkerGlobalScope.queueMicrotask()")}}
   - : Queues a microtask to be executed at a safe time prior to control returning to the browser's event loop.
 - {{domxref("setInterval()", "WorkerGlobalScope.setInterval()")}}
   - : Schedules a function to execute every time a given number of milliseconds elapses.
