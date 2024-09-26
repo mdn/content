@@ -21,7 +21,7 @@ The HTTP reference documentation contains detailed information about headers, re
 - [HTTP request methods](/en-US/docs/Web/HTTP/Methods)
   - : Request methods indicate the purpose of the request and what is expected if the request is successful.
     The most common methods are {{HTTPMethod("GET")}} and {{HTTPMethod("POST")}} for retrieving and sending data to servers, respectively, but there are other methods which serve different purposes.
-- [HTTP status response codes](/en-US/docs/Web/HTTP/Status)
+- [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
   - : Response status codes indicate the outcome of a specific HTTP request.
     Responses are grouped in five classes: informational, successful, redirections, client errors, and server errors.
 - [HTTP resources and specifications](/en-US/docs/Web/HTTP/Resources_and_specifications)
