@@ -176,7 +176,7 @@ They typically link back to the main page of the reference/guide/tutorial (this 
 
 ### Inline indicators for API documentation
 
-[`optional_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/optional_inline.ejs) and [`ReadOnlyInline`](https://github.com/mdn/yari/blob/main/kumascript/macros/ReadOnlyInline.ejs) are used in API documentation, usually when describing the list of properties of an object or parameters of a function.
+[`Optional_Inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/optional_inline.ejs) and [`ReadOnlyInline`](https://github.com/mdn/yari/blob/main/kumascript/macros/ReadOnlyInline.ejs) are used in API documentation, usually when describing the list of properties of an object or parameters of a function.
 
 Usage: `\{{Optional_Inline}}` or `\{{ReadOnlyInline}}`.
 Example:
@@ -192,7 +192,7 @@ Example:
 
 #### Non-standard
 
-[`non-standard_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/Non-standard_Inline.ejs) inserts an in-line mark indicating the API has not been standardized and is not on a standards track.
+[`Non-standard_Inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/Non-standard_Inline.ejs) inserts an in-line mark indicating the API has not been standardized and is not on a standards track.
 
 ##### Syntax
 
@@ -204,7 +204,7 @@ Example:
 
 #### Experimental
 
-[`experimental_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/experimental_inline.ejs) inserts an in-line mark indicating the API is not widely implemented and may change in the future.
+[`Experimental_Inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/experimental_inline.ejs) inserts an in-line mark indicating the API is not widely implemented and may change in the future.
 For more information on the definition **experimental**, see the [Experimental, deprecated, and obsolete](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete) documentation.
 
 ##### Syntax
@@ -219,7 +219,7 @@ For more information on the definition **experimental**, see the [Experimental, 
 
 #### Deprecated
 
-[`deprecated_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Inline.ejs) inserts an in-line deprecated mark ({{Deprecated_Inline}}) to discourage the use of an API that is officially deprecated (or has been removed).
+[`Deprecated_Inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Inline.ejs) inserts an in-line deprecated mark ({{Deprecated_Inline}}) to discourage the use of an API that is officially deprecated (or has been removed).
 For more information on the definition **deprecated**, see the [Experimental, deprecated, and obsolete](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete) documentation.
 
 ##### Syntax
@@ -236,18 +236,18 @@ These templates have the same semantics as their inline counterparts described a
 The templates should be placed directly underneath the main page title (or breadcrumb navigation if available) in the reference page.
 They can also be used to mark up a section on a page.
 
-- [`non-standard_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Non-standard_Header.ejs): `\{{Non-standard_Header}}` {{Non-standard_Header}}
+- [`Non-standard_Header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Non-standard_Header.ejs): `\{{Non-standard_Header}}` {{Non-standard_Header}}
 - [`SeeCompatTable`](https://github.com/mdn/yari/blob/main/kumascript/macros/SeeCompatTable.ejs) used on pages
   that document [experimental features](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
   Example: `\{{SeeCompatTable}}` {{SeeCompatTable}}
-- [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs): `\{{Deprecated_Header}}` {{Deprecated_Header}}
-- [`secureContext_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/secureContext_header.ejs).
+- [`Deprecated_Header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs): `\{{Deprecated_Header}}` {{Deprecated_Header}}
+- [`SecureContext_Header`](https://github.com/mdn/yari/blob/main/kumascript/macros/secureContext_header.ejs).
   Should be used on main pages like interface pages, API overview pages, and API entry points (e.g. `navigator.xyz`) but usually not on subpages like method and property pages.
   Example: `\{{SecureContext_Header}}` {{SecureContext_Header}}
 
 #### Indicating that a feature is available in web workers
 
-The [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) macro inserts a localized note box indicating that a feature is available in a [Web worker](/en-US/docs/Web/API/Web_Workers_API) context.
+The [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) macro inserts a localized note box indicating that a feature is available in a [worker context](/en-US/docs/Web/API/Web_Workers_API).
 You can also pass some arguments to indicate that a feature works in specified worker context.
 
 ##### Syntax
