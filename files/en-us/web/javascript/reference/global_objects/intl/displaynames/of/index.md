@@ -55,11 +55,17 @@ languageNames.of("fr"); // "French"
 const currencyNames = new Intl.DisplayNames("en", { type: "currency" });
 currencyNames.of("EUR"); // "Euro"
 
-const languageNamesStandard = new Intl.DisplayNames("fr", {type: "language", languageDisplay: "standard"});
-languageNamesStandard.of('fr-CA') // "français (Canada)"
+const languageNamesStandard = new Intl.DisplayNames("fr", {
+  type: "language",
+  languageDisplay: "standard",
+});
+languageNamesStandard.of("fr-CA"); // "français (Canada)"
 
-const languageNamesDialect = new Intl.DisplayNames("fr", {type: "language", languageDisplay: "dialect"});
-languageNamesDialect.of('fr-CA') // "français canadien"
+const languageNamesDialect = new Intl.DisplayNames("fr", {
+  type: "language",
+  languageDisplay: "dialect",
+});
+languageNamesDialect.of("fr-CA"); // "français canadien"
 ```
 
 ### Using fallback
