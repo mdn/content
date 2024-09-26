@@ -10,6 +10,8 @@ browser-compat: api.HTMLOptionsCollection.add
 
 The **`add()`** method of the {{DOMxRef("HTMLOptionsCollection")}} interface adds an {{domxref("HTMLOptionElement")}} or {{domxref("HTMLOptGroupElement")}} to this `HTMLOptionsCollection`.
 
+## Description
+
 By default, the `add()` appends the {{HTMLelement("option")}} or {{HTMLelement("optgroup")}} passed as the parameter to the end of the collection. You can define where the added `<option>` or `<optgroup>` should be placed by specifying the `before` parameter. The `before` is the `<option>` element or a numeric `0`-based index of the `<option>` element the added element should precede.
 
 If the `before` parameter is null or out of range (or omitted), the `<option>` or `<optgroup>` will be appended as the last element in the collection, outside of any {{HTMLelement("optgroup")}}. If the `<option>` referenced by the `before` parameter is in an {{HTMLelement("optgroup")}}, an added `HTMLOptionElement` will be in the same group.
