@@ -208,11 +208,11 @@ async function main() {
 }
 ```
 
-To improve this further, we can use {{domxref("Scheduler.yield")}} when available to allow this code to continue executing ahead of other less critical tasks in the queue:
+To improve this further, we can use {{domxref("Scheduler.yield")}} where available to allow this code to continue executing ahead of other less critical tasks in the queue:
 
 ```js
 function yield() {
-  // Use scheduler.yield if it exists:
+  // Use scheduler.yield() if available
   if ("scheduler" in window && "yield" in scheduler) {
     return scheduler.yield();
   }

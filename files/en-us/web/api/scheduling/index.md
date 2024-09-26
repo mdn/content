@@ -12,7 +12,7 @@ browser-compat: api.Scheduling
 The **`Scheduling`** object provides methods and properties to control scheduling tasks within the current document.
 
 > [!WARNING]
-> This is an older interface and newer scheduling APIs are available using the {{domxref("Scheduler")}} interface. Some [no longer recommend using `isInputPending()`](https://web.dev/articles/optimize-long-tasks#isinputpending).
+> The `Scheduling` interface has been superseded by the {{domxref("Scheduler")}} interface, the features of which are better designed for addressing scheduling tasks. See [Don't use `isInputPending()`](https://web.dev/articles/optimize-long-tasks#isinputpending) for more details.
 
 ## Instance methods
 

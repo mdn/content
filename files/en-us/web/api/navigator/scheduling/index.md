@@ -13,7 +13,7 @@ browser-compat: api.Navigator.scheduling
 The **`scheduling`** read-only property of the {{domxref("Navigator")}} interface returns a {{domxref("Scheduling")}} object for the current document, which provides methods and properties to control scheduling tasks.
 
 > [!WARNING]
-> This is an older interface and newer scheduling APIs are available using the {{domxref("Scheduler")}} interface. Some [no longer recommend using `isInputPending()`](https://web.dev/articles/optimize-long-tasks#isinputpending).
+> The {{domxref("Scheduling")}} interface (which includes the `isInputPending()` method) has been superseded by the {{domxref("Scheduler")}} interface, the features of which are better designed for addressing scheduling tasks. See [Don't use `isInputPending()`](https://web.dev/articles/optimize-long-tasks#isinputpending) for more details.
 
 ## Value
 

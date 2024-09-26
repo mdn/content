@@ -15,7 +15,7 @@ The **`isInputPending()`** method of the {{domxref("Scheduling")}} interface all
 This feature can be useful in situations where you have a queue of tasks to run, and you want to yield to the main thread regularly to allow user interaction to occur so that the app is kept as responsive and performant as possible. `isInputPending()` allows you to yield only when there is input pending, rather than having to do it at arbitrary intervals.
 
 > [!WARNING]
-> This is an older interface and newer scheduling APIs are available using the {{domxref("Scheduler")}} interface. Some [no longer recommend using `isInputPending()`](https://web.dev/articles/optimize-long-tasks#isinputpending).
+> `isInputPending()` has been superseded by features available on the {{domxref("Scheduler")}} interface such as `yield()`, which are better designed for addressing scheduling tasks. See [Don't use `isInputPending()`](https://web.dev/articles/optimize-long-tasks#isinputpending) for more details.
 
 `isInputPending()` is called using `navigator.scheduling.isInputPending()`.
 
