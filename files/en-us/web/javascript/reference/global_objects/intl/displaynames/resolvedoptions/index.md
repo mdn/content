@@ -68,6 +68,14 @@ console.log(usedOptions.type); // "region"
 console.log(usedOptions.fallback); // "code"
 ```
 
+```js
+const displayNames = new Intl.DisplayNames('en', {type: "language", languageDisplay: "standard"});
+
+const usedOptions = displayNames.resolvedOptions();
+console.log(usedOptions.type);  // "language"
+console.log(usedOptions.languageDisplay); // "standard"
+```
+
 ## Specifications
 
 {{Specifications}}
