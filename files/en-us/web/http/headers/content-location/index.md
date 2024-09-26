@@ -7,14 +7,12 @@ browser-compat: http.headers.Content-Location
 
 {{HTTPSidebar}}
 
-The HTTP **`Content-Location`** header indicates an alternate location for the returned data. The principal use is to indicate the URL of a resource transmitted as the result of [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation).
+The HTTP **`Content-Location`** header indicates an alternate location for the returned data.
+The principal use is to indicate the URL of a resource transmitted as the result of [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation).
 
 {{HTTPHeader("Location")}} and `Content-Location` are different.
-`Location` indicates the URL of a redirect, while
-`Content-Location` indicates the direct URL to use to access the resource,
-without further content negotiation in the future. `Location` is a header
-associated with the response, while `Content-Location` is associated with the
-data returned. This distinction may seem abstract without [examples](#examples).
+`Location` indicates the target of a redirection (`3XX`) or the URL of a newly created resource in a {{HTTPStatus("201", "201 Created")}}.
+`Content-Location` indicates the direct URL to use to access the resource when [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) happened, so the client doesn't need to initiate content negotiation for the resource again in future.
 
 <table class="properties">
   <tbody>
@@ -68,32 +66,6 @@ URL, skipping content negotiation the next time it requests that document.
 The server could also consider other [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) headers, such
 as {{HTTPHeader("Accept-Language")}}.
 
-### Pointing to a new document (HTTP 201 Created)
-
-Say you're creating a new blog post through a site's API:
-
-```http
-POST /new/post
-Host: example.com
-Content-Type: text/markdown
-
-# My first blog post!
-
-I made this through `example.com`'s API. I hope it worked.
-```
-
-The site returns the published post in the response body. The server specifies _where_ the new post is with the `Content-Location` header, indicating that this location refers to the content (the body) of this response:
-
-```http
-HTTP/1.1 201 Created
-Content-Type: text/markdown
-Content-Location: /my-first-blog-post
-
-# My first blog post
-
-I made this through `example.com`'s API. I hope it worked.
-```
-
 ### Indicating the URL of a transaction's result
 
 Say you have a
@@ -103,15 +75,15 @@ money to another user of a site.
 ```html
 <form action="/send-payment" method="post">
   <p>
-    <label
-      >Who do you want to send the money to?
+    <label>
+      Who do you want to send the money to?
       <input type="text" name="recipient" />
     </label>
   </p>
 
   <p>
-    <label
-      >How much?
+    <label>
+      How much?
       <input type="number" name="amount" />
     </label>
   </p>
