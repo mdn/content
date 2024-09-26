@@ -19,19 +19,37 @@ In this page, we also include information about the {{domxref("Scheduling.isInpu
 
 ## Concepts and usage
 
-### Prioritized task scheduling
-
 The Prioritized Task Scheduling API is available in both window and worker threads using the `scheduler` property on the global object.
 
-The main API method is {{domxref('Scheduler.postTask()')}}, which takes a callback function ("the task") and returns a promise that resolves with the return value of the function, or rejects with an error.
+The main API methods are {{domxref('scheduler.postTask()')}} and {{domxref('scheduler.yield()')}}. `scheduler.postTask()` takes a callback function (the task) and returns a promise that resolves with the return value of the function or rejects with an error. `scheduler.yield()` turns any [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) function into a task by yielding the main thread to the browser for other work, with execution continuing when the returned promise is resolved.
 
-The simplest form of the API is shown below. This creates a task with default priority [`user-visible`](#user-visible) that has a fixed priority and cannot be aborted.
+The two methods have similar functionality but different levels of control. `scheduler.postTask()` is more configurable — for example, it allows task priority to be explicitly set and task cancellation via an [`AbortSignal`](/en-US/docs/Web/API/AbortSignal). `scheduler.yield()` on the other hand is simpler and can be `await`ed in any `async` function without having to provide a followup task in another function.
+
+### `scheduler.yield()`
+
+To break up long-running JavaScript tasks so they don't block the main thread, insert a `scheduler.yield()` call to temporarily yield the main thread back to the browser, which creates a task to continue execution where it left off.
+
+```js
+async function slowTask() {
+  firstHalfOfWork();
+  await scheduler.yield();
+  secondHalfOfWork();
+}
+```
+
+`scheduler.yield()` returns a promise that can be awaited to continue execution. This allows work belonging to the same function to be included there, without blocking the main thread when the function runs.
+
+`scheduler.yield()` takes no arguments. The task that triggers its continuation has a default [`user-visible`](#user-visible) priority; however, if `scheduler.yield()` is called within a `scheduler.postTask()` callback, it will [inherit the priority of the surrounding task](/en-US/docs/Web/API/Scheduler/yield#inheriting_task_priorities).
+
+### `scheduler.postTask()`
+
+When `scheduler.postTask()` is called with no arguments, it creates a task with a default [`user-visible`](#user-visible) priority that cannot be aborted or have its priority changed.
 
 ```js
 const promise = scheduler.postTask(myTask);
 ```
 
-Because the method returns a promise you can wait on its resolution asynchronously using `then`, and catch errors thrown by the task callback function (or when the task is aborted) using `catch`. The callback function can be any kind of function (below we demonstrate an arrow function).
+Because the method returns a promise, you can wait on its resolution asynchronously using [`then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then), and catch errors thrown by the task callback function (or when the task is aborted) using [`catch`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch). The callback function can be any kind of function (below we demonstrate an arrow function).
 
 ```js
 scheduler
@@ -75,7 +93,7 @@ scheduler
   .catch((error) => console.error(`Error: ${error}`)); // Log any errors
 ```
 
-#### Task priorities
+### Task priorities
 
 Scheduled tasks are run in priority order, followed by the order that they were added to the scheduler queue.
 
@@ -91,13 +109,13 @@ There are just three priorities, which are listed below (ordered from highest to
   - : Tasks that are visible to the user but not necessarily blocking user actions.
     This might include rendering non-essential parts of the page, such as non-essential images or animations.
 
-    This is the default priority.
+    This is the default priority for `scheduler.postTask()` and `scheduler.yield()`.
 
 - `background`
   - : Tasks that are not time-critical.
     This might include log processing or initializing third party libraries that aren't required for rendering.
 
-#### Mutable and immutable task priority
+### Mutable and immutable task priority
 
 There are many use cases where the task priority never needs to change, while for others it does.
 For example fetching an image might change from a `background` task to `user-visible` as a carousel is scrolled into the viewing area.
@@ -115,7 +133,7 @@ If the priority is not set with `options.priority` or by passing a {{domxref("Ta
 Note that a task that needs to be aborted must set `options.signal` to either {{domxref("TaskSignal")}} or {{domxref("AbortSignal")}}.
 However for a task with an immutable priority, {{domxref("AbortSignal")}} more clearly indicates that the task priority cannot be changed using the signal.
 
-### isInputPending()
+### `isInputPending()`
 
 The {{domxref("Scheduling.isInputPending", "isInputPending()")}} API is intended to help with task execution, enabling you to make task runners more efficient by yielding to the main thread only when the user is trying to interact with your app, rather than having to do it at arbitrary intervals.
 
@@ -193,8 +211,8 @@ This allows you to avoid blocking the main thread when the user is actively inte
 ## Interfaces
 
 - {{domxref("Scheduler")}}
-  - : Contains the {{domxref('Scheduler.postTask', 'postTask()')}} method for adding prioritized tasks to be scheduled.
-    An instance of this interface is available on the {{domxref("Window")}} or {{domxref("WorkerGlobalScope")}} global objects (`this.scheduler`).
+  - : Contains the {{domxref('Scheduler.postTask', 'postTask()')}} and {{domxref('Scheduler.yield', 'yield()')}} methods for adding prioritized tasks to be scheduled.
+    An instance of this interface is available on the {{domxref("Window")}} or {{domxref("WorkerGlobalScope")}} global objects (`globalThis.scheduler`).
 - {{domxref("Scheduling")}}
   - : Contains the {{domxref('Scheduling.isInputPending', 'isInputPending()')}} method for checking whether there are pending input events in the event queue.
 - {{domxref("TaskController")}}
