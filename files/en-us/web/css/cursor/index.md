@@ -66,7 +66,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
   - : Optional x- and y-coordinates indicating the cursor hotspot; the precise position within the cursor that is being pointed to.
 
     The numbers are in units of image pixels.
-    They are relative to the top left corner of the image, which corresponds to "`0 0`", and are clamped within the boundaries of the cursor image.
+    They are relative to the top left corner of the image, which corresponds to `0 0`, and are clamped within the boundaries of the cursor image.
     If these values are not specified, they may be read from the file itself, and will otherwise default to the top-left corner of the image.
 
 - `keyword`

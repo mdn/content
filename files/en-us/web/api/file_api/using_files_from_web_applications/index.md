@@ -270,7 +270,7 @@ function handleFiles(files) {
 }
 ```
 
-Here our loop handling the user-selected files looks at each file's `type` attribute to see if its MIME type begins with the string "`image/`"). For each file that is an image, we create a new `img` element. CSS can be used to establish any pretty borders or shadows and to specify the size of the image, so that doesn't need to be done here.
+Here our loop handling the user-selected files looks at each file's `type` attribute to see if its MIME type begins with `image/`). For each file that is an image, we create a new `img` element. CSS can be used to establish any pretty borders or shadows and to specify the size of the image, so that doesn't need to be done here.
 
 Each image has the CSS class `obj` added to it, making it easy to find in the DOM tree. We also add a `file` attribute to each image specifying the {{DOMxRef("File")}} for the image; this will let us fetch the images for actual upload later. We use {{DOMxRef("Node.appendChild()")}} to add the new thumbnail to the preview area of our document.
 

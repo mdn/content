@@ -2,10 +2,12 @@
 title: X-Frame-Options
 slug: Web/HTTP/Headers/X-Frame-Options
 page-type: http-header
+status:
+  - deprecated
 browser-compat: http.headers.X-Frame-Options
 ---
 
-{{HTTPSidebar}}
+{{HTTPSidebar}}{{deprecated_header}}
 
 > [!WARNING]
 > Instead of this header, use the {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} directive in a {{HTTPHeader("Content-Security-Policy")}} header.
@@ -42,7 +44,7 @@ If you specify `DENY`, not only will the browser attempt to load the page in a f
 
 - `DENY`
   - : The page cannot be displayed in a frame, regardless of the site attempting to do so.
-- `SAMEORIGIN`
+- `SAMEORIGIN` {{deprecated_inline}}
   - : The page can only be displayed if all ancestor frames are same origin to the page itself.
 - `ALLOW-FROM origin` {{deprecated_inline}}
   - : This is an obsolete directive. Modern browsers that encounter response headers with this directive will ignore the header completely. The {{HTTPHeader("Content-Security-Policy")}} HTTP header has a {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} directive which you should use instead.
