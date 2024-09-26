@@ -255,7 +255,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Sizes the window according to its content.
 - {{domxref("Window.stop()")}}
   - : This method stops window loading.
-- {{domxref("structuredClone", "Window.structuredClone()")}}
+- {{domxref("Window.structuredClone()")}}
   - : Creates a [deep clone](/en-US/docs/Glossary/Deep_copy) of a given value using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 - {{domxref("Window.updateCommands()")}} {{Non-standard_Inline}}
   - : Updates the state of commands of the current chrome window (UI).

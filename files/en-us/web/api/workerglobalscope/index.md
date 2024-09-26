@@ -72,7 +72,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Schedules a function to execute every time a given number of milliseconds elapses.
 - {{domxref("setTimeout()", "WorkerGlobalScope.setTimeout()")}}
   - : Schedules a function to execute in a given amount of time.
-- {{domxref("structuredClone()", "WorkerGlobalScope.structuredClone()")}}
+- {{domxref("WorkerGlobalScope.structuredClone()")}}
   - : Creates a [deep clone](/en-US/docs/Glossary/Deep_copy) of a given value using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 - {{domxref("WorkerGlobalScope.reportError()")}}
   - : Reports an error in a script, emulating an unhandled exception.
