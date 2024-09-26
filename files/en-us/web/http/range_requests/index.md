@@ -7,7 +7,7 @@ page-type: guide
 {{HTTPSidebar}}
 
 An HTTP {{HTTPHeader("Range")}} request asks the server to send parts of a resource back to a client.
-Range requests are useful for clients like media players that support random access, data tools that know they need only part of a large file, and download managers that let the user pause and resume a download.
+Range requests are useful for various clients, including media players that support random access, data tools that require only part of a large file, and download managers that let users pause and resume a download.
 
 ## Checking if a server supports partial requests
 
@@ -15,7 +15,7 @@ If an HTTP response includes the {{HTTPHeader("Accept-Ranges")}} header with any
 If responses omit the `Accept-Ranges` header, it indicates the server doesn't support partial requests.
 If range requests are not supported, applications can adapt to this condition; for instance, download managers can disable pause buttons that relied on range requests to resume a download.
 
-To check if a server supports range requests, you can issue a {{HTTPMethod("HEAD")}} request so that you can inspect headers without requesting the resource in full.
+To check if a server supports range requests, you can issue a {{HTTPMethod("HEAD")}} request to inspect headers without requesting the resource in full.
 If you use [curl](https://curl.se/), you can use the `-I` flag to make a `HEAD` request:
 
 ```bash
@@ -81,8 +81,8 @@ content-range: bytes 0-1023/146515
 (binary content)
 ```
 
-The {{HTTPHeader("Content-Length")}} header indicates the size of the requested range (and not the full size of the image).
-The {{HTTPHeader("Content-Range")}} response header indicates where in the full resource this partial message belongs.
+The {{HTTPHeader("Content-Length")}} header indicates the size of the requested range, not the full size of the image.
+The {{HTTPHeader("Content-Range")}} response header indicates where this partial message belongs within the full resource.
 
 ### Multipart ranges
 
@@ -92,9 +92,9 @@ The {{HTTPHeader("Range")}} header also allows you to get multiple ranges at onc
 curl http://www.example.com -i -H "Range: bytes=0-50, 100-150"
 ```
 
-The server responds with the {{HTTPStatus("206", "206 Partial Content")}} status as follows.
+The server responds with the {{HTTPStatus("206", "206 Partial Content")}} status as shown below.
 The response contains a {{HTTPHeader("Content-Type")}} header, indicating that a multipart byterange follows.
-The boundary string (`3d6b6a416f9b5` in this case) separates each body part, which has its own `Content-Type` and `Content-Range` fields:
+The boundary string (`3d6b6a416f9b5` in this case) separates the body parts, each of which has its own `Content-Type` and `Content-Range` fields:
 
 ```http
 HTTP/1.1 206 Partial Content
