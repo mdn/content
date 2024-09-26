@@ -1,15 +1,14 @@
 ---
-title: queueMicrotask() global function
+title: "WorkerGlobalScope: queueMicrotask() method"
 short-title: queueMicrotask()
-slug: Web/API/queueMicrotask
-page-type: web-api-global-function
+slug: Web/API/WorkerGlobalScope/queueMicrotask
+page-type: web-api-instance-method
 browser-compat: api.queueMicrotask
 ---
 
-{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
+{{APIRef("Web Workers API")}}{{AvailableInWorkers("worker")}}
 
-The **`queueMicrotask()`** method,
-which is exposed on the {{domxref("Window")}} or {{domxref("Worker")}} interface,
+The **`queueMicrotask()`** method of the {{domxref("WorkerGlobalScope")}} interface
 queues a microtask to be executed at a safe time prior to control returning to the
 browser's event loop.
 
@@ -23,7 +22,7 @@ execution context, potentially depending on work you need to complete. You can l
 more about how to use microtasks and why you might choose to do so in our [microtask guide](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide).
 
 The importance of microtasks comes in its ability to perform tasks asynchronously but
-in a specific order. See [Using microtasks in JavaScript with queueMicrotask()](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) for more details.
+in a specific order. See [Using microtasks in JavaScript with `queueMicrotask()`](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) for more details.
 
 Microtasks are especially useful for libraries and frameworks that need to perform
 final cleanup or other just-before-rendering tasks.
@@ -31,12 +30,12 @@ final cleanup or other just-before-rendering tasks.
 ## Syntax
 
 ```js-nolint
-queueMicrotask(() => {/* ... */})
+queueMicrotask(callback)
 ```
 
 ### Parameters
 
-- `function`
+- `callback`
   - : A {{jsxref("function")}} to be executed when the browser engine determines it is
     safe to call your code. Enqueued microtasks are executed after all pending tasks have
     completed but before yielding control to the browser's event loop.
@@ -84,6 +83,7 @@ MyElement.prototype.loadData = function (url) {
 
 ## See also
 
+- {{domxref("Window.queueMicrotask()")}}
 - [Polyfill of `queueMicrotask()` in `core-js`](https://github.com/zloirock/core-js#queuemicrotask)
 - [Using microtasks in JavaScript with queueMicrotask()](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide)
 - [Asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous)
