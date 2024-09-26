@@ -10,7 +10,7 @@ browser-compat: api.setInterval
 
 The **`setInterval()`** method of the {{domxref("WorkerGlobalScope")}} interface repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
 
-This method returns an interval ID which uniquely identifies the interval, so you can remove it later by calling {{domxref("clearInterval", "clearInterval()")}}.
+This method returns an interval ID which uniquely identifies the interval, so you can remove it later by calling {{domxref("WorkerGlobalScope.clearInterval", "clearInterval()")}}.
 
 ## Syntax
 
@@ -33,14 +33,14 @@ setInterval(func, delay, arg1, arg2, /* …, */ argN)
   - : An optional syntax allows you to include a string instead of a function, which is compiled and executed every `delay` milliseconds.
     This syntax is _not recommended_ for the same reasons that make using {{jsxref("Global_Objects/eval", "eval()")}} a security risk.
 - `delay` {{optional_inline}}
-  - : The time, in milliseconds (thousandths of a second), the timer should delay in between executions of the specified function or code. Defaults to `0` if not specified.
-    See delay restrictions in {{domxref("Window.setInterval()")}} for details on the permitted range of `delay` values.
+  - : The time, in milliseconds (thousandths of a second), the timer should delay in between executions of the specified function or code. Defaults to 0 if not specified.
+    See [Delay restrictions](#delay_restrictions) below for details on the permitted range of `delay` values.
 - `arg1`, …, `argN` {{optional_inline}}
   - : Additional arguments which are passed through to the function specified by _func_ once the timer expires.
 
 ### Return value
 
-The returned `intervalID` is a numeric, non-zero value which identifies the timer created by the call to `setInterval()`; this value can be passed to {{domxref("clearInterval()")}} to cancel the interval.
+The returned `intervalID` is a numeric, non-zero value which identifies the timer created by the call to `setInterval()`; this value can be passed to {{domxref("WorkerGlobalScope.clearInterval", "clearInterval()")}} to cancel the interval.
 
 It may be helpful to be aware that `setInterval()` and {{domxref("setTimeout()")}} share the same pool of IDs, and that `clearInterval()` and {{domxref("clearTimeout", "clearTimeout()")}} can technically be used interchangeably.
 For clarity, however, you should try to always match them to avoid confusion when maintaining your code.
@@ -51,7 +51,15 @@ For clarity, however, you should try to always match them to avoid confusion whe
 
 ## Examples
 
-See {{domxref("Window.setInterval", "setInterval()")}} for examples.
+See the same name section under {{domxref("Window.setInterval", "setInterval()")}} for examples.
+
+## Description
+
+See the same name section under {{domxref("Window.setInterval", "setInterval()")}} for description.
+
+## Usage notes
+
+See the same name section under {{domxref("Window.setInterval", "setInterval()")}} for usage notes.
 
 ## Specifications
 
@@ -66,5 +74,6 @@ See {{domxref("Window.setInterval", "setInterval()")}} for examples.
 - [Polyfill of `setInterval` which allows passing arguments to the callback in `core-js`](https://github.com/zloirock/core-js#settimeout-and-setinterval)
 - {{domxref("setTimeout()")}}
 - {{domxref("clearTimeout()")}}
+- {{domxref("Window.setInterval()")}}
 - {{domxref("WorkerGlobalScope.clearInterval()")}}
 - {{domxref("Window.requestAnimationFrame()")}}

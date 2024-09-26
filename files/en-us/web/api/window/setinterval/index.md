@@ -10,7 +10,7 @@ browser-compat: api.setInterval
 
 The **`setInterval()`** method of the {{domxref("Window")}} interface repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
 
-This method returns an interval ID which uniquely identifies the interval, so you can remove it later by calling {{domxref("clearInterval", "clearInterval()")}}.
+This method returns an interval ID which uniquely identifies the interval, so you can remove it later by calling {{domxref("Window.clearInterval", "clearInterval()")}}.
 
 ## Syntax
 
@@ -40,7 +40,7 @@ setInterval(func, delay, arg1, arg2, /* …, */ argN)
 
 ### Return value
 
-The returned `intervalID` is a numeric, non-zero value which identifies the timer created by the call to `setInterval()`; this value can be passed to {{domxref("clearInterval()")}} to cancel the interval.
+The returned `intervalID` is a numeric, non-zero value which identifies the timer created by the call to `setInterval()`; this value can be passed to {{domxref("Window.clearInterval", "clearInterval()")}} to cancel the interval.
 
 It may be helpful to be aware that `setInterval()` and {{domxref("setTimeout()")}} share the same pool of IDs, and that `clearInterval()` and {{domxref("clearTimeout", "clearTimeout()")}} can technically be used interchangeably.
 For clarity, however, you should try to always match them to avoid confusion when maintaining your code.
@@ -123,8 +123,6 @@ document.getElementById("stop").addEventListener("click", stopTextColor);
 #### Result
 
 {{EmbedLiveSample("Example_2:_Alternating_two_colors")}}
-
-See also: [`clearInterval()`](/en-US/docs/Web/API/Window/clearInterval).
 
 ## The "this" problem
 
@@ -237,4 +235,5 @@ interval has completed before recursing.
 - {{domxref("setTimeout()")}}
 - {{domxref("clearTimeout()")}}
 - {{domxref("Window.clearInterval()")}}
+- {{domxref("WorkerGlobalScope.setInterval()")}}
 - {{domxref("Window.requestAnimationFrame()")}}

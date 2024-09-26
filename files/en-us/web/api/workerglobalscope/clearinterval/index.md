@@ -23,7 +23,7 @@ clearInterval(intervalID)
     the corresponding call to `setInterval()`.
 
 It's worth noting that the pool of IDs used by
-{{domxref("setInterval", "setInterval()")}} and
+{{domxref("WorkerGlobalScope.setInterval", "setInterval()")}} and
 {{domxref("setTimeout()")}} are shared, which
 means you can technically use `clearInterval()` and
 {{domxref("clearTimeout", "clearTimeout()")}} interchangeably.
@@ -49,5 +49,6 @@ See {{domxref("Window.setInterval", "setInterval()")}} for examples.
 
 - {{domxref("setTimeout()")}}
 - {{domxref("clearTimeout()")}}
+- {{domxref("Window.clearInterval()")}}
 - {{domxref("WorkerGlobalScope.setInterval()")}}
 - {{domxref("Window.requestAnimationFrame()")}}

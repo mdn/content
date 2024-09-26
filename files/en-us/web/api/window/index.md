@@ -177,8 +177,8 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Enables you to cancel a callback previously scheduled with {{domxref("Window.requestAnimationFrame")}}.
 - {{domxref("Window.cancelIdleCallback()")}}
   - : Enables you to cancel a callback previously scheduled with {{domxref("Window.requestIdleCallback")}}.
-- {{domxref("clearInterval", "Window.clearInterval()")}}
-  - : Cancels the repeated execution set using {{domxref("setInterval()")}}.
+- {{domxref("Window.clearInterval()")}}
+  - : Cancels the repeated execution set using {{domxref("Window.setInterval()")}}.
 - {{domxref("clearTimeout()", "Window.clearTimeout()")}}
   - : Cancels the delayed execution set using {{domxref("setTimeout()")}}.
 - {{domxref("Window.close()")}}
@@ -241,7 +241,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Scrolls the current document by the specified number of pages.
 - {{domxref("Window.scrollTo()")}}
   - : Scrolls to a particular set of coordinates in the document.
-- {{domxref("setInterval", "Window.setInterval()")}}
+- {{domxref("Window.setInterval()")}}
   - : Schedules a function to execute every time a given number of milliseconds elapses.
 - {{domxref("setTimeout()", "Window.setTimeout()")}}
   - : Schedules a function to execute in a given amount of time.

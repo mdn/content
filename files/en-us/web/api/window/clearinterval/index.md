@@ -50,4 +50,5 @@ See {{domxref("Window.setInterval", "setInterval()")}} for examples.
 - {{domxref("setTimeout()")}}
 - {{domxref("clearTimeout()")}}
 - {{domxref("Window.setInterval()")}}
+- {{domxref("WorkerGlobalScope.clearInterval()")}}
 - {{domxref("Window.requestAnimationFrame()")}}

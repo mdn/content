@@ -10303,7 +10303,6 @@
 /en-US/docs/Web/API/WorkerGlobalScope.performance	/en-US/docs/Web/API/WorkerGlobalScope/performance
 /en-US/docs/Web/API/WorkerGlobalScope.self	/en-US/docs/Web/API/WorkerGlobalScope/self
 /en-US/docs/Web/API/WorkerGlobalScope/WorkerGlobalScope.caches	/en-US/docs/Web/API/WorkerGlobalScope/caches
-/en-US/docs/Web/API/WorkerGlobalScope/clearInterval	/en-US/docs/Web/API/Window/clearInterval
 /en-US/docs/Web/API/WorkerGlobalScope/clearTimeout	/en-US/docs/Web/API/clearTimeout
 /en-US/docs/Web/API/WorkerGlobalScope/close	/en-US/docs/Web/API/DedicatedWorkerGlobalScope/close
 /en-US/docs/Web/API/WorkerGlobalScope/console	/en-US/docs/Web/API/console
@@ -10313,7 +10312,6 @@
 /en-US/docs/Web/API/WorkerGlobalScope/onoffline	/en-US/docs/Web/API/WorkerGlobalScope/offline_event
 /en-US/docs/Web/API/WorkerGlobalScope/ononline	/en-US/docs/Web/API/WorkerGlobalScope/online_event
 /en-US/docs/Web/API/WorkerGlobalScope/requestFileSystemSync	/en-US/docs/Web/API/File_and_Directory_Entries_API
-/en-US/docs/Web/API/WorkerGlobalScope/setInterval	/en-US/docs/Web/API/Window/setInterval
 /en-US/docs/Web/API/WorkerGlobalScope/setTimeout	/en-US/docs/Web/API/setTimeout
 /en-US/docs/Web/API/WorkerLocation.hash	/en-US/docs/Web/API/WorkerLocation/hash
 /en-US/docs/Web/API/WorkerNavigator/taintEnabled	/en-US/docs/Web/API/Navigator/taintEnabled
