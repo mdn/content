@@ -75,7 +75,7 @@ const displayNames = new Intl.DisplayNames("en", {
 });
 
 const usedOptions = displayNames.resolvedOptions();
-console.log(usedOptions.type);  // "language"
+console.log(usedOptions.type); // "language"
 console.log(usedOptions.languageDisplay); // "standard"
 ```
 
