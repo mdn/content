@@ -29,7 +29,7 @@ Some of the functions (a subset) that are common to all workers and to the main 
 - {{domxref("WorkerGlobalScope.reportError()", "reportError()")}}
 - {{domxref("setInterval()")}}
 - {{domxref("setTimeout()")}}
-- {{domxref("structuredClone()")}}
+- {{DOMxRef("WorkerGlobalScope.structuredClone", "structuredClone()")}}
 - {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()", "requestAnimationFrame()")}} (dedicated workers only)
 - {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()", "cancelAnimationFrame()")}} (dedicated workers only)
 

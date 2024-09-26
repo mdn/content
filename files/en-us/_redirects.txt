@@ -10266,7 +10266,7 @@
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/rejectionhandled_event	/en-US/docs/Web/API/Window/rejectionhandled_event
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout	/en-US/docs/Web/API/setTimeout
-/en-US/docs/Web/API/WindowOrWorkerGlobalScope/structuredClone	/en-US/docs/Web/API/structuredClone
+/en-US/docs/Web/API/WindowOrWorkerGlobalScope/structuredClone	/en-US/docs/Web/API/Window/structuredClone
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/unhandledrejection_event	/en-US/docs/Web/API/Window/unhandledrejection_event
 /en-US/docs/Web/API/WindowSessionStorage	/en-US/docs/Web/API/Window/sessionStorage
 /en-US/docs/Web/API/WindowSessionStorage.sessionStorage	/en-US/docs/Web/API/Window/sessionStorage
@@ -10745,6 +10745,7 @@
 /en-US/docs/Web/API/scheduler_property	/en-US/docs/Web/API/Window/scheduler
 /en-US/docs/Web/API/select.type	/en-US/docs/Web/API/HTMLSelectElement/type
 /en-US/docs/Web/API/sessionStorage	/en-US/docs/Web/API/Window/sessionStorage
+/en-US/docs/Web/API/structuredClone	/en-US/docs/Web/API/Window/structuredClone
 /en-US/docs/Web/API/style.media	/en-US/docs/Web/API/HTMLStyleElement/media
 /en-US/docs/Web/API/style.type	/en-US/docs/Web/API/HTMLStyleElement/type
 /en-US/docs/Web/API/success	/en-US/docs/Web/API/IDBRequest/success_event

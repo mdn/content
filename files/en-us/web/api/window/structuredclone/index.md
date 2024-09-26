@@ -1,14 +1,14 @@
 ---
-title: structuredClone() global function
+title: "Window: structuredClone() method"
 short-title: structuredClone()
-slug: Web/API/structuredClone
-page-type: web-api-global-function
+slug: Web/API/Window/structuredClone
+page-type: web-api-instance-method
 browser-compat: api.structuredClone
 ---
 
-{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
+{{APIRef("HTML DOM")}}
 
-The global **`structuredClone()`** method creates a [deep clone](/en-US/docs/Glossary/Deep_copy) of a given value using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
+The **`structuredClone()`** method of the {{domxref("Window")}} interface creates a [deep clone](/en-US/docs/Glossary/Deep_copy) of a given value using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 
 The method also allows [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) in the original value to be _transferred_ rather than cloned to the new object.
 Transferred objects are detached from the original object and attached to the new object; they are no longer accessible in the original object.
@@ -32,7 +32,7 @@ structuredClone(value, options)
 
 ### Return value
 
-The returned value is a [deep copy](/en-US/docs/Glossary/Deep_copy) of the original `value`.
+A [deep copy](/en-US/docs/Glossary/Deep_copy) of the original `value`.
 
 ### Exceptions
 
