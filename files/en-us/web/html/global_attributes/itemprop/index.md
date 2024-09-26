@@ -283,7 +283,7 @@ A property is an unordered set of unique tokens that are case-sensitive and repr
 
 2. If the item is not a typed item it must be:
 
-   1. A string that contains no "`.`" (U+002E FULL STOP) characters and no "`:`" characters (U+003A COLON) and is used as a proprietary item property name (again, one not defined in a public specification).
+   1. A string that contains no `.` (U+002E FULL STOP) characters and no `:` characters (U+003A COLON) and is used as a proprietary item property name (again, one not defined in a public specification).
 
 > [!NOTE]
 > The rules above disallow ":" characters in non-URL values because otherwise they could not be distinguished from URLs. Values with "." characters are reserved for future extensions. Space characters are disallowed because otherwise the values would be parsed as multiple tokens.

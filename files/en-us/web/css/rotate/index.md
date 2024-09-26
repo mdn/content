@@ -43,7 +43,7 @@ rotate: unset;
 - angle value
   - : An {{CSSxRef("&lt;angle&gt;")}} specifying the angle to rotate the affected element through, around the Z axis. Equivalent to a `rotate()` (2D rotation) function.
 - x, y, or z axis name plus angle value
-  - : The name of the axis you want to rotate the affected element around (`"x"`, "`y`", or "`z"`), plus an {{CSSxRef("&lt;angle&gt;")}} specifying the angle to rotate the element through. Equivalent to a `rotateX()`/`rotateY()`/`rotateZ()` (3D rotation) function.
+  - : The name of the axis you want to rotate the affected element around (`x`, `y`, or `z`), plus an {{CSSxRef("&lt;angle&gt;")}} specifying the angle to rotate the element through. Equivalent to a `rotateX()`/`rotateY()`/`rotateZ()` (3D rotation) function.
 - vector plus angle value
   - : Three {{CSSxRef("&lt;number&gt;")}}s representing an origin-centered vector that defines a line around which you want to rotate the element, plus an {{CSSxRef("&lt;angle&gt;")}} specifying the angle to rotate the element through. Equivalent to a `rotate3d()` (3D rotation) function.
 - `none`
