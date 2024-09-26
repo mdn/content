@@ -10,7 +10,7 @@ browser-compat: api.HTMLOptionsCollection.length
 
 The **`length`** property of the {{DOMxRef("HTMLOptionsCollection")}} interface returns the number of {{htmlelement("option")}} elements in the collection. The property can get or set the size of the collection.
 
-When setting `length`, property value assignment will truncate the `<option>` elements in the `<select>` if the value is smaller than the current `length` and will add new blank `<option>` elements to the `<select>` if the value is greater than the current `length`.
+When setting `length` to a value smaller than the current, the options collection gets truncated; otherwise, new blank `<option>` elements are appended to the end of the `<select>`.
 
 ## Value
 

@@ -8,7 +8,7 @@ browser-compat: api.HTMLOptionsCollection.remove
 
 {{ APIRef("HTML DOM") }}
 
-The **`remove()`** method of the {{DOMxRef("HTMLOptionsCollection")}} interface removes the {{HTMLelement("option")}} element specified by the index from the ancestor {HTMLelement("select")}} element.
+The **`remove()`** method of the {{DOMxRef("HTMLOptionsCollection")}} interface removes the {{HTMLelement("option")}} element specified by the index from this collection.
 
 ## Syntax
 
@@ -30,8 +30,8 @@ None ({{jsxref("undefined")}}).
 ```js
 const optionList = document.querySelector("select").options;
 const listLength = optionList.length;
-optionList.remove(length - 1); // removes the last item
-optionList.remove(optionList[0]); // removes the first item
+optionList.remove(listLength - 1); // removes the last item
+optionList.remove(0); // removes the first item
 ```
 
 ## Specifications
