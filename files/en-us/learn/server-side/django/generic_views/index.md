@@ -68,7 +68,7 @@ class BookListView(generic.ListView):
     model = Book
 ```
 
-That's it! The generic view will query the database to get all records for the specified model (`Book`) then render a template located at **/django-locallibrary-tutorial/catalog/templates/catalog/book_list.html** (which we will create below). Within the template you can access the list of books with the template variable named `object_list` OR `book_list` (i.e. generically "`<the model name>_list`").
+That's it! The generic view will query the database to get all records for the specified model (`Book`) then render a template located at **/django-locallibrary-tutorial/catalog/templates/catalog/book_list.html** (which we will create below). Within the template you can access the list of books with the template variable named `object_list` OR `book_list` (i.e. generically `<the model name>_list`).
 
 > [!NOTE]
 > This awkward path for the template location isn't a misprint — the generic views look for templates in `/application_name/the_model_name_list.html` (`catalog/book_list.html` in this case) inside the application's `/application_name/templates/` directory (`/catalog/templates/)`.
@@ -97,7 +97,7 @@ class BookListView(generic.ListView):
         return Book.objects.filter(title__icontains='war')[:5] # Get 5 books containing the title war
 ```
 
-We might also override `get_context_data()` in order to pass additional context variables to the template (e.g. the list of books is passed by default). The fragment below shows how to add a variable named "`some_data`" to the context (it would then be available as a template variable).
+We might also override `get_context_data()` in order to pass additional context variables to the template (e.g. the list of books is passed by default). The fragment below shows how to add a variable named `some_data` to the context (it would then be available as a template variable).
 
 ```python
 class BookListView(generic.ListView):
@@ -428,7 +428,7 @@ class BookDetailView(generic.DetailView):
     model = Book
 ```
 
-That's it! All you need to do now is create a template called **/django-locallibrary-tutorial/catalog/templates/catalog/book_detail.html**, and the view will pass it the database information for the specific `Book` record extracted by the URL mapper. Within the template you can access the book's details with the template variable named `object` OR `book` (i.e. generically "`the_model_name`").
+That's it! All you need to do now is create a template called **/django-locallibrary-tutorial/catalog/templates/catalog/book_detail.html**, and the view will pass it the database information for the specific `Book` record extracted by the URL mapper. Within the template you can access the book's details with the template variable named `object` OR `book` (i.e. generically `the_model_name`).
 
 If you need to, you can change the template used and the name of the context object used to reference the book in the template. You can also override methods to, for example, add additional information to the context.
 
@@ -520,7 +520,7 @@ Though a little larger, almost everything in this template has been described pr
 - We extend our base template and override the "content" block.
 - We use conditional processing to determine whether or not to display specific content.
 - We use `for` loops to loop through lists of objects.
-- We access the context fields using the dot notation (because we've used the detail generic view, the context is named `book`; we could also use "`object`")
+- We access the context fields using the dot notation (because we've used the detail generic view, the context is named `book`; we could also use `object`)
 
 The first interesting thing we haven't seen before is the function `book.bookinstance_set.all()`. This method is "automagically" constructed by Django in order to return the set of `BookInstance` records associated with a particular `Book`.
 
@@ -583,7 +583,7 @@ Astute readers will note that the method `BookInstance.get_status_display()` tha
 ```
 
 This function is automatically created because `BookInstance.status` is a [choices field](https://docs.djangoproject.com/en/5.0/ref/models/fields/#choices).
-Django automatically creates a method `get_FOO_display()` for every choices field "`Foo`" in a model, which can be used to get the current value of the field.
+Django automatically creates a method `get_foo_display()` for every choices field `foo` in a model, which can be used to get the current value of the field.
 
 ## What does it look like?
 

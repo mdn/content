@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.SecurityPolicyViolationEvent.sample
 ---
 
-{{APIRef("Reporting API")}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}
 
 The **`sample`** read-only property of the {{domxref("SecurityPolicyViolationEvent")}} interface is a string representing a sample of the resource that caused the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) violation.
 
@@ -38,4 +38,4 @@ document.addEventListener("securitypolicyviolation", (e) => {
 
 ## See also
 
-- [`CSPViolationReportBody.sample`](/en-US/docs/Web/API/CSPViolationReportBody#cspviolationreportbody.sample)
+- {{domxref("CSPViolationReportBody.sample")}}

@@ -5,11 +5,10 @@ slug: Web/API/WebSocketStream/url
 page-type: web-api-instance-property
 status:
   - experimental
-  - non-standard
 browser-compat: api.WebSocketStream.url
 ---
 
-{{APIRef("WebSockets API")}}{{non-standard_header}}
+{{APIRef("WebSockets API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`url`** read-only property of the
 {{domxref("WebSocketStream")}} interface returns the URL of the WebSocket server that the `WebSocketStream` instance was created with.

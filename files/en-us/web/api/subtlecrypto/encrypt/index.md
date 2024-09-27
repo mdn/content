@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.SubtleCrypto.encrypt
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{APIRef("Web Crypto API")}}{{SecureContext_header}}{{AvailableInWorkers}}
 
 The **`encrypt()`** method of the {{domxref("SubtleCrypto")}} interface encrypts data.
 

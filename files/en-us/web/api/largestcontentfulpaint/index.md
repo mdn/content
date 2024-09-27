@@ -35,7 +35,7 @@ Additional key paint moments are provided by the {{domxref("PerformancePaintTimi
 This interface extends the following {{domxref("PerformanceEntry")}} properties by qualifying and constraining the properties as follows:
 
 - {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns "`largest-contentful-paint`".
+  - : Returns `"largest-contentful-paint"`.
 - {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Always returns an empty string.
 - {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}

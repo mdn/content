@@ -613,7 +613,12 @@
       "guides": ["/docs/Web/API/Fullscreen_API/Guide"],
       "interfaces": [],
       "methods": ["Document.exitFullscreen()", "Element.requestFullscreen()"],
-      "properties": ["Document.fullscreen", "Document.fullscreenElement"],
+      "properties": [
+        "Document.fullscreen",
+        "Document.fullscreenElement",
+        "Document.fullscreenEnabled",
+        "ShadowRoot.fullscreenElement"
+      ],
       "events": [
         "Document: fullscreenchange",
         "Document: fullscreenerror",
@@ -791,7 +796,7 @@
         "Window",
         "WorkletGlobalScope"
       ],
-      "methods": ["reportError"],
+      "methods": [],
       "properties": [],
       "events": [
         "Document: DOMContentLoaded",
@@ -1165,8 +1170,8 @@
     },
     "Picture-in-Picture API": {
       "overview": ["Picture-in-Picture API"],
-      "guides": ["/docs/Web/API/Picture-in-Picture_API/Guide"],
-      "interfaces": ["PictureInPictureWindow"],
+      "guides": [],
+      "interfaces": ["PictureInPictureWindow", "PictureInPictureEvent"],
       "methods": [
         "HTMLVideoElement.requestPictureInPicture()",
         "Document.exitPictureInPicture()"
@@ -1174,12 +1179,12 @@
       "properties": [
         "HTMLVideoElement.disablePictureInPicture",
         "Document.pictureInPictureEnabled",
-        "Document.pictureInPictureElement"
+        "Document.pictureInPictureElement",
+        "ShadowRoot.pictureInPictureElement"
       ],
       "events": [
         "HTMLVideoElement: enterpictureinpicture",
-        "HTMLVideoElement: leavepictureinpicture",
-        "PictureInPictureWindow: resize"
+        "HTMLVideoElement: leavepictureinpicture"
       ]
     },
     "Pointer Events": {

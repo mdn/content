@@ -68230,6 +68230,16 @@
       "JesseW"
     ]
   },
+  "Web/API/Window/queueMicrotask": {
+    "modified": "2020-10-15T22:21:06.789Z",
+    "contributors": [
+      "Kaiido",
+      "chrisdavidmills",
+      "Sheppy",
+      "zbjornson",
+      "DomenicDenicola"
+    ]
+  },
   "Web/API/Window/rejectionhandled_event": {
     "modified": "2020-10-15T21:44:33.123Z",
     "contributors": [
@@ -71516,16 +71526,6 @@
       "Khodaidad_Basharmand",
       "Sheppy",
       "myakura"
-    ]
-  },
-  "Web/API/queueMicrotask": {
-    "modified": "2020-10-15T22:21:06.789Z",
-    "contributors": [
-      "Kaiido",
-      "chrisdavidmills",
-      "Sheppy",
-      "zbjornson",
-      "DomenicDenicola"
     ]
   },
   "Web/API/setInterval": {

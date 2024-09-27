@@ -91,13 +91,13 @@ Some names will interfere with JavaScript access to the form's properties and el
 
 For example:
 
-- `<input name="id">` will take precedence over `<form id="…">`. This means that `form.id` will not refer to the form's id, but to the element whose name is "`id`". This will be the case with any other form properties, such as `<input name="action">` or `<input name="post">`.
+- `<input name="id">` will take precedence over `<form id="…">`. This means that `form.id` will not refer to the form's id, but to the element whose name is `"id"`. This will be the case with any other form properties, such as `<input name="action">` or `<input name="post">`.
 - `<input name="elements">` will render the form's `elements` collection inaccessible. The reference `form.elements` will now refer to the individual element.
 
 To avoid such problems with element names:
 
 - _Always_ use the `elements` collection to avoid ambiguity between an element name and a form property.
-- _Never_ use "`elements`" as an element name.
+- _Never_ use `"elements"` as an element name.
 
 If you are not using JavaScript, this will not cause a problem.
 

@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUBuffer.mapState
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`mapState`** read-only property of the
 {{domxref("GPUBuffer")}} interface represents the mapped state of the `GPUBuffer`.

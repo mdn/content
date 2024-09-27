@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.MediaSource.readyState
 ---
 
-{{APIRef("Media Source Extensions")}}
+{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`readyState`** read-only property of the
 {{domxref("MediaSource")}} interface returns an enum representing the state of the

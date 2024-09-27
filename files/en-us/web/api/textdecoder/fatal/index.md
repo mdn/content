@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.TextDecoder.fatal
 ---
 
-{{APIRef("Encoding API")}}
+{{APIRef("Encoding API")}}{{AvailableInWorkers}}
 
 The **`fatal`** read-only property of the {{domxref("TextDecoder")}} interface is a {{jsxref('Boolean')}} indicating whether the error mode is fatal.
 
