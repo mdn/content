@@ -30,11 +30,9 @@ A new object with properties reflecting the options computed during the initiali
 - `type`
   - : The value provided for this property in the `options` argument, with default filled in as needed. It is either `"cardinal"` or `"ordinal"`. The default is `"cardinal"`.
 - `minimumIntegerDigits`, `minimumFractionDigits`, `maximumFractionDigits` {{optional_inline}}
-  - : The value provided for these properties in the `options` argument, with defaults filled in as needed.
-    These properties are present only if neither `minimumSignificantDigits` nor `maximumSignificantDigits` was provided in the `options` argument.
+  - : The value provided for these properties in the `options` argument, with defaults filled in as needed. These properties are present only if neither `minimumSignificantDigits` nor `maximumSignificantDigits` was provided in the `options` argument.
 - `minimumSignificantDigits`, `maximumSignificantDigits` {{optional_inline}}
-  - : The value provided for these properties in the `options` argument, with defaults filled in as needed.
-    These properties are present only if at least one of them was provided in the `options` argument.
+  - : The value provided for these properties in the `options` argument, with defaults filled in as needed. These properties are present only if at least one of them was provided in the `options` argument.
 - `pluralCategories`
   - : An {{jsxref("Array")}} of plural categories used by the given locale, selected from the list `"zero"`, `"one"`, `"two"`, `"few"`, `"many"` and `"other"`.
 - `roundingIncrement`

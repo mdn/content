@@ -26,8 +26,7 @@ A new object with properties reflecting the options computed during the initiali
 - `locale`
   - : The BCP 47 language tag for the locale actually used, determined by the [locale negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) process. No Unicode extension key will be included in the output.
 - `style`
-  - : The value provided for this property in the `options` argument, with default filled in as needed. It is either
-    `"narrow"`, `"short"`, or `"long"`. The default is `"long"`.
+  - : The value provided for this property in the `options` argument, with default filled in as needed. It is either `"narrow"`, `"short"`, or `"long"`. The default is `"long"`.
 - `type`
   - : The value provided for this property in the `options` argument. It is either `"language"`, `"region"`, `"script"`, `"currency"`, `"calendar"`, or `"dateTimeField"`. It is required so there is no default.
 - `fallback`

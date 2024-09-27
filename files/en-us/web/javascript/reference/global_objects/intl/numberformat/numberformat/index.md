@@ -65,7 +65,7 @@ Depending on the `style` used, some of them may be ignored, and others may be re
     - `"unit"`
       - : For unit formatting.
 - `currency`
-  - : The currency to use in currency formatting. Possible values are the ISO 4217 currency codes, such as `"USD"` for the US dollar, `"EUR"` for the euro, or `"CNY"` for the Chinese RMB — see the [Current currency & funds code list](https://en.wikipedia.org/wiki/ISO_4217#List_of_ISO_4217_currency_codes). There is no default value; if the `style` is `"currency"`, the `currency` property must be provided.
+  - : The currency to use in currency formatting. Possible values are the ISO 4217 currency codes, such as `"USD"` for the US dollar, `"EUR"` for the euro, or `"CNY"` for the Chinese RMB — see the [Current currency & funds code list](https://en.wikipedia.org/wiki/ISO_4217#List_of_ISO_4217_currency_codes). There is no default value; if the `style` is `"currency"`, the `currency` property must be provided. It is normalized to uppercase.
 - `currencyDisplay`
   - : How to display the currency in currency formatting.
     - `"code"`
@@ -104,7 +104,12 @@ The following properties are also supported by {{jsxref("Intl.PluralRules")}}.
 - `maximumSignificantDigits`
   - : The maximum number of significant digits to use. Possible values are from `1` to `21`; the default is `21`.
 
-The above properties fall into two groups: `minimumIntegerDigits`, `minimumFractionDigits`, and `maximumFractionDigits` in one group, `minimumSignificantDigits` and `maximumSignificantDigits` in the other. If properties from both groups are specified, conflicts in the resulting display format are resolved based on the value of the [`roundingPriority`](#roundingpriority) property.
+For the four options above (the `FractionDigits` and `SignificantDigits` options), we mentioned their defaults; however, these defaults are _not unconditionally applied_. They are only applied when the property is actually going to be used, which depends on the [`roundingPriority`](#roundingpriority) and [`notation`](#notation) settings. Specifically:
+
+- If `roundingPriority` is not `"auto"`, then all four options apply.
+- If `roundingPriority` is `"auto"` and at least one `SignificantDigits` option is set, then the `SignificantDigits` options apply and the `FractionDigits` options are ignored.
+- If `roundingPriority` is `"auto"`, and either at least one `FractionDigits` option is set or `notation` is not `"compact"`, then the `FractionDigits` options apply and the `SignificantDigits` options are ignored.
+- If `roundingPriority` is `"auto"`, `notation` is `"compact"`, and none of the four options are set, then they are set to `{ minimumFractionDigits: 0, maximumFractionDigits: 0, minimumSignificantDigits: 1, maximumSignificantDigits: 2 }`, regardless of the defaults mentioned above, and `roundingPriority` is set to `"morePrecision"`.
 
 - `roundingPriority`
 
@@ -118,11 +123,13 @@ The above properties fall into two groups: `minimumIntegerDigits`, `minimumFract
     - `"lessPrecision"`
       - : The result from the property that results in less precision is used.
 
+    The value `"auto"` is normalized to `"morePrecision"` if `notation` is `"compact"` and none of the four "FractionDigits"/"SignificantDigits" options are set.
+
     Note that for values other than `auto` the result with more precision is calculated from the [`maximumSignificantDigits`](#minimumsignificantdigits) and [`maximumFractionDigits`](#maximumfractiondigits) (minimum fractional and significant digit settings are ignored).
 
 - `roundingIncrement`
 
-  - : Indicates the increment at which rounding should take place relative to the calculated rounding magnitude. Possible values are `1`, `2`, `5`, `10`, `20`, `25`, `50`, `100`, `200`, `250`, `500`, `1000`, `2000`, `2500`, and `5000`. It cannot be mixed with significant-digits rounding or any setting of `roundingPriority` other than `auto`.
+  - : Indicates the increment at which rounding should take place relative to the calculated rounding magnitude. Possible values are `1`, `2`, `5`, `10`, `20`, `25`, `50`, `100`, `200`, `250`, `500`, `1000`, `2000`, `2500`, and `5000`; the default is `1`. It cannot be mixed with significant-digits rounding or any setting of `roundingPriority` other than `auto`.
 
 - `roundingMode`
 
