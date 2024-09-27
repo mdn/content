@@ -37,7 +37,7 @@ This article provides information about the changes in Firefox 93 that will affe
 
 - {{domxref("ElementInternals.shadowRoot")}} and {{domxref("HTMLElement.attachInternals")}} are now supported ([Firefox bug 1723521](https://bugzil.la/1723521)).
 - The value `device-pixel-content-box` is now supported for {{domxref("ResizeObserver.Observe()")}} ([Firefox bug 1587973](https://bugzil.la/1587973)).
-- The {{domxref("reportError()")}} global function is now supported, allowing scripts to report errors to the console or global event handlers, emulating an uncaught JavaScript exception ([Firefox bug 1722448](https://bugzil.la/1722448)).
+- The {{domxref("Window.reportError()")}} and {{domxref("WorkerGlobalScope.reportError()")}} is now supported, allowing scripts to report errors to the console or global event handlers, emulating an uncaught JavaScript exception ([Firefox bug 1722448](https://bugzil.la/1722448)).
 
 #### Events
 

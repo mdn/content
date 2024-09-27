@@ -248,7 +248,7 @@ See our [Third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies) artic
 
 Legislation or regulations that cover the use of cookies include:
 
-- The General Data Privacy Regulation (GDPR) in the European Union
+- The [General Data Privacy Regulation](https://gdpr.eu/) (GDPR) in the European Union
 - The ePrivacy Directive in the EU
 - The California Consumer Privacy Act
 

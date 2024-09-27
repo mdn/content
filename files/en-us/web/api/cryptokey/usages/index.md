@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.CryptoKey.usages
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_Header}}
+{{APIRef("Web Crypto API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The read-only **`usages`** property of the {{DOMxRef("CryptoKey")}} interface indicates what can be done with the key.
 

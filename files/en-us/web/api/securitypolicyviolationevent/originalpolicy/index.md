@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.SecurityPolicyViolationEvent.originalPolicy
 ---
 
-{{APIRef("Reporting API")}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}
 
 The **`originalPolicy`** read-only property of the {{domxref("SecurityPolicyViolationEvent")}} interface is a string containing the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) whose enforcement uncovered the violation.
 
@@ -34,4 +34,4 @@ document.addEventListener("securitypolicyviolation", (e) => {
 
 ## See also
 
-- [`CSPViolationReportBody.originalPolicy`](/en-US/docs/Web/API/CSPViolationReportBody#cspviolationreportbody.originalpolicy)
+- {{domxref("CSPViolationReportBody.originalPolicy")}}

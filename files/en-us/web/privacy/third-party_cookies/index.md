@@ -60,7 +60,7 @@ In such cases, third-party cookies are referred to as _tracking cookies_.
 > [!NOTE]
 > User information gained through illegitimate means is also often sold to other third parties, multiplying the problem further.
 
-Legislation such as the [General Data Privacy Regulation](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation) (GDPR) in the European Union and the [California Consumer Privacy Act](https://www.oag.ca.gov/privacy/ccpa) (CCPA) have helped by making it a legal requirement for companies to be transparent about the cookies they set and the information they collect. Examples include asking customers to opt into such data collection, allowing them to see what data a company holds on them, and delete the data if they wish. However, it is still not always clear to customers how their data is used.
+Legislation such as the [General Data Privacy Regulation](https://gdpr.eu/) (GDPR) in the European Union and the [California Consumer Privacy Act](https://www.oag.ca.gov/privacy/ccpa) (CCPA) have helped by making it a legal requirement for companies to be transparent about the cookies they set and the information they collect. Examples include asking customers to opt into such data collection, allowing them to see what data a company holds on them, and delete the data if they wish. However, it is still not always clear to customers how their data is used.
 
 ## How do browsers handle third-party cookies?
 
@@ -98,7 +98,7 @@ Note that if `SameSite=None` is set then the `Secure` attribute must also be set
 
 ### Transitioning from third-party cookies
 
-There are multiple strategies to help sites minimise breakage in browsers where third-party cookies are blocked:
+There are multiple strategies to help sites minimize breakage in browsers where third-party cookies are blocked:
 
 1. Audit your third-party cookie usage. Cookies must have the `SameSite=None` attribute set to be used in a cross-site context. You can therefore identify third-party cookies by searching for `SameSite=None` in your code, or checking for stored `SameSite=None` cookies in your browser DevTools, for example in the [Firefox Storage Inspector](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/). Chrome's [Issues panel](https://developer.chrome.com/docs/devtools/issues/) also [reports issues with third-party cookie blocking](https://developers.google.com/privacy-sandbox/cookies/prepare/audit-cookies#chrome-dev-tools) along with a list of affected cookies.
 2. Test your functionality with third-party cookies blocked, to see what breaks. You might find that some cookies are no longer needed.

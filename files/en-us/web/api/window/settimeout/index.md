@@ -464,4 +464,4 @@ See also the [`clearTimeout()` example](/en-US/docs/Web/API/Window/clearTimeout#
 - {{domxref("setInterval()")}}
 - {{domxref("clearInterval()")}}
 - {{domxref("Window.requestAnimationFrame()")}}
-- {{domxref("queueMicrotask()")}}
+- {{domxref("Window.queueMicrotask()")}}

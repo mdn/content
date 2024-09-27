@@ -222,7 +222,7 @@ To determine that type after evaluation, we use the `resultType` property of the
 
 The following code is intended to be placed in any JavaScript fragment within or linked to the HTML document against which the XPath expression is to be evaluated.
 
-To extract all the `<h2>` heading elements in an HTML document using XPath, the `xpathExpression` is '`//h2`'. Where, `//` is the Recursive Descent Operator that matches elements with the nodeName `h2` anywhere in the document tree. The full code for this is: link to introductory xpath doc
+To extract all the `<h2>` heading elements in an HTML document using XPath, the `xpathExpression` is `"//h2"`. Where, `//` is the Recursive Descent Operator that matches elements with the nodeName `h2` anywhere in the document tree. The full code for this is: link to introductory xpath doc
 
 ```js
 const headings = document.evaluate(
@@ -265,7 +265,7 @@ This is an example for illustration only. This function will need to take namesp
 
 will select all [MathML](/en-US/docs/Web/MathML) expressions that are the children of (X)HTML table data cell elements.
 
-In order to associate the '`mathml:`' prefix with the namespace URI '`http://www.w3.org/1998/Math/MathML`' and '`xhtml:`' with the URI '`http://www.w3.org/1999/xhtml`' we provide a function:
+In order to associate the `mathml:` prefix with the namespace URI `http://www.w3.org/1998/Math/MathML` and `xhtml:` with the URI `http://www.w3.org/1999/xhtml` we provide a function:
 
 ```js
 function nsResolver(prefix) {
@@ -329,7 +329,7 @@ While one can adapt the approach in the above section to test for namespaced ele
 
 For example, one might try (incorrectly) to grab an element with a namespaced attribute as follows: `const xpathlink = someElements[local-name(@*)="href" and namespace-uri(@*)='http://www.w3.org/1999/xlink'];`
 
-This could inadvertently grab some elements if one of its attributes existed that had a local name of "`href`", but it was a different attribute which had the targeted (XLink) namespace (instead of [`@href`](/en-US/docs/Web/XPath/Axes#attribute)).
+This could inadvertently grab some elements if one of its attributes existed that had a local name of `href`, but it was a different attribute which had the targeted (XLink) namespace (instead of [`@href`](/en-US/docs/Web/XPath/Axes#attribute)).
 
 In order to accurately grab elements with the XLink `@href` attribute (without also being confined to predefined prefixes in a namespace resolver), one could obtain them as follows:
 
