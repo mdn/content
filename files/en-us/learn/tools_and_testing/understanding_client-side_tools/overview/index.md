@@ -139,7 +139,7 @@ These generally take the form of a tool that will automatically run tests agains
 
 Deployment systems allow you to get your website published, are available for both static and dynamic sites, and commonly tend to work alongside testing systems. For example, a typical toolchain will wait for you to push changes to a remote repo, run some tests to see if the changes are OK, and then if the tests pass, automatically deploy your app to a production site.
 
-[GitHub Pages](https://pages.github.com/) is nicely integrated with GitHub itself and is free for all public repos. Other services, such as [Netlify](https://www.netlify.com/) and [Vercel](https://vercel.com/), are also very popular, featuring generous free tier quotas, smooth deployment workflows, and GitHub integration.
+[GitHub Pages](https://pages.github.com/) is nicely integrated with GitHub itself and is free for all public repos. Other services, such as [Netlify](https://www.netlify.com/), [Genezio](https://www.genezio.com/) and [Vercel](https://vercel.com/), are also very popular, featuring generous free tier quotas, smooth deployment workflows, and GitHub integration.
 
 #### Others
 
