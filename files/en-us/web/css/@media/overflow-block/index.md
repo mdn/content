@@ -10,12 +10,7 @@ browser-compat: css.at-rules.media.overflow-block
 The **`overflow-block`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test how the output device handles content that overflows the initial [containing block](/en-US/docs/Web/CSS/Containing_block) along the block axis.
 
 > [!NOTE]
-> The `overflow-block` property is useful for understanding how a device manages
-> vertical overflowing content. It does not determine whether overflow occurs;
-> rather, it reveals the device's handling of such overflow. Typically, on most
-> devices and in browsers, the behavior will be "scroll": when content exceeds
-> the available vertical space, the device allows you to scroll to access the
-> overflowed content.
+> The `overflow-block` property does not determine whether overflow occurs; rather, it reveals the device's handling of such overflow. Typically, on screens in most browsers, the behavior will be "scroll": when content exceeds the available vertical space, the device allows you to scroll to access the overflowed content.
 
 ## Syntax
 
