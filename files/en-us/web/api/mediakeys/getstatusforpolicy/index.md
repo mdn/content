@@ -142,7 +142,7 @@ async function getMediaStatus(config) {
     log(mediaStatus);
 
     // Get the content or fallback to an alternative if the
-    // keys are not usuable
+    // keys are not usable
     if (mediaStatus === "usable") {
       console.log("HDCP 2.2 can be enforced.");
       // Fetch the high resolution protected content

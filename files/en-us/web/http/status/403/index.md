@@ -12,7 +12,7 @@ This status is similar to {{HTTPStatus("401")}}, except that for **`403 Forbidde
 The request failure is tied to application logic, such as insufficient permissions to a resource or action.
 
 Clients that receive a `403` response should expect that repeating the request without modification will fail with the same error.
-Server owners may decided to send a {{HTTPStatus("404")}} response instead of a 403 if acknowledging the existence of a resource to clients with insufficient privileges is not desired.
+Server owners may decide to send a {{HTTPStatus("404")}} response instead of a 403 if acknowledging the existence of a resource to clients with insufficient privileges is not desired.
 
 ## Status
 

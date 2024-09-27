@@ -130,7 +130,7 @@ block content
     li #[strong Genres:] !{genre_count}
 ```
 
-The view is straightforward. We extend the **layout.pug** base template, overriding the `block` named '**content**'. The first `h1` heading will be the escaped text for the `title` variable that was passed into the `render()` function—note the use of the '`h1=`' so that the following text is treated as a JavaScript expression. We then include a paragraph introducing the LocalLibrary.
+The view is straightforward. We extend the **layout.pug** base template, overriding the `block` named '**content**'. The first `h1` heading will be the escaped text for the `title` variable that was passed into the `render()` function—note the use of the `h1=` so that the following text is treated as a JavaScript expression. We then include a paragraph introducing the LocalLibrary.
 
 Under the _Dynamic content_ heading we list the number of copies of each model.
 Note that the template values for the data are the keys that were specified when `render()` was called in the route handler function.

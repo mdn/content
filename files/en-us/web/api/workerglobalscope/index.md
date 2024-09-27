@@ -66,15 +66,15 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Starts the process of fetching a resource from the network.
 - {{domxref("WorkerGlobalScope.importScripts()")}}
   - : Imports one or more scripts into the worker's scope. You can specify as many as you'd like, separated by commas. For example: `importScripts('foo.js', 'bar.js');`.
-- {{domxref("queueMicrotask()", "WorkerGlobalScope.queueMicrotask()")}}
+- {{domxref("WorkerGlobalScope.queueMicrotask()")}}
   - : Queues a microtask to be executed at a safe time prior to control returning to the browser's event loop.
 - {{domxref("WorkerGlobalScope.setInterval()")}}
   - : Schedules a function to execute every time a given number of milliseconds elapses.
 - {{domxref("setTimeout()", "WorkerGlobalScope.setTimeout()")}}
   - : Schedules a function to execute in a given amount of time.
-- {{domxref("structuredClone()", "WorkerGlobalScope.structuredClone()")}}
+- {{domxref("WorkerGlobalScope.structuredClone()")}}
   - : Creates a [deep clone](/en-US/docs/Glossary/Deep_copy) of a given value using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
-- {{domxref("reportError()", "WorkerGlobalScope.reportError()")}}
+- {{domxref("WorkerGlobalScope.reportError()")}}
   - : Reports an error in a script, emulating an unhandled exception.
 
 ## Events

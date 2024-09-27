@@ -81,8 +81,8 @@ In other browsers you'll just see a link.
 
 {{EmbedLiveSample("Examples", 300, 300)}}
 
-Did you realize how many default CSS properties a link had? Update the '`a`'
-to the '`p`', and you'll notice a difference in the `margin-top`
+Did you realize how many default CSS properties a link had? Update the `document.querySelector("a")`
+to `document.querySelector("p")`, and you'll notice a difference in the `margin-top`
 and `margin-bottom` default computed values.
 
 ## Specifications

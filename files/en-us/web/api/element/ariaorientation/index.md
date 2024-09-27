@@ -23,7 +23,7 @@ A string with one of the following values:
 
 ## Examples
 
-In this example the [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) attribute on the element with an ID of `handle_zoomSlider` is set to "`vertical`". Using `ariaOrientation` we update the value to "`horizontal`".
+In this example the [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) attribute on the element with an ID of `handle_zoomSlider` is set to `"vertical"`. Using `ariaOrientation` we update the value to `"horizontal"`.
 
 ```html
 <div

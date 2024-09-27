@@ -25,7 +25,7 @@ SyntaxError: Invalid regular expression: unmatched ] or } bracket for Unicode pa
 
 In Unicode-unaware mode, `{`, `}`, and `]` that are not part of a quantifier or character class are treated as literal characters. This may hide errors in your code and is therefore deprecated and disallowed in Unicode-aware mode. You should either check whether you have invalid syntax or you should [escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape) the characters to match them literally.
 
-If `{` appears in a context that accepts a [quantitier](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier), it is treated as the start of a quantifier. If what follows it is not a valid quantifier, another syntax error, [incomplete quantifier](/en-US/docs/Web/JavaScript/Reference/Errors/Regex_incomplete_quantifier), is thrown.
+If `{` appears in a context that accepts a [quantifier](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier), it is treated as the start of a quantifier. If what follows it is not a valid quantifier, another syntax error, [incomplete quantifier](/en-US/docs/Web/JavaScript/Reference/Errors/Regex_incomplete_quantifier), is thrown.
 
 ## Examples
 

@@ -11,6 +11,10 @@ browser-compat: api.Geolocation.watchPosition
 The **`watchPosition()`** method of the {{domxref("Geolocation")}} interface is used to register a handler function that will be called automatically each time the position of the device changes.
 You can also, optionally, specify an error handling callback function.
 
+Note that in addition to requiring a secure context this feature may be blocked by the [`geolocation`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/geolocation) `Permissions-Policy`, and also requires that explicit permission be granted by the user.
+If required, the user will be prompted when this method is called.
+The permission state can be queried using the `geolocation` user permission in the [Permissions API](/en-US/docs/Web/API/Permissions_API).
+
 ## Syntax
 
 ```js-nolint

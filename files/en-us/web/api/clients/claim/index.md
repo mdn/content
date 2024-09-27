@@ -9,7 +9,7 @@ browser-compat: api.Clients.claim
 {{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 The **`claim()`** method of the {{domxref("Clients")}} interface allows an active service worker to set itself as the {{domxref("ServiceWorkerContainer.controller", "controller")}} for all clients within its {{domxref("ServiceWorkerRegistration.scope", "scope")}}.
-This triggers a "`controllerchange`" event on {{domxref("ServiceWorkerContainer","navigator.serviceWorker")}} in any clients that become controlled by this service worker.
+This triggers a `controllerchange` event on {{domxref("ServiceWorkerContainer","navigator.serviceWorker")}} in any clients that become controlled by this service worker.
 
 When a service worker is initially registered, pages won't use it until they next
 load. The `claim()` method causes those pages to be controlled immediately.
@@ -32,7 +32,7 @@ A {{jsxref("Promise")}} that resolves to `undefined`.
 
 ## Examples
 
-The following example uses `claim()` inside service worker's "`activate`" event listener so that clients loaded in the same scope do not need to be reloaded before their fetches will go through this service worker.
+The following example uses `claim()` inside service worker's `activate` event listener so that clients loaded in the same scope do not need to be reloaded before their fetches will go through this service worker.
 
 ```js
 self.addEventListener("activate", (event) => {
