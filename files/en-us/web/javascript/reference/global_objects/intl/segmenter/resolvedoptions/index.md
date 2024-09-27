@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Intl.Segmenter.resolvedOptions
 
 {{JSRef}}
 
-The **`resolvedOptions()`** method of {{jsxref("Intl.Segmenter")}} instances returns a new object with properties reflecting the locale and granularity options computed during the initialization of this `Intl.Segmenter` object.
+The **`resolvedOptions()`** method of {{jsxref("Intl.Segmenter")}} instances returns a new object with properties reflecting the options computed during initialization of this `Segmenter` object.
 
 {{EmbedInteractiveExample("pages/js/intl-segmenter-prototype-resolvedoptions.html")}}
 
@@ -23,21 +23,12 @@ None.
 
 ### Return value
 
-A new object with properties reflecting the locale and collation options computed
-during the initialization of the given [`Intl.Segmenter`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) object.
-
-## Description
-
-The resulting object has the following properties:
+A new object with properties reflecting the options computed during the initialization of this `Segmenter` object. The object has the following properties, in the order they are listed:
 
 - `locale`
-  - : The BCP 47 language tag for the locale actually used. If any Unicode extension
-    values were requested in the input BCP 47 language tag that led to this locale,
-    the key-value pairs that were requested and are supported for this locale are
-    included in `locale`.
+  - : The BCP 47 language tag for the locale actually used, determined by the [locale negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) process. No Unicode extension key will be included in the output.
 - `granularity`
-  - : The value provided for this property in the `options` argument or filled
-    in as the default.
+  - : The value provided for this property in the `options` argument, with default filled in as needed. It is either `"grapheme"`, `"word"`, or `"sentence"`. The default is `"grapheme"`.
 
 ## Examples
 
