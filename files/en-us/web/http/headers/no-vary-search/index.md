@@ -10,9 +10,12 @@ spec-urls: https://wicg.github.io/nav-speculation/no-vary-search.html
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-The **`No-Vary-Search`** response header specifies a set of rules that define how a URL's query parameters will affect cache matching. These rules dictate whether the same URL with different URL parameters should be saved as separate browser cache entries.
+The HTTP **`No-Vary-Search`** response header specifies a set of rules that define how a URL's query parameters will affect cache matching.
+These rules dictate whether the same URL with different URL parameters should be saved as separate browser cache entries.
 
-> **Note:** [Speculation rules](/en-US/docs/Web/API/Speculation_Rules_API) can include an `expects_no_vary_search` field, which indicates to the browser what the expected `No-Vary-Search` value will be (if any) for documents that it is receiving prefetch/prerender requests for via the speculation rules. The browser can use this to determine ahead of time whether it is more useful to wait for an existing prefetch/prerender to finish, or start a new fetch request when the speculation rule is matched.
+> [!NOTE]
+> The [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) can include an `expects_no_vary_search` field, which indicates to the browser what the expected `No-Vary-Search` value will be (if any) for documents that it is receiving prefetch/prerender requests for via the speculation rules.
+> The browser can use this to determine ahead of time whether it is more useful to wait for an existing prefetch/prerender to finish, or start a new fetch request when the speculation rule is matched.
 
 <table class="properties">
   <tbody>
@@ -22,7 +25,7 @@ The **`No-Vary-Search`** response header specifies a set of rules that define ho
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -39,9 +42,9 @@ No-Vary-Search: params, except=("param1" "param2")
 ## Directives
 
 - `key-order`
-  - : A boolean. If included in the header value, it indicates that differences in the order of parameters between otherwise identical URLs will not cause them to be cached as separate entries. Differences in the parameters present _will_ cause them to be cached separately.
+  - : If included in the header value, it indicates that differences in the order of parameters between otherwise identical URLs will not cause them to be cached as separate entries. Differences in the parameters present _will_ cause them to be cached separately.
 - `params`
-  - : Either a boolean or a list of strings:
+  - : Either a boolean (as a literal `params`) or a list of strings:
     - If included in the header value as a boolean, it indicates that differences in parameters between otherwise identical URLs will not cause them to be cached as separate entries.
     - If included in the header value as a list, it indicates that the presence of the specific parameters listed will not cause otherwise identical URLs to be cached as separate entries. The presence of other parameters _will_ cause them to be cached separately.
 - `except`

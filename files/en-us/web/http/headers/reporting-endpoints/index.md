@@ -27,13 +27,13 @@ For more details on setting up CSP reporting, see the [Content Security Policy (
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
     <tr>
       <th scope="row">
         {{Glossary("CORS-safelisted response header")}}
       </th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -45,9 +45,9 @@ Reporting-Endpoints: <endpoint>
 Reporting-Endpoints: <endpoint>, <endpoint>
 ```
 
-- \<endpoint>
-  - : A reporting endpoint in the format `{endpoint-name}="{URL}"`.
-    The endpoints must have valid URIs as strings in the format `endpoint-name-"{report-URL}"` and non-secure endpoints are ignored.
+- `<endpoint>`
+  - : A reporting endpoint in the format `<endpoint-name>="<URL>"`.
+    The endpoints must have valid URIs in quoted strings (e.g., `my-endpoint="https://example.com/reports"`) and non-secure endpoints are ignored.
     A comma-separated list of endpoints may be provided.
 
 ## Examples
@@ -63,11 +63,11 @@ Content-Security-Policy: default-src 'self'; report-to csp-endpoint
 
 ### Specifying multiple reporting endpoints
 
-It's possible to specify multiple endpoints that can be used for different types of violation reports:
+It's possible to specify multiple endpoints that can be used for different types of violation reports.
 
 ```http
 Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports",
-                     hpkp-endpoint="https://example.com/hpkp-reports"
+                     permissions-endpoint="https://example.com/permissions-policy-reports"
 ```
 
 ## Specifications
@@ -80,7 +80,7 @@ Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports",
 
 ## See also
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- {{CSP("report-to")}} directive
-- [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP#violation_reporting) guide
 - [Reporting API](/en-US/docs/Web/API/Reporting_API)
+- [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP#violation_reporting) guide
+- {{HTTPHeader("Content-Security-Policy")}} header
+- {{CSP("report-to")}} directive
