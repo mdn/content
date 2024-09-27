@@ -7,10 +7,7 @@ browser-compat: javascript.builtins.Intl.DisplayNames.resolvedOptions
 
 {{JSRef}}
 
-The **`resolvedOptions()`** method of {{jsxref("Intl.DisplayNames")}} instances
-returns a new object with properties reflecting the locale and style formatting
-options computed during the construction of this `Intl.DisplayNames`
-object.
+The **`resolvedOptions()`** method of {{jsxref("Intl.DisplayNames")}} instances returns a new object with properties reflecting the options computed during initialization of this `DisplayNames` object.
 
 ## Syntax
 
@@ -24,12 +21,7 @@ None.
 
 ### Return value
 
-An object with properties reflecting the locale and formatting options computed during
-the construction of the given {{jsxref("Intl.DisplayNames")}} object.
-
-## Description
-
-The object returned by `resolvedOptions()` has the following properties:
+A new object with properties reflecting the options computed during the initialization of this `DisplayNames` object. The object has the following properties, in the order they are listed:
 
 - `locale`
   - : The BCP 47 language tag for the locale actually used, determined by the [locale negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) process. No Unicode extension key will be included in the output.

@@ -23,7 +23,7 @@ None.
 
 ### Return value
 
-A new object with properties reflecting the options computes during the initialization of this `DateTimeFormat` object. The object has the following properties, in the order they are listed:
+A new object with properties reflecting the options computed during the initialization of this `DateTimeFormat` object. The object has the following properties, in the order they are listed:
 
 - `locale`
   - : The BCP 47 language tag for the locale actually used, determined by the [locale negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) process. Only the `ca`, `hc`, and `nu` Unicode extension keys, if requested, may be included in the output.
