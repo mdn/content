@@ -26,7 +26,7 @@ clearTimeout(timeoutID)
     corresponding call to `setTimeout()`.
 
 It's worth noting that the pool of IDs used by
-{{domxref("setTimeout()")}} and
+{{domxref("Window.setTimeout()")}} and
 {{domxref("setInterval()")}} are shared, which
 means you can technically use `clearTimeout()` and
 {{domxref("clearInterval", "clearInterval()")}}

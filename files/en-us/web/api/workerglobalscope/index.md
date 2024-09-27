@@ -56,7 +56,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Creates a base-64 encoded {{Glossary("ASCII")}} string from a string of binary data.
 - {{domxref("clearInterval()", "WorkerGlobalScope.clearInterval()")}}
   - : Cancels the repeated execution set using {{domxref("setInterval()")}}.
-- {{domxref("clearTimeout()", "WorkerGlobalScope.clearTimeout()")}}
+- {{domxref("WorkerGlobalScope.clearTimeout()")}}
   - : Cancels the delayed execution set using {{domxref("setTimeout()")}}.
 - {{domxref("createImageBitmap()", "WorkerGlobalScope.createImageBitmap()")}}
   - : Accepts a variety of different image sources, and returns a {{jsxref("Promise")}} which resolves to an {{domxref("ImageBitmap")}}. Optionally the source is cropped to the rectangle of pixels originating at _(sx, sy)_ with width sw, and height sh.
@@ -70,7 +70,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Queues a microtask to be executed at a safe time prior to control returning to the browser's event loop.
 - {{domxref("setInterval()", "WorkerGlobalScope.setInterval()")}}
   - : Schedules a function to execute every time a given number of milliseconds elapses.
-- {{domxref("setTimeout()", "WorkerGlobalScope.setTimeout()")}}
+- {{domxref("WorkerGlobalScope.setTimeout()")}}
   - : Schedules a function to execute in a given amount of time.
 - {{domxref("WorkerGlobalScope.structuredClone()")}}
   - : Creates a [deep clone](/en-US/docs/Glossary/Deep_copy) of a given value using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).

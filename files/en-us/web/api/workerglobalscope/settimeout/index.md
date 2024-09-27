@@ -50,7 +50,7 @@ setTimeout(functionRef, delay, param1, param2, /* …, */ paramN)
 
 The returned `timeoutID` is a positive integer value which
 identifies the timer created by the call to `setTimeout()`. This value can be
-passed to {{domxref("clearTimeout","clearTimeout()")}} to
+passed to {{domxref("WorkerGlobalScope.clearTimeout","clearTimeout()")}} to
 cancel the timeout.
 
 It is guaranteed that a `timeoutID` value will never be reused by a subsequent call to
@@ -59,11 +59,11 @@ a worker) while the timer is still active. However, different objects use separa
 
 ## Description
 
-See {{domxref("Window.setTimeout()"")}} for detailed descriptions.
+See {{domxref("Window.setTimeout()")}} for detailed descriptions.
 
 ## Examples
 
-See {{domxref("Window.setTimeout()"")}} for examples.
+See {{domxref("Window.setTimeout()")}} for examples.
 
 ## Specifications
 
@@ -76,7 +76,7 @@ See {{domxref("Window.setTimeout()"")}} for examples.
 ## See also
 
 - [Polyfill of `setTimeout` which allows passing arguments to the callback in `core-js`](https://github.com/zloirock/core-js#settimeout-and-setinterval)
-- {{domxref("Window.clearTimeout()")}}
+- {{domxref("WorkerGlobalScope.clearTimeout()")}}
 - {{domxref("setInterval()")}}
 - {{domxref("clearInterval()")}}
 - {{domxref("Window.requestAnimationFrame()")}}

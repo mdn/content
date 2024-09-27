@@ -26,10 +26,10 @@ clearTimeout(timeoutID)
     corresponding call to `setTimeout()`.
 
 It's worth noting that the pool of IDs used by
-{{domxref("setTimeout()")}} and
+{{domxref("WorkerGlobalScope.setTimeout()")}} and
 {{domxref("setInterval()")}} are shared, which
 means you can technically use `clearTimeout()` and
-{{domxref("clearInterval", "clearInterval()")}}
+{{domxref("clearInterval()")}}
 interchangeably. However, for clarity, you should avoid doing so.
 
 ### Return value
@@ -55,7 +55,7 @@ exception is thrown.
 
 ## See also
 
-- {{domxref("Window.setTimeout()")}}
+- {{domxref("WorkerGlobalScope.setTimeout()")}}
 - {{domxref("setInterval()")}}
 - {{domxref("clearInterval()")}}
 - {{domxref("Window.requestAnimationFrame()")}}

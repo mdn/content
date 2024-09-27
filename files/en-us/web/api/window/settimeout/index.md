@@ -50,7 +50,7 @@ setTimeout(functionRef, delay, param1, param2, /* …, */ paramN)
 
 The returned `timeoutID` is a positive integer value which
 identifies the timer created by the call to `setTimeout()`. This value can be
-passed to {{domxref("clearTimeout","clearTimeout()")}} to
+passed to {{domxref("Window.clearTimeout","clearTimeout()")}} to
 cancel the timeout.
 
 It is guaranteed that a `timeoutID` value will never be reused by a subsequent call to
@@ -60,7 +60,7 @@ a worker) while the timer is still active. However, different objects use separa
 ## Description
 
 Timeouts are cancelled using
-{{domxref("clearTimeout()")}}.
+{{domxref("Window.clearTimeout()")}}.
 
 To call a function repeatedly (e.g., every _N_ milliseconds), consider using
 {{domxref("setInterval()")}}.
@@ -370,7 +370,7 @@ the resulting execution order may not be as expected.
 
 Firefox will defer firing `setTimeout()` timers
 while the current tab is loading. Firing is deferred until the main thread is deemed
-idle (similar to [window.requestIdleCallback()](/en-US/docs/Web/API/Window/requestIdleCallback)),
+idle (similar to {{domxref("Window.requestIdleCallback()")}}),
 or until the load event is fired.
 
 ### WebExtension background pages and timers
@@ -447,7 +447,7 @@ function clearMessage() {
 
 {{EmbedLiveSample('Setting_and_clearing_timeouts')}}
 
-See also the [`clearTimeout()` example](/en-US/docs/Web/API/Window/clearTimeout#examples).
+See also the {{domxref("Window.clearTimeout", "clearTimeout()")}} example.
 
 ## Specifications
 
