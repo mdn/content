@@ -8,8 +8,7 @@ browser-compat: api.HTMLOptionsCollection.selectedIndex
 
 {{APIRef("HTML DOM")}}
 
-The **`selectedIndex`** property of the {{DOMxRef("HTMLOptionsCollection")}} interface is the numeric index of the first selected
-{{HTMLElement("option")}} element, if any, or −1 if no `<option>` is selected. The property changes which option element is selected, or selects an option element if none is selected, with the `-1` deselecting any currently selected elements
+The **`selectedIndex`** property of the {{DOMxRef("HTMLOptionsCollection")}} interface is the numeric index of the first selected {{HTMLElement("option")}} element, if any, or `−1` if no `<option>` is selected. Setting this property selects the option at that index and deselects all other options in this collection, while setting it to `-1` deselects any currently selected elements. It is exactly equivalent to the {{domxref("HTMLSelectElement.selectedIndex", "selectedIndex")}} property of the {{domxref("HTMLSelectElement")}} that owns this collection.
 
 ## Value
 
