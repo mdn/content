@@ -102,14 +102,16 @@ The following properties are also supported by {{jsxref("Intl.PluralRules")}}.
 - `minimumSignificantDigits`
   - : The minimum number of significant digits to use. Possible values are from `1` to `21`; the default is `1`.
 - `maximumSignificantDigits`
+
   - : The maximum number of significant digits to use. Possible values are from `1` to `21`; the default is `21`.
 
-For the four options above (the `FractionDigits` and `SignificantDigits` options), we mentioned their defaults; however, these defaults are _not unconditionally applied_. They are only applied when the property is actually going to be used, which depends on the [`roundingPriority`](#roundingpriority) and [`notation`](#notation) settings. Specifically:
-
-- If `roundingPriority` is not `"auto"`, then all four options apply.
-- If `roundingPriority` is `"auto"` and at least one `SignificantDigits` option is set, then the `SignificantDigits` options apply and the `FractionDigits` options are ignored.
-- If `roundingPriority` is `"auto"`, and either at least one `FractionDigits` option is set or `notation` is not `"compact"`, then the `FractionDigits` options apply and the `SignificantDigits` options are ignored.
-- If `roundingPriority` is `"auto"`, `notation` is `"compact"`, and none of the four options are set, then they are set to `{ minimumFractionDigits: 0, maximumFractionDigits: 0, minimumSignificantDigits: 1, maximumSignificantDigits: 2 }`, regardless of the defaults mentioned above, and `roundingPriority` is set to `"morePrecision"`.
+    > [!NOTE]
+    > For the four options above (the `FractionDigits` and `SignificantDigits` options), we mentioned their defaults; however, these defaults are _not unconditionally applied_. They are only applied when the property is actually going to be used, which depends on the [`roundingPriority`](#roundingpriority) and [`notation`](#notation) settings. Specifically:
+    >
+    > - If `roundingPriority` is not `"auto"`, then all four options apply.
+    > - If `roundingPriority` is `"auto"` and at least one `SignificantDigits` option is set, then the `SignificantDigits` options apply and the `FractionDigits` options are ignored.
+    > - If `roundingPriority` is `"auto"`, and either at least one `FractionDigits` option is set or `notation` is not `"compact"`, then the `FractionDigits` options apply and the `SignificantDigits` options are ignored.
+    > - If `roundingPriority` is `"auto"`, `notation` is `"compact"`, and none of the four options are set, then they are set to `{ minimumFractionDigits: 0, maximumFractionDigits: 0, minimumSignificantDigits: 1, maximumSignificantDigits: 2 }`, regardless of the defaults mentioned above, and `roundingPriority` is set to `"morePrecision"`.
 
 - `roundingPriority`
 
