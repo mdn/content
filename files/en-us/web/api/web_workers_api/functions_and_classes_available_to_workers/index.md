@@ -36,7 +36,7 @@ Some of the functions (a subset) that are common to all workers and to the main 
 The following functions are **only** available to workers:
 
 - {{domxref("WorkerGlobalScope.importScripts", "WorkerGlobalScope.importScripts()")}} (all workers)
-- {{domxref("DedicatedWorkerGlobalScope.postMessage")}} (dedicated workers only)
+- {{domxref("DedicatedWorkerGlobalScope.postMessage()")}} (dedicated workers only)
 
 ## Web APIs available in workers
 
