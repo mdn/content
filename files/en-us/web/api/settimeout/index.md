@@ -61,11 +61,9 @@ a worker) while the timer is still active. However, different objects use separa
 
 ## Description
 
-Timeouts are cancelled using
-{{domxref("clearTimeout()")}}.
+Timeouts are cancelled using {{domxref("clearTimeout()")}}.
 
-To call a function repeatedly (e.g., every _N_ milliseconds), consider using
-{{domxref("setInterval()")}}.
+To call a function repeatedly (e.g., every _N_ milliseconds), consider using {{domxref("Window.setInterval", "setInterval()")}}.
 
 ### Non-number delay values are silently coerced into numbers
 
@@ -463,7 +461,7 @@ See also the [`clearTimeout()` example](/en-US/docs/Web/API/clearTimeout#example
 
 - [Polyfill of `setTimeout` which allows passing arguments to the callback in `core-js`](https://github.com/zloirock/core-js#settimeout-and-setinterval)
 - {{domxref("clearTimeout")}}
-- {{domxref("setInterval()")}}
-- {{domxref("Window.requestAnimationFrame")}}
+- {{domxref("Window.setInterval", "setInterval()")}}
+- {{domxref("Window.requestAnimationFrame()")}}
 - {{domxref("Window.queueMicrotask()")}}
 - {{domxref("WorkerGlobalScope.queueMicrotask()")}}

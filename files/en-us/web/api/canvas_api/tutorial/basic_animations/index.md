@@ -31,13 +31,13 @@ That means we need a way to execute our drawing functions over a period of time.
 
 ### Scheduled updates
 
-First there's the {{domxref("setInterval()")}}, {{domxref("setTimeout()")}}, and {{domxref("window.requestAnimationFrame()")}} functions, which can be used to call a specific function over a set period of time.
+First there's the {{domxref("Window.setInterval", "setInterval()")}}, {{domxref("setTimeout()")}}, and {{domxref("Window.requestAnimationFrame", "requestAnimationFrame")}} functions, which can be used to call a specific function over a set period of time.
 
-- {{domxref("setInterval()")}}
+- {{domxref("Window.setInterval", "setInterval()")}}
   - : Starts repeatedly executing the function specified by `function` every `delay` milliseconds.
 - {{domxref("setTimeout()")}}
   - : Executes the function specified by `function` in `delay` milliseconds.
-- {{domxref("Window.requestAnimationFrame()", "requestAnimationFrame(callback)")}}
+- {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}}
   - : Tells the browser that you wish to perform an animation and requests that the browser call a specified function to update an animation before the next repaint.
 
 If you don't want any user interaction you can use the `setInterval()` function, which repeatedly executes the supplied code. If we wanted to make a game, we could use keyboard or mouse events to control the animation and use `setTimeout()`. By setting listeners using {{domxref("EventTarget/addEventListener", "addEventListener()")}}, we catch any user interaction and execute our animation functions.

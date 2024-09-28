@@ -172,7 +172,7 @@ If you need to support IE, use the [`Function.prototype.bind()`](/en-US/docs/Web
 
 The `setInterval()` function is commonly used to set a delay for functions
 that are executed again and again, such as animations. You can cancel the interval using
-{{domxref("clearInterval()")}}.
+{{domxref("Window.clearInterval", "clearInterval()")}}.
 
 If you wish to have your function called _once_ after the specified delay, use
 {{domxref("setTimeout()")}}.
