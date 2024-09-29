@@ -165,8 +165,7 @@ try {
 
   window.addEventListener("test", null, options);
   window.removeEventListener("test", null, options);
-} catch {
-}
+} catch {}
 ```
 
 This creates an `options` object with a getter function for the
