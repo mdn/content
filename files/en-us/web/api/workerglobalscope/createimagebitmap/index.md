@@ -1,15 +1,14 @@
 ---
-title: createImageBitmap() global function
+title: "WorkerGlobalScope: createImageBitmap() method"
 short-title: createImageBitmap()
-slug: Web/API/createImageBitmap
-page-type: web-api-global-function
+slug: Web/API/WorkerGlobalScope/createImageBitmap
+page-type: web-api-instance-method
 browser-compat: api.createImageBitmap
 ---
 
-{{APIRef("Canvas API")}}{{AvailableInWorkers}}
+{{APIRef("Canvas API")}}{{AvailableInWorkers("worker")}}
 
-The **`createImageBitmap()`** global method creates a bitmap from a given source, optionally cropped to contain only a portion of that source.
-The method exists on the global scope in both windows and workers.
+The **`createImageBitmap()`** method of the {{domxref("WorkerGlobalScope")}} interface creates a bitmap from a given source, optionally cropped to contain only a portion of that source.
 It accepts a variety of different image sources, and returns a {{jsxref("Promise")}} which resolves to an {{domxref("ImageBitmap")}}.
 
 ## Syntax
@@ -80,50 +79,7 @@ A {{jsxref("Promise")}} which resolves to an {{domxref("ImageBitmap")}} object c
 
 ## Examples
 
-### Creating sprites from a sprite sheet
-
-This example loads a sprite sheet, extracts individual sprites, and then renders each
-sprite to the canvas. A sprite sheet is an image containing multiple smaller images,
-each of which you want to be able to render separately.
-
-```html hidden
-Original image:
-<img src="50x50.jpg" />
-<hr />
-<canvas id="myCanvas"></canvas>
-```
-
-```css hidden
-canvas {
-  border: 2px solid green;
-}
-```
-
-```js
-const canvas = document.getElementById("myCanvas"),
-  ctx = canvas.getContext("2d"),
-  image = new Image();
-
-// Wait for the sprite sheet to load
-image.onload = () => {
-  Promise.all([
-    // Cut out two sprites from the sprite sheet
-    createImageBitmap(image, 0, 0, 32, 32),
-    createImageBitmap(image, 32, 0, 32, 32),
-    createImageBitmap(image, 0, 0, 50, 50, { imageOrientation: "flipY" }),
-  ]).then((sprites) => {
-    // Draw each sprite onto the canvas
-    ctx.drawImage(sprites[0], 0, 0);
-    ctx.drawImage(sprites[1], 32, 32);
-    ctx.drawImage(sprites[2], 64, 64);
-  });
-};
-
-// Load the sprite sheet from an image file
-image.src = "50x50.jpg";
-```
-
-{{EmbedLiveSample("Creating sprites from a sprite sheet", "100%", "250")}}
+See {{domxref("Window.createImageBitmap()")}} for examples.
 
 ## Specifications
 
@@ -135,5 +91,6 @@ image.src = "50x50.jpg";
 
 ## See also
 
+- {{domxref("Window.createImageBitmap()")}}
 - {{domxref("CanvasRenderingContext2D.drawImage()")}}
 - {{domxref("ImageData")}}
