@@ -259,7 +259,7 @@ The last part, and perhaps the trickiest, is to handle form data on the server s
 The {{HTMLelement("form")}} element defines where and how to send the data thanks to the [`action`](/en-US/docs/Web/HTML/Element/form#action) and [`method`](/en-US/docs/Web/HTML/Element/form#method) attributes.
 
 We provide a `name` attribute for each form control.
-The names are important on both the client- and server-side; they tell the browser which name to give each piece of data and, on the server side, they let the server handle each piece of data by name.
+The names are important on both the client-side and server-side; they tell the browser which name to give each piece of data and, on the server side, they let the server handle each piece of data by name.
 The form data is sent to the server as name/value pairs.
 
 To name the data in a form, you need to use the `name` attribute on each form widget that will collect a specific piece of data.
