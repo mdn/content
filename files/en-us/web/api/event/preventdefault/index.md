@@ -21,6 +21,8 @@ non-cancelable event, such as one dispatched via
 {{domxref("EventTarget.dispatchEvent()")}}, without specifying
 `cancelable: true` has no effect.
 
+If a passive listener does call preventDefault(), the user agent will do nothing other than generate a console warning.
+
 ## Syntax
 
 ```js-nolint
