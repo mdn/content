@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.bufferSubData
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.bufferSubData()`** method of the
 [WebGL API](/en-US/docs/Web/API/WebGL_API) updates a subset of a buffer

@@ -237,7 +237,7 @@ li:nth-last-child(odd of .noted) {
 
 #### Result
 
-Items with `class="noted"` have a think bottom border and items 1, 7, 14, and 20 have a solid background as they are the _odd_ list items with `class="noted"`.
+Items with `class="noted"` have a thick bottom border and items 1, 7, 14, and 20 have a solid background as they are the _odd_ list items with `class="noted"`.
 
 {{EmbedLiveSample('of_selector_syntax_example', 550, 120)}}
 

@@ -66637,6 +66637,28 @@
     "modified": "2020-10-15T22:16:13.286Z",
     "contributors": ["mfuji09", "wbamberg"]
   },
+  "Web/API/Window/createImageBitmap": {
+    "modified": "2020-10-15T21:37:56.407Z",
+    "contributors": [
+      "gmanpersona",
+      "mfluehr",
+      "styfle",
+      "fscholz",
+      "DomenicDenicola",
+      "Halfman",
+      "jaffathecake",
+      "jpmedley",
+      "Brettz9",
+      "MatthiasSaihttam",
+      "nmve",
+      "chrisdavidmills",
+      "yisibl",
+      "DrRataplan",
+      "zeird",
+      "Kaku",
+      "adria"
+    ]
+  },
   "Web/API/Window/crossOriginIsolated": {
     "modified": "2020-10-15T22:25:16.295Z",
     "contributors": ["ExE-Boss", "chrisdavidmills"]
@@ -71610,28 +71632,6 @@
       "Khodaidad_Basharmand",
       "Sheppy",
       "myakura"
-    ]
-  },
-  "Web/API/createImageBitmap": {
-    "modified": "2020-10-15T21:37:56.407Z",
-    "contributors": [
-      "gmanpersona",
-      "mfluehr",
-      "styfle",
-      "fscholz",
-      "DomenicDenicola",
-      "Halfman",
-      "jaffathecake",
-      "jpmedley",
-      "Brettz9",
-      "MatthiasSaihttam",
-      "nmve",
-      "chrisdavidmills",
-      "yisibl",
-      "DrRataplan",
-      "zeird",
-      "Kaku",
-      "adria"
     ]
   },
   "Web/API/setInterval": {

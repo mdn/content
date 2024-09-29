@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.stencilOp
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.stencilOp()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) sets both the front and back-facing
 stencil test actions.
