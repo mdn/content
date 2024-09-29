@@ -8,9 +8,7 @@ browser-compat: api.HTMLAnchorElement.port
 
 {{ApiRef("HTML DOM")}}
 
-The **`HTMLAnchorElement.port`** property is a
-string containing the port number of the URL. If the URL does not
-contain an explicit port number, it will be set to `''`.
+The **`port`** property of the {{domxref("HTMLAnchorElement")}} interface is a string containing the port number of the URL. If the URL does not contain an explicit port number or the port number is the same as the protocol's default, it will be `''`.
 
 ## Value
 
@@ -23,7 +21,13 @@ A string.
 ```js
 // An <a id="myAnchor" href="https://developer.mozilla.org:443/en-US/docs/HTMLAnchorElement"> element is in the document
 const anchor = document.getElementByID("myAnchor");
-anchor.port; // returns '443'
+anchor.port; // returns ''
+```
+
+```js
+// Another <a id="myAnchor" href="https://developer.mozilla.org:8888/en-US/docs/HTMLAnchorElement"> element is in the document
+const anchor = document.getElementByID("myAnchor");
+anchor.port; // Returns:'8888'
 ```
 
 ## Specifications
