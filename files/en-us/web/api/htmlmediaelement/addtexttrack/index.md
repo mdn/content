@@ -24,7 +24,7 @@ addTextTrack(kind, label, language)
 - `kind`
   - A string representing the {{domxref("TextTrack.kind")}} property (`subtitles`, `captions`, `descriptions`, `chapters`, or `metadata`).
 - `label`
-  - A string representing the {{domxref("TextTrack.label")} property.
+  - A string representing the {{domxref("TextTrack.label")}} property.
 - `language`
   - A string representing the {{domxref("TextTrack.language")}} property, or the `[/en-US/docs/Web/HTML/Element/track#srclang](srclang)` property.
 
