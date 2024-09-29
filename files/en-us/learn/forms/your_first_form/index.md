@@ -225,6 +225,8 @@ textarea {
 
 input:focus,
 textarea:focus {
+  /* Mute default highlight */
+  outline: none;
   /* Additional highlight for focused elements */
   border-color: #000;
 }
