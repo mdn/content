@@ -46,7 +46,7 @@ Some of the functions (a subset) that are common to all workers and to the main 
 - {{domxref("WorkerGlobalScope.btoa()", "btoa()")}}
 - {{domxref("clearInterval()")}}
 - {{domxref("clearTimeout()")}}
-- {{domxref("createImageBitmap()")}}
+- {{domxref("WorkerGlobalScope.createImageBitmap()", "createImageBitmap()")}}
 - {{domxref("WorkerGlobalScope.dump()", "dump()")}} {{non-standard_inline}}
 - {{domxref("WorkerGlobalScope.fetch()", "fetch()")}}
 - {{domxref("WorkerGlobalScope.queueMicrotask()", "queueMicrotask()")}}
