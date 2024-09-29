@@ -12,15 +12,12 @@ if (!fs.existsSync(filePath)) {
   process.exit(1);
 }
 
-function equalsIgnoreCase(string1, string2) {
-  return new RegExp(`^${string1}$`, "gi").test(string2);
-}
-
+const equalsIgnoreCase = (a, b) => a?.toLowerCase() === b?.toLowerCase();
 const uniq = [];
 const content = fs.readFileSync(filePath, "utf-8");
 const lines = content.split("\n").sort((a, b) => {
-  a = a.toUpperCase();
-  b = b.toUpperCase();
+  a = a.toLowerCase();
+  b = b.toLowerCase();
   return a < b ? -1 : a > b ? 1 : 0;
 });
 
