@@ -31,7 +31,7 @@ That means we need a way to execute our drawing functions over a period of time.
 
 ### Scheduled updates
 
-First there's the {{domxref("Window.setInterval", "setInterval()")}}, {{domxref("setTimeout()")}}, and {{domxref("Window.requestAnimationFrame", "requestAnimationFrame")}} functions, which can be used to call a specific function over a set period of time.
+First there's the {{domxref("Window.setInterval", "setInterval()")}}, {{domxref("setTimeout()")}}, and {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} functions, which can be used to call a specific function over a set period of time.
 
 - {{domxref("Window.setInterval", "setInterval()")}}
   - : Starts repeatedly executing the function specified by `function` every `delay` milliseconds.

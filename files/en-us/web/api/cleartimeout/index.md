@@ -82,6 +82,5 @@ exception is thrown.
 ## See also
 
 - {{domxref("setTimeout()")}}
-- {{domxref("Window.setInterval", "setInterval()")}}
-- {{domxref("Window.clearInterval", "clearInterval()")}}
-- {{domxref("Window.requestAnimationFrame()")}}
+- {{domxref("Window.clearInterval()")}} and {{domxref("WorkerGlobalScope.clearInterval()")}}
+- {{domxref("Window.cancelAnimationFrame()")}} and {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()")}}

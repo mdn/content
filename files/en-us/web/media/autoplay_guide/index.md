@@ -226,7 +226,7 @@ In the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), a website or app can 
 
 ## The autoplay Permissions Policy
 
-In addition to the browser-side management and control over autoplay functionality described above, a web server can also express its willingness to allow autoplay to function. The {{Glossary("HTTP")}} {{HTTPHeader("Permissions-Policy")}} header's [`autoplay`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/autoplay) directive is used to control which domains, if any, can be used to autoplay media. By default, the `autoplay` Permissions Policy is set to `self`, indicating that autoplay is permitted as they're hosted on the same domain as the document.
+In addition to the browser-side management and control over autoplay functionality described above, a web server can also express its willingness to allow autoplay to function. The {{Glossary("HTTP")}} {{HTTPHeader("Permissions-Policy")}} header's {{httpheader("Permissions-Policy/autoplay", "autoplay")}} directive is used to control which domains, if any, can be used to autoplay media. By default, the `autoplay` Permissions Policy is set to `self`, indicating that autoplay is permitted as they're hosted on the same domain as the document.
 
 You can also specify an empty allowlist (`()`) to disable autoplay entirely, `*` to allow autoplay from all domains, or one or more specific origins from which media can be automatically played. These origins are separated by space characters.
 
