@@ -13,11 +13,11 @@ The **`File`** interface provides information about files and allows JavaScript 
 
 A `File` object is a specific kind of {{DOMxRef("Blob")}}, and can be used in any context that a Blob can. In particular, the following APIs accept both `Blob`s and `File` objects:
 
- - {{DOMxRef("FileReader")}}
- - {{DOMxRef("URL.createObjectURL_static", "URL.createObjectURL()")}}
- - {{DOMxRef("Window.createImageBitmap()")}} and {{DOMxRef("WorkerGlobalScope.createImageBitmap()")}}
- - the [`body`](/en-US/docs/Web/API/RequestInit#body) option to {{domxref("Window/fetch", "fetch()")}}
- - {{DOMxRef("XMLHttpRequest.send()")}} .
+- {{DOMxRef("FileReader")}}
+- {{DOMxRef("URL.createObjectURL_static", "URL.createObjectURL()")}}
+- {{DOMxRef("Window.createImageBitmap()")}} and {{DOMxRef("WorkerGlobalScope.createImageBitmap()")}}
+- the [`body`](/en-US/docs/Web/API/RequestInit#body) option to {{domxref("Window/fetch", "fetch()")}}
+- {{DOMxRef("XMLHttpRequest.send()")}} .
 
 See [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications) for more information and examples.
 
