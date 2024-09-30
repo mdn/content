@@ -41,9 +41,9 @@ This example adds a new {{domxref("TextTrack")}} with the `kind` set to `"subtit
 
 ```js
 const video = document.querySelector("video");
-video.addTextTrack("subtitles");
-video.textTracks[0].addCue(new VTTCue(3, 6, "Hello world!"));
-console.log(voices.textTracks[2].cues[0].text);
+const newTrack = video.addTextTrack("subtitles");
+newTrack.addCue(new VTTCue(3, 6, "Hello world!"));
+console.log(newTrack.cues[0].text);
 // "Hello world!"
 ```
 
