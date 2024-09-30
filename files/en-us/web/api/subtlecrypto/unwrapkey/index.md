@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.SubtleCrypto.unwrapKey
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{APIRef("Web Crypto API")}}{{SecureContext_header}}{{AvailableInWorkers}}
 
 The **`unwrapKey()`** method of the {{domxref("SubtleCrypto")}} interface "unwraps" a key.
 This means that it takes as its input a key that has been exported and then encrypted (also called "wrapped").

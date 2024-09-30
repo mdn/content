@@ -54,7 +54,7 @@ If you need a list of all elements matching the specified selectors, you should 
 ### Finding the first element matching a class
 
 In this example, the first element in the document with the class
-"`myclass`" is returned:
+`myclass` is returned:
 
 ```js
 const el = document.querySelector(".myclass");

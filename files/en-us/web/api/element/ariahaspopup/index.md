@@ -34,7 +34,7 @@ A string with one of the following values:
 
 ## Examples
 
-In this example, the `aria-haspopup` attribute on the element with an ID of `animal` is set to "`true`". Using `ariaHasPopup`, we update the value to "`listbox`", which is the expected value for a combobox that invokes a `listbox` popup.
+In this example, the `aria-haspopup` attribute on the element with an ID of `animal` is set to `"true"`. Using `ariaHasPopup`, we update the value to `"listbox"`, which is the expected value for a combobox that invokes a `listbox` popup.
 
 ```html
 <div class="animals-combobox">

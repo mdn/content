@@ -8,7 +8,7 @@ browser-compat: html.elements.input.type_month
 {{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`month`** create input fields that let the user enter a month and year allowing a month and year to be easily entered.
-The value is a string whose value is in the format "`YYYY-MM`", where `YYYY` is the four-digit year and `MM` is the month number.
+The value is a string whose value is in the format `YYYY-MM`, where `YYYY` is the four-digit year and `MM` is the month number.
 
 {{EmbedInteractiveExample("pages/tabbed/input-month.html", "tabbed-shorter")}}
 
@@ -26,7 +26,7 @@ The Microsoft Edge `month` control looks like this:
 
 ## Value
 
-A string representing the value of the month and year entered into the input, in the form YYYY-MM (four or more digit year, then a hyphen ("`-`"), followed by the two-digit month).
+A string representing the value of the month and year entered into the input, in the form YYYY-MM (four or more digit year, then a hyphen (`-`), followed by the two-digit month).
 The format of the month string used by this input type is described in [Month strings](/en-US/docs/Web/HTML/Date_and_time_formats#month_strings).
 
 ### Setting a default value
@@ -75,13 +75,13 @@ The values provided are suggestions, not requirements: users can select from thi
 
 The latest year and month, in the string format discussed in the [Value](#value) section above, to accept.
 If the [`value`](/en-US/docs/Web/HTML/Element/input#value) entered into the element exceeds this, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation).
-If the value of the `max` attribute isn't a valid string in "`yyyy-MM`" format, then the element has no maximum value.
+If the value of the `max` attribute isn't a valid string in `yyyy-MM` format, then the element has no maximum value.
 
 This value must specify a year-month pairing later than or equal to the one specified by the `min` attribute.
 
 ### min
 
-The earliest year and month to accept, in the same "`yyyy-MM`" format described above.
+The earliest year and month to accept, in the same `yyyy-MM` format described above.
 If the [`value`](/en-US/docs/Web/HTML/Element/input#value) of the element is less than this, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation).
 If a value is specified for `min` that isn't a valid year and month string, the input has no minimum value.
 

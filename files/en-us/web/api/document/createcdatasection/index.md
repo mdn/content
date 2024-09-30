@@ -42,7 +42,7 @@ console.log(new XMLSerializer().serializeToString(docu));
   CDATA sections); attempting it on an HTML document will throw
   `NOT_SUPPORTED_ERR`.
 - Will throw a `NS_ERROR_DOM_INVALID_CHARACTER_ERR` exception if one tries
-  to submit the closing CDATA sequence ("`]]>`") as part of the data, so
+  to submit the closing CDATA sequence (`]]>`) as part of the data, so
   unescaped user-provided data cannot be safely used without this method getting this
   exception ({{domxref("document.createTextNode","createTextNode()")}} can often be used
   in its place).

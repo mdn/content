@@ -72,7 +72,7 @@ reportButton.addEventListener("click", () => {
 
 {{EmbedLiveSample("Basic usage", "100%", 120)}}
 
-When `false`, if the value is missing, is below 21, is above 65, or is othewise invalid, an error message appears, an invalid event is fired, and we log that invalid event to the console.
+When `false`, if the value is missing, is below 21, is above 65, or is otherwise invalid, an error message appears, an invalid event is fired, and we log that invalid event to the console.
 
 ### Custom error message
 

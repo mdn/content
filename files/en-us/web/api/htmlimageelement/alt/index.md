@@ -162,7 +162,7 @@ Logos (such as corporate or brand logos) and informational icons should use the 
 That is, if an image is a corporate logo, the `alt` text should be the name of the company.
 If the image is an icon representing a status or other information, the text should be the name of that state.
 
-For example, if an image is a badge that's shown on a page to indicate that the content of the page is new and has been updated recently, the corresponding `alt` text might be "`Updated Recently"` or even "`Updated on 27 August 2019"`.
+For example, if an image is a badge that's shown on a page to indicate that the content of the page is new and has been updated recently, the corresponding `alt` text might be `"Updated Recently"` or even `"Updated on 27 August 2019"`.
 
 In this example, a starburst image with the word "New!" is used to indicate that an article is about something new (and probably supposedly also exciting).
 The `alt` attribute is set to `New Page!` to allow that text to be displayed in place of the image if the image isn't available.
@@ -242,7 +242,7 @@ The main feature of the CSS here is the use of {{cssxref("clip-path")}} and {{cs
 ### Other images
 
 Images showing objects or scenes should have `alt` text describing what's seen in the image.
-A photo of a yellow teapot might literally have its `alt` attribute set to "`A yellow teapot"`.
+A photo of a yellow teapot might literally have its `alt` attribute set to `"A yellow teapot"`.
 
 ## Specifications
 

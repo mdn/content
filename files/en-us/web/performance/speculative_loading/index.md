@@ -149,7 +149,7 @@ Would not be accessible from `https://aggregator.example/`.
 ### `<link rel="prerender">` {{deprecated_inline}}{{non-standard_inline}}
 
 > [!NOTE]
-> This technology was only ever available in Chrome, and is now deprecated. You should use the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) instead, which supercedes this.
+> This technology was only ever available in Chrome, and is now deprecated. You should use the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) instead, which supersedes this.
 
 [`<link rel="prerender">`](/en-US/docs/Web/HTML/Attributes/rel/prerender) provides a hint to browsers that the user might need the target resource for the next navigation, and therefore the browser can likely improve performance by prerendering the resource. `prerender` is used for future navigations, same-site only, and as such makes sense for multi-page applications (MPAs), not single-page applications (SPAs).
 

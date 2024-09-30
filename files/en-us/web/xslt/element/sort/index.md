@@ -28,13 +28,13 @@ None.
 - `select`
   - : Uses an XPath expression to specify the nodes to be sorted.
 - `order`
-  - : Specifies whether the nodes should be processed in "`ascending`" or "`descending`" order. The default is "`ascending`".
+  - : Specifies whether the nodes should be processed in `ascending` or `descending` order. The default is `ascending`.
 - `case-order`
-  - : Indicates whether upper- or lowercase letters are to be ordered first. The allowable values are "`upper-first`" and "`lower-first`".
+  - : Indicates whether upper- or lowercase letters are to be ordered first. The allowable values are `upper-first` and `lower-first`.
 - `lang`
   - : Specifies which language is to be used by the sort.
 - `data-type`
-  - : Defines whether items are to be ordered alphabetically or numerically. The allowable values are "`text`" and "`number`" with "`text`" being the default.
+  - : Defines whether items are to be ordered alphabetically or numerically. The allowable values are `text` and `number` with `text` being the default.
 
 ### Type
 

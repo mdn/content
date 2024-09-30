@@ -66604,6 +66604,28 @@
     "modified": "2020-10-15T22:16:13.286Z",
     "contributors": ["mfuji09", "wbamberg"]
   },
+  "Web/API/Window/createImageBitmap": {
+    "modified": "2020-10-15T21:37:56.407Z",
+    "contributors": [
+      "gmanpersona",
+      "mfluehr",
+      "styfle",
+      "fscholz",
+      "DomenicDenicola",
+      "Halfman",
+      "jaffathecake",
+      "jpmedley",
+      "Brettz9",
+      "MatthiasSaihttam",
+      "nmve",
+      "chrisdavidmills",
+      "yisibl",
+      "DrRataplan",
+      "zeird",
+      "Kaku",
+      "adria"
+    ]
+  },
   "Web/API/Window/crossOriginIsolated": {
     "modified": "2020-10-15T22:25:16.295Z",
     "contributors": ["ExE-Boss", "chrisdavidmills"]
@@ -68206,6 +68228,16 @@
       "Maian",
       "Dria",
       "JesseW"
+    ]
+  },
+  "Web/API/Window/queueMicrotask": {
+    "modified": "2020-10-15T22:21:06.789Z",
+    "contributors": [
+      "Kaiido",
+      "chrisdavidmills",
+      "Sheppy",
+      "zbjornson",
+      "DomenicDenicola"
     ]
   },
   "Web/API/Window/rejectionhandled_event": {
@@ -71494,38 +71526,6 @@
       "Khodaidad_Basharmand",
       "Sheppy",
       "myakura"
-    ]
-  },
-  "Web/API/createImageBitmap": {
-    "modified": "2020-10-15T21:37:56.407Z",
-    "contributors": [
-      "gmanpersona",
-      "mfluehr",
-      "styfle",
-      "fscholz",
-      "DomenicDenicola",
-      "Halfman",
-      "jaffathecake",
-      "jpmedley",
-      "Brettz9",
-      "MatthiasSaihttam",
-      "nmve",
-      "chrisdavidmills",
-      "yisibl",
-      "DrRataplan",
-      "zeird",
-      "Kaku",
-      "adria"
-    ]
-  },
-  "Web/API/queueMicrotask": {
-    "modified": "2020-10-15T22:21:06.789Z",
-    "contributors": [
-      "Kaiido",
-      "chrisdavidmills",
-      "Sheppy",
-      "zbjornson",
-      "DomenicDenicola"
     ]
   },
   "Web/API/setInterval": {
