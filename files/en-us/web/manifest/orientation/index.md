@@ -7,7 +7,11 @@ browser-compat: html.manifest.orientation
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
-The `orientation` manifest member is used to specify the default screen orientation for your web application, which defines how it should be displayed when launched and during use, particularly on mobile devices.
+The `orientation` manifest member is used to specify the default orientation for your web application.
+It defines how the app should be displayed when launched and during use, in relation to the device's screen orientation, particularly on devices that support multiple orientations.
+
+> [!NOTE]
+> The app's orientation can be changed during runtime through various means, such as using the [Screen Orientation API](/en-US/docs/Web/API/Screen_Orientation_API).
 
 ## Syntax
 
@@ -27,94 +31,113 @@ The `orientation` manifest member is used to specify the default screen orientat
 
 - `orientation`
 
-  - : A string that specifies the default orientation for the web app. The value must be one of the following keywords:
+  - : A string that specifies the default orientation for the web app.
+    If the `orientation` member is not specified or an invalid value is provided, the web app will typically use the device's natural orientation and any user or system-level orientation settings.
+
+    The `orientation` value must be one of the following keywords:
 
     - `any`
 
       - : Displays the web app in any orientation allowed by the device's operating system or user settings.
-        It allows the app to rotate freely between `portrait` and `landscape` orientations as the device is rotated.
+        It allows the app to rotate freely to match the orientation of the device when it is rotated.
 
     - `natural`
 
-      - : Displays the web app in the orientation considered most natural for the device, as determined by the browser, operating system, user settings, or the screen itself. Typically, the `natural` setting resolves to the following orientation of web apps:
+      - : Displays the web app in the orientation considered most natural for the device, as determined by the browser, operating system, user settings, or the screen itself. It corresponds to how the device is most commonly held or used:
 
-        - `portrait-primary` in mobile phones (held upright).
-        - `landscape-primary` in computer monitors.
+        - On devices typically held vertically, such as mobile phones, `natural` is usually `portrait-primary`.
+        - On devices typically used horizontally, such as computer monitors and tablets, `natural` is usually `landscape-primary`.
 
-        This setting restricts the web app to the device's inherent orientation preference, which may be a single orientation or a limited set of orientations considered natural for that device.
+        When the device is rotated, the app may or may not rotate so as to match the device's natural orientation; this behavior may vary depending on the specific device, browser implementation, and user settings.
 
     - `portrait`
 
-      - : Displays the web app in portrait orientation, where the app's height is greater than its width.
-        This setting allows the app to rotate between `portrait-primary` (device is held upright) and `portrait-secondary` (device rotated 180 degrees from upright position) orientations. The app will attempt to maintain the portrait orientation even if the device is rotated to a landscape position.
+      - : Displays the web app with height greater than width.
+        It allows the app to switch between `portrait-primary` and `portrait-secondary` orientations when the device is rotated.
 
     - `portrait-primary`
 
-      - : Displays the web app in primary portrait orientation.
-        On devices with a natural portrait orientation, this setting displays the app in the .
-        On devices with a natural landscape orientation, this is 90 degrees clockwise from the natural orientation.
+      - : Displays the web app in portrait mode, typically with the device held upright.
+        This is usually the default app orientation on devices that are naturally portrait.
+        Depending on the device and browser implementation, the app will typically maintain this orientation even when the device is rotated.
 
     - `portrait-secondary`
 
-      - : Displays the web app in the secondary portrait mode.
-        This is typically the default `portrait` orientation.
-        On devices with a natural portrait orientation, this is upside down (180 degrees).
-        On devices with a natural landscape orientation, this is 270 degrees clockwise from the natural orientation.
+      - : Displays the web app in inverted portrait mode, which is `portrait-primary` rotated 180 degrees.
+        Depending on the device and browser implementation, the app will typically maintain this orientation even when the device is rotated.
 
     - `landscape`
 
-      - : Displays the web app in landscape orientation, where the app's width is greater than its height.
-        This setting allows the app to rotate between `landscape-primary` (device held in horizontal position) and `landscape-secondary` (device rotated 180 degrees from horizontal position) orientations. The app will attempt to maintain the landscape orientation even if the device is rotated to a portrait position.
+      - : Displays the web app with width greater than height.
+        It allows the app to switch between `landscape-primary` and `landscape-secondary` orientations when the device is rotated.
 
     - `landscape-primary`
 
-      - : Displays the web app in the primary landscape mode.
-        This is typically the default `landscape` orientation.
-        On devices with a natural landscape orientation, this is the same as the natural orientation (0 degrees).
-        On devices with a natural portrait orientation, this is 90 degrees clockwise from the natural orientation.
+      - : Displays the web app in landscape mode, typically with the device held in its standard horizontal position.
+        This is usually the default app orientation on devices that are naturally landscape.
+        Depending on the device and browser implementation, the app will typically maintain this orientation even when the device is rotated.
 
     - `landscape-secondary`
 
-      - : Displays the web app in the secondary landscape mode.
-        On devices with a natural landscape orientation, this is upside down (180 degrees).
-        On devices with a natural portrait orientation, this is 270 degrees clockwise from the natural orientation.
+      - : Displays the web app in inverted landscape mode, which is `landscape-primary` rotated 180 degrees.
+        Depending on the device and browser implementation, the app will typically maintain this orientation even when the device is rotated.
 
 ## Description
 
-Use the `orientation` manifest member to specify how your web app should be displayed on devices with variable screen orientations.
-This is particularly useful for mobile devices and tablets, where users can rotate the device.
+To understand the `orientation` manifest member, it's important to be familiar with the following orientation-related concepts:
 
-If the `orientation` member is not specified in the web app manifest or an invalid value is provided, the web app will typically use the device's natural orientation and any user or system-level orientation settings. Not specifying an orientation can be a deliberate choice, allowing your web app to adapt flexibly to different devices and user preferences.
+- **Device orientation**: Defines how the device is physically held or positioned.
+- **Screen orientation**: Defines the physical orientation of the device's display.
+- **App orientation**: Defines how the app's content is displayed relative to the screen orientation.
+
+When a device is rotated, it typically changes the screen orientation. For example, rotating a mobile phone from vertical to horizontal usually switches the screen from portrait to landscape mode. Without any specific orientation set in the manifest, most apps will adjust their layout to fit this new screen orientation.
+
+The manifest's `orientation` member allows you to control how your app responds to these changes. By specifying a preferred orientation for your app, you can decide whether your app should adapt to screen orientation changes or maintain a fixed layout regardless of how the device is held. For example, by setting `"orientation": "portrait-primary"`, you can indicate that you prefer your app to always be displayed in upright portrait mode relative to the screen, even if the device is rotated. The browser or operating system will attempt to honor this preference when possible.
+
+The example below illustrates how a web app's layout might appear when a mobile phone is rotated. For this example, assume that the app's `orientation` value is set to `any`, allowing the app to rotate between all `orientation` values when the mobile phone is rotated. Also assume that both the phone and the browser support all orientations. The sequence shows a clockwise rotation of the phone, with each position rotated from the starting position as follows:
+
+- Top-left: `portrait-primary` (starting position)
+- Top-right: `landscape-primary` (90 degrees)
+- Bottom-left: `portrait-secondary` (180 degrees)
+- Bottom-right: `landscape-secondary` (270 degrees)
 
 ```html hidden
 <div class="container">
   <div class="orientation">
-    <div class="device">
-      <div class="screen"></div>
-      <div class="button"></div>
+    <div class="device portrait-primary">
+      <div class="screen">
+        <div class="title-bar">App Title Bar</div>
+        <div class="content">App content in portrait mode</div>
+      </div>
     </div>
-    <div class="label">Portrait Primary</div>
+    <div class="label"><code>portrait-primary</code></div>
   </div>
   <div class="orientation">
-    <div class="device landscape">
-      <div class="screen"></div>
-      <div class="button"></div>
+    <div class="device landscape-primary">
+      <div class="screen">
+        <div class="title-bar">App Title Bar</div>
+        <div class="content">App content in landscape mode</div>
+      </div>
     </div>
-    <div class="label">Landscape Primary</div>
+    <div class="label"><code>landscape-primary</code></div>
   </div>
   <div class="orientation">
     <div class="device portrait-secondary">
-      <div class="screen"></div>
-      <div class="button"></div>
+      <div class="screen">
+        <div class="title-bar">App Title Bar</div>
+        <div class="content">App content in inverted portrait mode</div>
+      </div>
     </div>
-    <div class="label">Portrait Secondary</div>
+    <div class="label"><code>portrait-secondary</code></div>
   </div>
   <div class="orientation">
     <div class="device landscape-secondary">
-      <div class="screen"></div>
-      <div class="button"></div>
+      <div class="screen">
+        <div class="title-bar">App Title Bar</div>
+        <div class="content">App content in inverted landscape mode</div>
+      </div>
     </div>
-    <div class="label">Landscape Secondary</div>
+    <div class="label"><code>landscape-secondary</code></div>
   </div>
 </div>
 ```
@@ -147,37 +170,41 @@ If the `orientation` member is not specified in the web app manifest or an inval
 .screen {
   width: 180px;
   height: 280px;
-  border-radius: 20px;
+  border-radius: 15px;
   background-color: lightgrey;
   margin: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
-/* .button {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: darkgrey;
-  position: absolute;
-  bottom: 5px;
-  left: 50%;
-  transform: translateX(-50%);
-} */
-
-.button {
-  width: 20px;
-  height: 20px;
-  border-radius: 5px;
-  background-color: darkgrey;
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-top: 1px solid #888;
-  border-left: 1px solid #888;
+.title-bar {
+  background-color: #4285f4;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  font-weight: bold;
 }
 
-.landscape {
-  transform: rotate(90deg);
+.content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+}
+
+.landscape-primary,
+.landscape-secondary {
+  width: 300px;
+  height: 200px;
+}
+
+.landscape-primary .screen,
+.landscape-secondary .screen {
+  width: 280px;
+  height: 180px;
 }
 
 .portrait-secondary {
@@ -185,7 +212,7 @@ If the `orientation` member is not specified in the web app manifest or an inval
 }
 
 .landscape-secondary {
-  transform: rotate(270deg);
+  transform: rotate(180deg);
 }
 
 .label {
@@ -197,57 +224,66 @@ If the `orientation` member is not specified in the web app manifest or an inval
 
 {{EmbedLiveSample('Description', '', 800)}}
 
-By setting a specific orientation, you can ensure that your web app is displayed in the most optimal way for its content and user interface.
-For example, a video app is often better suited to landscape orientation, while a reading app typically works better in portrait orientation.
-
 ### Scope and default behavior
 
-The specified orientation is applied to all top-level {{Glossary("Browsing context", "browsing contexts")}} of the web app.
+The specified `orientation` is applied to all top-level {{Glossary("Browsing context", "browsing contexts")}} of the web app.
 
-If a browser supports the value of the `orientation` member as the default screen orientation, it serves as the default screen orientation for the life of the web app (unless overridden by some other means at runtime).
-This means that browsers will revert to this default screen orientation whenever the top-level browsing context is navigated.
+If a browser supports the `orientation` value, it will use this as the default orientation for the web app throughout the life of the web app, unless overridden at runtime.
+This means that browsers will revert to this default orientation whenever the top-level browsing context is navigated.
 
-### Manifest vs. Screen Orientation API behavior
+### Choosing a preferred orientation for your web app
 
-The `orientation` values are similar across the web app manifest and the [Screen Orientation API](/en-US/docs/Web/API/Screen_Orientation_API), but their behavior and purpose differ.
+By setting a specific orientation, you can ensure that your web app is displayed optimally for its content and user interface.
+For example, a video app is often better suited to landscape orientation, while a reading app typically works better in portrait orientation.
+
+Not specifying an orientation can also be a deliberate choice, allowing your web app to adapt flexibly to different devices and user preferences.
+
+### Manifest `orientation` vs. Screen Orientation API behavior
+
+While the `orientation` manifest member sets the default orientation of the web app, the orientation of a top-level browsing context can be changed once the web app is running using the [Screen Orientation API](/en-US/docs/Web/API/Screen_Orientation_API).
+
+The `orientation` values are similar across the web app manifest and the Screen Orientation API, but their behavior and purposes differ.
 
 - Web app manifest:
+
   - Suggests the preferred default orientation of the web app using the `orientation` manifest member.
   - Sets the initial orientation when the app is launched.
+
 - Screen Orientation API:
+
   - Uses orientation values to lock the screen to a specific orientation.
   - Allows dynamic changes to orientation during runtime (for example, locking orientation using {{domxref("ScreenOrientation.lock", "screen.orientation.lock()")}}).
 
-> [!NOTE]
-> While the `orientation` manifest member sets the default orientation of the web app, the orientation of a top-level browsing context can be changed once the web app is running. This can be done through various means, such as using the [Screen Orientation API](/en-US/docs/Web/API/Screen_Orientation_API).
-
-Remember that although it is encouraged, browsers may or may not implement the Screen Orientation API.
+  > [!NOTE]
+  > The Screen Orientation API's [`lock()`](/en-US/docs/Web/API/ScreenOrientation/lock) method has limited support across browsers.
+  > Check its compatibility if you plan to use this it to dynamically change screen orientation during runtime.
 
 ### Platform and browser limitations
 
-Certain UI/UX concerns and platform conventions may limit which screen orientations and [`display`](/en-US/docs/Web/Manifest/display) modes can be used together.
-Browser vendors and device manufacturers decide which orientations and display modes are compatible.
-For example, some browsers might not allow changing the default screen orientation of a web app while in [`"display": "browser"`](/en-US/docs/Web/Manifest/display#browser) mode.
+When adding the orientation preference for your app, keep the following considerations and limitations mind:
 
-Support for specific values may vary depending on the device and platform.
-For example, some devices may not support `portrait-secondary` or `landscape-secondary` orientations.
+- Browser vendors and device manufacturers decide which orientations and [`display`](/en-US/docs/Web/Manifest/display) modes are compatible.
+- Certain UI/UX concerns and platform conventions may limit which screen orientations and display modes can be used together.
+- Support for specific `orientation` values may vary depending on the device and platform.
+- Some devices may not support all `orientation` values, such as `portrait-secondary` and `landscape-secondary`.
+- Some browsers might not allow changing the default orientation of a web app while in while in certain display modes (e.g., [`"display": "browser"`](/en-US/docs/Web/Manifest/display#browser)).
 
 ## Examples
 
-### Setting the default orientation for a web app
+### Specifying a fixed orientation for a web app
 
-This example sets the default orientation to `portrait-primary`, which is a typical natural orientation for most mobile devices.
+This example sets the app's orientation to `portrait-primary`. Assuming browser and device support, the app will always display in upright portrait mode even when the device is rotated.
 
 ```json
 {
-  "name": "My Web App"
+  "name": "My Web App",
   "orientation": "portrait-primary"
 }
 ```
 
-### Setting the default orientation for a photo viewing and editing app
+### Setting a flexible orientation for a web app
 
-Consider this example of a photo viewing and editing app that works on both mobile phones and tablets. In the app's manifest file, as shown below, the `orientation` is set to `any`, allowing the app to launch in the device's current orientation. The main gallery view of the app adapts to both `portrait` and `landscape` orientations. When a user selects an image for detailed viewing or editing, the app can use the Screen Orientation API to suggest `landscape` orientation for a wider editing canvas on tablets.
+Consider a photo viewing and editing app. In the app's manifest file, as shown below, `orientation` is set to `any`. This allows the app to be launched in the device's current orientation and adapt to both `portrait` and `landscape` orientations as users rotate their devices. This `orientation` setting will enable users to view and edit photos comfortably in whichever orientation best suits the current display or their current usage context.
 
 ```json
 {
