@@ -58,8 +58,8 @@ console.log(voices.textTracks[2].cues[0].text);
 
 ## See also
 
-- [The TextTrack interface](/en-US/docs/Web/API/TextTrack)
-- [Guide to the WebVTT API](/en-US/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format)
+- {{domxref("TextTrack")}}
+- [WebVTT API](/en-US/docs/Web/API/WebVTT_API)
 - [Web media technologies](/en-US/docs/Web/Media)
 - Learning: [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
