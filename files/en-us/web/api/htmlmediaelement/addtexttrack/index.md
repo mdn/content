@@ -1,4 +1,4 @@
-I---
+---
 title: "HTMLMediaElement: addTextTrack() method"
 short-title: addTextTrack()
 slug: Web/API/HTMLMediaElement/addTextTrack
