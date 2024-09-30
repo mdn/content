@@ -232,7 +232,7 @@ The most obvious piece of animation advice is to use less animations — cut out
 
 For essential DOM animations, you are advised to use [CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) where possible, rather than JavaScript animations (the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) provides a way to directly hook into CSS animations using JavaScript). Using the browser to directly perform DOM animations rather than manipulating inline styles using JavaScript is much faster and more efficient. See also [CSS performance optimization > Handling animations](/en-US/docs/Learn/Performance/CSS#handling_animations).
 
-For animations that can't be handled in JavaScript, for example, animating an HTML {{htmlelement("canvas")}}, you are advised to use {{domxref("Window.requestAnimationFrame()")}} rather than older options such as {{domxref("setInterval()")}}. The `requestAnimationFrame()` method is specially designed for handling animation frames efficiently and consistently, for a smooth user experience. The basic pattern looks like this:
+For animations that can't be handled in JavaScript, for example, animating an HTML {{htmlelement("canvas")}}, you are advised to use {{domxref("Window.requestAnimationFrame()")}} rather than older options such as {{domxref("Window.setInterval()")}}. The `requestAnimationFrame()` method is specially designed for handling animation frames efficiently and consistently, for a smooth user experience. The basic pattern looks like this:
 
 ```js
 function loop() {

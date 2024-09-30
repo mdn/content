@@ -825,14 +825,14 @@ To learn how to debug web workers, see the documentation for each browser's Java
 You can use most standard JavaScript features inside a web worker, including:
 
 - {{domxref("Navigator")}}
-- {{domxref("WorkerGlobalScope/fetch", "fetch()")}}
+- {{domxref("WorkerGlobalScope.fetch", "fetch()")}}
 - {{jsxref("Global_Objects/Array", "Array")}}, {{jsxref("Global_Objects/Date", "Date")}}, {{jsxref("Global_Objects/Math", "Math")}}, and {{jsxref("Global_Objects/String", "String")}}
-- {{domxref("setTimeout()")}} and {{domxref("setInterval()")}}
+- {{domxref("setTimeout()")}} and {{domxref("WorkerGlobalScope.setInterval", "setInterval()")}}
 
 The main thing you _can't_ do in a Worker is directly affect the parent page. This includes manipulating the DOM and using that page's objects. You have to do it indirectly, by sending a message back to the main script via {{domxref("DedicatedWorkerGlobalScope.postMessage")}}, then doing the changes in event handler.
 
 > [!NOTE]
-> You can test whether a method is available to workers using the site: <https://worker-playground.glitch.me/>. For example, if you enter [EventSource](/en-US/docs/Web/API/EventSource) into the site on Firefox 84 you'll see that this is not supported in service workers, but is in dedicated and shared workers.
+> You can test whether a method is available to workers using the site: <https://worker-playground.glitch.me/>. For example, if you enter {{domxref("EventSource")}} into the site on Firefox 84 you'll see that this is not supported in service workers, but is in dedicated and shared workers.
 
 > [!NOTE]
 > For a complete list of functions available to workers, see [Functions and interfaces available to workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).
@@ -843,7 +843,7 @@ The main thing you _can't_ do in a Worker is directly affect the parent page. Th
 
 ## See also
 
-- [`Worker`](/en-US/docs/Web/API/Worker) interface
-- [`SharedWorker`](/en-US/docs/Web/API/SharedWorker) interface
+- {{domxref("Worker")}} interface
+- {{domxref("SharedWorker")}} interface
 - [Functions available to workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)
-- [`OffscreenCanvas`](/en-US/docs/Web/API/OffscreenCanvas) interface
+- {{domxref("OffscreenCanvas")}} interface
