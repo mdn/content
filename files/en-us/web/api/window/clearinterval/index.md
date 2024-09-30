@@ -47,7 +47,7 @@ See {{domxref("Window.setInterval", "setInterval()")}} for examples.
 
 ## See also
 
-- {{domxref("clearTimeout()")}}
-- {{domxref("Window.setInterval()")}} and {{domxref("WorkerGlobalScope.setInterval()")}}
+- {{domxref("Window.setInterval()")}}
 - {{domxref("WorkerGlobalScope.clearInterval()")}}
-- {{domxref("Window.cancelAnimationFrame()")}} and {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()")}}
+- {{domxref("Window.clearTimeout()")}}
+- {{domxref("Window.cancelAnimationFrame()")}}

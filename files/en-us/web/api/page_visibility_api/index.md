@@ -35,7 +35,7 @@ Developers have historically used imperfect proxies to detect this. For example,
 Separately from the Page Visibility API, user agents typically have a number of policies in place to mitigate the performance impact of background or hidden tabs. These may include:
 
 - Most browsers stop sending {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} callbacks to background tabs or hidden {{ HTMLElement("iframe") }}s in order to improve performance and battery life.
-- Timers such as {{domxref("setTimeout()")}} are throttled in background/inactive tabs to help improve performance. See [Reasons for delays longer than specified](/en-US/docs/Web/API/Window/setTimeout#reasons_for_delays_longer_than_specified) for more details.
+- Timers such as {{domxref("Window.setTimeout", "setTimeout()")}} are throttled in background/inactive tabs to help improve performance. See [Reasons for delays longer than specified](/en-US/docs/Web/API/Window/setTimeout#reasons_for_delays_longer_than_specified) for more details.
 - Browsers implement budget-based background timeout throttling. This operates in a similar way across modern browsers, with the details being as follows:
 
   - In Firefox, windows in background tabs each have their own time budget in milliseconds — a max and a min value of +50 ms and -150 ms, respectively. Chrome is very similar except that the budget is specified in seconds.

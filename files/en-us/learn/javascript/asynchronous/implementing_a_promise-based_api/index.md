@@ -32,7 +32,7 @@ In this example we'll implement a promise-based alarm API, called `alarm()`. It 
 
 ### Wrapping setTimeout()
 
-We'll use the {{domxref("setTimeout()")}} API to implement our `alarm()` function. The `setTimeout()` API takes as arguments a callback function and a delay, given in milliseconds. When `setTimeout()` is called, it starts a timer set to the given delay, and when the time expires, it calls the given function.
+We'll use the {{domxref("Window.setTimeout", "setTimeout()")}} API to implement our `alarm()` function. The `setTimeout()` API takes as arguments a callback function and a delay, given in milliseconds. When `setTimeout()` is called, it starts a timer set to the given delay, and when the time expires, it calls the given function.
 
 In the example below, we call `setTimeout()` with a callback function and a delay of 1000 milliseconds:
 

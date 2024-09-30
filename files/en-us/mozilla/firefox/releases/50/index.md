@@ -113,7 +113,7 @@ Firefox 50 was released on November 15, 2016. This article lists key changes tha
 
 - The {{domxref("PannerNode")}} interface now supports the 3D Cartesian space properties for the position ({{domxref("PannerNode.positionX")}}, {{domxref("PannerNode.positionY")}}, and {{domxref("PannerNode.positionZ")}}) and directionality ({{domxref("PannerNode.orientationX")}}, {{domxref("PannerNode.orientationY")}}, {{domxref("PannerNode.orientationZ")}}) of an audio source.
 - The interface {{domxref("IIRFilterNode")}}, which implements a general [infinite impulse response](https://en.wikipedia.org/wiki/Infinite_impulse_response) (IIR) filter, has been implemented.
-- Throttling in background tabs of timers created by {{domxref("Window.setInterval()")}} and {{domxref("WorkerGlobalScope.setInterval()")}}, and {{domxref("setTimeout()")}} no longer occurs if a [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) {{domxref("AudioContext")}} is actively playing sound. This should help prevent issues with timing-sensitive audio playback (such as music players generating individual notes using timers) in the background ([Firefox bug 1181073](https://bugzil.la/1181073)).
+- Throttling in background tabs of timers created by {{domxref("Window.setInterval()")}} and {{domxref("WorkerGlobalScope.setInterval()")}}, {{domxref("Window.setTimeout", "setTimeout()")}} and {{domxref("WorkerGlobalScope.setTimeout", "setTimeout()")}} no longer occurs if a [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) {{domxref("AudioContext")}} is actively playing sound. This should help prevent issues with timing-sensitive audio playback (such as music players generating individual notes using timers) in the background ([Firefox bug 1181073](https://bugzil.la/1181073)).
 
 ### Audio/Video
 

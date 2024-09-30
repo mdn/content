@@ -40,7 +40,7 @@ setTimeout(functionRef, delay, param1, param2, /* …, */ paramN)
 
     Note that in either case, the actual delay may be longer than intended; see [Reasons for delays longer than specified](#reasons_for_delays_longer_than_specified) below.
 
-    Also note that if the value isn't a number, implicit [type coercion](/en-US/docs/Glossary/Type_coercion) is silently done on the value to convert it to a number — which can lead to unexpected and surprising results; see [Non-number delay values are silently coerced into numbers](#non-number_delay_values_are_silently_coerced_into_numbers) for an example.
+    Also note that if the value isn't a number, implicit {{glossary("type coercion")}} is silently done on the value to convert it to a number — which can lead to unexpected and surprising results; see [Non-number delay values are silently coerced into numbers](#non-number_delay_values_are_silently_coerced_into_numbers) for an example.
 
 - `param1`, …, `paramN` {{optional_inline}}
 
@@ -76,8 +76,8 @@ See {{domxref("Window.setTimeout()")}} for examples.
 ## See also
 
 - [Polyfill of `setTimeout` which allows passing arguments to the callback in `core-js`](https://github.com/zloirock/core-js#settimeout-and-setinterval)
+- {{domxref("Window.setTimeout()")}}
 - {{domxref("WorkerGlobalScope.clearTimeout()")}}
-- {{domxref("setInterval()")}}
-- {{domxref("clearInterval()")}}
-- {{domxref("Window.requestAnimationFrame()")}}
-- {{domxref("queueMicrotask()")}}
+- {{domxref("WorkerGlobalScope.setInterval()")}}
+- {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}}
+- {{domxref("WorkerGlobalScope.queueMicrotask()")}}

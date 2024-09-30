@@ -117,7 +117,7 @@ To disable a button, specify the [`disabled`](/en-US/docs/Web/HTML/Attributes/di
 
 #### Setting the disabled attribute
 
-You can enable and disable buttons at run time by setting `disabled` to `true` or `false`. In this example our button starts off enabled, but if you press it, it is disabled using `button.disabled = true`. A {{domxref("setTimeout()")}} function is then used to reset the button back to its enabled state after two seconds.
+You can enable and disable buttons at run time by setting `disabled` to `true` or `false`. In this example our button starts off enabled, but if you press it, it is disabled using `button.disabled = true`. A {{domxref("Window.setTimeout", "setTimeout()")}} function is then used to reset the button back to its enabled state after two seconds.
 
 ```html
 <input type="button" value="Enabled" />

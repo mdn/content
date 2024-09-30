@@ -42,7 +42,7 @@ setInterval(func, delay, arg1, arg2, /* …, */ argN)
 
 The returned `intervalID` is a numeric, non-zero value which identifies the timer created by the call to `setInterval()`; this value can be passed to {{domxref("WorkerGlobalScope.clearInterval", "clearInterval()")}} to cancel the interval.
 
-It may be helpful to be aware that `setInterval()` and {{domxref("setTimeout()")}} share the same pool of IDs, and that `clearInterval()` and {{domxref("clearTimeout", "clearTimeout()")}} can technically be used interchangeably.
+It may be helpful to be aware that `setInterval()` and {{domxref("WorkerGlobalScope.setTimeout", "setTimeout()")}} share the same pool of IDs, and that `clearInterval()` and {{domxref("WorkerGlobalScope.clearTimeout", "clearTimeout()")}} can technically be used interchangeably.
 For clarity, however, you should try to always match them to avoid confusion when maintaining your code.
 
 > [!NOTE]
@@ -72,7 +72,7 @@ See the same name section under {{domxref("Window.setInterval", "setInterval()")
 ## See also
 
 - [Polyfill of `setInterval` which allows passing arguments to the callback in `core-js`](https://github.com/zloirock/core-js#settimeout-and-setinterval)
-- {{domxref("setTimeout()")}}
-- {{domxref("Window.clearInterval()")}} and {{domxref("WorkerGlobalScope.clearInterval()")}}
 - {{domxref("Window.setInterval()")}}
-- {{domxref("Window.requestAnimationFrame()")}} and {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}}
+- {{domxref("WorkerGlobalScope.clearInterval()")}}
+- {{domxref("WorkerGlobalScope.setTimeout()")}}
+- {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}}

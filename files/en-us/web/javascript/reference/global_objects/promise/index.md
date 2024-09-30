@@ -306,7 +306,7 @@ new Promise(tetheredGetNumber)
 
 ### Advanced Example
 
-This small example shows the mechanism of a `Promise`. The `testPromise()` method is called each time the {{HTMLElement("button")}} is clicked. It creates a promise that will be fulfilled, using {{domxref("setTimeout()")}}, to the promise count (number starting from 1) every 1-3 seconds, at random. The `Promise()` constructor is used to create the promise.
+This small example shows the mechanism of a `Promise`. The `testPromise()` method is called each time the {{HTMLElement("button")}} is clicked. It creates a promise that will be fulfilled, using {{domxref("Window.setTimeout", "setTimeout()")}}, to the promise count (number starting from 1) every 1-3 seconds, at random. The `Promise()` constructor is used to create the promise.
 
 The fulfillment of the promise is logged, via a fulfill callback set using {{jsxref("Promise/then", "p1.then()")}}. A few logs show how the synchronous part of the method is decoupled from the asynchronous completion of the promise.
 

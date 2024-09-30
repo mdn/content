@@ -513,7 +513,7 @@ So, what is happening here? When you update a component's state in Svelte, it do
 
 In this case, when `editing` is `false`, the edit `<input>` is not visible because it does not exist in the DOM. Inside the `onEdit()` function we set `editing = true` and immediately afterwards try to access the `nameEl` variable and execute `nameEl.focus()`. The problem here is that Svelte hasn't yet updated the DOM.
 
-One way to solve this problem is to use [`setTimeout()`](/en-US/docs/Web/API/Window/setTimeout) to delay the call to `nameEl.focus()` until the next event cycle, and give Svelte the opportunity to update the DOM.
+One way to solve this problem is to use {{domxref("Window.setTimeout", "setTimeout()")}} to delay the call to `nameEl.focus()` until the next event cycle, and give Svelte the opportunity to update the DOM.
 
 Try this now:
 

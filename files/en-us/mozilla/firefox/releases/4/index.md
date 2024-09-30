@@ -296,7 +296,7 @@ Several HTML elements have had their DOM interfaces changed to the ones required
 - The document root now has [a `privatebrowsingmode` attribute](/en-US/docs/Supporting_private_browsing_mode#detecting_whether_private_browsing_mode_is_permanent) that describes the state of private browsing mode, including an indication of whether private browsing is temporary or permanent for the session.
 - The second parameter of the {{domxref("window.getComputedStyle()")}} method is now optional, as it is in every other major browser.
 - The DOM [`StorageEvent`](/en-US/docs/DOM/event/StorageEvent) object now matches the latest version of the specification.
-- The minimum allowed delay for the {{domxref("setTimeout()")}} method is now a preference, `dom.min_timeout_value`.
+- The minimum allowed delay for the {{domxref("Window.setTimeout", "setTimeout()")}} and {{domxref("WorkerGlobalScope.setTimeout", "setTimeout()")}} method is now a preference, `dom.min_timeout_value`.
 - The [`MozAfterPaint`](/en-US/docs/Gecko-Specific_DOM_Events#mozafterpaint) event is no longer sent by default, due to a potential security issue. It can be re-enabled by setting a preference.
 
 ### Security

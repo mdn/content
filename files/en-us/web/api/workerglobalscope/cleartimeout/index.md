@@ -25,12 +25,7 @@ clearTimeout(timeoutID)
   - : The identifier of the timeout you want to cancel. This ID was returned by the
     corresponding call to `setTimeout()`.
 
-It's worth noting that the pool of IDs used by
-{{domxref("WorkerGlobalScope.setTimeout()")}} and
-{{domxref("setInterval()")}} are shared, which
-means you can technically use `clearTimeout()` and
-{{domxref("clearInterval()")}}
-interchangeably. However, for clarity, you should avoid doing so.
+It's worth noting that the pool of IDs used by {{domxref("WorkerGlobalScope.setTimeout", "setTimeout()")}} and {{domxref("WorkerGlobalScope.setInterval", "setInterval()")}} are shared, which means you can technically use `clearTimeout()` and {{domxref("WorkerGlobalScope.clearInterval", "clearInterval()")}} interchangeably. However, for clarity, you should avoid doing so.
 
 ### Return value
 
@@ -55,7 +50,7 @@ exception is thrown.
 
 ## See also
 
+- {{domxref("Window.clearTimeout()")}}
 - {{domxref("WorkerGlobalScope.setTimeout()")}}
-- {{domxref("setInterval()")}}
-- {{domxref("clearInterval()")}}
-- {{domxref("Window.requestAnimationFrame()")}}
+- {{domxref("WorkerGlobalScope.clearInterval()")}}
+- {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}}
