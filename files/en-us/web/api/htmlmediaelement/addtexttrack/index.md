@@ -38,7 +38,7 @@ None.
 
 ## Examples
 
-This example adds a new {{domxref("TextTrack")}} with the `kind` as subtitles, and adds a new {{domxref("VTTCue")}} to that.
+This example adds a new {{domxref("TextTrack")}} with the `kind` set to `"subtitles"`, and adds a new {{domxref("VTTCue")}} to that.
 
 ```js
 const video = document.querySelector("video");
