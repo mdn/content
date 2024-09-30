@@ -312,10 +312,9 @@ shadowButton.addEventListener("click", () => {
 The method below first checks for `document.caretPositionFromPoint` support and uses it to get the text node and offset at the caret position.
 The value of the `useShadows` variable is used to determine whether the shadow root hosted in our text is passed to `caretPositionFromPoint()`.
 
-If the browser doesn't support that method, the code then checks for {{domxref("Document.caretRangeFromPoint", "document.caretRangeFromPoint")}}, and uses that instead.
-
-If the node at the caret position is a text node, the code then splits the node at the selected offset, and inserts a line break between them.
-If the node is an element node, then the code inserts a line break element node at the offset.
+- If the browser doesn't support that method, the code then checks for {{domxref("Document.caretRangeFromPoint", "document.caretRangeFromPoint")}}, and uses that instead.
+- If the node at the caret position is a text node, the code then splits the node at the selected offset, and inserts a line break between them.
+- If the node is an element node, then the code inserts a line break element node at the offset.
 
 ```js
 function insertBreakAtPoint(e) {
