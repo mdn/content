@@ -42,7 +42,7 @@ The returned value is `null` if there is no viewport associated with the documen
 
 ### Split text nodes at caret position in DOM
 
-This example demonstrates how to get the caret position from a selected DOM node, and use it to insert split the node.
+This example demonstrates how to get the caret position from a selected DOM node, use the position to split the node, and insert a line break between the two nodes.
 The example uses `caretPositionFromPoint()` to get the caret position if supported, with the non-standard {{domxref("Document.caretRangeFromPoint()")}} method as a fallback.
 
 Note that some parts of the code are hidden, including code used for logging, as this is not useful for understanding this method.
@@ -116,7 +116,7 @@ reload.addEventListener("click", () => {
 The method below first checks for `document.caretPositionFromPoint` support and uses it to get the text node and offset at the caret position.
 If the browser doesn't support that method, the code then checks for {{domxref("Document.caretRangeFromPoint", "document.caretRangeFromPoint")}}, and uses that instead.
 
-If the node at the caret position is a text node, the code then splits the node at the selected offset, and inserts a line break between them.
+If the node at the caret position is a text node, the code then [splits the node](/en-US/docs/Web/API/Text/splitText) into two at the selected offset, and inserts a line break between the two nodes.
 
 ```js
 function insertBreakAtPoint(e) {
@@ -198,8 +198,7 @@ Note that the log shows the `nodeName`, the offset, and a fragment of the select
 ### Split text nodes at caret positions in a Shadow DOM
 
 This example demonstrates how to get the caret position from a selected node within a shadow root.
-
-The example is very similar to the "DOM-only example" above, except that some of the text is inside a shadow root.
+The example is very similar to the DOM-only example above, except that some of the text is inside a shadow root.
 We provide a button to allow you to see the difference when a shadow root is passed/not passed to `caretPositionFromPoint()`.
 
 Note that some parts of the code are hidden, including code used for logging, as this is not useful for understanding this method.
@@ -286,8 +285,8 @@ reload.addEventListener("click", () => {
 ```
 
 First we have some code to populate our shadow DOM.
-Here we're using JavaScript to attach a shadow root dynamically, because the MDN infrastructure does not allow us to do so declaratively using the {{htmlelement("template")}} element.
-The content of the shadow DOM is just a {{htmlelement("span")}} element that contains the text "I'm in the shadow DOM".
+We're using JavaScript to attach a shadow root dynamically, because the MDN example system does not allow us to do this declaratively using the {{htmlelement("template")}} element.
+The content of the shadow DOM is a {{htmlelement("span")}} element that contains the text "I'm in the shadow DOM".
 
 ```js
 const host = document.querySelector("#host");
@@ -298,7 +297,7 @@ shadow.appendChild(shadowSpan);
 ```
 
 Next we add a handler for our "Enable/Disable shadow" button.
-This code just toggles the value of the `useShadows` variable and updates the button text appropriately.
+This code toggles the value of the `useShadows` variable and updates the button text appropriately.
 
 ```js
 let useShadows = false;
@@ -374,7 +373,7 @@ ${caretInText}`,
     const targetNode = textNode.childNodes[offset];
     textNode.insertBefore(br, targetNode);
   } else {
-    //Do nothing
+    // Do nothing
   }
 }
 ```
@@ -426,12 +425,12 @@ if (document.caretPositionFromPoint) {
 Click in the **Lorem ipsum ...** paragraph before or after the shadow DOM text to insert a line break at the point where you click.
 Note that in this case the log shows you have selected a `TEXT_NODE`, the offset, and a fragment of the selected node with a `^` character at the offset.
 
-Initially the shadow root is not passed to `caretPositionFromPoint()`, so if you click on the text _I'm in the shadow DOM_ the returned caret position node is the parent node of the host, at the offset of the shadow root.
+Initially the shadow root is not passed to `caretPositionFromPoint()`, so if you click on the text "I'm in the shadow DOM", the returned caret position node is the parent node of the host, at the offset of the shadow root.
 The line break therefore gets added before the node rather than the point you selected.
 Note that the caret position node in this case has the type `ELEMENT_NODE`.
 
 If you click the "Add shadow" button, the shadow root is passed to `caretPositionFromPoint()`, so the returned caret position is the specific selected node within the shadow DOM.
-This makes the shadow DOM text behave just like the other paragraph text.
+This makes the shadow DOM text behave like the other paragraph text.
 
 {{EmbedLiveSample('Split text nodes at caret positions in a Shadow DOM','100%','400px')}}
 
