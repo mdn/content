@@ -35,7 +35,7 @@ A generic {{domxref("Event")}}.
 
 ## Examples
 
-### \<select> element
+### `<select>` element
 
 #### HTML
 

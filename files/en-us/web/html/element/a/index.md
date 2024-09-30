@@ -373,7 +373,7 @@ For details about `mailto:` URLs, such as including a subject or body, see [Emai
 
 See {{RFC(3966)}} for syntax, additional features, and other details about the `tel:` URL scheme.
 
-### Using the download attribute to save a \<canvas> as a PNG
+### Using the download attribute to save a `<canvas>` as a PNG
 
 To save a {{HTMLElement("canvas")}} element's contents as an image, you can create a link where the `href` is the canvas data as a `data:` URL created with JavaScript and the `download` attribute provides the file name for the downloaded PNG file:
 

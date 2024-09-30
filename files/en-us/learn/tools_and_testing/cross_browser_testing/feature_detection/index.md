@@ -167,7 +167,7 @@ Common patterns for detectable features include:
 
 - Retention of assigned property value by an element
 
-  - : Create an element in memory using {{domxref("Document.createElement()")}}, set a property to a specific value, then check to see if the value is retained. See the feature test in [Dive into HTML \<input> type detection](https://diveinto.html5doctor.com/detect.html#input-types) for an example of this pattern.
+  - : Create an element in memory using {{domxref("Document.createElement()")}}, set a property to a specific value, then check to see if the value is retained. See the feature test in [Dive into HTML `<input>` type detection](https://diveinto.html5doctor.com/detect.html#input-types) for an example of this pattern.
 
 Bear in mind that some features are, however, known to be undetectable. In these cases, you'll need to use a different approach, such as using a {{Glossary("Polyfill", "polyfill")}}.
 

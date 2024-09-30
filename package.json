@@ -25,7 +25,7 @@
     "fix:fm": "node scripts/front-matter_linter.js --fix true",
     "fix:js": "prettier -w \"**/*.(m)?js\"",
     "fix:json": "prettier -w \"**/*.json(c)?\"",
-    "fix:md": "markdownlint-cli2 --fix \"**/*.md\" && prettier -w \"**/*.md\"",
+    "fix:md": "markdownlint-cli2 --fix \"**/*.md\"",
     "fix:yml": "prettier -w \"**/*.yml\"",
     "lint:fm": "node scripts/front-matter_linter.js",
     "lint:js": "prettier -c \"**/*.(m)?js\"",

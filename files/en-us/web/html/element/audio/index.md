@@ -367,7 +367,7 @@ The following example shows simple usage of the `<audio>` element to play an OGG
 
 For details on when autoplay works, how to get permission to use autoplay, and how and when it's appropriate to use autoplay, see our [autoplay guide](/en-US/docs/Web/Media/Autoplay_guide).
 
-### \<audio> element with \<source> element
+### `<audio>` element with \<source> element
 
 This example specifies which audio track to embed using the `src` attribute on a nested `<source>` element rather than directly on the `<audio>` element. It is always useful to include the file's MIME type inside the `type` attribute, as the browser is able to instantly tell if it can play that file, and not waste time on it if not.
 
@@ -378,7 +378,7 @@ This example specifies which audio track to embed using the `src` attribute on a
 </audio>
 ```
 
-### \<audio> with multiple \<source> elements
+### `<audio>` with multiple \<source> elements
 
 This example includes multiple `<source>` elements. The browser tries to load the first source element (Opus) if it is able to play it; if not it falls back to the second (Vorbis) and finally back to MP3:
 

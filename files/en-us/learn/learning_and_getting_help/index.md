@@ -227,7 +227,7 @@ It is often fairly obvious what to search for. For example:
 
 - If you want to find out more about responsive web design, you could search for "responsive web design".
 - If you want to find out more about a specific technology feature, such as the HTML `<video>` element, or the CSS `background-color` or `opacity` properties, or the JavaScript `Date.setTime()` method, you should just search for the feature's name.
-- If you are looking for some more specific information, you can add other keywords as modifiers, for example "\<video> element autoplay attribute", or "Date.setTime parameters".
+- If you are looking for some more specific information, you can add other keywords as modifiers, for example "`<video>` element autoplay attribute", or "Date.setTime parameters".
 
 If you want to search for something that has less obvious buzzwords, you need to think about what is most likely to return what you want.
 
@@ -245,7 +245,7 @@ If you are having a problem with some code and a specific error message is comin
 
 It is often a good idea to see if your problem is affecting all browsers, or whether it only occurs in one or a small number of browsers. If it is only affecting one browser, for example, you can use that browser to narrow down the search. Example searches might look like:
 
-- \<video> playback doesn't work in the iOS browser.
+- `<video>` playback doesn't work in the iOS browser.
 - Firefox doesn't seem to support the Beetlejuice API.
 
 ### Using MDN
