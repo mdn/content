@@ -45,7 +45,7 @@ Last-Modified: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 - `<day>`
   - : 2 digit day number, e.g., "04" or "23".
 - `<month>`
-  - : One of "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" (case sensitive).
+  - : One of "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" (case-sensitive).
 - `<year>`
   - : 4 digit year number, e.g. "1990" or "2016".
 - `<hour>`

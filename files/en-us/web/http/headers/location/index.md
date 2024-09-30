@@ -13,8 +13,8 @@ It only provides a meaning when served with a `3XX` [redirection response](/en-U
 In redirections, the HTTP method used to make the redirected request to fetch the page pointed to by `Location` depends on the original method and the kind of redirection:
 
 - {{HTTPStatus("303", "303 See Other")}} responses always result in a {{HTTPMethod("GET")}} request in the redirection.
-- {{HTTPStatus("307", "307 Temporary Redirect")}} and {{HTTPStatus("308", "308 Permanent Redirect")}} don't change the method used from the initiating request.
-- {{HTTPStatus("301", "301 Moved Permanently")}} and {{HTTPStatus("302", "302 Found")}} don't change the request method, although older user-agents may, so this is not guaranteed.
+- {{HTTPStatus("307", "307 Temporary Redirect")}} and {{HTTPStatus("308", "308 Permanent Redirect")}} use the same method as the initiating request.
+- {{HTTPStatus("301", "301 Moved Permanently")}} and {{HTTPStatus("302", "302 Found")}} should use the same request method as the initiating request, although this is not guaranteed for older user-agents.
 
 All responses with one of the above status codes include a `Location` header.
 
