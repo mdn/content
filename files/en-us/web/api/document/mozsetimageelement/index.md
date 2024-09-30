@@ -22,12 +22,14 @@ mozSetImageElement(imageElementId, imageElement)
 
 ### Parameters
 
-- `imageElementId` is a string indicating the name of an element that has
-  been specified as a background image using the {{ cssxref("element", "-moz-element") }} CSS
-  function.
-- `imageElement` is the new element to use as the background corresponding
-  to that image element string. Specify `null` to remove the background
-  element.
+- `imageElementId`
+  - : A string indicating the name of an element that has
+    been specified as a background image using the {{ cssxref("element", "-moz-element") }} CSS
+    function.
+- `imageElement`
+  - : The new element to use as the background corresponding
+    to that image element string. Specify `null` to remove the background
+    element.
 
 ### Return value
 
@@ -52,8 +54,7 @@ block is clicked by the user.
 </style>
 ```
 
-The CSS defined by the {{ HTMLElement("style") }} block above is used by our {{
-  HTMLElement("div") }} to use an element with the id "canvasbg" as its background.
+The CSS defined by the {{ HTMLElement("style") }} block above is used by our {{HTMLElement("div")}} to use an element with the id "canvasbg" as its background.
 
 ```js
 let c = 0x00;

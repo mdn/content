@@ -39,7 +39,7 @@ A `MediaStreamTrackAudioSourceNode` has no inputs and exactly one output, and is
 
 ## Constructor
 
-- {{domxref("MediaStreamTrackAudioSourceNode.MediaStreamTrackAudioSourceNode", "new MediaStreamTrackAudioSourceNode()")}}
+- {{domxref("MediaStreamTrackAudioSourceNode.MediaStreamTrackAudioSourceNode", "MediaStreamTrackAudioSourceNode()")}}
   - : Creates a new `MediaStreamTrackAudioSourceNode` object instance with the specified options.
 
 ## Instance properties

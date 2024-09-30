@@ -5,6 +5,8 @@ page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#group
 ---
 
+{{AccessibilitySidebar}}
+
 The `group` role identifies a set of user interface objects that is not intended to be included in a page summary or table of contents by assistive technologies.
 
 ## Description
@@ -96,11 +98,3 @@ This menu could be constructed using {{HTMLElement('select')}} and {{HTMLElement
 - [ARIA: `row` role](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
 - [ARIA: `select` role](/en-US/docs/Web/Accessibility/ARIA/Roles/select_role)
 - [ARIA: `toolbar` role](/en-US/docs/Web/Accessibility/ARIA/Roles/toolbar_role)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

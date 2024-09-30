@@ -40,7 +40,7 @@ removeRecursively(successCallback, errorCallback)
 
 None ({{jsxref("undefined")}}).
 
-### Errors
+### Exceptions
 
 If an error occurs and an `errorCallback` was specified, it gets called with
 a single parameter: a {{domxref("FileError")}} object describing the error. The
@@ -65,7 +65,8 @@ a single parameter: a {{domxref("FileError")}} object describing the error. The
     - Too many file system calls are being made.
     - Other security concerns as raised by the user agent or the operating system.
 
-> **Note:** If you try to delete a directory which contains one or more files that can't be
+> [!NOTE]
+> If you try to delete a directory which contains one or more files that can't be
 > removed, or if an error occurs while deletion of a number of files is underway, some
 > files may not be deleted. You should provide an `errorCallback` to watch
 > for and handle this, perhaps by trying again.

@@ -10,7 +10,8 @@ browser-compat: api.HTMLInputElement.selectionStart
 
 The **`selectionStart`** property of the {{domxref("HTMLInputElement")}} interface is a number that represents the beginning index of the selected text. When nothing is selected, then returns the position of the text input cursor (caret) inside of the `<input>` element.
 
-> **Note:** According to the [WHATWG forms spec](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply) `selectionStart` property applies only to inputs of types text, search, URL, tel, and password. In modern browsers, throws an exception while setting `selectionStart` property on the rest of input types. Additionally, this property returns `null` while accessing `selectionStart` property on non-text input elements.
+> [!NOTE]
+> According to the [WHATWG forms spec](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply) `selectionStart` property applies only to inputs of types text, search, URL, tel, and password. In modern browsers, throws an exception while setting `selectionStart` property on the rest of input types. Additionally, this property returns `null` while accessing `selectionStart` property on non-text input elements.
 
 If `selectionStart` is greater than `selectionEnd`, then both are
 treated as the value of `selectionEnd`.

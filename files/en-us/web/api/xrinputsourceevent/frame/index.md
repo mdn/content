@@ -35,8 +35,7 @@ list.
 
 ## Examples
 
-This code shows a handler for the {{domxref("XRSession.selectstart_event",
-  "selectstart")}} event which gets the target ray's pose from the frame, mapping the pose
+This code shows a handler for the {{domxref("XRSession.selectstart_event", "selectstart")}} event which gets the target ray's pose from the frame, mapping the pose
 representing the ray (`event.inputSource.targetRaySpace`) to the overall
 reference space `myRefSpace`.
 

@@ -6,12 +6,10 @@ page-type: web-api-instance-property
 browser-compat: api.IDBObjectStore.name
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`name`** property of the {{domxref("IDBObjectStore")}}
 interface indicates the name of this object store.
-
-{{AvailableInWorkers}}
 
 ## Value
 
@@ -39,14 +37,15 @@ some data to an object store using `add()`. After the object store has been
 created, we log `objectStore.name` to
 the console. For a full working example, see
 our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app
-(>[view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
+([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 // Let us open our database
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += "<li>Database initialized.</li>";
+  note.appendChild(document.createElement("li")).textContent =
+    "Database initialized.";
 
   // store the result of opening the database in the db variable.
   // This is used a lot below
@@ -75,12 +74,13 @@ function addData() {
 
   // report on the success of the transaction completing, when everything is done
   transaction.oncomplete = (event) => {
-    note.innerHTML += "<li>Transaction completed.</li>";
+    note.appendChild(document.createElement("li")).textContent =
+      "Transaction completed.";
   };
 
   transaction.onerror = (event) => {
-    note.innerHTML +=
-      "<li>Transaction not opened due to error. Duplicate items not allowed.</li>";
+    note.appendChild(document.createElement("li")).textContent =
+      "Transaction not opened due to error. Duplicate items not allowed.";
   };
 
   // create an object store on the transaction
@@ -92,7 +92,8 @@ function addData() {
 
   objectStoreRequest.onsuccess = (event) => {
     // report the success of our request
-    note.innerHTML += "<li>Request successful.</li>";
+    note.appendChild(document.createElement("li")).textContent =
+      "Request successful.";
   };
 }
 ```

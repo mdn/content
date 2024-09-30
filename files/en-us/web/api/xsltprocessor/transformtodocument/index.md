@@ -33,6 +33,70 @@ A {{domxref("Document")}}. The actual interface depends on the [output method](h
 
 ## Examples
 
+### Using transformToDocument()
+
+This example demonstrates how to use `transformToDocument()` to transform an XML document using XSLT, resulting in a new XML document structure.
+
+#### HTML
+
+```html
+<pre id="result"></pre>
+```
+
+#### JavaScript
+
+```js
+const xmlString = `
+<books>
+  <book>
+    <title>Book 1</title>
+    <author>Author 1</author>
+  </book>
+  <book>
+    <title>Book 2</title>
+    <author>Author 2</author>
+  </book>
+</books>
+`;
+
+const xsltString = `
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:output method="xml" indent="yes"/>
+  <xsl:template match="/">
+    <catalog>
+      <xsl:for-each select="books/book">
+        <item>
+          <name><xsl:value-of select="title"/></name>
+          <writer><xsl:value-of select="author"/></writer>
+        </item>
+      </xsl:for-each>
+    </catalog>
+  </xsl:template>
+</xsl:stylesheet>
+`;
+
+const parser = new DOMParser();
+const xmlDoc = parser.parseFromString(xmlString, "application/xml");
+const xsltDoc = parser.parseFromString(xsltString, "application/xml");
+
+const xsltProcessor = new XSLTProcessor();
+xsltProcessor.importStylesheet(xsltDoc);
+
+// Perform the transformation, returning the result as a new XML document
+const resultDoc = xsltProcessor.transformToDocument(xmlDoc);
+
+// Serialize the result document to a string
+const serializer = new XMLSerializer();
+const resultString = serializer.serializeToString(resultDoc);
+
+// Display the transformed XML in the page
+document.getElementById("result").textContent = resultString;
+```
+
+#### Result
+
+{{EmbedLiveSample("using_transformToDocument", "", "200")}}
+
 ## Specifications
 
 {{Specifications}}
@@ -43,4 +107,4 @@ A {{domxref("Document")}}. The actual interface depends on the [output method](h
 
 ## See also
 
-- {{domxref("XSLTProcessor.transformToDocument()")}}
+- {{domxref("XSLTProcessor.transformToFragment()")}}

@@ -15,9 +15,9 @@ The **`outline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/We
 
 This property is a shorthand for the following CSS properties:
 
-- {{cssxref("outline-color")}}
-- {{cssxref("outline-style")}}
 - {{cssxref("outline-width")}}
+- {{cssxref("outline-style")}}
+- {{cssxref("outline-color")}}
 
 ## Syntax
 
@@ -25,14 +25,14 @@ This property is a shorthand for the following CSS properties:
 /* style */
 outline: solid;
 
-/* color | style */
-outline: #f66 dashed;
+/* style | color */
+outline: dashed #f66;
 
-/* style | width */
-outline: inset thick;
+/* width | style */
+outline: thick inset;
 
-/* color | style | width */
-outline: green solid 3px;
+/* width | style | color*/
+outline: 3px solid green;
 
 /* Global values */
 outline: inherit;
@@ -44,16 +44,17 @@ outline: unset;
 
 The `outline` property may be specified using one, two, or three of the values listed below. The order of the values does not matter. As with all shorthand properties, any omitted sub-values will be set to their [initial value](/en-US/docs/Web/CSS/initial_value).
 
-> **Note:** The outline will be invisible for many elements if its style is not defined. This is because the style defaults to `none`. A notable exception is `input` elements, which are given default styling by browsers.
+> [!NOTE]
+> The outline will be invisible for many elements if its style is not defined. This is because the style defaults to `none`. A notable exception is `input` elements, which are given default styling by browsers.
 
 ### Values
 
-- `<'outline-color'>`
-  - : Sets the color of the outline. Defaults to `invert` for browsers supporting it, `currentcolor` for the others. See {{cssxref("outline-color")}}.
-- `<'outline-style'>`
-  - : Sets the style of the outline. Defaults to `none` if absent. See {{cssxref("outline-style")}}.
 - `<'outline-width'>`
   - : Sets the thickness of the outline. Defaults to `medium` if absent. See {{cssxref("outline-width")}}.
+- `<'outline-style'>`
+  - : Sets the style of the outline. Defaults to `none` if absent. See {{cssxref("outline-style")}}.
+- `<'outline-color'>`
+  - : Sets the color of the outline. Defaults to `invert` for browsers supporting it, `currentcolor` for the others. See {{cssxref("outline-color")}}.
 
 ## Description
 
@@ -63,7 +64,7 @@ There are a few properties that affect an outline's appearance. It is possible t
 
 An outline is not required to be rectangular: While dealing with multiline text, some browsers will draw an outline for each line box separately, while others will wrap the whole text with a single outline.
 
-## Accessibility concerns
+## Accessibility
 
 Assigning `outline` a value of `0` or `none` will remove the browser's default focus style. If an element can be interacted with it must have a visible focus indicator. Provide obvious focus styling if the default focus style is removed.
 
@@ -120,6 +121,7 @@ a:focus {
 
 ## See also
 
-- {{cssxref("outline-color")}}
-- {{cssxref("outline-style")}}
 - {{cssxref("outline-width")}}
+- {{cssxref("outline-style")}}
+- {{cssxref("outline-color")}}
+- {{Cssxref("border")}}

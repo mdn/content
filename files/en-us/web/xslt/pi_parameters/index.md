@@ -111,7 +111,7 @@ If **namespace** is missing, the PI is ignored. If **namespace** is empty, the p
 
 ##### Examples
 
-Set the parameter 'books' to a nodeset containing all `<book>` elements in the 'http\://www\.example.org/myNamespace' namespace:
+Set the parameter 'books' to a nodeset containing all `<book>` elements in the `http://www.example.org/myNamespace` namespace:
 
 ```xml
 <?xslt-param-namespace prefix="my" namespace="http://www.example.org/myNamespace"?>

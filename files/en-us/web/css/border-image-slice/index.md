@@ -13,7 +13,7 @@ The **`border-image-slice`** [CSS](/en-US/docs/Web/CSS) property divides the ima
 
 The slicing process creates nine regions in total: four corners, four edges, and a middle region. Four slice lines, set a given distance from their respective sides, control the size of the regions.
 
-[![The nine regions defined by the border-image or border-image-slice properties](border-image-slice.png)](/en-US/docs/Web/CSS/border-image-slice/border-image-slice.png)
+![The nine regions defined by the border-image or border-image-slice properties](border-image-slice.png)
 
 The above diagram illustrates the location of each region.
 

@@ -29,7 +29,8 @@ In this tutorial, we'll show you how to allow users to log in to your site with 
 
 Django provides an authentication and authorization ("permission") system, built on top of the session framework discussed in the [previous tutorial](/en-US/docs/Learn/Server-side/Django/Sessions), that allows you to verify user credentials and define what actions each user is allowed to perform. The framework includes built-in models for `Users` and `Groups` (a generic way of applying permissions to more than one user at a time), permissions/flags that designate whether a user may perform a task, forms and views for logging in users, and view tools for restricting content.
 
-> **Note:** According to Django the authentication system aims to be very generic, and so does not provide some features provided in other web authentication systems. Solutions for some common problems are available as third-party packages. For example, throttling of login attempts and authentication against third parties (e.g. OAuth).
+> [!NOTE]
+> According to Django the authentication system aims to be very generic, and so does not provide some features provided in other web authentication systems. Solutions for some common problems are available as third-party packages. For example, {{glossary("throttle", "throttling")}} of login attempts and authentication against third parties (e.g. OAuth).
 
 In this tutorial, we'll show you how to enable user authentication in the [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) website, create your own login and logout pages, add permissions to your models, and control access to pages. We'll use the authentication/permissions to display lists of books that have been borrowed for both users and librarians.
 
@@ -41,7 +42,8 @@ We'll also show you how to create permissions, and check on login status and per
 
 The authentication was enabled automatically when we [created the skeleton website](/en-US/docs/Learn/Server-side/Django/skeleton_website) (in tutorial 2) so you don't need to do anything more at this point.
 
-> **Note:** The necessary configuration was all done for us when we created the app using the `django-admin startproject` command. The database tables for users and model permissions were created when we first called `python manage.py migrate`.
+> [!NOTE]
+> The necessary configuration was all done for us when we created the app using the `django-admin startproject` command. The database tables for users and model permissions were created when we first called `python manage.py migrate`.
 
 The configuration is set up in the `INSTALLED_APPS` and `MIDDLEWARE` sections of the project file (**django-locallibrary-tutorial/locallibrary/settings.py**), as shown below:
 
@@ -65,7 +67,8 @@ MIDDLEWARE = [
 You already created your first user when we looked at the [Django admin site](/en-US/docs/Learn/Server-side/Django/Admin_site) in tutorial 4 (this was a superuser, created with the command `python manage.py createsuperuser`).
 Our superuser is already authenticated and has all permissions, so we'll need to create a test user to represent a normal site user. We'll be using the admin site to create our _locallibrary_ groups and website logins, as it is one of the quickest ways to do so.
 
-> **Note:** You can also create users programmatically as shown below.
+> [!NOTE]
+> You can also create users programmatically as shown below.
 > You would have to do this, for example, if developing an interface to allow "ordinary" users to create their own logins (you shouldn't give most users access to the admin site).
 >
 > ```python
@@ -128,7 +131,8 @@ Now let's create a user:
 
 That's it! Now you have a "normal library member" account that you will be able to use for testing (once we've implemented the pages to enable them to log in).
 
-> **Note:** You should try creating another library member user. Also, create a group for Librarians, and add a user to that too!
+> [!NOTE]
+> You should try creating another library member user. Also, create a group for Librarians, and add a user to that too!
 
 ## Setting up your authentication views
 
@@ -136,10 +140,12 @@ Django provides almost everything you need to create authentication pages to han
 
 In this section, we show how to integrate the default system into the _LocalLibrary_ website and create the templates. We'll put them in the main project URLs.
 
-> **Note:** You don't have to use any of this code, but it is likely that you'll want to because it makes things a lot easier.
+> [!NOTE]
+> You don't have to use any of this code, but it is likely that you'll want to because it makes things a lot easier.
 > You'll almost certainly need to change the form handling code if you change your user model, but even so, you would still be able to use the stock view functions.
 
-> **Note:** In this case, we could reasonably put the authentication pages, including the URLs and templates, inside our catalog application.
+> [!NOTE]
+> In this case, we could reasonably put the authentication pages, including the URLs and templates, inside our catalog application.
 > However, if we had multiple applications it would be better to separate out this shared login behavior and have it available across the whole site, so that is what we've shown here!
 
 ### Project URLs
@@ -158,7 +164,8 @@ Navigate to the `http://127.0.0.1:8000/accounts/` URL (note the trailing forward
 Django will show an error that it could not find a mapping for this URL, and list all the URLs that it tried.
 From this you can see the URLs that will work once we have created templates.
 
-> **Note:** Adding the `accounts/` path as shown above adds the following URLs, along with names (given in square brackets) that can be used to reverse the URL mappings. You don't have to implement anything else — the above URL mapping automatically maps the below mentioned URLs.
+> [!NOTE]
+> Adding the `accounts/` path as shown above adds the following URLs, along with names (given in square brackets) that can be used to reverse the URL mappings. You don't have to implement anything else — the above URL mapping automatically maps the below mentioned URLs.
 >
 > ```python
 > accounts/ login/ [name='login']
@@ -187,7 +194,8 @@ The URLs (and implicitly, views) that we just added expect to find their associa
 
 For this site, we'll put our HTML pages in the **templates/registration/** directory. This directory should be in your project root directory, that is, the same directory as the **catalog** and **locallibrary** folders. Please create these folders now.
 
-> **Note:** Your folder structure should now look like the below:
+> [!NOTE]
+> Your folder structure should now look like the below:
 >
 > ```plain
 > django-locallibrary-tutorial/   # Django top level project folder
@@ -220,7 +228,8 @@ Update the `TEMPLATES` section's `'DIRS'` line as shown:
 
 ### Login template
 
-> **Warning:** The authentication templates provided in this article are a very basic/slightly modified version of the Django demonstration login templates. You may need to customize them for your own use!
+> [!WARNING]
+> The authentication templates provided in this article are a very basic/slightly modified version of the Django demonstration login templates. You may need to customize them for your own use!
 
 Create a new HTML file called /**django-locallibrary-tutorial/templates/registration/login.html** and give it the following contents:
 
@@ -403,7 +412,8 @@ You'll be able to test the password reset functionality from the link in the log
 
 Note that you won't be able to test account logout yet, because logout requests must be sent as a `POST` rather than a `GET` request.
 
-> **Note:** The password reset system requires that your website supports email, which is beyond the scope of this article, so this part **won't work yet**. To allow testing, put the following line at the end of your settings.py file. This logs any emails sent to the console (so you can copy the password reset link from the console).
+> [!NOTE]
+> The password reset system requires that your website supports email, which is beyond the scope of this article, so this part **won't work yet**. To allow testing, put the following line at the end of your settings.py file. This logs any emails sent to the console (so you can copy the password reset link from the console).
 >
 > ```python
 > EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -429,7 +439,7 @@ Open the base template (**/django-locallibrary-tutorial/catalog/templates/base_g
    {% if user.is_authenticated %}
      <li>User: \{{ user.get_username }}</li>
      <li>
-       <form id="logout-form" method="post" action="{% url 'admin:logout' %}">
+       <form id="logout-form" method="post" action="{% url 'logout' %}">
          {% csrf_token %}
          <button type="submit" class="btn btn-link">Logout</button>
        </form>
@@ -443,12 +453,12 @@ Open the base template (**/django-locallibrary-tutorial/catalog/templates/base_g
 
 As you can see, we use `if` / `else` / `endif` template tags to conditionally display text based on whether `\{{ user.is_authenticated }}` is true. If the user is authenticated then we know that we have a valid user, so we call `\{{ user.get_username }}` to display their name.
 
-We create the login link URL using the `url` template tag and the name of the `login` URL configuration. Note also how we have appended `?next=\{{ request.path }}` to the end of the URL. What this does is add a URL parameter `next` containing the address (URL) of the _current_ page, to the end of the linked URL. After the user has successfully logged in, the view will use this "`next`" value to redirect the user back to the page where they first clicked the login link.
+We create the login link URL using the `url` template tag and the name of the `login` URL configuration. Note also how we have appended `?next=\{{ request.path }}` to the end of the URL. What this does is add a URL parameter `next` containing the address (URL) of the _current_ page, to the end of the linked URL. After the user has successfully logged in, the view will use this `next` value to redirect the user back to the page where they first clicked the login link.
 
 The logout template code is different, because from Django 5 to logout you must `POST` to the `admin:logout` URL, using a form with a button.
 By default this would render as a button, but you can style the button to display as a link.
 For this example we're using _Bootstrap_, so we make the button look like a link by applying `class="btn btn-link"`.
-YOu also also need to append the following styles to **/django-locallibrary-tutorial/catalog/static/css/styles.css** in order to correctly position the logout link next to all the other sidebar links:
+You also need to append the following styles to **/django-locallibrary-tutorial/catalog/static/css/styles.css** in order to correctly position the logout link next to all the other sidebar links:
 
 ```css
 #logout-form {
@@ -461,6 +471,7 @@ YOu also also need to append the following styles to **/django-locallibrary-tuto
 ```
 
 Try it out by clicking the Login/Logout links in the sidebar.
+You should be taken to the logout/login pages that you defined in the [Template directory](#template_directory) above.
 
 ### Testing in views
 
@@ -474,7 +485,8 @@ def my_view(request):
     # …
 ```
 
-> **Note:** You can do the same sort of thing manually by testing on `request.user.is_authenticated`, but the decorator is much more convenient!
+> [!NOTE]
+> You can do the same sort of thing manually by testing on `request.user.is_authenticated`, but the decorator is much more convenient!
 
 Similarly, the easiest way to restrict access to logged-in users in your class-based views is to derive from `LoginRequiredMixin`. You need to declare this mixin first in the superclass list, before the main view class.
 
@@ -485,7 +497,7 @@ class MyView(LoginRequiredMixin, View):
     # …
 ```
 
-This has exactly the same redirect behavior as the `login_required` decorator. You can also specify an alternative location to redirect the user to if they are not authenticated (`login_url`), and a URL parameter name instead of "`next`" to insert the current absolute path (`redirect_field_name`).
+This has exactly the same redirect behavior as the `login_required` decorator. You can also specify an alternative location to redirect the user to if they are not authenticated (`login_url`), and a URL parameter name instead of `next` to insert the current absolute path (`redirect_field_name`).
 
 ```python
 class MyView(LoginRequiredMixin, View):
@@ -518,7 +530,8 @@ Since we have not overridden the setting with a [custom user model](https://docs
 borrower = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True, blank=True)
 ```
 
-> **Note:** Importing the model in this way reduces the work required if you later discover that you need a custom user model.
+> [!NOTE]
+> Importing the model in this way reduces the work required if you later discover that you need a custom user model.
 > This tutorial uses the default model, so you could instead import the `User` model directly with the following lines:
 >
 > ```python
@@ -540,7 +553,8 @@ from datetime import date
 
 Now add the following property definition to the `BookInstance` class:
 
-> **Note:** The following code uses Python's `bool()` function, which evaluates an object or the resulting object of an expression, and returns `True` unless the result is "falsy", in which case it returns `False`.
+> [!NOTE]
+> The following code uses Python's `bool()` function, which evaluates an object or the resulting object of an expression, and returns `True` unless the result is "falsy", in which case it returns `False`.
 > In Python an object is _falsy_ (evaluates as `False`) if it is: empty (like `[]`, `()`, `{}`), `0`, `None` or if it is `False`.
 
 ```python
@@ -550,7 +564,8 @@ def is_overdue(self):
     return bool(self.due_back and date.today() > self.due_back)
 ```
 
-> **Note:** We first verify whether `due_back` is empty before making a comparison. An empty `due_back` field would cause Django to throw an error instead of showing the page: empty values are not comparable. This is not something we would want our users to experience!
+> [!NOTE]
+> We first verify whether `due_back` is empty before making a comparison. An empty `due_back` field would cause Django to throw an error instead of showing the page: empty values are not comparable. This is not something we would want our users to experience!
 
 Now that we've updated our models, we'll need to make fresh migrations on the project and then apply those migrations:
 
@@ -584,7 +599,8 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 Now that it's possible to loan books to a specific user, go and loan out a number of `BookInstance` records. Set their `borrowed` field to your test user, make the `status` "On loan", and set due dates both in the future and the past.
 
-> **Note:** We won't spell the process out, as you already know how to use the Admin site!
+> [!NOTE]
+> We won't spell the process out, as you already know how to use the Admin site!
 
 ### On loan view
 
@@ -691,7 +707,7 @@ Testing on permissions in views and templates is then very similar to testing on
 
 ### Models
 
-Defining permissions is done on the model "`class Meta`" section, using the `permissions` field.
+Defining permissions is done on the model `class Meta` section, using the `permissions` field.
 You can specify as many permissions as you need in a tuple, each permission itself being defined in a nested tuple containing the permission name and permission display value.
 For example, we might define a permission to allow a user to mark that a book has been returned as shown:
 
@@ -746,7 +762,8 @@ class MyView(PermissionRequiredMixin, View):
     # Is created automatically for the book model, along with add_book, and delete_book
 ```
 
-> **Note:** There is a small default difference in the behavior above. By **default** for a logged-in user with a permission violation:
+> [!NOTE]
+> There is a small default difference in the behavior above. By **default** for a logged-in user with a permission violation:
 >
 > - `@permission_required` redirects to login screen (HTTP Status 302).
 > - `PermissionRequiredMixin` returns 403 (HTTP Status Forbidden).
@@ -773,7 +790,8 @@ The challenge now is to create a similar page that is only visible for librarian
 
 You should be able to follow the same pattern as for the other view. The main difference is that you'll need to restrict the view to only librarians. You could do this based on whether the user is a staff member (function decorator: `staff_member_required`, template variable: `user.is_staff`) but we recommend that you instead use the `can_mark_returned` permission and `PermissionRequiredMixin`, as described in the previous section.
 
-> **Warning:** Remember not to use your superuser for permissions based testing (permission checks always return true for superusers, even if a permission has not yet been defined!). Instead, create a librarian user, and add the required capability.
+> [!WARNING]
+> Remember not to use your superuser for permissions based testing (permission checks always return true for superusers, even if a permission has not yet been defined!). Instead, create a librarian user, and add the required capability.
 
 When you are finished, your page should look something like the screenshot below.
 

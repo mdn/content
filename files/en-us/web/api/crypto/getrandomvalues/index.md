@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Crypto.getRandomValues
 ---
 
-{{APIRef("Web Crypto API")}}
+{{APIRef("Web Crypto API")}}{{AvailableInWorkers}}
 
 The **`Crypto.getRandomValues()`** method lets you get cryptographically strong random values.
 The array given as the parameter is filled with random numbers (random in its cryptographic meaning).
@@ -43,9 +43,7 @@ Note that `typedArray` is modified in-place, and no copy is made.
 
 ## Usage notes
 
-Don't use `getRandomValues()` to generate encryption keys.
-Instead, use the {{domxref("SubtleCrypto.generateKey", "generateKey()")}} method.
-There are a few reasons for this; for example, `getRandomValues()` is not guaranteed to be running in a secure context.
+Prefer the {{domxref("SubtleCrypto.generateKey", "generateKey()")}} method for key generation, which is guaranteed to be running in a secure context.
 
 There is no minimum degree of entropy mandated by the Web Cryptography specification.
 User agents are instead urged to provide the best entropy they can when generating random numbers,
@@ -76,5 +74,4 @@ for (const num of array) {
 ## See also
 
 - [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API)
-- {{domxref("crypto_property", "crypto")}} to get a {{domxref("Crypto")}} object.
 - {{jsxref("Math.random")}}, a non-cryptographic source of random numbers.

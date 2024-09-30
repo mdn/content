@@ -6,7 +6,7 @@ page-type: guide
 
 {{LearnSidebar}}
 
-All web developers learn very quickly (and sometimes painfully) that the Web is a very rough place for them. Our worst curse is legacy browsers. Okay, let's admit it, when we said "legacy browser" we all have in mind "Internet Explorer", but they are far from the only ones. In the mobile world, when neither the browser nor the OS can be updated such as on older Android phones or iPhones, the stock browsers that don't update are also legacy browsers.
+All web developers learn very quickly (and sometimes painfully) that the Web is a very rough place for them. Our worst curse is legacy browsers. This used to mean "Internet Explorer", but there are millions of people using old devices, especially mobile phones, where neither the browser nor the OS can be updated.
 
 Dealing with this wilderness is part of the job. Fortunately, there are a few tricks to know that can help you to solve most of the problems caused by legacy browsers. If a browser doesn't support an HTML {{htmlelement('input')}} type, it doesn't fail: it just uses the default value of `type=text`.
 
@@ -97,22 +97,6 @@ input[type="button"] {
 ```
 
 See the global CSS {{cssxref('revert')}} value for more information.
-
-##### {{HTMLElement("button")}}
-
-The {{HTMLElement("button")}} element suffered from two issues that are now resolved:
-
-- A bug in old versions of Internet Explorer sent the HTML content available between the starting and ending tag of the {{HTMLElement("button")}} element instead of the content of the [`value`](/en-US/docs/Web/HTML/Element/button#value) attribute when clicked. This was only an issue if that value needed to be sent, such as when data processing depends on which button a user clicked.
-- Some very old browsers did not use `submit` as the default value for the [`type`](/en-US/docs/Web/HTML/Element/button#type) attribute. While resolved in all modern browsers, it is still recommended to always set the [`type`](/en-US/docs/Web/HTML/Element/button#type) attribute on {{HTMLElement("button")}} elements.
-
-```html
-<!-- Clicking this button sent "<em>Do A</em>" instead of "A" in some cases -->
-<button type="submit" name="IWantTo" value="A">
-  <em>Do A</em>
-</button>
-```
-
-Choosing one solution or the other is up to you based on your project's constraints.
 
 ### Let go of CSS
 

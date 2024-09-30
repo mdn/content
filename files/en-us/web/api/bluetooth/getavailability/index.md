@@ -8,14 +8,15 @@ status:
 browser-compat: api.Bluetooth.getAvailability
 ---
 
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef("Bluetooth API")}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{securecontext_header}}
 
-The **`getAvailability()`** method of the {{DOMxRef("Bluetooth")}} interface returns `true` if the device has a Bluetooth adapter, and false otherwise (unless the user has configured the browser to not expose a real value).
+The **`getAvailability()`** method of the {{DOMxRef("Bluetooth")}} interface _nominally_ returns `true` if the user agent can support Bluetooth (because the device has a Bluetooth adapter), and `false` otherwise.
 
-> **Note:** A user might not allow use of Web Bluetooth API, even if
-> `getAvailability()` returns `true`
-> ({{DOMxRef("Bluetooth.requestDevice","navigator.bluetooth.requestDevice()")}} might
-> not resolve with a {{DOMxRef("BluetoothDevice")}}). Also, a user can configure their browser to return a fixed value instead of a real one.
+The word "nominally" is used because if permission to use the Web Bluetooth API is disallowed by the [`Permissions-Policy: bluetooth`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/bluetooth) permission, the method will always return `false`.
+In addition, a user can configure their browser to return `false` from a `getAvailability()` call even if the browser does have an operational Bluetooth adapter, and vice versa. This setting value ignored if access is blocked by the permission.
+
+Even if `getAvailability()` returns `true` and the device actually has a Bluetooth adaptor, this does not necessarily mean that calling {{DOMxRef("Bluetooth.requestDevice","navigator.bluetooth.requestDevice()")}} will resolve with a {{DOMxRef("BluetoothDevice")}}.
+The Bluetooth adapter may not be powered, and a user might deny permission to use the API when prompted.
 
 ## Syntax
 
@@ -29,16 +30,18 @@ None.
 
 ### Return value
 
-A {{JSxRef("Promise")}} that resolves with {{JSxRef("Boolean")}}.
+A {{JSxRef("Promise")}} that resolves with a {{JSxRef("Boolean")}}.
 
-## Exceptions
+The {{JSxRef("Promise")}} will resolve with a value of `false` if access is disallowed by [`Permissions-Policy: bluetooth`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/bluetooth), if the user has configured the browser to always resolve with `false`, or if the device does not have a Bluetooth adapter.
+Otherwise it will resolve with `true`.
 
-This method doesn't throw any exceptions.
+### Exceptions
+
+None.
 
 ## Examples
 
-The following snippet prints out a message in the console specifying whether or not
-Bluetooth is supported:
+The following snippet prints out a message in the console specifying whether or not Bluetooth is supported by the device:
 
 ```js
 navigator.bluetooth.getAvailability().then((available) => {

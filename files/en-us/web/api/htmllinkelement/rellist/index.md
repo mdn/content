@@ -6,9 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.HTMLLinkElement.relList
 ---
 
-{{ APIRef("HTML DOM") }}
+{{APIRef("HTML DOM")}}
 
-The **`HTMLLinkElement.relList`** read-only property reflects the [`rel`](/en-US/docs/Web/HTML/Attributes/rel) attribute. It is a live {{domxref("DOMTokenList")}} containing the set of link types indicating the relationship between the resource represented by the {{HTMLElement("link")}} element and the current document.
+The **`relList`** read-only property of the {{domxref("HTMLLinkElement")}} interface reflects the [`rel`](/en-US/docs/Web/HTML/Attributes/rel) attribute. It is a live {{domxref("DOMTokenList")}} containing the set of link types indicating the relationship between the resource represented by the {{HTMLElement("link")}} element and the current document.
 
 The property itself is read-only, meaning you can not substitute the
 {{domxref("DOMTokenList")}} by another one, but the content of the returned list can be

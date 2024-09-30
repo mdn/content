@@ -17,7 +17,8 @@ Extensions cannot send messages to content scripts using this method. To send me
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-> **Note:** You can also use a [connection-based approach to exchange messages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#connection-based_messaging).
+> [!NOTE]
+> You can also use a [connection-based approach to exchange messages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#connection-based_messaging).
 
 ## Syntax
 
@@ -111,12 +112,14 @@ function handleMessage(request, sender, sendResponse) {
 browser.runtime.onMessage.addListener(handleMessage);
 ```
 
-> **Note:** Instead of using `sendResponse()`, returning a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) is the recommended approach for Firefox add-ons.
+> [!NOTE]
+> Instead of using `sendResponse()`, returning a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) is the recommended approach for Firefox add-ons.
 > Examples using a Promise are available in the [examples section](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#examples) of the {{WebExtAPIRef('runtime.onMessage')}} listener.
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#method-sendMessage) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#method-sendMessage) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

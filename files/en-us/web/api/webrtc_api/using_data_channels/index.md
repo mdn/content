@@ -8,7 +8,8 @@ page-type: guide
 
 In this guide, we'll examine how to add a data channel to a peer connection, which can then be used to securely exchange arbitrary data; that is, any kind of data we wish, in any format we choose.
 
-> **Note:** Since all WebRTC components are required to use encryption, any data transmitted on an `RTCDataChannel` is automatically secured using Datagram Transport Layer Security (**DTLS**). See [Security](#security) below for more information.
+> [!NOTE]
+> Since all WebRTC components are required to use encryption, any data transmitted on an `RTCDataChannel` is automatically secured using Datagram Transport Layer Security (**DTLS**). See [Security](#security) below for more information.
 
 ## Creating a data channel
 
@@ -21,9 +22,7 @@ Let's look at each of these cases, starting with the first, which is the most co
 
 ### Automatic negotiation
 
-Often, you can allow the peer connection to handle negotiating the {{domxref("RTCDataChannel")}} connection for you. To do this, call
-
-{{domxref("RTCPeerConnection.createDataChannel", "createDataChannel()")}} without specifying a value for the `negotiated` property, or specifying the property with a value of `false`. This will automatically trigger the `RTCPeerConnection` to handle the negotiations for you, causing the remote peer to create a data channel and linking the two together across the network.
+Often, you can allow the peer connection to handle negotiating the {{domxref("RTCDataChannel")}} connection for you. To do this, call {{domxref("RTCPeerConnection.createDataChannel", "createDataChannel()")}} without specifying a value for the `negotiated` property, or specifying the property with a value of `false`. This will automatically trigger the `RTCPeerConnection` to handle the negotiations for you, causing the remote peer to create a data channel and linking the two together across the network.
 
 The `RTCDataChannel` object is returned immediately by `createDataChannel()`; you can tell when the connection has been made successfully by watching for the {{domxref("RTCDataChannel.open_event", "open")}} event to be sent to the `RTCDataChannel`.
 
@@ -83,7 +82,8 @@ In order to resolve this issue, a new system of **stream schedulers** (usually r
 
 Firefox support for ndata is in the process of being implemented; see [Firefox bug 1381145](https://bugzil.la/1381145) to track it becoming available for general use. The Chrome team is tracking their implementation of ndata support in [Chrome Bug 5696](https://bugs.chromium.org/p/webrtc/issues/detail?id=5696).
 
-> **Note:** Much of the information in this section is based in part on the blog post [Demystifying WebRTC's Data Channel Message Size Limitations](https://lgrahl.de/articles/demystifying-webrtc-dc-size-limit.html), written by Lennart Grahl. He goes into a bit more detail there, but as browsers have been updated since then some of it may be out-of-date. In addition, as time goes by, it will become more so, especially once EOR and ndata support are fully integrated in the major browsers.
+> [!NOTE]
+> Much of the information in this section is based in part on the blog post [Demystifying WebRTC's Data Channel Message Size Limitations](https://lgrahl.de/articles/demystifying-webrtc-dc-size-limit.html), written by Lennart Grahl. He goes into a bit more detail there, but as browsers have been updated since then some of it may be out-of-date. In addition, as time goes by, it will become more so, especially once EOR and ndata support are fully integrated in the major browsers.
 
 ## Security
 

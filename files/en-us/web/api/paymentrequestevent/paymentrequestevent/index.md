@@ -8,7 +8,7 @@ status:
 browser-compat: api.PaymentRequestEvent.PaymentRequestEvent
 ---
 
-{{APIRef("Payment Handler API")}}{{SeeCompatTable}}
+{{APIRef("Payment Handler API")}}{{SeeCompatTable}}{{AvailableInWorkers("service")}}
 
 The **`PaymentRequestEvent`** constructor creates a new {{domxref("PaymentRequestEvent")}} object instance.
 
@@ -40,7 +40,7 @@ new PaymentRequestEvent(type, options)
     - `total`
       - : The total amount being requested for payment.
 
-## Return value
+### Return value
 
 A new {{domxref("PaymentRequestEvent")}} object.
 

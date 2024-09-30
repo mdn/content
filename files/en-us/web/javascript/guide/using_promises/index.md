@@ -34,7 +34,7 @@ This convention has several advantages. We will explore each one.
 
 ## Chaining
 
-A common need is to execute two or more asynchronous operations back to back, where each subsequent operation starts when the previous operation succeeds, with the result from the previous step. In the old days, doing several asynchronous operations in a row would lead to the classic callback pyramid of doom:
+A common need is to execute two or more asynchronous operations back to back, where each subsequent operation starts when the previous operation succeeds, with the result from the previous step. In the old days, doing several asynchronous operations in a row would lead to the classic [callback hell](http://callbackhell.com/):
 
 ```js-nolint
 doSomething(function (result) {
@@ -57,7 +57,8 @@ const promise2 = promise.then(successCallback, failureCallback);
 
 This second promise (`promise2`) represents the completion not just of `doSomething()`, but also of the `successCallback` or `failureCallback` you passed in — which can be other asynchronous functions returning a promise. When that's the case, any callbacks added to `promise2` get queued behind the promise returned by either `successCallback` or `failureCallback`.
 
-> **Note:** If you want a working example to play with, you can use the following template to create any function returning a promise:
+> [!NOTE]
+> If you want a working example to play with, you can use the following template to create any function returning a promise:
 >
 > ```js
 > function doSomething() {
@@ -102,7 +103,8 @@ doSomething()
   .catch(failureCallback);
 ```
 
-> **Note:** Arrow function expressions can have an [implicit return](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#function_body); so, `() => x` is short for `() => { return x; }`.
+> [!NOTE]
+> Arrow function expressions can have an [implicit return](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#function_body); so, `() => x` is short for `() => { return x; }`.
 
 `doSomethingElse` and `doThirdThing` can return any value — if they return promises, that promise is first waited until it settles, and the next callback receives the fulfillment value, not the promise itself. It is important to always return promises from `then` callbacks, even if the promise always resolves to `undefined`. If the previous handler started a promise but did not return it, there's no way to track its settlement anymore, and the promise is said to be "floating".
 
@@ -202,7 +204,7 @@ Note how the code looks exactly like synchronous code, except for the `await` ke
 
 `async`/`await` builds on promises — for example, `doSomething()` is the same function as before, so there's minimal refactoring needed to change from promises to `async`/`await`. You can read more about the `async`/`await` syntax in the [async functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) and [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) references.
 
-> **Note:** async/await has the same concurrency semantics as normal promise chains. `await` within one async function does not stop the entire program, only the parts that depend on its value, so other async jobs can still run while the `await` is pending.
+> **Note:** `async`/`await` has the same concurrency semantics as normal promise chains. `await` within one async function does not stop the entire program, only the parts that depend on its value, so other async jobs can still run while the `await` is pending.
 
 ## Error handling
 
@@ -286,7 +288,8 @@ async function main() {
 }
 ```
 
-> **Note:** If you don't have sophisticated error handling, you very likely don't need nested `then` handlers. Instead, use a flat chain and put the error handling logic at the end.
+> [!NOTE]
+> If you don't have sophisticated error handling, you very likely don't need nested `then` handlers. Instead, use a flat chain and put the error handling logic at the end.
 
 ### Chaining after a catch
 
@@ -315,7 +318,8 @@ Do that
 Do this, no matter what happened before
 ```
 
-> **Note:** The text "Do this" is not displayed because the "Something failed" error caused a rejection.
+> [!NOTE]
+> The text "Do this" is not displayed because the "Something failed" error caused a rejection.
 
 In `async`/`await`, this code looks like:
 
@@ -421,6 +425,10 @@ for (const f of [func1, func2, func3]) {
 ```
 
 However, before you compose promises sequentially, consider if it's really necessary — it's always better to run promises concurrently so that they don't unnecessarily block each other unless one promise's execution depends on another's result.
+
+## Cancellation
+
+`Promise` itself has no first-class protocol for cancellation, but you may be able to directly cancel the underlying asynchronous operation, typically using [`AbortController`](/en-US/docs/Web/API/AbortController).
 
 ## Creating a Promise around an old callback API
 
@@ -528,13 +536,13 @@ Promise callback (.then)
 event-loop cycle: Promise (fulfilled) Promise {<fulfilled>}
 ```
 
-For more details, refer to [Tasks vs. microtasks](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth#tasks_vs_microtasks).
+For more details, refer to [Tasks vs. microtasks](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth#tasks_vs._microtasks).
 
 ### When promises and tasks collide
 
 If you run into situations in which you have promises and tasks (such as events or callbacks) which are firing in unpredictable orders, it's possible you may benefit from using a microtask to check status or balance out your promises when promises are created conditionally.
 
-If you think microtasks may help solve this problem, see the [microtask guide](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) to learn more about how to use [`queueMicrotask()`](/en-US/docs/Web/API/queueMicrotask) to enqueue a function as a microtask.
+If you think microtasks may help solve this problem, see the [microtask guide](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) to learn more about how to use {{domxref("Window.queueMicrotask()", "queueMicrotask()")}} to enqueue a function as a microtask.
 
 ## See also
 

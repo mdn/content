@@ -2,12 +2,10 @@
 title: CustomStateSet
 slug: Web/API/CustomStateSet
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.CustomStateSet
 ---
 
-{{APIRef("Web Components")}}{{SeeCompatTable}}
+{{APIRef("Web Components")}}
 
 The **`CustomStateSet`** interface of the [Document Object Model](/en-US/docs/Web/API/Document_Object_Model) stores a list of states for an [autonomous custom element](/en-US/docs/Web/API/Web_components/Using_custom_elements#types_of_custom_element), and allows states to be added and removed from the set.
 
@@ -15,26 +13,26 @@ The interface can be used to expose the internal states of a custom element, all
 
 ## Instance properties
 
-- {{domxref("CustomStateSet.size")}} {{Experimental_Inline}}
+- {{domxref("CustomStateSet.size")}}
   - : Returns the number of values in the `CustomStateSet`.
 
 ## Instance methods
 
-- {{domxref("CustomStateSet.add()")}} {{Experimental_Inline}}
+- {{domxref("CustomStateSet.add()")}}
   - : Adds a value to the set.
-- {{domxref("CustomStateSet.clear()")}} {{Experimental_Inline}}
+- {{domxref("CustomStateSet.clear()")}}
   - : Removes all elements from the `CustomStateSet` object.
-- {{domxref("CustomStateSet.delete()")}} {{Experimental_Inline}}
+- {{domxref("CustomStateSet.delete()")}}
   - : Removes one value from the `CustomStateSet` object.
-- {{domxref("CustomStateSet.entries()")}} {{Experimental_Inline}}
+- {{domxref("CustomStateSet.entries()")}}
   - : Returns a new iterator with the values for each element in the `CustomStateSet` in insertion order.
-- {{domxref("CustomStateSet.forEach()")}} {{Experimental_Inline}}
+- {{domxref("CustomStateSet.forEach()")}}
   - : Executes a provided function for each value in the `CustomStateSet` object.
-- {{domxref("CustomStateSet.has()")}} {{Experimental_Inline}}
+- {{domxref("CustomStateSet.has()")}}
   - : Returns a {{jsxref("Boolean")}} asserting whether an element is present with the given value.
-- {{domxref("CustomStateSet.keys()")}} {{Experimental_Inline}}
+- {{domxref("CustomStateSet.keys()")}}
   - : An alias for {{domxref("CustomStateSet.values()")}}.
-- {{domxref("CustomStateSet.values()")}} {{Experimental_Inline}}
+- {{domxref("CustomStateSet.values()")}}
   - : Returns a new iterator object that yields the values for each element in the `CustomStateSet` object in insertion order.
 
 ## Description
@@ -48,7 +46,7 @@ These states can then be used as custom state pseudo-class selectors in a simila
 
 ### Setting custom element states
 
-To make the {{domxref("CustomStateSet")}} available, a custom element must first call {{domxref("HTMLElement.attachInternals()")}} in order to attach an {{domxref("ElementInternals")}} object.
+To make the `CustomStateSet` available, a custom element must first call {{domxref("HTMLElement.attachInternals()")}} in order to attach an {{domxref("ElementInternals")}} object.
 `CustomStateSet` is then returned by {{domxref("ElementInternals.states")}}.
 Note that `ElementInternals` cannot be attached to a custom element based on a built-in element, so this feature only works for autonomous custom elements (see [github.com/whatwg/html/issues/5166](https://github.com/whatwg/html/issues/5166)).
 
@@ -79,8 +77,9 @@ CSS can also be used to match a custom state [within a custom element's shadow D
 
 Additionally, the `:state()` pseudo-class can be used after the [`::part()`](/en-US/docs/Web/CSS/::part) pseudo-element to match the [shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) of a custom element that are in a particular state.
 
-> **Warning:** Chrome supports a deprecated syntax that selects custom states using a CSS `<dashed-ident>` rather than the `:state()` function.
-> For information about how to support both approaches see the [Compatibility with `<dashed-ident>` syntax](compability_with_dashed-ident_syntax) section below.
+> [!WARNING]
+> Browsers that do not yet support [`:state()`](/en-US/docs/Web/CSS/:state) will use a CSS `<dashed-ident>` for selecting custom states, which is now deprecated.
+> For information about how to support both approaches see the [Compatibility with `<dashed-ident>` syntax](#compatibility_with_dashed-ident_syntax) section below.
 
 ## Examples
 
@@ -92,7 +91,9 @@ This is mapped to the `checked` custom state, allowing styling to be applied usi
 #### JavaScript
 
 First we define our class `LabeledCheckbox` which extends from `HTMLElement`.
-In the constructor we call the `super()` method, leaving most of the "work" to `connectedCallback()`, which is invoked when a custom element is added to the page.
+In the constructor we call the `super()` method, add a listener for the click event, and call {{domxref("HTMLElement.attachInternals()", "this.attachInternals()")}} to attach an {{domxref("ElementInternals", "ElementInternals")}} object.
+
+Most of the rest of the "work" is then left to `connectedCallback()`, which is invoked when a custom element is added to the page.
 The content of the element is defined using a `<style>` element to be the text `[]` or `[x]` followed by a label.
 What's noteworthy here is that the custom state pseudo class is used to select the text to display: `:host(:state(checked))`.
 After the example below, we'll cover what's happening in the snippet in more detail.
@@ -101,26 +102,30 @@ After the example below, we'll cover what's happening in the snippet in more det
 class LabeledCheckbox extends HTMLElement {
   constructor() {
     super();
+    this._boundOnClick = this._onClick.bind(this);
+    this.addEventListener("click", this._boundOnClick);
+
+    // Attach an ElementInternals to get states property
+    this._internals = this.attachInternals();
   }
 
   connectedCallback() {
-    // Attach an ElementInternals to get states property
-    this._internals = this.attachInternals();
-    this.addEventListener("click", this._onClick.bind(this));
-
     const shadowRoot = this.attachShadow({ mode: "open" });
     shadowRoot.innerHTML = `<style>
-        :host {
-          display: block;
-        }
-       :host::before {
-         content: '[ ]';
-         white-space: pre;
-         font-family: monospace;
-       }
-       :host(:state(checked))::before { content: '[x]'; }
-       </style>
-       <slot>Label</slot>`;
+  :host {
+    display: block;
+  }
+  :host::before {
+    content: "[ ]";
+    white-space: pre;
+    font-family: monospace;
+  }
+  :host(:state(checked))::before {
+    content: "[x]";
+  }
+</style>
+<slot>Label</slot>
+`;
   }
 
   get checked() {
@@ -139,12 +144,30 @@ class LabeledCheckbox extends HTMLElement {
     // Toggle the 'checked' property when the element is clicked
     this.checked = !this.checked;
   }
+
+  static isStateSyntaxSupported() {
+    return CSS.supports("selector(:state(checked))");
+  }
 }
+
+customElements.define("labeled-checkbox", LabeledCheckbox);
+
+// Display a warning to unsupported browsers
+document.addEventListener("DOMContentLoaded", () => {
+  if (!LabeledCheckbox.isStateSyntaxSupported()) {
+    if (!document.getElementById("state-warning")) {
+      const warning = document.createElement("div");
+      warning.id = "state-warning";
+      warning.style.color = "red";
+      warning.textContent = "This feature is not supported by your browser.";
+      document.body.insertBefore(warning, document.body.firstChild);
+    }
+  }
+});
 ```
 
 In the `LabeledCheckbox` class:
 
-- The `connectedCallback()` method uses {{domxref("HTMLElement.attachInternals()", "`this.attachInternals()`")}} to attach an {{domxref("ElementInternals", "`ElementInternals`")}} object.
 - In the `get checked()` and `set checked()` we use `ElementInternals.states` to get the `CustomStateSet`.
 - The `set checked(flag)` method adds the `"checked"` identifier to the `CustomStateSet` if the flag is set and delete the identifier if the flag is `false`.
 - The `get checked()` method just checks whether the `checked` property is defined in the set.
@@ -197,26 +220,30 @@ The element uses the `<labeled-checkbox>` defined in the [previous example](#mat
 class LabeledCheckbox extends HTMLElement {
   constructor() {
     super();
+    this._boundOnClick = this._onClick.bind(this);
+    this.addEventListener("click", this._boundOnClick);
+
+    // Attach an ElementInternals to get states property
+    this._internals = this.attachInternals();
   }
 
   connectedCallback() {
-    // Attach an ElementInternals to get states property
-    this._internals = this.attachInternals();
-    this.addEventListener("click", this._onClick.bind(this));
-
     const shadowRoot = this.attachShadow({ mode: "open" });
     shadowRoot.innerHTML = `<style>
-        :host {
-          display: block;
-        }
-       :host::before {
-         content: '[ ]';
-         white-space: pre;
-         font-family: monospace;
-       }
-       :host(:state(checked))::before { content: '[x]'; }
-       </style>
-       <slot>Label</slot>`;
+  :host {
+    display: block;
+  }
+  :host::before {
+    content: "[ ]";
+    white-space: pre;
+    font-family: monospace;
+  }
+  :host(:state(checked))::before {
+    content: "[x]";
+  }
+</style>
+<slot>Label</slot>
+`;
   }
 
   get checked() {
@@ -235,9 +262,25 @@ class LabeledCheckbox extends HTMLElement {
     // Toggle the 'checked' property when the element is clicked
     this.checked = !this.checked;
   }
+
+  static isStateSyntaxSupported() {
+    return CSS.supports("selector(:state(checked))");
+  }
 }
 
 customElements.define("labeled-checkbox", LabeledCheckbox);
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (!LabeledCheckbox.isStateSyntaxSupported()) {
+    if (!document.getElementById("state-warning")) {
+      const warning = document.createElement("div");
+      warning.id = "state-warning";
+      warning.style.color = "red";
+      warning.textContent = "This feature is not supported by your browser.";
+      document.body.insertBefore(warning, document.body.firstChild);
+    }
+  }
+});
 ```
 
 First, we define the custom element class `QuestionBox`, which extends `HTMLElement`.
@@ -250,7 +293,8 @@ class QuestionBox extends HTMLElement {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
     shadowRoot.innerHTML = `<div><slot>Question</slot></div>
-       <labeled-checkbox part='checkbox'>Yes</labeled-checkbox>`;
+<labeled-checkbox part="checkbox">Yes</labeled-checkbox>
+`;
   }
 }
 ```
@@ -320,26 +364,37 @@ Most of the remaining code is similar to the example that demonstrates a single 
 class ManyStateElement extends HTMLElement {
   constructor() {
     super();
+    this._boundOnClick = this._onClick.bind(this);
+    this.addEventListener("click", this._boundOnClick);
+    // Attach an ElementInternals to get states property
+    this._internals = this.attachInternals();
   }
 
   connectedCallback() {
-    // Attach an ElementInternals to get states property
-    this._internals = this.attachInternals();
     this.state = "loading";
-    this.addEventListener("click", this._onClick.bind(this));
 
     const shadowRoot = this.attachShadow({ mode: "open" });
     shadowRoot.innerHTML = `<style>
-        :host {
-          display: block;
-          font-family: monospace;
-        }
-       :host::before { content: '[ unknown ]'; white-space: pre; }
-       :host(:state(loading))::before { content: '[ loading ]' }
-       :host(:state(interactive))::before { content: '[ interactive ]' }
-       :host(:state(complete))::before { content: '[ complete ]' }
-       </style>
-       <slot>Click me</slot>`;
+  :host {
+    display: block;
+    font-family: monospace;
+  }
+  :host::before {
+    content: "[ unknown ]";
+    white-space: pre;
+  }
+  :host(:state(loading))::before {
+    content: "[ loading ]";
+  }
+  :host(:state(interactive))::before {
+    content: "[ interactive ]";
+  }
+  :host(:state(complete))::before {
+    content: "[ complete ]";
+  }
+</style>
+<slot>Click me</slot>
+`;
   }
 
   get state() {
@@ -349,17 +404,17 @@ class ManyStateElement extends HTMLElement {
   set state(stateName) {
     // Set internal state to passed value
     // Add identifier matching state and delete others
-    if (stateName == "loading") {
+    if (stateName === "loading") {
       this._state = "loading";
       this._internals.states.add("loading");
       this._internals.states.delete("interactive");
       this._internals.states.delete("complete");
-    } else if (stateName == "interactive") {
+    } else if (stateName === "interactive") {
       this._state = "interactive";
       this._internals.states.delete("loading");
       this._internals.states.add("interactive");
       this._internals.states.delete("complete");
-    } else if (stateName == "complete") {
+    } else if (stateName === "complete") {
       this._state = "complete";
       this._internals.states.delete("loading");
       this._internals.states.delete("interactive");
@@ -377,9 +432,25 @@ class ManyStateElement extends HTMLElement {
       this.state = "loading";
     }
   }
+
+  static isStateSyntaxSupported() {
+    return CSS.supports("selector(:state(loading))");
+  }
 }
 
 customElements.define("many-state-element", ManyStateElement);
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (!LabeledCheckbox.isStateSyntaxSupported()) {
+    if (!document.getElementById("state-warning")) {
+      const warning = document.createElement("div");
+      warning.id = "state-warning";
+      warning.style.color = "red";
+      warning.textContent = "This feature is not supported by your browser.";
+      document.body.insertBefore(warning, document.body.firstChild);
+    }
+  }
+});
 ```
 
 #### HTML
@@ -414,28 +485,32 @@ Click the element to see a different border being applied as the state changes.
 
 {{EmbedLiveSample("Non-boolean internal states", "100%", 50)}}
 
-## Compability with `<dashed-ident>` syntax
+## Comptability with `<dashed-ident>` syntax
 
 Previously custom elements with custom states were selected using a `<dashed-ident>` instead of the [`:state()`](/en-US/docs/Web/CSS/:state) function.
-Browsers that don't support `:state()`, including versions of Chrome, will throw an error when supplied with an ident that is not prefixed with the double dash.
-If support for these browsers is required, either use a [try...catch](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block to support both syntaxes, or use a `<dashed-ident>` as the state's value and select it with both the `:--mystate` and `:state(--mystate)` CSS selector:
+Browser versions that don't support `:state()` will throw an error when supplied with an ident that is not prefixed with the double dash.
+If support for these browsers is required, either use a [try...catch](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block to support both syntaxes, or use a `<dashed-ident>` as the state's value and select it with both the `:--mystate` and `:state(--mystate)` CSS selector.
 
 ### Using a try...catch block
 
-Setting the state to a name without the two dashes will cause an error in some versions of Chrome, catching this error and providing the `<dashed-ident>` alternative allows both to be selected for in CSS:
+This code shows how you can use `try...catch` to attempt adding a state identifier that does not use a `<dashed-ident>`, and fall back to `<dashed-ident>` if an error is thrown.
 
 #### JavaScript
 
 ```js
 class CompatibleStateElement extends HTMLElement {
+  constructor() {
+    super();
+    this._internals = this.attachInternals();
+  }
+
   connectedCallback() {
-    const internals = this.attachInternals();
     // The double dash is required in browsers with the
     // legacy syntax, not supplying it will throw
     try {
-      internals.states.add("loaded");
+      this._internals.states.add("loaded");
     } catch {
-      internals.states.add("--loaded");
+      this._internals.states.add("--loaded");
     }
   }
 }
@@ -452,17 +527,20 @@ compatible-state-element:is(:--loaded, :state(loaded)) {
 ### Using double dash prefixed idents
 
 An alternative solution can be to use the `<dashed-ident>` within JavaScript.
-The downside to this approach is that the dashes must be included when using the CSS `:state()` syntax:
+The downside to this approach is that the dashes must be included when using the CSS `:state()` syntax.
 
 #### JavaScript
 
 ```js
 class CompatibleStateElement extends HTMLElement {
+  constructor() {
+    super();
+    this._internals = this.attachInternals();
+  }
   connectedCallback() {
-    const internals = this.attachInternals();
     // The double dash is required in browsers with the
     // legacy syntax, but works with the modern syntax
-    internals.states.add("--loaded");
+    this._internals.states.add("--loaded");
   }
 }
 ```

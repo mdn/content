@@ -27,13 +27,11 @@ browser-compat: css.properties.-webkit-text-security
 -webkit-text-security: unset;
 ```
 
-## Formal definition
-
-{{CSSInfo}}
-
 ## Formal syntax
 
-{{CSSSyntax}}
+```plain
+-webkit-text-security = circle | disc | square | none
+```
 
 ## Examples
 

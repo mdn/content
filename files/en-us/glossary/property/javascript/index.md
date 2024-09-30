@@ -11,7 +11,7 @@ A **JavaScript property** is a member of an [object](/en-US/docs/Web/JavaScript/
 A property consists of the following parts:
 
 - A _name_ (also called a _key_), which is either a [string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) or a [symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol).
-- A _value_, which can be any JavaScript value. A property that has a function as its value may also be called a [method](/en-US/docs/Glossary/Method).
+- A _value_, which can be any JavaScript value. A property that has a function as its value may also be called a {{Glossary("method")}}.
 - Some _attributes_, which specify how the property can be read and written. A property may have the `configurable`, `enumerable`, and `writable` attributes.
 
 [Accessor properties](/en-US/docs/Web/JavaScript/Data_structures#accessor_property) do not have an actual "value". The value is represented indirectly through a pair of functions, one (the getter) invoked when reading the value and one (the setter) invoked when setting the value. However, accessor properties behave like regular data properties on the surface, because the getter and setter functions are invoked automatically and are typically transparent to JavaScript code.

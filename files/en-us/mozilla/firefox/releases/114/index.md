@@ -45,14 +45,6 @@ No notable changes.
 
 - [`CSSImportRule.supportsText`](/en-US/docs/Web/API/CSSImportRule/supportsText) can now be used for getting any `supports()` conditions that were specified when using the {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/At-rule) ([Firefox bug 1829590](https://bugzil.la/1829590)).
 
-#### DOM
-
-No notable changes.
-
-#### Media, WebRTC, and Web Audio
-
-No notable changes.
-
 #### Removals
 
 - The deprecated and non-standard `mozImageSmoothingEnabled` property is permanently removed.
@@ -81,4 +73,4 @@ No notable changes.
 
 ## Older versions
 
-{{Firefox_for_developers(113)}}
+{{Firefox_for_developers}}

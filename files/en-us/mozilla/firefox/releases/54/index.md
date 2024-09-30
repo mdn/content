@@ -46,7 +46,7 @@ Firefox 54 was released on June 13, 2017. This article lists key changes that ar
 ### Web Workers and Service Workers
 
 - `WorkerGlobalScope.close` is now available on {{domxref("DedicatedWorkerGlobalScope.close", "DedicatedWorkerGlobalScope")}} and {{domxref("SharedWorkerGlobalScope.close", "SharedWorkerGlobalScope")}} instead. This change was made to stop `close()` being available on service workers, as it isn't supposed to be used there and always throws an exception when called (see [Firefox bug 1336043](https://bugzil.la/1336043)).
-- The {{domxref("origin")}} property has been implemented (see [Firefox bug 1306170](https://bugzil.la/1306170)).
+- The {{domxref("Window.origin")}} property and the {{domxref("WorkerGlobalScope.origin")}} has been implemented (see [Firefox bug 1306170](https://bugzil.la/1306170)).
 - The {{domxref("Client.type")}} property has been implemented (see [Firefox bug 1339844](https://bugzil.la/1339844)).
 - {{domxref("Clients.matchAll()")}} now returns {{domxref("Client")}} objects in most recently focused order (see [Firefox bug 1266747](https://bugzil.la/1266747)).
 - Some changes have been made to the observed behavior when the {{domxref("Request.Request","Request()")}} constructor is passed an existing {{domxref("Request")}} object instance to make a new instance. The following new behaviors are designed to retain security while making the constructor less likely to throw exceptions:
@@ -91,4 +91,4 @@ Firefox 54 was released on June 13, 2017. This article lists key changes that ar
 
 ## Older versions
 
-{{Firefox_for_developers(53)}}
+{{Firefox_for_developers}}

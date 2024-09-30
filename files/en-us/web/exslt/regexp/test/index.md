@@ -30,7 +30,7 @@ The character flags are:
 - `i`
   - : Case insensitive match<. If this flag is specified, the match is performed in a case insensitive fashion.
 
-### Returns
+### Return value
 
 `true` if the specified regexp matches the test string.
 

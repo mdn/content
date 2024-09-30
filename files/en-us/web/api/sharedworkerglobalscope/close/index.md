@@ -34,7 +34,8 @@ close();
 
 `close()` and `self.close()` are effectively equivalent — both represent `close()` being called from inside the worker's inner scope.
 
-> **Note:** There is also a way to stop the worker from the main thread: the {{domxref("Worker.terminate")}} method.
+> [!NOTE]
+> There is also a way to stop the worker from the main thread: the {{domxref("Worker.terminate")}} method.
 
 ## Specifications
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WritableStreamDefaultWriter.abort
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`abort()`** method of the
 {{domxref("WritableStreamDefaultWriter")}} interface aborts the stream, signaling that

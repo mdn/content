@@ -15,12 +15,13 @@ Updates the state of commands of the current chrome window (UI).
 ## Syntax
 
 ```js-nolint
-updateCommands("sCommandName")
+updateCommands(commandName)
 ```
 
 ### Parameters
 
-- `sCommandName` is a particular string which describes what kind of update event this is (e.g. whether we are in bold right now).
+- `commandName`
+  - : A string which describes what kind of update event this is (e.g. whether we are in bold right now).
 
 ### Return value
 

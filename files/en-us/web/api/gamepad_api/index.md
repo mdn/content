@@ -25,8 +25,6 @@ The **Gamepad API** is a way for developers to access and respond to signals fro
 - [`GamepadPose`](/en-US/docs/Web/API/GamepadPose)
   - : Represents the pose of a controller (e.g. position and orientation in 3D space) in the case of a [WebVR](/en-US/docs/Web/API/WebVR_API) controller. This is _not_ used by the newer [WebXR](/en-US/docs/Web/API/WebXR_Device_API) standard.
 
-See also the [extensions to the Gamepad interface](/en-US/docs/Web/API/Gamepad#experimental_extensions_to_gamepad), for features that allow you to access the above information.
-
 ### Extensions to other interfaces
 
 #### Navigator

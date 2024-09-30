@@ -26,7 +26,7 @@ In any other browser, you can determine the selected candidate pair by looking f
 
 The function shown in this example identifies the currently-selected candidate pair from a statistics report by first iterating over each report, looking for a `transport` report; when one is found, that transport's {{domxref("RTCTransportStats.selectedCandidatePairId", "selectedCandidatePairId")}} is used to get the {{domxref("RTCIceCandidatePair")}} describing the connection.
 
-If that fails, then the second section iterates over the reports, looking for a `candidate-pair` record whose Firefox-specific {{domxref("RTCIceCandidatePairStats.selected", "selected")}} property is `true`. This candidate pair is then returned as the currently-selected one.
+If that fails, then the second section iterates over the reports, looking for a `candidate-pair` record whose Firefox-specific `selected` property is `true`. This candidate pair is then returned as the currently-selected one.
 
 ```js
 function getCurrentCandidatePair(statsResults) {

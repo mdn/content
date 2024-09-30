@@ -80,7 +80,8 @@ What are these extra properties, and where do they come from?
 
 Every object in JavaScript has a built-in property, which is called its **prototype**. The prototype is itself an object, so the prototype will have its own prototype, making what's called a **prototype chain**. The chain ends when we reach a prototype that has `null` for its own prototype.
 
-> **Note:** The property of an object that points to its prototype is **not** called `prototype`. Its name is not standard, but in practice all browsers use [`__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto). The standard way to access an object's prototype is the {{jsxref("Object/getPrototypeOf", "Object.getPrototypeOf()")}} method.
+> [!NOTE]
+> The property of an object that points to its prototype is **not** called `prototype`. Its name is not standard, but in practice all browsers use [`__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto). The standard way to access an object's prototype is the {{jsxref("Object/getPrototypeOf", "Object.getPrototypeOf()")}} method.
 
 When you try to access a property of an object: if the property can't be found in the object itself, the prototype is searched for the property. If the property still can't be found, then the prototype's prototype is searched, and so on until either the property is found, or the end of the chain is reached, in which case `undefined` is returned.
 
@@ -120,7 +121,7 @@ This code creates a `Date` object, then walks up the prototype chain, logging th
 
 ![Prototype chain for myDate](mydate-prototype-chain.svg)
 
-In fact, when you call familiar methods, like `myDate2.getMonth()`,
+In fact, when you call familiar methods, like `myDate2.getTime()`,
 you are calling a method that's defined on `Date.prototype`.
 
 ## Shadowing properties
@@ -130,16 +131,16 @@ What happens if you define a property in an object, when a property with the sam
 ```js
 const myDate = new Date(1995, 11, 17);
 
-console.log(myDate.getYear()); // 95
+console.log(myDate.getTime()); // 819129600000
 
-myDate.getYear = function () {
+myDate.getTime = function () {
   console.log("something else!");
 };
 
-myDate.getYear(); // 'something else!'
+myDate.getTime(); // 'something else!'
 ```
 
-This should be predictable, given the description of the prototype chain. When we call `getYear()` the browser first looks in `myDate` for a property with that name, and only checks the prototype if `myDate` does not define it. So when we add `getYear()` to `myDate`, then the version in `myDate` is called.
+This should be predictable, given the description of the prototype chain. When we call `getTime()` the browser first looks in `myDate` for a property with that name, and only checks the prototype if `myDate` does not define it. So when we add `getTime()` to `myDate`, then the version in `myDate` is called.
 
 This is called "shadowing" the property.
 
@@ -222,7 +223,8 @@ console.log(Object.hasOwn(irma, "name")); // true
 console.log(Object.hasOwn(irma, "greet")); // false
 ```
 
-> **Note:** You can also use the non-static {{jsxref("Object/hasOwnProperty", "Object.hasOwnProperty()")}} method here, but we recommend that you use `Object.hasOwn()` if you can.
+> [!NOTE]
+> You can also use the non-static {{jsxref("Object/hasOwnProperty", "Object.hasOwnProperty()")}} method here, but we recommend that you use `Object.hasOwn()` if you can.
 
 ## Prototypes and inheritance
 

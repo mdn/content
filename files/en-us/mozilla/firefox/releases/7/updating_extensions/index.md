@@ -8,7 +8,8 @@ page-type: guide
 
 This article offers advice for add-on developers that want to update their extensions to work in Firefox 7. Fortunately, most of the changes are relatively minor in this release, and few add-ons should need significant changes to work in Firefox 7.
 
-> **Note:** For a complete list of developer-related changes in Firefox 7, see [Firefox 7 for developers](/en-US/docs/Mozilla/Firefox/Releases/7).
+> [!NOTE]
+> For a complete list of developer-related changes in Firefox 7, see [Firefox 7 for developers](/en-US/docs/Mozilla/Firefox/Releases/7).
 
 As always, you will need to [recompile any binary components](/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces) to make them compatible with Firefox 7.
 

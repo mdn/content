@@ -6,11 +6,12 @@ page-type: web-api-instance-property
 browser-compat: api.Element.ariaLevel
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
 The **`ariaLevel`** property of the {{domxref("Element")}} interface reflects the value of the `aria-level` attribute, which defines the hierarchical level of an element within a structure.
 
-> **Note:** Where possible use an HTML {{htmlelement("Heading_Elements", "h1")}} or other correct heading level as these have built in semantics and do not require ARIA attributes.
+> [!NOTE]
+> Where possible use an HTML {{htmlelement("Heading_Elements", "h1")}} or other correct heading level as these have built in semantics and do not require ARIA attributes.
 
 ## Value
 

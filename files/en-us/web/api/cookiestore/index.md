@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.CookieStore
 ---
 
-{{securecontext_header}}{{APIRef("Cookie Store API")}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{AvailableInWorkers("window_and_service")}}
 
 The **`CookieStore`** interface of the {{domxref("Cookie Store API", "", "", "nocode")}} provides methods for getting and setting cookies asynchronously from either a page or a service worker.
 
@@ -13,18 +13,16 @@ The `CookieStore` is accessed via attributes in the global scope in a {{domxref(
 
 {{InheritanceDiagram}}
 
-{{AvailableInWorkers}}
-
 ## Instance methods
 
 - {{domxref("CookieStore.delete()")}}
-  - : The `delete()` method deletes a cookie with the given name or options object, it returns a {{jsxref("Promise")}} that resolves when the deletion completes.
+  - : The `delete()` method deletes a cookie with the given `name` or `options` object, it returns a {{jsxref("Promise")}} that resolves when the deletion completes.
 - {{domxref("CookieStore.get()")}}
-  - : The `get()` method gets a single cookie with the given name or options object, it returns a {{jsxref("Promise")}} that resolves with details of a single cookie.
+  - : The `get()` method gets a single cookie with the given `name` or `options` object, it returns a {{jsxref("Promise")}} that resolves with details of a single cookie.
 - {{domxref("CookieStore.getAll()")}}
   - : The `getAll()` method gets all matching cookies, it returns a {{jsxref("Promise")}} that resolves with a list of cookies.
 - {{domxref("CookieStore.set()")}}
-  - : The `set()` method sets a cookie with the given name and value or options object, it returns a {{jsxref("Promise")}} that resolves when the cookie is set.
+  - : The `set()` method sets a cookie with the given `name` and `value` or `options` object, it returns a {{jsxref("Promise")}} that resolves when the cookie is set.
 
 ## Events
 

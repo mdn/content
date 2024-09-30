@@ -55,7 +55,8 @@ The first three URLs will return the index page, books list, and authors list. T
 
 By contrast the final two URLs will display detailed information about a specific book or author. These URLs encode the identity of the item to display (represented by `<id>` above). The URL mapper will extract the encoded information and pass it to the view, and the view will dynamically determine what information to get from the database. By encoding the information in the URL we will use a single set of a URL mapping, a view, and a template to handle all books (or authors).
 
-> **Note:** With Django, you can construct your URLs however you require — you can encode information in the body of the URL as shown above, or include `GET` parameters in the URL, for example `/book/?id=6`. Whichever approach you use, the URLs should be kept clean, logical, and readable, as [recommended by the W3C](https://www.w3.org/Provider/Style/URI).
+> [!NOTE]
+> With Django, you can construct your URLs however you require — you can encode information in the body of the URL as shown above, or include `GET` parameters in the URL, for example `/book/?id=6`. Whichever approach you use, the URLs should be kept clean, logical, and readable, as [recommended by the W3C](https://www.w3.org/Provider/Style/URI).
 > The Django documentation recommends encoding information in the body of the URL to achieve better URL design.
 
 As mentioned in the overview, the rest of this article describes how to construct the index page.
@@ -64,7 +65,8 @@ As mentioned in the overview, the rest of this article describes how to construc
 
 The first page we'll create is the index page (`catalog/`). The index page will include some static HTML, along with generated "counts" of different records in the database. To make this work we'll create a URL mapping, a view, and a template.
 
-> **Note:** It's worth paying a little extra attention in this section. Most of the information also applies to the other pages we'll create.
+> [!NOTE]
+> It's worth paying a little extra attention in this section. Most of the information also applies to the other pages we'll create.
 
 ### URL mapping
 
@@ -78,7 +80,8 @@ urlpatterns += [
 ]
 ```
 
-> **Note:** Whenever Django encounters the import function [`django.urls.include()`](https://docs.djangoproject.com/en/5.0/ref/urls/#django.urls.include), it splits the URL string at the designated end character and sends the remaining substring to the included _URLconf_ module for further processing.
+> [!NOTE]
+> Whenever Django encounters the import function [`django.urls.include()`](https://docs.djangoproject.com/en/5.0/ref/urls/#django.urls.include), it splits the URL string at the designated end character and sends the remaining substring to the included _URLconf_ module for further processing.
 
 We also created a placeholder file for the _URLConf_ module, named **/catalog/urls.py**.
 Add the following lines to that file:
@@ -101,7 +104,8 @@ For example, we can use the name parameter to link to our home page from any oth
 <a href="{% url 'index' %}">Home</a>.
 ```
 
-> **Note:** We can hard code the link as in `<a href="/catalog/">Home</a>`), but if we change the pattern for our home page, for example, to `/catalog/index`) the templates will no longer link correctly. Using a reversed URL mapping is more robust.
+> [!NOTE]
+> We can hard code the link as in `<a href="/catalog/">Home</a>`), but if we change the pattern for our home page, for example, to `/catalog/index`) the templates will no longer link correctly. Using a reversed URL mapping is more robust.
 
 ### View (function-based)
 
@@ -162,9 +166,10 @@ A template is a text file that defines the structure or layout of a file (such a
 
 A Django application created using **startapp** (like the skeleton of this example) will look for templates in a subdirectory named '**templates**' of your applications. For example, in the index view that we just added, the `render()` function will expect to find the file **_index.html_** in **/django-locallibrary-tutorial/catalog/templates/** and will raise an error if the file is not present.
 
-You can check this by saving the previous changes and accessing `127.0.0.1:8000` in your browser - it will display a fairly intuitive error message: "`TemplateDoesNotExist at /catalog/`", and other details.
+You can check this by saving the previous changes and accessing `127.0.0.1:8000` in your browser - it will display a fairly intuitive error message: "TemplateDoesNotExist at /catalog/", and other details.
 
-> **Note:** Based on your project's settings file, Django will look for templates in a number of places, searching in your installed applications by default. You can find out more about how Django finds templates and what template formats it supports in [the Templates section of the Django documentation](https://docs.djangoproject.com/en/5.0/topics/templates/).
+> [!NOTE]
+> Based on your project's settings file, Django will look for templates in a number of places, searching in your installed applications by default. You can find out more about how Django finds templates and what template formats it supports in [the Templates section of the Django documentation](https://docs.djangoproject.com/en/5.0/topics/templates/).
 
 #### Extending templates
 
@@ -177,10 +182,11 @@ We'll be creating the template for LocalLibrary shortly.
 The sample below includes common HTML with sections for a title, a sidebar, and main contents marked with the named `block` and `endblock` template tags.
 You can leave the blocks empty, or include default content to use when rendering pages derived from the template.
 
-> **Note:** Template _tags_ are functions that you can use in a template to loop through lists, perform conditional operations based on the value of a variable, and so on. In addition to template tags, the template syntax allows you to reference variables that are passed into the template from the view, and use _template filters_ to format variables (for example, to convert a string to lower case).
+> [!NOTE]
+> Template _tags_ are functions that you can use in a template to loop through lists, perform conditional operations based on the value of a variable, and so on. In addition to template tags, the template syntax allows you to reference variables that are passed into the template from the view, and use _template filters_ to format variables (for example, to convert a string to lower case).
 
 ```django
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     {% block title %}
@@ -218,12 +224,13 @@ For example, the code snippet below shows how to use the `extends` template tag 
 
 We will use the following code snippet as the base template for the _LocalLibrary_ website. As you can see, it contains some HTML code and defines blocks for `title`, `sidebar`, and `content`. We have a default title and a default sidebar with links to lists of all books and authors, both enclosed in blocks to be easily changed in the future.
 
-> **Note:** We also introduce two additional template tags: `url` and `load static`. These tags will be explained in following sections.
+> [!NOTE]
+> We also introduce two additional template tags: `url` and `load static`. These tags will be explained in following sections.
 
 Create a new file **base_generic.html** in **/django-locallibrary-tutorial/catalog/templates/** and paste the following code to the file:
 
 ```django
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     {% block title %}
@@ -298,7 +305,8 @@ This code extends our base template on the first line, and then replaces the def
 In the _Dynamic content_ section we declare placeholders (_template variables_) for the information from the view that we want to include.
 The variables are enclosed with double brace (handlebars).
 
-> **Note:** You can easily recognize template variables and template tags (functions) - variables are enclosed in double braces (`\{{ num_books }}`), and tags are enclosed in single braces with percentage signs (`{% extends "base_generic.html" %}`).
+> [!NOTE]
+> You can easily recognize template variables and template tags (functions) - variables are enclosed in double braces (`\{{ num_books }}`), and tags are enclosed in single braces with percentage signs (`{% extends "base_generic.html" %}`).
 
 The important thing to note here is that variables are named with the _keys_ that we pass into the `context` dictionary in the `render()` function of our view (see sample below).
 Variables will be replaced with their associated _values_ when the template is rendered.
@@ -316,7 +324,7 @@ return render(request, 'index.html', context=context)
 
 #### Referencing static files in templates
 
-Your project is likely to use static resources, including JavaScript, CSS, and images. Because the location of these files might not be known (or might change), Django allows you to specify the location in your templates relative to the `STATIC_URL` global setting. The default skeleton website sets the value of `STATIC_URL` to '`/static/`', but you might choose to host these on a content delivery network or elsewhere.
+Your project is likely to use static resources, including JavaScript, CSS, and images. Because the location of these files might not be known (or might change), Django allows you to specify the location in your templates relative to the `STATIC_URL` global setting. The default skeleton website sets the value of `STATIC_URL` to `"/static/"`, but you might choose to host these on a content delivery network or elsewhere.
 
 Within the template you first call the `load` template tag specifying "static" to add the template library, as shown in the code sample below. You can then use the `static` template tag and specify the relative URL to the required file.
 
@@ -336,7 +344,8 @@ You can add an image into the page in a similar way, for example:
   style="width:555px;height:540px;" />
 ```
 
-> **Note:** The samples above specify where the files are located, but Django does not serve them by default. We configured the development web server to serve files by modifying the global URL mapper (**/django-locallibrary-tutorial/locallibrary/urls.py**) when we [created the website skeleton](/en-US/docs/Learn/Server-side/Django/skeleton_website), but still need to enable file serving in production. We'll look at this later.
+> [!NOTE]
+> The samples above specify where the files are located, but Django does not serve them by default. We configured the development web server to serve files by modifying the global URL mapper (**/django-locallibrary-tutorial/locallibrary/urls.py**) when we [created the website skeleton](/en-US/docs/Learn/Server-side/Django/skeleton_website), but still need to enable file serving in production. We'll look at this later.
 
 For more information on working with static files see [Managing static files](https://docs.djangoproject.com/en/5.0/howto/static-files/) in the Django documentation.
 
@@ -377,7 +386,8 @@ The setting of `'APP_DIRS': True`, is the most important, as it tells Django to 
 
 We can also specify specific locations for Django to search for directories using `'DIRS': []` (but that isn't needed yet).
 
-> **Note:** You can find out more about how Django finds templates and what template formats it supports in [the Templates section of the Django documentation](https://docs.djangoproject.com/en/5.0/topics/templates/).
+> [!NOTE]
+> You can find out more about how Django finds templates and what template formats it supports in [the Templates section of the Django documentation](https://docs.djangoproject.com/en/5.0/topics/templates/).
 
 ## What does it look like?
 
@@ -385,7 +395,8 @@ At this point we have created all required resources to display the index page. 
 
 ![Index page for LocalLibrary website](index_page_ok.png)
 
-> **Note:** The **All books** and **All authors** links will not work yet because the paths, views, and templates for those pages are not defined. We just inserted placeholders for those links in the `base_generic.html` template.
+> [!NOTE]
+> The **All books** and **All authors** links will not work yet because the paths, views, and templates for those pages are not defined. We just inserted placeholders for those links in the `base_generic.html` template.
 
 ## Challenge yourself
 
@@ -393,9 +404,10 @@ Here are a couple of tasks to test your familiarity with model queries, views, a
 
 1. The LocalLibrary [base template](#the_locallibrary_base_template) includes a `title` block. Override this block in the [index template](#the_index_template) and create a new title for the page.
 
-   > **Note:** The section [Extending templates](#extending_templates) explains how to create blocks and extend a block in another template.
+   > [!NOTE]
+   > The section [Extending templates](#extending_templates) explains how to create blocks and extend a block in another template.
 
-2. Modify the [view](<#view_(function-based)>) to generate counts for _genres_ and _books_ that contain a particular word (case insensitive), and pass the results to the `context`. You accomplish this in a similar way to creating and using `num_books` and `num_instances_available`. Then update the [index template](#the_index_template) to include these variables.
+2. Modify the [view](#view_function-based) to generate counts for _genres_ and _books_ that contain a particular word (case insensitive), and pass the results to the `context`. You accomplish this in a similar way to creating and using `num_books` and `num_instances_available`. Then update the [index template](#the_index_template) to include these variables.
 
 ## Summary
 

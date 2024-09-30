@@ -47,7 +47,8 @@ As you can infer from the brief example above, the caption is meant to contain a
 
 A caption is placed directly beneath the `<table>` tag.
 
-> **Note:** The [`summary`](/en-US/docs/Web/HTML/Element/table#summary) attribute can also be used on the `<table>` element to provide a description — this is also read out by screen readers. We'd recommend using the `<caption>` element instead, however, as `summary` is deprecated and can't be read by sighted users (it doesn't appear on the page).
+> [!NOTE]
+> The [`summary`](/en-US/docs/Web/HTML/Element/table#summary) attribute can also be used on the `<table>` element to provide a description — this is also read out by screen readers. We'd recommend using the `<caption>` element instead, however, as `summary` is deprecated and can't be read by sighted users (it doesn't appear on the page).
 
 ### Active learning: Adding a caption
 
@@ -57,19 +58,20 @@ Let's try this out, revisiting an example we first met in the previous article.
 2. Add a suitable caption for the table.
 3. Save your code and open it in a browser to see what it looks like.
 
-> **Note:** You can find our version on GitHub — see [timetable-caption.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/timetable-caption.html) ([see it live also](https://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html)).
+> [!NOTE]
+> You can find our version on GitHub — see [timetable-caption.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/timetable-caption.html) ([see it live also](https://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html)).
 
-## Adding structure with \<thead>, \<tfoot>, and \<tbody>
+## Adding structure with \<thead>, \<tbody>, and \<tfoot>
 
-As your tables get a bit more complex in structure, it is useful to give them more structural definition. One clear way to do this is by using {{htmlelement("thead")}}, {{htmlelement("tfoot")}}, and {{htmlelement("tbody")}}, which allow you to mark up a header, footer, and body section for the table.
+As your tables get a bit more complex in structure, it is useful to give them more structural definition. One clear way to do this is by using {{htmlelement("thead")}}, {{htmlelement("tbody")}}, and {{htmlelement("tfoot")}}, which allow you to mark up a header, body, and footer section for the table.
 
 These elements don't make the table any more accessible to screen reader users, and don't result in any visual enhancement on their own. They are however very useful for styling and layout — acting as useful hooks for adding CSS to your table. To give you some interesting examples, in the case of a long table you could make the table header and footer repeat on every printed page, and you could make the table body display on a single page and have the contents available by scrolling up and down.
 
-To use them:
+To use them, they should be included in the following order:
 
-- The `<thead>` element must wrap the part of the table that is the header — this is usually the first row containing the column headings, but this is not necessarily always the case. If you are using {{htmlelement("col")}}/{{htmlelement("colgroup")}} element, the table header should come just below those.
-- The `<tfoot>` element needs to wrap the part of the table that is the footer — this might be a final row with items in the previous rows summed, for example. You can include the table footer right at the bottom of the table as you'd expect, or just below the table header (the browser will still render it at the bottom of the table).
-- The `<tbody>` element needs to wrap the other parts of the table content that aren't in the table header or footer. It will appear below the table header or sometimes footer, depending on how you decided to structure it.
+- The `<thead>` element must wrap the part of the table that is the header — this is usually the first row containing the column headings, but this is not necessarily always the case. If you are using {{htmlelement("col")}}/{{htmlelement("colgroup")}} elements, the table header should come just below those.
+- The `<tbody>` element needs to wrap the main part of the table content that isn't the table header or footer.
+- The `<tfoot>` element needs to wrap the part of the table that is the footer — this might be a final row with items in the previous rows summed, for example.
 
 > **Note:** `<tbody>` is always included in every table, implicitly if you don't specify it in your code. To check this, open up one of your previous examples that doesn't include `<tbody>` and look at the HTML code in your [browser developer tools](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) — you will see that the browser has added this tag for you. You might wonder why you ought to bother including it at all — you should, because it gives you more control over your table structure and styling.
 
@@ -97,13 +99,15 @@ Let's put these new elements into action.
 
 7. Save and refresh, and have a look at the result. If the `<tbody>` and `<tfoot>` elements weren't in place, you'd have to write much more complicated selectors/rules to apply the same styling.
 
-> **Note:** We don't expect you to fully understand the CSS right now. You'll learn more about this when you go through our CSS modules ([Introduction to CSS](/en-US/docs/Learn/CSS/First_steps) is a good place to start; we also have an article specifically on [styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)).
+> [!NOTE]
+> We don't expect you to fully understand the CSS right now. You'll learn more about this when you go through our CSS modules ([Introduction to CSS](/en-US/docs/Learn/CSS/First_steps) is a good place to start; we also have an article specifically on [styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)).
 
 Your finished table should look something like the following:
 
 {{ EmbedGHLiveSample('learning-area/html/tables/advanced/spending-record-finished.html', '100%', 400) }}
 
-> **Note:** You can also find it on GitHub as [spending-record-finished.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/spending-record-finished.html).
+> [!NOTE]
+> You can also find it on GitHub as [spending-record-finished.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/spending-record-finished.html).
 
 ## Nesting Tables
 
@@ -222,7 +226,8 @@ Let's recap briefly on how we use data tables. A table can be a handy tool, for 
 
 But what if you cannot make those visual associations? How then can you read a table like the above? Visually impaired people often use a screen reader that reads out information on web pages to them. This is no problem when you're reading plain text but interpreting a table can be quite a challenge for a blind person. Nevertheless, with the proper markup we can replace visual associations by programmatic ones.
 
-> **Note:** There are around 253 Million people living with Visual Impairment according to [WHO data in 2017](https://www.who.int/en/news-room/fact-sheets/detail/blindness-and-visual-impairment).
+> [!NOTE]
+> There are around 253 Million people living with Visual Impairment according to [WHO data in 2017](https://www.who.int/en/news-room/fact-sheets/detail/blindness-and-visual-impairment).
 
 This section of the article provides further techniques for making tables as accessible as possible.
 
@@ -331,7 +336,8 @@ Returning to our "Items Sold August 2016" example, we can use the `id` and `head
 </tbody>
 ```
 
-> **Note:** This method creates very precise associations between headers and data cells but it uses **a lot** more markup and does not leave any room for errors. The `scope` approach is usually sufficient for most tables.
+> [!NOTE]
+> This method creates very precise associations between headers and data cells but it uses **a lot** more markup and does not leave any room for errors. The `scope` approach is usually sufficient for most tables.
 
 ### Active learning: playing with scope and headers
 
@@ -339,7 +345,8 @@ Returning to our "Items Sold August 2016" example, we can use the `id` and `head
 2. Now try adding in the appropriate `scope` attributes to make this table more accessible.
 3. Finally, try making another copy of the starter files, and this time make the table more accessible by creating precise and explicit associations using `id` and `headers` attributes.
 
-> **Note:** You can check your work against our finished examples — see [items-sold-scope.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/items-sold-scope.html) ([also see this live](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html)) and [items-sold-headers.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/items-sold-headers.html) ([see this live too](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html)).
+> [!NOTE]
+> You can check your work against our finished examples — see [items-sold-scope.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/items-sold-scope.html) ([also see this live](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html)) and [items-sold-headers.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/items-sold-headers.html) ([see this live too](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html)).
 
 ## Summary
 

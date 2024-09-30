@@ -64,51 +64,51 @@ Note that these keywords are _case insensitive_, but are listed here with mixed 
 
 The following keywords were defined in earlier versions of the CSS Color Module. They are now deprecated for use on public web pages.
 
-- `ActiveBorder` {{deprecated_inline}}
+- `ActiveBorder`
   - : Active window border.
-- `ActiveCaption` {{deprecated_inline}}
+- `ActiveCaption`
   - : Active window caption. Should be used with `CaptionText` as foreground color.
-- `AppWorkspace` {{deprecated_inline}}
+- `AppWorkspace`
   - : Background color of multiple document interface.
-- `Background` {{deprecated_inline}}
+- `Background`
   - : Desktop background.
-- `ButtonHighlight` {{deprecated_inline}}
+- `ButtonHighlight`
   - : The color of the border facing the light source for 3-D elements that appear 3-D due to that layer of surrounding border.
-- `ButtonShadow` {{deprecated_inline}}
+- `ButtonShadow`
   - : The color of the border away from the light source for 3-D elements that appear 3-D due to that layer of surrounding border.
-- `CaptionText` {{deprecated_inline}}
+- `CaptionText`
   - : Text in caption, size box, and scrollbar arrow box. Should be used with the `ActiveCaption` background color.
-- `InactiveBorder` {{deprecated_inline}}
+- `InactiveBorder`
   - : Inactive window border.
-- `InactiveCaption` {{deprecated_inline}}
+- `InactiveCaption`
   - : Inactive window caption. Should be used with the `InactiveCaptionText` foreground color.
-- `InactiveCaptionText` {{deprecated_inline}}
+- `InactiveCaptionText`
   - : Color of text in an inactive caption. Should be used with the `InactiveCaption` background color.
-- `InfoBackground` {{deprecated_inline}}
+- `InfoBackground`
   - : Background color for tooltip controls. Should be used with the `InfoText` foreground color.
-- `InfoText` {{deprecated_inline}}
+- `InfoText`
   - : Text color for tooltip controls. Should be used with the `InfoBackground` background color.
-- `Menu` {{deprecated_inline}}
+- `Menu`
   - : Menu background. Should be used with the `MenuText` or `-moz-MenuBarText` foreground color.
-- `MenuText` {{deprecated_inline}}
+- `MenuText`
   - : Text in menus. Should be used with the `Menu` background color.
-- `Scrollbar` {{deprecated_inline}}
+- `Scrollbar`
   - : Background color of scroll bars.
-- `ThreeDDarkShadow` {{deprecated_inline}}
+- `ThreeDDarkShadow`
   - : The color of the darker (generally outer) of the two borders away from the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border.
-- `ThreeDFace` {{deprecated_inline}}
+- `ThreeDFace`
   - : The face background color for 3-D elements that appear 3-D due to two concentric layers of surrounding border. Should be used with the `ButtonText` foreground color.
-- `ThreeDHighlight` {{deprecated_inline}}
+- `ThreeDHighlight`
   - : The color of the lighter (generally outer) of the two borders facing the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border.
-- `ThreeDLightShadow` {{deprecated_inline}}
+- `ThreeDLightShadow`
   - : The color of the darker (generally inner) of the two borders facing the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border.
-- `ThreeDShadow` {{deprecated_inline}}
+- `ThreeDShadow`
   - : The color of the lighter (generally inner) of the two borders away from the light source for 3-D elements that appear 3-D due to two concentric layers of surrounding border.
-- `Window` {{deprecated_inline}}
+- `Window`
   - : Window background. Should be used with the `WindowText` foreground color.
-- `WindowFrame` {{deprecated_inline}}
+- `WindowFrame`
   - : Window frame.
-- `WindowText` {{deprecated_inline}}
+- `WindowText`
   - : Text in windows. Should be used with the `Window` background color.
 
 ## Examples

@@ -139,7 +139,7 @@ You can [see this example in action](https://fullscreen-requestfullscreen-demo.g
 ### Using navigationUI
 
 In this example, the entire document is placed into fullscreen mode by calling
-{{DOMxRef("Element.requestFullscreen", "requestFullscreen()")}} on the document's
+`requestFullscreen()` on the document's
 {{DOMxRef("Document.documentElement")}}, which is the document's root
 {{HTMLElement("html")}} element.
 

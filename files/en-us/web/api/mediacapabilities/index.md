@@ -9,7 +9,7 @@ browser-compat: api.MediaCapabilities
 
 The **`MediaCapabilities`** interface of the [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API) provides information about the decoding abilities of the device, system and browser. The API can be used to query the browser about the decoding abilities of the device based on codecs, profile, resolution, and bitrates. The information can be used to serve optimal media streams to the user and determine if playback should be smooth and power efficient.
 
-The information is accessed through the **`mediaCapabilities`** property of the {{domxref("Navigator")}} interface.
+The information is accessed through the **`mediaCapabilities`** property of the {{domxref("Navigator")}} and {{domxref("WorkerNavigator")}} interface.
 
 ## Instance methods
 

@@ -2,13 +2,11 @@
 title: Using the Permissions API
 slug: Web/API/Permissions_API/Using_the_Permissions_API
 page-type: guide
-status:
-  - experimental
 ---
 
 {{DefaultAPISidebar("Permissions API")}}
 
-This article provides a basic guide to using the W3C [Permissions API](/en-US/docs/Web/API/Permissions_API), which provides a programmatic way to query the status of API permissions attributed to the current context.
+This article provides a basic guide to using the [Permissions API](/en-US/docs/Web/API/Permissions_API), which provides a programmatic way to query the status of API permissions attributed to the current context.
 
 ## The trouble with asking for permission…
 
@@ -20,10 +18,7 @@ The [Permissions API](/en-US/docs/Web/API/Permissions_API) provides a consistent
 Specifically, developers can use {{domxref("Permissions.query()")}} to check whether permission to use a particular API in the current context is granted, denied, or requires specific user permission via a prompt.
 Querying permissions in the main thread is [broadly supported](/en-US/docs/Web/API/Permissions_API#api.navigator.permissions), and also in [Workers](/en-US/docs/Web/API/Permissions_API#api.workernavigator.permissions) (with a notable exception).
 
-Many APIs now enable permission querying, such as the [Clipboard API](/en-US/docs/Web/API/Clipboard_API), [Notifications API](/en-US/docs/Web/API/Notifications_API)
-
-- [Push API](/en-US/docs/Web/API/Push_API), [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API).
-  A list of many permission enabled APIs is provided in the [API Overview](/en-US/docs/Web/API/Permissions_API#permission-aware_apis), and you can get a sense of browser support in the [compatibility table here](/en-US/docs/Web/API/Permissions_API#api.permissions).
+Many APIs now enable permission querying, such as the [Clipboard API](/en-US/docs/Web/API/Clipboard_API), [Notifications API](/en-US/docs/Web/API/Notifications_API), [Push API](/en-US/docs/Web/API/Push_API), and [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API). A list of many permission enabled APIs is provided in the [API Overview](/en-US/docs/Web/API/Permissions_API#permission-aware_apis), and you can get a sense of browser support in the [compatibility table here](/en-US/docs/Web/API/Permissions_API#api.permissions).
 
 {{domxref("Permissions")}} has other methods to specifically request permission to use an API, and to revoke permission, but these are deprecated (non-standard, and/or not broadly supported).
 
@@ -85,39 +80,6 @@ handlePermission();
 
 The {{domxref("Permissions.query()")}} method takes a `PermissionDescriptor` dictionary as a parameter — this contains the name of the API you are interested in. Some APIs have more complex `PermissionDescriptor`s containing additional information, which inherit from the default `PermissionDescriptor`. For example, the `PushPermissionDescriptor` should also contain a Boolean that specifies if [`userVisibleOnly`](/en-US/docs/Web/API/PushManager/subscribe#parameters) is `true` or `false`.
 
-### Revoking permissions
-
-Starting in Firefox 47, you can now revoke existing permissions, using the {{domxref("Permissions.revoke()")}} method. This works in exactly the same way as the {{domxref("Permissions.query()")}} method, except that it causes an existing permission to be reverted back to its default state when the promise successfully resolves (which is usually `prompt`). See the following code in our demo:
-
-```js
-const revokeBtn = document.querySelector(".revoke");
-
-// ...
-
-revokeBtn.onclick = () => {
-  revokePermission();
-};
-
-// ...
-
-function revokePermission() {
-  navigator.permissions.revoke({ name: "geolocation" }).then((result) => {
-    report(result.state);
-  });
-}
-```
-
-> **Note:** The `revoke()` function has been disabled by default starting in Firefox 51, since its design has been brought into question in the [Web Applications Security Working Group](https://www.w3.org/2011/webappsec/). It can be re-enabled by setting the preference `dom.permissions.revoke.enable` to `true`.
-
 ### Responding to permission state changes
 
 You'll notice that we're listening to the {{domxref("PermissionStatus.change_event", "change")}} event in the code above, attached to the {{domxref("PermissionStatus")}} object — this allows us to respond to any changes in the permission status for the API we are interested in. At the moment we are just reporting the change in state.
-
-## Conclusion and future work
-
-At the moment this doesn't offer much more than what we had already. If we choose to never share our location from the permission prompt (deny permission), then we can't get back to the permission prompt without using the browser menu options:
-
-- **Firefox**: _Tools > Page Info > Permissions > Access Your Location_. Select _Always Ask_.
-- **Chrome**: _Hamburger Menu > Settings > Show advanced settings_. In the _Privacy_ section, click _Content Settings_. In the resulting dialog, find the _Location_ section and select _Ask when a site tries to…_. Finally, click _Manage Exceptions_ and remove the permissions you granted to the sites you are interested in.
-
-However, future additions to browser functionality should provide the `request()` method, which will allow us to programmatically request permissions, any time we like. These should hopefully be available soon.

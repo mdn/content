@@ -46,7 +46,7 @@ sensor.addEventListener("reading", () => {
   // model is a Three.js object instantiated elsewhere.
   model.quaternion.fromArray(sensor.quaternion).inverse();
 });
-sensor.addEventListener("error", (error) => {
+sensor.addEventListener("error", (event) => {
   if (event.error.name === "NotReadableError") {
     console.log("Sensor is not available.");
   }

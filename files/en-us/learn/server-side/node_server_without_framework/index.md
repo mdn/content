@@ -85,7 +85,7 @@ http
 console.log(`Server running at http://127.0.0.1:${PORT}/`);
 ```
 
-The asynchronous function `prepareFile` returns the structure: `{ found: boolean , ext: string, stream: ReadableStream }`.
+The asynchronous function `prepareFile` returns the structure: `{ found: boolean, ext: string, stream: ReadableStream }`.
 If the file can be served (the server process has access and no path-traversal vulnerability is found), we will return the HTTP status of `200` as a `statusCode` indicating success (otherwise we return `HTTP 404`).
 Note that other status codes can be found in `http.STATUS_CODES`.
 With `404` status we will return content of `'/404.html'` file.

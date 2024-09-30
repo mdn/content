@@ -57,14 +57,10 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : Function to call when network communication has been restored.
 - `onpopstate`
   - : Function to call when the user has navigated session history.
-- `onredo`
-  - : Function to call when the user has moved forward in undo transaction history.
 - `onresize`
   - : Function to call when the document has been resized.
 - `onstorage`
   - : Function to call when the storage area has changed.
-- `onundo`
-  - : Function to call when the user has moved backward in undo transaction history.
 - `onunload`
   - : Function to call when the document is going away.
 - `rightmargin` {{deprecated_inline}}
@@ -144,7 +140,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Generic_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role"
             >generic</a
           ></code
         >

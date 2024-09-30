@@ -5,6 +5,8 @@ page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#rowgroup
 ---
 
+{{AccessibilitySidebar}}
+
 An element with `role="rowgroup"` is a group of [rows](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) within a tabular structure. A `rowgroup` contains one or more rows of [cells](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role), [grid cells](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role), [column headers](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role), or [row headers](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role) within a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role) or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role).
 
 ```html
@@ -38,7 +40,8 @@ An element with `role="rowgroup"` is a group of [rows](/en-US/docs/Web/Accessibi
 
 To create an ARIA table header, table footer or table body, add `role="rowgroup"` to the element. That rowgroup should be nested within a grid, table or treegrid, encompassing a group of one or more rows. Each row, in turn, contains child cells. These cells can be of different types, depending on whether they are column or row headers, or plain or grid cells.
 
-> **Note:** Using the native HTML table element ({{HTMLElement('table')}}) along with the table header ({{HTMLElement('thead')}}), footer ({{HTMLElement('tfoot')}}), and body ({{HTMLElement('tbody')}}) elements whenever possible is strongly encouraged.
+> [!NOTE]
+> Using the native HTML table element ({{HTMLElement('table')}}) along with the table header ({{HTMLElement('thead')}}), footer ({{HTMLElement('tfoot')}}), and body ({{HTMLElement('tbody')}}) elements whenever possible is strongly encouraged.
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -64,7 +67,8 @@ None
 
 None.
 
-> **Note:** The first rule of ARIA use is if you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. Employ the HTML `<table>` element instead of the ARIA role of table whenever possible.
+> [!NOTE]
+> The first rule of ARIA use is if you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. Employ the HTML `<table>` element instead of the ARIA role of table whenever possible.
 
 ## Examples
 
@@ -138,7 +142,7 @@ Only use {{HTMLElement('table')}}, {{HTMLElement('tbody')}}, {{HTMLElement('thea
 </table>
 ```
 
-Above is the semantic way of writing a table. The ARIA roles are only necessary if the native semantics of the table, and therefore the table rows, are obliterated, such as by setting the [display property to flex or grid](/en-US/docs/Web/CSS/display#accessibility_concerns).
+Above is the semantic way of writing a table. The ARIA roles are only necessary if the native semantics of the table, and therefore the table rows, are obliterated, such as by setting the [display property to flex or grid](/en-US/docs/Web/CSS/display#accessibility).
 
 ### Added benefits
 
@@ -154,11 +158,3 @@ none
 - [HTML table body](/en-US/docs/Web/HTML/Element/tbody)
 - [HTML table footer](/en-US/docs/Web/HTML/Element/tfoot)
 - [HTML table header](/en-US/docs/Web/HTML/Element/thead)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

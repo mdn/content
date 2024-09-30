@@ -29,7 +29,7 @@ No notable changes
 #### DOM
 
 - {{domxref("HTMLElement.outerText")}} is now supported ([Firefox bug 1709790](https://bugzil.la/1709790)).
-- The properties `colorSpaceConversion`, `resizeWidth` and `resizeHeight` can be passed to the method {{domxref("createImageBitmap()")}} using the `options` object ([Firefox bug 1748868](https://bugzil.la/1748868) and [Firefox bug 1733559](https://bugzil.la/1733559)).
+- The properties `colorSpaceConversion`, `resizeWidth` and `resizeHeight` can be passed to the method {{domxref("Window.createImageBitmap()")}} and {{domxref("WorkerGlobalScope.createImageBitmap()")}} using the `options` object ([Firefox bug 1748868](https://bugzil.la/1748868) and [Firefox bug 1733559](https://bugzil.la/1733559)).
 
 #### Removals
 
@@ -47,4 +47,4 @@ No notable changes
 
 ## Older versions
 
-{{Firefox_for_developers(97)}}
+{{Firefox_for_developers}}

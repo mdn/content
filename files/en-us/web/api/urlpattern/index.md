@@ -7,14 +7,12 @@ status:
 browser-compat: api.URLPattern
 ---
 
-{{APIRef("URL Pattern API")}}{{SeeCompatTable}}
+{{APIRef("URL Pattern API")}}{{SeeCompatTable}} {{AvailableInWorkers}}
 
 The **`URLPattern`** interface of the {{domxref("URL Pattern API", "", "", "nocode")}} matches URLs or parts of URLs against a pattern. The pattern can contain capturing groups that extract parts of the matched URL.
 
 More information about the syntax of patterns can be found on the API overview
 page: {{domxref("URL Pattern API", "", "", "nocode")}}.
-
-{{AvailableInWorkers}}
 
 ## Constructor
 

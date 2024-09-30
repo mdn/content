@@ -7,9 +7,13 @@ browser-compat: css.properties.grid-auto-flow
 
 {{CSSRef}}
 
-The **`grid-auto-flow`** CSS property controls how the auto-placement algorithm works, specifying exactly how auto-placed items get flowed into the grid.
+The **`grid-auto-flow`** [CSS](/en-US/docs/Web/CSS) property controls how the auto-placement algorithm works, specifying exactly how auto-placed items get flowed into the grid.
 
 {{EmbedInteractiveExample("pages/css/grid-auto-flow.html")}}
+
+> [!NOTE]
+> The `masonry-auto-flow` property was dropped from CSS [Masonry layout](/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout) in favor of `grid-auto-flow`.
+> See [csswg-drafts #10231](https://github.com/w3c/csswg-drafts/issues/10231) for details.
 
 ## Syntax
 
@@ -145,6 +149,8 @@ inputElem.addEventListener("change", changeGridAutoFlow);
 
 ## See also
 
-- Related CSS properties: {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid")}}
-- Grid Layout Guide: _[Auto-placement in grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)_
-- Video tutorial: _[Introducing Grid auto-placement and order](https://gridbyexample.com/video/series-auto-placement-order/)_
+- {{cssxref("grid-auto-rows")}}
+- {{cssxref("grid-auto-columns")}}
+- {{cssxref("grid")}}
+- [Auto-placement in grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
+- Video: [Introducing grid auto-placement and order](https://gridbyexample.com/video/series-auto-placement-order/)

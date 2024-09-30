@@ -31,7 +31,8 @@ In terms of stacking contexts, DIV #1 and DIV #3 are assimilated into the root e
   - DIV #2 (`z-index`: 1)
   - DIV #4 (`z-index`: 2)
 
-> **Note:** DIV #1 and DIV #3 are not translucent. It is important to remember that assigning an opacity less than 1 to a positioned element implicitly creates a stacking context, just like adding a `z-index` value. And this example shows what happens when a parent element does not create a stacking context.
+> [!NOTE]
+> DIV #1 and DIV #3 are not translucent. It is important to remember that assigning an opacity less than 1 to a positioned element implicitly creates a stacking context, just like adding a `z-index` value. And this example shows what happens when a parent element does not create a stacking context.
 
 ## Example
 

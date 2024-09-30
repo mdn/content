@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.ReadableStreamDefaultReader.cancel
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`cancel()`** method of the
 {{domxref("ReadableStreamDefaultReader")}} interface returns a {{jsxref("Promise")}} that resolves when the stream is canceled. Calling this method signals a loss of interest in the stream by a consumer.
@@ -17,7 +17,8 @@ after cancel is called, and the stream is not readable any more. To read those c
 still and not completely get rid of the stream, you'd use
 {{domxref("ReadableStreamDefaultController.close()")}}.
 
-> **Note:** If the reader is active, the
+> [!NOTE]
+> If the reader is active, the
 > `cancel()` method behaves the same as that for the associated stream
 > ({{domxref("ReadableStream.cancel()")}}).
 

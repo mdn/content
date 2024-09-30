@@ -7,13 +7,14 @@ browser-compat: css.properties.touch-action
 
 {{CSSRef}}
 
-The **`touch-action`** CSS property sets how an element's region can be manipulated by a touchscreen user (for example, by zooming features built into the browser).
+The **`touch-action`** [CSS](/en-US/docs/Web/CSS) property sets how an element's region can be manipulated by a touchscreen user (for example, by zooming features built into the browser).
 
 By default, panning (scrolling) and pinching gestures are handled exclusively by the browser. An application using {{domxref("Pointer_events", "Pointer events", "", 1)}} will receive a {{domxref("Element/pointercancel_event", "pointercancel")}} event when the browser starts handling a touch gesture. By explicitly specifying which gestures should be handled by the browser, an application can supply its own behavior in {{domxref("Element/pointermove_event", "pointermove")}} and {{domxref("Element/pointerup_event", "pointerup")}} listeners for the remaining gestures. Applications using {{domxref("Touch_events", "Touch events", "", 1)}} disable the browser handling of gestures by calling {{domxref("Event.preventDefault","preventDefault()")}}, but should also use `touch-action` to ensure the browser knows the intent of the application before any event listeners have been invoked.
 
 When a gesture is started, the browser intersects the `touch-action` values of the touched element and its ancestors, up to the one that implements the gesture (in other words, the first containing scrolling element). This means that in practice, `touch-action` is typically applied only to top-level elements which have some custom behavior, without needing to specify `touch-action` explicitly on any of that element's descendants.
 
-> **Note:** After a gesture starts, changes to `touch-action` will not have any impact on the behavior of the current gesture.
+> [!NOTE]
+> After a gesture starts, changes to `touch-action` will not have any impact on the behavior of the current gesture.
 
 ## Syntax
 
@@ -60,7 +61,7 @@ The `touch-action` property may be specified as either:
 - `pinch-zoom`
   - : Enable multi-finger panning and zooming of the page. This may be combined with any of the **pan-** values.
 
-## Accessibility concerns
+## Accessibility
 
 A declaration of `touch-action: none;` may inhibit operating a browser's zooming capabilities. This will prevent people experiencing low vision conditions from being able to read and understand page content.
 
@@ -113,7 +114,7 @@ The most common usage is to disable all gestures on an element (and its non-scro
 ## See also
 
 - {{cssxref("pointer-events","pointer-events")}}
-- {{domxref("Pointer_events","Pointer Events")}}
+- [Pointer Events](/en-US/docs/Web/API/Pointer_events)
 - WebKit Blog [More Responsive Tapping on iOS](https://webkit.org/blog/5610/more-responsive-tapping-on-ios/)
 - Google Developers Blog [Making touch scrolling fast by default](https://developer.chrome.com/blog/scrolling-intervention/)
 - [Scroll Snap](/en-US/docs/Web/CSS/CSS_scroll_snap)

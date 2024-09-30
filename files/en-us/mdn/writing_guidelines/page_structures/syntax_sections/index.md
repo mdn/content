@@ -26,7 +26,8 @@ slice(start, end)
 ```
 ````
 
-> **Note:** The markup-language used in this case is `js-nolint`, where `js` indicates that JavaScript syntax highlighting should be used.
+> [!NOTE]
+> The markup-language used in this case is `js-nolint`, where `js` indicates that JavaScript syntax highlighting should be used.
 > For JavaScript syntax sections `-nolint` is also required because the syntax section is deliberatively not "quite" JavaScript and we don't want the linter to "fix" it (return values and end-of-line semicolons are omitted).
 
 ### General style rules
@@ -49,7 +50,7 @@ A few rules to follow in terms of markup within the syntax block:
 
 #### Syntax block
 
-Start with a syntax block, like this (from the {{DOMxRef("IntersectionObserver.IntersectionObserver", "IntersectionObserver constructor")}} page):
+Start with a syntax block, like this (from the {{DOMxRef("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} constructor page):
 
 ```js-nolint
 new IntersectionObserver(callback, options)
@@ -104,7 +105,7 @@ new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
 
 Formal syntax notation (using [BNF](https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form)) should not be used in the Syntax section — instead use the expanded multiple-line format [described above](#multiple_linesoptional_parameters).
 
-While the formal notation provides a concise mechanism for describing complex syntax, it is not familiar to many developers, and can _conflict_ with valid syntax for particular programming languages. For example, "`[ ]`" indicates both an "optional parameter" and a JavaScript {{jsxref("Array")}}. You can see this in the formal syntax for {{jsxref("Array.prototype.slice()")}} below:
+While the formal notation provides a concise mechanism for describing complex syntax, it is not familiar to many developers, and can _conflict_ with valid syntax for particular programming languages. For example, `[ ]` indicates both an "optional parameter" and a JavaScript {{jsxref("Array")}}. You can see this in the formal syntax for {{jsxref("Array.prototype.slice()")}} below:
 
 ```js-nolint
 arr.slice([begin[, end]])
@@ -188,7 +189,8 @@ Next, include a "Parameters" subsection, which explains what each parameter shou
 
 The name of each parameter in the list should be contained in markdown code fence notation `` ` ` ``.
 
-> **Note:** Even if the feature does not take any parameters, you need to include a "Parameters" section, with content of "None".
+> [!NOTE]
+> Even if the feature does not take any parameters, you need to include a "Parameters" section, with content of "None".
 
 #### Return value section
 
@@ -206,7 +208,8 @@ Determining what exceptions are thrown by a method can require a good perusal of
 
 The exception names and explanations should be included in a description list.
 
-> **Note:** If no exceptions can be raised on the feature, you don't need to include an "Exceptions" section, but you can if you wish include it with content of "None".
+> [!NOTE]
+> If no exceptions can be raised on the feature, you don't need to include an "Exceptions" section, but you can if you wish include it with content of "None".
 
 ### Properties
 
@@ -231,7 +234,8 @@ JavaScript built-in object reference pages follow the same basic rules as API re
 
 CSS property reference pages include a "Syntax" section, which used to be found at the top of the page but is increasingly commonly found below a section containing a block of code showing typical usage of the feature, plus a live example to illustrate what the feature does (see {{CSSxRef("animation")}} for example).
 
-> **Note:** We do this because CSS formal syntax is complex, not used by many of the MDN readership, and off-putting for beginners. Real syntax and examples are more useful to the majority of people.
+> [!NOTE]
+> We do this because CSS formal syntax is complex, not used by many of the MDN readership, and off-putting for beginners. Real syntax and examples are more useful to the majority of people.
 
 Inside the syntax section you'll find the following contents.
 

@@ -31,7 +31,16 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : This Boolean attribute indicates whether the details — that is, the contents of the `<details>` element — are currently visible. The details are shown when this attribute exists, or hidden when this attribute is absent. By default this attribute is absent which means the details are not visible.
 
-    > **Note:** You have to remove this attribute entirely to make the details hidden. `open="false"` makes the details visible because this attribute is Boolean.
+    > [!NOTE]
+    > You have to remove this attribute entirely to make the details hidden. `open="false"` makes the details visible because this attribute is Boolean.
+
+- `name`
+
+  - : This attribute enables multiple `<details>` elements to be connected, with only one open at a time. This allows developers to easily create UI features such as accordions without scripting.
+
+    The `name` attribute specifies a group name — give multiple `<details>` elements the same `name` value to group them. Only one of the grouped `<details>` elements can be open at a time — opening one will cause another to close. If multiple grouped `<details>` elements are given the `open` attribute, only the first one in the source order will be rendered open.
+
+    > **Note:** `<details>` elements don't have to be adjacent to one another in the source to be part of the same group.
 
 ## Events
 
@@ -88,6 +97,42 @@ To start the `<details>` box in its open state, add the Boolean `open` attribute
 #### Result
 
 {{EmbedLiveSample("Creating_an_open_disclosure_box", 650, 150)}}
+
+### Multiple named disclosure boxes
+
+We include several `<details>` boxes, all with the same name so only one can be open at a time:
+
+```html
+<details name="reqs">
+  <summary>Graduation Requirements</summary>
+  <p>
+    Requires 40 credits, including a passing grade in health, geography,
+    history, economics, and wood shop.
+  </p>
+</details>
+<details name="reqs">
+  <summary>System Requirements</summary>
+  <p>
+    Requires a computer running an operating system. The computer must have some
+    memory and ideally some kind of long-term storage. An input device as well
+    as some form of output device is recommended.
+  </p>
+</details>
+<details name="reqs">
+  <summary>Job Requirements</summary>
+  <p>
+    Requires knowledge of HTML, CSS, JavaScript, accessibility, web performance,
+    privacy, security, and internationalization, as well as a dislike of
+    broccoli.
+  </p>
+</details>
+```
+
+#### Result
+
+{{EmbedLiveSample("Multiple named disclosure boxes", 650, 150)}}
+
+Try opening all the disclosure widgets. When you open one, all the others automatically close.
 
 ### Customizing the appearance
 

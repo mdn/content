@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-orientation
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-orientation` attribute indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.
 
 ## Description
@@ -78,8 +80,3 @@ Inherited into roles:
 ## See also
 
 - [Understanding WCAG: Keyboard](/en-US/docs/Web/Accessibility/Understanding_WCAG/Keyboard)
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

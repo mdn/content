@@ -8,12 +8,13 @@ status:
 browser-compat: api.GPUDevice.createRenderPipelineAsync
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`createRenderPipelineAsync()`** method of the
 {{domxref("GPUDevice")}} interface returns a {{jsxref("Promise")}} that fulfills with a {{domxref("GPURenderPipeline")}}, which can control the vertex and fragment shader stages and be used in a {{domxref("GPURenderPassEncoder")}} or {{domxref("GPURenderBundleEncoder")}}, once the pipeline can be used without any stalling.
 
-> **Note:** It is generally preferable to use this method over {{domxref("GPUDevice.createRenderPipeline()")}} whenever possible, as it prevents blocking of GPU operation execution on pipeline compilation.
+> [!NOTE]
+> It is generally preferable to use this method over {{domxref("GPUDevice.createRenderPipeline()")}} whenever possible, as it prevents blocking of GPU operation execution on pipeline compilation.
 
 ## Syntax
 
@@ -50,7 +51,8 @@ A validation error can occur if any of the following are false:
 
 ## Examples
 
-> **Note:** The [WebGPU samples](https://webgpu.github.io/webgpu-samples/) feature many more examples.
+> [!NOTE]
+> The [WebGPU samples](https://webgpu.github.io/webgpu-samples/) feature many more examples.
 
 ### Basic example
 

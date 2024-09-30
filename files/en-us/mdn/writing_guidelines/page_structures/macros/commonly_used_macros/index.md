@@ -45,7 +45,7 @@ Most macros will also take a second argument allowing you to change the display 
   <tbody>
     <tr>
       <td>
-        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/cssxref.ejs">CSSxRef</a>
+        <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/cssxref.ejs">CSSxRef</a>
       </td>
       <td>
         <a href="/en-US/docs/Web/CSS/Reference">CSS Reference</a> (/Web/CSS/Reference)
@@ -56,7 +56,7 @@ Most macros will also take a second argument allowing you to change the display 
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/DOMxRef.ejs">DOMxRef</a>
+        <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/DOMxRef.ejs">DOMxRef</a>
       </td>
       <td><a href="/en-US/docs/Web/API">DOM Reference</a> (/Web/API)</td>
       <td>
@@ -68,7 +68,7 @@ Most macros will also take a second argument allowing you to change the display 
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTMLElement.ejs">HTMLElement</a>
+        <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLElement.ejs">HTMLElement</a>
       </td>
       <td>
         <a href="/en-US/docs/Web/HTML/Element">HTML Elements reference</a> (/Web/HTML/Element)
@@ -79,7 +79,7 @@ Most macros will also take a second argument allowing you to change the display 
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/jsxref.ejs">JSxRef</a>
+        <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/jsxref.ejs">JSxRef</a>
       </td>
       <td>
         <a href="/en-US/docs/Web/JavaScript/Reference">JavaScript reference</a> (/Web/JavaScript/Reference).
@@ -90,7 +90,7 @@ Most macros will also take a second argument allowing you to change the display 
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/SVGAttr.ejs">SVGAttr</a>
+        <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/SVGAttr.ejs">SVGAttr</a>
       </td>
       <td>
         <a href="/en-US/docs/Web/SVG/Attribute">SVG attribute reference</a> (/Web/SVG/Attribute).
@@ -102,7 +102,7 @@ Most macros will also take a second argument allowing you to change the display 
     <tr>
       <td>
         <a
-          href="https://github.com/mdn/yari/tree/main/kumascript/macros/SVGElement.ejs">SVGElement</a>
+          href="https://github.com/mdn/yari/blob/main/kumascript/macros/SVGElement.ejs">SVGElement</a>
       </td>
       <td>
         <a href="/en-US/docs/Web/SVG/Attribute">SVG Element reference</a> (/Web/SVG/Element).
@@ -124,7 +124,7 @@ Most macros will also take a second argument allowing you to change the display 
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPMethod.ejs">HTTPMethod</a>
+        <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/HTTPMethod.ejs">HTTPMethod</a>
       </td>
       <td>
         <a href="/en-US/docs/Web/HTTP/Methods">HTTP request methods</a> (/Web/HTTP/Methods).
@@ -135,7 +135,7 @@ Most macros will also take a second argument allowing you to change the display 
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPStatus.ejs">HTTPStatus</a>
+        <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/HTTPStatus.ejs">HTTPStatus</a>
       </td>
       <td>
         <a href="/en-US/docs/Web/HTTP/Status">HTTP response status codes</a> (/Web/HTTP/Status)
@@ -245,22 +245,22 @@ They can also be used to mark up a section on a page.
   Should be used on main pages like interface pages, API overview pages, and API entry points (e.g. `navigator.xyz`) but usually not on subpages like method and property pages.
   Example: `\{{SecureContext_Header}}` {{SecureContext_Header}}
 
-### Indicating that a feature is available in web workers
+#### Indicating that a feature is available in web workers
 
 The [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) macro inserts a localized note box indicating that a feature is available in a [Web worker](/en-US/docs/Web/API/Web_Workers_API) context.
-You can use the argument `notservice` to indicate that a feature works in web workers except for service workers.
+You can use the argument `window_and_worker_except_service` to indicate that a feature works in web workers except for service workers.
 
-#### Syntax
+##### Syntax
 
 ```plain
 \{{AvailableInWorkers}}
-\{{AvailableInWorkers("notservice")}}
+\{{AvailableInWorkers("window_and_worker_except_service")}}
 ```
 
-#### Examples
+##### Examples
 
 {{AvailableInWorkers}}
-{{AvailableInWorkers("notservice")}}
+{{AvailableInWorkers("window_and_worker_except_service")}}
 
 ## Browser compatibility and specification macros
 

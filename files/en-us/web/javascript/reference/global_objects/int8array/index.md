@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Int8Array
 
 {{JSRef}}
 
-The **`Int8Array`** typed array represents an array of 8-bit signed integers. The contents are initialized to `0`. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
+The **`Int8Array`** typed array represents an array of 8-bit signed integers. The contents are initialized to `0` unless initialization data is explicitly provided. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
 
 `Int8Array` is a subclass of the hidden {{jsxref("TypedArray")}} class.
 

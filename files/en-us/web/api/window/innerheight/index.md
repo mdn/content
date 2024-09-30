@@ -21,15 +21,13 @@ The value of `innerHeight` is taken from the height of the window's
 An integer value indicating the window's layout viewport height in pixels. The property
 is read only and has no default value.
 
-To change the width of the window, call one of its resize methods, such as
-{{domxref("Window.resizeTo", "resizeTo()")}} or {{domxref("Window.resizeBy",
-  "resizeBy()")}}.
+To change the height of the window, call one of its resize methods, such as
+{{domxref("Window.resizeTo", "resizeTo()")}} or {{domxref("Window.resizeBy", "resizeBy()")}}.
 
 ## Usage notes
 
 To obtain the height of the window minus its horizontal scroll bar and any borders, use
-the root {{HTMLElement("html")}} element's {{domxref("Element.clientHeight",
-  "clientHeight")}} property instead.
+the root {{HTMLElement("html")}} element's {{domxref("Element.clientHeight", "clientHeight")}} property instead.
 
 Both `innerHeight` and `innerWidth` are available on any window
 or any object that behaves like a window, such as a tab or frame.

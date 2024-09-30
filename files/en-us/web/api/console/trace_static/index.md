@@ -6,13 +6,12 @@ page-type: web-api-instance-method
 browser-compat: api.console.trace_static
 ---
 
-{{APIRef("Console API")}}
+{{APIRef("Console API")}} {{AvailableInWorkers}}
 
 The **`console.trace()`** static method outputs a stack trace to the console.
 
-{{AvailableInWorkers}}
-
-> **Note:** In some browsers, `console.trace()` may also output the sequence of calls and asynchronous events leading to the current `console.trace()` which are not on the call stack — to help identify the origin of the current event evaluation loop.
+> [!NOTE]
+> In some browsers, `console.trace()` may also output the sequence of calls and asynchronous events leading to the current `console.trace()` which are not on the call stack — to help identify the origin of the current event evaluation loop.
 
 See [Stack traces](/en-US/docs/Web/API/console#stack_traces) in the {{domxref("console")}} documentation for details and examples.
 

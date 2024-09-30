@@ -11,11 +11,13 @@ The **`background-clip`** [CSS](/en-US/docs/Web/CSS) property sets whether an el
 
 {{EmbedInteractiveExample("pages/css/background-clip.html")}}
 
-If the element has no {{cssxref("background-image")}} or {{cssxref("background-color")}}, this property will only have a visual effect when the border has transparent regions or partially opaque regions (due to {{cssxref("border-style")}} or {{cssxref("border-image")}}); otherwise, the border masks the difference.
+The background is always drawn behind the border, so `background-clip: border-box` has a visual effect only when the border is partially opaque or has transparent or partially opaque regions. Also, the `background-clip: text` property has little to no visual effect if the text is fully or partially opaque.
 
-> **Note:** Because the [root element](/en-US/docs/Web/HTML/Element/html) has a different background painting area, the `background-clip` property has no effect when specified on it. See "[The backgrounds of special elements.](https://drafts.csswg.org/css-backgrounds-3/#special-backgrounds)"
+> [!NOTE]
+> Because the [root element](/en-US/docs/Web/HTML/Element/html) has a different background painting area, the `background-clip` property has no effect when specified on it. See "[The backgrounds of special elements.](https://drafts.csswg.org/css-backgrounds-3/#special-backgrounds)"
 
-> **Note:** For documents whose [root element](/en-US/docs/Web/HTML/Element/html) is an HTML element: if the computed value of {{cssxref("background-image")}} on the root element is `none` and its {{cssxref("background-color")}} is `transparent`, user agents must instead propagate the computed values of the `background` properties from that element's first HTML {{HTMLElement("body")}} child element. The used values of that `<body>` element's `background` properties are their initial values, and the propagated values are treated as if they were specified on the root element. It is recommended that authors of HTML documents specify the canvas background for the `<body>` element rather than the HTML element.
+> [!NOTE]
+> For documents whose [root element](/en-US/docs/Web/HTML/Element/html) is an HTML element: if the computed value of {{cssxref("background-image")}} on the root element is `none` and its {{cssxref("background-color")}} is `transparent`, user agents must instead propagate the computed values of the `background` properties from that element's first HTML {{HTMLElement("body")}} child element. The used values of that `<body>` element's `background` properties are their initial values, and the propagated values are treated as if they were specified on the root element. It is recommended that authors of HTML documents specify the canvas background for the `<body>` element rather than the HTML element.
 
 ## Syntax
 
@@ -25,6 +27,7 @@ background-clip: border-box;
 background-clip: padding-box;
 background-clip: content-box;
 background-clip: text;
+background-clip: border-area;
 
 /* Global values */
 background-clip: inherit;
@@ -44,10 +47,12 @@ background-clip: unset;
   - : The background is painted within (clipped to) the content box.
 - `text`
   - : The background is painted within (clipped to) the foreground text.
+- `border-area`
+  - : The background is painted within (clipped to) the area painted by the border, taking {{Cssxref("border-width")}} and {{Cssxref("border-style")}} into account but ignoring any transparency introduced by {{Cssxref("border-color")}}.
 
-## Accessibility concerns
+## Accessibility
 
-When using `background-clip: text` check that the contrast ratio between the background color and the color of the text placed over it is high enough that people experiencing low vision conditions will be able to read the content of the page.
+When using `background-clip: text`, check that the contrast ratio between the background color and the color of the text placed over it is high enough that people experiencing low vision conditions will be able to read the content of the page.
 
 If the background image does not load, this could also lead to the text becoming unreadable. Add a fallback {{cssxref("background-color")}} to prevent this from happening, and test without the image.
 
@@ -74,6 +79,9 @@ Consider using feature queries with {{cssxref("@supports")}} to test for support
   The background extends only to the edge of the content box.
 </p>
 <p class="text">The background is clipped to the foreground text.</p>
+<p class="border-area">
+  The background is clipped to the area painted by the border.
+</p>
 ```
 
 ### CSS
@@ -101,14 +109,18 @@ p {
 
 .text {
   background-clip: text;
-  -webkit-background-clip: text;
   color: rgb(0 0 0 / 20%);
+}
+
+.border-area {
+  background-clip: border-area;
+  border-color: transparent;
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample('Examples', 600, 580)}}
+{{EmbedLiveSample('Examples', 600, 630)}}
 
 ## Specifications
 

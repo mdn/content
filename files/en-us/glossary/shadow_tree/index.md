@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-A **shadow tree** is a hidden set of {{Glossary("DOM")}} nodes whose topmost [node](/en-US/docs/Glossary/Node/DOM) is a **shadow root**. The shadow root is the topmost node of a **shadow DOM** and not part of the regular document's DOM tree.
+A **shadow tree** is a hidden set of {{Glossary("DOM")}} nodes whose topmost {{Glossary("node/dom", "node")}} is a **shadow root**. The shadow root is the topmost node of a **shadow DOM** and not part of the regular document's DOM tree.
 
 The shadow root is attached to another node tree through a specific DOM node referred to as its **host**. This host may be part of another shadow tree or part of the regular DOM tree. The node tree of a shadow root's host is sometimes referred to as the **light tree**.
 
@@ -21,4 +21,5 @@ The hidden DOM nodes of a shadow tree are generally not affected by anything app
 - {{domxref("Element.shadowRoot")}} and {{domxref("Element.attachShadow()")}}
 - {{domxref("ShadowRoot")}}
 - {{HTMLElement("slot")}}
-- {{Glossary("accessibility_tree", "Accessibility tree")}}
+- Related glossary terms:
+  - {{Glossary("Accessibility tree")}}

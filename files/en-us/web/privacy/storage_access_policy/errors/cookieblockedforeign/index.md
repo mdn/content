@@ -1,10 +1,10 @@
 ---
 title: "Blocked: All third-party storage access requests"
-slug: Web/Privacy/Storage_access_policy/Errors/CookieBlockedForeign
+slug: Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedForeign
 page-type: guide
 ---
 
-{{QuicklinksWithSubPages("Web/Privacy/Storage_access_policy/Errors")}}
+{{QuicklinksWithSubPages("Web/Privacy/Storage_Access_Policy/Errors")}}
 
 ## Message
 
@@ -28,5 +28,5 @@ If the resource that is being blocked doesn't need authentication, you can fix t
 
 ## See also
 
-- [Content blocking](https://support.mozilla.org/en-US/kb/content-blocking) on [support.mozilla.org](https://support.mozilla.org)
+- [Content blocking](https://support.mozilla.org/en-US/kb/content-blocking) on [support.mozilla.org](https://support.mozilla.org/)
 - [The `crossorigin` attribute](/en-US/docs/Web/HTML/Attributes/crossorigin)

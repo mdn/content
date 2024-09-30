@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUDevice.createRenderPipeline
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`createRenderPipeline()`** method of the
 {{domxref("GPUDevice")}} interface creates a {{domxref("GPURenderPipeline")}} that can control the vertex and fragment shader stages and be used in a {{domxref("GPURenderPassEncoder")}} or {{domxref("GPURenderBundleEncoder")}}.
@@ -88,7 +88,8 @@ The `depthStencil` object can contain the following properties:
 
         If omitted, `depthFailOp` defaults to `"keep"`.
 
-        > **Note:**: The render state stencil value is initialized to 0 at the start of a render pass.
+        > [!NOTE]
+        > The render state stencil value is initialized to 0 at the start of a render pass.
 
     - `failOp` {{optional_inline}}
       - : An enumerated value specifying the stencil operation performed if the fragment stencil comparison test described by `compare` fails. Possible and default values are the same as for `depthFailOp`.
@@ -184,7 +185,8 @@ The `fragment` object contains an array of objects, each of which can contain th
         - `srcFactor` {{optional_inline}}
           - : An enumerated value that defines the blend factor operation to be performed on values from the fragment shader. Possible values are the same as for `dstFactor`. If omitted, `srcFactor` defaults to `"one"`.
 
-        > **Note:** For a detailed explanation of the algorithms defined by each `dstFactor`/`srcFactor` and `operation` enumerated value, see the [Blend State](https://gpuweb.github.io/gpuweb/#blend-state) section of the specification.
+        > [!NOTE]
+        > For a detailed explanation of the algorithms defined by each `dstFactor`/`srcFactor` and `operation` enumerated value, see the [Blend State](https://gpuweb.github.io/gpuweb/#blend-state) section of the specification.
 
     - `format`
       - : An enumerated value specifying the required format for output colors. See the specification's [Texture Formats](https://gpuweb.github.io/gpuweb/#enumdef-gputextureformat) section for all the available `format` values.
@@ -192,18 +194,18 @@ The `fragment` object contains an array of objects, each of which can contain th
 
       - : One or more {{glossary("bitwise flags")}} defining the write mask to apply to the color target state. Possible flag values are:
 
-        - `GPUFlagsConstant.RED`
-        - `GPUFlagsConstant.GREEN`
-        - `GPUFlagsConstant.BLUE`
-        - `GPUFlagsConstant.ALPHA`
-        - `GPUFlagsConstant.ALL`
+        - `GPUColorWrite.RED`
+        - `GPUColorWrite.GREEN`
+        - `GPUColorWrite.BLUE`
+        - `GPUColorWrite.ALPHA`
+        - `GPUColorWrite.ALL`
 
-        If omitted, `writeMask` defaults to `GPUFlagsConstant.ALL`.
+        If omitted, `writeMask` defaults to `GPUColorWrite.ALL`.
 
         Note that multiple flags can be specified by separating values with pipe symbols, for example:
 
         ```js
-        writeMask: GPUFlagsConstant.RED | GPUFlagsConstant.ALPHA;
+        writeMask: GPUColorWrite.RED | GPUColorWrite.ALPHA;
         ```
 
 ### `multisample` object structure
@@ -344,7 +346,8 @@ The following criteria must be met when calling **`createRenderPipeline()`**, ot
 
 ## Examples
 
-> **Note:** The [WebGPU samples](https://webgpu.github.io/webgpu-samples/) feature many more examples.
+> [!NOTE]
+> The [WebGPU samples](https://webgpu.github.io/webgpu-samples/) feature many more examples.
 
 ### Basic example
 

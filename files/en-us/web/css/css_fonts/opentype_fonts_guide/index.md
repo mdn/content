@@ -12,11 +12,12 @@ Some fonts will have one or more of these features enabled by default (kerning a
 
 In addition to broad feature sets like ligatures or lining figures (numerals that line up evenly as opposed to 'oldstyle', which look more like lower-case letters), there are also very specific ones such as stylistic sets (which might include several specific variants of glyphs meant to be used together), alternates (which might be one or more variants of the letter 'a'), or even language-specific alterations for East Asian languages. In the latter case, these alterations are actually necessary to properly express the language, so they go beyond the more stylistic preference of most other OpenType features.
 
-> **Warning:** There are many CSS attributes defined to leverage font features, but unfortunately many are not fully implemented. They are all defined and shown here, but many will only work using the lower-level {{cssxref("font-feature-settings")}} property. It's possible to write CSS to work both ways but this can become cumbersome. The issue with using `font-feature-settings` for everything is that every time you want to change one of the individual features, you have to redefine the entire string (similar to manipulating variable fonts with {{cssxref("font-variation-settings")}}).
+> [!WARNING]
+> There are many CSS attributes defined to leverage font features, but unfortunately many are not fully implemented. They are all defined and shown here, but many will only work using the lower-level {{cssxref("font-feature-settings")}} property. It's possible to write CSS to work both ways but this can become cumbersome. The issue with using `font-feature-settings` for everything is that every time you want to change one of the individual features, you have to redefine the entire string (similar to manipulating variable fonts with {{cssxref("font-variation-settings")}}).
 
 ## Discovering availability of features in fonts
 
-This is sometimes the trickiest thing to work out if you don't have any documentation that came with the fonts (many type designers and foundries will provide sample pages and CSS just for this very reason). But there are some sites that make it easier to figure out. You can visit [wakamaifondue.com](https://wakamaifondue.com), drop your font file on the circle where instructed, and in a few moments you'll have a full report on all the capabilities and features of your font. [Axis-praxis.org](https://www.axis-praxis.org/) also offers a similar capability, with the ability to click on the features to turn them on or off in a given text block.
+This is sometimes the trickiest thing to work out if you don't have any documentation that came with the fonts (many type designers and foundries will provide sample pages and CSS just for this very reason). But there are some sites that make it easier to figure out. You can visit [wakamaifondue.com](https://wakamaifondue.com/), drop your font file on the circle where instructed, and in a few moments you'll have a full report on all the capabilities and features of your font. [Axis-praxis.org](https://www.axis-praxis.org/) also offers a similar capability, with the ability to click on the features to turn them on or off in a given text block.
 
 ## Why you would use them?
 
@@ -38,7 +39,8 @@ There are some cases — like with {{cssxref("font-variant-east-asian")}} — th
 
 There are a number of different features to consider. They are grouped and explained here according to the main attributes and options covered in the W3C specifications.
 
-> **Note:** The examples below show the properties and some example combinations, along with the lower-level syntax equivalents. They may not match exactly due to browser implementation inconsistencies, but in many cases, the first example will match the second. The typefaces shown are Playfair Display, Source Serif Pro, IBM Plex Serif, Dancing Script, and Kokoro (all available and free to use, most are on Google Fonts and other services).
+> [!NOTE]
+> The examples below show the properties and some example combinations, along with the lower-level syntax equivalents. They may not match exactly due to browser implementation inconsistencies, but in many cases, the first example will match the second. The typefaces shown are Playfair Display, Source Serif Pro, IBM Plex Serif, Dancing Script, and Kokoro (all available and free to use, most are on Google Fonts and other services).
 
 ### Kerning
 
@@ -136,7 +138,8 @@ This allows access to various alternate forms of glyphs within a font. The examp
 
 {{EmbedGHLiveSample("css-examples/font-features/font-variant-east-asian.html", '100%', 750)}}
 
-> **Note:** these glyphs were copied out of a font sample and are not intended as prose.
+> [!NOTE]
+> These glyphs were copied out of a font sample and are not intended as prose.
 
 ### Font variant shorthand
 
@@ -200,7 +203,7 @@ For example, small caps can be set several ways, but if you want to ensure that 
 
 ### Web font analysis tools
 
-- [Wakamai Fondue](https://wakamaifondue.com)
+- [Wakamai Fondue](https://wakamaifondue.com/)
 - [Axis Praxis](https://www.axis-praxis.org/)
 
 ### W3C Specifications

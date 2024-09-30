@@ -10,7 +10,8 @@ browser-compat: api.SVGClipPathElement.clipPathUnits
 
 The read-only **`clipPathUnits`** property of the {{domxref("SVGClipPathElement")}} interface reflects the {{SVGAttr("clipPathUnits")}} attribute of a {{SVGElement("clipPath")}} element which defines the coordinate system to use for the content of the element.
 
-> **Note:** Although this property is read-only, it is merely a container for two values you can modify, {{domxref("SVGAnimatedEnumeration.baseVal", "baseVal")}} and {{domxref("SVGAnimatedEnumeration.animVal", "animVal")}}.
+> [!NOTE]
+> Although this property is read-only, it is merely a container for two values you can modify, {{domxref("SVGAnimatedEnumeration.baseVal", "baseVal")}} and {{domxref("SVGAnimatedEnumeration.animVal", "animVal")}}.
 
 ## Value
 

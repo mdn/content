@@ -14,9 +14,8 @@ read-only **`mediaStream`** property indicates the
 receiving audio.
 
 This stream was specified when the node was first created,
-either using the {{domxref("MediaStreamAudioSourceNode.MediaStreamAudioSourceNode",
-  "MediaStreamAudioSourceNode()")}} constructor or the
-{{domxref("AudioContext.createMediaStreamSource()")}} method.
+either using the {{domxref("MediaStreamAudioSourceNode.MediaStreamAudioSourceNode", "MediaStreamAudioSourceNode()")}}
+constructor or the {{domxref("AudioContext.createMediaStreamSource()")}} method.
 
 ## Value
 

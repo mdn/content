@@ -8,13 +8,14 @@ page-type: css-module
 
 The **CSS box alignment** module specifies CSS features that relate to the alignment of boxes in the various CSS box layout models: block layout, table layout, flex layout, and grid layout. The module aims to create a consistent method of alignment across all of CSS. This document details the general concepts found in the specification.
 
-> **Note:** The documentation for each layout method will detail how Box Alignment is applied there.
+> [!NOTE]
+> The documentation for each layout method will detail how Box Alignment is applied there.
 
 ## Older alignment methods
 
 CSS traditionally had very limited alignment capabilities. We were able to align text using {{cssxref("text-align")}}, center blocks using auto {{cssxref("margin")}}s, and in table or inline-block layouts using the {{cssxref("vertical-align")}} property. Alignment of text is now covered by the [Inline Layout](https://www.w3.org/TR/css-inline-3/) and [CSS Text](https://www.w3.org/TR/css-text-3/) modules, and for the first time in Box Alignment we have full horizontal and vertical alignment capabilities.
 
-If you initially learned [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) then you may consider these properties to be part of the Flexbox specification, and some of the properties are indeed listed in Level 1 of Flexbox. However the specification notes that the Box Alignment specification should be referred to as it may add additional capabilities over what is currently in Flexbox.
+If you initially learned [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) then you may consider these properties to be part of the flexbox specification, and some of the properties are indeed listed in Level 1 of flexbox. However the specification notes that the Box Alignment specification should be referred to as it may add additional capabilities over what is currently in flexbox.
 
 ## Basic examples
 
@@ -22,7 +23,7 @@ The following examples demonstrate how some of the Box Alignment Properties are 
 
 ### CSS grid layout alignment example
 
-In this example using Grid Layout, there is extra space in the grid container after laying out the fixed width tracks on the inline (main) axis. This space is distributed using {{cssxref("justify-content")}}. On the block (cross) axis the alignment of the items inside their grid areas is controlled with {{cssxref("align-items")}}. The first item overrides the `align-items` value set on the group by setting {{cssxref("align-self")}} to `center`.
+In this example using grid layout, there is extra space in the grid container after laying out the fixed width tracks on the inline (main) axis. This space is distributed using {{cssxref("justify-content")}}. On the block (cross) axis the alignment of the items inside their grid areas is controlled with {{cssxref("align-items")}}. The first item overrides the `align-items` value set on the group by setting {{cssxref("align-self")}} to `center`.
 
 {{EmbedGHLiveSample("css-examples/box-alignment/overview/grid-align-items.html", '100%', 700)}}
 
@@ -93,14 +94,14 @@ The following values are defined for positional alignment, and can be used as va
 - `end`
 - `self-start`
 - `self-end`
-- `flex-start` for Flexbox only
-- `flex-end` for Flexbox only
+- `flex-start` for flexbox only
+- `flex-end` for flexbox only
 - `left`
 - `right`
 
 Other than the physical values of `left` and `right`, which relate to physical attributes of the screen, all of the other values are logical values and relate to the writing mode of the content.
 
-For example, when working in CSS Grid Layout, if you are working in English and set `justify-content` to `start` this will move the items in the inline dimension to the start, which will be the left as sentences in English start on the left. If you were using Arabic, a right to left language, then the same value of `start` would result in the items moving to the right, as sentences in Arabic start on the right-hand side of the page.
+For example, when working in CSS grid layout, if you are working in English and set `justify-content` to `start` this will move the items in the inline dimension to the start, which will be the left as sentences in English start on the left. If you were using Arabic, a right to left language, then the same value of `start` would result in the items moving to the right, as sentences in Arabic start on the right-hand side of the page.
 
 Both of these examples have `justify-content: start`, however the location of start changes according to the writing mode.
 
@@ -157,7 +158,8 @@ In the below example, a grid layout uses the `gap` shorthand to set a `10px` gap
 
 {{EmbedGHLiveSample("css-examples/box-alignment/overview/grid-gap.html", '100%', 700)}}
 
-> **Note:** The early grid implementation included `-gap` properties prefixed with `grid-`. All browsers now support the unprefixed properties, though you may see the following legacy properties in examples and tutorials: {{cssxref("row-gap", "grid-row-gap")}}, {{cssxref("column-gap", "grid-column-gap")}}, and {{cssxref("gap", "grid-gap")}}. The prefixed versions will be maintained as an alias of the unprefixed ones.
+> [!NOTE]
+> The early grid implementation included `-gap` properties prefixed with `grid-`. All browsers now support the unprefixed properties, though you may see the following legacy properties in examples and tutorials: {{cssxref("row-gap", "grid-row-gap")}}, {{cssxref("column-gap", "grid-column-gap")}}, and {{cssxref("gap", "grid-gap")}}. The prefixed versions will be maintained as an alias of the unprefixed ones.
 
 Be aware that other things may increase the visual gap displayed, for example using the space distribution keywords or adding margins to items.
 
@@ -165,8 +167,8 @@ Be aware that other things may increase the visual gap displayed, for example us
 
 As the CSS box alignment properties are implemented differently depending on the specification they interact with, refer to the following pages for each layout type for details of how to use the alignment properties with it:
 
-- [Box alignment in Flexbox](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
-- [Box alignment in CSS Grid Layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
+- [Box alignment in flexbox](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
+- [Box alignment in CSS grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
 - [Box alignment in multiple-column layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_multi-column_layout)
 - [Box alignment for block, absolutely positioned and table layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables)
 
@@ -197,11 +199,6 @@ As the CSS box alignment properties are implemented differently depending on the
 
 ## Guides
 
-- CSS Flexbox guide: _[Basic concepts of Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- CSS Flexbox guide: _[Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
-- CSS Grid guide: _[Box alignment in CSS Grid layouts](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
-
-## External Resources
-
-- [CSS Grid, Flexbox and Box alignment](https://www.smashingmagazine.com/2016/11/css-grids-flexbox-box-alignment-new-layout-standard/)
-- [Thoughts on partial implementations of Box alignment](https://blogs.igalia.com/jfernandez/2017/05/03/can-i-use-css-box-alignment/)
+- [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+- [Box alignment in CSS grid layouts](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)

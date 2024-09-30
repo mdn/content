@@ -9,7 +9,8 @@ browser-compat: svg.elements.svg
 
 The `svg` element is a container that defines a new coordinate system and [viewport](/en-US/docs/Web/SVG/Attribute/viewBox). It is used as the outermost element of SVG documents, but it can also be used to embed an SVG fragment inside an SVG or HTML document.
 
-> **Note:** The `xmlns` attribute is only required on the outermost `svg` element of _SVG documents_, or inside HTML documents with XML serialization. It is unnecessary for inner `svg` elements or inside HTML documents with HTML serialization.
+> [!NOTE]
+> The `xmlns` attribute is only required on the outermost `svg` element of _SVG documents_, or inside HTML documents with XML serialization. It is unnecessary for inner `svg` elements or inside HTML documents with HTML serialization.
 
 ## Examples
 
@@ -98,7 +99,7 @@ To change the iframe's dimensions try resizing the dotted red border from bottom
   - : The displayed height of the rectangular viewport. (Not the height of its coordinate system.)
     _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; _Default value_: `auto`; _Animatable_: **yes**
 - {{SVGAttr("preserveAspectRatio")}}
-  - : How the `svg` fragment must be deformed if it is displayed with a different aspect ratio.
+  - : How the `svg` fragment must be deformed if it is displayed with a different {{glossary("aspect ratio")}}.
     _Value type_: (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ; _Default value_: `xMidYMid meet`; _Animatable_: **yes**
 - {{SVGAttr("version")}} {{deprecated_inline}}
   - : Which version of SVG is used for the inner content of the element.
@@ -116,9 +117,10 @@ To change the iframe's dimensions try resizing the dotted red border from bottom
   - : The displayed y coordinate of the svg container. No effect on outermost `svg` elements.
     _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; _Default value_: `0`; _Animatable_: **yes**
 
-> **Note:** Starting with SVG2, `x`, `y`, `width`, and `height` are _Geometry Properties_, meaning these attributes can also be used as CSS properties.
+> [!NOTE]
+> Starting with SVG2, `x`, `y`, `width`, and `height` are _Geometry Properties_, meaning these attributes can also be used as CSS properties.
 
-## Usage notes
+## Usage context
 
 {{svginfo}}
 

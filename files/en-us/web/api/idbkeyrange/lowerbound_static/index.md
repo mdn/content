@@ -6,13 +6,11 @@ page-type: web-api-static-method
 browser-compat: api.IDBKeyRange.lowerBound_static
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`lowerBound()`** static method of the
 {{domxref("IDBKeyRange")}} interface creates a new key range with only a lower bound.
 By default, it includes the lower endpoint value and is closed.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -50,7 +48,8 @@ the key value "F" and all that come after it. If we used
 `IDBKeyRange.lowerBound("F", true);`, then the range would not include "F";
 only the values after it.
 
-> **Note:** For a more complete example allowing you to experiment with
+> [!NOTE]
+> For a more complete example allowing you to experiment with
 > key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) repo
 > ([view the example live too](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/).)
 

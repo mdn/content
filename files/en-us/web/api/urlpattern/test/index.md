@@ -8,13 +8,11 @@ status:
 browser-compat: api.URLPattern.test
 ---
 
-{{APIRef("URL Pattern API")}}{{SeeCompatTable}}
+{{APIRef("URL Pattern API")}}{{SeeCompatTable}} {{AvailableInWorkers}}
 
 The **`test()`** method of the {{domxref("URLPattern")}} interface takes a URL or
 object of URL parts, and returns a boolean indicating if the given input matches
 the current pattern.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

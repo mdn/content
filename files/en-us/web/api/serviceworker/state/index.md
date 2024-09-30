@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ServiceWorker.state
 ---
 
-{{APIRef("Service Workers API")}}{{SecureContext_Header}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`state`** read-only property of the
 {{domxref("ServiceWorker")}} interface returns a string representing the current state
@@ -20,7 +20,7 @@ A {{jsxref("String")}} that can take one of the following values:
 
 - `"parsed"`
   - : The initial state of a service worker after it is downloaded and confirmed to be runnable.
-    A service worker is never updated to this state, so this will never be the value of the {{DOMxRef("ServiceWorker.statechange_event")}}
+    A service worker is never updated to this state, so this will never be the value of the {{DOMxRef("ServiceWorker.statechange_event", "statechange")}} event.
 - `"installing"`
   - : The service worker in this state is considered an installing worker. During this state, {{DOMxRef("ExtendableEvent.waitUntil()")}} can be called inside the `install` event handler to extend the life of the installing worker until the passed promise resolves successfully. This is primarily used to ensure that the service worker is not active until all of the core caches are populated.
 - `"installed"`
@@ -34,7 +34,7 @@ A {{jsxref("String")}} that can take one of the following values:
 
 ## Examples
 
-This code snippet is from the [service worker registration-events sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html) ([live demo](https://googlechrome.github.io/samples/service-worker/registration-events/)). The code listens for any change in the {{domxref("ServiceWorker.state")}}
+This code snippet is from the [service worker registration-events sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html) ([live demo](https://googlechrome.github.io/samples/service-worker/registration-events/)). The code listens for any change in the `ServiceWorker.state`
 and returns its value.
 
 ```js

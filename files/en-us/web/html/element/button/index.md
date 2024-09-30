@@ -19,12 +19,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 - `autofocus`
   - : This Boolean attribute specifies that the button should have input [focus](/en-US/docs/Web/API/HTMLElement/focus) when the page loads. **Only one element in a document can have this attribute.**
-- `disabled`
-
+- [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled)
   - : This Boolean attribute prevents the user from interacting with the button: it cannot be pressed or focused.
-
-    Firefox, unlike other browsers, [persists the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. To control this feature, use the [`autocomplete`](#autocomplete) attribute.
-
 - `form`
 
   - : The {{HTMLElement("form")}} element to associate the button with (its _form owner_). The value of this attribute must be the `id` of a `<form>` in the same document. (If this attribute is not set, the `<button>` is associated with its ancestor `<form>` element, if any.)
@@ -104,23 +100,17 @@ A submit button with the attribute `formaction` set, but without an associated f
 
 `<button>` elements are much easier to style than {{HTMLElement("input")}} elements. You can add inner HTML content (think `<i>`, `<br>`, or even `<img>`), and use {{Cssxref("::after")}} and {{Cssxref("::before")}} pseudo-elements for complex rendering.
 
-If your buttons are not for submitting form data to a server, be sure to set their `type` attribute to `button`. Otherwise they will try to submit form data and to load the (nonexistent) response, possibly destroying the current state of the document.
+If your buttons are not for submitting form data to a server, be sure to set their `type` attribute to `button`. Otherwise, they will try to submit form data and to load the (nonexistent) response, possibly destroying the current state of the document.
 
 While `<button type="button">` has no default behavior, event handlers can be scripted to trigger behaviors. An activated button can perform programmable actions using [JavaScript](/en-US/docs/Learn/JavaScript), such as removing an item from a list.
 
-## Examples
+By default, user agents style buttons as `display: flow-root`, which establishes a new [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) and centers the button's children both horizontally and vertically as long as they do not overflow. If the button is defined as a flex or grid container, the children will behave as flex or grid items. A button set to `display: inline` will be styled as if the value were set to `display: inline-block`.
 
-```html
-<button name="button">Press me</button>
-```
-
-{{ EmbedLiveSample('Example', 200, 64) }}
-
-## Accessibility concerns
+## Accessibility
 
 ### Icon buttons
 
-Buttons that only show an icon to represent do not have an _accessible name_. Accessible names provide information for assistive technology, such as screen readers, to access when they parse the document and generate [an accessibility tree](/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis). Assistive technology then uses the accessibility tree to navigate and manipulate page content.
+Buttons that only display an icon do not have an _{{glossary("accessible name")}}_. Accessible names provide information for assistive technology, such as screen readers, to access when they parse the document and generate [an accessibility tree](/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis). Assistive technology then uses the accessibility tree to navigate and manipulate page content.
 
 To give an icon button an accessible name, put text in the `<button>` element that concisely describes the button's functionality.
 
@@ -139,9 +129,9 @@ To give an icon button an accessible name, put text in the `<button>` element th
 
 {{EmbedLiveSample('Icon buttons')}}
 
-If you want to visually hide the button's text, an accessible way to do so is to use [a combination of CSS properties](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link) to remove it visually from the screen, but keep it parsable by assistive technology.
+If you want to visually hide the button's text, an accessible way to do so is to use [a combination of CSS properties](https://www.a11yproject.com/posts/how-to-hide-content/) to remove it visually from the screen, but keep it parsable by assistive technology.
 
-However, it is worth noting that leaving the button text visually apparent can aid people who may not be familiar with the icon's meaning or understand the button's purpose. This is especially relevant for people who are not technologically sophisticated, or who may have different cultural interpretations for the icon the button uses.
+However, it is worth noting that leaving the button text visible can help people who may not be familiar with the icon's meaning or understand the button's purpose. This is especially important for people who are not technologically sophisticated or who may have different cultural interpretations of the icon the button uses.
 
 - [What is an accessible name? | The Paciello Group](https://www.tpgi.com/what-is-an-accessible-name/)
 - [MDN Understanding WCAG, Guideline 4.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Robust#guideline_4.1_—_compatible_maximize_compatibility_with_current_and_future_user_agents_including_assistive_technologies)
@@ -151,7 +141,7 @@ However, it is worth noting that leaving the button text visually apparent can a
 
 #### Size
 
-Interactive elements such as buttons should provide an area large enough that it is easy to activate them. This helps a variety of people, including people with motor control issues and people using non-precise forms of input such as a stylus or fingers. A minimum interactive size of 44×44 [CSS pixels](https://www.w3.org/TR/WCAG21/#dfn-css-pixels) is recommended.
+Interactive elements such as buttons should have an area large enough to be easy to activate. This helps a variety of people, including people with motor control issues and people using non-precise forms of input such as a stylus or fingers. A minimum interactive size of 44×44 [CSS pixels](/en-US/docs/Glossary/CSS_pixel) is recommended.
 
 - [Understanding Success Criterion 2.5.5: Target Size | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
 - [Target Size and 2.5.5 | Adrian Roselli](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
@@ -169,13 +159,13 @@ Spacing may be created using CSS properties such as {{cssxref("margin")}}.
 
 To describe the state of a button the correct ARIA attribute to use is [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) and not [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) or [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected). To find out more read the information about the [ARIA button role](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role).
 
-### Firefox
+### Button styles
 
-Firefox will add a small dotted border on a focused button. This border is declared through CSS in the browser stylesheet, but you can override it to add your own focused style using [`button::-moz-focus-inner { }`](/en-US/docs/Web/CSS/::-moz-focus-inner).
+It is best not to override the default focus ring for elements that have focus. If the button styles are overridden, it is important to **ensure that the focus state has enough contrast** so that people experiencing low vision conditions can perceive it and people with cognitive differences will understand it.
 
-If overridden, it is important to **ensure that the state change when focus is moved to the button is high enough** that people experiencing low vision conditions will be able to perceive it.
+The {{cssxref(":focus-visible")}} pseudo-class can be used to apply styles to an element that has {{cssxref(":focus")}} only when the user agent's heuristics determine that the focus should be highlighted, such as when a `<button>` receives keyboard focus. See [:focus vs :focus-visible](/en-US/docs/Web/CSS/:focus-visible#focus_vs_focus-visible) for more information.
 
-Color contrast ratio is determined by comparing the luminosity of the button text and background color values compared to the background the button is placed on. In order to meet current [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/), a ratio of 4.5:1 is required for text content and 3:1 for large text. (Large text is defined as 18.66px and {{cssxref("font-weight", "bold")}} or larger, or 24px or larger.)
+Color contrast ratio is determined by comparing the luminosity of the button text and background color values to the background the button is placed on. To meet current [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/), a ratio of 4.5:1 is required for text content and 3:1 for large text. (Large text is defined as 18.66px and {{cssxref("font-weight", "bold")}} or larger, or 24px or larger.)
 
 - [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
 - [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
@@ -183,7 +173,15 @@ Color contrast ratio is determined by comparing the luminosity of the button tex
 
 ### Clicking and focus
 
-Whether clicking on a {{HTMLElement("button")}} or {{HTMLElement("input")}} button types causes it to (by default) become focused varies by browser and OS. Most browsers do give focus to a button being clicked, but [Safari does not, by design](https://webkit.org/b/22261).
+Whether clicking on a `<button>` or {{HTMLElement("input")}} button types causes it to (by default) become focused varies by browser and OS. Most browsers do give focus to a button being clicked, but [Safari does not, by design](https://webkit.org/b/22261#c68).
+
+## Examples
+
+```html
+<button name="button">Press me</button>
+```
+
+{{ EmbedLiveSample('Example', 200, 64) }}
 
 ## Technical summary
 

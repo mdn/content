@@ -42,7 +42,8 @@ getCommands.then(logCommands);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/commands/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/api/commands) API.
 
 ## Browser compatibility
 

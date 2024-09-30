@@ -24,7 +24,8 @@ Custom properties are scoped to the element(s) they are declared on, and partici
 - `<declaration-value>`
   - : This value matches any sequence of one or more tokens, so long as the sequence does not contain any disallowed token. It represents the entirety of what a valid declaration can have as its value.
 
-> **Note:** Custom property names are case sensitive — `--my-color` will be treated as a separate custom property to `--My-color`.
+> [!NOTE]
+> Custom property names are case sensitive — `--my-color` will be treated as a separate custom property to `--My-color`.
 
 ## Example
 

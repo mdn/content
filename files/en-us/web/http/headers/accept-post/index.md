@@ -13,7 +13,10 @@ The **`Accept-Post`** response HTTP header advertises which [media types](/en-US
 
 For example, a server receiving a `POST` request with an unsupported media type could reply with {{HTTPStatus("415")}} `Unsupported Media Type` and an **`Accept-Post`** header referencing one or more supported media types.
 
-> **Note:** An IANA registry maintains [a complete list of official content encodings](https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1).
+> [!NOTE]
+>
+> - An IANA registry maintains [a list of official content encodings](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#content-coding).
+> - The `bzip` and `bzip2` encodings are non-standard, but may be used in some cases, including legacy support.
 
 <table class="properties">
   <tbody>
@@ -36,7 +39,8 @@ Accept-Post: <MIME_type>/*
 Accept-Post: */*
 ```
 
-> **Note:** The `Accept-Post` header specifies a media range in the same way as {{HTTPHeader("Accept")}}, except that it has no notion of preference (i.e., no `q` arguments). This is because `Accept-Post` is a response header while `Accept` is a request header.
+> [!NOTE]
+> The `Accept-Post` header specifies a media range in the same way as {{HTTPHeader("Accept")}}, except that it has no notion of preference (i.e., no `q` arguments). This is because `Accept-Post` is a response header while `Accept` is a request header.
 
 ## Directives
 

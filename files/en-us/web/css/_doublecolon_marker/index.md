@@ -22,7 +22,8 @@ The `::marker` pseudo-element supports a limited number of CSS properties, inclu
 - The {{CSSxRef("content")}} property
 - All [animation](/en-US/docs/Web/CSS/CSS_animations#properties) and [transition](/en-US/docs/Web/CSS/CSS_transitions#properties) properties
 
-> **Note:** The specification states that additional CSS properties may be supported in the future.
+> [!NOTE]
+> The specification states that additional CSS properties may be supported in the future.
 
 ## Syntax
 

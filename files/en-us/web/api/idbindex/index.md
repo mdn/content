@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.IDBIndex
 ---
 
-{{APIRef("IndexedDB")}}
+{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
 `IDBIndex` interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) provides asynchronous access to an [index](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#index) in a database. An index is a kind of object store for looking up records in another object store, called the referenced object store. You use this interface to retrieve data.
 
@@ -14,8 +14,6 @@ You can retrieve records in an object store through the primary key or by using 
 The index is a persistent key-value storage where the value part of its records is the key part of a record in the referenced object store. The records in an index are automatically populated whenever records in the referenced object store are inserted, updated, or deleted. Each record in an index can point to only one record in its referenced object store, but several indexes can reference the same object store. When the object store changes, all indexes that refers to the object store are automatically updated.
 
 You can grab a set of keys within a range. To learn more, see {{domxref("IDBKeyRange")}}.
-
-{{AvailableInWorkers}}
 
 ## Instance properties
 
@@ -61,7 +59,7 @@ Finally, we iterate through each record, and insert the data into an HTML table.
 
 ```js
 function displayDataByIndex() {
-  tableEntry.innerHTML = "";
+  tableEntry.textContent = "";
   const transaction = db.transaction(["contactsList"], "readonly");
   const objectStore = transaction.objectStore("contactsList");
 
@@ -70,15 +68,20 @@ function displayDataByIndex() {
     const cursor = event.target.result;
     if (cursor) {
       const tableRow = document.createElement("tr");
-      tableRow.innerHTML =
-        `<td>${cursor.value.id}</td>` +
-        `<td>${cursor.value.lName}</td>` +
-        `<td>${cursor.value.fName}</td>` +
-        `<td>${cursor.value.jTitle}</td>` +
-        `<td>${cursor.value.company}</td>` +
-        `<td>${cursor.value.eMail}</td>` +
-        `<td>${cursor.value.phone}</td>` +
-        `<td>${cursor.value.age}</td>`;
+      for (const cell of [
+        cursor.value.id,
+        cursor.value.lName,
+        cursor.value.fName,
+        cursor.value.jTitle,
+        cursor.value.company,
+        cursor.value.eMail,
+        cursor.value.phone,
+        cursor.value.age,
+      ]) {
+        const tableCell = document.createElement("td");
+        tableCell.textContent = cell;
+        tableRow.appendChild(tableCell);
+      }
       tableEntry.appendChild(tableRow);
 
       cursor.continue();

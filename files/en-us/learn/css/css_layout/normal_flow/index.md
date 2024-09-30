@@ -69,7 +69,7 @@ Let's look at a simple example that explains all of this:
 
 <p>
   We are separated by our margins. Because of margin collapsing, we are
-  separated by the width of one of our margins, not both.
+  separated by the size of one of our margins, not both.
 </p>
 
 <p>

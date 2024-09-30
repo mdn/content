@@ -41,7 +41,7 @@ A {{jsxref("Statements/class", "class")}} can have any number of `static {}` ini
 These are [evaluated](/en-US/docs/Web/JavaScript/Reference/Classes#evaluation_order), along with any interleaved static field initializers, in the order they are declared.
 Any static initialization of a super class is performed first, before that of its sub classes.
 
-The scope of the variables declared inside the static block is local to the block. This includes `var`, `function`, `const`, and `let` declarations. `var` declarations in the block are not hoisted.
+The scope of the variables declared inside the static block is local to the block. This includes `var`, `function`, `const`, and `let` declarations. `var` declarations will not be hoisted out of the static block.
 
 ```js
 var y = "Outer y";
@@ -49,11 +49,15 @@ var y = "Outer y";
 class A {
   static field = "Inner y";
   static {
+    // var y only hoisted inside block
+    console.log(y); // undefined <-- not 'Outer y'
+
     var y = this.field;
   }
 }
 
-// var defined in static block is not hoisted
+// var y defined in static block is not hoisted
+// outside the block
 console.log(y); // 'Outer y'
 ```
 
@@ -67,7 +71,8 @@ The scope of the static block is nested _within_ the lexical scope of the class 
 
 [Static field](/en-US/docs/Web/JavaScript/Reference/Classes/static) initializers and static initialization blocks are evaluated one-by-one. The initialization block can refer to field values above it, but not below it. All static methods are added beforehand and can be accessed, although calling them may not behave as expected if they refer to fields below the current block.
 
-> **Note:** This is more important with [private static fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties), because accessing a non-initialized private field throws a {{jsxref("TypeError")}}, even if the private field is declared below. (If the private field is not declared, it would be an early {{jsxref("SyntaxError")}}.)
+> [!NOTE]
+> This is more important with [private static fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties), because accessing a non-initialized private field throws a {{jsxref("TypeError")}}, even if the private field is declared below. (If the private field is not declared, it would be an early {{jsxref("SyntaxError")}}.)
 
 A static initialization block may not have decorators (the class itself may).
 

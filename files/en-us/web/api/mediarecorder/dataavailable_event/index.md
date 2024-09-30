@@ -33,8 +33,10 @@ object that contains the data. This occurs in four situations:
   {{domxref("MediaRecorder.stop()")}} and {{domxref("MediaRecorder.requestData()")}} to
   produce multiple same-length blobs plus other shorter blobs as well.
 
-> **Note:** The {{domxref("Blob")}} containing the media data is available in the
-> {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} event's `data` property.
+> [!NOTE]
+> Like other time values in web APIs, `timeslice` is not exact and the real intervals may be slightly delayed due to other pending tasks. Therefore, don't rely on `timeslice` and the number of chunks received to calculate the time elapsed, because errors may accumulate. Instead, keep a separate timer using {{domxref("Event.timeStamp")}} or similar, that records the total time elapsed since starting.
+
+The {{domxref("Blob")}} containing the media data is available in the `dataavailable` event's `data` property.
 
 ## Syntax
 

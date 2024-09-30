@@ -8,7 +8,11 @@ browser-compat: api.RTCIceTransport.gatheringState
 
 {{APIRef("WebRTC")}}
 
-The read-only property **`gatheringState`** property of the {{domxref("RTCIceTransport")}} interface returns a string that indicates the current gathering state of the ICE agent: `"new"`, `"gathering"`, or `"complete"`.
+The **`gatheringState`** read-only property of the {{domxref("RTCIceTransport")}} interface returns a string that indicates the current gathering state of the ICE agent for this transport: `"new"`, `"gathering"`, or `"complete"`.
+
+You can detect when the value of this property changes by watching for an event of type {{domxref("RTCIceTransport/gatheringstatechange_event", "gatheringstatechange")}}.
+
+Note that **`gatheringState`** represents the gathering state of just this transport, while {{domxref("RTCPeerConnection.iceGatheringState")}} represents the overall gathering state of the whole connection, including every {{domxref("RTCIceTransport")}} used by every {{domxref("RTCRtpSender")}} and every {{domxref("RTCRtpReceiver")}} on the entire connection.
 
 ## Value
 

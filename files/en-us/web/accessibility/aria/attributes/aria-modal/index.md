@@ -5,13 +5,16 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-modal
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-modal` attribute indicates whether an element is modal when displayed.
 
 ## Description
 
 A section of content is "modal" means navigation is limited to the area itself and the background (the ancestors and siblings of the modal) is hidden. Setting `aria-modal="true"` on [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) and [`alertdialog` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role) containers indicates the presence of a "modal" element to users of assistive technology, but does not actually make the element modal. The features that make the element actually modal must be implemented by the developer.
 
-> **Note:** ARIA only modifies the accessibility tree, modifying how assistive technology presents the content to your users. ARIA doesn't change anything about an element's function or behavior. To create a modal effect you must use JavaScript to manage behavior, focus, and ARIA states.
+> [!NOTE]
+> ARIA only modifies the accessibility tree, modifying how assistive technology presents the content to your users. ARIA doesn't change anything about an element's function or behavior. To create a modal effect you must use JavaScript to manage behavior, focus, and ARIA states.
 
 Relevant only on `dialog` and `alertdialog` containers, setting `aria-modal="true"` tells assistive technologies to let the user know the ability to interact with, or access other content on the page requires the modal dialog to be closed or otherwise lose focus.
 
@@ -25,7 +28,7 @@ Ensure the modal is controllable using only its descendant elements. If a modal 
 
 When a modal element is displayed, authors **should** mark all other contents as inert (such as "inert subtrees" in HTML). Disabled content is not inert content. Inert content cannot be interacted with using both normal and specialized browsing modes such as caret browsing, which allow an assistive technology user to explore a page in detail. This includes disabled content, whose content may provide meaning.
 
-The [`inert`](/en-US/docs/Web/HTML/Global_attributes/inert) attribute is a boolean attribute that indicates, by its presence, that the element and all its shadow-including descendants are to be made inert. Until [`HTMLElement.inert`](/en-US/docs/Web/API/HTMLElement/inert) is fully supported, content can be [made inert with JavaScript](https://whistlr.info/2021/inert/).
+The [`inert`](/en-US/docs/Web/HTML/Global_attributes/inert) attribute is a boolean attribute that indicates, by its presence, that the element and all its shadow-including descendants are to be made inert. Until [`HTMLElement.inert`](/en-US/docs/Web/API/HTMLElement/inert) is fully supported, content can be [made inert with JavaScript](https://samthor.au/2021/inert/).
 
 Including `aria-modal="true"` on a [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) or [`alertdialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role), removes the requirement of putting [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) on background content, as the `aria-modal` informs assistive technologies that content outside a dialog is inert. Note that while support for the {{HTMLElement("dialog")}} element is good, thoroughly testing your implementation is vitally important.
 
@@ -98,8 +101,3 @@ Inherits into roles:
 - [`dialog` role](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)
 - HTML [`inert` global attribute](/en-US/docs/Web/HTML/Global_attributes/inert)
 - HTMLElement API [`inert`](/en-US/docs/Web/API/HTMLElement/inert) property
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

@@ -8,7 +8,7 @@ status:
 browser-compat: api.ReadableStream.from_static
 ---
 
-{{APIRef("Streams")}}{{SeeCompatTable}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`ReadableStream.from()`** static method returns a {{domxref("ReadableStream")}} from a provided iterable or async iterable object.
 
@@ -32,7 +32,7 @@ A {{domxref("ReadableStream")}}.
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if the passed parameter is not an iterable or async iterable (does not define the `@@iterator` or `@@asyncIterator` method).
+  - : Thrown if the passed parameter is not an iterable or async iterable (does not define the `[Symbol.iterator]()` or `[Symbol.asyncIterator]()` method).
     Also thrown if, during iteration, the result of the next step is not an object or is a promise that does not resolve to an object.
 
 ## Examples

@@ -6,13 +6,11 @@ page-type: web-api-instance-method
 browser-compat: api.URLSearchParams.forEach
 ---
 
-{{APIRef("URL API")}}
+{{APIRef("URL API")}} {{AvailableInWorkers}}
 
 The **`forEach()`** method of the
 {{domxref("URLSearchParams")}} interface allows iteration through all values contained
 in this object via a callback function.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-posinset
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-posinset` attribute defines an element's number or position in the current set of listitems or treeitems when not all items are present in the DOM.
 
 ## Description
@@ -27,7 +29,8 @@ The following example shows a listbox with four element options out of the 118 i
 
 The value of each `aria-posinset` is an integer greater than or equal to `1`, and less than or equal to the size of the set when that size is known.
 
-> **Note:** When using `aria-posinset` you must also include value for [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize), which is the size of the entire set. If the size of the entire set is unknown, set `aria-setsize="-1"`.
+> [!NOTE]
+> When using `aria-posinset` you must also include value for [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize), which is the size of the entire set. If the size of the entire set is unknown, set `aria-setsize="-1"`.
 
 For [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role), [`menuitemcheckbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role), or [`menuitemradio`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role), set the value of `aria-posinset` with respect to the total number of items in the menu, excluding any separators.
 
@@ -74,8 +77,3 @@ Inherits into roles:
 ## See also
 
 - [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize)
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

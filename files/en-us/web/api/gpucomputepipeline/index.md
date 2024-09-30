@@ -7,7 +7,7 @@ status:
 browser-compat: api.GPUComputePipeline
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPUComputePipeline`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents a pipeline that controls the compute shader stage and can be used in a {{domxref("GPUComputePassEncoder")}}.
 
@@ -27,7 +27,8 @@ A `GPUComputePipeline` object instance can be created using the {{domxref("GPUDe
 
 ## Examples
 
-> **Note:** The [WebGPU samples](https://webgpu.github.io/webgpu-samples/) feature many more examples.
+> [!NOTE]
+> The [WebGPU samples](https://webgpu.github.io/webgpu-samples/) feature many more examples.
 
 ### Basic example
 
@@ -35,7 +36,7 @@ Our [basic compute demo](https://mdn.github.io/dom-examples/webgpu-compute-demo/
 
 - Creating a bind group layout with {{domxref("GPUDevice.createBindGroupLayout()")}}.
 - Feeding the `bindGroupLayout` into {{domxref("GPUDevice.createPipelineLayout()")}} to create a {{domxref("GPUPipelineLayout")}}.
-- Using that value immediately in a `createComputePipeline()` call to create a {{domxref("GPUComputePipeline")}}.
+- Using that value immediately in a `createComputePipeline()` call to create a `GPUComputePipeline`.
 
 ```js
 // ...

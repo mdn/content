@@ -70,6 +70,10 @@ Instead, perhaps you would like to add scrollbars when content overflows? Using 
 
 **Remove some content from the box below. Notice how the scrollbars remain, even if there is no need for scrolling.**
 
+> [!NOTE]
+> Scrollbar visibility depends on the operating system.
+> You may have to change your browser settings to always show scroll bars in order for the scroll bars to always show in the following examples.
+
 {{EmbedGHLiveSample("css-examples/learn/overflow/scroll.html", '100%', 700)}}
 
 In the example above, we only need to scroll on the `y` axis, however we get scrollbars in both axes. To just scroll on the `y` axis, you could use the {{cssxref("overflow-y")}} property, setting `overflow-y: scroll`.
@@ -82,7 +86,8 @@ You can also enable scrolling along the x-axis by using {{cssxref("overflow-x")}
 
 As with `scroll`, you get a scrollbar in the scrolling dimension whether or not there is enough content to cause a scrollbar.
 
-> **Note:** You can specify x- and y-axis scrolling using the `overflow` property, passing two values. If two keywords are specified, the first applies to `overflow-x` and the second applies to `overflow-y`. Otherwise, both `overflow-x` and `overflow-y` are set to the same value. For example, `overflow: scroll hidden` would set `overflow-x` to `scroll` and `overflow-y` to `hidden`.
+> [!NOTE]
+> You can specify x- and y-axis scrolling using the `overflow` property, passing two values. If two keywords are specified, the first applies to `overflow-x` and the second applies to `overflow-y`. Otherwise, both `overflow-x` and `overflow-y` are set to the same value. For example, `overflow: scroll hidden` would set `overflow-x` to `scroll` and `overflow-y` to `hidden`.
 
 If you only want scrollbars to appear when there is more content than can fit in the box, use `overflow: auto`. This allows the browser to determine if it should display scrollbars.
 

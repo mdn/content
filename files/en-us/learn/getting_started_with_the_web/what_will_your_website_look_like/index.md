@@ -20,7 +20,8 @@ To begin, you'll need to answer these questions:
 2. **What information are you presenting on the subject?** Write a title and a few paragraphs and think of an image you'd like to show on your page.
 3. **What does your website look like,** in simple high-level terms? What's the background color? What kind of font is appropriate: formal, cartoony, bold and loud, subtle?
 
-> **Note:** Complex projects need detailed guidelines that go into all the details of colors, fonts, spacing between items on a page, appropriate writing style, and so on. This is sometimes called a design guide, design system, or brand book, and you can see an example at the [Firefox Photon Design System](https://design.firefox.com/photon/).
+> [!NOTE]
+> Complex projects need detailed guidelines that go into all the details of colors, fonts, spacing between items on a page, appropriate writing style, and so on. This is sometimes called a design guide, design system, or brand book, and you can see an example at the [Firefox Acorn Design System](https://acorn.firefox.com/latest).
 
 ## Sketching out your design
 
@@ -28,7 +29,8 @@ Next, grab pen and paper and sketch out roughly how you want your site to look. 
 
 ![A rough drawing and sketch of a website on paper](website-drawing-scan.png)
 
-> **Note:** Even on real, complex websites, the design teams usually start out with rough sketches on paper and later on build digital mockups using a graphics editor or web technologies.
+> [!NOTE]
+> Even on real, complex websites, the design teams usually start out with rough sketches on paper and later on build digital mockups using a graphics editor or web technologies.
 >
 > Web teams often include both a graphic designer and a {{Glossary("UX", "user experience")}} (UX) designer. Graphic designers put together the visuals of the website. UX designers have a somewhat more abstract role in addressing how users will experience and interact with the website.
 
@@ -68,7 +70,8 @@ Once you have found a font, there are two main ways of using it:
 1. Add a reference in your code to load the font from Google's servers.
 2. Download the font file to your own system, host the font yourself, and use your hosted copy in your website's code.
 
-> **Note:** Serving fonts hosted on Google Fonts may be incompatible with the European Union's data privacy regulation [GDPR](https://gdpr.eu/what-is-gdpr/) as the font service exposes the user's IP address. If this is a potential problem for you, choose the second option.
+> [!NOTE]
+> Serving fonts hosted on Google Fonts may be incompatible with the European Union's data privacy regulation [GDPR](https://gdpr.eu/) as the font service exposes the user's IP address. If this is a potential problem for you, then either choose the second option or choose a font provider that is GDPR compliant, such as [Bunny Fonts](https://fonts.bunny.net/about).
 
 Alternatively you can use [safe web fonts](https://web.mit.edu/jmorzins/www/fonts.html) such as Arial, Times New Roman, or Courier New.
 

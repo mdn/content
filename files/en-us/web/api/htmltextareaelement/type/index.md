@@ -8,25 +8,17 @@ browser-compat: api.HTMLTextAreaElement.type
 
 {{ApiRef("HTML DOM")}}
 
-The read-only **`type`** property of the {{domxref("HTMLTextAreaElement")}} always returns `textarea`.
+The **`type`** read-only property of the {{domxref("HTMLTextAreaElement")}} interface returns the string `"textarea"`.
 
 ## Value
 
-A string whose value is always `textarea`.
+The string `"textarea"`.
 
 ## Example
 
-### HTML
-
-```html
-<textarea id="txtarea"></textarea>
-```
-
-### JavaScript
-
 ```js
-const txtAreaElement = document.querySelector("#txtarea");
-console.log(txtAreaElement.type); // Output: "textarea"
+const textArea = document.querySelector("textarea");
+console.log(textArea.type); // "textarea"
 ```
 
 ## Specifications
@@ -39,4 +31,5 @@ console.log(txtAreaElement.type); // Output: "textarea"
 
 ## See also
 
-- {{domxref("HTMLInputElement.type")}} property
+- {{domxref("HTMLTextAreaElement")}}
+- {{HTMLElement("textarea")}}

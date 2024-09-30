@@ -25,7 +25,7 @@ isVertexArrayOES(arrayObject)
 
 ### Return value
 
-A {{domxref("WebGL_API.Types")}} indicating whether the given object is a
+A {{domxref("WebGL_API.Types", "GLboolean")}} indicating whether the given object is a
 {{domxref("WebGLVertexArrayObject")}} object (`true`) or not
 (`false`).
 

@@ -8,7 +8,7 @@ browser-compat: api.HTMLAnchorElement.text
 
 {{ApiRef("HTML DOM")}}
 
-The **`text`** property of the {{domxref("HTMLAnchorElement")}} represents the text inside the the element.
+The **`text`** property of the {{domxref("HTMLAnchorElement")}} represents the text inside the element.
 This property represents the same information as {{domxref("Node.textContent")}}.
 
 ## Value

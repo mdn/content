@@ -41,11 +41,11 @@ The `hyphenate-limit-chars` property takes 1–3 values that can be numeric or `
 
 ### Values
 
-- `x y z`
+- `<number> <number> <number>`
   - : The first value is the minimum word length before words should be hyphenated. The second value is the minimum number of characters before the hyphen. The third value is the minimum number of characters after the hyphen.
-- `x y`
+- `<number> <number>`
   - : The first value is the minimum word length before words should be hyphenated. The second value is the minimum number of characters before the hyphen. The minimum number of characters after the hyphen will be set equal to the second value.
-- `x`
+- `<number>`
   - : The value is the minimum word length before words should be hyphenated. The minimum number of characters before and after the hyphen will be set to `auto`.
 
 If `auto` is set for any of the values, the user agent will choose an appropriate value for the current layout. Unless the user agent can calculate a better value, the following default values will be used:

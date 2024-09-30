@@ -435,7 +435,7 @@ function outside() {
 console.log(outside()(10)); // 20 (instead of 10)
 ```
 
-The name conflict happens at the statement `return x * 2` and is between `inside`'s parameter `x` and `outside`'s variable `x`. The scope chain here is {`inside`, `outside`, global object}. Therefore, `inside`'s `x` takes precedences over `outside`'s `x`, and `20` (`inside`'s `x`) is returned instead of `10` (`outside`'s `x`).
+The name conflict happens at the statement `return x * 2` and is between `inside`'s parameter `x` and `outside`'s variable `x`. The scope chain here is `inside` => `outside` => global object. Therefore, `inside`'s `x` takes precedences over `outside`'s `x`, and `20` (`inside`'s `x`) is returned instead of `10` (`outside`'s `x`).
 
 ## Closures
 
@@ -516,7 +516,8 @@ const getCode = (function () {
 console.log(getCode()); // "0]Eal(eh&2"
 ```
 
-> **Note:** There are a number of pitfalls to watch out for when using closures!
+> [!NOTE]
+> There are a number of pitfalls to watch out for when using closures!
 >
 > If an enclosed function defines a variable with the same name as a variable in the outer scope, then there is no way to refer to the variable in the outer scope again. (The inner scope variable "overrides" the outer one, until the program exits the inner scope. It can be thought of as a [name conflict](#name_conflicts).)
 >
@@ -570,7 +571,8 @@ console.log(myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley"));
 // "sage. basil. oregano. pepper. parsley. "
 ```
 
-> **Note:** The `arguments` variable is "array-like", but not an array. It is array-like in that it has a numbered index and a `length` property. However, it does _not_ possess all of the array-manipulation methods.
+> [!NOTE]
+> The `arguments` variable is "array-like", but not an array. It is array-like in that it has a numbered index and a `length` property. However, it does _not_ possess all of the array-manipulation methods.
 
 See the {{jsxref("Function")}} object in the JavaScript reference for more information.
 

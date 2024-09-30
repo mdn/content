@@ -16,9 +16,10 @@ jobs:
     name: Label by path
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/labeler@v4
+      - uses: actions/labeler@v5
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          sync-labels: true
 
   # Docs: https://github.com/CodelyTV/pr-size-labeler
   label-by-size:

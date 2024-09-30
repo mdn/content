@@ -14,4 +14,5 @@ Communication between browsing contexts is severely constrained. Between browsin
 
 ## See also
 
-- See {{glossary("origin")}}
+- Related glossary terms:
+  - {{glossary("Origin")}}

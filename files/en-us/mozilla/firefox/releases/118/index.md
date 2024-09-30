@@ -35,14 +35,6 @@ No notable changes.
 - The [`<semantics>`](/en-US/docs/Web/MathML/Element/semantics) and [`<maction>`](/en-US/docs/Web/MathML/Element/maction) elements only render the first child element by default now. The `mathml.legacy_maction_and_semantics_implementations.disabled` preference has been removed (Firefox bug [1788223](https://bugzil.la/1788223)).
 - All values of the [`mathvariant`](/en-US/docs/Web/MathML/Element/mi#mathvariant) attribute other than `normal` are now deprecated. Additionally, the attribute's use is now limited to the `<mi>` element (Firefox bug [1845461](https://bugzil.la/1845461)).
 
-### SVG
-
-No notable changes.
-
-### Security
-
-No notable changes.
-
 ### APIs
 
 - The <kbd>⊞ Windows Logo</kbd> key on Windows and the <kbd>Command</kbd> key on macOS now return a value of `"Meta"` for [`KeyboardEvent.key`](/en-US/docs/Web/API/KeyboardEvent/key), instead of `"OS"`, and [`KeyboardEvent.code`](/en-US/docs/Web/API/KeyboardEvent/code) returns `MetaLeft`/`MetaRight` instead of `OSLeft`/`OSRight` (Firefox bug [1232918](https://bugzil.la/1232918)).
@@ -76,4 +68,4 @@ No notable changes.
 
 ## Older versions
 
-{{Firefox_for_developers(117)}}
+{{Firefox_for_developers}}

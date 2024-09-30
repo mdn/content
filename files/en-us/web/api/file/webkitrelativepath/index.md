@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.File.webkitRelativePath
 ---
 
-{{APIRef("File API")}}{{AvailableInWorkers}}
+{{APIRef("File and Directory Entries API")}}{{AvailableInWorkers}}
 
 The **`webkitRelativePath`** read-only property of the {{domxref("File")}} interface
 contains a string which specifies the file's path relative to the

@@ -6,11 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.URLSearchParams.size
 ---
 
-{{APIRef("URL API")}}
+{{APIRef("URL API")}} {{AvailableInWorkers}}
 
 The **`size`** read-only property of the {{domxref("URLSearchParams")}} interface indicates the total number of search parameter entries.
-
-{{AvailableInWorkers}}
 
 ## Value
 

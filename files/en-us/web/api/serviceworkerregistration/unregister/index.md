@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.ServiceWorkerRegistration.unregister
 ---
 
-{{APIRef("Service Workers API")}}{{SecureContext_Header}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`unregister()`** method of the
 {{domxref("ServiceWorkerRegistration")}} interface unregisters the service worker
@@ -16,8 +16,6 @@ registration and returns a {{jsxref("Promise")}}. The promise will resolve to
 unregister if someone else just called {{domxref("ServiceWorkerContainer.register()")}}
 with the same scope.) The service worker will finish any ongoing operations before it is
 unregistered.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

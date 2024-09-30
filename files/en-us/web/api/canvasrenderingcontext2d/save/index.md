@@ -33,13 +33,12 @@ The drawing state that gets saved onto a stack consists of:
   {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}},
   {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}},
   {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}},
-  {{domxref("CanvasRenderingContext2D.globalCompositeOperation",
-    "globalCompositeOperation")}}, {{domxref("CanvasRenderingContext2D.font", "font")}},
+  {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation")}},
+  {{domxref("CanvasRenderingContext2D.font", "font")}},
   {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}},
   {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}},
   {{domxref("CanvasRenderingContext2D.direction", "direction")}},
-  {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled",
-    "imageSmoothingEnabled")}}.
+  {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}}.
 
 ## Syntax
 

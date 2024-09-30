@@ -8,9 +8,7 @@ browser-compat: api.BiquadFilterNode.getFrequencyResponse
 
 {{ APIRef("Web Audio API") }}
 
-The `getFrequencyResponse()` method of the {{ domxref("BiquadFilterNode")
-    }} interface takes the current filtering algorithm's settings and calculates the
-frequency response for frequencies specified in a specified array of frequencies.
+The `getFrequencyResponse()` method of the {{ domxref("BiquadFilterNode")}} interface takes the current filtering algorithm's settings and calculates the frequency response for frequencies specified in a specified array of frequencies.
 
 The two output arrays, `magResponseOutput` and
 `phaseResponseOutput`, must be created before calling this method; they
@@ -105,7 +103,11 @@ function calcFrequencyResponse() {
 
   for (let i = 0; i <= myFrequencyArray.length - 1; i++) {
     const listItem = document.createElement("li");
-    listItem.innerHTML = `<strong>${myFrequencyArray[i]}Hz</strong>: Magnitude ${magResponseOutput[i]}, Phase ${phaseResponseOutput[i]} radians.`;
+    listItem.textContent = `: Magnitude ${magResponseOutput[i]}, Phase ${phaseResponseOutput[i]} radians.`;
+    listItem.insertBefore(
+      document.createElement("strong"),
+      listItem.firstChild,
+    ).textContent = `${myFrequencyArray[i]}Hz`;
     freqResponseOutput.appendChild(listItem);
   }
 }

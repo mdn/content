@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.ReadableStreamDefaultReader.read
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`read()`** method of the {{domxref("ReadableStreamDefaultReader")}} interface returns a {{jsxref("Promise")}} providing access to the next chunk in the stream's internal queue.
 

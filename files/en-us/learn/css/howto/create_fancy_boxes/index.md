@@ -118,7 +118,8 @@ Okay, let's have fun with backgrounds:
 
 {{ EmbedLiveSample('Backgrounds', '100%', '200') }}
 
-> **Note:** Gradients can be used in some very creative ways. If you want to see some creative examples, take a look at [Lea Verou's CSS patterns](https://projects.verou.me/css3patterns/). If you want to learn more about gradients, feel free to get into [our dedicated article](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients).
+> [!NOTE]
+> Gradients can be used in some very creative ways. If you want to see some creative examples, take a look at [Lea Verou's CSS patterns](https://projects.verou.me/css3patterns/). If you want to learn more about gradients, feel free to get into [our dedicated article](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients).
 
 ## Pseudo-elements
 

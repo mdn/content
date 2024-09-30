@@ -46,7 +46,8 @@ quotes: unset;
 
     Which pair of quotes is used depends on the depth, or nesting level, of quotes: the number of occurrences of `<q>` quotes or `open-quote` (or `no-open-quote`) in all generated text before the current occurrence, minus the number of occurrences of closing quotes, either as `</q>`, `close-quote`, or `no-close-quote`. If the depth is 0, the first pair is used, if the depth is 1, the second pair is used, etc.
 
-> **Note:** The CSS `content` property value `open-quote` increments and `no-close-quote` decrements the quoting level, but does not insert a quotation marks.
+> [!NOTE]
+> The CSS `content` property value `open-quote` increments and `no-close-quote` decrements the quoting level, but does not insert a quotation marks.
 
 ## Formal definition
 

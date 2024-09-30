@@ -79,3 +79,7 @@ table.deleteRow(1);
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("HTMLTableSectionElement.deleteRow()")}}

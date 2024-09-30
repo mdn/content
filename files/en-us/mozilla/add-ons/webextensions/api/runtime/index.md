@@ -31,6 +31,10 @@ It also provides messaging APIs enabling you to:
   - : Result of a call to {{WebExtAPIRef("runtime.requestUpdateCheck()")}}.
 - {{WebExtAPIRef("runtime.OnInstalledReason")}}
   - : The reason that the {{WebExtAPIRef("runtime.onInstalled")}} event is being dispatched.
+- {{WebExtAPIRef("runtime.OnPerformanceWarningCategory")}}
+  - : The category of warning that dispatched the {{WebExtAPIRef("runtime.onPerformanceWarning")}} event.
+- {{WebExtAPIRef("runtime.OnPerformanceWarningSeverity")}}
+  - : The severity of warning that dispatched the {{WebExtAPIRef("runtime.onPerformanceWarning")}} event.
 - {{WebExtAPIRef("runtime.OnRestartRequiredReason")}}
   - : The reason that the {{WebExtAPIRef("runtime.onRestartRequired")}} event is being dispatched.
 
@@ -47,6 +51,8 @@ It also provides messaging APIs enabling you to:
   - : Retrieves the [Window](/en-US/docs/Web/API/Window) object for the background page running inside the current extension.
 - {{WebExtAPIRef("runtime.openOptionsPage()")}}
   - : Opens your extension's [options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages).
+- {{WebExtAPIRef("runtime.getContexts()")}}
+  - : Gets details about the contexts associated with the extension.
 - {{WebExtAPIRef("runtime.getFrameId()")}}
   - : Gets the frame ID of any window global or frame element.
 - {{WebExtAPIRef("runtime.getManifest()")}}
@@ -96,6 +102,8 @@ It also provides messaging APIs enabling you to:
   - : Fired when a message is sent from either an extension process or a content script.
 - {{WebExtAPIRef("runtime.onMessageExternal")}}
   - : Fired when a message is sent from another extension. Cannot be used in a content script.
+- {{WebExtAPIRef("runtime.onPerformanceWarning")}}
+  - : Fired when a runtime performance issue is detected for the extension.
 - {{WebExtAPIRef("runtime.onRestartRequired")}}
   - : Fired when the device needs to be restarted.
 
@@ -105,7 +113,8 @@ It also provides messaging APIs enabling you to:
 
 {{WebExtExamples("h2")}}
 
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

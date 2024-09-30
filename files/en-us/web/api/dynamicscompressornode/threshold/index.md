@@ -18,7 +18,8 @@ The `threshold` property's default value is `-24` and it can be set between `-10
 
 An {{domxref("AudioParam")}}.
 
-> **Note:** Though the {{domxref("AudioParam")}} returned is read-only, the value it represents is not.
+> [!NOTE]
+> Though the {{domxref("AudioParam")}} returned is read-only, the value it represents is not.
 
 ## Examples
 

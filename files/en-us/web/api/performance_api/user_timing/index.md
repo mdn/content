@@ -108,7 +108,8 @@ There are many different performance entries in the browser's performance timeli
 
 To retrieve performance marks and measures at a single point in time, the {{domxref("Performance")}} interface provides three methods, as shown below.
 
-> **Note:** The methods below do not notify you about new performance markers; you will only get markers that have been created when you call these methods.
+> [!NOTE]
+> The methods below do not notify you about new performance markers; you will only get markers that have been created when you call these methods.
 > See the section [Observing performance measures](#observing_performance_measures) above for receiving notifications about new metrics as they become available using a {{domxref("PerformanceObserver")}}. Usually, using performance observers is the preferred way to get performance markers and measures.
 
 The {{domxref("Performance.getEntries","performance.getEntries()")}} method gets all performance entries. You can filter them as needed.

@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.FileSystemSyncAccessHandle
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers("dedicated")}}
 
 The **`FileSystemSyncAccessHandle`** interface of the {{domxref("File System API", "File System API", "", "nocode")}} represents a synchronous handle to a file system entry.
 
@@ -15,7 +15,8 @@ As a result, its methods are not subject to the same security checks as methods 
 
 The interface is accessed through the {{domxref('FileSystemFileHandle.createSyncAccessHandle()')}} method.
 
-> **Note:** In earlier versions of the spec, {{domxref("FileSystemSyncAccessHandle.close()", "close()")}}, {{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}, {{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}, and {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} were wrongly specified as asynchronous methods, and older versions of some browsers implement them in this way. However, all current browsers that support these methods implement them as synchronous methods.
+> [!NOTE]
+> In earlier versions of the spec, {{domxref("FileSystemSyncAccessHandle.close()", "close()")}}, {{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}, {{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}, and {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} were wrongly specified as asynchronous methods, and older versions of some browsers implement them in this way. However, all current browsers that support these methods implement them as synchronous methods.
 
 ## Instance properties
 

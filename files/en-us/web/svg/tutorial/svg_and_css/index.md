@@ -12,7 +12,8 @@ This page illustrates the application of CSS to the specialized language for cre
 
 Below you'll create a simple demonstration that runs in your SVG-enabled browser.
 
-> **Note:** Elements referenced by {{SVGElement("use")}} elements inherit the styles from that element. So to apply different styles to them you should use [CSS custom properties](/en-US/docs/Web/CSS/CSS_cascading_variables).
+> [!NOTE]
+> Elements referenced by {{SVGElement("use")}} elements inherit the styles from that element. So to apply different styles to them you should use [CSS custom properties](/en-US/docs/Web/CSS/CSS_cascading_variables).
 
 ## Example
 

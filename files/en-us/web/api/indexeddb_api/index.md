@@ -5,11 +5,9 @@ page-type: web-api-overview
 spec-urls: https://w3c.github.io/IndexedDB/
 ---
 
-{{DefaultAPISidebar("IndexedDB")}}
+{{DefaultAPISidebar("IndexedDB")}} {{AvailableInWorkers}}
 
 IndexedDB is a low-level API for client-side storage of significant amounts of structured data, including files/blobs. This API uses indexes to enable high-performance searches of this data. While [Web Storage](/en-US/docs/Web/API/Web_Storage_API) is useful for storing smaller amounts of data, it is less useful for storing larger amounts of structured data. IndexedDB provides a solution. This is the main landing page for MDN's IndexedDB coverage — here we provide links to the full API reference and usage guides, browser support details, and some explanation of key concepts.
-
-{{AvailableInWorkers}}
 
 ## Key concepts and usage
 
@@ -17,8 +15,10 @@ IndexedDB is a transactional database system, like an SQL-based Relational Datab
 
 - Read more about [IndexedDB key characteristics and basic terminology](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology).
 - Learn to use IndexedDB asynchronously from first principles with our [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB) guide.
+- See a complete step-by-step example in the [checking when a deadline is due](/en-US/docs/Web/API/IndexedDB_API/Checking_when_a_deadline_is_due) guide.
 
-> **Note:** Like most web storage solutions, IndexedDB follows a [same-origin policy](https://www.w3.org/Security/wiki/Same_Origin_Policy). So while you can access stored data within a domain, you cannot access data across different domains.
+> [!NOTE]
+> Like most web storage solutions, IndexedDB follows a [same-origin policy](https://www.w3.org/Security/wiki/Same_Origin_Policy). So while you can access stored data within a domain, you cannot access data across different domains.
 
 ### Synchronous and asynchronous
 
@@ -30,12 +30,12 @@ There are a number of web technologies that store data of one kind or another on
 
 ## Interfaces
 
-To get access to a database, call [`open()`](/en-US/docs/Web/API/IDBFactory/open) on the [`indexedDB`](/en-US/docs/Web/API/indexedDB) property of a [window](/en-US/docs/Web/API/Window) object. This method returns an {{domxref("IDBRequest")}} object; asynchronous operations communicate to the calling application by firing events on {{domxref("IDBRequest")}} objects.
+To get access to a database, call [`open()`](/en-US/docs/Web/API/IDBFactory/open) on the [`indexedDB`](/en-US/docs/Web/API/Window/indexedDB) property of a [window](/en-US/docs/Web/API/Window) object. This method returns an {{domxref("IDBRequest")}} object; asynchronous operations communicate to the calling application by firing events on {{domxref("IDBRequest")}} objects.
 
 ### Connecting to a database
 
 - {{domxref("IDBFactory")}}
-  - : Provides access to a database. This is the interface implemented by the global object {{domxref("indexedDB")}} and is therefore the entry point for the API.
+  - : Provides access to a database. An object of this type is the value of the global {{domxref("Window.indexedDB")}} and {{domxref("WorkerGlobalScope.indexedDB")}} properties. It is therefore the entry point for the API.
 - {{domxref("IDBOpenDBRequest")}}
   - : Represents a request to open a database.
 - {{domxref("IDBDatabase")}}

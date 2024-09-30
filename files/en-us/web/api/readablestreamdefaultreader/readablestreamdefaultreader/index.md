@@ -6,13 +6,14 @@ page-type: web-api-constructor
 browser-compat: api.ReadableStreamDefaultReader.ReadableStreamDefaultReader
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`ReadableStreamDefaultReader()`**
 constructor creates and returns a `ReadableStreamDefaultReader` object
 instance.
 
-> **Note:** You generally wouldn't use this constructor manually; instead,
+> [!NOTE]
+> You generally wouldn't use this constructor manually; instead,
 > you'd use the {{domxref("ReadableStream.getReader()")}} method.
 
 ## Syntax

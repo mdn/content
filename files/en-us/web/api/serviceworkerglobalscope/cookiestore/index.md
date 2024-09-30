@@ -8,7 +8,7 @@ status:
 browser-compat: api.ServiceWorkerGlobalScope.cookieStore
 ---
 
-{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
+{{APIRef("Cookie Store API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
 
 The **`cookieStore`** read-only property of the {{domxref("ServiceWorkerGlobalScope")}} interface returns a reference to the {{domxref("CookieStore")}} object associated with this service worker.
 

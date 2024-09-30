@@ -28,7 +28,8 @@ communicate with the TURN server. The possible values are:
 - `udp`
   - : UDP (User Datagram Protocol) is being used to communicate with the TURN server.
 
-> **Note:** This property is only present on
+> [!NOTE]
+> This property is only present on
 > {{domxref("RTCIceCandidateStats")}} objects that represent local candidates.
 
 ## Specifications

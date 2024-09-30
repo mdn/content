@@ -355,12 +355,55 @@ div {
       217deg,
       rgb(255 0 0 / 80%),
       rgb(255 0 0 / 0%) 70.71%
-    ), linear-gradient(127deg, rgb(0 255 0 / 80%), rgb(0 255 0 / 0%) 70.71%),
+    ),
+    linear-gradient(127deg, rgb(0 255 0 / 80%), rgb(0 255 0 / 0%) 70.71%),
     linear-gradient(336deg, rgb(0 0 255 / 80%), rgb(0 0 255 / 0%) 70.71%);
 }
 ```
 
 {{ EmbedLiveSample('Stacked_gradients', 200, 200) }}
+
+### Blending gradients
+
+In addition to transparency, stacking multiple semi-transparent gradients and stacking gradients over raster background images, gradients can be used with other CSS effects. In this example, the four {{htmlelement("div")}} elements have the same two fully-opaque gradients as background images. We apply different {{cssxref("background-blend-mode")}} CSS property values to the last three that blend the two background images creating different effects.
+
+```html hidden
+<div class="original"></div>
+<div class="screen"></div>
+<div class="overlay"></div>
+<div class="difference"></div>
+```
+
+```css hidden
+div {
+  width: 120px;
+  height: 120px;
+  float: left;
+  margin-right: 10px;
+  box-sizing: border-box;
+}
+```
+
+```css
+div {
+  background: linear-gradient(to top, red, blue),
+    linear-gradient(to right, #5500ff, #00ff55);
+}
+
+.screen {
+  background-blend-mode: screen;
+}
+
+.overlay {
+  background-blend-mode: overlay;
+}
+
+.difference {
+  background-blend-mode: difference;
+}
+```
+
+{{ EmbedLiveSample('Blending_gradients', 120, 120) }}
 
 ## Using radial gradients
 
@@ -368,7 +411,7 @@ Radial gradients are similar to linear gradients, except that they radiate out f
 
 ### A basic radial gradient
 
-As with linear gradients, all you need to create a radial gradient are two colors. By default, the center of the gradient is at the 50% 50% mark, and the gradient is elliptical matching the aspect ratio of its box:
+As with linear gradients, all you need to create a radial gradient are two colors. By default, the center of the gradient is at the 50% 50% mark, and the gradient is elliptical matching the {{glossary("aspect ratio")}} of its box:
 
 ```html hidden
 <div class="simple-radial"></div>
@@ -610,7 +653,8 @@ div {
         circle at 93.3% 75%,
         rgb(0 255 0 / 50%),
         rgb(0 255 0 / 0%) 70.71%
-      ) beige;
+      )
+      beige;
   border-radius: 50%;
 }
 ```
@@ -758,7 +802,8 @@ div {
       rgb(75 0 130 / 50%) 240px,
       rgb(238 130 238 / 50%) 280px,
       rgb(255 0 0 / 50%) 300px
-    ), repeating-linear-gradient(
+    ),
+    repeating-linear-gradient(
       -190deg,
       rgb(255 0 0 / 50%) 30px,
       rgb(255 153 0 / 50%) 60px,
@@ -768,8 +813,18 @@ div {
       rgb(75 0 130 / 50%) 180px,
       rgb(238 130 238 / 50%) 210px,
       rgb(255 0 0 / 50%) 230px
-    ), repeating-linear-gradient(23deg, red 50px, orange 100px, yellow 150px, green
-        200px, blue 250px, indigo 300px, violet 350px, red 370px);
+    ),
+    repeating-linear-gradient(
+      23deg,
+      red 50px,
+      orange 100px,
+      yellow 150px,
+      green 200px,
+      blue 250px,
+      indigo 300px,
+      violet 350px,
+      red 370px
+    );
 }
 ```
 
@@ -806,7 +861,8 @@ div {
       transparent 116px,
       rgb(255 206 0 / 25%) 116px,
       rgb(255 206 0 / 25%) 166px
-    ), repeating-linear-gradient(
+    ),
+    repeating-linear-gradient(
       0deg,
       transparent,
       transparent 50px,
@@ -820,15 +876,21 @@ div {
       transparent 116px,
       rgb(255 206 0 / 25%) 116px,
       rgb(255 206 0 / 25%) 166px
-    ), repeating-linear-gradient(
+    ),
+    repeating-linear-gradient(
       -45deg,
       transparent,
       transparent 5px,
       rgb(143 77 63 / 25%) 5px,
       rgb(143 77 63 / 25%) 10px
-    ), repeating-linear-gradient(45deg, transparent, transparent 5px, rgb(
-          143 77 63 / 25%
-        ) 5px, rgb(143 77 63 / 25%) 10px);
+    ),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 5px,
+      rgb(143 77 63 / 25%) 5px,
+      rgb(143 77 63 / 25%) 10px
+    );
 
   background: repeating-linear-gradient(
       90deg,
@@ -838,7 +900,8 @@ div {
       rgb(255 127 0 / 25%) 63px 69px,
       transparent 69px 116px,
       rgb(255 206 0 / 25%) 116px 166px
-    ), repeating-linear-gradient(
+    ),
+    repeating-linear-gradient(
       0deg,
       transparent 0 50px,
       rgb(255 127 0 / 25%) 50px 56px,
@@ -846,12 +909,17 @@ div {
       rgb(255 127 0 / 25%) 63px 69px,
       transparent 69px 116px,
       rgb(255 206 0 / 25%) 116px 166px
-    ), repeating-linear-gradient(
+    ),
+    repeating-linear-gradient(
       -45deg,
       transparent 0 5px,
       rgb(143 77 63 / 25%) 5px 10px
-    ), repeating-linear-gradient(45deg, transparent 0 5px, rgb(143 77 63 / 25%) 5px
-        10px);
+    ),
+    repeating-linear-gradient(
+      45deg,
+      transparent 0 5px,
+      rgb(143 77 63 / 25%) 5px 10px
+    );
 }
 ```
 
@@ -907,14 +975,16 @@ div {
         rgb(0 0 0 / 50%) 15px,
         rgb(255 255 255 / 50%) 15px,
         rgb(255 255 255 / 50%) 30px
-      ) top left no-repeat,
+      )
+      top left no-repeat,
     repeating-radial-gradient(
         ellipse at 20% 50%,
         rgb(0 0 0 / 50%),
         rgb(0 0 0 / 50%) 10px,
         rgb(255 255 255 / 50%) 10px,
         rgb(255 255 255 / 50%) 20px
-      ) top left no-repeat yellow;
+      )
+      top left no-repeat yellow;
   background-size:
     200px 200px,
     150px 150px;
@@ -922,6 +992,73 @@ div {
 ```
 
 {{ EmbedLiveSample('Multiple_repeating_radial_gradients', 250, 150) }}
+
+### Repeating conic gradients
+
+This example uses {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}} to create a gradient that rotates repeatedly around a center point. In this case, the declared color stops are repeated four times.
+
+```html hidden
+<div class="repeating-conic"></div>
+```
+
+```css hidden
+div {
+  width: 120px;
+  height: 120px;
+}
+```
+
+```css
+.repeating-conic {
+  background: repeating-conic-gradient(
+    #66ccff 0% 8.25%,
+    #6633ff 8.25% 16.5%,
+    #ff3399 16.5% 25%
+  );
+}
+```
+
+{{ EmbedLiveSample('Repeating_conic_gradients', 120, 120) }}
+
+### Multiple repeating conic gradients
+
+Just like linear and radial repeating gradients, you can stack multiple conic gradients on top of each other, creating interesting effects by using different `at <position>` values so the conic gradients don't overlap at their centers and different `from <angle>` values so the repeating effects don't line up. This example overlaps three semi-transparent repeating radial gradients that each repeat their color schemes four times. To make overlapping gradients visible, you need to ensure either that the colors of the gradients on the top of the stack are partially transparent or use the {{cssxref("background-blend-mode")}} CSS property.
+
+```html hidden
+<div class="multi-repeating-conic"></div>
+```
+
+```css hidden
+div {
+  width: 250px;
+  height: 250px;
+}
+```
+
+```css
+.multi-repeating-conic {
+  background: repeating-conic-gradient(
+      from 0deg at 80% 50%,
+      #5691f580 0% 8.25%,
+      #b338ff80 8.25% 16.5%,
+      #f8305880 16.5% 25%
+    ),
+    repeating-conic-gradient(
+      from 15deg at 50% 50%,
+      #e856f580 0% 8.25%,
+      #ff384c80 8.25% 16.5%,
+      #e7f83080 16.5% 25%
+    ),
+    repeating-conic-gradient(
+      from 0deg at 20% 50%,
+      #f58356ff 0% 8.25%,
+      #caff38ff 8.25% 16.5%,
+      #30f88aff 16.5% 25%
+    );
+}
+```
+
+{{ EmbedLiveSample('Multiple_repeating_conic_gradients', 250, 250) }}
 
 ## See also
 
@@ -931,3 +1068,4 @@ div {
 - [CSS Gradients Patterns Gallery, by Lea Verou](https://projects.verou.me/css3patterns/)
 - [CSS Gradients Library, by Estelle Weyl](https://standardista.com/cssgradients/)
 - [Gradient CSS Generator](https://cssgenerator.org/gradient-css-generator.html)
+- [Advanced CSS Gradient Generator](https://colorbeta.com/)

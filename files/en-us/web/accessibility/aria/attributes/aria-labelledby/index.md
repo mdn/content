@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-labelledby
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-labelledby` attribute identifies the element (or elements) that labels the element it is applied to.
 
 ## Description
@@ -21,7 +23,8 @@ The purpose of `aria-labelledby` is the same as that of `aria-label`. It provide
 
 The `aria-labelledby` and [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) attributes both reference other elements to calculate text alternatives. `aria-labelledby` should reference brief text that provides the element with an accessible name. `aria-describedby` is used to reference longer content that provides a description. If there is no element in the DOM that provides a brief label appropriate for an accessible name for an interactive element, use `aria-label` to define the accessible name for an interactive element.
 
-> **Note:** While in U.S. English the attribute would be assumed to be spelled "labeledby", the "labelledby" spelling has been established and is the spelling used in accessibility APIs.
+> [!NOTE]
+> While in U.S. English the attribute would be assumed to be spelled "labeledby", the "labelledby" spelling has been established and is the spelling used in accessibility APIs.
 
 The following example uses `aria-labelledby` to provide an accessible name for a checkbox input by using the text content of a sibling element:
 
@@ -79,7 +82,8 @@ Fortunately, the HTML {{HTMLElement('input')}} with `type="checkbox"` works with
 
 7. The `aria-labelledby` property cannot be chained. If an element with `aria-labelledby` references another element that also has `aria-labelledby`, the `aria-labelledby` attribute on the referenced element is ignored.
 
-> **Warning:** Because calculating the name of an element with `aria-labelledby` can be complex and reference hidden content, testing with assistive technologies to ensure the expected name is presented to users is very important.
+> [!WARNING]
+> Because calculating the name of an element with `aria-labelledby` can be complex and reference hidden content, testing with assistive technologies to ensure the expected name is presented to users is very important.
 
 ## Values
 
@@ -119,8 +123,3 @@ The `aria-labelledby` attribute is **NOT** supported in:
 - HTML {{HTMLElement('caption')}} element
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
 - [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

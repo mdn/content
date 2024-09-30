@@ -148,7 +148,8 @@ The whole thing is wrapped in a test that checks whether `getUserMedia` is suppo
 - **The success callback**: This code is run once the `getUserMedia` call has been completed successfully.
 - **The error/failure callback**: The code is run if the `getUserMedia` call fails for whatever reason.
 
-> **Note:** All of the code below is placed inside the `getUserMedia` success callback.
+> [!NOTE]
+> All of the code below is placed inside the `getUserMedia` success callback.
 
 ## Capturing the media stream
 
@@ -182,7 +183,8 @@ mediaRecorder.ondataavailable = (e) => {
 };
 ```
 
-> **Note:** The browser will fire `dataavailable` events as needed, but if you want to intervene you can also include a timeslice when invoking the `start()` method — for example `start(10000)` — to control this interval, or call {{domxref("MediaRecorder.requestData()")}} to trigger an event when you need it.
+> [!NOTE]
+> The browser will fire `dataavailable` events as needed, but if you want to intervene you can also include a timeslice when invoking the `start()` method — for example `start(10000)` — to control this interval, or call {{domxref("MediaRecorder.requestData()")}} to trigger an event when you need it.
 
 Lastly, we use the {{domxref("MediaRecorder.stop()")}} method to stop the recording when the stop button is pressed, and finalize the {{domxref("Blob")}} ready for use somewhere else in our application.
 
@@ -215,8 +217,8 @@ mediaRecorder.onstop = (e) => {
 
   clipContainer.classList.add("clip");
   audio.setAttribute("controls", "");
-  deleteButton.innerHTML = "Delete";
-  clipLabel.innerHTML = clipName;
+  deleteButton.textContent = "Delete";
+  clipLabel.textContent = clipName;
 
   clipContainer.appendChild(audio);
   clipContainer.appendChild(clipLabel);

@@ -5,6 +5,8 @@ page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#spinbutton
 ---
 
+{{AccessibilitySidebar}}
+
 The `spinbutton` role defines a type of range that expects the user to select a value from among discrete choices.
 
 ## Description
@@ -17,7 +19,8 @@ Spinbuttons often have three components, including a text field that displays th
 
 In addition to including the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes#tabindex) attribute to enable spinbutton focus, keyboard and pointer device support must be implemented. Directional keys such as the arrow keys must be supported for keyboard users. Changing the value when increment and decrement buttons are clicked must be supported for pointing devices. See [keyboard interactions](#keyboard_interactions) below.
 
-> **Note:** It is recommended to use [`<input type="number">`](/en-US/docs/Web/HTML/Element/input/number) element, or other input types for dates and time that also implicitly have the `role="spinbutton"` semantic, rather than the `spinbutton` role. User agents provide stylized widget for the these input elements which provide default increment, decrement, and native range limiting functionality. When using non-semantic elements, all features of the native semantic element need to be recreated with ARIA attributes, JavaScript, and CSS.
+> [!NOTE]
+> It is recommended to use [`<input type="number">`](/en-US/docs/Web/HTML/Element/input/number) element, or other input types for dates and time that also implicitly have the `role="spinbutton"` semantic, rather than the `spinbutton` role. User agents provide stylized widget for the these input elements which provide default increment, decrement, and native range limiting functionality. When using non-semantic elements, all features of the native semantic element need to be recreated with ARIA attributes, JavaScript, and CSS.
 
 ### ARIA range widget options
 
@@ -31,7 +34,8 @@ The `slider` role, similar to HTML's `input` of type `range`, [`<input type="ran
 
 While all three of these ranges have the same ARIA states and properties, the `spinbutton` role is the only read-write range: it is the only one whose value changes via user interaction. As such, it must be able to receive focus. In addition, keyboard interaction, mouse clicks, and touch interaction must be supported.
 
-> **Warning:** To change the spinbutton value, touch-based assistive technologies need to respond to user gestures for increasing and decreasing the value by synthesizing key events.
+> [!WARNING]
+> To change the spinbutton value, touch-based assistive technologies need to respond to user gestures for increasing and decreasing the value by synthesizing key events.
 > Fully test spinbutton widgets using assistive technologies on devices where touch is a primary input mechanism before using the `spinbutton` role (and all range widgets).
 
 #### Common attributes
@@ -159,11 +163,3 @@ It is recommended to use the native {{HTMLElement("input")}} element of type `nu
 - Working examples:
   - [Date picker spin button example](https://www.w3.org/WAI/ARIA/apg/patterns/spinbutton/examples/datepicker-spinbuttons/)
   - [Toolbar example: font-size picker](https://www.w3.org/WAI/ARIA/apg/patterns/toolbar/examples/toolbar/)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

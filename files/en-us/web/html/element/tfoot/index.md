@@ -25,15 +25,15 @@ The following attributes are deprecated and should not be used. They are documen
 
 - `bgcolor` {{deprecated_inline}}
 
-  - : Defines the background color of each foot cell. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a '`#`', or a [color keyword](/en-US/docs/Web/CSS/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
+  - : Defines the background color of each foot cell. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a `#`, or a [color keyword](/en-US/docs/Web/CSS/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
 
 - `char` {{deprecated_inline}}
 
-  - : Specifies the alignment of the content to a character of each foot cell. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.
+  - : Does nothing. It was originally intended to specify the alignment of the content to a character of each foot cell. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.
 
 - `charoff` {{deprecated_inline}}
 
-  - : Specifies the number of characters to offset the foot cell content from the alignment character specified by the [`char`](#char) attribute.
+  - : Does nothing. It was originally intended to specify the number of characters to offset the foot cell content from the alignment character specified by the [`char`](#char) attribute.
 
 - `valign` {{deprecated_inline}}
 
@@ -48,6 +48,8 @@ The following attributes are deprecated and should not be used. They are documen
 ## Example
 
 See {{HTMLElement("table")}} for a complete table example introducing common standards and best practices.
+
+### Table with footer
 
 This example demonstrates a table divided into a head section with column headers, a body section with the table's main data, and a foot section summarizing data of one column.
 
@@ -177,11 +179,11 @@ tr > td:last-of-type {
       <th scope="row">Permitted parents</th>
       <td>
         A {{HTMLElement("table")}} element. The
-        {{HTMLElement("tfoot")}} must appear after any
+        <code>&lt;tfoot&gt;</code> must appear after any
         {{HTMLElement("caption")}},
         {{HTMLElement("colgroup")}}, {{HTMLElement("thead")}},
         {{HTMLElement("tbody")}}, and {{HTMLElement("tr")}}
-        elements. Note that this is the requirement in HTML.<br />Originally, in HTML4, the opposite was true: the {{HTMLElement("tfoot")}} element could not be placed after any
+        elements. Note that this is the requirement in HTML.<br />Originally, in HTML4, the opposite was true: the <code>&lt;tfoot&gt;</code> element could not be placed after any
         {{HTMLElement("tbody")}} and {{HTMLElement("tr")}}
         elements.
       </td>
@@ -190,7 +192,7 @@ tr > td:last-of-type {
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role"
             >rowgroup</a
           ></code
         >

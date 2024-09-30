@@ -14,10 +14,7 @@ This is a relatively simple example, but it does show how you can use the sessio
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Complete all previous tutorial topics, including <a
-          href="/en-US/docs/Learn/Server-side/Django/Generic_views"
-          >Django Tutorial Part 6: Generic list and detail views</a
-        >
+        Complete all previous tutorial topics, including <a href="/en-US/docs/Learn/Server-side/Django/Generic_views">Django Tutorial Part 6: Generic list and detail views</a>
       </td>
     </tr>
     <tr>
@@ -69,9 +66,10 @@ This session attribute represents the specific connection to the current user (o
 
 The `session` attribute is a dictionary-like object that you can read and write as many times as you like in your view, modifying it as wished. You can do all the normal dictionary operations, including clearing all data, testing if a key is present, looping through data, etc. Most of the time though, you'll just use the standard "dictionary" API to get and set values.
 
-The code fragments below show how you can get, set, and delete some data with the key "`my_car`", associated with the current session (browser).
+The code fragments below show how you can get, set, and delete some data with the key `my_car`, associated with the current session (browser).
 
-> **Note:** One of the great things about Django is that you don't need to think about the mechanisms that tie the session to your current request in your view. If we were to use the fragments below in our view, we'd know that the information about `my_car` is associated only with the browser that sent the current request.
+> [!NOTE]
+> One of the great things about Django is that you don't need to think about the mechanisms that tie the session to your current request in your view. If we were to use the fragments below in our view, we'd know that the information about `my_car` is associated only with the browser that sent the current request.
 
 ```python
 # Get a session value by its key (e.g. 'my_car'), raising a KeyError if the key is not present
@@ -98,7 +96,7 @@ By default, Django only saves to the session database and sends the session cook
 request.session['my_car'] = 'mini'
 ```
 
-If you're updating some information _within_ session data, then Django will not recognize that you've made a change to the session and save the data (for example, if you were to change "`wheels`" data inside your "`my_car`" data, as shown below). In this case you will need to explicitly mark the session as having been modified.
+If you're updating some information _within_ session data, then Django will not recognize that you've made a change to the session and save the data (for example, if you were to change `wheels` data inside your `my_car` data, as shown below). In this case you will need to explicitly mark the session as having been modified.
 
 ```python
 # Session object not directly modified, only data within the session. Session changes not saved!
@@ -108,7 +106,8 @@ request.session['my_car']['wheels'] = 'alloy'
 request.session.modified = True
 ```
 
-> **Note:** You can change the behavior so the site will update the database/send cookie on every request by adding `SESSION_SAVE_EVERY_REQUEST = True` into your project settings (**django-locallibrary-tutorial/locallibrary/settings.py**).
+> [!NOTE]
+> You can change the behavior so the site will update the database/send cookie on every request by adding `SESSION_SAVE_EVERY_REQUEST = True` into your project settings (**django-locallibrary-tutorial/locallibrary/settings.py**).
 
 ## Simple example — getting visit counts
 
@@ -124,7 +123,8 @@ def index(request):
 
     # Number of visits to this view, as counted in the session variable.
     num_visits = request.session.get('num_visits', 0)
-    request.session['num_visits'] = num_visits + 1
+    num_visits += 1
+    request.session['num_visits'] = num_visits
 
     context = {
         'num_books': num_books,
@@ -140,7 +140,8 @@ def index(request):
 
 Here we first get the value of the `'num_visits'` session key, setting the value to 0 if it has not previously been set. Each time a request is received, we then increment the value and store it back in the session (for the next time the user visits the page). The `num_visits` variable is then passed to the template in our context variable.
 
-> **Note:** We might also test whether cookies are even supported in the browser here (see [How to use sessions](https://docs.djangoproject.com/en/5.0/topics/http/sessions/) for examples) or design our UI so that it doesn't matter whether or not cookies are supported.
+> [!NOTE]
+> We might also test whether cookies are even supported in the browser here (see [How to use sessions](https://docs.djangoproject.com/en/5.0/topics/http/sessions/) for examples) or design our UI so that it doesn't matter whether or not cookies are supported.
 
 Add the line shown at the bottom of the following block to your main HTML template (**/django-locallibrary-tutorial/catalog/templates/index.html**) at the bottom of the "Dynamic content" section to display the `num_visits` context variable.
 

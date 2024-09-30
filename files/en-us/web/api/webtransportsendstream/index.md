@@ -7,7 +7,7 @@ status:
 browser-compat: api.WebTransportSendStream
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{securecontext_header}}
+{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{securecontext_header}} {{AvailableInWorkers}}
 
 The `WebTransportSendStream` interface of the {{domxref("WebTransport API", "WebTransport API", "", "nocode")}} is a specialized {{domxref("WritableStream")}} that is used to send outbound data in both unidirectional or bidirectional {{domxref("WebTransport")}} streams.
 
@@ -22,8 +22,6 @@ When a bidirectional stream is initiated by the remote end, an object of this ty
 `WebTransportSendStream` is a [transferable object](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects).
 
 {{InheritanceDiagram}}
-
-{{AvailableInWorkers}}
 
 ## Instance properties
 

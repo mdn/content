@@ -25,7 +25,8 @@ WebAssembly is being created as an open standard inside the [W3C WebAssembly Com
 - Keep secure — WebAssembly is specified to be run in a safe, sandboxed execution environment. Like other web code, it will enforce the browser's same-origin and permissions policies.
 - Don't break the web — WebAssembly is designed so that it plays nicely with other web technologies and maintains backwards compatibility.
 
-> **Note:** WebAssembly will also have uses outside web and JavaScript environments (see [Non-web embeddings](https://webassembly.org/docs/non-web/)).
+> [!NOTE]
+> WebAssembly will also have uses outside web and JavaScript environments (see [Non-web embeddings](https://webassembly.org/docs/non-web/)).
 
 ## How does WebAssembly fit into the web platform?
 
@@ -94,7 +95,8 @@ In a nutshell, the process works as follows:
 2. Emscripten transforms the compiled result of clang+LLVM into a Wasm binary.
 3. By itself, WebAssembly cannot currently directly access the DOM; it can only call JavaScript, passing in integer and floating point primitive data types. Thus, to access any Web API, WebAssembly needs to call out to JavaScript, which then makes the Web API call. Emscripten therefore creates the HTML and JavaScript glue code needed to achieve this.
 
-> **Note:** There are future plans to [allow WebAssembly to call Web APIs directly](https://github.com/WebAssembly/gc/blob/master/README.md).
+> [!NOTE]
+> There are future plans to [allow WebAssembly to call Web APIs directly](https://github.com/WebAssembly/gc/blob/master/README.md).
 
 The JavaScript glue code is not as simple as you might imagine. For a start, Emscripten implements popular C/C++ libraries like [SDL](https://en.wikipedia.org/wiki/Simple_DirectMedia_Layer), [OpenGL](https://en.wikipedia.org/wiki/OpenGL), [OpenAL](https://en.wikipedia.org/wiki/OpenAL), and parts of [POSIX](https://en.wikipedia.org/wiki/POSIX). These libraries are implemented in terms of Web APIs and thus each one requires some JavaScript glue code to connect WebAssembly to the underlying Web API.
 
@@ -102,7 +104,7 @@ So part of the glue code is implementing the functionality of each respective li
 
 The generated HTML document loads the JavaScript glue file and writes stdout to a {{htmlelement("textarea")}}. If the application uses OpenGL, the HTML also contains a {{htmlelement("canvas")}} element that is used as the rendering target. It's very easy to modify the Emscripten output and turn it into whatever web app you require.
 
-You can find full documentation on Emscripten at [emscripten.org](https://emscripten.org), and a guide to implementing the toolchain and compiling your own C/C++ app across to Wasm at [Compiling from C/C++ to WebAssembly](/en-US/docs/WebAssembly/C_to_Wasm).
+You can find full documentation on Emscripten at [emscripten.org](https://emscripten.org/), and a guide to implementing the toolchain and compiling your own C/C++ app across to Wasm at [Compiling from C/C++ to WebAssembly](/en-US/docs/WebAssembly/C_to_Wasm).
 
 ### Writing WebAssembly directly
 

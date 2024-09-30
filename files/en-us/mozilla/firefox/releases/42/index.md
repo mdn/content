@@ -6,7 +6,7 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) Firefox 42 was released on November 3, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
+[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) Firefox 42 was released on November 3, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
 ## Changes for Web developers
 
@@ -91,7 +91,7 @@ Our experimental implementation of the [Shadow DOM](/en-US/docs/Web/API/Web_comp
 
 #### New APIs
 
-- The {{domxref("ImageBitmap")}} interface and the {{domxref("createImageBitmap()")}} method have been implemented. They are available on regular window scripts and in Web workers and allow efficient posting of images between window and worker contexts ([Firefox bug 1044102](https://bugzil.la/1044102)).
+- The {{domxref("ImageBitmap")}} interface, the {{domxref("Window.createImageBitmap()")}} and {{domxref("WorkerGlobalScope.createImageBitmap()")}} method have been implemented. They are available on regular window scripts and in Web workers and allow efficient posting of images between window and worker contexts ([Firefox bug 1044102](https://bugzil.la/1044102)).
 
 #### Miscellaneous
 
@@ -152,4 +152,4 @@ _No change._
 
 ## Older versions
 
-{{Firefox_for_developers('41')}}
+{{Firefox_for_developers}}

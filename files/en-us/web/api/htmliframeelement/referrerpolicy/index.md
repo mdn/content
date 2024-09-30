@@ -45,7 +45,8 @@ resource.
 
   - : Send a full URL when performing a same-origin or cross-origin request.
 
-    > **Note:** This policy will leak origins and paths from TLS-protected resources
+    > [!NOTE]
+    > This policy will leak origins and paths from TLS-protected resources
     > to insecure origins. Carefully consider the impact of this setting.
 
 ## Examples

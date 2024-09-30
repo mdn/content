@@ -31,13 +31,14 @@ This element also accepts the [global attributes](/en-US/docs/Web/HTML/Global_at
 
     The specified type is used for the entire list unless a different [`type`](/en-US/docs/Web/HTML/Element/li#type) attribute is used on an enclosed {{HTMLElement("li")}} element.
 
-    > **Note:** Unless the type of the list number matters (like legal or technical documents where items are referenced by their number/letter), use the CSS {{CSSxRef("list-style-type")}} property instead.
+    > [!NOTE]
+    > Unless the type of the list number matters (like legal or technical documents where items are referenced by their number/letter), use the CSS {{CSSxRef("list-style-type")}} property instead.
 
 ## Usage notes
 
 Typically, ordered list items display with a preceding [marker](/en-US/docs/Web/CSS/::marker), such as a number or letter.
 
-The `<ol>` and {{HTMLElement("ul")}} elements may nest as deeply as desired, alternating between `<ol>` and `<ul>` however you like.
+The `<ol>` and {{HTMLElement("ul")}} (or the synonym {{HTMLElement("menu")}}) elements may nest as deeply as desired, alternating between `<ol>`, `<ul>` (or `<menu>`) as needed.
 
 The `<ol>` and {{HTMLElement("ul")}} elements both represent a list of items. The difference is with the `<ol>` element, the order is meaningful. For example:
 
@@ -45,7 +46,7 @@ The `<ol>` and {{HTMLElement("ul")}} elements both represent a list of items. Th
 - Turn-by-turn directions
 - The list of ingredients in decreasing proportion on nutrition information labels
 
-To determine which list to use, try changing the order of the list items; if the meaning changes, use the `<ol>` element — otherwise you can use {{HTMLElement("ul")}}.
+To determine which list to use, try changing the order of the list items; if the meaning changes, use the `<ol>` element — otherwise you can use {{HTMLElement("ul")}} otherwise, or {{HTMLElement("menu")}} if your list is a menu.
 
 ## Examples
 
@@ -185,7 +186,7 @@ To determine which list to use, try changing the order of the list items; if the
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/List_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/list_role"
             >list</a
           ></code
         >

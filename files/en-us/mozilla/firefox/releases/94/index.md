@@ -24,7 +24,7 @@ No notable changes
 
 ### APIs
 
-- The {{domxref("structuredClone()")}} global function is now supported for copying complex JavaScript objects ([Firefox bug 1722576](https://bugzil.la/1722576)).
+- The {{DOMxRef("Window.structuredClone()")}} and {{DOMxRef("WorkerGlobalScope.structuredClone()")}} function is now supported for copying complex JavaScript objects ([Firefox bug 1722576](https://bugzil.la/1722576)).
 
 #### DOM
 
@@ -48,4 +48,4 @@ No notable changes
 
 ## Older versions
 
-{{Firefox_for_developers(93)}}
+{{Firefox_for_developers}}

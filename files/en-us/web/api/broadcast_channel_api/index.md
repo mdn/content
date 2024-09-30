@@ -5,11 +5,12 @@ page-type: web-api-overview
 browser-compat: api.BroadcastChannel
 ---
 
-{{DefaultAPISidebar("Broadcast Channel API")}}
+{{DefaultAPISidebar("Broadcast Channel API")}} {{AvailableInWorkers}}
 
 The **Broadcast Channel API** allows basic communication between {{glossary("browsing context", "browsing contexts")}} (that is, _windows_, _tabs_, _frames_, or _iframes_) and workers on the same {{glossary("origin")}}.
 
-{{AvailableInWorkers}}
+> [!NOTE]
+> To be exact, communication is allowed between browsing contexts using the same [storage partition](/en-US/docs/Web/Privacy/State_Partitioning). Storage is first partitioned according to top-level sites—so for example, if you have one opened page at `a.com` that embeds an iframe from `b.com`, and another page opened to `b.com`, then the iframe cannot communicate with the second page despite them being technically same-origin. However, if the first page is also on `b.com`, then the iframe can communicate with the second page.
 
 By creating a {{domxref("BroadcastChannel")}} object, you can receive any messages that are posted to it. You don't have to maintain a reference to the frames or workers you wish to communicate with: they can "subscribe" to a particular channel by constructing their own {{domxref("BroadcastChannel")}} with the same name, and have bi-directional communication between all of them.
 
@@ -64,6 +65,11 @@ bc.close();
 The Broadcast Channel API's self-contained interface allows cross-context communication. It can be used to detect user actions in other tabs within a same origin, like when the user logs in or out.
 
 The messaging protocol is not defined and the different browsing contexts need to implement it themselves; there is no negotiation nor requirement from the specification.
+
+## Interfaces
+
+- {{domxref("BroadcastChannel")}}
+  - : Represents a named channel that any {{glossary("browsing context")}} of a given {{glossary("origin")}} can subscribe to.
 
 ## Specifications
 

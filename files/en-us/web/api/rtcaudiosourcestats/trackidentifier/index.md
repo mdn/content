@@ -8,7 +8,7 @@ browser-compat: api.RTCStatsReport.type_media-source.trackIdentifier
 
 {{APIRef("WebRTC")}}
 
-The {{domxref("RTCAudioSourceStats")}} dictionary's property **`trackIdentifier`** contains the `id` attribute of the associated [`MediaStreamTrack`](/en-US/docs/Web/API/MediaStreamTrack).
+The **`trackIdentifier`** property of the {{domxref("RTCAudioSourceStats")}} dictionary contains the `id` attribute of the associated [`MediaStreamTrack`](/en-US/docs/Web/API/MediaStreamTrack).
 
 ## Value
 

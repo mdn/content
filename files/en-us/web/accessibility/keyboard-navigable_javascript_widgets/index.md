@@ -4,9 +4,7 @@ slug: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 page-type: guide
 ---
 
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
-</section>
+{{AccessibilitySidebar}}
 
 Web applications often use JavaScript to mimic desktop widgets such as menus, tree views, rich text fields, and tab panels. These widgets are typically composed of {{ HTMLElement("div") }} and {{ HTMLElement("span") }} elements that do not, by nature, offer the same keyboard functionality that their desktop counterparts do. This document describes techniques to make JavaScript widgets accessible with the keyboard.
 
@@ -16,7 +14,8 @@ By default, when people use the tab key to browse a webpage, only interactive el
 
 The order in which elements gain focus when using a keyboard, is the source order by default. In exceptional circumstances, authors may want to redefine the order. To do this, authors can set `tabindex` to any positive number.
 
-> **Warning:** avoid using positive values for `tabindex`. Elements with a positive `tabindex` are put before the default interactive elements on the page, which means page authors will have to set (and maintain) `tabindex` values for all focusable elements on the page whenever they use one or more positive values for `tabindex`.
+> [!WARNING]
+> Avoid using positive values for `tabindex`. Elements with a positive `tabindex` are put before the default interactive elements on the page, which means page authors will have to set (and maintain) `tabindex` values for all focusable elements on the page whenever they use one or more positive values for `tabindex`.
 
 The following table describes `tabindex` behavior in modern browsers:
 
@@ -148,7 +147,7 @@ To ensure that the user experience is consistent regardless of input device, key
 
 ### Ensure that the keyboard can be used to activate element
 
-To ensure that the keyboard can be used to activate elements, any handlers bound to mouse events should also be bound to keyboard events. For example, to ensure that the Enter key will activate an element, if you have an `onclick="doSomething()"`, you should bind `doSomething()` to the key down event as well: `onkeydown="return event.keyCode !== 13 || doSomething();"`.
+To ensure that the keyboard can be used to activate elements, any handlers bound to mouse events should also be bound to keyboard events. For example, to ensure that the Enter key will activate an element, if you have an `onclick="doSomething()"`, you should bind `doSomething()` to the key down event as well: `onkeydown="event.code === "Enter" && doSomething();"`.
 
 ### Always draw the focus for tabindex="-1" items and elements that receive focus programmatically
 

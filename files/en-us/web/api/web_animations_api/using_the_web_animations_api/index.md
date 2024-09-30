@@ -88,7 +88,8 @@ You'll notice a few differences here from how equivalent values are represented 
 - For one, the duration is in milliseconds as opposed to seconds — 3000 not 3s. Like {{domxref("setTimeout()")}} and {{domxref("Window.requestAnimationFrame()")}}, the Web Animations API only takes milliseconds.
 - The other thing you'll notice is that it's `iterations`, not `iteration-count`.
 
-> **Note:** There are a number of small differences between the terminology used in CSS Animations and the terminology used in Web Animations. For instance, Web Animations doesn't use the string `"infinite"`, but instead uses the JavaScript keyword `Infinity`. And instead of `timing-function` we use `easing`. We aren't listing an `easing` value here because, unlike CSS Animations where the default [animation-timing-function](/en-US/docs/Web/CSS/animation-timing-function) is `ease`, in the Web Animations API the default easing is `linear` — which is what we want here.
+> [!NOTE]
+> There are a number of small differences between the terminology used in CSS Animations and the terminology used in Web Animations. For instance, Web Animations doesn't use the string `"infinite"`, but instead uses the JavaScript keyword `Infinity`. And instead of `timing-function` we use `easing`. We aren't listing an `easing` value here because, unlike CSS Animations where the default [animation-timing-function](/en-US/docs/Web/CSS/animation-timing-function) is `ease`, in the Web Animations API the default easing is `linear` — which is what we want here.
 
 #### Bring the pieces together
 
@@ -360,8 +361,6 @@ const endGame = () => {
   }
 };
 ```
-
-> **Note:** `getAnimations()` and `effect` are not shipping in all browsers as of this writing, but the polyfill does support them today.
 
 ## Callbacks and promises
 

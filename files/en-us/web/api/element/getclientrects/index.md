@@ -259,10 +259,6 @@ function addClientRectsOverlay(elt) {
 
 {{Specifications}}
 
-### Notes
-
-`getClientRects()` was first introduced in the MS IE DHTML object model.
-
 ## Browser compatibility
 
 {{Compat}}

@@ -216,7 +216,8 @@ Something to take note of is that the rule doesn't take up any width of its own.
 
 You can cause an element to span across all the columns. In this case, the content breaks where the spanning element's introduced and then continues below the element, creating a new set of columns. To cause an element to span all the columns, specify the value of `all` for the {{cssxref("column-span")}} property.
 
-> **Note:** It isn't possible to cause an element to span just _some_ columns. The property can only have the values of `none` (which is the default) or `all`.
+> [!NOTE]
+> It isn't possible to cause an element to span just _some_ columns. The property can only have the values of `none` (which is the default) or `all`.
 
 ```css hidden
 body {

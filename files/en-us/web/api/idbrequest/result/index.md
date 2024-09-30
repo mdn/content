@@ -6,14 +6,12 @@ page-type: web-api-instance-property
 browser-compat: api.IDBRequest.result
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`result`** read-only property of the
 {{domxref("IDBRequest")}} interface returns the result of the request. If the request
 is not completed, the result is not available and an `InvalidStateError` exception is
 thrown.
-
-{{AvailableInWorkers}}
 
 ## Value
 
@@ -35,7 +33,7 @@ const objectStore = db
   .transaction(["toDoList"], "readwrite")
   .objectStore("toDoList");
 
-// Get the to-do list object that has this title as it's title
+// Get the to-do list object that has this title as its title
 const objectStoreTitleRequest = objectStore.get(title);
 
 objectStoreTitleRequest.onsuccess = () => {

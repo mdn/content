@@ -2,16 +2,15 @@
 title: content-visibility
 slug: Web/CSS/content-visibility
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.content-visibility
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`content-visibility`** [CSS](/en-US/docs/Web/CSS) property controls whether or not an element renders its contents at all, along with forcing a strong set of containments, allowing user agents to potentially omit large swathes of layout and rendering work until it becomes needed. It enables the user agent to skip an element's rendering work (including layout and painting) until it is needed — which makes the initial page load much faster.
 
-> **Note:** The {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} event fires on any element with `content-visibility: auto` set on it when its rendering work starts or stops being skipped. This provides a convenient way for an app's code to start or stop rendering processes (e.g. drawing on a {{htmlelement("canvas")}}) when they are not needed, thereby conserving processing power.
+> [!NOTE]
+> The {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} event fires on any element with `content-visibility: auto` set on it when its rendering work starts or stops being skipped. This provides a convenient way for an app's code to start or stop rendering processes (e.g. drawing on a {{htmlelement("canvas")}}) when they are not needed, thereby conserving processing power.
 
 {{EmbedInteractiveExample("pages/css/content-visibility.html")}}
 
@@ -36,9 +35,9 @@ content-visibility: unset;
 - `visible`
   - : No effect. The element's contents are laid out and rendered as normal.
 - `hidden`
-  - : The element [skips its contents](/en-US/docs/Web/CSS/CSS_containment#skips_its_contents). The skipped contents must not be accessible to user-agent features, such as find-in-page, tab-order navigation, etc., nor be selectable or focusable. This is similar to giving the contents `display: none`.
+  - : The element [skips its contents](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#skips_its_contents). The skipped contents must not be accessible to user-agent features, such as find-in-page, tab-order navigation, etc., nor be selectable or focusable. This is similar to giving the contents `display: none`.
 - `auto`
-  - : The element turns on layout containment, style containment, and paint containment. If the element is not [relevant to the user](/en-US/docs/Web/CSS/CSS_containment#relevant_to_the_user), it also skips its contents. Unlike hidden, the skipped contents must still be available as normal to user-agent features such as find-in-page, tab order navigation, etc., and must be focusable and selectable as normal.
+  - : The element turns on layout containment, style containment, and paint containment. If the element is not [relevant to the user](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#relevant_to_the_user), it also skips its contents. Unlike hidden, the skipped contents must still be available as normal to user-agent features such as find-in-page, tab order navigation, etc., and must be focusable and selectable as normal.
 
 ## Description
 
@@ -55,7 +54,8 @@ This behavior is useful for creating entry/exit animations where you want to, fo
 
 When animating `content-visibility` with [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) needs to be set on `content-visibility`. This effectively enables `content-visibility` transitions.
 
-> **Note:** When transitioning an element's `content-visibility` value, you don't need to provide a set of starting values for transitioned properties using a [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) block, like you do when [transitioning `display`](/en-US/docs/Web/CSS/display#animating_display). This is because `content-visibility` doesn't hide an element from the DOM like `display` does: it just skips rendering the element's content.
+> [!NOTE]
+> When transitioning an element's `content-visibility` value, you don't need to provide a set of starting values for transitioned properties using a [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) block, like you do when [transitioning `display`](/en-US/docs/Web/CSS/display#animating_display). This is because `content-visibility` doesn't hide an element from the DOM like `display` does: it just skips rendering the element's content.
 
 ## Formal definition
 
@@ -65,7 +65,7 @@ When animating `content-visibility` with [CSS transitions](/en-US/docs/Web/CSS/C
 
 {{CSSSyntax}}
 
-## Accessibility concerns
+## Accessibility
 
 Off-screen content within a `content-visibility: auto` property remains in the document object model and the accessibility tree. This allows improving page performance with `content-visibility: auto` without negatively impacting accessibility.
 

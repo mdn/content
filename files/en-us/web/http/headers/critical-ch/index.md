@@ -61,7 +61,8 @@ Vary: Sec-CH-Prefers-Reduced-Motion
 Critical-CH: Sec-CH-Prefers-Reduced-Motion
 ```
 
-> **Note:** We've also specified `Sec-CH-Prefers-Reduced-Motion` in the {{httpheader("Vary")}} header to indicate that responses should be separately cached based on the value of this header (even if the URL stays the same).
+> [!NOTE]
+> We've also specified `Sec-CH-Prefers-Reduced-Motion` in the {{httpheader("Vary")}} header to indicate that responses should be separately cached based on the value of this header (even if the URL stays the same).
 > Each header listed in the `Critical-CH` header should also be present in the `Accept-CH` and `Vary` headers.
 
 The client automatically retries the request (due to `Critical-CH` being specified above), telling the server via `Sec-CH-Prefers-Reduced-Motion` that it has a user preference for reduced-motion animations:
@@ -89,3 +90,4 @@ The client will include the header in subsequent requests in the current session
 - [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)
 - {{HTTPHeader("Accept-CH")}}
 - [HTTP Caching > Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}}
+- {{domxref("PerformanceNavigationTiming.criticalCHRestart")}}

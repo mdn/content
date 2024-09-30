@@ -7,7 +7,7 @@ browser-compat: css.properties.font-variant-east-asian
 
 {{CSSRef}}
 
-The **`font-variant-east-asian`** CSS property controls the use of alternate glyphs for East Asian scripts, like Japanese and Chinese.
+The **`font-variant-east-asian`** [CSS](/en-US/docs/Web/CSS) property controls the use of alternate glyphs for East Asian scripts, like Japanese and Chinese.
 
 {{EmbedInteractiveExample("pages/css/font-variant-east-asian.html")}}
 

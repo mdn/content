@@ -47,24 +47,27 @@ The production environment is the environment provided by the server computer wh
 - Application server that passes "dynamic" requests between your Django website and the web server.
 - Databases on which your website is dependent.
 
-> **Note:** Depending on how your production environment is configured you might also have a reverse proxy, load balancer, and so on.
+> [!NOTE]
+> Depending on how your production environment is configured you might also have a reverse proxy, load balancer, and so on.
 
 The server computer could be located on your premises and connected to the internet by a fast link, but it is far more common to use a computer that is hosted "in the cloud". What this actually means is that your code is run on some remote computer (or possibly a "virtual" computer) in your hosting company's data center(s). The remote server will usually offer some guaranteed level of computing resources (CPU, RAM, storage memory, etc.) and internet connectivity for a certain price.
 
 This sort of remotely accessible computing/networking hardware is referred to as _Infrastructure as a Service (IaaS)_. Many IaaS vendors provide options to preinstall a particular operating system, onto which you must install the other components of your production environment. Other vendors allow you to select more fully-featured environments, perhaps including a complete Django and web-server setup.
 
-> **Note:** Pre-built environments can make setting up your website very easy because they reduce the configuration, but the available options may limit you to an unfamiliar server (or other components) and may be based on an older version of the OS. Often it is better to install components yourself, so that you get the ones that you want, and when you need to upgrade parts of the system, you have some idea of where to start!
+> [!NOTE]
+> Pre-built environments can make setting up your website very easy because they reduce the configuration, but the available options may limit you to an unfamiliar server (or other components) and may be based on an older version of the OS. Often it is better to install components yourself, so that you get the ones that you want, and when you need to upgrade parts of the system, you have some idea of where to start!
 
 Other hosting providers support Django as part of a _Platform as a Service_ (PaaS) offering. In this sort of hosting you don't need to worry about most of your production environment (web server, application server, load balancers) as the host platform takes care of those for you — along with most of what you need to do in order to scale your application.
 That makes deployment quite easy, because you just need to concentrate on your web application and not all the other server infrastructure.
 
 Some developers will choose the increased flexibility provided by IaaS over PaaS, while others will appreciate the reduced maintenance overhead and easier scaling of PaaS. When you're getting started, setting up your website on a PaaS system is much easier, and so that is what we'll do in this tutorial.
 
-> **Note:** If you choose a Python/Django-friendly hosting provider they should provide instructions on how to set up a Django website using different configurations of web server, application server, reverse proxy, and so on. (this won't be relevant if you choose a PaaS). For example, there are many step-by-step guides for various configurations in the [Digital Ocean Django community docs](https://www.digitalocean.com/community/tutorials?q=django).
+> [!NOTE]
+> If you choose a Python/Django-friendly hosting provider they should provide instructions on how to set up a Django website using different configurations of web server, application server, reverse proxy, and so on. (this won't be relevant if you choose a PaaS). For example, there are many step-by-step guides for various configurations in the [Digital Ocean Django community docs](https://www.digitalocean.com/community/tutorials?q=django).
 
 ## Choosing a hosting provider
 
-There are many hosting providers that are known to either actively support or work well with Django, including: [Heroku](https://www.heroku.com/), [Digital Ocean](https://www.digitalocean.com/), [Railway](https://railway.app/), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](https://aws.amazon.com/), [Azure](https://azure.microsoft.com/en-us/), [Google Cloud](https://cloud.google.com/), [Hetzner](https://www.hetzner.com/), and [Vultr Cloud Compute](https://www.vultr.com/news/new-free-tier-plan/) — to name just a few.
+There are many hosting providers that are known to either actively support or work well with Django, including: [Heroku](https://www.heroku.com/), [Digital Ocean](https://www.digitalocean.com/), [Railway](https://railway.app/), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](https://aws.amazon.com/), [Azure](https://azure.microsoft.com/en-us/), [Google Cloud](https://cloud.google.com/), [Hetzner](https://www.hetzner.com/), and [Vultr Cloud Compute](https://blogs.vultr.com/new-free-tier-plan) — to name just a few.
 These vendors provide different types of environments (IaaS, PaaS), and different levels of computing and network resources at different prices.
 
 Some of the things to consider when choosing a host:
@@ -82,18 +85,20 @@ Some of the things to consider when choosing a host:
 The good news when you're starting out is that there are quite a few sites that provide "free" computing environments that are intended for evaluation and testing.
 These are usually fairly resource constrained/limited environments, and you do need to be aware that they may expire after some introductory period or have other constraints.
 They are however great for testing low traffic sites in a hosted environment, and can provide an easy migration to paying for more resources when your site gets busier.
-Popular choices in this category include [Vultr Cloud Compute](https://www.vultr.com/news/new-free-tier-plan/), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/pricing/details/app-service/), and so on.
+Popular choices in this category include [Vultr Cloud Compute](https://blogs.vultr.com/new-free-tier-plan), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/app-service/linux/), and so on.
 
 Most providers also offer a "basic" tier that is intended for small production sites, and which provide more useful levels of computing power and fewer limitations.
 [Railway](https://railway.app/), [Heroku](https://www.heroku.com/), and [Digital Ocean](https://www.digitalocean.com/) are examples of popular hosting providers that have a relatively inexpensive basic computing tier (in the $5 to $10 USD per month range).
 
-> **Note:** Remember that price is not the only selection criterion. If your website is successful, it may turn out that scalability is the most important consideration.
+> [!NOTE]
+> Remember that price is not the only selection criterion. If your website is successful, it may turn out that scalability is the most important consideration.
 
 ## Getting your website ready to publish
 
 The [Django skeleton website](/en-US/docs/Learn/Server-side/Django/skeleton_website) created using the _django-admin_ and _manage.py_ tools are configured to make development easier. Many of the Django project settings (specified in **settings.py**) should be different for production, either for security or performance reasons.
 
-> **Note:** It is common to have a separate **settings.py** file for production, and/or to conditionally import sensitive settings from a separate file or an environment variable. This file should then be protected, even if the rest of the source code is available on a public repository.
+> [!NOTE]
+> It is common to have a separate **settings.py** file for production, and/or to conditionally import sensitive settings from a separate file or an environment variable. This file should then be protected, even if the rest of the source code is available on a public repository.
 
 The critical settings that you must check are:
 
@@ -126,7 +131,8 @@ load_dotenv(env_path)
 This loads the `.env` file from the root of the web application.
 Variables defined as `KEY=VALUE` in the file are imported when the key is used in `os.environ.get('<KEY>'', '<DEFAULT VALUE>')`, if defined.
 
-> **Note:** Any values that you add to **.env** are likely to be _secrets_!
+> [!NOTE]
+> Any values that you add to **.env** are likely to be _secrets_!
 > You must not save them to GitHub, and you should add `.env` to your `.gitignore` file so that it is not added by accident.
 
 Next disable the original `SECRET_KEY` configuration and add the new lines as shown below.
@@ -162,7 +168,7 @@ A full checklist of settings you might want to change is provided in [Deployment
 python3 manage.py check --deploy
 ```
 
-#### Gunicorn
+### Gunicorn
 
 [Gunicorn](https://gunicorn.org/) is a pure-Python HTTP server that is commonly used for serving Django WSGI applications.
 
@@ -175,7 +181,7 @@ Then install _Gunicorn_ locally on the command line using _pip_:
 pip3 install gunicorn
 ```
 
-#### Database configuration
+### Database configuration
 
 SQLite, the default Django database that you've been using for development, is a reasonable choice for small to medium websites.
 Unfortunately it cannot be used on some popular hosting services, such as Heroku, because they don't provide persistent data storage in the application environment (a requirement of SQLite).
@@ -188,7 +194,7 @@ The database connection information will be supplied to Django using an environm
 Rather than hard-coding this information into Django, we'll use the [dj-database-url](https://pypi.org/project/dj-database-url/) package to parse the `DATABASE_URL` environment variable and automatically convert it to Django's desired configuration format.
 In addition to installing the _dj-database-url_ package we'll also need to install [psycopg2](https://www.psycopg.org/), as Django needs this to interact with Postgres databases.
 
-##### dj-database-url
+#### dj-database-url
 
 _dj-database-url_ is used to extract the Django database configuration from an environment variable.
 
@@ -198,7 +204,7 @@ Install it locally so that it becomes part of our [requirements](#requirements) 
 pip3 install dj-database-url
 ```
 
-##### settings.py
+#### settings.py
 
 Open **/locallibrary/settings.py** and copy the following configuration into the bottom of the file:
 
@@ -216,7 +222,7 @@ if 'DATABASE_URL' in os.environ:
 Django will now use the database configuration in `DATABASE_URL` if the environment variable is set; otherwise it uses the default SQLite database.
 The value `conn_max_age=500` makes the connection persistent, which is far more efficient than recreating the connection on every request cycle (this is optional and can be removed if needed).
 
-##### psycopg2
+#### psycopg2
 
 <!-- Django 4.2 now supports Psycopg (3) : https://docs.djangoproject.com/en/5.0/releases/4.2/#psycopg-3-support
   But didn't work on Railway!
@@ -234,7 +240,7 @@ Note that Django will use the SQLite database during development by default, unl
 You can switch to Postgres completely and use the same hosted database for development and production by setting the same environment variable in your development environment (Railway makes it easy to use the same environment for production and development).
 Alternatively you can also install and use a [self-hosted Postgres database](https://www.psycopg.org/docs/install.html) on your local computer.
 
-#### Serving static files in production
+### Serving static files in production
 
 During development we use Django and the Django development web server to serve both our dynamic HTML and our static files (CSS, JavaScript, etc.).
 This is inefficient for static files, because the requests have to pass through Django even though Django doesn't do anything with them.
@@ -261,7 +267,7 @@ python3 manage.py collectstatic
 For this tutorial, _collectstatic_ can be run before the application is uploaded, copying all the static files in the application to the location specified in `STATIC_ROOT`.
 `Whitenoise` then finds the files from the location defined by `STATIC_ROOT` (by default) and serves them at the base URL defined by `STATIC_URL`.
 
-##### settings.py
+#### settings.py
 
 Open **/locallibrary/settings.py** and copy the following configuration into the bottom of the file.
 The `BASE_DIR` should already have been defined in your file (the `STATIC_URL` may already have been defined within the file when it was created.
@@ -280,16 +286,16 @@ STATIC_URL = '/static/'
 
 We'll actually do the file serving using a library called [WhiteNoise](https://pypi.org/project/whitenoise/), which we install and configure in the next section.
 
-#### Whitenoise
+### Whitenoise
 
 There are many ways to serve static files in production (we saw the relevant Django settings in the previous sections).
 The [WhiteNoise](https://pypi.org/project/whitenoise/) project provides one of the easiest methods for serving static assets directly from Gunicorn in production.
 
 Check out [WhiteNoise](https://pypi.org/project/whitenoise/) documentation for an explanation of how it works and why the implementation is a relatively efficient method for serving these files.
 
-The steps to set up _WhiteNoise_ to use with the project are [given here](https://whitenoise.evans.io/en/stable/django.html) (and reproduced below):
+The steps to set up _WhiteNoise_ to use with the project are [given here](https://whitenoise.readthedocs.io/en/stable/django.html) (and reproduced below):
 
-##### Install whitenoise
+#### Install whitenoise
 
 Install whitenoise locally using the following command:
 
@@ -297,7 +303,7 @@ Install whitenoise locally using the following command:
 pip3 install whitenoise
 ```
 
-##### settings.py
+#### settings.py
 
 To install _WhiteNoise_ into your Django application, open **/locallibrary/settings.py**, find the `MIDDLEWARE` setting and add the `WhiteNoiseMiddleware` near the top of the list, just below the `SecurityMiddleware`:
 
@@ -330,7 +336,7 @@ STORAGES = {
 
 You don't need to do anything else to configure _WhiteNoise_ because it uses your project settings for `STATIC_ROOT` and `STATIC_URL` by default.
 
-#### Requirements
+### Requirements
 
 The Python requirements of your web application should be stored in a file **requirements.txt** in the root of your repository.
 Many hosting services will automatically install dependencies in this file (in others you have to do this yourself).
@@ -392,7 +398,8 @@ We are choosing to use PythonAnywhere for several reasons:
 - PythonAnywhere has a [free beginner plan](https://www.pythonanywhere.com/pricing/) that is _really_ free, albeit with some limitations.
   The fact that it is affordable for all developers is really important to MDN!
 
-  > **Note:** This tutorial has been hosted on Heroku, Railway, and now PythonAnywhere, migrating when the previously free plans were discontinued.
+  > [!NOTE]
+  > This tutorial has been hosted on Heroku, Railway, and now PythonAnywhere, migrating when the previously free plans were discontinued.
   > We've chosen PythonAnywhere because we think this plan is likely to remain free.
   > We've kept the Railway example too, which is not free, for comparison, and because it allows us to more easily demonstrate features such as integration with a Postgres databases running on a different service.
 
@@ -437,7 +444,7 @@ To start using PythonAnywhere you will first need to create an account:
 
 ### Install library from GitHub
 
-Next we're going open a Bash prompt, set up a virtual environment, and fetch the local library source code from Github.
+Next we're going open a Bash prompt, set up a virtual environment, and fetch the local library source code from GitHub.
 We'll also configure the default database and collect static files so that they can be served by PythonAnywhere.
 
 1. First open the Console management screen by selecting **Consoles** in the top application bar.
@@ -465,7 +472,8 @@ We'll also configure the default database and collect static files so that they 
 4. Next get the library sources from GitHub.
    PythonAnywhere expects you to install applications in a folder named after your site URL.
 
-   > **Note:** Because we're using the free account you can only name your account `<your_pythonaware_username>.pythonanywhere.com` (for example, if your username is "Odtsetseg" you will have to put the local library source into a folder named `odtsetseg.pythonanywhere.com`).
+   > [!NOTE]
+   > Because we're using the free account you can only name your account `<your_pythonaware_username>.pythonanywhere.com` (for example, if your username is "Odtsetseg" you will have to put the local library source into a folder named `odtsetseg.pythonanywhere.com`).
 
    Enter the following command to clone your library sources into an appropriately named folder (you will need to replace the username values with your own name):
 
@@ -488,7 +496,8 @@ We'll also configure the default database and collect static files so that they 
    python manage.py migrate
    ```
 
-   > **Note:** For the Railway example we will [Configure a Postgres database](#provision_and_connect_a_postgres_sql_database), and connect to it by setting the `DATABASE_URL` environment variable.
+   > [!NOTE]
+   > For the Railway example we will [Configure a Postgres database](#provision_and_connect_a_postgres_sql_database), and connect to it by setting the `DATABASE_URL` environment variable.
    > It is important that `migrate` is called _after_ configuring what database to use database.
 
 7. Collect all the static files into a location where they can be [served in production](#serving_static_files_in_production):
@@ -546,7 +555,7 @@ After getting the local library sources and installing the dependencies in a vir
 6. Scroll down to the "Code" section of the _Web_ tab and select the link to the WSGI configuration file.
    This will have a name with the form `/var/www/<user_name>_pythonanywhere_com_wsgi.py`.
 
-   ![PythonAnywhere WGSI file in Web tab, code section](python_anywhere_web_code_wsgi_select.png)
+   ![PythonAnywhere WSGI file in Web tab, code section](python_anywhere_web_code_wsgi_select.png)
 
    Replace the content in the file with the following text (first updating "hamishwillee" with your own username), and then select the **Save** button.
 
@@ -564,7 +573,7 @@ After getting the local library sources and installing the dependencies in a vir
    application = get_wsgi_application()
    ```
 
-   Note that the role of the WGSI file is to help the Gunicorn server find the local library application.
+   Note that the role of the WSGI file is to help the Gunicorn server find the local library application.
    PythonAnywhere expects this file to be in this location, which is why the WSGI file already in the project cannot be used.
 
 7. Scroll down to the "Virtualenv" section of the _Web_ tab.
@@ -581,7 +590,7 @@ After getting the local library sources and installing the dependencies in a vir
    This is the `STATIC_URL` in the [application settings](#settings.py_2), and reflects the location where files were copied when we ran `collectstatic` in the previous section.
 
 9. Near the top of the _Web_ tab select the **Reload** button to restart the site.
-   Then then select the site URL link to launch the live site:
+   Then select the site URL link to launch the live site:
 
 ![PythonAnywhere Web screen with the link to launch the site highlighted](python_anywhere_web_open_site.png)
 
@@ -592,7 +601,8 @@ This is a Django security error that is raised because our source code is not ru
 
 ![A detailed error page with a full traceback of an invalid HTTP_HOST header](python_anywhere_error_disallowed_host.png)
 
-> **Note:** This kind of debug information is very useful when you're getting set up, but is a security risk in a deployed site.
+> [!NOTE]
+> This kind of debug information is very useful when you're getting set up, but is a security risk in a deployed site.
 > In the next section we'll show you how to disable this level of logging on the live site using [environment variables](#using_environment_variables_on_pythonanywhere).
 
 Open **/locallibrary/settings.py** in your GitHub project and change the [ALLOWED_HOSTS](https://docs.djangoproject.com/en/5.0/ref/settings/#allowed-hosts) setting to include your PythonAnywhere site URL:
@@ -665,7 +675,7 @@ The steps are:
 
 4. Restart the application.
 
-You can test that the operation worked by attempting to open a record that that does not exist (for example, create a genre, then increment the number in the URL bar to open a record that has not yet been created).
+You can test that the operation worked by attempting to open a record that does not exist (for example, create a genre, then increment the number in the URL bar to open a record that has not yet been created).
 If the environment variable has been loaded you'll get a "Not found" message rather than a detailed debug trace.
 
 ## Example: Hosting on Railway
@@ -674,14 +684,15 @@ This section provides a practical demonstration of how to install _LocalLibrary_
 
 ### Why Railway?
 
-> **Warning:** Railway no longer has a completely free starter tier.
+> [!WARNING]
+> Railway no longer has a completely free starter tier.
 > We've kept these instructions because Railway has some great features, and will be a better option for some users.
 
 Railway is an attractive hosting option for several reasons:
 
 - Railway takes care of most of the infrastructure so you don't have to.
   Not having to worry about servers, load balancers, reverse proxies, and so on, makes it much easier to get started.
-- Railway has a [focus on developer experience for development and deployment](https://docs.railway.app/reference/compare-to-heroku), which leads to a faster and softer learning curve than many other alternatives.
+- Railway has a [focus on developer experience for development and deployment](https://docs.railway.app/maturity/compare-to-heroku), which leads to a faster and softer learning curve than many other alternatives.
 - The skills and concepts you will learn when using Railway are transferrable.
   While Railway has some excellent new features, other popular hosting services use many of the same ideas and approaches.
 - [Railway documentation](https://docs.railway.app/) is clear and complete.
@@ -701,11 +712,11 @@ For Django apps we provide this information in a number of text files:
   For Django this will usually be the Gunicorn web application server (with a `.wsgi` script).
 - **wsgi.py**: [WSGI](https://wsgi.readthedocs.io/en/latest/what.html) configuration to call our Django application in the Railway environment.
 
-Once the application is running it can configure itself using information provided in [environment variables](https://docs.railway.app/develop/variables).
+Once the application is running it can configure itself using information provided in [environment variables](https://docs.railway.app/guides/variables).
 For example, an application that uses a database can get the address using the variable `DATABASE_URL`.
 The database service itself may be hosted by Railway or some other provider.
 
-Developers interact with Railway through the Railway site, and using a special [Command Line Interface (CLI)](https://docs.railway.app/develop/cli) tool.
+Developers interact with Railway through the Railway site, and using a special [Command Line Interface (CLI)](https://docs.railway.app/guides/cli) tool.
 The CLI allows you to associate a local GitHub repository with a railway project, upload the repository from the local branch to the live site, inspect the logs of the running process, set and get configuration variables and much more.
 One of the most useful features is that you can use the CLI to run your local project with the same environment variables as the live project.
 
@@ -750,7 +761,8 @@ Create the file in the root of the repo and add the following text:
 python-3.10.2
 ```
 
-> **Note:** Hosting providers do not necessarily support every Python runtime minor version.
+> [!NOTE]
+> Hosting providers do not necessarily support every Python runtime minor version.
 > They will generally use the closest supported version to the value that you specify.
 
 #### Re-test and save changes to GitHub
@@ -820,7 +832,8 @@ This is a Django security error that is raised because our source code is not ru
 
 ![A detailed error page with a full traceback of an invalid HTTP_HOST header](site_error_dissallowed_host.png)
 
-> **Note:** This kind of debug information is very useful when you're getting set up, but is a security risk in a deployed site.
+> [!NOTE]
+> This kind of debug information is very useful when you're getting set up, but is a security risk in a deployed site.
 > We'll show you how to disable it once the site is up and running.
 
 Open **/locallibrary/settings.py** in your GitHub project and change the [ALLOWED_HOSTS](https://docs.djangoproject.com/en/5.0/ref/settings/#allowed-hosts) setting to include your Railway site URL:
@@ -886,11 +899,11 @@ Note that you could also have opened the Postgres database, then its variable ta
 
 If you open the project now it should display just as it did locally.
 Note however that there is no way to populate the library with data yet, because we have not yet created a superuser account.
-We'll do that using the [CLI](https://docs.railway.app/develop/cli) tool on our local computer.
+We'll do that using the [CLI](https://docs.railway.app/guides/cli) tool on our local computer.
 
 ### Install the client
 
-Download and install the Railway client for your local operating system by following the [instructions here](https://docs.railway.app/develop/cli).
+Download and install the Railway client for your local operating system by following the [instructions here](https://docs.railway.app/guides/cli).
 
 After the client is installed you will be able to run commands.
 Some of the more important operations include deploying the current directory of your computer to an associated Railway project (without having to upload to GitHub), and running your Django project locally using the same settings as you have on the production server.
@@ -902,7 +915,8 @@ You can get a list of all the possible commands by entering the following in a t
 railway help
 ```
 
-> **Note:** In the following section we use `railway login` and `railway link` to link the current project to a directory.
+> [!NOTE]
+> In the following section we use `railway login` and `railway link` to link the current project to a directory.
 > If you are logged out by the system, you will need to call both commands again to re-link the project.
 
 ### Configure a superuser
@@ -989,7 +1003,7 @@ The next step is to read our last few articles, and then complete the assessment
 
 - Railway Docs
 
-  - [CLI](https://docs.railway.app/develop/cli)
+  - [CLI](https://docs.railway.app/guides/cli)
 
 - Digital Ocean
 

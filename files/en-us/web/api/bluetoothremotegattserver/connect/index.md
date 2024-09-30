@@ -35,5 +35,3 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("BluetoothRemoteGATTServer"
 ## Browser compatibility
 
 {{Compat}}
-
-{{APIRef("Web Bluetooth")}}

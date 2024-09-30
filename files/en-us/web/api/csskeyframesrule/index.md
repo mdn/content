@@ -19,6 +19,8 @@ _Inherits properties from its ancestor {{domxref("CSSRule")}}._
   - : Represents the name of the keyframes, used by the {{cssxref("animation-name")}} property.
 - {{domxref("CSSKeyframesRule.cssRules")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("CSSRuleList")}} of the keyframes in the list.
+- {{domxref("CSSKeyframesRule.length")}} {{ReadOnlyInline}}
+  - : Returns the number of keyframes in the list.
 
 ## Instance methods
 
@@ -32,6 +34,8 @@ _Inherits methods from its ancestor {{domxref("CSSRule")}}._
   - : Returns a keyframe rule corresponding to the given key. The key is a string containing an index of the keyframe to be returned, resolving to a percentage between `0%` and `100%`. If no such keyframe exists, `findRule` returns `null`.
 
 ## Example
+
+### Using CSSKeyframesRule
 
 The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule")}} returned by `document.styleSheets[0].cssRules`.
 `myRules[0]` returns a `CSSKeyframesRule` object.
@@ -49,8 +53,24 @@ The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule"
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-let keyframes = myRules[0]; // a CSSKeyframesRule
+const myRules = document.styleSheets[0].cssRules;
+const keyframes = myRules[0]; // a CSSKeyframesRule
+```
+
+### Accessing indexes
+
+`CSSKeyframesRule` can be indexed like an array, and functions similar to its {{domxref("CSSKeyframesRule.cssRules", "cssRules")}} property.
+
+```js
+const keyframes = document.styleSheets[0].cssRules[0];
+
+for (let i = 0; i < keyframes.length; i++) {
+  console.log(keyframes[i].keyText);
+}
+
+// Output:
+// 0%
+// 100%
 ```
 
 ## Specifications

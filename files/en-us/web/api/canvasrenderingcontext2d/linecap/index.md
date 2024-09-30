@@ -12,7 +12,8 @@ The
 **`CanvasRenderingContext2D.lineCap`**
 property of the Canvas 2D API determines the shape used to draw the end points of lines.
 
-> **Note:** Lines can be drawn with the
+> [!NOTE]
+> Lines can be drawn with the
 > {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}},
 > and {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} methods.
 
@@ -99,8 +100,7 @@ ctx.strokeStyle = "black";
 });
 ```
 
-{{EmbedLiveSample("Comparison_of_line_caps", "180", "180",
-  "canvas_linecap.png")}}
+{{EmbedLiveSample("Comparison_of_line_caps", "180", "180")}}
 
 ## Specifications
 

@@ -38,6 +38,7 @@ Sec-Fetch-Dest: audioworklet
 Sec-Fetch-Dest: document
 Sec-Fetch-Dest: embed
 Sec-Fetch-Dest: empty
+Sec-Fetch-Dest: fencedframe
 Sec-Fetch-Dest: font
 Sec-Fetch-Dest: frame
 Sec-Fetch-Dest: iframe
@@ -61,7 +62,8 @@ Servers should ignore this header if it contains any other value.
 
 ## Directives
 
-> **Note:** These directives correspond to the values returned by {{domxref("Request.destination")}}.
+> [!NOTE]
+> These directives correspond to the values returned by {{domxref("Request.destination")}}.
 
 - `audio`
   - : The destination is audio data. This might originate from an HTML {{HTMLElement("audio")}} tag.
@@ -72,7 +74,9 @@ Servers should ignore this header if it contains any other value.
 - `embed`
   - : The destination is embedded content. This might originate from an HTML {{HTMLElement("embed")}} tag.
 - `empty`
-  - : The destination is the empty string. This is used for destinations that do not have their own value. For example: {{domxref("fetch()")}}, {{domxref("navigator.sendBeacon()")}}, {{domxref("EventSource")}}, {{domxref("XMLHttpRequest")}}, {{domxref("WebSocket")}}, etc.
+  - : The destination is the empty string. This is used for destinations that do not have their own value. For example: {{domxref("Window/fetch", "fetch()")}}, {{domxref("navigator.sendBeacon()")}}, {{domxref("EventSource")}}, {{domxref("XMLHttpRequest")}}, {{domxref("WebSocket")}}, etc.
+- `fencedframe` {{experimental_inline}}
+  - : The destination is a [fenced frame](/en-US/docs/Web/API/Fenced_frame_API).
 - `font`
   - : The destination is a font. This might originate from CSS {{cssxref("@font-face")}}.
 - `frame`

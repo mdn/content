@@ -6,13 +6,11 @@ page-type: web-api-instance-property
 browser-compat: api.IDBDatabase.objectStoreNames
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`objectStoreNames`** read-only property of the
 {{domxref("IDBDatabase")}} interface is a {{ domxref("DOMStringList") }} containing a
 list of the names of the [object stores](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#object_store) currently in the connected database.
-
-{{AvailableInWorkers}}
 
 ## Value
 
@@ -28,11 +26,13 @@ const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these two event handlers act on the database being opened successfully, or not
 DBOpenRequest.onerror = (event) => {
-  note.innerHTML += "<li>Error loading database.</li>";
+  note.appendChild(document.createElement("li")).textContent =
+    "Error loading database.";
 };
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += "<li>Database initialized.</li>";
+  note.appendChild(document.createElement("li")).textContent =
+    "Database initialized.";
 
   // store the result of opening the database in the db variable. This is used a lot below
   db = DBOpenRequest.result;

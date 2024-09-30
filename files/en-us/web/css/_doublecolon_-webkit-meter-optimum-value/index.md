@@ -21,10 +21,6 @@ Green is the default color.
 }
 ```
 
-## Specifications
-
-Not part of any standard.
-
 ## Examples
 
 This example will only work in browsers based on WebKit or Blink.
@@ -82,6 +78,10 @@ if (is_safari) {
 ### Result
 
 {{ EmbedLiveSample('Examples', '100%', 50) }}
+
+## Specifications
+
+Not part of any standard.
 
 ## Browser compatibility
 

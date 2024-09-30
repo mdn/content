@@ -13,7 +13,8 @@ browser-compat: api.MouseEvent.initMouseEvent
 The **`MouseEvent.initMouseEvent()`** method initializes the
 value of a mouse event once it's been created (normally using the {{domxref("Document.createEvent()")}} method).
 
-> **Warning:** Do not use this method anymore as it is deprecated.
+> [!WARNING]
+> Do not use this method anymore as it is deprecated.
 >
 > Instead use specific event constructors, like {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}}.
 > The page on [Creating and triggering events](/en-US/docs/Web/Events/Creating_and_triggering_events) gives more information about the way to use these.
@@ -107,7 +108,7 @@ None ({{jsxref("undefined")}}).
 ```js
 document.body.onclick = (event) => {
   const elementTag = event.target.tagName.toLowerCase();
-  document.getElementById("out").innerHTML = elementTag;
+  document.getElementById("out").textContent = elementTag;
 };
 
 const simulateClick = () => {
@@ -141,9 +142,7 @@ simulateClick();
 
 ## Specifications
 
-This feature is not part of any specification. It is no longer on track to becoming a standard.
-
-Use the {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}} constructor instead.
+{{Specifications}}
 
 ## Browser compatibility
 

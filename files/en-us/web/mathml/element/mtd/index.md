@@ -27,6 +27,43 @@ Some browsers may also support the following attributes:
   - : Specifies the vertical alignment of this cell and overrides values specified by {{ MathMLElement("mtable") }} or {{ MathMLElement("mtr") }}.
     Possible values are: `axis`, `baseline`, `bottom`, `center` and `top`.
 
+## Examples
+
+### Matrix using mtable, mrow, mtr and mtd
+
+```html
+<math display="block">
+  <mfrac>
+    <mi>A</mi>
+    <mn>2</mn>
+  </mfrac>
+  <mo>=</mo>
+  <mrow>
+    <mo>(</mo>
+    <mtable>
+      <mtr>
+        <mtd><mn>1</mn></mtd>
+        <mtd><mn>2</mn></mtd>
+        <mtd><mn>3</mn></mtd>
+      </mtr>
+      <mtr>
+        <mtd><mn>4</mn></mtd>
+        <mtd><mn>5</mn></mtd>
+        <mtd><mn>6</mn></mtd>
+      </mtr>
+      <mtr>
+        <mtd><mn>7</mn></mtd>
+        <mtd><mn>8</mn></mtd>
+        <mtd><mn>9</mn></mtd>
+      </mtr>
+    </mtable>
+    <mo>)</mo>
+  </mrow>
+</math>
+```
+
+{{EmbedLiveSample('Alignment with row number')}}
+
 ## Specifications
 
 {{Specifications}}

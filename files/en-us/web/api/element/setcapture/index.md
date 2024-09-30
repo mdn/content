@@ -12,10 +12,10 @@ browser-compat: api.Element.setCapture
 {{Deprecated_Header}}{{non-standard_header}}{{ APIRef("DOM") }}
 
 Call this method during the handling of a mousedown event to retarget all mouse events
-to this element until the mouse button is released or {{
-  domxref("document.releaseCapture()") }} is called.
+to this element until the mouse button is released or {{domxref("document.releaseCapture()")}} is called.
 
-> **Warning:** This interface never had much cross-browser
+> [!WARNING]
+> This interface never had much cross-browser
 > support and you probably looking for {{domxref("element.setPointerCapture")}} instead,
 > from the Pointer Events API.
 

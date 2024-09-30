@@ -11,9 +11,10 @@ The **`prefetch`** keyword for the [`rel`](/en-US/docs/Web/HTML/Element/link#rel
 
 The result is kept in the HTTP cache on disk. Because of this it is useful for prefetching subresources, even if they are not used by the current page. You could also use it to prefetch the next document the user will likely visit on the site. However, as a result you need to be careful with headers — for example certain [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) headers could block prefetching (for example `no-cache` or `no-store`).
 
-> **Note:** Because of such limitations, you are advised to use the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) for document prefetches instead, where it is supported.
+> [!NOTE]
+> Because of such limitations, you are advised to use the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) for document prefetches instead, where it is supported.
 
-`<link rel="prefetch">` is functionally equivalent to a {{domxref("fetch()")}} call with a `priority: "low"` option set on it, except that the former will generally have an even lower priority, and it will have a [`Sec-Purpose: prefetch`](/en-US/docs/Web/HTTP/Headers/Sec-Purpose) header set on the request. Note that in general browsers will give prefetch resources a lower priority than preload ones (e.g. requested via [`<link rel="preload">`](/en-US/docs/Web/HTML/Attributes/rel/preload)) — the current page is more important than the next.
+`<link rel="prefetch">` is functionally equivalent to a {{domxref("Window/fetch", "fetch()")}} call with a `priority: "low"` option set on it, except that the former will generally have an even lower priority, and it will have a [`Sec-Purpose: prefetch`](/en-US/docs/Web/HTTP/Headers/Sec-Purpose) header set on the request. Note that in general browsers will give prefetch resources a lower priority than preload ones (e.g. requested via [`<link rel="preload">`](/en-US/docs/Web/HTML/Attributes/rel/preload)) — the current page is more important than the next.
 
 The fetch request for a `prefetch` operation results in an HTTP request that includes the HTTP header [`Sec-Purpose: prefetch`](/en-US/docs/Web/HTTP/Headers/Sec-Purpose). A server might use this header to change the cache timeouts for the resources, or perform other special handling.
 The request will also include the {{HTTPHeader("Sec-Fetch-Dest")}} header with the value set to `empty`.
@@ -39,7 +40,7 @@ Prefetching can be used to fetch both HTML and sub-resources for a possible next
 
 ### The effects of cache partitioning
 
-Many browsers now implement some form of [cache partitioning](https://developer.chrome.com/en/blog/http-cache-partitioning/), which makes `<link rel="prefetch">` useless for resources intended for use by different top-level sites. This includes the main document when navigating cross-site. So, for example, the following prefetch:
+Many browsers now implement some form of [cache partitioning](https://developer.chrome.com/blog/http-cache-partitioning), which makes `<link rel="prefetch">` useless for resources intended for use by different top-level sites. This includes the main document when navigating cross-site. So, for example, the following prefetch:
 
 ```html
 <link rel="prefetch" href="https://news.example/article" />

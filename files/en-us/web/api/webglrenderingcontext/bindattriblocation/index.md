@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.bindAttribLocation
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.bindAttribLocation()`** method of
 the [WebGL API](/en-US/docs/Web/API/WebGL_API) binds a generic vertex index
@@ -26,7 +26,7 @@ bindAttribLocation(program, index, name)
   - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the generic vertex to bind.
 - `name`
   - : A string specifying the name of the variable to bind to the
-    generic vertex index. This name cannot start with "webgl\_" or "\_webgl\_", as these are
+    generic vertex index. This name cannot start with `"webgl_"` or `"_webgl_"`, as these are
     reserved for use by WebGL.
 
 ### Return value

@@ -70,4 +70,4 @@ Addons that overlay chrome://browser/content/debugger.xul must now overlay chrom
 
 ### Older versions
 
-{{Firefox_for_developers('22')}}
+{{Firefox_for_developers}}

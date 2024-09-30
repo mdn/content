@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-valuemax
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-valuemax` attribute defines the maximum allowed value for a range widget.
 
 ## Description
@@ -15,7 +17,8 @@ When creating a range type role, including [`meter`](/en-US/docs/Web/Accessibili
 
 Declaring the minimum and maximum values allows assistive technologies to convey the size of the range to users. The minimum value is defined with [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin).
 
-> **Warning:** The [`range`](/en-US/docs/Web/Accessibility/ARIA/Roles/range_role) role itself should **NOT** be used as it is an ["abstract"](/en-US/docs/Web/Accessibility/ARIA/Roles#6._abstract_roles). The `aria-valuemax` attribute is used on all of the range roles subtypes.
+> [!WARNING]
+> The [`range`](/en-US/docs/Web/Accessibility/ARIA/Roles/range_role) role itself should **NOT** be used as it is an ["abstract"](/en-US/docs/Web/Accessibility/ARIA/Roles#6._abstract_roles). The `aria-valuemax` attribute is used on all of the range roles subtypes.
 
 ## Example
 
@@ -72,8 +75,3 @@ Inherited into roles:
 - [`<input type="range>` element `max` attribute](/en-US/docs/Web/HTML/Element/input/range#max)
 - [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin)
 - [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow)
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

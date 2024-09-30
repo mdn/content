@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUTexture.createView
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`createView()`** method of the
 {{domxref("GPUTexture")}} interface creates a {{domxref("GPUTextureView")}} representing a specific view of the `GPUTexture`.
@@ -101,7 +101,7 @@ The following criteria must be met when calling **`createView()`**, otherwise a 
 - `mipLevelCount` is greater than 0.
 - `mipLevelCount` + `baseMipLevel` is less than or equal to {{domxref("GPUTexture.mipLevelCount")}}.
 - `arrayLayerCount` is greater than 0.
-- `arrayLayerCount` + `baseArrayLayer` is less than or equal to {{domxref("GPUTexture.depthOrArrayLayers")}}.
+- `arrayLayerCount` + `baseArrayLayer` is less than or equal to {{domxref("GPUTexture.depthOrArrayLayers")}} if {{domxref("GPUTexture.dimension")}} is `"2d"`, or less than or equal to 1 if {{domxref("GPUTexture.dimension")}} is `"1d"` or `"3d"`.
 - If `sampleCount` is greater than 1, `dimension` is `"2d"`.
 - If `dimension` is:
   - `"1d"`
@@ -126,7 +126,7 @@ The following criteria must be met when calling **`createView()`**, otherwise a 
 
 ## Examples
 
-In the WebGPU Samples [Cubemap demo](https://webgpu.github.io/webgpu-samples/samples/cubemap), you will see multiple examples of how `createView()` is used, both as to create a view `resource` for a {{domxref("GPUDevice.createBindGroup()")}} call, and to provide a `view` in the `depthStencilAttachment` object of a {{domxref("GPUCommandEncoder.beginRenderPass()")}} descriptor.
+In the WebGPU Samples [Cubemap demo](https://webgpu.github.io/webgpu-samples/samples/cubemap/), you will see multiple examples of how `createView()` is used, both as to create a view `resource` for a {{domxref("GPUDevice.createBindGroup()")}} call, and to provide a `view` in the `depthStencilAttachment` object of a {{domxref("GPUCommandEncoder.beginRenderPass()")}} descriptor.
 
 ```js
 const uniformBindGroup = device.createBindGroup({

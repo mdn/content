@@ -46,7 +46,7 @@ Note that this same set of values can be used in all {{Glossary("fetch directive
 
 ## Examples
 
-### Whitelisting resources from trusted domains
+### Allowlisting resources from trusted domains
 
 Given this CSP header that only allows scripts from `https://example.com`:
 
@@ -75,7 +75,7 @@ document.getElementById("btn").addEventListener("click", doSomething);
 If you cannot replace inline event handlers, you can use the `'unsafe-hashes'` source expression to allow them.
 See [Unsafe hashes](#unsafe_hashes) for more information.
 
-### Whitelisting external scripts using hashes
+### Allowlisting external scripts using hashes
 
 Allowing trusted domains, as shown in the section above, is a broad-brushed approach for specifying the locations from which code can safely be loaded.
 This is a pragmatic approach, in particular when your site uses many resources and you have confidence that the trusted site will not be compromised.
@@ -127,7 +127,7 @@ Values that are not recognized as hashes by the browser are ignored, so the foll
 
 ### Unsafe inline script
 
-> **Note:**
+> [!NOTE]
 > Disallowing inline styles and inline scripts is one of the biggest security wins CSP provides.
 > If you absolutely have to use them, there are a few mechanisms that will allow them.
 > Hashes apply to inline scripts and styles, but not event handlers.
@@ -263,10 +263,10 @@ will act like `'unsafe-inline' https:` in browsers that support CSP1, `https: 'n
 
 ### Allowing speculation rules
 
-To include [speculation rules](/en-US/docs/Web/API/Speculation_Rules_API) in scripts (see also [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/type/speculationrules)), you need to use the `script-src` directive along with the `'inline-speculation-rules'` source and a hash- or nonce-source. For example:
+To include [speculation rules](/en-US/docs/Web/API/Speculation_Rules_API) in a script element (see also [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/type/speculationrules)), you need to use the `script-src` directive with one of the `'inline-speculation-rules'` source, a hash-source, or nonce-source. For example:
 
 ```http
-Content-Security-Policy: script-src 'inline-speculation-rules' 'sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC'
+Content-Security-Policy: script-src 'inline-speculation-rules'
 ```
 
 ## Specifications

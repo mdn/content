@@ -27,7 +27,8 @@ Some formats can be used for both loss-less or lossy compression, like `webp`, a
 
 Lossy compression algorithms are usually more efficient than loss-less ones.
 
-> **Note:** As compression works better on a specific kind of files, it usually provides nothing to compress them a second time. In fact, this is often counterproductive as the cost of the overhead (algorithms usually need a dictionary that adds to the initial size) can be higher than the extra gain in compression resulting in a larger file. Do not use the two following techniques for files in a compressed format.
+> [!NOTE]
+> As compression works better on a specific kind of files, it usually provides nothing to compress them a second time. In fact, this is often counterproductive as the cost of the overhead (algorithms usually need a dictionary that adds to the initial size) can be higher than the extra gain in compression resulting in a larger file. Do not use the two following techniques for files in a compressed format.
 
 ## End-to-end compression
 
@@ -71,9 +72,9 @@ sequenceDiagram
 
 ![A client requesting content with an 'Accept-Encoding: br, gzip' header. The server responds with a body compressed using the Brotli algorithm and the required 'Content-Encoding' and 'Vary' headers.](httpcompression1.svg)
 
-As compression brings significant performance improvements, it is recommended to activate it for all files, but already compressed ones like images, audio files and videos.
+As compression brings significant performance improvements, it is recommended to activate it for all files except already compressed ones like images, audio files and videos.
 
-Apache supports compression and uses [mod_deflate](https://httpd.apache.org/docs/current/mod/mod_deflate.html); for Nginx there is [ngx_http_gzip_module](https://nginx.org/en/docs/http/ngx_http_gzip_module.html); for IIS, the [`<httpCompression>`](https://docs.microsoft.com/iis/configuration/system.webServer/httpCompression/) element.
+Apache supports compression and uses [mod_deflate](https://httpd.apache.org/docs/current/mod/mod_deflate.html); for Nginx there is [ngx_http_gzip_module](https://nginx.org/en/docs/http/ngx_http_gzip_module.html); for IIS, the [`<httpCompression>`](https://learn.microsoft.com/en-us/iis/configuration/system.webServer/httpCompression/) element.
 
 ## Hop-by-hop compression
 

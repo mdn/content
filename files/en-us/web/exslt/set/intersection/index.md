@@ -14,14 +14,14 @@ page-type: exslt-function
 set:intersection(nodeSet1, nodeSet2)
 ```
 
-### Arguments
+### Parameters
 
 - `nodeSet1`
   - : The first node-set.
 - `nodeSet2`
   - : The second node-set.
 
-### Returns
+### Return value
 
 A node-set containing the nodes that existed in both `nodeSet1` and in `nodeSet2`.
 

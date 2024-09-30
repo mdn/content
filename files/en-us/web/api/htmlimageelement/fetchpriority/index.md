@@ -51,3 +51,8 @@ img.src = "img/logo.png";
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("HTMLLinkElement.fetchPriority")}}
+- {{domxref("HTMLScriptElement.fetchPriority")}}

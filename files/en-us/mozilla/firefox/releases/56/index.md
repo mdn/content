@@ -51,7 +51,7 @@ _No changes._
 
 #### DOM events
 
-- `onwheel` is now available on {{domxref("HTMLElement.onwheel", "HTMLElement")}} — it wasn't before ([Firefox bug 1370550](https://bugzil.la/1370550)).
+- {{domxref("HTMLElement/wheel_event", "onwheel")}} is now available on {{domxref("HTMLElement")}} — it wasn't before ([Firefox bug 1370550](https://bugzil.la/1370550)).
 
 #### Media and WebRTC
 
@@ -80,7 +80,7 @@ _No changes._
 
 ### HTML
 
-- The {{htmlelement("isindex")}} element has been removed from the HTML parser, and from form submission ([Firefox bug 1266495](https://bugzil.la/1266495)).
+- The `<isindex>` element has been removed from the HTML parser, and from form submission ([Firefox bug 1266495](https://bugzil.la/1266495)).
 - The `<applet>` element has been removed ([Firefox bug 1279218](https://bugzil.la/1279218)).
 
 ### APIs
@@ -126,4 +126,4 @@ _No changes._
 
 ## Older versions
 
-{{Firefox_for_developers(55)}}
+{{Firefox_for_developers}}

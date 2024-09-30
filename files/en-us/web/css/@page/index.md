@@ -44,7 +44,7 @@ The **`@page`** at-rule is a CSS at-rule used to modify different aspects of pri
 
 ### Page properties
 
-The `@page` at-rule can contain only [page descriptors](#page-descriptors) and [margin at-rules](#margin_at-rules). The following descriptors have been implemented by at least one browser:
+The `@page` at-rule can contain only page descriptors and [margin at-rules](#margin_at-rules). The following descriptors have been implemented by at least one browser:
 
 - [`margin`](/en-US/docs/Web/CSS/margin)
   - : Specifies the page margins. Individual margin properties [`margin-top`](/en-US/docs/Web/CSS/margin-top), [`margin-right`](/en-US/docs/Web/CSS/margin-right), [`margin-bottom`](/en-US/docs/Web/CSS/margin-bottom), and [`margin-left`](/en-US/docs/Web/CSS/margin-left) can also be used.
@@ -133,7 +133,8 @@ The specification mentions following CSS properties to be applicable to page box
 
 The @page rule defines properties of the page box. The `@page` at-rule can be accessed via the CSS object model interface {{domxref("CSSPageRule")}}.
 
-> **Note:** The W3C is discussing how to handle viewport-related {{cssxref("&lt;length&gt;")}} units, `vh`, `vw`, `vmin`, and `vmax`. Meanwhile do not use them within a `@page` at-rule.
+> [!NOTE]
+> The W3C is discussing how to handle viewport-related {{cssxref("&lt;length&gt;")}} units, `vh`, `vw`, `vmin`, and `vmax`. Meanwhile do not use them within a `@page` at-rule.
 
 ### Related properties
 
@@ -151,7 +152,7 @@ Where the `<page-body>` includes:
 - page-properties
 - page-margin properties
 
-and `<pseudo-selector>` represents these pseudo-classes:
+and `<pseudo-page>` represents these pseudo-classes:
 
 - [`:blank`](https://drafts.csswg.org/css-page/#blank-pseudo)
 - {{Cssxref(":first")}}
@@ -160,7 +161,8 @@ and `<pseudo-selector>` represents these pseudo-classes:
 
 ## Margin at-rules
 
-> **Warning:** The margin at-rules have not been implemented by any user agent (updated: August 2023).
+> [!WARNING]
+> The margin at-rules have not been implemented by any user agent (updated: August 2023).
 
 The margin at-rules are used inside of the `@page` at-rule. They each target a different section of the document printed page, styling the area of the printed page based on the property values set in the style block:
 
@@ -408,4 +410,4 @@ Please refer to the various [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes)
 - The {{Cssxref("page")}} property
 - See the [\[META\] CSS Paged Media Module Level 3](https://bugzilla.mozilla.org/show_bug.cgi?id=286443) ticket in Bugzilla for tracking progress on the subject (page-based counters, etc.)
 - [CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media) module
-- [Paged.js: W3C paged media polyfill](https://pagedjs.org/documentation/1-the-big-picture)
+- [Paged.js: W3C paged media polyfill](https://pagedjs.org/documentation/1-the-big-picture/)

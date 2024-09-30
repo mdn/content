@@ -97,7 +97,7 @@ Because Firefox now caches code and other resources more aggressively, you'll wa
 
 The old Profile Manager tool will be getting removed from Firefox 4, although it hasn't been yet. This tool hasn't been updated for a long time and is missing features. On top of that, its presence is slowing down application startup.
 
-A replacement to the profile manager is [available](ftp://ftp.mozilla.org/pub/utilities/profilemanager/). (See also [Firefox bug 539524](https://bugzil.la/539524)). This new tool is independent of the browser itself, and more robust than the old Profile Manager.
+A replacement to the profile manager is [available](https://ftp.mozilla.org/pub/utilities/profilemanager/). (See also [Firefox bug 539524](https://bugzil.la/539524)). This new tool is independent of the browser itself, and more robust than the old Profile Manager.
 
 ### Installing extensions globally
 

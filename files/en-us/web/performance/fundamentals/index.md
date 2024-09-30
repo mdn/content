@@ -32,7 +32,8 @@ Frame rate is important as a "quality of service" metric. Computer displays are 
 
 As your brain infers, motion is not jerky and discrete, but rather "updates" smoothly and continuously. (Strobe lights are fun because they turn that upside down, starving your brain of inputs to create the illusion of discrete reality). On a computer display, a higher frame rate makes for a more faithful imitation of reality.
 
-> **Note:** Humans usually cannot perceive differences in frame rate above 60Hz. That's why most modern electronic displays are designed to refresh at that rate. A television probably looks choppy and unrealistic to a hummingbird, for example.
+> [!NOTE]
+> Humans usually cannot perceive differences in frame rate above 60Hz. That's why most modern electronic displays are designed to refresh at that rate. A television probably looks choppy and unrealistic to a hummingbird, for example.
 
 ### Memory usage
 
@@ -100,7 +101,8 @@ The Web platform is highly dynamic. JavaScript is a dynamically-typed language, 
 
 Another problem that can delay startup is idle time, caused by waiting for responses to requests (like database loads). To avoid this problem, applications should issue requests as early as possible in startup (this is called "front-loading"). Then when the data is needed later, hopefully it's already available and the application doesn't have to wait.
 
-> **Note:** For much more information on improving startup performance, read [Optimizing startup performance](/en-US/docs/Web/Performance/Optimizing_startup_performance).
+> [!NOTE]
+> For much more information on improving startup performance, read [Optimizing startup performance](/en-US/docs/Web/Performance/Optimizing_startup_performance).
 
 On the same note, notice that locally-cached, static resources can be loaded much faster than dynamic data fetched over high-latency, low-bandwidth mobile networks. Network requests should never be on the critical path to early application startup. Local caching/offline apps can be achieved via [Service Workers](/en-US/docs/Web/API/Service_Worker_API). See [Offline and background operation](/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation) for a guide about using service workers for offline and background sync capabilities.
 
@@ -145,7 +147,8 @@ Instead of tweaking absolute positioning and fiddling with all that math yoursel
 
 In addition, transforms give you capabilities you might not otherwise have. Not only can you translate elements in 2D space, but you can transform in three dimensions, skew and rotate, and so forth. Paul Irish has an [in-depth analysis of the benefits of `translate()`](https://www.paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft/) (2012) from a performance point of view. In general, however, you have the same benefits you get from using CSS animations: you use the right tool for the job and leave the optimization to the browser. You also use an easily extensible way of positioning elements — something that needs a lot of extra code if you simulate translation with `top` and `left` positioning. Another bonus is that this is just like working in a `canvas` element.
 
-> **Note:** You may need to attach a `translateZ(0.1)` transform if you wish to get hardware acceleration on your CSS animations, depending on platform. As noted above, this can improve performance. When overused, it can have memory consumption issues. What you do in this regard is up to you — do some testing and find out what's best for your particular app.
+> [!NOTE]
+> You may need to attach a `translateZ(0.1)` transform if you wish to get hardware acceleration on your CSS animations, depending on platform. As noted above, this can improve performance. When overused, it can have memory consumption issues. What you do in this regard is up to you — do some testing and find out what's best for your particular app.
 
 #### Use `requestAnimationFrame()` instead of `setInterval()`
 
@@ -177,7 +180,8 @@ The [Built-in Gecko Profiler](https://firefox-source-docs.mozilla.org/tools/prof
 
 ![A built-in Gecko profiler windows showing a lot of network information.](gecko-profiler.png)
 
-> **Note:** You can use these tools with the Android browser by running Firefox and enabling [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html).
+> [!NOTE]
+> You can use these tools with the Android browser by running Firefox and enabling [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html).
 
 In particular, making dozens or hundreds of network requests takes longer in mobile browsers. Rendering large images and CSS gradients can also take longer. Downloading large files can take longer, even over a fast network, because mobile hardware is sometimes too slow to take advantage of all the available bandwidth. For useful general tips on mobile Web performance, have a look at Maximiliano Firtman's [Mobile Web High Performance](https://www.slideshare.net/firt/mobile-web-high-performance) talk.
 

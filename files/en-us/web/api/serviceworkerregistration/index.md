@@ -5,13 +5,11 @@ page-type: web-api-interface
 browser-compat: api.ServiceWorkerRegistration
 ---
 
-{{APIRef("Service Workers API")}}{{SecureContext_Header}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`ServiceWorkerRegistration`** interface of the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) represents the service worker registration. You register a service worker to control one or more pages that share the same origin.
 
 The lifetime of a service worker registration is beyond that of the `ServiceWorkerRegistration` objects that represent them within the lifetime of their corresponding service worker clients. The browser maintains a persistent list of active `ServiceWorkerRegistration` objects.
-
-{{AvailableInWorkers}}
 
 {{InheritanceDiagram}}
 
@@ -38,11 +36,11 @@ _Also inherits properties from its parent interface,_ {{domxref("EventTarget")}}
 - {{domxref("ServiceWorkerRegistration.pushManager")}} {{ReadOnlyInline}}
   - : Returns a reference to the {{domxref("PushManager")}} interface for managing push subscriptions including subscribing, getting an active subscription, and accessing push permission status.
 - {{domxref("ServiceWorkerRegistration.scope")}} {{ReadOnlyInline}}
-  - : Returns a unique identifier for a service worker registration. This must be on the same origin as the document that registers the {{domxref("ServiceWorker")}}.
-- {{domxref("ServiceWorkerRegistration.sync")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a string representing a URL that defines a service worker's registration scope; that is, the range of URLs the service worker can control.
+- {{domxref("ServiceWorkerRegistration.sync")}} {{ReadOnlyInline}}
   - : Returns a reference to the {{domxref("SyncManager")}} interface, which manages background synchronization processes.
 - {{domxref("ServiceWorkerRegistration.updateViaCache")}} {{ReadOnlyInline}}
-  - : Returns a string indicating what is the cache strategy to use when updating the service worker scripts. It can be one of the following: `imports`, `all`, or `none`.
+  - : Returns the value of the setting used to determine the circumstances in which the browser will consult the HTTP cache when it tries to update the service worker or any scripts that are imported via {{domxref("WorkerGlobalScope.importScripts", "importScripts()")}}. It can be one of the following: `imports`, `all`, or `none`.
 - {{domxref("ServiceWorkerRegistration.waiting")}} {{ReadOnlyInline}}
   - : Returns a service worker whose state is `installed`. This is initially set to `null`.
 

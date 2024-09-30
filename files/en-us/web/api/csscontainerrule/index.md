@@ -31,7 +31,7 @@ _No specific methods; inherits methods from its ancestors {{domxref("CSSConditio
 
 ### Unnamed container rule
 
-The example below defines an unnamed {{cssxref("@container")}} rule, and displays the properties of the associated {{domxref("CSSContainerRule")}}.
+The example below defines an unnamed {{cssxref("@container")}} rule, and displays the properties of the associated `CSSContainerRule`.
 The CSS is the same as in the `@container` example [Setting styles based on a container's size](/en-US/docs/Web/CSS/@container#setting_styles_based_on_a_containers_size).
 
 The first part of the code simply creates a list for logging the container rule properties, along with a JavaScript `log()` method to simplify adding the properties.
@@ -102,7 +102,8 @@ log(`CSSContainerRule.containerQuery: "${containerRule.containerQuery}"`);
 log(`CSSContainerRule.conditionText: "${containerRule.conditionText}"`);
 ```
 
-> **Note:** The styles for this example are defined in an inline HTML `style` element with an id in order to make it easy for the code to find the correct sheet.
+> [!NOTE]
+> The styles for this example are defined in an inline HTML `style` element with an id in order to make it easy for the code to find the correct sheet.
 > You might also locate the correct sheets for each example from the document by indexing against the length (e.g. `document.styleSheets[document.styleSheets.length-1]` but that makes working out correct sheet for each example more complicated).
 
 The example output is shown below.
@@ -114,7 +115,7 @@ The card should change background and as the width of the page transitions throu
 
 ### Named container rule
 
-The example below defines a named {{cssxref("@container")}} rule, and displays the properties of the associated {{domxref("CSSContainerRule")}}.
+The example below defines a named {{cssxref("@container")}} rule, and displays the properties of the associated `CSSContainerRule`.
 The CSS is very similar to that in the `@container` example [Creating named container contexts](/en-US/docs/Web/CSS/@container#creating_named_container_contexts).
 
 ```html hidden

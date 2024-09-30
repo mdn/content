@@ -12,8 +12,7 @@ including Cross-Site Scripting ({{Glossary("Cross-site_scripting", "XSS")}}) and
 These attacks are used for everything from data theft, to site defacement, to malware distribution.
 
 CSP is designed to be fully backward compatible (except CSP version 2 where there are some explicitly-mentioned inconsistencies in backward compatibility; more details [here](https://www.w3.org/TR/CSP2/) section 1.1).
-Browsers that don't support it still work with servers that implement it, and vice versa: browsers that don't support CSP ignore it, functioning as usual, defaulting to the standard same-origin policy for web content.
-If the site doesn't offer the CSP header, browsers likewise use the standard [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
+Browsers that don't support it still work with servers that implement it, and vice versa. Browsers that don't support CSP ignore it, functioning as usual; they will only apply the protections of the standard [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) without the further restrictions that the CSP would add.
 
 To enable CSP, you need to configure your web server to return the {{HTTPHeader("Content-Security-Policy")}} HTTP header.
 (Sometimes you may see mentions of the `X-Content-Security-Policy` header, but that's an older version and you don't need to specify it anymore.)
@@ -26,7 +25,8 @@ Alternatively, the {{HTMLElement("meta")}} element can be used to configure a po
   content="default-src 'self'; img-src https://*; child-src 'none';" />
 ```
 
-> **Note:** Some features, such as sending CSP violation reports, are only available when using the HTTP headers.
+> [!NOTE]
+> Some features, such as sending CSP violation reports, are only available when using the HTTP headers.
 
 ## Threats
 
@@ -122,14 +122,13 @@ The server permits access only to documents being loaded specifically over HTTPS
 
 ### Example 5
 
-A website administrator of a web mail site wants to allow HTML in email, as well as images loaded from anywhere, but not JavaScript or other potentially dangerous content.
+A website administrator of a web mail site wants to allow HTML in email, as well as images loaded from anywhere, but JavaScript or other potentially dangerous content can only come from the same origin as the mail server.
 
 ```http
 Content-Security-Policy: default-src 'self' *.example.com; img-src *
 ```
 
-Note that this example doesn't specify a {{CSP("script-src")}}; with the example CSP,
-this site uses the setting specified by the {{CSP("default-src")}} directive, which means that scripts can be loaded only from the originating server.
+Note that this example doesn't specify a {{CSP("script-src")}}, so the {{CSP("default-src")}} directive will be used for JavaScript sources as a fallback.
 
 ## Testing your policy
 
@@ -146,91 +145,72 @@ Content-Security-Policy-Report-Only: policy
 If both a {{HTTPHeader("Content-Security-Policy-Report-Only")}} header and a {{HTTPHeader("Content-Security-Policy")}} header are present in the same response, both policies are honored.
 The policy specified in `Content-Security-Policy` headers is enforced while the `Content-Security-Policy-Report-Only` policy generates reports but is not enforced.
 
-## Enabling reporting
+## Violation reporting
 
-By default, violation reports aren't sent. To enable violation reporting, you need to specify the {{CSP("report-to")}} policy directive, providing at least one URI to which to deliver the reports:
+The recommended method for reporting CSP violations is to use the [Reporting API](/en-US/docs/Web/API/Reporting_API), declaring endpoints in {{HTTPHeader("Reporting-Endpoints")}} and specifying one of them as the CSP reporting target using the `Content-Security-Policy` header's {{CSP("report-to")}} directive.
 
-```http
-Content-Security-Policy: default-src 'self'; report-to http://reportcollector.example.com/collector.cgi
-```
+> [!WARNING]
+> You can also use the CSP {{CSP("report-uri")}} directive to specify a target URL for CSP violation reports.
+> This sends a slightly different JSON report format via a `POST` operation with a {{HTTPHeader("Content-Type")}} of `application/csp-report`.
+> This approach is deprecated, but you should declare both until {{CSP("report-to")}} is supported in all browsers.
+> For more information about the approach see the {{CSP("report-uri")}} topic.
 
-Then you need to set up your server to receive the reports; it can store or process them in whatever manner you determine is appropriate.
-
-## Violation report syntax
-
-The report JSON object is sent with an `application/csp-report` {{HTTPHeader("Content-Type")}} and contains the following data:
-
-- `blocked-uri`
-  - : The URI of the resource that was blocked from loading by the Content Security Policy.
-    If the blocked URI is from a different origin than the `document-uri`, then the blocked URI is truncated to contain just the scheme, host, and port.
-- `disposition`
-  - : Either `"enforce"` or `"report"` depending on whether the {{HTTPHeader("Content-Security-Policy-Report-Only")}} header or the `Content-Security-Policy` header is used.
-- `document-uri`
-  - : The URI of the document in which the violation occurred.
-- `effective-directive`
-  - : The directive whose enforcement caused the violation.
-    Some browsers may provide different values, such as Chrome providing `style-src-elem`/`style-src-attr`, even when the actually enforced directive was `style-src`.
-- `original-policy`
-  - : The original policy as specified by the `Content-Security-Policy` HTTP header.
-- `referrer` {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : The referrer of the document in which the violation occurred.
-- `script-sample`
-  - : The first 40 characters of the inline script, event handler, or style that caused the violation.
-    Only applicable to `script-src*` and `style-src*` violations, when they contain the `'report-sample'`
-- `status-code`
-  - : The HTTP status code of the resource on which the global object was instantiated.
-- `violated-directive` {{deprecated_inline}}
-  - : The directive whose enforcement caused the violation. The `violated-directive` is a historic name for the `effective-directive` field and contains the same value.
-
-## Sample violation report
-
-Let's consider a page located at `http://example.com/signup.html`.
-It uses the following policy, disallowing everything but stylesheets from `cdn.example.com`.
+A server can inform clients where to send reports using the {{HTTPHeader("Reporting-Endpoints")}} HTTP response header.
+This header defines one or more endpoint URLs as a comma-separated list.
+For example, to define a reporting endpoint named `csp-endpoint` which accepts reports at `https://example.com/csp-reports`, the server's response header could look like this:
 
 ```http
-Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-to /_/csp-reports
+Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports"
 ```
 
-The HTML of `signup.html` looks like this:
+If you want to have multiple endpoints that handle different types of reports, you would specify them like this:
 
-```html
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Sign Up</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    Here be content.
-  </body>
-</html>
+```http
+Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports",
+                     hpkp-endpoint="https://example.com/hpkp-reports"
 ```
 
-Can you spot the mistake? Stylesheets are allowed to be loaded only from `cdn.example.com`, yet the website tries to load one from its own origin (`http://example.com`).
-A browser capable of enforcing CSP would send the following violation report as a POST request to `http://example.com/_/csp-reports`, when the document is visited:
+You can then use the `Content-Security-Policy` header's {{CSP("report-to")}} directive to specify that a particular defined endpoint should be used for reporting.
+For example, to send CSP violation reports to `https://example.com/csp-reports` for the `default-src`, you might send response headers that look like the following:
+
+```http
+Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports"
+Content-Security-Policy: default-src 'self'; report-to csp-endpoint
+```
+
+When a CSP violation occurs, the browser sends the report as a JSON object to the specified endpoint via an HTTP `POST` operation, with a {{HTTPHeader("Content-Type")}} of `application/reports+json`.
+The report is a serialized form of the {{domxref("Report")}} object containing a `type` property with a value of `"csp-violation"`, and a `body` that is the serialized form of a {{domxref("CSPViolationReportBody")}} object.
+
+A typical object might look like this:
 
 ```json
 {
-  "csp-report": {
-    "blocked-uri": "http://example.com/css/style.css",
-    "disposition": "report",
-    "document-uri": "http://example.com/signup.html",
-    "effective-directive": "style-src-elem",
-    "original-policy": "default-src 'none'; style-src cdn.example.com; report-to /_/csp-reports",
-    "referrer": "",
-    "status-code": 200,
-    "violated-directive": "style-src-elem"
-  }
+  "age": 53531,
+  "body": {
+    "blockedURL": "inline",
+    "columnNumber": 39,
+    "disposition": "enforce",
+    "documentURL": "https://example.com/csp-report",
+    "effectiveDirective": "script-src-elem",
+    "lineNumber": 121,
+    "originalPolicy": "default-src 'self'; report-to csp-endpoint-name",
+    "referrer": "https://www.google.com/",
+    "sample": "console.log(\"lo\")",
+    "sourceFile": "https://example.com/csp-report",
+    "statusCode": 200
+  },
+  "type": "csp-violation",
+  "url": "https://example.com/csp-report",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
 }
 ```
 
-As you can see, the report includes the full path to the violating resource in `blocked-uri`.
-This is not always the case.
-For example, if the `signup.html` attempted to load CSS from `http://anothercdn.example.com/stylesheet.css`, the browser would _not_ include the full path, but only the origin
-(`http://anothercdn.example.com`).
-The CSP specification [gives an explanation](https://www.w3.org/TR/CSP/#security-violation-reports) of this odd behavior.
-In summary, this is done to prevent leaking sensitive information about cross-origin resources.
+You need to set up a server to receive reports with the given JSON format and content type.
+The server handling these requests can then store or process the incoming reports in a way that best suits your needs.
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

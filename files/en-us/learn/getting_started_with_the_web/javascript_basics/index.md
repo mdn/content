@@ -33,7 +33,8 @@ JavaScript is one of the most popular modern web technologies! As your JavaScrip
 
 However, getting comfortable with JavaScript is more challenging than getting comfortable with HTML and CSS. You may have to start small, and progress gradually. To begin, let's examine how to add JavaScript to your page for creating a _Hello world!_ example. (_Hello world!_ is [the standard for introductory programming examples](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program).)
 
-> **Warning:** If you haven't been following along with the rest of our course, [download this example code](https://codeload.github.com/mdn/beginner-html-site-styled/zip/refs/heads/gh-pages) and use it as a starting point.
+> [!WARNING]
+> If you haven't been following along with the rest of our course, [download this example code](https://codeload.github.com/mdn/beginner-html-site-styled/zip/refs/heads/gh-pages) and use it as a starting point.
 
 1. Go to your test site and create a new folder named `scripts`. Within the scripts folder, create a new text document called `main.js`, and save it.
 2. In your `index.html` file, enter this code on a new line, just before the closing `</body>` tag:
@@ -43,7 +44,7 @@ However, getting comfortable with JavaScript is more challenging than getting co
    ```
 
 3. This is doing the same job as the {{htmlelement("link")}} element for CSS. It applies the JavaScript to the page, so it can have an effect on the HTML (along with the CSS, and anything else on the page).
-4. Add this code to the `main.js` file:
+4. Add this code to the `scripts/main.js` file:
 
    ```js
    const myHeading = document.querySelector("h1");
@@ -54,7 +55,8 @@ However, getting comfortable with JavaScript is more challenging than getting co
 
 ![Heading "hello world" above a firefox logo](hello-world.png)
 
-> **Note:** The reason the instructions (above) place the {{htmlelement("script")}} element near the bottom of the HTML file is that **the browser reads code in the order it appears in the file**.
+> [!NOTE]
+> The reason the instructions (above) place the {{htmlelement("script")}} element near the bottom of the HTML file is that **the browser reads code in the order it appears in the file**.
 >
 > If the JavaScript loads first and it is supposed to affect the HTML that hasn't loaded yet, there could be problems. Placing JavaScript near the bottom of an HTML page is one way to accommodate this dependency. To learn more about alternative approaches, see [Script loading strategies](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#script_loading_strategies).
 
@@ -64,13 +66,15 @@ The heading text changed to _Hello world!_ using JavaScript. You did this by usi
 
 Following that, the code set the value of the `myHeading` variable's {{domxref("Node.textContent", "textContent")}} property (which represents the content of the heading) to _Hello world!_.
 
-> **Note:** Both of the features you used in this exercise are parts of the [Document Object Model (DOM) API](/en-US/docs/Web/API/Document_Object_Model), which has the capability to manipulate documents.
+> [!NOTE]
+> Both of the features you used in this exercise are parts of the [Document Object Model (DOM) API](/en-US/docs/Web/API/Document_Object_Model), which has the capability to manipulate documents.
 
 ## Language basics crash course
 
 To give you a better understanding of how JavaScript works, let's explain some of the core features of the language. It's worth noting that these features are common to all programming languages. If you master these fundamentals, you have a head start on coding in other languages too!
 
-> **Warning:** In this article, try entering the example code lines into your JavaScript console to see what happens. For more details on JavaScript consoles, see [Discover browser developer tools](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools).
+> [!WARNING]
+> In this article, try entering the example code lines into your JavaScript console to see what happens. For more details on JavaScript consoles, see [Discover browser developer tools](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools).
 
 ### Variables
 
@@ -256,7 +260,7 @@ An `{{Glossary("operator")}}` is a mathematical symbol that produces a result ba
         <p>
           "Does-not-equal" gives basically the same result with different
           syntax. Here we are testing "is <code>myVariable</code> NOT equal to
-          3". This returns<code> false</code> because <code>myVariable</code> IS
+          3". This returns <code>false</code> because <code>myVariable</code> IS
           equal to 3:
         </p>
         <p>
@@ -269,7 +273,8 @@ An `{{Glossary("operator")}}` is a mathematical symbol that produces a result ba
 
 There are a lot more operators to explore, but this is enough for now. See [Expressions and operators](/en-US/docs/Web/JavaScript/Reference/Operators) for a complete list.
 
-> **Note:** Mixing data types can lead to some strange results when performing calculations. Be careful that you are referring to your variables correctly, and getting the results you expect. For example, enter `'35' + '25'` into your console. Why don't you get the result you expected? Because the quote marks turn the numbers into strings, so you've ended up concatenating strings rather than adding numbers. If you enter `35 + 25` you'll get the total of the two numbers.
+> [!NOTE]
+> Mixing data types can lead to some strange results when performing calculations. Be careful that you are referring to your variables correctly, and getting the results you expect. For example, enter `'35' + '25'` into your console. Why don't you get the result you expected? Because the quote marks turn the numbers into strings, so you've ended up concatenating strings rather than adding numbers. If you enter `35 + 25` you'll get the total of the two numbers.
 
 ### Conditionals
 
@@ -284,7 +289,7 @@ if (iceCream === "chocolate") {
 }
 ```
 
-The expression inside the `if ()` is the test. This uses the strict equality operator (as described above) to compare the variable `iceCream` with the string `chocolate` to see if the two are equal. If this comparison returns `true`, the first block of code runs. If the comparison is not true, the second block of code—after the `else` statement—runs instead.
+The expression inside the `if ()` is the test. This uses the strict equality operator (as described above) to compare the variable `iceCream` with the string `chocolate` to see if the two are equal. If this comparison returns `true`, the first block of code runs. If the comparison is not true, the second block of code—after the `else` keyword—runs instead.
 
 ### Functions
 
@@ -321,7 +326,8 @@ multiply(20, 20);
 multiply(0.5, 3);
 ```
 
-> **Note:** The [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) statement tells the browser to return the `result` variable out of the function so it is available to use. This is necessary because variables defined inside functions are only available inside those functions. This is called variable {{Glossary("Scope", "scoping")}}. (Read more about [variable scoping](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#variable_scope).)
+> [!NOTE]
+> The [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) statement tells the browser to return the `result` variable out of the function so it is available to use. This is necessary because variables defined inside functions are only available inside those functions. This is called variable {{Glossary("Scope", "scoping")}}. (Read more about [variable scoping](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#variable_scope).)
 
 ### Events
 
@@ -461,7 +467,7 @@ If you have followed all the instructions in this article, you should end up wit
 
 ![Final look of HTML page after creating elements: a header, large centered logo, content, and a button](website-screen-scripted.png)
 
-If you get stuck, you can compare your work with our [finished example code on GitHub](https://github.com/mdn/beginner-html-site-scripted/blob/gh-pages/scripts/main.js).
+If you get stuck, you can compare your work with our [finished example code on GitHub](https://github.com/mdn/beginner-html-site-scripted/blob/main/scripts/main.js).
 
 We have just scratched the surface of JavaScript. If you enjoyed playing, and wish to go further, take advantage of the resources listed below.
 

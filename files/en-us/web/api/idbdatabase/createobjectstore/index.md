@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.IDBDatabase.createObjectStore
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`createObjectStore()`** method of the
 {{domxref("IDBDatabase")}} interface creates and returns a new {{domxref("IDBObjectStore")}}.
@@ -16,10 +16,8 @@ define important optional properties. You can use the property to uniquely ident
 individual objects in the store. As the property is an identifier, it should be unique
 to every object, and every object should have that property.
 
-This method can be called _only_ within a [`versionchange`](/en-US/docs/Web/API/IDBTransaction#version_change)
+This method can be called _only_ within a [`versionchange`](/en-US/docs/Web/API/IDBDatabase/versionchange_event)
 transaction.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -86,7 +84,8 @@ request.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   db.onerror = (event) => {
-    note.innerHTML += "<li>Error loading database.</li>";
+    note.appendChild(document.createElement("li")).textContent =
+      "Error loading database.";
   };
 
   // Create an objectStore for this database
@@ -105,7 +104,8 @@ request.onupgradeneeded = (event) => {
 
   objectStore.createIndex("notified", "notified", { unique: false });
 
-  note.innerHTML += "<li>Object store created.</li>";
+  note.appendChild(document.createElement("li")).textContent =
+    "Object store created.";
 };
 ```
 

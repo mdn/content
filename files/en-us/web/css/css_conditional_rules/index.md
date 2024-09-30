@@ -29,7 +29,8 @@ There are plans to further extend possible queries by adding the generalized con
 - {{cssxref("@media")}}
 - {{cssxref("@supports")}}
 
-> **Note:** The CSS conditional rules module introduces two at-rules that have not been implemented: `@else` and `@when`.
+> [!NOTE]
+> The CSS conditional rules module introduces two at-rules that have not been implemented: `@else` and `@when`.
 
 ### Functions
 
@@ -38,7 +39,8 @@ There are plans to further extend possible queries by adding the generalized con
 - [`selector()`](/en-US/docs/Web/CSS/@supports#function_syntax)
 - [`supports()`](/en-US/docs/Web/CSS/@import#supports-condition)
 
-> **Note:** The CSS conditional rules module introduces a CSS function that has not been implemented: `media()`.
+> [!NOTE]
+> The CSS conditional rules module introduces a CSS function that has not been implemented: `media()`.
 
 ### data types
 
@@ -57,7 +59,6 @@ There are plans to further extend possible queries by adding the generalized con
 
 - {{glossary("media/CSS", "Media")}}
 - Supports query (See [feature query](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries))
-- [Conditional group rules](/en-US/docs/Web/CSS/At-rule#conditional_group_rules)
 
 ## Guides
 
@@ -90,6 +91,10 @@ There are plans to further extend possible queries by adding the generalized con
   - [`<media-condition>`](/en-US/docs/Web/CSS/@media#logical_operators)
   - [`<media-query-list>`](/en-US/docs/Web/SVG/Attribute/media)
   - [CSS logical operators](/en-US/docs/Web/CSS/@media#logical_operators) (`not`, `or`, and `and`)
+
+- [CSS containment](/en-US/docs/Web/CSS/CSS_containment)
+
+  - {{cssxref("@container")}} at-rule
 
 - [CSSOM view](/en-US/docs/Web/CSS/CSSOM_view) module
 

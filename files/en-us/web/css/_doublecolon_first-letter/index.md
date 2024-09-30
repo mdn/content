@@ -17,7 +17,8 @@ The first letter of an element is not always trivial to identify:
 - Some languages have digraphs that are always capitalized together, like the `IJ` in Dutch. In these cases, both letters of the digraph should be matched by the `::first-letter` pseudo-element.
 - A combination of the {{ cssxref("::before") }} pseudo-element and the {{ cssxref("content") }} property may inject some text at the beginning of the element. In that case, `::first-letter` will match the first letter of this generated content.
 
-> **Note:** CSS introduced the `::first-letter` notation (with two colons) to distinguish [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) from [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements). For backward compatibility, browsers also accept `:first-letter`, introduced earlier.
+> [!NOTE]
+> CSS introduced the `::first-letter` notation (with two colons) to distinguish [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) from [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements). For backward compatibility, browsers also accept `:first-letter`, introduced earlier.
 >
 > Browser support for digraphs such as `IJ` in Dutch is poor. Check the compatibility table below to see the current state of support.
 
@@ -121,6 +122,41 @@ p::first-letter {
 #### Result
 
 {{ EmbedLiveSample('Effect_on_special_punctuation_and_non-Latin_characters', '100%', 350) }}
+
+### Styling first letter in SVG text element
+
+In this example, we use the `::first-letter` pseudo-element to style the first letter of a SVG {{SVGElement("text")}} element.
+
+> [!NOTE]
+> At time of writing this feature has [limited support](#browser_compatibility).
+
+#### HTML
+
+```html
+<svg viewBox="0 0 300 40">
+  <text y="30">First letter in &lt;text&gt; SVG</text>
+</svg>
+```
+
+#### CSS
+
+```css
+text {
+  font-family: sans-serif;
+}
+
+text::first-letter {
+  font-family: serif;
+  font-size: 2rem;
+  font-weight: 600;
+  fill: tomato;
+  stroke: indigo;
+}
+```
+
+#### Result
+
+{{ EmbedLiveSample("styling_first_letter_in_SVG_text_element", "100%", "100") }}
 
 ## Specifications
 

@@ -59,8 +59,7 @@ f.size = "6";
 
 ## Specifications
 
-The `<font>` element has been deprecated and is no longer supported and, as a result, neither is
-`<font>.size`.
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -135,9 +135,9 @@ I'm using the same grid definitions as above, however this time I am going to pl
 
 We don't need to define where our areas are with `grid-template-areas` as our named lines have created an area for us.
 
-## Implicit Grid lines from named areas
+## Implicit grid lines from named areas
 
-We have seen how named lines create a named area, and this also works in reverse. Named template areas create named lines that you can use to place your items. If we take the layout created in the guide to Grid Template Areas, we can use the lines created by our areas to see how this works.
+We have seen how named lines create a named area, and this also works in reverse. Named template areas create named lines that you can use to place your items. If we take the layout created in the guide to grid template Areas, we can use the lines created by our areas to see how this works.
 
 In this example I have added an extra div with a class of `overlay`. We have named areas created using the `grid-area` property, then a layout created in `grid-template-areas`. The area names are:
 
@@ -295,9 +295,9 @@ You can also use the `span` keyword here. My next item will be placed from the 7
 
 {{ EmbedLiveSample('Twelve-column_grid_using_repeat', '500', '330') }}
 
-If you take a look at this layout in the Firefox Grid Highlighter you can see how the column lines are shown, and how our items are placed against these lines.
+If you take a look at this layout in the Firefox grid highlighter you can see how the column lines are shown, and how our items are placed against these lines.
 
-![The 12 column grid with items placed. The Grid Highlighter shows the position of the lines.](5_named_lines1.png)
+![The 12 column grid with items placed. The grid highlighter shows the position of the lines.](5_named_lines1.png)
 
 ### Defining named lines with a track list
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.ReadableStreamBYOBRequest.respond
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`respond()`** method of the {{domxref("ReadableStreamBYOBRequest")}} interface is used to signal to the associated [readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams) that the specified number of bytes were written into the {{domxref("ReadableStreamBYOBRequest.view")}}.
 

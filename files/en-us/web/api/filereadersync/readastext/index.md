@@ -6,33 +6,29 @@ page-type: web-api-instance-method
 browser-compat: api.FileReaderSync.readAsText
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}} {{AvailableInWorkers("worker_except_service")}}
 
 The **`readAsText()`** method of the {{DOMxRef("FileReaderSync")}} interface allows to read {{DOMxRef("File")}} or {{DOMxRef("Blob")}} objects in a synchronous way into a string. This interface is [only available](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers) in [workers](/en-US/docs/Web/API/Worker) as it enables synchronous I/O that could potentially block.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
 ```js-nolint
-readAsText(File)
-readAsText(Blob)
-readAsText(File, encoding)
-readAsText(Blob, encoding)
+readAsText(blob)
+readAsText(blob, encoding)
 ```
 
 ### Parameters
 
 - `blob`
   - : The {{DOMxRef("File")}} or {{DOMxRef("Blob")}} to read.
-- `encoding`
+- `encoding` {{optional_inline}}
   - : The optional parameter specifies encoding to be used (e.g., `iso-8859-1` or `UTF-8`). If not present, the method will apply a detection algorithm for it.
 
 ### Return value
 
 A string representing the input data.
 
-## Exceptions
+### Exceptions
 
 The following exceptions can be raised by this method:
 

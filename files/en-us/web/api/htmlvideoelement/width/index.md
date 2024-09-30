@@ -8,7 +8,7 @@ browser-compat: api.HTMLVideoElement.width
 
 {{APIRef("HTML DOM")}}
 
-The **`width`** property of the {{domxref("HTMLVideoElement")}} interface returns an integer that that reflects the `width` attribute of the {{HTMLElement("video")}} element, specifying the displayed width of the resource in CSS pixels.
+The **`width`** property of the {{domxref("HTMLVideoElement")}} interface returns an integer that reflects the `width` attribute of the {{HTMLElement("video")}} element, specifying the displayed width of the resource in CSS pixels.
 
 ## Value
 

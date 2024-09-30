@@ -7,6 +7,8 @@ spec-urls:
   - https://www.w3.org/WAI/ARIA/apg/patterns/table/examples/table/
 ---
 
+{{AccessibilitySidebar}}
+
 The `table` value of the ARIA `role` attribute identifies the element containing the role as having a non-interactive table structure containing data arranged in rows and columns, similar to the native {{HTMLElement('table')}} HTML element.
 
 ```html
@@ -49,7 +51,8 @@ The `table` value of the ARIA `role` attribute identifies the element containing
 
 An element with `role="table"` is a static tabular structure with rows containing cells. The cells are not focusable or selectable, though widgets within individual cells of the table can be interactive. Using a native HTML {{HTMLElement('table')}} element whenever possible is strongly encouraged.
 
-> **Warning:** If a table maintains a selection state, has two-dimensional navigation, or allows the user to rearrange cell order use [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role) or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role) instead.
+> [!WARNING]
+> If a table maintains a selection state, has two-dimensional navigation, or allows the user to rearrange cell order use [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role) or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role) instead.
 
 To create an ARIA table, add `role="table"` to the container element. Within that container, each row has `role="row"` set and contains child cells. Each cell has a role of either `columnheader`, `rowheader`, or `cell`. Rows can be children of the table or within a `rowgroup`.
 
@@ -59,7 +62,8 @@ If the table contains sortable columns or rows, the [`aria-sort`](/en-US/docs/We
 
 To create an interactive widget that has a tabular structure, use the `grid` pattern instead. If the interaction provides for the selection state of individual cells, if left to right and top to bottom navigation is provided, or if the user interface allows the rearranging of cell order or otherwise changing individual cell order such as through drag and drop, use [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role) or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role) instead.
 
-> **Note:** Using a native HTML table element whenever possible is strongly encouraged.
+> [!NOTE]
+> Using a native HTML table element whenever possible is strongly encouraged.
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -84,7 +88,8 @@ None
 
 None. For sortable columns, see the [columnheader](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role) aria role.
 
-> **Note:** The first rule of ARIA use is if you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. Employ the HTML {{HTMLElement('table')}} element instead of the ARIA role of table whenever possible.
+> [!NOTE]
+> The first rule of ARIA use is if you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. Employ the HTML {{HTMLElement('table')}} element instead of the ARIA role of table whenever possible.
 
 ## Examples
 
@@ -143,11 +148,3 @@ none
 - [HTML table element](/en-US/docs/Learn/HTML/Tables/Advanced)
 - [HTML table tutorial](/en-US/docs/Learn/HTML/Tables/Basics)
 - [ARIA: `grid` role](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

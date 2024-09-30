@@ -28,7 +28,8 @@ A {{domxref("PointerEvent")}}. Inherits from {{domxref("MouseEvent")}}.
 
 {{InheritanceDiagram("PointerEvent")}}
 
-> **Note:** In earlier versions of the specification the event type for this event was a {{domxref("MouseEvent")}}, and this is still the type passed in Firefox and Safari.
+> [!NOTE]
+> In earlier versions of the specification the event type for this event was a {{domxref("MouseEvent")}}, and this is still the type passed in Firefox and Safari.
 
 ## Event properties
 
@@ -137,7 +138,8 @@ h1 {
 
 {{EmbedLiveSample("Examples", 640, 300)}}
 
-> **Note:** If you are using a three-button mouse, you'll notice that the `onauxclick` handler is run when any of the non-left mouse buttons are clicked (usually including any "special" buttons on gaming mice).
+> [!NOTE]
+> If you are using a three-button mouse, you'll notice that the `onauxclick` handler is run when any of the non-left mouse buttons are clicked (usually including any "special" buttons on gaming mice).
 
 ## Specifications
 

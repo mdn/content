@@ -4,11 +4,14 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_mom
 page-type: learn-module-chapter
 ---
 
+{{LearnSidebar}}
+
 The default rendering of dates from our models is very ugly: _Mon Apr 10 2020 15:49:58 GMT+1100 (AUS Eastern Daylight Time)_. In this section we'll show how you can update the _BookInstance List_ page from the previous section to present the `due_date` field in a more friendly format: Apr 10th, 2023.
 
 The approach we will use is to create a virtual property in our `BookInstance` model that returns the formatted date. We'll do the actual formatting using [luxon](https://www.npmjs.com/package/luxon), a powerful, modern, and friendly library for parsing, validating, manipulating, formatting and localising dates.
 
-> **Note:** It is possible to use _luxon_ to format the strings directly in our Pug templates, or we could format the string in a number of other places. Using a virtual property allows us to get the formatted date in exactly the same way as we get the `due_date` currently.
+> [!NOTE]
+> It is possible to use _luxon_ to format the strings directly in our Pug templates, or we could format the string in a number of other places. Using a virtual property allows us to get the formatted date in exactly the same way as we get the `due_date` currently.
 
 ## Install luxon
 
@@ -35,7 +38,8 @@ BookInstanceSchema.virtual("due_back_formatted").get(function () {
 });
 ```
 
-> **Note:** Luxon can import strings in many formats and export to both predefined and free-form formats. In this case we use `fromJSDate()` to import a JavaScript date string and `toLocaleString()` to output the date in `DATE_MED` format in English: Apr 10th, 2023.
+> [!NOTE]
+> Luxon can import strings in many formats and export to both predefined and free-form formats. In this case we use `fromJSDate()` to import a JavaScript date string and `toLocaleString()` to output the date in `DATE_MED` format in English: Apr 10th, 2023.
 > For information about other formats and date string internationalization see the Luxon documentation on [formatting](https://github.com/moment/luxon/blob/master/docs/formatting.md#formatting).
 
 ## Update the view

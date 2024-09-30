@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-valuemin
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-valuemin` attribute defines the minimum allowed value for a range widget.
 
 ## Description
@@ -17,7 +19,8 @@ Declaring the minimum and maximum values allows assistive technologies to convey
 
 The maximum value is defined with [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax).
 
-> **Warning:** The [`range`](/en-US/docs/Web/Accessibility/ARIA/Roles/range_role) role itself should **NOT** be used as it is an ["abstract"](/en-US/docs/Web/Accessibility/ARIA/Roles#6._abstract_roles). The `aria-valuemin` attribute is used on all of the range roles subtypes.
+> [!WARNING]
+> The [`range`](/en-US/docs/Web/Accessibility/ARIA/Roles/range_role) role itself should **NOT** be used as it is an ["abstract"](/en-US/docs/Web/Accessibility/ARIA/Roles#6._abstract_roles). The `aria-valuemin` attribute is used on all of the range roles subtypes.
 
 ## Values
 
@@ -58,9 +61,4 @@ Inherited into roles:
 - [`range` role](/en-US/docs/Web/Accessibility/ARIA/Roles/range_role)
 - [`<input type="range>` element `min` attribute](/en-US/docs/Web/HTML/Element/input/range#min)
 - [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax)
-- [`aria-aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-aria-valuenow).
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>
+- [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow)

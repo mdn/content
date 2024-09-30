@@ -62,7 +62,8 @@ Django was initially developed between 2003 and 2005 by a web team who were resp
 
 Django has continued to grow and improve, from its first milestone release (1.0) in September 2008 through to the version 5.0 in late 2023. Each release has added new functionality and bug fixes, ranging from support for new types of databases, template engines, and caching, through to the addition of "generic" view functions and classes (which reduce the amount of code that developers have to write for a number of programming tasks).
 
-> **Note:** Check out the [release notes](https://docs.djangoproject.com/en/stable/releases/) on the Django website to see what has changed in recent versions, and how much work is going into making Django better.
+> [!NOTE]
+> Check out the [release notes](https://docs.djangoproject.com/en/stable/releases/) on the Django website to see what has changed in recent versions, and how much work is going into making Django better.
 
 Django is now a thriving, collaborative open source project, with many thousands of users and contributors. While it does still have some features that reflect its origin, Django has evolved into a versatile framework that is capable of developing any type of website.
 
@@ -97,7 +98,8 @@ Django web applications typically group the code that handles each of these step
 - **Models:** Models are Python objects that define the structure of an application's data, and provide mechanisms to manage (add, modify, delete) and query records in the database.
 - **Templates:** A template is a text file defining the structure or layout of a file (such as an HTML page), with placeholders used to represent actual content. A _view_ can dynamically create an HTML page using an HTML template, populating it with data from a _model_. A template can be used to define the structure of any type of file; it doesn't have to be HTML!
 
-> **Note:** Django refers to this organization as the "Model View Template (MVT)" architecture. It has many similarities to the more familiar [Model View Controller](/en-US/docs/Glossary/MVC) architecture.
+> [!NOTE]
+> Django refers to this organization as the "Model View Template (MVT)" architecture. It has many similarities to the more familiar [Model View Controller](/en-US/docs/Glossary/MVC) architecture.
 
 The sections below will give you an idea of what these main parts of a Django app look like (we'll go into more detail later on in the course, once we've set up a development environment).
 
@@ -140,7 +142,8 @@ def index(request):
     return HttpResponse('Hello from Django!')
 ```
 
-> **Note:** A little bit of Python:
+> [!NOTE]
+> A little bit of Python:
 >
 > - [Python modules](https://docs.python.org/3/tutorial/modules.html) are "libraries" of functions, stored in separate files, that we might want to use in our code. Here we import just the `HttpResponse` object from the `django.http` module so that we can use it in our view: `from django.http import HttpResponse`. There are other ways of importing some or all objects from a module.
 > - Functions are declared using the `def` keyword as shown above, with named parameters listed in parentheses after the name of the function; the whole line ends in a colon. Note how the next lines are all **indented**. The indentation is important, as it specifies that the lines of code are inside that particular block (mandatory indentation is a key feature of Python, and is one reason that Python code is so easy to read).
@@ -171,7 +174,8 @@ class Team(models.Model):
     team_level = models.CharField(max_length=3, choices=TEAM_LEVELS, default='U11')
 ```
 
-> **Note:** A little bit of Python:
+> [!NOTE]
+> A little bit of Python:
 >
 > Python supports "object-oriented programming", a style of programming where we organize our code into objects, which include related data and functions for operating on that data. Objects can also inherit/extend/derive from other objects, allowing common behavior between related objects to be shared. In Python we use the keyword `class` to define the "blueprint" for an object. We can create multiple specific _instances_ of the type of object based on the model in the class.
 >
@@ -181,7 +185,7 @@ class Team(models.Model):
 
 The Django model provides a simple query API for searching the associated database. This can match against a number of fields at a time using different criteria (e.g. exact, case-insensitive, greater than, etc.), and can support complex statements (for example, you can specify a search on U11 teams that have a team name that starts with "Fr" or ends with "al").
 
-The code snippet shows a view function (resource handler) for displaying all of our U09 teams. The `list_teams = Team.objects.filter(team_level__exact="U09")` line shows how we can use the model query API to filter for all records where the `team_level` field has exactly the text '`U09`' (note how this criteria is passed to the `filter()` function as an argument, with the field name and match type separated by a double underscore: **`team_level__exact`**).
+The code snippet shows a view function (resource handler) for displaying all of our U09 teams. The `list_teams = Team.objects.filter(team_level__exact="U09")` line shows how we can use the model query API to filter for all records where the `team_level` field has exactly the text `U09` (note how this criteria is passed to the `filter()` function as an argument, with the field name and match type separated by a double underscore: **`team_level__exact`**).
 
 ```python
 ## filename: views.py
@@ -195,7 +199,7 @@ def index(request):
     return render(request, '/best/index.html', context)
 ```
 
-This function uses the `render()` function to create the `HttpResponse` that is sent back to the browser. This function is a _shortcut_; it creates an HTML file by combining a specified HTML template and some data to insert in the template (provided in the variable named "`context`"). In the next section we show how the template has the data inserted in it to create the HTML.
+This function uses the `render()` function to create the `HttpResponse` that is sent back to the browser. This function is a _shortcut_; it creates an HTML file by combining a specified HTML template and some data to insert in the template (provided in the variable named `context`). In the next section we show how the template has the data inserted in it to create the HTML.
 
 ### Rendering data (HTML templates)
 
@@ -203,10 +207,10 @@ Template systems allow you to specify the structure of an output document, using
 
 The code snippet shows what the HTML template called by the `render()` function in the previous section might look like. This template has been written under the assumption that it will have access to a list variable called `youngest_teams` when it is rendered (this is contained in the `context` variable inside the `render()` function above). Inside the HTML skeleton we have an expression that first checks if the `youngest_teams` variable exists, and then iterates it in a `for` loop. On each iteration the template displays each team's `team_name` value in an `{{htmlelement("li")}}` element.
 
-```python
+```django
 ## filename: best/templates/best/index.html
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">

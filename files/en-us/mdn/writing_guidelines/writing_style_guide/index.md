@@ -10,7 +10,8 @@ This writing style guide describes how content should be written, organized, spe
 
 These guidelines are for ensuring language and style consistency across the website. That said, we are more interested in content rather than its formatting, so don't feel obligated to learn the entire writing style guide before contributing. Do not be upset or surprised, however, if another contributor later edits your work to conform to this guide. The reviewers might also point you to this style guide when you submit a content pull request.
 
-> **Note:** The language aspects of this guide apply primarily to English-language documentation. Other languages may have (and are welcome to create) their own style guides. These should be published as subpages of the respective localization team's page. However, this guide should still be consulted for formatting and organizing content.
+> [!NOTE]
+> The language aspects of this guide apply primarily to English-language documentation. Other languages may have (and are welcome to create) their own style guides. These should be published as subpages of the respective localization team's page. However, this guide should still be consulted for formatting and organizing content.
 
 After listing the general writing guidelines, this guide describes the recommended writing style for MDN Web Docs and then how to format different components on a page, such as lists and titles.
 
@@ -108,7 +109,8 @@ Both versions are gender-specific. To fix this, use gender-neutral pronouns like
 
 - **Correct**: "A confirmation dialog asks the user if they want to allow the web page to make use of their webcam."
 
-> **Note:** MDN Web Docs allows the use of third-person plural, commonly known as "[singular 'they'](https://en.wikipedia.org/wiki/Singular_they).". The gender-neutral pronouns include "they," "them", "their," and "theirs".
+> [!NOTE]
+> MDN Web Docs allows the use of third-person plural, commonly known as "[singular 'they'](https://en.wikipedia.org/wiki/Singular_they).". The gender-neutral pronouns include "they," "them", "their," and "theirs".
 
 Another option is to make the users plural, like so:
 
@@ -153,9 +155,11 @@ The following checklist is good to keep in mind while writing and reviewing cont
   - **Add examples**: There should be examples covering all parameters or at least the parameters (or properties, or attributes) that users from the beginner-through-intermediate range are likely to use, as well as any advanced ones that require extra explanation. Each example should be preceded with an overview of what the example will do, what additional knowledge might be needed to understand it, and so forth. After the example (or interspersed among pieces of the example) should be text explaining how the code works. Don't skimp on the details or the handling of errors in examples. Keep in mind that users _will_ copy and paste your example to use in their own projects, and your code _will_ wind up used on production sites! See our [code example guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide) for more useful information.
   - **Explain use cases**: If there are particularly common use cases for the feature being described, talk about them! Instead of assuming that a user will figure out that the method being documented can be used to solve a common development problem, actually add a section about that use case with an example and text explaining how the example works.
   - **Add image information**: Include proper [`alt`](/en-US/docs/Web/HTML/Element/img#alt) text on all images and diagrams. This text, as well as captions on tables and other figures, counts because spiders can't crawl images, and so `alt` text tells search engine crawlers what content the embedded media contains.
-    > **Note:** It is not recommended to include too many keywords or keywords not related to the feature in an attempt to manipulate search engine rankings; this type of behavior is easy to spot and tends to be penalized.
+    > [!NOTE]
+    > It is not recommended to include too many keywords or keywords not related to the feature in an attempt to manipulate search engine rankings; this type of behavior is easy to spot and tends to be penalized.
     > Likewise, **do not** add repetitive, unhelpful material or blobs of keywords within the actual page, in an attempt to improve the page's size and search ranking. This does more harm than good, both to content readability and to our search results.
-  - **Focus on topic content**: It is far better to write content around the topic of the page than a specific keyword. It is highly likely that there will be many keywords you could include for a given topic; in fact, many SEOs compile a list of 5-100 different keywords (varying between short, medium, and long-tail keywords) to include within their article, depending on the length. Doing so will diversify your wording, leading to less repetition.
+
+- **Focus on topic content**: It is far better to write content around the topic of the page than a specific keyword. It is highly likely that there will be many keywords you could include for a given topic; in fact, many SEOs compile a list of 5-100 different keywords (varying between short, medium, and long-tail keywords) to include within their article, depending on the length. Doing so will diversify your wording, leading to less repetition.
 
 ## Writing style
 
@@ -214,7 +218,8 @@ An abbreviation is a shortened version of a longer word, while an acronym is a n
   | N.B.   | _nota bene_      | note well               |
   | P.S.   | _post scriptum_  | postscript              |
 
-  > **Note:** Always consider whether it's truly beneficial to use a Latin abbreviation. Some of these are used so rarely that many readers will either confuse or fail to understand their meanings.
+  > [!NOTE]
+  > Always consider whether it's truly beneficial to use a Latin abbreviation. Some of these are used so rarely that many readers will either confuse or fail to understand their meanings.
   >
   > Also, be sure that _you_ use them correctly if you choose to do so. For example, be careful not to confuse "e.g." with "i.e.", which is a common error.
 
@@ -233,7 +238,8 @@ An abbreviation is a shortened version of a longer word, while an acronym is a n
 
 Use standard English capitalization rules in body text, and capitalize "World Wide Web." It is acceptable to use lower case for "web" (used alone or as a modifier) and "internet".
 
-> **Note:** This guideline is a change from a previous version of this guide, so you may find many instances of "Web" and "Internet" on MDN.
+> [!NOTE]
+> This guideline is a change from a previous version of this guide, so you may find many instances of "Web" and "Internet" on MDN.
 > Feel free to change these as you are making other changes, but editing an article just to change capitalization is not necessary.
 
 Keyboard keys should use sentence-style capitalization, not all-caps capitalization.
@@ -359,7 +365,7 @@ Compound words should be hyphenated only when the last letter of the prefix is a
 Use American-English spelling.
 
 In general, use the first entry at [Dictionary.com](https://www.dictionary.com/), unless that entry is listed as a variant spelling or as being primarily used in a non-American form of English.
-For example, if you [look up "behaviour"](https://www.dictionary.com/browse/behaviour)(with an additional _u_ added to the American standard form), you find the phrase "Chiefly British" followed by a link to the American standard form, ["behavior"](https://www.dictionary.com/browse/behavior).
+For example, if you [look up "behaviour"](https://www.dictionary.com/browse/behaviour) (with an additional _u_ added to the American standard form), you find the phrase "Chiefly British" followed by a link to the American standard form, ["behavior"](https://www.dictionary.com/browse/behavior).
 Do not use variant spelling.
 
 - **Correct**: localize, behavior, color
@@ -434,7 +440,7 @@ Follow similar style when linking to a section on a page, as shown below:
 
 If the section you're linking to is on the same page, you can hint at the location of the section using the words "above" or "below".
 
-- **Correct**: "This concept is described in more detail in the [Accessibility concerns](/en-US/docs/Web/CSS/gradient/repeating-conic-gradient#accessibility_concerns) section below."
+- **Correct**: "This concept is described in more detail in the [Accessibility](/en-US/docs/Web/CSS/gradient/repeating-conic-gradient#accessibility) section below."
 
 You can link part of a sentence to an article or the section of an article. Be mindful to use descriptive phrases as link texts to provide enough context for the page being linked.
 
@@ -457,7 +463,8 @@ In general, if you're considering adding an external link, you need to ensure th
 - Attempt to use MDN Web Docs to distribute spam
 - Shortlinks that obfuscate the link destination
 
-> **Note:** Before adding an external link, consider cross-referencing content within MDN Web Docs. Internal links are easier to maintain and make the entirety of MDN Web Docs more valuable to readers.
+> [!NOTE]
+> Before adding an external link, consider cross-referencing content within MDN Web Docs. Internal links are easier to maintain and make the entirety of MDN Web Docs more valuable to readers.
 
 - **Good external links**: Good external links take readers to resources that are relevant, durable, and widely trusted. You should prefer adding links to external content that is:
 
@@ -476,7 +483,8 @@ In general, if you're considering adding an external link, you need to ensure th
 
 - **Links that are self-promotional or spam**: While a personal blog post, conference talk, or GitHub repository has value, linking to your own resources can create the appearance of a conflict of interest. Think twice before linking to resources that you have a business or personal connection with.
 
-  > **Note:** If you have a business or personal relationship with the target of a link, you must disclose that relationship in your pull request. Failure to do so may imperil your continued participation with MDN Web Docs.
+  > [!NOTE]
+  > If you have a business or personal relationship with the target of a link, you must disclose that relationship in your pull request. Failure to do so may imperil your continued participation with MDN Web Docs.
 
   Sometimes such links are relevant and appropriate. For example, if you're the editor of a specification and you're contributing to documentation related to that specification, then linking to that specification is expected and acceptable. But you must disclose the relationship between you and the link.
 
@@ -508,7 +516,7 @@ Keep the following dos and don'ts in mind while creating headings for subsection
 
 If you include images or other media on a page, follow these guidelines:
 
-- Make sure the media license allows you to use them. Try to use media that has a very permissive license such as [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/) or at least one that is compatible with our general content license — [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA).
+- Make sure the media license allows you to use them. Try to use media that has a very permissive license such as [CC0](https://creativecommons.org/public-domain/cc0/) or at least one that is compatible with our general content license — [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA).
 - For images, run them through <https://tinypng.com> or <https://imageoptim.com> to reduce the page weight.
 - For `SVG`, run the code through [SVGOMG](https://jakearchibald.github.io/svgomg/), and ensure that the `SVG` file has an empty line at the end of the file.
 - Every image must [include descriptive `alt` text](/en-US/docs/MDN/Writing_guidelines/Howto/Images_media#adding_alternative_text_to_images).
@@ -656,16 +664,15 @@ Keep the following guidelines in mind when writing titles:
 
 ### Other style guides
 
-If you have questions about usage and style not covered here, we recommend referring to the [Microsoft Writing Style Guide](https://docs.microsoft.com/style-guide/welcome/) or the [Chicago Manual of Style](https://www.chicagomanualofstyle.org).
-An [unofficial crib sheet for the Chicago Manual of Style](https://faculty.cascadia.edu/cma/HIST148/cmscrib.pdf) is available online.
+If you have questions about usage and style not covered here, we recommend referring to the [Microsoft Writing Style Guide](https://learn.microsoft.com/en-us/style-guide/welcome/) or the [Chicago Manual of Style](https://www.chicagomanualofstyle.org/).
 
 ### Language, grammar, and spelling
 
 If you're interested in improving your writing and editing skills, you may find the following resources to be helpful.
 
 - [Common errors in English usage](https://brians.wsu.edu/common-errors-in-english-usage/) on brians.wsu.edu
-- [English grammar FAQ](https://www-personal.umich.edu/~jlawler/aue.html) on alt-usage-english.org
+- [English grammar FAQ](https://websites.umich.edu/~jlawler/aue.html) on alt-usage-english.org
 - [English language and usage](https://english.stackexchange.com/) on english.stackexchange.com: Question and answer site for English language usage
-- [Merriam-Webster's Concise Dictionary of English Usage](https://www.google.com/books/edition/Merriam_Webster_s_Dictionary_of_English/UDIjAQAAIAAJ) on google.com/books (published 2002): Scholarly but user-friendly, evidence-based advice; very good for non-native speakers, especially for preposition usage
+- [Merriam-Webster's Concise Dictionary of English Usage](https://books.google.com/books?id=UDIjAQAAIAAJ) on google.com/books (published 2002): Scholarly but user-friendly, evidence-based advice; very good for non-native speakers, especially for preposition usage
 - [On Writing Well](https://www.harpercollins.com/products/on-writing-well-william-zinsser) by William Zinsser on harpercollins.com (published 2016)
-- [Style: Lessons in Clarity and Grace](https://www.google.ca/books/edition/Style/QjskvgEACAAJ) by Joseph Williams and Gregory Colomb on google.com/books (published 2019)
+- [Style: Lessons in Clarity and Grace](https://books.google.com/books?id=QjskvgEACAAJ) by Joseph Williams and Gregory Colomb on google.com/books (published 2019)

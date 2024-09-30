@@ -25,7 +25,7 @@ setProperty(propertyName, value, priority)
   - : A string representing the CSS property name (hyphen case) to be modified.
 - `value` {{optional_inline}}
   - : A string containing the new property value. If not specified, treated
-    as the empty string.
+    as the empty string. A [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) value is treated the same as the empty string (`""`).
     > **Note:** `value` must not contain `"!important"`, that should be set using the `priority` parameter.
 - `priority` {{optional_inline}}
 

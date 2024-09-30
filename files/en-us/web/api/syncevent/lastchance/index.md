@@ -3,12 +3,10 @@ title: "SyncEvent: lastChance property"
 short-title: lastChance
 slug: Web/API/SyncEvent/lastChance
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.SyncEvent.lastChance
 ---
 
-{{APIRef("Background Sync")}}{{SeeCompatTable}}
+{{APIRef("Background Sync")}}{{AvailableInWorkers("service")}}
 
 The **`lastChance`** read-only property of the
 {{domxref("SyncEvent")}} interface returns `true` if the user agent will not

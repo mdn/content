@@ -16,7 +16,8 @@ It is a dimensionless value with a default value of `1` and a nominal range of `
 
 An {{domxref("AudioParam")}}.
 
-> **Note:** Though the `AudioParam` returned is read-only, the value it represents is not.
+> [!NOTE]
+> Though the `AudioParam` returned is read-only, the value it represents is not.
 
 ## Examples
 

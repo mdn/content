@@ -98,7 +98,8 @@ if (shoppingDone === true) {
 
 This code as shown always results in the `shoppingDone` variable returning `false`, meaning disappointment for our poor child. It'd be up to us to provide a mechanism for the parent to set the `shoppingDone` variable to `true` if the child did the shopping.
 
-> **Note:** You can see a more [complete version of this example on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/allowance-updater.html) (also see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html).)
+> [!NOTE]
+> You can see a more [complete version of this example on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/allowance-updater.html) (also see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html).)
 
 ### else if
 
@@ -153,7 +154,8 @@ function setWeather() {
 3. When this function is run, we first set a variable called `choice` to the current value selected in the `<select>` element. We then use a conditional statement to show different text inside the paragraph depending on what the value of `choice` is. Notice how all the conditions are tested in `else if () { }` blocks, except for the first one, which is tested in an `if () { }` block.
 4. The very last choice, inside the `else { }` block, is basically a "last resort" option — the code inside it will be run if none of the conditions are `true`. In this case, it serves to empty the text out of the paragraph if nothing is selected, for example, if a user decides to re-select the "--Make a choice--" placeholder option shown at the beginning.
 
-> **Note:** You can also [find this example on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/simple-else-if.html) ([see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html) on there also.)
+> [!NOTE]
+> You can also [find this example on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/simple-else-if.html) ([see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html) on there also.)
 
 ### A note on comparison operators
 
@@ -304,7 +306,8 @@ Here we've got:
 6. As many other cases (bullets 3–5) as you like.
 7. The keyword `default`, followed by exactly the same code pattern as one of the cases (bullets 3–5), except that `default` does not have a choice after it, and you don't need the `break` statement as there is nothing to run after this in the block anyway. This is the default option that runs if none of the choices match.
 
-> **Note:** You don't have to include the `default` section — you can safely omit it if there is no chance that the expression could end up equaling an unknown value. If there is a chance of this, however, you need to include it to handle unknown cases.
+> [!NOTE]
+> You don't have to include the `default` section — you can safely omit it if there is no chance that the expression could end up equaling an unknown value. If there is a chance of this, however, you need to include it to handle unknown cases.
 
 ### A switch example
 
@@ -357,7 +360,8 @@ function setWeather() {
 
 {{ EmbedLiveSample('A_switch_example', '100%', 100, "", "") }}
 
-> **Note:** You can also [find this example on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/simple-switch.html) (see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html) on there also.)
+> [!NOTE]
+> You can also [find this example on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/simple-switch.html) (see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html) on there also.)
 
 ## Ternary operator
 
@@ -414,7 +418,8 @@ Here we've got a {{htmlelement('select')}} element to choose a theme (black or w
 
 Finally, we've also got an [onchange](/en-US/docs/Web/API/HTMLElement/change_event) event listener that serves to run a function containing a ternary operator. It starts with a test condition — `select.value === 'black'`. If this returns `true`, we run the `update()` function with parameters of black and white, meaning that we end up with a background color of black and a text color of white. If it returns `false`, we run the `update()` function with parameters of white and black, meaning that the site colors are inverted.
 
-> **Note:** You can also [find this example on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/simple-ternary.html) (see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html) on there also.)
+> [!NOTE]
+> You can also [find this example on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/simple-ternary.html) (see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html) on there also.)
 
 ## Active learning: A simple calendar
 
@@ -424,10 +429,10 @@ In this example, you are going to help us finish a simple calendar application. 
 - An `onchange` event handler to detect when the value selected in the `<select>` menu is changed.
 - A function called `createCalendar()` that draws the calendar and displays the correct month in the {{htmlelement("Heading_Elements", "h1")}} element.
 
-We need you to write a conditional statement inside the `onchange` handler function, just below the `// ADD CONDITIONAL HERE` comment. It should:
+We need you to write a conditional statement inside the `createCalendar()` function, just below the `// ADD CONDITIONAL HERE` comment. It should:
 
 1. Look at the selected month (stored in the `choice` variable. This will be the `<select>` element value after the value changes, so "January" for example.)
-2. Set a variable called `days` to be equal to the number of days in the selected month. To do this you'll have to look up the number of days in each month of the year. You can ignore leap years for the purposes of this example.
+2. Assign the `days` variable to be equal to the number of days in the selected month. To do this you'll have to look up the number of days in each month of the year. You can ignore leap years for the purposes of this example.
 
 Hints:
 
@@ -446,29 +451,31 @@ If you make a mistake, you can always reset the example with the "Reset" button.
 </p>
 
 <textarea id="code" class="playable-code" style="height: 400px;width: 95%">
-const select = document.querySelector('select');
-const list = document.querySelector('ul');
-const h1 = document.querySelector('h1');
+const select = document.querySelector("select");
+const list = document.querySelector("ul");
+const h1 = document.querySelector("h1");
 
-select.addEventListener('change', () => {
+select.addEventListener("change", () => {
   const choice = select.value;
+  createCalendar(choice);
+});
+
+function createCalendar(month) {
+  let days = 31;
 
   // ADD CONDITIONAL HERE
 
-  createCalendar(days, choice);
-});
-
-function createCalendar(days, choice) {
-  list.innerHTML = '';
-  h1.textContent = choice;
+  list.textContent = "";
+  h1.textContent = month;
   for (let i = 1; i <= days; i++) {
-    const listItem = document.createElement('li');
+    const listItem = document.createElement("li");
     listItem.textContent = i;
     list.appendChild(listItem);
   }
 }
 
-createCalendar(31, 'January');
+select.value = "January";
+createCalendar("January");
 </textarea>
 
 <div class="playable-buttons">
@@ -513,25 +520,25 @@ const h1 = document.querySelector("h1");
 
 select.addEventListener("change", () => {
   const choice = select.value;
+  createCalendar(choice);
+});
 
+function createCalendar(month) {
   let days = 31;
-  if (choice === "February") {
+
+  if (month === "February") {
     days = 28;
   } else if (
-    choice === "April" ||
-    choice === "June" ||
-    choice === "September" ||
-    choice === "November"
+    month === "April" ||
+    month === "June" ||
+    month === "September" ||
+    month === "November"
   ) {
     days = 30;
   }
 
-  createCalendar(days, choice);
-});
-
-function createCalendar(days, choice) {
-  list.innerHTML = "";
-  h1.textContent = choice;
+  list.textContent = "";
+  h1.textContent = month;
   for (let i = 1; i <= days; i++) {
     const listItem = document.createElement("li");
     listItem.textContent = i;
@@ -539,7 +546,8 @@ function createCalendar(days, choice) {
   }
 }
 
-createCalendar(31, "January");`;
+select.value = "January";
+createCalendar("January");`;
 
 function outputDocument(code) {
   const outputBody = `
@@ -636,12 +644,12 @@ solution.addEventListener("click", () => {
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 textarea.onkeydown = (e) => {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -671,32 +679,21 @@ function insertAtCaret(text) {
 In this example, you are going to take the ternary operator example we saw earlier and convert the ternary operator into a switch statement to allow us to apply more choices to the simple website. Look at the {{htmlelement("select")}} — this time you'll see that it has not two theme options, but five. You need to add a switch statement just underneath the `// ADD SWITCH STATEMENT` comment:
 
 - It should accept the `choice` variable as its input expression.
-- For each case, the choice should equal one of the possible `<option>` values that can be selected, that is, `white`, `black`, `purple`, `yellow`, or `psychedelic`.
+- For each case, the choice should equal one of the possible `<option>` values that can be selected, that is, `white`, `black`, `purple`, `yellow`, or `psychedelic`. Note that the option values are lowercase, while the option _labels_, as displayed in the live output, are capitalized. You should use the lowercase values in your code.
 - For each case, the `update()` function should be run, and be passed two color values, the first one for the background color, and the second one for the text color. Remember that color values are strings, so they need to be wrapped in quotes.
 
 If you make a mistake, you can always reset the example with the "Reset" button. If you get really stuck, press "Show solution" to see a solution.
 
 ```html hidden
 <h2>Live output</h2>
-<div class="output" style="height: 300px;">
-  <label for="theme">Select theme: </label>
-  <select id="theme">
-    <option value="white">White</option>
-    <option value="black">Black</option>
-    <option value="purple">Purple</option>
-    <option value="yellow">Yellow</option>
-    <option value="psychedelic">Psychedelic</option>
-  </select>
-
-  <h1>This is my website</h1>
-</div>
+<iframe id="output" width="100%" height="350px"></iframe>
 
 <h2>Editable code</h2>
 <p class="a11y-label">
   Press Esc to move focus away from the code area (Tab inserts a tab character).
 </p>
 
-<textarea id="code" class="playable-code" style="height: 450px;width: 95%">
+<textarea id="code" class="playable-code" style="height: 400px;width: 95%">
 const select = document.querySelector('select');
 const html = document.querySelector('.output');
 
@@ -741,36 +738,14 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById("code");
 const reset = document.getElementById("reset");
 const solution = document.getElementById("solution");
-let code = textarea.value;
-let userEntry = textarea.value;
+const outputIFrame = document.querySelector("#output");
+const textarea = document.getElementById("code");
+const initialCode = textarea.value;
+let userCode = textarea.value;
 
-function updateCode() {
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = jsSolution;
-  solution.value = "Show solution";
-  updateCode();
-});
-
-solution.addEventListener("click", function () {
-  if (solution.value === "Show solution") {
-    textarea.value = solutionEntry;
-    solution.value = "Hide solution";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Show solution";
-  }
-  updateCode();
-});
-
-const jsSolution = `const select = document.querySelector('select');
+const solutionCode = `const select = document.querySelector('select');
 const html = document.querySelector('.output');
 
 select.addEventListener('change', () => {
@@ -800,21 +775,71 @@ function update(bgColor, textColor) {
   html.style.color = textColor;
 }`;
 
-let solutionEntry = jsSolution;
+function outputDocument(code) {
+  const outputBody = `
+<div class="output" style="height: 300px;">
+  <label for="theme">Select theme: </label>
+  <select id="theme">
+    <option value="white">White</option>
+    <option value="black">Black</option>
+    <option value="purple">Purple</option>
+    <option value="yellow">Yellow</option>
+    <option value="psychedelic">Psychedelic</option>
+  </select>
 
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
+  <h1>This is my website</h1>
+</div>`;
+
+  return `
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    ${outputBody}
+    <script>${code}</script>
+  </body>
+</html>`;
+}
+
+function update() {
+  output.setAttribute("srcdoc", outputDocument(textarea.value));
+}
+
+update();
+
+textarea.addEventListener("input", update);
+
+reset.addEventListener("click", () => {
+  textarea.value = initialCode;
+  userEntry = textarea.value;
+  solution.value = "Show solution";
+  update();
+});
+
+solution.addEventListener("click", () => {
+  if (solution.value === "Show solution") {
+    // remember the state of the user's code
+    // so we can restore it
+    userCode = textarea.value;
+    textarea.value = solutionCode;
+    solution.value = "Hide solution";
+  } else {
+    textarea.value = userCode;
+    solution.value = "Show solution";
+  }
+  update();
+});
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
-
-textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
+textarea.onkeydown = (e) => {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -835,20 +860,6 @@ function insertAtCaret(text) {
   textarea.focus();
   textarea.scrollTop = scrollPos;
 }
-
-// Update the saved userCode every time the user updates the text area code
-
-textarea.onkeyup = function () {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "Show solution") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
-  }
-
-  updateCode();
-};
 ```
 
 {{ EmbedLiveSample('Active_learning_More_color_choices', '100%', 950) }}

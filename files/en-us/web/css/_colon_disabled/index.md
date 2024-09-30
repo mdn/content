@@ -56,29 +56,22 @@ input[type="text"]:disabled {
 
 ### JavaScript
 
+Toggle the disabled input fields when the checkbox is clicked
+
 ```js
-// Wait for the page to finish loading
-document.addEventListener(
-  "DOMContentLoaded",
-  () => {
-    // Attach `change` event listener to checkbox
-    document.getElementById("billing-checkbox").onchange = toggleBilling;
-  },
-  false,
-);
+const checkbox = document.querySelector("#billing-checkbox");
+const billingItems = document.querySelectorAll('#billing input[type="text"]');
 
-function toggleBilling() {
-  // Select the billing text fields
-  const billingItems = document.querySelectorAll('#billing input[type="text"]');
-
-  // Toggle the billing text fields
+checkbox.addEventListener("change", () => {
   billingItems.forEach((item) => {
     item.disabled = !item.disabled;
   });
-}
+});
 ```
 
 ### Result
+
+Check/un-check the checkbox to change the styling on the billing fields.
 
 {{EmbedLiveSample('Examples', 300, 250)}}
 

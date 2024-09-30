@@ -21,7 +21,7 @@ transform: rotate(acos(pi / 5));
 transform: rotate(acos(e / 3));
 ```
 
-### Parameter
+### Parameters
 
 The `acos(number)` function accepts only one value as its parameter.
 

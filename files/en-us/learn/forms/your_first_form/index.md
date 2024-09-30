@@ -76,7 +76,8 @@ This element formally defines a form. It's a container element like a {{HTMLelem
 - The `action` attribute defines the location (URL) where the form's collected data should be sent when it is submitted.
 - The `method` attribute defines which HTTP method to send the data with (usually `get` or `post`).
 
-> **Note:** We'll look at how those attributes work in our [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data) article later on.
+> [!NOTE]
+> We'll look at how those attributes work in our [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data) article later on.
 
 For now, add the above {{htmlelement("form")}} element into your HTML {{htmlelement("body")}}.
 
@@ -92,26 +93,24 @@ In terms of HTML code we need something like the following to implement these fo
 
 ```html
 <form action="/my-handling-form-page" method="post">
-  <ul>
-    <li>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="user_name" />
-    </li>
-    <li>
-      <label for="mail">Email:</label>
-      <input type="email" id="mail" name="user_email" />
-    </li>
-    <li>
-      <label for="msg">Message:</label>
-      <textarea id="msg" name="user_message"></textarea>
-    </li>
-  </ul>
+  <p>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="user_name" />
+  </p>
+  <p>
+    <label for="mail">Email:</label>
+    <input type="email" id="mail" name="user_email" />
+  </p>
+  <p>
+    <label for="msg">Message:</label>
+    <textarea id="msg" name="user_message"></textarea>
+  </p>
 </form>
 ```
 
 Update your form code to look like the above.
 
-The {{HTMLelement("li")}} elements are there to conveniently structure our code and make styling easier (see later in the article).
+The {{HTMLelement("p")}} elements are there to conveniently structure our code and make styling easier (see later in the article).
 For usability and accessibility, we include an explicit label for each form control.
 Note the use of the [`for`](/en-US/docs/Web/HTML/Attributes/for) attribute on all {{HTMLelement("label")}} elements, which takes as its value the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of the form control with which it is associated — this is how you associate a form control with its label.
 
@@ -151,12 +150,12 @@ by default this element is filled with this text
 ### The `<button>` element
 
 The markup for our form is almost complete; we just need to add a button to allow the user to send, or "submit", their data once they have filled out the form.
-This is done by using the {{HTMLelement("button")}} element; add the following just above the closing `</ul>` tag:
+This is done by using the {{HTMLelement("button")}} element; add the following just above the closing `</form>` tag:
 
 ```html
-<li class="button">
+<p class="button">
   <button type="submit">Send your message</button>
-</li>
+</p>
 ```
 
 The {{htmlelement("button")}} element also accepts a `type` attribute — this accepts one of three values: `submit`, `reset`, or `button`.
@@ -165,13 +164,15 @@ The {{htmlelement("button")}} element also accepts a `type` attribute — this a
 - A click on a `reset` button resets all the form widgets to their default value immediately. From a UX point of view, this is considered bad practice, so you should avoid using this type of button unless you really have a good reason to include one.
 - A click on a `button` button does _nothing_! That sounds silly, but it's amazingly useful for building custom buttons — you can define their chosen functionality with JavaScript.
 
-> **Note:** You can also use the {{HTMLElement("input")}} element with the corresponding `type` to produce a button, for example `<input type="submit">`. The main advantage of the {{HTMLelement("button")}} element is that the {{HTMLelement("input")}} element only allows plain text in its label whereas the {{HTMLelement("button")}} element allows full HTML content, allowing more complex, creative button content.
+> [!NOTE]
+> You can also use the {{HTMLElement("input")}} element with the corresponding `type` to produce a button, for example `<input type="submit">`. The main advantage of the {{HTMLelement("button")}} element is that the {{HTMLelement("input")}} element only allows plain text in its label whereas the {{HTMLelement("button")}} element allows full HTML content, allowing more complex, creative button content.
 
 ## Basic form styling
 
 Now that you have finished writing your form's HTML code, try saving it and looking at it in a browser. At the moment, you'll see that it looks rather ugly.
 
-> **Note:** If you don't think you've got the HTML code right, try comparing it with our finished example — see [first-form.html](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form.html) ([also see it live](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form.html)).
+> [!NOTE]
+> If you don't think you've got the HTML code right, try comparing it with our finished example — see [first-form.html](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form.html) ([also see it live](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form.html)).
 
 Forms are notoriously tricky to style nicely. It is beyond the scope of this article to teach you form styling in detail, so for the moment we will just get you to add some CSS to make it look OK.
 
@@ -186,30 +187,27 @@ First of all, add a {{htmlelement("style")}} element to your page, inside your H
 Inside the `style` tags, add the following CSS:
 
 ```css
-form {
+body {
   /* Center the form on the page */
-  margin: 0 auto;
-  width: 400px;
+  text-align: center;
+}
+
+form {
+  display: inline-block;
   /* Form outline */
   padding: 1em;
   border: 1px solid #ccc;
   border-radius: 1em;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-form li + li {
+p + p {
   margin-top: 1em;
 }
 
 label {
   /* Uniform size & alignment */
   display: inline-block;
-  width: 90px;
+  min-width: 90px;
   text-align: right;
 }
 
@@ -218,11 +216,9 @@ textarea {
   /* To make sure that all text fields have the same font settings
      By default, textareas have a monospace font */
   font: 1em sans-serif;
-
   /* Uniform text field size */
   width: 300px;
   box-sizing: border-box;
-
   /* Match form field borders */
   border: 1px solid #999;
 }
@@ -236,7 +232,6 @@ textarea:focus {
 textarea {
   /* Align multiline text fields with their labels */
   vertical-align: top;
-
   /* Provide space to type some text */
   height: 5em;
 }
@@ -255,7 +250,8 @@ button {
 
 Save and reload, and you'll see that your form should look much less ugly.
 
-> **Note:** You can find our version on GitHub at [first-form-styled.html](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form-styled.html) ([also see it live](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html)).
+> [!NOTE]
+> You can find our version on GitHub at [first-form-styled.html](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form-styled.html) ([also see it live](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html)).
 
 ## Sending form data to your web server
 
@@ -271,29 +267,27 @@ Let's look at some of our form code again:
 
 ```html
 <form action="/my-handling-form-page" method="post">
-  <ul>
-    <li>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="user_name" />
-    </li>
-    <li>
-      <label for="mail">Email:</label>
-      <input type="email" id="mail" name="user_email" />
-    </li>
-    <li>
-      <label for="msg">Message:</label>
-      <textarea id="msg" name="user_message"></textarea>
-    </li>
+  <p>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="user_name" />
+  </p>
+  <p>
+    <label for="mail">Email:</label>
+    <input type="email" id="mail" name="user_email" />
+  </p>
+  <p>
+    <label for="msg">Message:</label>
+    <textarea id="msg" name="user_message"></textarea>
+  </p>
 
-    …
-  </ul>
+  …
 </form>
 ```
 
-In our example, the form will send 3 pieces of data named "`user_name`", "`user_email`", and "`user_message`".
-That data will be sent to the URL "`/my-handling-form-page`" using the [HTTP `POST`](/en-US/docs/Web/HTTP/Methods/POST) method.
+In our example, the form will send 3 pieces of data named `user_name`, `user_email`, and `user_message`.
+That data will be sent to the URL `/my-handling-form-page` using the [HTTP `POST`](/en-US/docs/Web/HTTP/Methods/POST) method.
 
-On the server side, the script at the URL "`/my-handling-form-page`" will receive the data as a list of 3 key/value items contained in the HTTP request.
+On the server side, the script at the URL `/my-handling-form-page` will receive the data as a list of 3 key/value items contained in the HTTP request.
 The way this script will handle that data is up to you.
 Each server-side language (PHP, Python, Ruby, Java, C#, etc.) has its own mechanism of handling form data.
 It's beyond the scope of this guide to go deeply into that subject, but if you want to know more, we have provided some examples in our [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data) article later on.

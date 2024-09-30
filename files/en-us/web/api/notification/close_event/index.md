@@ -6,11 +6,9 @@ page-type: web-api-event
 browser-compat: api.Notification.close_event
 ---
 
-{{APIRef("Web Notifications")}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 The **`close`** event of the {{domxref("Notification")}} interface fires when a {{domxref("Notification")}} is closed.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

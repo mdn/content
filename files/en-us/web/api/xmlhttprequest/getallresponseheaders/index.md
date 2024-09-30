@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.XMLHttpRequest.getAllResponseHeaders
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
 The {{domxref("XMLHttpRequest")}} method
 **`getAllResponseHeaders()`** returns all the response
@@ -16,7 +16,8 @@ if no response has been received.
 If a network error happened, an empty string
 is returned.
 
-> **Note:** For multipart requests, this returns the headers from the
+> [!NOTE]
+> For multipart requests, this returns the headers from the
 > _current_ part of the request, not from the original channel.
 
 ## Syntax
@@ -55,7 +56,8 @@ x-xss-protection: 1; mode=block\r\n
 Each line is terminated by both carriage return and line feed characters
 (`\r\n`). These are essentially delimiters separating each of the headers.
 
-> **Note:** In modern browsers, the header names are returned in all lower
+> [!NOTE]
+> In modern browsers, the header names are returned in all lower
 > case, as per the latest spec.
 
 ## Examples
@@ -110,5 +112,4 @@ This obtains the value of the {{httpheader("Content-Type")}} header into the var
 ## See also
 
 - [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- Setting request headers: {{domxref("XMLHttpRequest.setRequestHeader",
-    "setRequestHeader()")}}
+- Setting request headers: {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}

@@ -118,9 +118,10 @@ Doing this will populate our `editFieldRef` and `editButtonRef` with references 
 console.log(editButtonRef.current);
 ```
 
-You'll see that the value of `editButtonRef.current` is `null` when the component first renders, but if you click an "Edit" button, it will log the `<input>` element to the console. This is because the ref is populated only after the component renders, and clicking the "Edit" button causes the component to re-render. Be sure to delete this log before moving on.
+You'll see that the value of `editButtonRef.current` is `null` when the component first renders, but if you click an "Edit" button, it will log the `<button>` element to the console. This is because the ref is populated only after the component renders, and clicking the "Edit" button causes the component to re-render. Be sure to delete this log before moving on.
 
-> **Note:** Your logs will appear 6 times because we have 3 instances of `<Todo />` in our app and React renders our components twice in development.
+> [!NOTE]
+> Your logs will appear 6 times because we have 3 instances of `<Todo />` in our app and React renders our components twice in development.
 
 We're getting closer! To take advantage of our newly referenced elements, we need to use another React hook: `useEffect()`.
 
@@ -207,7 +208,7 @@ if (wasNotEditingBefore && isEditingNow) {
 }
 ```
 
-The React team has discussed [ways to get a component's previous state](https://reactjs.org/docs/hooks-faq.html#how-to-get-the-previous-props-or-state), and provided an example hook we can use for the job.
+The React team has discussed [ways to get a component's previous state](https://legacy.reactjs.org/docs/hooks-faq.html#how-to-get-the-previous-props-or-state), and provided an example hook we can use for the job.
 
 ### Enter `usePrevious()`
 
@@ -297,7 +298,8 @@ Let's add the `tabindex` attribute — written as `tabIndex` in JSX — to the h
 </h2>
 ```
 
-> **Note:** The `tabindex` attribute is excellent for accessibility edge cases, but you should take **great care** not to overuse it. Only apply a `tabindex` to an element when you're sure that making it focusable will benefit your user somehow. In most cases, you should utilize elements that can naturally take focus, such as buttons, anchors, and inputs. Irresponsible usage of `tabindex` could have a profoundly negative impact on keyboard and screen reader users!
+> [!NOTE]
+> The `tabindex` attribute is excellent for accessibility edge cases, but you should take **great care** not to overuse it. Only apply a `tabindex` to an element when you're sure that making it focusable will benefit your user somehow. In most cases, you should utilize elements that can naturally take focus, such as buttons, anchors, and inputs. Irresponsible usage of `tabindex` could have a profoundly negative impact on keyboard and screen reader users!
 
 ### Getting previous state
 
@@ -321,7 +323,8 @@ const prevTaskLength = usePrevious(tasks.length);
 
 Here we are invoking `usePrevious()` to track the previous length of the tasks array.
 
-> **Note:** Since we're now utilizing `usePrevious()` in two files, it might be more efficient to move the `usePrevious()` function into its own file, export it from that file, and import it where you need it. Try doing this as an exercise once you've got to the end.
+> [!NOTE]
+> Since we're now utilizing `usePrevious()` in two files, it might be more efficient to move the `usePrevious()` function into its own file, export it from that file, and import it where you need it. Try doing this as an exercise once you've got to the end.
 
 ### Using `useEffect()` to control our heading focus
 
@@ -349,7 +352,8 @@ Most of the time, you can be an effective contributor to a React project even if
 
 `useRef()` and `useEffect()` are somewhat advanced features, and you should be proud of yourself for using them! Look out for opportunities to practice them more, because doing so will allow you to create inclusive experiences for users. Remember: our app would have been inaccessible to keyboard users without them!
 
-> **Note:** If you need to check your code against our version, you can find a finished version of the sample React app code in our [todo-react repository](https://github.com/mdn/todo-react). For a running live version, see <https://mdn.github.io/todo-react>.
+> [!NOTE]
+> If you need to check your code against our version, you can find a finished version of the sample React app code in our [todo-react repository](https://github.com/mdn/todo-react). For a running live version, see <https://mdn.github.io/todo-react/>.
 
 In the very last article we'll present you with a list of React resources that you can use to go further in your learning.
 

@@ -17,8 +17,8 @@ This method is nearly equivalent to
 After surrounding, the boundary points of the `range` include
 `newNode`.
 
-An exception will be thrown, however, if the {{ domxref("Range") }} splits a non-{{
-  domxref("Text") }} node with only one of its boundary points. That is, unlike the
+An exception will be thrown, however, if the {{ domxref("Range") }} splits a non-{{domxref("Text") }}
+node with only one of its boundary points. That is, unlike the
 alternative above, if there are partially selected nodes, they will not be cloned and
 instead the operation will fail.
 

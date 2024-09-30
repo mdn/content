@@ -39,7 +39,7 @@ To understand cascade layers, you must understand the CSS cascade well. The sect
 
 ## Review of the cascade concept
 
-The C in CSS stands for "Cascading". It is the method by which styles cascade together. The user agent runs through several clearly defined steps to determine the values assigned to every property for every element. We will briefly list these steps here and then dig deeper into step 4, **Cascade layers**, which is what you came here to learn:
+The 'C' in CSS stands for "Cascading". It is the method by which styles cascade together. The user agent runs through several clearly defined steps to determine the values assigned to every property for every element. We will briefly list these steps here and then dig deeper into step 4, **Cascade layers**, which is what you came here to learn:
 
 1. **Relevance:** Find all the declaration blocks with a selector match for each element.
 2. **Importance:** Sort rules based on whether they are normal or important. Important styles are those that have the [`!important`](/en-US/docs/Web/CSS/important) flag set.
@@ -128,13 +128,14 @@ The ability to create nested layers also removes the worry of having conflicting
 
 Layers can be created using any one of the following methods:
 
-- The `@layer` statement at-rule, declaring layers using `@layer` followed by the names of one or more layers. This creates named layers without assigning any styles to them.
+- The [`@layer`](/en-US/docs/Web/CSS/@layer) statement at-rule, declaring layers using `@layer` followed by the names of one or more layers. This creates named layers without assigning any styles to them.
 - The `@layer` block at-rule, in which all styles within a block are added to a named or unnamed layer.
 - The [`@import`](/en-US/docs/Web/CSS/@import) rule with the `layer` keyword or `layer()` function, which assigns the contents of the imported file into that layer.
 
 All three methods create a layer if a layer with that name has not already been initialized. If no layer name is provided in the `@layer` at-rule or `@import` with `layer()`, a new anonymous (unnamed) layer is created.
 
-> **Note:** The order of precedence of layers is the order in which they are created. Styles not in a layer, or "unlayered styles", cascade together into a final implicit label.
+> [!NOTE]
+> The order of precedence of layers is the order in which they are created. Styles not in a layer, or "unlayered styles", cascade together into a final implicit label.
 
 Let's cover the three ways of creating a layer in a little more detail before discussing nested layers.
 
@@ -156,7 +157,7 @@ If the above statement is the first line of a site's CSS, the layer order will b
 
 Layers can be created using the block `@layer` at-rule. If an `@layer` at-rule is followed by an identifier and a block of styles, the identifier is used to name the layer, and the styles in this at-rule are added to the layer's styles. If a layer with the specified name does not already exist, a new layer will be created. If a layer with the specified name already exists, the styles are added to the previously existing layer. If no name is specified while creating a block of styles using `@layer`, the styles in the at-rule will be added to a new anonymous layer.
 
-In the example below, we've used four block and one inline `@layer` at-rules. This CSS does the following in the order listed:
+In the example below, we've used four `@layer` block at-rules and one `@layer` statement at-rule. This CSS does the following in the order listed:
 
 1. Creates a named `layout` layer
 2. Creates an unnamed, anonymous layer
@@ -210,7 +211,8 @@ We assigned some styles to the layer named `layout`. If a named layer doesn't al
 
 Anonymous layers are created by assigning styles to a layer without naming the layer. Styles can be added to an unnamed layer only at the time of its creation.
 
-> **Note:** Subsequent use of `@layer` with no layer name creates additional unnamed layers; it does not append styles to a previously existing unnamed layer.
+> [!NOTE]
+> Subsequent use of `@layer` with no layer name creates additional unnamed layers; it does not append styles to a previously existing unnamed layer.
 
 The `@layer` at-rule creates a layer, named or not, or appends styles to a layer if the named layer already exists. We called the first anonymous layer `<anonymous(01)>` and the second `<anonymous(02)>`, this is just so we can explain them. These are actually unnamed layers. There is no way to reference them or add additional styles to them.
 
@@ -262,7 +264,8 @@ You can import styles and create layers based on specific conditions using [medi
   (width >= 32rem);
 ```
 
-> **Note:** There is no equivalent of the {{HTMLElement('link')}} method of linking stylesheets. Use `@import` to import a stylesheet into a layer when you can't use `@layer` within the stylesheet.
+> [!NOTE]
+> There is no equivalent of the {{HTMLElement('link')}} method of linking stylesheets. Use `@import` to import a stylesheet into a layer when you can't use `@layer` within the stylesheet.
 
 ## Overview of nested cascade layers
 
@@ -348,7 +351,7 @@ Transitioning styles have the highest precedence. When a normal property value i
 
 {{EmbedGHLiveSample("css-examples/learn/layers/layer-precedence.html", '100%', 500)}}
 
-In this example, there are two inline layers `A` and `B` without styles, a block of unlayered styles, and two blocks of styles in named layers `A` and `B`.
+In this example, two layers (`A` and `B`) are initially defined using an `@layer` statement at-rule without any styles. The layer styles are defined in two `@layer` block at-rules appearing after the `h1` CSS rule declared outside of any layer.
 
 The inline styles added on the `h1` element using the `style` attribute, set a normal `color` and an important `background-color`. Normal inline styles override all layered and unlayered normal styles. Important inline styles override all layered and unlayered normal and important author styles. There is no way for author styles to override important inline styles.
 
@@ -378,35 +381,63 @@ To summarize:
 
 The cascade precedence order for nested layers is similar to that of regular layers, but contained within the layer. The precedence order is based on the order of nested layer creation. Non-nested styles in a layer have precedence over nested normal styles, with the precedence order reversed for important styles. Specificity weight between nested layers does not matter, though it does matter for conflicting styles within a nested layer.
 
-The following creates and adds styles to the `components` layer and `components.narrow` nested layer and creates and appends styles to a new `components.wide` layer:
+The following creates and adds styles to the `components` layer, `components.narrow` nested layer, and `components.wide` nested layer:
+
+```html hidden
+<div>Text</div>
+```
+
+```css hidden
+div {
+  height: 150px;
+  width: 150px;
+  margin: 1rem;
+  padding: 1rem;
+  font-size: 3rem;
+}
+```
 
 ```css
-@import url("components-lib.css") layer(components);
-@import url("narrowtheme.css") layer(components.narrow);
+div {
+  background-color: wheat;
+  color: pink !important;
+}
 
 @layer components {
-  :root {
-    --theme: red;
-    font-family: serif !important;
+  div {
+    background-color: yellow;
+    border: 1rem dashed red;
+    color: orange !important;
   }
 }
+
 @layer components.narrow {
-  :root {
-    --theme: blue;
-    font-family: sans-serif !important;
+  div {
+    background-color: skyblue;
+    border: 1rem dashed blue;
+    color: purple !important;
+    border-radius: 50%;
   }
 }
+
 @layer components.wide {
-  :root {
-    --theme: purple;
-    font-family: cursive !important;
+  div {
+    background-color: limegreen;
+    border: 1rem dashed green;
+    color: seagreen !important;
+    border-radius: 20%;
   }
 }
 ```
 
-Because unlayered normal styles have precedence over layered normal styles, and within a layer, non-nested styles have precedence over normal nested styles, `red` wins over the other `theme` colors.
+{{EmbedLiveSample("Precedence order of nested cascade layers", "100%", "250")}}
 
-With important styles, layered styles take precedence over unlayered styles, with important styles in earlier declared layers having precedence over later declared layers. In this example, the order of nested layer creation is `components.narrow`, then `components.wide`, so important styles in `components.narrow` have precedence over important styles in `components.wide`, meaning `sans-serif` wins.
+Here's a summary of the properties that are used and why each declaration is applied:
+
+- `background-color`: Because unlayered normal styles have precedence over layered normal styles, `wheat` color wins.
+- `border`: Because within a layer non-nested styles have precedence over normal nested styles, `red` color wins.
+- `color`: With important styles, layered styles take precedence over unlayered styles, with important styles in earlier declared layers having precedence over later declared layers. In this example, the order of nested layer creation is `components.narrow`, then `components.wide`, so important styles in `components.narrow` have precedence over important styles in `components.wide`, meaning `purple` color wins.
+- `border-radius`: The property has been set only in the nested layers so by declaration order `20%` radius wins.
 
 ## Test your skills!
 

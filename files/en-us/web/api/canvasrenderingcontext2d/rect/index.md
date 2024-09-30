@@ -17,7 +17,8 @@ anything. To draw the rectangle onto a canvas, you can use the
 {{domxref("CanvasRenderingContext2D.fill", "fill()")}} or
 {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} methods.
 
-> **Note:** To both create and render a rectangle in one step, use the
+> [!NOTE]
+> To both create and render a rectangle in one step, use the
 > {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} or
 > {{domxref("CanvasRenderingContext2D.strokeRect", "strokeRect()")}} methods.
 
@@ -67,8 +68,9 @@ The rectangle's corner is located at (10, 20). It has a width of 150 and a heigh
 ```js
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
-ctx.rect(10, 20, 150, 100);
-ctx.fill();
+ctx.beginPath(); // Start a new path
+ctx.rect(10, 20, 150, 100); // Add a rectangle to the current path
+ctx.fill(); // Render the path
 ```
 
 #### Result

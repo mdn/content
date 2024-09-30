@@ -17,7 +17,7 @@ Every CSS declaration includes a property / value pair. Depending on the propert
 - {{cssxref("&lt;custom-ident&gt;")}}
 - Pre-defined keywords as an `<ident>`
 - {{cssxref("&lt;string&gt;")}}
-- {{cssxref("url","url()")}}
+- {{cssxref("url_value", "&lt;url&gt;")}}
 
 Text data types are either `<string>`, a quoted series of characters, or an `<ident>`, a "CSS Identifier" which is an unquoted string. A `<string>` must be quoted with either single or double quotes. CSS Identifiers, listed in the specifications as `<ident>` or `<custom-ident>`, must be unquoted.
 
@@ -87,7 +87,7 @@ In addition to the pre-defined keywords that are part of the specification for a
 
 ### URLs
 
-A {{cssxref("url","url()")}} type uses functional notation, which accepts a `<string>` that is a URL. This may be an absolute URL or a relative URL. For example, if you wanted to include a background image, you might use either of the following.
+A {{cssxref("url_value", "&lt;url&gt;")}} type uses functional notation, which accepts a `<string>` that is a URL. This may be an absolute URL or a relative URL. For example, if you wanted to include a background image, you might use either of the following.
 
 ```css
 .box {
@@ -99,7 +99,7 @@ A {{cssxref("url","url()")}} type uses functional notation, which accepts a `<st
 }
 ```
 
-The parameter for `url()` can be either quoted or unquoted. If unquoted, it is parsed as a `<url-token>`, which has extra requirements including the escaping of certain characters. See {{cssxref("url","url()")}} for more information.
+The parameter for `url()` can be either quoted or unquoted. If unquoted, it is parsed as a `<url-token>`, which has extra requirements including the escaping of certain characters. See {{cssxref("url_value", "&lt;url&gt;")}} for more information.
 
 ## Numeric data types
 
@@ -153,7 +153,7 @@ For example, `em` is relative to the font size on the element and `ex` is relati
 
 ##### Root font-relative lengths
 
-Root font-relative lengths specify a length in relation to the element's {{CSSxRef(":root", "root element")}} ancestor, such as {{HTMLElement("HTML")}} or {{SVGElement("SVG")}}.
+Root font-relative lengths specify a length in relation to the element's [root element](/en-US/docs/Web/CSS/:root) ancestor, such as {{HTMLElement("HTML")}} or {{SVGElement("SVG")}}.
 For example, `rem` is relative to the font size on the root element and `rex` is the x-height of the root element's font.
 
 | Unit   | Relative to                                                                                                                                 |
@@ -170,20 +170,20 @@ For example, `rem` is relative to the font size on the root element and `rex` is
 Viewport unit lengths specify a length relative to the dimensions of the [viewport](/en-US/docs/Glossary/Viewport).
 For example, `vw` is relative to the width of the viewport and `vh` is relative to the height of the viewport.
 
-| Unit   | Relative to                                                                                                                        |
-| ------ | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `dvh`  | 1% of the [dynamic](/en-US/docs/Web/CSS/length#dynamic) viewport's height.                                                         |
-| `dvw`  | 1% of the [dynamic](/en-US/docs/Web/CSS/length#dynamic) viewport's width.                                                          |
-| `lvh`  | 1% of the [large](/en-US/docs/Web/CSS/length#large) viewport's height.                                                             |
-| `lvw`  | 1% of the [large](/en-US/docs/Web/CSS/length#large) viewport's width.                                                              |
-| `svh`  | 1% of the [small](/en-US/docs/Web/CSS/length#small) viewport's height.                                                             |
-| `svw`  | 1% of the [small](/en-US/docs/Web/CSS/length#small) viewport's width.                                                              |
-| `vb`   | 1% of viewport's size in the root element's [block axis](/en-US/docs/Web/CSS/CSS_logical_properties_and_values#block_vs._inline).  |
-| `vh`   | 1% of viewport's height.                                                                                                           |
-| `vi`   | 1% of viewport's size in the root element's [inline axis](/en-US/docs/Web/CSS/CSS_logical_properties_and_values#block_vs._inline). |
-| `vmax` | 1% of viewport's larger dimension.                                                                                                 |
-| `vmin` | 1% of viewport's smaller dimension.                                                                                                |
-| `vw`   | 1% of viewport's width.                                                                                                            |
+| Unit   | Relative to                                                                                           |
+| ------ | ----------------------------------------------------------------------------------------------------- |
+| `dvh`  | 1% of the [dynamic](/en-US/docs/Web/CSS/length#dynamic) viewport's height.                            |
+| `dvw`  | 1% of the [dynamic](/en-US/docs/Web/CSS/length#dynamic) viewport's width.                             |
+| `lvh`  | 1% of the [large](/en-US/docs/Web/CSS/length#large) viewport's height.                                |
+| `lvw`  | 1% of the [large](/en-US/docs/Web/CSS/length#large) viewport's width.                                 |
+| `svh`  | 1% of the [small](/en-US/docs/Web/CSS/length#small) viewport's height.                                |
+| `svw`  | 1% of the [small](/en-US/docs/Web/CSS/length#small) viewport's width.                                 |
+| `vb`   | 1% of viewport's size in the root element's [block axis](/en-US/docs/Glossary/Flow_relative_values).  |
+| `vh`   | 1% of viewport's height.                                                                              |
+| `vi`   | 1% of viewport's size in the root element's [inline axis](/en-US/docs/Glossary/Flow_relative_values). |
+| `vmax` | 1% of viewport's larger dimension.                                                                    |
+| `vmin` | 1% of viewport's smaller dimension.                                                                   |
+| `vw`   | 1% of viewport's width.                                                                               |
 
 ##### Container units
 
@@ -318,7 +318,7 @@ The {{cssxref("&lt;position&gt;")}} type defines 2D positioning of an object ins
 
 White space is allowed, but optional inside the parentheses. (But see notes regarding whitespace within pages for `min()`, `max()`, `minmax()`, and `clamp()` functions.)
 
-Some legacy functional notations such as `rgba()` use commas, but generally commas are only used to separate items in a list. If a comma is used to separate arguments, white space is optional before and after the comma.
+Some legacy functional notations, such as legacy syntax for `rgb()`, `rgba()`, `hsl()`, and `hsla()`, used commas, but commas are generally only used to separate items in a list. If a comma is used to separate arguments, white space is optional before and after the comma.
 
 ## Specifications
 

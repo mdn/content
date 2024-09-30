@@ -8,7 +8,8 @@ page-type: guide
 
 **Image sprites** are used in numerous web apps where multiple images are used. Rather than include each image as a separate image file, it is much more memory- and bandwidth-friendly to send them as a single image; using background position as a way to distinguish between individual images in the same image file, so the number of HTTP requests is reduced.
 
-> **Note:** When using HTTP/2, it may in fact be more bandwidth-friendly to use multiple small requests.
+> [!NOTE]
+> When using HTTP/2, it may in fact be more bandwidth-friendly to use multiple small requests.
 
 ## Implementation
 
@@ -23,7 +24,7 @@ Suppose an image is given to every item with class `toolbtn`:
 }
 ```
 
-A background position can be added either as two x, y values after the {{cssxref("url", "url()")}} in the background, or as {{cssxref("background-position")}}. For example:
+A background position can be added either as two x, y values after the {{cssxref("url_value", "&lt;url&gt;")}} in the background, or as {{cssxref("background-position")}}. For example:
 
 ```css
 #btn1 {

@@ -8,7 +8,7 @@ status:
 browser-compat: api.SerialPort.connect_event
 ---
 
-{{APIRef("Web Serial API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("Web Serial API")}}{{SecureContext_Header}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`connect`** event of the {{domxref("SerialPort")}} interface is fired when a port has connected to the device. This event is only fired for ports associated with removable devices such as those connected via USB.
 
@@ -32,7 +32,7 @@ A generic {{domxref("Event")}}.
 
 This event bubbles to {{domxref("Serial")}}. The `event.target` property refers to the {{domxref('SerialPort')}} object that bubbles up.
 
-For more information, see [Event bubbling](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling).
+For more information, see [Event bubbling](/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling).
 
 ## Examples
 

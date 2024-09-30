@@ -88,7 +88,8 @@ This registers a service worker, which runs in a worker context, and therefore h
 
 A single service worker can control many pages. Each time a page within your scope is loaded, the service worker is installed against that page and operates on it. Bear in mind therefore that you need to be careful with global variables in the service worker script: each page doesn't get its own unique worker.
 
-> **Note:** One great thing about service workers is that if you use feature detection like we've shown above, browsers that don't support service workers can just use your app online in the normal expected fashion.
+> [!NOTE]
+> One great thing about service workers is that if you use feature detection like we've shown above, browsers that don't support service workers can just use your app online in the normal expected fashion.
 
 #### Why is my service worker failing to register?
 
@@ -98,7 +99,7 @@ This could be for the following reasons:
 - The path to your service worker file is not written correctly — it needs to be written relative to the origin, not your app's root directory. In our example, the worker is at `https://bncb2v.csb.app/sw.js`, and the app's root is `https://bncb2v.csb.app/`. But the path needs to be written as `/sw.js`.
 - It is also not allowed to point to a service worker of a different origin than that of your app.
 - The service worker will only catch requests from clients under the service worker's scope.
-- The max scope for a service worker is the location of the worker (in other words if the script `sw.js` is located in `/js/sw.js`, it can only control URLs under `/js/` by default). A list of max scopes for that worker can be specified with the [`Service-Worker-Allowed`](/en-US/docs/Web/HTTP/Header/Service-Worker-Allowed) header.
+- The max scope for a service worker is the location of the worker (in other words if the script `sw.js` is located in `/js/sw.js`, it can only control URLs under `/js/` by default). A list of max scopes for that worker can be specified with the `Service-Worker-Allowed` header.
 - In Firefox, Service Worker APIs are hidden and cannot be used when the user is in [private browsing mode](https://bugzil.la/1320796), or when history is disabled, or if cookies are cleared when Firefox is closed.
 - In Chrome, registration fails when the "Block all cookies (not recommended)" option is enabled.
 
@@ -384,7 +385,8 @@ Note that in this example we download and cache the same data for the resource w
 
 If your service worker has previously been installed, but then a new version of the worker is available on refresh or page load, the new version is installed in the background, but not yet activated. It is only activated when there are no longer any pages loaded that are still using the old service worker. As soon as there are no more such pages still loaded, the new service worker activates.
 
-> **Note:** It is possible to bypass this by using [`Clients.claim()`](/en-US/docs/Web/API/Clients/claim).
+> [!NOTE]
+> It is possible to bypass this by using [`Clients.claim()`](/en-US/docs/Web/API/Clients/claim).
 
 You'll want to update your `install` event listener in the new service worker to something like this (notice the new version number):
 

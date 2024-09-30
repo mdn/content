@@ -10,7 +10,8 @@ page-type: guide
 
 When SVG was specified, support for web fonts was not widespread in browsers. Since accessing the correct font file is, however, crucial for rendering text correctly, a font description technology was added to SVG to provide this ability. It was not meant for compatibility with other formats like [PostScript](https://www.adobe.com/products/postscript.html) or [OTF](https://fonts.google.com/knowledge/glossary/open_type), but rather as a simple means of embedding glyph information into SVG when rendered.
 
-> **Note:** SVG Fonts are currently supported only in Safari and Android Browser.
+> [!NOTE]
+> SVG Fonts are currently supported only in Safari and Android Browser.
 >
 > The functionality was [removed from Chrome 38](https://chromestatus.com/feature/5930075908210688) (and Opera 25) and Firefox [postponed its implementation indefinitely](https://bugzil.la/119490) to concentrate on [WOFF](/en-US/docs/Web/CSS/CSS_fonts/WOFF). Other tools, however, like Batik and parts of Inkscape support SVG font embedding.
 

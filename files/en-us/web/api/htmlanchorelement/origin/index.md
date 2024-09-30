@@ -21,7 +21,7 @@ That is:
   explicitly specified);
 - for URL using `file:` scheme, the value is browser dependent;
 - for URL using the `blob:` scheme, the origin of the URL following
-  `blob:`. E.g `"blob:https://mozilla.org"` will have
+  `blob:`. E.g. `"blob:https://mozilla.org"` will have
   `"https://mozilla.org".`
 
 ## Value

@@ -19,7 +19,8 @@ relative to the `navigationStart` attribute of the
 increasing, meaning that they can be compared to determine the ordering of updates, as
 newer values will always be greater than or equal to older values.
 
-> **Note:** This property is not currently supported anywhere.
+> [!NOTE]
+> This property is not currently supported anywhere.
 
 ## Value
 

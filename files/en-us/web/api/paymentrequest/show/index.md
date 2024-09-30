@@ -20,7 +20,8 @@ called, any other call to `show()` will by rejected with an
 fulfilled with a {{domxref("PaymentResponse")}} indicating the results of the payment
 request, or by being rejected with an error.
 
-> **Note:** In reality, despite the fact that the specification says this
+> [!NOTE]
+> In reality, despite the fact that the specification says this
 > can't be done, some browsers, including Firefox, support multiple active payment
 > requests at a time.
 
@@ -42,17 +43,16 @@ to wait asynchronously while results are validated and so forth.
 
 ```js-nolint
 show()
-show(detailsPromise)
+show(details)
 ```
 
 ### Parameters
 
-- `detailsPromise` {{optional_inline}}
+- `details` {{optional_inline}}
 
-  - : An optional {{jsxref("Promise")}} that you can provide if your architecture requires
+  - : Either an object or a {{jsxref("Promise")}} that resolves to an object. Provide this if your architecture requires
     that the payment request's details need to be updated between instantiating the
-    payment interface and the user beginning to interact with it. The promise should
-    resolve with an object containing the updated information:
+    payment interface and the user beginning to interact with it. The object should contain the updated information:
 
     - `displayItems` {{optional_inline}}
 
@@ -71,7 +71,7 @@ show(detailsPromise)
 
     - `error` {{optional_inline}} {{deprecated_inline}} {{non-standard_inline}}
 
-      - : A string specifying an error message to present to the user*.* When calling {{domxref("PaymentRequestUpdateEvent.updateWith", "updateWith()")}}, including `error` in the updated data causes the {{Glossary("user agent")}} to display the text as a general error message. For address-field specific errors, use the `shippingAddressErrors` field.
+      - : A string specifying an error message to present to the user. When calling {{domxref("PaymentRequestUpdateEvent.updateWith", "updateWith()")}}, including `error` in the updated data causes the {{Glossary("user agent")}} to display the text as a general error message. For address-field specific errors, use the `shippingAddressErrors` field.
 
     - `modifiers` {{optional_inline}}
 

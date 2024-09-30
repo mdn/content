@@ -17,13 +17,14 @@ Values of this type are objects. They contain the following properties:
 
   - : `string`. This property only applies to cookies and indexedDB items. The removal is limited to items belonging to a specific [cookie store](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore) as specified by the ID. See [Work with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) for more information.
 
-    > **Note:** On Firefox Nightly removal of localStorage items by `cookieStoreId` is also supported.
+    > [!NOTE]
+    > On Firefox Nightly removal of localStorage items by `cookieStoreId` is also supported.
 
 - `hostnames` {{optional_inline}}
 
   - : `Array` of `string`. This property applies to cookie, indexedDB, local storage, and service worker registration items. Remove only cookie, indexedDB, local storage, and service worker registration items associated with these hostnames.
 
-    You must pass in just a hostname here, without protocol (for example, "google.com" not "https\://google.com"). You can use the [`URL`](/en-US/docs/Web/API/URL) interface to parse a raw URL and retrieve the hostname. Items associated with subdomains of a given hostname are _not_ removed: you must explicitly list subdomains.
+    You must pass in just a hostname here, without protocol (for example, `"google.com"` not `"https://google.com"`). You can use the [`URL`](/en-US/docs/Web/API/URL) interface to parse a raw URL and retrieve the hostname. Items associated with subdomains of a given hostname are _not_ removed: you must explicitly list subdomains.
 
 - `originTypes` {{optional_inline}}
 
@@ -45,7 +46,8 @@ Values of this type are objects. They contain the following properties:
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/browsingData/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

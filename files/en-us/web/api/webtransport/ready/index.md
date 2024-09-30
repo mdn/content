@@ -6,11 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.WebTransport.ready
 ---
 
-{{APIRef("WebTransport API")}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`ready`** read-only property of the {{domxref("WebTransport")}} interface returns a promise that resolves when the transport is ready to use.
-
-{{AvailableInWorkers}}
 
 ## Value
 

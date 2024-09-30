@@ -64,7 +64,8 @@ asyncGen.next().then((res) => console.log(res)); // { value: undefined, done: tr
 
 In this example, `next` is called with a value.
 
-> **Note:** The first call does not log anything, because the generator was not yielding anything initially.
+> [!NOTE]
+> The first call does not log anything, because the generator was not yielding anything initially.
 
 ```js
 // An async task. Pretend it's doing something more useful

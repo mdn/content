@@ -9,7 +9,8 @@ browser-compat: webextensions.api.cookies.onChanged
 
 The `onChanged` event of the {{WebExtAPIRef("cookies")}} API fires when a cookie that the extension can access is set or removed.
 
-> **Note:** When [storage partitioning](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#storage_partitioning) is active, `cookies.Cookie.partitionKey` contains the description of the cookie's storage partition. When modifying cookies, it's important to pass this value to {{WebExtAPIRef("cookies.set()")}} or {{WebExtAPIRef("cookies.remove()")}} to ensure the extension works with the correct cookie.
+> [!NOTE]
+> When [storage partitioning](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#storage_partitioning) is active, `cookies.Cookie.partitionKey` contains the description of the cookie's storage partition. When modifying cookies, it's important to pass this value to {{WebExtAPIRef("cookies.set()")}} or {{WebExtAPIRef("cookies.remove()")}} to ensure the extension works with the correct cookie.
 
 Note that updating a cookie's properties is implemented as a two step process:
 
@@ -75,7 +76,8 @@ browser.cookies.onChanged.addListener((changeInfo) => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/cookies/#event-onChanged) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies#event-onChanged) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

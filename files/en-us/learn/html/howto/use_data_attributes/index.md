@@ -75,4 +75,4 @@ Do not store content that should be visible and accessible in data attributes, b
 
 - This article is adapted from [Using data attributes in JavaScript and CSS on hacks.mozilla.org](https://hacks.mozilla.org/2012/10/using-data-attributes-in-javascript-and-css/).
 - Custom attributes are also supported in SVG 2; see {{domxref("HTMLElement.dataset")}} and {{SVGAttr("data-*")}} for more information.
-- [How to use HTML data attributes](https://www.sitepoint.com/use-html5-data-attributes/) (Sitepoint)
+- [How to use HTML data attributes](https://www.sitepoint.com/how-why-use-html5-custom-data-attributes/) (Sitepoint)

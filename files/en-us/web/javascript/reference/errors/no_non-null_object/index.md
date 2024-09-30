@@ -15,10 +15,6 @@ somewhere and wasn't provided. [`null`](/en-US/docs/Web/JavaScript/Reference/Ope
 TypeError: Property description must be an object: x (V8-based)
 TypeError: Property descriptor must be an object, got "x" (Firefox)
 TypeError: Property description must be an object. (Safari)
-
-TypeError: Invalid value used in weak set (V8-based)
-TypeError: WeakSet value must be an object, got "x" (Firefox)
-TypeError: Attempted to add a non-object value to a WeakSet (Safari)
 ```
 
 ## Error type
@@ -53,28 +49,8 @@ A valid property descriptor object might look like this:
 Object.defineProperty({}, "key", { value: "foo", writable: false });
 ```
 
-### WeakMap and WeakSet objects require object or symbol keys
-
-{{jsxref("WeakMap")}} and {{jsxref("WeakSet")}} objects store object or symbol keys. You can't
-use other types as keys.
-
-```js example-bad
-const ws = new WeakSet();
-ws.add("foo");
-// TypeError: "foo" is not a non-null object
-```
-
-Use objects instead:
-
-```js example-good
-ws.add({ foo: "bar" });
-ws.add(window);
-```
-
 ## See also
 
 - {{jsxref("Object.create()")}}
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.defineProperties()")}}
-- {{jsxref("WeakMap")}}
-- {{jsxref("WeakSet")}}

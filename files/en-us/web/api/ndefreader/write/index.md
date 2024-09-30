@@ -23,11 +23,11 @@ write(message, options)
 
 - `message`
 
-  - : The message to be written, either a string object or literal, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}},
+  - : The message to be written, either a string, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}},
     a {{jsxref("DataView")}}, or an array of records. A record has the following members:
 
     - `data` {{optional_inline}}
-      - : Contains the data to be transmitted, a string object or literal, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}},
+      - : Contains the data to be transmitted, a string, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}},
         a {{jsxref("DataView")}}, or an array of nested records
     - `encoding` {{optional_inline}}
       - : A string specifying the record's encoding.
@@ -69,7 +69,7 @@ write(message, options)
 
 A {{JSxRef("Promise")}} that either resolves when a message has been written to the tag or rejects if a hardware or permission error is encountered.
 
-## Exceptions
+### Exceptions
 
 This method doesn't throw exceptions; instead, it rejects the returned promise,
 passing a {{domxref("DOMException")}} whose `name` is one of the

@@ -6,13 +6,11 @@ page-type: web-api-instance-property
 browser-compat: api.WebTransportDatagramDuplexStream.writable
 ---
 
-{{APIRef("WebTransport API")}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`writable`** read-only property of the {{domxref("WebTransportDatagramDuplexStream")}} interface returns a {{domxref("WritableStream")}} instance that can be used to unreliably write outgoing datagrams to the stream.
 
 "Unreliably" means that transmission of data is not guaranteed, nor is arrival in a specific order. This is fine in some situations and provides very fast delivery. For example, you might want to transmit regular game state updates where each message supersedes the last one that arrives, and order is not important.
-
-{{AvailableInWorkers}}
 
 ## Value
 

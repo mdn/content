@@ -41,5 +41,3 @@ Server on a remote device.
 ## Browser compatibility
 
 {{Compat}}
-
-{{APIRef("Web Bluetooth")}}

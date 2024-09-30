@@ -8,13 +8,11 @@ status:
 browser-compat: api.WebTransport.congestionControl
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`congestionControl`** read-only property of the {{domxref("WebTransport")}} interface indicates the application's preference for either high throughput or low-latency when sending data.
 
 The value is set in the [`WebTransport()` constructor options](/en-US/docs/Web/API/WebTransport/WebTransport#congestioncontrol).
-
-{{AvailableInWorkers}}
 
 ## Value
 

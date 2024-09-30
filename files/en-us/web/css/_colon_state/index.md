@@ -2,12 +2,10 @@
 title: ":state()"
 slug: Web/CSS/:state
 page-type: css-pseudo-class
-status:
-  - experimental
 browser-compat: css.selectors.state
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`:state()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches [custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements) that have the specified custom state.
 

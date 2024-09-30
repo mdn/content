@@ -2,7 +2,6 @@
 title: API method subpage template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_method_subpage_template
 page-type: mdn-writing-guide
-browser-compat: path.to.feature.NameOfTheMethod
 ---
 
 {{MDNSidebar}}
@@ -31,8 +30,8 @@ browser-compat: path.to.feature.NameOfTheMethod
 >
 > - **title**
 >   - : Title heading displayed at the top of the page.
->     Format as _NameOfTheParentInterface_**.**_NameOfTheMethod_**()**.
->     For example, the [count()](/en-US/docs/Web/API/IDBIndex/count) method of the [IDBIndex](/en-US/docs/Web/API/IDBIndex) interface has a _title_ of `IDBIndex.count()`.
+>     Format as `"NameOfTheParentInterface: NameOfTheMethod() method"`.
+>     For example, the [count()](/en-US/docs/Web/API/IDBIndex/count) method of the [IDBIndex](/en-US/docs/Web/API/IDBIndex) interface has a _title_ of `IDBIndex: count() method`.
 > - **slug**
 >
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`.
@@ -74,7 +73,7 @@ browser-compat: path.to.feature.NameOfTheMethod
 > - `\{{APIRef("GroupDataName")}}` — this generates the left-hand reference sidebar showing quick reference links related to the current page.
 >   For example, every page in the [WebVR API](/en-US/docs/Web/API/WebVR_API) has the same sidebar, which points to the other pages in the API.
 >   To generate the correct sidebar for your API, you need to add a `GroupData` entry to our GitHub repo, and include the entry's name inside the macro call in place of _GroupDataName_.
->   See our [API reference sidebars](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars) guide for information on how to do this. Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
+>   See our [API reference sidebars](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars) guide for information on how to do this. Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
 >
 > Do not provide status header macros manually. Refer to the section ["How to add or update feature statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses) to add these statuses to the page.
 >
@@ -98,7 +97,8 @@ Fill in a syntax box, according to the guidance in our [syntax sections](/en-US/
 - `parameter2`
   - : etc.
 
-> **Note:** This section is mandatory. If there aren't any parameters, put `None.` instead of the definition list.
+> [!NOTE]
+> This section is mandatory. If there aren't any parameters, put `None.` instead of the definition list.
 
 ### Return value
 
@@ -108,7 +108,7 @@ If the method doesn't return anything, just put "None ({{jsxref('undefined')}}).
 
 ### Exceptions
 
-Include a list of all the exceptions that the constructor can raise. Include one term and definition for each exception.
+Include a list of all the exceptions that the method can raise. Include one term and definition for each exception.
 
 - `Exception1`
   - : Include descriptions of how the exception is raised.
@@ -139,7 +139,8 @@ Each example must have an H3 heading naming the example. The heading should be d
 
 See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples) for more information.
 
-> **Note:** Sometimes you will want to link to examples given on another page.
+> [!NOTE]
+> Sometimes you will want to link to examples given on another page.
 >
 > **Scenario 1:** If you have some examples on this page and some more examples on another page:
 >
@@ -164,7 +165,7 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 > ```md
 > ## Examples
 >
-> For examples of this API, see [the page on fetch()](https://example.org).
+> For examples of this API, see [the page on fetch()](https://example.org/).
 > ```
 
 ## Specifications

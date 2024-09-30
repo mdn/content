@@ -16,7 +16,7 @@ When working with files, you are looking at either grabbing the file from an {{d
 
 Media elements have streaming support out of the box. The audio will start playing when the browser determines it can load the rest of the file before playing finishes. You can see an example of how to use this with the Web Audio API in the [Using the Web Audio API tutorial](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API).
 
-You will, however, have more control if you use a buffer node. You have to request the file and wait for it to load ([this section of our advanced article](/en-US/docs/Web/API/Web_Audio_API/Advanced_techniques#Dial_up_%E2%80%94_loading_a_sound_sample) shows a good way to do it), but then you have access to the data directly, which means more precision, and more precise manipulation.
+You will, however, have more control if you use a buffer node. You have to request the file and wait for it to load ([this section of our advanced article](/en-US/docs/Web/API/Web_Audio_API/Advanced_techniques#dial-up_—_loading_a_sound_sample) shows a good way to do it), but then you have access to the data directly, which means more precision, and more precise manipulation.
 
 If you're looking to work with audio from the user's camera or microphone you can access it via the [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API) and the {{domxref("MediaStreamAudioSourceNode")}} interface. This is good for WebRTC and situations where you might want to record or possibly analyze audio.
 
@@ -32,7 +32,7 @@ There is also the option of libraries, of which there are a few depending on you
 
 If you are looking for sound creation or a more instrument-based option, [tone.js](https://tonejs.github.io/) is a great library. It provides advanced scheduling capabilities, synths, and effects, and intuitive musical abstractions built on top of the Web Audio API.
 
-[R-audio](https://github.com/bbc/r-audio), from the [BBC's Research & Development department](https://medium.com/bbc-design-engineering/r-audio-declarative-reactive-and-flexible-web-audio-graphs-in-react-102c44a1c69c), is a library of React components aiming to provide a "more intuitive, declarative interface to Web Audio". If you're used to writing JSX it might be worth looking at.
+[R-audio](https://github.com/bbc/r-audio), from the [BBC's Research & Development department](https://medium.com/bbc-product-technology/r-audio-declarative-reactive-and-flexible-web-audio-graphs-in-react-102c44a1c69c), is a library of React components aiming to provide a "more intuitive, declarative interface to Web Audio". If you're used to writing JSX it might be worth looking at.
 
 ## Autoplay policy
 
@@ -84,7 +84,7 @@ If your website or application contains sound, you should allow the user control
 
 If you have buttons that switch audio on and off, using the ARIA [`role="switch"`](/en-US/docs/Web/Accessibility/ARIA/Roles/switch_role) attribute on them is a good option for signalling to assistive technology what the button's exact purpose is, and therefore making the app more accessible. There's a [demo of how to use it here](https://codepen.io/Wilto/pen/ZoGoQm?editors=1100).
 
-As you work with a lot of changing values within the Web Audio API and will want to provide users with control over these, the [`range input`](/en-US/docs/Web/HTML/Element/input/range) is often a good choice of control to use. It's a good option as you can set minimum and maximum values, as well as increments with the [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute.
+As you work with a lot of changing values within the Web Audio API and will want to provide users with control over these, the [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range) is often a good choice of control to use. It's a good option as you can set minimum and maximum values, as well as increments with the [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute.
 
 ## Setting AudioParam values
 

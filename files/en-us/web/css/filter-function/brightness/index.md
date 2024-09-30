@@ -174,15 +174,22 @@ In the images below, the first one has a `brightness()` filter function applied,
   </thead>
   <tbody>
     <tr>
-      <td><img class="filter" src="flag.jpg" alt="darkened pride flag" /></td>
       <td>
         <img
-          style="filter: url(#darken25)"
-          src="flag.jpg"
+          class="filter"
+          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
           alt="darkened pride flag" />
       </td>
       <td>
-        <img src="flag.jpg" alt="Pride flag" />
+        <img
+          style="filter: url(#darken25)"
+          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+          alt="darkened pride flag" />
+      </td>
+      <td>
+        <img
+          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+          alt="Pride flag" />
       </td>
     </tr>
   </tbody>

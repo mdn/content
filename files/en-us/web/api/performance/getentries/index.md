@@ -12,7 +12,8 @@ The **`getEntries()`** method returns an array of all {{domxref("PerformanceEntr
 
 If you are only interested in performance entries of certain types or that have certain names, see {{domxref("Performance.getEntriesByType", "getEntriesByType()")}} and {{domxref("Performance.getEntriesByName", "getEntriesByName()")}}.
 
-> **Note:** This method does not notify you about new performance entries; you will only get entries that are present in the performance timeline at the time you call this method.
+> [!NOTE]
+> This method does not notify you about new performance entries; you will only get entries that are present in the performance timeline at the time you call this method.
 > To receive notifications about entries as they become available, use a {{domxref("PerformanceObserver")}}.
 
 The following entry types are not supported by this method at all and won't be returned even if entries for these types might exist:

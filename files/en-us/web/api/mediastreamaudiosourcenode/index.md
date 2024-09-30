@@ -32,7 +32,7 @@ The number of channels output by the node matches the number of tracks found in 
     <tr>
       <th scope="row">Channel count</th>
       <td>
-        2 (but note that {{domxref("AudioNode.channelCount")}} is only used for up-mixing and down-mixing {{domxref("AudioNode")}} inputs, and {{domxref("MediaStreamAudioSourceNode")}} doesn't have any input)
+        2 (but note that {{domxref("AudioNode.channelCount")}} is only used for up-mixing and down-mixing {{domxref("AudioNode")}} inputs, and <code>MediaStreamAudioSourceNode</code> doesn't have any input)
       </td>
     </tr>
   </tbody>
@@ -40,7 +40,7 @@ The number of channels output by the node matches the number of tracks found in 
 
 ## Constructor
 
-- {{domxref("MediaStreamAudioSourceNode.MediaStreamAudioSourceNode", "new MediaStreamAudioSourceNode()")}}
+- {{domxref("MediaStreamAudioSourceNode.MediaStreamAudioSourceNode", "MediaStreamAudioSourceNode()")}}
   - : Creates a new `MediaStreamAudioSourceNode` object instance with the specified options.
 
 ## Instance properties
@@ -53,11 +53,6 @@ _In addition to the following properties, `MediaStreamAudioSourceNode` inherits 
 ## Instance methods
 
 _Inherits methods from its parent, {{domxref("AudioNode")}}_.
-
-## Exceptions
-
-- `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the stream specified by the `mediaStream` parameter does not contain any audio tracks.
 
 ## Usage notes
 

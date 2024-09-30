@@ -14,8 +14,7 @@ The major point of HTTP/3 is that it uses a new {{glossary("UDP")}} protocol nam
 
 - [HTTP on MDN](/en-US/docs/Web/HTTP)
 - [HTTP/3](https://en.wikipedia.org/wiki/HTTP/3) on Wikipedia
-- [Glossary](/en-US/docs/Glossary)
-
+- Related glossary terms:
   - {{glossary("HTTP")}}
   - {{glossary("HTTP 2")}}
   - {{glossary("Latency")}}

@@ -42,7 +42,8 @@ mode on the client, and when communicated to origins allows them to deliver alte
 content to reduce the data downloaded such as smaller image and video resources,
 different markup and styling, disabled polling and automatic updates, and so on.
 
-> **Note:** Disabling HTTP/2 Server Push ({{RFC("7540", "Server Push", "8.2")}}) might be desirable too for reducing data downloads.
+> [!NOTE]
+> Disabling HTTP/2 Server Push ({{RFC("7540", "Server Push", "8.2")}}) might be desirable too for reducing data downloads.
 
 ## Syntax
 

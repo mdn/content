@@ -28,10 +28,8 @@ status:
 browser-compat: api.AudioDecoder
 ---
 
-\{{APIRef("WebCodecs API")}}\{{SeeCompatTable}}\{{SecureContext_Header}}
+\{{APIRef("WebCodecs API")}} \{{SeeCompatTable}} \{{SecureContext_Header}} \{{AvailableInWorkers}}
 ```
-
-While most banners are inserted immediately below the page metadata, the `\{{AvailableInWorkers}}` macro is added at the bottom of the first section of text, before the first heading.
 
 ## Banners that must be added manually
 
@@ -50,9 +48,11 @@ The following macros are automatically added to the content in order to match th
 
 [Update the feature status in the browser-compat-data repository](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses) in order to change these values.
 
-> **Note:** While you can manually/update these macros in content, values that don't match the browser compatibility data will be replaced/removed.
+> [!NOTE]
+> While you can manually/update these macros in content, values that don't match the browser compatibility data will be replaced/removed.
 
-> **Note:** Pages that have the `\{{SeeCompatTable}}`, `\{{Deprecated_Header}}`, or `\{{Non-standard_Header}}` banners will also have the corresponding `experimental`, `deprecated` and `non-standard` status values in the page metadata.
+> [!NOTE]
+> Pages that have the `\{{SeeCompatTable}}`, `\{{Deprecated_Header}}`, or `\{{Non-standard_Header}}` banners will also have the corresponding `experimental`, `deprecated` and `non-standard` status values in the page metadata.
 > The metadata is automatically updated at the same time as the headers.
 > The banner macros do not depend on this status metadata (but may one day be generated from it).
 
@@ -64,8 +64,9 @@ It is important to clarify the current standardization status of such features t
 
 - Adding this banner to the landing page for that feature (not for every subpage for the feature):
 
-  ```text
-  > **Warning:** This feature is currently opposed by <number> browser vendor(s). See the [Standards positions](#standards_positions) section below for details of opposition.
+  ```md
+  > [!WARNING]
+  > This feature is currently opposed by <number> browser vendor(s). See the [Standards positions](#standards_positions) section below for details of opposition.
   ```
 
   - Replace `<number>` with the number of browser vendors opposing the feature.
@@ -73,4 +74,5 @@ It is important to clarify the current standardization status of such features t
 
 - Adding a "Standards positions" section to the same page as the above banner, as a sub-section of the standard "Specifications" section.
 
-> **Note:** See [Related Website Sets](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets) for an example of the "Standards positions" section and what it should contain, as well as the landing page banner.
+> [!NOTE]
+> See [Related Website Sets](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets) for an example of the "Standards positions" section and what it should contain, as well as the landing page banner.

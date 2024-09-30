@@ -1,10 +1,10 @@
 ---
 title: "Blocked: Storage access requests from trackers"
-slug: Web/Privacy/Storage_access_policy/Errors/CookieBlockedTracker
+slug: Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedTracker
 page-type: guide
 ---
 
-{{QuicklinksWithSubPages("Web/Privacy/Storage_access_policy/Errors")}}
+{{QuicklinksWithSubPages("Web/Privacy/Storage_Access_Policy/Errors")}}
 
 ## Message
 
@@ -29,5 +29,5 @@ If the blocked resource doesn't need authentication, you can fix the warning mes
 
 ## See also
 
-- [Enhanced Tracking Protection in Firefox for desktop](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop) on [support.mozilla.org](https://support.mozilla.org)
+- [Enhanced Tracking Protection in Firefox for desktop](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop) on [support.mozilla.org](https://support.mozilla.org/)
 - [The `crossorigin` attribute](/en-US/docs/Web/HTML/Attributes/crossorigin)

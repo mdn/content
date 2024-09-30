@@ -10,7 +10,8 @@ CSS rules contain [declarations](/en-US/docs/Web/CSS/Syntax#css_declarations), w
 Each property used in CSS has a **value type** that describes what kind of values it is allowed to have.
 In this lesson, we will take a look at some of the most frequently used value types, what they are, and how they work.
 
-> **Note:** Each [CSS property page](/en-US/docs/Web/CSS/Reference#index) has a syntax section that lists the value types you can use with that property.
+> [!NOTE]
+> Each [CSS property page](/en-US/docs/Web/CSS/Reference#index) has a syntax section that lists the value types you can use with that property.
 
 <table>
   <tbody>
@@ -45,9 +46,11 @@ In this lesson, we will take a look at some of the most frequently used value ty
 
 In CSS specifications and on the property pages here on MDN you will be able to spot value types as they will be surrounded by angle brackets, such as [`<color>`](/en-US/docs/Web/CSS/color_value) or {{cssxref("length")}}. When you see the value type `<color>` as valid for a particular property, that means you can use any valid color as a value for that property, as listed on the [`<color>`](/en-US/docs/Web/CSS/color_value) reference page.
 
-> **Note:** You'll see CSS value types referred to as _data types_. The terms are basically interchangeable — when you see something in CSS referred to as a data type, it is really just a fancy way of saying value type. The term _value_ refers to any particular expression supported by a value type that you choose to use.
+> [!NOTE]
+> You'll see CSS value types referred to as _data types_. The terms are basically interchangeable — when you see something in CSS referred to as a data type, it is really just a fancy way of saying value type. The term _value_ refers to any particular expression supported by a value type that you choose to use.
 
-> **Note:** CSS value types tend to be enclosed in angle brackets (`<`, `>`) to differentiate them from CSS properties.
+> [!NOTE]
+> CSS value types tend to be enclosed in angle brackets (`<`, `>`) to differentiate them from CSS properties.
 > For example there is a {{cssxref("color")}} property and a [`<color>`](/en-US/docs/Web/CSS/color_value) data type.
 > This is not to be confused with HTML elements, as they also use angle brackets, but this is something to keep in mind that the context should make clear.
 
@@ -148,87 +151,14 @@ Most of these units are more useful when used for print, rather than screen outp
 
 #### Relative length units
 
-Relative length units are relative to something else, perhaps the size of the parent element's font, or the size of the viewport. The benefit of using relative units is that with some careful planning you can make it so the size of text or other elements scales relative to everything else on the page. Some of the most useful units for web development are listed in the table below.
+Relative length units are relative to something else. For example:
 
-<table class="standard-table no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Unit</th>
-      <th scope="col">Relative to</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>em</code></td>
-      <td>
-        Font size of the parent, in the case of typographical properties like
-        <code><a href="/en-US/docs/Web/CSS/font-size">font-size</a></code
-        >, and font size of the element itself, in the case of other properties
-        like <code><a href="/en-US/docs/Web/CSS/width">width</a></code
-        >.
-      </td>
-    </tr>
-    <tr>
-      <td><code>ex</code></td>
-      <td>x-height of the element's font.</td>
-    </tr>
-    <tr>
-      <td><code>ch</code></td>
-      <td>
-        The advance measure (width) of the glyph "0" of the element's font.
-      </td>
-    </tr>
-    <tr>
-      <td><code>rem</code></td>
-      <td>Font size of the root element.</td>
-    </tr>
-    <tr>
-      <td><code>lh</code></td>
-      <td>Line height of the element.</td>
-    </tr>
-    <tr>
-      <td><code>rlh</code></td>
-      <td>Line height of the root element. When used on the <code><a href="/en-US/docs/Web/CSS/font-size">font-size</a></code> or <code><a href="/en-US/docs/Web/CSS/line-height">line-height</a></code
-        > properties of the root element, it refers to the properties' initial value.</td>
-    </tr>
-    <tr>
-      <td><code>vw</code></td>
-      <td>1% of the viewport's width.</td>
-    </tr>
-    <tr>
-      <td><code>vh</code></td>
-      <td>1% of the viewport's height.</td>
-    </tr>
-    <tr>
-      <td><code>vmin</code></td>
-      <td>1% of the viewport's smaller dimension.</td>
-    </tr>
-    <tr>
-      <td><code>vmax</code></td>
-      <td>1% of the viewport's larger dimension.</td>
-    </tr>
-    <tr>
-      <td><code>vb</code></td>
-      <td>1% of the size of the initial containing block in the direction of the root element's <a href="/en-US/docs/Web/CSS/CSS_logical_properties_and_values#block_vs._inline">block axis</a>.</td>
-    </tr>
-    <tr>
-      <td><code>vi</code></td>
-      <td>1% of the size of the initial containing block in the direction of the root element's <a href="/en-US/docs/Web/CSS/CSS_logical_properties_and_values#block_vs._inline">inline axis</a>.</td>
-    </tr>
-    <tr>
-      <td><code>svw, svh</code></td>
-      <td>1% of the <a href="/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport">small viewport</a>'s width and height, respectively.</td>
-    </tr>
-    <tr>
-      <td><code>lvw, lvh</code></td>
-      <td>1% of the <a href="/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport">large viewport</a>'s width and height, respectively.</td>
-    </tr>
-    <tr>
-      <td><code>dvw, dvh</code></td>
-      <td>1% of the <a href="/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport">dynamic viewport</a>'s width and height, respectively.</td>
-    </tr>
-  </tbody>
-</table>
+- `em` is relative to the font size of this element, or the font size of the parent element when used for {{cssxref("font-size")}}. `rem` is relative to the font size of the root element.
+- `vh` and `vw` are relative to the viewport's height and width, respectively.
+
+The benefit of using relative units is that with some careful planning you can make it so the size of text or other elements scales relative to everything else on the page. For a complete list of the relative units available, see the reference page for the {{cssxref("length")}} type.
+
+In this section we'll explore some of the most common relative units.
 
 #### Exploring an example
 
@@ -236,7 +166,7 @@ In the example below, you can see how some relative and absolute length units be
 
 The second box has a width set in `vw` (viewport width) units. This value is relative to the viewport width, and so 10vw is 10 percent of the width of the viewport. If you change the width of your browser window, the size of the box should change. However this example is embedded into the page using an [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), so this won't work. To see this in action you'll have to [try the example after opening it in its own browser tab](https://mdn.github.io/css-examples/learn/values-units/length.html).
 
-The third box uses `em` units. These are relative to the font size. I've set a font size of `1em` on the containing {{htmlelement("div")}}, which has a class of `.wrapper`. Change this value to `1.5em` and you will see that the font size of all the elements increases, but only the last item will get wider, as its width is relative to that font size.
+The third box uses `em` units. These are relative to the element's font size. I've set a font size of `1em` on the containing {{htmlelement("div")}}, which has a class of `.wrapper`. Change this value to `1.5em` and you will see that the font size of all the elements increases, but only the last item will get wider, as its width is relative to that font size.
 
 After following the instructions above, try playing with the values in other ways, to see what you get.
 
@@ -250,9 +180,9 @@ The HTML illustrated below is a set of nested lists — we have two lists in tot
 
 To start with, we set 16px as the font size on the `<html>` element.
 
-**To recap, the em unit means "my parent element's font-size"** in the case of typography. The {{htmlelement("li")}} elements inside the {{htmlelement("ul")}} with a `class` of `ems` take their sizing from their parent. So each successive level of nesting gets progressively larger, as each has its font size set to `1.3em` — 1.3 times its parent's font size.
+**To recap, the `em` unit means "my parent element's font-size"** if used for `font-size` (and "my own font-size" when used for anything else). The {{htmlelement("li")}} elements inside the {{htmlelement("ul")}} with a `class` of `ems` take their sizing from their parent. So each successive level of nesting gets progressively larger, as each has its font size set to `1.3em` — 1.3 times its parent element's font size.
 
-**To recap, the rem unit means "The root element's font-size"** (rem stands for "root em"). The {{htmlelement("li")}} elements inside the {{htmlelement("ul")}} with a `class` of `rems` take their sizing from the root element (`<html>`). This means that each successive level of nesting does not keep getting larger.
+**To recap, the `rem` unit means "The root element's font-size"** (rem stands for "root em"). The {{htmlelement("li")}} elements inside the {{htmlelement("ul")}} with a `class` of `rems` take their sizing from the root element (`<html>`). This means that each successive level of nesting does not keep getting larger.
 
 However, if you change the `<html>` element's `font-size` in the CSS you will see that everything else changes relative to it — both `rem`- and `em`-sized text.
 
@@ -282,7 +212,7 @@ body {
     border-radius: 4px;
     background-color: tomato;
     color: white;
-    content: "You browser doesn’t support lh unit just yet";
+    content: "You browser doesn't support lh unit just yet";
   }
 }
 ```
@@ -340,7 +270,8 @@ Some value types accept numbers, without any unit added to them. An example of a
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/opacity.html", '100%', 600)}}
 
-> **Note:** When you use a number in CSS as a value it should not be surrounded in quotes.
+> [!NOTE]
+> When you use a number in CSS as a value it should not be surrounded in quotes.
 
 ## Color
 
@@ -386,15 +317,14 @@ Let's rewrite our last example to use RGB colors:
 
 You can pass a fourth parameter to `rgb()`, which represents the alpha channel of the color, which controls opacity. If you set this value to `0` it will make the color fully transparent, whereas `1` will make it fully opaque. Values in between give you different levels of transparency.
 
-> **Note:** Setting an alpha channel on a color has one key difference to using the {{cssxref("opacity")}} property we looked at earlier. When you use opacity you make the element and everything inside it opaque, whereas using RGB with an alpha parameter colors only makes the color you are specifying opaque.
+> [!NOTE]
+> Setting an alpha channel on a color has one key difference to using the {{cssxref("opacity")}} property we looked at earlier. When you use opacity you make the element and everything inside it opaque, whereas using RGB with an alpha parameter colors only makes the color you are specifying opaque.
 
 In the example below, we have added a background image to the containing block of our colored boxes. We have then set the boxes to have different opacity values — notice how the background shows through more when the alpha channel value is smaller.
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/color-rgba.html", '100%', 900)}}
 
 **In this example, try changing the alpha channel values to see how it affects the color output.**
-
-> **Note:** In older versions of CSS, the `rgb()` syntax didn't support an alpha parameter - you needed to use a different function called `rgba()` for that. These days you can pass an alpha parameter to `rgb()`, but for backwards compatibility with old websites, the `rgba()` syntax is still supported, and has exactly the same behavior as `rgb()`.
 
 ### SRGB values
 
@@ -406,7 +336,7 @@ If you want to go beyond keywords, hexadecimal, and `rgb()` for colors, you migh
 Hue is the property that allows us to tell the difference or similarity between colors like red, orange, yellow, green, blue, etc.
 The key concept is that you can specify a hue in an [`<angle>`](/en-US/docs/Web/CSS/angle) because most of the color models describe hues using a {{glossary("color wheel")}}.
 
-There are several color functions that include a [`<hue>`](/en-US/docs/Web/CSS/hue) component, including `hsl()`,`hwb()`, and [`lch()`](/en-US/docs/Web/CSS/color_value/lch). Other color functions, like [`lab()`](/en-US/docs/Web/CSS/color_value/lab), define colors based on what humans can see.
+There are several color functions that include a [`<hue>`](/en-US/docs/Web/CSS/hue) component, including `hsl()`, `hwb()`, and [`lch()`](/en-US/docs/Web/CSS/color_value/lch). Other color functions, like [`lab()`](/en-US/docs/Web/CSS/color_value/lab), define colors based on what humans can see.
 
 If you want to find out more about these functions and color spaces, see the [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color) guide, the [`<color>`](/en-US/docs/Web/CSS/color_value) reference that lists all the different ways you can use colors in CSS, and the [CSS color module](/en-US/docs/Web/CSS/CSS_colors) that provides an overview of all the color types in CSS and the properties that use color values.
 
@@ -438,8 +368,6 @@ Just like with `rgb()` you can pass an alpha parameter to `hsl()` to specify opa
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/color-hsla.html", '100%', 900)}}
 
-> **Note:** In older versions of CSS, the `hsl()` syntax didn't support an alpha parameter - you needed to use a different function called `hsla()` for that. These days you can pass an alpha parameter to `hsl()`, but for backwards compatibility with old websites, the `hsla()` syntax is still supported, and has exactly the same behavior as `hsl()`.
-
 ## Images
 
 The [`<image>`](/en-US/docs/Web/CSS/image) value type is used wherever an image is a valid value. This can be an actual image file pointed to via a `url()` function, or a gradient.
@@ -448,7 +376,8 @@ In the example below, we have demonstrated an image and a gradient in use as a v
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/image.html", '100%', 900)}}
 
-> **Note:** There are some other possible values for `<image>`, however these are newer and currently have poor browser support. Check out the page on MDN for the [`<image>`](/en-US/docs/Web/CSS/image) data type if you want to read about them.
+> [!NOTE]
+> There are some other possible values for `<image>`, however these are newer and currently have poor browser support. Check out the page on MDN for the [`<image>`](/en-US/docs/Web/CSS/image) data type if you want to read about them.
 
 ## Position
 
@@ -477,7 +406,7 @@ Functions are useful because you can write code once, then reuse it many times i
 Most programming languages not only support functions but also come with convenient built-in functions for common tasks so you don't have to write them yourself from scratch.
 
 CSS also has [functions](/en-US/docs/Web/CSS/CSS_Functions), which work in a similar way to functions in other languages.
-In fact, we've already seen CSS functions in the [Color](#color) section above with [`rgb()`](/en-US/docs/Web/CSS/color_value#rgb_function) and [`hsl()`](/en-US/docs/Web/CSS/color_value#hsl_function) functions.
+In fact, we've already seen CSS functions in the [Color](#color) section above with [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) and [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) functions.
 
 Aside from applying colors, you can use functions in CSS to do a lot of other things.
 For example [Transform functions](/en-US/docs/Web/CSS/CSS_Functions#transform_functions) are a common way to move, rotate, and scale elements on a page.

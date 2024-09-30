@@ -7,7 +7,7 @@ status:
 browser-compat: api.GPURenderPipeline
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPURenderPipeline`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents a pipeline that controls the vertex and fragment shader stages and can be used in a {{domxref("GPURenderPassEncoder")}} or {{domxref("GPURenderBundleEncoder")}}.
 
@@ -27,7 +27,8 @@ A `GPURenderPipeline` object instance can be created using the {{domxref("GPUDev
 
 ## Examples
 
-> **Note:** The [WebGPU samples](https://webgpu.github.io/webgpu-samples/) feature many more examples.
+> [!NOTE]
+> The [WebGPU samples](https://webgpu.github.io/webgpu-samples/) feature many more examples.
 
 ### Basic example
 

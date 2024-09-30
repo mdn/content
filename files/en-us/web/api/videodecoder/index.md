@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.VideoDecoder
 ---
 
-{{securecontext_header}}{{APIRef("WebCodecs API")}}
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`VideoDecoder`** interface of the {{domxref('WebCodecs API','','','true')}} decodes chunks of video.
 

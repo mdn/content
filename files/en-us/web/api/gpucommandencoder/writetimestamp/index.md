@@ -4,16 +4,18 @@ short-title: writeTimestamp()
 slug: Web/API/GPUCommandEncoder/writeTimestamp
 page-type: web-api-instance-method
 status:
-  - experimental
+  - deprecated
+  - non-standard
 browser-compat: api.GPUCommandEncoder.writeTimestamp
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{deprecated_header}}{{non-standard_header}}{{AvailableInWorkers}}
 
 The **`writeTimestamp()`** method of the
 {{domxref("GPUCommandEncoder")}} interface encodes a command that writes a timestamp into a {{domxref("GPUQuerySet")}} once the previous commands recorded into the same queued {{domxref("GPUCommandBuffer")}} have been executed by the GPU.
 
-> **Note:** To use timestamp queries, the `timestamp-query` {{domxref("GPUSupportedFeatures", "feature", "", "nocode")}} must be enabled in the {{domxref("GPUDevice")}}.
+> [!NOTE]
+> To use timestamp queries, the `timestamp-query` {{domxref("GPUSupportedFeatures", "feature", "", "nocode")}} must be enabled in the {{domxref("GPUDevice")}}.
 
 ## Syntax
 

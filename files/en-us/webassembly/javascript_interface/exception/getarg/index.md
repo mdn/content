@@ -13,7 +13,8 @@ The method passes a [`WebAssembly.Tag`](/en-US/docs/WebAssembly/JavaScript_inter
 This ensures that the exception can only be read if the calling code has access to the tag.
 Tags that are neither imported into or exported from the WebAssembly code are internal, and their associated [`WebAssembly.Exception`](/en-US/docs/WebAssembly/JavaScript_interface/Exception) cannot be queried using this method!
 
-> **Note:** It is not enough that the tag has an identical sequence of data types — it must have the same _identity_ (be the same tag) as was used to create the exception.
+> [!NOTE]
+> It is not enough that the tag has an identical sequence of data types — it must have the same _identity_ (be the same tag) as was used to create the exception.
 
 ## Syntax
 

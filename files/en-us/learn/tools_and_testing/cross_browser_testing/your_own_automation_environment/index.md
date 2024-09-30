@@ -40,7 +40,8 @@ Different browsers require different drivers to allow WebDriver to communicate w
 
 We will cover writing and running Selenium tests using Node.js, as it is quick and easy to get started, and a more familiar environment for front end devs.
 
-> **Note:** If you want to find out how to use WebDriver with other server-side environments, also check out [Platforms Supported by Selenium](https://www.selenium.dev/downloads/) for some useful links.
+> [!NOTE]
+> If you want to find out how to use WebDriver with other server-side environments, also check out [Platforms Supported by Selenium](https://www.selenium.dev/downloads/) for some useful links.
 
 ### Setting up Selenium in Node
 
@@ -51,15 +52,17 @@ We will cover writing and running Selenium tests using Node.js, as it is quick a
    npm install selenium-webdriver
    ```
 
-> **Note:** It is still a good idea to follow these steps even if you previously installed selenium-webdriver and downloaded the browser drivers. You should make sure that everything is up-to-date.
+> [!NOTE]
+> It is still a good idea to follow these steps even if you previously installed selenium-webdriver and downloaded the browser drivers. You should make sure that everything is up-to-date.
 
 Next, you need to download the relevant drivers to allow WebDriver to control the browsers you want to test. You can find details of where to get them from on the [selenium-webdriver](https://www.npmjs.com/package/selenium-webdriver) page (see the table in the first section.) Obviously, some of the browsers are OS-specific, but we're going to stick with Firefox and Chrome, as they are available across all the main OSes.
 
-1. Download the latest [GeckoDriver](https://github.com/mozilla/geckodriver/releases/) (for Firefox) and [ChromeDriver](https://chromedriver.chromium.org/downloads) drivers.
+1. Download the latest [GeckoDriver](https://github.com/mozilla/geckodriver/releases/) (for Firefox) and [ChromeDriver](https://developer.chrome.com/docs/chromedriver/downloads) drivers.
 2. Unpack them into somewhere fairly easy to navigate to, like the root of your home user directory.
 3. Add the `chromedriver` and `geckodriver` driver's location to your system `PATH` variable. This should be an absolute path from the root of your hard disk, to the directory containing the drivers. For example, if we were using a macOS machine, our user name was bob, and we put our drivers in the root of our home folder, the path would be `/Users/bob`.
 
-> **Note:** Just to reiterate, the path you add to `PATH` needs to be the path to the directory containing the drivers, not the paths to the drivers themselves! This is a common mistake.
+> [!NOTE]
+> Just to reiterate, the path you add to `PATH` needs to be the path to the directory containing the drivers, not the paths to the drivers themselves! This is a common mistake.
 
 To set your `PATH` variable on a macOS system and on most Linux systems:
 
@@ -110,7 +113,8 @@ OK, let's try a quick test to make sure everything is working.
    })();
    ```
 
-   > **Note:** This function is an {{glossary("IIFE")}} (Immediately Invoked Function Expression).
+   > [!NOTE]
+   > This function is an {{glossary("IIFE")}} (Immediately Invoked Function Expression).
 
 3. In terminal, make sure you are inside your project folder, then enter the following command:
 
@@ -125,7 +129,7 @@ We then wait four seconds, after which WebDriver will then close down the Firefo
 
 There is also nothing to stop you running the test on multiple browsers simultaneously. Let's try this!
 
-1. Create another new file inside your project directory called `google_test_multiple.js`. You can feel free to change the references to some of the other browsers we added, remove them, etc., depending on what browsers you have available to test on your operating system. You'll need to make sure you have the right browser drivers set up on your system. In terms of what string to use inside the `.forBrowser()` method for other browsers, see the [Browser enum](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/index_exports_Browser.html) reference page.
+1. Create another new file inside your project directory called `google_test_multiple.js`. You can feel free to change the references to some of the other browsers we added, remove them, etc., depending on what browsers you have available to test on your operating system. You'll need to make sure you have the right browser drivers set up on your system. In terms of what string to use inside the `.forBrowser()` method for other browsers, see the [Browser enum](https://www.selenium.dev/selenium/docs/api/javascript/global.html#Browser) reference page.
 2. Give it the following contents, then save it:
 
    ```js
@@ -171,7 +175,7 @@ Fun huh? Let's move on, look at the basics of WebDriver syntax, in a bit more de
 
 ## WebDriver syntax crash course
 
-Let's have a look at a few key features of the webdriver syntax. For more complete details, you should consult the [selenium-webdriver JavaScript API reference](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/) for a detailed reference and the Selenium main documentation's [Selenium WebDriver](https://www.selenium.dev/documentation/webdriver/), which contain multiple examples to learn from written in different languages.
+Let's have a look at a few key features of the webdriver syntax. For more complete details, you should consult the [selenium-webdriver JavaScript API reference](https://www.selenium.dev/selenium/docs/api/javascript/) for a detailed reference and the Selenium main documentation's [Selenium WebDriver](https://www.selenium.dev/documentation/webdriver/), which contain multiple examples to learn from written in different languages.
 
 ### Starting a new test
 
@@ -182,7 +186,7 @@ const { Builder, Browser } = require("selenium-webdriver");
 ```
 
 You use the `Builder()` constructor to create a new instance of a driver, chaining the `forBrowser()` method to specify what browser you want to test with this builder.
-The `build()` method is chained at the end to actually build the driver instance (see the [Builder class reference](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/index_exports_Builder.html) for detailed information on these features).
+The `build()` method is chained at the end to actually build the driver instance (see the [Builder class reference](https://www.selenium.dev/selenium/docs/api/javascript/Builder.html) for detailed information on these features).
 
 ```js
 let driver = new Builder().forBrowser(Browser.FIREFOX).build();
@@ -218,7 +222,8 @@ To load the page you actually want to test, you use the `get()` method of the dr
 driver.get("http://www.google.com");
 ```
 
-> **Note:** See the [WebDriver class reference](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html) for details of the features in this section and the ones below it.
+> [!NOTE]
+> See the [WebDriver class reference](https://www.selenium.dev/selenium/docs/api/javascript/WebDriver.html) for details of the features in this section and the ones below it.
 
 You can use any URL to point to your resource, including a `file://` URL to test a local document:
 
@@ -461,9 +466,10 @@ const driver = new Builder().forBrowser("firefox").build();
 })();
 ```
 
-WebDriver will now wait for 2 seconds before filling in the form field. We then test whether its value got filled in (i.e. is not empty) by using `getAttribute()` to retrieve it's `value` attribute value, and print a message to the console if it is not empty.
+WebDriver will now wait for 2 seconds before filling in the form field. We then test whether its value got filled in (i.e. is not empty) by using `getAttribute()` to retrieve its `value` attribute value, and print a message to the console if it is not empty.
 
-> **Note:** There is also a method called [`wait()`](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html#wait), which repeatedly tests a condition for a certain length of time, and then carries on executing the code. This also makes use of the [util library](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/lib/until.html), which defines common conditions to use along with `wait()`.
+> [!NOTE]
+> There is also a method called [`wait()`](https://www.selenium.dev/selenium/docs/api/javascript/WebDriver.html#wait), which repeatedly tests a condition for a certain length of time, and then carries on executing the code. This also makes use of the [util library](https://www.selenium.dev/selenium/docs/api/javascript/lib_until.js.html), which defines common conditions to use along with `wait()`.
 
 ### Shutting down drivers after use
 
@@ -590,9 +596,11 @@ Let's write an example:
    [![LambdaTest Automation Dashboard](automation-logs-1.jpg)](https://www.lambdatest.com/blog/wp-content/uploads/2019/02/Automation-logs-1.jpg)
    You can retrieve network, command, exception, and Selenium logs for every test within your test build. You will also find a video recording of your Selenium script execution.
 
-> **Note:** The _HELP_ button on LambdaTest Automation Dashboard will provide you with an ample amount of information to help you get started with LambdaTest automation. You can also follow our documentation about [running first Selenium script in Node JS](https://www.lambdatest.com/support/docs/quick-guide-to-run-node-js-tests-on-lambdatest-selenium-grid/).
+> [!NOTE]
+> The _HELP_ button on LambdaTest Automation Dashboard will provide you with an ample amount of information to help you get started with LambdaTest automation. You can also follow our documentation about [running first Selenium script in Node JS](https://www.lambdatest.com/support/docs/quick-guide-to-run-node-js-tests-on-lambdatest-selenium-grid/).
 
-> **Note:** If you don't want to write out the capabilities objects for your tests by hand, you can generate them using the [Selenium Desired Capabilities Generator](https://www.lambdatest.com/capabilities-generator/).
+> [!NOTE]
+> If you don't want to write out the capabilities objects for your tests by hand, you can generate them using the [Selenium Desired Capabilities Generator](https://www.lambdatest.com/capabilities-generator/).
 
 ### BrowserStack
 
@@ -658,9 +666,11 @@ Let's write an example:
 
 If you click on the link for your test, you'll get to a new screen where you will be able to see a video recording of the test, and multiple detailed logs of information pertaining to it.
 
-> **Note:** The _Resources_ menu option on the Browserstack automation dashboard contains a wealth of useful information on using it to run automated tests. See [Node JS Documentation for writing automate test scripts in Node JS](https://www.browserstack.com/docs/automate/selenium/getting-started/nodejs) for the node-specific information. Explore the docs to find out all the useful things BrowserStack can do.
+> [!NOTE]
+> The _Resources_ menu option on the Browserstack automation dashboard contains a wealth of useful information on using it to run automated tests. See [Node JS Documentation for writing automate test scripts in Node JS](https://www.browserstack.com/docs/automate/selenium/getting-started/nodejs) for the node-specific information. Explore the docs to find out all the useful things BrowserStack can do.
 
-> **Note:** If you don't want to write out the capabilities objects for your tests by hand, you can generate them using the generators embedded in the docs. See [Run your first test](https://www.browserstack.com/docs/automate/selenium/getting-started/nodejs#run-your-first-test).
+> [!NOTE]
+> If you don't want to write out the capabilities objects for your tests by hand, you can generate them using the generators embedded in the docs. See [Run your first test](https://www.browserstack.com/docs/automate/selenium/getting-started/nodejs#run-your-first-test).
 
 #### Filling in BrowserStack test details programmatically
 
@@ -794,9 +804,11 @@ Let's write an example:
 5. Now if you go to your [Sauce Labs Automated Test dashboard](https://app.saucelabs.com/dashboard/tests) page, you'll see your test listed; from here you'll be able to see videos, screenshots, and other such data.
    ![Sauce Labs automated test](sauce_labs_automated_test.png)
 
-> **Note:** Sauce Labs' [Platform Configurator](https://saucelabs.com/platform/platform-configurator#/) is a useful tool for generating capability objects to feed to your driver instances, based on what browser/OS you want to test on.
+> [!NOTE]
+> Sauce Labs' [Platform Configurator](https://saucelabs.com/products/platform-configurator#/) is a useful tool for generating capability objects to feed to your driver instances, based on what browser/OS you want to test on.
 
-> **Note:** for more useful details on testing with Sauce Labs and Selenium, check out [Getting Started with Selenium for Automated Website Testing](https://docs.saucelabs.com/web-apps/automated-testing/selenium/), and [Instant Selenium Node.js Tests](https://docs.saucelabs.com/web-apps/automated-testing/selenium/sample-scripts/#nodejs).
+> [!NOTE]
+> For more useful details on testing with Sauce Labs and Selenium, check out [Getting Started with Selenium for Automated Website Testing](https://docs.saucelabs.com/web-apps/automated-testing/selenium/), and [Instant Selenium Node.js Tests](https://docs.saucelabs.com/web-apps/automated-testing/selenium/sample-scripts/#nodejs).
 
 #### Filling in Sauce Labs test details programmatically
 
@@ -913,7 +925,8 @@ To get started, see for example:
 - [Using LambdaTest with Jenkins](https://www.lambdatest.com/support/docs/jenkins-with-lambdatest/)
 - [Using Sauce Labs with Travis CI](https://docs.travis-ci.com/user/sauce-connect/)
 
-> **Note:** If you wish to perform continuous testing with **codeless automation** then you can use [Endtest](https://endtest.io) or [TestingBot](https://testingbot.com).
+> [!NOTE]
+> If you wish to perform continuous testing with **codeless automation** then you can use [Endtest](https://www.endtest.io/) or [TestingBot](https://testingbot.com/).
 
 ## Summary
 

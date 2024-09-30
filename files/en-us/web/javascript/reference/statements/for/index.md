@@ -35,6 +35,13 @@ for (initialization; condition; afterthought)
 - `statement`
   - : A statement that is executed as long as the condition evaluates to true. You can use a [block statement](/en-US/docs/Web/JavaScript/Reference/Statements/block) to execute multiple statements. To execute no statement within the loop, use an [empty statement](/en-US/docs/Web/JavaScript/Reference/Statements/Empty) (`;`).
 
+## Description
+
+Like other looping statements, you can use [control flow statements](/en-US/docs/Web/JavaScript/Reference/Statements#control_flow) inside `statement`:
+
+- {{jsxref("Statements/break", "break")}} stops `statement` execution and goes to the first statement after the loop.
+- {{jsxref("Statements/continue", "continue")}} stops `statement` execution and re-evaluates `afterthought` then `condition`.
+
 ## Examples
 
 ### Using for

@@ -46,7 +46,8 @@ HTML is simple in terms of performance — it is mostly text, which is small in 
 - Delivery of embedded content: This is usually the content embedded in {{htmlelement("iframe")}} elements. Loading content into `<iframe>`s can impact performance significantly, so it should be considered carefully.
 - Order of resource loading: To maximize the perceived and actual performance, the HTML should be loaded first, in the order in which it appears on the page. You can then use various features to influence the order of resource loading for better performance. For example, you can preload critical CSS and fonts early, but defer non-critical JavaScript until later on.
 
-> **Note:** There is an argument to be made for simplifying your HTML structure and [minifying](<https://en.wikipedia.org/wiki/Minification_(programming)>) your source code, so that rendering and downloads are faster. However, HTML file size is negligible compared to images and videos, and browser rendering is very fast these days. If your HTML source is so large and complex that it is creating rendering and download performance hits, you probably have bigger problems, and should aim to simplify it and split the content up.
+> [!NOTE]
+> There is an argument to be made for simplifying your HTML structure and [minifying](<https://en.wikipedia.org/wiki/Minification_(programming)>) your source code, so that rendering and downloads are faster. However, HTML file size is negligible compared to images and videos, and browser rendering is very fast these days. If your HTML source is so large and complex that it is creating rendering and download performance hits, you probably have bigger problems, and should aim to simplify it and split the content up.
 
 ## Responsive handling of replaced elements
 
@@ -152,7 +153,7 @@ You can also lazy load video content by using the `preload` attribute. For examp
 
 Giving `preload` a value of `none` tells the browser to not preload any of the video data before the user decides to play it, which is obviously good for performance. Instead, it will just show the image indicated by the `poster` attribute. Different browsers have different default video loading behavior, so it is good to be explicit.
 
-See [Lazy loading video](https://web.dev/articles/lazy-loading-video) on web.dev for detailed information.
+See [Fast playback with audio and video preload](https://web.dev/articles/fast-playback-with-preload) on web.dev for detailed information.
 
 ## Handling embedded content
 
@@ -169,13 +170,14 @@ The most important and key piece of advice for using `<iframe>`s is: "Don't use 
 - Following on from the previous point, you'll also need to handle any CSS styling or JavaScript manipulation separately for each different `<iframe>` (unless the embedded pages are from the same origin), which becomes much more complex. You can't target embedded content with CSS and JavaScript applied to the top-level page, or vice versa. This is a sensible security measure that is fundamental to the web. Imagine all the problems you might run into if third-party embedded content could arbitrarily run scripts against any page it was embedded in!
 - Each `<iframe>` would also need to load any shared data and media files separately — you can't share cached assets across different page embeds (again, unless the embedded pages are from the same origin). This can lead to a page using much more bandwidth than you might expect.
 
-It is advisable to put the content into a single page. If you want to pull in new content dynamically as the page changes, it is still better for performance to load it into the same page rather than putting it into an `<iframe>`. You might grab the new data using the {{domxref("fetch()")}} method, for example, and then inject it into the page using some DOM scripting. See [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data) and [Manipulating documents](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents) for more information.
+It is advisable to put the content into a single page. If you want to pull in new content dynamically as the page changes, it is still better for performance to load it into the same page rather than putting it into an `<iframe>`. You might grab the new data using the {{domxref("Window/fetch", "fetch()")}} method, for example, and then inject it into the page using some DOM scripting. See [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data) and [Manipulating documents](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents) for more information.
 
-> **Note:** If you control the content and it is relatively simple, you could consider using base-64 encoded content in the `src` attribute to populate the `<iframe>`, or even insert raw HTML into the `srcdoc` attribute (See [Iframe Performance Part 2: The Good News](https://medium.com/slices-of-bread/iframe-performance-part-2-the-good-news-26eb53cea429) for more information).
+> [!NOTE]
+> If you control the content and it is relatively simple, you could consider using base-64 encoded content in the `src` attribute to populate the `<iframe>`, or even insert raw HTML into the `srcdoc` attribute (See [Iframe Performance Part 2: The Good News](https://medium.com/slices-of-bread/iframe-performance-part-2-the-good-news-26eb53cea429) for more information).
 
 If you must use `<iframe>`s, then use them sparingly.
 
-#### Lazy loading iframes
+### Lazy loading iframes
 
 In the same way as `<img>` elements, you can also use the `loading` attribute to instruct the browser to lazy-load `<iframe>` content that is initially offscreen, thereby improving performance:
 
@@ -196,7 +198,8 @@ Ordering of resource loading is important for maximizing perceived and actual pe
 4. Slightly later on, the browser works out how each HTML element should be styled, given the CSS applied to it.
 5. The styled result is then painted to the screen.
 
-> **Note:** This is a very simplified account of what happens, but it does give you an idea.
+> [!NOTE]
+> This is a very simplified account of what happens, but it does give you an idea.
 
 Various HTML features allow you to modify how resource loading happens to improve performance. We'll explore some of these now.
 
@@ -240,7 +243,8 @@ However, this doesn't solve the problem of waiting for the script to load. Bette
 
 This causes the script to be fetched in parallel with the DOM parsing, so it is ready at the same time, and won't block rendering, thereby improving performance.
 
-> **Note:** There is another attribute, `defer`, which causes the script to be executed after the document has been parsed, but before firing `DOMContentLoaded`. This has a similar effect to `async`.
+> [!NOTE]
+> There is another attribute, `defer`, which causes the script to be executed after the document has been parsed, but before firing `DOMContentLoaded`. This has a similar effect to `async`.
 
 Another JavaScript load handling tip is to split your script up into code modules and load each part when required, instead of putting all your code into one giant script and loading it all at the beginning. This is done using [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules). Read the linked article for a detailed guide.
 
@@ -259,9 +263,11 @@ See the following articles for detailed information on using `rel="preload"`:
 - [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload)
 - [Preload critical assets to improve loading speed](https://web.dev/articles/preload-critical-assets) on web.dev (2020)
 
-> **Note:** You can use `rel="preload"` to preload CSS and JavaScript files as well.
+> [!NOTE]
+> You can use `rel="preload"` to preload CSS and JavaScript files as well.
 
-> **Note:** There are other [`rel`](/en-US/docs/Web/HTML/Attributes/rel) values that are also designed to speed up various aspects of page loading: `dns-prefetch`, `preconnect`, `modulepreload`, `prefetch`, and `prerender`. Go to the linked page and find out what they do.
+> [!NOTE]
+> There are other [`rel`](/en-US/docs/Web/HTML/Attributes/rel) values that are also designed to speed up various aspects of page loading: `dns-prefetch`, `preconnect`, `modulepreload`, `prefetch`, and `prerender`. Go to the linked page and find out what they do.
 
 {{PreviousMenuNext("Learn/Performance/javascript_performance", "Learn/Performance/CSS", "Learn/Performance")}}
 

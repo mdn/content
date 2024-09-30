@@ -6,9 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.MediaKeyStatusMap.entries
 ---
 
-{{APIRef("EncryptedMediaExtensions API")}}
+{{APIRef("Encrypted Media Extensions")}}
 
-The **`entries()`** read-only property
+The **`entries()`** method
 of the {{domxref("MediaKeyStatusMap")}} interface returns a new Iterator object,
 containing an array of \[key, value] pairs for each element in the status map, in
 insertion order.

@@ -2,14 +2,15 @@
 title: stroke-dashoffset
 slug: Web/SVG/Attribute/stroke-dashoffset
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.stroke-dashoffset
+browser-compat: svg.global_attributes.stroke-dashoffset
 ---
 
 {{SVGRef}}
 
 The **`stroke-dashoffset`** attribute is a presentation attribute defining an offset on the rendering of the associated dash array.
 
-> **Note:** As a presentation attribute `stroke-dashoffset` can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute `stroke-dashoffset` can be used as a CSS property. See {{cssxref('stroke-dashoffset')}} for more.
 
 You can use this attribute with the following SVG elements:
 

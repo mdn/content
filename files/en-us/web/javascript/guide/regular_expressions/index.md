@@ -8,7 +8,7 @@ page-type: guide
 
 Regular expressions are patterns used to match character combinations in strings.
 In JavaScript, regular expressions are also objects. These patterns are used with the {{jsxref("RegExp/exec", "exec()")}} and {{jsxref("RegExp/test", "test()")}} methods of {{jsxref("RegExp")}}, and with the {{jsxref("String/match", "match()")}}, {{jsxref("String/matchAll", "matchAll()")}}, {{jsxref("String/replace", "replace()")}}, {{jsxref("String/replaceAll", "replaceAll()")}}, {{jsxref("String/search", "search()")}}, and {{jsxref("String/split", "split()")}} methods of {{jsxref("String")}}.
-This chapter describes JavaScript regular expressions.
+This chapter describes JavaScript regular expressions. It provides a brief overview of each syntax element. For a detailed explanation of each one's semantics, read the [regular expressions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions) reference.
 
 ## Creating a regular expression
 
@@ -37,8 +37,6 @@ You construct a regular expression in one of two ways:
 A regular expression pattern is composed of simple characters, such as `/abc/`, or a combination of simple and special characters, such as `/ab*c/` or `/Chapter (\d+)\.\d*/`.
 The last example includes parentheses, which are used as a memory device.
 The match made with this part of the pattern is remembered for later use, as described in [Using groups](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences#using_groups).
-
-> **Note:** If you are already familiar with the forms of a regular expression, you may also read [the cheat sheet](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet) for a quick lookup for a specific pattern/construct.
 
 ### Using simple patterns
 
@@ -359,6 +357,8 @@ and get the same result.
 The `m` flag is used to specify that a multiline input string should be treated as multiple lines.
 If the `m` flag is used, `^` and `$` match at the start or end of any line within the input string instead of the start or end of the entire string.
 
+The `i`, `m`, and `s` flags can be enabled or disabled for specific parts of a regex using the [modifier](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Modifier) syntax.
+
 #### Using the global search flag with exec()
 
 {{jsxref("RegExp.prototype.exec()")}} method with the `g` flag returns each match and its position iteratively.
@@ -391,7 +391,8 @@ Unicode regular expressions have different execution behavior as well. [`RegExp.
 
 ## Examples
 
-> **Note:** Several examples are also available in:
+> [!NOTE]
+> Several examples are also available in:
 >
 > - The reference pages for {{jsxref("RegExp/exec", "exec()")}}, {{jsxref("RegExp/test", "test()")}}, {{jsxref("String/match", "match()")}}, {{jsxref("String/matchAll", "matchAll()")}}, {{jsxref("String/search", "search()")}}, {{jsxref("String/replace", "replace()")}}, {{jsxref("String/split", "split()")}}
 > - The guide articles: [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes), [assertions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions), [groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences), [quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)

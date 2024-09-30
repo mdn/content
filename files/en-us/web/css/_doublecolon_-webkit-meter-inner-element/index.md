@@ -19,10 +19,6 @@ browser-compat: css.selectors.-webkit-meter-inner-element
 }
 ```
 
-## Specifications
-
-Not part of any standard.
-
 ## Examples
 
 This will only work in WebKit and Blink-based browsers, such as Safari, Chrome, and Chromium-based versions of Edge.
@@ -74,6 +70,10 @@ if (is_safari) {
 ### Result
 
 {{ EmbedLiveSample('Examples') }}
+
+## Specifications
+
+Not part of any standard.
 
 ## Browser compatibility
 

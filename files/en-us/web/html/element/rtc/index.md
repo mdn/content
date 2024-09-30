@@ -9,7 +9,7 @@ browser-compat: html.elements.rtc
 
 {{HTMLSidebar}}{{deprecated_header}}
 
-The **`<rtc>`** [HTML](/en-US/docs/Web/HTML) element embraces semantic annotations of characters presented in a ruby of {{HTMLElement("rb")}} elements used inside of {{ HTMLElement("ruby") }} element. {{HTMLElement("rb")}} elements can have both pronunciation ({{HTMLElement("rt")}}) and semantic ({{HTMLElement("rtc")}}) annotations.
+The **`<rtc>`** [HTML](/en-US/docs/Web/HTML) element embraces semantic annotations of characters presented in a ruby of {{HTMLElement("rb")}} elements used inside of {{ HTMLElement("ruby") }} element. {{HTMLElement("rb")}} elements can have both pronunciation ({{HTMLElement("rt")}}) and semantic (`<rtc>`) annotations.
 
 {{EmbedInteractiveExample("pages/tabbed/rtc.html", "tabbed-standard")}}
 
@@ -68,7 +68,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
       <th scope="row">Tag omission</th>
       <td>
         The closing tag can be omitted if it is immediately followed by a
-        {{HTMLElement("rb")}}, {{HTMLElement("rtc")}} or
+        {{HTMLElement("rb")}}, <code>&lt;rtc&gt;</code> or
         {{HTMLElement("rt")}} element opening tag or by its parent
         closing tag.
       </td>

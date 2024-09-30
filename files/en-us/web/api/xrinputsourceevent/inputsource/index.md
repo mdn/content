@@ -22,8 +22,7 @@ as a hand controller, motion sensing device, or other input apparatus.
 
 ## Examples
 
-The snippet below shows a handler for the {{domxref("XRSession.select_event",
-  "select")}} event which looks specifically for events which happen on `gaze`
+The snippet below shows a handler for the {{domxref("XRSession.select_event", "select")}} event which looks specifically for events which happen on `gaze`
 input devices. The device type is identified by looking at the
 {{domxref("XRInputSource")}} in `inputSource` and its
 {{domxref("XRInputSource.targetRayMode", "targetRayMode")}} property.

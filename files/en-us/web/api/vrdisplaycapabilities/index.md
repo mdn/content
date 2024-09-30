@@ -12,7 +12,8 @@ browser-compat: api.VRDisplayCapabilities
 
 The **`VRDisplayCapabilities`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_API) describes the capabilities of a {{domxref("VRDisplay")}} — its features can be used to perform VR device capability tests, for example can it return position information.
 
-> **Note:** This interface was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
+> [!NOTE]
+> This interface was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
 This interface is accessible through the {{domxref("VRDisplay.capabilities")}} property.
 
@@ -38,15 +39,18 @@ function reportDisplays() {
       const cap = display.capabilities;
       // cap is a VRDisplayCapabilities object
       const listItem = document.createElement("li");
-      listItem.innerHTML =
-        `<strong>Display ${i + 1}</strong><br>` +
-        `VR Display ID: ${display.displayId}<br>` +
-        `VR Display Name: ${display.displayName}<br>` +
-        `Display can present content: ${cap.canPresent}<br>` +
-        `Display is separate from the computer's main display: ${cap.hasExternalDisplay}<br>` +
-        `Display can return position info: ${cap.hasPosition}<br>` +
-        `Display can return orientation info: ${cap.hasOrientation}<br>` +
-        `Display max layers: ${cap.maxLayers}`;
+      listItem.innerText = `
+VR Display ID: ${display.displayId}
+VR Display Name: ${display.displayName}
+Display can present content: ${cap.canPresent}
+Display is separate from the computer's main display: ${cap.hasExternalDisplay}
+Display can return position info: ${cap.hasPosition}
+Display can return orientation info: ${cap.hasOrientation}
+Display max layers: ${cap.maxLayers}`;
+      listItem.insertBefore(
+        document.createElement("strong"),
+        listItem.firstChild,
+      ).textContent = `Display ${i + 1}`;
       list.appendChild(listItem);
     });
   });
@@ -57,7 +61,7 @@ function reportDisplays() {
 
 This interface was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) that has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/). It is no longer on track to becoming a standard.
 
-Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/).
+Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers. Read [Meta's Porting from WebVR to WebXR](https://developers.meta.com/horizon/documentation/web/port-vr-xr/) guide for more information.
 
 ## Browser compatibility
 

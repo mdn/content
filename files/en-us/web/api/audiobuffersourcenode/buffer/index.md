@@ -8,9 +8,7 @@ browser-compat: api.AudioBufferSourceNode.buffer
 
 {{ APIRef("Web Audio API") }}
 
-The **`buffer`** property of the {{
-  domxref("AudioBufferSourceNode") }} interface provides the ability to play back audio
-using an {{domxref("AudioBuffer")}} as the source of the sound data.
+The **`buffer`** property of the {{domxref("AudioBufferSourceNode")}} interface provides the ability to play back audio using an {{domxref("AudioBuffer")}} as the source of the sound data.
 
 If the `buffer` property is set to the value `null`, the node
 generates a single channel containing silence (that is, every sample is 0).
@@ -22,7 +20,8 @@ node will play.
 
 ## Examples
 
-> **Note:** For a full working example, see [this code running live](https://mdn.github.io/webaudio-examples/audio-buffer/), or [view the source](https://github.com/mdn/webaudio-examples/blob/main/audio-buffer/index.html).
+> [!NOTE]
+> For a full working example, see [this code running live](https://mdn.github.io/webaudio-examples/audio-buffer/), or [view the source](https://github.com/mdn/webaudio-examples/blob/main/audio-buffer/index.html).
 
 ```js
 const myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);

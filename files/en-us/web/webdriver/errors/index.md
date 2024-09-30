@@ -55,7 +55,7 @@ Because both WebDriver and JavaScript execution is halted by such a dialog, we s
 }
 ```
 
-In most [clients](/en-US/docs/Web/WebDriver/Clients) the error would be represented by some sort of error _type_ or _object representation_. In Python it is represented as a [`WebDriverException`](https://www.selenium.dev/selenium/docs/api/py/common/selenium.common.exceptions.html), in Node.js as a [`WebDriverError`](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/lib/error_exports_WebDriverError.html), and in Java also as a [`WebDriverException`](https://www.selenium.dev/selenium/docs/api/java/org/openqa/selenium/WebDriverException.html).
+In most [clients](/en-US/docs/Web/WebDriver/Clients) the error would be represented by some sort of error _type_ or _object representation_. In Python it is represented as a [`WebDriverException`](https://www.selenium.dev/selenium/docs/api/py/common/selenium.common.exceptions.html), in Node.js as a [`WebDriverError`](https://www.selenium.dev/selenium/docs/api/javascript/WebDriverError.html), and in Java also as a [`WebDriverException`](https://www.selenium.dev/selenium/docs/api/java/org/openqa/selenium/WebDriverException.html).
 
 ## Table of errors
 

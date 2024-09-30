@@ -20,7 +20,8 @@ subsequent {{domxref("CanvasRenderingContext2D.fill()", "fill()")}} or
 {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} calls will have no effect
 on it.
 
-> **Note:** Use the {{domxref('CanvasRenderingContext2D.fillText()', 'fillText()')}} method to
+> [!NOTE]
+> Use the {{domxref('CanvasRenderingContext2D.fillText()', 'fillText()')}} method to
 > fill the text characters rather than having just their outlines drawn.
 
 ## Syntax

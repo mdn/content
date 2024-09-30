@@ -3,10 +3,12 @@ title: "RTCOutboundRtpStreamStats: qualityLimitationReason property"
 short-title: qualityLimitationReason
 slug: Web/API/RTCOutboundRtpStreamStats/qualityLimitationReason
 page-type: web-api-instance-property
-browser-compat: api.RTCOutboundRtpStreamStats.qualityLimitationReason
+status:
+  - experimental
+browser-compat: api.RTCStatsReport.type_outbound-rtp.qualityLimitationReason
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 The **`qualityLimitationReason`**
 property of the {{domxref("RTCOutboundRtpStreamStats")}} dictionary is a string
@@ -19,8 +21,7 @@ rate or resolution, or an increase in compression factor.
 
 The amount of time the encoded media has had its quality reduced in each of the
 potential ways that can be done can be found in
-{{domxref("RTCOutboundRtpStreamStats.qualityLimitationDurations",
-  "qualityLimitationDurations")}}.
+{{domxref("RTCOutboundRtpStreamStats.qualityLimitationDurations", "qualityLimitationDurations")}}.
 
 ## Value
 

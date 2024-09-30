@@ -9,7 +9,7 @@ browser-compat: api.CSS.registerProperty_static
 {{APIRef("CSSOM")}}
 
 The **`CSS.registerProperty()`** static method registers
-{{cssxref('--*', 'custom properties')}}, allowing for property type checking, default
+[custom properties](/en-US/docs/Web/CSS/--*), allowing for property type checking, default
 values, and properties that do or do not inherit their value.
 
 Registering a custom property allows you to tell the browser how the custom property
@@ -19,26 +19,25 @@ and what the default value of the custom property is.
 ## Syntax
 
 ```js-nolint
-CSS.registerProperty(PropertyDefinition)
+CSS.registerProperty(propertyDefinition)
 ```
 
 ### Parameters
 
-A `PropertyDefinition` dictionary object, which can contain the following
-members:
-
-- `name`
-  - : A string representing the
-    name of the property being defined.
-- `syntax` {{optional_inline}}
-  - : A string representing
-    the expected syntax of the defined property. Defaults to `"*"`.
-- `inherits`
-  - : A boolean value defining whether the defined property should be inherited
-    (`true`), or not (`false`). Defaults to `false`.
-- `initialValue` {{optional_inline}}
-  - : A string representing
-    the initial value of the defined property.
+- `propertyDefinition`
+  - : An object containing the following properties:
+    - `name`
+      - : A string representing the
+        name of the property being defined.
+    - `syntax` {{optional_inline}}
+      - : A string representing
+        the expected syntax of the defined property. Defaults to `"*"`.
+    - `inherits`
+      - : A boolean value defining whether the defined property should be inherited
+        (`true`), or not (`false`). Defaults to `false`.
+    - `initialValue` {{optional_inline}}
+      - : A string representing
+        the initial value of the defined property.
 
 ### Return value
 
@@ -57,7 +56,7 @@ members:
 
 ## Examples
 
-The following will register a {{cssxref('--*', 'custom property')}},
+The following will register a [custom property](/en-US/docs/Web/CSS/--*),
 `--my-color`, using `registerProperty()`, as a color, give it a
 default value, and have it not inherit its value:
 
@@ -125,5 +124,5 @@ We can add these styles to some buttons:
 - {{DOMxRef("CSS")}}
 - {{DOMxRef("CSS/supports_static", "CSS.supports()")}}
 - {{DOMxRef("CSS/escape_static", "CSS.escape()")}}
-- {{DOMxRef("CSS/factory_functions_static", 'CSS factory functions')}}
+- [CSS factory functions](/en-US/docs/Web/API/CSS/factory_functions_static)
 - CSS {{cssxref("@property")}}

@@ -4,8 +4,7 @@
 
 {
   "default": true,
-  // Disabled, as some callouts include headings.
-  "heading-increment": false,
+  "heading-increment": true,
   "ul-style": {
     "style": "dash",
   },
@@ -210,6 +209,26 @@
         "name": "un-closed-md-link",
         "message": "Missing closing bracket ')'",
         "searchPattern": "/(\\[[^\\]]*?\\]\\(([^\\)\\n]|\\([^\\)\\n]\\)|\\s[\"'])+?)(\\n|\\s|[,:][\\s\\n])/gm",
+        "searchScope": "text",
+      },
+      {
+        "name": "text-code-fence",
+        "message": "Use 'plain' tag",
+        "searchPattern": "/(^ *`{3,})(text|none|unix)/gm",
+        "replace": "$1plain",
+        "searchScope": "text",
+      },
+      {
+        "name": "gfm-alert",
+        "message": "Use the GFM syntax: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#notes_warnings_and_callouts",
+        "searchPattern": "/^ *> \\*\\*(Note|Warning|Callout):\\*\\*(?! [[{`_*])/gm",
+        "searchScope": "text",
+      },
+      {
+        "name": "bad-gfm-alert",
+        "message": "Use the correct GFM syntax: `> [!NOTE]`",
+        // TODO this should use the modifier syntax; until it has better Node support
+        "searchPattern": "/^ *> !?\\[!?((?!NOTE)[Nn][Oo][Tt][Ee]|(?!WARNING)[Ww][Aa][Rr][Nn][Ii][Nn][Gg]|(?!CALLOUT)[Cc][Aa][Ll][Ll][Oo][Uu][Tt])\\]\\n|^ *> (?!\\[!)!?\\[!?(NOTE|WARNING|CALLOUT)\\]\\n/gm",
         "searchScope": "text",
       },
     ],

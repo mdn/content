@@ -51,11 +51,12 @@ Variable fonts can offer a fine control over the degree to which an oblique face
 
 For TrueType or OpenType variable fonts, the `"slnt"` variation is used to implement varying slant angles for oblique, and the `"ital"` variation with a value of 1 is used to implement italic values. See {{cssxref("font-variation-settings")}}.
 
-> **Note:** For the example below to work, you'll need a browser that supports the CSS Fonts Level 4 syntax in which `font-style: oblique` can accept an `<angle>`. The demo loads with `font-style: oblique 23deg;`. Change the value to see the slant of the text change.
+> [!NOTE]
+> For the example below to work, you'll need a browser that supports the CSS Fonts Level 4 syntax in which `font-style: oblique` can accept an `<angle>`. The demo loads with `font-style: oblique 23deg;`. Change the value to see the slant of the text change.
 
 {{EmbedGHLiveSample("css-examples/variable-fonts/oblique.html", '100%', 860)}}
 
-## Accessibility concerns
+## Accessibility
 
 Large sections of text set with a `font-style` value of `italic` may be difficult for people with cognitive concerns such as Dyslexia to read.
 

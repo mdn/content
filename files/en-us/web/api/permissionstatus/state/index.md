@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.PermissionStatus.state
 ---
 
-{{APIRef("Permissions API")}}
+{{APIRef("Permissions API")}}{{AvailableInWorkers}}
 
 The **`state`** read-only property of the
 {{domxref("PermissionStatus")}} interface returns the state of a requested permission.

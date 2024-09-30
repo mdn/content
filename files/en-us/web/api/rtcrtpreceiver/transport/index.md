@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.RTCRtpReceiver.transport
 ---
 
-{{DefaultAPISidebar("WebRTC")}}
+{{APIRef("WebRTC")}}
 
 The read-only **`transport`** property of an
 {{domxref("RTCRtpReceiver")}} object provides the {{domxref("RTCDtlsTransport")}} object

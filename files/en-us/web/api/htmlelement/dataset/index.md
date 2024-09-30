@@ -13,7 +13,8 @@ of the {{DOMxRef("HTMLElement")}} interface provides read/write access to [custo
 (`data-*`) on elements. It exposes a map of strings
 ({{domxref("DOMStringMap")}}) with an entry for each `data-*` attribute.
 
-> **Note:** The `dataset` property itself can be read, but not directly written.
+> [!NOTE]
+> The `dataset` property itself can be read, but not directly written.
 > Instead, all writes must be to the individual properties within the
 > `dataset`, which in turn represent the data attributes.
 
@@ -38,8 +39,8 @@ attributes in our article [_Using data attributes_](/en-US/docs/Learn/HTML/Howto
 
 - `dash-style` to `camelCase` conversion
 
-  - : A custom data attribute name is transformed to a key for the {{
-      domxref("DOMStringMap") }} entry by the following:
+  - : A custom data attribute name is transformed to a key for the
+    {{domxref("DOMStringMap") }} entry by the following:
 
     1. Lowercase all ASCII capital letters (`A` to
        `Z`);
@@ -71,7 +72,7 @@ For example, a `data-abc-def` attribute corresponds to
 - Attributes can also be set and read using bracket syntax:
   `element.dataset['keyname']`.
 - The [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in) can check if a given attribute exists:
-  `'keyname' in element.dataset`.
+  `'keyname' in element.dataset`. Note that this will walk the [prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) of `dataset` and may be unsafe if you have external code that may pollute the prototype chain. Several alternatives exist, such as {{jsxref("Object/hasOwn", "Object.hasOwn(element.dataset, 'keyname')")}}, or just checking if `element.dataset.keyname !== undefined`.
 
 ### Setting values
 
@@ -110,7 +111,7 @@ delete el.dataset.dateOfBirth;
 // Result on JS: el.dataset.dateOfBirth === undefined
 // Result on HTML: <div id="user" data-id="1234567890" data-user="carinaanand">Carina Anand</div>
 
-if (!("someDataAttr" in el.dataset)) {
+if (el.dataset.someDataAttr === undefined) {
   el.dataset.someDataAttr = "mydata";
   // Result on JS: 'someDataAttr' in el.dataset === true
   // Result on HTML: <div id="user" data-id="1234567890" data-user="carinaanand" data-some-data-attr="mydata">Carina Anand</div>

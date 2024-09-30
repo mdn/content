@@ -2,12 +2,10 @@
 title: Intl.DurationFormat() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/DurationFormat
 page-type: javascript-constructor
-status:
-  - experimental
 browser-compat: javascript.builtins.Intl.DurationFormat.DurationFormat
 ---
 
-{{JSRef}} {{SeeCompatTable}}
+{{JSRef}}
 
 The **`Intl.DurationFormat()`** constructor creates {{jsxref("Intl.DurationFormat")}} objects.
 
@@ -25,7 +23,7 @@ new Intl.DurationFormat(locales, options)
 
 - `locales` {{optional_inline}}
 
-  - : A string with a BCP 47 language tag or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
+  - : A string with a BCP 47 language tag or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. The runtime's default locale is used when `undefined` is passed or when none of the specified locale identifiers is supported. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 
     The following Unicode extension key is allowed:
 

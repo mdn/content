@@ -41,7 +41,8 @@ Since SVG is an XML application, you can of course _always_ embed arbitrary XML 
 
 The `foreignObject` element is a good way to embed XHTML in SVG. If you have longer texts, the HTML layout is more suitable and comfortable than the SVG `text` element. Another often cited use case is the embedding of formulas with MathML. For scientific applications of SVG this is a very good way to join both worlds.
 
-> **Note:** Please keep in mind, that the content of the `foreignObject` must be processable by the viewer. A standalone SVG viewer is unlikely to be able to render HTML or MathML.
+> [!NOTE]
+> Please keep in mind, that the content of the `foreignObject` must be processable by the viewer. A standalone SVG viewer is unlikely to be able to render HTML or MathML.
 
 Since the `foreignObject` is an SVG element, you can, like in the case of `image`, use any SVG goodness with it, which then will be applied to its content.
 

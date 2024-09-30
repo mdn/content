@@ -5,6 +5,8 @@ page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#term
 ---
 
+{{AccessibilitySidebar}}
+
 The `term` role can be used for a word or phrase with an optional corresponding [`definition`](/en-US/docs/Web/Accessibility/ARIA/Roles/definition_role).
 
 ## Description
@@ -15,7 +17,8 @@ The `term` role is used to explicitly identify a word or phrase for which a defi
 
 Don't use the `role="term"` on interactive elements like links because it can interfere with assistive technology users ability to interact with the element. Also, the term itself is the accessible name, so do not use [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby).
 
-> **Warning:** The accessible name should be the term itself, so DO NOT use `aria-label` or `aria-labelledby`.
+> [!WARNING]
+> The accessible name should be the term itself, so DO NOT use `aria-label` or `aria-labelledby`.
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -86,11 +89,3 @@ Allow the term itself to define the accessible name. Do not use `aria-label` or 
 
 - [ARIA: `definition` role](/en-US/docs/Web/Accessibility/ARIA/Roles/definition_role).
 - The HTML {{HTMLElement('dfn')}} element
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

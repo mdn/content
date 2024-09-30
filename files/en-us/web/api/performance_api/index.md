@@ -29,7 +29,7 @@ Each performance metric is represented by a single {{domxref("PerformanceEntry")
 
 Most of the performance entries are recorded for you without you having to do anything, and are then accessible either through {{domxref("Performance.getEntries()")}} or (preferably) through {{domxref("PerformanceObserver")}}. For example, {{domxref("PerformanceEventTiming")}} entries are recorded for events that take longer than a set threshold. But the Performance API also enables you to define and record your own custom events, using the {{domxref("PerformanceMark")}} and {{domxref("PerformanceMeasure")}} interfaces.
 
-The main {{domxref("Performance")}} interface is available for each global using {{domxref("performance_property", "self.performance")}} and enables you to add custom performance entries, to clear performance entries, and to retrieve performance entries.
+The main {{domxref("Performance")}} interface is available in both {{domxref("Window.performance", "Window")}} and {{domxref("WorkerGlobalScope.performance", "Worker")}} global scopes, and enables you to add custom performance entries, to clear performance entries, and to retrieve performance entries.
 
 The {{domxref("PerformanceObserver")}} interface enables you to listen for various types of performance entry as they are recorded.
 
@@ -50,15 +50,17 @@ The following interfaces are present in the Performance API:
 - {{domxref("LayoutShiftAttribution")}}
   - : Provides debugging information about elements which have shifted.
 - {{domxref("Performance")}}
-  - : Main interface to access performance measurements. Available to window and worker contexts using {{domxref("performance_property", "self.performance")}}.
+  - : Main interface to access performance measurements. Available to window and worker contexts using {{domxref("Window.performance")}} or {{domxref("WorkerGlobalScope.performance")}}.
 - {{domxref("PerformanceElementTiming")}}
   - : Measures rendering timestamps of specific elements.
 - {{domxref("PerformanceEntry")}}
   - : An entry on the performance timeline encapsulating a single performance metric. All performance metrics inherit from this interface.
 - {{domxref("PerformanceEventTiming")}}
   - : Measures latency of events and first input delay (FID).
+- {{domxref("PerformanceLongAnimationFrameTiming")}}
+  - : Provides metrics on [long animation frames (LoAFs)](/en-US/docs/Web/API/Performance_API/Long_animation_frame_timing#what_is_a_long_animation_frame) that occupy rendering and block other tasks from being executed.
 - {{domxref("PerformanceLongTaskTiming")}}
-  - : Detects long tasks that occupy rendering and block other tasks from being executed.
+  - : Provides metrics on [long tasks](/en-US/docs/Glossary/Long_task) that occupy rendering and block other tasks from being executed.
 - {{domxref("PerformanceMark")}}
   - : Custom marker for your own entry on the performance timeline.
 - {{domxref("PerformanceMeasure")}}
@@ -73,6 +75,8 @@ The following interfaces are present in the Performance API:
   - : Measures render operations during web page construction.
 - {{domxref("PerformanceResourceTiming")}}
   - : Measures network loading metrics such as redirect start and end times, fetch start, DNS lookup start and end times, response start and end times for resources such as images, scripts, fetch calls, etc.
+- {{domxref("PerformanceScriptTiming")}}
+  - : Provides metrics on individual scripts causing [long animation frames (LoAFs)](/en-US/docs/Web/API/Performance_API/Long_animation_frame_timing#what_is_a_long_animation_frame).
 - {{domxref("PerformanceServerTiming")}}
   - : Surfaces server metrics that are sent with the response in the {{HTTPHeader("Server-Timing")}} HTTP header.
 - {{domxref("TaskAttributionTiming")}}
@@ -90,6 +94,8 @@ The following guides help you to understand key concepts of the Performance API 
 - [Navigation timing](/en-US/docs/Web/API/Performance_API/Navigation_timing): Measuring navigation timing of a document.
 - [User timing](/en-US/docs/Web/API/Performance_API/User_timing): Measuring and recording performance data custom to your application.
 - [Server timing](/en-US/docs/Web/API/Performance_API/Server_timing): Collecting server-side metrics.
+- [Long animation frame timing](/en-US/docs/Web/API/Performance_API/Long_animation_frame_timing): Collecting metrics on long animation frames (LoAFs) and their causes.
+- [Monitoring bfcache blocking reasons](/en-US/docs/Web/API/Performance_API/Monitoring_bfcache_blocking_reasons): Reporting on why the current document was blocked from using the back/forward cache ({{Glossary("bfcache")}}).
 
 ## Specifications
 

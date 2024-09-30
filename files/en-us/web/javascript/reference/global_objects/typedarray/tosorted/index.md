@@ -20,12 +20,7 @@ toSorted(compareFn)
 
 - `compareFn` {{optional_inline}}
 
-  - : Specifies a function that defines the sort order. If omitted, the typed array elements are sorted according to numeric value.
-
-    - `a`
-      - : The first element for comparison.
-    - `b`
-      - : The second element for comparison.
+  - : A function that determines the order of the elements. If omitted, the typed array elements are sorted according to numeric value. See {{jsxref("TypedArray/sort", "sort()")}} for more information.
 
 ### Return value
 

@@ -9,7 +9,8 @@ browser-compat: webextensions.api.scripting.getRegisteredContentScripts
 
 Returns all the content scripts registered with {{WebExtAPIRef("scripting.registerContentScripts()")}} or a subset of the registered scripts when using a filter.
 
-> **Note:** This method is available in Manifest V3 or higher in Chrome and Firefox 101. In Firefox 102+, this method is also available in Manifest V2.
+> [!NOTE]
+> This method is available in Manifest V3 or higher in Chrome and Firefox 101. In Firefox 102+, this method is also available in Manifest V2.
 
 To use this API you must have the `"scripting"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and permission for the page's URL, either explicitly as a [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) or using the [activeTab permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
 
@@ -68,4 +69,5 @@ console.log(scripts.map((script) => script.id)); // ["script-2"]
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/docs/extensions/reference/scripting/#method-getRegisteredContentScripts) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/docs/extensions/reference/api/scripting#method-getRegisteredContentScripts) API.

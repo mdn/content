@@ -8,7 +8,7 @@ status:
 browser-compat: api.ImageTrackList.selectedTrack
 ---
 
-{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`selectedTrack`** property of the {{domxref("ImageTrackList")}} interface returns an {{domxref("ImageTrack")}} object representing the currently selected track.
 

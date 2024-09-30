@@ -58,7 +58,8 @@ Semantic HTML doesn't take any longer to write than non-semantic (bad) markup if
 
 Let's get on and look at accessible HTML in more detail.
 
-> **Note:** It is a good idea to have a screen reader set up on your local computer so that you can do some testing of the examples shown below. See our [Screen readers guide](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screen_readers) for more details.
+> [!NOTE]
+> It is a good idea to have a screen reader set up on your local computer so that you can do some testing of the examples shown below. See our [Screen readers guide](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screen_readers) for more details.
 
 ## Good semantics
 
@@ -254,11 +255,12 @@ Table layouts are a relic of the past — they made sense back when CSS support 
 </footer>
 ```
 
-If you try our more modern structure example with a screen reader, you'll see that the layout markup no longer gets in the way and confuses the content readout. It is also much leaner and smaller in terms of code size, which means easier to maintain code, and less bandwidth for the user to download (particularly prevalent for those on slow connections).
+If you try our more modern structure example with a screen reader, you'll notice that the layout markup no longer interferes with or causes confusion in the content readout. It is also much leaner and smaller in terms of code size, which means the code is easier to maintain and requires less bandwidth for users to download, making it particularly beneficial for those on slow connections.
 
 Another consideration when creating layouts is using HTML semantic elements as seen in the above example (see [content sectioning](/en-US/docs/Web/HTML/Element#content_sectioning)) — you can create a layout using only nested {{htmlelement("div")}} elements, but it is better to use appropriate sectioning elements to wrap your main navigation ({{htmlelement("nav")}}), footer ({{htmlelement("footer")}}), repeating content units ({{htmlelement("article")}}), etc. These provide extra semantics for screen readers (and other tools) to give users extra clues about the content they are navigating (see [Screen Reader Support for new HTML5 Section Elements](https://www.accessibilityoz.com/2020/02/html5-sectioning-elements-and-screen-readers/) for an idea of what screen reader support is like).
 
-> **Note:** In addition to having good semantics and an attractive layout, your content should make logical sense in its source order — you can always place it where you want using CSS later on, but you should get the source order right to start with, so what screen reader users get read out to them will make sense.
+> [!NOTE]
+> In addition to having good semantics and an attractive layout, your content should make logical sense in its source order — you can always place it where you want using CSS later on, but you should get the source order right to start with, so what screen reader users get read out to them will make sense.
 
 ### UI controls
 
@@ -268,11 +270,13 @@ One key aspect of the accessibility of UI controls is that by default, browsers 
 
 ![Three buttons with the text "Click me!", "Click me too!", and "And me!" inside them respectively. The third button has a blue outline around it to indicate current tab focus.](button-focused-unfocused.png)
 
-> **Note:** You can enable an overlay that shows the page tabbing order in your developer tools. For more information see: [Accessibility Inspector > Show web page tabbing order](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#show-web-page-tabbing-order).
+> [!NOTE]
+> You can enable an overlay that shows the page tabbing order in your developer tools. For more information see: [Accessibility Inspector > Show web page tabbing order](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#show-web-page-tabbing-order).
 
 You can then press Enter/Return to follow a focused link or press a button (we've included some JavaScript to make the buttons alert a message), or start typing to enter text in a text input. Other form elements have different controls; for example, the {{htmlelement("select")}} element can have its options displayed and cycled between using the up and down arrow keys.
 
-> **Note:** Different browsers may have different keyboard control options available. See [Using native keyboard accessibility](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#using_native_keyboard_accessibility) for more details.
+> [!NOTE]
+> Different browsers may have different keyboard control options available. See [Using native keyboard accessibility](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#using_native_keyboard_accessibility) for more details.
 
 You essentially get this behavior for free, just by using the appropriate elements, e.g.
 
@@ -391,7 +395,8 @@ but this is bad link text:
 </p>
 ```
 
-> **Note:** You can find a lot more about link implementation and best practices in our [Creating hyperlinks](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) article. You can also see some good and bad examples at [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) and [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html).
+> [!NOTE]
+> You can find a lot more about link implementation and best practices in our [Creating hyperlinks](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) article. You can also see some good and bad examples at [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) and [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html).
 
 Form labels are also important for giving you a clue about what you need to enter into each form input. The following seems like a reasonable enough example:
 
@@ -416,7 +421,8 @@ With code like this, the label will be clearly associated with the input; the de
 
 As an added bonus, in most browsers associating a label with a form input means that you can click the label to select or activate the form element. This gives the input a bigger hit area, making it easier to select.
 
-> **Note:** You can see some good and bad form examples in [good-form.html](https://mdn.github.io/learning-area/accessibility/html/good-form.html) and [bad-form.html](https://mdn.github.io/learning-area/accessibility/html/bad-form.html).
+> [!NOTE]
+> You can see some good and bad form examples in [good-form.html](https://mdn.github.io/learning-area/accessibility/html/good-form.html) and [bad-form.html](https://mdn.github.io/learning-area/accessibility/html/bad-form.html).
 
 You can find a nice explanation of the importance of proper text labels, and how to investigate text label issues using the [Firefox Accessibility Inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html), in the following video:
 
@@ -458,7 +464,8 @@ Now have a look at our [punk bands table example](https://github.com/mdn/learnin
 - Table headers are defined using {{htmlelement("th")}} elements — you can also specify if they are headers for rows or columns using the `scope` attribute. This gives you complete groups of data that can be consumed by screen readers as single units.
 - The {{htmlelement("caption")}} element and the `<table>` element's `summary` attribute both do similar jobs — they act as alt text for a table, giving a screen reader user a useful quick summary of the table's contents. The `<caption>` element is generally preferred as it makes it's content accessible to sighted users too, who might also find it useful. You don't really need both.
 
-> **Note:** See our [HTML table advanced features and accessibility](/en-US/docs/Learn/HTML/Tables/Advanced) article for more details about accessible data tables.
+> [!NOTE]
+> See our [HTML table advanced features and accessibility](/en-US/docs/Learn/HTML/Tables/Advanced) article for more details about accessible data tables.
 
 ## Text alternatives
 
@@ -488,7 +495,8 @@ We have a simple example written up, [accessible-image.html](https://mdn.github.
 
 The first image, when viewed by a screen reader, doesn't really offer the user much help — VoiceOver for example reads out "/dinosaur.png, image". It reads out the filename to try to provide some help. In this example the user will at least know it is a dinosaur of some kind, but often files may be uploaded with machine-generated file names (e.g. from a digital camera) and these file names would likely provide no context to the image's content.
 
-> **Note:** This is why you should never include text content inside an image — screen readers can't access it. There are other disadvantages too — you can't select it and copy/paste it. Just don't do it!
+> [!NOTE]
+> This is why you should never include text content inside an image — screen readers can't access it. There are other disadvantages too — you can't select it and copy/paste it. Just don't do it!
 
 When a screen reader encounters the second image, it reads out the full alt attribute — "A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.".
 
@@ -502,7 +510,8 @@ Any personal knowledge or extra description shouldn't be included here, as it is
 
 One thing to consider is whether your images have meaning inside your content, or whether they are purely for visual decoration, and thus have no meaning. If they are decorative, it is better to write an empty text as a value for `alt` attribute (see [Empty alt attributes](#empty_alt_attributes)) or to just include them in the page as CSS background images.
 
-> **Note:** Read [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML) and [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) for a lot more information about image implementation and best practices.
+> [!NOTE]
+> Read [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML) and [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) for a lot more information about image implementation and best practices.
 
 If you do want to provide extra contextual information, you should put it in the text surrounding the image, or inside a `title` attribute, as shown above. In this case, most screen readers will read out the alt text, the title attribute, and the filename. In addition, browsers display title text as tooltips when moused over.
 
@@ -552,7 +561,8 @@ There may be times where an image is included in a page's design, but its primar
 
 The reason to use an empty `alt` instead of not including it is because many screen readers announce the whole image URL if no `alt` is provided. In the above example, the image is acting as a visual decoration to the heading it's associated with. In cases like this, and in cases where an image is only decoration and has no content value, you should include an empty `alt` in your `img` elements. Another alternative is to use the aria [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles) attribute [`role="presentation"`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) as this also stops screen readers from reading out alternative text.
 
-> **Note:** If possible you should use CSS to display images that are only decorative.
+> [!NOTE]
+> If possible you should use CSS to display images that are only decorative.
 
 ## More on links
 

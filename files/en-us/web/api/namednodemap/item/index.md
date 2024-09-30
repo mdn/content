@@ -11,8 +11,9 @@ browser-compat: api.NamedNodeMap.item
 The **`item()`** method of the {{domxref("NamedNodeMap")}} interface
 returns the item in the map matching the index.
 
-> **Note:** This method is also called when you use the operator `[]` syntax.
-> So, `myMap[i]`is equivalent to `myMap.item(i)` where `i` is a number.
+> [!NOTE]
+> This method is also called when you use the operator `[]` syntax.
+> So, `myMap[i]` is equivalent to `myMap.item(i)` where `i` is a number.
 
 ## Syntax
 

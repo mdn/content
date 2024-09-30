@@ -55,9 +55,10 @@ svg {
   - : The total length of the rectangle's perimeter, in user units.
     _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number) ; _Default value_: _none_; _Animatable_: **yes**
 
-> **Note:** Starting with SVG2, `x`, `y`, `width`, `height`, `rx` and `ry` are _Geometry Properties_, meaning those attributes can also be used as CSS properties for that element.
+> [!NOTE]
+> Starting with SVG2, `x`, `y`, `width`, `height`, `rx` and `ry` are _Geometry Properties_, meaning those attributes can also be used as CSS properties for that element.
 
-## Usage notes
+## Usage context
 
 {{svginfo}}
 
@@ -71,5 +72,5 @@ svg {
 
 ## See also
 
-- [SVG presentation attributes](/en-US/docs/Web/SVG/Attribute/Presentation) including {{SVGAttr("fill")}} and {{SVGAttr("stroke")}}
+- [SVG presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes) including {{SVGAttr("fill")}} and {{SVGAttr("stroke")}}
 - Other basic SVG shapes: {{SVGElement('circle')}}, {{ SVGElement('ellipse') }}, {{ SVGElement('line') }}, **{{ SVGElement('polygon') }}**, {{ SVGElement('polyline') }}

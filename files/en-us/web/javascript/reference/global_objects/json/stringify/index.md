@@ -55,6 +55,7 @@ A JSON string representing the given value, or undefined.
 - {{jsxref("undefined")}}, {{jsxref("Function")}}, and {{jsxref("Symbol")}} values are not valid JSON values. If any such values are encountered during conversion, they are either omitted (when found in an object) or changed to [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) (when found in an array). `JSON.stringify()` can return `undefined` when passing in "pure" values like `JSON.stringify(() => {})` or `JSON.stringify(undefined)`.
 - The numbers {{jsxref("Infinity")}} and {{jsxref("NaN")}}, as well as the value [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), are all considered `null`. (But unlike the values in the previous point, they would never be omitted.)
 - Arrays are serialized as arrays (enclosed by square brackets). Only array indices between 0 and `length - 1` (inclusive) are serialized; other properties are ignored.
+- The special raw JSON object created with {{jsxref("JSON.rawJSON()")}} is serialized as the raw JSON text it contains (by accessing its `rawJSON` property).
 - For other objects:
 
   - All {{jsxref("Symbol")}}-keyed properties will be completely ignored, even when using the [`replacer`](#the_replacer_parameter) parameter.
@@ -85,7 +86,8 @@ The `replacer` function is called for the initial object being stringified as we
 - If you return a {{jsxref("Function")}}, {{jsxref("Symbol")}}, or {{jsxref("undefined")}}, the property is not included in the output.
 - If you return any other object, the object is recursively stringified, calling the `replacer` function on each property.
 
-> **Note:** When parsing JSON generated with `replacer` functions, you would likely want to use the [`reviver`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#using_the_reviver_parameter) parameter to perform the reverse operation.
+> [!NOTE]
+> When parsing JSON generated with `replacer` functions, you would likely want to use the [`reviver`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#using_the_reviver_parameter) parameter to perform the reverse operation.
 
 Typically, array elements' index would never shift (even when the element is an invalid value like a function, it will become `null` instead of omitted). Using the `replacer` function allows you to control the order of the array elements by returning a different array.
 
@@ -313,7 +315,7 @@ JSON.stringify(circularReference);
 
 To serialize circular references, you can use a library that supports them (e.g. [cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js) by Douglas Crockford) or implement a solution yourself, which will require finding and replacing (or removing) the cyclic references by serializable values.
 
-If you are using `JSON.stringify()` to deep-copy an object, you may instead want to use [`structuredClone()`](/en-US/docs/Web/API/structuredClone), which supports circular references. JavaScript engine APIs for binary serialization, such as [`v8.serialize()`](https://nodejs.org/api/v8.html#v8serializevalue), also support circular references.
+If you are using `JSON.stringify()` to deep-copy an object, you may instead want to use {{DOMxRef("Window.structuredClone", "structuredClone()")}}, which supports circular references. JavaScript engine APIs for binary serialization, such as [`v8.serialize()`](https://nodejs.org/api/v8.html#v8serializevalue), also support circular references.
 
 ### Using JSON.stringify() with localStorage
 
@@ -371,5 +373,6 @@ This change should be backwards-compatible as long as you pass the result of `JS
 
 ## See also
 
-- [Polyfill of modern `JSON.stringify` behavior (symbol and well-formed unicode) in `core-js`](https://github.com/zloirock/core-js#ecmascript-json)
+- [Polyfill of modern `JSON.stringify` behavior (symbol, well-formed unicode, raw JSON) in `core-js`](https://github.com/zloirock/core-js#ecmascript-json)
 - {{jsxref("JSON.parse()")}}
+- {{jsxref("JSON.rawJSON()")}}

@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Notification.click_event
 ---
 
-{{APIRef("Web Notifications")}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 The **`click`** event of the {{domxref("Notification")}}
 interface fires when the user clicks on displayed {{domxref("Notification")}}.
@@ -14,8 +14,6 @@ interface fires when the user clicks on displayed {{domxref("Notification")}}.
 The default behavior is to move the focus to the viewport of the notification's related
 [browsing context](https://html.spec.whatwg.org/multipage/browsers.html#browsing-context).
 If you don't want that behavior, call {{domxref("Event/preventDefault", "preventDefault()")}} on the event object.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -40,7 +38,7 @@ is clicked:
 ```js
 notification.onclick = (event) => {
   event.preventDefault(); // prevent the browser from focusing the Notification's tab
-  window.open("http://www.mozilla.org", "_blank");
+  window.open("https://www.mozilla.org", "_blank");
 };
 ```
 

@@ -40,11 +40,15 @@ document.onbeforescriptexecute = starting;
 
 [View Live Example](https://mdn.dev/archives/media/samples/html/currentScript.html)
 
+## Specifications
+
+Not part of any specification.
+
 ## Browser compatibility
 
 {{Compat}}
 
 ## See also
 
-- {{domxref("Document.afterscriptexecute_event")}}
+- {{domxref("Document.afterscriptexecute_event", "afterscriptexecute")}} event of `Document`
 - {{domxref("Document.currentScript")}}

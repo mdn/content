@@ -65,7 +65,7 @@ _No changes._
 #### New APIs
 
 - {{domxref("FormDataEvent")}} and [event-based form participation](/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects#using_a_formdata_event) is now enabled by default ([Firefox bug 1594708](https://bugzil.la/1594708)).
-- The {{domxref("crossOriginIsolated")}} property is now supported ([Firefox bug 1591892](https://bugzil.la/1591892)).
+- The {{domxref("Window.crossOriginIsolated")}} property and the {{domxref("WorkerGlobalScope.crossOriginIsolated")}} property is now supported ([Firefox bug 1591892](https://bugzil.la/1591892)).
 
 #### DOM
 
@@ -134,4 +134,4 @@ _No changes._
 
 ## Older versions
 
-{{Firefox_for_developers(71)}}
+{{Firefox_for_developers}}

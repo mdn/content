@@ -4,6 +4,8 @@ slug: Learn/Server-side/Express_Nodejs/forms/Update_Book_form
 page-type: learn-module-chapter
 ---
 
+{{LearnSidebar}}
+
 This final subarticle shows how to define a page to update `Book` objects. Form handling when updating a book is much like that for creating a book, except that you must populate the form in the `GET` route with values from the database.
 
 ## Controller—get route
@@ -46,7 +48,8 @@ It `awaits` on the promise returned by `Promise.all()` to get the specified `Boo
 
 When the operations complete the function checks whether any books were found, and if none were found sends an error "Book not found" to the error handling middleware.
 
-> **Note:** Not finding any book results is **not an error** for a search — but it is for this application because we know there must be a matching book record! The code above compares for (`book===null`) in the callback, but it could equally well have daisy chained the method [orFail()](<https://mongoosejs.com/docs/api/query.html#Query.prototype.orFail()>) to the query.
+> [!NOTE]
+> Not finding any book results is **not an error** for a search — but it is for this application because we know there must be a matching book record! The code above compares for (`book===null`) in the callback, but it could equally well have daisy chained the method [orFail()](<https://mongoosejs.com/docs/api/query.html#Query.prototype.orFail()>) to the query.
 
 We then mark the currently selected genres as checked and then render the **book_form.pug** view, passing variables for `title`, book, all `authors`, and all `genres`.
 
@@ -159,7 +162,8 @@ The form should look just like the _Create book_ page, only with a title of 'Upd
 
 ![The update book section of the Local library application. The left column has a vertical navigation bar. The right column has a form to update the book with an heading that reads 'Update book'. There are five input fields labelled Title, Author, Summary, ISBN, Genre. Genre is a checkbox option field. There is a button labelled 'Submit' at the end.](locallibary_express_book_update_noerrors.png)
 
-> **Note:** The other pages for updating objects can be implemented in much the same way. We've left that as a challenge.
+> [!NOTE]
+> The other pages for updating objects can be implemented in much the same way. We've left that as a challenge.
 
 ## Next steps
 

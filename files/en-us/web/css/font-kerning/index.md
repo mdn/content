@@ -7,7 +7,7 @@ browser-compat: css.properties.font-kerning
 
 {{CSSRef}}
 
-The **`font-kerning`** CSS property sets the use of the kerning information stored in a font.
+The **`font-kerning`** [CSS](/en-US/docs/Web/CSS) property sets the use of the kerning information stored in a font.
 
 {{EmbedInteractiveExample("pages/css/font-kerning.html")}}
 

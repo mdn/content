@@ -45,7 +45,8 @@ _Image source: [Overloaded plug socket](https://www.flickr.com/photos/easy-pics/
 
 In the same way, if you want to say, program some 3D graphics, it is a lot easier to do it using an API written in a higher-level language such as JavaScript or Python, rather than try to directly write low-level code (say C or C++) that directly controls the computer's GPU or other graphics functions.
 
-> **Note:** See also the [API glossary entry](/en-US/docs/Glossary/API) for further description.
+> [!NOTE]
+> See also the [API glossary entry](/en-US/docs/Glossary/API) for further description.
 
 ### APIs in client-side JavaScript
 
@@ -61,9 +62,9 @@ Client-side JavaScript, in particular, has many APIs available to it — these a
 So above, we talked about what client-side JavaScript APIs are, and how they relate to the JavaScript language. Let's recap this to make it clearer, and also mention where other JavaScript tools fit in:
 
 - JavaScript — A high-level scripting language built into browsers that allows you to implement functionality on web pages/apps. Note that JavaScript is also available in other programming environments, such as [Node](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction).
-- Browser APIs — constructs built into the browser that sits on top of the JavaScript language and allows you to implement functionality more easily.
+- Browser APIs — constructs built into the browser that sit on top of the JavaScript language and allow you to implement functionality more easily.
 - Third-party APIs — constructs built into third-party platforms (e.g. Disqus, Facebook) that allow you to use some of those platform's functionality in your own web pages (for example, display your Disqus comments on a web page).
-- JavaScript libraries — Usually one or more JavaScript files containing [custom functions](/en-US/docs/Learn/JavaScript/Building_blocks/Functions#custom_functions) that you can attach to your web page to speed up or enable writing common functionality. Examples include jQuery, Mootools and React.
+- JavaScript libraries — Usually one or more JavaScript files containing [custom functions](/en-US/docs/Learn/JavaScript/Building_blocks/Functions) that you can attach to your web page to speed up or enable writing common functionality. Examples include jQuery, Mootools and React.
 - JavaScript frameworks — The next step up from libraries, JavaScript frameworks (e.g. Angular and Ember) tend to be packages of HTML, CSS, JavaScript, and other technologies that you install and then use to write an entire web application from scratch. The key difference between a library and a framework is "Inversion of Control". When calling a method from a library, the developer is in control. With a framework, the control is inverted: the framework calls the developer's code.
 
 ## What can APIs do?
@@ -103,7 +104,8 @@ Different JavaScript APIs work in slightly different ways, but generally, they h
 
 Your code interacts with APIs using one or more [JavaScript objects](/en-US/docs/Learn/JavaScript/Objects), which serve as containers for the data the API uses (contained in object properties), and the functionality the API makes available (contained in object methods).
 
-> **Note:** If you are not already familiar with how objects work, you should go back and work through our [JavaScript objects](/en-US/docs/Learn/JavaScript/Objects) module before continuing.
+> [!NOTE]
+> If you are not already familiar with how objects work, you should go back and work through our [JavaScript objects](/en-US/docs/Learn/JavaScript/Objects) module before continuing.
 
 Let's return to the example of the Web Audio API — this is a fairly complex API, which consists of a number of objects. The most obvious ones are:
 
@@ -128,7 +130,6 @@ Next, let's look at the JavaScript for this example.
 We start by creating an `AudioContext` instance inside which to manipulate our track:
 
 ```js
-const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();
 ```
 
@@ -172,7 +173,8 @@ audioElement.addEventListener("ended", () => {
 });
 ```
 
-> **Note:** Some of you may notice that the `play()` and `pause()` methods being used to play and pause the track are not part of the Web Audio API; they are part of the {{domxref("HTMLMediaElement")}} API, which is different but closely-related.
+> [!NOTE]
+> Some of you may notice that the `play()` and `pause()` methods being used to play and pause the track are not part of the Web Audio API; they are part of the {{domxref("HTMLMediaElement")}} API, which is different but closely-related.
 
 Next, we create a {{domxref("GainNode")}} object using the {{domxref("BaseAudioContext/createGain", "AudioContext.createGain()")}} method, which can be used to adjust the volume of audio fed through it, and create another event handler that changes the value of the audio graph's gain (volume) whenever the slider value is changed:
 
@@ -224,7 +226,8 @@ Ball.prototype.draw = function () {
 };
 ```
 
-> **Note:** You can see this code in action in our [bouncing balls demo](https://github.com/mdn/learning-area/blob/main/javascript/apis/introduction/bouncing-balls.html) (see it [running live](https://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html) also).
+> [!NOTE]
+> You can see this code in action in our [bouncing balls demo](https://github.com/mdn/learning-area/blob/main/javascript/apis/introduction/bouncing-balls.html) (see it [running live](https://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html) also).
 
 ### They often use events to handle changes in state
 
@@ -272,7 +275,8 @@ In addition, some WebAPIs request permission to be enabled from the user once ca
 
 The Web Audio and {{domxref("HTMLMediaElement")}} APIs are subject to a security mechanism called [autoplay policy](/en-US/docs/Web/API/Web_Audio_API/Best_practices#autoplay_policy) — this basically means that you can't automatically play audio when a page loads — you've got to allow your users to initiate audio play through a control like a button. This is done because autoplaying audio is usually really annoying and we really shouldn't be subjecting our users to it.
 
-> **Note:** Depending on how strict the browser is, such security mechanisms might even stop the example from working locally, i.e. if you load the local example file in your browser instead of running it from a web server. At the time of writing, our Web Audio API example wouldn't work locally on Google Chrome — we had to upload it to GitHub before it would work.
+> [!NOTE]
+> Depending on how strict the browser is, such security mechanisms might even stop the example from working locally, i.e. if you load the local example file in your browser instead of running it from a web server. At the time of writing, our Web Audio API example wouldn't work locally on Google Chrome — we had to upload it to GitHub before it would work.
 
 ## Summary
 

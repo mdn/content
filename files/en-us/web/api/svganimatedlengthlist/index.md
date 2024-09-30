@@ -88,6 +88,10 @@ The `SVGAnimatedLengthList` interface is used for attributes of type {{ domxref(
 
 The `SVGAnimatedLengthList` interface do not provide any specific methods.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

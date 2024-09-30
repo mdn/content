@@ -7,7 +7,7 @@ browser-compat: css.properties.text-justify
 
 {{CSSRef}}
 
-The **`text-justify`** CSS property sets what type of justification should be applied to text when {{cssxref("text-align")}}`: justify;` is set on an element.
+The **`text-justify`** [CSS](/en-US/docs/Web/CSS) property sets what type of justification should be applied to text when {{cssxref("text-align", "text-align: justify;")}} is set on an element.
 
 ## Syntax
 
@@ -36,7 +36,7 @@ text-justify: unset;
   - : The text is justified by adding space between words (effectively varying {{cssxref("word-spacing")}}), which is most appropriate for languages that separate words using spaces, like English or Korean.
 - `inter-character`
   - : The text is justified by adding space between characters (effectively varying {{cssxref("letter-spacing")}}), which is most appropriate for languages like Japanese.
-- `distribute` {{deprecated_inline}}
+- `distribute`
   - : Exhibits the same behavior as `inter-character`; this value is kept for backwards compatibility.
 
 ## Formal definition

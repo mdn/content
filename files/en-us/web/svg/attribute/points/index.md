@@ -52,7 +52,8 @@ svg {
 
 For {{SVGElement('polyline')}}, `points` defines a list of points, each representing a vertex of the line to be drawn. Each point is define by a X and Y coordinate in the user coordinate system.
 
-> **Note:** A polyline is an open shape, meaning the last point is not connected to the first point.
+> [!NOTE]
+> A polyline is an open shape, meaning the last point is not connected to the first point.
 
 <table class="properties">
   <tbody>
@@ -92,7 +93,8 @@ svg {
 
 For {{SVGElement('polygon')}}, `points` defines a list of points, each representing a vertex of the shape to be drawn. Each point is define by a X and Y coordinate in the user coordinate system.
 
-> **Note:** A polygon is a closed shape, meaning the last point is connected to the first point.
+> [!NOTE]
+> A polygon is a closed shape, meaning the last point is connected to the first point.
 
 <table class="properties">
   <tbody>

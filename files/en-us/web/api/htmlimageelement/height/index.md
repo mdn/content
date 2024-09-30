@@ -10,7 +10,7 @@ browser-compat: api.HTMLImageElement.height
 
 The **`height`** property of the
 {{domxref("HTMLImageElement")}} interface indicates the height at which the image is
-drawn, in {{Glossary("CSS pixels")}} if the image is being drawn or rendered to any
+drawn, in {{Glossary("CSS pixel", "CSS pixels")}} if the image is being drawn or rendered to any
 visual medium such as the screen or a printer; otherwise, it's the natural, pixel
 density corrected height of the image.
 
@@ -20,7 +20,7 @@ An integer value indicating the height of the image. The terms in which the heig
 defined depends on whether the image is being rendered to a visual medium or not.
 
 - If the image is being rendered to a visual medium such as a screen or printer, the
-  height is expressed in {{Glossary("CSS pixels")}}.
+  height is expressed in {{Glossary("CSS pixel", "CSS pixels")}}.
 - Otherwise, the image's height is represented using its natural (intrinsic) height,
   adjusted for the display density as indicated by
   {{domxref("HTMLImageElement.naturalHeight", "naturalHeight")}}.

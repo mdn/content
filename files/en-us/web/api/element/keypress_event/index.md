@@ -14,7 +14,8 @@ The **`keypress`** event is fired when a key that produces a character value is 
 
 Examples of keys that produce a character value are alphabetic, numeric, and punctuation keys. Examples of keys that don't produce a character value are modifier keys such as <kbd>Alt</kbd>, <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, or <kbd>Meta</kbd>.
 
-> **Warning:** Since this event has been deprecated, you should use [`beforeinput`](/en-US/docs/Web/API/Element/beforeinput_event) or [`keydown`](/en-US/docs/Web/API/Element/keydown_event) instead.
+> [!WARNING]
+> Since this event has been deprecated, you should use [`beforeinput`](/en-US/docs/Web/API/Element/beforeinput_event) or [`keydown`](/en-US/docs/Web/API/Element/keydown_event) instead.
 
 ## Syntax
 
@@ -43,8 +44,6 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 - {{domxref("KeyboardEvent.code")}} {{ReadOnlyInline}}
 
   - : Returns a string with the code value of the physical key represented by the event.
-
-    > **Warning:** This ignores the user's keyboard layout, so that if the user presses the key at the "Y" position in a QWERTY keyboard layout (near the middle of the row above the home row), this will always return "KeyY", even if the user has a QWERTZ keyboard (which would mean the user expects a "Z" and all the other properties would indicate a "Z") or a Dvorak keyboard layout (where the user would expect an "F"). If you want to display the correct keystrokes to the user, you can use {{domxref("Keyboard.getLayoutMap()")}}.
 
 - {{domxref("KeyboardEvent.ctrlKey")}} {{ReadOnlyInline}}
 

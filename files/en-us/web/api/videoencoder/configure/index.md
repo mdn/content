@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.VideoEncoder.configure
 ---
 
-{{APIRef("WebCodecs API")}}{{SecureContext_Header}}
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`configure()`** method of the {{domxref("VideoEncoder")}} interface changes the {{domxref("VideoEncoder.state", "state")}} of the encoder to "configured" and asynchronously prepares the encoder to accept {{domxref("VideoEncoder")}}s for encoding with the specified parameters. If the encoder doesn't support the specified parameters or can't be initialized for other reasons an error will be reported via the error callback provided to the {{domxref("VideoEncoder")}} constructor.
 

@@ -66,7 +66,7 @@ Based on the provided parameters, the function returns {{CSSxRef("&lt;length&gt;
 
 ### min(), max(), and clamp() comparison
 
-In this example we have a web page that uses {{CSSxRef("min", "min()")}}, {{CSSxRef("max", "max()")}}, and {{CSSxRef("clamp", "clamp()")}} to set sizes responsively.
+In this example we have a web page that uses {{CSSxRef("min", "min()")}}, {{CSSxRef("max", "max()")}}, and `clamp()` to set sizes responsively.
 
 The example adjusts the sizes of page elements in three ways:
 

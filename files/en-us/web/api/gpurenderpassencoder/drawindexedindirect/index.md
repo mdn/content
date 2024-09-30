@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPURenderPassEncoder.drawIndexedIndirect
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`drawIndexedIndirect()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface draws indexed primitives using parameters read from a {{domxref("GPUBuffer")}}.
@@ -36,6 +36,8 @@ drawIndexedIndirect(indirectBuffer, indirectOffset)
     // Write values into a GPUBuffer
     device.queue.writeBuffer(buffer, 0, uint32, 0, uint32.length);
     ```
+
+    The value corresponding to `firstInstance` must be 0, unless the `indirect-first-instance` feature is enabled. If the `indirect-first-instance` feature is not enabled and `firstInstance` is not zero, the `drawIndexedIndirect()` call will be treated as a no-op.
 
 - `indirectOffset`
   - : The offset, in bytes, into `indirectBuffer` where the value data begins.

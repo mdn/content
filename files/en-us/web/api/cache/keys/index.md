@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Cache.keys
 ---
 
-{{APIRef("Service Workers API")}}{{SecureContext_Header}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`keys()`** method of the {{domxref("Cache")}} interface returns a
 {{jsxref("Promise")}} that resolves to an array of {{domxref("Request")}} objects
@@ -14,7 +14,8 @@ representing the keys of the {{domxref("Cache")}}.
 
 The requests are returned in the same order that they were inserted.
 
-> **Note:** Requests with duplicate URLs but different headers can be
+> [!NOTE]
+> Requests with duplicate URLs but different headers can be
 > returned if their responses have the `VARY` header set on them.
 
 ## Syntax
@@ -86,4 +87,4 @@ caches.open("v1").then((cache) => {
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("caches")}}
+- {{domxref("Window.caches")}} and {{domxref("WorkerGlobalScope.caches")}}

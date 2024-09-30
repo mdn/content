@@ -59,7 +59,7 @@ This element supports all [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ## Usage notes
 
-The `<source>` element is a **{{glossary("void element")}}**, which means that it not only has no content but also has no closing tag. That is, you _never_ use "`</source>`" in your HTML.
+The `<source>` element is a **{{glossary("void element")}}**, which means that it not only has no content but also has no closing tag. That is, you _never_ use `</source>` in your HTML.
 
 The browser goes through a list of `<source>` elements to find a format it supports. It uses the first one it can display. For each `<source>` element:
 
@@ -164,7 +164,7 @@ A [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) allow
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>It must have a start tag, but must not have an end tag.</td>
+      <td>Must have a start tag and must not have an end tag.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>

@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-colindextext
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-colindextext` attribute defines a human-readable text alternative of the numeric [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex).
 
 ## Description
@@ -59,14 +61,15 @@ In the above example, the table has 128 columns of which only 4 columns are show
 
 Only use `aria-colindextext` when the provided or calculated value of `aria-colindex` is not meaningful or does not reflect the displayed index. Whenever you include `aria-colindextext`, also keep the `aria-colindex` as some assistive technologies rely on the numeric column index for the purpose of keeping track of the user's position and in providing alternative table navigation.
 
-> **Note:** While `aria-colindex` can be added to a row when all the columns present are contiguous as sequential values can be deduced, `aria-colindextext` is NOT a supported property of [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role).
+> [!NOTE]
+> While `aria-colindex` can be added to a row when all the columns present are contiguous as sequential values can be deduced, `aria-colindextext` is NOT a supported property of [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role).
 
 See related [`aria-rowindextext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindextext).
 
 ## Values
 
 - `<string>`
-  - The human-readable text alternative of the numeric [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
+  - : The human-readable text alternative of the numeric [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
 
 ## Associated interfaces
 
@@ -99,11 +102,3 @@ Inherits into roles:
 - [`cell` role](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role)
 - [`columnheader` role](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
 - [`rowheader` role](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
-
-</section>

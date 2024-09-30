@@ -4,6 +4,8 @@ slug: Web/Accessibility/ARIA/Roles/suggestion_role
 page-type: aria-role
 ---
 
+{{AccessibilitySidebar}}
+
 The `suggestion` role semantically denotes a single proposed change to an editable document. This should be used on an element that wraps an element with an `insertion` role, and one with a `deletion` role.
 
 ## Examples
@@ -37,7 +39,7 @@ We could even provide an information box saying who made the suggestion and when
 </div>
 ```
 
-Browsers tend to provide a default black strikethrough for deletions, and a black underline for insertions, but you'll probably want to use
+Browsers tend to provide a default black strikethrough for deletions, and a black underline for insertions when using the HTML elements that implicitly expose these roles. But when using explicit ARIA roles to modify HTML elements, such as divs, you'll need to use CSS to customize the visual styling for such deletions and insertions.
 
 ## Best practices
 
@@ -50,13 +52,3 @@ Using the [`<ins>`](/en-US/docs/Web/HTML/Element/ins) and [`<del>`](/en-US/docs/
 Will be part of WAI-ARIA 1.3, which is still being drafted.
 
 ## See also
-
-- [ARIA annotations](/en-US/docs/Web/Accessibility/ARIA/Annotations)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

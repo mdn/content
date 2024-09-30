@@ -804,7 +804,7 @@ Unlike Haskell, Python, Java, etc., JavaScript module resolution is entirely hos
 
 However, the JavaScript language doesn't offer standard library modules — all core functionalities are powered by global variables like [`Math`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) and [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) instead. This is due to the long history of JavaScript lacking a module system, and the fact that opting into the module system involves some changes to the runtime setup.
 
-Different runtimes may use different module systems. For example, [Node.js](https://nodejs.org/en/) uses the package manager [npm](https://www.npmjs.com/) and is mostly file-system based, while [Deno](https://deno.land/) and browsers are fully URL-based and modules can be resolved from HTTP URLs.
+Different runtimes may use different module systems. For example, [Node.js](https://nodejs.org/en/) uses the package manager [npm](https://www.npmjs.com/) and is mostly file-system based, while [Deno](https://deno.com/) and browsers are fully URL-based and modules can be resolved from HTTP URLs.
 
 For more information, see the [modules guide page](/en-US/docs/Web/JavaScript/Guide/Modules).
 

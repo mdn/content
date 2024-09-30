@@ -8,12 +8,13 @@ status:
 browser-compat: api.GPUDevice.limits
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`limits`** read-only property of the
 {{domxref("GPUDevice")}} interface returns a {{domxref("GPUSupportedLimits")}} object that describes the limits supported by the device. All limit values will be included, and the limits requested during the creation of the device (i.e. when {{domxref("GPUAdapter.requestDevice()")}} is called) will be reflected in those values.
 
-> **Note:** Not all limits will be reported as expected, even if they are supported by the underlying hardware. See {{domxref("GPUAdapter.limits")}} for more details.
+> [!NOTE]
+> Not all limits will be reported as expected, even if they are supported by the underlying hardware. See {{domxref("GPUAdapter.limits")}} for more details.
 
 ## Value
 

@@ -8,11 +8,9 @@ browser-compat: api.Document.adoptNode
 
 {{ ApiRef("DOM") }}
 
-**`Document.adoptNode()`** transfers a {{Glossary("node/dom",
-  "node")}} from another {{domxref("Document", "document", "", "1")}} into the method's
-document. The adopted node and its subtree are removed from their original document (if
-any), and their {{domxref("Node.ownerDocument", "ownerDocument")}} is changed to the
-current document. The node can then be inserted into the current document.
+**`Document.adoptNode()`** transfers a {{Glossary("node/dom", "node")}} from another {{domxref("Document", "document", "", "1")}} into the method's document.
+The adopted node and its subtree are removed from their original document (if any), and their {{domxref("Node.ownerDocument", "ownerDocument")}} is changed to the current document.
+The node can then be inserted into the current document.
 
 ## Syntax
 
@@ -54,12 +52,9 @@ Before they can be inserted into the current document, nodes from external docum
 should either be:
 
 - cloned using {{domXref("document.importNode()")}}; or
-- adopted using {{domXref("document.adoptNode()")}}.
+- adopted using `document.adoptNode()`.
 
-> **Note:** Although Firefox doesn't currently enforce this rule,
-> we encourage you to follow this rule for improved future compatibility.
-
-For more on the {{domXref("Node.ownerDocument")}} issues, see the W3C DOM FAQ.
+For more on the {{domXref("Node.ownerDocument")}} issues, see the [W3C DOM FAQ](https://www.w3.org/DOM/faq.html#ownerdoc).
 
 ## Specifications
 

@@ -9,10 +9,12 @@ browser-compat: http.headers.Keep-Alive
 
 The **`Keep-Alive`** general header allows the sender to hint about how the connection may be used to set a timeout and a maximum amount of requests.
 
-> **Note:** Set the {{HTTPHeader("Connection")}} header to "keep-alive" for this header to have any effect.
+> [!NOTE]
+> Set the {{HTTPHeader("Connection")}} header to "keep-alive" for this header to have any effect.
 
-> **Warning:** Connection-specific header fields such as
-> {{HTTPHeader("Connection")}} and {{HTTPHeader("Keep-Alive")}} are prohibited
+> [!WARNING]
+> Connection-specific header fields such as
+> {{HTTPHeader("Connection")}} and `Keep-Alive` are prohibited
 > in [HTTP/2](https://httpwg.org/specs/rfc9113.html#ConnectionSpecific) and
 > [HTTP/3](https://httpwg.org/specs/rfc9114.html#header-formatting). Chrome and
 > Firefox ignore them in HTTP/2 responses, but Safari conforms to the HTTP/2

@@ -13,7 +13,7 @@ status:
 ## Events
 
 - {{domxref("Element/webkitmouseforcewillbegin_event", "webkitmouseforcewillbegin")}} {{non-standard_inline}}
-  - : This event is fired before the {{domxref("Element/mousedown_event", "mousedown")}} event. Its main use is that it can be {{domxref("Event.preventDefault()")}}ed.
+  - : This event is fired before the {{domxref("Element/mousedown_event", "mousedown")}} event. Its main use is that it can be {{domxref("Event.preventDefault()", "default-prevented", "", 1)}}.
 - {{domxref("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}} {{non-standard_inline}}
   - : This event is fired after the {{domxref("Element/mousedown_event", "mousedown")}} event as soon as sufficient pressure has been applied for it to qualify as a "force click".
 - {{domxref("Element/webkitmouseforceup_event", "webkitmouseforceup")}} {{non-standard_inline}}

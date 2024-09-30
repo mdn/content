@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.TextDecoder.TextDecoder
 ---
 
-{{APIRef("Encoding API")}}
+{{APIRef("Encoding API")}}{{AvailableInWorkers}}
 
 The **`TextDecoder()`** constructor returns a newly created {{DOMxRef("TextDecoder")}} object for the encoding specified in parameter.
 

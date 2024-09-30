@@ -1,15 +1,13 @@
 ---
 title: Console API
 slug: Web/API/Console_API
-page-type: guide
+page-type: web-api-overview
 browser-compat: api.console
 ---
 
-{{DefaultAPISidebar("Console API")}}
+{{DefaultAPISidebar("Console API")}} {{AvailableInWorkers}}
 
 The Console API provides functionality to allow developers to perform debugging tasks, such as logging messages or the values of variables at set points in your code, or timing how long an operation takes to complete.
-
-{{AvailableInWorkers}}
 
 ## Concepts and usage
 
@@ -36,7 +34,7 @@ let myString = "Hello world";
 console.log(myString);
 ```
 
-See the [console](/en-US/docs/Web/API/console#usage) reference page for more examples.
+See the [console](/en-US/docs/Web/API/console) reference page for more examples.
 
 ## Specifications
 

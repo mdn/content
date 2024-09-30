@@ -14,7 +14,7 @@ scrolls the document. In standards mode, this is the root element of the
 document, {{domxref("document.documentElement")}}.
 
 When in quirks mode, the `scrollingElement` attribute returns the HTML
-`body` element if it exists and is [potentially scrollable](https://drafts.csswg.org/cssom-view/#potentially-scrollable), otherwise it returns null.
+`body` element if it exists and is _not_ [potentially scrollable](https://drafts.csswg.org/cssom-view/#potentially-scrollable), otherwise it returns `null`. This may look surprising but is true according to both the specification and browsers.
 
 ## Value
 

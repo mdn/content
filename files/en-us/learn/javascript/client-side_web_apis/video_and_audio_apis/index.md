@@ -135,7 +135,7 @@ Now open the CSS file and have a look inside. The CSS for the example is not too
 
 - We start off with the {{cssxref("visibility")}} of the custom controls set to `hidden`. In our JavaScript later on, we will set the controls to `visible`, and remove the `controls` attribute from the `<video>` element. This is so that, if the JavaScript doesn't load for some reason, users can still use the video with the native controls.
 - We give the controls an {{cssxref("opacity")}} of 0.5 by default, so that they are less distracting when you are trying to watch the video. Only when you are hovering/focusing over the player do the controls appear at full opacity.
-- We lay out the buttons inside the control bar using Flexbox ({{cssxref("display")}}: flex), to make things easier.
+- We lay out the buttons inside the control bar using flexbox ({{cssxref("display")}}: flex), to make things easier.
 
 Next, let's look at our button icons:
 
@@ -144,7 +144,8 @@ Next, let's look at our button icons:
   font-family: "HeydingsControlsRegular";
   src: url("fonts/heydings_controls-webfont.eot");
   src:
-    url("fonts/heydings_controls-webfont.eot?#iefix") format("embedded-opentype"),
+    url("fonts/heydings_controls-webfont.eot?#iefix")
+      format("embedded-opentype"),
     url("fonts/heydings_controls-webfont.woff") format("woff"),
     url("fonts/heydings_controls-webfont.ttf") format("truetype");
   font-weight: normal;
@@ -201,7 +202,7 @@ Last but not least, let's look at the CSS for the timer:
 }
 ```
 
-- We set the outer `.timer` element to have `flex: 5`, so it takes up most of the width of the controls bar. We also give it {{cssxref("position")}}`: relative`, so that we can position elements inside it conveniently according to its boundaries, and not the boundaries of the {{htmlelement("body")}} element.
+- We set the outer `.timer` element to have `flex: 5`, so it takes up most of the width of the controls bar. We also give it {{cssxref("position", "position: relative")}}, so that we can position elements inside it conveniently according to its boundaries, and not the boundaries of the {{htmlelement("body")}} element.
 - The inner `<div>` is absolutely positioned to sit directly on top of the outer `<div>`. It is also given an initial width of 0, so you can't see it at all. As the video plays, the width will be increased via JavaScript as the video elapses.
 - The `<span>` is also absolutely positioned to sit near the left-hand side of the timer bar.
 - We also give our inner `<div>` and `<span>` the right amount of {{cssxref("z-index")}} so that the timer will be displayed on top, and the inner `<div>` below that. This way, we make sure we can see all the information — one box is not obscuring another.

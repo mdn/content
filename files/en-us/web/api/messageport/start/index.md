@@ -6,14 +6,12 @@ page-type: web-api-instance-method
 browser-compat: api.MessagePort.start
 ---
 
-{{APIRef("Channel Messaging API")}}
+{{APIRef("Channel Messaging API")}} {{AvailableInWorkers}}
 
 The **`start()`** method of the {{domxref("MessagePort")}}
 interface starts the sending of messages queued on the port. This method is only needed
 when using {{domxref("EventTarget.addEventListener")}}; it is implied when using
 {{domxref("MessagePort.message_event", "onmessage")}}.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

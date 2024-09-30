@@ -34,7 +34,7 @@ This article shows how you can create a "skeleton" website using the [Express Ap
 
 The following sections show you how to call the application generator, and provides a little explanation about the different view/CSS options. We'll also explain how the skeleton website is structured. At the end, we'll show how you can run the website to verify that it works.
 
-> **Note:**
+> [!NOTE]
 >
 > - The _Express Application Generator_ is not the only generator for Express applications, and the generated project is not the only viable way to structure your files and directories. The generated site does however have a modular structure that is easy to extend and understand. For information about a _minimal_ Express application, see [Hello world example](https://expressjs.com/en/starter/hello-world.html) (Express docs).
 > - The _Express Application Generator_ declares most variables using `var`.
@@ -80,13 +80,15 @@ express
 
 You can also choose a view (template) engine using `--view` and/or a CSS generation engine using `--css`.
 
-> **Note:** The other options for choosing template engines (e.g. `--hogan`, `--ejs`, `--hbs` etc.) are deprecated. Use `--view` (or `-v`).
+> [!NOTE]
+> The other options for choosing template engines (e.g. `--hogan`, `--ejs`, `--hbs` etc.) are deprecated. Use `--view` (or `-v`).
 
 ### What view engine should I use?
 
 The _Express Application Generator_ allows you to configure a number of popular view/templating engines, including [EJS](https://www.npmjs.com/package/ejs), [Hbs](https://github.com/pillarjs/hbs), [Pug](https://pugjs.org/api/getting-started.html) (Jade), [Twig](https://www.npmjs.com/package/twig), and [Vash](https://www.npmjs.com/package/vash), although it chooses Jade by default if you don't specify a view option. Express itself can also support a large number of other templating languages [out of the box](https://github.com/expressjs/express/wiki#template-engines).
 
-> **Note:** If you want to use a template engine that isn't supported by the generator then see [Using template engines with Express](https://expressjs.com/en/guide/using-template-engines.html) (Express docs) and the documentation for your target view engine.
+> [!NOTE]
+> If you want to use a template engine that isn't supported by the generator then see [Using template engines with Express](https://expressjs.com/en/guide/using-template-engines.html) (Express docs) and the documentation for your target view engine.
 
 Generally speaking, you should select a templating engine that delivers all the functionality you need and allows you to be productive sooner — or in other words, in the same way that you choose any other component! Some of the things to consider when comparing template engines:
 
@@ -104,15 +106,17 @@ Generally speaking, you should select a templating engine that delivers all the 
   - Support for asynchronous operations and streaming.
   - Client-side features. If a templating engine can be used on the client this allows the possibility of having all or most of the rendering done client-side.
 
-> **Note:** There are many resources on the Internet to help you compare the different options!
+> [!NOTE]
+> There are many resources on the Internet to help you compare the different options!
 
 For this project, we'll use the [Pug](https://pugjs.org/api/getting-started.html) templating engine (this is the recently-renamed Jade engine), as this is one of the most popular Express/JavaScript templating languages and is supported out of the box by the generator.
 
 ### What CSS stylesheet engine should I use?
 
-The _Express Application Generator_ allows you to create a project that is configured to use the most common CSS stylesheet engines: [LESS](https://lesscss.org/), [SASS](https://sass-lang.com/), [Compass](http://compass-style.org/), [Stylus](https://stylus-lang.com/).
+The _Express Application Generator_ allows you to create a project that is configured to use the most common CSS stylesheet engines: [LESS](https://lesscss.org/), [SASS](https://sass-lang.com/), [Stylus](https://stylus-lang.com/).
 
-> **Note:** CSS has some limitations that make certain tasks difficult. CSS stylesheet engines allow you to use more powerful syntax for defining your CSS and then compile the definition into plain-old CSS for browsers to use.
+> [!NOTE]
+> CSS has some limitations that make certain tasks difficult. CSS stylesheet engines allow you to use more powerful syntax for defining your CSS and then compile the definition into plain-old CSS for browsers to use.
 
 As with templating engines, you should use the stylesheet engine that will allow your team to be most productive. For this project, we'll use vanilla CSS (the default) as our CSS requirements are not sufficiently complicated to justify using anything else.
 
@@ -171,7 +175,8 @@ The generator will create (and list) the project's files.
 
 At the end of the output, the generator provides instructions on how to install the dependencies (as listed in the **package.json** file) and how to run the application on different operating systems.
 
-> **Note:** The generator-created files define all variables as `var`.
+> [!NOTE]
+> The generator-created files define all variables as `var`.
 > Open all of the generated files and change the `var` declarations to `const` before you continue (the remainder of the tutorial assumes that you have done so).
 
 ## Running the skeleton website
@@ -199,7 +204,8 @@ At this point, we have a complete skeleton project. The website doesn't actually
      ENV:DEBUG = "express-locallibrary-tutorial:*"; npm start
      ```
 
-     > **Note:** Powershell commands are not covered in this tutorial (The provided "Windows" commands assume you're using the Windows CMD prompt.)
+     > [!NOTE]
+     > Powershell commands are not covered in this tutorial (The provided "Windows" commands assume you're using the Windows CMD prompt.)
 
    - On macOS or Linux, use this command:
 
@@ -215,7 +221,8 @@ You should see a browser page that looks like this:
 
 Congratulations! You now have a working Express application that can be accessed via port 3000.
 
-> **Note:** You could also start the app just using the `npm start` command. Specifying the DEBUG variable as shown enables console logging/debugging. For example, when you visit the above page you'll see debug output like this:
+> [!NOTE]
+> You could also start the app just using the `npm start` command. Specifying the DEBUG variable as shown enables console logging/debugging. For example, when you visit the above page you'll see debug output like this:
 >
 > ```bash
 > SET DEBUG=express-locallibrary-tutorial:* & npm start
@@ -250,7 +257,7 @@ If you open your project's **package.json** file you'll now see a new section wi
 
 ```json
  "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^3.1.3"
 }
 ```
 
@@ -274,9 +281,10 @@ Because the tool isn't installed globally we can't launch it from the command li
 
 We can now start the server in almost exactly the same way as previously, but using the `devstart` command.
 
-> **Note:** Now if you edit any file in the project the server will restart (or you can restart it by typing `rs` on the command prompt at any time). You will still need to reload the browser to refresh the page.
+> [!NOTE]
+> Now if you edit any file in the project the server will restart (or you can restart it by typing `rs` on the command prompt at any time). You will still need to reload the browser to refresh the page.
 >
-> We now have to call "`npm run <scriptname>`" rather than just `npm start`, because "start" is actually an npm command that is mapped to the named script. We could have replaced the command in the _start_ script but we only want to use _nodemon_ during development, so it makes sense to create a new script command.
+> We now have to call `npm run <scriptname>` rather than just `npm start`, because "start" is actually an npm command that is mapped to the named script. We could have replaced the command in the _start_ script but we only want to use _nodemon_ during development, so it makes sense to create a new script command.
 >
 > The `serverstart` command added to the scripts in the **package.json** above is a very good example. Using this approach means you no longer have to type a long command to start the server. Note that the particular command added to the script works for macOS or Linux only.
 
@@ -339,19 +347,15 @@ The **package.json** file defines the application dependencies and other informa
     "pug": "2.0.0-beta11"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^3.1.3"
   }
 }
 ```
 
-The dependencies include the _express_ package and the package for our selected view engine (_pug_). In addition, we have the following packages that are useful in many web applications:
-
-- [cookie-parser](https://www.npmjs.com/package/cookie-parser): Used to parse the cookie header and populate `req.cookies` (essentially provides a convenient method for accessing cookie information).
-- [debug](https://www.npmjs.com/package/debug): A tiny node debugging utility modeled after node core's debugging technique.
-- [morgan](https://www.npmjs.com/package/morgan): An HTTP request logger middleware for node.
-- [http-errors](https://www.npmjs.com/package/http-errors): Create HTTP errors where needed (for express error handling).
-
 The scripts section first defines a "_start_" script, which is what we are invoking when we call `npm start` to start the server (this script was added by the _Express Application Generator_). From the script definition, you can see that this actually starts the JavaScript file **./bin/www** with _node_.
+
+We already modified this section in [Enable server restart on file changes](#enable_server_restart_on_file_changes) by adding the _devstart_ and _serverstart_ scripts.
+These can be used to start the same **./bin/www** file with _nodemon_ rather than _node_ (this version of the scripts is for Linux and macOS, as discussed above).
 
 ```json
   "scripts": {
@@ -361,11 +365,52 @@ The scripts section first defines a "_start_" script, which is what we are invok
   },
 ```
 
-The _devstart_ and _serverstart_ scripts can be used to start the same **./bin/www** file with _nodemon_ rather than _node_ (this example is for Linux and macOS, as discussed above in [Enable server restart on file changes](#enable_server_restart_on_file_changes)).
+The dependencies include the _express_ package and the package for our selected view engine (_pug_).
+In addition, we have the following packages that are useful in many web applications:
+
+- [cookie-parser](https://www.npmjs.com/package/cookie-parser): Used to parse the cookie header and populate `req.cookies` (essentially provides a convenient method for accessing cookie information).
+- [debug](https://www.npmjs.com/package/debug): A tiny node debugging utility modeled after node core's debugging technique.
+- [morgan](https://www.npmjs.com/package/morgan): An HTTP request logger middleware for node.
+- [http-errors](https://www.npmjs.com/package/http-errors): Create HTTP errors where needed (for express error handling).
+
+The default versions in the generated project are a little out of date.
+Replace the dependencies section of your `package.json` file with the following text, which specifies the latest versions of these libraries at the time of writing:
+
+```json
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "debug": "^4.3.5",
+    "express": "^4.19.2",
+    "http-errors": "~2.0.0",
+    "morgan": "^1.10.0",
+    "pug": "3.0.3"
+  },
+```
+
+Then update your installed dependencies using the command:
+
+```bash
+npm install
+```
+
+> [!NOTE]
+> It is a good idea to regularly update to the latest compatible versions of your dependency libraries — this may even be done automatically or semi-automatically as part of a continuous integration setup.
+>
+> Usually library updates to the minor and patch version remain compatible.
+> We've prefixed each version with `^` above so that we can automatically update to the latest `minor.patch` version by running:
+>
+> ```bash
+> npm update --save
+> ```
+>
+> Major versions change the compatibility.
+> For those updates we'll need to manually update the `package.json` and code that uses the library, and extensively re-test the project.
 
 ### www file
 
 The file **/bin/www** is the application entry point! The very first thing this does is `require()` the "real" application entry point (**app.js**, in the project root) that sets up and returns the [`express()`](https://expressjs.com/en/api.html) application object.
+`require()` is the [CommonJS way](https://nodejs.org/api/modules.html) to import JavaScript code, JSON, and other files into the current file.
+Here we specify **app.js** module using a relative path and omit the optional (.**js**) file extension.
 
 ```js
 #!/usr/bin/env node
@@ -377,7 +422,10 @@ The file **/bin/www** is the application entry point! The very first thing this 
 const app = require("../app");
 ```
 
-> **Note:** `require()` is a global node function that is used to import modules into the current file. Here we specify **app.js** module using a relative path and omitting the optional (.**js**) file extension.
+> [!NOTE]
+> Node.js 14 and later support ES6 `import` statements for importing JavaScript (ECMAScript) modules.
+> To use this feature you have to add `"type": "module",` to your Express **package.json** file, all the modules in your application have to use `import` rather than `require()`, and for _relative imports_ you must include the file extension (for more information see the [Node documentation](https://nodejs.org/api/esm.html#introduction)).
+> While there are benefits to using `import`, this tutorial uses `require()` in order to match [the Express documentation](https://expressjs.com/en/starter/hello-world.html).
 
 The remainder of the code in this file sets up a node HTTP server with `app` set to a specific port (defined in an environment variable or 3000 if the variable isn't defined), and starts listening and reporting server errors and connections. For now you don't really need to know anything else about the code (everything in this file is "boilerplate"), but feel free to review it if you're interested.
 
@@ -411,9 +459,10 @@ const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
 ```
 
-> **Note:** At this point, we have just _imported_ the module; we haven't actually used its routes yet (this happens just a little bit further down the file).
+> [!NOTE]
+> At this point, we have just _imported_ the module; we haven't actually used its routes yet (this happens just a little bit further down the file).
 
-Next, we create the `app` object using our imported _express_ module, and then use it to set up the view (template) engine. There are two parts to setting up the engine. First, we set the '`views`' value to specify the folder where the templates will be stored (in this case the subfolder **/views**). Then we set the '`view engine`' value to specify the template library (in this case "pug").
+Next, we create the `app` object using our imported _express_ module, and then use it to set up the view (template) engine. There are two parts to setting up the engine. First, we set the `"views"` value to specify the folder where the templates will be stored (in this case the subfolder **/views**). Then we set the `"view engine"` value to specify the template library (in this case "pug").
 
 ```js
 const app = express();
@@ -443,7 +492,8 @@ app.use("/", indexRouter);
 app.use("/users", usersRouter);
 ```
 
-> **Note:** The paths specified above (`'/'` and '`/users'`) are treated as a prefix to routes defined in the imported files.
+> [!NOTE]
+> The paths specified above (`"/"` and `"/users"`) are treated as a prefix to routes defined in the imported files.
 > So for example, if the imported **users** module defines a route for `/profile`, you would access that route at `/users/profile`. We'll talk more about routes in a later article.
 
 The last middleware in the file adds handler methods for errors and HTTP 404 responses.
@@ -490,11 +540,12 @@ router.get("/", (req, res, next) => {
 module.exports = router;
 ```
 
-The route defines a callback that will be invoked whenever an HTTP `GET` request with the correct pattern is detected. The matching pattern is the route specified when the module is imported ('`/users`') plus whatever is defined in this file ('`/`'). In other words, this route will be used when a URL of `/users/` is received.
+The route defines a callback that will be invoked whenever an HTTP `GET` request with the correct pattern is detected. The matching pattern is the route specified when the module is imported (`"/users"`) plus whatever is defined in this file (`"/"`). In other words, this route will be used when a URL of `/users/` is received.
 
-> **Note:** Try this out by running the server with node and visiting the URL in your browser: `http://localhost:3000/users/`. You should see a message: 'respond with a resource'.
+> [!NOTE]
+> Try this out by running the server with node and visiting the URL in your browser: `http://localhost:3000/users/`. You should see a message: 'respond with a resource'.
 
-One thing of interest above is that the callback function has the third argument '`next`', and is hence a middleware function rather than a simple route callback. While the code doesn't currently use the `next` argument, it may be useful in the future if you want to add multiple route handlers to the `'/'` route path.
+One thing of interest above is that the callback function has the third argument `next`, and is hence a middleware function rather than a simple route callback. While the code doesn't currently use the `next` argument, it may be useful in the future if you want to add multiple route handlers to the `'/'` route path.
 
 ### Views (templates)
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.SubtleCrypto.encrypt
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{APIRef("Web Crypto API")}}{{SecureContext_header}}{{AvailableInWorkers}}
 
 The **`encrypt()`** method of the {{domxref("SubtleCrypto")}} interface encrypts data.
 
@@ -74,7 +74,7 @@ The RSA-OAEP public-key encryption system is specified in [RFC 3447](https://dat
 
 ### AES-CTR
 
-This represents AES in Counter Mode, as specified in [NIST SP800-38A](https://csrc.nist.gov/publications/detail/sp/800-38a/final).
+This represents AES in Counter Mode, as specified in [NIST SP800-38A](https://csrc.nist.gov/pubs/sp/800/38/a/final).
 
 AES is a block cipher, meaning that it splits the message into blocks and encrypts it a block at a time.
 In CTR mode, every time a block of the message is encrypted, an extra block of data is mixed in. This extra block is called the "counter block".
@@ -91,21 +91,23 @@ Typically this is achieved by splitting the initial counter block value into two
 
 Essentially: the nonce should ensure that counter blocks are not reused from one message to the next, while the counter should ensure that counter blocks are not reused within a single message.
 
-> **Note:** See [Appendix B of the NIST SP800-38A standard](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38a.pdf#%5B%7B%22num%22%3A70%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22Fit%22%7D%5D) for more information.
+> [!NOTE]
+> See [Appendix B of the NIST SP800-38A standard](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38a.pdf#%5B%7B%22num%22%3A70%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22Fit%22%7D%5D) for more information.
 
 ### AES-CBC
 
-This represents AES in Cipher Block Chaining Mode, as specified in [NIST SP800-38A](https://csrc.nist.gov/publications/detail/sp/800-38a/final).
+This represents AES in Cipher Block Chaining Mode, as specified in [NIST SP800-38A](https://csrc.nist.gov/pubs/sp/800/38/a/final).
 
 ### AES-GCM
 
-This represents AES in Galois/Counter Mode, as specified in [NIST SP800-38D](https://csrc.nist.gov/publications/detail/sp/800-38d/final).
+This represents AES in Galois/Counter Mode, as specified in [NIST SP800-38D](https://csrc.nist.gov/pubs/sp/800/38/d/final).
 
 One major difference between this mode and the others is that GCM is an "authenticated" mode, which means that it includes checks that the ciphertext has not been modified by an attacker.
 
 ## Examples
 
-> **Note:** You can [try the working examples](https://mdn.github.io/dom-examples/web-crypto/encrypt-decrypt/index.html) out on GitHub.
+> [!NOTE]
+> You can [try the working examples](https://mdn.github.io/dom-examples/web-crypto/encrypt-decrypt/index.html) out on GitHub.
 
 ### RSA-OAEP
 
@@ -168,7 +170,7 @@ let data = new Uint8Array(12345);
 // crypto functions are wrapped in promises so we have to use await and make sure the function that
 // contains this code is an async function
 // encrypt function wants a cryptokey object
-const key_encoded = await crypto.subtle.importKey(
+const key_encoded = await window.crypto.subtle.importKey(
   "raw",
   key.buffer,
   "AES-CTR",
@@ -254,6 +256,6 @@ function encryptMessage(key) {
 
 - {{domxref("SubtleCrypto.decrypt()")}}.
 - [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447) specifies RSAOAEP.
-- [NIST SP800-38A](https://csrc.nist.gov/publications/detail/sp/800-38a/final) specifies CTR mode.
-- [NIST SP800-38A](https://csrc.nist.gov/publications/detail/sp/800-38a/final) specifies CBC mode.
-- [NIST SP800-38D](https://csrc.nist.gov/publications/detail/sp/800-38d/final) specifies GCM mode.
+- [NIST SP800-38A](https://csrc.nist.gov/pubs/sp/800/38/a/final) specifies CTR mode.
+- [NIST SP800-38A](https://csrc.nist.gov/pubs/sp/800/38/a/final) specifies CBC mode.
+- [NIST SP800-38D](https://csrc.nist.gov/pubs/sp/800/38/d/final) specifies GCM mode.

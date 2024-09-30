@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.EventTarget.removeEventListener
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`removeEventListener()`** method of the {{domxref("EventTarget")}} interface
 removes an event listener previously registered with {{domxref("EventTarget.addEventListener()")}} from the target.
@@ -20,7 +20,8 @@ effect.
 
 If an [event listener](/en-US/docs/Web/API/EventTarget/addEventListener#the_event_listener_callback) is removed from an {{domxref("EventTarget")}} while another listener of the target is processing an event, it will not be triggered by the event. However, it can be reattached.
 
-> **Warning:** If a listener is registered twice, one with the _capture_ flag set and one without, you must remove each one separately. Removal of a capturing listener does not affect a non-capturing version of the same listener, and vice versa.
+> [!WARNING]
+> If a listener is registered twice, one with the _capture_ flag set and one without, you must remove each one separately. Removal of a capturing listener does not affect a non-capturing version of the same listener, and vice versa.
 
 Event listeners can also be removed by passing an {{domxref("AbortSignal")}} to an {{domxref("EventTarget/addEventListener()", "addEventListener()")}} and then later calling {{domxref("AbortController/abort()", "abort()")}} on the controller owning the signal.
 

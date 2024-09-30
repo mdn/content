@@ -17,7 +17,8 @@ The **`RsaHashedImportParams`** dictionary of the [Web Crypto API](/en-US/docs/W
 
   - : A string representing the name of the [digest function](/en-US/docs/Web/API/SubtleCrypto#supported_algorithms) to use. This can be one of `SHA-256`, `SHA-384`, or `SHA-512`.
 
-    > **Warning:** Although you can technically pass `SHA-1` here, this is strongly discouraged as it is considered vulnerable.
+    > [!WARNING]
+    > Although you can technically pass `SHA-1` here, this is strongly discouraged as it is considered vulnerable.
 
 ## Examples
 

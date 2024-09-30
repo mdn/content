@@ -6,13 +6,11 @@ page-type: web-api-instance-method
 browser-compat: api.IDBKeyRange.includes
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The `includes()` method of the {{domxref("IDBKeyRange")}}
 interface returns a boolean indicating whether a specified key is inside the key
 range.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

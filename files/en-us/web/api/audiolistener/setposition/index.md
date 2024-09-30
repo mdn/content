@@ -16,7 +16,8 @@ The three parameters `x`, `y` and `z` are unitless and describe the listener's p
 
 The default value of the position vector is `(0, 0, 0)`.
 
-> **Note:** As this method is deprecated, use the three {{domxref("AudioListener.positionX", "positionX")}}, {{domxref("AudioListener.positionY", "positionY")}}, and {{domxref("AudioListener.positionZ", "positionZ")}} properties instead.
+> [!NOTE]
+> As this method is deprecated, use the three {{domxref("AudioListener.positionX", "positionX")}}, {{domxref("AudioListener.positionY", "positionY")}}, and {{domxref("AudioListener.positionZ", "positionZ")}} properties instead.
 
 ## Syntax
 

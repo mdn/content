@@ -5,11 +5,11 @@ page-type: web-api-interface
 browser-compat: api.URLSearchParams
 ---
 
-{{ApiRef("URL API")}}
+{{ApiRef("URL API")}} {{AvailableInWorkers}}
 
 The **`URLSearchParams`** interface defines utility methods to work with the query string of a URL.
 
-An object implementing `URLSearchParams` can directly be used in a {{jsxref("Statements/for...of", "for...of")}} structure to iterate over key/value pairs in the same order as they appear in the query string, for example the following two lines are equivalent:
+`URLSearchParams` objects are [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol), so they can directly be used in a {{jsxref("Statements/for...of", "for...of")}} structure to iterate over key/value pairs in the same order as they appear in the query string, for example the following two lines are equivalent:
 
 ```js
 for (const [key, value] of mySearchParams) {
@@ -18,7 +18,7 @@ for (const [key, value] of mySearchParams.entries()) {
 }
 ```
 
-{{AvailableInWorkers}}
+Although `URLSearchParams` is functionally similar to a {{jsxref("Map")}}, when iterating, it may suffer from some [pitfalls](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#concurrent_modifications_when_iterating) that `Map` doesn't encounter due to how it's implemented.
 
 ## Constructor
 
@@ -32,7 +32,7 @@ for (const [key, value] of mySearchParams.entries()) {
 
 ## Instance methods
 
-- `URLSearchParams.[@@iterator]()`
+- `URLSearchParams[Symbol.iterator]()`
   - : Returns an {{jsxref("Iteration_protocols","iterator")}} allowing iteration through all key/value pairs contained in this object in the same order as they appear in the query string.
 - {{domxref("URLSearchParams.append()")}}
   - : Appends a specified key/value pair as a new search parameter.

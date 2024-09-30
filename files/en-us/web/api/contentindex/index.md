@@ -7,7 +7,7 @@ status:
 browser-compat: api.ContentIndex
 ---
 
-{{APIRef("Content Index API")}}{{SeeCompatTable}}
+{{APIRef("Content Index API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`ContentIndex`** interface of the [Content Index API](/en-US/docs/Web/API/Content_Index_API) allows developers to register their offline enabled content with the browser.
 
@@ -97,7 +97,7 @@ async function createReadingList() {
   const readingListElem = document.createElement("div");
 
   // test for entries
-  if (!Array.length) {
+  if (entries.length === 0) {
     // if there are no entries, display a message
     const message = document.createElement("p");
     message.innerText =
@@ -163,5 +163,4 @@ const contentIndexItems = self.registration.index.getAll();
 ## See also
 
 - [An introductory article on the Content Index API](https://developer.chrome.com/docs/capabilities/web-apis/content-indexing-api)
-- [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
 - [Service Worker API, along with information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)

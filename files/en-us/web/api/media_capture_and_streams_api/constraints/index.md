@@ -5,7 +5,7 @@ page-type: guide
 browser-compat: api.MediaDevices.getSupportedConstraints
 ---
 
-{{APIRef("Media Capture and Streams")}}
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
 This article discusses the twin concepts of **constraints** and **capabilities**, as well as media settings, and includes an example we call the [Constraint Exerciser](#example_constraint_exerciser). The Constraint Exerciser lets you experiment with the results of different constraint sets being applied to the audio and video tracks coming from the computer's A/V input devices (such as its webcam and microphone).
 
@@ -56,7 +56,7 @@ const constraints = {
 myTrack.applyConstraints(constraints);
 ```
 
-In this case, the constraints indicate that any values are fine for nearly all properties, but that a standard high definition (HD) video size is desired, with the standard 16:9 aspect ratio. There's no guarantee that the resulting track will match any of these, but the user agent should do its best to match as many as possible.
+In this case, the constraints indicate that any values are fine for nearly all properties, but that a standard high definition (HD) video size is desired, with the standard 16:9 {{glossary("aspect ratio")}}. There's no guarantee that the resulting track will match any of these, but the user agent should do its best to match as many as possible.
 
 The prioritization of the properties is simple: if two properties' requested values are mutually exclusive, then the one listed first in the constraint set will be used. As an example, if the browser running the code above couldn't provide a 1920x1080 track but could do 1920x900, then that's what would be provided.
 
@@ -98,7 +98,8 @@ if (
 
 Here, after ensuring that the constrainable properties for which matches must be found are supported (`width`, `height`, `frameRate`, and `facingMode`), we set up constraints which request a width no smaller than 640 and no larger than 1920 (but preferably 1920), a height no smaller than 400 (but ideally 1080), an aspect ratio of 16:9 (1.777777778), and a frame rate no greater than 30 frames per second. In addition, the only acceptable input device is a camera facing the user (a "selfie cam"). If the `width`, `height`, `frameRate`, or `facingMode` constraints can't be met, the promise returned by `applyConstraints()` will be rejected.
 
-> **Note:** Constraints which are specified using any or all of `max`, `min`, or `exact` are always treated as mandatory. If any constraint which uses one or more of those can't be met when calling `applyConstraints()`, the promise will be rejected.
+> [!NOTE]
+> Constraints which are specified using any or all of `max`, `min`, or `exact` are always treated as mandatory. If any constraint which uses one or more of those can't be met when calling `applyConstraints()`, the promise will be rejected.
 
 ### Advanced constraints
 
@@ -135,7 +136,8 @@ navigator.mediaDevices
 
 In this example, constraints are applied at `getUserMedia()` time, asking for an ideal set of options with fallbacks for the video.
 
-> **Note:** You can specify one or more media input device IDs to establish restrictions on which input sources are allowed. To collect a list of the available devices, you can call {{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}}, then for each device which meets the desired criteria, add its `deviceId` to the `MediaConstraints` object that eventually gets passed into `getUserMedia()`.
+> [!NOTE]
+> You can specify one or more media input device IDs to establish restrictions on which input sources are allowed. To collect a list of the available devices, you can call {{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}}, then for each device which meets the desired criteria, add its `deviceId` to the `MediaConstraints` object that eventually gets passed into `getUserMedia()`.
 
 You can also change the constraints of an existing {{domxref("MediaStreamTrack")}} on the fly, by calling the track's {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} method, passing into it an object representing the constraints you wish to apply to the track:
 
@@ -350,7 +352,7 @@ audioConstraintEditor.value = audioDefaultConstraintString;
 
 ### Updating the settings display
 
-To the right of each of the constraint set editors is a second text box which we use to display the current configuration of the track's configurable properties. This display is updated by the function `getCurrentSettings()`, which gets the current settings for the audio and video tracks and inserts the corresponding code into the tracks' settings display boxes by setting their [`value`](/en-US/docs/Web/HTML/Element/textarea#value).
+To the right of each of the constraint set editors is a second text box which we use to display the current configuration of the track's configurable properties. This display is updated by the function `getCurrentSettings()`, which gets the current settings for the audio and video tracks and inserts the corresponding code into the tracks' settings display boxes by setting their [`value`](/en-US/docs/Web/API/HTMLTextAreaElement/value).
 
 ```js
 function getCurrentSettings() {
@@ -535,7 +537,8 @@ audioConstraintEditor.addEventListener("keydown", keyDownHandler, false);
 
 The last significant piece of the puzzle: code that displays, for the user's reference, a list of the constrainable properties which their browser supports. Each property is a link to its documentation on MDN for the user's convenience. See the [`MediaDevices.getSupportedConstraints()` examples](/en-US/docs/Web/API/MediaDevices/getSupportedConstraints#examples) for details on how this code works.
 
-> **Note:** Of course, there may be non-standard properties in this list, in which case you probably will find that the documentation link doesn't help much.
+> [!NOTE]
+> Of course, there may be non-standard properties in this list, in which case you probably will find that the documentation link doesn't help much.
 
 ```js
 const supportedConstraints = navigator.mediaDevices.getSupportedConstraints();

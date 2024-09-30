@@ -24,20 +24,21 @@ let duplicating = browser.tabs.duplicate(
 
 - `tabId`
   - : `integer`. The ID of the tab to be duplicated.
-- `duplicateProperties` Optional
+- `duplicateProperties` {{optional_inline}}
 
   - : `object`. An object describing how the tab is duplicated. It contains the following properties:
 
-    - `index` Optional
+    - `index` {{optional_inline}}
       - : `integer`. The position of the new tab in the window. The value is constrained to the range zero to the number of tabs in the window.
-    - `active` Optional
+    - `active` {{optional_inline}}
       - : `boolean`. Whether the tab becomes the active tab in the window. Does not affect whether the window is focused. Defaults to `true`.
 
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing details about the duplicated tab. The `Tab` object only contains `url`, `title` and `favIconUrl` if the extension has the [`"tabs"` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) or matching [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions). If any error occurs the promise will be rejected with an error message.
 
-> **Note:** Beginning with Firefox 68, the promise returned by browser.tabs.duplicate() resolves as soon as the tab has been duplicated. Previously, the promise only resolved once the tab had fully been loaded.
+> [!NOTE]
+> Beginning with Firefox 68, the promise returned by browser.tabs.duplicate() resolves as soon as the tab has been duplicated. Previously, the promise only resolved once the tab had fully been loaded.
 
 ## Examples
 
@@ -72,7 +73,8 @@ querying.then(duplicateFirstTab, onError);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-duplicate) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-duplicate) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

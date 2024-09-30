@@ -46,6 +46,12 @@ A string. The return value depends on the subtype of the `PerformanceEntry` obje
 
     The entry instance will be a {{domxref("LayoutShift")}} object.
 
+- `long-animation-frame`
+
+  - : Reports instances of [long animation frames (LoAFs)](/en-US/docs/Web/API/Performance_API/Long_animation_frame_timing#what_is_a_long_animation_frame).
+
+    The entry instance will be a {{domxref("PerformanceLongAnimationFrameTiming")}} object.
+
 - `longtask`
 
   - : Reports instances of long tasks.

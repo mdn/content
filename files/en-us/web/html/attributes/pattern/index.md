@@ -1,5 +1,6 @@
 ---
 title: "HTML attribute: pattern"
+short-title: pattern
 slug: Web/HTML/Attributes/pattern
 page-type: html-attribute
 browser-compat: html.elements.input.pattern
@@ -29,7 +30,8 @@ Some of the input types supporting the pattern attribute, notably the {{HTMLElem
 
 If the input's value is not the empty string and the value does not match the entire regular expression, there is a constraint violation reported by the {{domxref('ValidityState')}} object's {{domxref('ValidityState.patternMismatch','patternMismatch')}} property being `true`.
 
-> **Note:** If the `pattern` attribute is specified with no value, its value is implicitly the empty string. Thus, **any non-empty** input `value` will result in constraint violation.
+> [!NOTE]
+> If the `pattern` attribute is specified with no value, its value is implicitly the empty string. Thus, **any non-empty** input `value` will result in constraint violation.
 
 ### Usability and accessibility considerations
 

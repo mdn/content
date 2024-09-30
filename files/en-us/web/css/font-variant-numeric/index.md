@@ -7,7 +7,7 @@ browser-compat: css.properties.font-variant-numeric
 
 {{CSSRef}}
 
-The **`font-variant-numeric`** CSS property controls the usage of alternate glyphs for numbers, fractions, and ordinal markers.
+The **`font-variant-numeric`** [CSS](/en-US/docs/Web/CSS) property controls the usage of alternate glyphs for numbers, fractions, and ordinal markers.
 
 {{EmbedInteractiveExample("pages/css/font-variant-numeric.html")}}
 
@@ -52,7 +52,7 @@ This property can take one of two forms:
 
   - : This keyword forces the use of a 0 with a slash; this is useful when a clear distinction between O and 0 is needed. It corresponds to the OpenType values `zero`.
 
-- _`<numeric-figure-values`>_
+- _`<numeric-figure-values>`_
 
   - : These values control the figures used for numbers. Two values are possible:
 

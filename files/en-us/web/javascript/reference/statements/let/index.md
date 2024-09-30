@@ -94,11 +94,13 @@ The term "temporal" is used because the zone depends on the order of execution (
 }
 ```
 
-Using the `typeof` operator for a `let` variable in its TDZ will throw a {{jsxref("ReferenceError")}}:
+Using the `typeof` operator for a variable in its TDZ will throw a {{jsxref("ReferenceError")}}:
 
 ```js example-bad
-typeof i; // ReferenceError: Cannot access 'i' before initialization
-let i = 10;
+{
+  typeof i; // ReferenceError: Cannot access 'i' before initialization
+  let i = 10;
+}
 ```
 
 This differs from using `typeof` for undeclared variables, and variables that hold a value of `undefined`:

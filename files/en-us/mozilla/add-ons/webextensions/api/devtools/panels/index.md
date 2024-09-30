@@ -7,7 +7,8 @@ browser-compat: webextensions.api.devtools.panels
 
 {{AddonSidebar}}
 
-> **Note:** Although the APIs are based on the [Chrome devtools APIs](https://developer.chrome.com/docs/extensions/mv3/devtools/), there are still many features that are not yet implemented in Firefox, and therefore are not documented here. To see which features are currently missing please see [Limitations of the devtools APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools#limitations_of_the_devtools_apis).
+> [!NOTE]
+> Although the APIs are based on the [Chrome devtools APIs](https://developer.chrome.com/docs/extensions/how-to/devtools/extend-devtools), there are still many features that are not yet implemented in Firefox, and therefore are not documented here. To see which features are currently missing please see [Limitations of the devtools APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools#limitations_of_the_devtools_apis).
 
 The `devtools.panels` API lets a devtools extension define its user interface inside the devtools window.
 
@@ -43,17 +44,14 @@ Like all the `devtools` APIs, this API is only available to code running in the 
 - [`devtools.panels.onThemeChanged`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/onThemeChanged)
   - : Fired when the devtools theme changes.
 
-## Example extensions
-
-- [devtools-panels](https://github.com/mdn/webextensions-examples/tree/main/devtools-panels)
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 
 {{Compat}}
 
-{{WebExtExamples("h2")}}
-
-> **Note:** This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/devtools_panels/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/api/devtools/panels) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

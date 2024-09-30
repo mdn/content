@@ -23,7 +23,7 @@ An array containing the following information for each brand:
 
 ## Examples
 
-The following example prints the value of {{domxref("NavigatorUAData.brands")}} to the console.
+The following example prints the value of `brands` to the console.
 
 ```js
 console.log(navigator.userAgentData.brands);

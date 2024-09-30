@@ -10,7 +10,7 @@ browser-compat: api.XRSession.squeezestart_event
 
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The [WebXR](/en-US/docs/Web/API/WebXR_Device_API) event **`squeezestart`** is sent to an {{domxref("XRSession")}} when the user begins a [primary squeeze action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_squeeze_actions) on one of its input sources.
+The [WebXR](/en-US/docs/Web/API/WebXR_Device_API) event **`squeezestart`** is sent to an {{domxref("XRSession")}} when the user begins a [primary squeeze action](/en-US/docs/Web/API/WebXR_Device_API/Inputs#primary_squeeze_action) on one of its input sources.
 
 Primary squeeze actions are actions which are meant to represent gripping or squeezing using your hands, and may be simulated using triggers on hand controllers.
 

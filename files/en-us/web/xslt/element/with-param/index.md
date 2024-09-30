@@ -8,7 +8,7 @@ page-type: xslt-element
 
 The `<xsl:with-param>` element sets the value of a parameter to be passed into a template.
 
-### Syntax
+## Syntax
 
 ```xml
 <xsl:with-param name=NAME select=EXPRESSION>
@@ -30,10 +30,10 @@ The `<xsl:with-param>` element sets the value of a parameter to be passed into a
 
 Subinstruction, always appears within an `<xsl:apply-templates>` or an `<xsl:call-template>` element.
 
-### Defined
+## Specifications
 
 XSLT 11.6
 
-### Gecko support
+## Gecko support
 
 Supported.

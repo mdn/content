@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-colspan
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-colspan` attribute defines the number of columns spanned by a cell or gridcell within a [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role), [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role).
 
 ## Description
@@ -13,7 +15,8 @@ Intended for [`cell`s](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role) and [
 
 In HTML, {{HTMLElement('th')}} and {{HTMLElement('td')}} elements have the [`colspan`](/en-US/docs/Web/HTML/Element/td#attributes) attribute. When using the semantic {{HTMLElement('table')}}, use the native `colspan` attribute as designed. This ARIA attribute is intended for cells and gridcells which are not contained in a native table, and will be ignored if used on a cell in a {{HTMLElement('table')}}.
 
-> **Note:** The first rule of ARIA use is if you can use a native feature with the semantics and behavior you require already built in, instead of repurposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. Employ HTML {{HTMLelement('table')}} elements, including {{HTMLelement('td')}} and {{HTMLelement('th')}} with the `colspan` attribute instead of non-semantic elements with ARIA roles and attributes whenever possible.
+> [!NOTE]
+> The first rule of ARIA use is if you can use a native feature with the semantics and behavior you require already built in, instead of repurposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. Employ HTML {{HTMLelement('table')}} elements, including {{HTMLelement('td')}} and {{HTMLelement('th')}} with the `colspan` attribute instead of non-semantic elements with ARIA roles and attributes whenever possible.
 
 The value of `aria-colspan` should be a positive integer. The default or assumed value of a cell span is 1. Make sure that the included value does cause the cell or gridcell to overlap the next cell or gridcell in the same row and does not cause the cell to span outside of the containing table, grid, or treegrid.
 
@@ -167,11 +170,3 @@ Inherits into roles:
 - [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role) role
 - [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role) role
 - [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role) role
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
-
-</section>

@@ -20,8 +20,7 @@ getter.
 
 The {{domxref("AudioParamMap")}} object containing {{domxref("AudioParam")}} instances.
 They can be automated in the same way as with default `AudioNode`s, and their
-calculated values can be used in the {{domxref("AudioWorkletProcessor.process",
-  "process")}} method of your {{domxref("AudioWorkletProcessor")}}.
+calculated values can be used in the {{domxref("AudioWorkletProcessor.process", "process")}} method of your {{domxref("AudioWorkletProcessor")}}.
 
 ## Examples
 

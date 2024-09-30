@@ -4,7 +4,7 @@ slug: Learn/CSS/Building_blocks/Advanced_styling_effects
 page-type: guide
 ---
 
-{{LearnSidebar}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
 
 This article acts as a box of tricks, providing an introduction to some interesting advanced styling features such as box shadows, blend modes, and filters.
 
@@ -175,7 +175,8 @@ Here we've set up some button styling along with focus/hover/active states. The 
 
 When the button is pressed in, the active state causes the first box shadow to be swapped for a very dark inset shadow, giving the appearance of the button being pressed in.
 
-> **Note:** There is another item that can be set in the `box-shadow` value — another length value can be optionally set just before the color value, which is a **spread radius**. If set, this causes the shadow to become bigger than the original box. It is not very commonly used, but worth mentioning.
+> [!NOTE]
+> There is another item that can be set in the `box-shadow` value — another length value can be optionally set just before the color value, which is a **spread radius**. If set, this causes the shadow to become bigger than the original box. It is not very commonly used, but worth mentioning.
 
 ## Filters
 
@@ -206,7 +207,8 @@ There are two properties that use blend modes in CSS:
 
 You can find a lot more examples than are available here in our [blend-modes.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/blend-modes.html) example page (see [source code](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/advanced_box_effects/blend-modes.html)), and on the {{cssxref("&lt;blend-mode&gt;")}} reference page.
 
-> **Note:** Blend modes are also very new, and slightly less well supported than filters. There is no support as yet in Edge, and Safari only supports some of the blend mode options.
+> [!NOTE]
+> Blend modes are also very new, and slightly less well supported than filters. There is no support as yet in Edge, and Safari only supports some of the blend mode options.
 
 ### background-blend-mode
 
@@ -302,7 +304,8 @@ This gives us the following results:
 
 You can see here that the multiply mix blend has blended together not only the two background images, but also the color from the `<div>` below it too.
 
-> **Note:** Don't worry if you don't understand some of the layout properties above, like {{cssxref("position")}}, {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("z-index")}}, etc. We will cover these in detail in our [CSS Layout](/en-US/docs/Learn/CSS/CSS_layout) module.
+> [!NOTE]
+> Don't worry if you don't understand some of the layout properties above, like {{cssxref("position")}}, {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("z-index")}}, etc. We will cover these in detail in our [CSS Layout](/en-US/docs/Learn/CSS/CSS_layout) module.
 
 ## CSS shapes
 
@@ -316,7 +319,8 @@ In the image below we have a pleasingly round balloon. The actual file is rectan
 
 The shape in this example is not reacting to the content of the image file. Instead, the circle function is taking its center point from the center of the image file, as if we had put a compass in the middle of the file and drawn a circle that fits inside the file. It is that circle that the text flows around.
 
-> **Note:** In Firefox you can use the DevTools [Shapes Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html) to inspect Shapes.
+> [!NOTE]
+> In Firefox you can use the DevTools [Shapes Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html) to inspect Shapes.
 
 The `circle()` function is just one of a few basic shapes that are defined, however there are a number of different ways to create shapes. For more information and example code for CSS Shapes see the [Guides to CSS Shapes](/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes) on MDN.
 
@@ -335,8 +339,11 @@ So why have other browsers implemented a `-webkit-` prefix? Mainly for browser c
 
 If you do want to use such features in your production work, make sure to test across browsers thoroughly and check that, where these features don't work, the site is still usable.
 
-> **Note:** For a full `-webkit-background-clip: text` code example, see [background-clip-text.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html) (see also the [source code](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/advanced_box_effects/background-clip-text.html)).
+> [!NOTE]
+> For a full `-webkit-background-clip: text` code example, see [background-clip-text.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html) (see also the [source code](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/advanced_box_effects/background-clip-text.html)).
 
 ## Summary
 
 We hope this article was fun — playing with shiny toys generally is, and it is always interesting to see what kinds of advanced styling tools are becoming available in modern browsers.
+
+{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}

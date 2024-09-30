@@ -47,7 +47,8 @@ svg {
 
 For {{SVGElement('pattern')}}, `patternTransform` defines a list of [transform definitions](/en-US/docs/Web/SVG/Attribute/transform#transform_functions) that are applied to a pattern tile.
 
-> **Note:** As of SVG2, it is also allowed to use the CSS {{ cssxref('transform') }} property. However, the current state of implementation isn't very good. For backward compatibility reason, it is highly suggested to keep using the `patternTransform` attribute.
+> [!NOTE]
+> As of SVG2, it is also allowed to use the CSS {{ cssxref('transform') }} property. However, the current state of implementation isn't very good. For backward compatibility reason, it is highly suggested to keep using the `patternTransform` attribute.
 
 <table class="properties">
   <tbody>

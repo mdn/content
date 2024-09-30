@@ -9,24 +9,16 @@ browser-compat: html.manifest.share_target
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Type</th>
-      <td><code>Object</code></td>
-    </tr>
-  </tbody>
-</table>
-
 The `share_target` manifest member allows installed {{Glossary("Progressive Web Apps")}} (PWAs) to be registered as a share target in the system's share dialog.
 
 Once registered and installed, a PWA that uses the Web Share Target API acts as a content sharing target, along with typical system share targets like email, messengers, and other native apps that can receive shared content.
 
-> **Note:** If you want to share data using the Web Share API, see [Web Share API](/en-US/docs/Web/API/Web_Share_API) and [`navigator.share()`](/en-US/docs/Web/API/Navigator/share).
+> [!NOTE]
+> If you want to share data using the Web Share API, see [Web Share API](/en-US/docs/Web/API/Web_Share_API) and [`navigator.share()`](/en-US/docs/Web/API/Navigator/share).
 
-## Properties
+### Values
 
-To define how an application can receive share data, a `share_target` object in the manifest may contain the following properties (`action` and `params` are required):
+The value of the `share_target` member is an object that defines how an application can receive shared data. This object may contain the following properties (`action` and `params` are required):
 
 - `action`
   - : The URL for the web share target.

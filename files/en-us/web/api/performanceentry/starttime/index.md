@@ -8,12 +8,12 @@ browser-compat: api.PerformanceEntry.startTime
 
 {{APIRef("Performance API")}}
 
-The read-only **`startTime`** property returns the first {{domxref("DOMHighResTimeStamp","timestamp", "", "no-code")}} recorded for this {{domxref("PerformanceEntry","performance entry", "", "no-code")}}. The meaning of this property depends on the value of this entry's {{domxref("PerformanceEntry.entryType", "entryType")}}.
+The read-only **`startTime`** property returns the first {{domxref("DOMHighResTimeStamp","timestamp", "", "no-code")}} recorded for this {{domxref("PerformanceEntry")}}. The meaning of this property depends on the value of this entry's {{domxref("PerformanceEntry.entryType", "entryType")}}.
 
 ## Value
 
 A {{domxref("DOMHighResTimeStamp")}} representing the first timestamp when the
-{{domxref("PerformanceEntry","performance entry")}} was created.
+{{domxref("PerformanceEntry")}} was created.
 
 The meaning of this property depends on the value of this performance entry's {{domxref("PerformanceEntry.entryType","entryType")}}:
 

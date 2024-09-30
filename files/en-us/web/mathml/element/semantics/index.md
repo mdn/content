@@ -14,7 +14,8 @@ The **`<semantics>`** [MathML](/en-US/docs/Web/MathML) element associates annota
 
 By default, only the first child of the `<semantics>` element is rendered while the others have their [display](/en-US/docs/Web/CSS/display) set to `none`.
 
-> **Note:** Legacy MathML specifications allowed renderers to decide the default rendering according to available annotations. The following rules for determining the visible child have been implemented in some browsers. See [MathML 4](https://w3c.github.io/mathml/) for the distinction between Presentation and Content MathML.
+> [!NOTE]
+> Legacy MathML specifications allowed renderers to decide the default rendering according to available annotations. The following rules for determining the visible child have been implemented in some browsers. See [MathML 4](https://w3c.github.io/mathml/) for the distinction between Presentation and Content MathML.
 >
 > - If no other rules apply: By default only the first child is rendered, which is supposed to be Presentation MathML.
 > - If the first child is a Presentation MathML element other than `<annotation>` or `<annotation-xml>`, render the first child.
@@ -24,7 +25,7 @@ By default, only the first child of the `<semantics>` element is rendered while 
 >   - `"SVG1.1"`
 >   - `"text/html"`
 >   - `"image/svg+xml"`
->   - `"application/xml`".
+>   - `"application/xml"`
 >
 > Note that `"application/mathml+xml"` is _not_ mentioned here as it does not distinguish between Content or Presentation MathML.
 

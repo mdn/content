@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.IDBObjectStore.add
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`add()`** method of the {{domxref("IDBObjectStore")}} interface returns an {{domxref("IDBRequest")}} object, and, in a separate thread, creates a [structured clone](https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#structured-clone) of the value, and stores the cloned value in the object store. This is for adding new records to an object store.
 
@@ -21,8 +21,6 @@ record already exists in the object store with the `key` parameter as its
 key, then an error `ConstraintError` event is fired on the returned request
 object. For updating existing records, you should use the
 {{domxref("IDBObjectStore.put")}} method instead.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -80,7 +78,8 @@ event of success or failure. For a full working example, see our [To-do Notifica
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += "<li>Database initialized.</li>";
+  note.appendChild(document.createElement("li")).textContent =
+    "Database initialized.";
 
   // store the result of opening the database in the db variable.
   // This is used a lot below
@@ -109,12 +108,13 @@ function addData() {
 
   // report on the success of the transaction completing, when everything is done
   transaction.oncomplete = (event) => {
-    note.innerHTML += "<li>Transaction completed.</li>";
+    note.appendChild(document.createElement("li")).textContent =
+      "Transaction completed.";
   };
 
   transaction.onerror = (event) => {
-    note.innerHTML +=
-      "<li>Transaction not opened due to error. Duplicate items not allowed.</li>";
+    note.appendChild(document.createElement("li")).textContent =
+      "Transaction not opened due to error. Duplicate items not allowed.";
   };
 
   // create an object store on the transaction
@@ -125,7 +125,8 @@ function addData() {
 
   objectStoreRequest.onsuccess = (event) => {
     // report the success of our request
-    note.innerHTML += "<li>Request successful.</li>";
+    note.appendChild(document.createElement("li")).textContent =
+      "Request successful.";
   };
 }
 ```

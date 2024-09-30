@@ -6,14 +6,12 @@ page-type: web-api-static-method
 browser-compat: api.IDBKeyRange.bound_static
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`bound()`** static method of the {{domxref("IDBKeyRange")}}
 interface creates a new key range with the specified upper and lower bounds. The
 bounds can be open (that is, the bounds exclude the endpoint values) or closed (that
 is, the bounds include the endpoint values). By default, the bounds are closed.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -60,7 +58,8 @@ the values "A" and "F", as we haven't declared that they should be open bounds. 
 used `IDBKeyRange.bound("A", "F", true, true);`, then the range would not
 include `"A"` and `"F"`, only the values between them.
 
-> **Note:** For a more complete example allowing you to experiment with
+> [!NOTE]
+> For a more complete example allowing you to experiment with
 > key range, have a look at the idbkeyrange directory in the [indexeddb-examples](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) repo. (View the example [live](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/) too.
 
 ```js

@@ -18,7 +18,8 @@ The `ratio` property's default value is `12` and it can be set between `1` and `
 
 An {{domxref("AudioParam")}}.
 
-> **Note:** Though the {{domxref("AudioParam")}} returned is read-only, the value it represents is not.
+> [!NOTE]
+> Though the {{domxref("AudioParam")}} returned is read-only, the value it represents is not.
 
 ## Examples
 

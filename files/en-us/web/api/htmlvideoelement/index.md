@@ -30,7 +30,7 @@ _Inherits properties from its parent interface, {{domxref("HTMLMediaElement")}},
 - {{domxref("HTMLVideoElement.width")}}
   - : A string that reflects the [`width`](/en-US/docs/Web/HTML/Element/video#width) HTML attribute, which specifies the width of the display area, in CSS pixels.
 
-### Gecko-specific properties
+### Firefox-specific properties
 
 - {{domxref("HTMLVideoElement.mozParsedFrames")}} {{Non-standard_Inline}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Returns an `unsigned long` with the count of video frames that have been parsed from the media resource.
@@ -68,6 +68,8 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
   - : Fired when the `HTMLVideoElement` enters picture-in-picture mode successfully.
 - {{DOMxRef("HTMLVideoElement.leavepictureinpicture_event", "leavepictureinpicture")}}
   - : Fired when the `HTMLVideoElement` leaves picture-in-picture mode successfully.
+- {{DOMxRef("HTMLVideoElement.resize_event", "resize")}}
+  - : Fires when one or both of the {{domxref("HTMLVideoElement.videoWidth", "videoWidth")}} and {{domxref("HTMLVideoElement.videoHeight", "videoHeight")}} properties have just been updated.
 
 ## Specifications
 

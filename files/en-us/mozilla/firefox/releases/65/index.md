@@ -78,7 +78,7 @@ _No changes._
 ### JavaScript
 
 - {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}} is now supported ([Firefox bug 1504334](https://bugzil.la/1504334)).
-- Strings now have a maximum {{jsxref("String/length","length","","1")}} of `2**30 - 2` (\~1GB) instead of `2**28 - 1` (\~256MB) ([Firefox bug 1509542](https://bugzil.la/1509542)).
+- Strings now have a maximum {{jsxref("String/length","length","", 1)}} of `2**30 - 2` (\~1GB) instead of `2**28 - 1` (\~256MB) ([Firefox bug 1509542](https://bugzil.la/1509542)).
 - The {{jsxref("globalThis")}} property, which always refers to the top-level global object, has been implemented ([Firefox bug 1317422](https://bugzil.la/1317422)).
 
 ### APIs
@@ -93,7 +93,7 @@ _No changes._
 - {{domxref("Performance.toJSON()")}} has been exposed to {{domxref("Web_Workers_API", "Web Workers", "", "1")}} ([Firefox bug 1504958](https://bugzil.la/1504958)).
 - {{domxref("XMLHttpRequest")}} requests will now throw a `NetworkError` if the requested content type is a `Blob`, and the request method is not `GET` ([Firefox bug 1502599](https://bugzil.la/1502599)).
 - The `-moz-` prefixed versions of many of the {{domxref("Fullscreen API", "", "", "1")}} features have been deprecated, and will now display deprecation warnings in the JavaScript console when encountered ([Firefox bug 1504946](https://bugzil.la/1504946)).
-- {{domxref("createImageBitmap()")}} now supports SVG images ({{domxref("SVGImageElement")}}) as an image source ([Firefox bug 1500768](https://bugzil.la/1500768)).
+- {{domxref("Window.createImageBitmap()")}} and {{domxref("WorkerGlobalScope.createImageBitmap()")}} now supports SVG images ({{domxref("SVGImageElement")}}) as an image source ([Firefox bug 1500768](https://bugzil.la/1500768)).
 
 #### DOM events
 
@@ -192,4 +192,4 @@ _No changes._
 
 ## Older versions
 
-{{Firefox_for_developers(64)}}
+{{Firefox_for_developers}}

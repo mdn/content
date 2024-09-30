@@ -31,7 +31,8 @@ With the basic understanding that you gain from this preparation, you'll be read
 - [Website security](/en-US/docs/Learn/Server-side/First_steps/Website_security)
   - : Website security requires vigilance in all aspects of building and operating a site. This introductory article helps you understand the first important steps you can take to protect your web application against the most common threats.
 
-> **Note:** This topic deals with server-side frameworks, and how to use them to create websites. If you are looking for information on client-side JavaScript frameworks, see [Understanding client-side JavaScript frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks).
+> [!NOTE]
+> This topic deals with server-side frameworks, and how to use them to create websites. If you are looking for information on client-side JavaScript frameworks, see [Understanding client-side JavaScript frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks).
 
 ## Assessments
 

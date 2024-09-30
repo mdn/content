@@ -18,6 +18,8 @@ The element's height is set to the value of `min-height` whenever `min-height` i
 ```css
 /* <length> value */
 min-height: 3.5em;
+min-height: anchor-size(height);
+min-height: anchor-size(--myAnchor block, 200px);
 
 /* <percentage> value */
 min-height: 10%;
@@ -27,6 +29,7 @@ min-height: max-content;
 min-height: min-content;
 min-height: fit-content;
 min-height: fit-content(20em);
+min-height: stretch;
 
 /* Global values */
 min-height: inherit;
@@ -49,9 +52,15 @@ min-height: unset;
 - `min-content`
   - : The intrinsic minimum `min-height`.
 - `fit-content`
-  - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e `min(max-content, max(min-content, stretch))`.
-- `fit-content({{cssxref("&lt;length-percentage&gt;")}})` {{Experimental_Inline}}
+  - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e. `min(max-content, max(min-content, stretch))`.
+- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
   - : Uses the `fit-content` formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, argument))`.
+- `stretch`
+
+  - : Limits the minimum height of the element's [margin box](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#parts_of_a_box) to the height of its [containing block](/en-US/docs/Web/CSS/Containing_block#identifying_the_containing_block). It attempts to make the margin box fill the available space in the containing block, so in a way behaving similar to `100%` but applying the resulting size to the margin box rather than the box determined by [box-sizing](/en-US/docs/Web/CSS/box-sizing).
+
+    > [!NOTE]
+    > To check aliases used by browsers for the `stretch` value and its implementation status, see the [Browser compatibility](#browser_compatibility) section.
 
 ## Formal definition
 

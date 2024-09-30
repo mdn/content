@@ -6,7 +6,7 @@ page-type: guide
 
 {{QuickLinksWithSubPages("/en-US/docs/Web/Media")}}
 
-In the previous [Cross browser video player article](/en-US/docs/Web/Media) we described how to build a cross-browser HTML video player using the Media and Fullscreen APIs. This follow-up article looks at how to style this custom player, including making it responsive.
+In the previous [Cross browser video player article](/en-US/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player) we described how to build a cross-browser HTML video player using the Media and Fullscreen APIs. This follow-up article looks at how to style this custom player, including making it responsive.
 
 ## The example in action
 
@@ -54,7 +54,8 @@ As mentioned above, a `data-state` attribute is used in various places for styli
 
 The resultant video player style used here is rather basic — this is intentional, as the purpose is to show how such a video player could be styled and be made responsive.
 
-> **Note:** in some cases some basic CSS is omitted from the code examples here as its use is either obvious or not specifically relevant to styling the video player.
+> [!NOTE]
+> In some cases some basic CSS is omitted from the code examples here as its use is either obvious or not specifically relevant to styling the video player.
 
 ### Basic styling
 

@@ -12,7 +12,7 @@ browser-compat: api.IdentityProvider.getUserInfo_static
 
 The **`getUserInfo()`** static method of the {{domxref("IdentityProvider")}} interface returns information about a user that has signed in, which can be used to provide a personalized welcome message and sign-in button. This method has to be called from within an identity provider (IdP)-origin {{htmlelement("iframe")}} so that RP scripts cannot access the data. This must occur after a user has been signed in to a relying party (RP) site.
 
-This pattern is already common on sites that use identity federation for sign-in, but `getUserInfo()` provides a way to achieve it without relying on third-party cookies.
+This pattern is already common on sites that use identity federation for sign-in, but `getUserInfo()` provides a way to achieve it without relying on [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies).
 
 ## Usage notes
 
@@ -101,4 +101,4 @@ if (user_info.length > 0) {
 
 ## See also
 
-- [Federated Credential Management API](https://developer.chrome.com/docs/privacy-sandbox/fedcm/) on developer.chrome.com (2023)
+- [Federated Credential Management API](https://developers.google.com/privacy-sandbox/cookies/fedcm) on developers.google.com (2023)

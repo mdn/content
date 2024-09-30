@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.SubtleCrypto.digest
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{APIRef("Web Crypto API")}}{{SecureContext_header}}{{AvailableInWorkers}}
 
 The **`digest()`** method of the {{domxref("SubtleCrypto")}}
 interface generates a {{Glossary("digest")}} of the given data. A digest is a short
@@ -98,10 +98,12 @@ cryptography.
   </tbody>
 </table>
 
-> **Warning:** SHA-1 is now considered vulnerable and should not
+> [!WARNING]
+> SHA-1 is now considered vulnerable and should not
 > be used for cryptographic applications.
 
-> **Note:** If you are looking here for how to create a keyed-hash message authentication
+> [!NOTE]
+> If you are looking here for how to create a keyed-hash message authentication
 > code ([HMAC](/en-US/docs/Glossary/HMAC)), you need to use the [SubtleCrypto.sign()](/en-US/docs/Web/API/SubtleCrypto/sign#hmac) instead.
 
 ## Examples
@@ -120,7 +122,7 @@ const text =
 async function digestMessage(message) {
   const encoder = new TextEncoder();
   const data = encoder.encode(message);
-  const hash = await crypto.subtle.digest("SHA-256", data);
+  const hash = await window.crypto.subtle.digest("SHA-256", data);
   return hash;
 }
 
@@ -141,7 +143,7 @@ const text =
 
 async function digestMessage(message) {
   const msgUint8 = new TextEncoder().encode(message); // encode as (utf-8) Uint8Array
-  const hashBuffer = await crypto.subtle.digest("SHA-256", msgUint8); // hash the message
+  const hashBuffer = await window.crypto.subtle.digest("SHA-256", msgUint8); // hash the message
   const hashArray = Array.from(new Uint8Array(hashBuffer)); // convert buffer to byte array
   const hashHex = hashArray
     .map((b) => b.toString(16).padStart(2, "0"))

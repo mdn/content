@@ -36,9 +36,11 @@ A {{jsxref("Promise")}} that fulfills with `undefined`.
 - In the case of {{domxref("WorkletSharedStorage")}}, the `Promise` rejects with a {{jsxref("TypeError")}} if:
   - The worklet module has not been added with {{domxref("Worklet.addModule", "SharedStorageWorklet.addModule()")}}.
 
-> **Note:** If the key-value pair doesn't exist in the shared storage, no error is thrown — the operation still fulfills with `undefined`.
+> [!NOTE]
+> If the key-value pair doesn't exist in the shared storage, no error is thrown — the operation still fulfills with `undefined`.
 
-> **Note:** In the case of {{domxref("WindowSharedStorage")}}, if the `delete()` operation doesn't successfully write to the database for a reason other than shared storage not being available, no error is thrown — the operation still fulfills with `undefined`.
+> [!NOTE]
+> In the case of {{domxref("WindowSharedStorage")}}, if the `delete()` operation doesn't successfully write to the database for a reason other than shared storage not being available, no error is thrown — the operation still fulfills with `undefined`.
 
 ## Examples
 

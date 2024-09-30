@@ -6,13 +6,11 @@ page-type: web-api-instance-method
 browser-compat: api.Headers.getSetCookie
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}} {{AvailableInWorkers}}
 
 The **`getSetCookie()`** method of the {{domxref("Headers")}} interface returns an array containing the values of all {{httpheader("Set-Cookie")}} headers associated with a response. This allows {{domxref("Headers")}} objects to handle having multiple `Set-Cookie` headers, which wasn't possible prior to its implementation.
 
 This method is intended for use on server environments (for example Node.js). Browsers block frontend JavaScript code from accessing the {{httpheader("Set-Cookie")}} header, as required by the Fetch spec, which defines `Set-Cookie` as a [forbidden response-header name](https://fetch.spec.whatwg.org/#forbidden-response-header-name) that [must be filtered out](https://fetch.spec.whatwg.org/#ref-for-forbidden-response-header-name%E2%91%A0) from any response exposed to frontend code.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

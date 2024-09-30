@@ -2,7 +2,6 @@
 title: API property subpage template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_property_subpage_template
 page-type: mdn-writing-guide
-browser-compat: path.to.feature.NameOfTheProperty
 ---
 
 {{MDNSidebar}}
@@ -18,7 +17,7 @@ browser-compat: path.to.feature.NameOfTheProperty
 >
 > ```md
 > ---
-> title: NameOfTheParentInterface.NameOfTheProperty
+> title: "NameOfTheParentInterface: NameOfTheProperty property"
 > slug: Web/API/NameOfTheParentInterface/NameOfTheProperty
 > page-type: web-api-instance-property OR web-api-static-property
 > status:
@@ -31,8 +30,8 @@ browser-compat: path.to.feature.NameOfTheProperty
 >
 > - **title**
 >   - : Title heading displayed at the top of the page.
->     Format as _NameOfTheParentInterface_**.**_NameOfTheProperty_.
->     For example, the [`capabilities`](/en-US/docs/Web/API/VRDisplay/capabilities) property of the [`VRDisplay`](/en-US/docs/Web/API/VRDisplay) interface has a `title` of `VRDisplay.capabilities`.
+>     Format as "NameOfTheParentInterface: NameOfTheProperty property".
+>     For example, the [`capabilities`](/en-US/docs/Web/API/VRDisplay/capabilities) property of the [`VRDisplay`](/en-US/docs/Web/API/VRDisplay) interface has a `title` of `VRDisplay: capabilities property`.
 > - **slug**
 >
 >   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`.
@@ -72,7 +71,7 @@ browser-compat: path.to.feature.NameOfTheProperty
 > - `\{{APIRef("GroupDataName")}}` — this generates the left-hand reference sidebar showing quick reference links related to the current page.
 >   For example, every page in the [WebVR API](/en-US/docs/Web/API/WebVR_API) has the same sidebar, which points to the other pages in the API.
 >   To generate the correct sidebar for your API, you need to add a `GroupData` entry to our GitHub repo, and include the entry's name inside the macro call in place of _GroupDataName_.
->   See our [API reference sidebars](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars) guide for information on how to do this. Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
+>   See our [API reference sidebars](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars) guide for information on how to do this. Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
 >
 > Do not provide status header macros manually. Refer to the section ["How to add or update feature statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses) to add these statuses to the page.
 >
@@ -88,7 +87,12 @@ You could copy most of this from the property's summary on the corresponding API
 
 ## Value
 
-Include a description of the property's value, including data type and what it represents.
+Include a description of the property's value, including data type and what it represents. This should be in the form: "A [name of the property type] representing ...". For example:
+
+> A string representing...
+
+Note that some property pages are written in the form "Returns a [name of the property type] representing..." but this is not the recommended form.
+Also, some WebIDL extended attributes with specific meanings can be associated with the type. There are standard ways to document them; consult [Information contained in a WebIDL file](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file#type_of_the_property) for more information.
 
 ## Examples
 
@@ -100,7 +104,8 @@ Each example must have an H3 heading (`###`) naming the example. The heading sho
 
 See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples) for more information.
 
-> **Note:** Sometimes you will want to link to examples given on another page.
+> [!NOTE]
+> Sometimes you will want to link to examples given on another page.
 >
 > **Scenario 1:** If you have some examples on this page and some more examples on another page:
 >
@@ -125,7 +130,7 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 > ```md
 > ## Examples
 >
-> For examples of this API, see [the page on fetch()](https://example.org).
+> For examples of this API, see [the page on fetch()](https://example.org/).
 > ```
 
 ## Specifications

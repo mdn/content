@@ -5,13 +5,11 @@ page-type: web-api-interface
 browser-compat: api.Notification
 ---
 
-{{APIRef("Web Notifications")}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 The **`Notification`** interface of the {{domxref("Notifications API", "", "", "nocode")}} is used to configure and display desktop notifications to the user.
 
 These notifications' appearance and specific functionality vary across platforms but generally they provide a way to asynchronously provide information to the user.
-
-{{AvailableInWorkers}}
 
 {{InheritanceDiagram}}
 
@@ -135,7 +133,8 @@ function notifyMe() {
 
 We no longer show a live sample on this page, as Chrome and Firefox no longer allow notification permissions to be requested from cross-origin {{htmlelement("iframe")}}s, with other browsers to follow. To see an example in action, check out our [To-do list example](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) (also see [the app running live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
-> **Note:** In the above example we spawn notifications in response to a user gesture (clicking a button). This is not only best practice — you should not be spamming users with notifications they didn't agree to — but going forward browsers will explicitly disallow notifications not triggered in response to a user gesture. Firefox is already doing this from version 72, for example.
+> [!NOTE]
+> In the above example we spawn notifications in response to a user gesture (clicking a button). This is not only best practice — you should not be spamming users with notifications they didn't agree to — but going forward browsers will explicitly disallow notifications not triggered in response to a user gesture. Firefox is already doing this from version 72, for example.
 
 ## Specifications
 

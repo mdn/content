@@ -1,5 +1,5 @@
 ---
-title: CSS first steps overview
+title: CSS first steps
 slug: Learn/CSS/First_steps
 page-type: learn-module
 ---
@@ -7,15 +7,6 @@ page-type: learn-module
 {{LearnSidebar}}
 
 CSS (Cascading Style Sheets) is used to style and lay out web pages — for example, to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features. This module provides a gentle beginning to your path towards CSS mastery with the basics of how it works, what the syntax looks like, and how you can start using it to add styling to HTML.
-
-> **Callout:**
->
-> #### Looking to become a front-end web developer?
->
-> We have put together a course that includes all the essential information you need to
-> work towards your goal.
->
-> [**Get started**](/en-US/docs/Learn/Front-end_web_developer)
 
 ## Prerequisites
 
@@ -25,7 +16,8 @@ Before starting this module, you should have:
 2. A basic work environment set up, as detailed in [Installing basic software](/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software), and an understanding of how to create and manage files, as detailed in [Dealing with files](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files).
 3. Basic familiarity with HTML, as discussed in the [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) module.
 
-> **Note:** If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
+> [!NOTE]
+> If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
 
 ## Guides
 
@@ -46,3 +38,8 @@ The following assessment will test your understanding of the CSS basics covered 
 
 - [Styling a biography page](/en-US/docs/Learn/CSS/First_steps/Styling_a_biography_page)
   - : With the things you have learned in the last few articles, you should find that you can format simple text documents using CSS to add your own style to them. This assessment gives you a chance to do that.
+
+## See also
+
+- [Learn HTML and CSS](https://v2.scrimba.com/learn-html-and-css-c0p?via=mdn) <sup>_MDN Curriculum partner_</sup>
+  - : [Scrimba's](https://scrimba.com?via=mdn) _Learn HTML and CSS_ course teaches you HTML and CSS through building and deploying five awesome projects, with fun interactive lessons and challenges taught by knowledgeable teachers.

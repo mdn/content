@@ -36,26 +36,26 @@ The following example runs through the attribute nodes for the element in the do
 with id "paragraph", and prints each attribute's value.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <title>Attributes example</title>
     <script>
-    function listAttributes() {
-       const paragraph = document.getElementById("paragraph");
-       const result = document.getElementById("result");
+      function listAttributes() {
+        const paragraph = document.getElementById("paragraph");
+        const result = document.getElementById("result");
 
-       // First, let's verify that the paragraph has some attributes
-       if (paragraph.hasAttributes()) {
-         let output = "Attributes of first paragraph:\n";
-         for (const attr of paragraph.attributes) {
-           output += `${attr.name} -> ${attr.value}\n`;
-         }
-         result.textContent = output;
-       } else {
-         result.textContent = "No attributes to show";
-       }
-    }
+        // First, let's verify that the paragraph has some attributes
+        if (paragraph.hasAttributes()) {
+          let output = "Attributes of first paragraph:\n";
+          for (const attr of paragraph.attributes) {
+            output += `${attr.name} -> ${attr.value}\n`;
+          }
+          result.textContent = output;
+        } else {
+          result.textContent = "No attributes to show";
+        }
+      }
     </script>
   </head>
 
@@ -63,11 +63,13 @@ with id "paragraph", and prints each attribute's value.
     <p id="paragraph" style="color: green;">Sample Paragraph</p>
     <form action="">
       <p>
-        <input type="button" value="Show first attribute name and value"
-          onclick="listAttributes();">
-        <pre id="result"></pre>
+        <input
+          type="button"
+          value="Show first attribute name and value"
+          onclick="listAttributes();" />
       </p>
     </form>
+    <pre id="result"></pre>
   </body>
 </html>
 ```

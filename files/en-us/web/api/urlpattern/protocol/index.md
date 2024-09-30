@@ -8,14 +8,12 @@ status:
 browser-compat: api.URLPattern.protocol
 ---
 
-{{APIRef("URL Pattern API")}}{{SeeCompatTable}}
+{{APIRef("URL Pattern API")}}{{SeeCompatTable}} {{AvailableInWorkers}}
 
 The **`protocol`** read-only property of the {{domxref("URLPattern")}} interface is a
 string containing the pattern used to match the protocol part
 of a URL. This value may differ from the input to the constructor due to
 normalization.
-
-{{AvailableInWorkers}}
 
 ## Value
 

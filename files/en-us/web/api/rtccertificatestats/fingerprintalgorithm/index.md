@@ -14,7 +14,7 @@ The **`fingerprintAlgorithm`** property of the {{domxref("RTCCertificateStats")}
 
 A string containing the name of the hash function used to create the fingerprint of the associated certificate.
 
-Allowed values are: `"sha-1"`, `"sha-224"`, `"sha-256"`,`"sha-384"`, `"sha-512"`, `"md5"`, `"md2"`. <!-- from [RFC4572, Section 5](https://www.rfc-editor.org/rfc/rfc4572#section-5) -->
+Allowed values are: `"sha-1"`, `"sha-224"`, `"sha-256"`, `"sha-384"`, `"sha-512"`, `"md5"`, `"md2"`. <!-- from [RFC4572, Section 5](https://www.rfc-editor.org/rfc/rfc4572#section-5) -->
 
 ## Specifications
 

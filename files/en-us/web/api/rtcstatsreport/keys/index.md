@@ -48,7 +48,7 @@ for (const id of stats.keys()) {
 
 Note that this examples is somewhat contrived.
 You could more easily iterate with {{domxref("RTCStatsReport.entries()","entries()")}} or {{domxref("RTCStatsReport.values()","values()")}} and not have to map the ID to a value.
-You can even iterate the {{domxref("RTCStatsReport")}} itself, as it has the [`@@iterator`](/en-US/docs/Web/API/RTCStatsReport/@@iterator) method!
+You can even iterate the {{domxref("RTCStatsReport")}} itself, as it has the [`[Symbol.iterator]()`](/en-US/docs/Web/API/RTCStatsReport/Symbol.iterator) method!
 
 ## Specifications
 

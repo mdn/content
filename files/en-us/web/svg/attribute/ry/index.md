@@ -72,7 +72,8 @@ For {{SVGElement('ellipse')}}, `ry` defines the y-radius of the shape. With a va
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `ry` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for ellipses.
+> [!NOTE]
+> The y-radius of the `<ellipse>` can also be defined with the {{cssxref("ry")}} _geometry property_. If set in CSS, the `ry` property value overrides the `ry` attribute value.
 
 ## rect
 
@@ -114,7 +115,8 @@ The way the value of the `ry` attribute is interpreted depend on both the {{SVGA
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `ry` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for rects.
+> [!NOTE]
+> The vertical curve of the corners of the `<rect>` can also be defined with the {{cssxref("ry")}} _geometry property_. If set in CSS, the `ry` property value overrides the `ry` attribute value.
 
 ## Specifications
 

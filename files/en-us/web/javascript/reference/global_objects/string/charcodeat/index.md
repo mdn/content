@@ -59,7 +59,8 @@ const str = "𠮷𠮾";
 console.log(str.codePointAt(0)); // 134071
 ```
 
-> **Note:** Avoid re-implementing `codePointAt()` using `charCodeAt()`. The translation from UTF-16 surrogates to Unicode code points is complex, and `codePointAt()` may be more performant as it directly uses the internal representation of the string. Install a polyfill for `codePointAt()` if necessary.
+> [!NOTE]
+> Avoid re-implementing `codePointAt()` using `charCodeAt()`. The translation from UTF-16 surrogates to Unicode code points is complex, and `codePointAt()` may be more performant as it directly uses the internal representation of the string. Install a polyfill for `codePointAt()` if necessary.
 
 Below is a possible algorithm to convert a pair of UTF-16 code units into a Unicode code point, adapted from the [Unicode FAQ](https://unicode.org/faq/utf_bom.html#utf16-3):
 

@@ -8,12 +8,13 @@ status:
 browser-compat: api.GPURenderBundleEncoder.drawIndexedIndirect
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`drawIndexedIndirect()`** method of the
 {{domxref("GPURenderBundleEncoder")}} interface draws indexed primitives using parameters read from a {{domxref("GPUBuffer")}}.
 
-> **Note:** This method is functionally identical to its equivalent on {{domxref("GPURenderPassEncoder")}} — {{domxref("GPURenderPassEncoder.drawIndexedIndirect", "drawIndexedIndirect()")}}.
+> [!NOTE]
+> This method is functionally identical to its equivalent on {{domxref("GPURenderPassEncoder")}} — {{domxref("GPURenderPassEncoder.drawIndexedIndirect", "drawIndexedIndirect()")}}.
 
 ## Syntax
 

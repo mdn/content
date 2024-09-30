@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.getParameter
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.getParameter()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns a value for the passed
 parameter name.
@@ -893,8 +893,7 @@ You can query the following `pname` parameters when using a
       </td>
       <td>
         See
-        {{domxref("WebGL2RenderingContext/bindTransformFeedback",
-        "bindTransformFeedback")}}.
+        {{domxref("WebGL2RenderingContext/bindTransformFeedback", "bindTransformFeedback")}}.
       </td>
     </tr>
     <tr>

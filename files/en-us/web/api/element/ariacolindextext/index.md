@@ -2,12 +2,10 @@
 title: Element.ariaColIndexText
 slug: Web/API/Element/ariaColIndexText
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.Element.ariaColIndexText
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("DOM")}}
 
 The **`ariaColIndexText`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-colindextext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindextext) attribute, which defines a human readable text alternative of aria-colindex.
 

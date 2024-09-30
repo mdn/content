@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.XMLHttpRequest.overrideMimeType
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
 The {{domxref("XMLHttpRequest")}} method
 **`overrideMimeType()`** specifies a MIME type other than the
@@ -15,8 +15,7 @@ transferred in a request.
 
 This may be used, for example, to force a stream to
 be treated and parsed as `"text/xml"`, even if the server does not report it
-as such. This method must be called before calling {{domxref("XMLHttpRequest.send",
-  "send()")}}.
+as such. This method must be called before calling {{domxref("XMLHttpRequest.send", "send()")}}.
 
 ## Syntax
 
@@ -40,7 +39,8 @@ None ({{jsxref("undefined")}}).
 This example specifies a MIME type of `"text/plain"`, overriding the
 server's stated type for the data being received.
 
-> **Note:** If the server doesn't provide a
+> [!NOTE]
+> If the server doesn't provide a
 > [`Content-Type`](/en-US/docs/Web/HTTP/Headers/Content-Type)
 > header, {{domxref("XMLHttpRequest")}} assumes that the MIME type is
 > `"text/xml"`. If the content isn't valid XML, an "XML Parsing Error: not

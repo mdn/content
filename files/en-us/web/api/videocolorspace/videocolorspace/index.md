@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.VideoColorSpace.VideoColorSpace
 ---
 
-{{APIRef("WebCodecs API")}}
+{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`VideoColorSpace()`** constructor creates a new {{domxref("VideoColorSpace")}} object which represents a video color space.
 
