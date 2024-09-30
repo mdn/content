@@ -2,7 +2,6 @@
 title: CSS property page template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_template
 page-type: mdn-writing-guide
-browser-compat: css.properties.NameOfTheProperty
 ---
 
 {{MDNSidebar}}

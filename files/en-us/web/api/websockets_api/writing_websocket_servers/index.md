@@ -64,12 +64,12 @@ Connection: Upgrade
 Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
 ```
 
-Additionally, the server can decide on extension/subprotocol requests here; see [Miscellaneous](#miscellaneous) for details. The `Sec-WebSocket-Accept` header is important in that the server must derive it from the {{HTTPHeader("Sec-WebSocket-Key")}} that the client sent to it. To get it, concatenate the client's `Sec-WebSocket-Key` and the string "`258EAFA5-E914-47DA-95CA-C5AB0DC85B11`" together (it's a "[magic string](https://en.wikipedia.org/wiki/Magic_string)"), take the [SHA-1 hash](https://en.wikipedia.org/wiki/SHA-1) of the result, and return the [base64](https://en.wikipedia.org/wiki/Base64) encoding of that hash.
+Additionally, the server can decide on extension/subprotocol requests here; see [Miscellaneous](#miscellaneous) for details. The `Sec-WebSocket-Accept` header is important in that the server must derive it from the {{HTTPHeader("Sec-WebSocket-Key")}} that the client sent to it. To get it, concatenate the client's `Sec-WebSocket-Key` and the string `"258EAFA5-E914-47DA-95CA-C5AB0DC85B11"` together (it's a "[magic string](https://en.wikipedia.org/wiki/Magic_string)"), take the [SHA-1 hash](https://en.wikipedia.org/wiki/SHA-1) of the result, and return the [base64](https://en.wikipedia.org/wiki/Base64) encoding of that hash.
 
 > [!NOTE]
 > This seemingly overcomplicated process exists so that it's obvious to the client whether the server supports WebSockets. This is important because security issues might arise if the server accepts a WebSockets connection but interprets the data as a HTTP request.
 
-So if the Key was "`dGhlIHNhbXBsZSBub25jZQ==`", the `Sec-WebSocket-Accept` header's value is "`s3pPLMBiTxaQ9kYGzzhZRbK+xOo=`". Once the server sends these headers, the handshake is complete and you can start swapping data!
+So if the Key was `"dGhlIHNhbXBsZSBub25jZQ=="`, the `Sec-WebSocket-Accept` header's value is `"s3pPLMBiTxaQ9kYGzzhZRbK+xOo="`. Once the server sends these headers, the handshake is complete and you can start swapping data!
 
 > [!NOTE]
 > The server can send other headers like {{HTTPHeader("Set-Cookie")}}, or ask for authentication or redirects via other status codes, before sending the reply handshake.
@@ -222,7 +222,7 @@ Sec-WebSocket-Protocol: wamp
 
 Now the server must pick one of the protocols that the client suggested and it supports. If there is more than one, send the first one the client sent. Imagine our server can use both `soap` and `wamp`. Then, in the response handshake, it sends:
 
-```bash
+```http
 Sec-WebSocket-Protocol: soap
 ```
 

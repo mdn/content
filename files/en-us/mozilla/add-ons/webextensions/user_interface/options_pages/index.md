@@ -26,6 +26,7 @@ To create an options page, write an HTML file defining the page. This page can i
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="color-scheme" content="dark light" />
   </head>
 
   <body>
@@ -38,6 +39,8 @@ To create an options page, write an HTML file defining the page. This page can i
   </body>
 </html>
 ```
+
+Note the use of `<meta name="color-scheme" content="dark light">`. This enables automatic switching between light and dark themes in the embedded UI based on the user's browser preferences.
 
 JavaScript running in the page can use all the [WebExtension APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API) that the add-on has [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) for. In particular, you can use the [`storage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage) API to persist preferences.
 
@@ -55,7 +58,7 @@ See the [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/o
 
 ## Options content design
 
-For details on how to design your options content to match the style of Firefox, see the [Acorn Design System](https://acorn.firefox.com/latest/).
+For details on how to design your options content to match the style of Firefox, see the [Acorn Design System](https://acorn.firefox.com/latest).
 
 ## Examples
 

@@ -11,7 +11,7 @@ The introduction of the browser extensions API created a uniform landscape for t
 Maximizing the reach of your browser extension means developing it for at least two browsers, possibly more. This article looks at the main challenges faced when creating a cross-browser extension and suggests how to address these challenges.
 
 > [!NOTE]
-> The main browsers have adopted Manifest V3. This manifest version provides better compatibility between the browser extension environments, such as promises for handling asynchronous events. In addition to the information in this guide, refer to the Manifest V3 migration guides for [Firefox](https://extensionworkshop.com/documentation/develop/manifest-v3-migration-guide/) and [Chrome](https://developer.chrome.com/docs/extensions/migrating/).
+> The main browsers have adopted Manifest V3. This manifest version provides better compatibility between the browser extension environments, such as promises for handling asynchronous events. In addition to the information in this guide, refer to the Manifest V3 migration guides for [Firefox](https://extensionworkshop.com/documentation/develop/manifest-v3-migration-guide/) and [Chrome](https://developer.chrome.com/docs/extensions/develop/migrate).
 
 ## Cross-platform extension coding hurdles
 

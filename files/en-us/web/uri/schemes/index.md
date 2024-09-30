@@ -44,6 +44,10 @@ protocol:
     - `ws` / `wss`
       - : [WebSocket connections (Secure)](/en-US/docs/Web/API/WebSockets_API)
 
+## Specifications
+
+{{Specifications}}
+
 ## See also
 
 - [URIs](/en-US/docs/Web/URI)

@@ -154,6 +154,8 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
   - : Fired when the duration property has been updated.
 - {{domxref("HTMLMediaElement.emptied_event", 'emptied')}}
   - : Fired when the media has become empty; for example, when the media has already been loaded (or partially loaded), and the {{domxref("HTMLMediaElement.load()")}} method is called to reload it.
+- {{domxref("HTMLMediaElement.encrypted_event", 'encrypted')}}
+  - : Fired when initialization data is found in the media, indicating that it is encrypted.
 - {{domxref("HTMLMediaElement.ended_event", 'ended')}}
   - : Fired when playback stops when end of the media (\<audio> or \<video>) is reached or because no further data is available.
 - {{domxref("HTMLMediaElement.error_event", 'error')}}

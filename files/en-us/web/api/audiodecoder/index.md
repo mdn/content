@@ -2,12 +2,10 @@
 title: AudioDecoder
 slug: Web/API/AudioDecoder
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.AudioDecoder
 ---
 
-{{securecontext_header}}{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`AudioDecoder`** interface of the {{domxref('WebCodecs API','','',' ')}} decodes chunks of audio.
 
@@ -15,41 +13,41 @@ The **`AudioDecoder`** interface of the {{domxref('WebCodecs API','','',' ')}} d
 
 ## Constructor
 
-- {{domxref("AudioDecoder.AudioDecoder", "AudioDecoder()")}} {{Experimental_Inline}}
+- {{domxref("AudioDecoder.AudioDecoder", "AudioDecoder()")}}
   - : Creates a new `AudioDecoder` object.
 
 ## Instance properties
 
 _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 
-- {{domxref("AudioDecoder.decodeQueueSize")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("AudioDecoder.decodeQueueSize")}} {{ReadOnlyInline}}
   - : An integer representing the number of decode queue requests.
-- {{domxref("AudioDecoder.state")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("AudioDecoder.state")}} {{ReadOnlyInline}}
   - : Represents the state of the underlying codec and whether it is configured for decoding.
 
 ### Events
 
-- {{domxref("AudioDecoder.dequeue_event", "dequeue")}} {{Experimental_Inline}}
+- {{domxref("AudioDecoder.dequeue_event", "dequeue")}}
   - : Fires to signal a decrease in {{domxref("AudioDecoder.decodeQueueSize")}}.
 
 ## Static methods
 
-- {{domxref("AudioDecoder/isConfigSupported_static", "AudioDecoder.isConfigSupported()")}} {{Experimental_Inline}}
+- {{domxref("AudioDecoder/isConfigSupported_static", "AudioDecoder.isConfigSupported()")}}
   - : Returns a promise indicating whether the provided `AudioDecoderConfig` is supported.
 
 ## Instance methods
 
 _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
 
-- {{domxref("AudioDecoder.configure()")}} {{Experimental_Inline}}
+- {{domxref("AudioDecoder.configure()")}}
   - : Enqueues a control message to configure the audio decoder for decoding chunks.
-- {{domxref("AudioDecoder.decode()")}} {{Experimental_Inline}}
+- {{domxref("AudioDecoder.decode()")}}
   - : Enqueues a control message to decode a given chunk of audio.
-- {{domxref("AudioDecoder.flush()")}} {{Experimental_Inline}}
+- {{domxref("AudioDecoder.flush()")}}
   - : Returns a promise that resolves once all pending messages in the queue have been completed.
-- {{domxref("AudioDecoder.reset()")}} {{Experimental_Inline}}
+- {{domxref("AudioDecoder.reset()")}}
   - : Resets all states including configuration, control messages in the control message queue, and all pending callbacks.
-- {{domxref("AudioDecoder.close()")}} {{Experimental_Inline}}
+- {{domxref("AudioDecoder.close()")}}
   - : Ends all pending work and releases system resources.
 
 ## Specifications

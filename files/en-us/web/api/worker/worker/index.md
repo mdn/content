@@ -16,14 +16,25 @@ The **`Worker()`** constructor creates a {{domxref("Worker")}} object that execu
 ## Syntax
 
 ```js-nolint
-new Worker(aURL)
-new Worker(aURL, options)
+new Worker(url)
+new Worker(url, options)
 ```
 
 ### Parameters
 
-- `aURL`
-  - : A string representing the URL of the script the worker will execute. It must obey the same-origin policy.
+- `url`
+
+  - : A string representing the URL of the script the worker will execute. It must obey the same-origin policy. The URL is resolved relative to the current HTML page's location.
+
+    > [!NOTE]
+    > Bundlers, including [Webpack](https://webpack.js.org/guides/web-workers/), [Vite](https://vitejs.dev/guide/features.html#web-workers), and [Parcel](https://parceljs.org/languages/javascript/#web-workers), recommend passing URLs that are relative to [`import.meta.url`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta#url) to the `Worker()` constructor. For example:
+    >
+    > ```js
+    > const myWorker = new Worker(new URL("worker.js", import.meta.url));
+    > ```
+    >
+    > This way, the path is relative to the current script instead of the current HTML page, which allows the bundler to safely do optimizations like renaming (because otherwise the `worker.js` URL may point to a file not controlled by the bundler, so it cannot make any assumptions).
+
 - `options` {{optional_inline}}
 
   - : An object containing option properties that can be set when creating the object instance. Available properties are as follows:

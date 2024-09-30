@@ -66,17 +66,16 @@ milliseconds) with `0.1 * elapsed`. The element's final position is 200px
 const element = document.getElementById("some-element-you-want-to-animate");
 let start;
 
-function step(timeStamp) {
+function step(timestamp) {
   if (start === undefined) {
-    start = timeStamp;
+    start = timestamp;
   }
-  const elapsed = timeStamp - start;
+  const elapsed = timestamp - start;
 
   // Math.min() is used here to make sure the element stops at exactly 200px
   const shift = Math.min(0.1 * elapsed, 200);
   element.style.transform = `translateX(${shift}px)`;
   if (shift < 200) {
-    previousTimeStamp = timeStamp;
     requestAnimationFrame(step);
   }
 }
@@ -100,12 +99,12 @@ and the first call to the callback function.
 ```js
 let zero;
 requestAnimationFrame(firstFrame);
-function firstFrame(timeStamp) {
-  zero = timeStamp;
-  animate(timeStamp);
+function firstFrame(timestamp) {
+  zero = timestamp;
+  animate(timestamp);
 }
-function animate(timeStamp) {
-  const value = (timeStamp - zero) / duration;
+function animate(timestamp) {
+  const value = (timestamp - zero) / duration;
   if (value < 1) {
     element.style.opacity = value;
     requestAnimationFrame((t) => animate(t));
@@ -115,14 +114,14 @@ function animate(timeStamp) {
 
 This example uses {{domxref("AnimationTimeline/currentTime", "document.timeline.currentTime")}} to set a zero value
 before the first call to `requestAnimationFrame`. `document.timeline.currentTime`
-aligns with the `timeStamp` argument, so the zero value is equivalent to the
+aligns with the `timestamp` argument, so the zero value is equivalent to the
 0th frame's timestamp.
 
 ```js
 const zero = document.timeline.currentTime;
 requestAnimationFrame(animate);
-function animate(timeStamp) {
-  const value = (timeStamp - zero) / duration; // animation-timing-function: linear
+function animate(timestamp) {
+  const value = (timestamp - zero) / duration; // animation-timing-function: linear
   if (value < 1) {
     element.style.opacity = value;
     requestAnimationFrame((t) => animate(t));

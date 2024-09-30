@@ -172,7 +172,7 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
 
 ### Flex basis `0` vs `0%`
 
-This example demonstrates the difference between a `flex-basis` of `0` verus a `flex-basis` of `0%` when `flex-direction` is set to `column` and the flex containers and flex items don't have a set height; while `0` is an absolute length, percentage flex-basis values resolve to [`content`](#content) values.
+This example demonstrates the difference between a `flex-basis` of `0` versus a `flex-basis` of `0%` when `flex-direction` is set to `column` and the flex containers and flex items don't have a set height; while `0` is an absolute length, percentage flex-basis values resolve to [`content`](#content) values.
 
 #### HTML
 

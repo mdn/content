@@ -11,7 +11,7 @@ A {{WebExtAPIRef("storage.StorageArea")}} object that represents the `managed` s
 
 ## Provisioning managed storage
 
-The procedure for provisioning managed storage varies between browsers. For Chrome instructions, see the ["Manifest for storage areas"](https://developer.chrome.com/docs/extensions/mv3/manifest/storage/) article.
+The procedure for provisioning managed storage varies between browsers. For Chrome instructions, see the ["Manifest for storage areas"](https://developer.chrome.com/docs/extensions/reference/manifest/storage) article.
 
 For Firefox, you need to create a JSON manifest file in a specific format and location. For the details of manifest syntax and location, see [Native manifests](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests).
 
@@ -60,7 +60,7 @@ The `managed` object implements the events defined on the {{WebExtAPIRef("storag
 {{Compat}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/storage/#property-managed) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
+> This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage#property-managed) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

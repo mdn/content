@@ -39,7 +39,7 @@ Permissions delegated from the top-level context to a fenced frame for allowing 
 
 The only features that can be enabled by a policy inside fenced frames are the specific features designed to be used inside fenced frames:
 
-- [Protected Audience API](https://developers.google.com/privacy-sandbox/relevance/protected-audience)
+- [Protected Audience API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience)
   - `attribution-reporting`
   - `private-aggregation`
   - `shared-storage`
@@ -82,7 +82,7 @@ Without this title, they have to navigate into the `<iframe>` to determine what 
 
 ## Examples
 
-To set what content will be shown in a `<fencedframe>`, a utilizing API (such as [Protected Audience](https://developers.google.com/privacy-sandbox/relevance/protected-audience) or [Shared Storage](https://developers.google.com/privacy-sandbox/relevance/shared-storage)) generates a {{domxref("FencedFrameConfig")}} object, which is then set as the value of the `<fencedframe>`'s `config` property.
+To set what content will be shown in a `<fencedframe>`, a utilizing API (such as [Protected Audience](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience) or [Shared Storage](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage)) generates a {{domxref("FencedFrameConfig")}} object, which is then set as the value of the `<fencedframe>`'s `config` property.
 
 The following example gets a `FencedFrameConfig` from a Protected Audience API's ad auction, which is then used to display the winning ad in a `<fencedframe>`:
 
@@ -167,5 +167,5 @@ frame.config = frameConfig;
 ## See also
 
 - [Fenced Frame API](/en-US/docs/Web/API/Fenced_frame_API)
-- [Fenced frames](https://developers.google.com/privacy-sandbox/relevance/fenced-frame) on developers.google.com
+- [Fenced frames](https://developers.google.com/privacy-sandbox/private-advertising/fenced-frame) on developers.google.com
 - [The Privacy Sandbox](https://developers.google.com/privacy-sandbox) on developers.google.com

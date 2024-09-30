@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.VideoTrack.sourceBuffer
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("Media Source Extensions")}}
 
 The read-only **{{domxref("VideoTrack")}}**
 property **`sourceBuffer`** returns the

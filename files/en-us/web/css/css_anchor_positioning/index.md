@@ -44,7 +44,7 @@ In addition, the specification provides CSS-only mechanisms to:
 - [`<anchor-side>`](/en-US/docs/Web/CSS/anchor#anchor-side)
 - [`<anchor-size>`](/en-US/docs/Web/CSS/anchor-size#anchor-size)
 - [`<position-area>`](/en-US/docs/Web/CSS/position-area_value)
-- [`<try-side>`](/en-US/docs/Web/CSS/position-try-order#try-side)
+- [`<try-size>`](/en-US/docs/Web/CSS/position-try-order#try-size)
 - [`<try-tactic>`](/en-US/docs/Web/CSS/position-try-fallbacks#try-tactic)
 
 ### HTML attributes

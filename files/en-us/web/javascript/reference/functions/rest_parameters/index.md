@@ -66,7 +66,7 @@ The rest parameter is not counted towards the function's [`length`](/en-US/docs/
 
 ### The difference between rest parameters and the arguments object
 
-There are three main differences between rest parameters and the {{jsxref("Functions/arguments", "arguments")}} object:
+There are four main differences between rest parameters and the {{jsxref("Functions/arguments", "arguments")}} object:
 
 - The `arguments` object is **not a real array**, while rest parameters are {{jsxref("Array")}} instances, meaning methods like {{jsxref("Array/sort", "sort()")}}, {{jsxref("Array/map", "map()")}}, {{jsxref("Array/forEach", "forEach()")}} or {{jsxref("Array/pop", "pop()")}} can be applied on it directly.
 - The `arguments` object has the additional (deprecated) [`callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee) property.

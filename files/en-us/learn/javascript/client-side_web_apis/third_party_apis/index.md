@@ -205,7 +205,7 @@ First, you'll need to make a connection between the API and your app. In the cas
 
    Replace the existing API key with the actual API key you got in the previous section.
 
-2. Add the following line to your JavaScript, below the "`// Event listeners to control the functionality`" comment. This runs a function called `submitSearch()` when the form is submitted (the button is pressed).
+2. Add the following line to your JavaScript, below the `// Event listeners to control the functionality` comment. This runs a function called `submitSearch()` when the form is submitted (the button is pressed).
 
    ```js
    searchForm.addEventListener("submit", submitSearch);

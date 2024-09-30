@@ -220,7 +220,7 @@ function insertText(newText, selector) {
 
 ## Specifications
 
-This feature is not part of any current specification, but there is an [unofficial draft](https://w3c.github.io/editing/docs/execCommand/) attempting to specify it.
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -62,7 +62,7 @@ Access to the API is subject to the following constraints:
 - The method must be called in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
 - [Transient user activation](/en-US/docs/Web/Security/User_activation) is required.
   The user has to interact with the page or a UI element for this feature to work.
-- Access may be gated by the [`speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/midi) HTTP [Permission Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+- Access may be gated by the [`speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) HTTP [Permission Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 
 The permission status can be queried using the [Permissions API](/en-US/docs/Web/API/Permissions_API) method {{domxref("Permissions.query", "navigator.permissions.query()")}}, passing a permission descriptor with the `speaker-selection` permission.
 

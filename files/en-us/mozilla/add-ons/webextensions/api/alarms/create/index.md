@@ -84,7 +84,7 @@ browser.alarms.create("my-periodic-alarm", {
 {{Compat}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/alarms/) API.
+> This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

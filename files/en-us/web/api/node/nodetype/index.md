@@ -31,7 +31,7 @@ An integer which specifies the type of the node. Possible values are:
 - `Node.DOCUMENT_NODE` (`9`)
   - : A {{domxref("Document")}} node.
 - `Node.DOCUMENT_TYPE_NODE` (`10`)
-  - : A {{domxref("DocumentType")}} node, such as `<!DOCTYPE html>`.
+  - : A {{domxref("DocumentType")}} node, such as `<!doctype html>`.
 - `Node.DOCUMENT_FRAGMENT_NODE` (`11`)
   - : A {{domxref("DocumentFragment")}} node.
 

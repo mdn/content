@@ -77,4 +77,4 @@ document
 > Currently has a [bug with requesting origins](https://bugzil.la/1411873) and [requesting permissions on the about:addons page](https://bugzil.la/1382953).
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/permissions/) API.
+> This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/api/permissions) API.

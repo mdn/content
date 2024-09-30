@@ -206,7 +206,7 @@ For detailed reference see [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Cont
   - Other path parts in the CSP are matched exactly; for example, `example.com/file.js` will match `http://example.com/file.js` and `https://example.com/file.js`, but not `https://example.com/file.js/file2.js`.
 
 - Scheme
-  - Only allow loading of resources over a specific scheme, should always end with "`:`". For example, `https:`, `http:`, `data:`, etc.
+  - Only allow loading of resources over a specific scheme, should always end with `:`. For example, `https:`, `http:`, `data:`, etc.
 
 ### Other values
 
@@ -260,7 +260,7 @@ Because the `unsafe-inline` and `unsafe-eval` directives are not set, inline scr
 Content-Security-Policy: default-src https:
 ```
 
-The same restictions can be applied using the HTML {{htmlelement("meta")}} element.
+The same restrictions can be applied using the HTML {{htmlelement("meta")}} element.
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="default-src https:" />

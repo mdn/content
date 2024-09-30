@@ -79,6 +79,10 @@ The `SVGAnimatedNumber` interface is used for attributes of basic type [\<Number
 
 The `SVGAnimatedNumber` interface do not provide any specific methods.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

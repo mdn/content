@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.SubtleCrypto.unwrapKey
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{APIRef("Web Crypto API")}}{{SecureContext_header}}{{AvailableInWorkers}}
 
 The **`unwrapKey()`** method of the {{domxref("SubtleCrypto")}} interface "unwraps" a key.
 This means that it takes as its input a key that has been exported and then encrypted (also called "wrapped").
@@ -62,8 +62,8 @@ unwrapKey(format, wrappedKey, unwrappingKey, unwrapAlgo, unwrappedKeyAlgo, extra
     - For [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc),
       [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), or [AES-KW](/en-US/docs/Web/API/SubtleCrypto/wrapKey#aes-kw):
       Pass the string identifying the algorithm or an object of the form `{ "name": ALGORITHM }`, where `ALGORITHM` is the name of the algorithm.
-    - For [Ed25519](#ed25519): Pass an object of the form `{ "name": "Ed25519" }`.
-    - For [X25519](/en-US/docs/Web/API/SubtleCrypto/sign#ed25519): Pass an object of the form: `{name: 'X25519'}`.
+    - For [Ed25519](/en-US/docs/Web/API/SubtleCrypto/sign#ed25519): Pass an object of the form `{ "name": "Ed25519" }`.
+    - For [X25519](/en-US/docs/Web/API/SubtleCrypto/deriveKey#x25519): Pass an object of the form: `{name: 'X25519'}`.
 - `extractable`
   - : A boolean indicating whether it will be possible to export the key
     using [`SubtleCrypto.exportKey()`](/en-US/docs/Web/API/SubtleCrypto/exportKey) or [`SubtleCrypto.wrapKey()`](/en-US/docs/Web/API/SubtleCrypto/wrapKey).

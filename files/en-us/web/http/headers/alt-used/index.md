@@ -2,7 +2,7 @@
 title: Alt-Used
 slug: Web/HTTP/Headers/Alt-Used
 page-type: http-header
-browser-compat: http.headers.Alt-Used
+spec-urls: https://datatracker.ietf.org/doc/html/rfc7838
 ---
 
 {{HTTPSidebar}}
@@ -32,13 +32,9 @@ Alt-Used: <host>:<port>
 Alt-Used: alternate.example.net
 ```
 
-<!-- ## Specifications
+## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}} -->
 
 ## See also
 

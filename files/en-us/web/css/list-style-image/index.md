@@ -55,7 +55,7 @@ list-style-image: unset;
 
 ### Using a url value
 
-This example has a star as a marker, which we include using the {{cssxref("url", "url()")}} image function.
+This example has a star as a marker, which we include using the {{cssxref("url_value", "&lt;url&gt;")}} image function.
 
 #### HTML
 

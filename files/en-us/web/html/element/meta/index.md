@@ -29,40 +29,48 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : This attribute contains the value for the [`http-equiv`](#http-equiv) or [`name`](#name) attribute, depending on which is used.
 - `http-equiv`
 
-  - : Defines a pragma directive. The attribute is named `http-equiv(alent)` because all the allowed values are names of particular HTTP headers:
+  - : Defines a pragma directive. The attribute's name, short for `http-equivalent`, is because all the allowed values are names of particular HTTP headers:
 
     - `content-security-policy`
 
-      Allows page authors to define a [content policy](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) for the current page. Content policies mostly specify allowed server origins and script endpoints which help guard against cross-site scripting attacks.
+      - : Allows page authors to define a [content policy](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) for the current page. Content policies mostly specify allowed server origins and script endpoints which help guard against cross-site scripting attacks.
+
+        Also see {{HTTPHeader("Content-Security-Policy")}}.
 
     - `content-type`
 
-      Declares the [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) and the document's character encoding. The `content` attribute must have the value `"text/html; charset=utf-8"` if specified. This is equivalent to a `<meta>` element with the [`charset`](#charset) attribute specified and carries the same restriction on placement within the document. **Note:** Can only be used in documents served with a `text/html` — not in documents served with an XML MIME type.
+      - : Declares the [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) and the document's character encoding. The `content` attribute must have the value `"text/html; charset=utf-8"` if specified. This is equivalent to a `<meta>` element with the [`charset`](#charset) attribute specified and carries the same restriction on placement within the document. **Note:** Can only be used in documents served with a `text/html` — not in documents served with an XML MIME type.
+
+        Also see {{HTTPHeader("Content-Type")}}.
 
     - `default-style`
 
-      Sets the name of the default [CSS style sheet](/en-US/docs/Web/CSS) set.
+      - : Sets the name of the default [CSS style sheet](/en-US/docs/Web/CSS) set.
 
     - `x-ua-compatible`
 
-      If specified, the `content` attribute must have the value `"IE=edge"`. User agents are required to ignore this pragma.
+      - : If specified, the `content` attribute must have the value `"IE=edge"`. User agents are required to ignore this pragma.
 
-    - `refresh` This instruction specifies:
+    - `refresh`
 
-      - The number of seconds until the page should be reloaded - only if the [`content`](#content) attribute contains a non-negative integer.
-      - The number of seconds until the page should redirect to another - only if the [`content`](#content) attribute contains a non-negative integer followed by the string '`;url=`', and a valid URL.
+      - : This instruction specifies:
 
-      The timer starts when the page is _completely loaded_, which is after the {{domxref("Window/load_event", "load")}} and {{domxref("Window/pageshow_event", "pageshow")}} events have both fired.
+        - The number of seconds until the page should be reloaded - if the [`content`](#content) attribute's value is a non-negative integer.
+        - The number of seconds until the page should redirect to another - if the [`content`](#content) attribute's value is a non-negative integer followed by `;url=` and a valid URL.
 
-      > [!WARNING]
-      >
-      > Pages set with a `refresh` value run the risk of having the time interval being too short. People navigating with the aid of assistive technology such as a screen reader may be unable to read through and understand the page's content before being automatically redirected. The abrupt, unannounced updating of the page content may also be disorienting for people experiencing low vision conditions.
-      >
-      > - [MDN Understanding WCAG, Guideline 2.2 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.2_—_enough_time_provide_users_enough_time_to_read_and_use_content)
-      > - [MDN Understanding WCAG, Guideline 3.2 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
-      > - [Understanding Success Criterion 2.2.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html)
-      > - [Understanding Success Criterion 2.2.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-postponed.html)
-      > - [Understanding Success Criterion 3.2.5 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-no-extreme-changes-context.html)
+        The timer starts when the page is _completely loaded_, which is after the {{domxref("Window/load_event", "load")}} and {{domxref("Window/pageshow_event", "pageshow")}} events have both fired.
+
+        Also see {{HTTPHeader("Refresh")}}.
+
+        > [!WARNING]
+        >
+        > Pages set with a `refresh` value run the risk of having the time interval being too short. People navigating with the aid of assistive technology such as a screen reader may be unable to read through and understand the page's content before being automatically redirected. The abrupt, unannounced updating of the page content may also be disorienting for people experiencing low vision conditions.
+        >
+        > - [MDN Understanding WCAG, Guideline 2.2 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.2_—_enough_time_provide_users_enough_time_to_read_and_use_content)
+        > - [MDN Understanding WCAG, Guideline 3.2 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
+        > - [Understanding Success Criterion 2.2.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html)
+        > - [Understanding Success Criterion 2.2.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-postponed.html)
+        > - [Understanding Success Criterion 3.2.5 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-no-extreme-changes-context.html)
 
 - `name`
 

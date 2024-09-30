@@ -108,7 +108,7 @@ function modify() {
 
 ## Specifications
 
-_This method is not part of any specification._
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -118,7 +118,7 @@ Returns a {{domxref("ShadowRoot")}} object.
   - : This may can be thrown when you try to attach a shadow root to an element:
 
     - outside the HTML namespace or that can't have a shadow attached to it.
-    - where the element definition static property `disabledFeatures` has been given a value of `"shadow"` .
+    - where the element definition static property `disabledFeatures` has been given a value of `"shadow"`.
     - that already has a shadow root that was not created declaratively.
     - that has a [declarative shadow root](/en-US/docs/Web/HTML/Element/template#declarative_shadow_dom) but the specified `mode` does not match the existing mode.
 

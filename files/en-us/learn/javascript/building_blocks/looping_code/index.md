@@ -619,7 +619,7 @@ If you get really stuck, press "Show solution" to see a solution.
   Press Esc to move focus away from the code area (Tab inserts a tab character).
 </p>
 <textarea id="code" class="playable-code" style="height: 300px;width: 95%">
-let output = document.querySelector('.output');
+const output = document.querySelector('.output');
 output.textContent = "";
 
 // let i = 10;

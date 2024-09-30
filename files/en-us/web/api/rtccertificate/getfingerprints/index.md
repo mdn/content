@@ -21,7 +21,7 @@ getFingerprints()
 
 ### Parameters
 
-None
+None.
 
 ### Return value
 

@@ -30,6 +30,8 @@ Below you will find links to documentation, examples, and tools to work with Mat
   - : Suggestions and tips for writing MathML, including suggested MathML editors and how to integrate their output into Web content.
 - [MathML tutorial](/en-US/docs/Learn/MathML)
   - : A gentle introduction to MathML.
+- [Fonts for MathML](/en-US/docs/Web/MathML/Fonts)
+  - : How users can install such math fonts to properly display MathML in browsers.
 
 ## Getting help from the community
 

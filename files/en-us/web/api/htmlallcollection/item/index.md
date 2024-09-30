@@ -25,6 +25,10 @@ item(nameOrIndex)
 
 If `nameOrIndex` represents an index, `item()` returns the {{domxref("Element")}} at the specified index, or `null` if `nameOrIndex` is less than zero or greater than or equal to the length property. If `nameOrIndex` represents a name, `item()` returns the same value as {{domxref("HTMLAllCollection/namedItem", "namedItem()")}}.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

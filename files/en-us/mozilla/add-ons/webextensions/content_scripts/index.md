@@ -6,11 +6,13 @@ page-type: guide
 
 {{AddonSidebar}}
 
-A content script is a part of your extension that runs in the context of a particular web page (as opposed to background scripts which are part of the extension, or scripts which are part of the website itself, such as those loaded using the {{HTMLElement("script")}} element).
+A content script is a part of your extension that runs in the context of a web page (as opposed to background scripts that are part of the extension, or scripts that are part of the website itself, such as those loaded using the {{HTMLElement("script")}} element).
 
 [Background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) can access all the [WebExtension JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API), but they can't directly access the content of web pages. So if your extension needs to do that, you need content scripts.
 
-Just like the scripts loaded by normal web pages, content scripts can read and modify the content of their pages using the standard DOM APIs. However, they can only do this when [host permissions to the web page's origin have been granted](#permissions).
+Just like the scripts loaded by normal web pages, content scripts can read and modify the content of their pages using the standard [Web APIs](/en-US/docs/Web/API). However, they can only do this when [host permissions to the web page's origin have been granted](#permissions).
+
+> [!NOTE] Some Web APIs are restricted to [secure contexts](/en-US/docs/Web/Security/Secure_Contexts), which also applies to content scripts running in these contexts. Except for {{domxref("PointerEvent.getCoalescedEvents()")}}, which can be called from content scripts in insecure contexts in Firefox.
 
 Content scripts can only access [a small subset of the WebExtension APIs](#webextension_apis), but they can [communicate with background scripts](#communicating_with_background_scripts) using a messaging system, and thereby indirectly access the WebExtension APIs.
 
@@ -161,7 +163,7 @@ If a content script needs to use a JavaScript library, then the library itself s
 ```
 
 > [!NOTE]
-> Firefox _does_ provide some APIs that enable content scripts to access JavaScript objects created by page scripts, and to expose their own JavaScript objects to page scripts.
+> Firefox provides [cloneInto()](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts/cloneInto) and [exportFunction()](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts/exportFunction) to enable content scripts to access JavaScript objects created by page scripts and expose their JavaScript objects to page scripts.
 >
 > See [Sharing objects with page scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts) for more details.
 
@@ -222,7 +224,7 @@ This is accomplished by exposing more privileged XHR and fetch instances in the 
 > This is not possible in Manifest V3, as `content.XMLHttpRequest` and `content.fetch()` are not available.
 
 > [!NOTE]
-> In Chrome, starting with version 73, and Firefox, starting with version 101 when using Manifest V3, content scripts are subject to the same [CORS](/en-US/docs/Web/HTTP/CORS) policy as the page they are running within. Only backend scripts have elevated cross-domain privileges. See [Changes to Cross-Origin Requests in Chrome Extension Content Scripts](https://www.chromium.org/Home/chromium-security/extension-content-script-fetches).
+> In Chrome, starting with version 73, and Firefox, starting with version 101 when using Manifest V3, content scripts are subject to the same [CORS](/en-US/docs/Web/HTTP/CORS) policy as the page they are running within. Only backend scripts have elevated cross-domain privileges. See [Changes to Cross-Origin Requests in Chrome Extension Content Scripts](https://www.chromium.org/Home/chromium-security/extension-content-script-fetches/).
 
 ## Communicating with background scripts
 

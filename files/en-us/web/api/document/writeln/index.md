@@ -26,7 +26,8 @@ writeln(line)
 
 ### Parameters
 
-- `line` is string containing a line of text.
+- `line`
+  - : A string containing a line of text.
 
 ### Return value
 

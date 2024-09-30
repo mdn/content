@@ -171,7 +171,7 @@ When a client wants to communicate with a server, either the final server or an 
    Content-Length: 29769
    Content-Type: text/html
 
-   <!DOCTYPE html>… (here come the 29769 bytes of the requested web page)
+   <!doctype html>… (here come the 29769 bytes of the requested web page)
    ```
 
 4. Close or reuse the connection for further requests.

@@ -392,7 +392,7 @@ In the example image above, note how the sky has bands of different shades of bl
 
 ### Mosquito noise
 
-**Mosquito noise** is a temporal artifact which presents as noise or **edge busyness** that appears as a flickering haziness or shimmering that roughly follows outside the edges of objects with hard edges or sharp transitions between foreground objects and the background. The effect can be similar in appearance to [ringing](#ringing) .
+**Mosquito noise** is a temporal artifact which presents as noise or **edge busyness** that appears as a flickering haziness or shimmering that roughly follows outside the edges of objects with hard edges or sharp transitions between foreground objects and the background. The effect can be similar in appearance to [ringing](#ringing).
 
 ![Example of an image whose compression has introduced mosquito noise.](mosquito-effect-sm.png)
 

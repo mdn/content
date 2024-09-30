@@ -58,7 +58,7 @@ browser.downloads.onCreated.addListener(handleCreated);
 {{WebExtExamples}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#event-onCreated) API.
+> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#event-onCreated) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -209,5 +209,12 @@ Because `stroke-context` is being applied to an element that descends from a {{S
 
 ## See also
 
-- SVG {{SVGAttr("stroke")}} attribute
+- {{cssxref("stroke-dasharray")}}
+- {{cssxref("stroke-dashoffset")}}
+- {{cssxref("stroke-linecap")}}
+- {{cssxref("stroke-linejoin")}}
+- {{cssxref("stroke-miterlimit")}}
+- {{cssxref("stroke-opacity")}}
+- {{cssxref("stroke-width")}}
 - {{cssxref("paint-order")}}
+- SVG {{SVGAttr("stroke")}} attribute

@@ -34,7 +34,7 @@ querySelectorAll(selectors)
 ### Return value
 
 A non-live {{domxref("NodeList")}} containing one {{domxref("Element")}} object for
-each descendant node that matches at least one of the specified selectors.
+each descendant node that matches at least one of the specified selectors. The elements are in document order — that is, parents before children, earlier siblings before later siblings.
 
 > [!NOTE]
 > If the specified `selectors` include a [CSS pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), the returned list
@@ -68,14 +68,14 @@ const refs = [
 ### Obtaining a list of matches
 
 To obtain a {{domxref("NodeList")}} of all of the {{HTMLElement("p")}} elements
-contained within the element `"myBox"`:
+contained within the element `myBox`:
 
 ```js
 const matches = myBox.querySelectorAll("p");
 ```
 
 This example returns a list of all {{HTMLElement("div")}} elements within
-`"myBox"` with a class of either "`note`" or "`alert`":
+`myBox` with a class of either `note` or `alert`:
 
 ```js
 const matches = myBox.querySelectorAll("div.note, div.alert");

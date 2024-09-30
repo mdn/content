@@ -7,9 +7,9 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#status.415
 
 {{HTTPSidebar}}
 
-The HTTP **`415 Unsupported Media Type`** [client error response](/en-US/docs/Web/HTTP/Status#client_error_responses) status code indicates that the server refused to accept the request because the payload format is not supported.
+The HTTP **`415 Unsupported Media Type`** [client error response](/en-US/docs/Web/HTTP/Status#client_error_responses) status code indicates that the server refused to accept the request because the message {{Glossary("HTTP Content", "content")}} format is not supported.
 
-The format problem might be due to the request's indicated {{HTTPHeader("Content-Type")}} or {{HTTPHeader("Content-Encoding")}}, or as a result of processing the request payload.
+The format problem might be due to the request's indicated {{HTTPHeader("Content-Type")}} or {{HTTPHeader("Content-Encoding")}}, or as a result of processing the request message content.
 Some servers may be strict about the expected `Content-Type` of requests.
 For example, sending `UTF8` instead of `UTF-8` to specify the {{glossary("UTF-8")}} charset may cause the server to consider the media type invalid.
 
@@ -48,7 +48,7 @@ Content-Length: 0
 
 ### Invalid content type
 
-In the following example, the {{HTTPHeader("Content-Type")}} header is incorrectly set to URL-encoded form data when the payload is in the request body instead:
+In the following example, the {{HTTPHeader("Content-Type")}} header is incorrectly set to URL-encoded form data when the {{Glossary("HTTP Content", "content")}} is in the request body instead:
 
 ```http
 POST /comments HTTP/1.1

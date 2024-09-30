@@ -67,7 +67,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If t
 
 ## Examples
 
-This function authorizes an extension to access a user's Google data, according to the documentation at <https://developers.google.com/identity/protocols/OAuth2UserAgent>. Validation of the returned access token isn't shown here:
+This function authorizes an extension to access a user's Google data, according to the documentation at <https://developers.google.com/identity/protocols/oauth2/javascript-implicit-flow>. Validation of the returned access token isn't shown here:
 
 ```js
 function validate(redirectURL) {
@@ -99,4 +99,4 @@ function getAccessToken() {
 {{WebExtExamples}}
 
 > [!NOTE]
-> This API is based on Chromium's [`identity`](https://developer.chrome.com/docs/extensions/reference/identity/) API.
+> This API is based on Chromium's [`identity`](https://developer.chrome.com/docs/extensions/reference/api/identity) API.

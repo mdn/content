@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUBuffer.destroy
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`destroy()`** method of the
 {{domxref("GPUBuffer")}} interface destroys the `GPUBuffer`.

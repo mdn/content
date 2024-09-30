@@ -2,7 +2,6 @@
 title: RequestInit
 slug: Web/API/RequestInit
 page-type: web-api-interface
-browser-compat: api.RequestInit
 spec-urls: https://fetch.spec.whatwg.org/#requestinit
 ---
 
@@ -39,6 +38,7 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
     - {{domxref("FormData")}}
     - {{jsxref("TypedArray")}}
     - {{domxref("URLSearchParams")}}
+    - {{domxref("ReadableStream")}}
 
     See [Setting a body](/en-US/docs/Web/API/Fetch_API/Using_Fetch#setting_a_body) for more details.
 
@@ -171,7 +171,7 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
     - `low`
       - : A low priority fetch request relative to other requests of the same type.
     - `auto`
-      - : Automatically determine the priority of the fetch request relative to other requests of the same type .
+      - : Automatically determine the priority of the fetch request relative to other requests of the same type.
 
     Defaults to `auto`.
 

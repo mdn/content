@@ -67,9 +67,9 @@ Chromium-based browsers, including Google Chrome, Samsung Internet, and Microsof
 - [`icons`](/en-US/docs/Web/Manifest/icons) must contain a 192px and a 512px icon
 - [`start_url`](/en-US/docs/Web/Manifest/start_url)
 - [`display`](/en-US/docs/Web/Manifest/display) and/or [`display_override`](/en-US/docs/Web/Manifest/display_override)
-- [`prefer-related-application`](/en-US/docs/Web/Manifest/prefer_related_applications) must be `false` or not present
+- [`prefer_related_applications`](/en-US/docs/Web/Manifest/prefer_related_applications) must be `false` or not present
 
-For a full description of every member, see the [web app manifest reference documentation](/en-US/docs/Web/Manifest).
+For a full description of every member, see the [Web app manifest](/en-US/docs/Web/Manifest) reference documentation.
 
 ### HTTPS, localhost, or loopback are required
 
@@ -85,7 +85,7 @@ If your app meets the installability prerequisites, you can package it and distr
 
 - [How to publish a PWA to the Google Play Store](https://chromeos.dev/en/publish/pwa-in-play)
 - [How to publish a PWA to the Microsoft Store](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/microsoft-store)
-- [How to publish a PWA to the Meta Quest Store](https://developer.oculus.com/documentation/web/pwa-submit-app/)
+- [How to publish a PWA to the Meta Quest Store](https://developers.meta.com/horizon/documentation/web/pwa-submit-app/)
 
 The [PWABuilder](https://docs.pwabuilder.com/#/builder/quick-start) is a tool to simplify the process of packaging and publishing a PWA for various app stores. It supports the Google Play Store, Microsoft Store, Meta Quest Store, and iOS App Store.
 

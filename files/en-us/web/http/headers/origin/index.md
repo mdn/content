@@ -44,7 +44,7 @@ Origin: <scheme>://<hostname>:<port>
   - : The domain name or the IP address of the origin server.
 - `<port>` {{optional_inline}}
   - : Port number on which the server is listening.
-    If no port is given, the default port for the requested service is implied (e.g., "80" for an HTTP URL) .
+    If no port is given, the default port for the requested service is implied (e.g., "80" for an HTTP URL).
 
 ## Description
 

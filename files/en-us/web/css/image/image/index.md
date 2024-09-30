@@ -7,7 +7,7 @@ browser-compat: css.types.image.image
 
 {{CSSRef}}
 
-The **`image()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines an {{CSSxRef("&lt;image&gt;")}} in a similar fashion to the {{CSSxRef("url", "url()")}} function, but with added functionality including specifying the image's directionality, displaying just a part of that image defined by a media fragment, and specifying a solid color as a fallback in case none of the specified images are able to be rendered.
+The **`image()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines an {{CSSxRef("&lt;image&gt;")}} in a similar fashion to the {{CSSxRef("url_function", "url()")}} function, but with added functionality including specifying the image's directionality, displaying just a part of that image defined by a media fragment, and specifying a solid color as a fallback in case none of the specified images are able to be rendered.
 
 > [!NOTE]
 > The CSS `image()` function should not confused with {{DOMxRef("HTMLImageElement/Image", '<code>Image()</code>, the <code>HTMLImageElement</code> constructor', '', 1)}}.
@@ -21,7 +21,7 @@ where:
 - `image-tags` {{optional_inline}}
   - : The directionality of the image, either `ltr` for left-to-right or `rtl` for right-to-left.
 - `image-src` {{Optional_Inline}}
-  - : Zero or more {{CSSxRef("url", "url()")}}s or {{CSSxRef("&lt;string&gt;")}}s specifying the image sources, with optional image fragment identifiers.
+  - : Zero or more {{cssxref("url_value", "&lt;url&gt;")}}s or {{CSSxRef("&lt;string&gt;")}}s specifying the image sources, with optional image fragment identifiers.
 - `color` {{optional_inline}}
   - : A color, specifying a solid background color to use as a fallback if no `image-src` is found, supported, or declared.
 
@@ -145,7 +145,7 @@ The above will put a semi-transparent black mask over the Firefox logo backgroun
 
 - {{CSSxRef("&lt;image&gt;")}}
 - {{CSSxRef("element", "element()")}}
-- {{CSSxRef("url", "url()")}}
+- {{cssxref("url_value", "&lt;url&gt;")}}
 - {{CSSxRef("clip-path")}}
 - {{CSSxRef("&lt;gradient&gt;")}}
 - {{CSSxRef("image/image-set", "image-set()")}}

@@ -15,7 +15,7 @@ A typical 3D scene in a game — even the simplest one — contains standard ite
 
 To start developing with Three.js, you should make sure you are using a modern browser with good [WebGL](/en-US/docs/Web/API/WebGL_API) support, such as the latest Firefox or Chrome.
 
-You can download the [latest Three.js library](https://github.com/mrdoob/three.js/archive/master.zip) and copy the minified version of Three.js from the uncompressed archive at `build/three.module.min.js` into your project.
+You can download the [latest Three.js library](https://codeload.github.com/mrdoob/three.js/zip/refs/heads/master) and copy the minified version of Three.js from the uncompressed archive at `build/three.module.min.js` into your project.
 Bear in mind that the archives include source files, which makes the download size approximately 350MB.
 
 Alternatively, you can import Three.js [using a CDN or use Node.js](https://threejs.org/docs/#manual/en/introduction/Installation).

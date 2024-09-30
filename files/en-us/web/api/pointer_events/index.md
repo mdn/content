@@ -62,10 +62,12 @@ The following sub-sections contain short descriptions of each interface and prop
 
 The {{domxref("PointerEvent")}} interface extends the {{domxref("MouseEvent")}} interface and has the following properties.
 
-- {{ domxref('PointerEvent.altitudeAngle', 'altitudeAngle')}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{ domxref('PointerEvent.altitudeAngle', 'altitudeAngle')}} {{ReadOnlyInline}}
   - : Represents the angle between a transducer (a pointer or stylus) axis and the X-Y plane of a device screen.
-- {{ domxref('PointerEvent.azimuthAngle', 'azimuthAngle')}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{ domxref('PointerEvent.azimuthAngle', 'azimuthAngle')}} {{ReadOnlyInline}}
   - : Represents the angle between the Y-Z plane and the plane containing both the transducer (a pointer or stylus) axis and the Y axis.
+- {{domxref('PointerEvent.persistentDeviceId')}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : A unique identifier for the pointing device generating the `PointerEvent`.
 - {{ domxref('PointerEvent.pointerId','pointerId')}} {{ReadOnlyInline}}
   - : A unique identifier for the pointer causing the event.
 - {{ domxref('PointerEvent.width','width')}} {{ReadOnlyInline}}

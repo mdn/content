@@ -79,6 +79,10 @@ The `SVGAnimatedBoolean` interface is used for attributes of type boolean which 
 
 The `SVGAnimatedBoolean` interface do not provide any specific methods.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

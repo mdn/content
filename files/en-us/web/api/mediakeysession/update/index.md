@@ -8,7 +8,7 @@ browser-compat: api.MediaKeySession.update
 
 {{APIRef("Encrypted Media Extensions")}}{{SecureContext_Header}}
 
-The `update()` method of the {{domxref('MediaKeySession')}} interface loads messages and licenses to the CDM, and then returns a {{jsxref('Promise')}} .
+The `update()` method of the {{domxref('MediaKeySession')}} interface loads messages and licenses to the CDM, and then returns a {{jsxref('Promise')}}.
 
 ## Syntax
 

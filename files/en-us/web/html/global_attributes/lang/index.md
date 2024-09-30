@@ -132,6 +132,10 @@ For example, the language menu on this site (MDN) includes a **`lang`** attribut
 </div>
 ```
 
+## Inheritance
+
+If an element has no `lang` attribute, it will inherit the `lang` value set on its [parent node](/en-US/docs/Glossary/Node/DOM), which in turn may inherit it from its parent, and so on.
+
 ## Specifications
 
 {{Specifications}}

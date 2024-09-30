@@ -14,21 +14,20 @@ interface scrolls to a particular set of coordinates inside a given element.
 ## Syntax
 
 ```js-nolint
-scrollTo(x-coord, y-coord)
+scrollTo(xCoord, yCoord)
 scrollTo(options)
 ```
 
 ### Parameters
 
-- `x-coord` is the pixel along the horizontal axis of the
-  element that you want displayed in the upper left.
-- `y-coord` is the pixel along the vertical axis of the element
-  that you want displayed in the upper left.
-
-\- or -
-
+- `xCoord`
+  - : The pixel along the horizontal axis of the
+    element that you want displayed in the upper left.
+- `yCoord`
+  - : The pixel along the vertical axis of the element
+    that you want displayed in the upper left.
 - `options`
-  - : A dictionary containing the following parameters:
+  - : An object containing the following properties:
     - `top`
       - : Specifies the number of pixels along the Y axis to scroll the window or element.
     - `left`

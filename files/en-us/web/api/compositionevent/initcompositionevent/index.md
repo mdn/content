@@ -49,7 +49,7 @@ None ({{jsxref("undefined")}}).
 
 ## Specifications
 
-This method is no longer on a standardization track. It is kept for compatibility purposes. Use the constructor {{domxref("CompositionEvent.CompositionEvent", "CompositionEvent()")}}.
+{{Specifications}}
 
 ## Browser compatibility
 

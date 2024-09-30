@@ -52,6 +52,15 @@ Creating a new worker is simple. All you need to do is call the {{domxref("Worke
 const myWorker = new Worker("worker.js");
 ```
 
+> [!NOTE]
+> Bundlers, including [Webpack](https://webpack.js.org/guides/web-workers/), [Vite](https://vitejs.dev/guide/features.html#web-workers), and [Parcel](https://parceljs.org/languages/javascript/#web-workers), recommend passing URLs that are resolved relative to [`import.meta.url`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta#url) to the `Worker()` constructor. For example:
+>
+> ```js
+> const myWorker = new Worker(new URL("worker.js", import.meta.url));
+> ```
+>
+> This way, the path is relative to the current script instead of the current HTML page, which allows the bundler to safely do optimizations like renaming (because otherwise the `worker.js` URL may point to a file not controlled by the bundler, so it cannot make any assumptions).
+
 ### Sending messages to and from a dedicated worker
 
 The magic of workers happens via the {{domxref("Worker.postMessage", "postMessage()")}} method and the {{domxref("Worker.message_event", "onmessage")}} event handler. When you want to send a message to the worker, you post messages to it like this ([main.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-web-worker/main.js)):

@@ -22,7 +22,7 @@ If a tooltip is fixed to the top-right of a UI element, when the user scrolls th
 Position-try fallback options can be specified using:
 
 - [Predefined fallback options](#predefined_fallback_options).
-- [`position-area` values](#using-position-area_try_options).
+- [`position-area` values](#using_position-area_try_fallback_options).
 - [Custom options](#custom_fallback_options) defined using the {{cssxref("@position-try")}} at-rule.
 
 In addition, the {{cssxref("position-try-order")}} property allows you to specify various options that result in an available position try option being set in preference to the element's initial positioning. For example, you might want to initially display the element in a space that has more available height or width.

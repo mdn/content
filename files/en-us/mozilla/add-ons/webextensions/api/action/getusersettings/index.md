@@ -59,7 +59,7 @@ gettingUserSettings.then(gotSettings);
 {{Compat}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/#method-getUserSettings) API.
+> This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/api/action#method-getUserSettings) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
