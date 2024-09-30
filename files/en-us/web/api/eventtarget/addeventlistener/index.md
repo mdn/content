@@ -674,10 +674,6 @@ Click the outer, middle, inner containers respectively to see how the options wo
 
 {{ EmbedLiveSample('Example_of_options_usage', 600, 630) }}
 
-Before using a particular value in the `options` object, it's a
-good idea to ensure that the user's browser supports it, since these are an addition
-that not all browsers have supported historically. See [Safely detecting option support](#safely_detecting_option_support) for details.
-
 ### Event listener with multiple options
 
 You can set more than one of the options in the `options` parameter. In the following example we are setting two options:
