@@ -25,7 +25,7 @@ This article provides information about the changes in Firefox 93 that will affe
 ### JavaScript
 
 - [Class `static` initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks) are now supported, allowing more flexible initialization of {{jsxref("Classes/static", "static")}} properties ([Firefox bug 1725689](https://bugzil.la/1725689)).
-- The properties `imageOrientation` and `premultiplyAlpha` can be passed to the method {{domxref("createImageBitmap()")}} using the `options` object ([Firefox bug 1367251](https://bugzil.la/1367251)).
+- The properties `imageOrientation` and `premultiplyAlpha` can be passed to the method {{domxref("Window.createImageBitmap()")}} and {{domxref("WorkerGlobalScope.createImageBitmap()")}} using the `options` object ([Firefox bug 1367251](https://bugzil.la/1367251)).
 - {{jsxref("Intl.supportedValuesOf()")}} is now supported, allowing code to enumerate values supported by an implementation, This might be used, for example, to download a polyfill for just the missing category of values ([Firefox bug 1670033](https://bugzil.la/1670033)).
 
 ### HTTP

@@ -31,6 +31,8 @@ jobs:
           yarn content fix-flaws
           yarn fix:md
           yarn fix:fm
+          node scripts/sort_and_unique_file_lines.js .vscode/ignore-list.txt
+          node scripts/sort_and_unique_file_lines.js .vscode/terms-abbreviations.txt
 
       - name: Create PR with only fixable issues
         if: success()
