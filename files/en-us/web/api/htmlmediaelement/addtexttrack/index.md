@@ -8,8 +8,7 @@ browser-compat: api.HTMLMediaElement.addTextTrack
 
 {{APIRef("HTML DOM")}}
 
-The {{domxref("HTMLMediaElement")}}
-**`addTextTrack()`** method creates a new {{domxref("TextTrack")}} object, and adds it to the media element. It fires the {{domxref("addtrack")}} event. This method can't be used on a {{domxref("TextTrackList")}} interface, only a {{domxref("HTMLMediaElement")}}.
+The **`addTextTrack()`** method of the {{domxref("HTMLMediaElement")}} interface creates a new {{domxref("TextTrack")}} object and adds it to the media element. It fires an {{domxref("TextTrackList/addtrack_event", "addtrack")}} event on this media element's {{domxref("HTMLMediaElement/textTracks", "textTracks")}}. This method can't be used on a {{domxref("TextTrackList")}} interface, only an {{domxref("HTMLMediaElement")}}.
 
 ## Syntax
 
