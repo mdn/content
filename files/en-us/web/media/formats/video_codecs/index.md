@@ -1582,7 +1582,7 @@ The [Theora Cookbook](https://en.flossmanuals.net/ogg-theora/_full/) offers addi
               <th scope="row">Theora support</th>
               <td>3 to 121</td>
               <td>12 to 121</td>
-              <td>3.5 to 130</td>
+              <td>3.5 to 126</td>
               <td>10.5 to 107</td>
               <td>No</td>
             </tr>
