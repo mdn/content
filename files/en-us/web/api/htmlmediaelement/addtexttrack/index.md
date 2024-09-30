@@ -1,4 +1,4 @@
----
+I---
 title: "HTMLMediaElement: addTextTrack() method"
 short-title: addTextTrack()
 slug: Web/API/HTMLMediaElement/addTextTrack
@@ -9,7 +9,7 @@ browser-compat: api.HTMLMediaElement.addTextTrack
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLMediaElement")}}
-**`addTextTrack()`** method creates a new {{domxref("TextTrack")}} object, and adds it to the media element. It fires the {{domxref("addtrack")}} event.
+**`addTextTrack()`** method creates a new {{domxref("TextTrack")}} object, and adds it to the media element. It fires the {{domxref("addtrack")}} event. This method can't be used on a {{domxref("TextTrackList")}} interface, only a {{domxref("HTMLMediaElement")}}.
 
 ## Syntax
 
@@ -35,10 +35,6 @@ A {{domxref("TextTrackList")}} representing the {{domxref("HTMLMediaElement.text
 ### Exceptions
 
 None.
-
-## Usage notes
-
-This method can't be used on a {{domxref("TextTrackList")}} interface, only a {{domxref("HTMLMediaElement")}}.
 
 ## Examples
 
