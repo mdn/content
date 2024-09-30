@@ -30,7 +30,7 @@ addTextTrack(kind, label, language)
 
 ### Return value
 
-A {{domxref("TextTrackList")}} representing the {{domxref("HTMLMediaElement.textTracks")}} property.
+A {{domxref("TextTrackList")}} representing the {{domxref("HTMLMediaElement.textTracks")}} property, with the newly created `TextTrack` object inserted.
 
 ### Exceptions
 
