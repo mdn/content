@@ -352,12 +352,6 @@ Since it can't be canceled, event listeners can't block page rendering anyway.
 
 See [Improving scroll performance using passive listeners](#improving_scroll_performance_using_passive_listeners) for an example showing the effect of passive listeners.
 
-### Older browsers
-
-In older browsers that don't support the `options` parameter to
-`addEventListener()`, attempting to use it prevents the use of the
-`useCapture` argument without proper use of [feature detection](#safely_detecting_option_support).
-
 ## Examples
 
 ### Add a simple listener
