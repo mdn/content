@@ -195,7 +195,6 @@ This section lists `page-type` values for pages under [Web/XPath](/en-US/docs/We
 This section lists `page-type` values for pages under [Web/XSLT](/en-US/docs/Web/XSLT). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
 - `xslt-element`: an element of XSLT, like [`<xsl:message>`](/en-US/docs/Web/XSLT/Element/message).
-- `xslt-axis`: an axis of XSLT, like [`ancestor`](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference/Axes/ancestor).
 
 ### EXSLT page types
 
