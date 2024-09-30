@@ -1,6 +1,3 @@
-Montulli
-nonterminal
-canadien
 AAAAAAABAAE
 AAAAD
 AAABAAEAEBAAA
@@ -652,6 +649,7 @@ camelcase
 Camen
 Camino
 Camtasia
+canadien
 cand
 Candara
 Caniuse
@@ -2982,6 +2980,7 @@ monkeypatch
 monoscopic
 Montag
 montecarlo
+Montulli
 moof
 Moonrocks
 Mooog
@@ -3314,6 +3313,7 @@ nonliteral
 nono
 nonsparse
 nonstrict
+nonterminal
 nonummy
 nonumy
 Norah
