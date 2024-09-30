@@ -62,6 +62,8 @@ To see the code for this example, [view the source on GitHub](https://github.com
 
 - [Basic concepts of CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap/Basic_concepts)
   - : An overview and examples of CSS scroll snap features.
+- [Using scroll snap events](/en-US/docs/Web/CSS/CSS_scroll_snap/Using_scroll_snap_events)
+  - : A guide to using the scroll snap events — {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} and {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} — to run JavaScript in response to the browser determining that a new snap target is pending or selected.
 
 ## Related concepts
 
