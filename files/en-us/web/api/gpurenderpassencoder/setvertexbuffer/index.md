@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPURenderPassEncoder.setVertexBuffer
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`setVertexBuffer()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface sets or unsets the current {{domxref("GPUBuffer")}} for the given slot that will provide vertex data for subsequent drawing commands.

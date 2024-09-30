@@ -724,7 +724,7 @@ can be used to change an underlined element that is in focus.
   function drawCanvas() {
     const rPoint = 4;
     const colorConstruction = "#080";
-    const colorDragable = "#00F";
+    const colorDraggable = "#00F";
     const [P0, P1, P2] = state.controlPoints;
 
     ctx.font = "italic 14pt sans-serif";
@@ -783,7 +783,7 @@ can be used to change an underlined element that is in focus.
     state.controlPoints.forEach((value) => {
       ctx.beginPath();
       ctx.arc(value.x, value.y, rPoint, 0, 2 * Math.PI);
-      ctx.fillStyle = colorDragable;
+      ctx.fillStyle = colorDraggable;
       ctx.fill();
     });
     ctx.fillStyle = "#000";

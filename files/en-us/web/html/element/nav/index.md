@@ -25,7 +25,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 In this example, a `<nav>` block is used to contain an unordered list ({{HTMLElement("ul")}}) of links. With appropriate CSS, this can be presented as a sidebar, navigation bar, or drop-down menu.
 
-```html
+```html live-sample___unordered-list
 <nav class="menu">
   <ul>
     <li><a href="#">Home</a></li>
@@ -35,9 +35,11 @@ In this example, a `<nav>` block is used to contain an unordered list ({{HTMLEle
 </nav>
 ```
 
+{{EmbedLiveSample('unordered-list')}}
+
 The semantics of the `nav` element is that of providing links. However a `nav` element doesn't have to contain a list, it can contain other kinds of content as well. In this navigation block, links are provided in prose:
 
-```html
+```html live-sample___prose
 <nav>
   <h2>Navigation</h2>
   <p>
@@ -60,9 +62,7 @@ The semantics of the `nav` element is that of providing links. However a `nav` e
 </nav>
 ```
 
-### Result
-
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('prose')}}
 
 ## Technical summary
 

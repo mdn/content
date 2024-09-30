@@ -35,7 +35,7 @@ getEntriesByType(type)
 ### Parameters
 
 - `type`
-  - : The type of entry to retrieve such as "`mark`". The valid entry types are listed in {{domxref("PerformanceEntry.entryType")}}. The supported `entryTypes` can be retrieved using the static property {{domxref("PerformanceObserver.supportedEntryTypes_static", "PerformanceObserver.supportedEntryTypes")}}.
+  - : The type of entry to retrieve such as `"mark"`. The valid entry types are listed in {{domxref("PerformanceEntry.entryType")}}. The supported `entryTypes` can be retrieved using the static property {{domxref("PerformanceObserver.supportedEntryTypes_static", "PerformanceObserver.supportedEntryTypes")}}.
 
 ### Return value
 
@@ -45,7 +45,7 @@ An {{jsxref("Array")}} of {{domxref("PerformanceEntry")}} objects that have the 
 
 ### Logging resource entries
 
-The following example logs all entries with the type "`resource`".
+The following example logs all entries with the type `"resource"`.
 
 ```js
 const resources = performance.getEntriesByType("resource");

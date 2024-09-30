@@ -49,7 +49,7 @@ To modify styles to a document using CSS syntax, one can insert rules or insert 
 
 ## Modify an element's style
 
-The element {{domxref("HTMLElement.style", "style")}} property (see also the section "DOM Style Object" below) can also be used to get and set the styles on an element. However, this property only returns style attributes that have been set _in-line_ (e.g., `<td style="background-color: lightblue">` returns the string "`background-color:lightblue`", or directly for that element using `element.style.propertyName`, even though there may be other styles on the element from a stylesheet).
+The element {{domxref("HTMLElement.style", "style")}} property (see also the section "DOM Style Object" below) can also be used to get and set the styles on an element. However, this property only returns style attributes that have been set _in-line_ (e.g., accessing `element.style.color` on an element defined as `<td style="background-color: lightblue">` returns the string `""`, even though the element may have a `color` declared via a stylesheet).
 
 Also, when you set this property on an element, you override any styles that have been set elsewhere for that element's particular property you are setting. Setting the `border` property, for example, will override settings made elsewhere for that element's `border` property in the head section, or external style sheets. However, this will not affect any other property declarations for that element's styles, such as padding or margin or font, for example.
 

@@ -7,10 +7,7 @@ browser-compat: javascript.builtins.Intl.DisplayNames.resolvedOptions
 
 {{JSRef}}
 
-The **`resolvedOptions()`** method of {{jsxref("Intl.DisplayNames")}} instances
-returns a new object with properties reflecting the locale and style formatting
-options computed during the construction of this `Intl.DisplayNames`
-object.
+The **`resolvedOptions()`** method of {{jsxref("Intl.DisplayNames")}} instances returns a new object with properties reflecting the options computed during initialization of this `DisplayNames` object.
 
 ## Syntax
 
@@ -24,31 +21,18 @@ None.
 
 ### Return value
 
-An object with properties reflecting the locale and formatting options computed during
-the construction of the given {{jsxref("Intl.DisplayNames")}} object.
-
-## Description
-
-The object returned by `resolvedOptions()` has the following properties:
+A new object with properties reflecting the options computed during the initialization of this `DisplayNames` object. The object has the following properties, in the order they are listed:
 
 - `locale`
-  - : The BCP 47 language tag for the locale actually used. If any Unicode extension
-    values were requested in the input BCP 47 language tag that led to this locale,
-    the key-value pairs that were requested and are supported for this locale are
-    included in `locale`.
+  - : The BCP 47 language tag for the locale actually used, determined by the [locale negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) process. No Unicode extension key will be included in the output.
 - `style`
-  - : The value provided for this property in the `options` argument of the
-    constructor or the default value (`"long"`). Its value is either
-    `"long"`, `"short"`, or `"narrow"`.
+  - : The value provided for this property in the `options` argument, with default filled in as needed. It is either `"narrow"`, `"short"`, or `"long"`. The default is `"long"`.
 - `type`
-  - : The value provided for this property in the `options` argument of the
-    constructor or the default value (`"language"`). Its value is either
-    `"language"`, `"region"`, `"script"`, or
-    `"currency"`.
+  - : The value provided for this property in the `options` argument. It is either `"language"`, `"region"`, `"script"`, `"currency"`, `"calendar"`, or `"dateTimeField"`. It is required so there is no default.
 - `fallback`
-  - : The value provided for this property in the options argument of the constructor or
-    the default value (`"code"`). Its value is either `"code"`
-    or `"none"`.
+  - : The value provided for this property in the `options` argument. It is either `"code"` or `"none"`. The default is `"code"`.
+- `languageDisplay`
+  - : The value provided for this property in the `options` argument. It is either `"dialect"` or `"standard"`. The default is `"dialect"`.
 
 ## Examples
 
@@ -62,6 +46,17 @@ console.log(usedOptions.locale); // "de-DE"
 console.log(usedOptions.style); // "long"
 console.log(usedOptions.type); // "region"
 console.log(usedOptions.fallback); // "code"
+```
+
+```js
+const displayNames = new Intl.DisplayNames("en", {
+  type: "language",
+  languageDisplay: "standard",
+});
+
+const usedOptions = displayNames.resolvedOptions();
+console.log(usedOptions.type); // "language"
+console.log(usedOptions.languageDisplay); // "standard"
 ```
 
 ## Specifications

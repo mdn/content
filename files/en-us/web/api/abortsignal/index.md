@@ -116,7 +116,7 @@ If you need to abort the operation on timeout then you can use the static {{domx
 This returns an `AbortSignal` that will automatically timeout after a certain number of milliseconds.
 
 The code snippet below shows how you would either succeed in downloading a file, or handle a timeout error after 5 seconds.
-Note that when there is a timeout the `fetch()` promise rejects with a "`TimeoutError`" `DOMException`.
+Note that when there is a timeout the `fetch()` promise rejects with a `TimeoutError` `DOMException`.
 This allows code to differentiate between timeouts (for which user notification is probably required), and user aborts.
 
 ```js
