@@ -74,7 +74,7 @@ addEventListener(type, listener, useCapture)
         `listener` would be automatically removed when invoked. If not specified, defaults to `false`.
     - `passive` {{optional_inline}}
 
-      - : A boolean value that, if `true`, indicates that the function specified by `listener` will never call {{domxref("Event.preventDefault", "preventDefault()")}}. If a passive listener does call `preventDefault()`, the user agent will do nothing other than generate a console warning.
+      - : A boolean value that, if `true`, indicates that the function specified by `listener` will never call {{domxref("Event.preventDefault", "preventDefault()")}}. If a passive listener calls `preventDefault()`, nothing will happen and a console warning may be generated.
 
         If this option is not specified it defaults to `false` – except that in browsers other than Safari, it defaults to `true` for {{domxref("Element/wheel_event", "wheel")}}, {{domxref("Element/mousewheel_event", "mousewheel")}}, {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} events. See [Using passive listeners](#using_passive_listeners) to learn more.
 
