@@ -298,7 +298,7 @@ An `alt` attribute's value should provide a clear and concise text replacement f
 
 In terms of accessibility, if you prepend the phrase "Something I saw on my travels:" to the examples above, a screen reader could read the _Don't_ example as "Something I saw on my travels: image", which does not convey the same meaning a sighted person might get combining the text with what they see in the image.
 
-For images used to trigger an action, like inside an `<a>` tag or a `<button>` tag, consider using the triggered action as `alt` attribute value (like `alt="next page"` instead of `alt="arrow right"`), optionally adding a description to a `title` attribute, which might be read by screen readers upon user request.
+For images used to trigger an action, for example when nested inside an {{htmlelement("a")}} or {{htmlelement("button")}} element, consider describing the triggered action inside the `alt` attribute value. For example, you could write `alt="next page"` instead of `alt="arrow right"`. You could also consider adding an optional further description to a `title` attribute; this may be read by screen readers if requested by the user.
 
 When an `alt` attribute is not present on an image, some screen readers may announce the image's file name instead. This can be a confusing experience if the file name isn't representative of the image's contents.
 
