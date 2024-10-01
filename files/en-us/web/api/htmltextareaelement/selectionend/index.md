@@ -12,7 +12,7 @@ The **`selectionEnd`** property of the {{domxref("HTMLTextAreaElement")}} interf
 
 When nothing is selected, the value of both the {{domxref("HTMLTextAreaElement.selectionStart", "selectionStart")}} and `selectionEnd` is the position of the cursor (caret) inside the `<textarea>` element.
 
-Setting `selectionEnd` to a value less than the current value of {{domxref("HTMLTextAreaElement.selectionStart", "selectionStart")}} updates both the the `selectionEnd` and `selectionStart` properties to that value. If both value are less than 0, both properties are set to the {{domxref("HTMLTextAreaElement.textLength", "textLength")}} property value.
+Setting `selectionEnd` to a value less than the current value of {{domxref("HTMLTextAreaElement.selectionStart", "selectionStart")}} updates both the `selectionEnd` and `selectionStart` properties to that value. If both value are less than 0, both properties are set to the {{domxref("HTMLTextAreaElement.textLength", "textLength")}} property value.
 
 The property value can be retrieved and set without the `<textarea>` having focus, but the element does need to have focus for the {{cssxref("::selection")}} pseudo-element to match the selected text.
 
