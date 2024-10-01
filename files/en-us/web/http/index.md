@@ -27,15 +27,18 @@ The HTTP reference documentation contains detailed information about headers, re
 - [HTTP resources and specifications](/en-US/docs/Web/HTTP/Resources_and_specifications)
   - : This page lists relevant resources about HTTP since it was first specified in the early 1990s.
 
-## HTTP concepts
+## HTTP guides
 
 HTTP is an extensible protocol that relies on concepts like resources and Uniform Resource Identifiers (URIs), a simple message structure, and client-server communication model.
 On top of these concepts, numerous extensions have been developed over the years that add functionality and updated semantics, including additional HTTP methods and headers.
 
+The guides below are listed in order from general overviews to specialized, use-case-driven topics.
+Beginners are encouraged to start with the foundational guides before exploring more focused articles.
+
 - [Overview of HTTP](/en-US/docs/Web/HTTP/Overview)
   - : The basic features of HTTP, what it can do, its intended use in web architecture, and its position in the protocol stack.
 - [A typical HTTP session](/en-US/docs/Web/HTTP/Session)
-  - : Shows and explains the flow of a usual HTTP session, from establishing a connection, sending a request, to receiving a response.
+  - : Describes the flow of an HTTP session, from establishing a connection, sending a request, to receiving a response.
 - [HTTP messages](/en-US/docs/Web/HTTP/Messages)
   - : HTTP messages transmitted as requests and responses have a defined structure.
     This article describes this general structure, its purpose, and the different types of messages.
@@ -47,45 +50,40 @@ On top of these concepts, numerous extensions have been developed over the years
     A shortlist of common types used by web developers can be found in [Common MIME types](Web/HTTP/MIME_types/Common_types).
 - [Compression in HTTP](/en-US/docs/Web/HTTP/Compression)
   - : Browsers and servers compress their messages before sending them over the network to reduce the amount of data that needs to be transmitted, improving transfer speed and bandwidth utilization.
-- [Content negotiation](/en-US/docs/Web/HTTP/Content_negotiation)
-  - : HTTP defines a set of message headers, starting with [`Accept`](/en-US/docs/Web/HTTP/Headers/Accept) as a way for a browser to announce the format, language, or encoding it prefers.
-    This article explains how this advertisement happens, how the server is expected to react, and how it chooses the most adequate response to a request.
-- [Proxy servers and tunneling](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling)
-  - : A proxy can be on the user's local computer, or anywhere between the user's computer and a destination server on the Internet.
-    This page outlines some basics about proxies and introduces a few configuration options.
-- [Connection management in HTTP/1.x](/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x)
-  - : HTTP/1.1 was the first version of HTTP to support persistent connections and pipelining.
-    This article explains both concepts, including the pros and cons of each.
-- [Protocol upgrade mechanism](/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism)
-  - : HTTP/1.1 provides a mechanism to upgrade an already-established connection to a different protocol using the {{HTTPHeader("Upgrade")}} header.
-    A client can upgrade a connection from HTTP/1.1 to HTTP/2, or an HTTP(S) connection to a [WebSocket](/en-US/docs/Web/API/WebSocket) (`ws` / `wss`).
-- [Evolution of HTTP](/en-US/docs/Web/HTTP/Evolution_of_HTTP)
-  - : HTTP was created in the early 1990s and has been extended several times.
-    This article goes through its history and describes HTTP/0.9, HTTP/1.0, HTTP/1.1, through HTTP/2 and HTTP/3, as well as novelties introduced over the years.
-
-## Practical and topical guides
-
-Learn about common communication patterns and methods for improving security, resource usage and network efficiency.
-
 - [HTTP caching](/en-US/docs/Web/HTTP/Caching)
   - : Caching is a highly important mechanism for delivering fast experiences on the Web and for efficient use of resources.
     This article describes different methods of caching and how to use HTTP headers to control them.
 - [HTTP authentication](/en-US/docs/Web/HTTP/Authentication)
   - : Authentication is a way to verify the identity of a client when making requests to a server.
     It ensures that only authorized users or systems can access certain resources.
+- [Using HTTP cookies](/en-US/docs/Web/HTTP/Cookies)
+  - : Although HTTP is a stateless protocol, a server can send a {{HTTPHeader("Set-Cookie")}} header with the response.
+    The client then returns the cookie's value with every subsequent request to the server in the form of a {{HTTPHeader("Cookie")}} request header.
+    This adds the ability to store and exchange a small amount of data which effectively adds state to some client-server interactions.
 - [Redirections in HTTP](/en-US/docs/Web/HTTP/Redirections)
   - : URL redirection, also known as URL forwarding, is a technique to give more than one URL address to a page, a form, a whole website, or a web application.
     HTTP has a special kind of response, called a HTTP redirect, for this operation.
 - [HTTP conditional requests](/en-US/docs/Web/HTTP/Conditional_requests)
   - : In conditional requests, the outcome of a request depends on the value of a validator in the request.
     This method is used heavily in [caching](/en-US/docs/Web/HTTP/Caching) and use cases such as resuming a download, preventing lost updates when modifying a document on the server, and more.
-- [Using HTTP cookies](/en-US/docs/Web/HTTP/Cookies)
-  - : Although HTTP is a stateless protocol, a server can send a {{HTTPHeader("Set-Cookie")}} header with the response.
-    The client then returns the cookie's value with every subsequent request to the server in the form of a {{HTTPHeader("Cookie")}} request header.
-    This adds the ability to store and exchange a small amount of data which effectively adds state to some client-server interactions.
 - [HTTP range requests](/en-US/docs/Web/HTTP/Range_requests)
-  - : A range request asks the server to send a specific portion of a resource back to a client instead of the resource in full.
+  - : A range request asks the server to send a specific part (or parts) of a resource back to a client instead of the full resource.
     Range requests are useful for cases when a client knows they need only part of a large file, or for cases where an application allows the user to pause and resume a download.
+- [Content negotiation](/en-US/docs/Web/HTTP/Content_negotiation)
+  - : HTTP defines a set of message headers, starting with [`Accept`](/en-US/docs/Web/HTTP/Headers/Accept) as a way for a browser to announce the format, language, or encoding it prefers.
+    This article explains how this advertisement happens, how the server is expected to react, and how it chooses the most adequate response to a request.
+- [Connection management in HTTP/1.x](/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x)
+  - : HTTP/1.1 was the first version of HTTP to support persistent connections and pipelining.
+    This article explains both concepts, including the pros and cons of each.
+- [Evolution of HTTP](/en-US/docs/Web/HTTP/Evolution_of_HTTP)
+  - : HTTP was created in the early 1990s and has been extended several times.
+    This article goes through its history and describes HTTP/0.9, HTTP/1.0, HTTP/1.1, through HTTP/2 and HTTP/3, as well as novelties introduced over the years.
+- [Protocol upgrade mechanism](/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism)
+  - : HTTP/1.1 provides a mechanism to upgrade an already-established connection to a different protocol using the {{HTTPHeader("Upgrade")}} header.
+    A client can upgrade a connection from HTTP/1.1 to HTTP/2, or an HTTP(S) connection to a [WebSocket](/en-US/docs/Web/API/WebSocket) (`ws` / `wss`).
+- [Proxy servers and tunneling](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling)
+  - : A proxy can be on the user's local computer, or anywhere between the user's computer and a destination server on the Internet.
+    This page outlines some basics about proxies and introduces a few configuration options.
 - [HTTP Client hints](/en-US/docs/Web/HTTP/Client_hints)
   - : Client Hints are a set of response headers that a server can use to proactively request information from a client about the device, network, user, and user-agent-specific preferences.
     The server can then determine which resources to send, based on the information that the client chooses to provide.
