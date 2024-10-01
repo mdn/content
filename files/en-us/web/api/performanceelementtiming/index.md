@@ -20,7 +20,7 @@ The API supports timing information on the following elements:
 - {{htmlelement("img")}} elements,
 - {{SVGElement("image")}} elements inside an {{SVGElement("svg")}},
 - [poster](/en-US/docs/Web/HTML/Element/video#poster) images of {{htmlelement("video")}} elements,
-- elements which have a contentful {{cssxref("background-image")}} (url valued and available), and
+- elements which have a contentful {{cssxref("background-image")}} property with a URL value for a resource that is actually available, and
 - groups of text nodes, such as a {{htmlelement("p")}}.
 
 The author flags an element for observation by adding the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute on the element.
