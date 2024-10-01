@@ -35,20 +35,27 @@ These rules dictate whether the same URL with different URL parameters should be
 ```http
 No-Vary-Search: key-order
 No-Vary-Search: params
-No-Vary-Search: params=("param1" "param2" "utm_campaign")
+No-Vary-Search: params=("param1" "param2")
 No-Vary-Search: params, except=("param1" "param2")
+No-Vary-Search: key-order, params, except=("param1")
 ```
 
 ## Directives
 
-- `key-order`
-  - : If included in the header value, it indicates that differences in the order of parameters between otherwise identical URLs will not cause them to be cached as separate entries. Differences in the parameters present _will_ cause them to be cached separately.
-- `params`
-  - : Either a boolean (as a literal `params`) or a list of strings:
-    - If included in the header value as a boolean, it indicates that differences in parameters between otherwise identical URLs will not cause them to be cached as separate entries.
-    - If included in the header value as a list, it indicates that the presence of the specific parameters listed will not cause otherwise identical URLs to be cached as separate entries. The presence of other parameters _will_ cause them to be cached separately.
-- `except`
-  - : A list of strings. If included in the header value, it indicates that the presence of the specific parameters listed _will_ cause otherwise identical URLs to be cached as separate entries. The presence of other parameters _won't_ cause them to be cached separately. A boolean `params` directive has to be included along with `except` for it to take effect.
+- `key-order` {{optional_inline}}
+  - : Indicates that URLs will not be cached as separate entries if _the order_ in which parameters appear in the URL is the only difference.
+    The presence of other parameters _will_ cause URLs to be cached separately.
+- `params` {{optional_inline}}
+  - : Either a boolean or a list of strings:
+    - As a boolean (`params`), it indicates that URLs that differ only by their parameters will not be cached as separate entries.
+    - An inner list of space-separated strings (`params=("param1" "param2")`).
+      Indicates that URLs that differ only by the listed parameters will not be cached as separate entries.
+      The presence of other parameters _will_ cause them to be cached separately.
+- `except` {{optional_inline}}
+  - : An inner list of space-separated strings (`except=("param1" "param2")`).
+    Indicates that URLs that differ only by the listed parameters _will_ be cached as separate entries.
+    A boolean `params` directive has to be included for it to take effect (`params, except=("param1" "param2")`).
+    The presence of other parameters that are not in the `except=` list _won't_ cause URLs to be cached as separate entries.
 
 ## Examples
 
