@@ -48,10 +48,10 @@ const auctionConfig = {
 
 navigator.runAdAuction(auctionConfig).then((selectedAd) => {
   if (fencedFrameEmbedSupported) {
-    const fencedFrame = document.getElementById(
+    const fencedFrameElem = document.getElementById(
       "protected-audience-fenced-frame",
     );
-    fencedFrame.config = selectedAd;
+    fencedFrameElem.config = selectedAd;
   } else {
     const iframeElem = document.getElementById("protected-audience-iframe");
     iframeElem.src = selectedAd;
