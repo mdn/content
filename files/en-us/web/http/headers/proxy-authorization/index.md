@@ -32,7 +32,6 @@ Proxy-Authorization: <auth-scheme> <credentials>
 
 - `<auth-scheme>`
   - : Token indicating the [authentication scheme](/en-US/docs/Web/HTTP/Authentication#authentication_schemes), such as `Basic`, `Bearer`, etc.
-    A common type is ["Basic"](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme).
     The [IANA registry of Authentication schemes](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml) maintains a full list of available types.
 - `<credentials>`
   - : Credentials use for the authentication scheme.
