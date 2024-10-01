@@ -12814,7 +12814,6 @@
 /en-US/docs/Web/MathML/Element/annotation	/en-US/docs/Web/MathML/Element/semantics
 /en-US/docs/Web/MathML/Element/annotation-xml	/en-US/docs/Web/MathML/Element/semantics
 /en-US/docs/Web/MathML/Element/menclosed	/en-US/docs/Web/MathML/Element/menclose
-/en-US/docs/Web/MathML/Element/mprescripts	/en-US/docs/Web/MathML/Element/mmultiscripts
 /en-US/docs/Web/MathML/Element/none	/en-US/docs/Web/MathML/Element/mmultiscripts
 /en-US/docs/Web/MathML/Fonts/Test	/en-US/docs/Web/MathML/Fonts
 /en-US/docs/Web/MathML/Global_attributes/mathvariant	/en-US/docs/Web/MathML/Element/mi#mathvariant
