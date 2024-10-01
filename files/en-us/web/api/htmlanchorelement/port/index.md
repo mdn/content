@@ -11,7 +11,7 @@ browser-compat: api.HTMLAnchorElement.port
 The **`port`** property of the {{domxref("HTMLAnchorElement")}} interface is a string containing the port number of the URL.
 
 > [!NOTE]
-> If the {{domxref("HTMLAnchorElement")}} object refers to a URL that doesn't contain an explicit port number (e.g., `https://localhost`) or contains a port number that's the default port number corresponding to the protocol part of the URL (e.g., `https://localhost:443`), then the `port` property of the {{domxref("HTMLAnchorElement")}} interface will be the empty string: `''`.
+> If the {{domxref("HTMLAnchorElement")}} object refers to a URL that doesn't contain an explicit port number (e.g., `https://localhost`) or contains a port number that's the default port number corresponding to the protocol part of the URL (e.g., `https://localhost:443`), then the `port` property will be the empty string: `''`.
 
 ## Value
 
