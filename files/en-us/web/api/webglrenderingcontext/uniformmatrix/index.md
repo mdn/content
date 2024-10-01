@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.uniformMatrix2fv
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.uniformMatrix[234]fv()`** methods
 of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specify matrix values for

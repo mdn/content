@@ -66604,6 +66604,28 @@
     "modified": "2020-10-15T22:16:13.286Z",
     "contributors": ["mfuji09", "wbamberg"]
   },
+  "Web/API/Window/createImageBitmap": {
+    "modified": "2020-10-15T21:37:56.407Z",
+    "contributors": [
+      "gmanpersona",
+      "mfluehr",
+      "styfle",
+      "fscholz",
+      "DomenicDenicola",
+      "Halfman",
+      "jaffathecake",
+      "jpmedley",
+      "Brettz9",
+      "MatthiasSaihttam",
+      "nmve",
+      "chrisdavidmills",
+      "yisibl",
+      "DrRataplan",
+      "zeird",
+      "Kaku",
+      "adria"
+    ]
+  },
   "Web/API/Window/crossOriginIsolated": {
     "modified": "2020-10-15T22:25:16.295Z",
     "contributors": ["ExE-Boss", "chrisdavidmills"]
@@ -68206,6 +68228,16 @@
       "Maian",
       "Dria",
       "JesseW"
+    ]
+  },
+  "Web/API/Window/queueMicrotask": {
+    "modified": "2020-10-15T22:21:06.789Z",
+    "contributors": [
+      "Kaiido",
+      "chrisdavidmills",
+      "Sheppy",
+      "zbjornson",
+      "DomenicDenicola"
     ]
   },
   "Web/API/Window/rejectionhandled_event": {
@@ -71494,38 +71526,6 @@
       "Khodaidad_Basharmand",
       "Sheppy",
       "myakura"
-    ]
-  },
-  "Web/API/createImageBitmap": {
-    "modified": "2020-10-15T21:37:56.407Z",
-    "contributors": [
-      "gmanpersona",
-      "mfluehr",
-      "styfle",
-      "fscholz",
-      "DomenicDenicola",
-      "Halfman",
-      "jaffathecake",
-      "jpmedley",
-      "Brettz9",
-      "MatthiasSaihttam",
-      "nmve",
-      "chrisdavidmills",
-      "yisibl",
-      "DrRataplan",
-      "zeird",
-      "Kaku",
-      "adria"
-    ]
-  },
-  "Web/API/queueMicrotask": {
-    "modified": "2020-10-15T22:21:06.789Z",
-    "contributors": [
-      "Kaiido",
-      "chrisdavidmills",
-      "Sheppy",
-      "zbjornson",
-      "DomenicDenicola"
     ]
   },
   "Web/API/setInterval": {
@@ -128172,72 +128172,6 @@
       "Dria",
       "CitizenK"
     ]
-  },
-  "Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference": {
-    "modified": "2019-03-23T23:43:14.702Z",
-    "contributors": [
-      "dkocho4",
-      "SphinxKnight",
-      "chrisdavidmills",
-      "Fredchat",
-      "Mgjbot",
-      "Ptak82",
-      "Jonnyq",
-      "Nickolay",
-      "CitizenK"
-    ]
-  },
-  "Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference/Axes/ancestor": {
-    "modified": "2019-01-16T16:26:05.963Z",
-    "contributors": ["chrisdavidmills", "CitizenK"]
-  },
-  "Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference/Axes/ancestor-or-self": {
-    "modified": "2019-01-16T16:26:05.411Z",
-    "contributors": ["chrisdavidmills", "CitizenK"]
-  },
-  "Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference/Axes/attribute": {
-    "modified": "2019-01-16T16:26:13.305Z",
-    "contributors": ["chrisdavidmills", "CitizenK"]
-  },
-  "Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference/Axes/child": {
-    "modified": "2019-01-16T16:26:57.704Z",
-    "contributors": ["chrisdavidmills", "CitizenK"]
-  },
-  "Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference/Axes/descendant": {
-    "modified": "2019-01-16T16:26:05.386Z",
-    "contributors": ["chrisdavidmills", "CitizenK"]
-  },
-  "Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference/Axes/descendant-or-self": {
-    "modified": "2019-01-16T16:26:09.576Z",
-    "contributors": ["chrisdavidmills", "CitizenK"]
-  },
-  "Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference/Axes/following": {
-    "modified": "2019-01-16T16:26:07.299Z",
-    "contributors": ["chrisdavidmills", "CitizenK"]
-  },
-  "Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference/Axes/following-sibling": {
-    "modified": "2019-01-16T16:26:09.611Z",
-    "contributors": ["chrisdavidmills", "CitizenK"]
-  },
-  "Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference/Axes/namespace": {
-    "modified": "2019-01-16T16:26:09.593Z",
-    "contributors": ["chrisdavidmills", "CitizenK"]
-  },
-  "Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference/Axes/parent": {
-    "modified": "2019-01-16T16:26:07.282Z",
-    "contributors": ["chrisdavidmills", "CitizenK"]
-  },
-  "Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference/Axes/preceding": {
-    "modified": "2019-01-16T16:26:10.264Z",
-    "contributors": ["chrisdavidmills", "CitizenK"]
-  },
-  "Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference/Axes/preceding-sibling": {
-    "modified": "2019-01-16T16:26:06.971Z",
-    "contributors": ["chrisdavidmills", "CitizenK"]
-  },
-  "Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference/Axes/self": {
-    "modified": "2019-01-16T16:26:11.469Z",
-    "contributors": ["chrisdavidmills", "CitizenK"]
   },
   "WebAssembly": {
     "modified": "2020-10-15T21:51:43.373Z",

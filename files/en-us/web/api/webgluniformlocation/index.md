@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.WebGLUniformLocation
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **WebGLUniformLocation** interface is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and represents the location of a uniform variable in a shader program.
 
