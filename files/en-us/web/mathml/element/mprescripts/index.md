@@ -15,7 +15,7 @@ This element supports [global MathML attributes](/en-US/docs/Web/MathML/Global_a
 
 ## Example
 
-The first `<mmultiscripts>` child element becomes a base expression. The rest children by default become post-scripts elements (a, b). `<mprescripts>` acts as a separator, and children after it become pre-scripts elements (c, d).
+The first `<mmultiscripts>` child element becomes a base expression. The remaining children by default become post-scripts elements (a, b). `<mprescripts>` acts as a separator, and children after it become pre-scripts elements (c, d).
 
 ```css hidden
 html,
