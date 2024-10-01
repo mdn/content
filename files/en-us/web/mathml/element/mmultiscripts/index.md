@@ -126,16 +126,16 @@ body {
 ```html-nolint
 <math display="block">
   <mmultiscripts>
-    <mtext>X</mtext> <!-- base expression -->
-    <mtext>1</mtext> <!-- post-sub-script-1 -->
-    <mtext>2</mtext> <!-- post-sup-script-1 -->
-    <mtext>3</mtext> <!-- post-sub-script-2 -->
-    <mtext>4</mtext> <!-- post-sup-script-2 -->
+    <mi>X</mi> <!-- base expression -->
+    <mn>1</mn> <!-- post-sub-script-1 -->
+    <mn>2</mn> <!-- post-sup-script-1 -->
+    <mn>3</mn> <!-- post-sub-script-2 -->
+    <mn>4</mn> <!-- post-sup-script-2 -->
     <mprescripts />
-    <mtext>5</mtext> <!-- pre-sub-script-1 -->
-    <mtext>6</mtext> <!-- pre-sup-script-1 -->
-    <mtext>7</mtext> <!-- pre-sub-script-2 -->
-    <mtext>8</mtext> <!-- pre-sup-script-2 -->
+    <mn>5</mn> <!-- pre-sub-script-1 -->
+    <mn>6</mn> <!-- pre-sup-script-1 -->
+    <mn>7</mn> <!-- pre-sub-script-2 -->
+    <mn>8</mn> <!-- pre-sup-script-2 -->
   </mmultiscripts>
 </math>
 ```
