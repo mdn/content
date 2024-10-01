@@ -107,7 +107,7 @@ priority = u=2
 ```
 
 > [!NOTE]
-> The requests above use a human-readable format from the HTTP/2 or HTTP/3 specifications.
+> The requests above use the human-readable format from the HTTP/2 or HTTP/3 specifications.
 > The HTTP/1.1 format used in most of this documentation would be something like:
 >
 > ```http
