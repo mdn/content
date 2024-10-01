@@ -26,7 +26,7 @@ _This interface also inherits properties from its parent, {{domxref("HTMLElement
 - {{domxref("HTMLOutputElement.name")}}
   - : A string reflecting the [`name`](/en-US/docs/Web/HTML/Element/output#name) HTML attribute, containing the name for the control that is submitted with form data.
 - {{domxref("HTMLOutputElement.type")}} {{ReadOnlyInline}}
-  - : The string "`output`".
+  - : The string `"output"`.
 - {{domxref("HTMLOutputElement.validationMessage")}} {{ReadOnlyInline}}
   - : A string representing a localized message that describes the validation constraints that the control does not satisfy (if any). This is the empty string if the control is not a candidate for constraint validation (`willValidate` is `false`), or it satisfies its constraints.
 - {{domxref("HTMLOutputElement.validity")}} {{ReadOnlyInline}}

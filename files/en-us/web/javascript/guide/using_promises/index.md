@@ -542,7 +542,7 @@ For more details, refer to [Tasks vs. microtasks](/en-US/docs/Web/API/HTML_DOM_A
 
 If you run into situations in which you have promises and tasks (such as events or callbacks) which are firing in unpredictable orders, it's possible you may benefit from using a microtask to check status or balance out your promises when promises are created conditionally.
 
-If you think microtasks may help solve this problem, see the [microtask guide](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) to learn more about how to use [`queueMicrotask()`](/en-US/docs/Web/API/queueMicrotask) to enqueue a function as a microtask.
+If you think microtasks may help solve this problem, see the [microtask guide](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) to learn more about how to use {{domxref("Window.queueMicrotask()", "queueMicrotask()")}} to enqueue a function as a microtask.
 
 ## See also
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.generateMipmap
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.generateMipmap()`** method of the
 [WebGL API](/en-US/docs/Web/API/WebGL_API) generates a set of mipmaps for a

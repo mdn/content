@@ -164,9 +164,9 @@ The HTML for our client needs a location for video to be presented. This require
 
 The page structure defined here is using {{HTMLElement("div")}} elements, giving us full control over the page layout by enabling the use of CSS. We'll skip layout detail in this guide, but [take a look at the CSS](https://github.com/mdn/samples-server/blob/master/s/webrtc-from-chat/chat.css) on GitHub to see how we handled it. Take note of the two {{HTMLElement("video")}} elements, one for your self-view, one for the connection, and the {{HTMLElement("button")}} element.
 
-The `<video>` element with the `id` "`received_video`" will present video received from the connected user. We specify the `autoplay` attribute, ensuring once the video starts arriving, it immediately plays. This removes any need to explicitly handle playback in our code. The "`local_video`" `<video>` element presents a preview of the user's camera; specifying the `muted` attribute, as we don't need to hear local audio in this preview panel.
+The `<video>` element with the `id` `received_video` will present video received from the connected user. We specify the `autoplay` attribute, ensuring once the video starts arriving, it immediately plays. This removes any need to explicitly handle playback in our code. The `local_video` `<video>` element presents a preview of the user's camera; specifying the `muted` attribute, as we don't need to hear local audio in this preview panel.
 
-Finally, the "`hangup-button`" {{HTMLElement("button")}}, to disconnect from a call, is defined and configured to start disabled (setting this as our default for when no call is connected) and apply the function `hangUpCall()` on click. This function's role is to close the call, and send a signalling server notification to the other peer, requesting it also close.
+Finally, the `hangup-button` {{HTMLElement("button")}}, to disconnect from a call, is defined and configured to start disabled (setting this as our default for when no call is connected) and apply the function `hangUpCall()` on click. This function's role is to close the call, and send a signalling server notification to the other peer, requesting it also close.
 
 ### The JavaScript code
 
@@ -375,7 +375,7 @@ function handleNegotiationNeededEvent() {
         sdp: myPeerConnection.localDescription,
       });
     })
-    .catch(reportError);
+    .catch(window.reportError);
 }
 ```
 
@@ -397,7 +397,7 @@ We know the description is valid, and has been set, when the promise returned by
 - `sdp`
   - : The SDP string describing the offer.
 
-If an error occurs, either in the initial `createOffer()` or in any of the fulfillment handlers that follow, an error is reported by invoking our `reportError()` function.
+If an error occurs, either in the initial `createOffer()` or in any of the fulfillment handlers that follow, an error is reported by invoking our `window.reportError()` function.
 
 Once `setLocalDescription()`'s fulfillment handler has run, the ICE agent begins sending {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} events to the {{domxref("RTCPeerConnection")}}, one for each potential configuration it discovers. Our handler for the `icecandidate` event is responsible for transmitting the candidates to the other peer.
 
@@ -462,7 +462,7 @@ Finally, the caller handles the answer message it received by creating a new {{d
 ```js
 function handleVideoAnswerMsg(msg) {
   const desc = new RTCSessionDescription(msg.sdp);
-  myPeerConnection.setRemoteDescription(desc).catch(reportError);
+  myPeerConnection.setRemoteDescription(desc).catch(window.reportError);
 }
 ```
 
@@ -506,7 +506,7 @@ The signaling server delivers each ICE candidate to the destination peer using w
 function handleNewICECandidateMsg(msg) {
   const candidate = new RTCIceCandidate(msg.candidate);
 
-  myPeerConnection.addIceCandidate(candidate).catch(reportError);
+  myPeerConnection.addIceCandidate(candidate).catch(window.reportError);
 }
 ```
 

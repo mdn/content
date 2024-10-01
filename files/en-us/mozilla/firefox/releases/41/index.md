@@ -52,7 +52,7 @@ Highlights:
 - `Date.prototype` is now an ordinary object, not a {{jsxref("Date")}} instance anymore ([Firefox bug 861219](https://bugzil.la/861219)).
 - {{jsxref("Date.prototype.toString")}} is now a generic method ([Firefox bug 861219](https://bugzil.la/861219)).
 - {{jsxref("Symbol.species")}} has been added ([Firefox bug 1131043](https://bugzil.la/1131043)).
-- {{jsxref("Map.@@species", "Map[@@species]")}} and {{jsxref("Set.@@species", "Set[@@species]")}} getters have been added ([Firefox bug 1131043](https://bugzil.la/1131043)).
+- [`Map[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.species) and [`Set[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.species) getters have been added ([Firefox bug 1131043](https://bugzil.la/1131043)).
 - Non-standard {{jsxref("Statements/let", "let expression", "#let_expressions", 1)}} support has been dropped ([Firefox bug 1023609](https://bugzil.la/1023609)).
 - {{jsxref("Functions/Default_parameters", "Destructured parameters with default value assignment", "#Destructured_parameter_with_default_value_assignment", 1)}} are now supported ([Firefox bug 1018628](https://bugzil.la/1018628)).
 - Per ES2015, curly braces are required for [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions). Syntax without them will fail from now on ([Firefox bug 1150855](https://bugzil.la/1150855)).

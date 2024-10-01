@@ -21,7 +21,7 @@ selector {
 }
 ```
 
-In formal CSS syntax, data types are denoted by a keyword placed between the inequality signs "`<`" and "`>`".
+In formal CSS syntax, data types are denoted by a keyword placed between the angle brackets `<` and `>`.
 
 ## Textual data types
 

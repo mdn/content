@@ -122,7 +122,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - **Attribute is not set (default), an empty string, or a JavaScript MIME type**
       - : Indicates that the script is a "classic script", containing JavaScript code.
         Authors are encouraged to omit the attribute if the script refers to JavaScript code rather than specify a MIME type.
-        JavaScript MIME types are [listed in the IANA media types specification](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript).
+        JavaScript MIME types are [listed in the IANA media types specification](/en-US/docs/Web/HTTP/MIME_types#textjavascript).
     - [`importmap`](/en-US/docs/Web/HTML/Element/script/type/importmap)
       - : This value indicates that the body of the element contains an import map.
         The import map is a JSON object that developers can use to control how the browser resolves module specifiers when importing [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps).
@@ -143,7 +143,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 ### Deprecated attributes
 
 - `charset` {{Deprecated_inline}}
-  - : If present, its value must be an {{Glossary("ASCII")}} case-insensitive match for "`utf-8`". It's unnecessary to specify the `charset` attribute, because documents must use UTF-8, and the `script` element inherits its character encoding from the document.
+  - : If present, its value must be an {{Glossary("ASCII")}} case-insensitive match for `utf-8`. It's unnecessary to specify the `charset` attribute, because documents must use UTF-8, and the `script` element inherits its character encoding from the document.
 - `language` {{Deprecated_inline}} {{Non-standard_Inline}}
   - : Like the `type` attribute, this attribute identifies the scripting language in use. Unlike the `type` attribute, however, this attribute's possible values were never standardized. The `type` attribute should be used instead.
 

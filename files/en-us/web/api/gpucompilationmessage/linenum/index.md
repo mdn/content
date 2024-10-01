@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUCompilationMessage.lineNum
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`lineNum`** read-only property of the
 {{domxref("GPUCompilationMessage")}} interface is a number representing the line number in the shader code that the message corresponds to.

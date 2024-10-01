@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.SecurityPolicyViolationEvent.statusCode
 ---
 
-{{APIRef("Reporting API")}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}
 
 The **`statusCode`** read-only property of the {{domxref("SecurityPolicyViolationEvent")}} interface is a number representing the HTTP status code of the window or worker in which the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) violation occurred.
 
@@ -32,4 +32,4 @@ document.addEventListener("securitypolicyviolation", (e) => {
 
 ## See also
 
-- [`CSPViolationReportBody.statusCode`](/en-US/docs/Web/API/CSPViolationReportBody#cspviolationreportbody.statuscode)
+- {{domxref("CSPViolationReportBody.statusCode")}}

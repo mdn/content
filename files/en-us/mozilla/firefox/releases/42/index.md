@@ -91,7 +91,7 @@ Our experimental implementation of the [Shadow DOM](/en-US/docs/Web/API/Web_comp
 
 #### New APIs
 
-- The {{domxref("ImageBitmap")}} interface and the {{domxref("createImageBitmap()")}} method have been implemented. They are available on regular window scripts and in Web workers and allow efficient posting of images between window and worker contexts ([Firefox bug 1044102](https://bugzil.la/1044102)).
+- The {{domxref("ImageBitmap")}} interface, the {{domxref("Window.createImageBitmap()")}} and {{domxref("WorkerGlobalScope.createImageBitmap()")}} method have been implemented. They are available on regular window scripts and in Web workers and allow efficient posting of images between window and worker contexts ([Firefox bug 1044102](https://bugzil.la/1044102)).
 
 #### Miscellaneous
 

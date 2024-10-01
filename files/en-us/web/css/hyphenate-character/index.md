@@ -42,7 +42,7 @@ The value either sets the string to use instead of a hyphen, or indicates that t
 ## Examples
 
 This example shows two identical blocks of text that have {{cssxref("hyphens")}} set to ensure that they break wherever needed, and on soft hyphen breaks (created using `&shy;`).
-The first block has the value of the hyphen changed to the equals symbol ("`=`").
+The first block has the value of the hyphen changed to the equals symbol (`=`).
 The second block has no hyphenate-character set, which is equivalent to `hyphenate-character: auto` for user agents that support this property.
 
 ### HTML

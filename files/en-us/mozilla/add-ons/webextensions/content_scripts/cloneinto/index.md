@@ -40,9 +40,9 @@ let clonedObject = cloneInto(
 - `options` {{optional_inline}}
   - : `object`. Options for the function.
     - `cloneFunctions` {{optional_inline}}
-      - : `boolean`. Whether the object's functions should be cloned. Default to `false`. Cloned functions have the same semantics as functions exported using [`exportFunction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/Content_scripts/exportFunction). See [Cloning objects that have functions](#Cloning_objects_that_have_functions). {{optional_inline}}
+      - : `boolean`. Whether the object's functions should be cloned. Default to `false`. Cloned functions have the same semantics as functions exported using [`exportFunction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/Content_scripts/exportFunction). See [Cloning objects that have functions](#cloning_objects_that_have_functions). {{optional_inline}}
     - `wrapReflectors` {{optional_inline}}
-      - : `boolean`. Whether DOM objects should be passed by reference instead of cloned. DOM objects are usually not clonable. Defaults to `false`. See [Cloning objects that contain DOM elements](#Cloning_objects_that_contain_DOM_elements).
+      - : `boolean`. Whether DOM objects should be passed by reference instead of cloned. DOM objects are usually not clonable. Defaults to `false`. See [Cloning objects that contain DOM elements](#cloning_objects_that_contain_dom_elements).
 
 ### Return Value
 
@@ -102,7 +102,7 @@ If the object to clone contains functions, you must pass the `{cloneFunctions:tr
 ```js
 // content script
 var addonScriptObject = {
-  greetme: function () {
+  greetMe: function () {
     alert("hello from your extension");
   },
 };
@@ -117,7 +117,7 @@ var test = document.getElementById("test");
 test.addEventListener(
   "click",
   function () {
-    window.addonScriptObject.greetme();
+    window.addonScriptObject.greetMe();
   },
   false,
 );

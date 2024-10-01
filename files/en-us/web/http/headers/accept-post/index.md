@@ -7,7 +7,7 @@ spec-urls: https://www.w3.org/TR/ldp/#header-accept-post
 
 {{HTTPSidebar}}
 
-The **`Accept-Post`** response HTTP header advertises which [media types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) are accepted by the server for HTTP post requests.
+The **`Accept-Post`** response HTTP header advertises which [media types](/en-US/docs/Web/HTTP/MIME_types) are accepted by the server for HTTP post requests.
 
 **`Accept-Post`** in response to any method means that `POST` is allowed on the requested resource (any document/media format in the header further indicates that the document format is allowed).
 

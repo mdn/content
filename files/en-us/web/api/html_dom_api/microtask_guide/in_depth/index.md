@@ -4,7 +4,7 @@ slug: Web/API/HTML_DOM_API/Microtask_guide/In_depth
 page-type: guide
 ---
 
-{{APIRef("HTML DOM")}}
+{{DefaultAPISidebar("HTML DOM")}}
 
 When debugging or, possibly, when trying to decide upon the best approach to solving a problem around timing and scheduling of tasks and microtasks, there are things about how the JavaScript runtime operates under the hood that may be useful to understand.
 
@@ -12,7 +12,7 @@ JavaScript is an inherently single-threaded language. It was designed in an era 
 
 As time passed, of course, we know that computers have evolved into powerful multi-core systems, and JavaScript has become one of the most prolifically-used languages in the computing world. A vast number of the most popular applications are based at least in part on JavaScript code. To support this, it was necessary to find ways to allow for projects to escape the limitations of a single-threaded language.
 
-Starting with the addition of timeouts and intervals as part of the Web API ({{domxref("setTimeout()")}} and {{domxref("setInterval()")}}), the JavaScript environment provided by Web browsers has gradually advanced to include powerful features that enable scheduling of tasks, multi-threaded application development, and so forth. To understand where `queueMicrotask()` comes into play here, it's helpful to understand how the JavaScript runtime operates when scheduling and running code.
+Starting with the addition of timeouts and intervals as part of the Web API ({{domxref("setTimeout()")}} and {{domxref("setInterval()")}}), the JavaScript environment provided by Web browsers has gradually advanced to include powerful features that enable scheduling of tasks, multi-threaded application development, and so forth. To understand where {{domxref("Window.queueMicrotask()", "queueMicrotask()")}} comes into play here, it's helpful to understand how the JavaScript runtime operates when scheduling and running code.
 
 ## JavaScript execution contexts
 
@@ -140,12 +140,12 @@ This is further alleviated by using [asynchronous JavaScript](/en-US/docs/Learn/
 
 Microtasks are another solution to this problem, providing a finer degree of access by making it possible to schedule code to run before the next iteration of the event loop begins, instead of having to wait until the next one.
 
-The microtask queue has been around for a while, but it's historically been used only internally in order to drive things like promises. The addition of `queueMicrotask()`, exposing it to web developers, creates a unified queue for microtasks which is used wherever it's necessary to have the ability to schedule code to run safely when there are no execution contexts left on the JavaScript execution context stack. Across multiple instances and across all browsers and JavaScript runtimes, a standardized microqueue mechanism means these microtasks will operate reliably in the same order, thus avoiding potentially difficult to find bugs.
+The microtask queue has been around for a while, but it's historically been used only internally in order to drive things like promises. The addition of {{domxref("Window.queueMicrotask()", "queueMicrotask()")}}, exposing it to web developers, creates a unified queue for microtasks which is used wherever it's necessary to have the ability to schedule code to run safely when there are no execution contexts left on the JavaScript execution context stack. Across multiple instances and across all browsers and JavaScript runtimes, a standardized microqueue mechanism means these microtasks will operate reliably in the same order, thus avoiding potentially difficult to find bugs.
 
 ## See also
 
 - [Microtask guide](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide)
-- {{domxref("queueMicrotask()")}}
+- {{domxref("Window.queueMicrotask()")}}
 - [The Event Loop](/en-US/docs/Web/JavaScript/Event_loop)
 - [Asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous)
   - [Introducing asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing)

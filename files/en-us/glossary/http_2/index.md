@@ -6,11 +6,13 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-**HTTP/2** is a major revision of the [HTTP network protocol](/en-US/docs/Web/HTTP/Basics_of_HTTP).
+**HTTP/2** is a major revision of the [HTTP network protocol](/en-US/docs/Web/HTTP).
 
-The primary goals for HTTP/2 are to reduce {{glossary("latency")}} by enabling full request and response multiplexing, minimize protocol overhead via efficient compression of HTTP header fields, and add support for request prioritization and server push.
+The primary goals for HTTP/2 are to reduce {{glossary("latency")}} and head-of-line blocking by enabling full request and response multiplexing, minimize protocol overhead via efficient compression of HTTP header fields, and add support for request prioritization and server push.
 
-HTTP/2 does not modify the application semantics of HTTP in any way. All the core concepts found in HTTP 1.1, such as HTTP methods, status codes, URIs, and header fields, remain in place. Instead, HTTP/2 modifies how the data is formatted (framed) and transported between the client and server, both of which manage the entire process, and hides application complexity within the new framing layer. As a result, all existing applications can be delivered without modification.
+HTTP/2 does not modify the semantics of HTTP, meaning the core concepts found in HTTP/1.1, such as methods, status codes, URIs, and header fields, remain the same.
+Instead, HTTP/2 modifies how the data is formatted (framed) and transported between the client and server, both of which manage the entire process, and hides protocol complexity within a framing layer.
+As a result, all existing applications can be delivered over the protocol without modification.
 
 ## See also
 

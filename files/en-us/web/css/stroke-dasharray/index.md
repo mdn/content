@@ -48,7 +48,7 @@ The value is a list of comma and/or white space separated `<number>`, `<length>`
 
 - {{cssxref("&lt;length&gt;")}}
 
-  - : Pixel units are handled the same as SVG units (see `<number>`, above) and font-based lengths such as `em` are calculated with repect to the element's SVG value for the text size; the effects of other length units may depend on the browser. Negative values are invalid.
+  - : Pixel units are handled the same as SVG units (see `<number>`, above) and font-based lengths such as `em` are calculated with respect to the element's SVG value for the text size; the effects of other length units may depend on the browser. Negative values are invalid.
 
 - {{cssxref("&lt;percentage&gt;")}}
 
