@@ -21,6 +21,10 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 - `src` {{deprecated_inline}}
   - : The location of an external source for semantic information.
 
+## Accessibility
+
+The `<annotation>` element has no implicit [ARIA role](/en-US/docs/Web/Accessibility/ARIA/Roles).
+
 ## Example
 
 ```css hidden

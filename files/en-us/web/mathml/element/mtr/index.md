@@ -9,6 +9,10 @@ browser-compat: mathml.elements.mtr
 
 The **`<mtr>`** [MathML](/en-US/docs/Web/MathML) element represents a row in a table or a matrix. It may only appear in a {{ MathMLElement("mtable") }} element and its children are {{ MathMLElement("mtd") }} elements representing cells. This element is similar to the {{ HTMLElement("tr") }} element of [HTML](/en-US/docs/Web/HTML).
 
+## Accessibility
+
+The `<mtr>` element has no implicit [ARIA role](/en-US/docs/Web/Accessibility/ARIA/Roles).
+
 ## Attributes
 
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes). Some browsers may also support the following attributes:

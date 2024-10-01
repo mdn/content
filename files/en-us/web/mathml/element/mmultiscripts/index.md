@@ -40,6 +40,10 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 > [!NOTE]
 > For the `subscriptshift` and `superscriptshift` attributes, some browsers may also accept [legacy MathML lengths](/en-US/docs/Web/MathML/Values#legacy_mathml_lengths).
 
+## Accessibility
+
+The `<mmultiscripts>` element has no implicit [ARIA role](/en-US/docs/Web/Accessibility/ARIA/Roles).
+
 ## Examples
 
 ### Using `<mprescripts>`
