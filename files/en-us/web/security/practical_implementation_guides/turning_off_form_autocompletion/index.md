@@ -44,7 +44,7 @@ You can do this either for an entire form, or for specific input elements in a f
 
 Setting `autocomplete="off"` on fields has two effects:
 
-- It tells the browser not to save data inputted by the user for later autocompletion on similar forms, though heuristics for complying vary by browser.
+- It tells the browser not to save data inputted by the user for later autocompletion on similar forms (some browsers make exceptions for special cases, such as prompting users to save passwords).
 - It stops the browser from caching form data in the session history. When form data is cached in session history, the information filled in by the user is shown in the case where the user has submitted the form and clicked the Back button to go back to the original form page.
 
 If a browser keeps on making suggestions even after setting autocomplete to off, then you have to change the `name` attribute of the `<input>` element.
