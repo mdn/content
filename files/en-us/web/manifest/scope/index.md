@@ -7,7 +7,8 @@ browser-compat: html.manifest.scope
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
-The `scope` manifest member is used to define the navigation scope of your web application. It restricts the web pages that can be navigated while the manifest is applied.
+The `scope` manifest member is used to define the navigation scope of your web application.
+It restricts the web pages that can be navigated while the manifest is applied.
 
 ## Syntax
 
@@ -29,7 +30,7 @@ The `scope` manifest member is used to define the navigation scope of your web a
   - : A string that represents a URL.
     The URL can be absolute or relative.
     If the value is relative, it is resolved against the manifest file's URL.
-    The value must allow [`start_url`](/en-US/docs/Web/Manifest/start_url) to be within the defined scope.
+    The [`start_url`](/en-US/docs/Web/Manifest/start_url) must be within the defined scope.
 
     If `scope` is unspecified or the value is invalid (i.e., not a string, not a valid URL, or `start_url` is not within scope), the `start_url` value is used as a fallback, with the filename, query, and fragment removed.
 
