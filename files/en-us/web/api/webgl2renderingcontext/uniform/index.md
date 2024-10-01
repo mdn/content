@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.uniform1ui
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.uniform[1234][uif][v]()`**
 methods of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specify values of

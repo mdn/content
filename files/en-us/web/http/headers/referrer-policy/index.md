@@ -108,11 +108,12 @@ CSS can fetch resources referenced from stylesheets. These resources follow a re
 
 ### `no-referrer-when-downgrade`
 
-| From document              | Navigation to                   | Referrer used              |
-| -------------------------- | ------------------------------- | -------------------------- |
-| `https://example.com/page` | `https://example.com/otherpage` | `https://example.com/page` |
-| `https://example.com/page` | `https://mozilla.org`           | `https://example.com/page` |
-| `https://example.com/page` | **http**://example.com          | _(no referrer)_            |
+| From document               | Navigation to                   | Referrer used              |
+| --------------------------- | ------------------------------- | -------------------------- |
+| `https://example.com/page`  | `https://example.com/otherpage` | `https://example.com/page` |
+| `https://example.com/page`  | `https://mozilla.org`           | `https://example.com/page` |
+| `https://example.com/page`  | **http**://example.com          | _(no referrer)_            |
+| **http**://example.com/page | _anywhere_                      | `http://example.com/page`  |
 
 ### `origin`
 
