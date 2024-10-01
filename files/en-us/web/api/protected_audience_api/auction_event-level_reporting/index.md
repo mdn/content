@@ -1,6 +1,6 @@
 ---
-title: "Protected Audience API: Reporting auction results"
-slug: Web/API/Protected_Audience_API/Report_auction_results
+title: "Protected Audience API: Auction event-level reporting"
+slug: Web/API/Protected_Audience_API/Auction_event-level_reporting
 page-type: guide
 status:
   - experimental
@@ -8,10 +8,10 @@ status:
 
 {{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("Protected Audience API")}}
 
-There are several reporting mechanisms available to developers within and around the [Protected Audience API](/en-US/docs/Web/API/Protected_Audience_API). These provide reports of auction results, ad engegement, and conversion attribution. This article explains how these different mechanisms work.
+There are several event-level reporting mechanisms available to developers within and around the [Protected Audience API](/en-US/docs/Web/API/Protected_Audience_API). These provide reports of auction results, ad engegement, and conversion attribution. This article explains how these different mechanisms work.
 
 > [!NOTE]
-> The event-level reporting mechanisms that exist in the Protected Audience API today are transition mechanisms. In the future, alternative solutions will be designed to better support existing use cases.
+> The event-level reporting mechanisms that exist in the Protected Audience API today are transitional mechanisms. Event-level auction reporting will be [supported until at least 2026](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience-api/feature-status#event-level_auction_win_reporting), and advanced notice will be provided to the ecosystem before the API transitions to any alternative solutions.
 
 ## Report mechanism summary
 
@@ -26,9 +26,8 @@ There are several event-level reporting mechansims:
 
 3. Conversion attribution: When a user has clicked the winning ad (or interacted with it in some other way), it is useful for the buyer to be able to measure conversions — for example, did the user later go on to view or purchase the advertised product on the buyer's main site? To provide this functionality, the ad beacon can be [registered as an attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources), allowing the conversions to be reported via the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API).
 
-In addition, the [Private Aggregation API](https://developers.google.com/privacy-sandbox/private-advertising/private-aggregation) can be used to generate summary reports from Protected Audience data.
-
-> [!NOTE]
+> [!NOTE] In addition, the [Private Aggregation API](https://developers.google.com/privacy-sandbox/private-advertising/private-aggregation) can be used to generate summary reports from Protected Audience data.
+>
 > A summary report differs from an event-level report in that it doesn't reveal information about each individual event. For example, with an event-level report, you can determine that users A, B and C have seen ad campaign A. With summary reports, you can measure the number of users that have seen campaign A and [noise](https://developers.google.com/privacy-sandbox/private-advertising/aggregation-service#noise-scale) is added to protect user privacy.
 
 ## Reporting auction results

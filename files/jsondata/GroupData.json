@@ -1275,7 +1275,7 @@
       "guides": [
         "/docs/Web/API/Protected_Audience_API/Join_ad_interest_group",
         "/docs/Web/API/Protected_Audience_API/Run_ad_auction",
-        "/docs/Web/API/Protected_Audience_API/Report_auction_results"
+        "/docs/Web/API/Protected_Audience_API/Auction_event-level_reporting"
       ],
       "interfaces": [
         "ForDebuggingOnly",

@@ -27,7 +27,7 @@ To summarize:
 > [!NOTE]
 > To avoid leaking any sensitive information, the browser runs buyer- and seller-specific code inside dedicated **script runners**, which are modified [worklets](/en-US/docs/Web/API/Worklet), each associated with a single domain. The worklets cannot communicate with the seller page or the network — they serve only to load the buyer or seller logic, fetch any associated real-time data, run the code, and return the output.
 
-In the sections below, we'll look each of these steps in detail, except for Step 5. — you can find more details about reporting in [Reporting auction results](/en-US/docs/Web/API/Protected_Audience_API/Report_auction_results).
+In the sections below, we'll look each of these steps in detail, except for Step 5. — you can find more details about reporting in [Protected Audience API: Auction event-level reporting](/en-US/docs/Web/API/Protected_Audience_API/Auction_event-level_reporting).
 
 ## A typical `runAdAuction()` call
 

@@ -74,6 +74,6 @@ window.fence.reportEvent({
 
 ## See also
 
-- [Protected Audience API: Reporting auction results](/en-US/docs/Web/API/Protected_Audience_API/Report_auction_results)
+- [Protected Audience API: Auction event-level reporting](/en-US/docs/Web/API/Protected_Audience_API/Auction_event-level_reporting)
 - [Fenced frames](https://developers.google.com/privacy-sandbox/private-advertising/fenced-frame) on developers.google.com
 - [The Privacy Sandbox](https://developers.google.com/privacy-sandbox) on developers.google.com
