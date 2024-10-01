@@ -12811,8 +12811,6 @@
 /en-US/docs/Web/Manifest/iarc_rating_id	/en-US/docs/Web/Manifest
 /en-US/docs/Web/Manifest/lang	/en-US/docs/Web/Manifest
 /en-US/docs/Web/MathML/Attribute/Values	/en-US/docs/Web/MathML/Values
-/en-US/docs/Web/MathML/Element/annotation	/en-US/docs/Web/MathML/Element/semantics
-/en-US/docs/Web/MathML/Element/annotation-xml	/en-US/docs/Web/MathML/Element/semantics
 /en-US/docs/Web/MathML/Element/menclosed	/en-US/docs/Web/MathML/Element/menclose
 /en-US/docs/Web/MathML/Element/mprescripts	/en-US/docs/Web/MathML/Element/mmultiscripts
 /en-US/docs/Web/MathML/Element/none	/en-US/docs/Web/MathML/Element/mmultiscripts
