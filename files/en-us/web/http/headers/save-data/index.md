@@ -43,7 +43,7 @@ content to reduce the data downloaded such as smaller image and video resources,
 different markup and styling, disabled polling and automatic updates, and so on.
 
 > [!NOTE]
-> Disabling HTTP/2 Server Push ({{RFC("7540", "Server Push", "8.2")}}) might be desirable too for reducing data downloads.
+> Disabling HTTP/2 Server Push ({{RFC("7540", "Server Push", "8.2")}}) may reduce data downloads, although this feature is no longer supported by default in most major browser engines.
 
 ## Syntax
 

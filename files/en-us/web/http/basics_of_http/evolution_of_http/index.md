@@ -176,7 +176,6 @@ The HTTP/2 protocol differs from HTTP/1.1 in a few ways:
 - It's a binary protocol rather than a text protocol. It can't be read and created manually. Despite this hurdle, it allows for the implementation of improved optimization techniques.
 - It's a multiplexed protocol. Parallel requests can be made over the same connection, removing the constraints of the HTTP/1.x protocol.
 - It compresses headers. As these are often similar among a set of requests, this removes the duplication and overhead of data transmitted.
-- It allows a server to populate data in a client cache through a mechanism called the server push.
 
 Officially standardized in May 2015, HTTP/2 use peaked in January 2022 at 46.9% of all websites (see [these stats](https://w3techs.com/technologies/details/ce-http2)). High-traffic websites showed the most rapid adoption in an effort to save on data transfer overhead and subsequent budgets.
 
