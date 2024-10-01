@@ -20,6 +20,8 @@ This article provides information about the changes in Firefox 132 that affect d
 
 #### Removals
 
+- The [`-moz-user-modify`](/en-US/docs/Web/CSS/user-modify) CSS property has been removed. This property has been deprecated in favour of the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) global attribute. ([Firefox bug 1920118](https://bugzil.la/1920118)).
+
 ### JavaScript
 
 #### Removals
