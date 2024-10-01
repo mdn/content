@@ -47,7 +47,7 @@ Origin: <scheme>://<hostname>:<port>
 ## Description
 
 The `Origin` header is similar to the {{HTTPHeader("Referer")}} header, but does not disclose the path, and may be `null`.
-It is used to provide the 'security context' for the origin request, except in cases where the origin information would be sensitive or unnecessary.
+It is used to provide the security context for the origin request, except in cases where the origin information would be sensitive or unnecessary.
 
 Broadly speaking, user agents add the `Origin` request header to:
 
