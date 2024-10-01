@@ -14,7 +14,7 @@ The **`updateAdInterestGroups()`** method of the {{domxref("Navigator")}} interf
 
 Any values can be updated except for group `owner` and `name` — these cannot be changed. The calling origin must be same-origin with the owner of the groups being updated.
 
-Update information is retrieved from the [`updateURL`](/en-US/docs/Web/API/Navigator.joinAdInterestGroup#updateURL) property of the options object passed into each group's originating `joinAdInterestGroup()` call.
+Update information is retrieved from the [`updateURL`](/en-US/docs/Web/API/Navigator/joinAdInterestGroup#updateURL) property of the options object passed into each group's originating `joinAdInterestGroup()` call.
 
 > [!NOTE]
 > Updates that take too long are aborted, to avoid revealing coarse IP location information to update servers for too long after navigating to another page. The time limit can vary between implementations; Chromium for example has a 10 minute limit.
