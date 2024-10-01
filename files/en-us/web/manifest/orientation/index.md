@@ -228,7 +228,7 @@ The example below illustrates how a web app's layout might appear when a mobile 
 
 The specified `orientation` is applied to all top-level {{Glossary("Browsing context", "browsing contexts")}} of the web app.
 
-If a browser supports the `orientation` value, it will use this as the default orientation for the web app throughout the life of the web app, unless overridden at runtime.
+If a browser supports the specified `orientation` value, it will use this as the default app orientation throughout the app's lifespan, unless overridden at runtime.
 This means that browsers will revert to this default orientation whenever the top-level browsing context is navigated.
 
 ### Choosing a preferred orientation for your web app
@@ -256,7 +256,7 @@ The `orientation` values are similar across the web app manifest and the Screen 
 
   > [!NOTE]
   > The Screen Orientation API's [`lock()`](/en-US/docs/Web/API/ScreenOrientation/lock) method has limited support across browsers.
-  > Check its compatibility if you plan to use this it to dynamically change screen orientation during runtime.
+  > Check its compatibility if you plan to use it to dynamically change screen orientation during runtime.
 
 ### Platform and browser limitations
 
