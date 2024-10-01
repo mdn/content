@@ -84,7 +84,7 @@ When auctions complete, and ads are chosen, {{htmlelement("fencedframe")}} eleme
 - {{domxref("InterestGroupBiddingAndScoringScriptRunnerGlobalScope")}}
   - : Exposes appropriate interfaces to buyer and seller script runners to provide access to bidding and scoring functionality for user-defined functions.
 - {{domxref("InterestGroupReportingScriptRunnerGlobalScope")}}
-  - : Exposes appropriate interfaces to buyer and seller script runners to provide access to reporting functionality for user-defined functions (defined on `ForDebuggingOnly` and `RealTimeReporting`).
+  - : Defines reporting functionality exposed inside the user-defined functions included within buyer and seller script runners.
 - {{domxref("ProtectedAudience")}}
   - : Can be used to determine support for the Protected Audience API and specific features.
 - {{domxref("RealTimeReporting")}}

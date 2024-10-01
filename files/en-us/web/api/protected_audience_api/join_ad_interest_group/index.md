@@ -88,7 +88,7 @@ The method is invoked with no parameters:
 navigator.updateAdInterestGroups();
 ```
 
-Update information is retrieved from the [`updateURL`](/en-US/docs/Web/API/Navigator.joinAdInterestGroup#updateURL) property of the options object passed into each group's originating `joinAdInterestGroup()` call.
+Update information is retrieved from the [`updateURL`](/en-US/docs/Web/API/Navigator/joinAdInterestGroup#updateURL) property of the options object passed into each group's originating `joinAdInterestGroup()` call.
 
 ## Leaving interest groups
 

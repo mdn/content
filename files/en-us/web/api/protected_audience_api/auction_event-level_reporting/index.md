@@ -19,8 +19,8 @@ There are several event-level reporting mechansims:
 
 1. Auction results: When an in-browser [ad auction has been run](/en-US/docs/Web/API/Protected_Audience_API/Run_ad_auction), and a winning ad has been chosen, the results of the auction can be reported back to the seller and the winning buyer via author-defined functions located inside the seller's decision logic and the buyer's bidding logic.
 
-   - The buyer's bidding logic JavaScript, available at the URL specified in the [`biddingLogicURL`](/en-US/docs/Web/API/Navigator.joinAdInterestGroup#biddingLogicURL) property passed into a `joinAdInterestGroup()` call, can contain a [`reportWin()`](#) function that serves to report an auction win to the buyer.
-   - The seller's bidding logic JavaScript, available at the URL specified in the [`decisionLogicURL`](/en-US/docs/Web/API/Navigator.runAdAuction#decisionLogicURL) property passed into a `runAdAuction()` call, can contain a [`reportResult()`](#) function that report the auction results to the seller.
+   - The buyer's bidding logic JavaScript, available at the URL specified in the [`biddingLogicURL`](/en-US/docs/Web/API/Navigator/joinAdInterestGroup#biddingLogicURL) property passed into a `joinAdInterestGroup()` call, can contain a [`reportWin()`](#) function that reports an auction win to the buyer.
+   - The seller's decision logic JavaScript, available at the URL specified in the [`decisionLogicURL`](/en-US/docs/Web/API/Navigator/runAdAuction#decisionLogicURL) property passed into a `runAdAuction()` call, can contain a [`reportResult()`](#) function that reports the auction results to the seller.
 
 2. Ad engagement: When the winning ad has been rendered inside a {{htmlelement("fencedframe")}} or {{htmlelement("iframe")}}, you can create reports in which data from the ad — such as clicks or impressions — is associated with Protected Audience API signals. This reporting can be done via `reportResult()` in the case of an ad rendered inside an `<iframe>`, or a specialised ad [beacon](/en-US/docs/Web/API/Beacon_API) set up via the {{domxref("InterestGroupScriptRunnerGlobalScope.registerAdBeacon", "registerAdBeacon()")}} method in the case of a `<fencedframe>`-rendered ad.
 
@@ -34,7 +34,7 @@ There are several event-level reporting mechansims:
 
 ### Buyer result reporting
 
-When the buyer runs {{domxref("Navigator.joinAdInterestGroup()")}} to request that the user's browser join an interest group, it passes in a [`biddingLogicURL`](/en-US/docs/Web/API/Navigator.joinAdInterestGroup#biddingLogicURL) property containing the URL of the buyer's bidding logic. This contains the [`generateBid()`](#) function used to generate the buyer's bid, but it can also contain a [`reportWin()`](#) function that serves to report an auction win to the buyer.
+When the buyer runs {{domxref("Navigator.joinAdInterestGroup()")}} to request that the user's browser join an interest group, it passes in a [`biddingLogicURL`](/en-US/docs/Web/API/Navigator/joinAdInterestGroup#biddingLogicURL) property containing the URL of the buyer's bidding logic. This contains the [`generateBid()`](#) function used to generate the buyer's bid, but it can also contain a [`reportWin()`](#) function that serves to report an auction win to the buyer.
 
 Let's look at a `reportWin()` example:
 
@@ -54,9 +54,9 @@ function reportWin(
 The arguments passed to this function are as follows:
 
 - `auctionSignals`
-  - : The data provided in the [`auctionSignals`](/en-US/docs/Web/API/Navigator.runAdAuction#auctionSignals) property passed into the `runAdAuction()` call.
+  - : The data provided in the [`auctionSignals`](/en-US/docs/Web/API/Navigator/runAdAuction#auctionSignals) property passed into the `runAdAuction()` call.
 - `perBuyerSignals`
-  - : The data provided for this particular group owner in the [`perBuyerSignals`](/en-US/docs/Web/API/Navigator.runAdAuction#perBuyerSignals) property passed into the `runAdAuction()` call.
+  - : The data provided for this particular group owner in the [`perBuyerSignals`](/en-US/docs/Web/API/Navigator/runAdAuction#perBuyerSignals) property passed into the `runAdAuction()` call.
 - `sellerSignals`
   - : The return value of the seller's `reportResult()` function (see below).
 - `browserSignals`
@@ -71,9 +71,9 @@ The browser makes a [`GET`](/en-US/docs/Web/HTTP/Methods/GET) request to the rep
 
 ### Seller result reporting
 
-When the seller runs {{domxref("Navigator.RunAdAuction()")}} to start off the auction process, it passes in a [`decisionLogicURL`](/en-US/docs/Web/API/Navigator.runAdAuction#decisionLogicURL) property containing the URL of the seller's scoring logic. This contains the [`scoreAd()`](#) function used to score the buyer bids, but it can also contain a [`reportResult()`](#) function that serves to report the auction results to the seller.
+When the seller runs {{domxref("Navigator.RunAdAuction()")}} to start off the auction process, it passes in a [`decisionLogicURL`](/en-US/docs/Web/API/Navigator/runAdAuction#decisionLogicURL) property containing the URL of the seller's scoring logic. This contains the [`scoreAd()`](#) function used to score the buyer bids, but it can also contain a [`reportResult()`](#) function that serves to report the auction results to the seller.
 
-The following is a simple `reportResult()` example:
+The following shows a minimal `reportResult()` example:
 
 ```js
 function reportResult(auctionConfig, browserSignals) {
@@ -125,7 +125,7 @@ function reportWin(auctionSignals, browserSignals) {
 }
 ```
 
-The first part of the reporting URL is determined from the `interestGroupOwner` property available in the [`browserSignals`](#) argument passed into `reportWin()`. The data being sent in the URL params is a unique campaign ID available in the [`auctionSignals`](#) argument. The `campaignId` will have been generated before the auction started and set in the [`auctionSignals`](/en-US/docs/Web/API/Navigator.runAdAuction#auctionSignals) property passed into the `runAdAuction()` call that started off the auction process.
+The first part of the reporting URL is determined from the `interestGroupOwner` property available in the [`browserSignals`](#) argument passed into `reportWin()`. The data being sent in the URL params is a unique campaign ID available in the [`auctionSignals`](#) argument. The `campaignId` will have been generated before the auction started and set in the [`auctionSignals`](/en-US/docs/Web/API/Navigator/runAdAuction#auctionSignals) property passed into the `runAdAuction()` call that started off the auction process.
 
 Once the auction concludes, the `runAdAuction()` promise resolves with an opaque [URN](/en-US/docs/Web/URI#urns) containing the required information for displaying the winning ad in an `<iframe>`, provided the [`resolveToConfig`](/en-US/docs/Web/API/Navigator/runAdAuction#resolvetoconfig) option was set to `false`. At this point, you can include the `campaignId` in the `<iframe>`, as a class for example:
 
@@ -155,7 +155,7 @@ When the ad is rendered inside a {{htmlelement("fencedframe")}}, there is an add
 
 To overcome this problem, the reporting process is set up in two steps:
 
-1. Registering a specialized ad [beacon](/en-US/docs/Web/API/Beacon_API) to send your reporting data in response to a custom event occurring. This is done over in the reporting functions in the bidding/scoring logic.
+1. Registering a specialized ad [beacon](/en-US/docs/Web/API/Beacon_API) to send your reporting data to in response to a custom event occurring. This is done over in the reporting functions in the bidding/scoring logic.
 2. Later on, in the embedded ad code, triggering the custom event that will trigger the beacon to send the reporting data, and at the same time attaching its own data to the resulting request.
 
 #### Registering the ad beacon
@@ -174,7 +174,7 @@ function reportWin(auctionSignals, browserSignals) {
 }
 ```
 
-This registers an ad beacon that will send a request to the buyer's reporting server location when a click occurs on the ad. The first part of the URL is determined from the `interestGroupOwner` property available in the [`browserSignals`](#) argument passed into `reportWin()`. The data being sent in the URL params is a unique campaign ID available in the [`auctionSignals`](#) argument. The `campaignId` will have been set in the [`auctionSignals`](/en-US/docs/Web/API/Navigator.runAdAuction#auctionSignals) property passed into the `runAdAuction()` call that started off the auction process.
+This registers an ad beacon that will send a request to the buyer's reporting server location when a click occurs on the ad. The first part of the URL is determined from the `interestGroupOwner` property available in the [`browserSignals`](#) argument passed into `reportWin()`. The data being sent in the URL params is a unique campaign ID available in the [`auctionSignals`](#) argument. The `campaignId` will have been set in the [`auctionSignals`](/en-US/docs/Web/API/Navigator/runAdAuction#auctionSignals) property passed into the `runAdAuction()` call that started off the auction process.
 
 We can also report this campaign ID to the seller when the ad is clicked in a very similar way:
 

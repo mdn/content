@@ -19,8 +19,8 @@ When the user visits the seller site, the seller — the publisher themselves, o
 To summarize:
 
 1. {{domxref("Navigator.runAdAuction()")}} is invoked to start the in-browser ad auction in motion. This function provides information to the browser such as the size and type of ad space that is available, which interest group owners should be invited to bid in the auction, and the location of the decision logic JavaScript that will determine which bid wins the auction.
-2. Each bidder generates a bid to submit to the auction. This is done by running the author-defined [`generateBid()`](#) function contained in the bidder's interest group information that was previously stored in the browser. `generateBid()` should be available at the URL defined in the [`biddingLogicURL`](/en-US/docs/Web/API/Navigator.joinAdInterestGroup#biddingLogicURL) property passed along with the `joinAdInterestGroup()` that added the browser to the interest group in the first place.
-3. For each submitted bid, the browser runs the seller's decision logic to determine what each buyer ad's suitability score is. This is done by running the author-defined [`scoreAd()`](#) function, which should be available at the URL defined in the [`decisionLogicURL`](/en-US/docs/Web/API/Navigator.runAdAuction#decisionLogicURL) property passed into the `runAdAuction()` call that started the auction. The `scoreAd()` function returns a numeric score for each bid.
+2. Each bidder generates a bid to submit to the auction. This is done by running the author-defined [`generateBid()`](#) function contained in the bidder's interest group information that was previously stored in the browser. `generateBid()` should be available at the URL defined in the [`biddingLogicURL`](/en-US/docs/Web/API/Navigator/joinAdInterestGroup#biddingLogicURL) property passed along with the `joinAdInterestGroup()` that added the browser to the interest group in the first place.
+3. For each submitted bid, the browser runs the seller's decision logic to determine what each buyer ad's suitability score is. This is done by running the author-defined [`scoreAd()`](#) function, which should be available at the URL defined in the [`decisionLogicURL`](/en-US/docs/Web/API/Navigator/runAdAuction#decisionLogicURL) property passed into the `runAdAuction()` call that started the auction. The `scoreAd()` function returns a numeric score for each bid.
 4. The browser determines the ad with the highest score, and fulfills the promise returned by `runAdAuction()` with a value that can be used to render the ad, typically a {{domxref("FencedFrameConfig")}} that can be used to render the ad inside a {{htmlelement("fencedframe")}}.
 5. The seller and buyers can optionally choose to define reporting functions. The seller's `decisionLogicURL` code can contain a [`reportResult()`](#) function that reports the outcome of the auction. The buyer's `biddingLogicURL` code can contain a [`reportWin()`](#) function that reports whether the buyer won the auction or not.
 
@@ -92,11 +92,11 @@ The option properties as follows:
 
 ## `generateBid()` functions
 
-When an interest group owner invokes `joinAdInterestGroup()` to request a browser to join the interest group, it includes a [`biddingLogicURL`](/en-US/docs/Web/API/Navigator.joinAdInterestGroup#biddingLogicURL) property inside the method options object, which points to a JavaScript file on the owner's origin. For the owner to be able to successfully bid in auctions, this file should define a [`generateBid()`](#) function.
+When an interest group owner invokes `joinAdInterestGroup()` to request a browser to join the interest group, it includes a [`biddingLogicURL`](/en-US/docs/Web/API/Navigator/joinAdInterestGroup#biddingLogicURL) property inside the method options object, which points to a JavaScript file on the owner's origin. For the owner to be able to successfully bid in auctions, this file should define a [`generateBid()`](#) function.
 
 > [!NOTE]
-> Other requirements for successful bidding: The group has at least one ad creative listed in its [`ads`](/en-US/docs/Web/API/Navigator.joinAdInterestGroup#ads) array,
-> and a [`priority`](/en-US/docs/Web/API/Navigator.joinAdInterestGroup#priority) of greater than or equal to `0`.
+> Other requirements for successful bidding: The group has at least one ad creative listed in its [`ads`](/en-US/docs/Web/API/Navigator/joinAdInterestGroup#ads) array,
+> and a [`priority`](/en-US/docs/Web/API/Navigator/joinAdInterestGroup#priority) of greater than or equal to `0`.
 
 During an auction, each group owner invited to bid will have their `generateBid()` function invoked to create their bid. This is done inside a dedicated script runner, designed to protect user privacy, keeping the input, computation, and output from leaking.
 
@@ -119,11 +119,11 @@ function generateBid(interestGroup, auctionSignals, perBuyerSignals) {
 The arguments passed to the above function are as follows:
 
 - `interestGroup`
-  - : An object containing information about the interest group; this is the information saved by the browser after a successful `joinAdInterestGroup()` call, with the exception of a couple of properties. For example, [`lifetimeMs`](/en-US/docs/Web/API/Navigator.joinAdInterestGroup#lifetimeMs) is not shared because it is ambiguous as to whether it should be the lifetime when joined, or the remaining lifetime, and providing the remaining lifetime would potentially provide access to more granular timing information than is necessary.
+  - : An object containing information about the interest group; this is the information saved by the browser after a successful `joinAdInterestGroup()` call, with the exception of a couple of properties. For example, [`lifetimeMs`](/en-US/docs/Web/API/Navigator/joinAdInterestGroup#lifetimeMs) is not shared because it is ambiguous as to whether it should be the lifetime when joined, or the remaining lifetime, and providing the remaining lifetime would potentially provide access to more granular timing information than is necessary.
 - `auctionSignals`
-  - : The data provided in the [`auctionSignals`](/en-US/docs/Web/API/Navigator.runAdAuction#auctionSignals) property passed into the `runAdAuction()` call.
+  - : The data provided in the [`auctionSignals`](/en-US/docs/Web/API/Navigator/runAdAuction#auctionSignals) property passed into the `runAdAuction()` call.
 - `perBuyerSignals`
-  - : The data provided for this particular group owner in the [`perBuyerSignals`](/en-US/docs/Web/API/Navigator.runAdAuction#perBuyerSignals) property passed into the `runAdAuction()` call.
+  - : The data provided for this particular group owner in the [`perBuyerSignals`](/en-US/docs/Web/API/Navigator/runAdAuction#perBuyerSignals) property passed into the `runAdAuction()` call.
 
 The return object must provide the group owner's bid, plus information about the ad that will be rendered. In this case, we provide:
 
@@ -139,7 +139,7 @@ The return object must provide the group owner's bid, plus information about the
 
 ## `scoreAd()` functions()
 
-Once all the bidding group owners' `generateBid()` functions have been run, the browser runs the seller's `scoreAd()` function on each submitted bid to determine what each buyer ad's suitability score is. `scoreAd()` should be available at the URL defined in the [`decisionLogicURL`](/en-US/docs/Web/API/Navigator.runAdAuction#decisionLogicURL) property passed into the `runAdAuction()` call. The `scoreAd()` function returns a numeric score for each bid.
+Once all the bidding group owners' `generateBid()` functions have been run, the browser runs the seller's `scoreAd()` function on each submitted bid to determine what each buyer ad's suitability score is. `scoreAd()` should be available at the URL defined in the [`decisionLogicURL`](/en-US/docs/Web/API/Navigator/runAdAuction#decisionLogicURL) property passed into the `runAdAuction()` call. The `scoreAd()` function returns a numeric score for each bid.
 
 The `scoreAd()` function is run inside a dedicated script runner, designed to protect user privacy, keeping the input, computation, and output from leaking.
 
@@ -188,7 +188,7 @@ navigator.runAdAuction(auctionConfig).then((selectedAd) => {
 });
 ```
 
-The fulfillment value can be one of two things, depending on the value set for the [`resolveToConfig`](/en-US/docs/Web/API/Navigator.runAdAuction#resolveToConfig) property passed into the `runAdAuction()`:
+The fulfillment value can be one of two things, depending on the value set for the [`resolveToConfig`](/en-US/docs/Web/API/Navigator/runAdAuction#resolveToConfig) property passed into the `runAdAuction()`:
 
 - If `resolveToConfig` is `true`, the promise will fulfill with a {{domxref("FencedFrameConfig")}} object. This can be set as the value of a {{htmlelement("fencedframe")}} element's {{domxref("HTMLFencedFrameElement.config")}} property to display the ad in the `<fencedframe>`.
 - If `resolveToConfig` is `false`, the promise will fulfill with an opaque [URN](/en-US/docs/Web/URI#urns). This can be set as the value of an {{htmlelement("iframe")}} element's {{domxref("HTMLIFrameElement.src")}} property to display the ad in the `<iframe>`.
