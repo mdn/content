@@ -13,19 +13,13 @@ The `scope` manifest member is used to define the navigation scope of your web a
 
 ```json-nolint
 /* Absolute URL */
-{
-  "scope": "https://example.com/myapp/"
-}
+"scope": "https://example.com/myapp/"
 
 /* Relative URL */
-{
-  "scope": "/myapp/"
-}
+"scope": "/myapp/"
 
 /* Scope limited to a specific directory */
-{
-  "scope": "/myapp/dashboard/"
-}
+"scope": "/myapp/dashboard/"
 ```
 
 ### Values
