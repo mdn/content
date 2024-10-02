@@ -554,7 +554,7 @@ class MyIterable {
   }
   delete(deletedKey) {
     for (let i = 0; i < this.#data.length; i++) {
-      if (this.#data[i][1] === deletedKey) {
+      if (this.#data[i][0] === deletedKey) {
         this.#data[i] = tombstone;
         return true;
       }

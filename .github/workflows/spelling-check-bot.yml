@@ -44,7 +44,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TITLE: Weekly spelling check
-          LABELS: reported by automation,good first issue
+          LABELS: reported by automation
           BODY: |
             Typos and unknown words:
 
