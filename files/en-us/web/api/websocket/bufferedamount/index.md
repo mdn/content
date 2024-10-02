@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.WebSocket.bufferedAmount
 ---
 
-{{APIRef("WebSockets API")}}
+{{APIRef("WebSockets API")}}{{AvailableInWorkers}}
 
 The **`WebSocket.bufferedAmount`** read-only property returns
 the number of bytes of data that have been queued using calls to [`send()`](/en-US/docs/Web/API/WebSocket/send) but

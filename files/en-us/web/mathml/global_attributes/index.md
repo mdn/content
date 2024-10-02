@@ -18,10 +18,18 @@ In addition to the basic MathML global attributes, the following global attribut
 
 ## List of global attributes
 
+- [`autofocus`](/en-US/docs/Web/HTML/Global_attributes/autofocus)
+
+  - : A boolean attribute that indicates that the element should be focused on page load.
+
 - [`class`](/en-US/docs/Web/HTML/Global_attributes/class)
+
   - : A space-separated list of the classes of the element. Classes allow CSS and JavaScript to select and access specific elements via the [class selectors](/en-US/docs/Web/CSS/Class_selectors) or functions like the method {{DOMxRef("Document.getElementsByClassName()")}}.
+
 - [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*)
+
   - : Forms a class of attributes, called custom data attributes, that allow proprietary information to be exchanged between the [MathML](/en-US/docs/Web/MathML) and its {{glossary("DOM")}} representation that may be used by scripts. All such custom data are available via the {{DOMxRef("MathMLElement")}} interface of the element the attribute is set on. The {{DOMxRef("HTMLElement.dataset")}} property gives access to them.
+
 - [`dir`](/en-US/docs/Web/MathML/Global_attributes/dir)
 
   - : An [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicating the directionality of the MathML element. It can have the following values:
@@ -31,7 +39,7 @@ In addition to the basic MathML global attributes, the following global attribut
 
 - [`displaystyle`](/en-US/docs/Web/MathML/Global_attributes/displaystyle):
 
-  - : a boolean setting the [math-style](/en-US/docs/Web/CSS/math-style) for the element.
+  - : A boolean setting the [math-style](/en-US/docs/Web/CSS/math-style) for the element.
     - `true`, which means `normal`.
     - `false`, which means `compact`.
 
@@ -60,7 +68,9 @@ In addition to the basic MathML global attributes, the following global attribut
   - : Specifies a [math-depth](/en-US/docs/Web/CSS/math-depth) for the element. See the [scriptlevel page](/en-US/docs/Web/MathML/Global_attributes/scriptlevel#values) for accepted values and mapping.
 
 - [`style`](/en-US/docs/Web/HTML/Global_attributes/style)
+
   - : Contains [CSS](/en-US/docs/Web/CSS) styling declarations to be applied to the element. Note that it is recommended for styles to be defined in a separate file or files. This attribute and the {{MathMLElement("style")}} element have mainly the purpose of allowing for quick styling, for example for testing purposes.
+
 - [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex)
 
   - : An integer attribute indicating if the element can take input focus (is _focusable_), if it should participate to sequential keyboard navigation, and if so, at what position. It can take several values:

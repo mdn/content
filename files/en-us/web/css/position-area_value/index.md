@@ -180,11 +180,11 @@ The generic logical spanning keywords — when combined with a logical row or co
 
 - `span-start`
 
-  - : Span the center tile and the start tile of the grid row/column, with the direction refering to the writing mode of the element's containing block.
+  - : Span the center tile and the start tile of the grid row/column, with the direction referring to the writing mode of the element's containing block.
 
 - `span-end`
 
-  - : Span the center tile and the end tile of the grid row/column, with the direction refering to the writing mode of the element's containing block.
+  - : Span the center tile and the end tile of the grid row/column, with the direction referring to the writing mode of the element's containing block.
 
 - `span-self-start`
 

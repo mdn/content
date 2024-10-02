@@ -9,6 +9,9 @@ browser-compat: css.at-rules.media.overflow-inline
 
 The **`overflow-inline`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test how the output device handles content that overflows the initial [containing block](/en-US/docs/Web/CSS/Containing_block) along the inline axis.
 
+> [!NOTE]
+> The `overflow-inline` property does not determine whether overflow occurs; rather, it reveals the device's handling of such overflow. Typically, on screens in most browsers, the behavior will be "scroll": when content exceeds the available horizontal space, the device allows you to scroll to access the overflowed content.
+
 ## Syntax
 
 The `overflow-inline` feature is specified as a keyword value chosen from the list below.

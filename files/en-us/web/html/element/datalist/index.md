@@ -16,7 +16,7 @@ Only certain types of {{HTMLElement("input")}} support this behavior, and it can
 
 Each `<option>` element should have a `value` attribute, which represents a suggestion to be entered into the input. It can also have a `label` attribute, or, missing that, some text content, which may be displayed by the browser instead of `value` (Firefox), or in addition to `value` (Chrome and Safari, as supplemental text). The exact content of the drop-down menu depends on the browser, but when clicked, content entered into control field will always come from the `value` attribute.
 
-> **Note:** `<datalist>` is not a replacement for {{HTMLElement("select")}}. A `<datalist>` does not represent an input itself; it is a list of suggested values for an associated control. The control can still accept any value that passes vaildation, even if it is not in this suggestion list.
+> **Note:** `<datalist>` is not a replacement for {{HTMLElement("select")}}. A `<datalist>` does not represent an input itself; it is a list of suggested values for an associated control. The control can still accept any value that passes validation, even if it is not in this suggestion list.
 
 ## Attributes
 
@@ -103,20 +103,6 @@ The {{HTMLElement("input/color", "color")}} type can show predefined colors in a
 ```
 
 {{EmbedLiveSample("Color_type", 600, 70)}}
-
-### Password type
-
-The specification allows linking `<datalist>` with a {{HTMLElement("input/password", "password")}} type, but no browser supports it for security reasons.
-
-```html
-<label for="pwd">Enter a password:</label>
-<input type="password" list="randomPassword" id="pwd" />
-<datalist id="randomPassword">
-  <option value="5Mg[_3DnkgSu@!q#"></option>
-</datalist>
-```
-
-{{EmbedLiveSample("Password_type", 600, 40)}}
 
 ## Technical summary
 

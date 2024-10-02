@@ -57,7 +57,7 @@ This first converts the iterator returned by {{jsxref("Map.prototype.values()")}
 const totalDeposit = nameToDeposit.values().reduce((a, b) => a + b);
 ```
 
-This method is more efficient, because it only iterates the iterator once, without memorizing any intermediate values. Iterator helper methods are necessary to work with infinite iterators:
+This method may be more efficient, especially memory-wise, because it only iterates the iterator once, without memorizing any intermediate values. Iterator helper methods are necessary to work with infinite iterators:
 
 ```js
 function* fibonacci() {
@@ -127,12 +127,12 @@ const myIterator = Iterator.from({
 
 ## Constructor
 
-- {{jsxref("Iterator/Iterator", "Iterator()")}} {{experimental_inline}}
+- {{jsxref("Iterator/Iterator", "Iterator()")}}
   - : Intended to be [extended](/en-US/docs/Web/JavaScript/Reference/Classes/extends) by other classes that create iterators. Throws an error when constructed by itself.
 
 ## Static methods
 
-- {{jsxref("Iterator.from()")}} {{experimental_inline}}
+- {{jsxref("Iterator.from()")}}
   - : Creates a new `Iterator` object from an iterator or iterable object.
 
 ## Instance properties
@@ -150,27 +150,27 @@ These properties are defined on `Iterator.prototype` and shared by all `Iterator
 
 ## Instance methods
 
-- {{jsxref("Iterator.prototype.drop()")}} {{experimental_inline}}
+- {{jsxref("Iterator.prototype.drop()")}}
   - : Returns a new iterator helper that skips the given number of elements at the start of this iterator.
-- {{jsxref("Iterator.prototype.every()")}} {{experimental_inline}}
+- {{jsxref("Iterator.prototype.every()")}}
   - : Tests whether all elements produced by the iterator pass the test implemented by the provided function.
-- {{jsxref("Iterator.prototype.filter()")}} {{experimental_inline}}
+- {{jsxref("Iterator.prototype.filter()")}}
   - : Returns a new iterator helper that yields only those elements of the iterator for which the provided callback function returns `true`.
-- {{jsxref("Iterator.prototype.find()")}} {{experimental_inline}}
+- {{jsxref("Iterator.prototype.find()")}}
   - : Returns the first element produced by the iterator that satisfies the provided testing function. If no values satisfy the testing function, {{jsxref("undefined")}} is returned.
-- {{jsxref("Iterator.prototype.flatMap()")}} {{experimental_inline}}
+- {{jsxref("Iterator.prototype.flatMap()")}}
   - : Returns a new iterator helper that takes each element in the original iterator, runs it through a mapping function, and yields elements returned by the mapping function (which are contained in another iterator or iterable).
-- {{jsxref("Iterator.prototype.forEach()")}} {{experimental_inline}}
+- {{jsxref("Iterator.prototype.forEach()")}}
   - : Executes a provided function once for each element produced by the iterator.
-- {{jsxref("Iterator.prototype.map()")}} {{experimental_inline}}
+- {{jsxref("Iterator.prototype.map()")}}
   - : Returns a new iterator helper that yields elements of the iterator, each transformed by a mapping function.
-- {{jsxref("Iterator.prototype.reduce()")}} {{experimental_inline}}
+- {{jsxref("Iterator.prototype.reduce()")}}
   - : Executes a user-supplied "reducer" callback function on each element produced by the iterator, passing in the return value from the calculation on the preceding element. The final result of running the reducer across all elements is a single value.
-- {{jsxref("Iterator.prototype.some()")}} {{experimental_inline}}
+- {{jsxref("Iterator.prototype.some()")}}
   - : Tests whether at least one element in the iterator passes the test implemented by the provided function. It returns a boolean value.
-- {{jsxref("Iterator.prototype.take()")}} {{experimental_inline}}
+- {{jsxref("Iterator.prototype.take()")}}
   - : Returns a new iterator helper that yields the given number of elements in this iterator and then terminates.
-- {{jsxref("Iterator.prototype.toArray()")}} {{experimental_inline}}
+- {{jsxref("Iterator.prototype.toArray()")}}
   - : Creates a new {{jsxref("Array")}} instance populated with the elements yielded from the iterator.
 - [`Iterator.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/Symbol.iterator)
   - : Returns the iterator object itself. This allows iterator objects to also be iterable.

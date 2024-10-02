@@ -7,7 +7,7 @@ page-type: guide
 {{DefaultAPISidebar("Web Workers API") }}
 
 The **structured clone algorithm** copies complex JavaScript objects.
-It is used internally when invoking {{domxref("structuredClone()")}}, to transfer data between [Workers](/en-US/docs/Web/API/Worker) via {{domxref("Worker.postMessage()", "postMessage()")}}, storing objects with [IndexedDB](/en-US/docs/Glossary/IndexedDB), or copying objects for [other APIs](#see_also).
+It is used internally when invoking {{DOMxRef("WorkerGlobalScope.structuredClone", "structuredClone()")}}, to transfer data between [Workers](/en-US/docs/Web/API/Worker) via {{domxref("Worker.postMessage()", "postMessage()")}}, storing objects with [IndexedDB](/en-US/docs/Glossary/IndexedDB), or copying objects for [other APIs](#see_also).
 
 It clones by recursing through the input object while maintaining a map of previously visited references, to avoid infinitely traversing cycles.
 
@@ -80,7 +80,8 @@ Browsers must serialize the properties `name` and `message`, and are expected to
 
 - [HTML Specification: Safe passing of structured data](https://html.spec.whatwg.org/multipage/infrastructure.html#safe-passing-of-structured-data)
 - [Transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects)
-- {{domxref("structuredClone()")}}
+- {{DOMxRef("Window.structuredClone()")}}
+- {{DOMxRef("WorkerGlobalScope.structuredClone()")}}
 - {{domxref("window.postMessage()")}}
 - [Web Workers](/en-US/docs/Web/API/Web_Workers_API)
 - [IndexedDB](/en-US/docs/Web/API/IndexedDB_API)

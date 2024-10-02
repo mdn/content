@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.SubtleCrypto.digest
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{APIRef("Web Crypto API")}}{{SecureContext_header}}{{AvailableInWorkers}}
 
 The **`digest()`** method of the {{domxref("SubtleCrypto")}}
 interface generates a {{Glossary("digest")}} of the given data. A digest is a short

@@ -80,7 +80,7 @@ This example demonstrates potential DOM content when dynamically including JavaS
 {{EmbedLiveSample('Web app search')}}
 
 > [!NOTE]
-> Remember that some users don't have JavaScript, and none of your users have JavaScript running until the JavaScript is successfully downloaded, parsed, and executed, ensure your users can access the content of your site with JavaScript disabled.
+> Remember that some users don't have JavaScript, and none of your users have JavaScript running until the JavaScript is successfully downloaded, parsed, and executed. Ensure your users can access the content of your site with JavaScript disabled.
 
 ### Multiple searches
 

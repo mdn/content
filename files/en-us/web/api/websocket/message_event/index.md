@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.WebSocket.message_event
 ---
 
-{{APIRef("WebSockets API")}}
+{{APIRef("WebSockets API")}}{{AvailableInWorkers}}
 
 The `message` event is fired when data is received through a `WebSocket`.
 
