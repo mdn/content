@@ -6,17 +6,17 @@ page-type: guide
 
 {{CSSRef}}
 
-The [CSS Scroll Snap Module Level 2](drafts.csswg.org/css-scroll-snap-2) specification defines **scroll snap events**: {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} and {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}}. These make it easy to run JavaScript in response to the browser determining that a new snap target is pending, and when a new snap target is selected, respectively.
+The [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module defines two **scroll snap events**: {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} and {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}}. These enable running JavaScript in response to the browser determining that new [scroll snap targets](/en-US/docs/Web/CSS/CSS_scroll_snap/Basic_concepts) are pending and selected, respectively.
 
-This article provides a guide to using these events, along with complete examples.
+This guide provides an overview of these events, along with complete examples.
 
 ## Events overview
 
-The two events are set on a scrolling container that contains potential scroll snap targets, and are as follows:
+Scroll snap events are set on a [scrolling container](/en-US/docs/Glossary/Scroll_container) that contains potential scroll snap targets:
 
-- The {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} event is fired when the browser determines that a new scroll snap target is pending (i.e., it will be selected when the current scroll gesture ends). Specifically, this event fires during a scrolling gesture, each time the user moves over a potential new snap target. `scrollsnapchanging` can therefore fire multiple times for each scrolling gesture. However, `scrollsnapchanging` does not fire on all potential snap targets for a scrolling gesture that moves over multiple snap targets — just the last target that the snapping will potentially rest on.
+- The {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} event is fired when the browser determines that a new scroll snap target will be selected when the current scroll gesture ends. This is the _pending_ scroll snap target. Specifically, this event fires during a scrolling gesture, each time the user moves over potential new snap targets. While the `scrollsnapchanging` event may fire multiple times for each scrolling gesture, it does not fire on all potential snap targets for a scrolling gesture that moves over multiple snap targets. Rather, it fires just for the last target that the snapping will potentially rest on.
 
-- The {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} event is fired at the end of a scrolling operation when a new scroll snap target is selected. Specifically, this event fires when a scrolling gesture is completed, but only if a new snap target is selected. Also note that it fires just before the {{domxref("Element/scrollend_event", "scrollend")}} event fires.
+- The {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} event is fired at the end of a scrolling operation when a new scroll snap target is selected. Specifically, this event fires when a scrolling gesture is completed, but only if a new snap target is selected. This event fires just before the {{domxref("Element/scrollend_event", "scrollend")}} event fires.
 
 Let's look at an example that shows the two events in action (you'll see how this is built later on in the article):
 
@@ -24,16 +24,16 @@ Let's look at an example that shows the two events in action (you'll see how thi
 
 Have a go at scrolling up and down the list of boxes:
 
-- Try slowly scrolling the container up and down, without releasing the scrolling gesture, For example, drag your finger(s) on a touch screen device or trackpad, or hold down the mouse button on the scroll bar and move the mouse. You should see the boxes you move over turn a darker gray color, and then return to normal as you move away from them again. This is the `scrollsnapchanging` event in action.
-- Now try releasing the scrolling gesture; the nearest box to your scrolling position should animate to a purple color, with white text. This is due to code run in response to the `scrollsnapchange` event firing.
-- Last of all, try scrolling fast, for example by flicking your finger hard on the screen, to scroll past several potential targets before starting to come to rest near a target further down the scroll container. You should only see one `scrollsnapchanging` event fire as the scrolling starts to slow, before the `scrollsnapchange` event then fires and the selected snap target turns purple.
+- Try slowly scrolling the container up and down, without releasing the scrolling gesture. For example, drag your finger(s) on a touchscreen device or trackpad, or hold down the mouse button on the scroll bar and move the mouse. The boxes you move over should turn a darker gray color as you move over them, and then return to normal as you move away from them again. This is the `scrollsnapchanging` event in action.
+- Now try releasing the scrolling gesture; the nearest box to your scrolling position should animate to a purple color, with white text. The animation occurs when the `scrollsnapchange` event fires.
+- Last of all, try scrolling fast, for example by flicking your finger hard on the screen, to scroll past several potential targets before starting to come to rest near a target further down the scroll container. You should only see one `scrollsnapchanging` event fire as the scrolling starts to slow, before the `scrollsnapchange` event fires and the selected snap target turns purple.
 
 ## The `SnapEvent` event object
 
-Both of the above events share the same event object: {{domxref("SnapEvent")}}. This has two distinct properties that are key to how scroll snap events work:
+Both of the above events share the {{domxref("SnapEvent")}} event object. This has two properties that are key to how scroll snap events work:
 
-- {{domxref("SnapEvent.snapTargetBlock", "snapTargetBlock")}} returns a reference to the element snapped to in the block direction when the event fired.
-- {{domxref("SnapEvent.snapTargetInline", "snapTargetInline")}} returns a reference to the element snapped to in the inline direction when the event fired.
+- {{domxref("SnapEvent.snapTargetBlock", "snapTargetBlock")}} returns a reference to the element snapped to in the [block direction](/en-US/docs/Glossary/Flow_relative_values#block_direction) when the event fired.
+- {{domxref("SnapEvent.snapTargetInline", "snapTargetInline")}} returns a reference to the element snapped to in the [inline direction](/en-US/docs/Glossary/Flow_relative_values#inline_direction) when the event fired.
 
 These properties enable event handler functions to report the element that has been snapped to (in the case of `scrollsnapchange`) or the element that _would be snapped to_ if the scrolling gesture were to be finished now (in the case of `scrollsnapchanging`) — in one- and two-dimensions. You can then manipulate these elements in any way you want, for example by directly setting styles on them via their {{domxref("HTMLElement.style", "style")}} properties, setting classes on them that have styles defined for them in a stylesheet, etc.
 
