@@ -44,7 +44,7 @@ A media query's `<media-query-list>` includes [`<media-type>`s](#media_types), [
 
 ### Media types
 
-A _`<media-type>`_ describe the general category of a device.
+A _`<media-type>`_ describes the general category of a device.
 Except when using the `only` logical operator, the media type is optional and the `all` type is implied.
 
 - `all`
