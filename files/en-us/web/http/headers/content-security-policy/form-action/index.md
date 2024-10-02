@@ -44,7 +44,7 @@ This directive may have one of the following values:
 
   - : A space-separated list of _source expression_ values. Form submissions may be made to URLs that match any of the given source expressions.
 
-    The syntax for each source expression is given in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources). However, only the following subset of those values apply to `form-action`:
+    Source expressions are specified as keyword values or URL patterns: the syntax for each source expression is given in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources). However, only the following subset of those values apply to `form-action`:
 
     - `<host-source>`
     - `<scheme-source>`
