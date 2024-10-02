@@ -44,12 +44,15 @@ Content-Security-Policy: worker-src 'none';
 Content-Security-Policy: worker-src <source-expression-list>;
 ```
 
-This directive may have either:
+This directive may have one of the following values:
 
-- the single keyword value `'none'`, meaning that no resources of this type may be loaded
-- a list of _source expression_ values, meaning that resources of this type may be loaded if they match any of the given source expressions.
+- `'none'`
+  - : No resources of this type may be loaded. The single quotes are mandatory.
+- `<source-expression-list>`
 
-The syntax for each source expression is given in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources).
+  - : A space-separated list of _source expression_ values. Resources of this type may be loaded if they match any of the given source expressions.
+
+    The syntax for each source expression is given in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources).
 
 ## Examples
 

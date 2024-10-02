@@ -33,16 +33,19 @@ Content-Security-Policy: base-uri 'none';
 Content-Security-Policy: base-uri <source-expression-list>;
 ```
 
-This directive may have either:
+This directive may have one of the following values:
 
-- the single keyword value `'none'`, meaning that no base URI may be set using a `<base>` element
-- a list of _source expression_ values, meaning that a `<base>` element may set a base URI if it matches any of the given source expressions.
+- `'none'`
+  - : No base URI may be set using a `<base>` element. The single quotes are mandatory.
+- `<source-expression-list>`
 
-The syntax for each source expression is given in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources). However, only the following subset of those values apply to `base-uri`:
+  - : A space-separated list of _source expression_ values. A `<base>` element may set a base URI if its value matches any of the given source expressions.
 
-- `<host-source>`
-- `<scheme-source>`
-- the keyword value `'self'`.
+    The syntax for each source expression is given in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources). However, only the following subset of those values apply to `base-uri`:
+
+    - `<host-source>`
+    - `<scheme-source>`
+    - the keyword value `'self'`.
 
 ## Examples
 

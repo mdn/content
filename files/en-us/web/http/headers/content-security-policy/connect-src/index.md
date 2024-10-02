@@ -9,14 +9,14 @@ browser-compat: http.headers.Content-Security-Policy.connect-src
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 **`connect-src`** directive restricts the URLs which can be
-loaded using script interfaces. The APIs that are restricted are:
+loaded using script interfaces. The following APIs are controlled by this directive:
 
-- {{HTMLElement("a")}} [`ping`](/en-US/docs/Web/HTML/Element/a#ping),
-- {{domxref("Window/fetch", "fetch()")}},
-- {{domxref("XMLHttpRequest")}},
-- {{domxref("WebSocket")}},
-- {{domxref("EventSource")}}, and
-- {{domxref("Navigator.sendBeacon()")}}.
+- The [`ping`](/en-US/docs/Web/HTML/Element/a#ping) attribute in {{htmlelement("a")}} elements
+- {{domxref("Window/fetch", "fetch()")}}
+- {{domxref("XMLHttpRequest")}}
+- {{domxref("WebSocket")}}
+- {{domxref("EventSource")}}
+- {{domxref("Navigator.sendBeacon()")}}
 
 > **Note:** `connect-src 'self'` does not resolve to websocket
 > schemes in all browsers, more info in this [issue](https://github.com/w3c/webappsec-csp/issues/7).
@@ -48,12 +48,15 @@ Content-Security-Policy: connect-src 'none';
 Content-Security-Policy: connect-src <source-expression-list>;
 ```
 
-This directive may have either:
+This directive may have one of the following values:
 
-- the single keyword value `'none'`, meaning that no resources of this type may be loaded
-- a list of _source expression_ values, meaning that resources of this type may be loaded if they match any of the given source expressions.
+- `'none'`
+  - : No resources of this type may be loaded. The single quotes are mandatory.
+- `<source-expression-list>`
 
-The syntax for each source expression is given in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources).
+  - : A space-separated list of _source expression_ values. Resources of this type may be loaded if they match any of the given source expressions.
+
+    The syntax for each source expression is given in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources).
 
 ## Examples
 
