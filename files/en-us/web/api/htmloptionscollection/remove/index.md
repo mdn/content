@@ -44,9 +44,8 @@ optionList.remove(0); // removes the first item
 
 ## See also
 
-- {{DOMxRef("HTMLOptionsCollection.add")}}
+- {{DOMxRef("HTMLOptionsCollection.add()")}}
 - {{DOMxRef("HTMLOptionsCollection.length")}}
 - {{DOMxRef("HTMLOptionsCollection.selectedIndex")}}
-- {{domxref("HTMLOptionsCollection") }}
-- {{domxref("HTMLOptionsCollection.remove()")}}
+- {{domxref("HTMLOptionsCollection")}}
 - {{domxref("Element.remove")}}
