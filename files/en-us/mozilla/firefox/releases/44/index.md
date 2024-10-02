@@ -80,7 +80,7 @@ Highlights:
 
 #### New APIs
 
-- {{jsxref("Symbol.toPrimitive")}}, {{jsxref("Symbol.prototype.@@toPrimitive", "Symbol.prototype[@@toPrimitive]")}}, and {{jsxref("Date.prototype.@@toPrimitive", "Date.prototype[@@toPrimitive]")}} have been implemented ([Firefox bug 1054756](https://bugzil.la/1054756)).
+- {{jsxref("Symbol.toPrimitive")}}, [`Symbol.prototype[Symbol.toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive), and [`Date.prototype[Symbol.toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive) have been implemented ([Firefox bug 1054756](https://bugzil.la/1054756)).
 
 #### Changes
 
