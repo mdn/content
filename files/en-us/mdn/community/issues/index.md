@@ -103,7 +103,7 @@ These are the general steps for working on an issue:
    > [!NOTE]
    > An issue with the `needs triage` label indicates that the MDN Web Docs core team has not reviewed the issue yet, and you shouldn't begin work on it.
 
-2. **Assign the issue to yourself:** After finding an issue you'd like to work on, make sure that the issue is not assigned to anybody else. Add a comment saying you would like to work on the issue, and if you are able to, [assign the issue to yourself](https://docs.github.com/en/issues/tracking-your-work-with-issues/assigning-issues-and-pull-requests-to-other-github-users#assigning-an-individual-issue-or-pull-request).
+2. **Assign the issue to yourself:** After finding an issue you'd like to work on, make sure that the issue is not assigned to anybody else. Add a comment saying you would like to work on the issue, and if you are able to, [assign the issue to yourself](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/assigning-issues-and-pull-requests-to-other-github-users#assigning-an-individual-issue-or-pull-request).
 
 3. **Do the research:** Most issues need some investigation before work can start.
 
@@ -111,7 +111,7 @@ These are the general steps for working on an issue:
    - If the issue is well-described, and the work is pretty obvious, go ahead and do it.
    - If the issue is not well-described, and/or you are not sure what is needed, feel free to @mention the poster and ask for more information.
 
-4. **Make the changes:** Fork and branch the repository. Do your work and open a [pull request](/en-US/docs/MDN/Community/Pull_requests) in the repository. [Reference the issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue) in the pull request description. Depending on the files you've updated in the pull request, a reviewer will be assigned to your pull request automatically. (Teams per topic area are defined in the [CODEOWNERS](https://github.com/mdn/content/blob/main/.github/CODEOWNERS) file).
+4. **Make the changes:** Fork and branch the repository. Do your work and open a [pull request](/en-US/docs/MDN/Community/Pull_requests) in the repository. [Reference the issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue) in the pull request description. Depending on the files you've updated in the pull request, a reviewer will be assigned to your pull request automatically. (Teams per topic area are defined in the [CODEOWNERS](https://github.com/mdn/content/blob/main/.github/CODEOWNERS) file).
 
    After opening the pull request, if you find you no longer have the time to make changes or incorporate review feedback, let the team know as soon as possible in a comment in the pull request. This will help the team assign another interested contributor to complete the work on the pull request and close the linked issue.
 

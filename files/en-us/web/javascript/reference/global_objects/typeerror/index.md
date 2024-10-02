@@ -15,7 +15,7 @@ A `TypeError` may be thrown when:
 - when attempting to modify a value that cannot be changed; or
 - when attempting to use a value in an inappropriate way.
 
-`TypeError` is a {{Glossary("serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker/postMessage()", "postMessage()")}}.
+`TypeError` is a {{Glossary("serializable object")}}, so it can be cloned with {{DOMxRef("Window.structuredClone", "structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker/postMessage()", "postMessage()")}}.
 
 `TypeError` is a subclass of {{jsxref("Error")}}.
 

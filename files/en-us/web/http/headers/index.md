@@ -19,7 +19,7 @@ Headers can be grouped according to their contexts:
 - {{Glossary("Response header", "Response headers")}}
   - : Hold additional information about the response, like its location or about the server providing it.
 - {{Glossary("Representation header", "Representation headers")}}
-  - : Contain information about the body of the resource, like its [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types), or encoding/compression applied.
+  - : Contain information about the body of the resource, like its [MIME type](/en-US/docs/Web/HTTP/MIME_types), or encoding/compression applied.
 - {{Glossary("Payload header","Payload headers")}}
   - : Contain representation-independent information about payload data, including content length and the encoding used for transport.
 
@@ -92,9 +92,9 @@ For more details, refer to the [Content negotiation article](/en-US/docs/Web/HTT
 - {{HTTPHeader("Accept-Language")}}
   - : Informs the server about the human language the server is expected to send back. This is a hint and is not necessarily under the full control of the user: the server should always pay attention not to override an explicit user choice (like selecting a language from a dropdown).
 - {{HTTPHeader("Accept-Patch")}}
-  - : A _request content negotiation_ response header that advertises which [media type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) the server is able to understand in a {{HTTPMethod("PATCH")}} request.
+  - : A _request content negotiation_ response header that advertises which [media type](/en-US/docs/Web/HTTP/MIME_types) the server is able to understand in a {{HTTPMethod("PATCH")}} request.
 - {{HTTPHeader("Accept-Post")}}
-  - : A _request content negotiation_ response header that advertises which [media type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) the server is able to understand in a {{HTTPMethod("POST")}} request.
+  - : A _request content negotiation_ response header that advertises which [media type](/en-US/docs/Web/HTTP/MIME_types) the server is able to understand in a {{HTTPMethod("POST")}} request.
 
 ## Controls
 

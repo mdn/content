@@ -54,7 +54,7 @@ Content-Type: application/json; charset=utf-8
 {"name":"John"}
 ```
 
-Modules are identified and parsed only according to their served [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) — the file extension in the URL cannot be used to identify a file's type. In this case, the MIME type is `application/json`, which tells the browser that the file is JSON and must be parsed as JSON. If, for some reason (e.g. the server is hijacked or bogus), the MIME type in the server response is set to `text/javascript` (for JavaScript source), then the file would be parsed and executed as code. If the "JSON" file actually contains malicious code, the `import` declaration would unintentionally execute external code, posing a serious security threat.
+Modules are identified and parsed only according to their served [MIME type](/en-US/docs/Web/HTTP/MIME_types) — the file extension in the URL cannot be used to identify a file's type. In this case, the MIME type is `application/json`, which tells the browser that the file is JSON and must be parsed as JSON. If, for some reason (e.g. the server is hijacked or bogus), the MIME type in the server response is set to `text/javascript` (for JavaScript source), then the file would be parsed and executed as code. If the "JSON" file actually contains malicious code, the `import` declaration would unintentionally execute external code, posing a serious security threat.
 
 Import attributes fix this problem by allowing the author to explicitly specify how a module should be validated. For example, the import statement above, which lacks an attribute, would actually fail:
 

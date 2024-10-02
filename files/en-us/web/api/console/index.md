@@ -112,7 +112,7 @@ If you are going to mutate your object and you want to prevent the logged inform
 console.log(JSON.parse(JSON.stringify(obj)));
 ```
 
-There are other alternatives that work in browsers, such as [`structuredClone()`](/en-US/docs/Web/API/structuredClone), which are more effective at cloning different types of objects.
+There are other alternatives that work in browsers, such as {{DOMxRef("Window.structuredClone", "structuredClone()")}}, which are more effective at cloning different types of objects.
 
 #### Outputting multiple objects
 

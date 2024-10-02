@@ -70,11 +70,11 @@ The start-line in HTTP requests (`POST /users HTTP/1.1` in the example above) is
 ### Request targets
 
 There are a few ways of describing a request target, but by far the most common is the "origin form".
-Here's an overview of the types of targets and when they are used:
+Here's a list of the types of targets and when they are used:
 
 1. In _origin form_, the recipient combines an absolute path with the information in the {{HTTPHeader("Host")}} header.
    A query string can be appended to the path for additional information (usually in `key=value` format).
-   This Is used with `GET`, `POST`, `HEAD`, and `OPTIONS` methods:
+   This is used with `GET`, `POST`, `HEAD`, and `OPTIONS` methods:
 
    ```http
    GET /en-US/docs/Web/HTTP/Messages HTTP/1.1
@@ -245,12 +245,9 @@ Using the same TCP connection to handle multiple requests at the same time is ca
 ![Multiplexing requests and responses in HTTP/2 using a single TCP connection.](https://mdn.github.io/shared-assets/images/diagrams/http/messages/http-2-connection.png)
 
 Requests are not necessarily sequential: stream 9 doesn't have to wait for stream 7 to finish, for instance.
-The data from multiple streams may be interleaved on the connection, so stream 9 and 7 can be received by the client at the same time:
-
-<!-- TODO: show data interleaved on streams -->
-
-Because one connection has several logical streams of data flowing in both directions at the same time, the protocol can decide in which order or in priority each stream or resource should have.
-Low-priority resources take up less bandwidth as higher-priority resources when they're being sent in different streams in parallel, or they could effectively be sent sequentially on the same connection if there are critical resources that should be handled first.
+The data from multiple streams are usually interleaved on the connection, so stream 9 and 7 can be received by the client at the same time.
+There's a mechanism for the protocol to set a priority for each stream or resource.
+Low-priority resources take up less bandwidth than higher-priority resources when they're being sent over different streams, or they could effectively be sent sequentially on the same connection if there are critical resources that should be handled first.
 
 In general, despite all of the improvements and abstractions added over HTTP/1.x, virtually no changes are needed in the APIs used by developers to make use of HTTP/2 over HTTP/1.x.
 When HTTP/2 is available in both the browser and the server, it is switched on and used automatically.
