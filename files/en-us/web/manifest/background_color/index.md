@@ -42,7 +42,7 @@ This will ensure visual consistency between the initial display (including the s
 By aligning these colors, you can create a more polished and seamless experience for your users.
 
 After an app has loaded, the `background-color` in the stylesheet takes precedence.
-The manifest's `background_color` is only used as a temporary measure during the initial loading phase and for generating splash screens in some environments.
+The manifest's `background_color` is used only as a temporary measure during the initial loading phase and for generating splash screens in some environments.
 
 > [!NOTE]
 > Browsers may override the `background_color` manifest value to support any [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media query defined in your app's CSS.
