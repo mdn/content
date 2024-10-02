@@ -6,7 +6,7 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 131 that affect developers. Firefox 130 was released on [October 1, 2024](https://whattrainisitnow.com/release/?version=131).
+This article provides information about the changes in Firefox 131 that affect developers. Firefox 131 was released on [October 1, 2024](https://whattrainisitnow.com/release/?version=131).
 
 ## Changes for web developers
 
