@@ -91,11 +91,21 @@ One special fetch directive is `default-src`, which sets a fallback policy for a
 
 For the complete set of fetch directives, see the [reference documentation](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directives).
 
-Each fetch directive is specified as either the single keyword `'none'` or one or more _source expressions_, separated by spaces.
+Each fetch directive is specified as either the single keyword `'none'` or one or more _source expressions_, separated by spaces. When more than one source expression is listed: if any of the methods allow the resource, then the resource is allowed.
+
+For example, the CSP below sets two fetch directives:
+
+- `default-src` is given the single source expression `'self'`
+- `img-src` is given two source expressions: `'self'` and `example.com`
 
 ![CSP diagram showing source expressions](csp-source-expressions.svg)
 
-In the next few sections we'll describe some of the ways you can use source expressions to control resource loads. Note that although we're describing them separately, these expressions can in general be combined: for example, a single fetch directive may include nonces as well as hostnames. When this happens, if any of the methods allow the resource, then the resource is allowed.
+The effect of this is that:
+
+- images must be either same-origin with the document, or loaded from `example.com`
+- all other resources must be same-origin with the document.
+
+In the next few sections we'll describe some of the ways you can use source expressions to control resource loads. Note that although we're describing them separately, these expressions can in general be combined: for example, a single fetch directive may include nonces as well as hostnames.
 
 #### Blocking resources
 
