@@ -22,7 +22,7 @@ _This interface also inherits properties of its parent, {{domxref("EventTarget")
 _This interface also inherits methods of its parent, {{domxref("EventTarget")}}._
 
 - {{domxref("HID.getDevices","getDevices()")}} {{Experimental_Inline}}
-  - : Returns a {{jsxref("Promise")}} that resolves with an array of connected {{domxref("HIDDevice")}} objects.
+  - : Returns a {{jsxref("Promise")}} that resolves with an array of connected HID devices that the user has previously been granted access to in response to a {{domxref("HID.requestDevice","requestDevice()")}} call.
 - {{domxref("HID.requestDevice","requestDevice()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves with an array of connected {{domxref("HIDDevice")}} objects. Calling this function will trigger the user agent's permission flow in order to gain permission to access one selected device from the returned list of devices.
 
