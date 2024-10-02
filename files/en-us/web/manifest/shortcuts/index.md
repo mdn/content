@@ -83,24 +83,25 @@ Browsers can use this information to create a context menu, which is typically d
     - [`icons`](/en-US/docs/Web/Manifest/icons) {{Optional_Inline}}
 
       - : An array of icon objects representing the shortcut in various contexts.
-        Similar to the [`icons`](/en-US/docs/Web/Manifest/icons) manifest member, each shortcut icon object must specify the [`src`](/en-US/docs/Web/Manifest/icons#src) property.
+        This has the same format as the [`icons`](/en-US/docs/Web/Manifest/icons) manifest member.
 
 ## Description
 
-The `shortcuts` member allows you to define quick access points to key functionalities within your web app.
-Shortcuts are typically presented to users in a context menu when they interact with the web app's icon, such as by right-clicking or long-pressing it.
-Browsers typically render shortcuts in the same order as they are provided in the app's manifest file.
+The `shortcuts` member allows you to provide users with direct access to key features offered by your web app.
+Shortcuts are usually presented to users in a context menu when they interact with the web app's icon, such as by right-clicking or long-pressing it.
 When users activate a shortcut from this menu, browsers navigate them to the address specified in the `url` of the shortcut.
 
+Browsers commonly render shortcuts in the same order as they are provided in the app's manifest file.
+
 > [!NOTE]
-> The presentation and the number of shortcuts shown to users is at the discretion of browsers and/or the operating system. For example, browsers may truncate the list of declared shortcuts to remain consistent with the conventions or limitations of the host operating system.
+> The presentation and the number of shortcuts shown to users is at the discretion of browsers and/or the operating system.
+> For example, browsers may truncate the list of declared shortcuts to remain consistent with the conventions or limitations of the host operating system.
 
 ### Benefits of adding shortcuts
 
 Shortcuts can enhance user experience by:
 
-- Providing quick navigation to frequently used features or pages within the web app
-- Making users more productive by allowing direct access to main actions from their home screen.
+- Providing direct navigation to frequently used features or pages within the web app
 - Making your web app feel more platform-native and familiar to users.
 
 For example, shortcuts can be used to link directly to a user's timeline within a social media app or provide fast access to a user's recent orders in an e-commerce context.
@@ -110,10 +111,11 @@ For example, shortcuts can be used to link directly to a user's timeline within 
 When creating shortcuts for your web app, keep the following guidelines in mind:
 
 - Keep the shortcut names short but descriptive enough to clearly convey their purpose to users.
-- Order the shortcuts by priority, with the most critical shortcut first in the list.
 - Ensure that shortcut URLs are within the scope of your web app.
-- Include icons for shortcuts to improve visual recognition. Provide icons in multiple sizes to ensure quality display across different devices and contexts.
-- Avoid adding too many shortcuts.
+- Include icons for shortcuts to improve visual recognition.
+  Provide icons in multiple sizes to ensure quality display across different devices and contexts.
+- Order the shortcuts from most to least important, based on the relevance and usage of features to which they link.
+- Prefer adding fewer, important shortcuts over many seemingly important ones. Not only can a long list overwhelm users, but it may also be truncated by some platforms or browsers.
 
 ## Examples
 
