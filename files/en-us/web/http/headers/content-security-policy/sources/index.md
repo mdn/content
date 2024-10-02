@@ -15,7 +15,7 @@ As well as fetch directives, some other CSP directives may take as a value a spa
 - {{CSP("form-action")}}
 - {{CSP("frame-ancestors")}}
 
-Directives that accept a list of source expressions may instead be given the single value `'none'`, indicating that no resources of the given type may be loaded (or, in the case of non-fetch directives, that the given ability is not allowed).
+Directives that accept a list of source expressions may instead be given the single value `'none'`, indicating that no resources of the given type may be loaded (or, in the case of non-fetch directives, that the associated feature is not allowed).
 
 ## Sources
 
