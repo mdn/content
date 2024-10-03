@@ -35,7 +35,7 @@ hasFeature(feature, version)
 
 ### Return value
 
-true
+A boolean value of `true`.
 
 ## Specifications
 
