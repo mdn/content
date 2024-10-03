@@ -35,7 +35,7 @@ hasFeature(feature, version)
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+true
 
 ## Specifications
 
