@@ -9,7 +9,7 @@ browser-compat: css.at-rules.custom-media
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`@custom-media`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines aliases for long and complex [media queries](/en-US/docs/Web/CSS/CSS_media_queries). Instead of using hardcoded {{CSSxRef("@media")}} values, in multiple CSS files, declare custom media query in a single location and use theme everywhere.
+The **`@custom-media`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines aliases for longer or complex [media queries](/en-US/docs/Web/CSS/CSS_media_queries). Instead of using the same hardcoded [media features](/en-US/docs/Web/CSS/@media#media_features) {{CSSxRef("@media")}} query list multiple times in multiple CSS files, a `@custom-media` query is defined once, in a single location, and can then be used everywhere.
 
 ## Syntax
 
@@ -21,19 +21,19 @@ The **`@custom-media`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines alias
 ### Values
 
 - `<extension-name>`
-  - : A name identifying the custom media.
+  - : A [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident); the name identifying the custom media.
 - `<media-query-list>`
   - : A comma-separated list of `<media-query>` values.
 
 ## Description
 
-When designing documents that use media queries, the {{CSSxRef("@media")}} may be used in multiple places. Repeating the same media query values multiple times is an editing hazard; developers making a change must edit every copy in the same way, or suffer from difficult-to-find bugs in their CSS.
+When designing documents that use media queries, an {{CSSxRef("@media")}} rule may be used in multiple places. Repeating the same media query values multiple times can lead to errors and maintenance issues. If a change needs to be made, every occurrence must be found and updated in the same way, which may be hard to detect, especially when media queries are used in multiple files and multiple teams.
 
-To help ameliorate this, the custom media queries at-rule defines named aliases for long and complex media queries. In this way, a media query used in multiple places can instead be assigned to a custom media query, which can be used everywhere, and editing the media query requires touching only one line of code.
+To help address this, the custom media queries at-rule defines named aliases that can be used for long and complex media queries. In this way, a media query used in multiple places can instead be defined as a custom media query, which can be used everywhere. Then, updating the media query requires touching only one line of code.
 
-A `@custom-media` rule can refer to other custom media queries. However, loops are forbidden, and a custom media query must not be defined in terms of itself or of another custom media query that directly or indirectly refers to it. Any attempt to define a custom media query with a circular dependency will cause all the custom media queries in the loop to fail.
+A `@custom-media` rule can refer to other custom media queries and include the alias name within the feature list. However, ensure the custom media query is not defined in terms of itself or of another custom media query that directly or indirectly refers to it as loops are not valid. Any attempt to define a custom media query with a circular dependency will cause all the custom media queries in the loop to fail.
 
-If multiple `@custom-media` rules declare the same name, the truth value is based on the last one alone, ignoring all previous declarations of the same name.
+If multiple `@custom-media` rules are declared using the same dashed-identifier, the last declaration defined is used, with all previous declarations using the same name being ignored.
 
 ## Formal syntax
 
@@ -58,7 +58,7 @@ The `@custom-media` at-rule is used on responsive websites which use a particula
 }
 ```
 
-By changing one line of code, all media queries using this custom media query alies in all CSS files are updated accordingly.
+If the breakpoint changes, by changing one line of code, a single media feature value, all media queries using this custom media query alias in all CSS files are updated accordingly.
 
 ### Grouping multiple responsive breakpoints
 
@@ -112,4 +112,4 @@ The following would be incorrect:
 - {{CSSxRef("@media")}}
 - {{CSSxRef("@import")}}
 - [Responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries)
+- [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
