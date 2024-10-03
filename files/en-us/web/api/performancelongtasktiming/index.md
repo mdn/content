@@ -11,6 +11,8 @@ browser-compat: api.PerformanceLongTaskTiming
 
 The **`PerformanceLongTaskTiming`** interface provides information about tasks that occupy the UI thread for 50 milliseconds or more.
 
+{{InheritanceDiagram}}
+
 ## Description
 
 Long tasks that block the main thread for 50ms or more cause, among other issues:

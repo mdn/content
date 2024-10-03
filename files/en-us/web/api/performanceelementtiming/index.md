@@ -11,6 +11,8 @@ browser-compat: api.PerformanceElementTiming
 
 The **`PerformanceElementTiming`** interface contains render timing information for image and text node elements the developer annotated with an [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute for observation.
 
+{{InheritanceDiagram}}
+
 ## Description
 
 The aim of the Element Timing API is to give web developers or analytics tools the ability to measure rendering timestamps of critical elements on a page.

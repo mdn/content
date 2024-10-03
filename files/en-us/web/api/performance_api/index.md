@@ -15,6 +15,9 @@ spec-urls:
   - https://w3c.github.io/resource-timing/
   - https://w3c.github.io/server-timing/
   - https://w3c.github.io/user-timing/
+  - https://w3c.github.io/long-animation-frames/
+  - https://wicg.github.io/performance-measure-memory/
+  - https://html.spec.whatwg.org/multipage/interaction.html#the-visibilitystateentry-interface
 ---
 
 {{DefaultAPISidebar("Performance API")}}

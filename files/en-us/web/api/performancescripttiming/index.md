@@ -11,6 +11,8 @@ browser-compat: api.PerformanceScriptTiming
 
 The **`PerformanceScriptTiming`** interface is specified in the Long Animation Frames API and provides metrics on individual scripts that contribute to long animation frames (LoAFs).
 
+{{InheritanceDiagram}}
+
 ## Description
 
 Long animation frames (LoAFs) are rendering updates that are delayed beyond 50ms. LoAFs can result in slow user interface (UI) updates, making controls appear unresponsive and causing [janky](/en-US/docs/Glossary/Jank) (non-smooth) animated effects and scrolling. This often leads to user frustration.
