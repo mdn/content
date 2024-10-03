@@ -48,7 +48,7 @@ scrollingElem.addEventListener("scrollsnapchange", (event) => {
 
 ## See also
 
-- The {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} event
+- {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} event
 - {{domxref("SnapEvent")}}
 - [CSS scroll snap module](/en-US/docs/Web/CSS/CSS_scroll_snap)
 - [Using scroll snap events](/en-US/docs/Web/CSS/CSS_scroll_snap/Using_scroll_snap_events)

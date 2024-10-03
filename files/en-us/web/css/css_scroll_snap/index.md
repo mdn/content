@@ -68,6 +68,8 @@ To see the code for this example, [view the source on GitHub](https://github.com
 ### Interfaces
 
 - {{domxref("SnapEvent")}} {{experimental_inline}}
+  - {{domxref("SnapEvent.snapTargetBlock")}} {{experimental_inline}}
+  - {{domxref("SnapEvent.snapTargetInline")}} {{experimental_inline}}
 
 ## Guides
 

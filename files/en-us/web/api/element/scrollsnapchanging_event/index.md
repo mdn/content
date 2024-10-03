@@ -12,9 +12,9 @@ browser-compat: api.Element.scrollsnapchanging_event
 
 The **`scrollsnapchanging`** event of the {{domxref("Element")}} interface is fired on the [scroll container](/en-US/docs/Glossary/Scroll_container) when the browser determines a new scroll snap target is pending, i.e. it will be selected when the current scroll gesture ends.
 
-Note that this event fires during a scrolling gesture, each time the user moves over a potential new snap target. For example, the user could scroll slowly by dragging their finger on a touch screen device, or hold down the mouse button on a scroll bar and move the mouse. `scrollsnapchanging` can therefore fire multiple times for each scrolling gesture.
+Specifically, this event fires during a scrolling gesture, each time the user moves over potential new snap targets. For example, the user could scroll slowly by dragging their finger on a touch screen device, or hold down the mouse button on a scroll bar and move the mouse. `scrollsnapchanging` can therefore fire multiple times for each scrolling gesture.
 
-However, `scrollsnapchanging` does not fire on all potential snap targets for a gesture that spans multiple snap targets at once — just the last target that the snapping will potentially rest on. For example, if a user flicks their finger hard on the screen to scroll past several potential targets before starting to come to rest near a target further down the scroll container, the `scrollsnapchanging` event will fire when the target near the end of the scroll container is reached.
+However, it does not fire on all potential snap targets for a scrolling gesture that moves over multiple snap targets. Rather, it fires just for the last target that the snapping will potentially rest on.
 
 ## Syntax
 
@@ -59,7 +59,7 @@ At the start of the function, we select all elements that previously had the `pe
 
 ## See also
 
-- The {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} event
+- {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} event
 - {{domxref("SnapEvent")}}
 - [CSS scroll snap module](/en-US/docs/Web/CSS/CSS_scroll_snap)
 - [Using scroll snap events](/en-US/docs/Web/CSS/CSS_scroll_snap/Using_scroll_snap_events)

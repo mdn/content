@@ -58,7 +58,7 @@ If you are dealing with a horizontal _and_ vertical scroller, the code gets more
 - If the scroller is scrolled horizontally, the `snapTargetInline` property will change as the snapped element changes if the content has a horizonal {{cssxref("writing-mode")}}, or the `snapTargetBlock` property if the content has a vertical `writing-mode`.
 - If the scroller is scrolled vertically, the `snapTargetBlock` property will change as the snapped element changes if the content has a horizonal `writing-mode`, or the `snapTargetInline` property if the content has a vertical `writing-mode`.
 
-To handle this, you will likely need to keep track of whether it was the `snapTargetBLock` or the `snapTargetInline` element that changed. Let's look at an example:
+To handle this, you will likely need to keep track of whether it was the `snapTargetBlock` or the `snapTargetInline` element that changed. Let's look at an example:
 
 ```js
 const prevState = {
@@ -116,24 +116,35 @@ html {
   height: 100%;
 }
 
-h2 {
-  font-size: 1rem;
-  letter-spacing: 1px;
-}
-```
-
-In the CSS, we start off by using [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) to center the `<main>` element inside the {{htmlelement("body")}}.
-
-```css
 body {
   display: flex;
   align-items: center;
   justify-content: center;
   height: inherit;
 }
+
+h2 {
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+section {
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+  background: #eee;
+  box-shadow:
+    inset 1px 1px 4px rgb(255 255 255 / 0.5),
+    inset -1px -1px 4px rgb(0 0 0 / 0.5);
+  width: 150px;
+  height: 150px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 ```
 
-Next, we give the `<main>` element a chunky black {{cssxref("border")}} and a fixed {{cssxref("width")}} and {{cssxref("height")}}. We set its {{cssxref("overflow")}} value to `scroll` so overflowing content will be hidden and can be scrolled to, and set {{cssxref("scroll-snap-type")}} to `block mandatory` so that snap targets in the block direction only will always be snapped to.
+In the CSS, we start off by giving the `<main>` element a chunky black {{cssxref("border")}} and a fixed {{cssxref("width")}} and {{cssxref("height")}}. We set its {{cssxref("overflow")}} value to `scroll` so overflowing content will be hidden and can be scrolled to, and set {{cssxref("scroll-snap-type")}} to `block mandatory` so that snap targets in the block direction only will always be snapped to.
 
 ```css
 main {
@@ -145,70 +156,26 @@ main {
 }
 ```
 
-Each `<section>` element is given fixed dimensions and some rudimentary styling, which we won't explain in detail. The most significant parts of this ruleset are:
-
-- We've given each one a {{cssxref("margin")}} of `50px` to separate out the `<section>` elements and make the scroll snapping behavior a bit easier to experience.
-- We've again used flexbox for centering. This time, we've used it to center the heading that appears inside each `<section>`.
-- We've used {{cssxref("scroll-snap-align")}} to specify that we want to snap to the center of each snap target.
+Each `<section>` element is given a {{cssxref("margin")}} of `50px` to separate out the `<section>` elements and make the scroll snapping behavior a bit easier to experience. We then set {{cssxref("scroll-snap-align")}} to `center`, to specify that we want to snap to the center of each snap target. Finally, we apply a {{cssxref("transition")}} to smoothly animate to and from the style changes applied when a snap target selection has been made or is pending.
 
 ```css
 section {
-  font-family: Arial, Helvetica, sans-serif;
-  border-radius: 5px;
-  background: #eee;
-  box-shadow:
-    inset 1px 1px 4px rgb(255 255 255 / 0.5),
-    inset -1px -1px 4px rgb(0 0 0 / 0.5);
-  width: 150px;
-  height: 150px;
-
   margin: 50px auto;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   scroll-snap-align: center;
+  transition: 0.5s ease;
 }
 ```
 
-Next, we define the classes that will be applied to signal that a snap target selection has been made or is pending. The `select-section` and `deselect-section` will be applied to signify a selection or deselection — these apply animations that animate from gray background and black (default) text color to purple background and white text color, and back again, respectively. The `pending` class on the other hand will be applied to signify a pending snap target selection — this colors the target selection's background a darker gray.
+The style changes mentioned above will be applied through classes applied to the `<section>` elements via JavaScript. The `select-section` class will be applied to signify a selection — this set a purple background and white text color. The `pending` class will be applied to signify a pending snap target selection — this colors the target selection's background a darker gray.
 
 ```css
-.select-section {
-  animation: select 0.6s ease forwards;
-}
-
-.deselect-section {
-  animation: deselect 0.6s ease forwards;
-}
-
-@keyframes select {
-  from {
-    background: #eee;
-    color: black;
-  }
-
-  to {
-    background: purple;
-    color: white;
-  }
-}
-
-@keyframes deselect {
-  from {
-    background: purple;
-    color: white;
-  }
-
-  to {
-    background: #eee;
-    color: black;
-  }
-}
-
 .pending {
   background-color: #ccc;
+}
+
+.select-section {
+  background: purple;
+  color: white;
 }
 ```
 
@@ -233,19 +200,17 @@ while (n <= sectionCount) {
 
 Now on to the {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} event handler function. When a child of the `<main>` element (i.e. any `<section>` element) becomes a pending snap target selection, we:
 
-1. Check to see if any elements previously had the `pending` class applied. If so, we remove the `pending` class from them. This is so that only the current pending target is given the `pending` class and colored darker gray. We don't want previously-pending targets that are no longer pending to keep the styling.
-2. Give the element referenced by the {{domxref("SnapEvent.snapTargetBlock", "snapTargetBlock")}} property (which will be one of the `<section>` elements) the `pending` class so it turns a darker gray, but only if it has not already got the `select-section` class applied — we want a previously selected target to keep the purple selection styling until a new target is actually selected.
+1. Check to see if an element previously had the `pending` class applied and, if so, remove it. This is so that only the current pending target is given the `pending` class and colored darker gray. We don't want previously-pending targets that are no longer pending to keep the styling.
+2. Give the element referenced by the {{domxref("SnapEvent.snapTargetBlock", "snapTargetBlock")}} property (which will be one of the `<section>` elements) the `pending` class so it turns a darker gray.
 
 ```js
 mainElem.addEventListener("scrollsnapchanging", (event) => {
-  const pendingElems = document.querySelectorAll(".pending");
-  pendingElems.forEach((elem) => {
-    elem.className = "";
-  });
-
-  if (!(event.snapTargetBlock.className === "select-section")) {
-    event.snapTargetBlock.className = "pending";
+  const previousPending = document.querySelector(".pending");
+  if (previousPending) {
+    previousPending.classList.remove("pending");
   }
+
+  event.snapTargetBlock.classList.add("pending");
 });
 ```
 
@@ -254,18 +219,17 @@ mainElem.addEventListener("scrollsnapchanging", (event) => {
 
 When a scrolling gesture ends, and a `<section>` element is actually selected as a snap target, the {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} event handler function fires. This:
 
-1. Checks to see if a snap target was previously selected — i.e. if a `select-section` class was previously applied to an element. If so, we replace the `select-section` class with the `deselect-section` class, so that the deselection animation is applied to the element and it animates back to light gray with black text. If not, we immediately apply the `select-section` class to the first `<section>` element in the DOM, so that it animates to selected when the page first loads.
+1. Checks to see if a snap target was previously selected — i.e. if a `select-section` class was previously applied to an element. If so, we remove it.
 2. Applies the `select-section` class to the `<section>` element referenced in the `snapTargetBlock` property so that the snap target that was just selected will have the selection animation applied to it.
 
 ```js
 mainElem.addEventListener("scrollsnapchange", (event) => {
-  if (document.querySelector(".select-section")) {
-    document.querySelector(".select-section").className = "deselect-section";
-  } else {
-    document.querySelector("section").className = "select-section";
+  const currentlySnapped = document.querySelector(".select-section");
+  if (currentlySnapped) {
+    currentlySnapped.classList.remove("select-section");
   }
 
-  event.snapTargetBlock.className = "select-section";
+  event.snapTargetBlock.classList.add("select-section");
 });
 ```
 
@@ -277,7 +241,7 @@ Try scrolling up and down the scroll container and observing the behavior descri
 
 ## Two-dimensional scroller example
 
-This example is very similar to the previous one, except that it features a horizontally- _and_ vertically-scrolling {{htmlelement("main")}} element containing multiple light gray {{htmlelement("section")}} elements, which are all snap targets.
+This example is similar to the previous one, except that it features a horizontally- _and_ vertically-scrolling {{htmlelement("main")}} element containing multiple light gray {{htmlelement("section")}} elements, which are all snap targets.
 
 The HTML for the example is the same as for the previous example — a single `<main>` element.
 
@@ -324,7 +288,34 @@ h2 {
   font-size: 1rem;
   letter-spacing: 1px;
 }
+```
 
+The CSS for this example is similar to the CSS in the previous example. The most significant differences are as follows.
+
+First let's look at the `<main>` element styling. We want the `<section>` elements to be laid out as a grid, so we use [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) to specify that we want them displayed in seven columns, using a {{cssxref("grid-template-columns")}} value of `repeat(7, 1fr)`. We also specify the space around the `<section>` elements by setting `padding` and {{cssxref("gap")}} on the `<main>` element rather than `margin` on the `<section>` elements.
+
+Finally, since we are scrolling in both directions in this example, we set {{cssxref("scroll-snap-type")}} to `both mandatory` so that snap targets in the block direction _and_ inline direction will always be snapped to.
+
+```css
+main {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 100px;
+  gap: 50px;
+  overflow: scroll;
+  border: 3px solid black;
+  width: 350px;
+  height: 350px;
+
+  scroll-snap-type: both mandatory;
+}
+```
+
+Next, we are going to use CSS animations in this example instead of transtions. This results in more complex code, but enables more fine-grained control over the animations applied. We first define the classes that will be applied to signal that a snap target selection has been made or is pending. The `select-section` and `deselect-section` will be applied to signify a selection or deselection — these apply animations that animate from gray background and black (default) text color to purple background and white text color, and back again, respectively.
+
+The `pending` class will be applied to signify a pending snap target selection, as in the previous example.
+
+```css
 .select-section {
   animation: select 0.6s ease forwards;
 }
@@ -362,25 +353,6 @@ h2 {
 }
 ```
 
-The CSS for this example is very nearly identical to the CSS in the previous example. The most significant difference is in the styling of the `<main>` element — we want the `<section>` elements to be laid out as a grid, so we use [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) to specify that we want them displayed in seven columns, using a {{cssxref("grid-template-columns")}} value of `repeat(7, 1fr)`. We also specify the space around the `<section>` elements by setting `padding` and {{cssxref("gap")}} on the `<main>` element rather than `margin` on the `<section>` elements.
-
-Finally, since we are scrolling in both directions in this example, we set {{cssxref("scroll-snap-type")}} to `both mandatory` so that snap targets in the block direction _and_ inline direction will always be snapped to.
-
-```css
-main {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  padding: 100px;
-  gap: 50px;
-  overflow: scroll;
-  border: 3px solid black;
-  width: 350px;
-  height: 350px;
-
-  scroll-snap-type: both mandatory;
-}
-```
-
 ### JavaScript
 
 In the JavaScript, we start off in the same way as with the previous example, except that this time we generate 49 `<section>` elements. With the grid layout we specified above, this gives us seven columns of seven `<section>`s.
@@ -413,7 +385,7 @@ For example, let's say the scroll container is scrolled so that the ID of the ne
 
 This time around, we'll explain the {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} event handler function first, as it'll make more sense that way. In this function, we:
 
-1. Start by running the same code as in the previous example — making sure that any previously-selected `<section>` element snap target (as signified by the presence of the `select-section` class) has the `deselect-section` class applied so it shows the deselection animation. If no snap target was previously selected, we apply the `select-section` class to the first `<section>` in the DOM so it shows up as selected when the page first loads.
+1. Start by making sure that a previously-selected `<section>` element snap target (as signified by the presence of the `select-section` class) has the `deselect-section` class applied so it shows the deselection animation. If no snap target was previously selected, we apply the `select-section` class to the first `<section>` in the DOM so it shows up as selected when the page first loads.
 2. Compare the previously-selected snap target ID to the newly-selected snap target ID, for both the block _and_ inline selections. If they are different, it indicates that the selection has changed, so we apply the `select-section` class to the appropriate snap target to visually indicate this.
 3. Update `prevState.snapTargetBlock` and `prevState.snapTargetInline` to be equal to the IDs of the scroll snap targets that were just selected, so that when the event next fires, they will be the previous selections.
 
@@ -440,15 +412,15 @@ mainElem.addEventListener("scrollsnapchange", (event) => {
 
 When the {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} event handler function fires, we:
 
-1. Remove the `pending` class from all elements that previously had it applied, as before, so that only the current pending target is given the `pending` class and colored darker gray.
-2. Give the element that we have actually scrolled over the `pending` class so it turns a darker gray, but only if it has not already got the `select-section` class applied — we want a previously selected target to keep the purple selection styling until a new target is actually selected. Because we are scrolling in two dimensions, this could be the inline or block pending snap target. To figure out which one we include an extra check in the `if` statements — again, we compare the previous snap target to the current snap target in each case.
+1. Remove the `pending` class from the element that previously had it applied so that only the current pending target is given the `pending` class and colored darker gray.
+2. Give the current pending element the `pending` class so it turns a darker gray, but only if it has not already got the `select-section` class applied — we want a previously selected target to keep the purple selection styling until a new target is actually selected. We also include an extra check in the `if` statements to make sure we style only the inline or block pending snap target, depending on which one has changed. Again, we compare the previous snap target to the current snap target in each case.
 
 ```js
 mainElem.addEventListener("scrollsnapchanging", (event) => {
-  const pendingElems = document.querySelectorAll(".pending");
-  pendingElems.forEach((elem) => {
-    elem.className = "";
-  });
+  const previousPending = document.querySelector(".pending");
+  if (previousPending) {
+    previousPending.className = "";
+  }
 
   if (
     !(event.snapTargetBlock.className === "select-section") &&

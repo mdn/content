@@ -38,7 +38,7 @@ A {{domxref("SnapEvent")}}, which inherits from the generic {{domxref("Event")}}
 
 ## See also
 
-- The {{domxref("Document/scrollsnapchange_event", "scrollsnapchange")}} event
+- {{domxref("Document/scrollsnapchange_event", "scrollsnapchange")}} event
 - {{domxref("SnapEvent")}}
 - [CSS scroll snap module](/en-US/docs/Web/CSS/CSS_scroll_snap)
 - [Scroll Snap Events](https://developer.chrome.com/blog/scroll-snap-events) on developer.chrome.com (2024)
