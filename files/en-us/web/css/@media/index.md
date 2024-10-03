@@ -67,13 +67,13 @@ Media feature expressions test for their presence, value, or range of values, an
 - {{cssxref("@media/any-pointer", "any-pointer")}}
   - : Is any available input mechanism a pointing device, and if so, how accurate is it?
 - {{cssxref("@media/aspect-ratio", "aspect-ratio")}}
-  - : Width-to-height {{glossary("aspect ratio")}} of the viewport
+  - : Width-to-height {{glossary("aspect ratio")}} of the viewport.
 - {{cssxref("@media/color", "color")}}
-  - : Number of bits per color component of the output device, or zero if the device isn't color
+  - : Number of bits per color component of the output device, or zero if the device isn't color.
 - {{cssxref("@media/color-gamut", "color-gamut")}}
   - : Approximate range of colors that are supported by the user agent and output device.
 - {{cssxref("@media/color-index", "color-index")}}
-  - : Number of entries in the output device's color lookup table, or zero if the device does not use such a table
+  - : Number of entries in the output device's color lookup table, or zero if the device does not use such a table.
 - {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}}
   - : Width-to-height aspect ratio of the output device. Deprecated in Media Queries Level 4.
 - {{cssxref("@media/device-height", "device-height")}}
