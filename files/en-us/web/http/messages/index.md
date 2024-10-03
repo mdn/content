@@ -69,7 +69,7 @@ Not all requests have one: requests with a {{HTTPMethod("GET")}} _[HTTP method](
 Bodies can be broadly divided into two categories:
 
 - Single-resource bodies, consisting of one single file, defined by the two headers: {{HTTPHeader("Content-Type")}} and {{HTTPHeader("Content-Length")}}.
-- [Multiple-resource bodies](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data), consisting of a multipart body, each containing a different bit of information. This is typically associated with [HTML Forms](/en-US/docs/Learn/Forms).
+- [Multiple-resource bodies](/en-US/docs/Web/HTTP/MIME_types#multipartform-data), consisting of a multipart body, each containing a different bit of information. This is typically associated with [HTML Forms](/en-US/docs/Learn/Forms).
 
 ## HTTP Responses
 
@@ -106,7 +106,7 @@ Bodies can be broadly divided into three categories:
 
 - Single-resource bodies, consisting of a single file of known length, defined by the two headers: {{HTTPHeader("Content-Type")}} and {{HTTPHeader("Content-Length")}}.
 - Single-resource bodies, consisting of a single file of unknown length, encoded by chunks with {{HTTPHeader("Transfer-Encoding")}} set to `chunked`.
-- [Multiple-resource bodies](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data), consisting of a multipart body, each containing a different section of information. These are relatively rare.
+- [Multiple-resource bodies](/en-US/docs/Web/HTTP/MIME_types#multipartform-data), consisting of a multipart body, each containing a different section of information. These are relatively rare.
 
 ## HTTP/2 Frames
 

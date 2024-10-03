@@ -74,7 +74,7 @@ myPeerConnection
   .then(() => {
     // send the offer to the other peer using the signaling server
   })
-  .catch(reportError);
+  .catch(window.reportError);
 ```
 
 First, a new object is created, `restartConfig`, specifying the new ICE server and its credentials.

@@ -95,7 +95,7 @@ However, there is a problem here. If you are embedding SVG sprites defined in ex
 </svg>
 ```
 
-your SVG images will be blocked in Firefox if you have a `default-src 'none'` policy set. Firefox does not treat the SVG as an embedded image like other browsers do, therefore `img-src 'self'` will not allow them to be loaded. You need to use `default-src 'self'` if you want your external sprites to load in Firefox (see [bug 1773976](https://bugzilla.mozilla.org/show_bug.cgi?id=1773976) and [this CSP spec issue](https://github.com/w3c/webappsec-csp/issues/199) for more information).
+your SVG images will be blocked in Firefox if you have a `default-src 'none'` policy set. Firefox does not treat the SVG as an embedded image like other browsers do, therefore `img-src 'self'` will not allow them to be loaded. You need to use `default-src 'self'` if you want your external sprites to load in Firefox (see [bug 1773976](https://bugzil.la/1773976) and [this CSP spec issue](https://github.com/w3c/webappsec-csp/issues/199) for more information).
 
 Alternatively, if the `default-src 'none'` policy is a hard requirement, you can include the SVG sprites inline in the HTML page:
 

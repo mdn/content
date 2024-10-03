@@ -16,7 +16,7 @@ Otherwise, if an `HTMLTemplateElement` is created, the value of this property is
 
 ## Value
 
-Reflects the value of the [`shadowrootdelegatesfocus`](/en-US/docs/Web/HTML/Element/template#shadowrootclonable) attribute of the associated [`<template>`](/en-US/docs/Web/HTML/Element/template) element.
+Reflects the value of the [`shadowrootdelegatesfocus`](/en-US/docs/Web/HTML/Element/template#shadowrootdelegatesfocus) attribute of the associated [`<template>`](/en-US/docs/Web/HTML/Element/template) element.
 
 ## Specifications
 
