@@ -18,6 +18,7 @@ spec-urls:
   - https://w3c.github.io/long-animation-frames/
   - https://wicg.github.io/performance-measure-memory/
   - https://html.spec.whatwg.org/multipage/interaction.html#the-visibilitystateentry-interface
+  - https://html.spec.whatwg.org/multipage/nav-history-apis.html#the-notrestoredreasons-interface
 ---
 
 {{DefaultAPISidebar("Performance API")}}
@@ -52,6 +53,10 @@ The following interfaces are present in the Performance API:
   - : Provides insights into the layout stability of web pages based on movements of the elements on the page.
 - {{domxref("LayoutShiftAttribution")}}
   - : Provides debugging information about elements which have shifted.
+- {{domxref("NotRestoredReasonDetails")}}
+  - : Represents a single reason why a navigated page was blocked from using the back/forward cache ({{Glossary("bfcache")}}).
+- {{domxref("NotRestoredReasons")}}
+  - : Provides report data containing reasons why the current document was blocked from using the back/forward cache ({{Glossary("bfcache")}}) on navigation.
 - {{domxref("Performance")}}
   - : Main interface to access performance measurements. Available to window and worker contexts using {{domxref("Window.performance")}} or {{domxref("WorkerGlobalScope.performance")}}.
 - {{domxref("PerformanceElementTiming")}}
@@ -80,7 +85,7 @@ The following interfaces are present in the Performance API:
   - : Measures network loading metrics such as redirect start and end times, fetch start, DNS lookup start and end times, response start and end times for resources such as images, scripts, fetch calls, etc.
 - {{domxref("PerformanceScriptTiming")}}
   - : Provides metrics on individual scripts causing [long animation frames (LoAFs)](/en-US/docs/Web/API/Performance_API/Long_animation_frame_timing#what_is_a_long_animation_frame).
-- {{domxref("PerformanceServerTiming")}}
+- {{domxref("PerformanceTiming")}}
   - : Surfaces server metrics that are sent with the response in the {{HTTPHeader("Server-Timing")}} HTTP header.
 - {{domxref("TaskAttributionTiming")}}
   - : Identifies the type of task and the container that is responsible for the long task.
