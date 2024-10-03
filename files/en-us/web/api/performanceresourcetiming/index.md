@@ -9,8 +9,6 @@ browser-compat: api.PerformanceResourceTiming
 
 The **`PerformanceResourceTiming`** interface enables retrieval and analysis of detailed network timing data regarding the loading of an application's resources. An application can use the timing metrics to determine, for example, the length of time it takes to fetch a specific resource, such as an {{domxref("XMLHttpRequest")}}, {{SVGElement("SVG","SVG element")}}, image, or script.
 
-{{InheritanceDiagram}}
-
 ## Description
 
 The interface's properties create a resource loading timeline with high-resolution timestamps for network events such as redirect start and end times, fetch start, DNS lookup start and end times, response start and end times, and more. Additionally, the interface extends {{domxref("PerformanceEntry")}} with other properties which provide data about the size of the fetched resource as well as the type of resource that initiated the fetch.
@@ -31,6 +29,12 @@ The properties of this interface allow you to calculate certain resource timing 
 - Checking if local caches were hit (`transferSize` should be `0`)
 - Checking if modern and fast protocols are used (`nextHopProtocol` should be HTTP/2 or HTTP/3)
 - Checking if the correct resources are render-blocking (`renderBlockingStatus`)
+
+### Inheritance
+
+`PerformanceResourceTiming` inherits from {{domxref("PerformanceEntry")}}.
+
+{{InheritanceDiagram}}
 
 ## Instance properties
 

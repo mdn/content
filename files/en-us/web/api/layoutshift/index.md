@@ -11,8 +11,6 @@ browser-compat: api.LayoutShift
 
 The `LayoutShift` interface of the [Performance API](/en-US/docs/Web/API/Performance_API) provides insights into the layout stability of web pages based on movements of the elements on the page.
 
-{{InheritanceDiagram}}
-
 ## Description
 
 A layout shift happens when any element that is visible in the viewport changes its position between two frames. These elements are described as being **unstable**, indicating a lack of visual stability.

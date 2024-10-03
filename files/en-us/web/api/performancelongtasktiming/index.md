@@ -11,8 +11,6 @@ browser-compat: api.PerformanceLongTaskTiming
 
 The **`PerformanceLongTaskTiming`** interface provides information about tasks that occupy the UI thread for 50 milliseconds or more.
 
-{{InheritanceDiagram}}
-
 ## Description
 
 Long tasks that block the main thread for 50ms or more cause, among other issues:
@@ -31,8 +29,6 @@ A long task is any uninterrupted period where the main UI thread is busy for 50m
 Long tasks refer to "culprit browsing context container", or "the container" for short, which is the top-level page, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} or {{HTMLElement("object")}} that the task occurred within.
 
 For tasks that don't occur within the top-level page and for figuring out which container is responsible for the long task, the {{domxref("TaskAttributionTiming")}} interface provides the `containerId`, `containerName` and `containerSrc` properties, which may provide more information about the source of the task.
-
-## Inheritance
 
 `PerformanceLongTaskTiming` inherits from {{domxref("PerformanceEntry")}}.
 
