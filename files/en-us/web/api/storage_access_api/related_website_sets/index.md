@@ -4,7 +4,6 @@ slug: Web/API/Storage_Access_API/Related_website_sets
 page-type: guide
 status:
   - non-standard
-browser-compat: api.document.requestStorageAccessFor
 spec-urls: https://wicg.github.io/first-party-sets/
 ---
 

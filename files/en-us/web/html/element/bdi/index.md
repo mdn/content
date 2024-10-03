@@ -69,7 +69,7 @@ body {
 
 ### No bdi with RTL text
 
-This example lists the winners of a competition using {{HTMLElement("span")}} elements only, and one of the winners has a name consisting of RTL text. In this case the "`- 1`", which consists of characters with neutral or weak directionality, will adopt the directionality of the RTL text, and the result will be garbled:
+This example lists the winners of a competition using {{HTMLElement("span")}} elements only, and one of the winners has a name consisting of RTL text. In this case the `- 1`, which consists of characters with neutral or weak directionality, will adopt the directionality of the RTL text, and the result will be garbled:
 
 ```html
 <ul>

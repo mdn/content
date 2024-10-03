@@ -37,7 +37,7 @@ saturate(200%)  /* Double saturation */
 
 ### saturate() does not preserve hue or lightness
 
-The diagram below compares two color gradients with `hsl(0, 50%, 50%)` as the mid-point: the first is generated using `saturate()`, and the second uses actual HSL color values. Note how the `saturate()` gradient shows differences in hue and lightness towards the two ends.
+The diagram below compares two color gradients with `hsl(0 50% 50%)` as the mid-point: the first is generated using `saturate()`, and the second uses actual HSL color values. Note how the `saturate()` gradient shows differences in hue and lightness towards the two ends.
 
 ```html
 <div>
@@ -70,11 +70,11 @@ const hsl = document.getElementById("hsl");
 
 for (let i = 0; i <= 200; i++) {
   const div1 = document.createElement("div");
-  div1.style.backgroundColor = `hsl(0, ${i / 2}%, 50%)`;
+  div1.style.backgroundColor = `hsl(0 ${i / 2}% 50%)`;
   hsl.appendChild(div1);
 
   const div2 = document.createElement("div");
-  div2.style.backgroundColor = "hsl(0, 50%, 50%)";
+  div2.style.backgroundColor = "hsl(0 50% 50%)";
   div2.style.filter = `saturate(${i}%)`;
   saturate.appendChild(div2);
 }

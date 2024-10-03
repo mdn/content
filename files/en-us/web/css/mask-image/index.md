@@ -43,7 +43,7 @@ mask-image: unset;
 
 - `<mask-source>`
 
-  - : A {{cssxref("url","url()")}} reference to a {{SVGElement("mask")}} or to a CSS image.
+  - : A {{cssxref("url_value", "&lt;url&gt;")}} reference to a {{SVGElement("mask")}} or to a CSS image.
 
     > [!NOTE]
     > Only the image sources served over HTTP and HTTPS protocols are accepted due to the [CORS](/en-US/docs/Glossary/CORS) policy. Images served locally, including relative or absolute `file://` protocols, are not accepted. To test URL image sources locally, [set up a local server](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection#localhost).

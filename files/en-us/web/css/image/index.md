@@ -13,7 +13,7 @@ The **`<image>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS
 
 The `<image>` data type can be represented with any of the following:
 
-- An image denoted by the {{CSSxRef("url", "url()")}} data type
+- An image denoted by the {{cssxref("url_value", "&lt;url&gt;")}} data type
 - A {{CSSxRef("&lt;gradient&gt;")}} data type
 - A part of the webpage, defined by the {{CSSxRef("element","element()")}} function
 - An image, image fragment or solid patch of color, defined by the {{CSSxRef("image/image","image()")}} function

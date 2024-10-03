@@ -37,9 +37,9 @@ None.
 - `encoding`
   - : Specifies the value of the `encoding` attribute in the output document.
 - `omit-xml-declaration`
-  - : Indicates whether or not to include an XML declaration in the output. Acceptable values are "`yes`" or "`no`".
+  - : Indicates whether or not to include an XML declaration in the output. Acceptable values are `yes` or `no`.
 - `standalone` (Not supported.)
-  - : If present, indicates that a standalone declaration should occur in the output document and gives its value. Acceptable values are "yes" or "no".
+  - : If present, indicates that a standalone declaration should occur in the output document and gives its value. Acceptable values are `yes` or `no`.
 - `doctype-public`
   - : Specifies the value of the `PUBLIC` attribute of the `DOCTYPE` declaration in the output document.
 - `doctype-system`

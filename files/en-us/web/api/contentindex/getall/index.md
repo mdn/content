@@ -22,7 +22,7 @@ getAll()
 
 ### Parameters
 
-This method receives no parameters.
+None.
 
 ### Return value
 

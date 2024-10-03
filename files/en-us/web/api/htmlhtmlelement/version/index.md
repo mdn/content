@@ -15,6 +15,10 @@ browser-compat: api.HTMLHtmlElement.version
 
 Returns version information about the document type definition (DTD) of a document. While this property is recognized by Mozilla, the return value for this property is always an empty string.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

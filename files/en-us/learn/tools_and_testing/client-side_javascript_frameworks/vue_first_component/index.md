@@ -310,28 +310,11 @@ Try changing `true` to `false` and back again, reloading your app in between to 
 
 Great! We now have a working checkbox where we can set the state programmatically. However, we can currently only add one `ToDoList` component to the page because the `id` is hardcoded. This would result in errors with assistive technology since the `id` is needed to correctly map labels to their checkboxes. To fix this, we can programmatically set the `id` in the component data.
 
-We can use the [nanoid](https://github.com/ai/nanoid) package to help keep the index unique. This package exports a function `nanoid()` that generates a unique string. This will be sufficient for keeping component `id`s unique.
+We can use the {{domxref("Crypto.randomUUID()")}} method to generate a unique string to keep component `id`s unique. `randomUUID()` is built into modern browsers and provides a straightforward way to ensure uniqueness without relying on external libraries.
 
-Let's add the package to our project with npm; stop your server and enter the following command into your terminal:
-
-```bash
-npm install --save nanoid
-```
-
-> [!NOTE]
-> If you prefer yarn, you could instead use `yarn add nanoid`.
-
-We can now import this package into our `ToDoItem` component. Add the following line at the top of `ToDoItem.vue`'s `<script>` element:
+Next, add an `id` field to the `data` property as shown below; this uses `crypto.randomUUID()` to return a unique string, which we then prefix with `todo-`:
 
 ```js
-import { nanoid } from "nanoid";
-```
-
-Next, add an `id` field to our data property, so the component object ends up looking like so (`nanoid()` returns a unique string with the specified prefix — `todo-`):
-
-```js
-import { nanoid } from "nanoid";
-
 export default {
   props: {
     label: { required: true, type: String },
@@ -340,7 +323,7 @@ export default {
   data() {
     return {
       isDone: this.done,
-      id: "todo-" + nanoid(),
+      id: "todo-" + crypto.randomUUID(),
     };
   },
 };

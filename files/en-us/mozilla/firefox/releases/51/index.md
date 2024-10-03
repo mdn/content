@@ -6,7 +6,7 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/firefox/developer/).
+[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/).
 Firefox 51 was released on January 24, 2017. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
 ## Changes for Web developers
@@ -33,7 +33,7 @@ Firefox 51 was released on January 24, 2017. This article lists key changes that
 - The {{jsxref("Intl/DateTimeFormat/formatToParts", "DateTimeFormat.prototype.formatToParts()")}} method is now available ([Firefox bug 1289340](https://bugzil.la/1289340)).
 - {{jsxref("Statements/const", "const")}} and {{jsxref("Statements/let", "let")}} are now fully ES2015-compliant ([Firefox bug 950547](https://bugzil.la/950547)).
 - Using {{jsxref("Statements/const", "const")}} in [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loops now has a fresh binding for each iteration and no longer throws a {{jsxref("SyntaxError")}} ([Firefox bug 1101653](https://bugzil.la/1101653)).
-- The deprecated [for each...in](/en-US/docs/Web/JavaScript/Reference/Statements/for_each...in) loop now presents a [warning in the console](/en-US/docs/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated) ([Firefox bug 1293205](https://bugzil.la/1293205)). Please migrate your code to use the standardized [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop.
+- The deprecated [`for each...in`](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#statements_2) loop now presents a warning in the console ([Firefox bug 1293205](https://bugzil.la/1293205)). Please migrate your code to use the standardized [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop.
 - [Generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*) can't have a [label](/en-US/docs/Web/JavaScript/Reference/Statements/label) anymore and "`let`" as a label name is disallowed now ([Firefox bug 1288459](https://bugzil.la/1288459)).
 - Deprecated [legacy generator functions](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features) will now throw when used in [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) ([Firefox bug 1199296](https://bugzil.la/1199296)).
 - The `next()` method of the [iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) will now throw a {{jsxref("TypeError")}} if the returned value is not an object ([Firefox bug 1016936](https://bugzil.la/1016936)).
@@ -87,14 +87,14 @@ Firefox 51 was released on January 24, 2017. This article lists key changes that
 
 ### Web Workers
 
-- The non-standard and obsolete {{domxref("DedicatedWorkerGlobalScope.close")}} event handler and {{domxref("Worker")}} use of the `close` event have been removed from Firefox.
+- The non-standard and obsolete `onclose` event handler and {{domxref("Worker")}} use of the `close` event have been removed from Firefox.
 
 ### Networking
 
-- Scripts served with an `image/*`, `video/*`, `audio/*` or `text/csv` MIME type are now blocked and are not loaded or executed. This happen when they are declared using {{HTMLElement("script")}}, or loaded via {{domxref("Worker.importScripts()")}}, {{domxref("Worker.Worker","Worker()")}}, {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} ([Firefox bug 1229267](https://bugzil.la/1229267) and [Firefox bug 1288361](https://bugzil.la/1288361)).
+- Scripts served with an `image/*`, `video/*`, `audio/*` or `text/csv` MIME type are now blocked and are not loaded or executed. This happen when they are declared using {{HTMLElement("script")}}, or loaded via {{domxref("WorkerGlobalScope.importScripts()")}}, {{domxref("Worker.Worker","Worker()")}}, {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} ([Firefox bug 1229267](https://bugzil.la/1229267) and [Firefox bug 1288361](https://bugzil.la/1288361)).
 - Support for SHA-1 certificates from publicly-trusted certificate authorities has been removed ([Firefox bug 1302140](https://bugzil.la/1302140)). See also [Phasing Out SHA-1 on the Public Web](https://blog.mozilla.org/security/2016/10/18/phasing-out-sha-1-on-the-public-web/) for more information.
 - New WoSign and StartCom certificates will no longer be accepted ([Firefox bug 1309707](https://bugzil.la/1309707)), see [Distrusting New WoSign and StartCom Certificates](https://blog.mozilla.org/security/2016/10/24/distrusting-new-wosign-and-startcom-certificates/) for more information.
-- The [PAC](</en-US/docs/Mozilla/Projects/Necko/Proxy_Auto-Configuration_(PAC)_file>) `FindProxyForURL(url, host)` function now strips paths and queries from https\:// URLs to avoid information leakage (see [Firefox bug 1255474](https://bugzil.la/1255474), [Sniffing HTTPS URLS with malicious PAC files](https://www.contextis.com/us/blog/leaking-https-urls-20-year-old-vulnerability), or `CVE-2017-5384`).
+- The [PAC](</en-US/docs/Mozilla/Projects/Necko/Proxy_Auto-Configuration_(PAC)_file>) `FindProxyForURL(url, host)` function now strips paths and queries from https\:// URLs to avoid information leakage (see [Firefox bug 1255474](https://bugzil.la/1255474) and [CVE-2017-5384](https://nvd.nist.gov/vuln/detail/CVE-2017-5384)).
 
 ### XHR
 
@@ -126,7 +126,7 @@ Firefox 51 was released on January 24, 2017. This article lists key changes that
 
 ### Events
 
-- Firefox now supports the {{domxref("Element.onanimationstart", "onanimationstart")}}, {{domxref("Element.onanimationiteration", "onanimationiteration")}}, and {{domxref("Element.onanimationstart", "onanimationstart")}} event handlers, in addition to supporting the corresponding events using {{domxref("EventTarget.addEventListener", "addEventListener()")}} ([Firefox bug 911987](https://bugzil.la/911987)).
+- Firefox now supports the {{domxref("Element/animationstart_event", "onanimationstart")}}, {{domxref("Element/animationiteration_event", "onanimationiteration")}}, and {{domxref("Element/animationend_event", "onanimationend")}} event handlers, in addition to supporting the corresponding events using {{domxref("EventTarget.addEventListener", "addEventListener()")}} ([Firefox bug 911987](https://bugzil.la/911987)).
 - Firefox now supports the {{domxref("Element.transitionend_event", "ontransitionend")}} event handler ([Firefox bug 911987](https://bugzil.la/911987)).
 
 ### Security

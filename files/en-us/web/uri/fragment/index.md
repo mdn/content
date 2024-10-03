@@ -32,6 +32,10 @@ The **fragment** of a URI is the last part of the URI, starting with the `#` cha
 - `#t=10,20`
   - : The video or audio will start playing from the 10th second.
 
+## Specifications
+
+{{Specifications}}
+
 ## See also
 
 - [URIs](/en-US/docs/Web/URI)

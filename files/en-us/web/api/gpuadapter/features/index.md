@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUAdapter.features
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`features`** read-only property of the
 {{domxref("GPUAdapter")}} interface returns a {{domxref("GPUSupportedFeatures")}} object that describes additional functionality supported by the adapter.

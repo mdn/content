@@ -16,8 +16,7 @@ settings. This is specified in the `silent` option of the
 
 ## Value
 
-A boolean value. `false` is the default; `true` makes
-the notification silent.
+A boolean value or `null`. If `true`, the notification is silent; if `null`, the device's default settings are respected.
 
 ## Examples
 

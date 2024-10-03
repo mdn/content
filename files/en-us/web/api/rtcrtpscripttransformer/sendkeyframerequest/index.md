@@ -25,7 +25,7 @@ sendKeyFrameRequest()
 
 ### Parameters
 
-None
+None.
 
 ### Return value
 

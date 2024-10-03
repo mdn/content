@@ -2,9 +2,6 @@
 title: CSS scrollbars styling
 slug: Web/CSS/CSS_scrollbars_styling
 page-type: css-module
-browser-compat:
-  - css.properties.scrollbar-color
-  - css.properties.scrollbar-width
 spec-urls: https://drafts.csswg.org/css-scrollbars/
 ---
 

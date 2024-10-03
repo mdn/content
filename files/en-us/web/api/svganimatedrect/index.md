@@ -83,6 +83,10 @@ The `SVGAnimatedRect` interface is used for attributes of basic {{ domxref("SVGR
 
 _The `SVGAnimatedRect` interface do not provide any specific methods._
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

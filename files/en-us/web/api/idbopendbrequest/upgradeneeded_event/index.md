@@ -87,6 +87,10 @@ dBOpenRequest.onupgradeneeded = (event) => {
 };
 ```
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

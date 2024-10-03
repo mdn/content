@@ -186,18 +186,14 @@ export default class TodoDataService extends Service {
   add(text) {
     let newTodo = new Todo(text);
 
-    this.todos.pushObject(newTodo);
+    this.todos = [...this.todos, newTodo];
   }
 }
 ```
 
 Here, the `todos` property on the service will maintain our list of todos contained inside an array, and we'll mark it with `@tracked`, because when the value of `todos` is updated we want the UI to update as well.
 
-And just like before, the `add()` function that will be called from the template gets annotated with the `@action` decorator to bind it to the class instance.
-While this may look like familiar JavaScript, you may notice that we're calling the method [`pushObject()`](https://api.emberjs.com/ember/4.2/classes/ArrayProxy/methods/filterBy?anchor=pushObject) on our `todos` array.
-This is because Ember extends JavaScript's Array prototype by default, giving us convenient methods to ensure Ember's tracking system knows about these changes.
-There are dozens of these methods, including `pushObjects()`, `insertAt()`, or `popObject()`, which can be used with any type (not just Objects).
-Ember's [ArrayProxy](https://api.emberjs.com/ember/4.2/classes/ArrayProxy) also gives us more handy methods, like `isAny()`, `findBy()`, and `filterBy()` to make life easier.
+And just like before, the `add()` function that will be called from the template gets annotated with the `@action` decorator to bind it to the class instance. We [spread our `todos` array](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) to add `newTodo` to it, which creates a new array and will trigger the reactivity system to update the UI.
 
 ## Using the service from our header component
 

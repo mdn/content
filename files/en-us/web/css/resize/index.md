@@ -14,7 +14,7 @@ The **`resize`** [CSS](/en-US/docs/Web/CSS) property sets whether an element is 
 `resize` does not apply to the following:
 
 - Inline elements
-- Block elements for which the {{cssxref("overflow")}} property is set to `visible`
+- Block elements for which the {{cssxref("overflow")}} property is set to `visible` or `clip`
 
 ## Syntax
 

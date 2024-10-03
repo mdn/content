@@ -3,12 +3,10 @@ title: "AudioEncoder: dequeue event"
 short-title: dequeue
 slug: Web/API/AudioEncoder/dequeue_event
 page-type: web-api-event
-status:
-  - experimental
 browser-compat: api.AudioEncoder.dequeue_event
 ---
 
-{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`dequeue`** event of the {{domxref("AudioEncoder")}} interface fires to signal a decrease in {{domxref("AudioEncoder.encodeQueueSize")}}.
 

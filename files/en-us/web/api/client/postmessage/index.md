@@ -11,7 +11,7 @@ browser-compat: api.Client.postMessage
 The **`postMessage()`** method of the
 {{domxref("Client")}} interface allows a service worker to send a message to a client
 (a {{domxref("Window")}}, {{domxref("Worker")}}, or {{domxref("SharedWorker")}}). The
-message is received in the "`message`" event on
+message is received in the `message` event on
 {{domxref("ServiceWorkerContainer", "navigator.serviceWorker")}}.
 
 ## Syntax

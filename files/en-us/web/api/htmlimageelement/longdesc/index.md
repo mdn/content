@@ -58,7 +58,7 @@ With that, the image is a link to the HTML file describing the image in more det
 
 ## Specifications
 
-This feature is not part of any current specification. It is no longer on track to become a standard.
+{{Specifications}}
 
 ## Browser compatibility
 

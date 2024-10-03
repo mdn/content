@@ -90,7 +90,7 @@ Border repeat styles, when included, are interpreted in the order of `<repeat-x>
 
 Where:
 
-<mask-image-source> = {{cssxref("url", "&lt;uri&gt;")}} | <gradient> | none
+<mask-image-source> = {{cssxref("url_value", "&lt;url&gt;")}} | <gradient> | none
 
 <mask-image-offset> = <length> | <percentage> | <number>
 

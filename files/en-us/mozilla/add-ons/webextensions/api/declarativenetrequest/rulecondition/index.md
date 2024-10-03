@@ -42,6 +42,10 @@ Values of this type are objects. They contain these properties:
   - : An array of {{WebExtAPIRef("declarativeNetRequest.ResourceType")}}. List of resource types that the rule matches with. An empty list is not allowed. This must be specified for `"allowAllRequests"` rules and may only include the `"sub_frame"` and `"main_frame"` resource types.
 - `excludedResourceTypes` {{optional_inline}}
   - : An array of {{WebExtAPIRef("declarativeNetRequest.ResourceType")}}. List of resource types that the rule does not match on. Only one of [`resourceTypes`](#resourcetypes) and `excludedResourceTypes` should be specified. If neither of them is specified, all resource types except `"main_frame"` are blocked.
+- `responseHeaders` {{optional_inline}}
+  - : An array of {{WebExtAPIRef("declarativeNetRequest.HeaderInfo")}}. The rule matches if the request matches any response header condition in this list (if specified).
+- `excludedResponseHeaders` {{optional_inline}}
+  - : An array of {{WebExtAPIRef("declarativeNetRequest.HeaderInfo")}}. The rule does not match if the request matches any response header condition in this list (if specified). If both `excludedResponseHeaders` and `responseHeaders` are specified, then the `excludedResponseHeaders` property takes precedence.
 - `tabIds` {{optional_inline}}
   - : An array of `number`. List of {{WebExtAPIRef("tabs.Tab")}}.`id` that the rule should match. An ID of {{WebExtAPIRef("tabs.TAB_ID_NONE")}} matches requests that don't originate from a tab. An empty list is not allowed. Only supported for session-scoped rules.
 - `excludedTabIds` {{optional_inline}}

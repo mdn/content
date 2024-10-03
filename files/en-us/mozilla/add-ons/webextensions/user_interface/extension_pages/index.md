@@ -70,7 +70,7 @@ To use the history API, you must request the "`history`" [permission](/en-US/doc
 
 ## Web page design
 
-For details on how to design your web page's to match the style of Firefox, see the [Acorn Design System](https://acorn.firefox.com/latest/).
+For details on how to design your web page's to match the style of Firefox, see the [Acorn Design System](https://acorn.firefox.com/latest).
 
 ## Examples
 

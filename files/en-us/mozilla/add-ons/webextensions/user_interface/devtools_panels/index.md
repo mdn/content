@@ -58,11 +58,11 @@ The extension can now run code in the inspected window using [`devtools.inspecte
 
 ## Developer panel design
 
-For details on how to design your developer panel's web page to match the style of Firefox, see the [Acorn Design System](https://acorn.firefox.com/latest/) documentation.
+For details on how to design your developer panel's web page to match the style of Firefox, see the [Acorn Design System](https://acorn.firefox.com/latest) documentation.
 
 ## Icons
 
-For details on how to create icons to use with your developer tools panel, see [Iconography](https://acorn.firefox.com/latest/styles/iconography-q7JqGl5H) in the [Acorn Design System](https://acorn.firefox.com/latest/) documentation.
+For details on how to create icons to use with your developer tools panel, see [Iconography](https://acorn.firefox.com/latest/styles/iconography-q7JqGl5H) in the [Acorn Design System](https://acorn.firefox.com/latest) documentation.
 
 ## Examples
 

@@ -2,7 +2,6 @@
 title: ":current"
 slug: Web/CSS/:current
 page-type: css-pseudo-class
-browser-compat: css.selectors.current
 spec-urls: https://drafts.csswg.org/selectors/#the-current-pseudo
 ---
 

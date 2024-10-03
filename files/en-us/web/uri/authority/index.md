@@ -40,6 +40,10 @@ user@host:port
 - `https://cnn.example.com&story=breaking_news@10.0.0.1`
   - : A misleading URL that looks like it's pointing to a trusted website. However, the host name is `10.0.0.1`, and the `cnn.example.com&story=breaking_news` part is the "user".
 
+## Specifications
+
+{{Specifications}}
+
 ## See also
 
 - [URIs](/en-US/docs/Web/URI)
