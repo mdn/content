@@ -420,7 +420,7 @@ Web developers are strongly encouraged to serve all their content over HTTPS. In
 <img src="http://example.org/my-cat.jpg" />
 ```
 
-This is called _mixed content_, and the presence of insecure resources greatly weakens the protection afforded by HTTPS. Under the [mixed content algorithm](/en-US/docs/Web/Security/Mixed_content) that browsers implement, if a document is served over HTTPS, resources are categorized into "upgradable content" and "blockable content". Upgradable content is upgraded to HTTPS, and blockable content is blocked, potentially breaking the page.
+This is called _mixed content_, and the presence of insecure resources greatly weakens the protection afforded by HTTPS. Under the [mixed content algorithm](/en-US/docs/Web/Security/Mixed_content) that browsers implement, if a document is served over HTTPS, insecure resources are categorized into "upgradable content" and "blockable content". Upgradable content is upgraded to HTTPS, and blockable content is blocked, potentially breaking the page.
 
 The ultimate solution to mixed content is for developers to load all resources over HTTPS. However, even if a site is actually able to serve all content over HTTPS, it can still be very difficult (or even effectively impossible, where archived content is concerned) for a developer to rewrite all the URLs the site uses to load resources.
 
@@ -430,12 +430,14 @@ The [`upgrade-insecure-requests`](/en-US/docs/Web/HTTP/Headers/Content-Security-
 upgrade-insecure-requests
 ```
 
-If this directive is set, then:
+If this directive is set on a document, then the browser will automatically upgrade to HTTPS any HTTP URLs in the following cases:
 
-- all requests to load resources that are written as insecure (HTTP) URLs will be automatically upgraded to HTTPS
-- all navigational links to the same site that are written as insecure URLs will be automatically upgraded to HTTPS
+- requests to load resources (such as images, scripts, or fonts)
+- navigation requests (such as link targets) which are same-origin with the document
+- navigation requests in nested browsing contexts, such as iframes
+- form submissions
 
-However, HTTP links to a different site will _not_ be upgraded.
+However, top-level navigation requests whose target is a different origin will not be upgraded.
 
 For example, suppose the document at `https://example.org` is served with a CSP containing the `upgrade-insecure-requests` directive, and the document contains markup like this:
 
@@ -453,9 +455,9 @@ Suppose the document also contains this:
 <a href="http://not-example.org/even-more-cats">More cats, on another site!</a>
 ```
 
-The browser will upgrade the first link to HTTPS, but not the second, as it is going to a different site.
+The browser will upgrade the first link to HTTPS, but not the second, as it is navigating to a different origin.
 
-This directive is _not_ a substitute for the {{httpheader("Strict-Transport-Security")}} header (also known as HSTS), because it does not upgrade external links to a site. Sites should include this directive and the `Strict-Transport-Security` header.
+This directive is not a substitute for the {{httpheader("Strict-Transport-Security")}} header (also known as HSTS), because it does not upgrade external links to a site. Sites should include this directive and the `Strict-Transport-Security` header.
 
 ## CSP testing and deployment
 
