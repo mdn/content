@@ -16,7 +16,7 @@ In this guide we'll start by describing how a CSP is delivered to a browser and 
 
 Then we'll describe how it can be used to [control which resources are loaded](#controlling_resource_loading) to protect against XSS, and then other use cases such as [clickjacking protection](#clickjacking_protection) and [upgrading insecure requests](#upgrading_insecure_requests). Note that there's no dependency between the different use cases: if you want to add clickjacking protection but not XSS mitigation, you can just add the directives for that use case.
 
-Finally we'll describe [strategies for deploying a CSP](#csp_testing_and_deployment) and tools that can help to make this process easier.
+Finally we'll describe [strategies for deploying a CSP](#testing_your_policy) and tools that can help to make this process easier.
 
 ## CSP overview
 
@@ -459,27 +459,80 @@ The browser will upgrade the first link to HTTPS, but not the second, as it is n
 
 This directive is not a substitute for the {{httpheader("Strict-Transport-Security")}} header (also known as HSTS), because it does not upgrade external links to a site. Sites should include this directive and the `Strict-Transport-Security` header.
 
-## CSP testing and deployment
+## Testing your policy
+
+To ease deployment, CSP can be deployed in report-only mode.
+The policy is not enforced, but any violations are reported to a provided URI.
+Additionally, a report-only header can be used to test a future revision to a policy without actually deploying it.
+
+You can use the {{HTTPHeader("Content-Security-Policy-Report-Only")}} HTTP header to specify your policy, like this:
+
+```http
+Content-Security-Policy-Report-Only: policy
+```
+
+If both a {{HTTPHeader("Content-Security-Policy-Report-Only")}} header and a {{HTTPHeader("Content-Security-Policy")}} header are present in the same response, both policies are honored.
+The policy specified in `Content-Security-Policy` headers is enforced while the `Content-Security-Policy-Report-Only` policy generates reports but is not enforced.
 
 ### Violation reporting
 
-## Other directives
+The recommended method for reporting CSP violations is to use the [Reporting API](/en-US/docs/Web/API/Reporting_API), declaring endpoints in {{HTTPHeader("Reporting-Endpoints")}} and specifying one of them as the CSP reporting target using the `Content-Security-Policy` header's {{CSP("report-to")}} directive.
 
-CSPs offer a number of directives in addition to fetch directives, and we'll list some of them here.
+> [!WARNING]
+> You can also use the CSP {{CSP("report-uri")}} directive to specify a target URL for CSP violation reports.
+> This sends a slightly different JSON report format via a `POST` operation with a {{HTTPHeader("Content-Type")}} of `application/csp-report`.
+> This approach is deprecated, but you should declare both until {{CSP("report-to")}} is supported in all browsers.
+> For more information about the approach see the {{CSP("report-uri")}} topic.
 
-- [`base-uri`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/base-uri)
-  - : Restricts the URLs that can be specified in the document's {{htmlelement("base")}} element.
-- [`form-action`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/form-action)
-  - : Restricts the URLs to which forms in this document may be submitted.
-- [`frame-ancestors`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors)
-  - : Controls which documents may embed this document (for example, in an {{htmlelement("iframe")}}). This can help a site protect itself against [clickjacking]() attacks.
-- [`report-to`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-to)
-  - : Sets an endpoint to which the browser will report CSP violations.
-- [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for)
-  - : Requires the document to use [trusted types](/en-US/docs/Web/API/Trusted_Types_API).
-- [`sandbox`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/sandbox)
-  - : Enables or disables various capabilities of the document.
-- [`trusted-types`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/trusted-types)
-  - : Restricts the [trusted type](/en-US/docs/Web/API/Trusted_Types_API) policies that can be created.
-- [`upgrade-insecure-requests`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests)
-  - : Automatically upgrades any HTTP requests made from the document to HTTPS.
+A server can inform clients where to send reports using the {{HTTPHeader("Reporting-Endpoints")}} HTTP response header.
+This header defines one or more endpoint URLs as a comma-separated list.
+For example, to define a reporting endpoint named `csp-endpoint` which accepts reports at `https://example.com/csp-reports`, the server's response header could look like this:
+
+```http
+Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports"
+```
+
+If you want to have multiple endpoints that handle different types of reports, you would specify them like this:
+
+```http
+Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports",
+                     hpkp-endpoint="https://example.com/hpkp-reports"
+```
+
+You can then use the `Content-Security-Policy` header's {{CSP("report-to")}} directive to specify that a particular defined endpoint should be used for reporting.
+For example, to send CSP violation reports to `https://example.com/csp-reports` for the `default-src`, you might send response headers that look like the following:
+
+```http
+Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports"
+Content-Security-Policy: default-src 'self'; report-to csp-endpoint
+```
+
+When a CSP violation occurs, the browser sends the report as a JSON object to the specified endpoint via an HTTP `POST` operation, with a {{HTTPHeader("Content-Type")}} of `application/reports+json`.
+The report is a serialized form of the {{domxref("Report")}} object containing a `type` property with a value of `"csp-violation"`, and a `body` that is the serialized form of a {{domxref("CSPViolationReportBody")}} object.
+
+A typical object might look like this:
+
+```json
+{
+  "age": 53531,
+  "body": {
+    "blockedURL": "inline",
+    "columnNumber": 39,
+    "disposition": "enforce",
+    "documentURL": "https://example.com/csp-report",
+    "effectiveDirective": "script-src-elem",
+    "lineNumber": 121,
+    "originalPolicy": "default-src 'self'; report-to csp-endpoint-name",
+    "referrer": "https://www.google.com/",
+    "sample": "console.log(\"lo\")",
+    "sourceFile": "https://example.com/csp-report",
+    "statusCode": 200
+  },
+  "type": "csp-violation",
+  "url": "https://example.com/csp-report",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+}
+```
+
+You need to set up a server to receive reports with the given JSON format and content type.
+The server handling these requests can then store or process the incoming reports in a way that best suits your needs.
