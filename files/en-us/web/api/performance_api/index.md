@@ -85,7 +85,7 @@ The following interfaces are present in the Performance API:
   - : Measures network loading metrics such as redirect start and end times, fetch start, DNS lookup start and end times, response start and end times for resources such as images, scripts, fetch calls, etc.
 - {{domxref("PerformanceScriptTiming")}}
   - : Provides metrics on individual scripts causing [long animation frames (LoAFs)](/en-US/docs/Web/API/Performance_API/Long_animation_frame_timing#what_is_a_long_animation_frame).
-- {{domxref("PerformanceTiming")}}
+- {{domxref("PerformanceServerTiming")}}
   - : Surfaces server metrics that are sent with the response in the {{HTTPHeader("Server-Timing")}} HTTP header.
 - {{domxref("TaskAttributionTiming")}}
   - : Identifies the type of task and the container that is responsible for the long task.
