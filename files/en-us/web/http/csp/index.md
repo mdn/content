@@ -12,7 +12,9 @@ The primary use case for CSP is to control which resources, in particular JavaSc
 
 A CSP can have other purposes as well, including defending against {{glossary("clickjacking")}} and helping to ensure that a site's pages will be loaded over HTTPS.
 
-In this guide we'll start by describing how a CSP is delivered to a browser and what it looks like at a high level. Then we'll describe how it can be used to [control which resources are loaded](#controlling_resource_loading) to protect against XSS, and then [other use cases](#other_use_cases_for_a_csp) such as clickjacking protection.
+In this guide we'll start by describing how a CSP is delivered to a browser and what it looks like at a high level.
+
+Then we'll describe how it can be used to [control which resources are loaded](#controlling_resource_loading) to protect against XSS, and then other use cases such as [clickjacking protection](#clickjacking_protection) and [upgrading insecure requests](#upgrading_insecure_requests). Note that there's no dependency between the different use cases: if you want to add clickjacking protection but not XSS mitigation, you can just add the directives for that use case.
 
 Finally we'll describe [strategies for deploying a CSP](#csp_testing_and_deployment) and tools that can help to make this process easier.
 
@@ -396,13 +398,64 @@ We've seen above that inline JavaScript is disallowed by default in a CSP. With 
 </script>
 ```
 
-## Other use cases for a CSP
+## Clickjacking protection
 
-Although controlling resource loading is the most common use case for a CSP, there are others, which can be met using other directives, and we'll introduce some of them in this section. Note that there's no dependency between the different use cases: if you want to add clickjacking protection but not XSS mitigation, you can just add the directives for that use case.
+The [`frame-ancestors`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) directive can be used to control which documents, if any, are allowed to embed this document in a nested browsing context such as an {{htmlelement("iframe")}}. This is an effective protection against clickjacking attacks, because these attacks depend on embedding the target site in a site controlled by the attacker.
 
-### Clickjacking protection
+The syntax of `frame-ancestors` is a subset of the fetch directive syntax: you can provide the single keyword value `'none'` or one or more source expressions. However, the only source expressions you can use are schemes, hostnames, or the `'self'` keyword value.
 
-The [`frame-ancestors`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) directive can be used to control which documents, if any, are allowed to embed this document in a nested browsing context such as an {{htmlelement("iframe")}}.
+Unless you need your site to be embeddable, you should set `frame-ancestors` to `'none'`:
+
+```plain
+frame-ancestors 'none'
+```
+
+This directive is a more flexible replacement for the {{httpheader("X-Frame-Options")}} header.
+
+## Upgrading insecure requests
+
+Web developers are strongly encouraged to serve all their content over HTTPS. In the process of upgrading a site to HTTPS, a site sometimes serves the main document over HTTPS but serves its resources over HTTP, for example, using markup like this:
+
+```html
+<img src="http://example.org/my-cat.jpg" />
+```
+
+This is called _mixed content_, and the presence of insecure resources greatly weakens the protection afforded by HTTPS. Under the [mixed content algorithm](/en-US/docs/Web/Security/Mixed_content) that browsers implement, if a document is served over HTTPS, resources are categorized into "upgradable content" and "blockable content". Upgradable content is upgraded to HTTPS, and blockable content is blocked, potentially breaking the page.
+
+The ultimate solution to mixed content is for developers to load all resources over HTTPS. However, even if a site is actually able to serve all content over HTTPS, it can still be very difficult (or even effectively impossible, where archived content is concerned) for a developer to rewrite all the URLs the site uses to load resources.
+
+The [`upgrade-insecure-requests`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests) directive is intended to solve this problem. This directive doesn't have any value: to set it, just include the directive name:
+
+```plain
+upgrade-insecure-requests
+```
+
+If this directive is set, then:
+
+- all requests to load resources that are written as insecure (HTTP) URLs will be automatically upgraded to HTTPS
+- all navigational links to the same site that are written as insecure URLs will be automatically upgraded to HTTPS
+
+However, HTTP links to a different site will _not_ be upgraded.
+
+For example, suppose the document at `https://example.org` is served with a CSP containing the `upgrade-insecure-requests` directive, and the document contains markup like this:
+
+```html
+<img src="http://example.org/my-cat.jpg" />
+<img src="http://not-example.org/another-cat.jpg" />
+```
+
+The browser will automatically upgrade both of these requests to HTTPS.
+
+Suppose the document also contains this:
+
+```html
+<a href="http://example.org/more-cats">See some more cats!</a>
+<a href="http://not-example.org/even-more-cats">More cats, on another site!</a>
+```
+
+The browser will upgrade the first link to HTTPS, but not the second, as it is going to a different site.
+
+This directive is _not_ a substitute for the {{httpheader("Strict-Transport-Security")}} header (also known as HSTS), because it does not upgrade external links to a site. Sites should include this directive and the `Strict-Transport-Security` header.
 
 ## CSP testing and deployment
 
