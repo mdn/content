@@ -12,7 +12,7 @@ The **`setInterval()`** method of the {{domxref("WorkerGlobalScope")}} interface
 
 This method returns an interval ID which uniquely identifies the interval, so you can remove it later by calling {{domxref("WorkerGlobalScope.clearInterval", "clearInterval()")}}.
 
-This method is also available in window contexts: for a detailed description and usage notes of `setInterval()`, see the {{domxref("Window.setInterval()")}} page.
+This method is also available in window contexts: for a detailed description of `setInterval()`, see the {{domxref("Window.setInterval()")}} page.
 
 ## Syntax
 
