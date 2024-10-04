@@ -38,6 +38,8 @@ This article provides information about the changes in Firefox 132 that affect d
 
 ### APIs
 
+- {{domxref('WebGLRenderingContext.drawingBufferColorSpace')}} and [`WebGL2RenderingContext.drawingBufferColorSpace`](/en-US/docs/Web/API/WebGL2RenderingContext) are now supported. ([Firefox bug 1885491](https://bugzil.la/1885491)).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
