@@ -23,9 +23,9 @@ Note that both the internal priority of any fetch operation, and the impact of `
 A string representing the priority hint. Possible values are:
 
 - `high`
-  - : Fetch the preload resource at a high priority relative to other resources of the same type and internal prioritization.
+  - : Fetch the resource at a high priority relative to other resources of the same type and internal prioritization.
 - `low`
-  - : Fetch the preload resource at a low priority relative to other resources of the same type and internal prioritization.
+  - : Fetch the resource at a low priority relative to other resources of the same type and internal prioritization.
 - `auto`
   - : No user preference for the fetch priority.
     This is the default.
