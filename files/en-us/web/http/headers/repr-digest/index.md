@@ -2,13 +2,11 @@
 title: Repr-Digest
 slug: Web/HTTP/Headers/Repr-Digest
 page-type: http-header
-status:
-  - experimental
 browser-compat: http.headers.Repr-Digest
 spec-urls: https://datatracker.ietf.org/doc/html/rfc9530
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{HTTPSidebar}}
 
 The **`Repr-Digest`** response or request header provides a {{Glossary("digest")}} of the [selected representation](https://www.rfc-editor.org/rfc/rfc9110#section-6.4) of the target resource. It is invariant under e.g., {{HTTPHeader("Content-Encoding")}} or {{HTTPHeader("Content-Range")}}, which do affect the {{HTTPHeader("Content-Digest")}}. Furthermore, [Content Negotiation](/en-US/docs/Web/HTTP/Content_negotiation) can result in different selected representations with different representation digests.
 

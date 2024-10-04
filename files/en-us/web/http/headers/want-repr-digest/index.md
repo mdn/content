@@ -2,13 +2,11 @@
 title: Want-Repr-Digest
 slug: Web/HTTP/Headers/Want-Repr-Digest
 page-type: http-header
-status:
-  - experimental
 browser-compat: http.headers.Want-Repr-Digest
 spec-urls: https://datatracker.ietf.org/doc/html/rfc9530
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{HTTPSidebar}}
 
 The **`Want-Repr-Digest`** request or response header states the wish for a {{HTTPHeader("Repr-Digest")}} header.
 
