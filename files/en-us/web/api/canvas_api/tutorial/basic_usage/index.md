@@ -111,7 +111,7 @@ Here is a minimalistic template, which we'll be using as a starting point for la
 </html>
 ```
 
-The script includes a function called `draw()`, which is executed once the page finishes loading; this is done by listening for the {{domxref("Window/load_event", "load")}} event on the document. This function, or one like it, could also be called using {{domxref("setTimeout()")}}, {{domxref("setInterval()")}}, or any other event handler, as long as the page has been loaded first.
+The script includes a function called `draw()`, which is executed once the page finishes loading; this is done by listening for the {{domxref("Window/load_event", "load")}} event on the document. This function, or one like it, could also be called using {{domxref("setTimeout()")}}, {{domxref("Window.setInterval", "setInterval()")}}, or any other event handler, as long as the page has been loaded first.
 
 Here is how a template would look in action. As shown here, it is initially blank.
 

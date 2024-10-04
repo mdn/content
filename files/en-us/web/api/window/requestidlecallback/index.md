@@ -68,5 +68,5 @@ in the article [Cooperative Scheduling of Background Tasks API](/en-US/docs/Web/
 - {{domxref("window.cancelIdleCallback()")}}
 - {{domxref("IdleDeadline")}}
 - {{domxref("setTimeout()")}}
-- {{domxref("setInterval()")}}
-- {{domxref("window.requestAnimationFrame")}}
+- {{domxref("Window.setInterval()")}}
+- {{domxref("Window.requestAnimationFrame()")}}
