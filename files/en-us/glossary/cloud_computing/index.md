@@ -10,7 +10,8 @@ page-type: glossary-definition
 
 This model enables faster innovation, flexible scalability, and significant cost savings. Users can access and utilize these services through a _pay-as-you-go_ pricing model, ensuring they only pay for what they use, making it a highly efficient and adaptable solution for businesses and individuals alike.
 
-> **Note:** The {{glossary("Cloud")}} in Cloud Computing refers to the server infrastructure on which cloud services are built and hosted.
+> [!NOTE]
+> The {{glossary("Cloud")}} in Cloud Computing refers to the server infrastructure on which cloud services are built and hosted.
 
 ### Cloud Services
 
