@@ -6,11 +6,15 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-**Cloud** or **Cloud Computing** refers to the on-demand delivery of a wide range of computing services such as servers, storage, databases, networking, software, analytics, and intelligence via the Internet.
+**Cloud** refers to servers that are accessed over the Internet, and the software and databases that run on those servers.
+Instead of storing data or running programs on a local computer or server, users rely on these remote resources. Cloud servers are located in data centers all over the world. By using {{glossary("Cloud Computing")}}, users and companies do not have to manage physical servers themselves or run software applications on their own machines.
 
-This model enables faster innovation, flexible scalability, and significant cost savings. Users can access and utilize these services through a _pay-as-you-go_ pricing model, ensuring they only pay for what they use, making it a highly efficient and adaptable solution for businesses and individuals alike.
+### Key features of the Cloud
+
+- Remote Access: Data and services are accessed remotely.
+- Scalability: Resources can be scaled up or down based on demand.
+- Availability: Services and data are typically accessible from anywhere with internet access.
 
 ## See also
 
-- [What is Cloud Computing?](https://cloud.google.com/learn/what-is-cloud-computing?hl=en) on Google Cloud
-- [Cloud Service Provider](https://cloud.google.com/learn/what-is-a-cloud-service-provider?hl=en) on Google Cloud
+- [What is the Cloud?](https://www.cloudflare.com/en-gb/learning/cloud/what-is-the-cloud/) on Cloudflare
