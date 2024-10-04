@@ -1214,6 +1214,7 @@
 /en-US/docs/DOM/DOM_Reference/style	/en-US/docs/Web/API/HTMLStyleElement
 /en-US/docs/DOM/DOM_Reference/window	/en-US/docs/Web/API/Window
 /en-US/docs/DOM/DOM_Reference/window/clearInterval	/en-US/docs/Web/API/Window/clearInterval
+/en-US/docs/DOM/DOM_Reference/window/clearInterval	/en-US/docs/Web/API/Window/clearInterval
 /en-US/docs/DOM/DOM_event_handlers	/en-US/docs/Web/Events/Event_handlers
 /en-US/docs/DOM/DOM_event_reference	/en-US/docs/Web/Events
 /en-US/docs/DOM/DOM_event_reference/DOMContentLoaded	/en-US/docs/Web/API/Document/DOMContentLoaded_event

@@ -23,7 +23,7 @@ new ImageDecoder(init)
 - `init`
   - : An object containing the following members:
     - `type`
-      - : A string containing the [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) of the image file to be decoded.
+      - : A string containing the [MIME type](/en-US/docs/Web/HTTP/MIME_types) of the image file to be decoded.
     - `data`
       - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, or a {{domxref("ReadableStream")}} of bytes representing an encoded image type as described by `type`.
     - `premultiplyAlpha` {{optional_inline}}

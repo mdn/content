@@ -68,7 +68,7 @@ For audio files, you can find free software ([Audacity](https://www.audacityteam
 
 ### Publishing tools
 
-You also need a way to upload files: from your hard drive to a distant web server. To do that you should use a publishing tool such as an (S)[FTP client](/en-US/docs/Glossary/FTP), [RSync](https://en.wikipedia.org/wiki/Rsync), or [Git/GitHub](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site).
+You also need a way to upload files: from your hard drive to a distant web server. To do that you should use a publishing tool such as an [(S)FTP client](/en-US/docs/Glossary/FTP), [RSync](https://en.wikipedia.org/wiki/Rsync), or [Git/GitHub](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site).
 
 Each operating system includes an (S)FTP client, as part of its file manager. Windows Explorer, Nautilus (a common Linux file manager), and the Mac Finder all include this functionality. However, people often choose dedicated (S)FTP clients to display local or remote directories side-by-side and store server passwords.
 

@@ -33,7 +33,7 @@ A new {{domxref("InstallEvent")}} object.
 
 ## Specifications
 
-_This feature is no more on the standard track._
+{{Specifications}}
 
 ## Browser compatibility
 

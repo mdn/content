@@ -913,15 +913,15 @@
   resolved "https://registry.yarnpkg.com/@mdn/bcd-utils-api/-/bcd-utils-api-0.0.7.tgz#555e80c33df520df068943e6b18ebc07f0e24d19"
   integrity sha512-IHkkypEjlIkBkx4mJ2//Xbzog9M/Lzne1Sl8db2cIHJ/5pe3NCqSLwSchmqzcUN+/WJr/U+V3tNAbWunk2xZcA==
 
-"@mdn/browser-compat-data@^5.6.2":
-  version "5.6.3"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.6.3.tgz#34d3448ec09677edba539fbaff6433e2df5a1a34"
-  integrity sha512-HOTfnXR2GmEtpriwCa689EYySqfVAwhzjQ4PzY3K3QN1g9z7/o8yYUjXxAHvTuVa2qU7EjlXmuZ0I3xYOmG0yg==
+"@mdn/browser-compat-data@^5.6.4":
+  version "5.6.4"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.6.4.tgz#8d29e089ddce23278a10c20760c7a93ad37e55f5"
+  integrity sha512-bOOF4GGzn0exmvNHpSWmTfOXB9beTpIFCm2KPY2UVoCdn1YVfr8heuHr1C++BYI9Tun8REgi5TNVdKbBs249CA==
 
-"@mdn/yari@2.64.0":
-  version "2.64.0"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-2.64.0.tgz#5cbd4cf8fac1eff9b627ac9d2816318e535cf7e0"
-  integrity sha512-MWGfKAzQ9qggvMBH5Ob61GeiHQVUKOZ6tQObyjKhz7u0mbyNxwdk7dEXoA+FpO1/d883/+rs07zYwJ/pElHqCA==
+"@mdn/yari@2.64.1":
+  version "2.64.1"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-2.64.1.tgz#623ab55e2b272537f426e4a4e377f993cb68b7b9"
+  integrity sha512-5vhbfMXX8eax18zeMbo/M7e9SO9k3D6+4Q6pV5vz1o3casDXGatxVjBg5JZNZ+YJitkSQolh1CyVgJBWP0oCSw==
   dependencies:
     "@caporal/core" "^2.0.7"
     "@codemirror/lang-css" "^6.3.0"
@@ -932,13 +932,13 @@
     "@fast-csv/parse" "^5.0.0"
     "@lit/react" "^1.0.5"
     "@mdn/bcd-utils-api" "^0.0.7"
-    "@mdn/browser-compat-data" "^5.6.2"
+    "@mdn/browser-compat-data" "^5.6.4"
     "@mozilla/glean" "5.0.3"
     "@sentry/node" "^8.32.0"
-    "@stripe/stripe-js" "^4.5.0"
+    "@stripe/stripe-js" "^4.6.0"
     "@use-it/interval" "^1.0.0"
     "@vscode/ripgrep" "^1.15.9"
-    "@webref/css" "^6.15.2"
+    "@webref/css" "^6.16.0"
     accept-language-parser "^1.5.0"
     async "^3.2.6"
     chalk "^5.3.0"
@@ -955,7 +955,7 @@
     dotenv "^16.4.5"
     ejs "^3.1.10"
     express "^4.21.0"
-    fdir "^6.3.0"
+    fdir "^6.4.0"
     feed "^4.2.2"
     file-type "^19.5.0"
     front-matter "^4.0.2"
@@ -981,7 +981,7 @@
     mdn-data "^2.11.1"
     open "^10.1.0"
     open-editor "^5.0.0"
-    openai "^4.63.0"
+    openai "^4.67.0"
     pg "^8.13.0"
     pgvector "^0.2.0"
     prism-svelte "^0.5.0"
@@ -990,11 +990,11 @@
     react-modal "^3.16.1"
     read-chunk "^5.0.0"
     rehype-format "^5.0.1"
-    rehype-parse "^9.0.0"
+    rehype-parse "^9.0.1"
     rehype-raw "^7.0.0"
     rehype-remark "^10.0.0"
     rehype-sanitize "^6.0.0"
-    rehype-stringify "^10.0.0"
+    rehype-stringify "^10.0.1"
     remark-gfm "^4.0.0"
     remark-parse "^11.0.0"
     remark-rehype "^11.1.1"
@@ -1447,10 +1447,10 @@
   dependencies:
     "@sinonjs/commons" "^3.0.0"
 
-"@stripe/stripe-js@^4.5.0":
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/@stripe/stripe-js/-/stripe-js-4.5.0.tgz#0beda9beefc05143ef6955d7bb7960064aecc53c"
-  integrity sha512-dMOzc58AOlsF20nYM/avzV8RFhO/vgYTY7ajLMH6mjlnZysnOHZxsECQvjEmL8Q/ukPwHkOnxSPW/QGCCnp7XA==
+"@stripe/stripe-js@^4.6.0":
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/@stripe/stripe-js/-/stripe-js-4.6.0.tgz#ad2c702d71360f3f9c22051b72a9e8e686451f4e"
+  integrity sha512-ZoK0dMFnVH0J5XUWGqsta8S8xm980qEwJKAIgZcLQxaSsbGRB9CsVvfOjwQFE1JC1q3rPwb/b+gQAmzIESnHnA==
 
 "@szmarczak/http-timer@^5.0.1":
   version "5.0.1"
@@ -1747,10 +1747,10 @@
     proxy-from-env "^1.1.0"
     yauzl "^2.9.2"
 
-"@webref/css@^6.15.2":
-  version "6.15.2"
-  resolved "https://registry.yarnpkg.com/@webref/css/-/css-6.15.2.tgz#2ab55bad6977b2498565c285b9935958edb2e1f7"
-  integrity sha512-Y1UOqVPU4vVWi5DLEauYOZXGbaP8oJbZ0/SFKticz4e79uOsZFz8wuAPb0Ys6/2D5dJ2v6Gq6XFx0wC5LwSeMQ==
+"@webref/css@^6.16.0":
+  version "6.16.0"
+  resolved "https://registry.yarnpkg.com/@webref/css/-/css-6.16.0.tgz#37ffbff3e942147431e2c2253c39aa64b7f0d94f"
+  integrity sha512-o2Qe3LvuR5Oyv4gnw3MQ/+XdOF72YQfKlUysL9SZLXAQyc1hsXO4wTdaayz6Z788UDo5yUxp0E9RwTmU/xqZ0Q==
 
 abort-controller@^3.0.0:
   version "3.0.0"
@@ -3554,10 +3554,10 @@ fd-slicer@~1.1.0:
   dependencies:
     pend "~1.2.0"
 
-fdir@^6.3.0:
-  version "6.3.0"
-  resolved "https://registry.yarnpkg.com/fdir/-/fdir-6.3.0.tgz#fcca5a23ea20e767b15e081ee13b3e6488ee0bb0"
-  integrity sha512-QOnuT+BOtivR77wYvCWHfGt9s4Pz1VIMbD463vegT5MLqNXy8rYFT/lPVEqf/bhYeT6qmqrNHhsX+rWwe3rOCQ==
+fdir@^6.4.0:
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/fdir/-/fdir-6.4.0.tgz#8e80ab4b18a2ac24beebf9d20d71e1bc2627dbae"
+  integrity sha512-3oB133prH1o4j/L5lLW7uOCF1PlD+/It2L0eL/iAqWMB91RBbqTewABqxhj0ibBd90EEmWZq7ntIWzVaWcXTGQ==
 
 fecha@^4.2.0:
   version "4.2.3"
@@ -6526,10 +6526,10 @@ open@^10.1.0:
     is-inside-container "^1.0.0"
     is-wsl "^3.1.0"
 
-openai@^4.63.0:
-  version "4.63.0"
-  resolved "https://registry.yarnpkg.com/openai/-/openai-4.63.0.tgz#cabe7223788157c96c818317cc361386807157f7"
-  integrity sha512-Y9V4KODbmrOpqiOmCDVnPfMxMqKLOx8Hwcdn/r8mePq4yv7FSXGnxCs8/jZKO7zCB/IVPWihpJXwJNAIOEiZ2g==
+openai@^4.67.0:
+  version "4.67.0"
+  resolved "https://registry.yarnpkg.com/openai/-/openai-4.67.0.tgz#94f46fc2e98445fab8b70d62fc684a6b6680402e"
+  integrity sha512-jdsPSEdZbUNVtvEFE/eeL4FjKavyVMJJEdGMZk9vExglqUrblEcFxi3LK2WhskhrYKAU1MgJAI+dK9pDcA5z5w==
   dependencies:
     "@types/node" "^18.11.18"
     "@types/node-fetch" "^2.6.4"
@@ -7216,10 +7216,10 @@ rehype-minify-whitespace@^6.0.0:
     hast-util-whitespace "^3.0.0"
     unist-util-is "^6.0.0"
 
-rehype-parse@^9.0.0:
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/rehype-parse/-/rehype-parse-9.0.0.tgz#3949faeec6f466ec57774215661e0d75469195d9"
-  integrity sha512-WG7nfvmWWkCR++KEkZevZb/uw41E8TsH4DsY9UxsTbIXCVGbAs4S+r8FrQ+OtH5EEQAs+5UxKC42VinkmpA1Yw==
+rehype-parse@^9.0.1:
+  version "9.0.1"
+  resolved "https://registry.yarnpkg.com/rehype-parse/-/rehype-parse-9.0.1.tgz#9993bda129acc64c417a9d3654a7be38b2a94c20"
+  integrity sha512-ksCzCD0Fgfh7trPDxr2rSylbwq9iYDkSn8TCDmEJ49ljEUBxDVCzCHv7QNzZOfODanX4+bWQ4WZqLCRWYLfhag==
   dependencies:
     "@types/hast" "^3.0.0"
     hast-util-from-html "^2.0.0"
@@ -7253,10 +7253,10 @@ rehype-sanitize@^6.0.0:
     "@types/hast" "^3.0.0"
     hast-util-sanitize "^5.0.0"
 
-rehype-stringify@^10.0.0:
-  version "10.0.0"
-  resolved "https://registry.yarnpkg.com/rehype-stringify/-/rehype-stringify-10.0.0.tgz#2031cf6fdd0355393706f0474ec794c75e5492f2"
-  integrity sha512-1TX1i048LooI9QoecrXy7nGFFbFSufxVRAfc6Y9YMRAi56l+oB0zP51mLSV312uRuvVLPV1opSlJmslozR1XHQ==
+rehype-stringify@^10.0.1:
+  version "10.0.1"
+  resolved "https://registry.yarnpkg.com/rehype-stringify/-/rehype-stringify-10.0.1.tgz#2ec1ebc56c6aba07905d3b4470bdf0f684f30b75"
+  integrity sha512-k9ecfXHmIPuFVI61B9DeLPN0qFHfawM6RsuX48hoqlaKSF61RskNjSm1lI8PhBEM0MRdLxVVm4WmTqJQccH9mA==
   dependencies:
     "@types/hast" "^3.0.0"
     hast-util-to-html "^9.0.0"

@@ -8,8 +8,8 @@ browser-compat: http.headers.X-Content-Type-Options
 {{HTTPSidebar}}
 
 The **`X-Content-Type-Options`** response HTTP header is a
-marker used by the server to indicate that the [MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) advertised in the
-{{HTTPHeader("Content-Type")}} headers should be followed and not be changed. The header allows you to avoid [MIME type sniffing](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#mime_sniffing) by saying that the MIME types are deliberately
+marker used by the server to indicate that the [MIME types](/en-US/docs/Web/HTTP/MIME_types) advertised in the
+{{HTTPHeader("Content-Type")}} headers should be followed and not be changed. The header allows you to avoid [MIME type sniffing](/en-US/docs/Web/HTTP/MIME_types#mime_sniffing) by saying that the MIME types are deliberately
 configured.
 
 This header was introduced by Microsoft in IE 8 as a way for webmasters to block
