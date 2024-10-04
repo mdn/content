@@ -27,6 +27,7 @@ User agents based on WebKit or Blink, such as Safari and Chrome, support several
 
 ### D-I
 
+- {{CSSxRef("-webkit-fill-available")}}
 - {{CSSxRef("font-smooth", "-webkit-font-smoothing")}}
 - {{CSSxRef("-webkit-hyphenate-limit-after")}}
 - {{CSSxRef("-webkit-hyphenate-limit-before")}}
