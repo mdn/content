@@ -127,7 +127,7 @@ Improving memory and power usage is a similar problem to speeding up startup: do
 
 Modern CPUs can enter a lower-power mode when mostly idle. Applications that constantly fire timers or keep unnecessary animations running prevent CPUs from entering low-power mode. Power-efficient applications shouldn't do that.
 
-When applications are sent to the background, a {{domxref("document.visibilitychange_event", "visibilitychange")}} event is fired on their documents. This event is a developer's friend; applications should listen for it.
+When applications are sent to the background, a {{domxref("document/visibilitychange_event", "visibilitychange")}} event is fired on their documents. This event is a developer's friend; applications should listen for it.
 
 ### Specific coding tips for application performance
 
