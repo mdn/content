@@ -5,7 +5,7 @@ page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Want-Content-Digest
-spec-urls: https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-digest-headers-12
+spec-urls: https://datatracker.ietf.org/doc/html/rfc9530
 ---
 
 {{HTTPSidebar}}{{SeeCompatTable}}
