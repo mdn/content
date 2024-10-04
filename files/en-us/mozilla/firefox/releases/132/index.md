@@ -42,6 +42,8 @@ This article provides information about the changes in Firefox 132 that affect d
 
 #### Media, WebRTC, and Web Audio
 
+- The {{domxref("MediaStreamTrack.getCapabilities()")}} method is now supported. This returns an object detailing the accepted values or value range for each constrainable property of the associated {{domxref("MediaStreamTrack")}} ([Firefox bug 1179084](https://bugzil.la/1179084)).
+
 #### Removals
 
 ### WebAssembly
