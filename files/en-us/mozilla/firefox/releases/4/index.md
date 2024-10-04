@@ -45,7 +45,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
 - `canvas2dcontext.lineCap` and `canvas2dcontext.lineJoin` no longer throw an exception when set to an unrecognized value.
 - `canvas2dcontext.globalCompositeOperation` no longer throws an exception when set to an unrecognized value, and no longer supports the non-standard `darker` value.
 - Support for the obsolete `<spacer>` element, which was absent in all other browsers, has been removed.
-- The {{HTMLElement("isindex")}} element, when created by calling {{domxref("document.createElement()")}}, is now created as a simple element with no properties or methods.
+- The `<isindex>` element, when created by calling {{domxref("document.createElement()")}}, is now created as a simple element with no properties or methods.
 - Gecko now supports calling `click()` on {{HTMLElement("input")}} elements to open the file picker. See the [example](/en-US/docs/Web/API/File_API/Using_files_from_web_applications#using_hidden_file_input_elements_using_the_click_method) in the article [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications).
 - The {{HTMLElement("input")}} element supports a new `mozactionhint` attribute, which lets you specify the label for the enter key on virtual keyboards.
 - {{HTMLElement("script")}} elements inside {{HTMLElement("iframe")}}, {{HTMLElement("noembed")}}, and {{HTMLElement("noframes")}} elements now get executed, which they weren't in previous versions of Firefox. This is in compliance with the specification, and matches the behavior of other browsers.
@@ -282,12 +282,12 @@ Several HTML elements have had their DOM interfaces changed to the ones required
 - Added the [`selection.modify()`](/en-US/docs/Web/API/Selection/modify) method to the {{domxref("Selection")}} object; this lets you easily alter the current text selection or cursor position in a browser window.
 - Support for the `window.directories` object and the `directories` feature for {{domxref("window.open")}}, which are not supported in any other browser, has been removed. Use `personalbar` instead. [Firefox bug 474058](https://bugzil.la/474058)
 - The {{domxref("event.mozInputSource")}} property has been added to DOM user interface events; this non-standard property lets you determine the type of device that generated an event.
-- The {{domxref("document.onreadystatechange")}} event has been implemented.
-- The {{domxref("document.createElement")}} method no longer accepts `<` and `>` around the tag name in quirks mode.
+- The {{domxref("Document")}} {{domxref("Document/readystatechange_event", "readystatechange")}} event has been implemented.
+- The {{domxref("Document.createElement()")}} method no longer accepts `<` and `>` around the tag name in quirks mode.
 - The {{domxref("element.setCapture()")}} and {{domxref("document.releaseCapture()")}} methods have been added, allowing elements to continue tracking mouse events even while the mouse is outside their normal tracking area after a `mousedown` event has occurred.
 - The `window.mozPaintCount` property has been added; it lets you determine how many times a document has been painted. This can be useful when testing performance of your web application.
-- The language token has been removed from {{domxref("window.navigator.appVersion")}} and {{domxref("window.navigator.userAgent")}}. Use {{domxref("window.navigator.language")}} or the [Accept-Language header](/en-US/docs/Web/HTTP/Content_negotiation) instead. [Firefox bug 572656](https://bugzil.la/572656)
-- The [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) object now exposes the response as a JavaScript typed array as well as a string, using the Gecko-specific `mozResponseArrayBuffer` property.
+- The language token has been removed from {{domxref("Navigator.appVersion")}} and {{domxref("Navigator.userAgent")}}. Use {{domxref("Navigator.language")}} or the [`Accept-Language`](/en-US/docs/Web/HTTP/Content_negotiation) header instead. [Firefox bug 572656](https://bugzil.la/572656)
+- The {{domxref("XMLHttpRequest")}} object now exposes the response as a JavaScript typed array as well as a string, using the Gecko-specific `mozResponseArrayBuffer` property.
 - [Mouse events](/en-US/docs/Web/API/MouseEvent) now include a `mozPressure` property indicating the amount of pressure on supported pressure-sensitive input devices.
 - The {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} and {{domxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} methods let you create object URLs which reference local files.
 - The {{domxref("DOMImplementation.createHTMLDocument()")}} method lets you create a new HTML document.
@@ -295,7 +295,7 @@ Several HTML elements have had their DOM interfaces changed to the ones required
 - You can now set an element's SVG properties' values using the same shorthand syntax as with CSS. For example: `element.style.fill = 'lime'`. See {{domxref("element.style")}} for details.
 - The document root now has [a `privatebrowsingmode` attribute](/en-US/docs/Supporting_private_browsing_mode#detecting_whether_private_browsing_mode_is_permanent) that describes the state of private browsing mode, including an indication of whether private browsing is temporary or permanent for the session.
 - The second parameter of the {{domxref("window.getComputedStyle()")}} method is now optional, as it is in every other major browser.
-- The DOM [`StorageEvent`](/en-US/docs/DOM/event/StorageEvent) object now matches the latest version of the specification.
+- The DOM {{domxref("StorageEvent")}} object now matches the latest version of the specification.
 - The minimum allowed delay for the {{domxref("setTimeout()")}} method is now a preference, `dom.min_timeout_value`.
 - The [`MozAfterPaint`](/en-US/docs/Gecko-Specific_DOM_Events#mozafterpaint) event is no longer sent by default, due to a potential security issue. It can be re-enabled by setting a preference.
 
