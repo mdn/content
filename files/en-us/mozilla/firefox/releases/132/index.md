@@ -38,6 +38,8 @@ This article provides information about the changes in Firefox 132 that affect d
 
 ### APIs
 
+- The {{domxref("Notification.silent")}} property is now supported, which controls whether system notifications should be silent. When `silent: true` is specified in the {{domxref("Notification.Notification", "Notification()")}} constructor, the resulting system notification is issued without accompanying sounds or vibrations, regardless of device settings ([Firefox bug 1809028](https://bugzil.la/1809028)).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
