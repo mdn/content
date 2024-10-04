@@ -8,9 +8,14 @@ browser-compat: api.HTMLScriptElement.fetchPriority
 
 {{APIRef("HTML DOM")}}
 
-The **`fetchPriority`** property of the {{domxref("HTMLScriptElement")}} interface represents a hint given to the browser on how it should prioritize fetching of an external script relative to other external scripts.
+The **`fetchPriority`** property of the {{domxref("HTMLScriptElement")}} interface represents a hint to the browser indicating how it should prioritize fetching an external script relative to other external scripts.
+It reflects the `fetchpriority` attribute of the {{HTMLElement("script")}} element, for the allowed values.
 
-It reflects the `fetchpriority` attribute of the {{HTMLElement("script")}} element.
+The property allows a developer to signal that fetching a particular script early in the loading process has more or less impact on user experience than a browser can reasonably infer when assigning an internal priority.
+This in turn allows the browser to increase or decrease the priority, and potentially load the script earlier or later than it would otherwise.
+The property should be used sparingly, as excessive or incorrect prioritization can degrade performance.
+
+Note that both the internal priority of any fetch operation, and the impact of `fetchPriority` on the priority, are entirely browser dependent.
 
 ## Value
 
@@ -21,22 +26,10 @@ A string representing the priority hint. Possible values are:
 - `low`
   - : Fetch the external script at a low priority relative to other external scripts.
 - `auto`
-  - : Default mode, which indicates no preference for the fetch priority.
-    The browser decides what is best for the user.
+  - : No user preference for the fetch priority.
+    This is the default.
 
-If the `fetchpriority` attribute is not specified or is specified with any other value, it is the same as specifying it as `auto`.
-
-The `fetchPriority` property allows you to signal high or low priority external script
-fetches. This can be useful when applied to {{HTMLElement("script")}} elements
-to signal external scripts that are "important" to the user experience early in the
-loading process.
-
-The effects of the hint on resource loading is browser-specific so make sure to
-test on multiple browser engines.
-
-Use it sparingly for exceptional cases where the browser may not be able to
-infer the best way to load the external script automatically. Over use can result in
-degrading performance.
+The property is `null` or an empty string if any other value is set.
 
 ## Examples
 
@@ -61,3 +54,5 @@ console.log(el.fetchPriority); // Output: "high"
 
 - {{domxref("HTMLImageElement.fetchPriority")}}
 - {{domxref("HTMLLinkElement.fetchPriority")}}
+- HTTP {{httpheader("Link")}} header
+- [Optimize resource loading with the Fetch Priority API](https://web.dev/articles/fetch-priority?hl=en#browser_priority_and_fetchpriority) for information about how this API affects priorities on Chrome.
