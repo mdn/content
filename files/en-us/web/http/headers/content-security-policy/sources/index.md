@@ -74,7 +74,10 @@ A source expression follows one of the following formats. The `<host-source>` an
     You must include the single quotes. Some browsers specifically exclude `blob` and `filesystem` from source directives.
     Sites needing to allow these content types can specify them using the Data attribute.
 
-    Note that `http:` and `wss:` schemes are automatically matched even if the document's origin does not match that scheme: so for example, if the document's origin is `https://example.org` and its CSP includes a directive like `connect-src 'self'`, then a WebSocket connection to `wss://example.org` will be allowed.
+    Note that `https:` and `wss:` schemes are automatically matched even if the document's origin does not match that scheme, so for example:
+
+    - if the document's origin is `https://example.org` and its CSP includes a directive like `connect-src 'self'`, then a WebSocket connection to `wss://example.org` will be allowed.
+    - if the document's origin is `http://example.org` and its CSP includes a directive like `connect-src 'self'`, then a fetch request to `https://example.org` will be allowed.
 
 - `'unsafe-eval'`
   - : Allows the use of `eval()` and other unsafe methods for creating code from strings.
