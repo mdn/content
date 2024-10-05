@@ -8,7 +8,7 @@ browser-compat: api.ImageBitmapRenderingContext.canvas
 
 {{APIRef("Canvas API")}}{{AvailableInWorkers}}
 
-The **`ImageBitmapRenderingContext.canvas`** read-only property, part of the
+The **`ImageBitmapRenderingContext.canvas`** property, part of the
 [Canvas API](/en-US/docs/Web/API/Canvas_API), is a read-only reference to the
 {{domxref("HTMLCanvasElement")}} or {{domxref("OffscreenCanvas")}} object that is associated with the given context.
 
