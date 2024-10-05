@@ -2,7 +2,6 @@
 title: Content-Digest
 slug: Web/HTTP/Headers/Content-Digest
 page-type: http-header
-browser-compat: http.headers.Content-Digest
 spec-urls: https://datatracker.ietf.org/doc/html/rfc9530
 ---
 
@@ -58,7 +57,7 @@ Content-Digest: md5=:+thA//8pGVGk2VYuJkFNvA==:, unixsum=26869
 
 ## Browser compatibility
 
-{{Compat}}
+There are no immediate plans by any major browser to implement features related to this header, however it is still of use for communication among servers.
 
 ## See also
 

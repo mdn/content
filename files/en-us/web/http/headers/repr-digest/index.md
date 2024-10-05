@@ -2,7 +2,6 @@
 title: Repr-Digest
 slug: Web/HTTP/Headers/Repr-Digest
 page-type: http-header
-browser-compat: http.headers.Repr-Digest
 spec-urls: https://datatracker.ietf.org/doc/html/rfc9530
 ---
 
@@ -124,7 +123,7 @@ Repr-Digest: sha-256=:W8oN3H3CmE/CBpV6ZPNozV2AIDzzQpWL7CCOXyDyDzI=:
 
 ## Browser compatibility
 
-{{Compat}}
+There are no immediate plans by any major browser to implement features related to this header, however it is still of use for communication among servers.
 
 ## See also
 

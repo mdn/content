@@ -2,7 +2,6 @@
 title: Want-Content-Digest
 slug: Web/HTTP/Headers/Want-Content-Digest
 page-type: http-header
-browser-compat: http.headers.Want-Content-Digest
 spec-urls: https://datatracker.ietf.org/doc/html/rfc9530
 ---
 
@@ -47,7 +46,7 @@ Want-Content-Digest: md5=0
 
 ## Browser compatibility
 
-{{Compat}}
+There are no immediate plans by any major browser to implement features related to this header, however it is still of use for communication among servers.
 
 ## See also
 

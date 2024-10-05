@@ -2,7 +2,6 @@
 title: Want-Repr-Digest
 slug: Web/HTTP/Headers/Want-Repr-Digest
 page-type: http-header
-browser-compat: http.headers.Want-Repr-Digest
 spec-urls: https://datatracker.ietf.org/doc/html/rfc9530
 ---
 
@@ -47,7 +46,7 @@ Want-Repr-Digest: sha-512=10, sha-256=1, md5=0
 
 ## Browser compatibility
 
-{{Compat}}
+There are no immediate plans by any major browser to implement features related to this header, however it is still of use for communication among servers.
 
 ## See also
 
