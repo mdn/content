@@ -148,6 +148,6 @@ If you want to indicate to browsers that you prefer users to be given the option
 
 ## See also
 
-- [`prefer_related_applications`](/en-US/docs/Web/Manifest/related_applications) manifest member
+- [`prefer_related_applications`](/en-US/docs/Web/Manifest/prefer_related_applications) manifest member
 - [The web app manifest](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#the_web_app_manifest) for making your web app installable
 - {{domxref("Navigator.getInstalledRelatedApps()")}}
