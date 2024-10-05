@@ -36,7 +36,7 @@ Metadata contains information about the page. This includes information about st
 
 | Element                 | Description                                                                                   |
 | ----------------------- | --------------------------------------------------------------------------------------------- |
-| {{HTMLElement("body")}} | represents the content of an HTML document. There can be only one such element in a document. |
+| {{HTMLElement("body")}} | Represents the content of an HTML document. There can be only one such element in a document. |
 
 ## Content sectioning
 
