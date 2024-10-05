@@ -71,11 +71,11 @@ The settled state of the initial promise determines which handler to execute.
 - If the initial promise is fulfilled, the fulfillment handler is called with the fulfillment value.
 - If the initial promise is rejected, the rejection handler is called with the rejection reason.
 
-The completion of the handler function determines the settled state of the new promise.
+The completion of the handler determines the settled state of the new promise.
 
-- If the handler function returns a [thenable](#thenables) value, the new promise settles in the same state as the returned promise.
-- If the handler function returns a non-thenable value, the new promise is fulfilled with the returned value.
-- If the handler function throws an error, the new promise is rejected with the thrown error.
+- If the handler returns a [thenable](#thenables) value, the new promise settles in the same state as the returned value.
+- If the handler returns a non-thenable value, the new promise is fulfilled with the returned value.
+- If the handler throws an error, the new promise is rejected with the thrown error.
 - If the initial promise has no corresponding handler attached, the new promise will settle to the same state as the initial promise — that is, without a rejection handler, a rejected promise stays rejected with the same reason.
 
 For example, in the code above, if `myPromise` rejects, `handleRejectedA` will be called, and if `handleRejectedA` completes normally (without throwing or returning a rejected promise), the promise returned by the first `then` will be fulfilled instead of staying rejected. Therefore, if an error must be handled immediately, but we want to maintain the error state down the chain, we must throw an error of some type in the rejection handler. On the other hand, in the absence of an immediate need, it is simpler to leave out error handling until the final `catch()` handler.
