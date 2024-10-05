@@ -39,6 +39,8 @@ A source expression follows one of the following formats. The `<host-source>` an
   - : Internet host by name or IP address. The [URL scheme](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL), port number, and path are optional.
     Wildcards (`'*'`) can be used for subdomains, host address, and port number, indicating that all legal values of each are valid.
 
+    If the scheme is omitted, then the document origin's scheme is used.
+
     When matching schemes, secure upgrades are allowed, so `http://example.com` will also match `https://example.com`, and `ws://example.org` will also match `wss://example.org`.
 
     Examples:
@@ -66,18 +68,13 @@ A source expression follows one of the following formats. The `<host-source>` an
     - `blob:` Allows [`blob:` URIs](/en-US/docs/Web/API/Blob) to be used as a content source.
     - `filesystem:` Allows [`filesystem:` URIs](/en-US/docs/Web/API/FileSystem) to be used as a content source.
 
-    > [!NOTE]
-    > If a scheme source is missing, the document origin's scheme is used.
-    > Secure upgrades are allowed, so if the document is loaded using `https:`, then `example.com` will match `https://example.com` but not `http://example.com`.
-    > For more information, see [CSP Level 3](https://www.w3.org/TR/CSP3/#match-url-to-source-list).
-
 - `'self'`
 
   - : Refers to the origin from which the protected document is being served, including the same URL scheme and port number.
     You must include the single quotes. Some browsers specifically exclude `blob` and `filesystem` from source directives.
     Sites needing to allow these content types can specify them using the Data attribute.
 
-    Note that `https:` and `wss:` schemes are automatically matched even if the document's origin does not match that scheme: so for example, if the document's origin is `https://example.org` and its CSP includes a directive like `connect-src 'self'`, then a WebSocket connection to `wss://example.org` will be allowed.
+    Note that `http:` and `wss:` schemes are automatically matched even if the document's origin does not match that scheme: so for example, if the document's origin is `https://example.org` and its CSP includes a directive like `connect-src 'self'`, then a WebSocket connection to `wss://example.org` will be allowed.
 
 - `'unsafe-eval'`
   - : Allows the use of `eval()` and other unsafe methods for creating code from strings.
