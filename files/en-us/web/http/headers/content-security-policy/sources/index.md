@@ -9,7 +9,7 @@ spec-urls: https://w3c.github.io/webappsec-csp/#framework-directive-source-list
 
 This page describes the syntax of a _source expression_, which is used in a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) to describe a way to decide whether the browser should be allowed to use a particular resource referenced by a web page.
 
-Most commonly, source expressions are used in CSP [fetch directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directives), which are the parts of a CSP that define whether the browser is allowed to load a particular resource. Fetch directives a may take as a value a space-separated list of source expressions.
+Most commonly, source expressions are used in CSP [fetch directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directives), which are the parts of a CSP that define whether the browser is allowed to load a particular resource. Fetch directives may take as a value a space-separated list of source expressions.
 
 For example, the following fetch directive, [`img-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src), contains two source expressions, `'self'` and `example.org`:
 
