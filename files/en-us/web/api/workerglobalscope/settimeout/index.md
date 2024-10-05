@@ -38,7 +38,7 @@ setTimeout(functionRef, delay, param1, param2, /* …, */ paramN)
     the specified function or code is executed. If this parameter is omitted, a value of 0
     is used, meaning execute "immediately", or more accurately, the next event cycle.
 
-    Note that in either case, the actual delay may be longer than intended; see [Reasons for delays longer than specified](/en-US/docs/Web/API/Window/setTimeout#reasons_for_delays_longer_than_specified) below.
+    Note that in either case, the actual delay may be longer than intended; see [Reasons for delays longer than specified](/en-US/docs/Web/API/Window/setTimeout#reasons_for_delays_longer_than_specified).
 
     Also note that if the value isn't a number, implicit {{glossary("type coercion")}} is silently done on the value to convert it to a number — which can lead to unexpected and surprising results; see [Non-number delay values are silently coerced into numbers](/en-US/docs/Web/API/Window/setTimeout#non-number_delay_values_are_silently_coerced_into_numbers) for an example.
 
