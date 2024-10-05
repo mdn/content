@@ -53,9 +53,7 @@ identifies the timer created by the call to `setTimeout()`. This value can be
 passed to {{domxref("Window.clearTimeout","clearTimeout()")}} to
 cancel the timeout.
 
-It is guaranteed that a `timeoutID` value will never be reused by a subsequent call to
-`setTimeout()` or `setInterval()` on the same object (a window or
-a worker) while the timer is still active. However, different objects use separate pools of IDs.
+It is guaranteed that a `timeoutID` value will never be reused by a subsequent call to `setTimeout()` or `setInterval()` on the same window while the timer is still active. However, different objects use separate pools of IDs.
 
 ## Description
 

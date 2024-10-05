@@ -38,9 +38,9 @@ setTimeout(functionRef, delay, param1, param2, /* …, */ paramN)
     the specified function or code is executed. If this parameter is omitted, a value of 0
     is used, meaning execute "immediately", or more accurately, the next event cycle.
 
-    Note that in either case, the actual delay may be longer than intended; see [Reasons for delays longer than specified](#reasons_for_delays_longer_than_specified) below.
+    Note that in either case, the actual delay may be longer than intended; see [Reasons for delays longer than specified](/en-US/docs/Web/API/Window/setTimeout#reasons_for_delays_longer_than_specified) below.
 
-    Also note that if the value isn't a number, implicit {{glossary("type coercion")}} is silently done on the value to convert it to a number — which can lead to unexpected and surprising results; see [Non-number delay values are silently coerced into numbers](#non-number_delay_values_are_silently_coerced_into_numbers) for an example.
+    Also note that if the value isn't a number, implicit {{glossary("type coercion")}} is silently done on the value to convert it to a number — which can lead to unexpected and surprising results; see [Non-number delay values are silently coerced into numbers](/en-US/docs/Web/API/Window/setTimeout#non-number_delay_values_are_silently_coerced_into_numbers) for an example.
 
 - `param1`, …, `paramN` {{optional_inline}}
 
@@ -53,9 +53,7 @@ identifies the timer created by the call to `setTimeout()`. This value can be
 passed to {{domxref("WorkerGlobalScope.clearTimeout","clearTimeout()")}} to
 cancel the timeout.
 
-It is guaranteed that a `timeoutID` value will never be reused by a subsequent call to
-`setTimeout()` or `setInterval()` on the same object (a window or
-a worker) while the timer is still active. However, different objects use separate pools of IDs.
+It is guaranteed that a `timeoutID` value will never be reused by a subsequent call to `setTimeout()` or `setInterval()` on the same worker while the timer is still active. However, different objects use separate pools of IDs.
 
 ## Description
 
