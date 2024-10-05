@@ -149,7 +149,7 @@ myArray.myMethod = function (sProperty) {
 myArray.myMethod(); // prints "zero,one,two"
 myArray.myMethod(1); // prints "one"
 setTimeout(myArray.myMethod, 1000); // prints "[object Window]" after 1 second
-setTimeout(myArray.myMethod, 1500, "1"); // prints "undefined" after 1,5 seconds
+setTimeout(myArray.myMethod, 1500, "1"); // prints "undefined" after 1.5 seconds
 
 // Passing the 'this' object with .call won't work
 // because this will change the value of this inside setTimeout itself
