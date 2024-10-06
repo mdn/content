@@ -27,7 +27,6 @@ User agents based on WebKit or Blink, such as Safari and Chrome, support several
 
 ### D-I
 
-- {{CSSxRef("-webkit-fill-available")}}
 - {{CSSxRef("font-smooth", "-webkit-font-smoothing")}}
 - {{CSSxRef("-webkit-hyphenate-limit-after")}}
 - {{CSSxRef("-webkit-hyphenate-limit-before")}}
@@ -179,6 +178,12 @@ For each of them, use the standard equivalent provided.
   - : Use the standard {{CSSxRef("padding-inline-end")}} property instead.
 - `-webkit-padding-start`
   - : Use the standard {{CSSxRef("padding-inline-start")}} property instead.
+
+## -webkit-prefixed property values
+
+- `-webkit-fill-available`
+  - Used with sizing properties like {{CSSxRef("width")}} and {{CSSxRef("height")}}, to allow elements to take up all the available space within their parent container.
+  - `stretch` or `fill-available` are available as standard replacements.
 
 ## Pseudo-classes
 
