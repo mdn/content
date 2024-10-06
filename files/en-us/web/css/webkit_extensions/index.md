@@ -182,8 +182,7 @@ For each of them, use the standard equivalent provided.
 ## -webkit-prefixed property values
 
 - `-webkit-fill-available`
-  - Used with sizing properties like {{CSSxRef("width")}} and {{CSSxRef("height")}}, to allow elements to take up all the available space within their parent container.
-  - `stretch` or `fill-available` are available as standard replacements.
+  - : Used with sizing properties like {{CSSxRef("width")}} and {{CSSxRef("height")}}, to allow elements to take up all the available space within their parent container. `stretch` or `fill-available` are available as standard replacements.
 
 ## Pseudo-classes
 
