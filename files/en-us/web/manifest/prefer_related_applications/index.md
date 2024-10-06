@@ -9,7 +9,7 @@ browser-compat: html.manifest.prefer_related_applications
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}
 
-The `prefer_related_applications` manifest member is used to provide a hint to browsers whether to prioritize native applications specified in the [`related_applications`](/en-US/docs/Web/Manifest/related_applications) manifest member over your web application.
+The `prefer_related_applications` manifest member is used to provide a hint to browsers whether to prefer installing native applications specified in the [`related_applications`](/en-US/docs/Web/Manifest/related_applications) manifest member over your web application.
 
 ## Syntax
 
@@ -32,7 +32,7 @@ The `prefer_related_applications` manifest member is used to provide a hint to b
 
 ### Specifying preference for installing your web app
 
-Consider a scenario where you have both a web app and native apps for your product available on Google Play Store and Windows Store. If you want to offer related native apps as options but prefer users to install your web app, you can set it up in your manifest file as shown below. Browsers will prioritize your web for installation. The native apps will still be available as alternatives.
+Consider a scenario where you have both a web app and native apps for your product available on Google Play Store and Windows Store. If you want to offer related native apps as options but prefer users to install your web app, you can set it up in your manifest file as shown below. Browsers will promote your web app for installation. The native apps will still be available as alternatives.
 
 ```json
 {
@@ -52,7 +52,7 @@ Consider a scenario where you have both a web app and native apps for your produ
 
 ### Specifying preference for installing the related native app
 
-To encourage users to install your native Android hiking app from Google Play Store over your web app, you can indicate it in your web app's manifest file as shown below. Browsers on Android devices will prefer installing the native app instead of the web app.
+To encourage users to install your native Android hiking app from Google Play Store in preference to the web app, you can configure your web app's manifest file as shown below.
 
 ```json
 {

@@ -10,7 +10,7 @@ browser-compat: html.manifest.related_applications
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}
 
 The `related_applications` manifest member is used to specify one or more native applications that are related to your web application.
-It affects user experience when the [`prefer_related_applications`](/en-US/docs/Web/Manifest/prefer_related_applications) manifest member is set to `true`, which indicates a preference for a native application over your web application.
+This can be used with the [`prefer_related_applications`](/en-US/docs/Web/Manifest/prefer_related_applications) manifest member, which indicates a preference for installing either a native application or your web application.
 
 ## Syntax
 
@@ -65,10 +65,9 @@ It affects user experience when the [`prefer_related_applications`](/en-US/docs/
 
 ## Description
 
-A "related application" is a {{Glossary("native")}} application that has a relationship with your web app.
-This relationshop means the native app provides functionality similar to your web app, often with additional features or better integration with users' devices.
+A "related application" is a {{Glossary("native")}} application that provides functionality similar to your web app, often with additional features or better integration with users' devices.
 
-The `related_applications` manifest member lets you specify these platform-specific native applications that are related to your web app.
+The `related_applications` manifest member lets you identify the platform-specific native applications that are related to your web app.
 For example, consider you have a native Android app for your product available through the Google Play Store.
 It provides the same core features as your web app and integrates better with the device's notification system.
 You can use `related_applications` to specify this native Android app in your web app's manifest file.
