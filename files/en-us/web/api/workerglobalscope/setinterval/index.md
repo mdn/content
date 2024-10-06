@@ -36,7 +36,7 @@ setInterval(func, delay, arg1, arg2, /* …, */ argN)
     This syntax is _not recommended_ for the same reasons that make using {{jsxref("Global_Objects/eval", "eval()")}} a security risk.
 - `delay` {{optional_inline}}
   - : The time, in milliseconds (thousandths of a second), the timer should delay in between executions of the specified function or code. Defaults to 0 if not specified.
-    See [Delay restrictions](#delay_restrictions) below for details on the permitted range of `delay` values.
+    See [Delay restrictions](/en-US/docs/Web/API/Window/setInterval#delay_restrictions) for details on the permitted range of `delay` values.
 - `arg1`, …, `argN` {{optional_inline}}
   - : Additional arguments which are passed through to the function specified by _func_ once the timer expires.
 

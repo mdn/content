@@ -155,8 +155,6 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
       - : The request must be a [simple request](/en-US/docs/Web/HTTP/CORS#simple_requests), which restricts the headers that may be set to {{glossary("CORS-safelisted request header", "CORS-safelisted request headers")}}, and restricts methods to `GET`, `HEAD`, and `POST`.
     - `navigate`
       - : Used only by HTML navigation. A `navigate` request is created only while navigating between documents.
-    - `websocket`
-      - : Used only when establishing a [WebSocket](/en-US/docs/Web/API/WebSockets_API) connection.
 
     See [Making cross-origin requests](/en-US/docs/Web/API/Fetch_API/Using_Fetch#making_cross-origin_requests) for more details.
 
