@@ -12,7 +12,7 @@ The **`autocomplete`** property of the {{DOMxRef("HTMLFormElement")}} interface 
 
 ## Value
 
-A string; the value of the `autocomplete` attribute (`"on"`, `"off"`), or the empty string `""` if unspecified.
+A string; the value `"on"` if the attribute is present, or `"off"` if set to `off`.
 
 ## Examples
 
