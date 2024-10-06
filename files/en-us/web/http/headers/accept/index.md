@@ -7,7 +7,7 @@ browser-compat: http.headers.Accept
 
 {{HTTPSidebar}}
 
-The **`Accept`** request HTTP header indicates which content types, expressed as [MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types), the client is able to understand. The server uses [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) to select one of the proposals and informs the client of the choice with the {{HTTPHeader("Content-Type")}} response header. Browsers set required values for this header based on the context of the request. For example, a browser uses different values in a request when fetching a CSS stylesheet, image, video, or a script.
+The **`Accept`** request HTTP header indicates which content types, expressed as [MIME types](/en-US/docs/Web/HTTP/MIME_types), the client is able to understand. The server uses [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) to select one of the proposals and informs the client of the choice with the {{HTTPHeader("Content-Type")}} response header. Browsers set required values for this header based on the context of the request. For example, a browser uses different values in a request when fetching a CSS stylesheet, image, video, or a script.
 
 <table class="properties">
   <tbody>
@@ -46,7 +46,7 @@ Accept: text/html, application/xhtml+xml, application/xml;q=0.9, image/webp, */*
 ## Directives
 
 - `<MIME_type>/<MIME_subtype>`
-  - : A single, precise [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types), like `text/html`.
+  - : A single, precise [MIME type](/en-US/docs/Web/HTTP/MIME_types), like `text/html`.
 - `<MIME_type>/*`
   - : A MIME type, but without a subtype. `image/*` corresponds to `image/png`, `image/svg`, `image/gif`, and other image types.
 - `*/*`

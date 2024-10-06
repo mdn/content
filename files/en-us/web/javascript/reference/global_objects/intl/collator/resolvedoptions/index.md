@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.Intl.Collator.resolvedOptions
 
 {{JSRef}}
 
-The **`resolvedOptions()`** method of {{jsxref("Intl.Collator")}} instances returns a new object with properties reflecting the locale and collation options
-computed during initialization of this collator object.
+The **`resolvedOptions()`** method of {{jsxref("Intl.Collator")}} instances returns a new object with properties reflecting the options computed during initialization of this `Collator` object.
 
 {{EmbedInteractiveExample("pages/js/intl-collator-prototype-resolvedoptions.html")}}
 
@@ -24,29 +23,22 @@ None.
 
 ### Return value
 
-A new object with properties reflecting the locale and collation options computed
-during the initialization of the given {{jsxref("Intl.Collator")}} object.
-
-## Description
-
-The resulting object has the following properties:
+A new object with properties reflecting the options computed during the initialization of this `Collator` object. The object has the following properties, in the order they are listed:
 
 - `locale`
-  - : The BCP 47 language tag for the locale actually used. If any Unicode extension
-    values were requested in the input BCP 47 language tag that led to this locale,
-    the key-value pairs that were requested and are supported for this locale are
-    included in `locale`.
-- `usage`, `sensitivity`, `ignorePunctuation`
-  - : The values provided for these properties in the `options` argument or
-    filled in as defaults.
+  - : The BCP 47 language tag for the locale actually used, determined by the [locale negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) process. Only the `co`, `kn`, and `kf` Unicode extension keys, if requested and supported, may be included in the output.
+- `usage`
+  - : The value provided for this property in the `options` argument, with default filled in as needed. It is either `"sort"` or `"search"`. The default is `"sort"`.
+- `sensitivity`
+  - : The value provided for this property in the `options` argument, with default filled in as needed. It is either `"base"`, `"accent"`, `"case"`, or `"variant"`. The default is `"variant"` for usage `"sort"`; it's locale dependent for usage `"search"`.
+- `ignorePunctuation`
+  - : The value provided for this property in the `options` argument, with default filled in as needed. It is a boolean. The default is `true` for Thai (`th`) and `false` for all other languages.
 - `collation`
-  - : The value requested using the Unicode extension key `"co"`, if it is
-    supported for `locale`, or `"default"`.
-- `numeric`, `caseFirst`
-  - : The values requested for these properties in the `options` argument or
-    using the Unicode extension keys `"kn"` and `"kf"` or filled
-    in as defaults. If the implementation does not support these properties, they are
-    omitted.
+  - : The value provided for this property in the `options` argument, or using the Unicode extension key `"co"`, with default filled in as needed. It is a supported [collation type](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getCollations#supported_collation_types) for this locale. The default is `"default"`.
+- `numeric`
+  - : The value provided for this property in the `options` argument, or using the Unicode extension key `"kn"`, with default filled in as needed. It is a boolean. The default is `false`. If the implementation does not support this Unicode extension key, this property is omitted.
+- `caseFirst`
+  - : The value provided for this property in the `options` argument, or using the Unicode extension key `"kf"`, with default filled in as needed. It is either `"upper"`, `"lower"`, or `"false"`. The default is `"false"`. If the implementation does not support this Unicode extension key, this property is omitted.
 
 ## Examples
 

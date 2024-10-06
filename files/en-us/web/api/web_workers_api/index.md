@@ -44,16 +44,16 @@ Some of the functions (a subset) that are common to all workers and to the main 
 
 - {{domxref("WorkerGlobalScope.atob()", "atob()")}}
 - {{domxref("WorkerGlobalScope.btoa()", "btoa()")}}
-- {{domxref("clearInterval()")}}
+- {{domxref("WorkerGlobalScope.clearInterval", "clearInterval()")}}
 - {{domxref("clearTimeout()")}}
-- {{domxref("createImageBitmap()")}}
+- {{domxref("WorkerGlobalScope.createImageBitmap()", "createImageBitmap()")}}
 - {{domxref("WorkerGlobalScope.dump()", "dump()")}} {{non-standard_inline}}
-- {{domxref("WorkerGlobalScope/fetch", "fetch()")}}
-- {{domxref("queueMicrotask()")}}
-- {{domxref("reportError()")}}
-- {{domxref("setInterval()")}}
+- {{domxref("WorkerGlobalScope.fetch()", "fetch()")}}
+- {{domxref("WorkerGlobalScope.queueMicrotask()", "queueMicrotask()")}}
+- {{domxref("WorkerGlobalScope.reportError()", "reportError()")}}
+- {{domxref("WorkerGlobalScope.setInterval", "setInterval()")}}
 - {{domxref("setTimeout()")}}
-- {{domxref("structuredClone()")}}
+- {{DOMxRef("WorkerGlobalScope.structuredClone", "structuredClone()")}}
 - {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()", "requestAnimationFrame()")}} (dedicated workers only)
 - {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()", "cancelAnimationFrame()")}} (dedicated workers only)
 

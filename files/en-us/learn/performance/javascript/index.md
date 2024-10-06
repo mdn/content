@@ -208,29 +208,21 @@ async function main() {
 }
 ```
 
-To improve this further, we can use {{domxref("Scheduling.isInputPending", "navigator.scheduling.isInputPending()")}} to run the `yield()` function only when the user is attempting to interact with the page:
+To improve this further, we can use {{domxref("Scheduler.yield")}} where available to allow this code to continue executing ahead of other less critical tasks in the queue:
 
 ```js
-async function main() {
-  // Create an array of functions to run
-  const tasks = [a, b, c, d, e];
-
-  while (tasks.length > 0) {
-    // Yield to a pending user input
-    if (navigator.scheduling.isInputPending()) {
-      await yield();
-    } else {
-      // Shift the first task off the tasks array
-      const task = tasks.shift();
-
-      // Run the task
-      task();
-    }
+function yield() {
+  // Use scheduler.yield() if available
+  if ("scheduler" in window && "yield" in scheduler) {
+    return scheduler.yield();
   }
+
+  // Fall back to setTimeout:
+  return new Promise((resolve) => {
+    setTimeout(resolve, 0);
+  });
 }
 ```
-
-This allows you to avoid blocking the main thread when the user is actively interacting with the page, potentially providing a smoother user experience. However, by only yielding when necessary, we can continue running the current task when there are no user inputs to process. This also avoids tasks being placed at the back of the queue behind other non-essential browser-initiated tasks that were scheduled after the current one.
 
 ## Handling JavaScript animations
 
@@ -240,7 +232,7 @@ The most obvious piece of animation advice is to use less animations — cut out
 
 For essential DOM animations, you are advised to use [CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) where possible, rather than JavaScript animations (the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) provides a way to directly hook into CSS animations using JavaScript). Using the browser to directly perform DOM animations rather than manipulating inline styles using JavaScript is much faster and more efficient. See also [CSS performance optimization > Handling animations](/en-US/docs/Learn/Performance/CSS#handling_animations).
 
-For animations that can't be handled in JavaScript, for example, animating an HTML {{htmlelement("canvas")}}, you are advised to use {{domxref("Window.requestAnimationFrame()")}} rather than older options such as {{domxref("setInterval()")}}. The `requestAnimationFrame()` method is specially designed for handling animation frames efficiently and consistently, for a smooth user experience. The basic pattern looks like this:
+For animations that can't be handled in JavaScript, for example, animating an HTML {{htmlelement("canvas")}}, you are advised to use {{domxref("Window.requestAnimationFrame()")}} rather than older options such as {{domxref("Window.setInterval()")}}. The `requestAnimationFrame()` method is specially designed for handling animation frames efficiently and consistently, for a smooth user experience. The basic pattern looks like this:
 
 ```js
 function loop() {

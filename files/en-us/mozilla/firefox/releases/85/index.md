@@ -23,7 +23,7 @@ This article provides information about the changes in Firefox 85 that will affe
 
 #### Removals
 
-- The {{HTMLElement("menuitem")}} HTML element is no longer available — it has been hidden behind the `dom.menuitem.enabled flag`. ([Firefox bug 1680596](https://bugzil.la/1680596)).
+- The `<menuitem>` HTML element is no longer available — it has been hidden behind the `dom.menuitem.enabled flag`. ([Firefox bug 1680596](https://bugzil.la/1680596)).
 
 ### CSS
 
