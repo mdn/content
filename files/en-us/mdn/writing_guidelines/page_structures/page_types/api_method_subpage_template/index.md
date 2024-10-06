@@ -132,7 +132,7 @@ Here is an example where a method can raise a `DOMException` with a name of `Ind
 ## Description
 
 _Detailed description of how the method behaves_
-_Section omitted if an introductory paraphgraph (or two) at the top of the page are sufficient._
+_Section omitted if an introductory paragraph (or two) at the top of the page is sufficient._
 
 ## Examples
 
