@@ -54,6 +54,7 @@ const placeholder = container.querySelector(".menu-placeholder");
 const undefinedElements = container.querySelectorAll(":not(:defined)");
 
 async function removePlaceholder() {
+  // Filter the elements down to unique localNames
   const tags = new Set(
     [...undefinedElements].map((button) => button.localName),
   );
