@@ -88,11 +88,11 @@ These selectors enable the selection of an element based on the presence of an a
 
 In the example below you can see these selectors being used.
 
-- By using `li[class]` we can match any list item with a class attribute. This matches all of the list items except the first one.
+{{EmbedGHLiveSample("css-examples/learn/selectors/attribute.html", '100%', 800)}}
+
+- By using `li[class]` we can match any list item with a class attribute. This matches all of the list items except the first one .
 - `li[class="a"]` matches a selector with a class of `a`, but not a selector with a class of `a` with another space-separated class as part of the value. It selects the second list item.
 - `li[class~="a"]` will match a class of `a` but also a value that contains the class of `a` as part of a whitespace-separated list. It selects the second and third list items.
-
-{{EmbedGHLiveSample("css-examples/learn/selectors/attribute.html", '100%', 800)}}
 
 ## Substring matching selectors
 
