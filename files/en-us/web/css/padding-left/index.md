@@ -60,7 +60,7 @@ The `padding-left` property is specified as a single value chosen from the list 
 .content {
   padding-left: 5%;
 }
-.sidebox {
+.side-box {
   padding-left: 10px;
 }
 ```

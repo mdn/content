@@ -60,7 +60,7 @@ The `padding-right` property is specified as a single value chosen from the list
 .content {
   padding-right: 5%;
 }
-.sidebox {
+.side-box {
   padding-right: 10px;
 }
 ```

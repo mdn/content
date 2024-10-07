@@ -145,14 +145,14 @@ p.goldie {
 ### Example using "max-content"
 
 ```css
-p.maxgreen {
+p.max-green {
   background: lightgreen;
   width: max-content;
 }
 ```
 
 ```html
-<p class="maxgreen">The MDN community writes really great documentation.</p>
+<p class="max-green">The MDN community writes really great documentation.</p>
 ```
 
 {{EmbedLiveSample('Example using "max-content"', '500px', '64px')}}
@@ -160,14 +160,14 @@ p.maxgreen {
 ### Example using "min-content"
 
 ```css
-p.minblue {
+p.min-blue {
   background: lightblue;
   width: min-content;
 }
 ```
 
 ```html
-<p class="minblue">The MDN community writes really great documentation.</p>
+<p class="min-blue">The MDN community writes really great documentation.</p>
 ```
 
 {{EmbedLiveSample('Example using "min-content"', '500px', '155px')}}

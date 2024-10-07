@@ -62,7 +62,7 @@ The `padding-bottom` property is specified as a single value chosen from the lis
 .content {
   padding-bottom: 5%;
 }
-.sidebox {
+.side-box {
   padding-bottom: 10px;
 }
 ```

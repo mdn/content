@@ -80,7 +80,7 @@ The default setting is to wrap the content so the `text-wrap-mode` property is n
 
 {{EmbedLiveSample("wrapping_content", "100%", 250)}}
 
-### Nowrapping content
+### Not wrapping content
 
 In this example the content will **not** flow over to the next line so that it fits in the box as the content has been specifically told not to wrap with `text-wrap-mode: nowrap;`, the content is longer that the containing box so overflows.
 
