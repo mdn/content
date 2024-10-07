@@ -48,7 +48,7 @@ TCP's three-way handshaking technique is often referred to as "SYN-SYN-ACK" — 
 
 For secure connections established over HTTPS, another "handshake" is required. This handshake, or rather the {{glossary('TLS')}} negotiation, determines which cipher will be used to encrypt the communication, verifies the server, and establishes that a secure connection is in place before beginning the actual transfer of data. This requires five more round trips to the server before the request for content is actually sent.
 
-![The DNS lookup, the TCP handshake, and 5 steps of the TLS handshake including clienthello, serverhello and certificate, clientkey and finished for both server and client.](ssl.jpg)
+![The DNS lookup, the TCP handshake, and 5 steps of the TLS handshake including client hello, server hello and certificate, client key and finished for both server and client.](ssl.jpg)
 
 While making the connection secure adds time to the page load, a secure connection is worth the latency expense, as the data transmitted between the browser and the web server cannot be decrypted by a third party.
 
@@ -71,9 +71,9 @@ Once we have an established connection to a web server, the browser sends an ini
     <h1 class="heading">My Page</h1>
     <p>A paragraph with a <a href="https://example.com/about">link</a></p>
     <div>
-      <img src="myimage.jpg" alt="image description" />
+      <img src="my-image.jpg" alt="image description" />
     </div>
-    <script src="anotherscript.js"></script>
+    <script src="another-script.js"></script>
   </body>
 </html>
 ```
@@ -122,9 +122,9 @@ While the browser builds the DOM tree, this process occupies the main thread. As
 
 ```html
 <link rel="stylesheet" href="styles.css" />
-<script src="myscript.js" async></script>
-<img src="myimage.jpg" alt="image description" />
-<script src="anotherscript.js" async></script>
+<script src="my-script.js" async></script>
+<img src="my-image.jpg" alt="image description" />
+<script src="another-script.js" async></script>
 ```
 
 In this example, while the main thread is parsing the HTML and CSS, the preload scanner will find the scripts and image, and start downloading them as well. To ensure the script doesn't block the process, add the `async` attribute, or the `defer` attribute if JavaScript parsing and execution order is important.
@@ -197,7 +197,7 @@ Once the main thread is done painting the page, you would think we would be "all
 
 {{glossary('Time to Interactive')}} (TTI) is the measurement of how long it took from that first request which led to the DNS lookup and TCP connection to when the page is interactive — interactive being the point in time after the {{glossary('First Contentful Paint')}} when the page responds to user interactions within 50ms. If the main thread is occupied parsing, compiling, and executing JavaScript, it is not available and therefore not able to respond to user interactions in a timely (less than 50ms) fashion.
 
-In our example, maybe the image loaded quickly, but perhaps the `anotherscript.js` file was 2MB and our user's network connection was slow. In this case, the user would see the page super quickly, but wouldn't be able to scroll without jank until the script was downloaded, parsed, and executed. That is not a good user experience. Avoid occupying the main thread, as demonstrated in this WebPageTest example:
+In our example, maybe the image loaded quickly, but perhaps the `another-script.js` file was 2MB and our user's network connection was slow. In this case, the user would see the page super quickly, but wouldn't be able to scroll without jank until the script was downloaded, parsed, and executed. That is not a good user experience. Avoid occupying the main thread, as demonstrated in this WebPageTest example:
 
 ![The main thread is occupied by the downloading, parsing and execution of a JavaScript file - over a fast connection](visa_network.png)
 

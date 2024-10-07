@@ -36,7 +36,7 @@ A valid `start_url` needs to be same-origin with the document that references th
 If the URL is relative, the manifest URL is used as the base URL to resolve it.
 
 ```json
-"start_url": "../startpoint.html"
+"start_url": "../start-point.html"
 ```
 
 ## Specifications

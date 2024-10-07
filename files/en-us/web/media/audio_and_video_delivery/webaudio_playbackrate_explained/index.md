@@ -14,7 +14,7 @@ Let's starting by looking at a brief example of `playbackRate` usage:
 
 ```js
 const audio = document.createElement("audio");
-audio.setAttribute("src", "audiofile.mp3");
+audio.setAttribute("src", "audio-file.mp3");
 audio.playbackRate = 0.5;
 ```
 
@@ -80,4 +80,4 @@ There is also an event available called `ratechange`, which fires every time the
 ## See also
 
 - [Hyperaudio's Playback Rate Test](https://hyperaud.io/lab/pbr-test/)
-- {{domxref("HTMLMediaElement")}}: interface which defines the {{domxref("HTMLMediaElement.playbackRate", "playbackrate")}} property.
+- {{domxref("HTMLMediaElement")}}: interface which defines the {{domxref("HTMLMediaElement.playbackRate", "playbackRate")}} property.

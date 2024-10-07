@@ -127,7 +127,7 @@ That means that the first time the `play` event is fired, you know your media is
 Consider this HTML for a media element:
 
 ```html
-<video src="myvideo.mp4" id="video" autoplay></video>
+<video src="my-video.mp4" id="video" autoplay></video>
 ```
 
 Here we have a {{HTMLElement("video")}} element whose [`autoplay`](/en-US/docs/Web/HTML/Element/video#autoplay) attribute is set and with a {{domxref("HTMLMediaElement.play_event", "play")}} event handler set up; the event is handled by a function called `handleFirstPlay()`, which receives as input the `play` event.
