@@ -62,7 +62,7 @@ This article provides information about the changes in Firefox 115 that affect d
 #### Marionette
 
 - Both the commands `WebDriver:GetComputedLabel` and `WebDriver:GetComputedRole` now correctly wait for the requested accessibility object for an element to exist if it just got inserted into the DOM ([Firefox bug 1828816](https://bugzil.la/1828816)).
-- All instances of `window.setTimeout()` in our privileged code running in content processes now use a variant timer that is not affected by the throttling of the timers in case the given tab for automation is in the background.
+- All instances of {{domxref("Window.setTimeout()")}} in our privileged code running in content processes now use a variant timer that is not affected by the throttling of the timers in case the given tab for automation is in the background.
 
 ## Changes for add-on developers
 

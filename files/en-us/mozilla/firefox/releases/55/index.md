@@ -87,7 +87,7 @@ Firefox 55 was released on August 8, 2017. This article lists key changes that a
 #### Workers
 
 - Workers and shared workers can now be created with an identifying `name` property. See the {{domxref("Worker.Worker", "Worker()")}} and {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructors, and the {{domxref("DedicatedWorkerGlobalScope")}} and {{domxref("SharedWorkerGlobalScope")}} interfaces. ([Firefox bug 1364297](https://bugzil.la/1364297)).
-- {{domxref("setTimeout()")}} and {{domxref("setInterval()")}} are now subject to minimum interval throttling for tracking scripts in background tabs — see [Throttling of tracking timeout scripts](/en-US/docs/Web/API/setTimeout#throttling_of_tracking_timeout_scripts) ([Firefox bug 1355311](https://bugzil.la/1355311)).
+- {{domxref("Window.setTimeout()")}}, {{domxref("WorkerGlobalScope.setTimeout()")}}, {{domxref("Window.setInterval()")}} and {{domxref("WorkerGlobalScope.setInterval()")}} are now subject to minimum interval throttling for tracking scripts in background tabs — see [Throttling of tracking timeout scripts](/en-US/docs/Web/API/Window/setTimeout#throttling_of_tracking_timeout_scripts) ([Firefox bug 1355311](https://bugzil.la/1355311)).
 
 #### Service Workers/Push
 
