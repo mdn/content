@@ -32,6 +32,7 @@ If a cross-origin document with COOP is opened in a new window, the opening docu
 Cross-Origin-Opener-Policy: unsafe-none
 Cross-Origin-Opener-Policy: same-origin-allow-popups
 Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Opener-Policy: noopener-allow-popups
 ```
 
 ### Directives
@@ -42,6 +43,8 @@ Cross-Origin-Opener-Policy: same-origin
   - : Retains references to newly opened windows or tabs that either don't set COOP or that opt out of isolation by setting a COOP of `unsafe-none`.
 - `same-origin`
   - : Isolates the browsing context exclusively to same-origin documents. Cross-origin documents are not loaded in the same browsing context.
+- `noopener-allow-popups`
+  - : Severs the opener connection and isolates the browsing context for the current document regardless of the opener document's origin.
 
 ## Examples
 
