@@ -5,12 +5,9 @@ page-type: web-api-overview
 browser-compat: api.FontFace
 ---
 
-{{DefaultAPISidebar("CSS Font Loading API")}}
+{{DefaultAPISidebar("CSS Font Loading API")}}{{AvailableInWorkers}}
 
-The CSS Font Loading API provides events and interfaces for dynamically loading font resources.
-
-> [!NOTE]
-> This feature is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (`self.fonts` provides access to {{domxref('FontFaceSet')}}).
+The **CSS Font Loading API** provides events and interfaces for dynamically loading font resources.
 
 ## Concepts and usage
 
