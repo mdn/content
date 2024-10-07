@@ -77,7 +77,7 @@ These abilities can enable XSS attacks, including:
   <object data="https://evil.com/hacker.plugin"></object>
   ```
 
-So one of the main functions of a CSP to to control which resources a web page is allowed to load. In this section we'll look at the tools CSP provides for this, and then we'll look at one particular recommended strategy, which is called a "Strict CSP".
+So one of the main functions of a CSP is to control which resources a web page is allowed to load. In this section we'll look at the tools CSP provides for this, and then we'll look at one particular recommended strategy, which is called a "Strict CSP".
 
 ### Fetch directives
 
