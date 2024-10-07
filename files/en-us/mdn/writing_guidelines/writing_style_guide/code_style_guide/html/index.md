@@ -41,9 +41,9 @@ Set the document language using the [`lang`](/en-US/docs/Web/HTML/Global_attribu
 
 This is good for accessibility and search engines, helps with localizing content, and reminds people to use best practices.
 
-### Document characterset
+### Document character set
 
-You should also define your document's characterset like so:
+You should also define your document's character set like so:
 
 ```html example-good
 <meta charset="utf-8" />
