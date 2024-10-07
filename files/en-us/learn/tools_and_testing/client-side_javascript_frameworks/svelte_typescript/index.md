@@ -199,6 +199,8 @@ We can also see that the `setupTypeScript.js` file made a couple of changes to o
 
 ![VS Code screenshot showing that when hovering on a component, it gives you hints](03-vscode-hints-in-main-ts.png)
 
+<!-- cSpell:ignore traget -->
+
 We also get type checking for free. If we pass an unknown property in the options parameter of the `App` constructor (for example a typo like `traget` instead of `target`), TypeScript will complain:
 
 ![Type checking in VS Code - App object has been given an unknown property traget](04-vscode-type-checking-in-main-ts.png)
@@ -690,7 +692,7 @@ Next we'll take care of the `actions.js` file.
 
 Now we have to migrate the `stores.js` and `localStore.js` files to TypeScript.
 
-Tip: the script `npm run check`, which uses the [`svelte-check`](https://github.com/sveltejs/language-tools/tree/master/packages/svelte-check) tool, will only check our application's `.svelte` files. If you want to also check the `.ts` files, you can run `npm run check && npx tsc --noemit`, which tells the TypeScript compiler to check for errors without generating the `.js` output files. You could even add a script to your `package.json` file that runs that command.
+Tip: the script `npm run check`, which uses the [`svelte-check`](https://github.com/sveltejs/language-tools/tree/master/packages/svelte-check) tool, will only check our application's `.svelte` files. If you want to also check the `.ts` files, you can run `npm run check && npx tsc --noEmit`, which tells the TypeScript compiler to check for errors without generating the `.js` output files. You could even add a script to your `package.json` file that runs that command.
 
 We'll start with `stores.js`.
 
