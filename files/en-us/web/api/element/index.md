@@ -405,7 +405,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{domxref("Element/MozMousePixelScroll_event", "MozMousePixelScroll")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Fired when a mouse wheel or similar device is operated.
 - {{domxref("Element/webkitmouseforcechanged_event", "webkitmouseforcechanged")}} {{Non-standard_Inline}}
-  - : Fired each time the amount of pressure changes on the trackpadtouchscreen.
+  - : Fired each time the amount of pressure changes on the trackpad touch screen.
 - {{domxref("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}} {{Non-standard_Inline}}
   - : Fired after the mousedown event as soon as sufficient pressure has been applied to qualify as a "force click".
 - {{domxref("Element/webkitmouseforcewillbegin_event", "webkitmouseforcewillbegin")}} {{Non-standard_Inline}}
