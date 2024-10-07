@@ -10,7 +10,7 @@ browser-compat: html.manifest.related_applications
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}
 
 The `related_applications` manifest member is used to specify one or more native applications that are related to your web application.
-This can be used with the [`prefer_related_applications`](/en-US/docs/Web/Manifest/prefer_related_applications) manifest member, which indicates a preference for installing either a native application or your web application.
+It can be used with the [`prefer_related_applications`](/en-US/docs/Web/Manifest/prefer_related_applications) manifest member, which indicates a preference for installing either a related native application or your web application.
 
 ## Syntax
 
