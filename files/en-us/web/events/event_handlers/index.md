@@ -48,7 +48,7 @@ The most flexible way to set an event handler on an element is to use the {{domx
 > [!NOTE]
 > The ability to add and remove event handlers allows you to, for example, have the same button performing different actions in different circumstances. In addition, in more complex programs cleaning up old/unused event handlers can improve efficiency.
 
-Below we show how a simple `greet()` function can be set as a listener/event handler for the `click` event (you could use a lambda function instead of a named function if desired). Note again that the event is passed as the first argument to the event handler.
+Below we show how a simple `greet()` function can be set as a listener/event handler for the `click` event (you could use an anonymous function expression instead of a named function if desired). Note again that the event is passed as the first argument to the event handler.
 
 ```js
 const btn = document.querySelector("button");
