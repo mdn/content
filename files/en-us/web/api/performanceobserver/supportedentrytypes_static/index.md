@@ -25,8 +25,8 @@ To find out which {{domxref("PerformanceEntry.entryType","entryType")}} values a
 ```js
 PerformanceObserver.supportedEntryTypes;
 
-// returns ["element", "event", "first-input", "largest-contentful-paint", "layout-shift", "long-animation-frame", "longtask", "mark", "measure", "navigation", "paint", "resource", "visibility-state"] of main thread in Chrome 129
-// returns ["mark", "measure", "resource"] of worker thread in Chrome 129
+// returns ["element", "event", "first-input", "largest-contentful-paint", "layout-shift", "long-animation-frame", "longtask", "mark", "measure", "navigation", "paint", "resource", "visibility-state"] in the main thread in Chrome 129
+// returns ["mark", "measure", "resource"] in a worker thread in Chrome 129
 ```
 
 ### Checking for unsupported types
