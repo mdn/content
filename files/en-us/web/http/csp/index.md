@@ -298,7 +298,7 @@ Unlike `unsafe-inline`, the `unsafe-eval` keyword does still work in a directive
 
 ### Strict CSP
 
-To control script loading as a mitigation against XSS, current recommended practice is to use nonce- or hash- based fetch directives. This is called a _strict CSP_. This type of CSP has two main advantages over a location-based CSP (usually called an _allowlist CSP_):
+To control script loading as a mitigation against XSS, recommended practice is to use nonce- or hash- based fetch directives. This is called a _strict CSP_. This type of CSP has two main advantages over a location-based CSP (usually called an _allowlist CSP_):
 
 - Allowlist CSPs are hard to get right and often don't provide effective protection against XSS (see [CSP Is Dead, Long Live CSP! On the Insecurity of Whitelists and the Future of Content Security Policy](https://dl.acm.org/doi/pdf/10.1145/2976749.2978363)).
 - Allowlist CSPs can be very large and hard to maintain. According to [How I learned to stop worrying and love the Content Security Policy](https://www.netlify.com/blog/general-availability-content-security-policy-csp-nonce-integration/), just to integrate Google Analytics, a developer is asked to add 187 Google domains to the allowlist.
