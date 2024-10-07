@@ -262,9 +262,9 @@ The example demonstrates the effects of various bézier curve easing functions.
 <div class="parent">
   <div class="linear">linear</div>
   <div class="ease">ease</div>
-  <div class="easein">ease-in</div>
-  <div class="easeout">ease-out</div>
-  <div class="easeinout">ease-in-out</div>
+  <div class="ease-in">ease-in</div>
+  <div class="ease-out">ease-out</div>
+  <div class="ease-in-out">ease-in-out</div>
   <div class="cb">cubic-bezier(.5, -0.5, 1, 1.5)</div>
 </div>
 <div class="x-axis"><span>50%</span></div>
@@ -342,13 +342,13 @@ btn.addEventListener("click", () => {
 .ease {
   animation-timing-function: ease;
 }
-.easein {
+.ease-in {
   animation-timing-function: ease-in;
 }
-.easeout {
+.ease-out {
   animation-timing-function: ease-out;
 }
-.easeinout {
+.ease-in-out {
   animation-timing-function: ease-in-out;
 }
 .cb {

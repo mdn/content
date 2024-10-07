@@ -80,26 +80,26 @@ This example demonstrates the applying `background-color` to HTML {{HTMLelement(
 #### HTML
 
 ```html
-<div class="exampleone">Lorem ipsum dolor sit amet, consectetuer</div>
+<div class="example-one">Lorem ipsum dolor sit amet, consectetuer</div>
 
-<div class="exampletwo">Lorem ipsum dolor sit amet, consectetuer</div>
+<div class="example-two">Lorem ipsum dolor sit amet, consectetuer</div>
 
-<div class="examplethree">Lorem ipsum dolor sit amet, consectetuer</div>
+<div class="example-three">Lorem ipsum dolor sit amet, consectetuer</div>
 ```
 
 #### CSS
 
 ```css
-.exampleone {
+.example-one {
   background-color: transparent;
 }
 
-.exampletwo {
+.example-two {
   background-color: rgb(153 102 153);
   color: rgb(255 255 204);
 }
 
-.examplethree {
+.example-three {
   background-color: #777799;
   color: #ffffff;
 }
