@@ -127,7 +127,7 @@ Improving memory and power usage is a similar problem to speeding up startup: do
 
 Modern CPUs can enter a lower-power mode when mostly idle. Applications that constantly fire timers or keep unnecessary animations running prevent CPUs from entering low-power mode. Power-efficient applications shouldn't do that.
 
-When applications are sent to the background, a {{domxref("document.visibilitychange_event", "visibilitychange")}} event is fired on their documents. This event is a developer's friend; applications should listen for it.
+When applications are sent to the background, a {{domxref("document/visibilitychange_event", "visibilitychange")}} event is fired on their documents. This event is a developer's friend; applications should listen for it.
 
 ### Specific coding tips for application performance
 
@@ -135,7 +135,7 @@ The following practical tips will help improve one or more of the Application pe
 
 #### Use CSS animations and transitions
 
-Instead of using some library's `animate()` function, which probably currently uses many badly performing technologies ({{domxref("setTimeout()")}} or `top`/`left` positioning, for example) use [CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations). In many cases, you can actually use [CSS Transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) to get the job done. This works well because the browser is designed to optimize these effects and use the GPU to handle them smoothly with minimal impact on processor performance. Another benefit is that you can define these effects in CSS along with the rest of your app's look-and-feel, using a standardized syntax.
+Instead of using some library's `animate()` function, which probably currently uses many badly performing technologies ({{domxref("Window.setTimeout", "setTimeout()")}} or `top`/`left` positioning, for example) use [CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations). In many cases, you can actually use [CSS Transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) to get the job done. This works well because the browser is designed to optimize these effects and use the GPU to handle them smoothly with minimal impact on processor performance. Another benefit is that you can define these effects in CSS along with the rest of your app's look-and-feel, using a standardized syntax.
 
 CSS animations give you very granular control over your effects using [keyframes](/en-US/docs/Web/CSS/@keyframes), and you can even watch events fired during the animation process in order to handle other tasks that need to be performed at set points in the animation process. You can easily trigger these animations with the {{cssxref(":hover")}}, {{cssxref(":focus")}}, or {{cssxref(":target")}}, or by dynamically adding and removing classes on parent elements.
 

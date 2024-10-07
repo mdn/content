@@ -85,7 +85,7 @@ const aliceTiming = {
 
 You'll notice a few differences here from how equivalent values are represented in CSS:
 
-- For one, the duration is in milliseconds as opposed to seconds — 3000 not 3s. Like {{domxref("setTimeout()")}} and {{domxref("Window.requestAnimationFrame()")}}, the Web Animations API only takes milliseconds.
+- For one, the duration is in milliseconds as opposed to seconds — 3000 not 3s. Like {{domxref("Window.setTimeout", "setTimeout()")}} and {{domxref("Window.requestAnimationFrame()")}}, the Web Animations API only takes milliseconds.
 - The other thing you'll notice is that it's `iterations`, not `iteration-count`.
 
 > [!NOTE]

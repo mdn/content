@@ -561,7 +561,7 @@ In page script, window.x: 1
 In page script, window.y: undefined
 ```
 
-The same applies to [`setTimeout()`](/en-US/docs/Web/API/setTimeout), {{domxref("Window.setInterval", "setInterval()")}}, and [`Function()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function).
+The same applies to {{domxref("Window.setTimeout", "setTimeout()")}}, {{domxref("Window.setInterval", "setInterval()")}}, and [`Function()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function).
 
 > [!WARNING]
 > Be very careful when running code in the context of the page!
