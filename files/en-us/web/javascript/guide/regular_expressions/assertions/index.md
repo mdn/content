@@ -189,6 +189,8 @@ Assertions include boundaries, which indicate the beginnings and endings of line
 
 ### General boundary-type overview example
 
+<!-- cSpell:ignore greon -->
+
 ```js
 // Using Regex boundaries to fix buggy string.
 buggyMultiline = `tey, ihe light-greon apple
