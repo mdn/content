@@ -49,9 +49,9 @@ const pipelineDescriptor = {
 
 const renderPipeline = device.createRenderPipeline(pipelineDescriptor);
 
-renderPipeline.label = "myrenderpipeline";
+renderPipeline.label = "my-render-pipeline";
 
-console.log(renderPipeline.label); // "myrenderpipeline"
+console.log(renderPipeline.label); // "my-render-pipeline"
 ```
 
 Setting a label via a {{domxref("GPUDevice.createRenderPipeline()")}} call, and then getting it via `GPURenderPipeline.label`:
@@ -78,12 +78,12 @@ const pipelineDescriptor = {
     topology: "triangle-list",
   },
   layout: "auto",
-  label: "myrenderpipeline",
+  label: "my-render-pipeline",
 };
 
 const renderPipeline = device.createRenderPipeline(pipelineDescriptor);
 
-console.log(renderPipeline.label); // "myrenderpipeline"
+console.log(renderPipeline.label); // "my-render-pipeline"
 ```
 
 ## Specifications
