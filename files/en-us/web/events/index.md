@@ -487,7 +487,7 @@ This topic provides an index to the main _sorts_ of events you might be interest
           <a href="/en-US/docs/Web/API/MouseEvent">computer mouse</a>.
         </p>
         <p>
-          Used to notify when the mouse is clicked, doubleclicked, up and down
+          Used to notify when the mouse is clicked, double-clicked, up and down
           events, right-click, movement in and out of an element, text
           selection, etc.
         </p>

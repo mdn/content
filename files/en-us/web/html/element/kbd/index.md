@@ -34,8 +34,8 @@ Other elements can be used in tandem with `<kbd>` to represent more specific sce
 
 ```html
 <p>
-  Use the command <kbd>help mycommand</kbd> to view documentation for the
-  command "mycommand".
+  Use the command <kbd>help my-command</kbd> to view documentation for the
+  command "my-command".
 </p>
 ```
 

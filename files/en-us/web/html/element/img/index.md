@@ -14,7 +14,7 @@ The **`<img>`** [HTML](/en-US/docs/Web/HTML) element embeds an image into the do
 The above example shows usage of the `<img>` element:
 
 - The `src` attribute is **required**, and contains the path to the image you want to embed.
-- The `alt` attribute holds a textual replacement for the image, which is mandatory and **incredibly useful** for accessibility — screen readers read the attribute value out to their users so they know what the image means. Alt text is also displayed on the page if the image can't be loaded for some reason: for example, network errors, content blocking, or linkrot.
+- The `alt` attribute holds a textual replacement for the image, which is mandatory and **incredibly useful** for accessibility — screen readers read the attribute value out to their users so they know what the image means. Alt text is also displayed on the page if the image can't be loaded for some reason: for example, network errors, content blocking, or link rot.
 
 There are many other attributes to achieve various purposes:
 
@@ -180,7 +180,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     > Loading is only deferred when JavaScript is enabled. This is an anti-tracking measure, because if a user agent supported lazy loading when scripting is disabled, it would still be possible for a site to track a user's approximate scroll position throughout a session, by strategically placing images in a page's markup such that a server can track how many images are requested and when.
 
     > [!NOTE]
-    > Images with `loading` set to `lazy` will never be loaded if they do not intersect a visible part of an element, even if loading them would change that as unloaded images have a `width` and `height` of `0`. Putting `width` and `height` on lazyloaded images fixes this issue and is a best practice, [recommended by the specification](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element). Doing so also helps prevent layout shifts.
+    > Images with `loading` set to `lazy` will never be loaded if they do not intersect a visible part of an element, even if loading them would change that as unloaded images have a `width` and `height` of `0`. Putting `width` and `height` on lazy-loaded images fixes this issue and is a best practice, [recommended by the specification](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element). Doing so also helps prevent layout shifts.
 
 - `referrerpolicy`
 
