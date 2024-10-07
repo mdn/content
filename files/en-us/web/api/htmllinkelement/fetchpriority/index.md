@@ -20,7 +20,8 @@ Note that both the internal priority of any fetch operation, and the impact of `
 
 ## Value
 
-A string representing the priority hint. Possible values are:
+A string representing the priority hint.
+Possible values are:
 
 - `high`
   - : Fetch the resource at a high priority relative to other resources of the same type and internal prioritization.
@@ -29,8 +30,7 @@ A string representing the priority hint. Possible values are:
 - `auto`
   - : No user preference for the fetch priority.
     This is the default.
-
-The property is `null` or an empty string if any other value is set.
+    It is used if no value is set or if an invalid value is set.
 
 ## Examples
 

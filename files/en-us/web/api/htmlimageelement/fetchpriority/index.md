@@ -29,8 +29,7 @@ Possible values are:
 - `auto`
   - : No user preference for the fetch priority.
     This is the default.
-
-The property is `null` or an empty string if any other value is set.
+    It is used if no value is set or if an invalid value is set.
 
 ## Examples
 
