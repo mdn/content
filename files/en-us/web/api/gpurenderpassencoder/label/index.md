@@ -38,9 +38,9 @@ const renderPassDescriptor = {
 };
 
 const passEncoder = commandEncoder.beginRenderPass(renderPassDescriptor);
-passEncoder.label = "myrenderpassencoder";
+passEncoder.label = "my-render-pass-encoder";
 
-console.log(passEncoder.label); // "myrenderpassencoder"
+console.log(passEncoder.label); // "my-render-pass-encoder"
 ```
 
 Setting a label via the originating {{domxref("GPUCommandEncoder.beginRenderPass()")}} call, and then getting it via `GPURenderPassEncoder.label`:
@@ -57,12 +57,12 @@ const renderPassDescriptor = {
       view: context.getCurrentTexture().createView(),
     },
   ],
-  label: "myrenderpassencoder",
+  label: "my-render-pass-encoder",
 };
 
 const passEncoder = commandEncoder.beginRenderPass(renderPassDescriptor);
 
-console.log(passEncoder.label); // "myrenderpassencoder"
+console.log(passEncoder.label); // "my-render-pass-encoder"
 ```
 
 ## Specifications

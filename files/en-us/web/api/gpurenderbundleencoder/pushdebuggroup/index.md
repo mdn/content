@@ -40,7 +40,7 @@ None ({{jsxref("Undefined")}}).
 
 const bundleEncoder = device.createRenderBundleEncoder(renderBundleDescriptor);
 
-bundleEncoder.pushDebugGroup("mygroupmarker"); // Start labeled debug group
+bundleEncoder.pushDebugGroup("my-group-marker"); // Start labeled debug group
 
 bundleEncoder.setPipeline(renderPipeline);
 bundleEncoder.setVertexBuffer(0, vertexBuffer);

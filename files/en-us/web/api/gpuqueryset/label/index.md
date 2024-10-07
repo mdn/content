@@ -29,9 +29,9 @@ const querySet = device.createQuerySet({
   count: 32,
 });
 
-querySet.label = "myqueryset";
+querySet.label = "my-query-set";
 
-console.log(querySet.label); // "myqueryset"
+console.log(querySet.label); // "my-query-set"
 ```
 
 Setting a label via the originating {{domxref("GPUDevice.createQuerySet()")}} call, and then getting it via `GPUQuerySet.label`:
@@ -40,10 +40,10 @@ Setting a label via the originating {{domxref("GPUDevice.createQuerySet()")}} ca
 const querySet = device.createQuerySet({
   type: "occlusion",
   count: 32,
-  label: "myqueryset",
+  label: "my-query-set",
 });
 
-console.log(querySet.label); // "myqueryset"
+console.log(querySet.label); // "my-query-set"
 ```
 
 ## Specifications

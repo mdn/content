@@ -25,18 +25,18 @@ Setting and getting a label via `GPUCommandEncoder.label`:
 
 ```js
 const commandEncoder = device.createCommandEncoder();
-commandEncoder.label = "mycommandencoder";
-console.log(commandEncoder.label); // "mycommandencoder";
+commandEncoder.label = "my-command-encoder";
+console.log(commandEncoder.label); // "my-command-encoder";
 ```
 
 Setting a label via the originating {{domxref("GPUDevice.createCommandEncoder()")}} call, and then getting it via `GPUCommandEncoder.label`:
 
 ```js
 const commandEncoder = device.createCommandEncoder({
-  label: "mycommandencoder",
+  label: "my-command-encoder",
 });
 
-console.log(commandEncoder.label); // "mycommandencoder";
+console.log(commandEncoder.label); // "my-command-encoder";
 ```
 
 ## Specifications
