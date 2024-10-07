@@ -86,9 +86,9 @@ These interfaces, dictionaries, and types are used to set up, open, and manage W
 - {{domxref("RTCPeerConnection.icecandidateerror_event", "icecandidateerror")}}
   - : An {{domxref("RTCPeerConnectionIceErrorEvent")}} indicating that an error has occurred while gathering ICE candidates.
 - {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}}
-  - : Sent to an {{domxref("RTCPeerConnection")}} when its ICE connection's state—found in the {{domxref("RTCPeerConnection.iceconnectionstate", "iceconnectionstate")}} property—changes.
+  - : Sent to an {{domxref("RTCPeerConnection")}} when its ICE connection's state—found in the {{domxref("RTCPeerConnection.iceConnectionState", "iceConnectionState")}} property—changes.
 - {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}}
-  - : Sent to an {{domxref("RTCPeerConnection")}} when its ICE gathering state—found in the {{domxref("RTCPeerConnection.icegatheringstate", "icegatheringstate")}} property—changes.
+  - : Sent to an {{domxref("RTCPeerConnection")}} when its ICE gathering state—found in the {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} property—changes.
 - {{domxref("RTCDataChannel.message_event", "message")}}
   - : A message has been received on the data channel. The event is of type {{domxref("MessageEvent")}}.
 - {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}}
@@ -98,9 +98,9 @@ These interfaces, dictionaries, and types are used to set up, open, and manage W
 - {{domxref("RTCIceTransport.selectedcandidatepairchange_event", "selectedcandidatepairchange")}}
   - : The currently-selected pair of ICE candidates has changed for the `RTCIceTransport` on which the event is fired.
 - {{domxref("RTCPeerConnection.track_event", "track")}}
-  - : The `track` event, of type {{domxref("RTCTrackevent")}} is sent to an {{domxref("RTCPeerConnection")}} when a new track is added to the connection following the successful negotiation of the media's streaming.
+  - : The `track` event, of type {{domxref("RTCTrackEvent")}} is sent to an {{domxref("RTCPeerConnection")}} when a new track is added to the connection following the successful negotiation of the media's streaming.
 - {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}
-  - : Sent to the peer connection when its {{domxref("RTCPeerConnection.signalingstate", "signalingstate")}} has changed. This happens as a result of a call to either {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} or {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}.
+  - : Sent to the peer connection when its {{domxref("RTCPeerConnection.signalingState", "signalingState")}} has changed. This happens as a result of a call to either {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} or {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}.
 - {{domxref("RTCDtlsTransport.statechange_event", "statechange")}}
   - : The state of the `RTCDtlsTransport` has changed.
 - {{domxref("RTCIceTransport.statechange_event", "statechange")}}

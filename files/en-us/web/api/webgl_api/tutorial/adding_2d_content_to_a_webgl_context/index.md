@@ -33,7 +33,7 @@ This project uses the [glMatrix](https://glmatrix.net/) library to perform its m
   </head>
 
   <body>
-    <canvas id="glcanvas" width="640" height="480"></canvas>
+    <canvas id="gl-canvas" width="640" height="480"></canvas>
   </body>
 </html>
 ```
@@ -274,7 +274,7 @@ function drawScene(gl, programInfo, buffers) {
   const zFar = 100.0;
   const projectionMatrix = mat4.create();
 
-  // note: glmatrix.js always has the first argument
+  // note: glMatrix always has the first argument
   // as the destination to receive the result.
   mat4.perspective(projectionMatrix, fieldOfView, aspect, zNear, zFar);
 
