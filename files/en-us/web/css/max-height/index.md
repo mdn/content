@@ -102,6 +102,7 @@ form {
 
 ## See also
 
-- [The box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{cssxref("box-sizing")}}
 - {{Cssxref("height")}}, {{Cssxref("min-height")}}
-- The mapped logical properties: {{cssxref("max-inline-size")}}, {{cssxref("max-block-size")}}
+- {{cssxref("max-inline-size")}}, {{cssxref("max-block-size")}}
+- {{cssxref("box-sizing")}}
+- [The CSS box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
