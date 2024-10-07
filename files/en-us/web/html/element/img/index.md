@@ -144,14 +144,17 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `fetchpriority`
 
-  - : Provides a hint of the relative priority to use when fetching the image. Allowed values:
+  - : Provides a hint of the relative priority to use when fetching the image.
+    Allowed values:
 
     - `high`
-      - : Signals a high-priority fetch relative to other images.
+      - : Fetch the image at a high priority relative to other images with the same internal prioritization.
     - `low`
-      - : Signals a low-priority fetch relative to other images.
+      - : Fetch the image at a low priority relative to other images with the same internal prioritization.
     - `auto`
-      - : Default: Signals automatic determination of fetch priority relative to other images.
+      - : No user preference for the fetch priority.
+        This is the default.
+        It is used if no value or an invalid value is set.
 
 - `height`
 
