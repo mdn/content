@@ -7,7 +7,7 @@ browser-compat: html.manifest.name
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
-The `name` manifest member is used to specify the name of your web application as it's typically displayed to users.
+The `name` manifest member is used to specify the full name of your web application as it's usually displayed to users, such as in application lists or as a label for your application's icon.
 
 ## Syntax
 
@@ -15,7 +15,6 @@ The `name` manifest member is used to specify the name of your web application a
 /* Full names of web apps */
 "name": "Daily Task Planner"
 "name": "Recipe and Pantry Tracker"
-"name": "Mindful Meditation"
 ```
 
 ### Values
@@ -30,22 +29,24 @@ The `name` manifest member serves as the {{Glossary("Accessible_name", "accessib
 > [!NOTE]
 > For Chromium-based browsers, a `name` or `short_name` is required in the manifest for the web app to be installable.
 
-Consider the following points when selecting a name for your web app:
+### Best practices for naming your web app
 
+Consider the following factors when selecting a name for your web app:
+
+- Length of the name, especially if you're not providing a separate `short_name`
 - How well it indicates the purpose or nature of your app
 - Whether it is clear and easy to understand and remember
-- Its length, especially if you're not providing a separate `short_name`
-- How it will appear in different contexts, such as in app lists or home screen
-- Its uniqueness compared to existing apps
-- Its cultural sensitivity and appropriateness for your target audience
-- How well it translates or is perceived in different languages if your app targets a global audience
-- Whether it has any trademark conflicts
+- How it appears in different contexts, such as in app lists or home screen
+- How easily it can be differentiated from other similar apps
+- Cultural sensitivity and appropriateness for your target audience
+- How well it translates or is perceived in different languages if your app target is a global audience
+- Potential trademark conflicts
 
 ## Examples
 
 ### Adding a name for your web app
 
-For a web app that helps users navigate trails and plan their hiking adventures, you can add the following `name` to the app manifest:
+For a web app that helps users navigate trails and plan their hiking adventures, you might add the following `name` to the app manifest:
 
 ```json
 "name": "Trail Navigator"

@@ -15,7 +15,6 @@ The `short_name` manifest member is used to specify a short name for your web ap
 /* Short names of web apps */
 "short_name": "TaskPlanner"
 "short_name": "RecipePantry"
-"short_name": "Meditate"
 ```
 
 ### Values
@@ -32,7 +31,7 @@ Browsers may use `short_name` in place of [`name`](/en-US/docs/Web/Manifest/name
 
 Keep the following points in mind when selecting a short name for your web app:
 
-- It should reflect a concise version of your app's `name`.
+- It should be a concise version of your app's `name`.
 - While aiming for brevity, it should still be recognizable and meaningful.
 - Consider how it will appear in space-constrained contexts.
 - Follow the same guidelines for cultural sensitivity and trademark as for `name`.

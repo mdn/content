@@ -64,7 +64,7 @@ Browsers have flexibility in how they handle `start_url`. They may:
 
 ### Specifying an absolute starting URL
 
-Let's say the manifest file for your web app is linked from `https://example.com/index.html`.
+Let's say the manifest file for your web app is at `https://example.com/resources/manifest.json` and is linked from `https://example.com/index.html`.
 You want a custom starting point when users launch the installed app from their devices, which is different from the default entry page for your web app.
 You can specify this starting URL in your manifest file like so:
 
@@ -72,25 +72,22 @@ You can specify this starting URL in your manifest file like so:
 "start_url": "https://example.com/dashboard.html"
 ```
 
-The `start_url` value above is valid because it is same-origin with `https://example.com/index.html`.
-
-In contrast, the following `start_url` will be considered invalid:
+- The `start_url` value above is valid because it is same-origin with `https://example.com/index.html`.
+- If you don't specify a `start_url`, the browser will fallback to using `https://example.com/index.html`.
+- The `start_url` below is invalid because it is not same-origin with the linking page, so the browser will fallback to using `https://example.com/index.html`:
 
 ```json example-bad
 "start_url": "https://other-domain.com/dashboard.html"
 ```
 
-In this case, the app launch will fallback to using `https://example.com/index.html`.
-
 ### Specifying a relative starting URL
 
-The above example used an absolute `start_url`. Assuming the manifest file's URL is `https://example.com/resources/manifest.json`, you could also specify the same starting point using a relative URL like so:
+You could specify the same starting point using a relative URL as shown below.
+This relative URL will resolve to `https://example.com/dashboard.html` using the manifest file's URL (`https://example.com/resources/manifest.json`) as the base.
 
 ```json
 "start_url": "../dashboard.html"
 ```
-
-Using the manifest file's URL as the base, this relative URL will also resolve to the same location: `https://example.com/dashboard.html`.
 
 ## Specifications
 
