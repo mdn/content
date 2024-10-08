@@ -133,7 +133,7 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
 
   - : A boolean. When set to `true`, the browser will not abort the associated request if the page that initiated it is unloaded before the request is complete. This enables a {{domxref('Window.fetch','fetch()')}} request to function as an alternative to {{domxref("Navigator.sendBeacon()")}} when sending analytics at the end of a session, which has some advantages (you can use HTTP methods other than [`POST`](/en-US/docs/Web/HTTP/Methods/POST), customize request properties, and access the server response via the fetch {{jsxref("Promise")}} fulfillment). It is also available in [service workers](/en-US/docs/Web/API/Service_Worker_API).
 
-    The body size for `keepalive` requests is limited to 64KB.
+    The body size for `keepalive` requests is limited to 64 kibibytes.
 
     Defaults to `false`.
 
