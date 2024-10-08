@@ -28,19 +28,22 @@ The `capture` attribute takes as its value a string that specifies which camera 
 
 When set on a file input type, operating systems with microphones and cameras will display a user interface allowing the selection from an existing file or the creating of a new one.
 
+The `capture` attribute allows users to upload media directly from their device. Here are some common use cases:
+
 ```html
 <p>
-  <label for="soundFile">What does your voice sound like?:</label>
-  <input type="file" id="soundFile" capture="user" accept="audio/*" />
+  <label for="userPhoto">Take a new photo:</label>
+  <input type="file" id="userPhoto" capture="user" accept="image/*" />
 </p>
 <p>
-  <label for="videoFile">Upload a video:</label>
-  <input type="file" id="videoFile" capture="environment" accept="video/*" />
+  <label for="environmentPhoto">Capture a photo of your surroundings:</label>
+  <input type="file" id="environmentPhoto" capture="environment" accept="image/*" />
 </p>
 <p>
-  <label for="imageFile">Upload a photo of yourself:</label>
-  <input type="file" id="imageFile" capture="user" accept="image/*" />
+  <label for="audioInput">Record a message:</label>
+  <input type="file" id="audioInput" capture="user" accept="audio/*" />
 </p>
+
 ```
 
 {{EmbedLiveSample('Examples', '100%', 200)}}
@@ -54,6 +57,11 @@ Note these work better on mobile devices; if your device is a desktop computer, 
 ## Browser compatibility
 
 {{Compat}}
+
+## Best Practices
+- Use the `capture` attribute in conjunction with the `accept` attribute to specify the type of media you want to capture.
+- Consider the user experience on both mobile and desktop devices, as the functionality may vary.
+
 
 ## See also
 
