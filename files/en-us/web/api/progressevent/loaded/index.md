@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ProgressEvent.loaded
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{APIRef("XMLHttpRequest API")}}{{AvailableInWorkers}}
 
 The **`ProgressEvent.loaded`** read-only property is a 64-bit unsigned integer
 indicating the size, in bytes, of the data already transmitted or processed. The ratio can be calculated by dividing `ProgressEvent.total` by the value of this property.
