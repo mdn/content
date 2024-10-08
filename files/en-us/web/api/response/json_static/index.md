@@ -6,7 +6,7 @@ page-type: web-api-static-method
 browser-compat: api.Response.json_static
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`json()`** static method of the {{domxref("Response")}} interface returns a `Response` that contains the provided JSON data as body, and a {{HTTPHeader("Content-Type")}} header which is set to `application/json`.
 The response status, status message, and additional headers can also be set.
