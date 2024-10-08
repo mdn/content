@@ -107,7 +107,7 @@ In this example the content will **not** flow over to the next line so that it f
 
 #### Result
 
-{{EmbedLiveSample("nowrapping_content", "100%",100)}}
+{{EmbedLiveSample("not_wrapping_content", "100%",100)}}
 
 ## Specifications
 
