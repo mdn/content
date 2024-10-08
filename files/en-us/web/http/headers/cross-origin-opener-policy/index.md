@@ -44,7 +44,8 @@ Cross-Origin-Opener-Policy: noopener-allow-popups
 - `same-origin`
   - : Isolates the browsing context exclusively to same-origin documents. Cross-origin documents are not loaded in the same browsing context.
 - `noopener-allow-popups`
-  - : Severs the opener connection and isolates the browsing context for the current document regardless of the opener document's origin.
+  - : Severs the opener connection to the new document, isolating the browsing context for the current document regardless of the opener document's origin.
+    This ensures that the opener can't run scripts in the opened documents even if they are same origin.
 
 ## Examples
 
