@@ -145,6 +145,32 @@ const stream = new ReadableStream({
 });
 ```
 
+A useful way to construct a `ReadableStream` from a variety of input types is to use the body property of a {{domxref("Response.Response","Response")}} object
+
+```js
+function newReadableStream(content){
+    return new Response(content).body;
+}
+
+const newStream = newReadableStream("Hello World");
+
+const decoder = new TextDecoder();
+
+for await (const chunk of newStream) {
+  console.log(decoder.decode(chunk)); //Hello World
+}
+```
+An object defining a body for the response can be `null` (which is the default value), or one of:
+
+    - {{domxref("Blob")}}
+    - {{jsxref("ArrayBuffer")}}
+    - {{jsxref("TypedArray")}}
+    - {{jsxref("DataView")}}
+    - {{domxref("FormData")}}
+    - {{domxref("ReadableStream")}}
+    - {{domxref("URLSearchParams")}}
+    - {{jsxref("String")}}
+    - `string` literal
 ## Specifications
 
 {{Specifications}}
