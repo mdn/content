@@ -115,7 +115,7 @@ When creating shortcuts for your web app, keep the following guidelines in mind:
 - Include icons for shortcuts to improve visual recognition.
   Provide icons in multiple sizes to ensure quality display across different devices and contexts.
 - Order the shortcuts from most to least important, based on the relevance and usage of features to which they link.
-- Prefer adding fewer, important shortcuts over many seemingly important ones. Not only can a long list overwhelm users, but it may also be truncated by some platforms or browsers.
+- Prefer adding a few important shortcuts. A long list can not only overwhelm users, but may also be truncated by some platforms or browsers.
 
 ## Examples
 
