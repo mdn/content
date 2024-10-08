@@ -53,7 +53,7 @@ If it is, we fetch the image with the ["Fetch API"](/en-US/docs/Web/API/Fetch_AP
 async function writeClipImg() {
   try {
     if (ClipboardItem.supports("image/svg+xml")) {
-      const imgURL = "/myimage.svg";
+      const imgURL = "/my-image.svg";
       const data = await fetch(imgURL);
       const blob = await data.blob();
       await navigator.clipboard.write([
