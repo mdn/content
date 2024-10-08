@@ -36,4 +36,6 @@ inputElement.formAction = "/cgi-bin/publish";
 - {{domxref("HTMLInputElement.formMethod")}}
 - {{domxref("HTMLInputElement.formNoValidate")}}
 - {{domxref("HTMLInputElement.formTarget")}}
+- [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit)
+- [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/submit)
 - [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data)
