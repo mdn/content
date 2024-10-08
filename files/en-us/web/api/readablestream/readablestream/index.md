@@ -172,6 +172,7 @@ An object defining a body for the response can be `null` (which is the default v
     - {{domxref("URLSearchParams")}}
     - {{jsxref("String")}}
     - `string` literal
+
 ## Specifications
 
 {{Specifications}}
