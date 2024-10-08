@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.DOMException.DOMException
 ---
 
-{{ APIRef("DOM") }}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`DOMException()`** constructor returns a
 {{domxref("DOMException")}} object with a specified message and name.
