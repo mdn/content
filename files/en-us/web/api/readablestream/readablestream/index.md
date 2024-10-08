@@ -160,6 +160,7 @@ for await (const chunk of newStream) {
   console.log(decoder.decode(chunk)); //Hello World
 }
 ```
+
 An object defining a body for the response can be `null` (which is the default value), or one of:
 
     - {{domxref("Blob")}}
