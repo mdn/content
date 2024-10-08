@@ -66,7 +66,7 @@ Browsers can use this information to create a context menu, which is typically d
     - `short_name` {{Optional_Inline}}
 
       - : A string that represents a short version of the shortcut's name.
-        It can be used where space to display the full name of the shortcut is insufficient.
+        Browsers may use this in contexts where there isn't enough space to display the full name.
 
     - `description` {{Optional_Inline}}
 
@@ -76,7 +76,7 @@ Browsers can use this information to create a context menu, which is typically d
     - `url`
 
       - : An app URL that opens when the associated shortcut is activated.
-        The URL must be within the scope of the web app manifest.
+        The URL must be within the [scope](/en-US/docs/Web/Manifest/scope) of the web app manifest.
         If the value is absolute, it should be same-origin with the page that links to the manifest file.
         If the value is relative, it is resolved against the manifest file's URL.
 
