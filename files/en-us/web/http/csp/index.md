@@ -101,14 +101,14 @@ A website administrator wants to allow users of a web application to include ima
 but to restrict audio or video media to trusted providers, and all scripts only to a specific server that hosts trusted code.
 
 ```http
-Content-Security-Policy: default-src 'self'; img-src *; media-src example.org example.net; script-src userscripts.example.com
+Content-Security-Policy: default-src 'self'; img-src *; media-src example.org example.net; script-src userscript.example.com
 ```
 
 Here, by default, content is only permitted from the document's origin, with the following exceptions:
 
 - Images may load from anywhere (note the "\*" wildcard).
 - Media is only allowed from example.org and example.net (and not from subdomains of those sites).
-- Executable script is only allowed from userscripts.example.com.
+- Executable script is only allowed from userscript.example.com.
 
 ### Example 4
 

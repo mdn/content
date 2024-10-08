@@ -179,6 +179,11 @@ For each of them, use the standard equivalent provided.
 - `-webkit-padding-start`
   - : Use the standard {{CSSxRef("padding-inline-start")}} property instead.
 
+## -webkit-prefixed property values
+
+- `-webkit-fill-available`
+  - : Used with sizing properties like {{CSSxRef("width")}} and {{CSSxRef("height")}}, to allow elements to take up all the available space within their parent container. The flexbox `stretch` value (see for example {{CSSxRef("align-items")}} and {{CSSxRef("justify-items")}}) provides a standard replacement.
+
 ## Pseudo-classes
 
 - {{CSSxRef(":animating-full-screen-transition", ":-webkit-animating-full-screen-transition")}}
