@@ -196,7 +196,7 @@ start();
 ```
 
 > [!NOTE]
-> The {{domxref("setTimeout")}} function wraps the `write()` call in a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block to handle any errors that can arise if the application tries to write to the stream after it has been closed.
+> The {{domxref("Window.setTimeout", "setTimeout()")}} function wraps the `write()` call in a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block to handle any errors that can arise if the application tries to write to the stream after it has been closed.
 
 We now include a promise-style code section to inform the user of the code and reason if the WebSocket connection is closed, as signalled by the {{domxref("WebSocketStream.closed", "closed")}} promise fulfilling:
 

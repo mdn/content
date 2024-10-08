@@ -184,6 +184,8 @@ The text before the directive will not be affected, but the text after the direc
 
 You may use `%c` multiple times:
 
+<!-- cSpell:ignore corange cred -->
+
 ```js
 console.log(
   "Multiple styles: %cred %corange",

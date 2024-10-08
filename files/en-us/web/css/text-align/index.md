@@ -21,7 +21,6 @@ text-align: left;
 text-align: right;
 text-align: center;
 text-align: justify;
-text-align: justify-all;
 text-align: match-parent;
 
 /* Block alignment values (Non-standard syntax) */
@@ -52,8 +51,6 @@ The `text-align` property is specified as a single keyword from the list below.
   - : The inline contents are centered within the line box.
 - `justify`
   - : The inline contents are justified. Spaces out the content to line up its left and right edges to the left and right edges of the line box, except for the last line.
-- `justify-all`
-  - : Same as `justify`, but also forces the last line to be justified.
 - `match-parent`
   - : Similar to `inherit`, but the values `start` and `end` are calculated according to the parent's {{cssxref("direction")}} and are replaced by the appropriate `left` or `right` value.
 

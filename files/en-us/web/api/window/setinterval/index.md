@@ -1,16 +1,16 @@
 ---
-title: setInterval() global function
+title: "Window: setInterval() method"
 short-title: setInterval()
-slug: Web/API/setInterval
-page-type: web-api-global-function
+slug: Web/API/Window/setInterval
+page-type: web-api-instance-method
 browser-compat: api.setInterval
 ---
 
-{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
+{{APIRef("HTML DOM")}}
 
-The **`setInterval()`** method, offered on the {{domxref("Window")}} and {{domxref("WorkerGlobalScope")}} interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
+The **`setInterval()`** method of the {{domxref("Window")}} interface repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
 
-This method returns an interval ID which uniquely identifies the interval, so you can remove it later by calling {{domxref("clearInterval", "clearInterval()")}}.
+This method returns an interval ID which uniquely identifies the interval, so you can remove it later by calling {{domxref("Window.clearInterval", "clearInterval()")}}.
 
 ## Syntax
 
@@ -40,9 +40,9 @@ setInterval(func, delay, arg1, arg2, /* …, */ argN)
 
 ### Return value
 
-The returned `intervalID` is a numeric, non-zero value which identifies the timer created by the call to `setInterval()`; this value can be passed to {{domxref("clearInterval()")}} to cancel the interval.
+The returned `intervalID` is a numeric, non-zero value which identifies the timer created by the call to `setInterval()`; this value can be passed to {{domxref("Window.clearInterval", "clearInterval()")}} to cancel the interval.
 
-It may be helpful to be aware that `setInterval()` and {{domxref("setTimeout()")}} share the same pool of IDs, and that `clearInterval()` and {{domxref("clearTimeout", "clearTimeout()")}} can technically be used interchangeably.
+It may be helpful to be aware that `setInterval()` and {{domxref("Window.setTimeout", "setTimeout()")}} share the same pool of IDs, and that `clearInterval()` and {{domxref("Window.clearTimeout", "clearTimeout()")}} can technically be used interchangeably.
 For clarity, however, you should try to always match them to avoid confusion when maintaining your code.
 
 > [!NOTE]
@@ -124,8 +124,6 @@ document.getElementById("stop").addEventListener("click", stopTextColor);
 
 {{EmbedLiveSample("Example_2:_Alternating_two_colors")}}
 
-See also: [`clearInterval()`](/en-US/docs/Web/API/clearInterval).
-
 ## The "this" problem
 
 When you pass a method to `setInterval()` or any other function, it is invoked with the wrong [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) value.
@@ -151,7 +149,7 @@ myArray.myMethod = function (sProperty) {
 myArray.myMethod(); // prints "zero,one,two"
 myArray.myMethod(1); // prints "one"
 setTimeout(myArray.myMethod, 1000); // prints "[object Window]" after 1 second
-setTimeout(myArray.myMethod, 1500, "1"); // prints "undefined" after 1,5 seconds
+setTimeout(myArray.myMethod, 1500, "1"); // prints "undefined" after 1.5 seconds
 
 // Passing the 'this' object with .call won't work
 // because this will change the value of this inside setTimeout itself
@@ -174,10 +172,10 @@ If you need to support IE, use the [`Function.prototype.bind()`](/en-US/docs/Web
 
 The `setInterval()` function is commonly used to set a delay for functions
 that are executed again and again, such as animations. You can cancel the interval using
-{{domxref("clearInterval()")}}.
+{{domxref("Window.clearInterval", "clearInterval()")}}.
 
 If you wish to have your function called _once_ after the specified delay, use
-{{domxref("setTimeout()")}}.
+{{domxref("Window.setTimeout", "setTimeout()")}}.
 
 ### Delay restrictions
 
@@ -193,13 +191,13 @@ Browsers may enforce even more stringent minimum values for the interval under s
 circumstances, although these should not be common. Note also that the actual amount of
 time that elapses between calls to the callback may be longer than the given
 `delay`; see
-[Reasons for delays longer than specified](/en-US/docs/Web/API/setTimeout#reasons_for_delays_longer_than_specified) for examples.
+[Reasons for delays longer than specified](/en-US/docs/Web/API/Window/setTimeout#reasons_for_delays_longer_than_specified) for examples.
 
 ### Ensure that execution duration is shorter than interval frequency
 
 If there is a possibility that your logic could take longer to execute than the
 interval time, it is recommended that you recursively call a named function using
-{{domxref("setTimeout()")}}. For example, if
+{{domxref("Window.setTimeout", "setTimeout()")}}. For example, if
 using `setInterval()` to poll a remote server every 5 seconds, network
 latency, an unresponsive server, and a host of other issues could prevent the request
 from completing in its allotted time. As such, you may find yourself with queued up XHR
@@ -234,7 +232,7 @@ interval has completed before recursing.
 ## See also
 
 - [Polyfill of `setInterval` which allows passing arguments to the callback in `core-js`](https://github.com/zloirock/core-js#settimeout-and-setinterval)
-- {{domxref("setTimeout()")}}
-- {{domxref("clearTimeout()")}}
-- {{domxref("clearInterval()")}}
-- {{domxref("window.requestAnimationFrame()")}}
+- {{domxref("Window.clearInterval()")}}
+- {{domxref("WorkerGlobalScope.setInterval()")}}
+- {{domxref("Window.setTimeout()")}}
+- {{domxref("Window.requestAnimationFrame()")}}
