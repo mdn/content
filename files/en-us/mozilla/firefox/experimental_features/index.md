@@ -1120,7 +1120,7 @@ The CSS [`calc()`](/en-US/docs/Web/CSS/calc) function can now parse color channe
 
 The [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module defines a number of features that allow elements to be defined as anchor elements, and for other elements to be positioned relative to anchor elements.
 This allows, for example, tooltips to be displayed alongside associated content as it scrolls through the viewport, moving as needed when it would overflow the viewport, and disappearing when the anchor moves offscreen.
-The set of features are being progressively rolled out behind a preference ([Firefox bug 1889561](https://bugzil.la/1889561)).
+The set of features are being progressively rolled out behind a preference ([Firefox bug 1838746](https://bugzil.la/1838746)).
 
 The parts that have been implemented include:
 
