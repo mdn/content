@@ -62,7 +62,7 @@ The `padding-top` property is specified as a single value chosen from the list b
 .content {
   padding-top: 5%;
 }
-.sidebox {
+.side-box {
   padding-top: 10px;
 }
 ```

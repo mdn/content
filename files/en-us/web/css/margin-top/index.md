@@ -59,7 +59,7 @@ The `margin-top` property is specified as the keyword `auto`, or a `<length>`, o
 .content {
   margin-top: 5%;
 }
-.sidebox {
+.side-box {
   margin-top: 10px;
 }
 .logo {
