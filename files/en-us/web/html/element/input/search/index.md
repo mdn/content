@@ -135,7 +135,7 @@ This renders like so:
 
 {{EmbedLiveSample("Basic_example", 600, 40)}}
 
-`q` is the most common `name` given to search inputs, although it's not mandatory. When submitted, the data name/value pair sent to the server will be `q=searchterm`.
+`q` is the most common `name` given to search inputs, although it's not mandatory. When submitted, the data name/value pair sent to the server will be `q=searchTerm`.
 
 > [!NOTE]
 > You must remember to set a [`name`](/en-US/docs/Web/HTML/Element/input#name) for your input, otherwise nothing will be submitted.

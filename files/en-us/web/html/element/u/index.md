@@ -56,6 +56,8 @@ This example uses the `<u>` element and some CSS to display a paragraph which in
 
 #### HTML
 
+<!-- cSpell:ignore wrnogly -->
+
 ```html
 <p>This paragraph includes a <u class="spelling">wrnogly</u> spelled word.</p>
 ```
@@ -113,7 +115,7 @@ Book titles should be presented using the {{HTMLElement("cite")}} element instea
 ##### Using the cite element
 
 ```html
-<p>The class read <cite>Moby Dick</cite> in the first term.</p>
+<p>The class read <cite>Moby-Dick</cite> in the first term.</p>
 ```
 
 {{EmbedLiveSample("Using_the_cite_element", 650, 80)}}
@@ -123,7 +125,7 @@ Book titles should be presented using the {{HTMLElement("cite")}} element instea
 The default styling for the `<cite>` element renders the text in italics. You can override that using CSS:
 
 ```html
-<p>The class read <cite>Moby Dick</cite> in the first term.</p>
+<p>The class read <cite>Moby-Dick</cite> in the first term.</p>
 ```
 
 ```css
