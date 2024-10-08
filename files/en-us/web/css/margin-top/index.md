@@ -82,5 +82,5 @@ The `margin-top` property is specified as the keyword `auto`, or a `<length>`, o
 
 - {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}}
 - {{cssxref("margin")}} shorthand
-- {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, and the {{cssxref("margin-block")}} shorthand
-- {{cssxref("margin-inline-start")}}, {{cssxref("margin-inline-end")}}, and the {{cssxref("margin-inline")}} shorthand
+- {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, and {{cssxref("margin-inline-end")}}
+- {{cssxref("margin-block")}} and {{cssxref("margin-inline")}} shorthands

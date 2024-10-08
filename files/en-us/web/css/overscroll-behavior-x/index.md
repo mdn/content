@@ -76,7 +76,7 @@ main > div {
 
 ## See also
 
-- {{cssxref("overscroll-behavior-x")}}
+- {{cssxref("overscroll-behavior")}}
 - {{cssxref("overscroll-behavior-y")}}
 - {{cssxref("overscroll-behavior-inline")}}
 - {{cssxref("overscroll-behavior-block")}}
