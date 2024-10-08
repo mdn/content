@@ -106,5 +106,5 @@ document.getElementById("okButton").addEventListener(
 
 ## See also
 
-- [hidden](/en-US/docs/Web/HTML/Global_attributes#hidden) attribute
+- [hidden](/en-US/docs/Web/HTML/Global_attributes/hidden) attribute
 - {{cssxref("display")}}

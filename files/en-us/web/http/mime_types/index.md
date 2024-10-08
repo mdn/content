@@ -1,6 +1,6 @@
 ---
 title: MIME types (IANA media types)
-slug: Web/HTTP/Basics_of_HTTP/MIME_types
+slug: Web/HTTP/MIME_types
 page-type: guide
 ---
 
@@ -207,7 +207,7 @@ The [codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs) guide e
 As for MIME types of audio or video files, they typically specify the container format (file type).
 The optional [codecs parameter](/en-US/docs/Web/Media/Formats/codecs_parameter) can be added to the MIME type to further specify which codecs to use and what options were used to encode the media, such as codec profile, level, or other such information.
 
-For more information on common media types, see the [Common MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types) page.
+For more information on common media types, see the [Common MIME types](/en-US/docs/Web/HTTP/MIME_types/Common_types) page.
 
 ### multipart/form-data
 
