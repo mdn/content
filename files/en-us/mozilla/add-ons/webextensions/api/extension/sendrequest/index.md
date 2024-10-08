@@ -24,7 +24,7 @@ chrome.extension.sendRequest(
 )
 ```
 
-This API is also available as `browser.extension.sendRequest()` in a [version that returns a promise](/en-US/docs/Mozilla/Add-ons/WebExtensions/API#callbacks_and_promises).
+This API is also available as `browser.extension.sendRequest()` in a version that returns a promise.
 
 ### Parameters
 

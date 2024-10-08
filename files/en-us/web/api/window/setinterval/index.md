@@ -42,7 +42,7 @@ setInterval(func, delay, arg1, arg2, /* …, */ argN)
 
 The returned `intervalID` is a numeric, non-zero value which identifies the timer created by the call to `setInterval()`; this value can be passed to {{domxref("Window.clearInterval", "clearInterval()")}} to cancel the interval.
 
-It may be helpful to be aware that `setInterval()` and {{domxref("setTimeout()")}} share the same pool of IDs, and that `clearInterval()` and {{domxref("clearTimeout", "clearTimeout()")}} can technically be used interchangeably.
+It may be helpful to be aware that `setInterval()` and {{domxref("Window.setTimeout", "setTimeout()")}} share the same pool of IDs, and that `clearInterval()` and {{domxref("Window.clearTimeout", "clearTimeout()")}} can technically be used interchangeably.
 For clarity, however, you should try to always match them to avoid confusion when maintaining your code.
 
 > [!NOTE]
@@ -175,7 +175,7 @@ that are executed again and again, such as animations. You can cancel the interv
 {{domxref("Window.clearInterval", "clearInterval()")}}.
 
 If you wish to have your function called _once_ after the specified delay, use
-{{domxref("setTimeout()")}}.
+{{domxref("Window.setTimeout", "setTimeout()")}}.
 
 ### Delay restrictions
 
@@ -191,13 +191,13 @@ Browsers may enforce even more stringent minimum values for the interval under s
 circumstances, although these should not be common. Note also that the actual amount of
 time that elapses between calls to the callback may be longer than the given
 `delay`; see
-[Reasons for delays longer than specified](/en-US/docs/Web/API/setTimeout#reasons_for_delays_longer_than_specified) for examples.
+[Reasons for delays longer than specified](/en-US/docs/Web/API/Window/setTimeout#reasons_for_delays_longer_than_specified) for examples.
 
 ### Ensure that execution duration is shorter than interval frequency
 
 If there is a possibility that your logic could take longer to execute than the
 interval time, it is recommended that you recursively call a named function using
-{{domxref("setTimeout()")}}. For example, if
+{{domxref("Window.setTimeout", "setTimeout()")}}. For example, if
 using `setInterval()` to poll a remote server every 5 seconds, network
 latency, an unresponsive server, and a host of other issues could prevent the request
 from completing in its allotted time. As such, you may find yourself with queued up XHR
@@ -232,7 +232,7 @@ interval has completed before recursing.
 ## See also
 
 - [Polyfill of `setInterval` which allows passing arguments to the callback in `core-js`](https://github.com/zloirock/core-js#settimeout-and-setinterval)
-- {{domxref("setTimeout()")}}
-- {{domxref("Window.clearInterval()")}} and {{domxref("WorkerGlobalScope.clearInterval()")}}
+- {{domxref("Window.clearInterval()")}}
 - {{domxref("WorkerGlobalScope.setInterval()")}}
-- {{domxref("Window.requestAnimationFrame()")}} and {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}}
+- {{domxref("Window.setTimeout()")}}
+- {{domxref("Window.requestAnimationFrame()")}}

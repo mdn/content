@@ -85,7 +85,7 @@ const aliceTiming = {
 
 You'll notice a few differences here from how equivalent values are represented in CSS:
 
-- For one, the duration is in milliseconds as opposed to seconds — 3000 not 3s. Like {{domxref("setTimeout()")}} and {{domxref("Window.requestAnimationFrame()")}}, the Web Animations API only takes milliseconds.
+- For one, the duration is in milliseconds as opposed to seconds — 3000 not 3s. Like {{domxref("Window.setTimeout", "setTimeout()")}} and {{domxref("Window.requestAnimationFrame()")}}, the Web Animations API only takes milliseconds.
 - The other thing you'll notice is that it's `iterations`, not `iteration-count`.
 
 > [!NOTE]
@@ -241,7 +241,7 @@ When animating elements, a common use case is to persist the final state of the 
 - The browser has to maintain the state of the animation while it is still active, so the animation continues to consume resources even though it is no longer animating. Note that this is somewhat alleviated by the browser [automatically removing filling animations](#automatically_removing_filling_animations).
 - Styles applied by animations have a [higher precedence in the cascade](/en-US/docs/Web/CSS/Cascade#cascading_order) than specified styles, so it can be difficult to override them when needed.
 
-A better approach is to use the {{domxref("Animation.commitStyles()")}} method. This writes the computed values of the animation's current styles into its target element's [`style`](/en-US/docs/Web/HTML/Global_attributes#style) attribute, after which the element can be restyled normally.
+A better approach is to use the {{domxref("Animation.commitStyles()")}} method. This writes the computed values of the animation's current styles into its target element's [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute, after which the element can be restyled normally.
 
 ## Automatically removing filling animations
 

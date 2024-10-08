@@ -120,7 +120,7 @@ Generally, web development is thought of as three languages: [HTML](/en-US/docs/
 3. Optimization. This is provided by _bundlers_, which are tools that get your code ready for production, for example by "[tree-shaking](/en-US/docs/Glossary/Tree_shaking)" to make sure only the parts of your code libraries that you are actually using are put into your final production code, or "[minifying](/en-US/docs/Glossary/Minification)" to remove all the whitespace in your production code, making it as small as possible before it is uploaded to a server. For example:
 
    - [Webpack](https://webpack.js.org/) has been the most popular bundler for a long time, featuring a huge number of plugins and a powerful configuration system. However, it is also known for being quite complex to set up, and is slow compared to more modern alternatives.
-   - [Vite](https://vitejs.dev/) is a more modern build tool that is popular for its speed, simplicity, and richness of features.
+   - [Vite](https://vite.dev/) is a more modern build tool that is popular for its speed, simplicity, and richness of features.
 
 ### Post development
 

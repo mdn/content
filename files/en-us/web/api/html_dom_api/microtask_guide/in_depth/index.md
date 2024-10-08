@@ -12,7 +12,7 @@ JavaScript is an inherently single-threaded language. It was designed in an era 
 
 As time passed, of course, we know that computers have evolved into powerful multi-core systems, and JavaScript has become one of the most prolifically-used languages in the computing world. A vast number of the most popular applications are based at least in part on JavaScript code. To support this, it was necessary to find ways to allow for projects to escape the limitations of a single-threaded language.
 
-Starting with the addition of timeouts and intervals as part of the Web API ({{domxref("setTimeout()")}} and {{domxref("Window.setInterval", "setInterval()")}}), the JavaScript environment provided by Web browsers has gradually advanced to include powerful features that enable scheduling of tasks, multi-threaded application development, and so forth. To understand where {{domxref("Window.queueMicrotask()", "queueMicrotask()")}} comes into play here, it's helpful to understand how the JavaScript runtime operates when scheduling and running code.
+Starting with the addition of timeouts and intervals as part of the Web API ({{domxref("Window.setTimeout", "setTimeout()")}} and {{domxref("Window.setInterval", "setInterval()")}}), the JavaScript environment provided by Web browsers has gradually advanced to include powerful features that enable scheduling of tasks, multi-threaded application development, and so forth. To understand where {{domxref("Window.queueMicrotask()", "queueMicrotask()")}} comes into play here, it's helpful to understand how the JavaScript runtime operates when scheduling and running code.
 
 ## JavaScript execution contexts
 
@@ -119,7 +119,7 @@ The specifics may vary from browser to browser, depending on how they're impleme
 
 #### Tasks vs. microtasks
 
-A **task** is anything scheduled to be run by the standard mechanisms such as initially starting to execute a script, asynchronously dispatching an event, and so forth. Other than by using events, you can enqueue a task by using {{domxref("setTimeout()")}} or {{domxref("Window.setInterval", "setInterval()")}}.
+A **task** is anything scheduled to be run by the standard mechanisms such as initially starting to execute a script, asynchronously dispatching an event, and so forth. Other than by using events, you can enqueue a task by using {{domxref("Window.setTimeout", "setTimeout()")}} or {{domxref("Window.setInterval", "setInterval()")}}.
 
 The difference between the task queue and the microtask queue is simple but very important:
 
