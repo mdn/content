@@ -1,15 +1,14 @@
 ---
-title: clearTimeout() global function
+title: "Window: clearTimeout() method"
 short-title: clearTimeout()
-slug: Web/API/clearTimeout
-page-type: web-api-global-function
+slug: Web/API/Window/clearTimeout
+page-type: web-api-instance-method
 browser-compat: api.clearTimeout
 ---
 
-{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
+{{APIRef("HTML DOM")}}
 
-The global **`clearTimeout()`** method cancels a timeout previously established
-by calling {{domxref("setTimeout()")}}.
+The **`clearTimeout()`** method of the {{domxref("Window")}} interface cancels a timeout previously established by calling {{domxref("Window.setTimeout()")}}.
 
 If the parameter provided does not identify a previously established action,
 this method does nothing.
@@ -26,12 +25,7 @@ clearTimeout(timeoutID)
   - : The identifier of the timeout you want to cancel. This ID was returned by the
     corresponding call to `setTimeout()`.
 
-It's worth noting that the pool of IDs used by
-{{domxref("setTimeout()")}} and
-{{domxref("setInterval()")}} are shared, which
-means you can technically use `clearTimeout()` and
-{{domxref("clearInterval", "clearInterval()")}}
-interchangeably. However, for clarity, you should avoid doing so.
+It's worth noting that the pool of IDs used by {{domxref("Window.setTimeout", "setTimeout()")}} and {{domxref("Window.setInterval", "setInterval()")}} are shared, which means you can technically use `clearTimeout()` and {{domxref("Window.clearInterval", "clearInterval()")}} interchangeably. However, for clarity, you should avoid doing so.
 
 ### Return value
 
@@ -86,7 +80,7 @@ exception is thrown.
 
 ## See also
 
-- {{domxref("setTimeout()")}}
-- {{domxref("setInterval()")}}
-- {{domxref("clearInterval()")}}
-- {{domxref("Window.requestAnimationFrame()")}}
+- {{domxref("Window.setTimeout()")}}
+- {{domxref("WorkerGlobalScope.clearTimeout()")}}
+- {{domxref("Window.clearInterval()")}}
+- {{domxref("Window.cancelAnimationFrame()")}}

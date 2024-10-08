@@ -1120,7 +1120,7 @@ The CSS [`calc()`](/en-US/docs/Web/CSS/calc) function can now parse color channe
 
 The [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module defines a number of features that allow elements to be defined as anchor elements, and for other elements to be positioned relative to anchor elements.
 This allows, for example, tooltips to be displayed alongside associated content as it scrolls through the viewport, moving as needed when it would overflow the viewport, and disappearing when the anchor moves offscreen.
-The set of features are being progressively rolled out behind a preference ([Firefox bug 1889561](https://bugzil.la/1889561)).
+The set of features are being progressively rolled out behind a preference ([Firefox bug 1838746](https://bugzil.la/1838746)).
 
 The parts that have been implemented include:
 
@@ -1207,6 +1207,46 @@ This includes: `SVGPathSegList`, [SVGPathElement.getPathSegAtLength()](/en-US/do
 </table>
 
 ## JavaScript
+
+### Promise.try()
+
+{{jsxref("Promise.try()")}} is a convenience method that takes a callback of any kind (returns or throws, synchronously or asynchronously) and wraps its result in a {{jsxref("Promise")}} so that promise semantics (e.g. {{jsxref("Promise.then", ".then()")}}, {{jsxref("Promise.catch", ".catch()")}}) can be used to handle it ([Firefox bug 1905364](https://bugzil.la/1905364)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>132</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>javascript.options.experimental.promise_try</code></td>
+    </tr>
+  </tbody>
+</table>
 
 ### Regular expression (?ims-ims:...) modifiers
 

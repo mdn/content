@@ -1,6 +1,6 @@
 ---
 title: Evolution of HTTP
-slug: Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
+slug: Web/HTTP/Evolution_of_HTTP
 page-type: guide
 ---
 
@@ -26,7 +26,7 @@ The HTTP protocol used in those early phases was very simple. It was later dubbe
 The initial version of HTTP had no version number; it was later called 0.9 to differentiate it from later versions. HTTP/0.9 was extremely simple: requests consisted of a single line and started with the only possible method {{HTTPMethod("GET")}} followed by the path to the resource. The full URL wasn't included as the protocol, server, and port weren't necessary once connected to the server.
 
 ```http
-GET /mypage.html
+GET /my-page.html
 ```
 
 The response was extremely simple, too: it only consisted of the file itself.
@@ -51,7 +51,7 @@ HTTP/0.9 was very limited, but browsers and servers quickly made it more versati
 At this point in time, a typical request and response looked like this:
 
 ```http
-GET /mypage.html HTTP/1.0
+GET /my-page.html HTTP/1.0
 User-Agent: NCSA_Mosaic/2.0 (Windows 3.1)
 
 HTTP/1.0 200 OK
@@ -60,14 +60,14 @@ Server: CERN/3.0 libwww/2.17
 Content-Type: text/html
 <HTML>
 A page with an image
-  <IMG SRC="/myimage.gif">
+  <IMG SRC="/my-image.gif">
 </HTML>
 ```
 
 It was followed by a second connection and a request to fetch the image (with the corresponding response):
 
 ```http
-GET /myimage.gif HTTP/1.0
+GET /my-image.gif HTTP/1.0
 User-Agent: NCSA_Mosaic/2.0 (Windows 3.1)
 
 HTTP/1.0 200 OK

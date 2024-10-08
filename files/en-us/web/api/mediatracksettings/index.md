@@ -94,8 +94,6 @@ Tracks containing video shared from a user's screen (regardless of whether the s
 
   - : A string which specifies the type of source the track contains; one of:
 
-    - `application`
-      - : The stream contains all of the windows of the application chosen by the user rendered into the one video track.
     - `browser`
       - : The stream contains the contents of a single browser tab selected by the user.
     - `monitor`
