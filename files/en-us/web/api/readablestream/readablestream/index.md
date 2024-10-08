@@ -161,17 +161,8 @@ for await (const chunk of newStream) {
 }
 ```
 
-An object defining a body for the response can be `null` (which is the default value), or one of:
 
-    - {{domxref("Blob")}}
-    - {{jsxref("ArrayBuffer")}}
-    - {{jsxref("TypedArray")}}
-    - {{jsxref("DataView")}}
-    - {{domxref("FormData")}}
-    - {{domxref("ReadableStream")}}
-    - {{domxref("URLSearchParams")}}
-    - {{jsxref("String")}}
-    - `string` literal
+An object defining a body for the response can be `null` (which is the default value), or one of {{domxref("Blob")}}, {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, {{jsxref("DataView")}}, {{domxref("FormData")}}, {{domxref("ReadableStream")}}, {{domxref("URLSearchParams")}}, {{jsxref("String")}}, or `string` literal.
 
 ## Specifications
 
