@@ -148,8 +148,8 @@ const stream = new ReadableStream({
 A useful way to construct a `ReadableStream` from a variety of input types is to use the body property of a {{domxref("Response.Response","Response")}} object
 
 ```js
-function newReadableStream(content){
-    return new Response(content).body;
+function newReadableStream(content) {
+  return new Response(content).body;
 }
 
 const newStream = newReadableStream("Hello World");
