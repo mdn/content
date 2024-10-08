@@ -38,6 +38,9 @@ This article provides information about the changes in Firefox 132 that affect d
 
 ### APIs
 
+- Developers can now provide a hint about the relative priority for fetching a particular resources compared to other resources of the same type.
+  This can be used, for example, to indicate that a image is more or less important to the user experience that other images. The priority may be set using the `fetchpriority` attribute of the {{htmlelement("link")}}, {{htmlelement("script")}}, or {{htmlelement("img")}} elements, the `fetchPriority` property of the {{domxref("HTMLLinkElement")}}, {{domxref("HTMLScriptElement")}}, or {{domxref("HTMLImageElement")}} interfaces, the [`options.priority`](/en-US/docs/Web/API/RequestInit#priority) parameter passed to the [`Request()` constructor](/en-US/docs/Web/API/Request/Request), or in the HTTP {{httpheader("Link")}} header. Note that this mechanism is complementary to other ways of setting the priority, such as preloading. ([Firefox bug 1854077](https://bugzil.la/1854077)).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
