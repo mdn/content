@@ -105,7 +105,7 @@ div {
 
 ## See also
 
-- {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and {{cssxref("left")}}.
+- {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and {{cssxref("left")}}
 - {{cssxref("inset-block")}} and {{cssxref("inset-inline")}}
 - {{cssxref("position")}}
 - [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module
