@@ -1208,6 +1208,46 @@ This includes: `SVGPathSegList`, [SVGPathElement.getPathSegAtLength()](/en-US/do
 
 ## JavaScript
 
+### Promise.try()
+
+{{jsxref("Promise.try()")}} is a convenience method that takes a callback of any kind (returns or throws, synchronously or asynchronously) and wraps its result in a {{jsxref("Promise")}} so that promise semantics (e.g. {{jsxref("Promise.then", ".then()")}}, {{jsxref("Promise.catch", ".catch()")}}) can be used to handle it ([Firefox bug 1905364](https://bugzil.la/1905364)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>132</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>javascript.options.experimental.promise_try</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ### Regular expression (?ims-ims:...) modifiers
 
 The [(?ims-ims:...)](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Modifier) regular expression modifiers allow you to make changes to only take effect in a specific part of a regex pattern.
