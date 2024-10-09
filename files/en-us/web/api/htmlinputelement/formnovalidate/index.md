@@ -40,7 +40,6 @@ console.log(inputElement.formNoValidate);
 - {{domxref("HTMLInputElement.formAction")}}
 - {{domxref("HTMLInputElement.formEnctype")}}
 - {{domxref("HTMLInputElement.formMethod")}}
-- {{domxref("HTMLInputElement.formNoValidate")}}
 - {{domxref("HTMLInputElement.formTarget")}}
 - [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit)
 - [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image)

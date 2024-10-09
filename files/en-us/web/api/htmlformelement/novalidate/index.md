@@ -40,7 +40,6 @@ console.log(element.noValidate);
 - {{domxref("HTMLFormElement.action")}}
 - {{domxref("HTMLFormElement.enctype")}}
 - {{domxref("HTMLFormElement.method")}}
-- {{domxref("HTMLFormElement.noValidate")}}
 - {{domxref("HTMLFormElement.target")}}
 - {{HTMLElement("form")}}
 - [Learn: Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)

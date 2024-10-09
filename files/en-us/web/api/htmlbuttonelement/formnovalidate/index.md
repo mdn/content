@@ -38,7 +38,6 @@ console.log(buttonElement.formNoValidate);
 - {{domxref("HTMLButtonElement.formAction")}}
 - {{domxref("HTMLButtonElement.formEnctype")}}
 - {{domxref("HTMLButtonElement.formMethod")}}
-- {{domxref("HTMLButtonElement.formNoValidate")}}
 - {{domxref("HTMLButtonElement.formTarget")}}
 - {{HTMLElement("form")}}
 - {{domxref("HTMLFormElement.noValidate")}}
