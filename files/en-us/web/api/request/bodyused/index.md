@@ -6,9 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.Request.bodyUsed
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-The read-only **`bodyUsed`** property of the
+The **`bodyUsed`** read-only property of the
 {{domxref("Request")}} interface is a boolean value that indicates
 whether the request body has been read yet.
 

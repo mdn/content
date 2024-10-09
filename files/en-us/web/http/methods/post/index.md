@@ -16,7 +16,7 @@ Successive identical `POST` requests may have additional effects, such as creati
 For HTML forms the format/encoding of the body content is determined by the [`enctype`](/en-US/docs/Web/HTML/Element/form#enctype) attribute of the {{HTMLElement("form")}} element or the [`formenctype`](/en-US/docs/Web/HTML/Element/input#formenctype) attribute of the {{HTMLElement("input") }} or {{HTMLElement("button")}} elements.
 The encoding may be one of the following:
 
-- `application/x-www-form-urlencoded`: the keys and values are encoded in key-value tuples separated by an ampersand (`&`), with an equals symbol (`=`) between the key and the value (e.g., `firstname=Frida&lastname=Kahlo`).
+- `application/x-www-form-urlencoded`: the keys and values are encoded in key-value tuples separated by an ampersand (`&`), with an equals symbol (`=`) between the key and the value (e.g., `first-name=Frida&last-name=Kahlo`).
   Non-alphanumeric characters in both keys and values are {{Glossary("Percent-encoding", "percent-encoded")}}: this is the reason why this type is not suitable to use with binary data and you should use `multipart/form-data` for this purpose instead.
 - `multipart/form-data`: each value is sent as a block of data ("body part"), with a user agent-defined delimiter (for example, `boundary="delimiter12345"`) separating each part.
   The keys are described in the {{HTTPHeader("Content-Disposition")}} header of each part or block of data.

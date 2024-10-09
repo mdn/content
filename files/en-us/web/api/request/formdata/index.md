@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Request.formData
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`formData()`** method of the {{domxref("Request")}} interface
 reads the request body and returns it as a promise that resolves with a {{domxref("FormData")}} object.

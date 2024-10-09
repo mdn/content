@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.uniform1f
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.uniform[1234][fi][v]()`** methods
 of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specify values of uniform

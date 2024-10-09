@@ -63,7 +63,7 @@ function render(now) {
 requestAnimationFrame(render);
 ```
 
-This code uses `requestAnimationFrame` to ask the browser to call the function "`render`" on each frame. `requestAnimationFrame` passes us the time in milliseconds since the page loaded. We convert that to seconds and then subtract from it the last time to compute `deltaTime`, which is the number of second since the last frame was rendered.
+This code uses `requestAnimationFrame` to ask the browser to call the function `render` on each frame. `requestAnimationFrame` passes us the time in milliseconds since the page loaded. We convert that to seconds and then subtract from it the last time to compute `deltaTime`, which is the number of second since the last frame was rendered.
 
 Finally, we update `squareRotation`.
 

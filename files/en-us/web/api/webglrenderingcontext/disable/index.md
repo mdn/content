@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.disable
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.disable()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) disables specific WebGL
 capabilities for this context.

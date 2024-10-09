@@ -11,7 +11,7 @@ spec-urls:
   - https://wicg.github.io/intervention-reporting/#intervention-report
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("Reporting API")}}
+{{SeeCompatTable}}{{DefaultAPISidebar("Reporting API")}}{{AvailableInWorkers}}
 
 The Reporting API provides a generic reporting mechanism for web applications to use to make reports available based on various platform features (for example [Content Security Policy](/en-US/docs/Web/HTTP/CSP), [Permissions-Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy), or feature deprecation reports) in a consistent manner.
 

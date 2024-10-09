@@ -19,7 +19,7 @@ In terms of performance, there is no difference between implementing an animatio
 
 ## requestAnimationFrame
 
-The {{domxref("Window.requestAnimationFrame","requestAnimationFrame()")}} API provides an efficient way to make animations in JavaScript. The callback function of the method is called by the browser before the next repaint on each frame. Compared to {{domxref("setTimeout()")}}/{{domxref("setInterval()")}}, which need a specific delay parameter, `requestAnimationFrame()` is much more efficient. Developers can create an animation by changing an element's style each time the loop is called (or updating the Canvas draw, or whatever.)
+The {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} API provides an efficient way to make animations in JavaScript. The callback function of the method is called by the browser before the next repaint on each frame. Compared to {{domxref("Window.setTimeout", "setTimeout()")}}/{{domxref("Window.setInterval", "setInterval()")}}, which need a specific delay parameter, `requestAnimationFrame()` is much more efficient. Developers can create an animation by changing an element's style each time the loop is called (or updating the Canvas draw, or whatever.)
 
 > [!NOTE]
 > Like CSS transitions and animations, `requestAnimationFrame()` pauses when the current tab is pushed into the background.
