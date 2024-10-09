@@ -97,13 +97,13 @@
   "dictionaryDefinitions": [
     {
       "name": "terms-abbreviations",
-      "path": "./terms-abbreviations.txt",
+      "path": "./dictionaries/terms-abbreviations.txt",
       "description": "Anything that may be used throughout the content: compound words, abbreviations, etc. They are considered as real words and will be suggested.",
       "addWords": true
     },
     {
       "name": "cultural-words",
-      "path": "./cultural-words.txt",
+      "path": "./dictionaries/cultural-words.txt",
       "description": "Culture-specific names: currencies, calendars, languages, big cities, countries, etc.",
       "addWords": true
     },
@@ -116,28 +116,28 @@
     // We recommend assessing applicability in the order the dictionaries are listed.
     {
       "name": "proper-names",
-      "path": "./proper-names.txt",
+      "path": "./dictionaries/proper-names.txt",
       "description": "Proper names: people, small towns, companies, products, fonts, online platform handles.",
       "addWords": false,
       "noSuggest": true
     },
     {
       "name": "non-english",
-      "path": "./non-english.txt",
+      "path": "./dictionaries/non-english.txt",
       "description": "Non-English words. Note that some non-English words denote well-known concepts, such as \"Adlam script\" or \"Adis Ababa\", in which case they should be placed in cultural-words. This dictionary is intended for entire scripts for demonstrating non-English languages.",
       "addWords": false,
       "noSuggest": true
     },
     {
       "name": "code-entities",
-      "path": "./code-entities.txt",
+      "path": "./dictionaries/code-entities.txt",
       "description": "This list contains compound words that aren't properly capitalized or obscure abbreviations that are only utilized by particular web APIs (e.g. HTML attributes, language codes, event names, etc.). Only include entities defined by standards or libraries here; variable names, strings, etc. that are created by MDN code examples should be added to ignore-list.",
       "addWords": false,
       "noSuggest": true
     },
     {
       "name": "ignore-list",
-      "path": "./ignore-list.txt",
+      "path": "./dictionaries/ignore-list.txt",
       "description": "Other gibberish words that are used for specific purposes. For example, placeholder identifiers, random strings, URLs (all lowercase), hashes, filler texts, etc. For purposefully misspelled words and/or words that are likely typos in other contexts, consider using cSpell:ignore instead.",
       "addWords": false,
       "noSuggest": true

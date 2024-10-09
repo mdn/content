@@ -1,7 +1,7 @@
 import fs from "node:fs";
 
 const check = process.argv[2] === "--check";
-const filePaths = process.argv.slice(2);
+const filePaths = process.argv.slice(check ? 3 : 2);
 
 if (!filePaths.length) {
   console.error(`No file paths provided.`);

@@ -17,8 +17,7 @@ export default {
     `yarn filecheck ${filenames.join(" ")}`,
   ],
   "*": (filenames) => [`node scripts/log-url-issues.js`],
-  ".vscode/{code-entities,ignore-list,non-english,proper-names,terms-abbreviations}.txt":
-    (filenames) => [
-      `node scripts/sort_and_unique_file_lines.js ${filenames.join(" ")}`,
-    ],
+  ".vscode/dictionaries/*.txt": (filenames) => [
+    `node scripts/sort_and_unique_file_lines.js ${filenames.join(" ")}`,
+  ],
 };
