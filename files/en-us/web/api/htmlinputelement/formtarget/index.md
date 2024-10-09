@@ -8,9 +8,13 @@ browser-compat: api.HTMLInputElement.formTarget
 
 {{APIRef("HTML DOM")}}
 
-The **`formTarget`** property of the {{domxref("HTMLInputElement")}} interface represents the form target of the {{HTMLElement("input")}} element. The `formtarget` is the tab, window, or iframe where the response of the submitted form {{HtmlElement("form")}} is to be displayed when the `<input>` with the `formTarget` is the method of form submission. It reflects the value of the `<input>`'s [`formtarget`](/en-US/docs/Web/HTML/Element/input#formtarget) attribute.
+The **`formTarget`** property of the {{domxref("HTMLInputElement")}} interface is the target of {{HtmlElement("form")}} as set on the {{HTMLElement("input")}} element. It reflects the value of the `<input>`'s [`formtarget`](/en-US/docs/Web/HTML/Element/input#formtarget) attribute.
 
-The value overrides the {{domxref("HTMLFormElement.target", "target")}} property of the {{domxref("HTMLFormElement")}} interface if the form is submitted via the input. This property can be retrieved or set. If not set, the value is the empty string (`""`).
+The `formtarget` is the tab, window, or iframe where the response of the submitted form is to be displayed.
+
+This property is valid only for [`submit`](/en-US/docs/Web/HTML/Element/input/submit) and [`image`](/en-US/docs/Web/HTML/Element/input/image) `<input>` elements.
+
+Its value overrides the {{domxref("HTMLFormElement.target", "target")}} property of the {{domxref("HTMLFormElement")}} interface if the form is submitted via the input. This property can be retrieved or set. If not set, the value is the empty string (`""`).
 
 ## Value
 
@@ -36,6 +40,7 @@ inputElement.formTarget = "_blank";
 - {{domxref("HTMLInputElement.formEnctype")}}
 - {{domxref("HTMLInputElement.formNoValidate")}}
 - {{domxref("HTMLInputElement.formMethod")}}
+- {{domxref("HTMLFormElement.target")}}
 - [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit)
-- [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/submit)
+- [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image)
 - [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data)
