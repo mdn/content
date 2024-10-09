@@ -438,7 +438,7 @@ You can see the example in action below (also [see it live here](https://mdn.git
 
 ### Read-only and read-write
 
-In a similar manner to `:disabled` and `:enabled`, the `:read-only` and `:read-write` pseudo-classes target two states that form inputs toggle between. As with disabled inputs, the user can't edit read-only inputs, but their values will be submitted to the server. Read-write means they can be edited — their default state.
+In a similar manner to `:disabled` and `:enabled`, the `:read-only` and `:read-write` pseudo-classes target two states that form inputs toggle between. As with disabled inputs, the user can't edit read-only inputs. However, unlike disabled inputs, read-only input values will be submitted to the server. Read-write means they can be edited — their default state.
 
 An input is set to read-only using the `readonly` attribute. As an example, imagine a confirmation page where the developer has sent the details filled in on previous pages over to this page, with the aim of getting the user to check them all in one place, add any final data that is needed, and then confirm the order by submitting. At this point, all the final form data can be sent to the server in one go.
 
