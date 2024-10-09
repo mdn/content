@@ -8,7 +8,7 @@ browser-compat: api.HTMLInputElement.formAction
 
 {{APIRef("HTML DOM")}}
 
-The **`formAction`** property of the {{domxref("HTMLInputElement")}} interface represents the form action of the {{HTMLElement("input")}} element. The form action is the URL of the program that is executed on the server when the form is submitted. It reflects the value of the `<input>`'s [`formaction`](/en-US/docs/Web/HTML/Element/input#formaction) attribute.
+The **`formAction`** property of the {{domxref("HTMLInputElement")}} interface is the URL of the program that is executed on the server when the form that owns this control is submitted. It reflects the value of the `<input>`'s [`formaction`](/en-US/docs/Web/HTML/Element/input#formaction) attribute.
 
 This property is valid only for [`submit`](/en-US/docs/Web/HTML/Element/input/submit) and [`image`](/en-US/docs/Web/HTML/Element/input/image) `<input>` elements.
 
