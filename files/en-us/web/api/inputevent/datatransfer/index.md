@@ -48,8 +48,16 @@ Try copying and pasting some of the content provided to see the effects.
 const editable = document.querySelector("p[contenteditable]");
 const result = document.querySelector(".result");
 
-editable.addEventListener("input", (e) => {
-  result.textContent = e.dataTransfer.getData("text/html");
+editable.addEventListener("paste", (e) => {
+  e.preventDefault();
+
+  let pastedContent = e.clipboardData.getData("text/html");
+
+  if (!pastedContent) {
+    pastedContent = e.clipboardData.getData("text/plain");
+  }
+
+  result.textContent = pastedContent;
 });
 ```
 
