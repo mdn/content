@@ -8,7 +8,7 @@ browser-compat: api.HTMLInputElement.formTarget
 
 {{APIRef("HTML DOM")}}
 
-The **`formTarget`** property of the {{domxref("HTMLInputElement")}} interface represents the form target of the {{HTMLElement("input")}} element. The `formtarget` is the tab, window, or iframe where the response of the submitted form {{HtmlElement("form")}} is to be displayed when the `<input>` is the method of form submission. It reflects the value of the `<input>`'s [`formtarget`](/en-US/docs/Web/HTML/Element/input#formtarget) attribute.
+The **`formTarget`** property of the {{domxref("HTMLInputElement")}} interface represents the form target of the {{HTMLElement("input")}} element. The `formtarget` is the tab, window, or iframe where the response of the submitted form {{HtmlElement("form")}} is to be displayed when the `<input>` with the `formTarget` is the method of form submission. It reflects the value of the `<input>`'s [`formtarget`](/en-US/docs/Web/HTML/Element/input#formtarget) attribute.
 
 The value overrides the {{domxref("HTMLFormElement.target", "target")}} property of the {{domxref("HTMLFormElement")}} interface if the form is submitted via the input. This property can be retrieved or set. If not set, the value is the empty string (`""`).
 
