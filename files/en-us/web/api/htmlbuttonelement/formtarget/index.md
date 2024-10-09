@@ -19,7 +19,7 @@ A string..
 ## Examples
 
 ```js
-btnEl.formTarget = "post";
+btnEl.formTarget = "_self";
 ```
 
 ## Specifications

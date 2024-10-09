@@ -19,7 +19,7 @@ A string.
 ## Examples
 
 ```js
-inputElement.formTarget = "post";
+inputElement.formTarget = "_blank";
 ```
 
 ## Specifications
