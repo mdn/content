@@ -14,7 +14,7 @@ The value overrides the {{domxref("HTMLFormElement.target", "target")}} property
 
 ## Value
 
-A string..
+A string.
 
 ## Examples
 
