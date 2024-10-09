@@ -134,7 +134,10 @@ Array.from({ length: 5 }, (v, i) => i);
 ```js
 // Sequence generator function (commonly referred to as "range", e.g. Python, Clojure, etc.)
 const range = (start, stop, step) =>
-  Array.from({ length: Math.ceil((stop - start) / step - 1) + 1 }, (_, i) => start + i * step);
+  Array.from(
+    { length: Math.ceil((stop - start) / step - 1) + 1 },
+    (_, i) => start + i * step,
+  );
 
 // Generate numbers from 0 (inclusive) to 4 (exclusive) with step 1
 range(0, 5, 1);
