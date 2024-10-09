@@ -229,7 +229,7 @@ select {
 ```
 
 ```html hidden
-<div id="gridcontainer">
+<div id="grid-container">
   <div id="item1">1</div>
   <div id="item2">2</div>
   <div id="item3">3</div>
@@ -238,8 +238,8 @@ select {
 </div>
 
 <div class="row">
-  <label for="gridvalues">place-items: </label>
-  <select id="gridvalues">
+  <label for="grid-values">place-items: </label>
+  <select id="grid-values">
     <option value="stretch">stretch</option>
     <option value="start">start</option>
     <option value="center">center</option>
@@ -266,8 +266,8 @@ select {
 ```
 
 ```js hidden
-const values = document.getElementById("gridvalues");
-const container = document.getElementById("gridcontainer");
+const values = document.getElementById("grid-values");
+const container = document.getElementById("grid-container");
 
 values.addEventListener("change", (evt) => {
   container.style.placeItems = evt.target.value;
@@ -277,7 +277,7 @@ values.addEventListener("change", (evt) => {
 #### CSS
 
 ```css
-#gridcontainer {
+#grid-container {
   height: 200px;
   width: 240px;
   place-items: stretch; /* You can change this value by selecting another option in the list */
@@ -286,7 +286,7 @@ values.addEventListener("change", (evt) => {
   grid-template-columns: repeat(3, 1fr);
 }
 
-#gridcontainer > div {
+#grid-container > div {
   width: 50px;
 }
 ```

@@ -70,7 +70,7 @@ To see local dependencies really shine, all you need to do is try to download an
 
 For a package manager to work, it needs to know where to install packages from, and this comes in the form of a package registry. The registry is a central place where a package is published and thus can be installed from. npm, as well as being a package manager, is also the name of the most commonly-used package registry for JavaScript packages. The npm registry exists at [npmjs.com](https://www.npmjs.com/).
 
-npm is not the only option. You could manage your own package registry — products like [Microsoft Azure](https://azure.microsoft.com/) allow you to create proxies to the npm registry (so you can override or lock certain packages), [GitHub also offers a package registry service](https://github.com/features/packages), and there will be likely more options appearing as time goes on.
+npm is not the only option. You could manage your own package registry — products like [Microsoft Azure](https://azure.microsoft.com/) allow you to create proxies to the npm registry (so you can override or lock certain packages), [GitHub also offers a package registry service](https://docs.github.com/en/packages), and there will be likely more options appearing as time goes on.
 
 What is important is that you ensure you've chosen the best registry for you. Many projects will use npm, and we'll stick to this in our examples throughout the rest of the module.
 
@@ -78,9 +78,9 @@ What is important is that you ensure you've chosen the best registry for you. Ma
 
 Let's run through an example to get you started with using a package manager and registry to install a command line utility.
 
-We will use [Vite](https://vitejs.dev/) to create a blank website. In the next article, we will expand on the toolchain to include more tools and show you how to deploy the site.
+We will use [Vite](https://vite.dev/) to create a blank website. In the next article, we will expand on the toolchain to include more tools and show you how to deploy the site.
 
-Vite provides some [init templates](https://vitejs.dev/guide/#scaffolding-your-first-vite-project), with all necessary dependencies and configurations, to get you started quickly in a real project. For demonstration, we will configure one from scratch, using the [React template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react) as a reference.
+Vite provides some [init templates](https://vite.dev/guide/#scaffolding-your-first-vite-project), with all necessary dependencies and configurations, to get you started quickly in a real project. For demonstration, we will configure one from scratch, using the [React template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react) as a reference.
 
 ### Setting up the app as an npm package
 

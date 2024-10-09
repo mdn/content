@@ -18,7 +18,7 @@ The **`font-variation-settings`** [CSS](/en-US/docs/Web/CSS) property provides l
 font-variation-settings: normal;
 
 /* Set values for variable font axis names */
-font-variation-settings: "XHGT" 0.7;
+font-variation-settings: "xhgt" 0.7;
 
 /* Global values */
 font-variation-settings: inherit;

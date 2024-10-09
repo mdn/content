@@ -39,7 +39,7 @@ HTTP requests are messages sent by the client to initiate an action on the serve
      - `POST / HTTP/1.1`
      - `GET /background.png HTTP/1.0`
      - `HEAD /test.html?query=alibaba HTTP/1.1`
-     - `OPTIONS /anypage.html HTTP/1.0`
+     - `OPTIONS /any-page.html HTTP/1.0`
    - A complete URL, known as the _absolute form_, is mostly used with `GET` when connected to a proxy.
      `GET https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages HTTP/1.1`
    - The authority component of a URL, consisting of the domain name and optionally the port (prefixed by a `':'`), is called the _authority form_. It is only used with `CONNECT` when setting up an HTTP tunnel.
@@ -69,7 +69,7 @@ Not all requests have one: requests with a {{HTTPMethod("GET")}} _[HTTP method](
 Bodies can be broadly divided into two categories:
 
 - Single-resource bodies, consisting of one single file, defined by the two headers: {{HTTPHeader("Content-Type")}} and {{HTTPHeader("Content-Length")}}.
-- [Multiple-resource bodies](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data), consisting of a multipart body, each containing a different bit of information. This is typically associated with [HTML Forms](/en-US/docs/Learn/Forms).
+- [Multiple-resource bodies](/en-US/docs/Web/HTTP/MIME_types#multipartform-data), consisting of a multipart body, each containing a different bit of information. This is typically associated with [HTML Forms](/en-US/docs/Learn/Forms).
 
 ## HTTP Responses
 
@@ -106,7 +106,7 @@ Bodies can be broadly divided into three categories:
 
 - Single-resource bodies, consisting of a single file of known length, defined by the two headers: {{HTTPHeader("Content-Type")}} and {{HTTPHeader("Content-Length")}}.
 - Single-resource bodies, consisting of a single file of unknown length, encoded by chunks with {{HTTPHeader("Transfer-Encoding")}} set to `chunked`.
-- [Multiple-resource bodies](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data), consisting of a multipart body, each containing a different section of information. These are relatively rare.
+- [Multiple-resource bodies](/en-US/docs/Web/HTTP/MIME_types#multipartform-data), consisting of a multipart body, each containing a different section of information. These are relatively rare.
 
 ## HTTP/2 Frames
 
