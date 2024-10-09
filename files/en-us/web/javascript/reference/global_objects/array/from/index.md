@@ -135,7 +135,7 @@ Array.from({ length: 5 }, (v, i) => i);
 // Sequence generator function (commonly referred to as "range", e.g. Python, Clojure, etc.)
 const range = (start, stop, step) =>
   Array.from(
-    { length: Math.ceil((stop - start) / step - 1) + 1 },
+    { length: Math.ceil((stop - start) / step) },
     (_, i) => start + i * step,
   );
 
