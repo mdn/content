@@ -24,15 +24,15 @@ new ErrorEvent(type, options)
 - `options` {{optional_inline}}
   - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
     - `message` {{optional_inline}}
-      - : A string containing a human-readable error message describing the problem. Lacking a [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) setting reduces error logging.
+      - : A string containing a human-readable error message describing the problem.
     - `filename` {{optional_inline}}
       - : A string containing the name of the script file in which the error occurred.
     - `lineno` {{optional_inline}}
-      - : An `integer` containing the line number of the script file on which the error occurred.
+      - : An integer containing the line number of the script file on which the error occurred.
     - `colno` {{optional_inline}}
-      - : An `integer` containing the column number of the script file on which the error occurred.
+      - : An integer containing the column number of the script file on which the error occurred.
     - `error` {{optional_inline}}
-      - : A JavaScript `Object` that is concerned by the event.
+      - : A JavaScript value, such as an {{jsxref("Error")}} or {{domxref("DOMException")}}, representing the error associated with this event.
 
 ### Return value
 
