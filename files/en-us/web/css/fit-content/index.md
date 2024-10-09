@@ -11,6 +11,8 @@ The **`fit-content`** keyword is equivalent to {{cssxref("fit-content_function",
 
 When used as laid out box size for {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} and {{cssxref("max-height")}} the maximum and minimum sizes refer to the content size.
 
+The {{cssxref("interpolate-size")}} property and {{cssxref("calc-size()")}} function can be used to enable animations to and from `fit-content`.
+
 > [!NOTE]
 > The CSS Sizing specification also defines the {{cssxref("fit-content_function", "fit-content()")}} function. This page details the keyword.
 
@@ -71,4 +73,3 @@ block-size: fit-content;
 
 - Related sizing keywords: {{cssxref("min-content")}}, {{cssxref("max-content")}}
 - [CSS box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) module
-- The {{cssxref("interpolate-size")}} property and {{cssxref("calc-size()")}} function for enabling animations to and from {{cssxref("fit-content")}}.

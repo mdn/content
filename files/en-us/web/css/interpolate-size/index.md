@@ -9,9 +9,9 @@ browser-compat: css.properties.interpolate-size
 
 {{CSSRef}}{{seecompattable}}
 
-The **`interpolate-size`** [CSS](/en-US/docs/Web/CSS) property allows you to enable [animations](/en-US/docs/Web/CSS/CSS_animations) and [transitions](/en-US/docs/Web/CSS/CSS_transitions) between a [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) value and an [intrinsic size value](/en-US/docs/Glossary/Intrinsic_Size) such as `auto`, [`fit-content`](/en-US/docs/Web/CSS/fit-content), or [`max-content`](/en-US/docs/Web/CSS/max-content).
+The **`interpolate-size`** [CSS](/en-US/docs/Web/CSS) property allows you to enable [animations](/en-US/docs/Web/CSS/CSS_animations) and [transitions](/en-US/docs/Web/CSS/CSS_transitions) between a [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) value and an [intrinsic size](/en-US/docs/Glossary/Intrinsic_Size) value such as `auto`, [`fit-content`](/en-US/docs/Web/CSS/fit-content), or [`max-content`](/en-US/docs/Web/CSS/max-content).
 
-This property is typically used to animate the {{cssxref("width")}} and/or {{cssxref("height")}} of a container between a `<length-percentage>` and the full size of its content (i.e. between "closed" and "open" or "hide" and "reveal" states).
+This property is typically used to animate the {{cssxref("width")}} and/or {{cssxref("height")}} of a container between a `<length-percentage>` and the full size of its content (i.e. between "closed" and "open" or "hide" and "reveal" states) when animating a non-box-model CSS property, such as {{cssxref("transform")}}, is not a viable solution.
 
 > [!NOTE]
 > The behavior opted-into by `interpolate-size` cannot be enabled by default across the web because many sites in the wild use stylesheets that assume intrinsic size values cannot be animated. Enabling it by default would cause several backwards-compatibility issues (see relevant [CSS WG discussion](https://github.com/w3c/csswg-drafts/issues/626#issuecomment-2071016522)).
@@ -34,15 +34,15 @@ interpolate-size: unset;
 ### Values
 
 - `allow-keywords`
-  - : Enables interpolation between a [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) value and an intrinsic size value, to allow animation between the two.
+  - : Enables [interpolation](/en-US/docs/Glossary/Interpolation) between a [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) value and an intrinsic size value, to allow animation between the two.
 - `numeric-only`
   - : The default behavior — intrinsic size values cannot be interpolated.
 
 ## Description
 
-`interpolate-size: allow-keywords` enables interpolation between a [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) value and an intrinsic size value. Note that it does not enable animating between two intrinsic size values. One end of the animation must be a `<length-percentage>`.
+Setting `interpolate-size: allow-keywords` enables interpolation between a [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) value and an intrinsic size value. Note that it does not enable animating between two intrinsic size values. One end of the animation must be a `<length-percentage>`.
 
-`interpolate-size` is inherited, so animating to (or from) an intrinsic size value can be enabled for an entire document by setting it on the document root:
+The `interpolate-size` value is inherited, so animating to (or from) an intrinsic size value can be enabled for an entire document by setting it on the document root:
 
 ```css
 :root {
@@ -50,17 +50,16 @@ interpolate-size: unset;
 }
 ```
 
-If you want to limit the scope, you can set it on the relevant container element:
+If you want to limit the scope, you can set it on the relevant container element. The following enables interpolating intrinsic sizes only for {{htmlelement("main")}} and its descendants:
 
 ```css
 main {
-  /* Enable only for <main> and its descendents */
   interpolate-size: allow-keywords;
 }
 ```
 
 > [!NOTE]
-> The {{cssxref("calc-size()")}} function can also be used to enable animations between a `<length-percentage>` and an intrinsic size value, when used to specify a value to animate or transition to/from. However, `interpolate-size` is simpler to implement in most cases, especially when there are multiple animations to consider (it only needs to be declared once). `calc-size()` should only be used if you need to create animations that include performing calculations on an intrinsic size value.
+> The {{cssxref("calc-size()")}} function's return values can also be interpolated. In effect, including `calc-size()` in a property value automatically applies `interpolate-size: allow-keywords` to the selection. However, because `interpolate-size` is inherited as explained above, it is the preferred solution for enabling intrinsic size animations in most cases. You should only use `calc-size()` to enable intrinsic size animations if they also require calculations.
 
 ### Values that can be interpolated
 
@@ -93,10 +92,10 @@ The HTML contains a single {{htmlelement("section")}} element with [`tabindex="0
 ```html
 <section tabindex="0">
   <header>
-    <h2>Chris Mills</h2>
+    <h2>Tanuki</h2>
   </header>
   <main>
-    <p>Chris is the silent phantom of MDN.</p>
+    <p>Tanuki is the silent phantom of MDN.</p>
     <ul>
       <li><strong>Height</strong>: 3.03m</li>
       <li><strong>Weight</strong>: 160kg</li>
@@ -125,7 +124,7 @@ section {
 }
 
 header {
-  padding: 10px;
+  padding: 0.7rem;
   border-bottom: 2px solid #ccc;
 }
 
@@ -160,11 +159,11 @@ In the CSS, we first set `interpolate-size: allow-keywords` on the {{cssxref(":r
 }
 ```
 
-We then set the `<section>`'s {{cssxref("height")}} to `42px` and {{cssxref("overflow")}} to `hidden` so only the `<header>` is shown by default, then specify a `transition` that animates the `<section>` `height` over 1 second during state change. Finally, we set the `<section>` `height` on {{cssxref(":hover")}} and {{cssxref(":focus")}} to `max-content`.
+We then set the `<section>`'s {{cssxref("height")}} to `2.5rem` and {{cssxref("overflow")}} to `hidden` so only the `<header>` is shown by default, then specify a `transition` that animates the `<section>` `height` over 1 second during state change. Finally, we set the `<section>` `height` on {{cssxref(":hover")}} and {{cssxref(":focus")}} to `max-content`.
 
 ```css
 section {
-  height: 42px;
+  height: 2.5rem;
   overflow: hidden;
   transition: height ease 1s;
 }

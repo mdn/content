@@ -88,4 +88,3 @@ The `block-size` property takes the same values as the {{cssxref("width")}} and 
 
 - The mapped physical properties: {{cssxref("width")}} and {{cssxref("height")}}
 - {{cssxref("writing-mode")}}
-- The {{cssxref("interpolate-size")}} property and {{cssxref("calc-size()")}} function for enabling animations to and from [intrinsic](/en-US/docs/Glossary/Intrinsic_Size) `block-size` values such as {{cssxref("auto")}} and {{cssxref("fit-content")}}.

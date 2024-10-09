@@ -53,7 +53,7 @@ There's a few points to keep in mind about `calc()`:
 
 - When `calc()` is used where an {{cssxref("&lt;integer&gt;")}} is expected, the value will be rounded to the nearest integer. So, `calc(1.4)` will result in a value of `1`. If the fractional part of the value is exactly `0.5`, the value will be rounded up. For example, `calc(1.5)` will result in a value of `2`, while `calc(-1.5)` will round to `-1`.
 
-- `calc()` cannot be used to perform calculations on [intrinsic size values](/en-US/docs/Glossary/Intrinsic_Size) such as {{cssxref("auto")}} and {{cssxref("fit-content")}}. For that purpose, you can use the {{cssxref("calc-size()")}} function.
+- `calc()` cannot perform calculations on [intrinsic size values](/en-US/docs/Glossary/Intrinsic_Size) such as {{cssxref("auto")}} and {{cssxref("fit-content")}}. Use the {{cssxref("calc-size()")}} function instead.
 
 ### Rules and best practices while using `calc()`
 
