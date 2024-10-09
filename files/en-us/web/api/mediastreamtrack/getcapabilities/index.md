@@ -76,7 +76,7 @@ navigator.mediaDevices
   });
 ```
 
-An example caapbilities object looks like this:
+An example capabilities object looks like this:
 
 ```js
 {
