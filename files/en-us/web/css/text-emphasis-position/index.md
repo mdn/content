@@ -15,14 +15,16 @@ The **`text-emphasis-position`** [CSS](/en-US/docs/Web/CSS) property sets where 
 
 ```css
 /* Initial value */
-text-emphasis-position: over right;
+text-emphasis-position: auto;
 
 /* Keywords value */
+text-emphasis-position: over right;
 text-emphasis-position: over left;
 text-emphasis-position: under right;
 text-emphasis-position: under left;
 
 text-emphasis-position: left over;
+text-emphasis-position: right over;
 text-emphasis-position: right under;
 text-emphasis-position: left under;
 
@@ -36,6 +38,8 @@ text-emphasis-position: unset;
 
 ### Values
 
+- `auto`
+  - : Draws marks over the text in horizontal writing mode and to the right of the text in vertical writing mode.
 - `over`
   - : Draws marks over the text in horizontal writing mode.
 - `under`
