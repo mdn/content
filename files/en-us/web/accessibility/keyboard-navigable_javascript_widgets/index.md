@@ -151,7 +151,7 @@ To ensure that the keyboard can be used to activate elements, any handlers bound
 
 ### Always draw the focus for tabindex="-1" items and elements that receive focus programmatically
 
-IE will not automatically draw the focus outline for items that programmatically receive focus. Choose between changing the background color via something like `this.style.backgroundColor = "gray";` or add a dotted border via `this.style.border = "1px dotted invert"`. In the dotted border case you will need to make sure those elements have an invisible 1px border to start with, so that the element doesn't grow when the border style is applied (borders take up space, and IE doesn't implement CSS outlines).
+IE will not automatically draw the focus outline for items that programmatically receive focus. Choose between changing the background color via something like `this.style.backgroundColor = "gray";` or add a dotted border via `this.style.border = "1px dotted"`. In the dotted border case you will need to make sure those elements have an invisible 1px border to start with, so that the element doesn't grow when the border style is applied (borders take up space, and IE doesn't implement CSS outlines).
 
 ### Prevent used key events from performing browser functions
 
