@@ -15,7 +15,7 @@ This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
 ## Constructor
 
-- {{domxref("InstallEvent.InstallEvent", "InstallEvent()")}} {{Deprecated_Inline}} {{Non-standard_Inline}} {{experimental_inline}}
+- {{domxref("InstallEvent.InstallEvent", "InstallEvent()")}} {{experimental_inline}}
   - : Creates a new `InstallEvent` object.
 
 ## Instance properties
