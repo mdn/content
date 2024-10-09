@@ -6,7 +6,7 @@ const filePaths = process.argv.slice(2);
 if (!filePaths.length) {
   console.error(`No file paths provided.`);
   console.warn(
-    "Usage:\n\tnode scripts/sort_and_unique_file_lines.js [--check] [...filePaths]",
+    "Usage:\n\tnode scripts/sort_and_unique_file_lines.js [--check] [filePaths...]",
   );
   process.exit(1);
 } else {
