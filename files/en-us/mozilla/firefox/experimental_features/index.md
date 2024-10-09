@@ -1341,7 +1341,6 @@ The global {{domxref('Window.fetch','fetch()')}} method has a [`keepalive`](/en-
 
 This enables a fetch request to function as an alternative to {{domxref("Navigator.sendBeacon()")}} when sending analytics at the end of a session, which has some advantages (you can use HTTP methods other than [`POST`](/en-US/docs/Web/HTTP/Methods/POST), customize request properties, and access the server response via the fetch {{jsxref("Promise")}} fulfillment). It is also available in [service workers](/en-US/docs/Web/API/Service_Worker_API).
 
-
 <table>
   <thead>
     <tr>
