@@ -29,7 +29,7 @@ registerPaint(
   "headerHighlight",
   class {
     /*
-       define if alphatransparency is allowed alpha
+       define if alpha transparency is allowed alpha
        is set to true by default. If set to false, all
        colors used on the canvas will be fully opaque
     */

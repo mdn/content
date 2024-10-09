@@ -71,7 +71,8 @@ To see the code for this example, [view the source on GitHub](https://github.com
 - Element {{domxref("Element.scrollBy", "scrollBy()")}} method
 - Element {{domxref("Element.scrollIntoView", "scrollIntoView()")}} method
 - Element {{domxref("Element.scrollTo", "scrollTo()")}} method
-- Document {{domxref("Document.scroll_event", "scroll")}} event
+- Element {{domxref("Element.scroll_event", "scroll")}} event
+- Element {{domxref("Element.scrollend_event", "scrollend")}} event
 - [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role) ARIA role
 - {{Glossary("Scroll container")}} glossary term
 

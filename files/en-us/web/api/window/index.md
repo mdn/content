@@ -179,8 +179,8 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Enables you to cancel a callback previously scheduled with {{domxref("Window.requestIdleCallback")}}.
 - {{domxref("Window.clearInterval()")}}
   - : Cancels the repeated execution set using {{domxref("Window.setInterval()")}}.
-- {{domxref("clearTimeout()", "Window.clearTimeout()")}}
-  - : Cancels the delayed execution set using {{domxref("setTimeout()")}}.
+- {{domxref("Window.clearTimeout()")}}
+  - : Cancels the delayed execution set using {{domxref("Window.setTimeout()")}}.
 - {{domxref("Window.close()")}}
   - : Closes the current window.
 - {{domxref("Window.confirm()")}}
@@ -243,7 +243,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Scrolls to a particular set of coordinates in the document.
 - {{domxref("Window.setInterval()")}}
   - : Schedules a function to execute every time a given number of milliseconds elapses.
-- {{domxref("setTimeout()", "Window.setTimeout()")}}
+- {{domxref("Window.setTimeout()")}}
   - : Schedules a function to execute in a given amount of time.
 - {{domxref("Window.showDirectoryPicker()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Displays a directory picker which allows the user to select a directory.

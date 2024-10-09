@@ -36,7 +36,7 @@ setInterval(func, delay, arg1, arg2, /* …, */ argN)
     This syntax is _not recommended_ for the same reasons that make using {{jsxref("Global_Objects/eval", "eval()")}} a security risk.
 - `delay` {{optional_inline}}
   - : The time, in milliseconds (thousandths of a second), the timer should delay in between executions of the specified function or code. Defaults to 0 if not specified.
-    See [Delay restrictions](#delay_restrictions) below for details on the permitted range of `delay` values.
+    See [Delay restrictions](/en-US/docs/Web/API/Window/setInterval#delay_restrictions) for details on the permitted range of `delay` values.
 - `arg1`, …, `argN` {{optional_inline}}
   - : Additional arguments which are passed through to the function specified by _func_ once the timer expires.
 
@@ -44,7 +44,7 @@ setInterval(func, delay, arg1, arg2, /* …, */ argN)
 
 The returned `intervalID` is a numeric, non-zero value which identifies the timer created by the call to `setInterval()`; this value can be passed to {{domxref("WorkerGlobalScope.clearInterval", "clearInterval()")}} to cancel the interval.
 
-It may be helpful to be aware that `setInterval()` and {{domxref("setTimeout()")}} share the same pool of IDs, and that `clearInterval()` and {{domxref("clearTimeout", "clearTimeout()")}} can technically be used interchangeably.
+It may be helpful to be aware that `setInterval()` and {{domxref("WorkerGlobalScope.setTimeout", "setTimeout()")}} share the same pool of IDs, and that `clearInterval()` and {{domxref("WorkerGlobalScope.clearTimeout", "clearTimeout()")}} can technically be used interchangeably.
 For clarity, however, you should try to always match them to avoid confusion when maintaining your code.
 
 > [!NOTE]
@@ -66,7 +66,7 @@ See {{domxref("Window.setInterval", "setInterval()")}} for examples.
 ## See also
 
 - [Polyfill of `setInterval` which allows passing arguments to the callback in `core-js`](https://github.com/zloirock/core-js#settimeout-and-setinterval)
-- {{domxref("setTimeout()")}}
-- {{domxref("Window.clearInterval()")}} and {{domxref("WorkerGlobalScope.clearInterval()")}}
 - {{domxref("Window.setInterval()")}}
-- {{domxref("Window.requestAnimationFrame()")}} and {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}}
+- {{domxref("WorkerGlobalScope.clearInterval()")}}
+- {{domxref("WorkerGlobalScope.setTimeout()")}}
+- {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}}
