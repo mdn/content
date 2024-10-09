@@ -8,7 +8,9 @@ browser-compat: api.HTMLInputElement.formMethod
 
 {{APIRef("HTML DOM")}}
 
-The **`formMethod`** property of the {{domxref("HTMLInputElement")}} interface represents the form method of the {{HTMLElement("input")}} element. The form method is the {{Glossary("HTTP")}} method used to submit the {{HtmlElement("form")}} when the `<input>` is the method of form submission. It reflects the value of the `<input>`'s [`formmethod`](/en-US/docs/Web/HTML/Element/input#formmethod) attribute.
+The **`formMethod`** property of the {{domxref("HTMLInputElement")}} interface is the {{Glossary("HTTP")}} method used to submit the {{HtmlElement("form")}} if the {{HTMLElement("input")}} element is the control that sumbits the form. It reflects the value of the `<input>`'s [`formmethod`](/en-US/docs/Web/HTML/Element/input#formmethod) attribute.
+
+This property is valid only for [`submit`](/en-US/docs/Web/HTML/Element/input/submit) and [`image`](/en-US/docs/Web/HTML/Element/input/image) `<input>` elements.
 
 The value overrides the {{domxref("HTMLFormElement.method", "method")}} property of the {{domxref("HTMLFormElement")}} interface if the form is submitted via the input. This property can be retrieved or set. If set with an empty or invalid value, the invalid default value is `"get"`. If not set at all, the value is the empty string (`""`).
 
@@ -36,6 +38,7 @@ inputElement.formMethod = "post";
 - {{domxref("HTMLInputElement.formEnctype")}}
 - {{domxref("HTMLInputElement.formNoValidate")}}
 - {{domxref("HTMLInputElement.formTarget")}}
+- {{domxref("HTMLFormElement.method")}}
 - [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit)
-- [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/submit)
+- [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image)
 - [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data)
