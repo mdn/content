@@ -1290,7 +1290,6 @@ The [(?ims-ims:...)](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Mo
 
 ## APIs
 
-
 ### Cookie Store API
 
 The [Cookie Store API](/en-US/docs/Web/API/Cookie_Store_API) is a modern, {{jsxref("Promise")}}-based method of managing cookies that does not block the event loop and does not rely on {{domxref("Document")}} (it can therefore be made available to [service workers](/en-US/docs/Web/API/Service_Worker_API)). A subset of the Cookie Store API has been implemented ([Firefox bug 1800882](https://bugzil.la/1800882)). This includes:
