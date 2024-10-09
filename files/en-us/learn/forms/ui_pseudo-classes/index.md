@@ -397,12 +397,12 @@ input[type="text"]:disabled {
   border: 1px solid #ccc;
 }
 
-.disabled-label {
+label:has(+ :disabled) {
   color: #aaa;
 }
 ```
 
-We've directly selected the inputs we want to disable using `input[type="text"]:disabled`, but we also wanted to gray out the corresponding text labels. These weren't quite as easy to select, so we've used a class to provide them with that styling.
+We've directly selected the inputs we want to disable using `input[type="text"]:disabled`, but we also wanted to gray out the corresponding text labels. As the labels are right before their inputs, we selected those using the pseudo-class [`:has`](/en-US/docs/Web/CSS/:has).
 
 Now finally, we've used some JavaScript to toggle the disabling of the billing address fields:
 
@@ -422,20 +422,10 @@ document.addEventListener(
 function toggleBilling() {
   // Select the billing text fields
   const billingItems = document.querySelectorAll('#billing input[type="text"]');
-  // Select the billing text labels
-  const billingLabels = document.querySelectorAll(".billing-label");
 
-  // Toggle the billing text fields and labels
+  // Toggle the billing text fields
   for (let i = 0; i < billingItems.length; i++) {
     billingItems[i].disabled = !billingItems[i].disabled;
-
-    if (
-      billingLabels[i].getAttribute("class") === "billing-label disabled-label"
-    ) {
-      billingLabels[i].setAttribute("class", "billing-label");
-    } else {
-      billingLabels[i].setAttribute("class", "billing-label disabled-label");
-    }
   }
 }
 ```

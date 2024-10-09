@@ -92,7 +92,7 @@ The basic approach for implementing a web component generally looks something li
   - : Pseudo-elements relating specifically to custom elements:
 
     - {{cssxref("::part")}}
-      - : Represents any element within a [shadow tree](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) that has a matching [`part`](/en-US/docs/Web/HTML/Global_attributes#part) attribute.
+      - : Represents any element within a [shadow tree](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) that has a matching [`part`](/en-US/docs/Web/HTML/Global_attributes/part) attribute.
 
 ### Shadow DOM
 

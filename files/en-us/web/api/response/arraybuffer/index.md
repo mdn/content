@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Response.arrayBuffer
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`arrayBuffer()`** method of the {{domxref("Response")}} interface
 takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise

@@ -2083,7 +2083,7 @@
 /en-US/docs/DOM/window.captureEvents	/en-US/docs/Web/API/Window/captureEvents
 /en-US/docs/DOM/window.clearImmediate	/en-US/docs/Web/API/Window/clearImmediate
 /en-US/docs/DOM/window.clearInterval	/en-US/docs/Web/API/Window/clearInterval
-/en-US/docs/DOM/window.clearTimeout	/en-US/docs/Web/API/clearTimeout
+/en-US/docs/DOM/window.clearTimeout	/en-US/docs/Web/API/Window/clearTimeout
 /en-US/docs/DOM/window.close	/en-US/docs/Web/API/Window/close
 /en-US/docs/DOM/window.closed	/en-US/docs/Web/API/Window/closed
 /en-US/docs/DOM/window.confirm	/en-US/docs/Web/API/Window/confirm
@@ -2230,7 +2230,7 @@
 /en-US/docs/DOM/window.self	/en-US/docs/Web/API/Window/self
 /en-US/docs/DOM/window.setImmediate	/en-US/docs/Web/API/Window/setImmediate
 /en-US/docs/DOM/window.setInterval	/en-US/docs/Web/API/Window/setInterval
-/en-US/docs/DOM/window.setTimeout	/en-US/docs/Web/API/setTimeout
+/en-US/docs/DOM/window.setTimeout	/en-US/docs/Web/API/Window/setTimeout
 /en-US/docs/DOM/window.showModalDialog	/en-US/docs/Web/API/Window/showModalDialog
 /en-US/docs/DOM/window.sidebar	/en-US/docs/Web/API/Window/external
 /en-US/docs/DOM/window.sizeToContent	/en-US/docs/Web/API/Window/sizeToContent
@@ -2543,7 +2543,7 @@
 /en-US/docs/DOM:window.btoa	/en-US/docs/Web/API/Window/btoa
 /en-US/docs/DOM:window.captureEvents	/en-US/docs/Web/API/Window/captureEvents
 /en-US/docs/DOM:window.clearInterval	/en-US/docs/Web/API/Window/clearInterval
-/en-US/docs/DOM:window.clearTimeout	/en-US/docs/Web/API/clearTimeout
+/en-US/docs/DOM:window.clearTimeout	/en-US/docs/Web/API/Window/clearTimeout
 /en-US/docs/DOM:window.close	/en-US/docs/Web/API/Window/close
 /en-US/docs/DOM:window.closed	/en-US/docs/Web/API/Window/closed
 /en-US/docs/DOM:window.confirm	/en-US/docs/Web/API/Window/confirm
@@ -2652,7 +2652,7 @@
 /en-US/docs/DOM:window.scrollbars	/en-US/docs/Web/API/Window/scrollbars
 /en-US/docs/DOM:window.self	/en-US/docs/Web/API/Window/self
 /en-US/docs/DOM:window.setInterval	/en-US/docs/Web/API/Window/setInterval
-/en-US/docs/DOM:window.setTimeout	/en-US/docs/Web/API/setTimeout
+/en-US/docs/DOM:window.setTimeout	/en-US/docs/Web/API/Window/setTimeout
 /en-US/docs/DOM:window.showModalDialog	/en-US/docs/Web/API/Window/showModalDialog
 /en-US/docs/DOM:window.sidebar	/en-US/docs/Web/API/Window/external
 /en-US/docs/DOM:window.sizeToContent	/en-US/docs/Web/API/Window/sizeToContent
@@ -3254,7 +3254,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.captureEvents	/en-US/docs/Web/API/Window/captureEvents
 /en-US/docs/Document_Object_Model_(DOM)/window.clearImmediate	/en-US/docs/Web/API/Window/clearImmediate
 /en-US/docs/Document_Object_Model_(DOM)/window.clearInterval	/en-US/docs/Web/API/Window/clearInterval
-/en-US/docs/Document_Object_Model_(DOM)/window.clearTimeout	/en-US/docs/Web/API/clearTimeout
+/en-US/docs/Document_Object_Model_(DOM)/window.clearTimeout	/en-US/docs/Web/API/Window/clearTimeout
 /en-US/docs/Document_Object_Model_(DOM)/window.close	/en-US/docs/Web/API/Window/close
 /en-US/docs/Document_Object_Model_(DOM)/window.closed	/en-US/docs/Web/API/Window/closed
 /en-US/docs/Document_Object_Model_(DOM)/window.confirm	/en-US/docs/Web/API/Window/confirm
@@ -3371,7 +3371,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.scrollbars	/en-US/docs/Web/API/Window/scrollbars
 /en-US/docs/Document_Object_Model_(DOM)/window.setImmediate	/en-US/docs/Web/API/Window/setImmediate
 /en-US/docs/Document_Object_Model_(DOM)/window.setInterval	/en-US/docs/Web/API/Window/setInterval
-/en-US/docs/Document_Object_Model_(DOM)/window.setTimeout	/en-US/docs/Web/API/setTimeout
+/en-US/docs/Document_Object_Model_(DOM)/window.setTimeout	/en-US/docs/Web/API/Window/setTimeout
 /en-US/docs/Document_Object_Model_(DOM)/window.showModalDialog	/en-US/docs/Web/API/Window/showModalDialog
 /en-US/docs/Document_Object_Model_(DOM)/window.sidebar	/en-US/docs/Web/API/Window/external
 /en-US/docs/Document_Object_Model_(DOM)/window.sizeToContent	/en-US/docs/Web/API/Window/sizeToContent
@@ -10148,7 +10148,6 @@
 /en-US/docs/Web/API/Window/animationend_event	/en-US/docs/Web/API/Element/animationend_event
 /en-US/docs/Web/API/Window/animationiteration_event	/en-US/docs/Web/API/Element/animationiteration_event
 /en-US/docs/Web/API/Window/animationstart_event	/en-US/docs/Web/API/Element/animationstart_event
-/en-US/docs/Web/API/Window/clearTimeout	/en-US/docs/Web/API/clearTimeout
 /en-US/docs/Web/API/Window/content	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/Window/convertPointFromNodeToPage	/en-US/docs/Web/API/Window/webkitConvertPointFromNodeToPage
 /en-US/docs/Web/API/Window/convertPointFromPageToNode	/en-US/docs/Web/API/Window/webkitConvertPointFromPageToNode
@@ -10212,7 +10211,6 @@
 /en-US/docs/Web/API/Window/removeEventListener	/en-US/docs/Web/API/EventTarget/removeEventListener
 /en-US/docs/Web/API/Window/resolveLocalFileSystemURL	/en-US/docs/Web/API/File_and_Directory_Entries_API#resolvelocalfilesystemurl()
 /en-US/docs/Web/API/Window/restore	/en-US/docs/Web/API/Window/moveTo
-/en-US/docs/Web/API/Window/setTimeout	/en-US/docs/Web/API/setTimeout
 /en-US/docs/Web/API/Window/sidebar	/en-US/docs/Web/API/Window/external
 /en-US/docs/Web/API/Window/sidebar/Adding_search_engines_from_Web_pages	/en-US/docs/Web/OpenSearch
 /en-US/docs/Web/API/Window/transitioncancel_event	/en-US/docs/Web/API/Element/transitioncancel_event
@@ -10253,7 +10251,7 @@
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/btoa	/en-US/docs/Web/API/Window/btoa
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/caches	/en-US/docs/Web/API/Window/caches
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval	/en-US/docs/Web/API/Window/clearInterval
-/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout	/en-US/docs/Web/API/clearTimeout
+/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout	/en-US/docs/Web/API/Window/clearTimeout
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap	/en-US/docs/Web/API/Window/createImageBitmap
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated	/en-US/docs/Web/API/Window/crossOriginIsolated
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch	/en-US/docs/Web/API/Window/fetch
@@ -10263,19 +10261,19 @@
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/queueMicrotask	/en-US/docs/Web/API/Window/queueMicrotask
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/rejectionhandled_event	/en-US/docs/Web/API/Window/rejectionhandled_event
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/en-US/docs/Web/API/Window/setInterval
-/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout	/en-US/docs/Web/API/setTimeout
+/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout	/en-US/docs/Web/API/Window/setTimeout
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/structuredClone	/en-US/docs/Web/API/Window/structuredClone
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/unhandledrejection_event	/en-US/docs/Web/API/Window/unhandledrejection_event
 /en-US/docs/Web/API/WindowSessionStorage	/en-US/docs/Web/API/Window/sessionStorage
 /en-US/docs/Web/API/WindowSessionStorage.sessionStorage	/en-US/docs/Web/API/Window/sessionStorage
 /en-US/docs/Web/API/WindowTimers.clearInterval	/en-US/docs/Web/API/Window/clearInterval
-/en-US/docs/Web/API/WindowTimers.clearTimeout	/en-US/docs/Web/API/clearTimeout
+/en-US/docs/Web/API/WindowTimers.clearTimeout	/en-US/docs/Web/API/Window/clearTimeout
 /en-US/docs/Web/API/WindowTimers.setInterval	/en-US/docs/Web/API/Window/setInterval
-/en-US/docs/Web/API/WindowTimers.setTimeout	/en-US/docs/Web/API/setTimeout
+/en-US/docs/Web/API/WindowTimers.setTimeout	/en-US/docs/Web/API/Window/setTimeout
 /en-US/docs/Web/API/WindowTimers/clearInterval	/en-US/docs/Web/API/Window/clearInterval
-/en-US/docs/Web/API/WindowTimers/clearTimeout	/en-US/docs/Web/API/clearTimeout
+/en-US/docs/Web/API/WindowTimers/clearTimeout	/en-US/docs/Web/API/Window/clearTimeout
 /en-US/docs/Web/API/WindowTimers/setInterval	/en-US/docs/Web/API/Window/setInterval
-/en-US/docs/Web/API/WindowTimers/setTimeout	/en-US/docs/Web/API/setTimeout
+/en-US/docs/Web/API/WindowTimers/setTimeout	/en-US/docs/Web/API/Window/setTimeout
 /en-US/docs/Web/API/Worker.Worker	/en-US/docs/Web/API/Worker/Worker
 /en-US/docs/Web/API/Worker.Worker()	/en-US/docs/Web/API/Worker/Worker
 /en-US/docs/Web/API/Worker.onmessage	/en-US/docs/Web/API/Worker/message_event
@@ -10303,7 +10301,6 @@
 /en-US/docs/Web/API/WorkerGlobalScope.performance	/en-US/docs/Web/API/WorkerGlobalScope/performance
 /en-US/docs/Web/API/WorkerGlobalScope.self	/en-US/docs/Web/API/WorkerGlobalScope/self
 /en-US/docs/Web/API/WorkerGlobalScope/WorkerGlobalScope.caches	/en-US/docs/Web/API/WorkerGlobalScope/caches
-/en-US/docs/Web/API/WorkerGlobalScope/clearTimeout	/en-US/docs/Web/API/clearTimeout
 /en-US/docs/Web/API/WorkerGlobalScope/close	/en-US/docs/Web/API/DedicatedWorkerGlobalScope/close
 /en-US/docs/Web/API/WorkerGlobalScope/console	/en-US/docs/Web/API/console
 /en-US/docs/Web/API/WorkerGlobalScope/onclose	/en-US/docs/Web/API/DedicatedWorkerGlobalScope/close
@@ -10312,7 +10309,6 @@
 /en-US/docs/Web/API/WorkerGlobalScope/onoffline	/en-US/docs/Web/API/WorkerGlobalScope/offline_event
 /en-US/docs/Web/API/WorkerGlobalScope/ononline	/en-US/docs/Web/API/WorkerGlobalScope/online_event
 /en-US/docs/Web/API/WorkerGlobalScope/requestFileSystemSync	/en-US/docs/Web/API/File_and_Directory_Entries_API
-/en-US/docs/Web/API/WorkerGlobalScope/setTimeout	/en-US/docs/Web/API/setTimeout
 /en-US/docs/Web/API/WorkerLocation.hash	/en-US/docs/Web/API/WorkerLocation/hash
 /en-US/docs/Web/API/WorkerNavigator/taintEnabled	/en-US/docs/Web/API/Navigator/taintEnabled
 /en-US/docs/Web/API/WritableStreamDefaultWriter/WritableStreamDefaultWriter.closed	/en-US/docs/Web/API/WritableStreamDefaultWriter/closed
@@ -10401,6 +10397,7 @@
 /en-US/docs/Web/API/btoa	/en-US/docs/Web/API/Window/btoa
 /en-US/docs/Web/API/caches	/en-US/docs/Web/API/Window/caches
 /en-US/docs/Web/API/clearInterval	/en-US/docs/Web/API/Window/clearInterval
+/en-US/docs/Web/API/clearTimeout	/en-US/docs/Web/API/Window/clearTimeout
 /en-US/docs/Web/API/console.assert	/en-US/docs/Web/API/console/assert_static
 /en-US/docs/Web/API/console.dir	/en-US/docs/Web/API/console/dir_static
 /en-US/docs/Web/API/console.error	/en-US/docs/Web/API/console/error_static
@@ -10744,6 +10741,7 @@
 /en-US/docs/Web/API/select.type	/en-US/docs/Web/API/HTMLSelectElement/type
 /en-US/docs/Web/API/sessionStorage	/en-US/docs/Web/API/Window/sessionStorage
 /en-US/docs/Web/API/setInterval	/en-US/docs/Web/API/Window/setInterval
+/en-US/docs/Web/API/setTimeout	/en-US/docs/Web/API/Window/setTimeout
 /en-US/docs/Web/API/structuredClone	/en-US/docs/Web/API/Window/structuredClone
 /en-US/docs/Web/API/style.media	/en-US/docs/Web/API/HTMLStyleElement/media
 /en-US/docs/Web/API/style.type	/en-US/docs/Web/API/HTMLStyleElement/type
@@ -10788,7 +10786,7 @@
 /en-US/docs/Web/API/window.captureEvents	/en-US/docs/Web/API/Window/captureEvents
 /en-US/docs/Web/API/window.clearImmediate	/en-US/docs/Web/API/Window/clearImmediate
 /en-US/docs/Web/API/window.clearInterval	/en-US/docs/Web/API/Window/clearInterval
-/en-US/docs/Web/API/window.clearTimeout	/en-US/docs/Web/API/clearTimeout
+/en-US/docs/Web/API/window.clearTimeout	/en-US/docs/Web/API/Window/clearTimeout
 /en-US/docs/Web/API/window.close	/en-US/docs/Web/API/Window/close
 /en-US/docs/Web/API/window.closed	/en-US/docs/Web/API/Window/closed
 /en-US/docs/Web/API/window.confirm	/en-US/docs/Web/API/Window/confirm
@@ -10937,7 +10935,7 @@
 /en-US/docs/Web/API/window.self	/en-US/docs/Web/API/Window/self
 /en-US/docs/Web/API/window.setImmediate	/en-US/docs/Web/API/Window/setImmediate
 /en-US/docs/Web/API/window.setInterval	/en-US/docs/Web/API/Window/setInterval
-/en-US/docs/Web/API/window.setTimeout	/en-US/docs/Web/API/setTimeout
+/en-US/docs/Web/API/window.setTimeout	/en-US/docs/Web/API/Window/setTimeout
 /en-US/docs/Web/API/window.showModalDialog	/en-US/docs/Web/API/Window/showModalDialog
 /en-US/docs/Web/API/window.sidebar	/en-US/docs/Web/API/Window/external
 /en-US/docs/Web/API/window.sizeToContent	/en-US/docs/Web/API/Window/sizeToContent
@@ -13769,7 +13767,7 @@
 /en-US/docs/width	/en-US/docs/Web/CSS/width
 /en-US/docs/window.captureEvents	/en-US/docs/Web/API/Window/captureEvents
 /en-US/docs/window.clearInterval	/en-US/docs/Web/API/Window/clearInterval
-/en-US/docs/window.clearTimeout	/en-US/docs/Web/API/clearTimeout
+/en-US/docs/window.clearTimeout	/en-US/docs/Web/API/Window/clearTimeout
 /en-US/docs/window.close	/en-US/docs/Web/API/Window/close
 /en-US/docs/window.closed	/en-US/docs/Web/API/Window/closed
 /en-US/docs/window.confirm	/en-US/docs/Web/API/Window/confirm
@@ -13812,7 +13810,7 @@
 /en-US/docs/window.scrollY	/en-US/docs/Web/API/Window/scrollY
 /en-US/docs/window.scrollbars	/en-US/docs/Web/API/Window/scrollbars
 /en-US/docs/window.setInterval	/en-US/docs/Web/API/Window/setInterval
-/en-US/docs/window.setTimeout	/en-US/docs/Web/API/setTimeout
+/en-US/docs/window.setTimeout	/en-US/docs/Web/API/Window/setTimeout
 /en-US/docs/window.sidebar	/en-US/docs/Web/API/Window/external
 /en-US/docs/window.sizeToContent	/en-US/docs/Web/API/Window/sizeToContent
 /en-US/docs/window.status	/en-US/docs/Web/API/Window/status

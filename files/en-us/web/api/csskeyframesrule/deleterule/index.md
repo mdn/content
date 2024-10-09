@@ -39,7 +39,7 @@ The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule"
 After deleting a rule with `deleteRule()` the `cssRules` property returns a {{domxref("CSSRuleList")}} containing one rule.
 
 ```css
-@keyframes slidein {
+@keyframes slide-in {
   from {
     transform: translateX(0%);
   }

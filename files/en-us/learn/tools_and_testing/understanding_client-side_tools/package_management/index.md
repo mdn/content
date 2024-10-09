@@ -78,9 +78,9 @@ What is important is that you ensure you've chosen the best registry for you. Ma
 
 Let's run through an example to get you started with using a package manager and registry to install a command line utility.
 
-We will use [Vite](https://vitejs.dev/) to create a blank website. In the next article, we will expand on the toolchain to include more tools and show you how to deploy the site.
+We will use [Vite](https://vite.dev/) to create a blank website. In the next article, we will expand on the toolchain to include more tools and show you how to deploy the site.
 
-Vite provides some [init templates](https://vitejs.dev/guide/#scaffolding-your-first-vite-project), with all necessary dependencies and configurations, to get you started quickly in a real project. For demonstration, we will configure one from scratch, using the [React template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react) as a reference.
+Vite provides some [init templates](https://vite.dev/guide/#scaffolding-your-first-vite-project), with all necessary dependencies and configurations, to get you started quickly in a real project. For demonstration, we will configure one from scratch, using the [React template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react) as a reference.
 
 ### Setting up the app as an npm package
 

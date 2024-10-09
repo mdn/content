@@ -24,7 +24,7 @@ For example, tasks get added to the task queue when:
 
 - A new JavaScript program or subprogram is executed (such as from a console, or by running the code in a {{HTMLElement("script")}} element) directly.
 - The user clicks an element. A task is then created and executes all event callbacks.
-- A timeout or interval created with {{domxref("setTimeout()")}} or {{domxref("Window.setInterval", "setInterval()")}} is reached, causing the corresponding callback to be added to the task queue.
+- A timeout or interval created with {{domxref("Window.setTimeout", "setTimeout()")}} or {{domxref("Window.setInterval", "setInterval()")}} is reached, causing the corresponding callback to be added to the task queue.
 
 The event loop driving your code handles these tasks one after another, in the order in which they were enqueued. The oldest runnable task in the task queue will be executed during a single iteration of the event loop. After that, microtasks will be executed until the microtask queue is empty, and then the browser may choose to update rendering. Then the browser moves on to the next iteration of event loop.
 
@@ -104,7 +104,7 @@ Executing this code twice in a row gives the following results.
 When the data is not cached:
 
 ```plain
-Fetching data
+Fetching data…
 Data fetched
 Loaded data
 ```
@@ -112,7 +112,7 @@ Loaded data
 When the data is cached:
 
 ```plain
-Fetching data
+Fetching data…
 Loaded data
 Data fetched
 ```

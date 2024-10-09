@@ -24,9 +24,9 @@ clearInterval(intervalID)
 
 It's worth noting that the pool of IDs used by
 {{domxref("WorkerGlobalScope.setInterval", "setInterval()")}} and
-{{domxref("setTimeout()")}} are shared, which
+{{domxref("WorkerGlobalScope.setTimeout", "setTimeout()")}} are shared, which
 means you can technically use `clearInterval()` and
-{{domxref("clearTimeout", "clearTimeout()")}} interchangeably.
+{{domxref("WorkerGlobalScope.clearTimeout", "clearTimeout()")}} interchangeably.
 However, for clarity, you should avoid doing so.
 
 ### Return value
@@ -47,7 +47,7 @@ See {{domxref("Window.setInterval", "setInterval()")}} for examples.
 
 ## See also
 
-- {{domxref("clearTimeout()")}}
-- {{domxref("Window.setInterval()")}} and {{domxref("WorkerGlobalScope.setInterval()")}}
 - {{domxref("Window.clearInterval()")}}
-- {{domxref("Window.cancelAnimationFrame()")}} and {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()")}}
+- {{domxref("WorkerGlobalScope.setInterval()")}}
+- {{domxref("WorkerGlobalScope.clearTimeout()")}}
+- {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()")}}
