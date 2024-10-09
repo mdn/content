@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.DOMRect
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 A **`DOMRect`** describes the size and position of a rectangle.
 

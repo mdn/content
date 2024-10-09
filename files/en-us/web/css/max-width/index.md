@@ -123,6 +123,10 @@ In this example, the "child" will be either 150 pixels wide or the width of the 
 
 ## See also
 
-- [The box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{cssxref("box-sizing")}}
-- {{cssxref("width")}}, {{cssxref("min-width")}}
-- The mapped logical properties: {{cssxref("max-inline-size")}}, {{cssxref("max-block-size")}}
+- {{Cssxref("min-width")}}
+- {{Cssxref("width")}}
+- {{cssxref("max-inline-size")}}
+- {{cssxref("max-block-size")}}
+- {{cssxref("box-sizing")}}
+- [Introduction to the CSS basic box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module

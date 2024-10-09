@@ -37,7 +37,7 @@ quotes: unset;
 - `none`
   - : The `open-quote` and `close-quote` values of the {{cssxref("content")}} property produce no quotation marks, as if `no-open-quote` and `no-close-quote` were set, respectively.
 - `auto`
-  - : Quotation marks that are typographically appropriate for the inherited language (i.e. via the [`lang`](/en-US/docs/Web/HTML/Global_attributes#lang) attribute set on the parent or other ancestor).
+  - : Quotation marks that are typographically appropriate for the inherited language (i.e. via the [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attribute set on the parent or other ancestor).
 - `[{{cssxref("&lt;string&gt;")}} <string>]+`
 
   - : Defines one or more pairs of quotation mark values for opening and closing quotes. In each pair, the first of each pair of quotes are used as the values for the `open-quote` and the second of each pair is the `close-quote`.
@@ -157,7 +157,7 @@ li {
 
 {{EmbedLiveSample('Auto_quotes', "100%", 200)}}
 
-Note that the [`lang`](/en-US/docs/Web/HTML/Global_attributes#lang) attribute was placed on an ancestor of the `<q>`, not the `<q>` itself. If a quotation is in a different language than the surrounding text, it is customary to quote the text with the quote marks of the language of the surrounding text, not the language of the quotation itself.
+Note that the [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attribute was placed on an ancestor of the `<q>`, not the `<q>` itself. If a quotation is in a different language than the surrounding text, it is customary to quote the text with the quote marks of the language of the surrounding text, not the language of the quotation itself.
 
 ### With generated content
 

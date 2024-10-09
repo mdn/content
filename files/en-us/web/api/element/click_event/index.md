@@ -15,7 +15,7 @@ An element receives a **`click`** event when any of the following occurs:
 - Any user interaction that is equivalent to a click occurs, such as pressing the <kbd>Space</kbd> key or <kbd>Enter</kbd> key while the element is focused.
 
 > [!NOTE]
-> In practice, browsers don't fire the `click` event for custom controls such as a `<div>` with `tabindex="0"`. To check the reason behind this behavior, see this [Chromium issue](https://crbug.com/40776466).
+> In practice, browsers don't fire the `click` event for custom controls (such as a `<div>` with `tabindex="0"`) when activated by keyboard. To check the reason behind this behavior, see this [Chromium issue](https://crbug.com/40776466).
 
 If the button is pressed on one element and the pointer is moved outside the element before the button is released, the event is fired on the most specific ancestor element that contained both elements.
 
