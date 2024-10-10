@@ -109,8 +109,8 @@ It is important to set the data in the right order, from most-specific to least-
 
 ```js
 const dt = event.dataTransfer;
-dt.setData("text/uri-list", imageurl);
-dt.setData("text/plain", imageurl);
+dt.setData("text/uri-list", imageURL);
+dt.setData("text/plain", imageURL);
 ```
 
 ## Dragging Nodes

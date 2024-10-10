@@ -27,8 +27,8 @@ Setting and getting a label via `GPUComputePassEncoder.label`:
 const commandEncoder = device.createCommandEncoder();
 const passEncoder = commandEncoder.beginComputePass();
 
-passEncoder.label = "mycomputepassencoder";
-console.log(passEncoder.label); // "mycomputepassencoder"
+passEncoder.label = "my-compute-pass-encoder";
+console.log(passEncoder.label); // "my-compute-pass-encoder"
 ```
 
 Setting a label via the originating {{domxref("GPUCommandEncoder.beginComputePass()")}} call, and then getting it via `GPUComputePassEncoder.label`:
@@ -36,10 +36,10 @@ Setting a label via the originating {{domxref("GPUCommandEncoder.beginComputePas
 ```js
 const commandEncoder = device.createCommandEncoder();
 const passEncoder = commandEncoder.beginComputePass({
-  label: "mycomputepassencoder",
+  label: "my-compute-pass-encoder",
 });
 
-console.log(passEncoder.label); // "mycomputepassencoder"
+console.log(passEncoder.label); // "my-compute-pass-encoder"
 ```
 
 ## Specifications
