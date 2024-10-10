@@ -177,14 +177,14 @@
   },
 
   "see_compat_table_copy": {
-    "es": "<strong>Esta es una <a href='/en-US/docs/Writing_guidelines/Experimental_deprecated_obsolete#experimental'>tecnología experimental</a></strong><br />Comprueba la <a href='#browser_compatibility'>Tabla de compabilidad de navegadores</a> cuidadosamente antes de usarla en producción.",
+    "es": "<strong>Esta es una <a href='/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental'>tecnología experimental</a></strong><br />Comprueba la <a href='#browser_compatibility'>Tabla de compabilidad de navegadores</a> cuidadosamente antes de usarla en producción.",
     "fr": "<strong>Cette fonction est expérimentale</strong><br />Puisque cette fonction est toujours en développement dans certains navigateurs, veuillez consulter le <a href='#compatibilité_des_navigateurs'>tableau de compatibilité</a> pour les préfixes à utiliser selon les navigateurs.<br />Il convient de noter qu'une fonctionnalité expérimentale peut voir sa syntaxe ou son comportement modifié dans le futur en fonction des évolutions de la spécification.",
     "ja": "<strong>これは<a href='/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的'>実験的な機能</a>です。</strong><br />本番で使用する前に<a href='#ブラウザーの互換性'>ブラウザー互換性一覧表</a>をチェックしてください。",
     "ko": "<strong>이 기능은 <a href='/ko/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#실험적'>실험적인 기능</a>입니다.</strong><br />프로덕션 환경에서 사용하기 전에 <a href='#브라우저_호환성'>브라우저 호환성 표</a>를 주의 깊게 확인하세요.",
     "zh-CN": "<strong>这是一项<a href='/zh-CN/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#实验性'>实验性技术</a></strong><br />在将其用于生产之前，请仔细检查<a href='#浏览器兼容性'>浏览器兼容性表格</a>。",
     "zh-TW": "<strong>這是一個<a href='/zh-TW/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#實驗性質'>實驗中的功能</a></strong><br />此功能在某些瀏覽器尚在開發中，請參考<a href='#瀏覽器相容性'>兼容表格</a>以得到不同瀏覽器用的前輟。",
-    "en-US": "<strong>This is an <a href='/en-US/docs/Writing_guidelines/Experimental_deprecated_obsolete#experimental'>experimental technology</a></strong><br />Check the <a href='#browser_compatibility'>Browser compatibility table</a> carefully before using this in production.",
-    "pt-BR": "<strong>Esta é uma <a href='/pt-BR/docs/Writing_guidelines/Experimental_deprecated_obsolete#experimental'>tecnologia experimental</a></strong><br />Verifique a <a href='#browser_compatibility'>tabela de compatibilidade entre Navegadores</a> cuidadosamente antes de usar essa funcionalidade em produção.",
+    "en-US": "<strong>This is an <a href='/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental'>experimental technology</a></strong><br />Check the <a href='#browser_compatibility'>Browser compatibility table</a> carefully before using this in production.",
+    "pt-BR": "<strong>Esta é uma <a href='/pt-BR/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental'>tecnologia experimental</a></strong><br />Verifique a <a href='#browser_compatibility'>tabela de compatibilidade entre Navegadores</a> cuidadosamente antes de usar essa funcionalidade em produção.",
     "ru": "<strong>Это экспериментальная технология</strong><br />Так как спецификация этой технологии ещё не стабилизировалась, смотрите <a href='#browser_compatibility'>таблицу совместимости</a> по поводу использования в различных браузерах. Также заметьте, что синтаксис и поведение экспериментальной технологии может измениться в будущих версиях браузеров, вслед за изменениями спецификации."
   },
 
