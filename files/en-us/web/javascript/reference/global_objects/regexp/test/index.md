@@ -67,8 +67,8 @@ The following example logs a message which depends on the success of the test:
 
 ```js
 function testInput(re, str) {
-  const midstring = re.test(str) ? "contains" : "does not contain";
-  console.log(`${str} ${midstring} ${re.source}`);
+  const midString = re.test(str) ? "contains" : "does not contain";
+  console.log(`${str} ${midString} ${re.source}`);
 }
 ```
 
