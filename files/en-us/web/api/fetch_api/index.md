@@ -25,7 +25,7 @@ Find out more about using the Fetch API features in [Using Fetch](/en-US/docs/We
 
 ## Fetch Interfaces
 
-- {{domxref("Window/fetch", "fetch()")}}
+- {{domxref("Window.fetch()")}} and {{domxref("WorkerGlobalScope.fetch()")}}
   - : The `fetch()` method used to fetch a resource.
 - {{DOMxRef("Headers")}}
   - : Represents response/request headers, allowing you to query them and take different actions depending on the results.

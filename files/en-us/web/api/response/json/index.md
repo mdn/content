@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Response.json
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`json()`** method of the {{DOMxRef("Response")}} interface takes
 a {{DOMxRef("Response")}} stream and reads it to completion. It returns a promise which
