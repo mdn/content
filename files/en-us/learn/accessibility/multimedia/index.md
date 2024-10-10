@@ -118,7 +118,7 @@ First of all, let's look at the HTML for the video player, in the HTML:
   </video>
 
   <div class="controls">
-    <button class="playpause">Play</button>
+    <button class="play-pause">Play</button>
     <button class="stop">Stop</button>
     <button class="rwd">Rwd</button>
     <button class="fwd">Fwd</button>
@@ -134,7 +134,7 @@ We've inserted some simple control buttons below our video. These controls of co
 We will first need to store references to each of the controls — add the following to the top of your JavaScript file:
 
 ```js
-const playPauseBtn = document.querySelector(".playpause");
+const playPauseBtn = document.querySelector(".play-pause");
 const stopBtn = document.querySelector(".stop");
 const rwdBtn = document.querySelector(".rwd");
 const fwdBtn = document.querySelector(".fwd");
@@ -250,7 +250,7 @@ It is not OK to publish an audio resource but promise to publish the transcript 
 
 If you use an automated service, then you'll probably have to use the user interface that the tool provides. For example, take a look at our [Wait, ARIA Roles Have Categories?](https://www.youtube.com/watch?v=mwF-PpJOjMs) video and choose the three-dot menu (. . .) _> Show Transcript_. You'll see the transcript come up in a separate panel.
 
-If you are creating your own user interface to present your audio and associated transcript, you can do it however you like, but it might make sense to include it in a showable/hideable panel; see our [audio-transcript-ui](https://mdn.github.io/learning-area/accessibility/multimedia/audio-transcript-ui/) example (also see the [source code](https://github.com/mdn/learning-area/tree/main/accessibility/multimedia/audio-transcript-ui)).
+If you are creating your own user interface to present your audio and associated transcript, you can do it however you like, but it might make sense to include it in a showable/hidable panel; see our [audio-transcript-ui](https://mdn.github.io/learning-area/accessibility/multimedia/audio-transcript-ui/) example (also see the [source code](https://github.com/mdn/learning-area/tree/main/accessibility/multimedia/audio-transcript-ui)).
 
 ### Audio descriptions
 

@@ -188,7 +188,7 @@ see &#x3C;cite>The Monster Book of Monsters&#x3C;/cite>.</pre
       <td id="time-example">
         <pre class="brush: html">
 Used to format the date. For example:
-&#x3C;time datetime="2020-05-24" pubdate>
+&#x3C;time datetime="2020-05-24">
 published on 23-05-2020&#x3C;/time>.</pre
         >
         {{EmbedLiveSample("time-example", 100, 60)}}

@@ -222,7 +222,7 @@ Then we also have the {{htmlelement("button")}} element itself. This can take a 
 ```
 
 ```html hidden
-<div class="buttondemo">
+<div class="button-demo">
   <p>Using &lt;input></p>
   <p>
     <input type="submit" value="Submit this form" />
@@ -243,8 +243,8 @@ button,
 input {
   display: none;
 }
-.buttondemo button,
-.buttondemo input {
+.button-demo button,
+.button-demo input {
   all: revert;
 }
 ```

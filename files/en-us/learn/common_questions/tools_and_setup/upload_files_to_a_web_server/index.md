@@ -54,7 +54,7 @@ There are several SFTP clients out there. Our demo covers [FileZilla](https://fi
 
 Open the FileZilla application; you should see something like this:
 
-![Screenshot of the user interface of Filezilla FTP application. Host input has focus.](filezilla-ui.png)
+![Screenshot of the user interface of FileZilla FTP application. Host input has focus.](filezilla-ui.png)
 
 ### Logging in
 

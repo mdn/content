@@ -129,7 +129,7 @@ X-Cache-Info: caching
 Content-Length: 41823
 
 <!doctype html>
-<html lang="en-US" dir="ltr" class="redesign no-js"  data-ffo-opensanslight=false data-ffo-opensans=false >
+<html lang="en-US" dir="ltr" class="redesign no-js" data-ffo-opensanslight=false data-ffo-opensans=false >
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -194,7 +194,7 @@ Content-Length: 0
 
 ## Static sites
 
-A _static site_ is one that returns the same hard coded content from the server whenever a particular resource is requested. So for example if you have a page about a product at `/static/myproduct1.html`, this same page will be returned to every user. If you add another similar product to your site you will need to add another page (e.g. `myproduct2.html`) and so on. This can start to get really inefficient — what happens when you get to thousands of product pages? You would repeat a lot of code across each page (the basic page template, structure, etc.), and if you wanted to change anything about the page structure — like add a new "related products" section for example — then you'd have to change every page individually.
+A _static site_ is one that returns the same hard coded content from the server whenever a particular resource is requested. So for example if you have a page about a product at `/static/my-product1.html`, this same page will be returned to every user. If you add another similar product to your site you will need to add another page (e.g. `my-product2.html`) and so on. This can start to get really inefficient — what happens when you get to thousands of product pages? You would repeat a lot of code across each page (the basic page template, structure, etc.), and if you wanted to change anything about the page structure — like add a new "related products" section for example — then you'd have to change every page individually.
 
 > [!NOTE]
 > Static sites are excellent when you have a small number of pages and you want to send the same content to every user. However they can have a significant cost to maintain as the number of pages becomes larger.

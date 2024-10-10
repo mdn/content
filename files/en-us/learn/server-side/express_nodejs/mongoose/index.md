@@ -547,7 +547,7 @@ While you can create schemas and models using any file structure you like, we hi
 This is shown below:
 
 ```js
-// File: ./models/somemodel.js
+// File: ./models/some-model.js
 
 // Require Mongoose
 const mongoose = require("mongoose");
@@ -568,7 +568,7 @@ You can then require and use the model immediately in other files. Below we show
 
 ```js
 // Create a SomeModel model just by requiring the module
-const SomeModel = require("../models/somemodel");
+const SomeModel = require("../models/some-model");
 
 // Use the SomeModel object (model) to find all SomeModel records
 const modelInstances = await SomeModel.find().exec();

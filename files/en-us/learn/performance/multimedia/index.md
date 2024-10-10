@@ -49,7 +49,7 @@ Despite being the largest consumer of bandwidth, the impact of image downloading
 
 ### Loading strategy
 
-One of the biggest improvements to most websites is [lazy-loading](/en-US/docs/Web/Performance/Lazy_loading) images beneath the fold, rather than downloading them all on initial page load regardless of whether a visitor scrolls to see them or not. Many JavaScript libraries can implement this for you, such as [lazysizes](https://github.com/aFarkas/lazysizes), and browser vendors are working on a native `lazyload` attribute that is currently in the experimental phase.
+One of the biggest improvements to most websites is [lazy-loading](/en-US/docs/Web/Performance/Lazy_loading) images beneath the fold, rather than downloading them all on initial page load regardless of whether a visitor scrolls to see them or not. Browsers provide this natively via the [`loading="lazy"`](/en-US/docs/Web/HTML/Element/img#loading) attribute on the `<img>` element, and there are also many client-side JavaScript libraries that can do this.
 
 Beyond loading a subset of images, you should look into the format of the images themselves:
 

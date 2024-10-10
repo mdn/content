@@ -214,7 +214,7 @@ label {
 input,
 textarea {
   /* To make sure that all text fields have the same font settings
-     By default, textareas have a monospace font */
+     By default, text areas have a monospace font */
   font: 1em sans-serif;
   /* Uniform text field size */
   width: 300px;

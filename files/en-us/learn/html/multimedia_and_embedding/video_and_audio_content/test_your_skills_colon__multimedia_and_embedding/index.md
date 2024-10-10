@@ -54,7 +54,7 @@ Try updating the live code below to recreate the finished example:
 
 In this task, we want you to:
 
-- Embed a PDF into the page. The PDF is called `mypdf.pdf`, and is contained in the `media` folder.
+- Embed a PDF into the page. The PDF is called `my-pdf.pdf`, and is contained in the `media` folder.
 - Go to a sharing site like YouTube or Google Maps, and embed a video or other media item into the page.
 
 Try updating the live code below to recreate the finished example:
