@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-An **application context** is a top-level {{glossary("browsing context")}} to which a [web application manifest](/en-US/docs/Web/Manifest) is applied.
+An **application context** is a top-level {{glossary("browsing context")}} to which a [web application manifest](/en-US/docs/Web/Manifest) is applied. The members of an applied manifest affect the presentation or behavior of the browsing context.
 
 The manifest is applied after the application context is created but before navigation begins to either a start URL or a deep link. A **deep link** is a URL that directs users to a specific page within the web app, bypassing the home page.
 
