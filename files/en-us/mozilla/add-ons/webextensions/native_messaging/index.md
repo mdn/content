@@ -346,11 +346,19 @@ import struct
 
 # Read a message from stdin and decode it.
 def getMessage():
-    rawLength = sys.stdin.buffer.read(4)
-    if len(rawLength) == 0:
-        sys.exit(0)
-    messageLength = struct.unpack('@I', rawLength)[0]
-    message = sys.stdin.buffer.read(messageLength).decode('utf-8')
+    totalLength = 0
+    messageParts = []
+    while True:
+        rawLength = sys.stdin.buffer.read(4)
+        if len(rawLength) == 0:
+            break
+        messageLength = struct.unpack('@I', rawLength)[0]
+        part = sys.stdin.buffer.read(messageLength).decode('utf-8')
+        messageParts.append(part)
+        totalLength += messageLength
+        if totalLength >= MAX_MESSAGE_SIZE:
+            break
+    message = ''.join(messageParts)
     return json.loads(message)
 
 # Encode a message for transmission,
@@ -365,10 +373,25 @@ def encodeMessage(messageContent):
     return {'length': encodedLength, 'content': encodedContent}
 
 # Send an encoded message to stdout
+MAX_MESSAGE_SIZE = 1024  # Maximum message size in bytes
+
 def sendMessage(encodedMessage):
-    sys.stdout.buffer.write(encodedMessage['length'])
-    sys.stdout.buffer.write(encodedMessage['content'])
-    sys.stdout.buffer.flush()
+    messageSize = len(encodedMessage['content'])
+    if messageSize > MAX_MESSAGE_SIZE:
+        # Split the message into chunks and send each chunk separately
+        chunkSize = MAX_MESSAGE_SIZE
+        numChunks = (messageSize + chunkSize - 1) // chunkSize
+        for i in range(numChunks):
+            start = i * chunkSize
+            end = min(start + chunkSize, messageSize)
+            chunk = encodedMessage['content'][start:end]
+            sys.stdout.buffer.write(struct.pack('@I', len(chunk)))
+            sys.stdout.buffer.write(chunk)
+            sys.stdout.buffer.flush()
+    else:
+        sys.stdout.buffer.write(encodedMessage['length'])
+        sys.stdout.buffer.write(encodedMessage['content'])
+        sys.stdout.buffer.flush()
 
 while True:
     receivedMessage = getMessage()
