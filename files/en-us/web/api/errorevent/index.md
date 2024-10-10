@@ -45,4 +45,6 @@ _Inherits methods from its parent {{domxref("Event")}}_.
 
 ## See also
 
-- [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers), most likely objects to raise such an event
+- [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers), most likely objects to raise such an event.
+- {{domxref("Window")}}: {{domxref("Window/error_event", "error")}} event
+- {{domxref("Navigation")}}: {{domxref("Navigation/navigateerror_event", "navigateerror")}} event
