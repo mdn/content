@@ -73,7 +73,7 @@ For example, {{domxref("Fence.reportEvent()")}} provides a way to trigger the su
 
 ### Permissions policy
 
-Only specific features designed to be used in `<fencedframes>`s can be enabled via permissions policies set on them; other policy-controlled features are not available in this context. See [Permissions policies available to fenced frames](/en-US/docs/Web/HTML/Element/fencedframe#permissions_policies_available_to_fenced_frames) for more details.
+Only specific features designed to be used in `<fencedframe>`s can be enabled via permissions policies set on them; other policy-controlled features are not available in this context. See [Permissions policies available to fenced frames](/en-US/docs/Web/HTML/Element/fencedframe#permissions_policies_available_to_fenced_frames) for more details.
 
 ### HTTP headers
 

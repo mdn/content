@@ -78,11 +78,11 @@ const matches = document.querySelectorAll("iframe[data-src]");
 ```
 
 Here, an attribute selector is used to return a list of the list items contained within
-a list whose ID is `userlist` which have a `data-active` attribute
+a list whose ID is `user-list` which have a `data-active` attribute
 whose value is `1`:
 
 ```js
-const container = document.querySelector("#userlist");
+const container = document.querySelector("#user-list");
 const matches = container.querySelectorAll("li[data-active='1']");
 ```
 

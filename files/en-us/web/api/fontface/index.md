@@ -52,12 +52,12 @@ For URL font sources it allows authors to trigger when the remote font is fetche
 
 ## Examples
 
-The code below defines a font face using data at the URL "myfont.woff" with a few font descriptors.
+The code below defines a font face using data at the URL "my-font.woff" with a few font descriptors.
 Just to show how it works, we then define the `stretch` descriptor using a property.
 
 ```js
 //Define a FontFace
-const font = new FontFace("myfont", "url(myfont.woff)", {
+const font = new FontFace("my-font", "url(my-font.woff)", {
   style: "italic",
   weight: "400",
 });

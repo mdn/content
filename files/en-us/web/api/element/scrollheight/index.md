@@ -141,7 +141,7 @@ until the content of the paragraph has been scrolled through. Once checked, the 
   <p>
     <input type="checkbox" id="agree" name="accept" disabled />
     <label for="agree">I agree</label>
-    <input type="submit" id="nextstep" value="Next" disabled />
+    <input type="submit" id="next-step" value="Next" disabled />
   </p>
 </form>
 ```
@@ -169,7 +169,7 @@ until the content of the paragraph has been scrolled through. Once checked, the 
 ```js
 const info = document.getElementById("info");
 const toAgree = document.getElementById("agree");
-const toNextStep = document.getElementById("nextstep");
+const toNextStep = document.getElementById("next-step");
 const veryImportantRead = document.getElementById("very-important-read");
 
 // Check if user has scrolled the element to the bottom

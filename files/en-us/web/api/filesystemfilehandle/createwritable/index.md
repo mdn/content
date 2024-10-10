@@ -12,7 +12,7 @@ The **`createWritable()`** method of the {{domxref("FileSystemFileHandle")}} int
 The method returns a {{jsxref('Promise')}} which resolves to this created stream.
 
 Any changes made through the stream won't be reflected in the file represented by the file handle until the stream has been closed.
-This is typically implemented by writing data to a temporary file, and only replacing the file represented by file handle with the temporary file when the writable filestream is closed.
+This is typically implemented by writing data to a temporary file, and only replacing the file represented by file handle with the temporary file when the writable file stream is closed.
 
 ## Syntax
 
@@ -93,8 +93,8 @@ The two {{htmlelement("button")}} elements and text {{htmlelement("input")}} fie
     Select a file to write to: <button class="select">Select file</button>
   </li>
   <li>
-    <label for="filetext">Enter text to write to the file:</label>
-    <input type="text" id="filetext" name="filetext" disabled />
+    <label for="file-text">Enter text to write to the file:</label>
+    <input type="text" id="file-text" name="file-text" disabled />
   </li>
   <li>
     Write your text to the file:
@@ -118,7 +118,7 @@ We start by grabbing references to the select file button, the write text button
 ```js
 const selectBtn = document.querySelector(".select");
 const writeBtn = document.querySelector(".write");
-const fileText = document.querySelector("#filetext");
+const fileText = document.querySelector("#file-text");
 
 let writableStream = null;
 ```

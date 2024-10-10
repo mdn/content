@@ -149,10 +149,10 @@ See [Introduction to using XPath in JavaScript](/en-US/docs/Web/XPath/Introducti
 This function is a replacement for {{domxref("Document.getElementById()")}} for when you need to search by `xml:id` instead.
 
 ```js
-function getElementByIdWrapper(xmldoc, id) {
-  return xmldoc.evaluate(
+function getElementByIdWrapper(xmlDoc, id) {
+  return xmlDoc.evaluate(
     `//*[@xml:id="${id}"]`,
-    xmldoc,
+    xmlDoc,
     () => "http://www.w3.org/XML/1998/namespace",
     XPathResult.FIRST_ORDERED_NODE_TYPE,
     null,

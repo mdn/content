@@ -29,10 +29,10 @@ A [CDATA Section](/en-US/docs/Web/API/CDATASection) node.
 ## Examples
 
 ```js
-const docu = new DOMParser().parseFromString("<xml></xml>", "application/xml");
-const cdata = docu.createCDATASection("Some <CDATA> data & then some");
-docu.querySelector("xml").appendChild(cdata);
-console.log(new XMLSerializer().serializeToString(docu));
+const doc = new DOMParser().parseFromString("<xml></xml>", "application/xml");
+const cdata = doc.createCDATASection("Some <CDATA> data & then some");
+doc.querySelector("xml").appendChild(cdata);
+console.log(new XMLSerializer().serializeToString(doc));
 // Displays: <xml><![CDATA[Some <CDATA> data & then some]]></xml>
 ```
 

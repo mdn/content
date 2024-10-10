@@ -35,7 +35,7 @@ A live {{DOMxRef("HTMLCollection")}} of found elements in the order they appear 
 ## Examples
 
 In the following example `getElementsByTagNameNS` starts from a particular
-parent element, and searches topdown recursively through the DOM from that parent
+parent element, and searches top-down recursively through the DOM from that parent
 element, looking for child elements matching the tag `name` parameter.
 
 Note that when the node on which `getElementsByTagName` is invoked is not

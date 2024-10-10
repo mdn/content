@@ -36,7 +36,7 @@ The following HTML sets up a basic video player.
       </a>
     </div>
 
-    <div id="controlbar">
+    <div id="control-bar">
       <p class="no-picture-in-picture">
         Document Picture-in-Picture API not available
       </p>
@@ -59,7 +59,7 @@ if ("documentPictureInPicture" in window) {
   togglePipButton.textContent = "Toggle Picture-in-Picture";
   togglePipButton.addEventListener("click", togglePictureInPicture, false);
 
-  document.getElementById("controlbar").appendChild(togglePipButton);
+  document.getElementById("control-bar").appendChild(togglePipButton);
 }
 ```
 
