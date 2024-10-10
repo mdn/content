@@ -7,7 +7,7 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.100
 
 {{HTTPSidebar}}
 
-The HTTP **`100 Continue`** [informational response](/en-US/docs/Web/HTTP/Status#information_responses) status code indicates that the initial part of a request has been received and has not yet been rejected by the server.
+The HTTP **`100 Continue`** [informational response](/en-US/docs/Web/HTTP/Status#informational_responses) status code indicates that the initial part of a request has been received and has not yet been rejected by the server.
 The client should continue with a request or discard the 100 response if the request is already finished.
 
 When a request has an {{HTTPHeader("Expect", "Expect: 100-continue")}} header, the 100 Continue response indicates that the server is ready or capable of receiving the request content.
