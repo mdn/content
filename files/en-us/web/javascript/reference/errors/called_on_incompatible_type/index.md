@@ -37,8 +37,7 @@ argument which does not have the expected type.
 This issue can also happen when providing a function that is stored as a property of an
 object as an argument to another function. In this case, the object that stores the
 function won't be the `this` target of that function when it is called by the
-other function. To work-around this issue, you will either need to provide a lambda
-which is making the call, or use the {{jsxref("Function.prototype.bind()")}} function to
+other function. To work-around this issue, you will either need to wrap the callback function in another function, or use the {{jsxref("Function.prototype.bind()")}} method to
 force the `this` argument to the expected object.
 
 ## Examples
@@ -68,7 +67,7 @@ const myFun = function () {
   console.log(this);
 };
 ["bar", "baz"].forEach((x) => myFun.bind(x));
-// This works using the "bind" function. It creates a lambda forwarding the argument.
+// This works using the "bind" function. It creates a new function forwarding the argument.
 ```
 
 ## See also

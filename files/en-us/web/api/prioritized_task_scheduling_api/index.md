@@ -147,7 +147,7 @@ function main() {
 
 However, this kind of structure doesn't help with main thread blocking. Since all five of the tasks are being run inside one main function, the browser runs them all as a single task.
 
-To handle this, we tend to run a function periodically to get the code to _yield to the main thread_. This means that our code is split into multiple tasks, between the execution of which the browser is given the opportunity to handle high-priority tasks such as updating the UI. A common pattern for this function uses {{domxref("setTimeout()")}} to postpone execution into a separate task:
+To handle this, we tend to run a function periodically to get the code to _yield to the main thread_. This means that our code is split into multiple tasks, between the execution of which the browser is given the opportunity to handle high-priority tasks such as updating the UI. A common pattern for this function uses {{domxref("Window.setTimeout", "setTimeout()")}} to postpone execution into a separate task:
 
 ```js
 function yield() {
@@ -468,7 +468,7 @@ The log below shows the aborted task.
 ### Delaying tasks
 
 Tasks can be delayed by specifying an integer number of milliseconds in the `options.delay` parameter to `postTask()`.
-This effectively adds the task to the prioritized queue on a timeout, as might be created using {{domxref("setTimeout()")}}.
+This effectively adds the task to the prioritized queue on a timeout, as might be created using {{domxref("Window.setTimeout", "setTimeout()")}}.
 The `delay` is the minimum amount of time before the task is added to the scheduler; it may be longer.
 
 ```html hidden

@@ -8,7 +8,7 @@ status:
 browser-compat: api.PressureRecord.state
 ---
 
-{{APIRef("Compute Pressure API")}}{{SeeCompatTable}}{{securecontext_header}}
+{{APIRef("Compute Pressure API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_service")}}{{securecontext_header}}
 
 The read-only **`state`** property is a string indicating the pressure state recorded.
 
