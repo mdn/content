@@ -52,7 +52,7 @@ Then there's a box which contains the text input box into which the user can typ
 Finally, there's the little box into which we'll insert the messages. This {{HTMLElement("div")}} block will be the second peer.
 
 ```html
-<div class="messagebox" id="receivebox">
+<div class="messagebox" id="receive-box">
   <p>Messages received:</p>
 </div>
 ```
@@ -83,7 +83,7 @@ function startup() {
   disconnectButton = document.getElementById("disconnectButton");
   sendButton = document.getElementById("sendButton");
   messageInputBox = document.getElementById("message");
-  receiveBox = document.getElementById("receivebox");
+  receiveBox = document.getElementById("receive-box");
 
   // Set event listeners for user interface widgets
 
@@ -283,9 +283,9 @@ When a "message" event occurs on the remote channel, our `handleReceiveMessage()
 ```js
 function handleReceiveMessage(event) {
   const el = document.createElement("p");
-  const txtNode = document.createTextNode(event.data);
+  const textNode = document.createTextNode(event.data);
 
-  el.appendChild(txtNode);
+  el.appendChild(textNode);
   receiveBox.appendChild(el);
 }
 ```
