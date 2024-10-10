@@ -111,6 +111,7 @@ console.log(
 ## See also
 
 - [Polyfill of `JSON.isRawJSON` in `core-js`](https://github.com/zloirock/core-js#jsonparse-source-text-access)
+- [Ponyfill of `JSON.isRawJSON` in `@ungap/raw-json`](https://github.com/ungap/raw-json)
 - {{jsxref("JSON")}}
 - {{jsxref("JSON.stringify()")}}
 - {{jsxref("JSON.rawJSON()")}}
