@@ -7,13 +7,13 @@ spec-urls: https://w3c.github.io/aria/#aria-label
 
 {{AccessibilitySidebar}}
 
-The `aria-label` attribute defines a string value that labels an interactive element.
+The `aria-label` attribute defines a string value that can be used to name an element, as long as the element's role does not [prohibit naming](#associated_roles).
 
 ## Description
 
 Sometimes, the default {{Glossary("accessible_name", "accessible name")}} of an element is missing or the accessible name does not accurately describe the contents of the element and there is no content visible in the DOM that can be associated with the object to give it meaning. A common example of such an element is a button containing an SVG icon without any text.
 
-In cases where an interactive element has no accessible name or an accessible name is not accurate and there is no content visible in the DOM that can be referenced via the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attribute, the `aria-label` attribute can be used to define a string that labels the interactive element on which it is set. This provides the interactive element with its accessible name.
+In cases where an element that is not part of the [prohibited list](#associated_roles), has no accessible name or an accessible name is not accurate and there is no content visible in the DOM that can be referenced via the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attribute, the `aria-label` attribute can be used to define a string that labels the interactive element on which it is set. This provides the element an accessible name.
 
 The code below shows an example of how to use the `aria-label` attribute to provide an accessible name for a `<button>` element. The button in this example contains an SVG graphic and lacks textual content, making the `aria-label` essential for screen reader users to understand its function, which in this case is "Close".
 
@@ -32,7 +32,7 @@ The code below shows an example of how to use the `aria-label` attribute to prov
 </button>
 ```
 
-> **Note:** `aria-label` is intended for interactive elements or for elements made interactive via other ARIA declarations when there's no visible text in the DOM to serve as a label.
+> **Note:** `aria-label` is intended for naming elements where the implicit or explicit role does not prohibit naming. It is strongly recommended to prioritize the use of `aria-labelledby` over `aria-label` if a visible label exists for the element to reference and receive its name from.
 
 Most content has an accessible name generated from its immediate wrapping element's text content. Accessible names can also be created by certain attributes or associated elements.
 
