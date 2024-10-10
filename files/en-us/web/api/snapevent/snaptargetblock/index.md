@@ -20,7 +20,7 @@ Specifically:
 
 ## Value
 
-A {{domxref("Node")}} representing the snapped element, or `null` if no block-direction element was snapped to.
+A {{domxref("Node")}} representing the snapped element, or `null` if no block-direction element is snapped to (i.e. scroll snapping only occurs in the inline direction).
 
 If the snapped element was a pseudo-element, the returned `Node` will be the owning element of that pseudo-element.
 
@@ -38,6 +38,7 @@ See the main {{domxref("SnapEvent")}} page for brief examples, and our [Using sc
 
 ## See also
 
-- The {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} and {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} events
+- {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} event
+- {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} event
 - [CSS scroll snap module](/en-US/docs/Web/CSS/CSS_scroll_snap)
 - [Scroll Snap Events](https://developer.chrome.com/blog/scroll-snap-events) on developer.chrome.com (2024)

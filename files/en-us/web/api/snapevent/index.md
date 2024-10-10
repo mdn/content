@@ -25,9 +25,9 @@ These events can be used to run code in response to new elements being snapped t
 _Inherits properties from its parent, {{DOMxRef("Event")}}._
 
 - {{domxref("SnapEvent.snapTargetBlock", "snapTargetBlock")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a reference to the element snapped to in the block direction when the event fired.
+  - : Returns a reference to the element snapped to in the block direction when the event fired, or `null` if no element is snapped to in the block direction.
 - {{domxref("SnapEvent.snapTargetInline", "snapTargetInline")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a reference to the element snapped to in the inline direction when the event fired.
+  - : Returns a reference to the element snapped to in the inline direction when the event fired, or `null` if no element is snapped to in the inline direction.
 
 ## Examples
 
@@ -35,19 +35,18 @@ _Inherits properties from its parent, {{DOMxRef("Event")}}._
 
 In the following `scrollsnapchanging` handler function snippet, we set the {{domxref("SnapEvent.snapTargetBlock", "snapTargetBlock")}} element's `class` attribute to `pending` using the {{domxref("Element.className")}} property, which could be used to style the element differently when it becomes a pending snap target.
 
-Note that this handler is intended to be set on a block-direction scroll container (vertically-scrolling if the page is set to a left-to-right {{cssxref("writing-mode")}}), therefore only the `snapTargetBlock` element will change between multiple events firing. The element snapped to in the inline direction will always be the same, therefore {{domxref("SnapEvent.snapTargetInline")}} will always contain a reference to the same element.
+Note that this handler is intended to be set on a block-direction scroll container (vertically-scrolling if the page is set to a horizontal {{cssxref("writing-mode")}}), therefore only the `snapTargetBlock` element will change between multiple events firing. {{domxref("SnapEvent.snapTargetInline")}} will return `null`, because no snapping occurs in the inline direction.
 
 ```js
 scrollingElem.addEventListener("scrollsnapchanging", (event) => {
   // Set current pending snap target class to "pending"
   event.snapTargetBlock.className = "pending";
 
-  // Logs the id of the new block-direction snap target element
-  console.log(event.snapTargetBlock.id);
+  // Logs the new pending block-direction snap target element
+  console.log(event.snapTargetBlock);
 
-  // Always logs the same ID; the inline-direction snap target
-  // element will always be the same
-  console.log(event.snapTargetInline.id);
+  // Logs null; no inline snapping occurs
+  console.log(event.snapTargetInline);
 });
 ```
 
@@ -71,7 +70,8 @@ scrollingElem.addEventListener("scrollsnapchange", (event) => {
 
 ## See also
 
-- {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} and {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} events
+- {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} event
+- {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} event
 - [CSS scroll snap module](/en-US/docs/Web/CSS/CSS_scroll_snap)
 - [Using scroll snap events](/en-US/docs/Web/CSS/CSS_scroll_snap/Using_scroll_snap_events)
 - [Scroll Snap Events](https://developer.chrome.com/blog/scroll-snap-events) on developer.chrome.com (2024)

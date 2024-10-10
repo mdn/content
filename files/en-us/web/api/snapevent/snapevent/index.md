@@ -26,9 +26,9 @@ new SnapEvent(type, init)
 - `init`
   - : An object containing the following properties:
     - `snapTargetBlock` {{optional_inline}}
-      - : Returns a reference to the element snapped to in the block direction when the event fired.
+      - : Returns a reference to the element snapped to in the block direction when the event fired, or `null` if no element is snapped to in the block direction.
     - `snapTargetInline` {{optional_inline}}
-      - : Returns a reference to the element snapped to in the inline direction when the event fired.
+      - : Returns a reference to the element snapped to in the inline direction when the event fired, or `null` if no element is snapped to in the inline direction.
 
 ## Examples
 
@@ -55,6 +55,7 @@ mainElem.addEventListener("scrollsnapchange", (event) => {
 
 ## See also
 
-- The {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} and {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} events
+- {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} event
+- {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} event
 - [CSS scroll snap module](/en-US/docs/Web/CSS/CSS_scroll_snap)
 - [Scroll Snap Events](https://developer.chrome.com/blog/scroll-snap-events) on developer.chrome.com (2024)
