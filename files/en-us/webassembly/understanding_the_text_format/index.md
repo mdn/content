@@ -580,7 +580,7 @@ Memory 2 data
 You can find the full source on GitHub as [multi-memory.html](https://github.com/mdn/webassembly-examples/blob/main/understanding-text-format/multi-memory.html) ([also see it live](https://mdn.github.io/webassembly-examples/understanding-text-format/multi-memory.html))
 
 > [!NOTE]
-> See [`webassembly.multimemory` in the home page](/en-US/docs/WebAssembly#webassembly.multimemory) for browser compatibility information for this feature.
+> See [`webassembly.multiMemory` in the home page](/en-US/docs/WebAssembly#webassembly.multimemory) for browser compatibility information for this feature.
 
 ### WebAssembly tables
 

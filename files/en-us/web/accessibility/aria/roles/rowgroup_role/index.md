@@ -36,7 +36,7 @@ An element with `role="rowgroup"` is a group of [rows](/en-US/docs/Web/Accessibi
 
 ## Description
 
-`Rowgroup` establishes a relationship between owned row elements and is a structural equivalent to the {{HTMLElement('thead')}}, {{HTMLElement('tfoot')}} and {{HTMLElement('tbody')}} elements in HTML. There is, however, no differentiation between different types of rowgroups. Their elements must be contained in, or owned by, elements with either the [table](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role) or [grid](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role) role. Using the native {{HTMLElement('thead')}}, {{HTMLElement('tfoot')}} and {{HTMLElement('tbody')}} HTML elements, whenever possible, is strongly encouraged.
+`Rowgroup` establishes a relationship between owned row elements and is a structural equivalent to the {{HTMLElement('thead')}}, {{HTMLElement('tfoot')}} and {{HTMLElement('tbody')}} elements in HTML. There is, however, no differentiation between different types of row groups. Their elements must be contained in, or owned by, elements with either the [table](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role) or [grid](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role) role. Using the native {{HTMLElement('thead')}}, {{HTMLElement('tfoot')}} and {{HTMLElement('tbody')}} HTML elements, whenever possible, is strongly encouraged.
 
 To create an ARIA table header, table footer or table body, add `role="rowgroup"` to the element. That rowgroup should be nested within a grid, table or treegrid, encompassing a group of one or more rows. Each row, in turn, contains child cells. These cells can be of different types, depending on whether they are column or row headers, or plain or grid cells.
 

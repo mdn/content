@@ -208,9 +208,9 @@ A lot of JavaScript is required to make radio buttons out of non-semantic HTML.
 
 const radioGroups = document.querySelectorAll('[role="radiogroup"]');
 
-for (let i = 0, groups = radioGroups.length; i < groups; i++) {
+for (let i = 0; i < radioGroups.length; i++) {
   const radios = radioGroups[i].querySelectorAll("[role=radio]");
-  for (let j = 0, radiobuttons = radios.length; j < radios; j++) {
+  for (let j = 0; j < radios.length; j++) {
     radios[j].addEventListener("keydown", function () {
       handleKeydown();
     });
