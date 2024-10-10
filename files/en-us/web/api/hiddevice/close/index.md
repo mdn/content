@@ -8,7 +8,7 @@ status:
 browser-compat: api.HIDDevice.close
 ---
 
-{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_shared")}}
 
 The **`close()`** method of the {{domxref("HIDDevice")}} interface closes the connection to the HID device.
 
