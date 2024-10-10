@@ -24,7 +24,9 @@ The `name` manifest member is used to specify the full name of your web applicat
 
 ## Description
 
-The `name` manifest member serves as the {{Glossary("Accessible_name", "accessible name")}} for your installed app. It is displayed to users in various contexts, such as in a list of other installed web apps, as a label for your app's icon, or in the application switcher or task manager. In space-constrained contexts, such as on a device's home screen or in the application switcher, where the full `name` may not fit, the [`short_name`](/en-US/docs/Web/Manifest/short_name) value may be used instead, if available.
+The `name` manifest member serves as the {{Glossary("Accessible_name", "accessible name")}} for your installed app. It is displayed to users in various contexts, such as in a list of other installed web apps, as a label for your app's icon, or in the application switcher or task manager.
+
+In space-constrained contexts where the full `name` may not fit, such as on a device's home screen or in the application switcher, the value of the [`short_name`](/en-US/docs/Web/Manifest/short_name) property (if defined) may be used instead.
 
 > [!NOTE]
 > For Chromium-based browsers, a `name` or `short_name` is required in the manifest for the web app to be installable.
