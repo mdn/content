@@ -8,7 +8,7 @@ status:
 browser-compat: api.InterventionReportBody.message
 ---
 
-{{APIRef("Reporting API")}}{{SeeCompatTable}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`message`** read-only property of the {{domxref("InterventionReportBody")}} interface returns a human-readable description of the intervention, including information such as how the intervention could be avoided. This typically matches the message a browser will display in its DevTools console when an intervention is imposed, if one is available.
 

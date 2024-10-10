@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Request.clone
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`clone()`** method of the {{domxref("Request")}} interface creates a copy of the current `Request` object.
 

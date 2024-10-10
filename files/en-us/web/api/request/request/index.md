@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.Request.Request
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`Request()`** constructor creates a new
 {{domxref("Request")}} object.

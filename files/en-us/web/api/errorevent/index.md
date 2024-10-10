@@ -5,11 +5,16 @@ page-type: web-api-interface
 browser-compat: api.ErrorEvent
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
 The **`ErrorEvent`** interface represents events providing information related to errors in scripts or in files.
 
 {{InheritanceDiagram}}
+
+## Constructor
+
+- {{domxref("ErrorEvent.ErrorEvent", "ErrorEvent()")}}
+  - : Creates an `ErrorEvent` event with the given parameters.
 
 ## Instance properties
 
@@ -25,11 +30,6 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
   - : An `integer` containing the column number of the script file on which the error occurred.
 - {{domxref("ErrorEvent.error")}} {{ReadOnlyInline}}
   - : A JavaScript `Object` that is concerned by the event.
-
-## Constructor
-
-- {{domxref("ErrorEvent.ErrorEvent", "ErrorEvent()")}}
-  - : Creates an `ErrorEvent` event with the given parameters.
 
 ## Instance methods
 
