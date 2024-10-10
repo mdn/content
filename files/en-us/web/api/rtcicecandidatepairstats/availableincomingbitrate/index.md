@@ -15,7 +15,7 @@ pair. The higher the value, the more bandwidth you can assume is available for
 incoming data.
 
 You can get the outgoing available bitrate from
-{{domxref("RTCIceCandidatePairStats.availableoutgoingBitrate", "availableoutgoingBitrate")}}.
+{{domxref("RTCIceCandidatePairStats.availableOutgoingBitrate", "availableOutgoingBitrate")}}.
 
 ## Syntax
 

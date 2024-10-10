@@ -371,16 +371,16 @@ In this example we create a function that will apply three different transformat
     <![CDATA[
       function transformMe(evt) {
         // svg root element to access the createSVGTransform() function
-        const svgroot = evt.target.parentNode;
+        const svgRoot = evt.target.parentNode;
         // SVGTransformList of the element that has been clicked on
         const tfmList = evt.target.transform.baseVal;
 
         // Create a separate transform object for each transform
-        const translate = svgroot.createSVGTransform();
+        const translate = svgRoot.createSVGTransform();
         translate.setTranslate(50,5);
-        const rotate = svgroot.createSVGTransform();
+        const rotate = svgRoot.createSVGTransform();
         rotate.setRotate(10,0,0);
-        const scale = svgroot.createSVGTransform();
+        const scale = svgRoot.createSVGTransform();
         scale.setScale(0.8,0.8);
 
         // apply the transformations by appending the SVGTransform objects to the SVGTransformList associated with the element

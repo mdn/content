@@ -50,13 +50,13 @@ You can add a `track` event listener to be notified when the new track is availa
 
 ## Example
 
-This simple example creates an event listener for the {{domxref("RTCPeerConnection.track_event", "track")}} event which sets the {{domxref("HTMLMediaElement.srcObject", "srcObject")}} of the {{HTMLElement("video")}} element with the ID `videobox` to the first stream in the list passed in the event's {{domxref("RTCTrackEvent.streams", "streams")}} array.
+This simple example creates an event listener for the {{domxref("RTCPeerConnection.track_event", "track")}} event which sets the {{domxref("HTMLMediaElement.srcObject", "srcObject")}} of the {{HTMLElement("video")}} element with the ID `video-box` to the first stream in the list passed in the event's {{domxref("RTCTrackEvent.streams", "streams")}} array.
 
 ```js
 peerConnection.addEventListener(
   "track",
   (e) => {
-    let videoElement = document.getElementById("videobox");
+    let videoElement = document.getElementById("video-box");
     videoElement.srcObject = e.streams[0];
   },
   false,

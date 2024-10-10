@@ -22,7 +22,7 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 - {{domxref("RTCOutboundRtpStreamStats.framesEncoded", "framesEncoded")}}
   - : The number of frames that have been successfully encoded so far for sending on this RTP stream. _Only valid for video streams._
 - {{domxref("RTCOutboundRtpStreamStats.nackCount", "nackCount")}}
-  - : An integer value indicating the total number of Negative ACKnolwedgement (NACK) packets this `RTCRtpSender` has received from the remote {{domxref("RTCRtpReceiver")}}.
+  - : An integer value indicating the total number of Negative ACKnowledgement (NACK) packets this `RTCRtpSender` has received from the remote {{domxref("RTCRtpReceiver")}}.
 - {{domxref("RTCOutboundRtpStreamStats.perDscpPacketsSent", "perDscpPacketsSent")}}
   - : A record of key-value pairs with strings as the keys mapped to 32-bit integer values, each indicating the total number of packets this `RTCRtpSender` has transmitted for this source for each Differentiated Services Code Point (DSCP).
 - {{domxref("RTCOutboundRtpStreamStats.pliCount", "pliCount")}}

@@ -29,7 +29,7 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : A {{domxref("DOMHighResTimeStamp")}} indicating the time at which the last packet was received for this source.
     The [`timestamp`](#timestamp) property, on the other hand, indicates the time at which the statistics object was generated.
 - {{domxref("RTCInboundRtpStreamStats.nackCount", "nackCount")}}
-  - : An integer value indicating the total number of Negative ACKnolwedgement (NACK) packets this receiver has sent.
+  - : An integer value indicating the total number of Negative ACKnowledgement (NACK) packets this receiver has sent.
 - {{domxref("RTCInboundRtpStreamStats.packetsDuplicated", "packetsDuplicated")}}
   - : An integer value indicating the total number of packets that have been discarded because they were duplicates. These packets are not counted by {{domxref("RTCInboundRtpStreamStats.packetsDiscarded", "packetsDiscarded")}}.
 - {{domxref("RTCInboundRtpStreamStats.packetsFailedDecryption", "packetsFailedDecryption")}}

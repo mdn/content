@@ -42,7 +42,7 @@ The example below shows how to listen for the `prioritychange` event on a {{domx
 
 ```js hidden
 let log = document.getElementById("log");
-function mylog(text) {
+function myLog(text) {
   log.textContent += `${text}\n`;
 }
 ```
@@ -61,14 +61,14 @@ if ("scheduler" in this) {
   controller.signal.addEventListener("prioritychange", (event) => {
     const previousPriority = event.previousPriority;
     const newPriority = event.target.priority;
-    mylog(`Priority changed from ${previousPriority} to ${newPriority}.`);
+    myLog(`Priority changed from ${previousPriority} to ${newPriority}.`);
   });
 
   // Post task using the controller's signal.
   // The signal priority sets the initial priority of the task
   scheduler.postTask(
     () => {
-      mylog("Task 1");
+      myLog("Task 1");
     },
     { signal: controller.signal },
   );
@@ -79,7 +79,7 @@ if ("scheduler" in this) {
 ```
 
 > [!NOTE]
-> The code above uses a custom logging function `mylog()` to log to the text area below.
+> The code above uses a custom logging function `myLog()` to log to the text area below.
 > This is hidden as it isn't relevant to the example.
 
 The output below demonstrates shows that the [task's priority](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities) changed from `user-blocking` to `background`.

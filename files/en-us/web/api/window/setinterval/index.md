@@ -96,12 +96,12 @@ the Stop button is pressed.
 
 ```js
 // variable to store our intervalID
-let nIntervId;
+let intervalId;
 
 function changeColor() {
   // check if an interval has already been set up
-  if (!nIntervId) {
-    nIntervId = setInterval(flashText, 1000);
+  if (!intervalId) {
+    intervalId = setInterval(flashText, 1000);
   }
 }
 
@@ -111,9 +111,9 @@ function flashText() {
 }
 
 function stopTextColor() {
-  clearInterval(nIntervId);
-  // release our intervalID from the variable
-  nIntervId = null;
+  clearInterval(intervalId);
+  // release our intervalId from the variable
+  intervalId = null;
 }
 
 document.getElementById("start").addEventListener("click", changeColor);

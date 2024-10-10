@@ -61,7 +61,7 @@ function getData(pageId) {
   fetch(myRequest)
     .then((response) => response.text())
     .then((text) => {
-      myArticle.innertext = text;
+      myArticle.innerText = text;
     });
 }
 ```
