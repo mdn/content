@@ -94,7 +94,7 @@ After that, it may subsequently contain any combination of the `*` wildcard and 
 
 The value for the _path_ matches against the string which is the URL path plus the [URL query string](https://en.wikipedia.org/wiki/Query_string). This includes the `?` between the two, if the query string is present in the URL. For example, if you want to match URLs on any domain where the URL path ends with `foo.bar`, then you need to use an array of Match Patterns like `["*://*/*foo.bar", "*://*/*foo.bar?*"]`. The `?*` is needed, rather than just `bar*`, in order to anchor the ending `*` as applying to the URL query string and not some portion of the URL path.
 
-Neither the [URL fragment identifier](https://en.wikipedia.org/wiki/Fragment_identifier), nor the `#` which precedes it, are considered as part of the _path_.
+Neither the [URL fragment identifier](https://en.wikipedia.org/wiki/Fragment_identifier) nor the `#` that precedes it are considered as part of the _path_ and are ignored during pattern matching. A match pattern containing `#` will fail to match with any URL.
 
 > [!NOTE]
 > The path pattern string should not include a port number. Adding a port, as in: `http://localhost:1234/*` causes the match pattern to be ignored. However, `http://localhost:1234` will match with `http://localhost/*`.
@@ -341,6 +341,10 @@ The special value `<all_urls>` matches all URLs under any of the supported schem
     <tr>
       <td><code>https://mozilla.org</code></td>
       <td>No path.</td>
+    </tr>
+    <tr>
+      <td><code>https://mozilla.org/#section1</code></td>
+      <td>Contains an unsupported match character.</td>
     </tr>
     <tr>
       <td><code>https://mozilla.*.org/</code></td>
