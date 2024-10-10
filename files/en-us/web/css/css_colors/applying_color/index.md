@@ -62,7 +62,7 @@ Every element is a box with some sort of content, and has a background and a bor
 
 - {{cssxref("box-shadow")}}
 
-  - : Configures inset shadow and dropshow effects on the box. Among the options for each shadow is the shadow's base color (which is then blurred and blended with any background based on the other parameters).
+  - : Configures inset shadow and drop shadow effects on the box. Among the options for each shadow is the shadow's base color (which is then blurred and blended with any background based on the other parameters).
 
 - {{cssxref("column-rule-color")}}
 

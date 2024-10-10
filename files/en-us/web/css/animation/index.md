@@ -30,15 +30,15 @@ This property is a shorthand for the following CSS properties:
 ```css
 /* @keyframes duration | easing-function | delay |
 iteration-count | direction | fill-mode | play-state | name */
-animation: 3s ease-in 1s 2 reverse both paused slidein;
+animation: 3s ease-in 1s 2 reverse both paused slide-in;
 
 /* @keyframes duration | easing-function | delay | name */
-animation: 3s linear 1s slidein;
+animation: 3s linear 1s slide-in;
 
 /* two animations */
 animation:
-  3s linear slidein,
-  3s ease-out 5s slideout;
+  3s linear slide-in,
+  3s ease-out 5s slide-out;
 ```
 
 The `animation` property is specified as one or more single animations, separated by commas.

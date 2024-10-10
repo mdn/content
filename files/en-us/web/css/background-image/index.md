@@ -25,7 +25,7 @@ If a specified image cannot be drawn (for example, when the file denoted by the 
 ```css
 /* single image */
 background-image: linear-gradient(black, white);
-background-image: url("catfront.png");
+background-image: url("cat-front.png");
 
 /* multiple images */
 background-image: radial-gradient(circle, #0000 45%, #000f 48%),
@@ -83,9 +83,9 @@ Note that the star image is partially transparent and is layered over the cat im
 
 ```html
 <div>
-  <p class="catsandstars">This paragraph is full of cats<br />and stars.</p>
+  <p class="cats-and-stars">This paragraph is full of cats<br />and stars.</p>
   <p>This paragraph is not.</p>
-  <p class="catsandstars">Here are more cats for you.<br />Look at them!</p>
+  <p class="cats-and-stars">Here are more cats for you.<br />Look at them!</p>
   <p>And no more.</p>
 </div>
 ```
@@ -106,8 +106,8 @@ div {
   background-image: url("mdn_logo_only_color.png");
 }
 
-.catsandstars {
-  background-image: url("startransparent.gif"), url("catfront.png");
+.cats-and-stars {
+  background-image: url("star-transparent.gif"), url("cat-front.png");
   background-color: transparent;
 }
 ```

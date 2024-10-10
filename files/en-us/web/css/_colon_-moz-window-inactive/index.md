@@ -31,7 +31,7 @@ This example alters the appearance of a box's background depending on whether it
 ### HTML
 
 ```html
-<div id="mybox">
+<div id="my-box">
   <p>This is a box!</p>
 </div>
 ```
@@ -39,13 +39,13 @@ This example alters the appearance of a box's background depending on whether it
 ### CSS
 
 ```css
-#mybox {
+#my-box {
   background: linear-gradient(to bottom, yellow, cyan);
   width: 200px;
   height: 200px;
 }
 
-#mybox:-moz-window-inactive {
+#my-box:-moz-window-inactive {
   background: cyan;
 }
 ```

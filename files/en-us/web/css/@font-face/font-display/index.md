@@ -62,8 +62,8 @@ The font display timeline is based on a timer that begins the moment the user ag
 @font-face {
   font-family: ExampleFont;
   src:
-    url(/path/to/fonts/examplefont.woff) format("woff"),
-    url(/path/to/fonts/examplefont.eot) format("eot");
+    url(/path/to/fonts/example-font.woff) format("woff"),
+    url(/path/to/fonts/example-font.eot) format("eot");
   font-weight: 400;
   font-style: normal;
   font-display: fallback;

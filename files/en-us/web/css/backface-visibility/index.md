@@ -62,7 +62,7 @@ This example shows a cube with transparent faces, and one with opaque faces.
   <tr>
     <td>
       <div class="container">
-        <div class="cube showbf">
+        <div class="cube show-bf">
           <div class="face front">1</div>
           <div class="face back">2</div>
           <div class="face right">3</div>
@@ -78,7 +78,7 @@ This example shows a cube with transparent faces, and one with opaque faces.
     </td>
     <td>
       <div class="container">
-        <div class="cube hidebf">
+        <div class="cube hide-bf">
           <div class="face front">1</div>
           <div class="face back">2</div>
           <div class="face right">3</div>
@@ -98,11 +98,11 @@ This example shows a cube with transparent faces, and one with opaque faces.
 ```css
 /* Classes that will show or hide the
    three back faces of the "cube" */
-.showbf div {
+.show-bf div {
   backface-visibility: visible;
 }
 
-.hidebf div {
+.hide-bf div {
   backface-visibility: hidden;
 }
 
