@@ -37,7 +37,10 @@ None (`undefined`).
 ### Exceptions
 
 - `TypeError` {{domxref("DOMException")}}
-  - : Thrown if: - The URL scheme is not HTTPS. - `registerAdBeacon()` has already been called inside the same script runner context. - The specified event type starts with `reserved.`, but isn't one of the [reserved automatic beacon event types](/en-US/docs/Web/API/Fence/setReportEventDataForAutomaticBeacons#eventtype).
+  - : Thrown if:
+    - The URL scheme is not HTTPS.
+    - `registerAdBeacon()` has already been called inside the same script runner context.
+    - The specified event type starts with `reserved.`, but isn't one of the [reserved automatic beacon event types](/en-US/docs/Web/API/Fence/setReportEventDataForAutomaticBeacons#eventtype).
 
 ## Examples
 

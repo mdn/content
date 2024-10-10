@@ -82,13 +82,13 @@ When auctions complete, and ads are chosen, {{htmlelement("fencedframe")}} eleme
 - {{domxref("ForDebuggingOnly")}}
   - : Defines methods for reporting auction wins and losses from inside the `generateBid()` and `scoreAd()` user-defined functions for debugging purposes.
 - {{domxref("InterestGroupBiddingAndScoringScriptRunnerGlobalScope")}}
-  - : Exposes appropriate interfaces to buyer and seller script runners to provide access to bidding and scoring functionality for user-defined functions.
+  - : Exposes interfaces that define debugging reporting functionality and summary reporting functionality exposed inside the user-defined functions included within buyer and seller script runners.
 - {{domxref("InterestGroupReportingScriptRunnerGlobalScope")}}
   - : Defines reporting functionality exposed inside the user-defined functions included within buyer and seller script runners.
 - {{domxref("ProtectedAudience")}}
   - : Can be used to determine support for the Protected Audience API and specific features.
 - {{domxref("RealTimeReporting")}}
-  - : Defines methods for real-time reporting, such as {{domxref("RealTimeReporting.contributeToHistogram", "contributeToHistogram()")}}
+  - : Defines the {{domxref("RealTimeReporting.contributeToHistogram", "contributeToHistogram()")}} method for real-time summary reporting.
 
 ### Extensions to other interfaces
 
