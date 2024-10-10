@@ -8,7 +8,7 @@ status:
 browser-compat: api.PerformanceResourceTiming.deliveryType
 ---
 
-{{APIRef("Performance API")}}{{SeeCompatTable}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`deliveryType`** read-only property is a string indicating how the resource was delivered — for example from the cache or from a navigational prefetch.
 

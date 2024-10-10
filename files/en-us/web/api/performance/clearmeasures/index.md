@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Performance.clearMeasures
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`clearMeasures()`** method removes all or specific {{domxref("PerformanceMeasure")}} objects from the browser's performance timeline.
 

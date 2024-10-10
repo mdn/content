@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.PerformanceMeasure
 ---
 
-{{APIRef("Performance API")}} {{AvailableInWorkers}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 **`PerformanceMeasure`** is an _abstract_ interface for {{domxref("PerformanceEntry")}} objects with an {{domxref("PerformanceEntry.entryType","entryType")}} of `"measure"`. Entries of this type are created by calling {{domxref("Performance.measure","performance.measure()")}} to add a _named_ {{domxref("DOMHighResTimeStamp")}} (the _measure_) between two _marks_ to the browser's _performance timeline_.
 

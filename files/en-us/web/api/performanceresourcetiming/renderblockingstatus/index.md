@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.PerformanceResourceTiming.renderBlockingStatus
 ---
 
-{{APIRef("Resource Timing API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`renderBlockingStatus`** read-only property returns the render-blocking status of the resource.
 

@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.PerformanceEntry
 ---
 
-{{APIRef("Performance API")}} {{AvailableInWorkers}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`PerformanceEntry`** object encapsulates a single performance metric that is part of the browser's performance timeline.
 
