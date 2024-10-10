@@ -77,14 +77,17 @@ User agents handle white space collapsing as follows:
 
 <!-- prettier-ignore-start -->
 ```html
-<h2 class="collapse">Default behavior; all whitespace is 
-    collapsed          in the          heading     .</h2>
+<h2 class="collapse">Default behavior;
+  all   whitespace   is   collapsed
+  in    the          heading       .</h2>
 
-<h2 class="preserve">In this case all whitespace is 
-    preserved          in the          heading     .</h2>
+<h2 class="preserve">In this case
+  all   whitespace   is   preserved
+  in    the          heading       .</h2>
 
-<h2 class="preserve-breaks">In this case only the line break is 
-    preserved          in the          heading     .</h2>
+<h2 class="preserve-breaks">In this case only
+  the   line breaks  are  preserved
+  in    the          heading       .</h2>
 ```
 <!-- prettier-ignore-end -->
 

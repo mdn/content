@@ -171,9 +171,6 @@ rgb(from red r g b / alpha)
 
 It is worth mentioning again that the color system of the origin color doesn't need to match the color system being used to create the output color. Again, this provides a lot of flexibility. Generally you won't be interested in and might not even know the system the origin color is defined in (you might just have a [custom property value](#using_custom_properties) to manipulate). You'll just want to input a color and, for example, create a lighter variant of it by putting it into an `hsl()` function and varying the lightness value.
 
-> [!NOTE]
-> Aliases such as `rgba()` or `hsla()` can be used to output relative colors, and to specify origin colors. When using legacy color functions to output a relative color, you must use the comma-less modern syntax and can't mix percentages and numbers.
-
 ## Using custom properties
 
 When creating a relative color, you can use values defined in [CSS custom properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties) both for the origin color and within the output color channel value definitions. Let's look at an example.

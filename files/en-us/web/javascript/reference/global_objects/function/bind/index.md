@@ -162,7 +162,7 @@ console.log(addThirtySeven(5, 10)); // 42
 
 ### With setTimeout()
 
-By default, within {{domxref("setTimeout()")}}, the `this` keyword will be set to [`globalThis`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis), which is {{domxref("window")}} in browsers. When working with class methods that require `this` to refer to class instances, you may explicitly bind `this` to the callback function, in order to maintain the instance.
+By default, within {{domxref("Window.setTimeout", "setTimeout()")}}, the `this` keyword will be set to [`globalThis`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis), which is {{domxref("window")}} in browsers. When working with class methods that require `this` to refer to class instances, you may explicitly bind `this` to the callback function, in order to maintain the instance.
 
 ```js
 class LateBloomer {

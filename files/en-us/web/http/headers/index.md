@@ -19,7 +19,7 @@ Headers can be grouped according to their contexts:
 - {{Glossary("Response header", "Response headers")}}
   - : Hold additional information about the response, like its location or about the server providing it.
 - {{Glossary("Representation header", "Representation headers")}}
-  - : Contain information about the body of the resource, like its [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types), or encoding/compression applied.
+  - : Contain information about the body of the resource, like its [MIME type](/en-US/docs/Web/HTTP/MIME_types), or encoding/compression applied.
 - {{Glossary("Payload header","Payload headers")}}
   - : Contain representation-independent information about payload data, including content length and the encoding used for transport.
 
@@ -92,9 +92,9 @@ For more details, refer to the [Content negotiation article](/en-US/docs/Web/HTT
 - {{HTTPHeader("Accept-Language")}}
   - : Informs the server about the human language the server is expected to send back. This is a hint and is not necessarily under the full control of the user: the server should always pay attention not to override an explicit user choice (like selecting a language from a dropdown).
 - {{HTTPHeader("Accept-Patch")}}
-  - : A _request content negotiation_ response header that advertises which [media type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) the server is able to understand in a {{HTTPMethod("PATCH")}} request.
+  - : A _request content negotiation_ response header that advertises which [media type](/en-US/docs/Web/HTTP/MIME_types) the server is able to understand in a {{HTTPMethod("PATCH")}} request.
 - {{HTTPHeader("Accept-Post")}}
-  - : A _request content negotiation_ response header that advertises which [media type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) the server is able to understand in a {{HTTPMethod("POST")}} request.
+  - : A _request content negotiation_ response header that advertises which [media type](/en-US/docs/Web/HTTP/MIME_types) the server is able to understand in a {{HTTPMethod("POST")}} request.
 
 ## Controls
 
@@ -292,10 +292,21 @@ The following request headers are not _strictly_ "fetch metadata request headers
 
 ## WebSockets
 
+Headers used by the [WebSockets API](/en-US/docs/Web/API/WebSockets_API) in the [WebSocket handshake](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#the_websocket_handshake):
+
 - {{HTTPHeader("Sec-WebSocket-Accept")}}
-  - : Sent from server to client and indicates that the server is willing to initiate a WebSocket connection.
+  - : Response header that indicates that the server is willing to upgrade to a WebSocket connection.
+- {{HTTPHeader("Sec-WebSocket-Extensions")}}
+  - : In requests, this header indicates the WebSocket extensions supported by the client in preferred order.
+    In responses, it indicates the extension selected by the server from the client's preferences.
 - {{HTTPHeader("Sec-WebSocket-Key")}}
-  - : Sent from client to server to confirm that it "really wants" to request that an HTTP client is upgraded to become a WebSocket.
+  - : Request header containing a key that verifies that the client explicitly intends to open a `WebSocket`.
+- {{HTTPHeader("Sec-WebSocket-Protocol")}}
+  - : In requests, this header indicates the sub-protocols supported by the client in preferred order.
+    In responses, it indicates the the sub-protocol selected by the server from the client's preferences.
+- {{HTTPHeader("Sec-WebSocket-Version")}}
+  - : In requests, this header indicates the version of the WebSocket protocol used by the client.
+    In responses, it is sent only if the requested protocol version is not supported by the server, and lists the versions that the server supports.
 
 ## Other
 

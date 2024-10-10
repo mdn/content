@@ -37,6 +37,8 @@ where:
     If the browser does not conform to the conditions specified in the _supports-condition_, it may not fetch the linked stylesheet, and even if downloaded through some other path, will not load it.
     The syntax of `supports()` is almost identical to that described in {{CSSxRef("@supports")}}, and that topic can be used as a more complete reference.
 
+Use `@import` together with the `layer` keyword or `layer()` function to import external style sheets (from frameworks, widget stylesheets, libraries, etc.) into layers.
+
 ## Description
 
 Imported rules must come before all other types of rules, except {{CSSxRef("@charset")}} rules and layer creating [`@layer`](/en-US/docs/Web/CSS/@layer) statements.
@@ -107,7 +109,7 @@ The `@import` rules in the above examples show media-dependent conditions that w
 
 The `@import` rules above illustrate how you might import a layout that uses a grid if `display: grid` is supported, and otherwise imports CSS that uses `display: flex`.
 While you can only have one `supports()` statement, you can combine any number of feature checks with `not`, `and`, and `or`. However, you must use parenthesis to define precedence when you mix them, e.g. `supports((..) or (..) and not (..))` is invalid, but `supports((..) or ((..) and (not (..))))` is valid.
-Note that if you just have a single declaration then you don't need to wrap it in additional parenthese: this is shown in the first example above.
+Note that if you just have a single declaration then you don't need to wrap it in additional parentheses: this is shown in the first example above.
 
 The examples above show support conditions using simple declaration syntax.
 You can also specify CSS functions in `supports()`, and it will evaluate to `true` if they are supported and can be evaluated on the user-agent.

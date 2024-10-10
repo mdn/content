@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.SubtleCrypto.decrypt
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{APIRef("Web Crypto API")}}{{SecureContext_header}}{{AvailableInWorkers}}
 
 The **`decrypt()`** method of the {{domxref("SubtleCrypto")}} interface decrypts some encrypted data.
 It takes as arguments a {{glossary("key")}} to decrypt with, some optional extra parameters, and the data to decrypt (also known as "ciphertext").

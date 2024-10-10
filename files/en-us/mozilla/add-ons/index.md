@@ -38,12 +38,6 @@ The [Firefox Extension Workshop](https://extensionworkshop.com) can help you dev
 
 In 2020, Mozilla will release a new Firefox for Android experience. This new, high-performance browser for Android has been rebuilt from the ground up using GeckoView, Mozilla's mobile browser engine. We are currently building support for the WebExtensions API on GeckoView.
 
-### Migrate an existing extension
-
-If you maintain a legacy extension, such as an XUL overlay, bootstrapped, or Add-on SDK-based extension, you can still port it to use WebExtension APIs. There are some [porting resources on Firefox Extension Workshop](https://extensionworkshop.com/documentation/develop/porting-a-legacy-firefox-extension/), our site for Firefox-specific development resources.
-
-For more information about transition support, please visit our [wiki page.](https://wiki.mozilla.org/Add-ons/developer/communication)
-
 ## Publishing add-ons
 
 [Addons.mozilla.org](https://addons.mozilla.org), commonly known as "AMO," is Mozilla's official site for developers to list add-ons, and for users to discover them. By uploading your add-on to AMO, you can participate in our community of users and creators and find an audience for your add-on.

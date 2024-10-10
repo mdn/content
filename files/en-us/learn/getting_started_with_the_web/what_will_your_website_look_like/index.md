@@ -21,7 +21,7 @@ To begin, you'll need to answer these questions:
 3. **What does your website look like,** in simple high-level terms? What's the background color? What kind of font is appropriate: formal, cartoony, bold and loud, subtle?
 
 > [!NOTE]
-> Complex projects need detailed guidelines that go into all the details of colors, fonts, spacing between items on a page, appropriate writing style, and so on. This is sometimes called a design guide, design system, or brand book, and you can see an example at the [Firefox Photon Design System](https://design.firefox.com/photon/).
+> Complex projects need detailed guidelines that go into all the details of colors, fonts, spacing between items on a page, appropriate writing style, and so on. This is sometimes called a design guide, design system, or brand book, and you can see an example at the [Firefox Acorn Design System](https://acorn.firefox.com/latest).
 
 ## Sketching out your design
 
@@ -71,7 +71,7 @@ Once you have found a font, there are two main ways of using it:
 2. Download the font file to your own system, host the font yourself, and use your hosted copy in your website's code.
 
 > [!NOTE]
-> Serving fonts hosted on Google Fonts may be incompatible with the European Union's data privacy regulation [GDPR](https://gdpr.eu/what-is-gdpr/) as the font service exposes the user's IP address. If this is a potential problem for you, then either choose the second option or choose a font provider that is GDPR compliant, such as [Bunny Fonts](https://fonts.bunny.net/about).
+> Serving fonts hosted on Google Fonts may be incompatible with the European Union's data privacy regulation [GDPR](https://gdpr.eu/) as the font service exposes the user's IP address. If this is a potential problem for you, then either choose the second option or choose a font provider that is GDPR compliant, such as [Bunny Fonts](https://fonts.bunny.net/about).
 
 Alternatively you can use [safe web fonts](https://web.mit.edu/jmorzins/www/fonts.html) such as Arial, Times New Roman, or Courier New.
 

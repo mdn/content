@@ -258,7 +258,7 @@ In our second example, we will take our first example — our info-box — and a
 > [!NOTE]
 > You can see the finished example running live at [fixed-info-box.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/fixed-info-box.html) ([source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/fixed-info-box.html)). Check it out to get an idea of what you will be building in this section of the article.
 
-As a starting point, you can use your completed example from the first section of the article, or make a local copy of [info-box.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html) from our GitHub repo.
+As a starting point, you can use your completed example from the first section of the article, or make a local copy of [tabbed-info-box.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/tabbed-info-box.html) from our GitHub repo.
 
 ### HTML additions
 

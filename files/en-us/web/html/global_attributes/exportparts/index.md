@@ -299,7 +299,7 @@ customElements.define(
 
 #### CSS
 
-In targetting the parts of the `<card-component>` from within the `<card-wrapper>`, we can only style the exported parts via their exposed part names:
+In targeting the parts of the `<card-component>` from within the `<card-wrapper>`, we can only style the exported parts via their exposed part names:
 
 ```css
 /* selects the exported parts name */

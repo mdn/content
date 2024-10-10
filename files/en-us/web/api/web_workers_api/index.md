@@ -42,25 +42,25 @@ Workers run in a different global context than the current {{DOMxRef("window")}}
 
 Some of the functions (a subset) that are common to all workers and to the main thread (from `WindowOrWorkerGlobalScope`) are:
 
-- {{domxref("WorkerGlobalScope.atob()", "atob()")}}
-- {{domxref("WorkerGlobalScope.btoa()", "btoa()")}}
-- {{domxref("clearInterval()")}}
-- {{domxref("clearTimeout()")}}
-- {{domxref("createImageBitmap()")}}
-- {{domxref("WorkerGlobalScope.dump()", "dump()")}} {{non-standard_inline}}
-- {{domxref("WorkerGlobalScope/fetch", "fetch()")}}
-- {{domxref("queueMicrotask()")}}
-- {{domxref("reportError()")}}
-- {{domxref("setInterval()")}}
-- {{domxref("setTimeout()")}}
-- {{domxref("structuredClone()")}}
-- {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()", "requestAnimationFrame()")}} (dedicated workers only)
-- {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()", "cancelAnimationFrame()")}} (dedicated workers only)
+- {{domxref("WorkerGlobalScope.atob()")}}
+- {{domxref("WorkerGlobalScope.btoa()")}}
+- {{domxref("WorkerGlobalScope.clearInterval()")}}
+- {{domxref("WorkerGlobalScope.clearTimeout()")}}
+- {{domxref("WorkerGlobalScope.createImageBitmap()")}}
+- {{domxref("WorkerGlobalScope.dump()")}} {{non-standard_inline}}
+- {{domxref("WorkerGlobalScope.fetch()")}}
+- {{domxref("WorkerGlobalScope.queueMicrotask()")}}
+- {{domxref("WorkerGlobalScope.reportError()")}}
+- {{domxref("WorkerGlobalScope.setInterval()")}}
+- {{domxref("WorkerGlobalScope.setTimeout()")}}
+- {{domxref("WorkerGlobalScope.structuredClone()")}}
+- {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}} (dedicated workers only)
+- {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()")}} (dedicated workers only)
 
 The following functions are **only** available to workers:
 
-- {{domxref("WorkerGlobalScope.importScripts()", "importScripts()")}},
-- {{domxref("DedicatedWorkerGlobalScope.postMessage()", "postMessage()")}} (dedicated workers only).
+- {{domxref("WorkerGlobalScope.importScripts()")}} (all workers)
+- {{domxref("DedicatedWorkerGlobalScope.postMessage()")}} (dedicated workers only)
 
 ### Supported Web APIs
 

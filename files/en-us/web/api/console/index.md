@@ -112,7 +112,7 @@ If you are going to mutate your object and you want to prevent the logged inform
 console.log(JSON.parse(JSON.stringify(obj)));
 ```
 
-There are other alternatives that work in browsers, such as [`structuredClone()`](/en-US/docs/Web/API/structuredClone), which are more effective at cloning different types of objects.
+There are other alternatives that work in browsers, such as {{DOMxRef("Window.structuredClone", "structuredClone()")}}, which are more effective at cloning different types of objects.
 
 #### Outputting multiple objects
 
@@ -147,7 +147,7 @@ The first parameter to the logging methods can be a string containing zero or mo
 - `%c`
   - : Applies CSS style rules to all following text. See [Styling console output](#styling_console_output).
 
-Some browsers may implement additional format specifiers. For example, Safari and Firefox support the C-style precision formating `%.<precision>f`. For example `console.log("Foo %.2f", 1.1)` will output the number to 2 decimal places: `Foo 1.10`, while `console.log("Foo %.2d", 1.1)` will output the number as two significant figures with a leading 0: `Foo 01`.
+Some browsers may implement additional format specifiers. For example, Safari and Firefox support the C-style precision formatting `%.<precision>f`. For example `console.log("Foo %.2f", 1.1)` will output the number to 2 decimal places: `Foo 1.10`, while `console.log("Foo %.2d", 1.1)` will output the number as two significant figures with a leading 0: `Foo 01`.
 
 Each of these pulls the next argument after the format string off the parameter list. For example:
 
@@ -183,6 +183,8 @@ The text before the directive will not be affected, but the text after the direc
 ![Styled Text in Firefox console](css-styling.png)
 
 You may use `%c` multiple times:
+
+<!-- cSpell:ignore corange cred -->
 
 ```js
 console.log(

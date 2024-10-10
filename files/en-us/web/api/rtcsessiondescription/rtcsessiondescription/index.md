@@ -17,8 +17,7 @@ specified object.
 > [!NOTE]
 > This constructor has been deprecated because
 > {{domxref("RTCPeerConnection.setLocalDescription()")}} and other methods which take
-> SDP as input now directly accept an object conforming to the
-> `RTCSessionDescriptionInit` dictionary, so you don't have to instantiate an
+> SDP as input now directly accept an object containing the {{domxref("RTCSessionDescription.type", "type")}} and {{domxref("RTCSessionDescription.sdp", "sdp")}} properties, so you don't have to instantiate an
 > `RTCSessionDescription` yourself.
 
 ## Syntax
@@ -29,15 +28,13 @@ new RTCSessionDescription(options)
 
 ### Values
 
-- `options` {{optional_inline}}
+- `options`
 
-  - : An object providing the default values for the session description; the object
-    conforms to the `RTCSessionDescriptionInit` dictionary. That dictionary has
-    the following properties:
+  - : An object providing the default values for the session description. It should contain the following properties:
 
     - `type`
-      - : **Required.** A string which is used to set the `type` property of the new `RTCSessionDescription` object.
-    - `sdp`
+      - : **Required.** A string which is used to set the `type` property of the new `RTCSessionDescription` object. Must be one of the valid {{domxref("RTCSessionDescription.type")}} values.
+    - `sdp` {{optional_inline}}
       - : A string containing a {{Glossary("SDP")}} message describing the session. This value is an empty string (`""`) by default and may not be `null`.
 
 ## Example
@@ -48,8 +45,7 @@ This example uses the constructor to convert an SDP offer into an
 > [!NOTE]
 > This is no longer necessary, however;
 > {{domxref("RTCPeerConnection.setLocalDescription()")}} and other methods which take
-> SDP as input now directly accept an object conforming to the
-> `RTCSessionDescriptionInit` dictionary, so you don't have to instantiate an
+> SDP as input now directly accept plain objects, so you don't have to instantiate an
 > `RTCSessionDescription` yourself.
 
 ```js
@@ -72,7 +68,7 @@ navigator.getUserMedia({ video: true }, (stream) => {
 
 ## Specifications
 
-This feature is not part of any current specification. It is no longer on track to become a standard.
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -66,6 +66,7 @@ Events have three functions:
         - "hidden"
         - "isArticle"
         - "mutedInfo"
+        - "openerTabId"
         - "pinned"
         - "status"
         - "title"
@@ -101,6 +102,8 @@ Lists the changes to the state of the tab that is updated. To learn more about t
   - : `boolean`. True if the tab is an article and is therefore eligible for display in [Reader Mode](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode).
 - `mutedInfo` {{optional_inline}}
   - : {{WebExtAPIRef('tabs.MutedInfo')}}. The tab's new muted state and the reason for the change.
+- `openerTabId` {{optional_inline}}
+  - : `integer`. The ID of the tab that opened this tab, if any. This property is only present if the opener tab exists and is in the same window.
 - `pinned` {{optional_inline}}
   - : `boolean`. The tab's new pinned state.
 - `status` {{optional_inline}}

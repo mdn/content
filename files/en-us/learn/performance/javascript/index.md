@@ -52,7 +52,7 @@ The most performant, least blocking JavaScript you can use is JavaScript that yo
 
 You should also split your JavaScript into multiple files representing critical and non-critical parts. [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) allow you to do this more efficiently than just using separate external JavaScript files.
 
-Then you can optimize these smaller files. [Minification](/en-US/docs/Glossary/Minification) reduces the number of characters in your file, thereby reducing the number of bytes or weight of your JavaScript. [Gzipping](/en-US/docs/Glossary/gzip_compression) compresses the file further and should be used even if you don't minify your code. [Brotli](/en-US/docs/Glossary/Brotli_compression) is similar to Gzip, but generally outperforms Gzip compression.
+Then you can optimize these smaller files. {{Glossary("Minification")}} reduces the number of characters in your file, thereby reducing the number of bytes or weight of your JavaScript. {{Glossary("Gzip compression", "Gzipping")}} compresses the file further and should be used even if you don't minify your code. {{Glossary("Brotli compression", "Brotli")}} is similar to Gzip, but generally outperforms Gzip compression.
 
 You can split and optimize your code manually, but often a module bundler like [Webpack](https://webpack.js.org/) will do a better job of this.
 
@@ -131,7 +131,7 @@ First of all, you can add the `async` attribute to your `<script>` elements:
 This causes the script to be fetched in parallel with the DOM parsing, so it will be ready at the same time and won't block rendering.
 
 > [!NOTE]
-> There is another attribute, `defer`, which causes the script to be executed after the document has been parsed, but before firing the [`DOMContentLoaded`](/en-US/docs/Web/API/Document/DOMContentLoaded_event) event. This has a similar effect to `async`.
+> There is another attribute, `defer`, which causes the script to be executed after the document has been parsed, but before firing the {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event. This has a similar effect to `async`.
 
 You could also just not load the JavaScript at all until an event occurs when it is needed. This could be done via DOM scripting, for example:
 
@@ -177,7 +177,7 @@ function main() {
 
 However, this kind of structure doesn't help with main thread blocking. Since all the five functions are being run inside one main function, the browser runs them all as a single long task.
 
-To handle this, we tend to run a "yield" function periodically to get the code to _yield to the main thread_. This means that our code is split into multiple tasks, between the execution of which the browser is given the opportunity to handle high-priority tasks such as updating the UI. A common pattern for this function uses {{domxref("setTimeout()")}} to postpone execution into a separate task:
+To handle this, we tend to run a "yield" function periodically to get the code to _yield to the main thread_. This means that our code is split into multiple tasks, between the execution of which the browser is given the opportunity to handle high-priority tasks such as updating the UI. A common pattern for this function uses {{domxref("Window.setTimeout", "setTimeout()")}} to postpone execution into a separate task:
 
 ```js
 function yield() {
@@ -208,29 +208,21 @@ async function main() {
 }
 ```
 
-To improve this further, we can use {{domxref("Scheduling.isInputPending", "navigator.scheduling.isInputPending()")}} to run the `yield()` function only when the user is attempting to interact with the page:
+To improve this further, we can use {{domxref("Scheduler.yield()")}} where available to allow this code to continue executing ahead of other less critical tasks in the queue:
 
 ```js
-async function main() {
-  // Create an array of functions to run
-  const tasks = [a, b, c, d, e];
-
-  while (tasks.length > 0) {
-    // Yield to a pending user input
-    if (navigator.scheduling.isInputPending()) {
-      await yield();
-    } else {
-      // Shift the first task off the tasks array
-      const task = tasks.shift();
-
-      // Run the task
-      task();
-    }
+function yield() {
+  // Use scheduler.yield() if available
+  if ("scheduler" in window && "yield" in scheduler) {
+    return scheduler.yield();
   }
+
+  // Fall back to setTimeout:
+  return new Promise((resolve) => {
+    setTimeout(resolve, 0);
+  });
 }
 ```
-
-This allows you to avoid blocking the main thread when the user is actively interacting with the page, potentially providing a smoother user experience. However, by only yielding when necessary, we can continue running the current task when there are no user inputs to process. This also avoids tasks being placed at the back of the queue behind other non-essential browser-initiated tasks that were scheduled after the current one.
 
 ## Handling JavaScript animations
 
@@ -240,7 +232,7 @@ The most obvious piece of animation advice is to use less animations — cut out
 
 For essential DOM animations, you are advised to use [CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) where possible, rather than JavaScript animations (the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) provides a way to directly hook into CSS animations using JavaScript). Using the browser to directly perform DOM animations rather than manipulating inline styles using JavaScript is much faster and more efficient. See also [CSS performance optimization > Handling animations](/en-US/docs/Learn/Performance/CSS#handling_animations).
 
-For animations that can't be handled in JavaScript, for example, animating an HTML {{htmlelement("canvas")}}, you are advised to use {{domxref("Window.requestAnimationFrame()")}} rather than older options such as {{domxref("setInterval()")}}. The `requestAnimationFrame()` method is specially designed for handling animation frames efficiently and consistently, for a smooth user experience. The basic pattern looks like this:
+For animations that can't be handled in JavaScript, for example, animating an HTML {{htmlelement("canvas")}}, you are advised to use {{domxref("Window.requestAnimationFrame()")}} rather than older options such as {{domxref("Window.setInterval()")}}. The `requestAnimationFrame()` method is specially designed for handling animation frames efficiently and consistently, for a smooth user experience. The basic pattern looks like this:
 
 ```js
 function loop() {
@@ -268,7 +260,7 @@ You can find a nice introduction to canvas animations at [Drawing graphics > Ani
 
 ## Optimizing event performance
 
-Events can be expensive for the browser to track and handle, especially when you are running an event continuously. For example, you might be tracking the position of the mouse using the [`mousemove`](/en-US/docs/Web/API/Element/mousemove_event) event to check whether it is still inside a certain area of the page:
+Events can be expensive for the browser to track and handle, especially when you are running an event continuously. For example, you might be tracking the position of the mouse using the {{domxref("Element/mousemove_event", "mousemove")}} event to check whether it is still inside a certain area of the page:
 
 ```js
 function handleMouseMove() {
@@ -313,7 +305,7 @@ There are several general best practices that will make your code run more effic
     }
     ```
 
-  - Do work that is only needed once outside the loop. This may sound a bit obvious, but it is easy to overlook. Take the following snippet, which fetches a JSON object containing data to be processed in some way. In this case the {{domxref("Window/fetch", "fetch()")}} operation is being done on every iteration of the loop, which is a waste of computing power. The fetching, which does not depend on `i`, could be moved outside the loop, so it is only done once.
+  - Do work that is only needed once outside the loop. This may sound a bit obvious, but it is easy to overlook. Take the following snippet, which fetches a JSON object containing data to be processed in some way. In this case the {{domxref("Window.fetch", "fetch()")}} operation is being done on every iteration of the loop, which is a waste of computing power. The fetching, which does not depend on `i`, could be moved outside the loop, so it is only done once.
 
     ```js
     async function returnResults(number) {

@@ -99,7 +99,7 @@ Using this method we do not need to specify anything at all on the individual gr
 
 ## Leaving a grid cell empty
 
-We have completely filled our grid with areas in this example, leaving no white space. However you can leave grid cells empty with this method of layout. To leave a cell empty use the full stop character, '`.`'. If I want to only display the footer directly under the main content I would need to leave the three cells underneath the sidebar empty.
+We have completely filled our grid with areas in this example, leaving no white space. However you can leave grid cells empty with this method of layout. To leave a cell empty use the full stop character, `.`. If I want to only display the footer directly under the main content I would need to leave the three cells underneath the sidebar empty.
 
 ```css
 .header {

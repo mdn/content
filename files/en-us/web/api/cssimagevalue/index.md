@@ -36,11 +36,11 @@ button {
   display: inline-block;
   min-height: 100px;
   min-width: 100px;
-  background: no-repeat 5% center url(magicwand.png) aqua;
+  background: no-repeat 5% center url(magic-wand.png) aqua;
 }
 ```
 
-We get the element's style map. We then get() the background-image from the stylemap and stringify it:
+We get the element's style map. We then get() the background-image from the style map and stringify it:
 
 ```js
 // get the element

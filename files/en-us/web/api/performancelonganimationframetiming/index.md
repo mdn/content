@@ -20,8 +20,6 @@ The `PerformanceLongAnimationFrameTiming` interface provides the following granu
 - A detailed set of timestamps for each LoAF.
 - Detailed information on each script that contributed to creating the LoAF, via the {{domxref("PerformanceLongAnimationFrameTiming.scripts")}} property. This returns an array of {{domxref("PerformanceScriptTiming")}} objects, one for each script.
 
-## Inheritance
-
 `PerformanceLongAnimationFrameTiming` inherits from {{domxref("PerformanceEntry")}}.
 
 {{InheritanceDiagram}}

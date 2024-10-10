@@ -63,7 +63,7 @@ Sometimes, you leave out parentheses around `if` statements:
 
 ```js-nolint example-bad
 function round(n, upperBound, lowerBound) {
-  if (n > upperBound) || (n < lowerBound) { // Not enough parenthese here!
+if (n > upperBound) || (n < lowerBound) { // Missing parentheses here!
     throw new Error(`Number ${n} is more than ${upperBound} or less than ${lowerBound}`);
   } else if (n < (upperBound + lowerBound) / 2) {
     return lowerBound;

@@ -31,18 +31,24 @@ The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`form-action`** direc
 
 ## Syntax
 
-One or more sources can be set for the `form-action` policy:
-
 ```http
-Content-Security-Policy: form-action <source>;
-Content-Security-Policy: form-action <source> <source>;
+Content-Security-Policy: form-action 'none';
+Content-Security-Policy: form-action <source-expression-list>;
 ```
 
-### Sources
+This directive may have one of the following values:
 
-`<source>` can be any one of the values listed in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
+- `'none'`
+  - : No form submissions may be made. The single quotes are mandatory.
+- `<source-expression-list>`
 
-Note that this same set of values can be used in all {{Glossary("fetch directive", "fetch directives")}} (and a [number of other directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#relevant_directives)).
+  - : A space-separated list of _source expression_ values. Form submissions may be made to URLs that match any of the given source expressions.
+
+    Source expressions are specified as keyword values or URL patterns: the syntax for each source expression is given in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources). However, only the following subset of those values apply to `form-action`:
+
+    - `<host-source>`
+    - `<scheme-source>`
+    - the keyword value `'self'`.
 
 ## Examples
 

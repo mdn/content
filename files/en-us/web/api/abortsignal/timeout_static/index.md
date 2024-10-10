@@ -27,6 +27,7 @@ AbortSignal.timeout(time)
 
 - `time`
   - : The "active" time in milliseconds before the returned {{domxref("AbortSignal")}} will abort.
+    The value must be within range of 0 and {{jsxref("Number.MAX_SAFE_INTEGER")}}.
 
 ### Return value
 

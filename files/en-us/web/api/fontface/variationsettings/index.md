@@ -8,7 +8,7 @@ status:
 browser-compat: api.FontFace.variationSettings
 ---
 
-{{APIRef("CSS Font Loading API")}}{{SeeCompatTable}}
+{{APIRef("CSS Font Loading API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`variationSettings`** property of the {{domxref("FontFace")}} interface retrieves or sets low-level OpenType or TrueType font variations.
 

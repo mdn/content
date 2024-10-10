@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.getSupportedExtensions
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.getSupportedExtensions()`** method
 returns a list of all the supported [WebGL](/en-US/docs/Web/API/WebGL_API)

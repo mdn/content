@@ -163,11 +163,11 @@ As seen in the previous `render()` function code example, each token is given a 
 
 .token-tagName {
   font-weight: bold;
-  color: rgb(117, 186, 242);
+  color: rgb(117 186 242);
 }
 
 .token-attributeName {
-  color: rgb(207, 81, 198);
+  color: rgb(207 81 198);
 }
 
 .token-attributeValue {

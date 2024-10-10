@@ -19,8 +19,8 @@ grid-template-rows: none;
 
 /* <track-list> values */
 grid-template-rows: 100px 1fr;
-grid-template-rows: [linename] 100px;
-grid-template-rows: [linename1] 100px [linename2 linename3];
+grid-template-rows: [line-name] 100px;
+grid-template-rows: [line-name1] 100px [line-name2 line-name3];
 grid-template-rows: minmax(100px, 1fr);
 grid-template-rows: fit-content(40%);
 grid-template-rows: repeat(3, 200px);
@@ -33,12 +33,12 @@ grid-template-rows:
   minmax(100px, max-content)
   repeat(auto-fill, 200px) 20%;
 grid-template-rows:
-  [linename1] 100px [linename2]
-  repeat(auto-fit, [linename3 linename4] 300px)
+  [line-name1] 100px [line-name2]
+  repeat(auto-fit, [line-name3 line-name4] 300px)
   100px;
 grid-template-rows:
-  [linename1 linename2] 100px
-  repeat(auto-fit, [linename1] 300px) [linename3];
+  [line-name1 line-name2] 100px
+  repeat(auto-fit, [line-name1] 300px) [line-name3];
 
 /* Global values */
 grid-template-rows: inherit;
@@ -58,7 +58,7 @@ This property may be specified as:
 
 - `none`
   - : Is a keyword meaning that there is no explicit grid. Any rows will be implicitly generated and their size will be determined by the {{cssxref("grid-auto-rows")}} property.
-- `[linename]`
+- `[line-name]`
   - : A [`<custom-ident>`](/en-US/docs/Web/CSS/custom-ident) specifying a name for the line in that location. The ident may be any valid string other than the reserved words `span` and `auto`. Lines may have multiple names separated by a space inside the square brackets, for example `[line-name-a line-name-b]`.
 - {{cssxref("&lt;length&gt;")}}
   - : Is a non-negative length.

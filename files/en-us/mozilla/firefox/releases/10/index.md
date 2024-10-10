@@ -60,7 +60,7 @@ Firefox 10 shipped on January 31, 2012. This article provides information about 
 
 #### WebGL
 
-- Firefox 10 now supports the [`OES_standard_derivatives`](https://www.khronos.org/registry/webgl/extensions/OES_standard_derivatives/) extension.
+- Firefox 10 now supports the [`OES_standard_derivatives`](https://registry.khronos.org/webgl/extensions/OES_standard_derivatives/) extension.
 - [New preferences have been added](/en-US/docs/Web/API/WebGL_API#webgl_debugging_and_testing) to help test WebGL code for compatibility with minimally-capable devices on your full development platform.
 
 #### Web Workers

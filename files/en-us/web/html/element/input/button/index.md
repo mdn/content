@@ -105,7 +105,7 @@ function updateButton() {
 {{EmbedLiveSample("Adding_keyboard_shortcuts_to_buttons", 650, 100)}}
 
 > [!NOTE]
-> The problem with the above example of course is that the user will not know what the access key is! In a real site, you'd have to provide this information in a way that doesn't interfere with the site design (for example by providing an easily accessible link that points to information on what the site accesskeys are).
+> The problem with the above example of course is that the user will not know what the access key is! In a real site, you'd have to provide this information in a way that doesn't interfere with the site design (for example by providing an easily accessible link that points to information on what the site access keys are).
 
 ### Disabling and enabling a button
 
@@ -117,7 +117,7 @@ To disable a button, specify the [`disabled`](/en-US/docs/Web/HTML/Attributes/di
 
 #### Setting the disabled attribute
 
-You can enable and disable buttons at run time by setting `disabled` to `true` or `false`. In this example our button starts off enabled, but if you press it, it is disabled using `button.disabled = true`. A {{domxref("setTimeout()")}} function is then used to reset the button back to its enabled state after two seconds.
+You can enable and disable buttons at run time by setting `disabled` to `true` or `false`. In this example our button starts off enabled, but if you press it, it is disabled using `button.disabled = true`. A {{domxref("Window.setTimeout", "setTimeout()")}} function is then used to reset the button back to its enabled state after two seconds.
 
 ```html
 <input type="button" value="Enabled" />
@@ -249,7 +249,7 @@ function degToRad(degrees) {
   return (degrees * Math.PI) / 180;
 }
 
-// update sizepicker output value
+// update size picker output value
 
 sizePicker.oninput = () => {
   output.textContent = sizePicker.value;
