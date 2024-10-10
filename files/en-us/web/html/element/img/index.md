@@ -293,8 +293,12 @@ An `alt` attribute's value should provide a clear and concise text replacement f
 #### Do
 
 ```html example-good
-<img alt="A Rockhopper Penguin is standing on a beach." src="penguin.jpg" />
+<img alt="A Penguin on a beach." src="penguin.jpg" />
 ```
+
+A simple accessibility test is to read the alt attribute content together with any preceding sentence to see if it conveys the same meaning as the image. Together with a preceding sentence "On my travels I saw a cute little animal:", the _Don't_ example could be read by a screen reader "On my travels I saw a cute little animal: image", and thus wouldn't make sense.
+
+For images used to trigger an action, for example when nested inside an {{htmlelement("a")}} or {{htmlelement("button")}} element, consider describing the triggered action inside the `alt` attribute value. For example, you could write `alt="next page"` instead of `alt="arrow right"`. You could also consider adding an optional further description to a `title` attribute; this may be read by screen readers if requested by the user.
 
 When an `alt` attribute is not present on an image, some screen readers may announce the image's file name instead. This can be a confusing experience if the file name isn't representative of the image's contents.
 
