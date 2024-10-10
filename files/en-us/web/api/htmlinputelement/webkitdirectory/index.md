@@ -77,14 +77,14 @@ within the selected directory hierarchies is generated and displayed.
 ### HTML
 
 ```html
-<input type="file" id="filepicker" name="fileList" webkitdirectory multiple />
+<input type="file" id="file-picker" name="fileList" webkitdirectory multiple />
 <ul id="listing"></ul>
 ```
 
 ### JavaScript
 
 ```js
-document.getElementById("filepicker").addEventListener(
+document.getElementById("file-picker").addEventListener(
   "change",
   (event) => {
     let output = document.getElementById("listing");

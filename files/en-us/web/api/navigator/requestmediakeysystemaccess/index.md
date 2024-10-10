@@ -26,7 +26,7 @@ requestMediaKeySystemAccess(keySystem, supportedConfigurations)
 
 - `keySystem`
   - : A string identifying the key system.
-    For example `com.example.somesystem` or `org.w3.clearkey`.
+    For example `com.example.some-system` or `org.w3.clearkey`.
 - `supportedConfigurations`
 
   - : A non-empty {{jsxref('Array')}} of objects conforming to the object returned by {{domxref("MediaKeySystemAccess.getConfiguration")}}.

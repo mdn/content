@@ -36,8 +36,8 @@ None.
 ## Examples
 
 ```js
-let myfoot = mytable.createTFoot();
-// Now this should be true: myfoot === mytable.tFoot
+let myFoot = myTable.createTFoot();
+// Now this should be true: myFoot === myTable.tFoot
 ```
 
 ## Specifications

@@ -14,7 +14,7 @@ indicates an abbreviation associated with the cell. If the cell does not represe
 It reflects the `abbr` attribute of the {{HTMLElement("th")}} element.
 
 > [!NOTE]
-> This property doesn't have a visual effect in browsers. It adds information to help assistive technology like screenreaders that can use this abbreviation
+> This property doesn't have a visual effect in browsers. It adds information to help assistive technology like screen readers that can use this abbreviation
 
 ## Value
 

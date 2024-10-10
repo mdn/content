@@ -82,7 +82,7 @@ handle blocked automatic playback:
 
 ```js
 let videoElem = document.getElementById("video");
-let playButton = document.getElementById("playbutton");
+let playButton = document.getElementById("play-button");
 
 playButton.addEventListener("click", handlePlayButton, false);
 playVideo();

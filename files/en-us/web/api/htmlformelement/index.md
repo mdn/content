@@ -187,10 +187,10 @@ Submit a `<form>` into a new window:
   <body>
     <form action="test.php" target="_blank">
       <p>
-        <label>First name: <input type="text" name="firstname" /></label>
+        <label>First name: <input type="text" name="first-name" /></label>
       </p>
       <p>
-        <label>Last name: <input type="text" name="lastname" /></label>
+        <label>Last name: <input type="text" name="last-name" /></label>
       </p>
       <p>
         <label><input type="password" name="pwd" /></label>
