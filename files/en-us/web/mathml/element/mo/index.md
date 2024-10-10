@@ -44,6 +44,10 @@ In addition to the [global MathML attributes](/en-US/docs/Web/MathML/Global_attr
 > [!NOTE]
 > For the `lspace`, `maxsize`, `minsize` and `rspace` attributes, some browsers may also accept [legacy MathML lengths](/en-US/docs/Web/MathML/Values#legacy_mathml_lengths).
 
+## Accessibility
+
+The `<mo>` element has no implicit [ARIA role](/en-US/docs/Web/Accessibility/ARIA/Roles).
+
 ## Examples
 
 ```html-nolint

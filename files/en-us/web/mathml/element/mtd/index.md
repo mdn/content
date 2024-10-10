@@ -27,6 +27,10 @@ Some browsers may also support the following attributes:
   - : Specifies the vertical alignment of this cell and overrides values specified by {{ MathMLElement("mtable") }} or {{ MathMLElement("mtr") }}.
     Possible values are: `axis`, `baseline`, `bottom`, `center` and `top`.
 
+## Accessibility
+
+The `<mtd>` element has no implicit [ARIA role](/en-US/docs/Web/Accessibility/ARIA/Roles).
+
 ## Examples
 
 ### Matrix using mtable, mrow, mtr and mtd
