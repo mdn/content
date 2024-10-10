@@ -9,7 +9,7 @@ browser-compat: api.InterestGroupBiddingAndScoringScriptRunnerGlobalScope
 
 {{APIRef("Protected Audience API")}}{{SeeCompatTable}}
 
-The **`InterestGroupBiddingAndScoringScriptRunnerGlobalScope`** interface of the {{domxref("Protected Audience API", "Protected Audience API", "", "nocode")}} exposes interfaces that define debugging reporting functionality and summary reporting functionality exposed inside the user-defined functions included within buyer and seller script runners.
+The **`InterestGroupBiddingAndScoringScriptRunnerGlobalScope`** interface of the {{domxref("Protected Audience API", "Protected Audience API", "", "nocode")}} exposes interfaces that define debugging reporting functionality and summary reporting functionality, exposed inside the user-defined functions included within buyer and seller script runners.
 
 {{InheritanceDiagram}}
 
