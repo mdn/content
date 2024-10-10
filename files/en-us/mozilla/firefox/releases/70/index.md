@@ -123,7 +123,7 @@ This article provides information about the changes in Firefox 70 that will affe
 ### API changes
 
 - Added a new parameter to the [`topSites.get()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/topSites/get) method that causes the method to return the list of pages that appear when the user opens a new tab ([Firefox bug 1568617](https://bugzil.la/1568617)).
-- The [`privacy.network`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy/network) property's `WebRTCIPHandlingPolicy` sub-property's permitted values have been amended (in [Firefox bug 1452713](https://bugzil.la/1452713)) to match the behavior seen in Chrome as follows:
+- The [`privacy.network`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy/network) property's `webRTCIPHandlingPolicy` sub-property's permitted values have been amended (in [Firefox bug 1452713](https://bugzil.la/1452713)) to match the behavior seen in Chrome as follows:
 
   - `disable_non_proxied_udp` previously prevented the use of WebRTC if no proxy was configured. Now a proxy is always used if one is configured, but otherwise a non-proxied connection is permitted.
   - `proxy_only` can be used to provide the old behavior; this has the effect of only allowing ICE negotiation over TURN on TCP using a proxy; no other connections are allowed.

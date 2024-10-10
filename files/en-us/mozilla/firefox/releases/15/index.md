@@ -78,8 +78,8 @@ Firefox 15 shipped on August 28, 2012. This article lists key changes that are u
   - : `aModifiers` of `sendMouseEvent()`, `sendTouchEvent()`, `sendMouseEventToWindow()`, `sendMouseScrollEvent()` and `sendKeyEvent()` supports all modifier keys which are supported by [`KeyboardEvent.getModifierState()`](/en-US/docs/Web/API/KeyboardEvent#getmodifierstate%28%29). Use `MODIFIER_*` values. And now the 5th parameter of `sendKeyEvent()` is changed from `boolean` to `unsigned long`. For backward compatibility, if caller passes `true` or `false` to it, the behavior isn't changed. This change allows callers to specify the key's location.
 - `nsIBrowserHistory`
   - : The `hidePage()` method was never implemented, and has been removed entirely in this release. The `addPageWithDetails()` method has also been removed as part of the ongoing work to make all 'Places APIs' asynchronous; use `mozIAsyncHistory.updatePlaces()` instead. Also, the `count` attribute was removed; it had not returned an actual count in some time (instead, it was indicating whether or not any entries existed). You can use `nsINavHistoryService.hasHistoryEntries` instead.
-- `inIDOMUtils`
-  - : The `inlDOMUtils.parseStyleSheet()` method has been added and allows the (re-)parsing of Cascading Style Sheets.
+- `nsIDOMUtils`
+  - : The `nsIDOMUtils.parseStyleSheet()` method has been added and allows the (re-)parsing of Cascading Style Sheets.
 - `nsIINIParserWriter`
   - : The `nsIINIParserWriter.writeFile()` method now accepts a `flags` property. This currently offers only one option: you can now tell it to write the file in UTF-16 format instead of UTF-8, for better compatibility with Windows and certain installers.
 

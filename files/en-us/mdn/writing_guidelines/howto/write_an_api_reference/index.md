@@ -105,7 +105,7 @@ Examples:
   Usually only instance methods exist, in which case you can put these under the title "Methods".
 - We do not document inherited properties and methods of the interface: they are listed on the respective parent interface. We do hint at their existence though.
 - We do document properties and methods defined in mixins. Please see the [contribution guide for mixins](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file#mixins) for more details.
-- Special methods like the stringifier (`toString()`) and the jsonizer (`toJSON()`) are also listed if they do exist.
+- Special methods like the stringifier (`toString()`) and the jsonifier (`toJSON()`) are also listed if they do exist.
 - Named constructors (like `Image()` for {{domxref("HTMLImageElement")}}) are also listed, if relevant.
 
 #### Constructor pages

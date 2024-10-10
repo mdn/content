@@ -42,14 +42,14 @@ itemLabel.value = "Hello world!";
 To add the button only once, create a bool pref to check if it is the first run. [For example](https://stackoverflow.com/questions/4978188/how-do-i-detect-a-first-run-in-firefox-a-addon/4978512#4978512):
 
 ```js
-var firstrun = Services.prefs.getBoolPref("extensions.YOUREXT.firstrun");
+var firstRun = Services.prefs.getBoolPref("extensions.YOUREXT.firstRun");
 
 var curVersion = "0.0.0";
 
-if (firstrun) {
-  Services.prefs.setBoolPref("extensions.YOUREXT.firstrun", false);
+if (firstRun) {
+  Services.prefs.setBoolPref("extensions.YOUREXT.firstRun", false);
   Services.prefs.setCharPref("extensions.YOUREXT.installedVersion", curVersion);
-  /* Code related to firstrun */
+  /* Code related to firstRun */
 } else {
   try {
     var installedVersion = Services.prefs.getCharPref(
@@ -73,7 +73,7 @@ if (firstrun) {
 Adding support for the add-on bar while staying compatible with Firefox 3.6 and older will require using two overlays. The [chrome.manifest](https://web.archive.org/web/20191029205045/https://developer.mozilla.org/en-US/docs/Mozilla/Chrome_Registration) file can specify which file is used by which Firefox version by using [manifest flags](https://web.archive.org/web/20191029205045/https://developer.mozilla.org/en-US/docs/Mozilla/Chrome_Registration#Manifest_Flags):
 
 ```plain
-overlay chrome://browser/content/browser.xul chrome://myaddon/content/myaddon/overlayold.xul application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion<4.0
+overlay chrome://browser/content/browser.xul chrome://myaddon/content/myaddon/overlay-old.xul application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion<4.0
 overlay chrome://browser/content/browser.xul chrome://myaddon/content/myaddon/overlay.xul application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion>=4.0
 ```
 

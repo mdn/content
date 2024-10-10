@@ -90,7 +90,7 @@ _No changes._
 ### API changes
 
 - Shortcut keys can now be unassigned in {{WebExtAPIRef("Commands.update")}} by passing an empty value of `shortcut` [Firefox bug 1475043](https://bugzil.la/1475043).
-- `urlclassification`s are now returned as part of the `details` in each event of {{WebExtAPIRef("webrequest")}}, providing information on whether a request is classified as fingerprinting or tracking [Firefox bug 1589494](https://bugzil.la/1589494).
+- `urlClassification`s are now returned as part of the `details` in each event of {{WebExtAPIRef("webRequest")}}, providing information on whether a request is classified as fingerprinting or tracking [Firefox bug 1589494](https://bugzil.la/1589494).
 
 ### Manifest changes
 

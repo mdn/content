@@ -80,7 +80,7 @@ Highlights:
 
 - The {{domxref("MediaDevices")}} interface, containing the {{jsxref("Promise")}}-based version of {{domxref("MediaDevices.getUserMedia()", "getUserMedia()")}}, has been added. It is available via {{domxref("Navigator.mediaDevices")}} ([Firefox bug 1033885](https://bugzil.la/1033885)).
 - The EME-related {{domxref("Navigator.requestMediaKeySystemAccess()")}} method, and the related {{domxref("MediaKeySystemAccess")}}, is now supported ([Firefox bug 1095257](https://bugzil.la/1095257)).
-- The {{domxref("MediaKeySession/keystatuseschange_event", "keyschange")}} event is now sent when an EME-related CDM change keys in a session ([Firefox bug 1081755](https://bugzil.la/1081755)).
+- The {{domxref("MediaKeySession/keystatuseschange_event", "keystatuseschange")}} event is now sent when an EME-related CDM change keys in a session ([Firefox bug 1081755](https://bugzil.la/1081755)).
 - The default values of the options for {{domxref("MutationObserver.observe()")}} have been updated to match the latest specification ([Firefox bug 973638](https://bugzil.la/973638)).
 - Experimental support for virtual reality devices has landed behind the `dom.vr.enabled` preference, off by default ([Firefox bug 1036604](https://bugzil.la/1036604)).
 - The function associated with {{domxref("RTCPeerConnection.signalingstatechange_event", "RTCPeerConnection.onsignalingstatechange")}} now receives an event as parameter, as per spec ([Firefox bug 1075133](https://bugzil.la/1075133)).

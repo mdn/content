@@ -118,7 +118,7 @@ Usually, when teaching the specifics of CSS syntax, it is clearer and more obvio
   ```css
   /* duration | timing-function | delay | iteration-count
     direction | fill-mode | play-state | name */
-  animation: 3s ease-in 1s 2 reverse both paused slidein;
+  animation: 3s ease-in 1s 2 reverse both paused slide-in;
   ```
 
   In this example, the first value that can be parsed as a [`<time>`](/en-US/docs/Web/CSS/time) is assigned to the [`animation-duration`](/en-US/docs/Web/CSS/animation-duration) property, and the second value that can be parsed as time is assigned to [`animation-delay`](/en-US/docs/Web/CSS/animation-delay). (For more information, see [animation syntax](/en-US/docs/Web/CSS/animation#syntax) details.)

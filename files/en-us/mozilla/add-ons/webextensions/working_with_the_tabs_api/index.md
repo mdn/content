@@ -200,7 +200,7 @@ Finally, the document fragment is written to the `<div id="tabs-list">` element:
 Another related example feature is the "Alert active tab" info option that dumps all the {{WebExtAPIRef("tabs.Tab")}} object properties for the active tab into an alert:
 
 ```js
-else if (e.target.id === "tabs-alertinfo") {
+else if (e.target.id === "tabs-alert-info") {
   callOnActiveTab((tab) => {
     let props = "";
     for (const item in tab) {
@@ -278,7 +278,7 @@ But first, here is a demonstration of the feature in action:
 
     <a href="#" id="tabs-duplicate">Duplicate active tab</a><br />
     <a href="#" id="tabs-reload">Reload active tab</a><br />
-    <a href="#" id="tabs-alertinfo">Alert active tab info</a><br />
+    <a href="#" id="tabs-alert-info">Alert active tab info</a><br />
     ```
 
 - tabs.js
