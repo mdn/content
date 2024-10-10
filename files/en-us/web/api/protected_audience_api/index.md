@@ -80,7 +80,7 @@ When auctions complete, and ads are chosen, {{htmlelement("fencedframe")}} eleme
 ## Interfaces
 
 - {{domxref("ForDebuggingOnly")}}
-  - : Defines methods for reporting auction wins and losses from inside the `generateBid()` and `scoreAd()` user-defined functions for debugging purposes.
+  - : Defines methods for reporting auction wins and losses for debugging purposes.
 - {{domxref("InterestGroupBiddingAndScoringScriptRunnerGlobalScope")}}
   - : Exposes interfaces that define debugging reporting functionality and summary reporting functionality exposed inside the user-defined functions included within buyer and seller script runners.
 - {{domxref("InterestGroupReportingScriptRunnerGlobalScope")}}
