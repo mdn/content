@@ -120,6 +120,9 @@ In this next example, we have added an empty string using the `::before` pseudo-
 
 The use of the `::before` and `::after` pseudo-elements along with the `content` property is referred to as "Generated Content" in CSS, and you will often see this technique being used for various tasks. A great example is the site [CSS Arrow Please](https://cssarrowplease.com/), which helps you to generate an arrow with CSS. Look at the CSS as you create your arrow and you will see the {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements in use. Whenever you see these selectors, look at the {{cssxref("content")}} property to see what is being added to the HTML element.
 
+> [!NOTE]
+> Generating visual content like in the above mentioned example may not display the expected results, when high contrast mode is applied.
+
 ## Summary
 
 In this article we've introduced CSS pseudo-classes and pseudo-elements, which are special types of selectors.
