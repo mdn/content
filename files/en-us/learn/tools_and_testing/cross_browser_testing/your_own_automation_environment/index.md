@@ -57,7 +57,7 @@ We will cover writing and running Selenium tests using Node.js, as it is quick a
 
 Next, you need to download the relevant drivers to allow WebDriver to control the browsers you want to test. You can find details of where to get them from on the [selenium-webdriver](https://www.npmjs.com/package/selenium-webdriver) page (see the table in the first section.) Obviously, some of the browsers are OS-specific, but we're going to stick with Firefox and Chrome, as they are available across all the main OSes.
 
-1. Download the latest [GeckoDriver](https://github.com/mozilla/geckodriver/releases/) (for Firefox) and [ChromeDriver](https://developer.chrome.com/docs/chromedriver/downloads) drivers.
+1. Download the latest [GeckoDriver](https://github.com/mozilla/geckodriver/releases/) (for Firefox) and [ChromeDriver](https://googlechromelabs.github.io/chrome-for-testing/#stable) drivers.
 2. Unpack them into somewhere fairly easy to navigate to, like the root of your home user directory.
 3. Add the `chromedriver` and `geckodriver` driver's location to your system `PATH` variable. This should be an absolute path from the root of your hard disk, to the directory containing the drivers. For example, if we were using a macOS machine, our user name was bob, and we put our drivers in the root of our home folder, the path would be `/Users/bob`.
 
@@ -66,35 +66,31 @@ Next, you need to download the relevant drivers to allow WebDriver to control th
 
 To set your `PATH` variable on a macOS system and on most Linux systems:
 
-1. If you're not already using the `bash` shell (for example, on macOS systems, the default is the `zsh` shell, not `bash`), switch to the `bash` shell:
-
-   ```bash
-   exec bash
-   ```
-
-2. Open your `.bash_profile` (or `.bashrc`) file (if you can't see hidden files, you'll need to display them, see [Show/Hide hidden files in macOS](https://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/) or [Show hidden folders in Ubuntu](https://askubuntu.com/questions/470837/how-to-show-hidden-folders-in-file-manager-nautilus-on-ubuntu)).
-3. Paste the following into the bottom of your file (updating the path as it actually is on your machine):
+1. Open your `.zprofile` (or `.bash_profile` if your system uses `bash` shell) file.
+   > [!NOTE]
+   > If you can't see hidden files, you'll need to display them, see [Show/Hide hidden files in macOS](https://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/) or [Show hidden folders in Ubuntu](https://askubuntu.com/questions/470837/how-to-show-hidden-folders-in-file-manager-nautilus-on-ubuntu)).
+2. Paste the following into the bottom of your file (updating the path as it actually is on your machine):
 
    ```bash
    #Add WebDriver browser drivers to PATH
-
    export PATH=$PATH:/Users/bob
    ```
 
-4. Save and close this file, then restart your Terminal/command prompt to reapply your Bash configuration.
-5. Check that your new paths are in the `PATH` variable by entering the following into your terminal:
+3. Save and close this file, then restart your Terminal/command prompt to reapply your Bash configuration.
+4. Check that your new paths are in the `PATH` variable by entering the following into your terminal:
 
    ```bash
    echo $PATH
    ```
 
-6. You should see it printed out in the terminal.
+   You should see it printed out in the terminal.
 
-To set your `PATH` variable on Windows, follow the instructions at [How can I add a new folder to my system path?](https://www.itprotoday.com/)
+> [!NOTE]
+> To set your `PATH` variable on Windows, follow the instructions at [How can I add a new folder to my system path?](https://www.itprotoday.com/)
 
-OK, let's try a quick test to make sure everything is working.
+Let's try a quick test to make sure everything is working.
 
-1. Create a new file inside your project directory called `google_test.js`:
+1. Create a new file inside your project directory called `duck_test.js`:
 2. Give it the following contents, then save it:
 
    ```js
@@ -103,9 +99,12 @@ OK, let's try a quick test to make sure everything is working.
    (async function example() {
      const driver = await new Builder().forBrowser(Browser.FIREFOX).build();
      try {
-       await driver.get("https://www.google.com/ncr");
+       await driver.get("https://duckduckgo.com/");
        await driver.findElement(By.name("q")).sendKeys("webdriver", Key.RETURN);
-       await driver.wait(until.titleIs("webdriver - Google Search"), 1000);
+       await driver.wait(until.titleIs("webdriver at DuckDuckGo"), 1000);
+       console.log("Test passed!");
+     } catch (e) {
+       console.log(`Error: ${e}`);
      } finally {
        await driver.sleep(2000); // Delay long enough to see search page!
        await driver.quit();
@@ -119,39 +118,37 @@ OK, let's try a quick test to make sure everything is working.
 3. In terminal, make sure you are inside your project folder, then enter the following command:
 
    ```bash
-   node google_test
+   node duck_test
    ```
 
-You should see an instance of Firefox automatically open up! Google should automatically be loaded in a tab, "webdriver" should be entered in the search box, and the search button will be clicked. WebDriver will then wait for 1 second; the document title is then accessed, and if it is "webdriver - Google Search", we will return a message to claim the test is passed.
-We then wait four seconds, after which WebDriver will then close down the Firefox instance and stop.
+You should see an instance of Firefox automatically open up! DuckDuckGo will automatically be loaded in a tab, "webdriver" will be entered in the search box, and the search button will be clicked. WebDriver will then wait for 1 second; the document title is then accessed, and if it is "webdriver at DuckDuckGo", we will return a message to state that the test is passed.
+
+We then wait 2 seconds, after which WebDriver will close down the Firefox instance and stop.
 
 ## Testing in multiple browsers at once
 
 There is also nothing to stop you running the test on multiple browsers simultaneously. Let's try this!
 
-1. Create another new file inside your project directory called `google_test_multiple.js`. You can feel free to change the references to some of the other browsers we added, remove them, etc., depending on what browsers you have available to test on your operating system. You'll need to make sure you have the right browser drivers set up on your system. In terms of what string to use inside the `.forBrowser()` method for other browsers, see the [Browser enum](https://www.selenium.dev/selenium/docs/api/javascript/global.html#Browser) reference page.
-2. Give it the following contents, then save it:
+1. Create another new file inside your project directory called `duck_test_multiple.js`. You can feel free to change the references to some of the other browsers we added, remove them, etc., depending on what browsers you have available to test on your operating system. You'll need to make sure you have the right browser drivers set up on your system. In terms of what string to use inside the `.forBrowser()` method for other browsers, see the [Browser enum](https://www.selenium.dev/selenium/docs/api/javascript/global.html#Browser) reference page.
+2. Give your file the following contents, then save it:
 
    ```js
    const { Builder, Browser, By, Key } = require("selenium-webdriver");
 
    const driver_fx = new Builder().forBrowser(Browser.FIREFOX).build();
-
    const driver_chr = new Builder().forBrowser(Browser.CHROME).build();
 
    async function searchTest(driver) {
      try {
-       await driver.get("http://www.google.com");
+       await driver.get("https://duckduckgo.com/");
        await driver.findElement(By.name("q")).sendKeys("webdriver", Key.RETURN);
-       await driver.sleep(2000).then(async () => {
-         await driver.getTitle().then(async (title) => {
-           if (title === "webdriver - Google Search") {
-             console.log("Test passed");
-           } else {
-             console.log("Test failed");
-           }
-         });
-       });
+       await driver.sleep(2000);
+       const title = await driver.getTitle();
+       if (title === "webdriver at DuckDuckGo") {
+         console.log("Test passed");
+       } else {
+         console.log("Test failed");
+       }
      } finally {
        driver.quit();
      }
@@ -164,14 +161,17 @@ There is also nothing to stop you running the test on multiple browsers simultan
 3. In terminal, make sure you are inside your project folder, then enter the following command:
 
    ```bash
-   node google_test_multiple
+   node duck_test_multiple
    ```
 
-4. If you are using a Mac and do decide to test Safari, you might get an error message along the lines of "Could not create a session: You must enable the 'Allow Remote Automation' option in Safari's Develop menu to control Safari via WebDriver." If you get this, follow the given instruction and try again.
+> [!NOTE]
+> If you are using a Mac and decide to test Safari, you might get an error message along the lines of "Could not create a session: You must enable the 'Allow Remote Automation' option in Safari's Develop menu to control Safari via WebDriver." If you get this, follow the given instruction and try again.
+>
+> You might get a message saying that you can't open a driver app because it was not downloaded from a verified source. If you get this, you can override that security setting just for that driver app. For example, on Mac, <kbd>Ctrl</kbd> + click on the app, choose _Open_, and choose _Open_ again from the resulting dialog box.
 
-So here we've done the test as before, except that this time we've wrapped it inside a function, `searchTest()`. We've created new browser instances for multiple browsers, then passed each one to the function so the test is performed on all three browsers!
+So here we've done the test as before, except that this time we've wrapped it inside a function, `searchTest()`. We've created new browser instances for multiple browsers, then passed each one to the function so the test is performed on all of them.
 
-Fun huh? Let's move on, look at the basics of WebDriver syntax, in a bit more detail.
+Let's move on and look at the basics of WebDriver syntax, in a bit more detail.
 
 ## WebDriver syntax crash course
 
@@ -195,13 +195,13 @@ let driver = new Builder().forBrowser(Browser.FIREFOX).build();
 Note that it is possible to set specific configuration options for browsers to be tested, for example you can set a specific version and OS to test in the `forBrowser()` method:
 
 ```js
-let driver = new Builder().forBrowser(Browser.FIREFOX, "46", "MAC").build();
+let driver = new Builder().forBrowser(Browser.FIREFOX, "130", "MAC").build();
 ```
 
 You could also set these options using an environment variable, for example:
 
 ```bash
-SELENIUM_BROWSER=firefox:46:MAC
+SELENIUM_BROWSER=firefox:130:MAC
 ```
 
 Let's create a new test to allow us to explore this code as we talk about it. Inside your selenium test project directory, create a new file called `quick_test.js`, and add the following code to it:
@@ -212,6 +212,12 @@ const { Builder, Browser } = require("selenium-webdriver");
 (async function example() {
   const driver = await new Builder().forBrowser(Browser.FIREFOX).build();
 })();
+```
+
+You can test the example by entering the following command into your terminal:
+
+```bash
+node quick_test
 ```
 
 ### Getting the document you want to test
@@ -228,29 +234,25 @@ driver.get("http://www.google.com");
 You can use any URL to point to your resource, including a `file://` URL to test a local document:
 
 ```js
-driver.get(
-  "file:///Users/chrismills/git/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html",
-);
+driver.get("file:///Users/bob/git/examples/test_file.html");
 ```
 
 or
 
 ```js
-driver.get("http://localhost:8888/fake-div-buttons.html");
+driver.get("http://localhost:8888/test_file.html");
 ```
 
 But it is better to use a remote server location so the code is more flexible — when you start using a remote server to run your tests (see later on), your code will break if you try to use local paths.
 
-Update your `example()` function as follows:
+Update your `example()` function as follows, replacing the placeholder path with a real local path to an HTML file on your computer, then try running it:
 
 ```js
 const { Builder, Browser } = require("selenium-webdriver");
 
 (async function example() {
   const driver = await new Builder().forBrowser(Browser.FIREFOX).build();
-  driver.get(
-    "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html",
-  );
+  driver.get("file:///Users/bob/git/examples/test_file.html");
 })();
 ```
 
@@ -264,7 +266,7 @@ const element = driver.findElement(By.id("myElementId"));
 
 One of the most useful ways to find an element by CSS — the `By.css()` method allows you to select an element using a CSS selector.
 
-Update your `example()` function now as follows:
+Update your `example()` function now as follows, then run the example:
 
 ```js
 const { Builder, Browser, By } = require("selenium-webdriver");
@@ -280,7 +282,7 @@ const { Builder, Browser, By } = require("selenium-webdriver");
 
 ### Testing your element
 
-There are many ways to interact with your web documents and elements on them. You can see useful common examples starting at [Getting text values](https://www.selenium.dev/documentation/webdriver/elements/information/#text-content) on the WebDriver docs.
+There are many ways to interact with your web documents and elements inside them. You can see useful common examples starting at [Getting text values](https://www.selenium.dev/documentation/webdriver/elements/information/#text-content) on the WebDriver docs.
 
 If we wanted to get the text inside our button, we could do this:
 
@@ -290,7 +292,7 @@ button.getText().then((text) => {
 });
 ```
 
-Add this to the bottom of the `example()` function now as shown below:
+Add this to the bottom of the `example()` function now as shown below, then run it:
 
 ```js
 const { Builder, Browser, By } = require("selenium-webdriver");
@@ -310,15 +312,9 @@ const { Builder, Browser, By } = require("selenium-webdriver");
 })();
 ```
 
-Making sure you are inside your project directory, try running the test:
-
-```bash
-node quick_test.js
-```
-
 You should see the button's text label reported inside the console.
 
-Let's do something a bit more useful. Replace the previous code entry with this line of code, `button.click();` as shown below:
+Let's do something a bit more useful. Replace the previous code entry with `button.click();` as shown below:
 
 ```js
 const { Builder, Browser, By } = require("selenium-webdriver");
@@ -335,7 +331,7 @@ const { Builder, Browser, By } = require("selenium-webdriver");
 })();
 ```
 
-Try running your test again; the button will be clicked, and the `alert()` popup should appear. At least we know the button is working!
+Try running your test again; the button will be clicked, and an `alert()` popup should appear. At least we know the button is working!
 
 You can interact with the popup too. Update the `example()` function as follows, and try testing it again:
 
@@ -365,10 +361,10 @@ const { Builder, Browser, By, until } = require("selenium-webdriver");
 })();
 ```
 
-Next, let's try entering some text into one of the form elements. Update the `example()` function as follows and try running your test again:
+Next, let's try entering some text into the form elements. Update the `example()` function as follows and try running your test again:
 
 ```js
-const { Builder, Browser, By, until } = require("selenium-webdriver");
+const { Builder, Browser, By, Key } = require("selenium-webdriver");
 
 (async function example() {
   const driver = await new Builder().forBrowser(Browser.FIREFOX).build();
@@ -377,121 +373,110 @@ const { Builder, Browser, By, until } = require("selenium-webdriver");
   );
 
   const input = driver.findElement(By.id("name"));
-  input.sendKeys("Filling in my form");
+  input.sendKeys("Bob Smith");
 
-  const button = driver.findElement(By.css("button:nth-of-type(1)"));
+  input.sendKeys(Key.TAB);
 
-  button.click();
-  await driver.wait(until.alertIsPresent());
-
-  const alert = driver.switchTo().alert();
-
-  alert.getText().then((text) => {
-    console.log(`Alert text is '${text}'`);
-  });
-
-  alert.accept();
+  const input2 = driver.findElement(By.id("age"));
+  input2.sendKeys("65");
 })();
 ```
 
-You can submit key presses that can't be represented by normal characters using properties of the `Key` object. For example, above we used this construct to tab out of the form input before submitting it:
+You can submit key presses that can't be represented by normal characters using properties of the `Key` object. For example, above we used the following to tab between form inputs:
 
 ```js
-driver.sleep(1000).then(() => {
-  driver.findElement(By.name("q")).sendKeys(Key.TAB);
-});
+input.sendKeys(Key.TAB);
 ```
 
 ### Waiting for something to complete
 
 There are times where you'll want to make WebDriver wait for something to complete before carrying on. For example if you load a new page, you'll want to wait for the page's DOM to finish loading before you try to interact with any of its elements, otherwise the test will likely fail.
 
-In our `google_test.js` test for example, we included this block:
+In our `duck_test_multiple.js` test for example, we included this line:
 
 ```js
-driver.sleep(2000).then(() => {
-  driver.getTitle().then((title) => {
-    if (title === "webdriver - Google Search") {
-      console.log("Test passed");
-    } else {
-      console.log("Test failed");
-    }
-  });
-});
+await driver.sleep(2000);
 ```
 
-The `sleep()` method accepts a value that specifies the time to wait in milliseconds — the method returns a promise that resolves at the end of that time, at which point the code inside the `then()` executes. In this case we get the title of the current page with the `getTitle()` method, then return a pass or fail message depending on what its value is.
+The `sleep()` method accepts a value that specifies the time to wait in milliseconds — the method returns a promise that resolves at the end of that time, at which point the code after it executes.
 
 We could add a `sleep()` method to our `quick_test.js` test too — try updating your `example()` function like this:
 
 ```js
-const { Builder, Browser, By, until } = require("selenium-webdriver");
-
-const driver = new Builder().forBrowser("firefox").build();
+const { Builder, Browser, By, Key } = require("selenium-webdriver");
 
 (async function example() {
-  try {
-    driver.get(
-      "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html",
-    );
+  const driver = await new Builder().forBrowser(Browser.FIREFOX).build();
+  driver.get(
+    "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html",
+  );
 
-    driver.sleep(2000).then(() => {
-      const input = driver.findElement(By.id("name"));
+  const input = driver.findElement(By.id("name"));
+  input.sendKeys("Bob Smith");
 
-      input.sendKeys("Filling in my form");
-      input.getAttribute("value").then((value) => {
-        if (value !== "") {
-          console.log("Form input editable");
-        }
-      });
+  driver.sleep(1000).then(() => {
+    input.getAttribute("value").then((value) => {
+      if (value !== "") {
+        console.log("Form input filled out");
+      } else {
+        console.log("Text could not be entered");
+      }
     });
-
-    const button = driver.findElement(By.css("button:nth-of-type(1)"));
-
-    button.click();
-
-    await driver.wait(until.alertIsPresent());
-
-    const alert = driver.switchTo().alert();
-
-    alert.getText().then((text) => {
-      console.log(`Alert text is '${text}'`);
-    });
-
-    alert.accept();
-  } finally {
-    await driver.sleep(4000); // Delay long enough to see search page!
-    driver.quit();
-  }
+  });
 })();
 ```
 
-WebDriver will now wait for 2 seconds before filling in the form field. We then test whether its value got filled in (i.e. is not empty) by using `getAttribute()` to retrieve its `value` attribute value, and print a message to the console if it is not empty.
+WebDriver will now fill out the first form field, wait for one second, then test whether its value got filled out (i.e., is not empty) by using `getAttribute()` to retrieve its `value` attribute value. It then prints a message to the console to report success/failure.
 
 > [!NOTE]
 > There is also a method called [`wait()`](https://www.selenium.dev/selenium/docs/api/javascript/WebDriver.html#wait), which repeatedly tests a condition for a certain length of time, and then carries on executing the code. This also makes use of the [util library](https://www.selenium.dev/selenium/docs/api/javascript/lib_until.js.html), which defines common conditions to use along with `wait()`.
 
 ### Shutting down drivers after use
 
-After you've finished running a test, you should shut down any driver instances you've opened, to make sure that you don't end up with loads of rogue browser instances open on your machine! This is done using the `quit()` method. Call this on your driver instance when you are finished with it. Add this line to the bottom of your `quick_test.js` test now:
+After you've finished running a test, you should shut down any driver instances you've opened, to make sure they don't continue to use resources unneccessarily. This is done using the `driver.quit()` method. Update `quick_test.js` as follows:
 
 ```js
-driver.quit();
+const { Builder, Browser, By, Key } = require("selenium-webdriver");
+
+(async function example() {
+  const driver = await new Builder().forBrowser(Browser.FIREFOX).build();
+  driver.get(
+    "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html",
+  );
+
+  const input = driver.findElement(By.id("name"));
+  input.sendKeys("Bob Smith");
+
+  driver.sleep(1000).then(() => {
+    input
+      .getAttribute("value")
+      .then((value) => {
+        if (value !== "") {
+          console.log("Form input filled out");
+        } else {
+          console.log("Text could not be entered");
+        }
+      })
+      .finally(() => {
+        driver.quit();
+      });
+  });
+})();
 ```
 
-When you run it, you should now see the test execute and the browser instance shut down again after the test is complete. This is useful for not cluttering up your computer with loads of browser instances, especially if you have so many that it is causing the computer to slow down.
+Now when you run it, you should now see the test execute and the browser instance shut down again after the test is complete.
 
 ## Test best practices
 
 There has been a lot written about best practices for writing tests. You can find some good background information at [Test Practices](https://www.selenium.dev/documentation/test_practices/). In general, you should make sure that your tests are:
 
 1. Using good locator strategies: When you are [Interacting with the document](#interacting_with_the_document), make sure that you use locators and page objects that are unlikely to change — if you have a testable element that you want to perform a test on, make sure that it has a stable ID, or position on the page that can be selected using a CSS selector, which isn't going to just change with the next site iteration. You want to make your tests as non-brittle as possible, i.e. they won't just break when something changes.
-2. Write atomic tests: Each test should test one thing only, making it easy to keep track of what test file is testing which criterion. As an example, the `google_test.js` test we looked at above is pretty good, as it just tests a single thing — whether the title of a search results page is set correctly. We could work on giving it a better name so it is easier to work out what it does if we add more google tests. Perhaps `results_page_title_set_correctly.js` would be slightly better?
+2. Write atomic tests: Each test should test one thing only, making it easy to keep track of what test file is testing which criterion. The `duck_test.js` test we looked at above is pretty good, as it just tests a single thing — whether the title of a search results page is set correctly. We could work on giving it a better name so it is easier to work out what it does if we add more tests. Perhaps `results_page_title_set_correctly.js` would be slightly better?
 3. Write autonomous tests: Each test should work on it's own, and not depend on other tests to work.
 
-In addition, we should mention test results/reporting — we've been reporting results in our above examples using simple `console.log()` statements, but this is all done in JavaScript, so you can use whatever test running and reporting system you want, be it [Mocha](https://mochajs.org/), [Chai](https://www.chaijs.com/), or some other tool.
+In addition, we should mention test results/reporting — we've been reporting results in our above examples using simple `console.log()` statements, but this is all done in JavaScript, so you can use whatever test running and reporting system you want, be it [Mocha](https://mochajs.org/), [Chai](https://www.chaijs.com/), or some other tool. Lets work through a quick example:
 
-1. For example, try making a local copy of our [`mocha_test.js`](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/selenium/mocha_test.js) example inside your project directory. Put it inside a subfolder called `test`. This example uses a long chain of promises to run all the steps required in our test — the promise-based methods WebDriver uses need to resolve for it to work properly.
+1. Make a local copy of our [`mocha_test.js`](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/selenium/mocha_test.js) example inside your project directory. Put it inside a subfolder called `test`. This example uses a long chain of promises to run all the steps required in our test — the promise-based methods WebDriver uses need to resolve for it to work properly.
 2. Install the mocha test harness by running the following command inside your project directory:
 
    ```bash
@@ -512,108 +497,15 @@ In addition, we should mention test results/reporting — we've been reporting r
 
 It turns out that running tests on remote servers isn't that much more difficult than running them locally. You just need to create your driver instance, but with a few more features specified, including the capabilities of the browser you want to test on, the address of the server, and the user credentials you need (if any) to access it.
 
-### LambdaTest
-
-Getting Selenium tests to run remotely on LambdaTest is very simple. The code you need should follow the pattern seen below.
-
-Let's write an example:
-
-1. Inside your project directory, create a new file called `lambdatest_google_test.js`
-2. Give it the following contents:
-
-   ```js
-   const { By, Builder } = require("selenium-webdriver");
-
-   // username: Username can be found at automation dashboard
-   const USERNAME = "{username}";
-
-   // AccessKey: AccessKey can be generated from automation dashboard or profile section
-   const KEY = "{accessKey}";
-
-   // gridUrl: gridUrl can be found at automation dashboard
-   const GRID_HOST = "hub.lambdatest.com/wd/hub";
-
-   function searchTextOnGoogle() {
-     // Setup Input capabilities
-     const capabilities = {
-       platform: "windows 10",
-       browserName: "chrome",
-       version: "67.0",
-       resolution: "1280x800",
-       network: true,
-       visual: true,
-       console: true,
-       video: true,
-       name: "Test 1", // name of the test
-       build: "NodeJS build", // name of the build
-     };
-
-     // URL: https://{username}:{accessToken}@hub.lambdatest.com/wd/hub
-     const gridUrl = `https://${USERNAME}:${KEY}@${GRID_HOST}`;
-
-     // setup and build selenium driver object
-     const driver = new Builder()
-       .usingServer(gridUrl)
-       .withCapabilities(capabilities)
-       .build();
-
-     // navigate to a URL, search for a text and get title of page
-     driver.get("https://www.google.com/ncr").then(function () {
-       driver
-         .findElement(By.name("q"))
-         .sendKeys("LambdaTest\n")
-         .then(function () {
-           driver.getTitle().then((title) => {
-             setTimeout(() => {
-               if (title === "LambdaTest - Google Search") {
-                 driver.executeScript("lambda-status=passed");
-               } else {
-                 driver.executeScript("lambda-status=failed");
-               }
-               driver.quit();
-             }, 5000);
-           });
-         });
-     });
-   }
-
-   searchTextOnGoogle();
-   ```
-
-3. Visit your [LambdaTest automation dashboard](https://www.lambdatest.com/selenium-automation), to fetch your LambdaTest's username and access key by clicking on the **key** icon on the top-right(see _Username and Access Keys_). Replace the `{username}` and `{accessKey}` placeholders in the code with your actual user name and access key values (and make sure you keep them secure).
-4. Run the below command in your terminal to execute your test:
-
-   ```bash
-   node lambdatest_google_test
-   ```
-
-   The test will be sent to LambdaTest, and the output of your test will be reflected on your LambdaTest console.
-   If you wish to extract these results for reporting purpose from LambdaTest platform then you can do so by using [LambdaTest restful API](https://www.lambdatest.com/blog/lambdatest-launches-api-for-selenium-automation/).
-
-5. Now if you go to your [LambdaTest Automation dashboard](https://accounts.lambdatest.com/dashboard), you'll see your test listed; from here you'll be able to see videos, screenshots, and other such data.
-   You will also see a status of **passed** or **failed** instead of **completed**, because of the `if` or `else` blocks of code.
-
-   [![LambdaTest Automation Dashboard](automation-logs-1.jpg)](https://www.lambdatest.com/blog/wp-content/uploads/2019/02/Automation-logs-1.jpg)
-   You can retrieve network, command, exception, and Selenium logs for every test within your test build. You will also find a video recording of your Selenium script execution.
-
-> [!NOTE]
-> The _HELP_ button on LambdaTest Automation Dashboard will provide you with an ample amount of information to help you get started with LambdaTest automation. You can also follow our documentation about [running first Selenium script in Node JS](https://www.lambdatest.com/support/docs/quick-guide-to-run-node-js-tests-on-lambdatest-selenium-grid/).
-
-> [!NOTE]
-> If you don't want to write out the capabilities objects for your tests by hand, you can generate them using the [Selenium Desired Capabilities Generator](https://www.lambdatest.com/capabilities-generator/).
-
 ### BrowserStack
 
-Getting Selenium tests to run remotely on BrowserStack is easy. The code you need should follow the pattern seen below.
+Let's create an example to show how to get a Selenium test running remotely on BrowserStack:
 
-Let's write an example:
-
-1. Inside your project directory, create a new file called `bstack_google_test.js`.
+1. Inside your project directory, create a new file called `bstack_duck_test.js`.
 2. Give it the following contents:
 
    ```js
    const { Builder, By, Key } = require("selenium-webdriver");
-   const request = require("request");
 
    // Input capabilities
    const capabilities = {
@@ -636,11 +528,11 @@ Let's write an example:
 
    (async function bStackGoogleTest() {
      try {
-       await driver.get("https://www.google.com/");
+       await driver.get("https://duckduckgo.com/");
        await driver.findElement(By.name("q")).sendKeys("webdriver", Key.RETURN);
        await driver.sleep(2000);
        const title = await driver.getTitle();
-       if (title === "webdriver - Google Search") {
+       if (title === "webdriver at DuckDuckGo") {
          console.log("Test passed");
        } else {
          console.log("Test failed");
@@ -652,8 +544,9 @@ Let's write an example:
    })();
    ```
 
-3. From your [BrowserStack Account - Summary](https://www.browserstack.com/accounts/profile/details), get your user name and access key (see _Username and Access Keys_). Replace the `YOUR-USER-NAME` and `YOUR-ACCESS-KEY` placeholders in the code with your actual user name and access key values (and make sure you keep them secure).
-4. Run your test with the following command:
+3. From your BrowserStack [Account & Profile details page](https://www.browserstack.com/accounts/profile/details), get your user name and access key (see _Username and Access Keys_).
+4. Replace the `YOUR-USER-NAME` and `YOUR-ACCESS-KEY` placeholders in the code with your actual user name and access key values (and make sure to keep them secure).
+5. Run your test with the following command:
 
    ```bash
    node bstack_google_test
@@ -661,92 +554,75 @@ Let's write an example:
 
    The test will be sent to BrowserStack, and the test result will be returned to your console. This shows the importance of including some kind of result reporting mechanism!
 
-5. Now if you go back to the [BrowserStack automation dashboard](https://www.browserstack.com/automate) page, you'll see your test listed:
+6. Now if you go back to the [BrowserStack Automate dashboard](https://automate.browserstack.com/dashboard/), you'll see your test listed, with details including a video recording of the test, and multiple detailed logs of information pertaining to it:
    ![BrowserStack automated results](bstack_automated_results.png)
 
-If you click on the link for your test, you'll get to a new screen where you will be able to see a video recording of the test, and multiple detailed logs of information pertaining to it.
-
 > [!NOTE]
-> The _Resources_ menu option on the Browserstack automation dashboard contains a wealth of useful information on using it to run automated tests. See [Node JS Documentation for writing automate test scripts in Node JS](https://www.browserstack.com/docs/automate/selenium/getting-started/nodejs) for the node-specific information. Explore the docs to find out all the useful things BrowserStack can do.
+> The _Resources_ menu option on the Browserstack automation dashboard contains a wealth of useful information on using it to run automated tests. See [Selenium with NodeJS](https://www.browserstack.com/docs/automate/selenium/getting-started/nodejs) for node-specific information.
 
-> [!NOTE]
-> If you don't want to write out the capabilities objects for your tests by hand, you can generate them using the generators embedded in the docs. See [Run your first test](https://www.browserstack.com/docs/automate/selenium/getting-started/nodejs#run-your-first-test).
+#### Filling out BrowserStack test details programmatically
 
-#### Filling in BrowserStack test details programmatically
+You can use the BrowserStack REST API and some other capabilities to annotate your test with more details, such as whether it passed, why it passed, what project the test is part of, etc. BrowserStack doesn't know these details by default.
 
-You can use the BrowserStack REST API and some other capabilities to annotate your test with more details, such as whether it passed, why it passed, what project the test is part of, etc. BrowserStack doesn't know these details by default!
+Let's update our `bstack_duck_test.js` demo, to show how these features work:
 
-Let's update our `bstack_google_test.js` demo, to show how these features work:
-
-1. Install the request module by running the following command inside your project directory:
+1. Install the [axios](https://www.npmjs.com/package/axios) module by running the following command inside your project directory:
 
    ```js
-   npm install request
+   npm install axios
    ```
 
-2. Then, we'll need to import the node request module, so we can use it to send requests to the REST API. Add the following line at the very top of your code:
+2. Import the axios module so we can use it to send requests to the BrowserStack REST API. Add the following line at the very top of your code:
 
    ```js
-   const request = require("request");
+   const axios = require("axios");
    ```
 
 3. Now we'll update our `capabilities` object to include a project name — add the following line before the closing curly brace, remembering to add a comma at the end of the previous line (you can vary the build and project names to organize the tests in different windows in the BrowserStack automation dashboard):
 
    ```js
-   'project' : 'Google test 2'
+   project: "DuckDuckGo test 2";
    ```
 
-4. Next we need to access the `sessionId` of the current session, so we know where to send the request (the ID is included in the request URL, as you'll see later). Include the following lines just below the block that creates the `driver` object (`let driver …`) :
+4. Next we'll retrieve the `sessionId` of the current session, and use it (along with your `userName` and `accessKey`) to assemble the URL to send requests to, to update the BrowserStack data. Include the following lines just below the block that creates the `driver` object (which starts with `const driver = new Builder()`) :
 
    ```js
    let sessionId;
+   let bstackURL;
 
    driver.session_.then((sessionData) => {
      sessionId = sessionData.id_;
+     bstackURL = `https://${capabilities["bstack:options"].userName}:${capabilities["bstack:options"].accessKey}@www.browserstack.com/automate/sessions/${sessionId}.json`;
    });
    ```
 
-5. Finally, update the `driver.sleep(2000)` block near the bottom of the code to add REST API calls (again, replace the `YOUR-USER-NAME` and `YOUR-ACCESS-KEY` placeholders in the code with your actual user name and access key values):
+5. Finally, update the `if ... else` block near the bottom of the code to send appropriate API calls to BrowserStack depending on whether the test passed or failed:
 
    ```js
-   driver.sleep(2000).then(() => {
-     driver.getTitle().then((title) => {
-       if (title === "webdriver - Google Search") {
-         console.log("Test passed");
-         request({
-           uri: `https://YOUR-USER-NAME:YOUR-ACCESS-KEY@www.browserstack.com/automate/sessions/${sessionId}.json`,
-           method: "PUT",
-           form: {
-             status: "passed",
-             reason: "Google results showed correct title",
-           },
-         });
-       } else {
-         console.log("Test failed");
-         request({
-           uri: `https://YOUR-USER-NAME:YOUR-ACCESS-KEY@www.browserstack.com/automate/sessions/${sessionId}.json`,
-           method: "PUT",
-           form: {
-             status: "failed",
-             reason: "Google results showed wrong title",
-           },
-         });
-       }
+   if (title === "webdriver at DuckDuckGo") {
+     console.log("Test passed");
+     axios.put(bstackURL, {
+       status: "passed",
+       reason: "DuckDuckGo results showed correct title",
      });
-   });
+   } else {
+     console.log("Test failed");
+     axios.put(bstackURL, {
+       status: "failed",
+       reason: "DuckDuckGo results showed wrong title",
+     });
+   }
    ```
 
-These are fairly intuitive — once the test completes, we send an API call to BrowserStack to update the test with a passed or failed status, and a reason for the result.
+Once the test completes, we send an API call to BrowserStack to update the test with a passed or failed status, and a reason for the result.
 
-If you now go back to your [BrowserStack automation dashboard](https://live.browserstack.com/dashboard) page, you should see your test session available, as before, but with the updated data attached to it:
+If you now go back to your [BrowserStack Automate dashboard](https://automate.browserstack.com/dashboard/), you should see your test session as before, but with your custom data attached to it. It shows a status of "PASSED", and the REST API reported reason for the pass:
 
 ![BrowserStack Custom Results](bstack_custom_results.png)
 
 ### Sauce Labs
 
-Getting Selenium tests to run remotely on Sauce Labs is also very simple, and very similar to BrowserStack albeit with a few syntactic differences. The code you need should follow the pattern seen below.
-
-Let's write an example:
+Let's look at an example that demonstrates getting Selenium tests to run remotely on Sauce Labs:
 
 1. Inside your project directory, create a new file called `sauce_google_test.js`.
 2. Give it the following contents:
