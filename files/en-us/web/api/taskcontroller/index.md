@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.TaskController
 ---
 
-{{APIRef("Prioritized Task Scheduling API")}}
+{{APIRef("Prioritized Task Scheduling API")}}{{AvailableInWorkers}}
 
 The **`TaskController`** interface of the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) represents a controller object that can be used to both abort and change the [priority](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities) of one or more prioritized tasks.
 If there is no need to change task priorities, then {{domxref("AbortController")}} can be used instead.

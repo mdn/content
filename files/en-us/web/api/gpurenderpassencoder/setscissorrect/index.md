@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPURenderPassEncoder.setScissorRect
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`setScissorRect()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface sets the scissor rectangle used during the rasterization stage. After transformation into viewport coordinates any fragments that fall outside the scissor rectangle will be discarded.

@@ -166,7 +166,7 @@ A template is a text file that defines the structure or layout of a file (such a
 
 A Django application created using **startapp** (like the skeleton of this example) will look for templates in a subdirectory named '**templates**' of your applications. For example, in the index view that we just added, the `render()` function will expect to find the file **_index.html_** in **/django-locallibrary-tutorial/catalog/templates/** and will raise an error if the file is not present.
 
-You can check this by saving the previous changes and accessing `127.0.0.1:8000` in your browser - it will display a fairly intuitive error message: "`TemplateDoesNotExist at /catalog/`", and other details.
+You can check this by saving the previous changes and accessing `127.0.0.1:8000` in your browser - it will display a fairly intuitive error message: "TemplateDoesNotExist at /catalog/", and other details.
 
 > [!NOTE]
 > Based on your project's settings file, Django will look for templates in a number of places, searching in your installed applications by default. You can find out more about how Django finds templates and what template formats it supports in [the Templates section of the Django documentation](https://docs.djangoproject.com/en/5.0/topics/templates/).
@@ -324,7 +324,7 @@ return render(request, 'index.html', context=context)
 
 #### Referencing static files in templates
 
-Your project is likely to use static resources, including JavaScript, CSS, and images. Because the location of these files might not be known (or might change), Django allows you to specify the location in your templates relative to the `STATIC_URL` global setting. The default skeleton website sets the value of `STATIC_URL` to '`/static/`', but you might choose to host these on a content delivery network or elsewhere.
+Your project is likely to use static resources, including JavaScript, CSS, and images. Because the location of these files might not be known (or might change), Django allows you to specify the location in your templates relative to the `STATIC_URL` global setting. The default skeleton website sets the value of `STATIC_URL` to `"/static/"`, but you might choose to host these on a content delivery network or elsewhere.
 
 Within the template you first call the `load` template tag specifying "static" to add the template library, as shown in the code sample below. You can then use the `static` template tag and specify the relative URL to the required file.
 

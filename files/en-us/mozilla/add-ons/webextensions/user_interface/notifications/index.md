@@ -45,7 +45,7 @@ If you are issuing calls to action through notifications, you will also want to 
 
 ## Icons
 
-For details on how to create icons to use with your notification, see [Iconography](https://acorn.firefox.com/latest/styles/iconography-q7JqGl5H) in the [Acorn Design System](https://acorn.firefox.com/latest/) documentation.
+For details on how to create icons to use with your notification, see [Iconography](https://acorn.firefox.com/latest/styles/iconography-q7JqGl5H) in the [Acorn Design System](https://acorn.firefox.com/latest) documentation.
 
 ## Examples
 

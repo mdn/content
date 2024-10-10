@@ -6,7 +6,7 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) Firefox 48 was released on August 2, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
+[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) Firefox 48 was released on August 2, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
 ## Changes for Web developers
 
@@ -67,10 +67,10 @@ page-type: firefox-release-notes
 #### New APIs
 
 - The {{jsxref("String.prototype.padStart()")}} and {{jsxref("String.prototype.padEnd()")}} methods have been implemented ([Firefox bug 1260509](https://bugzil.la/1260509)).
-- The ES2015 {{jsxref("Symbol.unscopables")}} and {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}} properties have been implemented ([Firefox bug 1054759](https://bugzil.la/1054759) and [Firefox bug 1258163](https://bugzil.la/1258163)).
+- The ES2015 {{jsxref("Symbol.unscopables")}} and [`Array.prototype[Symbol.unscopables]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables) properties have been implemented ([Firefox bug 1054759](https://bugzil.la/1054759) and [Firefox bug 1258163](https://bugzil.la/1258163)).
 - The ES2015 {{jsxref("Symbol.isConcatSpreadable")}} symbol has been implemented ([Firefox bug 1041586](https://bugzil.la/1041586)).
-- The ES2015 {{jsxref("Array.@@species", "Array[@@species]")}} getter has been implemented ([Firefox bug 1165052](https://bugzil.la/1165052)).
-- The ES2015 {{jsxref("ArrayBuffer.@@species", "ArrayBuffer[@@species]")}} getter and {{jsxref("TypedArray.@@species", "%TypedArray%[@@species]")}} getter have been implemented ([Firefox bug 1165053](https://bugzil.la/1165053)).
+- The ES2015 [`Array[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species) getter has been implemented ([Firefox bug 1165052](https://bugzil.la/1165052)).
+- The ES2015 [`ArrayBuffer[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/Symbol.species) getter and [`TypedArray[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.species) getter have been implemented ([Firefox bug 1165053](https://bugzil.la/1165053)).
 - The {{jsxref("Intl.getCanonicalLocales()")}} method of the ECMAScript Internationalization API draft has been implemented ([Firefox bug 1263040](https://bugzil.la/1263040)).
 
 #### Deprecations and removals

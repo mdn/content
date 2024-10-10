@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Intl.NumberFormat.resolvedOptions
 
 {{JSRef}}
 
-The **`resolvedOptions()`** method of {{jsxref("Intl.NumberFormat")}} instances returns a new object with properties reflecting the [locale and number formatting options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#parameters) computed during initialization of this `Intl.NumberFormat` object.
+The **`resolvedOptions()`** method of {{jsxref("Intl.NumberFormat")}} instances returns a new object with properties reflecting the options computed during initialization of this `NumberFormat` object.
 
 {{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-resolvedoptions.html")}}
 
@@ -23,72 +23,46 @@ None.
 
 ### Return value
 
-A new object with properties reflecting the [locale and number formatting options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#parameters) computed during the construction of the given {{jsxref("Intl.NumberFormat")}} object.
+A new object with properties reflecting the options computed during the initialization of this `NumberFormat` object. The object has the following properties, in the order they are listed:
 
-The resulting object has the following properties:
-
-- `compactDisplay`
-  - : Whether to use short or long form when using compact notation.
-    This is the value provided in the [`options.compactDisplay`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#compactdisplay) argument of the constructor, or the default value: `"short"`.
-    The value is only present if `notation` is set to "compact", and otherwise is `undefined`.
-- `currency`
-  - : The currency to use in currency formatting.
-    The value is defined if `style` is `"currency"`, and is otherwise `undefined`.
-    This is the value provided in the [`options.currency`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#currency) argument of the constructor.
-- `currencyDisplay`
-  - : The display format for the currency, such as a symbol, or currency code.
-    The value is defined if `style` is `"currency"`, and otherwise is `undefined`.
-    This is the value provided in the [`options.currencyDisplay`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#currencydisplay) argument of the constructor, or the default value: `"symbol"`.
-- `currencySign`
-  - : The method used to specify the sign of the currency value: `standard` or `accounting`.
-    The value is present if `style` is `"currency"`, and otherwise is `undefined`.
-    This is the value provided in the [`options.currencySign`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#currencysign) argument of the constructor, or the default value: `"standard"`.
 - `locale`
-  - : The BCP 47 language tag for the locale that was actually used.
-    Matches one of the locales that were requested in the constructor [`locales`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#locales).
-- `notation`
-  - : The formatting that should be applied to the number, such as `standard` or `engineering`.
-    This is the value provided in the [`options.notation`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#notation) argument of the constructor, or the default value: `"standard"`.
+  - : The BCP 47 language tag for the locale actually used, determined by the [locale negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) process. Only the `nu` Unicode extension key, if requested, may be included in the output.
 - `numberingSystem`
-  - : The numbering system.
-    This is the value provided in the [`options.numberingSystem`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#numberingsystem) argument of the constructor, if present, or the value set using the Unicode extension key [`nu`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#nu), or filled in as a default.
-- `roundingIncrement`
-  - : The rounding-increment precision (the increment used when rounding numbers).
-    This is the value specified in the [`options.roundingIncrement`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#roundingincrement) argument in the constructor.
-- `roundingMode`
-  - : The rounding mode.
-    This is the value provided for the [`options.roundingMode`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#roundingmode) argument in the constructor, or the default value: `halfExpand`.
-- `roundingPriority`
-  - : The priority for resolving rounding conflicts if both "FractionDigits" and "SignificantDigits" are specified.
-    This is the value provided for the [`options.roundingPriority`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#roundingpriority) argument in the constructor, or the default value: `auto`.
-- `signDisplay`
-  - : Whether or not to display the positive/negative sign.
-    This is the value specified in the [`options.signDisplay`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#signdisplay) argument in the constructor, or the default value: `"auto"`.
-- `unit`
-  - : The unit to use in unit formatting.
-    The value is only present if `style` is `"unit"`, and is otherwise `undefined`.
-    This is the value specified in the [`options.unit`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#unit) argument in the constructor.
-- `unitDisplay`
-
-  - : The display format to use for units in unit formatting, such as "long", "short" or "narrow".
-    The value is only present if `style` is `"unit"`, and is otherwise `undefined`.
-    This is the value specified in the [`options.unitDisplay`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#unitdisplay) argument in the constructor, or the default value: `short`.
-
+  - : The value provided for this property in the `options` argument, or using the Unicode extension key `"nu"`, with default filled in as needed. It is a supported [numbering system](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getNumberingSystems#supported_numbering_system_types) for this locale. The default is locale dependent.
+- `style`
+  - : The value provided for this property in the `options` argument, with default filled in as needed. It is either `"decimal"`, `"percent"`, `"currency"`, or `"unit"`. The default is `"decimal"`.
+- `currency` {{optional_inline}}
+  - : The value provided for this property in the `options` argument. It is only present if `style` is `"currency"`. It is an [ISO 4217 currency code](https://en.wikipedia.org/wiki/ISO_4217#List_of_ISO_4217_currency_codes). It is required if `style` is `"currency"` so there is no default.
+- `currencyDisplay` {{optional_inline}}
+  - : The value provided for this property in the `options` argument, with default filled in as needed. It is only present if `style` is `"currency"`. It is either `"code"`, `"symbol"`, `"narrowSymbol"`, or `"name"`. The default is `"symbol"`.
+- `currencySign` {{optional_inline}}
+  - : The value provided for this property in the `options` argument, with default filled in as needed. It is only present if `style` is `"currency"`. It is either `"standard"` or `"accounting"`. The default is `"standard"`.
+- `unit` {{optional_inline}}
+  - : The value provided for this property in the `options` argument. It is only present if `style` is `"unit"`. It is a [sanctioned unit identifier](https://tc39.es/ecma402/#table-sanctioned-single-unit-identifiers) from the [full CLDR list](https://github.com/unicode-org/cldr/blob/main/common/validity/unit.xml). It is required if `style` is `"unit"` so there is no default.
+- `unitDisplay` {{optional_inline}}
+  - : The value provided for this property in the `options` argument, with default filled in as needed. It is only present if `style` is `"unit"`. It is either `"short"`, `"narrow"`, or `"long"`. The default is `"short"`.
+- `minimumIntegerDigits`
+  - : The value provided for this property in the `options` argument, with default filled in as needed. It is an integer between `1` and `21`. The default is `1`.
+- `minimumFractionDigits`, `maximumFractionDigits` {{optional_inline}}
+  - : The value provided for these properties in the `options` argument, with defaults filled in as needed. They are only present if necessary; see [digit options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#digit_options). It is an integer between `0` and `100`.
+- `minimumSignificantDigits`, `maximumSignificantDigits` {{optional_inline}}
+  - : The value provided for these properties in the `options` argument, with defaults filled in as needed. They are only present if necessary; see [digit options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#digit_options). It is an integer between `1` and `21`.
 - `useGrouping`
-  - : Whether or not to use grouping separators to indicate "thousands", "millions" and son on.
-    This is the value specified in the [`options.useGrouping`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#usegrouping) argument in the constructor, or the default value: `"auto"`.
+  - : The value provided for this property in the `options` argument, with default filled in as needed, and with some values normalized. It is either `"always"`, `"auto"`, `"min2"`, or the boolean `false`. The default is `"min2"` if `notation` is `"compact"`, and `"auto"` otherwise.
+- `notation`
+  - : The value provided for this property in the `options` argument, with default filled in as needed. It is either `"standard"`, `"scientific"`, `"engineering"`, or `"compact"`. The default is `"standard"`.
+- `compactDisplay` {{optional_inline}}
+  - : The value provided for this property in the `options` argument, with default filled in as needed. It is only present if `notation` is `"compact"`. It is either `"short"` or `"long"`. The default is `"short"`.
+- `signDisplay`
+  - : The value provided for this property in the `options` argument, with default filled in as needed. It is either `"auto"`, `"always"`, `"exceptZero"`, `"negative"`, or `"never"`. The default is `"auto"`.
+- `roundingIncrement`
+  - : The value provided for this property in the `options` argument, with default filled in as needed. It is one of `1`, `2`, `5`, `10`, `20`, `25`, `50`, `100`, `200`, `250`, `500`, `1000`, `2000`, `2500`, and `5000`. The default is `1`.
+- `roundingMode`
+  - : The value provided for this property in the `options` argument, with default filled in as needed. It is one of `"ceil"`, `"floor"`, `"expand"`, `"trunc"`, `"halfCeil"`, `"halfFloor"`, `"halfExpand"`, `"halfTrunc"`, and `"halfEven"`. The default is `"halfExpand"`.
+- `roundingPriority`
+  - : The value provided for this property in the `options` argument, with default filled in as needed. It is either `"auto"`, `"morePrecision"`, or `"lessPrecision"`. The default is `"auto"`.
 - `trailingZeroDisplay`
-  - : The strategy for displaying trailing zeros on whole numbers.
-    This is the value specified in the [`options.trailingZeroDisplay`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#trailingzerodisplay) argument in the constructor, or the default value: `"auto"`.
-
-Only one of the following two groups of properties is included:
-
-- `minimumIntegerDigits`, `minimumFractionDigits`, `maximumFractionDigits`
-  - : The values provided for these properties in the `options` argument or filled in as defaults.
-    These properties are present only if neither `minimumSignificantDigits` nor `maximumSignificantDigits` was provided in the `options` argument.
-- `minimumSignificantDigits`, `maximumSignificantDigits`
-  - : The values provided for these properties in the `options` argument or filled in as defaults.
-    These properties are present only if at least one of them was provided in the `options` argument.
+  - : The value provided for this property in the `options` argument, with default filled in as needed. It is either `"auto"` or `"stripIfInteger"`. The default is `"auto"`.
 
 ## Examples
 

@@ -96,7 +96,7 @@ It is often more convenient to use the shorthand {{cssxref("list-style")}}.
 
 .inside-img {
   list-style-position: inside;
-  list-style-image: url("starsolid.gif");
+  list-style-image: url("star-solid.gif");
 }
 ```
 

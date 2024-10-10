@@ -25,7 +25,7 @@ A string with one of the following values:
 
 ## Examples
 
-In this example, the `aria-autocomplete` attribute on the element with an ID of `animal` is set to "`inline`". Using `ariaAutoComplete` we update the value to "`list`", which is the expected value for a combobox that invokes a `listbox` popup.
+In this example, the `aria-autocomplete` attribute on the element with an ID of `animal` is set to `"inline"`. Using `ariaAutoComplete` we update the value to `"list"`, which is the expected value for a combobox that invokes a `listbox` popup.
 
 ```html
 <div class="animals-combobox">

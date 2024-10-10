@@ -2,10 +2,10 @@ affordance
 affordances
 APNG
 Axess
-bézier
 Bhattacharya
 Brosset
 Brotli
+bézier
 callouts
 Caniuse
 cdylib

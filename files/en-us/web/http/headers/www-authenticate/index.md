@@ -82,7 +82,7 @@ WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
     > [!NOTE]
     > For more information/options see [HTTP Authentication > Authentication schemes](/en-US/docs/Web/HTTP/Authentication#authentication_schemes)
 
-- **realm=**\<realm> {{optional_inline}}
+- `<realm>` {{optional_inline}}
   - : A string describing a protected area.
     A realm allows a server to partition up the areas it protects (if supported by a scheme that allows such partitioning).
     Some clients show this value to the user to inform them about which particular credentials are required — though most browsers stopped doing so to counter phishing.

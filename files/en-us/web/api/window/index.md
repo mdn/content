@@ -177,15 +177,15 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Enables you to cancel a callback previously scheduled with {{domxref("Window.requestAnimationFrame")}}.
 - {{domxref("Window.cancelIdleCallback()")}}
   - : Enables you to cancel a callback previously scheduled with {{domxref("Window.requestIdleCallback")}}.
-- {{domxref("clearInterval", "Window.clearInterval()")}}
-  - : Cancels the repeated execution set using {{domxref("setInterval()")}}.
-- {{domxref("clearTimeout()", "Window.clearTimeout()")}}
-  - : Cancels the delayed execution set using {{domxref("setTimeout()")}}.
+- {{domxref("Window.clearInterval()")}}
+  - : Cancels the repeated execution set using {{domxref("Window.setInterval()")}}.
+- {{domxref("Window.clearTimeout()")}}
+  - : Cancels the delayed execution set using {{domxref("Window.setTimeout()")}}.
 - {{domxref("Window.close()")}}
   - : Closes the current window.
 - {{domxref("Window.confirm()")}}
   - : Displays a dialog with a message that the user needs to respond to.
-- {{domxref("createImageBitmap", "Window.createImageBitmap()")}}
+- {{domxref("Window.createImageBitmap()")}}
   - : Accepts a variety of different image sources, and returns a {{jsxref("Promise")}} which resolves to an {{domxref("ImageBitmap")}}. Optionally the source is cropped to the rectangle of pixels originating at _(sx, sy)_ with width sw, and height sh.
 - {{domxref("Window.dump()")}} {{Non-standard_Inline}}
   - : Writes a message to the console.
@@ -219,9 +219,9 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Returns the text entered by the user in a prompt dialog.
 - {{DOMxRef("Window.queryLocalFonts()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} that fulfills with an array of {{domxref("FontData")}} objects representing the font faces available locally.
-- {{domxref("queueMicrotask", "Window.queueMicrotask()")}}
+- {{domxref("Window.queueMicrotask()")}}
   - : Queues a microtask to be executed at a safe time prior to control returning to the browser's event loop.
-- {{domxref("reportError", "Window.reportError()")}}
+- {{domxref("Window.reportError()")}}
   - : Reports an error in a script, emulating an unhandled exception.
 - {{domxref("Window.requestAnimationFrame()")}}
   - : Tells the browser that an animation is in progress, requesting that the browser schedule a repaint of the window for the next animation frame.
@@ -241,9 +241,9 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Scrolls the current document by the specified number of pages.
 - {{domxref("Window.scrollTo()")}}
   - : Scrolls to a particular set of coordinates in the document.
-- {{domxref("setInterval", "Window.setInterval()")}}
+- {{domxref("Window.setInterval()")}}
   - : Schedules a function to execute every time a given number of milliseconds elapses.
-- {{domxref("setTimeout()", "Window.setTimeout()")}}
+- {{domxref("Window.setTimeout()")}}
   - : Schedules a function to execute in a given amount of time.
 - {{domxref("Window.showDirectoryPicker()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Displays a directory picker which allows the user to select a directory.
@@ -255,7 +255,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Sizes the window according to its content.
 - {{domxref("Window.stop()")}}
   - : This method stops window loading.
-- {{domxref("structuredClone", "Window.structuredClone()")}}
+- {{domxref("Window.structuredClone()")}}
   - : Creates a [deep clone](/en-US/docs/Glossary/Deep_copy) of a given value using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 - {{domxref("Window.updateCommands()")}} {{Non-standard_Inline}}
   - : Updates the state of commands of the current chrome window (UI).

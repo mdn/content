@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.PromiseRejectionEvent.PromiseRejectionEvent
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
 The **`PromiseRejectionEvent()`**
 constructor returns a new {{domxref("PromiseRejectionEvent")}} object, which

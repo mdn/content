@@ -7,7 +7,7 @@ status:
 browser-compat: api.GPUTexture
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPUTexture`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents a container used to store 1D, 2D, or 3D arrays of data, such as images, to use in GPU rendering operations.
 
@@ -47,7 +47,7 @@ A `GPUTexture` object instance is created using the {{domxref("GPUDevice.createT
 
 In the WebGPU samples [Textured Cube sample](https://webgpu.github.io/webgpu-samples/samples/texturedCube/), a texture to use on the faces of a cube is created by:
 
-- Loading the image into an {{domxref("HTMLImageElement")}} and creating an image bitmap using {{domxref("createImageBitmap()")}}.
+- Loading the image into an {{domxref("HTMLImageElement")}} and creating an image bitmap using {{domxref("Window.createImageBitmap", "createImageBitmap()")}}.
 - Creating a new `GPUTexture` using `createTexture()`.
 - Copying the image bitmap into the texture using {{domxref("GPUQueue.copyExternalImageToTexture()")}}.
 

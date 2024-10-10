@@ -21,7 +21,7 @@ The {{domxref("ImageData")}} object represents the underlying pixel data of an a
 
 The `data` property returns a {{jsxref("Uint8ClampedArray")}} which can be accessed to look at the raw pixel data; each pixel is represented by four one-byte values (red, green, blue, and alpha, in that order; that is, "RGBA" format). Each color component is represented by an integer between 0 and 255. Each component is assigned a consecutive index within the array, with the top left pixel's red component being at index 0 within the array. Pixels then proceed from left to right, then downward, throughout the array.
 
-The {{jsxref("Uint8ClampedArray")}} contains `height` × `width` × 4 bytes of data, with index values ranging from 0 to (`height`×`width`×4)-1.
+The {{jsxref("Uint8ClampedArray")}} contains `height` × `width` × 4 bytes of data, with index values ranging from 0 to (`height` × `width` × 4) - 1.
 
 For example, to read the blue component's value from the pixel at column 200, row 50 in the image, you would do the following:
 
@@ -213,7 +213,7 @@ With the help of the {{domxref("CanvasRenderingContext2D.drawImage", "drawImage(
 We get the position of the mouse and crop an image of 5 pixels left and above to 5 pixels right and below. Then we copy that one over to another canvas and resize the image to the size we want it to. In the zoom canvas we resize a 10×10 pixel crop of the original canvas to 200×200.
 
 ```js
-zoomctx.drawImage(
+zoomCtx.drawImage(
   canvas,
   Math.min(Math.max(0, x - 5), img.width - 10),
   Math.min(Math.max(0, y - 5), img.height - 10),

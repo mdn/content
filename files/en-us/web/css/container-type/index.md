@@ -49,7 +49,7 @@ container-type: unset;
     Inline size containment is applied to the element. The inline size of the element can be computed in isolation, ignoring the child elements.
 
 - `normal`
-  - : The element is not a query container for any container size queries, but remains a query container for container style queries.
+  - : Default value. The element is not a query container for any container size queries, but remains a query container for [container style queries](/en-US/docs/Web/CSS/@container#container_style_queries).
 
 ## Formal definition
 

@@ -3,13 +3,10 @@ title: "PaymentResponse: shippingOption property"
 short-title: shippingOption
 slug: Web/API/PaymentResponse/shippingOption
 page-type: web-api-instance-property
-status:
-  - deprecated
-  - non-standard
 browser-compat: api.PaymentResponse.shippingOption
 ---
 
-{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
+{{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The **`shippingOption`** read-only property of
 the `PaymentRequest` interface returns the ID attribute of the shipping
@@ -70,6 +67,10 @@ function updateDetails(details, shippingOption, resolve, reject) {
   resolve(details);
 }
 ```
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

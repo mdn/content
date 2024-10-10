@@ -18,7 +18,7 @@ The input value is automatically validated to ensure that it's either empty or a
 The {{HTMLElement("input")}} element's [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute contains a string that is automatically validated as conforming to URL syntax. More specifically, there are two possible value formats that will pass validation:
 
 1. An empty string ("") indicates the user did not enter a value or that the value was removed.
-2. A single properly-formed absolute URL. This doesn't necessarily mean the URL address exists, but it is at least formatted correctly. An entry matching `urlscheme://restofurl` can be valid, even if the `urlscheme` entered doesn't exist.
+2. A single properly-formed absolute URL. This doesn't necessarily mean the URL address exists, but it is at least formatted correctly. An entry matching `urlscheme://rest-of-url` can be valid, even if the `urlscheme` entered doesn't exist.
 
 See [Validation](#validation) for details on how URLs are validated to ensure that they're formatted properly.
 

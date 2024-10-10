@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.Report
 ---
 
-{{APIRef("Reporting API")}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}
 
 The `Report` interface of the [Reporting API](/en-US/docs/Web/API/Reporting_API) represents a single report.
 

@@ -2,12 +2,10 @@
 title: Iterator.prototype.take()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/take
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Iterator.take
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{JSRef}}
 
 The **`take()`** method of {{jsxref("Iterator")}} instances returns a new [iterator helper](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helpers) that yields the given number of elements in this iterator and then terminates.
 

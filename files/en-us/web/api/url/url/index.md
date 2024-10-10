@@ -30,7 +30,7 @@ new URL(url, base)
   - : A string representing the base URL to use in cases where `url` is a relative reference.
     If not specified, it defaults to `undefined`.
 
-    When specify a `base` URL, the resolved URL is not simply a concatenation of `url` and `base`.
+    When a `base` is specified, the resolved URL is not simply a concatenation of `url` and `base`.
     Relative references to the parent and current directory are resolved are relative to the current directory of the `base` URL, which includes path segments up until the last forward-slash, but not any after.
     Relative references to the root are resolved relative to the base origin.
     For more information see [Resolving relative references to a URL](/en-US/docs/Web/API/URL_API/Resolving_relative_references).

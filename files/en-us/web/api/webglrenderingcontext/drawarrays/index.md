@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.drawArrays
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.drawArrays()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) renders primitives from array data.
 

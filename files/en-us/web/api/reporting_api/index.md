@@ -4,10 +4,14 @@ slug: Web/API/Reporting_API
 page-type: web-api-overview
 status:
   - experimental
-spec-urls: https://w3c.github.io/reporting/#intro
+spec-urls:
+  - https://w3c.github.io/reporting/#intro
+  - https://w3c.github.io/webappsec-csp/#cspviolationreportbody
+  - https://wicg.github.io/deprecation-reporting/#deprecationreportbody
+  - https://wicg.github.io/intervention-reporting/#intervention-report
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("Reporting API")}}
+{{SeeCompatTable}}{{DefaultAPISidebar("Reporting API")}}{{AvailableInWorkers}}
 
 The Reporting API provides a generic reporting mechanism for web applications to use to make reports available based on various platform features (for example [Content Security Policy](/en-US/docs/Web/HTTP/CSP), [Permissions-Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy), or feature deprecation reports) in a consistent manner.
 
@@ -96,7 +100,7 @@ These HTTP response headers define the endpoints where reports are sent.
 
 - {{HTTPHeader("Reporting-Endpoints")}}
   - : Sets the name and URL of reporting endpoints.
-    These can be used in the `report-to` directive, which may be used with a number of HTTP headers including {{httpheader("Content-Security-Policy")}}.
+    These endpoints can be used in the `report-to` directive, which may be used with a number of HTTP headers including {{httpheader("Content-Security-Policy")}} and or {{HTTPHeader("Content-Security-Policy-Report-Only")}}.
 - {{HTTPHeader("Report-To")}} {{deprecated_inline}}
   - : Sets the name and URL of reporting endpoint groups, which may be used with a number of HTTP headers including `Content-Security-Policy`.
 
@@ -152,12 +156,9 @@ This causes a deprecation report to be generated; because of the event handler w
 
 ## Browser compatibility
 
-Support is at an early stage right now. Firefox supports the JavaScript API and the `Report-To` header behind preferences:
+The API is supported by Chromium browsers, and by Firefox behind a preference (`dom.reporting.enabled`).
 
-- JavaScript API: `dom.reporting.enabled` (enabled in nightly only)
-- HTTP header: `dom.reporting.header.enabled`
-
-Chrome is also working on an implementation: [information about Chrome implementation](https://developer.chrome.com/docs/capabilities/web-apis/reporting-api).
+See the specific interfaces for more detailed support information.
 
 ## See also
 

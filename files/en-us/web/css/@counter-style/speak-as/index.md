@@ -75,7 +75,7 @@ To experience the result of the `speak-as` descriptor, use assistive technology 
   <li>I ate two bananas</li>
   <li>I devoured three oranges</li>
   <li>I am not hungry for dinner</li>
-  <li>But I'll have five scopps of ice cream for desert</li>
+  <li>But I'll have five scoops of ice cream for dessert</li>
 </ul>
 ```
 

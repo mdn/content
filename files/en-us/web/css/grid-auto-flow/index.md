@@ -11,6 +11,10 @@ The **`grid-auto-flow`** [CSS](/en-US/docs/Web/CSS) property controls how the au
 
 {{EmbedInteractiveExample("pages/css/grid-auto-flow.html")}}
 
+> [!NOTE]
+> The `masonry-auto-flow` property was dropped from CSS [Masonry layout](/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout) in favor of `grid-auto-flow`.
+> See [csswg-drafts #10231](https://github.com/w3c/csswg-drafts/issues/10231) for details.
+
 ## Syntax
 
 ```css

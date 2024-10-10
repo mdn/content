@@ -84,7 +84,7 @@ Given the headers above, any `script-src` CSP violations would result in violati
 
 ### Specifying multiple reporting groups
 
-The example below demonstates a `Report-To` header that specifies multiple endpoint groups.
+The example below demonstrates a `Report-To` header that specifies multiple endpoint groups.
 Note that each group has a unique name, and that the groups are not bounded by the array markers.
 
 ```http

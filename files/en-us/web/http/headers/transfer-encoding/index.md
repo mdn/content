@@ -50,7 +50,7 @@ Transfer-Encoding: gzip, chunked
 ## Directives
 
 - `chunked`
-  - : Data is sent in a series of chunks. The {{HTTPHeader("Content-Length")}} header is omitted in this case and at the beginning of each chunk you need to add the length of the current chunk in hexadecimal format, followed by '`\r\n`' and then the chunk itself, followed by another '`\r\n`'.
+  - : Data is sent in a series of chunks. The {{HTTPHeader("Content-Length")}} header is omitted in this case and at the beginning of each chunk you need to add the length of the current chunk in hexadecimal format, followed by `\r\n` and then the chunk itself, followed by another `\r\n`.
     The terminating chunk is a regular chunk, with the exception that its length is zero.
     It is followed by the trailer, which consists of a (possibly empty) sequence of header fields.
 - `compress`

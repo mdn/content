@@ -13,7 +13,7 @@ browser-compat:
 
 The **`max`** attribute defines the maximum value that is acceptable and valid for the input containing the attribute. If the [`value`](/en-US/docs/Web/HTML/Element/input#value) of the element is greater than this, the element fails [validation](/en-US/docs/Learn/Forms/Form_validation). This value must be greater than or equal to the value of the [`min`](/en-US/docs/Web/HTML/Attributes/min) attribute. If the `max` attribute is present but is not specified or is invalid, no `max` value is applied. If the `max` attribute is valid and a non-empty value is greater than the maximum allowed by the `max` attribute, constraint validation will prevent form submission.
 
-Valid for the numeric input types, including the {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} and {{HTMLElement("input/range", "range")}} types, and both the {{htmlelement('progress')}} and {{htmlelement('meter')}} elements, the `max` attribute is a number that specifies the most positive value a form control to be considered valid.
+The max attribute is valid for the numeric input types, including the {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} and {{HTMLElement("input/range", "range")}} types, and both the {{htmlelement('progress')}} and {{htmlelement('meter')}} elements. It is a number that specifies the most positive value a form control to be considered valid.
 
 If the value exceeds the max value allowed, the {{domxref('validityState.rangeOverflow')}} will be true, and the control will be matched by the {{cssxref(':out-of-range')}} and {{cssxref(':invalid')}} pseudo-classes.
 
@@ -51,14 +51,14 @@ If the value exceeds the max value allowed, the {{domxref('validityState.rangeOv
     </tr>
     <tr>
       <td>{{HTMLElement("input/time", "time")}}</td>
-      <td><code>hh:mm</code></td>
+      <td><code>HH:mm</code></td>
       <td><code>&#x3C;input type="time" max="17:00" step="900"></code></td>
     </tr>
     <tr>
       <td>
         {{HTMLElement("input/datetime-local", "datetime-local")}}
       </td>
-      <td><code>yyyy-mm-ddThh:mm</code></td>
+      <td><code>yyyy-mm-ddTHH:mm</code></td>
       <td>
         <code>&#x3C;input type="datetime-local" max="2019-12-25T23:59"></code>
       </td>

@@ -5,7 +5,7 @@ page-type: guide
 browser-compat: api.MediaDevices.getSupportedConstraints
 ---
 
-{{APIRef("Media Capture and Streams")}}
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
 This article discusses the twin concepts of **constraints** and **capabilities**, as well as media settings, and includes an example we call the [Constraint Exerciser](#example_constraint_exerciser). The Constraint Exerciser lets you experiment with the results of different constraint sets being applied to the audio and video tracks coming from the computer's A/V input devices (such as its webcam and microphone).
 
@@ -109,7 +109,43 @@ So-called advanced constraints are created by adding an `advanced` property to t
 
 You can call {{domxref("MediaStreamTrack.getCapabilities()")}} to get a list of all of the supported capabilities and the values or ranges of values which each one accepts on the current platform and user agent. This function returns an object which lists each constrainable property supported by the browser and a value or range of values which are supported for each one of those properties.
 
-> **Note:** `getCapabilities()` hasn't been implemented yet by all major browsers. For the time being, you'll have to try to get what you need, and if you can't, decide what to do at that point. See Firefox [Firefox bug 1179084](https://bugzil.la/1179084), for example.
+For example, the following snippet will result in the user being asked for permission to access their local camera and microphone. Once permission is granted, `MediaTrackCapabilities` objects will be logged to the console that detail the capabilities of each {{domxref("MediaStreamTrack")}}:
+
+```js
+navigator.mediaDevices
+  .getUserMedia({ video: true, audio: true })
+  .then((stream) => {
+    const tracks = stream.getTracks();
+    tracks.map((t) => console.log(t.getCapabilities()));
+  });
+```
+
+An example capabilities object looks like this:
+
+```js
+{
+  "autoGainControl": [
+    true,
+    false
+  ],
+  "channelCount": {
+    "max": 1,
+    "min": 1
+  },
+  "deviceId": "jjxEMqxIhGdryqbTjDrXPWrkjy55Vte70kWpMe3Lge8=",
+  "echoCancellation": [
+    true,
+    false
+  ],
+  "groupId": "o2tZiEj4MwOdG/LW3HwkjpLm1D8URat4C5kt742xrVQ=",
+  "noiseSuppression": [
+    true,
+    false
+  ]
+}
+```
+
+The exact contents of the object will depend on the browser and media hardware.
 
 ## Applying constraints
 

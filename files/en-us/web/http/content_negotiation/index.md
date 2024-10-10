@@ -67,7 +67,7 @@ Compressing HTTP messages is one of the most important ways to improve the perfo
 
 ### The `Accept-Language` header
 
-The {{HTTPHeader("Accept-Language")}} header is used to indicate the language preference of the user. It's a list of values with quality factors (e.g., `"de, en;q=0.7`"). A default value is often set according to the language of the graphical interface of the user agent, but most browsers allow different language preferences to be set.
+The {{HTTPHeader("Accept-Language")}} header is used to indicate the language preference of the user. It's a list of values with quality factors (e.g., `de, en;q=0.7`). A default value is often set according to the language of the graphical interface of the user agent, but most browsers allow different language preferences to be set.
 
 Due to the [configuration-based entropy](https://www.eff.org/deeplinks/2010/01/primer-information-theory-and-privacy) increase, a modified value can be used to fingerprint the user. It's not recommended to change it and a website can't trust this value to reflect the actual intention of the user. It's best for site designers to avoid using language detection via this header as it can lead to a poor user experience.
 
@@ -81,15 +81,15 @@ Due to the [configuration-based entropy](https://www.eff.org/deeplinks/2010/01/p
 
 The {{HTTPHeader("User-Agent")}} header identifies the browser sending the request. This string may contain a space-separated list of _product tokens_ and _comments_.
 
-A _product token_ is a name followed by a '`/`' and a version number, like `Firefox/4.0.1`. The user agent can include as many of these as it wants. A _comment_ is an optional string delimited by parentheses. The information provided in a comment isn't standardized, though several browsers add several tokens to it separated by '`;`'.
+A _product token_ is a name followed by a `/` and a version number, like `Firefox/4.0.1`. The user agent can include as many of these as it wants. A _comment_ is an optional string delimited by parentheses. The information provided in a comment isn't standardized, though several browsers add several tokens to it separated by `;`.
 
 ### The `Vary` response header
 
 In contrast to the previous `Accept-*` headers, which are sent by the client, the {{HTTPHeader("Vary")}} HTTP header is sent by the web server in its response. It indicates the list of headers the server uses during the server-driven content negotiation phase. The `Vary` header is needed to inform the cache of the decision criteria so that it can reproduce it. This allows the cache to be functional while ensuring that the right content is served to the user.
 
-The special value '`*`' means that the server-driven content negotiation also uses information not conveyed in a header to choose the appropriate content.
+The special value `*` means that the server-driven content negotiation also uses information not conveyed in a header to choose the appropriate content.
 
-The `Vary` header was added in version 1.1 of HTTP and allows caches to work appropriately. To work with server-driven content negotiation, a cache needs to know which criteria the server used to select the transmitted content. That way, the cache can replay the algorithm and will be able to serve acceptable content directly, without more requests to the server. Obviously, the wildcard '`*`' prevents caching from occurring, as the cache can't know what element is behind it. For more information, see [HTTP caching > Varying responses](/en-US/docs/Web/HTTP/Caching#vary).
+The `Vary` header was added in version 1.1 of HTTP and allows caches to work appropriately. To work with server-driven content negotiation, a cache needs to know which criteria the server used to select the transmitted content. That way, the cache can replay the algorithm and will be able to serve acceptable content directly, without more requests to the server. Obviously, the wildcard `*` prevents caching from occurring, as the cache can't know what element is behind it. For more information, see [HTTP caching > Varying responses](/en-US/docs/Web/HTTP/Caching#vary).
 
 ## Agent-driven negotiation
 

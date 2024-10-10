@@ -27,11 +27,11 @@ A string representing the time portion of the given date (see description for th
 
 ## Description
 
-{{jsxref("Date")}} instances refer to a specific point in time. `toTimeString()` interprets the date in the local timezone and formats the _time_ part in English. It always uses the format of `hh:mm:ss GMT±xxxx (TZ)`, where:
+{{jsxref("Date")}} instances refer to a specific point in time. `toTimeString()` interprets the date in the local timezone and formats the _time_ part in English. It always uses the format of `HH:mm:ss GMT±xxxx (TZ)`, where:
 
 | Format String | Description                                                                                           |
 | ------------- | ----------------------------------------------------------------------------------------------------- |
-| `hh`          | Hour, as two digits with leading zero if required                                                     |
+| `HH`          | Hour, as two digits with leading zero if required                                                     |
 | `mm`          | Minute, as two digits with leading zero if required                                                   |
 | `ss`          | Seconds, as two digits with leading zero if required                                                  |
 | `±xxxx`       | The local timezone's offset — two digits for hours and two digits for minutes (e.g. `-0500`, `+0800`) |

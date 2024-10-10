@@ -134,35 +134,41 @@ Our example seen above is represented by the following code (you can also [find 
           congue enim, ut porta lorem lacinia consectetur.
         </p>
 
-        <h3>Subsection</h3>
+        <section>
+          <h3>Subsection</h3>
 
-        <p>
-          Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum
-          dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem.
-          Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.
-        </p>
+          <p>
+            Donec ut librero sed accu vehicula ultricies a non tortor. Lorem
+            ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut
+            gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id
+            dolor.
+          </p>
 
-        <p>
-          Pelientesque auctor nisi id magna consequat sagittis. Curabitur
-          dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet.
-          Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.
-        </p>
+          <p>
+            Pelientesque auctor nisi id magna consequat sagittis. Curabitur
+            dapibus, enim sit amet elit pharetra tincidunt feugiat nist
+            imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed
+            odio eros.
+          </p>
+        </section>
 
-        <h3>Another subsection</h3>
+        <section>
+          <h3>Another subsection</h3>
 
-        <p>
-          Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum
-          soclis natoque penatibus et manis dis parturient montes, nascetur
-          ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem
-          facilisis semper ac in est.
-        </p>
+          <p>
+            Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum
+            soclis natoque penatibus et manis dis parturient montes, nascetur
+            ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at
+            sem facilisis semper ac in est.
+          </p>
 
-        <p>
-          Vivamus fermentum semper porta. Nunc diam velit, adipscing ut
-          tristique vitae sagittis vel odio. Maecenas convallis ullamcorper
-          ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi
-          diam iaculis velit, is fringille sem nunc vet mi.
-        </p>
+          <p>
+            Vivamus fermentum semper porta. Nunc diam velit, adipscing ut
+            tristique vitae sagittis vel odio. Maecenas convallis ullamcorper
+            ultricied. Curabitur ornare, ligula semper consectetur sagittis,
+            nisi diam iaculis velit, is fringille sem nunc vet mi.
+          </p>
+        </section>
       </article>
 
       <!-- the aside content can also be nested within the main content -->
@@ -206,7 +212,7 @@ Each of the aforementioned elements can be clicked on to read the corresponding 
 
 ### Non-semantic wrappers
 
-Sometimes you'll come across a situation where you can't find an ideal semantic element to group some items together or wrap some content. Sometimes you might want to just group a set of elements together to affect them all as a single entity with some {{glossary("CSS")}} or {{glossary("JavaScript")}}. For cases like these, HTML provides the {{HTMLElement("div")}} and {{HTMLElement("span")}} elements. You should use these preferably with a suitable [`class`](/en-US/docs/Web/HTML/Global_attributes#class) attribute, to provide some kind of label for them so they can be easily targeted.
+Sometimes you'll come across a situation where you can't find an ideal semantic element to group some items together or wrap some content. Sometimes you might want to just group a set of elements together to affect them all as a single entity with some {{glossary("CSS")}} or {{glossary("JavaScript")}}. For cases like these, HTML provides the {{HTMLElement("div")}} and {{HTMLElement("span")}} elements. You should use these preferably with a suitable [`class`](/en-US/docs/Web/HTML/Global_attributes/class) attribute, to provide some kind of label for them so they can be easily targeted.
 
 {{HTMLElement("span")}} is an inline non-semantic element, which you should only use if you can't think of a better semantic text element to wrap your content, or don't want to add any specific meaning. For example:
 

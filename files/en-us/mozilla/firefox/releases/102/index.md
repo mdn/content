@@ -39,7 +39,7 @@ No notable changes.
 
 #### DOM
 
-- The Firefox-only property {{domxref("Window.sidebar")}} has been moved behind a preference (and permanently removed in version 119) ([Firefox bug 1768486](https://bugzil.la/1768486)).
+- The Firefox-only property {{domxref("Window.external", "Window.sidebar")}} has been moved behind a preference (and permanently removed in version 119) ([Firefox bug 1768486](https://bugzil.la/1768486)).
 
 ### WebDriver conformance
 

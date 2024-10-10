@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUCanvasContext.canvas
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`canvas`** read-only property of the
 {{domxref("GPUCanvasContext")}} interface returns a reference to the canvas that the context was created from.
