@@ -8,8 +8,8 @@ browser-compat: http.headers.X-Content-Type-Options
 {{HTTPSidebar}}
 
 The **`X-Content-Type-Options`** response HTTP header is a
-marker used by the server to indicate that the [MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) advertised in the
-{{HTTPHeader("Content-Type")}} headers should be followed and not be changed. The header allows you to avoid [MIME type sniffing](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#mime_sniffing) by saying that the MIME types are deliberately
+marker used by the server to indicate that the [MIME types](/en-US/docs/Web/HTTP/MIME_types) advertised in the
+{{HTTPHeader("Content-Type")}} headers should be followed and not be changed. The header allows you to avoid [MIME type sniffing](/en-US/docs/Web/HTTP/MIME_types#mime_sniffing) by saying that the MIME types are deliberately
 configured.
 
 This header was introduced by Microsoft in IE 8 as a way for webmasters to block
@@ -24,7 +24,7 @@ than `text/html`. Make sure to set both headers correctly.
 
 Site security testers usually expect this header to be set.
 
-> **Note:** `X-Content-Type-Options` only apply request-blocking [due to `nosniff`](https://fetch.spec.whatwg.org/#ref-for-determine-nosniff) for [request destinations](https://fetch.spec.whatwg.org/#concept-request-destination) of "`script`" and "`style`".
+> **Note:** `X-Content-Type-Options` only apply request-blocking [due to `nosniff`](https://fetch.spec.whatwg.org/#ref-for-determine-nosniff) for [request destinations](/en-US/docs/Web/API/Request/destination) of `"script"` and `"style"`.
 > However, it also [enables Cross-Origin Read Blocking (CORB)](https://chromium.googlesource.com/chromium/src/+/master/services/network/cross_origin_read_blocking_explainer.md#determining-whether-a-response-is-corb_protected) protection for HTML, TXT, JSON and XML files (excluding SVG `image/svg+xml`).
 
 <table class="properties">

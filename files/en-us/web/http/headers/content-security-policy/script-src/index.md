@@ -31,18 +31,20 @@ The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`script-src`** direct
 
 ## Syntax
 
-One or more sources can be allowed for the `script-src` policy:
-
 ```http
-Content-Security-Policy: script-src <source>;
-Content-Security-Policy: script-src <source> <source>;
+Content-Security-Policy: script-src 'none';
+Content-Security-Policy: script-src <source-expression-list>;
 ```
 
-### Sources
+This directive may have one of the following values:
 
-`<source>` can be any one of the values listed in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
+- `'none'`
+  - : No resources of this type may be loaded. The single quotes are mandatory.
+- `<source-expression-list>`
 
-Note that this same set of values can be used in all {{Glossary("fetch directive", "fetch directives")}} (and a [number of other directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#relevant_directives)).
+  - : A space-separated list of _source expression_ values. Resources of this type may be loaded if they match any of the given source expressions.
+
+    Source expressions are specified as keyword values or URL patterns: the syntax for each source expression is given in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources).
 
 ## Examples
 
@@ -218,9 +220,9 @@ If a page has a CSP header and `'unsafe-eval'` isn't specified with the `script-
 - {{jsxref("Function", "Function()")}}
 - When passing a string literal like to methods like: `setTimeout("alert(\"Hello World!\");", 500);`
 
-  - {{domxref("setTimeout()")}}
-  - {{domxref("setInterval()")}}
-  - {{domxref("window.setImmediate")}}
+  - {{domxref("Window.setTimeout", "setTimeout()")}}
+  - {{domxref("Window.setInterval", "setInterval()")}}
+  - {{domxref("Window.setImmediate", "setImmediate()")}}
 
 - `window.execScript()` {{non-standard_inline}} (IE < 11 only)
 

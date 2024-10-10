@@ -35,7 +35,6 @@ optionElement.label = "Updated label";
 ## See also
 
 - {{domxref("HTMLOptionElement.value")}}
-- {{domxref("HTMLOptionElement.label")}}
 - {{HTMLElement("select")}}
 - {{HTMLElement("datalist")}}
 - {{HTMLElement("optgroup")}}

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.compressedTexSubImage3D
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.compressedTexSubImage3D()`**
 method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specifies a

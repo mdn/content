@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUTexture.dimension
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`dimension`** read-only property of the
 {{domxref("GPUTexture")}} interface represents the dimension of the set of texels for each `GPUTexture` subresource.

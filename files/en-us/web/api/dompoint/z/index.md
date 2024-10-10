@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.DOMPoint.z
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 The **`DOMPoint`** interface's
 **`z`** property specifies the depth coordinate of a point in

@@ -57,7 +57,7 @@ This first converts the iterator returned by {{jsxref("Map.prototype.values()")}
 const totalDeposit = nameToDeposit.values().reduce((a, b) => a + b);
 ```
 
-This method is more efficient, because it only iterates the iterator once, without memorizing any intermediate values. Iterator helper methods are necessary to work with infinite iterators:
+This method may be more efficient, especially memory-wise, because it only iterates the iterator once, without memorizing any intermediate values. Iterator helper methods are necessary to work with infinite iterators:
 
 ```js
 function* fibonacci() {

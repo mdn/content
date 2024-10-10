@@ -35,12 +35,20 @@ It does not apply to other JavaScript sources that can trigger script execution,
 
 ## Syntax
 
-One or more sources can be allowed for the `script-src-attr` policy:
-
 ```http
-Content-Security-Policy: script-src-attr <source>;
-Content-Security-Policy: script-src-attr <source> <source>;
+Content-Security-Policy: script-src-attr 'none';
+Content-Security-Policy: script-src-attr <source-expression-list>;
 ```
+
+This directive may have one of the following values:
+
+- `'none'`
+  - : No resources of this type may be loaded. The single quotes are mandatory.
+- `<source-expression-list>`
+
+  - : A space-separated list of _source expression_ values. Resources of this type may be loaded if they match any of the given source expressions.
+
+    Source expressions are specified as keyword values or URL patterns: the syntax for each source expression is given in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources).
 
 `script-src-attr` can be used in conjunction with {{CSP("script-src")}}, and will override that directive for checks on inline handlers:
 
@@ -48,12 +56,6 @@ Content-Security-Policy: script-src-attr <source> <source>;
 Content-Security-Policy: script-src <source>;
 Content-Security-Policy: script-src-attr <source>;
 ```
-
-### Sources
-
-`<source>` can be any one of the values listed in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
-
-Note that this same set of values can be used in all {{Glossary("fetch directive", "fetch directives")}} (and a [number of other directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#relevant_directives)).
 
 ## Examples
 

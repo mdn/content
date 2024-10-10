@@ -14,7 +14,7 @@ The **`resize`** [CSS](/en-US/docs/Web/CSS) property sets whether an element is 
 `resize` does not apply to the following:
 
 - Inline elements
-- Block elements for which the {{cssxref("overflow")}} property is set to `visible`
+- Block elements for which the {{cssxref("overflow")}} property is set to `visible` or `clip`
 
 ## Syntax
 
@@ -62,7 +62,7 @@ The `resize` property is specified as a single keyword value from the list below
 
 ## Examples
 
-### Disabling resizability of textareas
+### Disabling resizability of text areas
 
 In many browsers, {{HTMLElement("textarea")}} elements are resizable by default. You may override this behavior with the `resize` property.
 
@@ -82,7 +82,7 @@ textarea {
 
 #### Result
 
-{{EmbedLiveSample("Disabling_resizability_of_textareas","200","100")}}
+{{EmbedLiveSample("Disabling_resizability_of_text_areas","200","100")}}
 
 ### Using resize with arbitrary elements
 

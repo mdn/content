@@ -8,7 +8,7 @@ status:
 browser-compat: api.USBConfiguration.configurationName
 ---
 
-{{securecontext_header}}{{APIRef("WebUSB API")}}{{SeeCompatTable}}
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`configurationName`** read-only property
 of the {{domxref("USBConfiguration")}} interface returns the name provided by the device
