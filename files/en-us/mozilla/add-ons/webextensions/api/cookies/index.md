@@ -51,10 +51,12 @@ Trackers use third-party cookies, that is, cookies set by a website other than t
 1. You visit `a-shopping-site.com`, which uses `ad-tracker.com` to deliver its adverts on the web. `ad-tracker.com` sets a cookie associated with the `ad-tracker.com` domain. While you are on `a-shopping-site.com`, `ad-tracker.com` receives information about the products you browse.
 2. You now visit `a-news-site.com` that uses `ad-tracker.com` to deliver adverts. `ad-tracker.com` read its cookie and use the information collected from `a-shopping-site.com` to decide which adverts to display to you.
 
-Firefox includes features to prevent tracking. These features separate cookies so that trackers cannot make an association between websites visited. So, in the preceding example, `ad-tracker.com` cannot see the cookie created on `a-news-site.com` when visiting `a-shopping-site.com`. The first iteration of this protection was first-party isolation, which is being superseded by [dynamic partitioning](/en-US/docs/Web/Privacy/State_Partitioning#dynamic_partitioning).
+Firefox includes two features to prevent tracking: [dynamic partitioning](#storage_partitioning) and [first-party isolation](#first-party_isolation). These features separate cookies so that trackers cannot make an association between websites visited. So, in the preceding example, `ad-tracker.com` cannot see the cookie created on `a-news-site.com` when visiting `a-shopping-site.com`.
+
+From Firefox 103, dynamic partitioning is the default feature used. However, if the user or an extension turns on first-party isolation, it takes precedence over dynamic partitioning.
 
 > [!NOTE]
-> First-party isolation and dynamic partitioning are not active at the same time. If the user or an extension turns on first-party isolation, it takes precedence over dynamic partitioning. However, when private browsing uses dynamic partitioning, normal browsing may not be partitioning cookies. See [Status of partitioning in Firefox](/en-US/docs/Web/Privacy/State_Partitioning#status_of_partitioning_in_firefox), for details.
+> When private browsing uses dynamic partitioning, normal browsing may not be partitioning cookies. See [Status of partitioning in Firefox](/en-US/docs/Web/Privacy/State_Partitioning#status_of_partitioning_in_firefox), for details.
 
 ### Storage partitioning
 
