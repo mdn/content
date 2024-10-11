@@ -29,7 +29,7 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
 - {{domxref("ErrorEvent.colno")}} {{ReadOnlyInline}}
   - : An `integer` containing the column number of the script file on which the error occurred.
 - {{domxref("ErrorEvent.error")}} {{ReadOnlyInline}}
-  - : A JavaScript `Object` that is concerned by the event.
+  - : A JavaScript value, such as an {{jsxref("Error")}} or {{domxref("DOMException")}}, representing the error associated with this event.
 
 ## Instance methods
 
