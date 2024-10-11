@@ -8,7 +8,7 @@ browser-compat: api.HTMLImageElement.fetchPriority
 
 {{APIRef("HTML DOM")}}
 
-The **`fetchPriority`** property of the {{domxref("HTMLImageElement")}} interface represents a hint to the browser indicating how it should prioritize fetching the image relative to other images with the same internal priority.
+The **`fetchPriority`** property of the {{domxref("HTMLImageElement")}} interface represents a hint to the browser indicating how it should prioritize fetching a particular image relative to other images.
 It reflects the [`fetchpriority`](/en-US/docs/Web/HTML/Element/img#fetchpriority) attribute of the corresponding {{htmlelement("img")}} element, for the allowed values.
 
 The property allows a developer to signal that fetching a particular image early in the loading process has more or less impact on user experience than a browser can reasonably infer when assigning an internal priority.

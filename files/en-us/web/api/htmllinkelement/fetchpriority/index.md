@@ -8,8 +8,7 @@ browser-compat: api.HTMLLinkElement.fetchPriority
 
 {{APIRef("HTML DOM")}}
 
-The **`fetchPriority`** property of the {{domxref("HTMLLinkElement")}} interface represents a hint to the browser indicating how it should prioritize fetching a given resource relative to other
-resources of the same type and internal prioritization.
+The **`fetchPriority`** property of the {{domxref("HTMLLinkElement")}} interface represents a hint to the browser indicating how it should prioritize fetching a particular resource relative to other resources of the same type.
 It reflects the [`fetchpriority`](/en-US/docs/Web/HTML/Element/link#fetchpriority) attribute of the corresponding {{htmlelement("link")}} element, for the allowed values.
 
 The property allows a developer to signal that fetching a particular resource early in the loading process has more or less impact on user experience than a browser can reasonably infer when assigning an internal priority, in particular when preloading resources.

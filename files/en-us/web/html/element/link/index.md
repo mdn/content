@@ -205,9 +205,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     Allowed values:
 
     - `high`
-      - : Fetch the resource at a high priority relative to other resources of the same type and internal prioritization.
+      - : Fetch the resource at a high priority relative to other resources of the same type.
     - `low`
-      - : Fetch the resource at a low priority relative to other resources of the same type and internal prioritization.
+      - : Fetch the resource at a low priority relative to other resources of the same type.
     - `auto`
       - : No user preference for the fetch priority.
         This is the default.

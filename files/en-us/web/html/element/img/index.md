@@ -148,9 +148,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     Allowed values:
 
     - `high`
-      - : Fetch the image at a high priority relative to other images with the same internal prioritization.
+      - : Fetch the image at a high priority relative to other images.
     - `low`
-      - : Fetch the image at a low priority relative to other images with the same internal prioritization.
+      - : Fetch the image at a low priority relative to other images.
     - `auto`
       - : No user preference for the fetch priority.
         This is the default.
