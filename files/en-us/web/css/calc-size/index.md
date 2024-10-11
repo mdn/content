@@ -50,11 +50,11 @@ The parameters are:
 
 ### Return value
 
-Returns a value equal to the `<calc-size-basis>` modified by the `<calc-sum>` expression. If the `<calc-size-basis>` value is an intrinsic size value, the return value will be a modified intrinsic size value that still behaves like the intrinsic size value input into the function.
+Returns a value equal to the `<calc-size-basis>` modified by the `<calc-sum>` expression. As the `<calc-size-basis>` value is an intrinsic size value, the return value is a modified intrinsic size value that behaves like the intrinsic size value input into the function.
 
 ## Description
 
-Certain browser layout algorithms have special behaviors for intrinsic sizing keywords. `calc-size()` is explicitly defined to represent an intrinsic size rather than a [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage), thereby enforcing correctness. `calc-size()` enables calculations to be performed on intrinsic size values in a safe, well-defined manner.
+Certain browser layout algorithms have special behaviors for intrinsic sizing keywords. The `calc-size()` function is explicitly defined to represent an intrinsic size rather than a [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage), thereby enforcing correctness. `calc-size()` enables calculations to be performed on intrinsic size values in a safe, well-defined manner.
 
 ### Valid values for the first argument (`<calc-size-basis>`)
 
