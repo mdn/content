@@ -32,7 +32,28 @@ A {{domxref("SnapEvent")}}, which inherits from the generic {{domxref("Event")}}
 
 ## Examples
 
-In the following `scrollsnapchanging` handler function snippet, we set a `pending` class on the {{domxref("SnapEvent.snapTargetBlock", "snapTargetBlock")}} element, which could be used to style the element differently when it becomes a pending snap target.
+### Basic usage
+
+Let's say we have a {{htmlelement("main")}} element containing significant content that causes it to scroll:
+
+```html
+<main>
+  <!-- Significant content -->
+</main>
+```
+
+The `<main>` element can be turned into a scroll container that snaps to its children when scrolled using a combination of the CSS {{cssxref("scroll-snap-type")}} property and other properties. For example:
+
+```css
+main {
+  width: 250px;
+  height: 450px;
+  overflow: scroll;
+  scroll-snap-type: block mandatory;
+}
+```
+
+The following JavaScript snippet would cause the `scrollsnapchanging` event to fire on the `<main>` element when one of its children becomes a pending snap target. In the handler function, we set a `pending` class on the child referenced by the {{domxref("SnapEvent.snapTargetBlock", "snapTargetBlock")}} property, which could be used to style it differently when the event fires.
 
 ```js
 scrollingElem.addEventListener("scrollsnapchanging", (event) => {

@@ -26,9 +26,9 @@ new SnapEvent(type, init)
 - `init`
   - : An object containing the following properties:
     - `snapTargetBlock` {{optional_inline}}
-      - : Returns a reference to the element snapped to in the block direction when the event fired, or `null` if no element is snapped to in the block direction.
+      - : Returns a reference to the element snapped to in the block direction when the event fired, or `null` if scroll snapping only occurs in the inline direction so no element is snapped to in the block direction.
     - `snapTargetInline` {{optional_inline}}
-      - : Returns a reference to the element snapped to in the inline direction when the event fired, or `null` if no element is snapped to in the inline direction.
+      - : Returns a reference to the element snapped to in the inline direction when the event fired, or `null` if scroll snapping only occurs in the block direction so no element is snapped to in the inline direction.
 
 ## Examples
 

@@ -18,9 +18,11 @@ Specifically:
 - In the case of the {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} event, this refers to a pending block-direction snap target (i.e. it will be selected when the current scroll gesture ends).
 - In the case of the {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} event, this refers to a newly-selected block-direction snap target.
 
+The property values available on `SnapEvent` correspond directly to the value of the {{cssxref("scroll-snap-type")}} CSS property set on the scroll container. `snapTargetBlock` only returns an element reference if the snap axis is specified as `block` (or a physical axis value that equates to `block` in the current writing mode) or `both`.
+
 ## Value
 
-A {{domxref("Node")}} representing the snapped element, or `null` if no block-direction element is snapped to (i.e. scroll snapping only occurs in the inline direction).
+A {{domxref("Node")}} representing the snapped element, or `null` if scroll snapping only occurs in the inline direction so no element is snapped to in the block direction.
 
 If the snapped element was a pseudo-element, the returned `Node` will be the owning element of that pseudo-element.
 

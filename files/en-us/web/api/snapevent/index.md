@@ -11,7 +11,11 @@ browser-compat: api.SnapEvent
 
 The **`SnapEvent`** interface defines the event object for the {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} and {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} events. Respectively, these fire on on a [scroll container](/en-US/docs/Glossary/Scroll_container) when the browser determines that a new scroll snap target is pending (will be selected when the current scroll gesture ends), and when a new snap target is selected.
 
-These events can be used to run code in response to new elements being snapped to; `SnapEvent` exposes references to the element snapped to in the inline and/or block direction.
+These events can be used to run code in response to new elements being snapped to; `SnapEvent` exposes references to the element snapped to in the inline and/or block direction. The property values available on `SnapEvent` correspond directly to the value of the {{cssxref("scroll-snap-type")}} CSS property set on the scroll container:
+
+- If the snap axis is specified as `block` (or a physical axis value that equates to `block` in the current writing mode), only {{domxref("SnapEvent.snapTargetBlock", "snapTargetBlock")}} returns an element reference.
+- If the snap axis is specified as `inline` (or a physical axis value that equates to `inline` in the current writing mode), only {{domxref("SnapEvent.snapTargetInline", "snapTargetInline")}} returns an element reference.
+- If the snap axis is specified as `both`, `snapTargetBlock` and `snapTargetInline` return an element reference.
 
 {{InheritanceDiagram}}
 
@@ -25,9 +29,9 @@ These events can be used to run code in response to new elements being snapped t
 _Inherits properties from its parent, {{DOMxRef("Event")}}._
 
 - {{domxref("SnapEvent.snapTargetBlock", "snapTargetBlock")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a reference to the element snapped to in the block direction when the event fired, or `null` if no element is snapped to in the block direction.
+  - : Returns a reference to the element snapped to in the block direction when the event fired, or `null` if scroll snapping only occurs in the inline direction so no element is snapped to in the block direction.
 - {{domxref("SnapEvent.snapTargetInline", "snapTargetInline")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a reference to the element snapped to in the inline direction when the event fired, or `null` if no element is snapped to in the inline direction.
+  - : Returns a reference to the element snapped to in the inline direction when the event fired, or `null` if scroll snapping only occurs in the block direction so no element is snapped to in the inline direction.
 
 ## Examples
 
