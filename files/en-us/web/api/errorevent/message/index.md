@@ -14,6 +14,14 @@ The **`message`** read-only property of the {{domxref("ErrorEvent")}} interface 
 
 A string.
 
+## Examples
+
+```js
+window.addEventListener("error", (ev) => {
+  console.log("The error message: " + ev.message);
+});
+```
+
 ## Specifications
 
 {{Specifications}}
