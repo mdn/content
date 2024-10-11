@@ -71,11 +71,11 @@ The settled state of the initial promise determines which handler to execute.
 - If the initial promise is fulfilled, the fulfillment handler is called with the fulfillment value.
 - If the initial promise is rejected, the rejection handler is called with the rejection reason.
 
-The completion of the handler function determines the settled state of the new promise.
+The completion of the handler determines the settled state of the new promise.
 
-- If the handler function returns a [thenable](#thenables) value, the new promise settles in the same state as the returned promise.
-- If the handler function returns a non-thenable value, the new promise is fulfilled with the returned value.
-- If the handler function throws an error, the new promise is rejected with the thrown error.
+- If the handler returns a [thenable](#thenables) value, the new promise settles in the same state as the returned value.
+- If the handler returns a non-thenable value, the new promise is fulfilled with the returned value.
+- If the handler throws an error, the new promise is rejected with the thrown error.
 - If the initial promise has no corresponding handler attached, the new promise will settle to the same state as the initial promise — that is, without a rejection handler, a rejected promise stays rejected with the same reason.
 
 For example, in the code above, if `myPromise` rejects, `handleRejectedA` will be called, and if `handleRejectedA` completes normally (without throwing or returning a rejected promise), the promise returned by the first `then` will be fulfilled instead of staying rejected. Therefore, if an error must be handled immediately, but we want to maintain the error state down the chain, we must throw an error of some type in the rejection handler. On the other hand, in the absence of an immediate need, it is simpler to leave out error handling until the final `catch()` handler.
@@ -306,7 +306,7 @@ new Promise(tetheredGetNumber)
 
 ### Advanced Example
 
-This small example shows the mechanism of a `Promise`. The `testPromise()` method is called each time the {{HTMLElement("button")}} is clicked. It creates a promise that will be fulfilled, using {{domxref("setTimeout()")}}, to the promise count (number starting from 1) every 1-3 seconds, at random. The `Promise()` constructor is used to create the promise.
+This small example shows the mechanism of a `Promise`. The `testPromise()` method is called each time the {{HTMLElement("button")}} is clicked. It creates a promise that will be fulfilled, using {{domxref("Window.setTimeout", "setTimeout()")}}, to the promise count (number starting from 1) every 1-3 seconds, at random. The `Promise()` constructor is used to create the promise.
 
 The fulfillment of the promise is logged, via a fulfill callback set using {{jsxref("Promise/then", "p1.then()")}}. A few logs show how the synchronous part of the method is decoupled from the asynchronous completion of the promise.
 

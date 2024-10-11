@@ -77,7 +77,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : This attribute specifies that the user must fill in a value before submitting a form.
 - `rows`
   - : The number of visible text lines for the control. If it is specified, it must be a positive integer. If it is not specified, the default value is 2.
-- [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes#spellcheck)
+- [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck)
 
   - : Specifies whether the `<textarea>` is subject to spell-checking by the underlying browser/OS. The value can be:
 
@@ -199,7 +199,7 @@ textarea {
 > [!NOTE]
 > Placeholders should only be used to show an example of the type of data that should be entered into a form; they are _not_ a substitute for a proper {{HTMLElement("label")}} element tied to the input. See [`<input>` labels](/en-US/docs/Web/HTML/Element/input#labels) for a full explanation.
 
-### Disabled and readonly textareas
+### Disabled and readonly text areas
 
 This example shows two `<textarea>`s — one is [`readonly`](/en-US/docs/Web/HTML/Attributes/readonly) and one is [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled).
 You cannot edit the contents of either element, but the `readonly` element is focusable and its value is submitted in forms.
@@ -224,7 +224,7 @@ textarea {
 
 #### Result
 
-{{EmbedLiveSample('disabled_and_readonly_textareas', '', '230')}}
+{{EmbedLiveSample('disabled_and_readonly_text_areas', '', '230')}}
 
 ## Technical summary
 

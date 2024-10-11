@@ -26,10 +26,10 @@ url(#IDofSVGpath);
 /* associated properties */
 background-image: url("star.gif");
 list-style-image: url('../images/bullet.jpg');
-content: url("pdficon.jpg");
-cursor: url(mycursor.cur);
+content: url("my-icon.jpg");
+cursor: url(my-cursor.cur);
 border-image-source: url(/media/diamonds.png);
-src: url('fantasticfont.woff');
+src: url('fantastic-font.woff');
 offset-path: url(#path);
 mask-image: url("masks.svg#mask1");
 
