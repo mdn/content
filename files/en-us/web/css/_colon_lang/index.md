@@ -12,7 +12,7 @@ The **`:lang()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-function-lang.html", "tabbed-shorter")}}
 
 > [!NOTE]
-> In HTML, the language is determined by a combination of the [`lang`](/en-US/docs/Web/HTML/Global_attributes#lang) attribute, the {{HTMLElement("meta")}} element, and possibly by information from the protocol (such as HTTP headers). For other document types there may be other document methods for determining the language.
+> In HTML, the language is determined by a combination of the [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attribute, the {{HTMLElement("meta")}} element, and possibly by information from the protocol (such as HTTP headers). For other document types there may be other document methods for determining the language.
 
 ## Syntax
 
@@ -129,6 +129,6 @@ p {
 ## See also
 
 - The {{cssxref(":dir")}} pseudo-class that matches by directionality of text
-- HTML [`lang`](/en-US/docs/Web/HTML/Global_attributes#lang) attribute
-- HTML [`translate`](/en-US/docs/Web/HTML/Global_attributes#translate) attribute
+- HTML [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attribute
+- HTML [`translate`](/en-US/docs/Web/HTML/Global_attributes/translate) attribute
 - {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}

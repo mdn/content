@@ -15,6 +15,10 @@ spec-urls:
   - https://w3c.github.io/resource-timing/
   - https://w3c.github.io/server-timing/
   - https://w3c.github.io/user-timing/
+  - https://w3c.github.io/long-animation-frames/
+  - https://wicg.github.io/performance-measure-memory/
+  - https://html.spec.whatwg.org/multipage/interaction.html#the-visibilitystateentry-interface
+  - https://html.spec.whatwg.org/multipage/nav-history-apis.html#the-notrestoredreasons-interface
 ---
 
 {{DefaultAPISidebar("Performance API")}}
@@ -49,6 +53,10 @@ The following interfaces are present in the Performance API:
   - : Provides insights into the layout stability of web pages based on movements of the elements on the page.
 - {{domxref("LayoutShiftAttribution")}}
   - : Provides debugging information about elements which have shifted.
+- {{domxref("NotRestoredReasonDetails")}}
+  - : Represents a single reason why a navigated page was blocked from using the back/forward cache ({{Glossary("bfcache")}}).
+- {{domxref("NotRestoredReasons")}}
+  - : Provides report data containing reasons why the current document was blocked from using the back/forward cache ({{Glossary("bfcache")}}) on navigation.
 - {{domxref("Performance")}}
   - : Main interface to access performance measurements. Available to window and worker contexts using {{domxref("Window.performance")}} or {{domxref("WorkerGlobalScope.performance")}}.
 - {{domxref("PerformanceElementTiming")}}
