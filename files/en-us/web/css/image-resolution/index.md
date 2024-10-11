@@ -57,7 +57,7 @@ When printing the document, use a higher resolution.
 
 ```css
 @media print {
-  .myimage {
+  .my-image {
     image-resolution: 300dpi;
   }
 }
@@ -68,7 +68,7 @@ When printing the document, use a higher resolution.
 Uses the resolution from the image. If the image does not have a resolution, use 300dpi rather than the default 1dppx.
 
 ```css
-.myimage {
+.my-image {
   image-resolution: from-image 300dpi;
 }
 ```

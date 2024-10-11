@@ -8,7 +8,7 @@ status:
 browser-compat: api.USBDevice.reset
 ---
 
-{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`reset()`** method of the {{domxref("USBDevice")}}
 interface returns a {{jsxref("promise")}} that resolves when the device is reset and all

@@ -18,16 +18,16 @@ The **`grid-row-start`** [CSS](/en-US/docs/Web/CSS) property specifies a grid it
 grid-row-start: auto;
 
 /* <custom-ident> values */
-grid-row-start: somegridarea;
+grid-row-start: some-grid-area;
 
 /* <integer> + <custom-ident> values */
 grid-row-start: 2;
-grid-row-start: somegridarea 4;
+grid-row-start: some-grid-area 4;
 
 /* span + <integer> + <custom-ident> values */
 grid-row-start: span 3;
-grid-row-start: span somegridarea;
-grid-row-start: 5 somegridarea span;
+grid-row-start: span some-grid-area;
+grid-row-start: 5 some-grid-area span;
 
 /* Global values */
 grid-row-start: inherit;

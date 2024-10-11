@@ -65,9 +65,9 @@ If you've forked the repo and have our CSS and JavaScript files with your exampl
 
 #### Useful tips
 
-- Do not indent the CSS and HTML inside the textareas; instead, align the code with the start of the lines. This will look better when it is rendered.
+- Do not indent the CSS and HTML inside the text areas; instead, align the code with the start of the lines. This will look better when it is rendered.
 - If any images are required, put them in the directory with the examples. You are welcome to use any images already present.
-- You can adjust the height of the textareas by changing the height in the inline styles.
+- You can adjust the height of the text areas by changing the height in the inline styles.
 
 ### 3. Create a downloadable version
 

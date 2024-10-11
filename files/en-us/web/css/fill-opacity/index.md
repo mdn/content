@@ -60,7 +60,7 @@ This example demonstrates the basic use case of `fill-opacity`, and how the CSS 
 We include several different SVG graphic elements and set the `fill-opacity` attribute of each one to `1` (except `line`), meaning the fill of each element is opaque. The `fill-opacity` SVG attribute does not apply to {{SVGElement("line")}}.
 
 ```html
-<svg viewbox="0 0 100 150" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 100 150" xmlns="http://www.w3.org/2000/svg">
   <rect x="10" y="10" width="30" height="30" fill-opacity="1" />
   <rect x="60" y="10" rx="10" ry="10" width="30" height="30" fill-opacity="1" />
   <circle cx="25" cy="75" r="20" fill-opacity="1" />

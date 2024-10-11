@@ -8,7 +8,7 @@ status:
 browser-compat: api.USBDevice.deviceVersionSubminor
 ---
 
-{{SeeCompatTable}}{{APIRef("WebUSB API")}}{{SecureContext_Header}}
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`deviceVersionSubminor`** read only property of the
 {{domxref("USBDevice")}} interface the patch version number of the device in a semantic

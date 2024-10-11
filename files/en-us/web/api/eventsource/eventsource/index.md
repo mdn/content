@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.EventSource.EventSource
 ---
 
-{{APIRef('WebSockets API')}}
+{{APIRef("Server Sent Events")}}{{AvailableInWorkers}}
 
 The **`EventSource()`**
 constructor returns a newly-created {{domxref("EventSource")}}, which represents a

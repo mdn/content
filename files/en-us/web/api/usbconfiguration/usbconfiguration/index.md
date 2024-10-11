@@ -8,7 +8,7 @@ status:
 browser-compat: api.USBConfiguration.USBConfiguration
 ---
 
-{{securecontext_header}}{{APIRef("WebUSB API")}}{{SeeCompatTable}}
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`USBConfiguration()`** constructor
 creates a new {{domxref("USBConfiguration")}} object which contains information about

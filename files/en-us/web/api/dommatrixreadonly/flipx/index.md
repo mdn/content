@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.DOMMatrixReadOnly.flipX
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 The `flipX()` method of the {{domxref("DOMMatrixReadOnly")}} interface creates a new matrix being the result of the original matrix flipped about the x-axis.
 

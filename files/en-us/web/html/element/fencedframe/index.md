@@ -13,7 +13,7 @@ The **`<fencedframe>`** [HTML](/en-US/docs/Web/HTML) element represents a nested
 
 - Communication is restricted between the `<fencedframe>` content and its embedding site.
 - A `<fencedframe>` can access cross-site data, but only in a very specific set of controlled circumstances that preserve user privacy.
-- A `<fencedframes>` cannot be manipulated or have its data accessed via regular scripting (for example reading or setting the source URL). `<fencedframe>` content can only be embedded via [specific APIs](/en-US/docs/Web/API/Fenced_frame_API#use_cases).
+- A `<fencedframe>` cannot be manipulated or have its data accessed via regular scripting (for example reading or setting the source URL). `<fencedframe>` content can only be embedded via [specific APIs](/en-US/docs/Web/API/Fenced_frame_API#use_cases).
 - A `<fencedframe>` cannot access the embedding context's DOM, nor can the embedding context access the `<fencedframe>`'s DOM.
 
 The `<fencedframe>` element is a type of `<iframe>` with more native privacy features built in. It addresses shortcomings of `<iframe>`s such as reliance on third-party cookies and other privacy risks. See [Fenced frame API](/en-US/docs/Web/API/Fenced_frame_API) for more details.

@@ -24,9 +24,9 @@ clearInterval(intervalID)
 
 It's worth noting that the pool of IDs used by
 {{domxref("Window.setInterval", "setInterval()")}} and
-{{domxref("setTimeout()")}} are shared, which
+{{domxref("Window.setTimeout", "setTimeout()")}} are shared, which
 means you can technically use `clearInterval()` and
-{{domxref("clearTimeout()")}} interchangeably.
+{{domxref("Window.clearTimeout", "clearTimeout()")}} interchangeably.
 However, for clarity, you should avoid doing so.
 
 ### Return value

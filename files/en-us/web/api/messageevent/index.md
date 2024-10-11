@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.MessageEvent
 ---
 
-{{APIRef("HTML DOM")}} {{AvailableInWorkers}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
 The **`MessageEvent`** interface represents a message received by a target object.
 

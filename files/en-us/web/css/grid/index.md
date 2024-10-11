@@ -33,7 +33,7 @@ This property is a shorthand for the following CSS properties:
 /* <'grid-template'> values */
 grid: none;
 grid: "a" 100px "b" 1fr;
-grid: [linename1] "a" 100px [linename2];
+grid: [line-name1] "a" 100px [line-name2];
 grid: "a" 200px "b" min-content;
 grid: "a" minmax(100px, max-content) "b" 20%;
 grid: 100px / 200px;

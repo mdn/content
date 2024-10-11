@@ -8,7 +8,7 @@ status:
 browser-compat: api.FontFace.variant
 ---
 
-{{APIRef("CSS Font Loading API")}}{{non-standard_header}}
+{{APIRef("CSS Font Loading API")}}{{AvailableInWorkers}}{{non-standard_header}}
 
 The **`variant`** property of the
 {{domxref("FontFace")}} interface programmatically retrieves or sets font variant

@@ -28,7 +28,7 @@ The `log(value [, base]?)` function accepts two comma-separated values as its pa
 
 - `value`
 
-  - : A calculation which resolves to a {{cssxref("&lt;number&gt;")}} greater than or equal to 0. Representing the value to be logarithmed.
+  - : A calculation which resolves to a {{cssxref("&lt;number&gt;")}} greater than or equal to 0. Representing the value to be taken the log of.
 
 - `base`
   - : Optional. A calculation which resolves to a {{cssxref("&lt;number&gt;")}} greater than or equal to 0. Representing the base of the logarithm. If not defined, the default logarithmic base `e` is used.

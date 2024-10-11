@@ -58,7 +58,7 @@ _Also inherits properties from its parent interface, {{domxref("EventTarget")}}_
 - {{domxref("Notification.requireInteraction")}} {{ReadOnlyInline}}
   - : A boolean value indicating that a notification should remain active until the user clicks or dismisses it, rather than closing automatically.
 - {{domxref("Notification.silent")}} {{ReadOnlyInline}}
-  - : Specifies whether the notification should be silent — i.e., no sounds or vibrations should be issued, regardless of the device settings.
+  - : Specifies whether the notification should be silent — i.e., no sounds or vibrations should be issued regardless of the device settings.
 - {{domxref("Notification.tag")}} {{ReadOnlyInline}}
   - : The ID of the notification (if any) as specified in the constructor's `options` parameter.
 - {{domxref("Notification.timestamp")}} {{ReadOnlyInline}} {{Experimental_Inline}}

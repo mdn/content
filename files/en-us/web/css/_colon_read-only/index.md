@@ -189,4 +189,4 @@ p:read-write {
 ## See also
 
 - {{cssxref(":read-write")}}
-- HTML [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) attribute
+- HTML [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute

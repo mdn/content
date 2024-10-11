@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.FontFace.display
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{APIRef("CSS Font Loading API")}}{{AvailableInWorkers}}
 
 The **`display`** property of the {{domxref("FontFace")}} interface determines how a font face is displayed based on whether and when it is downloaded and ready to use.
 This property is equivalent to the CSS `font-display` descriptor.

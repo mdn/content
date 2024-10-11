@@ -47,7 +47,7 @@ ground-level  /* A mix of alphanumeric characters and a dash */
 _internal     /* An underscore followed by alphanumeric characters */
 \22 toto      /* An escaped character followed by alphanumeric characters */
 \000022toto   /* Same as the previous example */
-bili\.bob     /* A correctly escaped period */
+scooby\.doo   /* A correctly escaped period */
 🔥123         /* A non-ASCII character followed by numbers */
 ```
 
@@ -56,9 +56,9 @@ bili\.bob     /* A correctly escaped period */
 ```plain example-bad
 34rem     /* Must not start with a decimal digit */
 -12rad    /* Must not start with a dash followed by a decimal digit */
-bili.bob  /* ASCII characters apart from alphanumerics must be escaped */
-'bilibob' /* Treated as a string */
-"bilibob" /* Treated as a string */
+scooby.doo  /* ASCII characters apart from alphanumerics must be escaped */
+'scoobyDoo' /* Treated as a string */
+"scoobyDoo" /* Treated as a string */
 ```
 
 ## Specifications

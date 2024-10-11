@@ -64,12 +64,12 @@ When form controls are disabled, many browsers will display them in a lighter, g
   <legend>Checkboxes</legend>
   <p>
     <label>
-      <input type="checkbox" name="chbox" value="regular" /> Regular
+      <input type="checkbox" name="ch-box" value="regular" /> Regular
     </label>
   </p>
   <p>
     <label>
-      <input type="checkbox" name="chbox" value="disabled" disabled /> disabled
+      <input type="checkbox" name="ch-box" value="disabled" disabled /> disabled
     </label>
   </p>
 </fieldset>

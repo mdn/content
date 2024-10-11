@@ -6,9 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.Response.redirected
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-The read-only **`redirected`** property of the {{domxref("Response")}} interface indicates whether or not the response is the result of a request you made which was redirected.
+The **`redirected`** read-only property of the {{domxref("Response")}} interface indicates whether or not the response is the result of a request you made which was redirected.
 
 > [!NOTE]
 > Relying on redirected to filter out redirects makes it easy for a forged redirect to prevent your content from working as expected.

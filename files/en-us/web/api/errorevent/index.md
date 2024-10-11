@@ -5,11 +5,16 @@ page-type: web-api-interface
 browser-compat: api.ErrorEvent
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
 The **`ErrorEvent`** interface represents events providing information related to errors in scripts or in files.
 
 {{InheritanceDiagram}}
+
+## Constructor
+
+- {{domxref("ErrorEvent.ErrorEvent", "ErrorEvent()")}}
+  - : Creates an `ErrorEvent` event with the given parameters.
 
 ## Instance properties
 
@@ -26,11 +31,6 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
 - {{domxref("ErrorEvent.error")}} {{ReadOnlyInline}}
   - : A JavaScript `Object` that is concerned by the event.
 
-## Constructor
-
-- {{domxref("ErrorEvent.ErrorEvent", "ErrorEvent()")}}
-  - : Creates an `ErrorEvent` event with the given parameters.
-
 ## Instance methods
 
 _Inherits methods from its parent {{domxref("Event")}}_.
@@ -45,4 +45,6 @@ _Inherits methods from its parent {{domxref("Event")}}_.
 
 ## See also
 
-- [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers), most likely objects to raise such an event
+- [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers), most likely objects to raise such an event.
+- {{domxref("Window")}}: {{domxref("Window/error_event", "error")}} event
+- {{domxref("Navigation")}}: {{domxref("Navigation/navigateerror_event", "navigateerror")}} event

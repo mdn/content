@@ -93,7 +93,7 @@ mask:
   mask: url(#c1) luminance;
 }
 
-.anothertarget {
+.another-target {
   mask: url(resources.svg#c1) 50px 30px/10px 10px repeat-x exclude;
 }
 ```

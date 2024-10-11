@@ -52,7 +52,7 @@ Following is a sample `206` response when two ranges of a PDF file are requested
 The response contains the `multipart/byteranges` {{HTTPHeader("Content-Type")}} with a separate {{HTTPHeader("Content-Type")}} (`application/pdf`) and {{HTTPHeader("Content-Range")}} for each range.
 
 ```http
-GET /pricelist.pdf HTTP/1.1
+GET /price-list.pdf HTTP/1.1
 Host: example.com
 Range: bytes=234-639,4590-7999
 ```

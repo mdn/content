@@ -6,9 +6,9 @@ page-type: web-api-event
 browser-compat: api.EventSource.open_event
 ---
 
-{{APIRef}}
+{{APIRef("Server Sent Events")}}{{AvailableInWorkers}}
 
-The `open` event of the {{domxref("EventSource")}} API is fired when a connection with an event source is opened.
+The **`open`** event of the {{domxref("EventSource")}} interface is fired when a connection with an event source is opened.
 
 This event is not cancelable and does not bubble.
 

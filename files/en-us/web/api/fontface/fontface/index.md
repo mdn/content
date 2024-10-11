@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.FontFace.FontFace
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{APIRef("CSS Font Loading API")}}{{AvailableInWorkers}}
 
 The **`FontFace()`** constructor creates a new {{domxref("FontFace")}} object.
 

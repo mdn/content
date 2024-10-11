@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Response.blob
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`blob()`** method of the {{domxref("Response")}} interface takes
 a {{domxref("Response")}} stream and reads it to completion. It returns a promise that

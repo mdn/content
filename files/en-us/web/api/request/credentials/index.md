@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Request.credentials
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`credentials`** read-only property of the {{domxref("Request")}} interface reflects the value given to the {{domxref("Request.Request()", "Request()")}} constructor in the [`credentials`](/en-US/docs/Web/API/RequestInit#credentials) option. It determines whether or not the browser sends credentials with the request, as well as whether any **`Set-Cookie`** response headers are respected.
 

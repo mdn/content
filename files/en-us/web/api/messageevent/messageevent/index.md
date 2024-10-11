@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.MessageEvent.MessageEvent
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
 The **`MessageEvent()`** constructor creates a new {{domxref("MessageEvent")}} object.
 

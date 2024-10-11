@@ -26,20 +26,20 @@ grid-column: auto;
 grid-column: auto / auto;
 
 /* <custom-ident> values */
-grid-column: somegridarea;
-grid-column: somegridarea / someothergridarea;
+grid-column: some-grid-area;
+grid-column: some-grid-area / some-other-grid-area;
 
 /* <integer> + <custom-ident> values */
-grid-column: somegridarea 4;
-grid-column: 4 somegridarea / 6;
+grid-column: some-grid-area 4;
+grid-column: 4 some-grid-area / 6;
 
 /* span + <integer> + <custom-ident> values */
 grid-column: span 3;
-grid-column: span somegridarea;
-grid-column: 5 somegridarea span;
+grid-column: span some-grid-area;
+grid-column: 5 some-grid-area span;
 grid-column: span 3 / 6;
-grid-column: span somegridarea / span someothergridarea;
-grid-column: 5 somegridarea span / 2 span;
+grid-column: span some-grid-area / span some-other-grid-area;
+grid-column: 5 some-grid-area span / 2 span;
 
 /* Global values */
 grid-column: inherit;

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.FontFaceSet.size
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{APIRef("CSS Font Loading API")}}{{AvailableInWorkers}}
 
 The **`size`** property of the {{domxref("FontFaceSet")}} interface returns the number of items in the `FontFaceSet`.
 

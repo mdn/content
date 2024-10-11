@@ -98,5 +98,10 @@ form {
 
 ## See also
 
-- {{Cssxref("width")}}, {{Cssxref("max-width")}}
-- The [box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{Cssxref("box-sizing")}}
+- {{Cssxref("max-width")}}
+- {{Cssxref("width")}}
+- {{cssxref("min-inline-size")}}
+- {{cssxref("min-block-size")}}
+- {{cssxref("box-sizing")}}
+- [Introduction to the CSS basic box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module

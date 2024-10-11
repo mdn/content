@@ -50,7 +50,7 @@ new Notification(title, options)
     - `requireInteraction` {{optional_inline}}
       - : Indicates that a notification should remain active until the user clicks or dismisses it, rather than closing automatically. The default value is `false`.
     - `silent` {{optional_inline}}
-      - : A boolean value specifying whether the notification is silent (no sounds or vibrations issued), regardless of the device settings. The default, `null`, means to respect device defaults. If `true`, then `vibrate` must not be present.
+      - : A boolean value specifying whether the notification should be silent, i.e., no sounds or vibrations should be issued regardless of the device settings. If set to `true`, the notification is silent; if set to `null` (the default value), the device's default settings are respected.
     - `tag` {{optional_inline}}
       - : A string representing an identifying tag for the notification. The default is the empty string.
     - `timestamp` {{optional_inline}}

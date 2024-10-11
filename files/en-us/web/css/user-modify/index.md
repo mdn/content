@@ -13,7 +13,7 @@ browser-compat: css.properties.user-modify
 The **`user-modify`** property has no effect in Firefox. It was originally planned to determine whether or not the content of an element can be edited by a user.
 
 > [!WARNING]
-> This property has been replaced by the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) attribute.
+> This property has been replaced by the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute.
 
 ## Syntax
 

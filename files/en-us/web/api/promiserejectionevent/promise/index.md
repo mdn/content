@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.PromiseRejectionEvent.promise
 ---
 
-{{APIRef("HTML DOM") }}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
 The {{domxref("PromiseRejectionEvent")}} interface's
 **`promise`** read-only property indicates the JavaScript

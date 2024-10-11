@@ -197,10 +197,10 @@ Set-Cookie: id=a3fWa; Max-Age=2592000
 
 A cookie for a domain that does not include the server that set it [should be rejected by the user agent](https://datatracker.ietf.org/doc/html/rfc6265#section-4.1.2.3).
 
-The following cookie will be rejected if set by a server hosted on `originalcompany.com`:
+The following cookie will be rejected if set by a server hosted on `original-company.com`:
 
 ```http
-Set-Cookie: qwerty=219ffwef9w0f; Domain=somecompany.co.uk
+Set-Cookie: qwerty=219ffwef9w0f; Domain=some-company.co.uk
 ```
 
 A cookie for a subdomain of the serving domain will be rejected.

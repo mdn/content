@@ -34,7 +34,7 @@ The first, optional parameter of the `image()` notation is the directionality of
 One key difference between `url()` and `image()` is the ability to add a media fragment identifier — a starting point along the x and y axis, along with a width and height — onto the image source to display only a section of the source image. The section of the image defined in the parameter becomes a standalone image. The syntax looks like so:
 
 ```css
-background-image: image("myimage.webp#xywh=0,20,40,60");
+background-image: image("my-image.webp#xywh=0,20,40,60");
 ```
 
 The background image of the element will be the portion of the image _myImage.webp_ that starts at the coordinate 0px, 20px (the top left-hand corner) and is 40px wide and 60px tall.
@@ -108,7 +108,7 @@ When the user hovers over the box, the cursor will change to display the 16x16 p
 ### Putting color on top of a background image
 
 ```css hidden
-.quarterlogo {
+.quarter-logo {
   height: 200px;
   width: 200px;
   border: 1px solid;
@@ -116,7 +116,7 @@ When the user hovers over the box, the cursor will change to display the 16x16 p
 ```
 
 ```css
-.quarterlogo {
+.quarter-logo {
   background-image: image(rgb(0 0 0 / 25%)), url("firefox.png");
   background-size: 25%;
   background-repeat: no-repeat;
@@ -124,7 +124,7 @@ When the user hovers over the box, the cursor will change to display the 16x16 p
 ```
 
 ```html
-<div class="quarterlogo">
+<div class="quarter-logo">
   If supported, a quarter of this div has a darkened logo
 </div>
 ```

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Request.method
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`method`** read-only property of the
 {{domxref("Request")}} interface contains the request's method (`GET`,

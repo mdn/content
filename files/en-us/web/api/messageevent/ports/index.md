@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.MessageEvent.ports
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
 The **`ports`** read-only property of the
 {{domxref("MessageEvent")}} interface is an array of {{domxref("MessagePort")}} objects

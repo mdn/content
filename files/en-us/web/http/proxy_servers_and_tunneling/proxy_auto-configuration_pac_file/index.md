@@ -175,14 +175,14 @@ dnsDomainIs("www", ".mozilla.org") // false
 #### Syntax
 
 ```js-nolint
-localHostOrDomainIs(host, hostdom)
+localHostOrDomainIs(host, hostDom)
 ```
 
 #### Parameters
 
 - host
   - : The hostname from the URL.
-- hostdom
+- hostDom
   - : Fully qualified hostname to match against.
 
 #### Description
@@ -344,14 +344,14 @@ dnsDomainLevels("www.mozilla.org"); // 2
 #### Syntax
 
 ```js-nolint
-shExpMatch(str, shexp)
+shExpMatch(str, shExp)
 ```
 
 #### Parameters
 
 - str
   - : is any string to compare (e.g. the URL, or the hostname).
-- shexp
+- shExp
   - : is a shell expression to compare against.
 
 Returns `true` if the string matches the specified shell glob expression.

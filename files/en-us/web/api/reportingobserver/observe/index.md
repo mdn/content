@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.ReportingObserver.observe
 ---
 
-{{APIRef("Reporting API")}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}
 
 The **`observe()`** method of the
 {{domxref("ReportingObserver")}} interface instructs a reporting observer to start

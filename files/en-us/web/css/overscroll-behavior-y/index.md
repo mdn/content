@@ -70,5 +70,8 @@ See {{cssxref("overscroll-behavior")}} for a full example and explanation.
 
 ## See also
 
-- [Take control of your scroll: customizing pull-to-refresh and overflow effects](https://developer.chrome.com/blog/overscroll-behavior/#demo)
-- The mapped logical properties: {{cssxref("overscroll-behavior-inline")}}, {{cssxref("overscroll-behavior-block")}}
+- {{cssxref("overscroll-behavior")}}
+- {{cssxref("overscroll-behavior-x")}}
+- {{cssxref("overscroll-behavior-inline")}}
+- {{cssxref("overscroll-behavior-block")}}
+- [CSS overscroll behavior](/en-US/docs/Web/CSS/CSS_overscroll_behavior) module

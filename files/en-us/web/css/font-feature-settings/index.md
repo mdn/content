@@ -65,27 +65,27 @@ This property is specified as either the keyword `normal` or as a comma-separate
 
 ```css
 /* use small-cap alternate glyphs */
-.smallcaps {
+.small-caps {
   font-feature-settings: "smcp" on;
 }
 
 /* convert both upper and lowercase to small caps (affects punctuation also) */
-.allsmallcaps {
+.all-small-caps {
   font-feature-settings: "c2sc", "smcp";
 }
 
 /* use zeros with a slash through them to differentiate from "O" */
-.nicezero {
+.nice-zero {
   font-feature-settings: "zero";
 }
 
 /* enable historical forms */
-.hist {
+.historical {
   font-feature-settings: "hist";
 }
 
 /* disable common ligatures, usually on by default */
-.noligs {
+.no-ligatures {
   font-feature-settings: "liga" 0;
 }
 
@@ -105,7 +105,7 @@ td.tabular {
 }
 
 /* enable stylistic set 7 */
-.fancystyle {
+.fancy-style {
   font-family: Gabriola;
   font-feature-settings: "ss07";
 }

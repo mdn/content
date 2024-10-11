@@ -70,7 +70,7 @@ The underlying {{domxref("TextTrack")}}, indicated by the {{domxref("HTMLTrackEl
 If the track _is_ associated with a media element, using the `<track>` element as a child of the {{HTMLElement("audio")}} or {{HTMLElement("video")}} element, the `cuechange` event is also sent to the {{domxref("HTMLTrackElement")}}.
 
 ```js
-let textTrackElem = document.getElementById("texttrack");
+let textTrackElem = document.getElementById("text-track");
 
 textTrackElem.addEventListener("cuechange", (event) => {
   let cues = event.target.track.activeCues;
