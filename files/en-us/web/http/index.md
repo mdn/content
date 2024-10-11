@@ -47,7 +47,7 @@ Beginners are encouraged to start with the foundational guides before exploring 
 - [MIME types](/en-US/docs/Web/HTTP/MIME_types)
   - : Since HTTP/1.0, different types of content can be transmitted.
     This article explains how this is accomplished using the {{HTTPHeader("Content-Type")}} header and the MIME standard.
-    A shortlist of common types used by web developers can be found in [Common MIME types](Web/HTTP/MIME_types/Common_types).
+    A shortlist of common types used by web developers can be found in [Common MIME types](/en-US/docs/Web/HTTP/MIME_types/Common_types).
 - [Compression in HTTP](/en-US/docs/Web/HTTP/Compression)
   - : Browsers and servers compress their messages before sending them over the network to reduce the amount of data that needs to be transmitted, improving transfer speed and bandwidth utilization.
 - [HTTP caching](/en-US/docs/Web/HTTP/Caching)

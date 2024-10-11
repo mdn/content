@@ -29,7 +29,7 @@ In the past, the {{ domxref("Navigator.language", "window.navigator.language") }
 
 ## DOM changes
 
-The behaviors of {{ domxref("setTimeout()") }} and {{ domxref("setInterval()") }} have changed; the minimum allowed time has changed, and [varies depending on the situation](/en-US/docs/Web/API/setTimeout#minimum_delay_and_timeout_nesting). In addition, timeouts and intervals are clamped to one per second in inactive tabs (that is, tabs the user isn't currently looking at).
+The behaviors of {{domxref("Window.setTimeout()")}}, {{domxref("WorkerGlobalScope.setTimeout()")}}, {{domxref("Window.setInterval()")}} and {{domxref("WorkerGlobalScope.setInterval()")}} have changed; the minimum allowed time has changed, and [varies depending on the situation](/en-US/docs/Web/API/Window/setTimeout#minimum_delay_and_timeout_nesting). In addition, timeouts and intervals are clamped to one per second in inactive tabs (that is, tabs the user isn't currently looking at).
 
 ## JavaScript changes
 
@@ -49,7 +49,7 @@ Don't use those keywords anywhere in your code, even as object property names.
 
 ## Interface changes
 
-Instantiating certain services, including the `nsICertOverrideService`, at startup can make Firefox unusable ([Firefox bug 650858](https://bugzil.la/650858). This happens only if you try to instantiate a service before the `load` event is fired.
+Instantiating certain services, including the `nsICertOverrideService`, at startup can make Firefox unusable ([Firefox bug 650858](https://bugzil.la/650858)). This happens only if you try to instantiate a service before the `load` event is fired.
 
 To fix this, move your instantiation of these services into your `load` event handler:
 

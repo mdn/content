@@ -44,9 +44,9 @@ None.
 
 ```js
 const span = document.querySelector("span");
-const textnode = span.nextSibling;
+const textNode = span.nextSibling;
 
-textnode.insertData(2, "long ");
+textNode.insertData(2, "long ");
 ```
 
 {{EmbedLiveSample("Example", "100%", 50)}}
