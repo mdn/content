@@ -74,6 +74,31 @@ if (crossOriginIsolated) {
 }
 ```
 
+### Severing the opener relationship
+
+The `Cross-Origin-Opener-Policy: noopener-allow-popups` header can be used to ensure that the document that opened a document with these headers cannot directly script it.
+
+To understand where this can be useful, let's examine a hypothetical example.com origin that has two very different applications.
+One is https://example.com/chat that enables any user to contact any other user and send them messages.
+Another is https://example.com/passwords that contains all of the user's passwords, across different services.
+
+Common security advice to further isolate these applications would be to host them on different origins.
+But in some cases that's not possible, and those two applications have to be on a single origin for historical/business/branding reasons.
+
+At the same time, the administrators of the "passwords" application would very much like to ensure that it can't be directly scripted by the "chat" app, which by its nature has a larger XSS surface.
+
+`Cross-Origin-Opener-Policy: noopener-allow-popups` helps them do that.
+
+At the same time, by itself it is not a sufficient security measure.
+They would also need to do the following:
+
+- Use Fetch Metadata to block same-origin requests to the more-sensitive app that are not navigation requests.
+- Ensure their authentication cookies are all `HttpOnly`.
+- Ensure root-level Service-Workers are not installed by the less-sensitive app.
+- Ensure that `postMessage` or `BroadcastMessage` on the more-sensitive app don't expose any sensitive information the any other same-origin app.
+- Ensure their login page is served on a separate origin, due to password manager autofill being applied based on origin.
+- Understand that the browser may still allocate the more-sensitive app in the same process as the less-sensitive one, making it vulnerable to Spectre-like attacks.
+
 ## Specifications
 
 {{Specifications}}
