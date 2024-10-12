@@ -21,7 +21,7 @@ spec-urls:
   - https://html.spec.whatwg.org/multipage/nav-history-apis.html#the-notrestoredreasons-interface
 ---
 
-{{DefaultAPISidebar("Performance API")}}
+{{DefaultAPISidebar("Performance API")}}{{AvailableInWorkers}}
 
 The Performance API is a group of standards used to measure the performance of web applications.
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.PerformanceObserverEntryList.getEntries
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`getEntries()`** method of the {{domxref("PerformanceObserverEntryList")}} interface returns a list of explicitly observed {{domxref("PerformanceEntry","performance entry", '', 'true')}} objects. The list's members are determined by the set of {{domxref("PerformanceEntry.entryType","entry types", '', 'true')}} specified in the call to the {{domxref("PerformanceObserver.observe","observe()")}} method. The list is available in the observer's callback function (as the first parameter in the callback).
 
