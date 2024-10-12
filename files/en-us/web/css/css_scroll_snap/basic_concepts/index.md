@@ -6,9 +6,9 @@ page-type: guide
 
 {{CSSRef}}
 
-The properties in the [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module enable you to define how scrolling snaps to specific points as a user scrolls through a document.
+The [scroll snap](/en-US/docs/Glossary/Scroll_snap) feature lets you define the snap positions where a [scroll container](/en-US/docs/Glossary/Scroll_container)'s scrollport may end or "snap to" after a scrolling operation has completed.
 
-The scroll snap feature lets you define the snap positions where a [scroll container](/en-US/docs/Glossary/Scroll_container)'s scrollport may end or "snap to" after a scrolling operation has completed.
+The properties in the [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module enable you to define how scrolling snaps to specific points as a user scrolls through a document.
 
 ## Key properties for CSS scroll snap
 
