@@ -89,7 +89,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `low`
       - : Fetch the external script at a low priority relative to other external scripts.
     - `auto`
-      - : No user preference for the fetch priority.
+      - : Don't set a preference for the fetch priority.
         This is the default.
         It is used if no value or an invalid value is set.
 

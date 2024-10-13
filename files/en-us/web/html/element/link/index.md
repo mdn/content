@@ -209,7 +209,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `low`
       - : Fetch the resource at a low priority relative to other resources of the same type.
     - `auto`
-      - : No user preference for the fetch priority.
+      - : Don't set a preference for the fetch priority.
         This is the default.
         It is used if no value or an invalid value is set.
 

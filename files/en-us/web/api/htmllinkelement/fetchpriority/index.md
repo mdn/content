@@ -27,7 +27,7 @@ Possible values are:
 - `low`
   - : Fetch the resource at a low priority relative to other resources of the same type and internal prioritization.
 - `auto`
-  - : No user preference for the fetch priority.
+  - : Don't set a preference for the fetch priority.
     This is the default.
     It is used if no value is set or if an invalid value is set.
 

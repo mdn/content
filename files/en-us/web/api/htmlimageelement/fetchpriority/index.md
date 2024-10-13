@@ -27,7 +27,7 @@ Possible values are:
 - `low`
   - : Fetch the image at a low priority relative to other images with the same internal prioritization.
 - `auto`
-  - : No user preference for the fetch priority.
+  - : Don't set a user preference for the fetch priority.
     This is the default.
     It is used if no value is set or if an invalid value is set.
 
