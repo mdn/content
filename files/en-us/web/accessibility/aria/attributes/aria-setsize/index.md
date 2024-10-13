@@ -86,6 +86,6 @@ Inherits into roles:
 ## See also
 
 - [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset)
-- [W3C WAI-ARIA practices: Treegrid Email Inbox](https://www.w3.org/WAI/ARIA/apg/patterns/treegrid/examples/treegrid-1/) example
-- [W3C WAI-ARIA practices: Navigation Treeview](https://www.w3.org/WAI/ARIA/apg/patterns/treeview/examples/treeview-navigation/) example
+- [W3C WAI-ARIA practices: Treegrid Email Inbox example](https://www.w3.org/WAI/ARIA/apg/patterns/treegrid/examples/treegrid-1/)
+- [W3C WAI-ARIA practices: Navigation Treeview example](https://www.w3.org/WAI/ARIA/apg/patterns/treeview/examples/treeview-navigation/)
 - [W3C WAI-ARIA practices: File Directory Treeview Example Using Declared Properties](https://www.w3.org/WAI/ARIA/apg/patterns/treeview/examples/treeview-1b/)
