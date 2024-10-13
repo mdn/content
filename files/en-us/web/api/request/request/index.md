@@ -55,7 +55,7 @@ new Request(input, options)
 ### Exceptions
 
 - `TypeError`
-  - The URL has credentials, such as `http://user:password@example.com` or cannot be parsed.
+  - : The URL has credentials, such as `http://user:password@example.com` or cannot be parsed.
 
 ## Examples
 

@@ -64,14 +64,14 @@ Link: <https://one.example.com>; rel="preconnect", <https://two.example.com>; re
 Even when using [`preload`](/en-US/docs/Web/HTML/Attributes/rel/preload) to fetch a resource as early as possible, different types of content will be fetched earlier or later based on the browser's internal prioritization.
 The [`fetchpriority`](/en-US/docs/Web/HTML/Element/link#fetchpriority) attribute can be used to hint to the browser that a particular resource will have a greater or lesser relative impact on user experience than other resources of the same type.
 
-For example, the header below might be used to preload `style.css` at higher priority than other stylesheets:
+For example, the header below might be used to preload `style.css` with a higher priority than other stylesheets:
 
 ```http
 Link: </style.css>; rel=preload; as=style; fetchpriority="high"
 ```
 
-Note that both the internal prioritization for fetching resources and the effect of the `fetchpriority` are browser dependent.
-The `fetchpriority` attribute should be used sparingly, and only in cases where a browser would be unable to infer that a particular resource should be treated with a different priority.
+Note that both the internal prioritization for fetching resources and the effect of the `fetchpriority` directive are browser-dependent.
+The `fetchpriority` directive should be used sparingly, and only in cases where a browser cannot infer that a particular resource should be treated with a different priority.
 
 ## Specifications
 
