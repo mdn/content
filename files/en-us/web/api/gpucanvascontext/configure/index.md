@@ -34,7 +34,19 @@ configure(configuration)
     - `device`
       - : The {{domxref("GPUDevice")}} that the rendering information for the context will come from.
     - `format`
+
       - : The format that textures returned by `getCurrentTexture()` will have. This can be `bgra8unorm`, `rgba8unorm`, or `rgba16float`. The optimal canvas texture format for the current system can be returned by {{domxref("GPU.getPreferredCanvasFormat()")}}. Using this is recommended — if you don't use the preferred format when configuring the canvas context, you may incur additional overhead, such as additional texture copies, depending on the platform.
+
+    - `toneMapping` {{optional_inline}}
+
+      - : An object specifying parameters that define the tone mapping for the context — how the content of associated textures are to be displayed. Possible properties are:
+        - `mode` {{optional_inline}}
+          - : The tone mapping mode for the canvas. Possible values include:
+            - `standard`
+              - : The default value. Restricts rendered content to the Standard Dynamic Range (SDR) of the display.
+            - `extended`
+              - : Allows content to be rendered in the full High Dynamic Range (HDR) of the display, where available. HDR mode allows a wider range of colors and brightness levels to be diplayed, with more precise instructions as to what color should be displayed in each case.
+
     - `usage` {{optional_inline}}
 
       - : {{glossary("Bitwise flags")}} specifying the allowed usage for textures returned by `getCurrentTexture()`. Possible values are:
