@@ -9,7 +9,7 @@ browser-compat: http.headers.Link
 
 The HTTP **`Link`** [entity header](/en-US/docs/Glossary/Entity_header) field provides a means for serializing one or more links in HTTP headers. This header has the same semantics as the HTML {{HTMLElement("link")}} element. The benefit of using the `Link` header is that the browser can start preconnecting or preloading resources before the HTML itself is fetched and processed.
 
-In practice, most [link types](/en-US/docs/Web/HTML/Attributes/rel) don't have an effect in the HTTP header. For example, the `icon` relation only works in HTML, and `stylesheet` does not work reliably across browsers (only in Firefox).
+In practice, most [`rel` link types](/en-US/docs/Web/HTML/Attributes/rel) don't have an effect when used with the HTTP header. For example, the `icon` relation only works in HTML, and `stylesheet` does not work reliably across browsers (only in Firefox).
 The only relations that work reliably are [`preconnect`](/en-US/docs/Web/HTML/Attributes/rel/preconnect) and [`preload`](/en-US/docs/Web/HTML/Attributes/rel/preload), which can be combined with {{HTTPStatus(103, "103 Early Hints")}}.
 
 ## Syntax
