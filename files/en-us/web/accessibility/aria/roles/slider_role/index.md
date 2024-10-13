@@ -210,7 +210,7 @@ It is recommended to use a native {{HTMLElement("input")}} of type `range`, [`<i
   - [`progressbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role)
   - [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
 - Working examples:
-  - [W3C WAI-ARIA practices: Horizontal Multi-Thumb Slider](https://www.w3.org/WAI/ARIA/apg/patterns/slider-multithumb/examples/slider-multithumb/)
+  - [W3C WAI-ARIA practices: Horizontal Multi-Thumb Slider](https://www.w3.org/WAI/ARIA/apg/patterns/slider-multithumb/examples/slider-multithumb/) example
   - [W3C WAI-ARIA practices: Color Viewer Slider](https://www.w3.org/WAI/ARIA/apg/patterns/slider/examples/slider-color-viewer/) example
   - [W3C WAI-ARIA practices: Rating Slider](https://www.w3.org/WAI/ARIA/apg/patterns/slider/examples/slider-rating/) example
   - [W3C WAI-ARIA practices: Media Seek Slider](https://www.w3.org/WAI/ARIA/apg/patterns/slider/examples/slider-seek/) example
