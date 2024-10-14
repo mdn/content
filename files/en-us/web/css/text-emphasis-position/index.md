@@ -142,8 +142,8 @@ The select field is used to change the class on the `<section>` and the class up
 
 ```html
 <section id="setting" class="auto">
-  <p class="horizontal" lang="ja">世界、こんにちは。</p>
-  <p class="vertical" lang="zh">你好世界</p>
+  <p class="horizontal" lang="zh">你好世界</p>
+  <p class="vertical" lang="ja">世界、こんにちは。</p>
 </section>
 ```
 
@@ -199,7 +199,7 @@ position.addEventListener("change", updateClass);
 
 Use the position select to choose the location of the emphasis marks. The **preferred** option uses the preferred positions highlighted it the [table above](#description).
 
-{{EmbedLiveSample("Emphasis_mark_positions", 450, 100)}}
+{{EmbedLiveSample("Emphasis_mark_positions", 450, 170)}}
 
 ### Preferring ruby over emphasis marks
 
