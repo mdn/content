@@ -25,7 +25,7 @@ None.
 
 ### Return value
 
-An object containing the configuration options set on the context (i.e., via the {{domxref("GPUCanvasContext.configure()")}} method), or `null` if no configuration was previously set.
+An object containing the configuration options set on the context (i.e., via the {{domxref("GPUCanvasContext.configure()")}} method), or `null` if no configuration is set (either no configuration was previously set, or a configuration was set and then {{domxref("GPUCanvasContext.unconfigure()")}} was called on the context).
 
 ## Examples
 
@@ -33,42 +33,38 @@ An object containing the configuration options set on the context (i.e., via the
 const canvas = document.querySelector("canvas");
 const context = canvas.getContext("webgpu");
 
-async function init() {
-  if (!navigator.gpu) {
-    throw Error("WebGPU not supported.");
-  }
-
-  const adapter = await navigator.gpu.requestAdapter();
-  if (!adapter) {
-    throw Error("Couldn't request WebGPU adapter.");
-  }
-
-  const device = await adapter.requestDevice();
-
-  context.configure({
-    device: device,
-    format: navigator.gpu.getPreferredCanvasFormat(),
-    alphaMode: "premultiplied",
-  });
-
-  console.log(context.getConfiguration());
-
-  /*
-  Logs something like:
-
-  {
-    "alphaMode": "premultiplied",
-    "colorSpace": "srgb",
-    "device": { ... },
-    "format": "bgra8unorm",
-    "toneMapping": {
-        "mode": "standard"
-    },
-    "usage": 16,
-    "viewFormats": []
-  }
-  */
+if (!navigator.gpu) {
+  throw Error("WebGPU not supported.");
 }
+
+const adapter = await navigator.gpu.requestAdapter();
+if (!adapter) {
+  throw Error("Couldn't request WebGPU adapter.");
+}
+
+const device = await adapter.requestDevice();
+
+context.configure({
+  device: device,
+  format: navigator.gpu.getPreferredCanvasFormat(),
+  alphaMode: "premultiplied",
+});
+
+console.log(context.getConfiguration());
+/* Logs something like:
+
+{
+  "alphaMode": "premultiplied",
+  "colorSpace": "srgb",
+  "device": { ... },
+  "format": "bgra8unorm",
+  "toneMapping": {
+      "mode": "standard"
+  },
+  "usage": 16,
+  "viewFormats": []
+}
+*/
 ```
 
 ## Specifications

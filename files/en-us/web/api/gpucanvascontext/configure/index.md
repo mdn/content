@@ -39,13 +39,13 @@ configure(configuration)
 
     - `toneMapping` {{optional_inline}}
 
-      - : An object specifying parameters that define the tone mapping for the context — how the content of associated textures are to be displayed. Possible properties are:
+      - : An object specifying parameters that define the tone mapping for the context — how the content of associated textures are to be displayed. This allows WebGPU to draw colors brighter than `white` (`#FFFFFF`). Possible properties are:
         - `mode` {{optional_inline}}
-          - : The tone mapping mode for the canvas. Possible values include:
+          - : An emumerated value specifying the tone mapping mode for the canvas. Possible values include:
             - `standard`
-              - : The default value. Restricts rendered content to the Standard Dynamic Range (SDR) of the display.
+              - : The default value. Restricts rendered content to the Standard Dynamic Range (SDR) of the display. This mode is accomplished by clamping all color values in the color space of the screen to the `[0, 1]` interval.
             - `extended`
-              - : Allows content to be rendered in the full High Dynamic Range (HDR) of the display, where available. HDR mode allows a wider range of colors and brightness levels to be diplayed, with more precise instructions as to what color should be displayed in each case.
+              - : Allows content to be rendered in the full High Dynamic Range (HDR) of the display, where available. HDR mode allows a wider range of colors and brightness levels to be diplayed, with more precise instructions as to what color should be displayed in each case. This mode matches `"standard"` in the `[0, 1]` range of the screen. Clamping or projection is done to the extended dynamic range of the screen but not `[0, 1]`.
 
     - `usage` {{optional_inline}}
 
@@ -68,6 +68,8 @@ None (`undefined`).
 
 ## Examples
 
+### Basic usage
+
 ```js
 const canvas = document.querySelector("#gpuCanvas");
 const context = canvas.getContext("webgpu");
@@ -78,6 +80,10 @@ context.configure({
   alphaMode: "premultiplied",
 });
 ```
+
+### HDR `toneMapping` demos
+
+See the [Particles (HDR)](https://webgpu.github.io/webgpu-samples/?sample=particles) sample and [HDR support](https://ccameron-chromium.github.io/webgpu-hdr/example.html) test.
 
 ## Specifications
 
