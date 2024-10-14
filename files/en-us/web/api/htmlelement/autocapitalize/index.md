@@ -72,4 +72,4 @@ controller.addEventListener("input", (e) => {
 
 ## See also
 
-- [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes#autocapitalize) HTML global attribute
+- [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize) HTML global attribute
