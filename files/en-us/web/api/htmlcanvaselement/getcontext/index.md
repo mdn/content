@@ -108,8 +108,8 @@ A rendering context which is either a
 
 - {{domxref("CanvasRenderingContext2D")}} for `"2d"`,
 - {{domxref("WebGLRenderingContext")}} for `"webgl"` and `"experimental-webgl"`,
-- {{domxref("WebGL2RenderingContext")}} for `"webgl2"`
-- {{domxref("GPUCanvasContext")}} for `"webgpu"`
+- {{domxref("WebGL2RenderingContext")}} for `"webgl2"`,
+- {{domxref("GPUCanvasContext")}} for `"webgpu"`,
 - {{domxref("ImageBitmapRenderingContext")}} for `"bitmaprenderer"`.
 
 If the context identifier is not supported, or the canvas has already been set to a different context mode, `null` is returned.
