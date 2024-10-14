@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.PerformanceResourceTiming.requestStart
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`requestStart`** read-only property returns a {{domxref("DOMHighResTimeStamp","timestamp")}} of the time immediately before the browser starts requesting the resource from the server, cache, or local resource. If the transport connection fails and the browser retires the request, the value returned will be the start of the retry request.
 

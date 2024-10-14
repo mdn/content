@@ -8,7 +8,7 @@ status:
 browser-compat: api.USBDevice.controlTransferOut
 ---
 
-{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`controlTransferOut()`** method of the {{domxref("USBDevice")}} interface returns a {{jsxref("Promise")}} that resolves with a {{domxref("USBOutTransferResult")}} when a command or status operation has been transmitted from the USB device.
 

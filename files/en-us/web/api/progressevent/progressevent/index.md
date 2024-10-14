@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.ProgressEvent.ProgressEvent
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{APIRef("XMLHttpRequest API")}}{{AvailableInWorkers}}
 
 The **`ProgressEvent()`** constructor returns a new {{domxref("ProgressEvent")}} object, representing the current completion of a long process.
 

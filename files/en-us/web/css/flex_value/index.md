@@ -22,7 +22,7 @@ The `<flex>` data type is specified as a {{cssxref("&lt;number&gt;")}} followed 
 2.5fr  /* Using a float value */
 ```
 
-### Example of use in a tracklisting for CSS grid layout
+### Example of use in a track listing for CSS grid layout
 
 ```css
 .grid {

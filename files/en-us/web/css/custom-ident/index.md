@@ -136,7 +136,7 @@ ground-level      A mix of alphanumeric characters and a dash
 -test             A dash followed by alphanumeric characters
 _internal         An underscore followed by alphanumeric characters
 \22 toto          A Unicode character followed by a sequence of alphanumeric characters
-bili\.bob         A correctly escaped period
+scooby\.doo       A correctly escaped period
 ```
 
 ### Invalid identifiers
@@ -144,9 +144,9 @@ bili\.bob         A correctly escaped period
 ```plain example-bad
 34rem             It must not start with a decimal digit.
 -12rad            It must not start with a dash followed by a decimal digit.
-bili.bob          Only alphanumeric characters, _, and - needn't be escaped.
-'bilibob'         This would be a <string>.
-"bilibob"         This would be a <string>.
+scooby.doo        Only alphanumeric characters, _, and - needn't be escaped.
+'scoobyDoo'       This would be a <string>.
+"scoobyDoo"       This would be a <string>.
 ```
 
 ## Specifications

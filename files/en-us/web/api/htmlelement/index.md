@@ -22,7 +22,7 @@ _Also inherits properties from its parent, {{DOMxRef("Element")}}._
 - {{DOMxRef("HTMLElement.anchorElement")}} {{ReadOnlyInline}}&nbsp;{{non-standard_inline}} {{experimental_inline}}
   - : Returns a reference to the element's anchor element, or `null` if it doesn't have one.
 - {{DOMxRef("HTMLElement.attributeStyleMap")}} {{ReadOnlyInline}}
-  - : A {{DOMxRef("StylePropertyMap")}} representing the declarations of the element's [`style`](/en-US/docs/Web/HTML/Global_attributes#style) attribute.
+  - : A {{DOMxRef("StylePropertyMap")}} representing the declarations of the element's [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute.
 - {{domxref("HTMLElement.autocapitalize", "autocapitalize")}}
   - : A string that represents the element's capitalization behavior for user input. Valid values are: `none`, `off`, `on`, `characters`, `words`, `sentences`.
 - {{domxref("HTMLElement.autofocus")}}
@@ -74,7 +74,7 @@ _Also inherits properties from its parent, {{DOMxRef("Element")}}._
 - {{DOMxRef("HTMLElement.spellcheck")}}
   - : A boolean value that controls the [spell-checking](/en-US/docs/Web/HTML/Global_attributes/spellcheck) hint. It is available on all HTML elements, though it doesn't affect all of them.
 - {{DOMxRef("HTMLElement.style")}}
-  - : A {{DOMxRef("CSSStyleDeclaration")}} representing the declarations of the element's [`style`](/en-US/docs/Web/HTML/Global_attributes#style) attribute.
+  - : A {{DOMxRef("CSSStyleDeclaration")}} representing the declarations of the element's [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute.
 - {{DOMxRef("HTMLElement.tabIndex")}}
   - : A `long` representing the position of the element in the tabbing order.
 - {{DOMxRef("HTMLElement.title")}}

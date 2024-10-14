@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Performance.clearMarks
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`clearMarks()`** method removes all or specific {{domxref("PerformanceMark")}} objects from the browser's performance timeline.
 
