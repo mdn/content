@@ -39,8 +39,8 @@ The first parameter in the HTTP context is either `inline` (default value, indic
 ```http
 Content-Disposition: inline
 Content-Disposition: attachment
-Content-Disposition: attachment; filename="filename.jpg"
-Content-Disposition: attachment; filename*="filename.jpg"
+Content-Disposition: attachment; filename="file name.jpg"
+Content-Disposition: attachment; filename*=utf-8''file%20name.jpg
 ```
 
 The quotes around the filename are optional, but are necessary if you use special characters in the filename, such as spaces.
