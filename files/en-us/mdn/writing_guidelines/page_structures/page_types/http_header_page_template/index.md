@@ -177,7 +177,7 @@ _Otherwise, to use this macro, remove the backticks and backslash in the markdow
 
 _If the browser has specific handling for the header, remove the text below:_
 
-This header has no specification-defined browser integration ("browser compatibility" does not apply).
+This header has no specification-defined user-agent integration ("browser compatibility" does not apply).
 Developers can set and get HTTP headers using `fetch()` in order to provide application-specific implementation behavior.
 
 ## See also
