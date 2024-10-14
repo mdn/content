@@ -156,6 +156,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
         This is the default.
         It is used if no value or an invalid value is set.
 
+    See {{domxref("HTMLImageElement.fetchPriority")}} for more information.
+
 - `height`
 
   - : The intrinsic height of the image, in pixels. Must be an integer without a unit.

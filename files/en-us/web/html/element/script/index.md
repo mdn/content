@@ -93,6 +93,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
         This is the default.
         It is used if no value or an invalid value is set.
 
+    See {{domxref("HTMLScriptElement.fetchPriority")}} for more information.
+
 - `integrity`
   - : This attribute contains inline metadata that a user agent can use to verify that a fetched resource has been delivered without unexpected manipulation. The attribute must not specified when the `src` attribute is not specified. See [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity).
 - `nomodule`

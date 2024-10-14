@@ -213,6 +213,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
         This is the default.
         It is used if no value or an invalid value is set.
 
+    See {{domxref("HTMLLinkElement.fetchPriority")}} for more information.
+
 - `href`
   - : This attribute specifies the {{glossary("URL")}} of the linked resource. A URL can be absolute or relative.
 - `hreflang`
