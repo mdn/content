@@ -10,7 +10,7 @@ The **Cloud** refers to servers located worldwide that are accessed over the Int
 
 Instead of storing data or running programs on a local computer or server, users can access cloud resources to perform tasks: this is known as {{glossary("Cloud computing")}}.
 
-### Key features of the cloud
+Key features of the cloud include:
 
 - Remote Access: Data and services are accessed remotely.
 - Scalability: Resources can be scaled up or down based on demand.
