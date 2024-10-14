@@ -9,7 +9,7 @@ browser-compat: css.properties.inset
 
 The **`inset`** [CSS](/en-US/docs/Web/CSS) property is a shorthand that corresponds to the {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and/or {{cssxref("left")}} properties. It has the same multi-value syntax of the {{cssxref("margin")}} shorthand.
 
-This {{glossary("inset properties", "inset property")}} has no effect on non-positioned elements.
+This {{glossary("inset properties")}}, including `inset`, have no effect on non-positioned elements.
 
 {{EmbedInteractiveExample("pages/css/inset.html")}}
 
@@ -105,6 +105,8 @@ div {
 
 ## See also
 
-- The longhand box offset properties: {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and {{cssxref("left")}}.
-- The mapped logical shorthands: {{cssxref("inset-block")}} and {{cssxref("inset-inline")}}
-- The {{cssxref("margin")}} shorthand multi-value syntax.
+- {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and {{cssxref("left")}}
+- {{cssxref("inset-block")}} and {{cssxref("inset-inline")}}
+- {{cssxref("position")}}
+- [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module
+- [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)

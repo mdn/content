@@ -44,6 +44,9 @@ page-type: mdn-writing-guide
 >     Note that you may first need to create/update an entry for the HTTP header in our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a>, and the entry for the header will need to include specification information.
 >     See our [guide on how to do this](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
 >
+>     Browser compatibility does not apply for HTTP headers where no specific implementation is provided (such as automatically adding a request header to some requests or changing behavior based on data in a response header).
+>     For these cases, remove the browser-compat key and value.
+>
 > ---
 >
 > **Top-of-page macros**
@@ -167,9 +170,15 @@ _To use this macro, remove the backticks and backslash in the markdown file._
 
 ## Browser compatibility
 
+_If the browser has no specific handling for the header, remove the macro below._
+_Otherwise, to use this macro, remove the backticks and backslash in the markdown file._
+
 `\{{Compat}}`
 
-_To use this macro, remove the backticks and backslash in the markdown file._
+_If the browser has specific handling for the header, remove the text below:_
+
+This header has no specification-defined user-agent integration ("browser compatibility" does not apply).
+Developers can set and get HTTP headers using `fetch()` in order to provide application-specific implementation behavior.
 
 ## See also
 

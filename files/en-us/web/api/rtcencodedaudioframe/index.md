@@ -12,9 +12,6 @@ The **`RTCEncodedAudioFrame`** of the [WebRTC API](/en-US/docs/Web/API/WebRTC_AP
 The interface provides methods and properties to get metadata about the frame, allowing its format and order in the sequence of frames to be determined.
 The `data` property gives access to the encoded frame data as a buffer, which might be encrypted, or otherwise modified by a transform.
 
-> [!NOTE]
-> This feature is available in [_Dedicated_ Web Workers](/en-US/docs/Web/API/Web_Workers_API#worker_types).
-
 ## Instance properties
 
 - {{domxref("RTCEncodedAudioFrame.timestamp")}} {{ReadOnlyInline}} {{deprecated_inline}} {{non-standard_inline}}

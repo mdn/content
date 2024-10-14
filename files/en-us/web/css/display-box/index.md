@@ -108,4 +108,4 @@ In this example the outer {{htmlelement("div")}} has a 2-pixel red border and a 
   - {{CSSxRef("&lt;display-legacy&gt;")}}
 
 - [Display: Contents Is Not a CSS Reset | Adrian Roselli](https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
-- [More accessible markup with display: contents — hiddedevries.nl](https://hidde.blog/more-accessible-markup-with-display-contents/)
+- [More accessible markup with display: contents](https://hidde.blog/more-accessible-markup-with-display-contents/) by Hidde de Vries (2018)

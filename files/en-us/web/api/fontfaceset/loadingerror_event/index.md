@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.FontFaceSet.loadingerror_event
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{APIRef("CSS Font Loading API")}}{{AvailableInWorkers}}
 
 The `loadingerror` event fires when fonts have finished loading, but some or all fonts have failed to load.
 
