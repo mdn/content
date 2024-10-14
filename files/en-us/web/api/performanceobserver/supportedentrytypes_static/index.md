@@ -6,7 +6,7 @@ page-type: web-api-static-property
 browser-compat: api.PerformanceObserver.supportedEntryTypes_static
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The static **`supportedEntryTypes`** read-only property of the {{domxref("PerformanceObserver")}} interface returns an array of the {{domxref("PerformanceEntry.entryType","entryType")}} values supported by the user agent.
 

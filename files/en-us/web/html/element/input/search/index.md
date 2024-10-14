@@ -76,7 +76,7 @@ This does _not_ set a limit on how many characters the user can enter into the f
 
 ### spellcheck
 
-[`spellcheck`](/en-US/docs/Web/HTML/Global_attributes#spellcheck) is a global attribute that is used to indicate whether to enable spell-checking for an element. It can be used on any editable content, but here we consider specifics related to the use of `spellcheck` on {{HTMLElement("input")}} elements. The permitted values for `spellcheck` are:
+[`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck) is a global attribute that is used to indicate whether to enable spell-checking for an element. It can be used on any editable content, but here we consider specifics related to the use of `spellcheck` on {{HTMLElement("input")}} elements. The permitted values for `spellcheck` are:
 
 - `false`
   - : Disable spell-checking for this element.

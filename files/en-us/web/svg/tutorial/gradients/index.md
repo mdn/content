@@ -101,7 +101,7 @@ The `<linearGradient>` element also takes several other attributes, which specif
 >   href="#Gradient1" />
 > ```
 >
-> I've included the xlink namespace here directly on the node, although usually you would define it at the top of your document. More on that when we [talk about images](/en-US/docs/Web/SVG/Tutorial/Other_content_in_SVG).
+> We've included the xlink namespace here directly on the node, although usually you would define it at the top of your document. More on that when we [talk about images](/en-US/docs/Web/SVG/Tutorial/Other_content_in_SVG).
 
 ## Radial Gradient
 
@@ -290,7 +290,7 @@ Both gradients also have an attribute named `gradientUnits`, which describes the
   gradientUnits="userSpaceOnUse"></radialGradient>
 ```
 
-You can also then apply another transformation to the gradient by using the `gradientTransform` attribute, but since we haven't [introduced transforms](/en-US/docs/Web/SVG/Tutorial/Basic_Transformations) yet, I'll leave that for later.
+You can also then apply another transformation to the gradient by using the `gradientTransform` attribute, but since we haven't [introduced transforms](/en-US/docs/Web/SVG/Tutorial/Basic_Transformations) yet, we'll leave that for later.
 
 There are some other caveats for dealing with `gradientUnits="objectBoundingBox"` when the object bounding box isn't square, but they're fairly complex and will have to wait for someone more in-the-know to explain them.
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Performance.setResourceTimingBufferSize
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`setResourceTimingBufferSize()`** method sets the desired size of the browser's resource timing buffer which stores the `"resource"` performance entries.
 

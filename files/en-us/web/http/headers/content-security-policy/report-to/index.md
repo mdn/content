@@ -18,7 +18,7 @@ The server must separately provide the mapping between endpoint names and their 
   <tbody>
     <tr>
       <th scope="row">CSP version</th>
-      <td>1</td>
+      <td>3</td>
     </tr>
     <tr>
       <th scope="row">Directive type</th>

@@ -44,4 +44,4 @@ element.virtualKeyboardPolicy = "manual";
 
 ## See also
 
-- [`virtualkeyboardpolicy`](/en-US/docs/Web/HTML/Global_attributes#virtualkeyboardpolicy) HTML global attribute
+- [`virtualkeyboardpolicy`](/en-US/docs/Web/HTML/Global_attributes/virtualkeyboardpolicy) HTML global attribute

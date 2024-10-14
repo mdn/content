@@ -2,13 +2,10 @@
 title: Want-Content-Digest
 slug: Web/HTTP/Headers/Want-Content-Digest
 page-type: http-header
-status:
-  - experimental
-browser-compat: http.headers.Want-Content-Digest
-spec-urls: https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-digest-headers-12
+spec-urls: https://datatracker.ietf.org/doc/html/rfc9530
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{HTTPSidebar}}
 
 The **`Want-Content-Digest`** request or response header states the wish for a {{HTTPHeader("Content-Digest")}} header. It is the `Content-` analogue of {{HTTPHeader("Want-Repr-Digest")}}.
 
@@ -49,7 +46,8 @@ Want-Content-Digest: md5=0
 
 ## Browser compatibility
 
-{{Compat}}
+This header has no specification-defined browser integration ("browser compatibility" does not apply).
+Developers can set and get HTTP headers using `fetch()` in order to provide application-specific implementation behavior.
 
 ## See also
 

@@ -364,6 +364,10 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when the document view or an element has been scrolled.
 - {{DOMxRef("Document/scrollend_event", "scrollend")}}
   - : Fired when the document view or an element has completed scrolling.
+- {{domxref("Document/scrollsnapchange_event", "scrollsnapchange")}} {{experimental_inline}}
+  - : Fired on the scroll container at the end of a scrolling operation when a new scroll snap target has been selected.
+- {{domxref("Document/scrollsnapchanging_event", "scrollsnapchanging")}} {{experimental_inline}}
+  - : Fired on the scroll container when the browser determines a new scroll snap target is pending, i.e. it will be selected when the current scroll gesture ends.
 
 ### Selection events
 

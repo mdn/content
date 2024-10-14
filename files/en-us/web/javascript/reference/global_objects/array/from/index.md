@@ -132,22 +132,22 @@ Array.from({ length: 5 }, (v, i) => i);
 ### Sequence generator (range)
 
 ```js
-// Sequence generator function (commonly referred to as "range", e.g. Python, Clojure, etc.)
+// Sequence generator function (commonly referred to as "range", cf. Python, Clojure, etc.)
 const range = (start, stop, step) =>
   Array.from(
     { length: Math.ceil((stop - start) / step) },
     (_, i) => start + i * step,
   );
 
-// Generate numbers from 0 (inclusive) to 4 (exclusive) with step 1
+// Generate a sequence of numbers from 0 (inclusive) to 5 (exclusive), incrementing by 1
 range(0, 5, 1);
 // [0, 1, 2, 3, 4]
 
-// Generate numbers from 1 (inclusive) to 10 (exclusive) with step 2
+// Generate a sequence of numbers from 1 (inclusive) to 10 (exclusive), incrementing by 2
 range(1, 10, 2);
 // [1, 3, 5, 7, 9]
 
-// Generate the alphabet making use of it being ordered as a sequence
+// Generate the Latin alphabet making use of it being ordered as a sequence
 range("A".charCodeAt(0), "Z".charCodeAt(0) + 1, 1).map((x) =>
   String.fromCharCode(x),
 );

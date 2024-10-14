@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Performance.timeOrigin
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`timeOrigin`** read-only property of the {{domxref("Performance")}} interface returns the high resolution timestamp that is used as the baseline for performance-related timestamps.
 

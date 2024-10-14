@@ -59,4 +59,4 @@ Note that you must enable the browser setting to check spelling and grammar.
 
 ## See also
 
-- [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes#spellcheck) HTML global attribute
+- [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck) HTML global attribute
