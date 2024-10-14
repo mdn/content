@@ -7,7 +7,7 @@ browser-compat: css.properties.text-emphasis-position
 
 {{CSSRef}}
 
-The **`text-emphasis-position`** [CSS](/en-US/docs/Web/CSS) property sets where emphasis marks are drawn. Like ruby text, if there isn't enough room for emphasis marks, the line height is increased.
+The **`text-emphasis-position`** [CSS](/en-US/docs/Web/CSS) property sets where emphasis marks are drawn. Like [ruby](/en-US/docs/Web/HTML/Element/ruby) text (not related to ruby language), if there isn't enough room for emphasis marks, the line height is increased.
 
 {{EmbedInteractiveExample("pages/css/text-emphasis-position.html")}}
 
@@ -121,6 +121,85 @@ The preferred position of emphasis marks depends on the language. In Japanese fo
 {{csssyntax}}
 
 ## Examples
+
+### Emphasis mark positions
+
+The select field is used to change the class on the `<section>` and the class updates the position of the emphasis marks.
+
+```html hidden
+<label for="position">position:</position>
+<select id="position">
+  <option value="auto">auto</option>
+  <option value="over-right">over right</option>
+  <option value="over-left">over left</option>
+  <option value="under-right">under right</option>
+  <option value="under-left">under left</option>
+  <option value="preferred">preferred</option>
+</select>
+```
+
+#### HTML
+
+```html
+<section id="setting" class="auto">
+  <p class="horizontal" lang="ja">世界、こんにちは。</p>
+  <p class="vertical" lang="zh">你好世界</p>
+</section>
+```
+
+#### CSS
+
+```css hidden
+.horizontal {
+  writing-mode: horizontal-tb;
+}
+.vertical {
+  writing-mode: vertical-rl;
+}
+section {
+  display: flex;
+  justify-content: space-around;
+}
+```
+
+```css
+p {
+  text-emphasis: filled circle tomato;
+  text-emphasis-position: auto;
+}
+.over-right p,
+.preferred p [lang="ja"] {
+  text-emphasis-position: over right;
+}
+.over-left p {
+  text-emphasis-position: over left;
+}
+.under-right p,
+.preferred p [lang="zh"] {
+  text-emphasis-position: under right;
+}
+.under-left p {
+  text-emphasis-position: under left;
+}
+.preferred p [lang="ja"] {
+}
+```
+
+```js hidden
+const position = document.querySelector("#position");
+const setting = document.querySelector("#setting");
+const updateClass = () => {
+  const currentClass = setting.classList;
+  setting.classList.replace(currentClass, position.value);
+};
+position.addEventListener("change", updateClass);
+```
+
+#### Result
+
+Use the position select to choose the location of the emphasis marks. The **preferred** option uses the preferred positions highlighted it the [table above](#description).
+
+{{EmbedLiveSample("Emphasis_mark_positions", 450, 100)}}
 
 ### Preferring ruby over emphasis marks
 
