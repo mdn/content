@@ -1484,7 +1484,7 @@ However, few web browsers support MPEG-2 without the support of a plugin, and wi
     <tr>
       <th scope="row">Licensing</th>
       <td>
-        Proprietary; all patents have expired worldwide with the exception of in Malaysia (as of October 1, 2024), so MPEG-2 can be used freely outside of Malaysia
+        Proprietary; all patents have expired worldwide with the exception of in Malaysia (as of October 1, 2024), so MPEG-2 can be used freely outside of Malaysia.
         Patents are licensed by <a href="https://www.via-la.com/licensing-2/mpeg-2/">Via LA</a>.
       </td>
     </tr>
