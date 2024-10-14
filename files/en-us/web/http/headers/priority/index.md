@@ -7,16 +7,16 @@ browser-compat: http.headers.Priority
 
 {{HTTPSidebar}}
 
-The **`Priority`** HTTP header is sent in requests to indicate a client's preference for the priority order at which the response containing the requested resource should be sent, relative to other resource requests on the same connection. If the header is not specified in the request, a default priority is assumed.
+The HTTP **`Priority`** header indicates a client's preference for the priority order at which the response containing the requested resource should be sent, relative to other resource requests on the same connection.
+If the header is not specified in the request, a default priority is assumed.
+The server may also include this header in responses in order to indicate it has an interest in changing the prioritization preferences the client advertized.
+In responses, this information can be used as an input to the prioritization process for caching servers and other servers that are forwarding the response.
 
-The server is not bound by client prioritization and might only use client requests as hints for its own prioritization process.
+The server is not bound by client prioritization and might only use client priorities as hints for its own prioritization process.
 For example, a server may know that a specific image is vital for user experience and should be sent at the highest priority.
 Server prioritization might also be affected by factors such as network congestion.
 
 This request may be cached, and the server is expected to control the cacheability or the applicability of the cached response using the header fields that control the caching behavior, such as {{HTTPHeader("Cache-Control")}} and {{HTTPHeader("Vary")}}.
-
-The server may also include this header in responses in order to indicate it has an interest in changing the prioritization.
-This information can then be used as an input to the prioritization process for caching servers and other servers that are forwarding the response.
 
 > [!NOTE]
 > This header is one part of the "Extensible Prioritization Scheme for HTTP" defined in {{rfc("9218")}}.
@@ -34,7 +34,7 @@ This information can then be used as an input to the prioritization process for 
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -157,3 +157,8 @@ priority = u=1, i
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{HTTPHeader("Cache-Control")}}
+- {{HTTPHeader("Vary")}}
