@@ -1,5 +1,5 @@
 sidebar:
-  - type: details
+  - details: closed
     title: Firefox_releases
     children:
       - link: /Mozilla/Firefox/Releases
@@ -7,7 +7,7 @@ sidebar:
       - link: /Mozilla/Firefox/Experimental_features
         title: Experimental_features_firefox
 
-  - type: details
+  - details: closed
     title: Add-ons
     children:
       - link: /Mozilla/Add-ons/WebExtensions

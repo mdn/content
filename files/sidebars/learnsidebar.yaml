@@ -3,7 +3,7 @@ sidebar:
     link: Getting_started_with_the_web
     type: section
   - title: Getting_started_with_the_web
-    type: details
+    details: closed
     children:
       - /Learn/Getting_started_with_the_web
       - /Learn/Getting_started_with_the_web/Installing_basic_software
@@ -18,7 +18,7 @@ sidebar:
     link: HTML
     type: section
   - title: Introduction_to_HTML
-    type: details
+    details: closed
     children:
       - /Learn/HTML/Introduction_to_HTML
       - /Learn/HTML/Introduction_to_HTML/Getting_started
@@ -31,7 +31,7 @@ sidebar:
       - /Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
       - /Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
   - title: Multimedia_and_embedding
-    type: details
+    details: closed
     children:
       - /Learn/HTML/Multimedia_and_embedding
       - /Learn/HTML/Multimedia_and_embedding/Images_in_HTML
@@ -41,7 +41,7 @@ sidebar:
       - /Learn/HTML/Multimedia_and_embedding/Responsive_images
       - /Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
   - title: HTML_tables
-    type: details
+    details: closed
     children:
       - /Learn/HTML/Tables
       - /Learn/HTML/Tables/Basics
@@ -51,7 +51,7 @@ sidebar:
     link: CSS
     type: section
   - title: CSS_first_steps
-    type: details
+    details: closed
     children:
       - /Learn/CSS/First_steps
       - /Learn/CSS/First_steps/What_is_CSS
@@ -60,7 +60,7 @@ sidebar:
       - /Learn/CSS/First_steps/How_CSS_works
       - /Learn/CSS/First_steps/Styling_a_biography_page
   - title: CSS_building_blocks
-    type: details
+    details: closed
     children:
       - /Learn/CSS/Building_blocks
       - /Learn/CSS/Building_blocks/Selectors
@@ -85,7 +85,7 @@ sidebar:
       - /Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper
       - /Learn/CSS/Building_blocks/A_cool_looking_box
   - title: Styling_text
-    type: details
+    details: closed
     children:
       - /Learn/CSS/Styling_text
       - /Learn/CSS/Styling_text/Fundamentals
@@ -94,7 +94,7 @@ sidebar:
       - /Learn/CSS/Styling_text/Web_fonts
       - /Learn/CSS/Styling_text/Typesetting_a_homepage
   - title: CSS_layout
-    type: details
+    details: closed
     children:
       - /Learn/CSS/CSS_layout
       - /Learn/CSS/CSS_layout/Introduction
@@ -113,7 +113,7 @@ sidebar:
     link: JavaScript
     type: section
   - title: JavaScript_first_steps
-    type: details
+    details: closed
     children:
       - /Learn/JavaScript/First_steps
       - /Learn/JavaScript/First_steps/What_is_JavaScript
@@ -126,7 +126,7 @@ sidebar:
       - /Learn/JavaScript/First_steps/Arrays
       - /Learn/JavaScript/First_steps/Silly_story_generator
   - title: JavaScript_building_blocks
-    type: details
+    details: closed
     children:
       - /Learn/JavaScript/Building_blocks
       - /Learn/JavaScript/Building_blocks/Conditionals
@@ -138,7 +138,7 @@ sidebar:
       - /Learn/JavaScript/Building_blocks/Event_bubbling
       - /Learn/JavaScript/Building_blocks/Image_gallery
   - title: Introducing_JavaScript_objects
-    type: details
+    details: closed
     children:
       - /Learn/JavaScript/Objects
       - /Learn/JavaScript/Objects/Basics
@@ -149,7 +149,7 @@ sidebar:
       - /Learn/JavaScript/Objects/Object_building_practice
       - /Learn/JavaScript/Objects/Adding_bouncing_balls_features
   - title: Asynchronous_JavaScript
-    type: details
+    details: closed
     children:
       - /Learn/JavaScript/Asynchronous
       - /Learn/JavaScript/Asynchronous/Introducing
@@ -158,7 +158,7 @@ sidebar:
       - /Learn/JavaScript/Asynchronous/Introducing_workers
       - /Learn/JavaScript/Asynchronous/Sequencing_animations
   - title: Client-side_web_APIs
-    type: details
+    details: closed
     children:
       - /Learn/JavaScript/Client-side_web_APIs
       - /Learn/JavaScript/Client-side_web_APIs/Introduction
@@ -172,7 +172,7 @@ sidebar:
     link: Forms
     type: section
   - title: Web_forms_core
-    type: details
+    details: closed
     children:
       - /Learn/Forms/
       - /Learn/Forms/Your_first_form
@@ -186,7 +186,7 @@ sidebar:
       - /Learn/Forms/Form_validation
       - /Learn/Forms/Sending_and_retrieving_form_data
   - title: Web_forms_advanced
-    type: details
+    details: closed
     children:
       - /Learn/Forms/How_to_build_custom_form_controls
       - /Learn/Forms/Sending_forms_through_JavaScript
@@ -196,7 +196,7 @@ sidebar:
     link: Accessibility
     type: section
   - title: Accessibility_guides
-    type: details
+    details: closed
     children:
       - /Learn/Accessibility/
       - /Learn/Accessibility/What_is_accessibility
@@ -210,7 +210,7 @@ sidebar:
     link: Performance
     type: section
   - title: Performance_guides
-    type: details
+    details: closed
     children:
       - /Learn/Performance/
       - /Learn/Performance/why_web_performance
@@ -227,7 +227,7 @@ sidebar:
     link: MathML
     type: section
   - title: MathML_first_steps
-    type: details
+    details: closed
     children:
       - /Learn/MathML/First_steps/
       - /Learn/MathML/First_steps/Getting_started
@@ -240,7 +240,7 @@ sidebar:
     link: /Games
     type: section
   - title: Guides_and_tutorials
-    type: details
+    details: closed
     children:
       - /Games/Introduction
       - /Games/Techniques
@@ -250,7 +250,7 @@ sidebar:
     link: Tools_and_testing
     type: section
   - title: Client-side_web_development_tools
-    type: details
+    details: closed
     children:
       - /Learn/Tools_and_testing/Understanding_client-side_tools
       - /Learn/Tools_and_testing/Understanding_client-side_tools/Overview
@@ -259,12 +259,12 @@ sidebar:
       - /Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain
       - /Learn/Tools_and_testing/Understanding_client-side_tools/Deployment
   - title: Introduction_to_client-side_frameworks
-    type: details
+    details: closed
     children:
       - /Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction
       - /Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features
   - title: React
-    type: details
+    details: closed
     children:
       - /Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
       - /Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning
@@ -274,7 +274,7 @@ sidebar:
       - /Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility
       - /Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources
   - title: Ember
-    type: details
+    details: closed
     children:
       - /Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started
       - /Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization
@@ -283,7 +283,7 @@ sidebar:
       - /Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing
       - /Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources
   - title: Vue
-    type: details
+    details: closed
     children:
       - /Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started
       - /Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component
@@ -295,7 +295,7 @@ sidebar:
       - /Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management
       - /Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources
   - title: Svelte
-    type: details
+    details: closed
     children:
       - /Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started
       - /Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning
@@ -306,7 +306,7 @@ sidebar:
       - /Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript
       - /Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next
   - title: Angular
-    type: details
+    details: closed
     children:
       - /Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started
       - /Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning
@@ -315,11 +315,11 @@ sidebar:
       - /Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering
       - /Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building
   - title: Git_and_GitHub
-    type: details
+    details: closed
     children:
       - /Learn/Tools_and_testing/GitHub
   - title: Cross_browser_testing
-    type: details
+    details: closed
     children:
       - /Learn/Tools_and_testing/Cross_browser_testing
       - /Learn/Tools_and_testing/Cross_browser_testing/Introduction
@@ -334,7 +334,7 @@ sidebar:
     link: Server-side
     type: section
   - title: First_steps
-    type: details
+    details: closed
     children:
       - /Learn/Server-side/First_steps
       - /Learn/Server-side/First_steps/Introduction
@@ -342,7 +342,7 @@ sidebar:
       - /Learn/Server-side/First_steps/Web_frameworks
       - /Learn/Server-side/First_steps/Website_security
   - title: Django_web_framework_(Python)
-    type: details
+    details: closed
     children:
       - /Learn/Server-side/Django
       - /Learn/Server-side/Django/Introduction
@@ -361,7 +361,7 @@ sidebar:
       - /Learn/Server-side/Django/web_application_security
       - /Learn/Server-side/Django/django_assessment_blog
   - title: Express_Web_Framework_(Node.js_JavaScript)
-    type: details
+    details: closed
     children:
       - /Learn/Server-side/Express_Nodejs
       - /Learn/Server-side/Express_Nodejs/Introduction
@@ -377,7 +377,7 @@ sidebar:
     link: Common_questions
     type: section
   - title: Common_questions
-    type: details
+    details: closed
     children:
       - /Learn/Common_questions
       - /Learn/HTML/Howto

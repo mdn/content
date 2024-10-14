@@ -1,7 +1,7 @@
 sidebar:
   - type: section
     link: /Mozilla/Add-ons/WebExtensions
-  - type: details
+  - details: closed
     title: WebExtensions#Getting_started
     children:
       - /Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
@@ -10,7 +10,7 @@ sidebar:
       - /Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
       - /Mozilla/Add-ons/WebExtensions/Examples
       - /Mozilla/Add-ons/WebExtensions/What_next
-  - type: details
+  - details: closed
     title: WebExtensions#Concepts
     children:
       - /Mozilla/Add-ons/WebExtensions/API
@@ -23,7 +23,7 @@ sidebar:
       - /Mozilla/Add-ons/WebExtensions/Native_messaging
       - /Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations
       - /Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
-  - type: details
+  - details: closed
     title: WebExtensions#User_Interface
     children:
       - /Mozilla/Add-ons/WebExtensions/user_interface
@@ -36,7 +36,7 @@ sidebar:
       - /Mozilla/Add-ons/WebExtensions/user_interface/Notifications
       - /Mozilla/Add-ons/WebExtensions/user_interface/Omnibox
       - /Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
-  - type: details
+  - details: closed
     title: WebExtensions#How_to
     children:
       - /Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
@@ -55,8 +55,10 @@ sidebar:
   - type: webExtApi
     title: WebExtensions#API
   - type: listSubPages
+    title: WebExtensions#manifest.json
+    details: closed
     path: /en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json
-  - type: details
+  - details: closed
     title: extension_workshop
     children:
       - link: https://extensionworkshop.com/documentation/develop/
@@ -69,7 +71,7 @@ sidebar:
         title: extension_workshop_enterprise
   - type: section
     link: /Mozilla/Add-ons/Contact_us
-  - type: details
+  - details: closed
     title: Channels
     children:
       - link: https://blog.mozilla.org/addons
