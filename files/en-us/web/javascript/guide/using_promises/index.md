@@ -434,15 +434,15 @@ However, before you compose promises sequentially, consider if it's really neces
 
 A {{jsxref("Promise")}} can be created from scratch using its [constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise). This should be needed only to wrap old APIs.
 
-In an ideal world, all asynchronous functions would already return promises. Unfortunately, some APIs still expect success and/or failure callbacks to be passed in the old way. The most obvious example is the [`setTimeout()`](/en-US/docs/Web/API/setTimeout) function:
+In an ideal world, all asynchronous functions would already return promises. Unfortunately, some APIs still expect success and/or failure callbacks to be passed in the old way. The most obvious example is the {{domxref("Window.setTimeout", "setTimeout()")}} function:
 
 ```js
 setTimeout(() => saySomething("10 seconds passed"), 10 * 1000);
 ```
 
-Mixing old-style callbacks and promises is problematic. If `saySomething()` fails or contains a programming error, nothing catches it. This is intrinsic to the design of `setTimeout`.
+Mixing old-style callbacks and promises is problematic. If `saySomething()` fails or contains a programming error, nothing catches it. This is intrinsic to the design of `setTimeout()`.
 
-Luckily we can wrap `setTimeout` in a promise. The best practice is to wrap the callback-accepting functions at the lowest possible level, and then never call them directly again:
+Luckily we can wrap `setTimeout()` in a promise. The best practice is to wrap the callback-accepting functions at the lowest possible level, and then never call them directly again:
 
 ```js
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -510,7 +510,7 @@ console.log(1); // 1, 2, 3, 4
 
 ### Task queues vs. microtasks
 
-Promise callbacks are handled as a [microtask](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) whereas [`setTimeout()`](/en-US/docs/Web/API/setTimeout) callbacks are handled as task queues.
+Promise callbacks are handled as a [microtask](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) whereas {{domxref("Window.setTimeout", "setTimeout()")}} callbacks are handled as task queues.
 
 ```js
 const promise = new Promise((resolve, reject) => {
@@ -542,7 +542,7 @@ For more details, refer to [Tasks vs. microtasks](/en-US/docs/Web/API/HTML_DOM_A
 
 If you run into situations in which you have promises and tasks (such as events or callbacks) which are firing in unpredictable orders, it's possible you may benefit from using a microtask to check status or balance out your promises when promises are created conditionally.
 
-If you think microtasks may help solve this problem, see the [microtask guide](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) to learn more about how to use [`queueMicrotask()`](/en-US/docs/Web/API/queueMicrotask) to enqueue a function as a microtask.
+If you think microtasks may help solve this problem, see the [microtask guide](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) to learn more about how to use {{domxref("Window.queueMicrotask()", "queueMicrotask()")}} to enqueue a function as a microtask.
 
 ## See also
 

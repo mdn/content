@@ -8,7 +8,7 @@ status:
 browser-compat: api.DeprecationReportBody.toJSON
 ---
 
-{{APIRef("Reporting API")}}{{SeeCompatTable}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`toJSON()`** method of the {{domxref("DeprecationReportBody")}} interface is a _serializer_, and returns a JSON representation of the `InterventionReportBody` object.
 

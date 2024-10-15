@@ -3,10 +3,12 @@ title: "Scheduler: yield() method"
 short-title: yield()
 slug: Web/API/Scheduler/yield
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.Scheduler.yield
 ---
 
-{{APIRef('Prioritized Task Scheduling API')}}{{AvailableInWorkers}}
+{{APIRef('Prioritized Task Scheduling API')}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`yield()`** method of the {{domxref('Scheduler')}} interface is used for yielding to the [main thread](/en-US/docs/Glossary/Main_thread) during a task and continuing execution later, with the continuation scheduled as a prioritized task (see the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) for more information). This allows long-running work to be broken up so the browser stays responsive.
 
@@ -91,7 +93,7 @@ The order in which the promise returned by `scheduler.yield()` is resolved relat
 
 By default, `scheduler.yield()` is run with a [`"user-visible"`](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#user-visible) priority. However, continuation after a `scheduler.yield()` call has a slightly different behavior than `scheduler.postTask()` tasks of the same `priority`.
 
-`scheduler.yield()` enqueues its task in a boosted task queue compared to a `scheduler.postTask()` of the same prioritiy level. So, for instance, a `scheduler.yield()` continuation with `"user-visible"` priority will be prioritized after `scheduler.postTask()` tasks of the higher `"user-blocking"` priority level, but before `scheduler.postTask()` tasks of the same `"user-visible"` priority (in the spec, this is defined by a task queue's [effective priority](https://wicg.github.io/scheduling-apis/#scheduler-task-queue-effective-priority)).
+`scheduler.yield()` enqueues its task in a boosted task queue compared to a `scheduler.postTask()` of the same priority level. So, for instance, a `scheduler.yield()` continuation with `"user-visible"` priority will be prioritized after `scheduler.postTask()` tasks of the higher `"user-blocking"` priority level, but before `scheduler.postTask()` tasks of the same `"user-visible"` priority (in the spec, this is defined by a task queue's [effective priority](https://wicg.github.io/scheduling-apis/#scheduler-task-queue-effective-priority)).
 
 This is sometimes described as `scheduler.yield()` enqueuing its task at the front of a priority level's queue, while `scheduler.postTask()` tasks go at the end. This can be a useful mental model. In situations with just a few tasks, this means that with the same priority, the `scheduler.yield()` continuation will come first, allowing additional flexibility in how tasks can be scheduled. For example:
 

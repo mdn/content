@@ -134,6 +134,11 @@ Here is an example where a method can raise a `DOMException` with a name of `Ind
 - {{jsxref("TypeError")}}
   - : Thrown …
 
+## Description
+
+_Detailed description of how the method behaves_
+_Section omitted if an introductory paragraph (or two) at the top of the page is sufficient._
+
 ## Examples
 
 Note that we use the plural "Examples" even if the page only contains one example.

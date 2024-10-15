@@ -376,6 +376,8 @@ You should be aware of the performance impact of this method, however, as it tak
 Aside from using `var()`, the `initial-value` defined in the `@property` at-rule can be used as a fallback mechanism.
 In fact, we've already seen this in the [`@property` inheritance](#using_property_to_control_inheritance) section.
 
+<!-- cSpell:ignore aqumarine -->
+
 The following example sets an initial value of `--box-color` to `cornflowerblue` using the `@property` at-rule.
 In the ruleset following the at-rule, we want to set `--box-color` to `aquamarine`, but there's a typo in the value name.
 The same is true for the third `<div>` where we've used `2rem` for the custom property that's expecting a valid [`<color>` value](/en-US/docs/Web/CSS/color_value).
