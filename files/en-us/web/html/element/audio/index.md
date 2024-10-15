@@ -253,6 +253,18 @@ Browsers don't all support the same [file types](/en-US/docs/Web/Media/Formats/C
 </audio>
 ```
 
+The `src` attribute can accept various types of audio sources:
+
+1. URLs: When using a URL, be aware that the browser will request the file from the server each time the user seeks within the audio. This can lead to increased server load and potential playback delays.
+
+2. Data URIs: You can use base64-encoded strings as the `src`. This embeds the audio data directly in the HTML, which can be useful for small audio files but isn't recommended for larger files as it increases the HTML file size.
+
+   ```html
+   <audio controls src="data:audio/mpeg;base64,AAAAAAAA..."></audio>
+   ```
+
+3. `MediaStream` objects: While supported, `MediaStream` sources have limitations. They are not seekable and only support a limited set of codecs. This is most commonly used for live audio streams or real-time audio processing.
+
 We offer a substantive and thorough [guide to media file types](/en-US/docs/Web/Media/Formats) and the [audio codecs that can be used within them](/en-US/docs/Web/Media/Formats/Audio_codecs). Also available is [a guide to the codecs supported for video](/en-US/docs/Web/Media/Formats/Video_codecs).
 
 Other usage notes:
