@@ -247,13 +247,13 @@ You can also set the [`srcObject`](/en-US/docs/Web/API/HTMLMediaElement/srcObjec
 ```js
 const audioElement = document.querySelector("audio");
 navigator.mediaDevices
- .getUserMedia({ audio: true })
- .then((stream) => {
-   audioElement.srcObject = stream;
- })
- .catch((error) => {
-   console.error("Error accessing the microphone", error);
- });
+  .getUserMedia({ audio: true })
+  .then((stream) => {
+    audioElement.srcObject = stream;
+  })
+  .catch((error) => {
+    console.error("Error accessing the microphone", error);
+  });
 ```
 
 Note that `MediaStream` sources have limitations: they are not seekable and only support a limited set of codecs.
