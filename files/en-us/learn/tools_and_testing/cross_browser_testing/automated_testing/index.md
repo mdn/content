@@ -46,25 +46,11 @@ As we said above, you can drastically speed up common tasks such as linting and 
 
 ### Setting up Node and npm
 
-Most tools these days are based on {{Glossary("Node.js")}}, so you'll need to install it from [nodejs.org](https://nodejs.org):
+Most tools these days are based on {{Glossary("Node.js")}}, so you'll need to install it along with its counterpart package manager, [`npm`](https://www.npmjs.com/):
 
-1. Download the installer for your system from the above site. (If you already have Node and npm installed, jump to point 4)
-2. Install it like you would any other program. Note that Node comes with [Node Package Manager](https://www.npmjs.com/) (npm), which allows you to easily install packages, share your own packages with others, and run useful scripts on your projects.
-3. Once the install completes, test that node is installed by typing the following into the terminal, which returns the installed versions of Node and npm:
-
-   ```bash
-   node -v
-   npm -v
-   ```
-
-4. If you've got Node/npm already installed, or installed them a while ago, you should update them to their latest versions. To update Node, the most reliable way is to download and install an updated installer package from their website (see link above). To update npm, use the following command in your terminal:
-
-   ```bash
-   npm install npm@latest -g
-   ```
-
-> [!NOTE]
-> If the above command fails with permissions errors, [Fixing npm permissions](https://docs.npmjs.com/getting-started/fixing-npm-permissions/) should sort you out.
+1. The easiest way to install and update Node.js and `npm` is via a node version manager: Follow the instructions at [Installing Node](/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment#installing_node) to do so.
+2. Make sure to [test that your installation was successful](/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment#testing_your_nodejs_and_npm_installation) before continuing.
+3. If you previously installed Node.js/`npm`, you should update them to their latest versions. This can be done by using the node version manager to install the latest LTS versions (refer again to the linked instructions above).
 
 To start using Node/npm-based packages on your projects, you need to set up your project directories as npm projects. This is easy to do.
 
@@ -339,7 +325,7 @@ There are many other task runners available. We certainly aren't trying to say t
 
 Now let's look at commercial third-party browser testing services and what they can do for us.
 
-The basic premise with such applications is that the company that runs each one has a huge server farm that can run many different tests. When you use this service, you provide a URL of the page you want to test along with information, such as what browsers you want it tested in. The app then configures a new VM with the OS and browser you specified, and returns the test results in the form of screenshots, videos, log files, text, etc. This is very useful, and way more convenient than having to set up all the OS/browser combinations by yourself.
+When you use these kinds of services, you provide a URL of the page you want to test along with information, such as what browsers you want it tested in. The app then configures a new VM with the OS and browser you specified, and returns the test results in the form of screenshots, videos, log files, text, etc. This is very useful, and way more convenient than having to set up all the OS/browser combinations by yourself.
 
 You can then step up a gear, using an API to access functionality programmatically, which means that such apps can be combined with task runners, such as your own local Selenium environments and others, to create automated tests.
 
@@ -502,7 +488,7 @@ Let's have a brief look at how we'd access the API using Node.js.
    ```
 
 3. Replace the placeholders for BrowserStack username and access key with your actual values. These can be retrieved from your [BrowserStack Account & Profile Details](https://www.browserstack.com/accounts/profile/details), under the _Authentication & Security_ section.
-4. Install the [axios](https://www.npmjs.com/package/axios) module we are using in the above code by running the following command in your terminal:
+4. Install the [axios](https://www.npmjs.com/package/axios) module we are using in the code to handle sending HTTP requests by running the following command in your terminal (we chose axios because it is simple, popular, and well-supported):
 
    ```bash
    npm install axios
@@ -523,9 +509,7 @@ function getBuilds() {
   axios.get(`${baseUrl}builds.json`).then((response) => {
     console.log(response.data);
   });
-  // request({ uri: `${baseUrl}builds.json` }, (err, res, body) => {
-  //   console.log(JSON.parse(body));
-  // });
+
   /* Response:
   [
     {

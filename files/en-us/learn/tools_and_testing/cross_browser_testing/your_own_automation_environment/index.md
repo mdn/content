@@ -292,7 +292,7 @@ button.getText().then((text) => {
 });
 ```
 
-Add this to the bottom of the `example()` function now as shown below, then run it:
+Add this to the bottom of the `example()` function now as shown below:
 
 ```js
 const { Builder, Browser, By } = require("selenium-webdriver");
@@ -312,7 +312,7 @@ const { Builder, Browser, By } = require("selenium-webdriver");
 })();
 ```
 
-You should see the button's text label reported inside the console.
+Run the example with `node` in the same way you did previously. You should see the button's text label reported inside the console.
 
 Let's do something a bit more useful. Replace the previous code entry with `button.click();` as shown below:
 
@@ -398,7 +398,7 @@ In our `duck_test_multiple.js` test for example, we included this line:
 await driver.sleep(2000);
 ```
 
-The `sleep()` method accepts a value that specifies the time to wait in milliseconds — the method returns a promise that resolves at the end of that time, at which point the code after it executes.
+The `sleep()` method accepts a value that specifies the time to wait in milliseconds — the method returns a {{jsxref("Promise")}} that resolves at the end of that time. We use the `await` keyword to pause the enclosing function until the promise resolves, after which the code following the method executes.
 
 We could add a `sleep()` method to our `quick_test.js` test too — try updating your `example()` function like this:
 
@@ -426,14 +426,14 @@ const { Builder, Browser, By, Key } = require("selenium-webdriver");
 })();
 ```
 
-WebDriver will now fill out the first form field, wait for one second, then test whether its value got filled out (i.e., is not empty) by using `getAttribute()` to retrieve its `value` attribute value. It then prints a message to the console to report success/failure.
+Try running the updated code. WebDriver will now fill out the first form field, wait for one second, then test whether its value got filled out (i.e., is not empty) by using `getAttribute()` to retrieve its `value` attribute value. It then prints a message to the console to report success/failure.
 
 > [!NOTE]
 > There is also a method called [`wait()`](https://www.selenium.dev/selenium/docs/api/javascript/WebDriver.html#wait), which repeatedly tests a condition for a certain length of time, and then carries on executing the code. This also makes use of the [util library](https://www.selenium.dev/selenium/docs/api/javascript/lib_until.js.html), which defines common conditions to use along with `wait()`.
 
 ### Shutting down drivers after use
 
-After you've finished running a test, you should shut down any driver instances you've opened, to make sure they don't continue to use resources unneccessarily. This is done using the `driver.quit()` method. Update `quick_test.js` as follows:
+After you've finished running a test, you should shut down any driver instances you've opened using the `driver.quit()` method, to make sure they don't continue to use resources unnecessarily. Update `quick_test.js` as follows:
 
 ```js
 const { Builder, Browser, By, Key } = require("selenium-webdriver");
