@@ -10,7 +10,7 @@ browser-compat: css.types.rem
 The **`rem()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) returns a remainder left over when the first parameter is divided by the second parameter, similar to the JavaScript [remainder operator (`%`)](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder). The remainder is the value left over when one operand, the dividend, is divided by a second operand, the divisor. It always takes the sign of the dividend.
 
 > [!NOTE]
-> To read about the unit `rem`, see the {{CSSxRef("length")}} page.
+> To read about the unit `rem`, see the {{CSSxRef("&lt;length&gt;")}} page.
 
 > For example, the CSS `rem(27, 5)` function returns the remainder of `2`. When dividing 27 by 5, the result is 5 with a remainder of 2. The full calculation is `27 / 5 = 5 * 5 + 2`.
 
