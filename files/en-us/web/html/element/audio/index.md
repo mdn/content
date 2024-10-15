@@ -240,35 +240,23 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 ## Usage notes
 
-The `src` attribute can accept various types of audio sources:
+The audio source can be set to any valid [URL](/en-US/docs/Web/URI), including HTTP(S) URLs and [Data URLs](/en-US/docs/Web/URI/Schemes/data). When using HTTP(S) URLs, be aware that the browser's caching behavior will affect how often the file is requested from the server. Data URLs embed the audio data directly in the HTML, which can be useful for small audio files but isn't recommended for larger files as it increases the HTML file size.
 
-1. URLs: The `src` attribute can be set to any valid [URL](/en-US/docs/Web/URI), including HTTP(S) URLs and [Data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs). When using HTTP(S) URLs, be aware that the browser's caching behavior will affect how often the file is requested from the server.
+You can also set the [`srcObject`](/en-US/docs/Web/API/HTMLMediaElement/srcObject) in JavaScript to a {{jsxref("MediaStream")}} object. This is commonly used for live audio streams or real-time audio processing.
 
-2. Data URLs: You can use base64-encoded strings as the `src`. This embeds the audio data directly in the HTML, which can be useful for small audio files but isn't recommended for larger files as it increases the HTML file size.
+```js
+const audioElement = document.querySelector("audio");
+navigator.mediaDevices
+ .getUserMedia({ audio: true })
+ .then((stream) => {
+   audioElement.srcObject = stream;
+ })
+ .catch((error) => {
+   console.error("Error accessing the microphone", error);
+ });
+```
 
-   ```html
-   <audio
-     controls
-     src="data:audio/mpeg;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU4LjI5LjEwMAAAAAAAAAAAAAAA//OEAAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAAUAAAiSAAYGBgYJCQkJCQwMDAwMDw8PDw8SUlJSUlVVVVVVWFhYWFhbW1tbW15eXl5eYaGhoaGkpKSkpKenp6enqqqqqqqtra2trbDw8PDw8/Pz8/P29vb29vn5+fn5/Pz8/Pz//////8AAAAATGF2YzU4LjU0AAAAAAAAAAAAAAAAJAYAAAAAAAAAIkjQ7jNkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA">
-     Your browser does not support the audio element.
-   </audio>
-   ```
-
-3. `MediaStream` objects: While not directly supported in HTML, `MediaStream` objects can be attached to an `<audio>` element using JavaScript. This is commonly used for live audio streams or real-time audio processing. Here's an example of how you might use it:
-
-   ```javascript
-   const audioElement = document.querySelector("audio");
-   navigator.mediaDevices
-     .getUserMedia({ audio: true })
-     .then((stream) => {
-       audioElement.srcObject = stream;
-     })
-     .catch((error) => {
-       console.error("Error accessing the microphone", error);
-     });
-   ```
-
-   Note that `MediaStream` sources have limitations: they are not seekable and only support a limited set of codecs.
+Note that `MediaStream` sources have limitations: they are not seekable and only support a limited set of codecs.
 
 We offer a substantive and thorough [guide to media file types](/en-US/docs/Web/Media/Formats) and the [audio codecs that can be used within them](/en-US/docs/Web/Media/Formats/Audio_codecs). Also available is [a guide to the codecs supported for video](/en-US/docs/Web/Media/Formats/Video_codecs).
 
