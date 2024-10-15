@@ -214,7 +214,7 @@ dodecahedron.position.x = 25;
 scene.add(dodecahedron);
 ```
 
-This time, we are creating a dodecahedron, a shape containing twelve flat faces. The parameter, `DodecahedronGeometry()` defines the size of the object. We're using a Lambert material, similar to Phong, but should be less glossy. Again it's black, for now. We're moving the object to the right, so it's not in the same position as the box, or torus.
+This time, we are creating a dodecahedron, a shape containing twelve flat faces. The parameter to `DodecahedronGeometry()` defines the size of the object. We're using a Lambert material, similar to Phong, but should be less glossy. Again it's black, for now. We're moving the object to the right, so it's not in the same position as the box, or torus.
 
 As mentioned above, the new objects currently just look black. To have both, the Phong and Lambert materials properly visible, we need to introduce a source of light.
 
@@ -250,7 +250,7 @@ This rotates the cube on every frame, by a tiny bit, so the animation looks smoo
 
 ### Scaling
 
-We can also scale an object. Applying a constant value, we would make it grow, or shrink just once. Let's make things more interesting. First, we implement a helper variable, called `t` for counting elapsed time. Add it right before the `render()` function:
+We can also scale an object. Applying a constant value, we would make it grow, or shrink just once. Let's make things more interesting. First, we implement a helper variable called `t` for counting elapsed time. Add it right before the `render()` function:
 
 ```js
 let t = 0;
