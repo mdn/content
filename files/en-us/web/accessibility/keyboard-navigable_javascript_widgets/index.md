@@ -140,7 +140,7 @@ To ensure that the keyboard can be used to activate elements, any handlers bound
 
 ### Always draw the focus for tabindex="-1" items and elements that receive focus programmatically
 
-Ensure that focused elements have the focus ring. This can be done using the CSS {{cssxref("outline")}} property. Avoid unconditionally setting it to `none`—if you want to prevent unnecessary focus rings being displayed, use the {{cssxref(":focus-visible")}} pseudo-class.
+Ensure that focused elements have a focus ring. This can be done using the CSS {{cssxref("outline")}} property, which should not be unconditionally set to `none`—if you want to prevent unnecessary focus rings being displayed, use the {{cssxref(":focus-visible")}} pseudo-class.
 
 ### Prevent used key events from performing browser functions
 
