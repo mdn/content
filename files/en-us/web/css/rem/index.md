@@ -76,4 +76,4 @@ Returns a {{CSSxREF("&lt;number&gt;")}}, {{CSSxREF("&lt;dimension&gt;")}}, or {{
 
 - {{CSSxRef("round")}}
 - {{CSSxRef("mod")}}
-- {{CSSxRef("length")}}
+- {{CSSxRef("&lt;length&gt;")}}
