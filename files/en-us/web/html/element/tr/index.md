@@ -82,7 +82,9 @@ Four `<tr>` elements are used to create four table rows. Each row contains three
       <td>Delta</td>
       <td>DELL tah</td>
     </tr>
-  <tbody>
+  </tbody>
+
+  <tbody></tbody>
 </table>
 ```
 
