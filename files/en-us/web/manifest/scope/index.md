@@ -7,8 +7,8 @@ browser-compat: html.manifest.scope
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
-The `scope` manifest member is used to define the navigation scope of your web application.
-It restricts the web pages that can be navigated while the manifest is applied.
+The `scope` manifest member is used to specify a URL that determines which pages are considered to be part of your web application.
+It restricts the URLs to which the manifest is applied.
 
 ## Syntax
 
@@ -38,13 +38,15 @@ It restricts the web pages that can be navigated while the manifest is applied.
 
 The `scope` member specifies the navigation boundaries of your web app, that is, pages that are considered part of the app and that are not. You can add a `scope` for your web app to ensure users remain within the {{Glossary("Application_context", "application's context")}} while navigating your app.
 
+> > It provides a way to "deep link" into your web app from other applications. For example, an email app could use the scope to open a specific page within your web app directly.
+
 ### Fallback behavior
 
 When `scope` is missing or invalid, it defaults to `start_url`. For example:
 
-- If `start_url` is `https://example.com/app/index.html?user=123#home`, the navigation scope will be `https://example.com/app/`.
-- If `start_url` is `/pages/welcome.html`, the navigation scope will be `/pages/` on the same origin.
-- If `start_url` is `/pages/` (the trailing slash is important), the navigation scope will be `/pages/`.
+- If `start_url` is `https://example.com/app/index.html?user=123#home`, the scope will be `https://example.com/app/`.
+- If `start_url` is `/pages/welcome.html`, the scope will be `/pages/` on the same origin.
+- If `start_url` is `/pages/` (the trailing slash is important), the scope will be `/pages/`.
 
 If you rely on the fallback behaviour of `scope`, ensure that URLs of all pages in your app begin with the parent path of `start_url`.
 To avoid potential issues with scope determination in this way, it's recommended to explicitly specify `scope` in your manifest file.
@@ -72,7 +74,7 @@ This behavior aims to make users aware that they have navigated away from your w
 
 ### Specifying an absolute URL for scope
 
-Consider a scenario where the manifest file for your web app is linked from `https://example.com/index.html`, and you want the navigation scope to include all the subdirectories. You can specify this scope such that it is same-origin with manifest file URL:
+Suppose the manifest file for your web app is linked from `https://example.com/index.html`, and you want the scope to include all the subdirectories. You can specify this scope using an absolute URL that is same-origin with manifest file URL, as shown below. This ensures that pages like `https://example.com/store` and `https://example.com/company` are part of your web app.
 
 ```json
 {
@@ -82,7 +84,7 @@ Consider a scenario where the manifest file for your web app is linked from `htt
 
 ### Specifying a relative URL for scope
 
-Suppose your manifest file's URL is `https://example.com/resources/manifest.json`, and you want the navigation scope to be `https://example.com/app/`. In this case, you can define the `scope` as a relative URL like so:
+If your manifest file's URL is `https://example.com/resources/manifest.json`, and you want the scope to be `https://example.com/app/`, you can define it as a relative URL:
 
 ```json
 {
@@ -90,9 +92,9 @@ Suppose your manifest file's URL is `https://example.com/resources/manifest.json
 }
 ```
 
-### Limiting navigation to a specific part in your web app
+### Defining a web app for a specific section of your site
 
-If you have a web app with multiple sections, but you want to limit the navigation to one section, you can define the `scope` as:
+If you have a website with multiple sections, but you want your web app to focus to on a specific section, you can define the `scope` as:
 
 ```json
 {
@@ -102,7 +104,7 @@ If you have a web app with multiple sections, but you want to limit the navigati
 }
 ```
 
-Users will be able to navigate to `https://example.com/store/products`, but navigating to `https://example.com/company/` will be out of scope for your web app. For off-scope URLs, browsers may display different UI elements to let users know they've navigated away from the app.
+With this setup, pages like `https://example.com/store/products` are part of your web app, but `https://example.com/company/` is out of your web app's scope. For off-scope URLs, browsers may display different UI elements to let users know they've navigated away from the app.
 
 ## Specifications
 
