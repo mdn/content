@@ -365,5 +365,15 @@
     "ru": "нет",
     "zh-CN": "否",
     "zh-TW": "否"
+  },
+  "overview": {
+    "en-US": "Overview",
+    "es": "Generalidades",
+    "fr": "Aperçu",
+    "ja": "の概要",
+    "ko": "개요",
+    "ru": "Обзор",
+    "zh-CN": "概述",
+    "zh-TW": "概述"
   }
 }

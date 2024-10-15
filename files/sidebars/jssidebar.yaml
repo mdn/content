@@ -92,36 +92,43 @@ sidebar:
   - type: listSubPages
     details: closed
     title: Global_Objects
+    includeParent: true
     path: /en-US/docs/Web/JavaScript/Reference/Global_Objects
 
   - type: listSubPages
     details: closed
     title: Operators
+    includeParent: true
     path: /en-US/docs/Web/JavaScript/Reference/Operators
 
   - type: listSubPages
     details: closed
     title: Statements
+    includeParent: true
     path: /en-US/docs/Web/JavaScript/Reference/Statements
 
   - type: listSubPages
     details: closed
     title: Functions
+    includeParent: true
     path: /en-US/docs/Web/JavaScript/Reference/Functions
 
   - type: listSubPages
     details: closed
     title: Classes
+    includeParent: true
     path: /en-US/docs/Web/JavaScript/Reference/Classes
 
   - type: listSubPages
     details: closed
     title: Guide_RegExp
+    includeParent: true
     path: /en-US/docs/Web/JavaScript/Reference/Regular_expressions
 
   - type: listSubPages
     details: closed
     title: Errors
+    includeParent: true
     path: /en-US/docs/Web/JavaScript/Reference/Errors
 
   - details: closed

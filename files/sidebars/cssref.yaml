@@ -73,7 +73,7 @@ sidebar:
       - /Learn/CSS/CSS_layout/Legacy_Layout_Methods
       - /Learn/CSS/CSS_layout/Supporting_Older_Browsers
       - link: /Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension
-        title: Assessment_Fundamental_layout_comprehension
+        title: Assessment_Fundamental_Layout_Comprehension
   - type: section
     link: /Web/CSS/Reference
   - type: listSubPages
@@ -304,8 +304,8 @@ sidebar:
       - /Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
 l10n:
   en-US:
-    Tutorials: Tutorials,
-    CSS_basics: CSS basics,
+    Tutorials: Tutorials
+    CSS_basics: CSS basics
     CSS_first_steps: CSS first steps
     CSS_first_steps_overview: CSS first steps overview
     Assessment_Styling_a_biography_page: "Assessment: Styling a biography page"
