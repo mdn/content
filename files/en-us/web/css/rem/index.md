@@ -12,7 +12,7 @@ The **`rem()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Fu
 > [!NOTE]
 > To read about the unit `rem`, see the {{CSSxRef("&lt;length&gt;")}} page.
 
-> For example, the CSS `rem(27, 5)` function returns the remainder of `2`. When dividing 27 by 5, the result is 5 with a remainder of 2. The full calculation is `27 / 5 = 5 * 5 + 2`.
+For example, the CSS `rem(27, 5)` function returns the remainder of `2`. When dividing 27 by 5, the result is 5 with a remainder of 2. The full calculation is `27 / 5 = 5 * 5 + 2`.
 
 ## Syntax
 
