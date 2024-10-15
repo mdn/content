@@ -1,14 +1,14 @@
 ---
-title: "HTMLInputElement: formNoValidate method"
+title: "HTMLInputElement: formNoValidate property"
 short-title: formNoValidate
 slug: Web/API/HTMLInputElement/formNoValidate
-page-type: web-api-instance-method
+page-type: web-api-instance-property
 browser-compat: api.HTMLInputElement.formNoValidate
 ---
 
 {{APIRef("HTML DOM")}}
 
-The **`formNoValidate`** property of the {{domxref("HTMLInputElement")}} interface is boolean value indicating if the {{htmlelement("form")}} will bypass [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) when submitted via the {{htmlelement("input")}}. It reflects the `<input>` element's [`formnovalidate`](/en-US/docs/Web/HTML/Element/input#formnovalidate) attribute.
+The **`formNoValidate`** property of the {{domxref("HTMLInputElement")}} interface is a boolean value indicating if the {{htmlelement("form")}} will bypass [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) when submitted via the {{htmlelement("input")}}. It reflects the `<input>` element's [`formnovalidate`](/en-US/docs/Web/HTML/Element/input#formnovalidate) attribute.
 
 This property is valid only for [`submit`](/en-US/docs/Web/HTML/Element/input/submit) and [`image`](/en-US/docs/Web/HTML/Element/input/image) `<input>` elements.
 
