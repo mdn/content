@@ -265,7 +265,7 @@ Testing gets complicated because some browsers only run on certain operating sys
 
 See [Strategies for carrying out testing: Putting together a testing lab](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#putting_together_a_testing_lab) for more information.
 
-By all means run some tests on a real device, especially on real mobile devices. Mobile device simulation is a new, evolving technology and less reliable than desktop simulation. Mobile devices cost money, of course, so we suggest taking a look at the [Open Device Lab initiative](https://www.smashingmagazine.com/2016/11/worlds-best-open-device-labs/#odls-have-opened-doors-for-idls). You can also share devices if you want to test on many platforms without spending too much.
+By all means run some tests on a real device, especially on real mobile devices. Mobile devices cost money, of course, so we recommend sharing devices across a team if you want to test on many platforms without spending too much. For scalable cloud access to real device testing, we'd also recommend taking a look at [App Live: BrowserStack's Interactive Mobile App Testing platform](https://www.browserstack.com/app-live).
 
 ## Next steps
 

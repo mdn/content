@@ -330,87 +330,7 @@ When you use these kinds of services, you provide a URL of the page you want to 
 You can then step up a gear, using an API to access functionality programmatically, which means that such apps can be combined with task runners, such as your own local Selenium environments and others, to create automated tests.
 
 > [!NOTE]
-> There are other commercial browser testing systems available but in this article, we'll focus on Sauce Labs, BrowserStack, and TestingBot. We're not saying that these are necessarily the best tools available, but they are good ones that are simple for beginners to get up and running with.
-
-### Sauce Labs
-
-#### Getting started with Sauce Labs
-
-Let's get started with a Sauce Labs Trial.
-
-1. Create a Sauce Labs trial account.
-2. Sign in. This should happen automatically after you verify your email address.
-
-#### The basics: Manual tests
-
-The [Sauce Labs dashboard](https://app.saucelabs.com/dashboard/manual) has a lot of options available on it. For now, make sure you are on the _Manual Tests_ tab.
-
-1. Click _Start a new manual session_.
-2. In the next screen, type in the URL of a page you want to test (use <https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html>, for example), then choose a browser/OS combination you want to test by using the different buttons and lists. There is a lot of choice, as you'll see!![select sauce manual session](sauce-manual-session.png)
-3. When you click Start session, a loading screen will then appear, which spins up a virtual machine running the combination you chose.
-4. When loading has finished, you can then start to remotely test the website running in the chosen browser.![Sauce test running](sauce-test-running.png)
-5. From here you can see the layout as it would look in the browser you are testing, move the mouse around and try clicking buttons, etc. The top menu allows you to:
-
-   - Stop the session
-   - Give someone else a URL so they can observe the test remotely.
-   - Copy text/notes to a remote clipboard.
-   - Take a screenshot.
-   - Test in full screen mode.
-
-Once you stop the session, you'll return to the Manual Tests tab, where you'll see an entry for each of the previous manual sessions you started. Clicking on one of these entries shows more data for the session. In here you can download any screenshots you took, watch a video of the session, view data logs, and more.
-
-> [!NOTE]
-> This is already very useful, and way more convenient than having to set up all these emulators and virtual machines by yourself.
-
-#### Advanced: The Sauce Labs API
-
-Sauce Labs has a [restful API](https://docs.saucelabs.com/dev/api/) that allows you to programmatically retrieve details of your account and existing tests, and annotate tests with further details, such as their pass/fail state which isn't recordable by manual testing alone. For example, you might want to run one of your own Selenium tests remotely using Sauce Labs to test a certain browser/OS combination, and then pass the test results back to Sauce Labs.
-
-It has several clients available to allow you to make calls to the API using your favorite environment, be it PHP, Java, Node.js, etc.
-
-Let's have a brief look at how we'd access the API using Node.js and [node-saucelabs](https://github.com/saucelabs/node-saucelabs).
-
-1. First, set up a new npm project to test this out, as detailed in [Setting up Node and npm](#setting_up_node_and_npm). Use a different directory name than before, like `sauce-test` for example.
-2. Install the Node Sauce Labs wrapper using the following command:
-
-   ```bash
-   npm install saucelabs
-   ```
-
-3. Create a new file inside your project root called `call_sauce.js`. give it the following contents:
-
-   ```js
-   const SauceLabs = require("saucelabs").default;
-
-   (async () => {
-     const myAccount = new SauceLabs({
-       username: "your-sauce-username",
-       password: "your-sauce-api-key",
-     });
-
-     // Get full WebDriver URL from the client depending on region:
-     console.log(myAccount.webdriverEndpoint);
-
-     // Get job details of last run job
-     const jobs = await myAccount.listJobs("your-sauce-username", {
-       limit: 1,
-       full: true,
-     });
-
-     console.log(jobs);
-   })();
-   ```
-
-4. You'll need to fill in your Sauce Labs username and API key in the indicated places. These can be retrieved from your [User Settings](https://app.saucelabs.com/user-settings) page. Fill these in now.
-5. Make sure everything is saved, and run your file like so:
-
-   ```bash
-   node call_sauce
-   ```
-
-#### Advanced: Automated tests
-
-We'll cover actually running automated Sauce Lab tests in the next article.
+> There are other commercial browser testing systems available but in this article, we'll focus on BrowserStack, Sauce Labs, and TestingBot. We're not saying that these are necessarily the best tools available, but they are good ones that are simple for beginners to get up and running with.
 
 ### BrowserStack
 
@@ -623,6 +543,86 @@ function getSessionDetails(session) {
 #### Advanced: Automated tests
 
 We'll cover [running automated BrowserStack tests](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment#browserstack) in the next article.
+
+### Sauce Labs
+
+#### Getting started with Sauce Labs
+
+Let's get started with a Sauce Labs Trial.
+
+1. Create a Sauce Labs trial account.
+2. Sign in. This should happen automatically after you verify your email address.
+
+#### The basics: Manual tests
+
+The [Sauce Labs dashboard](https://app.saucelabs.com/dashboard/manual) has a lot of options available on it. For now, make sure you are on the _Manual Tests_ tab.
+
+1. Click _Start a new manual session_.
+2. In the next screen, type in the URL of a page you want to test (use <https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html>, for example), then choose a browser/OS combination you want to test by using the different buttons and lists. There is a lot of choice, as you'll see!![select sauce manual session](sauce-manual-session.png)
+3. When you click Start session, a loading screen will then appear, which spins up a virtual machine running the combination you chose.
+4. When loading has finished, you can then start to remotely test the website running in the chosen browser.![Sauce test running](sauce-test-running.png)
+5. From here you can see the layout as it would look in the browser you are testing, move the mouse around and try clicking buttons, etc. The top menu allows you to:
+
+   - Stop the session
+   - Give someone else a URL so they can observe the test remotely.
+   - Copy text/notes to a remote clipboard.
+   - Take a screenshot.
+   - Test in full screen mode.
+
+Once you stop the session, you'll return to the Manual Tests tab, where you'll see an entry for each of the previous manual sessions you started. Clicking on one of these entries shows more data for the session. In here you can download any screenshots you took, watch a video of the session, view data logs, and more.
+
+> [!NOTE]
+> This is already very useful, and way more convenient than having to set up all these emulators and virtual machines by yourself.
+
+#### Advanced: The Sauce Labs API
+
+Sauce Labs has a [restful API](https://docs.saucelabs.com/dev/api/) that allows you to programmatically retrieve details of your account and existing tests, and annotate tests with further details, such as their pass/fail state which isn't recordable by manual testing alone. For example, you might want to run one of your own Selenium tests remotely using Sauce Labs to test a certain browser/OS combination, and then pass the test results back to Sauce Labs.
+
+It has several clients available to allow you to make calls to the API using your favorite environment, be it PHP, Java, Node.js, etc.
+
+Let's have a brief look at how we'd access the API using Node.js and [node-saucelabs](https://github.com/saucelabs/node-saucelabs).
+
+1. First, set up a new npm project to test this out, as detailed in [Setting up Node and npm](#setting_up_node_and_npm). Use a different directory name than before, like `sauce-test` for example.
+2. Install the Node Sauce Labs wrapper using the following command:
+
+   ```bash
+   npm install saucelabs
+   ```
+
+3. Create a new file inside your project root called `call_sauce.js`. give it the following contents:
+
+   ```js
+   const SauceLabs = require("saucelabs").default;
+
+   (async () => {
+     const myAccount = new SauceLabs({
+       username: "your-sauce-username",
+       password: "your-sauce-api-key",
+     });
+
+     // Get full WebDriver URL from the client depending on region:
+     console.log(myAccount.webdriverEndpoint);
+
+     // Get job details of last run job
+     const jobs = await myAccount.listJobs("your-sauce-username", {
+       limit: 1,
+       full: true,
+     });
+
+     console.log(jobs);
+   })();
+   ```
+
+4. You'll need to fill in your Sauce Labs username and API key in the indicated places. These can be retrieved from your [User Settings](https://app.saucelabs.com/user-settings) page. Fill these in now.
+5. Make sure everything is saved, and run your file like so:
+
+   ```bash
+   node call_sauce
+   ```
+
+#### Advanced: Automated tests
+
+We'll cover actually running automated Sauce Lab tests in the next article.
 
 ### TestingBot
 

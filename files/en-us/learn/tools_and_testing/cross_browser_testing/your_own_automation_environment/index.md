@@ -499,7 +499,7 @@ It turns out that running tests on remote servers isn't that much more difficult
 
 ### BrowserStack
 
-Let's create an example to show how to get a Selenium test running remotely on BrowserStack:
+Let's create an example to show how to get a Selenium test running remotely on [BrowserStack](https://www.browserstack.com/automate):
 
 1. Inside your project directory, create a new file called `bstack_duck_test.js`.
 2. Give it the following contents:
