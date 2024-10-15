@@ -57,7 +57,7 @@ Content-Type: text/html
 
 <!doctype html>
 ...
-<link rel="preload" href="https://cdn.example.com/fonts/myfont.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="https://cdn.example.com/fonts/my-font.woff2" as="font" type="font/woff2" crossorigin>
 ...
 <img src="https://cdn.example.com/images/image.jpg" alt="">
 ...
@@ -127,4 +127,5 @@ Content-Type: text/html
 - [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP)
 - [`rel="preconnect"`](/en-US/docs/Web/HTML/Attributes/rel/preconnect) ({{htmlelement("link")}} attribute)
 - [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload) ({{htmlelement("link")}} attribute)
+- [`fetchpriority`](/en-US/docs/Web/HTML/Element/link#fetchpriority) ({{htmlelement("link")}} attribute)
 - [Early Hints update: How Cloudflare, Google, and Shopify are working together to build a faster Internet for everyone](https://blog.cloudflare.com/early-hints-performance/) from the CloudFlare blog

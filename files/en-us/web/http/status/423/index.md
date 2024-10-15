@@ -32,7 +32,7 @@ Content-Length: xxxx
 <?xml version="1.0" encoding="utf-8" ?>
 <D:error xmlns:D="DAV:">
   <D:lock-token-submitted>
-    <D:href>/workspace/webdav/</D:href>
+    <D:href>/workspace/web-dav/</D:href>
   </D:lock-token-submitted>
 </D:error>
 ```

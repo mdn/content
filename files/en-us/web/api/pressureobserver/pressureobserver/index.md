@@ -8,7 +8,7 @@ status:
 browser-compat: api.PressureObserver.PressureObserver
 ---
 
-{{APIRef("Compute Pressure API")}}{{SeeCompatTable}}{{securecontext_header}}
+{{APIRef("Compute Pressure API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_service")}}{{securecontext_header}}
 
 The **`PressureObserver()`** constructor creates a new {{domxref("PressureObserver")}} object to watch for changes to pressure changes of system resources such as the CPU.
 

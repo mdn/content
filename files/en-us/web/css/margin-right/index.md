@@ -151,7 +151,7 @@ The `margin-right` property is specified as the keyword `auto`, or a `<length>`,
 .content {
   margin-right: 5%;
 }
-.sidebox {
+.side-box {
   margin-right: 10px;
 }
 .logo {
@@ -169,5 +169,8 @@ The `margin-right` property is specified as the keyword `auto`, or a `<length>`,
 
 ## See also
 
-- {{cssxref("margin-top")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}} and the {{cssxref("margin")}} shorthand
-- The mapped logical properties: {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, and {{cssxref("margin-inline-end")}} and the shorthands {{cssxref("margin-block")}} and {{cssxref("margin-inline")}}
+- {{cssxref("margin-top")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}}
+- {{cssxref("margin")}} shorthand
+- {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, and {{cssxref("margin-inline-end")}}
+- {{cssxref("margin-block")}} and {{cssxref("margin-inline")}} shorthands
+- [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module

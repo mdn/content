@@ -93,7 +93,7 @@ _No changes._
 - {{domxref("Performance.toJSON()")}} has been exposed to {{domxref("Web_Workers_API", "Web Workers", "", "1")}} ([Firefox bug 1504958](https://bugzil.la/1504958)).
 - {{domxref("XMLHttpRequest")}} requests will now throw a `NetworkError` if the requested content type is a `Blob`, and the request method is not `GET` ([Firefox bug 1502599](https://bugzil.la/1502599)).
 - The `-moz-` prefixed versions of many of the {{domxref("Fullscreen API", "", "", "1")}} features have been deprecated, and will now display deprecation warnings in the JavaScript console when encountered ([Firefox bug 1504946](https://bugzil.la/1504946)).
-- {{domxref("createImageBitmap()")}} now supports SVG images ({{domxref("SVGImageElement")}}) as an image source ([Firefox bug 1500768](https://bugzil.la/1500768)).
+- {{domxref("Window.createImageBitmap()")}} and {{domxref("WorkerGlobalScope.createImageBitmap()")}} now supports SVG images ({{domxref("SVGImageElement")}}) as an image source ([Firefox bug 1500768](https://bugzil.la/1500768)).
 
 #### DOM events
 
@@ -107,7 +107,7 @@ _No changes._
 #### Fetch and Service workers
 
 - The {{domxref("Response.redirect_static", "Response.redirect()")}} method now correctly throws a `TypeError` if a non-valid URL is specified as the first parameter ([Firefox bug 1503276](https://bugzil.la/1503276)).
-- The {{domxref("ServiceWorkerContainer.register()")}} and {{domxref("WorkerGlobalScope.importScripts()")}} (when used by a service worker) methods will now accept any files with a valid [JavaScript MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript) ([Firefox bug 1354577](https://bugzil.la/1354577)).
+- The {{domxref("ServiceWorkerContainer.register()")}} and {{domxref("WorkerGlobalScope.importScripts()")}} (when used by a service worker) methods will now accept any files with a valid [JavaScript MIME type](/en-US/docs/Web/HTTP/MIME_types#textjavascript) ([Firefox bug 1354577](https://bugzil.la/1354577)).
 - The {{domxref("FetchEvent.replacesClientId")}} and {{domxref("FetchEvent.resultingClientId")}} properties are now supported ([Firefox bug 1264177](https://bugzil.la/1264177)).
 - The {{domxref("ServiceWorkerGlobalScope.messageerror_event", "ServiceWorkerGlobalScope.onmessageerror")}} and {{domxref("ServiceWorkerContainer.messageerror_event", "ServiceWorkerContainer.onmessageerror")}} handler properties have been implemented ([Firefox bug 1399446](https://bugzil.la/1399446)).
 - The {{httpheader("Origin")}} header is no longer set on Fetch requests with a method of {{HTTPMethod("HEAD")}} or {{HTTPMethod("GET")}} ([Firefox bug 1508661](https://bugzil.la/1508661)).

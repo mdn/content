@@ -516,7 +516,7 @@ But a custom stream is still a `ReadableStream` instance, meaning you can attach
 > [!NOTE]
 > In order to consume a stream using {{domxref("FetchEvent.respondWith()")}}, the enqueued stream contents must be of type {{jsxref("Uint8Array")}}; for example, encoded using {{domxref("TextEncoder")}}.
 
-The custom stream constructor has a `start()` method that uses a {{domxref("setInterval()")}} call to generate a random string every second. {{domxref("ReadableStreamDefaultController.enqueue()")}} is then used to enqueue it into the stream. When the button is pressed, the interval is cancelled, and a function called `readStream()` is invoked to read the data back out of the stream again. We also close the stream, as we've stopped enqueuing chunks to it.
+The custom stream constructor has a `start()` method that uses a {{domxref("Window.setInterval", "setInterval()")}} call to generate a random string every second. {{domxref("ReadableStreamDefaultController.enqueue()")}} is then used to enqueue it into the stream. When the button is pressed, the interval is cancelled, and a function called `readStream()` is invoked to read the data back out of the stream again. We also close the stream, as we've stopped enqueuing chunks to it.
 
 ```js
 let interval;
