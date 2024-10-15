@@ -68,6 +68,114 @@ watcher.onclose = () => {
 picker.querySelector(".close-button").onclick = () => watcher.requestClose();
 ```
 
+### Closing a sidebar using a platform close request
+
+In this example we have a sidebar component that is displayed when an "Open" button is selected, and hidden using either a "Close" button or platform-native mechanisms.
+To make it more interesting, this is a live example!
+
+Note also the example is a little contrived because normally we would use a toggle button to change a sidebar state.
+We could certainly do that, but using separate "Open" and "Close" buttons makes it easier to demonstrate the feature.
+
+#### HTML
+
+The HTML defines "Open" and "Close" {{htmlelement("button")}} elements, along with {{htmlelement("div")}} elements for the main content and the sidebar.
+CSS is used to animate the display of the sidebar element when the `open` class is added or removed from the sidebar and content elements (this CSS is hidden because it is not relevant to the example).
+
+```html
+<button id="sidebar-open" type="button">Open</button>
+<button id="sidebar-close" type="button">Close</button>
+<div class="sidebar">Sidebar</div>
+<div class="main-content">Main content</div>
+```
+
+```css hidden
+.sidebar {
+  position: fixed;
+  top: 20px;
+  left: -300px;
+  right: auto;
+  bottom: 0;
+  width: 300px; /* Adjust the width as needed */
+  background-color: lightblue;
+}
+
+.main-content {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto; /* Adjust the width as needed */
+  background-color: green;
+  margin-left: 0px; /* Adjust for the sidebar width */
+}
+
+.sidebar.open {
+  left: 0; /* Slide the sidebar to the right when open */
+  transition: left 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+.main-content.open {
+  margin-left: 300px; /* Adjust for the sidebar width */
+  transition: margin-left 0.3s ease-in-out;
+  background-color: green;
+}
+```
+
+#### JavaScript
+
+The code first gets variables for the buttons and `<div>` elements defined in the HTML.
+It also defines a function `closeSidebar()` that is called when the sidebar is closed to remove the `open` class from the `<div>` elements, and adds a `click` event listener that calls the `openSidebar()` method when the "Open" button is clicked.
+
+```js
+const sidebar = document.querySelector(".sidebar");
+const mainContent = document.querySelector(".main-content");
+const sidebarOpen = document.getElementById("sidebar-open");
+const sidebarClose = document.getElementById("sidebar-close");
+
+function closeSidebar() {
+  sidebar.classList.remove("open");
+  mainContent.classList.remove("open");
+}
+
+sidebarOpen.addEventListener("click", openSidebar);
+```
+
+The implementation of `openSidebar()` is given below.
+The method first checks if the sidebar is already open, and if not adds the `open` class to the elements so that the sidebar is displayed.
+
+We then create a new `CloseWatcher` and add a listener that will call {{domxref("CloseWatcher.close()", "close()")}} on it if the "Close" button is clicked.
+This ensures that the `close` event is called when either platform native close methods or the "Close" button are used.
+The implementation of the `onclose()` event handler simply closes the sidebar, and the `CloseWatcher` is then destroyed automatically.
+
+```js
+function openSidebar() {
+  if (!sidebar.classList.contains("open")) {
+    sidebar.classList.add("open");
+    mainContent.classList.add("open");
+
+    //Add new CloseWatcher
+    const watcher = new CloseWatcher();
+
+    sidebarClose.addEventListener("click", () => watcher.close());
+
+    // Handle close event, invoked by platform mechanisms or "Close" button
+    watcher.onclose = () => {
+      closeSidebar();
+      console.log("close event");
+    };
+  }
+}
+```
+
+Note that we chose to call `close()` on the watcher instead of {{domxref("CloseWatcher.requestClose()")}} because in this example there is never a need to prevent the sidebar from closing prematurely, so we don't need to handle the `cancel` event.
+
+#### Result
+
+Select the "Open" button to open the sidebar. You should be able to close the sidebar using the "Close" button or the usual platform method, such as the <kbd>Esc</kbd> key on Windows.
+
+{{ EmbedLiveSample("Closing a sidebar using a platform close request", "100%", "200") }}
+
 ## Specifications
 
 {{Specifications}}
