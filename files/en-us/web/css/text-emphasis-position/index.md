@@ -199,7 +199,7 @@ position.addEventListener("change", updateClass);
 
 #### Result
 
-Use the position select to choose the location of the emphasis marks. The **preferred** option uses the preferred positions highlighted it the [table above](#description).
+Use the "Emphasis position" drop down to choose the location of the emphasis marks. The `preferred` option in the drop down uses the preferred positions, as explained in the [Description](#description) section.
 
 {{EmbedLiveSample("Emphasis_mark_positions", 450, 170)}}
 
