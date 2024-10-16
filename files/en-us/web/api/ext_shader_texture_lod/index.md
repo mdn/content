@@ -46,11 +46,11 @@ Shader code that avoids artifacts when wrapping texture coordinates:
   #extension GL_OES_standard_derivatives : enable
 
   uniform sampler2D myTexture;
-  varying vec2 texcoord;
+  varying vec2 texCoord;
 
   void main(){
-    gl_FragColor = texture2DGradEXT(myTexture, mod(texcoord, vec2(0.1, 0.5)),
-                                    dFdx(texcoord), dFdy(texcoord));
+    gl_FragColor = texture2DGradEXT(myTexture, mod(texCoord, vec2(0.1, 0.5)),
+                                    dFdx(texCoord), dFdy(texCoord));
   }
 </script>
 ```

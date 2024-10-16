@@ -7,7 +7,7 @@ browser-compat: css.properties.text-emphasis-position
 
 {{CSSRef}}
 
-The **`text-emphasis-position`** [CSS](/en-US/docs/Web/CSS) property sets where emphasis marks are drawn. Like [ruby](/en-US/docs/Web/HTML/Element/ruby) text (not related to ruby language), if there isn't enough room for emphasis marks, the line height is increased.
+The **`text-emphasis-position`** [CSS](/en-US/docs/Web/CSS) property sets where emphasis marks are drawn. Similar to the text rendered by the [`<ruby>`](/en-US/docs/Web/HTML/Element/ruby) HTML element, if there isn't enough room for emphasis marks, the line height is increased.
 
 {{EmbedInteractiveExample("pages/css/text-emphasis-position.html")}}
 
@@ -17,7 +17,7 @@ The **`text-emphasis-position`** [CSS](/en-US/docs/Web/CSS) property sets where 
 /* Initial value */
 text-emphasis-position: auto;
 
-/* Keywords value */
+/* Keyword values */
 text-emphasis-position: over right;
 text-emphasis-position: over left;
 text-emphasis-position: under right;
@@ -38,7 +38,11 @@ text-emphasis-position: unset;
 
 ### Values
 
-- `auto`
+The property accepts one or two values:
+
+- If only one value is provided, it can be `auto`, `over`, or `under`. When only `over` or `under` is used, `right` is assumed as the default position.
+- If two values are provided, they must include one of `over` or `under`and one of `right` or `left`. Their order does not matter.
+- `auto` {{Experimental_Inline}}
   - : Draws marks over the text in horizontal writing mode and to the right of the text in vertical writing mode.
 - `over`
   - : Draws marks over the text in horizontal writing mode.
@@ -120,14 +124,14 @@ The preferred position of emphasis marks depends on the language. In Japanese fo
 
 {{csssyntax}}
 
-## Examples
+### Adding emphasis mark positions
 
 ### Emphasis mark positions
 
-The select field is used to change the class on the `<section>` and the class updates the position of the emphasis marks.
+Use the drop down menu to change the position of the emphasis marks. This will change the class on the `<section>` element, which in turn, updates the position of the emphasis marks on the text.
 
 ```html hidden
-<label for="position">position:</position>
+<label for="position">Emphasis position:</position>
 <select id="position">
   <option value="auto">auto</option>
   <option value="over-right">over right</option>
@@ -199,7 +203,7 @@ position.addEventListener("change", updateClass);
 
 #### Result
 
-Use the position select to choose the location of the emphasis marks. The **preferred** option uses the preferred positions highlighted it the [table above](#description).
+Use the "Emphasis position" drop down to choose the location of the emphasis marks. The `preferred` option in the drop down uses the preferred positions, as explained in the [Description](#description) section.
 
 {{EmbedLiveSample("Emphasis_mark_positions", 450, 170)}}
 
