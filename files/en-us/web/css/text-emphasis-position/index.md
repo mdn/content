@@ -126,7 +126,7 @@ The preferred position of emphasis marks depends on the language. In Japanese fo
 
 ### Emphasis mark positions
 
-The select field is used to change the class on the `<section>` and the class updates the position of the emphasis marks.
+Use the drop down menu to change the position of the emphasis marks. This will change the class on the `<section>` element, which in turn, updates the position of the emphasis marks on the text.
 
 ```html hidden
 <label for="position">Emphasis position:</position>
