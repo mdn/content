@@ -41,43 +41,62 @@ In the next section, we'll look at the tools available to control resource loads
 
 ## Controlling resource loading
 
-A web page usually doesn't consist of just an HTML document. It usually loads various other resources, such as JavaScript files, stylesheets, images, fonts, and so on, through HTML elements like {{htmlelement("script")}} or {{htmlelement("style")}}, CSS properties like {{cssxref("font")}} or {{cssxref("background-image")}}, and Web APIs like {{domxref("Window.fetch", "fetch()")}}.
+A CSP can be used to control the resources that a document is allowed to load. This is primarily used for protection against cross-site scripting (XSS) attacks.
 
-By default a document can:
+In this section we'll first see how controlling resource laods can help protect against XSS, then at the tools CSP provides to control resource loads. Finally we'll describe one particular recommended strategy, which is called a "Strict CSP".
 
-- load resources from any location
-- embed inline JavaScript
-- execute text as JavaScript using APIs like [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval).
+### XSS and resource loading
 
-These abilities can enable XSS attacks, including:
+A cross-site scripting (XSS) attack is one in which an attacker is able to execute their code in the context of the target website. This code is then able to do anything that the website's own code could do, including, for example:
 
-- injecting a `<script>` tag that links to a malicious source:
+- access or modify the content of the site's loaded pages
+- access or modify content in local storage
+- make HTTP requests with the user's credentials, enabling them to impersonate the user or access sensitive data
+
+An XSS attack is possible when a website accepts some input which might have been crafted by an attacker (for example, URL parameters, or a comment on a blog post) and then includes it in the page without _sanitizing_ it: that is, without ensuring that it can't be executed as JavaScript.
+
+Websites should protect themselves against XSS by sanitizing this input before including it in the page. A CSP provides a complementary protection, which should protect the website even if sanitization fails.
+
+If sanitization does fail, there are various forms the injected malicious code can take in the document, including:
+
+- A {{htmlelement("script")}} tag that links to a malicious source:
 
   ```html
   <script src="https://evil.com/hacker.js"></script>
   ```
 
-- injecting a malicious inline script:
+- A `<script>` tag that includes inline JavaScript:
 
   ```html
   <script>
-    // something bad
+    console.log("You've been hacked!");
   </script>
   ```
 
-- tricking a site into executing a string containing malicious code:
-
-  ```js
-  eval("// something bad");
-  ```
-
-- injecting an {{htmlelement("object")}} element that loads a malicious plugin:
+- An inline event handler:
 
   ```html
-  <object data="https://evil.com/hacker.plugin"></object>
+  <img onmouseover="console.log(`You've been hacked!`)" />
   ```
 
-So one of the main functions of a CSP is to control which resources a web page is allowed to load. In this section we'll look at the tools CSP provides for this, and then we'll look at one particular recommended strategy, which is called a "Strict CSP".
+- A string argument to an unsafe API like [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval):
+
+  ```js
+  eval("console.log(`You've been hacked!`)");
+  ```
+
+A CSP can provide protection against all of these. With a CSP, you can:
+
+- define the permitted sources for JavaScript files and other resources, effectively blocking loads from `https://evil.com`
+- disable inline script tags
+- allow only script tags which have the correct nonce or hash set
+- disable inline event handlers
+- disable dangerous APIs like `eval()`
+
+In the next section we'll go over the tools CSP provides to do these things.
+
+> [!NOTE]
+> Setting a CSP is not an alternative to sanitizing input. Websites should sanitize input _and_ set a CSP, providing defense in depth against XSS.
 
 ### Fetch directives
 
@@ -286,7 +305,7 @@ Like inline JavaScript, if a CSP contains either a `default-src` or a `script-sr
   const sum = new Function("a", "b", "return a + b");
   ```
 
-- The string argument to {{domxref("setTimeout()")}} and {{domxref("setInterval()")}}:
+- The string argument to {{domxref("Window.setTimeout()", "setTimeout()")}} and {{domxref("Window.setInterval()", "setInterval()")}}:
 
   ```js
   setTimeout("console.log('hello from setTimeout')", 1);
