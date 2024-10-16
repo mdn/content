@@ -37,6 +37,8 @@ It sets two directives:
 
 ![A CSP broken into its directives.](csp-overview.svg)
 
+The first directive, `default-src`, tells the browser to load only resources that are same-origin with the document, unless other more specific directives set a different policy for other resource types. The second, `img-src`, tells the browser to load images that are same-origin or that are served from `example.com`.
+
 In the next section, we'll look at the tools available to control resource loads, which is the main function of a CSP.
 
 ## Controlling resource loading
