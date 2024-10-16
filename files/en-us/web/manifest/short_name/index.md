@@ -26,9 +26,6 @@ The `short_name` manifest member is used to specify a short name for your web ap
 
 Browsers may use `short_name` in place of [`name`](/en-US/docs/Web/Manifest/name) when there is insufficient space to display the full name, such as on a device's home screen, in the application switcher, or in other space-constrained contexts.
 
-> [!NOTE]
-> For Chromium-based browsers, a `short_name` or `name` is required in the manifest for the web app to be installable.
-
 Keep the following points in mind when selecting a short name for your web app:
 
 - It should be a concise version of your app's `name`.

@@ -51,9 +51,6 @@ They may also allow users to modify the URL, such as when creating a bookmark fo
 As a result, the `start_url` you specify may not be the one ultimately used.
 It is important for you to keep this in mind while designing your app to allow for variations in `start_url`.
 
-> [!NOTE]
-> For Chromium-based browsers, a `start_url` is required in the manifest for the web app to be installable.
-
 ## Privacy considerations
 
 - **Fingerprinting**:

@@ -28,9 +28,6 @@ The `name` manifest member serves as the {{Glossary("Accessible_name", "accessib
 
 In space-constrained contexts where the full `name` may not fit, such as on a device's home screen or in the application switcher, the value of the [`short_name`](/en-US/docs/Web/Manifest/short_name) property (if defined) may be used instead.
 
-> [!NOTE]
-> For Chromium-based browsers, a `name` or `short_name` is required in the manifest for the web app to be installable.
-
 ### Best practices for naming your web app
 
 Consider the following factors when selecting a name for your web app:
