@@ -143,7 +143,9 @@ The select field is used to change the class on the `<section>` and the class up
 ```html
 <section id="setting" class="auto">
   <p class="horizontal" lang="zh">你好世界</p>
+  <!-- Hello World in Chinese -->
   <p class="vertical" lang="ja">世界、こんにちは。</p>
+  <!-- Hello World in Japanese -->
 </section>
 ```
 
