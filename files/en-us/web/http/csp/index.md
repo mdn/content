@@ -138,7 +138,7 @@ To block a resource type entirely, use the `'none'` keyword. For example, the fo
 object-src 'none'
 ```
 
-Note that `'none'` cannot be combined with any other method: in practice, if any other source expressions are given alongside `'none'`, then they are ignored.
+Note that `'none'` cannot be combined with any other method in a particular directive: in practice, if any other source expressions are given alongside `'none'`, then they are ignored.
 
 #### Scheme-based policies
 
