@@ -202,7 +202,7 @@ Absolute specifiers can be any kind of [URL](/en-US/docs/Web/URI) that resolve t
   import x from 'data:application/json,{"foo":42}' with { type: "json" };
   ```
 
-  JavaScript code specified in data URLs are still interpreted as modules, but they cannot use relative imports because `data:` URLs are not hierarchical. That is, `import x from "data:text/javascript,import y from './y.js';"` will throw an error because the relative specifier `'./y.js'` cannot be resolved.
+  `text/javascript` data URLs are still interpreted as modules, but they cannot use relative imports — because the `data:` URL scheme is not hierarchical. That is, `import x from "data:text/javascript,import y from './y.js';"` will throw an error because the relative specifier `'./y.js'` cannot be resolved.
 
 - [`node:` URLs](https://nodejs.org/api/esm.html#node-imports) resolve to built-in Node.js modules. They are supported by Node and other runtimes that claim compatibility with Node, such as Bun.
 
