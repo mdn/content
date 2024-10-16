@@ -18,7 +18,7 @@ The above example demonstrates a number of features of `<textarea>`:
 - `rows` and `cols` attributes to allow you to specify an exact size for the `<textarea>` to take. Setting these is a good idea for consistency, as browser defaults can differ.
 - The `<textarea>` element specifies its content differently in HTML and JavaScript contexts:
   - In HTML, the initial content of a `<textarea>` is specified between its opening and closing tags, not as a `value` attribute.
-  - In JavaScript, `<textarea>` elements have a [`value`](/en-US/docs/Web/API/HTMLTextAreaElement/value) property that can be used to get or set the current content of the textarea, and [`defaultValue`](/en-US/docs/Web/API/HTMLTextAreaElement/defaultValue) to get and set its initial value (equivalent to setting the HTML element's text content).
+  - In JavaScript, `<textarea>` elements have a [`value`](/en-US/docs/Web/API/HTMLTextAreaElement/value) property that can be used to get or set the current content, and [`defaultValue`](/en-US/docs/Web/API/HTMLTextAreaElement/defaultValue) to get and set its initial value (equivalent to accessing the HTML element's text content).
 
 The `<textarea>` element also accepts several attributes common to form `<input>`s, such as `autocapitalize`, `autocomplete`, `autofocus`, `disabled`, `placeholder`, `readonly`, and `required`.
 
