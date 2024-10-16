@@ -11,9 +11,11 @@ page-type: glossary-definition
 Now CSS supports the scroll snap feature out of the box. The feature provides a well-controlled scrolling experience. Web developers can mark each [scroll container](/en-US/docs/Glossary/Scroll_container) with boundaries for scroll operations. The scroll operations then finish at these boundaries (snap positions). In the above carousel example, as the user finishes scrolling the carousel, its visible image will snap into place.
 
 - `Scroll snap container`
+
   - : If a box has {{CSSXref("scroll-snap-type")}} set to a value other than `none`, then the box captures snap positions. A box's **scroll snap container** is a box's nearest snap-position capturing scroll container ancestor.
 
 - `Snapport`
+
   - : The **snapport** is the area of the [scrollport](/en-US/docs/Glossary/Scroll_container#scrollport) defined using {{CSSXref("scroll-padding")}} property set on the scroll container. When calculating snap positions, the area is used as the alignment container for the scroll snap areas. By default, it is the same as the scroll container's visual viewport. The [snap areas](#snap_area) are aligned to the scrollport.
 
 - `Snap area`
