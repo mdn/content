@@ -44,10 +44,8 @@ It enables deep linking into your web app from other applications. For example, 
 
 The `scope` is invalid if `start_url` is not a subset of the `scope` URL. For example:
 
-- Invalid: `scope` is `/app/` and `start_url` is `/index.html`.
-  In this case, the fallback `scope` will be the root directory `/`.
 - Valid: `scope` is `/app/` and `start_url` is `/app/home.html`.
-  `start_url` is within the scope.
+- Invalid: `scope` is `/app/` and `start_url` is `/index.html`.
 
 If `scope` is missing or invalid, it defaults to `start_url`, with the filename, query, and fragment removed. For example:
 
@@ -71,7 +69,7 @@ Setting the `scope` as `/prefix/` ensures it will match only the pages within th
 A URL is considered to be "within scope" if its path begins with the URL path defined in `scope`.
 For example, if the `scope` is set to `/app/`, then the URLs `/app/`, `/app/page.html`, and `/app/dashboard/index.html` are all considered within scope, while `/` or `/page.html` are not.
 
-When a user navigates to a URL, browsers use the scope to determine if the resource is within your web app's application context. For in-scope pages, browsers maintain the application context and preserve the app-like experience. They may present these pages differently to indicate to users that they are navigating within the application.
+When a user navigates to a URL, browsers use the scope to determine if the resource is within your web app's {{Glossary("Application_context", "application context")}}. For in-scope pages, browsers maintain the application context and preserve the app-like experience. They may present these pages differently to indicate to users that they are navigating within the application.
 
 When a user navigates to a web page that is not within the scope of your web app's application context, browsers may display a prominent UI element, which clearly shows the URL or at least its origin, including whether it is served over a secure connection.
 This UI element will be different from what users see when navigating within the app's scope.
