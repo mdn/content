@@ -9,7 +9,8 @@ browser-compat: html.manifest.start_url
 
 The `start_url` manifest member is used to specify the URL that should be opened when a user launches your web application, such as when tapping the application's icon on their device's home screen or in an application list.
 
-> [!NOTE] > [Browsers have flexibility](#browser_flexibility) in how they the handle `start_url` and may not always use the specified value.
+> [!NOTE]
+> The `start_url` is a hint for browsers. [Browsers have flexibility](#browser_flexibility) in how they the handle `start_url` and may not always use the specified value.
 
 ## Syntax
 
