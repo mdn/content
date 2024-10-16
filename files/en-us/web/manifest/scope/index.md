@@ -7,8 +7,8 @@ browser-compat: html.manifest.scope
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
-The `scope` manifest member is used to specify a URL that determines which pages are considered to be part of your web application.
-It restricts the URLs to which the manifest is applied.
+The `scope` manifest member is used to specify the top-level URL path that contains your web application, determining which pages and subdirectories are part of the web app and where the manifest is applied.
+Web pages within the defined scope are presented distinctly so that users can recognize when they are navigating within the app.
 
 ## Syntax
 
@@ -36,55 +36,66 @@ It restricts the URLs to which the manifest is applied.
 
 ## Description
 
-The `scope` member specifies the navigation boundaries of your web app, that is, pages that are considered part of the app and that are not. You can add a `scope` for your web app to ensure users remain within the {{Glossary("Application_context", "application's context")}} while navigating your app.
+The `scope` member defines the set of URLs that is considered part of your web app when the manifest is applied.
 
-> > It provides a way to "deep link" into your web app from other applications. For example, an email app could use the scope to open a specific page within your web app directly.
+It enables deep linking into your web app from other applications. For example, if your hiking app's scope is `https://hikingapp.com/trails/`, a weather app can directly link to `https://hikingapp.com/trails/trailA/trail-conditions`. Note that deep linking is possible even without defining a scope, but defining it allows you to control pages that are considered part of your web app.
 
-### Fallback behavior
+### Fallback scope behavior
 
-When `scope` is missing or invalid, it defaults to `start_url`. For example:
+The `scope` is invalid if `start_url` is not a subset of the `scope` URL. For example:
+
+- Invalid: `scope` is `/app/` and `start_url` is `/index.html`.
+  In this case, the fallback `scope` will be the root directory `/`.
+- Valid: `scope` is `/app/` and `start_url` is `/app/home.html`.
+  `start_url` is within the scope.
+
+If `scope` is missing or invalid, it defaults to `start_url`, with the filename, query, and fragment removed. For example:
 
 - If `start_url` is `https://example.com/app/index.html?user=123#home`, the scope will be `https://example.com/app/`.
 - If `start_url` is `/pages/welcome.html`, the scope will be `/pages/` on the same origin.
 - If `start_url` is `/pages/` (the trailing slash is important), the scope will be `/pages/`.
 
 If you rely on the fallback behaviour of `scope`, ensure that URLs of all pages in your app begin with the parent path of `start_url`.
-To avoid potential issues with scope determination in this way, it's recommended to explicitly specify `scope` in your manifest file.
+To avoid issues with scope determination in this way, it's recommended to explicitly specify `scope` in your manifest file.
 
-### String matching for scope
+### Scope matching mechanism
 
 String matching for the scope URL uses a simple prefix match, not the path structure.
-For example, the target URL string `/prefix-of/resource.html` will match an app with `scope` set as `/prefix`, even though the path segment name is not an exact match.
-To avoid unexpected behavior, it's recommended to use a scope ending with a `/`.
+For example, if the `scope` is set as `/prefix`, it will match URLs starting with `/prefix`, including `/prefix-of/index.html` and `/prefix/index.html`. Note that `/prefix-of/index.html` matches even though `prefix-of` is not an exact match with the scope `/prefix`.
 
-### Navigation scope
+For this reason, it's recommended to define a scope ending with a `/`.
+Setting the `scope` as `/prefix/` ensures it will match only the pages within the `/prefix/` directory, preventing unintended matches.
+
+### In-scope and out-of-scope behavior
 
 A URL is considered to be "within scope" if its path begins with the URL path defined in `scope`.
-For example, if the `scope` is set to `/app/`, then the URLs `/app/`, `/app/page.html`, and `/app/dashboard/index.html` will all be considered within scope, while `/` or `/page.html` will not be considered within the scope of the application's context.
+For example, if the `scope` is set to `/app/`, then the URLs `/app/`, `/app/page.html`, and `/app/dashboard/index.html` are all considered within scope, while `/` or `/page.html` are not.
 
-If a user navigates to a web page that is not within the scope of your web app's context, browsers may display a prominent UI element, which clearly shows the URL or at least its origin, including whether it is served over a secure connection.
-This UI element will typically be different from what users see when navigating within the app's scope.
+When a user navigates to a URL, browsers use the scope to determine if the resource is within your web app's application context. For in-scope pages, browsers maintain the application context and preserve the app-like experience. They may present these pages differently to indicate to users that they are navigating within the application.
+
+When a user navigates to a web page that is not within the scope of your web app's application context, browsers may display a prominent UI element, which clearly shows the URL or at least its origin, including whether it is served over a secure connection.
+This UI element will be different from what users see when navigating within the app's scope.
 This behavior aims to make users aware that they have navigated away from your web app.
 
 > [!NOTE]
-> The existence of a `scope` doesn't prevent navigation to URLs outside of the defined scope while the manifest is applied.
-> Off-scope navigations are not blocked and not opened in a new top-level browsing context.
+> The existence of a `scope` doesn't prevent users from navigating to URLs outside of the defined scope while the manifest is applied.
+> Off-scope navigations are not blocked by browsers and are not opened in a new top-level browsing context.
 
 ## Examples
 
 ### Specifying an absolute URL for scope
 
-Suppose the manifest file for your web app is linked from `https://example.com/index.html`, and you want the scope to include all the subdirectories. You can specify this scope using an absolute URL that is same-origin with manifest file URL, as shown below. This ensures that pages like `https://example.com/store` and `https://example.com/company` are part of your web app.
+Suppose the manifest file for your web app is linked from `https://hikingapp.com/index.html`, and you want the scope to include all the subdirectories. You can specify this scope using an absolute URL that is same-origin with manifest file URL, as shown below. This ensures that pages like `https://hikingapp.com/store` and `https://hikingapp.com/company` are part of your web app.
 
 ```json
 {
-  "scope": "https://example.com/"
+  "scope": "https://hikingapp.com/"
 }
 ```
 
 ### Specifying a relative URL for scope
 
-If your manifest file's URL is `https://example.com/resources/manifest.json`, and you want the scope to be `https://example.com/app/`, you can define it as a relative URL:
+If your manifest file's URL is `https://hikingapp.com/resources/manifest.json`, and you want the scope to be `https://hikingapp.com/app/`, you can define it as a relative URL:
 
 ```json
 {
@@ -94,17 +105,17 @@ If your manifest file's URL is `https://example.com/resources/manifest.json`, an
 
 ### Defining a web app for a specific section of your site
 
-If you have a website with multiple sections, but you want your web app to focus to on a specific section, you can define the `scope` as:
+If you have a website with multiple sections, but you want your web app to focus on a specific section, you can define the `scope` as:
 
 ```json
 {
-  "name": "My Web App",
-  "start_url": "https://example.com/store/",
-  "scope": "https://example.com/store/"
+  "name": "My Hiking Web App",
+  "start_url": "https://hikingapp.com/store/",
+  "scope": "https://hikingapp.com/store/"
 }
 ```
 
-With this setup, pages like `https://example.com/store/products` are part of your web app, but `https://example.com/company/` is out of your web app's scope. For off-scope URLs, browsers may display different UI elements to let users know they've navigated away from the app.
+With this setup, pages like `https://hikingapp.com/store/products` are part of your web app, but `https://hikingapp.com/company/` is out of your web app's scope. For off-scope URLs, browsers may display different UI elements to let users know they've navigated away from the app.
 
 ## Specifications
 
