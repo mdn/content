@@ -285,7 +285,8 @@ The `unsafe-inline` keyword can be used to override this restriction. For exampl
 default-src 'self' 'unsafe-inline'
 ```
 
-**Developers should avoid `'unsafe-inline'`, because it defeats much of the purpose of having a CSP.** Inline JavaScript is one of the most common XSS vectors, and one of the most basic goals of a CSP is to prevent its uncontrolled use.
+> [!WARNING]
+> Developers should avoid `'unsafe-inline'`, because it defeats much of the purpose of having a CSP. Inline JavaScript is one of the most common XSS vectors, and one of the most basic goals of a CSP is to prevent its uncontrolled use.
 
 Inline `<script>` elements are allowed if they are protected by a nonce or a hash, as described above. If a directive contains nonce or hash expressions, then the `unsafe-inline` keyword is ignored by browsers.
 
