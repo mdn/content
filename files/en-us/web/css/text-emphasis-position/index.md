@@ -7,7 +7,7 @@ browser-compat: css.properties.text-emphasis-position
 
 {{CSSRef}}
 
-The **`text-emphasis-position`** [CSS](/en-US/docs/Web/CSS) property sets where emphasis marks are drawn. Like [ruby](/en-US/docs/Web/HTML/Element/ruby) text (not related to ruby language), if there isn't enough room for emphasis marks, the line height is increased.
+The **`text-emphasis-position`** [CSS](/en-US/docs/Web/CSS) property sets where emphasis marks are drawn. Similar to the text rendered by the [`<ruby>`](/en-US/docs/Web/HTML/Element/ruby) HTML element, if there isn't enough room for emphasis marks, the line height is increased.
 
 {{EmbedInteractiveExample("pages/css/text-emphasis-position.html")}}
 
