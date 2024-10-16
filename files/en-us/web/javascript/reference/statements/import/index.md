@@ -206,7 +206,7 @@ Absolute specifiers can be any kind of [URL](/en-US/docs/Web/URI) that resolve t
 
 - [`node:` URLs](https://nodejs.org/api/esm.html#node-imports) resolve to built-in Node.js modules. They are supported by Node and other runtimes that claim compatibility with Node, such as Bun.
 
-Bare specifiers are popularized by CommonJS, in which they are resolved within the `node_modules` directory. For example, if you have `import x from "foo"`, then the runtime will look for the `foo` package within any `node_modules` directory in the parent directories of the current module. This behavior can be reproduced in browsers using [import maps](/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps), which also enable you to customize resolution in other ways.
+Bare specifiers, popularized by CommonJS, are resolved within the `node_modules` directory. For example, if you have `import x from "foo"`, then the runtime will look for the `foo` package within any `node_modules` directory in the parent directories of the current module. This behavior can be reproduced in browsers using [import maps](/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps), which also enable you to customize resolution in other ways.
 
 The module resolution algorithm can also be executed programmatically using the [`import.meta.resolve`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta/resolve) function defined by the HTML spec.
 
