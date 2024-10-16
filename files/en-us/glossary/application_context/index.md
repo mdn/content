@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-**Application context** refers to the top-level {{glossary("browsing context")}} of a web application.
+**Application context** refers to the top-level {{glossary("browsing context")}} of a [web application](/en-US/docs/Web/Progressive_web_apps).
 It determines how an app's browsing context, such as a tab or a window, is presented and behaves.
 
 Web developers define the application context in the [web app's manifest file](/en-US/docs/Web/Manifest).
