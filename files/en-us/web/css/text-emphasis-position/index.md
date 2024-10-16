@@ -17,7 +17,7 @@ The **`text-emphasis-position`** [CSS](/en-US/docs/Web/CSS) property sets where 
 /* Initial value */
 text-emphasis-position: auto;
 
-/* Keywords value */
+/* Keyword values */
 text-emphasis-position: over right;
 text-emphasis-position: over left;
 text-emphasis-position: under right;
