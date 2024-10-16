@@ -129,7 +129,7 @@ The preferred position of emphasis marks depends on the language. In Japanese fo
 The select field is used to change the class on the `<section>` and the class updates the position of the emphasis marks.
 
 ```html hidden
-<label for="position">position:</position>
+<label for="position">Emphasis position:</position>
 <select id="position">
   <option value="auto">auto</option>
   <option value="over-right">over right</option>
