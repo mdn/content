@@ -102,7 +102,7 @@ In the next section we'll go over the tools CSP provides to do these things.
 
 ### Fetch directives
 
-The group of CSP directives which control resource loads are called _fetch directives_. Fetch directives describe which resources — such as JavaScript, CSS stylesheets, images, fonts, and so on — a document is allowed to load.
+Fetch directives are used to specify a particular category of resource that a document is allowed to load — such as JavaScript, CSS stylesheets, images, fonts, and so on.
 
 There are different fetch directives for different types of resource. For example:
 
