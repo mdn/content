@@ -45,7 +45,7 @@ popover.addEventListener("command", (event) => {
 
 ### Event dispatch and cancellation
 
-It is worth pointing out that `command` events fire on the element being invoked. If the control button is clicked, it will first dispatch a `click` event which, if cancelled, then the `command` event will not fire and the default behavior will not be run.
+It is worth pointing out that `command` events fire on the element being invoked. If the button is clicked, it will first dispatch a `click` event which, if cancelled, then the `command` event will not fire and the default behavior will not be run.
 In addition to cancelling the `click` event on the button, it is also possible to cancel the `command` event.
 
 For example:

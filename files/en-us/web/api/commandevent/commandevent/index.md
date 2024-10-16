@@ -27,7 +27,7 @@ new CommandEvent(type, options)
 - `options` {{optional_inline}}
   - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
     - `source` {{optional_inline}}
-      - : An {{domxref("HTMLButtonElement")}} representing the control button that was interacted with to cause this event. This can be any element but we recommend only using button as a source to avoid surprises.
+      - : An {{domxref("HTMLButtonElement")}} representing the button that was interacted with to cause this event. This can be any element but we recommend only using button as a source to avoid surprises.
     - `command` {{optional_inline}}
       - : A string containing the command for the controlled element to take. While manually instantiating a `CommandEvent` it is possible to use any string value, but it is recommended to use one of the built-in names or prefix with two dashes (`--`) to ensure forward compatibility.
 

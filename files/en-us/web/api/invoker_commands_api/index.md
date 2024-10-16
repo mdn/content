@@ -18,12 +18,12 @@ The **Invoker Commands API** provides a way to declaratively assign behaviors to
 
 A common pattern on the web is to have {{HTMLElement("button")}} elements control various aspects of the page, such as opening and closing {{domxref("Popover API", "popovers", "", "nocode")}} or {{HTMLElement("dialog")}} elements, formatting text, and more.
 
-Historically creating these kinds of controls has required JavaScript event listeners added to the button which can then call the APIs on the element they control. The {{domxref("HTMLButtonElement.commandForElement", "commandForElement")}} and {{domxref("HTMLButtonElement.command", "command")}} provide a way to do this declaratively for a limited set of actions. This can be advantageous for built-in commands as the user does not have to wait for JavaScript to download and execute to make these buttons interactive.
+Historically creating these kinds of controls has required JavaScript event listeners added to the button which can then call the APIs on the element they control. The {{domxref("HTMLButtonElement.commandForElement", "commandForElement")}} and {{domxref("HTMLButtonElement.command", "command")}} properties provide a way to do this declaratively for a limited set of actions. This can be advantageous for built-in commands as the user does not have to wait for JavaScript to download and execute to make these buttons interactive.
 
 ## HTML attributes
 
 - [`commandfor`](/en-US/docs/Web/HTML/Element/button#commandfor)
-  - : Turns a {{htmlelement("button")}} element into a control button, controlling the given interactive element; takes the ID of the element to control as its value.
+  - : Turns a {{htmlelement("button")}} element into a button, controlling the given interactive element; takes the ID of the element to control as its value.
 - [`command`](/en-US/docs/Web/HTML/Element/button#command)
   - : Specifies the action to be performed on an element being controlled by a control `<button>`, specified via the `commandfor` attribute.
 
@@ -37,14 +37,14 @@ Historically creating these kinds of controls has required JavaScript event list
 ### Instance properties
 
 - {{domxref("HTMLButtonElement.commandForElement")}}
-  - : Gets and sets the element being controlled by the control button. The JavaScript equivalent of the [`commandfor`](/en-US/docs/Web/HTML/Element/button#commandfor) HTML attribute.
+  - : Gets and sets the element being controlled by the button. The JavaScript equivalent of the [`commandfor`](/en-US/docs/Web/HTML/Element/button#commandfor) HTML attribute.
 - {{domxref("HTMLButtonElement.command")}}
-  - : Gets and sets the action to be performed on the element being controlled by the control button. Reflects the value of the [`command`](/en-US/docs/Web/HTML/Element/button#command) HTML attribute.
+  - : Gets and sets the action to be performed on the element being controlled by the button. Reflects the value of the [`command`](/en-US/docs/Web/HTML/Element/button#command) HTML attribute.
 
 ### Events
 
-- `HTMLElement` {{domxref("HTMLElement.command_event", "command")}} event
-  - : Fired on the element referenced by the control button.
+- {{domxref("HTMLElement.command_event", "command")}} event
+  - : Fired on the element referenced by the button.
 
 ## Examples
 

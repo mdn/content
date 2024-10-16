@@ -39,7 +39,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
       - : This attribute can represent custom values that are prefixed with a two hyphen characters (`--`). Buttons with a custom value will dispatch the {{domxref("CommandEvent")}} on the controlled element.
 
 - `commandfor`
-  - : Turns a {{htmlelement("button")}} element into a control button, controlling the given interactive element; takes the ID of the element to control as its value.
+  - : Turns a {{htmlelement("button")}} element into a button, controlling the given interactive element; takes the ID of the element to control as its value.
 - [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled)
   - : This Boolean attribute prevents the user from interacting with the button: it cannot be pressed or focused.
 - `form`
