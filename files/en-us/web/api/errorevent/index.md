@@ -25,9 +25,9 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
 - {{domxref("ErrorEvent.filename")}} {{ReadOnlyInline}}
   - : A string containing the name of the script file in which the error occurred.
 - {{domxref("ErrorEvent.lineno")}} {{ReadOnlyInline}}
-  - : An `integer` containing the line number of the script file on which the error occurred.
+  - : An integer containing the line number of the script file on which the error occurred.
 - {{domxref("ErrorEvent.colno")}} {{ReadOnlyInline}}
-  - : An `integer` containing the column number of the script file on which the error occurred.
+  - : An integer containing the column number of the script file on which the error occurred.
 - {{domxref("ErrorEvent.error")}} {{ReadOnlyInline}}
   - : A JavaScript value, such as an {{jsxref("Error")}} or {{domxref("DOMException")}}, representing the error associated with this event.
 

@@ -40,7 +40,7 @@ The {{domxref("RTCEncodedVideoFrame.data", "data")}} property provides access to
 This code snippet shows a handler for the `rtctransform` event in a {{domxref("Worker")}} that implements a {{domxref("TransformStream")}}, and pipes encoded frames through it from the `event.transformer.readable` to `event.transformer.writable` (`event.transformer` is a {{domxref("RTCRtpScriptTransformer")}}, the worker-side counterpart of {{domxref("RTCRtpScriptTransform")}}).
 
 If the transformer is inserted into a video stream, the `transform()` method is called with a `RTCEncodedVideoFrame` whenever a new frame is enqueued on `event.transformer.readable`.
-The `transform()` method shows how this might be read, modified by inverting the bits, and then enqueued on the controller (this ultimately pipes it through to the `event.transformer.writable`, and then back into the WebRTC pipline).
+The `transform()` method shows how this might be read, modified by inverting the bits, and then enqueued on the controller (this ultimately pipes it through to the `event.transformer.writable`, and then back into the WebRTC pipeline).
 
 ```js
 addEventListener("rtctransform", (event) => {
