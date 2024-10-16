@@ -181,7 +181,8 @@ It then includes the same value as the `nonce` attribute of one or more {{htmlel
 The browser compares the two values, and loads the resource only if they match. The idea is that even if an attacker can insert some JavaScript into the page, they won't know which nonce the server is going to use, so the browser will refuse to run the script.
 
 For this approach to work, it must not be possible for an attacker to guess the nonce.
-In practice this means that the nonce must be different for every HTTP response, and must not be predictable.
+
+**In practice this means that the nonce must be different for every HTTP response, and must not be predictable.**
 
 This in turn means that the server cannot serve static HTML, because it must insert a new nonce each time. Typically the server would use a templating engine to insert the nonce.
 
