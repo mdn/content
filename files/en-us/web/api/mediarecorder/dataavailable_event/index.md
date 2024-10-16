@@ -92,4 +92,4 @@ mediaRecorder.ondataavailable = (e) => {
   getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://github.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone).)
 - [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://github.com/samdutton).
 - {{domxref("Navigator.getUserMedia()")}}
-- [Dealing With Huge MediaRecorder Chunks](https://blog.addpipe.com/dealing-with-huge-mediarecorder-slices/)
+- [Dealing with huge MediaRecorder chunks](https://blog.addpipe.com/dealing-with-huge-mediarecorder-slices/) on addpipe.com (2024)
