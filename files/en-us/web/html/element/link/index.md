@@ -201,14 +201,19 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `fetchpriority`
 
-  - : Provides a hint of the relative priority to use when fetching a preloaded resource. Allowed values:
+  - : Provides a hint of the relative priority to use when fetching a resource of a particular type.
+    Allowed values:
 
     - `high`
-      - : Signals a high-priority fetch relative to other resources of the same type.
+      - : Fetch the resource at a high priority relative to other resources of the same type.
     - `low`
-      - : Signals a low-priority fetch relative to other resources of the same type.
+      - : Fetch the resource at a low priority relative to other resources of the same type.
     - `auto`
-      - : Default: Signals automatic determination of fetch priority relative to other resources of the same type.
+      - : Don't set a preference for the fetch priority.
+        This is the default.
+        It is used if no value or an invalid value is set.
+
+    See {{domxref("HTMLLinkElement.fetchPriority")}} for more information.
 
 - `href`
   - : This attribute specifies the {{glossary("URL")}} of the linked resource. A URL can be absolute or relative.

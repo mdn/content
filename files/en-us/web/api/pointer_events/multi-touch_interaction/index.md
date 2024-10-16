@@ -109,7 +109,7 @@ In this application, a pointer move is represented by the target's border being 
 ```js
 function pointermoveHandler(ev) {
   // Note: if the user makes more than one "simultaneous" touch, most browsers
-  // fire at least one pointermove event and some will fire several pointermoves.
+  // fire at least one pointermove event and some will fire several pointermove events.
   //
   // This function sets the target element's border to "dashed" to visually
   // indicate the target received a move event.
