@@ -75,7 +75,7 @@ Historically creating these kinds of controls has required JavaScript event list
 ```html
 <button commandfor="myimg" command="--rotate-left">Rotate left</button>
 <button commandfor="myimg" command="--rotate-right">Rotate right</button>
-<img id="myimg" src="..." />
+<img id="myimg" src="photo.jpg" alt="[add appropriate alt text here]" />
 ```
 
 ```js

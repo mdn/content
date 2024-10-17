@@ -46,7 +46,7 @@ toggleBtn.command = "show-popover";
 
 <button commandfor="the-image" command="--rotate-right">Rotate Right</button>
 
-<img id="the-image" src="photo.jpg" />
+<img id="the-image" src="photo.jpg" alt="[add appropriate alt text here]" />
 ```
 
 ```js
