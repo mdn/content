@@ -43,8 +43,10 @@ text-emphasis-position: unset;
 
 The property accepts one or two values:
 
-- If only one value is provided, it can be `auto`, `over`, or `under`. When only `over` or `under` is used, `right` is assumed as the default position.
-- If two values are provided, they must include one of `over` or `under`and one of `right` or `left`. Their order does not matter.
+If only one value is provided, it can be `auto`, `over`, or `under`. When only `over` or `under` is used, `right` is assumed as the default position.
+
+If two values are provided, they must include one of `over` or `under`and one of `right` or `left`. Their order does not matter.
+
 - `auto` {{Experimental_Inline}}
   - : Draws marks over the text in horizontal writing mode and to the right of the text in vertical writing mode.
 - `over`
@@ -254,3 +256,4 @@ em rt {
 ## See also
 
 - The longhand properties {{cssxref("text-emphasis-style")}}, {{cssxref("text-emphasis-color")}}, and the corresponding shorthand property {{cssxref("text-emphasis")}}.
+- {{cssxref("writing-mode")}}
