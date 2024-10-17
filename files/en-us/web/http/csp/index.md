@@ -26,7 +26,7 @@ The policy is specified as a series of _directives_, separated by semi-colons. E
 
 For example, consider the following CSP:
 
-```plain
+```http
 Content-Security-Policy: default-src 'self'; img-src 'self' example.com
 ```
 
@@ -134,8 +134,8 @@ In the next few sections we'll describe some of the ways you can use source expr
 
 To block a resource type entirely, use the `'none'` keyword. For example, the following directive blocks all {{htmlelement("object")}} and {{htmlelement("embed")}} resources:
 
-```plain
-object-src 'none'
+```http
+Content-Security-Policy: object-src 'none'
 ```
 
 Note that `'none'` cannot be combined with any other method in a particular directive: in practice, if any other source expressions are given alongside `'none'`, then they are ignored.
@@ -144,8 +144,8 @@ Note that `'none'` cannot be combined with any other method in a particular dire
 
 Fetch directives can list a scheme, like `https:`, to allow resources that are served using that scheme. This, for example, allows a policy to require HTTPS for all resource loads:
 
-```plain
-default-src https:
+```http
+Content-Security-Policy: default-src https:
 ```
 
 #### Location-based policies
@@ -154,28 +154,29 @@ Fetch directives can control resource loads based on where the resource is.
 
 The keyword `'self'` allows resources which are same-origin with the document itself:
 
-```plain
-img-src 'self'
+```http
+Content-Security-Policy: img-src 'self'
 ```
 
 You can also specify one or more hostnames, potentially including wildcards, and only resources served from those hosts will be allowed. This might be used, for example, to allow content to be served from a trusted CDN.
 
-```plain
-img-src *.example.org
+```http
+Content-Security-Policy: img-src *.example.org
 ```
 
 You can specify multiple locations. The following directive allows only images that are same-origin with the current document, or are served from a subdomain of "example.org", or are served from "example.com":
 
-```plain
-img-src 'self' *.example.org  example.com
+```http
+Content-Security-Policy: img-src 'self' *.example.org  example.com
 ```
 
 #### Nonces
 
 With a nonce, the server generates a random value for every HTTP response, and includes it in the directive:
 
-```plain
-script-src 'nonce-416d1177-4d12-4e3b-b7c9-f6c409789fb8'
+```http
+Content-Security-Policy:
+  script-src 'nonce-416d1177-4d12-4e3b-b7c9-f6c409789fb8'
 ```
 
 It then includes the same value as the `nonce` attribute of one or more {{htmlelement("script")}} or {{htmlelement("style")}} tags in the document.
@@ -226,8 +227,8 @@ Fetch directives can also use a hash of the script to guarantee its integrity. W
 
 If then adds the result to the directive:
 
-```plain
-script-src 'sha256-cd9827ad...'
+```http
+Content-Security-Policy: script-src 'sha256-cd9827ad...'
 ```
 
 When the browser receives the document, it hashes the script, compares the result with the value from the header, and loads the script only if they match.
@@ -285,8 +286,8 @@ If a CSP contains either a `default-src` or a `script-src` directive, then inlin
 
 The `unsafe-inline` keyword can be used to override this restriction. For example, the following directive requires all resources to be same-origin, but allows inline JavaScript:
 
-```plain example-bad
-default-src 'self' 'unsafe-inline'
+```http example-bad
+Content-Security-Policy: default-src 'self' 'unsafe-inline'
 ```
 
 > [!WARNING]
@@ -329,7 +330,7 @@ To control script loading as a mitigation against XSS, recommended practice is t
 
 A nonce-based strict CSP looks like this:
 
-```plain
+```http
 Content-Security-Policy:
   script-src 'nonce-{RANDOM}';
   object-src 'none';
@@ -344,7 +345,7 @@ In this CSP, we:
 
 A hash-based strict CSP is the same, except it uses hashes instead of nonces:
 
-```plain
+```http
 Content-Security-Policy:
   script-src 'sha256-{HASHED_SCRIPT}';
   object-src 'none';
@@ -387,16 +388,19 @@ document.head.appendChild(scriptElement);
 
 We serve our document with a CSP like this:
 
-```plain
-script-src 'sha256-gEh1+8U9S1vkEuQSmmUMTZjyNSu5tIoECP4UXIEjMTk='
+```http
+Content-Security-Policy:
+  script-src 'sha256-gEh1+8U9S1vkEuQSmmUMTZjyNSu5tIoECP4UXIEjMTk='
 ```
 
 The "main.js" script will be allowed to load, because its hash matches the value in the CSP. But its attempt to load "main2.js" will fail.
 
 If we add `'strict-dynamic'` to the CSP, then "main.js" will be allowed to load "main2.js":
 
-```plain
-script-src 'sha256-gEh1+8U9S1vkEuQSmmUMTZjyNSu5tIoECP4UXIEjMTk=' strict-dynamic
+```http
+Content-Security-Policy:
+  script-src 'sha256-gEh1+8U9S1vkEuQSmmUMTZjyNSu5tIoECP4UXIEjMTk='
+  strict-dynamic
 ```
 
 The `'strict-dynamic'` keyword makes it much easier to create and maintain nonce- or hash-based CSPs, especially when a website uses third-party scripts. It does make your CSP less secure, though, because if the scripts you include create `<script>` elements based on potential sources of XSS, then the CSP will not protect them.
@@ -430,7 +434,7 @@ The syntax of `frame-ancestors` is a subset of the fetch directive syntax: you c
 
 Unless you need your site to be embeddable, you should set `frame-ancestors` to `'none'`:
 
-```plain
+```http
 Content-Security-Policy: frame-ancestors 'none'
 ```
 
@@ -450,8 +454,8 @@ The ultimate solution to mixed content is for developers to load all resources o
 
 The [`upgrade-insecure-requests`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests) directive is intended to solve this problem. This directive doesn't have any value: to set it, just include the directive name:
 
-```plain
-upgrade-insecure-requests
+```http
+Content-Security-Policy: upgrade-insecure-requests
 ```
 
 If this directive is set on a document, then the browser will automatically upgrade to HTTPS any HTTP URLs in the following cases:
