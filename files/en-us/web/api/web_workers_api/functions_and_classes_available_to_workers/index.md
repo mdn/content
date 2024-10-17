@@ -87,6 +87,7 @@ The following Web APIs are available to workers:
 - {{domxref("WebCodecs API", "", "", "nocode")}}
 - {{domxref("WebGL API", "", "", "nocode")}}
 - {{domxref("WebGPU API", "", "", "nocode")}}
+- {{domxref("WebHID API", "", "", "nocode")}} (dedicated and service workers only)
 - {{domxref("WebUSB API", "", "", "nocode")}}
 - {{domxref("WebSockets API", "", "", "nocode")}}
 - {{domxref("XMLHttpRequest API", "", "", "nocode")}}
