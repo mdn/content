@@ -445,7 +445,7 @@ This directive is a more flexible replacement for the {{httpheader("X-Frame-Opti
 Web developers are strongly encouraged to serve all their content over HTTPS. In the process of upgrading a site to HTTPS, a site sometimes serves the main document over HTTPS but serves its resources over HTTP, for example, using markup like this:
 
 ```html
-<img src="http://example.org/my-cat.jpg" />
+<script src="http://example.org/my-cat.js"></script>
 ```
 
 This is called _mixed content_, and the presence of insecure resources greatly weakens the protection afforded by HTTPS. Under the [mixed content algorithm](/en-US/docs/Web/Security/Mixed_content) that browsers implement, if a document is served over HTTPS, insecure resources are categorized into "upgradable content" and "blockable content". Upgradable content is upgraded to HTTPS, and blockable content is blocked, potentially breaking the page.
@@ -470,8 +470,8 @@ However, top-level navigation requests whose target is a different origin will n
 For example, suppose the document at `https://example.org` is served with a CSP containing the `upgrade-insecure-requests` directive, and the document contains markup like this:
 
 ```html
-<img src="http://example.org/my-cat.jpg" />
-<img src="http://not-example.org/another-cat.jpg" />
+<script src="http://example.org/my-cat.js"></script>
+<script src="http://not-example.org/another-cat.js"></script>
 ```
 
 The browser will automatically upgrade both of these requests to HTTPS.
