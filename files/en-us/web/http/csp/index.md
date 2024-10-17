@@ -431,7 +431,7 @@ The syntax of `frame-ancestors` is a subset of the fetch directive syntax: you c
 Unless you need your site to be embeddable, you should set `frame-ancestors` to `'none'`:
 
 ```plain
-frame-ancestors 'none'
+Content-Security-Policy: frame-ancestors 'none'
 ```
 
 This directive is a more flexible replacement for the {{httpheader("X-Frame-Options")}} header.
