@@ -271,7 +271,7 @@ partial interface Blob {
 
 ### Not throwing exceptions
 
-When the semantics of Webidl is not followed, an exception is often thrown, even without `[SetterThrows]` or `[GetterThrows]` set. For example, in strict mode, if we try to set a read-only property to a new value, that is to call its implicit setter, a read-only property will throw in strict mode.
+When the semantics of WebIDL is not followed, an exception is often thrown, even without `[SetterThrows]` or `[GetterThrows]` set. For example, in strict mode, if we try to set a read-only property to a new value, that is to call its implicit setter, a read-only property will throw in strict mode.
 
 Mostly for compatibility purpose, this behavior is sometimes annoying. To prevent this by creating a no-op setter (that is by silently ignoring any attempt to set the property to a new value), the `[LenientSetter]` annotation can be used.
 

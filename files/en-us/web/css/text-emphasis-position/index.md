@@ -131,9 +131,7 @@ The preferred position of emphasis marks depends on the language. In Japanese fo
 
 ### Adding emphasis mark positions
 
-### Emphasis mark positions
-
-Use the drop down menu to change the position of the emphasis marks. This will change the class on the `<section>` element, which in turn, updates the position of the emphasis marks on the text.
+Use the drop down menu to change the position of the emphasis marks. This will change the class on the `<section>` element, which in turn, will update the position of the emphasis marks on the text.
 
 #### HTML
 
@@ -219,7 +217,7 @@ position.addEventListener("change", updateClass);
 
 Use the "Emphasis position" drop down to choose the location of the emphasis marks. The `preferred` option in the drop down uses the preferred positions, as explained in the [Description](#description) section.
 
-{{EmbedLiveSample("Emphasis_mark_positions", 450, 170)}}
+{{EmbedLiveSample("Emphasis_mark_positions", 450, 250)}}
 
 ### Preferring ruby over emphasis marks
 
