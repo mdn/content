@@ -12,7 +12,7 @@ Scroll snapping is a well-controlled scrolling experience, whereby developers de
 
 - `Scroll snap container`
 
-  - : The **scroll snap container** is a scroll container with scroll snapping applied. For example, if a box has overflowing content and a {{CSSXref("scroll-snap-type")}} set to a value other than `none`, then the box captures snap positions. A box's scroll snap container is the element's nearest snap-position capturing scroll container ancestor. If a box has no scroll snap container,  its snap positions, if any, will not trigger snapping.
+  - : The **scroll snap container** is a scroll container with scroll snapping applied. For example, if a box has overflowing content and a {{CSSXref("scroll-snap-type")}} set to a value other than `none`, then the box captures snap positions. A box's scroll snap container is the element's nearest snap-position capturing scroll container ancestor. If a box has no scroll snap container, its snap positions, if any, will not trigger snapping.
 
 - `Snapport`
 
