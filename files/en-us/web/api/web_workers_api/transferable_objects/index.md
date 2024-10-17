@@ -73,7 +73,7 @@ console.log(original.byteLength); // 0
 
 ## Supported objects
 
-The items that various specifications indicate can be _transferred_ are:
+The items that various specifications indicate can be _transferred_ are listed below (note that this list may not be exhaustive):
 
 - {{jsxref("ArrayBuffer")}}
 - {{domxref("MessagePort")}}
