@@ -563,5 +563,6 @@ The output is as follows:
 - [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
 - {{CSSXref("&lt;hue&gt;")}} data type
 - {{cssxref("color_value/lch","lch()")}} and {{cssxref("color_value/oklab","oklab()")}} color functions
-- [A perceptual color space for image processing](https://bottosson.github.io/posts/oklab/)
-- [OKLCH in CSS](https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl)
+- [Interactive post on OKLCH color space ](https://abhisaha.com/blog/interactive-post-oklch-color-space) (2024)
+- [OKLCH in CSS: why we moved from RGB and HSL](https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl) (2024)
+- [A perceptual color space for image processing](https://bottosson.github.io/posts/oklab/) (2020)
