@@ -158,7 +158,7 @@ The keyword `'self'` allows resources which are same-origin with the document it
 img-src 'self'
 ```
 
-You can also specify one or more hostnames, potentially including wildcards, and only resources served from those hosts will be allowed.
+You can also specify one or more hostnames, potentially including wildcards, and only resources served from those hosts will be allowed. This might be used, for example, to allow content to be served from a trusted CDN.
 
 ```plain
 img-src *.example.org
