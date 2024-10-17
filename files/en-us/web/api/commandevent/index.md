@@ -36,7 +36,8 @@ _This interface inherits properties from its parent, {{DOMxRef("Event")}}._
 ```html
 <button commandfor="mypopover" command="show-popover">Show popover</button>
 
-<div popover id="mypopover">
+<div popover id="mypopover" role="[declare appropriate ARIA role]">
+  <!-- popover content here -->
   <button commandfor="mypopover" command="hide-popover">Hide popover</button>
 </div>
 ```
@@ -60,7 +61,7 @@ popover.addEventListener("command", (event) => {
 
 <button commandfor="the-image" command="--rotate-right">Rotate Right</button>
 
-<img id="the-image" src="photo.jpg" />
+<img id="the-image" src="photo.jpg" alt="[add appropriate alt text here]" />
 ```
 
 ```js
