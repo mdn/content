@@ -18,6 +18,8 @@ This article provides information about the changes in Firefox 132 that affect d
 
 ### CSS
 
+- The {{CSSXRef("text-emphasis-position")}} property now supports the `auto` value to bring it inline with {{CSSXRef("text-underline-position")}} ([Firefox bug 1919658](https://bugzil.la/1919658)).
+
 #### Removals
 
 ### JavaScript
