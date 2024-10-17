@@ -11,7 +11,7 @@ The **`scroll-snap-type`** [CSS](/en-US/docs/Web/CSS) property is set on a {{glo
 
 {{EmbedInteractiveExample("pages/css/scroll-snap-type.html")}}
 
-If content in a snap port changes, for example, if content is added, moved, deleted, or resized, the scroll container will snap, re-snapping to the previous snapped content if that content is still present.
+If the content in the scroll port changes — for example, if content is added, moved, deleted, or resized — the scroll container will re-snap to the previously snapped content if that content is still present.
 
 If the value of a scroll snap-related property, such as `scroll-snap-type` or {{cssxref("scroll-margin")}}, is changed, the scroll container will re-snap based on the current value of `scroll-snap-type`.
 
