@@ -79,6 +79,7 @@ The following Web APIs are available to workers:
 - {{domxref("User-Agent Client Hints API", "", "", "nocode")}}
 - {{domxref("WebCodecs API", "", "", "nocode")}}
 - {{domxref("Web Crypto API", "", "", "nocode")}} (e.g. {{domxref("Crypto")}})
+- {{domxref("WebHID API", "", "", "nocode")}} (dedicated and service workers only)
 - {{domxref("Web Locks API", "", "", "nocode")}}
 - {{domxref("Web Serial API", "", "", "nocode")}}
 - {{domxref("Web Periodic Background Synchronization API", "", "", "nocode")}}

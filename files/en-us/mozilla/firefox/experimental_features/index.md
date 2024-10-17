@@ -104,7 +104,7 @@ HTML password input elements ([`<input type="password">`](/en-US/docs/Web/HTML/E
 
 ### Hex boxes to display stray control characters
 
-This feature renders control characters (Unicode category Cc) other than _tab_ (`U+0009`), _line feed_ (`U+000A`), _form feed_ (`U+000C`), and _carriage return_ (`U+000D`) as a hexbox when they are not expected. (See [Firefox bug 1099557](https://bugzil.la/1099557) for more details.)
+This feature renders control characters (Unicode category Cc) other than _tab_ (`U+0009`), _line feed_ (`U+000A`), _form feed_ (`U+000C`), and _carriage return_ (`U+000D`) as a hex box when they are not expected. (See [Firefox bug 1099557](https://bugzil.la/1099557) for more details.)
 
 <table>
   <thead>

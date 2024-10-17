@@ -18,7 +18,11 @@ This article provides information about the changes in Firefox 132 that affect d
 
 ### CSS
 
+- The {{CSSXRef("text-emphasis-position")}} property now supports the `auto` value to bring it inline with {{CSSXRef("text-underline-position")}} ([Firefox bug 1919658](https://bugzil.la/1919658)).
+
 #### Removals
+
+- The [`-moz-user-modify`](/en-US/docs/Web/CSS/user-modify) CSS property has been removed. This property has been deprecated in favour of the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) global attribute. ([Firefox bug 1920118](https://bugzil.la/1920118)).
 
 ### JavaScript
 

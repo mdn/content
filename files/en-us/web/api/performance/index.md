@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.Performance
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`Performance`** interface provides access to performance-related information for the current page.
 

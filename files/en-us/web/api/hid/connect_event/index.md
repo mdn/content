@@ -8,7 +8,7 @@ status:
 browser-compat: api.HID.connect_event
 ---
 
-{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_shared")}}
 
 The **`connect`** event of the {{domxref("HID")}} interface fires when the user agent connects to a HID device.
 

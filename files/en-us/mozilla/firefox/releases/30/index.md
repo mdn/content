@@ -59,7 +59,7 @@ _No change._
 
 ### Audio/Video
 
-- On Linux, Gstreamer 1.0 is now supported (instead of 0.10) ([Firefox bug 806917](https://bugzil.la/806917)).
+- On Linux, GStreamer 1.0 is now supported (instead of 0.10) ([Firefox bug 806917](https://bugzil.la/806917)).
 
 ## Security
 
