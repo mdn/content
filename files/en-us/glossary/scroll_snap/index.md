@@ -16,7 +16,7 @@ Scroll snapping is a well-controlled scrolling experience, whereby developers de
 
 - `Snapport`
 
-- : The **snapport** ​is the area of the [scrollport](/en-US/docs/Glossary/Scroll_container#scrollport) that is used as the alignment container for the scroll snap areas when calculating snap positions. By default, it is the same as the scroll container's visual viewport, but is the area of the scrollport defined by the {{CSSXref("scroll-padding")}} property. The [snap areas](#snap_area) are aligned to the scrollport.
+  - : The **snapport** ​is the area of the [scrollport](/en-US/docs/Glossary/Scroll_container#scrollport) that is used as the alignment container for the scroll snap areas when calculating snap positions. By default, it is the same as the scroll container's visual viewport, but is the area of the scrollport defined by the {{CSSXref("scroll-padding")}} property. The [snap areas](#snap_area) are aligned to the scrollport.
 
 - `Snap area`
   - : The **snap area** of an element in a scroll container is the area defined using {{CSSXref("scroll-margin")}} outsets specified on the element. The snap area is used to snap the element to its snapport.
