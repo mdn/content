@@ -16,7 +16,7 @@ The **`GPUQuerySet`** interface of the {{domxref("WebGPU API", "WebGPU API", "",
 - Timestamp queries allow applications to write timestamps to a `GPUQuerySet`. To run a timestamp query, appropriate `GPUQuerySet`s must be provided inside the value of the `timestampWrites` descriptor property when invoking {{domxref("GPUCommandEncoder.beginRenderPass()")}} to run a render pass, or {{domxref("GPUCommandEncoder.beginComputePass()")}} to run a compute pass.
 
 > [!NOTE]
-> To use timestamp queries, the `timestamp-query` {{domxref("GPUSupportedFeatures", "feature", "", "nocode")}} must be enabled in the {{domxref("GPUDevice")}}.
+> The `timestamp-query` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) needs to be enabled to use timestamp queries.
 
 A `GPUQuerySet` object instance is created using the {{domxref("GPUDevice.createQuerySet()")}} method.
 
