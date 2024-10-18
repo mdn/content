@@ -225,7 +225,7 @@ textarea {
 
 input:focus,
 textarea:focus {
-  /* Set the outline width and style /
+  /* Set the outline width and style */
   outline-style: solid;
   /* To give a little highlight on active elements */
   outline-color: #000;
