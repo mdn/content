@@ -75,7 +75,7 @@ This example gets the `XRWebGLLayer` for a session and then passes its
 framebuffer into the WebGL context's {{domxref("WebGLRenderingContext.bindFramebuffer", "bindFramebuffer()")}} function.
 
 ```js
-let glLayer = xrSession.renderState.baselayer;
+let glLayer = xrSession.renderState.baseLayer;
 gl.bindFramebuffer(gl.FRAMEBUFFER, glLayer.framebuffer);
 ```
 

@@ -83,17 +83,17 @@ window.addEventListener(
     const timer = setInterval(drawAnimation, 1000);
 
     const mask = [true, true, true];
-    const redtoggle = document.querySelector("#red-toggle");
-    const greentoggle = document.querySelector("#green-toggle");
-    const bluetoggle = document.querySelector("#blue-toggle");
-    redtoggle.addEventListener("click", setColorMask, false);
-    greentoggle.addEventListener("click", setColorMask, false);
-    bluetoggle.addEventListener("click", setColorMask, false);
+    const redToggle = document.querySelector("#red-toggle");
+    const greenToggle = document.querySelector("#green-toggle");
+    const blueToggle = document.querySelector("#blue-toggle");
+    redToggle.addEventListener("click", setColorMask, false);
+    greenToggle.addEventListener("click", setColorMask, false);
+    blueToggle.addEventListener("click", setColorMask, false);
 
     function setColorMask(evt) {
       const index =
-        (evt.target === greentoggle && 1) ||
-        (evt.target === bluetoggle && 2) ||
+        (evt.target === greenToggle && 1) ||
+        (evt.target === blueToggle && 2) ||
         0;
       mask[index] = !mask[index];
       evt.target.textContent = mask[index] ? "On" : "Off";

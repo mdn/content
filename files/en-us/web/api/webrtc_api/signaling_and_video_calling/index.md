@@ -188,11 +188,11 @@ The message object passed into this function is converted into a JSON string by 
 
 #### UI to start a call
 
-The code which handles the `"userlist"` message calls `handleUserlistMsg()`. Here we set up the handler for each connected user in the user list displayed to the left of the chat panel. This function receives a message object whose `users` property is an array of strings specifying the user names of every connected user.
+The code which handles the `"user-list"` message calls `handleUserListMsg()`. Here we set up the handler for each connected user in the user list displayed to the left of the chat panel. This function receives a message object whose `users` property is an array of strings specifying the user names of every connected user.
 
 ```js
-function handleUserlistMsg(msg) {
-  const listElem = document.querySelector(".userlistbox");
+function handleUserListMsg(msg) {
+  const listElem = document.querySelector(".user-list-box");
 
   while (listElem.firstChild) {
     listElem.removeChild(listElem.firstChild);

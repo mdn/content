@@ -70,6 +70,7 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
     <tr>
       <td>Invalid header name.</td>
       <td>
+        <!-- cSpell:ignore ontent -->
         <pre>
 // space in "C ontent-Type"
 const headers = {
