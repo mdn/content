@@ -7,7 +7,7 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#status.422
 
 {{HTTPSidebar}}
 
-The HTTP **`422 Unprocessable Content`** [client error response](/en-US/docs/Web/HTTP/Status#client_error_responses) status code indicates that the server understood the content type of the request entity, and the syntax of the request entity was correct, but it was unable to process the contained instructions.
+The HTTP **`422 Unprocessable Content`** [client error response](/en-US/docs/Web/HTTP/Status#client_error_responses) status code indicates that the server understood the content type of the request content, and the syntax of the request content was correct, but it was unable to process the contained instructions.
 
 Clients that receive a `422` response should expect that repeating the request without modification will fail with the same error.
 
@@ -40,10 +40,10 @@ Content-Length: 165
 ```
 
 In this implementation, the server expects strictly {{rfc("4648")}}-compliant Base64 encoded content (using [strict encoding methods](https://ruby-doc.org/3.3.2/stdlibs/base64/Base64.html#method-i-strict_encode64)).
-A `422` Unprocessable Entity response is returned and the `message` field provides context about the validation error:
+A `422` Unprocessable Content response is returned and the `message` field provides context about the validation error:
 
 ```http
-HTTP/1.1 422 Unprocessable Entity
+HTTP/1.1 422 Unprocessable Content
 Date: Fri, 28 Jun 2024 12:00:00 GMT
 Content-Type: application/json; charset=utf-8
 Content-Length: 187
