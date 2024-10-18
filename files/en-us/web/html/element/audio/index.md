@@ -240,18 +240,23 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 ## Usage notes
 
-Browsers don't all support the same [file types](/en-US/docs/Web/Media/Formats/Containers) and [audio codecs](/en-US/docs/Web/Media/Formats/Audio_codecs); you can provide multiple sources inside nested {{htmlelement("source")}} elements, and the browser will then use the first one it understands:
+The audio source can be set to any valid [URL](/en-US/docs/Web/URI), including HTTP(S) URLs and [Data URLs](/en-US/docs/Web/URI/Schemes/data). When using HTTP(S) URLs, be aware that the browser's caching behavior will affect how often the file is requested from the server. Data URLs embed the audio data directly in the HTML, which can be useful for small audio files but isn't recommended for larger files as it increases the HTML file size.
 
-```html
-<audio controls>
-  <source src="myAudio.mp3" type="audio/mpeg" />
-  <source src="myAudio.ogg" type="audio/ogg" />
-  <p>
-    Download <a href="myAudio.mp3" download="myAudio.mp3">MP3</a> or
-    <a href="myAudio.ogg" download="myAudio.ogg">OGG</a> audio.
-  </p>
-</audio>
+You can also set the [`srcObject`](/en-US/docs/Web/API/HTMLMediaElement/srcObject) in JavaScript to a {{jsxref("MediaStream")}} object. This is commonly used for live audio streams or real-time audio processing.
+
+```js
+const audioElement = document.querySelector("audio");
+navigator.mediaDevices
+  .getUserMedia({ audio: true })
+  .then((stream) => {
+    audioElement.srcObject = stream;
+  })
+  .catch((error) => {
+    console.error("Error accessing the microphone", error);
+  });
 ```
+
+Note that `MediaStream` sources have limitations: they are not seekable and only support a limited set of codecs.
 
 We offer a substantive and thorough [guide to media file types](/en-US/docs/Web/Media/Formats) and the [audio codecs that can be used within them](/en-US/docs/Web/Media/Formats/Audio_codecs). Also available is [a guide to the codecs supported for video](/en-US/docs/Web/Media/Formats/Video_codecs).
 
