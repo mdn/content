@@ -1248,46 +1248,6 @@ This includes: `SVGPathSegList`, [SVGPathElement.getPathSegAtLength()](/en-US/do
   </tbody>
 </table>
 
-### Regular expression (?ims-ims:...) modifiers
-
-The [(?ims-ims:...)](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Modifier) regular expression modifiers allow you to make changes to only take effect in a specific part of a regex pattern.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>131</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>-</td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>-</td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>-</td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>javascript.options.experimental.regexp_modifiers</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ## APIs
 
 ### Cookie Store API
