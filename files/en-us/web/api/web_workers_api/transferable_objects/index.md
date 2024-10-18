@@ -73,7 +73,7 @@ console.log(original.byteLength); // 0
 
 ## Supported objects
 
-The items that various specifications indicate can be _transferred_ are:
+The items that various specifications indicate can be _transferred_ are listed below (note that this list may not be exhaustive):
 
 - {{jsxref("ArrayBuffer")}}
 - {{domxref("MessagePort")}}
@@ -87,6 +87,8 @@ The items that various specifications indicate can be _transferred_ are:
 - {{domxref("VideoFrame")}}
 - {{domxref("OffscreenCanvas")}}
 - {{domxref("RTCDataChannel")}}
+- {{domxref("MediaSourceHandle")}}
+- {{domxref("MIDIAccess")}}
 
 Browser support should be indicated in the respective object's compatibility information by the `transferable` subfeature (see [`RTCDataChannel`](/en-US/docs/Web/API/RTCDataChannel#browser_compatibility) for an example).
 At time of writing, not all transferable objects have been updated with this information.
