@@ -236,22 +236,22 @@ The HTML and CSS for this example are pretty simple, and aren't shown here. You 
 <ul id="supportedConstraints"></ul>
 <div id="startButton" class="button">Start</div>
 <div class="wrapper">
-  <div class="trackrow">
-    <div class="leftside">
+  <div class="track-row">
+    <div class="left-side">
       <h3>Requested video constraints:</h3>
       <textarea id="videoConstraintEditor" cols="32" rows="8"></textarea>
     </div>
-    <div class="rightside">
+    <div class="right-side">
       <h3>Actual video settings:</h3>
       <textarea id="videoSettingsText" cols="32" rows="8" disabled></textarea>
     </div>
   </div>
-  <div class="trackrow">
-    <div class="leftside">
+  <div class="track-row">
+    <div class="left-side">
       <h3>Requested audio constraints:</h3>
       <textarea id="audioConstraintEditor" cols="32" rows="8"></textarea>
     </div>
-    <div class="rightside">
+    <div class="right-side">
       <h3>Actual audio settings:</h3>
       <textarea id="audioSettingsText" cols="32" rows="8" disabled></textarea>
     </div>
@@ -296,16 +296,16 @@ video {
   width: 600px;
 }
 
-.trackrow {
+.track-row {
   height: 200px;
 }
 
-.leftside {
+.left-side {
   float: left;
   width: calc(calc(100% / 2) - 10px);
 }
 
-.rightside {
+.right-side {
   float: right;
   width: calc(calc(100% / 2) - 10px);
 }
