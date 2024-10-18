@@ -210,7 +210,7 @@ async function runSession(session) {
 
   // Set up WebGL data and such
 
-  const worldData = loadGLPrograms(session, "worlddata.xml");
+  const worldData = loadGLPrograms(session, "world-data.xml");
   if (!worldData) {
     return null;
   }
