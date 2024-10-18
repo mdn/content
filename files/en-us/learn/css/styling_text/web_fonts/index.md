@@ -90,7 +90,7 @@ You should use the [web-font-start.html](https://github.com/mdn/learning-area/bl
 
 For this example, we'll use two web fonts: one for the headings and one for the body text. To start with, we need to find the font files that contain the fonts. Fonts are created by font foundries and are stored in different file formats. There are generally three types of sites where you can obtain fonts:
 
-- A free font distributor: This is a site that makes free fonts available for download (there may still be some license conditions, such as crediting the font creator). Examples include [Font Squirrel](https://www.fontsquirrel.com/), [dafont](https://www.dafont.com/), and [Everything Fonts](https://everythingfonts.com/).
+- A free font distributor: This is a site that makes free fonts available for download (there may still be some license conditions, such as crediting the font creator). Examples include [Font Squirrel](https://www.fontsquirrel.com/), [DaFont](https://www.dafont.com/), and [Everything Fonts](https://everythingfonts.com/).
 - A paid font distributor: This is a site that makes fonts available for a charge, such as [fonts.com](https://www.fonts.com/) or [myfonts.com](https://www.myfonts.com/). You can also buy fonts directly from font foundries, for example [Linotype](https://www.linotype.com/), [Monotype](https://www.monotype.com/), or [Exljbris](https://www.exljbris.com/).
 - An online font service: This is a site that stores and serves the fonts for you, making the whole process easier. See the [Using an online font service](#using_an_online_font_service) section for more details.
 
@@ -118,7 +118,7 @@ If you need to support legacy browsers, select the "Expert" mode in the Fontsqui
 Web services for font generation typically limit file sizes. In such a case, consider using tools such as:
 
 1. [sfnt2woff-zopfli](https://github.com/bramstein/sfnt2woff-zopfli) for converting ttf to woff
-2. [fontforge](https://fontforge.org/) for converting from ttf to svg
+2. [FontForge](https://fontforge.org/) for converting from ttf to svg
 3. [batik ttf2svg](https://xmlgraphics.apache.org/batik/tools/font-converter.html) for converting from ttf to svg
 4. [woff2](https://github.com/google/woff2) for converting from ttf to woff2
 
