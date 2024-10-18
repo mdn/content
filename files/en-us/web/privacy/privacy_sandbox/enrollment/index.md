@@ -16,7 +16,7 @@ The following features require enrollment to be usable:
 
 - [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API)
 - [Fenced Frame API](/en-US/docs/Web/API/Fenced_frame_API)
-- Protected Audience API
+- [Protected Audience API](/en-US/docs/Web/API/Protected_Audience_API)
 - [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API)
 - [Topics API](/en-US/docs/Web/API/Topics_API)
 

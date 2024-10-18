@@ -39,16 +39,8 @@ Permissions delegated from the top-level context to a fenced frame for allowing 
 
 The only features that can be enabled by a policy inside fenced frames are the specific features designed to be used inside fenced frames:
 
-- [Protected Audience API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience)
-  - `attribution-reporting`
-  - `private-aggregation`
-  - `shared-storage`
-  - `shared-storage-select-url`
+- [Protected Audience API](/en-US/docs/Web/API/Protected_Audience_API)
 - [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API)
-  - `attribution-reporting`
-  - `private-aggregation`
-  - `shared-storage`
-  - `shared-storage-select-url`
 
 Currently these are always enabled inside fenced frames. In the future, which ones are enabled will be controllable using the `<fencedframe>` `allow` attribute. Blocking privacy sandbox features in this manner will also block the fenced frame from loading — there will be no communication channel at all.
 
@@ -82,7 +74,7 @@ Without this title, they have to navigate into the `<iframe>` to determine what 
 
 ## Examples
 
-To set what content will be shown in a `<fencedframe>`, a utilizing API (such as [Protected Audience](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience) or [Shared Storage](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage)) generates a {{domxref("FencedFrameConfig")}} object, which is then set as the value of the `<fencedframe>`'s `config` property.
+To set what content will be shown in a `<fencedframe>`, a utilizing API (such as [Protected Audience](/en-US/docs/Web/API/Protected_Audience_API) or [Shared Storage](/en-US/docs/Web/API/Shared_Storage_API)) generates a {{domxref("FencedFrameConfig")}} object, which is then set as the value of the `<fencedframe>`'s `config` property.
 
 The following example gets a `FencedFrameConfig` from a Protected Audience API's ad auction, which is then used to display the winning ad in a `<fencedframe>`:
 
@@ -168,4 +160,4 @@ frame.config = frameConfig;
 
 - [Fenced Frame API](/en-US/docs/Web/API/Fenced_frame_API)
 - [Fenced frames](https://developers.google.com/privacy-sandbox/private-advertising/fenced-frame) on developers.google.com
-- [The Privacy Sandbox](https://developers.google.com/privacy-sandbox) on developers.google.com
+- [The Privacy Sandbox](/en-US/docs/Web/Privacy/Privacy_sandbox)
