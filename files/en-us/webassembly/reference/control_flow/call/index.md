@@ -6,7 +6,8 @@ page-type: webassembly-instruction
 
 {{WebAssemblySidebar}}
 
-**`call`** calls a function, `return_call` being the tail-call version of it. `call_indirect` calls a function in a table with the `return_call_indirect` tail-call version as well.
+**`call`** calls a function, while **`call_indirect`** calls a function in a table.
+**`return_call`** and **`return_call_indirect`** are the tail-call versions of `call` and `call_indirect`, respectively.
 
 {{EmbedInteractiveExample("pages/wat/call.html", "tabbed-standard")}}
 
@@ -22,6 +23,20 @@ call $greet
 | `call_indirect`        | `0x11`        |
 | `return_call`          | `0x12`        |
 | `return_call_indirect` | `0x13`        |
+
+## Examples
+
+### Using call to run a function imported from JavaScript
+
+Calling the `greet` function imported from JavaScript using `call`:
+
+{{EmbedInteractiveExample("pages/wat/call.html", "tabbed-taller")}}
+
+### Using return_call to calculate a factorial
+
+Calculating factorial for a number using `return_call` and logging the result using the exported `fac` function:
+
+{{EmbedInteractiveExample("pages/wat/return_call.html", "tabbed-taller")}}
 
 ## See also
 
