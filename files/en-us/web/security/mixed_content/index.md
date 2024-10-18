@@ -142,7 +142,7 @@ The best strategy to avoid issues with mixed content is to serve all the content
 - If using resource on other sites use HTTPS versions, if available.
 
   Most sites provide HTTPS versions of shared resources.
-  Often the easiest approach is to replace all `http://` links with `https://` and then use tools such as [linkchecker](https://linkchecker.github.io/linkchecker/) to verify that the links all work.
+  Often the easiest approach is to replace all `http://` links with `https://` and then use tools such as [LinkChecker](https://linkchecker.github.io/linkchecker/) to verify that the links all work.
 
 There are a number of ways to verify that your site is free of mixed content including:
 

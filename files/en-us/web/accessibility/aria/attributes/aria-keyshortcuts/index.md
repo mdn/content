@@ -93,7 +93,7 @@ The `aria-keyshortcuts` attribute is very similar to the [problematic](https://w
 
 In this example, we ensured the presence of the shortcut was known to sighted users a well by highlighting the non-modifier character.
 
-While the goal of the `accesskey` attribute matches the intention of `aria-keyshortcuts` and to do so natively, `accesskey` is rife with issues. Because of these issues, it is generally advised not to use accesskeys for most general-purpose websites and web apps.
+While the goal of the `accesskey` attribute matches the intention of `aria-keyshortcuts` and to do so natively, `accesskey` is rife with issues. Because of these issues, it is generally advised not to use access keys for most general-purpose websites and web apps.
 
 In addition to poor browser support, the same concerns arise for `accesskey` as exist for `aria-keyshortcuts`:
 

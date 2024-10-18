@@ -11,12 +11,12 @@ The `concat` function concatenates two or more strings and returns the resulting
 ## Syntax
 
 ```plain
-concat( string1, string2 [,stringn]* )
+concat( string1, string2 [,stringN]* )
 ```
 
 ### Parameters
 
-- `stringn`
+- `stringN`
   - : This function accepts two or more arguments. Each of these arguments is a string.
 
 ### Return value

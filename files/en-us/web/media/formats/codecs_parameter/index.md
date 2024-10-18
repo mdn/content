@@ -211,7 +211,7 @@ This codec parameter string's components are described in more detail in the tab
     <tr>
       <td><code>tc</code></td>
       <td>
-        The two-digit <code>transfer_characteristics</code> value. This value defines the function used to map the gamma (delightfully called the "opto-electrical transfer function" in technical parlance) from the source to the display.
+        The two-digit <code>transfer_characteristics</code> value. This value defines the function used to map the gamma (delightfully called the "opto-electronic transfer function" in technical parlance) from the source to the display.
         For example, 10-bit BT.2020 is <code>14</code>.
         The default value is <code>01</code> (ITU-R BT.709).
       </td>

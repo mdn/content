@@ -22,7 +22,7 @@ Before looking at codec-specific capabilities and requirements, there are a few 
 
 Unless the {{Glossary("SDP")}} specifically signals otherwise, the web browser receiving a WebRTC video stream must be able to handle video at 20 FPS at a minimum resolution of 320 pixels wide by 240 pixels tall. It's encouraged that video be encoded at a frame rate and size no lower than that, since that's essentially the lower bound of what WebRTC generally is expected to handle.
 
-SDP supports a codec-independent way to specify preferred video resolutions ({{RFC(6236)}}. This is done by sending an `a=imageattr` SDP attribute to indicate the maximum resolution that is acceptable. The sender is not required to support this mechanism, however, so you have to be prepared to receive media at a different resolution than you requested. Beyond this simple maximum resolution request, specific codecs may offer further ways to ask for specific media configurations.
+SDP supports a codec-independent way to specify preferred video resolutions ({{RFC(6236)}}. This is done by sending an `a=image-attr` SDP attribute to indicate the maximum resolution that is acceptable. The sender is not required to support this mechanism, however, so you have to be prepared to receive media at a different resolution than you requested. Beyond this simple maximum resolution request, specific codecs may offer further ways to ask for specific media configurations.
 
 ## Supported video codecs
 
