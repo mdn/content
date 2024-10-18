@@ -60,15 +60,17 @@ A search using Wikipedia with the results shown in a new window:
 
 ```js
 async function search() {
-  try {
-    // try to search using the `Wikipedia (en)` search engine
+  const engine = "Wikipedia (en)";
+  const engines = await browser.search.get();
+  if (engines.some((searchEngine) => searchEngine.name == engine)) {
+    // search using the `Wikipedia (en)` search engine
     await browser.search.search({
       query: "styracosaurus",
-      engine: "Wikipedia (en)",
+      engine,
       disposition: "NEW_WINDOW",
     });
-  } catch (ex) {
-    // if the search fails, e.g., because the search engine isn't defined to the browser, initiate the search using a url
+  } else {
+    // if the search engine isn't defined to the browser, initiate the search using a url
     await browser.windows.create({
       url: "https://en.wikipedia.org/w/index.php?title=Special:Search&search=styracosaurus",
     });
@@ -82,15 +84,17 @@ A search using Wikipedia with the results shown in the current tab:
 
 ```js
 async function search(tab) {
-  try {
-    // try to search using the `Wikipedia (en)` search engine
+  const engine = "Wikipedia (en)";
+  const engines = await browser.search.get();
+  if (engines.some((searchEngine) => searchEngine.name == engine)) {
+    // search using the `Wikipedia (en)` search engine
     await browser.search.search({
       query: "styracosaurus",
-      engine: "Wikipedia (en)",
+      engine,
       tabId: tab.id,
     });
-  } catch (ex) {
-    // if the search fails, e.g., because the search engine isn't defined to the browser, initiate the search using a url
+  } else {
+    // if the search engine isn't defined to the browser, initiate the search using a url
     await browser.tabs.update(tab.id, {
       url: "https://en.wikipedia.org/w/index.php?title=Special:Search&search=styracosaurus",
     });
