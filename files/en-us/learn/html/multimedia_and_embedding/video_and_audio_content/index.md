@@ -48,7 +48,7 @@ We won't be teaching you how to produce audio and video files — that requires 
 > [!NOTE]
 > Before you begin here, you should also know that there are quite a few OVPs (online video providers) like [YouTube](https://www.youtube.com/), [Dailymotion](https://www.dailymotion.com/), and [Vimeo](https://vimeo.com/), and online audio providers like [Soundcloud](https://soundcloud.com/). Such companies offer a convenient, easy way to host and consume videos, so you don't have to worry about the enormous bandwidth consumption. OVPs even usually offer ready-made code for embedding video/audio in your webpages; if you use that route, you can avoid some of the difficulties we discuss in this article. We'll be discussing this kind of service a bit more in the next article.
 
-### The \<video> element
+### The `<video>` element
 
 The {{htmlelement("video")}} element allows you to embed a video very easily. A really simple example looks like this:
 
@@ -136,7 +136,7 @@ Each `<source>` element also has a [`type`](/en-US/docs/Web/HTML/Element/source#
 
 Refer to our [guide to media types and formats](/en-US/docs/Web/Media/Formats) for help selecting the best containers and codecs for your needs, as well as to look up the right MIME types to specify for each.
 
-### Other \<video> features
+### Other `<video>` features
 
 There are a number of other features you can include when displaying an HTML video. Take a look at our next example:
 
@@ -185,7 +185,7 @@ Features include:
 
 You can find the above example available to [play live on GitHub](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html) (also [see the source code](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html).) Note that we haven't included the `autoplay` attribute in the live version — if the video starts to play as soon as the page loads, you don't get to see the poster!
 
-### The \<audio> element
+### The `<audio>` element
 
 The {{htmlelement("audio")}} element works just like the {{htmlelement("video")}} element, with a few small differences as outlined below. A typical example might look like so:
 

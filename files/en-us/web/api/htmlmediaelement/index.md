@@ -157,7 +157,7 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
 - {{domxref("HTMLMediaElement.encrypted_event", 'encrypted')}}
   - : Fired when initialization data is found in the media, indicating that it is encrypted.
 - {{domxref("HTMLMediaElement.ended_event", 'ended')}}
-  - : Fired when playback stops when end of the media (\<audio> or \<video>) is reached or because no further data is available.
+  - : Fired when playback stops when end of the media (`<audio>` or `<video>`) is reached or because no further data is available.
 - {{domxref("HTMLMediaElement.error_event", 'error')}}
   - : Fired when the resource could not be loaded due to an error.
 - {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}}
