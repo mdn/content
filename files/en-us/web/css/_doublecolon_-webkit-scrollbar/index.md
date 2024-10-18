@@ -128,7 +128,7 @@ The following example shows how to apply colors to scrollbars using {{cssxref("s
 #### HTML
 
 ```html
-<div class="scrollbox">
+<div class="scroll-box">
   <h1>Yoshi</h1>
   <p>
     Yoshi is a fictional dinosaur who appears in video games published by
@@ -149,7 +149,7 @@ The following example shows how to apply colors to scrollbars using {{cssxref("s
 #### CSS
 
 ```css hidden
-.scrollbox {
+.scroll-box {
   overflow: auto;
   width: 20rem;
   height: 5rem;
@@ -162,17 +162,17 @@ The following example shows how to apply colors to scrollbars using {{cssxref("s
 ```css
 /* For browsers that support `scrollbar-*` properties */
 @supports (scrollbar-color: auto) {
-  .scrollbox {
+  .scroll-box {
     scrollbar-color: aquamarine cornflowerblue;
   }
 }
 
 /* Otherwise, use `::-webkit-scrollbar-*` pseudo-elements */
 @supports selector(::-webkit-scrollbar) {
-  .scrollbox::-webkit-scrollbar {
+  .scroll-box::-webkit-scrollbar {
     background: aquamarine;
   }
-  .scrollbox::-webkit-scrollbar-thumb {
+  .scroll-box::-webkit-scrollbar-thumb {
     background: cornflowerblue;
   }
 }

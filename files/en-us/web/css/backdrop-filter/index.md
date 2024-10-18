@@ -18,7 +18,7 @@ The **`backdrop-filter`** [CSS](/en-US/docs/Web/CSS) property lets you apply gra
 backdrop-filter: none;
 
 /* URL to SVG filter */
-backdrop-filter: url(commonfilters.svg#filter);
+backdrop-filter: url(common-filters.svg#filter);
 
 /* <filter-function> values */
 backdrop-filter: blur(2px);

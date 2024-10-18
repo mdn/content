@@ -89,7 +89,7 @@ You can see the effect of `animation-fill-mode` in the following example. It dem
 ```html
 <p>Move your mouse over the gray box!</p>
 <div class="demo">
-  <div class="growsandstays">This grows and stays big.</div>
+  <div class="grows-and-stays">This grows and stays big.</div>
   <div class="grows">This just grows.</div>
 </div>
 ```
@@ -116,7 +116,7 @@ You can see the effect of `animation-fill-mode` in the following example. It dem
   animation-duration: 3s;
 }
 
-.demo:hover .growsandstays {
+.demo:hover .grows-and-stays {
   animation-name: grow;
   animation-duration: 3s;
   animation-fill-mode: forwards;

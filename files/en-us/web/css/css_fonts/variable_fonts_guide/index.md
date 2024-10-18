@@ -252,7 +252,8 @@ The basic syntax is the same, but the font technology can be specified, and allo
 ```css
 @font-face {
   font-family: "MyVariableFontName";
-  src: url("path/to/font/file/myvariablefont.woff2") format("woff2-variations");
+  src: url("path/to/font/file/my-variable-font.woff2")
+    format("woff2-variations");
   font-weight: 125 950;
   font-stretch: 75% 125%;
   font-style: normal;
@@ -266,7 +267,8 @@ In this case, the `normal` value indicates that this font file should be used wh
 ```css
 @font-face {
   font-family: "MyVariableFontName";
-  src: url("path/to/font/file/myvariablefont.woff2") format("woff2-variations");
+  src: url("path/to/font/file/my-variable-font.woff2")
+    format("woff2-variations");
   font-weight: 125 950;
   font-stretch: 75% 125%;
   font-style: italic;
@@ -280,7 +282,8 @@ In this case, the `italic` value indicates that this font file should be used wh
 ```css
 @font-face {
   font-family: "MyVariableFontName";
-  src: url("path/to/font/file/myvariablefont.woff2") format("woff2-variations");
+  src: url("path/to/font/file/my-variable-font.woff2")
+    format("woff2-variations");
   font-weight: 125 950;
   font-stretch: 75% 125%;
   font-style: oblique 0deg 12deg;

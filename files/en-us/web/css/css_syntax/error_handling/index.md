@@ -136,7 +136,7 @@ If the content between the last semi-colon and the end of the stylesheet is vali
 <style>
 @keyframes move {
   100% {
-    transform: translatex(100vw)
+    transform: translateX(100vw)
 </style>
 ```
 
@@ -150,8 +150,8 @@ Unclosed comments are logic errors, not syntax errors. If a comment starts with 
 <style>
   /* this comment is not closed
   @keyframes move {
-    0% {transform: translatex(0);}
-    100% {transform: translatex(100vw);}
+    0% {transform: translateX(0);}
+    100% {transform: translateX(100vw);}
   }
 </style>
 <p style="/* another unclosed comment">Parsed as HTML.</p>

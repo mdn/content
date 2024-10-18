@@ -16,9 +16,9 @@ Custom properties are scoped to the element(s) they are declared on, and partici
 ## Syntax
 
 ```css
---somekeyword: left;
---somecolor: #0000ff;
---somecomplexvalue: 3px 6px rgb(20 32 54);
+--some-keyword: left;
+--some-color: #0000ff;
+--some-complex-value: 3px 6px rgb(20 32 54);
 ```
 
 - `<declaration-value>`

@@ -19,10 +19,10 @@ The `counters()` function has two forms: `counters(<name>, <string>)` and `count
 
 ```css
 /* Simple usage  - style defaults to decimal */
-counters(countername, '.');
+counters(counter-name, '.');
 
 /* changing the counter display */
-counters(countername, '-', upper-roman)
+counters(counter-name, '-', upper-roman)
 ```
 
 A [counter](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) has no visible effect by itself. The `counters()` function (and {{cssxref("counter", "counter()")}} function) is what makes it useful by returning developer-defined content.
