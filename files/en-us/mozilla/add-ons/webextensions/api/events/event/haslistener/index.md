@@ -23,7 +23,7 @@ events.Event.hasListener(listener)
 
 ### Return value
 
-A boolean value: `true` if the listener is registered to the event. Otherwise,`false`.
+A boolean value: `true` if the listener is registered to the event. Otherwise, `false`.
 
 ## Browser compatibility
 

@@ -31,7 +31,7 @@ In this example, a publisher asks a third-party content provider to render some 
 
 To pass data into a `<fencedframe>` to be used in a shared storage worklet, the embedder can set the data in a {{domxref("FencedFrameConfig")}}. That value will be available as {{domxref("WorkletSharedStorage.context")}} inside the shared storage worklet. This data is not available outside a worklet, and can only be accessed inside a secure and private environment that a shared storage worklet provides.
 
-![A publisher created a fencedframeconfig using selectURL, which can set contextual data using setSharedStorageContext that will then be available in a shared storage worklet](share-contextual-data.png)
+![A publisher created a FencedFrameConfig using selectURL, which can set contextual data using setSharedStorageContext that will then be available in a shared storage worklet](share-contextual-data.png)
 
 When a `selectURL()` call returns a `FencedFrameConfig`, the frame embedder can pass in data by calling `setSharedStorageContext(data)`:
 

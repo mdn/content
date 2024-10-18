@@ -27,7 +27,7 @@ within the selected directory hierarchies is generated and displayed.
 ### HTML
 
 ```html
-<input type="file" id="filepicker" name="fileList" webkitdirectory multiple />
+<input type="file" id="file-picker" name="fileList" webkitdirectory multiple />
 <output id="output"></output>
 ```
 
@@ -42,9 +42,9 @@ output {
 
 ```js
 const output = document.getElementById("output");
-const filepicker = document.getElementById("filepicker");
+const filePicker = document.getElementById("file-picker");
 
-filepicker.addEventListener("change", (event) => {
+filePicker.addEventListener("change", (event) => {
   const files = event.target.files;
 
   for (const file of files) {

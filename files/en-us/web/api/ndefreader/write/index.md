@@ -133,14 +133,14 @@ ndef.onreading = (event) => console.log("We read a tag!");
 
 function write(data, { timeout } = {}) {
   return new Promise((resolve, reject) => {
-    const ctlr = new AbortController();
-    ctlr.signal.onabort = () => reject("Time is up, bailing out!");
-    setTimeout(() => ctlr.abort(), timeout);
+    const controller = new AbortController();
+    controller.signal.onabort = () => reject("Time is up, bailing out!");
+    setTimeout(() => controller.abort(), timeout);
 
     ndef.addEventListener(
       "reading",
       (event) => {
-        ndef.write(data, { signal: ctlr.signal }).then(resolve, reject);
+        ndef.write(data, { signal: controller.signal }).then(resolve, reject);
       },
       { once: true },
     );

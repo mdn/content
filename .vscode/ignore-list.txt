@@ -4819,6 +4819,7 @@ Tamaran
 tamen
 taml
 tamldec
+tanuki
 Tanx
 targetable
 TARGETDURATION
@@ -5279,6 +5280,7 @@ usermail
 usermessage
 userpic
 userproximity
+userscript
 userscripts
 USERSPACEONUSE
 usertext

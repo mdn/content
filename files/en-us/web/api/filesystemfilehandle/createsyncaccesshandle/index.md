@@ -92,8 +92,8 @@ The two {{htmlelement("button")}} elements and text {{htmlelement("input")}} fie
 ```html
 <ol>
   <li>
-    <label for="filetext">Enter text to write to the file:</label>
-    <input type="text" id="filetext" name="filetext" />
+    <label for="file-text">Enter text to write to the file:</label>
+    <input type="text" id="file-text" name="file-text" />
   </li>
   <li>
     Write your text to the file: <button class="write">Write text</button>
@@ -115,7 +115,7 @@ The main thread JavaScript inside the HTML file is shown below. We grab referenc
 ```js
 const writeBtn = document.querySelector(".write");
 const emptyBtn = document.querySelector(".empty");
-const fileText = document.querySelector("#filetext");
+const fileText = document.querySelector("#file-text");
 
 const opfsWorker = new Worker("worker.js");
 
