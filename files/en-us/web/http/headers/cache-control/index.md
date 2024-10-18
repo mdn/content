@@ -7,7 +7,7 @@ browser-compat: http.headers.Cache-Control
 
 {{HTTPSidebar}}
 
-The **`Cache-Control`** HTTP header field holds _directives_ (instructions) — in both requests and responses — that control [caching](/en-US/docs/Web/HTTP/Caching) in browsers and shared caches (e.g. Proxies, CDNs).
+The HTTP **`Cache-Control`** header holds _directives_ (instructions) in both requests and responses that control [caching](/en-US/docs/Web/HTTP/Caching) in browsers and shared caches (e.g., Proxies, CDNs).
 
 <table class="properties">
   <tbody>
@@ -20,13 +20,13 @@ The **`Cache-Control`** HTTP header field holds _directives_ (instructions) — 
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
     <tr>
       <th scope="row">
         {{Glossary("CORS-safelisted response header")}}
       </th>
-      <td>yes</td>
+      <td>Yes</td>
     </tr>
   </tbody>
 </table>
