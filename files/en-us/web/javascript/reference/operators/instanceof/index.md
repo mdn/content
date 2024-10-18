@@ -186,9 +186,9 @@ literalObject instanceof Object; // true, every object literal has Object.protot
 nullObject instanceof Object; // false, prototype is end of prototype chain (null)
 ```
 
-### Demonstrating that mycar is of type Car and type Object
+### Demonstrating that myCar is of type Car and type Object
 
-The following code creates an object type `Car` and an instance of that object type, `mycar`. The `instanceof` operator demonstrates that the `mycar` object is of type `Car` and of type `Object`.
+The following code creates an object type `Car` and an instance of that object type, `myCar`. The `instanceof` operator demonstrates that the `myCar` object is of type `Car` and of type `Object`.
 
 ```js
 function Car(make, model, year) {
@@ -196,9 +196,9 @@ function Car(make, model, year) {
   this.model = model;
   this.year = year;
 }
-const mycar = new Car("Honda", "Accord", 1998);
-const a = mycar instanceof Car; // returns true
-const b = mycar instanceof Object; // returns true
+const myCar = new Car("Honda", "Accord", 1998);
+const a = myCar instanceof Car; // returns true
+const b = myCar instanceof Object; // returns true
 ```
 
 ### Not an instanceof
@@ -206,21 +206,21 @@ const b = mycar instanceof Object; // returns true
 To test if an object is not an `instanceof` a specific constructor, you can do:
 
 ```js
-if (!(mycar instanceof Car)) {
+if (!(myCar instanceof Car)) {
   // Do something, like:
-  // mycar = new Car(mycar)
+  // myCar = new Car(myCar)
 }
 ```
 
 This is really different from:
 
 ```js-nolint example-bad
-if (!mycar instanceof Car) {
+if (!myCar instanceof Car) {
   // unreachable code
 }
 ```
 
-This will always be `false`. (`!mycar` will be evaluated before `instanceof`, so you always try to know if a boolean is an instance of `Car`).
+This will always be `false`. (`!myCar` will be evaluated before `instanceof`, so you always try to know if a boolean is an instance of `Car`).
 
 ### Overriding the behavior of instanceof
 
