@@ -62,8 +62,6 @@ console.log(self.btoa(ok)); // YQ==
 console.log(self.btoa(notOK)); // error
 ```
 
-For how to work around this limitation when dealing with arbitrary Unicode text, see _The "Unicode Problem"_ in the {{Glossary("Base64")}} glossary entry.
-
 ## Specifications
 
 {{Specifications}}
@@ -78,4 +76,5 @@ For how to work around this limitation when dealing with arbitrary Unicode text,
 - [`data` URLs](/en-US/docs/Web/URI/Schemes/data)
 - {{domxref("WorkerGlobalScope.atob()")}}
 - {{domxref("Window.btoa()")}}: the same method, but in window scopes.
+- {{jsxref("Uint8Array.prototype.toBase64()")}}
 - {{Glossary("Base64")}}
