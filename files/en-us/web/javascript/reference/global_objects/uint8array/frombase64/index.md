@@ -27,17 +27,17 @@ Uint8Array.fromBase64(string, options)
     - `alphabet` {{optional_inline}}
       - : A string specifying the base64 alphabet to use. It can be one of the following:
         - `"base64"` (default)
-          - : Accept `+` and `/` as `0x3E` and `0x3F`, respectively.
+          - : Accept input encoded with the standard base64 alphabet, which uses `+` and `/`.
         - `"base64url"`
-          - : Accept `-` and `_` as `0x3E` and `0x3F`, respectively.
+          - : Accept input encoded with the URL-safe base64 alphabet, which uses `-` and `_`.
     - `lastChunkHandling` {{optional_inline}}
       - : A string specifying how to handle the last chunk of the base64 string. Because every 4 characters in base64 encodes 3 bytes, the string is separated into chunks of 4 characters. If the last chunk has fewer than 4 characters, it needs to be handled differently. It can be one of the following:
         - `"loose"` (default)
           - : The last chunk can either be 2 or 3 base64 characters, or exactly 4 characters long with padding `=` characters. The last chunk is decoded and appended to the result.
         - `"strict"`
-          - : The last chunk must be exactly 4 characters long with padding `=` characters. Furthermore, [overflow bits](/en-US/docs/Glossary/Base64#last_chunk) (trailing bits from the base64 characters that don't represent any data) must be 0. The last chunk is decoded and appended to the result.
+          - : The last chunk must be exactly 4 characters long with padding `=` characters. Furthermore, [overflow bits](/en-US/docs/Glossary/Base64#last_chunk) (trailing bits from the last base64 character that don't represent any data) must be 0. The last chunk is decoded and appended to the result.
         - `"stop-before-partial"`
-          - : If the last chunk is exactly 4 characters long with padding `=` characters, then it's decoded and appended to the result. Otherwise, the last partial chunk is ignored (but if it contains one base64 character followed by `=`, then a syntax error is still thrown). This is useful if the string is coming from a stream and the last chunk is not yet complete.
+          - : If the last chunk is exactly 4 characters long with padding `=` characters, then it's decoded and appended to the result. Otherwise, the last partial chunk is ignored (but if it contains one base64 character followed by `=`, then a syntax error is still thrown). This is useful if the string is coming from a stream and the last chunk is not yet complete. To know how many characters of the input were read, use {{jsxref("Uint8Array.prototype.setFromBase64()")}} instead (the linked page also contains an example of stream decoding using `"stop-before-partial"`).
 
 ### Return value
 
@@ -59,13 +59,13 @@ A new `Uint8Array` object containing the decoded bytes from the base64-encoded s
 
 This example uses the default `alphabet` and `lastChunkHandling` options to decode a base64 string. Note that:
 
-- The string has 10 base64 characters, not a multiple of 4.
+- The string has 14 base64 characters, not a multiple of 4.
 - The whitespace in the space is ignored.
-- The last chunk, `ld`, ends in the character `d` which is `0b011101` in base64, so the `1101` bits are "overflow bits" and are ignored.
+- The last chunk, `Ph`, ends in the character `h` which is `0b100001` in base64, so the last `0001` bits are "overflow bits" and are ignored.
 
 ```js
-const uint8Array = Uint8Array.fromBase64("Hello World");
-console.log(uint8Array); // Uint8Array(7) [29, 233, 101, 161, 106, 43, 149]
+const uint8Array = Uint8Array.fromBase64("PGI+ TURO PC9i Ph");
+console.log(uint8Array); // Uint8Array(10) [60, 98, 62, 77, 68, 78, 60, 47, 98, 62]
 ```
 
 ### Decoding a URL-safe base64 string
@@ -73,10 +73,10 @@ console.log(uint8Array); // Uint8Array(7) [29, 233, 101, 161, 106, 43, 149]
 This example uses the `alphabet` option to decode a URL-safe base64 string.
 
 ```js
-const uint8Array = Uint8Array.fromBase64("Hello-World", {
+const uint8Array = Uint8Array.fromBase64("PGI-TUROPC9iPg", {
   alphabet: "base64url",
 });
-console.log(uint8Array); // Uint8Array(8) [29, 233, 101, 163, 229, 168, 174, 87]
+console.log(uint8Array); // Uint8Array(10) [60, 98, 62, 77, 68, 78, 60, 47, 98, 62]
 ```
 
 ### Decoding a base64 string with strict last chunk handling
@@ -84,13 +84,19 @@ console.log(uint8Array); // Uint8Array(8) [29, 233, 101, 163, 229, 168, 174, 87]
 This example uses the `lastChunkHandling` option to decode a base64 string, where the last chunk must be exactly 4 characters long with padding `=` characters, and the overflow bits must be 0.
 
 ```js
-const array1 = Uint8Array.fromBase64("VQ==", { lastChunkHandling: "strict" });
-console.log(array1); // Uint8Array(1) [85]
+const array1 = Uint8Array.fromBase64("PGI+TUROPC9iPg==", {
+  lastChunkHandling: "strict",
+});
+console.log(array1); // Uint8Array(10) [60, 98, 62, 77, 68, 78, 60, 47, 98, 62]
 
-const array2 = Uint8Array.fromBase64("VR==", { lastChunkHandling: "strict" });
-// Throws a SyntaxError because R is 0b010001, where the last 4 bits are not 0
+const array2 = Uint8Array.fromBase64("PGI+TUROPC9iPh==", {
+  lastChunkHandling: "strict",
+});
+// Throws a SyntaxError because h is 0b100001, where the last 4 bits are not 0
 
-const array3 = Uint8Array.fromBase64("VQ", { lastChunkHandling: "strict" });
+const array3 = Uint8Array.fromBase64("PGI+TUROPC9iPg", {
+  lastChunkHandling: "strict",
+});
 // Throws a SyntaxError because the last chunk is not exactly 4 characters long
 ```
 
@@ -100,28 +106,34 @@ This example uses the `lastChunkHandling` option to decode a base64 string, igno
 
 ```js
 // The last chunk is complete
-const array1 = Uint8Array.fromBase64("VQ==", {
+const array1 = Uint8Array.fromBase64("PGI+ TURO PC9i", {
   lastChunkHandling: "stop-before-partial",
 });
-console.log(array1); // Uint8Array(1) [85]
+console.log(array1); // Uint8Array(9) [60, 98, 62, 77, 68, 78, 60, 47, 98]
 
-// The last chunk is partial
-const array2 = Uint8Array.fromBase64("VQ", {
+// The last chunk is also complete with padding
+const array2 = Uint8Array.fromBase64("PGI+ TURO PC9i Pg==", {
   lastChunkHandling: "stop-before-partial",
 });
-console.log(array2); // Uint8Array(0) []
+console.log(array2); // Uint8Array(10) [60, 98, 62, 77, 68, 78, 60, 47, 98, 62]
 
-// The last chunk is partial with padding
-const array3 = Uint8Array.fromBase64("VQ=", {
+// The last chunk is partial; it's ignored
+const array3 = Uint8Array.fromBase64("PGI+ TURO PC9i Pg", {
   lastChunkHandling: "stop-before-partial",
 });
-console.log(array3); // Uint8Array(0) []
+console.log(array3); // Uint8Array(9) [60, 98, 62, 77, 68, 78, 60, 47, 98]
+
+// The last chunk is partial with padding; it's still ignored
+const array4 = Uint8Array.fromBase64("PGI+ TURO PC9i Pg=", {
+  lastChunkHandling: "stop-before-partial",
+});
+console.log(array4); // Uint8Array(9) [60, 98, 62, 77, 68, 78, 60, 47, 98]
 
 // The last chunk is partial, but it contains one base64 character followed by `=`
-const array4 = Uint8Array.fromBase64("V=", {
+const array5 = Uint8Array.fromBase64("PGI+ TURO PC9i P=", {
   lastChunkHandling: "stop-before-partial",
 });
-// Throws a SyntaxError because this cannot possibly be a valid base64 string
+// Throws a SyntaxError because this cannot possibly be part of a valid base64 string
 ```
 
 ## Specifications

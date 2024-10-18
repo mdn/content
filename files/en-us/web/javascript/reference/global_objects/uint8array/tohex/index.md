@@ -34,6 +34,14 @@ This example encodes data from a `Uint8Array` into a hex string.
 ```js
 const uint8Array = new Uint8Array([202, 254, 208, 13]);
 console.log(uint8Array.toHex()); // "cafed00d"
+
+const data = new Uint8Array([255, 0, 0, 0, 255, 0, 0, 0, 255]);
+for (let i = 0; i < data.length; i += 3) {
+  console.log(data.slice(i, i + 3).toHex());
+}
+// "ff0000"
+// "00ff00"
+// "00ff00"
 ```
 
 ## Specifications

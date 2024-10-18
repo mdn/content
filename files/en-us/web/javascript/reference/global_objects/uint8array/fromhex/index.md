@@ -20,7 +20,7 @@ Uint8Array.fromHex(string)
 ### Parameters
 
 - `string`
-  - : A hexadecimal string to convert to a `Uint8Array`. The string must only contain characters in the hexadecimal alphabet, which includes 0–9 and A–F (case-insensitive). It must have an even number of characters.
+  - : A hexadecimal string to convert to a `Uint8Array`. The string must only contain characters in the hexadecimal alphabet, which includes 0–9 and A–F (case-insensitive). It must have an even number of characters.Unlike {{jsxref("Uint8Array.fromBase64()")}}, the input cannot contain whitespace.
 
 ### Return value
 

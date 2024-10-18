@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Uint8Array.setFromBase64
 
 {{JSRef}}
 
-The **`setFromBase64()`** method of {{jsxref("Uint8Array")}} instances populates this `Uint8Array` object with bytes from a [base64](/en-US/docs/Glossary/Base64)-encoded string, returning an object containing how many bytes were read and written.
+The **`setFromBase64()`** method of {{jsxref("Uint8Array")}} instances populates this `Uint8Array` object with bytes from a [base64](/en-US/docs/Glossary/Base64)-encoded string, returning an object indicating how many bytes were read and written.
 
 For the general concepts around base64 strings, see the [base64](/en-US/docs/Glossary/Base64) glossary entry. This method is most suitable for populating a pre-allocated array buffer. If you just want to create a new `Uint8Array` object from a base64-encoded string, use the static method {{jsxref("Uint8Array.fromBase64()")}} instead.
 
@@ -30,7 +30,7 @@ setFromBase64(string, options)
 An object containing the following properties:
 
 - `read`
-  - : The number of base64 characters read from the input string. It is either the length of the input string (including padding), if the decoded data fits into the array, or a multiple of 4 up to the last complete 4-character chunk that fits into the array. If a chunk has more data than the remainder of the array can hold, that chunk will never be split (because the remaining bits cannot be partially "put back" into the base64 without completely re-encoding it); it will be entirely ignored, resulting in the last one or two bytes of the array not being written.
+  - : The number of base64 characters read from the input string. It is either the length of the input string (including padding), if the decoded data fits into the array, or up to the last complete 4-character chunk that fits into the array. Chunks will never be split (because the remaining bits cannot be partially "put back" into the base64 without completely re-encoding it); if the next chunk cannot fit into the remainder of the array, it will be entirely unread, resulting in the last one or two bytes of the array not being written.
 - `written`
   - : The number of bytes written to the `Uint8Array`. Will never be greater than this `Uint8Array`'s {{jsxref("TypedArray/byteLength", "byteLength")}}.
 
@@ -51,10 +51,11 @@ An object containing the following properties:
 This example uses the default `alphabet` and `lastChunkHandling` options to decode a base64 string into an existing `Uint8Array`.
 
 ```js
-const uint8Array = new Uint8Array(8);
-const result = uint8Array.setFromBase64("Hello World");
-console.log(result); // { read: 11, written: 7 }
-console.log(uint8Array); // Uint8Array(8) [29, 233, 101, 161, 106, 43, 149, 0]
+const uint8Array = new Uint8Array(16);
+const result = uint8Array.setFromBase64("PGI+ TURO PC9i Pg==");
+console.log(result); // { read: 19, written: 10 }
+console.log(uint8Array);
+// Uint8Array(16) [60, 98, 62, 77, 68, 78, 60, 47, 98, 62, 0, 0, 0, 0, 0, 0]
 ```
 
 ### Decoding a big string into a small array
@@ -62,13 +63,27 @@ console.log(uint8Array); // Uint8Array(8) [29, 233, 101, 161, 106, 43, 149, 0]
 If the string contains more data than the array can hold, the method will only write as many bytes as the array can hold, without discarding any bits.
 
 ```js
-const uint8Array = new Uint8Array(4);
-const result = uint8Array.setFromBase64("Hello World");
-console.log(result); // { read: 4, written: 3 }
-console.log(uint8Array); // Uint8Array(4) [29, 233, 101, 0]
+const uint8Array = new Uint8Array(8);
+const result = uint8Array.setFromBase64("PGI+ TURO PC9i Pg==");
+console.log(result); // { read: 9, written: 6 }
+console.log(uint8Array);
+// Uint8Array(8) [60, 98, 62, 77, 68, 78, 0, 0]
 ```
 
-Note how the last byte of the array is not written, because to decode that byte, we need to read two more base64 characters, which represent 12 bits, resulting in 4 trailing bits being discarded. Therefore, only the first 4-character chunk is decoded into 3 bytes.
+Note how the last two bytes of the array are not written, because to decode the next two bytes, we need to read three more base64 characters, which represent 18 bits, resulting in 2 trailing bits being discarded. Therefore, we can only write 2 chunks, or 6 bytes, to the array.
+
+### Setting data at a specific offset
+
+The `setFromBase64()` method always starts writing at the beginning of the `Uint8Array`. If you want to write to the middle of the array, you can write to a {{jsxref("TypedArray.prototype.subarray()")}} instead.
+
+```js
+const uint8Array = new Uint8Array(16);
+// Start writing at offset 2
+const result = uint8Array.subarray(2).setFromBase64("PGI+ TURO PC9i Pg==");
+console.log(result); // { read: 19, written: 10 }
+console.log(uint8Array);
+// Uint8Array(16) [0, 0, 60, 98, 62, 77, 68, 78, 60, 47, 98, 62, 0, 0, 0, 0]
+```
 
 ### Implementing stream decoding
 

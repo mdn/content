@@ -55,9 +55,9 @@ These properties are defined on `Uint8Array.prototype` and shared by all `Uint8A
 _Inherits instance methods from its parent {{jsxref("TypedArray")}}_.
 
 - {{jsxref("Uint8Array.prototype.setFromBase64()")}}
-  - : Populates this `Uint8Array` object with bytes from a base64-encoded string, returning an object containing how many bytes were read and written.
+  - : Populates this `Uint8Array` object with bytes from a base64-encoded string, returning an object indicating how many bytes were read and written.
 - {{jsxref("Uint8Array.prototype.setFromHex()")}}
-  - : Populates this `Uint8Array` object with bytes from a hex-encoded string, returning an object containing how many bytes were read and written.
+  - : Populates this `Uint8Array` object with bytes from a hex-encoded string, returning an object indicating how many bytes were read and written.
 - {{jsxref("Uint8Array.prototype.toBase64()")}}
   - : Returns a base64-encoded string based on the data in this `Uint8Array` object.
 - {{jsxref("Uint8Array.prototype.toHex()")}}

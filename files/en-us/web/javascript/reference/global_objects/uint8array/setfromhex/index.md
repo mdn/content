@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Uint8Array.setFromHex
 
 {{JSRef}}
 
-The **`setFromHex()`** method of {{jsxref("Uint8Array")}} instances populates this `Uint8Array` object with bytes from a hex-encoded string, returning an object containing how many bytes were read and written.
+The **`setFromHex()`** method of {{jsxref("Uint8Array")}} instances populates this `Uint8Array` object with bytes from a hex-encoded string, returning an object indicating how many bytes were read and written.
 
 This method parses the string into a byte array. To convert the string into a single number, use the {{jsxref("Global_Objects/parseInt", "parseInt()")}} function with `radix` set to `16` instead.
 
@@ -20,7 +20,7 @@ setFromHex(string)
 ### Parameters
 
 - `string`
-  - : A hexadecimal string to convert to a `Uint8Array`. The string must only contain characters in the hexadecimal alphabet, which includes 0–9 and A–F (case-insensitive). It must have an even number of characters. Note that the string is only read up to the point where the array is filled, so any invalid hex syntax after that point is ignored.
+  - : A hexadecimal string to convert to a `Uint8Array`. The string must only contain characters in the hexadecimal alphabet, which includes 0–9 and A–F (case-insensitive). It must have an even number of characters.Unlike {{jsxref("Uint8Array.prototype.setFromBase64()")}}, the input cannot contain whitespace. Note that the string is only read up to the point where the array is filled, so any invalid hex syntax after that point is ignored.
 
 ### Return value
 
