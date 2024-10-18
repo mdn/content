@@ -952,6 +952,17 @@
       "properties": [],
       "events": []
     },
+    "Invoker Commands API": {
+      "overview": ["Invoker Commands API"],
+      "guides": [],
+      "interfaces": ["CommandEvent"],
+      "methods": [],
+      "properties": [
+        "HTMLButtonElement.commandForElement",
+        "HTMLButtonElement.command"
+      ],
+      "events": ["HTMLElement: command"]
+    },
     "Keyboard API": {
       "overview": ["Keyboard API"],
       "interfaces": ["Keyboard", "KeyboardLayoutMap"],
