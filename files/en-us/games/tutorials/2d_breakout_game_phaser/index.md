@@ -28,7 +28,7 @@ All the lessons — and the different versions of the [MDN Breakout game](https:
 6. [Bounce off the walls](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls)
 7. [Player paddle and controls](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls)
 8. [Game over](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Game_over)
-9. [Build the brickfield](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field)
+9. [Build the brick field](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field)
 10. [Collision detection](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Collision_detection)
 11. [The score](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/The_score)
 12. [Win the game](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Win_the_game)

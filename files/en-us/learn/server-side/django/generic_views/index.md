@@ -410,10 +410,10 @@ You can capture multiple patterns in the one match, and hence encode lots of dif
 
 One feature that we haven't used here, but which you may find valuable, is that you can pass a [dictionary containing additional options](https://docs.djangoproject.com/en/5.0/topics/http/urls/#views-extra-options) to the view (using the third un-named argument to the `path()` function). This approach can be useful if you want to use the same view for multiple resources, and pass data to configure its behavior in each case.
 
-For example, given the path shown below, for a request to `/myurl/halibut/` Django will call `views.my_view(request, fish='halibut', my_template_name='some_path')`.
+For example, given the path shown below, for a request to `/my-url/halibut/` Django will call `views.my_view(request, fish='halibut', my_template_name='some_path')`.
 
 ```python
-path('myurl/<fish>', views.my_view, {'my_template_name': 'some_path'}, name='aurl'),
+path('my-url/<fish>', views.my_view, {'my_template_name': 'some_path'}, name='aurl'),
 ```
 
 > [!NOTE]

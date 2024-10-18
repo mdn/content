@@ -46,7 +46,7 @@ The following steps describe what you need to do to complete the table example. 
 3. Add a row to the table header containing all the column headers.
 4. Create all the content rows inside the table body, remembering to make all the row headings into headings semantically.
 5. Ensure all the content is placed into the right cells — in the raw data, each row of planet data is shown next to its associated planet.
-6. Add attributes to make the row and column headers unambiguously associated with the rows, columns, or rowgroups that they act as headings for.
+6. Add attributes to make the row and column headers unambiguously associated with the rows, columns, or row groups that they act as headings for.
 7. Add a black [border](/en-US/docs/Web/CSS/border) just around the column that contains all the planet name row headers.
 
 ## Hints and tips
