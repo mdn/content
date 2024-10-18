@@ -10,9 +10,9 @@ browser-compat: api.crossOriginIsolated
 
 The **`crossOriginIsolated`** read-only property of the {{domxref("Window")}} interface returns a boolean value that indicates whether the document is cross-origin isolated, and hence is allowed to use APIs that require cross-origin isolation.
 
-A cross origin isolated document only shares its browser context group with same-origin documents (`<iframe>` and popups).
-The relationship between a cross origin opener of the document or any cross-origin popups that it opens are severed.
-If supported by the operating system, the document's browser context group is hosted in its own OS process, if supported by the OS.
+A cross-origin isolated document only shares its browser context group with same-origin documents in popups and navigations, and resources (both same-origin and cross-origin) that the document has opted into using via [CORS](/en-US/docs/Web/HTTP/CORS) (and [COEP](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy)) for `<iframe>`).
+The relationship between a cross-origin opener of the document or any cross-origin popups that it opens are severed.
+The document may also be hosted in a separate OS process alongside other documents with which it can communicate by operating on shared memory.
 
 This mitigates the risk of side-channel attacks.
 The following APIs are therefore allowed:
