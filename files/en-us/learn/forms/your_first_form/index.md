@@ -225,10 +225,10 @@ textarea {
 
 input:focus,
 textarea:focus {
-  /* Mute default highlight */
-  outline: none;
-  /* Additional highlight for focused elements */
-  border-color: #000;
+  /* Set the outline width and style /
+  outline-style: solid;
+  /* To give a little highlight on active elements */
+  outline-color: #000;
 }
 
 textarea {
