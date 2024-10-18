@@ -51,11 +51,13 @@ The following Web APIs are available to workers:
 - {{domxref("Broadcast Channel API", "", "", "nocode")}}
 - {{domxref("Canvas API", "", "", "nocode")}}
 - {{domxref("Channel Messaging API", "", "", "nocode")}}
-- {{domxref("Console API", "", "", "nocode")}}
 - {{domxref("Compression Streams API", "", "", "nocode")}}
+- {{domxref("Compute Pressure API", "", "", "nocode")}}
+- {{domxref("Console API", "", "", "nocode")}}
+- {{domxref("Content Index API", "", "", "nocode")}}
+- {{domxref("Cookie Store API", "", "", "nocode")}} (service workers only)
 - {{domxref("CSS Font Loading API", "", "", "nocode")}}
-- {{domxref("CustomEvent")}}
-- {{domxref("Encoding API", "", "", "nocode")}} (e.g. {{domxref("TextEncoder")}}, {{domxref("TextDecoder")}})
+- {{domxref("Encoding API", "", "", "nocode")}}
 - {{domxref("Fetch API", "", "", "nocode")}}
 - {{domxref("File API", "", "", "nocode")}}
 - {{domxref("File System API", "", "", "nocode")}}
@@ -70,20 +72,22 @@ The following Web APIs are available to workers:
 - {{domxref("Permissions API", "", "", "nocode")}}
 - {{domxref("Prioritized Task Scheduling API", "", "", "nocode")}}
 - {{domxref("Push API", "", "", "nocode")}}
-- {{domxref("Server-sent events", "", "", "nocode")}}
+- {{domxref("Reporting API", "", "", "nocode")}}
+- {{domxref("Server-Sent Events", "", "", "nocode")}}
 - {{domxref("Service Worker API", "", "", "nocode")}}
 - {{domxref("Streams API", "", "", "nocode")}}
 - {{domxref("Trusted Types API", "", "", "nocode")}}
-- {{domxref("URL API", "", "", "nocode")}} (e.g. {{domxref("URL")}})
+- {{domxref("URL API", "", "", "nocode")}}
 - {{domxref("URL Pattern API", "", "", "nocode")}}
 - {{domxref("User-Agent Client Hints API", "", "", "nocode")}}
-- {{domxref("WebCodecs API", "", "", "nocode")}}
-- {{domxref("Web Crypto API", "", "", "nocode")}} (e.g. {{domxref("Crypto")}})
-- {{domxref("WebHID API", "", "", "nocode")}} (dedicated and service workers only)
+- {{domxref("Web Crypto API", "", "", "nocode")}}
 - {{domxref("Web Locks API", "", "", "nocode")}}
 - {{domxref("Web Serial API", "", "", "nocode")}}
 - {{domxref("Web Periodic Background Synchronization API", "", "", "nocode")}}
+- {{domxref("WebCodecs API", "", "", "nocode")}}
+- {{domxref("WebGL API", "", "", "nocode")}}
 - {{domxref("WebGPU API", "", "", "nocode")}}
+- {{domxref("WebHID API", "", "", "nocode")}} (dedicated and service workers only)
 - {{domxref("WebUSB API", "", "", "nocode")}}
 - {{domxref("WebSockets API", "", "", "nocode")}}
 - {{domxref("XMLHttpRequest API", "", "", "nocode")}}
