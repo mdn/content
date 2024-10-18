@@ -59,7 +59,7 @@ A cross-site scripting (XSS) attack is one in which an attacker is able to execu
 
 An XSS attack is possible when a website accepts some input which might have been crafted by an attacker (for example, URL parameters, or a comment on a blog post) and then includes it in the page without _sanitizing_ it: that is, without ensuring that it can't be executed as JavaScript.
 
-Websites should protect themselves against XSS by sanitizing this input before including it in the page. A CSP provides a complementary protection, which should protect the website even if sanitization fails.
+Websites should protect themselves against XSS by sanitizing this input before including it in the page. A CSP provides a complementary protection, which can protect the website even if sanitization fails.
 
 If sanitization does fail, there are various forms the injected malicious code can take in the document, including:
 
