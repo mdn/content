@@ -13,6 +13,8 @@ It can be accessed via the {{domxref("MediaSource.handle")}} property.
 
 Each `MediaSource` object created inside a dedicated worker has its own distinct `MediaSourceHandle`. The `MediaSource.handle` getter will always return the `MediaSourceHandle` instance specific to the associated dedicated worker `MediaSource` instance. If the handle has already been transferred to the main thread using {{domxref("DedicatedWorkerGlobalScope.postMessage()", "postMessage()")}}, the handle instance in the worker is technically detached and can't be transferred again.
 
+`MediaSourceHandle` is a [transferable object](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects).
+
 ## Instance properties
 
 None.

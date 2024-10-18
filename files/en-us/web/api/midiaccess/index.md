@@ -9,6 +9,8 @@ browser-compat: api.MIDIAccess
 
 The **`MIDIAccess`** interface of the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API) provides methods for listing MIDI input and output devices, and obtaining access to those devices.
 
+`MIDIAccess` is a [transferable object](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects).
+
 {{InheritanceDiagram}}
 
 ## Instance properties
