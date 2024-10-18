@@ -9,12 +9,9 @@ browser-compat: http.headers.Early-Data
 
 {{SeeCompatTable}}{{HTTPSidebar}}
 
-The **`Early-Data`** header is set by
-an intermediary to indicate that the request has been conveyed in [TLS early data](/en-US/docs/Web/Security/Transport_Layer_Security#tls_1.3),
-and also indicates that the intermediary understands the {{HTTPStatus("425", "425 Too Early")}} status code.
+The HTTP **`Early-Data`** header is set by an intermediary to indicate that the request has been conveyed in [TLS early data](/en-US/docs/Web/Security/Transport_Layer_Security#tls_1.3), and also indicates that the intermediary understands the {{HTTPStatus("425", "425 Too Early")}} status code.
 
-The `Early-Data` header is **not** set by the originator of the
-request (i.e., a browser).
+The `Early-Data` header is **not** set by the originator of the request (i.e., a browser).
 
 <table class="properties">
   <tbody>
@@ -24,7 +21,7 @@ request (i.e., a browser).
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
