@@ -140,7 +140,7 @@ This is further alleviated by using [asynchronous JavaScript](/en-US/docs/Learn/
 
 Microtasks are another solution to this problem, providing a finer degree of access by making it possible to schedule code to run before the next iteration of the event loop begins, instead of having to wait until the next one.
 
-The microtask queue has been around for a while, but it's historically been used only internally in order to drive things like promises. The addition of {{domxref("Window.queueMicrotask()", "queueMicrotask()")}}, exposing it to web developers, creates a unified queue for microtasks which is used wherever it's necessary to have the ability to schedule code to run safely when there are no execution contexts left on the JavaScript execution context stack. Across multiple instances and across all browsers and JavaScript runtimes, a standardized microqueue mechanism means these microtasks will operate reliably in the same order, thus avoiding potentially difficult to find bugs.
+The microtask queue has been around for a while, but it's historically been used only internally in order to drive things like promises. The addition of {{domxref("Window.queueMicrotask()", "queueMicrotask()")}}, exposing it to web developers, creates a unified queue for microtasks which is used wherever it's necessary to have the ability to schedule code to run safely when there are no execution contexts left on the JavaScript execution context stack. Across multiple instances and across all browsers and JavaScript runtimes, a standardized queue mechanism means these microtasks will operate reliably in the same order, thus avoiding potentially difficult to find bugs.
 
 ## See also
 

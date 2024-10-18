@@ -193,16 +193,16 @@ function gameLoop() {
 This example shows how to use the {{domxref("Gamepad")}} object, as well as the {{domxref("Window/gamepadconnected_event", "gamepadconnected")}} and {{domxref("Window/gamepaddisconnected_event", "gamepaddisconnected")}} events to display the state of all gamepads connected to the system. The example is based on a [Gamepad demo](https://luser.github.io/gamepadtest/), which has the [source code available on GitHub](https://github.com/luser/gamepadtest).
 
 ```js
-let loopstarted = false;
+let loopStarted = false;
 
 window.addEventListener("gamepadconnected", (evt) => {
-  addgamepad(evt.gamepad);
+  addGamepad(evt.gamepad);
 });
 window.addEventListener("gamepaddisconnected", (evt) => {
-  removegamepad(evt.gamepad);
+  removeGamepad(evt.gamepad);
 });
 
-function addgamepad(gamepad) {
+function addGamepad(gamepad) {
   const d = document.createElement("div");
   d.setAttribute("id", `controller${gamepad.index}`);
 
@@ -242,13 +242,13 @@ function addgamepad(gamepad) {
   }
 
   document.body.append(d);
-  if (!loopstarted) {
+  if (!loopStarted) {
     requestAnimationFrame(updateStatus);
-    loopstarted = true;
+    loopStarted = true;
   }
 }
 
-function removegamepad(gamepad) {
+function removeGamepad(gamepad) {
   document.querySelector(`#controller${gamepad.index}`).remove();
 }
 
