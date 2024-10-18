@@ -108,7 +108,7 @@ Fetch directives are used to specify a particular category of resource that a do
 
 There are different fetch directives for different types of resource. For example:
 
-- `script-src` sets allowed sources for JavaScript.
+- [`script-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src) sets allowed sources for external JavaScript.
 - `style-src` sets allowed sources for CSS stylesheets.
 - `img-src` sets allowed sources for images.
 
