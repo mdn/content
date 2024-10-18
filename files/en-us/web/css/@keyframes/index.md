@@ -12,7 +12,7 @@ The **`@keyframes`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) controls the int
 ## Syntax
 
 ```css
-@keyframes slidein {
+@keyframes slide-in {
   from {
     transform: translateX(0%);
   }

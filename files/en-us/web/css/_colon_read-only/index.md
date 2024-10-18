@@ -46,8 +46,8 @@ CA
       >
     </div>
     <div>
-      <label for="pcode">Zip/postal code: </label>
-      <input id="pcode" name="pcode" type="text" value="94708" readonly />
+      <label for="zip-code">Zip/postal code: </label>
+      <input id="zip-code" name="zip-code" type="text" value="94708" readonly />
     </div>
   </fieldset>
 
