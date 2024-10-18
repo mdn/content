@@ -47,7 +47,7 @@ In the next section, we'll look at the tools available to control resource loads
 
 A CSP can be used to control the resources that a document is allowed to load. This is primarily used for protection against cross-site scripting (XSS) attacks.
 
-In this section we'll first see how controlling resource laods can help protect against XSS, then at the tools CSP provides to control resource loads. Finally we'll describe one particular recommended strategy, which is called a "Strict CSP".
+In this section we'll first see how controlling resource loads can help protect against XSS, then at the tools CSP provides to control what resources are loaded. Finally we'll describe one particular recommended strategy, which is called a "Strict CSP".
 
 ### XSS and resource loading
 
