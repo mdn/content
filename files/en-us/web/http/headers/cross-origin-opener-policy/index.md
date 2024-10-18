@@ -21,7 +21,7 @@ If a cross-origin document with COOP is opened in a new window, the opening docu
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -80,4 +80,4 @@ if (crossOriginIsolated) {
 
 ## See also
 
-- {{httpheader("Cross-Origin-Embedder-Policy")}}
+- {{HTTPHeader("Cross-Origin-Embedder-Policy")}}
