@@ -16,6 +16,10 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 - `accentunder`
   - : A [`<boolean>`](/en-US/docs/Web/MathML/Values#mathml-specific_types) indicating whether the under script should be treated as an accent (i.e. drawn bigger and closer to the base expression).
 
+## Accessibility
+
+The `<munder>` element has no implicit [ARIA role](/en-US/docs/Web/Accessibility/ARIA/Roles).
+
 ## Examples
 
 ```html

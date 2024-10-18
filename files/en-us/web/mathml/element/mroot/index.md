@@ -13,6 +13,10 @@ The **`<mroot>`** [MathML](/en-US/docs/Web/MathML) element is used to display ro
 
 This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
 
+## Accessibility
+
+The `<mroot>` element has no implicit [ARIA role](/en-US/docs/Web/Accessibility/ARIA/Roles).
+
 ## Examples
 
 ```html

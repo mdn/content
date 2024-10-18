@@ -25,6 +25,73 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
     If not present, its default value is `inline`.
 
+## Accessibility
+
+The `<math>` element has an implicit [`math` ARIA role](/en-US/docs/Web/Accessibility/ARIA/Roles/math_role). Assistive technologies can use this role to identify the content as a mathematical expression and convey it to users.
+
+```css hidden
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+}
+```
+
+For example, screen readers will represent the following quadratic formula similar to:
+
+> x equals fraction start, negative b square root of b squared minus 4 a c, end of root, over 2 a, end of fraction, maths
+
+<details>
+<summary>Markup for the quadratic formula</summary>
+
+```html
+<math display="block">
+  <mrow>
+    <mi>x</mi>
+    <mo>=</mo>
+    <mfrac>
+      <mrow>
+        <mrow>
+          <mo>−</mo>
+          <mi>b</mi>
+        </mrow>
+        <mo>±</mo>
+        <msqrt>
+          <mrow>
+            <msup>
+              <mi>b</mi>
+              <mn>2</mn>
+            </msup>
+            <mo>−</mo>
+            <mrow>
+              <mn>4</mn>
+              <mo>⁢</mo>
+              <mi>a</mi>
+              <mo>⁢</mo>
+              <mi>c</mi>
+            </mrow>
+          </mrow>
+        </msqrt>
+      </mrow>
+      <mrow>
+        <mn>2</mn>
+        <mo>⁢</mo>
+        <mi>a</mi>
+      </mrow>
+    </mfrac>
+  </mrow>
+</math>
+```
+
+</details>
+
+{{ EmbedLiveSample('accessibility') }}
+
 ## Examples
 
 This example contains two MathML formula. The first one is rendered in its own centered block, taking as much space as needed. The second one is rendered inside the paragraph of text, with reduced size and spacing in order to minimize its height.

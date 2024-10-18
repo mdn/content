@@ -13,6 +13,10 @@ The **`<mn>`** [MathML](/en-US/docs/Web/MathML) element represents a **numeric**
 
 This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
 
+## Accessibility
+
+The `<mn>` element has no implicit [ARIA role](/en-US/docs/Web/Accessibility/ARIA/Roles).
+
 ## Examples
 
 ```html
