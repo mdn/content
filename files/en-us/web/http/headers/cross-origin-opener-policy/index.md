@@ -7,7 +7,7 @@ browser-compat: http.headers.Cross-Origin-Opener-Policy
 
 {{HTTPSidebar}}
 
-The HTTP **`Cross-Origin-Opener-Policy`** (COOP) {{Glossary("response header")}} allows you to ensure a top-level document does not share a browsing context group with cross-origin documents.
+The HTTP **`Cross-Origin-Opener-Policy`** (COOP) {{Glossary("response header")}} allows you to ensure a top-level document does not share a {{glossary("Browsing context","browsing context group")}} with cross-origin documents.
 
 COOP will process-isolate your document and potential attackers can't access your global object if they were to open it in a popup, preventing a set of cross-origin attacks dubbed [XS-Leaks](https://github.com/xsleaks/xsleaks).
 
@@ -44,8 +44,8 @@ Cross-Origin-Opener-Policy: noopener-allow-popups
 - `same-origin`
   - : Isolates the browsing context exclusively to same-origin documents. Cross-origin documents are not loaded in the same browsing context.
 - `noopener-allow-popups`
-  - : Severs the opener connection to the new document, isolating the browsing context for the current document regardless of the opener document's origin.
-    This ensures that the opener can't run scripts in the opened documents even if they are same origin.
+  - : Severs the connections between the new document and its opener, isolating the browsing context for the current document regardless of the opener document's origin.
+    This ensures that the opener can't run scripts in opened documents and vice versa — even if they are same-origin.
 
 ## Examples
 
