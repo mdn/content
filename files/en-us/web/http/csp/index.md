@@ -142,36 +142,6 @@ Content-Security-Policy: object-src 'none'
 
 Note that `'none'` cannot be combined with any other method in a particular directive: in practice, if any other source expressions are given alongside `'none'`, then they are ignored.
 
-#### Scheme-based policies
-
-Fetch directives can list a scheme, like `https:`, to allow resources that are served using that scheme. This, for example, allows a policy to require HTTPS for all resource loads:
-
-```http
-Content-Security-Policy: default-src https:
-```
-
-#### Location-based policies
-
-Fetch directives can control resource loads based on where the resource is located.
-
-The keyword `'self'` allows resources which are same-origin with the document itself:
-
-```http
-Content-Security-Policy: img-src 'self'
-```
-
-You can also specify one or more hostnames, potentially including wildcards, and only resources served from those hosts will be allowed. This might be used, for example, to allow content to be served from a trusted CDN.
-
-```http
-Content-Security-Policy: img-src *.example.org
-```
-
-You can specify multiple locations. The following directive allows only images that are same-origin with the current document, or are served from a subdomain of "example.org", or are served from "example.com":
-
-```http
-Content-Security-Policy: img-src 'self' *.example.org  example.com
-```
-
 #### Nonces
 
 With a nonce, the server generates a random value for every HTTP response, and includes it in the directive:
@@ -261,6 +231,36 @@ Note that:
 - We have a separate hash for every script in the document.
 - For the external script "main.js", we also include the `integrity` attribute, and give it the same value.
 - Unlike the example using nonces, both the CSP and the content can be static, because the hashes stay the same.
+
+#### Scheme-based policies
+
+Fetch directives can list a scheme, like `https:`, to allow resources that are served using that scheme. This, for example, allows a policy to require HTTPS for all resource loads:
+
+```http
+Content-Security-Policy: default-src https:
+```
+
+#### Location-based policies
+
+Fetch directives can control resource loads based on where the resource is located.
+
+The keyword `'self'` allows resources which are same-origin with the document itself:
+
+```http
+Content-Security-Policy: img-src 'self'
+```
+
+You can also specify one or more hostnames, potentially including wildcards, and only resources served from those hosts will be allowed. This might be used, for example, to allow content to be served from a trusted CDN.
+
+```http
+Content-Security-Policy: img-src *.example.org
+```
+
+You can specify multiple locations. The following directive allows only images that are same-origin with the current document, or are served from a subdomain of "example.org", or are served from "example.com":
+
+```http
+Content-Security-Policy: img-src 'self' *.example.org  example.com
+```
 
 #### Inline JavaScript
 
