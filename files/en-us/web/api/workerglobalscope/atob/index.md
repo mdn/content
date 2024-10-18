@@ -15,8 +15,6 @@ data which may otherwise cause communication problems, then transmit it and use 
 `atob()` method to decode the data again. For example, you can encode,
 transmit, and decode control characters such as {{Glossary("ASCII")}} values 0 through 31.
 
-For use with arbitrary Unicode strings, see _The "Unicode Problem"_ section in {{Glossary("Base64")}} glossary entry.
-
 ## Syntax
 
 ```js-nolint
@@ -58,3 +56,4 @@ const decodedData = self.atob(encodedData); // decode the string
 - [`data` URLs](/en-US/docs/Web/URI/Schemes/data)
 - {{domxref("Window.atob()")}}: the same method, but in window scopes.
 - {{domxref("WorkerGlobalScope.btoa()")}}
+- {{jsxref("Uint8Array.fromBase64()")}}

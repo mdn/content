@@ -28,9 +28,21 @@ Each Base64 digit represents 6 bits of data. So, three 8-bit bytes of the input 
 
 This means that the Base64 version of a string or file is typically roughly a third larger than its source (the exact size increase depends on various factors, such as the absolute length of the string, its length modulo 3, and whether padding characters are used).
 
+## Last chunk
+
+The base64 string can be partitioned into chunks of 4 characters, where the last chunk may have fewer than 4 characters. The last chunk may be padded with `=` characters so it's exactly 4 characters long. Excluding padding characters, the last chunk may be one of the following:
+
+- 2 characters: encodes 12 bits representing 1 byte (8 bits) of data
+- 3 characters: encodes 18 bits representing 2 bytes (16 bits) of data
+- 4 characters: encodes 24 bits representing 3 bytes (24 bits) of data
+
+In the first two cases, the characters may have 4 or 2 extra trailing bits that don't represent any data. In this case, [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648#section-3.5) requires encoders to set these bits to zero and decoders to optionally throw an error if they are not zero. For example, if the encoded data is a single byte `0b01010101`, then it needs two characters `0b010101` (`V`) and `0b010000` (`Q`), where the second character has 4 trailing bits set to zero. Decoding `VR==` (where the second character represents `0b010001`) technically results in the same byte `0b01010101`, but the decoder may throw an error due to the trailing bits not being zero.
+
 ## JavaScript support
 
-Browsers natively provide two JavaScript functions for decoding and encoding Base64 strings:
+The {{jsxref("Uint8Array")}} class provides the {{jsxref("Uint8Array.fromBase64()")}}, {{jsxref("Uint8Array.prototype.toBase64()")}}, and {{jsxref("Uint8Array.prototype.setFromBase64()")}} methods for conversion to/from base64 strings.
+
+Browsers also natively provide two JavaScript functions for decoding and encoding Base64 strings:
 
 - {{domxref("Window.btoa()")}} (also {{domxref("WorkerGlobalScope.btoa()", "available in workers", "", "nocode")}}): creates a Base64-encoded ASCII string from a string of binary data ("btoa" should be read as "binary to ASCII").
 - {{domxref("Window.atob()")}} (also {{domxref("WorkerGlobalScope.atob()", "available in workers", "", "nocode")}}): decodes a Base64-encoded string ("atob" should be read as "ASCII to binary").
@@ -40,62 +52,12 @@ Browsers natively provide two JavaScript functions for decoding and encoding Bas
 >
 > However, the byte-to-code-point correspondence only reliably holds true for code points up to `0x7f`. Furthermore, code points over `0xff` will cause `btoa` to throw an error due to exceeding the maximum value for 1 byte. The next section details how to work around this limitation when encoding arbitrary Unicode text.
 
-## The "Unicode Problem"
-
-Since `btoa` interprets the code points of its input string as byte values, calling `btoa` on a string will cause a "Character Out Of Range" exception if a character's code point exceeds `0xff`. For use cases where you need to encode arbitrary Unicode text, it is necessary to first convert the string to its constituent bytes in {{glossary("UTF-8")}}, and then encode the bytes.
-
-The simplest solution is to use `TextEncoder` and `TextDecoder` to convert between UTF-8 and single-byte representations of the string:
-
-```js
-function base64ToBytes(base64) {
-  const binString = atob(base64);
-  return Uint8Array.from(binString, (m) => m.codePointAt(0));
-}
-
-function bytesToBase64(bytes) {
-  const binString = Array.from(bytes, (byte) =>
-    String.fromCodePoint(byte),
-  ).join("");
-  return btoa(binString);
-}
-
-// Usage
-bytesToBase64(new TextEncoder().encode("a Ā 𐀀 文 🦄")); // "YSDEgCDwkICAIOaWhyDwn6aE"
-new TextDecoder().decode(base64ToBytes("YSDEgCDwkICAIOaWhyDwn6aE")); // "a Ā 𐀀 文 🦄"
-```
-
-## Converting arbitrary binary data
-
-The `bytesToBase64` and `base64ToBytes` functions in the previous section can be used directly to convert between Base64 strings and [`Uint8Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)s.
-
-For better performance, asynchronous conversion between base64 data URLs is possible natively within the web platform via the [`FileReader`](/en-US/docs/Web/API/FileReader) and [`fetch`](/en-US/docs/Web/API/Fetch_API) APIs:
-
-```js
-async function bytesToBase64DataUrl(bytes, type = "application/octet-stream") {
-  return await new Promise((resolve, reject) => {
-    const reader = Object.assign(new FileReader(), {
-      onload: () => resolve(reader.result),
-      onerror: () => reject(reader.error),
-    });
-    reader.readAsDataURL(new File([bytes], "", { type }));
-  });
-}
-
-async function dataUrlToBytes(dataUrl) {
-  const res = await fetch(dataUrl);
-  return new Uint8Array(await res.arrayBuffer());
-}
-
-// Usage
-await bytesToBase64DataUrl(new Uint8Array([0, 1, 2])); // "data:application/octet-stream;base64,AAEC"
-await dataUrlToBytes("data:application/octet-stream;base64,AAEC"); // Uint8Array [0, 1, 2]
-```
-
 ## See Also
 
 - JavaScript APIs:
   - {{domxref("Window.atob()")}} (also {{domxref("WorkerGlobalScope.atob()", "available in workers", "", "nocode")}})
   - {{domxref("Window.btoa()")}} (also {{domxref("WorkerGlobalScope.btoa()", "available in workers", "", "nocode")}})
+  - {{jsxref("Uint8Array")}}
 - [Data URLs](/en-US/docs/Web/URI/Schemes/data)
 - [Base64](https://en.wikipedia.org/wiki/Base64) on Wikipedia
 - Base64 Algorithm described in [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648)
