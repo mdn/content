@@ -9,7 +9,7 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc2295#section-8.1
 
 The HTTP **`506 Variant Also Negotiates`** [server error response](/en-US/docs/Web/HTTP/Status#server_error_responses) status code is returned during content negotiation when there is recursive loop in the process of selecting a resource.
 
-Agent-driven content negotiation enables a client and server to collaboratively decide the best variant of a given resource when the server has multiple variants.
+[Agent-driven content negotiation](/en-US/docs/Web/HTTP/Content_negotiation#agent-driven_negotiation) enables a client and server to collaboratively decide the best variant of a given resource when the server has multiple variants.
 A server sends a `506` status code due to server misconfiguration that results in circular references when creating responses.
 
 Lack of standardization of how clients automatically choose from responses, and the additional round-trips that slow down client-server interaction mean this mechanism is rarely used.
