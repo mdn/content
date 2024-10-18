@@ -108,9 +108,9 @@ Fetch directives are used to specify a particular category of resource that a do
 
 There are different fetch directives for different types of resource. For example:
 
-- [`script-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src) sets allowed sources for external JavaScript.
-- `style-src` sets allowed sources for CSS stylesheets.
-- `img-src` sets allowed sources for images.
+- [`script-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src) sets allowed sources for JavaScript.
+- [`style-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src) sets allowed sources for CSS stylesheets.
+- [`img-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) sets allowed sources for images.
 
 One special fetch directive is `default-src`, which sets a fallback policy for all resources whose directives are not explicitly listed.
 
@@ -325,7 +325,7 @@ Unlike `unsafe-inline`, the `unsafe-eval` keyword does still work in a directive
 
 ### Strict CSP
 
-To control script loading as a mitigation against XSS, recommended practice is to use nonce- or hash- based fetch directives. This is called a _strict CSP_. This type of CSP has two main advantages over a location-based CSP (usually called an _allowlist CSP_):
+To control script loading as a mitigation against XSS, recommended practice is to use [nonce-](#nonces) or [hash-](#hashes) based fetch directives. This is called a _strict CSP_. This type of CSP has two main advantages over a location-based CSP (usually called an _allowlist CSP_):
 
 - Allowlist CSPs are hard to get right and often policies inadvertently whitelist unsafe domains, and hence don't provide effective protection against XSS (see [CSP Is Dead, Long Live CSP! On the Insecurity of Whitelists and the Future of Content Security Policy](https://dl.acm.org/doi/pdf/10.1145/2976749.2978363)).
 - Allowlist CSPs can be very large and hard to maintain, in particular when using scripts that are outside of your control. According to [How I learned to stop worrying and love the Content Security Policy](https://www.netlify.com/blog/general-availability-content-security-policy-csp-nonce-integration/), just to integrate Google Analytics, a developer is asked to add 187 Google domains to the allowlist.
@@ -492,8 +492,7 @@ This directive is not a substitute for the {{httpheader("Strict-Transport-Securi
 ## Testing your policy
 
 To ease deployment, CSP can be deployed in report-only mode.
-The policy is not enforced, but any violations are reported to a provided URI.
-Additionally, a report-only header can be used to test a future revision to a policy without actually deploying it.
+The policy is not enforced, but any violations are sent to the reporting endpoint specified in the policy. Additionally, a report-only header can be used to test a future revision to a policy without actually deploying it.
 
 You can use the {{HTTPHeader("Content-Security-Policy-Report-Only")}} HTTP header to specify your policy, like this:
 
