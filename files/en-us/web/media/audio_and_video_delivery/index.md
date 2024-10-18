@@ -23,13 +23,13 @@ To deliver video and audio, the general workflow is usually something like this:
 
 ```html
 <audio controls preload="auto">
-  <source src="audiofile.mp3" type="audio/mpeg" />
+  <source src="audio-file.mp3" type="audio/mpeg" />
 
   <!-- fallback for browsers that don't support mp3 -->
-  <source src="audiofile.ogg" type="audio/ogg" />
+  <source src="audio-file.ogg" type="audio/ogg" />
 
   <!-- fallback for browsers that don't support audio tag -->
-  <a href="audiofile.mp3">download audio</a>
+  <a href="audio-file.mp3">download audio</a>
 </audio>
 ```
 
@@ -47,13 +47,13 @@ For further info see [Cross Browser Audio Basics (HTML Audio In Detail)](/en-US/
   controls
   width="640"
   height="480"
-  poster="initialimage.png"
+  poster="initial-image.png"
   autoplay
   muted>
-  <source src="videofile.mp4" type="video/mp4" />
+  <source src="video-file.mp4" type="video/mp4" />
 
   <!-- fallback for browsers that don't support mp4 -->
-  <source src="videofile.webm" type="video/webm" />
+  <source src="video-file.webm" type="video/webm" />
 
   <!-- specifying subtitle files -->
   <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English" />
@@ -64,7 +64,7 @@ For further info see [Cross Browser Audio Basics (HTML Audio In Detail)](/en-US/
     label="Norwegian" />
 
   <!-- fallback for browsers that don't support video tag -->
-  <a href="videofile.mp4">download video</a>
+  <a href="video-file.mp4">download video</a>
 </video>
 ```
 
@@ -81,9 +81,9 @@ For further info see [\<video> element](/en-US/docs/Web/HTML/Element/video) and 
 const myAudio = document.createElement("audio");
 
 if (myAudio.canPlayType("audio/mpeg")) {
-  myAudio.setAttribute("src", "audiofile.mp3");
+  myAudio.setAttribute("src", "audio-file.mp3");
 } else if (myAudio.canPlayType("audio/ogg")) {
-  myAudio.setAttribute("src", "audiofile.ogg");
+  myAudio.setAttribute("src", "audio-file.ogg");
 }
 
 myAudio.currentTime = 5;
@@ -109,9 +109,9 @@ It's also possible to feed an {{ htmlelement("audio") }} element a base64 encode
 const myVideo = document.createElement("video");
 
 if (myVideo.canPlayType("video/mp4")) {
-  myVideo.setAttribute("src", "videofile.mp4");
+  myVideo.setAttribute("src", "video-file.mp4");
 } else if (myVideo.canPlayType("video/webm")) {
-  myVideo.setAttribute("src", "videofile.webm");
+  myVideo.setAttribute("src", "video-file.webm");
 }
 
 myVideo.width = 480;
@@ -191,7 +191,7 @@ if (navigator.mediaDevices) {
 
 To find out more, read our {{domxref("MediaDevices.getUserMedia")}} page.
 
-## Mediastream Recording
+## MediaStream Recording
 
 New standards are being rolled out to allow your browser to grab media from your mic or camera using `getUserMedia` and record it instantly using the new MediaStream Recording API. You take the stream you receive from `getUserMedia`, pass it to a `MediaRecorder` object, take the resulting output and feed it to your audio or video source\*.
 
@@ -455,8 +455,8 @@ Another way to show the fallback content of a video, when none of the sources co
 ```js
 const v = document.querySelector("video");
 const sources = v.querySelectorAll("source");
-const lastsource = sources[sources.length - 1];
-lastsource.addEventListener(
+const lastSource = sources[sources.length - 1];
+lastSource.addEventListener(
   "error",
   (ev) => {
     const d = document.createElement("div");

@@ -69,14 +69,14 @@ Once again the HTML is quite straightforward, using an unordered list with `list
 
 ```html
 <ul id="video-controls" class="controls">
-  <li><button id="playpause" type="button">Play/Pause</button></li>
+  <li><button id="play-pause" type="button">Play/Pause</button></li>
   <li><button id="stop" type="button">Stop</button></li>
   <li class="progress">
     <progress id="progress" value="0" min="0"></progress>
   </li>
   <li><button id="mute" type="button">Mute/Unmute</button></li>
-  <li><button id="volinc" type="button">Vol+</button></li>
-  <li><button id="voldec" type="button">Vol-</button></li>
+  <li><button id="vol-inc" type="button">Vol+</button></li>
+  <li><button id="vol-dec" type="button">Vol-</button></li>
   <li><button id="fs" type="button">Fullscreen</button></li>
 </ul>
 ```
@@ -126,11 +126,11 @@ videoControls.style.display = "block";
 With that done, a variable pointing to each of the buttons is now required:
 
 ```js
-const playpause = document.getElementById("playpause");
+const playPause = document.getElementById("play-pause");
 const stop = document.getElementById("stop");
 const mute = document.getElementById("mute");
-const volinc = document.getElementById("volinc");
-const voldec = document.getElementById("voldec");
+const volInc = document.getElementById("vol-inc");
+const volDec = document.getElementById("vol-dec");
 const progress = document.getElementById("progress");
 const fullscreen = document.getElementById("fs");
 ```
@@ -140,7 +140,7 @@ Using these handles, events can now be attached to each of the custom control bu
 ### Play/Pause
 
 ```js
-playpause.addEventListener("click", (e) => {
+playPause.addEventListener("click", (e) => {
   if (video.paused || video.ended) {
     video.play();
   } else {
@@ -176,10 +176,10 @@ The mute button is a simple toggle button that uses the Media API's `muted` attr
 ### Volume
 
 ```js
-volinc.addEventListener("click", (e) => {
+volInc.addEventListener("click", (e) => {
   alterVolume("+");
 });
-voldec.addEventListener("click", (e) => {
+volDec.addEventListener("click", (e) => {
   alterVolume("-");
 });
 ```
