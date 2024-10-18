@@ -152,7 +152,7 @@ Content-Security-Policy: default-src https:
 
 #### Location-based policies
 
-Fetch directives can control resource loads based on where the resource is.
+Fetch directives can control resource loads based on where the resource is located.
 
 The keyword `'self'` allows resources which are same-origin with the document itself:
 
