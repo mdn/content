@@ -22,7 +22,7 @@ A `GPUTexture` object instance is created using the {{domxref("GPUDevice.createT
 - {{domxref("GPUTexture.dimension", "dimension")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : An enumerated value representing the dimension of the set of texels for each `GPUTexture` subresource.
 - {{domxref("GPUTexture.format", "format")}} {{Experimental_Inline}} {{ReadOnlyInline}}
-  - : An enumerated value representing the format of the `GPUTexture`.
+  - : An enumerated value representing the format of the `GPUTexture`. See the [Texture formats](https://gpuweb.github.io/gpuweb/#enumdef-gputextureformat) section of the specification for all the possible values.
 - {{domxref("GPUTexture.height", "height")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : A number representing the height of the `GPUTexture` in pixels.
 - {{domxref("GPUTexture.label", "label")}} {{Experimental_Inline}}
