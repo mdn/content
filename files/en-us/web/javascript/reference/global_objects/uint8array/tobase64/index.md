@@ -25,9 +25,9 @@ toBase64(options)
     - `alphabet` {{optional_inline}}
       - : A string specifying the base64 alphabet to use. It can be one of the following:
         - `"base64"` (default)
-          - : Use `+` and `/` as `0x3E` and `0x3F`, respectively.
+          - : Encode input with the standard base64 alphabet, which uses `+` and `/`.
         - `"base64url"`
-          - : Use `-` and `_` as `0x3E` and `0x3F`, respectively.
+          - : Encode input with the URL-safe base64 alphabet, which uses `-` and `_`.
     - `omitPadding` {{optional_inline}}
       - : A boolean specifying whether to omit padding characters (`=`) at the end of the base64 string. The default is `false`.
 
@@ -72,7 +72,7 @@ params.set("data", base64);
 console.log(params.toString()); // "data=Love_you"
 ```
 
-### Implementing stream encoding
+### Stream encoding
 
 This example is adapted from the [original proposal](https://github.com/tc39/proposal-arraybuffer-base64/blob/main/stream.mjs), showcasing how to implement streaming in userland. It mimics the {{domxref("TextEncoder")}} API with the `stream` option.
 

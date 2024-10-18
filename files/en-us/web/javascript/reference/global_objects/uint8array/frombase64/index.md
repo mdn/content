@@ -59,9 +59,9 @@ A new `Uint8Array` object containing the decoded bytes from the base64-encoded s
 
 This example uses the default `alphabet` and `lastChunkHandling` options to decode a base64 string. Note that:
 
-- The string has 14 base64 characters, not a multiple of 4.
 - The whitespace in the space is ignored.
-- The last chunk, `Ph`, ends in the character `h` which is `0b100001` in base64, so the last `0001` bits are "overflow bits" and are ignored.
+- The string has 14 base64 characters, not a multiple of 4. This is only valid and decodable with `lastChunkHandling: "loose"`.
+- The last chunk, `Ph`, ends in the character `h` which is `0b100001` in base64, so the last `0001` bits are "overflow bits" and are ignored. This is only valid and decodable with `lastChunkHandling: "loose"`.
 
 ```js
 const uint8Array = Uint8Array.fromBase64("PGI+ TURO PC9i Ph");
@@ -84,17 +84,17 @@ console.log(uint8Array); // Uint8Array(10) [60, 98, 62, 77, 68, 78, 60, 47, 98, 
 This example uses the `lastChunkHandling` option to decode a base64 string, where the last chunk must be exactly 4 characters long with padding `=` characters, and the overflow bits must be 0.
 
 ```js
-const array1 = Uint8Array.fromBase64("PGI+TUROPC9iPg==", {
+const array1 = Uint8Array.fromBase64("PGI+ TURO PC9i Pg==", {
   lastChunkHandling: "strict",
 });
 console.log(array1); // Uint8Array(10) [60, 98, 62, 77, 68, 78, 60, 47, 98, 62]
 
-const array2 = Uint8Array.fromBase64("PGI+TUROPC9iPh==", {
+const array2 = Uint8Array.fromBase64("PGI+ TURO PC9i Ph==", {
   lastChunkHandling: "strict",
 });
 // Throws a SyntaxError because h is 0b100001, where the last 4 bits are not 0
 
-const array3 = Uint8Array.fromBase64("PGI+TUROPC9iPg", {
+const array3 = Uint8Array.fromBase64("PGI+ TURO PC9i Pg", {
   lastChunkHandling: "strict",
 });
 // Throws a SyntaxError because the last chunk is not exactly 4 characters long

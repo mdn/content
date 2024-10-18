@@ -20,7 +20,7 @@ setFromHex(string)
 ### Parameters
 
 - `string`
-  - : A hexadecimal string to convert to a `Uint8Array`. The string must only contain characters in the hexadecimal alphabet, which includes 0–9 and A–F (case-insensitive). It must have an even number of characters.Unlike {{jsxref("Uint8Array.prototype.setFromBase64()")}}, the input cannot contain whitespace. Note that the string is only read up to the point where the array is filled, so any invalid hex syntax after that point is ignored.
+  - : A hexadecimal string to convert to a `Uint8Array`. The string must only contain characters in the hexadecimal alphabet, which includes 0–9 and A–F (case-insensitive). It must have an even number of characters. Unlike {{jsxref("Uint8Array.prototype.setFromBase64()")}}, the input cannot contain whitespace. Note that the string is only read up to the point where the array is filled, so any invalid hex syntax after that point is ignored.
 
 ### Return value
 
@@ -63,6 +63,19 @@ console.log(uint8Array); // Uint8Array(4) [202, 254, 208, 13]
 ```
 
 Excess characters are ignored, even if they are invalid. However the total length of the input string must be even.
+
+### Setting data at a specific offset
+
+The `setFromHex()` method always starts writing at the beginning of the `Uint8Array`. If you want to write to the middle of the array, you can write to a {{jsxref("TypedArray.prototype.subarray()")}} instead.
+
+```js
+const uint8Array = new Uint8Array(8);
+// Start writing at offset 2
+const result = uint8Array.subarray(2).setFromHex("cafed00d");
+console.log(result); // { read: 8, written: 4 }
+console.log(uint8Array);
+// Uint8Array(8) [0, 0, 202, 254, 208, 13, 0, 0]
+```
 
 ## Specifications
 
