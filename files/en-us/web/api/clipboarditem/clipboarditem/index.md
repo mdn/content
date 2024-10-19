@@ -26,6 +26,7 @@ new ClipboardItem(data, options)
   - : An {{jsxref("Object")}} with the {{Glossary("MIME type")}} as the key and data as the value.
     The data can be represented as a {{domxref("Blob")}}, a {{jsxref("String")}} or a {{jsxref("Promise")}} which resolves to either a blob or string.
 - `options` {{optional_inline}}
+
   - : An object with the following properties:
     - `presentationStyle` {{optional_inline}}
 
