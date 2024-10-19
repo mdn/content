@@ -28,6 +28,7 @@ new ClipboardItem(data, options)
 - `options` {{optional_inline}}
 
   - : An object with the following properties:
+
     - `presentationStyle` {{optional_inline}}
 
       - : One of the three strings: `unspecified`, `inline` or `attachment`.
