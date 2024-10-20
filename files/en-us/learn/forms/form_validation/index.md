@@ -700,7 +700,7 @@ email.addEventListener("input", (event) => {
   email.setCustomValidity(
     email.value.endsWith("@example.com")
       ? ""
-      : "Please enter an email address of @example.com"
+      : "Please enter an email address of @example.com",
   );
 });
 ```
