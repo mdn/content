@@ -708,7 +708,7 @@ email.addEventListener("input", (event) => {
 ```html
 <form>
   <label for="mail">email address (@example.com only):</label>
-  <input type="email" id="mail" name="mail" />
+  <input type="email" id="mail" />
   <button>Submit</button>
 </form>
 ```
