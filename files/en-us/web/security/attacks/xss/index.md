@@ -1,5 +1,5 @@
 ---
-title: Cross-site-scripting (XSS)
+title: Cross-site scripting (XSS)
 slug: Web/Security/Attacks/XSS
 page-type: guide
 ---
