@@ -84,7 +84,7 @@ Our TypeScript code will be able to run everywhere JavaScript can run. How is th
 > [!NOTE]
 > If you are curious about how TypeScript transpiles our code to JavaScript, you can have a look at the [TypeScript Playground](https://www.typescriptlang.org/play/?target=1&e=4#example/hello-world).
 
-First-class TypeScript support has been Svelte's most requested feature for quite some time. Thanks to the hard work of the Svelte team, together with many contributors, we have an [official solution](https://svelte.dev/blog/svelte-and-typescript) ready to be put to the test. In this section we'll show you how to set up a Svelte project with TypeScript support to give it a try.
+First-class TypeScript support has been Svelte's most requested feature for quite some time. Thanks to the hard work of the Svelte team, together with many contributors, they have an [official solution](https://svelte.dev/blog/svelte-and-typescript) ready to be put to the test. In this section we'll show you how to set up a Svelte project with TypeScript support to give it a try.
 
 ## Why TypeScript?
 
