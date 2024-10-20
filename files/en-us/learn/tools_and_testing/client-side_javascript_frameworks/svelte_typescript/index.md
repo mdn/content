@@ -171,7 +171,7 @@ Once you have TypeScript configured, you can start using it from a Svelte compon
 > See the [Module resolution for bundlers, TypeScript runtimes, and Node.js loaders](https://www.typescriptlang.org/docs/handbook/modules/theory.html#module-resolution-for-bundlers-typescript-runtimes-and-nodejs-loaders) section of the TypeScript manual for more information.
 
 > [!NOTE]
-> Using TypeScript in component markup sections is [not supported yet](https://github.com/sveltejs/svelte/issues/4701). You'll have to use JavaScript from the markup, and TypeScript in the `<script lang='ts'>` section.
+> Using TypeScript in component markup sections is [is supported](https://github.com/sveltejs/svelte/pull/9482) in [Svelte 5.](https://github.com/sveltejs/svelte/releases/tag/svelte%405.0.0). If you are using a version less than 5, you'll have to use JavaScript from the markup, and TypeScript in the `<script lang='ts'>` section.
 
 ## Improved developer experience with TypeScript
 
