@@ -75,7 +75,7 @@ console.log(original.byteLength); // 0
 
 Interfaces that can be transferred should include this information in their introduction.
 
-Some of the items that various specifications indicate can be *transferred* are listed below (this list may not be exhaustive!):
+Some of the items that various specifications indicate can be _transferred_ are listed below (this list may not be exhaustive!):
 
 - {{jsxref("ArrayBuffer")}}
 - {{domxref("MessagePort")}}
