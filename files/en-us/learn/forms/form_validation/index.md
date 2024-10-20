@@ -678,6 +678,45 @@ Here is the live result:
 
 The constraint validation API gives you a powerful tool to handle form validation, letting you have enormous control over the user interface above and beyond what you can do with HTML and CSS alone.
 
+### Extending built-in form validation
+
+With a built-in form validation such as [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email),
+you can extend the validation by `setCustomValidity()`.
+
+First, reset a custom validity message by `setCustomValidity("")`, then validate with the built-in constraints.
+Next, extend with a custom constraints.
+
+```js
+const email = document.getElementById("mail");
+
+email.addEventListener("input", (event) => {
+  // Validate with the built-in constraints
+  email.setCustomValidity("");
+  if (!email.validity.valid) {
+    return;
+  }
+ 
+ // Extends with a custom constraints
+  email.setCustomValidity(
+    email.value.endsWith("@example.com")
+      ? ""
+      : "Please enter an email address of @example.com"
+  );
+});
+```
+
+```html
+<form>
+  <label for="mail">email address (@example.com only):</label>
+  <input type="email" id="mail" />
+  <button>Submit</button>
+</form>
+```
+
+You can try it out below:
+
+{{EmbedLiveSample("Extending_built-in_form_validation", "100%", 120)}}
+
 ### Validating forms without a built-in API
 
 In some cases, such as [custom controls](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls), you won't be able to or won't want to use the Constraint Validation API. You're still able to use JavaScript to validate your form, but you'll just have to write your own.
