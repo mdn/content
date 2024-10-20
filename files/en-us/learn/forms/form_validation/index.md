@@ -695,8 +695,8 @@ email.addEventListener("input", (event) => {
   if (!email.validity.valid) {
     return;
   }
- 
- // Extends with a custom constraints
+
+  // Extends with a custom constraints
   email.setCustomValidity(
     email.value.endsWith("@example.com")
       ? ""
