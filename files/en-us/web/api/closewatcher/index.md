@@ -49,7 +49,7 @@ Web applications can use the `onclose` handler to close the UI element in respon
 They can also trigger these same events in response to the UI element's normal closing mechanism, and then implement common `close` event handling for both the application- and device-specific close action.
 Once the `onclose` event handler completes the `CloseWatcher` is destroyed and the events will no longer be fired.
 
-In some applications the UI element may only be allowed to close when it is in a particular state, for example, when some needed information is populated.
+In some applications the UI element may only be allowed to close when it is in a particular state; for example, when some needed information is populated.
 To address these cases, applications can prevent the `close` event from being emitted by implementing a handler for the `cancel` event that calls {{domxref("Event.preventDefault()")}} if the UI element is not ready to close.
 
 You can create `CloseWatcher` instances without [user activation](/en-US/docs/Web/Security/User_activation), and this can be useful to implement cases like session inactivity timeout dialogs. However, if you create more than one `CloseWatcher` without user activation, then the watchers will be grouped, so a single close request will close them both.
@@ -83,7 +83,7 @@ picker.querySelector(".close-button").onclick = () => watcher.requestClose();
 In this example we have a sidebar component that is displayed when an "Open" button is selected, and hidden using either a "Close" button or platform-native mechanisms.
 To make it more interesting, this is a live example!
 
-Note also the example is a little contrived because normally we would use a toggle button to change a sidebar state.
+Note also that the example is a little contrived, because normally we would use a toggle button to change a sidebar state.
 We could certainly do that, but using separate "Open" and "Close" buttons makes it easier to demonstrate the feature.
 
 #### HTML
@@ -135,7 +135,7 @@ CSS is used to animate the display of the sidebar element when the `open` class 
 #### JavaScript
 
 The code first gets variables for the buttons and `<div>` elements defined in the HTML.
-It also defines a function `closeSidebar()` that is called when the sidebar is closed to remove the `open` class from the `<div>` elements, and adds a `click` event listener that calls the `openSidebar()` method when the "Open" button is clicked.
+It also defines a function `closeSidebar()` that is called when the sidebar is closed, to remove the `open` class from the `<div>` elements, and adds a `click` event listener that calls the `openSidebar()` method when the "Open" button is clicked.
 
 ```js
 const sidebar = document.querySelector(".sidebar");
@@ -152,7 +152,7 @@ sidebarOpen.addEventListener("click", openSidebar);
 ```
 
 The implementation of `openSidebar()` is given below.
-The method first checks if the sidebar is already open, and if not adds the `open` class to the elements so that the sidebar is displayed.
+The method first checks if the sidebar is already open, and if not, adds the `open` class to the elements so that the sidebar is displayed.
 
 We then create a new `CloseWatcher` and add a listener that will call {{domxref("CloseWatcher.close()", "close()")}} on it if the "Close" button is clicked.
 This ensures that the `close` event is called when either platform native close methods or the "Close" button are used.
