@@ -24,7 +24,7 @@ All XSS attacks depend on a website doing two things:
 
 ## An XSS example
 
-Here's a web page that wants to display a welcome message, personalized for the current user. It displays the welcome in a {{htmlelement("Heading_Elements", "heading")}} element:
+Suppose the website for the user's bank is `my-bank.com`. The user is typically signed into it, and code in the website can access the user's account details and perform transactions. The website wants to display a welcome message, personalized for the current user. It displays the welcome in a {{htmlelement("Heading_Elements", "heading")}} element:
 
 ```html
 <h1 id="welcome"></h1>
@@ -40,10 +40,10 @@ const welcome = document.querySelector("#welcome");
 welcome.innerHTML = `Welcome back, ${user}!`;
 ```
 
-Let's say this page is served from `https://example.org/welcome`. To exploit the vulnerability, an attacker sends the user a link like this:
+Let's say this page is served from `https://my-bank.com/welcome`. To exploit the vulnerability, an attacker sends the user a link like this:
 
 ```html
-<a href="https://example.org/welcome?user=<img src=x onerror=alert('hello!')>">
+<a href="https://my-bank.com/welcome?user=<img src=x onerror=alert('hello!')>">
   Win a free iPad!</a
 >
 ```
