@@ -19,7 +19,7 @@ When you are working on a website locally on your computer, you should keep all 
 
 You'll notice that throughout this article, we ask you to name folders and files completely in lowercase with no spaces. This is because:
 
-1. Many computers, particularly web servers, are case-sensitive. So for example, if you put an image on your website at `test-site/MyImage.jpg` and then in a different file you try to invoke the image as `test-site/myimage.jpg`, it may not work.
+1. Many computers, particularly web servers, are case-sensitive. So for example, if you put an image on your website at `test-site/My_Image.jpg` and then in a different file you try to invoke the image as `test-site/my_image.jpg`, it may not work.
 2. There are many ways in which using spaces in file names create issues:
    - When you invoke commands in the terminal, you have to put quotes around file names with spaces in them, or the path will be interpreted as two separate items.
    - Some programming languages (e.g. Python) do not work well with spaces in file names if these files are modules to be imported.
