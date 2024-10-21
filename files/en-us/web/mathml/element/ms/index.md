@@ -22,6 +22,10 @@ Some browsers may also support the following deprecated attributes and will rend
 - `rquote`
   - : The closing quote to enclose the content. The default value is `&quot;`.
 
+## Accessibility
+
+The `<ms>` element has no implicit [ARIA role](/en-US/docs/Web/Accessibility/ARIA/Roles).
+
 ## Examples
 
 ### Default rendering

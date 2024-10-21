@@ -66,6 +66,10 @@ In order to use a particular form of a character such as bold/italic, serif, san
 
 This element also accepts the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
 
+## Accessibility
+
+The `<mi>` element has no implicit [ARIA role](/en-US/docs/Web/Accessibility/ARIA/Roles).
+
 ## Examples
 
 ```html

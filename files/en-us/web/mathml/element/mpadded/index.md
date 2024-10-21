@@ -36,6 +36,10 @@ For the `depth`, `height`, `lspace`, `voffset` and `width` attributes, some brow
    - A pseudo-unit `width`, `height` or `depth`. The specified value is interpreted as α times the corresponding dimension of the content.
    - A percent sign followed by a pseudo-unit `width`, `height` or `depth`. The specified value is interpreted as α% the corresponding dimension of the content.
 
+## Accessibility
+
+The `<mpadded>` element has no implicit [ARIA role](/en-US/docs/Web/Accessibility/ARIA/Roles).
+
 ## Examples
 
 ### Dimensions and offsets

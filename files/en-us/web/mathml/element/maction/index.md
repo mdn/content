@@ -30,6 +30,10 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 - `selection` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : The child element currently visible, only taken into account for `actiontype="toggle"` or non-standard `actiontype` values. The default value is `1`, which is the first child element.
 
+## Accessibility
+
+The `<maction>` element has no implicit [ARIA role](/en-US/docs/Web/Accessibility/ARIA/Roles).
+
 ## Examples
 
 The following example uses the "toggle" `actiontype`:
