@@ -144,6 +144,8 @@ Note that `'none'` cannot be combined with any other method in a particular dire
 
 #### Nonces
 
+A `nonce` is the recommended approach for restricting the loading of {{htmlelement("script")}} and {{htmlelement("style")}} resources.
+
 With a nonce, the server generates a random value for every HTTP response, and includes it in a `script-src` and/or a `style-src` directive:
 
 ```http
@@ -151,7 +153,7 @@ Content-Security-Policy:
   script-src 'nonce-416d1177-4d12-4e3b-b7c9-f6c409789fb8'
 ```
 
-The server then includes this value as the value of the `nonce` attribute of all the {{htmlelement("script")}} and/or {{htmlelement("style")}} tags that they intend to include in the document.
+The server then includes this value as the value of the `nonce` attribute of all the `<script>` and/or `<style>` tags that they intend to include in the document.
 
 The browser compares the two values, and loads the resource only if they match. The idea is that even if an attacker can insert some JavaScript into the page, they won't know which nonce the server is going to use, so the browser will refuse to run the script.
 
