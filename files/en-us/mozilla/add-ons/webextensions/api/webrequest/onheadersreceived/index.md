@@ -157,6 +157,7 @@ Events have three functions:
       - `fingerprinting_content` indicates the domain is in the fingerprinting category but not the tracking category. Examples of this type of domain include payment providers who use fingerprinting techniques to identify the visiting user for anti-fraud purposes.
     - `cryptomining` and `cryptomining_content`: similar to the fingerprinting category but for cryptomining resources.
     - `tracking`, `tracking_ad`, `tracking_analytics`, `tracking_social`, and `tracking_content`: indicates the request is involved in tracking. `tracking` is any generic tracking request, the `ad`, `analytics`, `social`, and `content` suffixes identify the type of tracker.
+    - `emailtracking` and `emailtracking_content`: indicates the request is involved in tracking emails. `emailtracking` is any generic email tracking request. The `content` suffix identify the type of tracker.
     - `any_basic_tracking`: a meta flag that combines tracking and fingerprinting flags, excluding `tracking_content` and `fingerprinting_content`.
     - `any_strict_tracking`: a meta flag that combines all tracking and fingerprinting flags.
     - `any_social_tracking`: a meta flag that combines all social tracking flags.
