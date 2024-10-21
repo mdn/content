@@ -11,7 +11,7 @@ The **`font-weight`** CSS descriptor enables authors to specify a single font we
 
 Unless it contains a [variable font](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide), a single font file contains characters from a font family in a specific weight and style: for example, "Helvetica bold italic". Typically, a developer will want to use fonts from a single font family in a range of different weights. To accomplish this, you can define multiple {{cssxref("@font-face")}} at-rules for the same family, one for each weight, and set the `font-weight` descriptor to match the font's weight. Then CSS rules can select a font in the appropriate weight by setting the {{cssxref("font-weight")}} property or the {{cssxref("font")}} shorthand property.
 
-If a font file contains a variable font, it may contain more than one weight. To reflect this, the `font-weight` descriptor can specify a range of weights, given as a space separated pair of weight values.
+If a font file contains a variable font, it may support a range of font weights. To reflect this, the `font-weight` descriptor can specify the range of font weights for which the font should be used as a space-separated pair of font-weight values.
 
 ## Syntax
 
