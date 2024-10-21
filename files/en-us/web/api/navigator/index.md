@@ -67,6 +67,8 @@ _Doesn't inherit any properties._
   - : Returns a {{domxref("Permissions")}} object that can be used to query and update permission status of APIs covered by the [Permissions API](/en-US/docs/Web/API/Permissions_API).
 - {{domxref("Navigator.presentation")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a reference to the {{domxref("Presentation")}} API.
+- {{domxref("Navigator.protectedAudience")}} {{SecureContext_Inline}} {{Experimental_Inline}}
+  - : Returns the current browsing context's {{domxref("ProtectedAudience")}} object, which can be used to determine support for the [Protected Audience API](/en-US/docs/Web/API/Protected_Audience_API) and specific features.
 - {{domxref("Navigator.scheduling")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("Scheduling")}} object for the current document.
 - {{domxref("Navigator.serial")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
@@ -136,11 +138,17 @@ _Doesn't inherit any properties._
 
 _Doesn't inherit any method._
 
+- {{domxref("Navigator.canLoadAdAuctionFencedFrame()")}} {{SecureContext_Inline}} {{Experimental_Inline}}
+  - : Returns a boolean value that indicates whether an ad auction-created {{htmlelement("fencedframe")}} can be loaded in the current browsing context.
 - {{domxref("Navigator.canShare()")}} {{SecureContext_Inline}}
   - : Returns `true` if a call to `Navigator.share()` would succeed.
 - {{domxref("Navigator.clearAppBadge()")}} {{SecureContext_Inline}}
   - : Clears a badge on the current app's icon and returns a {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
-- {{domxref("Navigator.deprecatedReplaceInURN()")}} {{Experimental_Inline}}
+- {{domxref("Navigator.clearOriginJoinedAdInterestGroups()")}} {{SecureContext_Inline}} {{Experimental_Inline}}
+  - : Requests the user's browser to leave all ad interest groups with a specified owner that were previously joined on the current top-level frame's origin.
+- {{domxref("Navigator.createAuctionNonce()")}} {{SecureContext_Inline}} {{Experimental_Inline}}
+  - : Generates an auction nonce, which is included in the configuration object of a {{domxref("Navigator.runAdAuction()")}} call to prevent unintended replaying of additional bids.
+- {{domxref("Navigator.deprecatedReplaceInURN()")}} {{SecureContext_Inline}} {{Experimental_Inline}}
   - : Substitutes specified strings inside the mapped URL corresponding to a given opaque URN or `FencedFrameConfig`'s internal `url` property. This method has been made available as a temporary measure (hence "deprecated") to enable that substitution for fenced frame URLs, helping ad tech providers to migrate existing implementations across to [privacy sandbox](https://developers.google.com/privacy-sandbox) APIs.
 - {{domxref("Navigator.getAutoplayPolicy()")}} {{Experimental_Inline}}
   - : Returns a value indicating whether the specified media element, audio context, or media feature "type" is allowed to autoplay.
@@ -150,22 +158,30 @@ _Doesn't inherit any method._
   - : returns an array of {{domxref("Gamepad")}} objects, one for each gamepad connected to the device.
 - {{domxref("Navigator.getInstalledRelatedApps()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a promise that resolves with an array of objects representing any related native or [Progressive Web Applications](/en-US/docs/Web/Progressive_web_apps) that the user has installed.
+- {{domxref("Navigator.joinAdInterestGroup()")}} {{SecureContext_Inline}} {{Experimental_Inline}}
+  - : Requests the user's browser to add an interest group to its list of stored interest groups that it is a member of.
+- {{domxref("Navigator.leaveAdInterestGroup()")}} {{SecureContext_Inline}} {{Experimental_Inline}}
+  - : Requests the user's browser to leave an ad interest group previously joined on the current top-level frame's origin.
 - {{domxref("Navigator.registerProtocolHandler()")}} {{SecureContext_Inline}}
   - : Allows websites to register themselves as a possible handler for a given protocol.
 - {{domxref("Navigator.requestMediaKeySystemAccess()")}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} for a MediaKeySystemAccess object.
 - {{domxref("Navigator.requestMIDIAccess()")}} {{SecureContext_Inline}}
   - : Returns a {{jsxref('Promise')}} representing a request for access to MIDI devices on the user's system.
+- {{domxref("Navigator.runAdAuction()")}} {{SecureContext_Inline}} {{Experimental_Inline}}
+  - : Initiates a real-time auction on the seller/publisher site that determines which ad is to be shown in the associated ad space.
 - {{domxref("Navigator.sendBeacon()")}}
   - : Used to asynchronously transfer a small amount of data using {{Glossary("HTTP")}} from the User Agent to a web server.
 - {{domxref("Navigator.setAppBadge()")}} {{SecureContext_Inline}}
   - : Sets a badge on the icon associated with this app and returns a {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
 - {{domxref("Navigator.share()")}} {{SecureContext_Inline}}
   - : Invokes the native sharing mechanism of the current platform.
-- {{domxref("Navigator.vibrate()")}}
-  - : Causes vibration on devices with support for it. Does nothing if vibration support isn't available.
 - {{domxref("Navigator.unregisterProtocolHandler()")}} {{SecureContext_Inline}}
   - : Unregister a website that is a handler for a given protocol.
+- {{domxref("Navigator.updateAdInterestGroups()")}} {{SecureContext_Inline}} {{Experimental_Inline}}
+  - : Updates interest groups that the browser is already a member of with information obtained from their update URLs.
+- {{domxref("Navigator.vibrate()")}}
+  - : Causes vibration on devices with support for it. Does nothing if vibration support isn't available.
 
 ### Deprecated methods
 

@@ -11,7 +11,7 @@ browser-compat: api.FencedFrameConfig
 
 The **`FencedFrameConfig`** interface represents the navigation of a {{htmlelement("fencedframe")}}, i.e. what content will be displayed in it.
 
-`FencedFrameConfig` objects cannot be constructed manually via JavaScript. They are returned from a source such as the [Protected Audience API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience) and set as the value of {{domxref("HTMLFencedFrameElement.config")}}.
+`FencedFrameConfig` objects cannot be constructed manually via JavaScript. They are returned from a source such as the [Protected Audience API](/en-US/docs/Web/API/Protected_Audience_API) and set as the value of {{domxref("HTMLFencedFrameElement.config")}}.
 
 A `FencedFrameConfig` object instance has an exposed method, but it also maps to internal config information containing opaque properties not accessible from JavaScript. This includes information such as the source of the loaded content and interest groups for advertising purposes. It is key to how fenced frames help to implement key use cases while respecting user privacy.
 
@@ -26,7 +26,7 @@ A `FencedFrameConfig` object instance has an exposed method, but it also maps to
 
 ### Basic usage
 
-To set what content will be shown in a `<fencedframe>`, a utilizing API (such as [Protected Audience](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience) or [Shared Storage](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage)) generates a `FencedFrameConfig` object, which is then set as the value of the `<fencedframe>`'s `config` property.
+To set what content will be shown in a `<fencedframe>`, a utilizing API (such as [Protected Audience](/en-US/docs/Web/API/Protected_Audience_API) or [Shared Storage](/en-US/docs/Web/API/Shared_Storage_API)) generates a `FencedFrameConfig` object, which is then set as the value of the `<fencedframe>`'s `config` property.
 
 The following example gets a `FencedFrameConfig` from a Protected Audience API's ad auction, which is then used to display the winning ad in a `<fencedframe>`:
 
@@ -44,9 +44,9 @@ frame.config = frameConfig;
 
 ### Passing contextual data via `setSharedStorageContext()`
 
-You can use the [Private Aggregation API](https://developers.google.com/privacy-sandbox/private-advertising/private-aggregation) to create reports that combine event-level data inside fenced frames with contextual data from the embedding document. `setSharedStorageContext()` can be used to pass contextual data from the embedder to shared storage worklets initiated by the [Protected Audience API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience).
+You can use the [Private Aggregation API](https://developers.google.com/privacy-sandbox/private-advertising/private-aggregation) to create reports that combine event-level data inside fenced frames with contextual data from the embedding document. `setSharedStorageContext()` can be used to pass contextual data from the embedder to shared storage worklets initiated by the [Protected Audience API](/en-US/docs/Web/API/Protected_Audience_API).
 
-In the following example, we store data from both the embedding page and the fenced frame in [shared storage](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage).
+In the following example, we store data from both the embedding page and the fenced frame in [shared storage](/en-US/docs/Web/API/Shared_Storage_API).
 
 In the embedding page, we will set a mock event ID as the shared storage context using `setSharedStorageContext()`:
 
