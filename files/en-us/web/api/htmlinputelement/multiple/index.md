@@ -17,11 +17,11 @@ A boolean value.
 ## Examples
 
 ```html
-<input id="myfileinput" type="file" multiple />
+<input id="my-file-input" type="file" multiple />
 ```
 
 ```js
-let fileInput = document.getElementById("myfileinput");
+let fileInput = document.getElementById("my-file-input");
 
 if (fileInput.multiple) {
   // Loop fileInput.files

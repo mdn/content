@@ -18,7 +18,11 @@ This article provides information about the changes in Firefox 132 that affect d
 
 ### CSS
 
+- The {{CSSXRef("text-emphasis-position")}} property now supports the `auto` value to bring it inline with {{CSSXRef("text-underline-position")}} ([Firefox bug 1919658](https://bugzil.la/1919658)).
+
 #### Removals
+
+- The [`-moz-user-modify`](/en-US/docs/Web/CSS/user-modify) CSS property has been removed. This property has been deprecated in favour of the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) global attribute. ([Firefox bug 1920118](https://bugzil.la/1920118)).
 
 ### JavaScript
 
@@ -37,18 +41,23 @@ This article provides information about the changes in Firefox 132 that affect d
 
 #### Removals
 
+- HTTP/2 Server Push is deactivated by default with the preference `network.http.http2.allow-push` now set to `false`.
+  This feature is no longer supported by any other major browser, and the implementation may be completely removed in a future release. ([Firefox bug 1915848](https://bugzil.la/1915848)).
+
 ### Security
 
 #### Removals
 
 ### APIs
 
+- The {{domxref('WebGLRenderingContext.drawingBufferColorSpace', 'drawingBufferColorSpace')}} and {{domxref('WebGLRenderingContext.unpackColorSpace','unpackColorSpace')}} properties of the {{domxref('WebGLRenderingContext')}} and {{domxref('WebGL2RenderingContext')}} interfaces are now supported. These specify the color space of the WebGL drawing buffer, and the color space to convert to when importing textures, respectively. ([Firefox bug 1885491](https://bugzil.la/1885491), [Firefox bug 1885446](https://bugzil.la/1885446)).
 - The {{domxref("Notification.silent")}} property is now supported, which controls whether system notifications should be silent. When `silent: true` is specified in the {{domxref("Notification.Notification", "Notification()")}} constructor, the resulting system notification is issued without accompanying sounds or vibrations, regardless of device settings ([Firefox bug 1809028](https://bugzil.la/1809028)).
 
 #### DOM
 
 #### Media, WebRTC, and Web Audio
 
+- The {{domxref('HTMLVideoElement/requestVideoFrameCallback','requestVideoFrameCallback()')}} and {{domxref('HTMLVideoElement/cancelVideoFrameCallback','cancelVideoFrameCallback()')}} methods of the {{domxref('HTMLVideoElement')}} interface are now supported. The `requestVideoFrameCallback()` registers a callback function that runs when a new video frame is sent to the compositor. Developers can use this function to perform operations on each video frame, enabling more efficient painting to a canvas, video analysis, synchronization with external audio sources, and so on. The method returns a callback handle that can be passed to `cancelVideoFrameCallback()` in order to cancel the outstanding callback request. ([Firefox bug 1919367](https://bugzil.la/1919367), [Firefox bug 1800882](https://bugzil.la/1800882)).
 - The {{domxref("MediaStreamTrack.getCapabilities()")}} method is now supported. This returns an object detailing the accepted values or value range for each constrainable property of the associated {{domxref("MediaStreamTrack")}} ([Firefox bug 1179084](https://bugzil.la/1179084)).
 
 #### Removals
