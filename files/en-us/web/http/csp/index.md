@@ -151,7 +151,7 @@ Content-Security-Policy:
   script-src 'nonce-416d1177-4d12-4e3b-b7c9-f6c409789fb8'
 ```
 
-The server then includes this value as the value of the `nonce` attribute of all the {{htmlelement("script")}} and/or {{htmlelement("style")}} tags in the document.
+The server then includes this value as the value of the `nonce` attribute of all the {{htmlelement("script")}} and/or {{htmlelement("style")}} tags that they intend to include in the document.
 
 The browser compares the two values, and loads the resource only if they match. The idea is that even if an attacker can insert some JavaScript into the page, they won't know which nonce the server is going to use, so the browser will refuse to run the script.
 
