@@ -184,7 +184,7 @@ When the form field is not a phone number, email address, or instant messaging p
 - `address-level2`
   - : The second [administrative level](#administrative_levels_in_addresses), in addresses with at least two of them. In countries with two administrative levels, this would typically be the city, town, village, or other locality in which the address is located.
 - `address-level1`
-  - : The first [administrative level](#administrative_levels_in_addresses) in the address. This is typically the province in which the address is located. In the United States, this would be the state. In Switzerland, the canton. In the United Kingdom, the post town.
+  - : The first [administrative level](#administrative_levels_in_addresses) in the address. This is typically the province in which the address is located. In the United States, this would be the state. In Switzerland, the canton. In the United Kingdom, the county.
 - `country`
   - : A country or territory code.
 - `country-name`
@@ -279,16 +279,18 @@ United States addresses do not use levels 3 and up.
 
 #### United Kingdom
 
-Address input forms in the UK should contain one address level and one, two or three address lines, depending on the address. A complete address would look like so:
+Address input forms in the UK should contain one or two address levels and one, two or three address lines, depending on the address. A complete address would look like so:
 
 103 Frogmarch Street
 Upper-Wapping
 Winchelsea
+Whereshire
 TN99 8ZZ
 
 The address levels are:
 
-- `address-level1`: The post town — "Winchelsea" in this case.
+- `address-level1`: The county — "Whereshire" in this case.
+- `address-level2`: The post town — "Winchelsea" in this case.
 - `address-line2`: The locality — "Upper-Wapping" in this case.
 - `address-line1`: The house/street particulars — "103 Frogmarch Street".
 
