@@ -116,20 +116,26 @@ if (crossOriginIsolated) {
 
 ### Severing the opener relationship
 
-The `Cross-Origin-Opener-Policy: noopener-allow-popups` header can be used to ensure that the document that opened a document with these headers cannot directly script it.
+Consider a hypothetical origin `example.com` that has two very different applications on the same origin:
 
-To understand where this can be useful, let's examine a hypothetical example.com origin that has two very different applications.
-One is https://example.com/chat that enables any user to contact any other user and send them messages.
-Another is https://example.com/passwords that contains all of the user's passwords, across different services.
+- A chat application at `/chat` that enables any user to contact any other user and send them messages.
+- A password management application at `/passwords` that contains all of the user's passwords, across different services.
 
-Common security advice to further isolate these applications would be to host them on different origins.
-But in some cases that's not possible, and those two applications have to be on a single origin for historical/business/branding reasons.
+The administrators of the "passwords" application would very much like to ensure that it can't be directly scripted by the "chat" app, which by its nature has a larger XSS surface.
+The "right way" to isolate these applications would be to host them on different origins, but in some cases that's not possible, and those two applications have to be on a single origin for historical, business, or branding reasons.
 
-At the same time, the administrators of the "passwords" application would very much like to ensure that it can't be directly scripted by the "chat" app, which by its nature has a larger XSS surface.
+The `Cross-Origin-Opener-Policy: noopener-allow-popups` header can be used to ensure that a document can't be scripted by a document that opens it.
 
-`Cross-Origin-Opener-Policy: noopener-allow-popups` helps them do that.
+If `example.com/passwords` is served with `noopener-allow-popups` the handle returned by {{domxref("Window.open()")}} will be `null`, so the opener can't script the passwords app:
 
-At the same time, by itself it is not a sufficient security measure.
+```js
+const handle = window.open("example.com/passwords", "passwordTab");
+if (!handle) {
+  // The handle is null so the new window can't be scripted.
+}
+```
+
+Note that this alone is not a sufficient security measure:
 They would also need to do the following:
 
 - Use Fetch Metadata to block same-origin requests to the more-sensitive app that are not navigation requests.
