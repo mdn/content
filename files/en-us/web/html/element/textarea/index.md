@@ -26,13 +26,13 @@ The `<textarea>` element also accepts several attributes common to form `<input>
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- `autocapitalize`
+- [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize)
 
-  - : Controls whether inputted text is automatically capitalized and, if so, in what manner. See the [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize) global attribute page for more information.
+  - : A string that indicates whether input text is automatically capitalized and, if so, in what manner.
 
 - [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete)
 
-  - : This attribute indicates whether the value of the control can be automatically completed by the browser. Possible values are:
+  - : A string that indicates whether the value of the control can be automatically completed by the browser. Possible values are:
 
     - `off`: The user must explicitly enter a value into this field for every use, or the document provides its own auto-completion method; the browser does not automatically complete the entry.
     - `on`: The browser can automatically complete the value based on values that the user has entered during previous uses.
@@ -40,16 +40,17 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     `<textarea>` elements that don't specify the `autocomplete` attribute inherit the `autocomplete` `on` or `off` status set on the `<textarea>`'s form owner. The form owner is either the {{HTMLElement("form")}} element that this `<textarea>` element is a descendant of or the form element whose `id` is specified by the `form` attribute of the input element. For more information, see the [`autocomplete`](/en-US/docs/Web/HTML/Element/form#autocomplete) attribute in {{HTMLElement("form")}}.
 
-- `autocorrect` {{non-standard_inline}}
+- [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect)
 
-  - : A string which indicates whether to activate automatic spelling correction and processing of text substitutions (if any are configured) while the user is editing this `textarea`. Permitted values are:
+  - : A string that indicates whether to activate automatic spelling correction and processing of text while the user is editing this `textarea`.
+    Permitted values are:
 
     - `on`
       - : Enable automatic spelling correction and text substitutions.
     - `off`
       - : Disable automatic spelling correction and text substitutions.
 
-- `autofocus`
+- [`autofocus`](/en-US/docs/Web/HTML/Global_attributes/autofocus)
   - : This Boolean attribute lets you specify that a form control should have input focus when the page loads. Only one form-associated element in a document can have this attribute specified.
 - `cols`
   - : The visible width of the text control, in average character widths. If it is specified, it must be a positive integer. If it is not specified, the default value is `20`.
