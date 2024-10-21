@@ -93,7 +93,7 @@ The WebVR API extends the following APIs, adding the listed features.
 #### Navigator
 
 - {{DOMxRef("Navigator.activeVRDisplays")}} {{ReadOnlyInline}}
-  - : Returns an array containing every {{DOMxRef("VRDisplay")}} object that is currently presenting ({{DOMxRef("VRDisplay.ispresenting")}} is `true`).
+  - : Returns an array containing every {{DOMxRef("VRDisplay")}} object that is currently presenting ({{DOMxRef("VRDisplay.isPresenting")}} is `true`).
 - {{DOMxRef("Navigator.getVRDisplays()")}}
   - : Returns a promise that resolves to an array of {{DOMxRef("VRDisplay")}} objects representing any available VR displays connected to the computer.
 

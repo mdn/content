@@ -137,7 +137,7 @@ The code that interprets these incoming messages might look like this:
 
 ```js
 exampleSocket.onmessage = (event) => {
-  const f = document.getElementById("chatbox").contentDocument;
+  const f = document.getElementById("chat-box").contentDocument;
   let text = "";
   const msg = JSON.parse(event.data);
   const time = new Date(msg.date);
@@ -154,17 +154,17 @@ exampleSocket.onmessage = (event) => {
     case "message":
       text = `(${timeStr}) ${msg.name} : ${msg.text} <br>`;
       break;
-    case "rejectusername":
+    case "reject-username":
       text = `Your username has been set to <em>${msg.name}</em> because the name you chose is in use.<br>`;
       break;
-    case "userlist":
-      document.getElementById("userlistbox").innerText = msg.users.join("\n");
+    case "user-list":
+      document.getElementById("user-list-box").innerText = msg.users.join("\n");
       break;
   }
 
   if (text.length) {
     f.write(text);
-    document.getElementById("chatbox").contentWindow.scrollByPages(1);
+    document.getElementById("chat-box").contentWindow.scrollByPages(1);
   }
 };
 ```
