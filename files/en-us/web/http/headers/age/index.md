@@ -7,10 +7,10 @@ browser-compat: http.headers.Age
 
 {{HTTPSidebar}}
 
-The **`Age`** header contains the time in seconds the object was in a proxy cache.
+The HTTP **`Age`** header contains the time in seconds the object was in a proxy cache.
 
-The `Age` header is usually close to zero. If it is `Age: 0`, it was probably fetched from the origin server; otherwise, it was usually calculated as
-a difference between the proxy's current date and the {{HTTPHeader("Date")}} general header included in the HTTP response.
+The `Age` header is usually close to zero.
+If it is `Age: 0`, it was probably fetched from the origin server; otherwise, it was usually calculated as a difference between the proxy's current date and the {{HTTPHeader("Date")}} general header included in the HTTP response.
 
 <table class="properties">
   <tbody>
@@ -20,7 +20,7 @@ a difference between the proxy's current date and the {{HTTPHeader("Date")}} gen
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -33,7 +33,7 @@ Age: <delta-seconds>
 
 ## Directives
 
-- \<delta-seconds>
+- `<delta-seconds>`
   - : A non-negative integer that is time in seconds the object was in a proxy cache.
 
 ## Examples
