@@ -15,7 +15,7 @@ custom-element::part(foo) {
 }
 ```
 
-## Descripton
+## Description
 
 The global [`part`](/en-US/docs/Web/HTML/Global_attributes/part) attribute makes a shadow tree element visible to its parent DOM. The part names declared using the `part` attribute are used as the parameter of the `::part()` pseudo-element. In this way, you can apply CSS styles to elements in the shadow tree from outside of it.
 

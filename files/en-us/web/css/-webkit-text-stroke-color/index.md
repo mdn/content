@@ -81,7 +81,7 @@ colorPicker.addEventListener("change", (evt) => {
 
 ## See also
 
-- [Surfin' Safari blog post announcing this feature](https://webkit.org/blog/85/introducing-text-stroke/)
+- [Introducing Text-Stroke](https://webkit.org/blog/85/introducing-text-stroke/) on webkit.org (2006)
 - [CSS-Tricks article explaining this feature](https://css-tricks.com/adding-stroke-to-web-text/)
 - {{cssxref("-webkit-text-fill-color")}}
 - {{cssxref("-webkit-text-stroke-width")}}

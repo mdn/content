@@ -91,7 +91,7 @@ The two examples above show how to specify the _url_ as a `<string>` and as a `u
 ### Importing CSS rules conditional on media queries
 
 ```css
-@import url("fineprint.css") print;
+@import url("fine-print.css") print;
 @import url("bluish.css") print, screen;
 @import "common.css" screen;
 @import url("landscape.css") screen and (orientation: landscape);
