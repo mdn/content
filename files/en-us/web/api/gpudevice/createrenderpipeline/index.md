@@ -175,7 +175,7 @@ The `fragment` object contains an array of objects, each of which can contain th
             If omitted, `dstFactor` defaults to `"zero"`.
 
             > [!NOTE]
-            > The `dual-source-blending` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) needs to be enabled for the `src1`, `one-minus-src1`, `src1-alpha`, and `one-minus-src1-alpha` blend factor operations to be available.
+            > The `dual-source-blending` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) needs to be enabled for the `src1`, `one-minus-src1`, `src1-alpha`, and `one-minus-src1-alpha` blend factor operations to be used successfully. If not, a {{domxref("GPUValidationError")}} is generated.
 
         - `operation` {{optional_inline}}
 
@@ -283,7 +283,7 @@ The `primitive` object can contain the following properties:
   - : A boolean. A value of `true` indicates that depth clipping is disabled. If omitted, `unclippedDepth` defaults to `false`. Note that to control depth clipping, the `depth-clip-control` {{domxref("GPUSupportedFeatures", "feature", "", "nocode")}} must be enabled in the {{domxref("GPUDevice")}}.
 
     > [!NOTE]
-    > The `depth-clip-control` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) needs to be enabled for the `unclippedDepth` property to be available.
+    > The `depth-clip-control` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) needs to be enabled for the `unclippedDepth` property to be used successfully. If not, a {{domxref("GPUValidationError")}} is generated.
 
 ### `vertex` object structure
 
@@ -354,6 +354,9 @@ The following criteria must be met when calling **`createRenderPipeline()`**, ot
   - `targets.length` is less than or equal to the {{domxref("GPUDevice")}}'s `maxColorAttachments` {{domxref("GPUSupportedLimits", "limit", "", "nocode")}}.
   - For each `target`, `writeMask`'s numeric equivalent is less than 16.
   - If any of the used blend factor operations use the source alpha channel (for example `"src-alpha-saturated"`), the output has an alpha channel (that is, it must be a `vec4`).
+  - If the `src1`, `one-minus-src1`, `src1-alpha`, or `one-minus-src1-alpha` blend factor operations are used, the `dual-source-blending` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) is enabled.
+- For `primitive` objects:
+  - If the `unclippedDepth` property is used, the `depth-clip-control` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) is enabled.
 
 ## Examples
 
