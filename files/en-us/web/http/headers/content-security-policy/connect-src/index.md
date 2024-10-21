@@ -18,9 +18,6 @@ loaded using script interfaces. The following APIs are controlled by this direct
 - {{domxref("EventSource")}}
 - {{domxref("Navigator.sendBeacon()")}}
 
-> **Note:** `connect-src 'self'` does not resolve to websocket
-> schemes in all browsers, more info in this [issue](https://github.com/w3c/webappsec-csp/issues/7).
-
 <table class="properties">
   <tbody>
     <tr>
