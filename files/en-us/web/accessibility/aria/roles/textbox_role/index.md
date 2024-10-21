@@ -16,11 +16,11 @@ The default is a single line input, in which <kbd>Return</kbd> or <kbd>Enter</kb
 
 ```html
 <!-- Simple text input field -->
-<div id="txtboxLabel">Enter your five-digit zipcode</div>
+<div id="txtboxLabel">Enter your five-digit zip code</div>
 <div
   role="textbox"
   contenteditable="true"
-  aria-placeholder="5-digit zipcode"
+  aria-placeholder="5-digit zip code"
   aria-labelledby="txtboxLabel"></div>
 
 <!-- Multi-line text area -->
@@ -36,8 +36,8 @@ The default is a single line input, in which <kbd>Return</kbd> or <kbd>Enter</kb
 Semantic elements are more concise and require no JavaScript to support textbox features.
 
 ```html
-<label for="txtbox">Enter your five-digit zipcode</label>
-<input type="text" placeholder="5-digit zipcode" id="txtbox" />
+<label for="txtbox">Enter your five-digit zip code</label>
+<input type="text" placeholder="5-digit zip code" id="txtbox" />
 
 <!-- Multi-line text area -->
 <label for="txtboxMultiline">Enter the tags for the article</label>

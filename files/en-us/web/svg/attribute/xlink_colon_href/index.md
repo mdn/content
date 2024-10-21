@@ -125,7 +125,7 @@ For {{SVGElement("cursor")}}, `xlink:href` defines the reference to the file or 
       <td>
         <code
           ><a href="/en-US/docs/Web/SVG/Content_type#funciri"
-            >&#x3C;funciri></a
+            >&#x3C;FuncIRI></a
           ></code
         >
       </td>

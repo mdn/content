@@ -37,7 +37,7 @@ You can also mitigate such risks using:
 Security-conscious server-side frameworks tend to have built in mitigations for such problems, for example:
 
 - [Security in Django](https://docs.djangoproject.com/en/stable/topics/security/) (especially see [Cross site request forgery (CSRF) protection](https://docs.djangoproject.com/en/stable/topics/security/#cross-site-request-forgery-csrf-protection)).
-- [helmetjs referrer-policy](https://github.com/helmetjs/helmet/tree/main/middlewares/referrer-policy) — middleware for setting Referrer-Policy in Node.js/Express apps (see also [helmetjs](https://github.com/helmetjs) for more security provisions).
+- [Helmet referrer-policy](https://github.com/helmetjs/helmet/tree/main/middlewares/referrer-policy) — middleware for setting Referrer-Policy in Node.js/Express apps (see also [Helmet](https://github.com/helmetjs) for more security provisions).
 
 ## Policy and requirements
 
