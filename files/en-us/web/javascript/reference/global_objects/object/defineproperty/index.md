@@ -412,20 +412,20 @@ const pattern = {
     return "I always return this string, whatever you have assigned";
   },
   set() {
-    this.myname = "this is my name string";
+    this.myName = "this is my name string";
   },
 };
 
 function TestDefineSetAndGet() {
-  Object.defineProperty(this, "myproperty", pattern);
+  Object.defineProperty(this, "myProperty", pattern);
 }
 
 const instance = new TestDefineSetAndGet();
-instance.myproperty = "test";
-console.log(instance.myproperty);
+instance.myProperty = "test";
+console.log(instance.myProperty);
 // I always return this string, whatever you have assigned
 
-console.log(instance.myname); // this is my name string
+console.log(instance.myName); // this is my name string
 ```
 
 ### Inheritance of properties

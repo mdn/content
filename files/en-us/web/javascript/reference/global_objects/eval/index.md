@@ -76,8 +76,8 @@ eval("x + y");
 eval?.("x + y");
 
 // Indirect call using a variable to store and return eval
-const geval = eval;
-geval("x + y");
+const myEval = eval;
+myEval("x + y");
 
 // Indirect call through member access
 const obj = { eval };

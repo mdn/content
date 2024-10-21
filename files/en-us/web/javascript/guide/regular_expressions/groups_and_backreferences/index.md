@@ -169,9 +169,9 @@ const personList = `First_Name: John, Last_Name: Doe
 First_Name: Jane, Last_Name: Smith`;
 
 const regexpNames =
-  /First_Name: (?<firstname>\w+), Last_Name: (?<lastname>\w+)/g;
+  /First_Name: (?<firstName>\w+), Last_Name: (?<lastName>\w+)/g;
 for (const match of personList.matchAll(regexpNames)) {
-  console.log(`Hello ${match.groups.firstname} ${match.groups.lastname}`);
+  console.log(`Hello ${match.groups.firstName} ${match.groups.lastName}`);
 }
 ```
 

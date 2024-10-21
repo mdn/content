@@ -463,7 +463,7 @@ const o = { a: 1 };
 // Object.prototype has null as its [[Prototype]].
 // o ---> Object.prototype ---> null
 
-const b = ["yo", "whadup", "?"];
+const b = ["yo", "sup", "?"];
 // Arrays inherit from Array.prototype
 // (which has methods indexOf, forEach, etc.)
 // The prototype chain looks like:
