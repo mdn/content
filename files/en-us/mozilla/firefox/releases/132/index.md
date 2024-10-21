@@ -46,8 +46,7 @@ This article provides information about the changes in Firefox 132 that affect d
 
 ### Privacy
 
-- All third-party cookies are now blocked in the [Strict Enhanced Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop#w_strict-enhanced-tracking-protection) mode.
-  However, web developers may continue to use third-party cookies with separate cookie jars per site (partitioned cookies) via [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies). ([Firefox bug 1918037](https://bugzil.la/1918037)).
+- All third-party cookies are now blocked in the [Strict Enhanced Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop#w_strict-enhanced-tracking-protection) mode. ([Firefox bug 1918037](https://bugzil.la/1918037)).
 
 ### APIs
 
