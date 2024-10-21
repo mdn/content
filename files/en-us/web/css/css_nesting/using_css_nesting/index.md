@@ -386,6 +386,51 @@ In the following CSS, we are creating the styles for `.card` and `.card h2`. The
 
 {{EmbedLiveSample('Appending_nesting_selector','100%','250')}}
 
+## Nested declarations rule
+
+In order to retain the order that the CSS is written by the author an update has been made to the [**CSS Object Model (CSSOM)**](/en-US/docs/Web/API/CSS_Object_Model). Which now means that if there is any form of nesting followed by other rules they are parsed in the correct order.
+
+### Prior to nested declaration rule
+
+The following CSS:
+
+```css
+.foo {
+  background-color: silver;
+  @media (screen) {
+    color: tomato;
+  }
+  color: black;
+}
+```
+
+Would be parsed:
+
+```css
+.foo {
+  background-color: silver;
+  color: black;
+  @media (screen) {
+    color: tomato;
+  }
+}
+```
+
+With the nested declaration rule the rules can nested and are all grouped together to retain the order. The following block shows how the CSSOM parses the CSS.
+
+```txt
+↳ CSSStyleRule
+  .style
+    - background-color: silver
+  ↳ CSSMediaRule
+    ↳ CSSNestedDeclarations
+      .style (CSSStyleDeclaration, 1) =
+      - color: tomato
+  ↳ CSSNestedDeclarations
+    .style (CSSStyleDeclaration, 1) =
+      - color: black
+```
+
 ## Concatenation (is not possible)
 
 In CSS preprocessors such as [Sass](https://sass-lang.com/), it is possible to use nesting to join strings to create new classes. This is common in CSS methodologies such as [BEM](https://getbem.com/naming/).
@@ -442,3 +487,4 @@ In the following example, there is an invalid selector (`%` is not a valid chara
 - [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector)
 - [Nesting `@` at-rules](/en-US/docs/Web/CSS/CSS_nesting/Nesting_at-rules)
 - [Nesting and specificity](/en-US/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)
+- [The Nested Declarations Rule](https://drafts.csswg.org/css-nesting-1/#nested-declarations-rule)
