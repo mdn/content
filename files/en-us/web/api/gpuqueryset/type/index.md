@@ -22,6 +22,9 @@ An enumerated value. Possible values are:
 - `"timestamp"`
   - : The `GPUQuerySet` manages timestamp queries.
 
+> [!NOTE]
+> The `timestamp-query` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) needs to be enabled to use timestamp queries.
+
 ## Examples
 
 See the main [`GPUQuerySet`](/en-US/docs/Web/API/GPUQuerySet#examples) page for an example.
