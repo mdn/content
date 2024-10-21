@@ -30,9 +30,9 @@ req.signal.addEventListener("abort", () => {
 
 // In case of abort, log the AbortSignal reason, if any
 fetch(req).catch(() => {
-  if (signal.aborted) {
-    if (signal.reason) {
-      console.log(`Request aborted with reason: ${signal.reason}`);
+  if (req.signal.aborted) {
+    if (req.signal.reason) {
+      console.log(`Request aborted with reason: ${req.signal.reason}`);
     } else {
       console.log("Request aborted but no reason was given.");
     }

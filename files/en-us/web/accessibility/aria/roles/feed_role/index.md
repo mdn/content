@@ -27,7 +27,7 @@ Unlike the document structure elements that represent static HTML elements, the 
 
 If the number of articles is known, set [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize) on the articles themselves. However, if the total number is extremely large, indefinite, or changes often, set `aria-setsize="-1"` to indicate that the size of the feed is not known.
 
-Another feature of the feed pattern is skim reading: Articles within a feed can contain both an accessible name with the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) and a description with an `aria-describedby,` suggesting to screen readers which elements to speak after the label when navigating by article. By identifying the elements inside an article that provide the title and the primary content, assistive technologies can provide functions that enable users to jump from article to article and efficiently discern which articles they want to read.
+Another feature of the feed pattern is skim reading: Articles within a feed can contain both an accessible name with the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) and a description with an `aria-describedby`, suggesting to screen readers which elements to speak after the label when navigating by article. By identifying the elements inside an article that provide the title and the primary content, assistive technologies can provide functions that enable users to jump from article to article and efficiently discern which articles they want to read.
 
 The feed pattern enables reliable assistive technology reading mode interaction by establishing the following interoperability agreement between the web page and assistive technologies:
 

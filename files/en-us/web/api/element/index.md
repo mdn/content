@@ -307,10 +307,6 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired before WebXR select events ({{domxref("XRSession/select_event", "select")}}, {{domxref("XRSession/selectstart_event", "selectstart")}}, {{domxref("XRSession/selectend_event", "selectend")}}) are dispatched.
 - {{domxref("Element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}}
   - : Fires on any element with {{cssxref("content-visibility", "content-visibility: auto")}} set on it when it starts or stops being [relevant to the user](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#relevant_to_the_user) and [skipping its contents](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#skips_its_contents).
-- {{domxref("Element/scroll_event", "scroll")}}
-  - : Fired when the document view or an element has been scrolled.
-- {{domxref("Element/scrollend_event", "scrollend")}}
-  - : Fires when the document view has completed scrolling.
 - {{domxref("Element/securitypolicyviolation_event","securitypolicyviolation")}}
   - : Fired when a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) is violated.
 - {{domxref("Element/wheel_event","wheel")}}
@@ -405,7 +401,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{domxref("Element/MozMousePixelScroll_event", "MozMousePixelScroll")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Fired when a mouse wheel or similar device is operated.
 - {{domxref("Element/webkitmouseforcechanged_event", "webkitmouseforcechanged")}} {{Non-standard_Inline}}
-  - : Fired each time the amount of pressure changes on the trackpadtouchscreen.
+  - : Fired each time the amount of pressure changes on the trackpad touch screen.
 - {{domxref("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}} {{Non-standard_Inline}}
   - : Fired after the mousedown event as soon as sufficient pressure has been applied to qualify as a "force click".
 - {{domxref("Element/webkitmouseforcewillbegin_event", "webkitmouseforcewillbegin")}} {{Non-standard_Inline}}
@@ -437,6 +433,17 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when a pointer changes any properties that don't fire {{domxref("Element/pointerdown_event", "pointerdown")}} or {{domxref("Element/pointerup_event", "pointerup")}} events.
 - {{domxref("Element/pointerup_event", "pointerup")}}
   - : Fired when a pointer is no longer active.
+
+### Scroll events
+
+- {{domxref("Element/scroll_event", "scroll")}}
+  - : Fired when the document view or an element has been scrolled.
+- {{domxref("Element/scrollend_event", "scrollend")}}
+  - : Fires when the document view has completed scrolling.
+- {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} {{experimental_inline}}
+  - : Fired on the scroll container at the end of a scrolling operation when a new scroll snap target has been selected.
+- {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} {{experimental_inline}}
+  - : Fired on the scroll container when the browser determines a new scroll snap target is pending, i.e. it will be selected when the current scroll gesture ends.
 
 ### Touch events
 

@@ -131,7 +131,7 @@ Starting with geckodriver 0.26.0 additional capabilities exist if Firefox or an 
 #### `androidPackage` (string, required)
 
 The package name of Firefox, e.g. `org.mozilla.firefox`,
-`org.mozilla.firefox_beta,` or `org.mozilla.fennec` depending on the release
+`org.mozilla.firefox_beta`, or `org.mozilla.fennec` depending on the release
 channel, or the package name of the application embedding GeckoView, e.g. `org.mozilla.geckoview_example`.
 
 #### `androidActivity` (string, optional)

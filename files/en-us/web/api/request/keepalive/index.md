@@ -26,7 +26,7 @@ const options = {
 };
 
 const myRequest = new Request("flowers.jpg", options);
-let mykeepalive = myRequest.keepalive; // true
+let myKeepAlive = myRequest.keepalive; // true
 ```
 
 ## Specifications
