@@ -7,12 +7,18 @@ browser-compat: http.headers.Cross-Origin-Opener-Policy
 
 {{HTTPSidebar}}
 
-The HTTP **`Cross-Origin-Opener-Policy`** (COOP) {{Glossary("response header")}} allows you to ensure a top-level document does not share a {{glossary("Browsing context","browsing context group")}} with cross-origin documents.
+The HTTP **`Cross-Origin-Opener-Policy`** (COOP) {{glossary("response header")}} allows a website to control whether a new top-level document, opened in a popup or by navigating to a new page, is opened in the same {{glossary("Browsing context","browsing context group")}} or in a new browsing context group.
 
-COOP will process-isolate your document and potential attackers can't access your global object if they were to open it in a popup, preventing a set of cross-origin attacks dubbed [XS-Leaks](https://github.com/xsleaks/xsleaks).
+When opened in a new browsing context group, any references between the new document and its opener are removed, and the new document may be process-isolated from its opener.
+This ensures that potential attackers can't open your documents in a popup with {{domxref("Window.open()")}} and then use the returned value to access its global object, and thereby prevents a set of cross-origin attacks dubbed [XS-Leaks](https://xsleaks.dev/).
 
-If a cross-origin document with COOP is opened in a new window, the opening document will not have a reference to it, and the [`window.opener`](/en-US/docs/Web/API/Window/opener) property of the new window will be `null`.
-This allows you to have more control over references to a window than [`rel=noopener`](/en-US/docs/Web/HTML/Attributes/rel/noopener), which only affects outgoing navigations.
+It also means that any object opened by your document in a new browser context group can't access your code using [`window.opener`](/en-US/docs/Web/API/Window/opener).
+This allows you to have more control over references to a window than [`rel=noopener`](/en-US/docs/Web/HTML/Attributes/rel/noopener), which affects outgoing navigations but not popups.
+
+The opening behaviour is based on the policies of both the new document and its opener, and whether the new document is opened following a navigation or is launched as a popup.
+
+Generally you should set your policies such that only same-origin and trusted cross-origin resources that need to be able to script each other should be allowed to be opened in the same browser context group.
+Other resources should be cross-origin isolated in their own group.
 
 <table class="properties">
   <tbody>
