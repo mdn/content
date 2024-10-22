@@ -239,7 +239,7 @@ Note that:
 
 - We have a separate hash for every script in the document.
 - For the external script "main.js", we also include the `integrity` attribute, and give it the same value.
-- Unlike the example using nonces, both the CSP and the content can be static, because the hashes stay the same.
+- Unlike the example using nonces, both the CSP and the content can be static, because the hashes stay the same. This makes hash-based policies more suitable for static pages or websites that rely on client-side rendering.
 
 #### Scheme-based policies
 
