@@ -11,8 +11,8 @@ A **boolean attribute** in {{Glossary("HTML")}} is an {{glossary("attribute")}} 
 If the attribute is present, it can have one of the following forms:
 
 - the attribute name alone, e.g., `attribute`, meaning it has an implicit empty string value
-- the attribute has a value of the empty string, e.g., `attribute=""`
-- the attribute has a value of attribute's name itself, with no leading or trailing whitespace, e.g., `attribute="attribute"`
+- the attribute with a value of the empty string, e.g., `attribute=""`
+- the attribute with a value of the attribute's name itself, with no leading or trailing whitespace, e.g., `attribute="attribute"`
 
 > [!NOTE]
 > The strings "true" and "false" are invalid values. To set the attribute to `false`, the attribute should be omitted altogether. Though modern browsers treat _any_ string value as `true`, you should not rely on that behavior.
