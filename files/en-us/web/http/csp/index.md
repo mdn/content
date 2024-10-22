@@ -330,7 +330,7 @@ Like inline JavaScript, if a CSP contains either a `default-src` or a `script-sr
   setTimeout("console.log('hello from setTimeout')", 1);
   ```
 
-The `unsafe-eval` keyword can be used to override this behavior, and as with `unsafe-inline`, and for the same reasons: **developers should avoid `unsafe-eval`**.
+The `unsafe-eval` keyword can be used to override this behavior, and as with `unsafe-inline`, and for the same reasons: **developers should avoid `unsafe-eval`**. Sometimes it can be difficult to remove usages of `eval()`: in these situations, the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) can make it safer, by ensuring that the input meets a defined policy.
 
 Unlike `unsafe-inline`, the `unsafe-eval` keyword does still work in a directive that contains nonce or hash expressions.
 
