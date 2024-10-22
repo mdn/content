@@ -308,7 +308,7 @@ Inline `<script>` elements are allowed if they are protected by a nonce or a has
 
 If a directive contains nonce or hash expressions, then the `unsafe-inline` keyword is ignored by browsers.
 
-### `eval()` and similar APIs
+#### `eval()` and similar APIs
 
 Like inline JavaScript, if a CSP contains either a `default-src` or a `script-src` directive, then `eval()` and similar APIs will not be allowed to execute. This includes, among other APIs:
 
