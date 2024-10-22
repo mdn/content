@@ -20,7 +20,7 @@ A {{domxref("NavigationActivation")}} object.
 
 ```js
 if (navigation.activation) {
-  console.log(navigation.activation.entry.url)
+  console.log(navigation.activation.entry.url);
 }
 ```
 
