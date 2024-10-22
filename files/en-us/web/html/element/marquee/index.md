@@ -11,7 +11,7 @@ browser-compat: html.elements.marquee
 
 The **`<marquee>`** [HTML](/en-US/docs/Web/HTML) element is used to insert a scrolling area of text. You can control what happens when the text reaches the edges of its content area using its attributes.
 
-The HTML `<marquee>` element is depreciated and strongly discouraged from being used. If you must create the effect of scrolling text or continuous elements, consider using [CSS animations](/en-US/docs/Web/CSS/CSS_animations) to [transform](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) content instead and include the [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) CSS {{cssxref("@media")}} query to stop the animation based on user preference, improving user experience and accessibility.
+The HTML `<marquee>` element is deprecated and its use is strongly discouraged. If you must create the effect of scrolling text or continuous elements, consider using [CSS animations](/en-US/docs/Web/CSS/CSS_animations) to [transform](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) content instead and include the [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) CSS {{cssxref("@media")}} query to stop the animation based on user preference, improving user experience and accessibility.
 
 ## Attributes
 
