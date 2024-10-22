@@ -10,7 +10,7 @@ A **boolean attribute** in {{Glossary("HTML")}} is an {{glossary("attribute")}} 
 
 If the attribute is present, it can have one of the following forms:
 
-- the attribute name alone, e.g., `attribute`, meaning it has an implicit empty string value
+- the attribute name alone; e.g., `attribute`, meaning its implicit value is the empty string
 - the attribute with a value of the empty string, e.g., `attribute=""`
 - the attribute with a value of the attribute's name itself, with no leading or trailing whitespace, e.g., `attribute="attribute"`
 
