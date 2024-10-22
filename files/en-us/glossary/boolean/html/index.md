@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-A **boolean attribute** in {{Glossary("HTML")}} is an {{glossary("attribute")}} that represents `true` or `false` values. If an HTML tag contains a boolean attribute --- no matter the value of that attribute --- the attribute is set to `true` on that element. If an HTML tag does not contain the attribute, the attribute is set to `false`.
+A **boolean attribute** in {{Glossary("HTML")}} is an {{glossary("attribute")}} that represents `true` or `false` values. If an HTML tag contains a boolean attribute — no matter the value of that attribute — the attribute is set to `true` on that element. If an HTML tag does not contain the attribute, the attribute is set to `false`.
 
 If the attribute is present, it can have one of the following forms:
 
