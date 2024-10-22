@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Request.json
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`json()`** method of the {{domxref("Request")}} interface
 reads the request body and returns it as a promise that resolves with the result of parsing the body text as {{JSxRef("JSON")}}.

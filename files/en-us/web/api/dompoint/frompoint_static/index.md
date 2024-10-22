@@ -6,7 +6,7 @@ page-type: web-api-static-method
 browser-compat: api.DOMPoint.fromPoint_static
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 The **`fromPoint()`** static method of the {{domxref("DOMPoint")}} interface creates and returns a new mutable `DOMPoint` object given a source point.
 

@@ -131,9 +131,9 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
 
 - `keepalive` {{optional_inline}}
 
-  - : A boolean. If `true`, the browser will not abort the request if the page that made it is unloaded before the request is complete. This enables a Fetch request to function as an alternative to {{domxref("Navigator.sendBeacon()")}} when sending analytics at the end of a session.
+  - : A boolean. When set to `true`, the browser will not abort the associated request if the page that initiated it is unloaded before the request is complete. This enables a {{domxref('Window.fetch','fetch()')}} request to function as an alternative to {{domxref("Navigator.sendBeacon()")}} when sending analytics at the end of a session, which has some advantages (you can use HTTP methods other than [`POST`](/en-US/docs/Web/HTTP/Methods/POST), customize request properties, and access the server response via the fetch {{jsxref("Promise")}} fulfillment). It is also available in [service workers](/en-US/docs/Web/API/Service_Worker_API).
 
-    The body size for keepalive requests is limited to 64 kibibytes.
+    The body size for `keepalive` requests is limited to 64 kibibytes.
 
     Defaults to `false`.
 
@@ -155,8 +155,6 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
       - : The request must be a [simple request](/en-US/docs/Web/HTTP/CORS#simple_requests), which restricts the headers that may be set to {{glossary("CORS-safelisted request header", "CORS-safelisted request headers")}}, and restricts methods to `GET`, `HEAD`, and `POST`.
     - `navigate`
       - : Used only by HTML navigation. A `navigate` request is created only while navigating between documents.
-    - `websocket`
-      - : Used only when establishing a [WebSocket](/en-US/docs/Web/API/WebSockets_API) connection.
 
     See [Making cross-origin requests](/en-US/docs/Web/API/Fetch_API/Using_Fetch#making_cross-origin_requests) for more details.
 
@@ -171,7 +169,8 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
     - `low`
       - : A low priority fetch request relative to other requests of the same type.
     - `auto`
-      - : Automatically determine the priority of the fetch request relative to other requests of the same type.
+      - : No user preference for the fetch priority.
+        It is used if no value is set or if an invalid value is set.
 
     Defaults to `auto`.
 

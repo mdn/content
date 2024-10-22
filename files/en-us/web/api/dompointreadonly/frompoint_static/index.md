@@ -6,7 +6,7 @@ page-type: web-api-static-method
 browser-compat: api.DOMPointReadOnly.fromPoint_static
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 The static **{{domxref("DOMPointReadOnly")}}**
 method `fromPoint()` creates and returns a new

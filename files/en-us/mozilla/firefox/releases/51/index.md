@@ -112,7 +112,7 @@ Firefox 51 was released on January 24, 2017. This article lists key changes that
 
 - Added FLAC support ([FLAC codec](https://xiph.org/flac/index.html)) in both FLAC and Ogg containers ([Firefox bug 1195723](https://bugzil.la/1195723)). Supported FLAC MIME types are: `audio/flac` and `audio/x-flac`. For FLAC in Ogg, supported MIME types are: `audio/ogg; codecs=flac`, and `video/ogg; codecs=flac`.
 - Added support for FLAC in MP4 (both with and without MSE) ([Firefox bug 1303888](https://bugzil.la/1303888)).
-- Throttling in background tabs of timers created by {{domxref("setInterval()")}} and {{domxref("setTimeout()")}} was changed in Firefox 50 to no longer occur if a [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) {{domxref("AudioContext")}} is actively playing sound. However, this didn't resolve all scenarios in which timing-sensitive audio playback (such as music players generating individual notes using timers) could fail to work properly. For that reason, Firefox 51 no longer throttles background tabs which have an {{domxref("AudioContext")}}, even if it's not currently playing sound.
+- Throttling in background tabs of timers created by {{domxref("Window.setInterval()")}}, {{domxref("WorkerGlobalScope.setInterval()")}}, {{domxref("Window.setTimeout", "setTimeout()")}} and {{domxref("WorkerGlobalScope.setTimeout", "setTimeout()")}} was changed in Firefox 50 to no longer occur if a [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) {{domxref("AudioContext")}} is actively playing sound. However, this didn't resolve all scenarios in which timing-sensitive audio playback (such as music players generating individual notes using timers) could fail to work properly. For that reason, Firefox 51 no longer throttles background tabs which have an {{domxref("AudioContext")}}, even if it's not currently playing sound.
 
 ### DOM
 
@@ -127,7 +127,7 @@ Firefox 51 was released on January 24, 2017. This article lists key changes that
 ### Events
 
 - Firefox now supports the {{domxref("Element/animationstart_event", "onanimationstart")}}, {{domxref("Element/animationiteration_event", "onanimationiteration")}}, and {{domxref("Element/animationend_event", "onanimationend")}} event handlers, in addition to supporting the corresponding events using {{domxref("EventTarget.addEventListener", "addEventListener()")}} ([Firefox bug 911987](https://bugzil.la/911987)).
-- Firefox now supports the {{domxref("Element.transitionend_event", "ontransitionend")}} event handler ([Firefox bug 911987](https://bugzil.la/911987)).
+- Firefox now supports the {{domxref("Element/transitionend_event", "ontransitionend")}} event handler ([Firefox bug 911987](https://bugzil.la/911987)).
 
 ### Security
 

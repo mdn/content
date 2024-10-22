@@ -83,7 +83,7 @@ function log(message) {
   logger.textContent = `${logger.textContent}\n${message}`;
 }
 
-function fullscreenchanged(event) {
+function fullscreenchangeHandler(event) {
   // document.fullscreenElement will point to the element that
   // is in fullscreen mode if there is one. If there isn't one,
   // the value of the property is null.
@@ -94,7 +94,7 @@ function fullscreenchanged(event) {
   }
 }
 
-document.addEventListener("fullscreenchange", fullscreenchanged);
+document.addEventListener("fullscreenchange", fullscreenchangeHandler);
 
 // When the toggle button is clicked, enter/exit fullscreen
 document.getElementById("toggle-fullscreen").addEventListener("click", () => {

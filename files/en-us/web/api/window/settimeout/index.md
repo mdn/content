@@ -1,15 +1,14 @@
 ---
-title: setTimeout() global function
+title: "Window: setTimeout() method"
 short-title: setTimeout()
-slug: Web/API/setTimeout
-page-type: web-api-global-function
+slug: Web/API/Window/setTimeout
+page-type: web-api-instance-method
 browser-compat: api.setTimeout
 ---
 
-{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
+{{APIRef("HTML DOM")}}
 
-The global **`setTimeout()`** method sets a timer which executes a function or specified
-piece of code once the timer expires.
+The **`setTimeout()`** method of the {{domxref("Window")}} interface sets a timer which executes a function or specified piece of code once the timer expires.
 
 ## Syntax
 
@@ -45,27 +44,22 @@ setTimeout(functionRef, delay, param1, param2, /* …, */ paramN)
 
 - `param1`, …, `paramN` {{optional_inline}}
 
-  - : Additional arguments which are passed through to the function specified by
-    `functionRef`.
+  - : Additional arguments which are passed through to the function specified by `functionRef`.
 
 ### Return value
 
 The returned `timeoutID` is a positive integer value which
 identifies the timer created by the call to `setTimeout()`. This value can be
-passed to {{domxref("clearTimeout","clearTimeout()")}} to
+passed to {{domxref("Window.clearTimeout","clearTimeout()")}} to
 cancel the timeout.
 
-It is guaranteed that a `timeoutID` value will never be reused by a subsequent call to
-`setTimeout()` or `setInterval()` on the same object (a window or
-a worker) while the timer is still active. However, different objects use separate pools of IDs.
+It is guaranteed that a `timeoutID` value will never be reused by a subsequent call to `setTimeout()` or `setInterval()` on the same window while the timer is still active. However, different objects use separate pools of IDs.
 
 ## Description
 
-Timeouts are cancelled using
-{{domxref("clearTimeout()")}}.
+Timeouts are cancelled using {{domxref("Window.clearTimeout()")}}.
 
-To call a function repeatedly (e.g., every _N_ milliseconds), consider using
-{{domxref("setInterval()")}}.
+To call a function repeatedly (e.g., every _N_ milliseconds), consider using {{domxref("Window.setInterval", "setInterval()")}}.
 
 ### Non-number delay values are silently coerced into numbers
 
@@ -268,7 +262,7 @@ let iterations = 10;
 
 function timeout() {
   // log the time of this call
-  logline(new Date().getMilliseconds());
+  log(new Date().getMilliseconds());
   // if we are not finished, schedule the next call
   if (iterations-- > 0) {
     setTimeout(timeout, 0);
@@ -289,7 +283,7 @@ function run() {
   setTimeout(timeout, 0);
 }
 
-function logline(now) {
+function log(now) {
   // log the last timestamp, the new timestamp, and the difference
   const tableBody = document.getElementById("log");
   const logRow = tableBody.insertRow();
@@ -372,7 +366,7 @@ the resulting execution order may not be as expected.
 
 Firefox will defer firing `setTimeout()` timers
 while the current tab is loading. Firing is deferred until the main thread is deemed
-idle (similar to [window.requestIdleCallback()](/en-US/docs/Web/API/Window/requestIdleCallback)),
+idle (similar to {{domxref("Window.requestIdleCallback()")}}),
 or until the load event is fired.
 
 ### WebExtension background pages and timers
@@ -449,7 +443,7 @@ function clearMessage() {
 
 {{EmbedLiveSample('Setting_and_clearing_timeouts')}}
 
-See also the [`clearTimeout()` example](/en-US/docs/Web/API/clearTimeout#examples).
+See also the {{domxref("Window.clearTimeout", "clearTimeout()")}} example.
 
 ## Specifications
 
@@ -462,8 +456,8 @@ See also the [`clearTimeout()` example](/en-US/docs/Web/API/clearTimeout#example
 ## See also
 
 - [Polyfill of `setTimeout` which allows passing arguments to the callback in `core-js`](https://github.com/zloirock/core-js#settimeout-and-setinterval)
-- {{domxref("clearTimeout")}}
-- {{domxref("setInterval()")}}
-- {{domxref("Window.requestAnimationFrame")}}
+- {{domxref("Window.clearTimeout()")}}
+- {{domxref("WorkerGlobalScope.setTimeout()")}}
+- {{domxref("Window.setInterval()")}}
+- {{domxref("Window.requestAnimationFrame()")}}
 - {{domxref("Window.queueMicrotask()")}}
-- {{domxref("WorkerGlobalScope.queueMicrotask()")}}

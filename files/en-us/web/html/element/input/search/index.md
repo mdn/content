@@ -76,7 +76,7 @@ This does _not_ set a limit on how many characters the user can enter into the f
 
 ### spellcheck
 
-[`spellcheck`](/en-US/docs/Web/HTML/Global_attributes#spellcheck) is a global attribute that is used to indicate whether to enable spell-checking for an element. It can be used on any editable content, but here we consider specifics related to the use of `spellcheck` on {{HTMLElement("input")}} elements. The permitted values for `spellcheck` are:
+[`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck) is a global attribute that is used to indicate whether to enable spell-checking for an element. It can be used on any editable content, but here we consider specifics related to the use of `spellcheck` on {{HTMLElement("input")}} elements. The permitted values for `spellcheck` are:
 
 - `false`
   - : Disable spell-checking for this element.
@@ -135,7 +135,7 @@ This renders like so:
 
 {{EmbedLiveSample("Basic_example", 600, 40)}}
 
-`q` is the most common `name` given to search inputs, although it's not mandatory. When submitted, the data name/value pair sent to the server will be `q=searchterm`.
+`q` is the most common `name` given to search inputs, although it's not mandatory. When submitted, the data name/value pair sent to the server will be `q=searchTerm`.
 
 > [!NOTE]
 > You must remember to set a [`name`](/en-US/docs/Web/HTML/Element/input#name) for your input, otherwise nothing will be submitted.

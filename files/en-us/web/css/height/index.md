@@ -140,11 +140,12 @@ div {
 
 ## See also
 
-- [The box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - {{cssxref("width")}}
 - {{cssxref("box-sizing")}}
 - {{cssxref("min-height")}}, {{cssxref("max-height")}}
-- The mapped logical properties: {{cssxref("block-size")}}, {{cssxref("inline-size")}}
+- {{cssxref("block-size")}}, {{cssxref("inline-size")}}
 - {{cssxref("anchor-size()")}}
 - {{cssxref("clamp", "clamp()")}}
 - {{cssxref("clamp", "minmax()")}}
+- [Introduction to the CSS basic box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module

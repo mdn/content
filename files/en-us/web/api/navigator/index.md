@@ -106,7 +106,7 @@ _Doesn't inherit any properties._
 ### Deprecated properties
 
 - {{domxref("Navigator.activeVRDisplays")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Returns an array containing every {{domxref("VRDisplay")}} object that is currently presenting ({{domxref("VRDisplay.ispresenting")}} is `true`).
+  - : Returns an array containing every {{domxref("VRDisplay")}} object that is currently presenting ({{domxref("VRDisplay.isPresenting")}} is `true`).
 - {{domxref("Navigator.appCodeName")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : Always returns `'Mozilla'`, in any browser.
 - {{domxref("Navigator.appName")}} {{ReadOnlyInline}} {{Deprecated_Inline}}

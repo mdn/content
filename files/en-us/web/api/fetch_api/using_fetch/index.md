@@ -481,7 +481,6 @@ async function* makeTextFileLineIterator(fileURL) {
 
   const newline = /\r?\n/gm;
   let startIndex = 0;
-  let result;
 
   while (true) {
     const result = newline.exec(chunk);

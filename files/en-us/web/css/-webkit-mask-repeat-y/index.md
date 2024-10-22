@@ -60,12 +60,12 @@ The `-webkit-mask-repeat-y` property sets whether and how a mask image is repeat
 ### Using a repeating or non-repeating mask image
 
 ```css
-.exampleone {
+.example-one {
   -webkit-mask-image: url("mask.png");
   -webkit-mask-repeat-y: repeat;
 }
 
-.exampletwo {
+.example-two {
   -webkit-mask-image: url("mask.png");
   -webkit-mask-repeat-y: no-repeat;
 }
@@ -76,7 +76,7 @@ The `-webkit-mask-repeat-y` property sets whether and how a mask image is repeat
 You can specify a different `<repeat-style>` for each mask image, separated by commas:
 
 ```css
-.examplethree {
+.example-three {
   -webkit-mask-image: url("mask1.png"), url("mask2.png");
   -webkit-mask-repeat-y: repeat, space;
 }

@@ -30,7 +30,7 @@ Using a value of `auto` will display the content with no scrollbars if the conte
 
 {{EmbedGHLiveSample("css-examples/flow/overflow/auto.html", '100%', 700)}}
 
-As we have already learned, using any of these values, other than the default of `visible,` will create a new Block Formatting Context.
+As we have already learned, using any of these values, other than the default of `visible`, will create a new Block Formatting Context.
 
 Note: In the [Working Draft of Overflow Level 3](https://www.w3.org/TR/css-overflow-3/), there is an additional value `overflow: clip`. This will act like `overflow: hidden` however it does not allow for programmatic scrolling, the box becomes non-scrollable. In addition it does not create a Block Formatting Context.
 
