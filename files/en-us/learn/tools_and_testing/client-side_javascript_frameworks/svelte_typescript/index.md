@@ -84,7 +84,7 @@ Our TypeScript code will be able to run everywhere JavaScript can run. How is th
 > [!NOTE]
 > If you are curious about how TypeScript transpiles our code to JavaScript, you can have a look at the [TypeScript Playground](https://www.typescriptlang.org/play/?target=1&e=4#example/hello-world).
 
-First-class TypeScript support has been Svelte's most requested feature for quite some time. Thanks to the hard work of the Svelte team, together with many contributors, we have an [official solution](https://svelte.dev/blog/svelte-and-typescript) ready to be put to the test. In this section we'll show you how to set up a Svelte project with TypeScript support to give it a try.
+First-class TypeScript support has been Svelte's most requested feature for quite some time. Thanks to the hard work of the Svelte team, together with many contributors, they have an [official solution](https://svelte.dev/blog/svelte-and-typescript) ready to be put to the test. In this section we'll show you how to set up a Svelte project with TypeScript support to give it a try.
 
 ## Why TypeScript?
 
@@ -171,7 +171,9 @@ Once you have TypeScript configured, you can start using it from a Svelte compon
 > See the [Module resolution for bundlers, TypeScript runtimes, and Node.js loaders](https://www.typescriptlang.org/docs/handbook/modules/theory.html#module-resolution-for-bundlers-typescript-runtimes-and-nodejs-loaders) section of the TypeScript manual for more information.
 
 > [!NOTE]
-> Using TypeScript in component markup sections is [not supported yet](https://github.com/sveltejs/svelte/issues/4701). You'll have to use JavaScript from the markup, and TypeScript in the `<script lang='ts'>` section.
+> Using TypeScript in component markup sections is not supported in Svelte 4, which this guide is based on.
+> So while you can use JavaScript from the markup, you'll have to use TypeScript in the `<script lang='ts'>` section.
+> Typescript in component markup is allowed from Svelte 5.
 
 ## Improved developer experience with TypeScript
 

@@ -18,16 +18,16 @@ The **`grid-column-end`** [CSS](/en-US/docs/Web/CSS) property specifies a grid i
 grid-column-end: auto;
 
 /* <custom-ident> values */
-grid-column-end: somegridarea;
+grid-column-end: some-grid-area;
 
 /* <integer> + <custom-ident> values */
 grid-column-end: 2;
-grid-column-end: somegridarea 4;
+grid-column-end: some-grid-area 4;
 
 /* span + <integer> + <custom-ident> values */
 grid-column-end: span 3;
-grid-column-end: span somegridarea;
-grid-column-end: 5 somegridarea span;
+grid-column-end: span some-grid-area;
+grid-column-end: 5 some-grid-area span;
 
 /* Global values */
 grid-column-end: inherit;

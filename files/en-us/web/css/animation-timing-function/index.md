@@ -112,7 +112,7 @@ animation-timing-function: unset;
 
 ## Description
 
-Easing functions may be specified on individual keyframes in a [@keyframes](/en-US/docs/Web/CSS/@keyframes) rule. If no **`animation-timing-function`** is specified on a keyframe, the corresponding value of **`animation-timing-function`** from the element to which the animation is applied is used for that keyframe.
+Easing functions may be specified on individual keyframes in a {{cssxref("@keyframes")}} rule. If no **`animation-timing-function`** is specified on a keyframe, the corresponding value of **`animation-timing-function`** from the element to which the animation is applied is used for that keyframe.
 
 Within a keyframe, `animation-timing-function` is an at-rule-specific descriptor, not the property of the same name. The timing is not being animated. Rather, a keyframe's easing function is applied on a property-by-property basis from the keyframe on which it is specified until the next keyframe specifying that property, or until the end of the animation if there is no subsequent keyframe specifying that property. As a result, an **`animation-timing-function`** specified on the **`100%`** or **`to`** keyframe will never be used.
 
@@ -262,9 +262,9 @@ The example demonstrates the effects of various bézier curve easing functions.
 <div class="parent">
   <div class="linear">linear</div>
   <div class="ease">ease</div>
-  <div class="easein">ease-in</div>
-  <div class="easeout">ease-out</div>
-  <div class="easeinout">ease-in-out</div>
+  <div class="ease-in">ease-in</div>
+  <div class="ease-out">ease-out</div>
+  <div class="ease-in-out">ease-in-out</div>
   <div class="cb">cubic-bezier(.5, -0.5, 1, 1.5)</div>
 </div>
 <div class="x-axis"><span>50%</span></div>
@@ -342,13 +342,13 @@ btn.addEventListener("click", () => {
 .ease {
   animation-timing-function: ease;
 }
-.easein {
+.ease-in {
   animation-timing-function: ease-in;
 }
-.easeout {
+.ease-out {
   animation-timing-function: ease-out;
 }
-.easeinout {
+.ease-in-out {
   animation-timing-function: ease-in-out;
 }
 .cb {

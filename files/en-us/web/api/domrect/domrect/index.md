@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.DOMRect.DOMRect
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 The **`DOMRect()`** constructor creates a new {{domxref("DOMRect")}} object.
 

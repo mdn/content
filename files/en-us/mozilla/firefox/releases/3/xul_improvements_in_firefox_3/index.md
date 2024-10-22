@@ -32,13 +32,13 @@ Firefox 3 provides a number of new XUL elements, as well as improvements to exis
 ### Improvements to menus
 
 - The `image` attribute is now used consistently for setting images.
-- Menulists fire the `select` event when selecting an item.
+- Menu lists fire the `select` event when selecting an item.
 - The `inputField` and `editable` properties have been added to menulist
 - The `<menu>`, `<menuitem>` and `<menuseparator>` elements now have a readonly `selected` property which retrieves whether the item is selected in a \<menulist>
 - The `<menu>`, `<menuitem>` and `<menuseparator>` elements now have a readonly `control` property which returns the enclosing \<menulist>
 - The `<menu>`, `<menuitem>` and `<menuseparator>` elements now support the `accessKey`, `disabled`, `crop`, `image` and `label` properties which set the corresponding attribute
 - The \<menu> element now has methods to append, insert and remove menuitems. ([Firefox bug 372552](https://bugzil.la/372552))
-- Editable menulists now offer an `editor` property to get the internal `nsIEditor` for its text field.
+- Editable menu lists now offer an `editor` property to get the internal `nsIEditor` for its text field.
 - Menus may now be made translucent on platforms that support it ([Firefox bug 70798](https://bugzil.la/70798)).
 
 ### Improvements to textboxes

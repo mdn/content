@@ -35,7 +35,7 @@ In this article, we'll go through these features. It's worth keeping in mind tha
       </td>
     </tr>
   </tbody>
-<table>
+</table>
 
 ## Classes and constructors
 

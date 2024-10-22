@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.ImageBitmap.close
 ---
 
-{{APIRef("Canvas API")}}
+{{APIRef("Canvas API")}}{{AvailableInWorkers}}
 
 The **`ImageBitmap.close()`**
 method disposes of all graphical resources associated with an `ImageBitmap`.

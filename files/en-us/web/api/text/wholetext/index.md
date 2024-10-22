@@ -14,7 +14,7 @@ The text is concatenated in document order.
 This allows specifying any text node and obtaining all adjacent text as a single string.
 
 > [!NOTE]
-> This is similar to call {{domxref("Node.normalize()")}} followed by reading the text value,
+> This is similar to calling {{domxref("Node.normalize()")}} followed by reading the text value,
 > but without modifying the tree.
 
 ## Value

@@ -45,7 +45,7 @@ In this article we're going to use the following tools and features:
 - The latest built-in JavaScript features (at the time of writing), such as [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import).
 - Useful development tools such as [Prettier](https://prettier.io/) for formatting and [ESLint](https://eslint.org/) for linting.
 - [PostCSS](https://postcss.org/) to provide CSS nesting capabilities.
-- [Vite](https://vitejs.dev/) to build and minify our code, and to write a bunch of configuration file content automatically for us.
+- [Vite](https://vite.dev/) to build and minify our code, and to write a bunch of configuration file content automatically for us.
 - [GitHub](/en-US/docs/Learn/Tools_and_testing/GitHub) to manage our source code control as well as to eventually deploy our site (using GitHub Pages).
 
 You may not be familiar with all the above features and tools or what they are doing, but don't panic — we'll explain each part as we move through this article.
@@ -353,15 +353,15 @@ export default defineConfig({
 });
 ```
 
-Read the [Vite documentation](https://vitejs.dev/guide/) for more information on how to configure Vite. Because our site is deployed on GitHub pages, it will be hosted at `https://your-username.github.io/your-repo-name`, so you should set the `base` option according to your GitHub repository's name—but you can always adjust it later when we get to [deployment](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment).
+Read the [Vite documentation](https://vite.dev/guide/) for more information on how to configure Vite. Because our site is deployed on GitHub pages, it will be hosted at `https://your-username.github.io/your-repo-name`, so you should set the `base` option according to your GitHub repository's name—but you can always adjust it later when we get to [deployment](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment).
 
 ### CSS transformation
 
 Our CSS may also be using syntax not understood by browsers. For example, you may use a syntax that was only implemented in the last few browser versions, which means older browsers will fail on it and display broken style. We can use a tool to transform our CSS into a format that all browsers that we target can understand.
 
-[PostCSS](https://postcss.org/) is a CSS postprocessor tool. Compared to build tools like [Sass](https://sass-lang.com/), PostCSS is intended to write _standard_ CSS (that is, CSS syntax that may get into browsers one day), while Sass is a custom language by itself that compiles to CSS. PostCSS is closer to the web and has a much lower learning curve. [Vite supports PostCSS by default](https://vitejs.dev/guide/features.html#postcss), so you just need to [configure PostCSS](https://github.com/postcss/postcss#usage) if you want to compile any features. Check out the [cssdb](https://preset-env.cssdb.org/features/) for what features are supported.
+[PostCSS](https://postcss.org/) is a CSS postprocessor tool. Compared to build tools like [Sass](https://sass-lang.com/), PostCSS is intended to write _standard_ CSS (that is, CSS syntax that may get into browsers one day), while Sass is a custom language by itself that compiles to CSS. PostCSS is closer to the web and has a much lower learning curve. [Vite supports PostCSS by default](https://vite.dev/guide/features.html#postcss), so you just need to [configure PostCSS](https://github.com/postcss/postcss#usage) if you want to compile any features. Check out the [cssdb](https://preset-env.cssdb.org/features/) for what features are supported.
 
-For our purposes, we are going to demonstrate another CSS transformation: [CSS modules](https://vitejs.dev/guide/features.html#css-modules). It is one of the ways to achieve _CSS modularization_. Remember that CSS selectors are all global, so if you have a class name like `.button`, all elements with the class name `button` will be styled the same way. This often leads to naming conflicts — imagine all your JavaScript variables being defined at the global scope! CSS modules solve this problem by making the class name unique to the pages that use them. To understand how it works, after you've downloaded the source code, you can check how we use the `.module.css` files, and also read the [CSS modules documentation](https://github.com/css-modules/css-modules).
+For our purposes, we are going to demonstrate another CSS transformation: [CSS modules](https://vite.dev/guide/features.html#css-modules). It is one of the ways to achieve _CSS modularization_. Remember that CSS selectors are all global, so if you have a class name like `.button`, all elements with the class name `button` will be styled the same way. This often leads to naming conflicts — imagine all your JavaScript variables being defined at the global scope! CSS modules solve this problem by making the class name unique to the pages that use them. To understand how it works, after you've downloaded the source code, you can check how we use the `.module.css` files, and also read the [CSS modules documentation](https://github.com/css-modules/css-modules).
 
 Although this stage of our toolchain can be quite painful, because we've chosen a tool that purposely tries to reduce configuration and complexity, there's really nothing more we need to do during the development phase. Modules are correctly imported, nested CSS is correctly transformed to "regular CSS", and our development is unimpeded by the build process.
 
