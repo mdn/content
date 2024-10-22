@@ -85,14 +85,14 @@ if (`autocorrect` in HTMLElement.prototype) {
 } else {
   toggleButton.hidden = true;
   searchInput.hidden = true;
-  log("autocomplete not supported");
+  log("autcorrect not supported");
 }
 ```
 
 #### Result
 
 Toggle the button to enable autocorrect, and then enter invalid text into the text box, such as "Carot".
-This should be corrected automatically.
+This should be corrected automatically when the feature is enabled.
 
 {{EmbedLiveSample("Enable and disable autocorrection", "100%", "200")}}
 

@@ -30,7 +30,7 @@ Possible values are:
 
   - : Disable automatic correction of editable text.
 
-The {{htmlelement("input")}} element types that don't support autocorrection always return `off`: [`password`](/en-US/docs/Web/HTML/Element/input/password), [`email`](/en-US/docs/Web/HTML/Element/input/email) and [`url`](/en-US/docs/Web/HTML/Element/input/url).
+The {{htmlelement("input")}} element types that don't support auto-correction always have the `off` state: [`password`](/en-US/docs/Web/HTML/Element/input/password), [`email`](/en-US/docs/Web/HTML/Element/input/email) and [`url`](/en-US/docs/Web/HTML/Element/input/url).
 
 For all other editable elements, setting any value other than `off` is always treated as `on` (including the empty string), and the default value for elements that are not nested inside a `<form>` is `on`.
 
@@ -38,245 +38,84 @@ When nested in a `<form>`, the following elements inherit their their default va
 
 ## Examples
 
-<!-- Below is currently test code -->
+### Enabling and disabling autocorrection
 
-### Autocorrection inheritance
-
-The input element in the following example would not allow autocorrection, since it does not have an autocorrect content attribute and therefore inherits from the form element, which has an attribute of "off". However, the textarea element would allow autocorrection, since it has an autocorrect content attribute with a value of "on".
-
-```html
-<form id="formelem" autocorrect="off">
-  <input id="searchelem" type="search" />
-  <textarea id="textareaelem" autocorrect="on"></textarea>
-</form>
-```
-
-```html
-<form id="formelemnoauto">
-  <input id="searchelemcont" type="search" />
-  <textarea id="textareaelemcont" autocorrect="on"></textarea>
-</form>
-```
-
-```html hidden
-<pre id="log"></pre>
-```
-
-```css hidden
-#log {
-  height: 100px;
-  overflow: scroll;
-  padding: 0.5rem;
-  border: 1px solid black;
-}
-```
-
-```js hidden
-const logElement = document.querySelector("#log");
-function log(text) {
-  logElement.innerText = `${logElement.innerText}${text}\n`;
-  logElement.scrollTop = logElement.scrollHeight;
-}
-```
-
-```js
-const formElement = document.querySelector("#formelem");
-console.log(formElement);
-log(formElement);
-log(`formElement: ${formElement.autocorrect}`);
-
-const searchElement = document.querySelector("#searchelem");
-console.log(searchElement);
-log(searchElement);
-log(`searchElement: ${searchElement.autocorrect}`);
-
-const textAreaElement = document.querySelector("#textareaelem");
-console.log(textAreaElement);
-log(textAreaElement);
-log(`textAreaElement autocrct: ${textAreaElement.autocorrect}`);
-
-// Test if form element have a default autocorrect value
-
-const formElementNo = document.querySelector("#formelemnoauto");
-console.log(formElementNo);
-log(formElementNo);
-log(`formElementNo: ${formElementNo.autocorrect}`);
-
-const searchElementCont = document.querySelector("#searchelemcont");
-console.log(searchElementCont);
-log(searchElementCont);
-log(`searchElementCont: ${searchElementCont.autocorrect}`);
-
-const textAreaElementCont = document.querySelector("#textareaelemcont");
-console.log(textAreaElementCont);
-log(textAreaElementCont);
-log(`textAreaElementCont autocrct: ${textAreaElementCont.autocorrect}`);
-```
-
-{{EmbedLiveSample("Autocorrection inheritance", "100%", "300")}}
-
-### Setting autocorrect on an editing host
-
-```html
-<blockquote id="bq" contenteditable="true">
-  <p id="para" autocorrect="on">Edit this content to add your own quote</p>
-</blockquote>
-
-<cite id="cite" contenteditable="true" autocorrect="on"
-  >-- Write your own name here</cite
->
-```
-
-```html hidden
-<pre id="log"></pre>
-```
-
-```js hidden
-const logElement = document.querySelector("#log");
-function log(text) {
-  logElement.innerText = `${logElement.innerText}${text}\n`;
-  logElement.scrollTop = logElement.scrollHeight;
-}
-```
-
-```css hidden
-#log {
-  height: 100px;
-  overflow: scroll;
-  padding: 0.5rem;
-  border: 1px solid black;
-}
-```
-
-```js
-const bqElement = document.querySelector("#bq");
-console.log(bqElement);
-log(bqElement);
-log(`bqElement: ${bqElement.autocorrect}`);
-const paraElement = document.querySelector("#para");
-log(`paraElement: ${paraElement.autocorrect}`);
-const citeElement = document.querySelector("#cite");
-log(`citeElement: ${citeElement.autocorrect}`);
-console.log(citeElement);
-```
-
-{{EmbedLiveSample("Setting autocorrect on an editing host", "100%", "300")}}
-
-### Setting autocorrect on a password
-
-To tell the user's browser that the password field must have a valid value before the form can be submitted, specify the Boolean [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute.
-
-```html
-<label for="userPassword">Password: </label>
-<input id="userPassword" type="password" autocorrect="on" />
-<input type="submit" value="Submit" />
-```
-
-```html hidden
-<pre id="log"></pre>
-```
-
-```js hidden
-const logElement = document.querySelector("#log");
-function log(text) {
-  logElement.innerText = `${logElement.innerText}${text}\n`;
-  logElement.scrollTop = logElement.scrollHeight;
-}
-```
-
-```js
-const passwordElement = document.querySelector("#userPassword");
-console.log(`passwordElem: ${passwordElement.autocorrect}`);
-log(`passwordElem: ${passwordElement.autocorrect}`);
-/*
-
-*/
-```
-
-```css hidden
-#log {
-  height: 100px;
-  overflow: scroll;
-  padding: 0.5rem;
-  border: 1px solid black;
-}
-```
-
-{{EmbedLiveSample("Setting autocorrect on a password", "100%", "300")}}
-
-### Test
+This example shows how you can enable and disable auto-correction using the `autocorrect` attribute.
 
 #### HTML
 
+The HTML markup defines a {{htmlelement("button")}}, a "name" {{htmlelement("input")}} element of [`type="text"`](/en-US/docs/Web/HTML/Element/input/text), a "bio" {{htmlelement("textarea")}} element, and two {{htmlelement("label")}} elements.
+
+The "username" element has `autocorrect="off"` set because auto-correcting a name would be annoying!
+The bio does not specify a value for `autocorrect`, which means that it is enabled (we could have set any value other than `off`).
+
 ```html
-<p>Form to test different autocorrect settings:</p>
+<button id="reset">Reset</button>
+<label for="username">Name: </label>
+<input id="username" name="username" type="text" autocorrect="off" />
+<label for="bio">Biography: </label>
+<textarea id="bio" name="bio"></textarea>
+```
 
-<form>
-  <div>
-    <label for="default">Default: no autocorrect set</label>
-    <input type="text" id="default" name="default" />
-  </div>
-  <div>
-    <label for="off">autocorrect="off"</label>
-    <input type="text" id="off" name="off" autocorrect="off" />
-  </div>
-  <div>
-    <label for="none">autocorrect="none"</label>
-    <input type="text" id="none" name="none" autocorrect="none" />
-  </div>
-  <div>
-    <label for="on">autocorrect="on"</label>
-    <input type="text" id="on" name="on" autocorrect="on" />
-  </div>
-  <div>
-    <label for="sentences">autocorrect="sentences"</label>
-    <input
-      type="text"
-      id="sentences"
-      name="sentences"
-      autocorrect="sentences" />
-  </div>
-  <div>
-    <label for="words">autocorrect="words"</label>
-    <input type="text" id="words" name="words" autocapitalize="words" />
-  </div>
-  <div>
-    <label for="autocorrect">autocorrect="characters"</label>
-    <input
-      type="text"
-      id="characters"
-      name="characters"
-      autocorrect="characters" />
-  </div>
-  <div>
-    <label for="characters-ta">autocorrect="characters" on textarea</label>
-    <textarea
-      type="text"
-      id="characters-ta"
-      name="characters-ta"
-      autocorrect="characters">
-    </textarea>
-  </div>
-</form>
-
-<hr />
-
-<p contenteditable autocorrect="on">
-  This content is editable and has autocorrect="on" set on it
-</p>
+```html hidden
+<pre id="log"></pre>
 ```
 
 ```css hidden
-div {
-  margin-bottom: 20px;
+#log {
+  height: 75px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+
+button,
+input,
+textarea {
+  display: block;
 }
 ```
 
-#### Result
+```js hidden
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
+```
 
-Test the effect on each input using a virtual keyboard or voice entry (keyboard entry will not work).
+#### JavaScript
 
-{{ EmbedLiveSample("Test", "100%", "300")}}
+The code checks whether the `autocorrect` is supported by checking if it is present on the prototype.
+If it is not present this fact is logged.
+If it is present then the value of the `autocorrect` property for each of the text-entry elements is logged.
+
+A click handler is added for the button, which allows you to reset the entered text and the log.
+
+```js
+const resetButton = document.querySelector("#reset");
+const userNameElement = document.querySelector("#username");
+const bioElement = document.querySelector("#bio");
+
+if (!("autocorrect" in HTMLElement.prototype)) {
+  log("autocorrect not supported");
+} else {
+  log(`userNameElement.autocorrect: ${userNameElement.autocorrect}`);
+  log(`userNameElement.autocorrect: ${bioElement.autocorrect}`);
+}
+
+resetButton.addEventListener("click", (e) => {
+  userNameElement.value = "";
+  bioElement.value = "";
+});
+```
+
+#### Results
+
+Enter invalid text into the name and biography text entry boxes below.
+If auto-correction is enabled on your browser (see the log below) the text in the "Biography" should be auto-corrected, but not in the "Name" box.
+
+{{EmbedLiveSample("Enabling and disabling autocorrection", "100%", "250")}}
 
 ## Specifications
 
