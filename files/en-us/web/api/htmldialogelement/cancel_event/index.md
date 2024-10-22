@@ -1,14 +1,14 @@
 ---
-title: "HTMLElement: cancel event"
+title: "HTMLDialogElement: cancel event"
 short-title: cancel
-slug: Web/API/HTMLElement/cancel_event
+slug: Web/API/HTMLDialogElement/cancel_event
 page-type: web-api-event
-browser-compat: api.HTMLElement.cancel_event
+browser-compat: api.HTMLDialogElement.cancel_event
 ---
 
 {{APIRef}}
 
-The **`cancel`** event is fired by {{HTMLElement("input")}} and {{HTMLElement("dialog")}} elements. The event is fired when the user cancels the currently open dialog by closing it with the <kbd>Esc</kbd> key. It is also fired by the [file input](/en-US/docs/Web/HTML/Element/input/file) when the user cancels the file picker dialog via the <kbd>Esc</kbd> key or the cancel button and when the user re-selects the same files that were previously selected.
+The **`cancel`** event fires on a {{HTMLElement("dialog")}} when the user instructs the browser that they wish to dismiss the current open dialog. The browser fires this event when the user presses the <kbd>Esc</kbd> key.
 
 This event does not bubble.
 
@@ -133,6 +133,5 @@ Open the file selector, then close the selection dialog with the escape key or t
 
 ## See also
 
-- HTML {{HTMLElement("input")}} element
 - HTML {{HTMLElement("dialog")}} element
 - {{domxref("HTMLDialogElement/close_event", "close")}}
