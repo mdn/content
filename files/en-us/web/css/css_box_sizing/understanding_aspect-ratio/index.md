@@ -98,7 +98,7 @@ Replaced elements like {{htmlelement("img")}} and {{htmlelement("video")}} are r
 
 This is a `220px` square image with no CSS applied; it is displayed at its intrinsic or default size.
 
-If replaced content is auto-sized or you provide a size for only one dimension, such as setting a value for width, the browser will automatically resize the other dimension, in this case, the height, while maintaining the media's original aspect ratio.
+If replaced content is auto-sized or you provide a size for only one dimension, such as setting a value for `width`, the browser will automatically resize the other dimension, in this case, the height, while maintaining the media's original aspect ratio.
 
 In this example, only the {{cssxref("width")}} is set on the image, so the user agent preserves its aspect ratio. The same image is repeated three times, displayed at different widths: `55px`, `110px`, and at its natural size of `220px` via the [`width: auto`](/en-US/docs/Web/CSS/width) value.
 
