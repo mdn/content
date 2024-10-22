@@ -14,7 +14,7 @@ The **`activation`** read-only property of the {{domxref("Navigation")}} interfa
 
 ## Value
 
-A {{domxref("NavigationActivation")}} object.
+A {{domxref("NavigationActivation")}} object, or `null` if current document is the initial `about:blank` document.
 
 ## Examples
 
