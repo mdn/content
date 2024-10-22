@@ -514,6 +514,8 @@ Content-Security-Policy-Report-Only: policy
 If both a {{HTTPHeader("Content-Security-Policy-Report-Only")}} header and a {{HTTPHeader("Content-Security-Policy")}} header are present in the same response, both policies are honored.
 The policy specified in `Content-Security-Policy` headers is enforced while the `Content-Security-Policy-Report-Only` policy generates reports but is not enforced.
 
+Note that unlike a normal content security policy, a report-only policy cannot be delivered in a `<meta>` element.
+
 ### Violation reporting
 
 The recommended method for reporting CSP violations is to use the [Reporting API](/en-US/docs/Web/API/Reporting_API), declaring endpoints in {{HTTPHeader("Reporting-Endpoints")}} and specifying one of them as the CSP reporting target using the `Content-Security-Policy` header's {{CSP("report-to")}} directive.
