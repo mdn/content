@@ -8,9 +8,9 @@ browser-compat: api.HTMLDialogElement.cancel_event
 
 {{APIRef}}
 
-The **`cancel`** event fires on a {{HTMLElement("dialog")}} when the user instructs the browser that they wish to dismiss the current open dialog. The browser fires this event when the user presses the <kbd>Esc</kbd> key.
+The **`cancel`** event fires on a {{HTMLElement("dialog")}} element when the user instructs the browser that they wish to dismiss the current open dialog. The browser fires this event when the user presses the <kbd>Esc</kbd> key.
 
-This event does not bubble.
+This event is cancelable but can not bubble.
 
 When a `<dialog>` is dismissed with the <kbd>Esc</kbd> key, both the `cancel` and {{domxref("HTMLDialogElement/close_event", "close")}} events are fired.
 
@@ -82,47 +82,6 @@ closeButton.addEventListener("click", () => {
 
 {{ EmbedLiveSample('Canceling a dialog', '100%', '100px') }}
 
-### Canceling an input element
-
-#### HTML
-
-```html
-<label for="file">Select or file. Or don't.</label>
-<input type="file" id="file" name="file" />
-
-<div id="result"></div>
-```
-
-```css hidden
-div {
-  margin-bottom: 10px;
-}
-```
-
-#### JavaScript
-
-```js
-const elem = document.getElementById("file");
-
-const result = document.getElementById("result");
-
-elem.addEventListener("cancel", () => {
-  result.textContent = "Canceled.";
-});
-
-elem.addEventListener("change", () => {
-  if (elem.files.length == 1) {
-    result.textContent = "File Selected.";
-  }
-});
-```
-
-#### Result
-
-{{ EmbedLiveSample('Canceling an input element', '100%', '100px') }}
-
-Open the file selector, then close the selection dialog with the escape key or the cancel button. Both of these will cause the cancel event to be fired. Also, try selecting a local file on your machine; then reopen the file selection window and reselect the same file. This too causes the cancel event to be fired.
-
 ## Specifications
 
 {{Specifications}}
@@ -134,4 +93,3 @@ Open the file selector, then close the selection dialog with the escape key or t
 ## See also
 
 - HTML {{HTMLElement("dialog")}} element
-- {{domxref("HTMLDialogElement/close_event", "close")}}

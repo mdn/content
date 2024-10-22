@@ -13,7 +13,7 @@ The **`HTMLDialogElement`** interface provides methods to manipulate {{HTMLEleme
 
 ## Instance properties
 
-_Inherits properties from its parent, {{domxref("HTMLElement")}}._
+_Also inherits properties from its parent interface, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLDialogElement.open")}}
   - : A boolean value reflecting the [`open`](/en-US/docs/Web/HTML/Element/dialog#open) HTML attribute, indicating whether the dialog is available for interaction.
@@ -22,7 +22,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 ## Instance methods
 
-_Inherits methods from its parent, {{domxref("HTMLElement")}}._
+_Also inherits methods from its parent interface, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLDialogElement.close()")}}
   - : Closes the dialog. An optional string may be passed as an argument, updating the `returnValue` of the dialog.

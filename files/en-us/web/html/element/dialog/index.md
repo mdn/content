@@ -571,8 +571,8 @@ The code renders as follows:
 ## See also
 
 - {{domxref("HTMLDialogElement")}} interface
-- {{domxref("HTMLDialogElement/close_event", "close")}} event
-- {{domxref("HTMLDialogElement/cancel_event", "cancel")}} event
+- {{domxref("HTMLDialogElement/close_event", "close")}} event of the `HTMLDialogElement` interface
+- {{domxref("HTMLDialogElement/cancel_event", "cancel")}} event of the `HTMLDialogElement` interface
 - {{domxref("HTMLDialogElement/open", "open")}} property of the `HTMLDialogElement` interface
 - [`inert`](/en-US/docs/Web/HTML/Global_attributes/inert) global attribute for HTML elements
 - {{CSSXref("::backdrop")}} CSS pseudo-element
