@@ -40,10 +40,10 @@ The `start_url` manifest member is used to specify the URL that should be opened
 
 The `start_url` allows you to recommend an appropriate common entry point for all users.
 
-Note however that browsers are not required to use the specified URL.
-They might ignore the specified value or provide users with alternative choices.
-The might also allow users to modify the URL at a later time, such as when creating a bookmark for the web app.
-Keep this in mind when designing your app .
+Note, however, that browsers are not required to use the specified URL.
+They may ignore the specified value or provide users with a choice not to use it.
+They may also allow users to modify the URL when creating a bookmark for the web app or at a later time.
+Keep this in mind when designing your app to allow for variations in `start_url`.
 
 ### Best practices
 
