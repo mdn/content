@@ -83,6 +83,12 @@ If sanitization does fail, there are various forms the injected malicious code c
   <img onmouseover="console.log(`You've been hacked!`)" />
   ```
 
+- A `javascript:` URL:
+
+  ```html
+  <iframe src="javascript:console.log(`You've been hacked!`)"></iframe>
+  ```
+
 - A string argument to an unsafe API like [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval):
 
   ```js
@@ -95,6 +101,7 @@ A CSP can provide protection against all of these. With a CSP, you can:
 - disable inline script tags
 - allow only script tags which have the correct nonce or hash set
 - disable inline event handlers
+- disable `javascript:` URLs
 - disable dangerous APIs like `eval()`
 
 In the next section we'll go over the tools CSP provides to do these things.
