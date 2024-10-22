@@ -30,12 +30,12 @@ The property reflects the value of the [`autocorrect`](/en-US/docs/Web/HTML/Glob
 
 ### Enable and disable autocorrection
 
-This example shows how you can enable and disable the autocorrection state programmatically.
+This example shows how you can enable and disable auto-correction.
 
 #### HTML
 
 The HTML markup defines a toggle button and an {{htmlelement("input")}} element of [`type="search"`](/en-US/docs/Web/HTML/Element/input/search).
-Note that if autocorrection is supported, it will be enabled by default.
+Note that if auto-correction is supported, it will be enabled by default.
 
 ```html
 <button id="toggleAutocorrect"></button>
@@ -74,12 +74,12 @@ const toggleButton = document.querySelector("button");
 const searchInput = document.querySelector("#searchinput");
 
 if (`autocorrect` in HTMLElement.prototype) {
+  toggleButton.textContent = searchInput.autocorrect ? "Disable" : "Enable";
   log(`autocorrect: ${searchInput.autocorrect}`);
+
   toggleButton.addEventListener("click", (e) => {
-    toggleButton.textContent = inputTextElement.autocorrect
-      ? "Disable"
-      : "Enable";
-    inputTextElement.autocorrect = !searchInput.autocorrect;
+    toggleButton.textContent = searchInput.autocorrect ? "Disable" : "Enable";
+    searchInput.autocorrect = !searchInput.autocorrect;
     log(`autocorrect: ${searchInput.autocorrect}`);
   });
 } else {
