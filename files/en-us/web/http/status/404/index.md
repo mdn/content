@@ -27,7 +27,7 @@ For more information, see the [Redirections in HTTP](/en-US/docs/Web/HTTP/Redire
 
 ### Page not found
 
-Fetching a non-existant page may look like the following request:
+Fetching a non-existent page may look like the following request:
 
 ```http
 GET /my-deleted-blog-post HTTP/1.1

@@ -61,7 +61,7 @@ async function writeClipImg() {
       ]);
       console.log("Fetched image copied.");
     } else {
-      console.log("image png is not suported");
+      console.log("image png is not supported");
     }
   } catch (err) {
     console.error(err.name, err.message);
