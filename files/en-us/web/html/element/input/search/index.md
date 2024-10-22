@@ -23,7 +23,7 @@ If no validation constraints are in place for the input (see [Validation](#valid
 
 ## Additional attributes
 
-In addition to the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, search field inputs support the following attributes.
+In addition to the [global attributes](/en-US/docs/Web/HTML/Global_attributes) and the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, search field inputs support the following attributes.
 
 ### list
 
@@ -89,19 +89,10 @@ An input field can have spell-checking enabled if it doesn't have the [readonly]
 
 The value returned by reading `spellcheck` may not reflect the actual state of spell-checking within a control, if the {{Glossary("user agent", "user agent's")}} preferences override the setting.
 
-### autocorrect
-
-[`autocorrect`](/en-US/docs/Web/HTML/Global_attributes#autocorrect) is a global attribute that is used to indicate whether to activate automatic spelling correction while the user is editing this field.
-Permitted values are:
-
-- `on`
-  - : Enable automatic correction of typos, as well as processing of text substitutions if any are configured.
-- `off`
-  - : Disable automatic correction and text substitutions.
-
 ## Non-standard attributes
 
-The following non-standard attributes are available to search input fields. As a general rule, you should avoid using them unless it can't be helped.
+The following non-standard attributes are available to search input fields.
+Avoid using them where possible.
 
 ### incremental
 

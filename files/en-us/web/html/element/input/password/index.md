@@ -33,7 +33,7 @@ If the [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) attribute is spec
 
 ## Additional attributes
 
-In addition to the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, password field inputs support the following attributes.
+In addition to the [global attributes](/en-US/docs/Web/HTML/Global_attributes) (except [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect)), and the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, password field inputs support the following attributes.
 
 ### maxlength
 

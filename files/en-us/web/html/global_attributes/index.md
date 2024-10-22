@@ -27,6 +27,7 @@ In addition to the basic HTML global attributes, the following global attributes
   - : Controls whether inputted text is automatically capitalized and, if so, in what manner.
 - [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect)
   - : Controls whether input text is automatically corrected for spelling errors.
+    This can be applied to elements that have editable text except for {{HTMLElement("input")}} elements with the attribute: [`type="password"`](/en-US/docs/Web/HTML/Element/input/password), [`type="email"`](/en-US/docs/Web/HTML/Element/input/email), or [`type="url"`](/en-US/docs/Web/HTML/Element/input/url).
 - [`autofocus`](/en-US/docs/Web/HTML/Global_attributes/autofocus)
   - : Indicates that an element is to be focused on page load, or as soon as the {{HTMLElement("dialog")}} it is part of is displayed. This attribute is a boolean, initially false.
 - [`class`](/en-US/docs/Web/HTML/Global_attributes/class)
