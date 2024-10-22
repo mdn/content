@@ -91,6 +91,7 @@ addevent
 addeventlistener
 addgamepad
 Addis
+addpipe
 addressbar
 addsourcebuffer
 addstream
@@ -239,6 +240,7 @@ APPCOMMAND
 appcontent
 Appelquist
 appinstalled
+Appium
 applicationcache
 appname
 appshell
@@ -1500,6 +1502,7 @@ Exfiltration
 EXIF
 exitpictureinpicture
 Exljbris
+exnref
 Expando
 expedita
 expm
@@ -2008,6 +2011,7 @@ hexdigit
 Hextris
 Heydings
 Heydon
+heydonworks
 HHMM
 Hickson's
 Hidde
@@ -3855,6 +3859,7 @@ protan
 protanomaly
 PROTO
 Proxied
+proxified
 proxify
 proxyfied
 proxyhandler
@@ -4818,6 +4823,7 @@ Tamaran
 tamen
 taml
 tamldec
+tanuki
 Tanx
 targetable
 TARGETDURATION
@@ -5278,6 +5284,7 @@ usermail
 usermessage
 userpic
 userproximity
+userscript
 userscripts
 USERSPACEONUSE
 usertext

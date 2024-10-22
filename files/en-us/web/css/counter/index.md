@@ -17,10 +17,10 @@ The `counter()` function is generally used within [pseudo-element](/en-US/docs/W
 
 ```css
 /* Simple usage */
-counter(countername);
+counter(counter-name);
 
 /* changing the counter display */
-counter(countername, upper-roman)
+counter(counter-name, upper-roman)
 ```
 
 [Counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) have no visible effect by themselves.

@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.ReportingObserver
 ---
 
-{{APIRef("Reporting API")}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}
 
 The `ReportingObserver` interface of the [Reporting API](/en-US/docs/Web/API/Reporting_API) allows you to collect and access reports.
 

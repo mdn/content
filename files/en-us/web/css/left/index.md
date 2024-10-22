@@ -208,6 +208,9 @@ pre {
 
 ## See also
 
-- {{cssxref("inset")}}, the shorthand for all related properties: {{cssxref("top")}}, {{cssxref("bottom")}}, and {{cssxref("right")}}
-- The mapped logical properties: {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}} and the shorthands {{cssxref("inset-block")}} and {{cssxref("inset-inline")}}
+- {{cssxref("top")}}, {{cssxref("bottom")}}, and {{cssxref("right")}}
+- {{cssxref("inset")}} shorthand
+- {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}}
+- {{cssxref("inset-block")}} and {{cssxref("inset-inline")}} shorthands
 - {{cssxref("position")}}
+- [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module

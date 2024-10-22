@@ -82,7 +82,7 @@ The flow is as follows:
 
 5. The IdP responds with the account information requested from the `accounts_endpoint`. This is an array of all accounts associated with the user's IdP cookies for any RPs associated with the IdP.
 
-6. {{optional_inline}} If included in the IdP config file, the browser makes an uncredentialed request to the [`client_metadata_endpoint`](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_client_metadata_endpoint) for the location of the IdP terms of service and privacy policy pages. This is a `GET` request sent with the `clientId` passed into the `get()` call as a parameter, without cookies.
+6. {{optional_inline}} If included in the IdP config file, the browser makes an uncredentialed request to the [`client_metadata_endpoint`](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_client_metadata_endpoint) for the location of the RP terms of service and privacy policy pages. This is a `GET` request sent with the `clientId` passed into the `get()` call as a parameter, without cookies.
 
 7. {{optional_inline}} The IdP responds with the URLs requested from the `client_metadata_endpoint`.
 

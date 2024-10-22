@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.Request.Request
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`Request()`** constructor creates a new
 {{domxref("Request")}} object.
@@ -54,33 +54,13 @@ new Request(input, options)
 
 ### Exceptions
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Type</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>TypeError</code></td>
-      <td>
-        Since <a href="/en-US/docs/Mozilla/Firefox/Releases/43">Firefox 43</a>,
-        <code>Request()</code> will throw a TypeError if the URL has
-        credentials, such as http://user:password@example.com.
-      </td>
-    </tr>
-  </tbody>
-</table>
+- `TypeError`
+  - : The URL has credentials, such as `http://user:password@example.com`, or cannot be parsed.
 
 ## Examples
 
-In our [Fetch Request example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request) (see [Fetch Request live](https://mdn.github.io/dom-examples/fetch/fetch-request/)) we
-create a new `Request` object using the constructor, then fetch it using a
-{{domxref("Window/fetch", "fetch()")}} call. Since we are fetching an image, we run
-{{domxref("Response.blob")}} on the response to give it the proper MIME type so it will be
-handled properly, then create an Object URL of it and display it in an
-{{htmlelement("img")}} element.
+In our [Fetch Request example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request) (see [Fetch Request live](https://mdn.github.io/dom-examples/fetch/fetch-request/)) we create a new `Request` object using the constructor, then fetch it using a {{domxref("Window/fetch", "fetch()")}} call.
+Since we are fetching an image, we run {{domxref("Response.blob")}} on the response to give it the proper MIME type so it will be handled properly, then create an Object URL of it and display it in an {{htmlelement("img")}} element.
 
 ```js
 const myImage = document.querySelector("img");

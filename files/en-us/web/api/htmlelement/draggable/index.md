@@ -45,5 +45,5 @@ if (notDraggableElement.draggable) {
 
 ## See also
 
-- [`draggable`](/en-US/docs/Web/HTML/Global_attributes#draggable) HTML global attribute
+- [`draggable`](/en-US/docs/Web/HTML/Global_attributes/draggable) HTML global attribute
 - [HTML Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) overview

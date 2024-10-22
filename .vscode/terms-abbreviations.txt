@@ -57,6 +57,8 @@ nolint
 okan
 Oklab
 oklch
+onscrollsnapchange
+onscrollsnapchanging
 Paciello
 Pinia
 prophoto
@@ -64,6 +66,8 @@ reprioritize
 rgba
 ripgrep
 rustc
+scrollsnapchange
+scrollsnapchanging
 sctp
 SMIL
 srgb

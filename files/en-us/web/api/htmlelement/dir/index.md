@@ -30,8 +30,8 @@ One of the following:
 ## Examples
 
 ```js
-const parg = document.getElementById("para1");
-parg.dir = "rtl";
+const para = document.getElementById("para1");
+para.dir = "rtl";
 // change the text direction on a paragraph identified as "para1"
 ```
 
