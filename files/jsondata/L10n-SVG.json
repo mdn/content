@@ -12,7 +12,7 @@
     "zh-TW": "動畫累加屬性"
   },
   "animationAttributeTargetAttributes": {
-    "de": "Zielattribute der Animationsattribute",
+    "de": "Attribute für Animationsziele",
     "en-US": "Animation attribute target attributes",
     "es": "Atributos de destino de atributo de animación",
     "fr": "Attributs de cible d'animation",
@@ -96,7 +96,7 @@
     "zh-TW": "任意元素或字元資料"
   },
   "anyNumberOfElementsAnyOrder": {
-    "de": "Beliebige Anzahl der folgenden Elemente in beliebiger Reihenfolge:",
+    "de": "Beliebige Anzahl folgender Elemente, in beliebiger Reihenfolge:",
     "en-US": "Any number of the following elements, in any order:",
     "es": "Cualquier número de los siguientes elementos, en cualquier orden:",
     "fr": "Tout élément de cette liste, quel qu'en soit l'ordre :",
@@ -168,7 +168,7 @@
     "zh-TW": "類型"
   },
   "characterDataElementsInAnyOrder": {
-    "de": "Zeichendaten und beliebige Anzahl der folgenden Elemente, in beliebiger Reihenfolge:",
+    "de": "Zeichendaten und beliebige Anzahl folgender Elemente, in beliebiger Reihenfolge:",
     "en-US": "Character data and any number of the following elements, in any order:",
     "es": "Datos de carácter y cualquier número de los siguientes elementos, en cualquier orden:",
     "fr": "Des données caractères et n'importe quelle quantité des éléments suivants, dans n'importe quel ordre :",
@@ -276,7 +276,7 @@
     "zh-TW": "濾鏡属性"
   },
   "filterPrimitiveElement": {
-    "de": "Primitive Filterelemente",
+    "de": "Primitives Filterelement",
     "en-US": "Filter primitive element",
     "es": "Filtrar elemento primitivo",
     "fr": "Élément de primitive de filtre",
