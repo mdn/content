@@ -6,18 +6,19 @@ page-type: guide
 
 {{HTTPSidebar}}
 
-**HTTP messages** are how data is exchanged between a server and a client in the HTTP protocol.
+**HTTP messages** are the mechanism used to exchange data between a server and a client in the HTTP protocol.
 There are two types of messages: **requests** sent by the client to trigger an action on the server, and **responses**, the answer that the server sends in response to a request.
 
 Developers rarely, if ever, build HTTP messages from scratch.
 Applications such as a browser, a proxy, or a Web server, use software designed to create HTTP messages in a reliable and efficient way.
 How messages are created or transformed is controlled via APIs in browsers, configuration files for proxies or servers, or other interfaces.
 
-In HTTP protocol versions up to HTTP/2, the message is text-based and it's relatively straightforward to read and understand after you've familiarized yourself with the format.
-In HTTP/2, messages are wrapped in binary framing, which makes them slightly harder to read without certain tools, but the underlying semantics of the protocol is the same.
-This means that you can learn the structure and meaning of HTTP messages based on the text-based format of HTTP/1.x messages, and apply this understanding to HTTP/2 and beyond.
+In HTTP protocol versions up to HTTP/2, messages are text-based, and are relatively straightforward to read and understand after you've familiarized yourself with the format.
+In HTTP/2, messages are wrapped in binary framing, which makes them slightly harder to read without certain tools.
+However the underlying semantics of the protocol are the same, so you can learn the structure and meaning of HTTP messages based on the text-based format of HTTP/1.x messages, and apply this understanding to HTTP/2 and beyond.
 
-This guide uses HTTP/1.1 messages for readability, and explains the structure of HTTP messages in HTTP/1.1, highlighting some differences with HTTP/2 in the final section.
+This guide uses HTTP/1.1 messages for readability, and explains the structure of HTTP messages using the HTTP/1.1 format.
+We highlight some differences that you might need for describing HTTP/2 in the final section.
 
 > [!NOTE]
 > You can see HTTP messages in a browser's **Network** tab in the developer tools, or if you print HTTP messages to the console using CLI tools such as [curl](https://curl.se/), for example.
@@ -25,16 +26,16 @@ This guide uses HTTP/1.1 messages for readability, and explains the structure of
 ## Anatomy of an HTTP message
 
 To understand how HTTP messages work, we'll look at HTTP/1.1 messages and examine the structure.
-The following illustration shows how messages in HTTP/1.1 look like and the similarities between requests and responses:
+The following illustration shows what messages in HTTP/1.1 look like:
 
 ![Requests and responses share a common structure in HTTP](https://mdn.github.io/shared-assets/images/diagrams/http/messages/http-message-anatomy.svg)
 
 Both requests and responses share a similar structure:
 
-1. A _start-line_ is a single line that describes the request or the outcome of a request.
-2. An optional set of _HTTP headers_ with metadata that describes a message or how the client and server are communicating.
+1. A _start-line_ is a single line that describes the HTTP version along with the request method or the outcome of the request.
+2. An optional set of _HTTP headers_ containing metadata that describes the message. For example, a request for a resource might include the allowed formats of that resource, while the response might include headers to indicate the actual format returned.
 3. An empty line indicating the metadata of the message is complete.
-4. An optional _body_ containing data associated with the message or the resource associated with a response.
+4. An optional _body_ containing data associated with the message. This might be POST data to send to the server in a request, or some resource returned to the client in a response.
    Whether a message contains a body or not is determined by the start-line and HTTP headers.
 
 The start-line and headers of the HTTP message are collectively known as the _head_ of the requests, and the part afterwards that contains its content is known as the _body_.
@@ -62,8 +63,9 @@ The start-line in HTTP requests (`POST /users HTTP/1.1` in the example above) is
   - : The [HTTP method](/en-US/docs/Web/HTTP/Methods) (also known as an _HTTP verb_) is one of a set of defined words that describes the meaning of the request and the desired outcome.
     For example, `GET` indicates that the client would like to receive a resource in return, and `POST` means that the client is sending data to a server.
 - `<request-target>`
-  - : The request target is usually a {{glossary("URL")}} or a path and is characterized by the context of the request.
-    The format of the request target depends on the HTTP method used and the request context, but is described in more detail in the [Request targets](#request-targets) section below
+  - : The request target is usually an absolute or relative {{glossary("URL")}}, and is characterized by the context of the request.
+    The format of the request target depends on the HTTP method used and the request context.
+    It is described in more detail in the [Request targets](#request-targets) section below.
 - `<protocol>`
   - : The _HTTP version_, which defines the structure of the remaining message, acting as an indicator of the expected version to use for the response.
 
@@ -110,8 +112,9 @@ Content-Type: application/x-www-form-urlencoded
 Content-Length: 50
 ```
 
-In HTTP/1.x, they are a **case-insensitive** string followed by a colon (`:`) and a value whose format depends on the header.
-The whole header, including the value, consists of one single line, which can be quite long for some cases like the {{HTTPHEader("Cookie")}} header.
+In HTTP/1.x, each header is a **case-insensitive** string followed by a colon (`:`) and a value whose format depends on the header.
+The whole header, including the value, consists of one single line.
+This line can be quite long in some cases, such as the {{HTTPHEader("Cookie")}} header.
 
 ![Example of headers in an HTTP request](https://mdn.github.io/shared-assets/images/diagrams/http/messages/request-headers.svg)
 
@@ -178,7 +181,7 @@ Location: http://example.com/users/123
 }
 ```
 
-The start-line (`HTTP/1.1 201 Created` above) is called a "status line" in responses and is made of three parts:
+The start-line (`HTTP/1.1 201 Created` above) is called a "status line" in responses, and has three parts:
 
 ```http
 <protocol> <status-code> <status-text>
@@ -195,7 +198,7 @@ The start-line (`HTTP/1.1 201 Created` above) is called a "status line" in respo
 ### Response headers
 
 Response headers are the metadata sent with a response.
-In HTTP/1.x, they are a **case-insensitive** string followed by a colon (`:`) and a value whose format depends upon which header is used.
+In HTTP/1.x, each header is a **case-insensitive** string followed by a colon (`:`) and a value whose format depends upon which header is used.
 
 ![Example of headers in an HTTP response](https://mdn.github.io/shared-assets/images/diagrams/http/messages/response-headers.svg)
 
@@ -210,7 +213,7 @@ Like request headers, there are many different headers that can appear in respon
 
 A response body is included in most messages when responding to a client.
 In successful requests, the response body contains the data that the client asked for in a `GET` request.
-If there are problems with the client's request, it's common that the response body describes why the request failed, with some hints about whether it's permanent or temporary, for example.
+If there are problems with the client's request, it's common for the response body to describe why the request failed, and hint as to whether it's permanent or temporary.
 
 Response bodies may be:
 
@@ -218,16 +221,16 @@ Response bodies may be:
 - [Multiple-resource bodies](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data), consisting of a body that contains multiple parts, each containing a different piece of information.
   Multipart bodies are typically associated with [HTML Forms](/en-US/docs/Learn/Forms), but may also be sent in response to [Range requests](/en-US/docs/Web/HTTP/Range_requests).
 
-Responses with a status code that answers the request without the need to include message content like {{HTTPStatus("201", "201 Created")}} or {{HTTPStatus("204", "204 No Content")}} do not have a body.
+Responses with a status code that answers the request without the need to include message content, such as {{HTTPStatus("201", "201 Created")}} or {{HTTPStatus("204", "204 No Content")}}, do not have a body.
 
 ## HTTP/2 messages
 
-HTTP/1.x uses text-based messages that are straightforward to read and construct, but there are a few downsides to this.
+HTTP/1.x uses text-based messages that are straightforward to read and construct, but as a result have a few downsides.
 You can compress message bodies using `gzip` or other compression algorithms, but not headers.
 Headers are often similar or identical in a client-server interaction, but they are repeated in successive messages on a connection.
 There are many known methods to compress repetitive text that are very efficient, which leaves a large amount of bandwidth savings unutilized.
 
-HTTP/1.x also has a problem called Head-of-Line blocking (HOL blocking) on the TCP connection, where a client has to wait for a response from the server before sending the next request.
+HTTP/1.x also has a problem called Head-of-Line (HOL) blocking on the TCP connection, where a client has to wait for a response from the server before sending the next request.
 HTTP [pipelining](/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x#http_pipelining) tried to work around this, but poor support and complexity means it's rarely used and difficult to get right.
 Several connections need to be opened to send requests concurrently; and warm (established and busy) connections are more efficient than cold ones due to TCP slow start.
 
@@ -235,7 +238,7 @@ In HTTP/1.1 if you want to make two requests in parallel, you have to open two c
 
 ![Making two HTTP requests to a server in parallel](https://mdn.github.io/shared-assets/images/diagrams/http/messages/http-1-connection.png)
 
-This means that browsers are limited in the number of resources that they can download and render at the same time, which has typically been limited to 6 parallel connections in browsers.
+This means that browsers are limited in the number of resources that they can download and render at the same time, which has typically been limited to 6 parallel connections.
 
 HTTP/2 allows you to use a single TCP connection for multiple requests and responses at the same time.
 This is done by wrapping messages into a binary frame and sending the requests and responses in a numbered **stream** on a connection.
@@ -308,7 +311,7 @@ If you look further down the output of the command, you will see the `:status` p
 ...
 ```
 
-And if you remove the timing and stream ID from this message, it should start looking familiar:
+And if you remove the timing and stream ID from this message, it should be even more familiar:
 
 ```http
 :status: 200
