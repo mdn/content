@@ -118,3 +118,4 @@ This example demonstrates the use of the `<blockquote>` element to quote a passa
 
 - The {{HTMLElement("q")}} element for inline quotations.
 - The {{HTMLElement("cite")}} element for source citations.
+- [The blockquote element](https://heydonworks.com/article/the-blockquote-element/) via heydonworks.com (2024)

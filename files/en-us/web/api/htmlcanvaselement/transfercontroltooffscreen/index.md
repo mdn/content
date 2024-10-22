@@ -40,7 +40,7 @@ The following example shows how to transfer control to an {{domxref("OffscreenCa
 
 ```js
 const offscreen = document.querySelector("canvas").transferControlToOffscreen();
-const worker = new Worker("myworkerurl.js");
+const worker = new Worker("my-worker-url.js");
 worker.postMessage({ canvas: offscreen }, [offscreen]);
 ```
 

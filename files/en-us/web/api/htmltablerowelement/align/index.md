@@ -28,7 +28,7 @@ The possible values are:
 - `justify`
   - : Spread the text across the cell. Use `text-align: justify` instead.
 - `char`
-  - : Never fully supported, align text to a specified character. Use `text-align: <string>,` where the string is a single character, when supported.
+  - : Never fully supported, align text to a specified character. Use `text-align: <string>`, where the string is a single character, when supported.
 
 ## Examples
 

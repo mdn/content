@@ -77,7 +77,7 @@ function getData() {
     })
     .then((buffer) => audioCtx.decodeAudioData(buffer))
     .then((decodedData) => {
-      const source = new AudioBufferSourceNode();
+      const source = new AudioBufferSourceNode(audioCtx);
       source.buffer = decodedData;
       source.connect(audioCtx.destination);
       return source;

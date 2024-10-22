@@ -27,7 +27,7 @@ Starting in Firefox 9, you should call the new `nsIChromeFrameMessageManager.rem
 
 ```js
 browser.messageManager.removeDelayedFrameScript(
-  "chrome://myextension/content/somescript.js",
+  "chrome://my-extension/content/some-script.js",
 );
 ```
 
