@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.SubtleCrypto.sign
 ---
 
-{{APIRef("Web Crypto API")}}{{SecureContext_header}}
+{{APIRef("Web Crypto API")}}{{SecureContext_header}}{{AvailableInWorkers}}
 
 The **`sign()`** method of the {{domxref("SubtleCrypto")}} interface generates a digital {{glossary("signature")}}.
 
@@ -69,7 +69,7 @@ The RSASSA-PKCS1-v1_5 algorithm is specified in [RFC 3447](https://datatracker.i
 
 The RSA-PSS algorithm is specified in [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447).
 
-It's different from RSASSA-PKCS1-v1_5 in that it incorporates a random salt in the signature operation, so the same message signed with the same key will not result in the same signature each time. An extra property, defining the salt length, is passed into the {{domxref("SubtleCrypto.sign()", "sign()")}} and {{domxref("SubtleCrypto.verify()", "verify()")}} functions when they are invoked.
+It's different from RSASSA-PKCS1-v1_5 in that it incorporates a random salt in the signature operation, so the same message signed with the same key will not result in the same signature each time. An extra property, defining the salt length, is passed into the `sign()` and {{domxref("SubtleCrypto.verify()", "verify()")}} functions when they are invoked.
 
 ### ECDSA
 

@@ -79,9 +79,9 @@ A downside of this model is that if a message takes too long to complete, the we
 
 In web browsers, messages are often added when an event occurs and there is an event listener attached to it. If there is no listener, the event is lost. So a click on an element with a click event handler will add a message — likewise with any other event. However, some events happen synchronously without a message — for example, simulated clicks via the {{domxref("HTMLElement/click", "click")}} method.
 
-The first two arguments to the function [`setTimeout`](/en-US/docs/Web/API/setTimeout) are a message to add to the queue and a time value (optional; defaults to `0`). The _time value_ represents the (minimum) delay after which the message will be pushed into the queue. If there is no other message in the queue, and the stack is empty, the message is processed right after the delay. However, if there are messages, the `setTimeout` message will have to wait for other messages to be processed. For this reason, the second argument indicates a _minimum_ time — not a _guaranteed_ time.
+The first two arguments to the function {{domxref("Window.setTimeout", "setTimeout()")}} are a message to add to the queue and a time value (optional; defaults to `0`). The _time value_ represents the (minimum) delay after which the message will be pushed into the queue. If there is no other message in the queue, and the stack is empty, the message is processed right after the delay. However, if there are messages, the `setTimeout()` message will have to wait for other messages to be processed. For this reason, the second argument indicates a _minimum_ time — not a _guaranteed_ time.
 
-Here is an example that demonstrates this concept (`setTimeout` does not run immediately after its timer expires):
+Here is an example that demonstrates this concept (`setTimeout()` does not run immediately after its timer expires):
 
 ```js
 const seconds = new Date().getTime() / 1000;
@@ -101,11 +101,11 @@ while (true) {
 
 ### Zero delays
 
-Zero delay doesn't mean the call back will fire-off after zero milliseconds. Calling [`setTimeout`](/en-US/docs/Web/API/setTimeout) with a delay of `0` (zero) milliseconds doesn't execute the callback function after the given interval.
+Zero delay doesn't mean the call back will fire-off after zero milliseconds. Calling {{domxref("Window.setTimeout", "setTimeout()")}} with a delay of `0` (zero) milliseconds doesn't execute the callback function after the given interval.
 
 The execution depends on the number of waiting tasks in the queue. In the example below, the message `"this is just a message"` will be written to the console before the message in the callback gets processed, because the delay is the _minimum_ time required for the runtime to process the request (not a _guaranteed_ time).
 
-The `setTimeout` needs to wait for all the code for queued messages to complete even though you specified a particular time limit for your `setTimeout`.
+The `setTimeout()` needs to wait for all the code for queued messages to complete even though you specified a particular time limit for your `setTimeout()`.
 
 ```js
 (() => {

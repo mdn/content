@@ -2,7 +2,9 @@
 title: rel=noopener
 slug: Web/HTML/Attributes/rel/noopener
 page-type: html-attribute-value
-browser-compat: html.elements.a.rel.noopener
+browser-compat:
+  - html.elements.a.rel.noopener
+  - html.elements.area.rel.noopener
 ---
 
 {{HTMLSidebar}}

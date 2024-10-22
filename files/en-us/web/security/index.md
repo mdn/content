@@ -102,7 +102,7 @@ Here are some other tips for providing secure logins:
   > [!NOTE]
   > Some phishing sites can be very sophisticated and hard to distinguish from a real website. You should therefore educate your users to not trust random links in emails and SMS messages. If they receive a message along the lines of "Urgent, you need to log in now to resolve an issue", they should go to the site directly in a new tab and try logging in directly rather than clicking the link in the message. Or they could phone or email you to discuss the message they received.
 
-- Protect against brute force attacks on login pages with [rate limiting](https://www.cloudflare.com/en-gb/learning/bots/what-is-rate-limiting/), account lockouts after a certain number of unsuccessful attempts, and [CAPTCHA challenges](https://en.wikipedia.org/wiki/CAPTCHA).
+- Protect against brute force attacks on login pages with {{glossary("rate limit", "rate limiting")}}, account lockouts after a certain number of unsuccessful attempts, and [CAPTCHA challenges](https://en.wikipedia.org/wiki/CAPTCHA).
 - Manage user login sessions with unique [session IDs](https://en.wikipedia.org/wiki/Session_ID), and automatically log out users after periods of inactivity.
 
 ### Don't include sensitive data in URL query strings
@@ -136,7 +136,7 @@ Related topics:
 - [HTTP Access-Control-Allow-Origin](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
   - : The **`Access-Control-Allow-Origin`** response header indicates whether the response can be shared with requesting code from the given {{glossary("origin")}}.
 - [HTTP X-Content-Type-Options](/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options)
-  - : The **`X-Content-Type-Options`** response header is a marker used by the server to indicate that the [MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) advertised in the {{HTTPHeader("Content-Type")}} headers should not be changed and must be followed. This header is a way to opt out of [MIME type sniffing](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#mime_sniffing), or, in other words, to specify that the MIME types are deliberately configured.
+  - : The **`X-Content-Type-Options`** response header is a marker used by the server to indicate that the [MIME types](/en-US/docs/Web/HTTP/MIME_types) advertised in the {{HTTPHeader("Content-Type")}} headers should not be changed and must be followed. This header is a way to opt out of [MIME type sniffing](/en-US/docs/Web/HTTP/MIME_types#mime_sniffing), or, in other words, to specify that the MIME types are deliberately configured.
 
 ### Sanitize form input
 

@@ -66,6 +66,7 @@ Events have three functions:
         - "hidden"
         - "isArticle"
         - "mutedInfo"
+        - "openerTabId"
         - "pinned"
         - "status"
         - "title"
@@ -98,9 +99,11 @@ Lists the changes to the state of the tab that is updated. To learn more about t
 - `hidden` {{optional_inline}}
   - : `boolean`. True if the tab is {{WebExtAPIRef("tabs.hide()", "hidden")}}.
 - `isArticle` {{optional_inline}}
-  - : `boolean`. True if the tab is an article and is therefore eligible for display in {{WebExtAPIRef("tabs.toggleReaderMode()", "Reader Mode")}}.
+  - : `boolean`. True if the tab is an article and is therefore eligible for display in [Reader Mode](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode).
 - `mutedInfo` {{optional_inline}}
   - : {{WebExtAPIRef('tabs.MutedInfo')}}. The tab's new muted state and the reason for the change.
+- `openerTabId` {{optional_inline}}
+  - : `integer`. The ID of the tab that opened this tab, if any. This property is only present if the opener tab exists and is in the same window.
 - `pinned` {{optional_inline}}
   - : `boolean`. The tab's new pinned state.
 - `status` {{optional_inline}}
@@ -221,7 +224,7 @@ browser.tabs.onUpdated.addListener(handleUpdated, filter);
 {{Compat}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#event-onUpdated) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#event-onUpdated) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

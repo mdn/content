@@ -37,7 +37,7 @@ CSP can also be used to provide granular control over:
 ### Steps for implementing CSP
 
 > [!NOTE]
-> Before implementing any actual CSP with the `Content-Security-Policy` header, you are advised to first test it out using the [`Content-Security-Policy-Report-Only`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy-Report-Only) HTTP header. This allows you to see if any violations would have occurred with that policy. This test requires the use of `report-to`/`report-uri`, as explained below.
+> Before implementing any actual CSP with the `Content-Security-Policy` header, you are advised to first test it out using the [`Content-Security-Policy-Report-Only`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy-Report-Only) HTTP header. This allows you to see if any violations would have occurred with that policy. This test requires the use of `report-to` (or the deprecated `report-uri`), as explained below.
 
 1. Begin by trying out a policy of `default-src https:`. This is a great first goal because it disables inline code and requires browsers to use HTTPS when loading resources. It will also allow you to start to pinpoint the resources that are failing to load as a result of the policy. [`default-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src) serves as a fallback for the other CSP fetch directives.
 2. Next, start to make the policy more specific, to allow the items you need, while blocking any unwanted items. You could first widen the policy remit with a reasonably locked-down policy such as `default-src 'none'; form-action 'self'; img-src 'self'; object-src 'none'; script-src 'self'; style-src 'self';`.
@@ -50,8 +50,11 @@ Keep the following points in mind:
 - If you are unable to use the `Content-Security-Policy` header, pages can instead include a [`<meta http-equiv="Content-Security-Policy" content="…">`](/en-US/docs/Web/HTML/Element/meta#http-equiv) element. This should be the first {{htmlelement("meta")}} element that appears inside the document {{htmlelement("head")}}.
 - Care needs to be taken with `data:` URIs because these are unsafe inside `script-src` and `object-src` (or `default-src`).
 - Similarly, the use of `script-src 'self'` can be unsafe for sites with JSONP endpoints. These sites should use a `script-src` that includes the path to their JavaScript source folder(s).
-- Sites should use the [`report-to`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-to) and [`report-uri`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri) [reporting directives](/en-US/docs/Glossary/Reporting_directive). These cause the browser to [`POST`](/en-US/docs/Web/HTTP/Methods/POST) JSON reports about CSP violations to endpoints (specified in the [`Reporting-Endpoints`](/en-US/docs/Web/HTTP/Headers/Reporting-Endpoints) header in the case of `report-to`). This allows CSP violations to be caught and repaired quickly.
-  > **Note:** `report-to` is preferred over the deprecated `report-uri`; however, both are still needed because `report-to` does not yet have full cross-browser support.
+- Sites should use the [`report-to`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-to) and [`report-uri`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri) [reporting directives](/en-US/docs/Glossary/Reporting_directive).
+  These cause the browser to [`POST`](/en-US/docs/Web/HTTP/Methods/POST) JSON reports about CSP violations to endpoints (specified in the {{httpheader("Reporting-Endpoints")}} header in the case of `report-to`). This allows CSP violations to be caught and repaired quickly.
+
+  > [!NOTE] > `report-to` is preferred over the deprecated `report-uri`; however, both are still needed because `report-to` does not yet have full cross-browser support.
+
 - Don't include any unsafe sources inside your CSP. Examples include `unsafe-inline` or `data:` URIs inside `script-src` and overly broad sources or form submission targets.
 - Unless sites need the ability to execute plugins, their execution should be disabled with `object-src 'none'`.
 - If you are embedding SVG sprites defined in external files via the [`<use>`](/en-US/docs/Web/SVG/Element/use) element, for example:
@@ -62,7 +65,7 @@ Keep the following points in mind:
   </svg>
   ```
 
-  your SVG images will be blocked in Firefox if you have a `default-src 'none'` policy set. Firefox does not treat the SVG as an embedded image like other browsers do, therefore `img-src 'self'` will not allow them to be loaded. You need to use `default-src 'self'` if you want your external sprites to load in Firefox (see [bug 1773976](https://bugzilla.mozilla.org/show_bug.cgi?id=1773976) and [this CSP spec issue](https://github.com/w3c/webappsec-csp/issues/199) for more information).
+  your SVG images will be blocked in Firefox if you have a `default-src 'none'` policy set. Firefox does not treat the SVG as an embedded image like other browsers do, therefore `img-src 'self'` will not allow them to be loaded. You need to use `default-src 'self'` if you want your external sprites to load in Firefox (see [bug 1773976](https://bugzil.la/1773976) and [this CSP spec issue](https://github.com/w3c/webappsec-csp/issues/199) for more information).
 
   Alternatively, if the `default-src 'none'` policy is a hard requirement, you can include the SVG sprites inline in the HTML page — see [CSP: default-src](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src#firefox_default-src_none_svg_sprite_blocking_issue) for an example.
 
@@ -117,16 +120,11 @@ Content-Security-Policy: script-src 'strict-dynamic' 'nonce-2726c7f26c'
 Don't implement the policy yet; only report the violations that would have occurred:
 
 ```http-nolint
+Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports"
+
 Content-Security-Policy-Report-Only: default-src https:;
   report-uri /csp-violation-report-endpoint/;
   report-to csp-endpoint;
-
-Report-To: { "group": "csp-endpoint",
-              "max_age": 10886400,
-              "endpoints": [
-                { "url": "https://example.com/csp-reports" }
-              ]
-           }
 ```
 
 Disable resource loading and embedding. APIs should use a policy like this:

@@ -18,25 +18,25 @@ In addition to the standard [JavaScript](/en-US/docs/Web/JavaScript) set of func
 
 Some of the functions (a subset) that are common to all workers and to the main thread (from `WindowOrWorkerGlobalScope`) are:
 
-- {{domxref("WorkerGlobalScope.atob()", "atob()")}}
-- {{domxref("WorkerGlobalScope.btoa()", "btoa()")}}
-- {{domxref("clearInterval()")}}
-- {{domxref("clearTimeout()")}}
-- {{domxref("createImageBitmap()")}}
-- {{domxref("WorkerGlobalScope.dump()", "dump()")}} {{non-standard_inline}}
-- {{domxref("WorkerGlobalScope/fetch", "fetch()")}}
-- {{domxref("queueMicrotask()")}}
-- {{domxref("reportError()")}}
-- {{domxref("setInterval()")}}
-- {{domxref("setTimeout()")}}
-- {{domxref("structuredClone()")}}
-- {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()", "requestAnimationFrame()")}} (dedicated workers only)
-- {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()", "cancelAnimationFrame()")}} (dedicated workers only)
+- {{domxref("WorkerGlobalScope.atob()")}}
+- {{domxref("WorkerGlobalScope.btoa()")}}
+- {{domxref("WorkerGlobalScope.clearInterval()")}}
+- {{domxref("WorkerGlobalScope.clearTimeout()")}}
+- {{domxref("WorkerGlobalScope.createImageBitmap()")}}
+- {{domxref("WorkerGlobalScope.dump()")}} {{non-standard_inline}}
+- {{domxref("WorkerGlobalScope.fetch()")}}
+- {{domxref("WorkerGlobalScope.queueMicrotask()")}}
+- {{domxref("WorkerGlobalScope.reportError()")}}
+- {{domxref("WorkerGlobalScope.setInterval()")}}
+- {{domxref("WorkerGlobalScope.setTimeout()")}}
+- {{domxref("WorkerGlobalScope.structuredClone()")}}
+- {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}} (dedicated workers only)
+- {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()")}} (dedicated workers only)
 
 The following functions are **only** available to workers:
 
-- {{domxref("WorkerGlobalScope.importScripts", "WorkerGlobalScope.importScripts()")}} (all workers)
-- {{domxref("DedicatedWorkerGlobalScope.postMessage")}} (dedicated workers only)
+- {{domxref("WorkerGlobalScope.importScripts()")}} (all workers)
+- {{domxref("DedicatedWorkerGlobalScope.postMessage()")}} (dedicated workers only)
 
 ## Web APIs available in workers
 
@@ -79,6 +79,7 @@ The following Web APIs are available to workers:
 - {{domxref("User-Agent Client Hints API", "", "", "nocode")}}
 - {{domxref("WebCodecs API", "", "", "nocode")}}
 - {{domxref("Web Crypto API", "", "", "nocode")}} (e.g. {{domxref("Crypto")}})
+- {{domxref("WebHID API", "", "", "nocode")}} (dedicated and service workers only)
 - {{domxref("Web Locks API", "", "", "nocode")}}
 - {{domxref("Web Serial API", "", "", "nocode")}}
 - {{domxref("Web Periodic Background Synchronization API", "", "", "nocode")}}

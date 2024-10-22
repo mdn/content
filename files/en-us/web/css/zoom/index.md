@@ -148,7 +148,7 @@ div#c {
 
 ### Creating a zoom control
 
-In this example a `select` field is used to change the zoom level of the .
+In this example a `select` field is used to change the zoom level of the element.
 
 #### HTML
 
@@ -221,7 +221,7 @@ html {
 }
 ```
 
-In this final CSS block we are checking to see if the browser supports `zoom` and if so setting the **not supported** message to `diplay: none;`.
+In this final CSS block we are checking to see if the browser supports `zoom` and if so setting the **not supported** message to `display: none;`.
 
 ```css
 @supports (zoom: 1) {

@@ -4,7 +4,7 @@ slug: Web/HTTP/Headers/RTT
 page-type: http-header
 status:
   - experimental
-browser-compat: http.headers.rtt
+browser-compat: http.headers.RTT
 ---
 
 {{HTTPSidebar}} {{SeeCompatTable}}

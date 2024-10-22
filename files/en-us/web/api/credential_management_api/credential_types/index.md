@@ -25,7 +25,7 @@ In this guide we'll introduce the different credential types and explain at a hi
 > Although we're describing all the credential types together here, the different credential types are defined in several different specifications, which extend the main Credential Management API specification.
 >
 > - [Credential Management API](https://w3c.github.io/webappsec-credential-management/) defines passwords and legacy federated credentials.
-> - [Federated Credential Management API](https://fedidcg.github.io/FedCM/) defines the new federated credentials.
+> - [Federated Credential Management API](https://w3c-fedid.github.io/FedCM/) defines the new federated credentials.
 > - [WebOTP API](https://wicg.github.io/web-otp/) defines OTP credentials.
 > - [Web Authentication API](https://w3c.github.io/webauthn/) defines Web Authentication assertions.
 
@@ -38,7 +38,7 @@ Modern browsers provide users with a password manager, which enables users to st
 
 In the Credential Management API, a password is represented by the {{domxref("PasswordCredential")}} interface. When a user successfully registers for or signs into your site, you can call the {{domxref("PasswordCredential.PasswordCredential()", "PasswordCredential()")}} constructor or {{domxref("CredentialsContainer.create", "navigator.credentials.create()")}} to create a `PasswordCredential` object from the credentials the user entered. You can then pass this into {{domxref("CredentialsContainer.store", "navigator.credentials.store()")}}, and the browser will ask the user if they want to store the password in the password manager.
 
-![Sequence diagram showing creation and storage of a pasword credential.](password-create.svg)
+![Sequence diagram showing creation and storage of a password credential.](password-create.svg)
 
 When a user visits your site, you can call {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} to retrieve a stored password for your site, and use it to log the user in. Depending on the situation, you can log the user in silently or use the returned password to auto-fill a form field.
 

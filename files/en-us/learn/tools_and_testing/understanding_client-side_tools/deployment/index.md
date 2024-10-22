@@ -126,6 +126,9 @@ Now we have three tasks ahead of us:
 
    Change the URL to your own repository, and run it now.
 
+   > [!NOTE]
+   > After you've chosen your repository name, make sure the `base` option in your `vite.config.js` reflects this name, as mentioned in [the previous chapter](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain#javascript_transformation). Otherwise, the JavaScript and CSS assets will not be linked correctly.
+
 6. Now we're ready to push our code to GitHub; run the following command now:
 
    ```bash

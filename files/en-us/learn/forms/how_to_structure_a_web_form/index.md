@@ -378,18 +378,11 @@ Let's put these ideas into practice and build a slightly more involved form — 
    }
 
    label {
-     position: relative;
      display: inline-block;
    }
 
    p label {
      width: 100%;
-   }
-
-   label em {
-     position: absolute;
-     right: 5px;
-     top: 20px;
    }
    ```
 

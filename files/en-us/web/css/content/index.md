@@ -64,9 +64,9 @@ content: unset;
 
 The value can be:
 
-- One of two keywords — `none` or `normal`
+- One of two keywords — `none` or `normal`.
 - `<content-replacement>` when replacing a DOM node. `<content-replacement>` is always an `<image>`.
-- A `<content-list>` when replacing pseudo-elements and margin boxes. A content-list is a list of one or more anonymous inline boxes appearing in the order specified. Each `<content-list>` item is either `contents` or of type [`<string>`](#string), [`<image>`](#image), [`<counter>`](#counter), [`<quote>`](#quote), [`<target>`](#target), or [`<leader()>`](#leader).
+- A `<content-list>` when replacing pseudo-elements and margin boxes. A `<content-list>` is a list of one or more anonymous inline boxes appearing in the order specified. Each `<content-list>` item is of type [`<string>`](#string), [`<image>`](#image), [`<counter>`](#counter), [`<quote>`](#quote), [`<target>`](#target), or [`<leader()>`](#leader).
 - An optional alternative text value of a `<string>` or `<counter>`, preceded by a slash (`/`).
 
 The keywords and data types mentioned above are described in more detail below:
@@ -78,11 +78,7 @@ The keywords and data types mentioned above are described in more detail below:
 
 - `normal`
 
-  - : The default value. Computes to `none` for the {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements. For other pseudo-elements, the content will be the initial (or normal) content expected for that {{cssxref("::marker")}}, {{cssxref("::placeholder")}}, or {{cssxref("::file-selector-button")}}. For regular elements or page margin boxes, this computes to `contents`.
-
-- `contents`
-
-  - : Adds the contents of the element itself to the generated content value.
+  - : The default value. Computes to `none` for the {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements. For other pseudo-elements, the content will be the initial (or normal) content expected for that {{cssxref("::marker")}}, {{cssxref("::placeholder")}}, or {{cssxref("::file-selector-button")}}. For regular elements or page margin boxes, this computes to the element's descendants.
 
 - {{cssxref("&lt;string&gt;")}}
 
@@ -90,7 +86,7 @@ The keywords and data types mentioned above are described in more detail below:
 
 - {{cssxref("&lt;image&gt;")}}
 
-  - : An {{cssxref("&lt;image&gt;")}}, representing an image to display. This can be equal to a {{cssxref("url", "url()")}}, {{cssxref("image/image-set", "image-set()")}}, or {{cssxref("&lt;gradient&gt;")}} data type, or a part of the webpage itself, defined by the {{cssxref("element", "element()")}} function.
+  - : An {{cssxref("&lt;image&gt;")}}, representing an image to display. This can be equal to a {{cssxref("url_value", "&lt;url&gt;")}}, {{cssxref("image/image-set", "image-set()")}}, or {{cssxref("&lt;gradient&gt;")}} data type, or a part of the webpage itself, defined by the {{cssxref("element", "element()")}} function.
 
 - `<counter>`
 
@@ -114,7 +110,7 @@ The keywords and data types mentioned above are described in more detail below:
 
 - `<leader()>`
 
-  - : The `<leader()>` data type inclues a leader function: `leader( <leader-type> )`. This function accepts the keyword values `dotted`, `solid`, or `space` (equal to `leader(".")`, `leader("_")`, and `leader(" ")`, respectively), or a `<string>` as a parameter. When supported and used as a value for `content`, the leader-type provided will be inserted as a repeating pattern, visually connecting content across a horizontal line.
+  - : The `<leader()>` data type includes a leader function: `leader( <leader-type> )`. This function accepts the keyword values `dotted`, `solid`, or `space` (equal to `leader(".")`, `leader("_")`, and `leader(" ")`, respectively), or a `<string>` as a parameter. When supported and used as a value for `content`, the leader-type provided will be inserted as a repeating pattern, visually connecting content across a horizontal line.
 
 - `attr(x)`
 
@@ -343,9 +339,9 @@ If using a screen reader, it should speak the word "MOZILLA" when it reaches the
 
 In browsers that don't support the alternative text syntax the whole declaration containing the alt text is invalid. In this case, the previous `content` value will be used, showing the image and "alt text is not supported" text.
 
-### Element replacement with `url()`
+### Element replacement with URL
 
-This example replaces a regular element! The element's contents are replaced with an SVG using the {{cssxref("url", "url()")}} image function.
+This example replaces a regular element! The element's contents are replaced with an SVG using the {{cssxref("url_value", "&lt;url&gt;")}} type.
 
 Pseudo-elements aren't rendered on replaced elements. As this element is replaced, any matching `::after` or `::before` are not generated or applied. To demonstrate this, we include an `::after` declaration block, attempting to add the `id` as generated content. This pseudo-element will not be generated as the element is replaced.
 
@@ -461,7 +457,7 @@ div {
 - {{Cssxref("quotes")}}
 - {{cssxref("gradient", "&lt;gradient&gt;")}}
 - {{cssxref("image/image-set", "image-set()")}}
-- {{cssxref("url", "url()")}}
+- {{cssxref("url_value", "&lt;url&gt;")}}
 - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
 - [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module
 - [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module

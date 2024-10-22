@@ -7,7 +7,7 @@ status:
 browser-compat: api.HIDDevice
 ---
 
-{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_shared")}}
 
 The **`HIDDevice`** interface of the [WebHID API](/en-US/docs/Web/API/WebHID_API) represents a HID Device. It provides properties for accessing information about the device, methods for opening and closing the connection, and the sending and receiving of reports.
 
@@ -22,7 +22,7 @@ This interface also inherits properties from {{domxref("EventTarget")}}.
 - {{domxref("HIDDevice.vendorId")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the vendorId of the HID device.
 - {{domxref("HIDDevice.productId")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns the productID of the HID device.
+  - : Returns the productId of the HID device.
 - {{domxref("HIDDevice.productName")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a string containing the product name of the HID device.
 - {{domxref("HIDDevice.collections")}} {{ReadOnlyInline}} {{Experimental_Inline}}

@@ -40,4 +40,4 @@ A {{DOMxRef("ShadowRoot")}} object instance, regardless of whether its
 ## See also
 
 - {{DOMxRef("Element.shadowRoot")}}
-- [`chrome.dom.openOrClosedShadowRoot`](https://developer.chrome.com/docs/extensions/reference/dom/#method-openOrClosedShadowRoot)
+- [`chrome.dom.openOrClosedShadowRoot`](https://developer.chrome.com/docs/extensions/reference/api/dom#method-openOrClosedShadowRoot)

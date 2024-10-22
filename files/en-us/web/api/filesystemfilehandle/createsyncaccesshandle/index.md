@@ -92,8 +92,8 @@ The two {{htmlelement("button")}} elements and text {{htmlelement("input")}} fie
 ```html
 <ol>
   <li>
-    <label for="filetext">Enter text to write to the file:</label>
-    <input type="text" id="filetext" name="filetext" />
+    <label for="file-text">Enter text to write to the file:</label>
+    <input type="text" id="file-text" name="file-text" />
   </li>
   <li>
     Write your text to the file: <button class="write">Write text</button>
@@ -115,7 +115,7 @@ The main thread JavaScript inside the HTML file is shown below. We grab referenc
 ```js
 const writeBtn = document.querySelector(".write");
 const emptyBtn = document.querySelector(".empty");
-const fileText = document.querySelector("#filetext");
+const fileText = document.querySelector("#file-text");
 
 const opfsWorker = new Worker("worker.js");
 
@@ -164,7 +164,7 @@ If the message data is something else, we:
 
 - Create a new {{domxref("TextEncoder")}} and {{domxref("TextDecoder")}} to handle encoding and decoding the text content later on.
 - Encode the message data and write the result to the end of the file using {{domxref("FileSystemSyncAccessHandle.write", "write()")}}, then update the file size contained in the `size` variable.
-- Create a {{domxref("DataView")}} to contain the file contents, and read the content into it using {{domxref("FileSystemSyncAccessHandle.read", "read()")}}.
+- Create a {{jsxref("DataView")}} to contain the file contents, and read the content into it using {{domxref("FileSystemSyncAccessHandle.read", "read()")}}.
 - Decode the `DataView` contents and log it to the console.
 
 ```js

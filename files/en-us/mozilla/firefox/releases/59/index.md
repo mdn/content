@@ -57,7 +57,7 @@ _No changes._
 
 #### Service workers
 
-- The service worker [Clients API](/en-US/docs/Web/API/Clients) can now find and communicate with windows in a separate browser process ([Firefox bug 1293277](https://bugzil.la/1293277)) .
+- The service worker [Clients API](/en-US/docs/Web/API/Clients) can now find and communicate with windows in a separate browser process ([Firefox bug 1293277](https://bugzil.la/1293277)).
 - Nested about:blank and about:srcdoc iframes will now inherit their parent's controlling service worker. Fixed in ([Firefox bug 1293277](https://bugzil.la/1293277)) and ([Firefox bug 1426979](https://bugzil.la/1426979)).
 - When a service worker provides a {{domxref("Response")}} to {{domxref("FetchEvent.respondWith()")}}, the {{domxref("Response.url")}} value will now be propagated to the intercepted network request as the final resolved URL. In the past the {{domxref("Request.url","FetchEvent.request.url")}} was used for this instead. This means, for example, if a service worker intercepts a stylesheet or worker script, then the provided `Response.url` will be used to resolve any relative {{cssxref("@import")}} or {{domxref("WorkerGlobalScope.importScripts()","importScripts()")}} subresource loads ([Firefox bug 1222008](https://bugzil.la/1222008)).
 - `FetchEvent.respondWith()` will now trigger a network error if the {{domxref("Request.mode","FetchEvent.request.mode")}} is `"same-origin"` and the provided {{domxref("Response.type")}} is `"cors"`. ([Firefox bug 1222008](https://bugzil.la/1222008))
@@ -123,7 +123,7 @@ The non-standard `version` parameter of the {{htmlelement("script")}} element's 
 
 - The non-standard method `Event.getPreventDefault()` has been removed. You should instead use the {{domxref("Event.defaultPrevented")}} property to determine whether or not {{domxref("Event.preventDefault", "preventDefault()")}} was called on the {{domxref("Event")}}.
 - The proprietary [`Navigator.mozNotification`](/en-US/docs/Archive/API/Navigator/mozNotification) property and `DesktopNotification` interface have been removed, in favor of the standard [Notifications API](/en-US/docs/Web/API/Notifications_API) ([Firefox bug 952453](https://bugzil.la/952453)).
-- The proprietary `window.external.addSearchEngine()` method has been removed ([Firefox bug 862147](https://bugzil.la/862147)). Also see {{domxref("Window.sidebar")}} for more details.
+- The proprietary `window.external.addSearchEngine()` method has been removed ([Firefox bug 862147](https://bugzil.la/862147)). Also see {{domxref("Window.external")}} for more details.
 - The non-standard Firefox-only {{domxref("HTMLMediaElement")}} property `mozAutoplayEnabled` has been removed.
 
 ### SVG

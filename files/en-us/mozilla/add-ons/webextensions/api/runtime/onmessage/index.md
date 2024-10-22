@@ -263,7 +263,7 @@ function isBookmarked(message, sender, response) {
 browser.runtime.onMessage.addListener(isBookmarked);
 ```
 
-If the asynchronous handler doesn't return a Promise, you can explicitly construct a promise. This rather contrived example sends a response after a 1-second delay, using [`setTimeout()`](/en-US/docs/Web/API/setTimeout):
+If the asynchronous handler doesn't return a Promise, you can explicitly construct a promise. This rather contrived example sends a response after a 1-second delay, using {{domxref("Window.setTimeout", "setTimeout()")}}:
 
 ```js
 // background-script.js
@@ -282,7 +282,7 @@ browser.runtime.onMessage.addListener(handleMessage);
 {{WebExtExamples}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#event-onMessage) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+> This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onMessage) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

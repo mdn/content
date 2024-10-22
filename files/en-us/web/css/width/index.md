@@ -37,6 +37,7 @@ width: min-content;
 width: fit-content;
 width: fit-content(20em);
 width: auto;
+width: stretch;
 
 /* Global values */
 width: inherit;
@@ -62,6 +63,12 @@ width: unset;
   - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e. `min(max-content, max(min-content, stretch))`.
 - `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
   - : Uses the fit-content formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, <length-percentage>))`.
+- `stretch`
+
+  - : Sets the width of the element's [margin box](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#parts_of_a_box) to the width of its [containing block](/en-US/docs/Web/CSS/Containing_block#identifying_the_containing_block). It attempts to make the margin box fill the available space in the containing block, so in a way behaving similar to `100%` but applying the resulting size to the margin box rather than the box determined by [box-sizing](/en-US/docs/Web/CSS/box-sizing).
+
+    > [!NOTE]
+    > To check aliases used by browsers for the `stretch` value and its implementation status, see the [Browser compatibility](#browser_compatibility) section.
 
 ## Accessibility
 
@@ -138,14 +145,14 @@ p.goldie {
 ### Example using "max-content"
 
 ```css
-p.maxgreen {
+p.max-green {
   background: lightgreen;
   width: max-content;
 }
 ```
 
 ```html
-<p class="maxgreen">The MDN community writes really great documentation.</p>
+<p class="max-green">The MDN community writes really great documentation.</p>
 ```
 
 {{EmbedLiveSample('Example using "max-content"', '500px', '64px')}}
@@ -153,14 +160,14 @@ p.maxgreen {
 ### Example using "min-content"
 
 ```css
-p.minblue {
+p.min-blue {
   background: lightblue;
   width: min-content;
 }
 ```
 
 ```html
-<p class="minblue">The MDN community writes really great documentation.</p>
+<p class="min-blue">The MDN community writes really great documentation.</p>
 ```
 
 {{EmbedLiveSample('Example using "min-content"', '500px', '155px')}}
@@ -175,9 +182,10 @@ p.minblue {
 
 ## See also
 
-- [The box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - {{cssxref("height")}}
 - {{cssxref("box-sizing")}}
 - {{cssxref("min-width")}}, {{cssxref("max-width")}}
-- The mapped logical properties: {{cssxref("block-size")}}, {{cssxref("inline-size")}}
+- {{cssxref("block-size")}}, {{cssxref("inline-size")}}
 - {{cssxref("anchor-size()")}}
+- [Introduction to the CSS basic box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module

@@ -312,7 +312,7 @@ _Modifiers_ are special keys which are used to generate special characters or ca
 
 \[2] Firefox did not add support for the <kbd>Symbol</kbd> key until Firefox 37.
 
-\[3] Firefox generates the key value `"OS`" for the <kbd>Super</kbd> and <kbd>Hyper</kbd> keys, instead of `"Super"` and `"Hyper"`.
+\[3] Firefox generates the key value `"OS"` for the <kbd>Super</kbd> and <kbd>Hyper</kbd> keys, instead of `"Super"` and `"Hyper"`.
 
 \[4] Chrome 67 and Firefox 63 now correctly interpret the right <kbd>Alt</kbd> key for keyboard layouts which map that key to <kbd>AltGr</kbd>. See Firefox bug [Firefox bug 900750](https://bugzil.la/900750) and [Chrome bug 25503](https://crbug.com/25503) for further details.
 
@@ -2135,7 +2135,7 @@ If more function keys are available, their names continue the pattern here by co
       <td><code>VK_F14</code> (0x7D)</td>
       <td><code>kVK_F14</code> (0x6B)</td>
       <td>
-        <code>GDK_KEY_F14</code> (0xFFCB)<br /><code>Qt::Key_F1</code>4
+        <code>GDK_KEY_F14</code> (0xFFCB)<br /><code>Qt::Key_F14</code>
         (0x0100003D)
       </td>
       <td><code>KEYCODE_F14</code></td>
@@ -2146,7 +2146,7 @@ If more function keys are available, their names continue the pattern here by co
       <td><code>VK_F15</code> (0x7E)</td>
       <td><code>kVK_F15</code> (0x71)</td>
       <td>
-        <code>GDK_KEY_F15</code> (0xFFCC)<br /><code>Qt::Key_F1</code>5
+        <code>GDK_KEY_F15</code> (0xFFCC)<br /><code>Qt::Key_F15</code>
         (0x0100003E)
       </td>
       <td><code>KEYCODE_F15</code></td>
@@ -2157,7 +2157,7 @@ If more function keys are available, their names continue the pattern here by co
       <td><code>VK_F16</code> (0x7F)</td>
       <td><code>kVK_F16</code> (0x6A)</td>
       <td>
-        <code>GDK_KEY_F16</code> (0xFFCD)<br /><code>Qt::Key_F1</code>6
+        <code>GDK_KEY_F16</code> (0xFFCD)<br /><code>Qt::Key_F16</code>
         (0x0100003F)
       </td>
       <td><code>KEYCODE_F16</code></td>
@@ -2168,7 +2168,7 @@ If more function keys are available, their names continue the pattern here by co
       <td><code>VK_F17</code> (0x80)</td>
       <td><code>kVK_F17</code> (0x40)</td>
       <td>
-        <code>GDK_KEY_F17</code> (0xFFCE)<br /><code>Qt::Key_F1</code>7
+        <code>GDK_KEY_F17</code> (0xFFCE)<br /><code>Qt::Key_F17</code>
         (0x01000040)
       </td>
       <td><code>KEYCODE_F17</code></td>
@@ -2179,7 +2179,7 @@ If more function keys are available, their names continue the pattern here by co
       <td><code>VK_F18</code> (0x81)</td>
       <td><code>kVK_F18</code> (0x4F)</td>
       <td>
-        <code>GDK_KEY_F18</code> (0xFFCF)<br /><code>Qt::Key_F1</code>8
+        <code>GDK_KEY_F18</code> (0xFFCF)<br /><code>Qt::Key_F18</code>
         (0x01000041)
       </td>
       <td><code>KEYCODE_F18</code></td>
@@ -2190,7 +2190,7 @@ If more function keys are available, their names continue the pattern here by co
       <td><code>VK_F19</code> (0x82)</td>
       <td><code>kVK_F19</code> (0x50)</td>
       <td>
-        <code>GDK_KEY_F19</code> (0xFFD0)<br /><code>Qt::Key_F1</code>9
+        <code>GDK_KEY_F19</code> (0xFFD0)<br /><code>Qt::Key_F19</code>
         (0x01000042)
       </td>
       <td><code>KEYCODE_F19</code></td>
@@ -4375,7 +4375,7 @@ Some keyboards offer special keys for launching or switching to certain common a
 
 \[3] Google Chrome 57 and earlier returned `"LaunchCalculator"` instead of `"LaunchApplication2"`. See [Chrome Bug 612743](https://crbug.com/612743) for more information.
 
-\[4] Prior to Firefox 37, Firefox returned the key code `"LaunchApplication1"` instead of "`LaunchWebBrowser"` for the Web browser key.
+\[4] Prior to Firefox 37, Firefox returned the key code `"LaunchApplication1"` instead of `"LaunchWebBrowser"` for the Web browser key.
 
 \[5] Firefox introduced support for this key in Firefox 37. Prior to that, this key was reported as `"Unidentified"`.
 

@@ -43,7 +43,7 @@ Events have three functions:
 
 ## Examples
 
-In this simple example we add a listener to the {{WebExtAPIRef("notifications.onClicked")}} event to listen for system notifications being clicked. When this occurs, we log an appropriate message to the console.
+In this simple example we add a listener to the `notifications.onClicked` event to listen for system notifications being clicked. When this occurs, we log an appropriate message to the console.
 
 ```js
 browser.notifications.onClicked.addListener((notificationId) => {
@@ -54,4 +54,4 @@ browser.notifications.onClicked.addListener((notificationId) => {
 {{WebExtExamples}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/notifications/) API.
+> This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications) API.

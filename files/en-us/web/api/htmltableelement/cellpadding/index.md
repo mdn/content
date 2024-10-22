@@ -29,7 +29,7 @@ t.cellPadding = "10";
 
 ## Specifications
 
-- W3C DOM 2 HTML Specification [_HTMLTableElement.cellPadding_](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-59162158).
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -1,7 +1,7 @@
 ---
 title: "console: timeStamp() static method"
 short-title: timeStamp()
-slug: Web/API/console/timestamp_static
+slug: Web/API/console/timeStamp_static
 page-type: web-api-instance-method
 status:
   - non-standard

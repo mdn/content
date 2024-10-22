@@ -222,11 +222,11 @@ The following are the feature strings for the `requiredFeatures` attribute. Thes
 - `http://www.w3.org/TR/SVG11/feature#BasicFilter`
   - : The browser supports the {{SVGElement("filter")}}, {{SVGElement("feBlend")}}, {{SVGElement("feColorMatrix")}}, {{SVGElement("feComponentTransfer")}}, {{SVGElement("feComposite")}}, {{SVGElement("feFlood")}}, {{SVGElement("feGaussianBlur")}}, {{SVGElement("feImage")}}, {{SVGElement("feMerge")}}, {{SVGElement("feMergeNode")}}, {{SVGElement("feOffset")}}, {{SVGElement("feTile")}}, {{SVGElement("feFuncR")}}, {{SVGElement("feFuncG")}}, {{SVGElement("feFuncB")}} and {{SVGElement("feFuncA")}} elements
 - `http://www.w3.org/TR/SVG11/feature#DocumentEventsAttribute`
-  - : The browser supports the {{SVGAttr("onunload")}}, {{SVGAttr("onabort")}}, {{SVGAttr("onerror")}}, {{SVGAttr("onresize")}}, {{SVGAttr("onscroll")}} and {{SVGAttr("onzoom")}} attributes
+  - : The browser supports the `onunload`, `onabort`, `onerror`, `onresize`, `onscroll` and `onzoom` [event attributes](/en-US/docs/Web/SVG/Attribute#event_attributes)
 - `http://www.w3.org/TR/SVG11/feature#GraphicalEventsAttribute`
-  - : The browser supports the {{SVGAttr("onfocusin")}}, {{SVGAttr("onfocusout")}}, {{SVGAttr("onactivate")}}, {{SVGAttr("onclick")}}, {{SVGAttr("onmousedown")}}, {{SVGAttr("onmouseup")}}, {{SVGAttr("onmouseover")}}, {{SVGAttr("onmousemove")}}, {{SVGAttr("onmouseout")}} and {{SVGAttr("onload")}} attributes
+  - : The browser supports the `onfocusin`, `onfocusout`, `onactivate`, `onclick`, `onmousedown`, `onmouseup`, `onmouseover`, `onmousemove`, `onmouseout` and `onload` [event attributes](/en-US/docs/Web/SVG/Attribute#event_attributes)
 - `http://www.w3.org/TR/SVG11/feature#AnimationEventsAttribute`
-  - : The browser supports the {{SVGAttr("onbegin")}}, {{SVGAttr("onend")}}, {{SVGAttr("onrepeat")}} and {{SVGAttr("onload")}} attributes
+  - : The browser supports the `onbegin`, `onend`, `onrepeat` and `onload` [event attributes](/en-US/docs/Web/SVG/Attribute#event_attributes)
 - `http://www.w3.org/TR/SVG11/feature#Cursor`
   - : The browser supports the {{SVGElement("cursor")}} element
 - `http://www.w3.org/TR/SVG11/feature#Hyperlinking`

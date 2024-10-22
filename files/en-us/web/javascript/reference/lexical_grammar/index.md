@@ -18,7 +18,7 @@ Format-control characters have no visual representation but are used to control 
 | ---------- | --------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | U+200C     | Zero width non-joiner | \<ZWNJ>      | Placed between characters to prevent being connected into ligatures in certain languages ([Wikipedia](https://en.wikipedia.org/wiki/Zero-width_non-joiner)).                                                                   |
 | U+200D     | Zero width joiner     | \<ZWJ>       | Placed between characters that would not normally be connected in order to cause the characters to be rendered using their connected form in certain languages ([Wikipedia](https://en.wikipedia.org/wiki/Zero-width_joiner)). |
-| U+FEFF     | Byte order mark       | \<BOM>       | Used at the start of the script to mark it as Unicode and the text's byte order ([Wikipedia](https://en.wikipedia.org/wiki/Byte_order_mark)).                                                                                  |
+| U+FEFF     | Byte order mark       | \<BOM>       | Used at the start of the script to mark it as Unicode and to allow detection of the text's encoding and byte order ([Wikipedia](https://en.wikipedia.org/wiki/Byte_order_mark)).                                               |
 
 In JavaScript source text, \<ZWNJ> and \<ZWJ> are treated as [identifier](#identifiers) parts, while \<BOM> (also called a zero-width no-break space \<ZWNBSP> when not at the start of text) is treated as [white space](#white_space).
 
@@ -539,7 +539,7 @@ A regular expression literal cannot start with two forward slashes (`//`), becau
 
 ### Template literals
 
-One template literal consists of several tokens: `` `xxx${`` (template head), `}xxx${` (template middle), and ``}xxx` `` (template tail) are individual tokens, while any expression may come between them.
+One template literal consists of several tokens: `` `xxx${ `` (template head), `}xxx${` (template middle), and `` }xxx` `` (template tail) are individual tokens, while any expression may come between them.
 
 See also [template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals) for more information.
 

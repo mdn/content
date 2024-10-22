@@ -14,7 +14,7 @@ An object of type `bookmarks.BookmarkTreeNode` represents a node in the bookmark
 An {{jsxref("object")}} with the following properties:
 
 - `children` {{optional_inline}}
-  - : An {{jsxref("array")}} of {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} objects which represent the node's children. The list is ordered in the list in which the children appear in the user interface. This field is omitted if the node isn't a folder.
+  - : An {{jsxref("array")}} of `bookmarks.BookmarkTreeNode` objects which represent the node's children. The list is ordered in the list in which the children appear in the user interface. This field is omitted if the node isn't a folder.
 - `dateAdded` {{optional_inline}}
   - : A number representing the creation date of the node in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
 - `dateGroupModified` {{optional_inline}}
@@ -43,7 +43,7 @@ An {{jsxref("object")}} with the following properties:
 {{WebExtExamples}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#type-BookmarkTreeNode) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+> This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#type-BookmarkTreeNode) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

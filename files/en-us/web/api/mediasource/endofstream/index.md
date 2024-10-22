@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.MediaSource.endOfStream
 ---
 
-{{APIRef("Media Source Extensions")}}
+{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`endOfStream()`** method of the
 {{domxref("MediaSource")}} interface signals the end of the stream.

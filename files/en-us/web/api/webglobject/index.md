@@ -7,7 +7,7 @@ status:
 browser-compat: api.WebGLObject
 ---
 
-{{APIRef("WebGL")}}{{SeeCompatTable}}
+{{APIRef("WebGL")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`WebGLObject`** is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and is the parent interface for all WebGL objects.
 
@@ -33,6 +33,14 @@ WebGL 2:
 - {{domxref("WebGLSync")}}
 - {{domxref("WebGLTransformFeedback")}}
 - {{domxref("WebGLVertexArrayObject")}} (and `WebGLVertexArrayObjectOES`)
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

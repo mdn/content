@@ -46,7 +46,7 @@ When the window is no longer needed, it can be closed programmatically.
 For example, after the user clicks a button, you may pass the current window's id to {{WebExtAPIRef("windows.remove()")}}:
 
 ```js
-document.getElementById("closeme").addEventListener("click", () => {
+document.getElementById("close-me").addEventListener("click", () => {
   let winId = browser.windows.WINDOW_ID_CURRENT;
   let removing = browser.windows.remove(winId);
 });
@@ -70,7 +70,7 @@ To use the history API, you must request the "`history`" [permission](/en-US/doc
 
 ## Web page design
 
-For details on how to design your web page's to match the style of Firefox, see the [Acorn Design System](https://acorn.firefox.com/latest/).
+For details on how to design your web page's to match the style of Firefox, see the [Acorn Design System](https://acorn.firefox.com/latest).
 
 ## Examples
 

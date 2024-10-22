@@ -7,7 +7,7 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc2518.html#section-10.1
 
 {{HTTPSidebar}}{{deprecated_header}}
 
-The HTTP **`102 Processing`** [informational response](/en-US/docs/Web/HTTP/Status#information_responses) status code indicates to client that a full request has been received and the server is working on it.
+The HTTP **`102 Processing`** [informational response](/en-US/docs/Web/HTTP/Status#informational_responses) status code indicates to client that a full request has been received and the server is working on it.
 This status code is only sent if the server expects the request to take significant time.
 
 > [!NOTE]

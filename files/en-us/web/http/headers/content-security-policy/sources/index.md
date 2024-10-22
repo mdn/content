@@ -7,8 +7,15 @@ spec-urls: https://w3c.github.io/webappsec-csp/#framework-directive-source-list
 
 {{HTTPSidebar}}
 
-HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) header directives that specify a `<source>` from which resources may be loaded can use any one of the values listed below.
-Relevant directives include the {{Glossary("fetch directive", "fetch directives")}}, along with others [listed below](#relevant_directives).
+HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) [fetch directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directives) may take as a value a space-separated list of _source expressions_. Each source expression can be any of the values listed below.
+
+As well as fetch directives, some other CSP directives may take as a value a space-separated list of source expressions, each of which may be a subset of the values listed below, namely: one of `<host-source>`, `<scheme-source>`, or the keyword `'self'`. These other directives are:
+
+- {{CSP("base-uri")}}
+- {{CSP("form-action")}}
+- {{CSP("frame-ancestors")}}
+
+Directives that accept a list of source expressions may instead be given the single value `'none'`, indicating that no resources of the given type may be loaded (or, in the case of non-fetch directives, that the associated feature is not allowed).
 
 ## Sources
 
@@ -37,7 +44,7 @@ Relevant directives include the {{Glossary("fetch directive", "fetch directives"
     Unlike other values below, single quotes shouldn't be used.
     You can also specify data schemes (not recommended).
 
-    - `data:` Allows [`data:` URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) to be used as a content source.
+    - `data:` Allows [`data:` URLs](/en-US/docs/Web/URI/Schemes/data) to be used as a content source.
       _This is insecure; an attacker can also inject arbitrary `data:` URLs. Use this sparingly and definitely not for scripts._
     - `mediastream:` Allows [`mediastream:` URIs](/en-US/docs/Web/API/Media_Capture_and_Streams_API) to be used as a content source.
     - `blob:` Allows [`blob:` URIs](/en-US/docs/Web/API/Blob) to be used as a content source.
@@ -60,16 +67,13 @@ Relevant directives include the {{Glossary("fetch directive", "fetch directives"
     The single quotes are required.
 - `'unsafe-hashes'`
   - : Allows enabling specific inline [event handlers](/en-US/docs/Web/Events/Event_handlers).
-    If you only need to allow inline event handlers and not inline {{HTMLElement("script")}} elements or `javascript:` URLs, this is a safer method than using the `unsafe-inline` expression.
+    If you only need to allow inline event handlers and not inline {{HTMLElement("script")}} elements or [`javascript:` URLs](/en-US/docs/Web/URI/Schemes/javascript), this is a safer method than using the `unsafe-inline` expression.
 - `'unsafe-inline'`
-  - : Allows the use of inline resources, such as inline {{HTMLElement("script")}} elements, `javascript:` URLs, inline event handlers, and inline {{HTMLElement("style")}} elements.
-    The single quotes are required.
-- `'none'`
-  - : Refers to the empty set; that is, no URLs match.
+  - : Allows the use of inline resources, such as inline {{HTMLElement("script")}} elements, [`javascript:` URLs](/en-US/docs/Web/URI/Schemes/javascript), inline event handlers, and inline {{HTMLElement("style")}} elements.
     The single quotes are required.
 - `'nonce-<base64-value>'`
 
-  - : An allowlist for specific inline scripts using a cryptographic nonce (number used once).
+  - : An allowlist for specific scripts using a cryptographic nonce (number used once).
     The server must generate a unique nonce value each time it transmits a policy.
     It is critical to provide an unguessable nonce, as bypassing a resource's policy is otherwise trivial.
     See [unsafe inline script](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_inline_script) for an example.
@@ -96,37 +100,3 @@ Relevant directives include the {{Glossary("fetch directive", "fetch directives"
 ## Specifications
 
 {{Specifications}}
-
-## Relevant directives
-
-Directives for which the above sources apply include:
-
-- {{Glossary("fetch directive", "Fetch directives")}}:
-
-  - {{CSP("default-src")}}
-  - {{CSP("child-src")}}
-  - {{CSP("connect-src")}}
-  - {{CSP("font-src")}}
-  - {{CSP("frame-src")}}
-  - {{CSP("img-src")}}
-  - {{CSP("manifest-src")}}
-  - {{CSP("media-src")}}
-  - {{CSP("object-src")}}
-  - {{CSP("prefetch-src")}}
-  - {{CSP("script-src")}}
-  - {{CSP("script-src-elem")}}
-  - {{CSP("script-src-attr")}}
-  - {{CSP("style-src")}}
-  - {{CSP("style-src-elem")}}
-  - {{CSP("style-src-attr")}}
-  - {{CSP("worker-src")}}
-
-- {{Glossary("Document directive", "Document directives")}}:
-
-  - {{CSP("base-uri")}}
-  - {{CSP("sandbox")}}
-
-- {{Glossary("Navigation directive", "Navigation directives")}}:
-
-  - {{CSP("form-action")}}
-  - {{CSP("frame-ancestors")}}

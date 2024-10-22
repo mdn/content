@@ -22,7 +22,7 @@ The value of `leftContext` updates whenever a `RegExp` (but not a `RegExp` subcl
 
 You cannot use the shorthand alias with the dot property accessor (``RegExp.$` ``), because `` ` `` is not a valid identifier part, so this causes a {{jsxref("SyntaxError")}}. Use the [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) instead.
 
-``$` `` can also be used in the replacement string of {{jsxref("String.prototype.replace()")}}, but that's unrelated to the ``RegExp["$`"]`` legacy property.
+`` $` `` can also be used in the replacement string of {{jsxref("String.prototype.replace()")}}, but that's unrelated to the ``RegExp["$`"]`` legacy property.
 
 ## Examples
 

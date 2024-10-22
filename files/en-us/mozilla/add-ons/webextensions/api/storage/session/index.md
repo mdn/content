@@ -14,6 +14,11 @@ The amount of data that an extension can store in the session storage area is li
 
 When the browser stops, all session storage is cleared. When the extension is uninstalled, its associated session storage is cleared.
 
+## Properties
+
+- {{WebExtAPIRef("storage.session.QUOTA_BYTES")}}
+  - : The maximum amount of data (in bytes) that can be stored in session storage.
+
 ## Methods
 
 The `session` object implements the methods defined on the {{WebExtAPIRef("storage.StorageArea")}} type:
@@ -45,7 +50,7 @@ The `session` object implements the events defined on the {{WebExtAPIRef("storag
 {{Compat}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/storage/#property-session) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
+> This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage#property-session) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

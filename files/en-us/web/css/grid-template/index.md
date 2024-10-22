@@ -28,7 +28,7 @@ grid-template: none;
 /* grid-template-rows / grid-template-columns values */
 grid-template: 100px 1fr / 50px 1fr;
 grid-template: auto 1fr / auto 1fr auto;
-grid-template: [linename] 100px / [columnname1] 30% [columnname2] 70%;
+grid-template: [line-name] 100px / [column-name1] 30% [column-name2] 70%;
 grid-template: fit-content(100px) / fit-content(40%);
 
 /* grid-template-areas grid-template-rows / grid-template-column values */

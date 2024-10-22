@@ -56,7 +56,7 @@ _This interface doesn't inherit any method._
   - : Moves the current {{domxref("Node")}} to the first _visible_ child of the current node, and returns the found child. It also moves the current node to this child. If no such child exists, returns `null` and the current node is not changed. Note that the node returned by `firstChild()` is dependent on the value of `whatToShow` set during instantiation of the `TreeWalker` object. Assuming the following HTML tree, and if you set the `whatToShow` to `NodeFilter.SHOW_ALL` a call to `firstChild()` will return a `Text` node and not an `HTMLDivElement` object.
 
     ```html
-    <!DOCTYPE html>
+    <!doctype html>
     <html lang="en">
       <head><title>Demo</title>
       <body>

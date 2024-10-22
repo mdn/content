@@ -13,7 +13,7 @@ The `listbox` role is used for lists from which a user may select one or more it
 
 ## Description
 
-The `listbox` role is used to identify an element that creates a list from which a user may select one or more static items, similar to the HTML {{HTMLElement('select')}} element. Unlike {{HTMLElement('select')}}, a listbox can contain images. Each child of a listbox should have a role of [option](https://www.w3.org/TR/2010/WD-wai-aria-20100916/roles#option).
+The `listbox` role is used to identify an element that creates a list from which a user may select one or more static items, similar to the HTML {{HTMLElement('select')}} element. Unlike {{HTMLElement('select')}}, a listbox can contain images. Listboxes contain children whose role is [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role) or elements whose role is [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) which in turn contain children whose role is `option`.
 
 It is highly recommended using the HTML select element, or a group of radio buttons if only one item can be selected, or a group of checkboxes if multiple items can be selected, because there is a lot of keyboard interactivity to manage focus for all the descendants, and native HTML elements provide this functionality for you for free.
 
@@ -110,7 +110,7 @@ When the listbox role is added to an element, or such an element becomes visible
 
     - <kbd>Space</kbd>
 
-      : changes the selection state of the focused option .
+      : changes the selection state of the focused option.
 
     - <kbd>Shift + Down Arrow</kbd>
 

@@ -122,8 +122,7 @@ This example adds some semantics to the `<summary>` element to indicate the labe
       <td>
         <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
-        >
-        or one element of
+        >, optionally intermixed with
         <a href="/en-US/docs/Web/HTML/Content_categories#heading_content"
           >Heading content</a
         >

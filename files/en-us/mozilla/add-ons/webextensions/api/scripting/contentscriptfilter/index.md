@@ -23,4 +23,4 @@ Values of this type are objects. They contain these properties:
 {{WebExtExamples}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/docs/extensions/reference/scripting/#type-ContentScriptFilter) API.
+> This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/docs/extensions/reference/api/scripting#type-ContentScriptFilter) API.

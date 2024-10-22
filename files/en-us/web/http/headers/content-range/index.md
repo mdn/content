@@ -16,7 +16,7 @@ a full body message a partial message belongs.
       <th scope="row">Header type</th>
       <td>
         {{Glossary("Response header")}},
-        {{Glossary("Payload header")}}
+        {{Glossary("Content header")}}
       </td>
     </tr>
     <tr>

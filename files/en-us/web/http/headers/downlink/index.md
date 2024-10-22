@@ -4,7 +4,7 @@ slug: Web/HTTP/Headers/Downlink
 page-type: http-header
 status:
   - experimental
-browser-compat: http.headers.downlink
+browser-compat: http.headers.Downlink
 ---
 
 {{HTTPSidebar}} {{SeeCompatTable}}

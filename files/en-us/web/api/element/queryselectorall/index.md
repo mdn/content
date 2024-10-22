@@ -27,14 +27,14 @@ querySelectorAll(selectors)
     must be a valid CSS selector string; if it isn't, a `SyntaxError` exception
     is thrown.
 
-    Note that the HTML specification does not require attribute values to be valid CSS identifiers. If a [`class`](/en-US/docs/Web/HTML/Global_attributes/class) or [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute value is not a valid CSS identifier, than you must escape it before using it in a selector, either by calling {{domxref("CSS.escape_static", "CSS.escape()")}} on the value, or using one of the techniques described in [Escaping characters](/en-US/docs/Web/CSS/ident#escaping_characters). See [Escaping attribute values](#escaping_attribute_values) for an example.
+    Note that the HTML specification does not require attribute values to be valid CSS identifiers. If a [`class`](/en-US/docs/Web/HTML/Global_attributes/class) or [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute value is not a valid CSS identifier, then you must escape it before using it in a selector, either by calling {{domxref("CSS.escape_static", "CSS.escape()")}} on the value, or using one of the techniques described in [Escaping characters](/en-US/docs/Web/CSS/ident#escaping_characters). See [Escaping attribute values](#escaping_attribute_values) for an example.
 
     The selectors are applied to the entire document, not just the particular element on which `querySelectorAll()` is called. To restrict the selector to the element on which `querySelectorAll()` is called, include the [`:scope`](/en-US/docs/Web/CSS/:scope) pseudo-class at the start of the selector. See the [selector scope](#selector_scope) example.
 
 ### Return value
 
 A non-live {{domxref("NodeList")}} containing one {{domxref("Element")}} object for
-each descendant node that matches at least one of the specified selectors.
+each descendant node that matches at least one of the specified selectors. The elements are in document order — that is, parents before children, earlier siblings before later siblings.
 
 > [!NOTE]
 > If the specified `selectors` include a [CSS pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), the returned list
@@ -68,14 +68,14 @@ const refs = [
 ### Obtaining a list of matches
 
 To obtain a {{domxref("NodeList")}} of all of the {{HTMLElement("p")}} elements
-contained within the element `"myBox"`:
+contained within the element `myBox`:
 
 ```js
 const matches = myBox.querySelectorAll("p");
 ```
 
 This example returns a list of all {{HTMLElement("div")}} elements within
-`"myBox"` with a class of either "`note`" or "`alert`":
+`myBox` with a class of either `note` or `alert`:
 
 ```js
 const matches = myBox.querySelectorAll("div.note, div.alert");
@@ -98,11 +98,11 @@ const matches = document.querySelectorAll("iframe[data-src]");
 ```
 
 Here, an attribute selector is used to return a list of the list items contained within
-a list whose ID is `"userlist"` which have a `"data-active"`
+a list whose ID is `"user-list"` which have a `"data-active"`
 attribute whose value is `"1"`:
 
 ```js
-const container = document.querySelector("#userlist");
+const container = document.querySelector("#user-list");
 const matches = container.querySelectorAll("li[data-active='1']");
 ```
 

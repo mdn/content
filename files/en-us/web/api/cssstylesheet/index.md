@@ -146,6 +146,15 @@ A (possibly incomplete) list of ways a stylesheet can be associated with a docum
       </td>
     </tr>
     <tr>
+      <td>
+        JavaScript <a href="/en-US/docs/Web/JavaScript/Reference/Statements/import/with"><code>import ... with { type: "css" }</code></a>
+      </td>
+      <td>No</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
       <td>HTTP Link Header</td>
       <td>Yes</td>
       <td><em>N/A</em></td>

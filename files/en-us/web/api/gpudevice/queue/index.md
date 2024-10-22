@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUDevice.queue
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`queue`** read-only property of the
 {{domxref("GPUDevice")}} interface returns the primary {{domxref("GPUQueue")}} for the device.

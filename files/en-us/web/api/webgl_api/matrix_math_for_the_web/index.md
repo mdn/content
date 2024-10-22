@@ -84,6 +84,27 @@ function multiplyMatrixAndPoint(matrix, point) {
 }
 ```
 
+> [!NOTE]
+> Our examples on this page use row vectors to represent points and right-multiplication to apply transformation matrices. That is, the above does `point * matrix` where `point` is a 4x1 row vector. If you want to use column vectors and left-multiplication, you need to adjust the multiplication function accordingly, and transpose each matrix introduced below.
+>
+> For example, the [`translationMatrix`](#translation_matrix) introduced below originally looks like:
+>
+> ```js-nolint
+> [1, 0, 0, 0,
+>  0, 1, 0, 0,
+>  0, 0, 1, 0,
+>  x, y, z, 1]
+> ```
+>
+> After transposition, it would look like:
+>
+> ```js-nolint
+> [1, 0, 0, x,
+>  0, 1, 0, y,
+>  0, 0, 1, z,
+>  0, 0, 0, 1]
+> ```
+
 Now using the function above we can multiply a point by the matrix. Using the identity matrix it should return a point identical to the original, since a point (or any other matrix) multiplied by the identity matrix is always equal to itself:
 
 ```js

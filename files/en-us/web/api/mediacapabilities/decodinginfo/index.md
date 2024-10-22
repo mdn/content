@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.MediaCapabilities.decodingInfo
 ---
 
-{{APIRef("Media Capabilities API")}}
+{{APIRef("Media Capabilities API")}}{{AvailableInWorkers}}
 
 The **`decodingInfo()`** method of the {{domxref("MediaCapabilities")}} interface returns a promise that fulfils with information about how well the user agent can decode/display media with a given configuration.
 
@@ -262,7 +262,7 @@ const videoConfig = {
 };
 
 // check support and performance
-navigator.mediaCapabilities.decodingInfo(audioConfig).then((result) => {
+navigator.mediaCapabilities.decodingInfo(videoConfig).then((result) => {
   if (result.supported) {
     log(
       `The video configuration is supported${result.smooth ? ", smooth" : ", not smooth"}${result.powerEfficient ? ", power efficient" : ", not power efficient"}.`,

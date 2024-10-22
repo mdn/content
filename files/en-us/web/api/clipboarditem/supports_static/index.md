@@ -11,7 +11,7 @@ browser-compat: api.ClipboardItem.supports_static
 The **`supports()`** static method of the {{domxref("ClipboardItem")}} interface returns `true` if the given {{Glossary("MIME type")}} is supported by the clipboard, and `false` otherwise.
 
 Note that the [Clipboard API](/en-US/docs/Web/API/Clipboard_API) mandates support for plain text, HTML and PNG files.
-The `supports()` method will always return `true` for these MIME types, so testing them is unnecessary .
+The `supports()` method will always return `true` for these MIME types, so testing them is unnecessary.
 
 ## Syntax
 
@@ -54,7 +54,7 @@ We also wrap the whole function body in [`try..catch`](/en-US/docs/Web/JavaScrip
 async function writeClipImg() {
   try {
     if (ClipboardItem.supports("image/svg+xml")) {
-      const imgURL = "/myimage.svg";
+      const imgURL = "/my-image.svg";
       const data = await fetch(imgURL);
       const blob = await data.blob();
       await navigator.clipboard.write([

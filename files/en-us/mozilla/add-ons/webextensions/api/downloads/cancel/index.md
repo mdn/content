@@ -52,7 +52,7 @@ canceling.then(onCanceled, onError);
 {{WebExtExamples}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-cancel) API.
+> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#method-cancel) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

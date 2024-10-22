@@ -25,7 +25,7 @@ Then, the result should be "UTF-16".
 
 ## Specifications
 
-This feature is not part of any specification anymore. It is no more on track to become a standard.
+{{Specifications}}
 
 ## Browser compatibility
 

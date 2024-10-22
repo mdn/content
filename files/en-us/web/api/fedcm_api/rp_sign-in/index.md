@@ -52,7 +52,7 @@ The example above also includes a couple of optional features:
 - The `nonce` property provides a random nonce value that ensures the response is issued for this specific request, preventing {{glossary("replay attack", "replay attacks")}}.
 - The `loginHint` property provides a hint about the account option(s) the browser should present for user sign-in. This hint is matched against the `login_hints` values that the IdP provides from the [accounts list endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_accounts_list_endpoint).
 
-The browser requests the IdP config file and carries out the sign-in flow detailed below. For more information on the kind of interaction a user might expect from the browser-supplied UI, see [Sign in to the relying party with the identity provider](https://developers.google.com/privacy-sandbox/3pcd/fedcm#sign-in).
+The browser requests the IdP config file and carries out the sign-in flow detailed below. For more information on the kind of interaction a user might expect from the browser-supplied UI, see [Sign in to the relying party with the identity provider](https://developers.google.com/privacy-sandbox/cookies/fedcm#sign-in).
 
 ## FedCM sign-in flow
 
@@ -82,7 +82,7 @@ The flow is as follows:
 
 5. The IdP responds with the account information requested from the `accounts_endpoint`. This is an array of all accounts associated with the user's IdP cookies for any RPs associated with the IdP.
 
-6. {{optional_inline}} If included in the IdP config file, the browser makes an uncredentialed request to the [`client_metadata_endpoint`](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_client_metadata_endpoint) for the location of the IdP terms of service and privacy policy pages. This is a `GET` request sent with the `clientId` passed into the `get()` call as a parameter, without cookies.
+6. {{optional_inline}} If included in the IdP config file, the browser makes an uncredentialed request to the [`client_metadata_endpoint`](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_client_metadata_endpoint) for the location of the RP terms of service and privacy policy pages. This is a `GET` request sent with the `clientId` passed into the `get()` call as a parameter, without cookies.
 
 7. {{optional_inline}} The IdP responds with the URLs requested from the `client_metadata_endpoint`.
 
@@ -153,4 +153,4 @@ If auto-reauthentication fails, the behavior depends on the `mediation` value th
 
 ## See also
 
-- [Federated Credential Management API](https://developers.google.com/privacy-sandbox/3pcd/fedcm) on developers.google.com (2023)
+- [Federated Credential Management API](https://developers.google.com/privacy-sandbox/cookies/fedcm) on developers.google.com (2023)

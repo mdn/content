@@ -10,7 +10,7 @@ browser-compat: svg.global_attributes.stroke-linejoin
 The **`stroke-linejoin`** attribute is a presentation attribute defining the shape to be used at the corners of paths when they are stroked.
 
 > [!NOTE]
-> As a presentation attribute `stroke-linejoin` can be used as a CSS property.
+> As a presentation attribute `stroke-linejoin` can be used as a CSS property. See {{cssxref('stroke-linejoin')}} for more.
 
 You can use this attribute with the following SVG elements:
 

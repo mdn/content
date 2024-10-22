@@ -89,7 +89,7 @@ For more information about `NaN` and its comparison, see [Equality comparison an
 
 ### Observably distinct NaN values
 
-There's a motivation for `NaN` being unequal to itself. It's possible to produce two floating point numbers with different binary representations but are both `NaN`, because in [IEEE 754 encoding](https://en.wikipedia.org/wiki/NaN#Floating_point), any floating point number with exponent `0x7ff` and a non-zero mantissa is `NaN`. In JavaScript, you can do bit-level manipulation using [typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays).
+It's possible to produce two floating point numbers with different binary representations but are both `NaN`, because in [IEEE 754 encoding](https://en.wikipedia.org/wiki/NaN#Floating_point), any floating point number with exponent `0x7ff` and a non-zero mantissa is `NaN`. In JavaScript, you can do bit-level manipulation using [typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays).
 
 ```js
 const f2b = (x) => new Uint8Array(new Float64Array([x]).buffer);

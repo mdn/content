@@ -52,4 +52,4 @@ browser.devtools.panels.onThemeChanged.addListener((newThemeName) => {
 {{WebExtExamples}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/devtools_panels/) API.
+> This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/api/devtools/panels) API.

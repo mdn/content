@@ -59,7 +59,7 @@ _No changes._
 
 ### JavaScript
 
-- The non-standard {{JSxRef("Statements/for_each...in", "for each...in")}} loop, originally part of EcmaScript for XML (E4X), has been removed. Please use {{JSxRef("Statements/for...of", "for...of")}} instead and see [Warning: JavaScript 1.6's for-each-in loops are deprecated](/en-US/docs/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated) for migration help. ([Firefox bug 1083470](https://bugzil.la/1083470)).
+- The non-standard [`for each...in`](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#statements_2) loop, originally part of EcmaScript for XML (E4X), has been removed. Please use {{JSxRef("Statements/for...of", "for...of")}} instead and see [Warning: JavaScript 1.6's for-each-in loops are deprecated](/en-US/docs/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated) for migration help. ([Firefox bug 1083470](https://bugzil.la/1083470)).
 - The {{JSxRef("Object.prototype.watch()")}} and {{JSxRef("Object.unwatch", "unwatch()")}} methods are deprecated, will now throw a warning when used, and will be removed soon ([Firefox bug 934669](https://bugzil.la/934669)).
 - The non-standard {{JSxRef("Iterator")}} and {{JSxRef("StopIteration")}} objects as well as the legacy iteration protocol have been removed ([Firefox bug 1098412](https://bugzil.la/1098412)).
 - Async generator is now enabled ([Firefox bug 1352312](https://bugzil.la/1352312)).
@@ -79,7 +79,7 @@ _No changes._
 - {{DOMxRef("Document.createEvent", "Document.createEvent('FocusEvent')")}} is now supported ([Firefox bug 1388069](https://bugzil.la/1388069)).
 - The `files` property of the {{DOMxRef("HTMLInputElement")}} interface is now settable ([Firefox bug 1384030](https://bugzil.la/1384030)).
 - The `HTMLDocument.getSelection()` method has been moved to the {{DOMxRef("Document/getSelection","Document")}} interface so it is available to XML documents ([Firefox bug 718711](https://bugzil.la/718711)).
-- The `messageerror` event is now implemented, and can have code run in response to it firing via event handlers implemented on message targets — see {{DOMxRef("MessagePort.messageerror_event")}}, {{DOMxRef("DedicatedWorkerGlobalScope.messageerror_event")}}, {{DOMxRef("Worker.messageerror_event")}}, {{DOMxRef("BroadcastChannel.messageerror_event")}}, and {{DOMxRef("Window.messageerror_event")}} ([Firefox bug 1359017](https://bugzil.la/1359017)).
+- The `messageerror` event is now implemented, and can have code run in response to it firing via event handlers implemented on message targets — see the `messageerror` event of {{DOMxRef("MessagePort.messageerror_event", "MessagePort")}}, {{DOMxRef("DedicatedWorkerGlobalScope.messageerror_event", "DedicatedWorkerGlobalScope")}}, {{DOMxRef("Worker.messageerror_event", "Worker")}}, {{DOMxRef("BroadcastChannel.messageerror_event", "BroadcastChannel")}}, and {{DOMxRef("Window.messageerror_event", "Window")}} ([Firefox bug 1359017](https://bugzil.la/1359017)).
 - When {{DOMxRef("Headers")}} values are iterated over, they are automatically sorted in lexicographical order, and values from duplicate header names are combined ([Firefox bug 1396848](https://bugzil.la/1396848)).
 
 #### DOM events

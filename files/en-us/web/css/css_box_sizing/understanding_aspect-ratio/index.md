@@ -89,7 +89,9 @@ Replaced elements like {{htmlelement("img")}} and {{htmlelement("video")}} are r
 <!-- temporarily ignore these images. Testing preview -->
 
 ```html hidden live-sample___original
-<img src="flag.jpg?image=good" alt="220 pixel square pride flag" />
+<img
+  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg?image=good"
+  alt="220 pixel square pride flag" />
 ```
 
 {{EmbedLiveSample("original", "100", "230")}}
@@ -101,9 +103,15 @@ If replaced content is auto-sized or you provide a size for only one dimension, 
 In this example, only the {{cssxref("width")}} is set on the image, so the user agent preserves its aspect ratio. The same image is repeated three times, displayed at different widths: `55px`, `110px`, and at its natural size of `220px` via the [`width: auto`](/en-US/docs/Web/CSS/width) value.
 
 ```html hidden live-sample___image
-<img src="flag.jpg" alt="Pride flag" />
-<img src="flag.jpg" alt="Pride flag" />
-<img src="flag.jpg" alt="Pride flag" />
+<img
+  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+  alt="Pride flag" />
+<img
+  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+  alt="Pride flag" />
+<img
+  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+  alt="Pride flag" />
 ```
 
 ```css hidden live-sample___image
@@ -128,9 +136,15 @@ Only when you provide sizes for both dimensions is there a risk of distorting th
 In this example, the same image is repeated three times, explicitly sized with the same {{cssxref("height")}} value (`110px`) but different {{cssxref("width")}} values (`55px`, `110px`, and `220px`).
 
 ```html hidden live-sample___imagebad
-<img src="flag.jpg" alt="Pride flag" />
-<img src="flag.jpg" alt="Pride flag" />
-<img src="flag.jpg" alt="Pride flag" />
+<img
+  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+  alt="Pride flag" />
+<img
+  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+  alt="Pride flag" />
+<img
+  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+  alt="Pride flag" />
 ```
 
 ```css hidden live-sample___imagebad
@@ -155,7 +169,9 @@ We have distorted the images intentionally by setting both a `height` and `width
 We could have created this same distorted effect using the CSS {{cssxref("aspect-ratio")}} property, by setting a single dimension (not both or neither) and providing a value other than `1` (or `1 / 1`). You likely don't want to do this, but it's good to know that it's possible.
 
 ```html hidden live-sample___stretch
-<img src="flag.jpg" alt="Pride flag" />
+<img
+  src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+  alt="Pride flag" />
 ```
 
 ```css live-sample___stretch
@@ -180,13 +196,21 @@ To begin with, we create a container with three items, each containing one image
 ```html live-sample___imagegrid
 <div class="grid">
   <div>
-    <img src="flag.jpg" alt="Pride flag" />
+    <img
+      src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+      alt="Pride flag" />
   </div>
   <div>
-    <img class="cover" src="flag.jpg" alt="Pride flag" />
+    <img
+      class="cover"
+      src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+      alt="Pride flag" />
   </div>
   <div>
-    <img class="contain" src="flag.jpg" alt="Pride flag" />
+    <img
+      class="contain"
+      src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+      alt="Pride flag" />
   </div>
 </div>
 ```
@@ -538,7 +562,11 @@ div div::after {
   <div></div>
   <div></div>
   <div></div>
-  <div class="item"><img src="flag.jpg" alt="Pride flag" /></div>
+  <div class="item">
+    <img
+      src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+      alt="Pride flag" />
+  </div>
   <div></div>
   <div></div>
   <div></div>

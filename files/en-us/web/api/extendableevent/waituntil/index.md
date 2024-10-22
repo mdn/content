@@ -40,7 +40,8 @@ waitUntil(promise)
 
 ### Parameters
 
-A {{jsxref("Promise")}}.
+- `promise`
+  - : A {{jsxref("Promise")}} that extends the lifetime of the event.
 
 ### Return value
 

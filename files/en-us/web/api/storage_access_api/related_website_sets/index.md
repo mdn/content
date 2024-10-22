@@ -4,7 +4,6 @@ slug: Web/API/Storage_Access_API/Related_website_sets
 page-type: guide
 status:
   - non-standard
-browser-compat: api.document.requestStorageAccessFor
 spec-urls: https://wicg.github.io/first-party-sets/
 ---
 
@@ -161,5 +160,5 @@ Two browser vendors [oppose](/en-US/docs/Glossary/Web_standards#opposing_standar
 ## See also
 
 - [Storage Access API](/en-US/docs/Web/API/Storage_Access_API)
-- [Related Website Sets](https://developers.google.com/privacy-sandbox/3pcd/related-website-sets) on developers.google.com (2023)
-- [Related Website Sets: developer guide](https://developers.google.com/privacy-sandbox/3pcd/related-website-sets-integration) on developers.google.com (2023)
+- [Related Website Sets](https://developers.google.com/privacy-sandbox/cookies/related-website-sets) on developers.google.com (2023)
+- [Related Website Sets: developer guide](https://developers.google.com/privacy-sandbox/cookies/related-website-sets-integration) on developers.google.com (2023)

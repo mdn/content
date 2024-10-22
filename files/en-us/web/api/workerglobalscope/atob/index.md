@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.atob
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers("worker")}}
 
 The **`atob()`** method of the {{domxref("WorkerGlobalScope")}} interface decodes a
 string of data which has been encoded using {{glossary("Base64")}} encoding. You can use
@@ -55,6 +55,6 @@ const decodedData = self.atob(encodedData); // decode the string
 ## See also
 
 - [A polyfill of `atob`](https://github.com/zloirock/core-js#base64-utility-methods) is available in [`core-js`](https://github.com/zloirock/core-js)
-- [`data` URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
+- [`data` URLs](/en-US/docs/Web/URI/Schemes/data)
 - {{domxref("Window.atob()")}}: the same method, but in window scopes.
 - {{domxref("WorkerGlobalScope.btoa()")}}

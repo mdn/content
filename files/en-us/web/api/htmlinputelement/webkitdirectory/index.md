@@ -15,7 +15,7 @@ When a directory is selected, the directory and its entire hierarchy of contents
 The selected file system entries can be obtained using the {{domxref("HTMLInputElement.webkitEntries", "webkitEntries")}} property.
 
 > [!NOTE]
-> This property is called `webkitEntries` in the specification due to its
+> This property is called `webkitdirectory` in the specification due to its
 > origins as a Google Chrome-specific API. It's likely to be renamed someday.
 
 ## Value
@@ -77,14 +77,14 @@ within the selected directory hierarchies is generated and displayed.
 ### HTML
 
 ```html
-<input type="file" id="filepicker" name="fileList" webkitdirectory multiple />
+<input type="file" id="file-picker" name="fileList" webkitdirectory multiple />
 <ul id="listing"></ul>
 ```
 
 ### JavaScript
 
 ```js
-document.getElementById("filepicker").addEventListener(
+document.getElementById("file-picker").addEventListener(
   "change",
   (event) => {
     let output = document.getElementById("listing");

@@ -104,7 +104,7 @@ const notification = new Notification("To do list", { body: text, icon: img });
 
 ## Closing notifications
 
-Use {{domxref("Notification.close","close()")}} to remove a notification that is no longer relevant to the user (e.g. the user already read the notification on the webpage, in the case of a messaging app, or the following song is already playing in a music app to notifies upon song changes). Most modern browsers dismiss notifications automatically after a few moments (around four seconds) but this isn't something you should generally be concerned about as it's up to the user and user agent. The dismissal may also happen at the operating system level and users should remain in control of this. Old versions of Chrome didn't remove notifications automatically so you can do so after a {{domxref("setTimeout()")}} only for those legacy versions in order to not remove notifications from notification trays on other browsers.
+Use {{domxref("Notification.close", "close()")}} to remove a notification that is no longer relevant to the user (e.g. the user already read the notification on the webpage, in the case of a messaging app, or the following song is already playing in a music app to notifies upon song changes). Most modern browsers dismiss notifications automatically after a few moments (around four seconds) but this isn't something you should generally be concerned about as it's up to the user and user agent. The dismissal may also happen at the operating system level and users should remain in control of this. Old versions of Chrome didn't remove notifications automatically so you can do so after a {{domxref("Window.setTimeout", "setTimeout()")}} only for those legacy versions in order to not remove notifications from notification trays on other browsers.
 
 ```js
 const n = new Notification("My Great Song");
@@ -158,6 +158,8 @@ Assume the following basic HTML:
   height: 100px;
   background-color: #ddd;
   overflow-x: auto;
+  padding: 10px;
+  margin-top: 10px;
 }
 ```
 
@@ -186,7 +188,7 @@ window.addEventListener("load", () => {
         }
         i++;
       }, 200);
-    } else if (Notification && Notification.permission !== "denied") {
+    } else if (Notification?.permission !== "denied") {
       demoLogs.innerText += "Requesting notification permission.\n";
       // If the user hasn't told if they want to be notified or not
       // Note: because of Chrome, we are not sure the permission property
@@ -199,7 +201,7 @@ window.addEventListener("load", () => {
           let i = 0;
           // Using an interval cause some browsers (including Firefox) are blocking notifications if there are too much in a certain time.
           const interval = setInterval(() => {
-            // Thanks to the tag, we should only see the "Hi! 9" notification
+            // Thanks to the tag, we should only see the "Message no 9 from MDN." notification
             const n = new Notification(`Message no ${i} from MDN.`, {
               tag: "soManyNotification",
             });
@@ -223,7 +225,7 @@ window.addEventListener("load", () => {
 
 ### Result
 
-{{ EmbedLiveSample('Tag_example', '100%', 150) }}
+{{ EmbedLiveSample('Tag_example', '100%', 200) }}
 
 To test the above example, change the [send notification setting](https://support.mozilla.org/en-US/kb/firefox-page-info-window#w_permissions) for the `https://live.mdnplay.dev` website.
 

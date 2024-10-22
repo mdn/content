@@ -135,6 +135,10 @@ The following elements can use the `class` attribute:
 - {{ SVGElement("tspan") }}
 - {{ SVGElement("use") }}
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

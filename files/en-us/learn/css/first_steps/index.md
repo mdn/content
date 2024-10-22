@@ -38,3 +38,8 @@ The following assessment will test your understanding of the CSS basics covered 
 
 - [Styling a biography page](/en-US/docs/Learn/CSS/First_steps/Styling_a_biography_page)
   - : With the things you have learned in the last few articles, you should find that you can format simple text documents using CSS to add your own style to them. This assessment gives you a chance to do that.
+
+## See also
+
+- [Learn HTML and CSS](https://v2.scrimba.com/learn-html-and-css-c0p?via=mdn) <sup>_MDN Curriculum partner_</sup>
+  - : [Scrimba's](https://scrimba.com?via=mdn) _Learn HTML and CSS_ course teaches you HTML and CSS through building and deploying five awesome projects, with fun interactive lessons and challenges taught by knowledgeable teachers.

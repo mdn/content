@@ -106,6 +106,6 @@ There is no inbuilt fallback for `image-set()`; therefore to include a {{cssxref
 - {{cssxref("image")}}
 - {{cssxref("image/image", "image()")}}
 - {{cssxref("element", "element()")}}
-- {{cssxref("url", "url()")}}
+- {{cssxref("url_value", "&lt;url&gt;")}}
 - {{cssxref("&lt;gradient&gt;")}}
 - {{cssxref("cross-fade", "cross-fade()")}}

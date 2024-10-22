@@ -35,7 +35,7 @@ We call these keywords and properties _physical_ because they relate to the scre
 
 ### Issues with physical properties
 
-This can become an issue when developing a site that has to work in multiple languages, including languages that have text starting on the right, rather than the left. Browsers are pretty good at dealing with text direction, and you don't even need to be working in a {{glossary("rtl")}} language to take a look. In the example below, I have two paragraphs. The first paragraph has {{cssxref("text-align")}} set to `left`, the second has no `text-align` property set. I have added `dir="rtl"` to the `html` element, which switches the writing mode from the default for an English language document of `ltr`. You can see that the first paragraph remains left to right, due to the `text-align` value being `left`. The second however, switches direction and the text runs from right to left .
+This can become an issue when developing a site that has to work in multiple languages, including languages that have text starting on the right, rather than the left. Browsers are pretty good at dealing with text direction, and you don't even need to be working in a {{glossary("rtl")}} language to take a look. In the example below, I have two paragraphs. The first paragraph has {{cssxref("text-align")}} set to `left`, the second has no `text-align` property set. I have added `dir="rtl"` to the `html` element, which switches the writing mode from the default for an English language document of `ltr`. You can see that the first paragraph remains left to right, due to the `text-align` value being `left`. The second however, switches direction and the text runs from right to left.
 
 ```html hidden
 <p class="left">

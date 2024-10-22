@@ -99,7 +99,7 @@ We'll step through the options in the initialization steps below.
 To explore various features of Vue, we will be building up a sample todo list app. We'll begin by using `create-vue` to build a new scaffold for our app.
 In terminal, `cd` to where you'd like to create your sample app, then run `npm create vue@latest` (or `yarn create vue@latest` if you prefer Yarn).
 
-The interactive tool let's you choose some options and you can procees by pressing <kbd>Enter</kbd>.
+The interactive tool let's you choose some options and you can proceed by pressing <kbd>Enter</kbd>.
 For this project, we'll use the following configuration:
 
 ```plain
@@ -135,7 +135,7 @@ If everything went successfully, the CLI should have created a series of files a
 - `package.json`: This file contains the list of dependencies for your project, as well as some metadata and `eslint` configuration.
 - `yarn.lock`: If you chose `yarn` as your package manager, this file will be generated with a list of all the dependencies and sub-dependencies that your project needs.
 - `jsconfig.json`: This is a config file for [Visual Studio Code](https://code.visualstudio.com/docs/languages/jsconfig) and gives context for VS Code on your project structure and assists auto-completion.
-- `vite.config.js`: This is the configuration file for the [Vite](https://vitejs.dev/) development server that builds and serves your project on your local machine.
+- `vite.config.js`: This is the configuration file for the [Vite](https://vite.dev/) development server that builds and serves your project on your local machine.
   The Vite server watches source files for changes and can hot-reload the project while you make changes.
 - `public`: This directory contains static assets that are published during build.
   - `favicon.ico`: This is the favicon for your app. Currently, it's the Vue logo.

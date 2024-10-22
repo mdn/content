@@ -112,18 +112,17 @@ const reWildcard = makeURLRegExp(".*");
 
 Many tools give special treatment to literals tagged by a particular name.
 
-```js-nolint
+```js
 // Some formatters will format this literal's content as HTML
-const doc = html`<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <title>Hello</title>
-  </head>
-  <body>
-    <h1>Hello world!</h1>
-  </body>
-</html>
-`;
+const doc = html`<!doctype html>
+  <html lang="en-US">
+    <head>
+      <title>Hello</title>
+    </head>
+    <body>
+      <h1>Hello world!</h1>
+    </body>
+  </html>`;
 ```
 
 One might naïvely implement the `html` tag as:

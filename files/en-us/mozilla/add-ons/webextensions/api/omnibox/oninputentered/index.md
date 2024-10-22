@@ -50,7 +50,7 @@ The listener function will be passed two parameters: a string `text`, and an {{W
 
 This example interprets the user's input as a CSS property name and populates the drop-down list with one {{WebExtAPIRef("omnibox.SuggestResult")}} object for each CSS property matching the input. The `description` property of `SuggestResult` is the full name of the property, and the `content` is the MDN page for that property.
 
-The example also listens to {{WebExtAPIRef("omnibox.onInputEntered")}}, and opens the MDN page corresponding to the selection, according to the {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}} argument.
+The example also listens to `omnibox.onInputEntered`, and opens the MDN page corresponding to the selection, according to the {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}} argument.
 
 ```js
 browser.omnibox.setDefaultSuggestion({
@@ -126,4 +126,4 @@ browser.omnibox.onInputEntered.addListener((url, disposition) => {
 {{WebExtExamples}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/omnibox/) API.
+> This API is based on Chromium's [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/api/omnibox) API.

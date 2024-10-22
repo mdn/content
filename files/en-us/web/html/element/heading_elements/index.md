@@ -2,7 +2,13 @@
 title: "<h1>–<h6>: The HTML Section Heading elements"
 slug: Web/HTML/Element/Heading_Elements
 page-type: html-element
-browser-compat: html.elements.h1
+browser-compat:
+  - html.elements.h1
+  - html.elements.h2
+  - html.elements.h3
+  - html.elements.h4
+  - html.elements.h5
+  - html.elements.h6
 ---
 
 {{HTMLSidebar}}
@@ -54,7 +60,35 @@ A common navigation technique for users of screen reading software is to quickly
 
 #### Nesting
 
-Headings may be nested as subsections to reflect the organization of the content of the page. Most screen readers can also generate an ordered list of all the headings on a page, which can help a person quickly determine the hierarchy of the content:
+Headings may be nested as subsections to reflect the organization of the content of the page. Most screen readers can also generate an ordered list of all the headings on a page, which can help a person quickly determine the content hierarchy and navigate to different headings.
+
+Given the following page structure:
+
+```html
+<h1>Beetles</h1>
+
+<h2>Etymology</h2>
+
+<h2>Distribution and Diversity</h2>
+
+<h2>Evolution</h2>
+<h3>Late Paleozoic</h3>
+<h3>Jurassic</h3>
+<h3>Cretaceous</h3>
+<h3>Cenozoic</h3>
+
+<h2>External Morphology</h2>
+<h3>Head</h3>
+<h4>Mouthparts</h4>
+<h3>Thorax</h3>
+<h4>Prothorax</h4>
+<h4>Pterothorax</h4>
+<h3>Legs</h3>
+<h3>Wings</h3>
+<h3>Abdomen</h3>
+```
+
+Screen readers would generate a list like this:
 
 1. `h1` Beetles
 
@@ -96,7 +130,7 @@ When headings are nested, heading levels may be "skipped" when closing a subsect
 
 Another common navigation technique for users of screen reading software is to generate a list of [sectioning content](/en-US/docs/Web/HTML/Element#content_sectioning) and use it to determine the page's layout.
 
-Sectioning content can be labeled using a combination of the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) and [`id`](/en-US/docs/Web/HTML/Global_attributes#id) attributes, with the label concisely describing the purpose of the section. This technique is useful for situations where there is more than one sectioning element on the same page.
+Sectioning content can be labeled using a combination of the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) and [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attributes, with the label concisely describing the purpose of the section. This technique is useful for situations where there is more than one sectioning element on the same page.
 
 #### Sectioning content examples
 

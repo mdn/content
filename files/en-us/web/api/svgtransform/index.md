@@ -363,6 +363,10 @@ An `SVGTransform` object can be designated as read only, which means that attemp
   </tbody>
 </table>
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

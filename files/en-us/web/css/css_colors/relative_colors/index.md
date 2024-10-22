@@ -35,14 +35,14 @@ The browser converts the origin color to a syntax compatible with the color func
 
 Let's look at relative color syntax in action. The below CSS is used to style two {{htmlelement("div")}} elements, one with a absolute background color — `red` — and one with a relative background color created with the `rgb()` function, based on the same `red` color value:
 
-```html hidden
+```html hidden live-sample___simple-relative-color
 <div id="container">
   <div class="item" id="one"></div>
   <div class="item" id="two"></div>
 </div>
 ```
 
-```css hidden
+```css hidden live-sample___simple-relative-color
 #container {
   display: flex;
   width: 100vw;
@@ -56,7 +56,7 @@ Let's look at relative color syntax in action. The below CSS is used to style tw
 }
 ```
 
-```css
+```css live-sample___simple-relative-color
 #one {
   background-color: red;
 }
@@ -68,7 +68,7 @@ Let's look at relative color syntax in action. The below CSS is used to style tw
 
 The output is as follows:
 
-{{ EmbedLiveSample("General syntax", "100%", "200") }}
+{{ EmbedLiveSample("simple-relative-color", "100%", "200") }}
 
 The relative color uses the [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) function, which takes `red` as the origin color, converts it to an equivalent `rgb()` color (`rgb(255 0 0)`) and then defines the new color as having a red channel of value `200` and green and blue channels with a value the same as the origin color (it uses the `g` and `b` values made available inside the function by the browser, which are both equal to `0`).
 
@@ -170,9 +170,6 @@ rgb(from red r g b / alpha)
 ```
 
 It is worth mentioning again that the color system of the origin color doesn't need to match the color system being used to create the output color. Again, this provides a lot of flexibility. Generally you won't be interested in and might not even know the system the origin color is defined in (you might just have a [custom property value](#using_custom_properties) to manipulate). You'll just want to input a color and, for example, create a lighter variant of it by putting it into an `hsl()` function and varying the lightness value.
-
-> [!NOTE]
-> Aliases such as `rgba()` or `hsla()` can be used to output relative colors, and to specify origin colors. When using legacy color functions to output a relative color, you must use the comma-less modern syntax and can't mix percentages and numbers.
 
 ## Using custom properties
 

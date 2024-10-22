@@ -102,6 +102,8 @@ align-content: unset;
 
 ## Examples
 
+### Effects of different align-content values
+
 In this example, you can switch between three different {{cssxref("display")}} property values, including `flex`, `grid`, and `block`. You can also switch between the different values for `align-content`.
 
 #### HTML

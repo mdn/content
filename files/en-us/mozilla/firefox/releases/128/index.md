@@ -25,7 +25,7 @@ This article provides information about the changes in Firefox 128 that affect d
 
 ### JavaScript
 
-- Resizeable {{jsxref("ArrayBuffer")}} and growable {{jsxref("SharedArrayBuffer")}} are now supported, allowing the size of buffers to be changed without having to allocate a new buffer and copy data into it ([Firefox bug 1884150](https://bugzil.la/1884150)).
+- Resizable {{jsxref("ArrayBuffer")}} and growable {{jsxref("SharedArrayBuffer")}} are now supported, allowing the size of buffers to be changed without having to allocate a new buffer and copy data into it ([Firefox bug 1884150](https://bugzil.la/1884150)).
   The relevant methods and properties are:
 
   - Grow {{jsxref("SharedArrayBuffer")}} using the {{jsxref("SharedArrayBuffer.prototype.grow()")}} method.
@@ -50,7 +50,7 @@ This article provides information about the changes in Firefox 128 that affect d
   This provides an application with a simple mechanism to know in advance whether playback at the optimal resolution will be allowed, without having to create a media key session or fetch a real license. ([Firefox bug 1878714](https://bugzil.la/1878714)).
 - {{domxref('RTCRtpTransceiver.setCodecPreferences()')}} is now supported for setting the codecs that a WebRTC local peer is able to use for decoding received data, in its preferred codec order. Web applications can use this to cause the remote peer to choose a preferred codec, and to disable the negotiation of specific codecs — including those used for retransmission, redundancy, and forward error correction. ([Firefox bug 1396922](https://bugzil.la/1396922)).
 - Serialization of [declarative shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM#declaratively_with_html), including the methods {{domxref('ShadowRoot.getHTML()')}} and {{domxref('Element.getHTML()')}}, and associated properties {{domxref('ShadowRoot.serializable')}} and {{domxref('HTMLTemplateElement.shadowRootSerializable')}}.
-- The [`CSSPropertyRule`](/en-US/docs/Web/API/CSSPropertyRule) interface is now supported by default and represents a CSS [`@property`](/en-US/docs/Web/CSS/@property) at-rule. The interface allows you to get the values, including [`name`](/en-US/docs/Web/API/CSSPropertyRule/name), [`syntax`](/en-US/docs/Web/API/CSSPropertyRule/syntax), [`inherits`](/en-US/docs/Web/API/CSSPropertyRule/inherits), and [`initialValue`](/en-US/docs/Web/API/CSSPropertyRule/initialvalue), of CSS custom properties defined using the `@property` at-rule ([Firefox bug 1864818](https://bugzil.la/1864818)).
+- The [`CSSPropertyRule`](/en-US/docs/Web/API/CSSPropertyRule) interface is now supported by default and represents a CSS [`@property`](/en-US/docs/Web/CSS/@property) at-rule. The interface allows you to get the values, including [`name`](/en-US/docs/Web/API/CSSPropertyRule/name), [`syntax`](/en-US/docs/Web/API/CSSPropertyRule/syntax), [`inherits`](/en-US/docs/Web/API/CSSPropertyRule/inherits), and [`initialValue`](/en-US/docs/Web/API/CSSPropertyRule/initialValue), of CSS custom properties defined using the `@property` at-rule ([Firefox bug 1864818](https://bugzil.la/1864818)).
 - The [`registerProperty()`](/en-US/docs/Web/API/CSS/registerProperty_static) method is now supported by default. It allows you to define [CSS custom properties](/en-US/docs/Web/CSS/--*) via JavaScript, which is similar to using the `@property` at-rule in CSS ([Firefox bug 1864818](https://bugzil.la/1864818)).
 
 #### Media, WebRTC, and Web Audio
@@ -110,7 +110,7 @@ These features are newly shipped in Firefox 128 but are disabled by default. To 
 
 - **Privacy Preserving Attribution API (PPA):** `dom.origin-trials.private-attribution.state`.
 
-  [PPA API](https://support.mozilla.org/kb/privacy-preserving-attribution) provides an alternative to user tracking for ad attribution using the new `navigator.privateAttribution` object with `saveImpression()` and `measureConversion()` methods. Read more about PPA [in the explainer](https://github.com/mozilla/explainers/tree/main/ppa-experiment). This experiment can be enabled for websites via [origin trial](https://wiki.mozilla.org/Origin_Trials) or in the browser by setting the preference to `1`. ([Firefox bug 1900929](https://bugzil.la/1900929)).
+  [PPA API](https://support.mozilla.org/en-US/kb/privacy-preserving-attribution) provides an alternative to user tracking for ad attribution using the new `navigator.privateAttribution` object with `saveImpression()` and `measureConversion()` methods. Read more about PPA [in the explainer](https://github.com/mozilla/explainers/tree/main/ppa-experiment). This experiment can be enabled for websites via [origin trial](https://wiki.mozilla.org/Origin_Trials) or in the browser by setting the preference to `1`. ([Firefox bug 1900929](https://bugzil.la/1900929)).
 
 ## Older versions
 

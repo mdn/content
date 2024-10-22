@@ -111,7 +111,7 @@ The {{Glossary("HTML")}} language — [which will be discussed later on](/en-US/
 - to display other HTML documents with the {{HTMLElement("iframe")}} element.
 
 > [!NOTE]
-> When specifying URLs to load resources as part of a page (such as when using the `<script>`, `<audio>`, `<img>`, `<video>`, and the like), you should generally only use HTTP and HTTPS URLs, with few exceptions (one notable one being `data:`; see [Data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)). Using FTP, for example, is not secure and is no longer supported by modern browsers.
+> When specifying URLs to load resources as part of a page (such as when using the `<script>`, `<audio>`, `<img>`, `<video>`, and the like), you should generally only use HTTP and HTTPS URLs, with few exceptions (one notable one being `data:`; see [Data URLs](/en-US/docs/Web/URI/Schemes/data)). Using FTP, for example, is not secure and is no longer supported by modern browsers.
 
 Other technologies, such as {{Glossary("CSS")}} or {{Glossary("JavaScript")}}, use URLs extensively, and these are really the heart of the Web.
 
@@ -123,7 +123,7 @@ Let's examine what the distinction between _absolute_ and _relative_ means in th
 
 The required parts of a URL depend to a great extent on the context in which the URL is used. In your browser's address bar, a URL doesn't have any context, so you must provide a full (or _absolute_) URL, like the ones we saw above. You don't need to include the protocol (the browser uses HTTP by default) or the port (which is only required when the targeted Web server is using some unusual port), but all the other parts of the URL are necessary.
 
-When a URL is used within a document, such as in an HTML page, things are a bit different. Because the browser already has the document's own URL, it can use this information to fill in the missing parts of any URL available inside that document. We can differentiate between an _absolute URL_ and a _relative URL_ by looking only at the _path_ part of the URL. If the path part of the URL starts with the "`/`" character, the browser will fetch that resource from the top root of the server, without reference to the context given by the current document.
+When a URL is used within a document, such as in an HTML page, things are a bit different. Because the browser already has the document's own URL, it can use this information to fill in the missing parts of any URL available inside that document. We can differentiate between an _absolute URL_ and a _relative URL_ by looking only at the _path_ part of the URL. If the path part of the URL starts with the `/` character, the browser will fetch that resource from the top root of the server, without reference to the context given by the current document.
 
 Let's look at some examples to make this clearer. Let's assume that the URLs are defined from within the document located at the following URL: `https://developer.mozilla.org/en-US/docs/Learn`.
 
@@ -149,4 +149,4 @@ Linguistic semantics are of course irrelevant to computers. You've probably ofte
 
 ## See also
 
-[Data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs): URLs prefixed with the `data:` scheme, allow content creators to embed small files inline in documents.
+[Data URLs](/en-US/docs/Web/URI/Schemes/data): URLs prefixed with the `data:` scheme, allow content creators to embed small files inline in documents.

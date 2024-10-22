@@ -53,7 +53,7 @@ async function waitForCondition(func, targetValue, { signal } = {}) {
 ```
 
 On each iteration of the loop, we use `throwIfAborted()` to throw the signal's `reason` if the operation has been aborted (and otherwise do nothing).
-If the signal is aborted, this will cause the `waitForCondition()` promise to be rejected .
+If the signal is aborted, this will cause the `waitForCondition()` promise to be rejected.
 
 ## Specifications
 

@@ -30,7 +30,7 @@ The **CSS images** module defines the types of images that can be used (the {{CS
 - {{CSSxRef("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
 - {{CSSxRef("gradient/conic-gradient", "conic-gradient()")}}
 - {{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
-- {{CSSxRef("url", "url()")}}
+- {{cssxref("url_value", "&lt;url&gt;")}}
 - {{CSSxRef("element", "element()")}}
 - {{CSSxRef("image/image", "image()")}}
 - {{CSSxRef("cross-fade", "cross-fade()")}}

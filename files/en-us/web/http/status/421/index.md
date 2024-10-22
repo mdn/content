@@ -8,7 +8,7 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#name-421-misdirected-request
 {{HTTPSidebar}}
 
 The HTTP **`421 Misdirected Request`** [client error response](/en-US/docs/Web/HTTP/Status#client_error_responses) status code indicates that the request was directed to a server that is not able to produce a response.
-This can be sent by a server that is not configured to produce responses for the combination of [scheme](/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#scheme_or_protocol) and [authority](/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#authority) that are included in the request URI.
+This can be sent by a server that is not configured to produce responses for the combination of [scheme](/en-US/docs/Web/URI/Schemes) and [authority](/en-US/docs/Web/URI/Authority) that are included in the request URI.
 
 Clients may retry the request over a different connection.
 
@@ -29,7 +29,7 @@ GET / HTTP/1.1
 Host: abc.example.com
 ```
 
-In cases such as a wildcard certifcate (`*.example.com`) and a connection is reused for multiple domains (`abc.example.com`, `def.example.com`), the server may respond with a 421:
+In cases such as a wildcard certificate (`*.example.com`) and a connection is reused for multiple domains (`abc.example.com`, `def.example.com`), the server may respond with a 421:
 
 ```http
 HTTP/1.1 421 Misdirected Request

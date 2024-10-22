@@ -16,7 +16,7 @@ The **`Content-Length`** header indicates the size of the message body, in bytes
       <td>
         {{Glossary("Request header")}},
         {{Glossary("Response header")}},
-        {{Glossary("Payload header")}}
+        {{Glossary("Content header")}}
       </td>
     </tr>
     <tr>

@@ -2,7 +2,7 @@
 title: IdentityCredentialRequestOptions
 slug: Web/API/IdentityCredentialRequestOptions
 page-type: web-api-interface
-spec-urls: https://fedidcg.github.io/FedCM/#dictdef-identitycredentialrequestoptions
+spec-urls: https://w3c-fedid.github.io/FedCM/#dictdef-identitycredentialrequestoptions
 ---
 
 {{APIRef("FedCM API")}}{{SecureContext_Header}}

@@ -24,7 +24,7 @@ This example illustrates using the {{domxref("Touch")}} object's
 {{domxref("Touch.clientX")}} property is the horizontal coordinate of a touch point
 relative to the browser's viewport excluding any scroll offset. The
 `Touch.clientY` property is the vertical coordinate of the touch point
-relative to the browser's viewport excluding any scroll offset .
+relative to the browser's viewport excluding any scroll offset.
 
 In this example, we assume the user initiates a touch on an element with an id of
 `source`, moves within the element or out of the element and then releases

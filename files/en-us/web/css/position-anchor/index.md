@@ -9,7 +9,7 @@ browser-compat: css.properties.position-anchor
 
 {{CSSRef}}{{seecompattable}}
 
-The **`position-anchor`** [CSS](/en-US/docs/Web/CSS) property specifices the anchor name of the **anchor element** (i.e. an element that has an **anchor name** set on it via the {{cssxref("anchor-name")}} property) a positioned element is associated with.
+The **`position-anchor`** [CSS](/en-US/docs/Web/CSS) property specifies the anchor name of the **anchor element** (i.e. an element that has an **anchor name** set on it via the {{cssxref("anchor-name")}} property) a positioned element is associated with.
 
 ## Syntax
 
@@ -46,7 +46,7 @@ The anchor element accepts one or more `<dashed-ident>` anchor names set on it v
 
 If there are multiple anchor elements with the anchor name listed in the `position-anchor` property, the positioned element will be associated with the last anchor element in the source order with that anchor name.
 
-To tether a positioned element to its anchor, it must be placed relative to an anchor element using an anchor positioning feature, such as the {{cssxref("anchor()")}} function (set as a value on {{glossary("inset properties")}}) or the {{cssxref("inset-area")}} property.
+To tether a positioned element to its anchor, it must be placed relative to an anchor element using an anchor positioning feature, such as the {{cssxref("anchor()")}} function (set as a value on {{glossary("inset properties")}}) or the {{cssxref("position-area")}} property.
 
 If the associated anchor is hidden, for example with {{cssxref("display", "display: none")}} or {{cssxref("visibility", "visibility: hidden")}}, or if it is part of the [skipped contents](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#skips_its_contents) of another element due to it having {{cssxref("content-visibility", "content-visibility: hidden")}} set on it, the anchor positioned element will not be displayed.
 

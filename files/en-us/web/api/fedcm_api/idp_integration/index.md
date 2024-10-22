@@ -18,7 +18,7 @@ To integrate with FedCM, an IdP needs to do the following:
 
 ## Provide a well-known file
 
-There is a potential privacy issue whereby an [IdP is able to discern whether a user visited an RP without explicit consent](https://github.com/fedidcg/FedCM/issues/230). This has tracking implications, so an IdP is required to provide a well-known file to verify its identity and mitigate this issue.
+There is a potential privacy issue whereby an [IdP is able to discern whether a user visited an RP without explicit consent](https://github.com/w3c-fedid/FedCM/issues/230). This has tracking implications, so an IdP is required to provide a well-known file to verify its identity and mitigate this issue.
 
 The well-known file is requested via an uncredentialed [`GET`](/en-US/docs/Web/HTTP/Methods/GET) request, which doesn't follow redirects. This effectively prevents the IdP from learning who made the request and which RP is attempting to connect.
 
@@ -242,7 +242,7 @@ This information can be used in a couple of different ways:
 
 ## Update login status using the Login Status API
 
-The **Login Status API** allows an IdP to inform a browser of its login (sign-in) status in that particular browser — by this, we mean "whether any users are logged into the IdP on the current browser or not". The browser stores this state for each IdP; the FedCM API then uses it to reduce the number of requests it makes to the IdP (because it does not need to waste time requesting accounts when there are no users logged in to the IdP). It also mitigates [potential timing attacks](https://github.com/fedidcg/FedCM/issues/447).
+The **Login Status API** allows an IdP to inform a browser of its login (sign-in) status in that particular browser — by this, we mean "whether any users are logged into the IdP on the current browser or not". The browser stores this state for each IdP; the FedCM API then uses it to reduce the number of requests it makes to the IdP (because it does not need to waste time requesting accounts when there are no users logged in to the IdP). It also mitigates [potential timing attacks](https://github.com/w3c-fedid/FedCM/issues/447).
 
 For each known IdP (identified by its config URL) the browser keeps a tri-state variable representing the login state with three possible values:
 
@@ -295,4 +295,4 @@ Once the user is signed in to the IdP, the IdP should:
 
 ## See also
 
-- [Federated Credential Management API](https://developers.google.com/privacy-sandbox/3pcd/fedcm) on developers.google.com (2023)
+- [Federated Credential Management API](https://developers.google.com/privacy-sandbox/cookies/fedcm) on developers.google.com (2023)

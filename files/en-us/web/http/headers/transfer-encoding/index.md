@@ -7,9 +7,12 @@ browser-compat: http.headers.Transfer-Encoding
 
 {{HTTPSidebar}}
 
-The **`Transfer-Encoding`** header specifies the form of encoding used to safely transfer the {{Glossary("Payload body","payload body")}} to the user.
+The **`Transfer-Encoding`** header specifies the form of encoding used to transfer messages between nodes on the network.
 
-> **Note:** [HTTP/2](https://en.wikipedia.org/wiki/HTTP/2) disallows all uses of the Transfer-Encoding header other than the HTTP/2 specific: `"trailers"`. HTTP 2 provides its own more efficient mechanisms for data streaming than chunked transfer and forbids the use of the header. Usage of the header in HTTP/2 may likely result in a specific `protocol error` as HTTP/2 Protocol prohibits the use.
+> [!WARNING]
+> HTTP/2 disallows all uses of the Transfer-Encoding header other than the HTTP/2 specific: `"trailers"`.
+> HTTP/2 and later provides its own more efficient mechanisms for data streaming than chunked transfer and forbids the use of the header.
+> Usage of the header in HTTP/2 may likely result in a specific `protocol error` as HTTP/2 Protocol prohibits the use.
 
 `Transfer-Encoding` is a [hop-by-hop header](/en-US/docs/Web/HTTP/Headers#hop-by-hop_headers), that is applied to a message between two nodes, not to a resource itself.
 Each segment of a multi-node connection can use different `Transfer-Encoding` values.
@@ -22,7 +25,7 @@ When present on a response to a {{HTTPMethod("HEAD")}} request that has no body,
     <tr>
       <th scope="row">Header type</th>
       <td>
-        {{Glossary("Request header")}}, {{Glossary("Response header")}}, {{Glossary("Payload header")}}
+        {{Glossary("Request header")}}, {{Glossary("Response header")}}, {{Glossary("Content header")}}
       </td>
     </tr>
     <tr>
@@ -47,7 +50,7 @@ Transfer-Encoding: gzip, chunked
 ## Directives
 
 - `chunked`
-  - : Data is sent in a series of chunks. The {{HTTPHeader("Content-Length")}} header is omitted in this case and at the beginning of each chunk you need to add the length of the current chunk in hexadecimal format, followed by '`\r\n`' and then the chunk itself, followed by another '`\r\n`'.
+  - : Data is sent in a series of chunks. The {{HTTPHeader("Content-Length")}} header is omitted in this case and at the beginning of each chunk you need to add the length of the current chunk in hexadecimal format, followed by `\r\n` and then the chunk itself, followed by another `\r\n`.
     The terminating chunk is a regular chunk, with the exception that its length is zero.
     It is followed by the trailer, which consists of a (possibly empty) sequence of header fields.
 - `compress`
@@ -66,7 +69,7 @@ Transfer-Encoding: gzip, chunked
 ### Chunked encoding
 
 Chunked encoding is useful when larger amounts of data are sent to the client and the total size of the response may not be known until the request has been fully processed.
-For example, when generating a large HTML table resulting from a database query or when transmitting large images. \
+For example, when generating a large HTML table resulting from a database query or when transmitting large images.
 A chunked response looks like this:
 
 ```http

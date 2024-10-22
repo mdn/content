@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.WorkerNavigator.storage
 ---
 
-{{securecontext_header}}{{APIRef("Storage")}}
+{{securecontext_header}}{{APIRef("Storage")}}{{AvailableInWorkers("worker")}}
 
 The **`storage`** read-only property of the {{domxref("WorkerNavigator")}} interface
 returns the singleton {{domxref("StorageManager")}} object used to

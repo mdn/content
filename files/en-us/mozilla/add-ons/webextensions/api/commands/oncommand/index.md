@@ -73,4 +73,4 @@ browser.commands.onCommand.addListener((command) => {
 {{Compat}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/commands/) API.
+> This API is based on Chromium's [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/api/commands) API.

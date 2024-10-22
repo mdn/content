@@ -8,7 +8,7 @@ status:
 browser-compat: api.HIDDevice.collections
 ---
 
-{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_shared")}}
 
 The **`collections`** read-only property of the {{domxref("HIDDevice")}} interface returns an array of report formats
 

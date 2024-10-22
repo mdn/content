@@ -15,7 +15,7 @@ A typical 3D scene in a game — even the simplest one — contains standard ite
 
 To start developing with Three.js, you should make sure you are using a modern browser with good [WebGL](/en-US/docs/Web/API/WebGL_API) support, such as the latest Firefox or Chrome.
 
-You can download the [latest Three.js library](https://github.com/mrdoob/three.js/archive/master.zip) and copy the minified version of Three.js from the uncompressed archive at `build/three.module.min.js` into your project.
+You can download the [latest Three.js library](https://codeload.github.com/mrdoob/three.js/zip/refs/heads/master) and copy the minified version of Three.js from the uncompressed archive at `build/three.module.min.js` into your project.
 Bear in mind that the archives include source files, which makes the download size approximately 350MB.
 
 Alternatively, you can import Three.js [using a CDN or use Node.js](https://threejs.org/docs/#manual/en/introduction/Installation).
@@ -214,7 +214,7 @@ dodecahedron.position.x = 25;
 scene.add(dodecahedron);
 ```
 
-This time, we are creating a dodecahedron, a shape containing twelve flat faces. The parameter, `DodecahedronGeometry(),` defines the size of the object. We're using a Lambert material, similar to Phong, but should be less glossy. Again it's black, for now. We're moving the object to the right, so it's not in the same position as the box, or torus.
+This time, we are creating a dodecahedron, a shape containing twelve flat faces. The parameter to `DodecahedronGeometry()` defines the size of the object. We're using a Lambert material, similar to Phong, but should be less glossy. Again it's black, for now. We're moving the object to the right, so it's not in the same position as the box, or torus.
 
 As mentioned above, the new objects currently just look black. To have both, the Phong and Lambert materials properly visible, we need to introduce a source of light.
 
@@ -250,7 +250,7 @@ This rotates the cube on every frame, by a tiny bit, so the animation looks smoo
 
 ### Scaling
 
-We can also scale an object. Applying a constant value, we would make it grow, or shrink just once. Let's make things more interesting. First, we implement a helper variable, called `t,` for counting elapsed time. Add it right before the `render()` function:
+We can also scale an object. Applying a constant value, we would make it grow, or shrink just once. Let's make things more interesting. First, we implement a helper variable called `t` for counting elapsed time. Add it right before the `render()` function:
 
 ```js
 let t = 0;

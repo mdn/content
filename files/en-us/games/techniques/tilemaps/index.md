@@ -132,5 +132,5 @@ In fast games that might still not be enough. An alternative method would be to 
 - External resources:
 
   - [Demos and source code](https://mozdevs.github.io/gamedev-js-tiles/)
-  - [Amit's thoughts on grids](http://www-cs-students.stanford.edu/~amitp/game-programming/grids/)
+  - [Grid parts and relationships](https://www.redblobgames.com/grids/parts/) by Amit Patel (May 2021)
   - [Isometric graphics in videogames](https://en.wikipedia.org/wiki/Isometric_graphics_in_video_games_and_pixel_art) (Wikipedia)

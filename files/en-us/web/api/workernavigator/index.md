@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.WorkerNavigator
 ---
 
-{{APIRef("Web Workers API")}}
+{{APIRef("Web Workers API")}}{{AvailableInWorkers("worker")}}
 
 The **`WorkerNavigator`** interface represents a subset of the {{DOMxRef("Navigator")}} interface allowed to be accessed from a {{DOMxRef("Worker")}}. Such an object is initialized for each worker and is available via the {{DOMxRef("WorkerGlobalScope.navigator", "self.navigator")}} property.
 
@@ -29,6 +29,8 @@ _The `WorkerNavigator` interface doesn't inherit any property._
   - : Returns the {{domxref("GPU")}} object for the current worker context. The entry point for the {{domxref("WebGPU_API", "WebGPU API", "", "nocode")}}.
 - {{DOMxRef("WorkerNavigator.hardwareConcurrency")}} {{ReadOnlyInline}}
   - : Returns the number of logical processor cores available.
+- {{domxref("WorkerNavigator.hid")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
+  - : Returns an {{domxref("HID")}} object providing methods for connecting to HID devices already granted permission by the user and listing attached HID devices, and event handlers for responding to HID devices connecting and disconnecting.
 - {{DOMxRef("WorkerNavigator.language")}} {{ReadOnlyInline}}
   - : Returns a string representing the preferred language of the user, usually the language of the browser UI. The `null` value is returned when this is unknown.
 - {{DOMxRef("WorkerNavigator.languages")}} {{ReadOnlyInline}}
@@ -62,9 +64,9 @@ _The `WorkerNavigator` interface doesn't inherit any property._
 
 _The `WorkerNavigator` interface doesn't inherit any method._
 
-- {{domxref("Navigator.clearAppBadge()")}} {{SecureContext_Inline}}
+- {{domxref("WorkerNavigator.clearAppBadge()")}} {{SecureContext_Inline}}
   - : Clears a badge on the current app's icon and returns a {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
-- {{domxref("Navigator.setAppBadge()")}} {{SecureContext_Inline}}
+- {{domxref("WorkerNavigator.setAppBadge()")}} {{SecureContext_Inline}}
   - : Sets a badge on the icon associated with this app and returns a {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
 
 ## Specifications

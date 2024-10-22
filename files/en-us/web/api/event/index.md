@@ -92,6 +92,8 @@ Note that all event interfaces have names which end in "Event".
   - : Indicates which phase of the event flow is being processed. It is one of the following numbers: `NONE`, `CAPTURING_PHASE`, `AT_TARGET`, `BUBBLING_PHASE`.
 - {{domxref("Event.isTrusted")}} {{ReadOnlyInline}}
   - : Indicates whether or not the event was initiated by the browser (after a user click, for instance) or by a script (using an event creation method, for example).
+- {{domxref("Event.srcElement")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+  - : An alias for the {{domxref("Event.target")}} property. Use {{domxref("Event.target")}} instead.
 - {{domxref("Event.target")}} {{ReadOnlyInline}}
   - : A reference to the object to which the event was originally dispatched.
 - {{domxref("Event.timeStamp")}} {{ReadOnlyInline}}

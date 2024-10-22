@@ -19,8 +19,8 @@ In addition, the specification provides CSS-only mechanisms to:
 ### Properties
 
 - {{cssxref("anchor-name")}}
-- {{cssxref("inset-area")}}
 - {{cssxref("position-anchor")}}
+- {{cssxref("position-area")}}
 - {{cssxref("position-try-fallbacks")}}
 - {{cssxref("position-try-order")}}
 - {{cssxref("position-try")}} shorthand
@@ -43,8 +43,8 @@ In addition, the specification provides CSS-only mechanisms to:
 - [`anchor-center`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center)
 - [`<anchor-side>`](/en-US/docs/Web/CSS/anchor#anchor-side)
 - [`<anchor-size>`](/en-US/docs/Web/CSS/anchor-size#anchor-size)
-- [`<inset-area>`](/en-US/docs/Web/CSS/inset-area_value)
-- [`<try-side>`](/en-US/docs/Web/CSS/position-try-order#try-side)
+- [`<position-area>`](/en-US/docs/Web/CSS/position-area_value)
+- [`<try-size>`](/en-US/docs/Web/CSS/position-try-order#try-size)
 - [`<try-tactic>`](/en-US/docs/Web/CSS/position-try-fallbacks#try-tactic)
 
 ### HTML attributes

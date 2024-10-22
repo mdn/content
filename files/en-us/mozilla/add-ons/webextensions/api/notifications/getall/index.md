@@ -76,4 +76,4 @@ browser.notifications.getAll().then(logNotifications);
 {{WebExtExamples}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/notifications/) API.
+> This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications) API.

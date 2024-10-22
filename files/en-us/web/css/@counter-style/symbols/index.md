@@ -95,5 +95,5 @@ In this example, the list of values for the `symbols` descriptor include letters
 - {{cssxref("@counter-style")}} descriptors: {{cssxref("@counter-style/system","system")}}, {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}, {{cssxref("@counter-style/negative", "negative")}}, {{cssxref("@counter-style/prefix", "prefix")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/range", "range")}}, {{cssxref("@counter-style/pad", "pad")}}, {{cssxref("@counter-style/speak-as", "speak-as")}}, {{cssxref("@counter-style/fallback", "fallback")}}
 - List style properties: {{cssxref("list-style")}}, {{cssxref("list-style-image")}}, {{cssxref("list-style-position")}}
 - {{cssxref("symbols", "symbols()")}} function
-- {{cssxref("url", "url()")}} function
+- {{cssxref("url_value", "&lt;url&gt;")}} type
 - [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module

@@ -163,11 +163,11 @@ As seen in the previous `render()` function code example, each token is given a 
 
 .token-tagName {
   font-weight: bold;
-  color: rgb(117, 186, 242);
+  color: rgb(117 186 242);
 }
 
 .token-attributeName {
-  color: rgb(207, 81, 198);
+  color: rgb(207 81 198);
 }
 
 .token-attributeValue {
@@ -199,7 +199,7 @@ As seen in the previous `render()` function code example, each token is given a 
 
 ### Rendering the selection
 
-Even though the demo app uses a `<div>` element for the editor, which already supports displaying a blinking text cursor and highlighting user selections, the EditContext API still requires to render the selection. This is because the EditContext API can be used with other types of elements that don't support these behaviors. Rendering the selection ourselves also gives us more control over how the selection is displayed. Finally, because the `render()` function clears the HTML content of the editor element everytime it runs, any selection that the user might have made is lost the next time the `render()` function runs.
+Even though the demo app uses a `<div>` element for the editor, which already supports displaying a blinking text cursor and highlighting user selections, the EditContext API still requires to render the selection. This is because the EditContext API can be used with other types of elements that don't support these behaviors. Rendering the selection ourselves also gives us more control over how the selection is displayed. Finally, because the `render()` function clears the HTML content of the editor element every time it runs, any selection that the user might have made is lost the next time the `render()` function runs.
 
 To render the selection, the demo app uses the {{domxref("Selection.setBaseAndExtent()")}} method at the end of the `render()` function. To use the `setBaseAndExtent()` method, we need a pair of DOM nodes and character offsets that represent the start and end of the selection. However, the EditContext API maintains the state for the current selection only as a pair of start and end character offsets into the entire edit buffer. The demo app code uses another function, called `fromOffsetsToSelection()` that's used to convert these character offsets into four values:
 

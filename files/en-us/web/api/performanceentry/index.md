@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.PerformanceEntry
 ---
 
-{{APIRef("Performance API")}} {{AvailableInWorkers}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`PerformanceEntry`** object encapsulates a single performance metric that is part of the browser's performance timeline.
 
@@ -35,7 +35,7 @@ The `PerformanceEntry` instances will always be one of the following subclasses:
 - {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}}
   - : A string representing the name for a performance entry. The value depends on the subtype.
 - {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}}
-  - : A string representing the type of performance metric. For example, "`mark`" when {{domxref("PerformanceMark")}} is used.
+  - : A string representing the type of performance metric. For example, `"mark"` when {{domxref("PerformanceMark")}} is used.
 - {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} representing the starting time for the performance metric.
 - {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}}

@@ -67,7 +67,10 @@ This example shows three images: the image with a `blur()` filter function appli
   <filter id="blur">
     <feGaussianBlur stdDeviation="3.5" edgeMode="duplicate" />
   </filter>
-  <image href="flag.jpg" xlink:href="flag.jpg" filter="url(#blur)" />
+  <image
+    href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+    xlink:href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+    filter="url(#blur)" />
 </svg>
 ```
 
@@ -89,18 +92,26 @@ svg:not([height]) {
   <tbody>
     <tr>
       <td>
-        <img class="filter" src="flag.jpg" alt="Pride flag" />
+        <img
+          class="filter"
+          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+          alt="Pride flag" />
       </td>
       <td>
         <svg id="svg" height="220" width="220" style="overflow: visible">
           <filter id="svgBlur">
             <feGaussianBlur stdDeviation="3.5" />
           </filter>
-          <image href="flag.jpg" xlink:href="flag.jpg" filter="url(#svgBlur)" />
+          <image
+            href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+            xlink:href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+            filter="url(#svgBlur)" />
         </svg>
       </td>
       <td>
-        <img src="flag.jpg" alt="Pride flag" />
+        <img
+          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+          alt="Pride flag" />
       </td>
     </tr>
   </tbody>

@@ -152,7 +152,7 @@ The code snippet below shows how this works. Continuing the "youngest team" exam
 ```django
 #best/templates/best/index.html
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <body>
     {% if youngest_teams %}
@@ -251,7 +251,7 @@ Deno is powered by [Tokio](https://tokio.rs/) — a Rust-based asynchronous runt
 
 Deno's features include:
 
-- Security by default. [Deno modules restrict permissions](https://docs.deno.com/runtime/manual/getting_started/first_steps/#runtime-security) to **file**, **network**, or **environment** access unless explicitly allowed.
+- Security by default. [Deno modules restrict permissions](https://docs.deno.com/runtime/fundamentals/security/) to **file**, **network**, or **environment** access unless explicitly allowed.
 - TypeScript support **out-of-the-box**.
 - First-class await mechanism.
 - Built-in testing facility and code formatter (`deno fmt`)

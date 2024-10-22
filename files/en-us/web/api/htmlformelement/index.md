@@ -91,13 +91,13 @@ Some names will interfere with JavaScript access to the form's properties and el
 
 For example:
 
-- `<input name="id">` will take precedence over `<form id="…">`. This means that `form.id` will not refer to the form's id, but to the element whose name is "`id`". This will be the case with any other form properties, such as `<input name="action">` or `<input name="post">`.
+- `<input name="id">` will take precedence over `<form id="…">`. This means that `form.id` will not refer to the form's id, but to the element whose name is `"id"`. This will be the case with any other form properties, such as `<input name="action">` or `<input name="post">`.
 - `<input name="elements">` will render the form's `elements` collection inaccessible. The reference `form.elements` will now refer to the individual element.
 
 To avoid such problems with element names:
 
 - _Always_ use the `elements` collection to avoid ambiguity between an element name and a form property.
-- _Never_ use "`elements`" as an element name.
+- _Never_ use `"elements"` as an element name.
 
 If you are not using JavaScript, this will not cause a problem.
 
@@ -113,7 +113,7 @@ The elements included by `HTMLFormElement.elements` and `HTMLFormElement.length`
 - {{HTMLElement("select")}}
 - {{HTMLElement("textarea")}}
 
-No other elements are included in the list returned by `elements`, which makes it an excellent way to get at the elements most important when processing forms.
+No other elements are included in the list returned by `elements`, which makes it an excellent way to get at the most important elements when processing forms.
 
 ## Examples
 
@@ -187,10 +187,10 @@ Submit a `<form>` into a new window:
   <body>
     <form action="test.php" target="_blank">
       <p>
-        <label>First name: <input type="text" name="firstname" /></label>
+        <label>First name: <input type="text" name="first-name" /></label>
       </p>
       <p>
-        <label>Last name: <input type="text" name="lastname" /></label>
+        <label>Last name: <input type="text" name="last-name" /></label>
       </p>
       <p>
         <label><input type="password" name="pwd" /></label>

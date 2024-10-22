@@ -86,12 +86,6 @@ A Safari extension, the `autocorrect` attribute is a string which indicates whet
 - `off`
   - : Disable automatic correction and text substitutions.
 
-### mozactionhint {{deprecated_inline}}
-
-A Mozilla extension, which provides a hint as to what sort of action will be taken if the user presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field.
-
-<strong>Deprecated: Use [`enterkeyhint`](/en-US/docs/Web/HTML/Global_attributes#enterkeyhint) instead.</strong>
-
 ## Using tel inputs
 
 Telephone numbers are a very commonly collected type of data on the web. When creating any kind of registration or e-commerce site, for example, you will likely need to ask the user for a telephone number, whether for business purposes or for emergency contact purposes. Given how commonly-entered phone numbers are, it's unfortunate that a "one size fits all" solution for validating phone numbers is not practical.

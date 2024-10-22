@@ -2,9 +2,6 @@
 title: JavaScript modules
 slug: Web/JavaScript/Guide/Modules
 page-type: guide
-browser-compat:
-  - javascript.statements.import
-  - javascript.statements.export
 ---
 
 {{jsSidebar("JavaScript Guide")}}{{Previous("Web/JavaScript/Guide/Meta_programming")}}
@@ -15,15 +12,9 @@ This guide gives you all you need to get started with JavaScript module syntax.
 
 JavaScript programs started off pretty small — most of its usage in the early days was to do isolated scripting tasks, providing a bit of interactivity to your web pages where needed, so large scripts were generally not needed. Fast forward a few years and we now have complete applications being run in browsers with a lot of JavaScript, as well as JavaScript being used in other contexts ([Node.js](/en-US/docs/Glossary/Node.js), for example).
 
-It has therefore made sense in recent years to start thinking about providing mechanisms for splitting JavaScript programs up into separate modules that can be imported when needed. Node.js has had this ability for a long time, and there are a number of JavaScript libraries and frameworks that enable module usage (for example, other [CommonJS](https://en.wikipedia.org/wiki/CommonJS) and [AMD](https://github.com/amdjs/amdjs-api/blob/master/AMD.md)-based module systems like [RequireJS](https://requirejs.org/), and more recently [Webpack](https://webpack.js.org/) and [Babel](https://babeljs.io/)).
+Complex projects necessitate a mechanism for splitting JavaScript programs into separate modules that can be imported when needed. Node.js has had this ability for a long time, and there are a number of JavaScript libraries and frameworks that enable module usage (for example, other [CommonJS](https://en.wikipedia.org/wiki/CommonJS) and [AMD](https://github.com/amdjs/amdjs-api/blob/master/AMD.md)-based module systems like [RequireJS](https://requirejs.org/), [Webpack](https://webpack.js.org/), and [Babel](https://babeljs.io/)).
 
-The good news is that modern browsers have started to support module functionality natively, and this is what this article is all about. This can only be a good thing — browsers can optimize loading of modules, making it more efficient than having to use a library and do all of that extra client-side processing and extra round trips.
-
-Use of native JavaScript modules is dependent on the {{jsxref("Statements/import", "import")}} and {{jsxref("Statements/export", "export")}} statements; these are supported in browsers as shown in the compatibility table below.
-
-## Browser compatibility
-
-{{Compat}}
+All modern browsers support module features natively without needing transpilation. It can only be a good thing — browsers can optimize loading of modules, making it more efficient than having to use a library and do all of that extra client-side processing and extra round trips. It does not obsolete bundlers like Webpack, though — bundlers still do a good job at partitioning code into reasonably sized chunks, and are able to do other optimizations like minification, dead code elimination, and tree-shaking.
 
 ## Introducing an example
 
@@ -364,6 +355,24 @@ An import map like the one below then provides a mapping to the actual script fi
 If `dependency_script` changes, then its hash contained in the file name changes as well. In this case, we only need to update the import map to reflect the changed name of the module.
 We don't have to update the source of any JavaScript code that depends on it, because the specifier in the import statement does not change.
 
+## Loading non-JavaScript resources
+
+One exciting feature that a unified module architecture brings is the ability to load non-JavaScript resources as modules. For example, you can import JSON as a JavaScript object, or import CSS as a {{domxref("CSSStyleSheet")}} object.
+
+You must explicitly declare what kind of resource you are importing. By default, the browser assumes that the resource is JavaScript, and will throw an error if the resolved resource is something else. To import JSON, CSS, or other types of resource, use the [import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) syntax:
+
+```js
+import colors from "./colors.json" with { type: "json" };
+import styles from "./styles.css" with { type: "css" };
+```
+
+Browsers will also perform validation on the module type, and fail if, for example, `./data.json` does not resolve to a JSON file. This ensures that you don't accidentally execute code when you just intend to import data. Once imported successfully, you can now use the imported value as a normal JavaScript object or `CSSStyleSheet` object.
+
+```js
+console.log(colors.map((color) => color.value));
+document.adoptedStyleSheets = [styles];
+```
+
 ## Applying the module to your HTML
 
 Now we just need to apply the `main.js` module to our HTML page. This is very similar to how we apply a regular script to a page, with a few notable differences.
@@ -399,10 +408,10 @@ You should generally define all your modules in separate files. Modules declared
 > Modules and their dependencies can be preloaded by specifying them in [`<link>`](/en-US/docs/Web/HTML/Element/link) elements with [`rel="modulepreloaded"`](/en-US/docs/Web/HTML/Attributes/rel/modulepreload).
 > This can significantly reduce load time when the modules are used.
 
-## Other differences between modules and standard scripts
+## Other differences between modules and classic scripts
 
 - You need to pay attention to local testing — if you try to load the HTML file locally (i.e. with a `file://` URL), you'll run into CORS errors due to JavaScript module security requirements. You need to do your testing through a server.
-- Also, note that you might get different behavior from sections of script defined inside modules as opposed to in standard scripts. This is because modules use {{jsxref("Strict_mode", "strict mode", "", 1)}} automatically.
+- Also, note that you might get different behavior from sections of script defined inside modules as opposed to in classic scripts. This is because modules use {{jsxref("Strict_mode", "strict mode", "", 1)}} automatically.
 - There is no need to use the `defer` attribute (see [`<script>` attributes](/en-US/docs/Web/HTML/Element/script#attributes)) when loading a module script; modules are deferred automatically.
 - Modules are only executed once, even if they have been referenced in multiple `<script>` tags.
 - Last but not least, let's make this clear — module features are imported into the scope of a single script — they aren't available in the global scope. Therefore, you will only be able to access imported features in the script they are imported into, and you won't be able to access them from the JavaScript console, for example. You'll still get syntax errors shown in the DevTools, but you'll not be able to use some of the debugging techniques you might have expected to use.

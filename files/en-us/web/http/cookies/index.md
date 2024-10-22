@@ -52,7 +52,7 @@ The following HTTP response instructs the receiving browser to store a pair of c
 ```http
 HTTP/2.0 200 OK
 Content-Type: text/html
-Set-Cookie: yummy_cookie=choco
+Set-Cookie: yummy_cookie=chocolate
 Set-Cookie: tasty_cookie=strawberry
 
 [page content]
@@ -66,7 +66,7 @@ When a new request is made, the browser usually sends previously stored cookies 
 ```http
 GET /sample_page.html HTTP/2.0
 Host: www.example.org
-Cookie: yummy_cookie=choco; tasty_cookie=strawberry
+Cookie: yummy_cookie=chocolate; tasty_cookie=strawberry
 ```
 
 ### Removal: defining the lifetime of a cookie
@@ -109,7 +109,7 @@ There are several reasons why you might want to do this, for example if a user h
 In the browser, you can create new cookies via JavaScript using the {{domxref("Document.cookie")}} property, or the asynchronous {{domxref("Cookie_Store_API", "Cookie Store API", "", "nocode")}}. Note that all examples below use `Document.cookie`, as it is the most widely supported/established option.
 
 ```js
-document.cookie = "yummy_cookie=choco";
+document.cookie = "yummy_cookie=chocolate";
 document.cookie = "tasty_cookie=strawberry";
 ```
 
@@ -117,7 +117,7 @@ You can also access existing cookies and set new values for them, provided the [
 
 ```js
 console.log(document.cookie);
-// logs "yummy_cookie=choco; tasty_cookie=strawberry"
+// logs "yummy_cookie=chocolate; tasty_cookie=strawberry"
 
 document.cookie = "yummy_cookie=blueberry";
 
@@ -248,7 +248,7 @@ See our [Third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies) artic
 
 Legislation or regulations that cover the use of cookies include:
 
-- The General Data Privacy Regulation (GDPR) in the European Union
+- The [General Data Privacy Regulation](https://gdpr.eu/) (GDPR) in the European Union
 - The ePrivacy Directive in the EU
 - The California Consumer Privacy Act
 

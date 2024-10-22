@@ -31,7 +31,7 @@ new IntersectionObserver(callback, options)
     The callback receives as input two parameters:
 
     - `entries`
-      - : An array of {{domxref("IntersectionObserverEntry")}} objects, each representing one threshold which was crossed, either becoming more or less visible than the percentage specified by that threshold.
+      - : An array of {{domxref("IntersectionObserverEntry")}} objects, each representing one threshold which was crossed, either becoming more or less visible than the percentage specified by that threshold. You should not assume the number of entries, because multiple threshold-crossing events may be reported in a single callback invocation. The entries are dispatched using a queue, so they should be ordered by the time they were generated, but you should preferably use {{domxref("IntersectionObserverEntry.time")}} to correctly order them.
     - `observer`
       - : The {{domxref("IntersectionObserver")}} for which the callback is being invoked.
 

@@ -131,8 +131,8 @@ _This interface also inherits methods from its ancestors {{domxref("HTMLElement"
 
 _These methods are obsolete and should not be used, even if a browser still supports them._
 
-- {{domxref("HTMLMediaElement.mozCaptureStream()")}} {{Non-standard_Inline}}
-  - : \[enter description]
+- {{domxref("HTMLMediaElement.captureStream", "HTMLMediaElement.mozCaptureStream()")}} {{Non-standard_Inline}}
+  - : The Firefox-prefixed equivalent of {{domxref("HTMLMediaElement.captureStream()")}}. See its [browser compatibility](/en-US/docs/Web/API/HTMLMediaElement/captureStream#browser_compatibility) for details.
 - {{domxref("HTMLMediaElement.mozCaptureStreamUntilEnded()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : \[enter description]
 - {{domxref("HTMLMediaElement.mozGetMetadata()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
@@ -154,6 +154,8 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
   - : Fired when the duration property has been updated.
 - {{domxref("HTMLMediaElement.emptied_event", 'emptied')}}
   - : Fired when the media has become empty; for example, when the media has already been loaded (or partially loaded), and the {{domxref("HTMLMediaElement.load()")}} method is called to reload it.
+- {{domxref("HTMLMediaElement.encrypted_event", 'encrypted')}}
+  - : Fired when initialization data is found in the media, indicating that it is encrypted.
 - {{domxref("HTMLMediaElement.ended_event", 'ended')}}
   - : Fired when playback stops when end of the media (\<audio> or \<video>) is reached or because no further data is available.
 - {{domxref("HTMLMediaElement.error_event", 'error')}}

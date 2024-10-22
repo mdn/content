@@ -378,7 +378,7 @@ Since `firstClone` is a `DocumentFragment`, only its children are added to `cont
 
 ## See also
 
-- [`part`](/en-US/docs/Web/HTML/Global_attributes#part) and [`exportparts`](/en-US/docs/Web/HTML/Global_attributes#exportparts) HTML attributes
+- [`part`](/en-US/docs/Web/HTML/Global_attributes/part) and [`exportparts`](/en-US/docs/Web/HTML/Global_attributes/exportparts) HTML attributes
 - {{HTMLElement("slot")}} HTML element
 - {{CSSXref(":host")}}, {{CSSXref(":host_function", ":host()")}}, and {{CSSXref(":host-context", ":host-context()")}} CSS pseudo-classes
 - {{CSSXref("::part")}} and {{CSSXref("::slotted")}} CSS pseudo-elements
@@ -386,4 +386,4 @@ Since `firstClone` is a `DocumentFragment`, only its children are added to `cont
 - [Using templates and slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots)
 - [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
 - [Declarative Shadow DOM (with html)](/en-US/docs/Web/API/Web_components/Using_shadow_DOM#declaratively_with_html) in _Using Shadow DOM_
-- [Declarative shadow DOM](https://developer.chrome.com/docs/css-ui/declarative-shadow-dom) on developer.chrome.com (2023)
+- [Declarative shadow DOM](https://web.dev/articles/declarative-shadow-dom) on web.dev (2023)

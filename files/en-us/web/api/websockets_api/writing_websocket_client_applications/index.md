@@ -24,8 +24,9 @@ webSocket = new WebSocket(url, protocols);
 
 - `url`
   - : The URL to which to connect; this should be the URL to which the WebSocket server will respond.
-    This should use the URL scheme `wss://`, although some software may allow you to use the insecure `ws://` for local connections.
-- `protocols` {{ optional_inline() }}
+    This should use the URL scheme `wss://`, although some software may allow you to use the insecure `ws://` for a local connection.
+    Relative URL values and `https://` and `http://` schemes are also allowed in [most recent browser versions](/en-US/docs/Web/API/WebSocket/WebSocket#browser_compatibility).
+- `protocols` {{optional_inline}}
   - : Either a single protocol string or an array of protocol strings.
     These strings are used to indicate sub-protocols, so that a single server can implement multiple WebSocket sub-protocols (for example, you might want one server to be able to handle different types of interactions depending on the specified `protocol`).
     If you don't specify a protocol string, an empty string is assumed.
@@ -35,7 +36,7 @@ This may happen if you attempt to use an insecure connection (most {{Glossary("u
 
 ### Connection errors
 
-If an error occurs while attempting to connect, first a simple event with the name `error` is sent to the {{domxref("WebSocket")}} object (thereby invoking its {{domxref("WebSocket/error_event", "onerror")}} handler), and then the {{domxref("CloseEvent")}} is sent to the `WebSocket` object (thereby invoking its {{domxref("WebSocket/close_event", "onclose")}} handler) to indicate the reason for the connection's closing.
+If an error occurs while attempting to connect, an [`error` event](/en-US/docs/Web/API/WebSocket/error_event) is first sent to the {{domxref("WebSocket")}} object (thereby invoking any handlers), followed by a [`close` event](/en-US/docs/Web/API/WebSocket/close_event) that indicates the reason for the connection's closing.
 
 The browser may also output to its console a more descriptive error message as well as a closing code as defined in [RFC 6455, Section 7.4](https://datatracker.ietf.org/doc/html/rfc6455#section-7.4) through the {{domxref("CloseEvent")}}.
 
@@ -51,8 +52,8 @@ const exampleSocket = new WebSocket(
 );
 ```
 
-On return, {{domxref("WebSocket.readyState", "exampleSocket.readyState")}} is `CONNECTING`. The `readyState` will become `OPEN` once
-the connection is ready to transfer data.
+On return, {{domxref("WebSocket.readyState", "exampleSocket.readyState")}} is `CONNECTING`.
+The `readyState` will become `OPEN` once the connection is ready to transfer data.
 
 If you want to open a connection and are flexible about the protocols you support, you can specify an array of protocols:
 
@@ -89,9 +90,8 @@ exampleSocket.onopen = (event) => {
 
 ### Using JSON to transmit objects
 
-One handy thing you can do is use {{glossary("JSON")}} to send reasonably complex data
-to the server. For example, a chat program can interact with a server using a protocol
-implemented using packets of JSON-encapsulated data:
+One handy thing you can do is use {{glossary("JSON")}} to send reasonably complex data to the server.
+For example, a chat program can interact with a server using a protocol implemented using packets of JSON-encapsulated data:
 
 ```js
 // Send text to all users through the server

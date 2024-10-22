@@ -10,7 +10,7 @@ browser-compat: svg.global_attributes.stroke-opacity
 The **`stroke-opacity`** attribute is a presentation attribute defining the opacity of the paint server (_color_, _gradient_, _pattern_, etc.) applied to the stroke of a shape.
 
 > [!NOTE]
-> As a presentation attribute `stroke-opacity` can be used as a CSS property.
+> As a presentation attribute `stroke-opacity` can be used as a CSS property. See {{cssxref('stroke-opacity')}} for more.
 
 You can use this attribute with the following SVG elements:
 
@@ -80,9 +80,6 @@ svg {
   </tbody>
 </table>
 
-> [!NOTE]
-> SVG2 introduces percentage values for `stroke-opacity`, however, it is not widely supported yet (_See [Browser compatibility](#browser_compatibility) below_) as a consequence, it is best practices to set opacity with a value in the range `[0-1]`.
-
 It's important to know that the stroke partially covers the fill of a shape, so a stroke with an opacity different than `1` will partially show the fill underneath. To avoid this effect, it is possible to apply a global opacity with the {{SVGAttr('opacity')}} attribute or to put the stroke behind the fill with the {{SVGAttr('paint-order')}} attribute.
 
 ## Specifications
@@ -95,6 +92,16 @@ It's important to know that the stroke partially covers the fill of a shape, so 
 
 ## See also
 
+CSS properties:
+
+- {{cssxref('stroke-opacity')}}
+- {{cssxref('stroke')}}
+- {{cssxref('opacity')}}
+- {{cssxref('fill-opacity')}}
+
+SVG Attributes:
+
+- {{SVGAttr("stroke")}}
 - {{SVGAttr("opacity")}}
 - {{SVGAttr("fill-opacity")}}
 - {{SVGAttr("stop-opacity")}}

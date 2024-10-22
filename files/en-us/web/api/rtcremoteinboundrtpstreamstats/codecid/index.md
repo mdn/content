@@ -3,7 +3,7 @@ title: "RTCRemoteInboundRtpStreamStats: codecId property"
 short-title: codecId
 slug: Web/API/RTCRemoteInboundRtpStreamStats/codecId
 page-type: web-api-instance-property
-browser-compat: api.RTCStatsReport.type_remote-outbound-rtp.codecId
+browser-compat: api.RTCStatsReport.type_remote-inbound-rtp.codecId
 ---
 
 {{APIRef("WebRTC")}}

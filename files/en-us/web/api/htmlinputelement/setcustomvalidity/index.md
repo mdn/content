@@ -3,7 +3,7 @@ title: "HTMLInputElement: setCustomValidity() method"
 short-title: setCustomValidity()
 slug: Web/API/HTMLInputElement/setCustomValidity
 page-type: web-api-instance-method
-browser-compat: api.HTMLObjectElement.setCustomValidity
+browser-compat: api.HTMLInputElement.setCustomValidity
 ---
 
 {{APIRef("HTML DOM")}}

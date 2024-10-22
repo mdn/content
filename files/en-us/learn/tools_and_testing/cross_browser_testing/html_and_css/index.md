@@ -52,7 +52,7 @@ Basically, it is a matter of checking whether your HTML and CSS code is well for
 
 ### Validation
 
-For HTML, validation involves making sure all your tags are properly closed and nested, you are using a DOCTYPE, and you are using tags for their correct purpose. A good strategy is to validate your code regularly. One service that can do this is the W3C [Markup Validation Service](https://validator.w3.org/), which allows you to point to your code, and returns a list of errors:
+For HTML, validation involves making sure all your tags are properly closed and nested, you are using a doctype, and you are using tags for their correct purpose. A good strategy is to validate your code regularly. One service that can do this is the W3C [Markup Validation Service](https://validator.w3.org/), which allows you to point to your code, and returns a list of errors:
 
 ![The HTML validator homepage](validator.png)
 

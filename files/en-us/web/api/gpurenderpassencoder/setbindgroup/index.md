@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPURenderPassEncoder.setBindGroup
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`setBindGroup()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface sets the {{domxref("GPUBindGroup")}} to use for subsequent render commands, for a given index.
@@ -22,7 +22,7 @@ setBindGroup(index, bindGroup, dynamicOffsets, dynamicOffsetsStart,
              dynamicOffsetsLength)
 ```
 
-#### Parameters
+### Parameters
 
 - `index`
   - : The index to set the bind group at. This matches the `n` index value of the corresponding [`@group(n)`](https://gpuweb.github.io/gpuweb/wgsl/#attribute-group) attribute in the shader code ({{domxref("GPUShaderModule")}}) used in the related pipeline.

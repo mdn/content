@@ -26,13 +26,13 @@ querySelectorAll(selectors)
     must be a valid CSS selector string; if it isn't, a `SyntaxError` exception
     is thrown.
 
-    Note that the HTML specification does not require attribute values to be valid CSS identifiers. If a [`class`](/en-US/docs/Web/HTML/Global_attributes/class) or [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute value is not a valid CSS identifier, than you must escape it before using it in a selector, either by calling {{domxref("CSS.escape_static", "CSS.escape()")}} on the value, or using one of the techniques described in [Escaping characters](/en-US/docs/Web/CSS/ident#escaping_characters). See [Escaping attribute values](#escaping_attribute_values) for an example.
+    Note that the HTML specification does not require attribute values to be valid CSS identifiers. If a [`class`](/en-US/docs/Web/HTML/Global_attributes/class) or [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute value is not a valid CSS identifier, then you must escape it before using it in a selector, either by calling {{domxref("CSS.escape_static", "CSS.escape()")}} on the value, or using one of the techniques described in [Escaping characters](/en-US/docs/Web/CSS/ident#escaping_characters). See [Escaping attribute values](#escaping_attribute_values) for an example.
 
 ### Return value
 
 A non-live {{domxref("NodeList")}} containing one {{domxref("Element")}} object for
 each element that matches at least one of the specified selectors or an empty
-{{domxref("NodeList")}} in case of no matches.
+{{domxref("NodeList")}} in case of no matches. The elements are in document order — that is, parents before children, earlier siblings before later siblings.
 
 > [!NOTE]
 > If the specified `selectors` include a [CSS pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), the returned list
@@ -78,11 +78,11 @@ const matches = document.querySelectorAll("iframe[data-src]");
 ```
 
 Here, an attribute selector is used to return a list of the list items contained within
-a list whose ID is `userlist` which have a `data-active` attribute
+a list whose ID is `user-list` which have a `data-active` attribute
 whose value is `1`:
 
 ```js
-const container = document.querySelector("#userlist");
+const container = document.querySelector("#user-list");
 const matches = container.querySelectorAll("li[data-active='1']");
 ```
 

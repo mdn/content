@@ -7,7 +7,7 @@ page-type: guide
 {{AddonSidebar}}
 
 > [!NOTE]
-> This page describes the devtools APIs in Firefox 55. Although the APIs are based on the [Chrome devtools APIs](https://developer.chrome.com/docs/extensions/mv3/devtools/), Firefox does not implement all those features; therefore, not all features are documented here. To see which features are missing, refer to [Limitations of the devtools APIs](#limitations_of_the_devtools_apis).
+> This page describes the devtools APIs in Firefox 55. Although the APIs are based on the [Chrome devtools APIs](https://developer.chrome.com/docs/extensions/how-to/devtools/extend-devtools), Firefox does not implement all those features; therefore, not all features are documented here. To see which features are missing, refer to [Limitations of the devtools APIs](#limitations_of_the_devtools_apis).
 
 You can use WebExtensions APIs to extend the browser's built-in developer tools. To create a devtools extension, include the "[devtools_page](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page)" key in your [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file:
 
@@ -119,7 +119,7 @@ browser.runtime.onMessage.addListener(handleMessage);
 
 If you need to exchange messages between the content scripts running in the target window and a devtools document, it's a good idea to use the {{WebExtAPIRef("runtime.connect()")}} and {{WebExtAPIRef("runtime.onConnect")}} to set up a connection between the background page and the devtools document. The background page can then maintain a mapping between tab IDs and {{WebExtAPIRef("runtime.Port")}} objects, and use this to route messages between the two scopes.
 
-![The background page tab ID is connected to the content script on the content page by a runtime.sendmessage() object. The Port of the background page is connected to the port of the Devtools document by a port.postMessage() object.](devtools-content-scripts.png)
+![The background page tab ID is connected to the content script on the content page by a runtime.sendMessage() object. The Port of the background page is connected to the port of the Devtools document by a port.postMessage() object.](devtools-content-scripts.png)
 
 ## Limitations of the devtools APIs
 

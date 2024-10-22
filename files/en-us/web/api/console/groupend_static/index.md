@@ -1,7 +1,7 @@
 ---
 title: "console: groupEnd() static method"
 short-title: groupEnd()
-slug: Web/API/console/groupend_static
+slug: Web/API/console/groupEnd_static
 page-type: web-api-instance-method
 browser-compat: api.console.groupEnd_static
 ---

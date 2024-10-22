@@ -58,7 +58,7 @@ That said, ensure you have enough [color contrast](/en-US/docs/Web/Accessibility
 
 In this example, we will create an appropriate color palette for a website for a game that takes place on the planet Mars. A [Google search for photos of Mars](https://www.google.com/search?q=Mars&tbm=isch) will output several color photos.
 
-Use a color picker tool to select a color sample for the base color. For this example, we've selected `#D79C7A`, which is a rusty orange-red color. We can use [Paletton](https://www.paletton.com/) to come up with the other colors for our palette. . Upon opening Paletton, we see:
+Use a color picker tool to select a color sample for the base color. For this example, we've selected `#D79C7A`, which is a rusty orange-red color. We can use [Paletton](https://www.paletton.com/) to come up with the other colors for our palette. Upon opening Paletton, we see:
 
 ![Right after loading Paletton.](paletton1.png)
 

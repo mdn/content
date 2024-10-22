@@ -98,7 +98,7 @@ draw();
 
 ### Embedding an image via data: URL
 
-Another possible way to include images is via the [data: URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs). Data URLs allow you to completely define an image as a Base64 encoded string of characters directly in your code.
+Another possible way to include images is via the [data: URL](/en-US/docs/Web/URI/Schemes/data). Data URLs allow you to completely define an image as a Base64 encoded string of characters directly in your code.
 
 ```js
 const img = new Image(); // Create new img element
@@ -204,7 +204,7 @@ function draw() {
       }
     }
   };
-  img.src = "rhino.jpg";
+  img.src = "https://mdn.github.io/shared-assets/images/examples/rhino.jpg";
 }
 
 draw();
@@ -236,7 +236,11 @@ In this example, we'll use the same rhino as in the previous example, but we'll 
 ```html
 <canvas id="canvas" width="150" height="150"></canvas>
 <div style="display: none;">
-  <img id="source" src="rhino.jpg" width="300" height="227" />
+  <img
+    id="source"
+    src="https://mdn.github.io/shared-assets/images/examples/rhino.jpg"
+    width="300"
+    height="227" />
   <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
 </div>
 ```
