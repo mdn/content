@@ -16,60 +16,30 @@ While it is available on all HTML elements, it is only relevant to editable text
 - {{htmlelement("textarea")}} elements and {{domxref("HTMLTextAreaElement")}} objects.
 - Any element that has the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set.
 
-Editable text elements (other than the exceptions listed above) have autocorrection enabled by default, except for within a {{htmlelement("form")}} element, where the default value may be inherited from the form.
-Explicitly setting the attribute overrides the default.
+Editable text elements (other than the exceptions listed above) have auto-correction enabled by default, except for within a {{htmlelement("form")}} element, where the default value may be inherited from the form.
+Elements nested within an element that was made editable using the `contenteditable` do not inherit its auto-correction attribute.
+Explicitly setting the attribute on an element overrides the default and any inherited value.
 
-It reflects the value of the [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) HTML global attribute.
+The property reflects the value of the [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) HTML global attribute.
 
 ## Value
 
-`true` if autocorrection is enabled, and `false` otherwise.
-
-Note that values are reflected from the [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) global attribute, which takes values `on` and `off`.
-The getter may return an inherited state as the attribute may be inherited from a parent {{htmlelement("form")}} element for elements of type {{htmlelement("button")}}, {{htmlelement("fieldset")}}, {{htmlelement("input")}}, {{htmlelement("output")}}, {{htmlelement("select")}}, or {{htmlelement("textarea")}} (the attribute is not inherited for elements that are nested within an element made editable by adding the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute).
-The setter always sets the value on the selected element.
+`true` if autocorrection is enabled for the element, and `false` otherwise.
 
 ## Examples
 
-### Blahs
+### Enable and disable autocorrection
 
-The following example shows how to control capitalization behavior for user input via script:
+This example shows how you can enable and disable the autocorrection state programmatically.
 
-```html
-<div>Current capitalization behavior is: <span id="ac-label"></span></div>
-<div id="ac-element" contenteditable="true" autocapitalize="default">
-  input here
-</div>
-<select id="ac-controller" type="checkbox" checked>
-  <option value="default">default</option>
-  <option value="none">none</option>
-  <option value="sentences">sentences</option>
-  <option value="words">words</option>
-  <option value="characters">characters</option></select
->Select the capitalization behavior
-```
+#### HTML
 
-```js
-const label = document.getElementById("autocorrect-label");
-const element = document.getElementById("ac-element");
-const controller = document.getElementById("ac-controller");
-
-controller.addEventListener("input", (e) => {
-  const behavior = e.target.value;
-  label.textContent = behavior;
-  element.autocapitalize = behavior;
-});
-```
-
-{{EmbedLiveSample('Blah', 600, 200)}}
-
-### Autocorrection inheritance
-
-This example shows how you can set and get the autocorrection state
+The HTML markup defines a toggle button and an {{htmlelement("input")}} element of [`type="search"`](/en-US/docs/Web/HTML/Element/input/search).
+Note that if autocorrection is supported, it will be enabled by default.
 
 ```html
-<button id="toggleAutocorrect">Enable Autocorrect</button>
-<input type="text" id="textinput" autocorrect="off" />
+<button id="toggleAutocorrect"></button>
+<input type="search" id="searchinput" />
 ```
 
 ```html hidden
@@ -93,26 +63,38 @@ function log(text) {
 }
 ```
 
+#### JavaScript
+
+The code first checks whether the `autocorrect` is supported by checking if it is present on the prototype.
+If it is present a click handler is added to allow you to toggle the value.
+If it is not present the UI hides the interactive elements and logs that `autocorrect` is not supported.
+
 ```js
 const toggleButton = document.querySelector("button");
-const inputTextElement = document.querySelector("#textinput");
+const searchInput = document.querySelector("#searchinput");
 
-if (inputTextElement.autocorrect) {
+if (`autocorrect` in HTMLElement.prototype) {
+  log(`autocorrect: ${searchInput.autocorrect}`);
   toggleButton.addEventListener("click", (e) => {
     toggleButton.textContent = inputTextElement.autocorrect
       ? "Disable"
       : "Enable";
-    inputTextElement.autocorrect = !inputTextElement.autocorrect;
-    log(`autocorrect: ${inputTextElement.autocorrect}`);
+    inputTextElement.autocorrect = !searchInput.autocorrect;
+    log(`autocorrect: ${searchInput.autocorrect}`);
   });
 } else {
   toggleButton.hidden = true;
-  inputTextElement.hidden = true;
+  searchInput.hidden = true;
   log("autocomplete not supported");
 }
 ```
 
-{{EmbedLiveSample("Autocorrection inheritance", "100%", "200")}}
+#### Result
+
+Toggle the button to enable autocorrect, and then enter invalid text into the text box, such as "Carot".
+This should be corrected automatically.
+
+{{EmbedLiveSample("Enable and disable autocorrection", "100%", "200")}}
 
 ## Specifications
 
