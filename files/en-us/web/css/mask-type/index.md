@@ -50,7 +50,7 @@ The `mask-type` property is specified as one of the keyword values listed below.
 #### HTML
 
 ```html
-<div class="redsquare"></div>
+<div class="red-square"></div>
 <svg
   version="1.1"
   xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +74,7 @@ The `mask-type` property is specified as one of the keyword values listed below.
 #### CSS
 
 ```css
-.redsquare {
+.red-square {
   height: 100px;
   width: 100px;
   background-color: rgb(128 128 128);
@@ -92,7 +92,7 @@ The `mask-type` property is specified as one of the keyword values listed below.
 #### HTML
 
 ```html
-<div class="redsquare"></div>
+<div class="red-square"></div>
 <svg
   version="1.1"
   xmlns="http://www.w3.org/2000/svg"
@@ -119,7 +119,7 @@ The `mask-type` property is specified as one of the keyword values listed below.
 #### CSS
 
 ```css
-.redsquare {
+.red-square {
   height: 100px;
   width: 100px;
   background-color: rgb(128 128 128);

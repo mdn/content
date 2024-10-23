@@ -22,18 +22,18 @@ A string.
 In this example the `aria-placeholder` attribute on the element with an ID of `txtBoxInput` has been set to a string. Using `ariaPlaceholder` we update the string to another value.
 
 ```html
-<div id="txtboxLabel">Enter your five-digit zipcode</div>
+<div id="txtboxLabel">Enter your five-digit zip code</div>
 <div
   role="textbox"
   id="txtBoxInput"
   contenteditable="true"
-  aria-placeholder="5-digit zipcode"
+  aria-placeholder="5-digit zip code"
   aria-labelledby="txtboxLabel"></div>
 ```
 
 ```js
 let el = document.getElementById("txtBoxInput");
-console.log(el.ariaPlaceholder); // "5-digit zipcode"
+console.log(el.ariaPlaceholder); // "5-digit zip code"
 el.ariaPlaceholder = "12345";
 console.log(el.ariaPlaceholder); // "12345"
 ```

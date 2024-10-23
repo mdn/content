@@ -91,11 +91,11 @@ The `main.js` script (main thread) may look like this:
 const htmlCanvas = document.getElementById("canvas");
 const offscreen = htmlCanvas.transferControlToOffscreen();
 
-const worker = new Worker("offscreencanvas.js");
+const worker = new Worker("offscreen-canvas.js");
 worker.postMessage({ canvas: offscreen }, [offscreen]);
 ```
 
-While the `offscreencanvas.js` script (worker thread) can look like this:
+While the `offscreen-canvas.js` script (worker thread) can look like this:
 
 ```js
 onmessage = (evt) => {

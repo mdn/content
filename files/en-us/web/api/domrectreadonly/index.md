@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.DOMRectReadOnly
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 The **`DOMRectReadOnly`** interface specifies the standard properties (also used by {{domxref("DOMRect")}}) to define a rectangle whose properties are immutable.
 

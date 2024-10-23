@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.MessageEvent.source
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
 The **`source`** read-only property of the
 {{domxref("MessageEvent")}} interface is a `MessageEventSource` (which can be

@@ -263,7 +263,7 @@ function isBookmarked(message, sender, response) {
 browser.runtime.onMessage.addListener(isBookmarked);
 ```
 
-If the asynchronous handler doesn't return a Promise, you can explicitly construct a promise. This rather contrived example sends a response after a 1-second delay, using [`setTimeout()`](/en-US/docs/Web/API/setTimeout):
+If the asynchronous handler doesn't return a Promise, you can explicitly construct a promise. This rather contrived example sends a response after a 1-second delay, using {{domxref("Window.setTimeout", "setTimeout()")}}:
 
 ```js
 // background-script.js

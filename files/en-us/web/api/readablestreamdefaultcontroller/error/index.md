@@ -40,7 +40,7 @@ None ({{jsxref("undefined")}}).
 
 The [A readable stream with an underlying push source and backpressure support](https://streams.spec.whatwg.org/#example-rs-push-backpressure) example in the spec
 provides a good example of using
-{{domxref("ReadablestreamDefaultController.desiredSize")}} to manually detect when the
+{{domxref("ReadableStreamDefaultController.desiredSize")}} to manually detect when the
 stream is full and apply backpressure, and also of using `error()` to
 manually trigger a stream error if another part of the system it relies on fails.
 

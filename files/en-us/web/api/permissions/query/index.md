@@ -31,7 +31,7 @@ query(permissionDescriptor)
     All permissions have a name:
 
     - `name`
-      - : A string containing the name of the API whose permissions you want to query, such as `camera`, `bluetooth`, `camera`, `geolocation` (see [`Permissions`](/en-US/docs/Web/API/Permissions#browser_compatibility) for a more complete list).
+      - : A string containing the name of the API whose permissions you want to query, such as `camera`, `bluetooth`, `microphone`, `geolocation` (see [`Permissions`](/en-US/docs/Web/API/Permissions#browser_compatibility) for a more complete list).
         The returned {{jsxref("Promise")}} will reject with a {{jsxref("TypeError")}} if the permission name is not supported by the browser.
 
     For the `push` permissions you can also specify:

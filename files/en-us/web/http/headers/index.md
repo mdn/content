@@ -19,7 +19,7 @@ Headers can be grouped according to their contexts:
 - {{Glossary("Response header", "Response headers")}}
   - : Hold additional information about the response, like its location or about the server providing it.
 - {{Glossary("Representation header", "Representation headers")}}
-  - : Contain information about the body of the resource, like its [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types), or encoding/compression applied.
+  - : Contain information about the body of the resource, like its [MIME type](/en-US/docs/Web/HTTP/MIME_types), or encoding/compression applied.
 - {{Glossary("Payload header","Payload headers")}}
   - : Contain representation-independent information about payload data, including content length and the encoding used for transport.
 
@@ -92,9 +92,9 @@ For more details, refer to the [Content negotiation article](/en-US/docs/Web/HTT
 - {{HTTPHeader("Accept-Language")}}
   - : Informs the server about the human language the server is expected to send back. This is a hint and is not necessarily under the full control of the user: the server should always pay attention not to override an explicit user choice (like selecting a language from a dropdown).
 - {{HTTPHeader("Accept-Patch")}}
-  - : A _request content negotiation_ response header that advertises which [media type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) the server is able to understand in a {{HTTPMethod("PATCH")}} request.
+  - : A _request content negotiation_ response header that advertises which [media type](/en-US/docs/Web/HTTP/MIME_types) the server is able to understand in a {{HTTPMethod("PATCH")}} request.
 - {{HTTPHeader("Accept-Post")}}
-  - : A _request content negotiation_ response header that advertises which [media type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) the server is able to understand in a {{HTTPMethod("POST")}} request.
+  - : A _request content negotiation_ response header that advertises which [media type](/en-US/docs/Web/HTTP/MIME_types) the server is able to understand in a {{HTTPMethod("POST")}} request.
 
 ## Controls
 
@@ -452,8 +452,6 @@ See the [Topics API](/en-US/docs/Web/API/Topics_API) documentation for more info
 
 ### Other
 
-- {{HTTPHeader("Accept-Push-Policy")}} {{experimental_inline}}
-  - : A client can express the desired push policy for a request by sending an [`Accept-Push-Policy`](https://datatracker.ietf.org/doc/html/draft-ruellan-http-accept-push-policy-00#section-3.1) header field in the request.
 - {{HTTPHeader("Accept-Signature")}} {{experimental_inline}}
   - : A client can send the [`Accept-Signature`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#name-the-accept-signature-header) header field to indicate intention to take advantage of any available signatures and to indicate what kinds of signatures it supports.
 - {{HTTPHeader("Early-Data")}} {{experimental_inline}}
@@ -461,8 +459,6 @@ See the [Topics API](/en-US/docs/Web/API/Topics_API) documentation for more info
 - {{HTTPHeader("Origin-Agent-Cluster")}} {{experimental_inline}}
   - : Response header used to indicate that the associated {{domxref("Document")}} should be placed in an _origin-keyed [agent cluster](https://tc39.es/ecma262/#sec-agent-clusters)_.
     This isolation allows user agents to allocate implementation-specific resources for agent clusters, such as processes or threads, more efficiently.
-- {{HTTPHeader("Push-Policy")}} {{experimental_inline}}
-  - : A [`Push-Policy`](https://datatracker.ietf.org/doc/html/draft-ruellan-http-accept-push-policy-00#section-3.2) defines the server behavior regarding push when processing a request.
 - {{HTTPHeader("Set-Login")}} {{experimental_inline}}
   - : Response header sent by a federated identity provider (IdP) to set its login status, meaning whether any users are logged into the IdP on the current browser or not.
     This is stored by the browser and used by the [FedCM API](/en-US/docs/Web/API/FedCM_API).
