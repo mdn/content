@@ -714,6 +714,7 @@ email.addEventListener("input", (event) => {
 ```
 
 This example code works as follows:
+
 - When the validation is failed as [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email), the browser's built-in error message is displayed.
   - ![Error message: Please include an '@' in the email address. 'invalid-as-email' is missing an '@'.](built-in-error-message.png)
 - When the validation is passed as [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email) but failed as the customized constraint, the customized error message is displayed.
