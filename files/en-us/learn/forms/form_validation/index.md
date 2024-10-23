@@ -713,9 +713,17 @@ email.addEventListener("input", (event) => {
 </form>
 ```
 
-You can try it out below:
+This example code works as follows:
+- When the validation is failed as [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email), the browser's built-in error message is displayed.
+  - ![Error message: Please include an '@' in the email address. 'invalid-as-email' is missing an '@'.](built-in-error-message.png)
+- When the validation is passed as [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email) but failed as the customized constraint, the customized error message is displayed.
+  - ![Error message: Please enter an email address of @example.com](customized-error-message.jpg)
 
+<!--
 {{EmbedLiveSample("Extending_built-in_form_validation", "100%", 120)}}
+doesn't work, so the example code is embedded as [Static example](https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples#static_examples).
+More details: https://github.com/mdn/content/pull/36415#issuecomment-2432087985
+-->
 
 ### Validating forms without a built-in API
 
