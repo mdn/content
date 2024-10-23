@@ -10,7 +10,7 @@ browser-compat: http.headers.DPR
 
 {{HTTPSidebar}}{{Deprecated_Header}}{{SecureContext_Header}}{{Non-standard_Header}}
 
-The HTTP **`DPR`** request header provides [device client hints](/en-US/docs/Web/HTTP/Client_hints) about the client device pixel ratio (DPR).
+The HTTP **`DPR`** {{Glossary("request header")}} provides [device client hints](/en-US/docs/Web/HTTP/Client_hints) about the client device pixel ratio (DPR).
 This ratio is the number of physical device pixels corresponding to every {{Glossary("CSS pixel")}}.
 
 The hint is useful when selecting image sources that best correspond to a screen's pixel density.

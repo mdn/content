@@ -7,12 +7,11 @@ browser-compat: http.headers.If-Range
 
 {{HTTPSidebar}}
 
-The HTTP **`If-Range`** request header is used to make a range request [conditional](/en-US/docs/Web/HTTP/Conditional_requests).
+The HTTP **`If-Range`** {{Glossary("request header")}} makes a range request [conditional](/en-US/docs/Web/HTTP/Conditional_requests).
 If the condition is fulfilled, a [range request](/en-US/docs/Web/HTTP/Range_requests) is issued, and the server sends back a {{HTTPStatus("206", "206 Partial Content")}} response with part (or parts) of the resource in the body.
 If the condition is not fulfilled, the full resource is sent back with a {{HTTPStatus("200", "200 OK")}} status.
 
-This header can be used either with the {{HTTPHeader("Last-Modified")}} validator or
-with {{HTTPHeader("ETag")}}, but not with both.
+This header can be used either with the {{HTTPHeader("Last-Modified")}} validator or with {{HTTPHeader("ETag")}}, but not with both.
 
 The most common use case is to resume a download with guarantees that the resource on the server has not been modified since the last part has been received by the client.
 

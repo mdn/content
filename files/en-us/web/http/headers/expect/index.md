@@ -7,7 +7,7 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#field.expect
 
 {{HTTPSidebar}}
 
-The HTTP **`Expect`** request header indicates that there are expectations that need to be met by the server in order to handle the complete request successfully.
+The HTTP **`Expect`** {{Glossary("request header")}} indicates that there are expectations that need to be met by the server in order to handle the complete request successfully.
 
 When a request has an `Expect: 100-continue` header, a server sends a {{HTTPStatus("100", "100 Continue")}} response to indicate that the server is ready or capable of receiving the rest of the request content.
 Waiting for a `100` response can be helpful if a client anticipates that an error is likely, for example, when sending state-changing operations without previously verified authentication credentials.

@@ -9,7 +9,7 @@ browser-compat: http.headers.ECT
 
 {{HTTPSidebar}} {{SeeCompatTable}}
 
-The HTTP **`ECT`** request header is used in [Client Hints](/en-US/docs/Web/HTTP/Client_hints) to indicate the {{Glossary("effective connection type")}}: `slow-2g`, `2g`, `3g`, or `4g`.
+The HTTP **`ECT`** {{Glossary("request header")}} is used in [Client Hints](/en-US/docs/Web/HTTP/Client_hints) to indicate the {{Glossary("effective connection type")}}: `slow-2g`, `2g`, `3g`, or `4g`.
 
 The value represents the "network profile" that best matches the connection's latency and bandwidth, rather than the actual mechanisms used for transferring the data.
 For example, `2g` might be used to represent a slow Wi-Fi connection with high latency and low bandwidth, while `4g` might represent a fast fibre-based broadband network.

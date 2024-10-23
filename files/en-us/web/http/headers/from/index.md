@@ -7,7 +7,7 @@ browser-compat: http.headers.From
 
 {{HTTPSidebar}}
 
-The HTTP **`From`** request header contains an Internet email address for an administrator who controls an automated user agent.
+The HTTP **`From`** {{Glossary("request header")}} contains an Internet email address for an administrator who controls an automated user agent.
 
 If you are running a robotic user agent (a web crawler, for example), the `From` header must be sent in requests so you can be contacted if problems occur, such as a bot sending excessive, unwanted, or invalid requests.
 

@@ -7,10 +7,9 @@ browser-compat: http.headers.Host
 
 {{HTTPSidebar}}
 
-The HTTP **`Host`** request header specifies the host and port number of the server to which the request is being sent.
+The HTTP **`Host`** {{Glossary("request header")}} specifies the host and port number of the server to which the request is being sent.
 
-If no port is included, the default port for the service requested is implied (e.g.,
-`443` for an HTTPS URL, and `80` for an HTTP URL).
+If no port is included, the default port for the service requested is implied (e.g., `443` for an HTTPS URL, and `80` for an HTTP URL).
 
 A `Host` header field must be sent in all HTTP/1.1 request messages.
 A {{HTTPStatus("400", "400 Bad Request")}} status code may be sent to any HTTP/1.1 request message that lacks or contains more than one `Host` header field.

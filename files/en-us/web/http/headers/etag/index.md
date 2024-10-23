@@ -7,7 +7,7 @@ browser-compat: http.headers.ETag
 
 {{HTTPSidebar}}
 
-The HTTP **`ETag`** (entity tag) response header is an identifier for a specific version of a resource.
+The HTTP **`ETag`** (entity tag) {{Glossary("response header")}} is an identifier for a specific version of a resource.
 It lets [caches](/en-US/docs/Web/HTTP/Caching) be more efficient and save bandwidth, as a web server does not need to resend a full response if the content has not changed.
 Additionally, ETags help to prevent simultaneous updates of a resource from overwriting each other (["mid-air collisions"](#avoiding_mid-air_collisions)).
 

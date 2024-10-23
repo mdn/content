@@ -19,7 +19,7 @@ The HTTP **`Digest`** header provides the recipient with a {{Glossary("digest")}
 It can be requested by using the {{HTTPHeader("Want-Digest")}} header.
 
 Representations are different forms of a particular resource that might be returned from a request: for example, the same resource might be formatted in a particular media type such as XML or JSON, localized to a particular written language or geographical region, and/or compressed or otherwise encoded for transmission.
-The _selected representation_ a resource returned following [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation), and can be determined from the response's {{Glossary("Representation header","Representation headers")}}.
+The _selected representation_ is a resource returned following [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation), and can be determined from the response's {{Glossary("Representation header","Representation headers")}}.
 
 The digest applies to the whole representation of a resource, not to a particular message.
 It can be used to verify that the representation data has not been modified during transmission.
@@ -31,7 +31,7 @@ It can be used to verify that the representation data has not been modified duri
   <tbody>
     <tr>
       <th scope="row">Header type</th>
-      <td>{{Glossary("Response header")}}</td>
+      <td>{{Glossary("Response header")}}, {{Glossary("Request header")}}</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>

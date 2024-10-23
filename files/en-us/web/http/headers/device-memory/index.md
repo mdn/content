@@ -7,7 +7,7 @@ browser-compat: http.headers.Device-Memory
 
 {{HTTPSidebar}}{{securecontext_header}}
 
-The HTTP **`Device-Memory`** request header is used in [device client hints](/en-US/docs/Web/HTTP/Client_hints#device_client_hints) to indicate the approximate amount of available RAM on the client device.
+The HTTP **`Device-Memory`** {{Glossary("request header")}} is used in [device client hints](/en-US/docs/Web/HTTP/Client_hints#device_client_hints) to indicate the approximate amount of available RAM on the client device.
 The header is part of the {{DOMxRef("Device Memory API", "Device Memory API", "", "nocode")}}.
 
 Client hints are accessible only on secure origins.

@@ -9,7 +9,7 @@ browser-compat: http.headers.Downlink
 
 {{HTTPSidebar}} {{SeeCompatTable}}
 
-The HTTP **`Downlink`** request header is used in [Client Hints](/en-US/docs/Web/HTTP/Client_hints) to provide the approximate bandwidth in Mbps of the client's connection to the server.
+The HTTP **`Downlink`** {{Glossary("request header")}} is used in [Client Hints](/en-US/docs/Web/HTTP/Client_hints) to provide the approximate bandwidth in Mbps of the client's connection to the server.
 
 The hint allows a server to choose what information is sent based on the network bandwidth.
 For example, a server might choose to send smaller versions of images and other resources on low bandwidth networks.
