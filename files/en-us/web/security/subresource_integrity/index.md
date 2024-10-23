@@ -16,7 +16,7 @@ browser-compat:
 
 ## How Subresource Integrity helps
 
-Using {{Glossary("CDN", "Content Delivery Networks (CDNs)")}} to host files such as scripts and stylesheets that are shared among multiple sites can improve site performance and conserve bandwidth. However, using CDNs also comes with a risk, in that if an attacker gains control of a CDN, the attacker can inject arbitrary malicious content into files on the CDN (or replace the files completely) and thus can also potentially attack all sites that fetch files from that CDN.
+{{Glossary("CDN", "Content Delivery Networks (CDNs)")}} can host files like scripts and stylesheets that are shared among multiple sites, which may influence site performance and bandwidth usage. However, using CDNs also comes with a risk, in that if an attacker gains control of a CDN, the attacker can inject arbitrary malicious content into files on the CDN (or replace the files completely) and thus can also potentially attack all sites that fetch files from that CDN.
 
 Subresource Integrity enables you to mitigate some risks of attacks such as this, by ensuring that the files your web application or web document fetches (from a CDN or anywhere) have been delivered without a third-party having injected any additional content into those files — and without any other changes of any kind at all having been made to those files.
 
