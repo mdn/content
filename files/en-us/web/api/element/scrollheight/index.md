@@ -175,8 +175,8 @@ const veryImportantRead = document.getElementById("very-important-read");
 // Check if user has scrolled the element to the bottom
 function isRead(element) {
   return (
-    Math.abs(element.scrollHeight - element.clientHeight - 
-      element.scrollTop) <= 1
+    Math.abs(element.scrollHeight - element.clientHeight - element.scrollTop) <=
+    1
   );
 }
 
