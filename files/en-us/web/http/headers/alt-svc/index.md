@@ -44,8 +44,8 @@ Alt-Svc: <protocol-id>=<alt-authority>; ma=<max-age>; persist=1
     Alternative service entries can be cached for up to `<max-age>` seconds, minus the age of the response (from the {{HTTPHeader("Age")}} header).
     Once the cached entry expires, the client can no longer use this alternative service for new connections.
 - `persist=1` {{optional_inline}}
-  - : Usually cached alternative service entries are cleared on network configuration changes.
-    Use of the `persist=1` parameter requests that the entry not be deleted by such changes.
+  - : Entries are not deleted by network configuration changes.
+    Cached alternative service entries are usually cleared on such changes.
 
 Multiple entries can be specified in a single `Alt-Svc` header using comma as separator.
 In that case, early entries are considered more preferable.

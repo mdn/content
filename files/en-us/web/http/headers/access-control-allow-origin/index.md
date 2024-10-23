@@ -32,8 +32,10 @@ Access-Control-Allow-Origin: null
 
 ## Directives
 
-- `*`
-  - : Specifies that requesting code from any origin is allowed to access the resource. For requests _without credentials_, the literal value `*` can be specified as a wildcard. Attempting to use the wildcard with credentials [results in an error](/en-US/docs/Web/HTTP/CORS/Errors/CORSNotSupportingCredentials).
+- `*` (wildcard)
+  - : The requesting code from any origin is allowed to access the resource.
+    For requests _without credentials_, the literal value `*` can be specified as a wildcard.
+    Attempting to use the wildcard with credentials [results in an error](/en-US/docs/Web/HTTP/CORS/Errors/CORSNotSupportingCredentials).
 - `<origin>`
   - : Specifies a single origin. If the server supports clients from multiple origins, it must return the origin for the specific client making the request.
 - `null`
