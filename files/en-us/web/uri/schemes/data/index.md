@@ -111,7 +111,7 @@ lots of text…
 
 ## Browser compatibility
 
-{{compat}}
+{{Compat}}
 
 ## See also
 
