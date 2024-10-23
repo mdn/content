@@ -12,7 +12,7 @@ If the attribute is present, it can have one of the following forms:
 
 - the attribute name alone; e.g., `attribute`, meaning its implicit value is the empty string
 - the attribute with a value of the empty string; e.g., `attribute=""`
-- the attribute with a value of the attribute's name itself, with no leading or trailing whitespace; e.g., `attribute="attribute"`
+- the attribute with a value of the attribute's name itself, with no leading or trailing whitespace and case ignored; e.g., `attribute="attribute"`, `attribute="ATTRIBUTE"`
 
 > [!NOTE]
 > The strings "true" and "false" are invalid values. To set the attribute to `false`, the attribute should be omitted altogether. Though modern browsers treat _any_ string value as `true`, you should not rely on that behavior.
@@ -24,6 +24,7 @@ Here's an example of a HTML boolean attribute `checked`:
 <input type="checkbox" checked />
 <input type="checkbox" checked="" />
 <input type="checkbox" checked="checked" />
+<input type="checkbox" checked="Checked" />
 
 <!-- The following checkbox will not be checked on initial rendering -->
 <input type="checkbox" />
