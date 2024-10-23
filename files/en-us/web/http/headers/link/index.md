@@ -12,7 +12,7 @@ This allows the server to point a client to another resource containing metadata
 This header has the same semantics as the HTML {{HTMLElement("link")}} element.
 One benefit of using the `Link` header is that the browser can start preconnecting or preloading resources before the HTML itself is fetched and processed.
 
-In practice, most [`rel` link types](/en-US/docs/Web/HTML/Attributes/rel) don't have an effect when used with the HTTP header. 
+In practice, most [`rel` link types](/en-US/docs/Web/HTML/Attributes/rel) don't have an effect when used with the HTTP header.
 For example, the `icon` relation only works in HTML, and `stylesheet` does not work reliably across browsers (only in Firefox).
 The only relations that work reliably are [`preconnect`](/en-US/docs/Web/HTML/Attributes/rel/preconnect) and [`preload`](/en-US/docs/Web/HTML/Attributes/rel/preload), which can be combined with {{HTTPStatus(103, "103 Early Hints")}}.
 
