@@ -9,7 +9,7 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#field.allow
 
 The HTTP **`Allow`** header lists the set of [request methods](/en-US/docs/Web/HTTP/Methods) supported by a resource.
 This header must be sent if the server responds with a {{HTTPStatus("405", "405 Method Not Allowed")}} status code to indicate which request methods can be used instead.
-An empty `Allow` header indicates that the resource allows no request methods, which might occur temporarily for a given resource, for example.
+An empty `Allow` header indicates that the resource allows no request methods, which might occur temporarily for a given resource.
 
 <table class="properties">
   <tbody>

@@ -33,13 +33,15 @@ Access-Control-Allow-Origin: null
 ## Directives
 
 - `*`
-  - : For requests _without credentials_, the literal value `*` can be specified as a wildcard. The value tells browsers to allow requesting code from any origin to access the resource. Attempting to use the wildcard with credentials [results in an error](/en-US/docs/Web/HTTP/CORS/Errors/CORSNotSupportingCredentials).
+  - : Specifies that requesting code from any origin is allowed to access the resource. For requests _without credentials_, the literal value `*` can be specified as a wildcard. Attempting to use the wildcard with credentials [results in an error](/en-US/docs/Web/HTTP/CORS/Errors/CORSNotSupportingCredentials).
 - `<origin>`
-  - : Specifies an origin. Only a single origin can be specified. If the server supports clients from multiple origins, it must return the origin for the specific client making the request.
+  - : Specifies a single origin. If the server supports clients from multiple origins, it must return the origin for the specific client making the request.
 - `null`
   - : Specifies the origin "null".
     > [!NOTE]
-    > A value of `null` [should not be used](https://w3c.github.io/webappsec-cors-for-developers/#avoid-returning-access-control-allow-origin-null): "It may seem safe to return `Access-Control-Allow-Origin: "null"`, but the serialization of the Origin of any resource that uses a non-hierarchical scheme (such as `data:` or `file:`) and sandboxed documents is defined to be "null". Many User Agents will grant such documents access to a response with an `Access-Control-Allow-Origin: null` header, and any origin can create a hostile document with a "null" Origin. The "null" value for the ACAO header should therefore be avoided."
+    > The value `null` should not be used. It may seem safe to return `Access-Control-Allow-Origin: "null"`; however, the origin of resources that use a non-hierarchical scheme (such as `data:` or `file:`) and sandboxed documents is serialized as `null`.
+    Many browsers will grant such documents access to a response with an `Access-Control-Allow-Origin: null` header, and any origin can create a hostile document with a `null` origin.
+    Therefore, the `null` value for the `Access-Control-Allow-Origin` header should be avoided.
 
 ## Examples
 

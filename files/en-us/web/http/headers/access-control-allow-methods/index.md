@@ -32,10 +32,10 @@ Access-Control-Allow-Methods: *
 ## Directives
 
 - `<method>`
-  - : A comma-delimited list of the allowed request methods.
+  - : A comma-separated list of the allowed request methods.
 - `*` (wildcard)
-  - : The value `*` only counts as a special wildcard value for requests
-    without credentials (requests without [HTTP cookies](/en-US/docs/Web/HTTP/Cookies) or HTTP authentication information). In requests with credentials, it is
+  - : All HTTP methods.
+    It has this meaning only for requests without credentials (requests without [HTTP cookies](/en-US/docs/Web/HTTP/Cookies) or HTTP authentication information). In requests with credentials, it is
     treated as the literal method name `*` without special semantics.
 
 ## Examples

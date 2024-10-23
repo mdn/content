@@ -7,8 +7,8 @@ browser-compat: http.headers.Accept-CH
 
 {{HTTPSidebar}}{{securecontext_header}}
 
-The HTTP **`Accept-CH`** response header may be set by a server to specify which [client hints](/en-US/docs/Web/HTTP/Client_hints) headers a client should include in subsequent requests.
-The `Accept-CH` header should be persisted for all secure requests to ensure client hints are sent reliably.
+The HTTP **`Accept-CH`** response header may be set by a server to specify which [client hint](/en-US/docs/Web/HTTP/Client_hints) headers should be included by the client in subsequent requests.
+To ensure client hints are sent reliably, the `Accept-CH` header should be persisted for all secure requests.
 
 <table class="properties">
   <tbody>
@@ -34,13 +34,13 @@ The `Accept-CH` header should be persisted for all secure requests to ensure cli
 ```http
 Accept-CH: <client-hints-headers>
 
-// Client hints headers in a comma-separated list
+// Client hint headers in a comma-separated list
 Accept-CH: <ch-header-one>, <ch-header-two>
 ```
 
 ## Examples
 
-### Client hints response headers
+### Client hint response headers
 
 The following response headers indicate that the server accepts `Viewport-Width` and `Width` [device client hints](/en-US/docs/Web/HTTP/Client_hints#device_client_hints) in subsequent requests.
 The {{HTTPHeader("Vary")}} header indicates which values were used to [vary the response](/en-US/docs/Web/HTTP/Client_hints#caching_and_client_hints) based on the accepted client hints.

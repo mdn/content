@@ -7,8 +7,8 @@ browser-compat: http.headers.Accept-Ranges
 
 {{HTTPSidebar}}
 
-The HTTP **`Accept-Ranges`** response header is used by the server to advertise support for [range requests](/en-US/docs/Web/HTTP/Range_requests), allowing clients to request a part, or several parts, of a resource.
-The value of this field indicates the unit that can be used to define a range.
+The HTTP **`Accept-Ranges`** response header is used by the server to advertise its support for [range requests](/en-US/docs/Web/HTTP/Range_requests), allowing clients to request part or several parts of a resource.
+The value of this header indicates the unit that can be used to define a range.
 
 For example, a response with an `Accept-Ranges` header indicates that the server is capable of _resuming_ an interrupted download instead of a client restarting the transfer in full.
 
@@ -38,8 +38,8 @@ Accept-Ranges: none
   - : The range unit that the server supports, although `bytes` is the only range unit formally defined by {{RFC("7233")}}.
     Range units are registered in the [HTTP Range Unit Registry](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#range-units).
 - `none`
-  - : Indicates that no range unit is supported.
-    This is equivalent to omitting the header, so and is, therefore, rarely used.
+  - : No range unit is supported.
+    This is equivalent to omitting the header and is, therefore, rarely used.
     This value was used in legacy browsers to disable or remove the pause buttons in the download manager if servers had no support for range requests.
 
 ## Examples

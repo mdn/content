@@ -15,7 +15,7 @@ An `Accept-Patch` header in a response to any request method implicitly means th
 
 > [!NOTE]
 > IANA maintains [a list of official content encodings](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#content-coding).
-> The `bzip` and `bzip2` encodings are non-standard, but may be used in some cases, particularly for legacy support.
+> The `bzip` and `bzip2` encodings are non-standard but may be used in some cases, particularly for legacy support.
 
 <table class="properties">
   <tbody>
@@ -37,7 +37,7 @@ Accept-Patch: <media-type>/<subtype>
 Accept-Patch: <media-type>/*
 Accept-Patch: */*
 
-// Comma-separated list of media types:
+// Comma-separated list of media types
 Accept-Patch: <media-type>/<subtype>, <media-type>/<subtype>
 ```
 
@@ -46,8 +46,8 @@ Accept-Patch: <media-type>/<subtype>, <media-type>/<subtype>
 - `<media-type>/<subtype>`
   - : A single, precise [media type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types), like `text/html`.
 - `<media-type>/*`
-  - : A media type, but without a subtype.
-    `image/*` corresponds to `image/png`, `image/svg`, `image/gif`, and other image types.
+  - : A media type without a subtype.
+    For example, `image/*` corresponds to `image/png`, `image/svg`, `image/gif`, and other image types.
 - `*/*`
   - : Any media type.
 
@@ -66,7 +66,7 @@ Accept-Patch: text/plain;charset=utf-8
 ## Browser compatibility
 
 Browser compatibility is not relevant for this header.
-The header is sent by the server and the specification does not define client behavior.
+The server sends the header, and the specification doesn't define client behavior.
 
 ## See also
 

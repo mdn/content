@@ -30,7 +30,7 @@ The HTTP **`Accept`** request header indicates which content types, expressed as
   </tbody>
 </table>
 
-\* Values can't contain a [CORS-unsafe request header byte](https://fetch.spec.whatwg.org/#cors-unsafe-request-header-byte): `"():<>?@[\]{},`, Delete `0x7F`, and control characters `0x00` to `0x19` except for Tab `0x09`.
+\* Values can't contain [CORS-unsafe request header bytes](https://fetch.spec.whatwg.org/#cors-unsafe-request-header-byte), including `"():<>?@[\]{},`, Delete `0x7F`, and control characters `0x00` to `0x19`, except for Tab `0x09`.
 
 ## Syntax
 
@@ -39,7 +39,7 @@ Accept: <media-type>/<MIME_subtype>
 Accept: <media-type>/*
 Accept: */*
 
-// Multiple types, weighted with the quality value syntax:
+// Multiple types, weighted with the quality value syntax
 Accept: text/html, application/xhtml+xml, application/xml;q=0.9, image/webp, */*;q=0.8
 ```
 
@@ -48,8 +48,8 @@ Accept: text/html, application/xhtml+xml, application/xml;q=0.9, image/webp, */*
 - `<media-type>/<subtype>`
   - : A single, precise [media type](/en-US/docs/Web/HTTP/MIME_types), like `text/html`.
 - `<media-type>/*`
-  - : A media type, but without a subtype.
-    `image/*` corresponds to `image/png`, `image/svg`, `image/gif`, and other image types.
+  - : A media type without a subtype.
+    For example, `image/*` corresponds to `image/png`, `image/svg`, `image/gif`, and other image types.
 - `*/*`
   - : Any media type.
 - `;q=` (q-factor weighting)
@@ -57,7 +57,7 @@ Accept: text/html, application/xhtml+xml, application/xml;q=0.9, image/webp, */*
 
 ## Examples
 
-### Default accept request headers
+### Using default Accept request headers
 
 HTTP requests made using command line tools such as [curl](https://curl.se/) and [wget](https://www.gnu.org/software/wget/) use `*/*` as the default `Accept` value:
 
@@ -77,13 +77,13 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 …
 ```
 
-After receiving the document, the default `Accept` values in requests for images on the `developer.mozilla.org` example looks like this:
+After receiving the document, the default `Accept` values in requests for images on the `developer.mozilla.org` example look like this:
 
 ```http
 Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
 ```
 
-### Accept values for JSON content
+### Configuring Accept request headers for JSON responses
 
 Systems that involve API interaction commonly request `application/json` responses.
 Here's an example of a {{HTTPMethod("GET")}} request where the client specifically requests a JSON response:

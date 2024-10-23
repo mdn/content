@@ -83,7 +83,7 @@ Accept-Encoding: gzip, deflate, br, zstd
 
 ### Weighted Accept-Encoding values
 
-The following request header shows `Accept-Encoding` preferences using a quality value between 0 (lowest priority) and 1 (highest-priority).
+The following request header shows `Accept-Encoding` preferences using a quality value between `0` (lowest priority) and `1` (highest-priority).
 Brotli compression is weighted at `1.0`, making `br` the client's first choice, followed by `gzip` at `0.8` priority, and then any other content encoding at `0.1`:
 
 ```http

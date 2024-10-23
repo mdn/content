@@ -37,7 +37,7 @@ Alt-Used: <host>:<port>
 - `<host>`
   - : The domain name of the server.
 - `<port>` {{optional_inline}}
-  - : TCP port number on which the server is listening.
+  - : The TCP port number on which the server is listening.
 
 ## Examples
 
