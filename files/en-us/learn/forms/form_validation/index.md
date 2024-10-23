@@ -520,6 +520,54 @@ You can try it out below:
 > [!NOTE]
 > You can find this example live on GitHub as [custom-error-message.html](https://mdn.github.io/learning-area/html/forms/form-validation/custom-error-message.html) (see also the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/custom-error-message.html).)
 
+#### Extending built-in form validation
+
+With a built-in form validation such as [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email),
+you can also extend the validation by `setCustomValidity()`.
+
+First, reset a custom validity message by `setCustomValidity("")`, then validate with the built-in constraints.
+Next, extend with a custom constraints.
+
+```js
+const email = document.getElementById("mail");
+
+email.addEventListener("input", (event) => {
+  // Validate with the built-in constraints
+  email.setCustomValidity("");
+  if (!email.validity.valid) {
+    return;
+  }
+
+  // Extends with a custom constraints
+  email.setCustomValidity(
+    email.value.endsWith("@example.com")
+      ? ""
+      : "Please enter an email address of @example.com",
+  );
+});
+```
+
+```html
+<form>
+  <label for="mail">email address (@example.com only):</label>
+  <input type="email" id="mail" />
+  <button>Submit</button>
+</form>
+```
+
+This example code works as follows:
+
+- When the validation is failed as [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email), the browser's built-in error message is displayed.
+  - ![Error message: Please include an '@' in the email address. 'invalid-as-email' is missing an '@'.](built-in-error-message.png)
+- When the validation is passed as [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email) but failed as the customized constraint, the customized error message is displayed.
+  - ![Error message: Please enter an email address of @example.com](customized-error-message.png)
+
+<!--
+{{EmbedLiveSample("Extending_built-in_form_validation", "100%", 120)}}
+doesn't work, so the example code is embedded as [Static example](https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples#static_examples).
+More details: https://github.com/mdn/content/pull/36415#issuecomment-2432087985
+-->
+
 #### A more detailed example
 
 Now that we've seen a really simple example, let's see how we can use this API to build some slightly more complex custom validation.
@@ -677,54 +725,6 @@ Here is the live result:
 > You can find this example live on GitHub as [detailed-custom-validation.html](https://mdn.github.io/learning-area/html/forms/form-validation/detailed-custom-validation.html). See also the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/detailed-custom-validation.html).
 
 The constraint validation API gives you a powerful tool to handle form validation, letting you have enormous control over the user interface above and beyond what you can do with HTML and CSS alone.
-
-### Extending built-in form validation
-
-With a built-in form validation such as [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email),
-you can extend the validation by `setCustomValidity()`.
-
-First, reset a custom validity message by `setCustomValidity("")`, then validate with the built-in constraints.
-Next, extend with a custom constraints.
-
-```js
-const email = document.getElementById("mail");
-
-email.addEventListener("input", (event) => {
-  // Validate with the built-in constraints
-  email.setCustomValidity("");
-  if (!email.validity.valid) {
-    return;
-  }
-
-  // Extends with a custom constraints
-  email.setCustomValidity(
-    email.value.endsWith("@example.com")
-      ? ""
-      : "Please enter an email address of @example.com",
-  );
-});
-```
-
-```html
-<form>
-  <label for="mail">email address (@example.com only):</label>
-  <input type="email" id="mail" />
-  <button>Submit</button>
-</form>
-```
-
-This example code works as follows:
-
-- When the validation is failed as [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email), the browser's built-in error message is displayed.
-  - ![Error message: Please include an '@' in the email address. 'invalid-as-email' is missing an '@'.](built-in-error-message.png)
-- When the validation is passed as [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email) but failed as the customized constraint, the customized error message is displayed.
-  - ![Error message: Please enter an email address of @example.com](customized-error-message.png)
-
-<!--
-{{EmbedLiveSample("Extending_built-in_form_validation", "100%", 120)}}
-doesn't work, so the example code is embedded as [Static example](https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples#static_examples).
-More details: https://github.com/mdn/content/pull/36415#issuecomment-2432087985
--->
 
 ### Validating forms without a built-in API
 
