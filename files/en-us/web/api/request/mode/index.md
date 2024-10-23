@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Request.mode
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`mode`** read-only property of the {{domxref("Request")}}
 interface contains the mode of the request (e.g., `cors`,

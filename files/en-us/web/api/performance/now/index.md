@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Performance.now
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`performance.now()`** method returns a high resolution timestamp in milliseconds. It represents the time elapsed since {{domxref("Performance.timeOrigin")}} (the time when navigation has started in window contexts, or the time when the worker is run in {{domxref("Worker")}} and {{domxref("ServiceWorker")}} contexts).
 
@@ -56,9 +56,9 @@ currentTime = performance.timeOrigin + performance.now();
 
 The specification (Level 2) requires that `performance.now()` should tick during sleep. It appears that only Firefox on Windows, and Chromiums on Windows keep ticking during sleep. Relevant browser bugs for other operating systems:
 
-- Chrome/Chromium ([bug](https://bugs.chromium.org/p/chromium/issues/detail?id=1206450))
-- Firefox ([bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1709767))
-- Safari/WebKit ([bug](https://bugs.webkit.org/show_bug.cgi?id=225610))
+- Chrome/Chromium ([bug](https://crbug.com/1206450))
+- Firefox ([bug](https://bugzil.la/1709767))
+- Safari/WebKit ([bug](https://webkit.org/b/225610))
 
 More details can also be found in the specification issue [hr-time#115](https://github.com/w3c/hr-time/issues/115#issuecomment-1172985601).
 

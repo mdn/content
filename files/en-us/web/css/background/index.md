@@ -110,7 +110,7 @@ Browsers do not provide any special information on background images to assistiv
 #### HTML
 
 ```html
-<p class="topbanner">
+<p class="top-banner">
   Starry sky<br />
   Twinkle twinkle<br />
   Starry sky
@@ -126,8 +126,8 @@ Browsers do not provide any special information on background images to assistiv
   background: pink;
 }
 
-.topbanner {
-  background: url("starsolid.gif") #99f repeat-y fixed;
+.top-banner {
+  background: url("star-solid.gif") #99f repeat-y fixed;
 }
 ```
 

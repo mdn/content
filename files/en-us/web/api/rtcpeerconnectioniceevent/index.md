@@ -34,7 +34,7 @@ _A `RTCPeerConnectionIceEvent` being an {{domxref("Event")}}, this event also im
 ```js
 pc.onicecandidate = (ev) => {
   console.log(
-    `The ICE candidate (trsp addr: '${ev.candidate.candidate}') added to connection.`,
+    `The ICE candidate ('${ev.candidate.candidate}') added to connection.`,
   );
 };
 ```

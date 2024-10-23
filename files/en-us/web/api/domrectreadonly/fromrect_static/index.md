@@ -6,7 +6,7 @@ page-type: web-api-static-method
 browser-compat: api.DOMRectReadOnly.fromRect_static
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 The **`fromRect()`** static method of the
 {{domxref("DOMRectReadOnly")}} object creates a new `DOMRectReadOnly`

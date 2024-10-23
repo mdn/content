@@ -99,8 +99,8 @@ Elements not in the document are not searched by `getElementById()`. When creati
 
 ```js
 const element = document.createElement("div");
-element.id = "testqq";
-const el = document.getElementById("testqq"); // el will be null!
+element.id = "test";
+const el = document.getElementById("test"); // el will be null!
 ```
 
 In non-HTML documents, the DOM implementation must have information on which attributes are of type ID. Attributes with the name "id" are not of type ID unless so defined in the document's DTD. The `id` attribute is defined to be of ID type in the common cases of [XHTML](/en-US/docs/Glossary/XHTML), XUL, and others. Implementations that do not know whether attributes are of type ID or not are expected to return `null`.

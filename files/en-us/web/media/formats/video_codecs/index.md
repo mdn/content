@@ -1459,12 +1459,7 @@ However, few web browsers support MPEG-2 without the support of a plugin, and wi
     <tr>
       <th scope="row">Container support</th>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mpegmpeg-2">MPEG</a>,
-        MPEG-TS (MPEG Transport Stream),
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#quicktime"
-          >QuickTime</a
-        >
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpegmpeg-2">MPEG</a>, MPEG-TS (MPEG Transport Stream), <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>, <a href="/en-US/docs/Web/Media/Formats/Containers#quicktime">QuickTime</a>
       </td>
     </tr>
     <tr>
@@ -1477,27 +1472,20 @@ However, few web browsers support MPEG-2 without the support of a plugin, and wi
     <tr>
       <th scope="row">Supporting/Maintaining organization</th>
       <td>
-        <a href="https://mpeg.chiariglione.org/">MPEG</a> /
-        <a href="https://www.itu.int/">ITU</a>
+        <a href="https://mpeg.chiariglione.org/">MPEG</a> / <a href="https://www.itu.int/">ITU</a>
       </td>
     </tr>
     <tr>
       <th scope="row">Specification</th>
       <td>
-        <a href="https://www.itu.int/rec/T-REC-H.262"
-          >https://www.itu.int/rec/T-REC-H.262</a
-        ><br /><a href="https://www.iso.org/standard/61152.html"
-          >https://www.iso.org/standard/61152.html</a
-        >
+        <a href="https://www.itu.int/rec/T-REC-H.262">https://www.itu.int/rec/T-REC-H.262</a><br /><a href="https://www.iso.org/standard/61152.html">https://www.iso.org/standard/61152.html</a>
       </td>
     </tr>
     <tr>
       <th scope="row">Licensing</th>
       <td>
-        Proprietary; all patents have expired worldwide with the exception of in
-        Malaysia and the Philippines as of April 1, 2019, so MPEG-2 can be used
-        freely outside those two countries. Patents are licensed by
-        <a href="https://www.via-la.com/licensing-2/mpeg-2/">Via LA</a>.
+        Proprietary; all patents have expired worldwide with the exception of in Malaysia (as of October 1, 2024), so MPEG-2 can be used freely outside of Malaysia.
+        Patents are licensed by <a href="https://www.via-la.com/licensing-2/mpeg-2/">Via LA</a>.
       </td>
     </tr>
   </tbody>

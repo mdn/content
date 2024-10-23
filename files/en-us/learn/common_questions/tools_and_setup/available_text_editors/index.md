@@ -246,7 +246,7 @@ Here are some popular editors:
         >
       </td>
       <td>
-        <a href="https://www.sublimetext.com/docs/">Official</a>,<a
+        <a href="https://www.sublimetext.com/docs/">Official</a>, <a
           href="https://docs.sublimetext.io/"
         >
           Unofficial</a

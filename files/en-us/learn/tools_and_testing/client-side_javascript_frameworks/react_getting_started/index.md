@@ -59,7 +59,7 @@ While React _can_ be used for [small pieces of an interface](https://react.dev/l
 
 In addition, many of the developer-experience benefits of a React app, such as writing interfaces with JSX, require a compilation process. Adding a compiler like Babel to a website makes the code on it run slowly, so developers often set up such tooling with a build step. React arguably has a heavy tooling requirement, but it can be learned.
 
-This article is going to focus on the use case of using React to render the entire user interface of an application with the support of [Vite](https://vitejs.dev/), a modern front-end build tool.
+This article is going to focus on the use case of using React to render the entire user interface of an application with the support of [Vite](https://vite.dev/), a modern front-end build tool.
 
 ## How does React use JavaScript?
 
@@ -136,7 +136,7 @@ See the following for more information:
 
 - ["About npm" on the npm blog](https://docs.npmjs.com/about-npm/)
 - ["Introducing npx" on the npm blog](https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner)
-- [Vite's documentation](https://vitejs.dev/guide/)
+- [Vite's documentation](https://vite.dev/guide/)
 
 ### Initializing your app
 
@@ -232,7 +232,7 @@ function App() {
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
+        <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
         <a href="https://react.dev" target="_blank">
@@ -290,7 +290,7 @@ function App() {
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
+        <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
         <a href="https://react.dev" target="_blank">
