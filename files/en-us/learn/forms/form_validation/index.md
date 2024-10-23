@@ -687,7 +687,7 @@ First, reset a custom validity message by `setCustomValidity("")`, then validate
 Next, extend with a custom constraints.
 
 ```js
-const email = document.getElementById("mail");
+/*const email = document.getElementById("mail");
 
 email.addEventListener("input", (event) => {
   // Validate with the built-in constraints
@@ -702,6 +702,15 @@ email.addEventListener("input", (event) => {
       ? ""
       : "Please enter an email address of @example.com",
   );
+});*/
+const email = document.getElementById("mail");
+
+email.addEventListener("input", (event) => {
+  if ((!email.validity.valid) || (!(email.value.endsWith("@example.com")) {
+    email.setCustomValidity("Please enter an @example.com email address");
+  } else {
+    email.setCustomValidity("");
+  }
 });
 ```
 
