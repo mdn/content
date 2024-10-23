@@ -7,7 +7,7 @@ browser-compat: http.headers.Clear-Site-Data
 
 {{securecontext_header}}{{HTTPSidebar}}
 
-The HTTP **`Clear-Site-Data`** response header clears browsing data (cookies, storage, cache) associated with the requesting website. It allows web developers to have more control over the data stored by a client browser for their origins.
+The HTTP **`Clear-Site-Data`** {{Glossary("response header")}} clears browsing data (cookies, storage, cache) associated with the requesting website. It allows web developers to have more control over the data stored by a client browser for their origins.
 
 <table class="properties">
   <tbody>

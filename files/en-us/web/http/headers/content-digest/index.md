@@ -19,7 +19,7 @@ A client can request that a server emit a `Content-Digest` by issuing {{HTTPHead
   <tbody>
     <tr>
       <th scope="row">Header type</th>
-      <td>{{Glossary("Representation header")}}</td>
+      <td>{{Glossary("Request header")}}, {{Glossary("Response header")}}, {{Glossary("Representation header")}}</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>

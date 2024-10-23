@@ -7,7 +7,7 @@ browser-compat: http.headers.Access-Control-Allow-Credentials
 
 {{HTTPSidebar}}
 
-The HTTP **`Access-Control-Allow-Credentials`** response header tells browsers whether the server allows credentials to be included in cross-origin HTTP requests.
+The HTTP **`Access-Control-Allow-Credentials`** {{Glossary("response header")}} tells browsers whether the server allows credentials to be included in cross-origin HTTP requests.
 
 Credentials include cookies, {{glossary("TLS", "Transport Layer Security (TLS)")}} client certificates, or authentication headers containing a username and password.
 By default, these credentials are not sent in cross-origin requests, and doing so can make a site vulnerable to {{Glossary("CSRF", "Cross-Site Request Forgery (CSRF)")}} attacks.
@@ -47,8 +47,8 @@ Access-Control-Allow-Credentials: true
 
 - `true`
   - : The server allows credentials to be included in cross-origin HTTP requests.
-     This is the only valid value for this header and is case-sensitive.
-     If you don't need credentials, omit this header entirely rather than setting its value to `false`.
+    This is the only valid value for this header and is case-sensitive.
+    If you don't need credentials, omit this header entirely rather than setting its value to `false`.
 
 ## Examples
 

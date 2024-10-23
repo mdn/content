@@ -7,8 +7,7 @@ browser-compat: http.headers.Access-Control-Allow-Headers
 
 {{HTTPSidebar}}
 
-The HTTP **`Access-Control-Allow-Headers`** response header is used in response to a {{Glossary("preflight request")}} to indicate the HTTP headers that can be used during the actual request. This header is required if the preflight request contains {{HTTPHeader("Access-Control-Request-Headers")}}.
-
+The HTTP **`Access-Control-Allow-Headers`** {{Glossary("response header")}} is used in response to a {{Glossary("preflight request")}} to indicate the HTTP headers that can be used during the actual request. This header is required if the preflight request contains {{HTTPHeader("Access-Control-Request-Headers")}}.
 
 > [!NOTE]
 > The {{glossary("CORS-safelisted_request_header", "CORS-safelisted request headers")}} are always allowed and usually aren't listed in `Access-Control-Allow-Headers` unless there is a need to circumvent the [additional safelist restrictions](/en-US/docs/Glossary/CORS-safelisted_request_header#additional_restrictions).

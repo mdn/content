@@ -7,7 +7,7 @@ browser-compat: http.headers.Content-Language
 
 {{HTTPSidebar}}
 
-The HTTP **`Content-Language`** {{Glossary("Representation header")}} is used to describe the language(s) intended for the audience, so users can differentiate it according to their own preferred language.
+The HTTP **`Content-Language`** {{Glossary("representation header")}} is used to describe the language(s) intended for the audience, so users can differentiate it according to their own preferred language.
 
 For example, if `Content-Language: de-DE` is set, it means that the document is intended for German language speakers. The document may not be written in German, but instead be written in English as part of a language course for German speakers. If you want to indicate which language the document is **written in**, use the [`lang` attribute](/en-US/docs/Web/HTML/Global_attributes/lang) instead.
 

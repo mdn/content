@@ -7,7 +7,7 @@ browser-compat: http.headers.Content-Disposition
 
 {{HTTPSidebar}}
 
-The HTTP **`Content-Disposition`** response header indicates if the content is expected to be displayed _inline_ in the browser as a Web page or as part of a Web page, or as an _attachment_ that may be downloaded and saved client-side.
+The HTTP **`Content-Disposition`** header indicates if the content is expected to be displayed _inline_ in the browser as a Web page or as part of a Web page, or as an _attachment_ that may be downloaded and saved client-side.
 
 In a `multipart/form-data` body, the `Content-Disposition` header must be used on each subpart of a multipart body to provide information about the field it applies to. The subpart is delimited by the _boundary_ defined in the {{HTTPHeader("Content-Type")}} header. Used on the body itself, `Content-Disposition` has no effect.
 

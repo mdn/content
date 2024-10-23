@@ -7,7 +7,7 @@ browser-compat: http.headers.Access-Control-Expose-Headers
 
 {{HTTPSidebar}}
 
-The HTTP **`Access-Control-Expose-Headers`** response header allows a server to indicate which response headers should be made available to scripts running in the browser in response to a cross-origin request.
+The HTTP **`Access-Control-Expose-Headers`** {{Glossary("response header")}} allows a server to indicate which response headers should be made available to scripts running in the browser in response to a cross-origin request.
 
 Only the {{Glossary("CORS-safelisted response header", "CORS-safelisted response headers")}} are exposed by default. For clients to be able to access other headers, the server must list them using the `Access-Control-Expose-Headers` header.
 

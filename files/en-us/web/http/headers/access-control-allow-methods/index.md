@@ -7,7 +7,7 @@ browser-compat: http.headers.Access-Control-Allow-Methods
 
 {{HTTPSidebar}}
 
-The HTTP **`Access-Control-Allow-Methods`** response header specifies one or more [HTTP request methods](/en-US/docs/Web/HTTP/Methods) allowed when accessing a resource in response to a {{glossary("preflight request")}}.
+The HTTP **`Access-Control-Allow-Methods`** {{Glossary("response header")}} specifies one or more [HTTP request methods](/en-US/docs/Web/HTTP/Methods) allowed when accessing a resource in response to a {{glossary("preflight request")}}.
 
 <table class="properties">
   <tbody>

@@ -7,7 +7,7 @@ browser-compat: http.headers.Age
 
 {{HTTPSidebar}}
 
-The HTTP **`Age`** header indicates the time in seconds for which an object was in a proxy cache.
+The HTTP **`Age`** {{Glossary("response header")}} indicates the time in seconds for which an object was in a proxy cache.
 
 The header value is usually close to zero.
 If the value is `0`, the object was probably fetched from the origin server; otherwise, the value is usually calculated as a difference between the proxy's current date and the {{HTTPHeader("Date")}} general header included in the HTTP response.

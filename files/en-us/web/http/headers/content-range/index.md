@@ -7,7 +7,7 @@ browser-compat: http.headers.Content-Range
 
 {{HTTPSidebar}}
 
-The HTTP **`Content-Range`** response header is used in [range requests](/en-US/docs/Web/HTTP/Range_requests) to indicate where the content of a response body belongs in relation to a complete resource.
+The HTTP **`Content-Range`** {{Glossary("response header")}} is used in [range requests](/en-US/docs/Web/HTTP/Range_requests) to indicate where the content of a response body belongs in relation to a complete resource.
 
 <table class="properties">
   <tbody>

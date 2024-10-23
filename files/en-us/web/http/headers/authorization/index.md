@@ -7,7 +7,7 @@ browser-compat: http.headers.Authorization
 
 {{HTTPSidebar}}
 
-The HTTP **`Authorization`** request header can be used to provide credentials that authenticate a user agent with a server, allowing access to protected resources.
+The HTTP **`Authorization`** {{Glossary("request header")}} can be used to provide credentials that authenticate a user agent with a server, allowing access to protected resources.
 
 The `Authorization` header is usually, but not always, sent after the user agent first attempts to request a protected resource without credentials.
 The server responds with a {{HTTPStatus("401", "401 Unauthorized")}} message that includes at least one {{HTTPHeader("WWW-Authenticate")}} header.

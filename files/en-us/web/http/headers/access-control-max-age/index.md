@@ -7,7 +7,7 @@ browser-compat: http.headers.Access-Control-Max-Age
 
 {{HTTPSidebar}}
 
-The HTTP **`Access-Control-Max-Age`** response header indicates how long the results of a {{glossary("preflight request")}} (that is, the information contained in the {{HTTPHeader("Access-Control-Allow-Methods")}} and {{HTTPHeader("Access-Control-Allow-Headers")}} headers) can be cached.
+The HTTP **`Access-Control-Max-Age`** {{Glossary("response header")}} indicates how long the results of a {{glossary("preflight request")}} (that is, the information contained in the {{HTTPHeader("Access-Control-Allow-Methods")}} and {{HTTPHeader("Access-Control-Allow-Headers")}} headers) can be cached.
 
 <table class="properties">
   <tbody>

@@ -7,7 +7,7 @@ browser-compat: http.headers.Alt-Svc
 
 {{HTTPSidebar}}
 
-The HTTP **`Alt-Svc`** response header lets a server indicate that another network location (the "alternative service") can be treated as authoritative for that origin when making future requests.
+The HTTP **`Alt-Svc`** {{Glossary("response header")}} lets a server indicate that another network location (the "alternative service") can be treated as authoritative for that origin when making future requests.
 
 Doing so allows new protocol versions to be advertised without affecting in-flight requests and can also help servers manage traffic. Using an alternative service is not visible to the end user; it does not change the URL or the origin of the request and does not introduce additional round trips.
 

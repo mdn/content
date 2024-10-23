@@ -7,7 +7,7 @@ browser-compat: http.headers.Content-Security-Policy-Report-Only
 
 {{HTTPSidebar}}
 
-The HTTP **`Content-Security-Policy-Report-Only`** response header allows web developers to experiment with policies by sending reports of CSP violations and monitoring their effects instead of enforcing them.
+The HTTP **`Content-Security-Policy-Report-Only`** {{Glossary("response header")}} allows web developers to experiment with policies by sending reports of CSP violations and monitoring their effects instead of enforcing them.
 This allows CSP violations to be examined or quickly repaired as a test phase before a specific {{HTTPHeader("Content-Security-Policy")}} is applied and enforced.
 
 The CSP {{CSP("report-to")}} directive must be specified for reports to be sent: if not, the operation won't have any effect.

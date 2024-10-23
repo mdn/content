@@ -9,7 +9,7 @@ page-type: http-header
 > [!WARNING]
 > Do not use this header. Browsers omit this header and servers should ignore it.
 
-The HTTP **`Accept-Charset`** request header was a header that advertised a client's supported {{glossary("character encoding", "character encodings")}}. It is no longer widely used.
+The HTTP **`Accept-Charset`** {{Glossary("request header")}} was a header that advertised a client's supported {{glossary("character encoding", "character encodings")}}. It is no longer widely used.
 
 UTF-8 is well-supported and the overwhelmingly preferred choice for character encoding. To [guarantee better privacy through less configuration-based entropy](https://www.eff.org/deeplinks/2010/01/primer-information-theory-and-privacy), all browsers omit the `Accept-Charset` header.
 
