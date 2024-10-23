@@ -7,7 +7,7 @@ browser-compat: http.headers.Range
 
 {{HTTPSidebar}}
 
-The HTTP **`Range`** request header indicates the part of a resource that the server should return.
+The HTTP **`Range`** {{Glossary("request header")}} indicates the part of a resource that the server should return.
 Several parts can be requested at the same time in one `Range` header, and the server may send back these ranges in a multipart document.
 If the server sends back ranges, it uses the {{HTTPStatus("206", "206 Partial Content")}} status code for the response.
 If the ranges are invalid, the server returns the {{HTTPStatus("416", "416 Range Not Satisfiable")}} error.

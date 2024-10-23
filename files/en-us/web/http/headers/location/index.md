@@ -7,7 +7,7 @@ browser-compat: http.headers.Location
 
 {{HTTPSidebar}}
 
-The HTTP **`Location`** response header indicates the URL to redirect a page to.
+The HTTP **`Location`** {{Glossary("response header")}} indicates the URL to redirect a page to.
 It only provides a meaning when served with a `3XX` [redirection response](/en-US/docs/Web/HTTP/Status#redirection_messages) or a {{HTTPStatus("201", "201 Created")}} status response.
 
 In redirections, the HTTP method used to make the redirected request to fetch the page pointed to by `Location` depends on the original method and the kind of redirection:

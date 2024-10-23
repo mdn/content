@@ -7,7 +7,7 @@ browser-compat: http.headers.Last-Modified
 
 {{HTTPSidebar}}
 
-The HTTP **`Last-Modified`** response header contains a date and time when the origin server believes the resource was last modified.
+The HTTP **`Last-Modified`** {{glossary("response header")}} contains a date and time when the origin server believes the resource was last modified.
 It is used as a validator in [conditional requests](/en-US/docs/Web/HTTP/Conditional_requests) ({{HTTPHeader("If-Modified-Since")}} or {{HTTPHeader("If-Unmodified-Since")}}) to determine if a requested resource is the same as one already stored by the client.
 It is less accurate than an {{HTTPHeader("ETag")}} for determining file contents, but can be used as a fallback mechanism if ETags are unavailable.
 
@@ -17,7 +17,7 @@ It is less accurate than an {{HTTPHeader("ETag")}} for determining file contents
   <tbody>
     <tr>
       <th scope="row">Header type</th>
-      <td>{{Glossary("Representation header")}}</td>
+      <td>{{glossary("Response header")}}, {{Glossary("Representation header")}}</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>

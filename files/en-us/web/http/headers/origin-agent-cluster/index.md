@@ -9,7 +9,7 @@ browser-compat: http.headers.Origin-Agent-Cluster
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-The HTTP **`Origin-Agent-Cluster`** response header is used to request that the associated {{domxref("Document")}} should be placed in an _origin-keyed [agent cluster](https://tc39.es/ecma262/#sec-agent-clusters)_. This means that operating system resources (for example, the operating system process) used to evaluate the document should be shared only with other documents from the same {{glossary("origin")}}.
+The HTTP **`Origin-Agent-Cluster`** {{Glossary("response header")}} is used to request that the associated {{domxref("Document")}} should be placed in an _origin-keyed [agent cluster](https://tc39.es/ecma262/#sec-agent-clusters)_. This means that operating system resources (for example, the operating system process) used to evaluate the document should be shared only with other documents from the same {{glossary("origin")}}.
 
 The effect of this is that a resource-intensive document will be less likely to degrade the performance of documents from other origins.
 

@@ -22,7 +22,7 @@ This header serves for backwards compatibility with HTTP/1.0 caches that do not 
       <th scope="row">Header type</th>
       <td>
         {{Glossary("Request header")}},
-        {{Glossary("Response header")}} (Response behavior is not specified and is implementation-specific).
+        {{Glossary("Response header")}} (response behavior is not specified and is implementation-specific).
       </td>
     </tr>
     <tr>

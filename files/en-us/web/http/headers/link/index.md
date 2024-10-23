@@ -7,7 +7,7 @@ browser-compat: http.headers.Link
 
 {{HTTPSidebar}}
 
-The HTTP **`Link`** [entity header](/en-US/docs/Glossary/Entity_header) field provides a means for serializing one or more links in HTTP headers.
+The HTTP **`Link`** header provides a means for serializing one or more links in HTTP headers.
 This allows the server to point a client to another resource containing metadata about the requested resource.
 This header has the same semantics as the HTML {{HTMLElement("link")}} element.
 One benefit of using the `Link` header is that the browser can start preconnecting or preloading resources before the HTML itself is fetched and processed.
@@ -21,7 +21,7 @@ The only relations that work reliably are [`preconnect`](/en-US/docs/Web/HTML/At
     <tr>
       <th scope="row">Header type</th>
       <td>
-        {{Glossary("Entity header")}}
+        {{Glossary("Response header")}}, {{Glossary("Request header")}}
       </td>
     </tr>
     <tr>

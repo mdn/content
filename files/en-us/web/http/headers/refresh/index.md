@@ -7,7 +7,7 @@ browser-compat: http.headers.Refresh
 
 {{HTTPSidebar}}
 
-The HTTP **`Refresh`** response header directs a web browser to either refresh or redirect the page when a specified amount of time has passed after the page was fully loaded.
+The HTTP **`Refresh`** {{Glossary("response header")}} directs a web browser to either refresh or redirect the page when a specified amount of time has passed after the page was fully loaded.
 It is exactly equivalent to using [`<meta http-equiv="refresh" content="...">`](/en-US/docs/Web/HTML/Element/meta#http-equiv) in HTML.
 
 > [!NOTE]

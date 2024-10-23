@@ -10,7 +10,7 @@ spec-urls: https://wicg.github.io/nav-speculation/no-vary-search.html
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-The HTTP **`No-Vary-Search`** response header specifies a set of rules that define how a URL's query parameters will affect cache matching.
+The HTTP **`No-Vary-Search`** {{Glossary("response header")}} specifies a set of rules that define how a URL's query parameters will affect cache matching.
 These rules dictate whether the same URL with different URL parameters should be saved as separate browser cache entries.
 
 > [!NOTE]
