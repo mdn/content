@@ -44,7 +44,7 @@ Access-Control-Allow-Headers: *
 
 ### Implementing a custom header
 
-Here's an example of what an `Access-Control-Allow-Headers` header might look like. It indicates that a custom header named `X-Custom-Header` is supported by CORS requests to the server in addition to the {{Glossary("CORS-safelisted_request_header", "CORS-safelisted request headers")}}.
+Below is an example of an `Access-Control-Allow-Headers` header. It indicates that a custom header named `X-Custom-Header` is supported by CORS requests to the server, in addition to the {{Glossary("CORS-safelisted_request_header", "CORS-safelisted request headers")}}.
 
 ```http
 Access-Control-Allow-Headers: X-Custom-Header
