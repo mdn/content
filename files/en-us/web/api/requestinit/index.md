@@ -145,14 +145,24 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
 
 - `mode` {{optional_inline}}
 
-  - : One of the following values:
+  - : Sets cross-origin behavior for the request. One of the following values:
 
     - `same-origin`
+
       - : Disallows cross-origin requests completely.
+
     - `cors`
-      - : If the request is cross-origin then it will use the [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS) mechanism.
+
+      - : If the request is cross-origin then it will use the [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS) mechanism. Only {{glossary("CORS-safelisted response header", "CORS-safelisted response headers")}} are exposed in the response.
+
     - `no-cors`
-      - : The request must be a [simple request](/en-US/docs/Web/HTTP/CORS#simple_requests), which restricts the headers that may be set to {{glossary("CORS-safelisted request header", "CORS-safelisted request headers")}}, and restricts methods to `GET`, `HEAD`, and `POST`.
+
+      - : Disables CORS for cross-origin requests. This option comes with the following restrictions:
+
+        - The method may only be one of `HEAD`, `GET` or `POST`.
+        - The headers may only be {{Glossary("CORS-safelisted request header", "CORS-safelisted request headers")}}, with the additional restriction that the {{httpheader("Range")}} header is also not allowed. This also applies to any headers added by service workers.
+        - The response is _opaque_, meaning that its headers and body are not available to JavaScript.
+
     - `navigate`
       - : Used only by HTML navigation. A `navigate` request is created only while navigating between documents.
 
