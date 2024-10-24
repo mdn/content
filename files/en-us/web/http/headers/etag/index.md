@@ -37,18 +37,15 @@ ETag: "<etag_value>"
 ## Directives
 
 - `W/` {{optional_inline}}
-  - : `W/` (case-sensitive) indicates that a [weak validator](/en-US/docs/Web/HTTP/Conditional_requests#weak_validation)
-    is used. Weak ETags are easy to generate, but are far less useful for comparisons.
-    Strong validators are ideal for comparisons but can be very difficult to generate
-    efficiently. Weak `ETag` values of two representations of the same
-    resources might be semantically equivalent, but not byte-for-byte identical. This
-    means weak ETags prevent caching when [byte range requests](/en-US/docs/Web/HTTP/Headers/Accept-Ranges) are used,
-    but strong ETags mean range requests can still be cached.
+  - : `W/` (case-sensitive) indicates that a [weak validator](/en-US/docs/Web/HTTP/Conditional_requests#weak_validation) is used.
+    Weak ETags are easy to generate, but are far less useful for comparisons.
+    Strong validators are ideal for comparisons but can be very difficult to generate efficiently.
+    Weak `ETag` values of two representations of the same resources might be semantically equivalent, but not byte-for-byte identical.
+    This means weak ETags prevent caching when [byte range requests](/en-US/docs/Web/HTTP/Headers/Accept-Ranges) are used, but strong ETags mean range requests can still be cached.
 - `<etag_value>`
-  - : Entity tag that uniquely represents the requested resource. It is a string of {{Glossary("ASCII")}}
-    characters placed between double quotes, like `"675af34563dc-tr34"`. The
-    method by which `ETag` values are generated is not specified. Typically, the ETag value
-    is a hash of the content, a hash of the last modification timestamp, or just a revision number.
+  - : Entity tag that uniquely represents the requested resource. It is a string of {{Glossary("ASCII")}} characters placed between double quotes, like `"675af34563dc-tr34"`.
+    The method by which `ETag` values are generated is not specified.
+    Typically, the ETag value is a hash of the content, a hash of the last modification timestamp, or just a revision number.
     For example, a wiki engine can use a hexadecimal hash of the documentation article content.
 
 ## Examples
@@ -81,21 +78,14 @@ If the hashes don't match, it means that the document has been edited in-between
 
 ### Caching of unchanged resources
 
-Another typical use of the `ETag` header is to cache resources that are
-unchanged. If a user visits a given URL again (that has an `ETag` set), and
-it is _stale_ (too old to be considered usable), the client will send the value
-of its `ETag` along in an {{HTTPHeader("If-None-Match")}} header field:
+Another typical use of the `ETag` header is to cache resources that are unchanged.
+If a user visits a given URL again (that has an `ETag` set), and it is _stale_ (too old to be considered usable), the client will send the value of its `ETag` along in an {{HTTPHeader("If-None-Match")}} header field:
 
 ```http
 If-None-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 ```
 
-The server compares the client's `ETag` (sent with
-`If-None-Match`) with the `ETag` for its current version of the
-resource, and if both values match (that is, the resource has not changed), the server
-sends back a {{HTTPStatus("304", "304 Not Modified")}} status, without a body,
-which tells the client that the cached version of the response is still good to use
-(_fresh_).
+The server compares the client's `ETag` (sent with `If-None-Match`) with the `ETag` for its current version of the resource, and if both values match (that is, the resource has not changed), the server sends back a {{HTTPStatus("304", "304 Not Modified")}} status, without a body, which tells the client that the cached version of the response is still good to use (_fresh_).
 
 ## Specifications
 
