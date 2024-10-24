@@ -39,10 +39,6 @@ semantics > :not(:first-child) {
 
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
 
-## Accessibility
-
-The `<semantics>` element has no implicit [ARIA role](/en-US/docs/Web/Accessibility/ARIA/Roles).
-
 ## Example
 
 ```css hidden
@@ -97,6 +93,19 @@ body {
 ```
 
 {{ EmbedLiveSample('example', 700, 200, "", "") }}
+
+## Technical summary
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Roles">Implicit ARIA role</a>
+    </th>
+    <td>
+      None
+    </td>
+  </tr>
+</table>
 
 ## Specifications
 

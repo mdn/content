@@ -13,10 +13,6 @@ The **`<mprescripts>`** [MathML](/en-US/docs/Web/MathML) element is used within 
 
 This element supports [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
 
-## Accessibility
-
-The `<mprescripts>` element has no implicit [ARIA role](/en-US/docs/Web/Accessibility/ARIA/Roles).
-
 ## Example
 
 The first `<mmultiscripts>` child element becomes a base expression. The remaining children by default become post-scripts elements (a, b). `<mprescripts>` acts as a separator, and children after it become pre-scripts elements (c, d).
@@ -48,6 +44,19 @@ body {
 ```
 
 {{ EmbedLiveSample('example', 700, 200, "", "") }}
+
+## Technical summary
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Roles">Implicit ARIA role</a>
+    </th>
+    <td>
+      None
+    </td>
+  </tr>
+</table>
 
 ## Specifications
 

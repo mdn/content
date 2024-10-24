@@ -38,10 +38,6 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
     | `updiagonalarrow`    | ![Arrow pointing up and to the right.](updiagonalarrow.png) | <math><menclose notation="updiagonalarrow"><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></menclose></math>    | diagonal arrow                                                                                                      |
     | `phasorangle`        | ![Screenshot of the phasorangle notation](phasorangle.png)  | <math><menclose notation="phasorangle"><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></menclose></math>        | phasor angle                                                                                                        |
 
-## Accessibility
-
-The `<menclose>` element has no implicit [ARIA role](/en-US/docs/Web/Accessibility/ARIA/Roles).
-
 ## Examples
 
 ```html
@@ -55,6 +51,19 @@ The `<menclose>` element has no implicit [ARIA role](/en-US/docs/Web/Accessibili
 ```
 
 {{ EmbedLiveSample('menclose_example', 700, 200, "", "") }}
+
+## Technical summary
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Roles">Implicit ARIA role</a>
+    </th>
+    <td>
+      None
+    </td>
+  </tr>
+</table>
 
 ## Specifications
 

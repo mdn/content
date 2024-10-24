@@ -20,10 +20,6 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 - `accentunder`
   - : A [`<boolean>`](/en-US/docs/Web/MathML/Values#mathml-specific_types) indicating whether the under script should be treated as an accent (i.e. drawn bigger and closer to the base expression).
 
-## Accessibility
-
-The `<munderover>` element has no implicit [ARIA role](/en-US/docs/Web/Accessibility/ARIA/Roles).
-
 ## Examples
 
 ```html
@@ -44,6 +40,19 @@ The `<munderover>` element has no implicit [ARIA role](/en-US/docs/Web/Accessibi
 ```
 
 {{ EmbedLiveSample('munderover_example', 700, 200, "", "") }}
+
+## Technical summary
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Roles">Implicit ARIA role</a>
+    </th>
+    <td>
+      None
+    </td>
+  </tr>
+</table>
 
 ## Specifications
 

@@ -21,10 +21,6 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 - `src` {{deprecated_inline}}
   - : The location of an external source for semantic information.
 
-## Accessibility
-
-The `<annotation>` element has no implicit [ARIA role](/en-US/docs/Web/Accessibility/ARIA/Roles).
-
 ## Example
 
 ```css hidden
@@ -60,6 +56,19 @@ body {
 ```
 
 {{ EmbedLiveSample('example', 700, 200, "", "") }}
+
+## Technical summary
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Roles">Implicit ARIA role</a>
+    </th>
+    <td>
+      None
+    </td>
+  </tr>
+</table>
 
 ## Specifications
 

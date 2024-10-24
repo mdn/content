@@ -32,10 +32,6 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 > [!NOTE]
 > For the `linethickness` attribute, some browsers may also accept the deprecated values `medium`, `thin` and `thick` (whose exact interpretation is left to implementers) or [legacy MathML lengths](/en-US/docs/Web/MathML/Values#legacy_mathml_lengths).
 
-## Accessibility
-
-The `<mfrac>` element has no implicit [ARIA role](/en-US/docs/Web/Accessibility/ARIA/Roles).
-
 ## Examples
 
 ### Simple fraction
@@ -80,6 +76,19 @@ The following MathML code should render as a [binomial coefficient](https://en.w
 ```
 
 {{ EmbedLiveSample('Fraction_without_bar', 700, 200, "", "") }}
+
+## Technical summary
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Roles">Implicit ARIA role</a>
+    </th>
+    <td>
+      None
+    </td>
+  </tr>
+</table>
 
 ## Specifications
 

@@ -48,10 +48,6 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 > [!NOTE]
 > For the `width` attribute, some browsers may also accept [legacy MathML lengths](/en-US/docs/Web/MathML/Values#legacy_mathml_lengths).
 
-## Accessibility
-
-The `<mtable>` element has no implicit [ARIA role](/en-US/docs/Web/Accessibility/ARIA/Roles).
-
 ## Examples
 
 ### Alignment with row number
@@ -78,6 +74,19 @@ The `<mtable>` element has no implicit [ARIA role](/en-US/docs/Web/Accessibility
 ```
 
 {{EmbedLiveSample('Alignment with row number')}}
+
+## Technical summary
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Roles">Implicit ARIA role</a>
+    </th>
+    <td>
+      None
+    </td>
+  </tr>
+</table>
 
 ## Specifications
 

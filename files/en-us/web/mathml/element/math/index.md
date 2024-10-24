@@ -137,6 +137,21 @@ This example contains two MathML formula. The first one is rendered in its own c
 
 {{ EmbedLiveSample('math_example', 700, 200, "", "") }}
 
+## Technical summary
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Roles">Implicit ARIA role</a>
+    </th>
+    <td>
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/math_role">
+        <code>math</code>
+      </a>
+    </td>
+  </tr>
+</table>
+
 ## Specifications
 
 {{Specifications}}

@@ -26,10 +26,6 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 - `separators`
   - : A sequence of zero or more characters to be used for different separators, optionally divided by white space, which is ignored. The default value is ",". By specifying more than one character, it is possible to set different separators for each argument in the expression. If there are too many separators, all excess is ignored. If there are too few separators in the expression, the last specified separator is repeated.
 
-## Accessibility
-
-The `<mfenced>` element has no implicit [ARIA role](/en-US/docs/Web/Accessibility/ARIA/Roles).
-
 ## Examples
 
 ### The last separator is repeated (`,`)
@@ -71,6 +67,19 @@ Sample rendering: ![[a|b|c|d|e]](mfenced02.png)
 Rendering in your browser:
 
 {{ EmbedLiveSample('mfenced_example1', 700, 200, "", "") }}
+
+## Technical summary
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Roles">Implicit ARIA role</a>
+    </th>
+    <td>
+      None
+    </td>
+  </tr>
+</table>
 
 ## Specifications
 

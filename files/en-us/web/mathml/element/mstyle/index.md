@@ -27,10 +27,6 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 - `fontweight` {{deprecated_inline}} {{Non-standard_Inline}}
   - : Use {{cssxref("font-weight")}} instead.
 
-## Accessibility
-
-The `<mstyle>` element has no implicit [ARIA role](/en-US/docs/Web/Accessibility/ARIA/Roles).
-
 ## Examples
 
 ### Attributes mapped to CSS
@@ -90,6 +86,19 @@ The following example shows a formula with [`font-size`](/en-US/docs/Web/CSS/fon
 ```
 
 {{EmbedLiveSample('Legacy script attributes', 700, 400)}}
+
+## Technical summary
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Roles">Implicit ARIA role</a>
+    </th>
+    <td>
+      None
+    </td>
+  </tr>
+</table>
 
 ## Specifications
 

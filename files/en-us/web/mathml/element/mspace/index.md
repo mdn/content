@@ -23,10 +23,6 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 > [!NOTE]
 > For the `depth`, `height`, `width` attributes, some browsers may also accept [legacy MathML lengths](/en-US/docs/Web/MathML/Values#legacy_mathml_lengths).
 
-## Accessibility
-
-The `<mspace>` element has no implicit [ARIA role](/en-US/docs/Web/Accessibility/ARIA/Roles).
-
 ## Examples
 
 ```html
@@ -42,6 +38,19 @@ The `<mspace>` element has no implicit [ARIA role](/en-US/docs/Web/Accessibility
 ```
 
 {{EmbedLiveSample('Examples')}}
+
+## Technical summary
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Roles">Implicit ARIA role</a>
+    </th>
+    <td>
+      None
+    </td>
+  </tr>
+</table>
 
 ## Specifications
 

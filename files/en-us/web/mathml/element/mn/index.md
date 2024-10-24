@@ -13,10 +13,6 @@ The **`<mn>`** [MathML](/en-US/docs/Web/MathML) element represents a **numeric**
 
 This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
 
-## Accessibility
-
-The `<mn>` element has no implicit [ARIA role](/en-US/docs/Web/Accessibility/ARIA/Roles).
-
 ## Examples
 
 ```html
@@ -42,6 +38,19 @@ The `<mn>` element has no implicit [ARIA role](/en-US/docs/Web/Accessibility/ARI
 ```
 
 {{ EmbedLiveSample('mi_example', 700, 200, "", "") }}
+
+## Technical summary
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Roles">Implicit ARIA role</a>
+    </th>
+    <td>
+      None
+    </td>
+  </tr>
+</table>
 
 ## Specifications
 

@@ -18,10 +18,6 @@ When writing a MathML expression, you should group elements within an `<mrow>` i
 
 This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
 
-## Accessibility
-
-The `<mrow>` element has no implicit [ARIA role](/en-US/docs/Web/Accessibility/ARIA/Roles).
-
 ## Examples
 
 ```html
@@ -53,6 +49,19 @@ The `<mrow>` element has no implicit [ARIA role](/en-US/docs/Web/Accessibility/A
 ```
 
 {{EmbedLiveSample('Examples')}}
+
+## Technical summary
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Roles">Implicit ARIA role</a>
+    </th>
+    <td>
+      None
+    </td>
+  </tr>
+</table>
 
 ## Specifications
 

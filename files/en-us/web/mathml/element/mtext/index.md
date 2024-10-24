@@ -15,10 +15,6 @@ To display text _with_ notational meaning, use {{ MathMLElement("mi") }}, {{ Mat
 
 This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
 
-## Accessibility
-
-The `<mtext>` element has no implicit [ARIA role](/en-US/docs/Web/Accessibility/ARIA/Roles).
-
 ## Examples
 
 ```html
@@ -32,6 +28,19 @@ The `<mtext>` element has no implicit [ARIA role](/en-US/docs/Web/Accessibility/
 ```
 
 {{ EmbedLiveSample('mtext_example', 700, 200, "", "") }}
+
+## Technical summary
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Roles">Implicit ARIA role</a>
+    </th>
+    <td>
+      None
+    </td>
+  </tr>
+</table>
 
 ## Specifications
 

@@ -13,10 +13,6 @@ The **`<mphantom>`** [MathML](/en-US/docs/Web/MathML) element is rendered invisi
 
 This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
 
-## Accessibility
-
-The `<mphantom>` element has no implicit [ARIA role](/en-US/docs/Web/Accessibility/ARIA/Roles).
-
 ## Examples
 
 ```html
@@ -34,6 +30,19 @@ The `<mphantom>` element has no implicit [ARIA role](/en-US/docs/Web/Accessibili
 ```
 
 {{EmbedLiveSample('Examples')}}
+
+## Technical summary
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Roles">Implicit ARIA role</a>
+    </th>
+    <td>
+      None
+    </td>
+  </tr>
+</table>
 
 ## Specifications
 
