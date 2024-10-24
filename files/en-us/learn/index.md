@@ -8,18 +8,18 @@ page-type: landing-page
 
 Welcome to the MDN learning area. This set of articles aims to provide complete beginners to web development with fundamental skills for coding websites. The aim is not to take you from "beginner" to "expert" but to take you from "beginner" to "comfortable." From there, you should be able to start making your way, learning from [the rest of MDN](/en-US/), and other intermediate to advanced resources that assume a lot of previous knowledge.
 
-If you are a complete beginner, web development can be challenging — we will hold your hand and provide enough detail for you to feel comfortable and learn the topics properly. You should feel at home whether you are a student learning web development (on your own or as part of a class), a teacher looking for class materials, a hobbyist, or someone who just wants to understand more about how web technologies work.
+If you are a complete beginner, web development can be challenging. We will hold your hand and provide enough detail for you to feel comfortable and learn the topics properly. You should feel at home whether you are a student learning web development (on your own or as part of a class), a teacher looking for class materials, a hobbyist, or someone who just wants to understand more about how web technologies work.
 
 ## Where to start
 
 If you are not sure about committing to learning web development in-depth and want to begin with a taster session, we'd recommend that you start by working through our [Getting started with the web](/en-US/docs/Learn/Getting_started_with_the_web) guides. Beyond that, you should start by learning the following topics:
 
-- HTML and CSS
-  - : HTML provides structure for web content, whereas CSS provides instructions to style and lay out that content. See [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) and [CSS first steps](/en-US/docs/Learn/CSS/First_steps) for essential starter information.
-- JavaScript
-  - : JavaScript allows you to code interactive functionality on websites. Begin with [JavaScript first steps](/en-US/docs/Learn/JavaScript/First_steps).
-- Frameworks and tooling
-  - : After mastering the essentials of vanilla HTML, CSS, and JavaScript, you should learn about [client-side web development tools](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools), and then consider digging into [client-side JavaScript frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks). You should also consider learning the basic concepts of [server-side website programming](/en-US/docs/Learn/Server-side).
+- **HTML and CSS**
+  - HTML provides structure for web content, whereas CSS provides instructions to style and lay out that content. See [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) and [CSS first steps](/en-US/docs/Learn/CSS/First_steps) for essential starter information.
+- **JavaScript**
+  - JavaScript allows you to code interactive functionality on websites. Begin with [JavaScript first steps](/en-US/docs/Learn/JavaScript/First_steps).
+- **Frameworks and tooling**
+  - After mastering the essentials of vanilla HTML, CSS, and JavaScript, you should learn about [client-side web development tools](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools), and then consider digging into [client-side JavaScript frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks). You should also consider learning the basic concepts of [server-side website programming](/en-US/docs/Learn/Server-side).
 
 > [!NOTE]
 > Our [glossary](/en-US/docs/Glossary) provides terminology definitions. Besides, if you have a specific question about web development, our [Common questions](/en-US/docs/Learn/Common_questions) section may have something to help you.
@@ -37,31 +37,31 @@ If you are not sure about committing to learning web development in-depth and wa
 The following is a list of all the topics we cover in the MDN learning area.
 
 - [Getting started with the web](/en-US/docs/Learn/Getting_started_with_the_web)
-  - : Provides a practical introduction to web development for complete beginners.
+  - Provides a practical introduction to web development for complete beginners.
 - [HTML — Structuring the web](/en-US/docs/Learn/HTML)
-  - : HTML is the language that we use to structure the different parts of our content and define what their meaning or purpose is. This topic teaches HTML in detail.
+  - HTML is the language that we use to structure the different parts of our content and define what their meaning or purpose is. This topic teaches HTML in detail.
 - [CSS — Styling the web](/en-US/docs/Learn/CSS)
-  - : CSS is the language that we use to control our web content's style and layout, as well as adding behavior like animation. This topic provides comprehensive coverage of CSS.
+  - CSS is the language that we use to control our web content's style and layout, as well as adding behavior like animation. This topic provides comprehensive coverage of CSS.
 - [JavaScript — Dynamic client-side scripting](/en-US/docs/Learn/JavaScript)
-  - : JavaScript is the scripting language used to add dynamic functionality to web pages. This topic teaches all the essentials needed to become comfortable with writing and understanding JavaScript.
+  - JavaScript is the scripting language used to add dynamic functionality to web pages. This topic teaches all the essentials needed to become comfortable with writing and understanding JavaScript.
 - [Web forms — Working with user data](/en-US/docs/Learn/Forms)
-  - : Web forms are a potent tool for interacting with users — most commonly, they are used for collecting data from users, or allowing them to control a user interface. In the articles listed below, we'll cover all the essential aspects of structuring, styling, and interacting with web forms.
+  - Web forms are a potent tool for interacting with users — most commonly, they are used for collecting data from users, or allowing them to control a user interface. In the articles listed below, we'll cover all the essential aspects of structuring, styling, and interacting with web forms.
 - [Accessibility — make the web usable by everyone](/en-US/docs/Learn/Accessibility)
-  - : Accessibility is the practice of making web content available to as many people as possible regardless of disability, device, locale, or other differentiating factors. This topic gives you all you need to know.
+  - Accessibility is the practice of making web content available to as many people as possible regardless of disability, device, locale, or other differentiating factors. This topic gives you all you need to know.
 - [Web Performance — making websites fast and responsive](/en-US/docs/Learn/Performance)
-  - : Web performance is the art of making sure web applications download fast and are responsive to user interaction, regardless of a user's bandwidth, screen size, network, or device capabilities.
+  - Web performance is the art of making sure web applications download fast and are responsive to user interaction, regardless of a user's bandwidth, screen size, network, or device capabilities.
 - [MathML](/en-US/docs/Learn/MathML)
-  - : MathML is the language that we can use to write mathematical formulas in web pages using fractions, scripts, radicals, matrices, integrals, series, etc. This topic covers MathML.
+  - MathML is the language that we can use to write mathematical formulas in web pages using fractions, scripts, radicals, matrices, integrals, series, etc. This topic covers MathML.
 - [Tools and testing](/en-US/docs/Learn/Tools_and_testing)
-  - : This topic covers the tools developers use to facilitate their work, such as cross-browser testing tools, linters, formatters, transformation tools, version control systems, deployment tools, and client-side JavaScript frameworks.
+  - This topic covers the tools developers use to facilitate their work, such as cross-browser testing tools, linters, formatters, transformation tools, version control systems, deployment tools, and client-side JavaScript frameworks.
 - [Server-side website programming](/en-US/docs/Learn/Server-side)
-  - : Even if you are concentrating on client-side web development, it is still useful to know how servers and server-side code features work. This topic provides a general introduction to how the server-side works and detailed tutorials showing how to build up a server-side app using two popular frameworks: Django (Python) and Express (Node.js).
+  - Even if you are concentrating on client-side web development, it is still useful to know how servers and server-side code features work. This topic provides a general introduction to how the server-side works and detailed tutorials showing how to build up a server-side app using two popular frameworks: Django (Python) and Express (Node.js).
 
 ## Tasks and assessments
 
 In the Learn web development section of MDN, there are many self-contained tasks and assessments for you to complete. These come in two main types:
 
-- "Test your skills" tasks, for example in [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#test_your_skills!).
+- **Test your skills** tasks, for example in [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#test_your_skills!).
 - More in-depth **assessments** at the end of some modules, for example [Image gallery](/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery).
 
 Each one has an associated marking guide and recommended solution available to help you assess your work.
@@ -113,16 +113,16 @@ If you're interested in helping develop/improve the content, take a look at [how
 ## See also
 
 - [The Frontend Developer Career Path](https://v2.scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>_MDN Curriculum partner_</sup>
-  - : [Scrimba's](https://scrimba.com?via=mdn) _Frontend Developer Career Path_ teaches all you need to know to be a competent front-end web developer, with fun interactive lessons and challenges, knowledgeable teachers, and a supportive community. Go from zero to landing your first front-end job! Many of the course components are available as standalone free versions.
+  - [Scrimba's](https://scrimba.com?via=mdn) _Frontend Developer Career Path_ teaches all you need to know to be a competent front-end web developer, with fun interactive lessons and challenges, knowledgeable teachers, and a supportive community. Go from zero to landing your first front-end job! Many of the course components are available as standalone free versions.
 - [Learn JavaScript](https://learnjavascript.online/)
-  - : An excellent resource for aspiring web developers — Learn JavaScript in an interactive environment, with short lessons and interactive tests, guided by automated assessment. The first 40 lessons are free, and the complete course is available for a small one-time payment.
+  - An excellent resource for aspiring web developers — Learn JavaScript in an interactive environment, with short lessons and interactive tests, guided by automated assessment. The first 40 lessons are free, and the complete course is available for a small one-time payment.
 - [Codecademy](https://www.codecademy.com/)
-  - : A great interactive site for learning programming languages from scratch.
+  - A great interactive site for learning programming languages from scratch.
 - [freeCodeCamp.org](https://www.freecodecamp.org/)
-  - : Interactive site with tutorials and projects to learn web development.
+  - Interactive site with tutorials and projects to learn web development.
 - [The Odin Project](https://www.theodinproject.com/)
-  - : Features a free and open-source full-stack curriculum, from beginner to advanced.
+  - Features a free and open-source full-stack curriculum, from beginner to advanced.
 - [MDN Blog](/en-US/blog/)
-  - : The MDN blog has articles from the MDN team and guest writers about new developments on the site, HTML, CSS, JavaScript, and other web development news.
+  - The MDN blog has articles from the MDN team and guest writers about new developments on the site, HTML, CSS, JavaScript, and other web development news.
 - [Mozilla developer newsletter](https://www.mozilla.org/en-US/newsletter/developer/)
-  - : Our newsletter for web developers, which is an excellent resource for all levels of experience.
+  - Our newsletter for web developers, which is an excellent resource for all levels of experience.
