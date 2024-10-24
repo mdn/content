@@ -1380,7 +1380,7 @@ This enables a fetch request to function as an alternative to {{domxref("Navigat
 ### CloseWatcher Interface
 
 Built-in web components with "open" and "close" semantics, such as modal dialogs and popovers, can be closed using device-native mechanisms.
-For example, on Windows you can close a dialog using the <kbd>Esc</kbd> key.
+For example, on Android you can close a dialog using the back button.
 The {{domxref("CloseWatcher")}} interface allows developers to implement UI components, such as custom sidebars, that can similarly be closed using native mechanisms.
 ([Firefox bug 1888729](https://bugzil.la/1888729)).
 
