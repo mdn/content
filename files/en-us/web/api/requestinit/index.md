@@ -149,7 +149,7 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
 
     - `same-origin`
 
-      - : Disallows cross-origin requests completely.
+      - : Disallows cross-origin requests. If a `same-origin` request is sent to a different origin, the result is a network error.
 
     - `cors`
 
@@ -161,7 +161,9 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
 
         - The method may only be one of `HEAD`, `GET` or `POST`.
         - The headers may only be {{Glossary("CORS-safelisted request header", "CORS-safelisted request headers")}}, with the additional restriction that the {{httpheader("Range")}} header is also not allowed. This also applies to any headers added by service workers.
-        - The response is _opaque_, meaning that its headers and body are not available to JavaScript.
+        - The response is _opaque_, meaning that its headers and body are not available to JavaScript, and its {{domxref("Response.status", "status code", "", "nocode")}} is always `0`.
+
+        The main application for `no-cors` is for a service worker: although the response to a `no-cors` request can't be read by JavaScript, it can be cached by a service worker and then used as a response to an intercepted fetch request. Note that in this situation you don't know whether the request succeeded or not, so you should adopt a caching strategy which enables the cached response to be updated from the network (such as [cache first with cache refresh](/en-US/docs/Web/Progressive_web_apps/Guides/Caching#cache_first_with_cache_refresh)).
 
     - `navigate`
       - : Used only by HTML navigation. A `navigate` request is created only while navigating between documents.

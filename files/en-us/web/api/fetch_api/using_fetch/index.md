@@ -174,7 +174,7 @@ const response = await fetch("https://example.org/post", {
 
 ### Making cross-origin requests
 
-Whether a request can be made cross-origin or not is determined by the value of the {{domxref("RequestInit", "", "mode")}} option. This may take one of three values: `cors`, `no-cors`, or `same-origin`.
+Whether a request can be made cross-origin or not is determined by the value of the {{domxref("RequestInit", "", "mode")}} option. This may take one of three values: `cors`, `same-origin`, or `no-cors`.
 
 - For fetch requests the default value of `mode` is `cors`, meaning that if the request is cross-origin then it will use the [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS) mechanism. This means that:
 
@@ -183,7 +183,7 @@ Whether a request can be made cross-origin or not is determined by the value of 
 
 - Setting `mode` to `same-origin` disallows cross-origin requests completely.
 
-- Setting `mode` to `no-cors` disables CORS for cross-origin requests. This restricts the headers that may be set, and restricts methods to GET, HEAD, and POST. The response is _opaque_, meaning that its headers and body are not available to JavaScript.
+- Setting `mode` to `no-cors` disables CORS for cross-origin requests. This restricts the headers that may be set, and restricts methods to GET, HEAD, and POST. The response is _opaque_, meaning that its headers and body are not available to JavaScript. Most of the time a website should not use `no-cors`: the main application of it is for certain service worker use cases.
 
 See the reference documentation for {{domxref("RequestInit", "", "mode")}} for more details.
 

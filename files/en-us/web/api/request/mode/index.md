@@ -15,7 +15,7 @@ to determine if cross-origin requests lead to valid responses, and which propert
 
 To construct a request with a specific mode, pass the desired value as the {{domxref("RequestInit", "", "mode")}} option to the {{domxref("Request.Request()")}} constructor.
 
-Note that selecting particular modes, especially `no-cors`, places restrictions on the request methods and headers that may be used: see the documentation for {{domxref("RequestInit", "", "mode")}} for more details.
+Note that setting particular modes, especially `no-cors`, places restrictions on the request methods and headers that may be used, and prevents JavaScript from accessing the response headers or body. See the documentation for {{domxref("RequestInit", "", "mode")}} for more details.
 
 ## Value
 
