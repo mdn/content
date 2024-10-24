@@ -10,11 +10,29 @@ browser-compat: api.console.table_static
 
 The **`console.table()`** static method displays tabular data as a table.
 
+## Syntax
+
+```js-nolint
+console.table(data)
+console.table(data, columns)
+```
+
 This function takes one mandatory argument `data`, which must be an array or an object, and one additional optional parameter `columns`.
 
 It logs `data` as a table. Each element in the array (or enumerable property if `data` is an object) will be a row in the table.
 
 The first column in the table will be labeled `(index)`. If `data` is an array, then its values will be the array indices. If `data` is an object, then its values will be the property names. Note that (in Firefox) `console.table` is limited to displaying 1000 rows (first row is the labeled index).
+
+### Parameters
+
+- `data`
+  - : The data to display. This must be either an array or an object.
+- `columns`
+  - : An array containing the names of columns to include in the output.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ### Collections of primitive types
 
@@ -140,24 +158,6 @@ console.table([tyrone, janet, maria], ["firstName"]);
 ### Sorting columns
 
 You can sort the table by a particular column by clicking on that column's label.
-
-## Syntax
-
-```js-nolint
-table(data)
-table(data, columns)
-```
-
-### Parameters
-
-- `data`
-  - : The data to display. This must be either an array or an object.
-- `columns`
-  - : An array containing the names of columns to include in the output.
-
-### Return value
-
-None ({{jsxref("undefined")}}).
 
 ## Specifications
 
