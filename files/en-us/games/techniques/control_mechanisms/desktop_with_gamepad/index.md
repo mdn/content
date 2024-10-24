@@ -348,7 +348,7 @@ if (gamepadAPI.buttonPressed("B")) {
 
 ## The paused and game-over states
 
-We already learned how to control the whole lifecycle of the game: pausing the gameplay, restarting it, or getting back to the main menu. It works smooth on mobile and desktop, and adding gamepad controls is just as straightforward — in the `update()` function, we check to see if the current state status is `paused` — if so, the relevant actions are enabled:
+We already learned how to control the whole lifecycle of the game: pausing the gameplay, restarting it, or getting back to the main menu. It works smooth on mobile and desktop, and adding gamepad controls is just as straightforward — in the `update()` function, we check to see if the current state status is "paused" — if so, the relevant actions are enabled:
 
 ```js
 if (GamepadAPI.buttons.pressed("Start")) {
