@@ -13,11 +13,9 @@ If the resource has been modified after the specified date, the response will be
 
 The `If-Unmodified-Since` header is commonly used in the following situations:
 
-- In conjunction with non-{{Glossary("Safe/HTTP", "safe")}} methods like {{HTTPMethod("POST")}},
-  this header can be used to implement an [optimistic concurrency control](https://en.wikipedia.org/wiki/Optimistic_concurrency_control), as is done by some wikis: revision are rejected if the
+- In conjunction with non-{{Glossary("Safe/HTTP", "safe")}} methods like {{HTTPMethod("POST")}}, this header can be used to implement an [optimistic concurrency control](https://en.wikipedia.org/wiki/Optimistic_concurrency_control), as is done by some wikis: revision are rejected if the
   stored document has been modified since the original was retrieved, avoiding conflicts.
-- In conjunction with a range request using the {{HTTPHeader("Range")}} header, this header can
-  be used to ensure that the new fragment requested comes from an unmodified document.
+- In conjunction with a range request using the {{HTTPHeader("Range")}} header, this header can be used to ensure that the new fragment requested comes from an unmodified document.
 
 <table class="properties">
   <tbody>
