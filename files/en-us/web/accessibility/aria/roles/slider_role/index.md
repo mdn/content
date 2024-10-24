@@ -15,15 +15,15 @@ The `slider` role is for range input widgets where the user selects a value from
 
 ### The `slider` role compared other range options
 
-ARIA provides developers with six different range [widget roles](/en-US/docs/Web/Accessibility/ARIA/Roles#2._widget_roles), including progressbars, meters, scrollbars, range input, spinbuttons and sliders.
+ARIA provides developers with five different range [widget roles](/en-US/docs/Web/Accessibility/ARIA/Roles#2._widget_roles), including progressbars, meters, scrollbars, spinbuttons and sliders.
 
-The [`progressbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role) role, similar to HTML's {{HTMLElement('progress')}} element, is a read-only range. It indicates the portion of completion of a task, progressing in a single direction, such as a file upload's loading progress bar that eventually reaches 100% when fully loaded.
+The [`progressbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role) role, similar to HTML's {{HTMLElement('progress')}} element, is a read-only range. It indicates the portion of completion of a task, progressing in a single direction. For instance, a file upload's progress bar that conveys the data transfer up to 100%, when the file has fully uploaded.
 
-The [`meter`](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role) role, similar to HTML's {{HTMLElement('meter')}} element, is a read-only gauge. It indicates the amount of something within a known range, such as a computer's battery indicator or a car's gas gauge.
+The [`meter`](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role) role, similar to HTML's {{HTMLElement('meter')}} element, is a read-only range. It represents a scalar measurement within a known range, or a fractional value. For instance, a computer's battery indicator, the disk usage of a hard drive or a car's gas gauge.
 
 The `slider` role, similar to HTML's `input` of type `range`, [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range), is a read-write input range. Sliders allow users to select a value between predefined minimum and maximum values. The user selects a value by moving a slider thumb along a horizontal or vertical slider to select a value.
 
-The `slider` role is a read-write range: it's value changes via user interaction. As such, it must be able to receive focus. In addition, keyboard interaction, mouse clicks, and touch interaction must be supported.
+A `slider` role's value changes via user interaction. As such, it must be able to receive focus. In addition, to adjust the value keyboard interaction, mouse clicks, and touch interaction must be supported.
 
 > [!WARNING]
 > To change the slider value, touch-based assistive technologies need to respond to user gestures for increasing and decreasing the value by synthesizing key events.
