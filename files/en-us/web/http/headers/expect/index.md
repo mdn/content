@@ -40,15 +40,13 @@ Expect: 100-continue
 There is only one defined expectation:
 
 - `100-continue`
-  - : Informs recipients that the client is about to send a (presumably large) message
-    body in this request and wishes to receive a {{HTTPStatus("100", "100 Continue")}} interim response.
+  - : Informs recipients that the client is about to send a (presumably large) message body in this request and wishes to receive a {{HTTPStatus("100", "100 Continue")}} interim response.
 
 ## Examples
 
 ### Large message body
 
-A client sends a request with `Expect` header and waits for the server to respond
-before sending the message body.
+A client sends a request with `Expect` header and waits for the server to respond before sending the message body.
 
 ```http
 PUT /somewhere/fun HTTP/1.1
