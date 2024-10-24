@@ -26,10 +26,15 @@ new ClipboardItem(data, options)
   - : An {{jsxref("Object")}} with the {{Glossary("MIME type")}} as the key and data as the value.
     The data can be represented as a {{domxref("Blob")}}, a {{jsxref("String")}} or a {{jsxref("Promise")}} which resolves to either a blob or string.
 - `options` {{optional_inline}}
+
   - : An object with the following properties:
+
     - `presentationStyle` {{optional_inline}}
+
       - : One of the three strings: `unspecified`, `inline` or `attachment`.
         The default is `unspecified`.
+
+        `inline` signifies to apps that receive the paste that the `ClipboardItem` should be inserted inline at the point of paste. `attachment` signifies to apps that receive the paste that the `ClipboardItem` should be added as an attachment. `unspecified` doesn't signify any information to apps that receive the paste.
 
 > [!NOTE]
 > You can also work with text via the {{domxref("Clipboard.readText()")}} and {{domxref("Clipboard.writeText()")}} methods of the {{domxref("Clipboard")}} interface.

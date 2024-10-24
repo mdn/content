@@ -198,8 +198,6 @@ You can find a number of examples at our [webaudio-example repo](https://github.
 
 ## Browser compatibility
 
-### AudioContext
-
 {{Compat}}
 
 ## See also
