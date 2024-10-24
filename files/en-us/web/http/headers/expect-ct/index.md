@@ -36,7 +36,7 @@ CT requirements can be satisfied via any one of the following mechanisms:
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes</td>
+      <td>Yes</td>
     </tr>
   </tbody>
 </table>
