@@ -13,8 +13,8 @@ The **`console.count()`** static method logs the number of times that this parti
 ## Syntax
 
 ```js-nolint
-count()
-count(label)
+console.count()
+console.count(label)
 ```
 
 ### Parameters
