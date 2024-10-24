@@ -238,7 +238,7 @@ const fsSource = `
     out vec4 fragColor;
 
     void main(void) {
-      fragColor = texture(uSampler, vTextureCoord);
+      fragColor = texture2D(uSampler, vTextureCoord);
     }
   `;
 ```
