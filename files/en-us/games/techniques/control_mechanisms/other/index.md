@@ -72,7 +72,7 @@ You can see it in action by watching [this video](https://www.youtube.com/watch?
 
 Have you ever thought about controlling a game only with your hands? It's possible with [Leap Motion](https://www.ultraleap.com/), an immersive controller for games and apps.
 
-Leapmotion is becoming more and more popular due to very good integration with VR headsets — demoing [Rainbow Membrane](https://mozilla.github.io/rainbow/) on an Oculus Rift with Leap Motion attached to it was voted one of the best WebVR experiences by JavaScript developers visiting demo booths at conferences around the world.
+Leap Motion is becoming more and more popular due to very good integration with VR headsets — demoing [Rainbow Membrane](https://mozilla.github.io/rainbow/) on an Oculus Rift with Leap Motion attached to it was voted one of the best WebVR experiences by JavaScript developers visiting demo booths at conferences around the world.
 
 As well as being great for virtual interfaces, it can also be used for a casual 2D gaming experiences. It would be very difficult to do everything with only your hands, but it's totally doable for the simple Captain Roger's gameplay — steering the ship and shooting the bullets.
 
@@ -158,15 +158,15 @@ The `diff` would be the difference between the initial position of the hand and 
 
 This approach won't give us the full flexibility of using a Gamepad, or even Leap Motion, but it's definitely an interesting, unconventional alternative. You can use it to scroll a page hands-free, or play theremin, but it should also be enough to move the ship up and down the screen if implemented correctly.
 
-## MaKey MaKey
+## Makey Makey
 
-If you want to go completely bananas you can use [MaKey MaKey](https://makeymakey.com/), a board that can turn anything into a controller — it's all about connecting real-world, conductive objects to a computer and using them as touch interfaces.
+If you want to go completely bananas you can use [Makey Makey](https://makeymakey.com/), a board that can turn anything into a controller — it's all about connecting real-world, conductive objects to a computer and using them as touch interfaces.
 
 ![Controlling a banana piano using Makey Makey.](controls-banana.png)
 
 Check out the [banana piano video](https://www.youtube.com/watch?v=_DWQ6ce2Ags), and be sure to visit the [quick start guide](https://learn.sparkfun.com/tutorials/makey-makey-quickstart-guide) for all the needed info.
 
-There's even a [Cylon.js-supported Makey Button functionality](https://cylonjs.com/documentation/drivers/makey-button/) inspired by the MaKey MaKey board, so you can use the popular Cylon robotics framework for your experiments with Arduino or Raspberry Pi. Connecting the boards and using them may look like this:
+There's even a [Cylon.js-supported Makey Button functionality](https://cylonjs.com/documentation/drivers/makey-button/) inspired by the Makey Makey board, so you can use the popular Cylon robotics framework for your experiments with Arduino or Raspberry Pi. Connecting the boards and using them may look like this:
 
 ```js
 const Cylon = require("cylon");

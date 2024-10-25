@@ -13,7 +13,7 @@ The **`console.clear()`** static method clears the console if the console allows
 ## Syntax
 
 ```js-nolint
-clear()
+console.clear()
 ```
 
 ### Parameters

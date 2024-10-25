@@ -22,6 +22,8 @@ This article provides information about the changes in Firefox 132 that affect d
 
 #### Removals
 
+- The [`-moz-user-modify`](/en-US/docs/Web/CSS/user-modify) CSS property has been removed. This property has been deprecated in favour of the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) global attribute. ([Firefox bug 1920118](https://bugzil.la/1920118)).
+
 ### JavaScript
 
 - The [JSON parse with source proposal](https://github.com/tc39/proposal-json-parse-with-source) is now supported, which aims to provide features to mitigate issues around loss of precision when converting values such as large floats and date values between JavaScript values and JSON text ([Firefox bug 1913085](https://bugzil.la/1913085)). Specifically, the following features are now available:
@@ -47,15 +49,21 @@ This article provides information about the changes in Firefox 132 that affect d
 
 #### Removals
 
+### Privacy
+
+- All [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies) are now blocked in [Strict Enhanced Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop#w_strict-enhanced-tracking-protection). ([Firefox bug 1918037](https://bugzil.la/1918037)).
+
 ### APIs
 
 - The {{domxref('WebGLRenderingContext.drawingBufferColorSpace', 'drawingBufferColorSpace')}} and {{domxref('WebGLRenderingContext.unpackColorSpace','unpackColorSpace')}} properties of the {{domxref('WebGLRenderingContext')}} and {{domxref('WebGL2RenderingContext')}} interfaces are now supported. These specify the color space of the WebGL drawing buffer, and the color space to convert to when importing textures, respectively. ([Firefox bug 1885491](https://bugzil.la/1885491), [Firefox bug 1885446](https://bugzil.la/1885446)).
 - The {{domxref("Notification.silent")}} property is now supported, which controls whether system notifications should be silent. When `silent: true` is specified in the {{domxref("Notification.Notification", "Notification()")}} constructor, the resulting system notification is issued without accompanying sounds or vibrations, regardless of device settings ([Firefox bug 1809028](https://bugzil.la/1809028)).
+- The `fetchpriority` attribute of the {{htmlelement("link")}}, {{htmlelement("script")}}, and {{htmlelement("img")}} elements, the `fetchPriority` property of the {{domxref("HTMLLinkElement")}}, {{domxref("HTMLScriptElement")}}, and {{domxref("HTMLImageElement")}} interfaces, the [`options.priority`](/en-US/docs/Web/API/RequestInit#priority) parameter passed to the [`Request()` constructor](/en-US/docs/Web/API/Request/Request), and the `fetchpriority` directive in the HTTP {{httpheader("Link")}} header, are now supported. These allow developers to provide a hint about the relative priority for fetching a particular resource compared to other resources of the same type, and can be used alongside other ways of setting the priority, such as preloading. ([Firefox bug 1854077](https://bugzil.la/1854077)).
 
 #### DOM
 
 #### Media, WebRTC, and Web Audio
 
+- The {{domxref('HTMLVideoElement/requestVideoFrameCallback','requestVideoFrameCallback()')}} and {{domxref('HTMLVideoElement/cancelVideoFrameCallback','cancelVideoFrameCallback()')}} methods of the {{domxref('HTMLVideoElement')}} interface are now supported. The `requestVideoFrameCallback()` registers a callback function that runs when a new video frame is sent to the compositor. Developers can use this function to perform operations on each video frame, enabling more efficient painting to a canvas, video analysis, synchronization with external audio sources, and so on. The method returns a callback handle that can be passed to `cancelVideoFrameCallback()` in order to cancel the outstanding callback request. ([Firefox bug 1919367](https://bugzil.la/1919367), [Firefox bug 1800882](https://bugzil.la/1800882)).
 - The {{domxref("MediaStreamTrack.getCapabilities()")}} method is now supported. This returns an object detailing the accepted values or value range for each constrainable property of the associated {{domxref("MediaStreamTrack")}} ([Firefox bug 1179084](https://bugzil.la/1179084)).
 
 #### Removals
@@ -66,11 +74,13 @@ This article provides information about the changes in Firefox 132 that affect d
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
-#### General
-
 #### WebDriver BiDi
 
-#### Marionette
+- Implemented several improvements to make WebDriver BiDi commands more reliable when used during navigation or with newly created tabs. Previously commands such as `browsingContext.setViewport` were likely to fail due to an `AbortError`, they will now be retried a few times to avoid such issues. ([Firefox bug 1854942](https://bugzil.la/1854942), [Firefox bug 1918287](https://bugzil.la/1918287), [Firefox bug 1918672](https://bugzil.la/1918672), [Firefox bug 1921756](https://bugzil.la/1921756))
+- The `browsingContext.contextCreated` event is now correctly emitted for lazy-loaded frames. Previously the event would only be emitted when the iframe actually started loading its content. ([Firefox bug 1878166](https://bugzil.la/1878166))
+- Network events are now correctly emitted for cached stylesheet requests. ([Firefox bug 1879438](https://bugzil.la/1879438))
+- Network event timings were previously using the wrong unit and were provided in microseconds. They are now correctly set in milliseconds. ([Firefox bug 1916685](https://bugzil.la/1916685))
+- The `requestTime` from network event timings should now be more accurate and really match the time where the request actually started. ([Firefox bug 1922390](https://bugzil.la/1922390))
 
 ## Changes for add-on developers
 

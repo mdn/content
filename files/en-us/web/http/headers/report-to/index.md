@@ -14,7 +14,7 @@ browser-compat: http.headers.Report-To
 > This header has been replaced by the {{HTTPHeader("Reporting-Endpoints")}} HTTP response header.
 > It is a deprecated part of an earlier iteration of the [Reporting API](/en-US/docs/Web/API/Reporting_API) specification.
 
-The HTTP **`Report-To`** {{glossary("response header")}} allows website administrators to define named groups of endpoints that can be used as the destination for warning and error reports, such as CSP violation reports, {{HTTPHeader("Cross-Origin-Opener-Policy")}} reports, deprecation reports, or other generic violations.
+The HTTP **`Report-To`** {{Glossary("response header")}} allows website administrators to define named groups of endpoints that can be used as the destination for warning and error reports, such as CSP violation reports, {{HTTPHeader("Cross-Origin-Opener-Policy")}} reports, deprecation reports, or other generic violations.
 
 `Report-To` is often used in conjunction with other headers that select a group of endpoints to use for a particular kind of report.
 For example, the {{HTTPHeader("Content-Security-Policy")}} header {{CSP("report-to")}} directive can be used to select the group used for reporting CSP violations.
@@ -27,13 +27,13 @@ For example, the {{HTTPHeader("Content-Security-Policy")}} header {{CSP("report-
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
     <tr>
       <th scope="row">
         {{Glossary("CORS-safelisted response header")}}
       </th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -44,11 +44,9 @@ For example, the {{HTTPHeader("Content-Security-Policy")}} header {{CSP("report-
 Report-To: <json-field-value>
 ```
 
-- \<json-field-value>
-
+- `<json-field-value>`
   - : One or more endpoint-group definitions, defined as a JSON array that omits the surrounding `[` and `]` markers.
-    Each object in the array has the following properties:
-
+    Each object in the array has the following members:
     - `group`
       - : A name for the group of endpoints.
     - `max_age`
@@ -117,9 +115,7 @@ It was previously part of the [Reporting API](/en-US/docs/Web/API/Reporting_API)
 
 ## See also
 
-- {{HTTPHeader("Reporting-Endpoints")}}
-- [Reporting API](/en-US/docs/Web/API/Reporting_API)
-- {{HTTPHeader("Content-Security-Policy")}}
-- {{CSP("report-to")}} directive
-- {{HTTPHeader("Content-Security-Policy-Report-Only")}}
+- [Reporting API](/en-US/docs/Web/API/Reporting_API) and {{HTTPHeader("Reporting-Endpoints")}} header
+- {{CSP("report-to")}} CSP directive
+- {{HTTPHeader("Content-Security-Policy")}}, {{HTTPHeader("Content-Security-Policy-Report-Only")}} headers
 - [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP#violation_reporting) guide

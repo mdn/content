@@ -414,7 +414,7 @@ The DEBUG command creates useful logging, resulting in an output like the follow
 ```bash
 >SET DEBUG=helloworld:* & npm start
 
-> helloworld@0.0.0 start D:\GitHub\expresstests\helloworld
+> helloworld@0.0.0 start D:\GitHub\express-tests\helloworld
 > node ./bin/www
 
   helloworld:server Listening on port 3000 +0ms
