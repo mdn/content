@@ -127,7 +127,8 @@ The keywords for alt text are "descriptive text". The alt text you write should 
 Try coming up with some better alt text for your image now.
 
 > [!NOTE]
-> Find out more about accessibility in our [accessibility learning module](/en-US/docs/Learn/Accessibility).
+> Find out more about accessibility in our [accessibility learning module](/en-US/docs/Learn/Accessibility) and how
+> to use [alt attribute in different scenarios](https://www.w3.org/WAI/tutorials/images/decision-tree/)
 
 ## Marking up text
 

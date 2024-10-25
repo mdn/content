@@ -40,3 +40,4 @@ inputElement.alt = "A much better description";
 - {{HTMLElement("input")}}
 - {{HTMLElement("img")}}
 - [Writing good alt text](https://www.wcag.com/blog/good-alt-text-bad-alt-text-making-your-content-perceivable/)
+- [An alt Decision Tree](https://www.w3.org/WAI/tutorials/images/decision-tree/)
