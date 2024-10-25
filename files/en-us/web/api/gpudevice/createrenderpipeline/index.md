@@ -162,15 +162,22 @@ The `fragment` object contains an array of objects, each of which can contain th
             - `"one"`
             - `"one-minus-dst"`
             - `"one-minus-src"`
+            - `"one-minus-src1"`
             - `"one-minus-src-alpha"`
+            - `"one-minus-src1-alpha"`
             - `"one-minus-dst-alpha"`
             - `"one-minus-constant"`
             - `"src"`
+            - `"src1"`
             - `"src-alpha"`
+            - `"src1-alpha"`
             - `"src-alpha-saturated"`
             - `"zero"`
 
             If omitted, `dstFactor` defaults to `"zero"`.
+
+            > [!NOTE]
+            > The `dual-source-blending` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) needs to be enabled for the `src1`, `one-minus-src1`, `src1-alpha`, and `one-minus-src1-alpha` blend factor operations to be used successfully. If not, a {{domxref("GPUValidationError")}} is generated.
 
         - `operation` {{optional_inline}}
 
@@ -250,6 +257,8 @@ The `primitive` object can contain the following properties:
 
     If omitted, `frontFace` defaults to `"ccw"`.
 
+    > [!NOTE] > `frontFace` and `cullMode` have no effect on `"point-list"`, `"line-list"`, or `"line-strip"` topologies.
+
 - `stripIndexFormat` {{optional_inline}}
 
   - : An enumerated value that determines the index buffer format and primitive restart value in the case of pipelines with strip topologies (`"line-strip"` or `"triangle-strip"`). The primitive restart value specifies which index value indicates that a new primitive should be started rather than continuing to construct the strip with the prior indexed vertices. Possible values are:
@@ -272,9 +281,11 @@ The `primitive` object can contain the following properties:
     If omitted, `topology` defaults to `"triangle-list"`.
 
 - `unclippedDepth` {{optional_inline}}
+
   - : A boolean. A value of `true` indicates that depth clipping is disabled. If omitted, `unclippedDepth` defaults to `false`. Note that to control depth clipping, the `depth-clip-control` {{domxref("GPUSupportedFeatures", "feature", "", "nocode")}} must be enabled in the {{domxref("GPUDevice")}}.
 
-> **Note:** `frontFace` and `cullMode` have no effect on `"point-list"`, `"line-list"`, or `"line-strip"` topologies.
+    > [!NOTE]
+    > The `depth-clip-control` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) needs to be enabled for the `unclippedDepth` property to be used successfully. If not, a {{domxref("GPUValidationError")}} is generated.
 
 ### `vertex` object structure
 
@@ -346,6 +357,9 @@ The following criteria must be met when calling **`createRenderPipeline()`**, ot
   - `targets.length` is less than or equal to the {{domxref("GPUDevice")}}'s `maxColorAttachments` {{domxref("GPUSupportedLimits", "limit", "", "nocode")}}.
   - For each `target`, `writeMask`'s numeric equivalent is less than 16.
   - If any of the used blend factor operations use the source alpha channel (for example `"src-alpha-saturated"`), the output has an alpha channel (that is, it must be a `vec4`).
+  - If the `src1`, `one-minus-src1`, `src1-alpha`, or `one-minus-src1-alpha` blend factor operations are used, the `dual-source-blending` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) is enabled.
+- For `primitive` objects:
+  - If the `unclippedDepth` property is used, the `depth-clip-control` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) is enabled.
 
 ## Examples
 
