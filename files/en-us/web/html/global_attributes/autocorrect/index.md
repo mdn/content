@@ -32,7 +32,8 @@ Possible values are:
 
 The {{htmlelement("input")}} element types that don't support auto-correction always have the `off` state: [`password`](/en-US/docs/Web/HTML/Element/input/password), [`email`](/en-US/docs/Web/HTML/Element/input/email) and [`url`](/en-US/docs/Web/HTML/Element/input/url).
 
-For all other editable elements, setting any value other than `off` is always treated as `on` (including the empty string), and the default value for elements that are not nested inside a `<form>` is `on`.
+For all other editable elements, setting any other value than those listed above is always treated as `on`.
+The default value for elements that are not nested inside a `<form>` is `on`.
 
 When nested in a `<form>`, the following elements inherit their their default value of `autocorrect` from the form if it has been set: {{htmlelement("button")}}, {{htmlelement("fieldset")}}, {{htmlelement("input")}}, {{htmlelement("output")}}, {{htmlelement("select")}}, and {{htmlelement("textarea")}}.
 
