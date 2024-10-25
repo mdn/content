@@ -34,9 +34,9 @@ const depthTexture = device.createTexture({
 
 const view = depthTexture.createView();
 
-view.label = "myview";
+view.label = "my-view";
 
-console.log(view.label); // "myview"
+console.log(view.label); // "my-view"
 ```
 
 Setting a label via the originating {{domxref("GPUTexture.createView()")}} call, and then getting it via `GPUTextureView.label`:
@@ -51,10 +51,10 @@ const depthTexture = device.createTexture({
 });
 
 const view = depthTexture.createView({
-  label: "myview",
+  label: "my-view",
 });
 
-console.log(view.label); // "myview"
+console.log(view.label); // "my-view"
 ```
 
 ## Specifications
