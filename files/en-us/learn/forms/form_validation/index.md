@@ -522,11 +522,26 @@ You can try it out below:
 
 #### Extending built-in form validation
 
-With a built-in form validation such as [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email),
-you can also extend the validation by `setCustomValidity()`.
+The previous example showed how you can add a customized message for a particular type of error (`validity.typeMismatch`).
+It is also possible to use all of the built in form validation, and then add to it using `setCustomValidity()`.
 
-First, reset a custom validity message by `setCustomValidity("")`, then validate with the built-in constraints.
-Next, extend with a custom constraints.
+Here we demonstrate how you can extend the built in [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email) validation to only accept addresses with the `@example.com` domain.
+We start with the HTML {{htmlelement("form")}} below.
+
+```html
+<form>
+  <label for="mail">Email address (@example.com only):</label>
+  <input type="email" id="mail" />
+  <button>Submit</button>
+</form>
+```
+
+The validation code is shown below.
+In the event of any new input the code first resets the custom validity message by calling `setCustomValidity("")`.
+It then uses `email.validity.valid` to check if the entered address is invalid and if so, returns from the event handler.
+This ensures that all the normal built-in validation checks are run while the entered text is not a valid email address.
+
+Once the email address is valid, the code adds a custom constraint, calling `setCustomValidity()` with an error message if the address does not end with `@example.com`.
 
 ```js
 const email = document.getElementById("mail");
@@ -538,35 +553,15 @@ email.addEventListener("input", (event) => {
     return;
   }
 
-  // Extends with a custom constraints
-  email.setCustomValidity(
-    email.value.endsWith("@example.com")
-      ? ""
-      : "Please enter an email address of @example.com",
-  );
+  // Extend with a custom constraints
+  if (!email.value.endsWith("@example.com")) {
+    email.setCustomValidity("Please enter an email address of @example.com");
+  }
 });
 ```
 
-```html
-<form>
-  <label for="mail">email address (@example.com only):</label>
-  <input type="email" id="mail" />
-  <button>Submit</button>
-</form>
-```
-
-This example code works as follows:
-
-- When the validation is failed as [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email), the browser's built-in error message is displayed.
-  - ![Error message: Please include an '@' in the email address. 'invalid-as-email' is missing an '@'.](built-in-error-message.png)
-- When the validation is passed as [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email) but failed as the customized constraint, the customized error message is displayed.
-  - ![Error message: Please enter an email address of @example.com](customized-error-message.png)
-
-<!--
-{{EmbedLiveSample("Extending_built-in_form_validation", "100%", 120)}}
-doesn't work, so the example code is embedded as [Static example](https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples#static_examples).
-More details: https://github.com/mdn/content/pull/36415#issuecomment-2432087985
--->
+You can try this example in the page at the {{LiveSampleLink('Extending_built-in_form_validation', 'Live sample demo link')}}.
+Try submitting an invalid email address, a valid email address that doesn't end in `@example.com`, and one that does end in `@example.com`.
 
 #### A more detailed example
 
