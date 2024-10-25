@@ -24,7 +24,7 @@ In addition to including the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes
 
 ### ARIA range widget options
 
-ARIA provides developers with six different range [widget roles](/en-US/docs/Web/Accessibility/ARIA/Roles#2._widget_roles), including `progressbar`, `meter`, `slider` and `spinbutton`.
+ARIA provides developers with six different range [widget roles](/en-US/docs/Web/Accessibility/ARIA/Roles#2._widget_roles), including `progressbar`, `meter`, `slider`, and `spinbutton`.
 
 The [`progressbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/progressbar_role) role, similar to HTML's {{HTMLElement('progress')}} element, is a read-only range. It indicates the portion of completion of a task, progressing in a single direction, such as a file upload's loading progress bar that eventually reaches 100% when fully loaded.
 
