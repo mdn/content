@@ -53,6 +53,7 @@ Inside the first `if...else`, you need to nest another `if...else` that puts app
 - Score of 90 to 100 — "What an amazing score! Did you cheat? Are you for real?"
 
 Try updating the live code below to recreate the finished example. After you've entered your code, try changing `machineActive` to `true`, to see if it works.
+Please note that, for the scope of this exercise, the `Your score is __` statement will remain on the screen regardless of the `machineActive`'s value.
 
 {{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/conditionals/conditionals2.html", '100%', 400)}}
 
