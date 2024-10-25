@@ -13,10 +13,10 @@ The **`console.warn()`** static method outputs a warning message to the console 
 ## Syntax
 
 ```js-nolint
-warn(val1)
-warn(val1, /* …, */ valN)
-warn(msg)
-warn(msg, subst1, /* …, */ substN)
+console.warn(val1)
+console.warn(val1, /* …, */ valN)
+console.warn(msg)
+console.warn(msg, subst1, /* …, */ substN)
 ```
 
 ### Parameters
