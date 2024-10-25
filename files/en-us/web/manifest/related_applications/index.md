@@ -24,7 +24,7 @@ It can be used with the [`prefer_related_applications`](/en-US/docs/Web/Manifest
   }
 ]
 
-/* Related native application on one platform specfied only by id */
+/* Related native application on one platform specified only by id */
 "related_applications": [
   {
     "platform": "windows",

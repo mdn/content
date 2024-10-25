@@ -186,7 +186,7 @@ All supported audio codecs report `powerEfficient` as true.
 
 ## Usage notes
 
-### Comparision with Navigator.requestMediaKeySystemAccess()
+### Comparison with Navigator.requestMediaKeySystemAccess()
 
 `decodingInfo()` and the {{domxref("Navigator.requestMediaKeySystemAccess()")}} method of the [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API) reflect fundamentally different approaches for selecting a configuration for decoding encrypted media.
 

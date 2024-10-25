@@ -11,7 +11,7 @@ The [CSS](/en-US/docs/Web/CSS) **`quotes`** property sets how the browser should
 
 {{EmbedInteractiveExample("pages/css/quotes.html")}}
 
-Browsers insert quotation marks at the opening and closing of `<q>` elements and for the `open-quote` and `close-quote` values of the `content` property. Each opening or closing quote is replaced by one of the strings from the value of `quotes`, based on the depth of nesting, or, if `quotes` is explicity set to or otherwise resolves to `auto`, the quotation marks used are language dependent.
+Browsers insert quotation marks at the opening and closing of `<q>` elements and for the `open-quote` and `close-quote` values of the `content` property. Each opening or closing quote is replaced by one of the strings from the value of `quotes`, based on the depth of nesting, or, if `quotes` is explicitly set to or otherwise resolves to `auto`, the quotation marks used are language dependent.
 
 ## Syntax
 

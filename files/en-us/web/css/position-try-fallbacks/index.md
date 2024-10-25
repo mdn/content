@@ -104,7 +104,7 @@ Referred to as a `<try-tactic>` in the specification, the predefined values move
 A single position-try fallback option can include more than one `<try-tactic>` or `dashed-ident` options, or a combination of both by declaring them as a single space-separated option:
 
 - In the case of multiple predefined `<try-tactic>` options, their transformations are composed together.
-- In the case of declaring a predefined `<try-tactic>` and a `<dashed-ident>` named `@postion-try` option, the custom position option is applied first, then the `<try-tactic>` transformation is applied.
+- In the case of declaring a predefined `<try-tactic>` and a `<dashed-ident>` named `@position-try` option, the custom position option is applied first, then the `<try-tactic>` transformation is applied.
 
 `position-area` values cannot be combined like this.
 

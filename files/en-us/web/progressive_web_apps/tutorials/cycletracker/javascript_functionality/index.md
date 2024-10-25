@@ -142,7 +142,7 @@ function storeNewPeriod(startDate, endDate) {
   // Get data from storage.
   const periods = getAllStoredPeriods();
 
-  // Add the new period objet to the end of the array of period objects.
+  // Add the new period object to the end of the array of period objects.
   periods.push({ startDate, endDate });
 
   // Sort the array so that periods are ordered by start date, from newest

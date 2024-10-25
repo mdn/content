@@ -209,7 +209,7 @@ wss.closed.then((result) => {
 });
 ```
 
-Finally, we add an event listener to the close button that closes the conenction using the `close()` method, with a code and custom reason. The function also disables the close button — we don't want users to press it once the connection is already closed.
+Finally, we add an event listener to the close button that closes the connection using the `close()` method, with a code and custom reason. The function also disables the close button — we don't want users to press it once the connection is already closed.
 
 ```js
 closeBtn.addEventListener("click", () => {

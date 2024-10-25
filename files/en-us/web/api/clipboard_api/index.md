@@ -27,7 +27,7 @@ The Clipboard API allows users to programmatically read and write text and other
 
 Events are fired as the result of {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}, and {{domxref("Element/paste_event", "paste")}} operations modifying the clipboard.
 The events have a default action, for example the `copy` action copies the current selection to the system clipboard by default.
-The default action can be overriden by the event handler — see each of the events for more information.
+The default action can be overridden by the event handler — see each of the events for more information.
 
 ## Interfaces
 
