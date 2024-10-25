@@ -10,21 +10,11 @@ browser-compat: api.HTMLElement.autocorrect
 
 The **`autocorrect`** property of the {{domxref("HTMLElement")}} interface controls whether or not user text input is automatically corrected for spelling and/or punctuation errors.
 
-While it is available on all HTML elements, it is only relevant to editable text elements:
-
-- User editable {{htmlelement("input")}} elements and {{domxref("HTMLInputElement")}} objects, except for [`password`](/en-US/docs/Web/HTML/Element/input/password), [`email`](/en-US/docs/Web/HTML/Element/input/email), and [`url`](/en-US/docs/Web/HTML/Element/input/url), which do not support autocorrection.
-- {{htmlelement("textarea")}} elements and {{domxref("HTMLTextAreaElement")}} objects.
-- Any element that is [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable).
-
-Editable text elements (other than the exceptions listed above) have auto-correction enabled by default, except for within a {{htmlelement("form")}} element, where the default value may be inherited from the form.
-Elements nested within an element that was made editable using the `contenteditable` do not inherit its auto-correction attribute.
-Explicitly setting the attribute on an element overrides any inherited value.
-
 The property reflects the value of the [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) HTML global attribute.
 
 ## Value
 
-`true` if autocorrection is enabled for the element, and `false` otherwise.
+`true` if auto-correction is enabled for the element, and `false` otherwise.
 
 ## Examples
 

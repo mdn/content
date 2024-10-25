@@ -15,7 +15,7 @@ Autocorrection is relevant to editable text elements:
 - {{htmlelement("textarea")}} elements.
 - Any element that has the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set.
 
-Editable elements have autocorrection enabled by default, except for within a {{htmlelement("form")}} element, where the default value may be inherited from the form.
+Editable elements have auto-correction enabled by default, except for within a {{htmlelement("form")}} element, where the default value may be inherited from the form.
 Explicitly setting the attribute overrides the default.
 
 ## Value
