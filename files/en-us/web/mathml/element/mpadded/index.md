@@ -86,6 +86,19 @@ For the `depth`, `height`, `lspace`, `voffset` and `width` attributes, some brow
 
 {{ EmbedLiveSample('legacy_syntax_example', 700, 200, "", "") }}
 
+## Technical summary
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Roles">Implicit ARIA role</a>
+    </th>
+    <td>
+      None
+    </td>
+  </tr>
+</table>
+
 ## Specifications
 
 {{Specifications}}

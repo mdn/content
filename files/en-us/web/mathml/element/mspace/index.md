@@ -39,6 +39,19 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 {{EmbedLiveSample('Examples')}}
 
+## Technical summary
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Roles">Implicit ARIA role</a>
+    </th>
+    <td>
+      None
+    </td>
+  </tr>
+</table>
+
 ## Specifications
 
 {{Specifications}}

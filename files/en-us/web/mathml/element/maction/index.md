@@ -69,6 +69,19 @@ The following example uses the "toggle" `actiontype`:
 
 {{EmbedLiveSample('Examples', 700, 200)}}
 
+## Technical summary
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Roles">Implicit ARIA role</a>
+    </th>
+    <td>
+      None
+    </td>
+  </tr>
+</table>
+
 ## Specifications
 
 {{Specifications}}

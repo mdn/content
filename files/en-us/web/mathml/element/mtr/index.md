@@ -18,6 +18,19 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 - `rowalign` {{Non-standard_Inline}}
   - : Overrides the vertical alignment of cells specified by {{ MathMLElement("mtable") }} for this row. Possible values are: `axis`, `baseline`, `bottom`, `center` and `top`.
 
+## Technical summary
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Roles">Implicit ARIA role</a>
+    </th>
+    <td>
+      None
+    </td>
+  </tr>
+</table>
+
 ## Specifications
 
 {{Specifications}}
