@@ -10,7 +10,7 @@ browser-compat: api.WebGL2RenderingContext.drawBuffers
 
 The **`WebGL2RenderingContext.drawBuffers()`** method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) defines draw buffers to which
 fragment colors are written into. The draw buffer settings are part of the state of the
-currently bound framebuffer or the drawingbuffer if no framebuffer is bound.
+currently bound framebuffer or the drawing buffer if no framebuffer is bound.
 
 ## Syntax
 

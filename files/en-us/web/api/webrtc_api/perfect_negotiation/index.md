@@ -37,25 +37,25 @@ Note that this code is identical for both peers involved in the connection.
 
 ### Create the signaling and peer connections
 
-First, the signaling channel needs to be opened and the {{domxref("RTCPeerConnection")}} needs to be created. The {{Glossary("STUN")}} server listed here is obviously not a real one; you'll need to replace `stun.myserver.tld` with the address of a real STUN server.
+First, the signaling channel needs to be opened and the {{domxref("RTCPeerConnection")}} needs to be created. The {{Glossary("STUN")}} server listed here is obviously not a real one; you'll need to replace `stun.my-server.tld` with the address of a real STUN server.
 
 ```js
 const config = {
-  iceServers: [{ urls: "stun:stun.mystunserver.tld" }],
+  iceServers: [{ urls: "stun:stun.my-stun-server.tld" }],
 };
 
 const signaler = new SignalingChannel();
 const pc = new RTCPeerConnection(config);
 ```
 
-This code also gets the {{HTMLElement("video")}} elements using the classes "selfview" and "remoteview"; these will contain, respectively, the local user's self-view and the view of the incoming stream from the remote peer.
+This code also gets the {{HTMLElement("video")}} elements using the classes "self-view" and "remote-view"; these will contain, respectively, the local user's self-view and the view of the incoming stream from the remote peer.
 
 ### Connecting to a remote peer
 
 ```js
 const constraints = { audio: true, video: true };
-const selfVideo = document.querySelector("video.selfview");
-const remoteVideo = document.querySelector("video.remoteview");
+const selfVideo = document.querySelector("video.self-view");
+const remoteVideo = document.querySelector("video.remote-view");
 
 async function start() {
   try {
