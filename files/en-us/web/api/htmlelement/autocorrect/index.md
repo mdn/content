@@ -94,7 +94,7 @@ if (`autocorrect` in HTMLElement.prototype) {
 
 #### Result
 
-Toggle the button to enable autocorrect, and then enter invalid text into the text box, such as "Carot".
+Activate the button to toggle the autocorrect value. Enter invalid text into the text box, such as "Carot".
 This should be corrected automatically when the feature is enabled.
 
 {{EmbedLiveSample("Enable and disable autocorrection", "100%", "200")}}
