@@ -64,7 +64,7 @@ The article [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_stylin
 - Elements involved in creating dropdown widgets, including {{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}} and {{HTMLElement("datalist")}}.
 - {{HTMLElement("progress")}} and {{HTMLElement("meter")}}
 
-For example, the date picker calendar, and the button on \<select> that displays an options list when clicked, can't be styled using CSS alone.
+For example, the date picker calendar, and the button on `<select>` that displays an options list when clicked, can't be styled using CSS alone.
 
 The articles [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling) and [How to build custom form controls](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls) describe how to style these.
 
