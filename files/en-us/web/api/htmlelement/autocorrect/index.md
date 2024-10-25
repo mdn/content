@@ -12,13 +12,13 @@ The **`autocorrect`** property of the {{domxref("HTMLElement")}} interface contr
 
 While it is available on all HTML elements, it is only relevant to editable text elements:
 
-- {{htmlelement("input")}} elements and {{domxref("HTMLInputElement")}} objects, except for [`password`](/en-US/docs/Web/HTML/Element/input/password), [`email`](/en-US/docs/Web/HTML/Element/input/email), and [`url`](/en-US/docs/Web/HTML/Element/input/url), which do not support autocorrection.
+- User editable {{htmlelement("input")}} elements and {{domxref("HTMLInputElement")}} objects, except for [`password`](/en-US/docs/Web/HTML/Element/input/password), [`email`](/en-US/docs/Web/HTML/Element/input/email), and [`url`](/en-US/docs/Web/HTML/Element/input/url), which do not support autocorrection.
 - {{htmlelement("textarea")}} elements and {{domxref("HTMLTextAreaElement")}} objects.
-- Any element that has the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set.
+- Any element that is [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable).
 
 Editable text elements (other than the exceptions listed above) have auto-correction enabled by default, except for within a {{htmlelement("form")}} element, where the default value may be inherited from the form.
 Elements nested within an element that was made editable using the `contenteditable` do not inherit its auto-correction attribute.
-Explicitly setting the attribute on an element overrides the default and any inherited value.
+Explicitly setting the attribute on an element overrides any inherited value.
 
 The property reflects the value of the [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) HTML global attribute.
 
