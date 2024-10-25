@@ -213,7 +213,7 @@ This example displays a page with the data we sent. You can see this in action i
 ![Otherwise blank web page with "hi mom", the data received in response after submitting form data to a php file with POST method](php-result.png)
 
 > [!NOTE]
-> This example won't work when you load it into a browser locally — browsers cannot interpret PHP code, so when the form is submitted the browser will just offer to download the PHP file for you. To get it to work, you need to run the example through a PHP server of some kind. Good options for local PHP testing are [MAMP](https://www.mamp.info/en/downloads/) (Mac and Windows) and [AMPPS](https://ampps.com/downloads/) (Mac, Windows, Linux).
+> This example won't work when you load it into a browser locally — browsers cannot interpret PHP code, so when the form is submitted the browser will just offer to download the PHP file for you. To get it to work, you need to run the example through a PHP server of some kind. Good options for local PHP testing are [MAMP](https://www.mamp.info/en/downloads/) (Mac and Windows) and [XAMPP](https://www.apachefriends.org/download.html) (Mac, Windows, Linux).
 >
 > Note also that if you are using MAMP but don't have MAMP Pro installed (or if the MAMP Pro demo time trial has expired), you might have trouble getting it working. To get it working again, we have found that you can load up the MAMP app, then choose the menu options _MAMP_ > _Preferences_ > _PHP_, and set "Standard Version:" to "7.2.x" (x will differ depending on what version you have installed).
 
