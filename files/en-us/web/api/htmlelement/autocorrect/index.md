@@ -65,9 +65,9 @@ function log(text) {
 
 #### JavaScript
 
-The code first checks whether the `autocorrect` is supported by checking if it is present on the prototype.
-If it is present a click handler is added to allow you to toggle the value.
-If it is not present the UI hides the interactive elements and logs that `autocorrect` is not supported.
+The code first checks whether the `autocorrect` is supported by checking if it is present on the `HTMLElement` prototype.
+If it is present, a click handler is added to allow you to toggle the value.
+If it is not present, the UI hides the interactive elements and logs that `autocorrect` is not supported.
 
 ```js
 const toggleButton = document.querySelector("button");
