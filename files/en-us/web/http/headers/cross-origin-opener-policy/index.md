@@ -59,7 +59,7 @@ Cross-Origin-Opener-Policy: noopener-allow-popups
 
 - `same-origin-allow-popups`
 
-  - : The document permits loading into BCGs that contain only same-origin documents opened in navigations, and documents with a COOP of `unsafe-none` opened via popups (or no COOP directive).
+  - : The document permits loading into BCGs that contain only same-origin documents opened in navigations, and documents with a COOP of `unsafe-none` (or no COOP directive) opened via popups.
 
     The behavior is the largely the same as for the [`same-origin`](#same-origin).
     The difference is that a document with this value can, using a popup, also open documents into the same BCG if they have a value of `unsafe-none` (or have not specified any value).
@@ -76,13 +76,13 @@ Cross-Origin-Opener-Policy: noopener-allow-popups
 - `noopener-allow-popups`
 
   - : The document must always be loaded into a new BCG.
-    This supports cases where is useful to process-isolate _same-origin_ documents.
+    This directive supports cases where is useful to process-isolate _same-origin_ documents.
 
     This severs the connections between the new document and its opener, isolating the browsing context for the current document regardless of the opener document's origin.
     This ensures that the opener can't run scripts in opened documents and vice versa — even if they are same-origin.
 
-    Whether or not a document with this value opens documents in the same BSG depends on their directive values.
-    For example a navigation to a same-origin documents with the value `same-origin` or `same-origin-allow-popups` will be opened in the same BCG, while cross-origin documents or documents with `noopener-allow-popups` or `unsafe-none` will be opened in a new BCG.
+    Whether or not a document with this COOP value opens other documents in the same BCG depends on their directive values.
+    For example, a navigation to a same-origin document with the value `same-origin` or `same-origin-allow-popups` will be opened in the same BCG, while cross-origin documents or documents with `noopener-allow-popups` or `unsafe-none` will be opened in a new BCG.
 
     Note that a document with this value has a slightly different behavior for documents that it opens in popups.
     In this case documents with a value of `unsafe-none` (or have not specified any value) are opened into the same BCG, irrespective of whether they are cross-site or same-site.
@@ -135,8 +135,8 @@ if (!handle) {
 }
 ```
 
-Note that this alone is not a sufficient security measure:
-They would also need to do the following:
+Note that this alone is not considered a sufficient security measure.
+The site would also need to do the following:
 
 - Use Fetch Metadata to block same-origin requests to the more-sensitive app that are not navigation requests.
 - Ensure their authentication cookies are all `HttpOnly`.
