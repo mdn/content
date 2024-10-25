@@ -92,7 +92,7 @@ function checkAvailability(arr, val) {
   return arr.some((arrVal) => val === arrVal);
 }
 
-checkAvailability(fruits, "kela"); // false
+checkAvailability(fruits, "grapefruit"); // false
 checkAvailability(fruits, "banana"); // true
 ```
 

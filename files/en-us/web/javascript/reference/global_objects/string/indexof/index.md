@@ -65,7 +65,7 @@ Strings are zero-indexed: The index of a string's first character is `0`, and th
 
 ```js
 "Blue Whale".indexOf("Blue"); // returns  0
-"Blue Whale".indexOf("Blute"); // returns -1
+"Blue Whale".indexOf("Wale"); // returns -1
 "Blue Whale".indexOf("Whale", 0); // returns  5
 "Blue Whale".indexOf("Whale", 5); // returns  5
 "Blue Whale".indexOf("Whale", 7); // returns -1
@@ -88,7 +88,7 @@ When checking if a specific substring occurs within a string, the correct way to
 
 ```js
 "Blue Whale".indexOf("Blue") !== -1; // true; found 'Blue' in 'Blue Whale'
-"Blue Whale".indexOf("Bloe") !== -1; // false; no 'Bloe' in 'Blue Whale'
+"Blue Whale".indexOf("Wale") !== -1; // false; no 'Wale' in 'Blue Whale'
 ```
 
 ## Examples
