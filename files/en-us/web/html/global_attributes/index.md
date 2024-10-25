@@ -25,6 +25,9 @@ In addition to the basic HTML global attributes, the following global attributes
   - : Associates a positioned element with an anchor element. The attribute's value is the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) value of the element you want to anchor the positioned element to. The element can then be positioned [using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using).
 - [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize)
   - : Controls whether inputted text is automatically capitalized and, if so, in what manner.
+- [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect)
+  - : Controls whether input text is automatically corrected for spelling errors.
+    This can be applied to elements that have editable text except for {{HTMLElement("input")}} elements with the attribute: [`type="password"`](/en-US/docs/Web/HTML/Element/input/password), [`type="email"`](/en-US/docs/Web/HTML/Element/input/email), or [`type="url"`](/en-US/docs/Web/HTML/Element/input/url).
 - [`autofocus`](/en-US/docs/Web/HTML/Global_attributes/autofocus)
   - : Indicates that an element is to be focused on page load, or as soon as the {{HTMLElement("dialog")}} it is part of is displayed. This attribute is a boolean, initially false.
 - [`class`](/en-US/docs/Web/HTML/Global_attributes/class)

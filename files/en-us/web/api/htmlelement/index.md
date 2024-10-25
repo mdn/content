@@ -23,10 +23,13 @@ _Also inherits properties from its parent, {{DOMxRef("Element")}}._
   - : Returns a reference to the element's anchor element, or `null` if it doesn't have one.
 - {{DOMxRef("HTMLElement.attributeStyleMap")}} {{ReadOnlyInline}}
   - : A {{DOMxRef("StylePropertyMap")}} representing the declarations of the element's [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute.
-- {{domxref("HTMLElement.autocapitalize", "autocapitalize")}}
+- {{domxref("HTMLElement.autocapitalize")}}
   - : A string that represents the element's capitalization behavior for user input. Valid values are: `none`, `off`, `on`, `characters`, `words`, `sentences`.
 - {{domxref("HTMLElement.autofocus")}}
   - : A boolean value reflecting the [`autofocus`](/en-US/docs/Web/HTML/Element/select#autofocus) HTML global attribute, which indicates whether the control should be focused when the page loads, or when dialog or popover become shown if specified in an element inside {{htmlelement("dialog")}} elements or elements whose popover attribute is set.
+- {{domxref("HTMLElement.autocorrect")}}
+  - : A boolean that represents whether or not text input by a user should be automatically corrected.
+    This reflects the [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) HTML global attribute.
 - {{DOMxRef("HTMLElement.contentEditable")}}
   - : A string, where a value of `true` means the element is editable and a value of `false` means it isn't.
 - {{DOMxRef("HTMLElement.dataset")}} {{ReadOnlyInline}}

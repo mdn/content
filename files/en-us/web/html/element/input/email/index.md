@@ -25,7 +25,7 @@ See [Validation](#validation) for details on how email addresses are validated t
 
 ## Additional attributes
 
-In addition to the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, `email` inputs support the following attributes.
+In addition to the [global attributes](/en-US/docs/Web/HTML/Global_attributes) (except [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect)), and the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, `email` inputs support the following attributes.
 
 ### list
 
