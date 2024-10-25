@@ -39,7 +39,6 @@ APIs that require transient activation (list is not exhaustive):
 - {{domxref("Element.requestFullScreen()")}}
 - {{domxref("Element.requestPointerLock()")}}
 - {{domxref("EyeDropper.open()")}}
-- {{domxref("GPUAdapter.requestAdapterInfo()")}}
 - {{domxref("HID.requestDevice()")}}
 - {{domxref("HTMLInputElement.showPicker()")}}
 - {{domxref("HTMLSelectElement.showPicker()")}}
