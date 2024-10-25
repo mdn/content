@@ -73,19 +73,22 @@ If it is not present, the UI hides the interactive elements and logs that `autoc
 const toggleButton = document.querySelector("button");
 const searchInput = document.querySelector("#searchinput");
 
-if (`autocorrect` in HTMLElement.prototype) {
-  toggleButton.textContent = searchInput.autocorrect ? "Disable" : "Enable";
+function setButtonText() {
+  toggleButton.textContent = searchInput.autocorrect ? "Enabled" : "Disabled";
   log(`autocorrect: ${searchInput.autocorrect}`);
+}
+
+if (`autocorrect` in HTMLElement.prototype) {
+  setButtonText();
 
   toggleButton.addEventListener("click", (e) => {
-    toggleButton.textContent = searchInput.autocorrect ? "Disable" : "Enable";
     searchInput.autocorrect = !searchInput.autocorrect;
-    log(`autocorrect: ${searchInput.autocorrect}`);
+    setButtonText();
   });
 } else {
   toggleButton.hidden = true;
   searchInput.hidden = true;
-  log("autcorrect not supported");
+  log("autocorrect not supported");
 }
 ```
 
