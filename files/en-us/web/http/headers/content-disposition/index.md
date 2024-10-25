@@ -7,9 +7,9 @@ browser-compat: http.headers.Content-Disposition
 
 {{HTTPSidebar}}
 
-In a regular HTTP response, the **`Content-Disposition`** response header is a header indicating if the content is expected to be displayed _inline_ in the browser, that is, as a Web page or as part of a Web page, or as an _attachment_, that is downloaded and saved locally.
+The HTTP **`Content-Disposition`** header indicates if the content is expected to be displayed _inline_ in the browser as a Web page or as part of a Web page, or as an _attachment_ that may be downloaded and saved client-side.
 
-In a `multipart/form-data` body, the HTTP **`Content-Disposition`** general header is a header that must be used on each subpart of a multipart body to give information about the field it applies to. The subpart is delimited by the _boundary_ defined in the {{HTTPHeader("Content-Type")}} header. Used on the body itself, `Content-Disposition` has no effect.
+In a `multipart/form-data` body, the `Content-Disposition` header must be used on each subpart of a multipart body to provide information about the field it applies to. The subpart is delimited by the _boundary_ defined in the {{HTTPHeader("Content-Type")}} header. Used on the body itself, `Content-Disposition` has no effect.
 
 The `Content-Disposition` header is defined in the larger context of MIME messages for email, but only a subset of the possible parameters apply to HTTP forms and {{HTTPMethod("POST")}} requests. Only the value `form-data`, as well as the optional directive `name` and `filename`, can be used in the HTTP context.
 
@@ -19,13 +19,12 @@ The `Content-Disposition` header is defined in the larger context of MIME messag
       <th scope="row">Header type</th>
       <td>
         {{Glossary("Response header")}} (for the main body),<br />{{Glossary("Request header")}},
-        {{Glossary("Response header")}} (for a subpart of a multipart
-        body)
+        {{Glossary("Response header")}} (for a subpart of a multipart body)
       </td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -56,7 +55,7 @@ Browsers may apply transformations to conform to the file system requirements, s
 
 ### As a header for a multipart body
 
-A `multipart/form-data` body requires a `Content-Disposition` header to provide information for each subpart of the form (e.g. for every form field and any files that are part of field data). The first directive is always `form-data`, and the header _must_ also include a `name` parameter to identify the relevant field. Additional directives are case-insensitive and have arguments that use quoted-string syntax after the `'='` sign. Multiple parameters are separated by a semicolon (`';'`).
+A `multipart/form-data` body requires a `Content-Disposition` header to provide information about each subpart of the form (e.g., for every form field and any files that are part of field data). The first directive is always `form-data`, and the header must also include a `name` parameter to identify the relevant field. Additional directives are case-insensitive and have arguments that use quoted-string syntax after the `=` sign. Multiple parameters are separated by a semicolon (`;`).
 
 ```http
 Content-Disposition: form-data; name="fieldName"
@@ -85,7 +84,9 @@ Note that the request header does not have the `filename*` parameter and does no
 
 ## Examples
 
-A response triggering the "Save As" dialog:
+### Triggering download prompt for a resource
+
+The following response triggers the "Save As" dialog in a browser:
 
 ```http
 200 OK
@@ -96,24 +97,28 @@ Content-Length: 21
 <HTML>Save me!</HTML>
 ```
 
-This simple HTML file will be saved as a regular download rather than displayed in the browser. Most browsers will propose to save it under the `cool.html` filename (by default).
+The HTML file will be saved as a downloaded file rather than displayed in the browser like visited web pages.
+Most browsers will propose to save it under the `cool.html` file name by default (specified in the `filename` directive).
 
-An example of an HTML form posted using the `multipart/form-data` format that makes use of the `Content-Disposition` header:
+### HTML posting multipart/form-data content type
+
+The following example shows an HTML form sent using `multipart/form-data` using the `Content-Disposition` header.
+In practice, the boundary value `delimiter123` would be a browser-generated string like `----8721656041911415653955004498`:
 
 ```http
 POST /test.html HTTP/1.1
 Host: example.org
-Content-Type: multipart/form-data;boundary="boundary"
+Content-Type: multipart/form-data;boundary="delimiter123"
 
---boundary
+--delimiter123
 Content-Disposition: form-data; name="field1"
 
 value1
---boundary
+--delimiter123
 Content-Disposition: form-data; name="field2"; filename="example.txt"
 
 value2
---boundary--
+--delimiter123--
 ```
 
 ## Specifications
