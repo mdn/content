@@ -147,6 +147,40 @@ In this example we have a button that normally gets its contrast using the {{css
 
 {{EmbedLiveSample("Using system colors")}}
 
+### Default colors
+
+This example demonstrates the default colors for each of the currently supported system colors.
+
+#### HTML
+
+```HTML
+<ul>
+  <li style="background-color: AccentColor;">AccentColor: Background of accented user interface controls</li>
+  <li style="color: AccentColorText;">AccentColorText: Text of accented user interface controls</li>
+  <li style="color: ActiveText;">ActiveText: Text of active links</li>
+  <li style="border: 2px solid ButtonBorder;">ButtonBorder: Base border color of controls</li>
+  <li style="background-color: ButtonFace;">ButtonFace: Background color of controls</li>
+  <li style="color: ButtonText;">ButtonText: Text color of controls</li>
+  <li style="background-color: Canvas;">Canvas: Background of application content or documents</li>
+  <li style="color: CanvasText;">CanvasText: Text color in application content or documents</li>
+  <li style="background-color: Field;">Field: Background of input fields</li>
+  <li style="color: FieldText;">FieldText: Text in input fields</li>
+  <li style="color: GrayText;">GrayText: Text color for disabled items (e.g., a disabled control)</li>
+  <li style="background-color: Highlight;">Highlight: Background of selected items</li>
+  <li style="color: HighlightText;">HighlightText: Text color of selected items</li>
+  <li style="color: LinkText;">LinkText: Text of non-active, non-visited links</li>
+  <li style="background-color: Mark;">Mark: Background of specially marked text</li>
+  <li style="color: MarkText;">MarkText: Text of specially marked text</li>
+  <li style="background-color: SelectedItem;">SelectedItem: Background of selected items</li>
+  <li style="color: SelectedItemText;">SelectedItemText: Text of selected items</li>
+  <li style="color: VisitedText;">VisitedText: Text of visited links</li>
+</ul>
+```
+
+#### Result
+
+{{EmbedLiveSample("Default colors")}}
+
 ## Specifications
 
 {{Specifications}}
