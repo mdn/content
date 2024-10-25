@@ -14,7 +14,7 @@ There are a number of guides within MDN docs. These articles aim to add addition
 
 - [Structuring the web with HTML](/en-US/docs/Learn/HTML)
   - : The HTML learning area offers tutorials to help you learn HTML from the ground up.
-- [HTML basics](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
+- [HTML basics](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/HTML_basics)
   - : This article will give you a basic understanding of HTML. After following this guide, you can further explore the material in the HTML Learning Area.
 
 ## CSS

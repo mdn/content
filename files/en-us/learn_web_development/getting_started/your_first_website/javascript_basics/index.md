@@ -1,7 +1,7 @@
 ---
 title: JavaScript basics
-slug: Learn/Getting_started_with_the_web/JavaScript_basics
-page-type: learn-module-chapter
+slug: Learn_web_development/Getting_started/Your_first_website/JavaScript_basics
+page-type: tutorial-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}

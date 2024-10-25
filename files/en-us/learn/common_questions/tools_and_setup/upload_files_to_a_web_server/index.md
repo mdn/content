@@ -26,7 +26,7 @@ This article shows you how to publish your site online using file transfer tools
           >set up a basic environment</a
         >
         and how to
-        <a href="/en-US/docs/Learn/Getting_started_with_the_web"
+        <a href="/en-US/docs/Learn_web_development/Getting_started/Your_first_website"
           >write a simple webpage</a
         >.
       </td>
@@ -43,7 +43,7 @@ This article shows you how to publish your site online using file transfer tools
 
 ## Summary
 
-If you have built a simple web page (see [HTML basics](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics) for an example), you will probably want to put it online, on a web server. In this article we'll discuss how to do that, using various available options such as SFTP clients, RSync and GitHub.
+If you have built a simple web page (see [HTML basics](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/HTML_basics) for an example), you will probably want to put it online, on a web server. In this article we'll discuss how to do that, using various available options such as SFTP clients, RSync and GitHub.
 
 ## SFTP
 
@@ -163,7 +163,7 @@ Again, you would have to get the connection credentials from your hosting provid
 
 GitHub allows you to publish websites via [GitHub pages](https://pages.github.com/) (gh-pages).
 
-We've covered the basics of using this in the [Publishing your website](/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website) article from our [Getting started with the Web](/en-US/docs/Learn/Getting_started_with_the_web) guide, so we aren't going to repeat it all here.
+We've covered the basics of using this in the [Publishing your website](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website) article from our [Getting started with the Web](/en-US/docs/Learn_web_development/Getting_started/Your_first_website) guide, so we aren't going to repeat it all here.
 
 However, it is worth knowing that you can also host a website on GitHub, but use a custom domain with it. See [Using a custom domain with GitHub Pages](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site) for a detailed guide.
 

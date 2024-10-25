@@ -1,14 +1,35 @@
 ---
 title: What will your website look like?
-slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
-page-type: learn-module-chapter
-status:
-  - deprecated
+slug: Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like
+page-type: tutorial-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
+{{LearnSidebar}}
+
+{{NextMenu("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website")}}
 
 _What will your website look like?_ discusses the planning and design work you have to do for your website before writing code, including "What information does my website offer?", "What fonts and colors do I want?", and "What does my site do?"
+
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        Basic familiarity with your computer operating system, the basic software you will use to build a website, and file systems.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Learning outcomes:</th>
+      <td>
+        <ul>
+          <li>Plan a basic website.</li>
+          <li>Use a basic design process.</li>
+          <li>Gather assets.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## First things first: planning
 
@@ -34,21 +55,15 @@ Next, grab pen and paper and sketch out roughly how you want your site to look. 
 >
 > Web teams often include both a graphic designer and a {{Glossary("UX", "user experience")}} (UX) designer. Graphic designers put together the visuals of the website. UX designers have a somewhat more abstract role in addressing how users will experience and interact with the website.
 
-## Choosing your assets
+At this point, it's good to start putting together the content that will eventually appear on your webpage. You should still have your paragraphs and title from earlier. Keep these close by.
 
-At this point, it's good to start putting together the content that will eventually appear on your webpage.
-
-### Text
-
-You should still have your paragraphs and title from earlier. Keep these close by.
-
-### Theme color
+## Choosing a theme color
 
 To choose a color, go to [the Color Picker](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool) and find a color you like. When you click on a color, you'll see a strange six-character code like `#660066`. That's called a _hex code_ (short for hexadecimal), and represents your color. Copy the code down somewhere safe for now.
 
 ![Color-Picker-Tool on MDN Docs website with RGB, HSL, and HEX colors ](color-picker.png)
 
-### Images
+## Choosing an image
 
 To choose an image, go to [Google Images](https://www.google.com/imghp) and search for something suitable.
 
@@ -61,7 +76,7 @@ Note that most images on the web, including in Google Images, are copyrighted. T
 
 ![Filtered search results to get images of Creative Commons Licenses on Google Images](updated-google-images-licensing.png)
 
-### Font
+## Choosing a font
 
 As with images, many fonts are protected by licenses, meaning you cannot freely use them in your site. [Google Fonts](https://developers.google.com/fonts) is a web service owned by Google that provides access to many fonts.
 
@@ -75,4 +90,4 @@ Once you have found a font, there are two main ways of using it:
 
 Alternatively you can use [safe web fonts](https://web.mit.edu/jmorzins/www/fonts.html) such as Arial, Times New Roman, or Courier New.
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
+{{NextMenu("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website")}}

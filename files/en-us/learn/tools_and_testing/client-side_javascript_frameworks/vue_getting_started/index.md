@@ -19,7 +19,7 @@ Now let's introduce Vue, the third of our frameworks. In this article we'll look
           <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages,
           knowledge of the
           <a
-            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
             >terminal/command line</a
           >.
         </p>
@@ -77,7 +77,7 @@ However, this approach has some limitations. To build more complex apps, you'll 
 2. [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/) or [yarn](https://yarnpkg.com/).
 
 > [!NOTE]
-> If you don't have the above installed, find out [more about installing npm and Node.js](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#adding_powerups) here.
+> If you don't have the above installed, find out [more about installing npm and Node.js](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line#adding_powerups) here.
 
 To install Vue and initialize a new project, run the following command in your terminal:
 

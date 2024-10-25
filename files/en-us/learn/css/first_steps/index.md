@@ -13,7 +13,7 @@ CSS (Cascading Style Sheets) is used to style and lay out web pages — for exam
 Before starting this module, you should have:
 
 1. Basic familiarity with using computers and using the Web passively (i.e. looking at it, consuming the content.)
-2. A basic work environment set up, as detailed in [Installing basic software](/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software), and an understanding of how to create and manage files, as detailed in [Dealing with files](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files).
+2. A basic work environment set up, as detailed in [Installing basic software](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software), and an understanding of how to create and manage files, as detailed in [Dealing with files](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files).
 3. Basic familiarity with HTML, as discussed in the [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) module.
 
 > [!NOTE]

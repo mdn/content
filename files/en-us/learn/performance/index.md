@@ -12,7 +12,7 @@ The rest of our beginner's learning material tried to stick to web best practice
 
 ## Learning pathway
 
-While knowing HTML, CSS, and JavaScript is needed for implementing many web performance improvement recommendations, knowing how to build applications is not a necessary pre-condition for understanding and measuring web performance. We do however recommend that before you work through this module, you at least get a basic idea of web development by working through our [Getting started with the web](/en-US/docs/Learn/Getting_started_with_the_web) module.
+While knowing HTML, CSS, and JavaScript is needed for implementing many web performance improvement recommendations, knowing how to build applications is not a necessary pre-condition for understanding and measuring web performance. We do however recommend that before you work through this module, you at least get a basic idea of web development by working through our [Getting started with the web](/en-US/docs/Learn_web_development/Getting_started/Your_first_website) module.
 
 It would also be helpful to go a bit deeper into these topics, with modules such as:
 

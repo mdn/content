@@ -19,7 +19,7 @@ With our component plan worked out, it's now time to start updating our app from
           <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages,
           knowledge of the
           <a
-            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
             >terminal/command line</a
           >.
         </p>

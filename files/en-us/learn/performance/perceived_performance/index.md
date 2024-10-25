@@ -16,10 +16,10 @@ This article provides a brief introduction to the factors that affect perceived 
       <th scope="row">Prerequisites:</th>
       <td>
         <a
-          href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >Basic software installed</a
         >, and basic knowledge of
-        <a href="/en-US/docs/Learn/Getting_started_with_the_web"
+        <a href="/en-US/docs/Learn_web_development/Getting_started/Your_first_website"
           >client-side web technologies</a
         >.
       </td>

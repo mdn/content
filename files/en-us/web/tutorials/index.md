@@ -10,7 +10,7 @@ These resources are created by forward-thinking companies and web developers who
 
 ## For complete beginners to the Web
 
-- [Getting started with the Web](/en-US/docs/Learn/Getting_started_with_the_web)
+- [Getting started with the Web](/en-US/docs/Learn_web_development/Getting_started/Your_first_website)
   - : _Getting started with the Web_ is a concise series introducing you to the practicalities of web development. You'll set up the tools you need to construct a simple webpage and publish your own simple code.
 
 ## HTML Tutorials
@@ -44,7 +44,7 @@ These resources are created by forward-thinking companies and web developers who
 
 ### Introductory level
 
-- [CSS basics](/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
+- [CSS basics](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/CSS_basics)
   - : CSS (Cascading Style Sheets) is the code you use to style your webpage. _CSS Basics_ takes you through what you need to get started. We'll answer questions like: How do I make my text black or red? How do I make my content show up in such-and-such a place on the screen? How do I decorate my webpage with background images and colors?
 - [CSS first steps](/en-US/docs/Learn/CSS/First_steps)
   - : CSS (Cascading Style Sheets) is used to style and lay out web pages — for example, to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features. This module provides a gentle beginning to your path toward CSS mastery with the basics of how it works, what the syntax looks like, and how you can start using it to add styling to HTML.
@@ -99,7 +99,7 @@ These resources are created by forward-thinking companies and web developers who
   - : In our first JavaScript module, we first answer some fundamental questions such as "what is JavaScript?", "what does it look like?", and "what can it do?", before moving on to taking you through your first practical experience of writing JavaScript. After that, we discuss some key JavaScript features in detail, such as variables, strings, numbers and arrays.
 - [JavaScript building blocks](/en-US/docs/Learn/JavaScript/Building_blocks)
   - : In this module, we continue our coverage of all JavaScript's key fundamental features, turning our attention to commonly-encountered types of code blocks such as conditional statements, loops, functions, and events. You've seen this stuff already in the course, but only in passing — here we'll discuss it all explicitly.
-- [Getting started with JavaScript](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
+- [Getting started with JavaScript](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/JavaScript_basics)
   - : What is JavaScript and how can it help you?
 - [Codecademy](https://www.codecademy.com/)
   - : Codecademy is an easy way to learn how to code JavaScript. It's interactive and you can do it with your friends.

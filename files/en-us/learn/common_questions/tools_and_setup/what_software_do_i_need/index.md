@@ -15,7 +15,7 @@ In this article, we lay out which software components you need when you're editi
       <td>
         You should already know
         <a
-          href="/en-US/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines"
+          href="/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web"
           >the difference between webpages, websites, web servers, and search
           engines.</a
         >

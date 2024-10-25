@@ -1,7 +1,7 @@
 ---
 title: The web and web standards
-slug: Learn/Getting_started_with_the_web/The_web_and_web_standards
-page-type: guide
+slug: Learn_web_development/Getting_started/Your_first_website/The_web_and_web_standards
+page-type: tutorial-chapter
 ---
 
 {{learnsidebar}}
@@ -58,7 +58,7 @@ You're a digital creative now. Enjoy the experience, and the potential for earni
 
 ## Overview of modern web technologies
 
-There are a number of technologies to learn if you want to be a front-end web developer. In this section we will describe them briefly. For a more detailed explanation of how some of them work together, read our article [How the web works](/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works).
+There are a number of technologies to learn if you want to be a front-end web developer. In this section we will describe them briefly. For a more detailed explanation of how some of them work together, read our article [How the web works](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/How_the_Web_works).
 
 ### Browsers
 

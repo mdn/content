@@ -1,32 +1,51 @@
 ---
 title: Installing basic software
-slug: Learn/Getting_started_with_the_web/Installing_basic_software
-page-type: learn-module-chapter
+slug: Learn_web_development/Getting_started/Environment_setup/Installing_software
+page-type: tutorial-chapter
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
+<!-- {{LearnSidebar}} -->
 
-In _Installing basic software_, we show you what tools you need to do simple web development and how to install them properly.
+{{NextMenu("Learn_web_development/Getting_started/Environment_setup/Browsing_the_web", "Learn_web_development/Getting_started/Environment_setup")}}
 
-## What tools do I actually need, right now?
+In this article, we show you what tools you need to do simple web development and how to install them properly. We'll set you up with the bare minimum of tools for now, including a code editor and some modern web browsers.
 
-In this article, we'll set you up with the bare minimum — a text editor and some modern web browsers.
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        Basic familiarity with your computer operating system.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Learning outcomes:</th>
+      <td>
+        <ul>
+          <li>Understand what software you need to get started.</li>
+          <li>Install basic software.</li>
+          <li>Understand in general what software professional web developers use.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-### Installing a text editor
+## Installing a code editor
 
 You probably already have a basic text editor on your computer. By default Windows includes [Notepad](https://en.wikipedia.org/wiki/Microsoft_Notepad) and macOS comes with [TextEdit](https://en.wikipedia.org/wiki/TextEdit). Linux distros vary; the Ubuntu 22.04 LTS release comes with [GNOME Text Editor](https://en.wikipedia.org/wiki/GNOME_Text_Editor) by default.
 
-For web development, you can probably do better than Notepad or TextEdit. We recommend starting with [Visual Studio Code](https://code.visualstudio.com/), which is a free editor, that offers live previews and code hints.
+For web development, you can probably do better than Notepad or TextEdit. We recommend starting with [Visual Studio Code](https://code.visualstudio.com/), which is a free editor that offers live previews, code hints, and many other features.
 
-### Installing modern web browsers
+## Installing modern web browsers
 
-For now, we'll install a couple of desktop web browsers to test our code in. Make sure you install at least two of these browsers, from two different families (so you don't test in two browsers that use the same rendering engine):
+For now, we'll install a couple of desktop web browsers to test our code in. If possible, make sure you have one browser from each line installed and available to test on (so you don't just test in multiple browsers based on the same rendering engine):
 
 - Chromium: [Chrome](https://www.google.com/chrome/), [Opera](https://www.opera.com/), [Brave](https://brave.com/), [Microsoft Edge](https://www.microsoft.com/en-us/edge)
 - Gecko: [Firefox](https://www.mozilla.org/en-US/firefox/new/)
 - WebKit: [Safari](https://www.apple.com/safari/) (macOS and iOS only)
 
-### Installing a local web server
+## Installing a local web server
 
 Some examples will need to be run by a web server to work successfully. You can find out how to do this in [How do you set up a local testing server?](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)
 
@@ -42,4 +61,4 @@ The following looks like a scary list, but fortunately, you can get started in w
 
 For more information about other project-specific tools, especially for client-side web development, see our [Understanding client-side web development tools](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools) guide.
 
-{{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
+{{NextMenu("Learn_web_development/Getting_started/Environment_setup/Browsing_the_web", "Learn_web_development/Getting_started/Environment_setup")}}

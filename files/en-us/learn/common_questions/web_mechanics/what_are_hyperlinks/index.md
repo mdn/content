@@ -18,7 +18,7 @@ In this article, we'll go over what hyperlinks are and why they matter.
           >how the Internet works</a
         >
         and be familiar with <a
-          href="/en-US/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines"
+          href="/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web"
         >
           the difference between a webpage, a website, a web server, and a
           search engine</a

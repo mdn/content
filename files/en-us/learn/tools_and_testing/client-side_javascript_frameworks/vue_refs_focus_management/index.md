@@ -19,7 +19,7 @@ We are nearly done with Vue. The last bit of functionality to look at is focus m
           <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages,
           knowledge of the
           <a
-            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
             >terminal/command line</a
           >.
         </p>

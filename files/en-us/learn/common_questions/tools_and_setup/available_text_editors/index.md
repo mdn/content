@@ -447,4 +447,4 @@ When you install a new text editor, your OS will probably continue to open text 
 
 ## Next steps
 
-Now that you have a good text editor, you could take some time to finalize [your basic working environment](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server), or, if you want to play with it right away, write [your very first web page](/en-US/docs/Learn/Getting_started_with_the_web).
+Now that you have a good text editor, you could take some time to finalize [your basic working environment](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server), or, if you want to play with it right away, write [your very first web page](/en-US/docs/Learn_web_development/Getting_started/Your_first_website).

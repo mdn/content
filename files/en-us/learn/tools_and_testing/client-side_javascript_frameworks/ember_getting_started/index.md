@@ -20,7 +20,7 @@ In our first Ember article we will look at how Ember works and what it's useful 
           <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, and
           have knowledge of the
           <a
-            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
             >terminal/command line</a
           >.
         </p>
@@ -120,7 +120,7 @@ That said, because this tutorial is a focus on the JavaScript side of making a s
 
 Ember uses a command-line interface (CLI) tool for building and scaffolding parts of your application.
 
-1. You'll need node and npm installed before you can install ember-cli. [Go here to find out how to install node and npm](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#adding_powerups), if you haven't already got them.
+1. You'll need node and npm installed before you can install ember-cli. [Go here to find out how to install node and npm](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line#adding_powerups), if you haven't already got them.
 2. Now type the following into your terminal to install ember-cli:
 
    ```bash

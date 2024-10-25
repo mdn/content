@@ -21,7 +21,7 @@ Now that we have our markup and styles ready, we can start developing the requir
           <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, and
           have knowledge of the
           <a
-            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
             >terminal/command line</a
           >.
         </p>

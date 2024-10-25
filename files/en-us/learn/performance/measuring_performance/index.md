@@ -18,10 +18,10 @@ This article introduces tools you can use to access web performance metrics, whi
       <th scope="row">Prerequisites:</th>
       <td>
         <a
-          href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >Basic software installed</a
         >, and basic knowledge of
-        <a href="/en-US/docs/Learn/Getting_started_with_the_web"
+        <a href="/en-US/docs/Learn_web_development/Getting_started/Your_first_website"
           >client-side web technologies</a
         >.
       </td>

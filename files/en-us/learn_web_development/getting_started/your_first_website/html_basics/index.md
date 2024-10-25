@@ -1,10 +1,10 @@
 ---
 title: HTML basics
-slug: Learn/Getting_started_with_the_web/HTML_basics
-page-type: learn-module-chapter
+slug: Learn_web_development/Getting_started/Your_first_website/HTML_basics
+page-type: tutorial-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
 
 HTML (**H**yper**T**ext **M**arkup **L**anguage) is the code that is used to structure a web page and its content. For example, content could be structured within a set of paragraphs, a list of bulleted points, or using images and data tables. As the title suggests, this article will give you a basic understanding of HTML and its functions.
 
@@ -79,7 +79,7 @@ This contains two attributes, but there is no closing `</img>` tag and no inner 
 
 ### Anatomy of an HTML document
 
-That wraps up the basics of individual HTML elements, but they aren't handy on their own. Now we'll look at how individual elements are combined to form an entire HTML page. Let's revisit the code we put into our `index.html` example (which we first met in the [Dealing with files](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files) article):
+That wraps up the basics of individual HTML elements, but they aren't handy on their own. Now we'll look at how individual elements are combined to form an entire HTML page. Let's revisit the code we put into our `index.html` example (which we first met in the [Dealing with files](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files) article):
 
 ```html
 <!doctype html>
@@ -161,7 +161,7 @@ As explained above, {{htmlelement("p")}} elements are for containing paragraphs 
 <p>This is a single paragraph</p>
 ```
 
-Add your sample text (you should have it from [_What will your website look like?_](/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)) into one or a few paragraphs, placed directly below your {{htmlelement("img")}} element.
+Add your sample text (you should have it from [_What will your website look like?_](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like)) into one or a few paragraphs, placed directly below your {{htmlelement("img")}} element.
 
 ### Lists
 
@@ -238,4 +238,4 @@ If you get stuck, you can always compare your work with our [finished example co
 
 Here, we have only really scratched the surface of HTML. To find out more, go to our [Learning HTML](/en-US/docs/Learn/HTML) topic.
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}

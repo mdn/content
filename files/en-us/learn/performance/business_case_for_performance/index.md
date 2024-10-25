@@ -14,7 +14,7 @@ We've discussed the importance of web performance. You've learned what you need 
       <th scope="row">Prerequisites:</th>
       <td>
         Basic knowledge of
-        <a href="/en-US/docs/Learn/Getting_started_with_the_web"
+        <a href="/en-US/docs/Learn_web_development/Getting_started/Your_first_website"
           >client-side web technologies</a
         >, and a basic understanding of
         <a href="/en-US/docs/Web/Performance">web performance optimization</a>.

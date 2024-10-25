@@ -14,7 +14,7 @@ HTML provides several ways to convey description semantics, whether inline or as
       <th scope="row">Prerequisites:</th>
       <td>
         You need to be familiar with how to
-        <a href="/en-US/docs/Learn/Getting_started_with_the_web"
+        <a href="/en-US/docs/Learn_web_development/Getting_started/Your_first_website"
           >create a basic HTML document</a
         >.
       </td>

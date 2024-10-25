@@ -12,7 +12,7 @@ If you are a complete beginner, web development can be challenging — we will h
 
 ## Where to start
 
-If you are not sure about committing to learning web development in-depth and want to begin with a taster session, we'd recommend that you start by working through our [Getting started with the web](/en-US/docs/Learn/Getting_started_with_the_web) guides. Beyond that, you should start by learning the following topics:
+If you are not sure about committing to learning web development in-depth and want to begin with a taster session, we'd recommend that you start by working through our [Getting started with the web](/en-US/docs/Learn_web_development/Getting_started/Your_first_website) guides. Beyond that, you should start by learning the following topics:
 
 - HTML and CSS
   - : HTML provides structure for web content, whereas CSS provides instructions to style and lay out that content. See [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) and [CSS first steps](/en-US/docs/Learn/CSS/First_steps) for essential starter information.
@@ -36,7 +36,7 @@ If you are not sure about committing to learning web development in-depth and wa
 
 The following is a list of all the topics we cover in the MDN learning area.
 
-- [Getting started with the web](/en-US/docs/Learn/Getting_started_with_the_web)
+- [Getting started with the web](/en-US/docs/Learn_web_development/Getting_started/Your_first_website)
   - : Provides a practical introduction to web development for complete beginners.
 - [HTML — Structuring the web](/en-US/docs/Learn/HTML)
   - : HTML is the language that we use to structure the different parts of our content and define what their meaning or purpose is. This topic teaches HTML in detail.

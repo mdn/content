@@ -14,11 +14,11 @@ The next set of selectors we will look at are referred to as **pseudo-classes** 
       <th scope="row">Prerequisites:</th>
       <td>
         <a
-          href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >Basic software installed</a
         >, basic knowledge of
         <a
-          href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >working with files</a
         >, HTML basics (study
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"

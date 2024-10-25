@@ -1,10 +1,12 @@
 ---
 title: Command line crash course
-slug: Learn/Tools_and_testing/Understanding_client-side_tools/Command_line
-page-type: learn-module-chapter
+slug: Learn_web_development/Getting_started/Environment_setup/Command_line
+page-type: tutorial-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Overview","Learn/Tools_and_testing/Understanding_client-side_tools/Package_management", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
+<!-- {{LearnSidebar}} -->
+
+{{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Dealing_with_files", "Learn_web_development/Getting_started/Your_first_website", "Learn_web_development/Getting_started/Environment_setup")}}
 
 In your development process, you'll undoubtedly be required to run some commands in the terminal (or on the "command line" — these are effectively the same thing). This article provides an introduction to the terminal, the essential commands you'll need to enter into it, how to chain commands together, and how to add your own command line interface (CLI) tools.
 
@@ -13,14 +15,19 @@ In your development process, you'll undoubtedly be required to run some commands
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
-        <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages.
+        Basic familiarity with your computer operating system, the basic software you will use to build a website, and file systems.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">Learning outcomes:</th>
       <td>
-        To understand what the terminal/command line is, what basic commands you should learn, and how to install new command line tools.
+        <ul>
+          <li>What the command line is, and what you can do with it.</li>
+          <li>Understand how to access the command line on different systems.</li>
+          <li>Know basic keyboard shortcuts (for example up arrow to access previous commands, tab for autocomplete).</li>
+          <li>Know basic commands (for example <code>cd</code>, <code>ls</code>, <code>mkdir</code>, <code>touch</code>, <code>grep</code>, <code>cat</code>, <code>mv</code>, <code>cp</code>).</li>
+          <li>Command options/flags.</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -74,13 +81,13 @@ As hinted at above, Linux/Unix systems have a terminal available by default, lis
 
 macOS has a system called Darwin that sits underneath the graphical user interface. Darwin is a Unix-like system, which provides the terminal, and access to the low-level tools. macOS Darwin mostly has parity with Unix, certainly good enough to not cause us any worries as we work through this article.
 
-The terminal is available on macOS at Applications/Utilities/Terminal.
+The terminal is available on macOS at `Applications/Utilities/Terminal`.
 
 #### Windows
 
 As with some other programming tools, using the terminal (or command line) on Windows has traditionally not been as simple or easy as on other operating systems. But things are getting better.
 
-Windows has traditionally had its own terminal-like program called cmd ("the command prompt") for a long time, but this definitely doesn't have parity with Unix commands, and is equivalent to the old-style Windows DOS prompt.
+Windows has traditionally had its own terminal-like program called `cmd` ("the command prompt") for a long time, but this definitely doesn't have parity with Unix commands, and is equivalent to the old-style Windows DOS prompt.
 
 Better programs exist for providing a terminal experience on Windows, such as Powershell ([see here to find installers](https://github.com/PowerShell/PowerShell)), and Gitbash (which comes as part of the [git for Windows](https://gitforwindows.org/) toolset).
 
@@ -482,6 +489,6 @@ Note that some of the above suggestions may need installing using npm, like we d
 
 ## Summary
 
-That brings us to the end of our brief tour of the terminal/command line. Next up we'll be looking in more detail at package managers, and what we can do with them.
+That brings us to the end of our introductory tour of the terminal/command line, and to the Environment setup module. Next up, we will get you working on building your first simple website, so you can get an idea of what web development is like.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Overview","Learn/Tools_and_testing/Understanding_client-side_tools/Package_management", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Dealing_with_files", "Learn_web_development/Getting_started/Your_first_website", "Learn_web_development/Getting_started/Environment_setup")}}

@@ -20,7 +20,7 @@ The articles below can help you learn more about HTML.
 ## Key resources
 
 - HTML Introduction
-  - : If you're new to web development, be sure to read our [HTML Basics](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics) article to learn what HTML is and how to use it.
+  - : If you're new to web development, be sure to read our [HTML Basics](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/HTML_basics) article to learn what HTML is and how to use it.
 - HTML Tutorials
   - : For articles about how to use HTML, as well as tutorials and complete examples, check out our [HTML Learning Area](/en-US/docs/Learn/HTML).
 - HTML Reference

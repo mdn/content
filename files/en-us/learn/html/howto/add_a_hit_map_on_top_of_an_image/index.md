@@ -14,7 +14,7 @@ Here we go over how to set up an image map, and some downsides to consider first
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        You should already know how to <a href="/en-US/docs/Learn/Getting_started_with_the_web">create a basic HTML document</a> and how to <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#how_do_we_put_an_image_on_a_webpage">add accessible images to a webpage.</a>
+        You should already know how to <a href="/en-US/docs/Learn_web_development/Getting_started/Your_first_website">create a basic HTML document</a> and how to <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#how_do_we_put_an_image_on_a_webpage">add accessible images to a webpage.</a>
       </td>
     </tr>
     <tr>

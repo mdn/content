@@ -18,7 +18,7 @@ Getting involved on the Web isn't as cheap as it looks. In this article we discu
           >what software you need</a
         >, the difference between
         <a
-          href="/en-US/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines"
+          href="/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web"
           >a webpage, a website, etc.</a
         >, and what
         <a href="/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name"

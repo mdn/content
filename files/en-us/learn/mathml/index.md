@@ -15,7 +15,7 @@ Mathematical Markup Language — or {{glossary("MathML")}} — is the markup lan
 
 Before attempting to learn MathML, it is assumed that you have some basic knowledge of [HTML](/en-US/docs/Learn/HTML) and [CSS](/en-US/docs/Learn/CSS). Consequently, you are strongly advised to get familiar with at least these two technologies first. Start by working through the following modules:
 
-- [Getting started with the Web](/en-US/docs/Learn/Getting_started_with_the_web)
+- [Getting started with the Web](/en-US/docs/Learn_web_development/Getting_started/Your_first_website)
 - [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML)
 - [Introduction to CSS](/en-US/docs/Learn/CSS/First_steps)
 

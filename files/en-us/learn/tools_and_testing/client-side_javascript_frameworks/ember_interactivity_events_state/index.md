@@ -21,7 +21,7 @@ At this point we'll start adding some interactivity to our app, providing the ab
           <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, and
           have knowledge of the
           <a
-            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
             >terminal/command line</a
           >.
         </p>

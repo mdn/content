@@ -1,7 +1,7 @@
 ---
 title: Publishing your website
-slug: Learn/Getting_started_with_the_web/Publishing_your_website
-page-type: learn-module-chapter
+slug: Learn_web_development/Getting_started/Your_first_website/Publishing_your_website
+page-type: tutorial-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}
