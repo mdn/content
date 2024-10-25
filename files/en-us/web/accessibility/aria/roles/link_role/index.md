@@ -63,7 +63,7 @@ for (let i = 0; i < fakeLinks.length; i++) {
   fakeLinks[i].addEventListener("keydown", navigateLink);
 }
 
-//handles clicks and keydowns on the link
+// handles click and keydown events on the link
 function navigateLink(e) {
   if (e.type === "click" || e.key === "Enter") {
     const ref = e.target ?? e.srcElement;
