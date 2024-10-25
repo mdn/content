@@ -28,11 +28,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize)
 
-  - : A string that indicates whether input text is automatically capitalized and, if so, in what manner.
+  - : Controls whether inputted text is automatically capitalized and, if so, in what manner.
 
 - [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete)
 
-  - : A string that indicates whether the value of the control can be automatically completed by the browser. Possible values are:
+  - : Controls whether entered text can be automatically completed by the browser. Possible values are:
 
     - `off`: The user must explicitly enter a value into this field for every use, or the document provides its own auto-completion method; the browser does not automatically complete the entry.
     - `on`: The browser can automatically complete the value based on values that the user has entered during previous uses.
@@ -42,7 +42,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect)
 
-  - : A string that indicates whether to activate automatic spelling correction and processing of text while the user is editing this `textarea`.
+  - : Controls whether automatic spelling correction and processing of text is enabled while the user is editing this `textarea`.
     Permitted values are:
 
     - `on`
