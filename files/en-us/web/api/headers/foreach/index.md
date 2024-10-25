@@ -67,7 +67,7 @@ cookie ==> This is a demo cookie
 
 ## Browser compatibility
 
-{{compat}}
+{{Compat}}
 
 ## See also
 

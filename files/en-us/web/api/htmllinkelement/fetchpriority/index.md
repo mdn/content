@@ -38,7 +38,7 @@ Possible values are:
 
 ```js
 const preloadLink = document.createElement("link");
-preloadLink.href = "myimage.jpg";
+preloadLink.href = "my-image.jpg";
 preloadLink.rel = "preload";
 preloadLink.as = "image";
 preloadLink.fetchPriority = "high";
