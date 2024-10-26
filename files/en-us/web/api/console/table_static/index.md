@@ -28,7 +28,7 @@ console.table(data, columns)
     Note that in Firefox, `console.table()` is limited to displaying 1000 rows, including the heading row.
 
 - `columns` {{optional_inline}}
-  - : An array which can be used to restrict the columns shown in the table. It contains indices, if `data` is a table, or property names, if `data` is an object. The resulting table then includes only columns for items which match the given indices or names.
+  - : An array which can be used to restrict the columns shown in the table. It contains indices, if each entry of `data` is an array, or property names, if each entry of `data` is an object. The resulting table then includes only columns for items which match the given indices or names.
 
 ### Return value
 
