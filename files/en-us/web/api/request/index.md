@@ -32,6 +32,8 @@ You can create a new `Request` object using the {{domxref("Request.Request","Req
   - : Contains the associated {{domxref("Headers")}} object of the request.
 - {{domxref("Request.integrity")}} {{ReadOnlyInline}}
   - : Contains the [subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity) value of the request (e.g., `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
+- {{domxref("Request.isHistoryNavigation")}} {{ReadOnlyInline}}
+  - : A boolean indicating whether the request is a history navigation(back-foward navigation).
 - {{domxref("Request.keepalive")}} {{ReadOnlyInline}}
   - : Contains the request's `keepalive` setting (`true` or `false`), which indicates whether the browser will keep the associated request alive if the page that initiated it is unloaded before the request is complete.
 - {{domxref("Request.method")}} {{ReadOnlyInline}}

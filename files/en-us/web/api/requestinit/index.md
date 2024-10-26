@@ -115,7 +115,7 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
 
     See [Setting headers](/en-US/docs/Web/API/Fetch_API/Using_Fetch#setting_headers) for more details.
 
-- `integrity`
+- `integrity` {{optional_inline}}
 
   - : Contains the [subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity)
     value of the request.
