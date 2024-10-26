@@ -18,7 +18,7 @@ A boolean value.
 
 ## Examples
 
-The example code executes in service worker, and listens {{domxref("ServiceWorkerGlobalScope/fetch_event", "fetch")}} event. In the event handler, check the `isHistoryNavigation` property to know whether a request happens because of a back/forward navigation.If so, we respond it with a cached response (if existed in cache storage).
+The example code executes in service worker, and listens {{domxref("ServiceWorkerGlobalScope/fetch_event", "fetch")}} event. In the event handler, check the `isHistoryNavigation` property to know whether a request happens because of a back/forward navigation. If so, we respond it with a cached response (if existed in the {{domxref("CacheStorage", "cache storage", "", 1)}}).
 
 ```js
 self.addEventListener("request", (event) => {
