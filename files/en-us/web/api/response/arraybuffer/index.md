@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Response.arrayBuffer
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`arrayBuffer()`** method of the {{domxref("Response")}} interface
 takes a {{domxref("Response")}} stream and reads it to completion. It returns a promise
@@ -77,7 +77,7 @@ function getData() {
     })
     .then((buffer) => audioCtx.decodeAudioData(buffer))
     .then((decodedData) => {
-      const source = new AudioBufferSourceNode();
+      const source = new AudioBufferSourceNode(audioCtx);
       source.buffer = decodedData;
       source.connect(audioCtx.destination);
       return source;

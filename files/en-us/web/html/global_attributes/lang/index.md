@@ -16,7 +16,7 @@ The **`lang`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) helps 
 
 If the attribute value is the _empty string_ (`lang=""`), the language is set to _unknown_; if the language tag is not valid according to BCP47, it is set to _invalid_.
 
-Even if the **lang** attribute is set, it may not be taken into account, as the [**xml:lang**](/en-US/docs/Web/HTML/Global_attributes#lang) attribute has priority.
+Even if the `lang` attribute is set, it may not be taken into account, as the `xml:lang` attribute has priority.
 
 For the CSS pseudo-class {{cssxref(":lang")}}, two invalid language names are different if their names are different. So while `:lang(es)` matches both `lang="es-ES"` and `lang="es-419"`, `:lang(xyzzy)` would _not_ match `lang="xyzzy-Zorp!"`.
 
@@ -31,7 +31,7 @@ A language tag is made of hyphen-separated _language subtags_, where each subtag
 - Script subtag
   - : Optional. This subtag defines the writing system used for the language, and is always 4 characters long, with the first letter capitalized. For example, French-in-Braille is `fr-Brai` and `ja-Kana` is Japanese written with the Katakana alphabet. If the language is written in a highly typical way, like English in the Latin alphabet, there is no need to use this subtag.
 - Region subtag
-  - : Optional. This subtag defines a dialect of the base language from a particular location, and is either 2 letters in ALLCAPS matching a country code, or 3 numbers matching a non-country area. For example, `es-ES` is for Spanish as spoken in Spain, and `es-013` is Spanish as spoken in Central America. "International Spanish" would just be `es`.
+  - : Optional. This subtag defines a dialect of the base language from a particular location and is either two upper-case letters matching a country code or three numbers matching a non-country area. For example, `es-ES` is for Spanish as spoken in Spain, and `es-013` is Spanish as spoken in Central America. "International Spanish" would just be `es`.
 
 The script subtag precedes the region subtag if both are present — `ru-Cyrl-BY` is Russian, written in the Cyrillic alphabet, as spoken in Belarus.
 
@@ -148,4 +148,4 @@ If an element has no `lang` attribute, it will inherit the `lang` value set on i
 
 - All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 - [`Content-Language` HTTP Header](/en-US/docs/Web/HTTP/Headers/Content-Language)
-- HTML [`translate`](/en-US/docs/Web/HTML/Global_attributes#translate) attribute
+- HTML [`translate`](/en-US/docs/Web/HTML/Global_attributes/translate) attribute

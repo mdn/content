@@ -94,6 +94,13 @@ See the [WebGL constants](/en-US/docs/Web/API/WebGL_API/Constants) page.
 - {{domxref("WebGL2RenderingContext.vertexAttribIPointer()")}}
   - : Specifies integer data formats and locations of vertex attributes in a vertex attributes array.
 
+## Color spaces
+
+- {{domxref("WebGL2RenderingContext.drawingBufferColorSpace")}}
+  - : Specifies the color space of the WebGL drawing buffer.
+- {{domxref("WebGL2RenderingContext.unpackColorSpace")}}
+  - : Specifies the color space to convert to when importing textures.
+
 ## Drawing buffers
 
 - {{domxref("WebGL2RenderingContext.vertexAttribDivisor()")}}

@@ -135,9 +135,9 @@ Each of these three examples uses the {{cssxref("background")}} property to crea
 #### HTML
 
 ```html
-<div class="exampleone">Example One</div>
-<div class="exampletwo">Example Two</div>
-<div class="examplethree">Example Three</div>
+<div class="example-one">Example One</div>
+<div class="example-two">Example Two</div>
+<div class="example-three">Example Three</div>
 ```
 
 #### CSS
@@ -153,17 +153,17 @@ div {
 }
 
 /* These examples use the `background` shorthand property */
-.exampleone {
-  background: url("startransparent.gif") #ffee99 2.5cm bottom no-repeat;
+.example-one {
+  background: url("star-transparent.gif") #ffee99 2.5cm bottom no-repeat;
 }
-.exampletwo {
-  background: url("startransparent.gif") #ffee99 left 4em bottom 1em no-repeat;
+.example-two {
+  background: url("star-transparent.gif") #ffee99 left 4em bottom 1em no-repeat;
 }
 
 /* Multiple background images: Each image is matched with the
    corresponding position, from first specified to last. */
-.examplethree {
-  background-image: url("startransparent.gif"), url("catfront.png");
+.example-three {
+  background-image: url("star-transparent.gif"), url("cat-front.png");
   background-position:
     0px 0px,
     right 3em bottom 2em;

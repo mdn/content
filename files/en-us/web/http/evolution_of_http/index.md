@@ -26,7 +26,7 @@ The HTTP protocol used in those early phases was very simple. It was later dubbe
 The initial version of HTTP had no version number; it was later called 0.9 to differentiate it from later versions. HTTP/0.9 was extremely simple: requests consisted of a single line and started with the only possible method {{HTTPMethod("GET")}} followed by the path to the resource. The full URL wasn't included as the protocol, server, and port weren't necessary once connected to the server.
 
 ```http
-GET /mypage.html
+GET /my-page.html
 ```
 
 The response was extremely simple, too: it only consisted of the file itself.
@@ -51,7 +51,7 @@ HTTP/0.9 was very limited, but browsers and servers quickly made it more versati
 At this point in time, a typical request and response looked like this:
 
 ```http
-GET /mypage.html HTTP/1.0
+GET /my-page.html HTTP/1.0
 User-Agent: NCSA_Mosaic/2.0 (Windows 3.1)
 
 HTTP/1.0 200 OK
@@ -60,14 +60,14 @@ Server: CERN/3.0 libwww/2.17
 Content-Type: text/html
 <HTML>
 A page with an image
-  <IMG SRC="/myimage.gif">
+  <IMG SRC="/my-image.gif">
 </HTML>
 ```
 
 It was followed by a second connection and a request to fetch the image (with the corresponding response):
 
 ```http
-GET /myimage.gif HTTP/1.0
+GET /my-image.gif HTTP/1.0
 User-Agent: NCSA_Mosaic/2.0 (Windows 3.1)
 
 HTTP/1.0 200 OK
@@ -176,7 +176,6 @@ The HTTP/2 protocol differs from HTTP/1.1 in a few ways:
 - It's a binary protocol rather than a text protocol. It can't be read and created manually. Despite this hurdle, it allows for the implementation of improved optimization techniques.
 - It's a multiplexed protocol. Parallel requests can be made over the same connection, removing the constraints of the HTTP/1.x protocol.
 - It compresses headers. As these are often similar among a set of requests, this removes the duplication and overhead of data transmitted.
-- It allows a server to populate data in a client cache through a mechanism called the server push.
 
 Officially standardized in May 2015, HTTP/2 use peaked in January 2022 at 46.9% of all websites (see [these stats](https://w3techs.com/technologies/details/ce-http2)). High-traffic websites showed the most rapid adoption in an effort to save on data transfer overhead and subsequent budgets.
 

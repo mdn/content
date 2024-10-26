@@ -51,12 +51,14 @@ Let's create two classes: one for boring paragraphs and one for exciting ones. W
 ```css
 .exciting-text::after {
   content: " <- EXCITING!";
-  color: green;
+  color: darkgreen;
+  font-weight: bolder;
 }
 
 .boring-text::after {
   content: " <- BORING";
-  color: red;
+  color: darkviolet;
+  font-weight: bolder;
 }
 ```
 

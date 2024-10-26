@@ -52,7 +52,7 @@ What that means to the example code is that, if an element is currently in fulls
 ### JavaScript
 
 ```js
-function fullscreenchanged(event) {
+function fullscreenchangeHandler(event) {
   // document.fullscreenElement will point to the element that
   // is in fullscreen mode if there is one. If not, the value
   // of the property is null.
@@ -67,9 +67,9 @@ function fullscreenchanged(event) {
 
 const el = document.getElementById("fullscreen-div");
 
-el.addEventListener("fullscreenchange", fullscreenchanged);
+el.addEventListener("fullscreenchange", fullscreenchangeHandler);
 // or
-el.onfullscreenchange = fullscreenchanged;
+el.onfullscreenchange = fullscreenchangeHandler;
 
 // When the toggle button is clicked, enter/exit fullscreen
 document
