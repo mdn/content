@@ -75,7 +75,7 @@ _No changes._
 - The {{domxref("DOMPointReadOnly")}} interface now supports the static function {{domxref("DOMPointReadOnly.fromPoint_static", "DOMPointReadOnly.fromPoint()")}}, which creates a new point object from a dictionary that's compatible with `DOMPointInit`, which includes any {{domxref("DOMPoint")}} object. This function is also available on {{domxref("DOMPoint")}} ([Firefox bug 1186265](https://bugzil.la/1186265)).
 - For compatibility purposes, the {{domxref("Event.srcElement")}} property is now supported. It is an alias for {{domxref("Event.target")}} ([Firefox bug 453968](https://bugzil.la/453968)).
 - {{domxref("Navigator.registerProtocolHandler()")}} now must only be called from a secure context ([Firefox bug 1460506](https://bugzil.la/1460506)).
-- The {{domxref("Navigator.registerContentHandler()")}} method has been disabled by default in preparation for being removed entirely, as it's been obsolete for some time ([Firefox bug 1460481](https://bugzil.la/1460481)).
+- The `Navigator.registerContentHandler()` method has been disabled by default in preparation for being removed entirely, as it's been obsolete for some time ([Firefox bug 1460481](https://bugzil.la/1460481)).
 - The {{domxref("DataTransfer.DataTransfer", "DataTransfer()")}} constructor has been implemented ([Firefox bug 1351193](https://bugzil.la/1351193)).
 - {{domxref("Document.domain")}} can no longer return `null` ([Firefox bug 819475](https://bugzil.la/819475)). If the domain cannot be identified, then `domain` returns an empty string instead of `null`.
 - Added the {{domxref("console/timeLog_static", "console.timeLog()")}} method to display the current value of a console timer while continuing to track the time ([Firefox bug 1458466](https://bugzil.la/1458466)).
