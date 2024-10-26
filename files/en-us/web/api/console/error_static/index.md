@@ -13,10 +13,10 @@ The **`console.error()`** static method outputs a message to the console at the 
 ## Syntax
 
 ```js-nolint
-error(val1)
-error(val1, /* …, */ valN)
-error(msg)
-error(msg, subst1, /* …, */ substN)
+console.error(val1)
+console.error(val1, /* …, */ valN)
+console.error(msg)
+console.error(msg, subst1, /* …, */ substN)
 ```
 
 ### Parameters

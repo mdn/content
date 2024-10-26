@@ -361,7 +361,7 @@ const a_middleware_function = function (req, res, next) {
 app.use(a_middleware_function);
 
 // Function added with use() for a specific route
-app.use("/someroute", a_middleware_function);
+app.use("/some-route", a_middleware_function);
 
 // A middleware function added for a specific HTTP verb and route
 app.get("/", a_middleware_function);

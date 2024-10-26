@@ -13,8 +13,8 @@ The **`console.group()`** static method creates a new inline group in the [Web c
 ## Syntax
 
 ```js-nolint
-group()
-group(label)
+console.group()
+console.group(label)
 ```
 
 ### Parameters

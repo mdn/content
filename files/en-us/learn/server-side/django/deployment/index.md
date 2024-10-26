@@ -473,15 +473,15 @@ We'll also configure the default database and collect static files so that they 
    PythonAnywhere expects you to install applications in a folder named after your site URL.
 
    > [!NOTE]
-   > Because we're using the free account you can only name your account `<your_pythonaware_username>.pythonanywhere.com` (for example, if your username is "Odtsetseg" you will have to put the local library source into a folder named `odtsetseg.pythonanywhere.com`).
+   > Because we're using the free account you can only name your account `<your_pythonanywhere_username>.pythonanywhere.com` (for example, if your username is "Odtsetseg" you will have to put the local library source into a folder named `odtsetseg.pythonanywhere.com`).
 
    Enter the following command to clone your library sources into an appropriately named folder (you will need to replace the username values with your own name):
 
    ```bash
-   git clone https://github.com/<github_username>/django-locallibrary-tutorial.git <pythonaware_username>.pythonanywhere.com
+   git clone https://github.com/<github_username>/django-locallibrary-tutorial.git <your_pythonanywhere_username>.pythonanywhere.com
 
    # Navigate into the new folder
-   cd <pythonaware_username>.pythonanywhere.com
+   cd <your_pythonanywhere_username>.pythonanywhere.com
    ```
 
 5. Install the library dependencies using the `requirements.txt` file:
@@ -659,7 +659,7 @@ We're already set up for that, so all we need to do is create the file.
 
 The steps are:
 
-1. Open a PythonAware Bash prompt.
+1. Open a PythonAnywhere Bash prompt.
 2. Navigate to your application directory (replacing `<user-name>` with your own account):
 
    ```bash
