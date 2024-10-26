@@ -20,7 +20,7 @@ Gecko now uses the [HTML5](/en-US/docs/Glossary/HTML5) parser, which fixes bugs,
   - : A look at improvements to web forms. Among these changes are added input types in the {{HTMLElement("input")}} element, data validation, and more.
 - [HTML5 Sections](/en-US/docs/Web/HTML/Element/Heading_Elements)
   - : Gecko now supports the new HTML5 elements related to sections in a document: {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}, {{HTMLElement("aside")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}} and {{HTMLElement("footer")}}.
-- [HTML5 hidden attribute](/en-US/docs/Web/HTML/Global_attributes#hidden)
+- [HTML5 hidden attribute](/en-US/docs/Web/HTML/Global_attributes/hidden)
   - : This attribute, common to all elements, is used to hide content in a webpage that is not currently relevant to the user.
 - Other HTML5 elements
   - : Gecko now also supports the following new HTML5 elements: {{HTMLElement("mark")}}, {{HTMLElement("figure")}}, and {{HTMLElement("figcaption")}}.
@@ -42,8 +42,8 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
 - {{HTMLElement("textarea")}} elements are now resizable by default; you can use the {{cssxref("resize")}} CSS property to disable this.
 - `canvas.getContext` and `canvas.toDataURL` no longer throw an exception when called with unrecognized arguments.
 - The {{HTMLElement("canvas")}} element now supports the Mozilla-specific `mozGetAsFile()` method, which lets you obtain a memory-based file containing an image of the canvas's contents. See {{domxref("HTMLCanvasElement")}} for details.
-- `canvas2dcontext.lineCap` and `canvas2dcontext.lineJoin` no longer throw an exception when set to an unrecognized value.
-- `canvas2dcontext.globalCompositeOperation` no longer throws an exception when set to an unrecognized value, and no longer supports the non-standard `darker` value.
+- `Canvas2DContext.lineCap` and `Canvas2DContext.lineJoin` no longer throw an exception when set to an unrecognized value.
+- `Canvas2DContext.globalCompositeOperation` no longer throws an exception when set to an unrecognized value, and no longer supports the non-standard `darker` value.
 - Support for the obsolete `<spacer>` element, which was absent in all other browsers, has been removed.
 - The `<isindex>` element, when created by calling {{domxref("Document.createElement()")}}, is now created as a simple element with no properties or methods.
 - Gecko now supports calling `click()` on {{HTMLElement("input")}} elements to open the file picker. See the [example](/en-US/docs/Web/API/File_API/Using_files_from_web_applications#using_hidden_file_input_elements_using_the_click_method) in the article [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications).
@@ -375,7 +375,7 @@ Several changes were made to the `<xul:tabbrowser>` element that impact extensio
 - Added the new `getIcon` method, which lets you get a tab's favicon without having to pull up the `<xul:browser>` element.
 - Added the new `tabbrowser.tabs` property, which lets you easily get a list of the tabs in a `<xul:tabbrowser>` element.
 - The new `pinTab` and `unpinTab` methods let you pin and unpin tabs (that is, switch them between being app tabs and regular tabs).
-- Added the `getTabModalPromptBox` method and `tabmodalPromptShowing` attribute to the `<xul:tabbrowser>` to support tab-modal alerts.
+- Added the `getTabModalPromptBox` method and `tabModalPromptShowing` attribute to the `<xul:tabbrowser>` to support tab-modal alerts.
 
 #### Changes to popups
 

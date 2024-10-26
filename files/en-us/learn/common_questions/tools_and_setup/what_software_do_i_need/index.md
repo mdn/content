@@ -251,20 +251,21 @@ Uploading files to a web server is a very important step while creating a websit
   </tbody>
 </table>
 
-### Browsing websites
+### Testing websites
 
-As you already know, you need a web browser to view websites. There are [dozens](https://en.wikipedia.org/wiki/List_of_web_browsers) of browser options for your personal use, but when you're developing a website you should test it at least with the following major browsers, to make sure your site works for most people:
+There are [many web browsers available](https://en.wikipedia.org/wiki/List_of_web_browsers). When you're developing a website you should test it at least with the following major browsers on both desktop and mobile platforms, to make sure your site works for most people:
 
 - [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/)
 - [Google Chrome](https://www.google.com/chrome/)
 - [Apple Safari](https://www.apple.com/safari/)
 
-If you're targeting a specific group (e.g., technical platform or country), you may have to test the site with additional browsers, like [Opera](https://www.opera.com/), [Konqueror](https://apps.kde.org/konqueror/).
+If you're targeting a specific group (e.g., technical platform or locale), you may have to test the site with additional browsers, like [UC Browser](https://www.ucweb.com/) or [Opera Mini](https://www.opera.com/browsers/opera-mini).
 
-Testing gets complicated because some browsers only run on certain operating systems. Notably, Apple Safari runs on iOS, iPadOS, and macOS. It's best to take advantage of services like [Browsershots](https://browsershots.org/) or [Browserstack](https://www.browserstack.com/). Browsershots furnishes screenshots of your website as it will look in various browsers. Browserstack gives you full remote access to virtual machines, so you can test your site in the most common environments and on different operating systems. Alternatively, you can set up your own virtual machines, but that takes some expertise.
+Testing gets complicated because some browsers only run on certain operating systems. Notably, Apple Safari runs on iOS, iPadOS, and macOS. It's best to take advantage of services like [Browsershots](https://browsershots.org/) or [Browserstack](https://www.browserstack.com/). Browsershots creates screenshots of your website as it will look in various browsers. Browserstack gives you full remote access to virtual machines, so you can test your site in the most common environments and on different operating systems. Alternatively, you can set up your own virtual machines, but that takes some expertise.
+
 See [Strategies for carrying out testing: Putting together a testing lab](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#putting_together_a_testing_lab) for more information.
 
-By all means run some tests on a real device, especially on real mobile devices. Mobile device simulation is a new, evolving technology and less reliable than desktop simulation. Mobile devices cost money, of course, so we suggest taking a look at the [Open Device Lab initiative](https://www.smashingmagazine.com/2016/11/worlds-best-open-device-labs/#odls-have-opened-doors-for-idls). You can also share devices if you want to test on many platforms without spending too much.
+By all means run some tests on a real device, especially on real mobile devices. Mobile devices cost money, of course, so we recommend sharing devices across a team if you want to test on many platforms without spending too much. For scalable cloud access to real device testing, we'd also recommend taking a look at [App Live: BrowserStack's Interactive Mobile App Testing platform](https://www.browserstack.com/app-live).
 
 ## Next steps
 

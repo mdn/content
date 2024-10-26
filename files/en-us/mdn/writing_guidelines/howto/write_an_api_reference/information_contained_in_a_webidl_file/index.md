@@ -271,7 +271,7 @@ partial interface Blob {
 
 ### Not throwing exceptions
 
-When the semantics of Webidl is not followed, an exception is often thrown, even without `[SetterThrows]` or `[GetterThrows]` set. For example, in strict mode, if we try to set a read-only property to a new value, that is to call its implicit setter, a read-only property will throw in strict mode.
+When the semantics of WebIDL is not followed, an exception is often thrown, even without `[SetterThrows]` or `[GetterThrows]` set. For example, in strict mode, if we try to set a read-only property to a new value, that is to call its implicit setter, a read-only property will throw in strict mode.
 
 Mostly for compatibility purpose, this behavior is sometimes annoying. To prevent this by creating a no-op setter (that is by silently ignoring any attempt to set the property to a new value), the `[LenientSetter]` annotation can be used.
 
@@ -495,7 +495,7 @@ The value pairs to iterate over can be defined in one of the following ways:
 
 ### Set-like methods
 
-An interface may be defined as _set-like_, meaning that it represents an _ordered set of values_ will have the following methods: `entries()`, `keys()`, `values()`, `forEach(),` and `has()` (it also has the `size` property). They also supports the use of {{jsxref("Statements/for...of", "for...of")}} on an object implementing this interface. The set-like can be prefixed `readonly` or not. If not read-only, the methods to modify the set are also implemented: `add()`, `clear()`, and `delete()`.
+An interface may be defined as _set-like_, meaning that it represents an _ordered set of values_ will have the following methods: `entries()`, `keys()`, `values()`, `forEach()`, and `has()` (it also has the `size` property). They also supports the use of {{jsxref("Statements/for...of", "for...of")}} on an object implementing this interface. The set-like can be prefixed `readonly` or not. If not read-only, the methods to modify the set are also implemented: `add()`, `clear()`, and `delete()`.
 
 ```webidl
 setlike<valueType>

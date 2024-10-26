@@ -216,7 +216,7 @@ The Web Audio API has a lot of different filter/effects that can be applied to a
 #### HTML
 
 ```html
-<video id="my-video" controls src="myvideo.mp4" type="video/mp4"></video>
+<video id="my-video" controls src="my-video.mp4" type="video/mp4"></video>
 ```
 
 #### JavaScript

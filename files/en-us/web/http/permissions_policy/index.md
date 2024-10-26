@@ -189,7 +189,7 @@ It is worth giving the `src` value a special mention. We mentioned above that us
 
 ### Fenced frames and permissions policy
 
-{{htmlelement("fencedframe")}}s interact with permissions policies in the same way as `<iframe>`s, but in a much more restricted capacity. Only specific features designed to be used in `<fencedframes>`s can be enabled via permissions policies set on them; other policy-controlled features are not available in this context.
+{{htmlelement("fencedframe")}}s interact with permissions policies in the same way as `<iframe>`s, but in a much more restricted capacity. Only specific features designed to be used in `<fencedframe>`s can be enabled via permissions policies set on them; other policy-controlled features are not available in this context.
 
 See [Permissions policies available to fenced frames](/en-US/docs/Web/HTML/Element/fencedframe#permissions_policies_available_to_fenced_frames) for more details.
 

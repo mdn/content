@@ -357,8 +357,8 @@ Let's have a look at an example that does just this. First of all, the HTML is a
       <input id="address1" name="address1" type="text" required />
     </div>
     <div>
-      <label for="pcode1">Zip/postal code: </label>
-      <input id="pcode1" name="pcode1" type="text" required />
+      <label for="zip-code1">Zip/postal code: </label>
+      <input id="zip-code1" name="zip-code1" type="text" required />
     </div>
   </fieldset>
   <fieldset id="billing">
@@ -378,10 +378,10 @@ Let's have a look at an example that does just this. First of all, the HTML is a
       <input id="address2" name="address2" type="text" disabled required />
     </div>
     <div>
-      <label for="pcode2" class="billing-label disabled-label">
+      <label for="zip-code2" class="billing-label disabled-label">
         Zip/postal code:
       </label>
-      <input id="pcode2" name="pcode2" type="text" disabled required />
+      <input id="zip-code2" name="zip-code2" type="text" disabled required />
     </div>
   </fieldset>
 
@@ -438,7 +438,7 @@ You can see the example in action below (also [see it live here](https://mdn.git
 
 ### Read-only and read-write
 
-In a similar manner to `:disabled` and `:enabled`, the `:read-only` and `:read-write` pseudo-classes target two states that form inputs toggle between. Read-only inputs have their values submitted to the server, but the user can't edit them, whereas read-write means they can be edited — their default state.
+In a similar manner to `:disabled` and `:enabled`, the `:read-only` and `:read-write` pseudo-classes target two states that form inputs toggle between. As with disabled inputs, the user can't edit read-only inputs. However, unlike disabled inputs, read-only input values will be submitted to the server. Read-write means they can be edited — their default state.
 
 An input is set to read-only using the `readonly` attribute. As an example, imagine a confirmation page where the developer has sent the details filled in on previous pages over to this page, with the aim of getting the user to check them all in one place, add any final data that is needed, and then confirm the order by submitting. At this point, all the final form data can be sent to the server in one go.
 
@@ -453,7 +453,7 @@ A fragment of the HTML is as follows — note the readonly attribute:
 </div>
 ```
 
-If you try the live example, you'll see that the top set of form elements are not focusable, however, the values are submitted when the form is submitted. We've styled the form controls using the `:read-only` and `:read-write` pseudo-classes, like so:
+If you try the live example, you'll see that the top set of form elements are not editable, however, the values are submitted when the form is submitted. We've styled the form controls using the `:read-only` and `:read-write` pseudo-classes, like so:
 
 ```css
 input:read-only,

@@ -17,10 +17,10 @@ browser-compat: http.data-url
 Data URLs are composed of four parts: a prefix (`data:`), a [MIME type](/en-US/docs/Web/HTTP/MIME_types) indicating the type of data, an optional `base64` token if non-textual, and the data itself:
 
 ```plain
-data:[<mediatype>][;base64],<data>
+data:[<media-type>][;base64],<data>
 ```
 
-The `mediatype` is a [MIME type](/en-US/docs/Web/HTTP/MIME_types) string, such as `'image/jpeg'` for a JPEG image file. If omitted, defaults to `text/plain;charset=US-ASCII`
+The `media-type` is a [MIME type](/en-US/docs/Web/HTTP/MIME_types) string, such as `'image/jpeg'` for a JPEG image file. If omitted, defaults to `text/plain;charset=US-ASCII`
 
 If the data contains [characters defined in RFC 3986 as reserved characters](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2), or contains space characters, newline characters, or other non-printing characters, those characters must be {{Glossary("Percent-encoding", "percent-encoded")}}.
 
@@ -111,7 +111,7 @@ lots of text…
 
 ## Browser compatibility
 
-{{compat}}
+{{Compat}}
 
 ## See also
 

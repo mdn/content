@@ -7,7 +7,7 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#status.101
 
 {{HTTPSidebar}}
 
-The HTTP **`101 Switching Protocols`** [informational response](/en-US/docs/Web/HTTP/Status#information_responses) status code indicates the protocol that a server has switched to.
+The HTTP **`101 Switching Protocols`** [informational response](/en-US/docs/Web/HTTP/Status#informational_responses) status code indicates the protocol that a server has switched to.
 The protocol is specified in the {{HTTPHeader("Upgrade")}} request header received from a client.
 
 The server includes an {{HTTPHeader("Upgrade")}} header in this response to indicate the protocol it has agreed to switch to.

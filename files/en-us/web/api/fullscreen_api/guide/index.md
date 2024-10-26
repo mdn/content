@@ -18,16 +18,16 @@ Given an element that you'd like to present in fullscreen mode (such as a {{HTML
 Let's consider this {{HTMLElement("video")}} element:
 
 ```html
-<video controls id="myvideo">
-  <source src="somevideo.webm"></source>
-  <source src="somevideo.mp4"></source>
+<video controls id="my-video">
+  <source src="somevideo.webm" />
+  <source src="somevideo.mp4" />
 </video>
 ```
 
 We can put that video into fullscreen mode as follows:
 
 ```js
-const elem = document.getElementById("myvideo");
+const elem = document.getElementById("my-video");
 if (elem.requestFullscreen) {
   elem.requestFullscreen();
 }

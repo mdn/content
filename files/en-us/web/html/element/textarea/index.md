@@ -16,7 +16,9 @@ The above example demonstrates a number of features of `<textarea>`:
 - An `id` attribute to allow the `<textarea>` to be associated with a {{htmlelement("label")}} element for accessibility purposes
 - A `name` attribute to set the name of the associated data point submitted to the server when the form is submitted.
 - `rows` and `cols` attributes to allow you to specify an exact size for the `<textarea>` to take. Setting these is a good idea for consistency, as browser defaults can differ.
-- Default content entered between the opening and closing tags. `<textarea>` does not support the `value` attribute.
+- The `<textarea>` element specifies its content differently in HTML and JavaScript contexts:
+  - In HTML, the initial content of a `<textarea>` is specified between its opening and closing tags, not as a `value` attribute.
+  - In JavaScript, `<textarea>` elements have a [`value`](/en-US/docs/Web/API/HTMLTextAreaElement/value) property that can be used to get or set the current content, and [`defaultValue`](/en-US/docs/Web/API/HTMLTextAreaElement/defaultValue) to get and set its initial value (equivalent to accessing the HTML element's text content).
 
 The `<textarea>` element also accepts several attributes common to form `<input>`s, such as `autocapitalize`, `autocomplete`, `autofocus`, `disabled`, `placeholder`, `readonly`, and `required`.
 
@@ -199,7 +201,7 @@ textarea {
 > [!NOTE]
 > Placeholders should only be used to show an example of the type of data that should be entered into a form; they are _not_ a substitute for a proper {{HTMLElement("label")}} element tied to the input. See [`<input>` labels](/en-US/docs/Web/HTML/Element/input#labels) for a full explanation.
 
-### Disabled and readonly textareas
+### Disabled and readonly text areas
 
 This example shows two `<textarea>`s — one is [`readonly`](/en-US/docs/Web/HTML/Attributes/readonly) and one is [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled).
 You cannot edit the contents of either element, but the `readonly` element is focusable and its value is submitted in forms.
@@ -224,7 +226,7 @@ textarea {
 
 #### Result
 
-{{EmbedLiveSample('disabled_and_readonly_textareas', '', '230')}}
+{{EmbedLiveSample('disabled_and_readonly_text_areas', '', '230')}}
 
 ## Technical summary
 
