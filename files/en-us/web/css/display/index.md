@@ -360,26 +360,29 @@ We have included {{cssxref("padding")}} and {{cssxref("background-color")}} on t
     <option>inline</option>
     <option>inline flow</option>
     <option>flow</option>
-    <option>block flow</option>
     <option>flow-root</option>
     <option>block flow-root</option>
-    <option>inline-block</option>
-    <option>inline flow-root</option>
     <option>table</option>
     <option>block table</option>
-    <option>inline-table</option>
-    <option>inline table</option>
     <option>flex</option>
     <option>block flex</option>
-    <option>inline-flex</option>
-    <option>inline flex</option>
     <option>grid</option>
     <option>block grid</option>
-    <option>inline-grid</option>
-    <option>inline grid</option>
     <option>list-item</option>
+    <option>block flow list-item</option>
+    <option>inline flow list-item</option>
+    <option>block flow-root list-item</option>
+    <option>inline flow-root list-item</option>
     <option>contents</option>
     <option>none</option>
+    <option>inline-block</option>
+    <option>inline flow-root</option>
+    <option>inline-table</option>
+    <option>inline table</option>
+    <option>inline-flex</option>
+    <option>inline flex</option>
+    <option>inline-grid</option>
+    <option>inline grid</option>
   </select>
 </div>
 ```
@@ -445,6 +448,7 @@ Note that some multi-keyword values are added for illustration which have the fo
 - `table` = `block table`
 - `flex` = `block flex`
 - `grid` = `block grid`
+- `list-item` = `block flow list-item`
 - `inline-block` = `inline flow-root`
 - `inline-table` = `inline table`
 - `inline-flex` = `inline flex`
