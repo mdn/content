@@ -27,7 +27,7 @@ setFromHex(string)
 An object containing the following properties:
 
 - `read`
-  - : The number of hex characters read from the input string. It is either the length of the input string (including padding), if the decoded data fits into the array, or a multiple of 2 up to the last 2-character chunk that fits into the array.
+  - : The number of hex characters read from the input string. It is either the length of the input string, if the decoded data fits into the array, or a multiple of 2 up to the last 2-character chunk that fits into the array.
 - `written`
   - : The number of bytes written to the `Uint8Array`. Will never be greater than this `Uint8Array`'s {{jsxref("TypedArray/byteLength", "byteLength")}}.
 
