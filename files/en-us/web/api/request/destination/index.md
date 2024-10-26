@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Request.destination
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`destination`** read-only
 property of the **{{domxref("Request")}}** interface returns a string

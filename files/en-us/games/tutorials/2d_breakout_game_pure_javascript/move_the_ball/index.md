@@ -15,7 +15,7 @@ You already know how to draw a ball from working through the previous article, s
 ## Defining a drawing loop
 
 To keep constantly updating the canvas drawing on each frame, we need to define a drawing function that will run over and over again, with a different set of variable values each time to change sprite positions, etc. You can run a function over and over again using a JavaScript timing function.
-Later on in the tutorial, we'll see how {{domxref("window.requestAnimationFrame()", "requestAnimationFrame()")}} helps with drawing, but we'll start with {{domxref("setInterval()")}} at first to create some looping logic.
+Later on in the tutorial, we'll see how {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} helps with drawing, but we'll start with {{domxref("Window.setInterval", "setInterval()")}} at first to create some looping logic.
 
 Delete all the JavaScript you currently have inside your HTML file except for the first two lines, and add the following below them. The `draw()` function will be executed within `setInterval` every 10 milliseconds:
 

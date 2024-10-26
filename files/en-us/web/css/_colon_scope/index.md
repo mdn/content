@@ -150,7 +150,7 @@ document.getElementById("results").textContent = Array.prototype.map
 
 #### Result
 
-The scope of `context` is the element with the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) of `context`. The selected elements are the `<div>` elements that are direct children of that context — `element-1` and `element-2` — but not their descendants.
+The scope of `context` is the element with the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of `context`. The selected elements are the `<div>` elements that are direct children of that context — `element-1` and `element-2` — but not their descendants.
 
 {{ EmbedLiveSample('Using :scope in JavaScript') }}
 

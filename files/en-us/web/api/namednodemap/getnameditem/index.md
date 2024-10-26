@@ -41,7 +41,7 @@ const pre = document.querySelector("pre");
 const attrMap = pre.attributes;
 const value = attrMap.getNamedItem("test").value;
 pre.textContent = `The 'test' attribute contains ${value}.
-And 'boum' has ${attrMap["boum"] ? "been" : "not been"} found.`;
+And 'foo' has ${attrMap["foo"] ? "been" : "not been"} found.`;
 ```
 
 {{EmbedLiveSample("Example", "100%", 80)}}

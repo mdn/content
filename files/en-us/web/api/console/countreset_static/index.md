@@ -13,8 +13,8 @@ The **`console.countReset()`** static method resets counter used with {{domxref(
 ## Syntax
 
 ```js-nolint
-countReset()
-countReset(label)
+console.countReset()
+console.countReset(label)
 ```
 
 ### Parameters

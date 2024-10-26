@@ -52,7 +52,7 @@ Using your favorite image editor, create 400px wide and 120px wide versions of:
 - `firefox-addons.jpg`
 - `mozilla-dinosaur-head.png`
 
-Call them something sensible, e.g. `firefoxlogo400.png` and `firefoxlogo120.png`.
+Call them something sensible, e.g. `firefox-logo400.png` and `firefox-logo120.png`.
 
 Along with `mdn.svg`, these images will be your icons to link to further resources, inside the `further-info` area. You'll also link to the Firefox logo in the site header. Save copies of all these inside the same directory as `index.html`.
 

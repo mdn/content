@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Performance.measure
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`measure()`** method creates a named {{domxref("PerformanceMeasure")}} object representing a time measurement between two marks in the browser's performance timeline.
 

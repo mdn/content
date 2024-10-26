@@ -153,7 +153,7 @@ One or more `<repeat-style>` values, separated by commas.
 You can specify a different `<repeat-style>` for each mask image, separated by commas:
 
 ```css
-.examplethree {
+.example-three {
   mask-image: url("mask1.png"), url("mask2.png");
   mask-repeat: repeat-x, repeat-y;
 }
