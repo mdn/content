@@ -347,10 +347,10 @@ The JavaScript code below defines several functions that make it easier to deal 
 /**
  * Determine whether a node's text content is entirely whitespace.
  *
- * @param nod  A node implementing the |CharacterData| interface (i.e.,
- *             a |Text|, |Comment|, or |CDATASection| node
- * @return     True if all of the text content of |nod| is whitespace,
- *             otherwise false.
+ * @param nod  A node implementing the `CharacterData` interface (i.e.,
+ *             a `Text`, `Comment`, or `CDATASection` node)
+ * @return     `true` if all of the text content of `nod` is whitespace,
+ *             otherwise `false`.
  */
 function isAllWs(nod) {
   return !/[^\t\n\r ]/.test(nod.textContent);
@@ -359,11 +359,11 @@ function isAllWs(nod) {
 /**
  * Determine if a node should be ignored by the iterator functions.
  *
- * @param nod  An object implementing the DOM1 |Node| interface.
- * @return     true if the node is:
- *                1) A |Text| node that is all whitespace
- *                2) A |Comment| node
- *             and otherwise false.
+ * @param nod  An object implementing the `Node` interface.
+ * @return     `true` if the node is:
+ *                1) A `Text` node that is all whitespace
+ *                2) A `Comment` node
+ *             and otherwise `false`.
  */
 function isIgnorable(nod) {
   return (
@@ -373,17 +373,16 @@ function isIgnorable(nod) {
 }
 
 /**
- * Version of |previousSibling| that skips nodes that are entirely
- * whitespace or comments. (Normally |previousSibling| is a property
+ * Version of `previousSibling` that skips nodes that are entirely
+ * whitespace or comments. (Normally `previousSibling` is a property
  * of all DOM nodes that gives the sibling node, the node that is
  * a child of the same parent, that occurs immediately before the
  * reference node.)
  *
  * @param sib  The reference node.
- * @return     Either:
- *               1) The closest previous sibling to |sib| that is not
- *                  ignorable according to |isIgnorable|, or
- *               2) null if no such node exists.
+ * @return     The closest previous sibling to `sib` that is not
+ *             ignorable according to `isIgnorable`, or `null` if
+ *             no such node exists.
  */
 function nodeBefore(sib) {
   while ((sib = sib.previousSibling)) {
@@ -395,14 +394,13 @@ function nodeBefore(sib) {
 }
 
 /**
- * Version of |nextSibling| that skips nodes that are entirely
+ * Version of `nextSibling` that skips nodes that are entirely
  * whitespace or comments.
  *
  * @param sib  The reference node.
- * @return     Either:
- *               1) The closest next sibling to |sib| that is not
- *                  ignorable according to |isIgnorable|, or
- *               2) null if no such node exists.
+ * @return     The closest next sibling to `sib` that is not
+ *             ignorable according to `isIgnorable`, or `null`
+ *             if no such node exists.
  */
 function nodeAfter(sib) {
   while ((sib = sib.nextSibling)) {
@@ -414,16 +412,15 @@ function nodeAfter(sib) {
 }
 
 /**
- * Version of |lastChild| that skips nodes that are entirely
- * whitespace or comments. (Normally |lastChild| is a property
+ * Version of `lastChild` that skips nodes that are entirely
+ * whitespace or comments. (Normally `lastChild` is a property
  * of all DOM nodes that gives the last of the nodes contained
  * directly in the reference node.)
  *
  * @param sib  The reference node.
- * @return     Either:
- *               1) The last child of |sib| that is not
- *                  ignorable according to |isIgnorable|, or
- *               2) null if no such node exists.
+ * @return     The last child of `sib` that is not ignorable
+ *             according to `isIgnorable`, or `null` if no
+ *             such node exists.
  */
 function lastChild(par) {
   let res = par.lastChild;
@@ -437,14 +434,13 @@ function lastChild(par) {
 }
 
 /**
- * Version of |firstChild| that skips nodes that are entirely
+ * Version of `firstChild` that skips nodes that are entirely
  * whitespace and comments.
  *
  * @param sib  The reference node.
- * @return     Either:
- *               1) The first child of |sib| that is not
- *                  ignorable according to |isIgnorable|, or
- *               2) null if no such node exists.
+ * @return     The first child of `sib` that is not ignorable
+ *             according to `isIgnorable`, or `null` if no
+ *             such node exists.
  */
 function firstChild(par) {
   let res = par.firstChild;
@@ -458,9 +454,9 @@ function firstChild(par) {
 }
 
 /**
- * Version of |data| that doesn't include whitespace at the beginning
+ * Version of `data` that doesn't include whitespace at the beginning
  * and end and normalizes all whitespace to a single space. (Normally
- * |data| is a property of text nodes that gives the text of the node.)
+ * `data` is a property of text nodes that gives the text of the node.)
  *
  * @param txt  The text node whose data should be returned
  * @return     A string giving the contents of the text node with
