@@ -352,7 +352,7 @@ The JavaScript code below defines several functions that make it easier to deal 
  * @return     True if all of the text content of |nod| is whitespace,
  *             otherwise false.
  */
-function is_all_ws(nod) {
+function isAllWs(nod) {
   return !/[^\t\n\r ]/.test(nod.textContent);
 }
 
@@ -365,11 +365,10 @@ function is_all_ws(nod) {
  *                2) A |Comment| node
  *             and otherwise false.
  */
-
-function is_ignorable(nod) {
+function isIgnorable(nod) {
   return (
-    nod.nodeType === 8 || // A comment node
-    (nod.nodeType === 3 && is_all_ws(nod))
+    nod.nodeType === 8 || // a comment node
+    (nod.nodeType === 3 && isAllWs(nod))
   ); // a text node, all ws
 }
 
@@ -383,12 +382,12 @@ function is_ignorable(nod) {
  * @param sib  The reference node.
  * @return     Either:
  *               1) The closest previous sibling to |sib| that is not
- *                  ignorable according to |is_ignorable|, or
+ *                  ignorable according to |isIgnorable|, or
  *               2) null if no such node exists.
  */
-function node_before(sib) {
+function nodeBefore(sib) {
   while ((sib = sib.previousSibling)) {
-    if (!is_ignorable(sib)) {
+    if (!isIgnorable(sib)) {
       return sib;
     }
   }
@@ -402,12 +401,12 @@ function node_before(sib) {
  * @param sib  The reference node.
  * @return     Either:
  *               1) The closest next sibling to |sib| that is not
- *                  ignorable according to |is_ignorable|, or
+ *                  ignorable according to |isIgnorable|, or
  *               2) null if no such node exists.
  */
-function node_after(sib) {
+function nodeAfter(sib) {
   while ((sib = sib.nextSibling)) {
-    if (!is_ignorable(sib)) {
+    if (!isIgnorable(sib)) {
       return sib;
     }
   }
@@ -423,13 +422,13 @@ function node_after(sib) {
  * @param sib  The reference node.
  * @return     Either:
  *               1) The last child of |sib| that is not
- *                  ignorable according to |is_ignorable|, or
+ *                  ignorable according to |isIgnorable|, or
  *               2) null if no such node exists.
  */
-function last_child(par) {
+function lastChild(par) {
   let res = par.lastChild;
   while (res) {
-    if (!is_ignorable(res)) {
+    if (!isIgnorable(res)) {
       return res;
     }
     res = res.previousSibling;
@@ -444,13 +443,13 @@ function last_child(par) {
  * @param sib  The reference node.
  * @return     Either:
  *               1) The first child of |sib| that is not
- *                  ignorable according to |is_ignorable|, or
+ *                  ignorable according to |isIgnorable|, or
  *               2) null if no such node exists.
  */
-function first_child(par) {
+function firstChild(par) {
   let res = par.firstChild;
   while (res) {
-    if (!is_ignorable(res)) {
+    if (!isIgnorable(res)) {
       return res;
     }
     res = res.nextSibling;
@@ -467,7 +466,7 @@ function first_child(par) {
  * @return     A string giving the contents of the text node with
  *             whitespace collapsed.
  */
-function data_of(txt) {
+function dataOf(txt) {
   let data = txt.textContent;
   data = data.replace(/[\t\n\r ]+/g, " ");
   if (data[0] === " ") {
@@ -485,12 +484,12 @@ function data_of(txt) {
 The following code demonstrates the use of the functions above. It iterates over the children of an element (whose children are all elements) to find the one whose text is `"This is the third paragraph"`, and then changes the class attribute and the contents of that paragraph.
 
 ```js
-let cur = first_child(document.getElementById("test"));
+let cur = firstChild(document.getElementById("test"));
 while (cur) {
-  if (data_of(cur.firstChild) === "This is the third paragraph.") {
+  if (dataOf(cur.firstChild) === "This is the third paragraph.") {
     cur.className = "magic";
     cur.firstChild.textContent = "This is the magic paragraph.";
   }
-  cur = node_after(cur);
+  cur = nodeAfter(cur);
 }
 ```
