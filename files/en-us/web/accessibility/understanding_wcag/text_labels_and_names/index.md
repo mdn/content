@@ -185,8 +185,8 @@ The form element can be placed inside the {{htmlelement("label")}}, in which cas
   <input type="checkbox" id="terms" name="terms" />
 </label>
 
-<input type="checkbox" id="emailoptin" name="optin" />
-<label for="emailoptin">Yes, please send me news about this product.</label>
+<input type="checkbox" id="email-opt-in" name="opt-in" />
+<label for="email-opt-in">Yes, please send me news about this product.</label>
 ```
 
 ## Form elements should have a visible text label
