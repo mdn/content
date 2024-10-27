@@ -74,6 +74,6 @@ Earlier we used the term "packets" to describe the format in which the data is t
 
 ## Credit
 
-Street photo: [Street composing](https://www.pinterest.com/pin/400538960580676851/), by [kevin digga](https://www.pinterest.com/kevindigga/).
+Street photo: [Street composing](https://www.pinterest.com/pin/400538960580676851/), by [Kevin Digga](https://www.pinterest.com/kevindigga/).
 
 {{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}

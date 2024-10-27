@@ -356,10 +356,10 @@ If you find yourself needing to embed plugin content, this is the kind of inform
 Let's look at an `<object>` example that embeds a PDF into a page (see the [live example](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html) and the [source code](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html)):
 
 ```html
-<object data="mypdf.pdf" type="application/pdf" width="800" height="1200">
+<object data="my-pdf.pdf" type="application/pdf" width="800" height="1200">
   <p>
     You don't have a PDF plugin, but you can
-    <a href="mypdf.pdf">download the PDF file. </a>
+    <a href="my-pdf.pdf">download the PDF file. </a>
   </p>
 </object>
 ```

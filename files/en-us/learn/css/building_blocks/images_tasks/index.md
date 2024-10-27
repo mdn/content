@@ -33,7 +33,7 @@ Try updating the live code below to recreate the finished example:
 
 In this task, you have a simple form. Your task is to make the following changes:
 
-- Use attribute selectors to target the search field and button inside `.myform`.
+- Use attribute selectors to target the search field and button inside `.my-form`.
 - Make the form field and button use the same text size as the rest of the form.
 - Give the form field and button 10 px of padding.
 - Give the button a background of `rebeccapurple`, white foreground, no border and rounded corners of 5px.

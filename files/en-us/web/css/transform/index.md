@@ -50,7 +50,7 @@ transform: skewY(1.07rad);
 
 /* Multiple function values */
 transform: translateX(10px) rotate(10deg) translateY(5px);
-transform: perspective(500px) translate(10px, 0, 20px) rotateY(3deg);
+transform: perspective(500px) translate3d(10px, 0, 20px) rotateY(30deg);
 
 /* Global values */
 transform: inherit;

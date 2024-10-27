@@ -19,8 +19,8 @@ In runtimes like {{glossary("Node.js", "Node")}} and {{glossary("Deno")}}, where
 ## Syntax
 
 ```js-nolint
-dir(object)
-dir(object, options)
+console.dir(object)
+console.dir(object, options)
 ```
 
 ### Parameters

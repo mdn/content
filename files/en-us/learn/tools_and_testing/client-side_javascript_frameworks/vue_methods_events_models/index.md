@@ -78,7 +78,7 @@ We now have an app that displays a list of to-do items. However, we can't update
 4. Let's load this component into our app. Go back to `App.vue` and add the following `import` statement just below the previous one, inside your `<script>` element:
 
    ```js
-   import ToDoForm from "./components/ToDoForm";
+   import ToDoForm from "./components/ToDoForm.vue";
    ```
 
 5. You also need to register the new component in your `App` component — update the `components` property of the component object so that it looks like this:

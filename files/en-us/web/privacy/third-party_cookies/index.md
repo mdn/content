@@ -49,7 +49,7 @@ The above use cases sound innocent enough. However, third-party cookies can also
 
 Following a link to a third-party or interacting with third-party content embedded in an `<iframe>` (for example, filling out a form or clicking a button) could result in cookies being set that put a user's information in the hands of someone they didn't expect. This information could be used to:
 
-- Chase users around the web with targetted ads whenever they search for information on a specific product.
+- Chase users around the web with targeted ads whenever they search for information on a specific product.
 - Target users with spam emails or phone calls.
 - Manipulate their behavior to choose certain options that increase affiliate revenue or manipulate statistics.
 

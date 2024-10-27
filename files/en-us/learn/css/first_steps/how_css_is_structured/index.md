@@ -184,8 +184,8 @@ Each CSS rule starts with a selector — or a list of selectors — in order to 
 ```css
 h1
 a:link
-.manythings
-#onething
+.many-things
+#one-thing
 *
 .box p
 .box p:first-child

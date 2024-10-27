@@ -60,7 +60,7 @@ page-type: firefox-release-notes
 
 - The `text` value of {{cssxref("background-clip")}} is now available in all type of Firefox (and not only non-release builds) ([Firefox bug 1263516](https://bugzil.la/1263516)).
 - The `absolute` value of {{cssxref("position")}} properties on the top layer element ([Firefox bug 1236828](https://bugzil.la/1236828)).
-- Added an internal-only syntax for {{domxref("@supports")}} to detect pref ([Firefox bug 1259889](https://bugzil.la/1259889)).
+- Added an internal-only syntax for {{cssxref("@supports")}} to detect pref ([Firefox bug 1259889](https://bugzil.la/1259889)).
 
 ### JavaScript
 
