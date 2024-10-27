@@ -292,7 +292,7 @@ function nthPrime(nth) {
   let maybePrime = 2n;
   let prime = 0n;
 
-  while (nth >= 0n) {
+  while (nth > 0n) {
     if (isPrime(maybePrime)) {
       nth--;
       prime = maybePrime;
