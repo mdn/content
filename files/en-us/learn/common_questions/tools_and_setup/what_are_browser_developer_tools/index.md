@@ -153,7 +153,7 @@ Find out more about the JavaScript debugger in different browsers:
 
 ## The JavaScript console
 
-The JavaScript console is an incredibly useful tool for debugging JavaScript that isn't working as expected. It allows you to run lines of JavaScript against the page currently loaded in the browser, and reports the errors encountered as the browser tries to execute your code. 
+The JavaScript console is an incredibly useful tool for debugging JavaScript that isn't working as expected. It allows you to run lines of JavaScript against the page currently loaded in the browser, and reports the errors encountered as the browser tries to execute your code.
 
 To access the console in any browser, open the developer tools and select the **Console** tab. This will give you a window like the following:
 
