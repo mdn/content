@@ -33,7 +33,7 @@ requiring a single line of JavaScript to import configurable components:
 no pre-processors, post-processors or JavaScript frameworks needed.
 
 ```js
-CSS.paintWorklet.addModule("csscomponent.js");
+CSS.paintWorklet.addModule("css-component.js");
 ```
 
 This added module contains {{domxref("PaintWorkletGlobalScope.registerPaint")}} functions,
@@ -56,7 +56,7 @@ In the following example the `paint()` function is passed a worklet called `myCo
 li {
   background-image: paint(myComponent, stroke, 10px);
   --highlights: blue;
-  --lowlights: green;
+  --theme: green;
 }
 ```
 

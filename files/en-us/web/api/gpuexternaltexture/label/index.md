@@ -30,9 +30,9 @@ const externalTexture = device.importExternalTexture({
   source: video,
 });
 
-externalTexture.label = "myExtTexture";
+externalTexture.label = "my_ext_texture";
 
-console.log(externalTexture.label); // "myExtTexture"
+console.log(externalTexture.label); // "my_ext_texture"
 ```
 
 Setting a label via the originating {{domxref("GPUDevice.importExternalTexture()")}} call, and then getting it via `GPUExternalTexture.label`:
@@ -42,10 +42,10 @@ Setting a label via the originating {{domxref("GPUDevice.importExternalTexture()
 
 const externalTexture = device.importExternalTexture({
   source: video,
-  label: "myExtTexture",
+  label: "my_ext_texture",
 });
 
-console.log(externalTexture.label); //  "myExtTexture"
+console.log(externalTexture.label); //  "my_ext_texture"
 ```
 
 ## Specifications
