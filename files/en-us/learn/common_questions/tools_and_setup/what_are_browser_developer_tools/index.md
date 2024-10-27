@@ -32,7 +32,7 @@ How do you pull it up? Three ways:
 
   - **Firefox:** Menu ![Firefox hamburger menu icon that has more options to customize and control Firefox.](2014-01-10-13-08-08-f52b8c.png) _➤ More tools ➤ Web Developer Tools_
   - **Chrome:** _More tools ➤ Developer tools_
-  - **Safari:** _Develop ➤ Show Web Inspector._ 
+  - **Safari:** _Develop ➤ Show Web Inspector._
   - **Opera**: _Developer ➤ Developer tools_
 
 - **_Context menu:_** Press-and-hold/right-click an item on a webpage (Ctrl-click on the Mac), and choose _Inspect Element_ from the context menu that appears. (_An added bonus:_ this method straight-away highlights the code of the element you right-clicked.)
