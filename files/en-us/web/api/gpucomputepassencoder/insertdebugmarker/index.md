@@ -35,7 +35,7 @@ None ({{jsxref("Undefined")}}).
 ```js
 // ...
 
-passEncoder.insertDebugMarker("my-marker");
+passEncoder.insertDebugMarker("my_marker");
 
 // ...
 ```

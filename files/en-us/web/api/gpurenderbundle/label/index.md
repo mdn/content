@@ -26,18 +26,18 @@ Setting and getting a label via `GPURenderBundle.label`:
 ```js
 const renderBundle = renderBundleEncoder.finish();
 
-renderBundle.label = "my-render-bundle";
-console.log(renderBundle.label); // "my-render-bundle"
+renderBundle.label = "my_render_bundle";
+console.log(renderBundle.label); // "my_render_bundle"
 ```
 
 Setting a label via the originating {{domxref("GPURenderBundleEncoder.finish()")}} call, and then getting it via `GPURenderBundle.label`:
 
 ```js
 const renderBundle = renderBundleEncoder.finish({
-  label: "my-render-bundle",
+  label: "my_render_bundle",
 });
 
-console.log(renderBundle.label); // "my-render-bundle"
+console.log(renderBundle.label); // "my_render_bundle"
 ```
 
 ## Specifications

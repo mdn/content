@@ -25,18 +25,18 @@ Setting and getting a label via `GPUCommandBuffer.label`:
 
 ```js
 const commandBuffer = commandEncoder.finish();
-commandBuffer.label = "my-command-buffer";
-console.log(commandBuffer.label); // "my-command-buffer";
+commandBuffer.label = "my_command_buffer";
+console.log(commandBuffer.label); // "my_command_buffer"
 ```
 
 Setting a label via the originating {{domxref("GPUCommandEncoder.finish()")}} call, and then getting it via `GPUCommandBuffer.label`:
 
 ```js
 const commandBuffer = commandEncoder.finish({
-  label: "my-command-buffer",
+  label: "my_command_buffer",
 });
 
-console.log(commandBuffer.label); // "my-command-buffer";
+console.log(commandBuffer.label); // "my_command_buffer"
 ```
 
 ## Specifications

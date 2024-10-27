@@ -30,9 +30,9 @@ const pipelineLayout = device.createPipelineLayout({
   bindGroupLayouts: [bindGroupLayout],
 });
 
-pipelineLayout.label = "my-pipeline-layout";
+pipelineLayout.label = "my_pipeline_layout";
 
-console.log(pipelineLayout.label); // "my-pipeline-layout";
+console.log(pipelineLayout.label); // "my_pipeline_layout"
 ```
 
 Setting a label via the originating {{domxref("GPUDevice.createPipelineLayout()")}} call, and then getting it via `GPUPipelineLayout.label`:
@@ -42,10 +42,10 @@ Setting a label via the originating {{domxref("GPUDevice.createPipelineLayout()"
 
 const pipelineLayout = device.createPipelineLayout({
   bindGroupLayouts: [bindGroupLayout],
-  label: "my-pipeline-layout",
+  label: "my_pipeline_layout",
 });
 
-console.log(pipelineLayout.label); // "my-pipeline-layout";
+console.log(pipelineLayout.label); // "my_pipeline_layout"
 ```
 
 ## Specifications

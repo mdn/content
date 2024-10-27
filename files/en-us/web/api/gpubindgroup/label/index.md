@@ -38,9 +38,9 @@ const bindGroup = device.createBindGroup({
   ],
 });
 
-bindGroup.label = "my-bind-group";
+bindGroup.label = "my_bind_group";
 
-console.log(bindGroup.label); // "my-bind-group";
+console.log(bindGroup.label); // "my_bind_group"
 ```
 
 Setting a label via the originating {{domxref("GPUDevice.createBindGroup()")}} call, and then getting it via `GPUBindGroup.label`:
@@ -58,10 +58,10 @@ const bindGroup = device.createBindGroup({
       },
     },
   ],
-  label: "my-bind-group",
+  label: "my_bind_group",
 });
 
-console.log(bindGroup.label); // "my-bind-group";
+console.log(bindGroup.label); // "my_bind_group"
 ```
 
 ## Specifications

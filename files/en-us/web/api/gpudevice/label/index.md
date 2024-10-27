@@ -34,7 +34,7 @@ async function init() {
   const device = await adapter.requestDevice();
 
   // Set a label
-  device.label = "my-label";
+  device.label = "my_label";
 
   // Get a label
   console.log(device.label);
