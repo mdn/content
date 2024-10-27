@@ -113,7 +113,7 @@ To get to the debugger:
 
 ### Exploring the debugger
 
-Each browser has a are  in the JavaScript Debugger with three panes. The layout of these panes is somewhat different depending on the browser you are using; this guide uses Firefox as a reference.
+Each browser's the JavaScript debugger is divided into three panes. The layout of these panes is somewhat different depending on the browser you are using; this guide uses Firefox as a reference.
 
 #### File list
 
