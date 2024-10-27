@@ -82,7 +82,7 @@ These features are especially handy:
 You'll notice a number of clickable tabs at the top of the CSS Viewer:
 
 - _Computed_: This shows the computed styles for the currently selected element (the final, normalized values that the browser applies).
-- _Layout_: This shows the details for CSS [grid](/en-US/docs/Web/CSS/CSS_grid_layout) and [flexbox](en-US/docs/Web/CSS/CSS_flexible_box_layout) layout modes if the element you are inspecting uses them.
+- _Layout_: This shows the details for CSS [grid](/en-US/docs/Web/CSS/CSS_grid_layout) and [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) layout modes if the element you are inspecting uses them.
 - _Fonts_: In Firefox and Safari, the _Fonts_ tab shows the fonts applied to the current element.
 
 The _box model_ view visually represents the current element's box model, so you can see at a glance what padding, border and margin is applied to it, and how big its content is. In Firefox, this is located in the _Layout_ tab, and in other browsers it is in the _Computed_ tab.
@@ -113,7 +113,7 @@ To get to the debugger:
 
 ### Exploring the debugger
 
-Each browser's the JavaScript debugger is divided into three panes. The layout of these panes is somewhat different depending on the browser you are using; this guide uses Firefox as a reference.
+Each browser's JavaScript debugger is divided into three panes. The layout of these is somewhat different depending on the browser you are using; this guide uses Firefox as a reference.
 
 #### File list
 
