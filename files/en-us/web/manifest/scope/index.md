@@ -7,8 +7,9 @@ browser-compat: html.manifest.scope
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
-The `scope` manifest member is used to specify the top-level URL path that contains your web application, determining which pages and subdirectories are part of the web app and where the manifest is applied.
-Web pages within the defined scope are presented distinctly so that users can recognize when they are navigating within the app.
+The `scope` manifest member is used to specify the top-level URL path that contains your web application's pages and subdirectories.
+When users install and use your web app, pages _within scope_ provide an app-like interface.
+When users navigate to pages outside the app's scope, they still experience the app-like interface, but browsers display UI elements like the URL bar to indicate the change in context.
 
 ## Syntax
 
@@ -36,9 +37,57 @@ Web pages within the defined scope are presented distinctly so that users can re
 
 ## Description
 
-The `scope` member defines the set of URLs that is considered part of your web app when the manifest is applied.
+The `scope` member defines the URLs that are part of your web app's installed experience. Browsers use `scope` to determine if a page is within your web app's {{Glossary("Application_context", "application context")}}.
 
-It enables deep linking into your web app from other applications. For example, if your hiking app's scope is `https://hikingapp.com/trails/`, a weather app can directly link to `https://hikingapp.com/trails/trailA/trail-conditions`. Note that deep linking is possible even without defining a scope, but defining it allows you to control pages that are considered part of your web app.
+### In-scope and out-of-scope behavior
+
+A URL is considered to be "within scope" if its path begins with the URL path defined in `scope`.
+For example, if the `scope` is set to `/app/`, then the URLs `/app/`, `/app/page.html`, and `/app/dashboard/index.html` are all considered within scope, while `/` or `/page.html` are not.
+
+When users browse your installed web app, they experience an app-like interface.
+For in-scope pages, browsers maintain the application context and preserve the app-like experience without browser controls.
+When users navigate to pages outside the app's scope, they still experience the app-like interface; however, in these pages, browsers display a prominent UI element like the URL bar.
+This helps users understand that they're viewing pages outside the app's defined scope.
+
+Consider a web app for exploring hiking trails with the following directory structure:
+
+```plain
+web-app/
+├── manifest.json
+├── trails/
+│   ├── index.html
+│   ├── trail-list.html
+│   ├── settings/
+│   │   └── index.html
+│   └── saratoga-gap-trail.html
+├── blog/
+│   └── index.html
+```
+
+With the scope set to `/trails/`:
+
+- When viewing pages and subdirectories under `/trails/` (like the `trail-list.html` and `/trails/settings/index.html`), users experience the app-like interface without the browser controls (image on the left).
+- When navigating to pages in subdirectories like `/blog/`, which are outside the scope of the app, the app-like interface remains but users see the website address and other browser controls (image on the right).
+
+| Page in scope                                                                             | Page out of scope                                                                                        |
+| ----------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| ![Trail listing page showing app-like interface without browser controls](trail-list.png) | ![Blog page showing website address and browser controls while maintaining app-like interface](blog.png) |
+
+> [!NOTE]
+> The `scope` member doesn't prevent users from navigating to app pages outside of the defined scope.
+> Off-scope navigations are not blocked by browsers and are not opened in a new top-level browsing context.
+
+### Scope's affect on deep-linked pages
+
+Other applications can deep link directly to specific pages of your web app.
+The `scope` member affects how these deep-linked pages are displayed, but it is not required for deep linking to work.
+
+Consider the previous example of the web app for exploring hiking trails, where the `scope` set to `/trails/`:
+
+- If a link to `https://trailnav.app/trails/saratoga-gap-trail.html` is shared on social media, users with the Trail Navigator app installed will view this page in the app's interface without browser controls.
+- If a link to `https://trailnav.app/blog/trail-safety.html` is shared, these users will view the blog page in the app-like interface but with the website address and browser controls visible, since it's outside the app's defined scope.
+
+This behavior helps users understand whether they're viewing pages within or outside the app's scope, even when accessing the app pages through external links.
 
 ### Fallback scope behavior
 
@@ -63,21 +112,6 @@ For example, if the `scope` is set as `/prefix`, it will match URLs starting wit
 
 For this reason, it's recommended to define a scope ending with a `/`.
 Setting the `scope` as `/prefix/` ensures it will match only the pages within the `/prefix/` directory, preventing unintended matches.
-
-### In-scope and out-of-scope behavior
-
-A URL is considered to be "within scope" if its path begins with the URL path defined in `scope`.
-For example, if the `scope` is set to `/app/`, then the URLs `/app/`, `/app/page.html`, and `/app/dashboard/index.html` are all considered within scope, while `/` or `/page.html` are not.
-
-When a user navigates to a URL, browsers use the scope to determine if the resource is within your web app's {{Glossary("Application_context", "application context")}}. For in-scope pages, browsers maintain the application context and preserve the app-like experience. They may present these pages differently to indicate to users that they are navigating within the application.
-
-When a user navigates to a web page that is not within the scope of your web app's application context, browsers may display a prominent UI element, which clearly shows the URL or at least its origin, including whether it is served over a secure connection.
-This UI element will be different from what users see when navigating within the app's scope.
-This behavior aims to make users aware that they have navigated away from your web app.
-
-> [!NOTE]
-> The existence of a `scope` doesn't prevent users from navigating to URLs outside of the defined scope while the manifest is applied.
-> Off-scope navigations are not blocked by browsers and are not opened in a new top-level browsing context.
 
 ## Examples
 
@@ -113,7 +147,7 @@ If you have a website with multiple sections, but you want your web app to focus
 }
 ```
 
-With this setup, pages like `https://hikingapp.com/store/products` are part of your web app, but `https://hikingapp.com/company/` is out of your web app's scope. For off-scope URLs, browsers may display different UI elements to let users know they've navigated away from the app.
+With this setup, pages like `https://hikingapp.com/store/products` are part of your web app, but `https://hikingapp.com/company/` is out of your web app's scope. For off-scope URLs, browsers may display different UI elements to let users know they've navigated away from the app's scope.
 
 ## Specifications
 
@@ -122,3 +156,8 @@ With this setup, pages like `https://hikingapp.com/store/products` are part of y
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [`start_url`](/en-US/docs/Web/Manifest/start_url) manifest member
+- {{Glossary("Application_context", "Application context")}}
