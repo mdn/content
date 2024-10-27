@@ -49,6 +49,10 @@ For in-scope pages, browsers maintain the application context and preserve the a
 When users navigate to pages outside the app's scope, they still experience the app-like interface; however, in these pages, browsers display a prominent UI element like the URL bar.
 This helps users understand that they're viewing pages outside the app's defined scope.
 
+> [!NOTE]
+> The `scope` member doesn't prevent users from navigating to app pages outside of the defined scope.
+> Off-scope navigations are not blocked by browsers and are not opened in a new top-level browsing context.
+
 Consider a web app for exploring hiking trails with the following directory structure:
 
 ```plain
@@ -72,10 +76,6 @@ With the scope set to `/trails/`:
 | Page in scope                                                                             | Page out of scope                                                                                        |
 | ----------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
 | ![Trail listing page showing app-like interface without browser controls](trail-list.png) | ![Blog page showing website address and browser controls while maintaining app-like interface](blog.png) |
-
-> [!NOTE]
-> The `scope` member doesn't prevent users from navigating to app pages outside of the defined scope.
-> Off-scope navigations are not blocked by browsers and are not opened in a new top-level browsing context.
 
 ### Scope's affect on deep-linked pages
 
