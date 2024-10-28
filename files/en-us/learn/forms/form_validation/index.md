@@ -70,11 +70,11 @@ There are three main reasons:
 There are two different types of client-side validation that you'll encounter on the web:
 
 - **HTML form validation**
-  Using HTML form attributes to define which form controls are required and the format user entered data must conform to to be valid.
+  HTML form attributes can define which form controls are required and which format the user-entered data must be in to be valid.
 - **JavaScript form validation**
   JavaScript is generally included to enhance or customize HTML form validation.
 
-Client side validation can be accomplished with little to no JavaScript. HTML validation is faster than JavaScript, but is less customizable than JavaScript validation. It is generally recommended to begin your forms using robust HTML features, then enhance the user experience with JavaScript as needed. .
+Client side validation can be accomplished with little to no JavaScript. HTML validation is faster than JavaScript, but is less customizable than JavaScript validation. It is generally recommended to begin your forms using robust HTML features, then enhance the user experience with JavaScript as needed.
 
 ## Using built-in form validation
 
@@ -98,7 +98,7 @@ When an element is valid, the following things are true:
 When an element is invalid, the following things are true:
 
 - The element matches the {{cssxref(":invalid")}} CSS pseudo-class. If the user has interacted with the control, it also matches the {{cssxref(":user-invalid")}} CSS pseudo-class. Other UI pseudo-classes may also match, such as {{cssxref(":out-of-range")}}, depending on the error. These let you apply a specific style to invalid elements.
-- If the user tries to send the data, the browser will block the form and display an error message. The error message will differ depending on the type of error. The [Constraint Validation API](#the_constraint_validation_api) is described below.
+- If the user tries to send the data, the browser will block the form submission and display an error message. The error message will differ depending on the type of error. The [Constraint Validation API](#the_constraint_validation_api) is described below.
 
 ## Built-in form validation examples
 
@@ -141,7 +141,7 @@ While empty, the input will also be considered invalid, matching the {{cssxref('
 If any radio button in a same-named group has the `required` attribute, one of the radio buttons in that group must be checked for the group to be valid; the checked radio doesn't have to be the one with the attribute set.
 
 > [!NOTE]
-> Only require users to input data you actually need: For example, why do you really need to know someone's gender or title?
+> Only require users to input data you need: For example, is it really necessary to know someone's gender or title?
 
 Add a `required` attribute to your input, as shown below.
 
@@ -153,7 +153,7 @@ Add a `required` attribute to your input, as shown below.
 </form>
 ```
 
-We added `(required)` to the {{htmlelement("label")}} to inform the user that the {{htmlelement("input")}} is required. Indicating to the user when form fields are required is not only good user experience, it is required by WCAG [accessibility](/en-US/docs/Learn/Accessibility) guidelines.
+We added "(required)" to the {{htmlelement("label")}} to inform the user that the {{htmlelement("input")}} is required. Indicating to the user when form fields are required is not only good user experience, it is required by WCAG [accessibility](/en-US/docs/Learn/Accessibility) guidelines.
 
 We include CSS styles that are applied based on whether the element is required, valid, and invalid:
 
