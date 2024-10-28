@@ -109,5 +109,5 @@ try {
 
 ## See also
 
-- [Polyfill of `Intl.supportedValuesOf` in FormatJS](https://github.com/formatjs/formatjs/tree/main/packages/intl-enumerator)
+- [Polyfill of `Intl.supportedValuesOf` in FormatJS](https://formatjs.github.io/docs/polyfills/intl-supportedvaluesof/)
 - {{jsxref("Intl")}}

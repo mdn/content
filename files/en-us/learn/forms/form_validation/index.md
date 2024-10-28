@@ -494,6 +494,49 @@ You can try it out below:
 
 You can find this example live on GitHub as [custom-error-message.html](https://mdn.github.io/learning-area/html/forms/form-validation/custom-error-message.html), along with the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/custom-error-message.html).
 
+#### Extending built-in form validation
+
+The previous example showed how you can add a customized message for a particular type of error (`validity.typeMismatch`).
+It is also possible to use all of the built in form validation, and then add to it using `setCustomValidity()`.
+
+Here we demonstrate how you can extend the built in [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email) validation to only accept addresses with the `@example.com` domain.
+We start with the HTML {{htmlelement("form")}} below.
+
+```html
+<form>
+  <label for="mail">Email address (@example.com only):</label>
+  <input type="email" id="mail" />
+  <button>Submit</button>
+</form>
+```
+
+The validation code is shown below.
+In the event of any new input the code first resets the custom validity message by calling `setCustomValidity("")`.
+It then uses `email.validity.valid` to check if the entered address is invalid and if so, returns from the event handler.
+This ensures that all the normal built-in validation checks are run while the entered text is not a valid email address.
+
+Once the email address is valid, the code adds a custom constraint, calling `setCustomValidity()` with an error message if the address does not end with `@example.com`.
+
+```js
+const email = document.getElementById("mail");
+
+email.addEventListener("input", (event) => {
+  // Validate with the built-in constraints
+  email.setCustomValidity("");
+  if (!email.validity.valid) {
+    return;
+  }
+
+  // Extend with a custom constraints
+  if (!email.value.endsWith("@example.com")) {
+    email.setCustomValidity("Please enter an email address of @example.com");
+  }
+});
+```
+
+You can try this example in the page at the {{LiveSampleLink('Extending_built-in_form_validation', 'Live sample demo link')}}.
+Try submitting an invalid email address, a valid email address that doesn't end in `@example.com`, and one that does end in `@example.com`.
+
 #### A more detailed example
 
 Now that we've seen a really basic example, let's see how we can use this API to build some slightly more complex custom validation.

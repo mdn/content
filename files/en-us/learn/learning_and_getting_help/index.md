@@ -277,5 +277,5 @@ You could also try attending full-fledged web conferences. While these can be ex
 ## See also
 
 - [Coursera: Learning to learn](https://www.coursera.org/learn/learning-how-to-learn)
-- [Freecodecamp](https://www.freecodecamp.org/)
+- [freeCodeCamp](https://www.freecodecamp.org/)
 - [Codecademy](https://www.codecademy.com/)

@@ -77,7 +77,7 @@ Now click on the play arrow in the top right corner of the scene to launch and r
 
 This looks great! Let's add more shapes to the scene to make it look more interesting.
 
-![PlayCanvas Editor - Boxrender](playcanvas-editor-boxrender.png)
+![PlayCanvas Editor - Box render](playcanvas-editor-boxrender.png)
 
 ## Adding more shapes
 
@@ -97,7 +97,7 @@ Now follow the same steps as we did before when coloring the cube:
 
 ![PlayCanvas Editor - Cylinder material](playcanvas-editor-cylindermaterial.png)
 
-Follow the same approach again to add a cone to the scene, giving it a grayish color (we used EAEFF2.) You should now have three shapes on your scene, something like the below screenshot.
+Follow the same approach again to add a cone to the scene, giving it a grayish color (we used `#EAEFF2`.) You should now have three shapes on your scene, something like the below screenshot.
 
 ![PlayCanvas Editor - Cone](playcanvas-editor-cone.png)
 

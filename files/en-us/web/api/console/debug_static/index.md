@@ -13,10 +13,10 @@ The **`console.debug()`** static method outputs a message to the console at the 
 ## Syntax
 
 ```js-nolint
-debug(val1)
-debug(val1, /* …, */ valN)
-debug(msg)
-debug(msg, subst1, /* …, */ substN)
+console.debug(val1)
+console.debug(val1, /* …, */ valN)
+console.debug(msg)
+console.debug(msg, subst1, /* …, */ substN)
 ```
 
 ### Parameters
