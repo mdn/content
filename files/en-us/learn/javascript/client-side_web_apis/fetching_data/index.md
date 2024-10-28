@@ -197,6 +197,8 @@ However, a complete website would handle this error more gracefully by displayin
 
 You can test the failure case yourself:
 
+<!-- cSpell:ignore produc -->
+
 1. Make a local copy of the example files.
 2. Run the code through a web server (as described above, in [Serving your example from a server](#serving_your_example_from_a_server)).
 3. Modify the path to the file being fetched, to something like 'produc.json' (make sure it is misspelled).

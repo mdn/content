@@ -9,7 +9,7 @@ browser-compat: http.headers.NEL
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-The HTTP **`NEL`** response header is used to configure network request logging.
+The HTTP **`NEL`** {{Glossary("response header")}} is used to configure network request logging.
 
 <table class="properties">
   <tbody>
@@ -19,7 +19,7 @@ The HTTP **`NEL`** response header is used to configure network request logging.
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>

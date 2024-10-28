@@ -13,7 +13,7 @@ The **`console.groupEnd()`** static method exits the current inline group in the
 ## Syntax
 
 ```js-nolint
-groupEnd()
+console.groupEnd()
 ```
 
 ### Parameters

@@ -20,21 +20,13 @@ A string.
 ## Examples
 
 ```js
-async function init() {
-  if (!navigator.gpu) {
-    throw Error("WebGPU not supported.");
-  }
-
-  const adapter = await navigator.gpu.requestAdapter();
-  if (!adapter) {
-    throw Error("Couldn't request WebGPU adapter.");
-  }
-
-  const adapterInfo = await adapter.requestAdapterInfo();
-  console.log(adapterInfo.device);
-
-  // ...
+const adapter = await navigator.gpu.requestAdapter();
+if (!adapter) {
+  throw Error("Couldn't request WebGPU adapter.");
 }
+
+const adapterInfo = adapter.info;
+console.log(adapterInfo.device);
 ```
 
 ## Specifications
