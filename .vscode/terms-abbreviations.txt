@@ -12,6 +12,8 @@ cdylib
 CEST
 CIELAB
 cjpeg
+closewatcher
+commandfor
 Condei
 Damme
 Datagram
