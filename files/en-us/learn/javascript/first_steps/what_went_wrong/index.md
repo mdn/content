@@ -96,13 +96,13 @@ Earlier on in the course we got you to type some simple JavaScript commands into
    > [!NOTE]
    > This error didn't come up as soon as the page was loaded because this error occurred inside a function (inside the `checkGuess() { }` block). As you'll learn in more detail in our later [functions article](/en-US/docs/Learn/JavaScript/Building_blocks/Functions), code inside functions runs in a separate scope than code outside functions. In this case, the code was not run and the error was not thrown until the `checkGuess()` function was run by line 83.
 
-4. The line number given in the error is 80. Have a look at line 80, and you'll see the following code:
+4. The line number given in the error is 75. Have a look at line 75, and you'll see the following code:
 
    ```js
    lowOrHi.textContent = "Last guess was too high!";
    ```
 
-5. This line is trying to set the `textContent` property of the `lowOrHi` variable to a text string, but it's not working because `lowOrHi` does not contain what it's supposed to. Let's see why this is — try searching for other instances of `lowOrHi` in the code. The earliest instance you'll find is on line 49:
+5. This line is trying to set the `textContent` property of the `lowOrHi` variable to a text string, but it's not working because `lowOrHi` does not contain what it's supposed to. Let's see why this is — try searching for other instances of `lowOrHi` in the code. The earliest instance you'll find is on line 47:
 
    ```js
    const lowOrHi = document.querySelector("lowOrHi");
@@ -114,17 +114,17 @@ Earlier on in the course we got you to type some simple JavaScript commands into
    console.log(lowOrHi);
    ```
 
-   This code will print the value of `lowOrHi` to the console after we tried to set it in line 49. See {{domxref("console/log_static", "console.log()")}} for more information.
+   This code will print the value of `lowOrHi` to the console after we tried to set it in line 47. See {{domxref("console/log_static", "console.log()")}} for more information.
 
-7. Save and refresh, and you should now see the `console.log()` result in your console. ![Screenshot of the same demo. One log statement is visible in the console, reading simply "null".](console-log-output.png) Sure enough, `lowOrHi`'s value is `null` at this point, and this matches up with the Firefox error message `lowOrHi is null`. So there is definitely a problem with line 49. The [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) value means "nothing", or "no value". So our code to set `lowOrHi` to an element is going wrong.
+7. Save and refresh, and you should now see the `console.log()` result in your console. ![Screenshot of the same demo. One log statement is visible in the console, reading simply "null".](console-log-output.png) Sure enough, `lowOrHi`'s value is `null` at this point, and this matches up with the Firefox error message `lowOrHi is null`. So there is definitely a problem with line 47. The [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) value means "nothing", or "no value". So our code to set `lowOrHi` to an element is going wrong.
 
-8. Let's think about what the problem could be. Line 49 is using a [`document.querySelector()`](/en-US/docs/Web/API/Document/querySelector) method to get a reference to an element by selecting it with a CSS selector. Looking further up our file, we can find the paragraph in question:
+8. Let's think about what the problem could be. Line 47 is using a [`document.querySelector()`](/en-US/docs/Web/API/Document/querySelector) method to get a reference to an element by selecting it with a CSS selector. Looking further up our file, we can find the paragraph in question:
 
    ```html
    <p class="lowOrHi"></p>
    ```
 
-9. So we need a class selector here, which begins with a dot (`.`), but the selector being passed into the `querySelector()` method in line 49 has no dot. This could be the problem! Try changing `lowOrHi` to `.lowOrHi` in line 49.
+9. So we need a class selector here, which begins with a dot (`.`), but the selector being passed into the `querySelector()` method in line 47 has no dot. This could be the problem! Try changing `lowOrHi` to `.lowOrHi` in line 47.
 10. Try saving and refreshing again, and your `console.log()` statement should return the `<p>` element we want. Phew! Another error fixed! You can delete your `console.log()` line now, or keep it to reference later on — your choice.
 
 > [!NOTE]
@@ -133,8 +133,8 @@ Earlier on in the course we got you to type some simple JavaScript commands into
 ### Syntax errors round three
 
 1. Now if you try playing the game through again, you should get more success — the game should play through absolutely fine, until you end the game, either by guessing the right number, or by running out of guesses.
-2. At that point, the game fails again, and the same error is spat out that we got at the beginning — "TypeError: resetButton.addeventListener is not a function"! However, this time it's listed as coming from line 94.
-3. Looking at line number 94, it is easy to see that we've made the same mistake here. We again just need to change `addeventListener` to `addEventListener`. Do this now.
+2. At that point, the game fails again, and the same error is spat out that we got at the beginning — "TypeError: resetButton.addeventListener is not a function"! However, this time it's listed as coming from line 91.
+3. Looking at line number 91, it is easy to see that we've made the same mistake here. We again just need to change `addeventListener` to `addEventListener`. Do this now.
 
 ## A logic error
 
@@ -142,13 +142,13 @@ At this point, the game should play through fine, however after playing through 
 
 There's definitely a problem in the game logic somewhere — the game is not returning an error; it just isn't playing right.
 
-1. Search for the `randomNumber` variable, and the lines where the random number is first set. The instance that stores the random number that we want to guess at the start of the game should be around line number 45:
+1. Search for the `randomNumber` variable, and the lines where the random number is first set. The instance that stores the random number that we want to guess at the start of the game should be around line number 43:
 
    ```js
    let randomNumber = Math.floor(Math.random()) + 1;
    ```
 
-2. And the one that generates the random number before each subsequent game is around line 113:
+2. And the one that generates the random number before each subsequent game is around line 110:
 
    ```js
    randomNumber = Math.floor(Math.random()) + 1;
