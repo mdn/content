@@ -69,7 +69,7 @@ This starts by specifying the precision of the `float` type, as required. Then w
 The HTML consists solely of the {{HTMLElement("canvas")}} that we'll obtain a WebGL context on.
 
 ```html
-<canvas id="glcanvas" width="600" height="460">
+<canvas id="gl-canvas" width="600" height="460">
   Oh no! Your browser doesn't support canvas!
 </canvas>
 ```
@@ -118,7 +118,7 @@ Initializing the program is handled through a {{domxref("Window/load_event", "lo
 window.addEventListener("load", startup, false);
 
 function startup() {
-  glCanvas = document.getElementById("glcanvas");
+  glCanvas = document.getElementById("gl-canvas");
   gl = glCanvas.getContext("webgl");
 
   const shaderSet = [
