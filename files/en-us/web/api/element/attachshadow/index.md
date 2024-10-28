@@ -161,7 +161,7 @@ class WordCount extends HTMLParagraphElement {
 
     // Update count when element content changes
     this.parentNode.addEventListener("input", () => {
-      text.textContent = "Words: " + countWords(wcParent);
+      text.textContent = `Words: ${countWords(wcParent)}`;
     });
   }
 }
