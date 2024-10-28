@@ -51,4 +51,4 @@ jobs:
             ${{ env.OUTPUT }}
 
             > [!TIP]
-            > If the word is actually valid, consider adding it to one of the dictionaries under `.vscode/dictionaries`.
+            > If the word is actually valid or it is required to be ignored, consider adding it to one of the dictionaries under [`.vscode/dictionaries`](https://github.com/mdn/content/tree/main/.vscode/dictionaries).
