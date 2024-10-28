@@ -15,7 +15,7 @@ You can get the outgoing available bitrate from {{domxref("RTCIceCandidatePairSt
 
 ## Value
 
-A number which approximates the amount of available bandwidth for incoming data on the network connection described by the `RTCIceCandidatePair`.
+A number value which approximates the amount of available bandwidth for incoming data on the network connection described by the `RTCIceCandidatePair`.
 The value is reported in bits per second and is computed over a 1-second interval.
 
 The value returned is calculated by adding up the available bit rate for every {{Glossary("RTP")}} stream using the connection described by this candidate pair.
