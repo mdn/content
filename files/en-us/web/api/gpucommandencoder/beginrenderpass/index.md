@@ -46,7 +46,7 @@ beginRenderPass(descriptor)
         - `querySet`: The {{domxref("GPUQuerySet")}} that the timestamp will be written to.
 
         > [!NOTE]
-        > To use timestamp queries, the `timestamp-query` {{domxref("GPUSupportedFeatures", "feature", "", "nocode")}} must be enabled in the {{domxref("GPUDevice")}}.
+        > The `timestamp-query` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) needs to be enabled to use timestamp queries.
 
 ### Color attachment object structure
 

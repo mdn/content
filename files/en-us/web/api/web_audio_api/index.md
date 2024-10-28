@@ -190,15 +190,13 @@ It is possible to process/render an audio graph very quickly in the background â
 
 ## Examples
 
-You can find a number of examples at our [webaudio-example repo](https://github.com/mdn/webaudio-examples/) on GitHub.
+You can find a number of examples at our [webaudio-examples repo](https://github.com/mdn/webaudio-examples/) on GitHub.
 
 ## Specifications
 
 {{Specifications}}
 
 ## Browser compatibility
-
-### AudioContext
 
 {{Compat}}
 

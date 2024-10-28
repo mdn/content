@@ -82,7 +82,7 @@ In addition to adding the `<track>` elements, we have also added a new button to
 
 ```html
 <div id="video-controls" class="controls" data-state="hidden">
-  <button id="playpause" type="button" data-state="play">Play/Pause</button>
+  <button id="play-pause" type="button" data-state="play">Play/Pause</button>
   <button id="stop" type="button" data-state="stop">Stop</button>
   <div class="progress">
     <progress id="progress" value="0" min="0">
@@ -90,8 +90,8 @@ In addition to adding the `<track>` elements, we have also added a new button to
     </progress>
   </div>
   <button id="mute" type="button" data-state="mute">Mute/Unmute</button>
-  <button id="volinc" type="button" data-state="volup">Vol+</button>
-  <button id="voldec" type="button" data-state="voldown">Vol-</button>
+  <button id="vol-inc" type="button" data-state="vol-up">Vol+</button>
+  <button id="vol-dec" type="button" data-state="vol-down">Vol-</button>
   <button id="fs" type="button" data-state="go-fullscreen">Fullscreen</button>
   <button id="subtitles" type="button" data-state="subtitles">CC</button>
 </div>

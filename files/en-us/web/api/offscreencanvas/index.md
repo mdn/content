@@ -32,7 +32,7 @@ Rendering operations can also be run inside a [worker](/en-US/docs/Web/API/Web_W
 ## Instance methods
 
 - {{domxref("OffscreenCanvas.getContext()")}}
-  - : Returns a rendering context for the offscreen canvas.
+  - : Returns a drawing context for the offscreen canvas, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if the context identifier is not supported, or the offscreen canvas has already been set to a different context mode.
 - {{domxref("OffscreenCanvas.convertToBlob()")}}
   - : Creates a {{domxref("Blob")}} object representing the image contained in the canvas.
 - {{domxref("OffscreenCanvas.transferToImageBitmap()")}}

@@ -91,6 +91,7 @@ addevent
 addeventlistener
 addgamepad
 Addis
+addpipe
 addressbar
 addsourcebuffer
 addstream
@@ -239,6 +240,7 @@ APPCOMMAND
 appcontent
 Appelquist
 appinstalled
+Appium
 applicationcache
 appname
 appshell
@@ -2009,6 +2011,7 @@ hexdigit
 Hextris
 Heydings
 Heydon
+heydonworks
 HHMM
 Hickson's
 Hidde
@@ -3654,6 +3657,7 @@ Picryl
 Picturefill
 PIDOM
 pilcrow
+pillarboxed
 pinetools
 Pingback
 pingbacks
@@ -3856,6 +3860,7 @@ protan
 protanomaly
 PROTO
 Proxied
+proxified
 proxify
 proxyfied
 proxyhandler

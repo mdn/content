@@ -7,34 +7,22 @@ browser-compat: http.headers.Location
 
 {{HTTPSidebar}}
 
-The **`Location`** response header indicates the URL to
-redirect a page to. It only provides a meaning when served with a
-`3xx` (redirection) or `201` (created) status response.
+The HTTP **`Location`** {{Glossary("response header")}} indicates the URL to redirect a page to.
+It only provides a meaning when served with a `3XX` [redirection response](/en-US/docs/Web/HTTP/Status#redirection_messages) or a {{HTTPStatus("201", "201 Created")}} status response.
 
-In cases of redirection, the HTTP method used to make the new request to fetch the page
-pointed to by `Location` depends on the original method and the kind of
-redirection:
+In redirections, the HTTP method used to make the redirected request to fetch the page pointed to by `Location` depends on the original method and the kind of redirection:
 
-- {{HTTPStatus("303")}} (See Other) responses always lead to the use of a
-  {{HTTPMethod("GET")}} method.
-- {{HTTPStatus("307")}} (Temporary Redirect) and
-  {{HTTPStatus("308")}} (Permanent Redirect) don't change the method used in the
-  original request.
-- {{HTTPStatus("301")}} (Moved Permanently) and {{HTTPStatus("302")}} (Found) don't
-  change the method most of the time, though older user-agents may (so you basically
-  don't know).
+- {{HTTPStatus("303", "303 See Other")}} responses always result in a {{HTTPMethod("GET")}} request in the redirection.
+- {{HTTPStatus("307", "307 Temporary Redirect")}} and {{HTTPStatus("308", "308 Permanent Redirect")}} use the same method as the initiating request.
+- {{HTTPStatus("301", "301 Moved Permanently")}} and {{HTTPStatus("302", "302 Found")}} should use the same request method as the initiating request, although this is not guaranteed for older user-agents.
 
-All responses with one of these status codes send a `Location` header.
+All responses with one of the above status codes include a `Location` header.
 
-In cases of resource creation, it indicates the URL to the newly created resource.
+In cases of resource creation, it indicates the URL of the newly-created resource so that a client can make a request for it immediately.
 
 `Location` and {{HTTPHeader("Content-Location")}} are different.
-`Location` indicates the target of a redirection or the URL of a newly
-created resource. {{HTTPHeader("Content-Location")}} indicates the direct URL to
-use to access the resource when [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) happened,
-without the need of further content negotiation. `Location` is a header
-associated with the response, while {{HTTPHeader("Content-Location")}} is associated
-with the entity returned.
+`Content-Location` indicates the URL to use to directly access the resource in future when [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) occurred.
+`Location` is associated with the response, while {{HTTPHeader("Content-Location")}} is associated with the representation that was returned.
 
 <table class="properties">
   <tbody>
@@ -44,7 +32,7 @@ with the entity returned.
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -57,8 +45,8 @@ Location: <url>
 
 ## Directives
 
-- \<url>
-  - : A relative (to the request URL) or absolute URL.
+- `<url>`
+  - : May be relative to the request URL or an absolute URL.
 
 ## Examples
 
@@ -77,6 +65,4 @@ Location: /index.html
 ## See also
 
 - {{HTTPHeader("Content-Location")}}
-- Status of responses including a `Location` header: {{HTTPStatus("201")}},
-  {{HTTPStatus("301")}}, {{HTTPStatus("302")}}, {{HTTPStatus("303")}},
-  {{HTTPStatus("307")}}, {{HTTPStatus("308")}}.
+- Status responses including a `Location` header: {{HTTPStatus("201")}}, {{HTTPStatus("301")}}, {{HTTPStatus("302")}}, {{HTTPStatus("303")}}, {{HTTPStatus("307")}}, {{HTTPStatus("308")}}.

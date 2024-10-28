@@ -1248,46 +1248,6 @@ This includes: `SVGPathSegList`, [SVGPathElement.getPathSegAtLength()](/en-US/do
   </tbody>
 </table>
 
-### Regular expression (?ims-ims:...) modifiers
-
-The [(?ims-ims:...)](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Modifier) regular expression modifiers allow you to make changes to only take effect in a specific part of a regex pattern.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>131</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>-</td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>-</td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>-</td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>javascript.options.experimental.regexp_modifiers</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ## APIs
 
 ### Cookie Store API
@@ -1377,11 +1337,12 @@ This enables a fetch request to function as an alternative to {{domxref("Navigat
   </tbody>
 </table>
 
-### Graphics: Canvas, WebGL, and WebGPU
+### CloseWatcher Interface
 
-#### Request video frame callbacks
-
-The {{domxref('HTMLVideoElement/requestVideoFrameCallback','requestVideoFrameCallback()')}} method of the {{domxref('HTMLVideoElement')}} interface registers a callback function that runs when a new video frame is sent to the compositor. Developers can use this to perform operations on each video frame, enabling more efficient painting to a canvas, video analysis, synchronization with external audio sources, and so on. The method returns a callback handle that can be passed to {{domxref('HTMLVideoElement.cancelVideoFrameCallback()')}} in order to cancel the outstanding callback request. ([Firefox bug 1800882](https://bugzil.la/1800882)).
+Built-in web components with "open" and "close" semantics, such as modal dialogs and popovers, can be closed using device-native mechanisms.
+For example, on Android you can close a dialog using the back button.
+The {{domxref("CloseWatcher")}} interface allows developers to implement UI components, such as custom sidebars, that can similarly be closed using native mechanisms.
+([Firefox bug 1888729](https://bugzil.la/1888729)).
 
 <table>
   <thead>
@@ -1394,30 +1355,32 @@ The {{domxref('HTMLVideoElement/requestVideoFrameCallback','requestVideoFrameCal
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>130</td>
-      <td>Yes</td>
+      <td>132</td>
+      <td>No</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>130</td>
-      <td>No</td>
+      <td>132</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>130</td>
-      <td>No</td>
+      <td>132</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Release</th>
-      <td>130</td>
+      <td>132</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2"><code>media.rvfc.enabled</code></td>
+      <td colspan="2"><code>dom.closewatcher.enabled</code></td>
     </tr>
   </tbody>
 </table>
+
+### Graphics: Canvas, WebGL, and WebGPU
 
 #### Hit regions
 

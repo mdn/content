@@ -15,8 +15,8 @@ See [Timers](/en-US/docs/Web/API/console#timers) in the {{domxref("console")}} d
 ## Syntax
 
 ```js-nolint
-time()
-time(label)
+console.time()
+console.time(label)
 ```
 
 ### Parameters
