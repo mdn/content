@@ -52,23 +52,18 @@ At this point, let's consult the developer console to see if it reports any synt
 
 Earlier on in the course we got you to type some simple JavaScript commands into the [developer tools JavaScript console](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) (if you can't remember how to open this in your browser, follow the previous link to find out how). What's even more useful is that the console gives you error messages whenever a syntax error exists inside the JavaScript being fed into the browser's JavaScript engine. Now let's go hunting.
 
-1. Go to the tab that you've got `number-game-errors.html` open in, and open your JavaScript console. You should see an error message along the following lines: !["Number guessing game" demo page in Firefox. One error is visible in the JavaScript console: "X TypeError: guessSubmit.addeventListener is not a function [Learn More] (number-game-errors.html:86:3)".](not-a-function.png)
+1. Go to the tab that you've got `number-game-errors.html` open in, and open your JavaScript console. You should see an error message along the following lines: !["Number guessing game" demo page in Firefox. One error is visible in the JavaScript console: "X TypeError: guessSubmit.addeventListener is not a function [Learn More] (number-game-errors.html:83:19)".](not-a-function.png)
 2. The first line of the error message is:
 
    ```plain
    Uncaught TypeError: guessSubmit.addeventListener is not a function
-   number-game-errors.html:86:15
+   number-game-errors.html:83:19
    ```
 
    - The first part, `Uncaught TypeError: guessSubmit.addeventListener is not a function`, is telling us something about what went wrong.
-   - The second part, `number-game-errors.html:86:15`, is telling us where in the code the error came from: line 86, character 15 of the file "number-game-errors.html".
+   - The second part, `number-game-errors.html:83:19`, is telling us where in the code the error came from: line 83, character 19 of the file "number-game-errors.html".
 
-3. If we look at line 86 in our code editor, we'll find this line:
-
-   > [!WARNING]
-   > Error message may not be on line 86.
-   >
-   > If you are using any code editor with an extension that launches a live server on your local machine, this will cause extra code to be injected. Because of this, the developer tools will list the error as occurring on a line that is not 86.
+3. If we look at line 83 in our code editor, we'll find this line:
 
    ```js
    guessSubmit.addeventListener("click", checkGuess);
@@ -99,7 +94,7 @@ Earlier on in the course we got you to type some simple JavaScript commands into
    It's the same error, but different browsers describe it in a different way.
 
    > [!NOTE]
-   > This error didn't come up as soon as the page was loaded because this error occurred inside a function (inside the `checkGuess() { }` block). As you'll learn in more detail in our later [functions article](/en-US/docs/Learn/JavaScript/Building_blocks/Functions), code inside functions runs in a separate scope than code outside functions. In this case, the code was not run and the error was not thrown until the `checkGuess()` function was run by line 86.
+   > This error didn't come up as soon as the page was loaded because this error occurred inside a function (inside the `checkGuess() { }` block). As you'll learn in more detail in our later [functions article](/en-US/docs/Learn/JavaScript/Building_blocks/Functions), code inside functions runs in a separate scope than code outside functions. In this case, the code was not run and the error was not thrown until the `checkGuess()` function was run by line 83.
 
 4. The line number given in the error is 80. Have a look at line 80, and you'll see the following code:
 
