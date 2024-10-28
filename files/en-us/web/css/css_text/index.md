@@ -21,7 +21,7 @@ The **CSS text** module defines how to perform text manipulation, like line brea
 - {{cssxref("hyphens")}}
 - {{cssxref("letter-spacing")}}
 - {{cssxref("line-break")}}
-- {{cssxref("overflow-wrap")}} (and the {{cssxref("word-wrap")}} alias)
+- {{cssxref("overflow-wrap")}} (and the `word-wrap` alias)
 - {{cssxref("tab-size")}}
 - {{cssxref("text-align")}}
 - {{cssxref("text-align-last")}}
