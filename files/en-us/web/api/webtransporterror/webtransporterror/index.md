@@ -30,7 +30,7 @@ new WebTransportError(init)
 A developer would not use this constructor manually. A new `WebTransportError` object is constructed when an error related to WebTransport occurs, for example a server error or network connection problem.
 
 ```js
-const url = "notaurl";
+const url = "not-a-url";
 
 async function initTransport(url) {
   try {

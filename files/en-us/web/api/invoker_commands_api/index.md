@@ -73,13 +73,13 @@ Historically creating these kinds of controls has required JavaScript event list
 ### Creating custom commands
 
 ```html
-<button commandfor="myimg" command="--rotate-left">Rotate left</button>
-<button commandfor="myimg" command="--rotate-right">Rotate right</button>
-<img id="myimg" src="photo.jpg" alt="[add appropriate alt text here]" />
+<button commandfor="my-img" command="--rotate-left">Rotate left</button>
+<button commandfor="my-img" command="--rotate-right">Rotate right</button>
+<img id="my-img" src="photo.jpg" alt="[add appropriate alt text here]" />
 ```
 
 ```js
-const myImg = document.getElementById("myimg");
+const myImg = document.getElementById("my-img");
 
 myImg.addEventListener("command", (event) => {
   if (event.command == "--rotate-left") {
