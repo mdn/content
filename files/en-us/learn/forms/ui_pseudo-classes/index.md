@@ -357,8 +357,8 @@ Let's have a look at an example that does just this. First of all, the HTML is a
       <input id="address1" name="address1" type="text" required />
     </div>
     <div>
-      <label for="pcode1">Zip/postal code: </label>
-      <input id="pcode1" name="pcode1" type="text" required />
+      <label for="zip-code1">Zip/postal code: </label>
+      <input id="zip-code1" name="zip-code1" type="text" required />
     </div>
   </fieldset>
   <fieldset id="billing">
@@ -378,10 +378,10 @@ Let's have a look at an example that does just this. First of all, the HTML is a
       <input id="address2" name="address2" type="text" disabled required />
     </div>
     <div>
-      <label for="pcode2" class="billing-label disabled-label">
+      <label for="zip-code2" class="billing-label disabled-label">
         Zip/postal code:
       </label>
-      <input id="pcode2" name="pcode2" type="text" disabled required />
+      <input id="zip-code2" name="zip-code2" type="text" disabled required />
     </div>
   </fieldset>
 
