@@ -7,7 +7,10 @@ browser-compat: api.CSSNestedDeclarations
 
 {{APIRef("CSSOM")}}
 
-The **`CSSNestedDeclarations`** interface of the [CSS Rule API](/en-US/docs/Web/API/CSSRule) allows the nesting of `CSSRules` within each other. This was added to the [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) to fix an issue where nested rules could be parsed by the browser in the wrong order.
+The **`CSSNestedDeclarations`** interface of the [CSS Rule API](/en-US/docs/Web/API/CSSRule) allows the nesting of `CSSRules` within each other.
+
+> [!NOTE]
+> [Browser versions](#browser_compatibility) that implementations that do not support this interface may parse nested rules in the wrong order.
 
 {{InheritanceDiagram}}
 
