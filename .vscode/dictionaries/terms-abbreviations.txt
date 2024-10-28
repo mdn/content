@@ -23,10 +23,10 @@ antialiasing
 antitracking
 APNG
 appcontent
-arccosh
+arcosh
 arcseconds
-arcsinh
-arctanh
+arsinh
+artanh
 ASCAP
 ascendingly
 ASCIIID
@@ -70,6 +70,7 @@ bitstream
 bitstreams
 blackbox
 blackboxing
+blendable
 blitting
 blockable
 blockified
@@ -460,6 +461,7 @@ phishable
 phonebook
 phonorecord
 phonorecords
+pillarboxed
 pingback
 pingbacks
 pingpong
@@ -582,6 +584,7 @@ scopable
 screencast
 screenful
 scriptable
+scrollers
 scrollport
 SECAM
 secp256r1
@@ -712,6 +715,7 @@ syncbase
 tablists
 tabstrip
 tada
+Tanuki
 targetable
 taskbars
 taskboard

@@ -599,6 +599,7 @@ Wirfs
 wisedog
 Wolenetz
 Wrox
+XAMPP
 Xiluodu
 Xiowan
 XITS

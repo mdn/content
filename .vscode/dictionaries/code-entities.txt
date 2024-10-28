@@ -59,6 +59,7 @@ apachectl
 appcache
 APPCOMMAND_MEDIA_PREVIOUSTRACK
 appinstalled
+appium_logs_url
 appshell
 appversion
 appworld
@@ -128,6 +129,7 @@ color-colrv0
 color-colrv1
 color-sbix
 colorMaskiOES
+commandfor
 compositionend
 compositionstart
 compositionupdate
@@ -183,6 +185,7 @@ dischargingtimechange
 docbook
 documentboundary
 dom.abortablepromise
+dom.closewatcher
 dom.element.customstateset
 dom.input.dirpicker
 dom.keyboardevent
@@ -345,6 +348,7 @@ KEYCODE_HEADSETHOOK
 KEYCODE_SYSRQ
 keyids
 keyint_min
+keyschange
 keywordsearch
 khmr
 KIND_NONHEAP
@@ -509,6 +513,8 @@ onpointerrawupdate
 onrtctransform
 onscreenschange
 onscrollend
+onscrollsnapchange
+onscrollsnapchanging
 onsinkchange
 ontextformatupdate
 ontextupdate
@@ -617,6 +623,8 @@ scalethumbstart
 scalethumbtick
 screenschange
 scrollend
+scrollsnapchange
+scrollsnapchanging
 scts
 sdcard
 sdch
@@ -704,6 +712,7 @@ transferringdata
 treecol
 TYPE_IMAGESET
 UBORed
+ufloat
 uidb64
 ulaw
 ulpfec
