@@ -275,7 +275,8 @@ To include the styles directly in the component decorator, use the `styles` prop
 })
 ```
 
-Typically, a component uses styles in a separate file using the `styleUrl` property:
+Typically, a component uses styles in a separate file.
+You can use the `styleUrl` property with the path to the CSS file as a string or `styleUrls` with an array of strings if there are multiple CSS stylesheets you want to include:
 
 ```js
 @Component({
@@ -293,7 +294,6 @@ It's recommended to [make components standalone](https://angular.dev/guide/compo
 This tutorial uses [standalone components](https://angular.dev/guide/components/importing#standalone-components) which are easier to start with.
 
 It's common to import [`CommonModule`](https://angular.dev/api/common/CommonModule) so that your component can make use of common [directives](https://angular.dev/guide/directives) and [pipes](https://angular.dev/guide/pipes).
-This tutorial makes use of `@for` and `@if`, so we can make sure they're available like so:
 
 ```js
 import { Component } from "@angular/core";
