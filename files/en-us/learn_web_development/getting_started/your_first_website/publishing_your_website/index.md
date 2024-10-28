@@ -4,9 +4,34 @@ slug: Learn_web_development/Getting_started/Your_first_website/Publishing_your_w
 page-type: tutorial-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}
+<!-- {{LearnSidebar}} -->
 
-Once you finish writing the code and organizing the files that make up your website, you need to put it all online so people can find it. This article explains how to get your simple sample code online with little effort.
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Web_standards", "Learn_web_development/Getting_started/Your_first_website")}}
+
+Once you finish writing the code and organizing the files that make up your website, you need to put it all online so people can find it. This article explains how to get your sample website online with little effort.
+
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        Basic familiarity with your computer operating system, the basic software you will use to build a website, and file systems.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Learning outcomes:</th>
+      <td>
+        <ul>
+          <li>The basic tools and concepts involved in publishing a website — hosting, domains, FTP programs.</li>
+          <li>What alternative hosting options are available, for example, Google App Engine, GitHub, and CodePen.</li>
+          <li>Publishing a website using GitHub Pages.</li>
+          <li>Hosting, how to purchase it, and how to put a website online.</li>
+          <li>TLDs and how to register a domain.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## What are the options?
 
@@ -81,4 +106,4 @@ To learn more, see [GitHub Pages Help](https://docs.github.com/en/pages/getting-
 - [How much does it cost to do something on the web?](/en-US/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)
 - [Deploy a Website](https://www.codecademy.com/learn/deploy-a-website): A nice tutorial from Codecademy that goes a bit further and shows some additional techniques.
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Web_standards", "Learn_web_development/Getting_started/Your_first_website")}}

@@ -1,12 +1,35 @@
 ---
-title: CSS basics
-slug: Learn_web_development/Getting_started/Your_first_website/CSS_basics
+title: Styling the content
+slug: Learn_web_development/Getting_started/Your_first_website/Styling_the_content
 page-type: tutorial-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
+<!-- {{LearnSidebar}} -->
 
-CSS (Cascading Style Sheets) is the code that styles web content. _CSS basics_ walks through what you need to get started. We'll answer questions like: How do I make text red? How do I make content display at a certain location in the (webpage) layout? How do I decorate my webpage with background images and colors?
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Your_first_website")}}
+
+CSS (Cascading Style Sheets) is the code that styles web content. _Styling the content_ walks through what you need to get started. We'll answer questions like: How do I make text red? How do I make content display at a certain location in the (webpage) layout? How do I decorate my webpage with background images and colors?
+
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        Basic familiarity with your computer operating system, the basic software you will use to build a website, and file systems.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Learning outcomes:</th>
+      <td>
+        <ul>
+          <li>The purpose and function of CSS.</li>
+          <li>The basic parts of CSS syntax — rulesets, selectors, declarations, properties, property values.</li>
+          <li>Common CSS functionality including box model, changing colors and fonts, and positioning HTML elements.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## What is CSS?
 
@@ -18,11 +41,15 @@ p {
 }
 ```
 
-Let's try it out! Using a text editor, paste the three lines of CSS (above) into a new file. Save the file as `style.css` in a directory named `styles`.
+Let's try it out!
 
-To make the code work, we still need to apply this CSS (above) to your HTML document. Otherwise, the styling won't change the appearance of the HTML. (If you haven't been following our project, pause here to read [Dealing with files](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files) and [HTML basics](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/HTML_basics).)
+1. Inside your `first-website` folder, create another new folder called `styles`.
+2. Using a text editor, paste the three lines of CSS shown above into a new file.
+3. Save the file inside your `styles` folder with a filename of `style.css`.
 
-1. Open your `index.html` file. Paste the following line in the head (between the {{HTMLElement("head")}} and `</head>` tags):
+To make the code work, we still need to apply this CSS (above) to your HTML document. Otherwise, the styling won't change the appearance of the HTML.
+
+1. Open your `index.html` file. Paste the following line inside the HTML head (between the {{HTMLElement("head")}} and `</head>` tags):
 
    ```html
    <link href="styles/style.css" rel="stylesheet" />
@@ -34,7 +61,7 @@ To make the code work, we still need to apply this CSS (above) to your HTML docu
 
 If your paragraph text is red, congratulations! Your CSS is working.
 
-### Anatomy of a CSS ruleset
+## Anatomy of a CSS ruleset
 
 Let's dissect the CSS code for red paragraph text to understand how it works:
 
@@ -47,7 +74,7 @@ The whole structure is called a **ruleset**. (The term _ruleset_ is often referr
 - Declaration
   - : This is a single rule like `color: red;`. It specifies which of the element's **properties** you want to style.
 - Properties
-  - : These are ways in which you can style an HTML element. (In this example, `color` is a property of the {{htmlelement("p")}} elements.) In CSS, you choose which properties you want to affect in the rule.
+  - : These are features of an HTML element that you can change the values of, to make it styled differently. (In this example, `color` is a property of the {{htmlelement("p")}} elements.) In CSS, you choose which properties you want to affect in the rule.
 - Property value
   - : To the right of the property—after the colon—there is the **property value**. This chooses one out of many possible appearances for a given property. (For example, there are many `color` values in addition to `red`.)
 
@@ -194,7 +221,7 @@ Adjust the `px` values as you like. Your work-in-progress should look similar to
 
 ## CSS: all about boxes
 
-Something you'll notice about writing CSS: a lot of it is about boxes. This includes setting size, color, and position. Most HTML elements on your page can be thought of as boxes sitting on top of other boxes.
+Something you'll notice about CSS as you use it more: a lot of it is about boxes. This includes setting size, color, and position. Most HTML elements on your page can be thought of as boxes sitting on top of other boxes.
 
 ![A big stack of boxes or crates sat on top of one another](boxes.jpg)
 
@@ -240,7 +267,7 @@ body {
 }
 ```
 
-There are several declarations for the {{htmlelement("body")}} element. Let's go through these line-by-line:
+The above code sets new values for several properties of the {{htmlelement("body")}} element. Let's go through these line-by-line:
 
 - `width: 600px;` This forces the body to always be 600 pixels wide.
 - `margin: 0 auto;` When you set two values on a property like `margin` or `padding`, the first value affects the element's top _and_ bottom side (setting it to `0` in this case); the second value affects the left _and_ right side. (Here, `auto` is a special value that divides the available horizontal space evenly between left and right). You can also use one, two, three, or four values, as documented in [Margin Syntax](/en-US/docs/Web/CSS/margin#syntax).
@@ -280,18 +307,18 @@ Try experimenting with different values to see how it changes the appearance.
 img {
   display: block;
   margin: 0 auto;
+  max-width: 100%;
 }
 ```
 
-Next, we center the image to make it look better. We could use the `margin: 0 auto` trick again as we did for the body. But there are differences that require an additional setting to make the CSS work.
+Next, we center the image to make it look better. We could use the same `margin: 0 auto` trick as we did for the body. But there are differences that require an additional setting to make the CSS work.
 
-The {{htmlelement("body")}} is a **block** element, meaning it takes up space on the page. The margin applied to a block element will be respected by other elements on the page. In contrast, images are **inline** elements, for the auto margin trick to work on this image, we must give it block-level behavior using `display: block;`.
+The {{htmlelement("body")}} is a **block** element, meaning it takes up space on the page. The margin applied to a block element will be respected by other elements on the page. In contrast, images are **inline** elements; for the auto margin trick to work on this image, we must give it block-level behavior using `display: block;`.
+
+Finally, we include `max-width: 100%;` to make sure that, if the image is larger than the `width` set on the body (600 pixels), it will be displayed at this width, and no biger.
 
 > [!NOTE]
-> The instructions above assume that you're using an image smaller than the width set on the body. (600 pixels) If your image is larger, it will overflow the body, spilling into the rest of the page. To fix this, you can either: 1) reduce the image width using a [graphics editor](https://en.wikipedia.org/wiki/Raster_graphics_editor), or 2) use CSS to size the image by setting the {{cssxref("width")}} property on the `<img>` element with a smaller value.
-
-> [!NOTE]
-> Don't be too concerned if you don't completely understand `display: block;` or the differences between a block element and an inline element. It will make more sense as you continue your study of CSS. You can find more information about different display values on MDN's [display reference page](/en-US/docs/Web/CSS/display).
+> Don't be too concerned if you don't completely understand `display: block;` and the differences between a block element and an inline element, or `max-width: 100%;`. They will make more sense as you continue your study of CSS. You can find more information about these propeties on MDN's {{cssxref("display")}} and {{cssxref("max-width")}} reference pages.
 
 ## Conclusion
 
@@ -301,6 +328,6 @@ If you followed all the instructions in this article, you should have a page tha
 
 (You can [view our version here](https://mdn.github.io/beginner-html-site-styled/).) If you get stuck, you can always compare your work with our [finished example code on GitHub](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css).
 
-In this exercise, we have just scratched the surface of CSS. To go further, see [Learning to style HTML using CSS](/en-US/docs/Learn/CSS).
+In this exercise, we have just scratched the surface of CSS. Our [Core modules](/en-US/docs/Learn_web_development/Core) will cover it in a lot more detail.
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Your_first_website")}}

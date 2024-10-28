@@ -24,24 +24,21 @@ If this is not the case, we'd suggest that you run through the [Environment setu
 
   - : Before you start writing the code for your website, you should plan it first. What information are you showcasing? What fonts and colors are you using? Here we'll outline a simple method that you can follow to plan out your site's content and design.
 
-- [HTML basics](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/HTML_basics)
+- [Creating the content](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)
 
-  - : HyperText Markup Language (HTML) is the code that you use to structure your web content and give it meaning and purpose. For example, is my content a set of paragraphs or a list of bullet points? Do I have images inserted on my page? Do I have a data table? Without overwhelming you, this article will provide enough information to make you familiar with HTML.
+  - : HTML (**H**yper**T**ext **M**arkup **L**anguage) is the code that is used to structure a web page and its content. For example, content could be structured within a set of paragraphs, a list of bulleted points, or using images and data tables. This article provides a basic understanding of HTML and its functions, and shows you how to create the basic content for your first website.
 
-- [CSS basics](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/CSS_basics)
+- [Styling the content](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content)
 
-  - : Cascading Style Sheets (CSS) is the code that you use to style your website. For example, do you want the text to be black or red? Where should content be drawn on the screen? What background images and colors should be used to decorate your website? In this article, we'll take you through what you need to get started.
+  - : CSS (Cascading Style Sheets) is the code that styles web content. _Styling the content_ walks through what you need to get started. We'll answer questions like: How do I make text red? How do I make content display at a certain location in the (webpage) layout? How do I decorate my webpage with background images and colors?
 
-- [JavaScript basics](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/JavaScript_basics)
+- [Adding interactivity](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity)
 
-  - : JavaScript is the programming language that you use to add interactive features to your website. Some examples could be games, things that happen when buttons are pressed or data is entered in forms, dynamic styling effects, animation, and much more. In this article, we'll give you an idea of what is possible with this exciting language, and how to get started.
+  - : JavaScript is a programming language that adds interactivity to websites. This happens in games, in the behavior of responses when buttons are pressed or with data entry on forms, with dynamic styling, with animation, etc. This article helps you get started with JavaScript and furthers your understanding of what is possible.
 
-- [Publishing your sample code](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
+- [Publishing your webaite](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
 
-  - : Once you have finished writing the code and organizing the files that make up your website, you need to put it all online so people can find it. This article describes how to get your simple sample code online with minimum effort.
-
-- [How the web works](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/How_the_Web_works)
-  - : When you access your favorite website, a lot of complicated things happen in the background that you may not know about. Here we will outline what happens when you view a webpage on your computer.
+  - : Once you finish writing the code and organizing the files that make up your website, you need to put it all online so people can find it. This article explains how to get your sample website online with little effort.
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Command_line", "Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started")}}
 

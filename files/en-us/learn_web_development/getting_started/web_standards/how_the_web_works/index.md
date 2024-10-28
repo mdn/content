@@ -1,14 +1,40 @@
 ---
 title: How the web works
-slug: Learn_web_development/Getting_started/Your_first_website/How_the_Web_works
+slug: Learn_web_development/Getting_started/Web_standards/How_the_web_works
 page-type: tutorial-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
+<!-- {{LearnSidebar}} -->
+
+{{NextMenu("Learn_web_development/Getting_started/Web_standards/The_Web_standards_model", "Learn_web_development/Getting_started/Web_standards")}}
 
 _How the web works_ provides a simplified view of what happens when you view a webpage in a web browser on your computer or phone.
 
 This theory is not essential to writing web code in the short term, but before long you'll really start to benefit from understanding what's happening in the background.
+
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        Basic familiarity with your computer operating system, web browsers, and web technologies.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Learning outcomes:</th>
+      <td>
+        <ul>
+          <li>Clients and servers and their roles in the web.</li>
+          <li>DNS and how it works at a high level.</li>
+          <li>TCP/IP, HTTP, and packets.</li>
+          <li>HTTP syntax at a basic level.</li>
+          <li>Common HTTP response codes (e.g. 200, 301, 403, 404, and 500).</li>
+          <li>Components of a URL (protocol, domain, and subdomain).</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Clients and servers
 
@@ -76,4 +102,4 @@ Earlier we used the term "packets" to describe the format in which the data is t
 
 Street photo: [Street composing](https://www.pinterest.com/pin/400538960580676851/), by [Kevin Digga](https://www.pinterest.com/kevindigga/).
 
-{{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
+{{NextMenu("Learn_web_development/Getting_started/Web_standards/The_web_standards_model", "Learn_web_development/Getting_started/Web_standards")}}

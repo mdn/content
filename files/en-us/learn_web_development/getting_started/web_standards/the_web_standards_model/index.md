@@ -1,12 +1,37 @@
 ---
-title: The web and web standards
-slug: Learn_web_development/Getting_started/Your_first_website/The_web_and_web_standards
+title: The web standards model
+slug: Learn_web_development/Getting_started/Web_standards/The_web_standards_model
 page-type: tutorial-chapter
 ---
 
-{{learnsidebar}}
+<!-- {{LearnSidebar}} -->
 
-This article provides some useful background on the Web — how it came about, what web standard technologies are, how they work together, why "web developer" is a great career to choose, and what kinds of best practices you'll learn about through the course.
+{{PreviousMenuNext("Learn_web_development/Getting_started/Web_standards/How_the_web_works", "Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites", "Learn_web_development/Getting_started/Web_standards")}}
+
+This article provides some useful background on the web and web standards — how they came about, what web standard technologies are, and how they work together.
+
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>
+        Basic familiarity with your computer operating system, web browsers, and web technologies.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Learning outcomes:</th>
+      <td>
+        <ul>
+          <li>How standards bodies operate — for example the <a href="https://www.w3.org/">W3C</a>, <a href="https://whatwg.org/">WHATWG</a>, <a href="https://tc39.es/">TC39</a>, and <a href="https://www.khronos.org/">Khronos Group</a>; the process of standards creation.</li>
+          <li>The lifecycle of web standards features.</li>
+          <li>The key principles web standards are built on.</li>
+          <li>The main web standards technologies, and how they work together.</li>
+          <li>Web best practices.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Brief history of the web
 
@@ -32,6 +57,17 @@ For example, the [HTML Living Standard](https://html.spec.whatwg.org/multipage/)
 
 Web standards are created by standards bodies — institutions that invite groups of people from different technology companies to come together and agree on how the technologies should work in the best way to fulfill all of their use cases. The W3C is the best known web standards body, but there are others such as the [WHATWG](https://whatwg.org/) (who maintain the living standards for the HTML language), [ECMA](https://ecma-international.org/) (who publish the standard for ECMAScript, which JavaScript is based on), [Khronos](https://www.khronos.org/) (who publish technologies for 3D graphics, such as WebGL), and others.
 
+### Web standards key principles
+
+The basic principles of the web:
+
+- Open to contribute and use.
+- Not patent-encumbered or controlled by a single private entity.
+- Accessible and interoperable.
+- They don't break the web.
+
+This basis means that the web is a unique and exciting industry to get involved in.
+
 ### "Open" standards
 
 One of the key aspects of web standards, which TimBL and the W3C agreed on from the start, is that the web (and web technologies) should be free to both contribute and use, and not encumbered by patents/licensing. Therefore anyone can write the code to build a website for free, and anyone can contribute to the standards creation process, where the specs are written.
@@ -44,74 +80,82 @@ This allows the web to remain a freely-available public resource.
 
 Another phrase you'll hear around open web standards is "don't break the web" — the idea is that any new web technology that is introduced should be backwards compatible with what went before it (i.e. old websites will still continue to work), and forwards compatible (future technologies in turn will be compatible with what we currently have). As you go through the learning material presented here, you'll start to learn how this is made possible with some very clever design and implementation work.
 
-## Being a web developer is good
+## Standards bodies
 
-The web industry is a very attractive market to enter if you are looking for a job. Recent published figures say that there are currently around 19 million web developers in the world, and that figure is set more than double in the next decade. And at the same time, there is a skill shortage in the industry — so what better time to learn web development?
+[W3C](https://www.w3.org/), [WHATWG](https://whatwg.org/), [TC39](https://tc39.es/), and [Khronos Group](https://www.khronos.org/)
 
-It isn't all fun and games however — building websites is a more complicated proposition than it used to be, and you'll have to put some time in to studying all the different technologies you need to use, all the techniques and best practices you need to know, and all the typical patterns you'll be called upon to implement. It'll take you a few months to really start to get into it, and then you'll need to keep learning so that your knowledge stays up-to-date with all the new tools and features that appear on the web platform, and keep practicing and refining your craft.
+The full W3C standards process is deep and academic. For now, you should understand how different individuals and companies get involved in the standards process.
 
-_The only constant is change._
+xxx
 
-Does this sound hard? Don't worry — we aim to give you everything you need to know to get started, and things will get easier. Once you embrace the constant change and uncertainty of the web, you'll start to enjoy yourself. As a part of the web community, you'll have an entire web of contacts and useful material to help you, and you'll start to enjoy the creative possibilities it brings.
+## The web standards lifecycle
 
-You're a digital creative now. Enjoy the experience, and the potential for earning a living.
+The different maturity stages are designed to weed out issues (e.g. interoperability issues, patent issues).
+
+xxx
 
 ## Overview of modern web technologies
 
-There are a number of technologies to learn if you want to be a front-end web developer. In this section we will describe them briefly. For a more detailed explanation of how some of them work together, read our article [How the web works](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/How_the_Web_works).
-
-### Browsers
-
-You are probably reading these words inside a web browser in this very moment (unless you've printed it out, or are using assistive technology, such as a screen reader to read it out to you). Web browsers are the software programs people use to consume the web, and include [Firefox](https://www.mozilla.org/en-US/firefox/), [Chrome](https://www.google.com/chrome/), [Opera](https://www.opera.com/), [Safari](https://www.apple.com/safari/), and [Edge](https://www.microsoft.com/en-us/edge).
-
-### HTTP
-
-Hypertext Transfer Protocol, or [HTTP](/en-US/docs/Web/HTTP), is a messaging protocol that allows web browsers to communicate with web servers (where websites are stored). A typical conversation goes something like
-
-```plain
-"Hello web server. Can you give me the files I need to render bbc.co.uk"?
-
-"Sure thing web browser — here you go"
-
-[Downloads files and renders web page]
-```
-
-The actual syntax for HTTP messages (called requests and responses) is not that human-readable, but this gives you the basic idea.
+There are a number of technologies to learn if you want to be a front-end web developer. In this section we will describe them briefly.
 
 ### HTML, CSS, and JavaScript
 
-[HTML](/en-US/docs/Web/HTML), [CSS](/en-US/docs/Web/CSS), and [JavaScript](/en-US/docs/Web/JavaScript) are the main three technologies you'll use to build a website:
+[HTML](/en-US/docs/Web/HTML), [CSS](/en-US/docs/Web/CSS), and [JavaScript](/en-US/docs/Web/JavaScript) are the main three technologies you'll use to build a website.
 
-- HyperText Markup Language, or **HTML**, is a markup language consisting of different elements you can wrap (mark up) content in to give it meaning (semantics) and structure. Simple HTML looks like this:
+- HTML is for structure and semantics (meaning).
+- CSS is for styling and layout.
+- JavaScript is for controlling dynamic behavior.
 
-  ```html
-  <h1>This is a top-level heading</h1>
+#### HTML
 
-  <p>This is a paragraph of text.</p>
+HyperText Markup Language, or **HTML**, is a markup language consisting of different elements you can wrap (mark up) content in to give it meaning (semantics) and structure. Simple HTML looks like this:
 
-  <img src="cat.jpg" alt="A picture of my cat" />
-  ```
+```html
+<h1>This is a top-level heading</h1>
 
-  If we adopted a house-building analogy, HTML would be like the foundations and walls of the house, which give it structure and hold it together.
+<p>This is a paragraph of text.</p>
 
-- Cascading Style Sheets (**CSS**) is a rule-based language used to apply styles to your HTML — for example, setting text and background colors, adding borders, animating things, or laying out a page in a certain way. As a simple example, the following code would turn our HTML paragraph red:
+<img src="cat.jpg" alt="A picture of my cat" />
+```
 
-  ```css
-  p {
-    color: red;
-  }
-  ```
+If we adopted a house-building analogy, HTML would be like the foundations and walls of the house, which give it structure and hold it together.
 
-  In the house analogy, CSS is like the paint, wallpaper, carpets and paintings you'd use to make the house look nice.
+#### CSS
 
-- **JavaScript** is the programming language we use to add interactivity to websites, from dynamic style switching, to fetching updates from the server, right through to complex 3D graphics. The following simple JavaScript will store a reference to our paragraph in memory and change the text inside it:
+Cascading Style Sheets (**CSS**) is a rule-based language used to apply styles to your HTML — for example, setting text and background colors, adding borders, animating things, or laying out a page in a certain way. As a simple example, the following code would turn our HTML paragraph red:
 
-  ```js
-  let pElem = document.querySelector("p");
-  pElem.textContent = "We changed the text!";
-  ```
+```css
+p {
+  color: red;
+}
+```
 
-  In the house analogy, JavaScript is like the cooker, TV, Microwave, or hairdryer — the things that give your house useful functionality.
+In the house analogy, CSS is like the paint, wallpaper, carpets and paintings you'd use to make the house look nice.
+
+#### JavaScript
+
+**JavaScript** is the programming language we use to add interactivity to websites, from dynamic style switching, to fetching updates from the server, right through to complex 3D graphics. The following simple JavaScript will store a reference to our paragraph in memory and change the text inside it:
+
+```js
+let pElem = document.querySelector("p");
+pElem.textContent = "We changed the text!";
+```
+
+In the house analogy, JavaScript is like the cooker, TV, Microwave, or hairdryer — the things that give your house useful functionality.
+
+#### Separating the layers
+
+Separating the technology layers is a good idea, for:
+
+- Code management and comprehension.
+- Teamwork/separation of roles.
+- Performance.
+
+In reality, the separation is not always clear. It is an ideal to aim for where possible rather than an absolute.
+
+- A prime example is the case of using JavaScript to dynamically update CSS styling on-the-fly in response to app state changes, user choices, etc.
+- Often this is done by modifying the Element.style.x properties, which results in inline CSS being injected into HTML. A better strategy is to add/change classes on elements to avoid inline CSS.
+- Much more severe is the case of JavaScript frameworks that use various HTML-in-JavaScript or CSS-in-JavaScript custom syntax, which results in a lot of mixing of syntax types.
 
 ### Tools
 
@@ -146,6 +190,7 @@ Because you don't know exactly what your users will use, you need to design defe
 
 You'll come across the below concepts at some point in your studies.
 
+- **Progressive enhancement** is the practice of creating a minimal experience that provides the essential functionality to all users, and layering on a better experience and other enhancments in browsers that can support them. Progressive enhancement is often seen as unimportant, because browsers tend to support new features more consistently these days, and people tend to have faster internet connections. However, you should think about examples relevant to the modern day — cutting down on decoration to make a mobile experience smoother and save on data, or providing a simpler, lower-bandwidth experience for users in developing countries who might still pay for home internet by the megabyte.
 - **Cross-browser compatibility** is the practice of trying to make sure your webpage works across as many devices as possible. This includes using technologies that all the browsers support, delivering better experiences to browsers that can handle them (progressive enhancement), and/or writing code so that it falls back to a simpler but still usable experience in older browsers (graceful degradation). It also involves a lot of testing to see if anything fails in certain browsers, and then more work to fix those failures.
 - **Responsive web design** is the practice of making your functionality and layouts flexible so they can automatically adapt to different browsers. An obvious example is a website that is laid out one way in a widescreen browser on the desktop, but displays as a more compact, single-column layout on mobile phone browsers. Try adjusting the width of your browser window now, and see what happens.
 - **Performance** means getting websites to load as quickly as possible, but also making them intuitive and easy to use so that users don't get frustrated and go somewhere else.
@@ -157,3 +202,5 @@ You'll come across the below concepts at some point in your studies.
 
 - [History of the World Wide Web](https://en.wikipedia.org/wiki/History_of_the_World_Wide_Web)
 - [How does the internet work?](/en-US/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)
+
+{{PreviousMenuNext("Learn_web_development/Getting_started/Web_standards/How_the_web_works", "Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites", "Learn_web_development/Getting_started/Web_standards")}}
