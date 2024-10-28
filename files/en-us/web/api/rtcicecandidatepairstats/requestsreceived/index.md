@@ -8,7 +8,7 @@ browser-compat: api.RTCStatsReport.type_candidate-pair.requestsReceived
 
 {{APIRef("WebRTC")}}
 
-The {{domxref("RTCIceCandidatePairStats")}} dictionary's **`requestsReceived`** property indicates the total number of {{Glossary("STUN")}} connectivity check requests that have been received so far on the connection described by this pairing of candidates.
+The **`requestsReceived`** property of the {{domxref("RTCIceCandidatePairStats")}} dictionary indicates the total number of {{Glossary("STUN")}} connectivity check requests that have been received so far on the connection described by this pairing of candidates.
 
 ## Value
 

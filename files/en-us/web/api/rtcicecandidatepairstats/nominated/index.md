@@ -8,7 +8,7 @@ browser-compat: api.RTCStatsReport.type_candidate-pair.nominated
 
 {{APIRef("WebRTC")}}
 
-The {{domxref("RTCIceCandidatePairStats")}} property **`nominated`** specifies whether or not the candidate pair described by the underlying `RTCIceCandidatePair` has been nominated to be used as the configuration for the WebRTC connection.
+The **`nominated`** property of the {{domxref("RTCIceCandidatePairStats")}} dictionary specifies whether or not the candidate pair described by the underlying `RTCIceCandidatePair` has been nominated to be used as the configuration for the WebRTC connection.
 
 ## Value
 

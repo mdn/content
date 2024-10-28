@@ -11,7 +11,8 @@ browser-compat: api.RTCStatsReport.type_candidate-pair.priority
 
 {{APIRef("WebRTC")}}{{deprecated_header}}{{non-standard_header}}
 
-The _obsolete_ {{domxref("RTCIceCandidatePairStats")}} property **`priority`** reports the priority of the candidate pair as an integer value.
+The **`priority`** property of the {{domxref("RTCIceCandidatePairStats")}} dictionary reports the priority of the candidate pair as an integer value.
+
 The higher the value, the more likely the WebRTC layer is to select the candidate pair when the time comes to establish (or re-establish) a connection between the two peers.
 
 ## Value
@@ -25,7 +26,7 @@ The higher this value, the better the WebRTC layer thinks this pair of candidate
 
 ## Specifications
 
-{{Specifications}}
+This property was removed from the specification.
 
 ## Browser compatibility
 

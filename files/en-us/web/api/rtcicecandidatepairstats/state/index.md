@@ -8,7 +8,7 @@ browser-compat: api.RTCStatsReport.type_candidate-pair.state
 
 {{APIRef("WebRTC")}}
 
-The **`state`** property is a string that indicates the state of the checklist of which the candidate pair is a member.
+The **`state`** property of the {{domxref("RTCIceCandidatePairStats")}} dictionary indicates the state of the [checklist](#ice_check_lists) of which the candidate pair is a member.
 
 ## Value
 
@@ -27,7 +27,9 @@ A string whose value is one of the following:
 - `waiting`
   - : This pair has not yet been checked, but the check can be performed as soon as this pair is the highest priority pair remaining in the `waiting` state.
 
-## ICE check lists
+## Description
+
+### ICE check lists
 
 During ICE negotiation, the ICE layer builds up a _checklist_, which is a list of potential pairings of ICE candidates.
 Each pair has a state, represented by a string literal.

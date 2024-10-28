@@ -8,7 +8,7 @@ browser-compat: api.RTCStatsReport.type_candidate-pair.localCandidateId
 
 {{APIRef("WebRTC")}}
 
-The {{domxref("RTCIceCandidatePairStats")}} property **`localCandidateId`** is a string that uniquely identifies the local {{Glossary("ICE")}} candidate which was analyzed to generate the {{domxref("RTCIceCandidateStats")}} used to compute the statistics for this pair of candidates.
+The **`localCandidateId`** property of the {{domxref("RTCIceCandidatePairStats")}} dictionary is a string that uniquely identifies the local {{Glossary("ICE")}} candidate which was analyzed to generate the {{domxref("RTCIceCandidateStats")}} used to compute the statistics for this pair of candidates.
 
 ## Value
 
