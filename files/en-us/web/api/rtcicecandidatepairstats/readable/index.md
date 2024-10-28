@@ -11,22 +11,14 @@ browser-compat: api.RTCIceCandidatePairStats.readable
 
 {{APIRef("WebRTC")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-The _obsolete_ {{domxref("RTCIceCandidatePairStats")}}
-property **`readable`** reports whether or not the connection
-described by the candidate pair has received at least one valid incoming ICE
-request.
+The _obsolete_ {{domxref("RTCIceCandidatePairStats")}} property **`readable`** reports whether or not the connection described by the candidate pair has received at least one valid incoming ICE request.
 
 ## Value
 
-A Boolean value which is `true` if the connection described by this
-candidate pair has received at least one valid ICE request, and is therefore ready to be
-read from.
+A Boolean value which is `true` if the connection described by this candidate pair has received at least one valid ICE request, and is therefore ready to be read from.
 
 > [!NOTE]
-> This property was removed from the specification in early 2017
-> because you can determine whether or not the connection is readable by checking to see
-> if {{domxref("RTCIceCandidatePairStats.requestsReceived", "requestsReceived")}} is
-> greater than 0:
+> This property was removed from the specification in early 2017 because you can determine whether or not the connection is readable by checking to see if {{domxref("RTCIceCandidatePairStats.requestsReceived", "requestsReceived")}} is greater than 0:
 >
 > ```js
 > if (icpStats.requestsReceived > 0) {
