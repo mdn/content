@@ -28,6 +28,8 @@ A generic {{domxref("Event")}}.
 
 ## Examples
 
+### Preventing code from running during prerendering
+
 The following code sets up an event listener to run a function once prerendering has finished, on a prerendered page (the prerendering is detected via {{domxref("Document.prerendering")}}), or runs it immediately on a non-prerendered page:
 
 ```js
@@ -43,6 +45,22 @@ if (document.prerendering) {
 > [!NOTE]
 > See the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) landing page and particularly the [Unsafe speculative loading conditions](/en-US/docs/Web/API/Speculation_Rules_API#unsafe_speculative_loading_conditions) section for more information on the kinds of activities you might wish to delay until after prerendering has finished.
 
+### Tracking prerendering activations
+
+Code following the above pattern will not suffice for measuring how often a prerender is activated, because it's possible for the code to run after prerendering activation. Instead, use the following pattern:
+
+```js
+if (document.prerendering) {
+  document.addEventListener("prerenderingchange", () => {
+    console.log("Prerender activated after this script ran");
+  }, { once: true });
+} else if (performance.getEntriesByType("navigation")[0]?.activationStart > 0) {
+  console.log("Prerender activated before this script ran");
+} else {
+  console.log("This page load was not via prerendering");
+}
+```
+
 ## Specifications
 
 {{Specifications}}
@@ -55,3 +73,4 @@ if (document.prerendering) {
 
 - [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API)
 - {{domxref("Document.prerendering", "prerendering")}} property
+- {{domxref("PerformanceNavigationTiming.activationStart")}} property
