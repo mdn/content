@@ -241,7 +241,7 @@ Let's put these ideas into practice and build a slightly more involved form — 
          <span>Email: </span>
          <strong><span aria-label="required">*</span></strong>
        </label>
-       <input type="email" id="mail" name="usermail" required />
+       <input type="email" id="mail" name="user-mail" required />
      </p>
      <p>
        <label for="pwd">
@@ -269,7 +269,7 @@ Let's put these ideas into practice and build a slightly more involved form — 
        <label for="card">
          <span>Card type:</span>
        </label>
-       <select id="card" name="usercard">
+       <select id="card" name="user-card">
          <option value="visa">Visa</option>
          <option value="mc">Mastercard</option>
          <option value="amex">American Express</option>
@@ -280,7 +280,7 @@ Let's put these ideas into practice and build a slightly more involved form — 
          <span>Card number:</span>
          <strong><span aria-label="required">*</span></strong>
        </label>
-       <input type="tel" id="number" name="cardnumber" required />
+       <input type="tel" id="number" name="card-number" required />
      </p>
      <p>
        <label for="expiration">

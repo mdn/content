@@ -97,7 +97,7 @@ You can get the codecs supported for decoding data using the {{domxref("RTCRtpRe
 const availReceiveCodecs = transceiver.receiver.getCapabilities("video").codecs;
 ```
 
-To reorder the codecs array to our preferred order, we can use the sorting fuction below to sort on MIME type (this comes from [setCodecPreferences is now in all browsers!](https://blog.mozilla.org/webrtc/cross-browser-support-for-choosing-webrtc-codecs/) on blog.mozilla.org (2024)).
+To reorder the codecs array to our preferred order, we can use the sorting function below to sort on MIME type (this comes from [setCodecPreferences is now in all browsers!](https://blog.mozilla.org/webrtc/cross-browser-support-for-choosing-webrtc-codecs/) on blog.mozilla.org (2024)).
 
 ```js
 function sortByMimeTypes(codecs, preferredOrder) {

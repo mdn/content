@@ -1248,46 +1248,6 @@ This includes: `SVGPathSegList`, [SVGPathElement.getPathSegAtLength()](/en-US/do
   </tbody>
 </table>
 
-### Regular expression (?ims-ims:...) modifiers
-
-The [(?ims-ims:...)](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Modifier) regular expression modifiers allow you to make changes to only take effect in a specific part of a regex pattern.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>131</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>-</td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>-</td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>-</td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>javascript.options.experimental.regexp_modifiers</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ## APIs
 
 ### Cookie Store API
@@ -1373,6 +1333,49 @@ This enables a fetch request to function as an alternative to {{domxref("Navigat
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>dom.fetchKeepalive.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### CloseWatcher Interface
+
+Built-in web components with "open" and "close" semantics, such as modal dialogs and popovers, can be closed using device-native mechanisms.
+For example, on Android you can close a dialog using the back button.
+The {{domxref("CloseWatcher")}} interface allows developers to implement UI components, such as custom sidebars, that can similarly be closed using native mechanisms.
+([Firefox bug 1888729](https://bugzil.la/1888729)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>132</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>132</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>132</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>132</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.closewatcher.enabled</code></td>
     </tr>
   </tbody>
 </table>

@@ -85,7 +85,7 @@ See [Using the View Transitions API](/en-US/docs/Web/API/View_Transitions_API/Us
 - [Basic View Transitions SPA demo](https://mdn.github.io/dom-examples/view-transitions/spa/): A basic image gallery demo with view transitions, featuring separate animations between old and new images, and old and new captions.
 - [Basic View Transitions MPA demo](https://mdn.github.io/dom-examples/view-transitions/mpa/): A sample two-page site that demonstrates usage of cross-document (MPA) view transitions, providing a custom "swipe up" transition when the two pages are navigated between.
 - [HTTP 203 playlist](https://http203-playlist.netlify.app/): A video player demo app that features several different SPA view transitions, many of which are explained in [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/).
-- [List of Chrome DevRel team members](https://view-transitions.netlify.app/profiles/mpa/): A basic team profile pages app that demonstrates how to use the {{domxref("Window.pagereveal_event", "pagereveal")}} and {{domxref("Window.pageswap_event", "pageswap")}} events to customize the outgoing and inbound animations of a cross-document view transition based on the "from" and "to" URLs.
+- [List of Chrome DevRel team members](https://view-transitions.chrome.dev/profiles/mpa/): A basic team profile pages app that demonstrates how to use the {{domxref("Window.pagereveal_event", "pagereveal")}} and {{domxref("Window.pageswap_event", "pageswap")}} events to customize the outgoing and inbound animations of a cross-document view transition based on the "from" and "to" URLs.
 
 ## Specifications
 

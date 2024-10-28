@@ -17,8 +17,8 @@ See [Using groups in the console](/en-US/docs/Web/API/console#using_groups_in_th
 ## Syntax
 
 ```js-nolint
-groupCollapsed()
-groupCollapsed(label)
+console.groupCollapsed()
+console.groupCollapsed(label)
 ```
 
 ### Parameters

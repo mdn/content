@@ -79,7 +79,7 @@ Provide a toggle on content that allows users to enable a longer session time li
 
 It is important not to distract users, especially ones with cognitive disabilities.
 
-If moving, blinking, scrolling, or auto-updating information starts automatically, lasts more than five seconds, and is presented in parallel with other content, the user must able to pause, stop, hide or control it, unless it's an essential functionality. "Essential" means that removing the moving, blinking, scrolling, or auto-updating information would fundamentally change the meaning of the content and/or functionality, **and** information and functionality cannot be achieved in another way that would conform. This includes animated gifs, if the gif animates for more than 5 seconds.
+If moving, blinking, scrolling, or auto-updating information starts automatically, lasts more than five seconds, and is presented in parallel with other content, the user must able to pause, stop, hide or control it, unless it's an essential functionality. "Essential" means that removing the moving, blinking, scrolling, or auto-updating information would fundamentally change the meaning of the content and/or functionality, **and** information and functionality cannot be achieved in another way that would conform. This includes animated GIFs, if the gif animates for more than 5 seconds.
 
 Additional timing criteria to consider are:
 
