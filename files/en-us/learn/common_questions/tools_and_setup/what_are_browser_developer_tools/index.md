@@ -17,9 +17,6 @@ The devtools live inside your browser in a subwindow that looks roughly like thi
 
 ![Screenshot of a browser with developer tools open. The web page is displayed in the top half of the browser, the developer tools occupy the bottom half. There are three panels open in the developer tools: HTML, with the body element selected, a CSS panel showing styles blocks targeting the highlighted body, and a computed styles panel showing all the author styles; the browser styles checkbox is not checked.](devtools_63_inspector.png)
 
-> [!NOTE]
-> If you've using Safari, its developer tools are not enabled by default. To enable them, go to _Safari ➤ Preferences ➤ Advanced_, and check the _Show Develop menu in menu bar_ or _Enable features for web developers_ checkbox.
-
 How do you pull it up? Three ways:
 
 - **_Keyboard:_**
@@ -30,10 +27,14 @@ How do you pull it up? Three ways:
 
 - **_Menu bar:_**
 
-  - **Firefox:** Menu ![Firefox hamburger menu icon that has more options to customize and control Firefox.](2014-01-10-13-08-08-f52b8c.png) _➤ More tools ➤ Web Developer Tools_
+  - **Firefox:** _Menu (☰) ➤ More tools ➤ Web Developer Tools_
   - **Chrome:** _More tools ➤ Developer tools_
-  - **Safari:** _Develop ➤ Show Web Inspector._
   - **Opera**: _Developer ➤ Developer tools_
+  - **Safari:** _Develop ➤ Show Web Inspector._
+
+    > [!NOTE]
+    > The Safari developer tools are not enabled by default.
+    > To enable them, go to _Safari ➤ Preferences ➤ Advanced_, and check the _Show Develop menu in menu bar_ or _Enable features for web developers_ checkbox.
 
 - **_Context menu:_** Press-and-hold/right-click an item on a webpage (Ctrl-click on the Mac), and choose _Inspect Element_ from the context menu that appears. (_An added bonus:_ this method straight-away highlights the code of the element you right-clicked.)
 
