@@ -40,7 +40,7 @@ example step 1 of [reset parser state](https://w3c.github.io/media-source/index.
 synchronous (blocking) operation, which doesn't make sense.
 
 Saying that, current implementations can be useful in certain situations, when you want
-to stop the current append (or whatever) operation occurring on a sourcebuffer, and then
+to stop the current append (or whatever) operation occurring on a source buffer, and then
 immediately start performing operations on it again. For example, consider this code:
 
 ```js

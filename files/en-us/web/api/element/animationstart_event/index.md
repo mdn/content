@@ -90,11 +90,11 @@ animated.onanimationstart = () => {
 
 .animation.active {
   animation-duration: 2s;
-  animation-name: slidein;
+  animation-name: slide-in;
   animation-iteration-count: 2;
 }
 
-@keyframes slidein {
+@keyframes slide-in {
   from {
     transform: translateX(100%) scaleX(3);
   }

@@ -29,7 +29,7 @@ The reset button has an event handler that closes the dialog; it has no impact o
       type="submit"
       aria-label="close"
       value="X"
-      name="Xbutton"
+      name="x-button"
       formnovalidate />
     <p>
       <label

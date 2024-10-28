@@ -43,7 +43,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-document.forms["myform"].submit();
+document.forms["my-form"].submit();
 ```
 
 ## Specifications
