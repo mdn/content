@@ -26,35 +26,7 @@ _No specific methods; inherits methods from its ancestor {{domxref("CSSRule")}}.
 
 ## Examples
 
-This stylesheet contains a rule, followed by a nested [@media](/en-US/docs/Web/CSS/@media) CSS at-rule, followed by another rule.
-
-```css
-.foo {
-  background-color: silver;
-  @media (screen) {
-    color: tomato;
-  }
-  color: black;
-}
-```
-
-### Without CSSNestedDeclarations
-
-Without `CSSNestedDeclarations` the CSS is is parsed in the wrong order, meaning the text color will be `tomato` and not `black` as the author intended.
-
-```css
-.foo {
-  background-color: silver;
-  color: black;
-  @media (screen) {
-    color: tomato;
-  }
-}
-```
-
-### With CSSNestedDeclarations
-
-With `CSSNestedDeclarations` the CSS is is parsed correctly.
+The following JavaScript code returns an object of nested CSS styles.
 
 ```js
 let myRules = document.styleSheets[0].cssRules;
@@ -72,4 +44,4 @@ console.log(myRules[0].cssRules[1]); // [object CSSNestedDeclarations]
 ## See Also
 
 - {{domxref("CSSNestedDeclarations.style")}}
-- [The Nested Declarations Rule](https://drafts.csswg.org/css-nesting-1/#nested-declarations-rule)
+- [The Nested Declarations Rule](/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting#nested_declarations_rule)
