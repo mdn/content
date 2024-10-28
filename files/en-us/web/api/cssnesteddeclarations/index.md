@@ -24,7 +24,7 @@ _No specific methods; inherits methods from its ancestor {{domxref("CSSRule")}}.
 
 ## Examples
 
-This stylesheet contains a rule followed by a nested [@media](/en-US/docs/Web/CSS/@media) CSS at-rule followed by another rule.
+This stylesheet contains a rule, followed by a nested [@media](/en-US/docs/Web/CSS/@media) CSS at-rule, followed by another rule.
 
 ```css
 .foo {
