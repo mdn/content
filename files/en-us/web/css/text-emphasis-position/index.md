@@ -253,5 +253,8 @@ em rt {
 
 ## See also
 
-- The longhand properties {{cssxref("text-emphasis-style")}}, {{cssxref("text-emphasis-color")}}, and the corresponding shorthand property {{cssxref("text-emphasis")}}.
+- {{cssxref("text-underline-position")}}
+- {{cssxref("text-emphasis-style")}}
+- {{cssxref("text-emphasis-color")}}
+- {{cssxref("text-emphasis")}} shorthand property
 - {{cssxref("writing-mode")}}
