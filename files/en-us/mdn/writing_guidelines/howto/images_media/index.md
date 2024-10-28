@@ -197,7 +197,7 @@ The recording steps using this tool are pretty simple:
 
 ### Other resources
 
-- [How to Add Custom Callouts to Screencast Videos in Screenflow](https://photography.tutsplus.com/tutorials/how-to-add-custom-callouts-to-screencast-videos-in-screenflow--cms-27122)
+- [How to Add Custom Callouts to Screencast Videos in ScreenFlow](https://photography.tutsplus.com/tutorials/how-to-add-custom-callouts-to-screencast-videos-in-screenflow--cms-27122)
 
 ## Workflow for creating videos
 

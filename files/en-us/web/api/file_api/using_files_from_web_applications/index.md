@@ -182,11 +182,13 @@ and this CSS:
 
 ```css
 .visually-hidden {
-  position: absolute !important;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
   height: 1px;
-  width: 1px;
   overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 input.visually-hidden:is(:focus, :focus-within) + label {

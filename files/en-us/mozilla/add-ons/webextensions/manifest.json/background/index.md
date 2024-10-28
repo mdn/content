@@ -195,7 +195,7 @@ if (typeof browser == "undefined") {
   globalThis.browser = chrome;
 }
 browser.runtime.onInstalled.addListener(() => {
-  browser.tabs.create({ url: "http://example.com/firstrun.html" });
+  browser.tabs.create({ url: "http://example.com/first-run.html" });
 });
 ```
 

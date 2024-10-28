@@ -42,7 +42,7 @@ body {
   text-align: center;
   vertical-align: middle;
   font-family: Georgia;
-  font-size: 175%;
+  font-size: 200%;
   line-height: 1em;
   white-space: nowrap;
 }
@@ -64,7 +64,7 @@ body {
   width: 100%;
   left: 50%;
   margin-left: -50%;
-  font-size: 60%;
+  font-size: 50%;
   line-height: 1.5;
   background: black;
 }

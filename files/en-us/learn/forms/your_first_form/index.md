@@ -214,7 +214,7 @@ label {
 input,
 textarea {
   /* To make sure that all text fields have the same font settings
-     By default, textareas have a monospace font */
+     By default, text areas have a monospace font */
   font: 1em sans-serif;
   /* Uniform text field size */
   width: 300px;
@@ -225,8 +225,10 @@ textarea {
 
 input:focus,
 textarea:focus {
-  /* Additional highlight for focused elements */
-  border-color: #000;
+  /* Set the outline width and style */
+  outline-style: solid;
+  /* To give a little highlight on active elements */
+  outline-color: #000;
 }
 
 textarea {

@@ -39,13 +39,15 @@ The first parameter in the HTTP context is either `inline` (default value, indic
 ```http
 Content-Disposition: inline
 Content-Disposition: attachment
-Content-Disposition: attachment; filename="filename.jpg"
-Content-Disposition: attachment; filename*="filename.jpg"
+Content-Disposition: attachment; filename="file name.jpg"
+Content-Disposition: attachment; filename*=UTF-8''file%20name.jpg
 ```
 
 The quotes around the filename are optional, but are necessary if you use special characters in the filename, such as spaces.
 
-The parameters `filename` and `filename*` differ only in that `filename*` uses the encoding defined in [RFC 5987](https://datatracker.ietf.org/doc/html/rfc5987). When both `filename` and `filename*` are present in a single header field value, `filename*` is preferred over `filename` when both are understood. It's recommended to include both for maximum compatibility, and you can convert `filename*` to `filename` by substituting non-ASCII characters with ASCII equivalents (such as converting `é` to `e`). You may want to avoid percent escape sequences in `filename`, because they are handled inconsistently across browsers. (Firefox and Chrome decode them, while Safari does not.)
+The parameters `filename` and `filename*` differ only in that `filename*` uses the encoding defined in {{rfc("5987", "", "3.2")}}.
+When both `filename` and `filename*` are present in a single header field value, `filename*` is preferred over `filename` when both are understood. It's recommended to include both for maximum compatibility, and you can convert `filename*` to `filename` by substituting non-ASCII characters with ASCII equivalents (such as converting `é` to `e`).
+You may want to avoid percent escape sequences in `filename`, because they are handled inconsistently across browsers. (Firefox and Chrome decode them, while Safari does not.)
 
 Browsers may apply transformations to conform to the file system requirements, such as converting path separators (`/` and `\`) to underscores (`_`).
 
@@ -61,7 +63,7 @@ Content-Disposition: form-data; name="fieldName"
 Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"
 ```
 
-### Directives
+#### Directives
 
 - `name`
 

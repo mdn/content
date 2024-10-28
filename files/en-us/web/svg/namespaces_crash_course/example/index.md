@@ -52,14 +52,14 @@ cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
     </p>
 
     <div>
-    (C) 2006 <a id='emailme' href='#'>Nick Johnson</a>
+    (C) 2006 <a id='email-me' href='#'>Nick Johnson</a>
 
     <script type='text/javascript'>
     <![CDATA[
       // foil spam bots
       let email = '@riovia.net';
       email ='nick' + email;
-      document.getElementById('emailme').href = 'mailto:'+email;
+      document.getElementById('email-me').href = 'mailto:'+email;
     ]]>
     </script>
     This software is free for you to use in any way whatsoever,
