@@ -51,9 +51,13 @@ Code following the above pattern will not suffice for measuring how often a prer
 
 ```js
 if (document.prerendering) {
-  document.addEventListener("prerenderingchange", () => {
-    console.log("Prerender activated after this script ran");
-  }, { once: true });
+  document.addEventListener(
+    "prerenderingchange",
+    () => {
+      console.log("Prerender activated after this script ran");
+    },
+    { once: true },
+  );
 } else if (performance.getEntriesByType("navigation")[0]?.activationStart > 0) {
   console.log("Prerender activated before this script ran");
 } else {
