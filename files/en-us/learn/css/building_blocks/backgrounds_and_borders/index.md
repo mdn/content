@@ -59,10 +59,30 @@ We'll return to how the shorthand works later in the tutorial, but first let's h
 The {{cssxref("background-color")}} property defines the background color on any element in CSS. The property accepts any valid [`<color>`](/en-US/docs/Web/CSS/color_value). A `background-color` extends underneath the content and padding box of the element.
 
 In the example below, we have used various color values to add a background color to the box, a heading, and a {{htmlelement("span")}} element.
+Try this out yourself, using any available [`<color>`](/en-US/docs/Web/CSS/color_value) value.
 
-**Play around with these, using any available [`<color>`](/en-US/docs/Web/CSS/color_value) value.**
+```html live-sample___color
+<div class="box">
+  <h2>Background Colors</h2>
+  <p>Try changing the background <span>colors</span>.</p>
+</div>
+```
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/color.html", '100%', 700)}}
+```css live-sample___color
+.box {
+  background-color: #567895;
+}
+
+h2 {
+  background-color: black;
+  color: white;
+}
+span {
+  background-color: rgb(255 255 255 / 50%);
+}
+```
+
+{{EmbedLiveSample("color")}}
 
 ### Background images
 
@@ -70,7 +90,24 @@ The {{cssxref("background-image")}} property enables the display of an image in 
 
 This example demonstrates two things about background images. By default, the large image is not scaled down to fit the box, so we only see a small corner of it, whereas the small image is tiled to fill the box.
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/background-image.html", '100%', 700)}}
+```html live-sample___background-image
+<div class="wrapper">
+  <div class="box a"></div>
+  <div class="box b"></div>
+</div>
+```
+
+```css live-sample___background-image
+.a {
+  background-image: url(balloons.jpg);
+}
+
+.b {
+  background-image: url(star.png);
+}
+```
+
+{{EmbedLiveSample("background-image")}}
 
 **If you specify a background color in addition to a background image then the image displays on top of the color. Try adding a `background-color` property to the example above to see that in action.**
 
@@ -87,7 +124,18 @@ The {{cssxref("background-repeat")}} property is used to control the tiling beha
 
 **Try these values out in the example below. We have set the value to `no-repeat` so you will only see one star. Try out the different values — `repeat-x` and `repeat-y` — to see what their effects are.**
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/repeat.html", '100%', 600)}}
+```html live-sample___repeat
+<div class="box"></div>
+```
+
+```css live-sample___repeat
+.box {
+  background-image: url(star.png);
+  background-repeat: no-repeat;
+}
+```
+
+{{EmbedLiveSample("repeat")}}
 
 #### Sizing the background image
 
@@ -106,7 +154,19 @@ Try the following.
 - Remove the length units and see what happens when you use `background-size: cover` or `background-size: contain`.
 - If your image is smaller than the box, you can change the value of `background-repeat` to repeat the image.
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/size.html", '100%', 800)}}
+```html live-sample___size
+<div class="box"></div>
+```
+
+```css live-sample___size
+.box {
+  background-image: url(balloons.jpg);
+  background-repeat: no-repeat;
+  background-size: 100px 10em;
+}
+```
+
+{{EmbedLiveSample("size")}}
 
 #### Positioning the background image
 
@@ -159,7 +219,19 @@ Finally, you can also use a 4-value syntax to indicate a distance from certain e
 
 **Use the example below to play around with these values and move the star around inside the box.**
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/position.html", '100%', 600)}}
+```html live-sample___position
+<div class="box"></div>
+```
+
+```css live-sample___position
+.box {
+  background-image: url(star.png);
+  background-repeat: no-repeat;
+  background-position: 120px 1em;
+}
+```
+
+{{EmbedLiveSample("position")}}
 
 > **Note:** `background-position` is a shorthand for {{cssxref("background-position-x")}} and {{cssxref("background-position-y")}}, which allow you to set the different axis position values individually.
 
@@ -171,7 +243,33 @@ You can read more about the different types of gradients and things you can do w
 
 Try some different gradients in the example below. In the two boxes respectively, we have a linear gradient that is stretched over the whole box, and a radial gradient with a set size, which therefore repeats.
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/gradients.html", '100%', 700)}}
+```html live-sample___gradients
+<div class="wrapper">
+  <div class="box a"></div>
+  <div class="box b"></div>
+</div>
+```
+
+```css live-sample___gradients
+.a {
+  background-image: linear-gradient(
+    105deg,
+    rgb(0 249 255 / 100%) 39%,
+    rgb(51 56 57 / 100%) 96%
+  );
+}
+
+.b {
+  background-image: radial-gradient(
+    circle,
+    rgb(0 249 255 / 100%) 39%,
+    rgb(51 56 57 / 100%) 96%
+  );
+  background-size: 100px 50px;
+}
+```
+
+{{EmbedLiveSample("gradients")}}
 
 ### Multiple background images
 
@@ -197,7 +295,19 @@ Each value of the different properties will match up to the values in the same p
 
 **Let's play. The example below includes two background images. To demonstrate the stacking order, try switching which background image comes first in the list. Or play with the other properties to change the position, size, or repeat values.**
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/multiple-background-image.html", '100%', 600)}}
+```html live-sample___multiple-background-image
+<div class="wrapper">
+  <div class="box"></div>
+</div>
+```
+
+```css live-sample___multiple-background-image
+.box {
+  background-image: url(star.png), url(big-star.png);
+}
+```
+
+{{EmbedLiveSample("multiple-background-image")}}
 
 ### Background attachment
 
@@ -222,7 +332,25 @@ There are a few rules that need to be followed when writing background image sho
 
 Take a look at the MDN page for {{cssxref("background")}} to see all of the considerations.
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/background.html", '100%', 900)}}
+```html live-sample___background
+<div class="box"></div>
+```
+
+```css live-sample___background
+.box {
+  background:
+    linear-gradient(
+        105deg,
+        rgb(255 255 255 / 20%) 39%,
+        rgb(51 56 57 / 100%) 96%
+      )
+      center center / 400px 200px no-repeat,
+    url(big-star.png) center no-repeat,
+    rebeccapurple;
+}
+```
+
+{{EmbedLiveSample("background")}}
 
 ### Accessibility considerations with backgrounds
 
@@ -260,7 +388,7 @@ The individual properties include the {{cssxref("border-width")}}, {{cssxref("bo
 }
 ```
 
-There are longhand properties for width, style, and color for each of the four sides:
+There are longhand properities for width, style, and color for each of the four sides:
 
 ```css
 .box {
@@ -275,7 +403,28 @@ There are longhand properties for width, style, and color for each of the four s
 
 There are a variety of styles that you can use for borders. In the example below, we have used two different border styles for the box and two different border styles for the heading. Play with the border style, width, and color to see how borders work.
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/borders.html", '100%', 800)}}
+```html live-sample___borders
+<div class="box">
+  <h2>Borders</h2>
+  <p>Try changing the borders.</p>
+</div>
+```
+
+```css live-sample___borders
+.box {
+  background-color: #567895;
+  border: 5px solid #0b385f;
+  border-bottom-style: dashed;
+  color: #fff;
+}
+
+h2 {
+  border-top: 2px dotted rebeccapurple;
+  border-bottom: 1em double rgb(24 163 78);
+}
+```
+
+{{EmbedLiveSample("borders")}}
 
 ### Rounded corners
 
@@ -302,7 +451,22 @@ Or to make the top right corner have a horizontal radius of `1em`, and a vertica
 
 We have set all four corners in the example below and then changed the values for the top right corner to make it different. You can play with the values to change the corners. Take a look at the property page for {{cssxref("border-radius")}} to see the available syntax options. The [border-radius generator](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator) can be used to output rounded corner values for you.
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/corners.html", '100%', 800)}}
+```html live-sample___corners
+<div class="box">
+  <h2>Borders</h2>
+  <p>Try changing the borders.</p>
+</div>
+```
+
+```css live-sample___corners
+.box {
+  border: 10px solid rebeccapurple;
+  border-radius: 1em;
+  border-top-right-radius: 10% 30%;
+}
+```
+
+{{EmbedLiveSample("corners")}}
 
 ## Test your skills!
 
