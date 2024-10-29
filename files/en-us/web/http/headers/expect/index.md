@@ -14,7 +14,7 @@ Waiting for a `100` response can be helpful if a client anticipates that an erro
 
 A {{HTTPStatus("417", "417 Expectation Failed")}} response is returned if the server cannot meet the expectation, or any other status otherwise (e.g., a [4XX](/en-US/docs/Web/HTTP/Status#client_error_responses) status for a client error, or a [2XX](/en-US/docs/Web/HTTP/Status#successful_responses) status if the request can be resolved successfully without further processing).
 
-No browsers send the `Expect` header, but some clients (command-line tools) do so by default.
+None of the more common browsers send the `Expect` header, but some clients (command-line tools) do so by default.
 
 <table class="properties">
   <tbody>

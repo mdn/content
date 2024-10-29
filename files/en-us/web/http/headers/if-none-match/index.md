@@ -22,7 +22,7 @@ When used in combination with {{HTTPHeader("If-Modified-Since")}}, `If-None-Matc
 There are two common cases for using `If-None-Match` in requests:
 
 - For {{HTTPMethod("GET")}} and {{HTTPMethod("HEAD")}} methods, to update a cached entity that has an associated ETag.
-- For other methods, and in particular for {{HTTPMethod("PUT")}}, `If-None-Match` used with the `*` value can be used to save a file not known to exist, guaranteeing that another upload didn't happen before, losing the data of the previous put; this problem is a variation of the [lost update problem](https://www.w3.org/1999/04/Editing/#3.1).
+- For other methods, and in particular for {{HTTPMethod("PUT")}}, `If-None-Match` used with the `*` value can be used to save a file only if it does not already exist, guaranteeing that the upload won't accidentally overwrite another upload and lose the data of the previous `PUT`; this problem is a variation of the [lost update problem](https://www.w3.org/1999/04/Editing/#3.1).
 
 <table class="properties">
   <tbody>

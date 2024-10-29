@@ -9,7 +9,7 @@ browser-compat: http.headers.If-Modified-Since
 
 The HTTP **`If-Modified-Since`** {{Glossary("request header")}} makes a request [conditional](/en-US/docs/Web/HTTP/Conditional_requests).
 The server sends back the requested resource, with a {{HTTPStatus("200")}} status, only if it has been modified after the date in the `If-Modified-Since` header.
-If the resource has not been modified since, the response is a {{HTTPStatus("304")}} without any body and the {{HTTPHeader("Last-Modified")}} response header of a previous request contains the date of the last modification.
+If the resource has not been modified since, the response is a {{HTTPStatus("304")}} without any body, and the {{HTTPHeader("Last-Modified")}} response header of the previous request contains the date of the last modification.
 
 Unlike {{HTTPHeader("If-Unmodified-Since")}}, `If-Modified-Since` can only be used with a {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}}.
 When used in combination with {{HTTPHeader("If-None-Match")}}, it is ignored, unless the server doesn't support `If-None-Match`.

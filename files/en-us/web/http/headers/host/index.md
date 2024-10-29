@@ -36,7 +36,7 @@ Host: <host>:<port>
 ## Directives
 
 - `<host>`
-  - : the domain name of the server (for virtual hosting).
+  - : The domain name of the server (for virtual hosting).
 - `<port>` {{optional_inline}}
   - : TCP port number on which the server is listening.
 

@@ -9,7 +9,7 @@ browser-compat: http.headers.Expires
 
 The HTTP **`Expires`** {{Glossary("response header")}} contains the date/time after which the response is considered expired in the context of [HTTP caching](/en-US/docs/Web/HTTP/Caching).
 
-Invalid expiration dates with value `0` represent a date in the past and mean that the resource is already expired.
+The value `0` is used to represent a date in the past, indicating the resource has already expired.
 
 > [!NOTE]
 > If there is a {{HTTPHeader("Cache-Control")}} header with the `max-age` or `s-maxage` directive in the response, the `Expires` header is ignored.
