@@ -513,9 +513,9 @@ const second = new Map([
 ]);
 
 // Merge maps with an array. The last repeated key wins.
-const merged = new Map([...first, ...second, [1, "eins"]]);
+const merged = new Map([...first, ...second, [1, "un"]]);
 
-console.log(merged.get(1)); // eins
+console.log(merged.get(1)); // un
 console.log(merged.get(2)); // dos
 console.log(merged.get(3)); // three
 ```

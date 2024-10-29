@@ -17,7 +17,7 @@ You can optionally supply an argument to label the timestamp, and this label wil
 ## Syntax
 
 ```js-nolint
-timeStamp(label)
+console.timeStamp(label)
 ```
 
 ### Parameters
