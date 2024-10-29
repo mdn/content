@@ -16,13 +16,16 @@ An object.
 
 ## Examples
 
-This stylesheet contains a rule followed by a nested [@media](/en-US/docs/Web/CSS/@media) CSS at-rule followed by another rule. The JS will return an object of all the nested rules.
+This stylesheet contains a nested {{domxref("cssRule","cssRules")}}.
+
+The first `console.log` shows the top-level `style`, the second shows the nested `@media` query with its nested style and the final shows the nested style declared after the `@media` query.
 
 ```css
 .foo {
-  background-color: silver;
+  font-size: 1.2rem;
   @media (screen) {
     color: tomato;
+    background-color: darkgrey;
   }
   color: black;
 }
@@ -30,7 +33,12 @@ This stylesheet contains a rule followed by a nested [@media](/en-US/docs/Web/CS
 
 ```js
 let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].cssRules[1].style); // { "0": "color" }
+console.log(myRules[0].style);
+// { "0": "font-size" }
+console.log(myRules[0].cssRules[0].cssRules[0].style);
+// { "0": "color", "1": "background-color" }
+console.log(myRules[0].cssRules[1].style);
+// { "0": "color" }
 ```
 
 ## Specifications
