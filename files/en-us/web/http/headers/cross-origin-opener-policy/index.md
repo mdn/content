@@ -60,21 +60,23 @@ Cross-Origin-Opener-Policy: noopener-allow-popups
 
     Similarly, a document with this value will itself open new documents in the same BCG if they also have a COOP value of `unsafe-none` (or no COOP directive).
 
-- `same-origin-allow-popups`
-
-  - : The document permits loading into BCGs that contain only same-origin documents opened in navigations, and documents with a COOP of `unsafe-none` (or no COOP directive) opened with {{domxref("Window.open()")}}.
-
-    The behavior is the largely the same as for the [`same-origin`](#same-origin).
-    The difference is that a document with this value can, using {{domxref("Window.open()")}}, also open documents into the same BCG if they have a value of `unsafe-none` (or have not specified any value).
-    In this case it does not matter if the opened document is cross-site or same-site.
-
 - `same-origin`
 
-  - : The document permits loading into BCGs that contain only same-origin documents.
-    This is used to provide cross-origin isolation for a BCG.
+  - : The document permits loading into BCGs that use COOP and contain only same-origin documents.
+    This is used to provide [cross-origin isolation](/en-US/docs/Web/API/Window/crossOriginIsolated) for a BCG.
 
     A document with this value will be opened into the same BCG as its opener unless it is cross-origin with the opener, or the opener has a COOP value of `unsafe-none`.
     A document with this value will itself open new documents in the same BCG if they are same-origin and dont have a COOP value of `unsafe-none`.
+
+- `same-origin-allow-popups`
+
+  - : This is the same as the [`same-origin`](#same-origin) directive, except with respect to opening documents with {{domxref("Window.open()")}}.
+
+    A document with this directive can open a document in the same BCG using {{domxref("Window.open()")}} if it has a COOP value of `unsafe-none` or has not specified any value.
+    In this case it does not matter if the opened document is cross-site or same-site, and the original document remains "cross-origin isolated".
+
+    The directive is used to relax the `same-origin` restriction for integrations where a document needs the benefits of cross-origin isolation but also needs to open and retain a reference to trusted cross-origin documents.
+    For example, when using a cross-origin service for OAuth or payments.
 
 - `noopener-allow-popups`
 
