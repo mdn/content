@@ -1268,18 +1268,18 @@ The [`JSON.parse` source text access proposal](https://github.com/tc39/proposal-
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>-</td>
-      <td>-</td>
+      <td>132</td>
+      <td>No</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>-</td>
-      <td>-</td>
+      <td>132</td>
+      <td>No</td>
     </tr>
     <tr>
       <th>Release</th>
-      <td>-</td>
-      <td>-</td>
+      <td>132</td>
+      <td>No</td>
     </tr>
     <tr>
       <th>Preference name</th>
