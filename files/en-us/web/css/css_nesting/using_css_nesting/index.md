@@ -388,11 +388,9 @@ In the following CSS, we are creating the styles for `.card` and `.card h2`. The
 
 ## Nested declarations rule
 
-In order to retain the order that the CSS is written by the author an update has been made to the [**CSS Object Model (CSSOM)**](/en-US/docs/Web/API/CSS_Object_Model). Which now means that if there is any form of nesting followed by other rules they are parsed in the correct order.
+The nested declaration rule means that the order of the rules are parsed in the order that they are written in the CSS document.
 
-### Prior to nested declaration rule
-
-The following CSS:
+With the following CSS:
 
 ```css
 .foo {
@@ -404,19 +402,7 @@ The following CSS:
 }
 ```
 
-Would be parsed:
-
-```css
-.foo {
-  background-color: silver;
-  color: black;
-  @media (screen) {
-    color: tomato;
-  }
-}
-```
-
-With the nested declaration rule the rules can nested and are all grouped together to retain the order. The following block shows how the CSSOM parses the CSS.
+The CSSOM parses the CSS in the following way.
 
 ```txt
 ↳ CSSStyleRule
@@ -487,4 +473,5 @@ In the following example, there is an invalid selector (`%` is not a valid chara
 - [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector)
 - [Nesting `@` at-rules](/en-US/docs/Web/CSS/CSS_nesting/Nesting_at-rules)
 - [Nesting and specificity](/en-US/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)
+- {{domxref("CSSNestedDeclarations")}}
 - [The Nested Declarations Rule](https://drafts.csswg.org/css-nesting-1/#nested-declarations-rule)
