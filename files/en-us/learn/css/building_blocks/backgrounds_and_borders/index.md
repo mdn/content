@@ -36,7 +36,7 @@ In this lesson, we will take a look at some of the creative things you can do wi
 
 ## Styling backgrounds in CSS
 
-The CSS {{cssxref("background")}} property is a shorthand for a number of background longhand properties that we will meet in this lesson. If you discover a complex background property in a stylesheet, it might seem a little hard to understand as so many values can be passed in at once.
+The CSS {{cssxref("background")}} property is a shorthand for a number of background longhand properties that we will meet in this lesson. If you discover a complex background property in a stylesheet, it might seem a little hard to understand as so many values can be passed in at once:
 
 ```css
 .box {
@@ -47,7 +47,7 @@ The CSS {{cssxref("background")}} property is a shorthand for a number of backgr
         rgb(51 56 57 / 100%) 96%
       )
       center center / 400px 200px no-repeat,
-    url(big-star.png) center no-repeat,
+    url(image.png) center no-repeat,
     rebeccapurple;
 }
 ```
@@ -70,6 +70,7 @@ Try this out yourself, using any available [`<color>`](/en-US/docs/Web/CSS/color
 
 ```css live-sample___color
 .box {
+  padding: 0.3em;
   background-color: #567895;
 }
 
@@ -86,7 +87,7 @@ span {
 
 ### Background images
 
-The {{cssxref("background-image")}} property enables the display of an image in the background of an element. In the example below, we have two boxes — one has a background image that is larger than the box ([balloons.jpg](https://mdn.github.io/css-examples/learn/backgrounds-borders/balloons.jpg)). The other has a small image of a single star ([star.png](https://mdn.github.io/css-examples/learn/backgrounds-borders/star.png)).
+The {{cssxref("background-image")}} property enables the display of an image in the background of an element. In the example below, we have two boxes — one has a background image that is larger than the box ([balloons.jpg](https://mdn.github.io/shared-assets/images/examples/balloons.jpg)). The other has a small image of a single star ([star.png](https://mdn.github.io/shared-assets/images/examples/star.png)).
 
 This example demonstrates two things about background images. By default, the large image is not scaled down to fit the box, so we only see a small corner of it, whereas the small image is tiled to fill the box.
 
@@ -98,18 +99,31 @@ This example demonstrates two things about background images. By default, the la
 ```
 
 ```css live-sample___background-image
+.wrapper {
+  display: flex;
+}
+
+.box {
+  width: 200px;
+  height: 80px;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  margin: 20px;
+}
+
 .a {
-  background-image: url(balloons.jpg);
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/balloons.jpg);
 }
 
 .b {
-  background-image: url(star.png);
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/star.png);
 }
 ```
 
 {{EmbedLiveSample("background-image")}}
 
-**If you specify a background color in addition to a background image then the image displays on top of the color. Try adding a `background-color` property to the example above to see that in action.**
+If you specify a background color in addition to a background image then the image displays on top of the color.
+Try adding a `background-color` property to the example above to see that in action.
 
 #### Controlling background-repeat
 
@@ -122,15 +136,25 @@ The {{cssxref("background-repeat")}} property is used to control the tiling beha
 - `space` — repeat as many times as possible, adding space between the images if there is extra space available.
 - `round` — similar to `space`, but stretches the images to fill any extra space
 
-**Try these values out in the example below. We have set the value to `no-repeat` so you will only see one star. Try out the different values — `repeat-x` and `repeat-y` — to see what their effects are.**
+Try these values out in the example below. We have set the value to `no-repeat` so you will only see one star. Try out the different values — `repeat-x` and `repeat-y` — to see what their effects are.
 
 ```html live-sample___repeat
 <div class="box"></div>
 ```
 
+```css hidden live-sample___repeat
+.box {
+  width: 200px;
+  height: 80px;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  margin: 20px;
+}
+```
+
 ```css live-sample___repeat
 .box {
-  background-image: url(star.png);
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/star.png);
   background-repeat: no-repeat;
 }
 ```
@@ -158,11 +182,21 @@ Try the following.
 <div class="box"></div>
 ```
 
+```css hidden live-sample___size
+.box {
+  width: 500px;
+  height: 100px;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  margin: 10px;
+}
+```
+
 ```css live-sample___size
 .box {
-  background-image: url(balloons.jpg);
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/balloons.jpg);
   background-repeat: no-repeat;
-  background-size: 100px 10em;
+  background-size: 80px 10em;
 }
 ```
 
@@ -181,7 +215,7 @@ You can use keywords such as `top` and `right` (look up the others on the {{cssx
 
 ```css
 .box {
-  background-image: url(star.png);
+  background-image: url(image.png);
   background-repeat: no-repeat;
   background-position: top center;
 }
@@ -191,7 +225,7 @@ And {{cssxref("length", "lengths")}}, and {{cssxref("percentage", "percentages")
 
 ```css
 .box {
-  background-image: url(star.png);
+  background-image: url(image.png);
   background-repeat: no-repeat;
   background-position: 20px 10%;
 }
@@ -201,7 +235,7 @@ You can also mix keyword values with lengths or percentages, in which case the f
 
 ```css
 .box {
-  background-image: url(star.png);
+  background-image: url(image.png);
   background-repeat: no-repeat;
   background-position: 20px top;
 }
@@ -211,21 +245,31 @@ Finally, you can also use a 4-value syntax to indicate a distance from certain e
 
 ```css
 .box {
-  background-image: url(star.png);
+  background-image: url(image.png);
   background-repeat: no-repeat;
   background-position: top 20px right 10px;
 }
 ```
 
-**Use the example below to play around with these values and move the star around inside the box.**
+Use the example below to play around with these values and move the star around inside the box:
 
 ```html live-sample___position
 <div class="box"></div>
 ```
 
+```css hidden live-sample___position
+.box {
+  width: 500px;
+  height: 80px;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  margin: 20px;
+}
+```
+
 ```css live-sample___position
 .box {
-  background-image: url(star.png);
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/star.png);
   background-repeat: no-repeat;
   background-position: 120px 1em;
 }
@@ -233,13 +277,14 @@ Finally, you can also use a 4-value syntax to indicate a distance from certain e
 
 {{EmbedLiveSample("position")}}
 
-> **Note:** `background-position` is a shorthand for {{cssxref("background-position-x")}} and {{cssxref("background-position-y")}}, which allow you to set the different axis position values individually.
+> [!NOTE]
+> The shorthand `background-position` is used instead of {{cssxref("background-position-x")}} and {{cssxref("background-position-y")}}, which allow you to set the different axis position values individually.
 
 ### Gradient backgrounds
 
 A gradient — when used for a background — acts just like an image and is also set by using the {{cssxref("background-image")}} property.
 
-You can read more about the different types of gradients and things you can do with them on the MDN page for the [`<gradient>`](/en-US/docs/Web/CSS/gradient) data type. A fun way to play with gradients is to use one of the many CSS Gradient Generators available on the web, such as [CSSGradient.io](https://cssgradient.io/). You can create a gradient and copy and paste the source code that generates it.
+You can read more about the different types of gradients and things you can do with them on the MDN page for the [`<gradient>`](/en-US/docs/Web/CSS/gradient) data type. A fun way to play with gradients is to use one of the many CSS gradient generators available on the web, such as [CSSGradient.io](https://cssgradient.io/). You can create a gradient and copy and paste the source code that generates it.
 
 Try some different gradients in the example below. In the two boxes respectively, we have a linear gradient that is stretched over the whole box, and a radial gradient with a set size, which therefore repeats.
 
@@ -251,6 +296,18 @@ Try some different gradients in the example below. In the two boxes respectively
 ```
 
 ```css live-sample___gradients
+.wrapper {
+  display: flex;
+}
+
+.box {
+  width: 400px;
+  height: 80px;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  margin: 20px;
+}
+
 .a {
   background-image: linear-gradient(
     105deg,
@@ -293,7 +350,7 @@ background-position:
 
 Each value of the different properties will match up to the values in the same position in the other properties. Above, for example, `image1`'s `background-repeat` value will be `no-repeat`. However, what happens when different properties have different numbers of values? The answer is that the smaller numbers of values will cycle — in the above example there are four background images but only two `background-position` values. The first two position values will be applied to the first two images, then they will cycle back around again — `image3` will be given the first position value, and `image4` will be given the second position value.
 
-**Let's play. The example below includes two background images. To demonstrate the stacking order, try switching which background image comes first in the list. Or play with the other properties to change the position, size, or repeat values.**
+Let's play. The example below includes two background images. To demonstrate the stacking order, try switching which background image comes first in the list. Or play with the other properties to change the position, size, or repeat values.
 
 ```html live-sample___multiple-background-image
 <div class="wrapper">
@@ -302,8 +359,21 @@ Each value of the different properties will match up to the values in the same p
 ```
 
 ```css live-sample___multiple-background-image
+.wrapper {
+  display: flex;
+}
+
 .box {
-  background-image: url(star.png), url(big-star.png);
+  width: 500px;
+  height: 80px;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  margin: 20px;
+}
+
+.box {
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/star.png),
+    url(https://mdn.github.io/shared-assets/images/examples/big-star.png);
 }
 ```
 
@@ -338,6 +408,9 @@ Take a look at the MDN page for {{cssxref("background")}} to see all of the cons
 
 ```css live-sample___background
 .box {
+  width: 500px;
+  height: 300px;
+  padding: 0.5em;
   background:
     linear-gradient(
         105deg,
@@ -345,12 +418,13 @@ Take a look at the MDN page for {{cssxref("background")}} to see all of the cons
         rgb(51 56 57 / 100%) 96%
       )
       center center / 400px 200px no-repeat,
-    url(big-star.png) center no-repeat,
+    url(https://mdn.github.io/shared-assets/images/examples/big-star.png) center
+      no-repeat,
     rebeccapurple;
 }
 ```
 
-{{EmbedLiveSample("background")}}
+{{EmbedLiveSample("background", "", "320px")}}
 
 ### Accessibility considerations with backgrounds
 
@@ -411,7 +485,11 @@ There are a variety of styles that you can use for borders. In the example below
 ```
 
 ```css live-sample___borders
+* {
+  padding: 0.2em;
+}
 .box {
+  width: 500px;
   background-color: #567895;
   border: 5px solid #0b385f;
   border-bottom-style: dashed;
@@ -424,7 +502,7 @@ h2 {
 }
 ```
 
-{{EmbedLiveSample("borders")}}
+{{EmbedLiveSample("borders", "", "200px")}}
 
 ### Rounded corners
 
@@ -460,6 +538,9 @@ We have set all four corners in the example below and then changed the values fo
 
 ```css live-sample___corners
 .box {
+  width: 500px;
+  height: 110px;
+  padding: 0.5em;
   border: 10px solid rebeccapurple;
   border-radius: 1em;
   border-top-right-radius: 10% 30%;
