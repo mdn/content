@@ -29,6 +29,4 @@ jobs:
 
       - name: Check if cSpell word lists are in correct order
         run: |
-          node scripts/sort_and_unique_file_lines.js --check .vscode/dictionaries/*.txt
-        # Let the shell expand the glob pattern for us
-        shell: bash
+          node scripts/sort_and_unique_file_lines.js --check .vscode/dictionaries
