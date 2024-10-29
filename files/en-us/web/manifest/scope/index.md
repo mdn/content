@@ -37,16 +37,17 @@ When users navigate to pages outside the app's scope, they still experience the 
 
 ## Description
 
-The `scope` member defines the URLs that are part of your web app's installed experience. Browsers use `scope` to determine if a page is within your web app's {{Glossary("Application_context", "application context")}}.
+The `scope` member defines the URLs that are part of your web app's installed experience.
+Browsers use `scope` to determine if a page is within your web app's {{Glossary("Application_context", "application context")}}.
 
 ### In-scope and out-of-scope behavior
 
 A URL is considered to be "within scope" if its path begins with the URL path defined in `scope`.
 For example, if the `scope` is set to `/app/`, then the URLs `/app/`, `/app/page.html`, and `/app/dashboard/index.html` are all considered within scope, while `/` or `/page.html` are not.
 
-When users browse your installed web app, they experience an app-like interface.
-For in-scope pages, browsers maintain the application context and preserve the app-like experience without browser controls.
-When users navigate to pages outside the app's scope, they still experience the app-like interface; however, in these pages, browsers display a prominent UI element like the URL bar.
+When users open your installed web app, they experience an app-like interface.
+For in-scope pages, browsers maintain the application context and preserve the app-like experience.
+When users navigate to pages outside the app's scope, they still broadly experience the app-like interface; however, in these pages, browsers display additional UI elements like the URL bar.
 This helps users understand that they're viewing pages outside the app's defined scope.
 
 > [!NOTE]
