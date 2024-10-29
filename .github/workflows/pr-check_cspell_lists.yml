@@ -5,8 +5,7 @@ on:
     branches:
       - main
     paths:
-      - .vscode/ignore-list.txt
-      - .vscode/terms-abbreviations.txt
+      - .vscode/dictionaries/*
 
 jobs:
   docs:
@@ -16,8 +15,7 @@ jobs:
         with:
           sparse-checkout-cone-mode: false
           sparse-checkout: |
-            .vscode/ignore-list.txt
-            .vscode/terms-abbreviations.txt
+            .vscode/dictionaries/*
             .nvmrc
             package.json
             scripts/sort_and_unique_file_lines.js
