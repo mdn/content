@@ -38,7 +38,7 @@ This article provides information about the changes in Firefox 133 that affect d
 
 ### APIs
 
-- {{domxref("EventSource")}} is now supported in [service workers](/en-US/docs/Web/API/Service_Worker_API). ([Firefox bug 1681218](https://bugzil.la/1681218)).
+- The {{domxref("EventSource")}} interface to handle [server-sent events](/en-US/docs/Web/API/Server-sent_events) is now supported in [service workers](/en-US/docs/Web/API/Service_Worker_API). ([Firefox bug 1681218](https://bugzil.la/1681218)).
 
 #### DOM
 
