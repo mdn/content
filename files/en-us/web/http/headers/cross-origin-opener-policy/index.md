@@ -7,18 +7,21 @@ browser-compat: http.headers.Cross-Origin-Opener-Policy
 
 {{HTTPSidebar}}
 
-The HTTP **`Cross-Origin-Opener-Policy`** (COOP) {{glossary("response header")}} allows a website to control whether a new top-level document, opened in a popup or by navigating to a new page, is opened in the same {{glossary("Browsing context","browsing context group")}} (BCG) or in a new browsing context group.
+The HTTP **`Cross-Origin-Opener-Policy`** (COOP) {{glossary("response header")}} allows a website to control whether a new top-level document, opened using {{domxref("Window.open()")}} or by navigating to a new page, is opened in the same {{glossary("Browsing context","browsing context group")}} (BCG) or in a new browsing context group.
 
 When opened in a new BCG, any references between the new document and its opener are removed, and the new document may be process-isolated from its opener.
-This ensures that potential attackers can't open your documents in a popup with {{domxref("Window.open()")}} and then use the returned value to access its global object, and thereby prevents a set of cross-origin attacks dubbed [XS-Leaks](https://xsleaks.dev/).
+This ensures that potential attackers can't open your documents with {{domxref("Window.open()")}} and then use the returned value to access its global object, and thereby prevents a set of cross-origin attacks referred to as [XS-Leaks](https://xsleaks.dev/).
 
 It also means that any object opened by your document in a new BCG can't access your code using [`window.opener`](/en-US/docs/Web/API/Window/opener).
-This allows you to have more control over references to a window than [`rel=noopener`](/en-US/docs/Web/HTML/Attributes/rel/noopener), which affects outgoing navigations but not popups.
+This allows you to have more control over references to a window than [`rel=noopener`](/en-US/docs/Web/HTML/Attributes/rel/noopener), which affects outgoing navigations but not documents opened with {{domxref("Window.open()")}}.
 
-The opening behaviour is based on the policies of both the new document and its opener, and whether the new document is opened following a navigation or is launched as a popup.
+The opening behaviour is based on the policies of both the new document and its opener, and whether the new document is opened following a navigation or using {{domxref("Window.open()")}}.
 
 Generally you should set your policies such that only same-origin and trusted cross-origin resources that need to be able to script each other should be allowed to be opened in the same browser context group.
 Other resources should be cross-origin isolated in their own group.
+
+> [!NOTE]
+> The specification and this document use the term "popup" to refer to any document opened using {{domxref("Window.open()")}}, whether it is a popup, tab, window, or other context.
 
 <table class="properties">
   <tbody>
@@ -53,16 +56,16 @@ Cross-Origin-Opener-Policy: noopener-allow-popups
     A new document with this value will only be opened into the same BCG as its opener if:
 
     - the opener also has a COOP value of either `unsafe-none`, or it has no COOP directive.
-    - the document is being opened in a popup and the opener has a value of `same-origin-allow-popups` or `noopener-allow-popups`.
+    - the document is being opened using {{domxref("Window.open()")}} and the opener has a value of `same-origin-allow-popups` or `noopener-allow-popups`.
 
     Similarly, a document with this value will itself open new documents in the same BCG if they also have a COOP value of `unsafe-none` (or no COOP directive).
 
 - `same-origin-allow-popups`
 
-  - : The document permits loading into BCGs that contain only same-origin documents opened in navigations, and documents with a COOP of `unsafe-none` (or no COOP directive) opened via popups.
+  - : The document permits loading into BCGs that contain only same-origin documents opened in navigations, and documents with a COOP of `unsafe-none` (or no COOP directive) opened with {{domxref("Window.open()")}}.
 
     The behavior is the largely the same as for the [`same-origin`](#same-origin).
-    The difference is that a document with this value can, using a popup, also open documents into the same BCG if they have a value of `unsafe-none` (or have not specified any value).
+    The difference is that a document with this value can, using {{domxref("Window.open()")}}, also open documents into the same BCG if they have a value of `unsafe-none` (or have not specified any value).
     In this case it does not matter if the opened document is cross-site or same-site.
 
 - `same-origin`
@@ -84,7 +87,7 @@ Cross-Origin-Opener-Policy: noopener-allow-popups
     Whether or not a document with this COOP value opens other documents in the same BCG depends on their directive values.
     For example, a navigation to a same-origin document with the value `same-origin` or `same-origin-allow-popups` will be opened in the same BCG, while cross-origin documents or documents with `noopener-allow-popups` or `unsafe-none` will be opened in a new BCG.
 
-    Note that a document with this value has a slightly different behavior for documents that it opens in popups.
+    Note that a document with this value has a slightly different behavior for documents that it opens using {{domxref("Window.open()")}}.
     In this case documents with a value of `unsafe-none` (or have not specified any value) are opened into the same BCG, irrespective of whether they are cross-site or same-site.
 
 ## Examples
