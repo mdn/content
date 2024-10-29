@@ -154,7 +154,6 @@ To show the effect of this we've included another font using "League Mono" that 
 }
 
 @font-face {
-@font-face {
   font-family: "FireSans";
   src: url("https://mdn.github.io/shared-assets/fonts/FiraSans-Regular.woff2");
 }
