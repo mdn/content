@@ -9,7 +9,8 @@ browser-compat: api.CSSNestedDeclarations
 
 The **`CSSNestedDeclarations`** interface of the [CSS Rule API](/en-US/docs/Web/API/CSSRule) allows the nesting of `CSSRules` within each other.
 
-> [!NOTE] > [Browser versions](#browser_compatibility) that implementations that do not support this interface may parse nested rules in the wrong order.
+> [!NOTE]
+> [Browser versions](#browser_compatibility) that implementations that do not support this interface may parse nested rules in the wrong order.
 
 {{InheritanceDiagram}}
 
