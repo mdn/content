@@ -47,7 +47,7 @@ if (document.prerendering) {
 
 ### Measuring prerendering activations
 
-Code following the above pattern will not suffice for measuring how often a prerender is activated, because it's possible for the code to run after prerendering activation. Instead, use the following pattern:
+The previous code will not suffice for measuring how often a prerender is activated, because it's possible for that code to run after prerendering activation. Instead, use the following pattern:
 
 ```js
 if (document.prerendering) {
