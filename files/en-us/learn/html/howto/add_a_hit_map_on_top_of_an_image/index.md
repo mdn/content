@@ -33,7 +33,7 @@ Here we go over how to set up an image map, and some downsides to consider first
 
 When you nest an image inside {{htmlelement('a')}}, the entire image links to one webpage. An image map, on the other hand, contains several active regions (called "hotspots") that each link to a different resource.
 
-Formerly, image maps were a popular navigation device, but it's important to thoroughly consider their performance and accessibility ramifications. 
+Formerly, image maps were a popular navigation device, but it's important to thoroughly consider their performance and accessibility ramifications.
 
 > [!WARNING]
 > Multiple images referencing the same image map may lead to unexpected browser behavior, severely degrading usability and accessibility. For example, when a user keyboard navigates an image with a re-used image map in Safari and Chromium-based browsers, latter image instances using that same image map are skipped entirely. In Firefox, all image maps get keyboard focus simultaneously and when the user keyboard navigates past the image, the next focused element is the one after the last image instance, effectively skipping everything between the two images.
