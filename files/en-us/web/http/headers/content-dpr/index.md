@@ -14,7 +14,7 @@ The HTTP **`Content-DPR`** {{Glossary("response header")}} is used to confirm th
 
 > [!NOTE]
 > The `Content-DPR` header was removed from the client hints specification in [draft-ietf-httpbis-client-hints-07](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-07).
-> The [Responsive Image Client Hints](https://wicg.github.io/responsive-image-client-hints/) spec proposes to replace this header by specifying intrinsic resolution/dimensions in EXIF metadata.
+> The [Responsive Image Client Hints](https://wicg.github.io/responsive-image-client-hints/) specification proposes to replace this header by specifying intrinsic resolution/dimensions in EXIF metadata.
 
 <table class="properties">
   <tbody>
@@ -38,9 +38,9 @@ The HTTP **`Content-DPR`** {{Glossary("response header")}} is used to confirm th
   </tbody>
 </table>
 
-If the {{HTTPHeader("DPR")}} client hint is used to select an image the server must specify `Content-DPR` in the response. If the value in `Content-DPR` is different from the {{HTTPHeader("DPR")}} value in the request (i.e., image DPR is not the same as screen DPR) then the client must use the `Content-DPR` for determining intrinsic image size and scaling the image.
+If the {{HTTPHeader("DPR")}} client hint is used to select an image, the server must specify `Content-DPR` in the response. If the value in `Content-DPR` is different from the {{HTTPHeader("DPR")}} value in the request (i.e., image DPR is not the same as screen DPR), the client must use the `Content-DPR` for determining intrinsic image size and scaling the image.
 
-If the `Content-DPR` header appears more than once in a message the last occurrence is used.
+If the `Content-DPR` header appears more than once in a message, the last occurrence is used.
 
 ## Syntax
 
@@ -71,4 +71,4 @@ See the [`DPR`](/en-US/docs/Web/HTTP/Headers/DPR#examples) header example.
   - {{HTTPHeader("Width")}}
 - {{HTTPHeader("Accept-CH")}}
 - [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}}
-- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) on developer.chrome.com (2020)

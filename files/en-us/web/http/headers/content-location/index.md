@@ -8,11 +8,11 @@ browser-compat: http.headers.Content-Location
 {{HTTPSidebar}}
 
 The HTTP **`Content-Location`** header indicates an alternate location for the returned data.
-The principal use is to indicate the URL of a resource transmitted as the result of [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation).
+It's main use is to indicate the URL of a resource transmitted as the result of [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation).
 
-{{HTTPHeader("Location")}} and `Content-Location` are different.
-`Location` indicates the target of a redirection (`3XX`) or the URL of a newly created resource in a {{HTTPStatus("201", "201 Created")}}.
-`Content-Location` indicates the direct URL to use to access the resource when [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) happened, so the client doesn't need to initiate content negotiation for the resource again in future.
+The `Content-Location` header is different from the {{HTTPHeader("Location")}} header.
+`Content-Location` indicates the direct URL to access the resource when [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) has happened, allowing the client to bypass future content negotiation for this resource.
+`Location`, on the other hand, indicates either the target of a `3XX` redirection or the URL of a newly created resource in a {{HTTPStatus("201", "201 Created")}} response.
 
 <table class="properties">
   <tbody>
@@ -36,9 +36,7 @@ Content-Location: <url>
 ## Directives
 
 - `<url>`
-  - : A [relative](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#absolute_urls_vs._relative_urls)
-    (to the request URL) or [absolute](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#absolute_urls_vs._relative_urls)
-    URL.
+  - : A URL that can be [absolute](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#absolute_urls_vs._relative_urls) or [relative](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#absolute_urls_vs._relative_urls) to the request URL.
 
 ## Examples
 

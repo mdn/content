@@ -7,7 +7,7 @@ browser-compat: http.headers.Clear-Site-Data
 
 {{securecontext_header}}{{HTTPSidebar}}
 
-The HTTP **`Clear-Site-Data`** {{Glossary("response header")}} clears browsing data (cookies, storage, cache) associated with the requesting website. It allows web developers to have more control over the data stored by a client browser for their origins.
+The HTTP **`Clear-Site-Data`** {{Glossary("response header")}} clears browsing data (such as cookies, storage, cache) associated with the requesting website. It allows web developers to have more control over the data stored by browsers for their origins.
 
 <table class="properties">
   <tbody>
@@ -24,8 +24,6 @@ The HTTP **`Clear-Site-Data`** {{Glossary("response header")}} clears browsing d
 
 ## Syntax
 
-The `Clear-Site-Data` header accepts one or more directives.
-If all types of data should be cleared, the wildcard directive (`"*"`) can be used.
 
 ```http
 // Single directive
@@ -49,7 +47,7 @@ Clear-Site-Data: "*"
 
 - `"clientHints"` {{Experimental_Inline}}
 
-  - : Indicates that the server wishes to remove all [client hints](/en-US/docs/Web/HTTP/Client_hints) (requested via {{HTTPHeader("Accept-CH")}}) stored for the origin of the response URL.
+  - : Indicates that the server will remove all [client hints](/en-US/docs/Web/HTTP/Client_hints) (requested via {{HTTPHeader("Accept-CH")}}) stored for the origin of the response URL.
 
     > [!NOTE]
     > In browsers that support the `"clientHints"` data type, client hints are also cleared when the `"cache"`, `"cookies"`, or `"*"` types are specified. `"clientHints"` is therefore only needed when none of those other types are specified.

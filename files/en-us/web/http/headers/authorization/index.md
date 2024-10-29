@@ -11,7 +11,7 @@ The HTTP **`Authorization`** {{Glossary("request header")}} can be used to provi
 
 The `Authorization` header is usually, but not always, sent after the user agent first attempts to request a protected resource without credentials.
 The server responds with a {{HTTPStatus("401", "401 Unauthorized")}} message that includes at least one {{HTTPHeader("WWW-Authenticate")}} header.
-This header indicates what authentication schemes can be used to access the resource and any additional information needed by the client to use them.
+This header indicates the authentication schemes that can be used to access the resource and any additional information needed by the client to use them.
 The user-agent should select the most secure authentication scheme that it supports from those offered, prompt the user for their credentials, and then re-request the resource with the encoded credentials in the `Authorization` header.
 
 This header is stripped from cross-origin redirects.
@@ -73,7 +73,7 @@ Authorization: Digest username=<username>,
 Other than `<auth-scheme>` the remaining directives are specific to each [authentication scheme](/en-US/docs/Web/HTTP/Authentication#authentication_schemes).
 Generally you will need to check the relevant specifications for these (keys for a small subset of schemes are listed below).
 
-### Basic
+### Basic authentication
 
 - `<credentials>`
 
@@ -122,13 +122,13 @@ Generally you will need to check the relevant specifications for these (keys for
 
 ### Basic authentication
 
-For `Basic` authentication, the credentials are constructed by first combining the username and the password with a colon (`aladdin:opensesame`), and then by encoding the resulting string in [`base64`](/en-US/docs/Glossary/Base64) (`YWxhZGRpbjpvcGVuc2VzYW1l`).
+For `Basic` authentication, the credentials are constructed by first combining the username and the password with a colon (e.g., `aladdin:opensesame`), and then by encoding the resulting string in [`base64`](/en-US/docs/Glossary/Base64) (e.g., `YWxhZGRpbjpvcGVuc2VzYW1l`).
 
 ```http
 Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 ```
 
-> **Warning:** {{Glossary("Base64")}}-encoding can easily be reversed to obtain the original name and password, so Basic authentication offers no cryptographic security.
+> **Warning:** {{Glossary("Base64")}}-encoding can easily be reversed to obtain the original name and password, so `Basic` authentication offers no cryptographic security.
 > {{Glossary("HTTPS")}} is always recommended when using authentication, but is even more so when using `Basic` authentication.
 
 See also [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) for examples on how to configure Apache or Nginx servers to password protect your site with HTTP basic authentication.
