@@ -45,7 +45,7 @@ Date: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 ## Directives
 
 - `<day-name>`
-  - : One of "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", or "Sun" (case-sensitive).
+  - : One of `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, `Sat`, or `Sun` (case-sensitive).
 - `<day>`
   - : 2 digit day number, e.g., "04" or "23".
 - `<month>`
