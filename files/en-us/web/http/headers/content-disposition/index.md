@@ -42,7 +42,7 @@ Content-Disposition: attachment; filename="file name.jpg"
 Content-Disposition: attachment; filename*=UTF-8''file%20name.jpg
 ```
 
-The quotes around the filename are optional, but are necessary if you use special characters in the filename, such as spaces.
+The quotes around the file name are optional, but are necessary if you use special characters in the file name, such as spaces.
 
 The parameters `filename` and `filename*` differ only in that `filename*` uses the encoding defined in [RFC 5987, section 3.2](hhttps://www.rfc-editor.org/rfc/rfc5987.html#section-3.2).
 When both `filename` and `filename*` are present in a single header field value, `filename*` is preferred over `filename` when both are understood. It's recommended to include both for maximum compatibility, and you can convert `filename*` to `filename` by substituting non-ASCII characters with ASCII equivalents (such as converting `é` to `e`).
@@ -97,8 +97,8 @@ Content-Length: 21
 <HTML>Save me!</HTML>
 ```
 
-The HTML file will be saved as a downloaded file rather than displayed in the browser like visited web pages.
-Most browsers will propose to save it under the `cool.html` file name by default (specified in the `filename` directive).
+The HTML file will be downloaded rather than displayed in the browser.
+Most browsers will prompt users to save it with the `cool.html` file name by default (as specified in the `filename` directive).
 
 ### HTML posting multipart/form-data content type
 

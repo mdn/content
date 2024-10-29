@@ -37,17 +37,11 @@ This header is stripped from cross-origin redirects.
 
 ```http
 Authorization: <auth-scheme> <authorization-parameters>
-```
 
-Basic authentication
-
-```http
+// Basic authentication
 Authorization: Basic <credentials>
-```
 
-Digest authentication
-
-```http
+// Digest authentication
 Authorization: Digest username=<username>,
     realm="<realm>",
     uri="<url>",
@@ -70,8 +64,8 @@ Authorization: Digest username=<username>,
     > [!NOTE]
     > For more information/options see [HTTP Authentication > Authentication schemes](/en-US/docs/Web/HTTP/Authentication#authentication_schemes)
 
-Other than `<auth-scheme>` the remaining directives are specific to each [authentication scheme](/en-US/docs/Web/HTTP/Authentication#authentication_schemes).
-Generally you will need to check the relevant specifications for these (keys for a small subset of schemes are listed below).
+Other than `<auth-scheme>`, the remaining directives are specific to each [authentication scheme](/en-US/docs/Web/HTTP/Authentication#authentication_schemes).
+Generally, you will need to check the relevant specifications for these (keys for a small subset of schemes are listed below).
 
 ### Basic authentication
 
@@ -82,7 +76,7 @@ Generally you will need to check the relevant specifications for these (keys for
     > [!NOTE]
     > For information about the encoding algorithm, see the examples: below, in {{HTTPHeader("WWW-Authenticate")}}, in [HTTP Authentication](/en-US/docs/Web/HTTP/Authentication), and in the relevant specifications.
 
-### Digest
+### Digest authentication
 
 - `<response>`
   - : A string of the hex digits that proves that the user knows a password.

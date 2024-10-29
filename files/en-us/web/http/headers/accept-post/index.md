@@ -42,7 +42,7 @@ Accept-Post: <media-type>/<subtype>, <media-type>/<subtype>
 ```
 
 > [!NOTE]
-> The `Accept-Post` header specifies a media range in the same way as {{HTTPHeader("Accept")}}, except that it has no notion of preference (i.e., no `q` arguments).
+> The `Accept-Post` header specifies a media range in the same way as {{HTTPHeader("Accept")}}, except that it has no notion of preference via `q` ({{Glossary("quality values")}}) arguments.
 > This is because `Accept-Post` is a response header while `Accept` is a request header.
 
 ## Directives
