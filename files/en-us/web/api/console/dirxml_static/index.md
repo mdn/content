@@ -13,7 +13,7 @@ The **`console.dirxml()`** static method displays an interactive tree of the des
 ## Syntax
 
 ```js-nolint
-dirxml(object)
+console.dirxml(object)
 ```
 
 ### Parameters
