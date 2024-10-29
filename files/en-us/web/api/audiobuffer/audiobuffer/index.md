@@ -37,19 +37,6 @@ new AudioBuffer(options)
         agents are required to support sample rates from 8,000 Hz to 96,000 Hz (but are
         allowed to go farther outside this range).
 
-#### Deprecated parameters
-
-The following parameters were previously part of the `AudioBufferOptions` interface in older versions of the Web Audio API specification. They are no longer in use.
-
-- `channelCount` {{Deprecated_Inline}}
-  - : Used to define the number of channels for up-mixing and down-mixing connections to inputs. See {{domxref("AudioNode.channelCount")}}.
-- `channelCountMode` {{Deprecated_Inline}}
-  - : Described the matching of channels between node inputs and outputs. See {{domxref("AudioNode.channelCountMode")}}.
-- `channelInterpretation` {{Deprecated_Inline}}
-  - : Interpreted the meaning of channels for up-mixing and down-mixing, with possible values `"speakers"` or `"discrete"`. See {{domxref("AudioNode.channelInterpretation")}}.
-- `context` {{Deprecated_Inline}}
-  - : A reference to an {{domxref("AudioContext")}}. This parameter was removed from the spec.
-
 ### Exceptions
 
 - `NotSupportedError` {{domxref("DOMException")}}
