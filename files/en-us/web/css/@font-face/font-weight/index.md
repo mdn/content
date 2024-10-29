@@ -9,7 +9,7 @@ browser-compat: css.at-rules.font-face.font-weight
 
 The **`font-weight`** CSS descriptor enables authors to specify a single font weight, or a range of font weights, for the font specified in a {{cssxref("@font-face")}} at-rule. This is then used by the browser to select the appropriate font when a CSS rule sets the desired weight of a font.
 
-Unless it contains a [variable font](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide), a single font file contains characters from a font family in a specific weight and style: for example, "Helvetica bold italic". Typically, a developer will want to use fonts from a single font family in a range of different weights. To accomplish this, you can define multiple {{cssxref("@font-face")}} at-rules for the same family, one for each weight, and set the `font-weight` descriptor to match the font's weight. Then CSS rules can select a font in the appropriate weight by setting the {{cssxref("font-weight")}} property or the {{cssxref("font")}} shorthand property.
+Unless it contains a [variable font](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide), a single font file contains characters from a font family in a specific weight and style: for example, "Helvetica bold italic". Typically, a developer will want to use fonts from a single font family in a range of different weights. To accomplish this, you can define multiple {{cssxref("@font-face")}} at-rules for the same family, one for each weight, and set the `font-weight` descriptor to define the weight range for which that particular font file will be used. When CSS rules set a font weight by setting the {{cssxref("font-weight")}} property or the {{cssxref("font")}} shorthand property, the  appropriate font will then be used.
 
 If a font file contains a variable font, it may support a range of font weights. To reflect this, the `font-weight` descriptor can specify the range of font weights for which the font should be used as a space-separated pair of font-weight values.
 
@@ -138,10 +138,10 @@ To show the effect of this we've included another font using "League Mono" that 
 #### HTML
 
 ```html
-<p class="one">League Mono, font-weight 100</p>
-<p class="two">League Mono, font-weight 900</p>
-<p class="three">League Mono-complete, font-weight 100</p>
-<p class="four">League Mono-complete, font-weight 900</p>
+<p class="one">League Mono-complete, font-weight 200</p>
+<p class="two">League Mono, font-weight 400</p>
+<p class="three">League Mono, font-weight 600</p>
+<p class="four">League Mono-complete, font-weight 800</p>
 ```
 
 #### CSS
@@ -159,27 +159,24 @@ To show the effect of this we've included another font using "League Mono" that 
 }
 
 p {
+  font-family: "League Mono", "League Mono-complete", serif;
   font-size: 1.5rem;
 }
 
 p.one {
-  font-family: "League Mono", serif;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 p.two {
-  font-family: "League Mono", serif;
-  font-weight: 900;
+  font-weight: 400;
 }
 
 p.three {
-  font-family: "League Mono-complete", serif;
-  font-weight: 100;
+  font-weight: 600;
 }
 
 p.four {
-  font-family: "League Mono-complete", serif;
-  font-weight: 900;
+  font-weight: 800;
 }
 ```
 
