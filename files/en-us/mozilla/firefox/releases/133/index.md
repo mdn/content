@@ -38,6 +38,8 @@ This article provides information about the changes in Firefox 133 that affect d
 
 ### APIs
 
+- The {{domxref("ImageDecoder")}}, {{domxref("ImageTrackList")}}, and {{domxref("ImageTrack")}} interfaces of the [WebCodecs API](/en-US/docs/Web/API/WebCodecs_API) are now supported, enabling the decoding images from the main and worker threads. ([Firefox bug 1923755](https://bugzil.la/1923755)).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
