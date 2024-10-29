@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.EventSource.withCredentials
 ---
 
-{{APIRef('WebSockets API')}}
+{{APIRef("Server Sent Events")}}{{AvailableInWorkers}}
 
 The **`withCredentials`** read-only property of the
 {{domxref("EventSource")}} interface returns a boolean value indicating whether

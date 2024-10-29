@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Performance.getEntriesByName
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`getEntriesByName()`** method returns an array of {{domxref("PerformanceEntry")}} objects currently present in the performance timeline with the given _name_ and _type_.
 

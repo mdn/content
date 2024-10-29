@@ -2,7 +2,9 @@
 title: CSS scroll snap
 slug: Web/CSS/CSS_scroll_snap
 page-type: css-module
-spec-urls: https://drafts.csswg.org/css-scroll-snap/
+spec-urls:
+  - https://drafts.csswg.org/css-scroll-snap/
+  - https://drafts.csswg.org/css-scroll-snap-2/
 ---
 
 {{CSSRef}}
@@ -58,10 +60,23 @@ To see the code for this example, [view the source on GitHub](https://github.com
   - {{cssxref("scroll-margin-block-end")}}
 - {{cssxref("scroll-snap-stop")}}
 
+### Events
+
+- {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} {{experimental_inline}}
+- {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} {{experimental_inline}}
+
+### Interfaces
+
+- {{domxref("SnapEvent")}} {{experimental_inline}}
+  - {{domxref("SnapEvent.snapTargetBlock")}} {{experimental_inline}}
+  - {{domxref("SnapEvent.snapTargetInline")}} {{experimental_inline}}
+
 ## Guides
 
 - [Basic concepts of CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap/Basic_concepts)
   - : An overview and examples of CSS scroll snap features.
+- [Using scroll snap events](/en-US/docs/Web/CSS/CSS_scroll_snap/Using_scroll_snap_events)
+  - : A guide to using the {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} and {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} scroll snap events that are fired when the browser determines a new snap target is pending or selected.
 
 ## Related concepts
 
@@ -71,7 +86,8 @@ To see the code for this example, [view the source on GitHub](https://github.com
 - Element {{domxref("Element.scrollBy", "scrollBy()")}} method
 - Element {{domxref("Element.scrollIntoView", "scrollIntoView()")}} method
 - Element {{domxref("Element.scrollTo", "scrollTo()")}} method
-- Document {{domxref("Document.scroll_event", "scroll")}} event
+- Element {{domxref("Element.scroll_event", "scroll")}} event
+- Element {{domxref("Element.scrollend_event", "scrollend")}} event
 - [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role) ARIA role
 - {{Glossary("Scroll container")}} glossary term
 

@@ -18,8 +18,8 @@ See [Stack traces](/en-US/docs/Web/API/console#stack_traces) in the {{domxref("c
 ## Syntax
 
 ```js-nolint
-trace()
-trace(object1, /* …, */ objectN)
+console.trace()
+console.trace(object1, /* …, */ objectN)
 ```
 
 ### Parameters

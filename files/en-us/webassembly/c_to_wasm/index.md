@@ -144,13 +144,13 @@ If you want to call a function defined in your C code from JavaScript, you can u
 6. Add a {{HTMLElement("button")}} element as shown below, just above the first opening `<script type='text/javascript'>` tag.
 
    ```html
-   <button id="mybutton">Run myFunction</button>
+   <button id="my-button">Run myFunction</button>
    ```
 
 7. Now add the following code at the end of the first {{HTMLElement("script")}} element:
 
    ```js
-   document.getElementById("mybutton").addEventListener("click", () => {
+   document.getElementById("my-button").addEventListener("click", () => {
      alert("check console");
      const result = Module.ccall(
        "myFunction", // name of C function

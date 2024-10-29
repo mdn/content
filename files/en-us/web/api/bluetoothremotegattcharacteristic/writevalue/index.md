@@ -36,5 +36,3 @@ A {{jsxref("Promise")}}.
 ## Browser compatibility
 
 {{Compat}}
-
-{{APIRef("Web Bluetooth")}}

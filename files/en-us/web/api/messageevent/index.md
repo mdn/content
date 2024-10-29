@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.MessageEvent
 ---
 
-{{APIRef("HTML DOM")}} {{AvailableInWorkers}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
 The **`MessageEvent`** interface represents a message received by a target object.
 
@@ -41,7 +41,7 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 - {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
   - : A `MessageEventSource` (which can be a {{glossary("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) representing the message emitter.
 - {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
-  - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g. in channel messaging or when sending a message to a shared worker).
+  - : An array of {{domxref("MessagePort")}} objects containing all {{domxref("MessagePort")}} objects sent with the message, in order.
 
 ## Instance methods
 

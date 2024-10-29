@@ -220,7 +220,7 @@ Let's look at a quick example — see [`aria-no-live.html`](https://github.com/m
 </section>
 ```
 
-Our JavaScript uses the {{domxref("Window/fetch", "fetch()")}} API to load a JSON file via containing a series of random quotes and their authors. Once that is done, we start up a [`setInterval()`](/en-US/docs/Web/API/setInterval) loop that loads a new random quote into the quote box every 10 seconds:
+Our JavaScript uses the {{domxref("Window.fetch", "fetch()")}} API to load a JSON file via containing a series of random quotes and their authors. Once that is done, we start up a {{domxref("Window.setInterval", "setInterval()")}} loop that loads a new random quote into the quote box every 10 seconds:
 
 ```js
 const intervalID = setInterval(showQuote, 10000);
@@ -343,18 +343,18 @@ which is hidden from view using absolute positioning. When this is checked/unche
 
 ```js
 function toggleMusician(bool) {
-  const instruItem = formItems[formItems.length - 1];
+  const instrument = formItems[formItems.length - 1];
   if (bool) {
-    instruItem.input.disabled = false;
-    instruItem.label.style.color = "#000";
-    instruItem.input.setAttribute("aria-disabled", "false");
+    instrument.input.disabled = false;
+    instrument.label.style.color = "#000";
+    instrument.input.setAttribute("aria-disabled", "false");
     hiddenAlert.textContent =
       "Instruments played field now enabled; use it to tell us what you play.";
   } else {
-    instruItem.input.disabled = true;
-    instruItem.label.style.color = "#999";
-    instruItem.input.setAttribute("aria-disabled", "true");
-    instruItem.input.removeAttribute("aria-label");
+    instrument.input.disabled = true;
+    instrument.label.style.color = "#999";
+    instrument.input.setAttribute("aria-disabled", "true");
+    instrument.input.removeAttribute("aria-label");
     hiddenAlert.textContent = "Instruments played field now disabled.";
   }
 }

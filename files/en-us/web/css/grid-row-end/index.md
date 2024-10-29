@@ -18,16 +18,16 @@ The **`grid-row-end`** [CSS](/en-US/docs/Web/CSS) property specifies a grid item
 grid-row-end: auto;
 
 /* <custom-ident> values */
-grid-row-end: somegridarea;
+grid-row-end: some-grid-area;
 
 /* <integer> + <custom-ident> values */
 grid-row-end: 2;
-grid-row-end: somegridarea 4;
+grid-row-end: some-grid-area 4;
 
 /* span + <integer> + <custom-ident> values */
 grid-row-end: span 3;
-grid-row-end: span somegridarea;
-grid-row-end: 5 somegridarea span;
+grid-row-end: span some-grid-area;
+grid-row-end: 5 some-grid-area span;
 
 /* Global values */
 grid-row-end: inherit;

@@ -7,7 +7,7 @@ browser-compat: css.properties.scroll-snap-align
 
 {{CSSRef}}
 
-The `scroll-snap-align` property specifies the box's snap position as an alignment of its snap area (as the alignment subject) within its snap container's snap port (as the alignment container).
+The `scroll-snap-align` property specifies the box's snap position as an alignment of its [snap area](/en-US/docs/Glossary/Scroll_snap#snap_area) (as the alignment subject) within its snap container's snap port (as the alignment container).
 
 {{EmbedInteractiveExample("pages/css/scroll-snap-align.html")}}
 
@@ -40,7 +40,7 @@ One or two values can be specified for the `scroll-snap-align` property. If one 
 - `none`
   - : The box does not define a snap position in that axis.
 - `start`
-  - : The start alignment of this box's scroll snap area, within the scroll container's snapport is a snap position in this axis.
+  - : The start alignment of this box's scroll [snap area](/en-US/docs/Glossary/Scroll_snap#snap_area), within the scroll container's [snapport](/en-US/docs/Glossary/Scroll_snap#snapport) is a snap position in this axis.
 - `end`
   - : The end alignment of this box's scroll snap area, within the scroll container's snapport is a snap position in this axis.
 - `center`

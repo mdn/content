@@ -70,7 +70,7 @@ To create an interactive widget that has a tabular structure, use the `grid` pat
 - `role="rowgroup"`
   - : An optional child of the table, the row group encapsulates a group of rows, similar to {{HTMLElement('thead')}}, {{HTMLElement('tbody')}}, and {{HTMLElement('tfoot')}}.
 - [`role="row"`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
-  - : A row within the table, and optionally within a rowgroup, that is a container for one or more cells, columnheaders, or rowheaders.
+  - : A row within the table, and optionally within a rowgroup that contains one or more cells, column headers, or row headers.
 - [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) attribute
   - : Takes as its value the id of the element that serves as a description for the table.
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute

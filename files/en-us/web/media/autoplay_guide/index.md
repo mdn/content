@@ -127,7 +127,7 @@ That means that the first time the `play` event is fired, you know your media is
 Consider this HTML for a media element:
 
 ```html
-<video src="myvideo.mp4" id="video" autoplay></video>
+<video src="my-video.mp4" id="video" autoplay></video>
 ```
 
 Here we have a {{HTMLElement("video")}} element whose [`autoplay`](/en-US/docs/Web/HTML/Element/video#autoplay) attribute is set and with a {{domxref("HTMLMediaElement.play_event", "play")}} event handler set up; the event is handled by a function called `handleFirstPlay()`, which receives as input the `play` event.
@@ -205,7 +205,7 @@ We then add a {{jsxref("Promise.catch", "catch()")}} handler to the promise. Thi
 
 Any other errors are handled as appropriate.
 
-If you want to start playing the video after the first interaction with the page, [`setInterval()`](/en-US/docs/Web/API/setInterval) might be used to achieve this:
+If you want to start playing the video after the first interaction with the page, {{domxref("Window.setInterval", "setInterval()")}} might be used to achieve this:
 
 ```js
 let playAttempt = setInterval(() => {
@@ -226,7 +226,7 @@ In the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), a website or app can 
 
 ## The autoplay Permissions Policy
 
-In addition to the browser-side management and control over autoplay functionality described above, a web server can also express its willingness to allow autoplay to function. The {{Glossary("HTTP")}} {{HTTPHeader("Permissions-Policy")}} header's [`autoplay`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/autoplay) directive is used to control which domains, if any, can be used to autoplay media. By default, the `autoplay` Permissions Policy is set to `self`, indicating that autoplay is permitted as they're hosted on the same domain as the document.
+In addition to the browser-side management and control over autoplay functionality described above, a web server can also express its willingness to allow autoplay to function. The {{Glossary("HTTP")}} {{HTTPHeader("Permissions-Policy")}} header's {{httpheader("Permissions-Policy/autoplay", "autoplay")}} directive is used to control which domains, if any, can be used to autoplay media. By default, the `autoplay` Permissions Policy is set to `self`, indicating that autoplay is permitted as they're hosted on the same domain as the document.
 
 You can also specify an empty allowlist (`()`) to disable autoplay entirely, `*` to allow autoplay from all domains, or one or more specific origins from which media can be automatically played. These origins are separated by space characters.
 

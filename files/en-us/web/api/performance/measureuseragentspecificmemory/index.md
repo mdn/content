@@ -8,7 +8,7 @@ status:
 browser-compat: api.Performance.measureUserAgentSpecificMemory
 ---
 
-{{APIRef("Performance API")}} {{SeeCompatTable}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`measureUserAgentSpecificMemory()`** method is used to estimate the memory usage of a web application including all its iframes and workers.
 
@@ -155,5 +155,5 @@ if (crossOriginIsolated) {
 
 ## See also
 
-- {{domxref("setTimeout()")}}
+- {{domxref("Window.setTimeout", "setTimeout()")}}
 - [Monitor your web page's total memory usage with measureUserAgentSpecificMemory() - web.dev](https://web.dev/articles/monitor-total-page-memory-usage)

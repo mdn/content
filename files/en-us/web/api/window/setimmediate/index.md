@@ -37,13 +37,13 @@ The ID of the immediate which can be used later with {{DOMxRef("window.clearImme
 
 ## Notes
 
-The {{DOMxRef("Window.clearImmediate", "clearImmediate")}} method can be used to clear the immediate actions, just like {{DOMxRef("clearTimeout")}} for {{DOMxRef("setTimeout()")}}.
+The {{DOMxRef("Window.clearImmediate", "clearImmediate()")}} method can be used to clear the immediate actions, just like {{DOMxRef("Window.clearTimeout", "clearTimeout()")}} for {{DOMxRef("Window.setTimeout", "setTimeout()")}}.
 
 This method can be used instead of the `setTimeout(fn, 0)` method to execute [heavy operations](https://humanwhocodes.com/blog/2009/08/11/timed-array-processing-in-javascript/).
 
 The feature can be emulated in a few different ways:
 
-- {{DOMxRef("Window.postMessage", "postMessage")}} can be used to trigger an immediate but yielding callback.
+- {{DOMxRef("Window.postMessage", "postMessage()")}} can be used to trigger an immediate but yielding callback.
 - {{DOMxRef("MessageChannel")}} can be used reliably inside of Web Workers whereas the
   semantics of postMessage mean it cannot be used there.
 - `setTimeout(fn, 0)` _can_ potentially be used, however as it is clamped to 4ms for timers nested more than 5 levels deep [per the HTML spec](https://html.spec.whatwg.org/multipage/webappapis.html#timers), it does not make for a suitable polyfill for the natural immediacy of `setImmediate`.

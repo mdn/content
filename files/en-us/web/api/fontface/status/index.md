@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.FontFace.status
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{APIRef("CSS Font Loading API")}}{{AvailableInWorkers}}
 
 The **`status`** read-only property of the {{domxref("FontFace")}} interface returns an enumerated value indicating the status of the font, one of `"unloaded"`, `"loading"`, `"loaded"`, or `"error"`.
 
