@@ -24,7 +24,6 @@ The HTTP **`Clear-Site-Data`** {{Glossary("response header")}} clears browsing d
 
 ## Syntax
 
-
 ```http
 // Single directive
 Clear-Site-Data: "cache"
