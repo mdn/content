@@ -58,12 +58,12 @@ const [] = nonIterable1;
 ### Array destructuring a non-iterable
 
 ```js example-bad
-const myobj = { arrayOrObjProp1: {}, arrayOrObjProp2: [42] };
+const myObj = { arrayOrObjProp1: {}, arrayOrObjProp2: [42] };
 
 const {
   arrayOrObjProp1: [value1],
   arrayOrObjProp2: [value2],
-} = myobj; // TypeError: object is not iterable
+} = myObj; // TypeError: object is not iterable
 
 console.log(value1, value2);
 ```

@@ -149,10 +149,14 @@
         "ImageBitmapRenderingContext",
         "ImageData",
         "OffscreenCanvas",
+        "OffscreenCanvasRenderingContext2D",
         "Path2D",
         "TextMetrics"
       ],
-      "methods": ["createImageBitmap()"],
+      "methods": [
+        "Window.createImageBitmap()",
+        "WorkerGlobalScope.createImageBitmap()"
+      ],
       "properties": [],
       "events": []
     },
@@ -792,7 +796,7 @@
         "Window",
         "WorkletGlobalScope"
       ],
-      "methods": ["reportError"],
+      "methods": [],
       "properties": [],
       "events": [
         "Document: DOMContentLoaded",
@@ -947,6 +951,17 @@
       "methods": [],
       "properties": [],
       "events": []
+    },
+    "Invoker Commands API": {
+      "overview": ["Invoker Commands API"],
+      "guides": [],
+      "interfaces": ["CommandEvent"],
+      "methods": [],
+      "properties": [
+        "HTMLButtonElement.commandForElement",
+        "HTMLButtonElement.command"
+      ],
+      "events": ["HTMLElement: command"]
     },
     "Keyboard API": {
       "overview": ["Keyboard API"],
@@ -2099,7 +2114,7 @@
         "HIDConnectionEvent"
       ],
       "methods": [],
-      "properties": ["Navigator.hid"],
+      "properties": ["Navigator.hid", "WorkerNavigator.hid"],
       "events": []
     },
     "Web Locks API": {

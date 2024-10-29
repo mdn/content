@@ -37,7 +37,7 @@ The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule"
 `myRules[0]` returns a {{domxref("CSSKeyframesRule")}} object. Calling findRule("to") returns a {{domxref("CSSKeyframeRule")}} representing the second rule.
 
 ```css
-@keyframes slidein {
+@keyframes slide-in {
   from {
     transform: translateX(0%);
   }

@@ -159,14 +159,14 @@ CSS anchor positioning changes this paradigm, enabling anchor-positioned element
 The function components look like this:
 
 ```plain
-anchor(<anchor-element> <anchor-side>, <fallback>)
+anchor(<anchor-name> <anchor-side>, <fallback>)
 ```
 
-- `<anchor-element>`
+- `<anchor-name>`
 
   - : The [`anchor-name`](/en-US/docs/Web/CSS/anchor-name) property value of the anchor element you want to position the element's side relative to. This is a `<dashed-ident>` value. If omitted, the element's **default anchor** is used. This is the anchor referenced in its [`position-anchor`](/en-US/docs/Web/CSS/position-anchor) property, or associated with the element via the [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) HTML attribute.
     > [!NOTE]
-    > Specifying an `<anchor-element>` positions the element relative to that anchor, but does not provide element association. Only the `position-anchor` property and `anchor` attributes create the association. While you can position an element's sides relative to multiple anchors by specifying [different `<anchor-element>` values](/en-US/docs/Web/CSS/anchor#element_positioned_relative_to_multiple_anchors) inside different `anchor()` functions on the same element, the positioned element is only associated with a single anchor.
+    > Specifying an `<anchor-name>` positions the element relative to that anchor, but does not provide element association. Only the `position-anchor` property and `anchor` attributes create the association. While you can position an element's sides relative to multiple anchors by specifying [different `<anchor-name>` values](/en-US/docs/Web/CSS/anchor#positioning_an_element_relative_to_multiple_anchors) inside different `anchor()` functions on the same element, the positioned element is only associated with a single anchor.
 
 - [`<anchor-side>`](/en-US/docs/Web/CSS/anchor#anchor-side)
 
@@ -573,10 +573,10 @@ Sizing properties that can accept an `anchor-size()` value include:
 `anchor-size()` functions resolve to {{cssxref("length")}} values. Their syntax looks like this:
 
 ```plain
-anchor-size(<anchor-element> <anchor-size>, <length-percentage>)
+anchor-size(<anchor-name> <anchor-size>, <length-percentage>)
 ```
 
-- `<anchor-element>`
+- `<anchor-name>`
   - : The `<dashed-ident>` name set as the value of the [`anchor-name`](/en-US/docs/Web/CSS/anchor-name) property of the anchor element you want to size the element relative to. If omitted, the element's **default anchor**, which is the anchor referenced in the [`position-anchor`](/en-US/docs/Web/CSS/position-anchor) property, is used.
 - [`<anchor-size>`](/en-US/docs/Web/CSS/anchor-size#anchor-size)
   - : Specifies the dimension of the anchor element that the positioned element will be sized relative to. This can be expressed using physical (`width` or `height`) or logical (`inline`, `block`, `self-inline`, or `self-block`) values.

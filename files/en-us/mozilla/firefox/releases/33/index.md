@@ -47,7 +47,7 @@ For details please [see the hacks post](https://hacks.mozilla.org/2014/07/event-
 - On Android, support for two new values for the [`name`](/en-US/docs/Web/HTML/Element/meta#name) attribute of {{HTMLElement("meta")}} has been added: `msapplication-TileImage` and `msapplication-TileColor` ([Firefox bug 1014712](https://bugzil.la/1014712)). Example:
 
   ```html
-  <meta name="msapplication-TileImage" content="images/benthepcguy-144.png" />
+  <meta name="msapplication-TileImage" content="images/my-img-144.png" />
   <meta name="msapplication-TileColor" content="#d83434" />
   ```
 

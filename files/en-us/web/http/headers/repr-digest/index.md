@@ -2,13 +2,10 @@
 title: Repr-Digest
 slug: Web/HTTP/Headers/Repr-Digest
 page-type: http-header
-status:
-  - experimental
-browser-compat: http.headers.Repr-Digest
-spec-urls: https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-digest-headers-12
+spec-urls: https://datatracker.ietf.org/doc/html/rfc9530
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{HTTPSidebar}}
 
 The **`Repr-Digest`** response or request header provides a {{Glossary("digest")}} of the [selected representation](https://www.rfc-editor.org/rfc/rfc9110#section-6.4) of the target resource. It is invariant under e.g., {{HTTPHeader("Content-Encoding")}} or {{HTTPHeader("Content-Range")}}, which do affect the {{HTTPHeader("Content-Digest")}}. Furthermore, [Content Negotiation](/en-US/docs/Web/HTTP/Content_negotiation) can result in different selected representations with different representation digests.
 
@@ -126,7 +123,8 @@ Repr-Digest: sha-256=:W8oN3H3CmE/CBpV6ZPNozV2AIDzzQpWL7CCOXyDyDzI=:
 
 ## Browser compatibility
 
-{{Compat}}
+This header has no specification-defined browser integration ("browser compatibility" does not apply).
+Developers can set and get HTTP headers using `fetch()` in order to provide application-specific implementation behavior.
 
 ## See also
 

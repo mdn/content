@@ -23,6 +23,8 @@ The well-known symbol `Symbol.replace`.
 
 ### Using Symbol.replace
 
+<!-- cSpell:ignore tball -->
+
 ```js
 class CustomReplacer {
   constructor(value) {

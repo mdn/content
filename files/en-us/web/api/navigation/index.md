@@ -21,6 +21,8 @@ The Navigation API only exposes history entries created in the current browsing 
 
 _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 
+- {{domxref("Navigation.activation", "activation")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a {{domxref("NavigationActivation")}} object containing information about the most recent cross-document navigation, which "activated" this Document.
 - {{domxref("Navigation.canGoBack", "canGoBack")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns `true` if it is possible to navigate backwards in the navigation history
     (i.e. the {{domxref("Navigation.currentEntry", "currentEntry")}} is not the first one in the history entry list),
@@ -57,6 +59,8 @@ _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
     in cases where the state change will be independent from a navigation or reload.
 
 ## Events
+
+_Inherits events from its parent, {{DOMxRef("EventTarget")}}._
 
 - {{domxref("Navigation/currententrychange_event", "currententrychange")}} {{Experimental_Inline}}
   - : Fired when the {{domxref("Navigation.currentEntry")}} has changed.

@@ -2,16 +2,18 @@ affordance
 affordances
 APNG
 Axess
-bézier
 Bhattacharya
 Brosset
 Brotli
+bézier
 callouts
 Caniuse
 cdylib
 CEST
 CIELAB
 cjpeg
+closewatcher
+commandfor
 Condei
 Damme
 Datagram
@@ -57,6 +59,8 @@ nolint
 okan
 Oklab
 oklch
+onscrollsnapchange
+onscrollsnapchanging
 Paciello
 Pinia
 prophoto
@@ -64,6 +68,8 @@ reprioritize
 rgba
 ripgrep
 rustc
+scrollsnapchange
+scrollsnapchanging
 sctp
 SMIL
 srgb

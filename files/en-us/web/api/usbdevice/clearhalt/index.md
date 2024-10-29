@@ -8,7 +8,7 @@ status:
 browser-compat: api.USBDevice.clearHalt
 ---
 
-{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`clearHalt()`** method of the {{domxref("USBDevice")}}
 interface returns a {{jsxref("promise")}} that resolves when a halt condition is

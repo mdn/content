@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.Error
 
 Runtime errors result in new `Error` objects being created and thrown.
 
-`Error` is a {{Glossary("serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker/postMessage()", "postMessage()")}}.
+`Error` is a {{Glossary("serializable object")}}, so it can be cloned with {{DOMxRef("Window.structuredClone", "structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker/postMessage()", "postMessage()")}}.
 
 ### Error types
 
@@ -48,7 +48,7 @@ Besides the generic `Error` constructor, there are other core error constructors
 - `Error.stackTraceLimit` {{non-standard_inline}}
   - : A non-standard V8 numerical property that limits how many stack frames to include in an error stacktrace.
 - `Error.prepareStackTrace()` {{non-standard_inline}} {{optional_inline}}
-  - : A non-standard V8 function that, if provided by usercode, is called by the V8 JavaScript engine for thrown exceptions, allowing the user to provide custom formatting for stacktraces.
+  - : A non-standard V8 function that, if provided by user code, is called by the V8 JavaScript engine for thrown exceptions, allowing the user to provide custom formatting for stacktraces.
 
 ## Instance properties
 

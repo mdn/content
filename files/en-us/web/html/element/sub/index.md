@@ -25,23 +25,7 @@ Appropriate use cases for `<sub>` include (but aren't necessarily limited to):
 
 - Marking up footnote numbers. See [Footnote numbers](#footnote_numbers) for an example.
 - Marking up the subscript in mathematical variable numbers (although you may also consider using a [MathML](/en-US/docs/Web/MathML) formula for this). See [Variable subscripts](#variable_subscripts).
-- Denoting the number of atoms of a given element within a chemical formula (such as every developer's best friend, C
-
-  <sub>8</sub>
-
-  H
-
-  <sub>10</sub>
-
-  N
-
-  <sub>4</sub>
-
-  O
-
-  <sub>2</sub>
-
-  , otherwise known as "caffeine"). See [Chemical formulas](#chemical_formulas).
+- Denoting the number of atoms of a given element within a chemical formula (such as every developer's best friend, C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, otherwise known as "caffeine"). See [Chemical formulas](#chemical_formulas).
 
 ## Examples
 

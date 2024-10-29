@@ -7,7 +7,7 @@ browser-compat: webextensions.api.alarms
 
 {{AddonSidebar}}
 
-Schedule code to run at a specific time in the future. This is like [`setTimeout()`](/en-US/docs/Web/API/setTimeout) and [`setInterval()`](/en-US/docs/Web/API/setInterval), except that those functions don't work with background pages that are loaded on demand.
+Schedule code to run at a specific time in the future. This is like {{domxref("Window.setTimeout()")}} and {{domxref("Window.setInterval()")}}, except that those functions don't work with background pages that are loaded on demand.
 
 Alarms do not persist across browser sessions. They are created globally across all contexts of a single extension. E.g. alarm created in background script will fire [`onAlarm`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms/onAlarm) event in background script, options page, popup page and extension tabs (and vice versa). Alarms API is not available in [Content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#webextension_apis).
 

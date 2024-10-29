@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.texStorage2D
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.texStorage2D()`** method of the
 [WebGL API](/en-US/docs/Web/API/WebGL_API) specifies all levels of

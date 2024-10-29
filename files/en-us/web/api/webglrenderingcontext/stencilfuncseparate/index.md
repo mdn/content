@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.stencilFuncSeparate
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.stencilFuncSeparate()`** method of
 the [WebGL API](/en-US/docs/Web/API/WebGL_API) sets the front and/or back

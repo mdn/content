@@ -60,7 +60,7 @@ bottom: unset;
   - : Specifies that:
 
     - for _absolutely positioned elements_, the position of the element is based on the {{Cssxref("top")}} property, while `height: auto` is treated as a height based on the content; or if `top` is also `auto`, the element is positioned where it should vertically be positioned if it were a static element.
-    - for _anchor positioned elements_, a percentage withing the {{cssxref("anchor()")}} function specifies the distance, as a percentage, from the start of the element's content along the block axis.
+    - for _anchor positioned elements_, a percentage within the {{cssxref("anchor()")}} function specifies the distance, as a percentage, from the start of the element's content along the block axis.
     - for _relatively positioned elements_, the distance of the element from its normal position is based on the {{Cssxref("top")}} property; or if `top` is also `auto`, the element is not moved vertically at all.
 
 - `inherit`
@@ -132,6 +132,9 @@ div {
 
 ## See also
 
-- {{cssxref("inset")}} shorthand related properties: {{cssxref("top")}}, {{cssxref("left")}}, and {{cssxref("right")}}
-- The mapped logical properties: {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}} and the shorthands {{cssxref("inset-block")}} and {{cssxref("inset-inline")}}
+- {{cssxref("top")}}, {{cssxref("left")}}, and {{cssxref("right")}}
+- {{cssxref("inset")}} shorthand
+- {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}}
+- {{cssxref("inset-block")}} and {{cssxref("inset-inline")}} shorthands
 - {{cssxref("position")}}
+- [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module

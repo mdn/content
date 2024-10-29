@@ -188,11 +188,11 @@ The message object passed into this function is converted into a JSON string by 
 
 #### UI to start a call
 
-The code which handles the `"userlist"` message calls `handleUserlistMsg()`. Here we set up the handler for each connected user in the user list displayed to the left of the chat panel. This function receives a message object whose `users` property is an array of strings specifying the user names of every connected user.
+The code which handles the `"user-list"` message calls `handleUserListMsg()`. Here we set up the handler for each connected user in the user list displayed to the left of the chat panel. This function receives a message object whose `users` property is an array of strings specifying the user names of every connected user.
 
 ```js
-function handleUserlistMsg(msg) {
-  const listElem = document.querySelector(".userlistbox");
+function handleUserListMsg(msg) {
+  const listElem = document.querySelector(".user-list-box");
 
   while (listElem.firstChild) {
     listElem.removeChild(listElem.firstChild);
@@ -375,7 +375,7 @@ function handleNegotiationNeededEvent() {
         sdp: myPeerConnection.localDescription,
       });
     })
-    .catch(reportError);
+    .catch(window.reportError);
 }
 ```
 
@@ -397,7 +397,7 @@ We know the description is valid, and has been set, when the promise returned by
 - `sdp`
   - : The SDP string describing the offer.
 
-If an error occurs, either in the initial `createOffer()` or in any of the fulfillment handlers that follow, an error is reported by invoking our `reportError()` function.
+If an error occurs, either in the initial `createOffer()` or in any of the fulfillment handlers that follow, an error is reported by invoking our `window.reportError()` function.
 
 Once `setLocalDescription()`'s fulfillment handler has run, the ICE agent begins sending {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} events to the {{domxref("RTCPeerConnection")}}, one for each potential configuration it discovers. Our handler for the `icecandidate` event is responsible for transmitting the candidates to the other peer.
 
@@ -462,7 +462,7 @@ Finally, the caller handles the answer message it received by creating a new {{d
 ```js
 function handleVideoAnswerMsg(msg) {
   const desc = new RTCSessionDescription(msg.sdp);
-  myPeerConnection.setRemoteDescription(desc).catch(reportError);
+  myPeerConnection.setRemoteDescription(desc).catch(window.reportError);
 }
 ```
 
@@ -506,7 +506,7 @@ The signaling server delivers each ICE candidate to the destination peer using w
 function handleNewICECandidateMsg(msg) {
   const candidate = new RTCIceCandidate(msg.candidate);
 
-  myPeerConnection.addIceCandidate(candidate).catch(reportError);
+  myPeerConnection.addIceCandidate(candidate).catch(window.reportError);
 }
 ```
 

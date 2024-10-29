@@ -9,7 +9,7 @@ browser-compat: css.types.anchor-size
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`anchor-size()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) enables [sizing anchor-positioned elements](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#sizing_elements_based_on_anchor_size) relative to the dimensions of anchor elements. It returns the `<length>` of a specified side of the target anchor element. `anchor()` is only valid when used within the value of anchor-positioned elements' [sizing properties](#properties_that_accept_anchor-size_function_values).
+The **`anchor-size()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) enables [sizing anchor-positioned elements](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#sizing_elements_based_on_anchor_size) relative to the dimensions of anchor elements. It returns the `<length>` of a specified side of the target anchor element. `anchor-size()` is only valid when used within the value of anchor-positioned elements' [sizing properties](#properties_that_accept_anchor-size_function_values).
 
 For detailed information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide.
 
@@ -35,19 +35,19 @@ block-size: anchor-size(--myAnchor block, 200px);
 The `anchor-size()` function's syntax is as follows:
 
 ```plain
-anchor-size(<anchor-element> <anchor-size>, <length-percentage>)
+anchor-size(<anchor-name> <anchor-size>, <length-percentage>)
 ```
 
 The parameters are:
 
-- `<anchor-element>` {{optional_inline}}
+- `<anchor-name>` {{optional_inline}}
 
   - : The [`anchor-name`](/en-US/docs/Web/CSS/anchor-name) property value of an anchor element you want to size the element relative to. This is a `<dashed-ident>` value. If omitted, the element's default anchor is used.
 
     > [!NOTE]
-    > Specifying an `<anchor-element>` inside an `anchor-size()` function neither associates nor tethers an element to an anchor; it only sizes the element relative to that anchor.
+    > Specifying an `<anchor-name>` inside an `anchor-size()` function neither associates nor tethers an element to an anchor; it only sizes the element relative to that anchor.
 
-- `<anchor-size>`
+- `<anchor-size>` {{optional_inline}}
 
   - : Specifies the dimension of the anchor element that the positioned element will be sized relative to. Valid values include:
 
@@ -90,7 +90,7 @@ Returns a {{cssxref("length")}} value.
 
 ## Description
 
-The `anchor()` function enables a positioned element's sizing values to be expressed in terms of an anchor element's dimensions; it defines the dimension of a specific anchor element the positioned element is being sized relative to. It is a valid value for [sizing properties](#properties_that_accept_anchor-size_function_values) set on anchor-positioned elements. When used, the function returns the {{cssxref("length")}} dimension of an anchor element, with both the anchor element and the dimension being optional parameters.
+The `anchor-size()` function enables a positioned element's sizing values to be expressed in terms of an anchor element's dimensions; it returns a {{cssxref("length")}} value representing the dimension of a specific anchor element the positioned element is being sized relative to. It is a valid value for [sizing properties](#properties_that_accept_anchor-size_function_values) set on anchor-positioned elements.
 
 The length returned is the vertical or horizontal size of an anchor element or its containing block. The dimension used is defined by the `<anchor-size>` parameter. If that parameter is omitted, the dimension used will match the axis of the sizing property is it set on.
 

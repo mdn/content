@@ -27,10 +27,19 @@ This extension exposes one new constant, which can be used in the {{domxref("Web
 The following new functions can be used in GLSL shader code, if this extension is enabled:
 
 ```cpp
-genType dFdx(genType)
-genType dFdy(genType)
-genType fwidth(genType)
+genType dFdx(genType p)
+genType dFdy(genType p)
+genType fwidth(genType p)
 ```
+
+- `dFdx()`
+  - : Returns the derivative in `x` using local differencing for the input argument `p`.
+- `dFdy()`
+  - : Returns the derivative in `y` using local differencing for the input argument `p`.
+- `fwidth()`
+  - : Returns the sum of the absolute derivative in `x` and `y` using local differencing for the input argument `p`. That is, `abs(dFdx(p)) + abs(dFdy(p))`.
+
+`dFdx()` and `dFdy()` are commonly used to estimate the filter width used to anti-alias procedural textures.
 
 ## Examples
 
@@ -49,11 +58,11 @@ Shader code that avoids artifacts when wrapping texture coordinates:
   #extension GL_OES_standard_derivatives : enable
 
   uniform sampler2D myTexture;
-  varying vec2 texcoord;
+  varying vec2 texCoord;
 
   void main(){
-    gl_FragColor = texture2DGradEXT(myTexture, mod(texcoord, vec2(0.1, 0.5)),
-                                    dFdx(texcoord), dFdy(texcoord));
+    gl_FragColor = texture2DGradEXT(myTexture, mod(texCoord, vec2(0.1, 0.5)),
+                                    dFdx(texCoord), dFdy(texCoord));
   }
 </script>
 ```

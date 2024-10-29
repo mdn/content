@@ -122,8 +122,8 @@ The non-standard `version` parameter of the {{htmlelement("script")}} element's 
 ### APIs
 
 - The non-standard method `Event.getPreventDefault()` has been removed. You should instead use the {{domxref("Event.defaultPrevented")}} property to determine whether or not {{domxref("Event.preventDefault", "preventDefault()")}} was called on the {{domxref("Event")}}.
-- The proprietary [`Navigator.mozNotification`](/en-US/docs/Archive/API/Navigator/mozNotification) property and `DesktopNotification` interface have been removed, in favor of the standard [Notifications API](/en-US/docs/Web/API/Notifications_API) ([Firefox bug 952453](https://bugzil.la/952453)).
-- The proprietary `window.external.addSearchEngine()` method has been removed ([Firefox bug 862147](https://bugzil.la/862147)). Also see {{domxref("Window.sidebar")}} for more details.
+- The proprietary `Navigator.mozNotification` property and `DesktopNotification` interface have been removed, in favor of the standard [Notifications API](/en-US/docs/Web/API/Notifications_API) ([Firefox bug 952453](https://bugzil.la/952453)).
+- The proprietary `window.external.addSearchEngine()` method has been removed ([Firefox bug 862147](https://bugzil.la/862147)). Also see {{domxref("Window.external")}} for more details.
 - The non-standard Firefox-only {{domxref("HTMLMediaElement")}} property `mozAutoplayEnabled` has been removed.
 
 ### SVG
