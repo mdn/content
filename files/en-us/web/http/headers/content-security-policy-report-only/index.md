@@ -46,7 +46,7 @@ Content-Security-Policy-Report-Only: <policy-directive>; …; <policy-directive>
 
 ## Directives
 
-All directives of the {{HTTPHeader("Content-Security-Policy")}} header can be applied to `Content-Security-Policy-Report-Only`, except for the `sandbox` directive, which is ignored.
+The `Content-Security-Policy-Report-Only` header supports all {{HTTPHeader("Content-Security-Policy")}} directives except `sandbox`, which is ignored.
 
 > [!NOTE]
 > The CSP {{CSP("report-to")}} directive should be used with this header or it will have no effect.

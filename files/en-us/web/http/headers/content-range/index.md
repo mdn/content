@@ -42,8 +42,8 @@ Content-Range: <unit> */<size>
 ## Directives
 
 - `<unit>`
-  - : The unit in which ranges are specified.
-    Currently only `bytes` is a defined value.
+  - : The unit for specifying ranges.
+    Currently, only `bytes` is supported.
 - `<range-start>`
   - : An integer in the given unit indicating the start position (zero-indexed & inclusive) of the request range.
 - `<range-end>`

@@ -7,7 +7,7 @@ browser-compat: http.headers.Content-Type
 
 {{HTTPSidebar}}
 
-The HTTP **`Content-Type`** {{Glossary("Representation header")}} is used to indicate the original {{Glossary("MIME type", "media type")}} of the resource prior to any content encoding applied before transmission.
+The HTTP **`Content-Type`** {{Glossary("representation header")}} is used to indicate the original {{Glossary("MIME type", "media type")}} of a resource before any content encoding is applied.
 
 In responses, the `Content-Type` header informs the client about the media type of the returned data.
 In requests such as {{HTTPMethod("POST")}} or {{HTTPMethod("PUT")}}, the client uses the `Content-Type` header to specify the type of content being sent to the server.
@@ -71,7 +71,7 @@ Content-Type: multipart/form-data; boundary=ExampleBoundaryString
     May contain the following parameters:
 
     - **`charset`**: Indicates the {{Glossary("character encoding")}} standard used.
-      The value is case insensitive, but lowercase is preferred.
+      The value is case insensitive but lowercase is preferred.
     - **`boundary`**: For multipart entities, the `boundary` parameter is required.
       It is used to demarcate the boundaries of the multiple parts of the message.
       The value consists of 1 to 70 characters (not ending with white space) known to be robust in the context of different systems (e.g., email gateways).

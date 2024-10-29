@@ -9,7 +9,7 @@ browser-compat: http.headers.Critical-CH
 
 {{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The HTTP **`Critical-CH`** [client hint](/en-US/docs/Web/HTTP/Client_hints) response header is used along with {{HttpHeader("Accept-CH")}} to specify that accepted client hints are also [critical client hints](/en-US/docs/Web/HTTP/Client_hints#critical_client_hints).
+The HTTP **`Critical-CH`** {{Glossary("response header")}} is used along with {{HTTPHeader("Accept-CH")}} to identify the accepted [client hints](/en-US/docs/Web/HTTP/Client_hints) that are [critical](/en-US/docs/Web/HTTP/Client_hints#critical_client_hints).
 
 User agents receiving a response with `Critical-CH` must check if the indicated critical headers were sent in the original request. If not, the user agent will retry the request along with the critical headers rather than render the page. This approach ensures that client preferences set using critical client hints are always used, even if not included in the first request, or following server configuration changes.
 
@@ -50,7 +50,7 @@ GET / HTTP/1.1
 Host: example.com
 ```
 
-The server responds, telling the client via {{HTTPHeader("Accept-CH")}} that it accepts {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}. In this example `Critical-CH` is also used, indicating that `Sec-CH-Prefers-Reduced-Motion` is considered a critical client hint.
+The server responds, indicating via {{HTTPHeader("Accept-CH")}} that it accepts {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}. In this example, `Critical-CH` is also used to specify that `Sec-CH-Prefers-Reduced-Motion` is considered a critical client hint.
 
 ```http
 HTTP/1.1 200 OK
