@@ -134,7 +134,6 @@ compositionend
 compositionstart
 compositionupdate
 congres
-Congrès
 connectionavailable
 contentaccessible
 contentdelete
