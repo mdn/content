@@ -9,17 +9,6 @@ browser-compat: http.headers.Date
 
 The HTTP **`Date`** header contains the date and time at which the message originated.
 
-> [!WARNING]
-> The `Date` header is a {{Glossary("Forbidden header name")}}, so this code cannot set the message `Date`, for example:
->
-> ```js
-> fetch("https://httpbin.org/get", {
->   headers: {
->     Date: new Date().toUTCString(),
->   },
-> });
-> ```
-
 <table class="properties">
   <tbody>
     <tr>
@@ -63,8 +52,29 @@ Date: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 
 ## Examples
 
+### Response with a Date header
+
+The following HTTP message is a successful `200` status, with a `Date` header showing the time the message originated.
+Other headers are omitted for brevity:
+
 ```http
-Date: Wed, 21 Oct 2015 07:28:00 GMT
+HTTP/1.1 200
+Content-Type: text/html
+Date: Tue, 29 Oct 2024 16:56:32 GMT
+
+<html lang="en-US" …
+```
+
+### Attempting to set the field value in JavaScript
+
+The `Date` header is a {{Glossary("forbidden header name")}}, so this code cannot set the message `Date` field:
+
+```js example-bad
+fetch("https://httpbin.org/get", {
+  headers: {
+    Date: new Date().toUTCString(),
+  },
+});
 ```
 
 ## Specifications
