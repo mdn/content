@@ -93,7 +93,7 @@ After this, CSS rules can select the normal or the bold font for the "Fira Sans"
 ```html
 <p class="one">Fira Sans, normal weight paragraph</p>
 <p class="two">Fira Sans, bold weight paragraph</p>
-<strong>Fira Sans, default weight &lt;strong&gt; element</strong>
+<p><strong>Fira Sans, default weight &lt;strong&gt; element</strong></p>
 ```
 
 #### CSS
@@ -154,12 +154,13 @@ To show the effect of this we've included another font using "League Mono" that 
 }
 
 @font-face {
-  font-family: "League Mono-complete";
-  src: url("https://mdn.github.io/shared-assets/fonts/LeagueMono-VF.ttf");
+@font-face {
+  font-family: "FireSans";
+  src: url("https://mdn.github.io/shared-assets/fonts/FiraSans-Regular.woff2");
 }
 
 p {
-  font-family: "League Mono", "League Mono-complete", serif;
+  font-family: "League Mono", "FireSans", serif;
   font-size: 1.5rem;
 }
 
@@ -184,10 +185,10 @@ p.four {
 
 The result of this is:
 
-- Setting the `font-weight` property to `100` for "League Mono" gets a weight of 300.
-- Setting the `font-weight` property to `900` for "League Mono" gets a weight of 700.
-- Setting the `font-weight` property to `100` for "League Mono-complete" gets a weight of 100.
-- Setting the `font-weight` property to `900` for "League Mono-complete" gets a weight of 900.
+- Setting the `font-weight` property to `200` gets a `normal` version of FireSans.
+- Setting the `font-weight` property to `400` gets "League Mono" at a weight of 400.
+- Setting the `font-weight` property to `600` gets "League Mono" at a weight of 600.
+- Setting the `font-weight` property to `800` gets a boldened version of "FireSans".
 
 {{embedlivesample("Setting a range for a variable font", "", "400")}}
 
