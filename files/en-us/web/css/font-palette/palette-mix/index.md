@@ -35,7 +35,7 @@ font-palette: palette-mix(in hsl shorter hue, --blues, --yellows)
 
 Functional notation:
 
-```text
+```plain
 palette-mix(method, palette1 [p1], palette2 [p2])
 ```
 
@@ -125,4 +125,5 @@ The output looks like this:
 - {{cssxref("font-palette")}}
 - {{cssxref("@font-palette-values", "@font-palette-values")}}
 - {{cssxref("color_value/color-mix", "color-mix()")}}
-- [Color spaces and color models](/en-US/docs/Web/CSS/CSS_colors/Applying_color#color_spaces_and_color_models) for information about color spaces
+- [CSS color values](/en-US/docs/Web/CSS/CSS_colors/Color_values) guide
+- {{glossary("Color space")}}

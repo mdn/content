@@ -19,7 +19,7 @@ This article provides information about the changes in Firefox 108 that will aff
 
 - [Trigonometric functions](/en-US/docs/Web/CSS/CSS_Functions#trigonometric_functions) are now enabled with the `layout.css.trig.enabled` preference set to `true` by default.
   This allows the use of `sin()`, `cos()`, `tan()`, `asin()`, `acos()`, `atan()`, and `atan2()` functions ([Firefox bug 1774589](https://bugzil.la/1774589), [Firefox bug 1787070](https://bugzil.la/1787070)).
-- CSS [`<calc-constant>`](/en-US/docs/Web/CSS/calc-constant) type is implemented to allow for well-known constants such as `pi` and `e` within [math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions) ([Firefox bug 1682444](https://bugzil.la/1682444), [Firefox bug 1787070](https://bugzil.la/1787070)).
+- CSS [`<calc-constant>`](/en-US/docs/Web/CSS/calc-keyword) type is implemented to allow for well-known constants such as `pi` and `e` within [math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions) ([Firefox bug 1682444](https://bugzil.la/1682444), [Firefox bug 1787070](https://bugzil.la/1787070)).
 - Container query length units are now supported via the `layout.css.container-queries.enabled` preference, which is set to `false` by default.
   Setting this preference to `true` allows the use of `cqw`, `cqh`, `cqi`, `cqb`, `cqmin`, and `cqmax` units of length which are relative to the size of a query container.
   For more information on these units, see the [CSS Container Queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries#container_query_length_units) documentation ([Firefox bug 1744231](https://bugzil.la/1744231)).
@@ -36,7 +36,7 @@ No notable changes
 - [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) HTTP header directives [`script-src-elem`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-elem) and [`script-src-attr`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-attr) are now supported.
   A server can use these to specify valid sources for JavaScript `<script>` elements, and for inline script event handlers like `onclick`, respectively ([Firefox bug 1529337](https://bugzil.la/1529337)).
 - [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) violation reports now include `effective-directive` and `status-code` properties.
-  For more information, see [Violation report syntax](/en-US/docs/Web/HTTP/CSP#violation_report_syntax) ([Firefox bug 1192684](https://bugzil.la/1192684)).
+  For more information, see [Violation report syntax](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri#violation_report_syntax) ([Firefox bug 1192684](https://bugzil.la/1192684)).
 
 ### APIs
 

@@ -3,7 +3,7 @@ title: "MediaTrackConstraints: channelCount property"
 short-title: channelCount
 slug: Web/API/MediaTrackConstraints/channelCount
 page-type: web-api-instance-property
-browser-compat: api.MediaTrackConstraints.channelCount
+browser-compat: api.MediaStreamTrack.applyConstraints.channelCount_constraint
 ---
 
 {{APIRef("Media Capture and Streams")}}

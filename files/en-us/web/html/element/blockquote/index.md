@@ -20,6 +20,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 ## Usage notes
 
+According to the specification, attribution for the quotation, if any, must be placed outside the `<blockquote>` element.
+
 To change the indentation applied to the quoted text, use the {{Glossary("CSS")}} {{cssxref("margin-left")}} and/or {{cssxref("margin-right")}} properties, or the {{cssxref("margin")}} shorthand property.
 
 To include shorter quotes inline rather than in a separate block, use the {{HTMLElement("q")}} (Quotation) element.
@@ -116,3 +118,4 @@ This example demonstrates the use of the `<blockquote>` element to quote a passa
 
 - The {{HTMLElement("q")}} element for inline quotations.
 - The {{HTMLElement("cite")}} element for source citations.
+- [The blockquote element](https://heydonworks.com/article/the-blockquote-element/) via heydonworks.com (2024)

@@ -13,7 +13,8 @@ The **`::placeholder`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/
 
 Only the subset of CSS properties that apply to the {{cssxref("::first-line")}} pseudo-element can be used in a rule using `::placeholder` in its selector.
 
-> **Note:** In most browsers, the appearance of placeholder text is a translucent or light gray color by default.
+> [!NOTE]
+> In most browsers, the appearance of placeholder text is a translucent or light gray color by default.
 
 ## Syntax
 
@@ -23,7 +24,7 @@ Only the subset of CSS properties that apply to the {{cssxref("::first-line")}} 
 }
 ```
 
-## Accessibility concerns
+## Accessibility
 
 ### Color contrast
 
@@ -65,7 +66,7 @@ Placeholder text will appear with the same styling as user-entered text content 
 
 ### Labels
 
-Placeholders are not a replacement for the {{htmlelement("label")}} element. Without a label that has been programmatically associated with an input using a combination of the [`for`](/en-US/docs/Web/HTML/Element/label#for) and [`id`](/en-US/docs/Web/HTML/Global_attributes#id) attributes, assistive technology such as screen readers cannot parse {{htmlelement("input")}} elements.
+Placeholders are not a replacement for the {{htmlelement("label")}} element. Without a label that has been programmatically associated with an input using a combination of the [`for`](/en-US/docs/Web/HTML/Element/label#for) and [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attributes, assistive technology such as screen readers cannot parse {{htmlelement("input")}} elements.
 
 - [Placeholders in Form Fields Are Harmful — Nielsen Norman Group](https://www.nngroup.com/articles/form-design-placeholders/)
 

@@ -32,7 +32,7 @@ scan(options)
 A {{JSxRef("Promise")}} that resolves immediately after
 scheduling read operations for the NFC adapter.
 
-## Exceptions
+### Exceptions
 
 This method doesn't throw exceptions; instead, it rejects the returned promise,
 passing a {{domxref("DOMException")}} whose `name` is one of the

@@ -8,7 +8,7 @@ browser-compat: api.BatteryManager.chargingtimechange_event
 
 {{ApiRef("Battery API")}}{{securecontext_header}}
 
-The **`chargingtimechange`** event of the {{domxref("Battery Status API", "", "", "nocode")}} is fired when the battery {{domxref("BatteryManager.chargingTime", "chargingTime")}} property is updated.
+The **`chargingtimechange`** event of the {{domxref("BatteryManager")}} interface is fired when the battery {{domxref("BatteryManager.chargingTime", "chargingTime")}} property is updated.
 
 ## Syntax
 

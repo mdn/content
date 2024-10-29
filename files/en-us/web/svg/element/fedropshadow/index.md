@@ -9,7 +9,8 @@ browser-compat: svg.elements.feDropShadow
 
 The SVG **`<feDropShadow>`** filter primitive creates a drop shadow of the input image. It can only be used inside a {{SVGElement('filter')}} element.
 
-> **Note:** The drop shadow color and opacity can be changed by using the {{SVGAttr('flood-color')}} and {{SVGAttr('flood-opacity')}} presentation attributes.
+> [!NOTE]
+> The drop shadow color and opacity can be changed by using the {{SVGAttr('flood-color')}} and {{SVGAttr('flood-opacity')}} presentation attributes.
 
 ## Example
 
@@ -62,7 +63,7 @@ svg {
   - : This attribute defines the standard deviation for the blur operation in the drop shadow.
     _Value type_: [**\<number-optional-number>**](/en-US/docs/Web/SVG/Content_type#number-optional-number); _Default value_: `2`; _Animatable_: **yes**
 
-## Usage notes
+## Usage context
 
 {{svginfo}}
 

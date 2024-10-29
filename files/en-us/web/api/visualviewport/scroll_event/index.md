@@ -8,7 +8,7 @@ browser-compat: api.VisualViewport.scroll_event
 
 {{APIRef("Visual Viewport")}}
 
-The **`scroll`** event of the {{domxref("VisualViewport")}} interface is fired when the visual viewport is scrolled.
+The **`scroll`** event of the {{domxref("VisualViewport")}} interface is fired when the visual viewport is scrolled. This allows you to position elements relative to the visual viewport as it is scrolled, which would normally be anchored to the layout viewport.
 
 ## Syntax
 
@@ -26,21 +26,7 @@ A generic {{domxref("Event")}}.
 
 ## Examples
 
-You can use the `scroll` event in an {{domxref("EventTarget.addEventListener", "addEventListener()")}} method:
-
-```js
-visualViewport.addEventListener("scroll", () => {
-  // …
-});
-```
-
-Or use the `onscroll` event handler property:
-
-```js
-visualViewport.onscroll = () => {
-  // …
-};
-```
+See the [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API#examples) landing page for a usage demo.
 
 ## Specifications
 

@@ -25,7 +25,7 @@ You can use this attribute with the following SVG elements:
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#Integer">&#x3C;integer></a
+          ><a href="/en-US/docs/Web/SVG/Content_type#integer">&#x3C;integer></a
           >{10}</code
         >
       </td>

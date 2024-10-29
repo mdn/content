@@ -47,4 +47,4 @@ The `+` and `-` operators **must be surrounded by {{Glossary("whitespace")}}**. 
 
 - {{CSSxRef("&lt;calc-product&gt;")}}
 - {{CSSxRef("&lt;calc-value&gt;")}}
-- {{CSSxRef("&lt;calc-constant&gt;")}}
+- {{CSSxRef("&lt;calc-keyword&gt;")}}

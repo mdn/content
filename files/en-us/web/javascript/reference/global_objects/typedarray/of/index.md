@@ -31,6 +31,7 @@ Where `TypedArray` is one of:
 - {{jsxref("Uint16Array")}}
 - {{jsxref("Int32Array")}}
 - {{jsxref("Uint32Array")}}
+- {{jsxref("Float16Array")}}
 - {{jsxref("Float32Array")}}
 - {{jsxref("Float64Array")}}
 - {{jsxref("BigInt64Array")}}
@@ -50,7 +51,7 @@ A new {{jsxref("TypedArray")}} instance.
 See {{jsxref("Array.of()")}} for more details. There are some subtle distinctions between {{jsxref("Array.of()")}} and
 `TypedArray.of()`:
 
-- If the `this` value passed to `TypedArray.of()` is not a constructor, `TypedArray.from()` will throw a {{jsxref("TypeError")}}, while `Array.of()` defaults to creating a new {{jsxref("Array")}}.
+- If the `this` value passed to `TypedArray.of()` is not a constructor, `TypedArray.of()` will throw a {{jsxref("TypeError")}}, while `Array.of()` defaults to creating a new {{jsxref("Array")}}.
 - `TypedArray.of()` uses `[[Set]]` while `Array.of()` uses `[[DefineOwnProperty]]`. Hence, when working with {{jsxref("Proxy")}} objects, it calls [`handler.set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set) to create new elements rather than [`handler.defineProperty()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty).
 
 ## Examples

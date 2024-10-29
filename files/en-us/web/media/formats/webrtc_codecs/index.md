@@ -10,7 +10,7 @@ The [WebRTC API](/en-US/docs/Web/API/WebRTC_API) makes it possible to construct 
 
 ## Containerless media
 
-WebRTC uses bare {{domxref("MediaStreamTrack")}} objects for each track being shared from one peer to another, without a container or even a {{domxref("MediaStream")}} associated with the tracks. Which codecs can be within those tracks is not mandated by the WebRTC specification. However, {{RFC(7742)}} specifies that all WebRTC-compatible browsers must support [VP8](/en-US/docs/Web/Media/Formats/Video_codecs#vp8) and [H.264](</en-US/docs/Web/Media/Formats/Video_codecs#avc_(h.264)>)'s Constrained Baseline profile for video, and {{RFC(7874)}} specifies that browsers must support at least the [Opus](/en-US/docs/Web/Media/Formats/Audio_codecs#opus) codec as well as [G.711](/en-US/docs/Web/Media/Formats/Audio_codecs#g.711_pulse_code_modulation_of_voice_frequencies)'s PCMA and PCMU formats.
+WebRTC uses bare {{domxref("MediaStreamTrack")}} objects for each track being shared from one peer to another, without a container or even a {{domxref("MediaStream")}} associated with the tracks. Which codecs can be within those tracks is not mandated by the WebRTC specification. However, {{RFC(7742)}} specifies that all WebRTC-compatible browsers must support [VP8](/en-US/docs/Web/Media/Formats/Video_codecs#vp8) and [H.264](/en-US/docs/Web/Media/Formats/Video_codecs#avc_h.264)'s Constrained Baseline profile for video, and {{RFC(7874)}} specifies that browsers must support at least the [Opus](/en-US/docs/Web/Media/Formats/Audio_codecs#opus) codec as well as [G.711](/en-US/docs/Web/Media/Formats/Audio_codecs#g.711_pulse_code_modulation_of_voice_frequencies)'s PCMA and PCMU formats.
 
 These two RFCs also lay out options that must be supported for each codec, as well as specific user comfort features such as echo cancellation. This guide reviews the codecs that browsers are required to implement as well as other codecs that some or all browsers support for WebRTC.
 
@@ -22,7 +22,7 @@ Before looking at codec-specific capabilities and requirements, there are a few 
 
 Unless the {{Glossary("SDP")}} specifically signals otherwise, the web browser receiving a WebRTC video stream must be able to handle video at 20 FPS at a minimum resolution of 320 pixels wide by 240 pixels tall. It's encouraged that video be encoded at a frame rate and size no lower than that, since that's essentially the lower bound of what WebRTC generally is expected to handle.
 
-SDP supports a codec-independent way to specify preferred video resolutions ({{RFC(6236)}}. This is done by sending an `a=imageattr` SDP attribute to indicate the maximum resolution that is acceptable. The sender is not required to support this mechanism, however, so you have to be prepared to receive media at a different resolution than you requested. Beyond this simple maximum resolution request, specific codecs may offer further ways to ask for specific media configurations.
+SDP supports a codec-independent way to specify preferred video resolutions ({{RFC(6236)}}. This is done by sending an `a=image-attr` SDP attribute to indicate the maximum resolution that is acceptable. The sender is not required to support this mechanism, however, so you have to be prepared to receive media at a different resolution than you requested. Beyond this simple maximum resolution request, specific codecs may offer further ways to ask for specific media configurations.
 
 ## Supported video codecs
 
@@ -48,7 +48,7 @@ Below are the video codecs which are _required_ in any fully WebRTC-compliant br
       <td>Chrome, Edge, Firefox, Safari (12.1+)</td>
     </tr>
     <tr>
-      <th scope="row"><a href="#avc">AVC / H.264</a></th>
+      <th scope="row"><a href="#avc_h.264">AVC / H.264</a></th>
       <td>Constrained Baseline (CB)</td>
       <td>
         <p>Chrome (52+), Edge, Firefox, Safari</p>
@@ -72,7 +72,8 @@ For details on WebRTC-related considerations for each codec, see the sub-section
 
 Complete details of what video codecs and configurations WebRTC is required to support can be found in {{RFC(7742, "WebRTC Video Processing and Codec Requirements")}}. It's worth noting that the RFC covers a variety of video-related requirements, including color spaces (sRGB is the preferred, but not required, default color space), recommendations for webcam processing features (automatic focus, automatic white balance, automatic light level), and so on.
 
-> **Note:** These requirements are for web browsers and other fully-WebRTC compliant products. Non-WebRTC products that are able to communicate with WebRTC to some extent may or may not support these codecs, although they're encouraged to by the specification documents.
+> [!NOTE]
+> These requirements are for web browsers and other fully-WebRTC compliant products. Non-WebRTC products that are able to communicate with WebRTC to some extent may or may not support these codecs, although they're encouraged to by the specification documents.
 
 In addition to the mandatory codecs, some browsers support additional codecs as well. Those are listed in the following table.
 
@@ -100,7 +101,7 @@ In addition to the mandatory codecs, some browsers support additional codecs as 
 
 VP8, which we [describe in general](/en-US/docs/Web/Media/Formats/Video_codecs#vp8) in the main [guide to video codecs used on the web](/en-US/docs/Web/Media/Formats/Video_codecs), has some specific requirements that must be followed when using it to encode or decode a video track on a WebRTC connection.
 
-Unless signaled otherwise, VP8 will use square pixels (that is, pixels with an aspect ratio of 1:1).
+Unless signaled otherwise, VP8 will use square pixels (that is, pixels with an {{glossary("aspect ratio")}} of 1:1).
 
 #### Other notes
 
@@ -110,7 +111,7 @@ The network payload format for sharing VP8 using {{Glossary("RTP")}} (such as wh
 
 Support for AVC's Constrained Baseline (CB) profile is required in all fully-compliant WebRTC implementations. CB is a subset of the main profile, and is specifically designed for low-complexity, low-delay applications such as mobile video and videoconferencing, as well as for platforms with lower performing video processing capabilities.
 
-Our [overview of AVC](</en-US/docs/Web/Media/Formats/Video_codecs#avc_(h.264)>) and its features can be found in the main video codec guide.
+Our [overview of AVC](/en-US/docs/Web/Media/Formats/Video_codecs#avc_h.264) and its features can be found in the main video codec guide.
 
 #### Special parameter support requirements
 
@@ -205,7 +206,8 @@ See below for more details about any WebRTC-specific considerations that exist f
 
 It's useful to note that {{RFC(7874)}} defines more than a list of audio codecs that a WebRTC-compliant browser must support; it also provides recommendations and requirements for special audio features such as echo cancellation, noise reduction, and audio leveling.
 
-> **Note:** The list above indicates the minimum required set of codecs that all WebRTC-compatible endpoints are required to implement. A given browser may also support other codecs; however, cross-platform and cross-device compatibility may be at risk if you use other codecs without carefully ensuring that support exists in all browsers your users might choose.
+> [!NOTE]
+> The list above indicates the minimum required set of codecs that all WebRTC-compatible endpoints are required to implement. A given browser may also support other codecs; however, cross-platform and cross-device compatibility may be at risk if you use other codecs without carefully ensuring that support exists in all browsers your users might choose.
 
 In addition to the mandatory audio codecs, some browsers support additional codecs as well. Those are listed in the following table.
 
@@ -315,14 +317,15 @@ peerConnection.addEventListener("icegatheringstatechange", (event) => {
 
 The event handler for `icegatheringstatechange` is established; in it, we look to see if the ICE gathering state is `complete`, indicating that no further candidates will be collected. The method {{domxref("RTCPeerConnection.getSenders()")}} is called to get a list of all the {{domxref("RTCRtpSender")}} objects used by the connection.
 
-With that in hand, we walk through the list of senders, looking for the first one whose {{domxref("MediaStreamTrack")}} indicates that it's {{domxref("MediaStreamTrack.kind", "kind")}} is `video`, indicating that the track's data is video media.
+With that in hand, we walk through the list of senders, looking for the first one whose {{domxref("MediaStreamTrack")}} indicates that its {{domxref("MediaStreamTrack.kind", "kind")}} is `video`, indicating that the track's data is video media.
 We then call that sender's {{domxref("RTCRtpSender.getParameters", "getParameters()")}} method and set `codecList` to the `codecs` property in the returned object, and then return to the caller.
 
 If no video track is found, we set `codecList` to `null`.
 
-On return, then, `codecList` is either `null` to indicate that no video tracks were found or it's an array of {{domxref("RTCRtpCodecParameters")}} objects, each describing one permitted codec configuration. Of special importance in these objects: the {{domxref("RTCRtpCodecParameters.payloadType", "payloadType")}} property, which is a one-byte value which uniquely identifies the described configuration.
+On return, then, `codecList` is either `null` to indicate that no video tracks were found or it's an array of {{domxref("RTCCodecStats")}} objects, each describing one permitted codec configuration. Of special importance in these objects: the {{domxref("RTCCodecStats.payloadType", "payloadType")}} property, which is a one-byte value which uniquely identifies the described configuration.
 
-> **Note:** The two methods for obtaining lists of codecs shown here use different output types in their codec lists. Be aware of this when using the results.
+> [!NOTE]
+> The two methods for obtaining lists of codecs shown here use different output types in their codec lists. Be aware of this when using the results.
 
 ### Customizing the codec list
 
@@ -442,7 +445,8 @@ There are a number of factors that come into play when deciding upon a video cod
 
 Before choosing a video codec, make sure you're aware of any licensing requirements around the codec you select; you can find information about possible licensing concerns in our main [guide to video codecs used on the web](/en-US/docs/Web/Media/Formats/Video_codecs). Of the two mandatory codecs for video—VP8 and AVC/H.264—only VP8 is completely free of licensing requirements. If you select AVC, make sure you're; aware of any potential fees you may need to pay; that said, the patent holders have generally said that most typical website developers shouldn't need to worry about paying the license fees, which are typically focused more on the developers of the encoding and decoding software.
 
-> **Warning:** The information here does _not_ constitute legal advice! Be sure to confirm your exposure to liability before making any final decisions where potential exists for licensing issues.
+> [!WARNING]
+> The information here does _not_ constitute legal advice! Be sure to confirm your exposure to liability before making any final decisions where potential exists for licensing issues.
 
 #### Power needs and battery life
 

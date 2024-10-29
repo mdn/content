@@ -29,7 +29,7 @@ characterData.deleteData(offset, count)
 
 None.
 
-## Exceptions
+### Exceptions
 
 - `IndexSizeError` {{domxref("DOMException")}}
   - : Thrown if `offset` is greater than the length of the contained data.
@@ -42,9 +42,9 @@ None.
 
 ```js
 const span = document.querySelector("span");
-const textnode = span.nextSibling;
+const textNode = span.nextSibling;
 
-textnode.deleteData(1, 5);
+textNode.deleteData(1, 5);
 ```
 
 {{EmbedLiveSample("Example", "100%", 50)}}

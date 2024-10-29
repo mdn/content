@@ -7,7 +7,7 @@ browser-compat: css.properties.caption-side
 
 {{CSSRef}}
 
-The **`caption-side`** [CSS](/en-US/docs/Web/CSS) property puts the content of a table's {{HTMLElement("caption")}} on the specified side. The values are relative to the {{cssxref('writing-mode')}} of the table.
+The **`caption-side`** [CSS](/en-US/docs/Web/CSS) property puts the content of a table's {{HTMLElement("caption")}} on the specified side. The values are relative to the {{cssxref("writing-mode")}} of the table.
 
 {{EmbedInteractiveExample("pages/css/caption-side.html")}}
 
@@ -17,12 +17,6 @@ The **`caption-side`** [CSS](/en-US/docs/Web/CSS) property puts the content of a
 /* Directional values */
 caption-side: top;
 caption-side: bottom;
-
-/* Logical values */
-caption-side: block-start;
-caption-side: block-end;
-caption-side: inline-start;
-caption-side: inline-end;
 
 /* Global values */
 caption-side: inherit;
@@ -37,17 +31,12 @@ The `caption-side` property is specified as one of the keyword values listed bel
 ### Values
 
 - `top`
-  - : The caption box should be positioned above the table.
+  - : The caption box should be positioned at the block start side of the table.
 - `bottom`
-  - : The caption box should be positioned below the table.
-- `block-start`
-  - : The caption box should be positioned at the block start edge of the table.
-- `block-end`
-  - : The caption box should be positioned at the block end edge of the table.
-- `inline-start`
-  - : The caption box should be positioned at the inline start edge of the table.
-- `inline-end`
-  - : The caption box should be positioned at the inline end edge of the table.
+  - : The caption box should be positioned at the block end side of the table.
+
+> [!NOTE]
+> The [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module defines two logical values, `inline-start` and `inline-end`, to position the caption box at the inline start edge and inline end edge of the table, respectively. These values are not supported in any browsers.
 
 ## Formal definition
 
@@ -118,3 +107,9 @@ td {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{HTMLelement("caption")}}
+- [CSS table](/en-US/docs/Web/CSS/CSS_table) module
+- [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module

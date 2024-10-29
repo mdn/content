@@ -26,6 +26,10 @@ None.
 
 None ({{jsxref("undefined")}}).
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

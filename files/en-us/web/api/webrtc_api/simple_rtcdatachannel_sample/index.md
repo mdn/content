@@ -52,7 +52,7 @@ Then there's a box which contains the text input box into which the user can typ
 Finally, there's the little box into which we'll insert the messages. This {{HTMLElement("div")}} block will be the second peer.
 
 ```html
-<div class="messagebox" id="receivebox">
+<div class="messagebox" id="receive-box">
   <p>Messages received:</p>
 </div>
 ```
@@ -83,7 +83,7 @@ function startup() {
   disconnectButton = document.getElementById("disconnectButton");
   sendButton = document.getElementById("sendButton");
   messageInputBox = document.getElementById("message");
-  receiveBox = document.getElementById("receivebox");
+  receiveBox = document.getElementById("receive-box");
 
   // Set event listeners for user interface widgets
 
@@ -93,13 +93,14 @@ function startup() {
 }
 ```
 
-This is quite straightforward. We declare variables and grab references to all the page elements we'll need to access, then set {{domxref("EventTarget/addEventListener", "event listeners")}} on the three buttons.
+This is quite straightforward. We declare variables and grab references to all the page elements we'll need to access, then set [event listeners](/en-US/docs/Web/API/EventTarget/addEventListener) on the three buttons.
 
 ### Establishing a connection
 
 When the user clicks the "Connect" button, the `connectPeers()` method is called. We're going to break this up and look at it a bit at a time, for clarity.
 
-> **Note:** Even though both ends of our connection will be on the same page, we're going to refer to the one that starts the connection as the "local" one, and to the other as the "remote" end.
+> [!NOTE]
+> Even though both ends of our connection will be on the same page, we're going to refer to the one that starts the connection as the "local" one, and to the other as the "remote" end.
 
 #### Set up the local peer
 
@@ -128,7 +129,8 @@ The remote end is set up similarly, except that we don't need to explicitly crea
 
 The next step is to set up each connection with ICE candidate listeners; these will be called when there's a new ICE candidate to tell the other side about.
 
-> **Note:** In a real-world scenario in which the two peers aren't running in the same context, the process is a bit more involved; each side provides, one at a time, a suggested way to connect (for example, UDP, UDP with a relay, TCP, etc.) by calling {{domxref("RTCPeerConnection.addIceCandidate()")}}, and they go back and forth until agreement is reached. But here, we just accept the first offer on each side, since there's no actual networking involved.
+> [!NOTE]
+> In a real-world scenario in which the two peers aren't running in the same context, the process is a bit more involved; each side provides, one at a time, a suggested way to connect (for example, UDP, UDP with a relay, TCP, etc.) by calling {{domxref("RTCPeerConnection.addIceCandidate()")}}, and they go back and forth until agreement is reached. But here, we just accept the first offer on each side, since there's no actual networking involved.
 
 ```js
 localConnection.onicecandidate = (e) =>
@@ -165,13 +167,14 @@ Let's go through this line by line and decipher what it means.
 
 1. First, we call {{domxref("RTCPeerConnection.createOffer()")}} method to create an {{Glossary("SDP")}} (Session Description Protocol) blob describing the connection we want to make. This method accepts, optionally, an object with constraints to be met for the connection to meet your needs, such as whether the connection should support audio, video, or both. In our simple example, we don't have any constraints.
 2. If the offer is created successfully, we pass the blob along to the local connection's {{domxref("RTCPeerConnection.setLocalDescription()")}} method. This configures the local end of the connection.
-3. The next step is to connect the local peer to the remote by telling the remote peer about it. This is done by calling `remoteConnection.`{{domxref("RTCPeerConnection.setRemoteDescription()")}}. Now the `remoteConnection` knows about the connection that's being built. In a real application, this would require a signaling server to exchange the description object.
+3. The next step is to connect the local peer to the remote by telling the remote peer about it. This is done by calling {{domxref("RTCPeerConnection.setRemoteDescription()", "remoteConnection.setRemoteDescription()")}}. Now the `remoteConnection` knows about the connection that's being built. In a real application, this would require a signaling server to exchange the description object.
 4. That means it's time for the remote peer to reply. It does so by calling its {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}} method. This generates a blob of SDP which describes the connection the remote peer is willing and able to establish. This configuration lies somewhere in the union of options that both peers can support.
 5. Once the answer has been created, it's passed into the remoteConnection by calling {{domxref("RTCPeerConnection.setLocalDescription()")}}. That establishes the remote's end of the connection (which, to the remote peer, is its local end. This stuff can be confusing, but you get used to it). Again, this would normally be exchanged through a signalling server.
 6. Finally, the local connection's remote description is set to refer to the remote peer by calling localConnection's {{domxref("RTCPeerConnection.setRemoteDescription()")}}.
 7. The `catch()` calls a routine that handles any errors that occur.
 
-> **Note:** Once again, this process is not a real-world implementation; in normal usage, there's two chunks of code running on two machines, interacting and negotiating the connection. A side channel, commonly called a "signalling server," is usually used to exchange the description (which is in **application/sdp** form) between the two peers.
+> [!NOTE]
+> Once again, this process is not a real-world implementation; in normal usage, there's two chunks of code running on two machines, interacting and negotiating the connection. A side channel, commonly called a "signalling server," is usually used to exchange the description (which is in **application/sdp** form) between the two peers.
 
 #### Handling successful peer connection
 
@@ -280,9 +283,9 @@ When a "message" event occurs on the remote channel, our `handleReceiveMessage()
 ```js
 function handleReceiveMessage(event) {
   const el = document.createElement("p");
-  const txtNode = document.createTextNode(event.data);
+  const textNode = document.createTextNode(event.data);
 
-  el.appendChild(txtNode);
+  el.appendChild(textNode);
   receiveBox.appendChild(el);
 }
 ```

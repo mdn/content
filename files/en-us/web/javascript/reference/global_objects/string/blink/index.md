@@ -11,7 +11,8 @@ browser-compat: javascript.builtins.String.blink
 
 The **`blink()`** method of {{jsxref("String")}} values creates a string that embeds this string in a `<blink>` element (`<blink>str</blink>`), which used to cause a string to blink in old browsers.
 
-> **Note:** All [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods) are deprecated and only standardized for compatibility purposes. For the case of `blink()`, the `<blink>` element itself is removed from modern browsers, and blinking text is frowned upon by several accessibility standards. Avoid using the element in any way.
+> [!NOTE]
+> All [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods) are deprecated and only standardized for compatibility purposes. For the case of `blink()`, the `<blink>` element itself is removed from modern browsers, and blinking text is frowned upon by several accessibility standards. Avoid using the element in any way.
 
 ## Syntax
 
@@ -45,7 +46,8 @@ This will create the following HTML:
 <blink>Hello, world</blink>
 ```
 
-> **Warning:** This markup is invalid, because `blink` is no longer a valid element.
+> [!WARNING]
+> This markup is invalid, because `blink` is no longer a valid element.
 
 You should avoid blinking elements altogether.
 

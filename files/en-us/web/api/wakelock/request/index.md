@@ -8,7 +8,7 @@ browser-compat: api.WakeLock.request
 
 {{APIRef("Screen Wake Lock API")}}{{SecureContext_Header}}
 
-The **`request()`** method of the {{domxref("WakeLock")}} interface returns a {{jsxref("Promise")}} that fullfills with a {{domxref("WakeLockSentinel")}} object if the system screen wake lock is granted.
+The **`request()`** method of the {{domxref("WakeLock")}} interface returns a {{jsxref("Promise")}} that fulfills with a {{domxref("WakeLockSentinel")}} object if the system screen wake lock is granted.
 
 The screen wake lock prevents device screens from dimming or locking when an application needs to keep running.
 

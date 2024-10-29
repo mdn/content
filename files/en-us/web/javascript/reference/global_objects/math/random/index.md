@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Math.random
 
 The **`Math.random()`** static method returns a floating-point, pseudo-random number that's greater than or equal to 0 and less than 1, with approximately uniform distribution over that range — which you can then scale to your desired range. The implementation selects the initial seed to the random number generation algorithm; it cannot be chosen or reset by the user.
 
-> **Note:** `Math.random()` _does not_ provide cryptographically secure random numbers. Do not use them for anything related to security. Use the Web Crypto API instead, and more precisely the {{domxref("Crypto/getRandomValues", "window.crypto.getRandomValues()")}} method.
+> **Note:** `Math.random()` _does not_ provide cryptographically secure random numbers. Do not use them for anything related to security. Use the Web Crypto API instead, and more precisely the {{domxref("Crypto.getRandomValues()")}} method.
 
 {{EmbedInteractiveExample("pages/js/math-random.html")}}
 
@@ -29,7 +29,7 @@ A floating-point, pseudo-random number between 0 (inclusive) and 1 (exclusive).
 
 ## Examples
 
-Note that as numbers in JavaScript are IEEE 754 floating point numbers with round-to-nearest-even behavior, the ranges claimed for the functions below (excluding the one for `Math.random()` itself) aren't exact. If extremely large bounds are chosen (2<sup>53</sup> or higher), it's possible in _extremely_ rare cases to reach the usually-excluded upper bound.
+Note that as numbers in JavaScript are IEEE 754 floating point numbers with round-to-nearest-even behavior, the ranges claimed for the functions below (excluding the one for `Math.random()` itself) aren't exact. Usually, the claimed upper bound is not attainable, but if `Math.random()` returns a number very close to 1, the tiny difference may not be representable at the requested maximum, therefore causing the upper bound to be attained.
 
 ### Getting a random number between 0 (inclusive) and 1 (exclusive)
 
@@ -61,7 +61,8 @@ function getRandomInt(min, max) {
 }
 ```
 
-> **Note:** It might be tempting to use [`Math.round()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round) to accomplish that, but doing so would cause your random numbers to follow a non-uniform distribution, which may not be acceptable for your needs.
+> [!NOTE]
+> It might be tempting to use [`Math.round()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round) to accomplish that, but doing so would cause your random numbers to follow a non-uniform distribution, which may not be acceptable for your needs.
 
 ### Getting a random integer between two values, inclusive
 
@@ -85,4 +86,4 @@ function getRandomIntInclusive(min, max) {
 
 ## See also
 
-- {{domxref("Crypto/getRandomValues", "window.crypto.getRandomValues()")}}
+- {{domxref("Crypto.getRandomValues()")}}

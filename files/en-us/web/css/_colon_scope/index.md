@@ -143,14 +143,14 @@ This example demonstrates using the `:scope` pseudo-class in JavaScript. This ca
 const context = document.getElementById("context");
 const selected = context.querySelectorAll(":scope > div");
 
-document.getElementById("results").innerHTML = Array.prototype.map
+document.getElementById("results").textContent = Array.prototype.map
   .call(selected, (element) => `#${element.getAttribute("id")}`)
   .join(", ");
 ```
 
 #### Result
 
-The scope of `context` is the element with the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) of `context`. The selected elements are the `<div>` elements that are direct children of that context — `element-1` and `element-2` — but not their descendants.
+The scope of `context` is the element with the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of `context`. The selected elements are the `<div>` elements that are direct children of that context — `element-1` and `element-2` — but not their descendants.
 
 {{ EmbedLiveSample('Using :scope in JavaScript') }}
 
@@ -166,7 +166,7 @@ The scope of `context` is the element with the [`id`](/en-US/docs/Web/HTML/Globa
 
 - The {{cssxref("@scope")}} [at-rule](/en-US/docs/Web/CSS/At-rule)
 - The {{cssxref(":root")}} [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes)
-- [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 - {{domxref("Element.querySelector()")}} and {{domxref("Element.querySelectorAll()")}}
 - {{domxref("Document.querySelector()")}} and {{domxref("Document.querySelectorAll()")}}
 - {{domxref("DocumentFragment.querySelector()")}} and {{domxref("DocumentFragment.querySelectorAll()")}}

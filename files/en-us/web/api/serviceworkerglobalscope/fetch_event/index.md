@@ -6,9 +6,9 @@ page-type: web-api-event
 browser-compat: api.ServiceWorkerGlobalScope.fetch_event
 ---
 
-{{APIRef("Service Workers API")}}{{SecureContext_Header}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
 
-The **`fetch`** event is fired in the service worker's global scope when the main app thread makes a network request. It enables the service worker to intercept network requests and send customized responses (for example, from a local cache).
+The **`fetch`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired in the service worker's global scope when the main app thread makes a network request. It enables the service worker to intercept network requests and send customized responses (for example, from a local cache).
 
 This event is not cancelable and does not bubble.
 
@@ -24,7 +24,7 @@ onfetch = (event) => {};
 
 ## Description
 
-The `fetch` event is fired in the service worker's global scope when the main app thread makes a network request. This includes not only explicit {{domxref("fetch()")}} calls from the main thread, but also implicit network requests to load pages and subresources (such as JavaScript, CSS, and images) made by the browser following page navigation.
+The `fetch` event is fired in the service worker's global scope when the main app thread makes a network request. This includes not only explicit {{domxref("WorkerGlobalScope/fetch", "fetch()")}} calls from the main thread, but also implicit network requests to load pages and subresources (such as JavaScript, CSS, and images) made by the browser following page navigation.
 
 The event handler is passed a {{domxref("FetchEvent")}} object, which provides access to the request as a {{domxref("Request")}} instance.
 
@@ -132,6 +132,6 @@ self.addEventListener("fetch", (event) => {
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- {{domxref("fetch()")}} method
+- {{domxref("WorkerGlobalScope/fetch", "fetch()")}} method
 - {{domxref("Request")}} interface
 - {{domxref("Response")}} interface

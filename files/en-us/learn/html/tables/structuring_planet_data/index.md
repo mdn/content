@@ -28,7 +28,8 @@ In our table assessment, we provide you with some data on the planets in our sol
 
 To start the assessment, make local copies of [blank-template.html](https://github.com/mdn/learning-area/blob/main/html/tables/assessment-start/blank-template.html), [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/assessment-start/minimal-table.css), and [planets-data.txt](https://github.com/mdn/learning-area/blob/main/html/tables/assessment-start/planets-data.txt) in a new directory in your local computer.
 
-> **Note:** You can try solutions in your code editor or in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+> [!NOTE]
+> You can try solutions in your code editor or in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 >
 > If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
@@ -45,7 +46,7 @@ The following steps describe what you need to do to complete the table example. 
 3. Add a row to the table header containing all the column headers.
 4. Create all the content rows inside the table body, remembering to make all the row headings into headings semantically.
 5. Ensure all the content is placed into the right cells — in the raw data, each row of planet data is shown next to its associated planet.
-6. Add attributes to make the row and column headers unambiguously associated with the rows, columns, or rowgroups that they act as headings for.
+6. Add attributes to make the row and column headers unambiguously associated with the rows, columns, or row groups that they act as headings for.
 7. Add a black [border](/en-US/docs/Web/CSS/border) just around the column that contains all the planet name row headers.
 
 ## Hints and tips

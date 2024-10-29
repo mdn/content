@@ -11,7 +11,7 @@ browser-compat: svg.global_attributes.clip
 
 The **`clip`** attribute is a presentation attribute defining the visible region of an element.
 
-This attribute has the same parameter values as defined for the {{ cssxref("clip","CSS clip property") }}. Unitless values, which indicate current user coordinates, are permitted on the coordinate values on the `rect()`. The value of `auto` defines a clipping path along the bounds of the viewport created by the given element.
+This attribute has the same parameter values as defined for the CSS {{cssxref("clip")}} property. Unitless values, which indicate current user coordinates, are permitted on the coordinate values on the `rect()`. The value of `auto` defines a clipping path along the bounds of the viewport created by the given element.
 
 You can use this attribute with the following SVG elements:
 
@@ -50,7 +50,8 @@ svg {
 
 ## Usage notes
 
-> **Warning:** This property is deprecated. Use {{cssxref("clip-path")}} instead.
+> [!WARNING]
+> This property is deprecated. Use {{cssxref("clip-path")}} instead.
 
 <table class="properties">
   <tbody>

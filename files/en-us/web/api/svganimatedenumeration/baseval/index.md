@@ -29,7 +29,7 @@ Considering this snippet with a {{SVGElement("clipPath")}} element: Its {{SVGAtt
 </svg>
 ```
 
-This snippet gets the element, and logs the `baseVal`of the {{domxref("SVGClipPathElement.clipPathUnits")}} property.
+This snippet gets the element, and logs the `baseVal` of the {{domxref("SVGClipPathElement.clipPathUnits")}} property.
 
 ```js
 const clipPathElt = document.getElementById("clip1");

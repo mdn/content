@@ -28,7 +28,7 @@ new MediaStreamTrackGenerator(options)
     - `"video"`
       - : Specifies that the stream accepts {{domxref("VideoTrack")}} objects.
 
-## Exceptions
+### Exceptions
 
 - {{jsxref("TypeError")}}
   - : Thrown if `init.kind` is not `"video"` or `"audio"`.

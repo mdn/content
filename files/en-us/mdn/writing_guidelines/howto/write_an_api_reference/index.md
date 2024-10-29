@@ -46,7 +46,8 @@ You will return to build demos many times through the course of documenting an A
 
 When an API has changed, you need to be careful that existing demos you refer to or learn from are not out of date. Check the main constructs that are used in the demo to see if they match up to the latest spec. They may also not work in up-to-date browsers, but this is not a very reliable test, as often the old features continue to be supported for backwards compatibility.
 
-> **Note:** If the spec has been recently updated so that, say, a method is now defined differently, but the old method still works in browsers, you will often have to document both in the same place, so that the old and new methods are covered.
+> [!NOTE]
+> If the spec has been recently updated so that, say, a method is now defined differently, but the old method still works in browsers, you will often have to document both in the same place, so that the old and new methods are covered.
 > If you need help, refer to demos you have found, or ask an engineering contact.
 
 ### Create the list of documents you need to write or update
@@ -64,7 +65,8 @@ Before you start you should write down a list of all the pages you should create
 7. Concept/guide pages
 8. Examples
 
-> **Note:** We'll be referring to the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) for examples in this article.
+> [!NOTE]
+> We'll be referring to the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) for examples in this article.
 
 #### Overview pages
 
@@ -95,14 +97,15 @@ Examples:
 - Slug: _AudioNode_
 - URL: [https://developer.mozilla.org/en-US/docs/Web/API/AudioNode](/en-US/docs/Web/API/AudioNode)
 
-> **Note:** We document every member appearing in the interface. You should bear the following rules in mind:
+> [!NOTE]
+> We document every member appearing in the interface. You should bear the following rules in mind:
 
 - We document methods defined on the prototype of an object implementing this interface (instance methods), and methods defined on the actual class itself (static methods).
   On the rare occasions that they both exist on the same interface, you should list them in separate sections on the page (Static methods/Instance methods).
   Usually only instance methods exist, in which case you can put these under the title "Methods".
 - We do not document inherited properties and methods of the interface: they are listed on the respective parent interface. We do hint at their existence though.
-- We do document properties and methods defined in mixins. Please see the [contribution guide for mixins](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#mixins) for more details.
-- Special methods like the stringifier (`toString()`) and the jsonizer (`toJSON()`) are also listed if they do exist.
+- We do document properties and methods defined in mixins. Please see the [contribution guide for mixins](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file#mixins) for more details.
+- Special methods like the stringifier (`toString()`) and the jsonifier (`toJSON()`) are also listed if they do exist.
 - Named constructors (like `Image()` for {{domxref("HTMLImageElement")}}) are also listed, if relevant.
 
 #### Constructor pages
@@ -241,7 +244,8 @@ Now you should be ready to start writing your interface pages. Each interface re
    - _This interface doesn't implement any specific methods, but inherits methods from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._
    - _This interface also inherits methods from \\{{domxref("XYZ")}}, and \\{{domxref("XYZ2")}}._
 
-   > **Note:** Properties that are read-only should have the \\{{ReadOnlyInline}} macro, which creates a nifty little "Read only" badge, included on the same line as their \\{{domxref}} links (after the use of the \\{{experimentalInline}}, \\{{non-standard_Inline}} and \\{{deprecatedInline}} macros, if some of these are needed.
+   > [!NOTE]
+   > Properties that are read-only should have the \\{{ReadOnlyInline}} macro, which creates a nifty little "Read only" badge, included on the same line as their \\{{domxref}} links (after the use of the \\{{experimentalInline}}, \\{{non-standard_Inline}} and \\{{deprecatedInline}} macros, if some of these are needed.
 
 6. **Examples**: Include a code listing to show typical usage of a major feature of the API. Rather than listing ALL the code, you should list an interesting subset of it. For a complete code listing, you could reference a [GitHub](https://github.com/) repo containing the full example, and you could also link to a live example created using the [GitHub gh-pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site) feature (so long as it uses only client-side code of course.) If the example is visual, you could also use the MDN [Live Sample](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples) feature to make it live and playable in the page.
 7. **Specifications table**: At this point you need to include a specifications table — see the "Creating a spec reference table" section for more details.
@@ -335,8 +339,8 @@ Method pages need the following sections:
 The following are exemplary examples of method pages:
 
 - {{domxref("Document.getAnimations")}} from the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API).
-- {{domxref("fetch()")}} from the [Fetch API](/en-US/docs/Web/API/Fetch_API).
+- {{domxref("Window/fetch", "fetch()")}} from the [Fetch API](/en-US/docs/Web/API/Fetch_API).
 
 ## Sidebars
 
-Once you've created your API reference pages, you'll want to insert the correct sidebars on them to associate the pages together. Our [API reference sidebars](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars) guide explains how.
+Once you've created your API reference pages, you'll want to insert the correct sidebars on them to associate the pages together. Our [API reference sidebars](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars) guide explains how.

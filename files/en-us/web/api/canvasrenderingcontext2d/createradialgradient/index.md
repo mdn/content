@@ -16,7 +16,8 @@ two circles.
 This method returns a {{domxref("CanvasGradient")}}. To be applied to a shape, the
 gradient must first be assigned to the {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} or {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} properties.
 
-> **Note:** Gradient coordinates are global, i.e., relative to the current
+> [!NOTE]
+> Gradient coordinates are global, i.e., relative to the current
 > coordinate space. When applied to a shape, the coordinates are NOT relative to the
 > shape's coordinates.
 

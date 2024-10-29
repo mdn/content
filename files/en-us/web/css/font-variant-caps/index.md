@@ -62,7 +62,7 @@ The `font-variant-caps` property is specified using a single keyword value from 
 - `titling-caps`
   - : Enables display of titling capitals (OpenType feature: `titl`). Uppercase letter glyphs are often designed for use with lowercase letters. When used in all uppercase titling sequences they can appear too strong. Titling capitals are designed specifically for this situation.
 
-## Accessibility concerns
+## Accessibility
 
 Large sections of text set with a `font-variant` value of `all-small-caps` or `all-petite-caps` may be difficult for people with cognitive concerns such as Dyslexia to read.
 

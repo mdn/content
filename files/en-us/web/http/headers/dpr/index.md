@@ -34,7 +34,7 @@ If a server uses the `DPR` hint to choose which resource is sent in a response, 
 
 If the `DPR` header appears more than once in a message the last occurrence is used.
 
-> **Note:**
+> [!NOTE]
 >
 > - Client Hints are accessible only on secure origins (via TLS).
 > - A server has to opt in to receive the `DPR` header from the client, by sending the {{HTTPHeader("Accept-CH")}} response header.

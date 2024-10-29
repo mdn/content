@@ -42,7 +42,8 @@ env(safe-area-inset-left, 1.4rem);
 - `keyboard-inset-top`, `keyboard-inset-right`, `keyboard-inset-bottom`, `keyboard-inset-left`, `keyboard-inset-width`, `keyboard-inset-height`
   - : The `keyboard-inset-*` variables provide information about the on-screen virtual keyboard's appearance. They define a rectangle by its top, right, bottom, and left insets from the edge of the viewport (the width and height insets are calculated from the other insets). To learn more, see the {{domxref("VirtualKeyboard API", "VirtualKeyboard API", "", "nocode")}}.
 
-> **Note:** Unlike other CSS properties, user agent-defined property names are case-sensitive.
+> [!NOTE]
+> Unlike other CSS properties, user agent-defined property names are case-sensitive.
 
 ### Formal syntax
 
@@ -60,10 +61,8 @@ You can then use `env()` in your CSS:
 
 ```css
 body {
-  padding: env(safe-area-inset-top, 20px) env(safe-area-inset-right, 20px) env(
-      safe-area-inset-bottom,
-      20px
-    ) env(safe-area-inset-left, 20px);
+  padding: env(safe-area-inset-top, 20px) env(safe-area-inset-right, 20px)
+    env(safe-area-inset-bottom, 20px) env(safe-area-inset-left, 20px);
 }
 ```
 
@@ -139,10 +138,8 @@ The below example makes use of the optional second parameter of `env()`, which a
 p {
   width: 300px;
   border: 2px solid red;
-  padding: env(safe-area-inset-top, 50px) env(safe-area-inset-right, 50px) env(
-      safe-area-inset-bottom,
-      50px
-    ) env(SAFE-AREA-INSET-LEFT, 50px);
+  padding: env(safe-area-inset-top, 50px) env(safe-area-inset-right, 50px)
+    env(safe-area-inset-bottom, 50px) env(SAFE-AREA-INSET-LEFT, 50px);
 }
 ```
 
@@ -166,7 +163,8 @@ padding: env(x, 50px, 20px);
 
 The syntax of the fallback, like that of custom properties, allows commas. But, if the property value doesn't support commas, the value is not valid.
 
-> **Note:** User agent properties are not reset by the [all](/en-US/docs/Web/CSS/all) property.
+> [!NOTE]
+> User agent properties are not reset by the [all](/en-US/docs/Web/CSS/all) property.
 
 ### Using env() to ensure content is not obscured by window control buttons in desktop PWAs
 
@@ -199,7 +197,8 @@ main {
 }
 ```
 
-> **Note:** Using `position:fixed` makes sure the header does not scroll with the rest of the content, and instead stays aligned with the window control buttons, even on device/browsers that support elastic overscroll (also known as rubber banding).
+> [!NOTE]
+> Using `position:fixed` makes sure the header does not scroll with the rest of the content, and instead stays aligned with the window control buttons, even on device/browsers that support elastic overscroll (also known as rubber banding).
 
 ## Specifications
 
@@ -216,5 +215,5 @@ main {
 - [Custom properties (`--*`): CSS variables](/en-US/docs/Web/CSS/--*)
 - [Using CSS custom properties (variables)](/en-US/docs/Web/CSS/Using_CSS_custom_properties)
 - [Customize the window controls overlay of your PWA's title bar](https://web.dev/articles/window-controls-overlay)
-- [Display content in the title bar](https://docs.microsoft.com/microsoft-edge/progressive-web-apps-chromium/how-to/window-controls-overlay)
+- [Display content in the title bar](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/window-controls-overlay)
 - [Breaking Out of the Box](https://alistapart.com/article/breaking-out-of-the-box/)

@@ -17,7 +17,7 @@ This element and its contents are not rendered in the DOM, but it can still be r
 Let's look at a trivial quick example:
 
 ```html
-<template id="my-paragraph">
+<template id="custom-paragraph">
   <p>My paragraph</p>
 </template>
 ```
@@ -25,7 +25,7 @@ Let's look at a trivial quick example:
 This won't appear in your page until you grab a reference to it with JavaScript and then append it to the DOM, using something like the following:
 
 ```js
-let template = document.getElementById("my-paragraph");
+let template = document.getElementById("custom-paragraph");
 let templateContent = template.content;
 document.body.appendChild(templateContent);
 ```
@@ -44,7 +44,7 @@ customElements.define(
   class extends HTMLElement {
     constructor() {
       super();
-      let template = document.getElementById("my-paragraph");
+      let template = document.getElementById("custom-paragraph");
       let templateContent = template.content;
 
       const shadowRoot = this.attachShadow({ mode: "open" });
@@ -62,7 +62,7 @@ This wouldn't work if we just appended it to the standard DOM.
 So for example:
 
 ```html
-<template id="my-paragraph">
+<template id="custom-paragraph">
   <style>
     p {
       color: white;
@@ -95,7 +95,7 @@ So, if we want to add a slot into our trivial example, we could update our templ
 
 If the slot's content isn't defined when the element is included in the markup, or if the browser doesn't support slots, `<my-paragraph>` just contains the fallback content "My default text".
 
-To define the slot's content, we include an HTML structure inside the `<my-paragraph>` element with a [`slot`](/en-US/docs/Web/HTML/Global_attributes#slot) attribute whose value is equal to the name of the slot we want it to fill. As before, this can be anything you like, for example:
+To define the slot's content, we include an HTML structure inside the `<my-paragraph>` element with a [`slot`](/en-US/docs/Web/HTML/Global_attributes/slot) attribute whose value is equal to the name of the slot we want it to fill. As before, this can be anything you like, for example:
 
 ```html
 <my-paragraph>
@@ -114,9 +114,11 @@ or
 </my-paragraph>
 ```
 
-> **Note:** Nodes that can be inserted into slots are known as _Slottable_ nodes; when a node has been inserted in a slot, it is said to be _slotted_.
+> [!NOTE]
+> Nodes that can be inserted into slots are known as _Slottable_ nodes; when a node has been inserted in a slot, it is said to be _slotted_.
 
-> **Note:** An unnamed {{HTMLElement("slot")}} will be filled with all of the custom element's top-level child nodes that do not have the [`slot`](/en-US/docs/Web/HTML/Global_attributes#slot) attribute. This includes text nodes.
+> [!NOTE]
+> An unnamed {{HTMLElement("slot")}} will be filled with all of the custom element's top-level child nodes that do not have the [`slot`](/en-US/docs/Web/HTML/Global_attributes/slot) attribute. This includes text nodes.
 
 And that's it for our trivial example.
 If you want to play with it some more, you can [find it on GitHub](https://github.com/mdn/web-components-examples/tree/main/simple-template) (see it [running live](https://mdn.github.io/web-components-examples/simple-template/) also).
@@ -135,7 +137,8 @@ However, it is generally more practical to add slots within a {{HTMLElement("tem
 
 In addition, even if it is not already rendered, the purpose of the container as a template should be more semantically clear when using the {{HTMLElement("template")}}. In addition, {{HTMLElement("template")}} can have items directly added to it, like {{HTMLElement("td")}}, which would disappear when added to a {{HTMLElement("div")}}.
 
-> **Note:** You can find this complete example at [element-details](https://github.com/mdn/web-components-examples/tree/main/element-details) (see it [running live](https://mdn.github.io/web-components-examples/element-details/) also).
+> [!NOTE]
+> You can find this complete example at [element-details](https://github.com/mdn/web-components-examples/tree/main/element-details) (see it [running live](https://mdn.github.io/web-components-examples/element-details/) also).
 
 ### Creating a template with some slots
 
@@ -256,7 +259,7 @@ Now let's take that **`<element-details>`** element and actually use it in our d
 
 About that snippet, notice these points:
 
-- The snippet has two instances of **`<element-details>`** elements which both use the [`slot`](/en-US/docs/Web/HTML/Global_attributes#slot) attribute to reference the [named slots](/en-US/docs/Web/HTML/Element/slot#name) `"element-name"` and `"description"` we put in the `<element-details>` [shadow root](/en-US/docs/Web/API/ShadowRoot) .
+- The snippet has two instances of **`<element-details>`** elements which both use the [`slot`](/en-US/docs/Web/HTML/Global_attributes/slot) attribute to reference the [named slots](/en-US/docs/Web/HTML/Element/slot#name) `"element-name"` and `"description"` we put in the `<element-details>` [shadow root](/en-US/docs/Web/API/ShadowRoot).
 - Only the first of those two **`<element-details>`** elements references the `"attributes"` [named slot](/en-US/docs/Web/HTML/Element/slot#name). The second `<element-details>` element lacks any reference to the `"attributes"` [named slot](/en-US/docs/Web/HTML/Element/slot#name).
 - The first `<element-details>` element references the `"attributes"` [named slot](/en-US/docs/Web/HTML/Element/slot#name) using a {{HTMLElement("dl")}} element with {{HTMLElement("dt")}} and {{HTMLElement("dd")}} children.
 

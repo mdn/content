@@ -9,7 +9,7 @@ browser-compat: api.RTCSctpTransport
 
 The **`RTCSctpTransport`** interface provides information which describes a Stream Control Transmission Protocol (**{{Glossary("SCTP")}}**) transport. This provides information about limitations of the transport, but also provides a way to access the underlying Datagram Transport Layer Security (**{{Glossary("DTLS")}}**) transport over which SCTP packets for all of an {{DOMxRef("RTCPeerConnection")}}'s data channels are sent and received.
 
-You don't create {{DOMxRef("RTCSctpTransport")}} objects yourself; instead, you get access to the `RTCSctpTransport` for a given `RTCPeerConnection` through its **{{DOMxRef("RTCPeerConnection.sctp", "sctp")}}** property.
+You don't create `RTCSctpTransport` objects yourself; instead, you get access to the `RTCSctpTransport` for a given `RTCPeerConnection` through its **{{DOMxRef("RTCPeerConnection.sctp", "sctp")}}** property.
 
 Possibly the most useful property on this interface is its [`maxMessageSize`](#rtcsctptransport.maxmessagesize) property, which you can use to determine the upper limit on the size of messages you can send over a data channel on the peer connection.
 

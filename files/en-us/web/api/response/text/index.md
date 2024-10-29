@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Response.text
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`text()`** method of the {{domxref("Response")}} interface takes a {{domxref("Response")}} stream and reads it to completion.
 It returns a promise that resolves with a {{jsxref("String")}}.
@@ -25,6 +25,15 @@ None.
 ### Return value
 
 A Promise that resolves with a {{jsxref("String")}}.
+
+### Exceptions
+
+- {{domxref("DOMException")}} `AbortError`
+  - : The request was [aborted](/en-US/docs/Web/API/Fetch_API/Using_Fetch#canceling_a_request).
+- {{jsxref("TypeError")}}
+  - : Thrown for one of the following reasons:
+    - The response body is [disturbed or locked](/en-US/docs/Web/API/Fetch_API/Using_Fetch#locked_and_disturbed_streams).
+    - There was an error decoding the body content (for example, because the {{httpheader("Content-Encoding")}} header is incorrect).
 
 ## Examples
 
@@ -52,7 +61,7 @@ function getData(pageId) {
   fetch(myRequest)
     .then((response) => response.text())
     .then((text) => {
-      myArticle.innertext = text;
+      myArticle.innerText = text;
     });
 }
 ```

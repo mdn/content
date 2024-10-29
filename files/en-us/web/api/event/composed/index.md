@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Event.composed
 ---
 
-{{APIRef("Shadow DOM")}}
+{{APIRef("Shadow DOM")}}{{AvailableInWorkers}}
 
 The read-only **`composed`** property of the
 {{domxref("Event")}} interface returns a boolean value which indicates whether

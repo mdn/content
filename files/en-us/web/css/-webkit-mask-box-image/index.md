@@ -1,7 +1,7 @@
 ---
 title: "-webkit-mask-box-image"
 slug: Web/CSS/-webkit-mask-box-image
-page-type: css-property
+page-type: css-shorthand-property
 status:
   - non-standard
 browser-compat: css.properties.-webkit-mask-box-image
@@ -11,7 +11,8 @@ browser-compat: css.properties.-webkit-mask-box-image
 
 The non-standard prefixed **`-webkit-mask-box-image`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) property sets the mask image for an element's border box.
 
-> **Note:** This property is not standard and is not on any standards track. Consider using the {{CSSXref("mask-border")}} property instead.
+> [!NOTE]
+> This property is not standard and is not on any standards track. Consider using the {{CSSXref("mask-border")}} property instead.
 
 ## Constituent properties
 
@@ -58,7 +59,7 @@ The values includes the `<image>` to be used as the mask border, and optionally 
   - : Used to specify that a border box is to have no mask image.
 - {{cssxref("length")}}
   - : The size of the mask image's offset. See {{cssxref("&lt;length&gt;")}} for possible units.
-- `{{cssxref("percentage")}}`
+- {{cssxref("percentage")}}
   - : The mask image's offset has a percentage value relative to the border box's corresponding dimension (width or height).
 - {{cssxref("number")}}
   - : The size of the mask image's offset in pixels.
@@ -73,7 +74,7 @@ The values includes the `<image>` to be used as the mask border, and optionally 
 
 The outset values, or edge offsets, define the distances from the top, right, bottom, and left edges of the image, in that order. The values can be set as {{cssxref("length")}}, {{cssxref("number")}}, or {{cssxref("percentage")}}, with numbers interpreted as pixel lengths.
 
-Border repeat styles, when included, are interpreted in the order of `<repeat-x> <repeat-y>`. If only one value is declared, the value is the same for both axes. While similar to `{{cssxref("background-repeat")}}`, the `cover` and `contain` values are not supported.
+Border repeat styles, when included, are interpreted in the order of `<repeat-x> <repeat-y>`. If only one value is declared, the value is the same for both axes. While similar to {{cssxref("background-repeat")}}, the `cover` and `contain` values are not supported.
 
 ## Formal definition
 
@@ -89,7 +90,7 @@ Border repeat styles, when included, are interpreted in the order of `<repeat-x>
 
 Where:
 
-<mask-image-source> = {{cssxref("url", "&lt;uri&gt;")}} | <gradient> | none
+<mask-image-source> = {{cssxref("url_value", "&lt;url&gt;")}} | <gradient> | none
 
 <mask-image-offset> = <length> | <percentage> | <number>
 
@@ -101,7 +102,7 @@ Where:
 ### Setting an image
 
 ```css
-.exampleone {
+.example-one {
   -webkit-mask-box-image: url("mask.png");
 }
 ```
@@ -109,7 +110,7 @@ Where:
 ### Offsetting and filling an image
 
 ```css
-.exampletwo {
+.example-two {
   -webkit-mask-box-image: url("logo.png") 100 100 0 0 round round;
 }
 ```

@@ -109,7 +109,7 @@ In this application, a pointer move is represented by the target's border being 
 ```js
 function pointermoveHandler(ev) {
   // Note: if the user makes more than one "simultaneous" touch, most browsers
-  // fire at least one pointermove event and some will fire several pointermoves.
+  // fire at least one pointermove event and some will fire several pointermove events.
   //
   // This function sets the target element's border to "dashed" to visually
   // indicate the target received a move event.
@@ -234,7 +234,7 @@ function updateBackground(ev) {
 
 #### Event logging
 
-These functions are used send to event activity to the application window (to support debugging and learning about the event flow).
+These functions are used to send event activity to the application window (to support debugging and learning about the event flow).
 
 ```js
 // Log events flag
@@ -246,16 +246,15 @@ function enableLog(ev) {
 
 function log(name, ev) {
   const o = document.getElementsByTagName("output")[0];
-  const s =
-    `${name}:<br>` +
-    `  pointerID   = ${ev.pointerId}<br>` +
-    `  pointerType = ${ev.pointerType}<br>` +
-    `  isPrimary   = ${ev.isPrimary}`;
-  o.innerHTML += `${s}<br>`;
+  o.innerText += `${name}:
+  pointerID   = ${ev.pointerId}
+  pointerType = ${ev.pointerType}
+  isPrimary   = ${ev.isPrimary}
+`;
 }
 
 function clearLog(event) {
   const o = document.getElementsByTagName("output")[0];
-  o.innerHTML = "";
+  o.textContent = "";
 }
 ```

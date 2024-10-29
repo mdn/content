@@ -36,7 +36,7 @@ First, let's take a look at the vertex shader. Its job, as always, is to convert
 </script>
 ```
 
-The main program shares with us the attribute `aVertexPosition`, which is the position of the vertex in whatever coordinate system it's using. We need to convert these values so that both components of the position are in the range -1.0 to 1.0. This can be done easily enough by multiplying by a scaling factor that's based on the context's aspect ratio. We'll see that computation shortly.
+The main program shares with us the attribute `aVertexPosition`, which is the position of the vertex in whatever coordinate system it's using. We need to convert these values so that both components of the position are in the range -1.0 to 1.0. This can be done easily enough by multiplying by a scaling factor that's based on the context's {{glossary("aspect ratio")}}. We'll see that computation shortly.
 
 We're also rotating the shape, and we can do that here, by applying a transform. We'll do that first. The rotated position of the vertex is computed by applying the rotation vector, found in the uniform `uRotationVector`, that's been computed by the JavaScript code.
 
@@ -69,7 +69,7 @@ This starts by specifying the precision of the `float` type, as required. Then w
 The HTML consists solely of the {{HTMLElement("canvas")}} that we'll obtain a WebGL context on.
 
 ```html
-<canvas id="glcanvas" width="600" height="460">
+<canvas id="gl-canvas" width="600" height="460">
   Oh no! Your browser doesn't support canvas!
 </canvas>
 ```
@@ -118,7 +118,7 @@ Initializing the program is handled through a {{domxref("Window/load_event", "lo
 window.addEventListener("load", startup, false);
 
 function startup() {
-  glCanvas = document.getElementById("glcanvas");
+  glCanvas = document.getElementById("gl-canvas");
   gl = glCanvas.getContext("webgl");
 
   const shaderSet = [
@@ -204,7 +204,8 @@ First, {{domxref("WebGLRenderingContext.createProgram", "gl.createProgram()")}} 
 
 Then, for each shader in the specified list of shaders, we call a `compileShader()` function to compile it, passing into it the ID and type of the shader function to build. Each of those objects includes, as mentioned before, the ID of the `<script>` element the shader code is found in and the type of shader it is. The compiled shader is attached to the shader program by passing it into {{domxref("WebGLRenderingContext.attachShader", "gl.attachShader()")}}.
 
-> **Note:** We could go a step farther here, actually, and look at the value of the `<script>` element's `type` attribute to determine the shader type.
+> [!NOTE]
+> We could go a step farther here, actually, and look at the value of the `<script>` element's `type` attribute to determine the shader type.
 
 Once all of the shaders are compiled, the program is linked using {{domxref("WebGLRenderingContext.linkProgram", "gl.linkProgram()")}}.
 

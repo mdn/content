@@ -33,7 +33,7 @@ document.
 
 ```html
 <img
-  src="/files/16797/clock-demo-400px.png"
+  src="/en-US/docs/Web/HTML/Element/img/clock-demo-400px.png"
   alt="Clock"
   srcset="
     /en-US/docs/Web/HTML/Element/img/clock-demo-200px.png 200w,
@@ -49,8 +49,8 @@ const clockImage = document.querySelector("img");
 const p = document.createElement("p");
 
 p.textContent = clockImage.currentSrc.endsWith("200px.png")
-  ? "Using the 400px image!"
-  : "Using the 200px image.";
+  ? "Using the 200px image!"
+  : "Using the 400px image.";
 document.body.appendChild(p);
 ```
 

@@ -8,7 +8,8 @@ page-type: firefox-release-notes
 
 This article provides information about the changes in Firefox 87 that will affect developers. Firefox 87 was released on March 23, 2021.
 
-> **Note:** See also [In March, we see Firefox 87](https://hacks.mozilla.org/2021/03/in-march-we-see-firefox-87/) on Mozilla Hacks.
+> [!NOTE]
+> See also [In March, we see Firefox 87](https://hacks.mozilla.org/2021/03/in-march-we-see-firefox-87/) on Mozilla Hacks.
 
 ## Changes for web developers
 
@@ -69,7 +70,7 @@ _No changes._
 
 #### DOM
 
-- The {{domxref("Element.beforeinput_event", "beforeinput")}} event and {{domxref('InputEvent.getTargetRanges()', 'getTargetRanges()')}} method are now enabled by default. They allow web apps to override text edit behavior before the browser modifies the DOM tree, and provide more control over input events to improve performance. The global `beforeinput` event is sent to an {{HTMLElement("input")}} element — or any element whose [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) attribute is set to `true` — immediately before the element's value changes. The `getTargetRanges()` method of the {{domxref("InputEvent")}} interface returns an array of static ranges that will be affected by a change to the DOM if the input event is not canceled.
+- The {{domxref("Element.beforeinput_event", "beforeinput")}} event and {{domxref('InputEvent.getTargetRanges()', 'getTargetRanges()')}} method are now enabled by default. They allow web apps to override text edit behavior before the browser modifies the DOM tree, and provide more control over input events to improve performance. The global `beforeinput` event is sent to an {{HTMLElement("input")}} element — or any element whose [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute is set to `true` — immediately before the element's value changes. The `getTargetRanges()` method of the {{domxref("InputEvent")}} interface returns an array of static ranges that will be affected by a change to the DOM if the input event is not canceled.
 
 ### WebDriver conformance (Marionette)
 

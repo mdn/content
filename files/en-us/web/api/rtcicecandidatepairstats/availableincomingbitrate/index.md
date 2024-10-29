@@ -15,7 +15,7 @@ pair. The higher the value, the more bandwidth you can assume is available for
 incoming data.
 
 You can get the outgoing available bitrate from
-{{domxref("RTCIceCandidatePairStats.availableoutgoingBitrate", "availableoutgoingBitrate")}}.
+{{domxref("RTCIceCandidatePairStats.availableOutgoingBitrate", "availableOutgoingBitrate")}}.
 
 ## Syntax
 
@@ -35,7 +35,8 @@ The value returned is calculated by adding up the available bit rate for every
 returned value doesn't take into account overhead introduced by underlying protocols,
 including IP, UDP, or TCP.
 
-> **Note:** The returned value is computed using a method similar—but not
+> [!NOTE]
+> The returned value is computed using a method similar—but not
 > identical—to the Transport Independent Application Specific Maximum (TIAS) described
 > in {{RFC(3890, "", "6.2")}}.
 

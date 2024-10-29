@@ -44,7 +44,8 @@ There are numerous types, levels, and classifications of tests and testing appro
 - Integration tests
   - : Verify how groupings of components work when used together. Integration tests are aware of the required interactions between components, but not necessarily of the internal operations of each component. They may cover simple groupings of components through to the whole website.
 
-> **Note:** Other common types of tests include black box, white box, manual, automated, canary, smoke, conformance, acceptance, functional, system, performance, load, and stress tests. Look them up for more information.
+> [!NOTE]
+> Other common types of tests include black box, white box, manual, automated, canary, smoke, conformance, acceptance, functional, system, performance, load, and stress tests. Look them up for more information.
 
 ### What does Django provide for testing?
 
@@ -73,7 +74,8 @@ class YourTestClass(TestCase):
 
 The best base class for most tests is [django.test.TestCase](https://docs.djangoproject.com/en/5.0/topics/testing/tools/#testcase). This test class creates a clean database before its tests are run, and runs every test function in its own transaction. The class also owns a test [Client](https://docs.djangoproject.com/en/5.0/topics/testing/tools/#django.test.Client) that you can use to simulate a user interacting with the code at the view level. In the following sections we're going to concentrate on unit tests, created using this [TestCase](https://docs.djangoproject.com/en/5.0/topics/testing/tools/#testcase) base class.
 
-> **Note:** The [django.test.TestCase](https://docs.djangoproject.com/en/5.0/topics/testing/tools/#testcase) class is very convenient, but may result in some tests being slower than they need to be (not every test will need to set up its own database or simulate the view interaction). Once you're familiar with what you can do with this class, you may want to replace some of your tests with the available simpler test classes.
+> [!NOTE]
+> The [django.test.TestCase](https://docs.djangoproject.com/en/5.0/topics/testing/tools/#testcase) class is very convenient, but may result in some tests being slower than they need to be (not every test will need to set up its own database or simulate the view interaction). Once you're familiar with what you can do with this class, you may want to replace some of your tests with the available simpler test classes.
 
 ### What should you test?
 
@@ -99,7 +101,8 @@ class Author(models.Model):
 
 Similarly, you should check that the custom methods `get_absolute_url()` and `__str__()` behave as required because they are your code/business logic. In the case of `get_absolute_url()` you can trust that the Django `reverse()` method has been implemented properly, so what you're testing is that the associated view has actually been defined.
 
-> **Note:** Astute readers may note that we would also want to constrain the date of birth and death to sensible values, and check that death comes after birth.
+> [!NOTE]
+> Astute readers may note that we would also want to constrain the date of birth and death to sensible values, and check that death comes after birth.
 > In Django this constraint would be added to your form classes (although you can define validators for model fields and model validators these are only used at the form level if they are called by the model's `clean()` method. This requires a `ModelForm`, or the model's `clean()` method needs to be specifically called.)
 
 With that in mind let's start looking at how to define and run tests.
@@ -121,7 +124,8 @@ catalog/
 
 Create a file structure as shown above in your _LocalLibrary_ project. The **\_\_init\_\_.py** should be an empty file (this tells Python that the directory is a package). You can create the three test files by copying and renaming the skeleton test file **/catalog/tests.py**.
 
-> **Note:** The skeleton test file **/catalog/tests.py** was created automatically when we [built the Django skeleton website](/en-US/docs/Learn/Server-side/Django/skeleton_website). It is perfectly "legal" to put all your tests inside it, but if you test properly, you'll quickly end up with a very large and unmanageable test file.
+> [!NOTE]
+> The skeleton test file **/catalog/tests.py** was created automatically when we [built the Django skeleton website](/en-US/docs/Learn/Server-side/Django/skeleton_website). It is perfectly "legal" to put all your tests inside it, but if you test properly, you'll quickly end up with a very large and unmanageable test file.
 >
 > Delete the skeleton file as we won't need it.
 
@@ -166,13 +170,15 @@ The new class defines two methods that you can use for pre-test configuration (f
 - `setUpTestData()` is called once at the beginning of the test run for class-level setup. You'd use this to create objects that aren't going to be modified or changed in any of the test methods.
 - `setUp()` is called before every test function to set up any objects that may be modified by the test (every test function will get a "fresh" version of these objects).
 
-> **Note:** The test classes also have a `tearDown()` method which we haven't used. This method isn't particularly useful for database tests, since the `TestCase` base class takes care of database teardown for you.
+> [!NOTE]
+> The test classes also have a `tearDown()` method which we haven't used. This method isn't particularly useful for database tests, since the `TestCase` base class takes care of database teardown for you.
 
 Below those we have a number of test methods, which use `Assert` functions to test whether conditions are true, false or equal (`AssertTrue`, `AssertFalse`, `AssertEqual`). If the condition does not evaluate as expected then the test will fail and report the error to your console.
 
 The `AssertTrue`, `AssertFalse`, `AssertEqual` are standard assertions provided by **unittest**. There are other standard assertions in the framework, and also [Django-specific assertions](https://docs.djangoproject.com/en/5.0/topics/testing/tools/#assertions) to test if a view redirects (`assertRedirects`), to test if a particular template has been used (`assertTemplateUsed`), etc.
 
-> **Note:** You should **not** normally include **print()** functions in your tests as shown above. We do that here only so that you can see the order that the setup functions are called in the console (in the following section).
+> [!NOTE]
+> You should **not** normally include **print()** functions in your tests as shown above. We do that here only so that you can see the order that the setup functions are called in the console (in the following section).
 
 ## How to run the tests
 
@@ -184,7 +190,8 @@ python3 manage.py test
 
 This will discover all files named with the pattern **test\*.py** under the current directory and run all tests defined using appropriate base classes (here we have a number of test files, but only **/catalog/tests/test_models.py** currently contains any tests.) By default the tests will individually report only on test failures, followed by a test summary.
 
-> **Note:** If you get errors similar to: `ValueError: Missing staticfiles manifest entry...` this may be because testing does not run _collectstatic_ by default, and your app is using a storage class that requires it (see [manifest_strict](https://docs.djangoproject.com/en/5.0/ref/contrib/staticfiles/#django.contrib.staticfiles.storage.ManifestStaticFilesStorage.manifest_strict) for more information). There are a number of ways you can overcome this problem - the easiest is to run _collectstatic_ before running the tests:
+> [!NOTE]
+> If you get errors similar to: `ValueError: Missing staticfiles manifest entry...` this may be because testing does not run _collectstatic_ by default, and your app is using a storage class that requires it (see [manifest_strict](https://docs.djangoproject.com/en/5.0/ref/contrib/staticfiles/#django.contrib.staticfiles.storage.ManifestStaticFilesStorage.manifest_strict) for more information). There are a number of ways you can overcome this problem - the easiest is to run _collectstatic_ before running the tests:
 >
 > ```bash
 > python3 manage.py collectstatic
@@ -221,7 +228,8 @@ Destroying test database for alias 'default'...
 
 Here we see that we had one test failure, and we can see exactly what function failed and why (this failure is expected, because `False` is not `True`!).
 
-> **Note:** The most important thing to learn from the test output above is that it is much more valuable if you use descriptive/informative names for your objects and methods.
+> [!NOTE]
+> The most important thing to learn from the test output above is that it is much more valuable if you use descriptive/informative names for your objects and methods.
 
 The output of the `print()` functions shows how the `setUpTestData()` method is called once for the class and `setUp()` is called before each method.
 Again, remember that normally you would not add this kind of `print()` to your tests.
@@ -277,7 +285,8 @@ For more information see the Django [test runner](https://docs.djangoproject.com
 
 Now we know how to run our tests and what sort of things we need to test, let's look at some practical examples.
 
-> **Note:** We won't write every possible test, but this should give you an idea of how tests work, and what more you can do.
+> [!NOTE]
+> We won't write every possible test, but this should give you an idea of how tests work, and what more you can do.
 
 ### Models
 
@@ -358,7 +367,8 @@ The interesting things to note are:
 - We can't get the `verbose_name` directly using `author.first_name.verbose_name`, because `author.first_name` is a _string_ (not a handle to the `first_name` object that we can use to access its properties). Instead we need to use the author's `_meta` attribute to get an instance of the field and use that to query for the additional information.
 - We chose to use `assertEqual(field_label,'first name')` rather than `assertTrue(field_label == 'first name')`. The reason for this is that if the test fails the output for the former tells you what the label actually was, which makes debugging the problem just a little easier.
 
-> **Note:** Tests for the `last_name` and `date_of_birth` labels, and also the test for the length of the `last_name` field have been omitted. Add your own versions now, following the naming conventions and approaches shown above.
+> [!NOTE]
+> Tests for the `last_name` and `date_of_birth` labels, and also the test for the length of the `last_name` field have been omitted. Add your own versions now, following the naming conventions and approaches shown above.
 
 We also need to test our custom methods. These essentially just check that the object name was constructed as we expected using "Last Name", "First Name" format, and that the URL we get for an `Author` item is as we would expect.
 
@@ -392,7 +402,8 @@ AssertionError: 'Died' != 'died'
 
 This is a very minor bug, but it does highlight how writing tests can more thoroughly check any assumptions you may have made.
 
-> **Note:** Change the label for the `date_of_death` field (**/catalog/models.py**) to "died" and re-run the tests.
+> [!NOTE]
+> Change the label for the `date_of_death` field (**/catalog/models.py**) to "died" and re-run the tests.
 
 The patterns for testing the other models are similar so we won't continue to discuss these further. Feel free to create your own tests for our other models.
 
@@ -468,11 +479,13 @@ The first two functions test that the field's `label` and `help_text` are as exp
 
 The rest of the functions test that the form is valid for renewal dates just inside the acceptable range and invalid for values outside the range. Note how we construct test date values around our current date (`datetime.date.today()`) using `datetime.timedelta()` (in this case specifying a number of days or weeks). We then just create the form, passing in our data, and test if it is valid.
 
-> **Note:** Here we don't actually use the database or test client. Consider modifying these tests to use [SimpleTestCase](https://docs.djangoproject.com/en/5.0/topics/testing/tools/#django.test.SimpleTestCase).
+> [!NOTE]
+> Here we don't actually use the database or test client. Consider modifying these tests to use [SimpleTestCase](https://docs.djangoproject.com/en/5.0/topics/testing/tools/#django.test.SimpleTestCase).
 >
 > We also need to validate that the correct errors are raised if the form is invalid, however this is usually done as part of view processing, so we'll take care of that in the next section.
 
-> **Warning:** If you use the [ModelForm](/en-US/docs/Learn/Server-side/Django/Forms#modelforms) class `RenewBookModelForm(forms.ModelForm)` instead of class `RenewBookForm(forms.Form)`, then the form field name would be **'due_back'** instead of **'renewal_date'**.
+> [!WARNING]
+> If you use the [ModelForm](/en-US/docs/Learn/Server-side/Django/Forms#modelforms) class `RenewBookModelForm(forms.ModelForm)` instead of class `RenewBookForm(forms.Form)`, then the form field name would be **'due_back'** instead of **'renewal_date'**.
 
 That's all for forms; we do have some others, but they are automatically created by our generic class-based editing views, and should be tested there! Run the tests and confirm that our code still passes!
 
@@ -548,7 +561,8 @@ response = self.client.get(reverse('authors'))
 
 Once we have the response we query it for its status code, the template used, whether or not the response is paginated, the number of items returned, and the total number of items.
 
-> **Note:** If you set the `paginate_by` variable in your **/catalog/views.py** file to a number other than 10, make sure to update the lines that test that the correct number of items are displayed in paginated templates above and in following sections. For example, if you set the variable for the author list page to 5, update the line above to:
+> [!NOTE]
+> If you set the `paginate_by` variable in your **/catalog/views.py** file to a number other than 10, make sure to update the lines that test that the correct number of items are displayed in paginated templates above and in following sections. For example, if you set the variable for the author list page to 5, update the line above to:
 >
 > ```python
 > self.assertTrue(len(response.context['author_list']) == 5)
@@ -576,7 +590,8 @@ class LoanedBooksByUserListView(LoginRequiredMixin, generic.ListView):
 
 Add the following test code to **/catalog/tests/test_views.py**. Here we first use `SetUp()` to create some user login accounts and `BookInstance` objects (along with their associated books and other records) that we'll use later in the tests. Half of the books are borrowed by each test user, but we've initially set the status of all books to "maintenance". We've used `SetUp()` rather than `setUpTestData()` because we'll be modifying some of these objects later.
 
-> **Note:** The `setUp()` code below creates a book with a specified `Language`, but _your_ code may not include the `Language` model as this was created as a _challenge_. If this is the case, comment out the parts of the code that create or import Language objects. You should also do this in the `RenewBookInstancesViewTest` section that follows.
+> [!NOTE]
+> The `setUp()` code below creates a book with a specified `Language`, but _your_ code may not include the `Language` model as this was created as a _challenge_. If this is the case, comment out the parts of the code that create or import Language objects. You should also do this in the `RenewBookInstancesViewTest` section that follows.
 
 ```python
 import datetime
@@ -681,9 +696,9 @@ The rest of the tests verify that our view only returns books that are on loan t
         self.assertTrue('bookinstance_list' in response.context)
 
         # Confirm all books belong to testuser1 and are on loan
-        for bookitem in response.context['bookinstance_list']:
-            self.assertEqual(response.context['user'], bookitem.borrower)
-            self.assertEqual(bookitem.status, 'o')
+        for book_item in response.context['bookinstance_list']:
+            self.assertEqual(response.context['user'], book_item.borrower)
+            self.assertEqual(book_item.status, 'o')
 
     def test_pages_ordered_by_due_date(self):
         # Change all books to be on loan
@@ -883,7 +898,8 @@ The next test (add this to the class too) checks that the view redirects to a li
         self.assertRedirects(response, reverse('all-borrowed'))
 ```
 
-> **Warning:** The _all-borrowed_ view was added as a _challenge_, and your code may instead redirect to the home page '/'. If so, modify the last two lines of the test code to be like the code below. The `follow=True` in the request ensures that the request returns the final destination URL (hence checking `/catalog/` rather than `/`).
+> [!WARNING]
+> The _all-borrowed_ view was added as a _challenge_, and your code may instead redirect to the home page '/'. If so, modify the last two lines of the test code to be like the code below. The `follow=True` in the request ensures that the request returns the final destination URL (hence checking `/catalog/` rather than `/`).
 >
 > ```python
 >  response = self.client.post(reverse('renew-book-librarian', kwargs={'pk':self.test_bookinstance1.pk,}), {'renewal_date':valid_date_in_future}, follow=True)

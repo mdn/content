@@ -38,7 +38,7 @@ remove(successCallback, errorCallback)
 
 None ({{jsxref("undefined")}}).
 
-### Errors
+### Exceptions
 
 - `FileError.INVALID_MODIFICATION_ERR`
   - : The specified entry was the file system's root directory, or the specified entry is
@@ -60,7 +60,7 @@ This example deletes a temporary work file.
 
 ```js
 workingDirectory.getFile(
-  "tmp/workfile.json",
+  "tmp/work-file.json",
   {},
   (fileEntry) => {
     fileEntry.remove(() => {

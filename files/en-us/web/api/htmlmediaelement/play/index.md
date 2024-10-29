@@ -31,7 +31,8 @@ None.
 A {{jsxref("Promise")}} which is resolved when playback has been started, or is
 rejected if for any reason playback cannot be started.
 
-> **Note:** Browsers released before 2019 may not return a value from
+> [!NOTE]
+> Browsers released before 2019 may not return a value from
 > `play()`.
 
 ### Exceptions
@@ -66,7 +67,8 @@ interface that assumes playback has begun automatically, but should instead upda
 UI based on whether the returned promise is fulfilled or rejected. See the
 [example](#examples) below for more information.
 
-> **Note:** The `play()` method may cause the user to be asked
+> [!NOTE]
+> The `play()` method may cause the user to be asked
 > to grant permission to play the media, resulting in a possible delay before the
 > returned promise is resolved. Be sure your code doesn't expect an immediate response.
 
@@ -80,7 +82,7 @@ handle blocked automatic playback:
 
 ```js
 let videoElem = document.getElementById("video");
-let playButton = document.getElementById("playbutton");
+let playButton = document.getElementById("play-button");
 
 playButton.addEventListener("click", handlePlayButton, false);
 playVideo();

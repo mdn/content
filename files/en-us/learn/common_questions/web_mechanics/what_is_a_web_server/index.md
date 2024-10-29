@@ -74,7 +74,7 @@ Once you have web hosting service, you must [upload your files to your web serve
 
 ### Communicating through HTTP
 
-Second, a web server provides support for {{Glossary("HTTP")}} (**H**yper**t**ext **T**ransfer **P**rotocol). As its name implies, HTTP specifies how to transfer hypertext (linked web documents) between two computers.
+Second, a web server provides support for {{Glossary("HTTP")}} (Hypertext Transfer Protocol). As its name implies, HTTP specifies how to transfer hypertext (linked web documents) between two computers.
 
 A {{Glossary("Protocol")}} is a set of rules for communication between two computers. HTTP is a textual, stateless protocol.
 
@@ -83,9 +83,11 @@ A {{Glossary("Protocol")}} is a set of rules for communication between two compu
 - Stateless
   - : Neither the server nor the client remember previous communications. For example, relying on HTTP alone, a server can't remember a password you typed or remember your progress on an incomplete transaction. You need an application server for tasks like that. (We'll cover that sort of technology in other articles.)
 
-HTTP provides clear rules for how a client and server communicate. We'll cover HTTP itself in a [technical article](/en-US/docs/Web/HTTP) later. For now, just be aware of these things:
+HTTP provides clear rules for how a client and server communicate.
+If you want to learn more, you can read the [HTTP documentation](/en-US/docs/Web/HTTP).
+For now, there are a few things to keep in mind:
 
-- Usually only _clients_ make HTTP requests, and only to _servers_. Servers _respond_ to a _client_'s HTTP request. A server can also populate data into a client cache, in advance of it being requested, through a mechanism called [server push](https://en.wikipedia.org/wiki/HTTP/2_Server_Push).
+- _Clients_ make HTTP requests to _servers_. Servers _respond_ to a _client_'s HTTP request.
 - When requesting a file via HTTP, clients must provide the file's {{Glossary("URL")}}.
 - The web server _must answer_ every HTTP request, at least with an error message.
 
@@ -95,7 +97,7 @@ On a web server, the HTTP server is responsible for processing and answering inc
 2. If so, the web server sends the file content back to the browser. If not, the server will check if it should generate a file dynamically for the request (see [Static vs. dynamic content](#static_vs._dynamic_content)).
 3. If neither of these options are possible, the web server returns an error message to the browser, most commonly {{HTTPStatus("404", "404 Not Found")}}.
    The 404 error is so common that some web designers devote considerable time and effort to designing 404 error pages.
-   [![The MDN 404 page as an example of such error page](mdn-404.jpg)](/en-US/docs/Web/HTTP/Status/404)
+   ![The MDN 404 page as an example of such error page](mdn-404.jpg)
 
 ### Static vs. dynamic content
 

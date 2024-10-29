@@ -40,18 +40,18 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
 ### Functions
 
 - Color functions:
-  - [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) and its `rgba()` alias
-  - [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) and its `hsla()` alias
+  - [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb)
+  - [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl)
   - [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb)
   - [`lab()`](/en-US/docs/Web/CSS/color_value/lab)
   - [`lch()`](/en-US/docs/Web/CSS/color_value/lch)
   - [`oklab()`](/en-US/docs/Web/CSS/color_value/oklab)
   - [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch)
   - [`color()`](/en-US/docs/Web/CSS/color_value/color)
-- [`color-contrast()`](/en-US/docs/Web/CSS/color_value/color-contrast) {{Experimental_Inline}}
+- [`color-contrast()`](/en-US/docs/Web/CSS/color_value/color-contrast) {{experimental_inline}}
 - [`color-mix()`](/en-US/docs/Web/CSS/color_value/color-mix)
-- [`device-cmyk()`](/en-US/docs/Web/CSS/color_value/device-cmyk) {{Experimental_Inline}}
-- {{CSSXref("color_value/light-dark", "light-dark()")}} {{Experimental_Inline}}
+- [`device-cmyk()`](/en-US/docs/Web/CSS/color_value/device-cmyk)
+- {{CSSXref("color_value/light-dark", "light-dark()")}}
 
 ### Data types
 
@@ -68,16 +68,22 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
 
 - {{glossary("color space")}}
 - [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword)
+- {{glossary("interpolation")}}
+- {{glossary("RGB")}}
 - [`transparent`](/en-US/docs/Web/CSS/named-color#transparent)
 
 ### Interfaces
 
-- `CSSColorProfileRule` {{Experimental_Inline}}
+- `CSSColorProfileRule`
 
 ## Guides
 
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)
-  - : A guide to using CSS to apply color to a variety of types of content. All color-related CSS properties are touched upon.
+  - : A guide to using CSS to apply color to a variety of types of content, including all CSS properties that accept `<color>` as a value.
+- [CSS color values](/en-US/docs/Web/CSS/CSS_colors/Color_values)
+  - : An overview of color spaces and the different `<color>` functional notations available in CSS.
+- [Using color wisely](/en-US/docs/Web/CSS/CSS_colors/Using_color_wisely)
+  - : Color theory and resources, including finding the right colors to create an accessible color palette, contrast, and printing in color.
 - [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
   - : This article explains relative CSS color syntax, shows what the different options are, and looks at some illustrative examples.
 - [Understanding color and luminance](/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
@@ -128,4 +134,3 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
 - The [`VideoColorSpace`](/en-US/docs/Web/API/VideoColorSpace) interface
 - The SVG [`<feColorMatrix>`](/en-US/docs/Web/SVG/Element/feColorMatrix) element
 - [Canvas API: applying styles and colors](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#colors)
-- [Color picker tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool): This tool makes it easy to create, adjust, and experiment with custom colors.

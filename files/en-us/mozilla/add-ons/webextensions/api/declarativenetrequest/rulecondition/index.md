@@ -14,7 +14,7 @@ Details of the condition that determines whether a rule matches a request, as th
 Values of this type are objects. They contain these properties:
 
 - `domainType` {{optional_inline}}
-  - : A `string`. Specifies whether the network request is first-party or third-party to the domain from where it originated. If omitted, all requests are accepted. Possible values are `"firstParty"` and `"thirdParty"`.
+  - : A `string`. Specifies whether the network request is first-party or third-party. The request is considered first-party if it's for the same domain as the document or subdocument that initiates the request. Otherwise, it's considered third-party. If omitted, all requests are accepted. Possible values are `"firstParty"` and `"thirdParty"`.
 - `domains` {{deprecated_inline}} {{optional_inline}}
   - : An array of `string`. Use [`initiatorDomains`](#initiatordomains) instead. The rule only matches network requests originating from this list of domains.
 - `excludedDomains` {{deprecated_inline}} {{optional_inline}}
@@ -29,7 +29,7 @@ Values of this type are objects. They contain these properties:
   - : A `string`. Regular expression to match against the network request URL. Note that:
     - The supported format is not stable and varies across browsers, see ["Regular expressions in DNR API (regexFilter)" in WECG issue 344](https://github.com/w3c/webextensions/issues/344) for details.
     - Only one of [`urlFilter`](#urlfilter) or [`regexFilter`](#regexfilter) can be specified.
-    - The [`regexFilter`](#regexfilter) must be composed of only {{Glossary("ASCII")}} characters. This is matched against a URL where the host is encoded in the [punycode](https://en.wikipedia.org/wiki/Punycode) format (in case of internationalized domains) and any other non-ascii characters are URL encoded in utf-8.
+    - The [`regexFilter`](#regexfilter) must be composed of only {{Glossary("ASCII")}} characters. This is matched against a URL where the host is encoded in the [punycode](https://en.wikipedia.org/wiki/Punycode) format (in case of internationalized domains) and any other non-ascii characters are percent-encoded in UTF-8.
 - `requestDomains` {{optional_inline}}
   - : An array of `string`. The rule only matches network requests when the domain matches one from this list. If the list is omitted, the rule is applied to requests from all domains. An empty list is not allowed. A [canonical domain](#canonical_domain) should be used.
 - `excludedRequestDomains` {{optional_inline}}
@@ -42,6 +42,10 @@ Values of this type are objects. They contain these properties:
   - : An array of {{WebExtAPIRef("declarativeNetRequest.ResourceType")}}. List of resource types that the rule matches with. An empty list is not allowed. This must be specified for `"allowAllRequests"` rules and may only include the `"sub_frame"` and `"main_frame"` resource types.
 - `excludedResourceTypes` {{optional_inline}}
   - : An array of {{WebExtAPIRef("declarativeNetRequest.ResourceType")}}. List of resource types that the rule does not match on. Only one of [`resourceTypes`](#resourcetypes) and `excludedResourceTypes` should be specified. If neither of them is specified, all resource types except `"main_frame"` are blocked.
+- `responseHeaders` {{optional_inline}}
+  - : An array of {{WebExtAPIRef("declarativeNetRequest.HeaderInfo")}}. The rule matches if the request matches any response header condition in this list (if specified).
+- `excludedResponseHeaders` {{optional_inline}}
+  - : An array of {{WebExtAPIRef("declarativeNetRequest.HeaderInfo")}}. The rule does not match if the request matches any response header condition in this list (if specified). If both `excludedResponseHeaders` and `responseHeaders` are specified, then the `excludedResponseHeaders` property takes precedence.
 - `tabIds` {{optional_inline}}
   - : An array of `number`. List of {{WebExtAPIRef("tabs.Tab")}}.`id` that the rule should match. An ID of {{WebExtAPIRef("tabs.TAB_ID_NONE")}} matches requests that don't originate from a tab. An empty list is not allowed. Only supported for session-scoped rules.
 - `excludedTabIds` {{optional_inline}}
@@ -61,7 +65,7 @@ Values of this type are objects. They contain these properties:
     Note that:
 
     - Only one of `urlFilter` or [`regexFilter`](#regexfilter) can be specified.
-    - The `urlFilter` must be composed of only ASCII characters. This is matched against a URL where the host is encoded in the [punycode](https://en.wikipedia.org/wiki/Punycode) format (in case of internationalized domains) and any other non-ASCII characters are URL encoded in utf-8. For example, when the request URL is `http://abc.рф?q=ф`, the `urlFilter` is matched against the URL `http://abc.xn--p1ai/?q=%D1%84`.
+    - The `urlFilter` must be composed of only ASCII characters. This is matched against a URL where the host is encoded in the [punycode](https://en.wikipedia.org/wiki/Punycode) format (in case of internationalized domains) and any other non-ASCII characters are percent-encoded in UTF-8. For example, when the request URL is `http://abc.рф?q=ф`, the `urlFilter` is matched against the URL `http://abc.xn--p1ai/?q=%D1%84`.
 
 ### Canonical domain
 

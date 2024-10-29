@@ -8,7 +8,7 @@ status:
 browser-compat: api.PaymentRequestEvent.openWindow
 ---
 
-{{APIRef("Payment Handler API")}}{{SeeCompatTable}}
+{{APIRef("Payment Handler API")}}{{SeeCompatTable}}{{AvailableInWorkers("service")}}
 
 The **`openWindow()`** method of the {{domxref("PaymentRequestEvent")}} interface opens the specified URL in a new window, only if the given URL is on the same origin as the calling page. It returns a {{jsxref("Promise")}} that resolves with a reference to a {{domxref("WindowClient")}}.
 

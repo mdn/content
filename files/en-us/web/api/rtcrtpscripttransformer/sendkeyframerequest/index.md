@@ -13,7 +13,8 @@ The **`sendKeyFrameRequest()`** method of the {{domxref("RTCRtpScriptTransformer
 The method may only be called when receiving _video_ (not audio) frames and if, for whatever reason, a recipient will not be able to decode the video without a new key frame.
 Note that the user agent can decide that the request for a key frame is not necessary, in which case the returned promise will fulfill even though the request was not actually sent.
 
-> **Note:** It might be called, for example, if a new user joins a WebRTC conference, in order to reduce the time before they receive a key frame and can hence start displaying video.
+> [!NOTE]
+> It might be called, for example, if a new user joins a WebRTC conference, in order to reduce the time before they receive a key frame and can hence start displaying video.
 > For more information see [Triggering a key frame](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms#triggering_a_key_frame) in Using WebRTC Encoded Transforms.
 
 ## Syntax
@@ -24,7 +25,7 @@ sendKeyFrameRequest()
 
 ### Parameters
 
-None
+None.
 
 ### Return value
 
@@ -70,8 +71,8 @@ event.transformer.options.port.onmessage = (event) => {
   // key is used by the transformer to decrypt frames (not shown)
 
   // Request sender to emit a key frame.
-  // Here 'rcevent' is the rtctransform event.
-  rcevent.transformer.sendKeyFrameRequest();
+  // Here 'rcEvent' is the rtctransform event.
+  rcEvent.transformer.sendKeyFrameRequest();
 };
 ```
 

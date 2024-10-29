@@ -27,8 +27,8 @@ These properties are defined on `Intl.RelativeTimeFormat.prototype` and shared b
 
 - {{jsxref("Object/constructor", "Intl.RelativeTimeFormat.prototype.constructor")}}
   - : The constructor function that created the instance object. For `Intl.RelativeTimeFormat` instances, the initial value is the {{jsxref("Intl/RelativeTimeFormat/RelativeTimeFormat", "Intl.RelativeTimeFormat")}} constructor.
-- `Intl.RelativeTimeFormat.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl.RelativeTimeFormat"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `Intl.RelativeTimeFormat.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl.RelativeTimeFormat"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 
@@ -90,6 +90,6 @@ rtf.formatToParts(100, "day");
 
 ## See also
 
-- [Polyfill of `Intl.RelativeTimeFormat` in FormatJS](https://formatjs.io/docs/polyfills/intl-relativetimeformat/)
+- [Polyfill of `Intl.RelativeTimeFormat` in FormatJS](https://formatjs.github.io/docs/polyfills/intl-relativetimeformat/)
 - {{jsxref("Intl")}}
 - [`Intl.RelativeTimeFormat`](https://v8.dev/features/intl-relativetimeformat) on v8.dev (2018)

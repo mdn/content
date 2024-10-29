@@ -13,7 +13,8 @@ The arc is automatically connected to the path's latest point with a straight li
 
 This method is commonly used for making rounded corners.
 
-> **Note:** You may get unexpected results when using a
+> [!NOTE]
+> You may get unexpected results when using a
 > relatively large radius: the arc's connecting line will go in whatever direction it
 > must to meet the specified radius.
 
@@ -372,15 +373,15 @@ can be used to change an underlined element that is in focus.
       this.setStateValue = setStateValue;
       this.#callbackKeydown = (evt) => {
         let valueInput;
-        switch (evt.keyCode) {
-          case 13: // enter -- do not allow since adds <br> nodes
+        switch (evt.code) {
+          case "Enter": // Do not allow since adds <br> nodes
             evt.preventDefault();
             return;
-          case 38: // up arrow
+          case "ArrowUp":
             valueInput = Number(this.elementText.textContent) + 1;
             evt.preventDefault();
             break;
-          case 40: // down arrow
+          case "ArrowDown":
             valueInput = Number(this.elementText.textContent) - 1;
             evt.preventDefault();
             break;
@@ -630,7 +631,7 @@ can be used to change an underlined element that is in focus.
     return [-1]; // no hit
   }
 
-  /* Handle a mouse move for either a mousemove event or mouseentry */
+  /* Handle a mouse move for either a mousemove event or mouseenter */
   function doMouseMove(pointCursor, rBtnDown) {
     /* Test for active move. If so, move accordingly based on the
      * cursor position. The right button down flag handles the case
@@ -723,7 +724,7 @@ can be used to change an underlined element that is in focus.
   function drawCanvas() {
     const rPoint = 4;
     const colorConstruction = "#080";
-    const colorDragable = "#00F";
+    const colorDraggable = "#00F";
     const [P0, P1, P2] = state.controlPoints;
 
     ctx.font = "italic 14pt sans-serif";
@@ -782,7 +783,7 @@ can be used to change an underlined element that is in focus.
     state.controlPoints.forEach((value) => {
       ctx.beginPath();
       ctx.arc(value.x, value.y, rPoint, 0, 2 * Math.PI);
-      ctx.fillStyle = colorDragable;
+      ctx.fillStyle = colorDraggable;
       ctx.fill();
     });
     ctx.fillStyle = "#000";
@@ -812,20 +813,20 @@ can be used to change an underlined element that is in focus.
     elem.addEventListener("keydown", (evt) => {
       let valueNew;
       let indexActive = indexTextInput;
-      switch (evt.keyCode) {
-        case 37: // left arrow -- dec x by 1
+      switch (evt.code) {
+        case "ArrowLeft": // left arrow -- dec x by 1
           valueNew = textInputs[indexActive].getStateValue() - 1;
           evt.preventDefault();
           break;
-        case 38: // up arrow -- dec y by 1
+        case "ArrowUp": // up arrow -- dec y by 1
           valueNew = textInputs[++indexActive].getStateValue() - 1;
           evt.preventDefault();
           break;
-        case 39: // right arrow -- inc x by 1
+        case "ArrowRight": // right arrow -- inc x by 1
           valueNew = textInputs[indexActive].getStateValue() + 1;
           evt.preventDefault();
           break;
-        case 40: // down arrow -- inc y by 1
+        case "ArrowDown": // down arrow -- inc y by 1
           valueNew = textInputs[++indexActive].getStateValue() + 1;
           evt.preventDefault();
           break;

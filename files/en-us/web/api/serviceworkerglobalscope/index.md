@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.ServiceWorkerGlobalScope
 ---
 
-{{APIRef("Service Workers API")}}{{SecureContext_Header}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
 
 The **`ServiceWorkerGlobalScope`** interface of the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) represents the global execution context of a service worker.
 
@@ -13,7 +13,7 @@ Developers should keep in mind that the ServiceWorker state is not persisted acr
 
 Once successfully registered, a service worker can and will be terminated when idle to conserve memory and processor power. An active service worker is automatically restarted to respond to events, such as {{domxref("ServiceWorkerGlobalScope.fetch_event", "fetch")}} or {{domxref("ServiceWorkerGlobalScope.message_event", "message")}}.
 
-Additionally, synchronous requests are not allowed from within a service worker — only asynchronous requests, like those initiated via the {{domxref("fetch()")}} method, can be used.
+Additionally, synchronous requests are not allowed from within a service worker — only asynchronous requests, like those initiated via the {{domxref("WorkerGlobalScope/fetch", "fetch()")}} method, can be used.
 
 This interface inherits from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}.
 
@@ -54,13 +54,13 @@ Listen to this event using {{domxref("EventTarget/addEventListener()", "addEvent
 - {{domxref("ServiceWorkerGlobalScope/backgroundfetchsuccess_event", "backgroundfetchsuccess")}} {{Experimental_Inline}}
   - : Fired when all of the requests in a [background fetch](/en-US/docs/Web/API/Background_Fetch_API) operation have succeeded.
 - {{domxref("ServiceWorkerGlobalScope/canmakepayment_event", "canmakepayment")}} {{Experimental_Inline}}
-  - : Fired on a payment app's service worker to check whether it is ready to handle a payment. Specifically, it is fired when the merchant website calls {{domxref("PaymentRequest.PaymentRequest", "new PaymentRequest()")}}.
+  - : Fired on a payment app's service worker to check whether it is ready to handle a payment. Specifically, it is fired when the merchant website calls the {{domxref("PaymentRequest.PaymentRequest", "PaymentRequest()")}} constructor.
 - {{domxref("ServiceWorkerGlobalScope/contentdelete_event", "contentdelete")}} {{Experimental_Inline}}
-  - : Occurs when an item is removed from the {{domxref("ContentIndex", "Content Index")}}.
+  - : Occurs when an item is removed from the {{domxref("ContentIndex")}}.
 - {{domxref("ServiceWorkerGlobalScope/cookiechange_event", "cookiechange")}} {{Experimental_Inline}}
   - : Fired when a cookie change has occurred that matches the service worker's cookie change subscription list.
 - {{domxref("ServiceWorkerGlobalScope/fetch_event", "fetch")}}
-  - : Occurs when a {{domxref("fetch()")}} is called.
+  - : Occurs when a {{domxref("WorkerGlobalScope/fetch", "fetch()")}} is called.
 - {{domxref("ServiceWorkerGlobalScope/install_event", "install")}}
   - : Occurs when a {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.installing")}} worker.
 - {{domxref("ServiceWorkerGlobalScope/message_event", "message")}}
@@ -86,7 +86,7 @@ Listen to this event using {{domxref("EventTarget/addEventListener()", "addEvent
 
 This code snippet is from the [service worker prefetch sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js) (see [prefetch example live](https://googlechrome.github.io/samples/service-worker/prefetch/).) The {{domxref("ServiceWorkerGlobalScope.fetch_event", "onfetch")}} event handler listens for the `fetch` event. When fired, the code returns a promise that resolves to the first matching request in the {{domxref("Cache")}} object. If no match is found, the code fetches a response from the network.
 
-The code also handles exceptions thrown from the {{domxref("fetch()")}} operation. Note that an HTTP error response (e.g., 404) will not trigger an exception. It will return a normal response object that has the appropriate error code set.
+The code also handles exceptions thrown from the {{domxref("WorkerGlobalScope/fetch", "fetch()")}} operation. Note that an HTTP error response (e.g., 404) will not trigger an exception. It will return a normal response object that has the appropriate error code set.
 
 ```js
 self.addEventListener("fetch", (event) => {

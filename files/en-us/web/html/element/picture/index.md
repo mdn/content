@@ -25,7 +25,8 @@ Common use cases for `<picture>`:
 - **Art direction.** Cropping or modifying images for different `media` conditions (for example, loading a simpler version of an image which has too many details, on smaller displays).
 - **Offering alternative image formats**, for cases where certain formats are not supported.
 
-  > **Note:** For example, newer formats like [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) or [WEBP](/en-US/docs/Web/Media/Formats/Image_types#webp_image) have many advantages, but might not be supported by the browser. A list of supported image formats can be found in: [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types).
+  > [!NOTE]
+  > For example, newer formats like [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) or [WEBP](/en-US/docs/Web/Media/Formats/Image_types#webp_image) have many advantages, but might not be supported by the browser. A list of supported image formats can be found in: [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types).
 
 - **Saving bandwidth and speeding page load times** by loading the most appropriate image for the viewer's display.
 
@@ -39,7 +40,8 @@ This element includes only [global attributes](/en-US/docs/Web/HTML/Global_attri
 
 You can use the {{cssxref("object-position")}} property to adjust the positioning of the image within the element's frame, and the {{cssxref("object-fit")}} property to control how the image is resized to fit within the frame.
 
-> **Note:** Use these properties on the child `<img>` element, **not** the `<picture>` element.
+> [!NOTE]
+> Use these properties on the child `<img>` element, **not** the `<picture>` element.
 
 ## Examples
 
@@ -103,7 +105,7 @@ For more information on using `srcset`, see the [Responsive images](/en-US/docs/
 
 ### The type attribute
 
-The `type` attribute specifies a [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) for the resource URL(s) in the {{HTMLElement("source")}} element's `srcset` attribute. If the user agent does not support the given type, the {{HTMLElement("source")}} element is skipped.
+The `type` attribute specifies a [MIME type](/en-US/docs/Web/HTTP/MIME_types) for the resource URL(s) in the {{HTMLElement("source")}} element's `srcset` attribute. If the user agent does not support the given type, the {{HTMLElement("source")}} element is skipped.
 
 ```html
 <picture>

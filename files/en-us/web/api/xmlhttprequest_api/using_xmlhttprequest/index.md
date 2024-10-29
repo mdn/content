@@ -34,7 +34,8 @@ req.send();
 
 A request made via `XMLHttpRequest` can fetch the data in one of two ways, asynchronously or synchronously. The type of request is dictated by the optional `async` argument (the third argument) that is set on the {{domxref("XMLHttpRequest.open()")}} method. If this argument is `true` or not specified, the `XMLHttpRequest` is processed asynchronously, otherwise the process is handled synchronously. A detailed discussion and demonstrations of these two types of requests can be found on the [synchronous and asynchronous requests](/en-US/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests) page. You can't use synchronous requests outside web workers as it freezes the main interface.
 
-> **Note:** The constructor `XMLHttpRequest` isn't limited to only XML documents. It starts with **"XML"** because when it was created the main format that was originally used for asynchronous data exchange was XML.
+> [!NOTE]
+> The constructor `XMLHttpRequest` isn't limited to only XML documents. It starts with **"XML"** because when it was created the main format that was originally used for asynchronous data exchange was XML.
 
 ## Handling responses
 
@@ -73,7 +74,7 @@ req.overrideMimeType("text/plain; charset=x-user-defined");
 
 However, more modern techniques are available, since the {{domxref("XMLHttpRequest.responseType", "responseType")}} attribute now supports a number of additional content types, which makes sending and receiving binary data much easier.
 
-For example, consider this snippet, which uses the `responseType` of "`arraybuffer`" to fetch the remote content into a {{jsxref("ArrayBuffer")}} object, which stores the raw binary data.
+For example, consider this snippet, which uses the `responseType` of `"arraybuffer"` to fetch the remote content into a {{jsxref("ArrayBuffer")}} object, which stores the raw binary data.
 
 ```js
 const req = new XMLHttpRequest();
@@ -135,9 +136,10 @@ function transferCanceled(evt) {
 }
 ```
 
-Lines 3-6 add event listeners for the various events that are sent while performing a data transfer using `XMLHttpRequest`.
+We add event listeners for the various events that are sent while performing a data transfer using `XMLHttpRequest`.
 
-> **Note:** You need to add the event listeners before calling `open()` on the request. Otherwise the `progress` events will not fire.
+> [!NOTE]
+> You need to add the event listeners before calling `open()` on the request. Otherwise the `progress` events will not fire.
 
 The progress event handler, specified by the `updateProgress()` function in this example, receives the total number of bytes to transfer as well as the number of bytes transferred so far in the event's `total` and `loaded` fields. However, if the `lengthComputable` field is false, the total length is not known and will be zero.
 
@@ -154,7 +156,8 @@ req.upload.addEventListener("abort", transferCanceled);
 req.open();
 ```
 
-> **Note:** Progress events are not available for the
+> [!NOTE]
+> Progress events are not available for the
 > `file:` protocol.
 
 Progress events come in for every chunk of data received, including the last chunk in cases in which the last packet is received and the connection closed before the progress event is fired. In this case, the progress event is automatically fired when the load event occurs for that packet. This lets you now reliably monitor progress by only watching the "progress" event.
@@ -184,7 +187,7 @@ function getHeaderTime() {
 const req = new XMLHttpRequest();
 req.open(
   "HEAD", // use HEAD when you only need the headers
-  "yourpage.html",
+  "your-page.html",
 );
 req.onload = getHeaderTime;
 req.send();
@@ -220,8 +223,8 @@ function ifHasChanged(URL, callback) {
 And to test:
 
 ```js
-// Let's test the file "yourpage.html"
-ifHasChanged("yourpage.html", function (modified, visit) {
+// Let's test the file "your-page.html"
+ifHasChanged("your-page.html", function (modified, visit) {
   console.log(
     `The page '${this.filepath}' has been changed on ${new Date(
       nModified,

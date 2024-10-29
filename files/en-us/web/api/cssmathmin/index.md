@@ -7,7 +7,7 @@ browser-compat: api.CSSMathMin
 
 {{APIRef("CSS Typed Object Model API")}}
 
-The **`CSSMathMin`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the CSS {{CSSXref('min','min()')}} function. It inherits properties and methods from its parent {{domxref('CSSNumericValue')}}.
+The **`CSSMathMin`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) represents the CSS {{CSSXref('min','min()')}} function. It inherits properties and methods from its parent {{domxref('CSSNumericValue')}}.
 
 {{InheritanceDiagram}}
 

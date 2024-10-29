@@ -1,7 +1,7 @@
 ---
 title: "CSSKeyframeRule: style property"
 short-title: style
-slug: Web/API/CSSkeyframeRule/style
+slug: Web/API/CSSKeyframeRule/style
 page-type: web-api-instance-property
 browser-compat: api.CSSKeyframeRule.style
 ---
@@ -29,7 +29,7 @@ The CSS includes a {{cssxref("@keyframes")}} at-rule. This will be the first {{d
 `myRules[0]` returns a {{domxref("CSSKeyframesRule")}} object, which will contain individual {{domxref("CSSKeyFrameRule")}} objects for each keyframe.
 
 ```css
-@keyframes slidein {
+@keyframes slide-in {
   from {
     transform: translateX(0%);
   }

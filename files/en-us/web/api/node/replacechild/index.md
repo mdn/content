@@ -20,11 +20,13 @@ replaceChild(newChild, oldChild)
 
 - `newChild`
   - : The new node to replace `oldChild`.
-    > **Warning:** If the new node is already present somewhere else in the DOM, it is first removed from that position.
+    > [!WARNING]
+    > If the new node is already present somewhere else in the DOM, it is first removed from that position.
 - `oldChild`
   - : The child to be replaced.
 
-> **Note:** The parameter order, _new_ before _old_, is unusual.
+> [!NOTE]
+> The parameter order, _new_ before _old_, is unusual.
 > [`Element.replaceWith()`](/en-US/docs/Web/API/Element/replaceWith), applying only to nodes that are elements,
 > may be easier to read and use.
 

@@ -21,7 +21,8 @@ and {{domxref("XRViewport.height", "height")}} properties.
 The offset from the bottom edge of the rendering surface to the bottom edge of the
 viewport, in pixels.
 
-> **Note:** Although other web APIs typically consider the `y`
+> [!NOTE]
+> Although other web APIs typically consider the `y`
 > axis to begin at the top and grow larger progressing downward, WebGL reverses this,
 > with `y` growing larger as it goes upward on the screen.
 

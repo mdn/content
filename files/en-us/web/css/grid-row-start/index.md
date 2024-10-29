@@ -7,7 +7,7 @@ browser-compat: css.properties.grid-row-start
 
 {{CSSRef}}
 
-The **`grid-row-start`** CSS property specifies a grid item's start position within the grid row by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start edge of its {{glossary("grid areas", "grid area")}}.
+The **`grid-row-start`** [CSS](/en-US/docs/Web/CSS) property specifies a grid item's start position within the grid row by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start edge of its {{glossary("grid areas", "grid area")}}.
 
 {{EmbedInteractiveExample("pages/css/grid-row-start.html")}}
 
@@ -18,16 +18,16 @@ The **`grid-row-start`** CSS property specifies a grid item's start position wit
 grid-row-start: auto;
 
 /* <custom-ident> values */
-grid-row-start: somegridarea;
+grid-row-start: some-grid-area;
 
 /* <integer> + <custom-ident> values */
 grid-row-start: 2;
-grid-row-start: somegridarea 4;
+grid-row-start: some-grid-area 4;
 
 /* span + <integer> + <custom-ident> values */
 grid-row-start: span 3;
-grid-row-start: span somegridarea;
-grid-row-start: 5 somegridarea span;
+grid-row-start: span some-grid-area;
+grid-row-start: 5 some-grid-area span;
 
 /* Global values */
 grid-row-start: inherit;
@@ -53,7 +53,8 @@ This property is specified as a single `<grid-line>` value. A `<grid-line>` valu
 
   - : If there is a named line with the name '\<custom-ident>-start', it contributes the first such line to the grid item's placement.
 
-    > **Note:** Named grid areas automatically generate implicit named lines of this form, so specifying `grid-row-start: foo;` will choose the start edge of that named grid area (unless another line named `foo-start` was explicitly specified before it).
+    > [!NOTE]
+    > Named grid areas automatically generate implicit named lines of this form, so specifying `grid-row-start: foo;` will choose the start edge of that named grid area (unless another line named `foo-start` was explicitly specified before it).
 
     Otherwise, this is treated as if the integer `1` had been specified along with the `<custom-ident>`.
 
@@ -163,6 +164,10 @@ This property is specified as a single `<grid-line>` value. A `<grid-line>` valu
 
 ## See also
 
-- Related CSS properties: {{cssxref("grid-row-end")}}, {{cssxref("grid-row")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-column")}}
-- Grid Layout Guide: _[Line-based placement with CSS Grid](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
-- Video tutorial: _[Line-based placement](https://gridbyexample.com/video/series-line-based-placement/)_
+- {{cssxref("grid-row-end")}}
+- {{cssxref("grid-row")}}
+- {{cssxref("grid-column-start")}}
+- {{cssxref("grid-column-end")}}
+- {{cssxref("grid-column")}}
+- [Line-based placement with CSS grid](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+- Video: [Line-based placement](https://gridbyexample.com/video/series-line-based-placement/)

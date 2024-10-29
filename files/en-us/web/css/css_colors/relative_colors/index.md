@@ -14,11 +14,11 @@ This article explains relative color syntax, shows what the different options ar
 
 A relative CSS color value has the following general syntax structure:
 
-```text
+```css
 color-function(from origin-color channel1 channel2 channel3)
 color-function(from origin-color channel1 channel2 channel3 / alpha)
 
-// color space included in the case of color() functions
+/* color space included in the case of color() functions */
 color(from origin-color colorspace channel1 channel2 channel3)
 color(from origin-color colorspace channel1 channel2 channel3 / alpha)
 ```
@@ -35,14 +35,14 @@ The browser converts the origin color to a syntax compatible with the color func
 
 Let's look at relative color syntax in action. The below CSS is used to style two {{htmlelement("div")}} elements, one with a absolute background color — `red` — and one with a relative background color created with the `rgb()` function, based on the same `red` color value:
 
-```html hidden
+```html hidden live-sample___simple-relative-color
 <div id="container">
   <div class="item" id="one"></div>
   <div class="item" id="two"></div>
 </div>
 ```
 
-```css hidden
+```css hidden live-sample___simple-relative-color
 #container {
   display: flex;
   width: 100vw;
@@ -56,7 +56,7 @@ Let's look at relative color syntax in action. The below CSS is used to style tw
 }
 ```
 
-```css
+```css live-sample___simple-relative-color
 #one {
   background-color: red;
 }
@@ -68,20 +68,21 @@ Let's look at relative color syntax in action. The below CSS is used to style tw
 
 The output is as follows:
 
-{{ EmbedLiveSample("General syntax", "100%", "200") }}
+{{ EmbedLiveSample("simple-relative-color", "100%", "200") }}
 
 The relative color uses the [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) function, which takes `red` as the origin color, converts it to an equivalent `rgb()` color (`rgb(255 0 0)`) and then defines the new color as having a red channel of value `200` and green and blue channels with a value the same as the origin color (it uses the `g` and `b` values made available inside the function by the browser, which are both equal to `0`).
 
 This results in an output of `rgb(200 0 0)` — a slightly darker red. If we had specified a red channel value of `255` (or just the `r` value), the resulting output color would be exactly the same as the input value. The browser's final output color (the computed value) is an sRGB `color()` value equivalent to `rgb(200 0 0)` — `color(srgb 0.784314 0 0)`.
 
-> **Note:** As mentioned above, when calculating a relative color the first thing the browser does is to convert the provided origin color (`red` in the above example) into a value compatible with the color function being used (in this case, `rgb()`). This is done so that the browser is able to calculate the output color from the origin color. While the calculations are performed relative to the color function used, the actual output color value depends on the color's color space:
+> [!NOTE]
+> As mentioned above, when calculating a relative color the first thing the browser does is to convert the provided origin color (`red` in the above example) into a value compatible with the color function being used (in this case, `rgb()`). This is done so that the browser is able to calculate the output color from the origin color. While the calculations are performed relative to the color function used, the actual output color value depends on the color's color space:
 >
 > - Older sRGB color functions cannot express the full spectrum of visible colors. The output colors of ([`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb), and [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb)) are serialized to `color(srgb)` to avoid these limitations. That means that querying the output color value via the {{domxref("HTMLElement.style")}} property or the {{domxref("CSSStyleDeclaration.getPropertyValue()")}} method returns the output color as a [`color(srgb ...)`](/en-US/docs/Web/CSS/color_value/color) value.
 > - For more recent color functions (`lab()`, `oklab()`, `lch()`, and `oklch()`), relative color output values are expressed in the same syntax as the color function used. For example, if a [`lab()`](/en-US/docs/Web/CSS/color_value/lab) color function is being used, the output color will be a `lab()` value.
 
 These five lines all produce an equivalent output color:
 
-```text
+```css
 red
 rgb(255 0 0)
 rgb(from red r g b)
@@ -108,7 +109,8 @@ rgb(from red 0 0 255)
 /* output color is equivalent to rgb(0 0 255), full blue */
 ```
 
-> **Note:** If you are using relative color syntax but outputting the same color as the origin color or a color not based on the origin color at all, you are not really creating a relative color. You'd be unlikely to ever do this in a real codebase, and would probably just use an absolute color value instead. But, we felt it useful to explain that you _can_ do this with relative color syntax, as a starting point for learning about it.
+> [!NOTE]
+> If you are using relative color syntax but outputting the same color as the origin color or a color not based on the origin color at all, you are not really creating a relative color. You'd be unlikely to ever do this in a real codebase, and would probably just use an absolute color value instead. But, we felt it useful to explain that you _can_ do this with relative color syntax, as a starting point for learning about it.
 
 You can even mix up or repeat the provided values. The following takes a slightly darker red as an input and outputs a light gray color — the output color's `r`, `g`, and `b` channels are all set to the origin color's `r` channel value:
 
@@ -168,8 +170,6 @@ rgb(from red r g b / alpha)
 ```
 
 It is worth mentioning again that the color system of the origin color doesn't need to match the color system being used to create the output color. Again, this provides a lot of flexibility. Generally you won't be interested in and might not even know the system the origin color is defined in (you might just have a [custom property value](#using_custom_properties) to manipulate). You'll just want to input a color and, for example, create a lighter variant of it by putting it into an `hsl()` function and varying the lightness value.
-
-> **Note:** Aliases such as `rgba()` or `hsla()` can be used to output relative colors, and to specify origin colors. When using legacy color functions to output a relative color, you must use the comma-less modern syntax and can't mix percentages and numbers.
 
 ## Using custom properties
 
@@ -302,7 +302,8 @@ For example:
 
 ## Examples
 
-> **Note:** You can find additional examples demonstrating the use of relative color syntax in the different functional notation types on their dedicated pages: [`color()`](/en-US/docs/Web/CSS/color_value/color#using_relative_colors_with_color), [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl#using_relative_colors_with_hsl), [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb#using_relative_colors_with_hwb), [`lab()`](/en-US/docs/Web/CSS/color_value/lab#using_relative_colors_with_lab), [`lch()`](/en-US/docs/Web/CSS/color_value/lch#using_relative_colors_with_lch), [`oklab()`](/en-US/docs/Web/CSS/color_value/oklab#using_relative_colors_with_oklab), [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch#using_relative_colors_with_oklch), [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb#using_relative_colors_with_rgb).
+> [!NOTE]
+> You can find additional examples demonstrating the use of relative color syntax in the different functional notation types on their dedicated pages: [`color()`](/en-US/docs/Web/CSS/color_value/color#using_relative_colors_with_color), [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl#using_relative_colors_with_hsl), [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb#using_relative_colors_with_hwb), [`lab()`](/en-US/docs/Web/CSS/color_value/lab#using_relative_colors_with_lab), [`lch()`](/en-US/docs/Web/CSS/color_value/lch#using_relative_colors_with_lch), [`oklab()`](/en-US/docs/Web/CSS/color_value/oklab#using_relative_colors_with_oklab), [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch#using_relative_colors_with_oklch), [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb#using_relative_colors_with_rgb).
 
 ### Color palette generator
 
@@ -628,10 +629,8 @@ The HTML for the example is shown below.
       From the fiery warmth of reds to the calming coolness of blues, they bring
       unparalleled richness to our world. Colors stir emotions, ignite
       creativity, and shape perceptions, acting as a universal language of
-      expression. Whether in a breathtaking sunset, a bustling marketplace, or
-      an artist's canvas, colors transcend the visual spectrum, turning the
-      ordinary into the extraordinary. In their brilliance, colors create a
-      visually enchanting tapestry that invites admiration and sparks joy.
+      expression. In their brilliance, colors create a visually enchanting
+      tapestry that invites admiration and sparks joy.
     </p>
   </section>
   <form>
@@ -659,49 +658,39 @@ The relative colors are as follows:
 
 Now have a look at the rest of the CSS and take note of all the places where these colors are used. This includes [backgrounds](/en-US/docs/Web/CSS/background), [borders](/en-US/docs/Web/CSS/border), [`text-shadow`](/en-US/docs/Web/CSS/text-shadow), and even the [`accent-color`](/en-US/docs/Web/CSS/accent-color) of the slider.
 
-> **Note:** For brevity, only the parts of the CSS relevant to relative color usage are shown.
+> [!NOTE]
+> For brevity, only the parts of the CSS relevant to relative color usage are shown.
 
 ```css hidden
 html {
   font-family: sans-serif;
 }
 
-body {
-  margin: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 main {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
+  width: 80vw;
+  margin: 2rem auto;
 }
 
-form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 40px;
-  width: 50%;
-  padding: 10px;
-}
-
-label {
-  padding-right: 10px;
+h1 {
+  text-align: center;
+  margin: 0;
+  color: black;
+  border-radius: 16px 16px 0 0;
+  font-size: 3rem;
+  letter-spacing: -1px;
 }
 
 p {
   line-height: 1.5;
   margin: 0;
-  padding: 20px;
+  padding: 1.2rem;
 }
 
-main {
-  width: 600px;
+form {
+  width: fit-content;
+  display: flex;
+  margin: 2rem auto;
+  padding: 0.4rem;
 }
 ```
 
@@ -715,7 +704,7 @@ main {
   --bg-color: lch(from var(--base-color) calc(l + 40) c h);
   --complementary-color: lch(from var(--base-color) l c calc(h + 180));
 
-  background: radial-gradient(ellipse at center, white 40%, var(--base-color));
+  background: radial-gradient(ellipse at center, white 20%, var(--base-color));
 }
 
 /* Use @supports to add in support for --complementary-color with old
@@ -737,14 +726,7 @@ section {
 }
 
 h1 {
-  text-align: center;
-  margin: 0;
-  padding: 20px;
   background-color: var(--base-color);
-  color: black;
-  border-radius: 16px 16px 0 0;
-  font-size: 3rem;
-  letter-spacing: -1px;
   text-shadow:
     1px 1px 1px var(--complementary-color),
     -1px -1px 1px var(--complementary-color),
@@ -759,7 +741,7 @@ form {
 }
 
 input {
-  accent-color: var(--base-color);
+  accent-color: var(--complementary-color);
 }
 ```
 
@@ -774,7 +756,6 @@ const slider = document.getElementById("hue-adjust");
 slider.addEventListener("input", setHue);
 
 function setHue(e) {
-  console.log("hue changed");
   rootElem.style.setProperty("--hue", e.target.value);
 }
 ```
@@ -783,7 +764,7 @@ function setHue(e) {
 
 The output is shown below. Relative CSS colors are being used here to control the color scheme of an entire UI, which can be adjusted live as a single value is modified.
 
-{{ EmbedLiveSample("Live UI color scheme updater", "100%", "500") }}
+{{ EmbedLiveSample("Live UI color scheme updater", "100%", "400") }}
 
 ## See also
 

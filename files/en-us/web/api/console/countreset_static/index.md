@@ -1,7 +1,7 @@
 ---
 title: "console: countReset() static method"
 short-title: countReset()
-slug: Web/API/console/countreset_static
+slug: Web/API/console/countReset_static
 page-type: web-api-instance-method
 browser-compat: api.console.countReset_static
 ---
@@ -13,8 +13,8 @@ The **`console.countReset()`** static method resets counter used with {{domxref(
 ## Syntax
 
 ```js-nolint
-countReset()
-countReset(label)
+console.countReset()
+console.countReset(label)
 ```
 
 ### Parameters
@@ -31,18 +31,14 @@ None ({{jsxref("undefined")}}).
 For example, given code like this:
 
 ```js
-let user = "";
-
-function greet() {
+function greet(user) {
   console.count();
   return `hi ${user}`;
 }
 
-user = "bob";
-greet();
-user = "alice";
-greet();
-greet();
+greet("bob");
+greet("alice");
+greet("alice");
 console.count();
 console.countReset();
 ```
@@ -62,18 +58,14 @@ Note that the call to `console.counterReset()` resets the value of the default c
 If we pass the `user` variable as the `label` argument with the string "bob" to the first invocation of `console.count()`, and the string "alice" to the second:
 
 ```js
-let user = "";
-
-function greet() {
+function greet(user) {
   console.count(user);
   return `hi ${user}`;
 }
 
-user = "bob";
-greet();
-user = "alice";
-greet();
-greet();
+greet("bob");
+greet("alice");
+greet("alice");
 console.countReset("bob");
 console.count("alice");
 ```

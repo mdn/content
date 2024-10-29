@@ -18,7 +18,7 @@ The **`SpeechSynthesisEvent`** interface of the [Web Speech API](/en-US/docs/Web
 
 ## Instance properties
 
-_The {{domxref("SpeechSynthesisEvent")}} interface also inherits properties from its parent interface, {{domxref("Event")}}._
+_The `SpeechSynthesisEvent` interface also inherits properties from its parent interface, {{domxref("Event")}}._
 
 - {{domxref("SpeechSynthesisEvent.charIndex")}} {{ReadOnlyInline}}
   - : Returns the index position of the character in the {{domxref("SpeechSynthesisUtterance.text")}} that was being spoken when the event was triggered.
@@ -33,7 +33,7 @@ _The {{domxref("SpeechSynthesisEvent")}} interface also inherits properties from
 
 ## Instance methods
 
-_The {{domxref("SpeechSynthesisEvent")}} interface also inherits methods from its parent interface, {{domxref("Event")}}._
+_The `SpeechSynthesisEvent` interface also inherits methods from its parent interface, {{domxref("Event")}}._
 
 ## Examples
 

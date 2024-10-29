@@ -6,9 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.PerformanceObserver.takeRecords
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
-The **`takeRecords()`** method of the {{domxref('PerformanceObserver')}} interface returns the current list of {{domxref("PerformanceEntry","performance entries")}} stored in the performance observer, emptying it out.
+The **`takeRecords()`** method of the {{domxref('PerformanceObserver')}} interface returns the current list of {{domxref("PerformanceEntry")}} objects stored in the performance observer, emptying it out.
 
 ## Syntax
 

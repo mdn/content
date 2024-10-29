@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-details
 ---
 
+{{AccessibilitySidebar}}
+
 The global `aria-details` attribute identifies the element (or elements) that provide additional information related to the object.
 
 ## Description
@@ -15,7 +17,7 @@ There are other HTML and WAI-ARIA properties that have similar purposes. The HTM
 
 The `aria-details` attribute serves a similar purpose as HTML's never fully-supported `longdesc` attribute － a URL of a long description to a replaced element's content － which was deprecated due to lack of support and misuse.
 
-The `aria-details` attribute takes the [`id`](/en-US/docs/Web/HTML/Global_attributes#id), or space separated list of `id`s of the elements to get more detailed information as its values. When `aria-details` is included on an element, assistive technologies inform users of the availability of extended information, enabling the user to navigate to the referenced content.
+The `aria-details` attribute takes the [`id`](/en-US/docs/Web/HTML/Global_attributes/id), or space separated list of `id`s of the elements to get more detailed information as its values. When `aria-details` is included on an element, assistive technologies inform users of the availability of extended information, enabling the user to navigate to the referenced content.
 
 Elements referenced by `aria-details` are intended to contain more information than would normally be provided via [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby).
 
@@ -72,8 +74,3 @@ Used in **ALL** roles.
 - [`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-description)
 - [The image `alt` attribute](/en-US/docs/Web/API/HTMLImageElement/alt)
 - HTML [title](/en-US/docs/Web/HTML/Global_attributes/title) attribute
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

@@ -10,7 +10,7 @@ spec-urls:
 
 {{CSSRef}}
 
-The **`oklab()`** functional notation expresses a given color in the Oklab {{glossary("color space")}}, which attempts to mimic how color is perceived by the human eye. The `oklab()` works with a Cartesian coordinate system on the Oklab color space, the a- and b-axes. If you want a polar color system, chroma and hue, use {{cssxref("color_value/oklch", "oklch()")}}.
+The **`oklab()`** functional notation expresses a given color in the Oklab {{glossary("color space")}}, which attempts to mimic how color is perceived by the human eye.
 
 Oklab is a perceptual color space and is useful to:
 
@@ -18,7 +18,7 @@ Oklab is a perceptual color space and is useful to:
 - Modify the saturation of colors, while keeping user perception of hue and lightness
 - Create smooth and uniform gradients of colors (when interpolated manually, for example, in a {{HTMLElement("canvas")}} element).
 
-The function `oklab()` can represent any color from the Oklab color space that is wider than RGB and include wide gamut and P3 colors.
+`oklab()` works with a Cartesian coordinate system on the Oklab color space — a- and b-axes. It can represent a wider range of colors than RGB, including wide-gamut and P3 colors. If you want a polar color system, chroma and hue, use {{cssxref("color_value/oklch", "oklch()")}}.
 
 ## Syntax
 
@@ -30,7 +30,7 @@ oklab(59.69% 0.1007 0.1191 / 0.5);
 
 /* Relative values */
 oklab(from green l a b / 0.5)
-oklab(from #0000FF calc(l + 0.1) a b)
+oklab(from #0000FF calc(l + 0.1) a b / calc(alpha * 0.9))
 oklab(from hsl(180 100% 50%) calc(l - 0.1) a b)
 ```
 
@@ -40,7 +40,7 @@ Below are descriptions of the allowed values for both absolute and [relative col
 
 #### Absolute value syntax
 
-```text
+```plain
 oklab(L a b[ / A])
 ```
 
@@ -55,11 +55,12 @@ The parameters are as follows:
 - `A` {{optional_inline}}
   - : An {{CSSXref("&lt;alpha-value&gt;")}} representing the alpha channel value of the color, where the number `0` corresponds to `0%` (fully transparent) and `1` corresponds to `100%` (fully opaque). Additionally, the keyword `none` can be used to explicitly specify no alpha channel. If the `A` channel value is not explicitly specified, it defaults to 100%. If included, the value is preceded by a slash (`/`).
 
-> **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for more information on the effect of `none`.
+> [!NOTE]
+> See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for more information on the effect of `none`.
 
 #### Relative value syntax
 
-```text
+```plain
 oklab(from <color> L a b[ / A])
 ```
 
@@ -118,7 +119,8 @@ This example:
 
 The final output color is `oklab(0.627966 -0.3 0.125859)`.
 
-> **Note:** As mentioned above, if the output color is using a different color model to the origin color, the origin color is converted to the same model as the output color in the background so that it can be represented in a way that is compatible (i.e. using the same channels).
+> [!NOTE]
+> As mentioned above, if the output color is using a different color model to the origin color, the origin color is converted to the same model as the output color in the background so that it can be represented in a way that is compatible (i.e. using the same channels).
 
 In the examples we've seen so far in this section, the alpha channels have not been explicitly specified for either the origin or output colors. When the output color alpha channel is not specified, it defaults to the same value as the origin color alpha channel. When the origin color alpha channel is not specified (and it is not a relative color), it defaults to `1`. Therefore, the origin and output alpha channel values are `1` for the above examples.
 
@@ -138,7 +140,8 @@ In the following example, the `hsl()` origin color is again converted to the `ok
 oklab(from hsl(0 100% 50%) calc(l + 0.2) calc(a - 0.08) calc(b - 0.2) / calc(alpha - 0.1))
 ```
 
-> **Note:** Because the origin color channel values are resolved to `<number>` values, you have to add numbers to them when using them in calculations, even in cases where a channel would normally accept `<percentage>`, `<angle>`, or other value types. Adding a `<percentage>` to a `<number>`, for example, doesn't work.
+> [!NOTE]
+> Because the origin color channel values are resolved to `<number>` values, you have to add numbers to them when using them in calculations, even in cases where a channel would normally accept `<percentage>`, `<angle>`, or other value types. Adding a `<percentage>` to a `<number>`, for example, doesn't work.
 
 ### Formal syntax
 
@@ -146,64 +149,78 @@ oklab(from hsl(0 100% 50%) calc(l + 0.2) calc(a - 0.08) calc(b - 0.2) / calc(alp
 
 ## Examples
 
-### Adjusting the lightness and axes with oklab()
+### Adjusting lightness
 
 The following example shows the effect of varying the lightness, a-axis, and b-axis values of the `oklab()` function.
 
 #### HTML
 
 ```html
+<div data-color="red-dark"></div>
+<div data-color="red"></div>
+<div data-color="red-light"></div>
+
+<div data-color="green-dark"></div>
+<div data-color="green"></div>
+<div data-color="green-light"></div>
+
+<div data-color="blue-dark"></div>
 <div data-color="blue"></div>
 <div data-color="blue-light"></div>
-
-<div data-color="red"></div>
-<div data-color="red-a"></div>
-
-<div data-color="green"></div>
-<div data-color="green-b"></div>
 ```
 
 #### CSS
 
 ```css hidden
+body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 div {
-  width: 50px;
   height: 50px;
-  padding: 5px;
-  margin: 5px;
-  display: inline-block;
+  flex: 0 0 28%;
   border: 1px solid black;
 }
 ```
 
 ```css
+[data-color="red-dark"] {
+  background-color: oklab(0.05 0.4 0.4);
+}
+[data-color="red"] {
+  background-color: oklab(0.5 0.4 0.4);
+}
+[data-color="red-light"] {
+  background-color: oklab(0.95 0.4 0.4);
+}
+
+[data-color="green-dark"] {
+  background-color: oklab(5% -100% 0.4);
+}
+[data-color="green"] {
+  background-color: oklab(50% -100% 0.4);
+}
+[data-color="green-light"] {
+  background-color: oklab(95% -100% 0.4);
+}
+
+[data-color="blue-dark"] {
+  background-color: oklab(0.05 -0.3 -0.4);
+}
 [data-color="blue"] {
   background-color: oklab(0.5 -0.3 -0.4);
 }
 [data-color="blue-light"] {
-  background-color: oklab(0.7 -0.3 -0.4);
-}
-
-[data-color="red"] {
-  background-color: oklab(100% 0.4 0.4);
-}
-[data-color="red-a"] {
-  background-color: oklab(100% 0.2 0.4);
-}
-
-[data-color="green"] {
-  background-color: oklab(100% -100% 0.4);
-}
-[data-color="green-b"] {
-  background-color: oklab(100% -100% 0.6);
+  background-color: oklab(0.95 -0.3 -0.4);
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample("Adjusting_the_lightness_and_axes", "100%", 155)}}
+{{EmbedLiveSample("Adjusting", "", "200")}}
 
-### Adjusting opacity with oklab()
+### Adjusting opacity
 
 The following example shows the effect of varying the `A` (alpha) value of the `oklab()` function.
 The `red` and `red-alpha` elements overlap the `#background-div` element to demonstrate the effect of opacity.
@@ -247,7 +264,157 @@ div {
 
 #### Result
 
-{{EmbedLiveSample("Adjusting_opacity_with_oklab", "100%", 155)}}
+{{EmbedLiveSample("Adjusting_opacity", "100%", 155)}}
+
+### Adjusting color axes
+
+This example demonstrates the effects of setting the `a` and `b` values of the `oklab()` function to the ends and midpoints of the a-axis and b-axis, respectively. The a-axis goes from green (`-0.4`) to red (`0.4`) and the b-axis goes from yellow (`-0.4`) to blue (`0.4`).
+
+#### HTML
+
+```html
+<div data-color="red-yellow"></div>
+<div data-color="red-zero"></div>
+<div data-color="red-blue"></div>
+
+<div data-color="zero-yellow"></div>
+<div data-color="zero-zero"></div>
+<div data-color="zero-blue"></div>
+
+<div data-color="green-yellow"></div>
+<div data-color="green-zero"></div>
+<div data-color="green-blue"></div>
+```
+
+#### CSS
+
+Using the CSS {{cssxref("background-color")}} property, we vary the `a` and `b` values of the `oklab()` color function along the a-axis and b-axis, showing the effects of maximum, midpoint, and minimum values in each case.
+
+```css hidden
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+div {
+  height: 50px;
+  flex: 0 0 28%;
+  border: 1px solid black;
+}
+```
+
+```css
+/* a-axis max, variable b-axis */
+[data-color="red-yellow"] {
+  background-color: oklab(0.5 0.4 0.4);
+}
+[data-color="red-zero"] {
+  background-color: oklab(0.5 0.4 0);
+}
+[data-color="red-blue"] {
+  background-color: oklab(0.5 0.4 -0.4);
+}
+
+/* a-axis center, variable b-axis */
+[data-color="zero-yellow"] {
+  background-color: oklab(0.5 0 0.4);
+}
+[data-color="zero-zero"] {
+  background-color: oklab(0.5 0 0);
+}
+[data-color="zero-blue"] {
+  background-color: oklab(0.5 0 -0.4);
+}
+
+/* a-axis min, variable b-axis */
+[data-color="green-yellow"] {
+  background-color: oklab(0.5 -0.4 0.4);
+}
+[data-color="green-zero"] {
+  background-color: oklab(0.5 -0.4 0);
+}
+[data-color="green-blue"] {
+  background-color: oklab(0.5 -0.4 -0.4);
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("Adjusting_color_axes", "", "200")}}
+
+The left column is at the yellow end (`-0.4`) of the b-axis and the right column is at the blue end (`0.4`). The top row displays colors at the red end of the a-axis (`-0.4`) and the bottom row is at the green end (`0.4`). The middle column and row are at the midpoints of each axis, with the middle cell being grey; it contains no red, green, yellow, or blue, with a `0` value for both axes.
+
+### Linear gradients along the a-axis and b-axis
+
+This example includes linear gradients to demonstrate the progression of values of the `oklab()` function along the a-axis (from red to green) and along the b-axis (from yellow to blue). In each gradient image, one axis remains static while the other axis progresses from low to high values.
+
+```html hidden
+<div data-color="red-to-green-yellow">
+  <span>red</span><span>`b`= -0.4 (yellow)</span><span>green</span>
+</div>
+<div data-color="red-to-green-zero">
+  <span>red</span><span>no yellow or blue</span><span>green</span>
+</div>
+<div data-color="red-to-green-blue">
+  <span>red</span><span>`b`= 0.4 (blue)</span><span>green</span>
+</div>
+
+<div data-color="yellow-to-blue-red">
+  <span>yellow</span><span>`a` = -0.4 (red)</span><span>blue</span>
+</div>
+<div data-color="yellow-to-blue-zero">
+  <span>yellow</span><span>no red or green</span><span>blue</span>
+</div>
+<div data-color="yellow-to-blue-green">
+  <span>yellow</span><span>`a` = 0.4 (green)</span><span>blue</span>
+</div>
+```
+
+#### CSS
+
+```css hidden
+div {
+  height: 50px;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+span {
+  background-color: #ffffffcc;
+  padding: 3px;
+}
+```
+
+```css-nolint
+/* a-axis gradients */
+[data-color="red-to-green-yellow"] {
+  background-image: linear-gradient(to right, oklab(50% 0.4 0.4), oklab(50% -0.4 0.4));
+}
+[data-color="red-to-green-zero"] {
+  background-image: linear-gradient(to right, oklab(50% 0.4 0), oklab(50% -0.4 0));
+}
+[data-color="red-to-green-blue"] {
+  background-image: linear-gradient(to right, oklab(50% 0.4 -0.4), oklab(50% -0.4 -0.4));
+}
+
+/* b-axis gradients */
+[data-color="yellow-to-blue-red"] {
+  background-image: linear-gradient(to right, oklab(50% 0.4 0.4), oklab(50% 0.4 -0.4));
+}
+[data-color="yellow-to-blue-zero"] {
+  background-image: linear-gradient(to right, oklab(50% 0 0.4), oklab(50% 0 -0.4));
+}
+[data-color="yellow-to-blue-green"] {
+  background-image: linear-gradient(to right, oklab(50% -0.4 0.4),oklab(50% -0.4 -0.4));
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("Linear gradients along the a-axis and b-axis", '', '420')}}
 
 ### Using relative colors with oklab()
 

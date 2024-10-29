@@ -5,7 +5,8 @@ page-type: guide
 browser-compat: html.elements.video
 ---
 
-> **Warning:** Don't delete this page. It's used by [mdn/yari](https://github.com/mdn/yari) for its automation.
+> [!WARNING]
+> Don't delete this page. It's used by [mdn/yari](https://github.com/mdn/yari) for its automation.
 
 ## About this page
 
@@ -16,9 +17,11 @@ Let's start with some notes…
 
 Text that uses the `<kbd>` tag: <kbd>Shift</kbd>
 
-> **Note:** Here's a block indicator note.
+> [!NOTE]
+> Here's a block indicator note.
 
-> **Warning:** Here's a block indicator warning.
+> [!WARNING]
+> Here's a block indicator warning.
 
 ## Prev/Next buttons
 
@@ -102,12 +105,6 @@ class BookListView(generic.ListView):
     queryset = Book.objects.filter(title__icontains='war')[:5]
     template_name = 'books/my_arbitrary_template_name_list.html'
 ```
-
-### Formal syntax
-
-_The formal syntax must be taken from the spec and added to the [MDN data repository](https://github.com/mdn/data). It is an important tool to get precise syntax information for advanced users._
-
-{{CSSSyntax("font-stretch")}}
 
 ## Interactive Examples
 

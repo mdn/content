@@ -8,7 +8,8 @@ page-type: guide
 
 This guide provides a walkthrough of typical usage of the {{domxref("Document Picture-in-Picture API", "Document Picture-in-Picture API", "", "nocode")}}.
 
-> **Note:** You can see the featured demo in action at [Document Picture-in-Picture API Example](https://mdn.github.io/dom-examples/document-picture-in-picture/) (see the full [source code](https://github.com/chrisdavidmills/dom-examples/tree/main/document-picture-in-picture) also).
+> [!NOTE]
+> You can see the featured demo in action at [Document Picture-in-Picture API Example](https://mdn.github.io/dom-examples/document-picture-in-picture/) (see the full [source code](https://github.com/mdn/dom-examples/tree/main/document-picture-in-picture) also).
 
 ## Sample HTML
 
@@ -35,7 +36,7 @@ The following HTML sets up a basic video player.
       </a>
     </div>
 
-    <div id="controlbar">
+    <div id="control-bar">
       <p class="no-picture-in-picture">
         Document Picture-in-Picture API not available
       </p>
@@ -58,7 +59,7 @@ if ("documentPictureInPicture" in window) {
   togglePipButton.textContent = "Toggle Picture-in-Picture";
   togglePipButton.addEventListener("click", togglePictureInPicture, false);
 
-  document.getElementById("controlbar").appendChild(togglePipButton);
+  document.getElementById("control-bar").appendChild(togglePipButton);
 }
 ```
 
@@ -72,22 +73,24 @@ The `width` and `height` options of `requestWindow()` set the Picture-in-Picture
 
 ```js
 async function togglePictureInPicture() {
-  // Returns null if no pip window is currently open
-  if (!!window.documentPictureInPicture.window) {
-    // Open a Picture-in-Picture window.
-    const pipWindow = await documentPictureInPicture.requestWindow({
-      width: videoPlayer.clientWidth,
-      height: videoPlayer.clientHeight,
-    });
-
-    // ...
-
-    // Move the player to the Picture-in-Picture window.
-    pipWindow.document.body.append(videoPlayer);
-
-    // Display a message to say it has been moved
-    inPipMessage.style.display = "block";
+  // Early return if there's already a Picture-in-Picture window open
+  if (window.documentPictureInPicture.window) {
+    return;
   }
+
+  // Open a Picture-in-Picture window.
+  const pipWindow = await window.documentPictureInPicture.requestWindow({
+    width: videoPlayer.clientWidth,
+    height: videoPlayer.clientHeight,
+  });
+
+  // ...
+
+  // Move the player to the Picture-in-Picture window.
+  pipWindow.document.body.append(videoPlayer);
+
+  // Display a message to say it has been moved
+  inPipMessage.style.display = "block";
 }
 ```
 
@@ -206,7 +209,8 @@ documentPictureInPicture.addEventListener("enter", (event) => {
 });
 ```
 
-> **Note:** The {{domxref("DocumentPictureInPictureEvent")}} event object contains a `window` property to access the Picture-in-Picture window.
+> [!NOTE]
+> The {{domxref("DocumentPictureInPictureEvent")}} event object contains a `window` property to access the Picture-in-Picture window.
 
 ## Access elements and handle events
 

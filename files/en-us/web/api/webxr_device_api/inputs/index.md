@@ -4,7 +4,7 @@ slug: Web/API/WebXR_Device_API/Inputs
 page-type: guide
 ---
 
-{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
+{{DefaultAPISidebar("WebXR Device API")}}{{SecureContext_Header}}
 
 A full WebXR experience isn't just about showing the user a wholly virtual scene or augmenting reality by adding to or altering the world around them. In order to make an experience that's fulfilling and engaging, the user needs to be able to interact with it. To that end, WebXR provides support for a variety of kinds of input devices.
 
@@ -180,7 +180,8 @@ See [Input profiles](#input_profiles) for more specific details on working with 
 
 In order to avoid having problems introduced by multiple controllers trying to inadvertently manipulate the UI at the same time, your app may need to have a "primary" controller. Not only would this controller then take the responsibility of clicking through the user interface of your app, but it would also be considered the "main hand," while other controllers would then be off-hand or additional controllers.
 
-> **Note:** This doesn't mean your app _needs_ to decide upon a primary controller. But if it does, these strategies may help.
+> [!NOTE]
+> This doesn't mean your app _needs_ to decide upon a primary controller. But if it does, these strategies may help.
 
 There are a few ways you can decide upon a primary controller. We'll look at three.
 
@@ -278,7 +279,8 @@ These types of input actions are described in more detail below.
 
 Each input source should define a **primary action**. A primary action (which will sometimes be shortened to "select action") is a platform-specific action which responds to the user manipulating it by delivering, in order, the events {{domxref("XRSession.selectstart_event", "selectstart")}}, {{domxref("XRSession.select_event", "select")}}, and {{domxref("XRSession.selectend_event", "selectend")}}. Each of these events is of type {{domxref("XRInputSourceEvent")}}.
 
-> **Note:** If an input source doesn't have a primary action, the input source is considered to be an **auxiliary input source**.
+> [!NOTE]
+> If an input source doesn't have a primary action, the input source is considered to be an **auxiliary input source**.
 
 When the user points a device along a target ray in your 3D space and then triggers a select action, the following events are sent to the active {{domxref("XRSession")}}:
 
@@ -484,7 +486,8 @@ Since the origin of the grip space is located at the center of the hand's grip, 
 
 An {{domxref("XRInputSource")}} has a {{domxref("XRInputSource.gamepad", "gamepad")}} property whose value, if not `null`, is a {{domxref("Gamepad")}} object which provides access to gamepad-style buttons, axis controllers (such as joysticks or thumbpads), and so forth. This may include the same buttons that trigger the standard {{domxref("XRInputSource")}} actions, but may include any number of additional buttons and controls.
 
-> **Note:** While `Gamepad` is defined by the [Gamepad API](/en-US/docs/Web/API/Gamepad_API), it is not managed by the Gamepad API, so you must not attempt to use any Gamepad API methods with it. The object type is reused as a convenience.
+> [!NOTE]
+> While `Gamepad` is defined by the [Gamepad API](/en-US/docs/Web/API/Gamepad_API), it is not managed by the Gamepad API, so you must not attempt to use any Gamepad API methods with it. The object type is reused as a convenience.
 
 If the value of `gamepad` is `null`, the input source doesn't define any controls using the `Gamepad` record, either because it doesn't support it or because it doesn't have any added controls on it.
 

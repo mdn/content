@@ -19,7 +19,7 @@ Data is sent between workers and the main thread via a system of messages — bo
 
 Workers may in turn spawn new workers, as long as those workers are hosted within the same {{glossary("origin")}} as the parent page.
 
-In addition, workers can make network requests using the {{domxref("fetch()")}} or {{domxref("XMLHttpRequest")}} APIs (although note that the {{domxref("XMLHttpRequest.responseXML", "responseXML")}} attribute of `XMLHttpRequest` will always be `null`).
+In addition, workers can make network requests using the {{domxref("WorkerGlobalScope/fetch", "fetch()")}} or {{domxref("XMLHttpRequest")}} APIs (although note that the {{domxref("XMLHttpRequest.responseXML", "responseXML")}} attribute of `XMLHttpRequest` will always be `null`).
 
 ### Worker types
 
@@ -29,7 +29,8 @@ There are a number of different types of workers:
 - {{domxref("SharedWorker", "Shared workers", "", "nocode")}} are workers that can be utilized by multiple scripts running in different windows, IFrames, etc., as long as they are in the same domain as the worker. They are a little more complex than dedicated workers — scripts must communicate via an active port.
 - {{domxref("Service Worker API", "Service Workers", "", "nocode")}} essentially act as proxy servers that sit between web applications, the browser, and the network (when available). They are intended, among other things, to enable the creation of effective offline experiences, intercept network requests and take appropriate action based on whether the network is available, and update assets residing on the server. They will also allow access to push notifications and background sync APIs.
 
-> **Note:** As per the [Web workers Spec](https://html.spec.whatwg.org/multipage/workers.html#runtime-script-errors-2), worker error events should not bubble (see [Firefox bug 1188141](https://bugzil.la/1188141)). This has been implemented in Firefox 42.
+> [!NOTE]
+> As per the [Web workers Spec](https://html.spec.whatwg.org/multipage/workers.html#runtime-script-errors-2), worker error events should not bubble (see [Firefox bug 1188141](https://bugzil.la/1188141)). This has been implemented in Firefox 42.
 
 ### Worker global contexts and functions
 
@@ -41,29 +42,30 @@ Workers run in a different global context than the current {{DOMxRef("window")}}
 
 Some of the functions (a subset) that are common to all workers and to the main thread (from `WindowOrWorkerGlobalScope`) are:
 
-- {{domxref("atob", "atob()")}}
-- {{domxref("btoa", "btoa()")}}
-- {{domxref("clearInterval()")}}
-- {{domxref("clearTimeout()")}}
-- {{domxref("createImageBitmap()")}}
-- {{domxref("WorkerGlobalScope.dump()", "dump()")}} {{non-standard_inline}}
-- {{domxref("fetch()")}}
-- {{domxref("queueMicrotask()")}}
-- {{domxref("reportError()")}}
-- {{domxref("setInterval()")}}
-- {{domxref("setTimeout()")}}
-- {{domxref("structuredClone()")}}
-- {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()", "requestAnimationFrame()")}} (dedicated workers only)
-- {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()", "cancelAnimationFrame()")}} (dedicated workers only)
+- {{domxref("WorkerGlobalScope.atob()")}}
+- {{domxref("WorkerGlobalScope.btoa()")}}
+- {{domxref("WorkerGlobalScope.clearInterval()")}}
+- {{domxref("WorkerGlobalScope.clearTimeout()")}}
+- {{domxref("WorkerGlobalScope.createImageBitmap()")}}
+- {{domxref("WorkerGlobalScope.dump()")}} {{non-standard_inline}}
+- {{domxref("WorkerGlobalScope.fetch()")}}
+- {{domxref("WorkerGlobalScope.queueMicrotask()")}}
+- {{domxref("WorkerGlobalScope.reportError()")}}
+- {{domxref("WorkerGlobalScope.setInterval()")}}
+- {{domxref("WorkerGlobalScope.setTimeout()")}}
+- {{domxref("WorkerGlobalScope.structuredClone()")}}
+- {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}} (dedicated workers only)
+- {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()")}} (dedicated workers only)
 
 The following functions are **only** available to workers:
 
-- {{domxref("WorkerGlobalScope.importScripts()", "importScripts()")}},
-- {{domxref("DedicatedWorkerGlobalScope.postMessage()", "postMessage()")}} (dedicated workers only).
+- {{domxref("WorkerGlobalScope.importScripts()")}} (all workers)
+- {{domxref("DedicatedWorkerGlobalScope.postMessage()")}} (dedicated workers only)
 
 ### Supported Web APIs
 
-> **Note:** If a listed API is supported by a platform in a particular version, then it can generally be assumed to be available in web workers. You can also test support for a particular object/function using the site: <https://worker-playground.glitch.me/>
+> [!NOTE]
+> If a listed API is supported by a platform in a particular version, then it can generally be assumed to be available in web workers. You can also test support for a particular object/function using the site: <https://worker-playground.glitch.me/>
 
 The following Web APIs are available to workers:
 
@@ -73,11 +75,13 @@ The following Web APIs are available to workers:
 - {{domxref("Broadcast Channel API", "", "", "nocode")}}
 - {{domxref("Canvas API", "", "", "nocode")}}
 - {{domxref("Channel Messaging API", "", "", "nocode")}}
-- {{domxref("Console API", "", "", "nocode")}}
 - {{domxref("Compression Streams API", "", "", "nocode")}}
+- {{domxref("Compute Pressure API", "", "", "nocode")}}
+- {{domxref("Console API", "", "", "nocode")}}
+- {{domxref("Content Index API", "", "", "nocode")}}
+- {{domxref("Cookie Store API", "", "", "nocode")}} (service workers only)
 - {{domxref("CSS Font Loading API", "", "", "nocode")}}
-- {{domxref("CustomEvent")}}
-- {{domxref("Encoding API", "", "", "nocode")}} (e.g. {{domxref("TextEncoder")}}, {{domxref("TextDecoder")}})
+- {{domxref("Encoding API", "", "", "nocode")}}
 - {{domxref("Fetch API", "", "", "nocode")}}
 - {{domxref("File API", "", "", "nocode")}}
 - {{domxref("File System API", "", "", "nocode")}}
@@ -92,19 +96,22 @@ The following Web APIs are available to workers:
 - {{domxref("Permissions API", "", "", "nocode")}}
 - {{domxref("Prioritized Task Scheduling API", "", "", "nocode")}}
 - {{domxref("Push API", "", "", "nocode")}}
+- {{domxref("Reporting API", "", "", "nocode")}}
 - {{domxref("Server-Sent Events", "", "", "nocode")}}
 - {{domxref("Service Worker API", "", "", "nocode")}}
 - {{domxref("Streams API", "", "", "nocode")}}
 - {{domxref("Trusted Types API", "", "", "nocode")}}
-- {{domxref("URL API", "", "", "nocode")}} (e.g. {{domxref("URL")}})
+- {{domxref("URL API", "", "", "nocode")}}
 - {{domxref("URL Pattern API", "", "", "nocode")}}
 - {{domxref("User-Agent Client Hints API", "", "", "nocode")}}
-- {{domxref("WebCodecs API", "", "", "nocode")}}
-- {{domxref("Web Crypto API", "", "", "nocode")}} (e.g. {{domxref("Crypto")}})
+- {{domxref("Web Crypto API", "", "", "nocode")}}
 - {{domxref("Web Locks API", "", "", "nocode")}}
 - {{domxref("Web Serial API", "", "", "nocode")}}
 - {{domxref("Web Periodic Background Synchronization API", "", "", "nocode")}}
+- {{domxref("WebCodecs API", "", "", "nocode")}}
+- {{domxref("WebGL API", "", "", "nocode")}}
 - {{domxref("WebGPU API", "", "", "nocode")}}
+- {{domxref("WebHID API", "", "", "nocode")}} (dedicated and service workers only)
 - {{domxref("WebUSB API", "", "", "nocode")}}
 - {{domxref("WebSockets API", "", "", "nocode")}}
 - {{domxref("XMLHttpRequest API", "", "", "nocode")}}

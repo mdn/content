@@ -28,7 +28,7 @@ All the lessons — and the different versions of the [MDN Breakout game](https:
 6. [Bounce off the walls](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls)
 7. [Player paddle and controls](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls)
 8. [Game over](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Game_over)
-9. [Build the brickfield](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field)
+9. [Build the brick field](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field)
 10. [Collision detection](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Collision_detection)
 11. [The score](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/The_score)
 12. [Win the game](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Win_the_game)
@@ -41,7 +41,8 @@ As a note on learning paths — starting with pure JavaScript is the best way to
 
 After that, you can pick any framework you like and use it for your projects; we have chosen Phaser as it is a good solid framework, with a good support and community available, and a good set of plugins. Frameworks speed up development time and help take care of the boring parts, allowing you to concentrate on the fun stuff. However, frameworks are not always perfect, so if something unexpected happens or you want to write some functionality that the framework does not provide, you will need some pure JavaScript knowledge.
 
-> **Note:** This series of articles can be used as material for hands-on game development workshops. You can also make use of the [Gamedev Phaser Content Kit](https://github.com/end3r/Gamedev-Phaser-Content-Kit) based on this tutorial if you want to give a talk about game development with Phaser.
+> [!NOTE]
+> This series of articles can be used as material for hands-on game development workshops. You can also make use of the [Gamedev Phaser Content Kit](https://github.com/end3r/Gamedev-Phaser-Content-Kit) based on this tutorial if you want to give a talk about game development with Phaser.
 
 ## Next steps
 

@@ -14,7 +14,8 @@ The **`view-timeline-name`** [CSS](/en-US/docs/Web/CSS) property is used to defi
 The visibility of the subject inside the scroller is tracked — by default, the timeline is at 0% when the subject is first visible at one edge of the scroller and 100% when it reaches the opposite edge.
 The name is then referenced in an [`animation-timeline`](/en-US/docs/Web/CSS/animation-timeline) declaration to indicate the element that will be animated as the timeline progresses. This can be the subject element, but it doesn't have to be — you can animate a different element as the subject moves through the scrolling area.
 
-> **Note:** If the element does not overflow its container in the axis dimension or if the overflow is hidden or clipped, no timeline will be created.
+> [!NOTE]
+> If the element does not overflow its container in the axis dimension or if the overflow is hidden or clipped, no timeline will be created.
 
 The {{cssxref("view-timeline-axis")}} and `view-timeline-name` properties can also be set using the [`view-timeline`](/en-US/docs/Web/CSS/scroll-timeline) shorthand property.
 

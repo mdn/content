@@ -3,12 +3,12 @@ title: "MediaTrackSettings: aspectRatio property"
 short-title: aspectRatio
 slug: Web/API/MediaTrackSettings/aspectRatio
 page-type: web-api-instance-property
-browser-compat: api.MediaTrackSettings.aspectRatio
+browser-compat: api.MediaStreamTrack.applyConstraints.aspectRatio_constraint
 ---
 
 {{APIRef("Media Capture and Streams")}}
 
-The {{domxref("MediaTrackSettings")}} dictionary's **`aspectRatio`** property is a double-precision floating-point number indicating the aspect ratio of the {{domxref("MediaStreamTrack")}} as currently configured.
+The {{domxref("MediaTrackSettings")}} dictionary's **`aspectRatio`** property is a double-precision floating-point number indicating the {{glossary("aspect ratio")}} of the {{domxref("MediaStreamTrack")}} as currently configured.
 This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the {{domxref("MediaTrackConstraints.aspectRatio")}} property you provided when calling either {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} or {{domxref("MediaStreamTrack.applyConstraints()")}}.
 
 If needed, you can determine whether or not this constraint is supported by checking

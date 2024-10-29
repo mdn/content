@@ -11,7 +11,8 @@ browser-compat:
 
 **Subresource Integrity** (SRI) is a security feature that enables browsers to verify that resources they fetch (for example, from a [CDN](/en-US/docs/Glossary/CDN)) are delivered without unexpected manipulation. It works by allowing you to provide a cryptographic hash that a fetched resource must match.
 
-> **Note:** For subresource-integrity verification of a resource served from an origin other than the document in which it's embedded, browsers additionally check the resource using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS), to ensure the origin serving the resource allows it to be shared with the requesting origin.
+> [!NOTE]
+> For subresource-integrity verification of a resource served from an origin other than the document in which it's embedded, browsers additionally check the resource using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS), to ensure the origin serving the resource allows it to be shared with the requesting origin.
 
 ## How Subresource Integrity helps
 
@@ -25,7 +26,8 @@ You use the Subresource Integrity feature by specifying a base64-encoded cryptog
 
 An `integrity` value begins with at least one string, with each string including a prefix indicating a particular hash algorithm (currently the allowed prefixes are `sha256`, `sha384`, and `sha512`), followed by a dash, and ending with the actual base64-encoded hash.
 
-> **Note:** An **integrity** value may contain multiple hashes separated by whitespace. A resource will be loaded if it matches one of those hashes.
+> [!NOTE]
+> An **integrity** value may contain multiple hashes separated by whitespace. A resource will be loaded if it matches one of those hashes.
 
 Example `integrity` string with base64-encoded sha384 hash:
 
@@ -35,7 +37,8 @@ sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC
 
 So `oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC` is the "hash" part, and the prefix `sha384` indicates that it's a sha384 hash.
 
-> **Note:** An `integrity` value's "hash" part is, strictly speaking, a **_cryptographic_ _digest_** formed by applying a particular hash function to some input (for example, a script or stylesheet file). But it's common to use the shorthand "hash" to mean _cryptographic_ _digest_, so that's what's used in this article.
+> [!NOTE]
+> An `integrity` value's "hash" part is, strictly speaking, a **_cryptographic_ _digest_** formed by applying a particular hash function to some input (for example, a script or stylesheet file). But it's common to use the shorthand "hash" to mean _cryptographic_ _digest_, so that's what's used in this article.
 
 ### Tools for generating SRI hashes
 
@@ -70,7 +73,8 @@ To use that code:
 3. Select the integrity value and right-click to copy it to the Clipboard.
 4. Press any key to dismiss the command box.
 
-> **Note:** If OpenSSL is not installed on your system, visit the [OpenSSL project website](https://www.openssl.org) for information about downloading and installing it. The OpenSSL project does not itself host binary distributions of OpenSSL, but does maintain an informal list of third-party distributions: https://wiki.openssl.org/index.php/Binaries.
+> [!NOTE]
+> If OpenSSL is not installed on your system, visit the [OpenSSL project website](https://www.openssl.org/) for information about downloading and installing it. The OpenSSL project does not itself host binary distributions of OpenSSL, but does maintain an informal list of third-party distributions: https://wiki.openssl.org/index.php/Binaries.
 
 #### Using shasum
 
@@ -106,7 +110,8 @@ You can use the following {{HTMLElement("script")}} element to tell a browser th
   crossorigin="anonymous"></script>
 ```
 
-> **Note:** For more details on the purpose of the `crossorigin` attribute, see [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin).
+> [!NOTE]
+> For more details on the purpose of the `crossorigin` attribute, see [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin).
 
 ## How browsers handle Subresource Integrity
 
@@ -130,6 +135,5 @@ Browsers handle SRI by doing the following:
 
 - [Content Security Policy](/en-US/docs/Web/HTTP/CSP)
 - The {{httpheader("Content-Security-Policy")}} HTTP header.
-- [A CDN that can not XSS you: Using Subresource Integrity](https://frederik-braun.com/using-subresource-integrity.html)
-- [Subresource Integrity test from W3C](https://w3c-test.org/subresource-integrity/subresource-integrity.html)
+- [A CDN that can not XSS you: Using Subresource Integrity](https://frederikbraun.de/using-subresource-integrity.html)
 - [SRI Hash Generator](https://www.srihash.org/)

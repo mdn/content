@@ -10,16 +10,16 @@ In this article, you'll find some frequently-asked questions (FAQs) about CSS, a
 
 ## Why doesn't my CSS, which is valid, render correctly?
 
-Browsers use the `DOCTYPE` declaration to choose whether to show the document using a mode that is more compatible with Web standards or with old browser bugs. Using a correct and modern `DOCTYPE` declaration at the start of your HTML will improve browser standards compliance.
+Browsers use the `doctype` declaration to choose whether to show the document using a mode that is more compatible with Web standards or with old browser bugs. Using a correct and modern `doctype` declaration at the start of your HTML will improve browser standards compliance.
 
 Modern browsers have two main rendering modes:
 
-- _Quirks Mode_: also called backwards-compatibility mode, allows legacy webpages to be rendered as their authors intended, following the non-standard rendering rules used by older browsers. Documents with an incomplete, incorrect, or missing `DOCTYPE` declaration or a known `DOCTYPE` declaration in common use before 2001 will be rendered in Quirks Mode.
-- _Standards Mode_: the browser attempts to follow the W3C standards strictly. New HTML pages are expected to be designed for standards-compliant browsers, and as a result, pages with a modern `DOCTYPE` declaration will be rendered with Standards Mode.
+- _Quirks Mode_: also called backwards-compatibility mode, allows legacy webpages to be rendered as their authors intended, following the non-standard rendering rules used by older browsers. Documents with an incomplete, incorrect, or missing `doctype` declaration or a known `doctype` declaration in common use before 2001 will be rendered in Quirks Mode.
+- _Standards Mode_: the browser attempts to follow the W3C standards strictly. New HTML pages are expected to be designed for standards-compliant browsers, and as a result, pages with a modern `doctype` declaration will be rendered with Standards Mode.
 
 Gecko-based browsers have a third [limited quirks mode](https://en.wikipedia.org/wiki/Quirks_mode#Limited_quirks_mode) that has only a few minor quirks.
 
-The standard `DOCTYPE` declaration that will trigger standards mode is:
+The standard `doctype` declaration that will trigger standards mode is:
 
 ```html
 <!doctype html>
@@ -63,7 +63,8 @@ It is generally recommended to use classes as much as possible, and to use ids o
 - Classes allow you to style multiple elements, therefore they can lead to shorter stylesheets, rather than having to write out the same styling information in multiple rules that use id selectors. Shorter stylesheets are more performant.
 - Class selectors have lower [specificity](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity) than id selectors, so are easier to override if needed.
 
-> **Note:** See [Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors) for more information.
+> [!NOTE]
+> See [Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors) for more information.
 
 ## How do I restore the default value of a property?
 
@@ -264,9 +265,11 @@ If you are required to use prefixes in your work, write the prefixed versions fi
 text-stroke: 4px navy;
 ```
 
-> **Note:** For more information on dealing with prefixed properties, see [Handling common HTML and CSS problems — Handling CSS prefixes](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#handling_css_prefixes) from our [Cross-browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) module.
+> [!NOTE]
+> For more information on dealing with prefixed properties, see [Handling common HTML and CSS problems — Handling CSS prefixes](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#handling_css_prefixes) from our [Cross-browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) module.
 
-> **Note:** See the [Mozilla CSS Extensions](/en-US/docs/Web/CSS/Mozilla_Extensions) and [WebKit CSS Extensions](/en-US/docs/Web/CSS/WebKit_Extensions) for lists of browser-prefixed CSS properties.
+> [!NOTE]
+> See the [Mozilla CSS Extensions](/en-US/docs/Web/CSS/Mozilla_Extensions) and [WebKit CSS Extensions](/en-US/docs/Web/CSS/WebKit_Extensions) for lists of browser-prefixed CSS properties.
 
 ## How does z-index relate to positioning?
 
@@ -274,4 +277,5 @@ The z-index property specifies the stack order of elements.
 
 An element with a higher z-index/stack order is always rendered in front of an element with a lower z-index/stack order on the screen. Z-index will only work on elements that have a specified position (`position:absolute`, `position:relative`, or `position:fixed`).
 
-> **Note:** For more information, see our [Positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning) learning article, and in particular the [Introducing z-index](/en-US/docs/Learn/CSS/CSS_layout/Positioning#introducing_z-index) section.
+> [!NOTE]
+> For more information, see our [Positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning) learning article, and in particular the [Introducing z-index](/en-US/docs/Learn/CSS/CSS_layout/Positioning#introducing_z-index) section.

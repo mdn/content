@@ -33,13 +33,14 @@ requiring a single line of JavaScript to import configurable components:
 no pre-processors, post-processors or JavaScript frameworks needed.
 
 ```js
-CSS.paintWorklet.addModule("csscomponent.js");
+CSS.paintWorklet.addModule("css-component.js");
 ```
 
 This added module contains {{domxref("PaintWorkletGlobalScope.registerPaint")}} functions,
 which register completely configurable worklets.
 
-> **Note:** You can write your own worklets, or install components created by other people.
+> [!NOTE]
+> You can write your own worklets, or install components created by other people.
 > The [Houdini.how](https://houdini.how/) website is a collection of worklets,
 > with [instructions on how to use them](https://houdini.how/usage/).
 
@@ -55,11 +56,12 @@ In the following example the `paint()` function is passed a worklet called `myCo
 li {
   background-image: paint(myComponent, stroke, 10px);
   --highlights: blue;
-  --lowlights: green;
+  --theme: green;
 }
 ```
 
-> **Note:** With great power comes great responsibility!
+> [!NOTE]
+> With great power comes great responsibility!
 > With Houdini you _could_ invent your own masonry, grid, or regions implementation,
 > but doing so is not necessarily the best idea.
 > The CSS Working group does a lot of work to ensure every feature is performant,
@@ -89,7 +91,7 @@ The CSS Typed OM exposes CSS values as typed JavaScript objects to allow their p
 
 - [CSS Typed OM reference](/en-US/docs/Web/API/CSS_Typed_OM_API)
 - [CSS Typed OM guide](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
-- [Working with the new CSS Typed Object Model](https://developer.chrome.com/blog/cssom/)
+- [Working with the new CSS Typed Object Model](https://developer.chrome.com/docs/css-ui/cssom)
 
 ### CSS Painting API
 

@@ -52,14 +52,18 @@ Although the `<small>` element, like the {{htmlelement("b")}} and {{htmlelement(
 <table class="properties">
   <tbody>
     <tr>
-      <th scope="row">Content categories</th>
+      <th scope="row">
+        <a href="/en-US/docs/Web/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
       <td>
         <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
         <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
-        >
+        >.
       </td>
     </tr>
     <tr>

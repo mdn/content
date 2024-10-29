@@ -4,31 +4,31 @@ slug: Web/API/Storage_Access_API/Related_website_sets
 page-type: guide
 status:
   - non-standard
-browser-compat: api.document.requestStorageAccessFor
 spec-urls: https://wicg.github.io/first-party-sets/
 ---
 
 {{DefaultAPISidebar("Storage Access API")}}
 
-> **Warning:** This feature is currently opposed by two browser vendors. See the [Standards positions](#standards_positions) section below for details of opposition.
+> [!WARNING]
+> This feature is currently opposed by two browser vendors. See the [Standards positions](#standards_positions) section below for details of opposition.
 
-Related website sets are a mechanism for defining a set of related sites that share trusted content. As a result, browsers will grant default access for these sites to [third-party cookies](/en-US/docs/Web/HTTP/Cookies#third-party_cookies) when they have content embedded in other set members.
+Related website sets are a mechanism for defining a set of related sites that share trusted content. As a result, browsers can grant default access for these sites to [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies) and [unpartitioned state](/en-US/docs/Web/Privacy/State_Partitioning#state_partitioning) when they have content embedded in other set members, without requiring users to grant access to the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) via a permission prompt.
 
 ## Concepts and usage
 
-Let's consider situations where you have a series of related websites with different domain names, and you want to give site content access to third-party cookies when loaded in a third-party context inside other related sites (i.e., embedded in an {{htmlelement("iframe")}}). Typical use cases are:
+Let's consider situations where you have a series of related websites with different domain names, and you want to give site content access to third-party cookies and unpartitioned state when loaded in a third-party context inside other related sites (i.e., embedded in an {{htmlelement("iframe")}}). Typical use cases are:
 
 - App sites: A single application may be deployed over multiple sites, aiming to allow users to navigate between them seamlessly in a single session.
 - Brand sites: A set of brand assets may be contained in a single site but then deployed over multiple domains, including session data relating to user preferences, customization, etc.
 
-Third-party cookie access is commonly blocked by browser cookie-blocking policies. Still, you can work around it using the Storage Access API — see [Using the Storage Access API](/en-US/docs/Web/API/Storage_Access_API/Using) for details.
+Third-party cookie and unpartitioned state access is commonly blocked by browser policies. Still, you can work around it using the Storage Access API — see [Using the Storage Access API](/en-US/docs/Web/API/Storage_Access_API/Using) for details.
 
-Related website are a progressive enhancement mechanism that works alongside the Storage Access API. Supporting browsers grant third-party cookie access between websites in the same set _without_ having to go through the usual user permission prompt workflow, once {{domxref("Document.requestStorageAccess()")}} (or {{domxref("Document.requestStorageAccessFor()")}}) is called. This results in a more user-friendly experience for users of sites in the set.
+Related website are a progressive enhancement mechanism that works alongside the Storage Access API. Supporting browsers grant third-party cookie and unpartitioned state access between websites in the same set _without_ having to go through the usual user permission prompt workflow, once {{domxref("Document.requestStorageAccess()")}} (or {{domxref("Document.requestStorageAccessFor()")}}) is called. This results in a more user-friendly experience for users of sites in the set.
 
 You should bear in mind that:
 
 - The Chrome-only {{domxref("Document.requestStorageAccessFor()")}} method — which allows top-level sites to request storage access on behalf of embedded origin content — is only supported on domains within a related website set. See [Using the Storage Access API](/en-US/docs/Web/API/Storage_Access_API/Using) for an example.
-- When Chrome first supported the standard Storage Access API (that is, the {{domxref("Document.hasStorageAccess()")}} and {{domxref("Document.requestStorageAccess()")}}methods), it required calling sites to be part of a related website set. This is no longer the case.
+- When Chrome first supported the standard Storage Access API (that is, the {{domxref("Document.hasStorageAccess()")}} and {{domxref("Document.requestStorageAccess()")}} methods), it required calling sites to be part of a related website set. This is no longer the case.
 
 ## How does RWS work?
 
@@ -72,7 +72,8 @@ A set is represented by a JSON structure. A hypothetical example is as follows:
 }
 ```
 
-> **Note:** The affiliation explanations must include a clear description of how the affiliation to the primary site is presented to users of those sites.
+> [!NOTE]
+> The affiliation explanations must include a clear description of how the affiliation to the primary site is presented to users of those sites.
 
 To use a set, its JSON must be added to the `related_website_sets.JSON` file available on the [Related Website Sets GitHub repository](https://github.com/GoogleChrome/related-website-sets/blob/main/related_website_sets.JSON), which Chrome then consumes to get the list of sets to apply RWS behavior to.
 
@@ -127,7 +128,7 @@ Bear in mind that the `.well-known` files are also verified as part of the submi
 
 Once a set is active:
 
-- Requests from sites in the set (via {{domxref("Document.requestStorageAccess()")}}) to access third-party cookies that belong to sites in the set are automatically granted, and no user permission step is required.
+- Requests from sites in the set (via {{domxref("Document.requestStorageAccess()")}}) to access third-party cookies and unpartitioned state that belong to sites in the set are automatically granted, and no user permission step is required.
 - {{domxref("Document.requestStorageAccessFor()")}} calls can be made from top-level sites in the set to request third-party cookie access for other sites in the set.
 
 ## RWS security
@@ -159,5 +160,5 @@ Two browser vendors [oppose](/en-US/docs/Glossary/Web_standards#opposing_standar
 ## See also
 
 - [Storage Access API](/en-US/docs/Web/API/Storage_Access_API)
-- [Related Website Sets](https://developer.chrome.com/docs/privacy-sandbox/related-website-sets/) on developer.chrome.com (2023)
-- [Related Website Sets: developer guide](https://developer.chrome.com/docs/privacy-sandbox/related-website-sets-integration/) on developer.chrome.com (2023)
+- [Related Website Sets](https://developers.google.com/privacy-sandbox/cookies/related-website-sets) on developers.google.com (2023)
+- [Related Website Sets: developer guide](https://developers.google.com/privacy-sandbox/cookies/related-website-sets-integration) on developers.google.com (2023)

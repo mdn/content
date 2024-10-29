@@ -21,11 +21,12 @@ If you are not sure about committing to learning web development in-depth and wa
 - Frameworks and tooling
   - : After mastering the essentials of vanilla HTML, CSS, and JavaScript, you should learn about [client-side web development tools](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools), and then consider digging into [client-side JavaScript frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks). You should also consider learning the basic concepts of [server-side website programming](/en-US/docs/Learn/Server-side).
 
-> **Note:** Our [glossary](/en-US/docs/Glossary) provides terminology definitions. Besides, if you have a specific question about web development, our [Common questions](/en-US/docs/Learn/Common_questions) section may have something to help you.
+> [!NOTE]
+> Our [glossary](/en-US/docs/Glossary) provides terminology definitions. Besides, if you have a specific question about web development, our [Common questions](/en-US/docs/Learn/Common_questions) section may have something to help you.
 
-> **Callout:**
+> [!CALLOUT]
 >
-> #### Looking to become a front-end web developer?
+> **Looking to become a front-end web developer?**
 >
 > If you want to become a front-end web developer and are not sure what to learn first, we'd suggest using the [MDN Curriculum](/en-US/curriculum/) to plan your learning. It provides a structured learning pathway covering the essential skills and practices for being a successful front-end developer, along with recommended learning resources.
 >
@@ -69,12 +70,13 @@ There are patterns that make it easier to find these resources, for example:
 - The **test your skills** task linked above has a marking guide and resources available at <https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/tasks/conditionals>.
 - The **assessment** linked above has a marking guide and resources available at <https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/gallery>.
 
-> **Note:** Most of the marking guides and other resources for the tasks and assessments are available in [`mdn/learning-area`](https://github.com/mdn/learning-area/), although some are in [`mdn/css-examples`](https://github.com/mdn/css-examples/tree/main/learn).
+> [!NOTE]
+> Most of the marking guides and other resources for the tasks and assessments are available in [`mdn/learning-area`](https://github.com/mdn/learning-area/), although some are in [`mdn/css-examples`](https://github.com/mdn/css-examples/tree/main/learn).
 
 ## Getting our code examples
 
 The code examples you'll encounter in the Learning Area are all [available on GitHub](https://github.com/mdn/learning-area/).
-If you want to copy them all to your computer, the easiest way is to [download a ZIP of the latest master code branch](https://codeload.github.com/mdn/learning-area/zip/main).
+If you want to copy them all to your computer, the easiest way is to [download a ZIP of the latest main code branch](https://codeload.github.com/mdn/learning-area/zip/main).
 
 If you prefer to copy the repo in a more flexible way that allows for automatic updates, you can follow the more complex instructions:
 
@@ -88,7 +90,7 @@ If you prefer to copy the repo in a more flexible way that allows for automatic 
 
 4. You can now enter the directory and find the files you are after (either using your Finder/File Explorer or the [`cd` command](<https://en.wikipedia.org/wiki/Cd_(command)>)).
 
-You can update the `learning-area` repository with any changes made to the master version on GitHub with the following steps:
+You can update the `learning-area` repository with any changes made to the main version on GitHub with the following steps:
 
 1. In your command prompt/terminal, go inside the `learning-area` directory using `cd`. For example, if you were in the parent directory:
 
@@ -110,6 +112,8 @@ If you're interested in helping develop/improve the content, take a look at [how
 
 ## See also
 
+- [The Frontend Developer Career Path](https://v2.scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>_MDN Curriculum partner_</sup>
+  - : [Scrimba's](https://scrimba.com?via=mdn) _Frontend Developer Career Path_ teaches all you need to know to be a competent front-end web developer, with fun interactive lessons and challenges, knowledgeable teachers, and a supportive community. Go from zero to landing your first front-end job! Many of the course components are available as standalone free versions.
 - [Learn JavaScript](https://learnjavascript.online/)
   - : An excellent resource for aspiring web developers — Learn JavaScript in an interactive environment, with short lessons and interactive tests, guided by automated assessment. The first 40 lessons are free, and the complete course is available for a small one-time payment.
 - [Codecademy](https://www.codecademy.com/)

@@ -37,11 +37,11 @@ You can also mitigate such risks using:
 Security-conscious server-side frameworks tend to have built in mitigations for such problems, for example:
 
 - [Security in Django](https://docs.djangoproject.com/en/stable/topics/security/) (especially see [Cross site request forgery (CSRF) protection](https://docs.djangoproject.com/en/stable/topics/security/#cross-site-request-forgery-csrf-protection)).
-- [helmetjs referrer-policy](https://github.com/helmetjs/helmet/tree/main/middlewares/referrer-policy) — middleware for setting Referrer-Policy in Node.js/Express apps (see also [helmetjs](https://github.com/helmetjs) for more security provisions).
+- [Helmet referrer-policy](https://github.com/helmetjs/helmet/tree/main/middlewares/referrer-policy) — middleware for setting Referrer-Policy in Node.js/Express apps (see also [Helmet](https://github.com/helmetjs) for more security provisions).
 
 ## Policy and requirements
 
-It would make sense to write a set of security and privacy requirements for your project team(s) that specify usage of such features to mitigate the associated risks. You should enlist the help of a web security expert to write these requirements, and consider both user needs and welfare, as well as other issues like policy and regulation enforced by legislation such as the [EU General Data Protection Regulation (GDPR)](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679&from=EN).
+It would make sense to write a set of security and privacy requirements for your project team(s) that specify usage of such features to mitigate the associated risks. You should enlist the help of a web security expert to write these requirements, and consider both user needs and welfare, as well as other issues like policy and regulation enforced by legislation such as the [EU General Data Protection Regulation](https://gdpr.eu/) (GDPR).
 
 ## See also
 

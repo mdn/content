@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPURenderPassEncoder.label
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`label`** read-only property of the
 {{domxref("GPURenderPassEncoder")}} interface is a string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
@@ -38,9 +38,9 @@ const renderPassDescriptor = {
 };
 
 const passEncoder = commandEncoder.beginRenderPass(renderPassDescriptor);
-passEncoder.label = "myrenderpassencoder";
+passEncoder.label = "my_render_pass_encoder";
 
-console.log(passEncoder.label); // "myrenderpassencoder"
+console.log(passEncoder.label); // "my_render_pass_encoder"
 ```
 
 Setting a label via the originating {{domxref("GPUCommandEncoder.beginRenderPass()")}} call, and then getting it via `GPURenderPassEncoder.label`:
@@ -57,12 +57,12 @@ const renderPassDescriptor = {
       view: context.getCurrentTexture().createView(),
     },
   ],
-  label: "myrenderpassencoder",
+  label: "my_render_pass_encoder",
 };
 
 const passEncoder = commandEncoder.beginRenderPass(renderPassDescriptor);
 
-console.log(passEncoder.label); // "myrenderpassencoder"
+console.log(passEncoder.label); // "my_render_pass_encoder"
 ```
 
 ## Specifications

@@ -43,10 +43,9 @@ uint8.includes(2); // true
 uint8.includes(4); // false
 uint8.includes(3, 3); // false
 
-// NaN handling (only true for Float32 and Float64)
+// NaN handling (only relevant for floating point arrays)
 new Uint8Array([NaN]).includes(NaN); // false, since the NaN passed to the constructor gets converted to 0
-new Float32Array([NaN]).includes(NaN); // true;
-new Float64Array([NaN]).includes(NaN); // true;
+new Float32Array([NaN]).includes(NaN); // true
 ```
 
 ## Specifications

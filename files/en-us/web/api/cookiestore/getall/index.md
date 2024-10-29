@@ -6,9 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.CookieStore.getAll
 ---
 
-{{securecontext_header}}{{APIRef("Cookie Store API")}} {{AvailableInWorkers}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{AvailableInWorkers("window_and_service")}}
 
-The **`getAll()`** method of the {{domxref("CookieStore")}} interface returns a list of cookies that match the name or options passed to it. Passing no parameters will return all cookies for the current context.
+The **`getAll()`** method of the {{domxref("CookieStore")}} interface returns a list of cookies that match the `name` or `options` passed to it. Passing no parameters will return all cookies for the current context.
 
 ## Syntax
 
@@ -33,11 +33,12 @@ Or
     - `url`
       - : A string with the URL of a cookie.
 
-> **Note:** The `url` option enables the modification of a cookie scoped under a particular URL. Service workers can obtain cookies that would be sent to any URL under their scope. From a document you may only obtain the cookies at the current URL, so the only valid URL in a document context is the document's URL.
+> [!NOTE]
+> The `url` option enables the modification of a cookie scoped under a particular URL. Service workers can obtain cookies that would be sent to any URL under their scope. From a document you may only obtain the cookies at the current URL, so the only valid URL in a document context is the document's URL.
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with an array of objects representing cookies that match the given name or options.
+A {{jsxref("Promise")}} that resolves with an array of objects representing cookies that match the given `name` or `options`.
 
 Each object contains the following properties:
 

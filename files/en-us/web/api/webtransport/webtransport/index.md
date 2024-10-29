@@ -49,7 +49,8 @@ new WebTransport(url, options)
 
         This feature allows developers to connect to WebTransport servers that would normally find obtaining a publicly trusted certificate challenging, such as hosts that are not publicly routable, or ephemeral hosts like virtual machines.
 
-        > **Note:** The web application might typically fetch the hashes from a trusted intermediary.
+        > [!NOTE]
+        > The web application might typically fetch the hashes from a trusted intermediary.
         > For example, you might use a cloud provider to provision VMs that run your WebTransport servers.
         > The provider has trusted access to the server and can request its certificate, generate hashes, and provide these to the application via an API (which is mediated via PKI), or a cloud console.
         > The web application can now connect directly to the VM-hosted server using the supplied hashes, even though the VM itself does not have a long-lived TLS certificate.

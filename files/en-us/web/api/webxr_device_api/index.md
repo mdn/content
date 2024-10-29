@@ -193,10 +193,10 @@ The following guides and tutorials are a great resource to learn how to comprehe
       <td><a href="https://immersive-web.github.io/depth-sensing/"><strong>WebXR Depth Sensing Module</strong></a>
       (<a href="https://github.com/immersive-web/depth-sensing">Source</a>,
        <a href="https://github.com/immersive-web/depth-sensing/issues">Issues</a>,
-       <a href="https://github.com/immersive-web/depth-sensing/blob/master/explainer.md">Explainer</a>)</td>
+       <a href="https://github.com/immersive-web/depth-sensing/blob/main/explainer.md">Explainer</a>)</td>
     </tr>
     <tr>
-      <td><a href="https://immersive-web.github.io/dom-overlays"><strong>WebXR DOM Overlays Module</strong></a>
+      <td><a href="https://immersive-web.github.io/dom-overlays/"><strong>WebXR DOM Overlays Module</strong></a>
       (<a href="https://github.com/immersive-web/dom-overlays">Source</a>,
        <a href="https://github.com/immersive-web/dom-overlays/issues">Issues</a>,
        <a href="https://github.com/immersive-web/dom-overlays/blob/master/explainer.md">Explainer</a>)</td>
@@ -214,7 +214,7 @@ The following guides and tutorials are a great resource to learn how to comprehe
        <a href="https://github.com/immersive-web/webxr-hand-input/blob/master/explainer.md">Explainer</a>)</td>
     </tr>
     <tr>
-      <td><a href="https://immersive-web.github.io/hit-test"><strong>WebXR Hit Test Module</strong></a>
+      <td><a href="https://immersive-web.github.io/hit-test/"><strong>WebXR Hit Test Module</strong></a>
       (<a href="https://github.com/immersive-web/hit-test">Source</a>,
        <a href="https://github.com/immersive-web/hit-test/issues">Issues</a>,
        <a href="https://github.com/immersive-web/hit-test/blob/master/hit-testing-explainer.md">Explainer</a>)</td>
@@ -229,7 +229,7 @@ The following guides and tutorials are a great resource to learn how to comprehe
       <td><a href="https://immersive-web.github.io/lighting-estimation/"><strong>WebXR Lighting Estimation API</strong></a>
       (<a href="https://github.com/immersive-web/lighting-estimation">Source</a>,
        <a href="https://github.com/immersive-web/lighting-estimation/issues">Issues</a>,
-       <a href="https://github.com/immersive-web/lighting-estimation/blob/master/lighting-estimation-explainer.md">Explainer</a>)</td>
+       <a href="https://github.com/immersive-web/lighting-estimation/blob/main/lighting-estimation-explainer.md">Explainer</a>)</td>
     </tr>
   </tbody>
 </table>

@@ -70,9 +70,11 @@ The keyword values can be grouped into six value categories.
     - `inline`
       - : The element generates one or more inline boxes that do not generate line breaks before or after themselves. In normal flow, the next element will be on the same line if there is space.
 
-> **Note:** When browsers that support multi-keyword syntax encounter a display property that only has an **outer** value (e.g., `display: block` or `display: inline`), the inner value is set to `flow` (e.g., `display: block flow` and `display: inline flow`).
+> [!NOTE]
+> When browsers that support multi-keyword syntax encounter a display property that only has an **outer** value (e.g., `display: block` or `display: inline`), the inner value is set to `flow` (e.g., `display: block flow` and `display: inline flow`).
 
-> **Note:** To be sure layouts work on older browsers, you may use single-value syntax, for example `display: inline flex` could have the following fallback
+> [!NOTE]
+> To be sure layouts work on older browsers, you may use single-value syntax, for example `display: inline flex` could have the following fallback
 >
 > ```css
 > .container {
@@ -89,11 +91,11 @@ The keyword values can be grouped into six value categories.
 
   - : These keywords specify the element's inner display type, which defines the type of formatting context that its contents are laid out in (assuming it is a non-replaced element):
 
-    - `flow` {{Experimental_Inline}}
+    - `flow`
 
       - : The element lays out its contents using flow layout (block-and-inline layout).
 
-        If its outer display type is `inline` or `run-in`, and it is participating in a block or inline formatting context, then it generates an inline box. Otherwise it generates a block container box.
+        If its outer display type is `inline`, and it is participating in a block or inline formatting context, then it generates an inline box. Otherwise it generates a block box.
 
         Depending on the value of other properties (such as {{CSSxRef("position")}}, {{CSSxRef("float")}}, or {{CSSxRef("overflow")}}) and whether it is itself participating in a block or inline formatting context, it either establishes a new [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) (BFC) for its contents or integrates its contents into its parent formatting context.
 
@@ -105,10 +107,11 @@ The keyword values can be grouped into six value categories.
       - : The element behaves like a block-level element and lays out its content according to the [flexbox model](/en-US/docs/Web/CSS/CSS_flexible_box_layout).
     - `grid`
       - : The element behaves like a block-level element and lays out its content according to the [grid model](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout).
-    - `ruby` {{Experimental_Inline}}
+    - `ruby`
       - : The element behaves like an inline-level element and lays out its content according to the ruby formatting model. It behaves like the corresponding HTML {{HTMLElement("ruby")}} elements.
 
-> **Note:** When browsers that support multi-keyword syntax encounter a display property that only has an **inner** value (e.g., `display: flex` or `display: grid`), the outer value is set to `block` (e.g., `display: block flex` and `display: block grid`).
+> [!NOTE]
+> When browsers that support multi-keyword syntax encounter a display property that only has an **inner** value (e.g., `display: flex` or `display: grid`), the outer value is set to `block` (e.g., `display: block flex` and `display: block grid`).
 
 ### List Item
 
@@ -118,9 +121,10 @@ The keyword values can be grouped into six value categories.
 A single value of `list-item` will cause the element to behave like a list item.
 This can be used together with {{CSSxRef("list-style-type")}} and {{CSSxRef("list-style-position")}}.
 
-`list-item` can also be combined with any {{CSSxRef("&lt;display-outside&gt;")}} keyword and the `flow` or `flow-root` {{CSSxRef("&lt;display-inside&gt;")}} keywords.
+`list-item` can also be combined with any {{CSSxRef("&lt;display-outside&gt;")}} keyword and the `flow` or `flow-root` {{CSSxRef("&lt;display-inside&gt;")}} keyword.
 
-> **Note:** In browsers that support the multi-keyword syntax, if no inner value is specified, it will default to `flow`.
+> [!NOTE]
+> In browsers that support the multi-keyword syntax, if no inner value is specified, it will default to `flow`.
 > If no outer value is specified, the principal box will have an outer display type of `block`.
 
 ### Internal
@@ -146,13 +150,13 @@ This can be used together with {{CSSxRef("list-style-type")}} and {{CSSxRef("lis
       - : These elements behave like {{HTMLElement("col")}} HTML elements.
     - `table-caption`
       - : These elements behave like {{HTMLElement("caption")}} HTML elements.
-    - `ruby-base` {{Experimental_Inline}}
+    - `ruby-base`
       - : These elements behave like {{HTMLElement("rb")}} HTML elements.
-    - `ruby-text` {{Experimental_Inline}}
+    - `ruby-text`
       - : These elements behave like {{HTMLElement("rt")}} HTML elements.
-    - `ruby-base-container` {{Experimental_Inline}}
+    - `ruby-base-container`
       - : These elements are generated as anonymous boxes.
-    - `ruby-text-container` {{Experimental_Inline}}
+    - `ruby-text-container`
       - : These elements behave like {{HTMLElement("rtc")}} HTML elements.
 
 ### Box
@@ -241,25 +245,25 @@ The individual pages for the different types of value that `display` can have se
 
 ### CSS Flow Layout (display: block, display: inline)
 
-- [Block and Inline Layout in Normal Flow](/en-US/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)
-- [Flow Layout and Overflow](/en-US/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_overflow)
-- [Flow Layout and Writing Modes](/en-US/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes)
-- [Formatting Contexts Explained](/en-US/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)
-- [In Flow and Out of Flow](/en-US/docs/Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow)
+- [Block and inline layout in normal flow](/en-US/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)
+- [Flow layout and overflow](/en-US/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_overflow)
+- [Flow layout and writing modes](/en-US/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes)
+- [Formatting contexts explained](/en-US/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)
+- [In flow and out of flow](/en-US/docs/Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow)
 
 ### display: flex
 
 - [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [Aligning Items in a Flex Container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-- [Controlling Ratios of Flex Items Along the Main Axis](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
-- [Mastering Wrapping of Flex Items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
-- [Ordering Flex Items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
+- [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+- [Controlling ratios of flex items along the main axis](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
+- [Mastering wrapping of flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
+- [Ordering flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
 - [Relationship of flexbox to other layout methods](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)
-- [Typical use cases of Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
+- [Typical use cases of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
 
 ### display: grid
 
-- [Basic Concepts of Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- [Basic concepts of grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
 - [Relationship to other layout methods](/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
 - [Line-based placement](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
 - [Grid template areas](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
@@ -267,8 +271,8 @@ The individual pages for the different types of value that `display` can have se
 - [Auto-placement in grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
 - [Box alignment in grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
 - [Grids, logical values and writing modes](/en-US/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
-- [CSS Grid Layout and Accessibility](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-- [CSS Grid Layout and Progressive Enhancement](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+- [CSS grid layout and accessibility](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
+- [CSS grid layout and progressive enhancement](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
 - [Realizing common layouts using grids](/en-US/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
 ### Animating display
@@ -291,13 +295,15 @@ When animating `display` with [CSS transitions](/en-US/docs/Web/CSS/CSS_transiti
 
 For examples of transitioning the `display` property, see the [`@starting-style`](/en-US/docs/Web/CSS/@starting-style#examples) and [`transition-behavior`](/en-US/docs/Web/CSS/transition-behavior#examples) pages.
 
-## Accessibility concerns
+## Accessibility
 
 ### display: none
 
 Using a `display` value of `none` on an element will remove it from the [accessibility tree](/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis). This will cause the element and all its descendant elements to no longer be announced by screen reading technology.
 
-If you want to visually hide the element, a more accessible alternative is to use [a combination of properties](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link) to remove it visually from the screen but keep it parsable by assistive technology such as screen readers.
+If you want to visually hide the element, a more accessible alternative is to use [a combination of properties](https://webaim.org/techniques/css/invisiblecontent/) to remove it visually from the screen but still make it available to assistive technology such as screen readers.
+
+While `display: none` hides content from the accessibility tree, elements that are hidden but are referenced from visible elements' `aria-describedby` or `aria-labelledby` attributes are exposed to assistive technologies.
 
 ### display: contents
 
@@ -329,7 +335,7 @@ In some browsers, changing the `display` value of a {{HTMLElement("table")}} ele
 
 In this example we have two block-level container elements, each one with three inline children. Below that, we have a select menu that allows you to apply different `display` values to the containers, allowing you to compare and contrast how the different values affect the element's layout, and that of their children.
 
-We've included {{cssxref("padding")}} and {{cssxref("background-color")}} on the containers and their children, so that it is easier to see the effect the display values are having.
+We have included {{cssxref("padding")}} and {{cssxref("background-color")}} on the containers and their children, so that it is easier to see the effect the display values are having.
 
 #### HTML
 
@@ -350,19 +356,33 @@ We've included {{cssxref("padding")}} and {{cssxref("background-color")}} on the
   <label for="display">Choose a display value:</label>
   <select id="display">
     <option selected>block</option>
+    <option>block flow</option>
     <option>inline</option>
-    <option>inline-block</option>
-    <option>inline flow-root</option>
-    <option>none</option>
-    <option>flex</option>
-    <option>inline-flex</option>
-    <option>inline flex</option>
-    <option>grid</option>
-    <option>inline-grid</option>
-    <option>inline grid</option>
+    <option>inline flow</option>
+    <option>flow</option>
+    <option>flow-root</option>
+    <option>block flow-root</option>
     <option>table</option>
     <option>block table</option>
+    <option>flex</option>
+    <option>block flex</option>
+    <option>grid</option>
+    <option>block grid</option>
     <option>list-item</option>
+    <option>block flow list-item</option>
+    <option>inline flow list-item</option>
+    <option>block flow-root list-item</option>
+    <option>inline flow-root list-item</option>
+    <option>contents</option>
+    <option>none</option>
+    <option>inline-block</option>
+    <option>inline flow-root</option>
+    <option>inline-table</option>
+    <option>inline table</option>
+    <option>inline-flex</option>
+    <option>inline flex</option>
+    <option>inline-grid</option>
+    <option>inline grid</option>
   </select>
 </div>
 ```
@@ -421,12 +441,20 @@ updateDisplay();
 
 Note that some multi-keyword values are added for illustration which have the following equivalents:
 
+- `block` = `block flow`
+- `inline` = `inline flow`
+- `flow` = `block flow`
+- `flow-root` = `block flow-root`
+- `table` = `block table`
+- `flex` = `block flex`
+- `grid` = `block grid`
+- `list-item` = `block flow list-item`
 - `inline-block` = `inline flow-root`
+- `inline-table` = `inline table`
 - `inline-flex` = `inline flex`
 - `inline-grid` = `inline grid`
-- `table` = `block table`
 
-You can find more examples in the pages for each separate display data type under [Grouped values](#grouped_values)
+You can find more examples in the pages for each separate display type under [Grouped values](#grouped_values).
 
 ## Specifications
 

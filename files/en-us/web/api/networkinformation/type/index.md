@@ -10,8 +10,7 @@ browser-compat: api.NetworkInformation.type
 
 {{apiref("Network Information API")}}{{SeeCompatTable}} {{AvailableInWorkers}}
 
-The **`NetworkInformation.type`** read-only property returns
-the type of connection a device is using to communicate with the network.
+The **`type`** read-only property of the {{domxref("NetworkInformation")}} interface returns the type of connection a device is using to communicate with the network.
 
 ## Value
 

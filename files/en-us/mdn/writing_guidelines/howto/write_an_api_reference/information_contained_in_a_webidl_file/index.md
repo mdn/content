@@ -1,6 +1,6 @@
 ---
 title: Information contained in a WebIDL file
-slug: MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file
+slug: MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file
 page-type: mdn-writing-guide
 ---
 
@@ -17,8 +17,8 @@ WebIDL can be found in multiple locations:
 - Each specification contains WebIDL inside the text: it is a very convenient way to convey precise definition. These describe the syntax of the API. Though the canonical reference, we have to keep in mind that they may differ from the actual implementation. On MDN we want to be practical and document what the Web platform really is, not what it ideally should be. So double check what is there with implementations (and don't hesitate to file bugs if you discover incoherence).
 - Three browser engines use (modified) WebIDL as part as their toolchain: Gecko, Chromium/Blink, and WebCore/WebKit. Pre-Chromium versions of Edge used it internally, but these are unfortunately not public.
 
-  - For Gecko, all WebIDL files are grouped in a single directory: <https://dxr.mozilla.org/mozilla-central/source/dom/webidl/>. Their extension is `.webidl`. There are other `*.idl` files in the Gecko source tree but they are not WebIDL, so you can ignore them. Older versions of Gecko have some of their WebIDL scattered around somewhat, and may even use Mozilla's IDL instead of WebIDL to describe some Web interfaces, but this won't be a problem in any recent Gecko code.
-  - For Chromium, they are located in two locations, both subtrees of the source code's [`renderer/`](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/) directory: [`core/`](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/core/) and [`modules/`](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/modules/). Chromium source code has IDL files in other locations, but these are part of the testing system and not relevant to API implementations.
+  - For Gecko, all WebIDL files are grouped in a single directory: <https://searchfox.org/mozilla-central/source/dom/webidl/>. Their extension is `.webidl`. There are other `*.idl` files in the Gecko source tree but they are not WebIDL, so you can ignore them. Older versions of Gecko have some of their WebIDL scattered around somewhat, and may even use Mozilla's IDL instead of WebIDL to describe some Web interfaces, but this won't be a problem in any recent Gecko code.
+  - For Chromium, they are located in two locations, both subtrees of the source code's [`renderer/`](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/) directory: [`core/`](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/core/) and [`modules/`](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/modules/). Chromium source code has IDL files in other locations, but these are part of the testing system and not relevant to API implementations.
   - For WebCore, they are scattered around the source code, so you need to dig a bit more: E.g. <https://github.com/WebKit/webkit/blob/main/Source/WebCore/html/DOMTokenList.idl>
 
 ## Different dialects of WebIDL
@@ -29,7 +29,8 @@ WebIDL is defined in [its specification](https://webidl.spec.whatwg.org/). But i
 - For Chromium, Google also created a [document](https://www.chromium.org/blink/webidl/) to describe its extensions.
 - For WebCore, Apple also made available a [page](https://trac.webkit.org/wiki/WebKitIDL) for its dialect.
 
-> **Note:** We describe here only the subset of WebIDL which is most useful when writing documentation. There are many more annotations useful for implementers; refer to the four documents linked above to have a complete overview.
+> [!NOTE]
+> We describe here only the subset of WebIDL which is most useful when writing documentation. There are many more annotations useful for implementers; refer to the four documents linked above to have a complete overview.
 
 ## Interfaces
 
@@ -171,7 +172,8 @@ Here, it is defined that when the global scope is of type `DedicatedWorkerGlobal
 
 ### Preferences
 
-> **Note:** this information is specific to Gecko and should only be used in the Browser compatibility section.
+> [!NOTE]
+> This information is specific to Gecko and should only be used in the Browser compatibility section.
 
 In Gecko, the availability of a partial interface, including its constructor, properties and methods may be controlled by a preference (usually called a "pref"). This is marked in the WebIDL too.
 
@@ -186,7 +188,8 @@ interface SpeechSynthesis {
 
 Here `media.webspeech.synth.enabled` controls the `SpeechSynthesis` interface and its properties (the full listing has more than 3.)
 
-> **Note:** the default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another.)
+> [!NOTE]
+> The default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another.)
 
 ### Available only in system code
 
@@ -219,6 +222,18 @@ readonly attribute MediaError? error;
 
 The property value is an object of type `MediaError`. The question mark (`'?'`) indicates that it can take a value of `null`, and the documentation must explain _when_ this may occur. If no question mark is present, the `error` property can't be `null`.
 
+The type of the property may be prefixed with an _extended attribute_, a string enclosed in square brackets (like `[LegacyNullToEmptyString]`). Such extended attributes indicate special behaviors that must be described in the prose. Here is a list of standard extended attributes of types, and the addition that must be made:
+
+- `[LegacyNullToEmptyString]`
+
+  - : The `null` value is converted to a string in a non-standard way. The standard way is to convert it to the `"null"` string, but in this case, it is converted to `""`.
+
+    Add the following sentence to the end of the _Value_ section of the article:
+
+    _When set to the `null` value, that `null` value is converted to the empty string (`""`), so `elt.innerHTML = null` is equivalent to `elt.innerHTML = ""`._
+
+    The small inline example has to be adapted for each property.
+
 ### Writing permissions on the property
 
 ```webidl
@@ -231,7 +246,8 @@ If the keyword `readonly` is present, the property can't be modified. It must be
 - In the first sentence of its own page, by starting the description with: _The read-only **`HTMLMediaElement.error`** property…_
 - By starting its description in the interface page with _Returns…_
 
-> **Note:** Only read-only properties can be described as 'returning' a value. Non read-only properties can also be used to set a value.
+> [!NOTE]
+> Only read-only properties can be described as 'returning' a value. Non read-only properties can also be used to set a value.
 
 ### Throwing exceptions
 
@@ -255,7 +271,7 @@ partial interface Blob {
 
 ### Not throwing exceptions
 
-When the semantics of Webidl is not followed, an exception is often thrown, even without `[SetterThrows]` or `[GetterThrows]` set. For example, in strict mode, if we try to set a read-only property to a new value, that is to call its implicit setter, a read-only property will throw in strict mode.
+When the semantics of WebIDL is not followed, an exception is often thrown, even without `[SetterThrows]` or `[GetterThrows]` set. For example, in strict mode, if we try to set a read-only property to a new value, that is to call its implicit setter, a read-only property will throw in strict mode.
 
 Mostly for compatibility purpose, this behavior is sometimes annoying. To prevent this by creating a no-op setter (that is by silently ignoring any attempt to set the property to a new value), the `[LenientSetter]` annotation can be used.
 
@@ -280,7 +296,8 @@ Basic objects with types like {{jsxref("String")}} (being an IDL `DOMString`, or
 
 For interface objects, the default is to return a _reference_ to the internal object. This has to be mentioned both in the short description in the interface page, and in the description in the specific sub-pages.
 
-> **Note:** The keyword `readonly` used with a property returning an object applies to the reference (the internal object cannot be changed.) The properties of the returned object can be changed, even if they are marked as read-only in the relevant interface.
+> [!NOTE]
+> The keyword `readonly` used with a property returning an object applies to the reference (the internal object cannot be changed.) The properties of the returned object can be changed, even if they are marked as read-only in the relevant interface.
 
 Sometimes an API must return a _new_ object, or a _copy_ of an internal one. This case is indicated in the WebIDL using the `[NewObject]` annotation.
 
@@ -313,7 +330,8 @@ For documentation, the subpage must contain a sentence indicating if it is avail
 
 ### Preferences
 
-> **Note:** This information is specific to Gecko and should only be used in the Browser compatibility section.
+> [!NOTE]
+> This information is specific to Gecko and should only be used in the Browser compatibility section.
 
 In Gecko, the availability of some properties may be controlled by a preference. This is marked in the WebIDL too.
 
@@ -324,7 +342,8 @@ In Gecko, the availability of some properties may be controlled by a preference.
 
 Here `media.webvtt.enabled` controls the `textTracks` property.
 
-> **Note:** The default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another).
+> [!NOTE]
+> The default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another).
 
 ## Methods
 
@@ -347,6 +366,11 @@ TextTrack addTextTrack(TextTrackKind kind,
 ```
 
 The parameters of a method are listed in the Syntax section of the method sub-page. They are listed in the WebIDL in order, between the parenthesis, as a comma-separated list. Each parameter has a name (indicated above) and a type (e.g. a `'?'` means that the `null` value is valid.) If marked `optional`, the parameter is optional to include in a method call and must have the \\{{OptionalInline}} flag included when it is listed in the Syntax section. The parameter's default value is listed after the equality sign (`'='`).
+
+Parameter types may have special behaviors described using extended attributes (like `[LegacyNullToEmptyString]`). Here is the list of such attributes, and the addition you have to do in the prose:
+
+- `[LegacyNullToEmptyString]`
+  - : Add the following sentence at the end of the parameter description: _A [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) value is treated the same as the empty string (`""`)._
 
 ### Type of the return value
 
@@ -379,7 +403,8 @@ For the documentation, the sub-page must contain a sentence indicating if it is 
 
 ### Preferences
 
-> **Note:** this information is specific to Gecko and should only be used in the Browser compatibility section.
+> [!NOTE]
+> This information is specific to Gecko and should only be used in the Browser compatibility section.
 
 In Gecko, the availability of some methods may be controlled by a preference. This is marked in the WebIDL too.
 
@@ -392,7 +417,8 @@ In Gecko, the availability of some methods may be controlled by a preference. Th
 
 Here `media.webvtt.enabled` controls the `addTextTrack()` method.
 
-> **Note:** The default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another.)
+> [!NOTE]
+> The default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another.)
 
 ## Special methods
 
@@ -417,7 +443,8 @@ serializer; // Standard version
 
 The `toJSON()` method is listed just like any other method of the interface and has its own sub-page (E.g. {{domxref("Performance.toJSON()")}})
 
-> **Note:** the WebIDL specification uses `serializer` instead of `jsonifier`. This is not used in Gecko — only the non-standard likely early proposal `jsonifier` is found in mozilla-central.
+> [!NOTE]
+> The WebIDL specification uses `serializer` instead of `jsonifier`. This is not used in Gecko — only the non-standard likely early proposal `jsonifier` is found in mozilla-central.
 
 ### Iterator-like methods
 
@@ -468,7 +495,7 @@ The value pairs to iterate over can be defined in one of the following ways:
 
 ### Set-like methods
 
-An interface may be defined as _set-like_, meaning that it represents an _ordered set of values_ will have the following methods: `entries()`, `keys()`, `values()`, `forEach(),` and `has()` (it also has the `size` property). They also supports the use of {{jsxref("Statements/for...of", "for...of")}} on an object implementing this interface. The set-like can be prefixed `readonly` or not. If not read-only, the methods to modify the set are also implemented: `add()`, `clear()`, and `delete()`.
+An interface may be defined as _set-like_, meaning that it represents an _ordered set of values_ will have the following methods: `entries()`, `keys()`, `values()`, `forEach()`, and `has()` (it also has the `size` property). They also supports the use of {{jsxref("Statements/for...of", "for...of")}} on an object implementing this interface. The set-like can be prefixed `readonly` or not. If not read-only, the methods to modify the set are also implemented: `add()`, `clear()`, and `delete()`.
 
 ```webidl
 setlike<valueType>

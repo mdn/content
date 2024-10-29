@@ -1,7 +1,7 @@
 ---
 title: border-radius
 slug: Web/CSS/border-radius
-page-type: css-property
+page-type: css-shorthand-property
 browser-compat: css.properties.border-radius
 ---
 
@@ -15,7 +15,8 @@ The radius applies to the whole {{cssxref("background")}}, even if the element h
 
 The `border-radius` property does not apply to table elements when {{cssxref("border-collapse")}} is `collapse`.
 
-> **Note:** As with any shorthand property, individual sub-properties cannot inherit, such as in `border-radius:0 0 inherit inherit`, which would partially override existing definitions. Instead, the individual longhand properties have to be used.
+> [!NOTE]
+> As with any shorthand property, individual sub-properties cannot inherit, such as in `border-radius:0 0 inherit inherit`, which would partially override existing definitions. Instead, the individual longhand properties have to be used.
 
 ## Constituent properties
 

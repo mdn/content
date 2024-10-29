@@ -4,7 +4,7 @@ slug: Learn/CSS/Building_blocks/Styling_tables
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks/Advanced_styling_effects", "Learn/CSS/Building_blocks")}}
 
 Styling an HTML table isn't the most glamorous job in the world, but sometimes we all have to do it. This article provides a guide to making HTML tables look good, with some specific table styling techniques highlighted.
 
@@ -293,8 +293,8 @@ There is nothing remarkable here, except for the {{cssxref("caption-side")}} pro
 Before moving on, we thought we'd provide you with a quick list of the most useful points illustrated above:
 
 - Make your table markup as simple as possible, and keep things flexible, e.g. by using percentages, so the design is more responsive.
-- Use {{cssxref("table-layout")}}`: fixed` to create a more predictable table layout that allows you to easily set column widths by setting {{cssxref("width")}} on their headings ({{htmlelement("th")}}).
-- Use {{cssxref("border-collapse")}}`: collapse` to make table elements borders collapse into each other, producing a neater and easier to control look.
+- Use {{cssxref("table-layout", "table-layout: fixed")}} to create a more predictable table layout that allows you to easily set column widths by setting {{cssxref("width")}} on their headings ({{htmlelement("th")}}).
+- Use {{cssxref("border-collapse", "border-collapse: collapse")}} to make table elements borders collapse into each other, producing a neater and easier to control look.
 - Use {{htmlelement("thead")}}, {{htmlelement("tbody")}}, and {{htmlelement("tfoot")}} to break up your table into logical chunks and provide extra places to apply CSS to, so it is easier to layer styles on top of one another if required.
 - Use zebra striping to make alternative rows easier to read.
 - Use {{cssxref("text-align")}} to line up your {{htmlelement("th")}} and {{htmlelement("td")}} text, to make things neater and easier to follow.
@@ -307,4 +307,4 @@ You've reached the end of this article, but can you remember the most important 
 
 With styling tables now behind us, we need something else to occupy our time. The next article explores [debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS) — how to solve problems such as layouts not looking like they should, or properties not applying when you think they should. This includes information on using browser DevTools to find solutions to your problems.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks/Advanced_styling_effects", "Learn/CSS/Building_blocks")}}

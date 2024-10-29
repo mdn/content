@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CookieStoreManager.subscribe
 ---
 
-{{securecontext_header}}{{APIRef("Cookie Store API")}} {{AvailableInWorkers}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{AvailableInWorkers("window_and_service")}}
 
 The **`subscribe()`** method of the {{domxref("CookieStoreManager")}} interface subscribes a {{domxref("ServiceWorkerRegistration")}} to cookie change events.
 
@@ -20,7 +20,7 @@ subscribe(subscriptions)
 
 - `subscriptions`
 
-  - : An object containing:
+  - : An array of objects, each of which has the following properties:
 
     - `name`
       - : A string with the name of a cookie.

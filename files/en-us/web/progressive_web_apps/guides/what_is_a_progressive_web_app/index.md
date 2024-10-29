@@ -75,7 +75,7 @@ Because PWAs are websites, they have the same basic features as any other websit
 Beyond that, a PWA has some additional features:
 
 - A [web app manifest](/en-US/docs/Web/Manifest) file, which, at a minimum, provides information that the browser needs to install the PWA, such as the app name and icon.
-- A [service worker](/en-US/docs/Web/API/Service_Worker_API), which, at a minimum, provides a basic offline experience.
+- Optionally, a [service worker](/en-US/docs/Web/API/Service_Worker_API) to provide an offline experience.
 
 #### Web app manifest
 
@@ -85,7 +85,7 @@ The manifest can define many other aspects of the PWA's appearance, such as [the
 
 #### Service worker
 
-A PWA must have a service worker, and the service worker must implement at least a minimal offline experience.
+Although a PWA does not need a service worker to be installed, service workers are often used with PWAs in order to provide at least a minimal offline experience.
 
 Service workers encourage an architecture in which the app's pages - that is, the traditional part of a website - implement the user interface, and the service worker implements a backend which can support [offline and background operation](/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation), making the PWA behave more like an app than a website. This is because service workers can be started by the browser in the background when they are needed (for example, to handle a push notification).
 

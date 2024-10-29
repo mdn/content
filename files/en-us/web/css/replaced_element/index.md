@@ -16,10 +16,11 @@ The only other impact CSS can have on a replaced element is that there are prope
 
 Typical replaced elements are:
 
-- {{HTMLElement("iframe")}}
-- {{HTMLElement("video")}}
-- {{HTMLElement("embed")}}
 - {{HTMLElement("img")}}
+- {{HTMLElement("video")}}
+- {{HTMLElement("iframe")}}
+- {{HTMLElement("embed")}}
+- {{HTMLElement("fencedframe")}}
 
 Some elements are treated as replaced elements only in specific cases:
 
@@ -43,7 +44,7 @@ Note that some replaced elements, but not all, have intrinsic dimensions or a de
 Certain CSS properties can be used to specify how the object contained within the replaced element should be positioned within the element's box area. These are defined by the [CSS Images](https://drafts.csswg.org/css-images/) specification:
 
 - {{cssxref("object-fit")}}
-  - : Specifies how the replaced element's content object should be fitted to the containing element's box.
+  - : Specifies how the replaced element's content object should be fitted to the containing element's box. The `object-fit` property has no effect on {{HTMLElement("iframe")}}, {{HTMLElement("embed")}}, and {{HTMLElement("fencedframe")}} elements.
 - {{cssxref("object-position")}}
   - : Specifies the alignment of the replaced element's content object within the element's box.
 

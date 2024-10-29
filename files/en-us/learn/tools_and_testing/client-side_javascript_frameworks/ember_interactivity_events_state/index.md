@@ -54,7 +54,7 @@ For our card-header / todo input, we'll want to be able to submit our typed in t
 
 We want to be able to capture the text typed into the input. We do this so that our JavaScript code knows what we typed in, and we can save our todo and pass that text along to the todo list component to display.
 
-We can capture the [`keydown`](/en-US/docs/Web/API/Element/keydown_event) event via the [on modifier](https://api.emberjs.com/ember/3.16/classes/Ember.Templates.helpers/methods/on?anchor=on), which is just Ember syntactic sugar around [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) and [`removeEventListener`](/en-US/docs/Web/API/EventTarget/removeEventListener) (see [this explanation](/en-US/docs/Learn/JavaScript/Building_blocks/Events#addeventlistener_and_removeeventlistener) if needed).
+We can capture the [`keydown`](/en-US/docs/Web/API/Element/keydown_event) event via the [on modifier](https://api.emberjs.com/ember/3.16/classes/Ember.Templates.helpers/methods/on?anchor=on), which is just Ember syntactic sugar around [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) and [`removeEventListener`](/en-US/docs/Web/API/EventTarget/removeEventListener) (see [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events) if needed).
 
 Add the new line shown below to your `header.hbs` file:
 
@@ -109,7 +109,8 @@ export default class HeaderComponent extends Component {
 
 The `@action` decorator is the only Ember-specific code here (aside from extending from the `Component` superclass, and the Ember-specific items we are importing using [JavaScript module syntax](/en-US/docs/Web/JavaScript/Guide/Modules)) — the rest of the file is vanilla JavaScript, and would work in any application. The `@action` decorator declares that the function is an "action", meaning it's a type of function that will be invoked from an event that occurred in the template. `@action` also binds the `this` of the function to the class instance.
 
-> **Note:** A decorator is basically a wrapper function, which wraps and calls other functions or properties, providing additional functionality along the way. For example, the `@tracked` decorator (see slightly later on) runs code it is applied to, but additionally tracks it and automatically updates the app when values change. [Read JavaScript Decorators: What They Are and When to Use Them](https://www.sitepoint.com/javascript-decorators-what-they-are/) for more general information on decorators.
+> [!NOTE]
+> A decorator is basically a wrapper function, which wraps and calls other functions or properties, providing additional functionality along the way. For example, the `@tracked` decorator (see slightly later on) runs code it is applied to, but additionally tracks it and automatically updates the app when values change. [Read JavaScript Decorators: What They Are and When to Use Them](https://www.sitepoint.com/javascript-decorators-what-they-are/) for more general information on decorators.
 
 Coming back to our browser tab with the app running, we can type whatever we want, and when we hit <kbd>Enter</kbd> we'll be greeted with an alert message telling us exactly what we typed.
 
@@ -185,18 +186,14 @@ export default class TodoDataService extends Service {
   add(text) {
     let newTodo = new Todo(text);
 
-    this.todos.pushObject(newTodo);
+    this.todos = [...this.todos, newTodo];
   }
 }
 ```
 
 Here, the `todos` property on the service will maintain our list of todos contained inside an array, and we'll mark it with `@tracked`, because when the value of `todos` is updated we want the UI to update as well.
 
-And just like before, the `add()` function that will be called from the template gets annotated with the `@action` decorator to bind it to the class instance.
-While this may look like familiar JavaScript, you may notice that we're calling the method [`pushObject()`](https://api.emberjs.com/ember/4.2/classes/ArrayProxy/methods/filterBy?anchor=pushObject) on our `todos` array.
-This is because Ember extends JavaScript's Array prototype by default, giving us convenient methods to ensure Ember's tracking system knows about these changes.
-There are dozens of these methods, including `pushObjects()`, `insertAt()`, or `popObject()`, which can be used with any type (not just Objects).
-Ember's [ArrayProxy](https://api.emberjs.com/ember/4.2/classes/ArrayProxy) also gives us more handy methods, like `isAny()`, `findBy()`, and `filterBy()` to make life easier.
+And just like before, the `add()` function that will be called from the template gets annotated with the `@action` decorator to bind it to the class instance. We [spread our `todos` array](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) to add `newTodo` to it, which creates a new array and will trigger the reactivity system to update the UI.
 
 ## Using the service from our header component
 

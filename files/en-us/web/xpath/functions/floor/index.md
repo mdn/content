@@ -8,25 +8,25 @@ page-type: xpath-function
 
 The `floor` function evaluates a decimal number and returns the largest integer less than or equal to the decimal number.
 
-### Syntax
+## Syntax
 
 ```plain
 floor( number )
 ```
 
-### Arguments
+### Parameters
 
 - `number`
   - : The decimal number to be evaluated.
 
-### Returns
+### Return value
 
 The nearest integer less than or equal to `number`.
 
-### Defined
+## Specifications
 
 [XPath 1.0 4.4](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-floor)
 
-### Gecko support
+## Gecko support
 
 Supported.

@@ -9,7 +9,7 @@ browser-compat: api.TextUpdateEvent
 
 {{APIRef("EditContext API")}}{{SeeCompatTable}}
 
-The **`TextUpdateEvent`** interface is a {{domxref("Event", "DOM event")}} that represents a text or selection update in an editable text region that's attached to an {{domxref("EditContext")}} instance.
+The **`TextUpdateEvent`** interface is a [DOM event](/en-US/docs/Web/API/Event) that represents a text or selection update in an editable text region that's attached to an {{domxref("EditContext")}} instance.
 
 This interface inherits properties from {{domxref("Event")}}.
 

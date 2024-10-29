@@ -11,7 +11,7 @@ browser-compat: api.RTCIceCandidate.candidate
 The read-only property **`candidate`** on the {{domxref("RTCIceCandidate")}} interface returns a string describing the candidate in detail.
 Most of the other properties of `RTCIceCandidate` are actually extracted from this string.
 
-This property can be configured using the `candidate` property of the object passed into the {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate() constructor")}} or {{domxref("RTCPeerConnection.addIceCandidate()")}}.
+This property can be configured using the `candidate` property of the object passed into the {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} constructor or {{domxref("RTCPeerConnection.addIceCandidate()")}}.
 
 ## Value
 

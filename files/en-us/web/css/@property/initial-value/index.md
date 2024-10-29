@@ -41,7 +41,7 @@ A string with a value which is a correct value for the chosen `syntax`.
 
 ## Examples
 
-Add type checking to `--my-color` {{cssxref('--*', 'custom property')}}, as a color, the initial-value being a valid color:
+Add type checking to `--my-color` [custom property](/en-US/docs/Web/CSS/--*), as a color, the initial-value being a valid color:
 
 Using [CSS](/en-US/docs/Web/CSS) {{cssxref('@property')}} [at-rule](/en-US/docs/Web/CSS/At-rule):
 

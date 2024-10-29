@@ -23,16 +23,26 @@ x **= y
 
 ## Examples
 
-### Using exponentiation assignment
+### Exponentiation assignment using numbers
 
 ```js
 let bar = 5;
-
 bar **= 2; // 25
-bar **= "foo"; // NaN
+```
 
+Other non-BigInt values are coerced to numbers:
+
+```js
+let baz = 5;
+baz **= "foo"; // NaN
+```
+
+### Exponentiation assignment using BigInts
+
+```js
 let foo = 3n;
 foo **= 2n; // 9n
+foo **= 1; // TypeError: Cannot mix BigInt and other types, use explicit conversions
 ```
 
 ## Specifications

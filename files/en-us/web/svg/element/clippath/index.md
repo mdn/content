@@ -74,7 +74,7 @@ By default, {{cssxref("pointer-events")}} are not dispatched on clipped regions.
   - : Defines the coordinate system for the contents of the `<clipPath>` element.
     _Value type_: `userSpaceOnUse`|`objectBoundingBox` ; _Default value_: `userSpaceOnUse`; _Animatable_: **yes**
 
-## Usage notes
+## Usage context
 
 {{svginfo}}
 

@@ -50,7 +50,8 @@ We do that in HTML too, except HTML is not a visual medium and so we don't use b
 <p><dfn>Firefox</dfn> is the web browser created by the Mozilla Foundation.</p>
 ```
 
-> **Note:** Another use for bold is to emphasize content. Bold itself is a concept foreign to HTML, but there are [tags for indicating emphasis.](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#emphasis_and_importance)
+> [!NOTE]
+> Another use for bold is to emphasize content. Bold itself is a concept foreign to HTML, but there are [tags for indicating emphasis.](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#emphasis_and_importance)
 
 ### Special case: Abbreviations
 
@@ -63,7 +64,8 @@ It's best to [mark abbreviations specially](/en-US/docs/Learn/HTML/Introduction_
 </p>
 ```
 
-> **Note:** The HTML spec does indeed [set aside the `title` attribute](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-abbr-element) for expanding the abbreviation. However, this is not an acceptable alternative for providing an inline expansion. The contents of `title` are completely hidden from your users, unless they're using a mouse and they happen to hover over the abbreviation. The spec duly [acknowledges this as well.](https://html.spec.whatwg.org/multipage/dom.html#attr-title)
+> [!NOTE]
+> The HTML spec does indeed [set aside the `title` attribute](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-abbr-element) for expanding the abbreviation. However, this is not an acceptable alternative for providing an inline expansion. The contents of `title` are completely hidden from your users, unless they're using a mouse and they happen to hover over the abbreviation. The spec duly [acknowledges this as well.](https://html.spec.whatwg.org/multipage/dom.html#attr-title)
 
 ### Improve accessibility
 
@@ -79,13 +81,14 @@ It's best to [mark abbreviations specially](/en-US/docs/Learn/HTML/Introduction_
 </p>
 ```
 
-Assistive technology can often use this attribute to find a text alternative to a given term. You can use `aria-describedby` on any tag enclosing a keyword to be defined (not just the `<dfn>` element). `aria-describedby` references the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) of the element containing the description.
+Assistive technology can often use this attribute to find a text alternative to a given term. You can use `aria-describedby` on any tag enclosing a keyword to be defined (not just the `<dfn>` element). `aria-describedby` references the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of the element containing the description.
 
 ## How to build a description list
 
 Description lists are just what they claim to be: a list of terms and their matching descriptions (e.g., definition lists, dictionary entries, FAQs, and key-value pairs).
 
-> **Note:** Description lists are [not suitable for marking up dialog,](https://html.spec.whatwg.org/multipage/grouping-content.html#the-dl-element) because conversation does not directly describe the speakers. Here are [recommendations for marking up dialog](https://html.spec.whatwg.org/multipage/semantics-other.html#conversations).
+> [!NOTE]
+> Description lists are [not suitable for marking up dialog,](https://html.spec.whatwg.org/multipage/grouping-content.html#the-dl-element) because conversation does not directly describe the speakers. Here are [recommendations for marking up dialog](https://html.spec.whatwg.org/multipage/semantics-other.html#conversations).
 
 The terms described go inside {{htmlelement("dt")}} elements. The matching description follows immediately, contained within one or more {{htmlelement("dd")}} elements. Enclose the whole description list with a {{htmlelement("dl")}} element.
 
@@ -111,7 +114,8 @@ Here's a simple example describing kinds of food and drink:
 </dl>
 ```
 
-> **Note:** The basic pattern, as you can see, is to alternate `<dt>` terms with `<dd>` descriptions. If two or more terms occur in a row, the following description applies to all of them. If two or more descriptions occur in a row, they all apply to the last given term.
+> [!NOTE]
+> The basic pattern, as you can see, is to alternate `<dt>` terms with `<dd>` descriptions. If two or more terms occur in a row, the following description applies to all of them. If two or more descriptions occur in a row, they all apply to the last given term.
 
 ### Improving the visual output
 

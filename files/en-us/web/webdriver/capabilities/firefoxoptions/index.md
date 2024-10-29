@@ -96,14 +96,14 @@ default locations of Firefox are:
 Command line arguments to pass to the Firefox binary. These must include the leading dash (`-`) where
 required, e.g. `["-headless"]`.
 
-To have geckodriver pick up an existing [profile](#profile) on the local filesystem, you may pass
+To have geckodriver pick up an existing [profile](#profile_string) on the local filesystem, you may pass
 `["-profile", "/path/to/profile"]`. But if a profile has to be transferred to a target machine it is
 recommended to use the `profile` entry.
 
 ##### `profile` (string)
 
 Base64-encoded ZIP of a profile directory to use for the Firefox instance. This may be used to e.g. install
-extensions or custom certificates, but for setting custom preferences we recommend using the `prefs` ([Preferences Object](#prefs)) entry instead.
+extensions or custom certificates, but for setting custom preferences we recommend using the `prefs` ([Preferences Object](#prefs_preferences_object)) entry instead.
 
 Profiles are created in the systems temporary folder. This is also where the encoded profile is extracted when
 `profile` is provided. By default geckodriver will create a new profile in this location.
@@ -117,7 +117,7 @@ on a different system, the profile must already exist on the target system.
 
 ##### `log` (Log object)
 
-To increase the logging verbosity of geckodriver and Firefox, you may pass a [`log`](#log)
+To increase the logging verbosity of geckodriver and Firefox, you may pass a [`log`](#log_log_object)
 object that may look like `{"log": {"level": "trace"}}` to include all trace-level logs and above
 
 ##### `prefs` (Preferences object)
@@ -131,7 +131,7 @@ Starting with geckodriver 0.26.0 additional capabilities exist if Firefox or an 
 #### `androidPackage` (string, required)
 
 The package name of Firefox, e.g. `org.mozilla.firefox`,
-`org.mozilla.firefox_beta,` or `org.mozilla.fennec` depending on the release
+`org.mozilla.firefox_beta`, or `org.mozilla.fennec` depending on the release
 channel, or the package name of the application embedding GeckoView, e.g. `org.mozilla.geckoview_example`.
 
 #### `androidActivity` (string, optional)
@@ -146,8 +146,8 @@ attached, an error will be returned.
 
 #### `androidIntentArguments` (array of strings, optional)
 
-Arguments to launch the intent with. Under the hood, geckodriver uses [Android am](https://developer.android.com/studio/command-line/adb#am) to start the Android application
-under test. The given intent arguments are appended to the `am start` command. See Android's [specification for intent arguments](https://developer.android.com/studio/command-line/adb#IntentSpec) for
+Arguments to launch the intent with. Under the hood, geckodriver uses [Android am](https://developer.android.com/tools/adb#am) to start the Android application
+under test. The given intent arguments are appended to the `am start` command. See Android's [specification for intent arguments](https://developer.android.com/tools/adb#IntentSpec) for
 details. This allows to control how the application is launched and to include optional extras for enabling and
 disabling features. For example, to launch with the view action and a specified URL before navigating as part of a
 test, include:
@@ -187,7 +187,7 @@ undefined the default is `info`. The value is treated case-insensitively.
 
 ### Preferences object
 
-A JSON Object with one entry per preference to set. The preference will be written to the [profile](#profile) before starting Firefox. A full list of available preferences is available from visiting
+A JSON Object with one entry per preference to set. The preference will be written to the [profile](#profile_string) before starting Firefox. A full list of available preferences is available from visiting
 "about:config" in your Firefox browser. Some of these are documented in [this source](https://searchfox.org/mozilla-central/source/modules/libpref/init/all.js) file.
 
 An example of a preference object:
@@ -217,7 +217,7 @@ An example of an env object:
 ## Example
 
 The following is an example of a full [capabilities object](/en-US/docs/Web/WebDriver/Capabilities) that
-selects a specific Firefox binary to run with a prepared [profile](#profile) from the filesystem in [headless mode](https://hacks.mozilla.org/2017/12/using-headless-mode-in-firefox/). It also increases the number of IPC processes
+selects a specific Firefox binary to run with a prepared [profile](#profile_string) from the filesystem in [headless mode](https://hacks.mozilla.org/2017/12/using-headless-mode-in-firefox/). It also increases the number of IPC processes
 through a preference, turns off chrome errors/warnings in the console, and enables more verbose logging:
 
 ```json
@@ -242,7 +242,7 @@ through a preference, turns off chrome errors/warnings in the console, and enabl
 }
 ```
 
-The [`moz:firefoxOptions`](#firefoxoptions) must be placed—as above—inside
+The `moz:firefoxOptions` must be placed—as above—inside
 [`alwaysMatch`](/en-US/docs/Web/WebDriver/Capabilities#alwaysmatch), or in one of the
 [`firstMatch`](/en-US/docs/Web/WebDriver/Capabilities#firstmatch) [capabilities objects](/en-US/docs/Web/WebDriver/Capabilities) as seen here:
 
@@ -282,7 +282,7 @@ This runs the GeckoView example application as installed on the first Android em
 ## See also
 
 - [geckodriver's documentation on supported Firefox capabilities](https://firefox-source-docs.mozilla.org/testing/geckodriver/Capabilities.html)
-- [Chrome-specific WebDriver capabilities](https://chromedriver.chromium.org/capabilities)
+- [Chrome-specific WebDriver capabilities](https://developer.chrome.com/docs/chromedriver/capabilities)
   (`goog:chromeOptions)`
 - [List of WebDriver capabilities](/en-US/docs/Web/WebDriver/Capabilities)
 - [New Session](/en-US/docs/Web/WebDriver/Commands/NewSession) command

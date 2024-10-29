@@ -31,13 +31,14 @@ createElement(tagName, options)
 
 The new {{domxref("Element")}}.
 
-> **Note:** A new {{domxref("HTMLElement", "HTMLElement", "", "1")}} is returned if the document is an {{domxref("HTMLDocument", "HTMLDocument", "", "1")}}, which is the most common case. Otherwise a new {{domxref("Element","Element","","1")}} is returned.
+> [!NOTE]
+> A new {{domxref("HTMLElement", "HTMLElement", "", "1")}} is returned if the document is an {{domxref("HTMLDocument", "HTMLDocument", "", "1")}}, which is the most common case. Otherwise a new {{domxref("Element","Element","","1")}} is returned.
 
 ## Examples
 
 ### Basic example
 
-This creates a new `<div>` and inserts it before the element with the ID "`div1`".
+This creates a new `<div>` and inserts it before the element with the ID `div1`.
 
 #### HTML
 
@@ -81,6 +82,9 @@ function addElement() {
 
 ### Web component example
 
+> [!NOTE]
+> Check the [browser compatibility](#browser_compatibility) section for support, and the [`is`](/en-US/docs/Web/HTML/Global_attributes/is) attribute reference for caveats on implementation reality of custom built-in elements.
+
 The following example snippet is taken from our [expanding-list-web-component](https://github.com/mdn/web-components-examples/tree/main/expanding-list-web-component) example ([see it live also](https://mdn.github.io/web-components-examples/expanding-list-web-component/)). In this case, our custom element extends the {{domxref("HTMLUListElement")}}, which represents the {{htmlelement("ul")}} element.
 
 ```js
@@ -107,7 +111,8 @@ let expandingList = document.createElement("ul", { is: "expanding-list" });
 
 The new element will be given an [`is`](/en-US/docs/Web/HTML/Global_attributes/is) attribute whose value is the custom element's tag name.
 
-> **Note:** For backwards compatibility with previous versions of the [Custom Elements specification](https://www.w3.org/TR/custom-elements/), some browsers will allow you to pass a string here instead of an object, where the string's value is the custom element's tag name.
+> [!NOTE]
+> For backwards compatibility with previous versions of the [Custom Elements specification](https://www.w3.org/TR/custom-elements/), some browsers will allow you to pass a string here instead of an object, where the string's value is the custom element's tag name.
 
 ## Specifications
 

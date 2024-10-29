@@ -4,6 +4,8 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_templat
 page-type: learn-module-chapter
 ---
 
+{{LearnSidebar}}
+
 Now that we understand how to extend templates using Pug, let's start by creating a base template for the project. This will have a sidebar with links for the pages we hope to create across the tutorial articles (e.g. to display and create books, genres, authors, etc.) and a main content area that we'll override in each of our individual pages.
 
 Open **/views/layout.pug** and replace the content with the code below.
@@ -52,10 +54,11 @@ html(lang='en')
 
 The template uses (and includes) JavaScript and CSS from [Bootstrap](https://getbootstrap.com/) to improve the layout and presentation of the HTML page. Using Bootstrap or another client-side web framework is a quick way to create an attractive page that can scale well on different browser sizes, and it also allows us to deal with the page presentation without having to get into any of the details—we just want to focus on the server-side code here!
 
-> **Note:** The scripts are loaded cross-origin, so later in the tutorial, when we add security middleware, we will need to explicitly allow these files to be loaded.
+> [!NOTE]
+> The scripts are loaded cross-origin, so later in the tutorial, when we add security middleware, we will need to explicitly allow these files to be loaded.
 > For more information see [Deployment > Use Helmet to protect against well known vulnerabilities](/en-US/docs/Learn/Server-side/Express_Nodejs/deployment#use_helmet_to_protect_against_well_known_vulnerabilities).
 
-The layout should be fairly obvious if you've read our above [Template primer](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data#template_primer). Note the use of `block content` as a placeholder for where the content for our individual pages will be placed.
+The layout should be fairly obvious if you've read our above [Template primer](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer). Note the use of `block content` as a placeholder for where the content for our individual pages will be placed.
 
 The base template also references a local CSS file (**style.css**) that provides a little additional styling. Open **/public/stylesheets/style.css** and replace its content with the following CSS code:
 

@@ -11,7 +11,8 @@ browser-compat: mathml.elements.maction
 
 The **`<maction>`** [MathML](/en-US/docs/Web/MathML) element allows to bind actions to mathematical expressions. By default, only the first child is rendered but some browsers may take into account `actiontype` and `selection` attributes to implement custom behaviors.
 
-> **Note:** Historically, this element provided a mechanism to make MathML formulas interactive. Nowadays, it is recommended to rely on [JavaScript](/en-US/docs/Web/JavaScript) and other Web technologies to implement this use case.
+> [!NOTE]
+> Historically, this element provided a mechanism to make MathML formulas interactive. Nowadays, it is recommended to rely on [JavaScript](/en-US/docs/Web/JavaScript) and other Web technologies to implement this use case.
 
 ## Attributes
 
@@ -67,6 +68,19 @@ The following example uses the "toggle" `actiontype`:
 ```
 
 {{EmbedLiveSample('Examples', 700, 200)}}
+
+## Technical summary
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Roles">Implicit ARIA role</a>
+    </th>
+    <td>
+      None
+    </td>
+  </tr>
+</table>
 
 ## Specifications
 

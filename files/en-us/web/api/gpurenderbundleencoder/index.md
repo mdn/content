@@ -7,7 +7,7 @@ status:
 browser-compat: api.GPURenderBundleEncoder
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPURenderBundleEncoder`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} is used to pre-record bundles of commands.
 
@@ -15,13 +15,15 @@ The command bundles are encoded by calling the methods of `GPURenderBundleEncode
 
 In effect, this is like a partial render pass — `GPURenderBundleEncoder`s have all the same functionality available as {{domxref("GPURenderPassEncoder")}}s, except that they can't begin and end occlusion queries, and can't set the scissor rect, viewport, blend constant, and stencil reference. The `GPURenderBundle` will inherit all these values from the {{domxref("GPURenderPassEncoder")}} that executes it.
 
-> **Note:** Currently set vertex buffers, index buffers, bind groups, and pipeline are all cleared prior to executing a render bundle, and once the render bundle has finished executing.
+> [!NOTE]
+> Currently set vertex buffers, index buffers, bind groups, and pipeline are all cleared prior to executing a render bundle, and once the render bundle has finished executing.
 
 Reusing pre-recoded commands can significantly improve app performance in situations where JavaScript draw call overhead is a bottleneck. Render bundles are most effective in situations where a batch of objects will be drawn the same way across multiple views or frames, with the only differences being the buffer content being used (such as updated matrix uniforms). A good example is VR rendering. Recording the rendering as a render bundle and then tweaking the view matrix and replaying it for each eye is a more efficient way to issue draw calls for both renderings of the scene.
 
 A `GPURenderBundleEncoder` object instance is created via the {{domxref("GPUDevice.createRenderBundleEncoder()")}} property.
 
-> **Note:** The methods of `GPURenderBundleEncoder` are functionally identical to their equivalents available on {{domxref("GPURenderPassEncoder")}}, except for {{domxref("GPURenderBundleEncoder.finish()")}}, which is similar in purpose to {{domxref("GPUCommandEncoder.finish()")}}.
+> [!NOTE]
+> The methods of `GPURenderBundleEncoder` are functionally identical to their equivalents available on {{domxref("GPURenderPassEncoder")}}, except for {{domxref("GPURenderBundleEncoder.finish()")}}, which is similar in purpose to {{domxref("GPUCommandEncoder.finish()")}}.
 
 {{InheritanceDiagram}}
 
@@ -69,7 +71,7 @@ A `GPURenderBundleEncoder` object instance is created via the {{domxref("GPUDevi
 
 ## Examples
 
-In the WebGPU Samples [Animometer example](https://webgpu.github.io/webgpu-samples/samples/animometer), a lot of like operations are done on many different objects simultaneously. A bundle of commands is encoded using the following function:
+In the WebGPU Samples [Animometer example](https://webgpu.github.io/webgpu-samples/samples/animometer/), a lot of like operations are done on many different objects simultaneously. A bundle of commands is encoded using the following function:
 
 ```js
 function recordRenderPass(

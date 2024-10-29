@@ -19,5 +19,6 @@ The following elements are considered when determining the LCP:
 ## See also
 
 - [`LargestContentfulPaint`](/en-US/docs/Web/API/LargestContentfulPaint)
-- [First contentful paint](/en-US/docs/Glossary/First_contentful_paint)
-- [First paint](/en-US/docs/Glossary/First_paint)
+- Related glossary terms:
+  - {{Glossary("First contentful paint")}}
+  - {{Glossary("First paint")}}

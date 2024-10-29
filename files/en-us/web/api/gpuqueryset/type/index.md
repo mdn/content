@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUQuerySet.type
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`type`** read-only property of the
 {{domxref("GPUQuerySet")}} interface is an enumerated value specifying the type of queries managed by the `GPUQuerySet`.
@@ -21,6 +21,9 @@ An enumerated value. Possible values are:
   - : The `GPUQuerySet` manages occlusion queries.
 - `"timestamp"`
   - : The `GPUQuerySet` manages timestamp queries.
+
+> [!NOTE]
+> The `timestamp-query` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) needs to be enabled to use timestamp queries.
 
 ## Examples
 

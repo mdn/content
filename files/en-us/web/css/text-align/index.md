@@ -21,7 +21,6 @@ text-align: left;
 text-align: right;
 text-align: center;
 text-align: justify;
-text-align: justify-all;
 text-align: match-parent;
 
 /* Block alignment values (Non-standard syntax) */
@@ -36,11 +35,7 @@ text-align: revert-layer;
 text-align: unset;
 ```
 
-The `text-align` property is specified in one of the following ways:
-
-- Using the keyword values `start`, `end`, `left`, `right`, `center`, `justify`, `justify-all`, or `match-parent`.
-- Using a `<string>` value only, in which case the other value defaults to `right`.
-- Using both a keyword value and a [`<string>`](#string) value.
+The `text-align` property is specified as a single keyword from the list below.
 
 ### Values
 
@@ -48,20 +43,18 @@ The `text-align` property is specified in one of the following ways:
   - : The same as `left` if direction is left-to-right and `right` if direction is right-to-left.
 - `end`
   - : The same as `right` if direction is left-to-right and `left` if direction is right-to-left.
-- `left` {{deprecated_inline}} {{non-standard_inline}}
+- `left`
   - : The inline contents are aligned to the left edge of the line box.
-- `right` {{deprecated_inline}} {{non-standard_inline}}
+- `right`
   - : The inline contents are aligned to the right edge of the line box.
-- `center` {{deprecated_inline}} {{non-standard_inline}}
+- `center`
   - : The inline contents are centered within the line box.
 - `justify`
-  - : The inline contents are justified. Text should be spaced to line up its left and right edges to the left and right edges of the line box, except for the last line.
-- `justify-all` {{experimental_inline}}
-  - : Same as `justify`, but also forces the last line to be justified.
+  - : The inline contents are justified. Spaces out the content to line up its left and right edges to the left and right edges of the line box, except for the last line.
 - `match-parent`
   - : Similar to `inherit`, but the values `start` and `end` are calculated according to the parent's {{cssxref("direction")}} and are replaced by the appropriate `left` or `right` value.
 
-## Accessibility concerns
+## Accessibility
 
 The inconsistent spacing between words created by justified text can be problematic for people with cognitive concerns such as Dyslexia.
 
@@ -126,7 +119,7 @@ The inconsistent spacing between words created by justified text can be problema
 
 #### Result
 
-{{EmbedLiveSample("Centered_text","100%","100%")}}
+{{EmbedLiveSample("Centered_text", "100%", "100%")}}
 
 ### Example using "justify"
 
@@ -152,6 +145,82 @@ The inconsistent spacing between words created by justified text can be problema
 #### Result
 
 {{EmbedLiveSample('Example using "justify"',"100%","100%")}}
+
+### Table alignment
+
+This example demonstrates the use of `text-align` on {{htmlelement("table")}} elements:
+
+- The {{htmlelement("caption")}} is set to right-aligned.
+- The first two {{htmlelement("th")}} elements inherit the left alignment from the `text-align: left` set on the {{htmlelement("thead")}}, while the third is set to right-aligned.
+- Inside the {{htmlelement("tbody")}} element, the first row is set to right-aligned, the second is set to center-aligned, and the third uses the default (left) alignment.
+- Within each row, some cells (c12, c31) are set to override the alignment of the row.
+
+#### HTML
+
+```html
+<table>
+  <caption>
+    Example table
+  </caption>
+  <thead>
+    <tr>
+      <th>Col 1</th>
+      <th>Col 2</th>
+      <th class="right">Col 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="right">
+      <td>11</td>
+      <td class="center">12</td>
+      <td>13</td>
+    </tr>
+    <tr class="center">
+      <td>21</td>
+      <td>22</td>
+      <td>23</td>
+    </tr>
+    <tr id="r3">
+      <td class="right">31</td>
+      <td>32</td>
+      <td>33</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+#### CSS
+
+```css
+table {
+  border-collapse: collapse;
+  border: solid black 1px;
+  width: 250px;
+  height: 150px;
+}
+
+thead {
+  text-align: left;
+}
+
+td,
+th {
+  border: solid 1px black;
+}
+
+.center {
+  text-align: center;
+}
+
+.right,
+caption {
+  text-align: right;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Table alignment', "100%", "200")}}
 
 ## Specifications
 

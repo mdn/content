@@ -8,9 +8,9 @@ status:
 browser-compat: api.HIDConnectionEvent.HIDConnectionEvent
 ---
 
-{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_shared")}}
 
-The **`HIDConnectionEvent()`** constructor creates a new {{domxref("HIDConnectionEvent")}} object. Typically this constructor is not used as events are created when an input report is received.
+The **`HIDConnectionEvent()`** constructor creates a new {{domxref("HIDConnectionEvent")}} object. Typically this constructor is not used as events are created when a device's connection state changes.
 
 ## Syntax
 
@@ -26,7 +26,7 @@ new HIDConnectionEvent(type, options)
 - `options`
   - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
     - `device`
-      - : The {{domxref("HIDDevice")}} instance representing the device sending the input report.
+      - : The {{domxref("HIDDevice")}} instance representing the device being connected or disconnected.
 
 ### Return value
 

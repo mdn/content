@@ -48,7 +48,7 @@ Here's where you should go to learn more about Vue:
 
 - [Vue Docs](https://vuejs.org/) — The main Vue site. Contains comprehensive documentation, including examples, cookbooks, and reference material. This is the best place to start learning Vue in depth.
 - [Vue GitHub Repo](https://github.com/vuejs/vue) — The Vue code itself. This is where you can report issues and/or contribute directly to the Vue codebase. Studying the Vue source code can help you better understand how the framework works, and write better code.
-- [Vue Forum](https://forum.vuejs.org/) — The official forum for getting help with Vue.
+- [Vue Discussions](https://github.com/vuejs/core/discussions) — The official forum for getting help with Vue.
 - [Vue CLI Docs](https://cli.vuejs.org/) — Documentation for the Vue CLI. This contains information on customizing and extending the output you are generating via the CLI.
 - [Nuxt](https://nuxt.com/) — Nuxt is a Server-Side Vue Framework, with some architectural opinions that can be useful to creating maintainable applications, even if you don't use any of the Server Side Rendering features it provides. This site provides detailed documentation on using Nuxt.
 - [Vue Mastery](https://www.vuemastery.com/courses/) — A paid education platform that specializes in Vue, including some free lessons.
@@ -64,7 +64,8 @@ The Vue CLI also provides us with tools for preparing our app for publishing to 
 
 This will create a new `dist` directory containing all of your production ready files. To publish your site to the web, copy the contents of this folder to your hosting environment.
 
-> **Note:** The Vue CLI docs also include a [specific guide on how to publish your app](https://cli.vuejs.org/guide/deployment.html#platform-guides) to many of the common hosting platforms.
+> [!NOTE]
+> The Vue CLI docs also include a [specific guide on how to publish your app](https://cli.vuejs.org/guide/deployment.html#platform-guides) to many of the common hosting platforms.
 
 ## Vue 2
 

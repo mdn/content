@@ -198,8 +198,8 @@ For more information on JavaScript debugging, see [Handling common JavaScript pr
 - [Which mechanism should I use to add event code to my web pages?](/en-US/docs/Learn/JavaScript/Building_blocks/Events#what_mechanism_should_i_use)
 - [What are event objects, and how do you use them?](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_objects)
 - [How do you prevent default event behavior?](/en-US/docs/Learn/JavaScript/Building_blocks/Events#preventing_default_behavior)
-- [How do events fire on nested elements? (event propagation, also related — event bubbling and capturing)](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture)
-- [What is event delegation, and how does it work?](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_delegation)
+- [How do events fire on nested elements? (event propagation, also related — event bubbling and capturing)](/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling)
+- [What is event delegation, and how does it work?](/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling#event_delegation)
 
 ### Object-oriented JavaScript
 

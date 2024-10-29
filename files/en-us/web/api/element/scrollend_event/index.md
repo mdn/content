@@ -15,7 +15,7 @@ Scroll position updates include smooth or instant mouse wheel scrolling, keyboar
 User gestures like touch panning or trackpad scrolling aren't complete until pointers or keys have released.
 If the scroll position did not change, then no scrollend event fires.
 
-For detecting when scrolling inside a Document is complete, see the {{domxref("Document/scrollend_event", "Document: scrollend event")}}.
+For detecting when scrolling inside a Document is complete, see the {{domxref("Document/scrollend_event", "scrollend")}} event of `Document`.
 
 ## Syntax
 
@@ -77,11 +77,11 @@ const element = document.querySelector("div#scroll-box");
 const output = document.querySelector("p#output");
 
 element.addEventListener("scroll", (event) => {
-  output.innerHTML = "Scroll event fired, waiting for scrollend...";
+  output.textContent = "scroll event fired, waiting for scrollend...";
 });
 
 element.addEventListener("scrollend", (event) => {
-  output.innerHTML = "Scrollend event fired!";
+  output.textContent = "scrollend event fired!";
 });
 ```
 
@@ -131,11 +131,11 @@ const element = document.querySelector("div#scroll-box");
 const output = document.querySelector("p#output");
 
 element.onscroll = (event) => {
-  output.innerHTML = "Element scroll event fired, waiting for scrollend...";
+  output.textContent = "Element scroll event fired, waiting for scrollend...";
 };
 
 element.onscrollend = (event) => {
-  output.innerHTML = "Element scrollend event fired!";
+  output.textContent = "Element scrollend event fired!";
 };
 ```
 

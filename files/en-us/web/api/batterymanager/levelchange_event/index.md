@@ -8,7 +8,7 @@ browser-compat: api.BatteryManager.levelchange_event
 
 {{ApiRef("Battery API")}}{{securecontext_header}}
 
-The **`levelchange`** event of the {{domxref("Battery Status API", "", "", "nocode")}} is fired when the battery {{domxref("BatteryManager.level", "level")}} property is updated.
+The **`levelchange`** event of the {{domxref("BatteryManager")}} interface is fired when the battery {{domxref("BatteryManager.level", "level")}} property is updated.
 
 ## Syntax
 

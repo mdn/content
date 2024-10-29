@@ -25,7 +25,8 @@ In the example below we have set the X and Y axes to 5px, the blur to 10px and t
 
 {{EmbedGHLiveSample("css-examples/howto/box-shadow-button.html", '100%', 500)}}
 
-> **Note:** We are not using `inset` in this example, this means that the shadow is the default drop shadow with the box on top of the shadow. Inset shadows appear inside the box as if the content were pushed back into the page.
+> [!NOTE]
+> We are not using `inset` in this example, this means that the shadow is the default drop shadow with the box on top of the shadow. Inset shadows appear inside the box as if the content were pushed back into the page.
 
 ## See also
 

@@ -7,7 +7,7 @@ browser-compat: api.Worklet
 
 {{APIRef("Worklets")}}{{SecureContext_Header}}
 
-The **`Worklet`** interface is a lightweight version of {{domxref("Worker", "Web Workers")}} and gives developers access to low-level parts of the rendering pipeline.
+The **`Worklet`** interface is a lightweight version of [Web Workers](/en-US/docs/Web/API/Web_Workers_API) and gives developers access to low-level parts of the rendering pipeline.
 
 With Worklets, you can run JavaScript and [WebAssembly](/en-US/docs/WebAssembly) code to do graphics rendering or audio processing where high performance is required.
 
@@ -76,7 +76,8 @@ Worklets are restricted to specific use cases; they cannot be used for arbitrary
   </tbody>
 </table>
 
-> **Note:** Paint worklets, defined by the [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API), don't subclass {{domxref("Worklet")}}. They are accessed through a regular `Worklet` object obtained using {{DOMxref("CSS.paintWorklet_static", "CSS.paintWorklet")}}.
+> [!NOTE]
+> Paint worklets, defined by the [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API), don't subclass `Worklet`. They are accessed through a regular `Worklet` object obtained using {{DOMxref("CSS.paintWorklet_static", "CSS.paintWorklet")}}.
 
 For 3D rendering with [WebGL](/en-US/docs/Web/API/WebGL_API), you don't use worklets. Instead, you write vertex shaders and fragment shaders using GLSL code, and those shaders will then run on the graphics card.
 
@@ -99,7 +100,7 @@ _The Worklet interface does not define any properties._
 
 ## See also
 
-- [Houdini: Demystifying CSS](https://developer.chrome.com/blog/houdini/) on Google Developers (2016)
+- [Houdini: Demystifying CSS](https://developer.chrome.com/docs/css-ui/houdini) on Google Developers (2016)
 - [AudioWorklet :: What, Why, and How](https://www.youtube.com/watch?v=g1L4O1smMC0&t=1m33s) on YouTube (2017)
 - [Enter AudioWorklet](https://developer.chrome.com/blog/audio-worklet/) on Google Developers (2017)
 - [Animation Worklet - HTTP203 Advent](https://www.youtube.com/watch?v=ZPkMMShYxKU&t=0m19s) on YouTube (2017)

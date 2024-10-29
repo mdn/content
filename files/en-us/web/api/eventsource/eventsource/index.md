@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.EventSource.EventSource
 ---
 
-{{APIRef('WebSockets API')}}
+{{APIRef("Server Sent Events")}}{{AvailableInWorkers}}
 
 The **`EventSource()`**
 constructor returns a newly-created {{domxref("EventSource")}}, which represents a
@@ -46,7 +46,8 @@ evtSource.onmessage = (e) => {
 };
 ```
 
-> **Note:** You can find a full example on GitHub — see [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/main/server-sent-events).
+> [!NOTE]
+> You can find a full example on GitHub — see [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/main/server-sent-events).
 
 ## Specifications
 

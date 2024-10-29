@@ -40,20 +40,21 @@ console.log("b");
 
 The following properties are deprecated. This does not affect their use in [replacement strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace):
 
-- {{jsxref("RegExp/n", "$1–$9")}}
+- [`$1–$9`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/n)
   - : Parenthesized substring matches, if any.
-- {{jsxref("RegExp/input", "input, $_")}}
+- [`input`, `$_`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/input)
   - : The string against which a regular expression is matched.
-- {{jsxref("RegExp/lastMatch", "lastMatch, $&amp;")}}
+- [`lastMatch`, `$&`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch)
   - : The last matched substring.
-- {{jsxref("RegExp/lastParen", "lastParen, $+")}}
+- [`lastParen`, `$+`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastParen)
   - : The last parenthesized substring match, if any.
-- {{jsxref("RegExp/leftContext", "leftContext, $`")}}
+- [`leftContext`, `` $` ``](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/leftContext)
   - : The substring preceding the most recent match.
-- {{jsxref("RegExp/rightContext", "rightContext, $'")}}
+- [`rightContext`, `$'`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/rightContext)
   - : The substring following the most recent match.
 
-> **Warning:** Avoid using these static properties, as they can cause [issues when interacting with external code](https://github.com/tc39/proposal-regexp-legacy-features/blob/master/subclass-restriction-motivation.md#legacy-static-properties-regexp1-etc)!
+> [!WARNING]
+> Avoid using these static properties, as they can cause [issues when interacting with external code](https://github.com/tc39/proposal-regexp-legacy-features/blob/master/subclass-restriction-motivation.md#legacy-static-properties-regexp1-etc)!
 
 The {{jsxref("RegExp/compile", "compile()")}} method is deprecated. Construct a new `RegExp` instance instead.
 
@@ -97,7 +98,7 @@ The following regex syntaxes are deprecated and only available in [Unicode-unawa
 
 The [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statement is deprecated and unavailable in strict mode.
 
-Initializers in `var` declarations of [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops headers are deprecated and produce [syntax errors](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer) in strict mode. They are silently ignored in non-strict mode.
+Initializers in `var` declarations of [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops headers are deprecated and produce [syntax errors](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer) in strict mode. The initializer expression is evaluated and assigned to the variable, but the value would be immediately reassigned on the first iteration of the loop.
 
 Normally, the `catch` block of a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) statement cannot contain any variable declaration with the same name as the variables bound in the `catch()`. An extension grammar allows the `catch` block to contain a [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var) declared variable with the same name as the `catch`-bound identifier, but only if the `catch` binding is a simple identifier, not a [destructuring pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment). However, this variable's initialization and assignment would only act on the `catch`-bound identifier, instead of the upper scope variable, and the behavior could be confusing.
 

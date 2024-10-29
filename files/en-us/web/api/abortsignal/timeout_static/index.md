@@ -6,7 +6,7 @@ page-type: web-api-static-method
 browser-compat: api.AbortSignal.timeout_static
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`AbortSignal.timeout()`** static method returns an {{domxref("AbortSignal")}} that will automatically abort after a specified time.
 
@@ -27,6 +27,7 @@ AbortSignal.timeout(time)
 
 - `time`
   - : The "active" time in milliseconds before the returned {{domxref("AbortSignal")}} will abort.
+    The value must be within range of 0 and {{jsxref("Number.MAX_SAFE_INTEGER")}}.
 
 ### Return value
 

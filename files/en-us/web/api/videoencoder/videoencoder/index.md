@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.VideoEncoder.VideoEncoder
 ---
 
-{{APIRef("WebCodecs API")}}{{SecureContext_Header}}
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`VideoEncoder()`** constructor creates a new {{domxref("VideoEncoder")}} object with the provided `options.output` callback assigned as the output callback, the provided `options.error` callback as the error callback, and sets the {{domxref("VideoEncoder.state")}} to `"unconfigured"`.
 
@@ -33,7 +33,7 @@ new VideoEncoder(options)
             - `codedHeight` {{Optional_Inline}}
               - : An integer representing the height of the {{domxref("VideoFrame")}} in pixels, potentially including non-visible padding, and prior to considering potential ratio adjustments.
             - `displayAspectWidth` {{Optional_Inline}}
-              - : An integer representing the horizontal dimension of the {{domxref("VideoFrame")}}'s aspect ratio when displayed.
+              - : An integer representing the horizontal dimension of the {{domxref("VideoFrame")}}'s {{glossary("aspect ratio")}} when displayed.
             - `displayAspectHeight` {{Optional_Inline}}
               - : An integer representing the vertical dimension of the {{domxref("VideoFrame")}}'s aspect ratio when displayed.
             - `colorSpace` {{Optional_Inline}}

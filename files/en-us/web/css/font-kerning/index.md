@@ -7,7 +7,7 @@ browser-compat: css.properties.font-kerning
 
 {{CSSRef}}
 
-The **`font-kerning`** CSS property sets the use of the kerning information stored in a font.
+The **`font-kerning`** [CSS](/en-US/docs/Web/CSS) property sets the use of the kerning information stored in a font.
 
 {{EmbedInteractiveExample("pages/css/font-kerning.html")}}
 
@@ -57,7 +57,7 @@ font-kerning: unset;
 
 ```html
 <div id="kern"></div>
-<div id="nokern"></div>
+<div id="no-kern"></div>
 <textarea id="input">AV T. ij</textarea>
 ```
 
@@ -69,7 +69,7 @@ div {
   font-family: serif;
 }
 
-#nokern {
+#no-kern {
   font-kerning: none;
 }
 
@@ -83,15 +83,15 @@ div {
 ```js
 const input = document.getElementById("input");
 const kern = document.getElementById("kern");
-const nokern = document.getElementById("nokern");
+const noKern = document.getElementById("no-kern");
 
 input.addEventListener("keyup", () => {
   kern.textContent = input.value; /* Update content */
-  nokern.textContent = input.value;
+  noKern.textContent = input.value;
 });
 
 kern.textContent = input.value; /* Initialize content */
-nokern.textContent = input.value;
+noKern.textContent = input.value;
 ```
 
 {{ EmbedLiveSample('Enabling_and_disabling_kerning') }}

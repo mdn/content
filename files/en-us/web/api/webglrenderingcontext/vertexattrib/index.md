@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.vertexAttrib1f
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.vertexAttrib[1234]f[v]()`**
 methods of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specify constant
@@ -31,7 +31,7 @@ vertexAttrib4fv(index, value)
 - `index`
   - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the position of the vertex attribute to be
     modified.
-- `v0, v1, v2, v3`
+- `v0`, `v1`, `v2`, `v3`
   - : A floating point {{jsxref("Number")}} for the vertex attribute value.
 - `value`
   - : A {{jsxref("Float32Array")}} for floating point vector vertex attribute values.

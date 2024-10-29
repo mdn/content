@@ -19,7 +19,7 @@ not require negotiation.
 Among the use cases for `replaceTrack()` is the common need to switch
 between the rear- and front-facing cameras on a phone. With `replaceTrack()`,
 you can have a track object for each camera and switch between the two as needed. See
-the example [Switching cameras](#switching_cameras) below.
+the example [switching video cameras](#switching_video_cameras) below.
 
 ## Syntax
 

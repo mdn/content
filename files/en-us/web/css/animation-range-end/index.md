@@ -13,7 +13,7 @@ The **`animation-range-end`** [CSS](/en-US/docs/Web/CSS) property is used to set
 
 The `animation-range-end` and {{cssxref("animation-range-start")}} properties can also be set using the [`animation-range`](/en-US/docs/Web/CSS/animation-range) shorthand property.
 
-> **Note:** {{cssxref("animation-range-end")}} is included in the {{cssxref("animation")}} shorthand as a reset-only value. This means that including `animation` resets a previously-declared `animation-range-end` value to `normal`, but a specific value cannot be set via `animation`. When creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations), you need to declare `animation-range-end` after declaring any `animation` shorthand for it to take effect.
+> **Note:** `animation-range-end` is included in the {{cssxref("animation")}} shorthand as a reset-only value. This means that including `animation` resets a previously-declared `animation-range-end` value to `normal`, but a specific value cannot be set via `animation`. When creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations), you need to declare `animation-range-end` after declaring any `animation` shorthand for it to take effect.
 
 ## Syntax
 
@@ -147,7 +147,7 @@ Last, an animation is specified on the element that animates its opacity and sca
   }
 
   to {
-    opacity: 1,
+    opacity: 1;
     transform: scaleX(1);
   }
 }

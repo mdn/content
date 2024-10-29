@@ -71,12 +71,9 @@ Earlier we used the term "packets" to describe the format in which the data is t
 ## See also
 
 - [How the Internet works](/en-US/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)
-- [HTTP — an Application-Level Protocol](https://dev.opera.com/articles/http-basic-introduction/)
-- [HTTP: Let's GET It On!](https://dev.opera.com/articles/http-lets-get-it-on/)
-- [HTTP: Response Codes](https://dev.opera.com/articles/http-response-codes/)
 
 ## Credit
 
-Street photo: [Street composing](https://www.pinterest.com/pin/400538960580676851/), by [kevin digga](https://www.pinterest.com/kevindigga/).
+Street photo: [Street composing](https://www.pinterest.com/pin/400538960580676851/), by [Kevin Digga](https://www.pinterest.com/kevindigga/).
 
 {{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}

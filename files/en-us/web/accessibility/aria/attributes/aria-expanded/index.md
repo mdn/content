@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-expanded
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-expanded` attribute is set on an element to indicate if a control is expanded or collapsed, and whether or not the controlled elements are displayed or hidden.
 
 ## Description
@@ -19,7 +21,7 @@ Use the `aria-owns` property on the elements that own expandable grouping contai
 
 ### Buttons
 
-A button that opens a widget should have `aria-controls` set to the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) of the expandable widget and `aria-expanded` set to the current state of the widget.
+A button that opens a widget should have `aria-controls` set to the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of the expandable widget and `aria-expanded` set to the current state of the widget.
 
 ```html
 <button aria-expanded="false" aria-controls="widget1">Show widget</button>
@@ -54,11 +56,12 @@ By default, some roles are hidden or collapsed and other roles are open or expan
 </p>
 ```
 
-> **Note:** The presence of the `aria-expanded` attribute indicates control. Avoid including it on elements that do not control the expanded state of other elements.
+> [!NOTE]
+> The presence of the `aria-expanded` attribute indicates control. Avoid including it on elements that do not control the expanded state of other elements.
 
 ### Treeitems
 
-Each element with role [`treeitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role) that serves as a parent node has `aria-expanded="false"` when the node is in a closed state and `aria-expanded="true"`when the node is in an open state. End nodes, nodes with no descendant nodes, should not have the `aria-expanded` attribute because, if they were to have it, they would be incorrectly described to assistive technologies as parent nodes.
+Each element with role [`treeitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/treeitem_role) that serves as a parent node has `aria-expanded="false"` when the node is in a closed state and `aria-expanded="true"` when the node is in an open state. End nodes, nodes with no descendant nodes, should not have the `aria-expanded` attribute because, if they were to have it, they would be incorrectly described to assistive technologies as parent nodes.
 
 ### Rows
 
@@ -118,9 +121,4 @@ Inherits into roles:
 - [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
 - [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
 - [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
-- HTML [`hidden`](/en-US/docs/Web/HTML/Global_attributes#hidden) attribute
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>
+- HTML [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden) attribute

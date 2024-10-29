@@ -4,7 +4,7 @@ slug: Web/API/WebGL_API/By_example
 page-type: guide
 ---
 
-{{Next("Learn/WebGL/By_example/Detect_WebGL")}}
+{{DefaultAPISidebar("WebGL")}}{{Next("Learn/WebGL/By_example/Detect_WebGL")}}
 
 _WebGL by example_ is a series of live samples with short explanations that showcase WebGL concepts and capabilities.
 

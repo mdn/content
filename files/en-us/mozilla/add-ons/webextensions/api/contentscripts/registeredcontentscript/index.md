@@ -11,7 +11,8 @@ A `RegisteredContentScript` is returned by a call to {{WebExtAPIRef("contentScri
 
 It defines a single function {{WebExtAPIRef("contentScripts.RegisteredContentScript.unregister", "unregister()")}}, which can be used to unregister the content scripts.
 
-> **Note:** If this object is destroyed (for example because it goes out of scope) then the content scripts will be unregistered automatically, so you should keep a reference to this object for as long as you want the content scripts to stay registered.
+> [!NOTE]
+> If this object is destroyed (for example because it goes out of scope) then the content scripts will be unregistered automatically, so you should keep a reference to this object for as long as you want the content scripts to stay registered.
 
 ## Methods
 

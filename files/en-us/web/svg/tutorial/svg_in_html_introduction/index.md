@@ -44,7 +44,7 @@ There are three attributes and one nested element worth noting:
 
 1. The [`viewBox`](/en-US/docs/Web/SVG/Attribute/viewBox) attribute establishes a logical coordinate system which the SVG picture's coordinates are relative to. In this case our picture is laid out in a 100 by 100 viewport.
 
-2. The [`preserveAspectRatio`](/en-US/docs/Web/SVG/Attribute/preserveAspectRatio) attribute specifies that the aspect ratio must be preserved by centering the picture in the available size, sizing to the maximum of the height or width and then cutting off any overflow.
+2. The [`preserveAspectRatio`](/en-US/docs/Web/SVG/Attribute/preserveAspectRatio) attribute specifies that the {{glossary("aspect ratio")}} must be preserved by centering the picture in the available size, sizing to the maximum of the height or width and then cutting off any overflow.
 
 3. Including [`role="img"`](/en-US/docs/Web/Accessibility/ARIA/Roles/img_role) ensures assistive technologies handle the SVG as an image.
 
@@ -62,7 +62,7 @@ If the SVG can be labeled by visible text, reference that text with an [`aria-la
 <svg viewBox="0 0 100 125" role="img" aria-labelledby="svgTitle svgDescription">
   <title id="svgTitle">Manual</title>
   <desc id="svgDescription">
-    A non-descript twelve page booklet opened to the middle page
+    A nondescript twelve page booklet opened to the middle page
   </desc>
   <defs>
     <style>

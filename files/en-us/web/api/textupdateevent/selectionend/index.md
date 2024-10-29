@@ -50,7 +50,7 @@ editorEl.editContext = editContext;
 
 editContext.addEventListener("textupdate", (e) => {
   // Clear the current content.
-  editorEl.innerHTML = "";
+  editorEl.textContent = "";
 
   const text = editContext.text;
   const { selectionStart, selectionEnd } = e;

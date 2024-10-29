@@ -22,7 +22,7 @@ updateWith(details)
 
 - `details`
 
-  - : An object specifying the changes applied to the payment request:
+  - : Either an object or a {{jsxref("Promise")}} that resolves to an object, specifying the changes applied to the payment request:
 
     - `displayItems` {{optional_inline}}
 
@@ -41,7 +41,7 @@ updateWith(details)
 
     - `error` {{optional_inline}} {{deprecated_inline}} {{non-standard_inline}}
 
-      - : A string specifying an error message to present to the user*.* When calling `updateWith()`, including `error` in the updated data causes the {{Glossary("user agent")}} to display the text as a general error message. For address field-specific errors, use the `shippingAddressErrors` field.
+      - : A string specifying an error message to present to the user. When calling `updateWith()`, including `error` in the updated data causes the {{Glossary("user agent")}} to display the text as a general error message. For address field-specific errors, use the `shippingAddressErrors` field.
 
     - `modifiers` {{optional_inline}}
 

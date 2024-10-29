@@ -50,7 +50,8 @@ An authenticator data {{jsxref("ArrayBuffer")}} is at least 37 bytes in length, 
 
     Extensions are optional and different browsers may recognize different extensions. Processing extensions is always optional for the browser: if a browser does not recognize a given extension, it will just ignore it. For information on using extensions, and which ones are supported by which browsers, see [Web Authentication extensions](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions).
 
-    > **Note:** The authenticator data only contains the results from extensions processed by the authenticator. The results from extensions processed by the browser (client) can be accessed via {{domxref("PublicKeyCredential.getClientExtensionResults")}}.
+    > [!NOTE]
+    > The authenticator data only contains the results from extensions processed by the authenticator. The results from extensions processed by the browser (client) can be accessed via {{domxref("PublicKeyCredential.getClientExtensionResults")}}.
 
 ## See also
 

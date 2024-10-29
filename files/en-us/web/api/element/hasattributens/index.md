@@ -20,8 +20,10 @@ hasAttributeNS(namespace,localName)
 
 ### Parameters
 
-- `namespace` is a string specifying the namespace of the attribute.
-- `localName` is the name of the attribute.
+- `namespace`
+  - : A string specifying the namespace of the attribute.
+- `localName`
+  - : The name of the attribute.
 
 ### Return value
 

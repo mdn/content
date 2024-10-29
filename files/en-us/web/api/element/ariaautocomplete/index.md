@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Element.ariaAutoComplete
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
 The **`ariaAutoComplete`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-autocomplete`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-autocomplete) attribute, which indicates whether inputting text could trigger display of one or more predictions of the user's intended value for a combobox, searchbox, or textbox and specifies how predictions would be presented if they were made.
 
@@ -25,7 +25,7 @@ A string with one of the following values:
 
 ## Examples
 
-In this example, the `aria-autocomplete` attribute on the element with an ID of `animal` is set to "`inline`". Using `ariaAutoComplete` we update the value to "`list`", which is the expected value for a combobox that invokes a `listbox` popup.
+In this example, the `aria-autocomplete` attribute on the element with an ID of `animal` is set to `"inline"`. Using `ariaAutoComplete` we update the value to `"list"`, which is the expected value for a combobox that invokes a `listbox` popup.
 
 ```html
 <div class="animals-combobox">

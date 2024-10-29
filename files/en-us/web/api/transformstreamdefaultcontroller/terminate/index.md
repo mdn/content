@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.TransformStreamDefaultController.terminate
 ---
 
-{{DefaultAPISidebar("Streams API")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`terminate()`** method of the {{domxref("TransformStreamDefaultController")}} interface closes the readable side and errors the writable side of the stream.
 

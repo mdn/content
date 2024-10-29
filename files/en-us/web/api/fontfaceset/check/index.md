@@ -6,9 +6,12 @@ page-type: web-api-instance-method
 browser-compat: api.FontFaceSet.check
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{APIRef("CSS Font Loading API")}}{{AvailableInWorkers}}
 
-The `check()` method of the {{domxref("FontFaceSet")}} returns `true` if you can render some text using the given font specification without attempting to use any fonts in this `FontFaceSet` that are not yet fully loaded. This means you can use the font specification without causing a [font swap](/en-US/docs/Web/CSS/@font-face/font-display#the_font_display_timeline).
+The `check()` method of the {{domxref("FontFaceSet")}} returns `true` if you can render some text using the given font specification without attempting to use any fonts in this `FontFaceSet` that are not yet fully loaded. This means you can use the font specification without causing a [font swap](/en-US/docs/Web/CSS/@font-face/font-display).
+
+> [!NOTE]
+> The `check()` method is not designed to verify whether a specific font style can be rendered or if a particular font is fully loaded. Instead, it returns `true` if the specified text can be rendered using the given font specification without causing a font swap. This means that even if the requested font isn't available or fully loaded, the method may still return `true`. This behavior helps avoid the visual issues associated with font swapping but may be counterintuitive if you're trying to confirm the availability of a specific font.
 
 ## Syntax
 

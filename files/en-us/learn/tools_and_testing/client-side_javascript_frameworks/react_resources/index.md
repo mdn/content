@@ -61,7 +61,7 @@ On the left, we see all of the components that make up our application, includin
 
 React DevTools is available in several forms:
 
-- A [Chrome browser extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en).
+- A [Chrome browser extension](https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en).
 - A [Firefox browser extension](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/).
 - A [Microsoft Edge browser extension](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil).
 - A [stand-alone application you can install with npm or Yarn](https://www.npmjs.com/package/react-devtools).
@@ -98,6 +98,7 @@ While routing is traditionally handled by a server and not an application on the
 
 [React Router](https://reactrouter.com/) is the most popular and most robust client-side routing library for React. It allows developers to define the routes of their application, and associate components with those routes . It also provides a number of useful hooks and components for managing the browser's location and history.
 
-> **Note:** Client-side routing can make your application feel fast, but it poses a number of accessibility problems, especially for people who rely on assistive techology. You can read more about this in Marcy Sutton's article, ["The Implications of Client-Side Routing"](https://testingaccessibility.com/implications-of-client-side-routing).
+> [!NOTE]
+> Client-side routing can make your application feel fast, but it poses a number of accessibility problems, especially for people who rely on assistive technology. You can read more about this in Marcy Sutton's article, ["The Implications of Client-Side Routing"](https://testingaccessibility.com/implications-of-client-side-routing).
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}

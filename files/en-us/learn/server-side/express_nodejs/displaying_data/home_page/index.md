@@ -4,11 +4,14 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data/Home_page
 page-type: learn-module-chapter
 ---
 
+{{LearnSidebar}}
+
 The first page we'll create will be the website home page, which is accessible from either the site (`/`) or catalog (`catalog/`) root. This will display some static text describing the site, along with dynamically calculated "counts" of different record types in the database.
 
 We've already created a route for the home page. In order to complete the page we need to update our controller function to fetch "counts" of records from the database, and create a view (template) that we can use to render the page.
 
-> **Note:** We'll be using Mongoose for getting database information.
+> [!NOTE]
+> We'll be using Mongoose for getting database information.
 > Before continuing you may wish to re-read the [Mongoose primer](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose#mongoose_primer) section on [searching for records](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose#searching_for_records).
 
 ## Route
@@ -97,6 +100,10 @@ When all the queries complete, the promise returned by `all()` fulfills, continu
 We then call [`res.render()`](https://expressjs.com/en/4x/api.html#res.render), specifying a view (template) named '**index**' and objects mapping the results of the database queries to the view template.
 The data is supplied as key-value pairs, and can be accessed in the template using the key.
 
+> [!NOTE]
+> If you use a key/variable in a Pug template that hasn't been passed in, then it will render as an empty string, and be evaluated as `false` in expressions.
+> Other template languages may require that you pass in values for all objects that you use.
+
 Note that the code is very simple because we can assume that the database queries succeed.
 If any of the database operations fail, the exception that is thrown will be caught by `asyncHandler()` and passed to the `next` middleware handler in the chain.
 
@@ -111,7 +118,7 @@ block content
   h1= title
   p Welcome to #[em LocalLibrary], a very basic Express website developed as a tutorial example on the Mozilla Developer Network.
 
-  h1 Dynamic content
+  h2 Dynamic content
 
   p The library has the following record counts:
 
@@ -123,12 +130,13 @@ block content
     li #[strong Genres:] !{genre_count}
 ```
 
-The view is straightforward. We extend the **layout.pug** base template, overriding the `block` named '**content**'. The first `h1` heading will be the escaped text for the `title` variable that was passed into the `render()` function—note the use of the '`h1=`' so that the following text is treated as a JavaScript expression. We then include a paragraph introducing the LocalLibrary.
+The view is straightforward. We extend the **layout.pug** base template, overriding the `block` named '**content**'. The first `h1` heading will be the escaped text for the `title` variable that was passed into the `render()` function—note the use of the `h1=` so that the following text is treated as a JavaScript expression. We then include a paragraph introducing the LocalLibrary.
 
 Under the _Dynamic content_ heading we list the number of copies of each model.
 Note that the template values for the data are the keys that were specified when `render()` was called in the route handler function.
 
-> **Note:** We didn't escape the count values (i.e. we used the `!{}` syntax) because the count values are calculated. If the information was supplied by end-users then we'd escape the variable for display.
+> [!NOTE]
+> We didn't escape the count values (i.e. we used the `!{}` syntax) because the count values are calculated. If the information was supplied by end-users then we'd escape the variable for display.
 
 ## What does it look like?
 
@@ -136,7 +144,8 @@ At this point we should have created everything needed to display the index page
 
 ![Home page - Express Local Library site](locallibary_express_home.png)
 
-> **Note:** You won't be able to _use_ the sidebar links yet because the URLs, views, and templates for those pages haven't been defined. If you try you'll get errors like "NOT IMPLEMENTED: Book list" for example, depending on the link you click on. These string literals (which will be replaced with proper data) were specified in the different controllers that live inside your "controllers" file.
+> [!NOTE]
+> You won't be able to _use_ the sidebar links yet because the URLs, views, and templates for those pages haven't been defined. If you try you'll get errors like "NOT IMPLEMENTED: Book list" for example, depending on the link you click on. These string literals (which will be replaced with proper data) were specified in the different controllers that live inside your "controllers" file.
 
 ## Next steps
 

@@ -92,7 +92,11 @@ As a presentation attribute, it also can be used as a property directly inside a
 
 The following elements can use the `clip-rule` attribute, but only if they are inside a {{ SVGElement("clipPath") }} element.
 
-- [Graphical elements](/en-US/docs/Web/SVG/Element#graphical) »
+- [Graphics elements](/en-US/docs/Web/SVG/Element#graphics_elements)
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -101,3 +105,4 @@ The following elements can use the `clip-rule` attribute, but only if they are i
 ## See also
 
 - {{ SVGElement("clipPath") }}
+- CSS {{cssxref("clip-rule")}} property

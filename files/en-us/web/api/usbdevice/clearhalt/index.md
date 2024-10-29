@@ -8,7 +8,7 @@ status:
 browser-compat: api.USBDevice.clearHalt
 ---
 
-{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`clearHalt()`** method of the {{domxref("USBDevice")}}
 interface returns a {{jsxref("promise")}} that resolves when a halt condition is
@@ -40,7 +40,8 @@ A {{jsxref("promise")}}.
 The following example shows how to test for and clear a `'stall'` condition
 in the result of a data transfer.
 
-> **Note:** What data can be passed to a USB device and how it is passed is particular and unique
+> [!NOTE]
+> What data can be passed to a USB device and how it is passed is particular and unique
 > to each device.
 
 ```js

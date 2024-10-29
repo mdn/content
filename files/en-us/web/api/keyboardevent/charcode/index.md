@@ -14,7 +14,8 @@ The **`charCode`** read-only property of the
 {{domxref("KeyboardEvent")}} interface returns the Unicode value of a character key
 pressed during a {{domxref("Element/keypress_event", "keypress")}} event.
 
-> **Warning:** Do not use this property, as it is deprecated. Instead, get the
+> [!WARNING]
+> Do not use this property, as it is deprecated. Instead, get the
 > Unicode value of the character using the {{domxref("KeyboardEvent.key", "key")}}
 > property.
 

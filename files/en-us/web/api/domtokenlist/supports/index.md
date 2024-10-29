@@ -23,7 +23,7 @@ supports(token)
 - `token`
   - : A string containing the token to query for.
 
-### Returns
+### Return value
 
 A boolean value indicating whether the token was found.
 

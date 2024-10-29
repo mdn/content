@@ -7,7 +7,7 @@ status:
 browser-compat: api.BackgroundFetchManager
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{APIRef("Background Fetch API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`BackgroundFetchManager`** interface of the {{domxref('Background Fetch API','','',' ')}} is a map where the keys are background fetch IDs and the values are {{domxref("BackgroundFetchRegistration")}} objects.
 
@@ -26,7 +26,7 @@ None.
 
 ## Examples
 
-The example below shows how to get an instance of {{domxref("BackgroundFetchManager")}} from a {{domxref("ServiceWorkerRegistration")}} object and calls `fetch()` to download an audio file in the background.
+The example below shows how to get an instance of `BackgroundFetchManager` from a {{domxref("ServiceWorkerRegistration")}} object and calls `fetch()` to download an audio file in the background.
 
 ```js
 navigator.serviceWorker.ready.then(async (swReg) => {

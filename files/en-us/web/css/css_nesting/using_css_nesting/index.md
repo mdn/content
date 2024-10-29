@@ -19,7 +19,7 @@ You can use CSS nesting to create child selectors of a parent, which in turn can
 There are certain instances where using the `&` nesting selector can be necessary or helpful:
 
 - When joining selectors together, such as using [compound selectors](#compound_selectors) or [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes).
-- For backwards compatability.
+- For backwards compatibility.
 - As a visual indicator to aid with readability, when seeing the `&` nesting selector you know that CSS nesting is being used.
 
 ```css
@@ -52,7 +52,8 @@ parent child {
 
 In these examples, one without and one with the `&` nesting selector, the `<input>` inside the `<label>` is being styled differently to the `<input>` that is a sibling of a `<label>`. This demonstrates the impact of omitting the `&` nesting selector.
 
-> **Note:** This example demonstrates different outputs in browsers implementing the original specification versus the current nesting spec. The original, pre-August 2023 nesting spec that was implemented in Chrome or Safari, requires the `&` nesting combinator. If your browser supports the current spec, the output of both examples matches that of the second example.
+> [!NOTE]
+> This example demonstrates different outputs in browsers implementing the original specification versus the current nesting spec. The original, pre-August 2023 nesting spec that was implemented in Chrome or Safari, requires the `&` nesting combinator. If your browser supports the current spec, the output of both examples matches that of the second example.
 
 #### Without nesting selector
 
@@ -244,7 +245,7 @@ In this example the `&` nesting selector is used to create compound selectors to
 
 ##### CSS
 
-Styles for the `.notices` to create a column using {{cssxref('CSS_flexible_box_layout', 'flexbox layout')}}.
+Styles for the `.notices` to create a column using [flexbox layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout).
 
 ```css
 .notices {
@@ -256,7 +257,7 @@ Styles for the `.notices` to create a column using {{cssxref('CSS_flexible_box_l
 }
 ```
 
-In the CSS code below, nesting is used to create compound selectors both with and without `&`. The top-level selector defines the basic styles for elements with `class="notice"`. The `&` nesting selector is then used to create compound selectors for elements with either `class="notice warning"` or `class="notice success"`. Additionally, the use of nesting to create compound selectors without explicitly using `&` can be seen in the selector `.notice .notice-heading:before`.
+In the CSS code below, nesting is used to create compound selectors both with and without `&`. The top-level selector defines the basic styles for elements with `class="notice"`. The `&` nesting selector is then used to create compound selectors for elements with either `class="notice warning"` or `class="notice success"`. Additionally, the use of nesting to create compound selectors without explicitly using `&` can be seen in the selector `.notice .notice-heading::before`.
 
 ```css
 .notice {
@@ -267,8 +268,8 @@ In the CSS code below, nesting is used to create compound selectors both with an
   background-color: #ffc107;
   color: black;
   padding: 1rem;
-  .notice-heading:before {
-    /* equivalent to `.notice .notice-heading:before` */
+  .notice-heading::before {
+    /* equivalent to `.notice .notice-heading::before` */
     content: "ℹ︎ ";
   }
   &.warning {
@@ -276,8 +277,8 @@ In the CSS code below, nesting is used to create compound selectors both with an
     background-color: #d81b60;
     border-color: #d81b60;
     color: white;
-    .warning-heading:before {
-      /* equivalent to `.notice.warning .warning-heading:before` */
+    .warning-heading::before {
+      /* equivalent to `.notice.warning .warning-heading::before` */
       content: "! ";
     }
   }
@@ -286,8 +287,8 @@ In the CSS code below, nesting is used to create compound selectors both with an
     background-color: #004d40;
     border-color: #004d40;
     color: white;
-    .success-heading:before {
-      /* equivalent to `.notice.success .success-heading:before` */
+    .success-heading::before {
+      /* equivalent to `.notice.success .success-heading::before` */
       content: "✓ ";
     }
   }
@@ -399,7 +400,8 @@ In CSS preprocessors such as [Sass](https://sass-lang.com/), it is possible to u
 }
 ```
 
-> **Warning:** This is not possible in CSS nesting: when a [combinator](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators) is not used, the nested selector is treated as a [type selector](/en-US/docs/Web/CSS/Type_selectors). Allowing concatenation would break this.
+> [!WARNING]
+> This is not possible in CSS nesting: when a [combinator](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators) is not used, the nested selector is treated as a [type selector](/en-US/docs/Web/CSS/Type_selectors). Allowing concatenation would break this.
 
 In [compound selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector), the type selector must come first. Writing `&Element` (a [type selector](/en-US/docs/Web/CSS/Type_selectors)) makes the CSS selector, and the entire selector block, invalid. As the type selector must come first, the compound selector must be written as `Element&`.
 

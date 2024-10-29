@@ -53,8 +53,8 @@ These properties are defined on `Intl.PluralRules.prototype` and shared by all `
 
 - {{jsxref("Object/constructor", "Intl.PluralRules.prototype.constructor")}}
   - : The constructor function that created the instance object. For `Intl.PluralRules` instances, the initial value is the {{jsxref("Intl/PluralRules/PluralRules", "Intl.PluralRules")}} constructor.
-- `Intl.PluralRules.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl.PluralRules"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `Intl.PluralRules.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl.PluralRules"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 
@@ -147,5 +147,5 @@ formatOrdinals(103); // '103rd'
 
 ## See also
 
-- [Polyfill of `Intl.PluralRules` in FormatJS](https://formatjs.io/docs/polyfills/intl-pluralrules/)
+- [Polyfill of `Intl.PluralRules` in FormatJS](https://formatjs.github.io/docs/polyfills/intl-pluralrules/)
 - {{jsxref("Intl")}}

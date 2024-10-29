@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Worker.terminate
 ---
 
-{{APIRef("Web Workers API")}}
+{{APIRef("Web Workers API")}}{{AvailableInWorkers("window_and_worker_except_service")}}
 
 The **`terminate()`** method of the {{domxref("Worker")}} interface immediately terminates the {{domxref("Worker")}}. This does not offer the worker an opportunity to finish its operations; it is stopped at once.
 
@@ -34,7 +34,8 @@ const myWorker = new Worker("worker.js");
 myWorker.terminate();
 ```
 
-> **Note:** DedicatedWorkers and SharedWorkers can also be stopped from the {{domxref("Worker")}} instance using the {{domxref("DedicatedWorkerGlobalScope.close()")}} or {{domxref("SharedWorkerGlobalScope.close()")}} methods.
+> [!NOTE]
+> DedicatedWorkers and SharedWorkers can also be stopped from the {{domxref("Worker")}} instance using the {{domxref("DedicatedWorkerGlobalScope.close()")}} or {{domxref("SharedWorkerGlobalScope.close()")}} methods.
 
 ## Specifications
 

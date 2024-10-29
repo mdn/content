@@ -31,9 +31,9 @@ _While `XRSessionEvent` defines no methods, it inherits methods from its parent 
 
 _The following events are represented using the `XRSessionEvent` interface, and are permitted values for its `type` property._
 
-- {{domxref("XRSession.end_event", "end")}} {{SecureContext_Inline}}
+- {{domxref("XRSession.end_event", "end")}}
   - : Fired at the session when it has ended, after being terminated by the application or the {{Glossary("user agent")}}.
-- {{domxref("XRSession.visibilitychange_event", "visibilitychange")}} {{SecureContext_Inline}}
+- {{domxref("XRSession.visibilitychange_event", "visibilitychange")}}
   - : Fired at the session whenever its visibility state changes.
 
 ## Examples
@@ -41,8 +41,8 @@ _The following events are represented using the `XRSessionEvent` interface, and 
 This example creates a listener that watches for the visibility state of the session to change. It reacts by calling a function `mySessionVisible()` with a Boolean indicating whether or not the session is visible; this function might, for instance, spin up or reconfigure a worker that handles rendering the scene.
 
 ```js
-xrSession.addEventListener("visibilitystate", (e) => {
-  switch (e.session.visibilitystate) {
+xrSession.addEventListener("visibilitychange", (e) => {
+  switch (e.session.visibilityState) {
     case "visible":
     case "visible-blurred":
       mySessionVisible(true);

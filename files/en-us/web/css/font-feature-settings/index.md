@@ -7,7 +7,7 @@ browser-compat: css.properties.font-feature-settings
 
 {{CSSRef}}
 
-The **`font-feature-settings`** CSS property controls advanced typographic features in OpenType fonts.
+The **`font-feature-settings`** [CSS](/en-US/docs/Web/CSS) property controls advanced typographic features in OpenType fonts.
 
 {{EmbedInteractiveExample("pages/css/font-feature-settings.html")}}
 
@@ -65,27 +65,27 @@ This property is specified as either the keyword `normal` or as a comma-separate
 
 ```css
 /* use small-cap alternate glyphs */
-.smallcaps {
+.small-caps {
   font-feature-settings: "smcp" on;
 }
 
 /* convert both upper and lowercase to small caps (affects punctuation also) */
-.allsmallcaps {
+.all-small-caps {
   font-feature-settings: "c2sc", "smcp";
 }
 
 /* use zeros with a slash through them to differentiate from "O" */
-.nicezero {
+.nice-zero {
   font-feature-settings: "zero";
 }
 
 /* enable historical forms */
-.hist {
+.historical {
   font-feature-settings: "hist";
 }
 
 /* disable common ligatures, usually on by default */
-.noligs {
+.no-ligatures {
   font-feature-settings: "liga" 0;
 }
 
@@ -105,7 +105,7 @@ td.tabular {
 }
 
 /* enable stylistic set 7 */
-.fancystyle {
+.fancy-style {
   font-family: Gabriola;
   font-feature-settings: "ss07";
 }
@@ -129,5 +129,5 @@ td.tabular {
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
 - {{cssxref("@font-face/src", "src")}}
 - {{cssxref("@font-face/unicode-range", "unicode-range")}}
-- [OpenType feature tags](https://docs.microsoft.com/typography/opentype/spec/featurelist) list
+- [OpenType feature tags](https://learn.microsoft.com/en-us/typography/opentype/spec/featurelist) list
 - [OpenType features in CSS](https://sparanoid.com/lab/opentype-features/)

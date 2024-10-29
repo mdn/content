@@ -8,22 +8,22 @@ page-type: xpath-function
 
 The `not` function evaluates a boolean expression and returns the opposite value.
 
-### Syntax
+## Syntax
 
 ```plain
 not( expression )
 ```
 
-### Arguments
+### Parameters
 
 - `expression`
   - : The expression is evaluated exactly as if it were passed as an argument to the [boolean()](/en-US/docs/Web/XPath/Functions/boolean) function.
 
-### Returns
+### Return value
 
 True for an expression that evaluates to false; false for an expression that evaluates to true.
 
-### Notes
+## Description
 
 - This function should behave similarly to the [boolean()](/en-US/docs/Web/XPath/Functions/boolean) function except that it returns the opposite value.
 - You can test if an element doesn't have some attribute.
@@ -36,10 +36,10 @@ True for an expression that evaluates to false; false for an expression that eva
   </xsl:template>
   ```
 
-### Defined
+## Specifications
 
 [XPath 1.0 4.3](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-not)
 
-### Gecko support
+## Gecko support
 
 Supported.

@@ -58,7 +58,7 @@ available exports on a module using `WebAssembly.Module.exports`.
 
 ```js
 const importObject = {
-  imports: {
+  my_namespace: {
     imported_func(arg) {
       console.log(arg);
     },

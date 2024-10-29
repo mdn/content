@@ -32,7 +32,7 @@ scroll-padding-top: unset;
 
 ### Values
 
-- `{{cssxref("&lt;length-percentage&gt;")}}`
+- {{cssxref("&lt;length-percentage&gt;")}}
   - : An inwards offset from the top edge of the scrollport, as a valid length or a percentage.
 - `auto`
   - : The offset is determined by the user agent. This will generally be 0px, but a user agent is able to detect and do something else if a non-zero value is more appropriate.

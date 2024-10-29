@@ -6,9 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.CookieStore.get
 ---
 
-{{securecontext_header}}{{APIRef("Cookie Store API")}} {{AvailableInWorkers}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{AvailableInWorkers("window_and_service")}}
 
-The **`get()`** method of the {{domxref("CookieStore")}} interface returns a single cookie with the given name or options object. The method will return the first matching cookie for the passed parameters.
+The **`get()`** method of the {{domxref("CookieStore")}} interface returns a single cookie with the given `name` or `options` object. The method will return the first matching cookie for the passed parameters.
 
 ## Syntax
 
@@ -35,11 +35,12 @@ Or
     - `url`
       - : A string with the URL of a cookie.
 
-> **Note:** The `url` option enables the modification of a cookie scoped under a particular URL. Service workers can obtain cookies that would be sent to any URL under their scope. From a document you may only obtain the cookies at the current URL, so the only valid URL in a document context is the document's URL.
+> [!NOTE]
+> The `url` option enables the modification of a cookie scoped under a particular URL. Service workers can obtain cookies that would be sent to any URL under their scope. From a document you may only obtain the cookies at the current URL, so the only valid URL in a document context is the document's URL.
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with an object representing the first cookie matching the submitted name or options. This object contains the following properties:
+A {{jsxref("Promise")}} that resolves with an object representing the first cookie matching the submitted `name` or `options`. This object contains the following properties:
 
 - `domain`
 

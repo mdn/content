@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.ReadableStream
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The `ReadableStream` interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a readable stream of byte data. The [Fetch API](/en-US/docs/Web/API/Fetch_API) offers a concrete instance of a `ReadableStream` through the {{domxref("Response.body", "body")}} property of a {{domxref("Response")}} object.
 
@@ -133,15 +133,19 @@ function iteratorToStream(iterator) {
     async pull(controller) {
       const { value, done } = await iterator.next();
 
+      if (value) {
+        controller.enqueue(value);
+      }
       if (done) {
         controller.close();
-      } else {
-        controller.enqueue(value);
       }
     },
   });
 }
 ```
+
+> [!WARNING]
+> This example assumes that the return value (`value` when `done` is `true`), if present, is also a chunk to be enqueued. Some iterator APIs may use the return value for different purposes. You may need to adjust the code based on the API you are interacting with.
 
 ### Async iteration of a stream using for await...of
 

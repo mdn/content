@@ -7,7 +7,7 @@ status:
 browser-compat: http.headers.Supports-Loading-Mode
 ---
 
-{{HTTPSidebar}}{{securecontext_header}}
+{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
 
 The **`Supports-Loading-Mode`** header allows a response to opt-in to being loaded in a novel, higher-risk context that it would otherwise fail to be loaded in.
 
@@ -64,4 +64,4 @@ Supports-Loading-Mode: fenced-frame
 - [Fenced Frame API](/en-US/docs/Web/API/Fenced_frame_API)
 - [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API)
 - [Speculative loading](/en-US/docs/Web/Performance/Speculative_loading)
-- [Prerender pages in Chrome for instant page navigations](https://developer.chrome.com/blog/prerender-pages/) on developer.chrome.com (2023)
+- [Prerender pages in Chrome for instant page navigations](https://developer.chrome.com/docs/web-platform/prerender-pages) on developer.chrome.com

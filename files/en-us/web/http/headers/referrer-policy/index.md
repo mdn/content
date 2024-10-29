@@ -7,7 +7,8 @@ browser-compat: http.headers.Referrer-Policy
 
 {{HTTPSidebar}}
 
-The **`Referrer-Policy`** {{glossary("HTTP header")}} controls how much [referrer information](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) (sent with the {{HTTPHeader("Referer")}} header) should be included with requests. Aside from the HTTP header, you can [set this policy in HTML](#integration_with_html).
+The HTTP **`Referrer-Policy`** {{Glossary("response header")}} controls how much [referrer information](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) (sent with the {{HTTPHeader("Referer")}} header) should be included with requests.
+Aside from the HTTP header, you can [set this policy in HTML](#integration_with_html).
 
 <table class="properties">
   <tbody>
@@ -17,7 +18,7 @@ The **`Referrer-Policy`** {{glossary("HTTP header")}} controls how much [referre
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -35,14 +36,15 @@ Referrer-Policy: strict-origin-when-cross-origin
 Referrer-Policy: unsafe-url
 ```
 
-> **Note:** The original header name {{HTTPHeader("Referer")}} is a misspelling of the word "referrer". The `Referrer-Policy` header does not share this misspelling.
+> [!NOTE]
+> The header name {{HTTPHeader("Referer")}} is a misspelling of the word "referrer". The `Referrer-Policy` header does not share this misspelling.
 
 ## Directives
 
 - `no-referrer`
   - : The {{HTTPHeader("Referer")}} header will be omitted: sent requests do not include any referrer information.
 - `no-referrer-when-downgrade`
-  - : Send the {{glossary("origin")}}, path, and querystring in {{HTTPHeader("Referer")}} when the protocol security level stays the same or improves (HTTP→HTTP, HTTP→HTTPS, HTTPS→HTTPS). Don't send the {{HTTPHeader("Referer")}} header for requests to less secure destinations (HTTPS→HTTP, HTTPS→file).
+  - : Send the {{glossary("origin")}}, path, and query string in {{HTTPHeader("Referer")}} when the protocol security level stays the same or improves (HTTP→HTTP, HTTP→HTTPS, HTTPS→HTTPS). Don't send the {{HTTPHeader("Referer")}} header for requests to less secure destinations (HTTPS→HTTP, HTTPS→file).
 - `origin`
   - : Send only the {{glossary("origin")}} in the {{HTTPHeader("Referer")}} header.
     For example, a document at `https://example.com/page.html` will send the referrer `https://example.com/`.
@@ -54,15 +56,17 @@ Referrer-Policy: unsafe-url
   - : Send only the origin when the protocol security level stays the same (HTTPS→HTTPS). Don't send the {{HTTPHeader("Referer")}} header to less secure destinations (HTTPS→HTTP).
 - `strict-origin-when-cross-origin` (default)
 
-  - : Send the origin, path, and querystring when performing a same-origin request. For cross-origin requests send the origin (only) when the protocol security level stays same (HTTPS→HTTPS). Don't send the {{HTTPHeader("Referer")}} header to less secure destinations (HTTPS→HTTP).
+  - : Send the origin, path, and query string when performing a same-origin request. For cross-origin requests send the origin (only) when the protocol security level stays same (HTTPS→HTTPS). Don't send the {{HTTPHeader("Referer")}} header to less secure destinations (HTTPS→HTTP).
 
-    > **Note:** This is the default policy if no policy is specified, or if the provided value is invalid (see spec revision [November 2020](https://github.com/whatwg/fetch/pull/1066)). Previously the default was `no-referrer-when-downgrade`.
+    > [!NOTE]
+    > This is the default policy if no policy is specified, or if the provided value is invalid (see spec revision [November 2020](https://github.com/whatwg/fetch/pull/1066)). Previously the default was `no-referrer-when-downgrade`.
 
 - `unsafe-url`
 
   - : Send the origin, path, and query string when performing any request, regardless of security.
 
-    > **Warning:** This policy will leak potentially-private information from HTTPS resource URLs to insecure origins. Carefully consider the impact of this setting.
+    > [!WARNING]
+    > This policy will leak potentially-private information from HTTPS resource URLs to insecure origins. Carefully consider the impact of this setting.
 
 ## Integration with HTML
 
@@ -84,7 +88,8 @@ Alternatively, you can set a `noreferrer` [link relation](/en-US/docs/Web/HTML/A
 <a href="http://example.com" rel="noreferrer">…</a>
 ```
 
-> **Warning:** As seen above, the `noreferrer` link relation is written without a dash. When you specify the referrer policy for the entire document with a {{HTMLElement("meta")}} element, it should be written _with_ a dash: `<meta name="referrer" content="no-referrer">`.
+> [!WARNING]
+> As seen above, the `noreferrer` link relation is written without a dash. When you specify the referrer policy for the entire document with a {{HTMLElement("meta")}} element, it should be written _with_ a dash: `<meta name="referrer" content="no-referrer">`.
 
 ## Integration with CSS
 
@@ -103,11 +108,12 @@ CSS can fetch resources referenced from stylesheets. These resources follow a re
 
 ### `no-referrer-when-downgrade`
 
-| From document              | Navigation to                   | Referrer used              |
-| -------------------------- | ------------------------------- | -------------------------- |
-| `https://example.com/page` | `https://example.com/otherpage` | `https://example.com/page` |
-| `https://example.com/page` | `https://mozilla.org`           | `https://example.com/page` |
-| `https://example.com/page` | **http**://example.com          | _(no referrer)_            |
+| From document               | Navigation to                   | Referrer used              |
+| --------------------------- | ------------------------------- | -------------------------- |
+| `https://example.com/page`  | `https://example.com/otherpage` | `https://example.com/page` |
+| `https://example.com/page`  | `https://mozilla.org`           | `https://example.com/page` |
+| `https://example.com/page`  | **http**://example.com          | _(no referrer)_            |
+| **http**://example.com/page | _anywhere_                      | `http://example.com/page`  |
 
 ### `origin`
 
@@ -162,7 +168,8 @@ Referrer-Policy: no-referrer, strict-origin-when-cross-origin
 
 In the above scenario, `no-referrer` is used only if the browser does not support the `strict-origin-when-cross-origin` policy.
 
-> **Note:** Specifying multiple values is only supported in the `Referrer-Policy` HTTP header, and not in the `referrerpolicy` attribute.
+> [!NOTE]
+> Specifying multiple values is only supported in the `Referrer-Policy` HTTP header, and not in the `referrerpolicy` attribute.
 
 ## Browser-specific preferences/settings
 
@@ -186,8 +193,7 @@ All of these settings take the same set of values: `0 = no-referrer`, `1 = same-
 ## See also
 
 - [Web security > Referer header: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns)
-- [HTTP referer on Wikipedia](https://en.wikipedia.org/wiki/HTTP_referer)
 - When using [Fetch](/en-US/docs/Web/API/Fetch_API): {{domxref("Request.referrerPolicy")}}
-- The obsolete {{HTTPHeader("Content-Security-Policy")}}'s {{HTTPHeader("Content-Security-Policy/referrer", "referrer")}} {{deprecated_inline}} directive.
 - [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)
+- [HTTP referer on Wikipedia](https://en.wikipedia.org/wiki/HTTP_referer)
 - [Tighter Control Over Your Referrers – Mozilla Security Blog](https://blog.mozilla.org/security/2015/01/21/meta-referrer/)

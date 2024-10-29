@@ -30,7 +30,7 @@ One last significant data point to share is that in 1994, TimBL founded the [Wor
 
 For example, the [HTML Living Standard](https://html.spec.whatwg.org/multipage/) describes exactly how HTML (all the HTML elements, and their associated APIs, and other surrounding technologies) should be implemented.
 
-Web standards are created by standards bodies — institutions that invite groups of people from different technology companies to come together and agree on how the technologies should work in the best way to fulfill all of their use cases. The W3C is the best known web standards body, but there are others such as the [WHATWG](https://whatwg.org/) (who maintain the living standards for the HTML language), [ECMA](https://www.ecma-international.org/) (who publish the standard for ECMAScript, which JavaScript is based on), [Khronos](https://www.khronos.org/) (who publish technologies for 3D graphics, such as WebGL), and others.
+Web standards are created by standards bodies — institutions that invite groups of people from different technology companies to come together and agree on how the technologies should work in the best way to fulfill all of their use cases. The W3C is the best known web standards body, but there are others such as the [WHATWG](https://whatwg.org/) (who maintain the living standards for the HTML language), [ECMA](https://ecma-international.org/) (who publish the standard for ECMAScript, which JavaScript is based on), [Khronos](https://www.khronos.org/) (who publish technologies for 3D graphics, such as WebGL), and others.
 
 ### "Open" standards
 
@@ -66,7 +66,7 @@ You are probably reading these words inside a web browser in this very moment (u
 
 ### HTTP
 
-Hypertext Transfer Protocol, or [HTTP](/en-US/docs/Web/HTTP/Basics_of_HTTP), is a messaging protocol that allows web browsers to communicate with web servers (where websites are stored). A typical conversation goes something like
+Hypertext Transfer Protocol, or [HTTP](/en-US/docs/Web/HTTP), is a messaging protocol that allows web browsers to communicate with web servers (where websites are stored). A typical conversation goes something like
 
 ```plain
 "Hello web server. Can you give me the files I need to render bbc.co.uk"?

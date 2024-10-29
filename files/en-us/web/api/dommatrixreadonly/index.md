@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.DOMMatrixReadOnly
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 The **`DOMMatrixReadOnly`** interface represents a read-only 4×4 matrix, suitable for 2D and 3D operations. The {{domxref("DOMMatrix")}} interface — which is based upon `DOMMatrixReadOnly`—adds [mutability](https://en.wikipedia.org/wiki/Immutable_object), allowing you to alter the matrix after creating it.
 
@@ -75,7 +75,7 @@ _This interface doesn't inherit any methods. None of the following methods alter
   - : Returns a JSON representation of the `DOMMatrixReadOnly` object.
 - {{domxref("DOMMatrixReadOnly.toString()")}}
 
-  - : Creates and returns a string object which contains a string representation of the matrix in CSS matrix syntax, using the appropriate CSS matrix notation. See the {{cssxref("transform-function/matrix", "matrix()")}} CSS function for details on this syntax.
+  - : Creates and returns a string which contains a string representation of the matrix in CSS matrix syntax, using the appropriate CSS matrix notation. See the {{cssxref("transform-function/matrix", "matrix()")}} CSS function for details on this syntax.
 
     For a 2D matrix, the elements `a` through `f` are listed, for a total of six values and the form `matrix(a, b, c, d, e, f)`.
 
@@ -95,7 +95,7 @@ _This interface doesn't inherit any methods. None of the following methods alter
 - {{domxref("DOMMatrixReadOnly.fromFloat64Array", "fromFloat64Array()")}}
   - : Creates a new mutable `DOMMatrix` object given an array of double-precision (64-bit) floating-point values. If the array has six values, the result is a 2D matrix; if the array has 16 values, the result is a 3D matrix. Otherwise, a {{jsxref("TypeError")}} exception is thrown.
 - {{domxref("DOMMatrixReadOnly.fromMatrix", "fromMatrix()")}}
-  - : Creates a new mutable `DOMMatrix` object given an existing matrix or a {{domxref("DOMMatrixInit")}} dictionary which provides the values for its properties. If no matrix is specified, the matrix is initialized with every element set to `0` _except_ the bottom-right corner and the element immediately above and to its left: `m33` and `m34`. These have the default value of `1`.
+  - : Creates a new mutable `DOMMatrix` object given an existing matrix or an object which provides the values for its properties. If no matrix is specified, the matrix is initialized with every element set to `0` _except_ the bottom-right corner and the element immediately above and to its left: `m33` and `m34`. These have the default value of `1`.
 
 ## Specifications
 

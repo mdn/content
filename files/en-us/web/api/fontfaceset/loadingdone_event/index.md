@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.FontFaceSet.loadingdone_event
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{APIRef("CSS Font Loading API")}}{{AvailableInWorkers}}
 
 The `loadingdone` event fires when the document has loaded all fonts.
 

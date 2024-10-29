@@ -7,9 +7,9 @@ status:
 browser-compat: api.HIDInputReportEvent
 ---
 
-{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_shared")}}
 
-The **`HIDInputReportEvent`** interface of the {{domxref('WebHID API')}} is passed to {{domxref("HIDDevice.inputreport_event")}} when an input report is received from any associated HID device.
+The **`HIDInputReportEvent`** interface of the [WebHID API](/en-US/docs/Web/API/WebHID_API) is passed to {{domxref("HIDDevice.inputreport_event", "inputreport")}} event of `HIDDevice` when an input report is received from any associated HID device.
 
 {{InheritanceDiagram}}
 

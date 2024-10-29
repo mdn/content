@@ -43,7 +43,7 @@ Events have three functions:
 
 ## Examples
 
-Add a listener to the {{WebExtAPIRef("notifications.onShown")}} event and log its details:
+Add a listener to the `notifications.onShown` event and log its details:
 
 ```js
 function logShown(itemId) {
@@ -58,4 +58,5 @@ browser.notifications.onShown.addListener(logShown);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/notifications/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications) API.

@@ -49,7 +49,7 @@ With the history lesson out of the way, let's move on and see how to use some of
 
 ## Active learning: classic embedding uses
 
-In this article we are going to jump straight into an active learning section, to immediately give you a real idea of just what embedding technologies are useful for. The online world is very familiar with [YouTube](https://www.youtube.com), but many people don't know about some of the sharing facilities it has available. Let's look at how YouTube allows us to embed a video in any page we like using an {{htmlelement("iframe")}}.
+In this article we are going to jump straight into an active learning section, to immediately give you a real idea of just what embedding technologies are useful for. The online world is very familiar with [YouTube](https://www.youtube.com/), but many people don't know about some of the sharing facilities it has available. Let's look at how YouTube allows us to embed a video in any page we like using an {{htmlelement("iframe")}}.
 
 1. First, go to YouTube and find a video you like.
 2. Below the video, you'll find a _Share_ button — select this to display the sharing options.
@@ -151,12 +151,12 @@ window.addEventListener("load", updateCode);
 // make it write a tab at the caret position instead
 
 textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -240,7 +240,7 @@ The example includes the bare essentials needed to use an `<iframe>`:
 - [`border: none`](/en-US/docs/Web/CSS/border)
   - : If used, the `<iframe>` is displayed without a surrounding border. Otherwise, by default, browsers display the `<iframe>` with a surrounding border (which is generally undesirable).
 - [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#allowfullscreen)
-  - : If set, the `<iframe>` is able to be placed in fullscreen mode using the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) (somewhat beyond the scope of this article.)
+  - : If set, the `<iframe>` is able to be placed in fullscreen mode using the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) (somewhat beyond the scope of this article).
 - [`src`](/en-US/docs/Web/HTML/Element/iframe#src)
   - : This attribute, as with {{htmlelement("video")}}/{{htmlelement("img")}}, contains a path pointing to the URL of the document to be embedded.
 - [`width`](/en-US/docs/Web/HTML/Element/iframe#width) and [`height`](/en-US/docs/Web/HTML/Element/iframe#height)
@@ -248,7 +248,8 @@ The example includes the bare essentials needed to use an `<iframe>`:
 - [`sandbox`](/en-US/docs/Web/HTML/Element/iframe#sandbox)
   - : This attribute, which works in slightly more modern browsers than the rest of the `<iframe>` features (e.g. IE 10 and above) requests heightened security settings; we'll say more about this in the next section.
 
-> **Note:** In order to improve speed, it's a good idea to set the iframe's `src` attribute with JavaScript after the main content is done with loading. This makes your page usable sooner and decreases your official page load time (an important {{glossary("SEO")}} metric.)
+> [!NOTE]
+> In order to improve speed, it's a good idea to set the iframe's `src` attribute with JavaScript after the main content is done with loading. This makes your page usable sooner and decreases your official page load time (an important {{glossary("SEO")}} metric.)
 
 ### Security concerns
 
@@ -288,13 +289,15 @@ Content that's not sandboxed may be able to execute JavaScript, submit forms, tr
 
 If absolutely required, you can add permissions back one by one (inside the `sandbox=""` attribute value) — see the [`sandbox`](/en-US/docs/Web/HTML/Element/iframe#sandbox) reference entry for all the available options. One important note is that you should _never_ add both `allow-scripts` and `allow-same-origin` to your `sandbox` attribute — in that case, the embedded content could bypass the [Same-origin policy](/en-US/docs/Glossary/Same-origin_policy) that stops sites from executing scripts, and use JavaScript to turn off sandboxing altogether.
 
-> **Note:** Sandboxing provides no protection if attackers can fool people into visiting malicious content directly (outside an `iframe`). If there's any chance that certain content may be malicious (e.g., user-generated content), please serve it from a different {{glossary("domain")}} to your main site.
+> [!NOTE]
+> Sandboxing provides no protection if attackers can fool people into visiting malicious content directly (outside an `iframe`). If there's any chance that certain content may be malicious (e.g., user-generated content), please serve it from a different {{glossary("domain")}} to your main site.
 
 #### Configure CSP directives
 
 {{Glossary("CSP")}} stands for **[content security policy](/en-US/docs/Web/HTTP/CSP)** and provides [a set of HTTP Headers](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (metadata sent along with your web pages when they are served from a web server) designed to improve the security of your HTML document. When it comes to securing `<iframe>`s, you can _[configure your server to send an appropriate `X-Frame-Options` header.](/en-US/docs/Web/HTTP/Headers/X-Frame-Options)_ This can prevent other websites from embedding your content in their web pages (which would enable [clickjacking](/en-US/docs/Glossary/Clickjacking) and a host of other attacks), which is exactly what the MDN developers have done, as we saw earlier on.
 
-> **Note:** You can read Frederik Braun's post [On the X-Frame-Options Security Header](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/) for more background information on this topic. Obviously, it's rather out of scope for a full explanation in this article.
+> [!NOTE]
+> You can read Frederik Braun's post [On the X-Frame-Options Security Header](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/) for more background information on this topic. Obviously, it's rather out of scope for a full explanation in this article.
 
 ## The \<embed> and \<object> elements
 
@@ -322,7 +325,7 @@ If you find yourself needing to embed plugin content, this is the kind of inform
     </tr>
     <tr>
       <td>
-        <em>accurate </em>{{glossary("MIME type", 'media type')}}
+        <em>Accurate </em>{{glossary("MIME type", "media type")}}
         of the embedded content
       </td>
       <td><a href="/en-US/docs/Web/HTML/Element/embed#type"><code>type</code></a></td>
@@ -330,7 +333,7 @@ If you find yourself needing to embed plugin content, this is the kind of inform
     </tr>
     <tr>
       <td>
-        height and width (in CSS pixels) of the box controlled by the plugin
+        Height and width (in CSS pixels) of the box controlled by the plugin
       </td>
       <td>
          <a href="/en-US/docs/Web/HTML/Element/embed#height"><code>height</code></a><br /><a href="/en-US/docs/Web/HTML/Element/embed#width"><code>width</code></a>
@@ -340,19 +343,11 @@ If you find yourself needing to embed plugin content, this is the kind of inform
       </td>
     </tr>
     <tr>
-      <td>names and values, to feed the plugin as parameters</td>
-      <td>ad hoc attributes with those names and values</td>
+      <td>Independent HTML content as a fallback for an unavailable resource</td>
+      <td>Not supported (<code>&#x3C;noembed></code> is obsolete)</td>
       <td>
-        single-tag {{htmlelement("param")}} elements, contained within
-        <code>&#x3C;object></code>
-      </td>
-    </tr>
-    <tr>
-      <td>independent HTML content as fallback for an unavailable resource</td>
-      <td>not supported (<code>&#x3C;noembed></code> is obsolete)</td>
-      <td>
-        contained within <code>&#x3C;object></code>, after
-        <code>&#x3C;param></code> elements
+        Contained within the opening and closing
+        <code>&#x3C;object></code> tags
       </td>
     </tr>
   </tbody>
@@ -361,10 +356,10 @@ If you find yourself needing to embed plugin content, this is the kind of inform
 Let's look at an `<object>` example that embeds a PDF into a page (see the [live example](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html) and the [source code](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html)):
 
 ```html
-<object data="mypdf.pdf" type="application/pdf" width="800" height="1200">
+<object data="my-pdf.pdf" type="application/pdf" width="800" height="1200">
   <p>
     You don't have a PDF plugin, but you can
-    <a href="mypdf.pdf">download the PDF file. </a>
+    <a href="my-pdf.pdf">download the PDF file. </a>
   </p>
 </object>
 ```

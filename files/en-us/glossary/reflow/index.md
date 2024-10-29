@@ -10,6 +10,7 @@ page-type: glossary-definition
 
 ## See also
 
-- [Repaint](/en-US/docs/Glossary/Repaint)
-- [Minimizing browser reflow](https://developer.google.com/speed/docs/insights/browser-reflow) on developer.google.com
+- Related glossary terms:
+  - {{Glossary("Repaint")}}
+- [Minimizing browser reflow](https://developers.google.com/speed/docs/insights/browser-reflow) on developers.google.com
 - [Understanding Reflow and Repaint in the browser](https://dev.to/gopal1996/understanding-reflow-and-repaint-in-the-browser-1jbg) on dev.to (2020)

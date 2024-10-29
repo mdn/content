@@ -6,7 +6,9 @@ page-type: guide
 
 {{HTTPSidebar}}
 
-HTTP has a concept of _conditional requests_, where the result, and even the success of a request, can be changed by comparing the affected resources with the value of a _validator_. Such requests can be useful to validate the content of a cache, and sparing a useless control, to verify the integrity of a document, like when resuming a download, or when preventing lost updates when uploading or modifying a document on the server.
+HTTP has a concept of _conditional requests_, where the result, and even the success of a request, can be controlled by comparing the affected resources with a _validator_.
+These requests are useful for validating cached content, ensuring that it is only fetched if it differs from the copy that is already available to the browser.
+Conditional requests are also useful for ensuring the integrity of a document when resuming a download, or preventing lost updates when uploading or modifying a document on the server.
 
 ## Principles
 
@@ -22,7 +24,7 @@ The different behaviors are defined by the method of the request used, and by th
 All conditional headers try to check if the resource stored on the server matches a specific version. To achieve this, the conditional requests need to indicate the version of the resource. As comparing the whole resource byte to byte is impracticable, and not always what is wanted, the request transmits a value describing the version. Such values are called _validators_, and are of two kinds:
 
 - the date of last modification of the document, the _last-modified_ date.
-- an opaque string, uniquely identifying each version, called the _entity tag_, or the _etag_.
+- an opaque string, uniquely identifying each version, called the _entity tag_, or the _ETag_.
 
 Comparing versions of the same resource is a bit tricky: depending on the context, there are two kinds of _equality checks_:
 
@@ -37,9 +39,13 @@ Strong validation consists of guaranteeing that the resource is, byte to byte, i
 
 It is quite difficult to have a unique identifier for strong validation with {{HTTPHeader("Last-Modified")}}. Often this is done using an {{HTTPHeader("ETag")}} with the MD5 hash of the resource (or a derivative).
 
+> [!NOTE]
+> Because a change of content encoding requires a change to an ETag, some servers modify ETags when compressing responses from an origin server (reverse proxies, for example).
+> Apache Server appends the name of the compression method (`-gzip`) to ETags by default, but this is [configurable using the `DeflateAlterETag` directive](https://httpd.apache.org/docs/2.4/mod/mod_deflate.html).
+
 ### Weak validation
 
-Weak validation differs from strong validation, as it considers two versions of the document as identical if the content is equivalent. For example, a page that would differ from another only by a different date in its footer, or different advertising, would be considered _identical_ to the other with weak validation. These same two versions are considered _different_ when using strong validation. Building a system of etags that creates weak validation may be complex, as it involves knowing the importance of the different elements of a page, but is very useful towards optimizing cache performance.
+Weak validation differs from strong validation, as it considers two versions of the document as identical if the content is equivalent. For example, a page that would differ from another only by a different date in its footer, or different advertising, would be considered _identical_ to the other with weak validation. These same two versions are considered _different_ when using strong validation. Building a system of ETags that uses weak validation is very useful for optimizing cache performance, but may be complex, as it involves knowing the importance of the different elements of a page.
 
 ## Conditional headers
 
@@ -54,7 +60,7 @@ Several HTTP headers, called conditional headers, lead to conditional requests. 
 - {{HTTPHeader("If-Unmodified-Since")}}
   - : Succeeds if the {{HTTPHeader("Last-Modified")}} date of the distant resource is older or the same as the one given in this header.
 - {{HTTPHeader("If-Range")}}
-  - : Similar to {{HTTPHeader("If-Match")}}, or {{HTTPHeader("If-Unmodified-Since")}}, but can have only one single etag, or one date. If it fails, the range request fails, and instead of a {{HTTPStatus("206")}} `Partial Content` response, a {{HTTPStatus("200")}} `OK` is sent with the complete resource.
+  - : Similar to {{HTTPHeader("If-Match")}}, or {{HTTPHeader("If-Unmodified-Since")}}, but can have only one single ETag or one date. If it fails, the range request fails, and instead of a {{HTTPStatus("206", "206 Partial Content")}} response, a {{HTTPStatus("200", "200 OK")}} is sent with the complete resource.
 
 ## Use cases
 
@@ -62,7 +68,7 @@ Several HTTP headers, called conditional headers, lead to conditional requests. 
 
 The most common use case for conditional requests is updating a cache. With an empty cache, or without a cache, the requested resource is sent back with a status of {{HTTPStatus("200")}} `OK`.
 
-![The request issued when the cache is empty triggers the resource to be downloaded, with both validator values sent as headers. The cache is then filled.](cache1.png)
+![The request issued when the cache is empty triggers the resource to be downloaded, with both validator values sent as headers. The cache is then filled.](https://mdn.github.io/shared-assets/images/diagrams/http/conditional-requests/cache-sequence-1.svg)
 
 Together with the resource, the validators are sent in the headers. In this example, both {{HTTPHeader("Last-Modified")}} and {{HTTPHeader("ETag")}} are sent, but it could equally have been only one of them. These validators are cached with the resource (like all headers) and will be used to craft conditional requests, once the cache becomes stale.
 
@@ -70,12 +76,12 @@ As long as the cache is not stale, no requests are issued at all. But once it ha
 
 If the resource has not changed, the server sends back a {{HTTPStatus("304")}} `Not Modified` response. This makes the cache fresh again, and the client uses the cached resource. Although there is a response/request round-trip that consumes some resources, this is more efficient than to transmit the whole resource over the wire again.
 
-![With a stale cache, the conditional request is sent. The server can determine if the resource changed, and, as in this case, decide not to send it again as it is the same.](httpcache2.png)
+![With a stale cache, the conditional request is sent. The server can determine if the resource changed, and, as in this case, decide not to send it again as it is the same.](https://mdn.github.io/shared-assets/images/diagrams/http/conditional-requests/cache-sequence-2.svg)
 
 If the resource has changed, the server just sends back a {{HTTPStatus("200", "200 OK")}} response, with the new version of the resource (as though the request wasn't conditional).
 The client uses this new resource (and caches it).
 
-![In the case where the resource was changed, it is sent back as if the request wasn't conditional.](httpcache3.png)
+![In the case where the resource was changed, it is sent back as if the request wasn't conditional.](https://mdn.github.io/shared-assets/images/diagrams/http/conditional-requests/cache-sequence-3.svg)
 
 Besides the setting of the validators on the server side, this mechanism is transparent: all browsers manage a cache and send such conditional requests without any special work to be done by Web developers.
 
@@ -83,23 +89,23 @@ Besides the setting of the validators on the server side, this mechanism is tran
 
 Partial downloading of files is a functionality of HTTP that allows resuming previous operations, saving bandwidth and time, by keeping the already obtained information:
 
-![A download has been stopped and only partial content has been retrieved.](httpresume1.png)
+![A download has been stopped and only partial content has been retrieved.](https://mdn.github.io/shared-assets/images/diagrams/http/conditional-requests/resume-download-1.svg)
 
 A server supporting partial downloads broadcasts this by sending the {{HTTPHeader("Accept-Ranges")}} header. Once this happens, the client can resume a download by sending a {{HTTPHeader("Ranges")}} header with the missing ranges:
 
-![The client resumes the requests by indicating the range he needs and preconditions checking the validators of the partially obtained request.](httpresume2.png)
+![The client resumes the requests by indicating the range he needs and preconditions checking the validators of the partially obtained request.](https://mdn.github.io/shared-assets/images/diagrams/http/conditional-requests/resume-download-2.svg)
 
 The principle is simple, but there is one potential problem: if the downloaded resource has been modified between both downloads, the obtained ranges will correspond to two different versions of the resource, and the final document will be corrupted.
 
 To prevent this, conditional requests are used. For ranges, there are two ways of doing this. The more flexible one makes use of {{HTTPHeader("If-Unmodified-Since")}} and {{HTTPHeader("If-Match")}} and the server returns an error if the precondition fails; the client then restarts the download from the beginning:
 
-![When the partially downloaded resource has been modified, the preconditions will fail and the resource will have to be downloaded again completely.](httpresume3.png)
+![When the partially downloaded resource has been modified, the preconditions will fail and the resource will have to be downloaded again completely.](https://mdn.github.io/shared-assets/images/diagrams/http/conditional-requests/resume-download-3.svg)
 
 Even if this method works, it adds an extra response/request exchange when the document has been changed. This impairs performance, and HTTP has a specific header to avoid this scenario: {{HTTPHeader("If-Range")}}:
 
-![The If-Range headers allows the server to directly send back the complete resource if it has been modified, no need to send a 412 error and wait for the client to re-initiate the download.](httpresume4.png)
+![The If-Range headers allows the server to directly send back the complete resource if it has been modified, no need to send a 412 error and wait for the client to re-initiate the download.](https://mdn.github.io/shared-assets/images/diagrams/http/conditional-requests/resume-download-4.svg)
 
-This solution is more efficient, but slightly less flexible, as only one etag can be used in the condition. Rarely is such additional flexibility needed.
+This solution is more efficient, but slightly less flexible, as only one ETag can be used in the condition. Rarely is such additional flexibility needed.
 
 ### Avoiding the lost update problem with optimistic locking
 
@@ -107,32 +113,38 @@ A common operation in Web applications is to _update_ a remote document. This is
 
 With the {{HTTPMethod("PUT")}} method you are able to implement this. The client first reads the original files, modifies them, and finally pushes them to the server:
 
-![Updating a file with a PUT is very simple when concurrency is not involved.](httplock1.png)
+![Updating a file with a PUT is very simple when concurrency is not involved.](https://mdn.github.io/shared-assets/images/diagrams/http/conditional-requests/optimistic-locking-1.svg)
 
 Unfortunately, things get a little inaccurate as soon as we take into account concurrency. While a client is locally modifying its new copy of the resource, a second client can fetch the same resource and do the same on its copy. What happens next is very unfortunate: when they commit back to the server, the modifications from the first client are discarded by the next client push, as this second client is unaware of the first client's changes to the resource. The decision on who wins is not communicated to the other party. Which client's changes are to be kept, will vary with the speed they commit; this depends on the performance of the clients, of the server, and even of the human editing the document at the client. The winner will change from one time to the next. This is a _race condition_ and leads to problematic behaviors, which are difficult to detect and to debug:
 
-![When several clients update the same resource in parallel, we are facing a race condition: the slowest win, and the others don't even know they lost. Problematic!](httplock2.png)
+![When several clients update the same resource in parallel, we are facing a race condition: the slowest win, and the others don't even know they lost. Problematic!](https://mdn.github.io/shared-assets/images/diagrams/http/conditional-requests/optimistic-locking-2.svg)
 
 There is no way to deal with this problem without annoying one of the two clients. However, lost updates and race conditions are to be avoided. We want predictable results, and expect that the clients are notified when their changes are rejected.
 
 Conditional requests allow implementing the _optimistic locking algorithm_ (used by most wikis or source control systems). The concept is to allow all clients to get copies of the resource, then let them modify it locally, controlling concurrency by successfully allowing the first client to submit an update. All subsequent updates, based on the now obsolete version of the resource, are rejected:
 
-![Conditional requests allow to implement optimistic locking: now the quickest wins, and the others get an error.](httplock3.png)
+![Conditional requests allow to implement optimistic locking: now the quickest wins, and the others get an error.](https://mdn.github.io/shared-assets/images/diagrams/http/conditional-requests/optimistic-locking-3.svg)
 
-This is implemented using the {{HTTPHeader("If-Match")}} or {{HTTPHeader("If-Unmodified-Since")}} headers. If the etag doesn't match the original file, or if the file has been modified since it has been obtained, the change is rejected with a {{HTTPStatus("412")}} `Precondition Failed` error. It is then up to the client to deal with the error: either by notifying the user to start again (this time on the newest version), or by showing the user a _diff_ of both versions, helping them decide which changes they wish to keep.
+This is implemented using the {{HTTPHeader("If-Match")}} or {{HTTPHeader("If-Unmodified-Since")}} headers. If the ETag doesn't match the original file, or if the file has been modified since it has been obtained, the change is rejected with a {{HTTPStatus("412", "412 Precondition Failed")}} error. It is then up to the client to deal with the error: either by notifying the user to start again (this time on the newest version), or by showing the user a _diff_ of both versions, helping them decide which changes they wish to keep.
 
 ### Dealing with the first upload of a resource
 
-The first upload of a resource is an edge case of the previous. Like any update of a resource, it is subject to a race condition if two clients try to perform at similar times. To prevent this, conditional requests can be used: by adding {{HTTPHeader("If-None-Match")}} with the special value of `'*'`, representing any etag. The request will succeed, only if the resource didn't exist before:
+The first upload of a resource is an edge case of the previous. Like any update of a resource, it is subject to a race condition if two clients try to perform at similar times. To prevent this, conditional requests can be used: by adding {{HTTPHeader("If-None-Match")}} with the special value of `*`, representing any ETag. The request will succeed, only if the resource didn't exist before:
 
-![Like for a regular upload, the first upload of a resource is subject to a race condition: If-None-Match can prevent it.](httpfirst.png)
+![Like for a regular upload, the first upload of a resource is subject to a race condition: If-None-Match can prevent it.](https://mdn.github.io/shared-assets/images/diagrams/http/conditional-requests/first-upload.svg)
 
 `If-None-Match` will only work with HTTP/1.1 (and later) compliant servers. If unsure if the server will be compliant, you need first to issue a {{HTTPMethod("HEAD")}} request to the resource to check this.
 
 ## Conclusion
 
-Conditional requests are a key feature of HTTP, and allow the building of efficient and complex applications. For caching or resuming downloads, the only work required for webmasters is to configure the server correctly; setting correct etags in some environments can be tricky. Once achieved, the browser will serve the expected conditional requests.
+Conditional requests are a key feature of HTTP, and allow the building of efficient and complex applications. For caching or resuming downloads, the only work required for webmasters is to configure the server correctly; setting correct ETags in some environments can be tricky. Once achieved, the browser will serve the expected conditional requests.
 
 For locking mechanisms, it is the opposite: Web developers need to issue a request with the proper headers, while webmasters can mostly rely on the application to carry out the checks for them.
 
 In both cases it's clear, conditional requests are a fundamental feature behind the Web.
+
+## See also
+
+- {{HTTPStatus("304", "304 Not Modified")}}
+- {{HTTPHeader("If-None-Match")}}
+- [Apache Server `mod_deflate.c`](https://github.com/apache/httpd/blob/4348e8cb7d8c41b1c8019ceb0a1612bb4a3384f7/modules/filters/mod_deflate.c#L495-L500) transforms ETags during compression

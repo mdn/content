@@ -10,7 +10,8 @@ browser-compat: api.SVGAnimatedString.animVal
 
 AnimVal attribute or animVal property contains the same value as the {{domxref("SVGAnimatedString.baseVal")}} property. If the given attribute or property is being animated, contains the current animated value of the attribute or property. If the given attribute or property is not currently being animated, then it contains the same value as baseVal
 
-> **Note:** The **animVal** property is a read only property.
+> [!NOTE]
+> The **animVal** property is a read only property.
 
 ## Syntax
 

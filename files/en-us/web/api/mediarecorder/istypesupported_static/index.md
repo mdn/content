@@ -37,7 +37,7 @@ const types = [
   "video/webm;codecs=daala",
   "video/webm;codecs=h264",
   "audio/webm;codecs=opus",
-  "video/mpeg",
+  "video/mp4",
 ];
 
 for (const type of types) {

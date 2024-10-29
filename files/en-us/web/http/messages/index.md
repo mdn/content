@@ -19,7 +19,7 @@ HTTP requests, and responses, share similar structure and are composed of:
 3. A blank line indicating all meta-information for the request has been sent.
 4. An optional _body_ containing data associated with the request (like content of an HTML form), or the document associated with a response. The presence of the body and its size is specified by the start-line and HTTP headers.
 
-The start-line and HTTP headers of the HTTP message are collectively known as the _head_ of the requests, whereas its payload is known as the _body_.
+The start-line and HTTP headers of the HTTP message are collectively known as the _head_ of the requests, and the part afterwards that contains its content is known as the _body_.
 
 ![Requests and responses share a common structure in HTTP](httpmsgstructure2.png)
 
@@ -27,18 +27,19 @@ The start-line and HTTP headers of the HTTP message are collectively known as th
 
 ### Request line
 
-> **Note:** The start-line is called the "request-line" in requests.
+> [!NOTE]
+> The start-line is called the "request-line" in requests.
 
-HTTP requests are messages sent by the client to initiate an action on the server. Their _request-line_ contain three elements:
+HTTP requests are messages sent by the client to initiate an action on the server. Their _request-line_ contains three elements:
 
 1. An _[HTTP method](/en-US/docs/Web/HTTP/Methods)_, a verb (like {{HTTPMethod("GET")}}, {{HTTPMethod("PUT")}} or {{HTTPMethod("POST")}}) or a noun (like {{HTTPMethod("HEAD")}} or {{HTTPMethod("OPTIONS")}}), that describes the action to be performed. For example, `GET` indicates that a resource should be fetched or `POST` means that data is pushed to the server (creating or modifying a resource, or generating a temporary document to send back).
-2. The _request target_, usually a {{glossary("URL")}}, or the absolute path of the protocol, port, and domain are usually characterized by the request context. The format of this request target varies between different HTTP methods. It can be
+2. The _request target_, usually a {{glossary("URL")}}, or the absolute path of the protocol, port, and domain are usually characterized by the request context. The format of this request target varies between different HTTP methods. It can be:
 
    - An absolute path, ultimately followed by a `'?'` and query string. This is the most common form, known as the _origin form_, and is used with `GET`, `POST`, `HEAD`, and `OPTIONS` methods.
      - `POST / HTTP/1.1`
      - `GET /background.png HTTP/1.0`
      - `HEAD /test.html?query=alibaba HTTP/1.1`
-     - `OPTIONS /anypage.html HTTP/1.0`
+     - `OPTIONS /any-page.html HTTP/1.0`
    - A complete URL, known as the _absolute form_, is mostly used with `GET` when connected to a proxy.
      `GET https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages HTTP/1.1`
    - The authority component of a URL, consisting of the domain name and optionally the port (prefixed by a `':'`), is called the _authority form_. It is only used with `CONNECT` when setting up an HTTP tunnel.
@@ -62,18 +63,20 @@ Many different headers can appear in requests. They can be divided in several gr
 
 ### Body
 
-The final part of the request is its body. Not all requests have one: requests fetching resources like `GET` or `HEAD` usually don't need a body. Requests that send data to the server to create a resource, such as `PUT` or `POST` requests, typically require a body with the data used to fulfill the request (for instance, HTML form data).
+The last part of a request is the body.
+Not all requests have one: requests with a {{HTTPMethod("GET")}} _[HTTP method](/en-US/docs/Web/HTTP/Methods)_ should only be used to request data and shouldn't contain a body.
 
 Bodies can be broadly divided into two categories:
 
 - Single-resource bodies, consisting of one single file, defined by the two headers: {{HTTPHeader("Content-Type")}} and {{HTTPHeader("Content-Length")}}.
-- [Multiple-resource bodies](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data), consisting of a multipart body, each containing a different bit of information. This is typically associated with [HTML Forms](/en-US/docs/Learn/Forms).
+- [Multiple-resource bodies](/en-US/docs/Web/HTTP/MIME_types#multipartform-data), consisting of a multipart body, each containing a different bit of information. This is typically associated with [HTML Forms](/en-US/docs/Learn/Forms).
 
 ## HTTP Responses
 
 ### Status line
 
-> **Note:** The start-line is called the "status line" in responses.
+> [!NOTE]
+> The start-line is called the "status line" in responses.
 
 The start line of an HTTP response, called the _status line_, contains the following information:
 
@@ -97,13 +100,13 @@ Many different headers can appear in responses. These can be divided into severa
 
 ### Body
 
-The last part of a response is the body. Not all responses have one: responses with a status code that sufficiently answers the request without the need for corresponding payload (like {{HTTPStatus("201")}} **`Created`** or {{HTTPStatus("204")}} **`No Content`**) usually don't.
+The last part of a response is the body. Not all responses have one: responses with a status code that sufficiently answers the request without the need to include content (like {{HTTPStatus("201", "201 Created")}} or {{HTTPStatus("204", "204 No Content")}}) usually don't.
 
 Bodies can be broadly divided into three categories:
 
 - Single-resource bodies, consisting of a single file of known length, defined by the two headers: {{HTTPHeader("Content-Type")}} and {{HTTPHeader("Content-Length")}}.
 - Single-resource bodies, consisting of a single file of unknown length, encoded by chunks with {{HTTPHeader("Transfer-Encoding")}} set to `chunked`.
-- [Multiple-resource bodies](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data), consisting of a multipart body, each containing a different section of information. These are relatively rare.
+- [Multiple-resource bodies](/en-US/docs/Web/HTTP/MIME_types#multipartform-data), consisting of a multipart body, each containing a different section of information. These are relatively rare.
 
 ## HTTP/2 Frames
 

@@ -59,7 +59,7 @@ While React _can_ be used for [small pieces of an interface](https://react.dev/l
 
 In addition, many of the developer-experience benefits of a React app, such as writing interfaces with JSX, require a compilation process. Adding a compiler like Babel to a website makes the code on it run slowly, so developers often set up such tooling with a build step. React arguably has a heavy tooling requirement, but it can be learned.
 
-This article is going to focus on the use case of using React to render the entire user interface of an application with the support of [Vite](https://vitejs.dev/), a modern front-end build tool.
+This article is going to focus on the use case of using React to render the entire user interface of an application with the support of [Vite](https://vite.dev/), a modern front-end build tool.
 
 ## How does React use JavaScript?
 
@@ -81,7 +81,8 @@ const header = (
 );
 ```
 
-> **Note:** The parentheses in the previous snippet aren't unique to JSX, and don't have any effect on your application. They're a signal to you (and your computer) that the multiple lines of code inside are part of the same expression. You could just as well write the header expression like this:
+> [!NOTE]
+> The parentheses in the previous snippet aren't unique to JSX, and don't have any effect on your application. They're a signal to you (and your computer) that the multiple lines of code inside are part of the same expression. You could just as well write the header expression like this:
 >
 > ```jsx-nolint
 > const header = <header>
@@ -127,7 +128,7 @@ If Node is installed, you'll see a version number. If it isn't, you'll see an er
 
 You may use the Yarn package manager as an alternative to npm but we'll assume you're using npm in this set of tutorials. See [Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) for more information on npm and yarn.
 
-If you're using Windows, you will need to install some software to give you parity with Unix/macOS terminal in order to use the terminal commands mentioned in this tutorial. **Gitbash** (which comes as part of the [git for Windows toolset](https://gitforwindows.org/)) or **[Windows Subsystem for Linux](https://docs.microsoft.com/windows/wsl/about)** (**WSL**) are both suitable. See [Command line crash course](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line) for more information on these, and on terminal commands in general.
+If you're using Windows, you will need to install some software to give you parity with Unix/macOS terminal in order to use the terminal commands mentioned in this tutorial. **Gitbash** (which comes as part of the [git for Windows toolset](https://gitforwindows.org/)) or **[Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/about)** (**WSL**) are both suitable. See [Command line crash course](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line) for more information on these, and on terminal commands in general.
 
 Also bear in mind that React and ReactDOM produce apps that only work on a fairly modern set of browsers like Firefox, Microsoft Edge, Safari, or Chrome when working through these tutorials.
 
@@ -135,7 +136,7 @@ See the following for more information:
 
 - ["About npm" on the npm blog](https://docs.npmjs.com/about-npm/)
 - ["Introducing npx" on the npm blog](https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner)
-- [Vite's documentation](https://vitejs.dev/guide/)
+- [Vite's documentation](https://vite.dev/guide/)
 
 ### Initializing your app
 
@@ -147,7 +148,8 @@ npm create vite@latest moz-todo-react -- --template react
 
 This creates a `moz-todo-react` directory using Vite's `react` template.
 
-> **Note:** The `--` is necessary to pass arguments to npm commands such as `create`, and the `--template react` argument tells Vite to use its React template.
+> [!NOTE]
+> The `--` is necessary to pass arguments to npm commands such as `create`, and the `--template react` argument tells Vite to use its React template.
 
 Your terminal will have printed some messages if this command was successful. You should see text prompting you to `cd` to your new directory, install the app's dependencies, and run the app locally. Let's start with two of those commands. Run the following in your terminal:
 
@@ -196,7 +198,7 @@ The **`public`** directory contains static files that will be served directly to
 
 The **`src`** directory is where we'll spend most of our time, as it's where the source code for our application lives. You'll notice that some JavaScript files in this directory end in the extension `.jsx`. This extension is necessary for any file that contains JSX – it tells Vite to turn the JSX syntax into JavaScript that your browser can understand. The `src/assets` directory contains the React logo you saw in the browser.
 
-The `package.json` and `package-lock.json` files contain metadata about our project. These files are not unique to React applications: Vite populated `package.json` for us, and npm created `package-lock.json` for when we installed the app's dependencies. You don't need to understand these files at all to complete this tutorial. However, if you'd like to learn more about them, you can read about [`package.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-json/) and [`package-lock.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-lock-json) in the npm docs. We also talk about `package.json` in our [Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) tutorial.
+The `package.json` and `package-lock.json` files contain metadata about our project. These files are not unique to React applications: Vite populated `package.json` for us, and npm created `package-lock.json` for when we installed the app's dependencies. You don't need to understand these files at all to complete this tutorial. However, if you'd like to learn more about them, you can read about [`package.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-json/) and [`package-lock.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-lock-json/) in the npm docs. We also talk about `package.json` in our [Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) tutorial.
 
 ### Customizing our dev script
 
@@ -209,7 +211,8 @@ Before we move on, you might want to change your `package.json` file a little bi
 
 With this in place, your app will open in your browser at `http://localhost:3000` every time you run `npm run dev`.
 
-> **Note:** You _don't_ need the extra `--` here because we're passing arguments directly to `vite`, rather than to a pre-defined npm script.
+> [!NOTE]
+> You _don't_ need the extra `--` here because we're passing arguments directly to `vite`, rather than to a pre-defined npm script.
 
 ## Exploring our first React component — `<App />`
 
@@ -229,7 +232,7 @@ function App() {
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
+        <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
         <a href="https://react.dev" target="_blank">
@@ -287,7 +290,7 @@ function App() {
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
+        <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
         <a href="https://react.dev" target="_blank">
@@ -429,7 +432,7 @@ The curly braces around `subject` are another feature of JSX's syntax. The curly
 <h1>Hello, {subject + ' :)'}!</h1>
 {/* Hello, REACT */}
 <h1>Hello, {subject.toUpperCase()}</h1>
-{/* Hello, 4 */}
+{/* Hello, 4! */}
 <h1>Hello, {2 + 2}!</h1>
 ```
 
@@ -462,7 +465,8 @@ function App(props) {
 
 Save your file and check your browser. You'll see a blank background with no content. This is because we're trying to read a `subject` variable that's no longer defined. Fix this by commenting out the `<h1>Hello {subject}!</h1>` line.
 
-> **Note:** If your code editor understands how to parse JSX (most modern editors do!), you can use its built-in commenting shortcut — `Ctrl + /` (on Windows) or `Cmd + /` (on macOS) — to create comments more quickly.
+> [!NOTE]
+> If your code editor understands how to parse JSX (most modern editors do!), you can use its built-in commenting shortcut — `Ctrl + /` (on Windows) or `Cmd + /` (on macOS) — to create comments more quickly.
 
 Save the file with that line commented out. This time, you should see your
 "Click me!" button rendered by itself. If you open your browser's developer console, you'll see a message that looks like this:
@@ -505,5 +509,10 @@ In React:
 - You can render JavaScript expressions in JSX by putting them between curly braces, like `{so}`.
 - Some JSX attributes are different than HTML attributes so that they don't conflict with JavaScript reserved words. For example, `class` in HTML translates to `className` in JSX.
 - Props are written just like attributes inside component calls and are passed into components.
+
+## See also
+
+- [Learn React](https://v2.scrimba.com/learn-react-c0e?via=mdn) <sup>_MDN Curriculum partner_</sup>
+  - : [Scrimba's](https://scrimba.com?via=mdn) _Learn React_ course is the ultimate React 101 — the perfect starting point for any React beginner. Learn the basics of modern React by solving 140+ interactive coding challenges and building eight fun projects.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}

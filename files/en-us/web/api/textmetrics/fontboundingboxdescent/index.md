@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.TextMetrics.fontBoundingBoxDescent
 ---
 
-{{APIRef("Canvas API")}}
+{{APIRef("Canvas API")}}{{AvailableInWorkers}}
 
 The read-only `fontBoundingBoxDescent` property of the {{domxref("TextMetrics")}} interface returns the distance from the horizontal line indicated by the {{domxref("CanvasRenderingContext2D.textBaseline")}} attribute to the bottom of the bounding rectangle of all the fonts used to render the text, in CSS pixels.
 
@@ -25,7 +25,7 @@ const ctx = canvas.getContext("2d");
 ctx.font = "25px serif";
 const text = "Foo";
 
-const textMetrics = ctx.measureText("foo"); // returns TextMetrics object
+const textMetrics = ctx.measureText(text); // returns TextMetrics object
 const descentCssPixels = textMetrics.fontBoundingBoxDescent;
 ```
 

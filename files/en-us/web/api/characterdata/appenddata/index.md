@@ -34,9 +34,9 @@ None.
 
 ```js
 const span = document.querySelector("span");
-const textnode = span.nextSibling;
+const textNode = span.nextSibling;
 
-textnode.appendData(" - appended text.");
+textNode.appendData(" - appended text.");
 ```
 
 {{EmbedLiveSample("Example", "100%", 50)}}

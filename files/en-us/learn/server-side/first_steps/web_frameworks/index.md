@@ -79,8 +79,8 @@ While Django expects developers to define a list of URL mappings between a URL p
 ```python
 urlpatterns = [
     url(r'^$', views.index),
-    # example: /best/myteamname/5/
-    url(r'^best/(?P<team_name>\w.+?)/(?P<team_number>[0-9]+)/$', views.best),
+    # example: /best/my_team_name/5/
+    url(r'^best/(?P<team_name>\w+?)/(?P<team_number>[0-9]+)/$', views.best),
 ]
 ```
 
@@ -144,14 +144,15 @@ Web frameworks often provide a mechanism to make it easy to generate other forma
 
 For example, the Django template system allows you to specify variables using a "double-handlebars" syntax (e.g. `\{{ variable_name }}`), which will be replaced by values passed in from the view function when a page is rendered. The template system also provides support for expressions (with syntax: `{% expression %}`), which allow templates to perform simple operations like iterating list values passed into the template.
 
-> **Note:** Many other templating systems use a similar syntax, e.g.: Jinja2 (Python), handlebars (JavaScript), moustache (JavaScript), etc.
+> [!NOTE]
+> Many other templating systems use a similar syntax, e.g.: Jinja2 (Python), handlebars (JavaScript), moustache (JavaScript), etc.
 
 The code snippet below shows how this works. Continuing the "youngest team" example from the previous section, the HTML template is passed a list variable called `youngest_teams` by the view. Inside the HTML skeleton we have an expression that first checks if the `youngest_teams` variable exists, and then iterates it in a `for` loop. On each iteration the template displays the team's `team_name` value in a list item.
 
 ```django
 #best/templates/best/index.html
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <body>
     {% if youngest_teams %}
@@ -190,7 +191,8 @@ There are many other possible factors, including licensing, whether or not the f
 
 If you're an absolute beginner at programming then you'll probably choose your framework based on "ease of learning". In addition to "ease of use" of the language itself, high quality documentation/tutorials and an active community helping new users are your most valuable resources. We've chosen [Django](https://www.djangoproject.com/) (Python) and [Express](https://expressjs.com/) (Node/JavaScript) to write our examples later on in the course, mainly because they are easy to learn and have good support.
 
-> **Note:** Let's go to the main websites for [Django](https://www.djangoproject.com/) (Python) and [Express](https://expressjs.com/) (Node/JavaScript) and check out their documentation and community.
+> [!NOTE]
+> Let's go to the main websites for [Django](https://www.djangoproject.com/) (Python) and [Express](https://expressjs.com/) (Node/JavaScript) and check out their documentation and community.
 >
 > 1. Navigate to the main sites (linked above)
 >
@@ -210,7 +212,8 @@ Let's now move on, and discuss a few specific server-side web frameworks.
 
 The server-side frameworks below represent _a few_ of the most popular available at the time of writing. All of them have everything you need to be productive — they are open source, are under active development, have enthusiastic communities creating documentation and helping users on discussion boards, and are used in large numbers of high-profile websites. There are many other great server-side frameworks that you can discover using a basic internet search.
 
-> **Note:** Descriptions come (partially) from the framework websites!
+> [!NOTE]
+> Descriptions come (partially) from the framework websites!
 
 ### Django (Python)
 
@@ -222,9 +225,9 @@ Popular sites using Django (from Django home page) include: Disqus, Instagram, K
 
 ### Flask (Python)
 
-[Flask](https://flask.palletsprojects.com) is a microframework for Python.
+[Flask](https://flask.palletsprojects.com/) is a microframework for Python.
 
-While minimalist, Flask can create serious websites out of the box. It contains a development server and debugger, and includes support for [Jinja2](https://github.com/pallets/jinja) templating, secure cookies, [unit testing](https://en.wikipedia.org/wiki/Unit_testing), and [RESTful](https://www.restapitutorial.com/lessons/restfulresourcenaming.html) request dispatching. It has good documentation and an active community.
+While minimalist, Flask can create serious websites out of the box. It contains a development server and debugger, and includes support for [Jinja2](https://github.com/pallets/jinja) templating, secure cookies, [unit testing](https://en.wikipedia.org/wiki/Unit_testing), and [RESTful](https://restapitutorial.com/) request dispatching. It has good documentation and an active community.
 
 Flask has become extremely popular, particularly for developers who need to provide web services on small, resource-constrained systems (e.g. running a web server on a [Raspberry Pi](https://www.raspberrypi.org/), [Drone controllers](https://www.techuseful.com/drone-definitions-learning-the-drone-lingo/), etc.)
 
@@ -238,17 +241,17 @@ Because Express is a minimalist web framework it does not incorporate every comp
 
 Many popular server-side and full stack frameworks (comprising both server and client-side frameworks) are based on Express, including [Feathers](https://feathersjs.com/), [ItemsAPI](https://itemsapi.com/), [KeystoneJS](https://keystonejs.com/), [Kraken](https://krakenjs.com/), [LoopBack](https://loopback.io/), [MEAN](https://github.com/linnovate/mean), and [Sails](https://sailsjs.com/).
 
-A lot of high profile companies use Express, including: Uber, Accenture, IBM, etc. (a list is provided [here](https://expressjs.com/en/resources/companies-using-express.html)).
+A lot of high profile companies use Express, including: Uber, Accenture, IBM, etc.
 
 ### Deno (JavaScript)
 
-[Deno](https://deno.land/) is a simple, modern, and secure [JavaScript](/en-US/docs/Web/JavaScript)/TypeScript runtime and framework built on top of Chrome V8 and [Rust](https://www.rust-lang.org/).
+[Deno](https://deno.com/) is a simple, modern, and secure [JavaScript](/en-US/docs/Web/JavaScript)/TypeScript runtime and framework built on top of Chrome V8 and [Rust](https://www.rust-lang.org/).
 
 Deno is powered by [Tokio](https://tokio.rs/) — a Rust-based asynchronous runtime which lets it serve web pages faster. It also has internal support for [WebAssembly](/en-US/docs/WebAssembly), which enables the compilation of binary code for use on the client-side. Deno aims to fill in some of the loop-holes in [Node.js](/en-US/docs/Learn/Server-side/Node_server_without_framework) by providing a mechanism that naturally maintains better security.
 
 Deno's features include:
 
-- Security by default. [Deno modules restrict permissions](https://lyty.dev/deno/deno-permission.html) to **file**, **network**, or **environment** access unless explicitly allowed.
+- Security by default. [Deno modules restrict permissions](https://docs.deno.com/runtime/fundamentals/security/) to **file**, **network**, or **environment** access unless explicitly allowed.
 - TypeScript support **out-of-the-box**.
 - First-class await mechanism.
 - Built-in testing facility and code formatter (`deno fmt`)
@@ -265,7 +268,7 @@ Rails follows a very similar design philosophy to Django. Like Django it provide
 
 There are of course many differences due to specific design decisions and the nature of the languages.
 
-Rails has been used for high profile sites, including: [Basecamp](https://basecamp.com/), [GitHub](https://github.com/), [Shopify](https://www.shopify.com/), [Airbnb](https://www.airbnb.com/), [Twitch](https://www.twitch.tv/), [SoundCloud](https://soundcloud.com/), [Hulu](https://www.hulu.com/welcome), [Zendesk](https://www.zendesk.com/), [Square](https://square.com/), [Highrise](https://highrisehq.com/).
+Rails has been used for high profile sites, including: [Basecamp](https://basecamp.com/), [GitHub](https://github.com/), [Shopify](https://www.shopify.com/), [Airbnb](https://www.airbnb.com/), [Twitch](https://www.twitch.tv/), [SoundCloud](https://soundcloud.com/), [Hulu](https://www.hulu.com/welcome), [Zendesk](https://www.zendesk.com/), [Square](https://squareup.com/us/en), [Highrise](https://highrisehq.com/).
 
 ### Laravel (PHP)
 
@@ -298,7 +301,7 @@ Back in the early days of the web, many people learned Perl because of a wonderf
 Some of the features provided by Mojolicious are:
 
 - A real-time web framework, to easily grow single-file prototypes into well-structured MVC web applications.
-- RESTful routes, plugins, commands, Perl-ish templates, content negotiation, session management, form validation, testing framework, static file server, CGI/[PSGI](https://plackperl.org) detection, and first-class Unicode support.
+- RESTful routes, plugins, commands, Perl-ish templates, content negotiation, session management, form validation, testing framework, static file server, CGI/[PSGI](https://plackperl.org/) detection, and first-class Unicode support.
 - A full-stack HTTP and WebSocket client/server implementation with IPv6, TLS, SNI, IDNA, HTTP/SOCKS5 proxy, UNIX domain socket, Comet (long polling), keep-alive, connection pooling, timeout, cookie, multipart, and gzip compression support.
 - JSON and HTML/XML parsers and generators with CSS selector support.
 - Very clean, portable and object-oriented pure-Perl API with no hidden magic.
@@ -306,9 +309,9 @@ Some of the features provided by Mojolicious are:
 
 ### Spring Boot (Java)
 
-[Spring Boot](https://spring.io/projects/spring-boot) is one of a number of projects provided by [Spring](https://spring.io/). It is a good starting point for doing server-side web development using [Java](https://www.java.com).
+[Spring Boot](https://spring.io/projects/spring-boot/) is one of a number of projects provided by [Spring](https://spring.io/). It is a good starting point for doing server-side web development using [Java](https://www.java.com/).
 
-Although definitely not the only framework based on [Java](https://www.java.com) it is easy to use to create stand-alone, production-grade Spring-based Applications that you can "just run". It is an opinionated view of the Spring platform and third-party libraries but allows to start with minimum fuss and configuration.
+Although definitely not the only framework based on [Java](https://www.java.com/) it is easy to use to create stand-alone, production-grade Spring-based Applications that you can "just run". It is an opinionated view of the Spring platform and third-party libraries but allows to start with minimum fuss and configuration.
 
 It can be used for small problems but its strength is building larger scale applications that use a cloud approach. Usually multiple applications run in parallel talking to each other, with some providing user interaction and others doing back end work (e.g. accessing databases or other services). Load balancers help to ensure redundancy and reliability or allow geolocated handling of user requests to ensure responsiveness.
 

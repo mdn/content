@@ -104,7 +104,7 @@ if (rtcStats && rtcStats.type === "candidate-pair") {
 ```
 
 The code begins by looking at `rtcStats` to see if its {{domxref("RTCIceCandidatePairStats.type", "type")}} is `candidate-pair`.
-If it is, then we know that `rtcStats` is in fact an {{domxref("RTCIceCandidatePairStats")}} object.
+If it is, then we know that `rtcStats` is in fact an `RTCIceCandidatePairStats` object.
 We can then compute the average time elapsed between STUN connectivity checks and log that information.
 
 ## Specifications

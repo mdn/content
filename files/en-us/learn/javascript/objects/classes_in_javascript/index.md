@@ -35,7 +35,7 @@ In this article, we'll go through these features. It's worth keeping in mind tha
       </td>
     </tr>
   </tbody>
-<table>
+</table>
 
 ## Classes and constructors
 
@@ -130,7 +130,8 @@ The `Professor` class adds a new property `teaches`, so we declare that.
 
 Since we want to set `teaches` when a new `Professor` is created, we define a constructor, which takes the `name` and `teaches` as arguments. The first thing this constructor does is call the superclass constructor using {{jsxref("Operators/super", "super()")}}, passing up the `name` parameter. The superclass constructor takes care of setting `name`. After that, the `Professor` constructor sets the `teaches` property.
 
-> **Note:** If a subclass has any of its own initialization to do, it **must** first call the superclass constructor using `super()`, passing up any parameters that the superclass constructor is expecting.
+> [!NOTE]
+> If a subclass has any of its own initialization to do, it **must** first call the superclass constructor using `super()`, passing up any parameters that the superclass constructor is expecting.
 
 We've also overridden the `introduceSelf()` method from the superclass, and added a new method `grade()`, to grade a paper (our professor isn't very good, and just assigns random grades to papers).
 
@@ -179,7 +180,8 @@ summers.canStudyArchery(); // true
 summers.#year; // SyntaxError
 ```
 
-> **Note:** Code run in the Chrome console can access private properties outside the class. This is a DevTools-only relaxation of the JavaScript syntax restriction.
+> [!NOTE]
+> Code run in the Chrome console can access private properties outside the class. This is a DevTools-only relaxation of the JavaScript syntax restriction.
 
 Private data properties must be declared in the class declaration, and their names start with `#`.
 

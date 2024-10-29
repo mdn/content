@@ -89,7 +89,8 @@ Finally, we call the object's `render()` routine, passing along the
 `modelViewMatrix` and `normalMatrix` so the renderer can place and
 light the object properly.
 
-> **Note:** This example is derived from a larger example…
+> [!NOTE]
+> This example is derived from a larger example…
 > **<<<--- finish and add link --->>>**
 
 ## Specifications

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 status:
   - deprecated
   - non-standard
-browser-compat: api.MediaTrackConstraints.volume
+browser-compat: api.MediaStreamTrack.applyConstraints.volume_constraint
 ---
 
 {{APIRef("Media Capture and Streams")}}{{Deprecated_Header}}{{Non-standard_Header}}

@@ -12,7 +12,7 @@ browser-compat: api.Element.webkitmouseforcechanged_event
 
 The non-standard **`webkitmouseforcechanged`** event is fired by Safari each time the amount of pressure changes on the trackpad/touchscreen.
 
-**`webkitmouseforcechanged`** is a proprietary, WebKit-specific event introduced by Apple to support their {{domxref("Force Touch Events")}} feature.
+**`webkitmouseforcechanged`** is a proprietary, WebKit-specific event introduced by Apple to support their [Force Touch events](/en-US/docs/Web/API/Force_Touch_events) feature.
 
 This event first fires after the {{domxref("Element/mousedown_event", "mousedown")}} event and stops firing before the {{domxref("Element/mouseup_event", "mouseup")}} event.
 

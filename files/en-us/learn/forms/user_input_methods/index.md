@@ -4,6 +4,8 @@ slug: Learn/Forms/User_input_methods
 page-type: guide
 ---
 
+{{LearnSidebar}}
+
 Web forms require user input. When designing web forms, or really any web content, it's important to consider how users interact with their devices and browsers. Web user input goes beyond simple mouse and keyboard: think of touchscreens for example.
 
 In this article, we take a look at the different ways users interact with forms and other web content and provide recommendations for managing user input, real-world examples, and links to further information.
@@ -39,7 +41,8 @@ window.addEventListener("keyup", handleKeyUp, true);
 
 `handleKeyDown` and `handleKeyUp` are functions defining the control logic to be executed when the `keydown` and `keyup` events are fired.
 
-> **Note:** Have a look at the [Events reference](/en-US/docs/Web/Events) and {{domxref("KeyboardEvent")}} guide to find out more about keyboard events.
+> [!NOTE]
+> Have a look at the [Events reference](/en-US/docs/Web/Events) and {{domxref("KeyboardEvent")}} guide to find out more about keyboard events.
 
 ### Mouse
 
@@ -62,7 +65,8 @@ element.addEventListener("touchmove", handleMove, false);
 
 where `element` is the DOM element you want to register the touch events on.
 
-> **Note:** For further information about what you can do with touch events, please read our [touch events guide](/en-US/docs/Web/API/Touch_events).
+> [!NOTE]
+> For further information about what you can do with touch events, please read our [touch events guide](/en-US/docs/Web/API/Touch_events).
 
 ### Pointer Events
 
@@ -78,16 +82,17 @@ If you need slightly different layouts depending on whether the user is in portr
 
 When screen orientation matters for your form, you can read the screen orientation state, be informed when this state changes, and able to lock the screen orientation to a specific state (usually portrait or landscape) through the [Screen Orientation API](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation).
 
-- Orientation data can be retrieved through {{domxref("screenOrientation.type")}} or with CSS through the [`orientation`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#orientation) media feature.
+- Orientation data can be retrieved through {{domxref("screenOrientation.type")}} or with CSS through the [`orientation`](/en-US/docs/Web/CSS/@media/orientation) media feature.
 - When the screen orientation changes, the {{domxref("ScreenOrientation.change_event", "change")}} event is fired on the screen object.
 - Locking the screen orientation is made possible by invoking the {{domxref("ScreenOrientation.lock()")}} method.
 - The {{domxref("ScreenOrientation.unlock()")}} method removes all the previous screen locks that have been set.
 
-> **Note:** More information about the Screen Orientation API can be found in [Managing screen orientation](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation).
+> [!NOTE]
+> More information about the Screen Orientation API can be found in [Managing screen orientation](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation).
 
 ### Fullscreen
 
-If you need to present your form in fullscreen mode, such as when your form is displayed on a museum kiosk, toll booth, or really any publically displayed user interface, it is possible to do so by calling {{domxref("Element.requestFullscreen()")}} on that element:
+If you need to present your form in fullscreen mode, such as when your form is displayed on a museum kiosk, toll booth, or really any publicly displayed user interface, it is possible to do so by calling {{domxref("Element.requestFullscreen()")}} on that element:
 
 ```js
 const elem = document.getElementById("myForm");
@@ -96,7 +101,8 @@ if (elem.requestFullscreen) {
 }
 ```
 
-> **Note:** To find out more about adding fullscreen functionality to your application, read our documentation about [using fullscreen mode](/en-US/docs/Web/API/Fullscreen_API).
+> [!NOTE]
+> To find out more about adding fullscreen functionality to your application, read our documentation about [using fullscreen mode](/en-US/docs/Web/API/Fullscreen_API).
 
 ### Drag & Drop
 
@@ -116,16 +122,17 @@ Here is an example that allows a section of content to be dragged.
 
 in which we:
 
-- Set the [`draggable`](/en-US/docs/Web/HTML/Global_attributes#draggable) attribute to `true` on the element that you wish to make draggable.
+- Set the [`draggable`](/en-US/docs/Web/HTML/Global_attributes/draggable) attribute to `true` on the element that you wish to make draggable.
 - Add a listener for the [`dragstart`](/en-US/docs/Web/API/HTMLElement/dragstart_event) event and set the drag data within this listener.
 
-> **Note:** You can find more information in the [MDN Drag & Drop documentation](/en-US/docs/Web/API/HTML_Drag_and_Drop_API).
+> [!NOTE]
+> You can find more information in the [MDN Drag & Drop documentation](/en-US/docs/Web/API/HTML_Drag_and_Drop_API).
 
 ### contentEditable
 
 Generally, you should use a {{HTMLElement("textarea")}} or an appropriate {{HTMLElement("input")}} type within a {{HTMLElement("form")}} to collect data from users, along with a descriptive {{HTMLElement("label")}}. But these elements may not meet your needs. For example, rich text editors capture italic, bold, and normal text, but no native form control captures rich text. This use case requires you to create a custom control that is stylable _and_ editable. There's an attribute for that!
 
-Any DOM element can be made directly editable using the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) attribute.
+Any DOM element can be made directly editable using the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute.
 
 ```css hidden
 div {
@@ -139,7 +146,7 @@ div {
 <div contenteditable="true">This text can be edited by the user.</div>
 ```
 
-The `contenteditable` attribute automatically adds the element to the document's default tabbing order, meaning the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes#tabindex) attribute does not need to be added. However, when using non-semantic elements for data entry when [creating your own form controls](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls), you will need to add JavaScript and [ARIA](/en-US/docs/Web/Accessibility/ARIA) to retrofit the element with form control functionality for everything else.
+The `contenteditable` attribute automatically adds the element to the document's default tabbing order, meaning the [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute does not need to be added. However, when using non-semantic elements for data entry when [creating your own form controls](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls), you will need to add JavaScript and [ARIA](/en-US/docs/Web/Accessibility/ARIA) to retrofit the element with form control functionality for everything else.
 
 To provide a good user experience, any custom form control you create must be accessible and function like native form controls:
 
@@ -149,7 +156,8 @@ To provide a good user experience, any custom form control you create must be ac
 
 {{EmbedLiveSample("contentEditable")}}
 
-> **Note:** Examples and other resources can be found in the [Content Editable guide](/en-US/docs/Web/HTML/Global_attributes/contenteditable).
+> [!NOTE]
+> Examples and other resources can be found in the [Content Editable guide](/en-US/docs/Web/HTML/Global_attributes/contenteditable).
 
 ## Tutorials
 

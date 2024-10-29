@@ -9,13 +9,103 @@ spec-urls:
 
 {{SVGRef}}
 
-The **`preserveAspectRatio`** attribute indicates how an element with a viewBox providing a given aspect ratio must fit into a viewport with a different aspect ratio.
+The **`preserveAspectRatio`** attribute indicates how an element with a viewBox providing a given {{glossary("aspect ratio")}} must fit into a viewport with a different aspect ratio.
 
-Because the aspect ratio of an SVG image is defined by the {{SVGAttr('viewBox')}} attribute, if this attribute isn't set, the **`preserveAspectRatio`** attribute has no effect (_with one exception, the {{SVGElement('image')}} element, as described below_).
+The aspect ratio of an SVG image is defined by the {{SVGAttr('viewBox')}} attribute. Therefore, if `viewBox` isn't set, the `preserveAspectRatio` attribute has no effect on SVG's scaling (except in the case of the {{SVGElement('image')}} element, where `preserveAspectRatio` behaves differently as described below).
 
-## Example
+## Syntax
 
-### meet (width > height)
+```plain
+preserveAspectRatio="<align> [<meet or slice>]"
+```
+
+The `preserveAspectRatio` attribute value consists of up to two keywords: a required alignment value and an optional `meet` or `slice` keyword.
+
+The alignment value indicates whether to force uniform scaling and, if so, the alignment method to use in case the aspect ratio of the {{ SVGAttr("viewBox") }} doesn't match the aspect ratio of the viewport. `xMidYMid` is the default value. The alignment value must be one of the following keyword values:
+
+- `none`
+
+  - : Does not force uniform scaling. Scale the graphic content of the given element non-uniformly if necessary such that the element's bounding box exactly matches the viewport rectangle. Note that if `<align>` is `none`, then the optional `<meetOrSlice>` value is ignored.
+
+- `xMinYMin`
+
+  - : Forces uniform scaling.
+    Align the `<min-x>` of the element's {{ SVGAttr("viewBox") }} with the smallest X value of the viewport.
+    Align the `<min-y>` of the element's {{ SVGAttr("viewBox") }} with the smallest Y value of the viewport.
+
+- `xMidYMin`
+
+  - : Forces uniform scaling.
+    Align the midpoint X value of the element's {{ SVGAttr("viewBox") }} with the midpoint X value of the viewport.
+    Align the `<min-y>` of the element's {{ SVGAttr("viewBox") }} with the smallest Y value of the viewport.
+
+- `xMaxYMin`
+
+  - : Forces uniform scaling.
+    Align the `<min-x>+<width>` of the element's {{ SVGAttr("viewBox") }} with the maximum X value of the viewport.
+    Align the `<min-y>` of the element's {{ SVGAttr("viewBox") }} with the smallest Y value of the viewport.
+
+- `xMinYMid`
+
+  - : Forces uniform scaling.
+    Align the `<min-x>` of the element's {{ SVGAttr("viewBox") }} with the smallest X value of the viewport.
+    Align the midpoint Y value of the element's {{ SVGAttr("viewBox") }} with the midpoint Y value of the viewport.
+
+- `xMidYMid`
+
+  - : Forces uniform scaling.
+    Align the midpoint X value of the element's {{ SVGAttr("viewBox") }} with the midpoint X value of the viewport.
+    Align the midpoint Y value of the element's {{ SVGAttr("viewBox") }} with the midpoint Y value of the viewport. This is the default value.
+
+- `xMaxYMid`
+
+  - : Forces uniform scaling.
+    Align the `<min-x>+<width>` of the element's {{ SVGAttr("viewBox") }} with the maximum X value of the viewport.
+    Align the midpoint Y value of the element's {{ SVGAttr("viewBox") }} with the midpoint Y value of the viewport.
+
+- `xMinYMax`
+
+  - : Forces uniform scaling.
+    Align the `<min-x>` of the element's {{ SVGAttr("viewBox") }} with the smallest X value of the viewport.
+    Align the `<min-y>+<height>` of the element's {{ SVGAttr("viewBox") }} with the maximum Y value of the viewport.
+
+- `xMidYMax`
+
+  - : Forces uniform scaling.
+    Align the midpoint X value of the element's {{ SVGAttr("viewBox") }} with the midpoint X value of the viewport.
+    Align the `<min-y>+<height>` of the element's {{ SVGAttr("viewBox") }} with the maximum Y value of the viewport.
+
+- `xMaxYMax`
+
+  - : Forces uniform scaling.
+    Align the `<min-x>+<width>` of the element's {{ SVGAttr("viewBox") }} with the maximum X value of the viewport.
+    Align the `<min-y>+<height>` of the element's {{ SVGAttr("viewBox") }} with the maximum Y value of the viewport.
+
+The following two keywords determine how the SVG should be scaled relative to the container's bounds. Specifying the `meet` or `slice` reference is optional and, if provided, it must be one only one of two keywords. `meet` is the default value.
+
+- `meet`
+
+  - : Scales the graphic such that:
+
+    - The aspect ratio is preserved.
+    - The entire {{ SVGAttr("viewBox") }} is visible within the viewport.
+    - The {{ SVGAttr("viewBox") }} is scaled up as much as possible, while still meeting the other criteria.
+
+    In this case, if the aspect ratio of the graphic does not match the viewport, some of the viewport will extend beyond the bounds of the {{ SVGAttr("viewBox") }} (i.e., the area into which the {{ SVGAttr("viewBox") }} will draw will be smaller than the viewport).
+
+- `slice`
+
+  - : Scales the graphic such that:
+
+    - The aspect ratio is preserved.
+    - The entire viewport is covered by the {{ SVGAttr("viewBox") }}.
+    - The {{ SVGAttr("viewBox") }} is scaled down as much as possible, while still meeting the other criteria.
+
+    In this case, if the aspect ratio of the {{ SVGAttr("viewBox") }} does not match the viewport, some of the {{ SVGAttr("viewBox") }} will extend beyond the bounds of the viewport (i.e., the area into which the {{ SVGAttr("viewBox") }} will draw is larger than the viewport).
+
+## Examples
+
+### Using `meet` when width > height
 
 This example shows the use of `meet` when the element's `width` is greater than its `height`. It presents three variations, with three different alignment values: `xMidYMid`, `xMinYMid`, and `xMaxYMid`.
 
@@ -26,7 +116,7 @@ svg {
   height: 100%;
 }
 
-/* place flex element on each iframe body for responsitivity at different screen sizes */
+/* place flex element on each iframe body for responsiveness at different screen sizes */
 body {
   display: flex;
 }
@@ -104,9 +194,9 @@ rect:active {
 }
 ```
 
-{{EmbedLiveSample('meet width height', '100%', 200)}}
+{{EmbedLiveSample('Using meet when width height', '100%', 200)}}
 
-### slice (width > height)
+### Using `slice` when width > height
 
 This example shows the use of `slice` when the element's `width` is greater than its `height`. It presents three variations, with three different alignment values: `xMidYMin`, `xMidYMid`, and `xMidYMax`.
 
@@ -117,7 +207,7 @@ svg {
   height: 100%;
 }
 
-/* place flex element on each iframe body for responsitivity at different screen sizes */
+/* place flex element on each iframe body for responsiveness at different screen sizes */
 body {
   display: flex;
 }
@@ -195,9 +285,9 @@ rect:active {
 }
 ```
 
-{{EmbedLiveSample('slice width height', '100%', 200)}}
+{{EmbedLiveSample('Using slice when width height', '100%', 200)}}
 
-### meet (height > width)
+### Using `meet` when height > width
 
 This example shows the use of `meet` when the element's `height` is greater than its `width`. It presents three variations, with three different alignment values: `xMidYMin`, `xMidYMid`, and `xMidYMax`.
 
@@ -208,7 +298,7 @@ svg {
   height: 100%;
 }
 
-/* place flex element on each iframe body for responsitivity at different screen sizes */
+/* place flex element on each iframe body for responsiveness at different screen sizes */
 body {
   display: flex;
 }
@@ -286,9 +376,9 @@ rect:active {
 }
 ```
 
-{{EmbedLiveSample('meet height width', '100%', 200)}}
+{{EmbedLiveSample('Using meet when height width', '100%', 200)}}
 
-### slice (height > width)
+### Using `slice` when height > width
 
 This example shows the use of `slice` when the element's `height` is greater than its `width`. It presents three variations, with three different alignment values: `xMinYMid`, `xMidYMid`, and `xMaxYMid`.
 
@@ -299,7 +389,7 @@ svg {
   height: 100%;
 }
 
-/* place flex element on each iframe body for responsitivity at different screen sizes */
+/* place flex element on each iframe body for responsiveness at different screen sizes */
 body {
   display: flex;
 }
@@ -377,9 +467,9 @@ rect:active {
 }
 ```
 
-{{EmbedLiveSample('slice height width', '100%', 200)}}
+{{EmbedLiveSample('Using slice height width', '100%', 200)}}
 
-### none
+### Using the `none` alignment value
 
 This example shows an element with the alignment value set to `none`.
 
@@ -390,7 +480,7 @@ svg {
   height: 100%;
 }
 
-/* place flex element on each iframe body for responsitivity at different screen sizes */
+/* place flex element on each iframe body for responsiveness at different screen sizes */
 body {
   display: flex;
 }
@@ -439,69 +529,7 @@ rect:active {
 }
 ```
 
-{{EmbedLiveSample('none ', '100%', 200)}}
-
-## Syntax
-
-```plain
-preserveAspectRatio="<align> [<meetOrSlice>]"
-```
-
-Its value is made of one or two keywords: A required alignment value and an optional "meet or slice" reference as described below:
-
-- Alignment value
-
-  - : The alignment value indicates whether to force uniform scaling and, if so, the alignment method to use in case the aspect ratio of the {{ SVGAttr("viewBox") }} doesn't match the aspect ratio of the viewport. The alignment value must be one of the following keywords:
-
-    - **none**
-      Do not force uniform scaling. Scale the graphic content of the given element non-uniformly if necessary such that the element's bounding box exactly matches the viewport rectangle. _Note that if_ `<align>` _is_ `none`_, then the optional_ `<meetOrSlice>` _value is ignored_.
-    - **xMinYMin** - Force uniform scaling.
-      Align the `<min-x>` of the element's {{ SVGAttr("viewBox") }} with the smallest X value of the viewport.
-      Align the `<min-y>` of the element's {{ SVGAttr("viewBox") }} with the smallest Y value of the viewport.
-    - **xMidYMin** - Force uniform scaling.
-      Align the midpoint X value of the element's {{ SVGAttr("viewBox") }} with the midpoint X value of the viewport.
-      Align the `<min-y>` of the element's {{ SVGAttr("viewBox") }} with the smallest Y value of the viewport.
-    - **xMaxYMin** - Force uniform scaling.
-      Align the `<min-x>+<width>` of the element's {{ SVGAttr("viewBox") }} with the maximum X value of the viewport.
-      Align the `<min-y>` of the element's {{ SVGAttr("viewBox") }} with the smallest Y value of the viewport.
-    - **xMinYMid** - Force uniform scaling.
-      Align the `<min-x>` of the element's {{ SVGAttr("viewBox") }} with the smallest X value of the viewport.
-      Align the midpoint Y value of the element's {{ SVGAttr("viewBox") }} with the midpoint Y value of the viewport.
-    - **xMidYMid** (the default) - Force uniform scaling.
-      Align the midpoint X value of the element's {{ SVGAttr("viewBox") }} with the midpoint X value of the viewport.
-      Align the midpoint Y value of the element's {{ SVGAttr("viewBox") }} with the midpoint Y value of the viewport.
-    - **xMaxYMid** - Force uniform scaling.
-      Align the `<min-x>+<width>` of the element's {{ SVGAttr("viewBox") }} with the maximum X value of the viewport.
-      Align the midpoint Y value of the element's {{ SVGAttr("viewBox") }} with the midpoint Y value of the viewport.
-    - **xMinYMax** - Force uniform scaling.
-      Align the `<min-x>` of the element's {{ SVGAttr("viewBox") }} with the smallest X value of the viewport.
-      Align the `<min-y>+<height>` of the element's {{ SVGAttr("viewBox") }} with the maximum Y value of the viewport.
-    - **xMidYMax** - Force uniform scaling.
-      Align the midpoint X value of the element's {{ SVGAttr("viewBox") }} with the midpoint X value of the viewport.
-      Align the `<min-y>+<height>` of the element's {{ SVGAttr("viewBox") }} with the maximum Y value of the viewport.
-    - **xMaxYMax** - Force uniform scaling.
-      Align the `<min-x>+<width>` of the element's {{ SVGAttr("viewBox") }} with the maximum X value of the viewport.
-      Align the `<min-y>+<height>` of the element's {{ SVGAttr("viewBox") }} with the maximum Y value of the viewport.
-
-- Meet or slice reference
-
-  - : The meet or slice reference is optional and, if provided, must be one of the following keywords:
-
-    - **meet** (_the default_) - Scale the graphic such that:
-
-      - aspect ratio is preserved
-      - the entire {{ SVGAttr("viewBox") }} is visible within the viewport
-      - the {{ SVGAttr("viewBox") }} is scaled up as much as possible, while still meeting the other criteria
-
-      In this case, if the aspect ratio of the graphic does not match the viewport, some of the viewport will extend beyond the bounds of the {{ SVGAttr("viewBox") }} (i.e., the area into which the {{ SVGAttr("viewBox") }} will draw will be smaller than the viewport).
-
-    - **slice** - Scale the graphic such that:
-
-      - aspect ratio is preserved
-      - the entire viewport is covered by the {{ SVGAttr("viewBox") }}
-      - the {{ SVGAttr("viewBox") }} is scaled down as much as possible, while still meeting the other criteria
-
-      In this case, if the aspect ratio of the {{ SVGAttr("viewBox") }} does not match the viewport, some of the {{ SVGAttr("viewBox") }} will extend beyond the bounds of the viewport (i.e., the area into which the {{ SVGAttr("viewBox") }} will draw is larger than the viewport).
+{{EmbedLiveSample('Using the none alignment value', '100%', 200)}}
 
 ## Elements
 

@@ -23,21 +23,22 @@ To deliver video and audio, the general workflow is usually something like this:
 
 ```html
 <audio controls preload="auto">
-  <source src="audiofile.mp3" type="audio/mpeg" />
+  <source src="audio-file.mp3" type="audio/mpeg" />
 
   <!-- fallback for browsers that don't support mp3 -->
-  <source src="audiofile.ogg" type="audio/ogg" />
+  <source src="audio-file.ogg" type="audio/ogg" />
 
   <!-- fallback for browsers that don't support audio tag -->
-  <a href="audiofile.mp3">download audio</a>
+  <a href="audio-file.mp3">download audio</a>
 </audio>
 ```
 
 The code above will create an audio player that attempts to preload as much audio as possible for smooth playback.
 
-> **Note:** The `preload` attribute may be ignored by some mobile browsers.
+> [!NOTE]
+> The `preload` attribute may be ignored by some mobile browsers.
 
-For further info see [Cross Browser Audio Basics (HTML Audio In Detail)](/en-US/docs/Web/Media/Audio_and_video_delivery/Cross-browser_audio_basics#html5_audio_in_detail)
+For further info see [Cross Browser Audio Basics (HTML Audio In Detail)](/en-US/docs/Web/Media/Audio_and_video_delivery/Cross-browser_audio_basics#html_audio_in_detail)
 
 ### HTML Video
 
@@ -46,13 +47,13 @@ For further info see [Cross Browser Audio Basics (HTML Audio In Detail)](/en-US/
   controls
   width="640"
   height="480"
-  poster="initialimage.png"
+  poster="initial-image.png"
   autoplay
   muted>
-  <source src="videofile.mp4" type="video/mp4" />
+  <source src="video-file.mp4" type="video/mp4" />
 
   <!-- fallback for browsers that don't support mp4 -->
-  <source src="videofile.webm" type="video/webm" />
+  <source src="video-file.webm" type="video/webm" />
 
   <!-- specifying subtitle files -->
   <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English" />
@@ -63,13 +64,14 @@ For further info see [Cross Browser Audio Basics (HTML Audio In Detail)](/en-US/
     label="Norwegian" />
 
   <!-- fallback for browsers that don't support video tag -->
-  <a href="videofile.mp4">download video</a>
+  <a href="video-file.mp4">download video</a>
 </video>
 ```
 
 The code above creates a video player of dimensions 640x480 pixels, displaying a poster image until the video is played. We instruct the video to autoplay but to be muted by default.
 
-> **Note:** The `autoplay` attribute may be ignored by some mobile browsers. Also, the autoplay feature can be controversial when misused. It's strongly recommended that you read the [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide) to learn how to use autoplay wisely.
+> [!NOTE]
+> The `autoplay` attribute may be ignored by some mobile browsers. Also, the autoplay feature can be controversial when misused. It's strongly recommended that you read the [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide) to learn how to use autoplay wisely.
 
 For further info see [\<video> element](/en-US/docs/Web/HTML/Element/video) and [Creating a cross-browser video player](/en-US/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player).
 
@@ -79,9 +81,9 @@ For further info see [\<video> element](/en-US/docs/Web/HTML/Element/video) and 
 const myAudio = document.createElement("audio");
 
 if (myAudio.canPlayType("audio/mpeg")) {
-  myAudio.setAttribute("src", "audiofile.mp3");
+  myAudio.setAttribute("src", "audio-file.mp3");
 } else if (myAudio.canPlayType("audio/ogg")) {
-  myAudio.setAttribute("src", "audiofile.ogg");
+  myAudio.setAttribute("src", "audio-file.ogg");
 }
 
 myAudio.currentTime = 5;
@@ -90,7 +92,8 @@ myAudio.play();
 
 We set the source of the audio depending on the type of audio file the browser supports, then set the play-head 5 seconds in and attempt to play it.
 
-> **Note:** Play will be ignored by most browsers unless issued by a user-initiated event.
+> [!NOTE]
+> Play will be ignored by most browsers unless issued by a user-initiated event.
 
 It's also possible to feed an {{ htmlelement("audio") }} element a base64 encoded WAV file, allowing to generate audio on the fly:
 
@@ -106,9 +109,9 @@ It's also possible to feed an {{ htmlelement("audio") }} element a base64 encode
 const myVideo = document.createElement("video");
 
 if (myVideo.canPlayType("video/mp4")) {
-  myVideo.setAttribute("src", "videofile.mp4");
+  myVideo.setAttribute("src", "video-file.mp4");
 } else if (myVideo.canPlayType("video/webm")) {
-  myVideo.setAttribute("src", "videofile.webm");
+  myVideo.setAttribute("src", "video-file.webm");
 }
 
 myVideo.width = 480;
@@ -119,7 +122,7 @@ We set the source of the video depending on the type of video file the browser s
 
 ## Web Audio API
 
-In this example we retrieve an MP3 file using the {{domxref("fetch()")}} API, load it into a source, and play it.
+In this example we retrieve an MP3 file using the {{domxref("Window/fetch", "fetch()")}} API, load it into a source, and play it.
 
 ```js
 let audioCtx;
@@ -151,7 +154,7 @@ play.addEventListener("click", async () => {
 });
 ```
 
-You can [run the full example live](https://mdn.github.io/webaudio-examples/decode-audio-data/promise/), or [view the source](https://github.com/mdn/webaudio-examples/blob/main/decode-audio-data/promise/).
+You can [run the full example live](https://mdn.github.io/webaudio-examples/decode-audio-data/promise/), or [view the source](https://github.com/mdn/webaudio-examples/tree/main/decode-audio-data/promise).
 
 Find more about Web Audio API basics in [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API).
 
@@ -188,7 +191,7 @@ if (navigator.mediaDevices) {
 
 To find out more, read our {{domxref("MediaDevices.getUserMedia")}} page.
 
-## Mediastream Recording
+## MediaStream Recording
 
 New standards are being rolled out to allow your browser to grab media from your mic or camera using `getUserMedia` and record it instantly using the new MediaStream Recording API. You take the stream you receive from `getUserMedia`, pass it to a `MediaRecorder` object, take the resulting output and feed it to your audio or video source\*.
 
@@ -241,7 +244,8 @@ New formats and protocols are being rolled out to facilitate adaptive streaming.
 
 The main formats used for adaptive streaming are [HLS](/en-US/docs/Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_video#hls) and [MPEG-DASH](/en-US/docs/Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_video#mpeg-dash). MSE has been designed with DASH in mind. MSE defines byte streams according to [ISOBMFF](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/isobmff-byte-stream-format.html) and [M2TS](https://en.wikipedia.org/wiki/M2ts) (both supported in DASH, the latter supported in HLS). Generally speaking, if you are interested in standards, are looking for flexibility, or wish to support most modern browsers, you are probably better off with DASH.
 
-> **Note:** Currently Safari does not support DASH although dash.js will work on newer versions of Safari scheduled for release with OSX Yosemite.
+> [!NOTE]
+> Currently Safari does not support DASH although dash.js will work on newer versions of Safari scheduled for release with OSX Yosemite.
 
 DASH also provides a number of profiles including simple onDemand profiles that require no preprocessing and splitting up of media files. There are also a number of cloud based services that will convert your media to both HLS and DASH.
 
@@ -282,7 +286,7 @@ window.onload = () => {
   }
 
   function checkKey(e) {
-    if (e.keycode === 32) {
+    if (e.code === "Space") {
       // space bar
       switchState();
     }
@@ -425,7 +429,6 @@ Your files may have been encoded incorrectly — try encoding using one of the f
 - [Handbrake](https://handbrake.fr/) — Open Source Video Transcoder
 - [Firefogg](http://www.firefogg.org/) — Video and Audio encoding for Firefox
 - [FFmpeg2](https://www.ffmpeg.org/) — Comprehensive command line encoder
-- [Libav](https://libav.org/) — Comprehensive command line encoder
 - [Vid.ly](https://m.vid.ly/) — Video player, transcoding and delivery
 - [Internet Archive](https://archive.org/) — Free transcoding and storage
 
@@ -452,8 +455,8 @@ Another way to show the fallback content of a video, when none of the sources co
 ```js
 const v = document.querySelector("video");
 const sources = v.querySelectorAll("source");
-const lastsource = sources[sources.length - 1];
-lastsource.addEventListener(
+const lastSource = sources[sources.length - 1];
+lastSource.addEventListener(
   "error",
   (ev) => {
     const d = document.createElement("div");
@@ -477,13 +480,13 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 ### Video only
 
 - [flowplayer](https://flowplayer.com/): Gratis with a flowplayer logo watermark. Open source (GPL licensed.)
-- [JWPlayer](https://www.jwplayer.com): Requires registration to download. Open Source Edition (Creative Commons License.)
+- [JWPlayer](https://jwplayer.com/): Requires registration to download. Open Source Edition (Creative Commons License.)
 - [SublimeVideo](https://www.sublimevideo.net/): Requires registration. Form based set up with domain specific link to CDN hosted library.
 - [Video.js](https://videojs.com/): Gratis and Open Source (Apache 2 Licensed.)
 
 ### Audio and Video
 
-- [jPlayer](https://jPlayer.org): Gratis and Open Source (MIT Licensed.)
+- [jPlayer](https://jPlayer.org/): Gratis and Open Source (MIT Licensed.)
 - [mediaelement.js](https://www.mediaelementjs.com/): Gratis and Open Source (MIT Licensed.)
 
 ### Web Audio API
@@ -523,7 +526,8 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 - [Easy audio capture with the MediaRecorder API](https://hacks.mozilla.org/2014/06/easy-audio-capture-with-the-mediarecorder-api/)
   - : Explains the basics of using the MediaStream Recording API to directly record a media stream.
 
-> **Note:** Firefox OS versions 1.3 and above support the [RTSP](https://en.wikipedia.org/wiki/Real_Time_Streaming_Protocol) protocol for streaming video delivery. A fallback solution for older versions would be to use `<video>` along with a suitable format for Gecko (such as WebM) to serve fallback content. More information will be published on this in good time.
+> [!NOTE]
+> Firefox OS versions 1.3 and above support the [RTSP](https://en.wikipedia.org/wiki/Real_Time_Streaming_Protocol) protocol for streaming video delivery. A fallback solution for older versions would be to use `<video>` along with a suitable format for Gecko (such as WebM) to serve fallback content. More information will be published on this in good time.
 
 ## References
 

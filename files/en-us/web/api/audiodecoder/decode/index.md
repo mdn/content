@@ -3,12 +3,10 @@ title: "AudioDecoder: decode() method"
 short-title: decode()
 slug: Web/API/AudioDecoder/decode
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.AudioDecoder.decode
 ---
 
-{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`decode()`** method of the {{domxref("AudioDecoder")}} interface enqueues a control message to decode a given chunk of audio.
 

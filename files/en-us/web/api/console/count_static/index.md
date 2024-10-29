@@ -13,8 +13,8 @@ The **`console.count()`** static method logs the number of times that this parti
 ## Syntax
 
 ```js-nolint
-count()
-count(label)
+console.count()
+console.count(label)
 ```
 
 ### Parameters
@@ -31,17 +31,13 @@ None ({{jsxref("undefined")}}).
 For example, given code like this:
 
 ```js
-let user = "";
-
-function greet() {
+function greet(user) {
   console.count();
   return `hi ${user}`;
 }
 
-user = "bob";
-greet();
-user = "alice";
-greet();
+greet("bob");
+greet("alice");
 greet();
 console.count();
 ```
@@ -60,18 +56,14 @@ The label is displayed as `default` because no explicit label was supplied.
 If we pass the `user` variable as the `label` argument to the first invocation of `console.count()`, and the string "alice" to the second:
 
 ```js
-let user = "";
-
-function greet() {
+function greet(user) {
   console.count(user);
   return `hi ${user}`;
 }
 
-user = "bob";
-greet();
-user = "alice";
-greet();
-greet();
+greet("bob");
+greet("alice");
+greet("alice");
 console.count("alice");
 ```
 

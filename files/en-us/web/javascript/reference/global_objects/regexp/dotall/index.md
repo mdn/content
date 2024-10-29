@@ -20,7 +20,28 @@ The **`dotAll`** accessor property of {{jsxref("RegExp")}} instances returns whe
 - U+2028 LINE SEPARATOR
 - U+2029 PARAGRAPH SEPARATOR
 
-This effectively means the dot will match any character on the Unicode Basic Multilingual Plane (BMP). To allow it to match astral characters, the `u` (unicode) flag should be used. Using both flags in conjunction allows the dot to match any Unicode character, without exceptions.
+This effectively means the dot will match any UTF-16 code unit. However, it will _not_ match characters that are outside of the Unicode Basic Multilingual Plane (BMP), also known as astral characters, which are represented as [surrogate pairs](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters) and necessitate matching with two `.` patterns instead of one.
+
+```js
+"😄".match(/(.)(.)/s);
+// Array(3) [ "😄", "\ud83d", "\ude04" ]
+```
+
+The [`u`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) (unicode) flag can be used to allow the dot to match astral characters as a single character.
+
+```js
+"😄".match(/./su);
+// Array [ "😄" ]
+```
+
+Note that a pattern such as `.*` is still capable of _consuming_ astral characters as part of a larger context, even without the `u` flag.
+
+```js
+"😄".match(/.*/s);
+// Array [ "😄" ]
+```
+
+Using both the `s` and `u` flags in conjunction allows the dot to match any Unicode character in a more intuitive manner.
 
 The set accessor of `dotAll` is `undefined`. You cannot change this property directly.
 

@@ -57,10 +57,11 @@ if (document.elementsFromPoint) {
     }
   });
 } else {
-  output.innerHTML =
-    '<span style="color: red;">' +
-    "Browser does not support <code>document.elementsFromPoint()</code>" +
-    "</span>";
+  output.innerHTML = `<span style="color: red">
+  Browser does not support
+  <code>document.elementsFromPoint()</code>
+</span>
+`;
 }
 ```
 

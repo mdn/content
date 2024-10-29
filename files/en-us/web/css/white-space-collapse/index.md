@@ -7,9 +7,10 @@ browser-compat: css.properties.white-space-collapse
 
 {{CSSRef}}
 
-The **`white-space-collapse`** CSS property controls how {{Glossary("whitespace", "white space")}} inside an element is collapsed.
+The **`white-space-collapse`** [CSS](/en-US/docs/Web/CSS) property controls how {{Glossary("whitespace", "white space")}} inside an element is collapsed.
 
-> **Note:** The `white-space-collapse` and {{CSSxRef("text-wrap")}} properties can be declared together using the {{CSSxRef("white-space")}} shorthand property.
+> [!NOTE]
+> The `white-space-collapse` and {{CSSxRef("text-wrap")}} properties can be declared together using the {{CSSxRef("white-space")}} shorthand property.
 
 ## Syntax
 
@@ -45,7 +46,7 @@ The `white-space-collapse` property is specified as a single keyword chosen from
   - : The behavior is identical to `preserve`, except that:
     - Any sequence of preserved white space always takes up space, including at the end of the line.
     - A line-breaking opportunity exists after every preserved white space character, including between white space characters.
-    - Preserved spaces take up space and do not hang, thus affecting the box's intrinsic sizes (`min-content` size and `max-content` size).
+    - Preserved spaces take up space and do not hang, thus affecting the box's intrinsic sizes ({{cssxref("min-content")}} size and {{cssxref("max-content")}} size).
 
 > **Note:** _Segment break characters_ are characters such as line feeds that cause text to break onto new lines.
 
@@ -76,14 +77,17 @@ User agents handle white space collapsing as follows:
 
 <!-- prettier-ignore-start -->
 ```html
-<h2 class="collapse">Default behavior; all whitespace is 
-    collapsed          in the          heading     .</h2>
+<h2 class="collapse">Default behavior;
+  all   whitespace   is   collapsed
+  in    the          heading       .</h2>
 
-<h2 class="preserve">In this case all whitespace is 
-    preserved          in the          heading     .</h2>
+<h2 class="preserve">In this case
+  all   whitespace   is   preserved
+  in    the          heading       .</h2>
 
-<h2 class="preserve-breaks">In this case only the line break is 
-    preserved          in the          heading     .</h2>
+<h2 class="preserve-breaks">In this case only
+  the   line breaks  are  preserved
+  in    the          heading       .</h2>
 ```
 <!-- prettier-ignore-end -->
 

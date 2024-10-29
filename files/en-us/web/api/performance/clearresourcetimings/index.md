@@ -6,9 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.Performance.clearResourceTimings
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
-The **`clearResourceTimings()`** method removes all performance entries with an {{domxref("PerformanceEntry.entryType","entryType")}} of "`resource`" from the browser's performance timeline and sets the size of the performance resource data buffer to zero.
+The **`clearResourceTimings()`** method removes all performance entries with an {{domxref("PerformanceEntry.entryType","entryType")}} of `"resource"` from the browser's performance timeline and sets the size of the performance resource data buffer to zero.
 
 To set the size of the browser's performance resource data buffer, use the
 {{domxref("Performance.setResourceTimingBufferSize()")}} method.
@@ -42,7 +42,7 @@ performance.getEntriesByType("resource").length; // 0
 
 ### Taking records and emptying performance observers
 
-When using {{domxref("PerformanceObserver")}} objects (especially with the `buffered` flag set to `true`), the performance resource buffer might get full quickly. However, instead of clearing the buffer, you can also store the current list of performance entries and empty the performance observer using the {{domxref("PerformanceObserver.takeRecords()")}} method. This works with all kinds of performance entry types, not just "`resource`" entries.
+When using {{domxref("PerformanceObserver")}} objects (especially with the `buffered` flag set to `true`), the performance resource buffer might get full quickly. However, instead of clearing the buffer, you can also store the current list of performance entries and empty the performance observer using the {{domxref("PerformanceObserver.takeRecords()")}} method. This works with all kinds of performance entry types, not just `"resource"` entries.
 
 ```js
 function perfObserver(list, observer) {

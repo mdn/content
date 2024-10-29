@@ -24,7 +24,7 @@ Math.fround(doubleFloat)
 
 ### Return value
 
-The nearest [32-bit single precision](https://en.wikipedia.org/wiki/Single-precision_floating-point_format) float representation of `x`.
+The nearest [32-bit single precision](https://en.wikipedia.org/wiki/Single-precision_floating-point_format) float representation of `doubleFloat`.
 
 ## Description
 

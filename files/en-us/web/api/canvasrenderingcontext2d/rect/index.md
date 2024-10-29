@@ -17,7 +17,8 @@ anything. To draw the rectangle onto a canvas, you can use the
 {{domxref("CanvasRenderingContext2D.fill", "fill()")}} or
 {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} methods.
 
-> **Note:** To both create and render a rectangle in one step, use the
+> [!NOTE]
+> To both create and render a rectangle in one step, use the
 > {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} or
 > {{domxref("CanvasRenderingContext2D.strokeRect", "strokeRect()")}} methods.
 

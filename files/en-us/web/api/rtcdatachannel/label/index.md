@@ -19,7 +19,8 @@ decisions made when building your site or app.
 
 A unique ID can be found in the {{domxref("RTCDataChannel.id", "id")}} property.
 
-> **Note:** A data channel's label is set when the channel is created by calling
+> [!NOTE]
+> A data channel's label is set when the channel is created by calling
 > {{domxref("RTCPeerConnection.createDataChannel()")}}. It cannot be changed after that.
 
 ## Value
@@ -39,8 +40,12 @@ const dc = pc.createDataChannel("my channel");
 
 // …
 
-document.getElementById("channel-name").innerHTML =
-  `<span class='channelName'>${dc.label}</span>`;
+document.getElementById("channel-name").appendChild(
+  Object.assign(document.createElement("span"), {
+    className: "channelName",
+    textContent: dc.label,
+  }),
+);
 ```
 
 ## Specifications

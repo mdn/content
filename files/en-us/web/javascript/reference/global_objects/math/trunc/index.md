@@ -50,7 +50,8 @@ Math.trunc(Infinity); // Infinity
 
 ### Using bitwise no-ops to truncate numbers
 
-> **Warning:** This is not a polyfill for `Math.trunc()` because of non-negligible edge cases.
+> [!WARNING]
+> This is not a polyfill for `Math.trunc()` because of non-negligible edge cases.
 
 Bitwise operations convert their operands to 32-bit integers, which people have historically taken advantage of to truncate float-point numbers. Common techniques include:
 

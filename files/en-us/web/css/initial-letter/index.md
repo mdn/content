@@ -2,12 +2,10 @@
 title: initial-letter
 slug: Web/CSS/initial-letter
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.initial-letter
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The `initial-letter` CSS property sets styling for dropped, raised, and sunken initial letters.
 
@@ -95,5 +93,4 @@ The keyword value `normal`, or a `<number>` optionally followed by an `<integer>
 
 ## See also
 
-- {{cssxref("initial-letter-align")}}
 - [Drop caps in CSS](https://www.oddbird.net/2017/01/03/initial-letter/)

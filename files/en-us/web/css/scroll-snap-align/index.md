@@ -7,17 +7,23 @@ browser-compat: css.properties.scroll-snap-align
 
 {{CSSRef}}
 
-The `scroll-snap-align` property specifies the box's snap position as an alignment of its snap area (as the alignment subject) within its snap container's snapport (as the alignment container). The two values specify the snapping alignment in the block axis and inline axis, respectively. If only one value is specified, the second value defaults to the same value.
+The `scroll-snap-align` property specifies the box's snap position as an alignment of its [snap area](/en-US/docs/Glossary/Scroll_snap#snap_area) (as the alignment subject) within its snap container's snap port (as the alignment container).
 
 {{EmbedInteractiveExample("pages/css/scroll-snap-align.html")}}
 
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Single keyword value */
 scroll-snap-align: none;
-scroll-snap-align: start end; /* when two values set first is block, second inline */
 scroll-snap-align: center;
+scroll-snap-align: start;
+scroll-snap-align: end;
+
+/* Two keyword values */
+scroll-snap-align: start end;
+scroll-snap-align: end center;
+scroll-snap-align: center start;
 
 /* Global values */
 scroll-snap-align: inherit;
@@ -29,10 +35,12 @@ scroll-snap-align: unset;
 
 ### Values
 
+One or two values can be specified for the `scroll-snap-align` property. If one value is set, it is applied to both the block and inline axes. If two values are set, the first value controls the block axis and the second value controls the inline axis.
+
 - `none`
   - : The box does not define a snap position in that axis.
 - `start`
-  - : The start alignment of this box's scroll snap area, within the scroll container's snapport is a snap position in this axis.
+  - : The start alignment of this box's scroll [snap area](/en-US/docs/Glossary/Scroll_snap#snap_area), within the scroll container's [snapport](/en-US/docs/Glossary/Scroll_snap#snapport) is a snap position in this axis.
 - `end`
   - : The end alignment of this box's scroll snap area, within the scroll container's snapport is a snap position in this axis.
 - `center`

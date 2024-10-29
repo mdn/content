@@ -22,7 +22,7 @@ The **`WebTransportBidirectionalStream`** interface of the {{domxref("WebTranspo
 
 ### Bidirectional transmission initiated by the user agent
 
-To open a bidirectional stream from a user agent, you use the {{domxref("WebTransport.createBidirectionalStream()")}} method to get a reference to a {{domxref("WebTransportBidirectionalStream")}}. The `readable` and `writable` properties return references to `WebTransportReceiveStream` and `WebTransportSendStream` instances.
+To open a bidirectional stream from a user agent, you use the {{domxref("WebTransport.createBidirectionalStream()")}} method to get a reference to a `WebTransportBidirectionalStream`. The `readable` and `writable` properties return references to `WebTransportReceiveStream` and `WebTransportSendStream` instances.
 These inherit from `ReadableStream` and `WritableStream` respectively, and can be used to read from and write to the server.
 
 ```js

@@ -41,7 +41,8 @@ They've been a feature of the Web since the beginning, and are what makes the We
 Hyperlinks allow us to link documents to other documents or resources, link to specific parts of documents, or make apps available at a web address.
 Almost any web content can be converted to a link so that when clicked or otherwise activated the web browser goes to another web address ({{glossary("URL")}}).
 
-> **Note:** A URL can point to HTML files, text files, images, text documents, video and audio files, or anything else that lives on the Web.
+> [!NOTE]
+> A URL can point to HTML files, text files, images, text documents, video and audio files, or anything else that lives on the Web.
 > If the web browser doesn't know how to display or handle the file, it will ask you if you want to open the file (in which case the duty of opening or handling the file is passed to a suitable native app on the device) or download the file (in which case you can try to deal with it later on).
 
 For example, the BBC homepage contains many links that point not only to multiple news stories, but also different areas of the site (navigation functionality), login/registration pages (user tools), and more.
@@ -100,7 +101,8 @@ img {
 This makes the MDN logo a link:
 {{EmbedLiveSample('Image links', '100%', 150)}}
 
-> **Note:** You'll find out more about using images on the Web in a future article.
+> [!NOTE]
+> You'll find out more about using images on the Web in a future article.
 
 ### Adding supporting information with the title attribute
 
@@ -122,7 +124,8 @@ This gives us the following result and hovering over the link displays the title
 
 {{EmbedLiveSample('Adding supporting information with the title attribute', '100%', 150)}}
 
-> **Note:** A link title is only revealed on mouse hover, which means that people relying on keyboard controls or touchscreens to navigate web pages will have difficulty accessing title information.
+> [!NOTE]
+> A link title is only revealed on mouse hover, which means that people relying on keyboard controls or touchscreens to navigate web pages will have difficulty accessing title information.
 > If a title's information is truly important to the usability of the page, then you should present it in a manner that will be accessible to all users, for example by putting it in the regular text.
 
 ### Active learning: creating your own example link
@@ -170,12 +173,13 @@ There are also two directories inside our root — `pdfs` and `projects`. These 
   <p>A link to my <a href="../pdfs/project-brief.pdf">project brief</a>.</p>
   ```
 
-> **Note:** You can combine multiple instances of these features into complex URLs, if needed, for example: `../../../complex/path/to/my/file.html`.
+> [!NOTE]
+> You can combine multiple instances of these features into complex URLs, if needed, for example: `../../../complex/path/to/my/file.html`.
 
 ### Document fragments
 
 It's possible to link to a specific part of an HTML document, known as a **document fragment**, rather than just to the top of the document.
-To do this you first have to assign an [`id`](/en-US/docs/Web/HTML/Global_attributes#id) attribute to the element you want to link to.
+To do this you first have to assign an [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute to the element you want to link to.
 It normally makes sense to link to a specific heading, so this would look something like the following:
 
 ```html
@@ -233,14 +237,15 @@ Let's look at a specific example:
 **Good** link text: [Download Firefox](https://www.mozilla.org/en-US/firefox/new/?redirect_source=firefox-com)
 
 ```html example-good
-<p><a href="https://www.mozilla.org/firefox/">Download Firefox</a></p>
+<p><a href="https://www.mozilla.org/en-US/firefox/">Download Firefox</a></p>
 ```
 
-**Bad** link text: [Click here](https://www.mozilla.org/firefox/) to download Firefox
+**Bad** link text: [Click here](https://www.mozilla.org/en-US/firefox/) to download Firefox
 
 ```html example-bad
 <p>
-  <a href="https://www.mozilla.org/firefox/">Click here</a> to download Firefox
+  <a href="https://www.mozilla.org/en-US/firefox/">Click here</a> to download
+  Firefox
 </p>
 ```
 
@@ -313,7 +318,8 @@ The finished example should look similar to the following page:
 
 ![An example of a simple HTML navigation menu, with home, pictures, projects, and social menu items](navigation-example.png)
 
-> **Note:** If you get stuck, or aren't sure if you have got it right, you can check the [navigation-menu-marked-up](https://github.com/mdn/learning-area/tree/main/html/introduction-to-html/navigation-menu-marked-up) directory to see the correct answer.
+> [!NOTE]
+> If you get stuck, or aren't sure if you have got it right, you can check the [navigation-menu-marked-up](https://github.com/mdn/learning-area/tree/main/html/introduction-to-html/navigation-menu-marked-up) directory to see the correct answer.
 
 ## Email links
 
@@ -346,7 +352,8 @@ Here's an example that includes a cc, bcc, subject and body:
 </a>
 ```
 
-> **Note:** The values of each field must be URL-encoded with non-printing characters (invisible characters like tabs, carriage returns, and page breaks) and spaces [percent-escaped](https://en.wikipedia.org/wiki/Percent-encoding).
+> [!NOTE]
+> The values of each field must be URL-encoded with non-printing characters (invisible characters like tabs, carriage returns, and page breaks) and spaces {{Glossary("Percent-encoding", "percent-escaped")}}.
 > Also, note the use of the question mark (`?`) to separate the main URL from the field values, and ampersands (&) to separate each field in the `mailto:` URL.
 > This is standard URL query notation.
 > Read [The GET method](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data#the_get_method) to understand what URL query notation is more commonly used for.

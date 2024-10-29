@@ -1,5 +1,6 @@
 ---
 title: "HTML attribute: disabled"
+short-title: disabled
 slug: Web/HTML/Attributes/disabled
 page-type: html-attribute
 browser-compat:
@@ -26,7 +27,8 @@ The `disabled` attribute is supported by {{ HTMLElement("button") }}, {{ HTMLEle
 
 This Boolean disabled attribute indicates that the user cannot interact with the control or its descendant controls. If this attribute is not specified, the control inherits its setting from the containing element, for example `fieldset`; if there is no containing element with the `disabled` attribute set, and the control itself does not have the attribute, then the control is enabled. If declared on an {{ HTMLElement("optgroup") }}, the select is still interactive (unless otherwise disabled), but none of the items in the option group are selectable.
 
-> **Note:** If a {{ HTMLElement("fieldset") }} is disabled, the descendant form controls are all disabled, with the exception of form controls within the {{ HTMLElement("legend") }}.
+> [!NOTE]
+> If a {{ HTMLElement("fieldset") }} is disabled, the descendant form controls are all disabled, with the exception of form controls within the {{ HTMLElement("legend") }}.
 
 When a supporting element has the `disabled` attribute applied, the {{cssxref(":disabled")}} pseudo-class also applies to it. Conversely, elements that support the `disabled` attribute but don't have the attribute set match the {{cssxref(":enabled")}} pseudo-class.
 
@@ -40,13 +42,14 @@ The difference between `disabled` and [`readonly`](/en-US/docs/Web/HTML/Attribut
 
 Because a disabled field cannot have its value changed, [`required`](/en-US/docs/Web/HTML/Attributes/required) does not have any effect on inputs with the `disabled` attribute also specified. Additionally, since the elements become immutable, most other attributes, such as [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern), have no effect, until the control is enabled.
 
-> **Note:** The `required` attribute is not permitted on inputs with the `disabled` attribute specified.
+> [!NOTE]
+> The `required` attribute is not permitted on inputs with the `disabled` attribute specified.
 
 ### Usability
 
 Browsers display disabled form controls greyed as disabled form controls are immutable, won't receive focus or any browsing events, like mouse clicks or focus-related ones, and aren't submitted with the form.
 
-If present on a supporting elements, the `{{cssxref(':disabled')}}` pseudo class will match. If the attribute is not included, the `{{cssxref(':enabled')}}` pseudo class will match. If the element doesn't support the disabled attribute, the attribute will have no effect, including not leading to being matched by the `:disabled` and `:enabled` pseudo classes.
+If present on a supporting elements, the {{cssxref(':disabled')}} pseudo class will match. If the attribute is not included, the {{cssxref(':enabled')}} pseudo class will match. If the element doesn't support the disabled attribute, the attribute will have no effect, including not leading to being matched by the `:disabled` and `:enabled` pseudo classes.
 
 ### Constraint validation
 
@@ -61,12 +64,12 @@ When form controls are disabled, many browsers will display them in a lighter, g
   <legend>Checkboxes</legend>
   <p>
     <label>
-      <input type="checkbox" name="chbox" value="regular" /> Regular
+      <input type="checkbox" name="ch-box" value="regular" /> Regular
     </label>
   </p>
   <p>
     <label>
-      <input type="checkbox" name="chbox" value="disabled" disabled /> disabled
+      <input type="checkbox" name="ch-box" value="disabled" disabled /> disabled
     </label>
   </p>
 </fieldset>

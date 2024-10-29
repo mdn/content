@@ -18,7 +18,7 @@ In practice, web developers don't need to implement compression mechanisms, both
 
 Each data type has some redundancy, that is _wasted space_, in it. If text can typically have as much as 60% redundancy, this rate can be much higher for some other media like audio and video. Unlike text, these other media types use a lot of space to store their data and the need to optimize storage and regain space was apparent very early. Engineers designed the optimized compression algorithm used by file formats designed for this specific purpose. Compression algorithms used for files can be grouped into two broad categories:
 
-- _Loss-less compression_, where the compression-uncompression cycle doesn't alter the data that is recovered. It matches (byte to byte) with the original.
+- _Loss-less compression_, where the compression-decompression cycle doesn't alter the data that is recovered. It matches (byte to byte) with the original.
   For images, `gif` or `png` are using lossless compression.
 - _Lossy compression_, where the cycle alters the original data in a (hopefully) imperceptible way for the user.
   Video formats on the Web are lossy; the `jpeg` image format is also lossy.
@@ -27,7 +27,8 @@ Some formats can be used for both loss-less or lossy compression, like `webp`, a
 
 Lossy compression algorithms are usually more efficient than loss-less ones.
 
-> **Note:** As compression works better on a specific kind of files, it usually provides nothing to compress them a second time. In fact, this is often counterproductive as the cost of the overhead (algorithms usually need a dictionary that adds to the initial size) can be higher than the extra gain in compression resulting in a larger file. Do not use the two following techniques for files in a compressed format.
+> [!NOTE]
+> As compression works better on a specific kind of files, it usually provides nothing to compress them a second time. In fact, this is often counterproductive as the cost of the overhead (algorithms usually need a dictionary that adds to the initial size) can be higher than the extra gain in compression resulting in a larger file. Do not use the two following techniques for files in a compressed format.
 
 ## End-to-end compression
 
@@ -71,9 +72,9 @@ sequenceDiagram
 
 ![A client requesting content with an 'Accept-Encoding: br, gzip' header. The server responds with a body compressed using the Brotli algorithm and the required 'Content-Encoding' and 'Vary' headers.](httpcompression1.svg)
 
-As compression brings significant performance improvements, it is recommended to activate it for all files, but already compressed ones like images, audio files and videos.
+As compression brings significant performance improvements, it is recommended to activate it for all files except already compressed ones like images, audio files and videos.
 
-Apache supports compression and uses [mod_deflate](https://httpd.apache.org/docs/current/mod/mod_deflate.html); for Nginx there is [ngx_http_gzip_module](https://nginx.org/en/docs/http/ngx_http_gzip_module.html); for IIS, the [`<httpCompression>`](https://docs.microsoft.com/iis/configuration/system.webServer/httpCompression/) element.
+Apache supports compression and uses [mod_deflate](https://httpd.apache.org/docs/current/mod/mod_deflate.html); for Nginx there is [ngx_http_gzip_module](https://nginx.org/en/docs/http/ngx_http_gzip_module.html); for IIS, the [`<httpCompression>`](https://learn.microsoft.com/en-us/iis/configuration/system.webServer/httpCompression/) element.
 
 ## Hop-by-hop compression
 
@@ -126,7 +127,7 @@ sequenceDiagram
     Note over Node2: Compresses body and forwards message.
     Node2->>Node1: HTTP/1.1 200 OK<br/>Transfer-Encoding: br
 
-    Note over Node1: Uncompresses resource and returns message to Client.
+    Note over Node1: Decompresses resource and returns message to Client.
     Node1->>Client: HTTP/1.1 200 OK
 -->
 

@@ -7,7 +7,7 @@ page-type: guide
 {{DefaultAPISidebar("Web Workers API") }}
 
 The **structured clone algorithm** copies complex JavaScript objects.
-It is used internally when invoking {{domxref("structuredClone()")}}, to transfer data between [Workers](/en-US/docs/Web/API/Worker) via {{domxref("Worker.postMessage()", "postMessage()")}}, storing objects with [IndexedDB](/en-US/docs/Glossary/IndexedDB), or copying objects for [other APIs](#see_also).
+It is used internally when invoking {{DOMxRef("WorkerGlobalScope.structuredClone", "structuredClone()")}}, to transfer data between [Workers](/en-US/docs/Web/API/Worker) via {{domxref("Worker.postMessage()", "postMessage()")}}, storing objects with [IndexedDB](/en-US/docs/Glossary/IndexedDB), or copying objects for [other APIs](#see_also).
 
 It clones by recursing through the input object while maintaining a map of previously visited references, to avoid infinitely traversing cycles.
 
@@ -21,6 +21,7 @@ It clones by recursing through the input object while maintaining a map of previ
   - Property descriptors, setters, getters, and similar metadata-like features are not duplicated.
     For example, if an object is marked readonly with a [property descriptor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor), it will be read/write in the duplicate, since that's the default.
   - The prototype chain is not walked or duplicated.
+  - [Class private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) are not duplicated. (Although private properties of built-in types may.)
 
 ## Supported types
 
@@ -63,6 +64,9 @@ Browsers must serialize the properties `name` and `message`, and are expected to
 - {{domxref("DOMQuad")}}
 - {{domxref("DOMRect")}}
 - {{domxref("DOMRectReadOnly")}}
+- {{domxref("EncodedAudioChunk")}}
+- {{domxref("EncodedVideoChunk")}}
+- {{domxref("FencedFrameConfig")}}
 - {{domxref("File")}}
 - {{domxref("FileList")}}
 - {{domxref("FileSystemDirectoryHandle")}}
@@ -70,16 +74,24 @@ Browsers must serialize the properties `name` and `message`, and are expected to
 - {{domxref("FileSystemHandle")}}
 - {{domxref("GPUCompilationInfo")}}
 - {{domxref("GPUCompilationMessage")}}
+- {{domxref("GPUPipelineError")}}
 - {{domxref("ImageBitmap")}}
 - {{domxref("ImageData")}}
 - {{domxref("RTCCertificate")}}
+- {{domxref("RTCEncodedAudioFrame")}}
+- {{domxref("RTCEncodedVideoFrame")}}
 - {{domxref("VideoFrame")}}
+- {{domxref("WebTransportError")}}
+
+> [!NOTE]
+> Serializable objects are marked up in [Web IDL files](https://github.com/w3c/webref/tree/main/ed/idl) with the attribute `[Serializable]`.
 
 ## See also
 
 - [HTML Specification: Safe passing of structured data](https://html.spec.whatwg.org/multipage/infrastructure.html#safe-passing-of-structured-data)
 - [Transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects)
-- {{domxref("structuredClone()")}}
+- {{DOMxRef("Window.structuredClone()")}}
+- {{DOMxRef("WorkerGlobalScope.structuredClone()")}}
 - {{domxref("window.postMessage()")}}
 - [Web Workers](/en-US/docs/Web/API/Web_Workers_API)
 - [IndexedDB](/en-US/docs/Web/API/IndexedDB_API)

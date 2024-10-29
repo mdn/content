@@ -36,7 +36,7 @@ If the iterable contains one or more non-promise values and/or an already settle
 
 ### Using Promise.race()
 
-This example shows how `Promise.race()` can be used to race several timers implemented with [`setTimeout()`](/en-US/docs/Web/API/setTimeout). The timer with the shortest time always wins the race and becomes the resulting promise's state.
+This example shows how `Promise.race()` can be used to race several timers implemented with {{domxref("Window.setTimeout", "setTimeout()")}}. The timer with the shortest time always wins the race and becomes the resulting promise's state.
 
 ```js
 function sleep(time, value, state) {
@@ -219,7 +219,8 @@ setTimeout(() => {
 // { status: 'rejected', reason: 300 }
 ```
 
-> **Note:** The `promiseState` function still runs asynchronously, because there is no way to synchronously get a promise's value (i.e. without `then()` or `await`), even when it is already settled. However, `promiseState()` always fulfills within one tick and never actually waits for any promise's settlement.
+> [!NOTE]
+> The `promiseState` function still runs asynchronously, because there is no way to synchronously get a promise's value (i.e. without `then()` or `await`), even when it is already settled. However, `promiseState()` always fulfills within one tick and never actually waits for any promise's settlement.
 
 ### Comparison with Promise.any()
 

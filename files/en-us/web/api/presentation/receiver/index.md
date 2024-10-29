@@ -46,11 +46,12 @@ This example uses `receiver` to access the list of incoming connections and
 to build and display a list of those connections' ID strings.
 
 ```js
-let listElem = document.getElementById("connectionview");
+const listElem = document.getElementById("connection-view");
 
 navigator.presentation.receiver.connectionList.then((connections) => {
   connections.forEach((aConnection) => {
-    listElem.innerHTML += `<li>${aConnection.id}</li>`;
+    listElem.appendChild(document.createElement("li")).textContent =
+      aConnection.id;
   });
 });
 ```

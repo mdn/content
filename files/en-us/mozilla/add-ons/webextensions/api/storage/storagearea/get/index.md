@@ -19,7 +19,7 @@ let results = browser.storage.<storageType>.get(
 )
 ```
 
-`<storageType>` will be one of the writable storage types — {{WebExtAPIRef("storage.sync", "sync")}}, {{WebExtAPIRef("storage.local", "local")}}, or {{WebExtAPIRef("storage.managed", "managed")}}.
+Where `<storageType>` is one of the storage types — {{WebExtAPIRef("storage.sync", "sync")}}, {{WebExtAPIRef("storage.local", "local")}}, {{WebExtAPIRef("storage.session", "session")}}, or {{WebExtAPIRef("storage.managed", "managed")}}.
 
 ### Parameters
 
@@ -34,7 +34,8 @@ If the operation failed, the promise is rejected with an error message.
 
 If managed storage is not set, `undefined` will be returned.
 
-> **Warning:** When used within a content script in Firefox versions prior to 52, the Promise returned by `browser.storage.local.get()` is fulfilled with an Array containing one Object. The Object in the Array contains the `keys` found in the storage area, as described above.
+> [!WARNING]
+> When used within a content script in Firefox versions prior to 52, the Promise returned by `browser.storage.local.get()` is fulfilled with an Array containing one Object. The Object in the Array contains the `keys` found in the storage area, as described above.
 >
 > The Promise is correctly fulfilled with an Object when used in the background context (background scripts, popups, options pages, etc.).
 >
@@ -135,14 +136,6 @@ chrome.storage.local.get("kitten", (items) => {
 });
 ```
 
-Or with an arrow function
-
-```js
-chrome.storage.local.get("kitten", (items) => {
-  console.log(items.kitten); // -> {name:"Mog", eats:"mice"}
-});
-```
-
 Or using a Promise
 
 ```js
@@ -152,4 +145,5 @@ let gettingItem = new Promise((resolve) =>
 gettingItem.then(onGot); // -> Object { kitten: Object }
 ```
 
-> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/storage/) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.

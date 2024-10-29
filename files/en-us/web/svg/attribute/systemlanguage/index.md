@@ -15,8 +15,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("animate")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
-- {{SVGElement("audio")}}
-- {{SVGElement("canvas")}}
 - {{SVGElement("circle")}}
 - {{SVGElement("clipPath")}}
 - {{SVGElement("cursor")}}
@@ -24,7 +22,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("ellipse")}}
 - {{SVGElement("foreignObject")}}
 - {{SVGElement("g")}}
-- {{SVGElement("iframe")}}
 - {{SVGElement("image")}}
 - {{SVGElement("line")}}
 - {{SVGElement("mask")}}
@@ -40,9 +37,7 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("textPath")}}
 - {{SVGElement("tref")}}
 - {{SVGElement("tspan")}}
-- {{SVGElement("unknown")}}
 - {{SVGElement("use")}}
-- {{SVGElement("video")}}
 
 ## Usage notes
 
@@ -68,11 +63,13 @@ You can use this attribute with the following SVG elements:
 
 `systemLanguage` is often used in conjunction with the {{SVGElement("switch")}} element. If the attribute is used in other situations, then it represents a simple switch on the given element whether to render the element or not.
 
-> **Note:** If several alternative language objects are enclosed in a `<switch>` and none of them matches, this may lead to situations where no content is displayed. It is thus recommended to include a "catch-all" choice at the end of such a `<switch>` which is acceptable in all cases.
+> [!NOTE]
+> If several alternative language objects are enclosed in a `<switch>` and none of them matches, this may lead to situations where no content is displayed. It is thus recommended to include a "catch-all" choice at the end of such a `<switch>` which is acceptable in all cases.
 
 The attribute evaluates to "true" if one of the language tags indicated by user preferences is a case-insensitive match or prefix (followed by a "-") of one of the language tags given in the value of this parameter. Otherwise it evaluates to "false".
 
-> **Note:** The prefix matching rule does not imply that if a user understands a language with a certain tag, that the user will also understand all languages with the tag as prefix.
+> [!NOTE]
+> The prefix matching rule does not imply that if a user understands a language with a certain tag, that the user will also understand all languages with the tag as prefix.
 
 If the attribute is not present, then it implicitly evaluates to "true". If a null string or empty string value is given, the attribute evaluates to "false".
 

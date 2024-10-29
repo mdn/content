@@ -9,12 +9,14 @@ browser-compat: api.FileReader.readAsText
 {{APIRef("File API")}}{{AvailableInWorkers}}
 
 The **`readAsText()`** method of the {{domxref("FileReader")}} interface is used to read the contents of the specified {{domxref("Blob")}} or {{domxref("File")}}.
-When the read operation is complete, the {{domxref("FileReader.readyState","readyState")}} is changed to `DONE`,
+When the read operation is complete, the {{domxref("FileReader.readyState","readyState")}} property is changed to `DONE`,
 the {{domxref("FileReader/loadend_event", "loadend")}} event is triggered, and the {{domxref("FileReader.result","result")}} property contains the contents of the file as a text string.
 
-> **Note:** The {{domxref("Blob.text()")}} method is a newer promise-based API to read a file as text.
+> [!NOTE]
+> The {{domxref("Blob.text()")}} method is a newer promise-based API to read a file as text.
 
-> **Note:** This method loads the entire file's content into memory and is not suitable for large files. Prefer [`readAsArrayBuffer()`](/en-US/docs/Web/API/FileReader/readAsArrayBuffer) for large files.
+> [!NOTE]
+> This method loads the entire file's content into memory and is not suitable for large files. Prefer {{domxref("FileReader.readAsArrayBuffer", "readAsArrayBuffer()")}} for large files.
 
 ## Syntax
 

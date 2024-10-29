@@ -3,12 +3,10 @@ title: "SyncManager: register() method"
 short-title: register()
 slug: Web/API/SyncManager/register
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.SyncManager.register
 ---
 
-{{APIRef("Background Sync")}}{{SeeCompatTable}}
+{{APIRef("Background Sync")}}{{AvailableInWorkers}}
 
 The **`register()`** method of the {{domxref("SyncManager")}} interface registers a synchronization event, triggering a {{domxref("ServiceWorkerGlobalScope.sync_event", "sync")}} event inside the associated service worker as soon as network connectivity is available.
 

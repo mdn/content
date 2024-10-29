@@ -148,7 +148,8 @@ Most of the internal methods are straightforward in what they do. The only two t
 - {{jsxref("Proxy/Proxy", "Proxy()")}}
   - : Creates a new `Proxy` object.
 
-> **Note:** There's no `Proxy.prototype` property, so `Proxy` instances do not have any special properties or methods.
+> [!NOTE]
+> There's no `Proxy.prototype` property, so `Proxy` instances do not have any special properties or methods.
 
 ## Static methods
 
@@ -307,20 +308,20 @@ const view = new Proxy(
     selected: null,
   },
   {
-    set(obj, prop, newval) {
-      const oldval = obj[prop];
+    set(obj, prop, newVal) {
+      const oldVal = obj[prop];
 
       if (prop === "selected") {
-        if (oldval) {
-          oldval.setAttribute("aria-selected", "false");
+        if (oldVal) {
+          oldVal.setAttribute("aria-selected", "false");
         }
-        if (newval) {
-          newval.setAttribute("aria-selected", "true");
+        if (newVal) {
+          newVal.setAttribute("aria-selected", "true");
         }
       }
 
       // The default behavior to store the value
-      obj[prop] = newval;
+      obj[prop] = newVal;
 
       // Indicate success
       return true;

@@ -39,7 +39,8 @@ let myRules = document.styleSheets[0].cssRules;
 console.log(myRules[0].style); // a CSSStyleDeclaration representing the declarations on the h1.
 ```
 
-> **Note:** The declaration block is that part of the style rule that appears within the braces and that actually provides the style definitions (for the selector, the part that comes before the braces).
+> [!NOTE]
+> The declaration block is that part of the style rule that appears within the braces and that actually provides the style definitions (for the selector, the part that comes before the braces).
 
 ## Specifications
 

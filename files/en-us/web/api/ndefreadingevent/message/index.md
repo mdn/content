@@ -8,7 +8,7 @@ status:
 browser-compat: api.NDEFReadingEvent.message
 ---
 
-{{securecontext_header}}{{APIRef()}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef}}{{SeeCompatTable}}
 
 The **`message`** property of the {{domxref("NDEFReadingEvent")}} interface returns an {{DOMxRef("NDEFMessage")}} object containing the received message.
 
@@ -25,17 +25,17 @@ const ndefReader = new NDEFReader();
 
 function read() {
   return new Promise((resolve, reject) => {
-    const ctlr = new AbortController();
-    ctlr.signal.onabort = reject;
+    const controller = new AbortController();
+    controller.signal.onabort = reject;
     ndefReader.addEventListener(
       "reading",
       (event) => {
-        ctlr.abort();
+        controller.abort();
         resolve(event);
       },
       { once: true },
     );
-    ndefReader.scan({ signal: ctlr.signal }).catch((err) => reject(err));
+    ndefReader.scan({ signal: controller.signal }).catch((err) => reject(err));
   });
 }
 

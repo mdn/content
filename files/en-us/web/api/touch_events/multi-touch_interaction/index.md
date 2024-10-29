@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("Touch Events")}}
 
-The touch event interfaces support application-specific single and multi-touch interactions. However, the interfaces can be a bit tricky for programmers to use because touch events are very different from other DOM input events, such as {{domxref("MouseEvent","mouse events")}}. The application described in this guide shows how to use touch events for simple single and multi-touch interactions, the basics needed to build application-specific gestures.
+The touch event interfaces support application-specific single and multi-touch interactions. However, the interfaces can be a bit tricky for programmers to use because touch events are very different from other DOM input events, such as [mouse events](/en-US/docs/Web/API/MouseEvent). The application described in this guide shows how to use touch events for simple single and multi-touch interactions, the basics needed to build application-specific gestures.
 
 A _live_ version of this application is available on [GitHub](https://mdn.github.io/dom-examples/touchevents/Multi-touch_interaction.html). The [source code is available on GitHub](https://github.com/mdn/dom-examples/tree/main/touchevents) and pull requests and [bug reports](https://github.com/mdn/dom-examples/issues) are welcome.
 
@@ -49,7 +49,7 @@ The application uses {{HTMLElement("div")}} elements to represent four touch are
 
 ```js
 // Log events flag
-const logEvents = false;
+let logEvents = false;
 
 // Touch Point cache
 const tpCache = [];
@@ -111,7 +111,7 @@ function handle_pinch_zoom(ev) {
         ev.target.style.background = "green";
     } else {
       // empty tpCache
-      tpCache = [];
+      tpCache.length = 0;
     }
   }
 }
@@ -147,8 +147,8 @@ The {{domxref("Element/touchmove_event", "touchmove")}} handler calls {{domxref(
 ```js
 function move_handler(ev) {
   // Note: if the user makes more than one "simultaneous" touches, most browsers
-  // fire at least one touchmove event and some will fire several touchmoves.
-  // Consequently, an application might want to "ignore" some touchmoves.
+  // fire at least one touchmove event and some will fire several touch moves.
+  // Consequently, an application might want to "ignore" some touch moves.
   //
   // This function sets the target element's border to "dashed" to visually
   // indicate the target received a move event.
@@ -208,7 +208,7 @@ These functions support the application but aren't directly involved with the ev
 
 #### Update background color
 
-The background color of the touch areas will change as follows: no touch is `white`; one touch is `yellow`; two simultaneous touches is `pink`, and three or more simultaneous touches is `lightblue`. See [touch move](#touch_move) for information about the background color changing when a 2-finger move/pinch/zoom is detected.
+The background color of the touch areas will change as follows: no touch is `white`; one touch is `yellow`; two simultaneous touches is `pink`, and three or more simultaneous touches is `lightblue`. See [touch move handler](#touch_move_handler) for information about the background color changing when a 2-finger move/pinch/zoom is detected.
 
 ```js
 function update_background(ev) {
@@ -248,23 +248,23 @@ function log(name, ev, printTargetIds) {
     `${name}: touches = ${ev.touches.length} ; ` +
     `targetTouches = ${ev.targetTouches.length} ; ` +
     `changedTouches = ${ev.changedTouches.length}`;
-  o.innerHTML += `${s}<br>`;
+  o.innerText += `${s}\n`;
 
   if (printTargetIds) {
     s = "";
     for (let i = 0; i < ev.targetTouches.length; i++) {
-      s += `... id = ${ev.targetTouches[i].identifier}<br>`;
+      s += `... id = ${ev.targetTouches[i].identifier}\n`;
     }
-    o.innerHTML += s;
+    o.innerText += s;
   }
 }
 
 function clearLog(event) {
   const o = document.getElementsByTagName("output")[0];
-  o.innerHTML = "";
+  o.textContent = "";
 }
 ```
 
-## Related topics and resources
+## See also
 
-- {{domxref("Pointer_events","Pointer Events")}}
+- [Pointer events](/en-US/docs/Web/API/Pointer_events)

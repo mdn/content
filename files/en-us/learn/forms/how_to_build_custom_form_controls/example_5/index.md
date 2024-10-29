@@ -4,6 +4,8 @@ slug: Learn/Forms/How_to_build_custom_form_controls/Example_5
 page-type: learn-module-chapter
 ---
 
+{{LearnSidebar}}
+
 This is the last example that explain [how to build custom form widgets](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls).
 
 ## Change states
@@ -207,7 +209,7 @@ function updateValue(select, index) {
   optionList[index].setAttribute("aria-selected", "true");
 
   nativeWidget.selectedIndex = index;
-  value.innerHTML = optionList[index].innerHTML;
+  value.textContent = optionList[index].textContent;
   highlightOption(select, optionList[index]);
 }
 

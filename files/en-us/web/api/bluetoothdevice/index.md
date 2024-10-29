@@ -35,7 +35,7 @@ environment.
 
 Listen to these events using {{domxref("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
 
-- {{DOMxRef("BluetoothDevice/gattserverdisconnected_event", "gattserverdisconnected")}}
+- {{DOMxRef("BluetoothDevice/gattserverdisconnected_event", "gattserverdisconnected")}} {{experimental_inline}}
   - : Fired on a device when an active GATT connection is lost.
 
 ## Specifications

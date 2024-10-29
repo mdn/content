@@ -55,7 +55,8 @@ svg {
   - : This attribute defines the coordinate system for the contents of the {{SVGElement("pattern")}}.
     _Value type_: `userSpaceOnUse`|`objectBoundingBox`; _Default value_: `userSpaceOnUse`; _Animatable_: **yes**
 
-    > **Note:** This attribute has no effect if a `viewBox` attribute is specified on the `<pattern>` element.
+    > [!NOTE]
+    > This attribute has no effect if a `viewBox` attribute is specified on the `<pattern>` element.
 
 - {{SVGAttr("patternTransform")}}
   - : This attribute contains the definition of an optional additional transformation from the pattern coordinate system onto the target coordinate system.
@@ -64,7 +65,7 @@ svg {
   - : This attribute defines the coordinate system for attributes `x`, `y`, `width`, and `height`.
     _Value type_: `userSpaceOnUse`|`objectBoundingBox`; _Default value_: `objectBoundingBox`; _Animatable_: **yes**
 - {{SVGAttr("preserveAspectRatio")}}
-  - : This attribute defines how the SVG fragment must be deformed if it is embedded in a container with a different aspect ratio.
+  - : This attribute defines how the SVG fragment must be deformed if it is embedded in a container with a different {{glossary("aspect ratio")}}.
     _Value type_: (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ; _Default value_: `xMidYMid meet`; _Animatable_: **yes**
 - {{SVGAttr("viewBox")}}
   - : This attribute defines the bound of the SVG viewport for the pattern fragment.
@@ -80,13 +81,14 @@ svg {
   - : This attribute references a template pattern that provides default values for the `<pattern>` attributes.
     _Value type_: [**\<URL>**](/en-US/docs/Web/SVG/Content_type#url); _Default value_: _none_; _Animatable_: **yes**
 
-    > **Note:** For browsers implementing `href`, if both `href` and `xlink:href` are set, `xlink:href` will be ignored and only `href` will be used.
+    > [!NOTE]
+    > For browsers implementing `href`, if both `href` and `xlink:href` are set, `xlink:href` will be ignored and only `href` will be used.
 
 - {{SVGAttr("y")}}
   - : This attribute determines the y coordinate shift of the pattern tile.
     _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; _Default value_: `0`; _Animatable_: **yes**
 
-## Usage notes
+## Usage context
 
 {{svginfo}}
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Event.type
 ---
 
-{{APIRef}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`type`** read-only property of the {{domxref("Event")}}
 interface returns a string containing the event's type. It is set when the event is

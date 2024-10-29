@@ -11,7 +11,8 @@ The **`opacity()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CS
 
 {{EmbedInteractiveExample("pages/css/function-opacity.html")}}
 
-> **Note:** This function is similar to the more established {{Cssxref("opacity")}} property. The difference is that with filters, some browsers provide hardware acceleration for better performance.
+> [!NOTE]
+> This function is similar to the more established {{Cssxref("opacity")}} property. The difference is that with filters, some browsers provide hardware acceleration for better performance.
 
 ## Syntax
 

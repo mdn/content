@@ -24,17 +24,9 @@ No notable changes.
   These are used to find the value and index (respectively) of the last element in an {{jsxref("Array")}} or {{jsxref("TypedArray")}} that matches a supplied test function.
   (See [Firefox bug 1775026](https://bugzil.la/1775026) for more details.)
 
-- Serialization of [native Error types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types) additionally includes the [`stack`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/stack) property when used with [`window.postMessage()`](/en-US/docs/Web/API/Window/postMessage) and [`structuredClone()`](/en-US/docs/Web/API/structuredClone) (on error types that include `stack`).
+- Serialization of [native Error types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types) additionally includes the [`stack`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/stack) property when used with [`window.postMessage()`](/en-US/docs/Web/API/Window/postMessage) and {{DOMxRef("Window.structuredClone", "structuredClone()")}} (on error types that include `stack`).
   The `stack` is not yet serialized when errors are sent using other APIs, such as [`Worker.postMessage()`](/en-US/docs/Web/API/Worker/postMessage)
   (See [Firefox bug 1774866](https://bugzil.la/1774866) for more details.)
-
-### HTTP
-
-No notable changes.
-
-### Security
-
-No notable changes.
 
 ### APIs
 
@@ -61,10 +53,6 @@ No notable changes.
   The option was previously deprecated, and users that need this functionality should already have migrated to {{domxref("StorageManager.persist()")}}.
   (See [Firefox bug 1354500](https://bugzil.la/1354500) for more details.)
 
-### WebAssembly
-
-No notable changes.
-
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
 #### WebDriver BiDi
@@ -76,10 +64,6 @@ No notable changes.
 
 - Improved stability and performance when minimizing or restoring windows on Linux ([Firefox bug 1780212](https://bugzil.la/1780212)).
 - Added support for `touch` actions ([Firefox bug 1543337](https://bugzil.la/1543337)).
-
-## Changes for add-on developers
-
-No notable changes.
 
 ## Older versions
 

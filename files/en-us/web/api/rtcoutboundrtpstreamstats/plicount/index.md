@@ -24,7 +24,8 @@ the remote peer's {{domxref("RTCRtpReceiver")}}. These are sent by the receiver'
 decoder to notify the sender's encoder that an undefined amount of coded video data,
 which may span frame boundaries, has been lost.
 
-> **Note:** This property is only used for video streams.
+> [!NOTE]
+> This property is only used for video streams.
 
 ## Usage notes
 

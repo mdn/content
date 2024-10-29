@@ -132,14 +132,15 @@ ctx.closePath();
 
 ctx.beginPath();
 ctx.rect(160, 10, 100, 40);
-ctx.strokeStyle = "rgba(0, 0, 255, 0.5)";
+ctx.strokeStyle = "rgb(0 0 255 / 0.5)";
 ctx.stroke();
 ctx.closePath();
 ```
 
 {{embedlivesample("compare_your_code", 600, 340)}}
 
-> **Note:** Try changing the size and color of the given shapes.
+> [!NOTE]
+> Try changing the size and color of the given shapes.
 
 ## Next steps
 

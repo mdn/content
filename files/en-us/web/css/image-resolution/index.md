@@ -31,14 +31,15 @@ image-resolution: unset;
 
 ### Values
 
-- `{{cssxref("&lt;resolution&gt;")}}`
+- {{cssxref("&lt;resolution&gt;")}}
   - : Specifies the intrinsic resolution explicitly.
 - `from-image`
   - : Uses the intrinsic resolution as specified by the image format. If the image does not specify its own resolution, the explicitly specified resolution is used (if given), else it defaults to `1dppx` (1 image pixel per CSS px unit).
 - `snap`
   - : If the `snap` keyword is provided, the computed resolution is the specified resolution rounded to the nearest value that would map one image pixel to an integer number of device pixels. If the resolution is taken from the image, then the used intrinsic resolution is the image's native resolution similarly adjusted.
 
-> **Note:** As vector formats such as SVG do not have an intrinsic resolution, this property has no effect on vector images.
+> [!NOTE]
+> As vector formats such as SVG do not have an intrinsic resolution, this property has no effect on vector images.
 
 ## Formal definition
 
@@ -56,7 +57,7 @@ When printing the document, use a higher resolution.
 
 ```css
 @media print {
-  .myimage {
+  .my-image {
     image-resolution: 300dpi;
   }
 }
@@ -67,7 +68,7 @@ When printing the document, use a higher resolution.
 Uses the resolution from the image. If the image does not have a resolution, use 300dpi rather than the default 1dppx.
 
 ```css
-.myimage {
+.my-image {
   image-resolution: from-image 300dpi;
 }
 ```

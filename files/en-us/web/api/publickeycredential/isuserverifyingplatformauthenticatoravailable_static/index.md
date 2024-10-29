@@ -16,7 +16,8 @@ A user-verifying platform authenticator is a kind of multi-factor authenticator 
 - Windows Hello (Windows)
 - Device unlock (fingerprint, face, PIN, etc.) on Android
 
-> **Note:** This method may only be used in top-level contexts and will not be available in an {{HTMLElement("iframe")}} for example.
+> [!NOTE]
+> This method may only be used in top-level contexts and will not be available in an {{HTMLElement("iframe")}} for example.
 
 ## Syntax
 
@@ -33,7 +34,8 @@ None.
 A {{jsxref("Promise")}} which resolves to a boolean value indicating whether or
 a not a user-verifying platform authenticator is available.
 
-> **Note:** In earlier versions of the specification, the boolean also
+> [!NOTE]
+> In earlier versions of the specification, the boolean also
 > conveyed the consent of the user to disclose such an authenticator existed.
 
 ## Examples
@@ -65,5 +67,5 @@ PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()
 
 ## See also
 
-- [Windows Hello](https://docs.microsoft.com/windows-hardware/design/device-experiences/windows-hello)
-- [Web Authentication and Windows Hello - MSDN Guide](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/) and especially the [special considerations mentioning `isUserVerifyingPlatformAuthenticator()`](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/#special-considerations-for-windows-hello)
+- [Windows Hello](https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/windows-hello)
+- [Web Authentication and Windows Hello - MSDN Guide](https://learn.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/) and especially the [special considerations mentioning `isUserVerifyingPlatformAuthenticator()`](https://learn.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/#special-considerations-for-windows-hello)

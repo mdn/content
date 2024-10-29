@@ -7,6 +7,8 @@ spec-urls:
   - https://www.w3.org/WAI/ARIA/apg/patterns/tabs/examples/tabs-manual/
 ---
 
+{{AccessibilitySidebar}}
+
 The ARIA `tab` role indicates an interactive element inside a `tablist` that, when activated, displays its associated `tabpanel`.
 
 ```html
@@ -51,10 +53,10 @@ From the assistive technology user's perspective, the heading does not exist sin
   - : boolean
 - [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
   - : `id` of element with `tabpanel` role
-- [id](/en-US/docs/Web/HTML/Global_attributes#id)
+- [id](/en-US/docs/Web/HTML/Global_attributes/id)
   - : content
 
-### Keyboard interaction
+### Keyboard interactions
 
 | Key               | Action                                                                                                                                                                                                           |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -65,7 +67,8 @@ From the assistive technology user's perspective, the heading does not exist sin
 
 ### Required JavaScript features
 
-> **Note:** While there are ways to build tab-like functionality without JavaScript, there is no substitute combination using only HTML and CSS that will provide the same set of functionality that's required above for accessible tabs with content.
+> [!NOTE]
+> While there are ways to build tab-like functionality without JavaScript, there is no substitute combination using only HTML and CSS that will provide the same set of functionality that's required above for accessible tabs with content.
 
 ## Example
 
@@ -159,8 +162,10 @@ To handle changing the active `tab` and `tabpanel`, we have a function that take
 
 ```js
 window.addEventListener("DOMContentLoaded", () => {
-  const tabs = document.querySelectorAll('[role="tab"]');
+  // Only handle one particular tablist; if you have multiple tab
+  // lists (might even be nested), you have to apply this code for each one
   const tabList = document.querySelector('[role="tablist"]');
+  const tabs = tabList.querySelectorAll(':scope > [role="tab"]');
 
   // Add a click event handler to each tab
   tabs.forEach((tab) => {
@@ -196,26 +201,26 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 function changeTabs(e) {
-  const target = e.target;
-  const parent = target.parentNode;
-  const grandparent = parent.parentNode;
+  const targetTab = e.target;
+  const tabList = targetTab.parentNode;
+  const tabGroup = tabList.parentNode;
 
   // Remove all current selected tabs
-  parent
-    .querySelectorAll('[aria-selected="true"]')
+  tabList
+    .querySelectorAll(':scope > [aria-selected="true"]')
     .forEach((t) => t.setAttribute("aria-selected", false));
 
   // Set this tab as selected
-  target.setAttribute("aria-selected", true);
+  targetTab.setAttribute("aria-selected", true);
 
   // Hide all tab panels
-  grandparent
-    .querySelectorAll('[role="tabpanel"]')
+  tabGroup
+    .querySelectorAll(':scope > [role="tabpanel"]')
     .forEach((p) => p.setAttribute("hidden", true));
 
   // Show the selected panel
-  grandparent.parentNode
-    .querySelector(`#${target.getAttribute("aria-controls")}`)
+  tabGroup
+    .querySelector(`#${targetTab.getAttribute("aria-controls")}`)
     .removeAttribute("hidden");
 }
 ```
@@ -239,11 +244,3 @@ What are the related properties, and in what order will this attribute or proper
 - HTML {{HTMLElement('button')}} element
 - [KeyboardEvent.key](/en-US/docs/Web/API/KeyboardEvent/key)
 - [ARIA `tabpanel` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

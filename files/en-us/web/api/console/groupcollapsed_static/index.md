@@ -1,7 +1,7 @@
 ---
 title: "console: groupCollapsed() static method"
 short-title: groupCollapsed()
-slug: Web/API/console/groupcollapsed_static
+slug: Web/API/console/groupCollapsed_static
 page-type: web-api-instance-method
 browser-compat: api.console.groupCollapsed_static
 ---
@@ -17,8 +17,8 @@ See [Using groups in the console](/en-US/docs/Web/API/console#using_groups_in_th
 ## Syntax
 
 ```js-nolint
-groupCollapsed()
-groupCollapsed(label)
+console.groupCollapsed()
+console.groupCollapsed(label)
 ```
 
 ### Parameters

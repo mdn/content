@@ -79,21 +79,21 @@ Now that we have a list of items, we can use the `v-for` directive to display th
 
 Before we do that, there's one other piece of syntax to know about that is used with `v-for`, the `key` attribute. To help Vue optimize rendering the elements in the list, it tries to patch list elements so it's not recreating them every time the list changes. However, Vue needs help. To make sure it is re-using list elements appropriately, it needs a unique "key" on the same element that you attach `v-for` to.
 
-To make sure that Vue can accurately compare the `key` attributes, they need to be string or numeric values. While it would be great to use the name field, this field will eventually be controlled by user input, which means we can't guarantee that the names would be unique. We could use `lodash.uniqueid()`, however, like we did in the previous article.
+To make sure that Vue can accurately compare the `key` attributes, they need to be string or numeric values. While it would be great to use the name field, this field will eventually be controlled by user input, which means we can't guarantee that the names would be unique. We can use `nanoid()`, however, as we did in the previous article.
 
-1. Import `lodash.uniqueid` into your `App` component in the same way you did with your `ToDoItem` component, using
+1. Import `nanoid` into your `App` component in the same way you did with your `ToDoItem` component, using
 
    ```js
-   import uniqueId from "lodash.uniqueid";
+   import { nanoid } from "nanoid";
    ```
 
-2. Next, add an `id` field to each element in your `ToDoItems` array, and assign each of them a value of `uniqueId('todo-')`.
+2. Next, add an `id` field to each element in your `ToDoItems` array, and assign each of them a value of `"todo-" + nanoid()`.
 
    The `<script>` element in `App.vue` should now have the following contents:
 
    ```js
    import ToDoItem from "./components/ToDoItem.vue";
-   import uniqueId from "lodash.uniqueid";
+   import { nanoid } from "nanoid";
 
    export default {
      name: "app",
@@ -103,14 +103,18 @@ To make sure that Vue can accurately compare the `key` attributes, they need to 
      data() {
        return {
          ToDoItems: [
-           { id: uniqueId("todo-"), label: "Learn Vue", done: false },
+           { id: "todo-" + nanoid(), label: "Learn Vue", done: false },
            {
-             id: uniqueId("todo-"),
+             id: "todo-" + nanoid(),
              label: "Create a Vue project with the CLI",
              done: true,
            },
-           { id: uniqueId("todo-"), label: "Have fun", done: true },
-           { id: uniqueId("todo-"), label: "Create a to-do list", done: false },
+           { id: "todo-" + nanoid(), label: "Have fun", done: true },
+           {
+             id: "todo-" + nanoid(),
+             label: "Create a to-do list",
+             done: false,
+           },
          ],
        };
      },
@@ -150,7 +154,7 @@ There's one little bit of refactoring we can do here. Instead of generating the 
 1. Add a new prop to your `ToDoItem` component — `id`.
 2. Make it required, and make its type a `String`.
 3. To prevent name collisions, remove the `id` field from your `data` attribute.
-4. You are no longer using `uniqueId`, so you need to remove the `import uniqueId from 'lodash.uniqueid';` line, otherwise your app will throw an error.
+4. You are no longer using `nanoid`, so you need to remove the `import { nanoid } from 'nanoid';` line, otherwise your app will throw an error.
 
 The `<script>` contents in your `ToDoItem` component should now look something like this:
 

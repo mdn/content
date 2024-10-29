@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUComputePassEncoder.label
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`label`** read-only property of the
 {{domxref("GPUComputePassEncoder")}} interface is a string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
@@ -27,8 +27,8 @@ Setting and getting a label via `GPUComputePassEncoder.label`:
 const commandEncoder = device.createCommandEncoder();
 const passEncoder = commandEncoder.beginComputePass();
 
-passEncoder.label = "mycomputepassencoder";
-console.log(passEncoder.label); // "mycomputepassencoder"
+passEncoder.label = "my_compute_pass_encoder";
+console.log(passEncoder.label); // "my_compute_pass_encoder"
 ```
 
 Setting a label via the originating {{domxref("GPUCommandEncoder.beginComputePass()")}} call, and then getting it via `GPUComputePassEncoder.label`:
@@ -36,10 +36,10 @@ Setting a label via the originating {{domxref("GPUCommandEncoder.beginComputePas
 ```js
 const commandEncoder = device.createCommandEncoder();
 const passEncoder = commandEncoder.beginComputePass({
-  label: "mycomputepassencoder",
+  label: "my_compute_pass_encoder",
 });
 
-console.log(passEncoder.label); // "mycomputepassencoder"
+console.log(passEncoder.label); // "my_compute_pass_encoder"
 ```
 
 ## Specifications

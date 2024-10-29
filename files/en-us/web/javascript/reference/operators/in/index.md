@@ -103,9 +103,9 @@ Symbol.iterator in trees; // returns true
 "PI" in Math; // returns true
 
 // Custom objects
-const mycar = { make: "Honda", model: "Accord", year: 1998 };
-"make" in mycar; // returns true
-"model" in mycar; // returns true
+const myCar = { make: "Honda", model: "Accord", year: 1998 };
+"make" in myCar; // returns true
+"model" in myCar; // returns true
 ```
 
 You must specify an object on the right side of the `in` operator. For example, you can specify a string created with the `String` constructor, but you cannot specify a string literal.
@@ -124,9 +124,9 @@ const color2 = "coral";
 If you delete a property with the [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) operator, the `in` operator returns `false` for that property.
 
 ```js
-const mycar = { make: "Honda", model: "Accord", year: 1998 };
-delete mycar.make;
-"make" in mycar; // returns false
+const myCar = { make: "Honda", model: "Accord", year: 1998 };
+delete myCar.make;
+"make" in myCar; // returns false
 
 const trees = ["redwood", "bay", "cedar", "oak", "maple"];
 delete trees[3];
@@ -136,9 +136,9 @@ delete trees[3];
 If you set a property to {{jsxref("undefined")}} but do not delete it, the `in` operator returns true for that property.
 
 ```js
-const mycar = { make: "Honda", model: "Accord", year: 1998 };
-mycar.make = undefined;
-"make" in mycar; // returns true
+const myCar = { make: "Honda", model: "Accord", year: 1998 };
+myCar.make = undefined;
+"make" in myCar; // returns true
 ```
 
 ```js
@@ -241,7 +241,7 @@ p1.ageDifference(p2); // TypeError: Cannot read private member #age from an obje
 
 Without the `in` operator, you would have to use a `try...catch` block to check if the object has the private property.
 
-You can also implement this as a [`@@hasInstance`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance) method of the class, so that you can use the [`instanceof`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) operator to perform the same check (which, by default, only checks for the existence of `Person.prototype` in the object's prototype chain).
+You can also implement this as a [`[Symbol.hasInstance]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance) method of the class, so that you can use the [`instanceof`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) operator to perform the same check (which, by default, only checks for the existence of `Person.prototype` in the object's prototype chain).
 
 ```js
 class Person {

@@ -21,10 +21,6 @@ Red is the default color.
 }
 ```
 
-## Specifications
-
-Not part of any standard.
-
 ## Examples
 
 ### HTML
@@ -80,6 +76,10 @@ if (is_safari) {
 ### Result
 
 {{ EmbedLiveSample('Examples', '100%', 50) }}
+
+## Specifications
+
+Not part of any standard.
 
 ## Browser compatibility
 

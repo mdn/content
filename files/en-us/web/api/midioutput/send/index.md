@@ -20,7 +20,7 @@ send(data, timestamp)
 ### Parameters
 
 - `data`
-  - : A sequence of one or more [valid MIDI messages](https://www.midi.org/midi-articles/about-midi-part-3-midi-messages). Each entry represents a single byte of data.
+  - : A sequence of one or more [valid MIDI messages](https://midi.org/about-midi-part-3midi-messages). Each entry represents a single byte of data.
 - `timestamp` {{optional_inline}}
   - : A {{domxref("DOMHighResTimestamp")}} with the time in milliseconds when the message should be sent (relative to {{domxref("Performance.timeOrigin")}}).
 

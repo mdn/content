@@ -35,5 +35,3 @@ A {{jsxref("Promise")}} to the BluetoothRemoteGATTCharacteristic instance.
 ## Browser compatibility
 
 {{Compat}}
-
-{{APIRef("Web Bluetooth")}}

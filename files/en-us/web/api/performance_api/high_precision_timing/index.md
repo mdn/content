@@ -18,7 +18,7 @@ All timestamps in the Performance API use the {{domxref("DOMHighResTimeStamp")}}
 
 ## `Performance.now()` vs. `Date.now()`
 
-JavaScript defines {{jsxref("Date.now()")}} as the number of milliseconds elapsed since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_ecmascript_epoch_and_timestamps), which is defined as the midnight at the beginning of January 1, 1970, UTC. The `performance.now()` method on the other hand is relative to the {{domxref("Performance.timeOrigin")}} property. For more information, see the [time origins section](#time_origins) below.
+JavaScript defines {{jsxref("Date.now()")}} as the number of milliseconds elapsed since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date), which is defined as the midnight at the beginning of January 1, 1970, UTC. The `performance.now()` method on the other hand is relative to the {{domxref("Performance.timeOrigin")}} property. For more information, see the [time origins section](#time_origins) below.
 
 JavaScript `Date` times are subject to system clock skew or adjustments. This means that the value of time may not always be monotonically increasing. The main purpose of `Date` objects is to display time and date information to the user and so many operating systems run a daemon which regularly synchronizes time. It might be that the clock is tweaked a few milliseconds several times per hour.
 

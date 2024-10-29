@@ -8,7 +8,7 @@ page-type: xslt-element
 
 The `<xsl:attribute-set>` element creates a named set of attributes, which can then be applied as whole to the output document, in a manner similar to named styles in CSS.
 
-### Syntax
+## Syntax
 
 ```xml
 <xsl:attribute-set name=NAME use-attribute-sets=LIST-OF-NAMES>
@@ -30,10 +30,10 @@ The `<xsl:attribute-set>` element creates a named set of attributes, which can t
 
 Top-level, must be the child of `<xsl:stylesheet>` or `<xsl:transform>`.
 
-### Defined
+## Specifications
 
 XSLT, section 7.1.4.
 
-### Gecko support
+## Gecko support
 
 Supported.

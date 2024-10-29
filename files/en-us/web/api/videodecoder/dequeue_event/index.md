@@ -6,11 +6,11 @@ page-type: web-api-event
 browser-compat: api.VideoDecoder.dequeue_event
 ---
 
-{{securecontext_header}}{{APIRef("WebCodecs API")}}
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`dequeue`** event of the {{domxref("VideoDecoder")}} interface fires to signal a decrease in {{domxref("VideoDecoder.decodeQueueSize")}}.
 
-This eliminates the need for developers to use a {{domxref("setTimeout()")}} poll to determine when the queue has decreased, and more work should be queued up.
+This eliminates the need for developers to use a {{domxref("Window.setTimeout", "setTimeout()")}} poll to determine when the queue has decreased, and more work should be queued up.
 
 ## Syntax
 

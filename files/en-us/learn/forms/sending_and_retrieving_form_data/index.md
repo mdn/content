@@ -17,7 +17,7 @@ Once the form data has been validated on the client-side, it is okay to submit t
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
           >understanding of HTML</a
         >, and basic knowledge of
-        <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP">HTTP</a> and
+        <a href="/en-US/docs/Web/HTTP">HTTP</a> and
         <a href="/en-US/docs/Learn/Server-side/First_steps"
           >server-side programming</a
         >.
@@ -43,7 +43,8 @@ At its most basic, the web uses a client/server architecture that can be summari
 
 An HTML form on a web page is nothing more than a convenient user-friendly way to configure an HTTP request to send data to a server. This enables the user to provide information to be delivered in the HTTP request.
 
-> **Note:** To get a better idea of how client-server architectures work, read our [Server-side website programming first steps](/en-US/docs/Learn/Server-side/First_steps) module.
+> [!NOTE]
+> To get a better idea of how client-server architectures work, read our [Server-side website programming first steps](/en-US/docs/Learn/Server-side/First_steps) module.
 
 ## On the client side: defining how to send the data
 
@@ -71,7 +72,8 @@ When specified with no attributes, as below, the {{HTMLElement("form")}} data is
 <form>…</form>
 ```
 
-> **Note:** It's possible to specify a URL that uses the HTTPS (secure HTTP) protocol. When you do this, the data is encrypted along with the rest of the request, even if the form itself is hosted on an insecure page accessed using HTTP. On the other hand, if the form is hosted on a secure page but you specify an insecure HTTP URL with the [`action`](/en-US/docs/Web/HTML/Element/form#action) attribute, all browsers display a security warning to the user each time they try to send data because the data will not be encrypted.
+> [!NOTE]
+> It's possible to specify a URL that uses the HTTPS (secure HTTP) protocol. When you do this, the data is encrypted along with the rest of the request, even if the form itself is hosted on an insecure page accessed using HTTP. On the other hand, if the form is hosted on a secure page but you specify an insecure HTTP URL with the [`action`](/en-US/docs/Web/HTML/Element/form#action) attribute, all browsers display a security warning to the user each time they try to send data because the data will not be encrypted.
 
 The names and values of the non-file form controls are sent to the server as `name=value` pairs joined with ampersands. The `action` value should be a file on the server that can handle the incoming data, including ensuring server-side validation. The server then responds, generally handling the data and loading the URL defined by the `action` attribute, causing a new page load (or a refresh of the existing page, if the `action` points to the same page).
 
@@ -121,9 +123,11 @@ GET /?say=Hi&to=Mom HTTP/2.0
 Host: foo.com
 ```
 
-> **Note:** You can find this example on GitHub — see [get-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/get-method.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html)).
+> [!NOTE]
+> You can find this example on GitHub — see [get-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/get-method.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html)).
 
-> **Note:** The data will not be appended if the `action` URL scheme cannot handle queries, e.g. `file:`.
+> [!NOTE]
+> The data will not be appended if the `action` URL scheme cannot handle queries, e.g. `file:`.
 
 #### The POST method
 
@@ -160,9 +164,11 @@ say=Hi&to=Mom
 
 The `Content-Length` header indicates the size of the body, and the `Content-Type` header indicates the type of resource sent to the server. We'll discuss these headers later on.
 
-> **Note:** You can find this example on GitHub — see [post-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/post-method.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/sending-form-data/post-method.html)).
+> [!NOTE]
+> You can find this example on GitHub — see [post-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/post-method.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/sending-form-data/post-method.html)).
 
-> **Note:** The `GET` method will be used instead if the `action` URL scheme cannot handle a request body, e.g. `data:`.
+> [!NOTE]
+> The `GET` method will be used instead if the `action` URL scheme cannot handle a request body, e.g. `data:`.
 
 ### Viewing HTTP requests
 
@@ -172,7 +178,7 @@ HTTP requests are never displayed to the user (if you want to see them, you need
 2. Select "Network"
 3. Select "All"
 4. Select "foo.com" in the "Name" tab
-5. Select "Headers"
+5. Select "Request" (Firefox) or "Payload" (Chrome/Edge)
 
 You can then get the form data, as shown in the image below.
 
@@ -206,7 +212,8 @@ This example displays a page with the data we sent. You can see this in action i
 
 ![Otherwise blank web page with "hi mom", the data received in response after submitting form data to a php file with POST method](php-result.png)
 
-> **Note:** This example won't work when you load it into a browser locally — browsers cannot interpret PHP code, so when the form is submitted the browser will just offer to download the PHP file for you. To get it to work, you need to run the example through a PHP server of some kind. Good options for local PHP testing are [MAMP](https://www.mamp.info/en/downloads/) (Mac and Windows) and [AMPPS](https://ampps.com/downloads/) (Mac, Windows, Linux).
+> [!NOTE]
+> This example won't work when you load it into a browser locally — browsers cannot interpret PHP code, so when the form is submitted the browser will just offer to download the PHP file for you. To get it to work, you need to run the example through a PHP server of some kind. Good options for local PHP testing are [MAMP](https://www.mamp.info/en/downloads/) (Mac and Windows) and [XAMPP](https://www.apachefriends.org/download.html) (Mac, Windows, Linux).
 >
 > Note also that if you are using MAMP but don't have MAMP Pro installed (or if the MAMP Pro demo time trial has expired), you might have trouble getting it working. To get it working again, we have found that you can load up the MAMP app, then choose the menu options _MAMP_ > _Preferences_ > _PHP_, and set "Standard Version:" to "7.2.x" (x will differ depending on what version you have installed).
 
@@ -233,10 +240,11 @@ if __name__ == "__main__":
 
 The two templates referenced in the above code are as follows (these need to be in a subdirectory called `templates` in the same directory as the `python-example.py` file, if you try to run the example yourself):
 
-- [form.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/form.html): The same form as we saw above in [The POST method](#the_post_method) section but with the `action` set to `\{{ url_for('hello') }}`. This is a [Jinja](https://jinja.palletsprojects.com) template, which is basically HTML but can contain calls to the Python code that is running the web server contained in curly braces. `url_for('hello')` is basically saying "redirect to `/hello` when the form is submitted".
+- [form.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/form.html): The same form as we saw above in [The POST method](#the_post_method) section but with the `action` set to `\{{ url_for('hello') }}`. This is a [Jinja](https://jinja.palletsprojects.com/) template, which is basically HTML but can contain calls to the Python code that is running the web server contained in curly braces. `url_for('hello')` is basically saying "redirect to `/hello` when the form is submitted".
 - [greeting.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/greeting.html): This template just contains a line that renders the two bits of data passed to it when it is rendered. This is done via the `hello()` function seen above, which runs when the `/hello` URL is navigated to.
 
-> **Note:** Again, this code won't work if you just try to load it into a browser directly. Python works a bit differently from PHP — to run this code locally you'll need to [install Python/PIP](/en-US/docs/Learn/Server-side/Django/development_environment#installing_python_3), then install Flask using `pip3 install flask`. At this point, you should be able to run the example using `python3 python-example.py`, then navigate to `localhost:5042` in your browser.
+> [!NOTE]
+> Again, this code won't work if you just try to load it into a browser directly. Python works a bit differently from PHP — to run this code locally you'll need to [install Python/PIP](/en-US/docs/Learn/Server-side/Django/development_environment#installing_python_3), then install Flask using `pip3 install flask`. At this point, you should be able to run the example using `python3 python-example.py`, then navigate to `localhost:5042` in your browser.
 
 ### Other languages and frameworks
 
@@ -263,7 +271,8 @@ There are many other server-side technologies you can use for form handling, inc
 
 It's worth noting that even using these frameworks, working with forms isn't necessarily _easy_. But it's much easier than trying to write all the functionality yourself from scratch, and will save you a lot of time.
 
-> **Note:** It is beyond the scope of this article to teach you any server-side languages or frameworks. The links above will give you some help, should you wish to learn them.
+> [!NOTE]
+> It is beyond the scope of this article to teach you any server-side languages or frameworks. The links above will give you some help, should you wish to learn them.
 
 ## A special case: sending files
 
@@ -293,7 +302,8 @@ For example:
 </form>
 ```
 
-> **Note:** Servers can be configured with a size limit for files and HTTP requests in order to prevent abuse.
+> [!NOTE]
+> Servers can be configured with a size limit for files and HTTP requests in order to prevent abuse.
 
 ## Security issues
 

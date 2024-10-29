@@ -42,4 +42,7 @@ This topic contains the following modules. You should start with the first modul
 - [Node server without framework](/en-US/docs/Learn/Server-side/Node_server_without_framework)
   - : This article provides a simple static file server built with pure Node.js, for those of you not wanting to use a framework.
 - [Properly configuring server MIME types](/en-US/docs/Learn/Server-side/Configuring_server_MIME_types)
-  - : Configuring your server to send the correct {{Glossary("MIME type", "MIME types")}} (also known as media types or content types) to browsers is important for browsers to be able to properly process and display the content. It is also important to prevent malicious content from masquerading as benign content.
+  - : Configuring your server to send the correct {{Glossary("MIME type", "MIME types")}} (also known as media types or content types) to browsers is important for browsers to be able to properly process and display the content.
+    It is also important to prevent malicious content from masquerading as benign content.
+- [Apache Configuration: .htaccess](/en-US/docs/Learn/Server-side/Apache_Configuration_htaccess)
+  - : Apache .htaccess files allow users to configure directories of the web server they control without modifying the main configuration file.

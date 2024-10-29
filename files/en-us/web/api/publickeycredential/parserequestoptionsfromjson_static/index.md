@@ -3,14 +3,12 @@ title: "PublicKeyCredential: parseRequestOptionsFromJSON() static method"
 short-title: parseRequestOptionsFromJSON()
 slug: Web/API/PublicKeyCredential/parseRequestOptionsFromJSON_static
 page-type: web-api-static-method
-status:
-  - experimental
 browser-compat: api.PublicKeyCredential.parseRequestOptionsFromJSON_static
 ---
 
-{{APIRef("Web Authentication API")}} {{SeeCompatTable}}{{securecontext_header}}
+{{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-The **`parseRequestOptionsFromJSON()`** static method of the {{domxref("PublicKeyCredential")}} interface converts a {{glossary("JSON type representation")}} into its corresponding [`publicKey` request credentials options object structure](/en-US/docs/Web/API/CredentialsContainer/get#publickey_object_structure).
+The **`parseRequestOptionsFromJSON()`** static method of the {{domxref("PublicKeyCredential")}} interface converts a {{glossary("JSON type representation")}} into a {{domxref("PublicKeyCredentialRequestOptions")}} instance.
 
 The method is a convenience function for converting information provided by a relying server to a web app in order to request an existing credential.
 
@@ -24,25 +22,25 @@ PublicKeyCredential.parseRequestOptionsFromJSON(options)
 
 - `options`
 
-  - : An object with the same structure as the Web Authentication API [`publicKey` request credentials options object](/en-US/docs/Web/API/CredentialsContainer/get#publickey_object_structure), but with [base64url](/en-US/docs/Glossary/Base64)-encoded strings used in place of buffer properties.
+  - : An object with the same structure as a {{domxref("PublicKeyCredentialRequestOptions")}} instance, but with [base64url](/en-US/docs/Glossary/Base64)-encoded strings used in place of buffer properties.
 
 ### Return value
 
-An object with the Web Authentication API [`publicKey` request credentials options object structure](/en-US/docs/Web/API/CredentialsContainer/get#publickey_object_structure).
+A {{domxref("PublicKeyCredentialRequestOptions")}} instance.
 
 ### Exceptions
 
 - `EncodingError` {{domxref("DOMException")}}
-  - : Thrown if any part of the `options` object cannot be converted into the [`publicKey` request credentials options object structure](/en-US/docs/Web/API/CredentialsContainer/get#publickey_object_structure).
+  - : Thrown if any part of the `options` object cannot be converted into a {{domxref("PublicKeyCredentialRequestOptions")}} instance.
 
 ## Description
 
 The Web Authentication process for [authenticating a (registered) user](/en-US/docs/Web/API/Web_Authentication_API#authenticating_a_user) involves a relying party server sending the web app information needed to find an existing credential, including details about the user identity, the relying party, a "challenge", and optionally where to look for the credential: for example on a local built-in authenticator, or on an external one over USB, BLE, and so on.
-The web app passes this information to an authenticator to find the credential, by calling [`navigator.credentials.get()`](/en-US/docs/Web/API/CredentialsContainer/get) with an argument that contains the server-supplied data in the [`publicKey` request credentials options object structure](/en-US/docs/Web/API/CredentialsContainer/get#publickey_object_structure).
+The web app passes this information to an authenticator to find the credential, by calling [`navigator.credentials.get()`](/en-US/docs/Web/API/CredentialsContainer/get) with an argument that contains the server-supplied data as a {{domxref("PublicKeyCredentialRequestOptions")}} instance
 
 The specification does not define how the information needed for requesting a credential is sent.
-A convenient approach is for the server to encapsulate the information in a {{glossary("JSON type representation")}} of the [`publicKey` request credentials options object](/en-US/docs/Web/API/CredentialsContainer/get#publickey_object_structure) that mirrors its structure but encodes buffer properties such as the `challenge` as [base64url](/en-US/docs/Glossary/Base64) strings.
-This object can be serialized to a [JSON](/en-US/docs/Glossary/JSON) string, sent to the web app and deserialized, and then converted to the [`publicKey` request credentials options object structure](/en-US/docs/Web/API/CredentialsContainer/get#publickey_object_structure) using **`parseRequestOptionsFromJSON()`**.
+A convenient approach is for the server to encapsulate the information in a {{glossary("JSON type representation")}} of a {{domxref("PublicKeyCredentialRequestOptions")}} instance, that mirrors its structure but encodes buffer properties such as the `challenge` as [base64url](/en-US/docs/Glossary/Base64) strings.
+This object can be serialized to a [JSON](/en-US/docs/Glossary/JSON) string, sent to the web app and deserialized, and then converted to a {{domxref("PublicKeyCredentialRequestOptions")}} instance using **`parseRequestOptionsFromJSON()`**.
 
 ## Examples
 

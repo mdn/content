@@ -26,7 +26,7 @@ width: calc(100px * sin(pi / 2));
 width: calc(100px * sin(e / 4));
 ```
 
-### Parameter
+### Parameters
 
 The `sin(angle)` function accepts only one value as its parameter.
 

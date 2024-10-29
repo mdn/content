@@ -5,6 +5,8 @@ page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#note
 ---
 
+{{AccessibilitySidebar}}
+
 A `note` role suggests a section whose content is parenthetic or ancillary to the main content.
 
 ## Description
@@ -28,7 +30,7 @@ The `note` role can be added to parenthetic or ancillary content if no other nat
 …
 <h2>Career</h2>
 …
-<p role="note" class="hilitebox">
+<p role="note" class="highlight-box">
   At the height of the depression, Madam C. J. Walker trained 20,000 women to
   sell hair pomade door-to-door
 </p>
@@ -36,7 +38,7 @@ The `note` role can be added to parenthetic or ancillary content if no other nat
 …
 ```
 
-In the above Wikipedia style entry for Madam C.J. Walker, the `hilitebox` with role `note` could have been a {{HTMLElement('blockquote')}} if it contained a quote or {{HTMLElement('figcaption')}} in a {{HTMLElement('figure')}} if there was an associated image. In this case, as neither of those made sense, the `note` role was added to add semantics to the parenthetic content.
+In the above Wikipedia style entry for Madam C.J. Walker, the `highlight-box` with role `note` could have been a {{HTMLElement('blockquote')}} if it contained a quote or {{HTMLElement('figcaption')}} in a {{HTMLElement('figure')}} if there was an associated image. In this case, as neither of those made sense, the `note` role was added to add semantics to the parenthetic content.
 
 ## Specifications
 
@@ -45,11 +47,3 @@ In the above Wikipedia style entry for Madam C.J. Walker, the `hilitebox` with r
 ## See also
 
 - [Document structure roles](/en-US/docs/Web/Accessibility/ARIA/Roles#1._document_structure_roles)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

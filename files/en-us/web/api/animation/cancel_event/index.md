@@ -10,7 +10,8 @@ browser-compat: api.Animation.cancel_event
 
 The **`cancel`** event of the {{domxref("Animation")}} interface is fired when the {{domxref("Animation.cancel()")}} method is called or when the animation enters the `"idle"` play state from another state, such as when the animation is removed from an element before it finishes playing.
 
-> **Note:** Creating a new animation that is initially idle does not trigger a `cancel` event on the new animation.
+> [!NOTE]
+> Creating a new animation that is initially idle does not trigger a `cancel` event on the new animation.
 
 ## Syntax
 

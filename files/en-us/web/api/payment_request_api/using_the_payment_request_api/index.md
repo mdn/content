@@ -12,7 +12,8 @@ The [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) provides a br
 
 This section details the basics of using the Payment Request API to make a payment.
 
-> **Note:** The code snippets from this section are from our [Feature detect support demo](https://github.com/mdn/dom-examples/blob/main/payment-request/feature-detect-support.html).
+> [!NOTE]
+> The code snippets from this section are from our [Feature detect support demo](https://github.com/mdn/dom-examples/blob/main/payment-request/feature-detect-support.html).
 
 ### Creating a new payment request object
 
@@ -141,7 +142,8 @@ if (window.PaymentRequest) {
 }
 ```
 
-> **Note:** See our [Feature detect support demo](https://mdn.github.io/dom-examples/payment-request/feature-detect-support.html) for the full code.
+> [!NOTE]
+> See our [Feature detect support demo](https://mdn.github.io/dom-examples/payment-request/feature-detect-support.html) for the full code.
 
 ## Checking whether users can make payments
 
@@ -177,7 +179,8 @@ if (window.PaymentRequest) {
 }
 ```
 
-> **Note:** See our [Customizing the payment button demo](https://mdn.github.io/dom-examples/payment-request/customize-button-can-make-payment.html) for the full code.
+> [!NOTE]
+> See our [Customizing the payment button demo](https://mdn.github.io/dom-examples/payment-request/customize-button-can-make-payment.html) for the full code.
 
 ### Checking before all prices are known
 
@@ -224,7 +227,7 @@ function onServerCheckoutDetailsRetrieved(checkoutObject) {
     request
       .show()
       .then((paymentResponse) => {
-        // Post the results to the server and call `paymeResponse.complete()`.
+        // Post the results to the server and call `paymentResponse.complete()`.
       })
       .catch((error) => {
         console.error(error);
@@ -240,7 +243,8 @@ function onServerCheckoutDetailsRetrieved(checkoutObject) {
 }
 ```
 
-> **Note:** See our [Checking user can make payments before prices are known demo](https://mdn.github.io/dom-examples/payment-request/check-user-can-make-payment.html) for the full code.
+> [!NOTE]
+> See our [Checking user can make payments before prices are known demo](https://mdn.github.io/dom-examples/payment-request/check-user-can-make-payment.html) for the full code.
 
 ## Recommending a payment app when user has no apps
 
@@ -265,7 +269,7 @@ checkoutButton.addEventListener("click", () => {
       });
     })
     .catch((error) => {
-      if (error.code === DOMException.NOT_SUPPORTED_ERR) {
+      if (error.name === "NotSupportedError") {
         window.location.href = "https://bobpay.xyz/#download";
       } else {
         // Other kinds of errors; cancelled or failed payment. For demo purposes:
@@ -276,7 +280,8 @@ checkoutButton.addEventListener("click", () => {
 });
 ```
 
-> **Note:** See our [Recommending a payment app when user has no apps demo](https://mdn.github.io/dom-examples/payment-request/recommend-payment-app.html) for the full code.
+> [!NOTE]
+> See our [Recommending a payment app when user has no apps demo](https://mdn.github.io/dom-examples/payment-request/recommend-payment-app.html) for the full code.
 
 ## Showing additional user interface after successful payments
 
@@ -299,7 +304,8 @@ request
   });
 ```
 
-> **Note:** See our [Show additional user interface after successful payment demo](https://mdn.github.io/dom-examples/payment-request/show-additional-ui-after-payment.html) for the full code.
+> [!NOTE]
+> See our [Show additional user interface after successful payment demo](https://mdn.github.io/dom-examples/payment-request/show-additional-ui-after-payment.html) for the full code.
 
 ## Pre-authorizing transactions
 
@@ -341,7 +347,8 @@ self.addEventListener("canmakepayment", (evt) => {
 
 This payment handler would need to live in a service worker at `https://example.com/preauth` scope.
 
-> **Note:** See our [Pre-authorizing transactions demo](https://mdn.github.io/dom-examples/payment-request/pre-authorize-transaction.html) for the full code.
+> [!NOTE]
+> See our [Pre-authorizing transactions demo](https://mdn.github.io/dom-examples/payment-request/pre-authorize-transaction.html) for the full code.
 
 ## See also
 

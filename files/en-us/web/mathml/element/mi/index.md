@@ -14,7 +14,8 @@ The `mathvariant` attribute with a value of `normal` can be used to reset a sing
 
 In order to use a particular form of a character such as bold/italic, serif, sans-serif, script/calligraphy, monospaced, double-struck, and so on, you should use the appropriate [Mathematical Alphanumeric Symbols](https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols).
 
-> **Note:** In a previous specification (MathML3), the `mathvariant` attribute was used to define logical classes that could apply the character formatting for mathematical alphanumeric symbols.
+> [!NOTE]
+> In a previous specification (MathML3), the `mathvariant` attribute was used to define logical classes that could apply the character formatting for mathematical alphanumeric symbols.
 > The associated values are now deprecated, and expected to be removed from browsers in future releases.
 
 ## Attributes
@@ -90,6 +91,19 @@ This element also accepts the [global MathML attributes](/en-US/docs/Web/MathML/
 ```
 
 {{ EmbedLiveSample('mi_example', 400, 100) }}
+
+## Technical summary
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Roles">Implicit ARIA role</a>
+    </th>
+    <td>
+      None
+    </td>
+  </tr>
+</table>
 
 ## Specifications
 

@@ -7,7 +7,7 @@ browser-compat: css.properties.-webkit-text-stroke-color
 
 {{CSSRef}}
 
-The **`-webkit-text-stroke-color`** CSS property specifies the stroke [color](/en-US/docs/Web/CSS/color_value) of characters of text. If this property is not set, the value of the {{cssxref("color")}} property is used.
+The **`-webkit-text-stroke-color`** [CSS](/en-US/docs/Web/CSS) property specifies the stroke [color](/en-US/docs/Web/CSS/color_value) of characters of text. If this property is not set, the value of the {{cssxref("color")}} property is used.
 
 ## Syntax
 
@@ -81,7 +81,7 @@ colorPicker.addEventListener("change", (evt) => {
 
 ## See also
 
-- [Surfin' Safari blog post announcing this feature](https://webkit.org/blog/85/introducing-text-stroke/)
+- [Introducing Text-Stroke](https://webkit.org/blog/85/introducing-text-stroke/) on webkit.org (2006)
 - [CSS-Tricks article explaining this feature](https://css-tricks.com/adding-stroke-to-web-text/)
 - {{cssxref("-webkit-text-fill-color")}}
 - {{cssxref("-webkit-text-stroke-width")}}

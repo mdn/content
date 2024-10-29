@@ -5,6 +5,8 @@ page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#feed
 ---
 
+{{AccessibilitySidebar}}
+
 A `feed` is a dynamic scrollable `list` of `articles` in which articles are added to or removed from either end of the list as the user scrolls. A `feed` enables screen readers to use the browse mode reading cursor to both read and scroll through a stream of rich content that may continue scrolling infinitely by loading more content as the user reads.
 
 ```html
@@ -25,7 +27,7 @@ Unlike the document structure elements that represent static HTML elements, the 
 
 If the number of articles is known, set [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize) on the articles themselves. However, if the total number is extremely large, indefinite, or changes often, set `aria-setsize="-1"` to indicate that the size of the feed is not known.
 
-Another feature of the feed pattern is skim reading: Articles within a feed can contain both an accessible name with the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) and a description with an `aria-describedby,` suggesting to screen readers which elements to speak after the label when navigating by article. By identifying the elements inside an article that provide the title and the primary content, assistive technologies can provide functions that enable users to jump from article to article and efficiently discern which articles they want to read.
+Another feature of the feed pattern is skim reading: Articles within a feed can contain both an accessible name with the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) and a description with an `aria-describedby`, suggesting to screen readers which elements to speak after the label when navigating by article. By identifying the elements inside an article that provide the title and the primary content, assistive technologies can provide functions that enable users to jump from article to article and efficiently discern which articles they want to read.
 
 The feed pattern enables reliable assistive technology reading mode interaction by establishing the following interoperability agreement between the web page and assistive technologies:
 
@@ -86,11 +88,3 @@ To ensure good user experience, avoid inserting or removing articles in the midd
 - The {{HTMLElement('ul')}} unordered list element
 - [ARIA: `article` role](/en-US/docs/Web/Accessibility/ARIA/Roles/article_role)
 - [ARIA: `list` role](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

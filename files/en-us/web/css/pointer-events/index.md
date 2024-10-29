@@ -17,14 +17,17 @@ The **`pointer-events`** [CSS](/en-US/docs/Web/CSS) property sets under what cir
 /* Keyword values */
 pointer-events: auto;
 pointer-events: none;
-pointer-events: visiblePainted; /* SVG only */
-pointer-events: visibleFill; /* SVG only */
-pointer-events: visibleStroke; /* SVG only */
-pointer-events: visible; /* SVG only */
-pointer-events: painted; /* SVG only */
-pointer-events: fill; /* SVG only */
-pointer-events: stroke; /* SVG only */
-pointer-events: all; /* SVG only */
+
+/* Values used in SVGs */
+pointer-events: visiblePainted;
+pointer-events: visibleFill;
+pointer-events: visibleStroke;
+pointer-events: visible;
+pointer-events: painted;
+pointer-events: fill;
+pointer-events: stroke;
+pointer-events: bounding-box;
+pointer-events: all;
 
 /* Global values */
 pointer-events: inherit;
@@ -41,7 +44,11 @@ The `pointer-events` property is specified as a single keyword chosen from the l
 - `auto`
   - : The element behaves as it would if the `pointer-events` property were not specified. In SVG content, this value and the value `visiblePainted` have the same effect.
 - `none`
-  - : The element is never the [target](/en-US/docs/Web/API/Event/target) of pointer events; however, pointer events may target its descendant elements if those descendants have `pointer-events` set to some other value. In these circumstances, pointer events will trigger event listeners on this parent element as appropriate on their way to/from the descendant during the event capture/[bubble](/en-US/docs/Web/API/Event/bubbles) phases.
+
+  - : The element on its own is never the [target](/en-US/docs/Web/API/Event/target) of pointer events. However its subtree could be kept targetable by setting `pointer-events` to some other value. In these circumstances, pointer events will trigger event listeners on this parent element as appropriate on their way to or from the descendant during the event capture and [bubble](/en-US/docs/Web/API/Event/bubbles) phases.
+
+    > [!NOTE]
+    > The `pointerenter` and `pointerleave` events are fired when a pointing device is moved into an element or one of its descendants. So, even if `pointer-events: none` is set on the parent and not set on children, the events are triggered on the parent after the pointer is moved in or out of a descendant.
 
 #### SVG only (experimental for HTML)
 
@@ -59,6 +66,8 @@ The `pointer-events` property is specified as a single keyword chosen from the l
   - : SVG only. The element can only be the target of a pointer event when the pointer is over the interior (i.e., fill) of the element. The values of the `fill` and `visibility` properties do not affect event processing.
 - `stroke`
   - : SVG only. The element can only be the target of a pointer event when the pointer is over the perimeter (i.e., stroke) of the element. The values of the `stroke` and `visibility` properties do not affect event processing.
+- `bounding-box`
+  - : SVG only. The element can only be the target of a pointer event when the pointer is over the [bounding box](/en-US/docs/Glossary/Bounding_box) of the element.
 - `all`
   - : SVG only (experimental for HTML). The element can only be the target of a pointer event when the pointer is over the interior (i.e., fill) or the perimeter (i.e., stroke) of the element. The values of the `fill`, `stroke`, and `visibility` properties do not affect event processing.
 

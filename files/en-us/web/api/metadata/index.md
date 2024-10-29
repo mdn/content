@@ -12,7 +12,8 @@ browser-compat: api.Metadata
 
 The **`Metadata`** interface contains information about a file system entry. This metadata includes the file's size and modification date and time.
 
-> **Note:** This interface isn't available through the global scope; instead, you obtain a `Metadata` object describing a {{domxref("FileSystemEntry")}} using the method {{domxref("FileSystemEntry.getMetadata()")}}.
+> [!NOTE]
+> This interface isn't available through the global scope; instead, you obtain a `Metadata` object describing a {{domxref("FileSystemEntry")}} using the method {{domxref("FileSystemEntry.getMetadata()")}}.
 
 ## Instance properties
 

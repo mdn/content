@@ -8,7 +8,7 @@ page-type: xslt-element
 
 The `<xsl:number>` element counts things sequentially. It can also be used to quickly format a number.
 
-### Syntax
+## Syntax
 
 ```xml
 <xsl:number
@@ -66,20 +66,20 @@ None.
 - `lang` (Not supported at this time.)
   - : Specifies which language's alphabet should be used in letter-based numbering formats.
 - `letter-value`
-  - : Disambiguates between numbering sequences that use letters. Some languages have more than one numbering system that use letters. If both systems begin with the same token, ambiguity can arise. This attribute can have the value "`alphabetic`" or "`traditional`". The default is "`alphabetic`".
+  - : Disambiguates between numbering sequences that use letters. Some languages have more than one numbering system that use letters. If both systems begin with the same token, ambiguity can arise. This attribute can have the value `alphabetic` or `traditional`. The default is `alphabetic`.
 - `grouping-separator`
   - : Specifies what character should be used as the group (e.g. thousands) separator. The default is the comma (`,`).
 - `grouping-size`
-  - : Indicates the number of digits that make up a numeric group. The default value is "`3`".
+  - : Indicates the number of digits that make up a numeric group. The default value is `3`.
 
 ### Type
 
 Instruction, appears within a template.
 
-### Defined
+## Specifications
 
 XSLT, section 7.7
 
-### Gecko support
+## Gecko support
 
 Partial support. See comments above.

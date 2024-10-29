@@ -33,19 +33,23 @@ The `NavigationEvent` object also provides two methods:
 
 Once a navigation is initiated, and your `intercept()` handler is called, a {{domxref("NavigationTransition")}} object instance is created (accessible via {{domxref("Navigation.transition")}}), which can be used to track the process of the ongoing navigation.
 
-> **Note:** In this context "transition" refers to the transition between one history entry and another. It isn't related to CSS transitions.
+> [!NOTE]
+> In this context "transition" refers to the transition between one history entry and another. It isn't related to CSS transitions.
 
-> **Note:** You can also call {{domxref("Event.preventDefault", "preventDefault()")}} to stop the navigation entirely for most [navigation types](/en-US/docs/Web/API/NavigateEvent/navigationType#value); cancellation of traverse navigations is not yet implemented.
+> [!NOTE]
+> You can also call {{domxref("Event.preventDefault", "preventDefault()")}} to stop the navigation entirely for most [navigation types](/en-US/docs/Web/API/NavigateEvent/navigationType#value); cancellation of traverse navigations is not yet implemented.
 
 When the `intercept()` handler function's promise fulfills, the `Navigation` object's {{domxref("Navigation/navigatesuccess_event", "navigatesuccess")}} event fires, allowing you to run cleanup code after a successful navigation has completed. If it rejects, meaning the navigation has failed, {{domxref("Navigation/navigateerror_event", "navigateerror")}} fires instead, allowing you to gracefully handle the failure case. There is also a {{domxref("NavigationTransition.finished", "finished")}} property on the `NavigationTransition` object, which fulfills or rejects at the same time as the aforementioned events are fired, providing another path for handling the success and failure cases.
 
-> **Note:** Before the Navigation API was available, to do something similar you'd have to listen for all click events on links, run `e.preventDefault()`, perform the appropriate {{domxref("History.pushState()")}} call, then set up the page view based on the new URL. And this wouldn't handle all navigations — only user-initiated link clicks.
+> [!NOTE]
+> Before the Navigation API was available, to do something similar you'd have to listen for all click events on links, run `e.preventDefault()`, perform the appropriate {{domxref("History.pushState()")}} call, then set up the page view based on the new URL. And this wouldn't handle all navigations — only user-initiated link clicks.
 
 ### Programmatically updating and traversing the navigation history
 
 As the user navigates through your application, each new location navigated to results in the creation of a navigation history entry. Each history entry is represented by a distinct {{domxref("NavigationHistoryEntry")}} object instance. These contain several properties such as the entry's key, URL, and state information. You can get the entry that the user is currently on right now using {{domxref("Navigation.currentEntry")}}, and an array of all existing history entries using {{domxref("Navigation.entries()")}}. Each `NavigationHistoryEntry` object has a {{domxref("NavigationHistoryEntry/dispose_event", "dispose")}} event, which fires when the entry is no longer part of the browser history. For example, if the user navigates back three times, then navigates forward to somewhere else, those three history entries will be disposed of.
 
-> **Note:** The Navigation API only exposes history entries created in the current browsing context that have the same origin as the current page (e.g. not navigations inside embedded {{htmlelement("iframe")}}s, or cross-origin navigations), providing an accurate list of all previous history entries just for your app. This makes traversing the history a much less fragile proposition than with the older {{domxref("History API", "", "", "nocode")}}.
+> [!NOTE]
+> The Navigation API only exposes history entries created in the current browsing context that have the same origin as the current page (e.g. not navigations inside embedded {{htmlelement("iframe")}}s, or cross-origin navigations), providing an accurate list of all previous history entries just for your app. This makes traversing the history a much less fragile proposition than with the older {{domxref("History API", "", "", "nocode")}}.
 
 The `Navigation` object contains all the methods you'll need to update and traverse through the navigation history:
 
@@ -90,6 +94,8 @@ There are a few perceived limitations with the Navigation API:
   - : Event object for the {{domxref("Navigation/navigate_event", "navigate")}} event, which fires when [any type of navigation](https://github.com/WICG/navigation-api#appendix-types-of-navigations) is initiated. It provides access to information about that navigation, and most notably the {{domxref("NavigateEvent.intercept", "intercept()")}}, which allows you to control what happens when the navigation is initiated.
 - {{domxref("Navigation")}} {{Experimental_Inline}}
   - : Allows control over all navigation actions for the current `window` in one central place, including initiating navigations programmatically, examining navigation history entries, and managing navigations as they happen.
+- {{domxref("NavigationActivation")}} {{Experimental_Inline}}
+  - : Represents a recent cross-document navigation. It contains the navigation type and current and destination document history entries.
 - {{domxref("NavigationCurrentEntryChangeEvent")}} {{Experimental_Inline}}
   - : Event object for the {{domxref("Navigation/currententrychange_event", "currententrychange")}} event, which fires when the {{domxref("Navigation.currentEntry")}} has changed. It provides access to the navigation type, and the previous history entry that was navigated from.
 - {{domxref("NavigationDestination")}} {{Experimental_Inline}}
@@ -106,7 +112,8 @@ There are a few perceived limitations with the Navigation API:
 
 ## Examples
 
-> **Note:** Check out Domenic Denicola's [Navigation API live demo](https://gigantic-honored-octagon.glitch.me/).
+> [!NOTE]
+> Check out Domenic Denicola's [Navigation API live demo](https://gigantic-honored-octagon.glitch.me/).
 
 ### Handling a navigation using `intercept()`
 

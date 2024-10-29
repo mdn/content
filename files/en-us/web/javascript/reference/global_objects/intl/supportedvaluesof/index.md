@@ -31,6 +31,9 @@ Intl.supportedValuesOf(key)
 
 A sorted array of unique string values indicating the values supported by the implementation for the given key.
 
+> [!NOTE]
+> While the IANA database changes from time to time, the Unicode CLDR database (which browsers use) keeps old time zone names for stability purposes. Some browsers may use the legacy name, while others override it with the new name. See {{jsxref("Intl/Locale/getTimeZones", "Intl.Locale.prototype.getTimeZones")}} for more information.
+
 ### Exceptions
 
 - {{jsxref("RangeError")}}
@@ -59,7 +62,8 @@ Intl.supportedValuesOf("calendar").forEach((calendar) => {
 });
 ```
 
-> **Note:** The array returned for calendar values will always include the value "gregory" (gregorian).
+> [!NOTE]
+> The array returned for calendar values will always include the value "gregory" (gregorian).
 
 The other values are all obtained in the same way:
 
@@ -105,5 +109,5 @@ try {
 
 ## See also
 
-- [Polyfill of `Intl.supportedValuesOf` in FormatJS](https://github.com/formatjs/formatjs/tree/main/packages/intl-enumerator)
+- [Polyfill of `Intl.supportedValuesOf` in FormatJS](https://formatjs.github.io/docs/polyfills/intl-supportedvaluesof/)
 - {{jsxref("Intl")}}

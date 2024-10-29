@@ -6,9 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.OffscreenCanvas.getContext
 ---
 
-{{APIRef("Canvas API")}}
+{{APIRef("Canvas API")}}{{AvailableInWorkers}}
 
-The **`OffscreenCanvas.getContext()`** method returns a drawing context for an offscreen canvas, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if the context identifier is not supported.
+The **`OffscreenCanvas.getContext()`** method returns a drawing context for an offscreen canvas, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if the context identifier is not supported, or the offscreen canvas has already been set to a different context mode.
 
 ## Syntax
 
@@ -25,17 +25,18 @@ getContext(contextType, contextAttributes)
     - `2d`
       - : Creates a {{domxref("OffscreenCanvasRenderingContext2D")}} object representing a two-dimensional rendering context.
     - `webgl`
-      - : Creates a {{domxref("WebGLRenderingContext")}} object representing a three-dimensional rendering context.
-        This context is only available on browsers that implement [WebGL](/en-US/docs/Web/API/WebGL_API) version 1 (OpenGL ES 2.0).
+      - : Creates a {{domxref("WebGLRenderingContext")}} object representing a three-dimensional rendering context. This context is only available on browsers that implement [WebGL](/en-US/docs/Web/API/WebGL_API) version 1 (OpenGL ES 2.0).
     - `webgl2`
-      - : Creates a {{domxref("WebGL2RenderingContext")}} object representing a three-dimensional rendering context.
-        This context is only available on browsers that implement [WebGL](/en-US/docs/Web/API/WebGL_API) version 2 (OpenGL ES 3.0).
+      - : Creates a {{domxref("WebGL2RenderingContext")}} object representing a three-dimensional rendering context. This context is only available on browsers that implement [WebGL](/en-US/docs/Web/API/WebGL_API) version 2 (OpenGL ES 3.0).
+    - `"webgpu"`
+      - : Creates a {{domxref("GPUCanvasContext")}} object representing a three-dimensional rendering context for WebGPU render pipelines. This context is only available on browsers that implement [WebGPU API](/en-US/docs/Web/API/WebGPU_API).
     - `bitmaprenderer`
       - : Creates a {{domxref("ImageBitmapRenderingContext")}} which only provides functionality to replace the content of the canvas with a given {{domxref("ImageBitmap")}}.
 
-    > **Note:** The identifiers **`"experimental-webgl"`** or **`"experimental-webgl2"`** are also used in implementations of WebGL.
+    > [!NOTE]
+    > The identifiers **`"experimental-webgl"`** or **`"experimental-webgl2"`** are also used in implementations of WebGL.
     > These implementations have not reached test suite conformance, or the graphic drivers situation on the platform is not yet stable.
-    > The [Khronos Group](https://www.khronos.org/) certifies WebGL implementations under certain [conformance rules](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt).
+    > The [Khronos Group](https://www.khronos.org/) certifies WebGL implementations under certain [conformance rules](https://registry.khronos.org/webgl/sdk/tests/CONFORMANCE_RULES.txt).
 
 - `contextAttributes`
 
@@ -79,10 +80,16 @@ A rendering context which is either a
 
 - {{domxref("OffscreenCanvasRenderingContext2D")}} for `"2d"`,
 - {{domxref("WebGLRenderingContext")}} for `"webgl"` and `"experimental-webgl"`,
-- {{domxref("WebGL2RenderingContext")}} for `"webgl2"` and `"experimental-webgl2"` {{experimental_inline}}, or
+- {{domxref("WebGL2RenderingContext")}} for `"webgl2"` and `"experimental-webgl2"`,
+- {{domxref("GPUCanvasContext")}} for `"webgpu"`,
 - {{domxref("ImageBitmapRenderingContext")}} for `"bitmaprenderer"`.
 
-If the `contextType` doesn't match a possible drawing context, `null` is returned.
+If the context identifier is not supported, or the canvas has already been set to a different context mode, `null` is returned.
+
+### Exceptions
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Throws if the canvas has transferred to another context scope, for example, to worker.
 
 ## Examples
 

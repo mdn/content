@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-rowindex
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-rowindex` attribute defines an element's position with respect to the total number of rows within a table, grid, or treegrid.
 
 ## Description
@@ -19,9 +21,10 @@ The value for `aria-rowindex` is an integer greater than or equal to `1`, greate
 
 If all of the rows are loaded and in the DOM, you don't need to include `aria-rowindex` as browsers automatically calculate the index of each row. However, when only a subset of the rows are present in the DOM, `aria-rowindex` is needed to indicate each row's position with respect to the full table. If only a subset of rows are loaded, you also need to include [`aria-rowcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount) on the table ancestor, even if you don't know the total rowcount.
 
-If the table with only a subset of rows has a cell that spans more than one row, both the row and cell need to have the `aria-rowspan` set. If a cell spans more than one row－when a cell role includes the `aria-rowspan` attribute or HTML cell has a `rowspan` attribute set to a value greater than 1－include the row's `aria-rowindex` value on the spanning cell in addition to the appropriate row spanning attribute. The value should be the row index of the row where the span starts.
+If the table with only a subset of rows has a cell that spans more than one row, both the row and cell need to have the `aria-rowindex` set. If a cell spans more than one row－when a cell role includes the `aria-rowspan` attribute or HTML cell has a `rowspan` attribute set to a value greater than 1－include the row's `aria-rowindex` value on the spanning cell in addition to the appropriate row spanning attribute. The value should be the row index of the row where the span starts.
 
-> **Note:** The `aria-rowindex` must be added to each row, but is optional on the cells, except for cells that span rows: the `aria-rowindex` attribute is required on all spanning cells.
+> [!NOTE]
+> The `aria-rowindex` must be added to each row, but is optional on the cells, except for cells that span rows: the `aria-rowindex` attribute is required on all spanning cells.
 
 ## Examples
 
@@ -98,8 +101,3 @@ Inherited into roles:
 - [`aria-rowspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan)
 - [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
 - The [`rowspan`](/en-US/docs/Web/HTML/Element/td#rowspan) attribute on {{HTMLElement('td')}}
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

@@ -40,11 +40,15 @@ For the `depth`, `height`, `lspace`, `voffset` and `width` attributes, some brow
 
 ### Dimensions and offsets
 
-```html-nolint
+```html
 <math display="block">
-  <mpadded width="400px" height="5em" depth="4em"
-           lspace="300px" voffset="-2em"
-           style="background: lightblue">
+  <mpadded
+    width="400px"
+    height="5em"
+    depth="4em"
+    lspace="300px"
+    voffset="-2em"
+    style="background: lightblue">
     <mi>x</mi>
     <mo>+</mo>
     <mi>y</mi>
@@ -81,6 +85,19 @@ For the `depth`, `height`, `lspace`, `voffset` and `width` attributes, some brow
 ```
 
 {{ EmbedLiveSample('legacy_syntax_example', 700, 200, "", "") }}
+
+## Technical summary
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Roles">Implicit ARIA role</a>
+    </th>
+    <td>
+      None
+    </td>
+  </tr>
+</table>
 
 ## Specifications
 

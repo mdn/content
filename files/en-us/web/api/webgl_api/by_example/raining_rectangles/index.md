@@ -4,7 +4,7 @@ slug: Web/API/WebGL_API/By_example/Raining_rectangles
 page-type: guide
 ---
 
-{{PreviousNext("Learn/WebGL/By_example/Scissor_animation","Learn/WebGL/By_example/Hello_GLSL")}}
+{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Learn/WebGL/By_example/Scissor_animation","Learn/WebGL/By_example/Hello_GLSL")}}
 
 A simple WebGL game that demonstrates clearing with solid colors, scissoring, animation, and user interaction.
 

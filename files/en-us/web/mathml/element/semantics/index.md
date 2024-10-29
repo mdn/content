@@ -10,11 +10,18 @@ browser-compat: mathml.elements.semantics
 The **`<semantics>`** [MathML](/en-US/docs/Web/MathML) element associates annotations with a MathML expression, for example its text source as a [lightweight markup language](https://en.wikipedia.org/wiki/Lightweight_markup_language) or mathematical meaning expressed in a special {{glossary("XML")}} dialect. Typically, its structure is:
 
 - a first child which is a MathML expression to be annotated.
-- subsequent `<annotation>` or `<annotation-xml>` elements, the latter being reserved for XML formats such as [OpenMath](https://en.wikipedia.org/wiki/OpenMath).
+- subsequent {{mathmlelement("annotation")}} or {{mathmlelement("annotation-xml")}} elements, the latter being reserved for XML formats such as [Content MathML](https://en.wikipedia.org/wiki/MathML#Content_MathML) or {{glossary("SVG")}}.
 
 By default, only the first child of the `<semantics>` element is rendered while the others have their [display](/en-US/docs/Web/CSS/display) set to `none`.
 
-> **Note:** Legacy MathML specifications allowed renderers to decide the default rendering according to available annotations. The following rules for determining the visible child have been implemented in some browsers. See [MathML 4](https://w3c.github.io/mathml/) for the distinction between Presentation and Content MathML.
+```css
+semantics > :not(:first-child) {
+  display: none;
+}
+```
+
+> [!NOTE]
+> Legacy MathML specifications allowed renderers to decide the default rendering according to available annotations. The following rules for determining the visible child have been implemented in some browsers. See [MathML 4](https://w3c.github.io/mathml/) for the distinction between Presentation and Content MathML.
 >
 > - If no other rules apply: By default only the first child is rendered, which is supposed to be Presentation MathML.
 > - If the first child is a Presentation MathML element other than `<annotation>` or `<annotation-xml>`, render the first child.
@@ -24,20 +31,28 @@ By default, only the first child of the `<semantics>` element is rendered while 
 >   - `"SVG1.1"`
 >   - `"text/html"`
 >   - `"image/svg+xml"`
->   - `"application/xml`".
+>   - `"application/xml"`
 >
 > Note that `"application/mathml+xml"` is _not_ mentioned here as it does not distinguish between Content or Presentation MathML.
 
 ## Attributes
 
-`<semantics>`, `<annotation>` and `<annotation-xml>` elements accept the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes). Additionally, the following attributes can be set on the `<annotation>` and `<annotation-xml>` elements:
-
-- `encoding`
-  - : The encoding of the semantic information in the annotation (e.g. `"MathML-Content"`, `"MathML-Presentation"`, `"application/openmath+xml"`, `"image/png"`)
-- `src` {{deprecated_inline}}
-  - : The location of an external source for semantic information.
+This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
 
 ## Example
+
+```css hidden
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+}
+```
 
 ```html
 <math display="block">
@@ -52,9 +67,11 @@ By default, only the first child of the `<semantics>` element is rendered while 
       <mi>y</mi>
     </mrow>
 
-    <!-- Annotate with "Content MathML", a dedicated XML dialect to
-         express the meaning of mathematical formulas. -->
-    <annotation-xml encoding="MathML-Content">
+    <!--
+      Annotate with content MathML, a dedicated XML dialect
+      to express the meaning of mathematical formulas.
+    -->
+    <annotation-xml encoding="application/mathml-content+xml">
       <apply>
         <plus />
         <apply>
@@ -66,17 +83,29 @@ By default, only the first child of the `<semantics>` element is rendered while 
       </apply>
     </annotation-xml>
 
-    <!-- Annotate with a PNG image of the formula. -->
-    <annotation encoding="image/png" src="some/path/formula.png" />
-
-    <!-- Annotate with LaTeX, a lightweight markup language to write
-         mathematical formulas. -->
-    <annotation encoding="application/x-tex"> x^{2} + y </annotation>
+    <!--
+      Annotate with LaTeX, a lightweight markup language
+      to write mathematical formulas.
+    -->
+    <annotation encoding="application/x-tex">x^{2} + y</annotation>
   </semantics>
 </math>
 ```
 
-{{ EmbedLiveSample('semantics_example', 700, 200, "", "") }}
+{{ EmbedLiveSample('example', 700, 200, "", "") }}
+
+## Technical summary
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Roles">Implicit ARIA role</a>
+    </th>
+    <td>
+      None
+    </td>
+  </tr>
+</table>
 
 ## Specifications
 

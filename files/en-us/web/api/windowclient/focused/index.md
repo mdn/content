@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.WindowClient.focused
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 The **`focused`** read-only property of the
 {{domxref("WindowClient")}} interface is a boolean value that indicates whether

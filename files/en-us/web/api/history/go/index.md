@@ -38,7 +38,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : Thrown if the associated document is not fully active.
+  - : Thrown if the associated document is not fully active. Browsers also throttle navigations and may throw this error, generate a warning, or ignore the call if it's called too frequently.
 
 ## Examples
 
@@ -66,7 +66,7 @@ To move backwards by two pages:
 history.go(-2);
 ```
 
-And, finally either of the following statements will reload the current page:
+And finally, either of the following statements will reload the current page:
 
 ```js
 history.go();

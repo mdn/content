@@ -10,7 +10,8 @@ browser-compat: api.Selection.collapse
 
 The **`Selection.collapse()`** method collapses the current selection to a single point. The document is not modified. If the content is focused and editable, the caret will blink there.
 
-> **Note:** This method is an alias for the {{domxref("Selection.setPosition()")}} method.
+> [!NOTE]
+> This method is an alias for the {{domxref("Selection.setPosition()")}} method.
 
 ## Syntax
 

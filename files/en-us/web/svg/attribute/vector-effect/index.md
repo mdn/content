@@ -9,7 +9,10 @@ browser-compat: svg.global_attributes.vector-effect
 
 The **`vector-effect`** property specifies the vector effect to use when drawing an object. Vector effects are applied before any of the other compositing operations, i.e. filters, masks and clips.
 
-> **Note:** As a presentation attribute, `vector-effect` can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute, `vector-effect` can be used as a CSS property.
+
+## Elements
 
 You can use this attribute with the following SVG elements:
 
@@ -61,9 +64,9 @@ You can use this attribute with the following SVG elements:
 - `fixed-position`
   - : This value specifies a special user coordinate system used by the element and its descendants. The position of user coordinate system is fixed in spite of any transformation changes from a host coordinate space. However, it does not specify the suppression of rotation, skew and scaling. When this vector effect and the {{SVGAttr("transform")}} property are defined at the same time, that property is consumed for this effect.
 
-## Example
+## Examples
 
-### Example: vector-effect="non-scaling-stroke"
+### Setting `vector-effect` as `non-scaling-stroke`
 
 ```html
 <svg viewBox="0 0 500 240">
@@ -95,7 +98,7 @@ You can use this attribute with the following SVG elements:
 
 #### Result
 
-{{EmbedLiveSample("Example_vector-effectnon-scaling-stroke", 550, 300)}}
+{{EmbedLiveSample("Setting vector-effect as non-scaling-stroke", 550, 330)}}
 
 ## Specifications
 
@@ -104,3 +107,7 @@ You can use this attribute with the following SVG elements:
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- CSS {{cssxref("vector-effect")}} property

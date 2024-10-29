@@ -12,7 +12,8 @@ Quantifiers indicate numbers of characters or expressions to match.
 
 ## Types
 
-> **Note:** In the following, _item_ refers not only to singular characters, but also includes [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) and [groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences).
+> [!NOTE]
+> In the following, _item_ refers not only to singular characters, but also includes [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) and [groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences).
 
 <table class="standard-table">
   <thead>
@@ -71,7 +72,7 @@ Quantifiers indicate numbers of characters or expressions to match.
       </td>
       <td>
         <p>
-          Where "n" is a positive integer, matches exactly "n" occurrences of
+          Where "n" is a non-negative integer, matches exactly "n" occurrences of
           the preceding item "x". For example, <code>/a{2}/</code> doesn't match
           the "a" in "candy", but it matches all of the "a"'s in "caandy", and
           the first two "a"'s in "caaandy".
@@ -84,7 +85,7 @@ Quantifiers indicate numbers of characters or expressions to match.
       </td>
       <td>
         <p>
-          Where "n" is a positive integer, matches at least "n" occurrences of
+          Where "n" is a non-negative integer, matches at least "n" occurrences of
           the preceding item "x". For example, <code>/a{2,}/</code> doesn't
           match the "a" in "candy", but matches all of the a's in "caandy" and
           in "caaaaaaandy".
@@ -96,10 +97,10 @@ Quantifiers indicate numbers of characters or expressions to match.
         <code><em>x</em>{<em>n</em>,<em>m</em>}</code>
       </td>
       <td>
+        <!-- cSpell:ignore cndy -->
         <p>
-          Where "n" is 0 or a positive integer, "m" is a positive integer, and
-          <code><em>m</em> > <em>n</em></code
-          >, matches at least "n" and at most "m" occurrences of the preceding
+          Where "n" and "m" are non-negative integers and <code>m >= n</code>,
+          matches at least "n" and at most "m" occurrences of the preceding
           item "x". For example, <code>/a{1,3}/</code> matches nothing in
           "cndy", the "a" in "candy", the two "a"'s in "caandy", and the first
           three "a"'s in "caaaaaaandy". Notice that when matching "caaaaaaandy",
@@ -142,6 +143,8 @@ Quantifiers indicate numbers of characters or expressions to match.
 
 ### Repeated pattern
 
+In this example, we match one or more word characters with `\w+`, then one or more characters "a" with `a+`, and finally end at a word boundary with `\b`.
+
 ```js
 const wordEndingWithAs = /\w+a+\b/;
 const delicateMessage = "This is Spartaaaaaaa";
@@ -150,6 +153,8 @@ console.table(delicateMessage.match(wordEndingWithAs)); // [ "Spartaaaaaaa" ]
 ```
 
 ### Counting characters
+
+In this example, we match words that have a single letter, words that have between 2 and 6 letters, and words that have 13 or more letters.
 
 ```js
 const singleLetterWord = /\b\w\b/g;
@@ -164,6 +169,8 @@ console.table(sentence.match(longWord)); // ["multiplication"]
 ```
 
 ### Optional character
+
+In this example, we match words that either end with "our" or "or".
 
 ```js
 const britishText = "He asked his neighbour a favour.";
@@ -184,11 +191,11 @@ console.table(americanText.match(regexpEnding));
 
 ### Greedy versus non-greedy
 
+In this example, we match one or more word characters or spaces with `[\w ]+` and `[\w ]+?`. The first one is greedy and the second one is non-greedy. Note how the second one stops as soon as it meets the minimal requirement.
+
 ```js
 const text = "I must be getting somewhere near the center of the earth.";
 const greedyRegexp = /[\w ]+/;
-// [\w ]      a letter of the latin alphabet or a whitespace
-//      +     one or several times
 
 console.log(text.match(greedyRegexp)[0]);
 // "I must be getting somewhere near the center of the earth"
@@ -207,3 +214,5 @@ console.log(text.match(nonGreedyRegexp));
 - [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions) guide
 - [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences) guide
 - [`RegExp`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) reference
+- [Quantifier: `*`, `+`, `?`, `{n}`, `{n,}`, `{n,m}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier)

@@ -6,13 +6,14 @@ page-type: web-api-instance-property
 browser-compat: api.Request.referrer
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`referrer`** read-only property of the
 {{domxref("Request")}} interface is set by the user agent to be the referrer of the
 Request. (e.g., `client`, `no-referrer`, or a URL.)
 
-> **Note:** If `referrer`'s value is `no-referrer`,
+> [!NOTE]
+> If `referrer`'s value is `no-referrer`,
 > it returns an empty string.
 
 ## Value

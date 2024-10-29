@@ -37,7 +37,8 @@ function name(param0, param1, /* …, */ paramN) {
 }
 ```
 
-> **Note:** An [expression statement](/en-US/docs/Web/JavaScript/Reference/Statements/Expression_statement) cannot begin with the keyword `function` to avoid ambiguity with a [`function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function). The `function` keyword only begins an expression when it appears in a context that cannot accept statements.
+> [!NOTE]
+> An [expression statement](/en-US/docs/Web/JavaScript/Reference/Statements/Expression_statement) cannot begin with the keyword `function` to avoid ambiguity with a [`function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function). The `function` keyword only begins an expression when it appears in a context that cannot accept statements.
 
 ### Parameters
 
@@ -73,7 +74,7 @@ If you want to refer to the current function inside the function body, you need 
 
 ```js
 const math = {
-  factit: function factorial(n) {
+  factorial: function factorial(n) {
     console.log(n);
     if (n <= 1) {
       return 1;
@@ -82,7 +83,7 @@ const math = {
   },
 };
 
-math.factit(3); //3;2;1;
+math.factorial(3); //3;2;1;
 ```
 
 If a function expression is named, the [`name`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name) property of the function is set to that name, instead of the implicit name inferred from syntax (such as the variable the function is assigned to).

@@ -2,7 +2,6 @@
 title: Center an element
 slug: Web/CSS/Layout_cookbook/Center_an_element
 page-type: guide
-browser-compat: css.properties.grid
 ---
 
 {{CSSRef}}
@@ -19,7 +18,7 @@ To place an item into the center of another box horizontally and vertically.
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/center.html", '100%', 720)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/center--download.html)
 
@@ -94,5 +93,5 @@ Instead of applying `place-items: center;` on the container, you can achieve the
 
 ## Resources on MDN
 
-- [Box Alignment in Flexbox](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
-- [CSS Box alignment guide](/en-US/docs/Web/CSS/CSS_box_alignment)
+- [Box alignment in flexbox](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
+- [CSS box alignment guide](/en-US/docs/Web/CSS/CSS_box_alignment)

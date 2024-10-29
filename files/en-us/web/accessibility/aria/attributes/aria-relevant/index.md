@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-relevant
 ---
 
+{{AccessibilitySidebar}}
+
 Used in ARIA live regions, the global `aria-relevant` attribute indicates what notifications the user agent will trigger when the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree) within a live region is modified.
 
 ## Description
@@ -15,7 +17,7 @@ Examples of live regions include news marquees, stock tickers, chat windows, and
 
 The value is a space-separated list of change types, including `additions`, `removals`, and `text`, with a shorthand `all` meaning all three.
 
-When `aria-relevant` is not defined, the value is inherited from the nearest ancestor with a defined value. Inherited values are not additive; the value provided on a descendant element completely overrides any inherited value from an ancestor element. When a live region doesn't have an `aria-relevant` attribute set and has no ancestor with it set, it defaults to `additions text`, because generally text modifications and node additions are relevant, but node removals are not.
+When `aria-relevant` is not defined, the value is inherited from the nearest ancestor with a defined value. Inherited values are not additive; the value provided on a descendant element completely overrides any inherited value from an ancestor element. When a live region doesn't have an `aria-relevant` attribute set and has no ancestor with it set, it defaults to `additions text`, which means element nodes are added to the accessibility tree within the live region, AND text content or a text alternative is added to any descendant in the accessibility tree of the live region. This is because generally text modifications and node additions are relevant, but node removals are not.
 
 While not a supported value, if the value of `none` makes the most sense, it should not be a live region.
 
@@ -31,8 +33,6 @@ The values of `removals` and `all` should be used sparingly. For example, when a
   - : Text content, a text alternative, or an element node within the live region is removed from the accessibility tree.
 - `text`
   - : Text content or a text alternative is added to any descendant in the accessibility tree of the live region.
-- `additions text` (default)
-  - : Element nodes are added to the accessibility tree within the live region AND text content or a text alternative is added to any descendant in the accessibility tree of the live region.
 
 ## Associated interfaces
 
@@ -55,8 +55,3 @@ Used in **ALL** roles.
 - [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live)
 - [`aria-busy`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-busy)
 - [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

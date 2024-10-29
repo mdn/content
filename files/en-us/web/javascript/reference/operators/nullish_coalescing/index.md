@@ -96,7 +96,7 @@ console.log(preservingFalsy); // '' (as myText is neither undefined nor null)
 
 ### Short-circuiting
 
-Like the OR and AND logical operators, the right-hand side expression is not evaluated if the left-hand side proves to be neither `null` nor `undefined`.
+Like the 'OR' and 'AND' logical operators, the right-hand side expression is not evaluated if the left-hand side proves to be neither `null` nor `undefined`.
 
 ```js
 function a() {

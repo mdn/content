@@ -15,7 +15,7 @@ You don't create `FileSystemEntry` objects directly. Instead, you will receive a
 
 The `FileSystemEntry` interface includes methods that you would expect for manipulating files and directories, but it also includes a convenient method for obtaining the URL of the entry: [`toURL()`](#tourl). It also introduces a new URL scheme: `filesystem:`.
 
-You can use the `filesystem:` scheme on Google Chrome to see all the files and folders that are stored in the origin of your app. Just use `filesystem:` scheme for the root directory of the origin of the app. For example, if your app is in [`http://www.example.com`](https://www.example.com), open `filesystem:http://www.example.com/temporary/` in a tab. Chrome shows a read-only list of all the files and folders stored the origin of your app.
+You can use the `filesystem:` scheme on Google Chrome to see all the files and folders that are stored in the origin of your app. Just use `filesystem:` scheme for the root directory of the origin of the app. For example, if your app is in [`http://www.example.com`](https://www.example.com/), open `filesystem:http://www.example.com/temporary/` in a tab. Chrome shows a read-only list of all the files and folders stored the origin of your app.
 
 ### Example
 
@@ -55,7 +55,7 @@ _This interface provides the following properties._
 - {{domxref("FileSystemEntry.filesystem", "filesystem")}} {{ReadOnlyInline}}
   - : A {{domxref("FileSystem")}} object representing the file system in which the entry is located.
 - {{domxref("FileSystemEntry.fullPath", "fullPath")}} {{ReadOnlyInline}}
-  - : A string object which provides the full, absolute path from the file system's root to the entry; it can also be thought of as a path which is relative to the root directory, prepended with a "/" character.
+  - : A string which provides the full, absolute path from the file system's root to the entry; it can also be thought of as a path which is relative to the root directory, prepended with a "/" character.
 - {{domxref("FileSystemEntry.isDirectory", "isDirectory")}} {{ReadOnlyInline}}
   - : A boolean value which is `true` if the entry represents a directory; otherwise, it's `false`.
 - {{domxref("FileSystemEntry.isFile", "isFile")}} {{ReadOnlyInline}}

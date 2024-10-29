@@ -25,7 +25,7 @@ toSum(units)
 
 ### Return value
 
-A {{domxref('CSSNumericValue')}}.
+A {{domxref('CSSMathSum')}}.
 
 ### Exceptions
 

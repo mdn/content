@@ -30,7 +30,7 @@ Atomics.compareExchange(typedArray, index, expectedValue, replacementValue)
 
 ### Return value
 
-The old value at the given position (`typedArray[index]`).
+The old value at the given position (`typedArray[index]`). If the return value is equal to `expectedValue`, the exchange was successful; otherwise, the exchange failed.
 
 ### Exceptions
 
@@ -51,6 +51,25 @@ ta[0] = 7;
 Atomics.compareExchange(ta, 0, 7, 12); // returns 7, the old value
 Atomics.load(ta, 0); // 12
 ```
+
+### Checking the return value
+
+[Compare-and-swap](https://en.wikipedia.org/wiki/Compare-and-swap) guarantees that the new value is calculated based on up-to-date information; if the value had been updated by another thread in the meantime, the write would fail. Therefore, you should check the return value of `compareExchange()` to check if it has failed, and retry if necessary.
+
+Here is one example of an atomic adder (same functionality as {{jsxref("Atomics.add()")}}), adapted from the linked Wikipedia article:
+
+```js
+function add(mem, index, value) {
+  let done = false;
+  while (!done) {
+    const value = Atomics.load(mem, index);
+    done = Atomics.compareExchange(p, value, value + a) === value;
+  }
+  return value + a;
+}
+```
+
+It first reads the value at the given index, then tries to update it with the new value. It keeps retrying until it successfully updates the value.
 
 ## Specifications
 

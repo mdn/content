@@ -17,6 +17,29 @@ Content within each `<a>` _should_ indicate the link's destination. If the `href
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
+- `attributionsrc` {{experimental_inline}}
+
+  - : Specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} header in the response, to register a [navigation-based attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources).
+
+    The browser stores the source data associated with the navigation-based attribution source (as provided in the {{httpheader("Attribution-Reporting-Register-Source")}} response header) when the user clicks the link. See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
+
+    There are two versions of this attribute that you can set:
+
+    - Boolean, i.e. just the `attributionsrc` name. This specifies that you want the {{httpheader("Attribution-Reporting-Eligible")}} header sent to the same server as the `href` attribute points to. This is fine when you are handling the attribution source registration on the same server.
+    - Value containing one or more URLs, for example:
+
+      ```html
+      attributionsrc="https://a.example/register-source
+      https://b.example/register-source"
+      ```
+
+      This is useful in cases where the requested resource is not on a server you control, or you just want to handle registering the attribution source on a different server. In this case, you can specify one or more URLs as the value of `attributionsrc`. When the resource request occurs, the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URL(s) specified in `attributionsrc` in addition to the resource origin. These URLs can then respond with the {{httpheader("Attribution-Reporting-Register-Source")}} to complete registration.
+
+      > [!NOTE]
+      > Specifying multiple URLs means that multiple attribution sources can be registered on the same feature. You might for example have different campaigns that you are trying to measure the success of, which involve generating different reports on different data.
+
+    `<a>` elements cannot be used as attribution triggers, only sources.
+
 - `download`
 
   - : Causes the browser to treat the linked URL as a download. Can be used with or without a `filename` value:
@@ -25,11 +48,11 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
       - The {{HTTPHeader("Content-Disposition")}} HTTP header
       - The final segment in the URL [path](/en-US/docs/Web/API/URL/pathname)
-      - The {{Glossary("MIME_type", "media type")}} (from the {{HTTPHeader("Content-Type")}} header, the start of a [`data:` URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs), or {{domxref("Blob.type")}} for a [`blob:` URL](/en-US/docs/Web/API/URL/createObjectURL_static))
+      - The {{Glossary("MIME_type", "media type")}} (from the {{HTTPHeader("Content-Type")}} header, the start of a [`data:` URL](/en-US/docs/Web/URI/Schemes/data), or {{domxref("Blob.type")}} for a [`blob:` URL](/en-US/docs/Web/API/URL/createObjectURL_static))
 
     - `filename`: defining a value suggests it as the filename. `/` and `\` characters are converted to underscores (`_`). Filesystems may forbid other characters in filenames, so browsers will adjust the suggested name if necessary.
 
-    > **Note:**
+    > [!NOTE]
     >
     > - `download` only works for [same-origin URLs](/en-US/docs/Web/Security/Same-origin_policy), or the `blob:` and `data:` schemes.
     > - How browsers treat downloads varies by browser, user settings, and other factors. The user may be prompted before a download starts, or the file may be saved automatically, or it may open automatically, either in an external application or in the browser itself.
@@ -42,13 +65,17 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
   - : The URL that the hyperlink points to. Links are not restricted to HTTP-based URLs — they can use any URL scheme supported by browsers:
 
-    - Sections of a page with document fragments
-    - Specific text portions with [text fragments](/en-US/docs/Web/Text_fragments)
-    - Pieces of media files with media fragments
     - Telephone numbers with `tel:` URLs
     - Email addresses with `mailto:` URLs
     - SMS text messages with `sms:` URLs
+    - Executable code with [`javascript:` URLs](/en-US/docs/Web/URI/Schemes/javascript)
     - While web browsers may not support other URL schemes, websites can with [`registerProtocolHandler()`](/en-US/docs/Web/API/Navigator/registerProtocolHandler)
+
+    Moreover other URL features can locate specific parts of the resource, including:
+
+    - Sections of a page with document fragments
+    - Specific text portions with [text fragments](/en-US/docs/Web/URI/Fragment/Text_fragments)
+    - Pieces of media files with media fragments
 
 - `hreflang`
   - : Hints at the human language of the linked URL. No built-in functionality. Allowed values are the same as [the global `lang` attribute](/en-US/docs/Web/HTML/Global_attributes/lang).
@@ -67,7 +94,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     - `strict-origin-when-cross-origin` (default): Send a full URL when performing a same-origin request, only send the origin when the protocol security level stays the same (HTTPS→HTTPS), and send no header to a less secure destination (HTTPS→HTTP).
     - `unsafe-url`: The referrer will include the origin _and_ the path (but not the [fragment](/en-US/docs/Web/API/HTMLAnchorElement/hash), [password](/en-US/docs/Web/API/HTMLAnchorElement/password), or [username](/en-US/docs/Web/API/HTMLAnchorElement/username)). **This value is unsafe**, because it leaks origins and paths from TLS-protected resources to insecure origins.
 
-- `rel`
+- [`rel`](/en-US/docs/Web/HTML/Attributes/rel)
   - : The relationship of the linked URL as space-separated link types.
 - `target`
 
@@ -79,7 +106,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     - `_top`: The topmost browsing context. To be specific, this means the "highest" context that's an ancestor of the current one. If no ancestors, behaves as `_self`.
     - `_unfencedTop`: Allows embedded [fenced frames](/en-US/docs/Web/API/Fenced_frame_API) to navigate the top-level frame (i.e. traversing beyond the root of the fenced frame, unlike other reserved destinations). Note that the navigation will still succeed if this is used outside of a fenced frame context, but it will not act like a reserved keyword.
 
-    > **Note:** Setting `target="_blank"` on `<a>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel/noopener) which does not set `window.opener`.
+    > [!NOTE]
+    > Setting `target="_blank"` on `<a>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel/noopener) which does not set `window.opener`.
 
 - `type`
   - : Hints at the linked URL's format with a {{Glossary("MIME type")}}. No built-in functionality.
@@ -90,7 +118,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
   - : Hinted at the {{Glossary("character encoding")}} of the linked URL.
 
-    > **Note:** This attribute is deprecated and **should not be used by authors**. Use the HTTP {{HTTPHeader("Content-Type")}} header on the linked URL.
+    > [!NOTE]
+    > This attribute is deprecated and **should not be used by authors**. Use the HTTP {{HTTPHeader("Content-Type")}} header on the linked URL.
 
 - `coords` {{Deprecated_Inline}}
   - : Used with [the `shape` attribute](#shape). A comma-separated list of coordinates.
@@ -98,7 +127,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
   - : Was required to define a possible target location in a page. In HTML 4.01, `id` and `name` could both be used on `<a>`, as long as they had identical values.
 
-    > **Note:** Use the global attribute [`id`](/en-US/docs/Web/HTML/Global_attributes#id) instead.
+    > [!NOTE]
+    > Use the global attribute [`id`](/en-US/docs/Web/HTML/Global_attributes/id) instead.
 
 - `rev` {{Deprecated_Inline}}
   - : Specified a reverse link; the opposite of [the `rel` attribute](#rel). Deprecated for being very confusing.
@@ -106,170 +136,10 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
   - : The shape of the hyperlink's region in an image map.
 
-    > **Note:** Use the {{HTMLElement("area")}} element for image maps instead.
+    > [!NOTE]
+    > Use the {{HTMLElement("area")}} element for image maps instead.
 
-## Examples
-
-### Linking to an absolute URL
-
-#### HTML
-
-```html
-<a href="https://www.mozilla.com">Mozilla</a>
-```
-
-#### Result
-
-{{EmbedLiveSample('Linking_to_an_absolute_URL')}}
-
-### Linking to relative URLs
-
-#### HTML
-
-```html
-<a href="//example.com">Scheme-relative URL</a>
-<a href="/en-US/docs/Web/HTML">Origin-relative URL</a>
-<a href="./p">Directory-relative URL</a>
-```
-
-```css hidden
-a {
-  display: block;
-  margin-bottom: 0.5em;
-}
-```
-
-#### Result
-
-{{EmbedLiveSample('Linking_to_relative_URLs')}}
-
-### Linking to an element on the same page
-
-```html
-<!-- <a> element links to the section below -->
-<p><a href="#Section_further_down">Jump to the heading below</a></p>
-
-<!-- Heading to link to -->
-<h2 id="Section_further_down">Section further down</h2>
-```
-
-#### Result
-
-{{EmbedLiveSample('Linking to an element on the same page')}}
-
-> **Note:** You can use `href="#top"` or the empty fragment (`href="#"`) to link to the top of the current page, [as defined in the HTML specification](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier).
-
-### Linking to an email address
-
-To create links that open in the user's email program to let them send a new message, use the `mailto:` scheme:
-
-```html
-<a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
-```
-
-#### Result
-
-{{EmbedLiveSample('Linking to an email address')}}
-
-For details about `mailto:` URLs, such as including a subject or body, see [Email links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#email_links) or {{RFC(6068)}}.
-
-### Linking to telephone numbers
-
-```html
-<a href="tel:+49.157.0156">+49 157 0156</a>
-<a href="tel:+1(800)555-0123">(800) 555-0123</a>
-```
-
-#### Result
-
-{{EmbedLiveSample('Linking to telephone numbers')}}
-
-`tel:` link behavior varies with device capabilities:
-
-- Cellular devices autodial the number.
-- Most operating systems have programs that can make calls, like Skype or FaceTime.
-- Websites can make phone calls with {{domxref("Navigator/registerProtocolHandler", "registerProtocolHandler")}}, such as `web.skype.com`.
-- Other behaviors include saving the number to contacts, or sending the number to another device.
-
-See {{RFC(3966)}} for syntax, additional features, and other details about the `tel:` URL scheme.
-
-### Using the download attribute to save a \<canvas> as a PNG
-
-To save a {{HTMLElement("canvas")}} element's contents as an image, you can create a link where the `href` is the canvas data as a `data:` URL created with JavaScript and the `download` attribute provides the file name for the downloaded PNG file:
-
-#### Example painting app with save link
-
-##### HTML
-
-```html
-<p>
-  Paint by holding down the mouse button and moving it.
-  <a href="" download="my_painting.png">Download my painting</a>
-</p>
-
-<canvas width="300" height="300"></canvas>
-```
-
-##### CSS
-
-```css
-html {
-  font-family: sans-serif;
-}
-canvas {
-  background: #fff;
-  border: 1px dashed;
-}
-a {
-  display: inline-block;
-  background: #69c;
-  color: #fff;
-  padding: 5px 10px;
-}
-```
-
-##### JavaScript
-
-```js
-const canvas = document.querySelector("canvas");
-const c = canvas.getContext("2d");
-c.fillStyle = "hotpink";
-let isDrawing;
-
-function draw(x, y) {
-  if (isDrawing) {
-    c.beginPath();
-    c.arc(x, y, 10, 0, Math.PI * 2);
-    c.closePath();
-    c.fill();
-  }
-}
-
-canvas.addEventListener("mousemove", (event) =>
-  draw(event.offsetX, event.offsetY),
-);
-canvas.addEventListener("mousedown", () => (isDrawing = true));
-canvas.addEventListener("mouseup", () => (isDrawing = false));
-
-document
-  .querySelector("a")
-  .addEventListener(
-    "click",
-    (event) => (event.target.href = canvas.toDataURL()),
-  );
-```
-
-##### Result
-
-{{EmbedLiveSample('Example_painting_app_with_save_link', '100%', '400')}}
-
-## Security and privacy
-
-`<a>` elements can have consequences for users' security and privacy. See [`Referer` header: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) for information.
-
-Using `target="_blank"` without [`rel="noreferrer"`](/en-US/docs/Web/HTML/Attributes/rel/noreferrer) and [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel/noopener) makes the website vulnerable to {{domxref("window.opener")}} API exploitation attacks, although note that, in newer browser versions setting `target="_blank"` implicitly provides the same protection as setting `rel="noopener"`. See [browser compatibility](#browser_compatibility) for details.
-
-## Accessibility concerns
+## Accessibility
 
 ### Strong link text
 
@@ -303,7 +173,7 @@ Assistive software has shortcuts to list all links on a page. However, strong li
 
 ### onclick events
 
-Anchor elements are often abused as fake buttons by setting their `href` to `#` or `javascript:void(0)` to prevent the page from refreshing, then listening for their `click` events .
+Anchor elements are often abused as fake buttons by setting their `href` to `#` or [`javascript:void(0)`](/en-US/docs/Web/URI/Schemes/javascript) to prevent the page from refreshing, then listening for their `click` events.
 
 These bogus `href` values cause unexpected behavior when copying/dragging links, opening links in a new tab/window, bookmarking, or when JavaScript is loading, errors, or is disabled. They also convey incorrect semantics to assistive technologies, like screen readers.
 
@@ -415,6 +285,170 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
 
 - [Hand tremors and the giant-button-problem](https://axesslab.com/hand-tremors/)
 
+## Examples
+
+### Linking to an absolute URL
+
+#### HTML
+
+```html
+<a href="https://www.mozilla.com">Mozilla</a>
+```
+
+#### Result
+
+{{EmbedLiveSample('Linking_to_an_absolute_URL')}}
+
+### Linking to relative URLs
+
+#### HTML
+
+```html
+<a href="//example.com">Scheme-relative URL</a>
+<a href="/en-US/docs/Web/HTML">Origin-relative URL</a>
+<a href="p">Directory-relative URL</a>
+<a href="./p">Directory-relative URL</a>
+<a href="../p">Parent-directory-relative URL</a>
+```
+
+```css hidden
+a {
+  display: block;
+  margin-bottom: 0.5em;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Linking_to_relative_URLs')}}
+
+### Linking to an element on the same page
+
+```html
+<!-- <a> element links to the section below -->
+<p><a href="#Section_further_down">Jump to the heading below</a></p>
+
+<!-- Heading to link to -->
+<h2 id="Section_further_down">Section further down</h2>
+```
+
+#### Result
+
+{{EmbedLiveSample('Linking to an element on the same page')}}
+
+> [!NOTE]
+> You can use `href="#top"` or the empty fragment (`href="#"`) to link to the top of the current page, [as defined in the HTML specification](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier).
+
+### Linking to an email address
+
+To create links that open in the user's email program to let them send a new message, use the `mailto:` scheme:
+
+```html
+<a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
+```
+
+#### Result
+
+{{EmbedLiveSample('Linking to an email address')}}
+
+For details about `mailto:` URLs, such as including a subject or body, see [Email links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#email_links) or {{RFC(6068)}}.
+
+### Linking to telephone numbers
+
+```html
+<a href="tel:+49.157.0156">+49 157 0156</a>
+<a href="tel:+1(800)555-0123">(800) 555-0123</a>
+```
+
+#### Result
+
+{{EmbedLiveSample('Linking to telephone numbers')}}
+
+`tel:` link behavior varies with device capabilities:
+
+- Cellular devices autodial the number.
+- Most operating systems have programs that can make calls, like Skype or FaceTime.
+- Websites can make phone calls with {{domxref("Navigator/registerProtocolHandler", "registerProtocolHandler")}}, such as `web.skype.com`.
+- Other behaviors include saving the number to contacts, or sending the number to another device.
+
+See {{RFC(3966)}} for syntax, additional features, and other details about the `tel:` URL scheme.
+
+### Using the download attribute to save a \<canvas> as a PNG
+
+To save a {{HTMLElement("canvas")}} element's contents as an image, you can create a link where the `href` is the canvas data as a `data:` URL created with JavaScript and the `download` attribute provides the file name for the downloaded PNG file:
+
+#### Example painting app with save link
+
+##### HTML
+
+```html
+<p>
+  Paint by holding down the mouse button and moving it.
+  <a href="" download="my_painting.png">Download my painting</a>
+</p>
+
+<canvas width="300" height="300"></canvas>
+```
+
+##### CSS
+
+```css
+html {
+  font-family: sans-serif;
+}
+canvas {
+  background: #fff;
+  border: 1px dashed;
+}
+a {
+  display: inline-block;
+  background: #69c;
+  color: #fff;
+  padding: 5px 10px;
+}
+```
+
+##### JavaScript
+
+```js
+const canvas = document.querySelector("canvas");
+const c = canvas.getContext("2d");
+c.fillStyle = "hotpink";
+let isDrawing;
+
+function draw(x, y) {
+  if (isDrawing) {
+    c.beginPath();
+    c.arc(x, y, 10, 0, Math.PI * 2);
+    c.closePath();
+    c.fill();
+  }
+}
+
+canvas.addEventListener("mousemove", (event) =>
+  draw(event.offsetX, event.offsetY),
+);
+canvas.addEventListener("mousedown", () => (isDrawing = true));
+canvas.addEventListener("mouseup", () => (isDrawing = false));
+
+document
+  .querySelector("a")
+  .addEventListener(
+    "click",
+    (event) => (event.target.href = canvas.toDataURL()),
+  );
+```
+
+##### Result
+
+{{EmbedLiveSample('Example_painting_app_with_save_link', '100%', '400')}}
+
+## Security and privacy
+
+`<a>` elements can have consequences for users' security and privacy. See [`Referer` header: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) for information.
+
+Using `target="_blank"` without [`rel="noreferrer"`](/en-US/docs/Web/HTML/Attributes/rel/noreferrer) and [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel/noopener) makes the website vulnerable to {{domxref("window.opener")}} API exploitation attacks, although note that, in newer browser versions setting `target="_blank"` implicitly provides the same protection as setting `rel="noopener"`. See [browser compatibility](#browser_compatibility) for details.
+
 ## Technical summary
 
 <table class="properties">
@@ -449,9 +483,7 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
           href="/en-US/docs/Web/HTML/Content_categories#interactive_content"
           >interactive content</a
         > or an
-        <a href="/en-US/docs/Web/HTML/Element/a"
-          >a</a
-        > element, and no descendant may have a specified
+        <code>&lt;a&gt;</code> element, and no descendant may have a specified
         <a
           href="/en-US/docs/Web/HTML/Global_attributes/tabindex"
           >tabindex</a
@@ -468,7 +500,7 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
         Any element that accepts
         <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
-        >, but not other <code>&#x3C;a></code> elements.
+        >, but not other <code>&lt;a&gt;</code> elements.
       </td>
     </tr>
     <tr>
@@ -522,4 +554,4 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
 - {{CSSxRef(":link")}} is a CSS pseudo-class that will match `<a>` elements with URL in `href` attribute that was not yet visited by the user.
 - {{CSSxRef(":visited")}} is a CSS pseudo-class that will match `<a>` elements with URL in `href` attribute that was visited by the user in the past.
 - {{CSSxRef(":any-link")}} is a CSS pseudo-class that will match `<a>` elements with `href` attribute.
-- [Text fragments](/en-US/docs/Web/Text_fragments) are user-agent instructions added to URLs that allow content authors to link to specific text on a page, without IDs being required.
+- [Text fragments](/en-US/docs/Web/URI/Fragment/Text_fragments) are user-agent instructions added to URLs that allow content authors to link to specific text on a page, without IDs being required.

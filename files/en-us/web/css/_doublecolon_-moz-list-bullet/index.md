@@ -3,10 +3,12 @@ title: "::-moz-list-bullet"
 slug: Web/CSS/::-moz-list-bullet
 page-type: css-pseudo-element
 status:
+  - experimental
   - non-standard
+browser-compat: css.selectors.-moz-list-bullet
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{CSSRef}}{{Non-standard_header}}{{SeeCompatTable}}
 
 The **`::-moz-list-bullet`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that represents the marker (typically a bullet) of a list item ({{htmlelement("li")}}) in an unordered list ({{htmlelement("ul")}}).
 
@@ -48,6 +50,10 @@ li::-moz-list-bullet {
 ## Specifications
 
 Not part of any standard.
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

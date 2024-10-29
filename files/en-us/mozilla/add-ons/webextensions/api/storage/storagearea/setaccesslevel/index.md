@@ -23,7 +23,7 @@ await browser.storage.<storageType>.setAccessLevel(
 )
 ```
 
-`<storageType>` can be the {{WebExtAPIRef("storage.session")}} storage type.
+Where `<storageType>` is the {{WebExtAPIRef("storage.session")}} storage type.
 
 ### Parameters
 
@@ -41,4 +41,5 @@ A {{jsxref("Promise")}} that is fulfilled with no arguments if the operation suc
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/storage/) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.

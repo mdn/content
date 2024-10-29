@@ -744,9 +744,9 @@ JavaScript is single-threaded by nature. There's no [paralleling](https://en.wik
 
 There are three idiomatic ways to write asynchronous code in JavaScript:
 
-- Callback-based (such as [`setTimeout()`](/en-US/docs/Web/API/setTimeout))
-- [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)-based
-- [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)/[`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await), which is a syntactic sugar for Promises
+- Callback-based (such as {{domxref("Window.setTimeout", "setTimeout()")}})
+- {{jsxref("Global_Objects/Promise", "Promise")}}-based
+- {{jsxref("Statements/async_function", "async")}}/{{jsxref("Operators/await", "await")}}, which is a syntactic sugar for Promises
 
 For example, here's what a file-read operation might look like in JavaScript:
 
@@ -781,7 +781,7 @@ async function readFile(filename) {
 
 The core language doesn't specify any asynchronous programming features, but it's crucial when interacting with the external environment — from [asking user permissions](/en-US/docs/Web/API/Permissions_API), to [fetching data](/en-US/docs/Web/API/Fetch_API/Using_Fetch), to [reading files](https://nodejs.org/api/fs.html). Keeping the potentially long-running operations async ensures that other processes can still run while this one waits — for example, the browser will not freeze while waiting for the user to click a button to grant permission.
 
-If you have an async value, it's not possible to get its value synchronously. For example, if you have a promise, you can only access the eventual result via the [`then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) method. Similarly, [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) can only be used in an async context, which is usually an async function or a module. Promises are _never blocking_ — only the logic depending on the promise's result will be deferred; everything else continues to execute in the meantime. If you are a functional programmer, you may recognize promises as [monads](<https://en.wikipedia.org/wiki/Monad_(functional_programming)>) which can be mapped with `then()` (however, they are not _proper_ monads because they auto-flatten; i.e. you can't have a `Promise<Promise<T>>`).
+If you have an async value, it's not possible to get its value synchronously. For example, if you have a promise, you can only access the eventual result via the [`then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) method. Similarly, {{jsxref("Operators/await", "await")}} can only be used in an async context, which is usually an async function or a module. Promises are _never blocking_ — only the logic depending on the promise's result will be deferred; everything else continues to execute in the meantime. If you are a functional programmer, you may recognize promises as [monads](<https://en.wikipedia.org/wiki/Monad_(functional_programming)>) which can be mapped with `then()` (however, they are not _proper_ monads because they auto-flatten; i.e. you can't have a `Promise<Promise<T>>`).
 
 In fact, the single-threaded model has made Node.js a popular choice for server-side programming due to its non-blocking IO, making handling a large number of database or file-system requests very performant. However, CPU-bound (computationally intensive) tasks that are pure JavaScript will still block the main thread. To achieve real paralleling, you may need to use [workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers).
 
@@ -789,7 +789,7 @@ To learn more about asynchronous programming, you can read about [using promises
 
 ## Modules
 
-JavaScript also specifies a module system supported by most runtimes. A module is usually a file, identified by its file path or URL. You can use the [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) and [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) statements to exchange data between modules:
+JavaScript also specifies a module system supported by most runtimes. A module is usually a file, identified by its file path or URL. You can use the {{jsxref("Statements/import", "import")}} and {{jsxref("Statements/export", "export")}} statements to exchange data between modules:
 
 ```js
 import { foo } from "./foo.js";
@@ -804,7 +804,7 @@ Unlike Haskell, Python, Java, etc., JavaScript module resolution is entirely hos
 
 However, the JavaScript language doesn't offer standard library modules — all core functionalities are powered by global variables like [`Math`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) and [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) instead. This is due to the long history of JavaScript lacking a module system, and the fact that opting into the module system involves some changes to the runtime setup.
 
-Different runtimes may use different module systems. For example, [Node.js](https://nodejs.org/en/) uses the package manager [npm](https://www.npmjs.com/) and is mostly file-system based, while [Deno](https://deno.land/) and browsers are fully URL-based and modules can be resolved from HTTP URLs.
+Different runtimes may use different module systems. For example, [Node.js](https://nodejs.org/en/) uses the package manager [npm](https://www.npmjs.com/) and is mostly file-system based, while [Deno](https://deno.com/) and browsers are fully URL-based and modules can be resolved from HTTP URLs.
 
 For more information, see the [modules guide page](/en-US/docs/Web/JavaScript/Guide/Modules).
 

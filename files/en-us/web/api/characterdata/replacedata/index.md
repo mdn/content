@@ -30,7 +30,7 @@ characterData.replaceData(offset, count, data)
 
 None.
 
-## Exceptions
+### Exceptions
 
 - `IndexSizeError` {{domxref("DOMException")}}
   - : Thrown if `offset` or `count` is negative or `offset` is greater than the length of the contained data.
@@ -43,9 +43,9 @@ None.
 
 ```js
 const span = document.querySelector("span");
-const textnode = span.nextSibling;
+const textNode = span.nextSibling;
 
-textnode.replaceData(2, 4, "replaced");
+textNode.replaceData(2, 4, "replaced");
 ```
 
 {{EmbedLiveSample("Example", "100%", 50)}}

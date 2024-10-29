@@ -4,6 +4,8 @@ slug: Learn/Server-side/Express_Nodejs/forms/Create_author_form
 page-type: learn-module-chapter
 ---
 
+{{LearnSidebar}}
+
 This subarticle shows how to define a page for creating `Author` objects.
 
 ## Import validation and sanitization methods
@@ -91,7 +93,8 @@ exports.author_create_post = [
 ];
 ```
 
-> **Warning:** Never validate _names_ using `isAlphanumeric()` (as we have done above) as there are many names that use other character sets.
+> [!WARNING]
+> Never validate _names_ using `isAlphanumeric()` (as we have done above) as there are many names that use other character sets.
 > We do it here in order to demonstrate how the validator is used, and how it can be daisy-chained with other validators and error reporting.
 
 The structure and behavior of this code is almost exactly the same as for creating a `Genre` object. First we validate and sanitize the data. If the data is invalid then we re-display the form along with the data that was originally entered by the user and a list of error messages. If the data is valid then we save the new author record and redirect the user to the author detail page.
@@ -160,7 +163,8 @@ block content
 
 The structure and behavior for this view is exactly the same as for the **genre_form.pug** template, so we won't describe it again.
 
-> **Note:** Some browsers don't support the input `type="date"`, so you won't get the datepicker widget or the default `dd/mm/yyyy` placeholder, but will instead get an empty plain text field. One workaround is to explicitly add the attribute `placeholder='dd/mm/yyyy'` so that on less capable browsers you will still get information about the desired text format.
+> [!NOTE]
+> Some browsers don't support the input `type="date"`, so you won't get the datepicker widget or the default `dd/mm/yyyy` placeholder, but will instead get an empty plain text field. One workaround is to explicitly add the attribute `placeholder='dd/mm/yyyy'` so that on less capable browsers you will still get information about the desired text format.
 
 ### Challenge: Adding the date of death
 
@@ -172,7 +176,8 @@ Run the application, open your browser to `http://localhost:3000/`, then select 
 
 ![Author Create Page - Express Local Library site](locallibary_express_author_create_empty.png)
 
-> **Note:** If you experiment with various input formats for the dates, you may find that the format `yyyy-mm-dd` misbehaves. This is because JavaScript treats date strings as including the time of 0 hours, but additionally treats date strings in that format (the ISO 8601 standard) as including the time 0 hours UTC, rather than the local time. If your time zone is west of UTC, the date display, being local, will be one day before the date you entered. This is one of several complexities (such as multi-word family names and multi-author books) that we are not addressing here.
+> [!NOTE]
+> If you experiment with various input formats for the dates, you may find that the format `yyyy-mm-dd` misbehaves. This is because JavaScript treats date strings as including the time of 0 hours, but additionally treats date strings in that format (the ISO 8601 standard) as including the time 0 hours UTC, rather than the local time. If your time zone is west of UTC, the date display, being local, will be one day before the date you entered. This is one of several complexities (such as multi-word family names and multi-author books) that we are not addressing here.
 
 ## Next steps
 

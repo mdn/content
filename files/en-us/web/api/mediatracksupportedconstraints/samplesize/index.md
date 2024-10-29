@@ -3,7 +3,7 @@ title: "MediaTrackSupportedConstraints: sampleSize property"
 short-title: sampleSize
 slug: Web/API/MediaTrackSupportedConstraints/sampleSize
 page-type: web-api-instance-property
-browser-compat: api.MediaTrackSupportedConstraints.sampleSize
+browser-compat: api.MediaStreamTrack.applyConstraints.sampleSize_constraint
 ---
 
 {{APIRef("Media Capture and Streams")}}

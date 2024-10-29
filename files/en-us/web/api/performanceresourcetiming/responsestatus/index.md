@@ -3,12 +3,10 @@ title: "PerformanceResourceTiming: responseStatus property"
 short-title: responseStatus
 slug: Web/API/PerformanceResourceTiming/responseStatus
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.PerformanceResourceTiming.responseStatus
 ---
 
-{{APIRef("Performance API")}} {{SeeCompatTable}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`responseStatus`** read-only property represents the HTTP response status code returned when fetching the resource.
 

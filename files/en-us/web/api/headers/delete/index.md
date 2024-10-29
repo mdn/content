@@ -11,11 +11,6 @@ browser-compat: api.Headers.delete
 The **`delete()`** method of the {{domxref("Headers")}}
 interface deletes a header from the current `Headers` object.
 
-This method throws a {{jsxref("TypeError")}} for the following reasons:
-
-- The value of the name parameter is not the name of an HTTP header.
-- The value of {{Glossary("Guard")}} is `immutable`.
-
 For security reasons, some headers can only be controlled by the user agent. These
 headers include the {{Glossary("Forbidden_header_name", "forbidden header names")}}
 and {{Glossary("Forbidden_response_header_name", "forbidden response header names")}}.

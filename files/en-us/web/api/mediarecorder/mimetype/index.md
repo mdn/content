@@ -14,7 +14,8 @@ This is the file format of the file that would result from writing all of the re
 Keep in mind that not all codecs are supported by a given container; if you write media using a codec that is not supported by a given media container, the resulting file may not work reliably if at all when you try to play it back.
 See our [media type and format guide](/en-US/docs/Web/Media/Formats) for information about container and codec support across browsers.
 
-> **Note:** The term "MIME type" is officially considered to be historical; these strings are now officially known as **media types**.
+> [!NOTE]
+> The term "MIME type" is officially considered to be historical; these strings are now officially known as **media types**.
 > MDN Web Docs content uses the terms interchangeably.
 
 ## Value
@@ -24,7 +25,7 @@ This string _may_ include the [`codecs` parameter,](/en-US/docs/Web/Media/Format
 
 The media type strings are standardized by the Internet Assigned Numbers Authority (IANA).
 For their official list of defined media type strings, see the article [Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml) on the IANA site.
-See also [media types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) to learn more about media types and how they're used in web content and by web browsers.
+See also [media types](/en-US/docs/Web/HTTP/MIME_types) to learn more about media types and how they're used in web content and by web browsers.
 
 ## Examples
 
@@ -55,11 +56,7 @@ if (navigator.mediaDevices) {
 }
 ```
 
-Changing line 14 to the following causes `MediaRecorder` to try to use AVC Constrained Baseline Profile Level 4 for video and AAC-LC (Low Complexity) for audio, which is good for mobile and other possible resource-constrained situations.
-
-```js
-mimeType: 'video/mp4; codecs="avc1.424028, mp4a.40.2"';
-```
+Changing the `mimeType` in `options` to `'video/mp4; codecs="avc1.424028, mp4a.40.2"'` causes `MediaRecorder` to try to use AVC Constrained Baseline Profile Level 4 for video and AAC-LC (Low Complexity) for audio, which is good for mobile and other possible resource-constrained situations.
 
 Assuming this configuration is acceptable to the user agent, the value returned later
 by `m.mimeType` would then be

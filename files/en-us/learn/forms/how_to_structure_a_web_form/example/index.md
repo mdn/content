@@ -4,6 +4,8 @@ slug: Learn/Forms/How_to_structure_a_web_form/Example
 page-type: learn-module-chapter
 ---
 
+{{LearnSidebar}}
+
 This the example for a basic payment form for the article [How to structure an HTML form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form).
 
 ## A payment form
@@ -54,7 +56,7 @@ This the example for a basic payment form for the article [How to structure an H
         <span>Email: </span>
         <strong><span aria-label="required">*</span></strong>
       </label>
-      <input type="email" id="mail" name="usermail" required />
+      <input type="email" id="mail" name="user-mail" required />
     </p>
     <p>
       <label for="pwd">
@@ -70,7 +72,7 @@ This the example for a basic payment form for the article [How to structure an H
       <label for="card">
         <span>Card type:</span>
       </label>
-      <select id="card" name="usercard">
+      <select id="card" name="user-card">
         <option value="visa">Visa</option>
         <option value="mc">Mastercard</option>
         <option value="amex">American Express</option>
@@ -81,7 +83,7 @@ This the example for a basic payment form for the article [How to structure an H
         <span>Card number:</span>
         <strong><span aria-label="required">*</span></strong>
       </label>
-      <input type="tel" id="number" name="cardnumber" />
+      <input type="tel" id="number" name="card-number" />
     </p>
     <p>
       <label for="expiration">
@@ -168,18 +170,11 @@ button {
 }
 
 label {
-  position: relative;
   display: inline-block;
 }
 
 p label {
   width: 100%;
-}
-
-label em {
-  position: absolute;
-  right: 5px;
-  top: 20px;
 }
 ```
 

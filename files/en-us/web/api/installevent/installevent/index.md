@@ -4,12 +4,11 @@ short-title: InstallEvent()
 slug: Web/API/InstallEvent/InstallEvent
 page-type: web-api-constructor
 status:
-  - deprecated
-  - non-standard
+  - experimental
 browser-compat: api.InstallEvent.InstallEvent
 ---
 
-{{APIRef("Service Workers API")}}{{Deprecated_Header}}{{Non-standard_header}}
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 The **`InstallEvent()`** constructor creates a new {{domxref("InstallEvent")}} object.
 
@@ -27,13 +26,13 @@ new InstallEvent(type, options)
 - `options` {{optional_inline}}
   - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can contain any custom settings that you want to apply to the event object. Currently no possible options are mandatory, but this has been defined for forward compatibility.
 
-## Return value
+### Return value
 
 A new {{domxref("InstallEvent")}} object.
 
 ## Specifications
 
-_This feature is no more on the standard track._
+{{Specifications}}
 
 ## Browser compatibility
 

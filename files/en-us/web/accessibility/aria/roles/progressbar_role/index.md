@@ -5,13 +5,15 @@ page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#progressbar
 ---
 
+{{AccessibilitySidebar}}
+
 The `progressbar` role defines an element that displays the progress status for tasks that take a long time.
 
 ## Description
 
 The `progressbar` range widget indicates that a request has been received and the application is making progress toward completing the requested action.
 
-Authors **may** set aria-valuemin and aria-valuemax to indicate the minimum and maximum progress indicator values. Otherwise, their implicit values follow the same rules as HTML's [`<input type="range"`>](/en-US/docs/Web/HTML/Element/input/range):
+Authors **may** set aria-valuemin and aria-valuemax to indicate the minimum and maximum progress indicator values. Otherwise, their implicit values follow the same rules as HTML's [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range):
 
 - If [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) is missing or not a number, it defaults to `0` (zero).
 - If [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) is missing or not a number, it defaults to `100`.
@@ -103,11 +105,3 @@ It is recommended to use a native {{HTMLElement("progress")}} or [`<input type="
   - [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role) (if focusable)
   - [`slider`](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role)
   - [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

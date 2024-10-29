@@ -8,7 +8,7 @@ page-type: xslt-element
 
 The `<xsl:apply-templates>` element selects a set of nodes in the input tree and instructs the processor to apply the proper templates to them.
 
-### Syntax
+## Syntax
 
 ```xml
 <xsl:apply-templates select=EXPRESSION mode=NAME>
@@ -32,10 +32,10 @@ None.
 
 Instruction, appears within a template.
 
-### Defined
+## Specifications
 
 XSLT section 5.4.
 
-### Gecko support
+## Gecko support
 
 Supported.

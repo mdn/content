@@ -18,7 +18,8 @@ Therefore, to add specific styles to an element without altering other style val
 
 A style declaration is reset by setting it to `null` or an empty string, e.g., `elt.style.color = null`.
 
-> **Note:** CSS property names are converted to JavaScript identifier with these rules:
+> [!NOTE]
+> CSS property names are converted to JavaScript identifier with these rules:
 >
 > - If the property is made of one word, it remains as it is: `height` stays as is (in lowercase).
 > - If the property is made of several words, separated by dashes, the dashes are removed and it is converted to {{Glossary("camel_case", "camel case")}}: `background-attachment` becomes `backgroundAttachment`.
@@ -37,7 +38,7 @@ A live {{domxref("CSSStyleDeclaration")}} object.
 The following code snippet demonstrates how the `style` attribute is translated into a list of entries in {{domxref("CSSStyleDeclaration")}} :
 
 ```html
-<math xmlns="http://www.w3.org/1998/Math/MathML">
+<math>
   <mrow>
     <mi>f</mi>
     <mo stretchy="false">(</mo>
@@ -55,9 +56,14 @@ const element = document.querySelector(".parameter");
 const out = document.getElementById("out");
 const elementStyle = element.style;
 
-// We loop through all styles (for…of doesn't work with CSStyleDeclaration)
+// We loop through all the element's styles using `for...in`
 for (const prop in elementStyle) {
-  if (Object.hasOwn(elementStyle, prop)) {
+  // We check if the property belongs to the CSSStyleDeclaration instance
+  // We also ensure that the property is a numeric index (indicating an inline style)
+  if (
+    Object.hasOwn(elementStyle, prop) &&
+    !Number.isNaN(Number.parseInt(prop))
+  ) {
     out.textContent += `${
       elementStyle[prop]
     } = '${elementStyle.getPropertyValue(elementStyle[prop])}'\n`;
@@ -80,3 +86,4 @@ for (const prop in elementStyle) {
 - [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
 - {{domxref("HTMLElement.style")}}
 - {{domxref("SVGElement.style")}}
+- {{domxref("MathMLElement.attributeStyleMap")}}

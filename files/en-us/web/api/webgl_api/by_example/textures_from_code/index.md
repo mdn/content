@@ -4,7 +4,7 @@ slug: Web/API/WebGL_API/By_example/Textures_from_code
 page-type: guide
 ---
 
-{{PreviousNext("Learn/WebGL/By_example/Hello_vertex_attributes","Learn/WebGL/By_example/Video_textures")}}
+{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Learn/WebGL/By_example/Hello_vertex_attributes","Learn/WebGL/By_example/Video_textures")}}
 
 This WebGL example provides a simple demonstration of procedural texturing with fragment shaders. That is, using code to generate textures for use in shading WebGL objects.
 
@@ -63,10 +63,10 @@ button {
   void main() {
     vec2 fragmentPosition = 2.0*gl_PointCoord - 1.0;
     float distance = length(fragmentPosition);
-    float distanceSqrd = distance * distance;
+    float distanceSq = distance * distance;
     gl_FragColor = vec4(
-      0.2/distanceSqrd,
-      0.1/distanceSqrd,
+      0.2/distanceSq,
+      0.1/distanceSq,
       0.0, 1.0 );
   }
 </script>

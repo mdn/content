@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.AbortSignal
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`AbortSignal`** interface represents a signal object that allows you to communicate with an asynchronous operation (such as a fetch request) and abort it if required via an {{domxref("AbortController")}} object.
 
@@ -54,38 +54,59 @@ Listen to this event using {{domxref("EventTarget.addEventListener", "addEventLi
 
 The following snippet shows how we might use a signal to abort downloading a video using the [Fetch API](/en-US/docs/Web/API/Fetch_API).
 
-We first create an abort controller using the {{domxref("AbortController.AbortController","AbortController()")}} constructor, then grab a reference to its associated {{domxref("AbortSignal")}} object using the {{domxref("AbortController.signal")}} property.
+We first create an abort controller using the {{domxref("AbortController.AbortController","AbortController()")}} constructor, then grab a reference to its associated `AbortSignal` object using the {{domxref("AbortController.signal")}} property.
 
-When the [fetch request](/en-US/docs/Web/API/fetch) is initiated, we pass in the `AbortSignal` as an option inside the request's options object (the `{signal}` below). This associates the signal and controller with the fetch request, and allows us to abort it by calling {{domxref("AbortController.abort()")}}.
+When the [fetch request](/en-US/docs/Web/API/Window/fetch) is initiated, we pass in the `AbortSignal` as an option inside the request's options object (the `{signal}` below). This associates the signal and controller with the fetch request, and allows us to abort it by calling {{domxref("AbortController.abort()")}}.
 Below you can see that the fetch operation is aborted in the second event listener, which triggered when the abort button (`abortBtn`) is clicked.
 
-```js
-const controller = new AbortController();
-const signal = controller.signal;
+When `abort()` is called, the `fetch()` promise rejects with a `DOMException` named `AbortError`.
 
+```js
+let controller;
 const url = "video.mp4";
+
 const downloadBtn = document.querySelector(".download");
 const abortBtn = document.querySelector(".abort");
 
 downloadBtn.addEventListener("click", fetchVideo);
 
 abortBtn.addEventListener("click", () => {
-  controller.abort();
-  console.log("Download aborted");
+  if (controller) {
+    controller.abort();
+    console.log("Download aborted");
+  }
 });
 
-function fetchVideo() {
-  fetch(url, { signal })
-    .then((response) => {
-      console.log("Download complete", response);
-    })
-    .catch((err) => {
-      console.error(`Download error: ${err.message}`);
-    });
+async function fetchVideo() {
+  controller = new AbortController();
+  const signal = controller.signal;
+
+  try {
+    const response = await fetch(url, { signal });
+    console.log("Download complete", response);
+    // process response further
+  } catch (err) {
+    console.error(`Download error: ${err.message}`);
+  }
 }
 ```
 
-> **Note:** When `abort()` is called, the `fetch()` promise rejects with an "`AbortError`" `DOMException`.
+If the request is aborted after the `fetch()` call has been fulfilled but before the response body has been read, then attempting to read the response body will reject with an `AbortError` exception.
+
+```js
+async function get() {
+  const controller = new AbortController();
+  const request = new Request("https://example.org/get", {
+    signal: controller.signal,
+  });
+
+  const response = await fetch(request);
+  controller.abort();
+  // The next line will throw `AbortError`
+  const text = await response.text();
+  console.log(text);
+}
+```
 
 You can find a [full working example on GitHub](https://github.com/mdn/dom-examples/tree/main/abort-api); you can also see it [running live](https://mdn.github.io/dom-examples/abort-api/).
 
@@ -95,7 +116,7 @@ If you need to abort the operation on timeout then you can use the static {{domx
 This returns an `AbortSignal` that will automatically timeout after a certain number of milliseconds.
 
 The code snippet below shows how you would either succeed in downloading a file, or handle a timeout error after 5 seconds.
-Note that when there is a timeout the `fetch()` promise rejects with a "`TimeoutError`" `DOMException`.
+Note that when there is a timeout the `fetch()` promise rejects with a `TimeoutError` `DOMException`.
 This allows code to differentiate between timeouts (for which user notification is probably required), and user aborts.
 
 ```js
@@ -112,8 +133,6 @@ try {
     console.error(
       "Fetch aborted by user action (browser stop button, closing tab, etc.",
     );
-  } else if (err.name === "TypeError") {
-    console.error("AbortSignal.timeout() method is not supported");
   } else {
     // A network error, or some other problem.
     console.error(`Error: type: ${err.name}, message: ${err.message}`);
@@ -123,7 +142,7 @@ try {
 
 ### Aborting a fetch with timeout or explicit abort
 
-If you want to abort from multiple signals, you can use {{domxref("AbortSignal/any_static", "AbortSignal.any()")}} to combine them into a single signal. The following example shows this using {{domxref("fetch")}}:
+If you want to abort from multiple signals, you can use {{domxref("AbortSignal/any_static", "AbortSignal.any()")}} to combine them into a single signal. The following example shows this using {{domxref("Window/fetch", "fetch")}}:
 
 ```js
 try {
@@ -146,7 +165,8 @@ try {
 }
 ```
 
-> **Note:** Unlike when using {{domxref("AbortSignal/timeout_static", "AbortSignal.timeout()")}}, there is no way to tell whether the final abort was caused by a timeout.
+> [!NOTE]
+> Unlike when using {{domxref("AbortSignal/timeout_static", "AbortSignal.timeout()")}}, there is no way to tell whether the final abort was caused by a timeout.
 
 ### Implementing an abortable API
 

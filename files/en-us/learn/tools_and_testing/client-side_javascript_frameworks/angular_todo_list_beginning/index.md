@@ -37,7 +37,7 @@ At this point, we are ready to start creating our to-do list application using A
 
 ## The to-do application structure
 
-Like any web application, an Angular application has an `index.html` as the entry point. The `index.html` acually is the app's top level HTML template:
+Like any web application, an Angular application has an `index.html` as the entry point. The `index.html` actually is the app's top level HTML template:
 
 ```html
 <!doctype html>
@@ -60,7 +60,7 @@ Components are a central building block of Angular applications.
 This to-do application has two components — a component as a foundation for your application, and a component for handling to-do items.
 
 Each component is made up of a TypeScript class, HTML, and CSS.
-TypeScript transpiles, or converts, into JavaScript, which means that your application ultimately ends up in plain JavaScript but you have the convenience of using Typescript's extended features and streamlined syntax.
+TypeScript transpiles, or converts, into JavaScript, which means that your application ultimately ends up in plain JavaScript but you have the convenience of using TypeScript's extended features and streamlined syntax.
 
 ### Dynamically change the UI with \*ngIf and \*ngFor
 
@@ -143,7 +143,7 @@ Here's some more information about the metadata we're using:
 
 - [`standalone`](https://angular.io/api/core/Component#standalone): Describe whether the component requires a [NgModule](https://angular.io/guide/ngmodules#the-basic-ngmodule) or not.
   Your app will directly manage template dependencies (components, directives, etc.) using imports when it's a standalone.
-- [`selector`](https://angular.io/api/core/Directive#selector): Tells you the the CSS selector that you use in a template to place this component. Here it is `'app-root'`.
+- [`selector`](https://angular.io/api/core/Directive#selector): Tells you the CSS selector that you use in a template to place this component. Here it is `'app-root'`.
   In the `index.html`, within the `body` tag, the Angular CLI added `<app-root></app-root>` when generating your application.
   You use all component selectors in the same way by adding them to other component HTML templates.
 - [`templateUrl`](https://angular.io/api/core/Component#templateurl): Specifies the HTML file to associate with this component.

@@ -8,12 +8,9 @@ browser-compat: api.URL.hash
 
 {{ APIRef("URL API") }} {{AvailableInWorkers}}
 
-The **`hash`** property of the
-{{domxref("URL")}} interface is a string containing a
-`'#'` followed by the fragment identifier of the URL.
+The **`hash`** property of the {{domxref("URL")}} interface is a string containing a `'#'` followed by the fragment identifier of the URL.
 
-The fragment is not [URL decoded](https://en.wikipedia.org/wiki/URL_encoding). If the URL does not
-have a fragment identifier, this property contains an empty string — `""`.
+The fragment is not {{Glossary("Percent-encoding", "percent-encoded")}}. If the URL does not have a fragment identifier, this property contains an empty string — `""`.
 
 ## Value
 
@@ -23,9 +20,9 @@ A string.
 
 ```js
 const url = new URL(
-  "https://developer.mozilla.org/en-US/docs/Web/API/URL/href#Examples",
+  "https://developer.mozilla.org/en-US/docs/Web/API/URL/href#examples",
 );
-console.log(url.hash); // Logs: '#Examples'
+console.log(url.hash); // '#examples'
 ```
 
 ## Specifications

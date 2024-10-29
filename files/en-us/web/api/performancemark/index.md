@@ -5,9 +5,9 @@ page-type: web-api-interface
 browser-compat: api.PerformanceMark
 ---
 
-{{APIRef("Performance API")}} {{AvailableInWorkers}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
-**`PerformanceMark`** is an interface for {{domxref("PerformanceEntry")}} objects with an {{domxref("PerformanceEntry.entryType","entryType")}} of "`mark`".
+**`PerformanceMark`** is an interface for {{domxref("PerformanceEntry")}} objects with an {{domxref("PerformanceEntry.entryType","entryType")}} of `"mark"`.
 
 Entries of this type are typically created by calling {{domxref("Performance.mark","performance.mark()")}} to add a _named_ {{domxref("DOMHighResTimeStamp")}} (the _mark_) to the browser's performance timeline. To create a performance mark that isn't added to the browser's performance timeline, use the constructor.
 
@@ -23,13 +23,13 @@ Entries of this type are typically created by calling {{domxref("Performance.mar
 This interface extends the following {{domxref("PerformanceEntry")}} properties by qualifying/constraining the properties as follows:
 
 - {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}}
-  - : Returns "`mark`".
+  - : Returns `"mark"`.
 - {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}}
   - : Returns the name given to the mark when it was created via a call to {{domxref("Performance.mark()","performance.mark()")}}.
 - {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("DOMHighResTimeStamp")}} when {{domxref("Performance.mark()","performance.mark()")}} was called.
 - {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}}
-  - : Returns "`0`". (A mark has no _duration_.)
+  - : Returns `0`. (A mark has no _duration_.)
 
 This interface also supports the following properties:
 

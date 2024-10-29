@@ -3,13 +3,14 @@ title: Vibration API
 slug: Web/API/Vibration_API
 page-type: web-api-overview
 browser-compat: api.Navigator.vibrate
+spec-urls: https://w3c.github.io/vibration/
 ---
 
 {{DefaultAPISidebar("Vibration API")}}
 
 Most modern mobile devices include vibration hardware, which lets software code provide physical feedback to the user by causing the device to shake. The **Vibration API** offers Web apps the ability to access this hardware, if it exists, and does nothing if the device doesn't support it.
 
-## Describing vibrations
+## Concepts and usage
 
 Vibration is described as a pattern of on-off pulses, which may be of varying lengths. The pattern may consist of either a single integer, describing the number of milliseconds to vibrate, or an array of integers describing a pattern of vibrations and pauses. Vibration is controlled with a single method: {{DOMxRef("Navigator.vibrate()")}}.
 
@@ -69,6 +70,13 @@ function startPersistentVibrate(duration, interval) {
 ```
 
 Of course, the snippet above doesn't take into account the array method of vibration; persistent array-based vibration will require calculating the sum of the array items and creating an interval based on that number (with an additional delay, probably).
+
+## Interfaces
+
+### Extensions to other interfaces
+
+- {{domxref("Navigator.vibrate()")}}
+  - : Causes vibration on devices with support for it. Does nothing if vibration support isn't available.
 
 ## Specifications
 

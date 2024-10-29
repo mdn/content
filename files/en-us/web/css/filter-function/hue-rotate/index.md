@@ -9,6 +9,8 @@ browser-compat: css.types.filter-function.hue-rotate
 
 The **`hue-rotate()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) rotates the [hue](https://en.wikipedia.org/wiki/Hue) of an element and its contents. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
 
+> **Note:** `hue-rotate()` is specified as a matrix operation on the RGB color. It does not actually convert the color to the HSL model, which is a non-linear operation. Therefore, it may not preserve the saturation or lightness of the original color, especially for saturated colors.
+
 {{EmbedInteractiveExample("pages/css/function-hue-rotate.html")}}
 
 ## Syntax
@@ -70,7 +72,7 @@ p {
 ```html hidden
 <div
   class="container"
-  style="background-image: url(listen_to_black_women.jpg);">
+  style="background-image: url('https://mdn.github.io/shared-assets/images/examples/listen_to_black_women.jpg');">
   <p>
     Text on images can be illegible and inaccessible even with a drop shadow.
   </p>
@@ -113,7 +115,7 @@ p {
 
 ### With url() and the SVG hue-rotate filter
 
-The SVG {{SVGElement("filter")}} element is used to define custom filter effects that can then be referenced by [`id`](/en-US/docs/Web/HTML/Global_attributes#id). The `<filter>`'s {{SVGElement("feColorMatrix")}} primitive `hueRotate` type provides the same effect. Given the following:
+The SVG {{SVGElement("filter")}} element is used to define custom filter effects that can then be referenced by [`id`](/en-US/docs/Web/HTML/Global_attributes/id). The `<filter>`'s {{SVGElement("feColorMatrix")}} primitive `hueRotate` type provides the same effect. Given the following:
 
 ```svg
 <filter id="filterID">
@@ -145,7 +147,7 @@ This example shows three images: the image with a `hue-rotate()` filter function
       <td>
         <img
           style="filter: hue-rotate(90deg)"
-          src="flag.jpg"
+          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
           alt="Pride flag with rotated colors" />
       </td>
       <td>
@@ -159,20 +161,71 @@ This example shows three images: the image with a `hue-rotate()` filter function
             <feColorMatrix type="hueRotate" values="90" />
           </filter>
           <image
-            xlink:href="flag.jpg"
+            href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
             filter="url(#hue-rotate)"
             width="220"
             height="220" />
         </svg>
       </td>
 
-      <td><img src="flag.jpg" alt="Pride flag" /></td>
+      <td>
+        <img
+          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+          alt="Pride flag" />
+      </td>
     </tr>
   </tbody>
 </table>
 ```
 
 {{EmbedLiveSample('With_url()_and_the_SVG_hue-rotate_filter','100%','280')}}
+
+### hue-rotate() does not preserve saturation or lightness
+
+The diagram below compares two color gradients starting with red: the first is generated using `hue-rotate()`, and the second uses actual HSL color values. Note how the `hue-rotate()` gradient shows obvious differences in saturation and lightness in the middle.
+
+```html
+<div>
+  <p>Using <code>hue-rotate()</code></p>
+  <div id="hue-rotate"></div>
+</div>
+<div>
+  <p>Using <code>hsl()</code></p>
+  <div id="hsl"></div>
+</div>
+```
+
+```css hidden
+#hue-rotate,
+#hsl {
+  display: flex;
+  margin: 1em 0;
+}
+
+#hue-rotate div,
+#hsl div {
+  width: 2px;
+  height: 100px;
+}
+```
+
+```js
+const hueRotate = document.getElementById("hue-rotate");
+const hsl = document.getElementById("hsl");
+
+for (let i = 0; i < 360; i++) {
+  const div1 = document.createElement("div");
+  div1.style.backgroundColor = `hsl(${i}, 100%, 50%)`;
+  hsl.appendChild(div1);
+
+  const div2 = document.createElement("div");
+  div2.style.backgroundColor = "red";
+  div2.style.filter = `hue-rotate(${i}deg)`;
+  hueRotate.appendChild(div2);
+}
+```
+
+{{EmbedLiveSample('hue-rotate_does_not_preserve_saturation_or_lightness','100%','350')}}
 
 ## Specifications
 

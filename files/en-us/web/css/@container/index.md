@@ -20,7 +20,7 @@ Once an eligible query container has been selected for an element, each containe
 The `@container` at-rule has the following syntax:
 
 ```plain
-@container <container-condition> {
+@container <container-condition># {
   <stylesheet>
 }
 ```
@@ -33,10 +33,25 @@ For example:
     font-size: 1.5em;
   }
 }
+
 /* with an optional <container-name> */
 @container tall (height > 30rem) {
   h2 {
     line-height: 1.6;
+  }
+}
+
+/* multiple queries in a single condition */
+@container (width > 400px) and style(--responsive: true) {
+  h2 {
+    font-size: 1.5em;
+  }
+}
+
+/* condition list */
+@container card (width > 400px), style(--responsive: true) {
+  h2 {
+    font-size: 1.5em;
   }
 }
 ```
@@ -154,11 +169,11 @@ You can then use the `@container` at-rule to apply styles to the element with th
 ```js hidden
 const post = document.querySelector(".post");
 const span = document.createElement("span");
-span.innerHTML = ".post width: " + post.clientWidth + "px";
+span.textContent = ".post width: " + post.clientWidth + "px";
 post.parentNode.insertBefore(span, post.nextSibling);
 // update on resize
 window.addEventListener("resize", () => {
-  span.innerHTML = ".post width: " + post.clientWidth + "px";
+  span.textContent = ".post width: " + post.clientWidth + "px";
 });
 ```
 
@@ -281,7 +296,8 @@ The following container query checks if the {{cssxref("computed_value")}} of the
 }
 ```
 
-> **Note:** If a custom property has a value of `blue`, the equivalent hexidecimal code `#0000ff` will not match unless the property has been defined as a color with {{cssxref("@property")}} so the browser can properly compare computed values.
+> [!NOTE]
+> If a custom property has a value of `blue`, the equivalent hexadecimal code `#0000ff` will not match unless the property has been defined as a color with {{cssxref("@property")}} so the browser can properly compare computed values.
 
 Style features that query a shorthand property are true if the computed values match for each of its longhand properties, and false otherwise. For example, `@container style(border: 2px solid red)` will resolve to true if all 12 longhand properties (`border-bottom-style`, etc.) that make up that shorthand are true.
 

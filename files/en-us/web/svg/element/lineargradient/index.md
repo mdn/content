@@ -68,7 +68,7 @@ svg {
   - : This attribute defines the y coordinate of the ending point of the vector gradient along which the linear gradient is drawn.
     _Value type_: {{cssxref("length-percentage")}} | {{cssxref("number")}}; _Default value_: `0%`; _Animatable_: **yes**
 
-## Usage notes
+## Usage context
 
 {{svginfo}}
 

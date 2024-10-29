@@ -13,7 +13,6 @@ JavaScript errors contain a "Learn more" link that takes you to the JavaScript e
 ## Step 1 – Determine the error to document
 
 - Firefox/Gecko's error messages: <https://github.com/mozilla/gecko-dev/blob/master/js/src/jsshell.msg>
-- Edge/Chakra's error messages: <https://github.com/Microsoft/ChakraCore/blob/master/lib/Parser/rterrors.h>
 - Chrome/v8's error messages: <https://chromium.googlesource.com/v8/v8.git/+/refs/heads/main/src/execution/messages.h>
 
 ## Step 2 – Check the existing error documentation

@@ -7,7 +7,7 @@ browser-compat: api.CSSMathMax
 
 {{APIRef("CSS Typed Object Model API")}}
 
-The **`CSSMathMax`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the CSS {{CSSXref('max','max()')}} function. It inherits properties and methods from its parent {{domxref('CSSNumericValue')}}.
+The **`CSSMathMax`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) represents the CSS {{CSSXref('max','max()')}} function. It inherits properties and methods from its parent {{domxref('CSSNumericValue')}}.
 
 {{InheritanceDiagram}}
 

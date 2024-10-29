@@ -7,7 +7,7 @@ browser-compat: css.properties.font-variation-settings
 
 {{CSSRef}}
 
-The **`font-variation-settings`** CSS property provides low-level control over [variable font](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide) characteristics by letting you specify the four letter axis names of the characteristics you want to vary along with their values.
+The **`font-variation-settings`** [CSS](/en-US/docs/Web/CSS) property provides low-level control over [variable font](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide) characteristics by letting you specify the four letter axis names of the characteristics you want to vary along with their values.
 
 {{EmbedInteractiveExample("pages/css/font-variation-settings.html")}}
 
@@ -18,7 +18,7 @@ The **`font-variation-settings`** CSS property provides low-level control over [
 font-variation-settings: normal;
 
 /* Set values for variable font axis names */
-font-variation-settings: "XHGT" 0.7;
+font-variation-settings: "xhgt" 0.7;
 
 /* Global values */
 font-variation-settings: inherit;
@@ -84,7 +84,8 @@ Here are the registered axes along with their corresponding CSS properties:
 
 Custom axes can be anything the font designer wants to vary in their font, for example ascender or descender heights, the size of serifs, or anything else they can imagine. Any axis can be used as long as it is given a unique 4-character axis. Some will end up becoming more common, and may even become registered over time.
 
-> **Note:** Registered axis tags are identified using lower-case tags, whereas custom axes should be given upper-case tags. Note that font designers aren't forced to follow this practice in any way, and some won't. The important takeaway here is that axis tags are case-sensitive.
+> [!NOTE]
+> Registered axis tags are identified using lower-case tags, whereas custom axes should be given upper-case tags. Note that font designers aren't forced to follow this practice in any way, and some won't. The important takeaway here is that axis tags are case-sensitive.
 
 To use variable fonts on your operating system, you need to make sure that it is up to date. For example Linux OSes need the latest Linux Freetype version, and macOS before 10.13 does not support variable fonts. If your operating system is not up to date, you will not be able to use variable fonts in web pages or the Firefox Developer Tools.
 
@@ -124,6 +125,6 @@ You can edit the CSS in the example below to play with different font slant/obli
 
 - [Variable fonts guide](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
 - [OpenType font variations overview](https://learn.microsoft.com/en-us/typography/opentype/spec/otvaroverview) on microsoft.com
-- [OpenType design-variation axis tag registry](https://docs.microsoft.com/typography/opentype/spec/dvaraxisreg) on microsoft.com
+- [OpenType design-variation axis tag registry](https://learn.microsoft.com/en-us/typography/opentype/spec/dvaraxisreg) on microsoft.com
 - [OpenType variable fonts](https://www.axis-praxis.org/) on axis-praxis.org
 - [Variable fonts](https://v-fonts.com/) on v-fonts.com

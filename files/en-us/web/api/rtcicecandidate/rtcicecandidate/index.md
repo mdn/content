@@ -59,7 +59,8 @@ new RTCIceCandidate(candidateInfo)
 
         Additional information can be found in {{domxref("RTCIceCandidate.candidate")}}.
 
-        > **Note:** For backward compatibility with older versions of the WebRTC specification, the constructor also accepts this string directly as an argument.
+        > [!NOTE]
+        > For backward compatibility with older versions of the WebRTC specification, the constructor also accepts this string directly as an argument.
 
     - `sdpMid` {{optional_inline}}
 
@@ -102,7 +103,8 @@ If `candidateInfo` is provided, the new `RTCIceCandidate` is initialized as foll
   {{domxref("RTCIceCandidate.port", "port")}}, {{domxref("RTCIceCandidate.type", "type")}}, {{domxref("RTCIceCandidate.tcpType", "tcpType")}},
   {{domxref("RTCIceCandidate.relatedAddress", "relatedAddress")}}, and {{domxref("RTCIceCandidate.relatedPort", "relatedPort")}}.
 
-> **Note:** Parsing of the `candidate` string is performed using the [candidate-attribute grammar](https://w3c.github.io/webrtc-pc/#candidate-attribute-grammar) from the WebRTC Specification.
+> [!NOTE]
+> Parsing of the `candidate` string is performed using the [candidate-attribute grammar](https://w3c.github.io/webrtc-pc/#candidate-attribute-grammar) from the WebRTC Specification.
 
 ### Exceptions
 

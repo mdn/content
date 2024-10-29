@@ -8,7 +8,7 @@ page-type: xslt-element
 
 The `<xsl:element>` element creates an element in the output document.
 
-### Syntax
+## Syntax
 
 ```xml
 <xsl:element name=NAME namespace=URI use-attribute-sets=LIST-OF-NAMES >
@@ -32,10 +32,10 @@ The `<xsl:element>` element creates an element in the output document.
 
 Instruction, appears within a template.
 
-### Defined
+## Specifications
 
 XSLT, section 7.1.2.
 
-### Gecko support
+## Gecko support
 
 Supported.

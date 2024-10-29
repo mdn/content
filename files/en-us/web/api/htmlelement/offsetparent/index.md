@@ -12,9 +12,10 @@ The **`HTMLElement.offsetParent`** read-only property returns a
 reference to the element which is the closest (nearest in the containment hierarchy)
 positioned ancestor element.
 
-A positioned ancestor is either:
+A positioned ancestor might be:
 
-- an element with a non-static position, or
+- a [containing block](/en-US/docs/Web/CSS/Containing_block#identifying_the_containing_block) for absolutely-positioned elements
+- an element with a different effective [zoom](/en-US/docs/Web/CSS/zoom) value (that is, the product of all zoom scales of its parents) from this element
 - `td`, `th`, `table` in case the element itself is static positioned.
 
 If there is no positioned ancestor element, the `body` is returned.

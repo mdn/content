@@ -46,7 +46,7 @@ JavaScript {{jsxref("RegExp")}} objects are _stateful_ when they have the [globa
 
 When using `exec()`, the global flag has no effect when the sticky flag is set — the match is always sticky.
 
-`exec()` is the primitive method of regexps. Many other regexp methods call `exec()` internally — including those called by string methods, like [`@@replace`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace). While `exec()` itself is powerful (and is the most efficient), it often does not convey the intent most clearly.
+`exec()` is the primitive method of regexps. Many other regexp methods call `exec()` internally — including those called by string methods, like [`[Symbol.replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace). While `exec()` itself is powerful (and is the most efficient), it often does not convey the intent most clearly.
 
 - If you only care whether the regex matches a string, but not what is actually being matched, use {{jsxref("RegExp.prototype.test()")}} instead.
 - If you are finding all occurrences of a global regex and you don't care about information like capturing groups, use {{jsxref("String.prototype.match()")}} instead. In addition, {{jsxref("String.prototype.matchAll()")}} helps to simplify matching multiple parts of a string (with capture groups) by allowing you to iterate over the matches.
@@ -104,7 +104,8 @@ Found abb. Next match starts at 3
 Found ab. Next match starts at 9
 ```
 
-> **Warning:** There are many pitfalls that can lead to this becoming an infinite loop!
+> [!WARNING]
+> There are many pitfalls that can lead to this becoming an infinite loop!
 >
 > - Do _not_ place the regular expression literal (or {{jsxref("RegExp")}} constructor) within the `while` condition — it will recreate the regex for every iteration and reset {{jsxref("RegExp/lastIndex", "lastIndex")}}.
 > - Be sure that the [global (`g`) flag](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags) is set, or `lastIndex` will never be advanced.

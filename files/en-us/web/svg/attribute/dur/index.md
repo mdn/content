@@ -59,7 +59,7 @@ svg {
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#Clock-value"
+          ><a href="/en-US/docs/Web/SVG/Content_type#clock-value"
             >&#x3C;clock-value></a
           ></code
         >
@@ -85,7 +85,8 @@ svg {
 - `indefinite`
   - : This value specifies the simple duration as indefinite.
 
-> **Note:** the {{Glossary("interpolation")}} will not work if the simple duration is indefinite (although this may still be useful for {{SVGElement("set")}} elements).
+> [!NOTE]
+> The {{Glossary("interpolation")}} will not work if the simple duration is indefinite (although this may still be useful for {{SVGElement("set")}} elements).
 
 ## Specifications
 

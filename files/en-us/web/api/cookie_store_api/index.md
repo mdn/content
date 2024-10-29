@@ -8,7 +8,7 @@ browser-compat:
 spec-urls: https://wicg.github.io/cookie-store/
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}} {{AvailableInWorkers}}
+{{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}{{AvailableInWorkers("window_and_service")}}
 
 The **Cookie Store API** is an asynchronous API for managing cookies, available in windows and also [service workers](/en-US/docs/Web/API/Service_Worker_API).
 
