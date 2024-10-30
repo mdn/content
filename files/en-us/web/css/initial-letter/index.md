@@ -7,7 +7,7 @@ browser-compat: css.properties.initial-letter
 
 {{CSSRef}}
 
-The `initial-letter` CSS property sets styling for dropped, raised, and sunken initial letters.
+The `initial-letter` CSS property sets styling for dropped, raised, and sunken initial letters. This property applies to {{cssxref("::first-letter")}} pseudo-elements and inline-level first children of block containers.
 
 ## Syntax
 
@@ -93,4 +93,6 @@ The keyword value `normal`, or a `<number>` optionally followed by an `<integer>
 
 ## See also
 
-- [Drop caps in CSS](https://www.oddbird.net/2017/01/03/initial-letter/)
+- {{cssxref("::first-letter")}}
+- {{cssxref(":first-child")}}
+- [Drop caps in CSS](https://www.oddbird.net/2017/01/03/initial-letter/) via Oddbird (2017)
