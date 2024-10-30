@@ -55,7 +55,7 @@ for (const filePath of filePaths) {
       );
       process.exitCode = 1;
     } else {
-      console.log("The file looks good.");
+      console.log(`The file ${filePath} looks good.`);
     }
   } else {
     fs.writeFileSync(filePath, sortedContent);
