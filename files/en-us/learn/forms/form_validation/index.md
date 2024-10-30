@@ -92,7 +92,7 @@ If the data entered in a form field follows all of the rules specified by the at
 
 When an element is valid, the following things are true:
 
-- The element matches the {{cssxref(":valid")}} CSS pseudo-class, which lets you apply a specific style to valid elements. The control will also match {{cssxref(":user-invalid")}} if the user has interacted with the control, and may match other UI pseudo-classes, such as {{cssxref(":in-range")}}, depending on the input type and attributes.
+- The element matches the {{cssxref(":valid")}} CSS pseudo-class, which lets you apply a specific style to valid elements. The control will also match {{cssxref(":user-valid")}} if the user has interacted with the control, and may match other UI pseudo-classes, such as {{cssxref(":in-range")}}, depending on the input type and attributes.
 - If the user tries to send the data, the browser will submit the form, provided there is nothing else stopping it from doing so (e.g., JavaScript).
 
 When an element is invalid, the following things are true:
