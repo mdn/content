@@ -11,7 +11,7 @@ The HTTP **`Content-Encoding`** {{Glossary("representation header")}} lists the 
 This lets the recipient know how to decode the data in order to obtain the original content format described in the {{HTTPHeader("Content-Type")}} header.
 Content encoding is mainly used to compress content without losing information about the original media type.
 
-Servers are encouraged to compress data as much as possible, and should use content encoding where appropriate.
+Servers should compress data as much as possible, and should use content encoding where appropriate.
 Compressing already compressed media types, such as .zip or .jpeg, is usually not appropriate because it can increase the file size.
 If the original media is already encoded (e.g., as a .zip file), this information is not included in the `Content-Encoding` header.
 
@@ -77,7 +77,7 @@ The server responds with the scheme used, indicated by the `Content-Encoding` re
 Content-Encoding: gzip
 ```
 
-The server is not obligated to use any compression method as this depends on server configuration and capabilities.
+Whether a server uses compression methods requested by the client depends on server configuration and capabilities.
 
 ## Specifications
 
