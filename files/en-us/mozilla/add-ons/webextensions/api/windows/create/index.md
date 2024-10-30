@@ -49,7 +49,7 @@ let creating = browser.windows.create(
     - `incognito` {{optional_inline}}
       - : `boolean`. Whether the new window should be an incognito (private) window. Note that if you specify `incognito` and `tabId`, the ID must refer to a private tab — that is, you can't move a non-private tab to a private window.
     - `left` {{optional_inline}}
-      - : `integer`. The number of pixels to position the new window from the left edge of the screen. If not specified, the new window is offset naturally from the last focused window. (For Firefox versions earlier than 109, `left: value` is ignored for popups (bug 1271047) and workaround is using `browser.windows.update()`. From Firefox Version 109, the `left: value` is considered (fix D73419).)
+      - : `integer`. The number of pixels to position the new window from the left edge of the screen. If not specified, the new window is offset naturally from the last focused window. (Ignored in Firefox 108 or earlier, where positioning the window using {{WebExtAPIRef("windows.update()")}} could be used as a workaround.)
     - `state` {{optional_inline}}
       - : A {{WebExtAPIRef('windows.WindowState')}} value. The initial state of the window. The `minimized`, `maximized` and, `fullscreen` states cannot be combined with `left`, `top`, `width`, or `height`.
     - `tabId` {{optional_inline}}
