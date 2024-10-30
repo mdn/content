@@ -79,6 +79,10 @@ The keyword value `normal`, or a `<number>` optionally followed by an `<integer>
   -webkit-initial-letter: 3;
   initial-letter: 3;
 }
+
+p {
+  outline: 1px dashed red;
+}
 ```
 
 #### Result
@@ -126,11 +130,14 @@ In this example, all the initial letters are the same size, but with different s
   -webkit-initial-letter: 3 4;
   initial-letter: 3 4;
 }
+p {
+  outline: 1px dashed red;
+}
 ```
 
 #### Result
 
-{{EmbedLiveSample('Setting_the_sink_value', 250, 180)}}
+{{EmbedLiveSample('Setting_the_sink_value', 250, 240)}}
 
 ## Specifications
 
