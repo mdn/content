@@ -15,7 +15,7 @@ After CSS 2.1, the scope of the specification increased significantly and the pr
 ## Key resources
 
 - CSS Introduction
-  - : If you're new to web development, be sure to read our [CSS basics](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/CSS_basics) article to learn what CSS is and how to use it.
+  - : If you're new to web development, be sure to read our [CSS basics](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content) article to learn what CSS is and how to use it.
 - CSS Tutorials
   - : Our [CSS learning area](/en-US/docs/Learn/CSS) contains a wealth of tutorials to take you from beginner level to proficiency, covering all the fundamentals.
 - CSS Reference

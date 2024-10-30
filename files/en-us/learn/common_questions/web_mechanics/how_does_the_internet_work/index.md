@@ -110,6 +110,6 @@ They can therefore be accessed by authorized members from different physical loc
 
 ## Next steps
 
-- [How the Web works](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/How_the_Web_works)
+- [How the Web works](/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works)
 - [Understanding the difference between a web page, a website, a web server and a search engine](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web)
 - [Understanding domain names](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)

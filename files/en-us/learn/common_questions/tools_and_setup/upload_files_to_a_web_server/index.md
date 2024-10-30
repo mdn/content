@@ -43,7 +43,7 @@ This article shows you how to publish your site online using file transfer tools
 
 ## Summary
 
-If you have built a simple web page (see [HTML basics](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/HTML_basics) for an example), you will probably want to put it online, on a web server. In this article we'll discuss how to do that, using various available options such as SFTP clients, RSync and GitHub.
+If you have built a simple web page (see [HTML basics](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content) for an example), you will probably want to put it online, on a web server. In this article we'll discuss how to do that, using various available options such as SFTP clients, RSync and GitHub.
 
 ## SFTP
 
