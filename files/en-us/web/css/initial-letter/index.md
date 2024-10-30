@@ -7,7 +7,7 @@ browser-compat: css.properties.initial-letter
 
 {{CSSRef}}
 
-The `initial-letter` CSS property sets styling for dropped, raised, and sunken initial letters. This property applies to {{cssxref("::first-letter")}} pseudo-elements and inline-level first children of block containers.
+The `initial-letter` CSS property sets the size and sink for dropped, raised, and sunken initial letters.  in terms of the number of lines spanned and sunk. This property applies to {{cssxref("::first-letter")}} pseudo-elements and inline-level first children of block containers.
 
 ## Syntax
 
@@ -15,11 +15,13 @@ The `initial-letter` CSS property sets styling for dropped, raised, and sunken i
 /* Keyword values */
 initial-letter: normal;
 
-/* Numeric values */
-initial-letter: 1.5; /* Initial letter occupies 1.5 lines */
-initial-letter: 3; /* Initial letter occupies 3 lines */
-initial-letter: 3 2; /* Initial letter occupies 3 lines and
-                           sinks 2 lines */
+/* One value */
+initial-letter: 3; /* 3 lines tall, baseline at line 3 */
+initial-letter: 1.5; /* 1.5 lines tall, baseline at line 2 */
+
+/* Two values */
+initial-letter: 3 2; /* 3 lines tall, baseline at line 2 (raised 1 line) */
+initial-letter: 3 1; /* 3 lines tall, baseline unchanged (raised 2 lines) */
 
 /* Global values */
 initial-letter: inherit;
@@ -29,9 +31,9 @@ initial-letter: revert-layer;
 initial-letter: unset;
 ```
 
-The keyword value `normal`, or a `<number>` optionally followed by an `<integer>`.
-
 ### Values
+
+The keyword value `normal`, or a `<number>` optionally followed by an `<integer>`.
 
 - `normal`
   - : No special initial-letter effect. Text behaves as normal.
