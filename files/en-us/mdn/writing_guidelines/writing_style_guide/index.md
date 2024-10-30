@@ -373,6 +373,14 @@ Do not use variant spelling.
 - **Correct**: localize, behavior, color
 - **Incorrect**: localise, behaviour, colour
 
+We have [cSpell](https://cspell.org/) installed to help you catch many spelling errors. It runs every week and generates a report of spelling errors in the repository. You can also run it locally via the following command:
+
+```bash
+npx cspell --no-progress --gitignore --config .vscode/cspell.json "**/*.md"
+```
+
+In the repository, we maintain several word lists, located at [`.vscode/dictionaries`](https://github.com/mdn/content/tree/main/.vscode/dictionaries), that contain sanctioned words not in the default dictionaries. You can add more words to these lists if they are valid but reported by the spell checker. Read [`.vscode/cspell.json`](https://github.com/mdn/content/blob/main/.vscode/cspell.json) to understand what each dictionary contains and the details of our spell-checking configuration.
+
 ### Terminology
 
 These are our recommendations for using certain technical terms:

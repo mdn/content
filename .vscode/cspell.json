@@ -94,6 +94,10 @@
     "ucaf:.*\""
   ],
   "dictionaryDefinitions": [
+    // Note: when adding words to these lists, be as specific and contextualized
+    // as possible, to avoid typos being masked elsewhere. For example, all FF
+    // preferences should include prefixes: `dom.abortablepromise` instead of
+    // just `abortablepromise`, which may be missing a space in other contexts.
     {
       "name": "terms-abbreviations",
       "path": "./dictionaries/terms-abbreviations.txt",
@@ -108,11 +112,13 @@
     },
     // Dictionaries below will not be suggested.
     // We are not dogmatic about where to put a word: for example,
-    // sometimes proper names are in terms-abbreviations dictionary because you are likely to use them.
+    // sometimes proper names are in terms-abbreviations dictionary because you
+    // are likely to use them.
     // There's no difference between these dictionaries; they only provide rough
-    // divisions for easier management. For example, a proper name can be non-English,
-    // and non-English words may be code entities.
-    // We recommend assessing applicability in the order in which the dictionaries are listed.
+    // divisions for easier management. For example, a proper name can be
+    // non-English, and non-English words may be code entities.
+    // We recommend assessing applicability in the order in which the
+    // dictionaries are listed.
     {
       "name": "proper-names",
       "path": "./dictionaries/proper-names.txt",
