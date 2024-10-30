@@ -55,14 +55,14 @@ Note that this is not the most efficient algorithm for all cases, but useful for
 
 ```js
 const SimplePropertyRetriever = {
-  getOwnEnumerables(obj) {
+  getOwnEnumProps(obj) {
     return this._getPropertyNames(obj, true, false, this._enumerable);
     // Or could use for...in filtered with Object.hasOwn or just this: return Object.keys(obj);
   },
-  getOwnNonenumerables(obj) {
+  getOwnNonEnumProps(obj) {
     return this._getPropertyNames(obj, true, false, this._notEnumerable);
   },
-  getOwnEnumerablesAndNonenumerables(obj) {
+  getOwnProps(obj) {
     return this._getPropertyNames(
       obj,
       true,
@@ -71,13 +71,13 @@ const SimplePropertyRetriever = {
     );
     // Or just use: return Object.getOwnPropertyNames(obj);
   },
-  getPrototypeEnumerables(obj) {
+  getPrototypeEnumProps(obj) {
     return this._getPropertyNames(obj, false, true, this._enumerable);
   },
-  getPrototypeNonenumerables(obj) {
+  getPrototypeNonEnumProps(obj) {
     return this._getPropertyNames(obj, false, true, this._notEnumerable);
   },
-  getPrototypeEnumerablesAndNonenumerables(obj) {
+  getPrototypeProps(obj) {
     return this._getPropertyNames(
       obj,
       false,
@@ -85,14 +85,14 @@ const SimplePropertyRetriever = {
       this._enumerableAndNotEnumerable,
     );
   },
-  getOwnAndPrototypeEnumerables(obj) {
+  getOwnAndPrototypeEnumProps(obj) {
     return this._getPropertyNames(obj, true, true, this._enumerable);
     // Or could use unfiltered for...in
   },
-  getOwnAndPrototypeNonenumerables(obj) {
+  getOwnAndPrototypeNonEnumProps(obj) {
     return this._getPropertyNames(obj, true, true, this._notEnumerable);
   },
-  getOwnAndPrototypeEnumerablesAndNonenumerables(obj) {
+  getOwnAndPrototypeEnumAndNonEnumProps(obj) {
     return this._getPropertyNames(
       obj,
       true,

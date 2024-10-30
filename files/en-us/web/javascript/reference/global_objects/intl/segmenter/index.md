@@ -68,3 +68,8 @@ console.table(Array.from(segments));
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Polyfill of `Intl.Segmenter` in FormatJS](https://formatjs.github.io/docs/polyfills/intl-segmenter/)
+- {{jsxref("Intl")}}

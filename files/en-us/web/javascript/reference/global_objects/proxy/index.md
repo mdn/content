@@ -308,20 +308,20 @@ const view = new Proxy(
     selected: null,
   },
   {
-    set(obj, prop, newval) {
-      const oldval = obj[prop];
+    set(obj, prop, newVal) {
+      const oldVal = obj[prop];
 
       if (prop === "selected") {
-        if (oldval) {
-          oldval.setAttribute("aria-selected", "false");
+        if (oldVal) {
+          oldVal.setAttribute("aria-selected", "false");
         }
-        if (newval) {
-          newval.setAttribute("aria-selected", "true");
+        if (newVal) {
+          newVal.setAttribute("aria-selected", "true");
         }
       }
 
       // The default behavior to store the value
-      obj[prop] = newval;
+      obj[prop] = newVal;
 
       // Indicate success
       return true;
