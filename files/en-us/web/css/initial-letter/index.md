@@ -85,6 +85,53 @@ The keyword value `normal`, or a `<number>` optionally followed by an `<integer>
 
 {{EmbedLiveSample('Setting_initial_letter_size', 250, 180)}}
 
+### Setting the sink value
+
+In this example, all the initial letters are the same size, but with different sink values.
+
+#### HTML
+
+```html
+<p class="same">Initial letter: Sink value not declared (same as size)</p>
+<p class="three">Initial letter: Sink value = 3 (same as size)</p>
+<p class="two">Initial letter: Sink value = 2</p>
+<p class="one">Initial letter: Sink value = 1</p>
+<p class="four">Initial letter: Sink value = 4</p>
+```
+
+#### CSS
+
+```css
+.same::first-letter {
+  -webkit-initial-letter: 3;
+  initial-letter: 3;
+}
+
+.three::first-letter {
+  -webkit-initial-letter: 3 3;
+  initial-letter: 3 3;
+}
+
+.two::first-letter {
+  -webkit-initial-letter: 3 2;
+  initial-letter: 3 2;
+}
+
+.one::first-letter {
+  -webkit-initial-letter: 3 1;
+  initial-letter: 3 1;
+}
+
+.four::first-letter {
+  -webkit-initial-letter: 3 4;
+  initial-letter: 3 4;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Setting_the_sink_value', 250, 180)}}
+
 ## Specifications
 
 {{Specifications}}
