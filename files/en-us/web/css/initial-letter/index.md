@@ -7,7 +7,7 @@ browser-compat: css.properties.initial-letter
 
 {{CSSRef}}
 
-The `initial-letter` CSS property sets the size and sink for dropped, raised, and sunken initial letters.  in terms of the number of lines spanned and sunk. This property applies to {{cssxref("::first-letter")}} pseudo-elements and inline-level first children of block containers.
+The `initial-letter` CSS property sets the size and sink for dropped, raised, and sunken initial letters. in terms of the number of lines spanned and sunk. This property applies to {{cssxref("::first-letter")}} pseudo-elements and inline-level first children of block containers.
 
 ## Syntax
 
