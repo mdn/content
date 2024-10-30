@@ -130,6 +130,7 @@ In this example, all the initial letters are the same size, but with different s
   -webkit-initial-letter: 3 4;
   initial-letter: 3 4;
 }
+
 p {
   outline: 1px dashed red;
 }
