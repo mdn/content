@@ -326,6 +326,7 @@ For example, the following query tests for devices that have a monochrome displa
 Note that you cannot use the `or` operator on the same level as the `and` and `not` operators. You have to use brackets to group sub-expressions of media features to clarify the order of evaluation.
 
 For example, the following query specifies that the `and` operator takes precedence over the `or` operator:
+
 ```css
 @media ((color) and (hover)) or (monochrome) {
   /* … */
