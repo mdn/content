@@ -10,11 +10,16 @@ browser-compat: http.headers.Content-DPR
 
 {{HTTPSidebar}}{{deprecated_header}}{{securecontext_header}}{{Non-standard_header}}
 
-The HTTP **`Content-DPR`** {{Glossary("response header")}} is used to confirm the _image_ device to pixel ratio in requests where the screen {{HTTPHeader("DPR")}} [client hint](/en-US/docs/Web/HTTP/Client_hints) was used to select an image resource.
+The HTTP **`Content-DPR`** {{Glossary("response header")}} is used to confirm the _image_ device to pixel ratio (DPR) in requests where the screen {{HTTPHeader("DPR")}} client hint was used to select an image resource.
 
 > [!NOTE]
 > The `Content-DPR` header was removed from the client hints specification in [draft-ietf-httpbis-client-hints-07](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-07).
 > The [Responsive Image Client Hints](https://wicg.github.io/responsive-image-client-hints/) specification proposes to replace this header by specifying intrinsic resolution/dimensions in EXIF metadata.
+
+If the `DPR` client hint is used to select an image, the server must specify `Content-DPR` in the response.
+If the value in `Content-DPR` is different from the {{HTTPHeader("DPR")}} value in the request (i.e., image DPR is not the same as screen DPR), the client must use the `Content-DPR` for determining intrinsic image size and scaling the image.
+
+If the `Content-DPR` header appears more than once in a message, the last occurrence is used.
 
 <table class="properties">
   <tbody>
@@ -37,10 +42,6 @@ The HTTP **`Content-DPR`** {{Glossary("response header")}} is used to confirm th
     </tr>
   </tbody>
 </table>
-
-If the {{HTTPHeader("DPR")}} client hint is used to select an image, the server must specify `Content-DPR` in the response. If the value in `Content-DPR` is different from the {{HTTPHeader("DPR")}} value in the request (i.e., image DPR is not the same as screen DPR), the client must use the `Content-DPR` for determining intrinsic image size and scaling the image.
-
-If the `Content-DPR` header appears more than once in a message, the last occurrence is used.
 
 ## Syntax
 
