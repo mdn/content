@@ -96,24 +96,23 @@ In this example, all the initial letters are the same size, but with different s
 #### HTML
 
 ```html
+<p class="four">Initial letter: Sink value = 4</p>
 <p class="same">Initial letter: Sink value not declared (same as size)</p>
-<p class="three">Initial letter: Sink value = 3 (same as size)</p>
 <p class="two">Initial letter: Sink value = 2</p>
 <p class="one">Initial letter: Sink value = 1</p>
-<p class="four">Initial letter: Sink value = 4</p>
 ```
 
 #### CSS
 
 ```css
+.four::first-letter {
+  -webkit-initial-letter: 3 4;
+  initial-letter: 3 4;
+}
+
 .same::first-letter {
   -webkit-initial-letter: 3;
   initial-letter: 3;
-}
-
-.three::first-letter {
-  -webkit-initial-letter: 3 3;
-  initial-letter: 3 3;
 }
 
 .two::first-letter {
@@ -124,11 +123,6 @@ In this example, all the initial letters are the same size, but with different s
 .one::first-letter {
   -webkit-initial-letter: 3 1;
   initial-letter: 3 1;
-}
-
-.four::first-letter {
-  -webkit-initial-letter: 3 4;
-  initial-letter: 3 4;
 }
 
 p {
