@@ -61,19 +61,28 @@ Accept-Language: fr-CH, fr;q=0.9, en;q=0.8, de;q=0.7, *;q=0.5
     This consists of a 2-3 letter base language tag that indicates a language, optionally followed by additional subtags separated by `-`.
     The most common extra information is the country or region variant (like `en-US` or `fr-CA`) or the type of alphabet to use (like `sr-Latn`).
     Other variants, like the type of orthography (`de-DE-1996`), are usually not used in the context of this header.
-- `*`
-  - : Any language, where `*` is used as a wildcard.
+- `*` (wildcard)
+  - : Any language not matched by any other language present in the `Accept-Language` field.
 - `;q=` (q-factor weighting)
   - : Any value placed in an order of preference expressed using a relative {{Glossary("Quality values", "quality value")}} called _weight_.
+    The quality value defaults to `1`.
 
 ## Examples
 
+### Using Accept-Language headers
+
+The following request has a preference for German using the `de` base language:
+
 ```http
 Accept-Language: de
+```
 
-Accept-Language: de-CH
+### Using quality values in Accept-Language
 
-Accept-Language: en-US,en;q=0.5
+The following request indicates a stronger preference for Danish, but accepts British English and other types of English at a lower priority:
+
+```http
+Accept-Language: da, en-gb;q=0.8, en;q=0.7
 ```
 
 ## Specifications
