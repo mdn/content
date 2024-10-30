@@ -50,6 +50,8 @@ Although you are encouraged to avoid using `substr()`, there is no trivial way t
 
 ### Using substr()
 
+<!-- cSpell:ignore ozilla -->
+
 ```js
 const aString = "Mozilla";
 
