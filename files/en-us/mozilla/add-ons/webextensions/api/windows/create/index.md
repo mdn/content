@@ -57,7 +57,7 @@ let creating = browser.windows.create(
     - `titlePreface` {{optional_inline}}
       - : `string`. Use this to add a string to the beginning of the browser window's title. Depending on the underlying operating system, this might not work on browser windows that don't have a title (such as about:blank in Firefox).
     - `top` {{optional_inline}}
-      - : `integer`. The number of pixels to position the new window from the top edge of the screen. If not specified, the new window is offset naturally from the last focused window. (For Firefox versions earlier than 109, `top: value` is ignored for popups (bug 1271047) and workaround is using `browser.windows.update()`. From Firefox version 109, the `top: value` is considered (fix D73419).)
+      - : `integer`. The number of pixels to position the new window from the top edge of the screen. If not specified, the new window is offset naturally from the last focused window. (Ignored in Firefox 108 or earlier, where positioning the window using {{WebExtAPIRef("windows.update()")}} could be used as a workaround.)
     - `type` {{optional_inline}}
       - : A {{WebExtAPIRef('windows.CreateType')}} value. Specifies what type of browser window to create. Specify `panel` or `popup` here to open a window without any of the normal browser UI (address bar, toolbar, etc.).
     - `url` {{optional_inline}}
