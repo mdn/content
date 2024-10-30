@@ -7,12 +7,10 @@ browser-compat: http.headers.Accept-Ranges
 
 {{HTTPSidebar}}
 
-The **`Accept-Ranges`** HTTP response header is a marker used
-by the server to advertise its support for partial requests from the client for file downloads. The value of this field
-indicates the unit that can be used to define a range.
+The HTTP **`Accept-Ranges`** {{Glossary("response header")}} is used by the server to advertise its support for [range requests](/en-US/docs/Web/HTTP/Range_requests), allowing clients to request part or several parts of a resource.
+The value of this header indicates the unit that can be used to define a range.
 
-In the presence of an `Accept-Ranges` header, the browser may try to
-_resume_ an interrupted download instead of trying to restart the download.
+For example, a response with an `Accept-Ranges` header indicates that the server is capable of _resuming_ an interrupted download instead of a client restarting the transfer in full.
 
 <table class="properties">
   <tbody>
@@ -22,7 +20,7 @@ _resume_ an interrupted download instead of trying to restart the download.
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -37,13 +35,12 @@ Accept-Ranges: none
 ## Directives
 
 - `<range-unit>`
-  - : Defines the range unit that the server supports. Though `bytes` is the only
-    range unit formally defined by {{RFC("7233")}}, additional range units may be
-    registered in the [HTTP Range Unit Registry](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#range-units).
+  - : The range unit that the server supports, although `bytes` is the only range unit formally defined by {{RFC("7233")}}.
+    Range units are registered in the [HTTP Range Unit Registry](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#range-units).
 - `none`
-  - : Indicates that no range unit is supported. This makes the header equivalent of its own absence
-    and is therefore, rarely used. Although in some browsers, like IE9, this setting is used to
-    disable or remove the pause buttons in the download manager.
+  - : No range unit is supported.
+    This is equivalent to omitting the header and is, therefore, rarely used.
+    This value was used in legacy browsers to disable or remove the pause buttons in the download manager if servers had no support for range requests.
 
 ## Examples
 
@@ -61,6 +58,7 @@ Accept-Ranges: bytes
 
 ## See also
 
-- {{HTTPHeader("If-Range")}}
-- {{HTTPHeader("Range")}}
+- [HTTP range requests](/en-US/docs/Web/HTTP/Range_requests) guide
+- [HTTP conditional requests](/en-US/docs/Web/HTTP/Conditional_requests) guide
+- {{HTTPHeader("Range")}}, {{HTTPHeader("If-Range")}} request headers
 - [IANA HTTP Range Unit Registry](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#range-units)
