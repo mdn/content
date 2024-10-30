@@ -17,16 +17,16 @@ It is the event object for the `HTMLElement` {{domxref("HTMLElement.command_even
 
 ## Constructor
 
-- {{domxref("CommandEvent.CommandEvent", "CommandEvent()")}}
+- {{domxref("CommandEvent.CommandEvent", "CommandEvent()")}} {{experimental_inline}}
   - : Creates an `CommandEvent` object.
 
 ## Instance properties
 
 _This interface inherits properties from its parent, {{DOMxRef("Event")}}._
 
-- {{domxref("CommandEvent.source")}} {{ReadOnlyInline}}
+- {{domxref("CommandEvent.source")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : An {{domxref("HTMLButtonElement")}} representing the button that caused this invocation.
-- {{domxref("CommandEvent.command")}} {{ReadOnlyInline}}
+- {{domxref("CommandEvent.command")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : A string representing the {{domxref("HTMLButtonElement.command", "command")}} value of the source button.
 
 ## Examples
