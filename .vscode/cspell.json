@@ -108,11 +108,11 @@
     },
     // Dictionaries below will not be suggested.
     // We are not dogmatic about where to put a word: for example,
-    // sometimes proper names are in terms-abbreviations because you are likely to use it.
+    // sometimes proper names are in terms-abbreviations dictionary because you are likely to use them.
     // There's no difference between these dictionaries; they only provide rough
     // divisions for easier management. For example, a proper name can be non-English,
     // and non-English words may be code entities.
-    // We recommend assessing applicability in the order the dictionaries are listed.
+    // We recommend assessing applicability in the order in which the dictionaries are listed.
     {
       "name": "proper-names",
       "path": "./dictionaries/proper-names.txt",
