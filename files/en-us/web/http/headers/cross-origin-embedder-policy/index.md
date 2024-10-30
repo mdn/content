@@ -7,7 +7,7 @@ browser-compat: http.headers.Cross-Origin-Embedder-Policy
 
 {{HTTPSidebar}}
 
-The HTTP **`Cross-Origin-Embedder-Policy`** (COEP) response header configures embedding cross-origin resources into the document.
+The HTTP **`Cross-Origin-Embedder-Policy`** (COEP) {{Glossary("response header")}} configures embedding cross-origin resources into the document.
 
 <table class="properties">
   <tbody>
