@@ -8,9 +8,9 @@ browser-compat: api.Request.isHistoryNavigation
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-The **`isHistoryNavigation`** read-only property of the {{domxref("Request")}} interface is a boolean indicating whether the request is a history navigation(back/foward navigation). This allows a service worker to know whether a request was due to a back/forward navigation. An example of how this might be used is that a service worker could respond to such a navigation with a cached response.
+The **`isHistoryNavigation`** read-only property of the {{domxref("Request")}} interface is a boolean indicating whether the request is a history navigation.
 
-The history navigation happens by calling {{domxref("History.go()")}}, {{domxref("History.back()")}}, {{domxref("History.forward()")}}, {{domxref("Navigation.traverseTo()")}}, {{domxref("Navigation.back()")}}, {{domxref("Navigation.forward()")}}, or directly by clicking the browser's navigation button.
+A history navigation is a navigation within the browser's history, made by calling {{domxref("History.go()")}}, {{domxref("History.back()")}}, {{domxref("History.forward()")}}, {{domxref("Navigation.traverseTo()")}}, {{domxref("Navigation.back()")}}, {{domxref("Navigation.forward()")}}, or directly by clicking the browser's back or forward navigation button.
 
 ## Value
 
@@ -18,7 +18,7 @@ A boolean value.
 
 ## Examples
 
-The example code executes in service worker, and listens {{domxref("ServiceWorkerGlobalScope/fetch_event", "fetch")}} event. In the event handler, check the `isHistoryNavigation` property to know whether a request happens because of a back/forward navigation. If so, we respond it with a cached response (if existed in the {{domxref("CacheStorage", "cache storage", "", 1)}}).
+This example executes in a service worker. It listens for the {{domxref("ServiceWorkerGlobalScope/fetch_event", "fetch")}} event. In the event handler, the service worker checks the `isHistoryNavigation` property to know whether the request happened because of a history navigation. If so, it attempts to respond with a cached response. If the cache does not contain a response for this request, the service worker fetches a response from the network, caches a clone of it, and responds with the network response.
 
 ```js
 self.addEventListener("request", (event) => {
