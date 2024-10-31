@@ -3,12 +3,10 @@ title: "ImageDecoder: ImageDecoder() constructor"
 short-title: ImageDecoder()
 slug: Web/API/ImageDecoder/ImageDecoder
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.ImageDecoder.ImageDecoder
 ---
 
-{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`ImageDecoder()`** constructor creates a new {{domxref("ImageDecoder")}} object which unpacks and decodes image data.
 
