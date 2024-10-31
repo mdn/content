@@ -48,7 +48,7 @@ The property accepts one or two values:
 
 The values include:
 
-- `auto` {{Experimental_Inline}}
+- `auto`
   - : Draws marks over the text in horizontal writing mode and to the right of the text in vertical writing mode.
 - `over`
   - : Draws marks over the text in horizontal writing mode.
