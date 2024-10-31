@@ -7,9 +7,9 @@ browser-compat: http.headers.TE
 
 {{HTTPSidebar}}
 
-The **`TE`** request header specifies the transfer encodings
-the user agent is willing to accept. (you could informally call it
-`Accept-Transfer-Encoding`, which would be more intuitive).
+The HTTP **`TE`** {{Glossary("request header")}} specifies the transfer encodings the user agent is willing to accept.
+
+Some people informally consider "`Accept-Transfer-Encoding`" to be a more intuitive name for this header.
 
 > [!NOTE]
 > In
@@ -17,11 +17,9 @@ the user agent is willing to accept. (you could informally call it
 > [HTTP/3](https://httpwg.org/specs/rfc9114.html#header-formatting), the `TE`
 > header field is only accepted if the `trailers` value is set.
 
-See also the {{HTTPHeader("Transfer-Encoding")}} response header for more details on
-transfer encodings. Note that `chunked` is always acceptable for HTTP/1.1
-recipients and you don't have to specify `"chunked"` using the
-`TE` header. However, it is useful for setting if the client is accepting
-trailer fields in a chunked transfer coding using the "trailers" value.
+See the {{HTTPHeader("Transfer-Encoding")}} response header for more details on transfer encodings.
+Note that `chunked` is always acceptable for HTTP/1.1 recipients and you don't have to specify `chunked` using the `TE` header.
+However, it is useful for setting if the client is accepting trailer fields in a chunked transfer coding using the `trailers` value.
 
 <table class="properties">
   <tbody>
@@ -31,7 +29,7 @@ trailer fields in a chunked transfer coding using the "trailers" value.
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes</td>
+      <td>Yes</td>
     </tr>
   </tbody>
 </table>

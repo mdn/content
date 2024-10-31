@@ -7,7 +7,7 @@ browser-compat: http.headers.Transfer-Encoding
 
 {{HTTPSidebar}}
 
-The **`Transfer-Encoding`** header specifies the form of encoding used to transfer messages between nodes on the network.
+The HTTP **`Transfer-Encoding`** {{glossary("request header", "request")}} and {{glossary("response header")}} specifies the form of encoding used to transfer messages between nodes on the network.
 
 > [!WARNING]
 > HTTP/2 disallows all uses of the Transfer-Encoding header other than the HTTP/2 specific: `"trailers"`.
@@ -30,7 +30,7 @@ When present on a response to a {{HTTPMethod("HEAD")}} request that has no body,
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes</td>
+      <td>Yes</td>
     </tr>
   </tbody>
 </table>

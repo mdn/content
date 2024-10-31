@@ -7,7 +7,7 @@ spec-urls: https://datatracker.ietf.org/doc/html/rfc9530
 
 {{HTTPSidebar}}
 
-The **`Want-Repr-Digest`** request or response header states the wish for a {{HTTPHeader("Repr-Digest")}} header.
+The HTTP **`Want-Repr-Digest`** {{glossary("request header", "request")}} and {{glossary("response header")}} header indicates that the recipient should send a {{HTTPHeader("Repr-Digest")}} header.
 
 <table class="properties">
   <tbody>
@@ -17,21 +17,24 @@ The **`Want-Repr-Digest`** request or response header states the wish for a {{HT
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
 
 ## Syntax
 
-`Want-Repr-Digest` describes an [RFC8941 dictionary](https://www.rfc-editor.org/rfc/rfc8941#section-3.2) with its keys being hashing algorithms and its values being the integers `0` (meaning "not acceptable") or `1` to `9` (conveying ascending, relative, weighted preference).
-
-> [!NOTE]
-> In contrast to earlier drafts of the specifications, the weighting is _not_ declared via [q-values](/en-US/docs/Glossary/Quality_values).
+```http
+Want-Repr-Digest: <algorithm>=<preference>
+```
 
 ## Directives
 
-For permissible digest algorithms see {{HTTPHeader("Repr-Digest")}}.
+- `<algorithm>`
+  - : For permissible digest algorithms see {{HTTPHeader("Repr-Digest")}}.
+- `<preference>`
+  - : An integer from 0 to 9 where `0` means "not acceptable", and the values `1` to `9` convey ascending, relative, weighted preference.
+    In contrast to earlier drafts of the specifications, the weighting is _not_ declared via `q` [quality values](/en-US/docs/Glossary/Quality_values).
 
 ## Examples
 
@@ -51,4 +54,4 @@ Developers can set and get HTTP headers using `fetch()` in order to provide appl
 
 ## See also
 
-- {{HTTPHeader("Content-Digest")}}, {{HTTPHeader("Repr-Digest")}}, {{HTTPHeader("Want-Content-Digest")}}
+- {{HTTPHeader("Content-Digest")}}, {{HTTPHeader("Repr-Digest")}}, {{HTTPHeader("Want-Content-Digest")}} digest headers

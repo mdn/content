@@ -8,7 +8,7 @@ status:
 
 {{HTTPSidebar}}
 
-The **`X-Forwarded-For`** (XFF) request header is a de-facto standard header for identifying the originating IP address of a client connecting to a web server through a proxy server.
+The HTTP **`X-Forwarded-For`** (XFF) {{Glossary("request header")}} is a de-facto standard header for identifying the originating IP address of a client connecting to a web server through a proxy server.
 
 > [!WARNING]
 > Improper use of this header can be a security risk. For details, see the [Security and privacy concerns](#security_and_privacy_concerns) section.
@@ -21,7 +21,8 @@ the final proxy is a load balancer which is part of the same installation
 as the server. So, to provide a more-useful client IP address to the server, the `X-Forwarded-For` request header is
 used.
 
-For detailed guidance on using this header, see the [Parsing](#parsing) and [Selecting an IP address](#selecting_an_ip_address) sections.
+For detailed guidance on using `X-Forwarded-For`, see the [Parsing](#parsing) and [Selecting an IP address](#selecting_an_ip_address) sections.
+A standardized version of this header is the HTTP {{HTTPHeader("Forwarded")}} header.
 
 <table class="properties">
   <tbody>
@@ -31,12 +32,10 @@ For detailed guidance on using this header, see the [Parsing](#parsing) and [Sel
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
-
-A standardized version of this header is the HTTP {{HTTPHeader("Forwarded")}} header.
 
 ## Security and privacy concerns
 
@@ -73,9 +72,9 @@ Elements are comma-separated, with optional whitespace surrounding the commas.
 
 ## Directives
 
-- \<client>
+- `<client>`
   - : The client IP address
-- \<proxy1>, \<proxy2>
+- `<proxy1>`, `<proxy2>`
   - : If a request goes through multiple proxies, the IP addresses of each successive
     proxy is listed. This means that, given well-behaved client and proxies, the rightmost
     IP address is the IP address of the most recent proxy and the leftmost IP address is
@@ -144,8 +143,7 @@ considered trustworthy or safe for security-related uses.
 
 ## Specifications
 
-Not part of any current specification. The standardized version of this header is
-{{HTTPHeader("Forwarded")}}.
+Not part of any current specification. The standardized version of this header is {{HTTPHeader("Forwarded")}}.
 
 ## See also
 

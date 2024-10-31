@@ -7,20 +7,19 @@ browser-compat: http.headers.WWW-Authenticate
 
 {{HTTPSidebar}}
 
-The HTTP **`WWW-Authenticate`** response header defines the [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) methods ("challenges") that might be used to gain access to a specific resource.
+The HTTP **`WWW-Authenticate`** {{Glossary("response header")}} defines the [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) methods (or {{Glossary("challenge")}}) that might be used to gain access to a specific resource.
 
-> [!NOTE]
-> This header is part of the [General HTTP authentication framework](/en-US/docs/Web/HTTP/Authentication#the_general_http_authentication_framework), which can be used with a number of [authentication schemes](/en-US/docs/Web/HTTP/Authentication#authentication_schemes).
-> Each "challenge" lists a scheme supported by the server and additional parameters that are defined for that scheme type.
+This header is part of the [General HTTP authentication framework](/en-US/docs/Web/HTTP/Authentication#the_general_http_authentication_framework), which can be used with a number of [authentication schemes](/en-US/docs/Web/HTTP/Authentication#authentication_schemes).
+Each challenge lists a scheme supported by the server and additional parameters that are defined for that scheme type.
 
-A server using [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) will respond with a {{HTTPStatus("401")}} `Unauthorized` response to a request for a protected resource.
-This response must include at least one `WWW-Authenticate` header and at least one {{Glossary("challenge")}}, to indicate what authentication schemes can be used to access the resource (and any additional data that each particular scheme needs).
+A server using [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) will respond with a {{HTTPStatus("401", "401 Unauthorized")}} response to a request for a protected resource.
+This response must include at least one `WWW-Authenticate` header and at least one challenge to indicate what authentication schemes can be used to access the resource and any additional data that each particular scheme needs.
 
 Multiple challenges are allowed in one `WWW-Authenticate` header, and multiple `WWW-Authenticate` headers are allowed in one response.
 A server may also include the `WWW-Authenticate` header in other response messages to indicate that supplying credentials might affect the response.
 
 After receiving the `WWW-Authenticate` header, a client will typically prompt the user for credentials, and then re-request the resource.
-This new request uses the {{HTTPHeader("Authorization")}} header to supply the credentials to the server, encoded appropriately for the selected "challenge" authentication method.
+This new request uses the {{HTTPHeader("Authorization")}} header to supply the credentials to the server, encoded appropriately for the selected authentication method.
 The client is expected to select the most secure of the challenges it understands (note that in some cases the "most secure" method is debatable).
 
 <table class="properties">

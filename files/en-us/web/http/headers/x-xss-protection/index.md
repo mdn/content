@@ -9,7 +9,8 @@ browser-compat: http.headers.X-XSS-Protection
 
 {{HTTPSidebar}}{{Non-standard_header}}
 
-The HTTP **`X-XSS-Protection`** response header was a feature of Internet Explorer, Chrome and Safari that stopped pages from loading when they detected reflected cross-site scripting ({{Glossary("Cross-site_scripting", "XSS")}}) attacks. These protections are largely unnecessary in modern browsers when sites implement a strong {{HTTPHeader("Content-Security-Policy")}} that disables the use of inline JavaScript (`'unsafe-inline'`).
+The HTTP **`X-XSS-Protection`** {{Glossary("response header")}} was a feature of Internet Explorer, Chrome and Safari that stopped pages from loading when they detected reflected cross-site scripting ({{Glossary("Cross-site_scripting", "XSS")}}) attacks.
+These protections are largely unnecessary in modern browsers when sites implement a strong {{HTTPHeader("Content-Security-Policy")}} that disables the use of inline JavaScript (`'unsafe-inline'`).
 
 > [!WARNING]
 > Even though this feature can protect users of older web browsers that don't yet support {{Glossary("CSP")}}, in some cases, **XSS protection can create XSS vulnerabilities** in otherwise safe websites. See the section below for more information.
@@ -30,7 +31,7 @@ The HTTP **`X-XSS-Protection`** response header was a feature of Internet Explor
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -44,13 +45,13 @@ X-XSS-Protection: 1; mode=block
 X-XSS-Protection: 1; report=<reporting-uri>
 ```
 
-- 0
+- `0`
   - : Disables XSS filtering.
-- 1
+- `1`
   - : Enables XSS filtering (usually default in browsers). If a cross-site scripting attack is detected, the browser will sanitize the page (remove the unsafe parts).
-- 1; mode=block
+- `1; mode=block`
   - : Enables XSS filtering. Rather than sanitizing the page, the browser will prevent rendering of the page if an attack is detected.
-- 1; report=\<reporting-URI> (Chromium only)
+- `1; report=<reporting-URI>` (Chromium only)
   - : Enables XSS filtering. If a cross-site scripting attack is detected, the browser will sanitize the page and report the violation. This uses the functionality of the CSP {{CSP("report-uri")}} directive to send a report.
 
 ## Vulnerabilities caused by XSS filtering

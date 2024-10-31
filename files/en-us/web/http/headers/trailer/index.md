@@ -7,14 +7,13 @@ browser-compat: http.headers.Trailer
 
 {{HTTPSidebar}}
 
-The **Trailer** response header allows the sender to include additional
+The HTTP **Trailer** {{glossary("request header", "request")}} and {{glossary("response header")}} allows the sender to include additional
 fields at the end of chunked messages in order to supply metadata that might be
 dynamically generated while the message body is sent, such as a message integrity check,
 digital signature, or post-processing status.
 
 > [!NOTE]
-> The {{HTTPHeader("TE")}} request header needs to be set to "trailers" to allow
-> trailer fields.
+> The {{HTTPHeader("TE")}} request header needs to be set to "trailers" to allow trailer fields.
 
 <table class="properties">
   <tbody>
@@ -28,7 +27,7 @@ digital signature, or post-processing status.
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes</td>
+      <td>Yes</td>
     </tr>
   </tbody>
 </table>
@@ -46,16 +45,12 @@ Trailer: header-names
   - : HTTP header fields which will be present in the trailer part of chunked messages.
     These header fields are **disallowed**:
 
-    - message framing headers (e.g., {{HTTPHeader("Transfer-Encoding")}} and
-      {{HTTPHeader("Content-Length")}}),
+    - message framing headers (e.g., {{HTTPHeader("Transfer-Encoding")}} and {{HTTPHeader("Content-Length")}}),
     - routing headers (e.g., {{HTTPHeader("Host")}}),
     - request modifiers (e.g., controls and conditionals, like
-      {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Max-Forwards")}}, or
-      {{HTTPHeader("TE")}}),
-    - authentication headers (e.g., {{HTTPHeader("Authorization")}} or
-      {{HTTPHeader("Set-Cookie")}}),
-    - or {{HTTPHeader("Content-Encoding")}}, {{HTTPHeader("Content-Type")}},
-      {{HTTPHeader("Content-Range")}}, and `Trailer` itself.
+      {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Max-Forwards")}}, or {{HTTPHeader("TE")}}),
+    - authentication headers (e.g., {{HTTPHeader("Authorization")}} or {{HTTPHeader("Set-Cookie")}}),
+    - or {{HTTPHeader("Content-Encoding")}}, {{HTTPHeader("Content-Type")}}, {{HTTPHeader("Content-Range")}}, and `Trailer` itself.
 
 ## Examples
 

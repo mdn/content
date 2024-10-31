@@ -15,7 +15,7 @@ browser-compat: http.headers.Want-Digest
 > Use {{HTTPHeader("Want-Content-Digest")}} instead.
 > For `id-*` digest algorithms, use {{HTTPHeader("Want-Repr-Digest")}}.
 
-The **`Want-Digest`** request or response HTTP header requests the other side to provide a {{Glossary("digest")}} using the {{HTTPHeader("Digest")}} header.
+The HTTP **`Want-Digest`** {{glossary("request header", "request")}} and {{glossary("response header")}} header requests the recipient to provide a {{Glossary("digest")}} using the {{HTTPHeader("Digest")}} header.
 
 The header contains identifiers for one or more digest algorithms that the sender wishes the server to use to create the digest.
 The request may use {{Glossary("quality values")}} to indicate its preference/order for particular digest algorithms.
@@ -38,7 +38,7 @@ See also the {{HTTPHeader("Digest")}} header.
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -54,13 +54,12 @@ Want-Digest: <digest-algorithm><q-value>,<digest-algorithm><q-value>
 
 ## Directives
 
-- \<digest-algorithm>
+- `<digest-algorithm>`
   - : Digest algorithms are defined in [Digest Headers](https://datatracker.ietf.org/doc/draft-ietf-httpbis-digest-headers/).
     - Permitted digest algorithms values include: `unixsum`, `unixcksum`, `crc32c`, `sha-256` and `sha-512`, `id-sha-256`, `id-sha-512`
     - Deprecated algorithms values include: `md5`, `sha`, `adler32`.
-- \<q-value>
-  - : The [quality value](/en-US/docs/Glossary/Quality_values) to apply to that
-    option.
+- `<q-value>`
+  - : The [quality value](/en-US/docs/Glossary/Quality_values) to apply to that option.
 
 ## Examples
 
@@ -133,4 +132,4 @@ Want-Digest: sha-256, sha-512
 
 ## See also
 
-- {{HTTPHeader("Digest")}}
+- {{HTTPHeader("Want-Content-Digest")}}, {{HTTPHeader("Want-Repr-Digest")}}

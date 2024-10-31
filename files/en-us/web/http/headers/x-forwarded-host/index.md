@@ -8,13 +8,9 @@ status:
 
 {{HTTPSidebar}}
 
-The **`X-Forwarded-Host`** (XFH) header is a de-facto standard
-header for identifying the original host requested by the client in the
-{{HTTPHeader("Host")}} HTTP request header.
+The HTTP **`X-Forwarded-Host`** (XFH) {{Glossary("request header")}} is a de-facto standard header for identifying the original host requested by the client in the {{HTTPHeader("Host")}} HTTP request header.
 
-Host names and ports of reverse proxies (load balancers, CDNs) may differ from the
-origin server handling the request, in that case the `X-Forwarded-Host`
-header is useful to determine which Host was originally used.
+Host names and ports of reverse proxies (load balancers, CDNs) may differ from the origin server handling the request, in that case the `X-Forwarded-Host` header is useful to determine which Host was originally used.
 
 <table class="properties">
   <tbody>
@@ -24,7 +20,7 @@ header is useful to determine which Host was originally used.
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -37,7 +33,7 @@ X-Forwarded-Host: <host>
 
 ## Directives
 
-- \<host>
+- `<host>`
   - : The domain name of the forwarded server.
 
 ## Examples

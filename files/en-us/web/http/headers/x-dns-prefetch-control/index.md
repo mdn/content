@@ -9,14 +9,10 @@ browser-compat: http.headers.X-DNS-Prefetch-Control
 
 {{HTTPSidebar}}{{Non-standard_header}}
 
-The **`X-DNS-Prefetch-Control`** HTTP response header controls
-DNS prefetching, a feature by which browsers proactively perform domain name resolution
-on both links that the user may choose to follow as well as URLs for items referenced by
-the document, including images, CSS, JavaScript, and so forth.
+The HTTP **`X-DNS-Prefetch-Control`** {{Glossary("response header")}} controls DNS prefetching, a feature by which browsers proactively perform domain name resolution on both links that the user may choose to follow as well as URLs for items referenced by the document, including images, CSS, JavaScript, and so forth.
 
-This prefetching is performed in the background, so that the {{glossary("DNS")}} is
-likely to have been resolved by the time the referenced items are needed. This reduces
-latency when the user clicks a link.
+This prefetching is performed in the background, so that the {{glossary("DNS")}} is likely to have been resolved by the time the referenced items are needed.
+This reduces latency when the user clicks a link.
 
 <table class="properties">
   <tbody>
@@ -26,7 +22,7 @@ latency when the user clicks a link.
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -40,10 +36,10 @@ X-DNS-Prefetch-Control: off
 
 ### Directives
 
-- on
+- `on`
   - : Enables DNS prefetching. This is what browsers do, if they support the feature, when
     this header is not present
-- off
+- `off`
   - : Disables DNS prefetching. This is useful if you don't control the link on the pages,
     or know that you don't want to leak information to these domains.
 
@@ -116,6 +112,10 @@ affected.
 ## Browser compatibility
 
 {{Compat}}
+
+## Specifications
+
+Not part of any current specification.
 
 ## See also
 
