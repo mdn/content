@@ -30,7 +30,7 @@ Pseudo-elements enable targeting entities not included in HTML and sections of c
 - {{CSSXref("::spelling-error")}}
 - {{CSSXref("::target-text")}}
 
-The specification also defines the `::details-content` and `::search-text` pseudo-elements and the `::postfix` and `::prefix` sub-pseudo elements. These are not yet supported by any browser. The {{CSSXref("::highlight()")}} pseudo-element is part of this module, with more details provided in the [CSS custom highlight API](/en-US/docs/Web/API/CSS_Custom_Highlight_API)
+The specification also defines the `::details-content` and `::search-text` pseudo-elements and the `::postfix` and `::prefix` sub-pseudo elements. These are not yet supported by any browser. The {{CSSXref("::highlight()")}} pseudo-element is included within this module, but most details are provided in the [CSS custom highlight API](/en-US/docs/Web/API/CSS_Custom_Highlight_API).
 
 ### Interfaces
 
