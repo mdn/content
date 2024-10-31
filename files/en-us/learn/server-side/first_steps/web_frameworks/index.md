@@ -158,7 +158,7 @@ The code snippet below shows how this works. Continuing the "youngest team" exam
     {% if youngest_teams %}
       <ul>
         {% for team in youngest_teams %}
-          <li>\{\{ team.team_name \}\}</li>
+          <li>\{{ team.team_name }}</li>
         {% endfor %}
       </ul>
     {% else %}

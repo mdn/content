@@ -385,7 +385,7 @@ These are our recommendations for using certain technical terms:
   On MDN, you can optionally specify the HTML element in the [`HTMLElement` macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references), which will style the element, add the angle brackets "<>", as well as add a link to its reference page.
 
   - **Using backticks**: `<span>`
-  - **Using the macro**: {{HTMLElement("span")}} (source in markdown: \\{{HTMLElement("span")\}})
+  - **Using the macro**: {{HTMLElement("span")}} (source in markdown: `\{{HTMLElement("span")}}`)
 
 - **Parameters vs. arguments**: The preferred term on MDN Web Docs is **parameters**. Please avoid the term "arguments" for consistency whenever possible.
 
