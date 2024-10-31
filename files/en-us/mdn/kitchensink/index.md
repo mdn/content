@@ -303,7 +303,7 @@ this.color("blue");
 
 {{EmbedLiveSample('Rect_code', '700', '300') }}
 
-{{APIRef("Web_Bluetooth_API")}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 {{WebExtAPIRef("tabs.mutedInfo")}}
 
