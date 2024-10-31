@@ -373,7 +373,7 @@ Do not use variant spelling.
 - **Correct**: localize, behavior, color
 - **Incorrect**: localise, behaviour, colour
 
-We have [cSpell](https://cspell.org/) installed to help you catch many spelling errors. It runs every week and generates a report of spelling errors in the repository. You can also run it locally via the following command:
+We have [cSpell](https://cspell.org/) installed to catch spelling errors. It runs every week and generates [a report of spelling errors](https://github.com/mdn/content/issues?q=Weekly+spelling+check+is%3Aissue+in%3Atitle) in the repository. You can also run it locally via the following command:
 
 ```bash
 npx cspell --no-progress --gitignore --config .vscode/cspell.json "**/*.md"
