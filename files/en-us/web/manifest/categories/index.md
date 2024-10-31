@@ -7,18 +7,66 @@ spec-urls: https://w3c.github.io/manifest-app-info/#categories-member
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
-The `categories` member is an array of strings defining the names of categories that the application supposedly belongs to.
+The `categories` member lets you specify one or more classifications for your web application, which helps digital storefronts, such as Google Play Store and App Store, organize and display it appropriately.
 
-There is no standard list of possible values, but the W3C maintains [a list of known categories](https://github.com/w3c/manifest/wiki/Categories).
+> [!NOTE]
+> The `categories` member is optional and purely advisory.
+> Digital storefronts may choose to ignore it and may use different values when presenting your app.
 
-> **Note:** `categories` are used only as hints for catalogs or stores listing web applications. Like search engines and meta keywords, catalogs and stores are free to ignore them.
+## Syntax
 
-> **Note:** `categories` values are lower-cased by the stores and catalogs before processing, so "News" and "news" are treated as the same value. Developers are encouraged to use lower case in the first place.
+```json-nolint
+/* Single category */
+"categories": ["productivity"]
+
+/* Multiple categories */
+"categories": ["productivity", "utilities", "social"]
+```
+
+### Values
+
+- `categories`
+  - : An array of comma-separated strings, where each string represents a category name.
+    The strings should be in lowercase.
+    Common categories include `business`, `education`, `entertainment`, `finance`, `games`, and `photo`.
+    See the [W3C categories list](https://github.com/w3c/manifest/wiki/Categories) for more options.
+
+## Description
+
+The `categories` member is supplementary metadata that does not affect the app's runtime behavior or how browsers present the app.
+Its values are used only in app store listings and distribution platforms and are not visible to users in the browser or installed app.
+
+If your app serves multiple purposes, specifying multiple relevant categories can help users discover your app across different sections of the app store.
+
+If `categories` is not specified or the specified values are not used, digital storefronts will categorize your web app based on their own classification system.
+
+The images below from the Apple App Store illustrate how categories appear in different parts of a digital storefront. The app overview shows the category in the "CHART" field (highlighted) along with the app's ranking in that category, and the Information section displays "Category" as a dedicated field (highlighted).
+
+- The BBC app is categorized as "News":
+
+  <div style="display: flex; justify-content: center;">
+    <img src="bbc.jpeg" alt="BBC app overview in Apple App Store. CHART field is circled in red to show News category.">
+    <img src="bbc-info.jpeg" alt="BBC app Information section with the Category field circled in red showing News.">
+  </div>
+
+- The Weather Channel app is categorized as "Weather":
+
+  <div style="display: flex; justify-content: center;">
+    <img src="weather.jpeg" alt="Weather app overview in Apple App Store. CHART field is circled in red to show Weather category">
+    <img src="weather-info.jpeg" alt="Weather app Information section with the Category field circled in red showing Weather">
+  </div>
 
 ## Examples
 
+### Categorizing a web app
+
+This example shows how to categorize a web app for planning meals based on available ingredients:
+
 ```json
-"categories": ["books", "education", "medical"]
+{
+  "name": "Meal Planner",
+  "categories": ["food", "health", "lifestyle"]
+}
 ```
 
 ## Specifications
@@ -27,4 +75,5 @@ There is no standard list of possible values, but the W3C maintains [a list of k
 
 ## Browser compatibility
 
-This manifest member is used by app stores and catalogs when publishing and listing web apps, so browser compatibility is not applicable. Browsers may parse this information, but it's optional and doesn't affect the core functionality of a web app.
+The `categories` manifest member is used by app stores when publishing and listing web apps, so browser compatibility is not applicable.
+While browsers may parse this member, it's optional and doesn't affect the app's functionality or presentation.
