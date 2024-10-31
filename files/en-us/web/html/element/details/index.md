@@ -198,6 +198,8 @@ The disclosure triangle itself can be customized, although this is not as broadl
 
 The {{HTMLElement("summary")}} element supports the {{cssxref("list-style")}} shorthand property and its longhand properties, such as {{cssxref("list-style-type")}}, to change the disclosure triangle to whatever you choose (usually with {{cssxref("list-style-image")}}). For example, we can remove the disclosure widget icon by setting `list-style: none`.
 
+Note: Safari doesn't support `list-style: none` for customizing the disclosure widget. You must instead use `::-webkit-details-marker` to target the marker and `display: none` to hide it.
+
 #### CSS
 
 ```css
