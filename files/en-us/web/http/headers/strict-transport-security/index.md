@@ -7,10 +7,10 @@ browser-compat: http.headers.Strict-Transport-Security
 
 {{HTTPSidebar}}
 
-The HTTP **`Strict-Transport-Security`** response header (often abbreviated as {{Glossary("HSTS")}}) informs browsers that the site should only be accessed using HTTPS, and that any future attempts to access it using HTTP should automatically be converted to HTTPS.
+The HTTP **`Strict-Transport-Security`** {{Glossary("response header")}} (often abbreviated as {{Glossary("HSTS")}}) informs browsers that the site should only be accessed using HTTPS, and that any future attempts to access it using HTTP should automatically be upgraded to HTTPS.
 
 > [!NOTE]
-> This is more secure than simply configuring a HTTP to HTTPS (301) redirect on your server, where the initial HTTP connection is still vulnerable to a man-in-the-middle attack.
+> This is more secure than configuring a HTTP to HTTPS ({{HTTPStatus("301")}}) redirect on your server, as the initial HTTP connection is still vulnerable to a man-in-the-middle attack.
 
 <table class="properties">
   <tbody>
@@ -20,7 +20,7 @@ The HTTP **`Strict-Transport-Security`** response header (often abbreviated as {
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -45,15 +45,15 @@ Strict-Transport-Security: max-age=<expire-time>; includeSubDomains; preload
 
 ## Description
 
-If a website accepts a connection through HTTP and redirects to HTTPS, visitors may initially communicate with the non-encrypted version of the site before being redirected, if, for example, the visitor types `http://www.foo.com/` or even just foo.com.
+If a website accepts a connection through HTTP and redirects to HTTPS, visitors may initially communicate with the non-encrypted version of the site before being redirected, if, for example, the visitor types `http://www.foo.com/` or even just `foo.com`.
 This creates an opportunity for a man-in-the-middle attack.
 The redirect could be exploited to direct visitors to a malicious site instead of the secure version of the original site.
 
-The HTTP Strict Transport Security header informs the browser that it should never load a site using HTTP and should automatically convert all attempts to access the site using HTTP to HTTPS requests instead.
+The `Strict-Transport-Security` header informs the browser that it should never load a site using HTTP and should automatically convert all attempts to access the site using HTTP to HTTPS requests instead.
 
 > [!NOTE]
 > The `Strict-Transport-Security` header is _ignored_ by the browser when your site has only been accessed using HTTP.
-> Once your site is accessed over HTTPS with no certificate errors, the browser knows your site is HTTPS capable and will honor the `Strict-Transport-Security` header.
+> Once your site is accessed over HTTPS with no certificate errors, the browser knows your site is HTTPS-capable and will honor the `Strict-Transport-Security` header.
 > Browsers do this as attackers may intercept HTTP connections to the site and inject or remove the header.
 
 ### An example scenario
@@ -80,10 +80,12 @@ By following the guidelines and successfully submitting your domain, you can ens
 While the service is hosted by Google, all browsers are using this preload list.
 However, it is not part of the HSTS specification and should not be treated as official.
 
-- Information regarding the HSTS preload list in Chrome: <https://www.chromium.org/hsts/>
+- Information regarding the HSTS preload list in Chrome: https://www.chromium.org/hsts/
 - Consultation of the Firefox HSTS preload list: [nsSTSPreloadList.inc](https://searchfox.org/mozilla-central/source/security/manager/ssl/nsSTSPreloadList.inc)
 
 ## Examples
+
+### Using Strict-Transport-Security
 
 All present and future subdomains will be HTTPS for a `max-age` of 1 year.
 This blocks access to pages or subdomains that can only be served over HTTP.
@@ -92,7 +94,7 @@ This blocks access to pages or subdomains that can only be served over HTTP.
 Strict-Transport-Security: max-age=31536000; includeSubDomains
 ```
 
-Although a `max-age` of 1 year is acceptable for a domain, two years is the recommended value as explained on <https://hstspreload.org>.
+Although a `max-age` of 1 year is acceptable for a domain, two years is the recommended value as explained on https://hstspreload.org.
 
 In the following example, `max-age` is set to 2 years, and is suffixed with `preload`, which is necessary for inclusion in all major web browsers' HSTS preload lists, like Chromium, Edge, and Firefox.
 
@@ -110,9 +112,9 @@ Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 
 ## See also
 
-- Blog post: [HTTP Strict Transport Security has landed!](https://blog.sidstamm.com/2010/08/http-strict-transport-security-has.html)
-- Blog post: [HTTP Strict Transport Security (force HTTPS)](https://hacks.mozilla.org/2010/08/firefox-4-http-strict-transport-security-force-https/)
-- OWASP Article: [HTTP Strict Transport Security](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html)
-- Wikipedia: [HTTP Strict Transport Security](https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security)
-- [HSTS preload service](https://hstspreload.org/)
 - [Features restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)
+- [HTTP Strict Transport Security has landed!](https://blog.sidstamm.com/2010/08/http-strict-transport-security-has.html) on blog.sidstamm.com (2010)
+- [HTTP Strict Transport Security (force HTTPS)](https://hacks.mozilla.org/2010/08/firefox-4-http-strict-transport-security-force-https/) on hacks.mozilla.org (2010)
+- [HTTP Strict Transport Security](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html) cheatsheet on owasp.org
+- [HTTP Strict Transport Security](https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security) on Wikipedia
+- [HSTS preload service](https://hstspreload.org/)

@@ -7,7 +7,7 @@ browser-compat: http.headers.SourceMap
 
 {{HTTPSidebar}}
 
-The **`SourceMap`** [HTTP](/en-US/docs/Web/HTTP) response header links generated code to a [source map](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html), enabling the browser to reconstruct the original source and present the reconstructed original in the debugger.
+The HTTP **`SourceMap`** {{Glossary("response header")}} links generated code to a {{Glossary("source map")}}, enabling the browser to reconstruct the original source and present the reconstructed original in the debugger.
 
 <table class="properties">
   <tbody>
@@ -17,7 +17,7 @@ The **`SourceMap`** [HTTP](/en-US/docs/Web/HTTP) response header links generated
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -31,10 +31,14 @@ X-SourceMap: <url> (deprecated)
 
 ### Directives
 
-- \<url>
+- `<url>`
   - : A relative (to the request URL) or absolute URL pointing to a source map file.
 
 ## Examples
+
+### Linking to a source map using `SourceMap`
+
+The following response contains an absolute
 
 ```http
 SourceMap: /path/to/file.js.map
@@ -50,4 +54,5 @@ SourceMap: /path/to/file.js.map
 
 ## See also
 
+- {{Glossary("Source map")}}
 - [Firefox Developer Tools: using a source map](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)
