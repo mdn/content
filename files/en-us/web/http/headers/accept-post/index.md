@@ -48,7 +48,7 @@ Accept-Post: <media-type>/<subtype>, <media-type>/<subtype>
 ## Directives
 
 - `<media-type>/<subtype>`
-  - : A single, precise [media type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types), like `text/html`.
+  - : A single, precise [media type](/en-US/docs/Web/HTTP/MIME_types), like `text/html`.
 - `<media-type>/*`
   - : A media type without a subtype.
     For example, `image/*` corresponds to `image/png`, `image/svg`, `image/gif`, and other image types.
