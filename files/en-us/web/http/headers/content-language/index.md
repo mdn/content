@@ -7,9 +7,9 @@ browser-compat: http.headers.Content-Language
 
 {{HTTPSidebar}}
 
-The **`Content-Language`** {{Glossary("representation header")}} is used to **describe the language(s) intended for the audience**, so users can differentiate it according to their own preferred language.
+The HTTP **`Content-Language`** {{Glossary("representation header")}} is used to describe the language(s) intended for the audience, so users can differentiate it according to their own preferred language.
 
-For example, if `Content-Language: de-DE` is set, it says that the document is intended for German language speakers (however, it doesn't indicate the document is written in German. For example, it might be written in English as part of a language course for German speakers. If you want to indicate which language the document is written in, use the [`lang` attribute](/en-US/docs/Web/HTML/Global_attributes/lang) instead).
+For example, `Content-Language: de-DE` indicates that the document is intended for German language speakers. The document may be written in English, not German, as part of a language course for German speakers. To indicate the language the document is **written in**, use the [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attribute instead.
 
 If no `Content-Language` is specified, the default is that the content is intended for all language audiences. Multiple language tags are also possible, as well as applying the `Content-Language` header to various media types and not only to textual documents.
 
@@ -21,26 +21,26 @@ If no `Content-Language` is specified, the default is that the content is intend
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
     <tr>
       <th scope="row">
         {{Glossary("CORS-safelisted response header")}}
       </th>
-      <td>yes</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th scope="row">
         {{Glossary("CORS-safelisted request header")}}
       </th>
       <td>
-        yes, with the additional restriction that values can only be
-        <code>0-9</code>, <code>A-Z</code>, <code>a-z</code>, space or
-        <code>*,-.;=</code>.
+        Yes*
       </td>
     </tr>
   </tbody>
 </table>
+
+\* Values can only be `0-9`, `A-Z`, `a-z`, a space, or the characters `*,-.;=`.
 
 ## Syntax
 
@@ -70,10 +70,9 @@ The global [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attribute is us
 </html>
 ```
 
-Do **not** use this meta element like this for stating a document language:
+Do **not** use this meta element to state the document language, as shown below:
 
 ```html example-bad
-<!-- ⚠️ This is bad practice -->
 <meta http-equiv="content-language" content="de" />
 ```
 
