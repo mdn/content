@@ -3,10 +3,12 @@ title: "CommandEvent: command property"
 short-title: command
 slug: Web/API/CommandEvent/command
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.CommandEvent.command
 ---
 
-{{APIRef("Invoker Commands API")}}
+{{APIRef("Invoker Commands API")}}{{SeeCompatTable}}
 
 The **`command`** read-only property of the {{domxref("CommandEvent")}} interface returns a string containing the value of the {{domxref("HTMLButtonElement.command", "command")}} property at the time the event was dispatched.
 
