@@ -7,7 +7,7 @@ spec-urls: https://w3c.github.io/manifest-app-info/#categories-member
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
-The `categories` member lets you specify one or more classifications for your web application.
+The `categories` manifest member lets you specify one or more classifications for your web application.
 These classifications help users discover your app in distribution platforms, such as Google Play Store, where apps are organized by category.
 
 > [!NOTE]

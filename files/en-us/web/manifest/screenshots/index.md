@@ -7,7 +7,7 @@ spec-urls: https://w3c.github.io/manifest-app-info/#screenshots-member
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
-The `screenshots` member lets you specify one or more images that showcase your web application.
+The `screenshots` manifest member lets you specify one or more images that showcase your web application.
 These images help users preview your web app's interface and features in distribution platforms, such as Google Play Store.
 
 > [!NOTE]
