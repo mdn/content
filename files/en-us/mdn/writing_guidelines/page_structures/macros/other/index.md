@@ -12,7 +12,7 @@ In contrast to the macros listed in [Commonly-used macros](/en-US/docs/MDN/Writi
 
 This macro is used only with particular contexts, such as a specific API reference.
 
-- [`RFC`](https://github.com/mdn/yari/blob/main/kumascript/macros/RFC.ejs) creates a link to the specified RFC, given its number. The syntax is: `\{\{RFC(number)\}\}`. For example, `\{\{RFC(2616)\}\}` becomes {{ RFC(2616) }}.
+- [`RFC`](https://github.com/mdn/yari/blob/main/kumascript/macros/RFC.ejs) creates a link to the specified RFC, given its number. The syntax is `\{{RFC(number)}}`. For example, `\{{RFC(2616)}}` becomes {{ RFC(2616) }}.
 
 ### Landing page components
 

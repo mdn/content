@@ -103,11 +103,11 @@ This uses the {{jsxref("Array.prototype.filter()")}} function to remove the enum
 
 ```js
 const target = myObject;
-const enumAndNonenum = Object.getOwnPropertyNames(target);
+const enumAndNonEnum = Object.getOwnPropertyNames(target);
 const enumOnly = new Set(Object.keys(target));
-const nonenumOnly = enumAndNonenum.filter((key) => !enumOnly.has(key));
+const nonEnumOnly = enumAndNonEnum.filter((key) => !enumOnly.has(key));
 
-console.log(nonenumOnly);
+console.log(nonEnumOnly);
 ```
 
 ## Specifications
