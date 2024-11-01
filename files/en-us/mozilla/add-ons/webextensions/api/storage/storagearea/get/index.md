@@ -35,7 +35,7 @@ If the operation fails, the promise is rejected with an error message.
 If managed storage is not set, `undefined` is returned.
 
 > [!WARNING]
-> In Firefox, if an extension's managed storage has not been configured with a native manifest or using the [`3rdparty` enterprise policy](https://mozilla.github.io/policy-templates/#3rdparty), an exception is thrown when using this function to access managed storage (see [Firefox bug 1868153](https://bugzil.la/1868153)). This issue can be avoided by catching the error. This issue is related to the lack of support for the [`storage.managed_schema`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/storage) manifest key (see [Firefox bug 1771731](https://bugzil.la/1771731)).
+> In Firefox, if an extension's managed storage has not been configured with a [native manifest](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#managed_storage_manifests) or using the [`3rdparty` enterprise policy](https://mozilla.github.io/policy-templates/#3rdparty), an exception is thrown when using this function to access managed storage (see [Firefox bug 1868153](https://bugzil.la/1868153)). This issue can be avoided by catching the error. This issue is related to the lack of support for the [`storage.managed_schema`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/storage) manifest key (see [Firefox bug 1771731](https://bugzil.la/1771731)).
 
 ## Examples
 
