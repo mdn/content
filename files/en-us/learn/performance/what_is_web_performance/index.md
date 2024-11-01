@@ -52,15 +52,7 @@ To summarize, many features impact performance including latency, application si
 
 To effectively understand web performance, the issues behind it, and the major topic areas we mentioned above, you really should understand some specifics about how browsers work. This includes:
 
-- **How the browser works**. When you request a URL and hit
-
-  <kbd>Enter</kbd>
-
-  /
-
-  <kbd>Return</kbd>
-
-  , the browser finds out where the server is that holds that website's files, establishes a connection to it, and requests the files. See [Populating the page: how the browser works](/en-US/docs/Web/Performance/How_browsers_work) for a detailed overview.
+- **How the browser works**. When you request a URL and hit <kbd>Enter</kbd> / <kbd>Return</kbd>, the browser finds out where the server is that holds that website's files, establishes a connection to it, and requests the files. See [Populating the page: how the browser works](/en-US/docs/Web/Performance/How_browsers_work) for a detailed overview.
 
 - **Source order**. Your HTML index file's source order can significantly affect performance. The download of additional assets linked to from the index file is generally sequential, based on source order, but this can be manipulated and should definitely be optimized, realizing that some resources block additional downloads until their content is parsed and executed.
 - **The critical path**. This is the process that the browser uses to construct the web document once the files have been downloaded from the server. The browser follows a well-defined set of steps, and optimizing the critical rendering path to prioritize the display of content that relates to the current user action will lead to significant improvements in content rendering time. See [Critical rendering path](/en-US/docs/Web/Performance/Critical_rendering_path) for more information.

@@ -42,37 +42,9 @@ Consider the event sequence generated when we interact with the <kbd>Shift</kbd>
 
 Try experimenting using the following two test cases:
 
-1. Press and hold the
+1. Press and hold the <kbd>Shift</kbd> key, then press <kbd>2</kbd> and release it. Next, release the <kbd>Shift</kbd> key.
 
-   <kbd>Shift</kbd>
-
-   key, then press
-
-   <kbd>2</kbd>
-
-   and release it. Next, release the
-
-   <kbd>Shift</kbd>
-
-   key.
-
-2. Press and hold the
-
-   <kbd>Shift</kbd>
-
-   key, then press and hold
-
-   <kbd>2</kbd>
-
-   . Release the
-
-   <kbd>Shift</kbd>
-
-   key. Finally, release
-
-   <kbd>2</kbd>
-
-   .
+2. Press and hold the <kbd>Shift</kbd> key, then press and hold <kbd>2</kbd>. Release the <kbd>Shift</kbd> key. Finally, release <kbd>2</kbd>.
 
 ### HTML
 

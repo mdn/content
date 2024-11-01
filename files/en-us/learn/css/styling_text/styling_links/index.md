@@ -44,11 +44,7 @@ The first thing to understand is the concept of link states — different states
 - **Link**: A link that has a destination (i.e., not just a named anchor), styled using the {{cssxref(":link")}} pseudo class.
 - **Visited**: A link that has already been visited (exists in the browser's history), styled using the {{cssxref(":visited")}} pseudo class.
 - **Hover**: A link that is hovered over by a user's mouse pointer, styled using the {{cssxref(":hover")}} pseudo class.
-- **Focus**: A link that is focused (e.g., moved to by a keyboard user using the
-
-  <kbd>Tab</kbd>
-
-  key or something similar, or programmatically focused using {{domxref("HTMLElement.focus()")}}) — this is styled using the {{cssxref(":focus")}} pseudo class.
+- **Focus**: A link that is focused (e.g., moved to by a keyboard user using the <kbd>Tab</kbd> key or something similar, or programmatically focused using {{domxref("HTMLElement.focus()")}}) — this is styled using the {{cssxref(":focus")}} pseudo class.
 
 - **Active**: A link that is activated (e.g., clicked on), styled using the {{cssxref(":active")}} pseudo class.
 
