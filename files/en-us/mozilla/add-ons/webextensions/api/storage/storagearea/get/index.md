@@ -28,14 +28,14 @@ Where `<storageType>` is one of the storage types — {{WebExtAPIRef("storage.sy
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves to a `results` object, containing every object in `keys` found in the storage area. If `keys` is an object, keys that are not found in the storage area have their values given by the `keys` object.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves to a `results` object, containing a key-value pair for every key in `keys` found in the storage area. When `keys` is an object, any key that isn't found in storage takes the default value from the `keys` object.
 
 If the operation fails, the promise is rejected with an error message.
 
 If managed storage is not set, `undefined` is returned.
 
 > [!WARNING]
-> In Firefox, if the managed storage manifest is missing, an exception is thrown when using this function to access managed storage (see [Firefox bug 1868153](https://bugzil.la/1868153)). This issue can be avoided by catching the error. This issue is related to the lack of support for the [`storage.managed_schema`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/storage) manifest key (see [Firefox bug 1771731](https://bugzil.la/1771731)). `storage.managed_schema` provides a fallback managed storage manifest definition on other browsers.
+> In Firefox, if an extension's managed storage has not been configured with a native manifest or using the [`3rdparty` enterprise policy](https://mozilla.github.io/policy-templates/#3rdparty), an exception is thrown when using this function to access managed storage (see [Firefox bug 1868153](https://bugzil.la/1868153)). This issue can be avoided by catching the error. This issue is related to the lack of support for the [`storage.managed_schema`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/storage) manifest key (see [Firefox bug 1771731](https://bugzil.la/1771731)).
 
 ## Examples
 
