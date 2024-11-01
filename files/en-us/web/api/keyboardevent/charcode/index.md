@@ -57,11 +57,7 @@ input.addEventListener("keypress", (e) => {
   property, but never both. If the key pressed generates a character (e.g., 'a'),
   `charCode` is set to the code of that character; `charCode`
   respects the letter case (in other words, `charCode` takes into account
-  whether the
-
-  <kbd>shift</kbd>
-
-  key is held down). Otherwise, the code of the pressed key
+  whether the <kbd>shift</kbd> key is held down). Otherwise, the code of the pressed key
   is stored in `keyCode`.
 
 - When one or more modifier keys are pressed, there are some complex rules for
