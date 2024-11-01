@@ -3,71 +3,34 @@ sidebar:
     link: /Web/HTTP
   - type: section
     title: Guides
-  - details: closed
-    title: ResourcesURI
-    children:
-      - link: /Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
-        title: Identifying
-      - link: /Web/HTTP/Basics_of_HTTP/Data_URLs
-        title: DataURLs
-      - link: /Web/HTTP/Basics_of_HTTP/MIME_types
-        title: MIMETypes
-      - link: /Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
-        title: ListMIMETypes
-      - link: /Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
-        title: WWWorNotWWW
-  - details: closed
-    title: HTTPGuide
-    children:
-      - link: /Web/HTTP/Basics_of_HTTP
-        title: Basics
-      - link: /Web/HTTP/Overview
-        title: Overview
-      - link: /Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
-        title: Evolution
-      - link: /Web/HTTP/Messages
-        title: Messages
-      - link: /Web/HTTP/Session
-        title: Session
-      - link: /Web/HTTP/Connection_management_in_HTTP_1.x
-        title: Connection1x
-      - link: /Web/HTTP/Protocol_upgrade_mechanism
-        title: ProtocolUpgradeMech
+  - /Web/HTTP/Overview
+  - /Web/HTTP/Session
+  - /Web/HTTP/Messages
+  - /Web/HTTP/MIME_types
+  - /Web/HTTP/Compression
+  - /Web/HTTP/Caching
+  - /Web/HTTP/Authentication
+  - /Web/HTTP/Cookies
+  - /Web/HTTP/Redirections
+  - /Web/HTTP/Conditional_requests
+  - /Web/HTTP/Range_requests
+  - /Web/HTTP/Content_negotiation
+  - /Web/HTTP/Connection_management_in_HTTP_1
+  - /Web/HTTP/Evolution_of_HTTP
+  - /Web/HTTP/Protocol_upgrade_mechanism
+  - /Web/HTTP/Proxy_servers_and_tunneling
+  - /Web/HTTP/Client_hints
   - details: closed
     title: Security
     children:
-      - link: /Web/HTTP/CSP
-        title: CSP
-      - /Web/HTTP/Headers/Strict-Transport-Security
-      - /Web/HTTP/Headers/X-Content-Type-Options
-      - /Web/HTTP/Headers/X-Frame-Options
-      - /Web/HTTP/Headers/X-XSS-Protection
       - /Web/Security/Practical_implementation_guides
       - link: /en-US/observatory
         title: HTTP Observatory
-
-  - link: /Web/HTTP/CORS
-    title: CORS
-  - link: /Web/HTTP/Authentication
-    title: Authentication
-  - link: /Web/HTTP/Caching
-    title: Caching
-  - link: /Web/HTTP/Compression
-    title: Compression
-  - link: /Web/HTTP/Conditional_requests
-    title: Conditionals
-  - link: /Web/HTTP/Content_negotiation
-    title: ContentNego
-  - link: /Web/HTTP/Cookies
-    title: Cookies
-  - link: /Web/HTTP/Range_requests
-    title: Ranges
-  - link: /Web/HTTP/Redirections
-    title: Redirects
-  - link: /Web/HTTP/Resources_and_specifications
-    title: Resources
-  - link: /Web/HTTP/Permissions_Policy
-    title: Permissions_Policy
+      - /Web/HTTP/Permissions_Policy
+      - /Web/HTTP/CSP
+      - /Web/HTTP/CORS
+      - /Web/HTTP/Cross
+      - /Web/HTTP/Headers
   - type: section
     title: Reference
 
@@ -101,266 +64,77 @@ sidebar:
     title: PermissionsPolicyDirectives
     path: /en-US/docs/Web/HTTP//Headers/Permissions-Policy
 
+  - /Web/HTTP/Resources_and_specifications
+
 l10n:
   en-US:
-    HTTP: HTTP
-    HTTPGuide: HTTP guide
-    Basics: Basics of HTTP
-    Overview: Overview of HTTP
-    Evolution: Evolution of HTTP
-    ResourcesURI: Resources and URIs
-    Identifying: Identifying resources on the Web
-    DataURLs: Data URLs
-    MIMETypes: Introduction to MIME types
-    ListMIMETypes: Common MIME types
-    WWWorNotWWW: Choosing between www and non-www URLs
-    Messages: HTTP Messages
-    Session: A typical HTTP session
-    Connection1x: Connection management in HTTP/1.x
-    Ranges: HTTP range requests
-    Redirects: HTTP redirects
-    Conditionals: HTTP conditional requests
-    ContentNego: HTTP content negotiation
-    Headers: HTTP headers
-    Response_codes: Response codes
-    Compression: HTTP compression
-    Cookies: HTTP cookies
-    Caching: HTTP caching
-    CORS: HTTP access control (CORS)
-    Resources: HTTP specifications
-    Permissions_Policy: Permissions Policy
-    Guides: Guides
-    Reference: References
-    Methods: HTTP request methods
-    Status: HTTP response status codes
-    CSPDirectives: CSP directives
     CORS_errors: CORS errors
-    PermissionsPolicyDirectives: Permissions-Policy directives
-    Security: HTTP security
-    Authentication: HTTP authentication
-    ProtocolUpgradeMech: Protocol upgrade mechanism
-    CSP: Content Security Policy (CSP)
-  es:
-    HTTP: HTTP
-    HTTPGuide: Guía de HTTP
-    Basics: Fundamentos de HTTP
-    Overview: Generalidades de HTTP
-    Evolution: Evolución de HTTP
-    ResourcesURI: Recursos y URIs
-    Identifying: Identificación de recursos en la Web
-    DataURLs: URLs de Datos
-    MIMETypes: Presentación de tipos MIME
-    ListMIMETypes: Lista completa de tipos MIME
-    WWWorNotWWW: Elección entre URLs con y sin www
-    Messages: Mensajes HTTP
-    Session: Una típica comunicación HTTP
-    Connection1x: Gestión de la conexión en HTTP/1.x
-    Ranges: Rangos de peticiones HTTP
-    Redirects: Redirecciones en HTTP
-    Conditionals: Peticiones condicionales en HTTP
-    ContentNego: Gestión del contenido en HTTP
-    Headers: Cabeceras HTTP
-    Response_codes: Códigos de respuesta
-    Compression: Compresión en HTTP
-    Cookies: Cookies HTTP
-    Caching: Caché HTTP
-    CORS: Control de acceso en HTTP(CORS)
-    Resources: La especificación de HTTP
-    Guides: Guías
-    Reference: Referencias
-    Methods: Métodos de petición HTTP
-    Status: Códigos de estado de HTTP
-    CSPDirectives: Directivas CSP
-    Security: Seguridad en HTTP
-    Authentication: Autenticación en HTTP
-    CSP: Content Security Policy (CSP)
-  fr:
-    HTTP: HTTP
-    HTTPGuide: Guide HTTP
-    Basics: Notions élémentaires de HTTP
-    Overview: Aperçu de HTTP
-    Evolution: Évolution de HTTP
-    ResourcesURI: Ressources et URI
-    Identifying: Identifier des ressources sur le Web
-    DataURLs: URL de données
-    MIMETypes: Introduction aux types MIME
-    ListMIMETypes: Types MIME usuels
-    WWWorNotWWW: Choisir entre les URL avec ou sans www
-    Messages: Messages HTTP
-    Session: Une session HTTP typique
-    Connection1x: Gestion des connexions avec HTTP/1.x
-    Ranges: Requêtes d'intervalle HTTP
-    Redirects: Redirections HTTP
-    Conditionals: Requêtes HTTP conditionnelles
-    ContentNego: Négociation de contenu HTTP
-    Headers: En-têtes HTTP
-    Response_codes: Codes de réponse
-    Compression: Compression HTTP
-    Cookies: Cookies HTTP
-    Caching: Cache HTTP
-    CORS: Contrôle d'accès HTTP
-    Resources: Spécifications HTTP
-    Permissions_Policy: Règles de fonctionnalité
+    CSPDirectives: CSP directives
     Guides: Guides
-    Reference: Références
-    Methods: Méthodes de requête HTTP
-    Status: Codes de statut de réponse HTTP
-    CSPDirectives: Directives CSP
+    Headers: HTTP headers
+    Methods: HTTP request methods
+    PermissionsPolicyDirectives: Permissions-Policy directives
+    Reference: References
+    Security: HTTP security
+    Status: HTTP response status codes
+  es:
+    CORS_errors: Errores de CORS
+    CSPDirectives: Directivas CSP
+    Guides: Guías
+    Headers: Cabeceras HTTP
+    Methods: Métodos de petición HTTP
+    PermissionsPolicyDirectives: Directivas Permissions-Policy
+    Reference: Referencias
+    Security: Seguridad en HTTP
+    Status: Códigos de estado de HTTP
+  fr:
     CORS_errors: Erreurs CORS
+    CSPDirectives: Directives CSP
+    Guides: Guides
+    Headers: En-têtes HTTP
+    Methods: Méthodes de requête HTTP
     PermissionsPolicyDirectives: Directives Permissions-Policy
+    Reference: Références
     Security: Sécurité HTTP
-    Authentication: Authentification HTTP
-    ProtocolUpgradeMech: Mécanisme d'amélioration du protocole
-    CSP: Content Security Policy (CSP)
+    Status: Codes de statut de réponse HTTP
   ja:
-    HTTP: HTTP
-    HTTPGuide: HTTP ガイド
-    Basics: HTTP の基本
-    Overview: HTTP の概要
-    Evolution: HTTP の進化
-    ResourcesURI: リソースと URI
-    Identifying: ウェブ上のリソースの識別
-    DataURLs: データ URL
-    MIMETypes: MIME タイプ入門
-    ListMIMETypes: よくある MIME タイプ
-    WWWorNotWWW: www 付きと www なしの URL の選択
-    Messages: HTTP メッセージ
-    Session: 典型的な HTTP セッション
-    Connection1x: HTTP/1.x のコネクション管理
-    Ranges: HTTP 範囲リクエスト
-    Redirects: HTTP のリダイレクト
-    Conditionals: HTTP 条件付きリクエスト
-    ContentNego: コンテントネゴシエーション
-    Headers: HTTP ヘッダー
-    Response_codes: レスポンスコード
-    Compression: HTTP の圧縮
-    Cookies: HTTP Cookie
-    Caching: HTTP キャッシュ
-    CORS: HTTP アクセス制御 (CORS)
-    Resources: HTTP 仕様書
-    Permissions_Policy: 機能ポリシー
-    Guides: ガイド
-    Reference: リファレンス
-    Methods: HTTP リクエストメソッド
-    Status: HTTP レスポンスステータスコード
-    CSPDirectives: CSP ディレクティブ
     CORS_errors: CORS エラー
+    CSPDirectives: CSP ディレクティブ
+    Guides: ガイド
+    Headers: HTTP ヘッダー
+    Methods: HTTP リクエストメソッド
     PermissionsPolicyDirectives: 機能ポリシーディレクティブ
+    Reference: リファレンス
     Security: HTTP セキュリティ
-    Authentication: HTTP 認証
-    ProtocolUpgradeMech: プロトコルのアップグレードの仕組み
-    CSP: Content Security Policy (CSP)
+    Status: HTTP レスポンスステータスコード
   ko:
-    HTTP: HTTP
-    HTTPGuide: HTTP 안내서
-    Basics: HTTP 기본
-    Overview: HTTP 개요
-    Evolution: HTTP의 진화
-    ResourcesURI: 리소스와 URIs
-    Identifying: 웹의 리소스 식별하기
-    DataURLs: 데이터 URLs
-    MIMETypes: MIME 타입 소개
-    ListMIMETypes: MIME 타입의 전체 리스트
-    WWWorNotWWW: www와 non-www URL 중에서 선택하기
-    Messages: HTTP 메시지
-    Session: 전형적인 HTTP 세션
-    Connection1x: HTTP/1.x의 연결 관리
-    Ranges: HTTP range 요청
-    Redirects: HTTP 리다이렉트
-    Conditionals: HTTP 조건부 요청
-    ContentNego: HTTP 컨텐츠 협상
-    Headers: HTTP 헤더
-    Response_codes: 응답 코드
-    Compression: HTTP 압축
-    Cookies: HTTP 쿠키
-    Caching: HTTP 캐싱
-    CORS: HTTP 접근 제어(CORS)
-    Resources: HTTP 명세
-    Permissions_Policy: Permissions policy
-    Guides: 가이드
-    Reference: 레퍼런스
-    Methods: HTTP 요청 메소드
-    Status: HTTP 응답 상태 코드
-    CSPDirectives: CSP 지시문
     CORS_errors: CORS 에러
+    CSPDirectives: CSP 지시문
+    Guides: 가이드
+    Headers: HTTP 헤더
+    Methods: HTTP 요청 메소드
     PermissionsPolicyDirectives: Permissions-Policy 지시문
+    Reference: 레퍼런스
     Security: HTTP 보안
-    Authentication: HTTP 인증
-    ProtocolUpgradeMech: 프로토콜 업그레이드 메커니즘
-    CSP: Content Security Policy (CSP)
+    Status: HTTP 응답 상태 코드
   ru:
-    HTTP: HTTP
-    HTTPGuide: Руководство по HTTP
-    Basics: Основы HTTP
-    Overview: Обзор протокола HTTP
-    Evolution: Эволюция протокола HTTP
-    ResourcesURI: Ресурсы и URI-адреса
-    Identifying: Идентификация ресурсов в Вебе
-    DataURLs: Data URL
-    MIMETypes: Введение в MIME типы
-    ListMIMETypes: Неполный список типов MIME
-    WWWorNotWWW: Choosing between www and non-www URLs
-    Messages: Сообщения HTTP
-    Session: HTTP сессия
-    Connection1x: Управление подключениями в HTTP/1.x
-    Ranges: HTTP range requests
-    Redirects: Перенаправления в HTTP
-    Conditionals: Условные HTTP запросы
-    ContentNego: Согласование контента
-    Headers: Заголовки HTTP
-    Response_codes: Коды ответа HTTP
-    Compression: Сжатие в HTTP
-    Cookies: Куки HTTP
-    Caching: HTTP-кеширование
-    CORS: Контроль доступа в HTTP (CORS)
-    Resources: Спецификации HTTP
-    Permissions_Policy: Permissions policy
-    Guides: Учебники
-    Reference: Справочники
-    Methods: Методы HTTP запроса
-    Status: Коды ответа HTTP
-    CSPDirectives: Директивы CSP
     CORS_errors: Ошибки CORS
+    CSPDirectives: Директивы CSP
+    Guides: Учебники
+    Headers: Заголовки HTTP
+    Methods: Методы HTTP запроса
     PermissionsPolicyDirectives: Директивы Permissions-Policy
+    Reference: Справочники
     Security: Безопасность в HTTP
-    Authentication: HTTP авторизация
-    ProtocolUpgradeMech: Protocol upgrade mechanism
-    CSP: Content Security Policy (CSP)
+    Status: Коды ответа HTTP
   zh-CN:
-    HTTP: HTTP
-    HTTPGuide: HTTP 指南
-    Basics: HTTP 基础
-    Overview: HTTP 概述
-    Evolution: HTTP 的发展
-    ResourcesURI: 资源和 URI
-    Identifying: 标识互联网上的内容
-    DataURLs: Data URL
-    MIMETypes: MIME 类型介绍
-    ListMIMETypes: 常见的 MIME 类型
-    WWWorNotWWW: 选择 www 或非 www 域名？
-    Messages: HTTP 消息
-    Session: 典型的 HTTP 会话
-    Connection1x: HTTP/1.x 的连接管理
-    Ranges: HTTP 范围请求
-    Redirects: HTTP 重定向
-    Conditionals: HTTP 条件请求
-    ContentNego: HTTP 内容协商
-    Headers: HTTP 标头
-    Response_codes: 响应代码
-    Compression: HTTP 压缩
-    Cookies: HTTP cookie
-    Caching: HTTP 缓存
-    CORS: HTTP 访问控制（CORS）
-    Resources: HTTP 规范
-    Permissions_Policy: 权限策略
-    Guides: 指南：
-    Reference: 参考：
-    Methods: HTTP 请求方法
-    Status: HTTP 响应状态码
-    CSPDirectives: CSP 指令
     CORS_errors: CORS 错误
+    CSPDirectives: CSP 指令
+    Guides: 指南：
+    Headers: HTTP 标头
+    Methods: HTTP 请求方法
     PermissionsPolicyDirectives: 权限策略指令
+    Reference: 参考：
     Security: HTTP 安全
-    Authentication: HTTP 认证
-    ProtocolUpgradeMech: 协议升级机制
-    CSP: 内容安全策略（CSP）
+    Status: HTTP 响应状态码
+
