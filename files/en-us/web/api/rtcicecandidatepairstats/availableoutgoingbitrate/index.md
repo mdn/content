@@ -15,7 +15,7 @@ You can get the incoming available bitrate from {{domxref("RTCIceCandidatePairSt
 
 ## Value
 
-A number value which approximates the amount of available bandwidth for outgoing data on the network connection described by the
+A number which approximates the amount of available bandwidth for outgoing data on the network connection described by the
 `RTCIceCandidatePair`.
 The value is reported in bits per second and is computed over a 1-second interval.
 

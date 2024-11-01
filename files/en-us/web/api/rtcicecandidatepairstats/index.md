@@ -14,7 +14,7 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 ## Instance properties
 
 - {{domxref("RTCIceCandidatePairStats.availableIncomingBitrate", "availableIncomingBitrate")}} {{optional_inline}} <!-- Not in BCD but is in spec IDL. -->
-  - : An number representing the available inbound capacity of the network.
+  - : A number representing the available inbound capacity of the network.
     This reports the total number of bits per second available for all of the candidate pair's incoming {{Glossary("RTP")}} streams.
     It does not take into account the size of the Internet Protocol (IP) overhead, nor any other transport layers such as {{Glossary("TCP")}} or {{Glossary("UDP")}}.
 - {{domxref("RTCIceCandidatePairStats.availableOutgoingBitrate", "availableOutgoingBitrate")}} {{optional_inline}}
@@ -59,7 +59,7 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 - {{domxref("RTCIceCandidatePairStats.state", "state")}} {{optional_inline}}
   - : A string which indicates the state of the connection between the two candidates.
 - {{domxref("RTCIceCandidatePairStats.totalRoundTripTime", "totalRoundTripTime")}} {{optional_inline}}
-  - : A number value indicating the total time, in seconds, that has elapsed between sending STUN requests and receiving responses to them, for all such requests made to date on this candidate pair.
+  - : A number indicating the total time, in seconds, that has elapsed between sending STUN requests and receiving responses to them, for all such requests made to date on this candidate pair.
     This includes both connectivity check and consent check requests. You can compute the average round trip time (RTT) by dividing this value by {{domxref("RTCIceCandidatePairStats.responsesReceived", "responsesReceived")}}.
 - {{domxref("RTCIceCandidatePairStats.transportId", "transportId")}} {{optional_inline}}
   - : A string that uniquely identifies the {{domxref("RTCIceTransport")}} that was inspected to obtain the transport-related statistics (as found in {{domxref("RTCTransportStats")}}) used in generating this object.
