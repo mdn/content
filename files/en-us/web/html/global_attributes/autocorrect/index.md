@@ -38,6 +38,7 @@ The default value for elements that are not nested inside a `<form>` is `on`.
 When nested in a `<form>`, the following elements inherit their their default value of `autocorrect` from the form if it has been set: {{htmlelement("button")}}, {{htmlelement("fieldset")}}, {{htmlelement("input")}}, {{htmlelement("output")}}, {{htmlelement("select")}}, and {{htmlelement("textarea")}}.
 
 ## Examples
+
 ### Basic example
 
 This example demonstrates basic `autocorrect` attribute usage.
@@ -52,11 +53,11 @@ We include two text `<input>` elements with different values for their `autocorr
 
 <label for="fruit">A fruit: </label>
 <input id="fruit" name="fruit" type="text" autocorrect="off" />
-```end
+```
 
 #### Results
 
-{{EmbedLiveSample("Basic example", "100%", "250")}}
+{{EmbedLiveSample("Basic example", "100%", "75")}}
 
 Enter invalid text into the fruit and vegetable text entry boxes above.
 If auto-correction is enabled on your browser, a typo in a vegetable name should be auto-corrected, but not in a fruit name.
