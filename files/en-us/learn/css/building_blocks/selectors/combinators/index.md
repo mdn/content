@@ -39,15 +39,27 @@ The final selectors we will look at are called combinators, because they combine
 
 ## Descendant combinator
 
-The **descendant combinator** — typically represented by a single space (" ") character — combines two selectors such that elements matched by the second selector are selected if they have an ancestor (parent, parent's parent, parent's parent's parent, etc.) element matching the first selector. Selectors that utilize a descendant combinator are called _descendant selectors_.
+The **descendant combinator** — typically represented by a single space (``) character — combines two selectors such that elements matched by the second selector are selected if they have an ancestor (parent, parent's parent, parent's parent's parent, etc.) element matching the first selector. Selectors that utilize a descendant combinator are called _descendant selectors_.
 
 ```css
-body article p
+body article p {
+}
 ```
 
 In the example below, we are matching only the `<p>` element which is inside an element with a class of `.box`.
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/descendant.html", '100%', 500)}}
+```html live-sample___descendant
+<div class="box"><p>Text in .box</p></div>
+<p>Text not in .box</p>
+```
+
+```css live-sample___descendant
+.box p {
+  color: red;
+}
+```
+
+{{EmbedLiveSample("descendant")}}
 
 ## Child combinator
 
@@ -61,7 +73,26 @@ In this next example, we have an ordered list ({{htmlelement("ol")}}) nested ins
 
 If you remove the `>` that designates this as a child combinator, you end up with a descendant selector and all `<li>` elements will get a red border.
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/child.html", '100%', 600)}}
+```html live-sample___child
+<ul>
+  <li>Unordered item</li>
+  <li>
+    Unordered item
+    <ol>
+      <li>Item 1</li>
+      <li>Item 2</li>
+    </ol>
+  </li>
+</ul>
+```
+
+```css live-sample___child
+ul > li {
+  border-top: 5px solid red;
+}
+```
+
+{{EmbedLiveSample("child")}}
 
 ## Next-sibling combinator
 
@@ -75,9 +106,36 @@ A common use case is to do something with a paragraph that follows a heading, as
 
 If you insert some other element such as a `<h2>` in between the `<h1>` and the `<p>`, you will find that the paragraph is no longer matched by the selector and so does not get the background and foreground color applied when the element is adjacent.
 
-<!-- This example lives https://github.com/mdn/css-examples/blob/main/learn/selectors/adjacent.html -->
+```html live-sample___adjacent
+<article>
+  <h1>A heading</h1>
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/adjacent.html", '100%', 800)}}
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+</article>
+```
+
+```css live-sample___adjacent
+body {
+  font-family: sans-serif;
+}
+
+h1 + p {
+  font-weight: bold;
+  background-color: #333;
+  color: #fff;
+  padding: 0.5em;
+}
+```
+
+{{EmbedLiveSample("adjacent", "", "220px")}}
 
 ## Subsequent-sibling combinator
 
@@ -89,9 +147,29 @@ p ~ img
 
 In the example below we are selecting all `<p>` elements that come after the `<h1>`, and even though there is a `<div>` in the document as well, the `<p>` that comes after it is selected.
 
-<!-- This example lives https://github.com/mdn/css-examples/blob/main/learn/selectors/general.html -->
+```html live-sample___general
+<article>
+  <h1>A heading</h1>
+  <p>I am a paragraph.</p>
+  <div>I am a div</div>
+  <p>I am another paragraph.</p>
+</article>
+```
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/general.html", '100%', 600)}}
+```css live-sample___general
+body {
+  font-family: sans-serif;
+}
+
+h1 ~ p {
+  font-weight: bold;
+  background-color: #333;
+  color: #fff;
+  padding: 0.5em;
+}
+```
+
+{{EmbedLiveSample("general", "", "220px")}}
 
 ## Creating complex selectors with nesting
 
@@ -107,7 +185,7 @@ p ~ img {
 }
 ```
 
-The [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector) can also be used to create complex selectors.
+The [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector) can also be used to create complex selectors:
 
 ```css
 p {
@@ -119,9 +197,34 @@ p img {
 }
 ```
 
-<!-- This example lives https://github.com/mdn/css-examples/blob/main/learn/selectors/nesting.html -->
+Here's an example demonstrating complex selectors:
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/nesting.html", '100%', 800)}}
+```html live-sample___nesting
+<article>
+  <h1>A heading</h1>
+  <p>I am a paragraph.</p>
+  <div>I am a div</div>
+  <p>I am another paragraph.</p>
+</article>
+```
+
+```css live-sample___nesting
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  & ~ p {
+    /* this is parsed by the browser as h1 ~ p */
+    font-weight: bold;
+    background-color: #333;
+    color: #fff;
+    padding: 0.5em;
+  }
+}
+```
+
+{{EmbedLiveSample("nesting", "", "220px")}}
 
 > [!NOTE]
 > In the example above, the `&` nesting selector is not required, but adding it helps to explicitly show that CSS nesting is being used.
