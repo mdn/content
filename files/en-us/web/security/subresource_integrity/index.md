@@ -21,6 +21,7 @@ Websites sometimes choose to rely on a third party such as a {{glossary(""CDN", 
 ```html
 <script src="https://not-example.com/script.js"></script>
 ```
+
 This comes with a risk, in that if an attacker gains control of the third-party host, the attacker can inject arbitrary malicious content into its files (or replace the files completely) and thus can also potentially attack sites that fetch files from it.
 
 Subresource Integrity enables you to mitigate some risks of attacks such as this, by ensuring that the files your web application or web document fetches have been delivered without an attacker having injected any additional content into those files — and without any other changes of any kind at all having been made to those files.
