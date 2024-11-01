@@ -46,12 +46,15 @@ if (document.prerendering) {
 }
 ```
 
+Note that this kind of code should not be used for measuring how often a prerender is activated, because the code may run after a prerendered page has already activated.
+
 > [!NOTE]
 > See the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) landing page and particularly the [Unsafe speculative loading conditions](/en-US/docs/Web/API/Speculation_Rules_API#unsafe_speculative_loading_conditions) section for more information on the kinds of activities you might wish to delay until after prerendering has finished.
 
 ### Measuring prerendering activations
 
-The previous code will not suffice for measuring how often a prerender is activated, because it's possible for that code to run after prerendering activation. Instead, use the following pattern:
+This code shows how to measure how often a prerender is activated.
+It uses the `prerenderingchange` to track activation events, and {{domxref(Performance.getEntriesByType())}} to track navigation activations. 
 
 ```js
 if (document.prerendering) {
