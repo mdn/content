@@ -811,7 +811,6 @@
         "Element: focus",
         "Element: select",
         "Element: show",
-        "HTMLDetailsElement: toggle",
         "HTMLDialogElement: cancel",
         "HTMLDialogElement: close",
         "HTMLElement: input",
