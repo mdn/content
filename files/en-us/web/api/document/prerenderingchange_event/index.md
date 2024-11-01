@@ -30,7 +30,11 @@ A generic {{domxref("Event")}}.
 
 ### Preventing code from running during prerendering
 
-The following code sets up an event listener to run a function once prerendering has finished, on a prerendered page (the prerendering is detected via {{domxref("Document.prerendering")}}), or runs it immediately on a non-prerendered page:
+The example shows how to defer code, that would otherwise run during prerendering, until after page activation.
+This is useful for deferring analytics code, which is only relevant when and if the page is actually viewed.
+
+The code checks if prerendering is running using {{domxref("Document.prerendering")}}, and if so adds an event listener to run an analytics initialization function once the page is activated.
+On a page that is not prerendering the analytics code is run immediately.
 
 ```js
 if (document.prerendering) {
