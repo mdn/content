@@ -26,7 +26,7 @@ In order to not bother the programmer with allocations, JavaScript will automati
 
 ```js
 const n = 123; // allocates memory for a number
-const s = "azerty"; // allocates memory for a string
+const s = "string"; // allocates memory for a string
 
 const o = {
   a: 1,
@@ -35,7 +35,7 @@ const o = {
 
 // (like object) allocates memory for the array and
 // contained values
-const a = [1, null, "abra"];
+const a = [1, null, "str2"];
 
 function f(a) {
   return a + 2;
@@ -64,14 +64,14 @@ const e = document.createElement("div"); // allocates a DOM element
 Some methods allocate new values or objects:
 
 ```js
-const s = "azerty";
+const s = "string";
 const s2 = s.substr(0, 3); // s2 is a new string
 // Since strings are immutable values,
 // JavaScript may decide to not allocate memory,
 // but just store the [0, 3] range.
 
-const a = ["ouais ouais", "nan nan"];
-const a2 = ["generation", "nan nan"];
+const a = ["yeah yeah", "no no"];
+const a2 = ["generation", "no no"];
 const a3 = a.concat(a2);
 // new array with 4 elements being
 // the concatenation of a and a2 elements.

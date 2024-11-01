@@ -7,19 +7,20 @@ browser-compat: http.headers.Accept-Encoding
 
 {{HTTPSidebar}}
 
-The **`Accept-Encoding`** request HTTP header indicates the content encoding (usually a compression algorithm) that the client can understand. The server uses [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) to select one of the proposals and informs the client of that choice with the {{HTTPHeader("Content-Encoding")}} response header.
+The HTTP **`Accept-Encoding`** {{Glossary("request header")}} indicates the content encoding (usually a compression algorithm) that the client can understand. The server uses [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) to select one of the proposals and informs the client of that choice with the {{HTTPHeader("Content-Encoding")}} response header.
 
-Even if both the client and the server support the same compression algorithms, the server may choose not to compress the body of a response if the `identity` value is also acceptable. Two common cases lead to this:
+Even if both the client and the server support the same compression algorithms, the server may choose not to compress the body of a response if the `identity` value is also acceptable.
+This happens in two common cases:
 
-- The data to be sent is already compressed, therefore a second compression will not reduce the transmitted data size. This is true for pre-compressed image formats (JPEG, for instance);
-- The server is overloaded and cannot allocate computing resources to perform the compression. For example, Microsoft recommends not to compress if a server uses more than 80% of its computational power.
+1. The data is already compressed, meaning a second round of compression will not reduce the transmitted data size, and may actually increase the size of the content in some cases.
+   This is true for pre-compressed image formats (JPEG, for instance).
+2. The server is overloaded and cannot allocate computing resources to perform the compression. For example, Microsoft recommends not to compress if a server uses more than 80% of its computational power.
 
-As long as the `identity;q=0` or `*;q=0` directives do not explicitly forbid the `identity` value that means no encoding, the server must never return a {{HTTPStatus("406")}} `Not Acceptable` error.
+As long as the `identity;q=0` or `*;q=0` directives do not explicitly forbid the `identity` value that means no encoding, the server must never return a {{HTTPStatus("406", "406 Not Acceptable")}} error.
 
 > [!NOTE]
->
-> - An IANA registry maintains [a list of official content encodings](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#content-coding).
-> - The `bzip` and `bzip2` encodings are non-standard, but may be used in some cases, including legacy support.
+> IANA maintains [a list of official content encodings](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#content-coding).
+> The `bzip` and `bzip2` encodings are non-standard, but may be used in some cases, particularly for legacy support.
 
 <table class="properties">
   <tbody>
@@ -29,7 +30,7 @@ As long as the `identity;q=0` or `*;q=0` directives do not explicitly forbid the
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes</td>
+      <td>Yes</td>
     </tr>
   </tbody>
 </table>
@@ -70,13 +71,22 @@ Accept-Encoding: deflate, gzip;q=1.0, *;q=0.5
 
 ## Examples
 
+### Default Accept-Encoding values
+
+Browser navigation typically has the following `Accept-Encoding` request header value:
+
 ```http
-Accept-Encoding: gzip
+GET /en-US/ HTTP/2
+Host: developer.mozilla.org
+Accept-Encoding: gzip, deflate, br, zstd
+```
 
-Accept-Encoding: gzip, compress, br
+### Weighted Accept-Encoding values
 
-Accept-Encoding: gzip, compress, br, zstd
+The following request header shows `Accept-Encoding` preferences using a quality value between `0` (lowest priority) and `1` (highest-priority).
+Brotli compression is weighted at `1.0`, making `br` the client's first choice, followed by `gzip` at `0.8` priority, and then any other content encoding at `0.1`:
 
+```http
 Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
 ```
 

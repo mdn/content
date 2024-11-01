@@ -472,15 +472,15 @@ class ExpandingList extends HTMLUListElement {
         // Add click handler to this span
         newSpan.addEventListener("click", (e) => {
           // next sibling to the span should be the ul
-          const nextul = e.target.nextElementSibling;
+          const nextUl = e.target.nextElementSibling;
 
           // Toggle visible state and update class attribute on ul
-          if (nextul.style.display == "block") {
-            nextul.style.display = "none";
-            nextul.parentNode.setAttribute("class", "closed");
+          if (nextUl.style.display == "block") {
+            nextUl.style.display = "none";
+            nextUl.parentNode.setAttribute("class", "closed");
           } else {
-            nextul.style.display = "block";
-            nextul.parentNode.setAttribute("class", "open");
+            nextUl.style.display = "block";
+            nextUl.parentNode.setAttribute("class", "open");
           }
         });
         // Add the span and remove the bare text node from the li
