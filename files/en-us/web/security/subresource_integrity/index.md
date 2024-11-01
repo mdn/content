@@ -17,6 +17,7 @@ browser-compat:
 ## How Subresource Integrity helps
 
 Websites sometimes choose to rely on a third party such as a {{glossary(""CDN", "Content Delivery Network (CDN)")}} to host some of their resources, rather than self-host all their resources. For example, a document served from `https://example.com` might include a resource from another location:
+
 ```html
 <script src="https://not-example.com/script.js"></script>
 ```
