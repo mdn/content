@@ -234,6 +234,11 @@
     "zh-TW": "此功能可在 <a href=\"/zh-TW/docs/Web/API/Web_Workers_API\">Web Worker</a>（不包括 <a href=\"/zh-TW/docs/Web/API/Service_Worker_API\">Service Worker</a>）中使用。"
   },
 
+  "available_in_worker__window_and_worker_except_shared": {
+    "en-US": "This feature is available in <a href=\"/en-US/docs/Web/API/Web_Workers_API\">Web Workers</a>, except for <a href=\"/en-US/docs/Web/API/SharedWorkerGlobalScope\">Shared Web Workers</a>.",
+    "zh-CN": "此特性在 <a href=\"/zh-CN/docs/Web/API/Web_Workers_API\">Web Worker</a>（不包括<a href=\"/zh-CN/docs/Web/API/SharedWorkerGlobalScope\">共享 Web Worker</a>）中可用。"
+  },
+
   "available_in_worker__worker_except_service": {
     "de": "Diese Funktion ist nur in <a href=\"/de/docs/Web/API/Web_Workers_API\">Web Workers</a> verfügbar, mit Ausnahme von <a href=\"/de/docs/Web/API/Service_Worker_API\">Service Workers</a>.",
     "en-US": "This feature is only available in <a href=\"/en-US/docs/Web/API/Web_Workers_API\">Web Workers</a>, except for <a href=\"/en-US/docs/Web/API/Service_Worker_API\">Service Workers</a>.",
