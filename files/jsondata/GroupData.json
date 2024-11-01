@@ -815,6 +815,8 @@
         "HTMLDialogElement: cancel",
         "HTMLDialogElement: close",
         "HTMLElement: input",
+        "HTMLElement: beforetoggle",
+        "HTMLElement: toggle",
         "HTMLFormElement: reset",
         "HTMLFormElement: submit",
         "HTMLInputElement: change",
