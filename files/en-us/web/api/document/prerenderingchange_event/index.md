@@ -54,7 +54,7 @@ Note that this kind of code should not be used for measuring how often a prerend
 ### Measuring prerendering activations
 
 This code shows how to measure how often a prerender is activated.
-It uses the `prerenderingchange` to track activation events, and {{domxref(Performance.getEntriesByType())}} to track navigation activations. 
+It uses the `prerenderingchange` to track activation events, and {{domxref(Performance.getEntriesByType())}} to track navigation activations.
 
 ```js
 if (document.prerendering) {
