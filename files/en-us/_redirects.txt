@@ -8417,6 +8417,7 @@
 /en-US/docs/Web/API/HTMLContentElement.select	/en-US/docs/Web/API/HTMLSlotElement
 /en-US/docs/Web/API/HTMLContentElement/getDistributedNodes	/en-US/docs/Web/API/HTMLSlotElement
 /en-US/docs/Web/API/HTMLContentElement/select	/en-US/docs/Web/API/HTMLSlotElement
+/en-US/docs/Web/API/HTMLDetailsElement/toggle_event	/en-US/docs/Web/API/HTMLElement/toggle_event
 /en-US/docs/Web/API/HTMLDialogElement/close()	/en-US/docs/Web/API/HTMLDialogElement/close
 /en-US/docs/Web/API/HTMLDialogElement/returnValue()	/en-US/docs/Web/API/HTMLDialogElement/returnValue
 /en-US/docs/Web/API/HTMLDialogElement/show()	/en-US/docs/Web/API/HTMLDialogElement/show
@@ -11959,7 +11960,7 @@
 /en-US/docs/Web/Events/suspend	/en-US/docs/Web/API/HTMLMediaElement/suspend_event
 /en-US/docs/Web/Events/timeout	/en-US/docs/Web/API/XMLHttpRequest/timeout_event
 /en-US/docs/Web/Events/timeupdate	/en-US/docs/Web/API/HTMLMediaElement/timeupdate_event
-/en-US/docs/Web/Events/toggle	/en-US/docs/Web/API/HTMLDetailsElement/toggle_event
+/en-US/docs/Web/Events/toggle	/en-US/docs/Web/API/HTMLElement/toggle_event
 /en-US/docs/Web/Events/tonechange	/en-US/docs/Web/API/RTCDTMFSender/tonechange_event
 /en-US/docs/Web/Events/touchcancel	/en-US/docs/Web/API/Element/touchcancel_event
 /en-US/docs/Web/Events/touchend	/en-US/docs/Web/API/Element/touchend_event
