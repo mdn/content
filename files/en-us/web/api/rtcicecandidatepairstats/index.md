@@ -30,7 +30,7 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 - {{domxref("RTCIceCandidatePairStats/consentRequestsSent", "consentRequestsSent")}} {{optional_inline}}
   - : An integer representing the total number of [STUN](/en-US/docs/Web/API/WebRTC_API/Protocols#stun) consent requests sent on this candidate pair.
 - {{domxref("RTCIceCandidatePairStats.currentRoundTripTime", "currentRoundTripTime")}} {{optional_inline}}
-  - : A real number representing the total time, in seconds, that elapsed between the most recently-sent STUN request and the response being received.
+  - : A number representing the total time, in seconds, that elapsed between the most recently-sent STUN request and the response being received.
     This may be based upon requests that were involved in confirming permission to open the connection.
 - {{domxref("RTCIceCandidatePairStats.lastPacketReceivedTimestamp", "lastPacketReceivedTimestamp")}} {{optional_inline}}
   - : A {{domxref("DOMHighResTimeStamp")}} value indicating the time at which the last packet was received by the local peer from the remote peer for this candidate pair. Timestamps are not recorded for STUN packets.

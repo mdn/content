@@ -12,7 +12,7 @@ The **`currentRoundTripTime`** property of the {{domxref("RTCIceCandidatePairSta
 
 ## Value
 
-A real number indicating the round-trip time, in seconds, for the connection described by the pair of candidates for which this `RTCIceCandidatePairStats` object offers statistics.
+A number indicating the round-trip time, in seconds, for the connection described by the pair of candidates for which this `RTCIceCandidatePairStats` object offers statistics.
 
 This value is computed by observing the time that elapsed between the most recent {{Glossary("STUN")}} request being sent to the remote peer and the response to that request arriving.
 This information may come from ongoing STUN connectivity checks as well as from consent requests made when the connection was initially being opened.
