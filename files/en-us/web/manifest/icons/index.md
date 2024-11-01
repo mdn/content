@@ -30,13 +30,13 @@ The `icons` manifest member is used to specify one or more image files that defi
 /* Two icons with various properties */
 "icons": [
   {
-  "src": "icon/low-res.png",
-  "sizes": "48x48"
+    "src": "icon/low-res.png",
+    "sizes": "48x48"
   },
   {
-  "src": "maskable_icon.png",
-  "sizes": "48x48",
-  "type": "image/png"
+    "src": "maskable_icon.png",
+    "sizes": "48x48",
+    "type": "image/png"
   }
 ]
 ```

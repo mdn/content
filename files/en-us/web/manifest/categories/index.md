@@ -7,11 +7,12 @@ spec-urls: https://w3c.github.io/manifest-app-info/#categories-member
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
-The `categories` member lets you specify one or more classifications for your web application, which helps digital storefronts, such as Google Play Store and App Store, organize and display it appropriately.
+The `categories` member lets you specify one or more classifications for your web application.
+These classifications help users discover your app in distribution platforms, such as Google Play Store, where apps are organized by category.
 
 > [!NOTE]
 > The `categories` member is optional and purely advisory.
-> Digital storefronts may choose to ignore it and may use different values when presenting your app.
+> Distribution platforms may choose to ignore it and may use different values when presenting your app.
 
 ## Syntax
 
@@ -34,13 +35,14 @@ The `categories` member lets you specify one or more classifications for your we
 ## Description
 
 The `categories` member is supplementary metadata that does not affect the app's runtime behavior or how browsers present the app.
-Its values are used only in app store listings and distribution platforms and are not visible to users in the browser or installed app.
+Its values are used only in app stores and other distribution platforms and are not visible to users in the browser or installed app.
 
 If your app serves multiple purposes, specifying multiple relevant categories can help users discover your app across different sections of the app store.
 
-If `categories` is not specified or the specified values are not used, digital storefronts will categorize your web app based on their own classification system.
+If `categories` is not specified or the specified values are not used, app stores will categorize your web app based on their own classification system.
 
-The images below from the Apple App Store illustrate how categories appear in different parts of a digital storefront. The app overview shows the category in the "CHART" field (highlighted) along with the app's ranking in that category, and the Information section displays "Category" as a dedicated field (highlighted).
+The images below from the Apple App Store show how categories appear in different parts of an app store.
+The app overview shows the category in the "CHART" field (highlighted) along with the app's ranking in that category, and the Information section displays "Category" as a dedicated field (highlighted).
 
 - The BBC app is categorized as "News":
 
@@ -58,7 +60,7 @@ The images below from the Apple App Store illustrate how categories appear in di
 
 ## Examples
 
-### Categorizing a web app
+### Categorizing a meal planning web app
 
 This example shows how to categorize a web app for planning meals based on available ingredients:
 
