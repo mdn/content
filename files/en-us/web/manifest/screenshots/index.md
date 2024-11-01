@@ -123,9 +123,9 @@ The images below from the Apple App Store show how screenshots appear in an ipho
 In the gallery view (image on the left), users can scroll through multiple images horizontally.
 They can tap any image to view it in full screen (image on the right).
 
-<div style="display: flex; justify-content: center; flex-wrap: wrap; max-width: 100%;">
-  <img src="todoist-iphone-gallery.png" alt="Todoist app in the Apple App Store showing a horizontal gallery of app images that users can scroll through" style="max-width: 45%; height: auto;">
-  <img src="todoist-iphone-fullscreen.png" alt="A full-screen view of an image from the horizontal gallery of Todoist app" style="max-width: 45%; height: auto;">
+<div style="display: flex; justify-content: center; flex-wrap: wrap;">
+  <img src="todoist-iphone-gallery.png" alt="Todoist app in the Apple App Store showing a horizontal gallery of app images that users can scroll through" style="max-width: 350px;">
+  <img src="todoist-iphone-fullscreen.png" alt="A full-screen view of an image from the horizontal gallery of Todoist app" style="max-width: 350px;">
 </div>
 
 The same full-screen image on iPad, as shown below, shows why different screenshots are needed to consider narrow (iPhone) and wide (iPad) form factors of devices:
