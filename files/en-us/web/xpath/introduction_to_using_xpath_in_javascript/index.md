@@ -6,8 +6,7 @@ page-type: guide
 
 {{XsltSidebar}}
 
-This document describes the interface for using [XPath](/en-US/docs/Web/XPath) in JavaScript. Mozilla implements a fair amount of the [DOM 3 XPath](https://www.w3.org/TR/DOM-Level-3-XPath/), which means that XPath expressions can be run against both HTML and XML documents.
-
+This document describes the interface for using [XPath](/en-US/docs/Web/XPath) in JavaScript.
 The main interface to using XPath is the [evaluate](/en-US/docs/Web/API/Document/evaluate) function of the [document](/en-US/docs/Web/API/Document) object.
 
 ## document.evaluate()
