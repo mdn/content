@@ -1361,6 +1361,8 @@ Some keys are common across multiple languages, while others exist only on keybo
 
 \[1] On the _X Window System_, the <kbd>Compose</kbd> key is called the <kbd>Multi</kbd> key.
 
+<!-- cSpell:ignore Nonconvert -->
+
 \[2] The <kbd>NonConvert</kbd> key is reported as `"Nonconvert"` instead of the correct `"NonConvert"` by Firefox versions 36 and earlier.
 
 \[3] The <kbd>Process</kbd> key currently returns `"Unidentified"` in Firefox. Google Chrome returns the value of the key as if IME were not in use.
@@ -1577,7 +1579,7 @@ These keys are only available on Japanese keyboards.
       <td></td>
     </tr>
     <tr>
-      <td><code>"ZenkakuHanaku"</code> [6]</td>
+      <td><code>"ZenkakuHankaku"</code> [6]</td>
       <td>
         The <kbd>Zenkaku/Hankaku</kbd> (full width/half width) toggle key.
       </td>
@@ -3414,7 +3416,7 @@ The values below are derived in part from a number of consumer electronics techn
     </tr>
     <tr>
       <td><code>"Lock"</code></td>
-      <td>Locks or unlocks the currently selected content or pgoram.</td>
+      <td>Locks or unlocks the currently selected content or program.</td>
       <td><code>VK_LOCK</code></td>
       <td></td>
       <td></td>

@@ -9,7 +9,7 @@ browser-compat: http.headers.Attribution-Reporting-Register-Source
 
 {{HTTPSidebar}}{{seecompattable}}
 
-The **`Attribution-Reporting-Register-Source`** header registers a page feature as an [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources). This is included as part of a response to a request that included an {{httpheader("Attribution-Reporting-Eligible")}} header. It provides the information that the browser should store when the attribution source is interacted with. The information you include in this header also determines which types of reports the browser can generate.
+The HTTP **`Attribution-Reporting-Register-Source`** {{Glossary("response header")}} registers a page feature as an [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources). This header is included as part of a response to a request that contains the {{HTTPHeader("Attribution-Reporting-Eligible")}} header. It provides the information that the browser should store when a user interacts with the attribution source. The information you include in this header also determines the types of reports the browser can generate.
 
 See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 
@@ -24,13 +24,13 @@ See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_AP
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
     <tr>
       <th scope="row">
         {{Glossary("CORS-safelisted response header")}}
       </th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -158,6 +158,6 @@ res.set(
 
 ## See also
 
-- {{httpheader("Attribution-Reporting-Eligible")}}
-- {{httpheader("Attribution-Reporting-Register-Trigger")}}
+- {{HTTPHeader("Attribution-Reporting-Eligible")}}
+- {{HTTPHeader("Attribution-Reporting-Register-Trigger")}}
 - [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API)

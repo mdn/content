@@ -378,7 +378,7 @@ Text marked up with these tags can be formatted in [`STYLE` blocks](#style_block
   - : Used to highlight text that has been marked up as belonging to a particular language or language variant using the format defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
 
     ```xml
-    <lang en-GB>Engish text as spoken in Great Britain!</lang>
+    <lang en-GB>English text as spoken in Great Britain!</lang>
     ```
 
 ## NOTE blocks
@@ -619,13 +619,13 @@ Note that escape sequences are used in WebVTT CSS in the same way as HTML pages.
 WEBVTT
 
 STYLE
-::cue(#crédit\ de\ transcription) {
+::cue(#transcription\ credits) {
   color: red;
 }
 
-crédit de transcription
+transcription credits
 00:04.000 --> 00:05.000
-Transcrit par Célestes™
+Transcribed by Célestes™
 ```
 
 ## Specifications

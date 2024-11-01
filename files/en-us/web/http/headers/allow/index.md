@@ -7,9 +7,9 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#field.allow
 
 {{HTTPSidebar}}
 
-The **`Allow`** header lists the set of methods supported by a resource.
-
-This header must be sent if the server responds with a {{HTTPStatus("405")}} `Method Not Allowed` status code to indicate which request methods can be used. An empty `Allow` header indicates that the resource allows no request methods, which might occur temporarily for a given resource, for example.
+The HTTP **`Allow`** {{Glossary("response header")}} lists the set of [request methods](/en-US/docs/Web/HTTP/Methods) supported by a resource.
+This header must be sent if the server responds with a {{HTTPStatus("405", "405 Method Not Allowed")}} status code to indicate which request methods can be used instead.
+An empty `Allow` value indicates that the resource allows no request methods, which might occur temporarily for a given resource.
 
 <table class="properties">
   <tbody>
@@ -19,7 +19,7 @@ This header must be sent if the server responds with a {{HTTPStatus("405")}} `Me
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -32,8 +32,8 @@ Allow: <http-methods>
 
 ## Directives
 
-- \<http-methods>
-  - : The comma-separated list of allowed [HTTP request methods](/en-US/docs/Web/HTTP/Methods).
+- `<http-methods>`
+  - : A comma-separated list of allowed request methods supported by a resource.
 
 ## Examples
 
@@ -47,5 +47,6 @@ Allow: GET, POST, HEAD
 
 ## See also
 
-- {{HTTPStatus("405")}}
+- {{HTTPStatus("405", "405 Method Not Allowed")}} status code
 - {{HTTPHeader("Server")}}
+- {{HTTPMethod("OPTIONS")}}
