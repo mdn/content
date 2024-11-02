@@ -39,7 +39,7 @@ The final selectors we will look at are called combinators, because they combine
 
 ## Descendant combinator
 
-The **descendant combinator** — typically represented by a single space (``) character — combines two selectors such that elements matched by the second selector are selected if they have an ancestor (parent, parent's parent, parent's parent's parent, etc.) element matching the first selector. Selectors that utilize a descendant combinator are called _descendant selectors_.
+The **descendant combinator** — typically represented by a single space (<code> </code>) character — combines two selectors such that elements matched by the second selector are selected if they have an ancestor (parent, parent's parent, parent's parent's parent, etc.) element matching the first selector. Selectors that utilize a descendant combinator are called _descendant selectors_.
 
 ```css
 body article p {
