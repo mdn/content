@@ -240,11 +240,11 @@ You can also see that the {{htmlelement("Heading_Elements", "h2")}} has a black 
 <div class="wrapper">
   <div class="box physical">
     <h2>Physical Properties</h2>
-    <p>A paragraph. Demonstrating Logical Properties in CSS.</p>
+    <p>A paragraph demonstrating logical properties in CSS.</p>
   </div>
   <div class="box logical">
     <h2>Logical Properties</h2>
-    <p>A paragraph. Demonstrating Logical Properties in CSS.</p>
+    <p>A paragraph demonstrating logical properties in CSS.</p>
   </div>
 </div>
 ```
