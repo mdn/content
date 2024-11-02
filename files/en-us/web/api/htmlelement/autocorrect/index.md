@@ -3,10 +3,12 @@ title: "HTMLElement: autocorrect property"
 short-title: autocorrect
 slug: Web/API/HTMLElement/autocorrect
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.HTMLElement.autocorrect
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 The **`autocorrect`** property of the {{domxref("HTMLElement")}} interface controls whether or not user text input is automatically corrected for spelling and/or punctuation errors.
 
