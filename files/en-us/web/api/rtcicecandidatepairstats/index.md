@@ -21,13 +21,13 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : A number representing the approximate available outbound capacity of the network.
     This reports the total number of bits per second available for all of the candidate pair's outgoing {{Glossary("RTP")}} streams.
     It does not take into account the size of the IP overhead, nor any other transport layers such as {{Glossary("TCP")}} or {{Glossary("UDP")}}.
-- {{domxref("RTCIceCandidatePairStats/bytesDiscardedOnSend", "bytesDiscardedOnSend")}} {{optional_inline}}
+- {{domxref("RTCIceCandidatePairStats/bytesDiscardedOnSend", "bytesDiscardedOnSend")}} {{optional_inline}} {{experimental_inline}}
   - : An integer representing the total number of bytes discarded due to socket errors on this candidate pair.
 - {{domxref("RTCIceCandidatePairStats/bytesReceived", "bytesReceived")}} {{optional_inline}}
   - : An integer representing the total number of payload bytes received on this candidate pair.
 - {{domxref("RTCIceCandidatePairStats.bytesSent", "bytesSent")}} {{optional_inline}}
   - : An integer representing the total number of payload bytes sent on this candidate pair (the total number of bytes sent excluding any headers, padding, or other protocol overhead).
-- {{domxref("RTCIceCandidatePairStats/consentRequestsSent", "consentRequestsSent")}} {{optional_inline}}
+- {{domxref("RTCIceCandidatePairStats/consentRequestsSent", "consentRequestsSent")}} {{optional_inline}} {{experimental_inline}}
   - : An integer representing the total number of [STUN](/en-US/docs/Web/API/WebRTC_API/Protocols#stun) consent requests sent on this candidate pair.
 - {{domxref("RTCIceCandidatePairStats.currentRoundTripTime", "currentRoundTripTime")}} {{optional_inline}}
   - : A number representing the total time, in seconds, that elapsed between the most recently-sent STUN request and the response being received.
@@ -40,11 +40,11 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : A string representing the unique ID corresponding to the {{domxref("RTCIceCandidate")}} from the data included in the {{domxref("RTCIceCandidateStats")}} object providing statistics for the candidate pair's local candidate.
 - {{domxref("RTCIceCandidatePairStats.nominated", "nominated")}} {{optional_inline}}
   - : A Boolean value which, if `true`, indicates that the candidate pair described by this object is one which has been proposed for use, and will be (or was) used if its priority is the highest among the nominated candidate pairs. See {{RFC(5245, "", "7.1.3.2.4")}} for details.
-- {{domxref("RTCIceCandidatePairStats/packetsDiscardedOnSend", "packetsDiscardedOnSend")}} {{optional_inline}}
+- {{domxref("RTCIceCandidatePairStats/packetsDiscardedOnSend", "packetsDiscardedOnSend")}} {{optional_inline}} {{experimental_inline}}
   - : An integer representing the total number of packets discarded due to socket errors on this candidate pair.
-- {{domxref("RTCIceCandidatePairStats/packetsReceived", "packetsReceived")}} {{optional_inline}}
+- {{domxref("RTCIceCandidatePairStats/packetsReceived", "packetsReceived")}} {{optional_inline}} {{experimental_inline}}
   - : An integer representing the total number of packets received on this candidate pair.
-- {{domxref("RTCIceCandidatePairStats/packetsSent", "packetsSent")}} {{optional_inline}}
+- {{domxref("RTCIceCandidatePairStats/packetsSent", "packetsSent")}} {{optional_inline}} {{experimental_inline}}
   - : An integer representing the total number of packets sent on this candidate pair.
 - {{domxref("RTCIceCandidatePairStats.remoteCandidateId", "remoteCandidateId")}} {{optional_inline}}
   - : A string containing a unique ID corresponding to the remote candidate from which data was taken to construct the `RTCIceCandidateStats` object describing the remote end of the connection.
