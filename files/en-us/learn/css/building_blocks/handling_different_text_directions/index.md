@@ -79,11 +79,11 @@ If we look at an example this will become clearer. In this next example I have t
 <div class="wrapper">
   <div class="box horizontal">
     <h2>Heading</h2>
-    <p>A paragraph. Demonstrating Writing Modes in CSS.</p>
+    <p>A paragraph demonstrating writing modes in CSS.</p>
   </div>
   <div class="box vertical">
     <h2>Heading</h2>
-    <p>A paragraph. Demonstrating Writing Modes in CSS.</p>
+    <p>A paragraph demonstrating writing modes in CSS.</p>
   </div>
 </div>
 ```
@@ -140,12 +140,12 @@ Let's take a look at our two boxes again — one with a `horizontal-tb` writing 
 <div class="wrapper">
   <div class="box horizontal">
     <h2>Heading</h2>
-    <p>A paragraph. Demonstrating Writing Modes in CSS.</p>
+    <p>A paragraph demonstrating writing modes in CSS.</p>
     <p>These boxes have a width.</p>
   </div>
   <div class="box vertical">
     <h2>Heading</h2>
-    <p>A paragraph. Demonstrating Writing Modes in CSS.</p>
+    <p>A paragraph demonstrating writing modes in CSS.</p>
     <p>These boxes have a width.</p>
   </div>
 </div>
@@ -188,12 +188,12 @@ The property mapped to `width` when in a horizontal writing mode is called {{css
 <div class="wrapper">
   <div class="box horizontal">
     <h2>Heading</h2>
-    <p>A paragraph. Demonstrating Writing Modes in CSS.</p>
+    <p>A paragraph demonstrating writing modes in CSS.</p>
     <p>These boxes have inline-size.</p>
   </div>
   <div class="box vertical">
     <h2>Heading</h2>
-    <p>A paragraph. Demonstrating Writing Modes in CSS.</p>
+    <p>A paragraph demonstrating writing modes in CSS.</p>
     <p>These boxes have inline-size.</p>
   </div>
 </div>
