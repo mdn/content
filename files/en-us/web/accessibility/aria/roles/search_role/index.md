@@ -28,8 +28,8 @@ When a {{HTMLElement('form')}} is a search form, use the `search` role instead o
 ```html
 <form id="search" role="search">
   <label for="search-input">Search this site</label>
-  <input type="search" id="search-input" name="search" spellcheck="false">
-  <input value="Submit" type="submit">
+  <input type="search" id="search-input" name="search" spellcheck="false" />
+  <input value="Submit" type="submit" />
 </form>
 ```
 
