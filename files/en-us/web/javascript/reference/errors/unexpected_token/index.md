@@ -90,6 +90,24 @@ function round(n, upperBound, lowerBound) {
 }
 ```
 
+### A structure error further up confused the meaning
+
+Sometimes as a member of a class not a method but a property was declared. This might happen with JavaScript frameworks with unfamliar structures:
+
+```js-noling example-bad
+mounted: {
+  document.getElementById('app').classList.add('loaded');
+}
+```
+
+The dot after document is unexpedted as in an object body `{}` a property name is followed by a `:`. The problem is solved by declaring `mounted` as function
+
+```js-nolint example-good
+mounted() {
+  document.getElementById('app').classList.add('loaded');
+}
+```
+
 ## See also
 
 - {{jsxref("SyntaxError")}}
