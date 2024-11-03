@@ -39,7 +39,7 @@ new DOMQuad(p1, p2, p3, p4)
 
 ## Examples
 
-This example creates a `DOMQuad` using a combination of {{domxref("DOMPoint")}} and {{domxref("DOMPointInit")}} objects.
+This example creates a `DOMQuad` using a {{domxref("DOMPoint")}} and three additional points defined as objects.
 
 ```js
 const point = new DOMPoint(2, 0);
