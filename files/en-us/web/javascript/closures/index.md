@@ -263,7 +263,7 @@ function sum(a) {
   };
 }
 
-console.log(sum(1)(2)(3)(4)); // 20
+console.log(sum(1)(2)(3)(4)); // 10
 ```
 
 You can also write without anonymous functions:
@@ -287,7 +287,7 @@ const sum2 = sum(1);
 const sum3 = sum2(2);
 const sum4 = sum3(3);
 const result = sum4(4);
-console.log(result); // 20
+console.log(result); // 10
 ```
 
 In the example above, there's a series of nested functions, all of which have access to the outer functions' scope. In this context, we can say that closures have access to _all_ outer scopes.
