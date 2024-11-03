@@ -22,7 +22,7 @@ This article provides information about the changes in Firefox 133 that affect d
 
 ### JavaScript
 
-- Support for {{jsxref("Uint8Array")}} methods to ease conversions between hex- and {{glossary("base64")}}- encoded strings and byte arrays. ([Firefox bug 1917885](https://bugzil.la/1917885) and [Firefox bug 1862220](https://bugzil.la/1862220)).
+- Support for {{jsxref("Uint8Array")}} methods to ease conversions between {{glossary("base64")}}- and hex-encoded strings and byte arrays. ([Firefox bug 1917885](https://bugzil.la/1917885) and [Firefox bug 1862220](https://bugzil.la/1862220)).
 
   The new methods include:
 
