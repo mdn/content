@@ -89,7 +89,7 @@ device.queue.submit([commandEncoder.finish()]);
 
 ```js
 // Set bind group in slot 0
-passEncoder.setBindGroup(0, bindGroup);
+passEncoder.setBindGroup(0, uniformBindGroup);
 
 // Later, unset bind group in slot 0
 passEncoder.setBindGroup(0, null);

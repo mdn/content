@@ -96,7 +96,7 @@ The above snippet is taken from the WebGPU Samples [Animometer example](https://
 
 ```js
 // Set bind group in slot 0
-passEncoder.setBindGroup(0, bindGroup);
+passEncoder.setBindGroup(0, timeBindGroup);
 
 // Later, unset bind group in slot 0
 passEncoder.setBindGroup(0, null);
