@@ -87,7 +87,7 @@ console.log(uint8Array);
 
 ### Stream decoding
 
-This example is adapted from the [original proposal](https://github.com/tc39/proposal-arraybuffer-base64/blob/main/stream.mjs), showcasing how to implement streaming in userland. It mimics the {{domxref("TextDecoder")}} API with the `stream` option. Note the use of `lastChunkHandling: "stop-before-partial"` to handle incomplete chunks.
+This example is adapted from the [original proposal](https://github.com/tc39/proposal-arraybuffer-base64/blob/main/stream.mjs). It mimics the {{domxref("TextDecoder")}} API with the `stream` option. Note the use of `lastChunkHandling: "stop-before-partial"` to handle incomplete chunks.
 
 ```js
 class Base64Decoder {
