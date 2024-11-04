@@ -9,8 +9,10 @@ browser-compat: api.HTMLElement.toggle_event
 
 The **`toggle`** event of the {{domxref("HTMLElement")}} interface fires on a {{domxref("Popover_API", "popover", "", "nocode")}} element, {{htmlelement("dialog")}} element, or {{htmlelement("details")}} element just after it is shown or hidden.
 
-- If the element is transitioning from hidden to showing, the `event.oldState` property will be set to `closed` and the `event.newState` property will be set to `open`.
+- If the element is transitioning from hidden to showing, the [`event.oldState`](/en-US/docs/Web/API/ToggleEvent/oldState) property will be set to `closed` and the [`event.newState`](/en-US/docs/Web/API/ToggleEvent/newState) property will be set to `open`.
 - If the element is transitioning from showing to hidden, then `event.oldState` will be `open` and `event.newState` will be `closed`.
+
+This event is not [cancelable](/en-US/docs/Web/API/Event/cancelable).
 
 ## Syntax
 

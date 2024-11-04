@@ -9,8 +9,13 @@ browser-compat: api.HTMLElement.beforetoggle_event
 
 The **`beforetoggle`** event of the {{domxref("HTMLElement")}} interface fires on a {{domxref("Popover_API", "popover", "", "nocode")}} or {{htmlelement("dialog")}} element just before it is shown or hidden.
 
-- If the element is transitioning from hidden to showing, the `event.oldState` property will be set to `closed` and the `event.newState` property will be set to `open`.
+- If the element is transitioning from hidden to showing, the [`event.oldState`](/en-US/docs/Web/API/ToggleEvent/oldState) property will be set to `closed` and the [`event.newState`](/en-US/docs/Web/API/ToggleEvent/newState) property will be set to `open`.
 - If the element is transitioning from showing to hidden, then `event.oldState` will be `open` and `event.newState` will be `closed`.
+
+This event is [cancelable](/en-US/docs/Web/API/Event/cancelable) when an element is toggled to open ("show") but not when the element is closing.
+
+The event can be used to prevent an element from being shown.
+It can also be used to apply classes or set properties on other elements, for example to animate their behaviour as the element changes its display state.
 
 ## Syntax
 
@@ -45,6 +50,21 @@ popover.addEventListener("beforetoggle", (event) => {
     console.log("Popover is about to be shown");
   } else {
     console.log("Popover is about to be hidden");
+  }
+});
+```
+
+### Preventing a dialog from opening
+
+The `beforetoggle` event is cancelable when opening an element.
+
+Below we show how a dialog might first check some method `allowOpen()` method to determine if it is ready to open, and if not, call {{domxref("Event.preventDefault()")}} to cancel the event and prevent the dialog opening.
+
+```js
+dialog.addEventListener("beforetoggle", (event) => {
+  // Check if the element is allowed to open
+  if (allowOpen()) {
+    event.preventDefault();
   }
 });
 ```
