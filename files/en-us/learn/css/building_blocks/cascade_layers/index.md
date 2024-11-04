@@ -317,9 +317,9 @@ You can import more than one CSS file into a single layer. The following declara
 You can import styles and create layers based on specific conditions using [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) and [feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries). The following imports a style sheet into an `international` layer only if the browser supports `display: ruby`, and the file being imported is dependent on the width of the screen.
 
 ```css
-@import url("ruby-narrow.css") layer(international) supports(display: ruby) and
+@import url("ruby-narrow.css") layer(international) supports(display: ruby)
   (width < 32rem);
-@import url("ruby-wide.css") layer(international) supports(display: ruby) and
+@import url("ruby-wide.css") layer(international) supports(display: ruby)
   (width >= 32rem);
 ```
 
@@ -344,12 +344,12 @@ Let's look at the following example:
 
 ```css
 @import url("components-lib.css") layer(components);
-@import url("narrowtheme.css") layer(components.narrow);
+@import url("narrow-theme.css") layer(components.narrow);
 ```
 
 In the first line, we import `components-lib.css` into the `components` layer. If that file contains any layers, named or not, those layers become nested layers within the `components` layer.
 
-The second line imports `narrowtheme.css` into the `narrow` layer, which is a sub-layer of `components`. The nested `components.narrow` gets created as the last layer within the `components` layer, unless `components-lib.css` already contains a `narrow` layer, in which case, the contents of `narrowtheme.css` would be appended to the `components.narrow` nested layer. Additional nested named layers can be added to the `components` layer using the pattern `components.<layerName>`. As mentioned before, unnamed layers can be created but they cannot be accessed subsequently.
+The second line imports `narrow-theme.css` into the `narrow` layer, which is a sub-layer of `components`. The nested `components.narrow` gets created as the last layer within the `components` layer, unless `components-lib.css` already contains a `narrow` layer, in which case, the contents of `narrow-theme.css` would be appended to the `components.narrow` nested layer. Additional nested named layers can be added to the `components` layer using the pattern `components.<layerName>`. As mentioned before, unnamed layers can be created but they cannot be accessed subsequently.
 
 Let's look at another example, where we [import `layers1.css` into a named layer](#the_layer_block_at-rule_for_named_and_anonymous_layers) using the following statement:
 
