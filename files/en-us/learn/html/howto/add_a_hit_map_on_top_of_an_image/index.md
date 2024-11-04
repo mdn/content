@@ -35,6 +35,9 @@ When you nest an image inside {{htmlelement('a')}}, the entire image links to on
 
 Formerly, image maps were a popular navigation device, but it's important to thoroughly consider their performance and accessibility ramifications.
 
+> [!WARNING]
+> Multiple images referencing the same image map may lead to unexpected browser behavior, severely degrading usability and accessibility. For example, when a user keyboard navigates an image with a re-used image map in Safari and Chromium-based browsers, latter image instances using that same image map are skipped entirely. In Firefox, all image maps get keyboard focus simultaneously and when the user keyboard navigates past the image, the next focused element is the one after the last image instance, effectively skipping everything between the two images.
+
 [Text links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) (perhaps styled with CSS) are preferable to image maps for several reasons: text links are lightweight, maintainable, often more SEO-friendly, and support accessibility needs (e.g., screen readers, text-only browsers, translation services).
 
 ## How to insert an image map, properly

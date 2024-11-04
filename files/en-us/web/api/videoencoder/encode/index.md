@@ -38,6 +38,10 @@ encode(frame, options)
       - : Encode options for the [AVC (H.264)](/en-US/docs/Web/Media/Formats/Video_codecs#avc_h.264) codec.
         - `quantizer`
           - : Frame quantizer value 0 to 51. Only effective if {{domxref("VideoEncoder")}} was configured with `quantizer` bitrate mode.
+    - `hevc` {{optional_inline}}
+      - : Encode options for the [HEVC (H.265)](/en-US/docs/Web/Media/Formats/Video_codecs#hevc_h.265) codec.
+        - `quantizer`
+          - : Frame quantizer value 0 to 51. Only effective if {{domxref("VideoEncoder")}} was configured with `quantizer` bitrate mode.
 
 ### Return value
 
@@ -81,6 +85,8 @@ if (codec.includes("vp09")) {
   encodeOptions.av1 = { quantizer: qp };
 } else if (codec.includes("avc")) {
   encodeOptions.avc = { quantizer: qp };
+} else if (codec.includes("hvc1" || codec.includes("hev1"))) {
+  encodeOptions.hevc = { quantizer: qp };
 }
 
 encoder.encode(frame, encodeOptions);

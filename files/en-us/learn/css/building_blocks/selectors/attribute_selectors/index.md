@@ -38,53 +38,12 @@ As you know from your study of HTML, elements can have attributes that give furt
 
 These selectors enable the selection of an element based on the presence of an attribute alone (for example `href`), or on various different matches against the value of the attribute.
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Selector</th>
-      <th scope="col">Example</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>[<em>attr</em>]</code></td>
-      <td><code>a[title]</code></td>
-      <td>
-        Matches elements with an <em>attr</em> attribute (whose name is the
-        value in square brackets).
-      </td>
-    </tr>
-    <tr>
-      <td><code>[<em>attr</em>=<em>value</em>]</code></td>
-      <td><code>a[href="https://example.com"]</code></td>
-      <td>
-        Matches elements with an <em>attr</em> attribute whose value is exactly
-        <em>value</em> — the string inside the quotes.
-      </td>
-    </tr>
-    <tr>
-      <td><code>[<em>attr</em>~=<em>value</em>]</code></td>
-      <td><code>p[class~="special"]</code></td>
-      <td>
-        <p>
-          <br />Matches elements with an <em>attr</em> attribute whose value is
-          exactly <em>value</em>, or contains <em>value</em> in its (space
-          separated) list of values.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td><code>[<em>attr</em>|=<em>value</em>]</code></td>
-      <td><code>div[lang|="zh"]</code></td>
-      <td>
-        Matches elements with an <em>attr</em> attribute whose value is exactly
-        <em>value</em> or begins with <em>value</em> immediately followed by a
-        hyphen.
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Selector             | Example                         | Description                                                                                                                            |
+| -------------------- | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `[*attr*]`           | `a[title]`                      | Matches elements with an _attr_ attribute (whose name is the value in square brackets).                                                |
+| `[*attr*=*value*]`   | `a[href="https://example.com"]` | Matches elements with an _attr_ attribute whose value is exactly _value_ — the string inside the quotes.                               |
+| `[*attr*~=*value*]`  | `p[class~="special"]`           | Matches elements with an _attr_ attribute whose value is exactly _value_, or contains _value_ in its (space-separated) list of values. |
+| `[*attr*\|=*value*]` | `div[lang\|="zh"]`              | Matches elements with an _attr_ attribute whose value is exactly _value_ or begins with _value_ immediately followed by a hyphen.      |
 
 In the example below you can see these selectors being used.
 
@@ -92,7 +51,34 @@ In the example below you can see these selectors being used.
 - `li[class="a"]` matches a selector with a class of `a`, but not a selector with a class of `a` with another space-separated class as part of the value. It selects the second list item.
 - `li[class~="a"]` will match a class of `a` but also a value that contains the class of `a` as part of a whitespace-separated list. It selects the second and third list items.
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/attribute.html", '100%', 800)}}
+```html live-sample___attribute
+<h1>Attribute presence and value selectors</h1>
+<ul>
+  <li>Item 1</li>
+  <li class="a">Item 2</li>
+  <li class="a b">Item 3</li>
+  <li class="ab">Item 4</li>
+</ul>
+```
+
+```css live-sample___attribute
+body {
+  font-family: sans-serif;
+}
+li[class] {
+  font-size: 120%;
+}
+
+li[class="a"] {
+  background-color: yellow;
+}
+
+li[class~="a"] {
+  color: red;
+}
+```
+
+{{EmbedLiveSample("attribute", "", "200px")}}
 
 ## Substring matching selectors
 
@@ -112,7 +98,34 @@ The next example shows usage of these selectors:
 - `li[class$="a"]` matches any attribute value that ends with `a`, so matches the first and third list item.
 - `li[class*="a"]` matches any attribute value where `a` appears anywhere in the string, so it matches all of our list items.
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/attribute-substring.html", '100%', 800)}}
+```html live-sample___attribute-substring
+<h1>Attribute substring matching selectors</h1>
+<ul>
+  <li class="a">Item 1</li>
+  <li class="ab">Item 2</li>
+  <li class="bca">Item 3</li>
+  <li class="bcabc">Item 4</li>
+</ul>
+```
+
+```css live-sample___attribute-substring
+body {
+  font-family: sans-serif;
+}
+li[class^="a"] {
+  font-size: 120%;
+}
+
+li[class$="a"] {
+  background-color: yellow;
+}
+
+li[class*="a"] {
+  color: red;
+}
+```
+
+{{EmbedLiveSample("attribute-substring", "", "200px")}}
 
 ## Case-sensitivity
 
@@ -120,7 +133,29 @@ If you want to match attribute values case-insensitively you can use the value `
 
 In the example below, the first selector will match a value that begins with `a` — it only matches the first list item because the other two list items start with an uppercase A. The second selector uses the case-insensitive flag and so matches all of the list items.
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/attribute-case.html", '100%', 800)}}
+```html live-sample___attribute-case
+<h1>Case-insensitivity</h1>
+<ul>
+  <li class="a">Item 1</li>
+  <li class="A">Item 2</li>
+  <li class="Ab">Item 3</li>
+</ul>
+```
+
+```css live-sample___attribute-case
+body {
+  font-family: sans-serif;
+}
+li[class^="a"] {
+  background-color: yellow;
+}
+
+li[class^="a" i] {
+  color: red;
+}
+```
+
+{{EmbedLiveSample("attribute-case")}}
 
 > [!NOTE]
 > There is also a newer value `s`, which will force case-sensitive matching in contexts where matching is normally case-insensitive, however this is less well supported in browsers and isn't very useful in an HTML context.

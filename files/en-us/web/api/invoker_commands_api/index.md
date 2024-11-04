@@ -10,7 +10,7 @@ browser-compat:
   - api.HTMLButtonElement.command
 ---
 
-{{DefaultAPISidebar("Invoker Commands API")}}
+{{DefaultAPISidebar("Invoker Commands API")}}{{SeeCompatTable}}
 
 The **Invoker Commands API** provides a way to declaratively assign behaviors to buttons, allowing control of interactive elements when the button is enacted (clicked or invoked via a keypress, such as the spacebar or return key).
 
@@ -22,14 +22,14 @@ Historically creating these kinds of controls has required JavaScript event list
 
 ## HTML attributes
 
-- [`commandfor`](/en-US/docs/Web/HTML/Element/button#commandfor)
+- [`commandfor`](/en-US/docs/Web/HTML/Element/button#commandfor) {{experimental_inline}}
   - : Turns a {{htmlelement("button")}} element into a button, controlling the given interactive element; takes the ID of the element to control as its value.
-- [`command`](/en-US/docs/Web/HTML/Element/button#command)
+- [`command`](/en-US/docs/Web/HTML/Element/button#command) {{experimental_inline}}
   - : Specifies the action to be performed on an element being controlled by a control `<button>`, specified via the `commandfor` attribute.
 
 ## Interfaces
 
-- {{domxref("CommandEvent")}}
+- {{domxref("CommandEvent")}} {{experimental_inline}}
   - : Represents an event notifying the user that a command has been issued. It is the event object for the {{domxref("HTMLElement/command_event", "command")}} event. The event fires on element referenced by {{domxref("HTMLButtonElement.commandForElement", "commandForElement")}}.
 
 ## Extensions to other interfaces
@@ -73,13 +73,13 @@ Historically creating these kinds of controls has required JavaScript event list
 ### Creating custom commands
 
 ```html
-<button commandfor="myimg" command="--rotate-left">Rotate left</button>
-<button commandfor="myimg" command="--rotate-right">Rotate right</button>
-<img id="myimg" src="photo.jpg" alt="[add appropriate alt text here]" />
+<button commandfor="my-img" command="--rotate-left">Rotate left</button>
+<button commandfor="my-img" command="--rotate-right">Rotate right</button>
+<img id="my-img" src="photo.jpg" alt="[add appropriate alt text here]" />
 ```
 
 ```js
-const myImg = document.getElementById("myimg");
+const myImg = document.getElementById("my-img");
 
 myImg.addEventListener("command", (event) => {
   if (event.command == "--rotate-left") {

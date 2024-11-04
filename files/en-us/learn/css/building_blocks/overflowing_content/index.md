@@ -44,11 +44,41 @@ Let's consider two examples that demonstrate the default behavior of CSS when th
 
 The first example is a box that has been restricted by setting a `height`. Then we add content that exceeds the allocated space. The content overflows the box and falls into the paragraph below.
 
-{{EmbedGHLiveSample("css-examples/learn/overflow/block-overflow.html", '100%', 700)}}
+```html live-sample___block-overflow
+<div class="box">
+  This box has a height and a width. This means that if there is too much
+  content to be displayed within the assigned height, there will be an overflow
+  situation. If overflow is set to hidden then any overflow will not be visible.
+</div>
+
+<p>This content is outside of the box.</p>
+```
+
+```css live-sample___block-overflow
+.box {
+  border: 1px solid #333333;
+  width: 250px;
+  height: 100px;
+}
+```
+
+{{EmbedLiveSample("block-overflow", "", "200px")}}
 
 The second example is a word in a box. The box has been made too small for the word and so it breaks out of the box.
 
-{{EmbedGHLiveSample("css-examples/learn/overflow/inline-overflow.html", '100%', 600)}}
+```html live-sample___inline-overflow
+<div class="word">Overflow</div>
+```
+
+```css live-sample___inline-overflow
+.word {
+  border: 1px solid #333333;
+  width: 100px;
+  font-size: 250%;
+}
+```
+
+{{EmbedLiveSample("inline-overflow")}}
 
 You might wonder why CSS works in such a messy way, displaying content outside of its intended container. Why not hide overflowing content? Why not scale the size of the container to fit all the content?
 
@@ -64,25 +94,95 @@ The {{cssxref("overflow")}} property helps you manage an element's content overf
 
 To crop content when it overflows, you can set `overflow: hidden`. This does exactly what it says: it hides overflow. Beware that this can make some content invisible. You should only do this if hiding content won't cause problems.
 
-{{EmbedGHLiveSample("css-examples/learn/overflow/hidden.html", '100%', 700)}}
+```html live-sample___hidden
+<div class="box">
+  This box has a height and a width. This means that if there is too much
+  content to be displayed within the assigned height, there will be an overflow
+  situation. If overflow is set to hidden then any overflow will not be visible.
+</div>
+
+<p>This content is outside of the box.</p>
+```
+
+```css live-sample___hidden
+.box {
+  border: 1px solid #333333;
+  width: 250px;
+  height: 100px;
+  overflow: hidden;
+}
+```
+
+{{EmbedLiveSample("hidden", "", "200px")}}
 
 Instead, perhaps you would like to add scrollbars when content overflows? Using `overflow: scroll`, browsers with visible scrollbars will always display them—even if there is not enough content to overflow. This offers the advantage of keeping the layout consistent, instead of scrollbars appearing or disappearing, depending upon the amount of content in the container.
 
-**Remove some content from the box below. Notice how the scrollbars remain, even if there is no need for scrolling.**
+Remove some content from the box below. Notice how the scrollbars remain, even if there is no need for scrolling:
 
 > [!NOTE]
 > Scrollbar visibility depends on the operating system.
 > You may have to change your browser settings to always show scroll bars in order for the scroll bars to always show in the following examples.
 
-{{EmbedGHLiveSample("css-examples/learn/overflow/scroll.html", '100%', 700)}}
+```html live-sample___scroll
+<div class="box">
+  This box has a height and a width. This means that if there is too much
+  content to be displayed within the assigned height, there will be an overflow
+  situation. If overflow is set to hidden then any overflow will not be visible.
+</div>
+
+<p>This content is outside of the box.</p>
+```
+
+```css live-sample___scroll
+.box {
+  border: 1px solid #333333;
+  width: 250px;
+  height: 100px;
+  overflow: scroll;
+}
+```
+
+{{EmbedLiveSample("scroll", "", "200px")}}
 
 In the example above, we only need to scroll on the `y` axis, however we get scrollbars in both axes. To just scroll on the `y` axis, you could use the {{cssxref("overflow-y")}} property, setting `overflow-y: scroll`.
 
-{{EmbedGHLiveSample("css-examples/learn/overflow/scroll-y.html", '100%', 700)}}
+```html live-sample___scroll-y
+<div class="box">
+  This box has a height and a width. This means that if there is too much
+  content to be displayed within the assigned height, there will be an overflow
+  situation. If overflow is set to hidden then any overflow will not be visible.
+</div>
+
+<p>This content is outside of the box.</p>
+```
+
+```css live-sample___scroll-y
+.box {
+  border: 1px solid #333333;
+  width: 250px;
+  height: 100px;
+  overflow-y: scroll;
+}
+```
+
+{{EmbedLiveSample("scroll-y", "", "200px")}}
 
 You can also enable scrolling along the x-axis by using {{cssxref("overflow-x")}}, although this is not a recommended way to accommodate long words! If you have a long word in a small box, consider using the {{cssxref("word-break")}} or {{cssxref("overflow-wrap")}} property. In addition, some of the methods discussed in [Sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS) may help you create boxes that scale better with varying amounts of content.
 
-{{EmbedGHLiveSample("css-examples/learn/overflow/scroll-x.html", '100%', 600)}}
+```html live-sample___scroll-x
+<div class="word">Overflow</div>
+```
+
+```css live-sample___scroll-x
+.word {
+  border: 5px solid #333333;
+  width: 100px;
+  font-size: 250%;
+  overflow-x: scroll;
+}
+```
+
+{{EmbedLiveSample("scroll-x")}}
 
 As with `scroll`, you get a scrollbar in the scrolling dimension whether or not there is enough content to cause a scrollbar.
 
@@ -91,9 +191,28 @@ As with `scroll`, you get a scrollbar in the scrolling dimension whether or not 
 
 If you only want scrollbars to appear when there is more content than can fit in the box, use `overflow: auto`. This allows the browser to determine if it should display scrollbars.
 
-**In the example below, remove content until it fits into the box. You should see the scrollbars disappear.**
+In the example below, remove content until it fits into the box. You should see the scrollbars disappear:
 
-{{EmbedGHLiveSample("css-examples/learn/overflow/auto.html", '100%', 700)}}
+```html live-sample___auto
+<div class="box">
+  This box has a height and a width. This means that if there is too much
+  content to be displayed within the assigned height, there will be an overflow
+  situation. If overflow is set to hidden then any overflow will not be visible.
+</div>
+
+<p>This content is outside of the box.</p>
+```
+
+```css live-sample___auto
+.box {
+  border: 1px solid #333333;
+  width: 250px;
+  height: 100px;
+  overflow: auto;
+}
+```
+
+{{EmbedLiveSample("auto", "", "200px")}}
 
 ## Overflow establishes a Block Formatting Context
 

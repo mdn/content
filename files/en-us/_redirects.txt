@@ -8117,7 +8117,7 @@
 /en-US/docs/Web/API/Element/MozMousePixelScroll	/en-US/docs/Web/API/Element/MozMousePixelScroll_event
 /en-US/docs/Web/API/Element/accessKey	/en-US/docs/Web/API/HTMLElement/accessKey
 /en-US/docs/Web/API/Element/attachInternals	/en-US/docs/Web/API/HTMLElement/attachInternals
-/en-US/docs/Web/API/Element/cancel_event	/en-US/docs/Web/API/HTMLElement/cancel_event
+/en-US/docs/Web/API/Element/cancel_event	/en-US/docs/Web/API/HTMLDialogElement/cancel_event
 /en-US/docs/Web/API/Element/contentvisibilityautostatechanged_event	/en-US/docs/Web/API/Element/contentvisibilityautostatechange_event
 /en-US/docs/Web/API/Element/createShadowRoot	/en-US/docs/Web/API/Element/shadowRoot
 /en-US/docs/Web/API/Element/error_event	/en-US/docs/Web/API/HTMLElement/error_event
@@ -8435,7 +8435,6 @@
 /en-US/docs/Web/API/HTMLContentElement.select	/en-US/docs/Web/API/HTMLSlotElement
 /en-US/docs/Web/API/HTMLContentElement/getDistributedNodes	/en-US/docs/Web/API/HTMLSlotElement
 /en-US/docs/Web/API/HTMLContentElement/select	/en-US/docs/Web/API/HTMLSlotElement
-/en-US/docs/Web/API/HTMLDialogElement/cancel_event	/en-US/docs/Web/API/HTMLElement/cancel_event
 /en-US/docs/Web/API/HTMLDialogElement/close()	/en-US/docs/Web/API/HTMLDialogElement/close
 /en-US/docs/Web/API/HTMLDialogElement/returnValue()	/en-US/docs/Web/API/HTMLDialogElement/returnValue
 /en-US/docs/Web/API/HTMLDialogElement/show()	/en-US/docs/Web/API/HTMLDialogElement/show
@@ -9483,10 +9482,6 @@
 /en-US/docs/Web/API/RTCIceCandidateInit/sdpMid	/en-US/docs/Web/API/RTCIceCandidate/sdpMid
 /en-US/docs/Web/API/RTCIceCandidateInit/usernameFragment	/en-US/docs/Web/API/RTCIceCandidate/usernameFragment
 /en-US/docs/Web/API/RTCIceCandidatePairStats/bytesReceieved	/en-US/docs/Web/API/RTCIceCandidatePairStats/bytesReceived
-/en-US/docs/Web/API/RTCIceCandidatePairStats/consentRequestsSent	/en-US/docs/Web/API/RTCIceCandidatePairStats
-/en-US/docs/Web/API/RTCIceCandidatePairStats/contentRequestsSent	/en-US/docs/Web/API/RTCIceCandidatePairStats
-/en-US/docs/Web/API/RTCIceCandidatePairStats/packetsReceived	/en-US/docs/Web/API/RTCIceCandidatePairStats
-/en-US/docs/Web/API/RTCIceCandidatePairStats/packetsSent	/en-US/docs/Web/API/RTCIceCandidatePairStats
 /en-US/docs/Web/API/RTCIceCandidateStats/ip	/en-US/docs/Web/API/RTCIceCandidateStats/address
 /en-US/docs/Web/API/RTCIceCandidateStats/mozLocalTransport	/en-US/docs/Web/API/RTCIceCandidateStats/relayProtocol
 /en-US/docs/Web/API/RTCIceCandidateType	/en-US/docs/Web/API/RTCIceCandidate/type
@@ -11805,7 +11800,7 @@
 /en-US/docs/Web/Events/blur	/en-US/docs/Web/API/Element/blur_event
 /en-US/docs/Web/Events/boundary	/en-US/docs/Web/API/SpeechSynthesisUtterance/boundary_event
 /en-US/docs/Web/Events/bufferedamountlow	/en-US/docs/Web/API/RTCDataChannel/bufferedamountlow_event
-/en-US/docs/Web/Events/cancel	/en-US/docs/Web/API/HTMLElement/cancel_event
+/en-US/docs/Web/Events/cancel	/en-US/docs/Web/API/HTMLDialogElement/cancel_event
 /en-US/docs/Web/Events/canplay	/en-US/docs/Web/API/HTMLMediaElement/canplay_event
 /en-US/docs/Web/Events/canplaythrough	/en-US/docs/Web/API/HTMLMediaElement/canplaythrough_event
 /en-US/docs/Web/Events/change	/en-US/docs/Web/API/HTMLElement/change_event

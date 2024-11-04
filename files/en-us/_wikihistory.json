@@ -37649,6 +37649,18 @@
       "dhodder"
     ]
   },
+  "Web/API/HTMLDialogElement/cancel_event": {
+    "modified": "2020-10-15T21:43:04.572Z",
+    "contributors": [
+      "mfuji09",
+      "fscholz",
+      "mfluehr",
+      "sideshowbarker",
+      "fgwang",
+      "rolfedh",
+      "cvrebert"
+    ]
+  },
   "Web/API/HTMLDialogElement/close": {
     "modified": "2020-10-15T21:52:17.118Z",
     "contributors": ["fscholz", "chrisdavidmills"]

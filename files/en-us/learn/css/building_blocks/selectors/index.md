@@ -77,7 +77,45 @@ h1,
 
 In the live example below try combining the two selectors which have identical declarations. The visual display should be the same after combining them.
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/selector-list.html", '100%', 1150)}}
+```html live-sample___selector-list
+<h1>Type selectors</h1>
+<p>
+  Veggies es bonus vobis, proinde vos postulo essum magis
+  <span>kohlrabi welsh onion</span> daikon amaranth tatsoi tomatillo melon azuki
+  bean garlic.
+</p>
+
+<p>
+  Gumbo beet greens corn soko <strong>endive</strong> gumbo gourd. Parsley
+  shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra
+  wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.
+</p>
+
+<p>
+  Turnip greens yarrow ricebean rutabaga <em>endive cauliflower</em> sea lettuce
+  kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter
+  purslane kale. Celery potato scallion desert raisin horseradish spinach
+</p>
+```
+
+```css live-sample___selector-list
+body {
+  font-family: sans-serif;
+}
+span {
+  background-color: yellow;
+}
+
+strong {
+  color: rebeccapurple;
+}
+
+em {
+  color: rebeccapurple;
+}
+```
+
+{{EmbedLiveSample("selector-list", "", "280px")}}
 
 When you group selectors in this way, if any selector is syntactically invalid, the whole rule will be ignored.
 

@@ -7,8 +7,7 @@ browser-compat: http.headers.Cross-Origin-Embedder-Policy
 
 {{HTTPSidebar}}
 
-The HTTP **`Cross-Origin-Embedder-Policy`** (COEP) response header configures
-embedding cross-origin resources into the document.
+The HTTP **`Cross-Origin-Embedder-Policy`** (COEP) {{Glossary("response header")}} configures embedding cross-origin resources into the document.
 
 <table class="properties">
   <tbody>
@@ -18,7 +17,7 @@ embedding cross-origin resources into the document.
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -86,4 +85,4 @@ If CORS is not supported for some images, a COEP value of `credentialless` can b
 
 ## See also
 
-- {{httpheader("Cross-Origin-Opener-Policy")}}
+- {{HTTPHeader("Cross-Origin-Opener-Policy")}}
