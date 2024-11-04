@@ -22,7 +22,7 @@ submit(commandBuffers)
 ### Parameters
 
 - `commandBuffers`
-  - : An array of {{domxref("GPUCommandBuffer")}} objects containing the commands to be enqueued for processing by the GPU. The array must not contain duplicate `GPUCommandBuffer` objects — each one can only be submitted once.
+  - : An array of {{domxref("GPUCommandBuffer")}} objects containing the commands to be enqueued for processing by the GPU. The array must not contain duplicate `GPUCommandBuffer` objects — each one can only be submitted once per `submit()` call.
 
 ### Return value
 
