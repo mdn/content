@@ -10,8 +10,6 @@ browser-compat: api.HTMLElement.autocorrect
 
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
-<!-- cSpell:ignore Carot -->
-
 The **`autocorrect`** property of the {{domxref("HTMLElement")}} interface controls whether or not user text input is automatically corrected for spelling and/or punctuation errors.
 
 The property reflects the value of the [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) HTML global attribute.
@@ -87,6 +85,8 @@ if (`autocorrect` in HTMLElement.prototype) {
 ```
 
 #### Result
+
+<!-- cSpell:ignore Carot -->
 
 Activate the button to toggle the autocorrect value. Enter invalid text into the text box, such as "Carot".
 This should be corrected automatically when the feature is enabled.
