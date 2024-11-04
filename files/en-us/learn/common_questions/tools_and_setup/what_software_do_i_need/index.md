@@ -87,6 +87,7 @@ All desktop operating systems come with a basic text editor. These editors are a
           <li><a href="https://brackets.io/">Brackets</a></li>
           <li><a href="https://shiftedit.net/">ShiftEdit</a></li>
           <li><a href="https://www.sublimetext.com/">Sublime Text</a></li>
+          <li><a href="https://www.codelobster.com/">CodeLobster</a></li>
         </ul>
       </td>
     </tr>
@@ -114,6 +115,7 @@ All desktop operating systems come with a basic text editor. These editors are a
           <li><a href="https://brackets.io/">Brackets</a></li>
           <li><a href="https://shiftedit.net/">ShiftEdit</a></li>
           <li><a href="https://www.sublimetext.com/">Sublime Text</a></li>
+          <li><a href="https://www.codelobster.com/">CodeLobster</a></li>
         </ul>
       </td>
     </tr>
@@ -157,6 +159,7 @@ All desktop operating systems come with a basic text editor. These editors are a
           <li><a href="https://brackets.io/">Brackets</a></li>
           <li><a href="https://shiftedit.net/">ShiftEdit</a></li>
           <li><a href="https://www.sublimetext.com/">Sublime Text</a></li>
+          <li><a href="https://www.codelobster.com/">CodeLobster</a></li>
         </ul>
       </td>
     </tr>
