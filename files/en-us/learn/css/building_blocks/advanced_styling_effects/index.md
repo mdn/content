@@ -74,7 +74,7 @@ article {
 
 This gives us the following result:
 
-{{ EmbedLiveSample('A_simple_box_shadow', '100%', 100) }}
+{{EmbedLiveSample("A_simple_box_shadow", "", "100px")}}
 
 You'll see that we've got four items in the `box-shadow` property value:
 
@@ -126,7 +126,7 @@ article {
 
 Now we get this result:
 
-{{ EmbedLiveSample('Multiple_box_shadows', '100%', 100) }}
+{{EmbedLiveSample("Multiple_box_shadows", "", "100px")}}
 
 We've done something fun here by creating a raised box with multiple colored layers, but you could use it in any way you want, for example to create a more realistic look with shadows based on multiple light sources.
 
@@ -169,7 +169,7 @@ button:active {
 
 This gives us the following result:
 
-{{ EmbedLiveSample('Other_box_shadow_features', '100%', 70) }}
+{{EmbedLiveSample("Other_box_shadow_features", "100%", "70px")}}
 
 Here we've set up some button styling along with focus/hover/active states. The button has a simple black box shadow set on it by default, plus a couple of inset shadows, one light and one dark, placed on opposite corners of the button to give it a nice shading effect.
 
@@ -186,15 +186,91 @@ In the example below we have used two different values for filter. The `first` i
 
 The second is `grayscale()`; by using a percentage we are setting how much color we want to be removed.
 
-{{EmbedGHLiveSample("css-examples/learn/images/filter.html", '100%', 900)}}
+Play with the percentage and pixel parameters in the example below to see how the images change. You could also swap the values for some others. Try `contrast(200%)`, `invert(100%)` or `hue-rotate(20deg)` on the live example above. Take a look at the MDN page for [`filter`](/en-US/docs/Web/CSS/filter) for many other options you could try.
 
-**Play with the percentage and pixel parameters in the live example to see how the images change. You could also swap the values for some others. Try `contrast(200%)`, `invert(100%)` or `hue-rotate(20deg)` on the live example above. Take a look at the MDN page for [`filter`](/en-US/docs/Web/CSS/filter) for many other options you could try.**
+```html live-sample___filter
+<div class="wrapper">
+  <div class="box">
+    <img
+      alt="balloons"
+      class="blur"
+      src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+  </div>
+  <div class="box">
+    <img
+      alt="balloons"
+      class="grayscale"
+      src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+  </div>
+</div>
+```
+
+```css hidden live-sample___filter
+.wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
+.wrapper > * {
+  margin: 20px;
+  flex: 1;
+}
+
+.box {
+  border: 5px solid darkblue;
+}
+```
+
+```css live-sample___filter
+img {
+  height: 100%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.blur {
+  filter: blur(10px);
+}
+
+.grayscale {
+  filter: grayscale(60%);
+}
+```
+
+{{EmbedLiveSample("filter", "", "260px")}}
 
 You can apply filters to any element and not just images. Some of the filter options available do very similar things to other CSS features, for example `drop-shadow()` works in a very similar way and gives a similar effect to [`box-shadow`](/en-US/docs/Web/CSS/box-shadow) or [`text-shadow`](/en-US/docs/Web/CSS/text-shadow). The really nice thing about filters however, is that they work on the exact shapes of the content inside the box, not just the box itself as one big chunk, so it is worth knowing the difference.
 
 In this next example we are applying our filter to a box, and comparing it to a box shadow. As you can see, the drop-shadow filter follows the exact shape of the text and border dashes. The box shadow just follows the square of the box.
 
-{{EmbedGHLiveSample("css-examples/learn/images/filter-text.html", '100%', 700)}}
+```html live-sample___filter-text
+<p class="filter">Filter</p>
+<p class="box-shadow">Box shadow</p>
+```
+
+```css live-sample___filter-text
+body {
+  font-family: sans-serif;
+}
+p {
+  margin: 1em 2em;
+  padding: 20px;
+  width: 100px;
+  display: inline-block;
+  border: 5px dashed red;
+}
+
+.filter {
+  filter: drop-shadow(5px 5px 1px rgb(0 0 0 / 70%));
+}
+
+.box-shadow {
+  box-shadow: 5px 5px 1px rgb(0 0 0 / 70%);
+}
+```
+
+{{EmbedLiveSample("filter-text")}}
 
 ## Blend modes
 
@@ -239,7 +315,7 @@ div {
 
 The result we get is this — you can see the original on the left, and the multiply blend mode on the right:
 
-{{ EmbedLiveSample('background-blend-mode', '100%', 300) }}
+{{EmbedLiveSample("background-blend-mode", "", "220px")}}
 
 ### mix-blend-mode
 
@@ -300,7 +376,7 @@ article div:last-child {
 
 This gives us the following results:
 
-{{ EmbedLiveSample('mix-blend-mode', '100%', 300) }}
+{{EmbedLiveSample("mix-blend-mode", "", "220px")}}
 
 You can see here that the multiply mix blend has blended together not only the two background images, but also the color from the `<div>` below it too.
 
@@ -315,7 +391,36 @@ The CSS Shapes specification enables the wrapping of text around a non-rectangul
 
 In the image below we have a pleasingly round balloon. The actual file is rectangular, but by floating the image (shapes only apply to floated elements) and using the {{cssxref("shape-outside")}} property with a value of `circle(50%)`, we can give the effect of the text following the line of the balloon.
 
-{{EmbedGHLiveSample("css-examples/learn/images/shapes.html", '100%', 1000)}}
+```html live-sample___shapes
+<div class="wrapper">
+  <img
+    alt="balloon"
+    src="https://mdn.github.io/shared-assets/images/examples/round-balloon.png" />
+  <p>
+    One November night in the year 1782, so the story runs, two brothers sat
+    over their winter fire in the little French town of Annonay, watching the
+    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+    were noted as possessing thoughtful minds and a deep interest in all
+    scientific knowledge and new discovery. Before that night—a memorable night,
+    as it was to prove—hundreds of millions of people had watched the rising
+    smoke-wreaths of their fires without drawing any special inspiration from
+    the fact.
+  </p>
+</div>
+```
+
+```css live-sample___shapes
+body {
+  font-family: sans-serif;
+}
+img {
+  float: left;
+  shape-outside: circle(50%);
+}
+```
+
+{{EmbedLiveSample("shapes", "", "200px")}}
 
 The shape in this example is not reacting to the content of the image file. Instead, the circle function is taking its center point from the center of the image file, as if we had put a compass in the middle of the file and drawn a circle that fits inside the file. It is that circle that the text flows around.
 
