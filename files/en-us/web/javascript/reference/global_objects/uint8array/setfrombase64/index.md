@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Uint8Array.setFromBase64
 
 The **`setFromBase64()`** method of {{jsxref("Uint8Array")}} instances populates this `Uint8Array` object with bytes from a [base64](/en-US/docs/Glossary/Base64)-encoded string, returning an object indicating how many bytes were read and written.
 
-For the general concepts around base64 strings, see the [base64](/en-US/docs/Glossary/Base64) glossary entry. This method is most suitable for populating a pre-allocated array buffer. If you just want to create a new `Uint8Array` object from a base64-encoded string, use the static method {{jsxref("Uint8Array.fromBase64()")}} instead.
+This method is most suitable for populating a pre-allocated array buffer. If you just want to create a new `Uint8Array` object from a base64-encoded string, use the static method {{jsxref("Uint8Array.fromBase64()")}} instead.
 
 ## Syntax
 
@@ -21,7 +21,7 @@ setFromBase64(string, options)
 ### Parameters
 
 - `string`
-  - : A base64-encoded string to convert to a `Uint8Array`. It has the same requirements as the [`string` parameter of `Uint8Array.fromBase64()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array/fromBase64#string). Note that the string is only read up to the point where the array is filled, so any invalid base64 syntax after that point is ignored.
+  - : A base64 string encoding bytes to write into a `Uint8Array`. It has the same requirements as the [`string` parameter of `Uint8Array.fromBase64()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array/fromBase64#string). Note that the string is only read up to the point where the array is filled, so any invalid base64 syntax after that point is ignored.
 - `options` {{optional_inline}}
   - : An object customizing the base64 string interpretation process. It has the same requirements as the [`options` parameter of `Uint8Array.fromBase64()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array/fromBase64#options).
 
@@ -30,7 +30,7 @@ setFromBase64(string, options)
 An object containing the following properties:
 
 - `read`
-  - : The number of base64 characters read from the input string. It is either the length of the input string (including padding), if the decoded data fits into the array, or up to the last complete 4-character chunk that fits into the array. Chunks will never be split (because the remaining bits cannot be partially "put back" into the base64 without completely re-encoding it); if the next chunk cannot fit into the remainder of the array, it will be entirely unread, resulting in the last one or two bytes of the array not being written.
+  - : The number of base64 characters read from the input string. If the decoded data fits into the array, this is the length of the input string (including padding); otherwise, it is the length up to the last complete 4-character chunk that fits into the array. Chunks will never be split (because the remaining bits cannot be partially "put back" into the base64 without completely re-encoding it); if the next chunk cannot fit into the remainder of the array, it will be entirely unread, resulting in the last one or two bytes of the array not being written.
 - `written`
   - : The number of bytes written to the `Uint8Array`. Will never be greater than this `Uint8Array`'s {{jsxref("TypedArray/byteLength", "byteLength")}}.
 
@@ -70,7 +70,7 @@ console.log(uint8Array);
 // Uint8Array(8) [60, 98, 62, 77, 68, 78, 0, 0]
 ```
 
-Note how the last two bytes of the array are not written, because to decode the next two bytes, we need to read three more base64 characters, which represent 18 bits, resulting in 2 trailing bits being discarded. Therefore, we can only write 2 chunks, or 6 bytes, to the array.
+Note how the last two bytes of the array are not written. To decode these two bytes, we need to read at least three more base64 characters, which represent 18 bits. These can't fit into the remaining two bytes of the array, so we can only write 2 chunks, or 6 bytes.
 
 ### Setting data at a specific offset
 

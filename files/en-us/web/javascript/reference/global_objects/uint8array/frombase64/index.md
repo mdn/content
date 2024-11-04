@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Uint8Array.fromBase64
 
 The **`Uint8Array.fromBase64()`** static method creates a new {{jsxref("Uint8Array")}} object from a [base64](/en-US/docs/Glossary/Base64)-encoded string.
 
-For the general concepts around base64 strings, see the [base64](/en-US/docs/Glossary/Base64) glossary entry. This method should be preferred over {{domxref("Window.atob()")}} because it results in a byte array, which is easier to work with than a string containing raw bytes. If you already have an array buffer allocated and you want to populate it, use the instance method {{jsxref("Uint8Array.prototype.setFromBase64()")}} instead.
+This method should be preferred over {{domxref("Window.atob()")}} because it results in a byte array, which is easier to work with than a string containing raw bytes, unless your decoded binary data is actually intended to be ASCII text. If you already have an array buffer allocated and you want to populate it, use the instance method {{jsxref("Uint8Array.prototype.setFromBase64()")}} instead.
 
 ## Syntax
 
@@ -21,7 +21,7 @@ Uint8Array.fromBase64(string, options)
 ### Parameters
 
 - `string`
-  - : A base64-encoded string to convert to a `Uint8Array`. The string must only contain characters in the base64 alphabet, which includes A–Z, a–z, 0–9, and two special characters, which are either `+` and `/` (if using `alphabet: "base64"` in `options`) or `-` and `_` (if using `alphabet: "base64url"` in `options`). Any ASCII white space characters within the string are ignored.
+  - : A base64 string encoding bytes to convert to a `Uint8Array`. The string must only contain characters in the base64 alphabet, which includes A–Z, a–z, 0–9, and two special characters, which are either `+` and `/` (if using `alphabet: "base64"` in `options`) or `-` and `_` (if using `alphabet: "base64url"` in `options`). It may have padding `=` characters at the end. Any ASCII white space characters within the string are ignored.
 - `options` {{optional_inline}}
   - : An object customizing the base64 string interpretation process. It can contain the following properties:
     - `alphabet` {{optional_inline}}

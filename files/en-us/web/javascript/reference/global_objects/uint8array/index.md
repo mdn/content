@@ -16,7 +16,7 @@ The **`Uint8Array`** typed array represents an array of 8-bit unsigned integers.
 `Uint8Array` is currently the only `TypedArray` subclass that has additional methods compared to other typed arrays. Because of its nature as a generic byte array, it is the most suitable for working with arbitrary binary data. It supports two sets of methods for the creation, serialization, and modification of `Uint8Array` data to/from hex strings and base64 strings.
 
 - {{jsxref("Uint8Array.fromBase64()")}}, {{jsxref("Uint8Array.prototype.toBase64()")}}, and {{jsxref("Uint8Array.prototype.setFromBase64()")}} for working with [base64](/en-US/docs/Glossary/Base64) strings, where 3 bytes are encoded by 4 characters that are either 0–9, A–Z, a–z, "+", and "/" (or "-" and "\_", if using URL-safe base64).
-- {{jsxref("Uint8Array.fromHex()")}}, {{jsxref("Uint8Array.prototype.toHex()")}}, and {{jsxref("Uint8Array.prototype.setFromHex()")}} for working with hex strings, where every byte is encoded by two characters that's either 0–9 or A–F (case-insensitive).
+- {{jsxref("Uint8Array.fromHex()")}}, {{jsxref("Uint8Array.prototype.toHex()")}}, and {{jsxref("Uint8Array.prototype.setFromHex()")}} for working with hex strings, where every byte is encoded by two characters, each one being either 0–9 or A–F (case-insensitive).
 
 ## Constructor
 

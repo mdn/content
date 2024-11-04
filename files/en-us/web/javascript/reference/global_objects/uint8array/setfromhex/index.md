@@ -20,14 +20,21 @@ setFromHex(string)
 ### Parameters
 
 - `string`
-  - : A hexadecimal string to convert to a `Uint8Array`. The string must only contain characters in the hexadecimal alphabet, which includes 0–9 and A–F (case-insensitive). It must have an even number of characters. Unlike {{jsxref("Uint8Array.prototype.setFromBase64()")}}, the input cannot contain whitespace. Note that the string is only read up to the point where the array is filled, so any invalid hex syntax after that point is ignored.
+
+  - : A hexadecimal string encoding bytes to write into a `Uint8Array`. The string must:
+
+    - Have an even number of characters because two characters encode one byte.
+    - Only contain characters in the hexadecimal alphabet, which includes 0–9 and A–F (case-insensitive).
+    - Not contain whitespace (unlike {{jsxref("Uint8Array.prototype.setFromBase64()")}}).
+
+    Note that the string is only read up to the point where the array is filled, so any invalid hex syntax after that point is ignored.
 
 ### Return value
 
 An object containing the following properties:
 
 - `read`
-  - : The number of hex characters read from the input string. It is either the length of the input string, if the decoded data fits into the array, or a multiple of 2 up to the last 2-character chunk that fits into the array.
+  - : The number of hex characters read from the input string. If the decoded data fits into the array, it is the length of the input string: otherwise, it is the number of complete hex characters that fit into the array.
 - `written`
   - : The number of bytes written to the `Uint8Array`. Will never be greater than this `Uint8Array`'s {{jsxref("TypedArray/byteLength", "byteLength")}}.
 

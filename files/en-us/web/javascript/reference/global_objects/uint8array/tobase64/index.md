@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Uint8Array.toBase64
 
 The **`toBase64()`** method of {{jsxref("Uint8Array")}} instances returns a [base64](/en-US/docs/Glossary/Base64)-encoded string based on the data in this `Uint8Array` object.
 
-For the general concepts around base64 strings, see the [base64](/en-US/docs/Glossary/Base64) glossary entry. This method should be preferred over {{domxref("Window.btoa()")}}, especially if you already have a `Uint8Array` holding the object, because you don't need to convert it to a string first.
+This method should be preferred over {{domxref("Window.btoa()")}}, especially if you already have a `Uint8Array` holding the object, because you don't need to convert it to a string first.
 
 ## Syntax
 
