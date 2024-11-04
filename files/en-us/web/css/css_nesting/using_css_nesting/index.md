@@ -417,6 +417,10 @@ The CSSOM parses the CSS in the following way.
       - color: black
 ```
 
+> [!NOTE]
+> Support for the rule was added with {{domxref("CSSNestedDeclarations")}}.
+> Browsers that [do not support this interface](/en-US/docs/Web/API/CSSNestedDeclarations#browser_compatibility) this interface may parse nested rules in the wrong order.
+
 ## Concatenation (is not possible)
 
 In CSS preprocessors such as [Sass](https://sass-lang.com/), it is possible to use nesting to join strings to create new classes. This is common in CSS methodologies such as [BEM](https://getbem.com/naming/).
