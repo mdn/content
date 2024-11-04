@@ -6,6 +6,8 @@ page-type: guide
 
 {{CSSRef}}
 
+<!-- cSpell:ignore pwllgwyngy -->
+
 This guide explains the various ways in which overflowing text can be managed in CSS.
 
 ## What is overflowing text?
@@ -163,11 +165,11 @@ In the example below there is a checkbox and label. Let's say, you want the labe
 
 ## Adding hyphens
 
-To add hyphens when words are broken, use the CSS {{cssxref("hyphens")}} property. Using a value of `auto`, the browser is free to automatically break words at appropriate hyphenation points, following whatever rules it chooses. To have some control over the process, use a value of `manual`, then insert a hard or soft break character into the string. A hard break (`‐`) will always break, even if it is not necessary to do so. A soft break (`&shy;`) only breaks if breaking is needed.
+To add hyphens when words are broken, use the CSS {{cssxref("hyphens")}} property. Using a value of `auto`, the browser is free to automatically break words at appropriate hyphenation points, following whatever rules it chooses. To have some control over the process, use a value of `manual`, then insert a hard (`-`) or soft break character (U+00AD) into the string. A soft break character can be added using `&shy;`, `&#173;`, or `&#xad` HTML character codes as well. A hard break will always break, even if it is not necessary to do so. A soft break only breaks if breaking is needed.
 
 ```html live-sample___hyphens
 <div class="box">
-  Llanfair­pwllgwyngy­llgogerychwyrndrobwllllantysiliogogogoch
+  Llanfair&shy;pwllgwyngy&shy;llgogerychwyrndrobwllllantysiliogogogoch
 </div>
 ```
 

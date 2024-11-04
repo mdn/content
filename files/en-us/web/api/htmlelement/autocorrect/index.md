@@ -10,6 +10,8 @@ browser-compat: api.HTMLElement.autocorrect
 
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
+<!-- cSpell:ignore Carot -->
+
 The **`autocorrect`** property of the {{domxref("HTMLElement")}} interface controls whether or not user text input is automatically corrected for spelling and/or punctuation errors.
 
 The property reflects the value of the [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) HTML global attribute.
@@ -22,7 +24,7 @@ The property reflects the value of the [`autocorrect`](/en-US/docs/Web/HTML/Glob
 
 ### Enable and disable autocorrection
 
-This example shows how you can enable and disable auto-correction.
+This example shows how you can enable and disable autocorrection.
 
 #### HTML
 
