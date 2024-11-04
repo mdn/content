@@ -138,7 +138,7 @@ In this case, the browser will attempt to match the trigger with a stored attrib
 A {{htmlelement("script")}} example might look like so:
 
 ```html
-<script src="advertising-script.js" attributionsrc />
+<script src="advertising-script.js" attributionsrc></script>
 ```
 
 ```js

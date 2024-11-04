@@ -634,7 +634,7 @@ Save these settings and commit them to your GitHub repo.
 You will then need to update the version of your project on PythonAnywhere.
 Assuming you're using your Bash prompt in the folder `<user_name>.pythonanywhere.com`, and you have pushed the changes to the main branch, then you could import them in the Bash prompt using the command:
 
-```Bash
+```bash
 git pull origin main
 ```
 

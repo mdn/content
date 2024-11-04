@@ -66,7 +66,7 @@ If sanitization does fail, there are various forms the injected malicious code c
 - A {{htmlelement("script")}} tag that links to a malicious source:
 
   ```html
-  <script src="https://evil.com/hacker.js"></script>
+  <script src="https://evil.example.com/hacker.js"></script>
   ```
 
 - A `<script>` tag that includes inline JavaScript:
@@ -97,7 +97,7 @@ If sanitization does fail, there are various forms the injected malicious code c
 
 A CSP can provide protection against all of these. With a CSP, you can:
 
-- define the permitted sources for JavaScript files and other resources, effectively blocking loads from `https://evil.com`
+- define the permitted sources for JavaScript files and other resources, effectively blocking loads from `https://evil.example.com`
 - disable inline script tags
 - allow only script tags which have the correct nonce or hash set
 - disable inline event handlers

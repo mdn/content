@@ -369,7 +369,7 @@ The available features vary depending on what browser is loaded, and can include
 - Accessing browser DevTools
 - Changing reported location
 - Throttling the network
-- Accessing screenreaders
+- Accessing screen readers
 
 #### Advanced: The BrowserStack API
 
