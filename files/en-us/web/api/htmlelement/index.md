@@ -144,12 +144,12 @@ _Also, inherits events from its parent, {{DOMxRef("Element")}}._
 - {{DOMxRef("HTMLElement/drop_event", "drop")}}
   - : This event is fired when an element or text selection is dropped on a valid drop target.
 
-### Popover events
+### Toggle events
 
 - {{DOMxRef("HTMLElement/beforetoggle_event", "beforetoggle")}}
-  - : Fired when the element is a popover, before it is hidden or shown.
+  - : Fired when the element is a [popover](/en-US/docs/Web/API/Popover_API) or {{htmlelement("dialog")}}, before it is hidden or shown.
 - {{DOMxRef("HTMLElement/toggle_event", "toggle")}}
-  - : Fired when the element is a popover, just after it is hidden or shown.
+  - : Fired when the element is a [popover](/en-US/docs/Web/API/Popover_API), {{htmlelement("dialog")}}, or {{htmlelement("details")}} element, just after it is hidden or shown.
 
 ## Specifications
 
