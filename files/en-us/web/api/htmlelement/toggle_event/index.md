@@ -32,15 +32,49 @@ A {{domxref("ToggleEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Examples
 
+The example code below demonstrates how the `toggle` event might be used for {{domxref("Popover_API", "popover", "", "nocode")}}.
+The same code is might be used for a {{htmlelement("dialog")}} or {{htmlelement("details")}} elements in the same way.
+
 ### Basic example
 
-A basic example showing how the toggle event would be used for a popover is given below.
-A {{htmlelement("dialog")}} element or {{htmlelement("details")}} element would behave in the same way.
+This example shows how to listen for the `toggle` event and log the result.
+
+#### HTML
+
+The HTML consists of a popover and a button for toggling it open and closed.
+
+```html
+<button popovertarget="mypopover">Toggle the popover</button>
+<div id="mypopover" popover>Popover content</div>
+```
+
+```html hidden
+<pre id="log"></pre>
+```
+
+```css hidden
+#log {
+  height: 150px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+```js hidden
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
+```
+
+#### JavaScript
+
+The code gets adds an event listener for the `toggle` event and logs the state.
 
 ```js
 const popover = document.getElementById("mypopover");
-
-// ...
 
 popover.addEventListener("toggle", (event) => {
   if (event.newState === "open") {
@@ -50,6 +84,10 @@ popover.addEventListener("toggle", (event) => {
   }
 });
 ```
+
+#### Result
+
+{{EmbedLiveSample("Basic example", '100%', "250px")}}
 
 ### A note on toggle event coalescing
 
@@ -67,6 +105,10 @@ popover.showPopover();
 popover.hidePopover();
 // `toggle` only fires once
 ```
+
+### Other examples
+
+- [Opening a modal dialog](/en-US/docs/Web/API/HTMLDialogElement#opening_a_modal_dialog) example in `HTMLDialogElement`
 
 ## Specifications
 

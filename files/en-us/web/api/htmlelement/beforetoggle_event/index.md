@@ -14,8 +14,11 @@ The **`beforetoggle`** event of the {{domxref("HTMLElement")}} interface fires o
 
 This event is [cancelable](/en-US/docs/Web/API/Event/cancelable) when an element is toggled to open ("show") but not when the element is closing.
 
-The event can be used to prevent an element from being shown.
-It can also be used to apply classes or set properties on other elements, for example to animate their behaviour as the element changes its display state.
+Among other things, this event can be used to:
+
+- prevent an element from being shown.
+- add or remove classes or properties from the element or associated elements, for example to control the animation behaviour of a dialog as it is opened and closed.
+- clear the state of the element before before it is opened or after it is hidden, for example to reset a dialog form and return value to an empty state, or hide any nested manual popovers when reopening a popup.
 
 ## Syntax
 
@@ -35,39 +38,146 @@ A {{domxref("ToggleEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Examples
 
+The examples below demonstrates how the `beforetoggle` event might be used for a {{domxref("Popover_API", "popover", "", "nocode")}} or {{htmlelement("dialog")}} element.
+The same examples would work similarily on the other element types.
+
 ### Basic example
 
-A basic example showing how the `beforetoggle` event might be used for a popover is given below.
-A {{htmlelement("dialog")}} element or {{htmlelement("details")}} element would behave in the same way.
+This example shows how to listen for the `beforetoggle` event and log the result.
+
+#### HTML
+
+The HTML consists of a popover and a button for toggling it open and closed.
+
+```html
+<button popovertarget="mypopover">Toggle the popover</button>
+<div id="mypopover" popover>Popover content</div>
+```
+
+```html hidden
+<pre id="log"></pre>
+```
+
+```css hidden
+#log {
+  height: 150px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+```js hidden
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
+```
+
+#### JavaScript
+
+The code gets adds an event listener for the `beforetoggle` event and logs the state.
 
 ```js
 const popover = document.getElementById("mypopover");
 
-// ...
+popover.addEventListener("beforetoggle", (event) => {
+  if (event.newState === "open") {
+    log("Popover is about to be shown");
+  } else {
+    log("Popover is about to be hidden");
+  }
+});
+```
+
+#### Result
+
+{{EmbedLiveSample("Basic example", '100%', "250px")}}
+
+### Prevent a popover opening
+
+The `beforetoggle` event is cancelable if fired when opening an element.
+
+Below we show how a popover that might first check if it is allowed to open, and if not, call {{domxref("Event.preventDefault()")}} to cancel the event.
+In this example we use a button to set whether the popover can open or not: in a more "full featured" example this might depend on the application state, or the data in the popover being ready to display.
+
+#### HTML
+
+The HTML consists of a popover, a button for toggling it open and closed, and a button for setting wether the button can be opened.
+
+```html
+<button popovertarget="mypopover">Toggle the popover</button>
+<button id="allow_button"></button>
+<div id="mypopover" popover>Popover content</div>
+```
+
+```html hidden
+<pre id="log"></pre>
+```
+
+```css hidden
+#log {
+  height: 150px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+```js hidden
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
+```
+
+#### JavaScript
+
+First we set up the code to simulate a state where we don't want to allow the popover to open.
+This is represented by the variable `allowOpen`, which is toggled when the associated button is clicked.
+
+```js
+const allowButton = document.getElementById("allow_button");
+
+let allowOpen = true;
+
+function toggleState() {
+  allowOpen = !allowOpen;
+  allowButton.innerText = allowOpen ? "Open Allowed" : "Open Prevented";
+}
+
+toggleState();
+
+allowButton.addEventListener("click", (event) => {
+  toggleState();
+});
+```
+
+The code gets adds an event listener for the `beforetoggle` event.
+If `allowOpen` is false then `preventDefault()` is called, which stops the popup from opening.
+
+```js
+const popover = document.getElementById("mypopover");
 
 popover.addEventListener("beforetoggle", (event) => {
   if (event.newState === "open") {
-    console.log("Popover is about to be shown");
+    if (allowOpen) {
+      log("Popover is about to be shown");
+    } else {
+      log("Popover opening prevented");
+      event.preventDefault();
+    }
   } else {
-    console.log("Popover is about to be hidden");
+    log("Popover is about to be hidden");
   }
 });
 ```
 
-### Preventing a dialog from opening
+#### Result
 
-The `beforetoggle` event is cancelable when opening an element.
-
-Below we show how a dialog might first check some method `allowOpen()` method to determine if it is ready to open, and if not, call {{domxref("Event.preventDefault()")}} to cancel the event and prevent the dialog opening.
-
-```js
-dialog.addEventListener("beforetoggle", (event) => {
-  // Check if the element is allowed to open
-  if (allowOpen()) {
-    event.preventDefault();
-  }
-});
-```
+{{EmbedLiveSample("Prevent a popover opening", '100%', "250px")}}
 
 ### A note on beforetoggle event coalescing
 
@@ -85,6 +195,10 @@ popover.showPopover();
 popover.hidePopover();
 // `beforetoggle` only fires once
 ```
+
+### Other examples
+
+- [Opening a modal dialog](/en-US/docs/Web/API/HTMLDialogElement#opening_a_modal_dialog) example in `HTMLDialogElement`
 
 ## Specifications
 
