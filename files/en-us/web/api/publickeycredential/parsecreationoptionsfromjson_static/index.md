@@ -86,7 +86,7 @@ const createCredentialOptions =
   );
 
 navigator.credentials
-  .create({ createCredentialOptions })
+  .create({ publicKey: createCredentialOptions })
   .then((newCredentialInfo) => {
     // Handle the new credential information here.
   })
