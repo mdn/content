@@ -402,7 +402,9 @@ With the following CSS:
 }
 ```
 
-The CSSOM parses the CSS in the following way.
+The `background-color` is parsed first and set to silver, then the `@media` rule is evaluated, and finally the `color`.
+
+The CSSOM parses the CSS in the following way:
 
 ```txt
 ↳ CSSStyleRule
