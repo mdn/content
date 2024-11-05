@@ -8,15 +8,9 @@ page-type: guide
 
 In addition to the standard [JavaScript](/en-US/docs/Web/JavaScript) set of functions (such as {{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("Object")}}, {{jsxref("JSON")}}, etc.), there are a variety of functions (and APIs) available in the workers. This article provides a list of those.
 
-## Worker Contexts & Functions
+## Functions available in workers
 
-**Workers run in a different global context than the current window!** While {{domxref("Window")}} is not directly available to workers, many of the same methods are defined in a shared mixin (`WindowOrWorkerGlobalScope`), and made available to workers through their own {{domxref("WorkerGlobalScope")}}-derived contexts:
-
-- {{domxref("DedicatedWorkerGlobalScope")}} for dedicated workers
-- {{domxref("SharedWorkerGlobalScope")}} for shared workers
-- {{domxref("ServiceWorkerGlobalScope")}} for [service workers](/en-US/docs/Web/API/Service_Worker_API)
-
-Some of the functions (a subset) that are common to all workers and to the main thread (from `WindowOrWorkerGlobalScope`) are:
+The following functions are available to workers:
 
 - {{domxref("WorkerGlobalScope.atob()")}}
 - {{domxref("WorkerGlobalScope.btoa()")}}
@@ -36,7 +30,7 @@ Some of the functions (a subset) that are common to all workers and to the main 
 
 The following functions are **only** available to workers:
 
-- {{domxref("WorkerGlobalScope.importScripts()")}} (all workers)
+- {{domxref("WorkerGlobalScope.importScripts()")}}
 
 ## Web APIs available in workers
 
