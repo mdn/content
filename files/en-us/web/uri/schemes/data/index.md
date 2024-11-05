@@ -119,5 +119,5 @@ lots of text…
 - {{Glossary("Percent-encoding")}}
 - {{domxref("WorkerGlobalScope.atob()", "atob()")}}
 - {{domxref("WorkerGlobalScope.btoa()", "btoa()")}}
-- CSS {{CSSXref("url", "url()")}}
+- CSS {{CSSXref("url_value", "&lt;url&gt;")}}
 - {{Glossary("URI")}}

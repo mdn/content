@@ -89,7 +89,7 @@ The _box model_ view visually represents the current element's box model, so you
 
 In some browsers, the JavaScript details of the selected element can also be viewed in this panel. In Safari, these are unified under the _Node_ tab, but are in separate tabs in Chrome, Opera, and Edge.
 
-- _Properties_: The {{Glossary("Property (JavaScript)", "properties")}} of the element object.
+- _Properties_: The {{Glossary("Property/JavaScript", "properties")}} of the element object.
 - _Event Listeners_: The [events](/en-US/docs/Web/API/Event) associated with the element.
 
 ### Find out more
