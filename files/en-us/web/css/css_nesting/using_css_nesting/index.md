@@ -417,6 +417,9 @@ The CSSOM parses the CSS in the following way.
       - color: black
 ```
 
+Note that in order to preserve the parsing order, all the rules before nesting are handled as top-level `CSSRules`, while any top level rules after nesting are represented as `CSSNestedDeclarations`.
+That's why the `color-black` is inside a nested declaration even though it is a top level declaration in the original document.
+
 > [!NOTE]
 > Support for the rule was added with {{domxref("CSSNestedDeclarations")}}.
 > Browsers that [do not support this interface](/en-US/docs/Web/API/CSSNestedDeclarations#browser_compatibility) this interface may parse nested rules in the wrong order.
