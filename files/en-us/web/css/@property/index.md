@@ -14,10 +14,10 @@ The `@property` rule represents a custom property registration directly in a sty
 ## Syntax
 
 ```css
-@property --theme-color {
-  syntax: "<color>";
+@property --rotation {
+  syntax: "<angle>";
   inherits: false;
-  initial-value: #c0ffee;
+  initial-value: 45deg;
 }
 ```
 
