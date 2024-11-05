@@ -388,7 +388,7 @@ In the following CSS, we are creating the styles for `.card` and `.card h2`. The
 
 ## Nested declarations rule
 
-The nested declaration rule means that the order of the rules are parsed in the order that they are written in the CSS document.
+The nested declaration rule is that CSS rules are parsed in the order that they are written in the CSS document.
 
 With the following CSS:
 
