@@ -255,7 +255,7 @@ Browsers don't all support the same [file types](/en-US/docs/Web/Media/Formats/C
 
 The audio source can be set to any valid [URL](/en-US/docs/Web/URI), including HTTP(S) URLs and [Data URLs](/en-US/docs/Web/URI/Schemes/data). When using HTTP(S) URLs, be aware that the browser's caching behavior will affect how often the file is requested from the server. Data URLs embed the audio data directly in the HTML, which can be useful for small audio files but isn't recommended for larger files as it increases the HTML file size.
 
-You can also use the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) to directly generate and manipulate audio streams from JavaScript code rather than streaming pre-existing audio files. You can set the [`srcObject`](/en-US/docs/Web/API/HTMLMediaElement/srcObject) in JavaScript to a {{jsxref("MediaStream")}} object. This is commonly used for live audio streams or real-time audio processing.
+You can also use the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) to directly generate and manipulate audio streams from JavaScript code rather than streaming pre-existing audio files. You can set the [`srcObject`](/en-US/docs/Web/API/HTMLMediaElement/srcObject) in JavaScript to a {{domxref("MediaStream")}} object. This is commonly used for live audio streams or real-time audio processing.
 
 ```js
 const audioElement = document.querySelector("audio");
