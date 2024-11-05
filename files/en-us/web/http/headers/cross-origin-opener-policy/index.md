@@ -131,12 +131,12 @@ The "right way" to isolate these applications would be to host them on different
 
 The `Cross-Origin-Opener-Policy: noopener-allow-popups` header can be used to ensure that a document can't be scripted by a document that opens it.
 
-If `example.com/passwords` is served with `noopener-allow-popups` the handle returned by {{domxref("Window.open()")}} will be `null`, so the opener can't script the passwords app:
+If `example.com/passwords` is served with `noopener-allow-popups` the `WindowProxy` returned by {{domxref("Window.open()")}} will indicate that the windows is closed ({{domxref("Window.closed")}} is `true`), so the opener can't script the passwords app:
 
 ```js
 const handle = window.open("example.com/passwords", "passwordTab");
-if (!handle) {
-  // The handle is null so the new window can't be scripted.
+if (windowProxy.closed) {
+  // The new window is closed so it can't be scripted.
 }
 ```
 
