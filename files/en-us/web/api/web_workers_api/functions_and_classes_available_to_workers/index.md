@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("Web Workers API")}}
 
-In addition to the standard [JavaScript](/en-US/docs/Web/JavaScript) set of functions (such as {{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("Object")}}, {{jsxref("JSON")}}, etc.), there are a variety of functions available from the DOM to workers. This article provides a list of those.
+In addition to the standard [JavaScript](/en-US/docs/Web/JavaScript) set of functions (such as {{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("Object")}}, {{jsxref("JSON")}}, etc.), there are a variety of functions (and APIs) available in the workers. This article provides a list of those.
 
 ## Worker Contexts & Functions
 
@@ -30,13 +30,13 @@ Some of the functions (a subset) that are common to all workers and to the main 
 - {{domxref("WorkerGlobalScope.setInterval()")}}
 - {{domxref("WorkerGlobalScope.setTimeout()")}}
 - {{domxref("WorkerGlobalScope.structuredClone()")}}
+- {{domxref("DedicatedWorkerGlobalScope.postMessage()")}} (dedicated workers only)
 - {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}} (dedicated workers only)
 - {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()")}} (dedicated workers only)
 
 The following functions are **only** available to workers:
 
 - {{domxref("WorkerGlobalScope.importScripts()")}} (all workers)
-- {{domxref("DedicatedWorkerGlobalScope.postMessage()")}} (dedicated workers only)
 
 ## Web APIs available in workers
 
