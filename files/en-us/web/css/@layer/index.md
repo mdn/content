@@ -38,6 +38,13 @@ The following diagram shows layer priorities where layers are declared in 1, 2, 
 
 ![Diagram showing cascade layer priorities](https://mdn.github.io/shared-assets/images/diagrams/css/at-rules/layer-cascade.svg)
 
+In the above diagram,
+
+- [_User agent_](/en-US/docs/Glossary/User_agent) means a web browser.
+- _User_ means the person using a browser to view the page. Users can specify styles using browser preferences, operating system preferences, or browser extensions.
+- _Author_ means the web developer who is writing the CSS code.
+- [_Important declaration_](/en-US/docs/Web/CSS/important) means properties with `!important` flags.
+
 The declaration order matters. The first declared layer gets the lowest priority and the last declared layer gets the highest priority. However, the priority is reversed when the [`!important`](/en-US/docs/Web/CSS/important) flag is used.
 
 The `@layer` at-rule is used to create a cascade layer in one of three ways.
