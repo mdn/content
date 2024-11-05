@@ -92,10 +92,10 @@ function round(n, upperBound, lowerBound) {
 
 ### A structure error further up confused the meaning
 
-Sometimes, the error is caused by some structure issues not directly next to the error location, so you need to look around for potential errors. For example, you intended to declare a method of a class, but you declared it as a propety instead:
+Sometimes, the error is caused by some structure issues not directly next to the error location, so you need to look around for potential errors. For example, you intended to declare a method of an object, but you declared it as a propety instead:
 
 ```js-nolint example-bad
-class MyComponent {
+const MyComponent = {
   mounted: {
     document.getElementById("app").classList.add("loaded");
   }
@@ -105,7 +105,7 @@ class MyComponent {
 The `.` after `document` is unexpected, because JavaScript is parsing the `{}` as an object literal instead of a function body, so it expects a `:`. The problem is solved by declaring `mounted` as function.
 
 ```js-nolint example-good
-class MyComponent {
+const MyComponent = {
   mounted() {
     document.getElementById("app").classList.add("loaded");
   }
