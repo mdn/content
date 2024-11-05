@@ -92,19 +92,23 @@ function round(n, upperBound, lowerBound) {
 
 ### A structure error further up confused the meaning
 
-Sometimes as a member of a class not a method but a property was declared. This might happen with JavaScript frameworks with unfamliar structures:
+Sometimes, the error is caused by some structure issues not directly next to the error location, so you need to look around for potential errors. For example, you intended to declare a method of a class, but you declared it as a propety instead:
 
-```js-noling example-bad
-mounted: {
-  document.getElementById('app').classList.add('loaded');
+```js-nolint example-bad
+class MyComponent {
+  mounted: {
+    document.getElementById("app").classList.add("loaded");
+  }
 }
 ```
 
-The dot after document is unexpedted as in an object body `{}` a property name is followed by a `:`. The problem is solved by declaring `mounted` as function
+The `.` after `document` is unexpected, because JavaScript is parsing the `{}` as an object literal instead of a function body, so it expects a `:`. The problem is solved by declaring `mounted` as function.
 
 ```js-nolint example-good
-mounted() {
-  document.getElementById('app').classList.add('loaded');
+class MyComponent {
+  mounted() {
+    document.getElementById("app").classList.add("loaded");
+  }
 }
 ```
 
