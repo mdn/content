@@ -47,7 +47,7 @@ src:
 
 - `url()`
 
-  - : Specifies an external reference consisting of a {{cssxref("&lt;url&gt;")}}, followed by optional hints using the `format()` and `tech()` component values that specify the format and font technology of the resource referenced by the URL. The `format()` and `tech()` components are a comma-separated list of strings of known [font formats](#font_formats) and technologies. If a user agent doesn't support the font technology or formats, it skips downloading the font resource. If no format or technology hints are supplied, the font resource is always downloaded.
+  - : Specifies an external reference consisting of a {{cssxref("url_value", "&lt;url&gt;")}}, followed by optional hints using the `format()` and `tech()` component values that specify the format and font technology of the resource referenced by the URL. The `format()` and `tech()` components are a comma-separated list of strings of known [font formats](#font_formats) and technologies. If a user agent doesn't support the font technology or formats, it skips downloading the font resource. If no format or technology hints are supplied, the font resource is always downloaded.
 
 - `format()`
   - : An optional declaration that follows the `url()` value that provides a hint for the user agent on the font format.
