@@ -17,7 +17,7 @@ A number, or `null`.
 ## Examples
 
 ```js
-const url = "notaurl";
+const url = "not-a-url";
 
 async function initTransport(url) {
   try {

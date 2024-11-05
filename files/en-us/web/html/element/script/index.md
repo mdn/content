@@ -81,14 +81,19 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `fetchpriority`
 
-  - : Provides a hint of the relative priority to use when fetching an external script. Allowed values:
+  - : Provides a hint of the relative priority to use when fetching an external script.
+    Allowed values:
 
     - `high`
-      - : Signals a high-priority fetch relative to other external scripts.
+      - : Fetch the external script at a high priority relative to other external scripts.
     - `low`
-      - : Signals a low-priority fetch relative to other external scripts.
+      - : Fetch the external script at a low priority relative to other external scripts.
     - `auto`
-      - : Default: Signals automatic determination of fetch priority relative to other external scripts.
+      - : Don't set a preference for the fetch priority.
+        This is the default.
+        It is used if no value or an invalid value is set.
+
+    See {{domxref("HTMLScriptElement.fetchPriority")}} for more information.
 
 - `integrity`
   - : This attribute contains inline metadata that a user agent can use to verify that a fetched resource has been delivered without unexpected manipulation. The attribute must not specified when the `src` attribute is not specified. See [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity).

@@ -19,7 +19,7 @@ To stop recording call {{domxref("console/profileEnd_static", "console.profileEn
 ## Syntax
 
 ```js-nolint
-profile(profileName)
+console.profile(profileName)
 ```
 
 ### Parameters

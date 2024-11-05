@@ -30,9 +30,9 @@ const sampler = device.createSampler({
   compare: "less",
 });
 
-sampler.label = "mysampler";
+sampler.label = "my_sampler";
 
-console.log(sampler.label); // "mysampler"
+console.log(sampler.label); // "my_sampler"
 ```
 
 Setting a label via the originating {{domxref("GPUDevice.createSampler()")}} call, and then getting it via `GPUSampler.label`:
@@ -42,10 +42,10 @@ Setting a label via the originating {{domxref("GPUDevice.createSampler()")}} cal
 
 const sampler = device.createSampler({
   compare: "less",
-  label: "mysampler",
+  label: "my_sampler",
 });
 
-console.log(sampler.label); // "mysampler"
+console.log(sampler.label); // "my_sampler"
 ```
 
 ## Specifications

@@ -143,7 +143,7 @@ The advantage is that we can prime one piece of audio and have our sprites ready
 
 ```js
 const myAudio = document.createElement("audio");
-myAudio.src = "mysprite.mp3";
+myAudio.src = "my-sprite.mp3";
 myAudio.play();
 myAudio.pause();
 ```

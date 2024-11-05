@@ -21,16 +21,19 @@ How do you pull it up? Three ways:
 
 - **_Keyboard:_**
 
-  - **Windows:** _<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>_ or <kbd>F12</kbd>
-
-  - **macOS:** _<kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>I</kbd>_
+  - **Windows:** <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd> or <kbd>F12</kbd>
+  - **macOS:** <kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>I</kbd>
 
 - **_Menu bar:_**
 
-  - **Firefox:** Menu ![Firefox hamburger menu icon that has more options to customize and control Firefox.](2014-01-10-13-08-08-f52b8c.png) _➤ More tools ➤ Web Developer Tools_
+  - **Firefox:** _Menu (☰) ➤ More tools ➤ Web Developer Tools_
   - **Chrome:** _More tools ➤ Developer tools_
-  - **Safari:** _Develop ➤ Show Web Inspector._ If you can't see the _Develop_ menu, go to _Safari ➤ Preferences ➤ Advanced_, and check the _Show Develop menu in menu bar_ checkbox.
   - **Opera**: _Developer ➤ Developer tools_
+  - **Safari:** _Develop ➤ Show Web Inspector._
+
+    > [!NOTE]
+    > The Safari developer tools are not enabled by default.
+    > To enable them, go to _Safari ➤ Preferences ➤ Advanced_, and check the _Show Develop menu in menu bar_ or _Enable features for web developers_ checkbox.
 
 - **_Context menu:_** Press-and-hold/right-click an item on a webpage (Ctrl-click on the Mac), and choose _Inspect Element_ from the context menu that appears. (_An added bonus:_ this method straight-away highlights the code of the element you right-clicked.)
 
@@ -44,9 +47,8 @@ The developer tools usually open by default to the inspector, which looks someth
 
 If you _don't_ see the inspector,
 
-- Tap/click the _Inspector_ tab.
-- In Chrome, Microsoft Edge, or Opera, tap/click Elements.
-- In Safari, the controls are not so clearly presented, but you should see the HTML if you haven't selected something else to appear in the window. Press the _Style_ button to see the CSS.
+- **Firefox:** Select the **Inspector** tab.
+- **Other browsers:** Select the **Elements** tab.
 
 ### Exploring the DOM inspector
 
@@ -80,20 +82,23 @@ These features are especially handy:
 You'll notice a number of clickable tabs at the top of the CSS Viewer:
 
 - _Computed_: This shows the computed styles for the currently selected element (the final, normalized values that the browser applies).
-- _Layout_: In Firefox, this area includes two sections:
+- _Layout_: This shows the details for CSS [grid](/en-US/docs/Web/CSS/CSS_grid_layout) and [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) layout modes if the element you are inspecting uses them.
+- _Fonts_: In Firefox and Safari, the _Fonts_ tab shows the fonts applied to the current element.
 
-  - _Box Model_: represents visually the current element's box model, so you can see at a glance what padding, border and margin is applied to it, and how big its content is.
-  - _Grid_: If the page you are inspecting uses CSS grid, this section allows you to view the grid details.
+The _box model_ view visually represents the current element's box model, so you can see at a glance what padding, border and margin is applied to it, and how big its content is. In Firefox, this is located in the _Layout_ tab, and in other browsers it is in the _Computed_ tab.
 
-- _Fonts_: In Firefox, the _Fonts_ tab shows the fonts applied to the current element.
+In some browsers, the JavaScript details of the selected element can also be viewed in this panel. In Safari, these are unified under the _Node_ tab, but are in separate tabs in Chrome, Opera, and Edge.
+
+- _Properties_: The {{Glossary("Property (JavaScript)", "properties")}} of the element object.
+- _Event Listeners_: The [events](/en-US/docs/Web/API/Event) associated with the element.
 
 ### Find out more
 
 Find out more about the Inspector in different browsers:
 
 - [Firefox Page inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html)
-- [Chrome DOM inspector](https://developer.chrome.com/docs/devtools/dom/) (Opera's inspector works the same as this)
-- [Safari DOM inspector and style explorer](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/ResourcesandtheDOM/ResourcesandtheDOM.html#//apple_ref/doc/uid/TP40007874-CH3-SW1)
+- [Chrome DOM inspector](https://developer.chrome.com/docs/devtools/dom/) (Opera and Edge's inspector is the same)
+- [Safari Elements tab](https://webkit.org/web-inspector/elements-tab/)
 
 ## The JavaScript debugger
 
@@ -103,15 +108,12 @@ The JavaScript debugger allows you to watch the value of variables and set break
 
 To get to the debugger:
 
-**Firefox**: Select ![Firefox menu icon that has more options to customize and control Firefox.](2014-01-10-13-08-08-f52b8c.png) ➤ _Web Developer_ ➤ _Debugger_ or press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> to open the JavaScript Debugger. If the tools are already displayed, click on the **Debugger** tab.
-
-**Chrome**: Open the Developer tools and then select the **Sources** tab. (Opera works the same way.)
-
-**Safari**: Open the Developer Tools and then select the Debugger tab.
+**Firefox**: Open the Developer tools and select the **Debugger** tab.
+**Other browsers**: Open the Developer tools and select the **Sources** tab.
 
 ### Exploring the debugger
 
-There are three panes in the JavaScript Debugger on Firefox.
+Each browser's JavaScript debugger is divided into three panes. The layout of these is somewhat different depending on the browser you are using; this guide uses Firefox as a reference.
 
 #### File list
 
@@ -146,19 +148,14 @@ The final section, **Scopes**, shows what values are visible from various points
 Find out more about the JavaScript debugger in different browsers:
 
 - [Firefox JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html))
-- [Microsoft Edge Debugger](https://learn.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/devtools-guide/debugger)
-- [Chrome Debugger](https://developer.chrome.com/docs/devtools/javascript/)
-- [Safari Debugger](https://developer.apple.com/safari/tools/)
+- [Chrome Debugger](https://developer.chrome.com/docs/devtools/javascript/) (Opera and Edge's debugger is the same)
+- [Safari Sources tab](https://webkit.org/web-inspector/sources-tab/)
 
 ## The JavaScript console
 
-The JavaScript console is an incredibly useful tool for debugging JavaScript that isn't working as expected. It allows you to run lines of JavaScript against the page currently loaded in the browser, and reports the errors encountered as the browser tries to execute your code. To access the console in any browser:
+The JavaScript console is an incredibly useful tool for debugging JavaScript that isn't working as expected. It allows you to run lines of JavaScript against the page currently loaded in the browser, and reports the errors encountered as the browser tries to execute your code.
 
-If the developer tools are already open, click or press the Console tab.
-
-If not, Firefox allows you to open the console directly using <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> or using the menu command: Menu ![Firefox menu](2014-01-10-13-08-08-f52b8c.png) _➤ Web Developer ➤ Web Console,_ or _Tools ➤_ _Web Developer ➤ Web Console._ On other browsers, open the developer tools and then click the Console tab.
-
-This will give you a window like the following:
+To access the console in any browser, open the developer tools and select the **Console** tab. This will give you a window like the following:
 
 ![The Console tab of the browser developer tools. Two JavaScript functions have been executed in the console. The user entered functions, and the console displayed the return values.](console_only.png)
 
@@ -207,8 +204,8 @@ You'll start to see the kind of errors that the browser returns. Often these err
 Find out more about the JavaScript console in different browsers:
 
 - [Firefox Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)
-- [Chrome JavaScript Console](https://developer.chrome.com/docs/devtools/console/) (Opera's inspector works the same as this)
-- [Safari Console](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html#//apple_ref/doc/uid/TP40007874-CH6-SW1)
+- [Chrome JavaScript Console](https://developer.chrome.com/docs/devtools/console/) (Opera and Edge's console is the same)
+- [Safari Console Object API](https://webkit.org/web-inspector/console-object-api/) and [Console Command Line API](https://webkit.org/web-inspector/console-command-line-api/)
 
 ## See also
 

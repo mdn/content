@@ -48,11 +48,55 @@ Some elements may generate additional boxes in addition to the principal box, fo
 
 An **anonymous box** is created when there is not an HTML element to use for the box. This situation happens when, for example, you declare `display: flex` on a parent element, and directly inside there is a run of text not contained in another element. In order to fix the box tree, an anonymous box is created around that run of text. It will then behave as a flex item, however, it cannot be targeted and styled like a regular box because there is no element to target.
 
-{{EmbedGHLiveSample("css-examples/visual-formatting/anonymous-flex.html", '100%', 720)}}
+```html live-sample___anonymous-flex
+<div class="flex">
+  I am wrapped in an anonymous box
+  <p>I am in the paragraph</p>
+  I am wrapped in an anonymous box.
+</div>
+```
+
+```css live-sample___anonymous-flex
+body {
+  font: 1.2em sans-serif;
+  margin: 20px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex > * {
+  background-color: rebeccapurple;
+  color: white;
+}
+```
+
+{{EmbedLiveSample("anonymous-flex")}}
 
 The same thing happens when you have text runs interspersed with block elements. In the next example I have a string inside a `<div>`; in the middle of my string is a `<p>` element containing part of the text.
 
-{{EmbedGHLiveSample("css-examples/visual-formatting/anonymous-block.html", '100%', 720)}}
+```html live-sample___anonymous-block
+<div class="example">
+  I am wrapped in an anonymous box
+  <p>I am in the paragraph</p>
+  I am wrapped in an anonymous box.
+</div>
+```
+
+```css live-sample___anonymous-block
+body {
+  font: 1.2em sans-serif;
+  margin: 20px;
+}
+
+.example > * {
+  background-color: rebeccapurple;
+  color: white;
+}
+```
+
+{{EmbedLiveSample("anonymous-block")}}
 
 The string is split into three boxes in the box tree. The part of the string before the paragraph element is wrapped in an anonymous box, then we have the `<p>`, which generates a box, and then another anonymous box.
 
@@ -68,7 +112,34 @@ Other formatting contexts also create anonymous boxes. [Grid layout](/en-US/docs
 
 In the following example, the line boxes following the floated `<div>` are shortened to wrap around the float. The background of the box runs behind the float, as the floated item has been taken out of flow.
 
-{{EmbedGHLiveSample("css-examples/visual-formatting/line-boxes.html", '100%', 720)}}
+```html live-sample___line-boxes
+<div class="float"></div>
+<p class="following">
+  This text is following the float, the line boxes are shortened to make room
+  for the float but the box of the element still takes position in normal flow.
+</p>
+```
+
+```css live-sample___line-boxes
+body {
+  font: 1.2em sans-serif;
+  margin: 20px;
+}
+
+.float {
+  float: left;
+  width: 150px;
+  height: 150px;
+  background-color: rebeccapurple;
+  margin: 20px;
+}
+
+.following {
+  background-color: #ccc;
+}
+```
+
+{{EmbedLiveSample("line-boxes", "", "250px")}}
 
 ## Positioning schemes and in-flow and out-of-flow elements
 
@@ -118,9 +189,47 @@ Elements either participate in the formatting context of their containing block 
 
 **Independent formatting contexts** contain floats, and margins do not collapse across formatting context boundaries. Therefore, creating a new block formatting context can ensure that floats and margins remain inside a box. To do this, add `display: flow-root` to the box on which you wish to create a new [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context).
 
-The following example shows the effect of `display: flow-root`. The box with the black background appears to wrap around the floated item and text. If you remove `display: flow-root` from the editable CSS the floated item will poke out of the bottom of the box as it is no longer contained.
+The following example shows the effect of `display: flow-root`. The box with the black background appears to wrap around the floated item and text. If you remove `display: flow-root`, the floated item will poke out of the bottom of the box as it is no longer contained.
 
-{{EmbedGHLiveSample("css-examples/display/multi-keyword/block-flow-root.html", '100%', 720)}}
+```html live-sample___block-flow-root
+<div class="container">
+  <div class="item">Floated</div>
+  <p>Text following the float.</p>
+</div>
+```
+
+```css hidden live-sample___block-flow-root
+body {
+  font: 1.2em sans-serif;
+  margin: 20px;
+}
+.container {
+  background-color: #333;
+  color: #fff;
+}
+
+.item {
+  background-color: #fff;
+  border: 1px solid #999;
+  color: #333;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+}
+```
+
+```css live-sample___block-flow-root
+.container {
+  display: flow-root;
+}
+
+.item {
+  margin: 10px;
+  float: left;
+}
+```
+
+{{EmbedLiveSample("block-flow-root", "", "250px")}}
 
 ### Block boxes
 

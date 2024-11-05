@@ -67,63 +67,15 @@ Mouse users can hold the <kbd>Ctrl</kbd>, <kbd>Command</kbd>, or <kbd>Shift</kbd
 
 Keyboard users can select multiple contiguous items by:
 
-- Focusing on the `<select>` element (e.g. using
-
-  <kbd>Tab</kbd>
-
-  ).
-
-- Selecting an item at the top or bottom of the range they want to select using the
-
-  <kbd>Up</kbd>
-
-  and
-
-  <kbd>Down</kbd>
-
-  cursor keys to go up and down the options.
-
-- Holding down the
-
-  <kbd>Shift</kbd>
-
-  key and then using the
-
-  <kbd>Up</kbd>
-
-  and
-
-  <kbd>Down</kbd>
-
-  cursor keys to increase or decrease the range of items selected.
+- Focusing on the `<select>` element (e.g. using <kbd>Tab</kbd>).
+- Selecting an item at the top or bottom of the range they want to select using the <kbd>Up</kbd> and <kbd>Down</kbd> cursor keys to go up and down the options.
+- Holding down the <kbd>Shift</kbd> key and then using the <kbd>Up</kbd> and <kbd>Down</kbd> cursor keys to increase or decrease the range of items selected.
 
 Keyboard users can select multiple non-contiguous items by:
 
-- Focusing on the `<select>` element (e.g. using
-
-  <kbd>Tab</kbd>
-
-  ).
-
-- Holding down the
-
-  <kbd>Ctrl</kbd>
-
-  key then using the
-
-  <kbd>Up</kbd>
-
-  and
-
-  <kbd>Down</kbd>
-
-  cursor keys to change the "focused" select option, i.e. the one that will be selected if you choose to do so. The "focused" select option is highlighted with a dotted outline, in the same way as a keyboard-focused link.
-
-- Pressing
-
-  <kbd>Space</kbd>
-
-  to select/deselect "focused" select options.
+- Focusing on the `<select>` element (e.g. using <kbd>Tab</kbd>).
+- Holding down the <kbd>Ctrl</kbd> key then using the <kbd>Up</kbd> and <kbd>Down</kbd> cursor keys to change the "focused" select option, i.e. the one that will be selected if you choose to do so. The "focused" select option is highlighted with a dotted outline, in the same way as a keyboard-focused link.
+- Pressing <kbd>Space</kbd> to select/deselect "focused" select options.
 
 ## Styling with CSS
 

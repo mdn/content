@@ -220,7 +220,7 @@ init();
 
 ### Advanced example
 
-This advanced example sorts several divs based on their content. The example allows sorting the content multiple times, alternating between ascending and descending order. The JavaScript loads the .xsl file only on the first sort and sets the `xslloaded` variable to true once it has finished loading the file. Using the {{domxref("XSLTProcessor.getParameter()")}} method, the code can figure whether to sort in ascending or descending order. It defaults to ascending if the parameter is empty (the first time the sorting happens, as there is no value for it in the XSLT file). The sorting value is set using {{domxref("XSLTProcessor.setParameter()")}}.
+This advanced example sorts several divs based on their content. The example allows sorting the content multiple times, alternating between ascending and descending order. The JavaScript loads the .xsl file only on the first sort and sets the `xslLoaded` variable to true once it has finished loading the file. Using the {{domxref("XSLTProcessor.getParameter()")}} method, the code can figure whether to sort in ascending or descending order. It defaults to ascending if the parameter is empty (the first time the sorting happens, as there is no value for it in the XSLT file). The sorting value is set using {{domxref("XSLTProcessor.setParameter()")}}.
 
 The XSLT file has a parameter called `myOrder` that JavaScript sets to change the sorting method. The `xsl:sort` element's order attribute can access the value of the parameter using `$myOrder`. However, the value needs to be an XPATH expression and not a string, so `{$myOrder}` is used. Using {} evaluates the content as an XPath expression.
 
@@ -247,7 +247,7 @@ Once the transformation is complete, the result is appended to the document, as 
 
 ```js
 let xslRef;
-let xslloaded = false;
+let xslLoaded = false;
 const parser = new DOMParser();
 const xsltProcessor = new XSLTProcessor();
 let myDOM;
@@ -255,12 +255,12 @@ let myDOM;
 let xmlRef = document.implementation.createDocument("", "", null);
 
 async function sort() {
-  if (!xslloaded) {
+  if (!xslLoaded) {
     const response = await fetch("example2.xsl");
     const xslText = await response.text();
     xslRef = parser.parseFromString(xslText, "application/xml");
     xsltProcessor.importStylesheet(xslRef);
-    xslloaded = true;
+    xslLoaded = true;
   }
 
   // Create a new XML document in memory

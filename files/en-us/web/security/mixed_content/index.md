@@ -16,7 +16,7 @@ Scripts are particularly dangerous because they can modify any aspect of the pag
 For example, images can be modified to give the user false or misleading information, or to change the apparent function of a button.
 
 "Mixed downloads" refer to resource downloads initiated from a secure context, but fetched over an insecure connection.
-These are share the same risks as mixed content: downloads appears to come from a secure origin, but could have been modified or viewed en-route.
+These share the same risks as mixed content: downloads appear to come from a secure origin, but could have been modified or viewed en-route.
 
 You should avoid using mixed content and mixed downloads in your websites!
 Browsers mitigate the risks of mixed content by auto-upgrading image, video, and audio mixed content requests from HTTP to HTTPS, and block insecure requests for all other resource types.
@@ -142,7 +142,7 @@ The best strategy to avoid issues with mixed content is to serve all the content
 - If using resource on other sites use HTTPS versions, if available.
 
   Most sites provide HTTPS versions of shared resources.
-  Often the easiest approach is to replace all `http://` links with `https://` and then use tools such as [linkchecker](https://linkchecker.github.io/linkchecker/) to verify that the links all work.
+  Often the easiest approach is to replace all `http://` links with `https://` and then use tools such as [LinkChecker](https://linkchecker.github.io/linkchecker/) to verify that the links all work.
 
 There are a number of ways to verify that your site is free of mixed content including:
 

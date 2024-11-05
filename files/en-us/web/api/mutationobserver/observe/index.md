@@ -166,7 +166,7 @@ function callback(mutationList) {
   });
 }
 
-const userListElement = document.querySelector("#userlist");
+const userListElement = document.querySelector("#user-list");
 
 const observer = new MutationObserver(callback);
 observer.observe(userListElement, {
