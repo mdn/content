@@ -49,6 +49,17 @@ This example shows how to define a custom property `--my-color` that does not in
 }
 ```
 
+Using [JavaScript](/en-US/docs/Web/JavaScript) {{domxref('CSS.registerProperty_static', 'CSS.registerProperty()')}}:
+
+```js
+window.CSS.registerProperty({
+  name: "--my-color",
+  syntax: "<color>",
+  inherits: false,
+  initialValue: "#c0ffee",
+});
+```
+
 ## Specifications
 
 {{Specifications}}
