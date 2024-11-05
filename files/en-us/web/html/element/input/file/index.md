@@ -53,7 +53,7 @@ In addition to the attributes listed above, the following non-standard attribute
 
 The Boolean `webkitdirectory` attribute, if present, indicates that only directories should be available to be selected by the user in the file picker interface. See {{domxref("HTMLInputElement.webkitdirectory")}} for additional details and examples.
 
-Though originally implemented only for WebKit-based browsers, `webkitdirectory` is also usable in Microsoft Edge as well as Firefox 50 and later. However, even though it has relatively broad support, it is still not standard and should not be used unless you have no alternative.
+Though originally implemented only for WebKit-based browsers, `webkitdirectory` is also usable in Firefox. However, even though it has relatively broad support, it is still not standard and should not be used unless you have no alternative.
 
 ## Unique file type specifiers
 
@@ -122,9 +122,6 @@ Each `File` object contains the following information:
   - : The file's [MIME type](/en-US/docs/Web/HTTP/MIME_types).
 - `webkitRelativePath` {{non-standard_inline}}
   - : A string specifying the file's path relative to the base directory selected in a directory picker (that is, a `file` picker in which the [`webkitdirectory`](#webkitdirectory) attribute is set). _This is non-standard and should be used with caution._
-
-> [!NOTE]
-> You can set as well as get the value of `HTMLInputElement.files` in all modern browsers; this was most recently added to Firefox, in version 57 (see [Firefox bug 1384030](https://bugzil.la/1384030)).
 
 ### Limiting accepted file types
 
@@ -436,7 +433,7 @@ The example looks like this; have a play:
       <td>
         {{domxref("HTMLElement/change_event", "change")}},
         {{domxref("Element/input_event", "input")}} and
-        {{domxref("HTMLElement/cancel_event", "cancel")}}
+        {{domxref("HTMLInputElement/cancel_event", "cancel")}}
       </td>
     </tr>
     <tr>
