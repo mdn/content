@@ -39,6 +39,7 @@ autoallocate
 autobuffering
 autocapitalization
 autoconfig
+autocorrection
 autodetection
 autofilled
 autofilling
