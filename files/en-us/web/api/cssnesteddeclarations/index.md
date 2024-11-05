@@ -28,7 +28,24 @@ _No specific methods; inherits methods from its ancestor {{domxref("CSSRule")}}.
 
 ## Examples
 
-The following JavaScript code returns an object of nested CSS styles.
+The CSS below includes a selector `.foo` with a three of rules that define it:
+
+- The first is a {{domxref("CSSStyleRule")}} object which can be returned via `document.styleSheets[0].cssRules[0]` and is equivalent to `background-color: silver`
+- The second is a {{domxref("CSSMediaRule")}} object which can be returned via `document.styleSheets[0].cssRules[0].cssRules[0]` and is equivalent to `@media (screen)`
+  - The `CSSMediaRule` object contains a `CSSNestedDeclaration` object which can be returned via `document.styleSheets[0].cssRules[0].cssRules[0].cssRules[0]` and is equivalent to `color: tomato`
+- The third is a `CSSNestedDeclaration` object which can be returned via `document.styleSheets[0].cssRules[0].cssRules[1]` and is equivalent to `color: black`
+
+```css
+.foo {
+  background-color: silver;
+  @media (screen) {
+    color: tomato;
+  }
+  color: black;
+}
+```
+
+The following JavaScript code returns a CSSNestedDeclarations object.
 
 ```js
 let myRules = document.styleSheets[0].cssRules;
