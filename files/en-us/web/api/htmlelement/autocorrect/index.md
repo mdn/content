@@ -22,7 +22,7 @@ The property reflects the value of the [`autocorrect`](/en-US/docs/Web/HTML/Glob
 
 ### Enable and disable autocorrection
 
-This example shows how you can enable and disable auto-correction.
+This example shows how you can enable and disable autocorrection.
 
 #### HTML
 
@@ -85,6 +85,8 @@ if (`autocorrect` in HTMLElement.prototype) {
 ```
 
 #### Result
+
+<!-- cSpell:ignore Carot -->
 
 Activate the button to toggle the autocorrect value. Enter invalid text into the text box, such as "Carot".
 This should be corrected automatically when the feature is enabled.
