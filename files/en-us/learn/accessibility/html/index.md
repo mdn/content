@@ -465,7 +465,7 @@ Now have a look at our [punk bands table example](https://github.com/mdn/learnin
 - The {{htmlelement("caption")}} element and the `<table>` element's `summary` attribute both do similar jobs — they act as alt text for a table, giving a screen reader user a useful quick summary of the table's contents. The `<caption>` element is generally preferred as it makes it's content accessible to sighted users too, who might also find it useful. You don't really need both.
 
 > [!NOTE]
-> See our [HTML table advanced features and accessibility](/en-US/docs/Learn/HTML/Tables/Advanced) article for more details about accessible data tables.
+> See our [HTML table accessibility](/en-US/docs/Learn_web_development/Core/Structuring_content/Table_accessibility) article for more details about accessible data tables.
 
 ## Text alternatives
 

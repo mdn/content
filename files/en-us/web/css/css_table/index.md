@@ -33,11 +33,11 @@ The properties introduced in this module aren't limited to the `<table>` element
 
   - : A guide to improving the appearance of HTML tables, covering table styling techniques.
 
-- [Learn: HTML table basics](/en-US/docs/Learn/HTML/Tables/Basics)
+- [Learn: HTML table basics](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 
-  - : An introduction to HTML tables, including the HTML for creating rows and cells, headings, making cells span multiple columns and rows, and grouping cells in a column for styling purposes.
+  - : An introduction to HTML tables, including the HTML for creating rows and cells, headings, and making cells span multiple columns and rows.
 
-- [Learn: HTML table advanced features and accessibility](/en-US/docs/Learn/HTML/Tables/Advanced)
+- [Learn: HTML table accessibility](/en-US/docs/Learn_web_development/Core/Structuring_content/Table_accessibility)
 
   - : A look at advanced HTML table features, including captions and grouping table rows into table head, body and footer sections — as well as looking at the accessibility of tables for visually impaired users.
 

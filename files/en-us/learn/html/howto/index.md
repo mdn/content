@@ -67,8 +67,8 @@ Forms are a complex HTML structure made to send data from a webpage to a web ser
 
 Some information, called tabular data, needs to be organized into tables with columns and rows. It's one of the most complex HTML structures, and mastering it is not easy:
 
-- [How to create a data table](/en-US/docs/Learn/HTML/Tables/Basics)
-- [How to make HTML tables accessible](/en-US/docs/Learn/HTML/Tables/Advanced)
+- [How to create a data table](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
+- [How to make HTML tables accessible](/en-US/docs/Learn_web_development/Core/Structuring_content/Table_accessibility)
 
 ### Data representation
 

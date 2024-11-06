@@ -21,9 +21,9 @@ Once all basic math notations are known, it remains to consider tabular layout w
           href="/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >working with files</a
         >, and HTML basics (study
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
-          >Introduction to HTML</a
-        >. and <a href="/en-US/docs/Learn/HTML/Tables"
+        <a href="/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
+          >Basic HTML syntax</a
+        >. and <a href="/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics"
           >HTML tables</a
         >)
       </td>

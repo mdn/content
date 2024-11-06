@@ -28,21 +28,12 @@ The articles below can help you learn more about HTML.
 
 ## Beginner's tutorials
 
-Our [HTML Learning Area](/en-US/docs/Learn/HTML) features multiple modules that teach HTML from the ground up — no previous knowledge required.
-
-- [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML)
-  - : This module sets the stage, getting you used to important concepts and syntax such as looking at applying HTML to text, how to create hyperlinks, and how to use HTML to structure a web page.
-- [Multimedia and embedding](/en-US/docs/Learn/HTML/Multimedia_and_embedding)
-  - : This module explores how to use HTML to include multimedia in your web pages, including the different ways that images can be included, and how to embed video, audio, and even entire other webpages.
-- [HTML tables](/en-US/docs/Learn/HTML/Tables)
-  - : Representing tabular data on a webpage in an understandable, accessible way can be a challenge. This module covers basic table markup, along with more complex features such as implementing captions and summaries.
-- [HTML forms](/en-US/docs/Learn/Forms)
-  - : Forms are a very important part of the Web — these provide much of the functionality you need for interacting with websites, e.g. registering and logging in, sending feedback, buying products, and more. This module gets you started with creating the client-side/front-end parts of forms.
-- [Use HTML to solve common problems](/en-US/docs/Learn/HTML/Howto)
-  - : Provides links to sections of content explaining how to use HTML to solve very common problems when creating a web page: dealing with titles, adding images or videos, emphasizing content, creating a basic form, etc.
+Our [Learn web development](/en-US/docs/Learn_web_development) section's [Structuring content with HTML module](Learn_web_development/Core/Structuring_content) teaches HTML from the ground up — no previous knowledge required.
 
 ## Advanced topics
 
+- [HTML forms](/en-US/docs/Learn/Forms)
+  - : Forms are a very important part of the Web — these provide much of the functionality you need for interacting with websites, e.g. registering and logging in, sending feedback, buying products, and more. This module gets you started with creating the client-side/front-end parts of forms.
 - [CORS enabled image](/en-US/docs/Web/HTML/CORS_enabled_image)
   - : The [`crossorigin`](/en-US/docs/Web/HTML/Element/img#crossorigin) attribute, in combination with an appropriate {{glossary("CORS")}} header, allows images defined by the {{HTMLElement("img")}} element to be loaded from foreign origins and used in a {{HTMLElement("canvas")}} element as if they were being loaded from the current origin.
 - [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin)

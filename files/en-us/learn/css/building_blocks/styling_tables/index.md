@@ -14,10 +14,10 @@ Styling an HTML table isn't the most glamorous job in the world, but sometimes w
       <th scope="row">Prerequisites:</th>
       <td>
         HTML basics (study
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
-          >Introduction to HTML</a
+        <a href="/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
+          >Basic HTML syntax</a
         >), knowledge of
-        <a href="/en-US/docs/Learn/HTML/Tables">HTML tables</a>, and an idea of
+        <a href="/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics">HTML tables</a>, and an idea of
         how CSS works (study CSS first steps.)
       </td>
     </tr>
