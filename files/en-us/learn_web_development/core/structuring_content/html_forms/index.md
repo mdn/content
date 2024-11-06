@@ -44,7 +44,7 @@ HTML forms and buttons are powerful tools for interacting with users — most co
   </tbody>
 </table>
 
->[!NOTE]
+> [!NOTE]
 > There are a lot of input types and form features not explicitly mentioned here; the purpose is to get a good general introduction to buttons and form elements, and learn the most common cases. The advanced/specialized cases can be studied on a need-to-know basis, as part of a web developer's constant learning throughout their career.
 
 ## Buttons
