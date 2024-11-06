@@ -12,7 +12,8 @@ Normal Flow is defined in the [CSS 2.1 specification](https://www.w3.org/TR/CSS2
 
 The behavior of elements which have a block or inline formatting context is also defined in this specification. For elements with a block formatting context, the spec says:
 
-> "In a block formatting context, boxes are laid out one after the other, vertically, beginning at the top of a containing block. The vertical distance between two sibling boxes is determined by the 'margin' properties. Vertical margins between adjacent block-level boxes in a block formatting context collapse. In a block formatting context, each box's left outer edge touches the left edge of the containing block (for right-to-left formatting, right edges touch)." - 9.4.1
+> "In a block formatting context, boxes are laid out one after the other, vertically, beginning at the top of a containing block. The vertical distance between two sibling boxes is determined by the 'margin' properties. Vertical margins between adjacent block-level boxes in a block formatting context collapse.\
+> In a block formatting context, each box's left outer edge touches the left edge of the containing block (for right-to-left formatting, right edges touch)." - 9.4.1
 
 For elements with an inline formatting context:
 
@@ -174,9 +175,9 @@ In the following example, we have three inline boxes created by a paragraph with
 
 {{EmbedLiveSample("inline")}}
 
-The boxes around the words before and after the `<strong>` element are referred to as **anonymous boxes** - boxes introduced to ensure that everything is wrapped in a box, but are boxes that we cannot target directly.
+The boxes around the words before the `<strong>` element and after the `</strong>` element are referred to as anonymous boxes, boxes introduced to ensure that everything is wrapped in a box, but ones that we cannot target directly.
 
-The line box size in the block direction (the height when working in English) is defined by the tallest box inside it. In the next example, the `<strong>` element is 300%; since that content spans two lines, it now defines the height of the line boxes of those two lines.
+The line box size in the block direction (so the height when working in English) is defined by the tallest box inside it. In the next example, the `<strong>` element is 300%; since that content spans two lines, it now defines the height of the line boxes of those two lines.
 
 ```html live-sample___line-box
 <p>
