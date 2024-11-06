@@ -46,7 +46,7 @@ Try to update the code below to recreate the finished example:
 
 ```css live-sample___type
 body {
-  font-family: sans-serif;
+  font: 1.2em / 1.5 sans-serif;
 }
 /* Add styles here */
 ```
@@ -111,7 +111,7 @@ Try to update the code below to recreate the finished example:
 
 ```css live-sample___class-id
 body {
-  font-family: sans-serif;
+  font: 1.2em / 1.5 sans-serif;
 }
 /* Add styles here */
 ```
@@ -202,7 +202,7 @@ Try to update the code below to recreate the finished example:
 
 ```css hidden live-sample___pseudo
 body {
-  font-family: sans-serif;
+  font: 1.2em / 1.5 sans-serif;
 }
 * {
   box-sizing: border-box;
@@ -298,7 +298,7 @@ Try to update the code below to recreate the finished example:
 
 ```css live-sample___combinators
 body {
-  font-family: sans-serif;
+  font: 1.2em / 1.5 sans-serif;
 }
 /* Add styles here */
 ```
@@ -349,7 +349,7 @@ Try to update the code below to recreate the finished example:
 
 ```css hidden live-sample___attribute-links
 body {
-  font-family: sans-serif;
+  font: 1.2em / 1.5 sans-serif;
 }
 
 ul {

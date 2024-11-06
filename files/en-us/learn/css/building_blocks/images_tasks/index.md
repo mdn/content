@@ -88,7 +88,7 @@ Try to update the code below to recreate the finished example:
 
 ```css live-sample___form
 body {
-  font-family: sans-serif;
+  font: 1.2em / 1.5 sans-serif;
 }
 .my-form {
   border: 2px solid #000;

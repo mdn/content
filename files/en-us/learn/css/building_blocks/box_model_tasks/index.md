@@ -30,7 +30,7 @@ Try to update the code below to recreate the finished example:
 
 ```css live-sample___box-models
 body {
-  font-family: sans-serif;
+  font: 1.2em / 1.5 sans-serif;
 }
 .box {
   border: 5px solid rebeccapurple;
@@ -86,7 +86,7 @@ Try to update the code below to recreate the finished example:
 
 ```css live-sample___mbp
 body {
-  font-family: sans-serif;
+  font: 1.2em / 1.5 sans-serif;
 }
 
 .box {
@@ -139,7 +139,7 @@ Try to update the code below to recreate the finished example:
 
 ```css live-sample___inline-block
 body {
-  font-family: sans-serif;
+  font: 1.2em / 1.5 sans-serif;
 }
 
 .box span {
