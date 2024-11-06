@@ -50,8 +50,8 @@ Inside the {{htmlelement("header")}} element, add an {{htmlelement("img")}} elem
 
 Just inside the {{htmlelement("article")}} element (right below the opening tag), embed the YouTube video found at <https://www.youtube.com/watch?v=ojcNcvb1olg>, using the appropriate YouTube tools to generate the code. The video should be 400px wide.
 
->[!NOTE]
-> This is a bit of a stretch goal, as we haven't discussed the code required to embed YouTubev videos in our course. Try looking up how to embed a YouTube video online. 
+> [!NOTE]
+> This is a bit of a stretch goal, as we haven't discussed the code required to embed YouTubev videos in our course. Try looking up how to embed a YouTube video online.
 
 ### Adding images to the further info links
 
