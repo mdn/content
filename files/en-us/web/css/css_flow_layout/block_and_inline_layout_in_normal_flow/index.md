@@ -12,8 +12,7 @@ Normal Flow is defined in the [CSS 2.1 specification](https://www.w3.org/TR/CSS2
 
 The behavior of elements which have a block or inline formatting context is also defined in this specification. For elements with a block formatting context, the spec says:
 
-> "In a block formatting context, boxes are laid out one after the other, vertically, beginning at the top of a containing block. The vertical distance between two sibling boxes is determined by the 'margin' properties. Vertical margins between adjacent block-level boxes in a block formatting context collapse.\
-> In a block formatting context, each box's left outer edge touches the left edge of the containing block (for right-to-left formatting, right edges touch)." - 9.4.1
+> "In a block formatting context, boxes are laid out one after the other, vertically, beginning at the top of a containing block. The vertical distance between two sibling boxes is determined by the 'margin' properties. Vertical margins between adjacent block-level boxes in a block formatting context collapse. In a block formatting context, each box's left outer edge touches the left edge of the containing block (for right-to-left formatting, right edges touch)." - 9.4.1
 
 For elements with an inline formatting context:
 
@@ -35,15 +34,89 @@ In this guide, we will be working in English and therefore a horizontal writing 
 
 As defined in the specification, the margins between two block boxes are what creates separation between the elements. We see this with a very simple layout of two paragraphs, to which I have added a border. The default browser stylesheet adds spacing between the paragraphs by way of adding a margin to the top and bottom.
 
-{{EmbedGHLiveSample("css-examples/flow/block-inline/normal-flow.html", '100%', 700)}}
+```html live-sample___normal-flow
+<div class="box">
+  <p>
+    One November night in the year 1782, so the story runs, two brothers sat
+    over their winter fire in the little French town of Annonay, watching the
+    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+    were noted as possessing thoughtful minds and a deep interest in all
+    scientific knowledge and new discovery.
+  </p>
+  <p>
+    Before that night—a memorable night, as it was to prove—hundreds of millions
+    of people had watched the rising smoke-wreaths of their fires without
+    drawing any special inspiration from the fact.”
+  </p>
+</div>
+```
+
+```css live-sample___normal-flow
+p {
+  border: 2px solid green;
+}
+```
+
+{{EmbedLiveSample("normal-flow", "", "200px")}}
 
 If we set margins on the paragraph element to `0` then the borders will touch.
 
-{{EmbedGHLiveSample("css-examples/flow/block-inline/normal-flow-margin-zero.html", '100%', 700)}}
+```html live-sample___normal-flow-margin-zero
+<div class="box">
+  <p>
+    One November night in the year 1782, so the story runs, two brothers sat
+    over their winter fire in the little French town of Annonay, watching the
+    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+    were noted as possessing thoughtful minds and a deep interest in all
+    scientific knowledge and new discovery.
+  </p>
+  <p>
+    Before that night—a memorable night, as it was to prove—hundreds of millions
+    of people had watched the rising smoke-wreaths of their fires without
+    drawing any special inspiration from the fact.”
+  </p>
+</div>
+```
+
+```css live-sample___normal-flow-margin-zero
+p {
+  border: 2px solid green;
+  margin: 0;
+}
+```
+
+{{EmbedLiveSample("normal-flow-margin-zero")}}
 
 By default block elements will consume all of the space in the inline direction, so our paragraphs spread out and get as big as they can inside their containing block. If we give them a width, they will continue to lay out one below the other - even if there would be space for them to be side by side. Each will start against the start edge of the containing block, so the place at which sentences would begin in that writing mode.
 
-{{EmbedGHLiveSample("css-examples/flow/block-inline/normal-flow-width.html", '100%', 700)}}
+```html live-sample___normal-flow-width
+<div class="box">
+  <p>
+    One November night in the year 1782, so the story runs, two brothers sat
+    over their winter fire in the little French town of Annonay, watching the
+    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+    were noted as possessing thoughtful minds and a deep interest in all
+    scientific knowledge and new discovery.
+  </p>
+  <p>
+    Before that night—a memorable night, as it was to prove—hundreds of millions
+    of people had watched the rising smoke-wreaths of their fires without
+    drawing any special inspiration from the fact.”
+  </p>
+</div>
+```
+
+```css live-sample___normal-flow-width
+p {
+  border: 2px solid green;
+  width: 40%;
+}
+```
+
+{{EmbedLiveSample("normal-flow-width", "", "370px")}}
 
 ### Margin collapsing
 
@@ -51,7 +124,32 @@ The spec explains that margins between block elements _collapse_. This means tha
 
 In the example below, the paragraphs have a top margin of `20px` and a bottom margin of `40px`. The size of the margin between the paragraphs is `40px` as the smaller top margin on the second paragraph has collapsed with the larger bottom margin of the first.
 
-{{EmbedGHLiveSample("css-examples/flow/block-inline/normal-flow-collapsing.html", '100%', 500)}}
+```html live-sample___normal-flow-collapsing
+<div class="box">
+  <p>
+    One November night in the year 1782, so the story runs, two brothers sat
+    over their winter fire in the little French town of Annonay, watching the
+    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+    were noted as possessing thoughtful minds and a deep interest in all
+    scientific knowledge and new discovery.
+  </p>
+  <p>
+    Before that night—a memorable night, as it was to prove—hundreds of millions
+    of people had watched the rising smoke-wreaths of their fires without
+    drawing any special inspiration from the fact.”
+  </p>
+</div>
+```
+
+```css live-sample___normal-flow-collapsing
+p {
+  border: 2px solid green;
+  margin: 20px 0 40px 0;
+}
+```
+
+{{EmbedLiveSample("normal-flow-collapsing", "", "230px")}}
 
 You can read more about margin collapsing in our article [Mastering Margin Collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing).
 
@@ -66,13 +164,35 @@ Inline elements display one after the other in the direction that sentences run 
 
 In the following example, we have three inline boxes created by a paragraph with a {{HTMLElement("strong")}} element inside it.
 
-{{EmbedGHLiveSample("css-examples/flow/block-inline/inline.html", '100%', 500)}}
+```html live-sample___inline
+<p>
+  Before that night—<strong>a memorable night</strong>, as it was to
+  prove—hundreds of millions of people had watched the rising smoke-wreaths of
+  their fires without drawing any special inspiration from the fact.”
+</p>
+```
 
-The boxes around the words before the `<strong>` element and after the `</strong>` element are referred to as anonymous boxes, boxes introduced to ensure that everything is wrapped in a box, but ones that we cannot target directly.
+{{EmbedLiveSample("inline")}}
 
-The line box size in the block direction (so the height when working in English) is defined by the tallest box inside it. In the next example, the `<strong>` element is 300%; since that content spans two lines, it now defines the height of the line boxes of those two lines.
+The boxes around the words before and after the `<strong>` element are referred to as **anonymous boxes** - boxes introduced to ensure that everything is wrapped in a box, but are boxes that we cannot target directly.
 
-{{EmbedGHLiveSample("css-examples/flow/block-inline/line-box.html", '100%', 500)}}
+The line box size in the block direction (the height when working in English) is defined by the tallest box inside it. In the next example, the `<strong>` element is 300%; since that content spans two lines, it now defines the height of the line boxes of those two lines.
+
+```html live-sample___line-box
+<p>
+  Before that night—<strong>a memorable night</strong>, as it was to
+  prove—hundreds of millions of people had watched the rising smoke-wreaths of
+  their fires without drawing any special inspiration from the fact.”
+</p>
+```
+
+```css live-sample___line-box
+strong {
+  font-size: 300%;
+}
+```
+
+{{EmbedLiveSample("line-box")}}
 
 Find out more about how Block and Inline Boxes behave in our Guide to the [Visual Formatting Model](/en-US/docs/Web/CSS/Visual_formatting_model).
 
@@ -84,7 +204,29 @@ The display type of an element defines the outer display type; this dictates how
 
 The flex items however are participating in a flex formatting context, because their parent is the element with `display: flex`, which has an inner display type of `flex`, establishing the flex formatting context for the direct children.
 
-{{EmbedGHLiveSample("css-examples/flow/block-inline/flex.html", '100%', 500)}}
+```html live-sample___flex
+<div class="container">
+  <div>Flex Item</div>
+  <div>Flex Item</div>
+  <div>
+    <div>Children</div>
+    <div>are in</div>
+    <div>normal flow</div>
+  </div>
+</div>
+```
+
+```css live-sample___flex
+.container {
+  display: flex;
+}
+
+.container > * {
+  border: 1px solid green;
+}
+```
+
+{{EmbedLiveSample("flex")}}
 
 Therefore you can think of every box in CSS working in this way. The box itself has an outer display type, so it knows how to behave alongside other boxes. It then has an inner display type which changes the way its children behave. Those children then have an outer and inner display type too. The flex items in the previous example become flex level boxes, so their outer display type is dictated by way of them being part of the flex formatting context. They have an inner display type of _flow_ however, meaning that their children participate in normal flow. Items nested inside our flex item lay themselves out as block and inline elements unless something changes their display type.
 
@@ -94,7 +236,21 @@ This concept of the outer and inner display type is important as this tells us t
 
 Browsers display items in block or inline formatting contexts based on what normally makes sense for that element. For example, a {{HTMLElement("strong")}} element is used to strongly emphasize a span of content and is displayed in bold in browsers by default. It would not generally make sense for that `<strong>` element to be displayed as a block-level element, breaking onto a new line. If you did want all `<strong>` elements to display as block boxes, you could do so by setting `strong { display: block; }`. The ability to style content with CSS means you can always use the most appropriate semantic HTML elements to mark up your content and then change how they are displayed with CSS.
 
-{{EmbedGHLiveSample("css-examples/flow/block-inline/change-formatting.html", '100%', 500)}}
+```html live-sample___change-formatting
+<p>
+  Before that night—<strong>a memorable night</strong>, as it was to
+  prove—hundreds of millions of people had watched the rising smoke-wreaths of
+  their fires without drawing any special inspiration from the fact.”
+</p>
+```
+
+```css live-sample___change-formatting
+strong {
+  display: block;
+}
+```
+
+{{EmbedLiveSample("change-formatting")}}
 
 ## Summary
 
