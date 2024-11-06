@@ -6,7 +6,7 @@ page-type: learn-module-assessment
 
 {{LearnSidebar}}
 
-The aim of these tasks is to assess whether you understand the [CSS box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model).
+The aim of this skill test is to assess whether you understand the [CSS box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model).
 
 > [!NOTE]
 > Click **"Play"** in the code blocks below to edit the examples in the MDN Playground.
