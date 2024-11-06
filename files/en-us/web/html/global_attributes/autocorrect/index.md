@@ -66,7 +66,7 @@ If auto-correction is enabled on your browser, a typo in a vegetable name should
 
 ### Enabling and disabling autocorrection
 
-This example shows how you can enable and disable auto-correction using the `autocorrect` attribute.
+This example shows how you can enable and disable autocorrection using the `autocorrect` attribute.
 
 #### HTML
 

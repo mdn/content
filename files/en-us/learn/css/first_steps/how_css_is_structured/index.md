@@ -64,16 +64,16 @@ p {
 }
 ```
 
-The `href` attribute of the {{htmlelement("link")}} element needs to reference a file on your file system. In the example above, the CSS file is in the same folder as the HTML document, but you could place it somewhere else and adjust the path. Here are three examples:
+The `href` attribute of the {{htmlelement("link")}} element needs to reference a file on a file system. In the example above, the CSS file is in the same folder as the HTML document, but you could place it somewhere else and adjust the path. Here are three examples:
 
 ```html
-<!-- Inside a subdirectory called styles inside the current directory -->
+<!-- In a subdirectory called styles in the current directory -->
 <link rel="stylesheet" href="styles/style.css" />
 
-<!-- Inside a subdirectory called general, which is in a subdirectory called styles, inside the current directory -->
+<!-- In a subdirectory called general, which is in a subdirectory called styles, in the current directory -->
 <link rel="stylesheet" href="styles/general/style.css" />
 
-<!-- Go up one directory level, then inside a subdirectory called styles -->
+<!-- Go back one directory level, then in a subdirectory called styles -->
 <link rel="stylesheet" href="../styles/style.css" />
 ```
 
@@ -169,9 +169,21 @@ p {
 
 When you find CSS that you want to experiment with, replace the HTML `<body>` contents with some HTML to style, and then add your test CSS code to your CSS file.
 
-As an alternative, you can also use the interactive editor below.
+As an alternative, you can click "Play" on the example below to open a starting point in the MDN Playground:
 
-{{EmbedGHLiveSample("css-examples/learn/getting-started/experiment-sandbox.html", '100%', 800)}}
+```html live-sample___experiment-sandbox
+<p>Create your test HTML here</p>
+```
+
+```css live-sample___experiment-sandbox
+/* Create your test CSS here */
+
+p {
+  color: red;
+}
+```
+
+{{EmbedLiveSample("experiment-sandbox")}}
 
 Read on and have fun!
 
@@ -184,8 +196,8 @@ Each CSS rule starts with a selector — or a list of selectors — in order to 
 ```css
 h1
 a:link
-.many-things
-#one-thing
+.manythings
+#onething
 *
 .box p
 .box p:first-child
