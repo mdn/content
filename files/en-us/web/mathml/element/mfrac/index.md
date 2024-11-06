@@ -77,6 +77,19 @@ The following MathML code should render as a [binomial coefficient](https://en.w
 
 {{ EmbedLiveSample('Fraction_without_bar', 700, 200, "", "") }}
 
+## Technical summary
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Roles">Implicit ARIA role</a>
+    </th>
+    <td>
+      None
+    </td>
+  </tr>
+</table>
+
 ## Specifications
 
 {{Specifications}}

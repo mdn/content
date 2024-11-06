@@ -7,12 +7,12 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc2295#section-8.1
 
 {{HTTPSidebar}}
 
-The HTTP **`506 Variant Also Negotiates`** [server error response](/en-US/docs/Web/HTTP/Status#server_error_responses) status code is returned during Transparent Content Negotiation (TCN) when there is recursive loop in the process of selecting a resource.
+The HTTP **`506 Variant Also Negotiates`** [server error response](/en-US/docs/Web/HTTP/Status#server_error_responses) status code is returned during content negotiation when there is recursive loop in the process of selecting a resource.
 
-Transparent Content Negotiation enables a client and server to collaboratively decide the best variant of a given resource when the server has multiple variants.
+[Agent-driven content negotiation](/en-US/docs/Web/HTTP/Content_negotiation#agent-driven_negotiation) enables a client and server to collaboratively decide the best variant of a given resource when the server has multiple variants.
 A server sends a `506` status code due to server misconfiguration that results in circular references when creating responses.
 
-Transparent Content Negotiation is not supported in most modern browsers due to complexity in implementations, lack of standardization of how clients automatically choose from responses, and the additional round-trips that slow down client-server interaction.
+Lack of standardization of how clients automatically choose from responses, and the additional round-trips that slow down client-server interaction mean this mechanism is rarely used.
 [Server-driven content negotiation](/en-US/docs/Web/HTTP/Content_negotiation#server-driven_content_negotiation) is far more common, where a server directly chooses the most appropriate resource for the client based on the request headers ({{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Accept")}}, etc.).
 
 ## Status

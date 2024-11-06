@@ -49,7 +49,7 @@ keys(request, options)
         and `HEAD` are allowed.) It defaults to `false`.
     - `ignoreVary`
       - : A boolean value that, when set to
-        `true,` tells the matching operation not to perform `VARY`
+        `true`, tells the matching operation not to perform `VARY`
         header matching. In other words, if the URL matches you will get a match
         regardless of whether the {{domxref("Response")}} object has a `VARY`
         header. It defaults to `false`.

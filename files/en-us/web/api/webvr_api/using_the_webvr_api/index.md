@@ -114,7 +114,7 @@ To begin with, `start()` retrieves a WebGL context to use to render 3D graphics 
 
 ```js
 function start() {
-  canvas = document.getElementById("glcanvas");
+  canvas = document.getElementById("gl-canvas");
 
   initWebGL(canvas);      // Initialize the GL context
 

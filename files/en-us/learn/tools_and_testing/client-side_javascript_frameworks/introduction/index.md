@@ -171,7 +171,7 @@ The vanilla JavaScript approach to building out new DOM elements in repetition w
 ```html
 <ul>
   <li v-for="task in tasks" v-bind:key="task.id">
-    <span>\{{task.name\}}</span>
+    <span>\{{task.name}}</span>
     <button type="button">Delete</button>
   </li>
 </ul>

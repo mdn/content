@@ -318,7 +318,7 @@ textarea:focus {
 
 Now that our text fields are complete, we need to adjust the display of the single and multiple-line text fields to match, since they won't typically look the same using the defaults.
 
-#### Tweaking the textareas
+#### Tweaking the text areas
 
 {{HTMLElement("textarea")}} elements default to being rendered as an inline-block element. The two important things here are the {{cssxref("resize")}} and {{cssxref("overflow")}} properties. While our design is a fixed-size design, and we could use the `resize` property to prevent users from resizing our multi-line text field, it is best to not prevent users from resizing a textarea if they so choose. The {{cssxref("overflow")}} property is used to make the field render more consistently across browsers. Some browsers default to the value `auto`, while some default to the value `scroll`. In our case, it's better to be sure everyone will use `auto`:
 

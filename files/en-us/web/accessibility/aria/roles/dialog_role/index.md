@@ -137,8 +137,6 @@ When the dialog is correctly labeled and focus is moved to an element (often an 
 
 {{Specifications}}
 
-Coming soon
-
 ## See also
 
 - [ARIA: alertdialog role](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)

@@ -102,7 +102,7 @@ Where:
 ### Setting an image
 
 ```css
-.exampleone {
+.example-one {
   -webkit-mask-box-image: url("mask.png");
 }
 ```
@@ -110,7 +110,7 @@ Where:
 ### Offsetting and filling an image
 
 ```css
-.exampletwo {
+.example-two {
   -webkit-mask-box-image: url("logo.png") 100 100 0 0 round round;
 }
 ```

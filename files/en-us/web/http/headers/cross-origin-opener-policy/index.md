@@ -7,7 +7,7 @@ browser-compat: http.headers.Cross-Origin-Opener-Policy
 
 {{HTTPSidebar}}
 
-The HTTP **`Cross-Origin-Opener-Policy`** (COOP) response header allows you to ensure a top-level document does not share a browsing context group with cross-origin documents.
+The HTTP **`Cross-Origin-Opener-Policy`** (COOP) {{Glossary("response header")}} allows you to ensure a top-level document does not share a browsing context group with cross-origin documents.
 
 COOP will process-isolate your document and potential attackers can't access your global object if they were to open it in a popup, preventing a set of cross-origin attacks dubbed [XS-Leaks](https://github.com/xsleaks/xsleaks).
 
@@ -21,7 +21,7 @@ If a cross-origin document with COOP is opened in a new window, the opening docu
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -80,4 +80,4 @@ if (crossOriginIsolated) {
 
 ## See also
 
-- {{httpheader("Cross-Origin-Embedder-Policy")}}
+- {{HTTPHeader("Cross-Origin-Embedder-Policy")}}

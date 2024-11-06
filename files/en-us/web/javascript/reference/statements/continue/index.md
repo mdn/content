@@ -85,14 +85,14 @@ Output:
 ```plain
 i: 0
 
-// start checkj
+// start checkJ
 j: 8
 7 is odd.
 j: 7
 j: 6
 5 is odd.
 j: 5
-// end checkj
+// end checkJ
 
 i = 1
 j = 4

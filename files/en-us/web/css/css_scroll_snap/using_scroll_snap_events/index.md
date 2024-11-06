@@ -327,7 +327,7 @@ main {
 }
 ```
 
-Next, we are going to use CSS animations in this example instead of transtions. This results in more complex code, but enables more fine-grained control over the animations applied.
+Next, we are going to use CSS animations in this example instead of transitions. This results in more complex code, but enables more fine-grained control over the animations applied.
 
 We first define the classes that will be applied to signal that a snap target selection has been made or is pending. The `select-section` and `deselect-section` classes will apply keyframe animations to signify a selection or deselection. The `pending` class will be applied to signify a pending snap target selection (it applies a darker gray background to the selection, as in the previous example).
 

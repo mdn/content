@@ -65,7 +65,7 @@ async function loadImage(url, elem) {
 
 async function lightBox(url) {
   lightboxElem.style.display = "block";
-  await loadImage("https://somesite.net/huge-image.jpg", lightboxImgElem);
+  await loadImage("https://some-site.net/huge-image.jpg", lightboxImgElem);
   lightboxControlsElem.disabled = false;
 }
 

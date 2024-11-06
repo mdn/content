@@ -77,11 +77,11 @@ const element = document.querySelector("div#scroll-box");
 const output = document.querySelector("p#output");
 
 element.addEventListener("scroll", (event) => {
-  output.textContent = "Scroll event fired, waiting for scrollend...";
+  output.textContent = "scroll event fired, waiting for scrollend...";
 });
 
 element.addEventListener("scrollend", (event) => {
-  output.textContent = "Scrollend event fired!";
+  output.textContent = "scrollend event fired!";
 });
 ```
 

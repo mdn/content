@@ -42,7 +42,7 @@ The example below shows how to get the text selected in an {{HTMLElement("textar
 ```html
 <div>
   Enter and select text here:<br /><textarea
-    id="mytext"
+    id="my-text"
     rows="2"
     cols="20"></textarea>
 </div>
@@ -54,12 +54,12 @@ The example below shows how to get the text selected in an {{HTMLElement("textar
 ### JavaScript
 
 ```js
-const myinput = document.getElementById("mytext");
+const myInput = document.getElementById("my-text");
 
-myinput.addEventListener("selectionchange", () => {
-  document.getElementById("start").textContent = myinput.selectionStart;
-  document.getElementById("end").textContent = myinput.selectionEnd;
-  document.getElementById("direction").textContent = myinput.selectionDirection;
+myInput.addEventListener("selectionchange", () => {
+  document.getElementById("start").textContent = myInput.selectionStart;
+  document.getElementById("end").textContent = myInput.selectionEnd;
+  document.getElementById("direction").textContent = myInput.selectionDirection;
 });
 ```
 
