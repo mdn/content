@@ -60,7 +60,6 @@ xx
 - Going back to the argument for semantic HTML (see also 2.2 Good document structure), you should understand why it is important to use the right element for the right job. For example, use a `<button>` to submit your form, and not a `<div>` programmed to behave like a `<button>`.
 - Understand the features programmed into `<button>`s and form elements by the browser by default, and how important they are. Examples include keyboard accessibility, focus outlines, and semantic meaning for AT to identify the elements and communicate their meaning.
 
-
 ## Other control types
 
 xx
