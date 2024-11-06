@@ -24,7 +24,7 @@ symbols: indic-numbers;
 The `symbols` descriptor is specified as a list of one or more space-separated `<symbol>` values.
 
 - `<symbol>`
-  - : Specifies the symbol to use within the counter system. Each symbol in the list can be either a {{cssxref("&lt;string&gt;")}}, an {{cssxref("&lt;image&gt;")}}, or a {{cssxref("&lt;custom-ident&gt;")}}. The `<image>` value can, in turn, be specified as a {{cssxref("&lt;url&gt;")}} or {{cssxref("&lt;gradient&gt;")}}.
+  - : Specifies the symbol to use within the counter system. Each symbol in the list can be either a {{cssxref("&lt;string&gt;")}}, an {{cssxref("&lt;image&gt;")}}, or a {{cssxref("&lt;custom-ident&gt;")}}. The `<image>` value can, in turn, be specified as a {{cssxref("url_value", "&lt;url&gt;")}} or {{cssxref("&lt;gradient&gt;")}}.
 
 > [!NOTE]
 > When using an {{glossary("identifier")}} for a symbol, note that {{glossary("ASCII")}} non-letters such as `*`, `"`, and `\` are not considered identifiers. They must be either quoted as a string or escaped.
