@@ -51,7 +51,6 @@ Before starting this module, you don't need any previous HTML knowledge, but you
   - : In this article we look at more HTML table accessibility features such as captions/summaries, grouping your rows into table head, body and footer sections, and scoping columns and rows.
 - [Structuring a planet data table](/en-US/docs/Learn_web_development/Core/Structuring_content/Planet_data_table) <sup>Challenge</sup>
   - : In this challenge, we provide you with some data on the planets in our solar system. Your job is to structure it into an accessible HTML table.
-  
 
 ## See also
 
