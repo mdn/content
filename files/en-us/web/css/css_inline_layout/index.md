@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-inline
 
 {{CSSRef}}
 
-The **CSS inline layout** module defines the block-axis alignment and sizing of inline-level content, and adds a special layout mode for drop-caps. It describes the CSS formatting model for a flow of elements and text inside of a container to be wrapped into lines.
+The **CSS inline layout** module defines the block-axis alignment and sizing of inline-level content and adds a special layout mode for drop-caps. It describes the CSS formatting model for a flow of elements and text inside a container to be wrapped across multiple lines.
 
 ## Reference
 
