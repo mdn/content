@@ -21,3 +21,7 @@ A boolean value that is `true` if the picture-in-picture feature is disabled for
 ## Browser compatibility
 
 {{Compat}}
+
+## Overrides
+
+FireFox users can decide to ignore the request to disable PiP by changing the `media.videocontrols.picture-in-picture.respect-disablePictureInPicture` setting.
