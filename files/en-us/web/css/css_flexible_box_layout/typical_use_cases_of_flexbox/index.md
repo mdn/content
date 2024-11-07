@@ -159,7 +159,7 @@ nav ul {
 
 A long-standing joke among developers is that the hardest problem in web design is vertical centering. Vertically centering content is very straightforward with flexbox alignment properties, as the following live example shows.
 
-You can play with the alignment, aligning the item to the start with `start` or end with `end`.
+Click **"Play"** and try changing the alignment, for example aligning the item to the start with `start` or end with `end`:
 
 ```html live-sample___center
 <div class="box">
@@ -387,15 +387,14 @@ Flexbox makes this type of layout easy to achieve. The `<label>`, `<input>` and 
 ```
 
 ```css live-sample___label-input-button
-body {
-  font: 1.2em sans-serif;
+* {
+  font: 1.1em sans-serif;
 }
 
 .wrapper {
   display: flex;
   border: 1px solid rgb(96 139 168);
 }
-
 .wrapper > * {
   padding: 10px;
   border: none;
