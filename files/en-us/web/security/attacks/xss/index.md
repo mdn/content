@@ -128,11 +128,46 @@ For example, a website might include a blog that allows comments. Since anyone c
 
 ### DOM-based XSS
 
-A DOM-based XSS attack happens when a website's front-end takes some input that could have been crafted by an attacker, and without sanitizing it, passes it to an API that could result in the input becoming executable. APIs like this are referred to as _sinks_.
+A DOM-based XSS attack happens when a website's front-end takes some input that could have been crafted by an attacker, and without sanitizing it, passes it to an API that could result in the input becoming executable. APIs like this are referred to as _injection sinks_.
 
-The first XSS example we saw in this page is an example of DOM-based XSS, in which the sink is the {{domxref("Element.innerHTML")}} property. Some, like `innerHTML`, modify the DOM, and can make their input executable by injecting {{htmlelement("script")}} tags, `javascript:` URLs, or inline event handlers. Others, like [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval), directly execute their arguments as JavaScript.
+The first XSS example we saw in this page is an example of DOM-based XSS, in which the injection sink is the {{domxref("Element.innerHTML")}} property.
+
+Some injection sinks modify the DOM, and can make input executable by injecting {{htmlelement("script")}} tags, `javascript:` URLs, or inline event handlers. For example:
+
+- {{domxref("Element.innerHTML")}}
+- {{domxref("Element.outerHTML")}}
+- {{domxref("Element.insertAdjacentHTML()")}}
+- {{domxref("Document.write()")}}
+
+Other injection sinks directly execute their arguments as JavaScript. For example:
+
+- [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)
+- {{domxref("Window.setTimeout()")}} and {{domxref("Window.setInterval()")}}
+
+APIs provided by third-party frameworks or libraries can also contain injection sinks. For example:
+
+- [`dangerouslySetInnerHTML()`](https://react.dev/reference/react-dom/components/common#dangerously-setting-the-inner-html) in React
+- [`html()`](https://api.jquery.com/html/) in jQuery
 
 ### Client versus server XSS
+
+Alongside the three categories described above — reflected, stored, and DOM-based XSS — is a different but overlapping taxonomy, which distinguishes attacks based on whether they take place in the server side or the client side of a website.
+
+DOM-based XSS is always a client-side attack, but reflected and stored XSS may be either server-side or client-side, depending on the website's architecture.
+
+For example, consider a stored XSS attack which uses blog post comments to inject malicous code.
+
+In one architecture, the user navigates to the blog post by following a normal link. The browser makes an HTTP GET request to the server, which retrieves the blog post and comments from a database, then feeds them into a template to construct the response as an HTML document. The browser receives the HTML document containing the malicious code, and renders it.
+
+![Diagram of server-side XSS](server-side-xss.svg)
+
+In an alternative architecture, the website is implemented as a {{glossary("SPA", "single-page app")}}. When the user navigates to the blog post, the navigation is handled by the front-end JavaScript code. This code might get the blog post and comments from the server as JSON using the {{domxref("Window.fetch()", "fetch()")}} API, and then render them as HTML client-side.
+
+![Diagram of client-side XSS](client-side-xss.svg)
+
+Although the attack and the result are the same in both cases, the point at which the malicious code is introduced into the HTML document is different: in the first case, it's the server code that is failing to sanitize the blog post comments before including them in the document, and in the second case, it's the front-end code. Note that in the second case, the attack is a stored XSS attack _and_ a DOM-based attack.
+
+The distinction between server and client XSS matters because effective defenses against XSS are different depending on where the vulnerability is.
 
 ## Defenses against XSS
 
