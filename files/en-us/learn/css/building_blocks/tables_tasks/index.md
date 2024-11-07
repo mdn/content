@@ -31,6 +31,8 @@ Our finished table will look like the image below. There are a number of ways th
 
 ![A table with striped rows.](mdn-table-bands.png)
 
+**Bonus question:** What can you do to make the table layout behave a bit more predictably? Think of how table columns are sized by default and how we can change this behavior to size the columns according to the width of their headings.
+
 Try to update the code below to recreate the finished example:
 
 ```html live-sample___table
@@ -117,7 +119,7 @@ body {
 /* Add styles here */
 ```
 
-{{EmbedLiveSample("table")}}
+{{EmbedLiveSample("table", "", "400px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -129,7 +131,6 @@ table {
   border-top: 1px solid #999;
   border-bottom: 1px solid #999;
   border-collapse: collapse;
-  table-layout: fixed;
 }
 
 th,
@@ -165,9 +166,16 @@ tfoot tr :nth-child(2) {
 }
 ```
 
-</details>
+For the bonus question, you can make the table layout more predictable by adding {{cssxref("table-layout")}} with a value of [`fixed`](/en-US/docs/Web/CSS/table-layout#fixed) and an explicit `width`:
 
-**Bonus question:** What can you do to make the table layout behave a bit more predictably? Think of how table columns are sized by default and how we can change this behavior to size the columns according to the width of their headings.
+```css
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+```
+
+</details>
 
 ## See also
 
