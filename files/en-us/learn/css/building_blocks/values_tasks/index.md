@@ -186,7 +186,7 @@ Try to update the code below to recreate the finished example:
 
 ```css live-sample___position
 .box {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/star-pink_256x256.png);
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/purple-star.png);
   background-repeat: no-repeat;
 }
 ```
@@ -200,7 +200,7 @@ Use `background-position` with ther `center` keyword and a percentage:
 
 ```css
 .box {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/star-pink_256x256.png);
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/purple-star.png);
   background-repeat: no-repeat;
   background-position: center 20%;
 }

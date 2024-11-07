@@ -42,7 +42,7 @@ body {
 }
 ```
 
-{{EmbedLiveSample("writing-mode", "", "400px")}}
+{{EmbedLiveSample("writing-mode", "", "250px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
