@@ -375,7 +375,7 @@ a {
 /* Add styles here */
 ```
 
-{{EmbedLiveSample("attribute-links", "", "250px")}}
+{{EmbedLiveSample("attribute-links", "", "300px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
