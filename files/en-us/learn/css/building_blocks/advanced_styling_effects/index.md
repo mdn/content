@@ -34,8 +34,6 @@ This article acts as a box of tricks, providing an introduction to some interest
 
 {{cssxref("box-shadow")}} allows you to apply one or more drop shadows to an element's box. Like text shadows, box shadows are supported pretty well across browsers, including IE9+ and Edge. Users of older IE versions might just have to cope with no shadows, so just test your designs to make sure your content is legible without them.
 
-You can find the examples in this section at [box-shadow.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/box-shadow.html) (see the [source code](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/advanced_box_effects/box-shadow.html) too).
-
 ### A simple box shadow
 
 Let's look at a simple example to get things started. First, some HTML:
@@ -431,21 +429,46 @@ The `circle()` function is just one of a few basic shapes that are defined, howe
 
 ## -webkit-background-clip: text
 
-Another feature we thought we'd mention briefly is the `text` value for {{cssxref("background-clip")}}. When used along with the proprietary `-webkit-text-fill-color: transparent;` feature, this allows you to clip background images to the shape of the element's text, making for some nice effects. This is not an official standard, but has been implemented across multiple browsers, as it is popular, and used fairly widely by developers. When used in this context, both of the properties would require a `-webkit-` vendor prefix, even for Non-Webkit/Chrome-based browsers:
+Another feature we thought we'd mention briefly is the `text` value for {{cssxref("background-clip")}}. When used along with the proprietary `-webkit-text-fill-color: transparent;` feature, this allows you to clip background images to the shape of the element's text, making for some nice effects. This is not an official standard, but has been implemented across multiple browsers, as it is popular, and used fairly widely by developers. When used in this context, both of the properties would require a `-webkit-` vendor prefix, even for non-Webkit/Chrome-based browsers.
+You can see this in action in the live sample below:
 
-```css
+```html live-sample___webkit-background-clip
+<h2>WOW</h2>
+<h2 class="text-clip">WOW</h2>
+```
+
+```css hidden live-sample___webkit-background-clip
+body {
+  font-family: impact, sans-serif;
+}
+
+h2 {
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  line-height: 250px;
+  font-size: 50px;
+}
+```
+
+```css live-sample___webkit-background-clip
+h2 {
+  color: white;
+  display: inline-block;
+  background: url(colorful-heart.png) no-repeat center;
+}
+
 .text-clip {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 ```
 
+{{EmbedLiveSample("webkit-background-clip", "", "340px")}}
+
 So why have other browsers implemented a `-webkit-` prefix? Mainly for browser compatibility — so many web developers have started implementing websites with `-webkit-` prefixes that it started to look like the other browsers were broken, whereas in actual fact they were following the standards. So they were forced to implement a few such features. This highlights the danger of using non-standard and/or prefixed CSS features in your work — not only do they cause browser compatibility issues, but they are also subject to change, so your code could break at any time. It is much better to stick to the standards.
 
 If you do want to use such features in your production work, make sure to test across browsers thoroughly and check that, where these features don't work, the site is still usable.
-
-> [!NOTE]
-> For a full `-webkit-background-clip: text` code example, see [background-clip-text.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html) (see also the [source code](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/advanced_box_effects/background-clip-text.html)).
 
 ## Summary
 
