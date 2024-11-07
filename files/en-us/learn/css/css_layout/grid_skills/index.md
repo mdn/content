@@ -246,7 +246,7 @@ Try to update the code below to recreate the finished example:
   <div class="card">
     <img
       alt="a single red balloon"
-      src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+      src="https://mdn.github.io/shared-assets/images/examples/balloons1.jpg" />
     <ul class="tags">
       <li>balloon</li>
       <li>red</li>
@@ -258,7 +258,7 @@ Try to update the code below to recreate the finished example:
   <div class="card">
     <img
       alt="balloons over some houses"
-      src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+      src="https://mdn.github.io/shared-assets/images/examples/balloons2.jpg" />
     <ul class="tags">
       <li>balloons</li>
       <li>houses</li>
@@ -269,7 +269,7 @@ Try to update the code below to recreate the finished example:
   <div class="card">
     <img
       alt="close-up of balloons inflating"
-      src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+      src="https://mdn.github.io/shared-assets/images/examples/balloons3.jpg" />
     <ul class="tags">
       <li>balloons</li>
       <li>inflating</li>
@@ -280,7 +280,7 @@ Try to update the code below to recreate the finished example:
   <div class="card">
     <img
       alt="a balloon in the sun"
-      src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+      src="https://mdn.github.io/shared-assets/images/examples/balloons4.jpg" />
     <ul class="tags">
       <li>balloon</li>
       <li>sun</li>
