@@ -146,7 +146,8 @@ In this example, we include the same two fonts as in the example above, but we s
 #### CSS
 
 We include two `@font-face` declarations for two different fonts, with the second font's font-weight range matching a subset of the first font's range.
-The `@font-face` declarations must be written in this order due to the CSS [cascade](/en-US/docs/Web/CSS/Cascade); otherwise the larger range would override the smaller substet declaration.
+The `@font-face` declarations must be included (If omitted, the `font-weight` descriptor defaults to `400`) and must be written in this order due to the CSS [cascade](/en-US/docs/Web/CSS/Cascade); otherwise the larger range would override the smaller subset declaration.
+Note that we declared more that one font using the same font name.
 
 ```css
 @font-face {
@@ -187,65 +188,61 @@ While `font-weight: 500` is generally bolder than `font-weight: 300`, only the `
 
 ### Setting a range for a variable font
 
-In this example we include a variable font, ["League Mono"](https://www.theleagueofmoveabletype.com/league-mono), using a single `@font-face` at-rule. We've used a `font-weight: 300 700` value to effectively limit the range of weights that are available. If a CSS rule uses our "League Mono" font, then if it specifies a weight outside this range the weight it gets is clamped to the range.
-
-To show the effect of this we've included another font using "League Mono" that does not set the `font-weight` descriptor, and we've called this "League Mono-complete".
+In this example, you can change the font size of the variable font. We include ["League Mono"](https://www.theleagueofmoveabletype.com/league-mono), using a single `@font-face` at-rule. We've used a `font-weight: 300 700` value which effectively limits the range of weights that are available.
+When the `font-weight` property is specifies a weight outside this range the weight it gets is clamped to the range.
 
 #### HTML
 
+We include a paragraph with `<output>` initially set to `400`, as that is the the default font-weight for unstyled paragraph text.
+We also include an input of type range, setting the `step` to `50`.
+
 ```html
-<p class="one">Fire Sans Regular, font-weight 200</p>
-<p class="two">League Mono, font-weight 400</p>
-<p class="three">League Mono, font-weight 600</p>
-<p class="four">Fire Sans Regular, font-weight 800</p>
+<p>LeagueMono, font-weight: <output>400</output></p>
+<label
+  >Change the font size:
+  <input type="range" min="50" max="1000" step="50" value="400" />
+</label>
 ```
 
 #### CSS
 
+We set the `font-weight` descriptor range to `300 700`, clamping the variable font to that range.
+
 ```css
 @font-face {
-  font-family: "NamedFont";
-  src: url("https://mdn.github.io/shared-assets/fonts/FiraSans-Regular.woff2");
-}
-
-@font-face {
-  font-family: "NamedFont";
+  font-family: LeagueMono;
   src: url("https://mdn.github.io/shared-assets/fonts/LeagueMono-VF.ttf");
   font-weight: 300 700;
 }
 
 p {
-  font-family: "NamedFont", serif;
+  font-family: LeagueMono, serif;
   font-size: 1.5rem;
 }
+```
 
-p.one {
-  font-weight: 200;
-}
+#### JavaScript
 
-p.two {
-  font-weight: 400;
-}
+We include an event handler that updates the `font-weight` of the paragraph, and updates the text to reflect that value:
 
-p.three {
-  font-weight: 600;
-}
+```JavaScript
+const text = document.querySelector("p");
+const log = document.querySelector("output");
+const range = document.querySelector("input");
 
-p.four {
-  font-weight: 800;
-}
+range.addEventListener("change", () => {
+  text.style.fontWeight = range.value;
+  log.innerText = range.value;
+});
 ```
 
 #### Result
 
-The result of this is:
-
-- Setting the `font-weight` property to `200` gets a `normal` version of FireSans.
-- Setting the `font-weight` property to `400` gets "League Mono" at a weight of 400.
-- Setting the `font-weight` property to `600` gets "League Mono" at a weight of 600.
-- Setting the `font-weight` property to `800` gets a boldened version of "FireSans".
-
 {{embedlivesample("Setting a range for a variable font", "", "400")}}
+
+Change the font weight of the paragraph via the range.
+Notice that any value less than `300` is display at `300` and
+any value above `700` is displayed at `700`.
 
 ## Specifications
 
