@@ -35,6 +35,6 @@ console.log(selectElement.size);
 ## See also
 
 - {{HTMLElement("select")}}
-- {{HTMLElement("options")}}
+- {{HTMLElement("option")}}
 - {{DOMXref("HTMLSelectElement.selectedOptions")}}
 - {{DOMXref("HTMLSelectElement.length")}}

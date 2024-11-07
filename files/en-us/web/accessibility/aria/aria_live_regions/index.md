@@ -142,7 +142,7 @@ Elements with the following [`role="…"`](/en-US/docs/Web/Accessibility/ARIA/Ro
   </tr>
   <tr>
    <td>alert</td>
-   <td>Error or warning message that flashes on the screen. Alerts are particularly important for client side validation notices to users. <a href="https://www.w3.org/WAI/ARIA/apg/example-index/alert/alert.html" class="external" rel=" noopener">Alert Example.</a></td>
+   <td>Error or warning message that flashes on the screen. Alerts are particularly important for client side validation notices to users. <a href="https://www.w3.org/WAI/ARIA/apg/example-index/alert/alert.html" class="external" rel="noopener">Alert Example.</a></td>
    <td>To maximize compatibility, some people recommend adding a redundant <code>aria-live="assertive"</code> when using this role. However, adding both <code>aria-live</code> and <code>role="alert"</code> causes double speaking issues in VoiceOver on iOS.</td>
   </tr>
   <tr>

@@ -462,7 +462,7 @@ The individual properties include the {{cssxref("border-width")}}, {{cssxref("bo
 }
 ```
 
-There are longhand properities for width, style, and color for each of the four sides:
+There are longhand properties for width, style, and color for each of the four sides:
 
 ```css
 .box {

@@ -61,6 +61,8 @@ This example animates a small model of our solar system.
 const sun = new Image();
 const moon = new Image();
 const earth = new Image();
+const ctx = document.getElementById("canvas").getContext("2d");
+
 function init() {
   sun.src = "canvas_sun.png";
   moon.src = "canvas_moon.png";
@@ -69,8 +71,6 @@ function init() {
 }
 
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
-
   ctx.globalCompositeOperation = "destination-over";
   ctx.clearRect(0, 0, 300, 300); // clear canvas
 

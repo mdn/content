@@ -7,10 +7,9 @@ browser-compat: http.headers.Content-Security-Policy-Report-Only
 
 {{HTTPSidebar}}
 
-The HTTP **`Content-Security-Policy-Report-Only`** response header allows web developers to send CSP violation reports to experiment with policies by monitoring (but not enforcing) their effects.
-This allows CSP violations to be caught and repaired quickly during testing.
+The HTTP **`Content-Security-Policy-Report-Only`** {{Glossary("response header")}} helps to monitor Content Security Policy (CSP) violations and their effects without enforcing the security policies.
+This header allows you to test or repair violations before a specific {{HTTPHeader("Content-Security-Policy")}} is applied and enforced.
 
-`Content-Security-Policy-Report-Only` is used in the same way as {{httpheader("Content-Security-Policy")}} but violations are not enforced.
 The CSP {{CSP("report-to")}} directive must be specified for reports to be sent: if not, the operation won't have any effect.
 
 Violation reports are sent using the [Reporting API](/en-US/docs/Web/API/Reporting_API) to endpoints defined in a {{HTTPHeader("Reporting-Endpoints")}} HTTP response header and selected using the CSP {{CSP("report-to")}} directive.
@@ -29,7 +28,7 @@ For more information, see our [Content Security Policy (CSP)](/en-US/docs/Web/HT
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
     <tr>
       <th colspan="2" scope="row">
@@ -42,25 +41,28 @@ For more information, see our [Content Security Policy (CSP)](/en-US/docs/Web/HT
 ## Syntax
 
 ```http
-Content-Security-Policy-Report-Only: <policy-directive>; ...; <policy-directive>; report-to <endpoint-name>
+Content-Security-Policy-Report-Only: <policy-directive>; …; <policy-directive>; report-to <endpoint-name>
 ```
 
 ## Directives
 
-The directives of the {{HTTPHeader("Content-Security-Policy")}} header can also be applied to `Content-Security-Policy-Report-Only`, except for the `sandbox` directive, which will be ignored.
+The `Content-Security-Policy-Report-Only` header supports all {{HTTPHeader("Content-Security-Policy")}} directives except `sandbox`, which is ignored.
 
-The CSP {{CSP("report-to")}} directive should be used with this header or it will have no effect.
+> [!NOTE]
+> The CSP {{CSP("report-to")}} directive should be used with this header or it will have no effect.
 
 ## Examples
 
-To use the {{CSP("report-to")}} directive, you first need to define a corresponding endpoint using the {{httpheader("Reporting-Endpoints")}} HTTP response header.
-In the example below we define a single endpoint named `csp-endpoint`.
+### Using Content-Security-Policy-Report-Only to send CSP reports
+
+To use the {{CSP("report-to")}} directive, you first need to define a corresponding endpoint using the {{HTTPHeader("Reporting-Endpoints")}} response header.
+In the example below, we define a single endpoint named `csp-endpoint`.
 
 ```http
 Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports"
 ```
 
-We might then define the destination of the report using {{CSP("report-to")}} and {{CSP("report-uri")}}, as shown below.
+We can then define the destination of the report using {{CSP("report-to")}} and {{CSP("report-uri")}}, as shown below.
 Note that this particular report would be triggered if the page loaded resources insecurely, or from inline code.
 
 ```http
