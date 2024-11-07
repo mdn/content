@@ -20,7 +20,7 @@ There are many other elements in HTML for defining text semantics, which we didn
           >Basic HTML Syntax</a
         >. Text-level semantics such as <a href="/en-US/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
           >headings and paragraphs</a
-        > and <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        > and <a href="/en-US/docs/Learn_web_development/Core/Structuring_content/Lists"
           >lists</a
         >.
       </td>
@@ -577,7 +577,9 @@ The basic example above just provides a simple machine readable date, but there 
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Advanced HTML text](/en-US/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Advanced_HTML_text).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Advanced HTML text](/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_Advanced_HTML_text).
+
+
 
 ## Summary
 

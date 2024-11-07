@@ -20,7 +20,7 @@ Now that we are comfortable with adding simple images to a webpage, the next ste
           >Basic HTML Syntax</a
         >. Text-level semantics such as <a href="/en-US/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
           >headings and paragraphs</a
-        > and <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        > and <a href="/en-US/docs/Learn_web_development/Core/Structuring_content/Lists"
           >lists</a
         >.
       </td>
@@ -48,7 +48,7 @@ We won't be teaching you how to produce audio and video files — that requires 
 > [!NOTE]
 > Before you begin here, you should also know that there are quite a few OVPs (online video providers) like [YouTube](https://www.youtube.com/), [Dailymotion](https://www.dailymotion.com/), and [Vimeo](https://vimeo.com/), and online audio providers like [Soundcloud](https://soundcloud.com/). Such companies offer a convenient, easy way to host and consume videos, so you don't have to worry about the enormous bandwidth consumption. OVPs even usually offer ready-made code for embedding video/audio in your webpages; if you use that route, you can avoid some of the difficulties we discuss in this article. We'll be discussing this kind of service a bit more in the next article.
 
-### The \<video> element
+## The \<video> element
 
 The {{htmlelement("video")}} element allows you to embed a video very easily. A really simple example looks like this:
 
@@ -76,11 +76,11 @@ The embedded video will look something like this:
 
 You can [try the example live](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/simple-video.html) here (see also the [source code](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/video-and-audio-content/simple-video.html).)
 
-### Using multiple source formats to improve compatibility
+## Using multiple source formats to improve compatibility
 
 There's a problem with the above example. It is possible that the video might not play for you, because different browsers support different video (and audio) formats. Fortunately, there are things you can do to help prevent this from being an issue.
 
-#### Contents of a media file
+### Contents of a media file
 
 First, let's go through the terminology quickly. Formats like MP3, MP4 and WebM are called **[container formats](/en-US/docs/Web/Media/Formats/Containers)**. They define a structure in which the audio and/or video tracks that make up the media are stored, along with metadata describing the media, what codecs are used to encode its channels, and so forth.
 
@@ -102,7 +102,7 @@ Another such situation is the always-popular MP3 file. An "MP3 file" is actually
 
 An audio player will tend to play an audio track directly, e.g. an MP3 or Ogg file. These don't need containers.
 
-#### Media file support in browsers
+### Media file support in browsers
 
 > [!NOTE]
 > Several popular formats, such as MP3 and MP4/H.264, are excellent but are encumbered by patents; that is, there are patents covering some or all of the technology that they're based upon. In the United States, patents covered MP3 until 2017, and H.264 is encumbered by patents through at least 2027.
@@ -136,7 +136,7 @@ Each `<source>` element also has a [`type`](/en-US/docs/Web/HTML/Element/source#
 
 Refer to our [guide to media types and formats](/en-US/docs/Web/Media/Formats) for help selecting the best containers and codecs for your needs, as well as to look up the right MIME types to specify for each.
 
-### Other \<video> features
+## Other \<video> features
 
 There are a number of other features you can include when displaying an HTML video. Take a look at our next example:
 
@@ -185,7 +185,7 @@ Features include:
 
 You can find the above example available to [play live on GitHub](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html) (also [see the source code](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html).) Note that we haven't included the `autoplay` attribute in the live version — if the video starts to play as soon as the page loads, you don't get to see the poster!
 
-### The \<audio> element
+## The \<audio> element
 
 The {{htmlelement("audio")}} element works just like the {{htmlelement("video")}} element, with a few small differences as outlined below. A typical example might look like so:
 
@@ -277,7 +277,7 @@ For more details, including on how to add labels please read [Adding captions an
 > [!NOTE]
 > Text tracks also help you with {{glossary("SEO")}}, since search engines especially thrive on text. Text tracks even allow search engines to link directly to a spot partway through the video.
 
-### Active learning: Embedding your own audio and video
+## Active learning: Embedding your own audio and video
 
 For this active learning, we'd (ideally) like you to go out into the world and record some of your own video and audio — most phones these days allow you to record audio and video very easily and, provided you can transfer it on to your computer, you can use it. You may have to do some conversion to end up with a WebM and MP4 in the case of video, and an MP3 and Ogg in the case of audio, but there are enough programs out there to allow you to do this without too much trouble, such as [Miro Video Converter](http://www.mirovideoconverter.com/) and [Audacity](https://sourceforge.net/projects/audacity/). We'd like you to have a go!
 
@@ -295,7 +295,7 @@ For an added bonus, you could try researching text tracks, and work out how to a
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Multimedia and embedding](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding). Note that the third assessment question in this test assumes knowledge of some of the techniques covered in the [next article](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies), so you may want to read that before attempting it.
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Multimedia and embedding](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding).
 
 ## Summary
 
