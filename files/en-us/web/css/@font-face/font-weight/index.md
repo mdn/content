@@ -7,11 +7,13 @@ browser-compat: css.at-rules.font-face.font-weight
 
 {{CSSRef}}
 
-The **`font-weight`** CSS descriptor allows authors to specify font weights for the fonts specified in the {{cssxref("@font-face")}} at-rule. The {{cssxref("font-weight")}} property can separately be used to set how thick or thin characters in text should be displayed.
+The **`font-weight`** CSS {{cssxref("@font-face")}} descriptor enables authors to specify a single font weight, or a range of font weights, for the font specified in a {{cssxref("@font-face")}} at-rule. This is then used by the browser to select the appropriate font when a CSS rule sets a desired {{cssxref("font-weight", "font weight")}}.
 
-For a particular font family, authors can download various font faces which correspond to the different styles of the same font family, and then use the `font-weight` descriptor to explicitly specify the font face's weights. The values for the CSS descriptor is same as that of its corresponding font property.
+Unless it contains a [variable font](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide), a single font file contains characters from a font family in a specific weight and style: for example, "Helvetica bold italic". To declare the font to be used for a range of font weights, declare a space-separated pair of font-weight values as the value for the `font-weight` descriptor.
 
-There are generally limited weights available for a particular font family. When a specified weight doesn't exist, a nearby weight is used. Fonts lacking bold typeface are often synthesized by the user agent. To prevent this, use the {{cssxref('font-synthesis')}} shorthand property.
+Typically, a developer will want to use fonts from a single font family in a range of different weights. To accomplish this, you can define multiple {{cssxref("@font-face")}} at-rules for the same family (all with the same {{cssxref("@font-face/font-family", "font-family")}} descriptor value), one for each weight, and set the `font-weight` descriptor to define the weight range for which that particular font file will be used.
+
+When CSS rules set a font weight by setting the {{cssxref("font-weight")}} property or the {{cssxref("font")}} shorthand property, the appropriate font will then be used. For example, if the descriptor is `font-weight: 400 600;`, when the property is `font-weight: 450` or `font-weight: 550`, that font will be use for that font-family. The same font is used in both cases, but uf its a variable font, the latter will be bolder.
 
 ## Syntax
 
@@ -21,14 +23,20 @@ font-weight: normal;
 font-weight: bold;
 font-weight: 400;
 
-/* Multiple Values */
+/* Defining a range */
 font-weight: normal bold;
 font-weight: 300 500;
 ```
 
-The `font-weight` property is described using any one of the values listed below.
-
 ### Values
+
+The syntax of the `font-weight` descriptor takes one of the following forms:
+
+- The keyword `auto`.
+- A single `<font-weight-absolute>` value.
+- A pair of `<font-weight-absolute>` values, separated by a space.
+
+Each `<font-weight-absolute>` may be any one of the following:
 
 - `normal`
   - : Normal font weight. Same as `400`.
@@ -36,10 +44,6 @@ The `font-weight` property is described using any one of the values listed below
   - : Bold font weight. Same as `700`.
 - `<number>`
   - : A {{cssxref("&lt;number&gt;")}} value between 1 and 1000, inclusive. Higher numbers represent weights that are bolder than (or as bold as) lower numbers. Certain commonly used values correspond to common weight names, as described in the [Common weight name mapping](#common_weight_name_mapping) section below.
-
-In earlier versions of the `font-weight` specification, the property accepts only keyword values and the numeric values 100, 200, 300, 400, 500, 600, 700, 800, and 900; non-variable fonts can only really make use of these set values, although fine-grained values (e.g. 451) will be translated to one of these values for non-variable fonts.
-
-CSS Fonts Level 4 extends the syntax to accept any number between 1 and 1000, inclusive, and introduces [Variable fonts](#variable_fonts), which can make use of this much finer-grained range of font weights.
 
 ### Common weight name mapping
 
@@ -80,19 +84,168 @@ People experiencing low vision conditions may have difficulty reading text set w
 
 ## Examples
 
-### Setting normal font weight in a @font-face rule
+### Selecting normal and bold fonts
 
-The following finds a local Open Sans font or imports it, and allows using the font for normal font weights.
+In this example we include two fonts, one normal weight, one bold weight, from the ["Fira Sans"](https://fonts.google.com/specimen/Fira+Sans) font family using two `@font-face` at rules. We set `font-weight` descriptors to match the weight of the fonts.
+
+After this, CSS rules can select the normal or the bold font for the "Fira Sans" family just by setting the {{cssxref("font-weight")}} property. Note that the {{htmlelement("strong")}} HTML element also selects the bold font, because by default `<strong>` elements have a CSS `font-weight` property value of `bold`.
+
+#### HTML
+
+```html
+<p class="one">Fira Sans, `normal` weight paragraph</p>
+<p class="two">Fira Sans, `bold` weight paragraph</p>
+<p><strong>Fira Sans, &lt;strong&gt; element (`bold`)</strong></p>
+```
+
+#### CSS
 
 ```css
 @font-face {
-  font-family: "Open Sans";
-  src:
-    local("Open Sans") format("woff2"),
-    url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
-  font-weight: 400;
+  font-family: "Fira Sans";
+  font-weight: normal;
+  src: url("https://mdn.github.io/shared-assets/fonts/FiraSans-Regular.woff2");
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  font-weight: bold;
+  src: url("https://mdn.github.io/shared-assets/fonts/FiraSans-Bold.woff2");
+}
+
+body {
+  font-family: "Fira Sans", serif;
+  font-size: 2rem;
+}
+
+p.one {
+  font-weight: normal;
+}
+
+p.two {
+  font-weight: bold;
 }
 ```
+
+#### Result
+
+{{embedlivesample("Selecting normal and bold fonts", "", 300)}}
+
+### Setting font-weight ranges
+
+In this example, we include the same two fonts as in the example above, but we set the `font-weight` descriptors to a different ranges.
+
+#### HTML
+
+```html
+<p class="one">This has a font weight of 100</p>
+<p class="three">This has a font weight of 300</p>
+<p class="five">This has a font weight of 500</p>
+```
+
+#### CSS
+
+We include two `@font-face` declarations for two different fonts, with the second font's font-weight range matching a subset of the first font's range.
+The `@font-face` declarations must be written in this order due to the CSS [cascade](/en-US/docs/Web/CSS/Cascade); otherwise the larger range would override the smaller substet declaration.
+
+```css
+@font-face {
+  font-family: "Fira Sans";
+  font-weight: 1 1000;
+  src: url("https://mdn.github.io/shared-assets/fonts/FiraSans-Regular.woff2");
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  font-weight: 200 400;
+  src: url("https://mdn.github.io/shared-assets/fonts/FiraSans-Bold.woff2");
+}
+
+body {
+  font-family: "Fira Sans", serif;
+  font-size: 2rem;
+}
+
+p.one {
+  font-weight: 100;
+}
+
+p.three {
+  font-weight: 300;
+}
+
+p.five {
+  font-weight: 500;
+}
+```
+
+#### Result
+
+{{embedlivesample("Setting font-weight ranges", "", 300)}}
+
+While `font-weight: 500` is generally bolder than `font-weight: 300`, only the `300` value is within the range of the `@font-face` declaration that uses the bold `FiraSans-Bold.woff2` font, so the `500` is rendered using the `FiraSans-Regular.woff2` font.
+
+### Setting a range for a variable font
+
+In this example we include a variable font, ["League Mono"](https://www.theleagueofmoveabletype.com/league-mono), using a single `@font-face` at-rule. We've used a `font-weight: 300 700` value to effectively limit the range of weights that are available. If a CSS rule uses our "League Mono" font, then if it specifies a weight outside this range the weight it gets is clamped to the range.
+
+To show the effect of this we've included another font using "League Mono" that does not set the `font-weight` descriptor, and we've called this "League Mono-complete".
+
+#### HTML
+
+```html
+<p class="one">Fire Sans Regular, font-weight 200</p>
+<p class="two">League Mono, font-weight 400</p>
+<p class="three">League Mono, font-weight 600</p>
+<p class="four">Fire Sans Regular, font-weight 800</p>
+```
+
+#### CSS
+
+```css
+@font-face {
+  font-family: "NamedFont";
+  src: url("https://mdn.github.io/shared-assets/fonts/FiraSans-Regular.woff2");
+}
+
+@font-face {
+  font-family: "NamedFont";
+  src: url("https://mdn.github.io/shared-assets/fonts/LeagueMono-VF.ttf");
+  font-weight: 300 700;
+}
+
+p {
+  font-family: "NamedFont", serif;
+  font-size: 1.5rem;
+}
+
+p.one {
+  font-weight: 200;
+}
+
+p.two {
+  font-weight: 400;
+}
+
+p.three {
+  font-weight: 600;
+}
+
+p.four {
+  font-weight: 800;
+}
+```
+
+#### Result
+
+The result of this is:
+
+- Setting the `font-weight` property to `200` gets a `normal` version of FireSans.
+- Setting the `font-weight` property to `400` gets "League Mono" at a weight of 400.
+- Setting the `font-weight` property to `600` gets "League Mono" at a weight of 600.
+- Setting the `font-weight` property to `800` gets a boldened version of "FireSans".
+
+{{embedlivesample("Setting a range for a variable font", "", "400")}}
 
 ## Specifications
 
