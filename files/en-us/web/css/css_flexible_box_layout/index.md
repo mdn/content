@@ -17,7 +17,7 @@ In the following example, a container has been set to `display: flex`, which mea
 <div class="box">
   <div>One</div>
   <div>Two</div>
-  <div>Three</div>
+  <div>Three <br />has <br />extra <br />text</div>
 </div>
 ```
 
