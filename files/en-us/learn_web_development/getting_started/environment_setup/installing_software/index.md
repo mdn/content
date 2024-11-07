@@ -4,7 +4,7 @@ slug: Learn_web_development/Getting_started/Environment_setup/Installing_softwar
 page-type: tutorial-chapter
 ---
 
-<!-- {{LearnSidebar}} -->
+{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Getting_started/Environment_setup/Browsing_the_web", "Learn_web_development/Getting_started/Environment_setup")}}
 

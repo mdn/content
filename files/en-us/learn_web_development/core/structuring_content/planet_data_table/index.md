@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Planet_data_table
 page-type: learn-module-assessment
 ---
 
-<!-- {{LearnSidebar}} -->
+{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn_web_development/Core/Structuring_content/HTML_forms", "Learn_web_development/Core/Structuring_content")}}
 

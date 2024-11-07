@@ -4,7 +4,7 @@ slug: Learn_web_development/Getting_started/Environment_setup
 page-type: landing-page
 ---
 
-<!-- {{LearnSidebar}} -->
+{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Getting_started/Environment_setup/Installing_software", "Learn_web_development/Getting_started")}}
 

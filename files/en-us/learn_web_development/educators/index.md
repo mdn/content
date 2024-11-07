@@ -4,6 +4,6 @@ slug: Learn_web_development/Educators
 page-type: landing-page
 ---
 
-<!-- {{LearnSidebar}} -->
+{{LearnSidebar}}
 
 Educators page

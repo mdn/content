@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Lists
 page-type: tutorial-chapter
 ---
 
-<!-- {{LearnSidebar}} -->
+{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Emphasis_and_importance", "Learn_web_development/Core/Structuring_content/Structuring_documents", "Learn_web_development/Core/Structuring_content")}}
 

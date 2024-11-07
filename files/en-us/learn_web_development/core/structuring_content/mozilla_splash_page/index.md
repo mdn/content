@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Mozilla_splash_page
 page-type: learn-module-assessment
 ---
 
-<!-- {{LearnSidebar}} -->
+{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content/HTML_table_basics", "Learn_web_development/Core/Structuring_content")}}
 

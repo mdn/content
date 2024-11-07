@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Debugging_HTML
 page-type: learn-module-chapter
 ---
 
-<!-- {{LearnSidebar}} -->
+{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_forms", "Learn/CSS/Building_blocks", "Learn_web_development/Core/Structuring_content")}}
 

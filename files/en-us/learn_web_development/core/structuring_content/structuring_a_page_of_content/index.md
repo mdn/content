@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Structuring_a_page_of_conte
 page-type: learn-module-assessment
 ---
 
-<!-- {{LearnSidebar}} -->
+{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content/HTML_images", "Learn_web_development/Core/Structuring_content")}}
 

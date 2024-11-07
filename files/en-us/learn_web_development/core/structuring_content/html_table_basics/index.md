@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/HTML_table_basics
 page-type: learn-module-chapter
 ---
 
-<!-- {{LearnSidebar}} -->
+{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Mozilla_splash_page", "Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn_web_development/Core/Structuring_content")}}
 

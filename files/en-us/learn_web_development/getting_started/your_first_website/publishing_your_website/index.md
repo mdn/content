@@ -4,7 +4,7 @@ slug: Learn_web_development/Getting_started/Your_first_website/Publishing_your_w
 page-type: tutorial-chapter
 ---
 
-<!-- {{LearnSidebar}} -->
+{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Web_standards", "Learn_web_development/Getting_started/Your_first_website")}}
 

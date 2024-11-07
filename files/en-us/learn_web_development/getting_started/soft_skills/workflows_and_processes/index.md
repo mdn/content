@@ -4,7 +4,7 @@ slug: Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes
 page-type: tutorial-chapter
 ---
 
-<!-- {{LearnSidebar}} -->
+{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork", "Learn_web_development/Getting_started/Soft_skills/Job_interviews", "Learn_web_development/Getting_started/Soft_skills")}}
 

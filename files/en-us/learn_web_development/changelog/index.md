@@ -4,6 +4,6 @@ slug: Learn_web_development/Changelog
 page-type: landing-page
 ---
 
-<!-- {{LearnSidebar}} -->
+{{LearnSidebar}}
 
 Changelog page

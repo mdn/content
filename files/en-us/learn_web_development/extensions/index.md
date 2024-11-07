@@ -4,6 +4,6 @@ slug: Learn_web_development/Extensions
 page-type: landing-page
 ---
 
-<!-- {{LearnSidebar}} -->
+{{LearnSidebar}}
 
 Extensions landing page

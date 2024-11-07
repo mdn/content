@@ -4,7 +4,7 @@ slug: Learn_web_development/Getting_started/Web_standards
 page-type: landing-page
 ---
 
-<!-- {{LearnSidebar}} -->
+{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Web_standards/How_the_web_works", "Learn_web_development/Getting_started")}}
 
