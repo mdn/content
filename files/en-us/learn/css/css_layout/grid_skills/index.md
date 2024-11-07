@@ -120,7 +120,7 @@ body {
 }
 ```
 
-{{EmbedLiveSample("grid2", "", "300px")}}
+{{EmbedLiveSample("grid2", "", "340px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
