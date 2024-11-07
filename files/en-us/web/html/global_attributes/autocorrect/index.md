@@ -2,10 +2,12 @@
 title: autocorrect
 slug: Web/HTML/Global_attributes/autocorrect
 page-type: html-attribute
+status:
+  - experimental
 browser-compat: html.global_attributes.autocorrect
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+{{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}
 
 The **`autocorrect`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is an [enumerated](/en-US/docs/Glossary/Enumerated) attribute that controls whether editable text is automatically corrected for spelling and/or punctuation errors.
 
@@ -64,7 +66,7 @@ If auto-correction is enabled on your browser, a typo in a vegetable name should
 
 ### Enabling and disabling autocorrection
 
-This example shows how you can enable and disable auto-correction using the `autocorrect` attribute.
+This example shows how you can enable and disable autocorrection using the `autocorrect` attribute.
 
 #### HTML
 
