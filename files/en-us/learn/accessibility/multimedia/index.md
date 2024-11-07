@@ -333,7 +333,7 @@ For more details, see [Adding captions and subtitles to HTML video](/en-US/docs/
 
 You've reached the end of this article, but can you remember the most important information?
 
-We've not written a new set of assessments for this article, because there are already assessments available in our [HTML Multimedia and embedding](/en-US/docs/Learn/HTML/Multimedia_and_embedding) module that test your knowledge of the information presented here. If you haven't already, go and try out the assessments at [Test your skills: HTML images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images) and [Test your skills: Multimedia and embedding](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding).
+We've not written a new set of assessments for this article, because there are already assessments available in our [HTML Multimedia and embedding](/en-US/docs/Learn/HTML/Multimedia_and_embedding) module that test your knowledge of the information presented here. If you haven't already, go and try out the assessments at [Test your skills: HTML images](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skills:_HTML_images) and [Test your skills: Multimedia and embedding](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding).
 
 ## Summary
 

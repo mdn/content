@@ -289,7 +289,7 @@ The conformance criteria under this guideline relate to ways in which users can 
       <td>
         See
         <a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_a_title"
+          href="/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#adding_a_title"
           >Adding a title</a
         >.
       </td>
@@ -356,7 +356,7 @@ The conformance criteria under this guideline relate to ways in which users can 
           >Search field</a
         >,
         <a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#active_learning_creating_a_navigation_menu"
+          href="/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links#active_learning_creating_a_navigation_menu"
           >Creating a navigation menu</a
         >,
         <a
@@ -382,7 +382,7 @@ The conformance criteria under this guideline relate to ways in which users can 
             >Meaningful text labels</a
           >,
           <a
-            href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#the_basics_headings_and_paragraphs"
+            href="/en-US/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
             >The basics of headings and paragraphs</a
           >,
           <a
@@ -458,7 +458,7 @@ The conformance criteria under this guideline relate to ways in which users can 
         <p>
           See
           <a
-            href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#the_basics_headings_and_paragraphs"
+            href="/en-US/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
             >The basics of headings and paragraphs</a
           >.
         </p>

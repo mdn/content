@@ -51,11 +51,11 @@ We do that in HTML too, except HTML is not a visual medium and so we don't use b
 ```
 
 > [!NOTE]
-> Another use for bold is to emphasize content. Bold itself is a concept foreign to HTML, but there are [tags for indicating emphasis.](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#emphasis_and_importance)
+> Another use for bold is to emphasize content. Bold itself is a concept foreign to HTML, but there are [tags for indicating emphasis.](/en-US/docs/Learn_web_development/Core/Structuring_content/Emphasis_and_importance)
 
 ### Special case: Abbreviations
 
-It's best to [mark abbreviations specially](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#abbreviations) with {{htmlelement("abbr")}}, so that screen readers read them appropriately and so that you can operate on all abbreviations uniformly. Just as with any new keyword, you should define your abbreviations the first time they occur.
+It's best to [mark abbreviations specially](/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#abbreviations) with {{htmlelement("abbr")}}, so that screen readers read them appropriately and so that you can operate on all abbreviations uniformly. Just as with any new keyword, you should define your abbreviations the first time they occur.
 
 ```html
 <p>

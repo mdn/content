@@ -92,4 +92,4 @@ Links influence how readily a search engine will link to your site. The trouble 
 Now you'll want to set up some webpages with links.
 
 - To get some more theoretical background, learn about [URLs and their structure](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL), since every link points to a URL.
-- Want something a bit more practical? The [Creating hyperlinks](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) article of our [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) module explains how to implement links in detail.
+- Want something a bit more practical? Our [Creating links](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links) tutorial explains how to implement links in detail.

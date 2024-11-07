@@ -11,7 +11,7 @@ This page lists all the {{Glossary("HTML")}} {{Glossary("Element","elements")}},
 They are grouped by function to help you find what you have in mind easily. An alphabetical list of all elements is provided in the sidebar on every element's page as well as this one.
 
 > [!NOTE]
-> For more information about the basics of HTML elements and attributes, see [the section on elements in the Introduction to HTML article](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#anatomy_of_an_html_element).
+> For more information about the basics of HTML elements and attributes, see [Anatomy of an HTML element](/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#anatomy_of_an_html_element).
 
 ## Main root
 

@@ -14,7 +14,7 @@ Here we go over how to set up an image map, and some downsides to consider first
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        You should already know how to <a href="/en-US/docs/Learn_web_development/Getting_started/Your_first_website">create a basic HTML document</a> and how to <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#how_do_we_put_an_image_on_a_webpage">add accessible images to a webpage.</a>
+        You should already know how to <a href="/en-US/docs/Learn_web_development/Getting_started/Your_first_website">create a basic HTML document</a> and how to <a href="/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images#how_do_we_put_an_image_on_a_webpage">add accessible images to a webpage.</a>
       </td>
     </tr>
     <tr>
@@ -38,7 +38,7 @@ Formerly, image maps were a popular navigation device, but it's important to tho
 > [!WARNING]
 > Multiple images referencing the same image map may lead to unexpected browser behavior, severely degrading usability and accessibility. For example, when a user keyboard navigates an image with a re-used image map in Safari and Chromium-based browsers, latter image instances using that same image map are skipped entirely. In Firefox, all image maps get keyboard focus simultaneously and when the user keyboard navigates past the image, the next focused element is the one after the last image instance, effectively skipping everything between the two images.
 
-[Text links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) (perhaps styled with CSS) are preferable to image maps for several reasons: text links are lightweight, maintainable, often more SEO-friendly, and support accessibility needs (e.g., screen readers, text-only browsers, translation services).
+[Text links](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links) (perhaps styled with CSS) are preferable to image maps for several reasons: text links are lightweight, maintainable, often more SEO-friendly, and support accessibility needs (e.g., screen readers, text-only browsers, translation services).
 
 ## How to insert an image map, properly
 
@@ -50,7 +50,7 @@ Not just any image is acceptable.
 - The image must clearly indicate where hotspots begin and end.
 - Hotspots must be large enough to tap comfortably, at any viewport size. How large is large enough? [72 × 72 CSS pixels is a good minimum,](https://uxmovement.com/mobile/finger-friendly-design-ideal-mobile-touch-target-sizes/) with additional generous gaps between touch targets. The map of the world at [50languages.com](https://www.goethe-verlag.com/book2/) (as of time of writing) illustrates the problem perfectly. It's much easier to tap Russia or North America than Albania or Estonia.
 
-You insert your image [much the same way as always](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#how_do_we_put_an_image_on_a_webpage) (with an {{htmlelement("img")}} element and [`alt`](/en-US/docs/Web/HTML/Element/img#alt) text). If the image is only present as a navigation device, you may write `alt=""`, provided you furnish appropriate [`alt`](/en-US/docs/Web/HTML/Element/area#alt) text in the {{htmlelement('area')}} elements later on.
+You insert your image [much the same way as always](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images#how_do_we_put_an_image_on_a_webpage) (with an {{htmlelement("img")}} element and [`alt`](/en-US/docs/Web/HTML/Element/img#alt) text). If the image is only present as a navigation device, you may write `alt=""`, provided you furnish appropriate [`alt`](/en-US/docs/Web/HTML/Element/area#alt) text in the {{htmlelement('area')}} elements later on.
 
 You will need a special [`usemap`](/en-US/docs/Web/HTML/Element/img#usemap) attribute. Come up with a unique name, containing no spaces, for your image map. Then assign that name (preceded by a hash) as the value for the `usemap` attribute:
 
@@ -90,7 +90,7 @@ Inside the `<map>` element, we need {{htmlelement('area')}} elements. An `<area>
 
 - [`alt`](/en-US/docs/Web/HTML/Element/area#alt)
 
-  - : A mandatory attribute, telling people where the link goes or what it does. `alt` text only displays when the image is unavailable. Please refer to our [guidelines for writing accessible link text.](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#use_clear_link_wording)
+  - : A mandatory attribute, telling people where the link goes or what it does. `alt` text only displays when the image is unavailable. Please refer to our [guidelines for writing accessible link text](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links#use_clear_link_wording).
 
     You may write `alt=""` if the `href` attribute is blank _and_ the entire image already has an `alt` attribute.
 

@@ -6,7 +6,7 @@ page-type: learn-module-assessment
 
 {{learnsidebar}}
 
-The aim of this skill test is to assess whether you understand how to [implement hyperlinks in HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks).
+The aim of this skill test is to assess whether you understand how to [implement links in HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links).
 
 > [!NOTE]
 > You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).

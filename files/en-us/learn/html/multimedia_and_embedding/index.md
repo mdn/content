@@ -19,9 +19,9 @@ Before starting this module, you should have a reasonable understanding of the b
 
 This module contains the following articles, which will take you through all the fundamentals of embedding multimedia on webpages.
 
-- [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [HTML images](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images)
   - : There are other types of multimedia to consider, but it is logical to start with the humble {{htmlelement("img")}} element used to embed a simple image in a webpage. In this article we'll look at how to use it in more depth, including basics, annotating it with captions using {{htmlelement("figure")}}, and how it relates to CSS background images.
-- [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
   - : Next, we'll look at how to use the HTML {{htmlelement("video")}} and {{htmlelement("audio")}} elements to embed video and audio on our pages, including basics, providing access to different file formats to different browsers, adding captions and subtitles, and how to add fallbacks for older browsers.
 - [From \<object> to \<iframe> — other embedding technologies](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
   - : At this point we'd like to take somewhat of a sideways step, looking at a couple of elements that allow you to embed a wide variety of content types into your webpages: the {{htmlelement("iframe")}}, {{htmlelement("embed")}} and {{htmlelement("object")}} elements. `<iframe>`s are for embedding other web pages, and the other two allow you to embed external resources such as PDF files.
@@ -34,7 +34,7 @@ This module contains the following articles, which will take you through all the
 
 The following assessment will test your understanding of the material covered in the guides above.
 
-- [Mozilla splash page](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)
+- [Mozilla splash page](/en-US/docs/Learn_web_development/Core/Structuring_content/Mozilla_splash_page)
   - : In this assessment, we'll test your knowledge of some of the techniques discussed in this module's articles, getting you to add some images and video to a funky splash page all about Mozilla!
 
 ## See also

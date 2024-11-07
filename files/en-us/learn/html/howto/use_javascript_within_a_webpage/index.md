@@ -70,7 +70,7 @@ That's convenient when you just need a small bit of JavaScript, but if you keep 
 
 Accessibility is a major issue in any software development. JavaScript can make your website more accessible if you use it wisely, or it can become a disaster if you use scripting without care. To make JavaScript work in your favor, it's worth knowing about certain best practices for adding JavaScript:
 
-- **Make all content available as (structured) text.** Rely on HTML for your content as much as possible. For example, if you've implemented a nice JavaScript progress bar, make sure to supplement it with matching text percentages inside the HTML. Likewise, your drop-down menus should be structured as [unordered lists](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists) of [links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks).
+- **Make all content available as (structured) text.** Rely on HTML for your content as much as possible. For example, if you've implemented a nice JavaScript progress bar, make sure to supplement it with matching text percentages inside the HTML. Likewise, your drop-down menus should be structured as [unordered lists](/en-US/docs/Learn_web_development/Core/Structuring_content/Lists#unordered_lists) of [links](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links).
 - **Make all functionality accessible from the keyboard.**
 
   - Let users Tab through all controls (e.g., links and form input) in a logical order.

@@ -21,8 +21,8 @@ By now you should really be getting the hang of embedding things into your web p
           href="/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >working with files</a
         >, familiarity with HTML fundamentals (as covered in
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
-          >Getting started with HTML</a
+        <a href="/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
+          >Basic HTML syntax</a
         >) and the previous articles in this module.
       </td>
     </tr>
@@ -368,7 +368,7 @@ PDFs were a necessary stepping stone between paper and digital, but they pose ma
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Multimedia and embedding](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Multimedia and embedding](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding).
 
 ## Summary
 

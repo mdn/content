@@ -83,4 +83,4 @@ Please refer to:
 Accessibility can impact both a website's design and technical structure.
 
 - From a design point of view, we suggest learning about [designing for all types of users](/en-US/docs/Learn/Common_questions/Design_and_accessibility/Design_for_all_types_of_users).
-- If the technical side interests you more, you could learn how to [embed images in webpages](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML).
+- If the technical side interests you more, you could learn how to [embed images in webpages](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images).

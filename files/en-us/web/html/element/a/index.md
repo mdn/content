@@ -351,7 +351,7 @@ To create links that open in the user's email program to let them send a new mes
 
 {{EmbedLiveSample('Linking to an email address')}}
 
-For details about `mailto:` URLs, such as including a subject or body, see [Email links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#email_links) or {{RFC(6068)}}.
+For details about `mailto:` URLs, such as including a subject or body, see [Email links](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links#email_links) or {{RFC(6068)}}.
 
 ### Linking to telephone numbers
 

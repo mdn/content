@@ -632,8 +632,8 @@ Try to avoid putting your article at the top of the hierarchy, which slows the s
 The page title, which is displayed at the top of the page, can be different from the page "slug", which is the portion of the page's URL following `<locale>/docs/`. Keep the following guidelines in mind when defining a slug:
 
 - Slugs should be kept short. When creating a new level of hierarchy, the new level's component in the slug should just be a word or two.
-- Slugs should use an underscore for a multi-word component, such as `Getting_started` in `/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started`.
-- Follow sentence casing in slugs as well for each component, such as `Getting_started` in the previous example.
+- Slugs should use an underscore for a multi-word component, such as `Basic_HTML_syntax` in `/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax`.
+- Follow sentence casing in slugs as well for each component, such as `Basic_HTML_syntax` in the previous example.
 
 ### Titles
 

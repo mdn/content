@@ -40,7 +40,7 @@ This guideline focuses on making content as compatible as possible, not only wit
       </td>
       <td>
         See
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML"
+        <a href="/en-US/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML"
           >Debugging HTML</a
         >
         for a practical guide.

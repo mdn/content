@@ -16,7 +16,7 @@ Vector graphics are very useful in many circumstances — they have small file s
         You should know the
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">basics of HTML</a>
         and how to
-        <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
+        <a href="/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images"
           >insert an image into your document</a
         >.
       </td>
@@ -96,7 +96,7 @@ In this section we'll go through the different ways in which you can add SVG vec
 
 ### The quick way: `img` element
 
-To embed an SVG via an {{htmlelement("img")}} element, you just need to reference it in the src attribute as you'd expect. You will need a `height` or a `width` attribute (or both if your SVG has no inherent {{glossary("aspect ratio")}}). If you have not already done so, please read [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML).
+To embed an SVG via an {{htmlelement("img")}} element, you just need to reference it in the src attribute as you'd expect. You will need a `height` or a `width` attribute (or both if your SVG has no inherent {{glossary("aspect ratio")}}). If you have not already done so, please read [HTML images](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images).
 
 ```html
 <img

@@ -526,6 +526,6 @@ Although `<img>` elements have innocent uses, they can have undesirable conseque
 - {{HTMLElement("picture")}}, {{HTMLElement("object")}}, and {{HTMLElement("embed")}} elements
 - {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, and {{cssxref("image-resolution")}}: Image-related CSS properties.
 - {{domxref("HTMLImageElement")}} interface for this element
-- [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [HTML images](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images)
 - [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types)
 - [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)

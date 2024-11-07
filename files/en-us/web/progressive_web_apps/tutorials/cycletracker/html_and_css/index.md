@@ -82,7 +82,7 @@ The root {{HTMLelement("html")}} tags wrap all the content with the [`lang`](/en
 
 The {{HTMLelement("head")}} contains machine-readable information about the web application that's not visible to readers except for the `<title>`, which is displayed as the heading of the browser tab.
 
-The `<head>` includes all the [meta data](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML). The first two bits of information in your `<head>` should always be the character set definition, which defines the [character encoding](/en-US/docs/Glossary/Character_encoding), and the [viewport](/en-US/docs/Web/HTML/Viewport_meta_tag) {{HTMLelement("meta")}} tag, which ensures the page renders at the width of the viewport and isn't shrunken down when loaded on very small screens.
+The `<head>` includes all the [metadata](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata). The first two bits of information in your `<head>` should always be the character set definition, which defines the [character encoding](/en-US/docs/Glossary/Character_encoding), and the [viewport](/en-US/docs/Web/HTML/Viewport_meta_tag) {{HTMLelement("meta")}} tag, which ensures the page renders at the width of the viewport and isn't shrunken down when loaded on very small screens.
 
 ```html
 <head>
@@ -323,7 +323,7 @@ Whether you use the above CSS verbatim, edit the above styles to your preference
 
 ### Finishing the static HTML and CSS for our PWA
 
-Before moving on, [comment](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#html_comments) out or delete the fake past period data and header:
+Before moving on, [comment](/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#html_comments) out or delete the fake past period data and header:
 
 ```html
 <section id="past-periods">

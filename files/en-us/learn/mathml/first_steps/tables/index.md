@@ -40,7 +40,7 @@ Once all basic math notations are known, it remains to consider tabular layout w
 
 ## MathML tabular elements
 
-The MathML tabular elements are similar to the ones for [HTML tables](/en-US/docs/Learn/HTML/Tables): the `<mtable>` element represents a mathematical table, it has `<mtr>` elements as its children (representing rows), each of them having `<mtd>` elements as its children (representing cells). An `<mtable>` element can be inserted anywhere in a MathML formula. The `<mtd>` element can contain any number of MathML children and will lay them out as an `<mrow>` container.
+The MathML tabular elements are similar to the ones for [HTML tables](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics): the `<mtable>` element represents a mathematical table, it has `<mtr>` elements as its children (representing rows), each of them having `<mtd>` elements as its children (representing cells). An `<mtable>` element can be inserted anywhere in a MathML formula. The `<mtd>` element can contain any number of MathML children and will lay them out as an `<mrow>` container.
 
 Tables are typically used for matrix-like expressions (including vectors). Here is a basic example taken from the [article about the CSS `matrix()` function](/en-US/docs/Web/CSS/transform-function/matrix):
 
@@ -127,7 +127,7 @@ Tables are typically used for matrix-like expressions (including vectors). Here 
 
 ## Allowing cells to span multiple rows and columns
 
-This is again similar to [HTML tables](/en-US/docs/Learn/HTML/Tables/Basics#allowing_cells_to_span_multiple_rows_and_columns). The `<mtd>` element accepts the `columnspan` and `rowspan` attributes to indicate that the cell spans multiples rows and columns. Below the inner matrix spans two columns of the outer matrix:
+This is again similar to [HTML tables](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics/Basics#allowing_cells_to_span_multiple_rows_and_columns). The `<mtd>` element accepts the `columnspan` and `rowspan` attributes to indicate that the cell spans multiples rows and columns. Below the inner matrix spans two columns of the outer matrix:
 
 ```html hidden
 <!doctype html>
@@ -310,7 +310,7 @@ You've nearly finished this module — we only have one more thing to do. In the
 
 ## See also
 
-- [Learning about HTML tables](/en-US/docs/Learn/HTML/Tables)
+- [Learning about HTML tables](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 - [The `<mtable>` element](/en-US/docs/Web/MathML/Element/mtable)
 - [The `<mtr>` element](/en-US/docs/Web/MathML/Element/mtr)
 - [The `<mtd>` element](/en-US/docs/Web/MathML/Element/mtd)

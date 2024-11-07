@@ -211,4 +211,3 @@ CSS isn't the only web technology that supports color. Other examples include:
 - [Using color wisely](/en-US/docs/Web/CSS/CSS_colors/Using_color_wisely)
 - [CSS color module](/en-US/docs/Web/CSS/CSS_colors)
 - [Drawing graphics](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Graphics on the web](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#other_graphics_on_the_web)

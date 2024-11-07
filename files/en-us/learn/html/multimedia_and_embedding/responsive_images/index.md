@@ -16,7 +16,7 @@ In this article, we'll learn about the concept of responsive images — images t
         You should already know the
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">basics of HTML</a>
         and how to
-        <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
+        <a href="/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images"
           >add static images to a web page</a
         >.
       </td>
@@ -158,7 +158,7 @@ Returning to our original [not-responsive.html](https://mdn.github.io/learning-a
 <img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva" />
 ```
 
-Let's fix this, with {{htmlelement("picture")}}! Like [`<video>` and `<audio>`](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content), the `<picture>` element is a wrapper containing several {{htmlelement("source")}} elements that provide different sources for the browser to choose from, followed by the all-important {{htmlelement("img")}} element. The code in [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) looks like so:
+Let's fix this, with {{htmlelement("picture")}}! Like [`<video>` and `<audio>`](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio), the `<picture>` element is a wrapper containing several {{htmlelement("source")}} elements that provide different sources for the browser to choose from, followed by the all-important {{htmlelement("img")}} element. The code in [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) looks like so:
 
 ```html
 <picture>
@@ -200,7 +200,7 @@ That's a wrap for responsive images — we hope you enjoyed playing with these n
 - **Art direction**: The problem whereby you want to serve cropped images for different layouts — for example a landscape image showing a full scene for a desktop layout, and a portrait image showing the main subject zoomed in for a mobile layout. You can solve this problem using the {{htmlelement("picture")}} element.
 - **Resolution switching**: The problem whereby you want to serve smaller image files to narrow-screen devices, as they don't need huge images like desktop displays do — and to serve different resolution images to high density/low density screens. You can solve this problem using [vector graphics](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web) (SVG images) and the [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) with [`sizes`](/en-US/docs/Web/HTML/Element/img#sizes) attributes.
 
-This also draws to a close the entire [Multimedia and embedding](/en-US/docs/Learn/HTML/Multimedia_and_embedding) module! The only thing to do now before moving on is to try our [Multimedia and embedding assessment](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page), and see how you get on. Have fun!
+This also draws to a close the entire [Multimedia and embedding](/en-US/docs/Learn/HTML/Multimedia_and_embedding) module! The only thing to do now before moving on is to try our [Multimedia and embedding assessment](/en-US/docs/Learn_web_development/Core/Structuring_content/Mozilla_splash_page), and see how you get on. Have fun!
 
 ## See also
 

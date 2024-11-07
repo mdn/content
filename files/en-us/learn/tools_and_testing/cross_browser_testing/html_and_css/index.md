@@ -43,7 +43,7 @@ Let's go forth and look at how we can reduce cross browser errors that result fr
 
 We said in the [first article of this series](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction#testingdiscovery) that a good strategy to begin with is to test in a couple of modern browsers on desktop/mobile, to make sure your code is working generally, before going on to concentrate on the cross browser issues.
 
-In our [Debugging HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML) and [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS) articles, we provided some really basic guidance on debugging HTML/CSS — if you are not familiar with the basics, you should definitely study these articles before carrying on.
+In our [Debugging HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML) and [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS) articles, we provided some really basic guidance on debugging HTML/CSS — if you are not familiar with the basics, you should definitely study these articles before carrying on.
 
 Basically, it is a matter of checking whether your HTML and CSS code is well formed and doesn't contain any syntax errors.
 

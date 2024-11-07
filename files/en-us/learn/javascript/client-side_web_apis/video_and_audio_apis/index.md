@@ -36,7 +36,7 @@ HTML comes with elements for embedding rich media in documents — {{htmlelement
 
 ## HTML video and audio
 
-The {{htmlelement("video")}} and {{htmlelement("audio")}} elements allow us to embed video and audio into web pages. As we showed in [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content), a typical implementation looks like this:
+The {{htmlelement("video")}} and {{htmlelement("audio")}} elements allow us to embed video and audio into web pages. As we showed in [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio), a typical implementation looks like this:
 
 ```html
 <video controls>
@@ -458,7 +458,7 @@ Here are some suggestions for ways you could enhance the existing example we've 
 ## See also
 
 - {{domxref("HTMLMediaElement")}}
-- [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) — simple guide to `<video>` and `<audio>` HTML.
+- [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio) — simple guide to `<video>` and `<audio>` HTML.
 - [Audio and video delivery](/en-US/docs/Web/Media/Audio_and_video_delivery) — detailed guide to delivering media inside the browser, with many tips, tricks, and links to further more advanced tutorials.
 - [Audio and video manipulation](/en-US/docs/Web/Media/Audio_and_video_manipulation) — detailed guide to manipulating audio and video, e.g. with [Canvas API](/en-US/docs/Web/API/Canvas_API), [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), and more.
 - {{htmlelement("video")}} and {{htmlelement("audio")}} reference pages.

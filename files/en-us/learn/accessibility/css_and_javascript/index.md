@@ -81,7 +81,7 @@ You should:
 - Make sure your headings stand out from your body text, typically big and bold like the default styling. Your lists should look like lists.
 - Your text color should contrast well with your background color.
 
-See [HTML text fundamentals](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals) and [Styling text](/en-US/docs/Learn/CSS/Styling_text) for more information.
+See [Headings and paragraphs in HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs) and [Styling text](/en-US/docs/Learn/CSS/Styling_text) for more information.
 
 #### Emphasized text
 
@@ -104,7 +104,7 @@ em {
 }
 ```
 
-You will however rarely need to style emphasis elements in any significant way. The standard conventions of bold and italic text are very recognizable, and changing the style can cause confusion. For more on emphasis, see [Emphasis and importance](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#emphasis_and_importance).
+You will however rarely need to style emphasis elements in any significant way. The standard conventions of bold and italic text are very recognizable, and changing the style can cause confusion. For more on emphasis, see [Emphasis and importance](/en-US/docs/Learn_web_development/Core/Structuring_content/Emphasis_and_importance).
 
 #### Abbreviations
 
@@ -125,7 +125,7 @@ abbr {
 }
 ```
 
-The recognized styling convention for abbreviations is a dotted underline, and it is unwise to significantly deviate from this. For more on abbreviations, see [Abbreviations](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#abbreviations).
+The recognized styling convention for abbreviations is a dotted underline, and it is unwise to significantly deviate from this. For more on abbreviations, see [Abbreviations](/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#abbreviations).
 
 #### Links
 

@@ -6,7 +6,7 @@ page-type: learn-module-assessment
 
 {{learnsidebar}}
 
-The aim of this skill test is to assess whether you understand how to use [lesser-known HTML elements to mark up advanced semantic features](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting).
+The aim of this skill test is to assess whether you understand how to use [lesser-known HTML elements to mark up advanced semantic features](/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features).
 
 > [!NOTE]
 > You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
@@ -14,22 +14,6 @@ The aim of this skill test is to assess whether you understand how to use [lesse
 > If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Task 1
-
-In this task, we want you to turn the provided animals and their definitions into a description list.
-
-The finished example should look like this:
-
-{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/advanced-text/advanced-text1-finished.html", '100%', 250)}}
-
-Try updating the live code below to recreate the finished example:
-
-{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/advanced-text/advanced-text1.html", '100%', 700)}}
-
-> [!CALLOUT]
->
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/advanced-text/advanced-text1-download.html) to work in your own editor or in an online editor.
-
-## Task 2
 
 In this task, we want you to add some semantics to the provided HTML as follows:
 

@@ -38,7 +38,7 @@ This guideline focuses on making text content as understandable as possible.
       <td>
         See
         <a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#setting_the_primary_language_of_the_document"
+          href="/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#setting_the_primary_language_of_the_document"
           >Setting the primary language of the document</a
         >.
       </td>
@@ -71,7 +71,7 @@ This guideline focuses on making text content as understandable as possible.
         link to when they appear, or at the very least provide definitions
         somewhere in the surrounding text, or in a
         <a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#description_lists"
+          href="/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#description_lists"
           >description list</a
         >
         at the bottom of the page.
@@ -100,7 +100,7 @@ This guideline focuses on making text content as understandable as possible.
       <td>
         See
         <a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#abbreviations"
+          href="/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#abbreviations"
           >Abbreviations</a
         >.
       </td>
@@ -145,7 +145,7 @@ This guideline focuses on making text content as understandable as possible.
       <td>
         See
         <a
-          href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content"
+          href="/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio"
           >Video and audio content</a
         >, and
         <a

@@ -65,7 +65,7 @@ You can make a simple `GET` request by clicking on a link or searching on a site
 
 #### The request
 
-Each line of the request contains information about it. The first part is called the **header**, and contains useful information about the request, in the same way that an [HTML head](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML) contains useful information about an HTML document (but not the actual content itself, which is in the body):
+Each line of the request contains information about it. The first part is called the **header**, and contains useful information about the request, in the same way that an [HTML head](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata) contains useful information about an HTML document (but not the actual content itself, which is in the body):
 
 ```http
 GET /en-US/search?q=client+server+overview&topic=apps&topic=html&topic=css&topic=js&topic=api&topic=webdev HTTP/1.1
