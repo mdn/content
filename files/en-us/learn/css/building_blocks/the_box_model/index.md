@@ -86,7 +86,46 @@ The example below has three different HTML elements, all of which have an outer 
 
 - A block-level paragraph, inside which are two `<span>` elements. These elements would normally be `inline`, however, one of the elements has a class of "block" which gets set to `display: block`.
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/block.html", '100%', 1100)}}
+```html live-sample___block
+<p>I am a paragraph. A short one.</p>
+<ul>
+  <li>Item One</li>
+  <li>Item Two</li>
+  <li>Item Three</li>
+</ul>
+<p>
+  I am another paragraph. Some of the <span class="block">words</span> have been
+  wrapped in a <span>span element</span>.
+</p>
+```
+
+```css live-sample___block
+body {
+  font-family: sans-serif;
+}
+p,
+ul {
+  border: 2px solid rebeccapurple;
+  padding: 0.2em;
+}
+
+.block,
+li {
+  border: 2px solid blue;
+  padding: 0.2em;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+.block {
+  display: block;
+}
+```
+
+{{EmbedLiveSample("block", "", "220px")}}
 
 In the next example, we can see how `inline` elements behave.
 
@@ -96,9 +135,48 @@ In the next example, we can see how `inline` elements behave.
 
 - The two paragraphs are both set to `display: inline`. The inline flex container and paragraphs all run together on one line rather than breaking onto new lines (as they would do if they were displaying as block-level elements).
 
-**To toggle between the display modes, you can change `display: inline` to `display: block` or `display: inline-flex` to `display: flex`.**
+To toggle between the display modes, you can change `display: inline` to `display: block` or `display: inline-flex` to `display: flex`:
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/inline.html", '100%', 1100)}}
+```html live-sample___inline
+<p>
+  I am a paragraph. Some of the
+  <span>words</span> have been wrapped in a <span>span element</span>.
+</p>
+<ul>
+  <li>Item One</li>
+  <li>Item Two</li>
+  <li>Item Three</li>
+</ul>
+<p class="inline">I am a paragraph. A short one.</p>
+<p class="inline">I am another paragraph. Also a short one.</p>
+```
+
+```css live-sample___inline
+body {
+  font-family: sans-serif;
+}
+p,
+ul {
+  border: 2px solid rebeccapurple;
+}
+
+span,
+li {
+  border: 2px solid blue;
+}
+
+ul {
+  display: inline-flex;
+  list-style: none;
+  padding: 0;
+}
+
+.inline {
+  display: inline;
+}
+```
+
+{{EmbedLiveSample("inline")}}
 
 The key thing to remember for now is: Changing the value of the `display` property can change whether the outer display type of a box is block or inline. This changes the way it displays alongside other elements in the layout.
 
@@ -193,10 +271,29 @@ To understand the underlying idea, you can read [the CSS Tricks article on box-s
 ## Playing with box models
 
 In the example below, you can see two boxes. Both have a class of `.box`, which gives them the same `width`, `height`, `margin`, `border`, and `padding`. The only difference is that the second box has been set to use the alternative box model.
+Can you change the size of the second box (by adding CSS to the `.alternate` class) to make it match the first box in width and height?
 
-**Can you change the size of the second box (by adding CSS to the `.alternate` class) to make it match the first box in width and height?**
+```html live-sample___box-models
+<div class="box">I use the standard box model.</div>
+<div class="box alternate">I use the alternate box model.</div>
+```
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/box-models.html", '100%', 1100)}}
+```css live-sample___box-models
+.box {
+  border: 5px solid rebeccapurple;
+  background-color: lightgray;
+  padding: 40px;
+  margin: 40px;
+  width: 300px;
+  height: 150px;
+}
+
+.alternate {
+  box-sizing: border-box;
+}
+```
+
+{{EmbedLiveSample("box-models", "", "400px")}}
 
 > [!NOTE]
 > You can find a solution for this task [here](https://github.com/mdn/css-examples/blob/main/learn/solutions.md#the-box-model).
@@ -224,9 +321,34 @@ We can control all margins of an element at once using the {{cssxref("margin")}}
 - {{cssxref("margin-bottom")}}
 - {{cssxref("margin-left")}}
 
-**In the example below, try changing the margin values to see how the box is pushed around due to the margin creating or removing space (if it is a negative margin) between this element and the containing element.**
+In the example below, try changing the margin values to see how the box is pushed around due to the margin creating or removing space (if it is a negative margin) between this element and the containing element.
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/margin.html", '100%', 800)}}
+```html live-sample___margin
+<div class="container">
+  <div class="box">Change my margin.</div>
+</div>
+```
+
+```css live-sample___margin
+.container {
+  border: 5px solid blue;
+  margin: 40px;
+}
+
+.box {
+  border: 5px solid rebeccapurple;
+  background-color: lightgray;
+  padding: 10px;
+  height: 100px;
+  /* try changing the margin properties: */
+  margin-top: -40px;
+  margin-right: 30px;
+  margin-bottom: 40px;
+  margin-left: 4em;
+}
+```
+
+{{EmbedLiveSample("margin", "", "220px")}}
 
 #### Margin collapsing
 
@@ -238,9 +360,36 @@ Depending on whether two elements whose margins touch have positive or negative 
 
 In the example below, we have two paragraphs. The top paragraph has a `margin-bottom` of 50 pixels, the other has a `margin-top` of 30 pixels. The margins have collapsed together so the actual margin between the boxes is 50 pixels and not the total of the two margins.
 
-**You can test this by setting the `margin-top` of paragraph two to 0. The visible margin between the two paragraphs will not change — it retains the 50 pixels set in the `margin-bottom` of paragraph one. If you set it to -10px, you'll see that the overall margin becomes 40px — it subtracts from the 50px.**
+You can test this by setting the `margin-top` of paragraph two to `0`. The visible margin between the two paragraphs will not change — it retains the 50 pixels set in the `margin-bottom` of paragraph one. If you set it to `-10px`, you'll see that the overall margin becomes `40px` — it subtracts from the `50px`.
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/margin-collapse.html", '100%', 800)}}
+```html live-sample___margin-collapse
+<div class="container">
+  <p class="one">I am paragraph one.</p>
+  <p class="two">I am paragraph two.</p>
+</div>
+```
+
+```css live-sample___margin-collapse
+.container {
+  border: 5px solid blue;
+  margin: 40px;
+}
+
+p {
+  border: 5px solid rebeccapurple;
+  background-color: lightgray;
+  padding: 10px;
+}
+.one {
+  margin-bottom: 50px;
+}
+
+.two {
+  margin-top: 30px;
+}
+```
+
+{{EmbedLiveSample("margin-collapse", "", "280px")}}
 
 A number of rules dictate when margins do and do not collapse. For further information see the detailed page on [mastering margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing). The main thing to remember is that margin collapsing is a thing that happens if you are creating space with margins and don't get the space you expect.
 
@@ -282,7 +431,35 @@ To set the width, style, or color of a single side, use one of the more granular
 
 In the example below, we have used various shorthands and longhands to create borders. Play around with the different properties to check that you understand how they work. The MDN pages for the border properties give you information about the different available border styles.
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/border.html", '100%', 700)}}
+```html live-sample___border
+<div class="container">
+  <div class="box">Change my borders.</div>
+</div>
+```
+
+```css live-sample___border
+body {
+  font-family: sans-serif;
+}
+.container {
+  margin: 40px;
+  padding: 20px;
+  border-top: 5px dotted green;
+  border-right: 1px solid black;
+  border-bottom: 20px double rgb(23 45 145);
+}
+
+.box {
+  padding: 20px;
+  background-color: lightgray;
+  border: 1px solid #333333;
+  border-top-style: dotted;
+  border-right-width: 20px;
+  border-bottom-color: hotpink;
+}
+```
+
+{{EmbedLiveSample("border", "", "220px")}}
 
 ### Padding
 
@@ -297,7 +474,33 @@ The {{cssxref("padding")}} property controls the padding on all sides of an elem
 
 In the example below, you can change the values for padding on the class `.box` to see that this changes where the text begins in relation to the box. You can also change the padding on the class `.container` to create space between the container and the box. You can change the padding on any element to create space between its border and whatever is inside the element.
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/padding.html", '100%', 700)}}
+```html live-sample___padding
+<div class="container">
+  <div class="box">Change my padding.</div>
+</div>
+```
+
+```css live-sample___padding
+body {
+  font-family: sans-serif;
+}
+.box {
+  border: 5px solid rebeccapurple;
+  background-color: lightgray;
+  padding-top: 0;
+  padding-right: 30px;
+  padding-bottom: 40px;
+  padding-left: 4em;
+}
+
+.container {
+  border: 5px solid blue;
+  margin: 40px;
+  padding: 20px;
+}
+```
+
+{{EmbedLiveSample("padding", "", "220px")}}
 
 ## The box model and inline boxes
 
@@ -305,7 +508,32 @@ All of the above fully applies to block boxes. Some of the properties can apply 
 
 In the example below, we have a `<span>` inside a paragraph. We have applied a `width`, `height`, `margin`, `border`, and `padding` to it. You can see that the width and height are ignored. The top and bottom margin, padding, and border are respected but don't change the relationship of other content to our inline box. The padding and border overlap other words in the paragraph. The left and right padding, margins, and borders move other content away from the box.
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/inline-box-model.html", '100%', 700)}}
+```html live-sample___inline-box-model
+<p>
+  I am a paragraph and this is a <span>span</span> inside that paragraph. A span
+  is an inline element and so does not respect width and height.
+</p>
+```
+
+```css live-sample___inline-box-model
+body {
+  font-family: sans-serif;
+}
+p {
+  border: 2px solid rebeccapurple;
+  width: 200px;
+}
+span {
+  margin: 20px;
+  padding: 20px;
+  width: 80px;
+  height: 150px;
+  background-color: lightblue;
+  border: 2px solid blue;
+}
+```
+
+{{EmbedLiveSample("inline-box-model")}}
 
 ## Using display: inline-block
 
@@ -318,17 +546,79 @@ An element with `display: inline-block` does a subset of the block things we alr
 
 It does not, however, break onto a new line, and will only become larger than its content if you explicitly add `width` and `height` properties.
 
-**In this next example, we have added `display: inline-block` to our `<span>` element. Try changing this to `display: block` or removing the line completely to see the difference in display models.**
+In this next example, we have added `display: inline-block` to our `<span>` element. Try changing this to `display: block` or removing the line completely to see the difference in display models:
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/inline-block.html", '100%', 800)}}
+```html live-sample___inline-block
+<p>
+  I am a paragraph and this is a <span>span</span> inside that paragraph. A span
+  is an inline element and so does not respect width and height.
+</p>
+```
+
+```css live-sample___inline-block
+body {
+  font-family: sans-serif;
+}
+p {
+  border: 2px solid rebeccapurple;
+  width: 300px;
+}
+
+span {
+  margin: 20px;
+  padding: 20px;
+  width: 80px;
+  height: 50px;
+  background-color: lightblue;
+  border: 2px solid blue;
+  display: inline-block;
+}
+```
+
+{{EmbedLiveSample("inline-block", "", "240px")}}
 
 Where this can be useful is when you want to give a link a larger hit area by adding `padding`. `<a>` is an inline element like `<span>`; you can use `display: inline-block` to allow padding to be set on it, making it easier for a user to click the link.
 
 You see this fairly frequently in navigation bars. The navigation below is displayed in a row using flexbox and we have added padding to the `<a>` element as we want to be able to change the `background-color` when the `<a>` is hovered. The padding appears to overlap the border on the `<ul>` element. This is because the `<a>` is an inline element.
 
-**Add `display: inline-block` to the rule with the `.links-list a` selector, and you will see how it fixes this issue by causing the padding to be respected by other elements.**
+Add `display: inline-block;` to the rule with the `.links-list a` selector, and you will see how it fixes this issue by causing the padding to be respected by other elements:
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/inline-block-nav.html", '100%', 700)}}
+```html live-sample___inline-block-nav
+<nav>
+  <ul class="links-list">
+    <li><a href="">Link one</a></li>
+    <li><a href="">Link two</a></li>
+    <li><a href="">Link three</a></li>
+  </ul>
+</nav>
+```
+
+```css live-sample___inline-block-nav
+ul {
+  font-family: sans-serif;
+  display: flex;
+  list-style: none;
+  border: 1px solid #000;
+}
+
+li {
+  margin: 5px;
+}
+
+.links-list a {
+  background-color: rgb(179 57 81);
+  color: #fff;
+  text-decoration: none;
+  padding: 1em 2em;
+}
+
+.links-list a:hover {
+  background-color: rgb(66 28 40);
+  color: #fff;
+}
+```
+
+{{EmbedLiveSample("inline-block-nav")}}
 
 ## Test your skills!
 
