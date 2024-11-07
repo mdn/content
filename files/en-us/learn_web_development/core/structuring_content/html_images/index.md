@@ -192,8 +192,6 @@ For an excellent article on the history of this feature, see [Setting height and
 
 As [with links](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links#adding_supporting_information_with_the_title_attribute), you can also add `title` attributes to images, to provide further supporting information if needed. In our example, we could do this:
 
-
-
 ```html
 <img
   src="images/dinosaur.jpg"

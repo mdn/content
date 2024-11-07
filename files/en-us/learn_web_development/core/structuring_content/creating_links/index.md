@@ -382,8 +382,6 @@ Here are a few other sample `mailto` URLs:
 
 You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Links](/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_Links).
 
-
-
 ## Summary
 
 That's it for links, for now anyway! You'll return to links later on in the course when you start to look at styling them. Next up for HTML, you're going to work through a couple of challenges that will test your comprehension of the topics you've covered so far.

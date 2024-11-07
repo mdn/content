@@ -579,8 +579,6 @@ The basic example above just provides a simple machine readable date, but there 
 
 You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Advanced HTML text](/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_Advanced_HTML_text).
 
-
-
 ## Summary
 
 That marks the end of our study of less-common HTML text semantics. What you have seen during this course is not an exhaustive list of HTML text elements — we wanted to try to cover the essentials, and some of the more common ones you will see in the wild. Next up, we'll look at links, one of the most important features of the web.
