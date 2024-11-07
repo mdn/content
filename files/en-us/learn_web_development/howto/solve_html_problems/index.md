@@ -1,6 +1,6 @@
 ---
-title: Use HTML to solve common problems
-slug: Learn/HTML/Howto
+title: Solve common HTML problems
+slug: Learn_web_development/Howto/Solve_HTML_problems
 page-type: landing-page
 ---
 
@@ -27,7 +27,7 @@ HTML specializes in providing semantic information for a document, so HTML answe
 - [How to annotate images and graphics](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images#annotating_images_with_figures_and_figure_captions)
 - [How to mark abbreviations and make them understandable](/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#abbreviations)
 - [How to add quotations and citations to web pages](/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#quotations)
-- [How to define terms with HTML](/en-US/docs/Learn/HTML/Howto/Define_terms_with_HTML)
+- [How to define terms with HTML](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Define_terms_with_HTML)
 
 ### Hyperlinks
 
@@ -46,7 +46,7 @@ One of the main reasons for HTML is making navigation easy with {{Glossary("hype
 HTML only sets up document structure. To solve presentation issues, use {{glossary("CSS")}}, or use scripting to make your page interactive.
 
 - [How to use CSS within a webpage](/en-US/docs/Learn/CSS/First_steps/How_CSS_works#applying_css_to_the_dom)
-- [How to use JavaScript within a webpage](/en-US/docs/Learn/HTML/Howto/Use_JavaScript_within_a_webpage)
+- [How to use JavaScript within a webpage](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_JavaScript_within_a_webpage)
 
 ### Embedded content
 
@@ -73,7 +73,7 @@ Some information, called tabular data, needs to be organized into tables with co
 ### Data representation
 
 - How to represent numeric and code values with HTML — see [Superscript and Subscript](/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#superscript_and_subscript), and [Representing computer code](/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#representing_computer_code).
-- [How to use data attributes](/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
+- [How to use data attributes](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)
 
 ### Advanced text semantics
 
@@ -84,7 +84,7 @@ Some information, called tabular data, needs to be organized into tables with co
 
 - [How to add a responsive image to a webpage](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
 - [How to add vector image to a webpage](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [How to add a hit map on top of an image](/en-US/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image)
+- [How to add a hit map on top of an image](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image)
 
 ### Internationalization
 
@@ -95,4 +95,4 @@ HTML is not monolingual. It provides tools to handle common internationalization
 
 ### Performance
 
-- [How to author fast-loading HTML pages](/en-US/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages)
+- [How to author fast-loading HTML pages](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages)

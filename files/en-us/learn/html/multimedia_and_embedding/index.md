@@ -39,7 +39,7 @@ The following assessment will test your understanding of the material covered in
 
 ## See also
 
-- [Add a hitmap on top of an image](/en-US/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image)
+- [Add a hitmap on top of an image](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image)
   - : Image maps provide a mechanism to make different parts of an image link to different places. (Think of a map linking through to further information about each different country you click on.) This technique can sometimes be useful.
 - [Web literacy basics II](https://mozilla.github.io/curriculum-final/web-lit-basics-two/session01-why-do-we-use-the-web.html#overview)
   - : An excellent Mozilla foundation course that explores and tests some of the skills talked about in this _Multimedia and embedding_ module. Dive deeper into the basics of composing webpages, designing for accessibility, sharing resources, using online media, and working open (meaning that your content is freely available and shareable by others).

@@ -30,8 +30,8 @@ Writing HTML is fine, but what if something goes wrong, and you can't work out w
       <th scope="row">Objective:</th>
       <td>
         <ul>
+          <li>The concept of permissive code, and what this means for HTML debugging.</li>
           <li>Using the [HTML validator](https://validator.w3.org/) to detect markup errors.</li>
-          <li>Using View source for getting a quick look at the source markup of a page.<li>
           <li>Using the DOM inspector in your browser DevTools to dive deeper into your markup.</li>
         </ul>
       </td>
@@ -65,7 +65,7 @@ HTML itself doesn't suffer from syntax errors because browsers parse it permissi
 > [!NOTE]
 > HTML is parsed permissively because when the web was first created, it was decided that allowing people to get their content published was more important than making sure the syntax was absolutely correct. The web would probably not be as popular as it is today, if it had been more strict from the very beginning.
 
-## Active learning: Studying permissive code
+### Active learning: Studying permissive code
 
 It's time to study the permissive nature of HTML code.
 
@@ -136,7 +136,7 @@ The best strategy is to start by running your HTML page through the [Markup Vali
 
 To specify the HTML to validate, you can provide a web address, upload an HTML file, or directly input some HTML code.
 
-## Active learning: Validating an HTML document
+### Active learning: Validating an HTML document
 
 Let's try this with our [sample document](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/debugging-html/debug-example.html).
 
@@ -173,6 +173,10 @@ If you can't work out what every error message means, don't worry about it — a
 You will know when all your errors are fixed when you see the following banner in your output:
 
 ![Banner that reads "The document validates according to the specified schema(s) and to additional constraints checked by the validator."](valid-html-banner.png)
+
+## Using a DOM inspector
+
+xx
 
 ## Summary
 

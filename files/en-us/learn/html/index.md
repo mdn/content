@@ -32,7 +32,7 @@ This topic contains the following modules, in a suggested order for working thro
 
 ## Solving common HTML problems
 
-[Use HTML to solve common problems](/en-US/docs/Learn/HTML/Howto) provides links to sections of content explaining how to use HTML to solve very common problems when creating a webpage: dealing with titles, adding images or videos, emphasizing content, creating a basic form, etc.
+[Solve common HTML problems](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems) provides links to sections of content explaining how to use HTML to solve very common problems when creating a webpage: dealing with titles, adding images or videos, emphasizing content, creating a basic form, etc.
 
 ## See also
 

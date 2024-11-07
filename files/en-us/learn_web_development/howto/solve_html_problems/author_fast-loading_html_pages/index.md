@@ -1,10 +1,10 @@
 ---
 title: Tips for authoring fast-loading HTML pages
-slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
+slug: Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages
 page-type: learn-faq
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Learn/HTML/Howto")}}
+{{QuickLinksWithSubpages("/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems")}}
 
 These tips are based on common knowledge and experimentation.
 
