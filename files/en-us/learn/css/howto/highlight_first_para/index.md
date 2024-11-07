@@ -16,7 +16,29 @@ You would like to make the first paragraph larger and bold. You could add a clas
 
 A {{cssxref("pseudo-classes","pseudo-class")}} acts as if you have applied a class; however, rather than using a class selector CSS selects based on the document structure. There are a number of different pseudo-classes that can select different things. In our case we are going to use {{cssxref(":first-child")}}. This will select the element that is the first-child of a parent.
 
-{{EmbedGHLiveSample("css-examples/howto/highlight_first_para.html", '100%', 770)}}
+```html live-sample___highlight_first_para
+<div class="wrapper">
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
+
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+</div>
+```
+
+```css live-sample___highlight_first_para
+.wrapper p:first-child {
+  font-weight: bold;
+  font-size: 130%;
+}
+```
+
+{{EmbedLiveSample("highlight_first_para")}}
 
 You can try changing {{cssxref(":first-child")}} to {{cssxref(":last-child")}} in the live example above, and you will select the last paragraph.
 
