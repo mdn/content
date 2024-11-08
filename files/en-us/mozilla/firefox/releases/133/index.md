@@ -58,7 +58,7 @@ This article provides information about the changes in Firefox 133 that affect d
 
 ## Changes for add-on developers
 
-- {{WebExtAPIRef("cookies.get")}} now orders cookies according to [RFC 6265, section 5.4](https://datatracker.ietf.org/doc/html/rfc6265#section-5.4). This impacts call results when a cookie has variants with different path components. Previously, the earliest created cookie was matched by {{WebExtAPIRef("cookies.get")}}, {{WebExtAPIRef("cookies.remove")}}, {{WebExtAPIRef("cookies.set")}}, and {{WebExtAPIRef("cookies.getAll")}}. After this change, the cookie with the longest matching path is returned. ([Firefox bug 1798655](https://bugzil.la/1798655))
+- {{WebExtAPIRef("cookies.get")}} now orders cookies according to the [5.4 The Cookie Header section of the HTTP State Management Mechanism (RFC 6265)](https://datatracker.ietf.org/doc/html/rfc6265#section-5.4). This impacts call results when a cookie has variants with different path components. Previously, the earliest created cookie was matched by {{WebExtAPIRef("cookies.get")}}, {{WebExtAPIRef("cookies.remove")}}, {{WebExtAPIRef("cookies.set")}}, and {{WebExtAPIRef("cookies.getAll")}}. After this change, the cookie with the longest matching path is returned. ([Firefox bug 1798655](https://bugzil.la/1798655))
 
 ### Removals
 
