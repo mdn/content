@@ -2,10 +2,12 @@
 title: Permissions-Policy
 slug: Web/HTTP/Headers/Permissions-Policy
 page-type: http-header
+status:
+  - experimental
 browser-compat: http.headers.Permissions-Policy
 ---
 
-{{HTTPSidebar}}
+{{HTTPSidebar}}{{SeeCompatTable}}
 
 The HTTP **`Permissions-Policy`** header provides a mechanism to allow and deny the use of browser features in a document or within any {{HTMLElement("iframe")}} elements in the document.
 
@@ -89,7 +91,7 @@ You can specify
 
   - : Controls access to the [Topics API](/en-US/docs/Web/API/Topics_API). Where a policy specifically disallows the use of the Topics API, any attempts to call the {{domxref("Document.browsingTopics()")}} method or send a request with a {{httpheader("Sec-Browsing-Topics")}} header will fail with a `NotAllowedError` {{domxref("DOMException")}}.
 
-- {{httpheader('Permissions-Policy/camera', 'camera')}}
+- {{httpheader('Permissions-Policy/camera', 'camera')}} {{experimental_inline}}
 
   - : Controls whether the current document is allowed to use video input devices. When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} will reject with a `NotAllowedError` {{DOMxRef("DOMException")}}.
 
@@ -97,7 +99,7 @@ You can specify
 
   - : Controls access to the [Compute Pressure API](/en-US/docs/Web/API/Compute_Pressure_API).
 
-- {{HTTPHeader('Permissions-Policy/display-capture', 'display-capture')}}
+- {{HTTPHeader('Permissions-Policy/display-capture', 'display-capture')}} {{experimental_inline}}
 
   - : Controls whether or not the current document is permitted to use the {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} method to capture screen contents. When this policy is disabled, the promise returned by `getDisplayMedia()` will reject with a `NotAllowedError` {{DOMxRef("DOMException")}} if permission is not obtained to capture the display's contents.
 
@@ -109,7 +111,7 @@ You can specify
 
   - : Controls whether the current document is allowed to use the [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API) (EME). When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("Navigator.requestMediaKeySystemAccess()")}} will reject with a `SecurityError` {{domxref("DOMException")}}.
 
-- {{httpheader('Permissions-Policy/fullscreen','fullscreen')}}
+- {{httpheader('Permissions-Policy/fullscreen','fullscreen')}} {{experimental_inline}}
 
   - : Controls whether the current document is allowed to use {{DOMxRef("Element.requestFullscreen()")}}. When this policy is disabled, the returned {{JSxRef("Promise")}} rejects with a {{JSxRef("TypeError")}}.
 
@@ -118,7 +120,7 @@ You can specify
   - : Controls whether the current document is allowed to use the [Gamepad API](/en-US/docs/Web/API/Gamepad_API).
     When this policy is disabled, calls to {{domxref('Navigator.getGamepads()')}} will throw a `SecurityError` {{domxref('DOMException')}}, and the {{domxref("Window.gamepadconnected_event", "gamepadconnected")}} and {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}} events will not fire.
 
-- {{httpheader('Permissions-Policy/geolocation','geolocation')}}
+- {{httpheader('Permissions-Policy/geolocation','geolocation')}} {{experimental_inline}}
 
   - : Controls whether the current document is allowed to use the {{domxref('Geolocation')}} Interface. When this policy is disabled, calls to {{domxref('Geolocation.getCurrentPosition','getCurrentPosition()')}} and {{domxref('Geolocation.watchPosition','watchPosition()')}} will cause those functions' callbacks to be invoked with a {{domxref('GeolocationPositionError')}} code of `PERMISSION_DENIED`.
 
@@ -146,7 +148,7 @@ You can specify
 
   - : Controls whether the current document is allowed to gather information about the orientation of the device through the {{DOMxRef("Magnetometer")}} interface.
 
-- {{httpheader('Permissions-Policy/microphone','microphone')}}
+- {{httpheader('Permissions-Policy/microphone','microphone')}} {{experimental_inline}}
 
   - : Controls whether the current document is allowed to use audio input devices. When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("MediaDevices.getUserMedia()")}} will reject with a `NotAllowedError` {{domxref("DOMException")}}.
 
@@ -170,11 +172,11 @@ You can specify
 
   - : Controls whether the current document is allowed to use the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) to create new asymmetric key credentials, i.e., via {{domxref("CredentialsContainer.create", "navigator.credentials.create({publicKey: ..., ...})")}}.
 
-- {{httpheader("Permissions-Policy/publickey-credentials-get", "publickey-credentials-get")}}
+- {{httpheader("Permissions-Policy/publickey-credentials-get", "publickey-credentials-get")}} {{experimental_inline}}
 
   - : Controls whether the current document is allowed to use the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) to retrieve already stored public-key credentials, i.e., via {{domxref("CredentialsContainer.get", "navigator.credentials.get({publicKey: ..., ...})")}}.
 
-- {{httpheader('Permissions-Policy/screen-wake-lock', 'screen-wake-lock')}}
+- {{httpheader('Permissions-Policy/screen-wake-lock', 'screen-wake-lock')}} {{experimental_inline}}
 
   - : Controls whether the current document is allowed to use [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API) to indicate that device should not turn off or dim the screen.
 
@@ -194,7 +196,7 @@ You can specify
 
   - : Controls whether the current document is allowed to use the [WebUSB API](/en-US/docs/Web/API/WebUSB_API).
 
-- {{httpheader("Permissions-Policy/web-share", "web-share")}}
+- {{httpheader("Permissions-Policy/web-share", "web-share")}} {{experimental_inline}}
 
   - : Controls whether or not the current document is allowed to use the {{domxref("Navigator.share","Navigator.share()")}} of [Web Share API](/en-US/docs/Web/API/Web_Share_API) to share text, links, images, and other content to arbitrary destinations of user's choice, e.g. mobile apps.
 

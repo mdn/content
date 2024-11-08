@@ -19,7 +19,7 @@ An enumerated value. Possible values are:
 
 - `"occlusion"`
   - : The `GPUQuerySet` manages occlusion queries.
-- `"timestamp"`
+- `"timestamp"` {{experimental_inline}}
   - : The `GPUQuerySet` manages timestamp queries.
 
 > [!NOTE]
