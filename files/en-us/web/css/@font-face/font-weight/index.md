@@ -137,6 +137,8 @@ In this example, we include the same two fonts as in the example above, but we s
 
 While this example is a bit contrived, it demonstrates how authors can include multiple fonts for multiple font-weights (and font-styles), by including multiple `@font-face` declarations with the same `font-family` value. In the rest of your stylesheets, you can then declare a `font-weight` (or `font-style`), and know the appropriate font will be used.
 
+While this example is a bit contrived, it demonstrates how authors can include multiple fonts for multiple font-weights (and font-styles), by including multiple `@font-face` declarations with the same `font-family` value. In the rest of your stylesheets, you can then declare a `font-weight` (or `font-style`), and know the appropriate font will be used.
+
 #### HTML
 
 ```html
