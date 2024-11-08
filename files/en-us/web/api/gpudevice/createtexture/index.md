@@ -84,8 +84,8 @@ createTexture(descriptor)
 
         > [!NOTE]
         >
-        > - The `bgra8unorm-storage` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) needs to be enabled to specify `STORAGE_BINDING` usage for a `bgra8unorm`-[`format`](/en-US/docs/Web/API/GPUDevice/createTexture#format) {{domxref("GPUTexture")}}.
-        > - The `rg11b10ufloat-renderable` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) needs to be enabled to specify `RENDER_ATTACHMENT` usage for a `rg11b10ufloat`-[`format`](/en-US/docs/Web/API/GPUDevice/createTexture#format) {{domxref("GPUTexture")}}, as well as its blending and multisampling.
+        > - The `bgra8unorm-storage` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) needs to be enabled to specify `STORAGE_BINDING` usage for a `bgra8unorm`-[`format`](#format) {{domxref("GPUTexture")}}.
+        > - The `rg11b10ufloat-renderable` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) needs to be enabled to specify `RENDER_ATTACHMENT` usage for a `rg11b10ufloat`-[`format`](#format) {{domxref("GPUTexture")}}, as well as its blending and multisampling.
 
     - `viewFormats` {{optional_inline}}
       - : An array of enumerated values specifying other [texture formats](https://gpuweb.github.io/gpuweb/#enumdef-gputextureformat) permitted when calling {{domxref("GPUTexture.createView()")}} on this texture, in addition to the texture format specified in its `format` value.

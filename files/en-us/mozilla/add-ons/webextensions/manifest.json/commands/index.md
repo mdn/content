@@ -86,45 +86,8 @@ For example:
 
 This JSON defines 2 shortcuts:
 
-1. `"toggle-feature"`, accessed with
-
-   <kbd>Ctrl</kbd>
-
-   \+
-
-   <kbd>Shift</kbd>
-
-   \+
-
-   <kbd>U</kbd>
-
-   on Linux, and
-
-   <kbd>Alt</kbd>
-
-   \+
-
-   <kbd>Shift</kbd>
-
-   \+
-
-   <kbd>U</kbd>
-
-   on all other platforms.
-
-2. `"do-another-thing"`, accessed with
-
-   <kbd>Ctrl</kbd>
-
-   \+
-
-   <kbd>Shift</kbd>
-
-   \+
-
-   <kbd>Y</kbd>
-
-   on all platforms.
+1. `"toggle-feature"`, accessed with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>U</kbd> on Linux, and <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>U</kbd> on all other platforms.
+2. `"do-another-thing"`, accessed with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Y</kbd> on all platforms.
 
 You could then listen for the `"toggle-feature"` command with code like this:
 

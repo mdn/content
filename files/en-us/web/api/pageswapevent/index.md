@@ -2,12 +2,10 @@
 title: PageSwapEvent
 slug: Web/API/PageSwapEvent
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.PageSwapEvent
 ---
 
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+{{APIRef("HTML DOM")}}
 
 The **`PageSwapEvent`** event object is made available inside handler functions for the {{domxref("Window.pageswap_event", "pageswap")}} event.
 
@@ -15,14 +13,14 @@ The `pageswap` event is fired when you navigate across documents, when the previ
 
 ## Constructor
 
-- {{domxref("PageSwapEvent.PageSwapEvent", "PageSwapEvent()")}} {{experimental_inline}}
+- {{domxref("PageSwapEvent.PageSwapEvent", "PageSwapEvent()")}}
   - : Creates a new `PageSwapEvent` object instance.
 
 ## Instance properties
 
-- {{domxref("PageSwapEvent.activation", "activation")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("PageSwapEvent.activation", "activation")}} {{ReadOnlyInline}}
   - : Contains a {{domxref("NavigationActivation")}} object containing the navigation type and current and destination document history entries for a same-origin navigation. If the navigation has a cross-origin URL anywhere in the redirect chain, it returns `null`.
-- {{domxref("PageSwapEvent.viewTransition", "viewTransition")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("PageSwapEvent.viewTransition", "viewTransition")}} {{ReadOnlyInline}}
   - : Contains a {{domxref("ViewTransition")}} object representing the active view transition for the cross-document navigation.
 
 ## Examples

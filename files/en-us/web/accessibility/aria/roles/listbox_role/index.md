@@ -96,45 +96,17 @@ When the listbox role is added to an element, or such an element becomes visible
   - Type a character: focus moves to the next item with a name that starts with the typed character.
   - Type multiple characters in rapid succession: focus moves to the next item with a name that starts with the string of characters typed.
 
-- **Multiple Selection**: Authors may implement either of two interaction models to support multiple selection: a recommended model that does not require the user to hold a modifier key, such as
-
-  <kbd>Shift</kbd>
-
-  or
-
-  <kbd>Control</kbd>
-
-  , while navigating the list or an alternative model that does require modifier keys to be held while navigating in order to avoid losing selection states.
+- **Multiple Selection**: Authors may implement either of two interaction models to support multiple selection: a recommended model that does not require the user to hold a modifier key, such as <kbd>Shift</kbd> or <kbd>Control</kbd>, while navigating the list or an alternative model that does require modifier keys to be held while navigating in order to avoid losing selection states.
 
   - Recommended selection model — holding modifier keys is not necessary:
 
-    - <kbd>Space</kbd>
-
-      : changes the selection state of the focused option.
-
-    - <kbd>Shift + Down Arrow</kbd>
-
-      (Optional): Moves focus to and toggles the selected state of the next option.
-
-    - <kbd>Shift + Up Arrow</kbd>
-
-      (Optional): Moves focus to and toggles the selected state of the previous option.
-
-    - <kbd>Shift + Space</kbd>
-
-      (Optional): Selects contiguous items from the most recently selected item to the focused item.
-
-    - <kbd>Control + Shift + Home</kbd>
-
-      (Optional): Selects the focused option and all options up to the first option. Optionally, moves focus to the first option.
-
-    - <kbd>Control + Shift + End</kbd>
-
-      (Optional): Selects the focused option and all options down to the last option. Optionally, moves focus to the last option.
-
-    - <kbd>Control + A</kbd>
-
-      (Optional): Selects all options in the list. Optionally, if all options are selected, it may also unselect all options.
+    - <kbd>Space</kbd>: changes the selection state of the focused option.
+    - <kbd>Shift + Down Arrow</kbd> (Optional): Moves focus to and toggles the selected state of the next option.
+    - <kbd>Shift + Up Arrow</kbd> (Optional): Moves focus to and toggles the selected state of the previous option.
+    - <kbd>Shift + Space</kbd> (Optional): Selects contiguous items from the most recently selected item to the focused item.
+    - <kbd>Control + Shift + Home</kbd> (Optional): Selects the focused option and all options up to the first option. Optionally, moves focus to the first option.
+    - <kbd>Control + Shift + End</kbd> (Optional): Selects the focused option and all options down to the last option. Optionally, moves focus to the last option.
+    - <kbd>Control + A</kbd> (Optional): Selects all options in the list. Optionally, if all options are selected, it may also unselect all options.
 
 ### Required JavaScript features
 

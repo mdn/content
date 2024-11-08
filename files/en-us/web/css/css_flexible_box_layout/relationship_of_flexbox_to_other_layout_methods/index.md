@@ -30,7 +30,30 @@ The writing modes specification defines the following values of the {{cssxref("w
 - `sideways-rl`
 - `sideways-lr`
 
-{{EmbedGHLiveSample("css-examples/flexbox/relationship/writing-modes.html", '100%', 360)}}
+```html live-sample___writing-modes
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+</div>
+```
+
+```css live-sample___writing-modes
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+
+.box {
+  width: 500px;
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  writing-mode: horizontal-tb;
+}
+```
+
+{{EmbedLiveSample("writing-modes")}}
 
 The `sideways-rl` and `sideways-lr` have support only in Firefox currently.
 
@@ -44,7 +67,30 @@ With regard to flex items, if an item was floated or cleared and then becomes a 
 
 In this next live example the child elements have been floated, and then their container has had `display: flex` added. If you remove `display: flex`, you should see that the `.box` element collapses as we have no clearing applied. This demonstrates that the float is happening. Re-apply `display: flex` and the collapsing does not happen. This is because the items no longer have a float applied, as they have been transformed into flex items.
 
-{{EmbedGHLiveSample("css-examples/flexbox/relationship/floats.html", '100%', 430)}}
+```html live-sample___floats
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+</div>
+```
+
+```css live-sample___floats
+.box {
+  width: 500px;
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+}
+
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  float: left;
+}
+```
+
+{{EmbedLiveSample("floats")}}
 
 ## Flexbox and grid layout
 
@@ -56,11 +102,68 @@ A common question is to ask what the difference is between flexbox and CSS grid 
 
 The most straightforward answer to this question is defined in the specifications themselves. Flexbox is a one-dimensional layout method whereas grid layout is a two-dimensional layout method. The example below has a flex layout. As already described in the [Basic concepts](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) article, flex items can be allowed to wrap but, once they do, each line behaves as if it were a flex container of its own. When space is distributed, flexbox does not look at the placement of items in other rows and tries to line things up with each other.
 
-{{EmbedGHLiveSample("css-examples/flexbox/relationship/flex-layout.html", '100%', 750)}}
+```html live-sample___flex-layout
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+</div>
+```
+
+```css live-sample___flex-layout
+.box {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1em;
+}
+
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  padding: 1em;
+  flex: 1 1 200px;
+}
+```
+
+{{EmbedLiveSample("flex-layout", "", "300px")}}
 
 If we create a very similar layout using grid, we can control the layout in both rows and columns.
 
-{{EmbedGHLiveSample("css-examples/flexbox/relationship/grid-layout.html", '100%', 700)}}
+```html live-sample___grid-layout
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+</div>
+```
+
+```css live-sample___grid-layout
+.box {
+  border: 2px dotted rgb(96 139 168);
+  padding: 1em;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, auto));
+}
+
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  padding: 1em;
+  background-color: rgb(96 139 168 / 0.2);
+}
+```
+
+{{EmbedLiveSample("grid-layout", "", "300px")}}
 
 These examples point to another key difference between these layout methods. In grid layout, you do the majority of sizing specification on the container, setting up tracks and then placing items into them. In flexbox, while you create a flex container and set the direction at that level, any control over item sizing needs to happen on the items themselves.
 
@@ -88,7 +191,38 @@ Note that this only removes the box from the layout; the sub-children don't beco
 
 As the box is removed, you cannot then use it to — for example — add a background color behind the nested sub children. If you remove `display: contents` in this live example you will see that the direct child we are removing has an orange background color. This also disappears when the box disappears.
 
-{{EmbedGHLiveSample("css-examples/flexbox/relationship/display-contents.html", '100%', 650)}}
+```html live-sample___display-contents
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div class="nested">
+    <div>Sub-item 1</div>
+    <div>Sub-item 2</div>
+  </div>
+</div>
+```
+
+```css live-sample___display-contents
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  padding: 1em;
+  background-color: rgb(96 139 168 / 0.2);
+}
+
+.box {
+  border: 2px dotted rgb(96 139 168);
+  padding: 1em;
+  display: flex;
+}
+
+.nested {
+  background-color: orange;
+  display: contents;
+}
+```
+
+{{EmbedLiveSample("display-contents")}}
 
 > [!WARNING]
-> Some browsers incorrectly remove some elements with `display: contents` from the accessibility tree (but descendants will remain), removing those elements' semantics while maintaining their child content. This means the element itself may not be announced by screen readers. See [`display: contents`](/en-US/docs/Web/CSS/display#display_contents) and [`display: contents` considered harmful`](https://ericwbailey.design/published/display-contents-considered-harmful/).
+> Some browsers incorrectly remove some elements with `display: contents` from the accessibility tree (but descendants will remain), removing those elements' semantics while maintaining their child content. This means the element itself may not be announced by screen readers. See [`display: contents`](/en-US/docs/Web/CSS/display#display_contents) and [`display: contents` considered harmful](https://ericwbailey.design/published/display-contents-considered-harmful/).

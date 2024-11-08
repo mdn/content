@@ -146,7 +146,7 @@ Elements in HTML have **attributes**; these are additional values that configure
       </td>
       <td>
         Specifies the URL of an image file.
-        <div class="note">
+        <div class="note notecard">
           <p>
             <strong>Note:</strong> Although browsers and email clients may still
             support this attribute, it is obsolete. Use CSS
@@ -168,7 +168,7 @@ Elements in HTML have **attributes**; these are additional values that configure
       </td>
       <td>
         <p>Background color of the element.</p>
-        <div class="note">
+        <div class="note notecard">
           <p>
             <strong>Note:</strong> This is a legacy attribute. Please use the
             CSS {{ Cssxref("background-color") }} property instead.
@@ -184,7 +184,7 @@ Elements in HTML have **attributes**; these are additional values that configure
       </td>
       <td>
         <p>The border width.</p>
-        <div class="note">
+        <div class="note notecard">
           <p>
             <strong>Note:</strong> This is a legacy attribute. Please use the
             CSS {{ Cssxref("border") }} property instead.
@@ -250,7 +250,7 @@ Elements in HTML have **attributes**; these are additional values that configure
           This attribute sets the text color using either a named color or a
           color specified in the hexadecimal #RRGGBB format.
         </p>
-        <div class="note">
+        <div class="note notecard">
           <p>
             <strong>Note:</strong> This is a legacy attribute. Please use the
             CSS {{ Cssxref("color") }} property instead.
@@ -605,7 +605,7 @@ Elements in HTML have **attributes**; these are additional values that configure
           Specifies the height of elements listed here. For all other elements,
           use the CSS {{cssxref("height")}} property.
         </p>
-        <div class="note">
+        <div class="note notecard">
           <p>
             <strong>Note:</strong> In some instances, such as
             {{ HTMLElement("div") }}, this is a legacy attribute, in
@@ -1359,7 +1359,7 @@ Elements in HTML have **attributes**; these are additional values that configure
         <p>
           For the elements listed here, this establishes the element's width.
         </p>
-        <div class="note">
+        <div class="note notecard">
           <p>
             <strong>Note:</strong> For all other instances, such as
             {{ HTMLElement("div") }}, this is a legacy attribute, in

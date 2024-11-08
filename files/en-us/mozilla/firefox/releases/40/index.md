@@ -107,7 +107,7 @@ New extensions to the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API):
 
 - Slight improvement in our [Service Worker API](/en-US/docs/Web/API/Service_Worker_API): the {{domxref("ServiceWorkerRegistration.update()", "update()")}} method has been moved from {{domxref("ServiceWorkerGlobalScope")}} to {{domxref("ServiceWorkerRegistration")}} ([Firefox bug 1131350](https://bugzil.la/1131350)).
 - {{domxref("ServiceWorkerRegistration")}} is now available in Web workers ([Firefox bug 1131327](https://bugzil.la/1131327)).
-- {{domxref("DataStore")}} is now available in Web workers ([Firefox bug 916196](https://bugzil.la/916196)).
+- `DataStore` is now available in Web workers ([Firefox bug 916196](https://bugzil.la/916196)).
 
 #### IndexedDB
 
