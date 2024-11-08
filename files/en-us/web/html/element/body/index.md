@@ -52,19 +52,31 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - `onmessage`
   - : Function to call when the document has received a message.
 - `onmessageerror`
-  - : Function to call when the document has received a message.
+  - : Function to call when the document has received a message that cannot be deserialized.
 - `onoffline`
   - : Function to call when network communication has failed.
 - `ononline`
   - : Function to call when network communication has been restored.
+- `onpageswap`
+  - : Function to call when you navigate across documents, when the previous document is about to unload.
+- `onpagehide`
+  - : Function to call when the browser hides the current page in the process of presenting a different page from the session's history.
+- `onpagereveal`
+  - : Function to call when a document is first rendered, either when loading a fresh document from the network or activating a document.
+- `onpageshow`
+  - : Function to call when the browser displays the window's document due to navigation.
 - `onpopstate`
   - : Function to call when the user has navigated session history.
 - `onresize` {{deprecated_inline}}
   - : Function to call when the document has been resized.
+- `onrejectionhandled`
+  - : Function to call when a JavaScript {{jsxref("Promise")}} is handled late.
 - `onstorage`
   - : Function to call when the storage area has changed.
 - `onunload`
   - : Function to call when the document is going away.
+- `onunhandledrejection`
+  - : Function to call when a JavaScript {{jsxref("Promise")}} that has no rejection handler is rejected.
 - `rightmargin` {{deprecated_inline}}
   - : The margin of the right of the body.
     **Do not use this attribute! Use the CSS {{cssxref("margin-right")}} property on the element instead.**
