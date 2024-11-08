@@ -78,6 +78,10 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     See [standard metadata names](/en-US/docs/Web/HTML/Element/meta/name) for details about the set of standard metadata names defined in the HTML specification.
 
+- `media`
+
+  - : The `media` attribute says which media the metadata applies to. The value must be a valid [media query list](/en-US/docs/Glossary/Media_query). Unless the `name` is [theme-color](/en-US/docs/Web/HTML/Element/meta/name/theme-color), the `media` attribute has no effect on the processing model and must not be used by authors.
+
 ## Examples
 
 ```html
