@@ -17,7 +17,7 @@ A `ServiceWorker` object is available via a number of properties:
 - {{domxref("ServiceWorkerRegistration.installing")}} — when the service worker is in `installing` state
 - {{domxref("ServiceWorkerRegistration.waiting")}} — when the service worker is in `installed` state
 
-The `ServiceWorker` interface is dispatched a set of lifecycle events — `install` and `activate` — and functional events including `fetch`. A `ServiceWorker` object has an associated {{domxref("ServiceWorker.state")}}, related to its lifecycle.
+The `ServiceWorker` interface is the target of several lifecycle events — `install` and `activate` — and functional events including `fetch`. A `ServiceWorker` object has an associated {{domxref("ServiceWorker.state")}}, related to its lifecycle.
 
 Service workers allow static import of [ECMAScript modules](/en-US/docs/Web/JavaScript/Guide/Modules), if supported, using [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import).
 Dynamic import is disallowed by the specification — calling [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import) will throw.
