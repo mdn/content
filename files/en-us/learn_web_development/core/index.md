@@ -18,6 +18,8 @@ In particular, if you've never done any coding before, we'd recommend the [Your 
 
 - [Structuring content with HTML](/en-US/docs/Learn_web_development/Core/Structuring_content)
   - : To build a high-quality, usable, accessible website, you need to understand how to define your content structure using semantic HTML. This module covers the basics of the HTML language, before looking at key areas such as document structure, links, lists, images, forms, and more.
+- [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics)
+  - : CSS (Cascading Style Sheets) is used to style and layout web pages — for example, to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features. This module provides all the CSS fundamentals you'll need for now, including syntax, features, and techniques.
 
 ## See also
 

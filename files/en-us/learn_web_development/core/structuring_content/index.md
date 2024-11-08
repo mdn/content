@@ -51,6 +51,10 @@ Before starting this module, you don't need any previous HTML knowledge, but you
   - : In this article we look at more HTML table accessibility features such as captions/summaries, grouping your rows into table head, body and footer sections, and scoping columns and rows.
 - [Structuring a planet data table](/en-US/docs/Learn_web_development/Core/Structuring_content/Planet_data_table) <sup>Challenge</sup>
   - : In this challenge, we provide you with some data on the planets in our solar system. Your job is to structure it into an accessible HTML table.
+- [Forms and buttons in HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_forms)
+  - : HTML forms and buttons are powerful tools for interacting with users — most commonly they are used for collecting data from users or allowing them to control a user interface. In this article we provide an introduction to the basics of forms and buttons.
+- [Debugging HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML)
+  - : Writing HTML is fine, but what if something goes wrong, and you can't work out where the error in the code is? This article will introduce you to some tools that can help you find and fix errors in HTML.
 
 ## See also
 
