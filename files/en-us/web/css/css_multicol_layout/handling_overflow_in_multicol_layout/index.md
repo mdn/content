@@ -20,15 +20,14 @@ In this situation, the content should visibly overflow into the next column, rat
     Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
     daikon amaranth tatsoi tomatillo melon azuki bean garlic.
   </p>
-
-  <img alt="balloons" src="image.jpg" />
-
+  <img
+    alt="A close-up of two hot air balloons being inflated."
+    src="https://mdn.github.io/shared-assets/images/examples/balloons3.jpg" />
   <p>
     Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
     tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
     Dandelion cucumber earthnut pea peanut soko zucchini.
   </p>
-
   <p>
     Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
     kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter
@@ -39,32 +38,36 @@ In this situation, the content should visibly overflow into the next column, rat
 ```
 
 ```css live-sample___image
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
 .container {
-  column-width: 150px;
+  column-width: 250px;
 }
 ```
 
-{{EmbedLiveSample("image")}}
+{{EmbedLiveSample("image", "", "440px")}}
 
 There are two columns of text. In the left column, there is a photo that is wider than the column. The image expands into that second column, appearing behind the text of the right column. The flow of text in the right column isn't affected by the protruding photo, but the appearance is.
 
 If you want an image to fit the column box, setting `max-width: 100%` will prevent the image from growing beyond its container, in this case, the column box.
+The HTML is identical to the example above, so it's hidden for brevity.
 
-```html live-sample___image-max-width
+```html hidden live-sample___image-max-width
 <div class="container">
   <p>
     Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
     daikon amaranth tatsoi tomatillo melon azuki bean garlic.
   </p>
-
-  <img alt="balloons" src="image.jpg" />
-
+  <img
+    alt="A close-up of two hot air balloons being inflated."
+    src="https://mdn.github.io/shared-assets/images/examples/balloons3.jpg" />
   <p>
     Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
     tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
     Dandelion cucumber earthnut pea peanut soko zucchini.
   </p>
-
   <p>
     Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
     kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter
@@ -75,15 +78,19 @@ If you want an image to fit the column box, setting `max-width: 100%` will preve
 ```
 
 ```css live-sample___image-max-width
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
 .container {
-  column-width: 150px;
+  column-width: 250px;
 }
 img {
   max-width: 100%;
 }
 ```
 
-{{EmbedLiveSample("image-max-width")}}
+{{EmbedLiveSample("image-max-width", "", "440px")}}
 
 ## More columns than will fit
 
@@ -99,13 +106,11 @@ The example below shows this overflow behavior. The multicol container has a set
     Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
     daikon amaranth tatsoi tomatillo melon azuki bean garlic.
   </p>
-
   <p>
     Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
     tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
     Dandelion cucumber earthnut pea peanut soko zucchini.
   </p>
-
   <p>
     Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
     kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter
@@ -116,33 +121,37 @@ The example below shows this overflow behavior. The multicol container has a set
 ```
 
 ```css live-sample___overflow-inline
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
 .container {
   column-width: 200px;
   height: 180px;
+  border: 2px dashed;
 }
 ```
 
-{{EmbedLiveSample("overflow-inline")}}
+{{EmbedLiveSample("overflow-inline", "", "240px")}}
 
 ## Using vertical media queries
 
 One issue with multicol on the web is that if the columns are taller than the viewport, the reader will need to scroll the page up and down to read, which is not a good user experience. One way to avoid this is to only apply the column properties if you know there is enough vertical space.
 
 In the example below, we used a {{CSSXref("min-height")}} [@media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) to ensure there is enough vertical space before applying the column properties.
+The HTML is identical to the previous example, so it's hidden for brevity.
 
-```html live-sample___min-height
+```html hidden live-sample___min-height
 <div class="container">
   <p>
     Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
     daikon amaranth tatsoi tomatillo melon azuki bean garlic.
   </p>
-
   <p>
     Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
     tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
     Dandelion cucumber earthnut pea peanut soko zucchini.
   </p>
-
   <p>
     Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
     kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter
@@ -153,6 +162,10 @@ In the example below, we used a {{CSSXref("min-height")}} [@media query](/en-US/
 ```
 
 ```css live-sample___min-height
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
 @media (min-height: 300px) {
   .container {
     column-width: 200px;
@@ -160,7 +173,7 @@ In the example below, we used a {{CSSXref("min-height")}} [@media query](/en-US/
 }
 ```
 
-{{EmbedLiveSample("min-height")}}
+{{EmbedLiveSample("min-height", "", "340px")}}
 
 ## Next steps
 
