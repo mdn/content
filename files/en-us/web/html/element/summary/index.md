@@ -103,6 +103,81 @@ This example adds some semantics to the `<summary>` element to indicate the labe
 
 {{EmbedLiveSample("HTML_in_summaries", 650, 120)}}
 
+### Styling disclosure widgets
+
+The `<summary>` element's marker, the disclosure triangle, can be customized with CSS. The marker can be targeted using the {{cssxref("::marker")}} pseudo-element and element supports the {{cssxref("list-style")}} shorthand property and its longhand component properties, such as {{cssxref("list-style-type")}}. This enables changing the triangle to an image (usually with {{cssxref("list-style-image")}}) or a string (inlcuding emojis). In this example, we replace the content of one disclosure widget and remove the icon from another by setting `list-style: none`, anding a custom disclosure icon via generated content.
+
+#### CSS
+
+In the first disclosure widget, we style the `::marker`, changing the {{cssxref("content")}} based on the `<details>` element's `[open]` attribute. For the second widget, we remove the marker with `list-style` properties, then add styled generated content with the {{cssxref("::after")}} pseudo-element. We also include styles for `::-webkit-details-marker` to target Safari. The selector for the browser-specific pseudo element is included in an {{cssxref(":is()")}} pseudo class doesn't invalidate the selector list.
+
+```css
+details {
+  font-size: 1rem;
+  font-family: "Open Sans", Calibri, sans-serif;
+  border: solid;
+  padding: 2px 6px;
+  margin-bottom: 1em;
+}
+
+details:first-of-type summary::marker,
+:is(::-webkit-details-marker) {
+  content: "+ ";
+  font-family: monospace;
+  color: red;
+  font-weight: bold;
+}
+
+details[open]:first-of-type summary::marker {
+  content: "- ";
+}
+
+details:last-of-type summary {
+  list-style: none;
+  &::after {
+    content: "+";
+    color: white;
+    background-color: darkgreen;
+    border-radius: 1em;
+    font-weight: bold;
+    padding: 0 5px;
+    margin-inline-start: 5px;
+  }
+  [open] &::after {
+    content: "-";
+  }
+}
+details:last-of-type summary::-webkit-details-marker {
+  display: none;
+}
+```
+
+The CSS included [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors), the {{cssxref(":first-of-type")}} and {{cssxref(":last-of-type")}} pseudo-classes, the {{cssxref(":is()")}} pseudo-class qwhich takes a [forgiving selector list](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list), and CSS [nesting](/en-US/docs/Web/CSS/Nesting_selector).
+
+#### HTML
+
+```html
+<details>
+  <summary>Famous quote</summary>
+  <p>
+    <q>Nothing is impossible. The word itself says <q>I'm possible</q>.</q>
+    —Audrey Hepburn
+  </p>
+</details>
+
+<details>
+  <summary>Famous quote</summary>
+  <p>
+    <q>Your passion is waiting for your courage to catch up.</q> —Isabelle
+    Lafleche
+  </p>
+</details>
+```
+
+#### Result
+
+{{EmbedLiveSample("Styling disclosure widgets", 650, 150)}}
+
 ## Technical summary
 
 <table class="properties">
