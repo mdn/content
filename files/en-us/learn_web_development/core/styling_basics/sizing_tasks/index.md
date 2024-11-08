@@ -9,8 +9,8 @@ page-type: learn-module-assessment
 The aim of this skill test is to assess whether you understand the different ways of [sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS).
 
 > [!NOTE]
-> You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
->
+> Click **"Play"** in the code blocks below to edit the examples in the MDN Playground.
+> You can also copy the code (click the clipboard icon) and paste it into an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 > If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Task 1
@@ -21,13 +21,67 @@ The second box should be fixed at 100 pixels tall, so that content will overflow
 
 ![Two boxes one with overflowing content](mdn-sizing-height-min-height.png)
 
-Try updating the live code below to recreate the finished example:
+Try to update the code below to recreate the finished example:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/sizing/height-min-height.html", '100%', 1000)}}
+```html live-sample___height-min-height
+<div class="box box1">
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens
+    corn soko endive gumbo gourd.
+  </p>
+</div>
 
-> [!CALLOUT]
->
-> [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/sizing/height-min-height-download.html) to work in your own editor or in an online editor.
+<div class="box box2">
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens
+    corn soko endive gumbo gourd.
+  </p>
+</div>
+```
+
+```css hidden live-sample___height-min-height
+body {
+  font: 1.2em / 1.5 sans-serif;
+  padding: 1em;
+}
+
+.box {
+  border: 5px solid #000;
+  width: 400px;
+  margin-bottom: 1em;
+}
+```
+
+```css live-sample___height-min-height
+.box1 {
+  /* Add styles here */
+}
+
+.box2 {
+  /* Add styles here */
+}
+```
+
+{{EmbedLiveSample("height-min-height", "", "500px")}}
+
+<details>
+<summary>Click here to show the solution</summary>
+
+There are two boxes, the first should be given a minimum height, in which case it will expand to take the additional content but if you remove some content, the box will be at least as tall as the `min-height`. The second is given a fixed height which will cause content to overflow.
+
+```css
+.box1 {
+  min-height: 100px;
+}
+
+.box2 {
+  height: 100px;
+}
+```
+
+</details>
 
 ## Task 2
 
@@ -37,13 +91,60 @@ Your final result should look like the image below:
 
 ![A box with another box nested inside](mdn-sizing-percentages.png)
 
-Try updating the live code below to recreate the finished example:
+Try to update the code below to recreate the finished example:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/sizing/percentages.html", '100%', 800)}}
+```html live-sample___percentages
+<div class="box">
+  <div class="inner">Make me 60% of my parent's width.</div>
+</div>
+```
 
-> [!CALLOUT]
->
-> [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/sizing/percentages-download.html) to work in your own editor or in an online editor.
+```css hidden live-sample___percentages
+body {
+  font: 1.2em / 1.5 sans-serif;
+  padding: 1em;
+}
+.box {
+  border: 5px solid #000;
+  width: 400px;
+  margin-bottom: 1em;
+}
+
+.inner {
+  background-color: rebeccapurple;
+  color: white;
+  border-radius: 5px;
+}
+```
+
+```css live-sample___percentages
+* {
+  box-sizing: border-box;
+}
+.inner {
+  /* Add styles here */
+}
+```
+
+{{EmbedLiveSample("percentages", "", "250px")}}
+
+<details>
+<summary>Click here to show the solution</summary>
+
+Make the box 60% of the container and give it 10% of padding on all sides.
+All elements already have `box-sizing: border-box` to save you from worrying about which width you are using:
+
+```css
+* {
+  box-sizing: border-box;
+}
+.inner {
+  width: 60%;
+  padding: 10%;
+}
+```
+
+</details>
 
 ## Task 3
 
@@ -53,10 +154,55 @@ Your final result should look like the images below:
 
 ![Two boxes with images in](mdn-sizing-max-width.png)
 
-Try updating the live code below to recreate the finished example:
+Try to update the code below to recreate the finished example:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/sizing/max-width.html", '100%', 1200)}}
+```html live-sample___max-width
+<div class="box">
+  <img
+    alt="A pink star"
+    src="https://mdn.github.io/shared-assets/images/examples/star-pink_256x256.png" />
+</div>
 
-> [!CALLOUT]
->
-> [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/sizing/max-width-download.html) to work in your own editor or in an online editor.
+<div class="box">
+  <img
+    alt="Hot air balloons flying in clear sky, and a crowd of people in the foreground"
+    src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+</div>
+```
+
+```css hidden live-sample___max-width
+body {
+  font: 1.2em / 1.5 sans-serif;
+  padding: 1em;
+}
+.box {
+  border: 5px solid #000;
+  margin-bottom: 1em;
+  width: 500px;
+}
+```
+
+```css live-sample___max-width
+img {
+  /* Add styles here */
+}
+```
+
+{{EmbedLiveSample("max-width", "", "700px")}}
+
+<details>
+<summary>Click here to show the solution</summary>
+
+The example has an image which is breaking out of the box and one which is smaller than the box, you need to use `max-width` set to 100% to cause the larger image to grow only as large as the box. If you use `width: 100%`, the small image will stretch.
+
+```css
+img {
+  max-width: 100%;
+}
+```
+
+</details>
+
+## See also
+
+- [CSS building blocks](/en-US/docs/Learn/CSS/Building_blocks)
