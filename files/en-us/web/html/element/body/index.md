@@ -37,19 +37,21 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : Function to call when the user requests printing of the document.
 - `onbeforeunload`
   - : Function to call when the document is about to be unloaded.
-- `onblur`
+- `onblur` {{deprecated_inline}}
   - : Function to call when the document loses focus.
-- `onerror`
+- `onerror` {{deprecated_inline}}
   - : Function to call when the document fails to load properly.
-- `onfocus`
+- `onfocus` {{deprecated_inline}}
   - : Function to call when the document receives focus.
 - `onhashchange`
   - : Function to call when the fragment identifier part (starting with the hash (`'#'`) character) of the document's current address has changed.
 - `onlanguagechange`
   - : Function to call when the preferred languages changed.
-- `onload`
+- `onload` {{deprecated_inline}}
   - : Function to call when the document has finished loading.
 - `onmessage`
+  - : Function to call when the document has received a message.
+- `onmessageerror`
   - : Function to call when the document has received a message.
 - `onoffline`
   - : Function to call when network communication has failed.
@@ -57,7 +59,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : Function to call when network communication has been restored.
 - `onpopstate`
   - : Function to call when the user has navigated session history.
-- `onresize`
+- `onresize` {{deprecated_inline}}
   - : Function to call when the document has been resized.
 - `onstorage`
   - : Function to call when the storage area has changed.
