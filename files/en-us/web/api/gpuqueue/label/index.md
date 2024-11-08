@@ -24,15 +24,15 @@ A string. If no label value has previously been set, getting the label returns a
 Setting and getting a label via `GPUQueue.label`:
 
 ```js
-device.queue.label = "myqueue";
-console.log(device.queue.label); // "myqueue"
+device.queue.label = "my_queue";
+console.log(device.queue.label); // "my_queue"
 ```
 
 You can also set the queue's label at the time you request the device, like this:
 
 ```js
 const device = adapter.requestDevice({
-  defaultQueue: { label: "myqueue" },
+  defaultQueue: { label: "my_queue" },
 });
 ```
 

@@ -37674,6 +37674,18 @@
       "dhodder"
     ]
   },
+  "Web/API/HTMLDialogElement/cancel_event": {
+    "modified": "2020-10-15T21:43:04.572Z",
+    "contributors": [
+      "mfuji09",
+      "fscholz",
+      "mfluehr",
+      "sideshowbarker",
+      "fgwang",
+      "rolfedh",
+      "cvrebert"
+    ]
+  },
   "Web/API/HTMLDialogElement/close": {
     "modified": "2020-10-15T21:52:17.118Z",
     "contributors": ["fscholz", "chrisdavidmills"]
@@ -65414,10 +65426,6 @@
   "Web/API/Web_Audio_API/Simple_synth": {
     "modified": "2020-06-16T14:49:12.422Z",
     "contributors": ["jmcantrell", "DianeLooney", "Sheppy"]
-  },
-  "Web/API/Web_Audio_API/Tools": {
-    "modified": "2019-03-18T21:37:44.787Z",
-    "contributors": ["chrisdavidmills", "alien35", "Sheppy"]
   },
   "Web/API/Web_Audio_API/Using_AudioWorklet": {
     "modified": "2020-10-11T19:28:05.402Z",

@@ -643,16 +643,9 @@ The following non-standard attributes are also available on some browsers. As a 
   </thead>
   <tbody>
     <tr>
-      <td><a href="#autocorrect"><code>autocorrect</code></a></td>
-      <td>
-        A string indicating whether autocorrect is <code>on</code> or <code>off</code>. <strong>Safari only.</strong>
-      </td>
-    </tr>
-    <tr>
       <td><a href="#incremental"><code>incremental</code></a></td>
       <td>
-        Whether or not to send repeated {{domxref("HTMLInputElement/search_event", "search")}}
-        events to allow updating live search results while the user is still editing the value of the field.
+        Whether or not to send repeated {{domxref("HTMLInputElement/search_event", "search")}} events to allow updating live search results while the user is still editing the value of the field.
         <strong>WebKit and Blink only (Safari, Chrome, Opera, etc.).</strong>
       </td>
     </tr>
@@ -687,15 +680,6 @@ The following non-standard attributes are also available on some browsers. As a 
     </tr>
   </tbody>
 </table>
-
-- `autocorrect` {{non-standard_inline}}
-
-  - : (Safari only). A string which indicates whether to activate automatic correction while the user is editing this field. Permitted values are:
-
-    - `on`
-      - : Enable automatic correction of typos, as well as processing of text substitutions if any are configured.
-    - `off`
-      - : Disable automatic correction and text substitutions.
 
 - `incremental` {{non-standard_inline}}
 

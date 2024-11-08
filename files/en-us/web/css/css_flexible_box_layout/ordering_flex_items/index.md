@@ -43,7 +43,35 @@ The flexible box layout specification warns us not to use reordering as a way of
 
 As you tab from link to link in the live example below, the focus style is highlighted, demonstrating that changing the order of flex-items with `flex-direction` does not change the tabbing order, which will continue to follow the source code order.
 
-{{EmbedGHLiveSample("css-examples/flexbox/order/flex-direction.html", '100%', 440)}}
+```html live-sample___flex-direction
+<div class="box">
+  <div><a href="#">One</a></div>
+  <div><a href="#">Two</a></div>
+  <div><a href="#">Three</a></div>
+</div>
+```
+
+```css live-sample___flex-direction
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  padding: 10px;
+}
+
+.box > * a:focus {
+  background-color: yellow;
+  color: black;
+}
+
+.box {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  flex-direction: row-reverse;
+}
+```
+
+{{EmbedLiveSample("flex-direction")}}
 
 In the same way that changing the value of `flex-direction` does not change the tabbing order, changing this value does not change paint order. It is a visual reversal of the items only.
 
@@ -73,7 +101,47 @@ These items would be displayed on the page in the following order:
 
 Play around with the values in this live example below and see how that changes the order. Also, try changing `flex-direction` to `row-reverse` and see what happens — the start line is switched so the ordering begins from the opposite side.
 
-{{EmbedGHLiveSample("css-examples/flexbox/order/order.html", '100%', 500)}}
+```html live-sample___order
+<div class="box">
+  <div><a href="#">1</a></div>
+  <div><a href="#">2</a></div>
+  <div><a href="#">3</a></div>
+  <div><a href="#">4</a></div>
+  <div><a href="#">5</a></div>
+</div>
+```
+
+```css live-sample___order
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  padding: 10px;
+}
+
+.box {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  flex-direction: row;
+}
+.box :nth-child(1) {
+  order: 2;
+}
+.box :nth-child(2) {
+  order: 3;
+}
+.box :nth-child(3) {
+  order: 1;
+}
+.box :nth-child(4) {
+  order: 3;
+}
+.box :nth-child(5) {
+  order: 1;
+}
+```
+
+{{EmbedLiveSample("order")}}
 
 Flex items have a default `order` value of `0`. Therefore, items with an integer value greater than `0` will be displayed after any items that have not been given an explicit `order` value.
 
@@ -81,7 +149,43 @@ You can also use negative values with `order`, which can be quite useful. If you
 
 In the live code example below, the items are laid out using flexbox. By changing which item has the class `active` assigned to it in the HTML, you can change which item displays first and therefore becomes full width at the top of the layout, with the other items displaying below it.
 
-{{EmbedGHLiveSample("css-examples/flexbox/order/negative-order.html", '100%', 520)}}
+```html live-sample___negative-order
+<div class="box">
+  <div><a href="#">1</a></div>
+  <div><a href="#">2</a></div>
+  <div class="active"><a href="#">3</a></div>
+  <div><a href="#">4</a></div>
+  <div><a href="#">5</a></div>
+</div>
+```
+
+```css live-sample___negative-order
+* {
+  box-sizing: border-box;
+}
+
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  padding: 10px;
+}
+
+.box {
+  width: 500px;
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.active {
+  order: -1;
+  flex: 1 0 100%;
+}
+```
+
+{{EmbedLiveSample("negative-order")}}
 
 The items are displayed in _order-modified document order_ meaning the value of the `order` property is taken into account before the items are displayed.
 
@@ -109,7 +213,48 @@ Visually, the date appears above the heading, in the source. However, if the car
 
 The card is our flex container, with `flex-direction` set to `column`. We give the date an `order` of `-1`, placing it above the heading.
 
-{{EmbedGHLiveSample("css-examples/flexbox/order/usecase-order.html", '100%', 730)}}
+```html live-sample___usecase-order
+<div class="wrapper">
+  <div class="card">
+    <h3>News item title</h3>
+    <div class="date">1 Nov 2017</div>
+    <p>This is the content of my news item. Very newsworthy.</p>
+  </div>
+  <div class="card">
+    <h3>Another title</h3>
+    <div class="date">6 Nov 2017</div>
+    <p>This is the content of my news item. Very newsworthy.</p>
+  </div>
+</div>
+```
+
+```css live-sample___usecase-order
+body {
+  font-family: sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex: 1 1 200px;
+  gap: 1em;
+}
+
+.card {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.date {
+  order: -1;
+  text-align: right;
+}
+```
+
+{{EmbedLiveSample("usecase-order", "", "220px")}}
 
 These small tweaks are the sort of cases where the `order` property makes sense. Keep the logical order the same as the reading and tab order of the document, and maintain that in the most accessible and structured fashion. Then use `order` for purely visual design tweaks. Don't reorder items that receive keyboard focus. Ensure you always test your content using only a keyboard rather than a mouse or a touchscreen; this will reveal if your development choices make it more complex to navigate the content.
 

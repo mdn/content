@@ -100,7 +100,7 @@ Our markup includes three custom elements, including a custom element with an in
 
 <person-details>
   <span slot="person-age">44</span>
-  <span slot="not-a-slot-name">Time traveller</span>
+  <span slot="not-a-slot-name">Time traveler</span>
   <p slot="person-name">Dr. Who</p>
 </person-details>
 ```

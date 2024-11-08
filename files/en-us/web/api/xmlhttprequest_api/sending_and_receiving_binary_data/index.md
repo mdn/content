@@ -62,11 +62,11 @@ function loadBinaryResource(url) {
 The magic happens in the `overrideMimeType` function, which forces the browser to treat it as plain text, using a user-defined character set. This tells the browser not to parse it, and to let the bytes pass through unprocessed.
 
 ```js
-const filestream = loadBinaryResource(url);
-const abyte = filestream.charCodeAt(x) & 0xff; // throw away high-order byte (f7)
+const fileStream = loadBinaryResource(url);
+const lowestByte = fileStream.charCodeAt(x) & 0xff; // throw away high-order byte (f7)
 ```
 
-The example above fetches the byte at offset `x` within the loaded binary data. The valid range for `x` is from 0 to `filestream.length-1`.
+The example above fetches the byte at offset `x` within the loaded binary data. The valid range for `x` is from 0 to `fileStream.length-1`.
 
 See [downloading binary streams with XMLHttpRequest](https://web.archive.org/web/20071103070418/http://mgran.blogspot.com/2006/08/downloading-binary-streams-with.html) for a detailed explanation.
 

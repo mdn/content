@@ -13,15 +13,15 @@ The **`console.assert()`** static method writes an error message to the console 
 ## Syntax
 
 ```js-nolint
-assert(assertion)
+console.assert(assertion)
 
-assert(assertion, val1)
-assert(assertion, val1, val2)
-assert(assertion, val1, val2, /* …, */ valN)
+console.assert(assertion, val1)
+console.assert(assertion, val1, val2)
+console.assert(assertion, val1, val2, /* …, */ valN)
 
-assert(assertion, msg)
-assert(assertion, msg, subst1)
-assert(assertion, msg, subst1, /* …, */ substN)
+console.assert(assertion, msg)
+console.assert(assertion, msg, subst1)
+console.assert(assertion, msg, subst1, /* …, */ substN)
 ```
 
 ### Parameters
