@@ -193,11 +193,14 @@ When the `font-weight` property is specifies a weight outside this range the wei
 
 #### HTML
 
-We include a paragraph with `<output>` initially set to `400`, as that is the the default font-weight for unstyled paragraph text.
-We also include an input of type range, setting the `step` to `50`.
+We include a paragraph with `<output>` initially set to `400`, as that is the the default font-weight for unstyled paragraph text. This paragraph is nestled between two other paragraphs to enable comparing rendered versus declared font weight values.
+
+We include an {{htmlelement("input/range")}} of type `range`, nested in a {{htmlelement("label")}}, setting the `step` to `50`.
 
 ```html
-<p>LeagueMono, font-weight: <output>400</output></p>
+<p>LeagueMono, font-weight: 300 (comparison)</p>
+<p id="example">LeagueMono, font-weight: <output>400</output> (example)</p>
+<p>LeagueMono, font-weight: 700 (comparison)</p>
 <label
   >Change the font size:
   <input type="range" min="50" max="1000" step="50" value="400" />
@@ -219,14 +222,22 @@ p {
   font-family: LeagueMono, serif;
   font-size: 1.5rem;
 }
+
+p:first-of-type {
+  font-weight: 300;
+}
+
+p:last-of-type {
+  font-weight: 700;
+}
 ```
 
 #### JavaScript
 
-We include an event handler that updates the `font-weight` of the paragraph, and updates the text to reflect that value:
+We include an event handler that updates the paragraph's `font-weight` property value, and updates the text to reflect the change:
 
-```JavaScript
-const text = document.querySelector("p");
+```js
+const text = document.querySelector("#example");
 const log = document.querySelector("output");
 const range = document.querySelector("input");
 
@@ -241,8 +252,7 @@ range.addEventListener("change", () => {
 {{embedlivesample("Setting a range for a variable font", "", "400")}}
 
 Change the font weight of the paragraph via the range.
-Notice that any value less than `300` is display at `300` and
-any value above `700` is displayed at `700`.
+Note that the example paragraph does not get lighter than the `300` paragraph above it or bolder than the `700` paragraph below it; the font weight is clamped to the range defined by the `font-weight` descriptor.
 
 ## Specifications
 
