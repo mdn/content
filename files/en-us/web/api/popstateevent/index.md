@@ -7,7 +7,7 @@ browser-compat: api.PopStateEvent
 
 {{APIRef("History API")}}
 
-**`PopStateEvent`** is an interface for the [`popstate`](/en-US/docs/Web/API/Window/popstate_event) event.
+**`PopStateEvent`** is an interface for the {{domxref("Window/popstate_event", "popstate")}} event.
 
 A `popstate` event is dispatched to the window every time the active history
 entry changes between two history entries for the same document. If the history entry
@@ -28,6 +28,8 @@ _This interface also inherits the properties of its parent, {{domxref("Event")}}
 
 - {{domxref("PopStateEvent.state")}} {{ReadOnlyInline}}
   - : Returns a copy of the information that was provided to `pushState()` or `replaceState()`.
+- {{domxref("PopStateEvent.hasUAVisualTransition", "hashChange")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns `true` if the navigation has been performed a visual transition before dispatching this event by the user agent, or `false` otherwise.
 
 ## Instance methods
 
