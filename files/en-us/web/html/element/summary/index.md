@@ -158,18 +158,17 @@ The CSS included [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors),
 
 ```html
 <details>
-  <summary>Famous quote</summary>
+<h1>Quotes from Helen Keller</h2>
+  <summary>On women's rights</summary>
   <p>
-    <q>Nothing is impossible. The word itself says <q>I'm possible</q>.</q>
-    —Audrey Hepburn
+    <q>We have prayed, we have coaxed, we have begged, for the vote, with the hope that men, out of chivalry, would bestow equal rights upon women and take them into partnership in the affairs of the state. We hoped that their common sense would triumph over prejudices and stupidity. We thought their boasted sense of justice would overcome the errors that so often fetter the human spirit; but we have always gone away empty-handed. We shall beg no more.</q>
   </p>
 </details>
 
 <details>
-  <summary>Famous quote</summary>
+  <summary>On optimism</summary>
   <p>
-    <q>Your passion is waiting for your courage to catch up.</q> —Isabelle
-    Lafleche
+    <q>Optimism is the faith that leads to achievement; nothing can be done without hope.</q>
   </p>
 </details>
 ```
