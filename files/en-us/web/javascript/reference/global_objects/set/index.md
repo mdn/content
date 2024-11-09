@@ -17,7 +17,7 @@ The specification requires sets to be implemented "that, on average, provide acc
 
 ### Value equality
 
-Value equality is based on the [SameValueZero](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality) algorithm. (It used to use [SameValue](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value_equality_using_object.is), which treated `0` and `-0` as different. Check [browser compatibility](#browser_compatibility).) This means {{jsxref("NaN")}} is considered the same as `NaN` (even though `NaN !== NaN`) and all other values are considered equal according to the semantics of the `===` operator.
+Value equality is based on the [SameValue](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value_equality_using_object.is) algorithm. (If the argument is -0, it is converted to 0 using the [CanonicalizeKeyedCollectionKey](https://tc39.es/ecma262/#sec-canonicalizekeyedcollectionkey) abstract operation before comparison. Check [browser compatibility](#browser_compatibility).) This means {{jsxref("NaN")}} is considered the same as `NaN` (even though `NaN !== NaN`) and all other values are considered equal according to the semantics of the `===` operator.
 
 ### Performance
 
