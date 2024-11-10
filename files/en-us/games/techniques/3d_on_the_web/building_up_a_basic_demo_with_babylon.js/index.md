@@ -29,7 +29,7 @@ With these editors, you can add `https://cdn.babylonjs.com/babylon.js` as a Java
 > [!NOTE]
 > This guide was last updated in November 2024, and is compatible with Babylon.js version `7.33.0`.
 
-### HTML skeleton
+### HTML starter for Babylon.js
 
 If you're building your project locally in an IDE, here's the HTML structure to get started:
 

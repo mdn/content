@@ -38,7 +38,7 @@ Whichever way you choose to get started, make sure you have the [Three.js docume
 > [!NOTE]
 > This guide was last updated in November 2024, and is compatible with Three.js version `r79`.
 
-## HTML structure
+### HTML starter for Three.js
 
 If you're building your project locally in an IDE, here's the HTML structure to get started:
 

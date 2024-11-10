@@ -29,7 +29,7 @@ With these editors, you can add `https://cdn.babylonjs.com/babylon.js` as a Java
 > [!NOTE]
 > This guide was last updated in November 2024, and is compatible with PlayCanvas version `2.2.2`.
 
-### HTML skeleton
+### HTML starter for PlayCanvas
 
 If you're building your project locally in an IDE, here's the HTML structure to get started:
 
