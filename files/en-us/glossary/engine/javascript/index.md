@@ -10,12 +10,13 @@ page-type: glossary-definition
 
 In a browser, the JavaScript engine operates together with the rendering engine via the {{glossary("DOM", "Document Object Model")}} and {{glossary("WebIDL", "Web IDL")}} bindings. Some JavaScript engines also execute {{glossary("WebAssembly")}} code in the same sandbox as regular JavaScript code.
 
+Do not confuse JavaScript engines with {{glossary("engine/rendering", "rendering engines")}}, which are also crucial parts of browsers.
+
 Common JavaScript engines include:
 
 - [V8](https://v8.dev/)
 - [SpiderMonkey](https://spidermonkey.dev/)
 - [WebKit](https://webkit.org/)
-Do not confuse JavaScript engines with {{glossary("engine/rendering", "rendering engines")}}, which are also crucial parts of browsers.
 
 ## See also
 
