@@ -16,7 +16,6 @@ Common JavaScript engines include:
 
 - [V8](https://v8.dev/)
 - [SpiderMonkey](https://spidermonkey.dev/)
-- [WebKit](https://webkit.org/)
 
 ## See also
 
