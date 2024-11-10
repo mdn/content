@@ -27,7 +27,7 @@ If you don't want to develop locally, you can use an online editor such as [Code
 With these editors, you can add `https://cdn.babylonjs.com/babylon.js` as a JavaScript source so it's available in your code.
 
 > [!NOTE]
-> This guide was last revised in November 2024, and is compatible with Babylon.js version `7.33.0`.
+> This guide was last updated in November 2024, and is compatible with Babylon.js version `7.33.0`.
 
 ### HTML skeleton
 
