@@ -29,6 +29,7 @@ deriveKey(algorithm, baseKey, derivedKeyAlgorithm, extractable, keyUsages)
     - To use [ECDH](#ecdh), pass an [`EcdhKeyDeriveParams`](/en-US/docs/Web/API/EcdhKeyDeriveParams) object, specifying the string `ECDH` as the `name` property.
     - To use [HKDF](#hkdf), pass an [`HkdfParams`](/en-US/docs/Web/API/HkdfParams) object.
     - To use [X25519](#x25519), pass an [`EcdhKeyDeriveParams`](/en-US/docs/Web/API/EcdhKeyDeriveParams) object, specifying the string `X25519` as the `name` property.
+    - To use [PBKDF2](#pbkdf2), pass a [`Pbkdf2Params`](/en-US/docs/Web/API/Pbkdf2Params) object.
 - `baseKey`
   - : A {{domxref("CryptoKey")}} representing the input to the derivation algorithm.
     If `algorithm` is ECDH or X25519, then this will be the ECDH or X25519 private key.
