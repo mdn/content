@@ -72,15 +72,15 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
         > - [Understanding Success Criterion 2.2.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-postponed.html)
         > - [Understanding Success Criterion 3.2.5 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-no-extreme-changes-context.html)
 
+- `media`
+
+  - : The `media` attribute defines which media the theme color defined in the `content` attribute should be applied to. Its value is a [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), which defaults to `all` if the attribute is missing. This attribute is only relevant when the element's [`name`](/en-US/docs/Web/HTML/Element/meta/name) attribute is set to [`theme-color`](/en-US/docs/Web/HTML/Element/meta/name/theme-color). Otherwise, it has no effect, and should not be included.
+
 - `name`
 
   - : The `name` and `content` attributes can be used together to provide document metadata in terms of name-value pairs, with the `name` attribute giving the metadata name, and the `content` attribute giving the value.
 
     See [standard metadata names](/en-US/docs/Web/HTML/Element/meta/name) for details about the set of standard metadata names defined in the HTML specification.
-
-- `media`
-
-  - : The `media` attribute defines which media the theme color defined in the `content` attribute should be applied to. Its value is a [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), which defaults to `all` if the attribute is missing. This attribute is only relevant when the element's [`name`](/en-US/docs/Web/HTML/Element/meta/name) attribute is set to [`theme-color`](/en-US/docs/Web/HTML/Element/meta/name/theme-color). Otherwise, it has no effect, and should not be included.
 
 ## Examples
 
