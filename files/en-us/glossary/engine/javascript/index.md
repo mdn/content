@@ -15,7 +15,6 @@ Common JavaScript engines include:
 - [V8](https://v8.dev/)
 - [SpiderMonkey](https://spidermonkey.dev/)
 - [WebKit](https://webkit.org/)
-  
 Do not confuse JavaScript engines with {{glossary("engine/rendering", "rendering engines")}}, which are also crucial parts of browsers.
 
 ## See also
