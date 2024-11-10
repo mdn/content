@@ -80,7 +80,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `media`
 
-  - : The `media` attribute says which media the metadata applies to. The value must be a valid [media query list](/en-US/docs/Glossary/Media_query). Unless the `name` is [theme-color](/en-US/docs/Web/HTML/Element/meta/name/theme-color), the `media` attribute has no effect on the processing model and must not be used by authors.
+  - : The `media` attribute defines which media the theme color defined in the `content` attribute should be applied to. Its value is a [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), which defaults to `all` if the attribute is missing. This attribute is only relevant when the element's [`name`](/en-US/docs/Web/HTML/Element/meta/name) attribute is set to [`theme-color`](/en-US/docs/Web/HTML/Element/meta/name/theme-color). Otherwise, it has no effect, and should not be included.
 
 ## Examples
 
