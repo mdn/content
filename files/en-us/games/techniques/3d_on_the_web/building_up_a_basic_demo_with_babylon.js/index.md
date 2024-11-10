@@ -27,7 +27,7 @@ If you don't want to develop locally, you can use an online editor such as [Code
 With these editors, you can add `https://cdn.babylonjs.com/babylon.js` as a JavaScript source so it's available in your code.
 
 > [!NOTE]
-> This guide was last revised in November 2024, and is compatible with Babylon.js version 7.33.0.
+> This guide was last revised in November 2024, and is compatible with Babylon.js version `7.33.0`.
 
 ### HTML skeleton
 
@@ -58,6 +58,7 @@ If you're building your project locally in an IDE, here's the HTML structure to 
     <!-- <script src="https://cdn.babylonjs.com/babylon.js"></script> -->
 
     <canvas id="render-canvas"></canvas>
+
     <script>
       const canvas = document.getElementById("render-canvas");
       /* All of our JavaScript code goes here */
@@ -68,7 +69,7 @@ If you're building your project locally in an IDE, here's the HTML structure to 
 
 It contains some basic information like the document {{htmlelement("title")}}, and some CSS to set the width and height of the {{htmlelement("canvas")}} element (which Babylon.js will use to render the content on) to fill the entire available viewport space. The first {{htmlelement("script")}} element includes the Babylon.js library in the page; we will write our example code in the second one. There is one variable already included, which will store a reference to the `<canvas>` element.
 
-Before reading on, copy this code to a new text file and save it in your working directory as `index.html`.
+If you're developing in an IDE, copy this code to a new text file and save it in your working directory as `index.html`.
 
 ## Initializing the Babylon.js engine
 
@@ -316,12 +317,12 @@ The cylinder will float up and down on the `y` axis thanks to the `Math.sin()` f
 Here's the final code with animated shapes.
 You can click "Play" to edit the example in the MDN Playground:
 
-```html hidden live-sample___babylon-js-2
+```html hidden live-sample___babylon-js-animation
 <canvas id="render-canvas"></canvas>
 <script src="https://cdn.babylonjs.com/babylon.js"></script>
 ```
 
-```js live-sample___babylon-js-2
+```js live-sample___babylon-js-animation
 const canvas = document.getElementById("render-canvas");
 const engine = new BABYLON.Engine(canvas, true, {
   preserveDrawingBuffer: false,
@@ -376,7 +377,7 @@ const renderLoop = function () {
 engine.runRenderLoop(renderLoop);
 ```
 
-```css hidden live-sample___babylon-js-2
+```css hidden live-sample___babylon-js-animation
 canvas {
   margin: 0;
   padding: 0;
@@ -387,4 +388,4 @@ canvas {
 }
 ```
 
-{{embedlivesample("babylon-js-2", "", "400px")}}
+{{embedlivesample("babylon-js-animation", "", "400px")}}
