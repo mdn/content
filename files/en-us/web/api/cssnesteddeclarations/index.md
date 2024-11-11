@@ -28,7 +28,9 @@ _No specific methods; inherits methods from its ancestor {{domxref("CSSRule")}}.
 
 ## Examples
 
-The CSS below includes a selector `.foo` that contains three nested rules.
+### CSS
+
+The CSS below includes a selector `.foo` that contains two declarations and a media query.
 
 ```css
 .foo {
@@ -44,12 +46,28 @@ This is represented by a number of JavaScript objects in the [CSS Object Model](
 
 - A {{domxref("CSSStyleRule")}} object that represents the `background-color: silver` rule.
   This can be returned via `document.styleSheets[0].cssRules[0]`.
-- A {{domxref("CSSMediaRule")}} object  that represents the `@media (screen)` rule, and which can be returned via `document.styleSheets[0].cssRules[0].cssRules[0]`.
-   - The `CSSMediaRule` object contains a `CSSNestedDeclaration` object which represents the  `color: tomato` rule nested by the `@media (screen)` rule.
-     This can be returned via `document.styleSheets[0].cssRules[0].cssRules[0].cssRules[0]`.
+- A {{domxref("CSSMediaRule")}} object that represents the `@media (screen)` rule, and which can be returned via `document.styleSheets[0].cssRules[0].cssRules[0]`.
+  - The `CSSMediaRule` object contains a `CSSNestedDeclaration` object which represents the `color: tomato` rule nested by the `@media (screen)` rule.
+    This can be returned via `document.styleSheets[0].cssRules[0].cssRules[0].cssRules[0]`.
 - The final rule is a `CSSNestedDeclaration` object that represents the `color: black` rule in the stylesheet, and which can be returned via `document.styleSheets[0].cssRules[0].cssRules[1]`.
 
-  Note that all top-level styles after the first `CSSNestedDeclaration` must also be represented as `CSSNestedDeclaration` objects in order to follow the [CSS nested declarations rule](/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting#nested_declarations_rule)
+Note that all top-level styles after the first `CSSNestedDeclaration` must also be represented as `CSSNestedDeclaration` objects in order to follow the [CSS nested declarations rule](/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting#nested_declarations_rule)
+
+### CSSOM (CSS Object Model)
+
+```txt
+↳ CSSStyleRule
+  .style
+    - background-color: silver
+  ↳ CSSMediaRule
+    ↳ CSSNestedDeclarations
+      .style (CSSStyleDeclaration, 1) =
+      - color: tomato
+  ↳ CSSNestedDeclarations
+    .style (CSSStyleDeclaration, 1) =
+      - color: black
+```
+
 ## Specifications
 
 {{Specifications}}
