@@ -206,7 +206,7 @@ Fetch directives can also use a hash of the script to guarantee its integrity. W
 2. creates a {{glossary("Base64")}} encoding of the result
 3. appends a prefix identifying the hash algorithm used (one of `sha256-`, `sha384-`, or `sha512-`).
 
-If then adds the result to the directive:
+It then adds the result to the directive:
 
 ```http
 Content-Security-Policy: script-src 'sha256-cd9827ad...'
