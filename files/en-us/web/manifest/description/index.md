@@ -8,11 +8,10 @@ browser-compat: html.manifest.description
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
 The `description` manifest member is used to explain the core features or functionality of your web application.
-This text helps users understand your app's purpose in distribution platforms, such as Google Play Store.
+This text helps users understand your app's purpose when viewing it in an app store.
 
 > [!NOTE]
-> The `description` member is optional and purely advisory.
-> Distribution platforms may choose to ignore it when presenting your app.
+> The `description` member is optional, and app stores may not use this text when presenting your app.
 
 ## Syntax
 

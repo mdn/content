@@ -8,11 +8,10 @@ spec-urls: https://w3c.github.io/manifest-app-info/#categories-member
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
 The `categories` manifest member lets you specify one or more classifications for your web application.
-These classifications help users discover your app in distribution platforms, such as Google Play Store, where apps are organized by category.
+These categories help users discover your app in app stores.
 
 > [!NOTE]
-> The `categories` member is optional and purely advisory.
-> Distribution platforms may choose to ignore it and may use different values when presenting your app.
+> The `categories` member is optional, and app stores may use different values when presenting your app.
 
 ## Syntax
 
@@ -29,8 +28,7 @@ These classifications help users discover your app in distribution platforms, su
 - `categories`
   - : An array of comma-separated strings, where each string represents a category name.
     The strings should be in lowercase.
-    Common categories include `business`, `education`, `entertainment`, `finance`, `games`, and `photo`.
-    See the [W3C categories list](https://github.com/w3c/manifest/wiki/Categories) for more options.
+    W3C maintains a [list of standardized categories](https://github.com/w3c/manifest/wiki/Categories), which includes common values such as `business`, `education`, `entertainment`, `finance`, `games`, and `productivity`.
 
 ## Description
 

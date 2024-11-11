@@ -8,11 +8,10 @@ spec-urls: https://w3c.github.io/manifest-app-info/#screenshots-member
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
 The `screenshots` manifest member lets you specify one or more images that showcase your web application.
-These images help users preview your web app's interface and features in distribution platforms, such as Google Play Store.
+These images help users preview your web app's interface and features in app stores.
 
 > [!NOTE]
-> The `screenshots` member is optional and purely advisory.
-> Distribution platforms may choose to ignore it when presenting your app.
+> The `screenshots` member is optional, and the app stores may not display these images when presenting your app.
 
 ## Syntax
 
@@ -119,7 +118,7 @@ Screenshots are used in app stores and other distribution platforms to showcase 
 
 Distribution platforms may choose how many screenshots to display.
 
-The images below from the Apple App Store show how screenshots appear in an iphone app listing.
+The images below from the Apple App Store show how screenshots appear in an iPhone app listing.
 In the gallery view (image on the left), users can scroll through multiple images horizontally.
 They can tap any image to view it in full screen (image on the right).
 
@@ -128,7 +127,7 @@ They can tap any image to view it in full screen (image on the right).
   <img src="todoist-iphone-fullscreen.png" alt="A full-screen view of an image from the horizontal gallery of Todoist app" width="350">
 </div>
 
-The same full-screen image on iPad, as shown below, shows why different screenshots are needed to consider narrow (iPhone) and wide (iPad) form factors of devices:
+The same full-screen image on iPad shows why different screenshots are needed for narrow (iPhone) and wide (iPad) device form factors:
 
 <div style="display: flex; justify-content: center;">
   <img src="todoist-ipad-fullscreen.png" alt="Todoist app listing on iPad showing multiple screenshots in a wider gallery view">
