@@ -29,6 +29,94 @@ You can set the color used to draw the text insertion {{Glossary("caret")}} with
 
 Elements that are made editable, and therefore interactive, by using the `contenteditable` attribute can be focused. They participate in sequential keyboard navigation. However, elements with the `contenteditable` attribute nested within other `contenteditable` elements are not added to the tabbing sequence by default. You can add the nested `contenteditable` elements to the keyboard navigation sequence by specifying the `tabindex` value ([`tabindex="0"`](/en-US/docs/Web/HTML/Global_attributes/tabindex)).
 
+If content is pasted into an element with `contenteditable="true"` all of the formatting is retained. If content is pasted into an element with `contenteditable="plaintext-only"` all of the formatting is removed.
+
+## Examples
+
+### Pasting content into contenteditable
+
+This example has 2 {{HTMLElement("div")}}s both with `contenteditable`, the first with the value `true` and the second with the value `plaintext-only`. Copy the content below and paste it into each of the `div`s to see the different effects.
+
+#### HTML
+
+```html hidden
+<h2>Content to copy</h2>
+<p class="instructions">
+  Copy all of the text in the block below and try pasting it into each of the
+  blocks below.
+</p>
+<section class="copying">
+  <div class="copy">
+    <p>
+      This is a paragraph with <strong>Bold</strong> <em>Italic</em> and
+      <span class="red">red text</span>. Below is an ordered and unordered list:
+    </p>
+    <ol>
+      <li>Step one</li>
+      <li>Step two</li>
+      <li>Step Three</li>
+    </ol>
+  </div>
+</section>
+```
+
+```html
+<h2>Pasting areas</h2>
+<section class="pasting">
+  <div class="wrapper">
+    <h3>contenteditable="true"</h3>
+    <div contenteditable="true"></div>
+  </div>
+  <div class="wrapper">
+    <h3>contenteditable="plaintext-only"</h3>
+    <div contenteditable="plaintext-only"></div>
+  </div>
+</section>
+```
+
+```css hidden
+.copying {
+  font-family: Georgia, serif;
+  margin: 1rem;
+  padding: 1rem;
+  border: solid black 1px;
+}
+.red {
+  color: red;
+}
+.pasting {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 100%;
+  .wrapper {
+    flex: 1 1;
+    /* margin: 1rem; */
+    padding: 1rem;
+    /* border: solid tomato 1px; */
+    border-radius: 1rem;
+    /* background-color: lightgrey; */
+  }
+  h3 {
+    font-family: monospace;
+  }
+  [contenteditable] {
+    min-height: 3rem;
+    border: solid 1px;
+    padding: 0.5rem;
+    background-color: whitesmoke;
+  }
+  [contenteditable="true"] {
+    caret-color: blue;
+  }
+  [contenteditable="plaintext-only"] {
+    caret-color: red;
+  }
+}
+```
+
+{{EmbedLiveSample("Pasting_Content_into_contenteditable", 400, 500)}}
+
 ## Specifications
 
 {{Specifications}}
