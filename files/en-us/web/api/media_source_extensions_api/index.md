@@ -4,14 +4,16 @@ slug: Web/API/Media_Source_Extensions_API
 page-type: web-api-overview
 status:
   - experimental
-spec-urls: https://w3c.github.io/media-source/
+spec-urls:
+  - https://w3c.github.io/media-source/
+  - https://w3c.github.io/media-playback-quality/
 ---
 
-{{DefaultAPISidebar("Media Source Extensions")}}
+{{DefaultAPISidebar("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **Media Source API**, formally known as **Media Source Extensions** (**MSE**), provides functionality enabling plugin-free web-based streaming media. Using MSE, media streams can be created via JavaScript, and played using {{htmlelement("audio")}} and {{htmlelement("video")}} elements.
 
-## Media Source Extensions concepts and usage
+## Concepts and usage
 
 Playing video and audio has been available in web applications without plugins for a few years now, but the basic features offered have really only been useful for playing single whole tracks. We can't, for example, combine/split arraybuffers. Streaming media has up until recently been the domain of Flash, with technologies like Flash Media Server serving video streams using the RTMP protocol.
 
@@ -45,6 +47,8 @@ See [MSE-in-Workers Demo by Matt Wolenetz](https://wolenetz.github.io/mse-in-wor
 
 - {{domxref("MediaSource")}}
   - : Represents a media source to be played via an {{domxref("HTMLMediaElement")}} object.
+- {{domxref("MediaSourceHandle")}}
+  - : A proxy for a {{domxref("MediaSource")}} that can be transferred from a dedicated worker back to the main thread and attached to a media element via its {{domxref("HTMLMediaElement.srcObject")}} property.
 - {{domxref("SourceBuffer")}}
   - : Represents a chunk of media to be passed into an {{domxref("HTMLMediaElement")}} via a `MediaSource` object.
 - {{domxref("SourceBufferList")}}
@@ -52,12 +56,14 @@ See [MSE-in-Workers Demo by Matt Wolenetz](https://wolenetz.github.io/mse-in-wor
 - {{domxref("VideoPlaybackQuality")}}
   - : Contains information about the quality of video being played by a {{htmlelement("video")}} element, such as number of dropped or corrupted frames. Returned by the {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}} method.
 
-## Extensions to other interfaces
+### Extensions to other interfaces
 
-- {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}
-  - : Creates an object URL pointing to a `MediaSource` object that can then be specified as the `src` value of an HTML media element to play a media stream.
+- {{domxref("HTMLMediaElement.buffered")}}
+  - : Returns a {{domxref("TimeRanges")}} object that indicates the ranges of the media source that the browser has buffered (if any) at the moment the `buffered` property is accessed.
 - {{domxref("HTMLMediaElement.seekable")}}
-  - : When a `MediaSource` object is played by an HTML media element, this property will return a {{domxref("TimeRanges")}} object that contains the time ranges that the user is able to seek to.
+  - : Returns a {{domxref('TimeRanges')}} object that contains the time ranges that the user is able to seek to, if any.
+- {{domxref("HTMLMediaElement.srcObject")}}
+  - : A media provider object representing the media resource to play or that has played in the current `HTMLMediaElement`, or `null` if not assigned.
 - {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}}
   - : Returns a {{domxref("VideoPlaybackQuality")}} object for the currently played video.
 - {{domxref("AudioTrack.sourceBuffer")}}, {{domxref("VideoTrack.sourceBuffer")}}, {{domxref("TextTrack.sourceBuffer")}}
