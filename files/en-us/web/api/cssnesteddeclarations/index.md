@@ -51,7 +51,8 @@ This is represented by a number of JavaScript objects in the [CSS Object Model](
     This can be returned via `document.styleSheets[0].cssRules[0].cssRules[0].cssRules[0]`.
 - The final rule is a `CSSNestedDeclaration` object that represents the `color: black` rule in the stylesheet, and which can be returned via `document.styleSheets[0].cssRules[0].cssRules[1]`.
 
-Note that all top-level styles after the first `CSSNestedDeclaration` must also be represented as `CSSNestedDeclaration` objects in order to follow the [CSS nested declarations rule](/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting#nested_declarations_rule)
+> [!NOTE]
+> All top-level styles after the first `CSSNestedDeclaration` must also be represented as `CSSNestedDeclaration` objects in order to follow the [CSS nested declarations rule](/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting#nested_declarations_rule)
 
 ### CSSOM (CSS Object Model)
 
