@@ -28,12 +28,7 @@ _No specific methods; inherits methods from its ancestor {{domxref("CSSRule")}}.
 
 ## Examples
 
-The CSS below includes a selector `.foo` with a three of rules that define it:
-
-- The first is a {{domxref("CSSStyleRule")}} object which can be returned via `document.styleSheets[0].cssRules[0]` and is equivalent to `background-color: silver`
-- The second is a {{domxref("CSSMediaRule")}} object which can be returned via `document.styleSheets[0].cssRules[0].cssRules[0]` and is equivalent to `@media (screen)`
-  - The `CSSMediaRule` object contains a `CSSNestedDeclaration` object which can be returned via `document.styleSheets[0].cssRules[0].cssRules[0].cssRules[0]` and is equivalent to `color: tomato`
-- The third is a `CSSNestedDeclaration` object which can be returned via `document.styleSheets[0].cssRules[0].cssRules[1]` and is equivalent to `color: black`
+The CSS below includes a selector `.foo` that contains three nested rules.
 
 ```css
 .foo {
@@ -45,13 +40,16 @@ The CSS below includes a selector `.foo` with a three of rules that define it:
 }
 ```
 
-The following JavaScript code returns a CSSNestedDeclarations object.
+This is represented by a number of JavaScript objects in the [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model):
 
-```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].cssRules[1]); // [object CSSNestedDeclarations]
-```
+- A {{domxref("CSSStyleRule")}} object that represents the `background-color: silver` rule.
+  This can be returned via `document.styleSheets[0].cssRules[0]`.
+- A {{domxref("CSSMediaRule")}} object  that represents the `@media (screen)` rule, and which can be returned via `document.styleSheets[0].cssRules[0].cssRules[0]`.
+   - The `CSSMediaRule` object contains a `CSSNestedDeclaration` object which represents the  `color: tomato` rule nested by the `@media (screen)` rule.
+     This can be returned via `document.styleSheets[0].cssRules[0].cssRules[0].cssRules[0]`.
+- The final rule is a `CSSNestedDeclaration` object that represents the `color: black` rule in the stylesheet, and which can be returned via `document.styleSheets[0].cssRules[0].cssRules[1]`.
 
+  Note that all top-level styles after the first `CSSNestedDeclaration` must also be represented as `CSSNestedDeclaration` objects in order to follow the [CSS nested declarations rule](/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting#nested_declarations_rule)
 ## Specifications
 
 {{Specifications}}
