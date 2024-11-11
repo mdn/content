@@ -11,7 +11,7 @@ The `screenshots` manifest member lets you specify one or more images that showc
 These images help users preview your web app's interface and features in app stores.
 
 > [!NOTE]
-> The `screenshots` member is optional, and the app stores may not display these images when presenting your app.
+> The `screenshots` member is optional, and app stores may not display these images when presenting your app.
 
 ## Syntax
 
