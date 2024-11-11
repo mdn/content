@@ -37,7 +37,9 @@ In addition to these mapped properties, there are some additional shorthand prop
 
 The physical values used with the {{cssxref("float")}} and {{cssxref("clear")}} properties are `left`, `right` and `both`. The CSS logical properties and values module defines the values `inline-start` and `inline-end` as mappings for `left` and `right`.
 
-This example has two boxes — the first has the box floated with `float: left`, the second with `float: inline-start`. If you change the `writing-mode` to `vertical-rl` or the `direction` to `rtl` you will see that the left-floated box always sticks to the left, whereas the `inline-start`-floated item follows the `direction` and `writing-mode`.
+In the example below, the first box is floated with `float: left`, and the second with `float: inline-start`.
+If you apply `direction: rtl` to the `.inner` element, the left-floated box always stays on the left, whereas the `inline-start`-floated item follows the `direction` of the text.
+You can also try `writing-mode: vertical-rl` to see the difference this makes to the direction of block layout in combination with text `direction` values:
 
 ```html live-sample___float
 <div class="container">
@@ -77,7 +79,8 @@ body {
 
 ```css live-sample___float
 .inner {
-  writing-mode: horizontal-tb;
+  /* direction: rtl; */
+  /* writing-mode: vertical-rl; */
 }
 
 .physical {
