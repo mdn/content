@@ -10,7 +10,7 @@ The [previous guide](/en-US/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout
 
 ## Example of elements in flow
 
-The following example contains a heading, paragraph, a list and a final paragraph which contains a `strong` element. The heading and paragraphs are block level, the `strong` element inline. The list is displayed using flexbox to arrange the items into a row, however it too is participating in block and inline layout - the container has an outside `display` type of `block`.
+The following example contains a heading, a paragraph, a list, and a final paragraph that contains a `strong` element. The heading and paragraphs are block level, the `strong` element inline. The list, which is displayed using flexbox to arrange the items into a row, is also participating in block and inline layout - the container has an outside `display` type of `block`.
 
 ```html live-sample___in-flow
 <div class="box">
@@ -52,7 +52,7 @@ ul {
 
 {{EmbedLiveSample("in-flow", "", "300px")}}
 
-All of the elements can be said to be in flow, appearing on the page in the order that they are in the source.
+All of the elements are considered "in flow"; they appear on the page in the order that they are in the source.
 
 ## Taking an item out of flow
 
@@ -62,7 +62,7 @@ All elements are in-flow apart from:
 - items with `position: absolute` (including `position: fixed` which acts in the same way)
 - the root element (`html`)
 
-Out of flow items create a new [Block Formatting Context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) (BFC) and therefore everything inside them can be seen as a mini layout, separate from the rest of the page. The root element therefore is out of flow, as the container for everything in our document, and establishes the Block Formatting Context for the document.
+Out-of-flow items create a new [Block Formatting Context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) (BFC), and therefore, everything inside them can be seen as a mini layout, separate from the rest of the page. The root element, therefore, is out of flow, as the container for everything in our document, and establishes the Block Formatting Context for the document.
 
 ### Floated items
 

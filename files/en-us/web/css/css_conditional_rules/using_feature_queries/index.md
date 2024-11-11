@@ -43,7 +43,7 @@ As another example, if you want to check if a browser supports the `row-gap` pro
 ```html live-sample___simple
 <div class="box">
   If your browser supports the row-gap property, the border will be dashed and
-  text will be red
+  text will be red.
 </div>
 ```
 

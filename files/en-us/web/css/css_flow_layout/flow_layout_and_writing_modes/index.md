@@ -84,7 +84,6 @@ body {
 {{EmbedLiveSample("horizontal-tb", "", "240px")}}
 
 Compare this with the value `vertical-rl`, which gives you a right-to-left block flow direction with a vertical inline direction, as shown in the next example.
-Identical HTML is hidden in the following two examples for brevity:
 
 ```html hidden live-sample___vertical-rl
 <div class="box">

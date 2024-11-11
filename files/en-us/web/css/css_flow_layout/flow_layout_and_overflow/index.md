@@ -22,7 +22,7 @@ Giving an element a fixed height and width, then adding significant content to t
   </p>
 </div>
 <p>
-  Their names were Stephen and Joseph Montgolfier, they were papermakers by
+  Their names were Stephen and Joseph Montgolfier. They were papermakers by
   trade, and were noted as possessing thoughtful minds and a deep interest in
   all scientific knowledge and new discovery.
 </p>
@@ -63,7 +63,7 @@ There are other values that control how overflow content behaves. To hide overfl
   </p>
 </div>
 <p>
-  Their names were Stephen and Joseph Montgolfier, they were papermakers by
+  Their names were Stephen and Joseph Montgolfier. They were papermakers by
   trade, and were noted as possessing thoughtful minds and a deep interest in
   all scientific knowledge and new discovery.
 </p>
@@ -100,9 +100,7 @@ Using a value of `scroll` contains the content in its box and add scrollbars to 
   </p>
 </div>
 <p>
-  Their names were Stephen and Joseph Montgolfier, they were papermakers by
-  trade, and were noted as possessing thoughtful minds and a deep interest in
-  all scientific knowledge and new discovery.
+Their names were Stephen and Joseph Montgolfier; they were papermakers by trade and were noted as possessing thoughtful minds and a deep interest in all scientific knowledge and new discoveries.
 </p>
 <p>
   Before that night—a memorable night, as it was to prove—hundreds of millions
@@ -207,11 +205,11 @@ body {
 
 ## Flow Relative Properties
 
-In the guide to [Writing Modes and Flow Layout](/en-US/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes), we looked at the `block-size` and `inline-size` properties, which make more sense when working with different writing modes than tying our layout to the physical dimensions of the screen. The Level 3 Overflow Module also includes flow relative properties for overflow - [`overflow-block`](/en-US/docs/Web/CSS/@media/overflow-block) and [`overflow-inline`](/en-US/docs/Web/CSS/@media/overflow-inline). These correspond to `overflow-x` and `overflow-y` but the mapping depends on the writing mode of the document.
+In the guide to [Writing Modes and Flow Layout](/en-US/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes), we looked at the `block-size` and `inline-size` properties, which make more sense when working with different writing modes than tying our layout to the physical dimensions of the screen. The [CSS overflow module](/en-US/docs/Web/CSS/CSS_overflow) also includes flow relative properties for overflow - [`overflow-block`](/en-US/docs/Web/CSS/@media/overflow-block) and [`overflow-inline`](/en-US/docs/Web/CSS/@media/overflow-inline). These correspond to `overflow-x` and `overflow-y` but the mapping depends on the writing mode of the document.
 
 ## Indicating Overflow
 
-In the Level 3 Overflow specification, there are some properties which can help improve the way content looks in an overflow situation.
+In the CSS overflow module, there are some properties that can help improve the way content looks in an overflow situation.
 
 ### Inline-Axis Overflow
 
@@ -270,5 +268,5 @@ Whether you are in continuous media on the web or in a Paged Media format such a
 ## See also
 
 - [Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content) guide
-- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow)
-- [CSS containment](/en-US/docs/Web/CSS/CSS_containment)
+- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+- [CSS containment](/en-US/docs/Web/CSS/CSS_containment) module
