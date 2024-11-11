@@ -17,10 +17,10 @@ Masonry layout is a layout method where one axis uses a typical strict grid layo
 
 ## Creating a masonry layout
 
-To create the most common masonry layout, your columns will be the grid axis and the rows the masonry axis. Define this layout with `grid-template-columns` and `grid-template-rows`.
+To create the most common masonry layout, your columns will be the grid axis and the rows the masonry axis, defined with `grid-template-columns` and `grid-template-rows`.
 The child elements of this container will now lay out item by item along the rows, as they would with regular grid layout automatic placement.
 
-As they move onto a new row, the items will display according to the masonry algorithm. Items will load into the column with the most room causing a tightly packed layout without strict row tracks.
+As the items move onto new rows, they will display according to the masonry algorithm. Items will load into the column with the most room, causing a tightly packed layout without strict row tracks.
 
 ```css hidden live-sample___block-axis
 * {
