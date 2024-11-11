@@ -37,7 +37,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     The values are numbers of CSS pixels.
 
 - `download`
-  - : This attribute, if present, indicates that the author intends the hyperlink to be used for downloading a resource.
+  - : This attribute, if present, indicates that the linked resource is intended to be downloaded rather than displayed in the browser.
     See {{HTMLElement("a")}} for a full description of the [`download`](/en-US/docs/Web/HTML/Element/a#download) attribute.
 - `href`
   - : The hyperlink target for the area.

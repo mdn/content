@@ -21,7 +21,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
   - : This Boolean attribute specifies that the button should have input [focus](/en-US/docs/Web/API/HTMLElement/focus) when the page loads. **Only one element in a document can have this attribute.**
 
-- `command`
+- `command` {{experimental_inline}}
 
   - : Specifies the action to be performed on an element being controlled by a control `<button>`, specified via the `commandfor` attribute. The possible values are:
 
@@ -38,7 +38,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     - Custom values
       - : This attribute can represent custom values that are prefixed with a two hyphen characters (`--`). Buttons with a custom value will dispatch the {{domxref("CommandEvent")}} on the controlled element.
 
-- `commandfor`
+- `commandfor` {{experimental_inline}}
   - : Turns a {{htmlelement("button")}} element into a button, controlling the given interactive element; takes the ID of the element to control as its value.
 - [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled)
   - : This Boolean attribute prevents the user from interacting with the button: it cannot be pressed or focused.
