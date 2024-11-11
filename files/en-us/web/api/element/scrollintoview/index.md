@@ -50,7 +50,7 @@ scrollIntoView(scrollIntoViewOptions)
         - `start`: Aligns the element's top edge with the top of the scrollable container, making the element appear at the start of the visible area vertically.
         - `center`: Aligns the element vertically at the center of the scrollable container, positioning it in the middle of the visible area.
         - `end`: Aligns the element's bottom edge with the bottom of the scrollable container, placing the element at the end of the visible area vertically.
-        - `nearest`: Scrolls the element to the nearest edge in the vertical direction. If the element is closer to the top edge of the scrollable container, it will align to the top; if it's closer to the bottom 
+        - `nearest`: Scrolls the element to the nearest edge in the vertical direction. If the element is closer to the top edge of the scrollable container, it will align to the top; if it's closer to the bottom
           edge, it will align to the bottom. This minimizes the scrolling distance.
         - Defaults to `start`.
     - `inline` {{optional_inline}}
