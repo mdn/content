@@ -18,7 +18,7 @@ In the example below, there is an image of a star with a solid red area and an a
 <div class="box">
   <img
     alt="A red star"
-    src="https://mdn.github.io/css-examples/shapes/images/star-shape1.png" />
+    src="https://mdn.github.io/shared-assets/images/examples/star-shape.png" />
   <p>
     One November night in the year 1782, so the story runs, two brothers sat
     over their winter fire in the little French town of Annonay, watching the
@@ -39,7 +39,7 @@ body {
 }
 img {
   float: left;
-  shape-outside: url(https://mdn.github.io/css-examples/shapes/images/star-shape1.png);
+  shape-outside: url(https://mdn.github.io/shared-assets/images/examples/star-shape.png);
 }
 ```
 
@@ -51,7 +51,7 @@ You can use {{cssxref("shape-margin")}} to move the text away from the shape, gi
 <div class="box">
   <img
     alt="A red star"
-    src="https://mdn.github.io/css-examples/shapes/images/star-shape1.png" />
+    src="https://mdn.github.io/shared-assets/images/examples/star-shape.png" />
   <p>
     One November night in the year 1782, so the story runs, two brothers sat
     over their winter fire in the little French town of Annonay, watching the
@@ -73,7 +73,7 @@ body {
 
 img {
   float: left;
-  shape-outside: url(https://mdn.github.io/css-examples/shapes/images/star-shape1.png);
+  shape-outside: url(https://mdn.github.io/shared-assets/images/examples/star-shape.png);
   shape-image-threshold: 0.2;
   shape-margin: 20px;
 }
@@ -99,7 +99,7 @@ In the example below I am using a similar image to the initial example, however,
 <div class="box">
   <img
     alt="A red star"
-    src="https://mdn.github.io/css-examples/shapes/images/star-shape1.png" />
+    src="https://mdn.github.io/shared-assets/images/examples/star-shape.png" />
   <p>
     One November night in the year 1782, so the story runs, two brothers sat
     over their winter fire in the little French town of Annonay, watching the
@@ -121,7 +121,7 @@ body {
 
 img {
   float: left;
-  shape-outside: url(https://mdn.github.io/css-examples/shapes/images/star-shape1.png);
+  shape-outside: url(https://mdn.github.io/shared-assets/images/examples/star-shape.png);
   shape-image-threshold: 0.2;
 }
 ```
@@ -160,7 +160,7 @@ body {
   float: left;
   width: 400px;
   height: 300px;
-  shape-outside: url(https://mdn.github.io/css-examples/shapes/images/star-shape1.png);
+  shape-outside: url(https://mdn.github.io/shared-assets/images/examples/star-shape.png);
   shape-image-threshold: 0.3;
 }
 ```
@@ -240,7 +240,7 @@ body {
   content: "";
   float: left;
   height: 250px;
-  width: 00px;
+  width: 400px;
   background-image: radial-gradient(
     ellipse closest-side,
     rebeccapurple,
