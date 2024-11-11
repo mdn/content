@@ -20,9 +20,9 @@ Additionally, elements adjusted using `scale()` transform from the `center` by d
 ## Syntax
 
 ```css
-/* Keyword values */
-zoom: normal;
-zoom: reset;
+/* Keyword values (Non-standard, use with caution) */
+zoom: normal; /* Non-standard value, not recommended for use */
+zoom: reset; /* Non-standard value, not recommended for use */
 
 /* <percentage> values */
 zoom: 50%;
@@ -43,9 +43,9 @@ zoom: unset;
 ### Values
 
 - `normal`
-  - : Render this element at its normal size.
+  - : Render this element at its normal size. **Non-standard.** Avoid using this value. Consider using `unset` instead.
 - `reset`
-  - : Do not (de)magnify this element if the user applies non-pinch-based zooming (e.g. by pressing <kbd>Ctrl</kbd> \- <kbd>-</kbd> or <kbd>Ctrl</kbd> \+ <kbd>+</kbd> keyboard shortcuts) to the document. **Do not use** this value, _use the standard `unset` value instead_.
+  - : Do not (de)magnify this element if the user applies non-pinch-based zooming (e.g. by pressing <kbd>Ctrl</kbd> \- <kbd>-</kbd> or <kbd>Ctrl</kbd> \+ <kbd>+</kbd> keyboard shortcuts) to the document. **Non-standard.** Consider using `unset` instead.
 - {{cssxref("&lt;percentage&gt;")}}
   - : Zoom factor. `100%` is equivalent to `normal`. Values larger than `100%` zoom in. Values smaller than `100%` zoom out.
 - {{cssxref("&lt;number&gt;")}}
@@ -59,7 +59,7 @@ zoom: unset;
 
 ```plain
 zoom =
-  normal | reset | <number> | <percentage>
+  normal | reset | <number> | <percentage> /* Non-standard values */
 ```
 
 ## Examples
@@ -259,3 +259,4 @@ zoomControl.addEventListener("change", updateZoom);
 ## See also
 
 - [`zoom` entry in CSS-Tricks' CSS Almanac](https://css-tricks.com/almanac/properties/z/zoom/)
+- [CSS Unset keyword](https://developer.mozilla.org/en-US/docs/Web/CSS/unset) - Information on the `unset` keyword, a recommended alternative for resetting properties, such as `zoom`, that are deprecated.
