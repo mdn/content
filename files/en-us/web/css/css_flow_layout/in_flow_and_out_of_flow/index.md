@@ -84,7 +84,7 @@ As a float it is first laid out according to where it would be in normal flow, t
   <p>
     Before that night—a memorable night, as it was to prove—hundreds of millions
     of people had watched the rising smoke-wreaths of their fires without
-    drawing any special inspiration from the fact.”
+    drawing any special inspiration from the fact.
   </p>
 </div>
 ```
@@ -129,7 +129,7 @@ Giving an item `position: absolute` or `position: fixed` removes it from flow, a
   <p>
     Before that night—a memorable night, as it was to prove—hundreds of millions
     of people had watched the rising smoke-wreaths of their fires without
-    drawing any special inspiration from the fact.”
+    drawing any special inspiration from the fact.
   </p>
 </div>
 ```
@@ -180,7 +180,7 @@ If you give an item relative positioning with `position: relative`, it remains i
   <p>
     Before that night—a memorable night, as it was to prove—hundreds of millions
     of people had watched the rising smoke-wreaths of their fires without
-    drawing any special inspiration from the fact.”
+    drawing any special inspiration from the fact.
   </p>
 </div>
 ```

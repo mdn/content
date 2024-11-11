@@ -100,7 +100,9 @@ Using a value of `scroll` contains the content in its box and add scrollbars to 
   </p>
 </div>
 <p>
-Their names were Stephen and Joseph Montgolfier; they were papermakers by trade and were noted as possessing thoughtful minds and a deep interest in all scientific knowledge and new discoveries.
+  Their names were Stephen and Joseph Montgolfier; they were papermakers by
+  trade and were noted as possessing thoughtful minds and a deep interest in all
+  scientific knowledge and new discoveries.
 </p>
 <p>
   Before that night—a memorable night, as it was to prove—hundreds of millions

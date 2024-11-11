@@ -69,7 +69,6 @@ As they move onto a new row, the items will display according to the masonry alg
 {{EmbedLiveSample("block-axis", "", "250px")}}
 
 It is also possible to create a masonry layout with items loading into rows.
-Identical HTML is used in the following example, so it's omitted for brevity:
 
 ```html hidden live-sample___inline-axis
 <div class="grid">
