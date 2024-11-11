@@ -16,10 +16,12 @@ Common JavaScript engines include:
 
 - [V8](https://v8.dev/)
 - [SpiderMonkey](https://spidermonkey.dev/)
+- [JavaScriptCore](https://developer.apple.com/documentation/javascriptcore)
 
 ## See also
 
 - [JavaScript engine](https://en.wikipedia.org/wiki/JavaScript_engine) on Wikipedia
+- [Browser-Based vs. Non-Browser Engines](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview#javascript_implementations)
 - Related glossary terms:
   - {{glossary("Engine")}}
   - {{glossary("JavaScript")}}
