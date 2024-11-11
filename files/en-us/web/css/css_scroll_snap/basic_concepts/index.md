@@ -8,7 +8,7 @@ page-type: guide
 
 The properties in the [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module enable you to define how scrolling snaps to specific points as a user scrolls through a document.
 
-The scroll snap feature lets you define the snap positions where a [scroll container](/en-US/docs/Glossary/Scroll_container)'s scrollport may end or "snap to" after a scrolling operation has completed.
+The [scroll snap](/en-US/docs/Glossary/Scroll_snap) feature lets you define the snap positions where a [scroll container](/en-US/docs/Glossary/Scroll_container)'s scrollport may end or "snap to" after a scrolling operation has completed.
 
 ## Key properties for CSS scroll snap
 
@@ -74,7 +74,7 @@ body {
 
 ## Using scroll-snap-type
 
-The {{CSSxRef("scroll-snap-type")}} property needs to know the direction in which scroll snapping happens. This can be `x`, `y`, or the logical mappings `block` or `inline`. You can also use the keyword `both` to have scroll snapping work along both axes.
+The {{CSSxRef("scroll-snap-type")}} property needs to know the axis along which scroll snapping happens. This can be `x`, `y`, or the logical mappings `block` or `inline`. You can also use the keyword `both` to have scroll snapping work along both axes.
 
 You can also pass in the keywords `mandatory` or `proximity`. The `mandatory` keyword tells the browser whether the content _has_ to snap to a certain point, no matter where the scroll is. The `proximity` keyword means that the content may snap to the point, but does not have to.
 
@@ -158,7 +158,6 @@ If the content doesn't overflow its container, there is nothing to scroll.
 ## Using scroll-snap-align
 
 The valid values for the {{CSSxRef("scroll-snap-align")}} property include `start`, `end`, `center`, and `none`. These values are used to indicate the point in the scroll container to which the content should snap. Click "Play" in the example below and change the value of `scroll-snap-align` to see how this changes the scroll behavior.
-The HTML is identical to the previous example, so it's hidden for brevity.
 
 ```html hidden live-sample___align
 <article class="scroller">
@@ -284,7 +283,6 @@ body {
 {{EmbedLiveSample("scroll-padding", "", "350px")}}
 
 This is potentially useful if you have a [fixed](/en-US/docs/Web/CSS/position#fixed_positioning) element such as a navigation bar, which could end up overlapping scrolled content. By using `scroll-padding`, you can reserve space for the fixed element, as shown in the example below, where the `<h1>` element remains on screen as the content scrolls beneath it. Without padding, the heading would overlap some of the content when snapping happens.
-The HTML is identical to the previous example, so it's hidden for brevity.
 
 ```html hidden live-sample___scroll-padding-sticky
 <article class="scroller">

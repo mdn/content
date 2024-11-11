@@ -58,7 +58,6 @@ The specification defines {{CSSXref("column-rule-width")}}, {{CSSXref("column-ru
 These properties are applied to the element, which is the multicol container, and therefore, all columns will have the same rule. Rules are only drawn between columns and not on the outer edges. Rules are also only drawn between columns that have content.
 
 In this next example, a 5px-dotted rule with a color of `rebeccapurple` has been created using the longhand values.
-The HTML is identical to the previous example, so it's hidden for brevity.
 
 ```html hidden live-sample___column-rule
 <div class="container">
@@ -98,7 +97,6 @@ body {
 Note that the rule itself does not take up any space: a wide rule will not push the columns apart to make space for the rule. Instead, the rule overlays the gap.
 
 The example below uses a very wide rule of `40px` and a `10px` gap. The rule displays under the column content. To make space on both sides of the rule, the gap would need to be increased to be larger than `40px`.
-The HTML is identical to the previous examples, so it's hidden for brevity.
 
 ```html hidden live-sample___column-rule-wide
 <div class="container">

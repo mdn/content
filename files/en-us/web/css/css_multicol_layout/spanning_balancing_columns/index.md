@@ -109,7 +109,6 @@ The `column-span` can have only two values. The initial value `none` means the i
 ### Things to watch out for
 
 If the spanning element is inside another element with margins, padding, and a border or background color, the box may appear above the spanner with the rest of the content being displayed below. For this reason, care should be taken when setting an element to span all the columns, ensuring this scenario is accounted for.
-The HTML is identical to the previous example, so it's hidden for brevity.
 
 ```html hidden live-sample___mpb-span
 <div class="container">
@@ -206,7 +205,6 @@ img {
 {{EmbedLiveSample("balance", "", "250px")}}
 
 The `auto` value for `column-fill` fills a column sequentially, filling the first column in the inline-start direction, before placing content in subsequent columns, rather than balancing and filling all the columns equally. In this example, we changed `column-fill` to `auto`. The columns are filled to the height of the container, leaving empty columns at the end.
-The HTML is identical to the previous example, so it's hidden for brevity.
 
 ```html hidden live-sample___auto
 <div class="container">

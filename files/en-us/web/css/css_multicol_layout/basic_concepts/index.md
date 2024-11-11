@@ -81,7 +81,6 @@ The `column-width` property is used to set the optimal width for every column bo
 In the case of a single column with less width available than the value of `column-width`, the column box will shrink to be smaller than the declared column width.
 
 In the example below, the `column-width` property is set to `200px`. We get as many 200-pixel columns as will fit the container, with the extra space shared equally.
-The HTML is identical to the previous example, so it's hidden for brevity.
 
 ```html hidden live-sample___column-width
 <div class="container">

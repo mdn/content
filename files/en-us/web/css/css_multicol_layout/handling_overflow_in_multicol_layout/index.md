@@ -52,7 +52,6 @@ body {
 There are two columns of text. In the left column, there is a photo that is wider than the column. The image expands into that second column, appearing behind the text of the right column. The flow of text in the right column isn't affected by the protruding photo, but the appearance is.
 
 If you want an image to fit the column box, setting `max-width: 100%` will prevent the image from growing beyond its container, in this case, the column box.
-The HTML is identical to the example above, so it's hidden for brevity.
 
 ```html hidden live-sample___image-max-width
 <div class="container">
@@ -139,7 +138,6 @@ body {
 One issue with multicol on the web is that if the columns are taller than the viewport, the reader will need to scroll the page up and down to read, which is not a good user experience. One way to avoid this is to only apply the column properties if you know there is enough vertical space.
 
 In the example below, we used a {{CSSXref("min-height")}} [@media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) to ensure there is enough vertical space before applying the column properties.
-The HTML is identical to the previous example, so it's hidden for brevity.
 
 ```html hidden live-sample___min-height
 <div class="container">
