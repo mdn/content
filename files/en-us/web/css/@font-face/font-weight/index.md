@@ -150,11 +150,10 @@ While this example is a bit contrived, it demonstrates how authors can include m
 
 #### CSS
 
-We include four `@font-face` declarations for four different fonts, each having a different range of font-weight values.
-The first is the normal font face, which we declare for all font-weight ranges. We then override which values are used; using a light font for 1 to 300, a bold for font-weights between 500 and 700, and extra bold for 700 to 1000.
+We include four `@font-face` declarations for four different fonts, each having a different range of font-weight values,
+but all using the same font name.
 
-The `@font-face` declarations must be included (If omitted, the `font-weight` descriptor defaults to `400`) and must be written in this order due to the CSS [cascade](/en-US/docs/Web/CSS/Cascade); otherwise the larger range would override the smaller subset declaration.
-Note that we declared more that one font using the same font name.
+The first, `FiraSans-Regular`, we declare to be used for the entire range of font-weight values. The `@font-face` declarations must include the `font-weight` descriptor range, for if omitted, the `font-weight` descriptor defaults to `400`. We then declare a smaller subset font-weight range for the light, bold, and extra bold versions of the font; we set different fonts to be used for font-weights between `1` to `300`, `500` to `700`, and `700` to `1000`. The `@font-face` declarations are written in this order due to the CSS [cascade](/en-US/docs/Web/CSS/Cascade), so the three latter declarations override parts of the the full subset declaration set in the FiraSans-Regular declaration.
 
 ```css
 @font-face {
