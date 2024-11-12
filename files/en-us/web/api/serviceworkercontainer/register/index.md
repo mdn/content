@@ -44,7 +44,7 @@ register(scriptURL, options)
 
       - : A string representing a URL that defines a service worker's registration scope; that is, what range of URLs a service worker can control.
 
-        This is usually specified as an URL that is relative to the base URL of the site (e.g. `./some/path/`), so that the resolved scope is the same irrespective of what page the registration code is called from.
+        This is usually specified as an URL that is relative to the base URL of the site (e.g. `/some/path/`), so that the resolved scope is the same irrespective of what page the registration code is called from.
         By default, the `scope` value for a service worker registration is set to the directory where the service worker script is located (by resolving `./` against `scriptURL`).
 
         The scope must specify documents that are in the same directory or more deeply nested than the service worker (if you need a broader scope, this can be permitted via the HTTP `Service-Worker-Allowed` header).
