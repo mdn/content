@@ -83,7 +83,8 @@ In the following cases, the mask is counted as a transparent black image layer:
   mask-size: 100%;
 
   background: red;
-  mask-image: url(star.svg), radial-gradient(transparent 50%, black);
+  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg),
+    radial-gradient(transparent 50%, black);
 }
 ```
 

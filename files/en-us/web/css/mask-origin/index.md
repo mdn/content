@@ -74,9 +74,28 @@ One or more of the keyword values listed below, separated by commas.
 
 ### Setting mask origin to border-box
 
-Try some of the other possible values by updating the CSS in the box below.
+Open the live sample in in the playground and try some of the other possible `mask-origin` values.
 
-{{EmbedGHLiveSample("css-examples/masking/mask-origin.html", '100%', 600)}}
+```html
+<div class="masked"></div>
+```
+
+```css
+.masked {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border: 10px solid blue;
+  background-color: #8cffa0;
+  padding: 10px;
+
+  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-image: url(../mask-repeat/mask-star.svg);
+  mask-origin: border-box;
+}
+```
+
+{{EmbedLiveSample("Setting mask origin to border-box", "", "200px")}}
 
 ## Specifications
 

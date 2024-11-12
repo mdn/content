@@ -80,9 +80,28 @@ One or more of the keyword values listed below, separated by commas.
 
 ### Clipping a mask to the border box
 
-Change the `mask-clip` value to any of the allowed values detailed above. If viewing the example in a Chromium-based browser change the value of `-webkit-mask-clip`.
+Open the live sample in the playground and change the `mask-clip` value to any of the allowed values detailed above.
 
-{{EmbedGHLiveSample("css-examples/masking/mask-clip.html", '100%', 800)}}
+```html
+<div class="masked"></div>
+```
+
+```css
+.masked {
+  width: 100px;
+  height: 100px;
+  background-color: #8cffa0;
+  margin: 20px;
+  border: 20px solid #8ca0ff;
+  padding: 20px;
+
+  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mdn.svg);
+  mask-size: 100% 100%;
+  mask-clip: border-box;
+}
+```
+
+{{EmbedLiveSample("Clipping a mask to the border box", "", "250px")}}
 
 ## Specifications
 

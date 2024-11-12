@@ -100,7 +100,23 @@ The rendered size of the mask image is then computed as follows:
 
 ### Setting mask size as a percentage
 
-{{EmbedGHLiveSample("css-examples/masking/mask-size.html", '100%', 700)}}
+```html
+<div class="masked"></div>
+```
+
+```css
+.masked {
+  width: 200px;
+  height: 200px;
+  background: blue linear-gradient(red, blue);
+  margin-bottom: 10px;
+
+  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mdn.svg);
+  mask-size: 50%;
+}
+```
+
+{{EmbedLiveSample("Setting mask size as a percentage", "", "250px")}}
 
 ## Specifications
 
