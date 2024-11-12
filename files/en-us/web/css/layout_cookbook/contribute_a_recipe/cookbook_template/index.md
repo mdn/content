@@ -48,10 +48,6 @@ _Change the example code. The last parameter is the live example height, which y
 
 {{EmbedLiveSample("center-example", "", "250px")}}
 
-_Change the link to point to your merged download version._
-
-[Download the example](https://github.com/mdn/css-examples/blob/main/css-cookbook/center--download.html)
-
 ## Choices made
 
 _Explain your decisions when creating the pattern. Why did you choose a certain method? If you want to add an additional example here — for example a version with fallbacks, please do. This section is deliberately loose as patterns range from the very simple to more complex._
