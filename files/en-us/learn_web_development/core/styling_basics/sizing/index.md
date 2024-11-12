@@ -161,7 +161,7 @@ When you use margin and padding set in percentages, the value is calculated from
 
 In addition to giving things a fixed size, we can ask CSS to give an element a minimum or a maximum size. If you have a box that might contain a variable amount of content, and you always want it to be _at least_ a certain height, you could set the {{cssxref("min-height")}} property on it. The box will always be at least this height, but will then grow taller if there is more content than the box has space for at its minimum height.
 
-In the example below you can see two boxes, both with a defined `min-height` of 150 pixels. The box on the left is 150 pixels tall; the box on the right has content that needs more room, and so it has grown taller than 150 pixels.
+In the example below you can see two boxes, both with a defined `min-height` of 100 pixels. The box on the left is 100 pixels tall; the box on the right has content that needs more room, and so it has grown taller than 100 pixels.
 
 ```html live-sample___min-height
 <div class="wrapper">
