@@ -23,7 +23,7 @@ None.
 
 ### Return value
 
-A number representing the [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date), in milliseconds, of the current time.
+A number representing the [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date), in milliseconds, of the current time. This timestamp is timezone-agnostic and uniquely defines an instant in history. For example, when called in November 2024, the response is something like 1731433117433.
 
 ## Description
 
