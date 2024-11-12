@@ -32,7 +32,47 @@ To control breaks inside boxes use the {{cssxref("break-inside")}} property. Thi
 
 In the example below, we have applied break-inside to the figure element to prevent the caption from becoming separated from the image.
 
-{{EmbedGHLiveSample("css-examples/multicol/fragmentation/break-inside.html", '100%', 800)}}
+```html live-sample___break-inside
+<div class="container">
+  <figure>
+    <img
+      alt="Multiple hot air balloons in a clear sky, a crowd of spectators gather in the foreground."
+      src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+    <figcaption>Balloons</figcaption>
+  </figure>
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+  </p>
+</div>
+```
+
+```css live-sample___break-inside
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+figure {
+  margin: 0;
+  break-inside: avoid;
+}
+figcaption {
+  font-weight: bold;
+  border-bottom: 2px solid #999;
+}
+.container {
+  column-width: 200px;
+}
+```
+
+{{EmbedLiveSample("break-inside", "", "230px")}}
 
 ## Breaks before and after boxes
 
@@ -45,7 +85,37 @@ The {{cssxref("break-before")}} and {{cssxref("break-after")}} properties are us
 
 In this next example, we are forcing a column break before an `h2` element.
 
-{{EmbedGHLiveSample("css-examples/multicol/fragmentation/break-before.html", '100%', 800)}}
+```html live-sample___break-before
+<div class="container">
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon.
+  </p>
+  <h2>My heading</h2>
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+  <p>Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce.</p>
+</div>
+```
+
+```css live-sample___break-before
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.container {
+  column-width: 250px;
+}
+
+h2 {
+  break-before: column;
+}
+```
+
+{{EmbedLiveSample("break-before", "", "250px")}}
 
 ## Breaks between lines
 
@@ -55,7 +125,33 @@ The `orphans` and `widows` properties take an {{CSSXref("integer")}} as a value,
 
 In the example below, we are using the `orphans` property to control the number of lines left at the bottom of a column. You can change that value to see the effect on the breaking of the content.
 
-{{EmbedGHLiveSample("css-examples/multicol/fragmentation/orphans.html", '100%', 800)}}
+```html live-sample___orphans
+<div class="container">
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon.
+  </p>
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+  <p>Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce.</p>
+</div>
+```
+
+```css live-sample___orphans
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.container {
+  column-width: 250px;
+  orphans: 3;
+}
+```
+
+{{EmbedLiveSample("orphans", "", "240px")}}
 
 ## When things don't work as expected
 
