@@ -14,13 +14,82 @@ An overflow situation happens when an item's size is larger than the column box.
 
 In this situation, the content should visibly overflow into the next column, rather than be clipped by the column box.
 
-{{EmbedGHLiveSample("css-examples/multicol/overflow/image.html", '100%', 800)}}
+```html live-sample___image
+<div class="container">
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
+  <img
+    alt="A close-up of two hot air balloons being inflated."
+    src="https://mdn.github.io/shared-assets/images/examples/balloons3.jpg" />
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+  <p>
+    Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+    kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter
+    purslane kale. Celery potato scallion desert raisin horseradish spinach
+    carrot soko.
+  </p>
+</div>
+```
+
+```css live-sample___image
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.container {
+  column-width: 250px;
+}
+```
+
+{{EmbedLiveSample("image", "", "440px")}}
 
 There are two columns of text. In the left column, there is a photo that is wider than the column. The image expands into that second column, appearing behind the text of the right column. The flow of text in the right column isn't affected by the protruding photo, but the appearance is.
 
 If you want an image to fit the column box, setting `max-width: 100%` will prevent the image from growing beyond its container, in this case, the column box.
 
-{{EmbedGHLiveSample("css-examples/multicol/overflow/image-max-width.html", '100%', 800)}}
+```html hidden live-sample___image-max-width
+<div class="container">
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
+  <img
+    alt="A close-up of two hot air balloons being inflated."
+    src="https://mdn.github.io/shared-assets/images/examples/balloons3.jpg" />
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+  <p>
+    Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+    kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter
+    purslane kale. Celery potato scallion desert raisin horseradish spinach
+    carrot soko.
+  </p>
+</div>
+```
+
+```css live-sample___image-max-width
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.container {
+  column-width: 250px;
+}
+img {
+  max-width: 100%;
+}
+```
+
+{{EmbedLiveSample("image-max-width", "", "440px")}}
 
 ## More columns than will fit
 
@@ -30,7 +99,39 @@ In fragmented media, after a fragment (for example, a page) is filled with colum
 
 The example below shows this overflow behavior. The multicol container has a set {{CSSXref("height")}} and there is more text than space to create columns; therefore, we get columns created outside of the container.
 
-{{EmbedGHLiveSample("css-examples/multicol/overflow/overflow-inline.html", '100%', 800)}}
+```html live-sample___overflow-inline
+<div class="container">
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+  <p>
+    Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+    kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter
+    purslane kale. Celery potato scallion desert raisin horseradish spinach
+    carrot soko.
+  </p>
+</div>
+```
+
+```css live-sample___overflow-inline
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.container {
+  column-width: 200px;
+  height: 180px;
+  border: 2px dashed;
+}
+```
+
+{{EmbedLiveSample("overflow-inline", "", "240px")}}
 
 ## Using vertical media queries
 
@@ -38,7 +139,39 @@ One issue with multicol on the web is that if the columns are taller than the vi
 
 In the example below, we used a {{CSSXref("min-height")}} [@media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) to ensure there is enough vertical space before applying the column properties.
 
-{{EmbedGHLiveSample("css-examples/multicol/overflow/min-height.html", '100%', 800)}}
+```html hidden live-sample___min-height
+<div class="container">
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+  <p>
+    Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+    kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter
+    purslane kale. Celery potato scallion desert raisin horseradish spinach
+    carrot soko.
+  </p>
+</div>
+```
+
+```css live-sample___min-height
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+@media (min-height: 300px) {
+  .container {
+    column-width: 200px;
+  }
+}
+```
+
+{{EmbedLiveSample("min-height", "", "340px")}}
 
 ## Next steps
 

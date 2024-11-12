@@ -8,14 +8,23 @@ browser-compat: api.crossOriginIsolated
 
 {{APIRef("DOM")}}
 
-The **`crossOriginIsolated`** read-only property of the {{domxref("Window")}} interface returns a boolean value that
-indicates whether the website is in a cross-origin isolation state. That state mitigates the risk of side-channel attacks and unlocks a few capabilities:
+The **`crossOriginIsolated`** read-only property of the {{domxref("Window")}} interface returns a boolean value that indicates whether the document is cross-origin isolated.
+
+A cross-origin isolated document only shares its {{glossary("Browsing context","browsing context group")}} with same-origin documents in popups and navigations, and resources (both same-origin and cross-origin) that the document has opted into using via [CORS](/en-US/docs/Web/HTTP/CORS) (and [COEP](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) for `<iframe>`).
+The relationship between a cross-origin opener of the document or any cross-origin popups that it opens are severed.
+The document may also be hosted in a separate OS process alongside other documents with which it can communicate by operating on shared memory.
+This mitigates the risk of side-channel attacks and cross-origin attacks referred to as [XS-Leaks](https://xsleaks.dev/).
+
+Cross-origin isolated documents operate with fewer restrictions when using the following APIs:
 
 - {{JSxRef("SharedArrayBuffer")}} can be created and sent via a {{DOMxRef("Window.postMessage()")}} or a {{DOMxRef("MessagePort.postMessage()")}} call.
 - {{DOMxRef("Performance.now()")}} offers better precision.
 - {{DOMxRef("Performance.measureUserAgentSpecificMemory()")}} can be accessed.
 
-A website is in a cross-origin isolated state, when the response header {{HTTPHeader("Cross-Origin-Opener-Policy")}} has the value `same-origin` and the {{HTTPHeader("Cross-Origin-Embedder-Policy")}} header has the value `require-corp` or `credentialless`.
+A document will be cross-origin isolated if it is returned with an HTTP response that includes the headers:
+
+- {{HTTPHeader("Cross-Origin-Opener-Policy")}} header with the directive `same-origin`.
+- {{HTTPHeader("Cross-Origin-Embedder-Policy")}} header with the directive `require-corp` or `credentialless`.
 
 ## Value
 
