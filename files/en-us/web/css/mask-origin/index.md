@@ -74,7 +74,7 @@ One or more of the keyword values listed below, separated by commas.
 
 ### Setting mask origin to border-box
 
-Open the live sample in in the playground and try some of the other possible `mask-origin` values.
+Click "Play" in the live sample to open the code in the MDN Playground and try some of the other possible `mask-origin` values.
 
 ```html live-sample___mask-origin-example
 <div class="masked"></div>

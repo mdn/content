@@ -80,7 +80,7 @@ One or more of the keyword values listed below, separated by commas.
 
 ### Clipping a mask to the border box
 
-Open the live sample in the playground and change the `mask-clip` value to any of the allowed values detailed above.
+Click "Play" in the live sample to open the code in the MDN Playground and change the `mask-clip` value to any of the allowed values described above.
 
 ```html live-sample___mask-clip-example
 <div class="masked"></div>

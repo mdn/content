@@ -57,7 +57,7 @@ One or more `<position>` values, separated by commas.
 
 ### Setting mask position
 
-Open the live sample in the playground and change the `mask-position` value to any of the allowed values detailed above.
+Click "Play" in the live sample to open the code in the MDN Playground and change the `mask-position` value to any of the allowed values detailed above.
 
 ```html live-sample___mask-position-example
 <div id="wrapper">
