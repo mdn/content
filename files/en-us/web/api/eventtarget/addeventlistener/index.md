@@ -95,7 +95,7 @@ addEventListener(type, listener, useCapture)
 
     > [!NOTE]
     > For event listeners attached to the event target, the event is in the target phase, rather than the capturing and bubbling phases.
-    > Event listeners in the _capturing_ phase are called before event listeners in any non-capturing phases.
+    > Event listeners in the _capturing_ phase are called before event listeners in the target and bubbling phases.
 
 - `wantsUntrusted` {{optional_inline}} {{non-standard_inline}}
   - : A Firefox (Gecko)-specific parameter. If `true`, the listener receives
