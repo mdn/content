@@ -20,6 +20,46 @@ Experimental features can be enabled or disabled using the [Firefox Configuratio
 
 ## HTML
 
+### Plaintext-only contenteditable mode
+
+The `plaintext-only` value of the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) global attribute indicates that the element is editable; rich text formatting is disabled and any formatting in pasted text is automatically stripped. (See [Firefox bug 1922723](https://bugzil.la/1922723) for more details.)
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>133</td>
+      <td>yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>133</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>133</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>133</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.element.contenteditable.plaintext-only.enable</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ### Layout for input type="search"
 
 Layout for `input type="search"` has been updated. This causes a search field to have a clear icon once someone starts typing in it, to match other browser implementations. (See [Firefox bug 558594](https://bugzil.la/558594) for more details.)
