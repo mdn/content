@@ -42,8 +42,8 @@ This example has two {{HTMLElement("div")}} elements with `contenteditable`, the
 ```html hidden
 <h2>Content to copy</h2>
 <p class="instructions">
-  Copy all the text in the block below and paste it into each of the contenteditable
-  blocks to compare the results.
+  Copy all the text in the block below and paste it into each of the
+  contenteditable blocks to compare the results.
 </p>
 <section class="copying">
   <div class="copy">
@@ -75,6 +75,9 @@ This example has two {{HTMLElement("div")}} elements with `contenteditable`, the
 ```
 
 ```css hidden
+h2 {
+  margin-bottom: 0;
+}
 .copying {
   font-family: Georgia, serif;
   margin: 1rem;
@@ -91,11 +94,8 @@ This example has two {{HTMLElement("div")}} elements with `contenteditable`, the
   width: 100%;
   .wrapper {
     flex: 1 1;
-    /* margin: 1rem; */
-    padding: 1rem;
-    /* border: solid tomato 1px; */
-    border-radius: 1rem;
-    /* background-color: lightgrey; */
+    margin: 0
+    padding: 0;
   }
   h3 {
     font-family: monospace;
@@ -115,7 +115,7 @@ This example has two {{HTMLElement("div")}} elements with `contenteditable`, the
 }
 ```
 
-{{EmbedLiveSample("Pasting_Content_into_contenteditable", 400, 500)}}
+{{EmbedLiveSample("Pasting_Content_into_contenteditable", 400, 620)}}
 
 ## Specifications
 
