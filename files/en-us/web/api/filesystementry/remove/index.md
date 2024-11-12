@@ -60,7 +60,7 @@ This example deletes a temporary work file.
 
 ```js
 workingDirectory.getFile(
-  "tmp/workfile.json",
+  "tmp/work-file.json",
   {},
   (fileEntry) => {
     fileEntry.remove(() => {

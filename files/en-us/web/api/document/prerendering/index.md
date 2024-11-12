@@ -32,7 +32,7 @@ When a prerendered document is activated, {{domxref("PerformanceNavigationTiming
 function pagePrerendered() {
   return (
     document.prerendering ||
-    self.performance?.getEntriesByType?.("navigation")[0]?.activationStart > 0
+    performance.getEntriesByType("navigation")[0]?.activationStart > 0
   );
 }
 ```
@@ -52,6 +52,24 @@ if (document.prerendering) {
 > [!NOTE]
 > See the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) landing page and particularly the [Unsafe speculative loading conditions](/en-US/docs/Web/API/Speculation_Rules_API#unsafe_speculative_loading_conditions) section for more information on the kinds of activities you might wish to delay.
 
+To measure how often a prerender is activated, combine all three APIs: `document.prerendering` to detect cases where the page is currently prerendering, `prerenderingchange` to watch for activations in that case, and `activationStart` to check for cases where the page was prerendered in the past.
+
+```js
+if (document.prerendering) {
+  document.addEventListener(
+    "prerenderingchange",
+    () => {
+      console.log("Prerender activated after this script ran");
+    },
+    { once: true },
+  );
+} else if (performance.getEntriesByType("navigation")[0]?.activationStart > 0) {
+  console.log("Prerender activated before this script ran");
+} else {
+  console.log("This page load was not via prerendering");
+}
+```
+
 ## Specifications
 
 {{Specifications}}
@@ -64,3 +82,4 @@ if (document.prerendering) {
 
 - [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API)
 - {{domxref("Document.prerenderingchange_event", "prerenderingchange")}} event
+- {{domxref("PerformanceNavigationTiming.activationStart")}} property

@@ -42,8 +42,8 @@ Events have three functions:
 Handle a change in captive portal status:
 
 ```js
-function handlePortalStatus(portalstatusInfo) {
-  console.log(`The portal status is now: ${portalstatusInfo.details}`);
+function handlePortalStatus(portalStatusInfo) {
+  console.log(`The portal status is now: ${portalStatusInfo.details}`);
 }
 
 browser.captivePortal.onStateChanged.addListener(handlePortalStatus);

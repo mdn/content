@@ -24,7 +24,7 @@ Being a type of dialog, the [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/
 
 Because of its urgent nature, interrupting the user's workflow, alert dialogs must always be [modal](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-modal).
 
-The alert dialog must have at least one focusable control — such as Confirm, Close, and Cancel — and focus must be moved to that control when the alert dialog appears. Alertdialogs can have additional interactive controls such as text fields and checkboxes.
+The alert dialog must have at least one focusable control — such as Confirm, Close, and Cancel — and focus must be moved to that control when the alert dialog appears. Alert dialogs can have additional interactive controls such as text fields and checkboxes.
 
 The `alertdialog` role is not to be used as a replacement for other dialogs, including no-confirmation-required `alert` dialogs ([`Window.alert()`](/en-US/docs/Web/API/Window/alert)) and prompts ([`Window.prompt()`](/en-US/docs/Web/API/Window/prompt)).
 

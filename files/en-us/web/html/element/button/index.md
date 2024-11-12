@@ -18,7 +18,28 @@ By default, HTML buttons are presented in a style resembling the platform the {{
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
 - `autofocus`
+
   - : This Boolean attribute specifies that the button should have input [focus](/en-US/docs/Web/API/HTMLElement/focus) when the page loads. **Only one element in a document can have this attribute.**
+
+- `command` {{experimental_inline}}
+
+  - : Specifies the action to be performed on an element being controlled by a control `<button>`, specified via the `commandfor` attribute. The possible values are:
+
+    - `"show-modal"`
+      - : The button will show a {{htmlelement("dialog")}} as modal. If the dialog is already modal, no action will be taken.
+    - `"close"`
+      - : The button will close a {{htmlelement("dialog")}} element. If the dialog is already closed, no action will be taken.
+    - `"show-popover"`
+      - : The button will show a hidden popover. If you try to show an already showing popover, no action will be taken. See {{domxref("Popover API", "Popover API", "", "nocode")}} for more details.
+    - `"hide-popover"`
+      - : The button will hide a showing popover. If you try to hide an already hidden popover, no action will be taken. See {{domxref("Popover API", "Popover API", "", "nocode")}} for more details.
+    - `"toggle-popover"`
+      - : The button will toggle a popover between showing and hidden. If the popover is hidden, it will be shown; if the popover is showing, it will be hidden. See {{domxref("Popover API", "Popover API", "", "nocode")}} for more details.
+    - Custom values
+      - : This attribute can represent custom values that are prefixed with a two hyphen characters (`--`). Buttons with a custom value will dispatch the {{domxref("CommandEvent")}} on the controlled element.
+
+- `commandfor` {{experimental_inline}}
+  - : Turns a {{htmlelement("button")}} element into a button, controlling the given interactive element; takes the ID of the element to control as its value.
 - [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled)
   - : This Boolean attribute prevents the user from interacting with the button: it cannot be pressed or focused.
 - `form`
@@ -118,8 +139,11 @@ To give an icon button an accessible name, put text in the `<button>` element th
 
 ```html
 <button name="favorite">
-  <svg aria-hidden="true" viewBox="0 0 10 10">
-    <path d="M7 9L5 8 3 9V6L1 4h3l1-3 1 3h3L7 6z" />
+  <svg fill="#000000" viewBox="0 0 42 42">
+    <path
+      d="M21,1c1.081,0,5.141,12.315,6.201,13.126s13.461,1.053,13.791,2.137 c0.34,1.087-9.561,8.938-9.961,10.252c-0.409,1.307,
+      3.202,13.769,2.331,14.442c-0.879,0.673-11.05-6.79-12.361-6.79 c-1.311,0-11.481,7.463-12.36,6.79c-0.871-0.674,2.739-13.136,
+      2.329-14.442c-0.399-1.313-10.3-9.165-9.96-10.252 c0.33-1.084,12.731-1.326,13.791-2.137S19.91,1,21,1z"></path>
   </svg>
   Add to favorites
 </button>

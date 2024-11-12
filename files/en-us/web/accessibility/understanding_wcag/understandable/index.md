@@ -330,7 +330,7 @@ This guideline centers around helping users enter correct information when requi
           help the user correct their inputs. For screen reader users, you can
           use aria live regions to alert the user to a change on the page.
         </p>
-        <div class="note">
+        <div class="note notecard">
           <p>
             <strong>Note:</strong> Server-side validation should <em>always</em> be
             used alongside client-side validation. Client-side validation is too

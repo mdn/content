@@ -7,7 +7,7 @@ status:
 browser-compat: api.HIDDevice
 ---
 
-{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_shared")}}
 
 The **`HIDDevice`** interface of the [WebHID API](/en-US/docs/Web/API/WebHID_API) represents a HID Device. It provides properties for accessing information about the device, methods for opening and closing the connection, and the sending and receiving of reports.
 
@@ -76,10 +76,10 @@ const reportId = 1;
 for (let i = 0; i < 10; i++) {
   // Turn off
   await device.sendFeatureReport(reportId, Uint32Array.from([0, 0]));
-  await waitFor(100);
+  await new Promise((resolve) => setTimeout(resolve, 100));
   // Turn on
   await device.sendFeatureReport(reportId, Uint32Array.from([512, 0]));
-  await waitFor(100);
+  await new Promise((resolve) => setTimeout(resolve, 100));
 }
 ```
 

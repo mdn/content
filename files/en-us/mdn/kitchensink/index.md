@@ -303,13 +303,13 @@ this.color("blue");
 
 {{EmbedLiveSample('Rect_code', '700', '300') }}
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 {{WebExtAPIRef("tabs.mutedInfo")}}
 
 ### Obsolete CSSOM interfaces {{deprecated_inline}}
 
-{{InheritanceDiagram}}
+{{InheritanceDiagram("WheelEvent")}}
 
 {{EmbedGHLiveSample("web-tech-games/index.html", '100%', 820)}}
 
