@@ -53,11 +53,11 @@ For the composition the current mask layer is referred to as _source_, while all
 
 ### Compositing mask layers with addition
 
-```html
+```html live-sample___mask-composite-example
 <div class="masked"></div>
 ```
 
-```css
+```css live-sample___mask-composite-example
 .masked {
   width: 100px;
   height: 100px;
@@ -70,7 +70,7 @@ For the composition the current mask layer is referred to as _source_, while all
 }
 ```
 
-{{EmbedLiveSample("Compositing mask layers with addition", "", "150px")}}
+{{EmbedLiveSample("mask-composite-example", "", "150px")}}
 
 ## Specifications
 

@@ -146,11 +146,11 @@ One or more `<repeat-style>` values, separated by commas.
 
 ### Setting repeat for a single mask
 
-```html
+```html live-sample___mask-repeat-example
 <div class="masked"></div>
 ```
 
-```css
+```css live-sample___mask-repeat-example
 .masked {
   width: 250px;
   height: 250px;
@@ -158,12 +158,11 @@ One or more `<repeat-style>` values, separated by commas.
   margin-bottom: 10px;
 
   mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
-  mask-image: url(mask-star.svg);
   mask-repeat: repeat;
 }
 ```
 
-{{EmbedLiveSample("Setting repeat for a single mask", "", "300px")}}
+{{EmbedLiveSample("mask-repeat-example", "", "300px")}}
 
 ### Multiple mask image support
 

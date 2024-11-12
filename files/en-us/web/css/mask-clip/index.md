@@ -82,11 +82,11 @@ One or more of the keyword values listed below, separated by commas.
 
 Open the live sample in the playground and change the `mask-clip` value to any of the allowed values detailed above.
 
-```html
+```html live-sample___mask-clip-example
 <div class="masked"></div>
 ```
 
-```css
+```css live-sample___mask-clip-example
 .masked {
   width: 100px;
   height: 100px;
@@ -101,7 +101,7 @@ Open the live sample in the playground and change the `mask-clip` value to any o
 }
 ```
 
-{{EmbedLiveSample("Clipping a mask to the border box", "", "250px")}}
+{{EmbedLiveSample("mask-clip-example", "", "250px")}}
 
 ## Specifications
 

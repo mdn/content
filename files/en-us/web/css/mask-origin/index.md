@@ -76,11 +76,11 @@ One or more of the keyword values listed below, separated by commas.
 
 Open the live sample in in the playground and try some of the other possible `mask-origin` values.
 
-```html
+```html live-sample___mask-origin-example
 <div class="masked"></div>
 ```
 
-```css
+```css live-sample___mask-origin-example
 .masked {
   width: 100px;
   height: 100px;
@@ -90,12 +90,11 @@ Open the live sample in in the playground and try some of the other possible `ma
   padding: 10px;
 
   mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
-  mask-image: url(../mask-repeat/mask-star.svg);
   mask-origin: border-box;
 }
 ```
 
-{{EmbedLiveSample("Setting mask origin to border-box", "", "200px")}}
+{{EmbedLiveSample("mask-origin-example", "", "200px")}}
 
 ## Specifications
 

@@ -54,11 +54,11 @@ The `mask-mode` property is specified as one or more of the keyword values liste
 
 ### Using alpha mask mode
 
-```html
+```html live-sample___mask-mode-example
 <div class="masked"></div>
 ```
 
-```css
+```css live-sample___mask-mode-example
 .masked {
   width: 227px;
   height: 200px;
@@ -69,7 +69,7 @@ The `mask-mode` property is specified as one or more of the keyword values liste
 }
 ```
 
-{{EmbedLiveSample("Using alpha mask mode", "", "250px")}}
+{{EmbedLiveSample("mask-mode-example", "", "250px")}}
 
 ## Specifications
 

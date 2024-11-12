@@ -71,11 +71,11 @@ In the following cases, the mask is counted as a transparent black image layer:
 
 ### Setting a mask image with a URL and a gradient
 
-```html
+```html live-sample___mask-image-example
 <div class="masked"></div>
 ```
 
-```css
+```css live-sample___mask-image-example
 .masked {
   width: 200px;
   height: 200px;
@@ -88,7 +88,7 @@ In the following cases, the mask is counted as a transparent black image layer:
 }
 ```
 
-{{EmbedLiveSample("Setting a mask image with a URL", "100%", 250)}}
+{{EmbedLiveSample("mask-composite-example", "100%", 250)}}
 
 ## Specifications
 

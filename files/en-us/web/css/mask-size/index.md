@@ -100,11 +100,11 @@ The rendered size of the mask image is then computed as follows:
 
 ### Setting mask size as a percentage
 
-```html
+```html live-sample___mask-size-example
 <div class="masked"></div>
 ```
 
-```css
+```css live-sample___mask-size-example
 .masked {
   width: 200px;
   height: 200px;
@@ -116,7 +116,7 @@ The rendered size of the mask image is then computed as follows:
 }
 ```
 
-{{EmbedLiveSample("Setting mask size as a percentage", "", "250px")}}
+{{EmbedLiveSample("mask-size-example", "", "250px")}}
 
 ## Specifications
 

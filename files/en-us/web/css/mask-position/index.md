@@ -59,13 +59,13 @@ One or more `<position>` values, separated by commas.
 
 Open the live sample in the playground and change the `mask-position` value to any of the allowed values detailed above.
 
-```html
+```html live-sample___mask-position-example
 <div id="wrapper">
   <div class="masked"></div>
 </div>
 ```
 
-```css
+```css live-sample___mask-position-example
 #wrapper {
   border: 1px solid black;
   width: 250px;
@@ -84,7 +84,7 @@ Open the live sample in the playground and change the `mask-position` value to a
 }
 ```
 
-{{EmbedLiveSample("Setting mask position", "", "300px")}}
+{{EmbedLiveSample("mask-position-example", "", "300px")}}
 
 ## Specifications
 
