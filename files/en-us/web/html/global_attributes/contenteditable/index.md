@@ -49,7 +49,7 @@ This example has 2 {{HTMLElement("div")}}s both with `contenteditable`, the firs
   <div class="copy">
     <p>
       This is a paragraph with <strong>Bold</strong> <em>Italic</em> and
-      <span class="red">red text</span>. Below is an ordered and unordered list:
+      <span class="red">red text</span>. Below is an ordered list:
     </p>
     <ol>
       <li>Step one</li>
