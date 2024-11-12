@@ -17,7 +17,7 @@ Cascade layers are most relevant when you're working with CSS from multiple sour
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>An idea of how CSS works, including cascade and specificity (study
-        <a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a> and <a href="/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Cascade, specificity, and inheritance</a>).
+        <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS Styling basics</a> and <a href="/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts">Handling conflicts</a>).
       </td>
     </tr>
     <tr>
@@ -548,6 +548,6 @@ You've reached the end of this article, but can you remember the most important 
 
 ## Summary
 
-If you understood most of this article, then well done — you're now familiar with the fundamental mechanics of CSS cascade layers. Next up, we'll look at [the box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model) in detail.
+If you understood most of this article, then well done — you're now familiar with the fundamental mechanics of CSS cascade layers. Next up, we'll look at the box model in detail.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}

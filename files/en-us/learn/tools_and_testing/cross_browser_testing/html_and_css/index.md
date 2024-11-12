@@ -43,7 +43,7 @@ Let's go forth and look at how we can reduce cross browser errors that result fr
 
 We said in the [first article of this series](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction#testingdiscovery) that a good strategy to begin with is to test in a couple of modern browsers on desktop/mobile, to make sure your code is working generally, before going on to concentrate on the cross browser issues.
 
-In our [Debugging HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML) and [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS) articles, we provided some really basic guidance on debugging HTML/CSS — if you are not familiar with the basics, you should definitely study these articles before carrying on.
+In our [Debugging HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML) and [Debugging CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS) articles, we provided some really basic guidance on debugging HTML/CSS — if you are not familiar with the basics, you should definitely study these articles before carrying on.
 
 Basically, it is a matter of checking whether your HTML and CSS code is well formed and doesn't contain any syntax errors.
 
@@ -196,7 +196,7 @@ To sort this out, we have added a second `background-color` declaration, which j
 
 ### Selector support
 
-Of course, no CSS features will apply at all if you don't use the right [selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors) to select the element you want to style!
+Of course, no CSS features will apply at all if you don't use the right [selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) to select the element you want to style!
 
 In a comma-separated list of selectors, if you just write a selector incorrectly, it may not match any element. If, however, a selector is invalid, the **entire** list of selectors is ignored, along with the entire style block. For this reason, only include a `:-moz-` prefixed pseudo class or pseudo-element in a [forgiving selector list](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list), such as `:where(::-moz-thumb)`. Don't include a `:-moz-` prefixed pseudo class or pseudo-element within a comma-separated group of selectors outside of a [`:is()`](/en-US/docs/Web/CSS/:is) or [`:where()`](/en-US/docs/Web/CSS/:where) forgiving selector list as all browsers other than Firefox will ignore the entire block. Note that both `:is()` and `:where()` can be passed as parameters in other selector lists, including [`:has()`](/en-US/docs/Web/CSS/:has) and [`:not()`](/en-US/docs/Web/CSS/:not).
 

@@ -17,7 +17,7 @@ Before attempting to learn MathML, it is assumed that you have some basic knowle
 
 - [Getting started with the Web](/en-US/docs/Learn_web_development/Getting_started/Your_first_website)
 - [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML)
-- [Introduction to CSS](/en-US/docs/Learn/CSS/First_steps)
+- [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics)
 
 Some familiarity with mathematical notations and [TeX](https://en.wikipedia.org/wiki/TeX) rendering rules might also come in handy, even though required concepts will be explained as needed.
 

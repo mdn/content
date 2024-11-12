@@ -16,19 +16,19 @@ Once you understand the fundamentals of HTML, we recommend that you learn furthe
 
 Before starting this topic, you should also be familiar with using computers and using the web passively (i.e., just looking at it, consuming the content). You should have a basic work environment set up, as detailed in [Installing basic software](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software), and understand how to create and manage files, as detailed in [Dealing with files](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files) — both of which are parts of our [Getting started with the web](/en-US/docs/Learn_web_development/Getting_started/Your_first_website) complete beginner's module.
 
-It is also recommended that you work through [Getting started with the web](/en-US/docs/Learn_web_development/Getting_started/Your_first_website) before proceeding with this topic, especially if you are completely new to web development. However, much of what is covered in its [CSS basics](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content) article is also covered in our [CSS first steps](/en-US/docs/Learn/CSS/First_steps) module, albeit in a lot more detail.
+It is also recommended that you work through [Getting started with the web](/en-US/docs/Learn_web_development/Getting_started/Your_first_website) before proceeding with this topic, especially if you are completely new to web development. However, much of what is covered in its [CSS basics](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content) article is also covered in our [CSS Styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics) module, albeit in a lot more detail.
 
 ## Modules
 
 This topic contains the following modules, in a suggested order for working through them. You should start with the first one.
 
-- [CSS first steps](/en-US/docs/Learn/CSS/First_steps)
+- [CSS Styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics)
 
   - : CSS (Cascading Style Sheets) is used to style and layout web pages — for example, to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features. This module provides a gentle beginning to your path towards CSS mastery with the basics of how it works, what the syntax looks like, and how you can start using it to add styling to HTML.
 
 - [CSS building blocks](/en-US/docs/Learn/CSS/Building_blocks)
 
-  - : This module carries on where [CSS first steps](/en-US/docs/Learn/CSS/First_steps) left off — now you've gained familiarity with the language and its syntax, and got some basic experience with using it, it's time to dive a bit deeper. This module looks at the cascade and inheritance, all the selector types we have available, units, sizing, styling backgrounds and borders, debugging, and lots more.
+  - : This module carries on where [CSS Styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics) left off — now you've gained familiarity with the language and its syntax, and got some basic experience with using it, it's time to dive a bit deeper. This module looks at the cascade and inheritance, all the selector types we have available, units, sizing, styling backgrounds and borders, debugging, and lots more.
 
     The aim here is to provide you with a toolkit for writing competent CSS and help you understand all the essential theory, before moving on to more specific disciplines like [text styling](/en-US/docs/Learn/CSS/Styling_text) and [CSS layout](/en-US/docs/Learn/CSS/CSS_layout).
 

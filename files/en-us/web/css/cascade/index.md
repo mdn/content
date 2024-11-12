@@ -407,7 +407,7 @@ After your content has finished altering styles, it may find itself in a situati
 
 ## See also
 
-- [Building blocks: the CSS cascade](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [Building blocks: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [Building blocks: cascade layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers)
 - [CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
 - [CSS syntax](/en-US/docs/Web/CSS/Syntax)

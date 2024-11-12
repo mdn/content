@@ -6,7 +6,7 @@ page-type: learn-module-assessment
 
 {{LearnSidebar}}
 
-The aim of this skill test is to assess whether you understand [overflow in CSS and how to manage it](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content).
+The aim of this skill test is to assess whether you understand [overflow in CSS and how to manage it](/en-US/docs/Learn_web_development/Core/Styling_basics/Overflow).
 
 > [!NOTE]
 > Click **"Play"** in the code blocks below to edit the examples in the MDN Playground.

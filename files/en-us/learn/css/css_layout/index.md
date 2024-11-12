@@ -12,8 +12,8 @@ At this point, we've looked at CSS fundamentals, how to style text, and how to s
 
 Before starting this module, you should already:
 
-1. Have basic familiarity with HTML, as discussed in the [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) module.
-2. Be comfortable with CSS fundamentals, as discussed in [Introduction to CSS](/en-US/docs/Learn/CSS/First_steps).
+1. Have basic familiarity with HTML, as discussed in the [Strucuring content with HTML](/en-US/docs/Learn_web_development/Core/Structuring_content) module.
+2. Be comfortable with CSS fundamentals, as discussed in [CSS Styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics).
 3. Understand how to [style boxes](/en-US/docs/Learn/CSS/Building_blocks).
 
 > [!NOTE]

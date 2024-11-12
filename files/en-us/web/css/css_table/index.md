@@ -29,7 +29,7 @@ The properties introduced in this module aren't limited to the `<table>` element
 
   - : An overview of CSS layouts, including how to set table-related `display` values to enable using CSS table properties on any element.
 
-- [Learn: Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
+- [Learn: Styling tables](/en-US/docs/Learn_web_development/Core/Styling_basics/Tables)
 
   - : A guide to improving the appearance of HTML tables, covering table styling techniques.
 

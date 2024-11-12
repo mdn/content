@@ -15,7 +15,7 @@ If you are a complete beginner, web development can be challenging — we will h
 If you are not sure about committing to learning web development in-depth and want to begin with a taster session, we'd recommend that you start by working through our [Getting started with the web](/en-US/docs/Learn_web_development/Getting_started/Your_first_website) guides. Beyond that, you should start by learning the following topics:
 
 - HTML and CSS
-  - : HTML provides structure for web content, whereas CSS provides instructions to style and lay out that content. See [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) and [CSS first steps](/en-US/docs/Learn/CSS/First_steps) for essential starter information.
+  - : HTML provides structure for web content, whereas CSS provides instructions to style and lay out that content. See [Introduction to HTML](/en-US/docs/Learn_web_development/Code/Structuring_content) and [CSS Styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics) for essential starter information.
 - JavaScript
   - : JavaScript allows you to code interactive functionality on websites. Begin with [JavaScript first steps](/en-US/docs/Learn/JavaScript/First_steps).
 - Frameworks and tooling

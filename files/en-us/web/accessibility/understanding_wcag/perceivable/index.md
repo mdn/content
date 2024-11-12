@@ -99,8 +99,8 @@ The key here is that text can be converted to other forms that people with disab
           Decorative images should be implemented using CSS background images
           (see
           <a
-            href="/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders"
-            >Backgrounds</a
+            href="/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders"
+            >Backgrounds and borders</a
           >). If you have to include an image via an
           {{htmlelement("img")}} element, give it a blank alt
           (<code>alt=""</code>). Otherwise, screen readers may try to read out

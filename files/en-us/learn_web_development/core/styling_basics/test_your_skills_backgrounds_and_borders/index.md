@@ -6,7 +6,7 @@ page-type: learn-module-assessment
 
 {{learnsidebar}}
 
-The aim of this skill test is to assess whether you understand [backgrounds and borders of boxes in CSS](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders).
+The aim of this skill test is to assess whether you understand [backgrounds and borders of boxes in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders).
 
 > [!NOTE]
 > Click **"Play"** in the code blocks below to edit the examples in the MDN Playground.
@@ -139,7 +139,7 @@ h2 {
 <details>
 <summary>Click here to show the solution</summary>
 
-You need to add padding to the heading so that it doesn't overlay the star image - this links back to learning from the earlier [Box Model lesson](/en-US/docs/Learn/CSS/Building_blocks/The_box_model).
+You need to add padding to the heading so that it doesn't overlay the star image - this links back to learning from the earlier [Box Model lesson](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model).
 The text should be aligned with the `text-align` property:
 
 ```css

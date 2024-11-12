@@ -168,4 +168,4 @@ Just keep in mind a handy keyboard shortcut: **Ctrl+C**. Ctrl+C sends an "interr
 Congratulations, your website is up and running for anyone to visit. That's a huge achievement. Now, you can start digging deeper into various subjects.
 
 - Since people can come to your website from all over the world, you should consider making it [accessible to everybody](/en-US/docs/Learn/Common_questions/Design_and_accessibility/What_is_accessibility).
-- Is the design of your website a bit too rough? It's time to [learn more about CSS](/en-US/docs/Learn/CSS/First_steps/How_CSS_works).
+- Is the design of your website a bit too rough? It's time to [learn more about CSS](Learn_web_development/Core/Styling_basics).

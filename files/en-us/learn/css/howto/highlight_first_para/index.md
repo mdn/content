@@ -47,4 +47,4 @@ Whenever you need to target something in your document, you can check to see if 
 ## See also
 
 - The {{cssxref("pseudo-classes")}} reference page.
-- [Learn CSS: Pseudo-classes and pseudo-elements.](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+- [Learn CSS: Pseudo-classes and pseudo-elements.](/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)

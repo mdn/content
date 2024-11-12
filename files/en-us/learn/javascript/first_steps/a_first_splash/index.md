@@ -465,7 +465,7 @@ In this particular case, we first created a `guessField` constant that stores a 
 const guessField = document.querySelector(".guessField");
 ```
 
-To get this reference, we used the {{domxref("document.querySelector", "querySelector()")}} method of the {{domxref("document")}} object. `querySelector()` takes one piece of information — a [CSS selector](/en-US/docs/Learn/CSS/Building_blocks/Selectors) that selects the element you want a reference to.
+To get this reference, we used the {{domxref("document.querySelector", "querySelector()")}} method of the {{domxref("document")}} object. `querySelector()` takes one piece of information — a [CSS selector](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) that selects the element you want a reference to.
 
 Because `guessField` now contains a reference to an {{htmlelement("input")}} element, it now has access to a number of properties (basically variables stored inside objects, some of which can't have their values changed) and methods (basically functions stored inside objects). One method available to input elements is `focus()`, so we can now use this line to focus the text input:
 

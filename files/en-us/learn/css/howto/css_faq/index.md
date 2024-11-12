@@ -61,10 +61,10 @@ It is generally recommended to use classes as much as possible, and to use ids o
 
 - Using classes makes your styling extensible — even if you only have one element to style with a particular ruleset now, you might want to add more later.
 - Classes allow you to style multiple elements, therefore they can lead to shorter stylesheets, rather than having to write out the same styling information in multiple rules that use id selectors. Shorter stylesheets are more performant.
-- Class selectors have lower [specificity](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity) than id selectors, so are easier to override if needed.
+- Class selectors have lower [specificity](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#specificity) than id selectors, so are easier to override if needed.
 
 > [!NOTE]
-> See [Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors) for more information.
+> See [Selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) for more information.
 
 ## How do I restore the default value of a property?
 
@@ -230,7 +230,7 @@ The use of the \* selector should be minimized as it is a slow selector, especia
 
 ### Specificity in CSS
 
-When multiple rules apply to a certain element, the rule chosen depends on its style [specificity](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity). Inline style (in HTML `style` attributes) has the highest specificity and will override any selectors, followed by ID selectors, then class selectors, and eventually element selectors. The text color of the below {{htmlelement("div")}} will therefore be red.
+When multiple rules apply to a certain element, the rule chosen depends on its style [specificity](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#specificity). Inline style (in HTML `style` attributes) has the highest specificity and will override any selectors, followed by ID selectors, then class selectors, and eventually element selectors. The text color of the below {{htmlelement("div")}} will therefore be red.
 
 ```css
 div {

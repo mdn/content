@@ -6,7 +6,7 @@ page-type: learn-module-assessment
 
 {{LearnSidebar}}
 
-The aim of this skill test is to assess whether you understand universal property values for [controlling inheritance in CSS](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance).
+The aim of this skill test is to assess whether you understand universal property values for [controlling inheritance in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts).
 
 > [!NOTE]
 > Click **"Play"** in the code blocks below to edit the examples in the MDN Playground.
@@ -15,7 +15,7 @@ The aim of this skill test is to assess whether you understand universal propert
 
 ## Task 1
 
-In this task, we want you to use one of the special values we looked at in the [controlling inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#controlling_inheritance) section. To write a declaration in a new rule that will reset the background color back to white, without using an actual color value.
+In this task, we want you to use one of the special values we looked at in the [controlling inheritance](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#controlling_inheritance) section. To write a declaration in a new rule that will reset the background color back to white, without using an actual color value.
 
 Your final result should look like the image below:
 
@@ -68,7 +68,7 @@ Then you need to remember there are special keyword values for all properties. I
 
 ## Task 2
 
-In this task, we want you to make your changes by leveraging the [order of cascade layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#order_of_cascade_layers) section. Edit an existing declaration, without touching the lightgreen declaration, using the cascade layer order to make the links rebeccapurple.
+In this task, we want you to make your changes by leveraging the [order of cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#order_of_cascade_layers) section. Edit an existing declaration, without touching the lightgreen declaration, using the cascade layer order to make the links rebeccapurple.
 
 Your final result should look like the image below:
 

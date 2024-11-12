@@ -183,7 +183,7 @@ Let's put these new elements into action.
 5. Save and refresh, and have a look at the result. If the `<tbody>` and `<tfoot>` elements weren't in place, you'd have to write much more complicated selectors/rules to apply the same styling.
 
 > [!NOTE]
-> We don't expect you to fully understand the CSS right now. You'll learn more about this when you go through our CSS modules ([Introduction to CSS](/en-US/docs/Learn/CSS/First_steps) is a good place to start; we also have an article specifically on [styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)).
+> We don't expect you to fully understand the CSS right now. You'll learn more about this when you go through our CSS modules ([CSS Styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics) is a good place to start; we also have an article specifically on [styling tables](/en-US/docs/Learn_web_development/Core/Styling_basics/Tables)).
 
 Your finished table should look something like the following:
 

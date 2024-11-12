@@ -19,7 +19,7 @@ This article explains normal flow, or the way that webpage elements lay themselv
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >), and an idea of How CSS works (study
-        <a href="/en-US/docs/Learn/CSS/First_steps">Introduction to CSS</a>.)
+        <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS Styling basics</a>.)
       </td>
     </tr>
     <tr>

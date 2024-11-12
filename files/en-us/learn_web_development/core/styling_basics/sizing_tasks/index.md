@@ -6,7 +6,7 @@ page-type: learn-module-assessment
 
 {{LearnSidebar}}
 
-The aim of this skill test is to assess whether you understand the different ways of [sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS).
+The aim of this skill test is to assess whether you understand the different ways of [sizing items in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Sizing).
 
 > [!NOTE]
 > Click **"Play"** in the code blocks below to edit the examples in the MDN Playground.

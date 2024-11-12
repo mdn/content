@@ -208,7 +208,7 @@ An extended discussion of a topic might be spread across multiple conceptual pag
 
 - [Using the WebVR API](/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API)
 - [Visualizations with Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
-- [Cascade and inheritance in CSS](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 
 ### Glossary page
 

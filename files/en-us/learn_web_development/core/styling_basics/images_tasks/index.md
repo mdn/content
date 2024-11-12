@@ -6,7 +6,7 @@ page-type: learn-module-assessment
 
 {{LearnSidebar}}
 
-The aim of this skill test is to assess whether you understand how special elements like [images, media and form elements are treated in CSS](/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements).
+The aim of this skill test is to assess whether you understand how special elements like [images, media and form elements are treated in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Images_media_forms).
 
 > [!NOTE]
 > Click **"Play"** in the code blocks below to edit the examples in the MDN Playground.

@@ -4,7 +4,9 @@ slug: Learn_web_development/Core/Styling_basics/Values_and_units
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics")}}
 
 CSS rules contain [declarations](/en-US/docs/Web/CSS/Syntax#css_declarations), which in turn are composed of properties and values.
 Each property used in CSS has a **value type** that describes what kind of values it is allowed to have.
@@ -18,25 +20,20 @@ In this lesson, we will take a look at some of the most frequently used value ty
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        <a
-          href="/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
-          >Basic software installed</a
-        >, basic knowledge of
-        <a
-          href="/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
-          >working with files</a
-        >, HTML basics (study
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
-          >Introduction to HTML</a
-        >), and an idea of how CSS works (study
-        <a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a>).
+        HTML basics (study
+        <a href="/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
+          >Basic HTML syntax</a
+        >), <a href="/en-US/docs/Learn_web_development/Core/Styling_basics/Getting_started">CSS basic syntax</a>, <a href="/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors">CSS selectors</a>.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">Learning outcomes:</th>
       <td>
-        To learn about the different types of values and units used in CSS
-        properties.
+        <ul>
+          <li>Understand that property values can take many different types, and what these types represent.</li>
+          <li>Familiarity with using the fundamental types: Numbers, lengths, percentages, colors, images, positions, strings and identifiers, and functions.</li>
+          <li>Understand what absolute and relative units are, and the difference between them.</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -44,15 +41,12 @@ In this lesson, we will take a look at some of the most frequently used value ty
 
 ## What is a CSS value?
 
-In CSS specifications and on the property pages here on MDN you will be able to spot value types as they will be surrounded by angle brackets, such as [`<color>`](/en-US/docs/Web/CSS/color_value) or {{cssxref("length")}}. When you see the value type `<color>` as valid for a particular property, that means you can use any valid color as a value for that property, as listed on the [`<color>`](/en-US/docs/Web/CSS/color_value) reference page.
+In CSS specifications and on the property pages here on MDN you will be able to spot value types as they will be surrounded by angle brackets (`<`, `>`), such as [`<color>`](/en-US/docs/Web/CSS/color_value) or {{cssxref("length")}}. When you see the value type `<color>` as valid for a particular property, that means you can use any valid color as a value for that property, as listed on the [`<color>`](/en-US/docs/Web/CSS/color_value) reference page.
+
+Sometimes value types and properties can have the same, or similar names — For example, there is a {{cssxref("color")}} property and a [`<color>`](/en-US/docs/Web/CSS/color_value) data type. You can use the angle brackets to determine which one you are studying in each case. HTML elements also use angle brackets, but it should be clear from the context which one you are looking at. If yo are not sure, try searching for it on MDN.
 
 > [!NOTE]
 > You'll see CSS value types referred to as _data types_. The terms are basically interchangeable — when you see something in CSS referred to as a data type, it is really just a fancy way of saying value type. The term _value_ refers to any particular expression supported by a value type that you choose to use.
-
-> [!NOTE]
-> CSS value types tend to be enclosed in angle brackets (`<`, `>`) to differentiate them from CSS properties.
-> For example there is a {{cssxref("color")}} property and a [`<color>`](/en-US/docs/Web/CSS/color_value) data type.
-> This is not to be confused with HTML elements, as they also use angle brackets, but this is something to keep in mind that the context should make clear.
 
 In the following example, we have set the color of our heading using a keyword, and the background using the `rgb()` function:
 
@@ -273,7 +267,7 @@ html {
 
 #### Line height units
 
-`lh` and `rlh` are relative lengths units similar to `em` and `rem`. The difference between `lh` and `rlh` is that the first one is relative to the line height of the element itself, while the second one is relative to the line height of the root element, usually `<html>`.
+`lh` and `rlh` are relative length units similar to `em` and `rem`. The difference between `lh` and `rlh` is that the first one is relative to the line height of the element itself, while the second one is relative to the line height of the root element, usually `<html>`.
 
 Using these units, we can precisely align box decoration to the text. In this example, we use `lh` unit to create notepad-like lines using [`repeating-linear-gradient()`](/en-US/docs/Web/CSS/gradient/repeating-linear-gradient). It doesn't matter what's the line height of the text, the lines will always start in the right place.
 
@@ -773,7 +767,7 @@ Play around with these values to see how you can push the image around.
 
 Throughout the examples above, we've seen places where keywords are used as a value (for example `<color>` keywords like `red`, `black`, `rebeccapurple`, and `goldenrod`). These keywords are more accurately described as _identifiers_, a special value that CSS understands. As such they are not quoted — they are not treated as strings.
 
-There are places where you use strings in CSS. For example, [when specifying generated content](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#generating_content_with_before_and_after). In this case, the value is quoted to demonstrate that it is a string. In the example below, we use unquoted color keywords along with a quoted generated content string.
+There are places where you use strings in CSS. For example, [when specifying generated content](/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements#generating_content_with_before_and_after). In this case, the value is quoted to demonstrate that it is a string. In the example below, we use unquoted color keywords along with a quoted generated content string.
 
 ```html live-sample___strings-idents
 <div class="box"></div>
@@ -859,6 +853,6 @@ This has been a quick run-through of the most common types of values and units y
 
 The key thing to remember is that each property has a defined list of allowed value types, and each value type has a definition explaining what the values are. You can then look up the specifics here on MDN. For example, understanding that [`<image>`](/en-US/docs/Web/CSS/image) also allows you to create a color gradient is useful but perhaps non-obvious knowledge to have!
 
-In the next article, we'll take a look at how [items are sized](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS) in CSS.
+In the next article, we'll take a look at how items are sized in CSS.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics")}}

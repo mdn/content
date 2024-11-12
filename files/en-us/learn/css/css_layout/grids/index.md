@@ -17,7 +17,7 @@ page-type: learn-module-chapter
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >) and an idea of how CSS works (study
-        <a href="/en-US/docs/Learn/CSS/First_steps">Introduction to CSS</a> and
+        <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS Styling basics</a> and
         <a href="/en-US/docs/Learn/CSS/Building_blocks">Styling boxes</a>.)
       </td>
     </tr>

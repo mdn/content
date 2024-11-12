@@ -21,8 +21,8 @@ This page rounds up questions and answers, and other material on the MDN site th
 
 ### Box styling lessons and guides
 
-- [The Box Model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
-- [Styling backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [The Box Model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model)
+- [Styling backgrounds and borders](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
 
 ## CSS and text
 
@@ -40,7 +40,7 @@ This page rounds up questions and answers, and other material on the MDN site th
 - [How to style text](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
 - [How to customize a list of elements](/en-US/docs/Learn/CSS/Styling_text/Styling_lists)
 - [How to style links](/en-US/docs/Learn/CSS/Styling_text/Styling_links)
-- [CSS Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
+- [CSS Selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
 
 ## CSS Layout
 

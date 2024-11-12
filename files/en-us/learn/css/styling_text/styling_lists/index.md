@@ -17,7 +17,7 @@ page-type: learn-module-chapter
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >), CSS basics (study
-        <a href="/en-US/docs/Learn/CSS/First_steps">Introduction to CSS</a>),
+        <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS Styling basics</a>),
         <a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals"
           >CSS text and font fundamentals</a
         >.
@@ -199,7 +199,7 @@ ul {
 }
 ```
 
-However, this property is a bit limited in terms of controlling the position, size, etc. of the bullets. You are better off using the {{cssxref("background")}} family of properties, which you've learned in the [Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) article. For now, here's a taster!
+However, this property is a bit limited in terms of controlling the position, size, etc. of the bullets. You are better off using the {{cssxref("background")}} family of properties, which you learned about in our previous [Backgrounds and borders](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders) lesson.
 
 In our finished example, we have styled the unordered list like so (on top of what you've already seen above):
 

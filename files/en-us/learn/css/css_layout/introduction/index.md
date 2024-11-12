@@ -17,7 +17,7 @@ This article will recap some of the CSS layout features we've already touched up
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >), and an idea of How CSS works (study
-        <a href="/en-US/docs/Learn/CSS/First_steps">Introduction to CSS</a>.)
+        <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS Styling basics</a>.)
       </td>
     </tr>
     <tr>
@@ -74,7 +74,7 @@ For many of the elements on your page, the normal flow will create exactly the l
 
 The methods that can change how elements are laid out in CSS are:
 
-- **The {{cssxref("display")}} property** — Standard values such as `block`, `inline` or `inline-block` can change how elements behave in normal flow, for example, by making a block-level element behave like an inline-level element (see [Types of CSS boxes](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#block_and_inline_boxes) for more information). We also have entire layout methods that are enabled via specific `display` values, for example, [CSS grid](/en-US/docs/Learn/CSS/CSS_layout/Grids) and [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox), which alter how child elements are laid out inside their parents.
+- **The {{cssxref("display")}} property** — Standard values such as `block`, `inline` or `inline-block` can change how elements behave in normal flow, for example, by making a block-level element behave like an inline-level element (see [Types of CSS boxes](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#block_and_inline_boxes) for more information). We also have entire layout methods that are enabled via specific `display` values, for example, [CSS grid](/en-US/docs/Learn/CSS/CSS_layout/Grids) and [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox), which alter how child elements are laid out inside their parents.
 - **Floats** — Applying a {{cssxref("float")}} value such as `left` can cause block-level elements to wrap along one side of an element, like the way images sometimes have text floating around them in magazine layouts.
 - **The {{cssxref("position")}} property** — Allows you to precisely control the placement of boxes inside other boxes. `static` positioning is the default in normal flow, but you can cause elements to be laid out differently using other values, for example, as fixed to the top of the browser viewport.
 - **Table layout** — Features designed for styling parts of an HTML table can be used on non-table elements using `display: table` and associated properties.

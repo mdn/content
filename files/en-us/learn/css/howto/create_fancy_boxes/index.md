@@ -8,7 +8,7 @@ page-type: learn-faq
 
 CSS boxes are the building blocks of any web page styled with CSS. Making them nice looking is both fun and challenging. It's fun because it's all about turning a design idea into working code; it's challenging because of the constraints of CSS. Let's do some fancy boxes.
 
-Before we start getting into the practical side of it, make sure you are familiar with [the CSS box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model). It's also a good idea, but not a prerequisite, to be familiar with some [CSS layout basics](/en-US/docs/Learn/CSS/CSS_layout/Introduction).
+Before we start getting into the practical side of it, make sure you are familiar with [the CSS box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model). It's also a good idea, but not a prerequisite, to be familiar with some [CSS layout basics](/en-US/docs/Learn/CSS/CSS_layout/Introduction).
 
 On the technical side, Creating fancy boxes are all about mastering CSS border and background properties and how to apply them to a given box. But beyond the techniques it's also all about unleashing your creativity. It will not be done in one day, and some web developers spend their whole life having fun with it.
 

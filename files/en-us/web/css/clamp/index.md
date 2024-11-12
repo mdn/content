@@ -153,4 +153,4 @@ p {
 - {{CSSxRef("calc", "calc()")}}
 - {{CSSxRef("max", "max()")}}
 - {{CSSxRef("min", "min()")}}
-- [CSS Values](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Learn: CSS Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

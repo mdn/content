@@ -15,7 +15,7 @@ In the previous few articles, we showed how to create web forms in HTML. Now, we
       <td>
         A basic understanding of
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">HTML</a> and
-        <a href="/en-US/docs/Learn/CSS/First_steps">CSS</a>.
+        <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS Styling basics</a>.
       </td>
     </tr>
     <tr>

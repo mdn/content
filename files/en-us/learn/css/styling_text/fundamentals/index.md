@@ -17,7 +17,7 @@ In this article we'll start you on your journey towards mastering text styling w
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >), CSS basics (study
-        <a href="/en-US/docs/Learn/CSS/First_steps">Introduction to CSS</a>).
+        <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS Styling basics</a>).
       </td>
     </tr>
     <tr>
@@ -32,10 +32,10 @@ In this article we'll start you on your journey towards mastering text styling w
 
 ## What is involved in styling text in CSS?
 
-Text inside an element is laid out inside the element's [content box](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#parts_of_a_box). It starts at the top left of the content area (or the top right, in the case of RTL language content), and flows towards the end of the line. Once it reaches the end, it goes down to the next line and flows to the end again. This pattern repeats until all the content has been placed in the box. Text content effectively behaves like a series of inline elements, being laid out on lines adjacent to one another, and not creating line breaks until the end of the line is reached, or unless you force a line break manually using the {{htmlelement("br")}} element.
+Text inside an element is laid out inside the element's [content box](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#parts_of_a_box). It starts at the top left of the content area (or the top right, in the case of RTL language content), and flows towards the end of the line. Once it reaches the end, it goes down to the next line and flows to the end again. This pattern repeats until all the content has been placed in the box. Text content effectively behaves like a series of inline elements, being laid out on lines adjacent to one another, and not creating line breaks until the end of the line is reached, or unless you force a line break manually using the {{htmlelement("br")}} element.
 
 > [!NOTE]
-> If the above paragraph leaves you feeling confused, then no matter — go back and review our [Box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model) article to brush up on the box model theory before carrying on.
+> If the above paragraph leaves you feeling confused, then no matter — go back and review our [Box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model) article to brush up on the box model theory before carrying on.
 
 The CSS properties used to style text generally fall into two categories, which we'll look at separately in this article:
 
@@ -69,7 +69,7 @@ You can find the [finished example on GitHub](https://mdn.github.io/learning-are
 
 The {{cssxref("color")}} property sets the color of the foreground content of the selected elements, which is usually the text, but can also include a couple of other things, such as an underline or overline placed on text using the {{cssxref("text-decoration")}} property.
 
-`color` can accept any [CSS color unit](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#color), for example:
+`color` can accept any [CSS color unit](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#color), for example:
 
 ```css
 p {
@@ -324,7 +324,7 @@ This gives us the following result:
 
 ### Font size
 
-In our previous module's [CSS values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units) article, we reviewed length and size units. Font size (set with the {{cssxref("font-size")}} property) can take values measured in most of these units (and others, such as [percentages](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#percentages)); however, the most common units you'll use to size text are:
+In our previous module's [CSS values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units) article, we reviewed length and size units. Font size (set with the {{cssxref("font-size")}} property) can take values measured in most of these units (and others, such as [percentages](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#percentages)); however, the most common units you'll use to size text are:
 
 - `px` (pixels): The number of pixels high you want the text to be. This is an absolute unit — it results in the same final computed value for the font on the page in pretty much any situation.
 - `em`s: 1 `em` is equal to the font size set on the parent element of the current element we are styling (more specifically, the width of a capital letter M contained inside the parent element). This can become tricky to work out if you have a lot of nested elements with different font sizes set, but it is doable, as you'll see below. Why bother? It is quite natural once you get used to it, and you can use `em` to size everything, not just text. You can have an entire website sized using `em`, which makes maintenance easy.
@@ -429,10 +429,10 @@ text-shadow: 4px 4px 5px red;
 
 The four properties are as follows:
 
-1. The horizontal offset of the shadow from the original text — this can take most available CSS [length and size units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#lengths), but you'll most commonly use `px`; positive values move the shadow right, and negative values left. This value has to be included.
+1. The horizontal offset of the shadow from the original text — this can take most available CSS [length and size units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#lengths), but you'll most commonly use `px`; positive values move the shadow right, and negative values left. This value has to be included.
 2. The vertical offset of the shadow from the original text. This behaves similarly to the horizontal offset, except that it moves the shadow up/down, not left/right. This value has to be included.
-3. The blur radius: a higher value means the shadow is dispersed more widely. If this value is not included, it defaults to 0, which means no blur. This can take most available CSS [length and size units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#lengths).
-4. The base color of the shadow, which can take any [CSS color unit](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#color). If not included, it defaults to [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword), i.e. the shadow's color is taken from the element's [`color`](/en-US/docs/Web/CSS/color) property.
+3. The blur radius: a higher value means the shadow is dispersed more widely. If this value is not included, it defaults to 0, which means no blur. This can take most available CSS [length and size units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#lengths).
+4. The base color of the shadow, which can take any [CSS color unit](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#color). If not included, it defaults to [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword), i.e. the shadow's color is taken from the element's [`color`](/en-US/docs/Web/CSS/color) property.
 
 #### Multiple shadows
 
@@ -546,7 +546,7 @@ p {
 
 ### Line height
 
-The {{cssxref("line-height")}} property sets the height of each line of text. This property can not only take most [length and size units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#lengths), but can also take a unitless value, which acts as a multiplier and is generally considered the best option. With a unitless value, the {{cssxref("font-size")}} gets multiplied and results in the `line-height`. Body text generally looks nicer and is easier to read when the lines are spaced apart. The recommended line height is around 1.5 – 2 (double spaced). To set our lines of text to 1.6 times the height of the font, we'd use:
+The {{cssxref("line-height")}} property sets the height of each line of text. This property can not only take most [length and size units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#lengths), but can also take a unitless value, which acts as a multiplier and is generally considered the best option. With a unitless value, the {{cssxref("font-size")}} gets multiplied and results in the `line-height`. Body text generally looks nicer and is easier to read when the lines are spaced apart. The recommended line height is around 1.5 – 2 (double spaced). To set our lines of text to 1.6 times the height of the font, we'd use:
 
 ```css
 p {
@@ -600,7 +600,7 @@ p {
 
 ### Letter and word spacing
 
-The {{cssxref("letter-spacing")}} and {{cssxref("word-spacing")}} properties allow you to set the spacing between letters and words in your text. You won't use these very often, but might find a use for them to obtain a specific look, or to improve the legibility of a particularly dense font. They can take most [length units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#lengths).
+The {{cssxref("letter-spacing")}} and {{cssxref("word-spacing")}} properties allow you to set the spacing between letters and words in your text. You won't use these very often, but might find a use for them to obtain a specific look, or to improve the legibility of a particularly dense font. They can take most [length units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#lengths).
 
 To illustrate, we could apply some word- and letter-spacing to the first line of each {{htmlelement("p")}} element in our HTML sample with:
 

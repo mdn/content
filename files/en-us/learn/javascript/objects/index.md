@@ -10,7 +10,7 @@ In JavaScript, most things are objects, from core JavaScript features like array
 
 ## Prerequisites
 
-Before starting this module, you should have some familiarity with {{Glossary("HTML")}} and {{Glossary("CSS")}}. You are advised to work through the [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) and [Introduction to CSS](/en-US/docs/Learn/CSS/First_steps) modules before starting on JavaScript.
+Before starting this module, you should have some familiarity with {{Glossary("HTML")}} and {{Glossary("CSS")}}. You are advised to work through the [Structuring content with HTML](/en-US/docs/Learn/Core/Structuring_content) and [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics) modules before starting on JavaScript.
 
 You should also have some familiarity with JavaScript basics before looking at JavaScript objects in detail. Before attempting this module, work through [JavaScript first steps](/en-US/docs/Learn/JavaScript/First_steps) and [JavaScript building blocks](/en-US/docs/Learn/JavaScript/Building_blocks).
 

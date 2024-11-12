@@ -10,7 +10,7 @@ With the basics of the CSS language covered, the next CSS topic for you to conce
 
 ## Prerequisites
 
-Before starting this module, you should already have basic familiarity with HTML, as discussed in the [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) module, and be comfortable with CSS fundamentals, as discussed in [Introduction to CSS](/en-US/docs/Learn/CSS/First_steps).
+Before starting this module, you should already have basic familiarity with HTML, as discussed in the [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) module, and be comfortable with CSS fundamentals, as discussed in [CSS Styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics).
 
 > [!NOTE]
 > If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).

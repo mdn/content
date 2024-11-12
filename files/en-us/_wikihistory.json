@@ -6339,73 +6339,6 @@
     "modified": "2020-07-16T22:27:36.041Z",
     "contributors": ["MelchiorIm3Tal", "chrisdavidmills", "rachelandrew"]
   },
-  "Learn/CSS/First_steps": {
-    "modified": "2020-07-16T22:27:37.951Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "Learn/CSS/First_steps/Getting_started": {
-    "modified": "2020-07-16T22:27:48.937Z",
-    "contributors": [
-      "onurbasturk",
-      "blueblots",
-      "gsorto",
-      "xp44mm",
-      "smilevideo",
-      "mbrasseau",
-      "chrisdavidmills",
-      "rachelandrew",
-      "ExE-Boss",
-      "MyNameIsBond"
-    ]
-  },
-  "Learn/CSS/First_steps/How_CSS_is_structured": {
-    "modified": "2020-11-25T08:39:35.232Z",
-    "contributors": [
-      "Seeeven7",
-      "mfuji09",
-      "gdsimoes",
-      "ohaver",
-      "impossibleshadow",
-      "theRealJennie",
-      "SnakeWhisperer",
-      "paul2ma",
-      "PatientLearner",
-      "vgiffin",
-      "bart5",
-      "jsargey",
-      "fischer",
-      "sardarisk",
-      "chrisdavidmills",
-      "choudh70",
-      "mikemorr",
-      "xp44mm",
-      "mbrasseau",
-      "jlbuckner",
-      "rachelandrew",
-      "ExE-Boss"
-    ]
-  },
-  "Learn/CSS/First_steps/How_CSS_works": {
-    "modified": "2020-07-27T17:10:18.945Z",
-    "contributors": [
-      "warleyfdias",
-      "choudh70",
-      "jlbuckner",
-      "rachelandrew",
-      "chrisdavidmills",
-      "ExE-Boss"
-    ]
-  },
-  "Learn/CSS/First_steps/Styling_a_biography_page": {
-    "modified": "2020-11-20T01:07:05.733Z",
-    "contributors": [
-      "schalkneethling",
-      "hakantr",
-      "salutis",
-      "chrisdavidmills",
-      "rachelandrew"
-    ]
-  },
   "Learn/CSS/Howto": {
     "modified": "2020-07-16T22:25:41.103Z",
     "contributors": [
@@ -10681,17 +10614,6 @@
       "Hemiptera1"
     ]
   },
-  "Learn_web_development/Core/Styling_basics/A_cool_looking_box": {
-    "modified": "2020-07-16T22:28:25.961Z",
-    "contributors": [
-      "chrisdavidmills",
-      "jamesdhurd",
-      "stevedav",
-      "jruota",
-      "jswisher",
-      "richardzacur"
-    ]
-  },
   "Learn_web_development/Core/Styling_basics/Advanced_styling_effects": {
     "modified": "2020-07-16T22:28:20.113Z",
     "contributors": [
@@ -10708,6 +10630,18 @@
       "Sebastianz"
     ]
   },
+  "Learn_web_development/Core/Styling_basics/Attribute_selectors": {
+    "modified": "2020-07-16T22:28:48.447Z",
+    "contributors": [
+      "chrisdavidmills",
+      "SaquibAsghar",
+      "fazl",
+      "rachelandrew",
+      "83C10",
+      "mikemorr",
+      "RoyZhu"
+    ]
+  },
   "Learn_web_development/Core/Styling_basics/Backgrounds_and_borders": {
     "modified": "2020-07-16T22:29:07.190Z",
     "contributors": [
@@ -10720,7 +10654,137 @@
       "xp44mm"
     ]
   },
-  "Learn_web_development/Core/Styling_basics/Cascade_and_inheritance": {
+  "Learn_web_development/Core/Styling_basics/Basic_selectors": {
+    "modified": "2020-07-27T04:04:29.042Z",
+    "contributors": [
+      "chrisdavidmills",
+      "cattofiq",
+      "gerfolder",
+      "choudh70",
+      "xp44mm",
+      "sergberg5",
+      "rachelandrew",
+      "ExE-Boss"
+    ]
+  },
+  "Learn_web_development/Core/Styling_basics/Basic_selectors/Selectors_Tasks": {
+    "modified": "2020-11-10T09:07:22.974Z",
+    "contributors": [
+      "Re9iNee",
+      "impossibleshadow",
+      "chrisdavidmills",
+      "HenningTimm",
+      "blueblots",
+      "RafeyIqbalRahman",
+      "rachelandrew"
+    ]
+  },
+  "Learn_web_development/Core/Styling_basics/Basic_selectors/Type_Class_and_ID_Selectors": {
+    "modified": "2020-10-15T19:45:39.626Z",
+    "contributors": [
+      "impossibleshadow",
+      "ohaver",
+      "chrisdavidmills",
+      "revanthn",
+      "cattofiq",
+      "mabouguerra",
+      "Saif-Shines",
+      "jpfkd",
+      "avry",
+      "fazl",
+      "xp44mm",
+      "jlbuckner",
+      "rachelandrew",
+      "ExE-Boss"
+    ]
+  },
+  "Learn_web_development/Core/Styling_basics/Box_model": {
+    "modified": "2020-12-02T16:00:00.171Z",
+    "contributors": [
+      "Seeeven7",
+      "chrisdavidmills",
+      "jameswatyeo",
+      "Edsonoguera",
+      "mattvagni",
+      "uhoh-itsmaciek",
+      "rachelandrew",
+      "RicardsVeveris",
+      "Iqbalh11",
+      "Igor-Sangin",
+      "xp44mm",
+      "erictleung",
+      "jlbuckner",
+      "trondpet",
+      "Mahdi_Karimi_Asl",
+      "gumchum"
+    ]
+  },
+  "Learn_web_development/Core/Styling_basics/Cascade_tasks": {
+    "modified": "2020-07-16T22:29:36.222Z",
+    "contributors": ["blueblots", "RafeyIqbalRahman", "rachelandrew"]
+  },
+  "Learn_web_development/Core/Styling_basics/Combinators": {
+    "modified": "2020-07-16T22:28:51.504Z",
+    "contributors": [
+      "haond10adp",
+      "rachelandrew",
+      "xp44mm",
+      "DanielNoamTuby",
+      "chrisdavidmills"
+    ]
+  },
+  "Learn_web_development/Core/Styling_basics/Cool-looking_box": {
+    "modified": "2020-07-16T22:28:25.961Z",
+    "contributors": [
+      "chrisdavidmills",
+      "jamesdhurd",
+      "stevedav",
+      "jruota",
+      "jswisher",
+      "richardzacur"
+    ]
+  },
+  "Learn_web_development/Core/Styling_basics/Debugging_CSS": {
+    "modified": "2020-12-11T17:53:49.635Z",
+    "contributors": [
+      "bershanskiy",
+      "chrisdavidmills",
+      "xp44mm",
+      "mbrasseau",
+      "rachelandrew"
+    ]
+  },
+  "Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper": {
+    "modified": "2020-07-16T22:28:23.858Z",
+    "contributors": ["chrisdavidmills", "jswisher", "maurodibert"]
+  },
+  "Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension": {
+    "modified": "2020-07-16T22:28:10.933Z",
+    "contributors": [
+      "chrisdavidmills",
+      "bripmccann",
+      "jswisher",
+      "jenjwong",
+      "jrussia",
+      "richardzacur"
+    ]
+  },
+  "Learn_web_development/Core/Styling_basics/Getting_started": {
+    "modified": "2020-07-16T22:27:48.937Z",
+    "contributors": [
+      "onurbasturk",
+      "blueblots",
+      "gsorto",
+      "xp44mm",
+      "smilevideo",
+      "mbrasseau",
+      "chrisdavidmills",
+      "rachelandrew",
+      "ExE-Boss",
+      "MyNameIsBond"
+    ]
+  },
+  "Learn_web_development/Core/Styling_basics/Handling_conflicts": {
     "modified": "2020-11-02T04:01:22.115Z",
     "contributors": [
       "sourabhramsingh",
@@ -10743,40 +10807,11 @@
       "ExE-Boss"
     ]
   },
-  "Learn_web_development/Core/Styling_basics/Cascade_tasks": {
-    "modified": "2020-07-16T22:29:36.222Z",
-    "contributors": ["blueblots", "RafeyIqbalRahman", "rachelandrew"]
-  },
-  "Learn_web_development/Core/Styling_basics/Creating_fancy_letterheaded_paper": {
-    "modified": "2020-07-16T22:28:23.858Z",
-    "contributors": ["chrisdavidmills", "jswisher", "maurodibert"]
-  },
-  "Learn_web_development/Core/Styling_basics/Debugging_CSS": {
-    "modified": "2020-12-11T17:53:49.635Z",
-    "contributors": [
-      "bershanskiy",
-      "chrisdavidmills",
-      "xp44mm",
-      "mbrasseau",
-      "rachelandrew"
-    ]
-  },
-  "Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension": {
-    "modified": "2020-07-16T22:28:10.933Z",
-    "contributors": [
-      "chrisdavidmills",
-      "bripmccann",
-      "jswisher",
-      "jenjwong",
-      "jrussia",
-      "richardzacur"
-    ]
-  },
   "Learn_web_development/Core/Styling_basics/Handling_different_text_directions": {
     "modified": "2020-08-20T07:58:55.334Z",
     "contributors": ["absinth0", "rachelandrew", "chrisdavidmills", "choudh70"]
   },
-  "Learn_web_development/Core/Styling_basics/Images_media_form_elements": {
+  "Learn_web_development/Core/Styling_basics/Images_media_forms": {
     "modified": "2020-07-16T22:29:23.752Z",
     "contributors": [
       "rachelandrew",
@@ -10804,11 +10839,7 @@
       "rachelandrew"
     ]
   },
-  "Learn_web_development/Core/Styling_basics/Overflow_Tasks": {
-    "modified": "2020-07-16T22:29:33.802Z",
-    "contributors": ["avivmu", "blueblots", "RafeyIqbalRahman", "rachelandrew"]
-  },
-  "Learn_web_development/Core/Styling_basics/Overflowing_content": {
+  "Learn_web_development/Core/Styling_basics/Overflow": {
     "modified": "2020-07-16T22:29:15.226Z",
     "contributors": [
       "mrodent33",
@@ -10819,42 +10850,11 @@
       "Gxz-NGU"
     ]
   },
-  "Learn_web_development/Core/Styling_basics/Selectors": {
-    "modified": "2020-07-27T04:04:29.042Z",
-    "contributors": [
-      "chrisdavidmills",
-      "cattofiq",
-      "gerfolder",
-      "choudh70",
-      "xp44mm",
-      "sergberg5",
-      "rachelandrew",
-      "ExE-Boss"
-    ]
+  "Learn_web_development/Core/Styling_basics/Overflow_Tasks": {
+    "modified": "2020-07-16T22:29:33.802Z",
+    "contributors": ["avivmu", "blueblots", "RafeyIqbalRahman", "rachelandrew"]
   },
-  "Learn_web_development/Core/Styling_basics/Selectors/Attribute_selectors": {
-    "modified": "2020-07-16T22:28:48.447Z",
-    "contributors": [
-      "chrisdavidmills",
-      "SaquibAsghar",
-      "fazl",
-      "rachelandrew",
-      "83C10",
-      "mikemorr",
-      "RoyZhu"
-    ]
-  },
-  "Learn_web_development/Core/Styling_basics/Selectors/Combinators": {
-    "modified": "2020-07-16T22:28:51.504Z",
-    "contributors": [
-      "haond10adp",
-      "rachelandrew",
-      "xp44mm",
-      "DanielNoamTuby",
-      "chrisdavidmills"
-    ]
-  },
-  "Learn_web_development/Core/Styling_basics/Selectors/Pseudo-classes_and_pseudo-elements": {
+  "Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements": {
     "modified": "2020-07-16T22:28:42.196Z",
     "contributors": [
       "chrisdavidmills",
@@ -10865,38 +10865,7 @@
       "rachelandrew"
     ]
   },
-  "Learn_web_development/Core/Styling_basics/Selectors/Selectors_Tasks": {
-    "modified": "2020-11-10T09:07:22.974Z",
-    "contributors": [
-      "Re9iNee",
-      "impossibleshadow",
-      "chrisdavidmills",
-      "HenningTimm",
-      "blueblots",
-      "RafeyIqbalRahman",
-      "rachelandrew"
-    ]
-  },
-  "Learn_web_development/Core/Styling_basics/Selectors/Type_Class_and_ID_Selectors": {
-    "modified": "2020-10-15T19:45:39.626Z",
-    "contributors": [
-      "impossibleshadow",
-      "ohaver",
-      "chrisdavidmills",
-      "revanthn",
-      "cattofiq",
-      "mabouguerra",
-      "Saif-Shines",
-      "jpfkd",
-      "avry",
-      "fazl",
-      "xp44mm",
-      "jlbuckner",
-      "rachelandrew",
-      "ExE-Boss"
-    ]
-  },
-  "Learn_web_development/Core/Styling_basics/Sizing_items_in_CSS": {
+  "Learn_web_development/Core/Styling_basics/Sizing": {
     "modified": "2020-10-16T11:08:04.568Z",
     "contributors": [
       "rachelandrew",
@@ -10916,7 +10885,17 @@
     "modified": "2020-07-16T22:29:34.677Z",
     "contributors": ["jpfkd", "sakthivelsekar33", "blueblots", "rachelandrew"]
   },
-  "Learn_web_development/Core/Styling_basics/Styling_tables": {
+  "Learn_web_development/Core/Styling_basics/Styling_a_bio_page": {
+    "modified": "2020-11-20T01:07:05.733Z",
+    "contributors": [
+      "schalkneethling",
+      "hakantr",
+      "salutis",
+      "chrisdavidmills",
+      "rachelandrew"
+    ]
+  },
+  "Learn_web_development/Core/Styling_basics/Tables": {
     "modified": "2020-08-29T06:23:45.928Z",
     "contributors": [
       "chrisdavidmills",
@@ -10943,27 +10922,6 @@
   "Learn_web_development/Core/Styling_basics/Test_your_skills_backgrounds_and_borders": {
     "modified": "2020-10-20T11:48:06.920Z",
     "contributors": ["chrisdavidmills", "rachelandrew"]
-  },
-  "Learn_web_development/Core/Styling_basics/The_box_model": {
-    "modified": "2020-12-02T16:00:00.171Z",
-    "contributors": [
-      "Seeeven7",
-      "chrisdavidmills",
-      "jameswatyeo",
-      "Edsonoguera",
-      "mattvagni",
-      "uhoh-itsmaciek",
-      "rachelandrew",
-      "RicardsVeveris",
-      "Iqbalh11",
-      "Igor-Sangin",
-      "xp44mm",
-      "erictleung",
-      "jlbuckner",
-      "trondpet",
-      "Mahdi_Karimi_Asl",
-      "gumchum"
-    ]
   },
   "Learn_web_development/Core/Styling_basics/Values_and_units": {
     "modified": "2020-09-27T15:04:48.072Z",

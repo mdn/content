@@ -17,7 +17,7 @@ _Responsive web design_ (RWD) is a web design approach to make web pages render 
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >), and an idea of how CSS works (study
-        <a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a> and
+        <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS Styling basics</a> and
         <a href="/en-US/docs/Learn/CSS/Building_blocks">CSS building blocks</a
         >.)
       </td>
@@ -83,7 +83,7 @@ You can add multiple media queries within a stylesheet, tweaking your whole layo
 
 A common approach when using Media Queries is to create a simple single-column layout for narrow-screen devices (e.g. mobile phones), then check for wider screens and implement a multiple-column layout when you know that you have enough screen width to handle it. Designing for mobile first is known as **mobile first** design.
 
-If using breakpoints, best practices encourage defining media query breakpoints with [relative units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#relative_length_units) rather than absolute sizes of an individual device.
+If using breakpoints, best practices encourage defining media query breakpoints with [relative units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#relative_length_units) rather than absolute sizes of an individual device.
 
 There are different approaches to the styles defined within a media query block; ranging from using media queries to {{htmlelement("link")}} style sheets based on browser size ranges to only including custom properties variables to store values associated with each breakpoint.
 

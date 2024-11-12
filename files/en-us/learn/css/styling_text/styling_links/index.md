@@ -17,7 +17,7 @@ When styling [links](/en-US/docs/Learn_web_development/Core/Structuring_content/
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >), CSS basics (study
-        <a href="/en-US/docs/Learn/CSS/First_steps">Introduction to CSS</a>),
+        <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS Styling basics</a>),
         <a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals"
           >CSS text and font fundamentals</a
         >.
@@ -360,7 +360,7 @@ a[href^="http"]::after {
 
 So what's going on here? We'll skip over most of the CSS, as it's just the same information you've looked at before. The last rule, however, is interesting: we're using {{cssxref("::after")}} pseudo-element. The `0.8rem x 0.8rem` pseudo-element gets put after the anchor text as an inline block. And the icon is being rendered as {{cssxref("background")}} of the pseudo-element.
 
-We've used a [relative unit](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#relative_length_units) `em`. It sizes the icon in proportion to the anchor's text size. If the text size of the anchor changes the icon size also adjusts accordingly.
+We've used a [relative unit](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#relative_length_units) `em`. It sizes the icon in proportion to the anchor's text size. If the text size of the anchor changes the icon size also adjusts accordingly.
 
 A final word: how did we select just external links? Well, if you are writing your [HTML links](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links) properly, you should only be using absolute URLs for external links — it is more efficient to use relative links to link to other parts of your own site (as with the first link). The text "http" should therefore only appear in external links (like the second and third ones), and we can select this with an [attribute selector](/en-US/docs/Learn/CSS/Building_blocks/Selectors#attribute_selectors): `a[href^="http"]` selects {{htmlelement("a")}} elements, but only if they have an [`href`](/en-US/docs/Web/HTML/Element/a#href) attribute with a value that begins with "http".
 

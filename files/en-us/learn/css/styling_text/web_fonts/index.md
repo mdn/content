@@ -17,7 +17,7 @@ In the first article of the module, we explored the basic CSS features available
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >), CSS basics (study
-        <a href="/en-US/docs/Learn/CSS/First_steps">Introduction to CSS</a>),
+        <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS Styling basics</a>),
         <a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals"
           >CSS text and font fundamentals</a
         >.

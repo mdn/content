@@ -26,7 +26,7 @@ In recent years however, CSS has evolved in order to better support different di
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >), and an idea of how CSS works (study
-        <a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a>.)
+        <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS Styling basics</a>.)
       </td>
     </tr>
     <tr>
@@ -348,6 +348,6 @@ You've reached the end of this article, but can you remember the most important 
 
 The concepts explained in this lesson are becoming increasingly important in CSS. An understanding of the block and inline direction — and how text flow changes with a change in writing mode — will be very useful going forward. It will help you in understanding CSS even if you never use a writing mode other than a horizontal one.
 
-In the next article, we'll take a good look at [overflow](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content) in CSS.
+In the next article, we'll take a good look at [overflow](/en-US/docs/Learn_web_development/Core/Styling_basics/Overflow) in CSS.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}

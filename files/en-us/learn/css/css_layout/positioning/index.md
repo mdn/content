@@ -17,7 +17,7 @@ Positioning allows you to take elements out of normal document flow and make the
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >), and an idea of How CSS works (study
-        <a href="/en-US/docs/Learn/CSS/First_steps">Introduction to CSS</a>.)
+        <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS Styling basics</a>.)
       </td>
     </tr>
     <tr>
@@ -79,7 +79,7 @@ left: 30px;
 ```
 
 > [!NOTE]
-> The values of these properties can take any [units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units) you'd reasonably expect: pixels, mm, rems, %, etc.
+> The values of these properties can take any [units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units) you'd reasonably expect: pixels, mm, rems, %, etc.
 
 If you now save and refresh, you'll get a result something like this:
 

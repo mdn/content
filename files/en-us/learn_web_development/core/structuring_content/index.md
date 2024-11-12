@@ -17,7 +17,7 @@ Before starting this module, you don't need any previous HTML knowledge, but you
 > [!NOTE]
 > If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
 
-## Guides and assessments
+## Guides and challenges
 
 - [Basic HTML syntax](/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax)
   - : Covers the absolute basics of {{glossary("HTML")}}, to get you started — we define elements, attributes, and other important terms, and show where they fit in the language. We also show how a typical HTML page is structured and how an HTML element is structured, and explain other important basic language features. Along the way, we'll play with some HTML to get you interested!

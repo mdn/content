@@ -15,10 +15,10 @@ In the previous articles, we covered the styling of various form controls in a g
       <td>
         A basic understanding of
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">HTML</a> and
-        <a href="/en-US/docs/Learn/CSS/First_steps">CSS</a>, including general
+        <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS</a>, including general
         knowledge of
         <a
-          href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements"
+          href="/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements"
           >pseudo-classes and pseudo-elements</a
         >.
       </td>
@@ -321,7 +321,7 @@ This is a similar story to what we had before in the `:required` example, except
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/out-of-range.html", '100%', 430)}}
 
-It is possible for the number input to be both required and out-of-range at the same time, so what happens then? Because the `:out-of-range` rule appears later in the source code than the `:required` rule, the [cascade rules](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#understanding_the_cascade) come into play, and the out of range message is shown.
+It is possible for the number input to be both required and out-of-range at the same time, so what happens then? Because the `:out-of-range` rule appears later in the source code than the `:required` rule, the [cascade rules](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#understanding_the_cascade) come into play, and the out of range message is shown.
 
 This works quite nicely — when the page first loads, "Required" is shown, along with a red cross and border. When you've typed in a valid age (i.e. in the range of 12-120), the input turns valid. If however, you then change the age entry to one that is out of range, the "Outside allowable value range" message then pops up in place of "Required".
 

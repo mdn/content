@@ -1,38 +1,21 @@
 ---
-title: Fundamental CSS comprehension
+title: "Challenge: Fundamental CSS comprehension"
 slug: Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
 page-type: learn-module-assessment
 ---
 
 {{LearnSidebar}}
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper", "Learn/CSS/Building_blocks")}}
 
-You've covered a lot in this module, so it must feel good to have reached the end! The final step before you move on is to attempt the assessment for the module — this involves a number of related exercises that must be completed in order to create the final design — a business card/gamer card/social media profile.
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper", "Learn_web_development/Core/Styling_basics")}}
 
-<table>
-  <tbody>
-    <tr>
-      <th scope="row">Prerequisites:</th>
-      <td>
-        Before attempting this assessment you should have already worked through
-        all the articles in this module.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Objective:</th>
-      <td>
-        To test comprehension of fundamental CSS theory, syntax and mechanics.
-      </td>
-    </tr>
-  </tbody>
-</table>
+This challenge provides a number of related exercises that must be completed in order to create the final design — a business card/gamer card/social media profile.
 
 ## Starting point
 
-To get this assessment started, you should:
+To start this challenge, you should:
 
 - Go and grab the [HTML file for the exercise](https://github.com/mdn/learning-area/blob/main/css/introduction-to-css/fundamental-css-comprehension/index.html), and the [associated image file](https://github.com/mdn/learning-area/blob/main/css/introduction-to-css/fundamental-css-comprehension/chris.jpg), and save them in a new directory on your local computer. If you want to use your own image file and fill your own name in, you are welcome to — just make sure the image is square.
-- Grab the [CSS resources text file](https://github.com/mdn/learning-area/blob/main/css/introduction-to-css/fundamental-css-comprehension/style-resources.txt) — this contains a set of raw selectors and rulesets that you'll need to study and combine to answer part of this assessment.
+- Grab the [CSS resources text file](https://github.com/mdn/learning-area/blob/main/css/introduction-to-css/fundamental-css-comprehension/style-resources.txt) — this contains a set of raw selectors and rulesets that you'll need to study and combine to answer part of this challenge.
 
 Alternatively, you could use an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 You could paste the HTML and fill in the CSS into one of these online editors, and use [this URL](https://mdn.github.io/learning-area/css/introduction-to-css/fundamental-css-comprehension/chris.jpg) to point the `<img>` element to the image file.
@@ -91,4 +74,4 @@ The following screenshot shows an example of what the finished design should loo
 
 ![A view of the finished business card, show a reader header and footer, and a darker center panel containing the main details and image.](business-card.png)
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper", "Learn_web_development/Core/Styling_basics")}}

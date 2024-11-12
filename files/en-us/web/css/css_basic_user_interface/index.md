@@ -9,7 +9,7 @@ spec-urls: https://drafts.csswg.org/css-ui/
 
 The **CSS basic user interface** module lets you define the rendering and functionality of features related to the user interface including outline properties, visual feedback to pointing device and keyboard, and altering the default appearance of UI widgets.
 
-Basic user interface properties can be used to improve user experience and accessibility by providing visual cues to elements that are being interacted with, including styling mouse cursors and keyboard directional focus navigation, and styling caret cursors when an editable element has focus. The module provides for providing outlines to focused (or not) elements without impacting an element's [box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#what_is_the_css_box_model) dimensions and styling. This UI module also enables the styling of user interface controls.
+Basic user interface properties can be used to improve user experience and accessibility by providing visual cues to elements that are being interacted with, including styling mouse cursors and keyboard directional focus navigation, and styling caret cursors when an editable element has focus. The module provides for providing outlines to focused (or not) elements without impacting an element's [box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#what_is_the_css_box_model) dimensions and styling. This UI module also enables the styling of user interface controls.
 
 ### Basic user interface in action
 

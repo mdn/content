@@ -15,7 +15,7 @@ In this article, we will see what can be done with CSS to style the types of for
       <td>
         A basic understanding of
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">HTML</a> and
-        <a href="/en-US/docs/Learn/CSS/First_steps">CSS</a>.
+        <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS</a>.
       </td>
     </tr>
     <tr>

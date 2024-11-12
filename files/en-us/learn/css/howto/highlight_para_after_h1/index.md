@@ -44,5 +44,5 @@ CSS has a group of [CSS Selectors](/en-US/docs/Web/CSS/CSS_selectors) which are 
 
 ## See also
 
-- [Learn CSS: Selectors.](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
-- [Learn CSS: Combinators.](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+- [Learn CSS: Basic selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
+- [Learn CSS: Combinators](/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators)

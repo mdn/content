@@ -79,4 +79,4 @@ In the example above, the pseudo-element selects the first line of every paragra
 ## See also
 
 - The {{cssxref("pseudo-elements", "pseudo-elements")}} reference page.
-- [Learn CSS: Pseudo-classes and pseudo-elements.](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+- [Learn CSS: Pseudo-classes and pseudo-elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements).

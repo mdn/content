@@ -45,7 +45,7 @@ One of the main reasons for HTML is making navigation easy with {{Glossary("hype
 
 HTML only sets up document structure. To solve presentation issues, use {{glossary("CSS")}}, or use scripting to make your page interactive.
 
-- [How to use CSS within a webpage](/en-US/docs/Learn/CSS/First_steps/How_CSS_works#applying_css_to_the_dom)
+- [How to use CSS within a webpage](/en-US/docs/Learn_web_development/Core/Styling_basics/Getting_started#adding_CSS_to_our_document)
 - [How to use JavaScript within a webpage](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_JavaScript_within_a_webpage)
 
 ### Embedded content

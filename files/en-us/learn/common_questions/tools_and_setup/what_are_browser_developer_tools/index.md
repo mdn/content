@@ -210,4 +210,4 @@ Find out more about the JavaScript console in different browsers:
 ## See also
 
 - [Debugging HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML)
-- [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS)
+- [Debugging CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS)

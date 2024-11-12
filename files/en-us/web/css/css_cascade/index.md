@@ -71,7 +71,7 @@ The opposite also occurs. Sometimes there are no declarations defining the value
 
   - : Guide to the cascade algorithm that defines how user agents combine property values originating from different sources.
 
-- [Learn: Cascade, specificity, and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 
   - : The most fundamental concepts of CSS — the cascade, specificity, and inheritance — which control how CSS is applied to HTML and how conflicts are resolved.
 

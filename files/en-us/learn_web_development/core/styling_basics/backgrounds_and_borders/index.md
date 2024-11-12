@@ -4,7 +4,9 @@ slug: Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics")}}
 
 In this lesson, we will take a look at some of the creative things you can do with CSS backgrounds and borders. From adding gradients, background images, and rounded corners, backgrounds and borders are the answer to a lot of styling questions in CSS.
 
@@ -13,23 +15,23 @@ In this lesson, we will take a look at some of the creative things you can do wi
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        <a
-          href="/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
-          >Basic software installed</a
-        >, basic knowledge of
-        <a
-          href="/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
-          >working with files</a
-        >, HTML basics (study
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
-          >Introduction to HTML</a
-        >), and an idea of how CSS works (study
-        <a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a>.)
+        HTML basics (study
+        <a href="/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
+          >Basic HTML syntax</a
+        >), <a href="/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units">CSS Values and units</a>, <a href="/en-US/docs/Learn_web_development/Core/Styling_basics/Sizing">CSS Sizing</a>.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
-      <td>To learn how to style the background and border of boxes.</td>
+      <th scope="row">Learning outcomes:</th>
+      <td>
+        <ul>
+          <li>Basic background styling — colors and images.</li>
+          <li>Background image size, repeat, position, and attachment.</li>
+          <li>Background gradients — general concept and linear gradients (radial, conic, and repeating gradients are more advanced; in-depth knowledge is not required at this stage.)</li>
+          <li>Accessibility considerations of backgrounds — ensure good contrast.</li>
+          <li>Border basics — width, style, color, and border shorthand. Border radius for rounded corners.</li>
+        </ul>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -54,7 +56,7 @@ The CSS {{cssxref("background")}} property is a shorthand for a number of backgr
 
 We'll return to how the shorthand works later in the tutorial, but first let's have a look at the different things you can do with backgrounds in CSS, by looking at the individual background properties.
 
-### Background colors
+## Background colors
 
 The {{cssxref("background-color")}} property defines the background color on any element in CSS. The property accepts any valid [`<color>`](/en-US/docs/Web/CSS/color_value). A `background-color` extends underneath the content and padding box of the element.
 
@@ -85,7 +87,7 @@ span {
 
 {{EmbedLiveSample("color")}}
 
-### Background images
+## Background images
 
 The {{cssxref("background-image")}} property enables the display of an image in the background of an element. In the example below, we have two boxes — one has a background image that is larger than the box ([balloons.jpg](https://mdn.github.io/shared-assets/images/examples/balloons.jpg)). The other has a small image of a single star ([star.png](https://mdn.github.io/shared-assets/images/examples/star.png)).
 
@@ -125,7 +127,7 @@ This example demonstrates two things about background images. By default, the la
 If you specify a background color in addition to a background image then the image displays on top of the color.
 Try adding a `background-color` property to the example above to see that in action.
 
-#### Controlling background-repeat
+### Controlling background-repeat
 
 The {{cssxref("background-repeat")}} property is used to control the tiling behavior of images. The available values are:
 
@@ -161,7 +163,7 @@ Try these values out in the example below. We have set the value to `no-repeat` 
 
 {{EmbedLiveSample("repeat")}}
 
-#### Sizing the background image
+### Sizing the background image
 
 The _balloons.jpg_ image used in the initial background image example is a large image that was cropped due to being larger than the element it is a background of. In this case, we could use the {{cssxref("background-size")}} property, which can take {{cssxref("length")}} or {{cssxref("percentage")}} values, to size the image to fit inside the background.
 
@@ -202,7 +204,7 @@ Try the following.
 
 {{EmbedLiveSample("size")}}
 
-#### Positioning the background image
+### Positioning the background image
 
 The {{cssxref("background-position")}} property allows you to choose the position in which the background image appears on the box it is applied to. This uses a coordinate system in which the top-left-hand corner of the box is `(0,0)`, and the box is positioned along the horizontal (`x`) and vertical (`y`) axes.
 
@@ -280,7 +282,7 @@ Use the example below to play around with these values and move the star around 
 > [!NOTE]
 > The shorthand `background-position` is used instead of {{cssxref("background-position-x")}} and {{cssxref("background-position-y")}}, which allow you to set the different axis position values individually.
 
-### Gradient backgrounds
+## Gradient backgrounds
 
 A gradient — when used for a background — acts just like an image and is also set by using the {{cssxref("background-image")}} property.
 
@@ -328,7 +330,7 @@ Try some different gradients in the example below. In the two boxes respectively
 
 {{EmbedLiveSample("gradients")}}
 
-### Multiple background images
+## Multiple background images
 
 It is also possible to have multiple background images — you specify multiple `background-image` values in a single property value, separating each one with a comma.
 
@@ -379,7 +381,7 @@ Let's play. The example below includes two background images. To demonstrate the
 
 {{EmbedLiveSample("multiple-background-image")}}
 
-### Background attachment
+## Background attachment
 
 Another option we have available for backgrounds is specifying how they scroll when the content scrolls. This is controlled using the {{cssxref("background-attachment")}} property, which can take the following values:
 
@@ -389,7 +391,7 @@ Another option we have available for backgrounds is specifying how they scroll w
 
 The {{cssxref("background-attachment")}} property only has an effect when there is content to scroll, so we've made a demo to demonstrate the differences between the three values — have a look at [background-attachment.html](https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html) (also [see the source code](https://github.com/mdn/learning-area/tree/main/css/styling-boxes/backgrounds) here).
 
-### Using the background shorthand property
+## Using the background shorthand property
 
 As mentioned at the beginning of this lesson, you will often see backgrounds specified using the {{cssxref("background")}} property. This shorthand lets you set all of the different properties at once.
 
@@ -426,7 +428,7 @@ Take a look at the MDN page for {{cssxref("background")}} to see all of the cons
 
 {{EmbedLiveSample("background", "", "320px")}}
 
-### Accessibility considerations with backgrounds
+## Accessibility considerations with backgrounds
 
 When placing text on top of a background image or color, you should take care that you have enough [contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast) for the text to be legible for your visitors. If specifying an image, and if text will be placed on top of that image, you should also specify a `background-color` that will allow the text to be legible if the image does not load.
 
@@ -434,7 +436,7 @@ Screen readers cannot parse background images; therefore, they should be purely 
 
 ## Borders
 
-When learning about the Box Model, we discovered how borders affect the size of our box. In this lesson, we will look at how to use borders creatively. Typically when we add borders to an element with CSS we use a shorthand property that sets the color, width, and [style](/en-US/docs/Web/CSS/line-style) of the border in one line of CSS.
+When learning about the [box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model), we discovered how borders affect the size of our box. In this lesson, we will look at how to use borders creatively. Typically when we add borders to an element with CSS we use a shorthand property that sets the color, width, and [style](/en-US/docs/Web/CSS/line-style) of the border in one line of CSS.
 
 We can set a border for all four sides of a box with {{cssxref("border")}}:
 
@@ -504,7 +506,7 @@ h2 {
 
 {{EmbedLiveSample("borders", "", "200px")}}
 
-### Rounded corners
+## Rounded corners
 
 Rounding corners on a box is achieved by using the {{cssxref("border-radius")}} property and associated longhands that relate to each corner of the box. Two lengths or percentages may be used as a value, the first value defining the horizontal radius, and the second the vertical radius. In a lot of cases, you will only pass in one value, which will be used for both.
 
@@ -555,8 +557,8 @@ You've reached the end of this article, but can you remember the most important 
 
 ## Summary
 
-We have covered quite a lot here, and you can see that there is quite a lot to adding a background or a border to a box. Do explore the different property pages if you want to find out more about any of the features discussed here. Almost every page on MDN has examples for you to play with to enhance your knowledge.
+You can see that there is quite a lot to adding a background or a border to a box. Explore the different property pages if you want to find out more about any of the features discussed here. Almost every page on MDN has examples for you to play with to enhance your knowledge.
 
-In the next article, we'll find out how the writing mode of your document interacts with your CSS. What happens when the text does not flow from left to right?
+In the next article, we'll learn more about the concept of overflow, which governs what happens when there is too much content to fit inside an element box.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics")}}
