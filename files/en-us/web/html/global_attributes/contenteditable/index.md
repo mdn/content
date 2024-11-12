@@ -54,7 +54,7 @@ This example has two {{HTMLElement("div")}} elements with `contenteditable`, the
     <ol>
       <li>Step one</li>
       <li>Step two</li>
-      <li>Step Three</li>
+      <li>Step three</li>
     </ol>
   </div>
 </section>
