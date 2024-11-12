@@ -9,8 +9,8 @@ page-type: learn-module-assessment
 The aim of this skill test is to assess whether you understand how to [handle different text directions using writing modes and logical properties in CSS](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
 
 > [!NOTE]
-> You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
->
+> Click **"Play"** in the code blocks below to edit the examples in the MDN Playground.
+> You can also copy the code (click the clipboard icon) and paste it into an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 > If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Task 1
@@ -21,13 +21,45 @@ Your final result should look like the image below:
 
 ![A box with a vertical writing mode](mdn-writing-modes1.png)
 
-Try updating the live code below to recreate the finished example:
+Try to update the code below to recreate the finished example:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/writing-modes/writing-mode.html", '100%', 800)}}
+```html live-sample___writing-mode
+<div class="box">Turn me on my side.</div>
+```
 
-> [!CALLOUT]
->
-> [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/writing-modes/writing-mode-download.html) to work in your own editor or in an online editor.
+```css hidden live-sample___writing-mode
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+```
+
+```css live-sample___writing-mode
+.box {
+  border: 5px solid rebeccapurple;
+  background-color: lightgray;
+  padding: 40px;
+  margin: 40px;
+}
+```
+
+{{EmbedLiveSample("writing-mode", "", "250px")}}
+
+<details>
+<summary>Click here to show the solution</summary>
+
+You should use the `writing-mode` property with a value of `vertical-rl` for vertical right-to-left script:
+
+```css
+.box {
+  border: 5px solid rebeccapurple;
+  background-color: lightgray;
+  padding: 40px;
+  margin: 40px;
+  writing-mode: vertical-rl;
+}
+```
+
+</details>
 
 ## Task 2
 
@@ -37,13 +69,52 @@ Your final result should look like the image below:
 
 ![Two boxes one horizontal the other vertical](mdn-writing-modes2.png)
 
-Try updating the live code below to recreate the finished example:
+Try to update the code below to recreate the finished example:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/writing-modes/logical-width-height.html", '100%', 1100)}}
+```html live-sample___logical-width-height
+<div class="box">Horizontal.</div>
+<div class="box vertical">Vertical.</div>
+```
 
-> [!CALLOUT]
->
-> [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/writing-modes/logical-width-height-download.html) to work in your own editor or in an online editor.
+```css hidden live-sample___logical-width-height
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+```
+
+```css live-sample___logical-width-height
+.box {
+  border: 5px solid rebeccapurple;
+  background-color: lightgray;
+  padding: 40px;
+  margin: 40px;
+  width: 200px;
+  height: 100px;
+}
+```
+
+{{EmbedLiveSample("logical-width-height", "", "500px")}}
+
+<details>
+<summary>Click here to show the solution</summary>
+
+As well as setting `writing-mode: vertical-rl` on the `.vertical` box, you need to apply the `inline-size` and `block-size` properties to replace `width` and `height`:
+
+```css
+.box {
+  border: 5px solid rebeccapurple;
+  background-color: lightgray;
+  padding: 40px;
+  margin: 40px;
+  inline-size: 200px;
+  block-size: 100px;
+}
+.vertical {
+  writing-mode: vertical-rl;
+}
+```
+
+</details>
 
 ## Task 3
 
@@ -53,10 +124,60 @@ Your final result should look like the image below:
 
 ![Two boxes one horizontal one vertical with different margin, border and padding](mdn-writing-modes3.png)
 
-Try updating the live code below to recreate the finished example:
+Try to update the code below to recreate the finished example:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/writing-modes/logical-mbp.html", '100%', 1100)}}
+```html live-sample___logical-mbp
+<div class="box">Horizontal.</div>
+<div class="box vertical">Vertical.</div>
+```
 
-> [!CALLOUT]
->
-> [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/writing-modes/logical-mbp-download.html) to work in your own editor or in an online editor.
+```css hidden live-sample___logical-mbp
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+```
+
+```css hidden live-sample___logical-mbp
+.vertical {
+  writing-mode: vertical-rl;
+}
+```
+
+```css live-sample___logical-mbp
+.box {
+  width: 150px;
+  height: 150px;
+  border-top: 5px solid rebeccapurple;
+  border-right: 5px solid grey;
+  border-bottom: 5px dotted red;
+  border-left: 5px dotted blue;
+  padding-top: 40px;
+  margin-bottom: 30px;
+}
+```
+
+{{EmbedLiveSample("logical-mbp", "", "500px")}}
+
+<details>
+<summary>Click here to show the solution</summary>
+
+To solve this, you need an understanding of the logical, flow relative mappings for margin, border and padding physical properties:
+
+```css
+.box {
+  width: 150px;
+  height: 150px;
+  border-block-start: 5px solid rebeccapurple;
+  border-inline-end: 5px solid grey;
+  border-block-end: 5px dotted red;
+  border-inline-start: 5px dotted blue;
+  padding-block-start: 40px;
+  margin-block-end: 30px;
+}
+```
+
+</details>
+
+## See also
+
+- [CSS building blocks](/en-US/docs/Learn/CSS/Building_blocks)
