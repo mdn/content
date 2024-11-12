@@ -88,7 +88,7 @@ In the following cases, the mask is counted as a transparent black image layer:
 }
 ```
 
-{{EmbedLiveSample("mask-composite-example", "100%", 250)}}
+{{EmbedLiveSample("mask-image-example", "100%", 250)}}
 
 ## Specifications
 
