@@ -20,7 +20,7 @@ Experimental features can be enabled or disabled using the [Firefox Configuratio
 
 ## HTML
 
-### contenteditable="plaintext-only"
+### Plaintext-only contenteditable mode
 
 The `plaintext-only` value of the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) global attribute indicates that the element is editable; rich text formatting is disabled and any formatting in pasted text is automatically stripped. (See [Firefox bug 1922723](https://bugzil.la/1922723) for more details.)
 
