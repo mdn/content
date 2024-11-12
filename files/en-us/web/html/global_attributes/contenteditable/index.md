@@ -48,8 +48,8 @@ This example has two {{HTMLElement("div")}} elements with `contenteditable`, the
 <section class="copying">
   <div class="copy">
     <p>
-      This is a paragraph with <strong>Bold</strong> <em>Italic</em> and
-      <span class="red">red text</span>. Below is an ordered list:
+      This is a paragraph containing <strong>Bold</strong>, <em>Italic</em>, and
+      <span class="red">red</span> text, followed by an ordered list:
     </p>
     <ol>
       <li>Step one</li>
