@@ -42,8 +42,8 @@ This example has two {{HTMLElement("div")}} elements with `contenteditable`, the
 ```html hidden
 <h2>Content to copy</h2>
 <p class="instructions">
-  Copy all of the text in the block below and try pasting it into each of the
-  blocks below.
+  Copy all the text in the block below and paste it into each of the contenteditable
+  blocks to compare the results.
 </p>
 <section class="copying">
   <div class="copy">
