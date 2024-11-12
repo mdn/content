@@ -25,7 +25,7 @@ The `@property` rule represents a custom property registration directly in a sty
 
 - {{cssxref("@property/syntax","syntax")}}
 
-  - : Describes the allowable syntax for the property. May be a `<length>`, `<number>`, `<percentage>`, `<length-percentage>`, `<color>`, `<image>`, `<url>`, `<integer>`, `<angle>`, `<time>`, `<resolution>`, `<transform-function>`, or `<custom-ident>`, or a list of data type and keyword values.
+  - : Describes the allowable syntax for the property. May be a `<length>`, `<number>`, `<percentage>`, `<length-percentage>`, `<string>`, `<color>`, `<image>`, `<url>`, `<integer>`, `<angle>`, `<time>`, `<resolution>`, `<transform-function>`, or `<custom-ident>`, or a list of data type and keyword values.
 
     The `+` (space-separated) and `#` (comma-separated) multipliers indicate that a list of values is expected, for example `<color>#` means a comma-separated list of `<color>` values is the expected syntax.
 
