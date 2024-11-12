@@ -44,9 +44,10 @@ register(scriptURL, options)
 
       - : A string representing a URL that defines a service worker's registration scope; that is, what range of URLs a service worker can control.
 
-        This is usually a relative URL, which is relative to the base URL of the application.
+        This is usually specified as an URL that is relative to the base URL of the site (e.g. `./some/path/`), so that the resolved scope is the same irrespective of what page the registration code is called from.
         By default, the `scope` value for a service worker registration is set to the directory where the service worker script is located (by resolving `./` against `scriptURL`).
-        Note that by default this scope must specify documents that are in the same directory or more deeply nested than the service worker (if you need a broader scope, this can be permitted via the HTTP `Service-Worker-Allowed` header).
+
+        The scope must specify documents that are in the same directory or more deeply nested than the service worker (if you need a broader scope, this can be permitted via the HTTP `Service-Worker-Allowed` header).
 
         See the [Examples](#examples) section for more information on how it works.
 
@@ -98,7 +99,8 @@ The examples described here should be taken together to get a better understandi
 
 ### Register a service worker with default scope
 
-The following example uses the default value of `scope` (by omitting it).
+The following example uses the default value of `scope` (by omitting it), which sets it to be the same location as the script URL.
+
 Suppose the service worker code is at `example.com/sw.js`, and the registration code at `example.com/index.html`.
 The service worker code will control `example.com/index.html`, as well as pages underneath it, like `example.com/product/description.html`.
 
@@ -106,7 +108,7 @@ The service worker code will control `example.com/index.html`, as well as pages 
 if ("serviceWorker" in navigator) {
   // Register a service worker hosted at the root of the
   // site using the default scope.
-  navigator.serviceWorker.register("./sw.js").then(
+  navigator.serviceWorker.register("/sw.js").then(
     (registration) => {
       console.log("Service worker registration succeeded:", registration);
     },
@@ -119,15 +121,18 @@ if ("serviceWorker" in navigator) {
 }
 ```
 
-### Register a service worker with a scope
+Note that we have registered the scriptURL relative to the site root rather than the current page.
+This allows the same registration code to be used from any page.
 
-The code below is almost identical, except we have specified the scope explicitly using `{ scope: "./" }`.
-This scope happens to be the same as the default scope, so the registration applies to exactly the same pages as the example above.
+### Register a service worker with an explicit default scope
+
+The code below is almost identical, except we have specified the scope explicitly using `{ scope: "/" }`.
+Again, we've specified the scope as site-relative so the same registration code can be used from anywhere in the site.
 
 ```js
 if ("serviceWorker" in navigator) {
   // declaring scope manually
-  navigator.serviceWorker.register("./sw.js", { scope: "./" }).then(
+  navigator.serviceWorker.register("./sw.js", { scope: "/" }).then(
     (registration) => {
       console.log("Service worker registration succeeded:", registration);
     },
@@ -140,12 +145,16 @@ if ("serviceWorker" in navigator) {
 }
 ```
 
-Note that if we were to run this code after the previous example, browsers should recognise that we're updating an existing registration at the same scope.
+This scope happens to be the same as the default scope, so the registration applies to exactly the same pages as the example above.
+Note that if we were to run this code after the previous example, browsers should recognise that we're updating an existing registration rather than a new one.
 
-### Register a service worker from a different base URL
+### Register a service worker using page-relative URLs
+
+There is nothing to stop you using page-relative URLs except that this makes it harder to move your pages around, and it is easy to accidentally create unwanted registrations if you do so.
 
 In this example the service worker code is at `example.com/product/sw.js`, and the registration code at `example.com/product/description.html`.
-The service worker applies to resources under `example.com/product`. Remember the scope, when included, uses the page's location as its base.
+We're using URLs that are relative to the current directory for the scriptURL and the scope, where the current directory is the base URL of the page that is calling `register()` (`example.com/product/`).
+The service worker applies to resources under `example.com/product/`.
 
 ```js
 if ("serviceWorker" in navigator) {
