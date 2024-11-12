@@ -154,7 +154,7 @@ The box model does not fully apply to items participating in an inline formattin
 <p>
   Before that night—<strong>a memorable night</strong>, as it was to
   prove—hundreds of millions of people had watched the rising smoke-wreaths of
-  their fires without drawing any special inspiration from the fact.”
+  their fires without drawing any special inspiration from the fact.
 </p>
 ```
 

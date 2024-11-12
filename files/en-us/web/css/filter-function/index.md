@@ -47,8 +47,8 @@ This example provides a simple graphic, along with a select menu to allow you to
 ```css
 div {
   width: 100%;
-  height: 300px;
-  background: url(firefox.png);
+  height: 512px;
+  background: url(fx-nightly-512.png);
   background-repeat: no-repeat;
   background-position: center center;
   filter: <filter-function>(<value>);
@@ -85,8 +85,8 @@ Where the `<filter-function>` is the filter you select from the drop down and th
 ```css live-sample___filter-functions
 div {
   width: 100%;
-  height: 300px;
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/colorful-heart.png);
+  height: 512px;
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/fx-nightly-512.png);
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -207,7 +207,7 @@ setSlider(selectElem.value);
 setDiv(selectElem.value);
 ```
 
-{{EmbedLiveSample("filter-functions", "", "480px")}}
+{{EmbedLiveSample("filter-functions", "", "700px")}}
 
 ## Specifications
 
