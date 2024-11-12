@@ -62,7 +62,9 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground:
   </div>
   <div class="footer"></div>
 </div>
+```
 
+```html hidden live-sample___media-objects-example
 <div class="media media-flip">
   <div class="img">
     <img

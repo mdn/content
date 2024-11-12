@@ -101,7 +101,7 @@ nav {
 }
 ```
 
-{{EmbedLiveSample("pagination-example", "", "200px")}}
+{{EmbedLiveSample("pagination-example")}}
 
 ## Choices made
 

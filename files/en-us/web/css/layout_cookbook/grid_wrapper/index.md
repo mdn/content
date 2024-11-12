@@ -40,6 +40,9 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground:
 ```
 
 ```css live-sample___grid-wrapper-example
+body {
+  font: 1.2em sans-serif;
+}
 .grid {
   display: grid;
   grid-template-columns: minmax(20px, 1fr) repeat(6, minmax(0, 60px)) minmax(

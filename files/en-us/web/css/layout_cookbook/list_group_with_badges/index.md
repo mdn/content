@@ -40,6 +40,11 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground:
 ```
 
 ```css live-sample___list-group-badges-example
+body {
+  font: 1.2em / 1.5 sans-serif;
+  padding: 0;
+  margin: 1em;
+}
 .list-group {
   list-style: none;
   margin: 0;
@@ -47,13 +52,11 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground:
   border: 1px solid #ccc;
   border-radius: 0.5em;
   width: 20em;
-  font: 1.2em sans-serif;
 }
 
 .list-group li {
   border-top: 1px solid #ccc;
   padding: 0.5em;
-
   display: flex;
   justify-content: space-between;
   align-items: center;

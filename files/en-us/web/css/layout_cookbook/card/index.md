@@ -98,7 +98,7 @@ img {
 }
 
 .cards {
-  max-width: 800px;
+  max-width: 700px;
   margin: 1em auto;
 
   display: grid;

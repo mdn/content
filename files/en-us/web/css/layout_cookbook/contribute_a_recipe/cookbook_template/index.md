@@ -18,7 +18,7 @@ _What does this pattern need to include, or what problems does it need to solve?
 
 ## Recipe
 
-_Change the example code. The last parameter is the live example height, which you can change as needed._
+_Change the example code. The last parameter is the live example height, which you can change as needed. Mention that you can click "Play" in code blocks to edit the example in the MDN Playground._
 
 ```html live-sample___center-example
 <div class="container">

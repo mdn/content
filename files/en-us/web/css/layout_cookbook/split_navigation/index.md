@@ -49,7 +49,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground:
 }
 ```
 
-{{EmbedLiveSample("split-navigation-example", "", "200px")}}
+{{EmbedLiveSample("split-navigation-example")}}
 
 ## Choices made
 
