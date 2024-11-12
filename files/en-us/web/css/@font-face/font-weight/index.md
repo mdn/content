@@ -142,12 +142,17 @@ While this example is a bit contrived, it demonstrates how authors can include m
 ```html
 <p class="one">This has a font weight of 100</p>
 <p class="three">This has a font weight of 300</p>
+<p class="four">This has a font weight of 400</p>
 <p class="five">This has a font weight of 500</p>
+<p class="seven">This has a font weight of 700</p>
+<p class="nine">This has a font weight of 900</p>
 ```
 
 #### CSS
 
-We include two `@font-face` declarations for two different fonts, with the second font's font-weight range matching a subset of the first font's range.
+We include four `@font-face` declarations for four different fonts, each having a different range of font-weight values.
+The first is the normal font face, which we declare for all font-weight ranges. We then override which values are used; using a light font for 1 to 300, a bold for font-weights between 500 and 700, and extra bold for 700 to 1000.
+
 The `@font-face` declarations must be included (If omitted, the `font-weight` descriptor defaults to `400`) and must be written in this order due to the CSS [cascade](/en-US/docs/Web/CSS/Cascade); otherwise the larger range would override the smaller subset declaration.
 Note that we declared more that one font using the same font name.
 
@@ -160,8 +165,20 @@ Note that we declared more that one font using the same font name.
 
 @font-face {
   font-family: "Fira Sans";
-  font-weight: 200 400;
+  font-weight: 1 300;
+  src: url("https://mdn.github.io/shared-assets/fonts/FiraSans-Light.woff2");
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  font-weight: 500 700;
   src: url("https://mdn.github.io/shared-assets/fonts/FiraSans-Bold.woff2");
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  font-weight: 700 1000;
+  src: url("https://mdn.github.io/shared-assets/fonts/FiraSans-ExtraBold.woff2");
 }
 
 body {
@@ -177,8 +194,20 @@ p.three {
   font-weight: 300;
 }
 
+p.four {
+  font-weight: 400;
+}
+
 p.five {
   font-weight: 500;
+}
+
+p.seven {
+  font-weight: 700;
+}
+
+p.nine {
+  font-weight: 900;
 }
 ```
 
@@ -186,7 +215,7 @@ p.five {
 
 {{embedlivesample("Setting font-weight ranges", "", 300)}}
 
-While `font-weight: 500` is generally bolder than `font-weight: 300`, only the `300` value is within the range of the `@font-face` declaration that uses the bold `FiraSans-Bold.woff2` font, so the `500` is rendered using the `FiraSans-Regular.woff2` font.
+The `seven` paragraph uses the extra bold font. While `font-weight: 700` matches both the FiraSans-Bold and FiraSans-ExtraBold declarations, as the FiraSans-ExtraBold is declared later, it overrides the FiraSans-Bold for that value. Similarly, the `100` and `300` both use the FiraSans-Light; which FiraSans-Regular and FiraSans-Light both include `300` in their ranges, FiraSans-Light is declared later. Alternatively, we could have declared FiraSans-Regular after FiraSans-Light, but we would need to change the `font-weight` descriptor range if we do so.
 
 ### Setting a range for a variable font
 
