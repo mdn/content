@@ -125,9 +125,9 @@ In your HTML document, add the following snippet somewhere between the `<head>` 
 
 ```html
 <style>
-p {
-  color: purple;
-}
+  p {
+    color: purple;
+  }
 </style>
 ```
 
