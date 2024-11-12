@@ -76,14 +76,14 @@ In this example, we will mask an element's border with a diamond pattern. The so
 
 To match the size of a single diamond, we will use a value of 90 divided by 3, or `30`, for slicing the image into corner and edge regions. A repeat value of `round` will make the mask slices fit evenly, i.e., without clipping or gaps.
 
-```html
+```html live-sample___mask-border
 <div class="masked">
   This element is surrounded by a bitmap-based mask border! Pretty neat, isn't
   it?
 </div>
 ```
 
-```css-nolint
+```css-nolint live-sample___mask-border
 .masked {
   width: 200px;
   background-color: lavender;
@@ -105,7 +105,7 @@ To match the size of a single diamond, we will use a value of 90 divided by 3, o
 }
 ```
 
-{{EmbedLiveSample("Setting a bitmap-based mask border", "", "170px")}}
+{{EmbedLiveSample("mask-border", "", "170px")}}
 
 ## Specifications
 
