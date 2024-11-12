@@ -29,7 +29,7 @@ You can set the color used to draw the text insertion {{Glossary("caret")}} with
 
 Elements that are made editable, and therefore interactive, by using the `contenteditable` attribute can be focused. They participate in sequential keyboard navigation. However, elements with the `contenteditable` attribute nested within other `contenteditable` elements are not added to the tabbing sequence by default. You can add the nested `contenteditable` elements to the keyboard navigation sequence by specifying the `tabindex` value ([`tabindex="0"`](/en-US/docs/Web/HTML/Global_attributes/tabindex)).
 
-If content is pasted into an element with `contenteditable="true"` all of the formatting is retained. If content is pasted into an element with `contenteditable="plaintext-only"` all of the formatting is removed.
+If content is pasted into an element with `contenteditable="true"`, all formatting is retained. If content is pasted into an element with `contenteditable="plaintext-only"`, all formatting is removed.
 
 ## Examples
 
