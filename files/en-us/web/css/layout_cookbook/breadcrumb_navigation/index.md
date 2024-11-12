@@ -16,7 +16,40 @@ Display the hierarchy of the site by displaying inline links, with a separator b
 
 ## Recipe
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/breadcrumb-navigation.html", '100%', 530)}}
+```html live-sample___breadcrumb-example
+<nav aria-label="Breadcrumb" class="breadcrumb">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Category</a></li>
+    <li><a href="#">Sub Category</a></li>
+    <li><a href="#">Type</a></li>
+    <li><span aria-current="page">Product</span></li>
+  </ul>
+</nav>
+```
+
+```css live-sample___breadcrumb-example
+.breadcrumb {
+  padding: 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+.breadcrumb ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumb li:not(:last-child)::after {
+  display: inline-block;
+  margin: 0 0.25rem;
+  content: "→";
+}
+```
+
+{{EmbedLiveSample("breadcrumb-example", "", "100px")}}
 
 > [!CALLOUT]
 >

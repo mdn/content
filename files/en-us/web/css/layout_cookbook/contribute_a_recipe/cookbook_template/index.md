@@ -18,9 +18,35 @@ _What does this pattern need to include, or what problems does it need to solve?
 
 ## Recipe
 
-_Change the path to the example below to point to your merged example. The last parameter is the live example height, which you can change as needed._
+_Change the example code. The last parameter is the live example height, which you can change as needed._
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/center.html", '100%', 720)}}
+```html live-sample___center-example
+<div class="container">
+  <div class="item">I am centered!</div>
+</div>
+```
+
+```css live-sample___center-example
+.container {
+  border: 2px solid rgb(75 70 74);
+  border-radius: 0.5em;
+
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item {
+  border: 2px solid rgb(95 97 110);
+  border-radius: 0.5em;
+  padding: 20px;
+
+  width: 10em;
+}
+```
+
+{{EmbedLiveSample("center-example", "", "250px")}}
 
 _Change the link to point to your merged download version._
 

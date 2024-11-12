@@ -16,7 +16,38 @@ A common navigation pattern is to have one element pushed away from the others. 
 
 ## Recipe
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/split-navigation.html", '100%', 520)}}
+```html live-sample___split-navigation-example
+<nav>
+  <ul class="main-nav">
+    <li><a href="">About</a></li>
+    <li><a href="">Products</a></li>
+    <li><a href="">Our Team</a></li>
+    <li class="push"><a href="">Contact</a></li>
+  </ul>
+</nav>
+```
+
+```css live-sample___split-navigation-example
+.main-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1.3rem;
+
+  display: flex;
+}
+
+.main-nav a {
+  padding: 0.5em 1em;
+  display: block;
+}
+
+.push {
+  margin-left: auto;
+}
+```
+
+{{EmbedLiveSample("split-navigation-example", "", "200px")}}
 
 > [!CALLOUT]
 >
