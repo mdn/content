@@ -37,9 +37,9 @@ This page rounds up questions and answers, and other material on the MDN site th
 
 ### Text styling lessons and guides
 
-- [How to style text](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
-- [How to customize a list of elements](/en-US/docs/Learn/CSS/Styling_text/Styling_lists)
-- [How to style links](/en-US/docs/Learn/CSS/Styling_text/Styling_links)
+- [How to style text](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals)
+- [How to customize a list of elements](/en-US/docs/Learn_web_development/Core/Text_styling/Styling_lists)
+- [How to style links](/en-US/docs/Learn_web_development/Core/Text_styling/Styling_links)
 - [CSS Selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
 
 ## CSS Layout

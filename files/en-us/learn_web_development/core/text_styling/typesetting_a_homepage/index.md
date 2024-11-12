@@ -1,32 +1,18 @@
 ---
-title: Typesetting a community school homepage
-slug: Learn/CSS/Styling_text/Typesetting_a_homepage
+title: "Challenge: Typesetting a community school homepage"
+slug: Learn_web_development/Core/Text_styling/Typesetting_a_homepage
 page-type: learn-module-assessment
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
+{{LearnSidebar}}
 
-In this assessment, we'll test your understanding of all the text styling techniques we've covered throughout this module by getting you to style the text for a community school's homepage. You might just have some fun along the way.
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/CSS_layout", "Learn_web_development/Core/Text_styling")}}
 
-<table>
-  <tbody>
-    <tr>
-      <th scope="row">Prerequisites:</th>
-      <td>
-        Before attempting this assessment you should have already worked through
-        all the articles in this module.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Objective:</th>
-      <td>To test comprehension of CSS text styling techniques.</td>
-    </tr>
-  </tbody>
-</table>
+In this challenge, we'll test your understanding of all the text styling techniques we've covered throughout this module by getting you to style the text for a community school's homepage. You might just have some fun along the way.
 
 ## Starting point
 
-To get this assessment started, you should:
+To start this challenge, you should:
 
 - Go and grab the [HTML](https://github.com/mdn/learning-area/blob/main/css/styling-text/typesetting-a-homepage-start/index.html) and [CSS](https://github.com/mdn/learning-area/blob/main/css/styling-text/typesetting-a-homepage-start/style.css) files for the exercise, and the provided [external link icon](https://github.com/mdn/learning-area/blob/main/css/styling-text/typesetting-a-homepage-start/external-link-52.png).
 - Make a copy of them on your local computer.
@@ -83,6 +69,6 @@ Navigation menu:
 
 The following screenshot shows an example of what the finished design could look like:
 
-![A screenshot of the finished design of the 'Community school website homepage' text styling assessment. The heading reads 'St Huxley's Community College'. There is a red line separating the banner header from the content. The main content has three columns. The first, widest column has a few paragraphs which imply the importance of college to Students. The second column has a list of links to the top course choices offered by the college. The third column contains a vertical navigation bar with rectangular outlined button links to different sections of the website.](example2.png)
+![A screenshot of the finished challenge design. The top heading reads 'St Huxley's Community College'. There is a red line separating the banner header from the content. The main content has three columns, two containing text, and a vertical navigation bar in the third column.](example2.png)
 
-{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/CSS_layout", "Learn_web_development/Core/Text_styling")}}

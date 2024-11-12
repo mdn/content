@@ -150,7 +150,7 @@ The challenges on page are:
 
 ## Lists
 
-The challenges on page [Lists](/en-US/docs/Learn/CSS/Styling_text/Styling_lists) are:
+The challenges on page [Styling lists](/en-US/docs/Learn_web_development/Core/Text_styling/Styling_lists) are:
 
 ### Lower Roman numerals
 

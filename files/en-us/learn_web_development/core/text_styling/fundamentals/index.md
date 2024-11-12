@@ -1,10 +1,12 @@
 ---
 title: Fundamental text and font styling
-slug: Learn/CSS/Styling_text/Fundamentals
+slug: Learn_web_development/Core/Text_styling/Fundamentals
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
+{{LearnSidebar}}
+
+{{NextMenu("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling")}}
 
 In this article we'll start you on your journey towards mastering text styling with {{glossary("CSS")}}. Here we'll go through all the basic fundamentals of text/font styling in detail, including setting font weight, family and style, font shorthand, text alignment and other effects, and line and letter spacing.
 
@@ -13,18 +15,22 @@ In this article we'll start you on your journey towards mastering text styling w
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        HTML basics (study
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
-          >Introduction to HTML</a
-        >), CSS basics (study
-        <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS Styling basics</a>).
+        <a href="/en-US/docs/Learn_web_development/Core/Structuring_content"
+          >Structuring content with HTML</a
+        > and
+        <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS Styling basics</a>.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">Learning outcomes:</th>
       <td>
-        To learn the fundamental properties and techniques needed to style text
-        on web pages.
+        <ul>
+          <li>Understanding the concepts of font families, font stacks, and web-safe fonts.</li>
+          <li>Setting font color, weight, size, and style.</li>
+          <li>Setting text alignment, transform, and decoration.</li>
+          <li>Setting line height.</li>
+          <li>Knowing that there are several other font and text styling properties, and being encouraged to explore them.</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -43,7 +49,7 @@ The CSS properties used to style text generally fall into two categories, which 
 - **Text layout styles**: Properties that affect the spacing and other layout features of the text, allowing manipulation of, for example, the space between lines and letters, and how the text is aligned within the content box.
 
 > [!NOTE]
-> Bear in mind that the text inside an element is all affected as one single entity. You can't select and style subsections of text unless you wrap them in an appropriate element (such as a {{htmlelement("span")}} or {{htmlelement("strong")}}), or use a text-specific pseudo-element like [::first-letter](/en-US/docs/Web/CSS/::first-letter) (selects the first letter of an element's text), [::first-line](/en-US/docs/Web/CSS/::first-line) (selects the first line of an element's text), or [::selection](/en-US/docs/Web/CSS/::selection) (selects the text currently highlighted by the cursor).
+> Bear in mind that the text inside an element is all affected as one single entity. You can't select and style subsections of text unless you wrap them in an appropriate element (such as a {{htmlelement("span")}} or {{htmlelement("strong")}}), or use a text-specific pseudo-element like [`::first-letter`](/en-US/docs/Web/CSS/::first-letter) (selects the first letter of an element's text), [`::first-line`](/en-US/docs/Web/CSS/::first-line) (selects the first line of an element's text), or [`::selection`](/en-US/docs/Web/CSS/::selection) (selects the text currently highlighted by the cursor).
 
 ## Fonts
 
@@ -179,7 +185,7 @@ The list of actual web safe fonts will change as operating systems evolve, but i
 > Among various resources, the [cssfontstack.com](https://www.cssfontstack.com/) website maintains a list of web safe fonts available on Windows and macOS operating systems, which can help you make your decision about what you consider safe for your usage.
 
 > [!NOTE]
-> There is a way to download a custom font along with a webpage, to allow you to customize your font usage in any way you want: **web fonts**. This is a little bit more complex, and we will discuss it in a [separate article](/en-US/docs/Learn/CSS/Styling_text/Web_fonts) later on in the module.
+> There is a way to download a custom font along with a webpage, to allow you to customize your font usage in any way you want: **web fonts**. This is a little bit more complex, and we will discuss it in a [separate article](/en-US/docs/Learn_web_development/Core/Text_styling/Web_fonts) later on in the module.
 
 #### Default fonts
 
@@ -782,6 +788,11 @@ window.addEventListener("load", drawOutput);
 
 ## Summary
 
-We hope you enjoyed playing with text in this article! The next article will provide you with all you need to know about [styling HTML lists](/en-US/docs/Learn/CSS/Styling_text/Styling_lists).
+We hope you enjoyed playing with text in this article! The next article will provide you with all you need to know about styling HTML lists.
 
-{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
+## See also
+
+- [Web-safe fonts](https://v2.scrimba.com/the-frontend-developer-career-path-c0j/~02b?via=mdn), Scrimba <sup>_MDN Curriculum partner_</sup>
+  - : This interactive lesson provides a fun look at web-safe fonts and applying them to a simple example.
+
+{{NextMenu("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling")}}

@@ -6429,110 +6429,6 @@
     "modified": "2020-07-16T22:25:49.147Z",
     "contributors": ["hbloomer", "Jeremie"]
   },
-  "Learn/CSS/Styling_text": {
-    "modified": "2020-07-16T22:25:57.072Z",
-    "contributors": [
-      "chrisdavidmills",
-      "cartwr40",
-      "mozdevcontrib",
-      "wilton-cruz",
-      "pranay2063",
-      "Didglee",
-      "richardzacur",
-      "rolfedh"
-    ]
-  },
-  "Learn/CSS/Styling_text/Fundamentals": {
-    "modified": "2020-12-01T06:10:24.965Z",
-    "contributors": [
-      "chrisdavidmills",
-      "salutis",
-      "choudh70",
-      "tayyabalishan",
-      "xp44mm",
-      "pei-han",
-      "UnorthodoxThing",
-      "PanayiotisPaschalides",
-      "koralcem",
-      "stephaniehobson",
-      "wilton-cruz",
-      "Sheppy",
-      "TimSongCoder",
-      "qdirks",
-      "PyroLagus",
-      "richardzacur",
-      "plug-n-play"
-    ]
-  },
-  "Learn/CSS/Styling_text/Styling_links": {
-    "modified": "2020-11-03T06:47:30.595Z",
-    "contributors": [
-      "tremby",
-      "gerfolder",
-      "chrisdavidmills",
-      "vgiffin",
-      "tayyabalishan",
-      "hackernewslibrary",
-      "angel-luis",
-      "stephaniehobson",
-      "TimSongCoder",
-      "multics",
-      "qdirks",
-      "dsujeeun",
-      "waldr",
-      "PyroLagus",
-      "mkamalkayani",
-      "richardzacur"
-    ]
-  },
-  "Learn/CSS/Styling_text/Styling_lists": {
-    "modified": "2020-07-16T22:26:10.863Z",
-    "contributors": [
-      "avivmu",
-      "haond10adp",
-      "chrisdavidmills",
-      "massood",
-      "ntutangyun",
-      "irenesmith",
-      "RafeyIqbalRahman",
-      "thenoelman",
-      "juandesouza",
-      "angel-luis",
-      "stephaniehobson",
-      "pbarun",
-      "jruota",
-      "anthonyvallee",
-      "richardzacur"
-    ]
-  },
-  "Learn/CSS/Styling_text/Typesetting_a_homepage": {
-    "modified": "2020-07-16T22:26:25.604Z",
-    "contributors": ["chrisdavidmills", "jswisher", "richardzacur"]
-  },
-  "Learn/CSS/Styling_text/Web_fonts": {
-    "modified": "2020-07-16T22:26:22.058Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mostlybytes",
-      "tayyabalishan",
-      "choudh70",
-      "kruschk",
-      "darman12",
-      "legostud",
-      "msobanjo",
-      "edprince",
-      "aboagyed",
-      "oyenirat",
-      "stephaniehobson",
-      "JonathanPool",
-      "mfluehr",
-      "potmpark",
-      "qdirks",
-      "pmontegna",
-      "PyroLagus",
-      "richardzacur"
-    ]
-  },
   "Learn/Common_questions": {
     "modified": "2020-07-16T22:35:20.908Z",
     "contributors": [
@@ -10959,6 +10855,110 @@
   "Learn_web_development/Core/Styling_basics/Writing_Modes_Tasks": {
     "modified": "2020-07-16T22:29:33.477Z",
     "contributors": ["blueblots", "rachelandrew"]
+  },
+  "Learn_web_development/Core/Text_styling": {
+    "modified": "2020-07-16T22:25:57.072Z",
+    "contributors": [
+      "chrisdavidmills",
+      "cartwr40",
+      "mozdevcontrib",
+      "wilton-cruz",
+      "pranay2063",
+      "Didglee",
+      "richardzacur",
+      "rolfedh"
+    ]
+  },
+  "Learn_web_development/Core/Text_styling/Fundamentals": {
+    "modified": "2020-12-01T06:10:24.965Z",
+    "contributors": [
+      "chrisdavidmills",
+      "salutis",
+      "choudh70",
+      "tayyabalishan",
+      "xp44mm",
+      "pei-han",
+      "UnorthodoxThing",
+      "PanayiotisPaschalides",
+      "koralcem",
+      "stephaniehobson",
+      "wilton-cruz",
+      "Sheppy",
+      "TimSongCoder",
+      "qdirks",
+      "PyroLagus",
+      "richardzacur",
+      "plug-n-play"
+    ]
+  },
+  "Learn_web_development/Core/Text_styling/Styling_links": {
+    "modified": "2020-11-03T06:47:30.595Z",
+    "contributors": [
+      "tremby",
+      "gerfolder",
+      "chrisdavidmills",
+      "vgiffin",
+      "tayyabalishan",
+      "hackernewslibrary",
+      "angel-luis",
+      "stephaniehobson",
+      "TimSongCoder",
+      "multics",
+      "qdirks",
+      "dsujeeun",
+      "waldr",
+      "PyroLagus",
+      "mkamalkayani",
+      "richardzacur"
+    ]
+  },
+  "Learn_web_development/Core/Text_styling/Styling_lists": {
+    "modified": "2020-07-16T22:26:10.863Z",
+    "contributors": [
+      "avivmu",
+      "haond10adp",
+      "chrisdavidmills",
+      "massood",
+      "ntutangyun",
+      "irenesmith",
+      "RafeyIqbalRahman",
+      "thenoelman",
+      "juandesouza",
+      "angel-luis",
+      "stephaniehobson",
+      "pbarun",
+      "jruota",
+      "anthonyvallee",
+      "richardzacur"
+    ]
+  },
+  "Learn_web_development/Core/Text_styling/Typesetting_a_homepage": {
+    "modified": "2020-07-16T22:26:25.604Z",
+    "contributors": ["chrisdavidmills", "jswisher", "richardzacur"]
+  },
+  "Learn_web_development/Core/Text_styling/Web_fonts": {
+    "modified": "2020-07-16T22:26:22.058Z",
+    "contributors": [
+      "chrisdavidmills",
+      "mostlybytes",
+      "tayyabalishan",
+      "choudh70",
+      "kruschk",
+      "darman12",
+      "legostud",
+      "msobanjo",
+      "edprince",
+      "aboagyed",
+      "oyenirat",
+      "stephaniehobson",
+      "JonathanPool",
+      "mfluehr",
+      "potmpark",
+      "qdirks",
+      "pmontegna",
+      "PyroLagus",
+      "richardzacur"
+    ]
   },
   "Learn_web_development/Getting_started/Environment_setup/Command_line": {
     "modified": "2020-10-18T22:03:14.400Z",

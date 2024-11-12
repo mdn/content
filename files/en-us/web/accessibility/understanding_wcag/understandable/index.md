@@ -240,7 +240,7 @@ This guideline focuses on making user interfaces intuitive and understandable.
         >
         for information on modern markup for layouts. See also
         <a
-          href="/en-US/docs/Learn/CSS/Styling_text/Styling_links#styling_links_as_buttons"
+          href="/en-US/docs/Learn_web_development/Core/Text_styling/Styling_links#styling_links_as_buttons"
           >Styling links as buttons</a
         >
         for a useful accessible navigation menu example.

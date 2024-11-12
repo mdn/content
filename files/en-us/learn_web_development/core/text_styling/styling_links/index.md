@@ -1,45 +1,44 @@
 ---
 title: Styling links
-slug: Learn/CSS/Styling_text/Styling_links
+slug: Learn_web_development/Core/Text_styling/Styling_links
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
+{{LearnSidebar}}
 
-When styling [links](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links), it's important to understand how to make use of pseudo-classes to style their states effectively. It's also important to know how to style links for use in common interface features whose content varies, such as navigation menus and tabs. We'll look at both these topics in this article.
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/Text_styling")}}
+
+When styling [links](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links), it is important to understand why default link styles are important, how to use pseudo-classes to style link states effectively, and how to style links for use in common varied interface features such as navigation menus and tabs. We'll look at all these topics in this article.
 
 <table>
   <tbody>
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        HTML basics (study
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
-          >Introduction to HTML</a
-        >), CSS basics (study
-        <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS Styling basics</a>),
-        <a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals"
-          >CSS text and font fundamentals</a
-        >.
+        <a href="/en-US/docs/Learn_web_development/Core/Structuring_content"
+          >Structuring content with HTML</a
+        > and
+        <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS Styling basics</a>.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">Learning outcomes:</th>
       <td>
-        To learn how to style link states, and how to use links effectively in
-        common UI features like navigation menus.
+        <ul>
+          <li>Understand why default link styles are important for usability on the web — they are familiar and help users recognize links.</li>
+          <li>Styling link states: <code>:hover</code>, <code>:focus</code>, <code>:visited</code>, and <code>:active</code>.</li>
+          <li>Understanding why link states are necessary for accessibility and usability.</li>
+          <li>Including icons on links.</li>
+          <li>Creating a navigation menu with lists and links.</li>
+        </ul>
       </td>
     </tr>
   </tbody>
 </table>
 
-## Let's look at some links
+## Link states
 
-We looked at how links are implemented in your HTML according to best practices in [Creating hyperlinks](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links). In this article we'll build on this knowledge, showing you the best practices for styling them.
-
-### Link states
-
-The first thing to understand is the concept of link states — different states that links can exist in. These can be styled using different [pseudo-classes](/en-US/docs/Learn/CSS/Building_blocks/Selectors#pseudo-classes_and_pseudo-elements):
+The first thing to understand is the concept of link states — different states that links can exist in. These can be styled using different [pseudo-classes](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#pseudo-classes_and_pseudo-elements):
 
 - **Link**: A link that has a destination (i.e., not just a named anchor), styled using the {{cssxref(":link")}} pseudo class.
 - **Visited**: A link that has already been visited (exists in the browser's history), styled using the {{cssxref(":visited")}} pseudo class.
@@ -47,7 +46,7 @@ The first thing to understand is the concept of link states — different states
 - **Focus**: A link that is focused (e.g., moved to by a keyboard user using the <kbd>Tab</kbd> key or something similar, or programmatically focused using {{domxref("HTMLElement.focus()")}}) — this is styled using the {{cssxref(":focus")}} pseudo class.
 - **Active**: A link that is activated (e.g., clicked on), styled using the {{cssxref(":active")}} pseudo class.
 
-### Default styles
+## Default styles
 
 The example below illustrates what a link will look and behave like by default; though the CSS is enlarging and centering the text to make it stand out more. You can compare the look and behavior of the default stylings in the example with the look and behavior of other links on this page which have more CSS styles applied. Default links have the following properties:
 
@@ -89,7 +88,7 @@ The default styles can be turned off/changed using the following CSS properties:
 > [!NOTE]
 > You are not just limited to the above properties to style your links — you are free to use any properties you like.
 
-### Styling some links
+## Styling links
 
 Now that we've looked at the default states in some detail, let's look at a typical set of link styles.
 
@@ -180,7 +179,7 @@ So what did we do here? This certainly looks different to the default styling, b
 - The next two rules use `a:focus` and `a:hover` to set focused and hovered links to have no underline and different background colors.
 - Finally, `a:active` is used to give the links an inverted color scheme while they are being activated, to make it clear something important is happening!
 
-### Active learning: Style your own links
+## Active learning: Style your own links
 
 In this active learning session, we'd like you to take our empty set of rules and add your own declarations to make the links look really cool. Use your imagination, go wild. We are sure you can come up with something cooler and just as functional as our example above.
 
@@ -362,12 +361,12 @@ So what's going on here? We'll skip over most of the CSS, as it's just the same 
 
 We've used a [relative unit](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#relative_length_units) `em`. It sizes the icon in proportion to the anchor's text size. If the text size of the anchor changes the icon size also adjusts accordingly.
 
-A final word: how did we select just external links? Well, if you are writing your [HTML links](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links) properly, you should only be using absolute URLs for external links — it is more efficient to use relative links to link to other parts of your own site (as with the first link). The text "http" should therefore only appear in external links (like the second and third ones), and we can select this with an [attribute selector](/en-US/docs/Learn/CSS/Building_blocks/Selectors#attribute_selectors): `a[href^="http"]` selects {{htmlelement("a")}} elements, but only if they have an [`href`](/en-US/docs/Web/HTML/Element/a#href) attribute with a value that begins with "http".
+A final word: how did we select just external links? Well, if you are writing your [HTML links](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links) properly, you should only be using absolute URLs for external links — it is more efficient to use relative links to link to other parts of your own site (as with the first link). The text "http" should therefore only appear in external links (like the second and third ones), and we can select this with an [attribute selector](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#attribute_selectors): `a[href^="http"]` selects {{htmlelement("a")}} elements, but only if they have an [`href`](/en-US/docs/Web/HTML/Element/a#href) attribute with a value that begins with "http".
 
 So that's it. Try revisiting the active learning section above and trying this new technique out!
 
 > [!NOTE]
-> Don't worry if you are not familiar with [backgrounds](/en-US/docs/Learn/CSS/Building_blocks) and [responsive web design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) yet; these are explained in other places.
+> Don't worry if you are not familiar with [backgrounds](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders) and [responsive web design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) yet; these are explained in other places.
 
 ## Styling links as buttons
 
@@ -445,6 +444,6 @@ The CSS includes the styling for the container and the links it contains.
 
 ## Summary
 
-We hope this article has provided you with all you'll need to know about links — for now! The final article in our Styling text module details how to use [custom fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts) on your websites (or web fonts, as they are better known).
+We hope this article has provided you with all you'll need to know about links — for now! The final article in our Styling text module details how to use custom fonts on your websites (or web fonts, as they are better known).
 
-{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/Text_styling")}}

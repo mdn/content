@@ -1,10 +1,12 @@
 ---
 title: Web fonts
-slug: Learn/CSS/Styling_text/Web_fonts
+slug: Learn_web_development/Core/Text_styling/Web_fonts
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling/Typesetting_a_homepage", "Learn_web_development/Core/Text_styling")}}
 
 In the first article of the module, we explored the basic CSS features available for styling fonts and text. In this article we will go further, exploring web fonts in detail. We'll see how to use custom fonts with your web page to allow for more varied, custom text styling.
 
@@ -13,21 +15,22 @@ In the first article of the module, we explored the basic CSS features available
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        HTML basics (study
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
-          >Introduction to HTML</a
-        >), CSS basics (study
-        <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS Styling basics</a>),
-        <a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals"
-          >CSS text and font fundamentals</a
-        >.
+        <a href="/en-US/docs/Learn_web_development/Core/Structuring_content"
+          >Structuring content with HTML</a
+        >,
+        <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS Styling basics</a>,
+        <a href="/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals">Fundamental text and font styling</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To learn how to apply web fonts to a web page, using either a third
-        party service, or by writing your own code.
+       <ul>
+         <li>Understand that web fonts allow developers to go beyond the web safe font set and use custom fonts on their web apps.</li>
+         <li>Basic setup — the <code>@font-face</code> at-rule, and common descriptors.</li>
+         <li>Using a web font with the <code>font-family</code> property.</li>
+         <li>Using an online service to find web fonts and generate web font code, for example, <a href="https://www.fontsquirrel.com/">Font Squirrel</a> or <a href="https://fonts.google.com/">Google Fonts</a>.</li>
+       </ul>
       </td>
     </tr>
   </tbody>
@@ -35,7 +38,7 @@ In the first article of the module, we explored the basic CSS features available
 
 ## Font families recap
 
-As we looked at in [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals), the fonts applied to your HTML can be controlled using the {{cssxref("font-family")}} property. This takes one or more font family names. When displaying a webpage, a browser will travel down a list of font-family values until it finds a font available on the system it is running on:
+As we looked at in [Fundamental text and font styling](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals), the fonts applied to your HTML can be controlled using the {{cssxref("font-family")}} property. This takes one or more font family names. When displaying a webpage, a browser will travel down a list of font-family values until it finds a font available on the system it is running on:
 
 ```css
 p {
@@ -43,11 +46,11 @@ p {
 }
 ```
 
-This system works well, but traditionally web developers' font choices were limited. There are only a handful of fonts that you can guarantee to be available across all common systems — the so-called [Web-safe fonts](/en-US/docs/Learn/CSS/Styling_text/Fundamentals#web_safe_fonts). You can use the font stack to specify preferred fonts, followed by web-safe alternatives, followed by the default system font. However, this increases your workload because of the testing required to make sure that your designs work with each font.
+This system works well, but traditionally web developers' font choices were limited. There are only a handful of fonts that you can guarantee to be available across all common systems — the so-called [Web-safe fonts](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals#web_safe_fonts). You can use the font stack to specify preferred fonts, followed by web-safe alternatives, followed by the default system font. However, this increases your workload because of the testing required to make sure that your designs work with each font.
 
 ## Web fonts
 
-But there is an alternative that works very well. CSS allows you to specify font files, available on the web, to be downloaded along with your website as it's accessed. This means that any browser supporting this CSS feature can display the fonts you've specifically chosen. Amazing! The syntax required looks something like this:
+There is an alternative that works well. CSS allows you to specify font files, available on the web, to be downloaded along with your website as it's accessed. This means that any browser supporting this CSS feature can display the fonts you've specifically chosen. Amazing! The syntax required looks something like this:
 
 First of all, you have a {{cssxref("@font-face")}} ruleset at the start of the CSS, which specifies the font file(s) to download:
 
@@ -70,15 +73,13 @@ The syntax does get a bit more complex than this. We'll go into more detail belo
 
 Here are some important things to bear in mind about web fonts:
 
-1. Fonts generally aren't free to use. You have to pay for them and/or follow other license conditions, such as crediting the font creator in your code (or on your site). You shouldn't steal fonts and use them without giving proper credit.
+1. Fonts generally aren't free to use without restrictions. You have to pay for them and/or follow other license conditions, such as crediting the font creator in your code (or on your site). You shouldn't steal fonts and use them without giving proper credit.
 2. All major browsers support WOFF/WOFF2 (Web Open Font Format versions 1 and 2). Even older browsers such as IE9 (released in 2011) support the WOFF format.
 3. WOFF2 supports the entirety of the TrueType and OpenType specifications, including variable fonts, chromatic fonts, and font collections.
 4. The order in which you list font files is important. If you provide the browser with a list of multiple font files to download, the browser will choose the first font file it's able to use. That's why the format you list first should be the preferred format — that is, WOFF2 — with the older formats listed after that. Browsers that don't understand one format will then fall back to the next format in the list.
 5. If you need to work with legacy browsers, you should provide EOT (Embedded Open Type), TTF (TrueType Font), and SVG web fonts for download. This article explains how to use the Fontsquirrel Webfont Generator to generate the required files.
 
-You can use the [Firefox Font Editor](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_fonts/index.html) to investigate and manipulate the fonts in use on your page, whether they are web fonts or not. This video provides a nice walkthrough:
-
-{{EmbedYouTube("UazfLa1O94M")}}
+You can use the [Firefox Font Editor](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_fonts/index.html) to investigate and manipulate the fonts in use on your page, whether they are web fonts or not.
 
 ## Active learning: A web font example
 
@@ -112,15 +113,6 @@ Now you'll need to generate the required code (and font formats). For each font,
 5. Click _Download your kit_.
 
 After the generator has finished processing, you should get a ZIP file to download. Save it in the same directory as your HTML and CSS.
-
-If you need to support legacy browsers, select the "Expert" mode in the Fontsquirrel Webfont Generator, select SVG, EOT, and TTF formats before downloading your kit.
-
-Web services for font generation typically limit file sizes. In such a case, consider using tools such as:
-
-1. [sfnt2woff-zopfli](https://github.com/bramstein/sfnt2woff-zopfli) for converting ttf to woff
-2. [FontForge](https://fontforge.org/) for converting from ttf to svg
-3. [batik ttf2svg](https://xmlgraphics.apache.org/batik/tools/font-converter.html) for converting from ttf to svg
-4. [woff2](https://github.com/google/woff2) for converting from ttf to woff2
 
 ### Implementing the code in your demo
 
@@ -177,7 +169,7 @@ Most of these services are easy to use, so we won't cover them in great detail. 
 
 ## @font-face in more detail
 
-Let's explore that `@font-face` syntax generated for you by Fontsquirrel. This is what one of the rulesets looks like:
+Let's explore that `@font-face` syntax generated for you by Fontsquirrel. The rulesets will look something like this:
 
 ```css
 @font-face {
@@ -199,12 +191,15 @@ Let's go through it to see what it does:
 > [!NOTE]
 > You can also specify particular {{cssxref("font-variant")}} and {{cssxref("font-stretch")}} values for your web fonts. In newer browsers, you can also specify a {{cssxref("@font-face/unicode-range", "unicode-range")}} value, which is a specific range of characters you might want to use out of the web font. In supporting browsers, the font will only be downloaded if the page contains those specified characters, saving unnecessary downloading. [Creating Custom Font Stacks with Unicode-Range](https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/) by Drew McLellan provides some useful ideas on how to make use of this.
 
-## Variable fonts
-
-There is a newer font technology available in browsers called variable fonts. These are fonts that allow many different variations of a typeface to be incorporated into a single file, rather than having a separate font file for every width, weight, or style. They are somewhat advanced for our beginner's course, but if you fancy stretching yourself and looking into them, read our [Variable fonts guide](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide).
-
 ## Summary
 
-Now that you have worked through our articles on text styling fundamentals, it's time to test your comprehension with our assessment for the module: [Typesetting a community school homepage](/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage).
+Now that you have worked through our articles on text styling fundamentals, it's time to test your comprehension with our challenge for the module: Typesetting a community school homepage.
 
-{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
+## See also
+
+- [Variable fonts guide](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
+  - : Variable fonts allow many different variations of a typeface to be incorporated into a single file, rather than having a separate font file for every width, weight, or style. They are somewhat advanced for our beginner's course, but have a look at this guide if you feel like stretching yourself.
+- [Fonts knowledge](https://fonts.google.com/knowledge), Google Fonts
+  - : A series of useful, in-depth articles covering different aspects of using fonts.
+
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling/Typesetting_a_homepage", "Learn_web_development/Core/Text_styling")}}

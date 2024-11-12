@@ -1,10 +1,12 @@
 ---
 title: Styling lists
-slug: Learn/CSS/Styling_text/Styling_lists
+slug: Learn_web_development/Core/Text_styling/Styling_lists
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Fundamentals", "Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling")}}
 
 [Lists](/en-US/docs/Learn_web_development/Core/Structuring_content/Lists) behave like any other text for the most part, but there are some CSS properties specific to lists that you need to know about, as well as some best practices to consider. This article explains all.
 
@@ -13,21 +15,19 @@ page-type: learn-module-chapter
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        HTML basics (study
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
-          >Introduction to HTML</a
-        >), CSS basics (study
-        <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS Styling basics</a>),
-        <a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals"
-          >CSS text and font fundamentals</a
-        >.
+        <a href="/en-US/docs/Learn_web_development/Core/Structuring_content"
+          >Structuring content with HTML</a
+        > and
+        <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS Styling basics</a>.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">Learning outcomes:</th>
       <td>
-        To become familiar with the best practices and properties related to
-        styling lists.
+        <ul>
+          <li>Spacing list items, for example with margin or line height.</li>
+          <li>Using <code>list-style</code> properties.</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -430,14 +430,6 @@ window.addEventListener("load", drawOutput);
 
 ## Summary
 
-Lists are relatively easy to get the hang of styling once you know a few associated basic principles and specific properties. In the next article, we'll move on to [link styling techniques](/en-US/docs/Learn/CSS/Styling_text/Styling_links).
+Lists are relatively easy to get the hang of styling once you know a few associated basic principles and specific properties. In the next article, we'll move on to link styling techniques.
 
-## See also
-
-CSS counters provide advanced tools for customizing list counting and styling, but they are quite complex. We recommend looking into these if you want to stretch yourself. See:
-
-- {{cssxref("@counter-style")}}
-- {{cssxref("counter-increment")}}
-- {{cssxref("counter-reset")}}
-
-{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Fundamentals", "Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling")}}

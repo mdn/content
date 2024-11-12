@@ -360,7 +360,7 @@ The conformance criteria under this guideline relate to ways in which users can 
           >Creating a navigation menu</a
         >,
         <a
-          href="/en-US/docs/Learn/CSS/Styling_text/Styling_links#styling_links_as_buttons"
+          href="/en-US/docs/Learn_web_development/Core/Text_styling/Styling_links#styling_links_as_buttons"
           >Styling links as buttons</a
         >.
       </td>

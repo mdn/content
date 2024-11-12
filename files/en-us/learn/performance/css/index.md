@@ -193,7 +193,7 @@ By default, the browser assumes that each specified style sheet is render blocki
 
 This section contains some useful tips for improving web font performance.
 
-In general, think carefully about the fonts you use on your site. Some font files can be very large (multiple megabytes). While it can be tempting to use lots of fonts for visual excitement, this can slow down page load significantly, and cause your site to look like a mess. You probably only need about two or three fonts, and you can get away with less if you choose to use [web safe fonts](/en-US/docs/Learn/CSS/Styling_text/Fundamentals#web_safe_fonts).
+In general, think carefully about the fonts you use on your site. Some font files can be very large (multiple megabytes). While it can be tempting to use lots of fonts for visual excitement, this can slow down page load significantly, and cause your site to look like a mess. You probably only need about two or three fonts, and you can get away with less if you choose to use [web safe fonts](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals#web_safe_fonts).
 
 ### Font loading
 

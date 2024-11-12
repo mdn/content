@@ -137,11 +137,11 @@ The CSS fonts module also supports variable fonts. Unlike regular fonts, where e
 
 ## Guides
 
-- [Learn: Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
+- [Learn: Fundamental text and font styling](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals)
 
   - : This beginner's learning article covers the basic fundamentals of text and font styling. It covers how to set the font weight, family, and style by using the {{cssxref("font")}} shorthand and how to align text and manage line and letter spacing.
 
-- [Learn: Web fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts)
+- [Learn: Web fonts](/en-US/docs/Learn_web_development/Core/Text_styling/Web_fonts)
 
   - : This beginner's learning article explains how to use custom fonts on your web page to allow for more varied and custom text styling.
 
