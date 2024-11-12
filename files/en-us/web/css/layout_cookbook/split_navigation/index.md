@@ -34,7 +34,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground:
   margin: 0;
   padding: 0;
   list-style: none;
-  font-size: 1.3rem;
+  font: 1.2em sans-serif;
 
   display: flex;
 }

@@ -47,6 +47,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground:
   border: 1px solid #ccc;
   border-radius: 0.5em;
   width: 20em;
+  font: 1.2em sans-serif;
 }
 
 .list-group li {
@@ -74,7 +75,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground:
 }
 ```
 
-{{EmbedLiveSample("list-group-badges-example", "", "200px")}}
+{{EmbedLiveSample("list-group-badges-example", "", "250px")}}
 
 ## Choices made
 

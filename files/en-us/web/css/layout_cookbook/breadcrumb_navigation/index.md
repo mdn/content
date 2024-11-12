@@ -31,9 +31,12 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground:
 ```
 
 ```css live-sample___breadcrumb-example
+body {
+  font: 1.2em sans-serif;
+}
+
 .breadcrumb {
   padding: 0 0.5rem;
-  font-size: 1.5rem;
 }
 
 .breadcrumb ul {

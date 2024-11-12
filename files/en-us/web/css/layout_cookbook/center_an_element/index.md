@@ -25,22 +25,22 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground:
 ```
 
 ```css live-sample___center-example
+.item {
+  border: 2px solid rgb(95 97 110);
+  border-radius: 0.5em;
+  padding: 20px;
+  width: 10em;
+}
+
 .container {
   border: 2px solid rgb(75 70 74);
   border-radius: 0.5em;
+  font: 1.2em sans-serif;
 
   height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.item {
-  border: 2px solid rgb(95 97 110);
-  border-radius: 0.5em;
-  padding: 20px;
-
-  width: 10em;
 }
 ```
 
@@ -66,11 +66,23 @@ div {
   padding: 1em;
   max-width: 75%;
 }
+
+.item {
+  border: 2px solid rgb(95 97 110);
+  border-radius: 0.5em;
+  padding: 20px;
+  width: 10em;
+}
+
 .container {
+  height: 8em;
+  border: 2px solid rgb(75 70 74);
+  border-radius: 0.5em;
+  font: 1.2em sans-serif;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 8em;
 }
 ```
 
@@ -78,7 +90,7 @@ We set a height for the container to demonstrate that the inner item is indeed v
 
 ### Result
 
-{{ EmbedLiveSample('Using_flexbox', 400, 200) }}
+{{EmbedLiveSample("Using_flexbox", "", "200px")}}
 
 Instead of applying `align-items: center;` on the container, you can also vertically center the inner item by setting {{cssxref("align-self")}} to `center` on the inner item itself.
 
@@ -102,16 +114,28 @@ div {
   padding: 1em;
   max-width: 75%;
 }
+
+.item {
+  border: 2px solid rgb(95 97 110);
+  border-radius: 0.5em;
+  padding: 20px;
+  width: 10em;
+}
+
 .container {
+  height: 8em;
+  border: 2px solid rgb(75 70 74);
+  border-radius: 0.5em;
+  font: 1.2em sans-serif;
+
   display: grid;
   place-items: center;
-  height: 8em;
 }
 ```
 
 ### Result
 
-{{ EmbedLiveSample('Using_grid', 400, 200) }}
+{{EmbedLiveSample("Using_grid", "", "200px")}}
 
 Instead of applying `place-items: center;` on the container, you can achieve the same centering by setting {{cssxref("place-content", "place-content: center;")}} on the container or by applying either {{cssxref("place-self", "place-self: center")}} or {{cssxref("margin", "margin: auto;")}} on the inner item itself.
 

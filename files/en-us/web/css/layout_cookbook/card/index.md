@@ -89,6 +89,10 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground:
 ```
 
 ```css live-sample___card-example
+body {
+  font: 1.2em sans-serif;
+}
+
 img {
   max-width: 100%;
 }
@@ -132,7 +136,7 @@ img {
 }
 ```
 
-{{EmbedLiveSample("card-example", "", "900px")}}
+{{EmbedLiveSample("card-example", "", "950px")}}
 
 ## Choices made
 

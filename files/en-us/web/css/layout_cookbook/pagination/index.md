@@ -24,30 +24,30 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground:
 <nav aria-label="pagination">
   <ul class="pagination">
     <li>
-      <a href=""
-        ><span aria-hidden="true">&laquo;</span
-        ><span class="visuallyhidden">previous set of pages</span></a
-      >
+      <a href="">
+        <span aria-hidden="true">&laquo;</span>
+        <span class="visuallyhidden">previous set of pages</span>
+      </a>
     </li>
     <li>
       <a href=""><span class="visuallyhidden">page </span>1</a>
     </li>
     <li>
-      <a href="" aria-current="page"
-        ><span class="visuallyhidden">page </span>2</a
-      >
+      <a href="" aria-current="page">
+        <span class="visuallyhidden">page </span>2
+      </a>
     </li>
     <li>
-      <a href=""><span class="visuallyhidden">page </span>3</a>
+      <a href=""> <span class="visuallyhidden">page </span>3 </a>
     </li>
     <li>
-      <a href=""><span class="visuallyhidden">page </span>4</a>
+      <a href=""> <span class="visuallyhidden">page </span>4 </a>
     </li>
     <li>
-      <a href=""
-        ><span class="visuallyhidden">next set of pages</span
-        ><span aria-hidden="true">&raquo;</span></a
-      >
+      <a href="">
+        <span class="visuallyhidden">next set of pages</span
+        ><span aria-hidden="true">&raquo;</span>
+      </a>
     </li>
   </ul>
 </nav>
@@ -70,6 +70,7 @@ nav {
   border-top: 1px solid #eee;
   margin-top: 1em;
   padding-top: 0.5em;
+  font: 1.2em sans-serif;
 
   display: flex;
   justify-content: center;

@@ -121,9 +121,14 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground:
 ```
 
 ```css live-sample___media-objects-example
+body {
+  font: 1.2em sans-serif;
+}
+
 img {
   max-width: 100%;
 }
+
 p {
   margin: 0 0 1em 0;
 }
@@ -161,7 +166,7 @@ p {
 }
 ```
 
-{{EmbedLiveSample("media-objects-example", "", "1400px")}}
+{{EmbedLiveSample("media-objects-example", "", "1500px")}}
 
 ## Choices made
 
