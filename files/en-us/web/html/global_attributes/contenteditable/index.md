@@ -35,7 +35,7 @@ If content is pasted into an element with `contenteditable="true"`, all formatti
 
 ### Pasting content into contenteditable
 
-This example has 2 {{HTMLElement("div")}}s both with `contenteditable`, the first with the value `true` and the second with the value `plaintext-only`. Copy the content below and paste it into each of the `div`s to see the different effects.
+This example has two {{HTMLElement("div")}} elements with `contenteditable`, the first with the value `true` and the second with the value `plaintext-only`. Copy the content below and paste it into each `div` to see their effects.
 
 #### HTML
 
