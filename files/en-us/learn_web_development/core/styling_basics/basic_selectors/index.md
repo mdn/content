@@ -399,7 +399,7 @@ In this article we've recapped CSS selectors, which enable you to target particu
 > [!NOTE]
 > For a complete list of selectors, see our [CSS selectors reference](/en-US/docs/Web/CSS/CSS_selectors).
 
-## See also 
+## See also
 
 - [CSS classes](https://v2.scrimba.com/the-frontend-developer-career-path-c0j/~01d?via=mdn), Scrimba <sup>_MDN Curriculum partner_</sup>
   - : An interactive lesson that provides some guidance on CSS classes.
