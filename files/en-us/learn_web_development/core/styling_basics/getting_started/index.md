@@ -204,7 +204,8 @@ h1 {
   color: red;
 }
 
-p,li {
+p,
+li {
 }
 ```
 
