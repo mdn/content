@@ -68,7 +68,7 @@ Cross-Origin-Opener-Policy: noopener-allow-popups
     For example, when using a cross-origin service for OAuth or payments.
 
     A document with this directive can open a document in the same BCG using {{domxref("Window.open()")}} if it has a COOP value of `unsafe-none`.
-    In this case it does not matter if the opened document is cross-site or same-site, and the original document remains "cross-origin isolated".
+    In this case it does not matter if the opened document is cross-site or same-site.
 
     Otherwise documents with `same-origin-allow-popups` will only open and be opened in the same BCG if both documents are same-origin and have the `same-origin-allow-popups` directive.
 
