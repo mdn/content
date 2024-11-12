@@ -35,7 +35,7 @@ The `plaintext-only` value of the [`contenteditable`](/en-US/docs/Web/HTML/Globa
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>134</td>
+      <td>133</td>
       <td>yes</td>
     </tr>
     <tr>
