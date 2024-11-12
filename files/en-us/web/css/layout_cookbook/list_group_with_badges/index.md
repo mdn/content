@@ -16,6 +16,8 @@ The list items should be displayed with the badges. The badge should be aligned 
 
 ## Recipe
 
+Click "Play" in the code blocks below to edit the example in the MDN Playground:
+
 ```html live-sample___list-group-badges-example
 <ul class="list-group">
   <li>
@@ -73,10 +75,6 @@ The list items should be displayed with the badges. The badge should be aligned 
 ```
 
 {{EmbedLiveSample("list-group-badges-example", "", "200px")}}
-
-> [!CALLOUT]
->
-> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/list-group-badges--download.html)
 
 ## Choices made
 

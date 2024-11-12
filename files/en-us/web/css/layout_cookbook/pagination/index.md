@@ -18,6 +18,8 @@ Typically, the pagination component will be centered horizontally underneath the
 
 ## Recipe
 
+Click "Play" in the code blocks below to edit the example in the MDN Playground:
+
 ```html live-sample___pagination-example
 <nav aria-label="pagination">
   <ul class="pagination">
@@ -99,10 +101,6 @@ nav {
 ```
 
 {{EmbedLiveSample("pagination-example", "", "200px")}}
-
-> [!CALLOUT]
->
-> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/pagination--download.html)
 
 ## Choices made
 

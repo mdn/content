@@ -14,6 +14,8 @@ Items placed on the grid should be able to align to a horizontally-centered max-
 
 ## Recipe
 
+Click "Play" in the code blocks below to edit the example in the MDN Playground:
+
 ```html live-sample___grid-wrapper-example
 <div class="grid">
   <div class="wrapper">
@@ -72,10 +74,6 @@ Items placed on the grid should be able to align to a horizontally-centered max-
 ```
 
 {{EmbedLiveSample("grid-wrapper-example", "", "550px")}}
-
-> [!CALLOUT]
->
-> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/grid-wrapper--download.html)
 
 ## Choices made
 

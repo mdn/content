@@ -22,6 +22,8 @@ Media Object pattern needs some or all of the following characteristics:
 
 ## The recipe
 
+Click "Play" in the code blocks below to edit the example in the MDN Playground:
+
 ```html live-sample___media-objects-example
 <div class="media">
   <div class="img">
@@ -160,10 +162,6 @@ p {
 ```
 
 {{EmbedLiveSample("media-objects-example", "", "1400px")}}
-
-> [!CALLOUT]
->
-> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/media-objects--download.html)
 
 ## Choices made
 

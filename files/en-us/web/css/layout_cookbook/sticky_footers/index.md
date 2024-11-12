@@ -19,6 +19,8 @@ The Sticky footer pattern needs to meet the following requirements:
 
 ## The recipe
 
+Click "Play" in the code blocks below to edit the example in the MDN Playground:
+
 ```html live-sample___sticky-footer-example
 <div class="wrapper">
   <header class="page-header">This is the header</header>
@@ -69,9 +71,6 @@ body {
 ```
 
 {{EmbedLiveSample("stiky-footer-example", "", "300px")}}
-
-> [!CALLOUT]
-> To take a look at the code, you can [download the full example](https://github.com/mdn/css-examples/blob/main/css-cookbook/sticky-footer--download.html).
 
 > [!NOTE]
 > In this example and the following one we are using a wrapper set to `min-height: 100%`. You can also achieve this for a full page by setting a {{cssxref("min-height")}} of `100vh` on the {{htmlelement("body")}} and then using it as your grid container.

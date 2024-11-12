@@ -20,6 +20,8 @@ The cards in the group should line up in two dimensions — both vertically and 
 
 ## Recipe
 
+Click "Play" in the code blocks below to edit the example in the MDN Playground:
+
 ```html live-sample___card-example
 <div class="cards">
   <article class="card">
@@ -131,10 +133,6 @@ img {
 ```
 
 {{EmbedLiveSample("card-example", "", "900px")}}
-
-> [!CALLOUT]
->
-> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/card--download.html)
 
 ## Choices made
 

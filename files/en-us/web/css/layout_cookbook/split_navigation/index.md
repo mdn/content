@@ -16,6 +16,8 @@ A common navigation pattern is to have one element pushed away from the others. 
 
 ## Recipe
 
+Click "Play" in the code blocks below to edit the example in the MDN Playground:
+
 ```html live-sample___split-navigation-example
 <nav>
   <ul class="main-nav">
@@ -48,10 +50,6 @@ A common navigation pattern is to have one element pushed away from the others. 
 ```
 
 {{EmbedLiveSample("split-navigation-example", "", "200px")}}
-
-> [!CALLOUT]
->
-> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/split-navigation--download.html)
 
 ## Choices made
 

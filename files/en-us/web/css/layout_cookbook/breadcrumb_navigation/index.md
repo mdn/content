@@ -16,6 +16,8 @@ Display the hierarchy of the site by displaying inline links, with a separator b
 
 ## Recipe
 
+Click "Play" in the code blocks below to edit the example in the MDN Playground:
+
 ```html live-sample___breadcrumb-example
 <nav aria-label="Breadcrumb" class="breadcrumb">
   <ul>
@@ -50,10 +52,6 @@ Display the hierarchy of the site by displaying inline links, with a separator b
 ```
 
 {{EmbedLiveSample("breadcrumb-example", "", "100px")}}
-
-> [!CALLOUT]
->
-> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/breadcrumb-navigation--download.html)
 
 > [!NOTE]
 > The example above uses a complex selector to insert content before every `li` except the last one. This could also be achieved using a complex selector targeting all `li` elements except the first:

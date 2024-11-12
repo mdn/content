@@ -16,6 +16,8 @@ To place an item into the center of another box horizontally and vertically.
 
 ## Recipe
 
+Click "Play" in the code blocks below to edit the example in the MDN Playground:
+
 ```html live-sample___center-example
 <div class="container">
   <div class="item">I am centered!</div>
@@ -43,10 +45,6 @@ To place an item into the center of another box horizontally and vertically.
 ```
 
 {{EmbedLiveSample("center-example", "", "250px")}}
-
-> [!CALLOUT]
->
-> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/center--download.html)
 
 ## Using flexbox
 

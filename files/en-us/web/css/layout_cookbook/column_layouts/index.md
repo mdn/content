@@ -188,6 +188,8 @@ Use flexbox:
 
 If you want a two-dimensional grid where items line up in rows _and_ columns, then you should choose CSS grid layout. Similar to how flexbox works on the direct children of the flex container, grid layout works on the direct children of the grid container. Just set {{cssxref("display", "display: grid;")}} on the container. Properties set on this container — like {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} — define how the items are distributed along rows and columns.
 
+Click "Play" in the code blocks below to edit the example in the MDN Playground:
+
 ```html live-sample___grid-layout-example
 <div class="container">
   <p>
@@ -230,10 +232,6 @@ If you want a two-dimensional grid where items line up in rows _and_ columns, th
 ```
 
 {{EmbedLiveSample("grid-layout-example", "", "400px")}}
-
-> [!CALLOUT]
->
-> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/columns-grid--download.html)
 
 Use grid:
 
