@@ -105,7 +105,7 @@ The other corners follow a similar pattern:
 
 ### HTML
 
-The HTML is quite simple:
+We include a container with four boxes:
 
 ```html
 <div id="container" onclick="rotate()">
