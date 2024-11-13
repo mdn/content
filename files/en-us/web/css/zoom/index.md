@@ -260,6 +260,6 @@ zoomControl.addEventListener("change", updateZoom);
 
 - [`zoom` entry in CSS-Tricks' CSS Almanac](https://css-tricks.com/almanac/properties/z/zoom/)
 - {{cssxref("transform")}}
-- {{cssxref("scale")}} 
+- {{cssxref("scale")}}
 - {{cssxref("unset")}} keyword
 - [Legay `zoom` property](https://css-tricks.com/almanac/properties/z/zoom/) via CSS-Tricks (2013)
