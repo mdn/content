@@ -135,7 +135,7 @@ The `plaintext-only` value of the [`contenteditable`](/en-US/docs/Web/HTML/Globa
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2"><code>dom.element.contenteditable.plaintext-only.enable</code></td>
+      <td colspan="2"><code>dom.element.contenteditable.plaintext-only.enabled</code></td>
     </tr>
   </tbody>
 </table>
