@@ -9,7 +9,7 @@ browser-compat: http.headers.Accept-Encoding
 
 The HTTP **`Accept-Encoding`** {{glossary("request header", "request")}} and {{glossary("response header")}} indicates the content encoding (usually a compression algorithm) that the recipient can understand.
 In requests, the server uses [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) to select one of the encoding proposals from the client and informs the client of that choice with the {{HTTPHeader("Content-Encoding")}} response header.
-In responses, it provides information about which encodings are preferred in the content of a subsequent request to the same resource.
+In responses, it provides information about which content encodings the server can understand in messages to the requested resource, so that the encoding can be used in subsequent requests to the resource. For example, this might be sent in the response to a `PUT` request to a resource that used an unsupported encoding.
 
 Even if both the client and the server support the same compression algorithms, the server may choose not to compress the body of a response if the `identity` value is also acceptable.
 This happens in two common cases:
