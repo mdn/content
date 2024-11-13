@@ -40,7 +40,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ### A basic stylesheet
 
-In the following example, we apply a very simple stylesheet to a document:
+In the following example, we apply a short stylesheet to a document:
 
 ```html
 <!doctype html>
