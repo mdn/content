@@ -43,7 +43,7 @@ The `value` of the `time` input is always in 24-hour format that includes leadin
 
 In this example, you can see the time input's value by entering a time and seeing how it changes afterward.
 
-First, a look at the HTML. This is simple enough, with the label and input as we've seen before, but with the addition of a {{HTMLElement("p")}} element with a {{HTMLElement("span")}} to display the value of the `time` input:
+First, a look at the HTML. We include a label and input, and add a {{HTMLElement("p")}} element with a {{HTMLElement("span")}} to display the value of the `time` input:
 
 ```html
 <form>

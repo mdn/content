@@ -397,7 +397,7 @@ switchBtn.addEventListener("click", () => {
 });
 ```
 
-After declaring a few variables, an event listener is added to the `button` to control the switching mechanism. This is pretty simple, mostly involving changing over the button's `class` and {{HTMLElement("label")}}, and updating the display values of the two sets of inputs when the button is pressed.
+After declaring a few variables, an event listener is added to the `button` to control the switching mechanism. This involves changing over the button's `class` and {{HTMLElement("label")}}, and updating the display values of the two sets of inputs when the button is pressed.
 
 (Note that we're not converting back and forth between meters and feet/inches here, which a real-life web application would probably do.)
 
