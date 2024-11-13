@@ -1,6 +1,6 @@
 ---
 title: InkPresenter
-slug: Web/API/InkPresenter
+slug: Web/API/DelegatedInkTrailPresenter
 page-type: web-api-interface
 status:
   - experimental

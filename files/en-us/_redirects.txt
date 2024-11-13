@@ -8800,6 +8800,10 @@
 /en-US/docs/Web/API/IndexedDB_API/ObjectStore	/en-US/docs/Web/API/IDBObjectStore
 /en-US/docs/Web/API/IndexedDB_API/Synchronous_API	/en-US/docs/Web/API/IndexedDB_API
 /en-US/docs/Web/API/IndexedDB_API/Transaction	/en-US/docs/Web/API/IDBTransaction
+/en-US/docs/Web/API/InkPresenter	/en-US/docs/Web/API/DelegatedInkTrailPresenter
+/en-US/docs/Web/API/InkPresenter/expectedImprovement	/en-US/docs/Web/API/DelegatedInkTrailPresenter/expectedImprovement
+/en-US/docs/Web/API/InkPresenter/presentationArea	/en-US/docs/Web/API/DelegatedInkTrailPresenter/presentationArea
+/en-US/docs/Web/API/InkPresenter/updateInkTrailStartPoint	/en-US/docs/Web/API/DelegatedInkTrailPresenter/updateInkTrailStartPoint
 /en-US/docs/Web/API/Input.mozGetFileNameArray	/en-US/docs/Web/API/HTMLInputElement
 /en-US/docs/Web/API/Input.mozSetFileNameArray	/en-US/docs/Web/API/HTMLInputElement
 /en-US/docs/Web/API/Input.multiple	/en-US/docs/Web/API/HTMLInputElement/multiple

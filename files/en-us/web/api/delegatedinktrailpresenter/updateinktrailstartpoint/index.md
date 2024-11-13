@@ -1,10 +1,7 @@
 ---
 title: "InkPresenter: updateInkTrailStartPoint() method"
-short-title: updateInkTrailStartPoint()
-slug: Web/API/InkPresenter/updateInkTrailStartPoint
+slug: Web/API/DelegatedInkTrailPresenter/updateInkTrailStartPoint
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.InkPresenter.updateInkTrailStartPoint
 ---
 

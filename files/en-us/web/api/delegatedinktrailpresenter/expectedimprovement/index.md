@@ -1,10 +1,7 @@
 ---
 title: "InkPresenter: expectedImprovement property"
-short-title: expectedImprovement
-slug: Web/API/InkPresenter/expectedImprovement
+slug: Web/API/DelegatedInkTrailPresenter/expectedImprovement
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.InkPresenter.expectedImprovement
 ---
 
