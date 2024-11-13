@@ -18,7 +18,7 @@ All modern browsers support module features natively without needing transpilati
 
 ## Introducing an example
 
-To demonstrate usage of modules, we've created a [simple set of examples](https://github.com/mdn/js-examples/tree/main/module-examples) that you can find on GitHub. These examples demonstrate a simple set of modules that create a [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas) element on a webpage, and then draw (and report information about) different shapes on the canvas.
+To demonstrate usage of modules, we've created a [set of examples](https://github.com/mdn/js-examples/tree/main/module-examples) that you can find on GitHub. These examples demonstrate a set of modules that create a [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas) element on a webpage, and then draw (and report information about) different shapes on the canvas.
 
 These are fairly trivial, but have been kept deliberately simple to demonstrate modules clearly.
 
@@ -101,7 +101,7 @@ export { name, draw, reportArea, reportPerimeter };
 
 ## Importing features into your script
 
-Once you've exported some features out of your module, you need to import them into your script to be able to use them. The simplest way to do this is as follows:
+Once you've exported some features out of your module, you need to import them into your script to be able to use them. One way to do this is as follows:
 
 ```js
 import { name, draw, reportArea, reportPerimeter } from "./modules/square.js";
