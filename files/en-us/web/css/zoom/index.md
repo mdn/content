@@ -43,7 +43,7 @@ zoom: unset;
 ### Values
 
 - `normal`
-  - : Render this element at its normal size. **Non-standard.** Avoid using this value. Consider using `unset` instead.
+  - : Render this element at its normal size; equal to `zoom: 1`. Use the global {{cssxref("unset")}} keyword value instead.
 - `reset`
   - : Resets the value to `zoom: 1` and prevents the element from being (de)magnified if the user applies non-pinch-based zooming (e.g. by pressing <kbd>Ctrl</kbd> \- <kbd>-</kbd> or <kbd>Ctrl</kbd> \+ <kbd>+</kbd> keyboard shortcuts) to the document.
 - {{cssxref("&lt;percentage&gt;")}}
