@@ -47,11 +47,9 @@ When an inline box is split, margins, borders, and padding have no visual effect
 
 ```html live-sample___break
 <div class="example">
-  Before that night—<span>
-    a memorable night, as it was to prove—hundreds of millions of people
-  </span>
-  had watched the rising smoke-wreaths of their fires without drawing any
-  special inspiration from the fact.
+  Before that night— <span>a memorable night, as it was to prove—
+  hundreds of millions of people</span> had watched the rising smoke-wreaths
+  of their fires without drawing any special inspiration from the fact.
 </div>
 ```
 
