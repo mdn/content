@@ -22,6 +22,10 @@ In particular, if you've never done any coding before, we'd recommend the [Your 
   - : CSS (Cascading Style Sheets) is used to style and layout web pages — for example, to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features. This module provides all the CSS fundamentals you'll need for now, including syntax, features, and techniques.
 - [CSS text styling](/en-US/docs/Learn_web_development/Core/Text_styling)
   - : With the basics of the CSS language covered, the next CSS topic for you to concentrate on is styling text — one of the most common things you'll do with CSS. Here we look at fundamentals including setting font, boldness, italics, line and letter spacing, drop shadows, and other text features. We round off the module by looking at applying custom fonts to your page, and styling lists and links.
+- [CSS layout](/en-US/docs/Learn_web_development/Core/CSS_layout)
+  - : In previous modules we looked at how to style and manipulate the boxes that your content sits inside. Now it's time to look at how to correctly lay out your boxes in relation to one another, and the browser viewport. This module looks at floats, positioning, other modern layout tools, and building responsive designs that will adapt to different devices, screen sizes, and resolutions.
+- [Dynamic scripting with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting)
+  - : JavaScript is a huge topic, with so many different features, styles, and techniques to learn, and so many APIs and tools built on top of it. This module focuses mostly on the essentials of the core language, plus some key surrounding topics — learning these topics will give you a solid basis to work from.
 
 ## See also
 

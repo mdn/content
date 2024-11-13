@@ -94,7 +94,7 @@ To optimize the CSSOM construction and improve page performance, you can do one 
   }
   ```
 
-  Remember that many properties (such as {{cssxref("font-size")}}) inherit their values from their parents, so you don't need to apply them everywhere. And powerful tools such as [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox) need to be used sparingly. Using them everywhere can cause all kinds of unexpected behavior.
+  Remember that many properties (such as {{cssxref("font-size")}}) inherit their values from their parents, so you don't need to apply them everywhere. And powerful tools such as [Flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox) need to be used sparingly. Using them everywhere can cause all kinds of unexpected behavior.
 
 - **Cut down on image HTTP requests with CSS sprites**: [CSS sprites](https://css-tricks.com/css-sprites/) is a technique that places several small images (such as icons) that you want to use on your site into a single image file, and then uses different {{cssxref("background-position")}} values to display the chunk of image that you want to show in each different place. This can dramatically cut down on the number of HTTP requests needed to fetch the images.
 

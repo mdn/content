@@ -48,7 +48,7 @@ window.addEventListener("keyup", handleKeyUp, true);
 
 You can also capture mouse and other pointer events. The events occurring when the user interacts with a pointing device such as a mouse are represented by the {{domxref("MouseEvent")}} DOM Interface. Common mouse events include [`click`](/en-US/docs/Web/API/Element/click_event), [`dblclick`](/en-US/docs/Web/API/Element/dblclick_event), [`mouseup`](/en-US/docs/Web/API/Element/mouseup_event), and [`mousedown`](/en-US/docs/Web/API/Element/mousedown_event). The list of all events using the Mouse Event Interface is provided in the [Events reference](/en-US/docs/Web/Events).
 
-When the input device is a mouse, you can also control user input through the Pointer Lock API and implement Drag & Drop (see below). You can also [use CSS to test for pointer device](/en-US/docs/Learn/CSS/CSS_layout/Media_queries#use_of_pointing_devices) support.
+When the input device is a mouse, you can also control user input through the Pointer Lock API and implement Drag & Drop (see below). You can also [use CSS to test for pointer device](/en-US/docs/Learn_web_development/Core/CSS_layout/Media_queries#use_of_pointing_devices) support.
 
 ### Finger touch
 
@@ -78,7 +78,7 @@ The events for handling generic pointer input look a lot like those for mouse: `
 
 ### Screen Orientation
 
-If you need slightly different layouts depending on whether the user is in portrait or landscape mode, you can use [CSS media queries](/en-US/docs/Learn/CSS/CSS_layout/Media_queries#media_feature_rules) to define CSS for different layouts or form control widths based on the size or orientation of the screen when [styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms).
+If you need slightly different layouts depending on whether the user is in portrait or landscape mode, you can use [CSS media queries](/en-US/docs/Learn_web_development/Core/CSS_layout/Media_queries#media_feature_rules) to define CSS for different layouts or form control widths based on the size or orientation of the screen when [styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms).
 
 When screen orientation matters for your form, you can read the screen orientation state, be informed when this state changes, and able to lock the screen orientation to a specific state (usually portrait or landscape) through the [Screen Orientation API](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation).
 

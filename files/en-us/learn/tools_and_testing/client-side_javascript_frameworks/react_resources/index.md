@@ -15,7 +15,7 @@ Our final article provides you with a list of React resources that you can use t
       <td>
         <p>
           Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
-          <a href="/en-US/docs/Learn/CSS">CSS</a>, and
+          <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS</a>, and
           <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages,
           knowledge of the
           <a

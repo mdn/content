@@ -15,7 +15,7 @@ As we near the end of our React journey (for now at least), we'll add the finish
       <td>
         <p>
           Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
-          <a href="/en-US/docs/Learn/CSS">CSS</a>, and
+          <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS</a>, and
           <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages,
           knowledge of the
           <a

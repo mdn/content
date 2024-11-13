@@ -219,7 +219,7 @@ In the example below, remove content until it fits into the box. You should see 
 
 ## Unwanted overflow in web design
 
-Modern layout methods (which you'll meet later in the [CSS layout](/en-US/docs/Learn/CSS/CSS_layout) module) manage overflow. They largely work without assumptions or dependencies for how much content there will be on a web page.
+Modern layout methods (which you'll meet later in the [CSS layout](/en-US/docs/Learn_web_development/Core/CSS_layout) module) manage overflow. They largely work without assumptions or dependencies for how much content there will be on a web page.
 
 This was not always the norm. In the past, some sites were built with fixed-height containers to align box bottoms. These boxes may otherwise have had no relationship to each other. This was fragile. If you encounter a box where content is overlaying other content on the page in legacy applications, you will now recognize that this happens with overflow. Ideally, you will refactor the layout to not rely on fixed-height containers.
 

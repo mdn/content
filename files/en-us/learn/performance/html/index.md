@@ -51,7 +51,7 @@ HTML is simple in terms of performance — it is mostly text, which is small in 
 
 ## Responsive handling of replaced elements
 
-[Responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) has revolutionized the way that web content layout is handled across different devices. One key advantage that it enables is dynamic switching of layouts optimized for different screen sizes, for example a wide screen layout versus a narrow (mobile) screen layout. It can also handle dynamic switching of content based on other device attributes, such as resolution or preference for light or dark color scheme.
+[Responsive design](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design) has revolutionized the way that web content layout is handled across different devices. One key advantage that it enables is dynamic switching of layouts optimized for different screen sizes, for example a wide screen layout versus a narrow (mobile) screen layout. It can also handle dynamic switching of content based on other device attributes, such as resolution or preference for light or dark color scheme.
 
 The so-called "mobile first" technique can ensure that the default layout is for small-screen devices, so mobiles can just download images suitable for their screens, and don't need to take the performance hit of downloading larger desktop images. However, since this is controlled using [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) in your CSS, it can only positively affect performance of images loaded in CSS.
 

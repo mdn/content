@@ -309,7 +309,7 @@ The conformance criteria under this guideline relate to ways in which users can 
         for general advice on tabbing to controls. If you need to place elements
         in an unusual layout, it is better to make sure the source order is
         sensible, then use CSS features like
-        <a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">positioning</a>
+        <a href="/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning">positioning</a>
         to handle the layout.
       </td>
     </tr>

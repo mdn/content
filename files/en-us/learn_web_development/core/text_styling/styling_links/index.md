@@ -366,7 +366,7 @@ A final word: how did we select just external links? Well, if you are writing yo
 So that's it. Try revisiting the active learning section above and trying this new technique out!
 
 > [!NOTE]
-> Don't worry if you are not familiar with [backgrounds](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders) and [responsive web design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) yet; these are explained in other places.
+> Don't worry if you are not familiar with [backgrounds](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders) and [responsive web design](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design) yet; these are explained in other places.
 
 ## Styling links as buttons
 
@@ -435,7 +435,7 @@ The HTML defines a {{HTMLElement("nav")}} element with a `"container"` class. Th
 The CSS includes the styling for the container and the links it contains.
 
 - The second rule says:
-  - The container is a [flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox). The items it contains — the links, in this case — will be _flex items_.
+  - The container is a [flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox). The items it contains — the links, in this case — will be _flex items_.
   - The gap between the flex items will be `0.625%` of the container's width.
 - The third rule styles the links:
   - The first declaration, `flex: 1`, means that the widths of the items will be adjusted so they use all the available space in the container.

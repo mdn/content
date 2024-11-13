@@ -15,7 +15,7 @@ In this article we'll add a counter that displays the number of completed todo i
       <td>
         <p>
           Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
-          <a href="/en-US/docs/Learn/CSS">CSS</a>, and
+          <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS</a>, and
           <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages,
           knowledge of the
           <a

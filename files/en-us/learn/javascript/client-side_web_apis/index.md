@@ -12,7 +12,7 @@ When writing client-side JavaScript for websites or applications, you will quick
 
 To get the most out of this module, you should have worked your way through the previous JavaScript modules in the series ([First steps](/en-US/docs/Learn/JavaScript/First_steps), [Building blocks](/en-US/docs/Learn/JavaScript/Building_blocks), and [JavaScript objects](/en-US/docs/Learn/JavaScript/Objects)). Those modules typically involve simple API usage, as it is often difficult to write client-side JavaScript examples without them. For this tutorial, we will assume that you are knowledgeable about the core JavaScript language, and we will explore common Web APIs in a bit more detail.
 
-Basic knowledge of [HTML](/en-US/docs/Learn/HTML) and [CSS](/en-US/docs/Learn/CSS) would also be useful.
+Basic knowledge of [HTML](/en-US/docs/Learn/HTML) and [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics) would also be useful.
 
 > [!NOTE]
 > If you are working on a device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).

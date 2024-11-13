@@ -299,7 +299,7 @@ You've reached the end of this article, but can you remember the most important 
 
 ## Summary
 
-This lesson has given you a rundown of some key issues that you might run into when sizing things on the web. When you move onto [CSS Layout](/en-US/docs/Learn/CSS/CSS_layout), sizing will become very important in mastering the different layout methods, so it is worth understanding the concepts here before moving on.
+This lesson has given you a rundown of some key issues that you might run into when sizing things on the web. When you move onto [CSS Layout](/en-US/docs/Learn_web_development/Core/CSS_layout), sizing will become very important in mastering the different layout methods, so it is worth understanding the concepts here before moving on.
 
 In the next article, we'll take a look at how backgrounds and borders are manipulated in CSS.
 

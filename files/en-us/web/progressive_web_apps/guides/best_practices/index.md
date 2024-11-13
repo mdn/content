@@ -26,7 +26,7 @@ For example, handling form submissions with the HTML {{htmlelement("form")}} ele
 
 Similar to how testing your app across various browsers is important, testing across devices ensures your app is accessible to the broadest audience.
 
-[Responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) is crucial for PWAs to ensure the content is accessible on any screen size. Users should be able to access all features and content regardless of their device's screen size. By rearranging content at different viewport sizes, you can prioritize important data and actions.
+[Responsive design](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design) is crucial for PWAs to ensure the content is accessible on any screen size. Users should be able to access all features and content regardless of their device's screen size. By rearranging content at different viewport sizes, you can prioritize important data and actions.
 
 Ensure users can interact with your application no matter how they access your content. Support keyboard and mouse, as well as touch or stylus input methods. Make sure all your application features can be accessed through any input method.
 

@@ -43,7 +43,7 @@ These resources are created by forward-thinking companies and web developers who
 
   - : This module carries on where [CSS Styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics) left off — now you've gained familiarity with the language and its syntax, and got some basic experience with using it, it's time to dive a bit deeper. This module looks at the cascade and inheritance, all the selector types we have available, units, sizing, styling backgrounds and borders, debugging, and lots more.
 
-    The aim here is to provide you with a toolkit for writing competent CSS and help you understand all the essential theory, before moving on to more specific disciplines like [text styling](/en-US/docs/Learn/CSS/Styling_text) and [CSS layout](/en-US/docs/Learn/CSS/CSS_layout).
+    The aim here is to provide you with a toolkit for writing competent CSS and help you understand all the essential theory, before moving on to more specific disciplines like [text styling](/en-US/docs/Learn/CSS/Styling_text) and [CSS layout](/en-US/docs/Learn_web_development/Core/CSS_layout).
 
 - [Selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
 
@@ -59,12 +59,12 @@ These resources are created by forward-thinking companies and web developers who
 
 - [Styling text](/en-US/docs/Learn/CSS/Styling_text)
   - : Here we look at text styling fundamentals, including setting font, boldness, and italics, line and letter spacing, and drop shadows and other text features. We round off the module by looking at applying custom fonts to your page, and styling lists and links.
-- [Common CSS Questions](/en-US/docs/Learn/CSS/Howto/CSS_FAQ)
+- [Solve common CSS problems](/en-US/docs/Learn_web_development/Howto/Solve_CSS_problems/CSS_FAQ)
   - : Common questions and answers for beginners.
 
 ### Intermediate level
 
-- [CSS layout](/en-US/docs/Learn/CSS/CSS_layout)
+- [CSS layout](/en-US/docs/Learn_web_development/Core/CSS_layout)
   - : At this point we've already looked at CSS fundamentals, how to style text, and how to style and manipulate the boxes that your content sits inside. Now it's time to look at how to place your boxes in the right place in relation to the viewport, and one another. We have covered the necessary prerequisites so can now dive deep into CSS layout, looking at different display settings, traditional layout methods involving float and positioning, and new fangled layout tools like flexbox.
 - [CSS reference](/en-US/docs/Web/CSS/Reference)
   - : Complete reference to CSS, with details on support by Firefox and other browsers.

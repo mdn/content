@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}
 
-In this article, we'll learn about the concept of responsive images — images that work well on devices with widely differing screen sizes, resolutions, and other such features — and look at what tools HTML provides to help implement them. This helps to improve performance across different devices. Responsive images are just one part of [responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design), a future CSS topic for you to learn.
+In this article, we'll learn about the concept of responsive images — images that work well on devices with widely differing screen sizes, resolutions, and other such features — and look at what tools HTML provides to help implement them. This helps to improve performance across different devices. Responsive images are just one part of [responsive design](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design), a future CSS topic for you to learn.
 
 <table class="standard-table">
   <tbody>
@@ -95,7 +95,7 @@ The `srcset` and `sizes` attributes look complicated, but they're not too hard t
 
 **`sizes`** defines a set of media conditions (e.g. screen widths) and indicates what image size would be best to choose, when certain media conditions are true — these are the hints we talked about earlier. In this case, before each comma we write:
 
-1. A **media condition** (`(max-width:600px)`) — you'll learn more about these in the [CSS topic](/en-US/docs/Learn/CSS), but for now let's just say that a media condition describes a possible state that the screen can be in. In this case, we are saying "when the viewport width is 600 pixels or less".
+1. A **media condition** (`(max-width:600px)`) — you'll learn more about these in the [CSS topic](/en-US/docs/Learn_web_development/Core/Styling_basics), but for now let's just say that a media condition describes a possible state that the screen can be in. In this case, we are saying "when the viewport width is 600 pixels or less".
 2. A space
 3. The **width of the slot** the image will fill when the media condition is true (`480px`)
 

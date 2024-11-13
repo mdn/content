@@ -14,7 +14,7 @@ In this article, we will teach you how to install your own automation environmen
       <th scope="row">Prerequisites:</th>
       <td>
         Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
-        <a href="/en-US/docs/Learn/CSS">CSS</a>, and
+        <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS</a>, and
         <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages; an idea
         of the high-level
         <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">principles of cross browser testing</a>, and

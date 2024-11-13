@@ -14,7 +14,7 @@ Next we turn our attention to accessibility, providing information on common pro
       <th scope="row">Prerequisites:</th>
       <td>
         Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
-        <a href="/en-US/docs/Learn/CSS">CSS</a>, and
+        <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS</a>, and
         <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages; an idea
         of the high level
         <a
@@ -231,7 +231,7 @@ Another tip is to not rely on color alone for signposts/information, as this wil
 
 #### Hiding content
 
-There are many instances where a visual design will require that not all content is shown at once. For example, in our [Tabbed info box example](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/tabbed-info-box.html) (see [source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/tabbed-info-box.html)) we have three panels of information, but we are [positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning) them on top of one another and providing tabs that can be clicked to show each one (it is also keyboard accessible — you can alternatively use Tab and Enter/Return to select them).
+There are many instances where a visual design will require that not all content is shown at once. For example, in our [Tabbed info box example](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/tabbed-info-box.html) (see [source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/tabbed-info-box.html)) we have three panels of information, but we are [positioning](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning) them on top of one another and providing tabs that can be clicked to show each one (it is also keyboard accessible — you can alternatively use Tab and Enter/Return to select them).
 
 ![A screenshot demonstrating an example of accessible hiding and showing content in tabs. The example has three tabs namely Tab 1, Tab 2 and Tab 3. Tab 1 is currently focused and activated to display content.](20191022144107.png)
 

@@ -60,15 +60,15 @@ If a box has a display type of `inline`, then:
 
 Some HTML elements, such as `<a>`, `<span>`, `<em>` and `<strong>` use `inline` as their outer display type by default.
 
-Block and inline layout is the default way things behave on the web. By default and without any other instruction, the elements inside a box are also laid out in **[normal flow](/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)** and behave as block or inline boxes.
+Block and inline layout is the default way things behave on the web. By default and without any other instruction, the elements inside a box are also laid out in **[normal flow](/en-US/docs/Learn_web_development/Core/CSS_layout/Introduction#normal_layout_flow)** and behave as block or inline boxes.
 
 ## Inner and outer display types
 
 `block` and `inline` display values are said to be **outer display** types — they affect how the box is laid out in relation to other boxes around it. Boxes also have an **inner display** type, which dictates how elements inside that box are laid out.
 
-You can change the inner display type by setting an inner display value, for example `display: flex;`. The element will still use the outer display type `block` but this changes the inner display type to `flex`. Any direct children of this box will become flex items and behave according to the [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox) specification.
+You can change the inner display type by setting an inner display value, for example `display: flex;`. The element will still use the outer display type `block` but this changes the inner display type to `flex`. Any direct children of this box will become flex items and behave according to the [Flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox) specification.
 
-When you move on to learn about CSS Layout in more detail, you will encounter [`flex`](/en-US/docs/Learn/CSS/CSS_layout/Flexbox), and various other inner values that your boxes can have, for example [`grid`](/en-US/docs/Learn/CSS/CSS_layout/Grids).
+When you move on to learn about CSS Layout in more detail, you will encounter [`flex`](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox), and various other inner values that your boxes can have, for example [`grid`](/en-US/docs/Learn_web_development/Core/CSS_layout/Grids).
 
 Don't worry too much about the inner and outer terminology for now; this is what is happening internally, and we mentioned it here in case you come across it elsewhere. Generally, you will just deal with single `display` values, and won't need to think about it much.
 

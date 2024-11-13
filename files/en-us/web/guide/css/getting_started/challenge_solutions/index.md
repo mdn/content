@@ -206,7 +206,7 @@ The challenges on page [Boxes](/en-US/docs/Learn/CSS/Building_blocks) are:
 
 ## Layout
 
-The challenges on page [Layout](/en-US/docs/Learn/CSS/CSS_layout) are:
+The challenges on page [Layout](/en-US/docs/Learn_web_development/Core/CSS_layout) are:
 
 ### Default image position
 

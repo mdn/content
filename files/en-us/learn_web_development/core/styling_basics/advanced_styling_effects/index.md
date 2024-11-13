@@ -379,7 +379,7 @@ This gives us the following results:
 You can see here that the multiply mix blend has blended together not only the two background images, but also the color from the `<div>` below it too.
 
 > [!NOTE]
-> Don't worry if you don't understand some of the layout properties above, like {{cssxref("position")}}, {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("z-index")}}, etc. We will cover these in detail in our [CSS Layout](/en-US/docs/Learn/CSS/CSS_layout) module.
+> Don't worry if you don't understand some of the layout properties above, like {{cssxref("position")}}, {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("z-index")}}, etc. We will cover these in detail in our [CSS Layout](/en-US/docs/Learn_web_development/Core/CSS_layout) module.
 
 ## CSS shapes
 

@@ -40,7 +40,7 @@ The following is a list of all the topics we cover in the MDN learning area.
   - : Provides a practical introduction to web development for complete beginners.
 - [HTML — Structuring the web](/en-US/docs/Learn/HTML)
   - : HTML is the language that we use to structure the different parts of our content and define what their meaning or purpose is. This topic teaches HTML in detail.
-- [CSS — Styling the web](/en-US/docs/Learn/CSS)
+- [CSS — Styling the web](/en-US/docs/Learn_web_development/Core/Styling_basics)
   - : CSS is the language that we use to control our web content's style and layout, as well as adding behavior like animation. This topic provides comprehensive coverage of CSS.
 - [JavaScript — Dynamic client-side scripting](/en-US/docs/Learn/JavaScript)
   - : JavaScript is the scripting language used to add dynamic functionality to web pages. This topic teaches all the essentials needed to become comfortable with writing and understanding JavaScript.

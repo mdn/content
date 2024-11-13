@@ -81,7 +81,7 @@ Moreover, valid markup allows for the free use of other tools that can _pre-proc
 
 ### Chunk your content
 
-Tables for layouts are a legacy method that should not be used anymore. Layouts utilizing [floats](/en-US/docs/Learn/CSS/CSS_layout/Floats), [positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning), [flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox), or [grids](/en-US/docs/Learn/CSS/CSS_layout/Grids) should be used instead.
+Tables for layouts are a legacy method that should not be used anymore. Layouts utilizing [floats](/en-US/docs/Learn_web_development/Core/CSS_layout/Floats), [positioning](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning), [flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox), or [grids](/en-US/docs/Learn_web_development/Core/CSS_layout/Grids) should be used instead.
 
 Tables are still considered valid markup but should be used for displaying tabular data. To help the browser render your page quicker, you should avoid nesting your tables.
 

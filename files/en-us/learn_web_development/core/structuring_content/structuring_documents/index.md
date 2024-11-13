@@ -57,7 +57,7 @@ A "typical website" could be structured something like this:
 ![a simple website structure example featuring a main heading, navigation menu, main content, side bar, and footer.](sample-website.png)
 
 > [!NOTE]
-> The image above illustrates the main sections of a document, which you can define with HTML. However, the _appearance_ of the page shown here — including the layout, colors, and fonts — is achieved by applying [CSS](/en-US/docs/Learn/CSS) to the HTML.
+> The image above illustrates the main sections of a document, which you can define with HTML. However, the _appearance_ of the page shown here — including the layout, colors, and fonts — is achieved by applying [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics) to the HTML.
 
 ## HTML for structuring content
 

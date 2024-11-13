@@ -19,7 +19,7 @@ We will now learn how to use TypeScript in Svelte applications. First we'll lear
         <p>
           At minimum, it is recommended that you are familiar with the core
           <a href="/en-US/docs/Learn/HTML">HTML</a>,
-          <a href="/en-US/docs/Learn/CSS">CSS</a>, and
+          <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS</a>, and
           <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, and
           have knowledge of the
           <a

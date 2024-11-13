@@ -52,7 +52,7 @@ The specification also defines the `::details-content` and `::search-text` pseud
 
   - : Part of CSS building blocks section on selectors. This article defines what a pseudo-element is and how it can be combined with pseudo-classes and be used for generating content with `::before` and `::after` pseudo-elements.
 
-- [How to create fancy boxes using pseudo-elements](/en-US/docs/Learn/CSS/Howto/Create_fancy_boxes#pseudo-elements)
+- [How to create fancy boxes using pseudo-elements](/en-US/docs/Learn_web_development/Howto/Solve_CSS_problems/Create_fancy_boxes#pseudo-elements)
 
   - : Example of styling generated content using `::before` and `::after` pseudo-elements for visual effects.
 

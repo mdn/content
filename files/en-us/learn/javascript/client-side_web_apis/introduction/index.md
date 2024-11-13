@@ -15,7 +15,7 @@ First up, we'll start by looking at APIs from a high level — what are they, ho
       <td>
         A basic understanding of
         <a href="/en-US/docs/Learn/HTML">HTML</a>,
-        <a href="/en-US/docs/Learn/CSS">CSS</a>, and JavaScript basics (see
+        <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS</a>, and JavaScript basics (see
         <a href="/en-US/docs/Learn/JavaScript/First_steps">first steps</a>,
         <a href="/en-US/docs/Learn/JavaScript/Building_blocks"
           >building blocks</a

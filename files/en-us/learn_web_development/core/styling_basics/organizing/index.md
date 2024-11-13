@@ -398,7 +398,7 @@ If you are concerned about adding size to your stylesheets, for example, by addi
 
 This is the final part of our building blocks module, and as you can see there are many ways in which your exploration of CSS can continue from this point — but now you can go on to testing yourself with our assessments: the first one is linked below.
 
-To learn more about layout in CSS, see the [CSS Layout](/en-US/docs/Learn/CSS/CSS_layout) module.
+To learn more about layout in CSS, see the [CSS Layout](/en-US/docs/Learn_web_development/Core/CSS_layout) module.
 
 You should also now have the skills to explore the rest of the [MDN CSS](/en-US/docs/Web/CSS) material. You can look up properties and values, explore our [CSS Cookbook](/en-US/docs/Web/CSS/Layout_cookbook) for patterns to use, or continue reading in some of the specific guides, such as our [Guide to CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout).
 

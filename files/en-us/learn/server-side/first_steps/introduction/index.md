@@ -78,7 +78,7 @@ Let's now turn our attention to the code involved in server-side and client-side
 
 Code running in the browser is known as **client-side code** and is primarily concerned with improving the appearance and behavior of a rendered web page. This includes selecting and styling UI components, creating layouts, navigation, form validation, etc. By contrast, server-side website programming mostly involves choosing _which content_ is returned to the browser in response to requests. The server-side code handles tasks like validating submitted data and requests, using databases to store and retrieve data and sending the correct data to the client as required.
 
-Client-side code is written using [HTML](/en-US/docs/Learn/HTML), [CSS](/en-US/docs/Learn/CSS), and [JavaScript](/en-US/docs/Learn/JavaScript) — it is run inside a web browser and has little or no access to the underlying operating system (including limited access to the file system).
+Client-side code is written using [HTML](/en-US/docs/Learn/HTML), [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics), and [JavaScript](/en-US/docs/Learn/JavaScript) — it is run inside a web browser and has little or no access to the underlying operating system (including limited access to the file system).
 
 Web developers can't control what browser every user might be using to view a website — browsers provide inconsistent levels of compatibility with client-side code features, and part of the challenge of client-side programming is handling differences in browser support gracefully.
 

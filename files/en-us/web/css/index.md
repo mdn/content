@@ -17,26 +17,26 @@ After CSS 2.1, the scope of the specification increased significantly and the pr
 - CSS Introduction
   - : If you're new to web development, be sure to read our [CSS basics](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content) article to learn what CSS is and how to use it.
 - CSS Tutorials
-  - : Our [CSS learning area](/en-US/docs/Learn/CSS) contains a wealth of tutorials to take you from beginner level to proficiency, covering all the fundamentals.
+  - : Our [CSS learning area](/en-US/docs/Learn_web_development/Core/Styling_basics) contains a wealth of tutorials to take you from beginner level to proficiency, covering all the fundamentals.
 - CSS Reference
   - : Our [CSS reference](/en-US/docs/Web/CSS/Reference) describes every property and concept of CSS.
 
 ## Tutorials
 
-Our [CSS Learning Area](/en-US/docs/Learn/CSS) features multiple modules that teach CSS from the ground up — no previous knowledge required.
+Our [CSS Learning Area](/en-US/docs/Learn_web_development/Core/Styling_basics) features multiple modules that teach CSS from the ground up — no previous knowledge required.
 
 - [CSS Styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics)
   - : CSS (Cascading Style Sheets) is used to style and layout web pages — for example, to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features. This module provides all the CSS fundamentals you'll need for now, including syntax, features, and techniques.
 
-- [CSS styling text](/en-US/docs/Learn/CSS/Styling_text)
+- [CSS styling text](/en-US/docs/Learn_web_development/Core/Text_styling)
 
   - : With the basics of the CSS language covered, the next CSS topic for you to concentrate on is styling text — one of the most common things you'll do with CSS. Here we look at text styling fundamentals, including setting font, boldness, italics, line and letter spacing, drop shadows, and other text features. We round off the module by looking at applying custom fonts to your page, and styling lists and links.
 
-- [CSS layout](/en-US/docs/Learn/CSS/CSS_layout)
+- [CSS layout](/en-US/docs/Learn_web_development/Core/CSS_layout)
 
   - : At this point we've already looked at CSS fundamentals, how to style text, and how to style and manipulate the boxes that your content sits inside. Now it's time to look at how to place your boxes in the right place in relation to the viewport, and to each other. We have covered the necessary prerequisites so we can now dive deep into CSS layout, looking at different display settings, modern layout tools like flexbox, CSS grid, and positioning, and some of the legacy techniques you might still want to know about.
 
-- [Use CSS to solve common problems](/en-US/docs/Learn/CSS/Howto)
+- [Solve common CSS problems](/en-US/docs/Learn_web_development/Howto/Solve_CSS_problems)
   - : This module provides links to sections of content explaining how to use CSS to solve common problems when creating a web page.
 
 ## Reference

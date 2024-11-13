@@ -78,7 +78,7 @@ const myObject = {
 
 ## Basic definitions
 
-- [What is JavaScript?](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#a_high-level_definition)
+- [What is JavaScript?](/en-US/docs/Learn_web_development/Core/Scripting/What_is_JavaScript#a_high-level_definition)
 - [What is a variable?](/en-US/docs/Learn/JavaScript/First_steps/Variables#what_is_a_variable)
 - [What are strings?](/en-US/docs/Learn/JavaScript/First_steps/Strings)
 - [What is an array?](/en-US/docs/Learn/JavaScript/First_steps/Arrays#what_is_an_array)
@@ -94,8 +94,8 @@ const myObject = {
 
 ### General
 
-- [How do you add JavaScript to your page?](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#how_do_you_add_javascript_to_your_page)
-- [How do you add comments to JavaScript code?](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#comments)
+- [How do you add JavaScript to your page?](/en-US/docs/Learn_web_development/Core/Scripting/What_is_JavaScript#how_do_you_add_javascript_to_your_page)
+- [How do you add comments to JavaScript code?](/en-US/docs/Learn_web_development/Core/Scripting/What_is_JavaScript#comments)
 
 ### Variables
 

@@ -23,7 +23,7 @@ After that, we'll provide some tutorials covering the essentials of some of the 
 
 ## Prerequisites
 
-You should really learn the basics of the core web languages first before attempting to move on to learning client-side frameworks — [HTML](/en-US/docs/Learn/HTML), [CSS](/en-US/docs/Learn/CSS), and especially [JavaScript](/en-US/docs/Learn/JavaScript).
+You should really learn the basics of the core web languages first before attempting to move on to learning client-side frameworks — [HTML](/en-US/docs/Learn/HTML), [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics), and especially [JavaScript](/en-US/docs/Learn/JavaScript).
 
 Your code will be richer and more professional as a result, and you'll be able to troubleshoot problems with more confidence if you understand the fundamental web platform features that the frameworks are building on top of.
 

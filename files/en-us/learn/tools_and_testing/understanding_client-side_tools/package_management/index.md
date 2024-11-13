@@ -14,7 +14,7 @@ In this article, we'll look at package managers in some detail to understand how
       <th scope="row">Prerequisites:</th>
       <td>
         Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
-        <a href="/en-US/docs/Learn/CSS">CSS</a>, and
+        <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS</a>, and
         <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages.
       </td>
     </tr>

@@ -10,7 +10,7 @@ Client-side tooling can be intimidating, but this series of articles aims to ill
 
 ## Prerequisites
 
-You should really learn the basics of the core [HTML](/en-US/docs/Learn/HTML), [CSS](/en-US/docs/Learn/CSS), and [JavaScript](/en-US/docs/Learn/JavaScript) languages first before attempting to use the tools detailed here.
+You should really learn the basics of the core [HTML](/en-US/docs/Learn/HTML), [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics), and [JavaScript](/en-US/docs/Learn/JavaScript) languages first before attempting to use the tools detailed here.
 
 ## Guides
 

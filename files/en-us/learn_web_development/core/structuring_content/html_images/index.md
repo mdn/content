@@ -186,7 +186,7 @@ For an excellent article on the history of this feature, see [Setting height and
 >
 > If you set the image size too big, you'll end up with images that look grainy, fuzzy, or too small, and wasting bandwidth downloading an image that is not fitting the user's needs. The image may also end up looking distorted, if you don't maintain the correct {{glossary("aspect ratio")}}. You should use an image editor to put your image at the correct size before putting it on your webpage.
 >
-> If you do need to alter an image's size, you should use [CSS](/en-US/docs/Learn/CSS) instead.
+> If you do need to alter an image's size, you should use [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics) instead.
 
 ### Image titles
 
