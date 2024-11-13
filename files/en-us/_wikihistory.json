@@ -23275,10 +23275,6 @@
     "modified": "2020-10-15T22:15:39.291Z",
     "contributors": ["sideshowbarker", "mfuji09", "jpmedley"]
   },
-  "Web/API/CSS_Counter_Styles": {
-    "modified": "2020-10-15T21:49:22.666Z",
-    "contributors": ["wbamberg", "fscholz", "Sebastianz"]
-  },
   "Web/API/CSS_Font_Loading_API": {
     "modified": "2020-12-13T22:13:07.232Z",
     "contributors": [

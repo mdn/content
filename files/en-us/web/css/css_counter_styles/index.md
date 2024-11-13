@@ -44,7 +44,6 @@ No properties are defined in this module
 
 ### Interfaces and APIs
 
-- [CSS counter styles](/en-US/docs/Web/API/CSS_Counter_Styles) API
 - {{domxref("CSSCounterStyleRule")}} interface
 
 ## Guides
@@ -80,7 +79,6 @@ No properties are defined in this module
 
 ## See also
 
-- [CSS counter styles](/en-US/docs/Web/API/CSS_Counter_Styles) API
 - [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
 - [CSS pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module
 - [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module
