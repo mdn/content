@@ -89,7 +89,7 @@ place-self: unset;
 
 ## Examples
 
-### Simple demonstration
+### Basic demonstration
 
 In the following example we have a simple 2 x 2 grid layout. Initially the grid container has [`justify-items`](/en-US/docs/Web/CSS/justify-items) and [`align-items`](/en-US/docs/Web/CSS/align-items) values of `stretch` — the defaults — which causes the grid items to stretch across the entire width of their cells.
 
@@ -152,7 +152,7 @@ span {
 
 #### Result
 
-{{EmbedLiveSample('Simple_demonstration', '100%', 300)}}
+{{EmbedLiveSample('Basic_demonstration', '100%', 300)}}
 
 ## Specifications
 
