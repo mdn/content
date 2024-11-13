@@ -40,9 +40,9 @@ If you don't specify a `value`, you get an empty button:
 
 `<input type="button">` elements have no default behavior (their cousins, `<input type="submit">` and [`<input type="reset">`](/en-US/docs/Web/HTML/Element/input/reset) are used to submit and reset forms, respectively). To make buttons do anything, you have to write JavaScript code to do the work.
 
-### A simple button
+### A basic button
 
-We'll begin by creating a simple button with a {{domxref("Element/click_event", "click")}} event handler that starts our machine (well, it toggles the `value` of the button and the text content of the following paragraph):
+We'll begin by creating a basic button with a {{domxref("Element/click_event", "click")}} event handler that starts our machine (well, it toggles the `value` of the button and the text content of the following paragraph):
 
 ```html
 <form>
@@ -70,7 +70,7 @@ function updateButton() {
 
 The script gets a reference to the {{domxref("HTMLInputElement")}} object representing the `<input>` in the DOM, saving this reference in the variable `button`. {{domxref("EventTarget.addEventListener", "addEventListener()")}} is then used to establish a function that will be run when {{domxref("Element/click_event", "click")}} events occur on the button.
 
-{{EmbedLiveSample("A_simple_button", 650, 100)}}
+{{EmbedLiveSample("A_basic_button", 650, 100)}}
 
 ### Adding keyboard shortcuts to buttons
 

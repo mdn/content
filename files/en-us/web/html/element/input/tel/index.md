@@ -87,7 +87,7 @@ One of the main advantages of `<input type="tel">` is that it causes mobile brow
 | ------------------------------------------------------ | ------------------------------------------------------------ |
 | ![Firefox for Android screen shot](fx-android-tel.png) | ![Firefox for iOS screenshot](iphone-tel-keyboard-50pct.png) |
 
-### A simple tel input
+### A basic tel input
 
 In its most basic form, a tel input can be implemented like this:
 
@@ -96,7 +96,7 @@ In its most basic form, a tel input can be implemented like this:
 <input id="telNo" name="telNo" type="tel" />
 ```
 
-{{ EmbedLiveSample('A_simple_tel_input', 600, 40) }}
+{{ EmbedLiveSample('A_basic_tel_input', 600, 40) }}
 
 There is nothing magical going on here. When submitted to the server, the above input's data would be represented as, for example, `telNo=+12125553151`.
 

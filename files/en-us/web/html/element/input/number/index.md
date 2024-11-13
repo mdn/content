@@ -90,7 +90,7 @@ The `number` input type should only be used for incremental numbers, especially 
 
 Mobile browsers further help with the user experience by showing a special keyboard more suited for entering numbers when the user tries to enter a value.
 
-### A simple number input
+### A basic number input
 
 In its most basic form, a number input can be implemented like this:
 
@@ -99,7 +99,7 @@ In its most basic form, a number input can be implemented like this:
 <input id="ticketNum" type="number" name="ticketNum" value="0" />
 ```
 
-{{EmbedLiveSample('A_simple_number_input', 600, 40)}}
+{{EmbedLiveSample('A_basic_number_input', 600, 40)}}
 
 A number input is considered valid when empty and when a single number is entered, but is otherwise invalid. If the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute is used, the input is no longer considered valid when empty.
 

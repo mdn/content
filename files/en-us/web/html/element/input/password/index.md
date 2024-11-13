@@ -87,7 +87,7 @@ This does _not_ set a limit on how many characters the user can enter into the f
 
 Password input boxes generally work just like other textual input boxes; the main difference is the obscuring of the content to prevent people near the user from reading the password.
 
-### A simple password input
+### A basic password input
 
 Here we see the most basic password input, with a label established using the {{HTMLElement("label")}} element.
 
@@ -96,7 +96,7 @@ Here we see the most basic password input, with a label established using the {{
 <input id="userPassword" type="password" />
 ```
 
-{{EmbedLiveSample("A_simple_password_input", 600, 40)}}
+{{EmbedLiveSample("A_basic_password_input", 600, 40)}}
 
 ### Allowing autocomplete
 

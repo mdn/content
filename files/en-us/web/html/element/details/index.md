@@ -60,9 +60,9 @@ details.addEventListener("toggle", (event) => {
 
 ## Examples
 
-### A simple disclosure example
+### A basic disclosure example
 
-This example shows a simple `<details>` element with a `<summary>`.
+This example shows a basic `<details>` element with a `<summary>`.
 
 ```html
 <details>
@@ -77,7 +77,7 @@ This example shows a simple `<details>` element with a `<summary>`.
 
 #### Result
 
-{{EmbedLiveSample("A_simple_disclosure_example", 650, 150)}}
+{{EmbedLiveSample("A_basic_disclosure_example", 650, 150)}}
 
 ### Creating an open disclosure box
 
