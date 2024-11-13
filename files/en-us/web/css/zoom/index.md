@@ -20,9 +20,9 @@ Additionally, elements adjusted using `scale()` transform from the `center` by d
 ## Syntax
 
 ```css
-/* Keyword values (Non-standard, use with caution) */
-zoom: normal; /* Non-standard value, not recommended for use */
-zoom: reset; /* Non-standard value, not recommended for use */
+/* Non-standard keyword values */
+zoom: normal; 
+zoom: reset;
 
 /* <percentage> values */
 zoom: 50%;
