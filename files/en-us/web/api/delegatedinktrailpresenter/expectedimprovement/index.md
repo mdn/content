@@ -1,13 +1,14 @@
 ---
-title: "InkPresenter: expectedImprovement property"
+title: "DelegatedInkTrailPresenter: expectedImprovement property"
+short-title: expectedImprovement
 slug: Web/API/DelegatedInkTrailPresenter/expectedImprovement
 page-type: web-api-instance-property
-browser-compat: api.InkPresenter.expectedImprovement
+browser-compat: api.DelegatedInkTrailPresenter.expectedImprovement
 ---
 
 {{APIRef("Ink API")}}{{SeeCompatTable}}
 
-The **`expectedImprovement`** read-only property of the {{domxref("InkPresenter")}} interface returns a value, in milliseconds, indicating the latency improvement that can be expected using this presenter.
+The **`expectedImprovement`** read-only property of the {{domxref("DelegatedInkTrailPresenter")}} interface returns a value, in milliseconds, indicating the latency improvement that can be expected using this presenter.
 
 ### Value
 
@@ -27,7 +28,7 @@ async function inkInit() {
 
 ## Specifications
 
-{{Specifications}}
+The feature is no longer a part of the specification.
 
 ## Browser compatibility
 

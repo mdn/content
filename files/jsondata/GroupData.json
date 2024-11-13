@@ -921,7 +921,7 @@
     },
     "Ink API": {
       "overview": ["Ink API"],
-      "interfaces": ["Ink", "InkPresenter"],
+      "interfaces": ["DelegatedInkTrailPresenter", "Ink"],
       "methods": [],
       "properties": ["Navigator.ink"],
       "events": []

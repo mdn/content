@@ -1,13 +1,14 @@
 ---
-title: "InkPresenter: presentationArea property"
+title: "DelegatedInkTrailPresenter: presentationArea property"
+short-title: presentationArea
 slug: Web/API/DelegatedInkTrailPresenter/presentationArea
 page-type: web-api-instance-property
-browser-compat: api.InkPresenter.presentationArea
+browser-compat: api.DelegatedInkTrailPresenter.presentationArea
 ---
 
 {{APIRef("Ink API")}}{{SeeCompatTable}}
 
-The **`presentationArea`** read-only property of the {{domxref("InkPresenter")}} interface returns the {{domxref("Element")}} inside which rendering of ink strokes is confined.
+The **`presentationArea`** read-only property of the {{domxref("DelegatedInkTrailPresenter")}} interface returns the {{domxref("Element")}} inside which rendering of ink strokes is confined.
 
 If the preceding {{domxref("Ink.requestPresenter", "Ink.requestPresenter()")}} method call included a specific `presentationArea` element definition, then that will be the element returned. Otherwise, the default is returned, which is the containing viewport.
 

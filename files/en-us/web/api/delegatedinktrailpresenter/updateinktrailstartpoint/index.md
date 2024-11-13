@@ -1,13 +1,14 @@
 ---
-title: "InkPresenter: updateInkTrailStartPoint() method"
+title: "DelegatedInkTrailPresenter: updateInkTrailStartPoint() method"
+short-title: updateInkTrailStartPoint()
 slug: Web/API/DelegatedInkTrailPresenter/updateInkTrailStartPoint
 page-type: web-api-instance-method
-browser-compat: api.InkPresenter.updateInkTrailStartPoint
+browser-compat: api.DelegatedInkTrailPresenter.updateInkTrailStartPoint
 ---
 
 {{APIRef("Ink API")}}{{SeeCompatTable}}
 
-The **`updateInkTrailStartPoint()`** method of the {{domxref("InkPresenter")}} interface indicates which {{domxref("PointerEvent")}} was used as the last rendering point for the current frame, allowing the OS-level compositor to render a delegated ink trail ahead of the next pointer event being dispatched.
+The **`updateInkTrailStartPoint()`** method of the {{domxref("DelegatedInkTrailPresenter")}} interface indicates which {{domxref("PointerEvent")}} was used as the last rendering point for the current frame, allowing the OS-level compositor to render a delegated ink trail ahead of the next pointer event being dispatched.
 
 ## Syntax
 
@@ -36,7 +37,7 @@ requestPresenter(event, style)
   - : An error is thrown and the operation is aborted if the:
     - `color` property does not contain a valid CSS color code.
     - `diameter` property is not a number or less than 1.
-    - {{domxref("InkPresenter.presentationArea", "presentationArea")}} element is removed from the document before or during rendering.
+    - {{domxref("DelegatedInkTrailPresenter.presentationArea", "presentationArea")}} element is removed from the document before or during rendering.
 
 ## Examples
 
@@ -44,7 +45,7 @@ requestPresenter(event, style)
 
 In this example, we draw a trail onto a 2D canvas. Near the start of the code, we call {{domxref("Ink.requestPresenter()")}}, passing it the canvas as the presentation area for it to take care of and storing the promise it returns in the `presenter` variable.
 
-Later on, in the `pointermove` event listener, the new position of the trailhead is drawn onto the canvas each time the event fires. In addition, the {{domxref("InkPresenter")}} object returned when the `presenter` promise fulfills has its `updateInkTrailStartPoint()` method invoked; this is passed:
+Later on, in the `pointermove` event listener, the new position of the trailhead is drawn onto the canvas each time the event fires. In addition, the {{domxref("DelegatedInkTrailPresenter")}} object returned when the `presenter` promise fulfills has its `updateInkTrailStartPoint()` method invoked; this is passed:
 
 - The last trusted pointer event representing the rendering point for the current frame.
 - A `style` object containing color and diameter settings.
