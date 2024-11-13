@@ -80,6 +80,10 @@ This article provides information about the changes in Firefox 133 that affect d
 
 These features are newly shipped in Firefox 133 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
+- **contenteditable plaintext-only value:** `dom.element.contenteditable.plaintext-only.enabled`.
+
+  The `plaintext-only` value of the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) global attribute indicates that the element is editable; rich text formatting is disabled and any formatting in pasted text is automatically stripped. ([Firefox bug 1922723](https://bugzil.la/1922723).)
+
 ## Older versions
 
 {{Firefox_for_developers}}
