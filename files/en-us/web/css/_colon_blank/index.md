@@ -26,7 +26,7 @@ The **`:blank`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/P
 
 ## Examples
 
-### Simple :blank example
+### Basic :blank example
 
 In eventual supporting browsers, the `:blank` pseudo-class will enable developers to highlight in some way input controls that are not required, but still have no content filled in, perhaps as a reminder to users.
 
@@ -46,7 +46,7 @@ textarea:blank {
 
 #### Result
 
-{{EmbedLiveSample('Simple_blank_example', '100%', 150)}}
+{{EmbedLiveSample('Basic_blank_example', '100%', 150)}}
 
 ## Specifications
 
