@@ -21,7 +21,7 @@ Additionally, elements adjusted using `scale()` transform from the `center` by d
 
 ```css
 /* Non-standard keyword values */
-zoom: normal; 
+zoom: normal;
 zoom: reset;
 
 /* <percentage> values */
