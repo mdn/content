@@ -42,14 +42,17 @@ zoom: unset;
 
 ### Values
 
-- `normal`
-  - : Render this element at its normal size; equal to `zoom: 1`. Use the global {{cssxref("unset")}} keyword value instead.
-- `reset`
-  - : Resets the value to `zoom: 1` and prevents the element from being (de)magnified if the user applies non-pinch-based zooming (e.g. by pressing <kbd>Ctrl</kbd> \- <kbd>-</kbd> or <kbd>Ctrl</kbd> \+ <kbd>+</kbd> keyboard shortcuts) to the document.
 - {{cssxref("&lt;percentage&gt;")}}
   - : Zoom factor. `100%` is equivalent to `normal`. Values larger than `100%` zoom in. Values smaller than `100%` zoom out.
 - {{cssxref("&lt;number&gt;")}}
   - : Zoom factor. Equivalent to the corresponding percentage (`1.0` = `100%` = `normal`). Values larger than `1.0` zoom in. Values smaller than `1.0` zoom out.
+
+Non-standard keyword values include `reset` and `normal`. These values are not recommended. Check browser compatibility data.
+
+- `normal`
+  - : Render this element at its normal size; equal to `zoom: 1`. Use the global {{cssxref("unset")}} keyword value instead.
+- `reset`
+  - : Resets the value to `zoom: 1` and prevents the element from being (de)magnified if the user applies non-pinch-based zooming (e.g. by pressing <kbd>Ctrl</kbd> \- <kbd>-</kbd> or <kbd>Ctrl</kbd> \+ <kbd>+</kbd> keyboard shortcuts) to the document.
 
 ## Formal definition
 
@@ -57,10 +60,7 @@ zoom: unset;
 
 ## Formal syntax
 
-```plain
-zoom =
-  normal | reset | <number> | <percentage> /* Non-standard values */
-```
+{{csssyntax}}
 
 ## Examples
 
