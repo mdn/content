@@ -45,7 +45,7 @@ zoom: unset;
 - `normal`
   - : Render this element at its normal size. **Non-standard.** Avoid using this value. Consider using `unset` instead.
 - `reset`
-  - : Do not (de)magnify this element if the user applies non-pinch-based zooming (e.g. by pressing <kbd>Ctrl</kbd> \- <kbd>-</kbd> or <kbd>Ctrl</kbd> \+ <kbd>+</kbd> keyboard shortcuts) to the document. **Non-standard.** Consider using `unset` instead.
+  - : Resets the value to `zoom: 1` and prevents the element from being (de)magnified if the user applies non-pinch-based zooming (e.g. by pressing <kbd>Ctrl</kbd> \- <kbd>-</kbd> or <kbd>Ctrl</kbd> \+ <kbd>+</kbd> keyboard shortcuts) to the document.
 - {{cssxref("&lt;percentage&gt;")}}
   - : Zoom factor. `100%` is equivalent to `normal`. Values larger than `100%` zoom in. Values smaller than `100%` zoom out.
 - {{cssxref("&lt;number&gt;")}}
