@@ -21,7 +21,7 @@ You can use CSS to style the disclosure widget, and you can programmatically ope
 
 By default when closed, the widget is only tall enough to display the disclosure triangle and summary. When open, it expands to display the details contained within.
 
-Fully standards-compliant implementations automatically apply the CSS `{{cssxref("display")}}: list-item` to the {{HTMLElement("summary")}} element. You can use this or the {{cssxref("::marker")}} pseudo-element to [customize the disclosure widget](/en-US/docs/Web/HTML/Element/summary#styling_disclosure_widgets) for further details.
+Fully standards-compliant implementations automatically apply the CSS `{{cssxref("display")}}: list-item` to the {{HTMLElement("summary")}} element. You can use this or the {{cssxref("::marker")}} pseudo-element to [customize the disclosure widget](/en-US/docs/Web/HTML/Element/summary#changing_the_summarys_icon).
 
 ## Attributes
 
@@ -192,7 +192,7 @@ The selector `details[open]` can be used to style the element which is open.
 
 {{EmbedLiveSample("Customizing_the_appearance", 650, 150)}}
 
-See the {{htmlelement("summary")}} page for an [example of customizing the disclosure widget](/en-US/docs/Web/HTML/Element/summary#styling_disclosure_widgets).
+See the {{htmlelement("summary")}} page for an [example of customizing the disclosure widget](/en-US/docs/Web/HTML/Element/summary#changing_the_summarys_icon).
 
 ## Technical summary
 

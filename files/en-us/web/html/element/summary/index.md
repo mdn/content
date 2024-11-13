@@ -103,13 +103,13 @@ This example adds some semantics to the `<summary>` element to indicate the labe
 
 {{EmbedLiveSample("HTML_in_summaries", 650, 120)}}
 
-### Styling disclosure widgets
+### Changing the summary's icon
 
-The `<summary>` element's marker, the disclosure triangle, can be customized with CSS. The marker can be targeted using the {{cssxref("::marker")}} pseudo-element and element supports the {{cssxref("list-style")}} shorthand property and its longhand component properties, such as {{cssxref("list-style-type")}}. This enables changing the triangle to an image (usually with {{cssxref("list-style-image")}}) or a string (inlcuding emojis). In this example, we replace the content of one disclosure widget and remove the icon from another by setting `list-style: none`, anding a custom disclosure icon via generated content.
+The `<summary>` element's marker, the disclosure triangle, can be customized with CSS. The marker can be targeted using the {{cssxref("::marker")}} pseudo-element. which accepts the {{cssxref("list-style")}} shorthand property and its longhand component properties, such as {{cssxref("list-style-type")}}. This enables changing the triangle to an image (usually with {{cssxref("list-style-image")}}) or a string (including emojis). In this example, we replace the content of one disclosure widget and remove the icon from another by setting `list-style: none` before adding a custom disclosure icon via generated content.
 
 #### CSS
 
-In the first disclosure widget, we style the `::marker`, changing the {{cssxref("content")}} based on the `<details>` element's `[open]` attribute. For the second widget, we remove the marker with `list-style` properties, then add styled generated content with the {{cssxref("::after")}} pseudo-element. We also include styles for `::-webkit-details-marker` to target Safari. The selector for the browser-specific pseudo element is included in an {{cssxref(":is()")}} pseudo class doesn't invalidate the selector list.
+In the first disclosure widget, we style the `::marker`, changing the {{cssxref("content")}} based on the `<details>` element's `[open]` attribute. For the second widget, we remove the marker with `list-style` properties, then add styled generated content with the {{cssxref("::after")}} pseudo-element. We also include styles for `::-webkit-details-marker` to target Safari. The selector for the browser-specific pseudo-element is included in an {{cssxref(":is()")}} pseudo-class so it doesn't invalidate the selector list.
 
 ```css
 details {
@@ -152,7 +152,7 @@ details:last-of-type summary::-webkit-details-marker {
 }
 ```
 
-The CSS included [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors), the {{cssxref(":first-of-type")}} and {{cssxref(":last-of-type")}} pseudo-classes, the {{cssxref(":is()")}} pseudo-class qwhich takes a [forgiving selector list](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list), and CSS [nesting](/en-US/docs/Web/CSS/Nesting_selector).
+The CSS includes the `[open]` [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors), matching only when the `open` attribute is present (when the `<details>` are open). The {{cssxref(":first-of-type")}} and {{cssxref(":last-of-type")}} pseudo-classes target the first and sibling elements of the same type. We included the prefixed `-webkit-` pseudo-element within a {{cssxref(":is()")}} pseudo-class as it takes a [forgiving selector list](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list), so if the prefixed pseudo-element is invalid in a browser, the whole selector block will not be invalid. We also used CSS [nesting](/en-US/docs/Web/CSS/Nesting_selector). See the [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module.
 
 #### HTML
 
@@ -175,7 +175,7 @@ The CSS included [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors),
 
 #### Result
 
-{{EmbedLiveSample("Styling disclosure widgets", 650, 150)}}
+{{EmbedLiveSample("Changing the summary's icon", 650, 150)}}
 
 ## Technical summary
 
