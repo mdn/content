@@ -44,7 +44,7 @@ You can feel free to style the `<fieldset>` and `<legend>` in any way you want t
 
 ### Basic fieldset
 
-This example shows a really simple `<fieldset>` example, with a `<legend>`, and a single control inside it.
+This example shows a basic `<fieldset>` example, with a `<legend>`, and a single control inside it.
 
 ```html
 <form action="#">

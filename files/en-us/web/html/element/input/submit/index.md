@@ -167,7 +167,7 @@ Submit buttons don't participate in constraint validation; they have no real val
 
 ## Examples
 
-We've included simple examples above. There isn't really anything more to say about submit buttons. There's a reason this kind of control is sometimes called a "simple button."
+We've included basic examples above. There isn't really anything more to say about submit buttons. There's a reason this kind of control is sometimes called a "simple button."
 
 ## Technical Summary
 

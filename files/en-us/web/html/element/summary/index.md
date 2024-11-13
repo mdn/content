@@ -43,7 +43,7 @@ Below are some examples showing `<summary>` in use. You can find more examples i
 
 ### Basic example
 
-A simple example showing the use of `<summary>` in a {{HTMLElement("details")}} element:
+A basic example showing the use of `<summary>` in a {{HTMLElement("details")}} element:
 
 ```html
 <details open>

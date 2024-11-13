@@ -232,7 +232,7 @@ The [`inputmode`](/en-US/docs/Web/HTML/Element/input#inputmode) is set to `numer
 
 #### JavaScript
 
-This is just some simple code to display the entered SSN onscreen so you can see it. Obviously this defeats the purpose of a password field, but it's helpful for experimenting with the `pattern`.
+This is just some JavaScript code to display the entered SSN onscreen so you can see it. Obviously this defeats the purpose of a password field, but it's helpful for experimenting with the `pattern`.
 
 ```js
 const ssn = document.getElementById("ssn");

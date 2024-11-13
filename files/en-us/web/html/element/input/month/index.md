@@ -117,7 +117,7 @@ We'll look at basic and more complex uses of `<input type="month">`, then offer 
 
 ### Basic uses of month
 
-The simplest use of `<input type="month">` involves a basic {{HTMLElement("input")}} and {{htmlelement("label")}} element combination, as seen below:
+The most basic use of `<input type="month">` involves a basic {{HTMLElement("input")}} and {{htmlelement("label")}} element combination, as seen below:
 
 ```html
 <form>

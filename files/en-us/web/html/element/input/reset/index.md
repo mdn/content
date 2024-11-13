@@ -103,7 +103,7 @@ Buttons don't participate in constraint validation; they have no real value to b
 
 ## Examples
 
-We've included simple examples above. There isn't really anything more to say about reset buttons.
+We've included basic examples above. There isn't really anything more to say about reset buttons.
 
 ## Technical summary
 

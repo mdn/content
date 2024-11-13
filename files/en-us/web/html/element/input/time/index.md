@@ -118,7 +118,7 @@ When `any` is set as the value for `step`, the default 60 seconds is used, and t
 
 ### Basic uses of time
 
-The simplest use of `<input type="time">` involves a basic `<input>` and {{htmlelement("label")}} element combination, as seen below:
+The most basic use of `<input type="time">` involves a basic `<input>` and {{htmlelement("label")}} element combination, as seen below:
 
 ```html
 <form>
