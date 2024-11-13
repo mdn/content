@@ -42,7 +42,7 @@ No properties are defined in this module
   - {{cssxref("@counter-style/speak-as", "speak-as")}}
   - {{cssxref("@counter-style/fallback", "fallback")}}
 
-### Interfaces and APIs
+### Interfaces
 
 - {{domxref("CSSCounterStyleRule")}} interface
 
@@ -69,7 +69,7 @@ No properties are defined in this module
 - {{cssxref("::before")}} pseudo-element
 - {{cssxref("::marker")}} pseudo-element
 
-[CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content)
+[CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module:
 
 - {{cssxref("content")}} property
 
