@@ -186,8 +186,7 @@ Sometimes it is not possible to avoid losing keyboard accessibility. You might h
 Text alternatives are very important for accessibility — if a person has a visual or hearing impairment that stops them being able to see or hear some content, then this is a problem. The simplest text alternative available is the humble `alt` attribute, which we should include on all images that contain relevant content. This should contain a description of the image that successfully conveys its meaning and content on the page, to be picked up by a screen reader and read out to the user.
 
 > [!NOTE]
-> For more information, read [Text alternatives](/en-US/docs/Learn/Accessibility/HTML#text_alternatives) and
-> [An alt Decision Tree](https://www.w3.org/WAI/tutorials/images/decision-tree/)
+> For more information, read [Text alternatives](/en-US/docs/Learn/Accessibility/HTML#text_alternatives) and [An alt Decision Tree](https://www.w3.org/WAI/tutorials/images/decision-tree/) to learn how to use an alt attribute for images in various situations.
 
 Missing alt text can be tested for in a number of ways, for example using accessibility [Auditing tools](#auditing_tools).
 
