@@ -3,10 +3,13 @@ title: "DelegatedInkTrailPresenter: expectedImprovement property"
 short-title: expectedImprovement
 slug: Web/API/DelegatedInkTrailPresenter/expectedImprovement
 page-type: web-api-instance-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.DelegatedInkTrailPresenter.expectedImprovement
 ---
 
-{{APIRef("Ink API")}}{{SeeCompatTable}}
+{{APIRef("Ink API")}}{{Deprecated_header}}{{Non-Standard_Header}}
 
 The **`expectedImprovement`** read-only property of the {{domxref("DelegatedInkTrailPresenter")}} interface returns a value, in milliseconds, indicating the latency improvement that can be expected using this presenter.
 

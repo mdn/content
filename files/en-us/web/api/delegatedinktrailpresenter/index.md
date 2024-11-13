@@ -15,7 +15,7 @@ The **`DelegatedInkTrailPresenter`** interface of the [Ink API](/en-US/docs/Web/
 
 ## Instance properties
 
-- {{domxref("DelegatedInkTrailPresenter.expectedImprovement", "expectedImprovement")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("DelegatedInkTrailPresenter.expectedImprovement", "expectedImprovement")}} {{Deprecated_Inline}} {{Non-standard_Inline}} {{ReadOnlyInline}}
   - : Returns a value, in milliseconds, indicating the latency improvement that can be expected using this presenter.
 - {{domxref("DelegatedInkTrailPresenter.presentationArea", "presentationArea")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns the {{domxref("Element")}} inside which rendering of ink strokes is confined.

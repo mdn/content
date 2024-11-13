@@ -26,9 +26,9 @@ The entry point is the {{domxref("Navigator.ink")}} property, which returns an {
 
 ## Interfaces
 
-- {{domxref("Ink")}}
+- {{domxref("Ink")}} {{Experimental_Inline}}
   - : Provides access to {{domxref("DelegatedInkTrailPresenter")}} objects for the application to use to render the strokes.
-- {{domxref("DelegatedInkTrailPresenter")}}
+- {{domxref("DelegatedInkTrailPresenter")}} {{Experimental_Inline}}
   - : Instructs the OS-level compositor to render ink strokes between pointer event dispatches.
 
 ### Extensions to other interfaces
