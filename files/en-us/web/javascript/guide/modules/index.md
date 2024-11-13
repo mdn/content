@@ -101,7 +101,7 @@ export { name, draw, reportArea, reportPerimeter };
 
 ## Importing features into your script
 
-Once you've exported some features out of your module, you need to import them into your script to be able to use them. One way to do this is as follows:
+Once you've exported some features out of your module, you need to import them into your script to be able to use them. The simplest way to do this is as follows:
 
 ```js
 import { name, draw, reportArea, reportPerimeter } from "./modules/square.js";
