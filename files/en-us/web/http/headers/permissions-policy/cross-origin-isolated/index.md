@@ -11,7 +11,7 @@ browser-compat: http.headers.Permissions-Policy.cross-origin-isolated
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `cross-origin-isolated` directive controls whether the current document is allowed to be cross-origin isolated.
 
-Specifically, where a defined policy blocks use of this feature, the {{domxref("Window.crossOriginIsolated")}} and {{domxref("WorkerGlobalScope.crossOriginIsolated")}} properties will always return `false`, regardless of of the {{HTTPHeader("Cross-Origin-Embedder-Policy")}} and {{HTTPHeader("Cross-Origin-Opener-Policy")}} headers.
+Specifically, where a defined policy blocks use of this feature, the {{domxref("Window.crossOriginIsolated")}} and {{domxref("WorkerGlobalScope.crossOriginIsolated")}} properties will always return `false`, regardless of the {{HTTPHeader("Cross-Origin-Embedder-Policy")}} and {{HTTPHeader("Cross-Origin-Opener-Policy")}} headers.
 
 ## Syntax
 
