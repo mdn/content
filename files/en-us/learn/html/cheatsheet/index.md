@@ -176,7 +176,7 @@ see &#x3C;cite>The Monster Book of Monsters&#x3C;/cite>.</pre
       <td id="wbr-example">
         <pre class="brush: html">
 &#x3C;div style="width: 200px">
-  Llanfair&#x3C;wbr>pwllgwyngyllgogerychwyrngogogoch.
+  Llanfair&#x3C;wbr>pwllgwyngyll&#x3C;wbr>gogerychwyrndrobwllllantysiliogogogoch.
 &#x3C;/div></pre
         >
         {{EmbedLiveSample("wbr-example", 100, 80)}}

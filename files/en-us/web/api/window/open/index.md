@@ -91,7 +91,10 @@ open(url, target, windowFeatures)
 
 ### Return value
 
-If the browser successfully opens the new browsing context, a [`WindowProxy`](/en-US/docs/Glossary/WindowProxy) object is returned. The returned reference can be used to access properties and methods of the new context as long as it complies with [the same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) security requirements.
+If the browser successfully opens the new browsing context, a [`WindowProxy`](/en-US/docs/Glossary/WindowProxy) object is returned.
+The returned reference can be used to access properties and methods of the new context as long as it complies with [the same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) security requirements.
+
+If the {{httpheader("Cross-Origin-Opener-Policy")}} HTTP header is being used, and the document policies are such that the document is opened in a new {{glossary("Browsing context","browsing context group")}}, references to the opened window are severed and the returned object will indicate that the opened window is closed ({{domxref("Window.closed","closed")}} is `true`).
 
 `null` is returned if the browser fails to open the new browsing context, for example because it was blocked by a browser popup blocker.
 

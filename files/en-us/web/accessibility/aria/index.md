@@ -54,7 +54,7 @@ All content that is available to non-assistive technology users must be made ava
 
 It would have been much simpler to use the native {{HTMLElement('progress')}} element instead:
 
-```HTML
+```html
 <progress id="percent-loaded" value="75" max="100">75 %</progress>
 ```
 

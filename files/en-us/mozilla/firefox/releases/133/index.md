@@ -22,6 +22,14 @@ This article provides information about the changes in Firefox 133 that affect d
 
 ### JavaScript
 
+- Support for {{jsxref("Uint8Array")}} methods to ease conversions between {{glossary("base64")}}- and hex-encoded strings and byte arrays. ([Firefox bug 1917885](https://bugzil.la/1917885) and [Firefox bug 1862220](https://bugzil.la/1862220)).
+
+  The new methods include:
+
+  - {{jsxref("Uint8Array.fromBase64()")}} and {{jsxref("Uint8Array.fromHex()")}} static methods for constructing a new `Uint8Array` object from a base64- and hex-encoded string, respectively.
+  - {{jsxref("Uint8Array.prototype.setFromBase64()")}}, and {{jsxref("Uint8Array.prototype.setFromHex()")}} instance methods for populating an existing `Uint8Array` object with bytes from a base64- or hex-encoded string.
+  - {{jsxref("Uint8Array.prototype.toBase64()")}} and {{jsxref("Uint8Array.prototype.toHex()")}} instance methods, which return a base64- and hex- encoded string from the data in a `Uint8Array` object.
+
 #### Removals
 
 ### SVG
@@ -62,6 +70,8 @@ This article provides information about the changes in Firefox 133 that affect d
 
 ## Changes for add-on developers
 
+- Fixed a bug in the {{WebExtAPIRef("declarativeNetRequest")}} API that prevented rule registration after a browser restart ([Firefox bug 1921353](https://bugzil.la/1921353)). This bug affected extensions that rely on {{WebExtAPIRef("declarativeNetRequest.updateDynamicRules")}} or {{WebExtAPIRef("declarativeNetRequest.updateEnabledRulesets")}}. This fix has also been backported to Firefox ESR 128.5 and Firefox ESR 115.18.
+
 ### Removals
 
 ### Other
@@ -69,6 +79,10 @@ This article provides information about the changes in Firefox 133 that affect d
 ## Experimental web features
 
 These features are newly shipped in Firefox 133 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **contenteditable plaintext-only value:** `dom.element.contenteditable.plaintext-only.enabled`.
+
+  The `plaintext-only` value of the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) global attribute indicates that the element is editable; rich text formatting is disabled and any formatting in pasted text is automatically stripped. ([Firefox bug 1922723](https://bugzil.la/1922723).)
 
 ## Older versions
 
