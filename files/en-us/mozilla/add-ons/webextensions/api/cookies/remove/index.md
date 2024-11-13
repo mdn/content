@@ -9,7 +9,7 @@ browser-compat: webextensions.api.cookies.remove
 
 The **`remove()`** method of the {{WebExtAPIRef("cookies")}} API deletes a cookie, given its name and URL.
 
-The call only succeeds if you include the "cookies" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) in your [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file, as well as [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the given URL specified in its manifest.
+To use this method, in its [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file, an add-on must specify the "cookies" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) and have the url of the site whose cookie it wants to remove in [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions).
 
 If there is more than one cookie with the same name for a URL, the cookie with the longest path is deleted. For cookies with the same path length, the cookie with the earliest creation time is deleted. If no matching cookie is found, `null` is returned.
 

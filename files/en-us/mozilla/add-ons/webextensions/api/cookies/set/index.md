@@ -9,7 +9,7 @@ browser-compat: webextensions.api.cookies.set
 
 The **`set()`** method of the {{WebExtAPIRef("cookies")}} API sets a cookie containing the specified cookie data. This method is equivalent to issuing an HTTP `Set-Cookie` header during a request to a given URL.
 
-The call only succeeds if you include the "cookies" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) in your [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file, as well as [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the given URL specified in its manifest. The given URL also needs the necessary permissions to create a cookie with the given parameters.
+To use this method, in its [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file, an add-on must specify the "cookies" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) and have the url of the site whose cookie it wants to set in [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions).
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
