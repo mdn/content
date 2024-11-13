@@ -100,7 +100,7 @@ If you choose to use `<button>` elements to create the buttons in your form, kee
 
 ### A basic submit button
 
-We'll begin by creating a form with a simple submit button:
+We'll begin by creating a form with a basic submit button:
 
 ```html
 <form>
