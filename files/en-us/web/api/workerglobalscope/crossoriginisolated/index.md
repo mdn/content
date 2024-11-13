@@ -23,8 +23,9 @@ Cross-origin isolated documents operate with fewer restrictions when using the f
 
 A document will be cross-origin isolated if it is returned with an HTTP response that includes the headers:
 
-- {{HTTPHeader("Cross-Origin-Opener-Policy")}} header with the directive `same-origin`
-- {{HTTPHeader("Cross-Origin-Embedder-Policy")}} header with the directive `require-corp` or `credentialless`
+- {{HTTPHeader("Cross-Origin-Opener-Policy")}} header with the directive `same-origin`.
+- {{HTTPHeader("Cross-Origin-Embedder-Policy")}} header with the directive `require-corp` or `credentialless`.
+- {{HTTPHeader("Permissions-Policy")}} header {{HTTPHeader("Permissions-Policy/cross-origin-isolated","cross-origin-isolated")}} directive doesn't block use of this feature.
 
 ## Value
 

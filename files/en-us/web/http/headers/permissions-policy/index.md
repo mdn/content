@@ -105,6 +105,10 @@ You can specify
 
   - : Controls access to the [Compute Pressure API](/en-US/docs/Web/API/Compute_Pressure_API).
 
+- {{httpheader('Permissions-Policy/cross-origin-isolated','cross-origin-isolated')}} {{Experimental_Inline}}
+
+  - : Controls whether the current document is allowed to be cross-origin isolated.
+
 - {{HTTPHeader('Permissions-Policy/display-capture', 'display-capture')}} {{experimental_inline}}
 
   - : Controls whether or not the current document is permitted to use the {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} method to capture screen contents. When this policy is disabled, the promise returned by `getDisplayMedia()` will reject with a `NotAllowedError` {{DOMxRef("DOMException")}} if permission is not obtained to capture the display's contents.
