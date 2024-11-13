@@ -259,4 +259,7 @@ zoomControl.addEventListener("change", updateZoom);
 ## See also
 
 - [`zoom` entry in CSS-Tricks' CSS Almanac](https://css-tricks.com/almanac/properties/z/zoom/)
-- [CSS Unset keyword](/en-US/docs/Web/CSS/unset) - Information on the `unset` keyword, a recommended alternative for resetting properties, such as `zoom`, that are deprecated.
+- {{cssxref("transform")}}
+- {{cssxref("scale")}} 
+- {{cssxref("unset")}} keyword
+- [Legay `zoom` property](https://css-tricks.com/almanac/properties/z/zoom/) via CSS-Tricks (2013)
