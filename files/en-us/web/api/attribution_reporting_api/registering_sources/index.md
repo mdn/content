@@ -167,7 +167,7 @@ The browser stores the attribution source data when the browser receives the res
 A {{htmlelement("script")}} example might look like so:
 
 ```html
-<script src="advertising-script.js" attributionsrc />
+<script src="advertising-script.js" attributionsrc></script>
 ```
 
 Or via the {{domxref("HTMLScriptElement.attributionSrc")}} property:

@@ -25,11 +25,11 @@ The `search` role is [a landmark](/en-US/docs/Web/Accessibility/ARIA/Roles#3._la
 
 When a {{HTMLElement('form')}} is a search form, use the `search` role instead of [`form`](/en-US/docs/Web/Accessibility/ARIA/Roles/form_role) role.
 
-```HTML
+```html
 <form id="search" role="search">
   <label for="search-input">Search this site</label>
-  <input type="search" id="search-input" name="search" spellcheck="false">
-  <input value="Submit" type="submit">
+  <input type="search" id="search-input" name="search" spellcheck="false" />
+  <input value="Submit" type="submit" />
 </form>
 ```
 

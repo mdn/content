@@ -45,10 +45,10 @@ const reportId = 1;
 for (let i = 0; i < 10; i++) {
   // Turn off
   await device.sendFeatureReport(reportId, Uint32Array.from([0, 0]));
-  await waitFor(100);
+  await new Promise((resolve) => setTimeout(resolve, 100));
   // Turn on
   await device.sendFeatureReport(reportId, Uint32Array.from([512, 0]));
-  await waitFor(100);
+  await new Promise((resolve) => setTimeout(resolve, 100));
 }
 ```
 

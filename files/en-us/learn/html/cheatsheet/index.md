@@ -176,7 +176,7 @@ see &#x3C;cite>The Monster Book of Monsters&#x3C;/cite>.</pre
       <td id="wbr-example">
         <pre class="brush: html">
 &#x3C;div style="width: 200px">
-  Llanfair&#x3C;wbr>pwllgwyngyllgogerychwyrngogogoch.
+  Llanfair&#x3C;wbr>pwllgwyngyll&#x3C;wbr>gogerychwyrndrobwllllantysiliogogogoch.
 &#x3C;/div></pre
         >
         {{EmbedLiveSample("wbr-example", 100, 80)}}
@@ -291,9 +291,9 @@ an extended quotation.&#x3C;/blockquote></pre
       <td>An unordered list</td>
       <td>{{HTMLElement("ul")}}</td>
       <td id="ul-example">
-        <pre class="brush: html">&#x3C;ul><br>
-  &#x3C;li>I'm an item&#x3C;/li><br>
-  &#x3C;li>I'm another item&#x3C;/li><br>
+        <pre class="brush: html">&#x3C;ul>
+  &#x3C;li>I'm an item&#x3C;/li>
+  &#x3C;li>I'm another item&#x3C;/li>
 &#x3C;/ul></pre>
         {{EmbedLiveSample("ul-example", 100, 100)}}
       </td>
@@ -302,9 +302,9 @@ an extended quotation.&#x3C;/blockquote></pre
       <td>An ordered list</td>
       <td>{{HTMLElement("ol")}}</td>
       <td id="ol-example">
-        <pre class="brush: html">&#x3C;ol><br>
-  &#x3C;li>I'm the first item&#x3C;/li><br>
-  &#x3C;li>I'm the second item&#x3C;/li><br>
+        <pre class="brush: html">&#x3C;ol>
+  &#x3C;li>I'm the first item&#x3C;/li>
+  &#x3C;li>I'm the second item&#x3C;/li>
 &#x3C;/ol></pre>
         {{EmbedLiveSample("ol-example", 100, 100)}}
       </td>
@@ -314,7 +314,7 @@ an extended quotation.&#x3C;/blockquote></pre
       <td>{{HTMLElement("dl")}}</td>
       <td id="dl-example">
         <pre class="brush: html">&#x3C;dl>
-  &#x3C;dt>A Term&#x3C;/dt><br>
+  &#x3C;dt>A Term&#x3C;/dt>
   &#x3C;dd>Definition of a term&#x3C;/dd>
   &#x3C;dt>Another Term&#x3C;/dt>
   &#x3C;dd>Definition of another term&#x3C;/dd>
