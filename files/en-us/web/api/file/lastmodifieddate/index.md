@@ -20,8 +20,8 @@ A {{JSXRef("Global_Objects/Date", "Date")}} object indicating the date and time 
 ## Examples
 
 ```js
-// fileInput is a HTMLInputElement: <input type="file" multiple id="myfileinput">
-const fileInput = document.getElementById("myfileinput");
+// fileInput is a HTMLInputElement: <input type="file" multiple id="my-file-input">
+const fileInput = document.getElementById("my-file-input");
 
 for (const file of fileInput.files) {
   console.log(

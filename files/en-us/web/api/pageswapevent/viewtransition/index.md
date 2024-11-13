@@ -3,12 +3,10 @@ title: "PageSwapEvent: viewTransition property"
 short-title: viewTransition
 slug: Web/API/PageSwapEvent/viewTransition
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.PageSwapEvent.viewTransition
 ---
 
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+{{APIRef("HTML DOM")}}
 
 The **`viewTransition`** read-only property of the {{domxref("PageRevealEvent")}} interface contains a {{domxref("ViewTransition")}} object representing the active view transition for the cross-document navigation.
 

@@ -42,37 +42,8 @@ Consider the event sequence generated when we interact with the <kbd>Shift</kbd>
 
 Try experimenting using the following two test cases:
 
-1. Press and hold the
-
-   <kbd>Shift</kbd>
-
-   key, then press
-
-   <kbd>2</kbd>
-
-   and release it. Next, release the
-
-   <kbd>Shift</kbd>
-
-   key.
-
-2. Press and hold the
-
-   <kbd>Shift</kbd>
-
-   key, then press and hold
-
-   <kbd>2</kbd>
-
-   . Release the
-
-   <kbd>Shift</kbd>
-
-   key. Finally, release
-
-   <kbd>2</kbd>
-
-   .
+1. Press and hold the <kbd>Shift</kbd> key, then press <kbd>2</kbd> and release it. Next, release the <kbd>Shift</kbd> key.
+2. Press and hold the <kbd>Shift</kbd> key, then press and hold <kbd>2</kbd>. Release the <kbd>Shift</kbd> key. Finally, release <kbd>2</kbd>.
 
 ### HTML
 
@@ -179,7 +150,7 @@ As we finally release the `shift` key, another {{domxref("Element/keyup_event", 
 
 ### Case 2
 
-When the shift key is pressed, a {{domxref("Element/keydown_event", "keydown")}} event is first fired, and the `key` property value is set to be the string `Shift`. As we keep holding this key, the keydown event does not continue to fire repeatedly because it produced no character key.
+When the shift key is pressed, a {{domxref("Element/keydown_event", "keydown")}} event is first fired, and the `key` property value is set to be the string `Shift`. As we keep holding this key, the {{domxref("Element/keydown_event", "keydown")}} event does not continue to fire repeatedly because it produced no character key.
 
 When `key 2` is pressed, another {{domxref("Element/keydown_event", "keydown")}} event is fired for this new key press, and the `key` property value for the event is set to be the string `@` for the U.S keyboard type and `"` for the UK keyboard type, because of the active modifier `shift` key. The {{domxref("Element/beforeinput_event", "beforeinput")}} and {{domxref("Element/input_event", "input")}} events are fired next because a character key has been produced. As we keep holding the key, the {{domxref("Element/keydown_event", "keydown")}} event continues to fire repeatedly and the {{domxref("KeyboardEvent.repeat")}} property is set to `true`. The {{domxref("Element/beforeinput_event", "beforeinput")}} and {{domxref("Element/input_event", "input")}} events are fired repeatedly as well.
 

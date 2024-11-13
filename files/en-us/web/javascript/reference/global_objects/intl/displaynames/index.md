@@ -132,4 +132,5 @@ currencyNames.of("CNY"); // "人民幣"
 
 ## See also
 
+- [Polyfill of `Intl.DisplayNames` in FormatJS](https://formatjs.github.io/docs/polyfills/intl-displaynames/)
 - {{jsxref("Intl")}}

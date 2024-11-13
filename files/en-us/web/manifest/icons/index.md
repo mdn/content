@@ -30,13 +30,13 @@ The `icons` manifest member is used to specify one or more image files that defi
 /* Two icons with various properties */
 "icons": [
   {
-  "src": "icon/lowres.png",
-  "sizes": "48x48"
+    "src": "icon/low-res.png",
+    "sizes": "48x48"
   },
   {
-  "src": "maskable_icon.png",
-  "sizes": "48x48",
-  "type": "image/png"
+    "src": "maskable_icon.png",
+    "sizes": "48x48",
+    "type": "image/png"
   }
 ]
 ```
@@ -111,7 +111,7 @@ The context in which an icon can be used is determined by the browser and the op
 
 The browser's ability to fetch an icon image is governed by the Content Security Policy ({{Glossary("CSP")}}) of the manifest's owner document, specifically by the [`img-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) directive. This security aspect is related to the `src` property.
 
-For example, if the `img-src` directive in a CSP header specifies `icons.example.com`, icons from only that domain would be fetchable. In a manifest with two icons, one from `icons.example.com/lowres` and another from `other.com/hi-res`, only the former would be fetched successfully because of CSP restrictions.
+For example, if the `img-src` directive in a CSP header specifies `icons.example.com`, icons from only that domain would be fetchable. In a manifest with two icons, one from `icons.example.com/low-res` and another from `other.com/hi-res`, only the former would be fetched successfully because of CSP restrictions.
 
 ## Performance considerations
 
@@ -136,12 +136,12 @@ This example shows how to declare multiple icons for different scenarios and dev
 {
   "icons": [
     {
-      "src": "icon/lowres.webp",
+      "src": "icon/low-res.webp",
       "sizes": "48x48",
       "type": "image/webp"
     },
     {
-      "src": "icon/lowres",
+      "src": "icon/low-res",
       "sizes": "48x48"
     },
     {

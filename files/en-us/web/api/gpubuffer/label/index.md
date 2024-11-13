@@ -29,9 +29,9 @@ const output = device.createBuffer({
   usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_SRC,
 });
 
-output.label = "mybuffer";
+output.label = "my_buffer";
 
-console.log(output.label); // "mybuffer"
+console.log(output.label); // "my_buffer"
 ```
 
 Setting a label via the originating {{domxref("GPUDevice.createBuffer()")}} call, and then getting it via `GPUBuffer.label`:
@@ -40,10 +40,10 @@ Setting a label via the originating {{domxref("GPUDevice.createBuffer()")}} call
 const output = device.createBuffer({
   size: BUFFER_SIZE,
   usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_SRC,
-  label: "mybuffer",
+  label: "my_buffer",
 });
 
-console.log(output.label); // "mybuffer"
+console.log(output.label); // "my_buffer"
 ```
 
 ## Specifications

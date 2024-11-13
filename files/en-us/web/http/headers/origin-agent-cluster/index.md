@@ -9,7 +9,7 @@ browser-compat: http.headers.Origin-Agent-Cluster
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-The **`Origin-Agent-Cluster`** HTTP response header is used to request that the associated {{domxref("Document")}} should be placed in an _origin-keyed [agent cluster](https://tc39.es/ecma262/#sec-agent-clusters)_. This means that operating system resources (for example, the operating system process) used to evaluate the document should be shared only with other documents from the same {{glossary("origin")}}.
+The HTTP **`Origin-Agent-Cluster`** {{Glossary("response header")}} is used to request that the associated {{domxref("Document")}} should be placed in an _origin-keyed [agent cluster](https://tc39.es/ecma262/#sec-agent-clusters)_. This means that operating system resources (for example, the operating system process) used to evaluate the document should be shared only with other documents from the same {{glossary("origin")}}.
 
 The effect of this is that a resource-intensive document will be less likely to degrade the performance of documents from other origins.
 
@@ -49,7 +49,7 @@ To avoid this kind of unpredictable situation, you should set this header for al
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -63,7 +63,6 @@ Origin-Agent-Cluster: <boolean>
 ### Directives
 
 - `<boolean>`
-
   - : `?1` indicates that the associated {{domxref("Document")}} should be placed in an origin-keyed agent cluster.
     Values other than `?1` are ignored (e.g., the `?0` structured field for false).
 

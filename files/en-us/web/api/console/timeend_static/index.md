@@ -15,8 +15,8 @@ See [Timers](/en-US/docs/Web/API/console#timers) in the documentation for detail
 ## Syntax
 
 ```js-nolint
-timeEnd()
-timeEnd(label)
+console.timeEnd()
+console.timeEnd(label)
 ```
 
 ### Parameters

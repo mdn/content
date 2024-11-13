@@ -117,4 +117,6 @@ See whether the text is wrapped before "々", "ぁ" and "。".
 
 {{Compat}}
 
-- [CSS and International text](https://www.w3.org/International/articles/css3-text/)
+## See also
+
+- [CSS and international text](https://www.w3.org/International/articles/css3-text/) on W3C

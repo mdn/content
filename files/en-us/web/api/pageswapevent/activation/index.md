@@ -3,12 +3,10 @@ title: "PageSwapEvent: activation property"
 short-title: activation
 slug: Web/API/PageSwapEvent/activation
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.PageSwapEvent.activation
 ---
 
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+{{APIRef("HTML DOM")}}
 
 The **`activation`** read-only property of the {{domxref("PageSwapEvent")}} interface contains a {{domxref("NavigationActivation")}} object containing the navigation type and current and destination document history entries for a same-origin navigation.
 

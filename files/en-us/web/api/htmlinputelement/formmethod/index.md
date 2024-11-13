@@ -8,7 +8,7 @@ browser-compat: api.HTMLInputElement.formMethod
 
 {{APIRef("HTML DOM")}}
 
-The **`formMethod`** property of the {{domxref("HTMLInputElement")}} interface is the {{Glossary("HTTP")}} method used to submit the {{HtmlElement("form")}} if the {{HTMLElement("input")}} element is the control that sumbits the form. It reflects the value of the `<input>`'s [`formmethod`](/en-US/docs/Web/HTML/Element/input#formmethod) attribute.
+The **`formMethod`** property of the {{domxref("HTMLInputElement")}} interface is the {{Glossary("HTTP")}} method used to submit the {{HtmlElement("form")}} if the {{HTMLElement("input")}} element is the control that submits the form. It reflects the value of the `<input>`'s [`formmethod`](/en-US/docs/Web/HTML/Element/input#formmethod) attribute.
 
 This property is valid only for [`submit`](/en-US/docs/Web/HTML/Element/input/submit) and [`image`](/en-US/docs/Web/HTML/Element/input/image) `<input>` elements.
 

@@ -170,7 +170,7 @@ One of the most useful features of this metadata is to control the _default orde
 So as an example, if we chose to sort books like this by default:
 
 ```python
-ordering = ['title', '-pubdate']
+ordering = ['title', '-publish_date']
 ```
 
 the books would be sorted alphabetically by title, from A-Z, and then by publication date inside each title, from newest to oldest.
@@ -207,7 +207,7 @@ def get_absolute_url(self):
 ```
 
 > [!NOTE]
-> Assuming you will use URLs like `/myapplication/mymodelname/2` to display individual records for your model (where "2" is the `id` for a particular record), you will need to create a URL mapper to pass the response and id to a "model detail view" (which will do the work required to display the record). The `reverse()` function above is able to "reverse" your URL mapper (in the above case named _'model-detail-view'_) in order to create a URL of the right format.
+> Assuming you will use URLs like `/my-application/my-model-name/2` to display individual records for your model (where "2" is the `id` for a particular record), you will need to create a URL mapper to pass the response and id to a "model detail view" (which will do the work required to display the record). The `reverse()` function above is able to "reverse" your URL mapper (in the above case named _'model-detail-view'_) in order to create a URL of the right format.
 >
 > Of course to make this work you still have to write the URL mapping, view, and template!
 
@@ -468,7 +468,7 @@ class Author(models.Model):
         return f'{self.last_name}, {self.first_name}'
 ```
 
-All of the fields/methods should now be familiar. The model defines an author as having a first name, last name, and dates of birth and death (both optional). It specifies that by default the `__str__()` returns the name in _last name_, _firstname_ order. The `get_absolute_url()` method reverses the `author-detail` URL mapping to get the URL for displaying an individual author.
+All of the fields/methods should now be familiar. The model defines an author as having a first name, last name, and dates of birth and death (both optional). It specifies that by default the `__str__()` returns the name in _last name_, _first name_ order. The `get_absolute_url()` method reverses the `author-detail` URL mapping to get the URL for displaying an individual author.
 
 ## Re-run the database migrations
 
