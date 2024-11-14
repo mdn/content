@@ -14,10 +14,10 @@ It is a required descriptor; if missing or invalid, the entire `@property` rule 
 ## Syntax
 
 ```css
-/* Basic data type */
+/* A data type name */
 syntax: "<color>";
 
-/* Multiple data types */
+/* A '|' combinator for multiple data types */
 syntax: "<length> | <percentage>";
 
 /* Space-separated list of values */
