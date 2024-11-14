@@ -906,7 +906,7 @@ checkBox2.addEventListener("change", () => {
 
 Associated CSS property: {{cssxref("font-variant-east-asian")}}
 
-This allows access to various alternate forms of glyphs within a font. The example below shows a string of glyphs with only the OpenType set 'jis78' enabled. Uncheck the box below and you'll see more characters displayed. Click "Play" in the code blocks below to edit the example in the MDN Playground:
+This allows access to various alternate forms of glyphs within a font. The example below shows a string of normal glyphs. Uncheck the box below and you'll see characters with only the `jis78` glyphs. Click "Play" in the code blocks below to edit the example in the MDN Playground:
 
 ```html hidden live-sample___font-variant-east-asian-example
 <fieldset>
@@ -915,7 +915,7 @@ This allows access to various alternate forms of glyphs within a font. The examp
     <p>唖 芦 溢 茨 鰯 嘘 欝 厩 噂</p>
   </div>
   <input type="checkbox" name="checkbox1" id="checkbox1" value="on" checked />
-  <label for="checkbox1">Features active</label>
+  <label for="checkbox1">Features disabled</label>
 </fieldset>
 
 <fieldset>
@@ -924,7 +924,7 @@ This allows access to various alternate forms of glyphs within a font. The examp
     <p>唖 芦 溢 茨 鰯 嘘 欝 厩 噂</p>
   </div>
   <input type="checkbox" name="checkbox2" id="checkbox2" value="on" checked />
-  <label for="checkbox2">Features active</label>
+  <label for="checkbox2">Features disabled</label>
 </fieldset>
 ```
 
@@ -963,17 +963,17 @@ label {
 
 ```css live-sample___font-variant-east-asian-example
 .container1 * {
-  font-variant-east-asian: jis78;
+  font-variant-east-asian: normal;
 }
 .inactive.container1 * {
-  font-variant-east-asian: normal;
+  font-variant-east-asian: jis78;
 }
 
 .container2 * {
-  font-feature-settings: "jp78";
+  font-feature-settings: "jp78" 0;
 }
 .inactive.container2 * {
-  font-feature-settings: "jp78" 0;
+  font-feature-settings: "jp78";
 }
 ```
 
