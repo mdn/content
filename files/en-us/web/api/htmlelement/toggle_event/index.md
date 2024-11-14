@@ -71,7 +71,7 @@ function log(text) {
 
 #### JavaScript
 
-The code gets adds an event listener for the `toggle` event and logs the state.
+The code adds an event listener for the `toggle` event and logs the state.
 
 ```js
 const popover = document.getElementById("mypopover");
