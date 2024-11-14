@@ -50,12 +50,10 @@ getContext(contextType, contextAttributes)
 
     - `alpha`
       - : Boolean that indicates if the canvas contains an alpha channel. If set to `false`, the browser now knows that the backdrop is always opaque, which can speed up drawing of transparent content and images then.
-    - `willReadFrequently` {{non-standard_inline}} (Firefox only)
+    - `willReadFrequently`
       - : Boolean that indicates whether or not a lot of read-back operations are planned.
         This will force the use of a software (instead of hardware accelerated) 2D canvas and can save memory when calling {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}} frequently.
-        This option is only available, if the flag `gfx.canvas.willReadFrequently.enable` is set to `true` (which, by default, is only the case for B2G/Firefox OS).
-    - `storage` {{non-standard_inline}} (Blink only)
-      - : String that indicates which storage is used ("persistent" by default).
+        In Firefox this option is only available if the flag `gfx.canvas.willReadFrequently.enable` is set to `true` (which, by default, is only the case for B2G/Firefox OS).
 
     WebGL context attributes:
 

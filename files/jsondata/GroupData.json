@@ -254,13 +254,6 @@
       "properties": ["Navigator.credentials"],
       "events": []
     },
-    "CSS Counter Styles": {
-      "overview": ["CSS Counter Styles"],
-      "interfaces": ["CSSCounterStyleRule"],
-      "methods": [],
-      "properties": [],
-      "events": []
-    },
     "CSS Font Loading API": {
       "overview": ["CSS Font Loading API"],
       "interfaces": ["FontFace", "FontFaceSet", "FontFaceSetLoadEvent"],
@@ -1040,6 +1033,9 @@
       ],
       "methods": ["HTMLVideoElement.getVideoPlaybackQuality()"],
       "properties": [
+        "HTMLMediaElement.buffered",
+        "HTMLMediaElement.seekable",
+        "HTMLMediaElement.srcObject",
         "AudioTrack.sourceBuffer",
         "VideoTrack.sourceBuffer",
         "TextTrack.sourceBuffer"

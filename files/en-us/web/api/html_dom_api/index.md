@@ -171,7 +171,6 @@ These interfaces offer access to the browser window and document that contain th
 
 #### Obsolete web app and browser integration interfaces
 
-- {{DOMxRef("ApplicationCache")}} {{deprecated_inline}}
 - {{DOMxRef("Plugin")}} {{deprecated_inline}}
 - {{DOMxRef("PluginArray")}} {{deprecated_inline}}
 
