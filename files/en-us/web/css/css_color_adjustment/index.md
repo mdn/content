@@ -38,6 +38,7 @@ Together with the {{CSSxRef("@media")}} features {{cssxref("@media/prefers-color
   - {{cssxref("column-rule-color")}}
   - {{cssxref("fill")}}
   - {{cssxref("flood-color")}}
+  - {{cssxref("flood-opacity")}}
   - {{cssxref("lighting-color")}}
   - {{cssxref("outline-color")}}
   - {{cssxref("scrollbar-color")}}
