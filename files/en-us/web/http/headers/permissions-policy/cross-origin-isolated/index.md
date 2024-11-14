@@ -20,7 +20,8 @@ Permissions-Policy: cross-origin-isolated=<allowlist>;
 ```
 
 - `<allowlist>`
-  - : A list of origins for which permission is granted to use the feature. See [`Permissions-Policy` > Syntax](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#syntax) for more details.
+  - : A list of origins for which permission is granted to use the feature.
+     See [`Permissions-Policy` > Syntax](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#syntax) for more details.
 
 ## Default policy
 
