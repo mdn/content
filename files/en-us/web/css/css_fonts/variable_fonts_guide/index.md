@@ -800,9 +800,6 @@ body {
   font-stretch: 100%;
   font-weight: 375;
 }
-```
-
-```css live-sample___sample-page-example
 .demo2 {
   --text-wght: 375;
   --text-wdth: 100;
