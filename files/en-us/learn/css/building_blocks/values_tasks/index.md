@@ -9,8 +9,8 @@ page-type: learn-module-assessment
 The aim of this skill test is to assess whether you understand different types of [values and units used in CSS properties](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units).
 
 > [!NOTE]
-> You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
->
+> Click **"Play"** in the code blocks below to edit the examples in the MDN Playground.
+> You can also copy the code (click the clipboard icon) and paste it into an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 > If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Task 1
@@ -21,17 +21,71 @@ In this task, the first list item has been given a background color using a hex 
 - The third should use HSL color.
 - The fourth should use RGB color but with the alpha channel set to `0.6`.
 
-You can find conversions for the hex color at [this link](https://convertingcolors.com/hex-color-86DEFA.html). You need to figure out how to use the values in CSS. Your final result should look like the image below:
+You [can convert the hex color at convertingcolors.com](https://convertingcolors.com/hex-color-86DEFA.html). You need to figure out how to use the values in CSS. Your final result should look like the image below:
 
 ![Four list items. The first three with the same background color and the last with a lighter background.](mdn-value-color.png)
 
-Try updating the live code below to recreate the finished example:
+Try to update the code below to recreate the finished example:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/values/color.html", '100%', 1000)}}
+```html live-sample___color
+<ul>
+  <li class="hex">hex color</li>
+  <li class="rgb">RGB color</li>
+  <li class="hsl">HSL color</li>
+  <li class="transparency">Alpha value 0.6</li>
+</ul>
+```
 
-> [!CALLOUT]
->
-> [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/values/color-download.html) to work in your own editor or in an online editor.
+```css hidden live-sample___color
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 1em;
+  padding: 0.5em;
+}
+```
+
+```css live-sample___color
+.hex {
+  background-color: #86defa;
+}
+
+/* Add styles here */
+```
+
+{{EmbedLiveSample("color", "", "300px")}}
+
+<details>
+<summary>Click here to show the solution</summary>
+
+By using [a color conversion tool](https://convertingcolors.com/hex-color-86DEFA.html), you should be equipped to use different [color functions](/en-US/docs/Web/CSS/color_value#syntax) to define the same color in different ways:
+
+```css
+.hex {
+  background-color: #86defa;
+}
+
+.rgb {
+  background-color: rgb(134 222 250);
+}
+
+.hsl {
+  background-color: hsl(194 92% 75%);
+}
+
+.transparency {
+  background-color: rgb(134 222 250 / 60%);
+}
+```
+
+</details>
 
 ## Task 2
 
@@ -46,13 +100,68 @@ Your final result should look like the image below:
 
 ![Some text at varying sizes.](mdn-value-length.png)
 
-Try updating the live code below to recreate the finished example:
+Try to update the code below to recreate the finished example:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/values/length.html", '100%', 1000)}}
+```html live-sample___length
+<h1>Level 1 heading</h1>
+<p>
+  Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+  daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+</p>
+<h2>Level 2 heading</h2>
+<p>
+  Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+  tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+  Dandelion cucumber earthnut pea peanut soko zucchini.
+</p>
+```
 
-> [!CALLOUT]
->
-> [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/values/length-download.html) to work in your own editor or in an online editor.
+```css hidden live-sample___length
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+```
+
+```css live-sample___length
+h1 {
+}
+
+h2 {
+}
+
+p {
+}
+
+h1 + p {
+}
+```
+
+{{EmbedLiveSample("length", "", "420px")}}
+
+<details>
+<summary>Click here to show the solution</summary>
+
+You can use the following length values:
+
+```css
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+p {
+  font-size: 16px;
+}
+
+h1 + p {
+  font-size: 120%;
+}
+```
+
+</details>
 
 ## Task 3
 
@@ -62,10 +171,43 @@ Your final result should look like the image below:
 
 ![A stat centered horizontally in a box and a short distance from the top of the box.](mdn-value-position.png)
 
-Try updating the live code below to recreate the finished example:
+Try to update the code below to recreate the finished example:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/values/position.html", '100%', 800)}}
+```html live-sample___position
+<div class="box"></div>
+```
 
-> [!CALLOUT]
->
-> [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/values/position-download.html) to work in your own editor or in an online editor.
+```css hidden live-sample___position
+.box {
+  border: 5px solid #000;
+  height: 350px;
+}
+```
+
+```css live-sample___position
+.box {
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/purple-star.png);
+  background-repeat: no-repeat;
+}
+```
+
+{{EmbedLiveSample("position", "", "400px")}}
+
+<details>
+<summary>Click here to show the solution</summary>
+
+Use `background-position` with ther `center` keyword and a percentage:
+
+```css
+.box {
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/purple-star.png);
+  background-repeat: no-repeat;
+  background-position: center 20%;
+}
+```
+
+</details>
+
+## See also
+
+- [CSS building blocks](/en-US/docs/Learn/CSS/Building_blocks)

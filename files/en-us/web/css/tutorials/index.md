@@ -36,7 +36,7 @@ After the release of CSS 2 (Level 1), new features have been added to CSS.
 Some of them are _fancy_ and are pretty self-contained.
 They are easy to use for anybody with a fair knowledge of basic concepts.
 
-- [CSS Counter Styles](/en-US/docs/Web/API/CSS_Counter_Styles)
+- [CSS Counter Styles](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
   - : Counting items and pages is an easy task in CSS. Learn to use {{cssxref("counter-reset")}}, {{cssxref("counter-increment")}}, {{cssxref("counters", "counters()")}}, and {{cssxref("counter", "counter()")}}.
 - [CSS Animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
   - : CSS Animations allow you to define configurations of style, as [keyframes](/en-US/docs/Web/CSS/@keyframes), and to transition between them defining an animation.

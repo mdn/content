@@ -37,7 +37,7 @@ page-type: firefox-release-notes
 - The {{domxref("BlobEvent")}} interface has been implemented ([Firefox bug 834165](https://bugzil.la/834165)).
 - The properties `HTMLMediaElement.crossorigin` and `HTMLInputElement.inputmode` has been removed to match the spec in {{domxref("HTMLMediaElement.crossOrigin")}} and `HTMLInputElement.inputMode`, respectively ([Firefox bug 847370](https://bugzil.la/847370) and [Firefox bug 850346](https://bugzil.la/850346)).
 - WebRTC: the Media Stream API and Peer Connection API are now supported by default.
-- Web Components: the {{domxref("Document.register")}} method has been implemented ([Firefox bug 783129](https://bugzil.la/783129)).
+- Web Components: the `Document.register()` method has been implemented ([Firefox bug 783129](https://bugzil.la/783129)).
 - The `ProgressEvent.initProgressEvent()` constructor method has been removed. Use the standard constructor, {{domxref("ProgressEvent.ProgressEvent", "ProgressEvent()")}} to construct and initialize {{domxref("ProgressEvent")}} ([Firefox bug 843489](https://bugzil.la/843489)).
 - Manipulated data associated with a {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}, or {{domxref("Element/paste_event", "paste")}} event can now be accessed via the {{domxref("ClipboardEvent.clipboardData")}} property ([Firefox bug 407983](https://bugzil.la/407983)).
 - The {{domxref("HTMLTimeElement")}} interface has been implemented ([Firefox bug 629801](https://bugzil.la/629801)).
