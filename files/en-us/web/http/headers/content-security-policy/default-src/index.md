@@ -52,9 +52,7 @@ This directive may have one of the following values:
   - : No resources may be loaded. The single quotes are mandatory.
 - `<source-expression-list>`
 
-  - : A space-separated list of _source expression_ values. Resources may be loaded if they match any of the given source expressions.
-
-    Source expressions are specified as keyword values or URL patterns: the syntax for each source expression is given in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources).
+  - : A space-separated list of _source expression_ values. Resources may be loaded if they match any of the given source expressions. For this directive, any of the values listed in [Source expression syntax](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#source_expression_syntax) are applicable.
 
 ## Examples
 
