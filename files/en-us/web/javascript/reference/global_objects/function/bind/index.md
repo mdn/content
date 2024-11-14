@@ -91,7 +91,7 @@ The bound function also inherits the [prototype chain](/en-US/docs/Web/JavaScrip
 
 ### Creating a bound function
 
-The most basic use of `bind()` is to make a function that, no matter how it is called, is called with a particular `this` value.
+The most common use of `bind()` is to make a function that, no matter how it is called, is called with a particular `this` value.
 
 A common mistake for new JavaScript programmers is to extract a method from an object, then to later call that function and expect it to use the original object as its `this` (e.g., by using the method in callback-based code).
 

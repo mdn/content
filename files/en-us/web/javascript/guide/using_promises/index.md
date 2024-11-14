@@ -174,7 +174,7 @@ doSomething()
   });
 ```
 
-Even better, you can flatten the nested chain into a single chain, which many find simpler and makes error handling easier. The details are discussed in the [Nesting](#nesting) section below.
+Even better, you can flatten the nested chain into a single chain, which is simpler and makes error handling easier. The details are discussed in the [Nesting](#nesting) section below.
 
 ```js
 doSomething()
