@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fútbol en primera persona</title>
+  <style>
+    canvas {
+      width: 100vw;
+      height: 100vh;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
+  <script src="src/game.js"></script>
+</body>
+</html>
+// src/game.js
+import Phaser from 'phaser';
+class Game extends Phaser.Scene {
+  constructor() {
+    super('Game');
+  }
+  preload() {
+    this.load.image('player', 'assets/player.png');
+  }
+  create() {
+    const player = this.add.sprite(100, 100, 'player');
+    player.setScale(2);
+  }
+  update(time, delta) {
+    // Actualiza el juego aquí
+  }
+}
+const config = {
+  type: Phaser.AUTO,
+  parent: 'canvas',
+  width: 800,
+  height: 600,
+  scene: [Game],
+};
+new Phaser.Game(config);
+this.load.image('player', 'assets/player.png');
+this.load.image('player', 'player.png');
+npx webpack   
