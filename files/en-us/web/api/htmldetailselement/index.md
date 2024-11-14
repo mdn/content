@@ -37,12 +37,6 @@ This example uses the `HTMLElement` {{domxref("HTMLElement/toggle_event", "toggl
 #### HTML
 
 ```html
-<aside id="log">
-  <p>Open chapters:</p>
-  <div data-id="ch1" hidden>I</div>
-  <div data-id="ch2" hidden>II</div>
-  <div data-id="ch3" hidden>III</div>
-</aside>
 <section id="summaries">
   <p>Chapter summaries:</p>
   <details id="ch1">
@@ -61,6 +55,12 @@ This example uses the `HTMLElement` {{domxref("HTMLElement/toggle_event", "toggl
     of the brilliancy of his former fortunes.
   </details>
 </section>
+<aside id="log">
+  <p>Open chapters:</p>
+  <div data-id="ch1" hidden>I</div>
+  <div data-id="ch2" hidden>II</div>
+  <div data-id="ch3" hidden>III</div>
+</aside>
 ```
 
 #### CSS
@@ -68,7 +68,6 @@ This example uses the `HTMLElement` {{domxref("HTMLElement/toggle_event", "toggl
 ```css
 body {
   display: flex;
-  flex-direction: row-reverse;
 }
 
 #log {
