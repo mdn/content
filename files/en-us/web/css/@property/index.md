@@ -27,7 +27,8 @@ The custom property name is a [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-iden
 
 - {{cssxref("@property/syntax","syntax")}}
   - : A string that describes the allowed value types for the registered custom property.
-    The allowed value types include basic data types such as `<color>`, `<length>`, and `<number>`, which can be either used alone or multiplied and combined in different ways.
+    May be a data type name (such as `<color>`, `<length>`, or `<number>`, etc.), with multipliers (`+`, `#`) and combinators (`|`), or a custom ident.
+    See the [syntax](/en-US/docs/Web/CSS/@property/syntax) descriptor page for more details.
 - {{cssxref("@property/inherits","inherits")}}
   - : A boolean value that controls whether the custom property registration specified by `@property` inherits by default.
 - {{cssxref("@property/initial-value","initial-value")}}
