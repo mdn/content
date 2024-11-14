@@ -167,7 +167,7 @@ While many fonts have a particular weight corresponding to one of the numbers in
 
 For TrueType or OpenType variable fonts, the "wght" variation is used to implement varying widths.
 
-This demo loads with `font-weight: 500;` set. Change the value of the `font-weight` property to see the weight of the text change. Click "Play" in the code blocks below to edit the example in the MDN Playground:
+This demo loads with `font-weight: 500;` set. Change the value of the `font-weight` property in the `.sample` selector to see the weight of the text change (e.g., 200, 700). Click "Play" in the code blocks below to edit the example in the MDN Playground:
 
 ```html live-sample___font-weight-example
 <p class="sample">
@@ -186,6 +186,7 @@ This demo loads with `font-weight: 500;` set. Change the value of the `font-weig
 
 .sample {
   text-transform: uppercase;
+  font-weight: 500;
   font:
     1.5rem "MutatorSans",
     sans-serif;

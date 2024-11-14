@@ -90,9 +90,6 @@ This example shows how to use [`image-set()`](https://drafts.csswg.org/css-image
 
 {{EmbedLiveSample("image-set-example", "", "250px")}}
 
-> [!NOTE]
-> In the above example, the `-webkit` prefixed version is also used to support Chrome and Safari. In Firefox 90, support was added for `-webkit-image-set()` as an alias to `image-set()` (in order to provide compat where developers had not added the standard property).
-
 ### Using image-set() to provide alternative image formats
 
 In the next example the `type()` function is used to serve the image in AVIF and JPEG formats. If the browser supports avif, it will choose that version. Otherwise it will use the jpeg version.
@@ -118,8 +115,6 @@ In the next example the `type()` function is used to serve the image in AVIF and
 ```
 
 {{EmbedLiveSample("image-set-type-example", "", "250px")}}
-
-{{EmbedGHLiveSample("css-examples/images/image-set-type.html", '100%', 600)}}
 
 ## Specifications
 
