@@ -18,8 +18,9 @@ sidebar:
         title: Forums
       - link: https://stackoverflow.com/questions/tagged/firefox-addon
         title: Stack_Overflow
-      - link: /Mozilla/Add-ons#contact_us
-        title: "#Contact_us"
+      - link: /Mozilla/Add-ons
+        title: Contact_us
+        hash: "#contact_us"
 
 l10n:
   en-US:
@@ -30,7 +31,8 @@ l10n:
     Blog: Add-ons blog
     Forums: Add-on forums
     Stack_Overflow: Stack Overflow
-    "#Contact_us": Contact us
+    Contact_us: Contact us
+    "#contact_us": contact_us
   fr:
     WebExtensions: WebExtensions
     Themes: Thèmes
@@ -38,7 +40,8 @@ l10n:
     Channels: Canaux de discussions
     Blog: Blog extensions
     Forums: Forum extensions
-    "#Contact_us": Nous contacter
+    Contact_us: Nous contacter
+    "#contact_us": nous_contacter
   ja:
     WebExtensions: ブラウザー拡張機能
     Themes: テーマ
@@ -46,7 +49,8 @@ l10n:
     Channels: チャンネル
     Blog: ブログ
     Forums: フォーラム
-    "#Contact_us": コンタクト
+    Contact_us: コンタクト
+    "#contact_us": 連絡先
   ko:
     WebExtensions: 브라우저 확장 기능
     Themes: 테마
@@ -54,7 +58,8 @@ l10n:
     Channels: 채널
     Blog: 부가 기능 블로그
     Forums: 부가 기능 포럼
-    "#Contact_us": 연락하기
+    Contact_us: 연락하기
+    "#contact_us": 연락하기
   zh-CN:
     WebExtensions: 浏览器扩展程序
     Themes: 主题
@@ -62,7 +67,8 @@ l10n:
     Channels: 渠道
     Blog: 附加组件博客
     Forums: 附加组件论坛
-    "#Contact_us": 联系我们
+    Contact_us: 联系我们
+    "#contact_us": 联系我们
   es:
     WebExtensions: Extensiones de navegador
     Themes: Temas
@@ -70,4 +76,5 @@ l10n:
     Channels: Canales de discusión
     Blog: Blog de complementos
     Forums: Foro de complementos
-    "#Contact_us": Contáctenos
+    Contact_us: Contáctenos
+    "#contact_us": Contáctenos
