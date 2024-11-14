@@ -406,6 +406,7 @@ Nyquist
 Nystrom
 OASYS
 octocat
+Oddbird
 Odelola
 Odenwald
 Oeschger
@@ -500,6 +501,7 @@ Shireen
 sideshowbarker
 Silverlight
 Sintel
+Siouxsie
 Siri
 Sitepoint
 Sivonen
