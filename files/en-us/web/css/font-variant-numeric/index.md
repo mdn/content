@@ -107,7 +107,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground:
 }
 ```
 
-{{EmbedLiveSample("font-variant-numeric-example", "", "200px")}}
+{{EmbedLiveSample("font-variant-numeric-example")}}
 
 ## Specifications
 
