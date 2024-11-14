@@ -21,7 +21,7 @@ Common JavaScript engines include:
 ## See also
 
 - [JavaScript engine](https://en.wikipedia.org/wiki/JavaScript_engine) on Wikipedia
-- [Browser-Based vs. Non-Browser Engines](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview#javascript_implementations)
+- [JavaScript implementations](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview#javascript_implementations)
 - Related glossary terms:
   - {{glossary("Engine")}}
   - {{glossary("JavaScript")}}
