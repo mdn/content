@@ -264,7 +264,7 @@ This behavior is useful if you want to target flex items using JavaScript to sho
 In the following live example, I have a non-wrapped flex container. The third item has more content than the others yet is set to `visibility: collapse`; therefore, the flex container is retaining a _strut_ of the height required to display this item. If you remove `visibility: collapse` from the CSS or change the value to `visible`, you will see the item appear, and the space is redistributed between non-collapsed items; the height of the flex container should not change.
 
 > [!NOTE]
-> Use Firefox for the below two examples as Chrome and Safari treat collapse as hidden.
+> Use Firefox for the example below as other common browsers treat `collapse` as `hidden`.
 
 ```html live-sample___visibility-collapse
 <div class="box">
@@ -293,24 +293,26 @@ In the following live example, I have a non-wrapped flex container. The third it
 
 {{EmbedLiveSample("visibility-collapse")}}
 
-When dealing with multiple-line flex containers however you need to understand that the wrapping is re-done _after_ collapsing. So the browser needs to re-do the wrapping behavior to account for the new space that the collapsed item has left in the inline direction.
+Note that multi-line flex containers rewrap their items after removing collapsed items from rendering. The new space that a collapsed item leaves in the inline direction may cause non-collapsed items to be placed in a different line than if the item were not collapsed. Because each line is laid out like an independent single-line flex container and its composition may change after collapsing, its cross-axis size may change too.
 
-This means that items might end up on a different line to the one they started on. In the case of an item being shown and hidden it could well cause the items to end up in a different row.
+The following example shows this behavior. The fifth flex item is collapsed, so it occupies zero horizontal space, and so there is enough space to place it on the first row after the fourth item, and so the first row becomes tall enough to fit the three lines of text that the fifth item would have had. Then, if you uncollapse the item (e.g. by removing the `collapse` class), there is no longer enough horizontal space for it on the first row, and it moves to the second. This causes the first row to be only as tall as necessary to fit its new contents (one line) and the second row to be taller instead. Note also that the last flex item is pushed on to a new row, making the entire flex container taller than it was before.
 
-I have created this behavior in the next live example. You can see how the stretching changes row based on the location of the collapsed item. If you add more content to the second item, it changes row once it gets long enough. That top row then only becomes as tall as a single line of text.
+> [!NOTE]
+> Use Firefox for the example below as other common browsers treat `collapse` as `hidden`.
 
 ```html live-sample___wrapped-visibility-collapse
 <div class="box">
   <div>One</div>
-  <div>Add more text to this box to make it grow</div>
-  <div class="hide">Three <br />has <br />extra <br />text</div>
-  <div>Four</div>
-  <div>Five</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four four four four four four four</div>
+  <div class="collapse">Five <br />is <br />taller</div>
   <div>Six</div>
   <div>Seven</div>
   <div>Eight</div>
   <div>Nine</div>
   <div>Ten</div>
+  <div>Eleven is longer</div>
 </div>
 ```
 
@@ -328,7 +330,7 @@ I have created this behavior in the next live example. You can see how the stret
   background-color: rgb(96 139 168 / 0.2);
   flex: 1 1 auto;
 }
-.hide {
+.collapse {
   visibility: collapse;
 }
 ```
