@@ -59,7 +59,7 @@ async (param1, param2, ...paramN) => {
 
 ## Description
 
-Let's decompose a traditional anonymous function down to the arrow function step-by-step. Each step along the way is a valid arrow function.
+Let's decompose a traditional anonymous function down to the simplest arrow function step-by-step. Each step along the way is a valid arrow function.
 
 > [!NOTE]
 > Traditional function expressions and arrow functions have more differences than their syntax. We will introduce their behavior differences in more detail in the next few subsections.
