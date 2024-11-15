@@ -37640,16 +37640,6 @@
       "chharvey"
     ]
   },
-  "Web/API/HTMLDetailsElement/toggle_event": {
-    "modified": "2020-10-15T22:11:35.633Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "chrisdavidmills",
-      "mfluehr",
-      "Claas"
-    ]
-  },
   "Web/API/HTMLDialogElement": {
     "modified": "2020-10-15T21:29:11.074Z",
     "contributors": [
