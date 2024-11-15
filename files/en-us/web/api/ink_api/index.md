@@ -22,7 +22,7 @@ The Ink API significantly reduces this latency by allowing browsers to bypass th
 > [!NOTE]
 > Compositors are part of the rendering machinery that draws the UI to the screen in a browser or operating system. See [Inside look at modern web browser (part 3)](https://developer.chrome.com/blog/inside-browser-part3/) for some interesting insights into how a compositor functions inside a web browser.
 
-The entry point is the {{domxref("Navigator.ink")}} property, which returns an {{domxref("Ink")}} object for the current document. The {{domxref("Ink.requestPresenter","Ink.requestPresenter()")}} method returns a {{jsxref("Promise")}} that fulfills with an {{domxref("DelegatedInkTrailPresenter")}} object instance. This instructs the OS-level compositor to render ink strokes between pointer event dispatches in the next available frame in each case.
+The entry point is the {{domxref("Navigator.ink")}} property, which returns an {{domxref("Ink")}} object for the current document. The {{domxref("Ink.requestPresenter","Ink.requestPresenter()")}} method returns a {{jsxref("Promise")}} that fulfills with a {{domxref("DelegatedInkTrailPresenter")}} object instance. This instructs the OS-level compositor to render ink strokes between pointer event dispatches in the next available frame in each case.
 
 ## Interfaces
 

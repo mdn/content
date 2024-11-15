@@ -10,7 +10,7 @@ browser-compat: api.Ink.requestPresenter
 
 {{APIRef("Ink API")}}{{SeeCompatTable}}
 
-The **`requestPresenter()`** method of the {{domxref("Ink")}} interface returns a {{jsxref("Promise")}} that fulfills with an {{domxref("DelegatedInkTrailPresenter")}} object to handle rendering strokes.
+The **`requestPresenter()`** method of the {{domxref("Ink")}} interface returns a {{jsxref("Promise")}} that fulfills with a {{domxref("DelegatedInkTrailPresenter")}} object to handle rendering strokes.
 
 ## Syntax
 
@@ -27,7 +27,7 @@ requestPresenter(param)
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves to an {{domxref("DelegatedInkTrailPresenter")}} object instance.
+A {{jsxref("Promise")}} that resolves to a {{domxref("DelegatedInkTrailPresenter")}} object instance.
 
 ### Exceptions
 
