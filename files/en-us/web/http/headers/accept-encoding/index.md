@@ -7,7 +7,9 @@ browser-compat: http.headers.Accept-Encoding
 
 {{HTTPSidebar}}
 
-The HTTP **`Accept-Encoding`** {{Glossary("request header")}} indicates the content encoding (usually a compression algorithm) that the client can understand. The server uses [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) to select one of the proposals and informs the client of that choice with the {{HTTPHeader("Content-Encoding")}} response header.
+The HTTP **`Accept-Encoding`** {{glossary("request header", "request")}} and {{glossary("response header")}} indicates the content encoding (usually a compression algorithm) that the recipient can understand.
+In requests, the server uses [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) to select one of the encoding proposals from the client and informs the client of that choice with the {{HTTPHeader("Content-Encoding")}} response header.
+In responses, it provides information about which content encodings the server can understand in messages to the requested resource, so that the encoding can be used in subsequent requests to the resource. For example, this might be sent in the response to a `PUT` request to a resource that used an unsupported encoding.
 
 Even if both the client and the server support the same compression algorithms, the server may choose not to compress the body of a response if the `identity` value is also acceptable.
 This happens in two common cases:
@@ -26,7 +28,7 @@ As long as the `identity;q=0` or `*;q=0` directives do not explicitly forbid the
   <tbody>
     <tr>
       <th scope="row">Header type</th>
-      <td>{{Glossary("Request header")}}</td>
+      <td>{{Glossary("Request header")}}, {{Glossary("Response header")}}</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
@@ -64,7 +66,7 @@ Accept-Encoding: deflate, gzip;q=1.0, *;q=0.5
   - : A compression format that uses the [Zstandard](https://en.wikipedia.org/wiki/Zstd) algorithm.
 - `identity`
   - : Indicates the identity function (that is, without modification or compression). This value is always considered as acceptable, even if omitted.
-- `*`
+- `*` (wildcard)
   - : Matches any content encoding not already listed in the header. This is the default value if the header is not present. This directive does not suggest that any algorithm is supported but indicates that no preference is expressed.
 - `;q=` (qvalues weighting)
   - : Any value is placed in an order of preference expressed using a relative [quality value](/en-US/docs/Glossary/Quality_values) called _weight_.
@@ -83,7 +85,7 @@ Accept-Encoding: gzip, deflate, br, zstd
 
 ### Weighted Accept-Encoding values
 
-The following request header shows `Accept-Encoding` preferences using a quality value between `0` (lowest priority) and `1` (highest-priority).
+The following header shows `Accept-Encoding` preferences using a quality value between `0` (lowest priority) and `1` (highest-priority).
 Brotli compression is weighted at `1.0`, making `br` the client's first choice, followed by `gzip` at `0.8` priority, and then any other content encoding at `0.1`:
 
 ```http

@@ -701,8 +701,6 @@
 /en-US/docs/CSS/flex-shrink	/en-US/docs/Web/CSS/flex-shrink
 /en-US/docs/CSS/flex-wrap	/en-US/docs/Web/CSS/flex-wrap
 /en-US/docs/CSS/float	/en-US/docs/Web/CSS/float
-/en-US/docs/CSS/flood-color	/en-US/docs/Web/SVG/Attribute/flood-color
-/en-US/docs/CSS/flood-opacity	/en-US/docs/Web/SVG/Attribute/flood-opacity
 /en-US/docs/CSS/font	/en-US/docs/Web/CSS/font
 /en-US/docs/CSS/font-family	/en-US/docs/Web/CSS/font-family
 /en-US/docs/CSS/font-feature-settings	/en-US/docs/Web/CSS/font-feature-settings
@@ -733,7 +731,6 @@
 /en-US/docs/CSS/left	/en-US/docs/Web/CSS/left
 /en-US/docs/CSS/length	/en-US/docs/Web/CSS/length
 /en-US/docs/CSS/letter-spacing	/en-US/docs/Web/CSS/letter-spacing
-/en-US/docs/CSS/lighting-color	/en-US/docs/Web/SVG/Attribute/lighting-color
 /en-US/docs/CSS/line-height	/en-US/docs/Web/CSS/line-height
 /en-US/docs/CSS/linear-gradient	/en-US/docs/Web/CSS/gradient/linear-gradient
 /en-US/docs/CSS/list-style	/en-US/docs/Web/CSS/list-style
@@ -7692,6 +7689,7 @@
 /en-US/docs/Web/API/CSSUnitValue/CSSUnitValue()	/en-US/docs/Web/API/CSSUnitValue/CSSUnitValue
 /en-US/docs/Web/API/CSSUnitValue/CSSUnitValue.CSSUnitValue	/en-US/docs/Web/API/CSSUnitValue/CSSUnitValue
 /en-US/docs/Web/API/CSSValueList/CSSValueList.length	/en-US/docs/Web/API/CSSValueList/length
+/en-US/docs/Web/API/CSS_Counter_Styles	/en-US/docs/Web/CSS/CSS_counter_styles
 /en-US/docs/Web/API/CSS_Properties_and_Values_API/_Using_the_CSS_properties_and_values_API	/en-US/docs/Web/API/CSS_Properties_and_Values_API/guide
 /en-US/docs/Web/API/CSS_Typed_Object_Model_API	/en-US/docs/Web/API/CSS_Object_Model#CSS_Typed_Object_Model
 /en-US/docs/Web/API/Cache/Cache.addAll()	/en-US/docs/Web/API/Cache/addAll
@@ -11626,8 +11624,6 @@
 /en-US/docs/Web/CSS/flex-line-pack	/en-US/docs/Web/CSS/align-content
 /en-US/docs/Web/CSS/flex-order	/en-US/docs/Web/CSS/order
 /en-US/docs/Web/CSS/flex-pack	/en-US/docs/Web/CSS/justify-content
-/en-US/docs/Web/CSS/flood-color	/en-US/docs/Web/SVG/Attribute/flood-color
-/en-US/docs/Web/CSS/flood-opacity	/en-US/docs/Web/SVG/Attribute/flood-opacity
 /en-US/docs/Web/CSS/font-size/font-optical-sizing	/en-US/docs/Web/CSS/font-optical-sizing
 /en-US/docs/Web/CSS/gradient/conic-gradient()	/en-US/docs/Web/CSS/gradient/conic-gradient
 /en-US/docs/Web/CSS/gradient/linear-gradient()	/en-US/docs/Web/CSS/gradient/linear-gradient
@@ -11651,7 +11647,6 @@
 /en-US/docs/Web/CSS/inset-area_value	/en-US/docs/Web/CSS/position-area_value
 /en-US/docs/Web/CSS/justify-tracks	/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout
 /en-US/docs/Web/CSS/kerning	/en-US/docs/Web/CSS/font-kerning
-/en-US/docs/Web/CSS/lighting-color	/en-US/docs/Web/SVG/Attribute/lighting-color
 /en-US/docs/Web/CSS/linear-gradient	/en-US/docs/Web/CSS/gradient/linear-gradient
 /en-US/docs/Web/CSS/linear-gradient()	/en-US/docs/Web/CSS/gradient/linear-gradient
 /en-US/docs/Web/CSS/margin-new	/en-US/docs/Web/CSS/margin

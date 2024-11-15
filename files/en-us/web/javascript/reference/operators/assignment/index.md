@@ -65,7 +65,7 @@ const x = 5,
 
 ## Examples
 
-### Simple assignment and chaining
+### Basic assignment and chaining
 
 ```js
 let x = 5;

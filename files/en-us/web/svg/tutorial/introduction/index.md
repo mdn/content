@@ -16,7 +16,7 @@ SVG came about in 1999 after several competing formats had been submitted to the
 
 ## Basic ingredients
 
-[HTML](/en-US/docs/Web/HTML) provides elements for defining headers, paragraphs, tables, and so on. In much the same way, SVG provides elements for circles, rectangles, and simple and complex curves. A simple SVG document consists of nothing more than the {{ SVGElement('svg') }} root element and several basic shapes that build a graphic together. In addition, there is the {{ SVGElement('g') }} element, which is used to group several basic shapes together.
+[HTML](/en-US/docs/Web/HTML) provides elements for defining headers, paragraphs, tables, and so on. In much the same way, SVG provides elements for circles, rectangles, and simple and complex curves. A basic SVG document consists of nothing more than the {{ SVGElement('svg') }} root element and several basic shapes that build a graphic together. In addition, there is the {{ SVGElement('g') }} element, which is used to group several basic shapes together.
 
 Starting from this basic structure, the SVG image can become arbitrarily complex. SVG supports gradients, rotations, filter effects, animations, interactivity with JavaScript, and so on. But all these extra features of the language rely on this relatively small set of elements to define the graphics area.
 
