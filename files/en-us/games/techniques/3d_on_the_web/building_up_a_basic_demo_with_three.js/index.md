@@ -93,7 +93,9 @@ Add this code into our second {{htmlelement("script")}} element, just below the 
 
 ## Scene
 
-A scene is the place where everything happens. When creating new objects in the demo, we add them all inside the scene to become visible on the screen. In three.js, the scene is represented by a `Scene` object. Let's create it, by adding the following line below our previous lines:
+A scene is the place where everything happens.
+When creating new objects in the demo, we add them all inside a scene to make them visible on the screen.
+In three.js, the scene is represented by a `Scene` object. Let's create it, by adding the following line below our previous lines:
 
 ```js
 const scene = new THREE.Scene();
@@ -103,7 +105,7 @@ Later, we will be using the `.add()` method, to add objects to this scene.
 
 ## Camera
 
-We have the rendered scene, but we still need to add a camera to view our handiwork — imagine a movie set without any cameras. The following lines put the camera in place in the 3D coordinate system, and point it in the direction of our scene, so we can finally see something:
+We have the rendered scene, but we still need to add a camera to view our handiwork — imagine a movie set without any cameras. The following lines put the camera in place in the 3D coordinate system, and point it in the direction of our scene:
 
 ```js
 const camera = new THREE.PerspectiveCamera(70, WIDTH / HEIGHT);
