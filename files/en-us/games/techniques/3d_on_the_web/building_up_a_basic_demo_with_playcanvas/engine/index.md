@@ -124,7 +124,8 @@ box.rotate(10, 15, 0);
 
 It will create an `Entity` with the `box` model component and add it to the root of the application, our scene. We also rotate the box a bit to show that it's actually a 3D cube and not a square.
 
-The cube is visible, but it is completely. To make it look better we need to shine some light onto it.
+The cube is visible, but it is completely dark.
+To make it look better we need to shine some light onto it.
 
 ## Lights
 
