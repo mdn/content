@@ -6,7 +6,7 @@ page-type: guide
 
 {{GamesSidebar}}
 
-A typical 3D scene in a game — even the simplest one — contains standard items like shapes located in a coordinate system, a camera to actually see them, lights and materials to make it look better, animations to make it look alive, etc. **Three.js**, as with any other 3D library, provides built-in helper functions to help you implement common 3D functionality more quickly. In this article we'll take you through the real basics of using Three, including setting up a development environment, structuring the necessary HTML, the fundamental objects of Three, and how to build up a basic demo.
+A typical 3D scene in a game — even the simplest one — contains standard items like shapes located in a coordinate system, a camera to view it, lights and materials to make it look better, animations to make it look alive, etc. **Three.js**, as with any other 3D library, provides built-in helper functions to help you implement common 3D functionality more quickly. In this article we'll take you through the real basics of using Three.js, including setting up a development environment, structuring the necessary HTML, the fundamental objects of Three, and how to build up a basic demo.
 
 > [!NOTE]
 > Three because is one of the most popular [WebGL](/en-US/docs/Web/API/WebGL_API) libraries, and it is easy to get started with. We are not saying it is better than any other WebGL library available, and you should feel free to try another library, such as [CopperLicht](https://www.ambiera.com/copperlicht/index.html) or [PlayCanvas](https://playcanvas.com/).
