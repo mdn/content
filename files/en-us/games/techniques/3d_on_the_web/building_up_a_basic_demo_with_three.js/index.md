@@ -79,14 +79,15 @@ Before reading further, copy this code to a new text file, and save it in your w
 
 A renderer is a tool which displays scenes right in your browser. There are a few different renderers: WebGL is the default, and others you can use are Canvas, SVG, CSS, and DOM. They differ in how everything is rendered, so the WebGL implementation will implement differently than the CSS one. Despite the variety of ways they achieve the goal, the experience will look the same for the user. Thanks to this approach, a fallback can be used, if a desired technology is not supported by the browser.
 
+The code below creates a new WebGL renderer, sets its size to fit the whole available space on the screen, and appends the DOM structure to the page.
+You might have noticed the `antialias` parameter in the first line — this renders the edges of shapes more smoothly. The `setClearColor()` method sets our background to a light gray color, instead of the default black one.
+
 ```js
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(WIDTH, HEIGHT);
 renderer.setClearColor(0xdddddd, 1);
 document.body.appendChild(renderer.domElement);
 ```
-
-We are creating a new WebGL renderer, setting its size to fit the whole available space on the screen, and appending the DOM structure to the page. You might have noticed the `antialias` parameter in the first line — this renders the edges of shapes more smoothly. The `setClearColor()` method sets our background to a light gray color, instead of the default black one.
 
 Add this code into our second {{htmlelement("script")}} element, just below the JavaScript comment.
 
