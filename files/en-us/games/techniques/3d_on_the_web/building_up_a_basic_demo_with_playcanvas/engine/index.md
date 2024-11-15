@@ -90,7 +90,7 @@ app.setCanvasResolution(pc.RESOLUTION_AUTO);
 
 ## Camera
 
-Now when the setup code is in place we need to think about implementing the standard scene components: camera, lights and objects. Let's start with the camera — add these lines to your code, below the previous ones.
+Now that the setup code is in place, we need to think about implementing the standard scene components: camera, lights and objects. Let's start with the camera — add these lines to your code, below the previous ones.
 
 ```js
 const camera = new pc.Entity();
