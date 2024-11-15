@@ -485,7 +485,7 @@ If we view the layout in Responsive Design Mode in DevTools we can see that it w
 
 From this point, start to drag the Responsive Design Mode view wider until you can see that the line lengths are becoming quite long, and we have space for the navigation to display in a horizontal line. This is where we'll add our first media query. We'll use ems, as this will mean that if the user has increased their text size, the breakpoint will happen at a similar line-length but wider viewport, than someone with a smaller text size.
 
-Add the following CSS to your styles:
+Add the following to your CSS:
 
 ```css
 @media screen and (min-width: 40em) {
