@@ -31,7 +31,7 @@ The index of the first match between the regular expression and the given string
 
 ## Description
 
-The implementation of `String.prototype.search()` itself is very simple — it simply calls the `Symbol.search` method of the argument with the string as the first parameter. The actual implementation comes from [`RegExp.prototype[Symbol.search]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search).
+The implementation of `String.prototype.search()` doesn't do much other than calling the `Symbol.search` method of the argument with the string as the first parameter. The actual implementation comes from [`RegExp.prototype[Symbol.search]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search).
 
 The `g` flag of `regexp` has no effect on the `search()` result, and the search always happens as if the regex's `lastIndex` is 0. For more information on the behavior of `search()`, see [`RegExp.prototype[Symbol.search]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search).
 

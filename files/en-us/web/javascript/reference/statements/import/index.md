@@ -97,7 +97,7 @@ import { "a-b" as a } from "/modules/my-module.js";
 
 #### Default import
 
-Default exports need to be imported with the corresponding default import syntax. The simplest version directly imports the default:
+Default exports need to be imported with the corresponding default import syntax. This version directly imports the default:
 
 ```js
 import myDefault from "/modules/my-module.js";
