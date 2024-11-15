@@ -264,6 +264,11 @@ Secure upgrades are allowed, so:
 
 Resources of the given type may only be loaded from the same {{glossary("origin")}} as the document.
 
+Secure upgrades are allowed. For example:
+
+- If the document is served from `http://example.com`, then a CSP of `'self'` will also permit resources from `https://example.com`.
+- If the document is served from `ws://example.org`, then a CSP of `'self'` will also permit resources from `wss://example.org`.
+
 ### 'unsafe-eval'
 
 By default, if a CSP contains a `default-src` or a `script-src` directive, then JavaScript functions which evaluate their arguments as JavaScript are disabled. This includes [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval), the [`code`](/en-US/docs/Web/API/Window/setTimeout#code) argument to {{domxref("Window.setTimeout()", "setTimeout()")}}, or the {{jsxref("Function/Function()", "Function()")}} constructor.
