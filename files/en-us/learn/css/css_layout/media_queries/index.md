@@ -326,7 +326,7 @@ The below walkthrough takes you through this approach with a very simple layout.
 ### Walkthrough: a mobile-first layout
 
 Our starting point is an HTML document with some CSS applied to add background colors to the various parts of the layout.
-You can click "Play" to see and edit the code in the MDN Playground, or you can copy the code from the blocks below into am HTML file on your computer and open it in your browser:
+You can copy the code from the blocks below into a text editor, save it as an HTML file on your computer, and open it in your browser or click "Play" to render and edit the code in the MDN Playground:
 
 ```html live-sample___walkthrough
 <head>
