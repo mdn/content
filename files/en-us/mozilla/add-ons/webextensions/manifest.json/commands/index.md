@@ -94,7 +94,7 @@ This JSON defines these shortcuts:
 
 1. `"toggle-feature"`, accessed with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>U</kbd> on Linux, and <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>U</kbd> on all other platforms.
 2. `"do-another-thing"`, accessed with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Y</kbd> on all platforms.
-3. `"do-something-else"`, accessed with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> on Linux only.
+3. `"do-something-else"`, accessed with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> on Linux only, and no default shortcut on other platforms.
 4. `"do-nothing-yet"`, sets no keyboard shortcut but enables a shortcut to be set by the user or with the {{WebExtAPIRef("commands.update")}} API.
 
 You can listen for the commands with code like this, in this case for the `"toggle-feature"` command:
