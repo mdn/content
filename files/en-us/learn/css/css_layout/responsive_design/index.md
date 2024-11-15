@@ -200,6 +200,8 @@ body {
 
 {{EmbedLiveSample("flex-based-rwd", "", "550px")}}
 
+Resize your screen. The layout will change when the size of the above example crosses the 600px width threshold.
+
 ### CSS grid
 
 In CSS grid layout the `fr` unit allows the distribution of available space across grid tracks. The next example creates a grid container with three tracks sized at `1fr`. This will create three column tracks, each taking one part of the available space in the container. You can find out more about this approach to create a grid in the Learn Layout grids topic, under [Flexible grids with the fr unit](/en-US/docs/Learn/CSS/CSS_layout/Grids#flexible_grids_with_the_fr_unit).

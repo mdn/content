@@ -79,7 +79,7 @@ The following media query will only set the body to 12pt if the page is printed.
 
 After specifying the type, you can then target a media feature with a rule.
 The following examples show how to use different media queries.
-You can click "Play" to view and edit the source for the examples in the MDN Playground.
+To change the `width` of your screen, change the size of your browser or rotate your handheld device. Alternatively, you can use your browser [developer tools' responsive sizing features]() to simulate different device widths.
 
 #### Width and height
 
@@ -600,7 +600,6 @@ body {
 
 {{EmbedLiveSample("grid", "", "350px")}}
 
-You can click "Play" to view and edit the source in the MDN Playground.
 Make the screen wider and narrower to see the number of column tracks change. The nice thing about this method is that grid is not looking at the viewport width, but the width it has available for this component. It might seem strange to wrap up a section about media queries with a suggestion that you might not need one at all! However, in practice you will find that good use of modern layout methods, enhanced with media queries, will give the best results.
 
 ## Test your skills!
