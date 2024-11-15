@@ -136,7 +136,6 @@ In the example below the flex items will each take an equal amount of space in t
 ```
 
 Here's how we could use flexbox with a media query for responsive design.
-You can click "Play" to view and edit the source code in the MDN Playground:
 
 ```html live-sample___flex-based-rwd
 <div class="wrapper">
@@ -213,7 +212,6 @@ In CSS grid layout the `fr` unit allows the distribution of available space acro
 ```
 
 Here's how we could use grid layout with a media query for responsive design.
-You can click "Play" to view and edit the source code in the MDN Playground:
 
 ```html live-sample___grid-based-rwd
 <div class="wrapper">

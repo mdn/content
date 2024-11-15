@@ -58,7 +58,7 @@ registerPaint(
     /*
       Retrieve any custom properties (or regular properties,
       such as 'height') defined for the element, and return
-      them in the specified array.
+      them as an array.
     */
     static get inputProperties() {
       return ["--boxColor", "--widthSubtractor"];

@@ -42,7 +42,7 @@ An ellipse is essentially a squashed circle and so `ellipse()` acts in a very si
 
 ### Basic ellipse() example
 
-This example shows an ellipse with an x radius of 40%, a y radius of 50% and the position being left. This means that the center of the ellipse is on the left edge of the box giving us a half ellipse shape to wrap our text around.
+This example shows an ellipse that is floated left that has a horizontal radius of 40%, a vertical radius of 50%, and a left position. This means that the center of the ellipse is on the left edge of the box giving us a half ellipse shape to wrap our text around.
 Click "Play" in the code blocks to change these values to see how the ellipse changes:
 
 ```html live-sample___ellipse

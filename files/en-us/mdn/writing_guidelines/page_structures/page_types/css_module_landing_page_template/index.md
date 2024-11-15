@@ -62,7 +62,7 @@ This should ideally be one or two short sentences.
 
 ## NameOfTheModule in action
 
-In this section, include an example that helps to demonstrate the usefulness or the power of various properties provided by this module.
+In this section, include an example that helps demonstrate the usefulness or the power of various properties provided by this module.
 The purpose of this section is to demonstrate a few use cases and to create interest and curiosity in the mind of the readers learning about this module.
 
 Provide a short description of how readers can interact with the example.

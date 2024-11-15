@@ -14,7 +14,6 @@ The properties in the **CSS filter effects** module let you define a way of proc
 ### Filter effects in action
 
 Play with the various sliders to apply filter effects to the image below.
-You can click "Play" to view and edit the code in the MDN Playground:
 
 ```html hidden live-sample___filters
 <article>

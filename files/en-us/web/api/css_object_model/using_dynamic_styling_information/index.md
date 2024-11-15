@@ -16,7 +16,7 @@ To get to the `style` objects from the `document`, you can use the {{domxref("Do
 
 ## Modify a stylesheet rule with CSSOM
 
-In this example the background of the page is set to red using CSS. The JavaScript then accesses the property using the CSSOM and changes the background to `cornflowerblue`.
+In this example the background of the page is set to `red` using CSS. The JavaScript then accesses the property using the CSSOM and changes the background to `cornflowerblue`.
 
 ```html live-sample___modify-rule
 <p>The stylesheet declaration for the body is modified via JavaScript.</p>
