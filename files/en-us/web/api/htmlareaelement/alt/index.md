@@ -10,9 +10,9 @@ browser-compat: api.HTMLAreaElement.alt
 
 The **`alt`** property of the {{DOMxRef("HTMLAreaElement")}} interface specifies the text of the hyperlink, defining the textual label for an image map's link. It reflects the {{htmlelement("area")}} element's [`alt`](/en-US/docs/Web/HTML/Element/area#alt) attribute.
 
-The `alt` value must be text that, when presented with the `alt` text of the other `<area>` hyperlinks within the same {{htmlelement("map")}, along with the `alt` text of the of the {{htmlelement("img")}} itself, provides the user with the same kind of choice as the hyperlink would when used without its text but with its shape applied to the image.
+The `alt` value must be text that, when presented with the `alt` text of the other `<area>` hyperlinks within the same {{htmlelement("map")}}, along with the `alt` text of the of the {{htmlelement("img")}} itself, provides the user with the same kind of choice as the hyperlink would when used without its text but with its shape applied to the image.
 
-If the {{htmlelement("area")}} is a link (contains an {{DOMxRef("HTMLAreaElement.href", "href")}}) property, the `alt` property value should be a non-empty string giving the label for the link that would be appropriate if the image was unavailable. The `alt` attribute for a link `<area>` can only be empty if there is another `<area>` element in the same `<map>` that points to the same resource and has a non-blank `alt` attribute.
+If the {{htmlelement("area")}} is a link (contains an {{DOMxRef("HTMLAreaElement.href", "href")}} property), the `alt` property value should be a non-empty string giving the label for the link that would be appropriate if the image was unavailable. The `alt` attribute for a link `<area>` can only be empty if there is another `<area>` element in the same `<map>` that points to the same resource and has a non-blank `alt` attribute.
 
 ## Value
 
