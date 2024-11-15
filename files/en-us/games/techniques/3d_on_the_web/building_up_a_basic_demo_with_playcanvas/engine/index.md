@@ -66,7 +66,7 @@ If you're building your project locally in an IDE, here's the HTML structure to 
 </html>
 ```
 
-It contains information like the document {{htmlelement("title")}}, and some CSS to set the width and height of the {{htmlelement("canvas")}} element that PlayCanvas will use to 100% so that it will fill the entire available viewport space. The first {{htmlelement("script")}} element includes the PlayCanvas library in the page; we will write our example code in the second one. There is one variable already included, which will store a reference to the {{htmlelement("canvas")}} element.
+It contains information like the document {{htmlelement("title")}}, and some CSS to set the width and height of the {{htmlelement("canvas")}} element (that PlayCanvas will use) to 100%, so that it will fill the entire available viewport space. The first {{htmlelement("script")}} element includes the PlayCanvas library in the page; we will write our example code in the second one. There is one variable already included, which will store a reference to the {{htmlelement("canvas")}} element.
 
 If you're developing in an IDE, copy this code to a new text file and save it in your working directory as `index.html`.
 
