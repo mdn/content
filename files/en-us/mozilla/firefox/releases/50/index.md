@@ -19,7 +19,7 @@ Firefox 50 was released on November 15, 2016. This article lists key changes tha
 
 ### CSS
 
-- Border-radiused corners with dashed and dotted styles are now rendered with the specified style instead of a solid style ([Firefox bug 382721](https://bugzil.la/382721)).
+- Corners with border-radius and with dashed and dotted styles are now rendered with the specified style instead of a solid style ([Firefox bug 382721](https://bugzil.la/382721)).
 - The non-standard `:-moz-full-screen-ancestor` pseudo-class selector has been removed ([Firefox bug 1199529](https://bugzil.la/1199529)).
 - The {{cssxref("box-sizing")}}`: padding-box` has been removed, since it's no longer a part of the spec and Firefox was the only major browser implementing it ([Firefox bug 1166728](https://bugzil.la/1166728)).
 - The three values `isolate`, `isolate-override`, and `plaintext` of the {{cssxref("unicode-bidi")}} property have been unprefixed ([Firefox bug 1141895](https://bugzil.la/1141895)).
@@ -140,7 +140,7 @@ Firefox 50 was released on November 15, 2016. This article lists key changes tha
 
   - {{domxref("HTMLInputElement.webkitdirectory")}} as well as the [`webkitdirectory`](/en-US/docs/Web/HTML/Element/input#webkitdirectory) attribute of the {{HTMLElement("input")}} element have been implemented; this lets you configure a file input to accept directories instead of files ([Firefox bug 1258489](https://bugzil.la/1258489)).
   - {{domxref("HTMLInputElement.webkitEntries")}} has been implemented; this returns an array of {{domxref("FileSystemEntry")}}-based objects representing the selected items.
-  - {{domxref("File.webkitRelativePath")}} has been implemented; this contains the path of the file relative to the root of the containing {{domxref("FileSystemDirectoryEntry")}} that was among the items in the list returned by {{domxref("HTMLInputElement.webkitGetEntries()")}}.
+  - {{domxref("File.webkitRelativePath")}} has been implemented; this contains the path of the file relative to the root of the containing {{domxref("FileSystemDirectoryEntry")}} that was among the items in the list returned by {{domxref("HTMLInputElement.webkitEntries")}}.
   - See [File and Directory Entries API support in Firefox](/en-US/docs/Web/API/File_and_Directory_Entries_API/Firefox_support) for details about what we do and do not support in this API.
   - These APIs are now enabled by default; some were previously available but only behind a preference ([Firefox bug 1288683](https://bugzil.la/1288683)).
 

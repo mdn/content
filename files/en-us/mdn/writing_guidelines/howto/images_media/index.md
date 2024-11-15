@@ -91,6 +91,7 @@ Examples:
 ```
 
 While purely decorative images should have an empty `alt`, images added to MDN documentation should have a purpose, and therefore require a non-empty-string description.
+For hints on alt text, see [An alt Decision Tree](https://www.w3.org/WAI/tutorials/images/decision-tree/) to learn how to use an alt attribute for images in various situations.
 
 ## Compressing images
 
@@ -195,7 +196,7 @@ The recording steps using this tool are pretty simple:
 
 ### Other resources
 
-- [How to Add Custom Callouts to Screencast Videos in Screenflow](https://photography.tutsplus.com/tutorials/how-to-add-custom-callouts-to-screencast-videos-in-screenflow--cms-27122)
+- [How to Add Custom Callouts to Screencast Videos in ScreenFlow](https://photography.tutsplus.com/tutorials/how-to-add-custom-callouts-to-screencast-videos-in-screenflow--cms-27122)
 
 ## Workflow for creating videos
 

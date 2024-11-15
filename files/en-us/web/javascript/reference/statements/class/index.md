@@ -53,7 +53,7 @@ console.log(Foo3); // 1
 
 ## Examples
 
-### A simple class declaration
+### A class declaration
 
 In the following example, we first define a class named `Rectangle`, then extend it to create a class named `FilledRectangle`.
 

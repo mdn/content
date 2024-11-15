@@ -42,7 +42,7 @@ The `return()` method, when called, can be seen as if a `return value;` statemen
 
 ### Using return()
 
-The following example shows a simple generator and the `return` method.
+The following example shows a generator and the `return` method.
 
 ```js
 function* gen() {

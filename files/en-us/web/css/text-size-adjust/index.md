@@ -75,6 +75,6 @@ p {
 
 ## See also
 
-- [Apple's documentation](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/AdjustingtheTextSize/AdjustingtheTextSize.html#//apple_ref/doc/uid/TP40006510-SW16)
-- [Google Chrome behavior description](https://docs.google.com/document/d/1PPcEwAhXJJ1TQShor29KWB17KJJq7UJOM34oHwYP3Zg/edit)
-- [Gecko's behavior description](https://dbaron.org/log/20111126-font-inflation), by L. David Baron
+- [Apple's documentation](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/AdjustingtheTextSize/AdjustingtheTextSize.html#//apple_ref/doc/uid/TP40006510-SW16) (2016)
+- [Google Chrome behavior description](https://docs.google.com/document/d/1PPcEwAhXJJ1TQShor29KWB17KJJq7UJOM34oHwYP3Zg/edit) (2014)
+- [Gecko's behavior description](https://dbaron.org/log/20111126-font-inflation), by L. David Baron (2011)

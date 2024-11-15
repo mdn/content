@@ -111,7 +111,7 @@ function autoGrow(field) {
 #### CSS
 
 ```css
-textarea.noscrollbars {
+textarea.no-scrollbars {
   overflow: hidden;
   width: 300px;
   height: 100px;
@@ -124,7 +124,7 @@ textarea.noscrollbars {
 <form>
   <fieldset>
     <legend>Your comments</legend>
-    <p><textarea class="noscrollbars" onkeyup="autoGrow(this);"></textarea></p>
+    <p><textarea class="no-scrollbars" onkeyup="autoGrow(this);"></textarea></p>
     <p><input type="submit" value="Send" /></p>
   </fieldset>
 </form>

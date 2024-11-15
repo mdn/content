@@ -35,7 +35,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : This Boolean attribute indicates that the user cannot interact with the control. If this attribute is not specified, the control inherits its setting from the containing element, for example {{htmlelement("fieldset")}}; if there is no containing element with the `disabled` attribute set, then the control is enabled.
 - `form`
 
-  - : The {{HTMLElement("form")}} element to associate the `<select>` with (its _form owner_). The value of this attribute must be the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) of a `<form>` in the same document. (If this attribute is not set, the `<select>` is associated with its ancestor `<form>` element, if any.)
+  - : The {{HTMLElement("form")}} element to associate the `<select>` with (its _form owner_). The value of this attribute must be the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of a `<form>` in the same document. (If this attribute is not set, the `<select>` is associated with its ancestor `<form>` element, if any.)
 
     This attribute lets you associate `<select>` elements to `<form>`s anywhere in the document, not just inside a `<form>`. It can also override an ancestor `<form>` element.
 
@@ -67,63 +67,15 @@ Mouse users can hold the <kbd>Ctrl</kbd>, <kbd>Command</kbd>, or <kbd>Shift</kbd
 
 Keyboard users can select multiple contiguous items by:
 
-- Focusing on the `<select>` element (e.g. using
-
-  <kbd>Tab</kbd>
-
-  ).
-
-- Selecting an item at the top or bottom of the range they want to select using the
-
-  <kbd>Up</kbd>
-
-  and
-
-  <kbd>Down</kbd>
-
-  cursor keys to go up and down the options.
-
-- Holding down the
-
-  <kbd>Shift</kbd>
-
-  key and then using the
-
-  <kbd>Up</kbd>
-
-  and
-
-  <kbd>Down</kbd>
-
-  cursor keys to increase or decrease the range of items selected.
+- Focusing on the `<select>` element (e.g. using <kbd>Tab</kbd>).
+- Selecting an item at the top or bottom of the range they want to select using the <kbd>Up</kbd> and <kbd>Down</kbd> cursor keys to go up and down the options.
+- Holding down the <kbd>Shift</kbd> key and then using the <kbd>Up</kbd> and <kbd>Down</kbd> cursor keys to increase or decrease the range of items selected.
 
 Keyboard users can select multiple non-contiguous items by:
 
-- Focusing on the `<select>` element (e.g. using
-
-  <kbd>Tab</kbd>
-
-  ).
-
-- Holding down the
-
-  <kbd>Ctrl</kbd>
-
-  key then using the
-
-  <kbd>Up</kbd>
-
-  and
-
-  <kbd>Down</kbd>
-
-  cursor keys to change the "focused" select option, i.e. the one that will be selected if you choose to do so. The "focused" select option is highlighted with a dotted outline, in the same way as a keyboard-focused link.
-
-- Pressing
-
-  <kbd>Space</kbd>
-
-  to select/deselect "focused" select options.
+- Focusing on the `<select>` element (e.g. using <kbd>Tab</kbd>).
+- Holding down the <kbd>Ctrl</kbd> key then using the <kbd>Up</kbd> and <kbd>Down</kbd> cursor keys to change the "focused" select option, i.e. the one that will be selected if you choose to do so. The "focused" select option is highlighted with a dotted outline, in the same way as a keyboard-focused link.
+- Pressing <kbd>Space</kbd> to select/deselect "focused" select options.
 
 ## Styling with CSS
 

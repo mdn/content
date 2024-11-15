@@ -78,7 +78,7 @@ The completion of the handler determines the settled state of the new promise.
 - If the handler throws an error, the new promise is rejected with the thrown error.
 - If the initial promise has no corresponding handler attached, the new promise will settle to the same state as the initial promise — that is, without a rejection handler, a rejected promise stays rejected with the same reason.
 
-For example, in the code above, if `myPromise` rejects, `handleRejectedA` will be called, and if `handleRejectedA` completes normally (without throwing or returning a rejected promise), the promise returned by the first `then` will be fulfilled instead of staying rejected. Therefore, if an error must be handled immediately, but we want to maintain the error state down the chain, we must throw an error of some type in the rejection handler. On the other hand, in the absence of an immediate need, it is simpler to leave out error handling until the final `catch()` handler.
+For example, in the code above, if `myPromise` rejects, `handleRejectedA` will be called, and if `handleRejectedA` completes normally (without throwing or returning a rejected promise), the promise returned by the first `then` will be fulfilled instead of staying rejected. Therefore, if an error must be handled immediately, but we want to maintain the error state down the chain, we must throw an error of some type in the rejection handler. On the other hand, in the absence of an immediate need, we can leave out error handling until the final `catch()` handler.
 
 ```js
 myPromise
@@ -194,7 +194,7 @@ Note that JavaScript is [single-threaded](/en-US/docs/Glossary/Thread) by nature
   - : Returns a new `Promise` object that is rejected with the given reason.
 - {{jsxref("Promise.resolve()")}}
   - : Returns a `Promise` object that is resolved with the given value. If the value is a thenable (i.e. has a `then` method), the returned promise will "follow" that thenable, adopting its eventual state; otherwise, the returned promise will be fulfilled with the value.
-- {{jsxref("Promise.try()")}} {{experimental_inline}}
+- {{jsxref("Promise.try()")}}
   - : Takes a callback of any kind (returns or throws, synchronously or asynchronously) and wraps its result in a `Promise`.
 - {{jsxref("Promise.withResolvers()")}}
   - : Returns an object containing a new `Promise` object and two functions to resolve or reject it, corresponding to the two parameters passed to the executor of the {{jsxref("Promise/Promise", "Promise()")}} constructor.
@@ -373,7 +373,7 @@ btn.addEventListener("click", testPromise);
 
 ### Loading an image with XHR
 
-Another simple example using `Promise` and {{domxref("XMLHttpRequest")}} to load an image is available at the MDN GitHub [js-examples](https://github.com/mdn/js-examples/tree/main/promises-test) repository. You can also [see it in action](https://mdn.github.io/js-examples/promises-test/). Each step is commented on and allows you to follow the Promise and XHR architecture closely.
+Another example using `Promise` and {{domxref("XMLHttpRequest")}} to load an image is available at the MDN GitHub [js-examples](https://github.com/mdn/js-examples/tree/main/promises-test) repository. You can also [see it in action](https://mdn.github.io/js-examples/promises-test/). Each step is commented on and allows you to follow the Promise and XHR architecture closely.
 
 ### Incumbent settings object tracking
 

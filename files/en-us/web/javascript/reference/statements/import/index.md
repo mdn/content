@@ -32,7 +32,7 @@ import "module-name";
 - `defaultExport`
   - : Name that will refer to the default export from the module. Must be a valid JavaScript identifier.
 - `module-name`
-  - : The module to import from. The evaluation of the specifier is host-specified. This is often a relative or absolute URL to the `.js` file containing the module. In Node, extension-less imports often refer to packages in `node_modules`. Certain bundlers may permit importing files without extensions; check your environment. Only single quoted and double quoted Strings are allowed.
+  - : The module to import from. Only single quoted and double quoted string literals are allowed. The evaluation of the specifier is host-specified. Most hosts align with browsers and resolve the specifiers as URLs relative to the current module URL (see [`import.meta.url`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta)). Node, bundlers, and other non-browser environments often define their own features on top of this, so you should find documentation for them to understand the exact rules. The [module specifier resolution](#module_specifier_resolution) section also has more information.
 - `name`
   - : Name of the module object that will be used as a kind of namespace when referring to the imports. Must be a valid JavaScript identifier.
 - `exportN`
@@ -97,7 +97,7 @@ import { "a-b" as a } from "/modules/my-module.js";
 
 #### Default import
 
-Default exports need to be imported with the corresponding default import syntax. The simplest version directly imports the default:
+Default exports need to be imported with the corresponding default import syntax. This version directly imports the default:
 
 ```js
 import myDefault from "/modules/my-module.js";
@@ -163,6 +163,52 @@ myModule.doAllTheAmazingThings(); // myModule.doAllTheAmazingThings is imported 
 
 import * as myModule from "/modules/my-module.js";
 ```
+
+### Module specifier resolution
+
+The ECMAScript specification does not define how module specifiers are resolved and leaves it to the host environment (e.g. browsers, Node.js, Deno). Browser behavior is specified by [the HTML spec](https://html.spec.whatwg.org/multipage/webappapis.html#resolve-a-module-specifier), and this has become the _de facto_ baseline for all environments.
+
+There are three types of specifiers widely recognized, as implemented by the HTML spec, Node, and many others:
+
+- _Relative specifiers_ that start with `/`, `./`, or `../`, which are resolved relative to the current module URL.
+- _Absolute specifiers_ that are parsable URLs, which are resolved as-is.
+- _Bare specifiers_ that are not one of the above.
+
+The most notable caveat for relative specifiers, especially for people familiar with the [CommonJS](https://wiki.commonjs.org/wiki/CommonJS) conventions, is that browsers forbid one specifier to implicitly resolve to many potential candidates. In CommonJS, if you have `main.js` and `utils/index.js`, then all of the following will import the "default export" from `utils/index.js`:
+
+```js
+// main.js
+const utils = require("./utils"); // Omit the "index.js" file name
+const utils = require("./utils/index"); // Omit only the ".js" extension
+const utils = require("./utils/index.js"); // The most explicit form
+```
+
+On the web, this is costly because if you write `import x from "./utils"`, the browser needs to send requests to `utils`, `utils/index.js`, `utils.js`, and potentially many other URLs until it finds an importable module. Therefore, in the HTML spec, the specifier by default can only be a URL resolved relative to the current module URL. You cannot omit the file extension or the `index.js` file name. This behavior has been inherited by Node's ESM implementation, but it is not a part of the ECMAScript specification.
+
+Note that this does not mean that `import x from "./utils"` never works on the web. The browser still sends a request to that URL, and if the server can respond with the correct content, the import will succeed. This requires the server to implement some custom resolution logic, because usually extension-less requests are understood as requests for HTML files.
+
+Absolute specifiers can be any kind of [URL](/en-US/docs/Web/URI) that resolve to importable source code. Most notably:
+
+- [HTTP URLs](/en-US/docs/Web/HTTP) are always supported on the web since most scripts already have HTTP URLs. It's supported natively by Deno (which initially predicated its entire module system on HTTP URLs), but it only has experimental support in Node via [custom HTTPS loaders](https://nodejs.org/api/module.html#import-from-https).
+- `file:` URLs are supported by many non-browser runtimes such as Node, since scripts there already have `file:` URLs, but they are not supported by browsers due to security reasons.
+- [Data URLs](/en-US/docs/Web/URI/Schemes/data) are supported by many runtimes including browsers, Node, Deno, etc. They are useful for embedding small modules directly into the source code. Supported [MIME types](/en-US/docs/Web/HTTP/MIME_types) are those that designate importable source code, such as `text/javascript` for JavaScript, `application/json` for JSON modules, `application/wasm` for WebAssembly modules, etc. (They may still require [import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with).)
+
+  ```js
+  // HTTP URLs
+  import x from "https://example.com/x.js";
+  // Data URLs
+  import x from "data:text/javascript,export default 42;";
+  // Data URLs for JSON modules
+  import x from 'data:application/json,{"foo":42}' with { type: "json" };
+  ```
+
+  `text/javascript` data URLs are still interpreted as modules, but they cannot use relative imports — because the `data:` URL scheme is not hierarchical. That is, `import x from "data:text/javascript,import y from './y.js';"` will throw an error because the relative specifier `'./y.js'` cannot be resolved.
+
+- [`node:` URLs](https://nodejs.org/api/esm.html#node-imports) resolve to built-in Node.js modules. They are supported by Node and other runtimes that claim compatibility with Node, such as Bun.
+
+Bare specifiers, popularized by CommonJS, are resolved within the `node_modules` directory. For example, if you have `import x from "foo"`, then the runtime will look for the `foo` package within any `node_modules` directory in the parent directories of the current module. This behavior can be reproduced in browsers using [import maps](/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps), which also enable you to customize resolution in other ways.
+
+The module resolution algorithm can also be executed programmatically using the [`import.meta.resolve`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta/resolve) function defined by the HTML spec.
 
 ## Examples
 

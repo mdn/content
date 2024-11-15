@@ -47,7 +47,7 @@ src:
 
 - `url()`
 
-  - : Specifies an external reference consisting of a {{cssxref("&lt;url&gt;")}}, followed by optional hints using the `format()` and `tech()` component values that specify the format and font technology of the resource referenced by the URL. The `format()` and `tech()` components are a comma-separated list of strings of known [font formats](#font_formats) and technologies. If a user agent doesn't support the font technology or formats, it skips downloading the font resource. If no format or technology hints are supplied, the font resource is always downloaded.
+  - : Specifies an external reference consisting of a {{cssxref("url_value", "&lt;url&gt;")}}, followed by optional hints using the `format()` and `tech()` component values that specify the format and font technology of the resource referenced by the URL. The `format()` and `tech()` components are a comma-separated list of strings of known [font formats](#font_formats) and technologies. If a user agent doesn't support the font technology or formats, it skips downloading the font resource. If no format or technology hints are supplied, the font resource is always downloaded.
 
 - `format()`
   - : An optional declaration that follows the `url()` value that provides a hint for the user agent on the font format.
@@ -95,7 +95,7 @@ If the last `src` descriptor can load a resource and doesn't include a `local()`
 > This may affect design of fallbacks.
 > See [Browser compatibility](#browser_compatibility) for more information.
 
-As with other URLs in CSS, the URL may be relative, in which case it is resolved relative to the location of the style sheet containing the `@font-face` rule. In the case of SVG fonts, the URL points to an element within a document containing SVG font definitions. If the element reference is omitted, a reference to the first defined font is implied. Similarly, font container formats that can contain more than one font load only one of the fonts for a given `@font-face` rule. Fragment identifiers are used to indicate which font to load. If a container format lacks a defined fragment identifier scheme, a simple 1-based indexing scheme (e.g., "font-collection#1" for the first font, "font-collection#2" for the second font, etc.) is used.
+As with other URLs in CSS, the URL may be relative, in which case it is resolved relative to the location of the style sheet containing the `@font-face` rule. In the case of SVG fonts, the URL points to an element within a document containing SVG font definitions. If the element reference is omitted, a reference to the first defined font is implied. Similarly, font container formats that can contain more than one font load only one of the fonts for a given `@font-face` rule. Fragment identifiers are used to indicate which font to load. If a container format lacks a defined fragment identifier scheme, a 1-based indexing scheme (e.g., "font-collection#1" for the first font, "font-collection#2" for the second font, etc.) is used.
 
 If the font file is a container for multiple fonts, a fragment identifier is included to indicate the sub-font that should be used, as shown below:
 

@@ -13,7 +13,7 @@ browser-compat: api.USBDevice.deviceClass
 The **`deviceClass`** read only property of the
 {{domxref("USBDevice")}} interface one of three properties that identify USB devices for
 the purpose of loading a USB driver that will work with that device. The other two
-properties are USBDevice.deviceSubclass and USBDevice.deviceprotocol.
+properties are `USBDevice.deviceSubclass` and `USBDevice.deviceProtocol`.
 
 ## Value
 

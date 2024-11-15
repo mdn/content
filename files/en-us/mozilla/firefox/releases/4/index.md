@@ -42,8 +42,8 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
 - {{HTMLElement("textarea")}} elements are now resizable by default; you can use the {{cssxref("resize")}} CSS property to disable this.
 - `canvas.getContext` and `canvas.toDataURL` no longer throw an exception when called with unrecognized arguments.
 - The {{HTMLElement("canvas")}} element now supports the Mozilla-specific `mozGetAsFile()` method, which lets you obtain a memory-based file containing an image of the canvas's contents. See {{domxref("HTMLCanvasElement")}} for details.
-- `canvas2dcontext.lineCap` and `canvas2dcontext.lineJoin` no longer throw an exception when set to an unrecognized value.
-- `canvas2dcontext.globalCompositeOperation` no longer throws an exception when set to an unrecognized value, and no longer supports the non-standard `darker` value.
+- `Canvas2DContext.lineCap` and `Canvas2DContext.lineJoin` no longer throw an exception when set to an unrecognized value.
+- `Canvas2DContext.globalCompositeOperation` no longer throws an exception when set to an unrecognized value, and no longer supports the non-standard `darker` value.
 - Support for the obsolete `<spacer>` element, which was absent in all other browsers, has been removed.
 - The `<isindex>` element, when created by calling {{domxref("Document.createElement()")}}, is now created as a simple element with no properties or methods.
 - Gecko now supports calling `click()` on {{HTMLElement("input")}} elements to open the file picker. See the [example](/en-US/docs/Web/API/File_API/Using_files_from_web_applications#using_hidden_file_input_elements_using_the_click_method) in the article [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications).
@@ -276,12 +276,12 @@ Several HTML elements have had their DOM interfaces changed to the ones required
 - {{HTMLElement("script")}} elements created using {{domxref("Document.createElement()")}} and inserted into a document now behave according to the HTML5 specification by default. Scripts with the `src` attribute execute as soon as available (without maintaining ordering) and scripts without the `src` attribute execute synchronously. To make script-inserted scripts that have the `src` attribute execute in the insertion order, set `.async=false` on them.
 - DOM {{domxref("File")}} objects now offer a `url` property.
 - [FormData](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#using_formdata_objects) support for XMLHttpRequest.
-- The {{domxref("Element.isContentEditable")}} property has been implemented.
-- The {{domxref("Document.currentScript")}} property lets you determine which {{HTMLElement("script")}} element's script is currently executing. The new {{domxref("element.onbeforescriptexecute")}} and {{domxref("element.onafterscriptexecute")}} events are fired before and after a script element executes.
-- Added the `mozSourceNode` property to the {{domxref("DragTransfer")}} object.
+- The {{domxref("HTMLElement.isContentEditable")}} property has been implemented.
+- The {{domxref("Document.currentScript")}} property lets you determine which {{HTMLElement("script")}} element's script is currently executing. The new {{domxref("Element/beforescriptexecute", "beforescriptexecute")}} and {{domxref("Element/afterscriptexecute", "afterscriptexecute")}} events are fired before and after a script element executes.
+- Added the `mozSourceNode` property to the {{domxref("DataTransfer")}} object.
 - Added the {{domxref("Selection.modify()")}} method to the {{domxref("Selection")}} object; this lets you easily alter the current text selection or cursor position in a browser window.
 - Support for the `window.directories` object and the `directories` feature for {{domxref("window.open")}}, which are not supported in any other browser, has been removed. Use `personalbar` instead. [Firefox bug 474058](https://bugzil.la/474058)
-- The {{domxref("Event.mozInputSource")}} property has been added to DOM user interface events; this non-standard property lets you determine the type of device that generated an event.
+- The {{domxref("MouseEvent.mozInputSource")}} property has been added to DOM user interface events; this non-standard property lets you determine the type of device that generated an event.
 - The {{domxref("Document")}} {{domxref("Document/readystatechange_event", "readystatechange")}} event has been implemented.
 - The {{domxref("Document.createElement()")}} method no longer accepts `<` and `>` around the tag name in quirks mode.
 - The {{domxref("Element.setCapture()")}} and {{domxref("Document.releaseCapture()")}} methods have been added, allowing elements to continue tracking mouse events even while the mouse is outside their normal tracking area after a `mousedown` event has occurred.
@@ -291,8 +291,8 @@ Several HTML elements have had their DOM interfaces changed to the ones required
 - [Mouse events](/en-US/docs/Web/API/MouseEvent) now include a `mozPressure` property indicating the amount of pressure on supported pressure-sensitive input devices.
 - The {{domxref("URL/createObjectURL_static", "URL.createObjectURL()")}} and {{domxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} methods let you create object URLs which reference local files.
 - The {{domxref("DOMImplementation.createHTMLDocument()")}} method lets you create a new HTML document.
-- {{domxref("Node.mozMatchesSelector()")}} now throws a `SYNTAX_ERR` exception if the specified selector string is invalid, instead of incorrectly returning `false`.
-- You can now set an element's SVG properties' values using the same shorthand syntax as with CSS. For example: `element.style.fill = 'lime'`. See {{domxref("element.style")}} for details.
+- `Node.mozMatchesSelector()` now throws a `SYNTAX_ERR` exception if the specified selector string is invalid, instead of incorrectly returning `false`.
+- You can now set an element's SVG properties' values using the same shorthand syntax as with CSS. For example: `element.style.fill = 'lime'`. See {{domxref("HTMLElement/style", "style")}} for details.
 - The document root now has [a `privatebrowsingmode` attribute](/en-US/docs/Supporting_private_browsing_mode#detecting_whether_private_browsing_mode_is_permanent) that describes the state of private browsing mode, including an indication of whether private browsing is temporary or permanent for the session.
 - The second parameter of the {{domxref("window.getComputedStyle()")}} method is now optional, as it is in every other major browser.
 - The DOM {{domxref("StorageEvent")}} object now matches the latest version of the specification.
@@ -353,7 +353,7 @@ If you're a theme developer, you should read [Theme changes in Firefox 4](/en-US
 
 ### DOM changes
 
-- {{domxref("ChromeWorker")}}
+- `ChromeWorker`
   - : A new type of worker for privileged code; this lets you use things like [js-ctypes](/en-US/docs/js-ctypes) from workers in extensions and application code.
 - [Touch events](/en-US/docs/Web/API/Touch_events)
   - : Support for (non-standard) touch events has been added; these let you track multiple fingers moving on a touch screen at the same time.
@@ -375,7 +375,7 @@ Several changes were made to the `<xul:tabbrowser>` element that impact extensio
 - Added the new `getIcon` method, which lets you get a tab's favicon without having to pull up the `<xul:browser>` element.
 - Added the new `tabbrowser.tabs` property, which lets you easily get a list of the tabs in a `<xul:tabbrowser>` element.
 - The new `pinTab` and `unpinTab` methods let you pin and unpin tabs (that is, switch them between being app tabs and regular tabs).
-- Added the `getTabModalPromptBox` method and `tabmodalPromptShowing` attribute to the `<xul:tabbrowser>` to support tab-modal alerts.
+- Added the `getTabModalPromptBox` method and `tabModalPromptShowing` attribute to the `<xul:tabbrowser>` to support tab-modal alerts.
 
 #### Changes to popups
 

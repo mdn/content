@@ -13,7 +13,7 @@ range of text in an {{HTMLElement("textarea")}} element with new text passed as 
 
 Additional optional parameters include the start of the section of text to change, the end of the section, and a keyword defining what part of the `<textarea>` should be selected after the text is updated. If the `startSelection` and `endSelection` arguments are not provided, the range is assumed to be the selection.
 
-The final argument determines how the selection will be set after the text has been replaced. The possible values are `"select"`, which selects the newly inserted text, `"start"`, which moves the selection to just before the inserted text,`"end"`, which moves the selection to just after the inserted text, or the default, `"preserve"` , which tries to preserve the selection.
+The final argument determines how the selection will be set after the text has been replaced. The possible values are `"select"`, which selects the newly inserted text, `"start"`, which moves the selection to just before the inserted text, `"end"`, which moves the selection to just after the inserted text, or the default, `"preserve"`, which tries to preserve the selection.
 
 In addition, the {{domxref("HTMLTextAreaElement.select_event", "select")}} and {{domxref("HTMLTextAreaElement.selectionchange_event", "selectchange")}} events are fired.
 
@@ -69,7 +69,7 @@ btn.addEventListener("click", () => {
 });
 
 function changeText() {
-  const textarea = document.getElementById("text-box");
+  const textarea = document.getElementById("ta");
   textarea.focus();
   textarea.setRangeText("ALREADY", 14, 17, "select");
 }

@@ -40,11 +40,11 @@ Consider a scenario where you have both a web app and native apps for your produ
   "related_applications": [
     {
       "platform": "play",
-      "id": "com.example.hikingapp"
+      "id": "com.example.hiking-app"
     },
     {
       "platform": "windows",
-      "url": "https://apps.microsoft.com/store/hikingapp/9WZDNCRFHVJL"
+      "url": "https://apps.microsoft.com/detail/9nqx6sv74srz"
     }
   ]
 }
@@ -60,7 +60,7 @@ To encourage users to install your native Android hiking app from Google Play St
   "related_applications": [
     {
       "platform": "play",
-      "id": "com.example.hikingapp"
+      "id": "com.example.hiking-app"
     }
   ]
 }
