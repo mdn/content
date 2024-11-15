@@ -8,8 +8,11 @@ page-type: guide
 
 A typical 3D scene in a game — even the simplest one — contains standard items like shapes located in a coordinate system, a camera to view it, lights and materials to make it look better, animations to make it look alive, etc. **Three.js**, as with any other 3D library, provides built-in helper functions to help you implement common 3D functionality more quickly. In this article we'll take you through the real basics of using Three.js, including setting up a development environment, structuring the necessary HTML, the fundamental objects of Three, and how to build up a basic demo.
 
+Three is one of the most popular [WebGL](/en-US/docs/Web/API/WebGL_API) libraries, and it is easy to get started with.
+We are not saying it is better than any other WebGL library, and you should feel free to try other libraries.
+
 > [!NOTE]
-> Three because is one of the most popular [WebGL](/en-US/docs/Web/API/WebGL_API) libraries, and it is easy to get started with. We are not saying it is better than any other WebGL library available, and you should feel free to try another library, such as [CopperLicht](https://www.ambiera.com/copperlicht/index.html) or [PlayCanvas](https://playcanvas.com/).
+> This guide was last updated in November 2024, and is compatible with Three.js version `r79`.
 
 ## Development setup
 
@@ -34,9 +37,6 @@ Alternatively, you can download the [latest Three.js library](https://github.com
 Bear in mind that the archives include source files, which makes the download size approximately 350MB.
 
 Whichever way you choose to get started, make sure you have the [Three.js documentation](https://threejs.org/docs/) open somewhere while you're working for reference.
-
-> [!NOTE]
-> This guide was last updated in November 2024, and is compatible with Three.js version `r79`.
 
 ### HTML starter for Three.js
 

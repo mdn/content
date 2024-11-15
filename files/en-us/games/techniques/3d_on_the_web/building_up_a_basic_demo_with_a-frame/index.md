@@ -11,6 +11,9 @@ To make this easier, Mozilla's [A-Frame](https://aframe.io/) framework provides 
 This is useful for quickly and successfully building prototypes and demos, without having to write a lot of JavaScript or GLSL.
 This article explains how to get up and running with A-Frame, and how to use it to build up a simple demo.
 
+> [!NOTE]
+> This guide was last updated in November 2024, and is compatible with A-Frame version `1.6.0`.
+
 ## High level overview
 
 A-Frame runs on most environments, such as desktop, mobile (iOS and Android), and devices such as Oculus Rift, Gear VR and HTC Vive.
@@ -30,9 +33,6 @@ Alternatively, you can load A-Frame from a CDN:
 ```
 
 Whichever way you choose to get started, make sure you have the [A-Frame documentation](https://aframe.io/docs/) open somewhere while you're working for reference.
-
-> [!NOTE]
-> This guide was last updated in November 2024, and is compatible with A-Frame version `1.6.0`.
 
 ### HTML starter for A-Frame
 

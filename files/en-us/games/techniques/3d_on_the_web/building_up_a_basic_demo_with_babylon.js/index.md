@@ -10,24 +10,24 @@ page-type: guide
 
 We will create a basic demo first — a cube rendered on the screen. If you have already worked through our _Building up a basic demo_ [series](/en-US/docs/Games/Techniques/3D_on_the_web) with [Three.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js), [PlayCanvas](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas) or [A-Frame](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame) (or you are familiar with other 3D libraries) you'll notice that Babylon.js works using similar concepts: camera, light and objects.
 
+> [!NOTE]
+> This guide was last updated in November 2024, and is compatible with Babylon.js version `7.34.1`.
+
 ## Development setup
 
 To start developing with Babylon.js, you don't need much.
 Make sure you are using a modern browser with good [WebGL](/en-US/docs/Web/API/WebGL_API) support.
 It's useful to keep the [Babylon.js documentation](https://doc.babylonjs.com/) in a separate tab while you're working.
 
-If you're developing locally in an IDE, make a directory to store your experiments in and save a copy of the [latest Babylon.js engine](https://cdn.babylonjs.com/babylon.js) inside that directory.
+If you're developing locally in an IDE, make a directory to store your experiments in and save a copy of the [latest Babylon.js engine](https://doc.babylonjs.com/setup/frameworkPackages/frameworkVers/) inside that directory.
 Alternatively, you can load Babylon.js from a CDN:
 
 ```html
-<script src="https://cdn.babylonjs.com/babylon.js"></script>
+<script src="https://cdn.babylonjs.com/v7.34.1/babylon.js"></script>
 ```
 
 If you don't want to develop locally, you can use an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
-With these editors, you can add `https://cdn.babylonjs.com/babylon.js` as a JavaScript source so it's available in your code.
-
-> [!NOTE]
-> This guide was last updated in November 2024, and is compatible with Babylon.js version `7.33.0`.
+With these editors, you can add `https://cdn.babylonjs.com/v7.34.1/babylon.js` as a JavaScript source so it's available in your code.
 
 ### HTML starter for Babylon.js
 
@@ -55,7 +55,7 @@ If you're building your project locally in an IDE, here's the HTML structure to 
     <!--  The local copy of Babylon.js -->
     <script src="babylon.js"></script>
     <!--  or loaded via CDN: -->
-    <!-- <script src="https://cdn.babylonjs.com/babylon.js"></script> -->
+    <!-- <script src="https://cdn.babylonjs.com/v7.34.1/babylon.js"></script> -->
 
     <canvas id="render-canvas"></canvas>
 
@@ -143,7 +143,7 @@ Now the scene is properly rendering we can start adding 3D shapes to it. To spee
 const box = BABYLON.Mesh.CreateBox("box", 2, scene);
 ```
 
-A mesh is a way the engine creates geometric shapes, so material can be easily applied to them later on. In this case we're creating a box using the `Mesh.CreateBox` method with its own name, a size of 2, and a declaration of which scene we want it added to.
+A mesh is a way the engine creates geometric shapes, so material (textures) can be easily applied to them later on. In this case we're creating a box using the `Mesh.CreateBox` method with its own name, a size of 2, and a declaration of which scene we want it added to.
 
 The size or position values (e.g., for the box size) are unitless, and can basically be anything you deem suitable for your scene — millimeters, meters, feet, or miles — it's up to you.
 
@@ -176,7 +176,7 @@ You can click "Play" to edit the code in the MDN Playground:
 
 ```html hidden live-sample___babylon-js-intro
 <canvas id="render-canvas"></canvas>
-<script src="https://cdn.babylonjs.com/babylon.js"></script>
+<script src="https://cdn.babylonjs.com/v7.34.1/babylon.js"></script>
 ```
 
 ```js hidden live-sample___babylon-js-intro
@@ -319,7 +319,7 @@ You can click "Play" to edit the example in the MDN Playground:
 
 ```html hidden live-sample___babylon-js-animation
 <canvas id="render-canvas"></canvas>
-<script src="https://cdn.babylonjs.com/babylon.js"></script>
+<script src="https://cdn.babylonjs.com/v7.34.1/babylon.js"></script>
 ```
 
 ```js live-sample___babylon-js-animation

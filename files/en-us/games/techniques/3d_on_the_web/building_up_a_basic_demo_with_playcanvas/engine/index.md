@@ -11,6 +11,9 @@ That's quite an impressive list of features — let's see some in action.
 
 We build a basic demo first — a cube rendered on the screen. If you have already worked through our [Building up a basic demo with Three.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js) article (or you are familiar with other 3D libraries) you'll notice that PlayCanvas has similar concepts: camera, light and objects.
 
+> [!NOTE]
+> This guide was last updated in November 2024, and is compatible with PlayCanvas version `2.2.2`.
+
 ## Development setup
 
 To start developing with PlayCanvas, make sure you are using a modern browser with good [WebGL](/en-US/docs/Web/API/WebGL_API) support.
@@ -25,9 +28,6 @@ Alternatively, you can load PlayCanvas from a CDN:
 
 If you don't want to develop locally, you can use an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 With these editors, you can add `https://cdn.babylonjs.com/babylon.js` as a JavaScript source so it's available in your code.
-
-> [!NOTE]
-> This guide was last updated in November 2024, and is compatible with PlayCanvas version `2.2.2`.
 
 ### HTML starter for PlayCanvas
 
