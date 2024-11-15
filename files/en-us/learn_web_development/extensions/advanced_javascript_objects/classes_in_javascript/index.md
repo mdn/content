@@ -1,6 +1,6 @@
 ---
 title: Classes in JavaScript
-slug: Learn/JavaScript/Objects/Classes_in_JavaScript
+slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript
 page-type: learn-module-chapter
 ---
 

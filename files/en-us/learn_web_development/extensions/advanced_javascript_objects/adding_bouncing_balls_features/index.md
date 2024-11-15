@@ -1,6 +1,6 @@
 ---
 title: Adding features to our bouncing balls demo
-slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
+slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features
 page-type: learn-module-assessment
 ---
 

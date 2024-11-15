@@ -1,10 +1,12 @@
 ---
 title: Object prototypes
-slug: Learn/JavaScript/Objects/Object_prototypes
+slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Object_basics", "Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}
+
+{{NextMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming", "Learn_web_development/Extensions")}}
 
 Prototypes are the mechanism by which JavaScript objects inherit features from one another. In this article, we explain what a prototype is, how prototype chains work, and how a prototype for an object can be set.
 
@@ -13,22 +15,17 @@ Prototypes are the mechanism by which JavaScript objects inherit features from o
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Understanding JavaScript functions, familiarity with JavaScript basics
-        (see
-        <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> and
-        <a href="/en-US/docs/Learn_web_development/Core/Scripting"
-          >Building blocks</a
-        >), and OOJS basics (see
-        <a href="/en-US/docs/Learn_web_development/Core/Scripting/Object_basics"
-          >Introduction to objects</a
-        >).
+        Familiarity with JavaScript basics
+        (especially
+        <a href="/en-US/docs/Learn_web_development/Core/Scripting/Object_basics">Object basics</a>.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">Learning outcomes:</th>
       <td>
-        To understand JavaScript object prototypes, how prototype chains work,
-        and how to set the prototype of an object.
+        <ul>
+          <li></li>
+        </ul>
       </td>
     </tr>
   </tbody>

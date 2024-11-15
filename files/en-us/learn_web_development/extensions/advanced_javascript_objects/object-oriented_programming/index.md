@@ -1,6 +1,6 @@
 ---
 title: Object-oriented programming
-slug: Learn/JavaScript/Objects/Object-oriented_programming
+slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming
 page-type: learn-module-chapter
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Object building practice
-slug: Learn/JavaScript/Objects/Object_building_practice
+slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice
 page-type: learn-module-chapter
 ---
 

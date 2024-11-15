@@ -7040,110 +7040,6 @@
       "BrunkBeard"
     ]
   },
-  "Learn/JavaScript/Objects": {
-    "modified": "2020-08-18T09:29:11.749Z",
-    "contributors": [
-      "owdown",
-      "chrisdavidmills",
-      "CodeDotJS",
-      "bripmccann",
-      "shi_zi_",
-      "Ch0coL8te",
-      "omeid",
-      "torazaburo",
-      "MashKao",
-      "fscholz"
-    ]
-  },
-  "Learn/JavaScript/Objects/Adding_bouncing_balls_features": {
-    "modified": "2020-10-28T23:14:36.083Z",
-    "contributors": [
-      "krankj",
-      "chrisdavidmills",
-      "jswisher",
-      "wwags33",
-      "rmdobservations",
-      "edsonmendieta",
-      "nmve",
-      "Jeremie",
-      "fscholz"
-    ]
-  },
-  "Learn/JavaScript/Objects/Object_building_practice": {
-    "modified": "2020-07-16T22:32:30.497Z",
-    "contributors": [
-      "chrisdavidmills",
-      "jswisher",
-      "IamLegendChamp",
-      "rohitarondekar",
-      "stephaniehobson",
-      "qdirks",
-      "RobWheadon",
-      "khamer1410",
-      "edsonmendieta",
-      "crueschenberg",
-      "nmve",
-      "wetlife",
-      "BaderSur",
-      "Jeremie",
-      "fscholz"
-    ]
-  },
-  "Learn/JavaScript/Objects/Object_prototypes": {
-    "modified": "2020-11-29T09:12:53.165Z",
-    "contributors": [
-      "chrisdavidmills",
-      "loretta-arineva",
-      "JohnnyMu-Cn",
-      "krankj",
-      "jgabrielpro",
-      "amit.gangaur",
-      "MrPodu",
-      "Zearin_Galaurum",
-      "ckashby",
-      "Bushwazi",
-      "ricardoorellana",
-      "hhimanshu",
-      "nsangwan",
-      "moneysharma1010",
-      "sappusaketh",
-      "Aerodium",
-      "collin",
-      "aniketkudale",
-      "LuoYun",
-      "anonyco",
-      "WeiyiChen",
-      "Univream",
-      "JonathanPool",
-      "COV",
-      "shateelahmed",
-      "MoTTs",
-      "deasydoesit",
-      "martian2049",
-      "theomjones",
-      "linasmnew",
-      "elWombator",
-      "stephaniehobson",
-      "iAziz786",
-      "lfzy",
-      "systematis",
-      "tcsc",
-      "giorgiobeggiora",
-      "zziccardi",
-      "rht19932",
-      "crueschenberg",
-      "sportnak",
-      "nmve",
-      "BrunkBeard",
-      "Jeremie",
-      "fscholz",
-      "ZeroUnderscoreOu"
-    ]
-  },
-  "Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript": {
-    "modified": "2020-08-12T12:48:24.778Z",
-    "contributors": ["A.Faturechi", "abinashLin", "chrisdavidmills"]
-  },
   "Learn/Learning_and_getting_help": {
     "modified": "2020-10-12T05:38:01.632Z",
     "contributors": [
@@ -10811,6 +10707,110 @@
   "Learn_web_development/Core/Version_control": {
     "modified": "2020-12-04T13:34:02.479Z",
     "contributors": ["Arpitgoyalgg", "chrisdavidmills"]
+  },
+  "Learn_web_development/Extensions/Advanced_JavaScript_objects": {
+    "modified": "2020-08-18T09:29:11.749Z",
+    "contributors": [
+      "owdown",
+      "chrisdavidmills",
+      "CodeDotJS",
+      "bripmccann",
+      "shi_zi_",
+      "Ch0coL8te",
+      "omeid",
+      "torazaburo",
+      "MashKao",
+      "fscholz"
+    ]
+  },
+  "Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features": {
+    "modified": "2020-10-28T23:14:36.083Z",
+    "contributors": [
+      "krankj",
+      "chrisdavidmills",
+      "jswisher",
+      "wwags33",
+      "rmdobservations",
+      "edsonmendieta",
+      "nmve",
+      "Jeremie",
+      "fscholz"
+    ]
+  },
+  "Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice": {
+    "modified": "2020-07-16T22:32:30.497Z",
+    "contributors": [
+      "chrisdavidmills",
+      "jswisher",
+      "IamLegendChamp",
+      "rohitarondekar",
+      "stephaniehobson",
+      "qdirks",
+      "RobWheadon",
+      "khamer1410",
+      "edsonmendieta",
+      "crueschenberg",
+      "nmve",
+      "wetlife",
+      "BaderSur",
+      "Jeremie",
+      "fscholz"
+    ]
+  },
+  "Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes": {
+    "modified": "2020-11-29T09:12:53.165Z",
+    "contributors": [
+      "chrisdavidmills",
+      "loretta-arineva",
+      "JohnnyMu-Cn",
+      "krankj",
+      "jgabrielpro",
+      "amit.gangaur",
+      "MrPodu",
+      "Zearin_Galaurum",
+      "ckashby",
+      "Bushwazi",
+      "ricardoorellana",
+      "hhimanshu",
+      "nsangwan",
+      "moneysharma1010",
+      "sappusaketh",
+      "Aerodium",
+      "collin",
+      "aniketkudale",
+      "LuoYun",
+      "anonyco",
+      "WeiyiChen",
+      "Univream",
+      "JonathanPool",
+      "COV",
+      "shateelahmed",
+      "MoTTs",
+      "deasydoesit",
+      "martian2049",
+      "theomjones",
+      "linasmnew",
+      "elWombator",
+      "stephaniehobson",
+      "iAziz786",
+      "lfzy",
+      "systematis",
+      "tcsc",
+      "giorgiobeggiora",
+      "zziccardi",
+      "rht19932",
+      "crueschenberg",
+      "sportnak",
+      "nmve",
+      "BrunkBeard",
+      "Jeremie",
+      "fscholz",
+      "ZeroUnderscoreOu"
+    ]
+  },
+  "Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills:_Object-oriented_JavaScript": {
+    "modified": "2020-08-12T12:48:24.778Z",
+    "contributors": ["A.Faturechi", "abinashLin", "chrisdavidmills"]
   },
   "Learn_web_development/Getting_started/Environment_setup/Command_line": {
     "modified": "2020-10-18T22:03:14.400Z",
