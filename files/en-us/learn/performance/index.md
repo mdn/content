@@ -8,7 +8,7 @@ page-type: learn-module
 
 Building websites requires HTML, CSS, and JavaScript. To build websites and applications people want to use, which attract and retain users, you need to create a good user experience. Part of good user experience is ensuring the content is quick to load and responsive to user interaction. This is known as **web performance**, and in this module you'll focus on the fundamentals of how to create performant websites.
 
-The rest of our beginner's learning material tried to stick to web best practices such as performance and [accessibility](/en-US/docs/Learn/Accessibility) as much as possible, however, it is good to focus specifically on such topics too, and make sure you are familiar with them.
+The rest of our beginner's learning material tried to stick to web best practices such as performance and [accessibility](/en-US/docs/Learn_web_development/Core/Accessibility) as much as possible, however, it is good to focus specifically on such topics too, and make sure you are familiar with them.
 
 ## Learning pathway
 

@@ -1,12 +1,14 @@
 ---
-title: Git and GitHub
-slug: Learn/Tools_and_testing/GitHub
+title: Version control
+slug: Learn_web_development/Core/Version_control
 page-type: learn-module
 ---
 
 {{LearnSidebar}}
 
-All developers will use some kind of **version control system** (**VCS**), a tool to allow them to collaborate with other developers on a project without the danger of them overwriting each other's work, and roll back to previous versions of the code base if a problem is discovered later on. The most popular VCS (at least among web developers) is **Git**, along with **GitHub**, a site that provides hosting for your repositories and several tools for working with them. This module aims to teach you what you need to know about both of them.
+{{PreviousMenu("Learn_web_development/Core/Design_for_developers", "Learn_web_development/Core")}}
+
+Version control tools are an essential part of modern workflows, for backing up and collaborating on codebases. This module takes you through the essentials of version control using Git and GitHub.
 
 ## Overview
 
@@ -37,6 +39,21 @@ It is also preferable that you have some basic terminal knowledge, so for exampl
 > [!NOTE]
 > GitHub is not the only site/toolset you can use with Git. There are other alternatives such as [GitLab](https://about.gitlab.com/) that you could try, and you could also try setting your own Git server up and using it instead of GitHub. We've only stuck with GitHub in this course to provide a single way that works.
 
+## Learning outcomes
+
+- Why version control systems are necessary.
+- The difference between Git, and websites like GitHub and GitLab.
+- Understand that websites such as GitHub and GitLab enable teamwork and collaboration that isn't so easy just with plain Git.
+- Basic setup — installing git, signing up for an account for your chosen social coding site.
+- Handling security requirements, like SSH/GPG keys.
+- Creating a repo and pushing changes to it.
+- Contributing to others' repos: forking, creating a new branch, creating a PR, and review flow.
+- Good housekeeping:
+  - Regularly updating local repos so that they are in sync with their remote counterparts.
+  - Using `.gitignore` to ignore all the stuff you don't want to commit.
+  - Deleting branches you have finished with.
+- Handling merge conflicts.
+
 ## Guides
 
 Note that the links below take you to resources on external sites. Eventually, we are aiming to have our own dedicated Git/GitHub course, but for now, these will help you get to grips with the subject at hand.
@@ -64,3 +81,5 @@ Note that the links below take you to resources on external sites. Eventually, w
 - [Learn Git branching](https://learngitbranching.js.org/)
 - [Flight rules for Git](https://github.com/k88hudson/git-flight-rules) (a very useful compendium of ways to achieve specific things in Git, including how to correct things when you went wrong).
 - [Dangit, git!](https://dangitgit.com/) (another useful compendium, specifically of ways to correct things when you went wrong).
+
+{{PreviousMenu("Learn_web_development/Core/Design_for_developers", "Learn_web_development/Core")}}

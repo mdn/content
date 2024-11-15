@@ -151,7 +151,7 @@ We have also included an `alt` (alternative) attribute. In the [`alt` attribute]
 The keywords for alt text are "descriptive text". The alt text you write should provide the reader with enough information to have a good idea of what the image conveys. In this example, our current text of "My test image" is no good at all. A much better alternative for our Firefox logo would be "The Firefox logo: a flaming fox surrounding the Earth."
 
 > [!NOTE]
-> Find out more about accessibility in our [accessibility learning module](/en-US/docs/Learn/Accessibility).
+> Find out more about accessibility in our [accessibility learning module](/en-US/docs/Learn_web_development/Core/Accessibility).
 
 Let's get your image displaying now.
 
@@ -185,7 +185,7 @@ Heading elements allow you to specify that certain parts of your content are hea
 Now try adding a suitable main title to your HTML page just above your {{htmlelement("img")}} element. Save the file and view it in a browser to see the effect.
 
 > [!NOTE]
-> You'll see that your heading level 1 has an implicit style. Don't use heading elements to make text bigger or bold, because they are used for [accessibility](/en-US/docs/Learn/Accessibility/HTML#text_content) and [other reasons such as SEO](/en-US/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#why_do_we_need_structure). Try to create a meaningful sequence of headings on your pages, without skipping levels.
+> You'll see that your heading level 1 has an implicit style. Don't use heading elements to make text bigger or bold, because they are used for [accessibility](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#text_content) and [other reasons such as SEO](/en-US/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#why_do_we_need_structure). Try to create a meaningful sequence of headings on your pages, without skipping levels.
 
 ### Paragraphs
 

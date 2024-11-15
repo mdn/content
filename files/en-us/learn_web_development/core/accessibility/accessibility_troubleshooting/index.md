@@ -1,43 +1,26 @@
 ---
-title: "Assessment: Accessibility troubleshooting"
-slug: Learn/Accessibility/Accessibility_troubleshooting
+title: "Challenge: Accessibility troubleshooting"
+slug: Learn_web_development/Core/Accessibility/Accessibility_troubleshooting
 page-type: learn-module-assessment
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
+{{LearnSidebar}}
 
-In the assessment for this module, we present to you a simple site with a number of accessibility issues that you need to diagnose and fix.
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Mobile","Learn_web_development/Core/Design_for_developers", "Learn_web_development/Core/Accessibility")}}
 
-<table>
-  <tbody>
-    <tr>
-      <th scope="row">Prerequisites:</th>
-      <td>
-        A basic understanding of HTML, CSS, and
-        JavaScript, an understanding of the
-        <a href="/en-US/docs/Learn/Accessibility"
-          >previous articles in the course</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Objective:</th>
-      <td>To test basic knowledge of accessibility fundamentals.</td>
-    </tr>
-  </tbody>
-</table>
+In the challenge for this module, we present to you a simple site with a number of accessibility issues that you need to diagnose and fix.
 
 ## Starting point
 
-To get this assessment started, you should go and grab the [ZIP containing the files that comprise the example](https://raw.githubusercontent.com/mdn/learning-area/main/accessibility/assessment-start/assessment-files.zip). Decompress the contents into a new directory somewhere on your local computer.
+To start this challenge, you should go and grab the [ZIP containing the files that comprise the example](https://raw.githubusercontent.com/mdn/learning-area/main/accessibility/assessment-start/assessment-files.zip). Decompress the contents into a new directory somewhere on your local computer.
 
 Alternatively, you could use an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 
-The finished assessment site should look like so:
+The finished challenge site should look like so:
 
-![Screenshot of the finished assessment site with good color contrast. The search input has placeholder text and a submit button that reads go, but no visible label.](assessment-site-finished.png)
+![Screenshot of the finished challenge site with good color contrast. The search input has placeholder text and a submit button that reads go, but no visible label.](assessment-site-finished.png)
 
-You will see some differences/issues with the display of the starting state of the assessment — this is mainly due to the differences in the markup, which in turn cause some styling issues as the CSS is not applied properly. Don't worry — you'll be fixing these problems in the upcoming sections!
+You will see some differences/issues with the display of the starting state of the challenge — this is mainly due to the differences in the markup, which in turn cause some styling issues as the CSS is not applied properly. Don't worry — you'll be fixing these problems in the upcoming sections!
 
 > [!NOTE]
 > If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
@@ -85,4 +68,4 @@ The data table is not currently very accessible — it is hard for screen reader
 
 Can you list two more ideas for improvements that would make the website more accessible?
 
-{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Mobile","Learn_web_development/Core/Design_for_developers", "Learn_web_development/Core/Accessibility")}}

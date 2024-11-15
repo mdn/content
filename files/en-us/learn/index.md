@@ -46,7 +46,7 @@ The following is a list of all the topics we cover in the MDN learning area.
   - : JavaScript is the scripting language used to add dynamic functionality to web pages. This topic teaches all the essentials needed to become comfortable with writing and understanding JavaScript.
 - [Web forms — Working with user data](/en-US/docs/Learn/Forms)
   - : Web forms are a potent tool for interacting with users — most commonly, they are used for collecting data from users, or allowing them to control a user interface. In the articles listed below, we'll cover all the essential aspects of structuring, styling, and interacting with web forms.
-- [Accessibility — make the web usable by everyone](/en-US/docs/Learn/Accessibility)
+- [Accessibility — make the web usable by everyone](/en-US/docs/Learn_web_development/Core/Accessibility)
   - : Accessibility is the practice of making web content available to as many people as possible regardless of disability, device, locale, or other differentiating factors. This topic gives you all you need to know.
 - [Web Performance — making websites fast and responsive](/en-US/docs/Learn/Performance)
   - : Web performance is the art of making sure web applications download fast and are responsive to user interaction, regardless of a user's bandwidth, screen size, network, or device capabilities.

@@ -192,7 +192,7 @@ This guideline focuses on making user interfaces intuitive and understandable.
         <code>Element</code>'s {{domxref("Element.focus_event", "focus")}} event contains some
         useful information. Also see
         <a
-          href="/en-US/docs/Learn/Accessibility/HTML#building_keyboard_accessibility_back_in"
+          href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#building_keyboard_accessibility_back_in"
           >Building keyboard accessibility back in</a
         >
         for some useful implementation ideas.
@@ -235,7 +235,7 @@ This guideline focuses on making user interfaces intuitive and understandable.
       </td>
       <td>
         See
-        <a href="/en-US/docs/Learn/Accessibility/HTML#page_layouts"
+        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#page_layouts"
           >Page layouts</a
         >
         for information on modern markup for layouts. See also
@@ -260,7 +260,7 @@ This guideline focuses on making user interfaces intuitive and understandable.
       <td>
         "Labels" can refer to descriptive information in text content, or HTML
         form labels. See
-        <a href="/en-US/docs/Learn/Accessibility/HTML#meaningful_text_labels"
+        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#meaningful_text_labels"
           >Meaningful text labels</a
         >
         for more information.
@@ -346,7 +346,7 @@ This guideline centers around helping users enter correct information when requi
         >
         for comprehensive validation information, and
         <a
-          href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics#dynamic_content_updates"
+          href="/en-US/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics#dynamic_content_updates"
           >WAI-ARIA: Dynamic content updates</a
         >
         for information on live regions.
@@ -374,7 +374,7 @@ This guideline centers around helping users enter correct information when requi
         <ul>
           <li>
             <a
-              href="/en-US/docs/Learn/Accessibility/HTML#meaningful_text_labels"
+              href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#meaningful_text_labels"
               >Meaningful text labels</a
             >
           </li>

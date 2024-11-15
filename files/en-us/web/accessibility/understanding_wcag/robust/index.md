@@ -64,11 +64,11 @@ This guideline focuses on making content as compatible as possible, not only wit
       </td>
       <td>
         See
-        <a href="/en-US/docs/Learn/Accessibility/HTML"
+        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML"
           >HTML: A good basis for accessibility</a
         >
         and
-        <a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics"
+        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics"
           >WAI-ARIA basics</a
         >.
       </td>

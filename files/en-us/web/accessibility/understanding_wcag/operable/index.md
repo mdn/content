@@ -35,12 +35,12 @@ This guideline covers the necessity of making core website functionality availab
       </td>
       <td>
         See
-        <a href="/en-US/docs/Learn/Accessibility/HTML#ui_controls"
+        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#ui_controls"
           >UI controls</a
         >
         and
         <a
-          href="/en-US/docs/Learn/Accessibility/HTML#building_keyboard_accessibility_back_in"
+          href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#building_keyboard_accessibility_back_in"
           >Building keyboard accessibility back in</a
         >
       </td>
@@ -72,12 +72,12 @@ This guideline covers the necessity of making core website functionality availab
       </td>
       <td>
         See
-        <a href="/en-US/docs/Learn/Accessibility/HTML#ui_controls"
+        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#ui_controls"
           >UI controls</a
         >
         and
         <a
-          href="/en-US/docs/Learn/Accessibility/HTML#building_keyboard_accessibility_back_in"
+          href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#building_keyboard_accessibility_back_in"
           >Building keyboard accessibility back in</a
         >
       </td>
@@ -303,7 +303,7 @@ The conformance criteria under this guideline relate to ways in which users can 
       </td>
       <td>
         See
-        <a href="/en-US/docs/Learn/Accessibility/HTML#ui_controls"
+        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#ui_controls"
           >UI controls</a
         >
         for general advice on tabbing to controls. If you need to place elements
@@ -326,7 +326,7 @@ The conformance criteria under this guideline relate to ways in which users can 
       </td>
       <td>
         See
-        <a href="/en-US/docs/Learn/Accessibility/HTML#meaningful_text_labels"
+        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#meaningful_text_labels"
           >Meaningful text labels</a
         >. Also note that you should minimize instances where multiple copies of
         the same text are linked to different places. This can cause problems
@@ -375,10 +375,10 @@ The conformance criteria under this guideline relate to ways in which users can 
       <td>
         <p>
           See
-          <a href="/en-US/docs/Learn/Accessibility/HTML#ui_controls"
+          <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#ui_controls"
             >UI controls</a
           >,
-          <a href="/en-US/docs/Learn/Accessibility/HTML#meaningful_text_labels"
+          <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#meaningful_text_labels"
             >Meaningful text labels</a
           >,
           <a
@@ -409,8 +409,8 @@ The conformance criteria under this guideline relate to ways in which users can 
       <td>
         See
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#using_native_keyboard_accessibility"
-          >Using native keyboard accessibility</a
+          href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#ui_controls"
+          >UI controls</a
         >.
       </td>
     </tr>
@@ -432,7 +432,7 @@ The conformance criteria under this guideline relate to ways in which users can 
       </td>
       <td>
         See
-        <a href="/en-US/docs/Learn/Accessibility/HTML#meaningful_text_labels"
+        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#meaningful_text_labels"
           >Meaningful text labels</a
         >. Also note that you should minimize instances where multiple copies of
         the same text are linked to different places. This can cause problems

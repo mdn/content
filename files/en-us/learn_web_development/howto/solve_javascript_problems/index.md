@@ -1,6 +1,6 @@
 ---
-title: Solve common problems in your JavaScript code
-slug: Learn/JavaScript/Howto
+title: Solve common JavaScript problems
+slug: Learn_web_development/Howto/Solve_JavaScript_problems
 page-type: landing-page
 ---
 

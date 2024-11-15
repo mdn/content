@@ -109,7 +109,7 @@ You can see what browsers and operating systems your users are using by selectin
 
 ### Other considerations
 
-You should include accessibility as a grade A testing requirement (we'll cover exactly what you should test in our [Handling common accessibility problems](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility) article).
+You should include accessibility as a grade A testing requirement.
 
 Also, you should be aware of situation-specific needs. For example, if your product targets a market where mobile phones are the primary means of accessing the internet, you will probably want to make mobile browser support a priority.
 

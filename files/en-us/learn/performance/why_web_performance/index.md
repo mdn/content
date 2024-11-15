@@ -36,7 +36,7 @@ Web performance refers to how quickly site content **loads** and **renders** in 
 
 ## Why care about performance?
 
-Web performance — and its associated best practices—are vital for your website visitors to have a good experience. In a sense, web performance can be considered a subset of [web accessibility](/en-US/docs/Learn/Accessibility). With performance as with accessibility, you consider what device a site visitor is using to access the site and the device connection speed.
+Web performance — and its associated best practices—are vital for your website visitors to have a good experience. In a sense, web performance can be considered a subset of [web accessibility](/en-US/docs/Learn_web_development/Core/Accessibility). With performance as with accessibility, you consider what device a site visitor is using to access the site and the device connection speed.
 
 As an example, consider the loading experience of CNN.com, which at the time of this writing had over 400 HTTP requests with a file size of over 22.6MB.
 

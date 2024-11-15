@@ -1,10 +1,12 @@
 ---
 title: What is accessibility?
-slug: Learn/Accessibility/What_is_accessibility
+slug: Learn_web_development/Core/Accessibility/What_is_accessibility
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}
+{{LearnSidebar}}
+
+{{NextMenu("Learn_web_development/Core/Accessibility/Tooling", "Learn_web_development/Core/Accessibility")}}
 
 This article starts the module off with a good look at what accessibility is — this overview includes what groups of people we need to consider and why, what tools different people use to interact with the web, and how we can make accessibility part of our web development workflow.
 
@@ -12,13 +14,18 @@ This article starts the module off with a good look at what accessibility is —
   <tbody>
     <tr>
       <th scope="row">Prerequisites:</th>
-      <td>A basic understanding of HTML and CSS.</td>
+      <td>Familiarity with <a href="/en-US/docs/Learn_web_development/Core/Structuring_content">HTML</a>, <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS</a>.</td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">Learning outcomes:</th>
       <td>
-        To gain familiarity with accessibility, including what it is, and how it
-        affects you as a web developer.
+        <ul>
+          <li>The point of accessibility — increased access to digital services for those with additional needs, improved usability for everyone, better SEO, and a wider target audience.</li>
+          <li>Awareness of the legal requirements of accessibility.</li>
+          <li>That accessibility should be considered from the start of a project, and not bolted on at the end.</li>
+          <li>Familiarity with the Web Content Accessibility Guidelines (WCAG) conformance criteria.</li>
+          <li>Awareness of accessibility APIs and their purpose.</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -54,7 +61,7 @@ People with visual impairments include people with blindness, low-level vision, 
 - Free products, like [NVDA](https://www.nvaccess.org/) (Windows), [ChromeVox](https://support.google.com/chromebook/answer/7031755) (Chrome), and [Orca](https://wiki.gnome.org/Projects/Orca) (Linux).
 - Software built into the operating system, like [VoiceOver](https://www.apple.com/accessibility/vision/) (macOS, iPadOS, iOS), [Narrator](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) (Windows), [ChromeVox](https://support.google.com/chromebook/answer/7031755) (on ChromeOS), and [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
 
-It is a good idea to familiarize yourself with screen readers; you should also set up a screen reader and play around with it, to get an idea of how it works. See our [cross-browser testing screen readers guide](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screen_readers) for more details on using them. The below video also provides a brief example of what the experience is like.
+It is a good idea to familiarize yourself with screen readers; you should also set up a screen reader and play around with it, to get an idea of how it works. See our [cross-browser testing screen readers guide](/en-US/docs/Learn_web_development/Core/Accessibility/Tooling#screen_readers) for more details on using them. The below video also provides a brief example of what the experience is like.
 
 {{EmbedYouTube("IK97XMibEws")}}
 
@@ -74,7 +81,7 @@ These people have disabilities concerning movement, which might involve purely p
 
 This kind of disability can also be a result of old age, rather than any specific trauma or condition, and it could also result from hardware limitations — some users might not have a mouse.
 
-The way this usually affects web development work is the requirement that controls be accessible by the keyboard — we'll discuss keyboard accessibility in later articles in the module, but it is a good idea to try out some websites using just the keyboard to see how you get on. Can you use the Tab key to move between the different controls of a web form, for example? You can find more details about keyboard controls in our [Cross browser testing Using native keyboard accessibility](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#using_native_keyboard_accessibility) section.
+The way this usually affects web development work is the requirement that controls be accessible by the keyboard — we'll discuss keyboard accessibility in later articles in the module, but it is a good idea to try out some websites using just the keyboard to see how you get on. Can you use the Tab key to move between the different controls of a web form, for example? You can find more details about keyboard controls in our [UI controls](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#ui_controls) section.
 
 In terms of statistics, a significant number of people have mobility impairments. The US Centers for Disease Control and Prevention [Disability and Functioning (Non-institutionalized Adults 18 Years and Over)](https://www.cdc.gov/nchs/fastats/disability.htm) reports the USA "Percent of adults with any physical functioning difficulty: 16.1%".
 
@@ -113,7 +120,7 @@ A common accessibility myth is that accessibility is an expensive "added extra" 
 
 If however, you consider accessibility from the start of a project, the cost of making most content accessible should be fairly minimal.
 
-When planning your project, factor accessibility testing into your testing regime, just like testing for any other important target audience segment (e.g., target desktop or mobile browsers). Test early and often, ideally running automated tests to pick up on programmatically detectable missing features (such as missing image [alternative text](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#text_alternatives) or bad link text — see [Element relationships and context](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#element_relationships_and_context)) and doing some testing with disabled user groups to see how well more complex site features work for them. For example:
+When planning your project, factor accessibility testing into your testing regime, just like testing for any other important target audience segment (e.g., target desktop or mobile browsers). Test early and often, ideally running automated tests to pick up on programmatically detectable missing features (such as missing image [alternative text](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#text_alternatives) or bad link text — see [Meaningful text labels](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#meaningful_text_labels)) and doing some testing with disabled user groups to see how well more complex site features work for them. For example:
 
 - Is my date picker widget usable by people using screen readers?
 - If content updates dynamically, do visually impaired people know about it?
@@ -126,9 +133,6 @@ Also, be realistic. "100% accessibility" is an unobtainable ideal — you will a
 On the other hand, if you are working on a gallery website showing interesting 3D art, it would be unreasonable to expect every piece of art to be perfectly accessible to visually impaired people, given that it is an entirely visual medium.
 
 To show that you care and have thought about accessibility, publish an accessibility statement on your site that details what your policy is toward accessibility, and what steps you have taken toward making the site accessible. If someone does notify you that your site has an accessibility problem, start a dialog with them, be empathetic, and take reasonable steps to try to fix the problem.
-
-> [!NOTE]
-> Our [Handling common accessibility problems article](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility) covers accessibility specifics that should be tested in more detail.
 
 To summarize:
 
@@ -159,13 +163,11 @@ Different operating systems have different accessibility APIs available:
 - Android: Accessibility framework
 - iOS: UIAccessibility
 
-Where the native semantic information provided by the HTML elements in your web apps falls down, you can supplement it with features from the [WAI-ARIA specification](https://www.w3.org/TR/wai-aria/), which add semantic information to the accessibility tree to improve accessibility. You can learn a lot more about WAI-ARIA in our [WAI-ARIA basics](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics) article.
+Where the native semantic information provided by the HTML elements in your web apps falls down, you can supplement it with features from the [WAI-ARIA specification](https://www.w3.org/TR/wai-aria/), which add semantic information to the accessibility tree to improve accessibility. You can learn a lot more about WAI-ARIA in our [WAI-ARIA basics](/en-US/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) article.
 
 ## Summary
 
-This article should have given you a useful high-level overview of accessibility, shown you why it's important, and looked at how you can fit it into your workflow. You should now also have a thirst to learn about the implementation details that can make sites accessible, and we'll start on that in the next section, looking at why HTML is a good basis for accessibility.
-
-{{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}
+This article should have given you a useful high-level overview of accessibility, shown you why it's important, and looked at how you can fit it into your workflow. You should now also have a thirst to learn about the implementation details that can make sites accessible, and what tools can help. We'll look at accessibility tooling in the next article.
 
 ## See also
 
@@ -177,3 +179,5 @@ This article should have given you a useful high-level overview of accessibility
   - [Robust](/en-US/docs/Web/Accessibility/Understanding_WCAG/Robust)
 
 - [Google Chrome released an auto-captioning extension](https://blog.google/products/chrome/live-caption-chrome/)
+
+{{NextMenu("Learn_web_development/Core/Accessibility/Tooling", "Learn_web_development/Core/Accessibility")}}

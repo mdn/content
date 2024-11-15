@@ -1,12 +1,12 @@
 ---
 title: "Test your skills: HTML accessibility"
-slug: Learn/Accessibility/Test_your_skills:_HTML_accessibility
+slug: Learn_web_development/Core/Accessibility/Test_your_skills:_HTML_accessibility
 page-type: learn-module-assessment
 ---
 
 {{learnsidebar}}
 
-The aim of this skill test is to assess whether you've understood our [HTML: A good basis for accessibility](/en-US/docs/Learn/Accessibility/HTML) article.
+The aim of this skill test is to assess whether you've understood our [HTML: A good basis for accessibility](/en-US/docs/Learn_web_development/Core/Accessibility/HTML) article.
 
 > [!NOTE]
 > You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).

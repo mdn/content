@@ -46,7 +46,7 @@ In this article we're going to use the following tools and features:
 - Useful development tools such as [Prettier](https://prettier.io/) for formatting and [ESLint](https://eslint.org/) for linting.
 - [PostCSS](https://postcss.org/) to provide CSS nesting capabilities.
 - [Vite](https://vite.dev/) to build and minify our code, and to write a bunch of configuration file content automatically for us.
-- [GitHub](/en-US/docs/Learn/Tools_and_testing/GitHub) to manage our source code control as well as to eventually deploy our site (using GitHub Pages).
+- [GitHub](/en-US/docs/Learn_web_development/Core/Version_control) to manage our source code control as well as to eventually deploy our site (using GitHub Pages).
 
 You may not be familiar with all the above features and tools or what they are doing, but don't panic — we'll explain each part as we move through this article.
 

@@ -29,4 +29,4 @@ The generated color values can be used anywhere the {{cssxref("color_value", "&l
 - [Understanding color and luminance](/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
 - [WCAG 1.4.1: Color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)
 - [Learn: Styling backgrounds and borders using CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
-- [Learn accessibility: Color and color contrast](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast)
+- [Learn accessibility: Color and color contrast](/en-US/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#color_and_color_contrast)

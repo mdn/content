@@ -1,10 +1,12 @@
 ---
 title: Mobile accessibility
-slug: Learn/Accessibility/Mobile
+slug: Learn_web_development/Core/Accessibility/Mobile
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Multimedia","Learn_web_development/Core/Accessibility/Accessibility_troubleshooting", "Learn_web_development/Core/Accessibility")}}
 
 With web access on mobile devices being so popular and renowned platforms such as iOS and Android having full-fledged accessibility tools, it is important to consider the accessibility of your web content on these platforms. This article looks at mobile-specific accessibility considerations.
 
@@ -12,19 +14,17 @@ With web access on mobile devices being so popular and renowned platforms such a
   <tbody>
     <tr>
       <th scope="row">Prerequisites:</th>
-      <td>
-        A basic understanding of HTML, CSS, and
-        JavaScript. An understanding of the
-        <a href="/en-US/docs/Learn/Accessibility"
-          >previous articles in the course</a
-        >.
-      </td>
+      <td>Familiarity with <a href="/en-US/docs/Learn_web_development/Core/Structuring_content">HTML</a>, <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS</a>, and accessibility best practices as taught in previous lessons in the module.</a>.</td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">Learning outcomes:</th>
       <td>
-        To understand what problems exist with accessibility on mobile devices,
-        and how to overcome them.
+        <ul>
+          <li>Familiarity with screenreaders on iOS and Android.</li>
+          <li>Familiarity with accessibility issues behind some types of events.</li>
+          <li>Specific techniques for more usable user input machanisms on mobile.</li>
+          <li>Know that mobile browsers provide specific usability advantages for specific <code>&lt;input&gt;</code> types such as <code>number</code> or <code>tel</code>.</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -34,7 +34,7 @@ With web access on mobile devices being so popular and renowned platforms such a
 
 The state of accessibility — and support for web standards in general — is good in modern mobile devices. Long gone are the days when mobile devices ran completely different web technologies to desktop browsers, forcing developers to use browser sniffing and serve them completely separate sites (although quite a few companies still detect usage of mobile devices and serve them a separate mobile domain).
 
-These days, mobile devices can usually handle fully-featured websites, and the main platforms even have screen readers built in to enable visually impaired users to use them successfully. Modern mobile browsers tend to have good support for [WAI-ARIA](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics), too.
+These days, mobile devices can usually handle fully-featured websites, and the main platforms even have screen readers built in to enable visually impaired users to use them successfully. Modern mobile browsers tend to have good support for [WAI-ARIA](/en-US/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics), too.
 
 To make a website accessible and usable on mobile, you just need to follow general good web design and accessibility best practices.
 
@@ -184,7 +184,7 @@ Let's have a go at web browsing with VoiceOver:
 
 ## Control mechanisms
 
-In our CSS and JavaScript accessibility article, we looked at the idea of events that are specific to a certain type of control mechanism (see [Mouse-specific events](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#mouse-specific_events)). To recap, these cause accessibility issues because other control mechanisms can't activate the associated functionality.
+In our CSS and JavaScript accessibility article, we looked at the idea of events that are specific to a certain type of control mechanism (see [Mouse-specific events](/en-US/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#mouse-specific_events)). To recap, these cause accessibility issues because other control mechanisms can't activate the associated functionality.
 
 As an example, the [click](/en-US/docs/Web/API/Element/click_event) event is good in terms of accessibility — an associated event handler can be invoked by clicking the element the handler is set on, tabbing to it and pressing Enter/Return, or tapping it on a touchscreen device. Try our [simple-button-example.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/simple-button-example.html) example ([see it running live](https://mdn.github.io/learning-area/accessibility/mobile/simple-button-example.html)) to see what we mean.
 
@@ -277,4 +277,4 @@ In this article, we have provided you with some details about common mobile acce
 - [Guidelines For Mobile Web Development](https://www.smashingmagazine.com/2012/07/guidelines-for-mobile-web-development/) — A list of articles in _Smashing Magazine_ covering different techniques for mobile web design.
 - [Make your site work on touch devices](https://www.creativebloq.com/javascript/make-your-site-work-touch-devices-51411644) — Useful article about using touch events to get interactions working on mobile devices.
 
-{{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Multimedia","Learn_web_development/Core/Accessibility/Accessibility_troubleshooting", "Learn_web_development/Core/Accessibility")}}

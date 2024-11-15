@@ -356,7 +356,7 @@ a:hover {
 We have removed the underline on our link on hover. You could remove the underline from all states of a link. It is worth remembering however that in a real site, you want to ensure that visitors know that a link is a link. Leaving the underline in place can be an important clue for people to realize that some text inside a paragraph can be clicked on — this is the behavior they are used to. As with everything in CSS, there is the potential to make the document less accessible with your changes — we will aim to highlight potential pitfalls in appropriate places.
 
 > [!NOTE]
-> You will often see mention of [accessibility](/en-US/docs/Learn/Accessibility) in these lessons and across MDN. When we talk about accessibility we are referring to the requirement for our webpages to be understandable and usable by everyone, whether they are using a computer with a mouse or trackpad, a phone with a touchscreen, navigating only using the keyboard, or via a screen reader, which reads out the content of the document.
+> You will often see mention of [accessibility](/en-US/docs/Learn_web_development/Core/Accessibility) in these lessons and across MDN. When we talk about accessibility we are referring to the requirement for our webpages to be understandable and usable by everyone, whether they are using a computer with a mouse or trackpad, a phone with a touchscreen, navigating only using the keyboard, or via a screen reader, which reads out the content of the document.
 
 ### Combining selectors and combinators
 

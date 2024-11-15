@@ -50,7 +50,7 @@ This topic contains the following modules, in a suggested order for working thro
 
 ## Solving common JavaScript problems
 
-[Solve common problems in your JavaScript code](/en-US/docs/Learn/JavaScript/Howto) provides a little advice on how to avoid common beginner JavaScript programming mistakes, along with many helpful links to topics that show how to solve common JavaScript programming problems.
+[Solve common JavaScript problems](/en-US/docs/Learn_web_development/Howto/Solve_JavaScript_problems) provides a little advice on how to avoid common beginner JavaScript programming mistakes, along with many helpful links to topics that show how to solve common JavaScript programming problems.
 
 ## See also
 

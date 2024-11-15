@@ -315,7 +315,7 @@ Color as in hues and saturation can affect our mood, and enhance — or de-enhan
 ## See also
 
 - [Accessibility](/en-US/docs/Web/Accessibility)
-- [Accessibility learning path](/en-US/docs/Learn/Accessibility)
+- [Accessibility learning path](/en-US/docs/Learn_web_development/Core/Accessibility)
 - CSS [`color`](/en-US/docs/Web/CSS/color) property
 - [`<color>`](/en-US/docs/Web/CSS/color_value) data type
 - [Web accessibility for seizures and physical reactions](/en-US/docs/Web/Accessibility/Seizure_disorders)

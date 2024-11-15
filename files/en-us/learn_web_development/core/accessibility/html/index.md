@@ -1,10 +1,12 @@
 ---
 title: "HTML: A good basis for accessibility"
-slug: Learn/Accessibility/HTML
+slug: Learn_web_development/Core/Accessibility/HTML
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Tooling","Learn_web_development/Core/Accessibility/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}
 
 A great deal of web content can be made accessible just by making sure the correct Hypertext Markup Language elements are used for the correct purpose at all times. This article looks in detail at how HTML can be used to ensure maximum accessibility.
 
@@ -12,21 +14,18 @@ A great deal of web content can be made accessible just by making sure the corre
   <tbody>
     <tr>
       <th scope="row">Prerequisites:</th>
-      <td>
-        A basic understanding of HTML (see
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
-          >Introduction to HTML</a
-        >), and an understanding of
-        <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility"
-          >what accessibility is</a
-        >.
-      </td>
+      <td>Familiarity with <a href="/en-US/docs/Learn_web_development/Core/Structuring_content">HTML</a>, <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS</a>, a <a href="/en-US/docs/Learn_web_development/Core/Accessibility/What_is_accessibility">basic understanding of accessibility concepts</a>.</td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">Learning outcomes:</th>
       <td>
-        To gain familiarity with the features of HTML that have accessibility
-        benefits and how to use them appropriately in your web documents.
+        <ul>
+          <li>Use semantic HTML, aka "The right element for the right job", because the browser provides so many built-in accessibility hooks.</li>
+          <li>Accessible best practices such as alt text, good link best, form labels, and table row and column headings and scoping.</li>
+          <li>Using simple plain language, steering clear of slang and abbreviations where possible, and providing definitions where it is not possible.</li>
+          <li>The concept and practice of keyboard accessibility.</li>
+          <li>The importance of source order.</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -57,9 +56,6 @@ Semantic HTML doesn't take any longer to write than non-semantic (bad) markup if
 3. **Good for SEO** — search engines give more importance to keywords inside headings, links, etc. than keywords included in non-semantic `<div>`s, etc., so your documents will be more findable by customers.
 
 Let's get on and look at accessible HTML in more detail.
-
-> [!NOTE]
-> It is a good idea to have a screen reader set up on your local computer so that you can do some testing of the examples shown below. See our [Screen readers guide](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screen_readers) for more details.
 
 ## Good semantics
 
@@ -275,9 +271,6 @@ One key aspect of the accessibility of UI controls is that by default, browsers 
 
 You can then press Enter/Return to follow a focused link or press a button (we've included some JavaScript to make the buttons alert a message), or start typing to enter text in a text input. Other form elements have different controls; for example, the {{htmlelement("select")}} element can have its options displayed and cycled between using the up and down arrow keys.
 
-> [!NOTE]
-> Different browsers may have different keyboard control options available. See [Using native keyboard accessibility](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#using_native_keyboard_accessibility) for more details.
-
 You essentially get this behavior for free, just by using the appropriate elements, e.g.
 
 ```html example-good
@@ -469,7 +462,7 @@ Now have a look at our [punk bands table example](https://github.com/mdn/learnin
 
 ## Text alternatives
 
-Whereas textual content is inherently accessible, the same cannot necessarily be said for multimedia content — image and video content cannot be seen by visually-impaired people, and audio content cannot be heard by hearing-impaired people. We cover video and audio content in detail in the [Accessible multimedia](/en-US/docs/Learn/Accessibility/Multimedia), but for this article we'll look at accessibility for the humble {{htmlelement("img")}} element.
+Whereas textual content is inherently accessible, the same cannot necessarily be said for multimedia content — image and video content cannot be seen by visually-impaired people, and audio content cannot be heard by hearing-impaired people. We cover video and audio content in detail in the [Accessible multimedia](/en-US/docs/Learn_web_development/Core/Accessibility/Multimedia), but for this article we'll look at accessibility for the humble {{htmlelement("img")}} element.
 
 We have a simple example written up, [accessible-image.html](https://mdn.github.io/learning-area/accessibility/html/accessible-image.html), which features four copies of the same image:
 
@@ -527,7 +520,7 @@ Let's have another quick look at the fourth method:
 
 In this case, we are not using the `alt` attribute at all — instead, we have presented our description of the image as a regular text paragraph, given it an `id`, and then used the `aria-labelledby` attribute to refer to that `id`, which causes screen readers to use that paragraph as the alt text/label for that image. This is especially useful if you want to use the same text as a label for multiple images — something that isn't possible with `alt`.
 
-> **Note:** [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) is part of the [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) spec, which allows developers to add in extra semantics to their markup to improve screen reader accessibility where needed. To learn more about how it works, read our [WAI-ARIA Basics](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics) article.
+> **Note:** [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) is part of the [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) spec, which allows developers to add in extra semantics to their markup to improve screen reader accessibility where needed.
 
 ### Figures and figure captions
 
@@ -630,10 +623,10 @@ Spacing may be created using CSS properties such as {{CSSxRef("margin")}}.
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? See [Test your skills: HTML Accessibility](/en-US/docs/Learn/Accessibility/Test_your_skills:_HTML_accessibility) to verify that you've retained this information before you move on.
+You've reached the end of this article, but can you remember the most important information? See [Test your skills: HTML Accessibility](/en-US/docs/Learn_web_development/Core/Accessibility/Test_your_skills:_HTML_accessibility) to verify that you've retained this information before you move on.
 
 ## Summary
 
 You should now be well-versed in writing accessible HTML for most occasions. Our WAI-ARIA basics article will help to fill gaps in this knowledge, but this article has taken care of the basics. Next up we'll explore CSS and JavaScript, and how accessibility is affected by their good or bad use.
 
-{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Tooling","Learn_web_development/Core/Accessibility/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}

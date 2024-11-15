@@ -122,7 +122,7 @@ What exactly should you write inside your `alt` attribute? It depends on _why_ t
 Essentially, the key is to deliver a usable experience, even when the images can't be seen. This ensures all users are not missing any of the content. Try turning off images in your browser and see how things look. You'll soon realize how helpful alt text is if the image cannot be seen.
 
 > [!NOTE]
-> For more information, see our guide to [Text Alternatives](/en-US/docs/Learn/Accessibility/HTML#text_alternatives).
+> For more information, see our guide to [Text Alternatives](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#text_alternatives).
 
 ### Width and height
 

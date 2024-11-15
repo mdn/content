@@ -99,4 +99,4 @@ git push
 
 You can replace _another commit_ with a more suitable message to describe what change you just made.
 
-We have barely scratched the surface of Git. To learn more, check out our [Git and GitHub](/en-US/docs/Learn/Tools_and_testing/GitHub) page.
+We have barely scratched the surface of Git. To learn more, check out our [Git and GitHub](/en-US/docs/Learn_web_development/Core/Version_control) page.

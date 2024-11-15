@@ -153,7 +153,7 @@ Add a `required` attribute to your input, as shown below.
 </form>
 ```
 
-We added "(required)" to the {{htmlelement("label")}} to inform the user that the {{htmlelement("input")}} is required. Indicating to the user when form fields are required is not only good user experience, it is required by WCAG [accessibility](/en-US/docs/Learn/Accessibility) guidelines.
+We added "(required)" to the {{htmlelement("label")}} to inform the user that the {{htmlelement("input")}} is required. Indicating to the user when form fields are required is not only good user experience, it is required by WCAG [accessibility](/en-US/docs/Learn_web_development/Core/Accessibility) guidelines.
 
 We include CSS styles that are applied based on whether the element is required, valid, and invalid:
 

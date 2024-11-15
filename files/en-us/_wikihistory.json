@@ -5842,168 +5842,6 @@
       "anistark"
     ]
   },
-  "Learn/Accessibility": {
-    "modified": "2020-10-04T00:35:19.095Z",
-    "contributors": [
-      "hadleyel",
-      "chrisdavidmills",
-      "sharma86hub",
-      "beezedits",
-      "nawaazwill11",
-      "Shobhit1",
-      "ijsasser",
-      "estelle",
-      "poacher2k",
-      "nackman",
-      "msobanjo",
-      "christopherwilson1",
-      "charlie-s"
-    ]
-  },
-  "Learn/Accessibility/Accessibility_troubleshooting": {
-    "modified": "2020-07-16T22:40:34.005Z",
-    "contributors": ["chrisdavidmills", "jswisher", "RicardsVeveris", "qdirks"]
-  },
-  "Learn/Accessibility/CSS_and_JavaScript": {
-    "modified": "2020-07-16T22:40:16.216Z",
-    "contributors": [
-      "chrisdavidmills",
-      "kruschk",
-      "niwsa",
-      "rajashreemadan",
-      "sideshowbarker",
-      "christopherwilson1",
-      "Uemmra3",
-      "stephaniehobson",
-      "qdirks",
-      "scottaohara",
-      "rebekahpadula",
-      "unused"
-    ]
-  },
-  "Learn/Accessibility/CSS_and_JavaScript/Test_your_skills:_CSS_and_JavaScript_accessibility": {
-    "modified": "2020-07-16T22:40:20.219Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "Learn/Accessibility/HTML": {
-    "modified": "2020-11-20T01:54:13.621Z",
-    "contributors": [
-      "hamishwillee",
-      "voiceofrae",
-      "NatJT",
-      "chrisdavidmills",
-      "rolfedh",
-      "garrettbsettles",
-      "Anonymous",
-      "osamak",
-      "kruschk",
-      "LeonFrempong",
-      "estelle",
-      "irenesmith",
-      "mizodo",
-      "rachelcarmena",
-      "dev-dongwon",
-      "seanc",
-      "kiiran",
-      "Thai",
-      "imi-tating",
-      "Hnakamur",
-      "stephaniehobson",
-      "AnnaMhairi",
-      "snazziness",
-      "scottaohara",
-      "hadleyel",
-      "jasper2virtual",
-      "unused"
-    ]
-  },
-  "Learn/Accessibility/Mobile": {
-    "modified": "2020-12-10T09:45:31.215Z",
-    "contributors": [
-      "chrisdavidmills",
-      "vgiffin",
-      "RafeyIqbalRahman",
-      "valgrimm",
-      "estelle",
-      "jamesdhurd",
-      "CheungJ",
-      "stephaniehobson",
-      "shenshaohui1991",
-      "newyork-anthonyng",
-      "qdirks"
-    ]
-  },
-  "Learn/Accessibility/Multimedia": {
-    "modified": "2020-12-03T08:05:47.296Z",
-    "contributors": [
-      "chrisdavidmills",
-      "dega",
-      "sourabhramsingh",
-      "sonn64877",
-      "transcribear",
-      "kruschk",
-      "serenitus",
-      "Mimi-Davies",
-      "brycepj",
-      "stephaniehobson",
-      "newyork-anthonyng",
-      "qdirks"
-    ]
-  },
-  "Learn/Accessibility/Test_your_skills:_HTML_accessibility": {
-    "modified": "2020-07-16T22:40:37.539Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "Learn/Accessibility/WAI-ARIA_basics": {
-    "modified": "2020-11-24T11:05:10.811Z",
-    "contributors": [
-      "SpartaSixZero",
-      "chrisdavidmills",
-      "ckashby",
-      "kruschk",
-      "brokerr",
-      "eduDevCF",
-      "anied",
-      "ferlo",
-      "brucelawson",
-      "EmotionChip",
-      "scheruiyot",
-      "JonathanPool",
-      "aziot",
-      "stephaniehobson",
-      "newyork-anthonyng",
-      "donysukardi",
-      "joshbader"
-    ]
-  },
-  "Learn/Accessibility/WAI-ARIA_basics/Test_your_skills:_WAI-ARIA": {
-    "modified": "2020-11-13T16:57:24.326Z",
-    "contributors": ["BassOfBass", "chrisdavidmills"]
-  },
-  "Learn/Accessibility/What_is_accessibility": {
-    "modified": "2020-10-04T01:37:18.886Z",
-    "contributors": [
-      "hadleyel",
-      "chrisdavidmills",
-      "ckashby",
-      "kruschk",
-      "espertus",
-      "mozdevcontrib",
-      "estelle",
-      "JohnRochfordUMMS",
-      "teleject",
-      "pavilion2t",
-      "matta2dev",
-      "yatil",
-      "goodwitch",
-      "ahmadnourallah",
-      "stephaniehobson",
-      "snazziness",
-      "scottaohara",
-      "dinoop.mathew",
-      "granttchart"
-    ]
-  },
   "Learn/CSS/Howto/create_fancy_boxes": {
     "modified": "2020-07-16T22:25:49.147Z",
     "contributors": ["hbloomer", "Jeremie"]
@@ -7200,19 +7038,6 @@
       "stephaniehobson",
       "david_ross",
       "BrunkBeard"
-    ]
-  },
-  "Learn/JavaScript/Howto": {
-    "modified": "2020-07-16T22:33:08.616Z",
-    "contributors": [
-      "kruschk",
-      "sywsyw",
-      "jmstfv",
-      "stephaniehobson",
-      "chrisdavidmills",
-      "Maxim79",
-      "tedmarynicz",
-      "adekoyejo"
     ]
   },
   "Learn/JavaScript/Objects": {
@@ -8585,23 +8410,6 @@
       "melaniemkwon"
     ]
   },
-  "Learn/Tools_and_testing/Cross_browser_testing/Accessibility": {
-    "modified": "2020-11-20T02:03:56.749Z",
-    "contributors": [
-      "hamishwillee",
-      "chrisdavidmills",
-      "ckashby",
-      "kruschk",
-      "eduDevCF",
-      "mharty",
-      "nackman",
-      "joestrouth1",
-      "stephaniehobson",
-      "conradbeach",
-      "joelcollinsdc",
-      "granttchart"
-    ]
-  },
   "Learn/Tools_and_testing/Cross_browser_testing/Automated_testing": {
     "modified": "2020-09-24T05:59:58.777Z",
     "contributors": [
@@ -8715,10 +8523,6 @@
       "paulinas"
     ]
   },
-  "Learn/Tools_and_testing/GitHub": {
-    "modified": "2020-12-04T13:34:02.479Z",
-    "contributors": ["Arpitgoyalgg", "chrisdavidmills"]
-  },
   "Learn/Tools_and_testing/Understanding_client-side_tools": {
     "modified": "2020-07-16T22:39:26.098Z",
     "contributors": ["chrisdavidmills"]
@@ -8745,6 +8549,185 @@
       "chrisdavidmills",
       "ralaplines1988",
       "remy"
+    ]
+  },
+  "Learn_web_development/Core/Accessibility": {
+    "modified": "2020-10-04T00:35:19.095Z",
+    "contributors": [
+      "hadleyel",
+      "chrisdavidmills",
+      "sharma86hub",
+      "beezedits",
+      "nawaazwill11",
+      "Shobhit1",
+      "ijsasser",
+      "estelle",
+      "poacher2k",
+      "nackman",
+      "msobanjo",
+      "christopherwilson1",
+      "charlie-s"
+    ]
+  },
+  "Learn_web_development/Core/Accessibility/Accessibility_troubleshooting": {
+    "modified": "2020-07-16T22:40:34.005Z",
+    "contributors": ["chrisdavidmills", "jswisher", "RicardsVeveris", "qdirks"]
+  },
+  "Learn_web_development/Core/Accessibility/CSS_and_JavaScript": {
+    "modified": "2020-07-16T22:40:16.216Z",
+    "contributors": [
+      "chrisdavidmills",
+      "kruschk",
+      "niwsa",
+      "rajashreemadan",
+      "sideshowbarker",
+      "christopherwilson1",
+      "Uemmra3",
+      "stephaniehobson",
+      "qdirks",
+      "scottaohara",
+      "rebekahpadula",
+      "unused"
+    ]
+  },
+  "Learn_web_development/Core/Accessibility/CSS_and_JavaScript/Test_your_skills:_CSS_and_JavaScript_accessibility": {
+    "modified": "2020-07-16T22:40:20.219Z",
+    "contributors": ["chrisdavidmills"]
+  },
+  "Learn_web_development/Core/Accessibility/HTML": {
+    "modified": "2020-11-20T01:54:13.621Z",
+    "contributors": [
+      "hamishwillee",
+      "voiceofrae",
+      "NatJT",
+      "chrisdavidmills",
+      "rolfedh",
+      "garrettbsettles",
+      "Anonymous",
+      "osamak",
+      "kruschk",
+      "LeonFrempong",
+      "estelle",
+      "irenesmith",
+      "mizodo",
+      "rachelcarmena",
+      "dev-dongwon",
+      "seanc",
+      "kiiran",
+      "Thai",
+      "imi-tating",
+      "Hnakamur",
+      "stephaniehobson",
+      "AnnaMhairi",
+      "snazziness",
+      "scottaohara",
+      "hadleyel",
+      "jasper2virtual",
+      "unused"
+    ]
+  },
+  "Learn_web_development/Core/Accessibility/Mobile": {
+    "modified": "2020-12-10T09:45:31.215Z",
+    "contributors": [
+      "chrisdavidmills",
+      "vgiffin",
+      "RafeyIqbalRahman",
+      "valgrimm",
+      "estelle",
+      "jamesdhurd",
+      "CheungJ",
+      "stephaniehobson",
+      "shenshaohui1991",
+      "newyork-anthonyng",
+      "qdirks"
+    ]
+  },
+  "Learn_web_development/Core/Accessibility/Multimedia": {
+    "modified": "2020-12-03T08:05:47.296Z",
+    "contributors": [
+      "chrisdavidmills",
+      "dega",
+      "sourabhramsingh",
+      "sonn64877",
+      "transcribear",
+      "kruschk",
+      "serenitus",
+      "Mimi-Davies",
+      "brycepj",
+      "stephaniehobson",
+      "newyork-anthonyng",
+      "qdirks"
+    ]
+  },
+  "Learn_web_development/Core/Accessibility/Test_your_skills:_HTML_accessibility": {
+    "modified": "2020-07-16T22:40:37.539Z",
+    "contributors": ["chrisdavidmills"]
+  },
+  "Learn_web_development/Core/Accessibility/Tooling": {
+    "modified": "2020-11-20T02:03:56.749Z",
+    "contributors": [
+      "hamishwillee",
+      "chrisdavidmills",
+      "ckashby",
+      "kruschk",
+      "eduDevCF",
+      "mharty",
+      "nackman",
+      "joestrouth1",
+      "stephaniehobson",
+      "conradbeach",
+      "joelcollinsdc",
+      "granttchart"
+    ]
+  },
+  "Learn_web_development/Core/Accessibility/WAI-ARIA_basics": {
+    "modified": "2020-11-24T11:05:10.811Z",
+    "contributors": [
+      "SpartaSixZero",
+      "chrisdavidmills",
+      "ckashby",
+      "kruschk",
+      "brokerr",
+      "eduDevCF",
+      "anied",
+      "ferlo",
+      "brucelawson",
+      "EmotionChip",
+      "scheruiyot",
+      "JonathanPool",
+      "aziot",
+      "stephaniehobson",
+      "newyork-anthonyng",
+      "donysukardi",
+      "joshbader"
+    ]
+  },
+  "Learn_web_development/Core/Accessibility/WAI-ARIA_basics/Test_your_skills:_WAI-ARIA": {
+    "modified": "2020-11-13T16:57:24.326Z",
+    "contributors": ["BassOfBass", "chrisdavidmills"]
+  },
+  "Learn_web_development/Core/Accessibility/What_is_accessibility": {
+    "modified": "2020-10-04T01:37:18.886Z",
+    "contributors": [
+      "hadleyel",
+      "chrisdavidmills",
+      "ckashby",
+      "kruschk",
+      "espertus",
+      "mozdevcontrib",
+      "estelle",
+      "JohnRochfordUMMS",
+      "teleject",
+      "pavilion2t",
+      "matta2dev",
+      "yatil",
+      "goodwitch",
+      "ahmadnourallah",
+      "stephaniehobson",
+      "snazziness",
+      "scottaohara",
+      "dinoop.mathew",
+      "granttchart"
     ]
   },
   "Learn_web_development/Core/CSS_layout": {
@@ -10825,6 +10808,10 @@
       "richardzacur"
     ]
   },
+  "Learn_web_development/Core/Version_control": {
+    "modified": "2020-12-04T13:34:02.479Z",
+    "contributors": ["Arpitgoyalgg", "chrisdavidmills"]
+  },
   "Learn_web_development/Getting_started/Environment_setup/Command_line": {
     "modified": "2020-10-18T22:03:14.400Z",
     "contributors": ["ralaplines1988", "Callahad", "chrisdavidmills"]
@@ -11464,6 +11451,19 @@
       "kscarfone",
       "teoli",
       "groovecoder"
+    ]
+  },
+  "Learn_web_development/Howto/Solve_JavaScript_problems": {
+    "modified": "2020-07-16T22:33:08.616Z",
+    "contributors": [
+      "kruschk",
+      "sywsyw",
+      "jmstfv",
+      "stephaniehobson",
+      "chrisdavidmills",
+      "Maxim79",
+      "tedmarynicz",
+      "adekoyejo"
     ]
   },
   "MDN": {

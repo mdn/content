@@ -5150,6 +5150,17 @@
 /en-US/docs/JavaScript_typed_arrays/Uint16Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array
 /en-US/docs/JavaScript_typed_arrays/Uint32Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array
 /en-US/docs/JavaScript_typed_arrays/Uint8Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array
+/en-US/docs/Learn/Accessibility	/en-US/docs/Learn_web_development/Core/Accessibility
+/en-US/docs/Learn/Accessibility/Accessibility_troubleshooting	/en-US/docs/Learn_web_development/Core/Accessibility/Accessibility_troubleshooting
+/en-US/docs/Learn/Accessibility/CSS_and_JavaScript	/en-US/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript
+/en-US/docs/Learn/Accessibility/CSS_and_JavaScript/Test_your_skills:_CSS_and_JavaScript_accessibility	/en-US/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript/Test_your_skills:_CSS_and_JavaScript_accessibility
+/en-US/docs/Learn/Accessibility/HTML	/en-US/docs/Learn_web_development/Core/Accessibility/HTML
+/en-US/docs/Learn/Accessibility/Mobile	/en-US/docs/Learn_web_development/Core/Accessibility/Mobile
+/en-US/docs/Learn/Accessibility/Multimedia	/en-US/docs/Learn_web_development/Core/Accessibility/Multimedia
+/en-US/docs/Learn/Accessibility/Test_your_skills:_HTML_accessibility	/en-US/docs/Learn_web_development/Core/Accessibility/Test_your_skills:_HTML_accessibility
+/en-US/docs/Learn/Accessibility/WAI-ARIA_basics	/en-US/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics
+/en-US/docs/Learn/Accessibility/WAI-ARIA_basics/Test_your_skills:_WAI-ARIA	/en-US/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics/Test_your_skills:_WAI-ARIA
+/en-US/docs/Learn/Accessibility/What_is_accessibility	/en-US/docs/Learn_web_development/Core/Accessibility/What_is_accessibility
 /en-US/docs/Learn/Advanced_layouts_with_flexbox	/en-US/docs/Glossary/Flexbox
 /en-US/docs/Learn/Anatomy_of_a_web_page	/en-US/docs/Learn/Common_questions/Design_and_accessibility/Common_web_layouts
 /en-US/docs/Learn/CSS/Basic_text_styling_in_CSS	/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals
@@ -5337,7 +5348,7 @@
 /en-US/docs/Learn/Getting_started_with_the_web/The_web_and_web_standards	/en-US/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model
 /en-US/docs/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like	/en-US/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like
 /en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like	/en-US/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like
-/en-US/docs/Learn/GitHub	/en-US/docs/Learn/Tools_and_testing/GitHub
+/en-US/docs/Learn/GitHub	/en-US/docs/Learn_web_development/Core/Version_control
 /en-US/docs/Learn/HTML/Element	/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems
 /en-US/docs/Learn/HTML/Element/abbr	/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#Abbreviations
 /en-US/docs/Learn/HTML/Forms	/en-US/docs/Learn/Forms
@@ -5464,7 +5475,8 @@
 /en-US/docs/Learn/JavaScript/First_steps/Variables	/en-US/docs/Learn_web_development/Core/Scripting/Variables
 /en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript	/en-US/docs/Learn_web_development/Core/Scripting/What_is_JavaScript
 /en-US/docs/Learn/JavaScript/First_steps/What_went_wrong	/en-US/docs/Learn_web_development/Core/Scripting/What_went_wrong
-/en-US/docs/Learn/JavaScript/How_to	/en-US/docs/Learn/JavaScript/Howto
+/en-US/docs/Learn/JavaScript/How_to	/en-US/docs/Learn_web_development/Howto/Solve_JavaScript_problems
+/en-US/docs/Learn/JavaScript/Howto	/en-US/docs/Learn_web_development/Howto/Solve_JavaScript_problems
 /en-US/docs/Learn/JavaScript/Introduction_to_JavaScript_1	/en-US/docs/Learn_web_development/Core/Scripting
 /en-US/docs/Learn/JavaScript/Introduction_to_JavaScript_1/A_first_splash	/en-US/docs/Learn_web_development/Core/Scripting/A_first_splash
 /en-US/docs/Learn/JavaScript/Introduction_to_JavaScript_1/Maths	/en-US/docs/Learn_web_development/Core/Scripting/Math
@@ -5552,7 +5564,9 @@
 /en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists	/en-US/docs/Learn_web_development/Core/Frameworks_libraries/Vue_rendering_lists
 /en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources	/en-US/docs/Learn_web_development/Core/Frameworks_libraries/Vue_resources
 /en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling	/en-US/docs/Learn_web_development/Core/Frameworks_libraries/Vue_styling
+/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility	/en-US/docs/Learn_web_development/Core/Accessibility/Tooling
 /en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript	/en-US/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript
+/en-US/docs/Learn/Tools_and_testing/GitHub	/en-US/docs/Learn_web_development/Core/Version_control
 /en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line
 /en-US/docs/Learn/Understanding_URLs	/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL
 /en-US/docs/Learn/Understanding_domain_names	/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name

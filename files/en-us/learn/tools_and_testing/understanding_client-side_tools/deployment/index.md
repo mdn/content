@@ -69,7 +69,7 @@ However, doing this step manually isn't our final aim — what we want is for th
 
 ## Committing changes to GitHub
 
-This section will get you over the line to storing your code in a git repository, but it is a far cry from a git tutorial. There are many great tutorials and books available, and our [Git and GitHub](/en-US/docs/Learn/Tools_and_testing/GitHub) page is a good place to start.
+This section will get you over the line to storing your code in a git repository, but it is a far cry from a git tutorial. There are many great tutorials and books available, and our [Git and GitHub](/en-US/docs/Learn_web_development/Core/Version_control) page is a good place to start.
 
 We initialized our working directory as a git working directory earlier on. A quick way to verify this is to run the following command:
 
