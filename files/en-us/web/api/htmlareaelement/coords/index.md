@@ -14,7 +14,7 @@ If the `shape` is `rect`, the shape is a rectangle and the string value's four c
 
 ## Value
 
-A string. A comma separated series of numbers.
+A string; composed of a comma separated series of numbers.
 
 ## Examples
 
