@@ -29,7 +29,7 @@ A string representing the given range of numbers formatted according to the loca
 ### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : Thrown if `startRange` is less than `endRange`, or either value is `NaN`.
+  - : Thrown if either value is `NaN`.
 - {{jsxref("TypeError")}}
   - : Thrown if either `startRange` or `endRange` is undefined.
 
