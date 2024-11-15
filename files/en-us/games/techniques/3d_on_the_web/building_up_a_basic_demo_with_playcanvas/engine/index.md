@@ -144,7 +144,7 @@ It will create a light `Entity` component and add it to the scene. We can rotate
 app.scene.ambientLight = new pc.Color(0.2, 0.2, 0.2);
 ```
 
-The code above assign a dark grey ambient light for the whole scene. The box look better now, but it could get some colors to look even better - for that we need to create material for it.
+The code above assign a dark grey ambient light for the whole scene. The box looks better now, but it could get some colors to look even better - for that we need to create material for it.
 
 ## Material
 
