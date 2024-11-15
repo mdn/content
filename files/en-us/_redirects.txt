@@ -165,13 +165,6 @@
 /en-US/docs/Bugzilla_(external)	https://bugzilla.mozilla.org/enter_bug.cgi?format=guided
 /en-US/docs/Building_an_Extension	/en-US/docs/Mozilla/Add-ons
 /en-US/docs/CER_temp	/en-US/docs/Web/API/Document/
-/en-US/docs/CN_MDN	/zh-CN/docs/Web
-/en-US/docs/CN_MDN/JavaScript	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create
-/en-US/docs/CN_MDN/JavaScript/About_JavaScript	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/seal
-/en-US/docs/CN_MDN/JavaScript/JavaScript_参考	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed
-/en-US/docs/CN_MDN/JavaScript/Reference	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
-/en-US/docs/CN_MDN/JavaScript/Reference/About_this_Reference	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze
-/en-US/docs/CN_MDN/JavaScript/Reference/Global_Objects	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/isFrozen
 /en-US/docs/CORS_Enabled_Image	/en-US/docs/Web/HTML/CORS_enabled_image
 /en-US/docs/CSS	/en-US/docs/Web/CSS
 /en-US/docs/CSS-2_Quick_Reference	/en-US/docs/Web/CSS
@@ -6740,7 +6733,6 @@
 /en-US/docs/SVG/polyline	/en-US/docs/Web/SVG/Element/polyline
 /en-US/docs/SVG/rect	/en-US/docs/Web/SVG/Element/rect
 /en-US/docs/SVG/use	/en-US/docs/Web/SVG/Element/use
-/en-US/docs/SVG/教程	/zh-TW/docs/Web/SVG/Tutorial
 /en-US/docs/SVG:Linking	/en-US/docs/Web/SVG/Linking
 /en-US/docs/SVG:Namespaces_Crash_Course	/en-US/docs/Web/SVG/Namespaces_Crash_Course
 /en-US/docs/SVG:Namespaces_Crash_Course:Example	/en-US/docs/Web/SVG/Namespaces_Crash_Course/Example
@@ -6770,7 +6762,6 @@
 /en-US/docs/Same_origin_policy_for_JavaScript	/en-US/docs/Web/Security/Same-origin_policy
 /en-US/docs/Sample_.htaccess_file	/en-US/docs/Learn/Server-side/Apache_Configuration_htaccess
 /en-US/docs/Scripting_plugins	/en-US/docs/Glossary/Plugin
-/en-US/docs/Secciones_y_contornos_de_un_documento_HTML5	/es/docs/Sections_and_Outlines_of_an_HTML5_document
 /en-US/docs/Security/CSP	/en-US/docs/Web/HTTP/CSP
 /en-US/docs/Security/CSP/CSP_policy_directives	/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
 /en-US/docs/Security/CSP/Default_CSP_restrictions	/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
@@ -10066,9 +10057,7 @@
 /en-US/docs/Web/API/WebGL_API/Creating_3D_objects_using_WebGL	/en-US/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
 /en-US/docs/Web/API/WebGL_API/Cross-Domain_Textures	/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL#Cross-domain_textures
 /en-US/docs/Web/API/WebGL_API/Getting_started_with_WebGL	/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
-/en-US/docs/Web/API/WebGL_API/Getting_started_with_WebGL/Commencer_avec_le_WebGL	/fr/docs/Web/API/WebGL_API/Tutorial/Commencer_avec_WebGL
 /en-US/docs/Web/API/WebGL_API/Lighting_in_WebGL	/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
-/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL/Commencer_avec_le_WebGL	/fr/docs/Web/API/WebGL_API/Tutorial/Commencer_avec_WebGL
 /en-US/docs/Web/API/WebGL_API/Using_shaders_to_apply_color_in_WebGL	/en-US/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 /en-US/docs/Web/API/WebGL_API/Using_textures_in_WebGL	/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 /en-US/docs/Web/API/WebKitCSSMatrix	/en-US/docs/Web/API/DOMMatrix
@@ -13013,7 +13002,6 @@
 /en-US/docs/Web/SVG/polyline	/en-US/docs/Web/SVG/Element/polyline
 /en-US/docs/Web/SVG/rect	/en-US/docs/Web/SVG/Element/rect
 /en-US/docs/Web/SVG/use	/en-US/docs/Web/SVG/Element/use
-/en-US/docs/Web/SVG/教程	/zh-TW/docs/Web/SVG/Tutorial
 /en-US/docs/Web/Security/CSP	/en-US/docs/Web/HTTP/CSP
 /en-US/docs/Web/Security/CSP/CSP_policy_directives	/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
 /en-US/docs/Web/Security/CSP/Default_CSP_restrictions	/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
@@ -13059,7 +13047,6 @@
 /en-US/docs/Web/WebGL/Creating_3D_objects_using_WebGL	/en-US/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
 /en-US/docs/Web/WebGL/Cross-Domain_Textures	/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL#Cross-domain_textures
 /en-US/docs/Web/WebGL/Getting_started_with_WebGL	/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
-/en-US/docs/Web/WebGL/Getting_started_with_WebGL/Commencer_avec_le_WebGL	/fr/docs/Web/API/WebGL_API/Tutorial/Commencer_avec_WebGL
 /en-US/docs/Web/WebGL/Lighting_in_WebGL	/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 /en-US/docs/Web/WebGL/Using_Extensions	/en-US/docs/Web/API/WebGL_API/Using_Extensions
 /en-US/docs/Web/WebGL/Using_shaders_to_apply_color_in_WebGL	/en-US/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
@@ -13226,7 +13213,6 @@
 /en-US/docs/WebGL/Creating_3D_objects_using_WebGL	/en-US/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
 /en-US/docs/WebGL/Cross-Domain_Textures	/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL#Cross-domain_textures
 /en-US/docs/WebGL/Getting_started_with_WebGL	/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
-/en-US/docs/WebGL/Getting_started_with_WebGL/Commencer_avec_le_WebGL	/fr/docs/Web/API/WebGL_API/Tutorial/Commencer_avec_WebGL
 /en-US/docs/WebGL/Lighting_in_WebGL	/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 /en-US/docs/WebGL/Using_Extensions	/en-US/docs/Web/API/WebGL_API/Using_Extensions
 /en-US/docs/WebGL/Using_shaders_to_apply_color_in_WebGL	/en-US/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
@@ -13742,7 +13728,6 @@
 /en-US/docs/transform	/en-US/docs/Web/CSS/transform
 /en-US/docs/typeof	/en-US/docs/Web/JavaScript/Reference/Operators/typeof
 /en-US/docs/var	/en-US/docs/Web/CSS/var
-/en-US/docs/video	/es/docs/Web/HTML/Elemento/video
 /en-US/docs/web/accessibility/aria/aria_techniques/using_the_alertdialog_role/	/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role
 /en-US/docs/web/accessibility/aria/aria_techniques/using_the_article_role/	/en-US/docs/Web/Accessibility/ARIA/Roles/article_role
 /en-US/docs/web/accessibility/aria/aria_techniques/using_the_group_role/	/en-US/docs/Web/Accessibility/ARIA/Roles/group_role
@@ -13811,5 +13796,3 @@
 /en-US/docs/window.window	/en-US/docs/Web/API/Window/window
 /en-US/docs/www_vs_non-www_URLs	/en-US/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs
 /en-US/docs/xml:base	/en-US/docs/Web/API/Node/baseURI
-/en-US/docs/zh-n/JavaScript/Reference/Global_Objects/String/quote	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/quote
-/en-US/docs/zh_cn	/zh-CN/docs/Web
