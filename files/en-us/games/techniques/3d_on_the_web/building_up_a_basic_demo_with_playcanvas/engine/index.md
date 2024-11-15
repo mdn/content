@@ -161,7 +161,7 @@ box.model.model.meshInstances[0].material = boxMaterial;
 By diffusing the light on the object, we can give it its own color — we'll choose a nice familiar blue.
 In PlayCanvas, the color channel values are provided as floats in the range `0-1`, instead of integers of `0-255` as you might be used to using on the Web.
 
-After the material is created and its color is set, it has to be updated so our changes are going to be applied. Then all we need to do is set the `box`'s material to the newly created `boxMaterial`.
+After the material is created and its color is set, it has to be updated so that our changes are applied. Then all we need to do is set the `box`'s material to the newly created `boxMaterial`.
 
 ## PlayCanvas shape example
 
