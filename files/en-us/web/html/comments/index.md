@@ -1,5 +1,5 @@
 ---
-title: "HTML Comments (<!-- … -->)"
+title: HTML Comments (<!-- … -->)
 slug: Web/HTML/Comments
 page-type: guide
 spec-urls: https://html.spec.whatwg.org/multipage/syntax.html#comments
