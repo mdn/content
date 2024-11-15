@@ -45,7 +45,7 @@ The `throw()` method, when called, can be seen as if a `throw exception;` statem
 
 ### Using throw()
 
-The following example shows a simple generator and an error that is thrown using the `throw` method. An error can be caught by a {{jsxref("Statements/try...catch", "try...catch")}} block as usual.
+The following example shows a generator and an error that is thrown using the `throw` method. An error can be caught by a {{jsxref("Statements/try...catch", "try...catch")}} block as usual.
 
 ```js
 function* gen() {

@@ -116,7 +116,7 @@ The timestamps provided in the {{domxref("PerformanceLongAnimationFrameTiming")}
 | Start time                        | `startTime`                                                              |
 | End time                          | `startTime + duration`                                                   |
 | Work duration                     | `renderStart ? renderStart - startTime : duration`                       |
-| Render duration                   | `renderStart ? (startTime + duration) - renderStart: 0`                  |
+| Render duration                   | `renderStart ? (startTime + duration) - renderStart : 0`                 |
 | Render: Pre-layout duration       | `styleAndLayoutStart ? styleAndLayoutStart - renderStart : 0`            |
 | Render: Style and Layout duration | `styleAndLayoutStart ? (startTime + duration) - styleAndLayoutStart : 0` |
 

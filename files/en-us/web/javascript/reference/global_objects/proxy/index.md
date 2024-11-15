@@ -57,7 +57,7 @@ const proxy2 = new Proxy(target, handler2);
 
 Here we've provided an implementation of the {{jsxref("Proxy/Proxy/get", "get()")}} handler, which intercepts attempts to access properties in the target.
 
-Handler functions are sometimes called _traps_, presumably because they trap calls to the target object. The very simple trap in `handler2` above redefines all property accessors:
+Handler functions are sometimes called _traps_, presumably because they trap calls to the target object. The trap in `handler2` above redefines all property accessors:
 
 ```js
 console.log(proxy2.message1); // world
@@ -160,7 +160,7 @@ Most of the internal methods are straightforward in what they do. The only two t
 
 ### Basic example
 
-In this simple example, the number `37` gets returned as the default value when the property name is not in the object. It is using the {{jsxref("Proxy/Proxy/get", "get()")}} handler.
+In this example, the number `37` gets returned as the default value when the property name is not in the object. It is using the {{jsxref("Proxy/Proxy/get", "get()")}} handler.
 
 ```js
 const handler = {
