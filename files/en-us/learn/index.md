@@ -19,7 +19,7 @@ If you are not sure about committing to learning web development in-depth and wa
 - JavaScript
   - : JavaScript allows you to code interactive functionality on websites. Begin with [JavaScript first steps](/en-US/docs/Learn/JavaScript/First_steps).
 - Frameworks and tooling
-  - : After mastering the essentials of vanilla HTML, CSS, and JavaScript, you should learn about [client-side web development tools](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools), and then consider digging into [client-side JavaScript frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks). You should also consider learning the basic concepts of [server-side website programming](/en-US/docs/Learn/Server-side).
+  - : After mastering the essentials of vanilla HTML, CSS, and JavaScript, you should learn about [client-side web development tools](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools), and then consider digging into [client-side JavaScript frameworks](/en-US/docs/Learn_web_development/Core/Frameworks_libraries). You should also consider learning the basic concepts of [server-side website programming](/en-US/docs/Learn/Server-side).
 
 > [!NOTE]
 > Our [glossary](/en-US/docs/Glossary) provides terminology definitions. Besides, if you have a specific question about web development, our [Common questions](/en-US/docs/Learn/Common_questions) section may have something to help you.
@@ -61,8 +61,8 @@ The following is a list of all the topics we cover in the MDN learning area.
 
 In the Learn web development section of MDN, there are many self-contained tasks and assessments for you to complete. These come in two main types:
 
-- "Test your skills" tasks, for example in [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#test_your_skills!).
-- More in-depth **assessments** at the end of some modules, for example [Image gallery](/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery).
+- "Test your skills" tasks, for example in [Making decisions in your code — conditionals](/en-US/docs/Learn_web_development/Core/Scripting/Conditionals#test_your_skills!).
+- More in-depth **assessments** at the end of some modules, for example [Image gallery](/en-US/docs/Learn_web_development/Core/Scripting/Image_gallery).
 
 Each one has an associated marking guide and recommended solution available to help you assess your work.
 There are patterns that make it easier to find these resources, for example:

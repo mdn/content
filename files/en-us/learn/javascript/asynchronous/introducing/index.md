@@ -260,7 +260,7 @@ document.querySelector("#reload").addEventListener("click", () => {
 
 {{EmbedLiveSample("Event handlers", 600, 120)}}
 
-This is just like the [event handlers we've encountered in a previous module](/en-US/docs/Learn/JavaScript/Building_blocks/Events), except that instead of the event being a user action, such as the user clicking a button, the event is a change in the state of some object.
+This is an [event handler](/en-US/docs/Learn_web_development/Core/Scripting/Events) just the same as handlers for user actions such as the user clicking a button. This time, however, the event is a change in the state of an object.
 
 ## Callbacks
 

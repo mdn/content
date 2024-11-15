@@ -4,7 +4,9 @@ slug: Learn_web_development/Core/Scripting/Math
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting")}}
 
 At this point in the course, we discuss math in JavaScript — how we can use {{Glossary("Operator","operators")}} and other features to successfully manipulate numbers to do our bidding.
 
@@ -12,14 +14,21 @@ At this point in the course, we discuss math in JavaScript — how we can use {{
   <tbody>
     <tr>
       <th scope="row">Prerequisites:</th>
-      <td>
-        A basic understanding of HTML and CSS, an
-        understanding of what JavaScript is.
-      </td>
+      <td>An understanding of <a href="/en-US/docs/Learn_web_development/Core/Structuring_content">HTML</a> and the <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">fundamentals of CSS</a>.</td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
-      <td>To gain familiarity with the basics of math in JavaScript.</td>
+      <th scope="row">Learning outcomes:</th>
+      <td>
+        <ul>
+          <li>Basic number operations in JavaScript — add, subtract, multiply, and divide.</li>
+          <li>numbers are not numbers if they are defined as strings, and can cause calculations to go wrong.</li>
+          <li>Converting strings to numbers with <code>Number()</code>.</li>
+          <li>Operator precedence.</li>
+          <li>Incrementing and decrementing.</li>
+          <li>Assignment and comparison operators.</li>
+          <li>Basic Math object methods, such as <code>Math.random()</code>, <code>Math.floor()</code>, and <code>Math.ceil()</code>.</li>
+        </ul>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -245,7 +254,7 @@ Try it and see.
 
 ## Increment and decrement operators
 
-Sometimes you'll want to repeatedly add or subtract one to or from a numeric variable value. This can be conveniently done using the increment (`++`) and decrement (`--`) operators. We used `++` in our "Guess the number" game back in our [first splash into JavaScript](/en-US/docs/Learn/JavaScript/First_steps/A_first_splash) article, when we added 1 to our `guessCount` variable to keep track of how many guesses the user has left after each turn.
+Sometimes you'll want to repeatedly add or subtract one to or from a numeric variable value. This can be conveniently done using the increment (`++`) and decrement (`--`) operators. We used `++` in our "Guess the number" game back in our [first splash into JavaScript](/en-US/docs/Learn_web_development/Core/Scripting/A_first_splash) article, when we added 1 to our `guessCount` variable to keep track of how many guesses the user has left after each turn.
 
 ```js
 guessCount++;
@@ -437,7 +446,7 @@ You can see the equality operator being used just inside the `updateBtn()` funct
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Math](/en-US/docs/Learn/JavaScript/First_steps/Test_your_skills:_Math).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Math](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Math).
 
 ## Summary
 
@@ -445,7 +454,9 @@ In this article, we have covered the fundamental information you need to know ab
 
 In the next article, we'll explore text and how JavaScript allows us to manipulate it.
 
-> [!NOTE]
-> If you do enjoy math and want to read more about how it is implemented in JavaScript, you can find a lot more detail in MDN's main JavaScript section. Great places to start are our [Numbers and dates](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates) and [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators) articles.
+## See also
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
+- [Numbers and dates](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates)
+- [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators)
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting")}}

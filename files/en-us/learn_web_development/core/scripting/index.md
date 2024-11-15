@@ -34,9 +34,31 @@ Before starting this module, you don't need any previous JavaScript knowledge, b
 - [Useful string methods](/en-US/docs/Learn_web_development/Core/Scripting/Useful_string_methods)
   - : Now we've looked at the very basics of strings, let's move up a gear and start thinking about what useful operations we can do on strings with built-in methods, such as finding the length of a text string, joining and splitting strings, substituting one character in a string for another, and more.
 - [Arrays](/en-US/docs/Learn_web_development/Core/Scripting/Arrays)
-  - : In the final article of this module, we'll look at arrays — a neat way of storing a list of data items under a single variable name. Here we look at why this is useful, then explore how to create an array, retrieve, add, and remove items stored in an array, and more besides.
-- [Silly story generator](/en-US/docs/Learn_web_development/Core/Scripting/Silly_story_generator)
-  - : In this assessment, you'll be tasked with taking some of the knowledge you've picked up in this module's articles and applying it to creating a fun app that generates random silly stories. Have fun!
+  - : In this lesson we'll look at arrays — a neat way of storing a list of data items under a single variable name. Here we look at why this is useful, then explore how to create an array, retrieve, add, and remove items stored in an array, and more besides.
+- [Challange: Silly story generator](/en-US/docs/Learn_web_development/Core/Scripting/Silly_story_generator) <sup>Challenge</sup>
+  - : In this challenge, you'll be tasked with taking some of the knowledge you've picked up in this module's articles and applying it to creating a fun app that generates random silly stories. Have fun!
+- [Making decisions in your code — conditionals](/en-US/docs/Learn_web_development/Core/Scripting/Conditionals)
+  - : In any programming language, the code needs to make decisions and carry out actions accordingly depending on different inputs. For example, in a game, if the player's number of lives is 0, then it's game over. In a weather app, if it is being looked at in the morning, show a sunrise graphic; show stars and a moon if it is nighttime. In this article, we'll explore how so-called conditional statements work in JavaScript.
+- [Functions — reusable blocks of code](/en-US/docs/Learn_web_development/Core/Scripting/Functions)
+  - : Another essential concept in coding is **functions**, which allow you to store a piece of code that does a single task inside a defined block, and then call that code whenever you need it using a single short command — rather than having to type out the same code multiple times. In this article we'll explore fundamental concepts behind functions such as basic syntax, how to invoke and define them, scope, and parameters.
+- [Build your own function](/en-US/docs/Learn_web_development/Core/Scripting/Build_your_own_function)
+  - : With most of the essential theory dealt with in the previous article, this article provides practical experience. Here you will get some practice building your own, custom function. Along the way, we'll also explain some useful details of dealing with functions.
+- [Function return values](/en-US/docs/Learn_web_development/Core/Scripting/Return_values)
+  - : There's one last essential concept about functions for us to discuss — return values. Some functions don't return a significant value, but others do. It's important to understand what their values are, how to use them in your code, and how to make functions return useful values. We'll cover all of these below.
+- [Introduction to events](/en-US/docs/Learn_web_development/Core/Scripting/Events)
+  - : In this article, we discuss some important concepts surrounding events, and look at the fundamentals of how they work in browsers.
+- [Event bubbling](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling)
+  - : This guide introduces the concepts of event bubbling, event capture, and event delegation, which are all about what happens when you add a listener to an element that contains another element, and an event then happens to the contained element.
+- [Challenge: Image gallery](/en-US/docs/Learn_web_development/Core/Scripting/Image_gallery) <sup>Challenge</sup>
+  - : Now that we've looked at the fundamental building blocks of JavaScript, we'll test your knowledge of loops, functions, conditionals and events by getting you to build a fairly common item you'll see on a lot of websites — a JavaScript-powered image gallery.
+- [Object basics](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics)
+  - : In this article, we'll look at fundamental JavaScript object syntax, and revisit some JavaScript features that we've already seen earlier in the course, reiterating the fact that many of the features you've already dealt with are objects.
+- [DOM scripting introduction](/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting)
+  - : When writing web pages and apps, one of the most common things you'll want to do is change the document structure in some way. This is usually done by manipulating the Document Object Model (DOM) via a set of built-in browser APIs for controlling HTML and styling information. In this article we'll introduce you to **DOM scripting**.
+- [Making network requests with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting/Network_requests)
+  - : Another very common task in modern websites and applications is making network requests to retrieve individual data items from the server to update sections of a webpage without having to load an entire new page. This seemingly small detail has had a huge impact on the performance and behavior of sites, so in this article, we'll explain the concept and look at technologies that make it possible.
+- [Working with JSON](/en-US/docs/Learn_web_development/Core/Scripting/JSON)
+  - : JavaScript Object Notation (JSON) is a standard text-based format for representing structured data based on JavaScript object syntax. It is commonly used for transmitting data in web applications (e.g., sending some data from the server to the client, so it can be displayed on a web page, or vice versa). You'll come across it quite often, so in this article, we give you all you need to work with JSON using JavaScript, including parsing JSON so you can access data within it, and creating JSON.
 
 ## See also
 

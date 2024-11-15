@@ -26,6 +26,6 @@ There are a number of programming techniques for implementing asynchronous softw
 
 ## See also
 
-- [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data) (Learning Area)
+- [Learn: Making network requests with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting/Network_requests) (Learning Area)
 - Related glossary terms:
   - {{glossary("Synchronous")}}

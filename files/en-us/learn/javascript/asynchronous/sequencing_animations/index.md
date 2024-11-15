@@ -91,7 +91,7 @@ We'd like you to try a few different ways to implement this, to reinforce differ
 
 1. First, implement something that works, but has the promise version of the "callback hell" problem we saw in our [discussion of using callbacks](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing#callbacks).
 
-2. Next, implement it as a [promise chain](/en-US/docs/Learn/JavaScript/Asynchronous/Promises#chaining_promises). Note that there are a few different ways you can write this, because of the different forms you can use for an [arrow function](/en-US/docs/Learn/JavaScript/Building_blocks/Functions#arrow_functions). Try some different forms. Which is the most concise? Which do you find the most readable?
+2. Next, implement it as a [promise chain](/en-US/docs/Learn/JavaScript/Asynchronous/Promises#chaining_promises). Note that there are a few different ways you can write this, because of the different forms you can use for an [arrow function](/en-US/docs/Learn_web_development/Core/Scripting/Functions#arrow_functions). Try some different forms. Which is the most concise? Which do you find the most readable?
 
 3. Finally, implement it using [`async` and `await`](/en-US/docs/Learn/JavaScript/Asynchronous/Promises#async_and_await).
 

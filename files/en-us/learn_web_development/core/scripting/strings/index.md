@@ -4,7 +4,9 @@ slug: Learn_web_development/Core/Scripting/Strings
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting")}}
 
 Next, we'll turn our attention to strings — this is what pieces of text are called in programming. In this article, we'll look at all the common things that you really ought to know about strings when learning JavaScript, such as creating strings, escaping quotes in strings, and joining strings together.
 
@@ -12,14 +14,19 @@ Next, we'll turn our attention to strings — this is what pieces of text are ca
   <tbody>
     <tr>
       <th scope="row">Prerequisites:</th>
-      <td>
-        A basic understanding of HTML and CSS, an
-        understanding of what JavaScript is.
-      </td>
+      <td>An understanding of <a href="/en-US/docs/Learn_web_development/Core/Structuring_content">HTML</a> and the <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">fundamentals of CSS</a>.</td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
-      <td>To gain familiarity with the basics of strings in JavaScript.</td>
+      <th scope="row">Learning outcomes:</th>
+      <td>
+        <ul>
+          <li>Creating string literals.</li>
+          <li>The requirement for quotes to match.</li>
+          <li>String concatenation.</li>
+          <li>Escaping characters in strings.</li>
+          <li>Template literals, including using variables and multiline template literals.</li>
+        </ul>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -254,8 +261,8 @@ If you have a numeric variable that you want to convert to a string or a string 
 
 These constructs can be really useful in some situations. For example, if a user enters a number into a form's text field, it's a string. However, if you want to add this number to something, you'll need it to be a number, so you could pass it through `Number()` to handle this. We did exactly this in our [Number Guessing Game](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game.html), in the `checkGuess` function.
 
-## Conclusion
+## Summary
 
 So that's the very basics of strings covered in JavaScript. In the next article, we'll build on this, looking at some of the built-in methods available to strings in JavaScript and how we can use them to manipulate our strings into just the form we want.
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting")}}

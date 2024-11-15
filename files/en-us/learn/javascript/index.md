@@ -39,7 +39,7 @@ This topic contains the following modules, in a suggested order for working thro
 
 - [JavaScript first steps](/en-US/docs/Learn/JavaScript/First_steps)
   - : In our first JavaScript module, we first answer some fundamental questions such as "what is JavaScript?", "what does it look like?", and "what can it do?", before moving on to taking you through your first practical experience of writing JavaScript. After that, we discuss some key JavaScript features in detail, such as variables, strings, numbers and arrays.
-- [JavaScript building blocks](/en-US/docs/Learn/JavaScript/Building_blocks)
+- [JavaScript building blocks](/en-US/docs/Learn_web_development/Core/Scripting)
   - : In this module, we continue our coverage of all JavaScript's key fundamental features, turning our attention to commonly-encountered types of code block such as conditional statements, loops, functions, and events. You've seen this stuff already in the course, but only in passing — here we'll discuss it all explicitly.
 - [Introducing JavaScript objects](/en-US/docs/Learn/JavaScript/Objects)
   - : In JavaScript, most things are objects, from core JavaScript features like strings and arrays to the browser APIs built on top of JavaScript. You can even create your own objects to encapsulate related functions and variables into efficient packages. The object-oriented nature of JavaScript is important to understand if you want to go further with your knowledge of the language and write more efficient code, therefore we've provided this module to help you. Here we teach object theory and syntax in detail, look at how to create your own objects, and explain what JSON data is and how to work with it.

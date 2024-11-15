@@ -6,7 +6,7 @@ page-type: learn-module-assessment
 
 {{learnsidebar}}
 
-The aim of this skill test is to assess whether you've understood our [Arrays](/en-US/docs/Learn/JavaScript/First_steps/Arrays) article.
+The aim of this skill test is to assess whether you've understood our [Arrays](/en-US/docs/Learn_web_development/Core/Scripting/Arrays) article.
 
 > [!NOTE]
 > You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).

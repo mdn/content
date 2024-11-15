@@ -4,7 +4,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Introduction
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Scripting/DOM_scripting", "Learn/JavaScript/Client-side_web_APIs")}}
 
 First up, we'll start by looking at APIs from a high level — what are they, how do they work, how to use them in your code, and how are they structured? We'll also take a look at what the different main classes of APIs are, and what kind of uses they have.
 
@@ -17,7 +17,7 @@ First up, we'll start by looking at APIs from a high level — what are they, ho
         <a href="/en-US/docs/Learn/HTML">HTML</a>,
         <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS</a>, and JavaScript basics (see
         <a href="/en-US/docs/Learn/JavaScript/First_steps">first steps</a>,
-        <a href="/en-US/docs/Learn/JavaScript/Building_blocks"
+        <a href="/en-US/docs/Learn_web_development/Core/Scripting"
           >building blocks</a
         >,
         <a href="/en-US/docs/Learn/JavaScript/Objects">JavaScript objects</a>).
@@ -64,7 +64,7 @@ So above, we talked about what client-side JavaScript APIs are, and how they rel
 - JavaScript — A high-level scripting language built into browsers that allows you to implement functionality on web pages/apps. Note that JavaScript is also available in other programming environments, such as [Node](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction).
 - Browser APIs — constructs built into the browser that sit on top of the JavaScript language and allow you to implement functionality more easily.
 - Third-party APIs — constructs built into third-party platforms (e.g. Disqus, Facebook) that allow you to use some of those platform's functionality in your own web pages (for example, display your Disqus comments on a web page).
-- JavaScript libraries — Usually one or more JavaScript files containing [custom functions](/en-US/docs/Learn/JavaScript/Building_blocks/Functions) that you can attach to your web page to speed up or enable writing common functionality. Examples include jQuery, Mootools and React.
+- JavaScript libraries — Usually one or more JavaScript files containing [custom functions](/en-US/docs/Learn_web_development/Core/Scripting/Functions) that you can attach to your web page to speed up or enable writing common functionality. Examples include jQuery, Mootools and React.
 - JavaScript frameworks — The next step up from libraries, JavaScript frameworks (e.g. Angular and Ember) tend to be packages of HTML, CSS, JavaScript, and other technologies that you install and then use to write an entire web application from scratch. The key difference between a library and a framework is "Inversion of Control". When calling a method from a library, the developer is in control. With a framework, the control is inverted: the framework calls the developer's code.
 
 ## What can APIs do?
@@ -75,8 +75,8 @@ There are a huge number of APIs available in modern browsers that allow you to d
 
 In particular, the most common categories of browser APIs you'll use (and which we'll cover in this module in greater detail) are:
 
-- **APIs for manipulating documents** loaded into the browser. The most obvious example is the [DOM (Document Object Model) API](/en-US/docs/Web/API/Document_Object_Model), which allows you to manipulate HTML and CSS — creating, removing and changing HTML, dynamically applying new styles to your page, etc. Every time you see a popup window appear on a page or some new content displayed, for example, that's the DOM in action. Find out more about these types of API in [Manipulating documents](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents).
-- **APIs that fetch data from the server** to update small sections of a webpage on their own are very commonly used. This seemingly small detail has had a huge impact on the performance and behavior of sites — if you just need to update a stock listing or list of available new stories, doing it instantly without having to reload the whole entire page from the server can make the site or app feel much more responsive and "snappy". The main API used for this is the [Fetch API](/en-US/docs/Web/API/Fetch_API), although older code might still use the [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) API. You may also come across the term **Ajax**, which describes this technique. Find out more about such APIs in [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data).
+- **APIs for manipulating documents** loaded into the browser. The most obvious example is the [DOM (Document Object Model) API](/en-US/docs/Web/API/Document_Object_Model), which allows you to manipulate HTML and CSS — creating, removing and changing HTML, dynamically applying new styles to your page, etc. Every time you see a popup window appear on a page or some new content displayed, for example, that's the DOM in action. Find out more about these types of API in [DOM scripting introduction](/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting).
+- **APIs that fetch data from the server** to update small sections of a webpage on their own are very commonly used. This seemingly small detail has had a huge impact on the performance and behavior of sites — if you just need to update a stock listing or list of available new stories, doing it instantly without having to reload the whole entire page from the server can make the site or app feel much more responsive and "snappy". The main API used for this is the [Fetch API](/en-US/docs/Web/API/Fetch_API), although older code might still use the [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) API. You may also come across the term **Ajax**, which describes this technique. Find out more about such APIs in [Making network requests with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting/Network_requests).
 - **APIs for drawing and manipulating graphics** are widely supported in browsers — the most popular ones are [Canvas](/en-US/docs/Web/API/Canvas_API) and [WebGL](/en-US/docs/Web/API/WebGL_API), which allow you to programmatically update the pixel data contained in an HTML {{htmlelement("canvas")}} element to create 2D and 3D scenes. For example, you might draw shapes such as rectangles or circles, import an image onto the canvas, and apply a filter to it such as sepia or grayscale using the Canvas API, or create a complex 3D scene with lighting and textures using WebGL. Such APIs are often combined with APIs for creating animation loops (such as {{domxref("window.requestAnimationFrame()")}}) and others to make constantly updating scenes like cartoons and games.
 - **[Audio and Video APIs](/en-US/docs/Web/Media/Audio_and_video_delivery)** like {{domxref("HTMLMediaElement")}}, the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), and [WebRTC](/en-US/docs/Web/API/WebRTC_API) allow you to do really interesting things with multimedia such as creating custom UI controls for playing audio and video, displaying text tracks like captions and subtitles along with your videos, grabbing video from your web camera to be manipulated via a canvas (see above) or displayed on someone else's computer in a web conference, or adding effects to audio tracks (such as gain, distortion, panning, etc.).
 - **Device APIs** enable you to interact with device hardware: for example, accessing the device GPS to find the user's position using the [Geolocation API](/en-US/docs/Web/API/Geolocation_API).
@@ -231,7 +231,7 @@ Ball.prototype.draw = function () {
 
 ### They often use events to handle changes in state
 
-We already discussed events earlier on in the course in our [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events) article, which looks in detail at what client-side web events are and how they are used in your code. If you are not already familiar with how client-side web API events work, you should go and read this article first before continuing.
+We already discussed events earlier on in the course in our [Introduction to events](/en-US/docs/Learn_web_development/Core/Scripting/Events) article, which looks in detail at what client-side web events are and how they are used in your code. If you are not already familiar with how client-side web API events work, you should go and read this article first before continuing.
 
 Some web APIs contain no events, but most contain at least a few. The handler properties that allow us to run functions when events fire are generally listed in our reference material in separate "Event handlers" sections.
 
@@ -282,4 +282,4 @@ The Web Audio and {{domxref("HTMLMediaElement")}} APIs are subject to a security
 
 At this point, you should have a good idea of what APIs are, how they work, and what you can do with them in your JavaScript code. You are probably excited to start actually doing some fun things with specific APIs, so let's go! Next up, we'll look at manipulating documents with the Document Object Model (DOM).
 
-{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
+{{NextMenu("Learn_web_development/Core/Scripting/DOM_scripting", "Learn/JavaScript/Client-side_web_APIs")}}

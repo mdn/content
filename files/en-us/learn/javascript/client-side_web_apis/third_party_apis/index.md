@@ -4,7 +4,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Network_requests", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
 
 The APIs we've covered so far are built into the browser, but not all APIs are. Many large websites and services such as Google Maps, Twitter, Facebook, PayPal, etc. provide APIs allowing developers to make use of their data (e.g. displaying your twitter stream on your blog) or services (e.g. using Facebook login to log in your users). This article looks at the difference between browser APIs and 3rd party APIs and shows some typical uses of the latter.
 
@@ -15,7 +15,7 @@ The APIs we've covered so far are built into the browser, but not all APIs are. 
       <td>
         JavaScript basics (see
         <a href="/en-US/docs/Learn/JavaScript/First_steps">first steps</a>,
-        <a href="/en-US/docs/Learn/JavaScript/Building_blocks"
+        <a href="/en-US/docs/Learn_web_development/Core/Scripting"
           >building blocks</a
         >,
         <a href="/en-US/docs/Learn/JavaScript/Objects">JavaScript objects</a>),
@@ -404,4 +404,4 @@ To get it running, you'll need to:
 
 This article has given you a useful introduction to using third-party APIs to add functionality to your websites.
 
-{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Network_requests", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}

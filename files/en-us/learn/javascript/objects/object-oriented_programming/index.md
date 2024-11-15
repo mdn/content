@@ -21,10 +21,10 @@ After that, in JavaScript, we'll look at how constructors and the prototype chai
         Understanding JavaScript functions, familiarity with JavaScript basics
         (see
         <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> and
-        <a href="/en-US/docs/Learn/JavaScript/Building_blocks"
+        <a href="/en-US/docs/Learn_web_development/Core/Scripting"
           >Building blocks</a
         >), and OOJS basics (see
-        <a href="/en-US/docs/Learn/JavaScript/Objects/Basics"
+        <a href="/en-US/docs/Learn_web_development/Core/Scripting/Object_basics"
           >Introduction to objects</a
         > and <a href="/en-US/docs/Learn/JavaScript/Objects/Object_prototypes">Object prototypes</a>).
       </td>
@@ -222,7 +222,7 @@ In languages that don't enforce access like this, programmers use naming convent
 
 In this article, we've described some of the basic features of class-based object-oriented programming as implemented in languages like Java and C++.
 
-In the two previous articles, we looked at a couple of core JavaScript features: [constructors](/en-US/docs/Learn/JavaScript/Objects/Basics) and [prototypes](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes). These features certainly have some relation to some of the OOP concepts described above.
+In the two previous articles, we looked at a couple of core JavaScript features: [constructors](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics) and [prototypes](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes). These features certainly have some relation to some of the OOP concepts described above.
 
 - **constructors** in JavaScript provide us with something like a class definition, enabling us to define the "shape" of an object, including any methods it contains, in a single place. But prototypes can be used here, too. For example, if a method is defined on a constructor's `prototype` property, then all objects created using that constructor get that method via their prototype, and we don't need to define it in the constructor.
 

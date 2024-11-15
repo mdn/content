@@ -4,7 +4,7 @@ slug: Learn/JavaScript/Objects/Object_prototypes
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Basics", "Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Object_basics", "Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects")}}
 
 Prototypes are the mechanism by which JavaScript objects inherit features from one another. In this article, we explain what a prototype is, how prototype chains work, and how a prototype for an object can be set.
 
@@ -16,10 +16,10 @@ Prototypes are the mechanism by which JavaScript objects inherit features from o
         Understanding JavaScript functions, familiarity with JavaScript basics
         (see
         <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> and
-        <a href="/en-US/docs/Learn/JavaScript/Building_blocks"
+        <a href="/en-US/docs/Learn_web_development/Core/Scripting"
           >Building blocks</a
         >), and OOJS basics (see
-        <a href="/en-US/docs/Learn/JavaScript/Objects/Basics"
+        <a href="/en-US/docs/Learn_web_development/Core/Scripting/Object_basics"
           >Introduction to objects</a
         >).
       </td>
@@ -244,4 +244,4 @@ This article has covered JavaScript object prototypes, including how prototype o
 
 In the next article we'll look at the concepts underlying object-oriented programming.
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Basics", "Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Object_basics", "Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects")}}

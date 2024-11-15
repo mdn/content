@@ -7084,228 +7084,6 @@
       "Sheppy"
     ]
   },
-  "Learn/JavaScript/Building_blocks": {
-    "modified": "2020-07-16T22:31:06.092Z",
-    "contributors": [
-      "chrisdavidmills",
-      "ckashby",
-      "Zearin_Galaurum",
-      "jswisher",
-      "baustinfry",
-      "nunarokapp",
-      "stephaniehobson",
-      "FishinginaSombrero8",
-      "ArchieAtOrigins",
-      "Jeremie",
-      "SnoopyRules",
-      "Cameron-Riecan"
-    ]
-  },
-  "Learn/JavaScript/Building_blocks/Build_your_own_function": {
-    "modified": "2020-07-16T22:31:28.317Z",
-    "contributors": [
-      "A.Faturechi",
-      "chrisdavidmills",
-      "mariusmucenicu",
-      "docrob0t",
-      "sambgordon",
-      "thenoelman",
-      "wazz",
-      "kan199041",
-      "stephaniehobson",
-      "FishinginaSombrero8",
-      "cPlayIt",
-      "nmve",
-      "rteliczan",
-      "Jeremie"
-    ]
-  },
-  "Learn/JavaScript/Building_blocks/Events": {
-    "modified": "2020-08-19T17:34:16.897Z",
-    "contributors": [
-      "Aaron228",
-      "owolagbadavid",
-      "chrisdavidmills",
-      "ankerok-dingdong",
-      "muhammadghazali",
-      "tayyabalishan",
-      "jswisher",
-      "VijayKumarKTG",
-      "FZs",
-      "imchriskitchens",
-      "mariusmucenicu",
-      "4R53N",
-      "sideshowbarker",
-      "christopherwilson1",
-      "bubzy34",
-      "wobedi",
-      "anton-mladenov",
-      "selrond",
-      "andyprickett",
-      "stephaniehobson",
-      "seasmith",
-      "Saabbir",
-      "qdirks",
-      "Arecius",
-      "Bogdancev",
-      "kirkins",
-      "cPlayIt",
-      "dsujeeun",
-      "shalvasvanidze",
-      "nmve",
-      "Jeremie",
-      "BaderSur",
-      "sngv"
-    ]
-  },
-  "Learn/JavaScript/Building_blocks/Functions": {
-    "modified": "2020-09-29T10:01:24.142Z",
-    "contributors": [
-      "bhushangoel",
-      "JohnnyMu-Cn",
-      "chrisdavidmills",
-      "ahmaazouzi",
-      "gerfolder",
-      "choudh70",
-      "tayyabalishan",
-      "cadorej",
-      "karlhorky",
-      "loretta-arineva",
-      "mariusmucenicu",
-      "riyaz",
-      "dan-nix",
-      "MachineShot",
-      "thenoelman",
-      "redrambles",
-      "jruota",
-      "stephaniehobson",
-      "FishinginaSombrero8",
-      "gabiaad",
-      "Anonymous",
-      "GKilyar",
-      "stockcj",
-      "nmve",
-      "Jeremie",
-      "Cameron-Riecan",
-      "husain100b",
-      "fscholz"
-    ]
-  },
-  "Learn/JavaScript/Building_blocks/Image_gallery": {
-    "modified": "2020-07-31T18:38:47.870Z",
-    "contributors": [
-      "Rafael_Green",
-      "chrisdavidmills",
-      "jswisher",
-      "csarami",
-      "jxhdev",
-      "jyjz2008",
-      "Jeremie"
-    ]
-  },
-  "Learn/JavaScript/Building_blocks/Looping_code": {
-    "modified": "2020-09-15T14:47:05.302Z",
-    "contributors": [
-      "theRealJennie",
-      "SphinxKnight",
-      "Rafael_Green",
-      "mrmowji",
-      "chrisdavidmills",
-      "The-UCS-Variable",
-      "sideshowbarker",
-      "hhimanshu",
-      "naser-baig",
-      "tayyabalishan",
-      "muhammadghazali",
-      "loretta-arineva",
-      "mariusmucenicu",
-      "walonge",
-      "eremis101",
-      "keshav1245",
-      "4EPTAKA",
-      "Erramyne",
-      "li3097",
-      "sumnercommajohn",
-      "thenoelman",
-      "csarami",
-      "SebastianMaciel",
-      "RundongZou",
-      "FloraFauna",
-      "stephaniehobson",
-      "GowthamPrakaash",
-      "JackZL",
-      "BrunkBeard",
-      "nmve",
-      "Jeremie",
-      "BaderSur",
-      "fscholz"
-    ]
-  },
-  "Learn/JavaScript/Building_blocks/Return_values": {
-    "modified": "2020-08-19T08:02:22.451Z",
-    "contributors": [
-      "wlt",
-      "Rafael_Green",
-      "chrisdavidmills",
-      "xuchunyang",
-      "ppusher",
-      "feeko",
-      "abbasalamin12",
-      "choudh70",
-      "tayyabalishan",
-      "muhammadghazali",
-      "Zearin_Galaurum",
-      "loretta-arineva",
-      "anton-mladenov",
-      "stephaniehobson",
-      "nmve",
-      "rteliczan",
-      "Jeremie",
-      "fscholz"
-    ]
-  },
-  "Learn/JavaScript/Building_blocks/Test_your_skills:_Conditionals": {
-    "modified": "2020-07-16T22:31:45.710Z",
-    "contributors": ["jpfkd", "jmliu", "chrisdavidmills"]
-  },
-  "Learn/JavaScript/Building_blocks/Test_your_skills:_Events": {
-    "modified": "2020-07-16T22:31:46.881Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "Learn/JavaScript/Building_blocks/Test_your_skills:_Functions": {
-    "modified": "2020-07-16T22:31:46.557Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "Learn/JavaScript/Building_blocks/Test_your_skills:_Loops": {
-    "modified": "2020-07-16T22:31:46.034Z",
-    "contributors": ["neuroptera", "chrisdavidmills"]
-  },
-  "Learn/JavaScript/Building_blocks/conditionals": {
-    "modified": "2020-07-16T22:31:11.893Z",
-    "contributors": [
-      "chrisdavidmills",
-      "choudh70",
-      "tayyabalishan",
-      "jswisher",
-      "keshav1245",
-      "RafeyIqbalRahman",
-      "Czl.Lebleu",
-      "smccrindle",
-      "OxyDesign",
-      "stephaniehobson",
-      "qdirks",
-      "drozycki",
-      "BrunkBeard",
-      "akshayjumbade",
-      "nmve",
-      "Rohit25negi",
-      "Jeremie",
-      "Cameron-Riecan",
-      "husain100b",
-      "fscholz",
-      "Sebastianz"
-    ]
-  },
   "Learn/JavaScript/Client-side_web_APIs": {
     "modified": "2020-07-16T22:32:38.327Z",
     "contributors": [
@@ -7356,31 +7134,6 @@
       "Sheppy"
     ]
   },
-  "Learn/JavaScript/Client-side_web_APIs/Fetching_data": {
-    "modified": "2020-09-12T22:58:21.536Z",
-    "contributors": [
-      "JohnnyMu-Cn",
-      "wlt",
-      "timandes",
-      "chrisdavidmills",
-      "joanvalis",
-      "thekosiguy",
-      "sideshowbarker",
-      "ezrinjaz",
-      "aboagyed",
-      "smoothie1998",
-      "stepharr",
-      "JoshApos",
-      "dlwagner",
-      "stephaniehobson",
-      "kriminals",
-      "SphinxKnight",
-      "li-shasha",
-      "fireattack",
-      "marcusgenrich",
-      "Sheppy"
-    ]
-  },
   "Learn/JavaScript/Client-side_web_APIs/Introduction": {
     "modified": "2020-07-16T22:32:43.814Z",
     "contributors": [
@@ -7408,27 +7161,6 @@
       "psy054duck",
       "vaibhav.vgc",
       "sngv"
-    ]
-  },
-  "Learn/JavaScript/Client-side_web_APIs/Manipulating_documents": {
-    "modified": "2020-08-23T02:38:31.029Z",
-    "contributors": [
-      "wlt",
-      "herrieii",
-      "chrisdavidmills",
-      "kruschk",
-      "HARARCA",
-      "Aternus",
-      "ajhsu",
-      "jlafica",
-      "sourav2706",
-      "francescm",
-      "jwq1",
-      "stephaniehobson",
-      "Bogdan.G",
-      "JideLambo",
-      "lybrendan",
-      "mientje"
     ]
   },
   "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs": {
@@ -7512,60 +7244,6 @@
       "fscholz"
     ]
   },
-  "Learn/JavaScript/Objects/Basics": {
-    "modified": "2020-07-16T22:31:55.445Z",
-    "contributors": [
-      "chrisdavidmills",
-      "tayyabalishan",
-      "jswisher",
-      "FishinginaSombrero8",
-      "nhsz",
-      "gumbol",
-      "rayrojas",
-      "bripmccann",
-      "Battlesquid",
-      "Abhro",
-      "FeruzOripov",
-      "snakecase",
-      "vcastrejont",
-      "muhammadghazali",
-      "MarckK",
-      "RockyAZ",
-      "rajasrijanakiraman",
-      "stephaniehobson",
-      "JonathanPool",
-      "systematis",
-      "dsujeeun",
-      "nmve",
-      "BaderSur",
-      "Jeremie",
-      "fscholz"
-    ]
-  },
-  "Learn/JavaScript/Objects/JSON": {
-    "modified": "2020-10-31T11:57:03.706Z",
-    "contributors": [
-      "randycasburn",
-      "chrisdavidmills",
-      "jswisher",
-      "mariusmucenicu",
-      "thebearingedge",
-      "bripmccann",
-      "shilili",
-      "thekosiguy",
-      "TasosPoursaitides",
-      "dvsgnr",
-      "stephaniehobson",
-      "torazaburo",
-      "DipperP",
-      "qdirks",
-      "systematis",
-      "mememachine666",
-      "nmve",
-      "Jeremie",
-      "fscholz"
-    ]
-  },
   "Learn/JavaScript/Objects/Object_building_practice": {
     "modified": "2020-07-16T22:32:30.497Z",
     "contributors": [
@@ -7637,17 +7315,9 @@
       "ZeroUnderscoreOu"
     ]
   },
-  "Learn/JavaScript/Objects/Test_your_skills:_JSON": {
-    "modified": "2020-07-16T22:32:38.003Z",
-    "contributors": ["chrisdavidmills", "blueblots"]
-  },
   "Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript": {
     "modified": "2020-08-12T12:48:24.778Z",
     "contributors": ["A.Faturechi", "abinashLin", "chrisdavidmills"]
-  },
-  "Learn/JavaScript/Objects/Test_your_skills:_Object_basics": {
-    "modified": "2020-12-11T06:18:00.445Z",
-    "contributors": ["chrisdavidmills", "iJacKP", "neuroptera"]
   },
   "Learn/Learning_and_getting_help": {
     "modified": "2020-10-12T05:38:01.632Z",
@@ -8901,184 +8571,6 @@
     "modified": "2020-07-16T22:38:53.469Z",
     "contributors": ["chrisdavidmills", "kruschk", "dylanferguson", "Navin77"]
   },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks": {
-    "modified": "2020-09-25T22:34:22.129Z",
-    "contributors": ["chrisdavidmills", "CodeDotJS"]
-  },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer": {
-    "modified": "2020-09-03T05:31:37.623Z",
-    "contributors": ["Rafael_Green", "chrisdavidmills"]
-  },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started": {
-    "modified": "2020-08-06T07:27:06.082Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state": {
-    "modified": "2020-08-06T07:26:59.624Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources": {
-    "modified": "2020-08-06T07:26:47.135Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing": {
-    "modified": "2020-08-06T07:26:51.530Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization": {
-    "modified": "2020-08-06T07:27:03.636Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction": {
-    "modified": "2020-09-08T07:18:11.161Z",
-    "contributors": [
-      "chrisdavidmills",
-      "harryghgim",
-      "terrymorse",
-      "valgrimm",
-      "nicolasguasca1",
-      "codeability",
-      "mgechev",
-      "jchimene"
-    ]
-  },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features": {
-    "modified": "2020-09-08T05:53:30.007Z",
-    "contributors": ["chrisdavidmills", "terrymorse", "luc4leone", "mrmowji"]
-  },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility": {
-    "modified": "2020-08-06T07:27:14.576Z",
-    "contributors": [
-      "chrisdavidmills",
-      "vgiffin",
-      "ndri",
-      "xfq",
-      "doncity-tech"
-    ]
-  },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components": {
-    "modified": "2020-08-06T07:27:25.146Z",
-    "contributors": ["chrisdavidmills", "storytellerrishabh", "codeability"]
-  },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started": {
-    "modified": "2020-10-21T06:59:37.317Z",
-    "contributors": [
-      "chrisdavidmills",
-      "ramiZackaryShamir",
-      "spaceinvadev",
-      "mrmowji",
-      "codeability",
-      "bias-santa",
-      "franca"
-    ]
-  },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state": {
-    "modified": "2020-09-01T07:11:30.226Z",
-    "contributors": [
-      "chrisdavidmills",
-      "ndri",
-      "nicolasguasca1",
-      "mrmowji",
-      "alperars"
-    ]
-  },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering": {
-    "modified": "2020-09-28T06:18:04.788Z",
-    "contributors": [
-      "chrisdavidmills",
-      "dl90",
-      "terrymorse",
-      "Rafael_Green",
-      "mrmowji"
-    ]
-  },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources": {
-    "modified": "2020-08-06T07:27:08.934Z",
-    "contributors": ["chrisdavidmills", "mrmowji", "bias-santa", "codeability"]
-  },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning": {
-    "modified": "2020-09-08T16:44:12.600Z",
-    "contributors": ["terrymorse", "chrisdavidmills", "codeability"]
-  },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning": {
-    "modified": "2020-12-01T21:39:23.352Z",
-    "contributors": ["seneca", "chrisdavidmills"]
-  },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript": {
-    "modified": "2020-10-29T07:18:00.018Z",
-    "contributors": ["haond10adp", "chrisdavidmills"]
-  },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components": {
-    "modified": "2020-10-07T20:21:51.724Z",
-    "contributors": ["seneca", "Rafael_Green", "chrisdavidmills", "opensas"]
-  },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next": {
-    "modified": "2020-09-20T04:24:34.950Z",
-    "contributors": ["Rafael_Green", "chrisdavidmills"]
-  },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started": {
-    "modified": "2020-09-11T14:25:08.477Z",
-    "contributors": ["Rafael_Green", "chrisdavidmills", "opensas"]
-  },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility": {
-    "modified": "2020-10-24T06:16:59.643Z",
-    "contributors": [
-      "haond10adp",
-      "SphinxKnight",
-      "Rafael_Green",
-      "chrisdavidmills",
-      "opensas"
-    ]
-  },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores": {
-    "modified": "2020-12-11T07:44:13.494Z",
-    "contributors": [
-      "Mishra-Suraj",
-      "haond10adp",
-      "Rafael_Green",
-      "chrisdavidmills"
-    ]
-  },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props": {
-    "modified": "2020-10-20T01:35:26.842Z",
-    "contributors": ["haond10adp", "Rafael_Green", "chrisdavidmills"]
-  },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties": {
-    "modified": "2020-09-08T10:27:40.979Z",
-    "contributors": ["Rafael_Green", "chrisdavidmills", "clintbingo"]
-  },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering": {
-    "modified": "2020-08-06T07:26:12.722Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component": {
-    "modified": "2020-09-05T08:38:17.788Z",
-    "contributors": ["Rafael_Green", "chrisdavidmills"]
-  },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started": {
-    "modified": "2020-08-06T07:26:44.679Z",
-    "contributors": ["chrisdavidmills", "taiwoayanleye"]
-  },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models": {
-    "modified": "2020-10-05T06:56:15.162Z",
-    "contributors": ["JohnnyMu-Cn", "chrisdavidmills"]
-  },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management": {
-    "modified": "2020-08-06T07:26:09.176Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists": {
-    "modified": "2020-09-15T11:22:44.422Z",
-    "contributors": ["chrisdavidmills", "technicalflaw"]
-  },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources": {
-    "modified": "2020-08-06T07:26:03.837Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling": {
-    "modified": "2020-08-06T07:26:25.263Z",
-    "contributors": ["chrisdavidmills"]
-  },
   "Learn/Tools_and_testing/Cross_browser_testing": {
     "modified": "2020-07-16T22:38:59.026Z",
     "contributors": [
@@ -9181,19 +8673,6 @@
       "RyanWng",
       "0000marcell",
       "xfq"
-    ]
-  },
-  "Learn/Tools_and_testing/Cross_browser_testing/JavaScript": {
-    "modified": "2020-11-23T02:24:03.962Z",
-    "contributors": [
-      "hamishwillee",
-      "chrisdavidmills",
-      "ckashby",
-      "kruschk",
-      "stephaniehobson",
-      "EdwardB",
-      "qdirks",
-      "Juggernaughtt"
     ]
   },
   "Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies": {
@@ -9571,6 +9050,184 @@
     "modified": "2020-07-16T22:27:36.041Z",
     "contributors": ["MelchiorIm3Tal", "chrisdavidmills", "rachelandrew"]
   },
+  "Learn_web_development/Core/Frameworks_libraries": {
+    "modified": "2020-09-25T22:34:22.129Z",
+    "contributors": ["chrisdavidmills", "CodeDotJS"]
+  },
+  "Learn_web_development/Core/Frameworks_libraries/Ember_conditional_footer": {
+    "modified": "2020-09-03T05:31:37.623Z",
+    "contributors": ["Rafael_Green", "chrisdavidmills"]
+  },
+  "Learn_web_development/Core/Frameworks_libraries/Ember_getting_started": {
+    "modified": "2020-08-06T07:27:06.082Z",
+    "contributors": ["chrisdavidmills"]
+  },
+  "Learn_web_development/Core/Frameworks_libraries/Ember_interactivity_events_state": {
+    "modified": "2020-08-06T07:26:59.624Z",
+    "contributors": ["chrisdavidmills"]
+  },
+  "Learn_web_development/Core/Frameworks_libraries/Ember_resources": {
+    "modified": "2020-08-06T07:26:47.135Z",
+    "contributors": ["chrisdavidmills"]
+  },
+  "Learn_web_development/Core/Frameworks_libraries/Ember_routing": {
+    "modified": "2020-08-06T07:26:51.530Z",
+    "contributors": ["chrisdavidmills"]
+  },
+  "Learn_web_development/Core/Frameworks_libraries/Ember_structure_componentization": {
+    "modified": "2020-08-06T07:27:03.636Z",
+    "contributors": ["chrisdavidmills"]
+  },
+  "Learn_web_development/Core/Frameworks_libraries/Introduction": {
+    "modified": "2020-09-08T07:18:11.161Z",
+    "contributors": [
+      "chrisdavidmills",
+      "harryghgim",
+      "terrymorse",
+      "valgrimm",
+      "nicolasguasca1",
+      "codeability",
+      "mgechev",
+      "jchimene"
+    ]
+  },
+  "Learn_web_development/Core/Frameworks_libraries/Main_features": {
+    "modified": "2020-09-08T05:53:30.007Z",
+    "contributors": ["chrisdavidmills", "terrymorse", "luc4leone", "mrmowji"]
+  },
+  "Learn_web_development/Core/Frameworks_libraries/React_accessibility": {
+    "modified": "2020-08-06T07:27:14.576Z",
+    "contributors": [
+      "chrisdavidmills",
+      "vgiffin",
+      "ndri",
+      "xfq",
+      "doncity-tech"
+    ]
+  },
+  "Learn_web_development/Core/Frameworks_libraries/React_components": {
+    "modified": "2020-08-06T07:27:25.146Z",
+    "contributors": ["chrisdavidmills", "storytellerrishabh", "codeability"]
+  },
+  "Learn_web_development/Core/Frameworks_libraries/React_getting_started": {
+    "modified": "2020-10-21T06:59:37.317Z",
+    "contributors": [
+      "chrisdavidmills",
+      "ramiZackaryShamir",
+      "spaceinvadev",
+      "mrmowji",
+      "codeability",
+      "bias-santa",
+      "franca"
+    ]
+  },
+  "Learn_web_development/Core/Frameworks_libraries/React_interactivity_events_state": {
+    "modified": "2020-09-01T07:11:30.226Z",
+    "contributors": [
+      "chrisdavidmills",
+      "ndri",
+      "nicolasguasca1",
+      "mrmowji",
+      "alperars"
+    ]
+  },
+  "Learn_web_development/Core/Frameworks_libraries/React_interactivity_filtering_conditional_rendering": {
+    "modified": "2020-09-28T06:18:04.788Z",
+    "contributors": [
+      "chrisdavidmills",
+      "dl90",
+      "terrymorse",
+      "Rafael_Green",
+      "mrmowji"
+    ]
+  },
+  "Learn_web_development/Core/Frameworks_libraries/React_resources": {
+    "modified": "2020-08-06T07:27:08.934Z",
+    "contributors": ["chrisdavidmills", "mrmowji", "bias-santa", "codeability"]
+  },
+  "Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning": {
+    "modified": "2020-09-08T16:44:12.600Z",
+    "contributors": ["terrymorse", "chrisdavidmills", "codeability"]
+  },
+  "Learn_web_development/Core/Frameworks_libraries/Svelte_Todo_list_beginning": {
+    "modified": "2020-12-01T21:39:23.352Z",
+    "contributors": ["seneca", "chrisdavidmills"]
+  },
+  "Learn_web_development/Core/Frameworks_libraries/Svelte_TypeScript": {
+    "modified": "2020-10-29T07:18:00.018Z",
+    "contributors": ["haond10adp", "chrisdavidmills"]
+  },
+  "Learn_web_development/Core/Frameworks_libraries/Svelte_components": {
+    "modified": "2020-10-07T20:21:51.724Z",
+    "contributors": ["seneca", "Rafael_Green", "chrisdavidmills", "opensas"]
+  },
+  "Learn_web_development/Core/Frameworks_libraries/Svelte_deployment_next": {
+    "modified": "2020-09-20T04:24:34.950Z",
+    "contributors": ["Rafael_Green", "chrisdavidmills"]
+  },
+  "Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started": {
+    "modified": "2020-09-11T14:25:08.477Z",
+    "contributors": ["Rafael_Green", "chrisdavidmills", "opensas"]
+  },
+  "Learn_web_development/Core/Frameworks_libraries/Svelte_reactivity_lifecycle_accessibility": {
+    "modified": "2020-10-24T06:16:59.643Z",
+    "contributors": [
+      "haond10adp",
+      "SphinxKnight",
+      "Rafael_Green",
+      "chrisdavidmills",
+      "opensas"
+    ]
+  },
+  "Learn_web_development/Core/Frameworks_libraries/Svelte_stores": {
+    "modified": "2020-12-11T07:44:13.494Z",
+    "contributors": [
+      "Mishra-Suraj",
+      "haond10adp",
+      "Rafael_Green",
+      "chrisdavidmills"
+    ]
+  },
+  "Learn_web_development/Core/Frameworks_libraries/Svelte_variables_props": {
+    "modified": "2020-10-20T01:35:26.842Z",
+    "contributors": ["haond10adp", "Rafael_Green", "chrisdavidmills"]
+  },
+  "Learn_web_development/Core/Frameworks_libraries/Vue_computed_properties": {
+    "modified": "2020-09-08T10:27:40.979Z",
+    "contributors": ["Rafael_Green", "chrisdavidmills", "clintbingo"]
+  },
+  "Learn_web_development/Core/Frameworks_libraries/Vue_conditional_rendering": {
+    "modified": "2020-08-06T07:26:12.722Z",
+    "contributors": ["chrisdavidmills"]
+  },
+  "Learn_web_development/Core/Frameworks_libraries/Vue_first_component": {
+    "modified": "2020-09-05T08:38:17.788Z",
+    "contributors": ["Rafael_Green", "chrisdavidmills"]
+  },
+  "Learn_web_development/Core/Frameworks_libraries/Vue_getting_started": {
+    "modified": "2020-08-06T07:26:44.679Z",
+    "contributors": ["chrisdavidmills", "taiwoayanleye"]
+  },
+  "Learn_web_development/Core/Frameworks_libraries/Vue_methods_events_models": {
+    "modified": "2020-10-05T06:56:15.162Z",
+    "contributors": ["JohnnyMu-Cn", "chrisdavidmills"]
+  },
+  "Learn_web_development/Core/Frameworks_libraries/Vue_refs_focus_management": {
+    "modified": "2020-08-06T07:26:09.176Z",
+    "contributors": ["chrisdavidmills"]
+  },
+  "Learn_web_development/Core/Frameworks_libraries/Vue_rendering_lists": {
+    "modified": "2020-09-15T11:22:44.422Z",
+    "contributors": ["chrisdavidmills", "technicalflaw"]
+  },
+  "Learn_web_development/Core/Frameworks_libraries/Vue_resources": {
+    "modified": "2020-08-06T07:26:03.837Z",
+    "contributors": ["chrisdavidmills"]
+  },
+  "Learn_web_development/Core/Frameworks_libraries/Vue_styling": {
+    "modified": "2020-08-06T07:26:25.263Z",
+    "contributors": ["chrisdavidmills"]
+  },
   "Learn_web_development/Core/Scripting": {
     "modified": "2020-07-16T22:29:47.255Z",
     "contributors": [
@@ -9665,6 +9322,230 @@
       "fscholz"
     ]
   },
+  "Learn_web_development/Core/Scripting/Build_your_own_function": {
+    "modified": "2020-07-16T22:31:28.317Z",
+    "contributors": [
+      "A.Faturechi",
+      "chrisdavidmills",
+      "mariusmucenicu",
+      "docrob0t",
+      "sambgordon",
+      "thenoelman",
+      "wazz",
+      "kan199041",
+      "stephaniehobson",
+      "FishinginaSombrero8",
+      "cPlayIt",
+      "nmve",
+      "rteliczan",
+      "Jeremie"
+    ]
+  },
+  "Learn_web_development/Core/Scripting/Conditionals": {
+    "modified": "2020-07-16T22:31:11.893Z",
+    "contributors": [
+      "chrisdavidmills",
+      "choudh70",
+      "tayyabalishan",
+      "jswisher",
+      "keshav1245",
+      "RafeyIqbalRahman",
+      "Czl.Lebleu",
+      "smccrindle",
+      "OxyDesign",
+      "stephaniehobson",
+      "qdirks",
+      "drozycki",
+      "BrunkBeard",
+      "akshayjumbade",
+      "nmve",
+      "Rohit25negi",
+      "Jeremie",
+      "Cameron-Riecan",
+      "husain100b",
+      "fscholz",
+      "Sebastianz"
+    ]
+  },
+  "Learn_web_development/Core/Scripting/DOM_scripting": {
+    "modified": "2020-08-23T02:38:31.029Z",
+    "contributors": [
+      "wlt",
+      "herrieii",
+      "chrisdavidmills",
+      "kruschk",
+      "HARARCA",
+      "Aternus",
+      "ajhsu",
+      "jlafica",
+      "sourav2706",
+      "francescm",
+      "jwq1",
+      "stephaniehobson",
+      "Bogdan.G",
+      "JideLambo",
+      "lybrendan",
+      "mientje"
+    ]
+  },
+  "Learn_web_development/Core/Scripting/Debugging_JavaScript": {
+    "modified": "2020-11-23T02:24:03.962Z",
+    "contributors": [
+      "hamishwillee",
+      "chrisdavidmills",
+      "ckashby",
+      "kruschk",
+      "stephaniehobson",
+      "EdwardB",
+      "qdirks",
+      "Juggernaughtt"
+    ]
+  },
+  "Learn_web_development/Core/Scripting/Events": {
+    "modified": "2020-08-19T17:34:16.897Z",
+    "contributors": [
+      "Aaron228",
+      "owolagbadavid",
+      "chrisdavidmills",
+      "ankerok-dingdong",
+      "muhammadghazali",
+      "tayyabalishan",
+      "jswisher",
+      "VijayKumarKTG",
+      "FZs",
+      "imchriskitchens",
+      "mariusmucenicu",
+      "4R53N",
+      "sideshowbarker",
+      "christopherwilson1",
+      "bubzy34",
+      "wobedi",
+      "anton-mladenov",
+      "selrond",
+      "andyprickett",
+      "stephaniehobson",
+      "seasmith",
+      "Saabbir",
+      "qdirks",
+      "Arecius",
+      "Bogdancev",
+      "kirkins",
+      "cPlayIt",
+      "dsujeeun",
+      "shalvasvanidze",
+      "nmve",
+      "Jeremie",
+      "BaderSur",
+      "sngv"
+    ]
+  },
+  "Learn_web_development/Core/Scripting/Functions": {
+    "modified": "2020-09-29T10:01:24.142Z",
+    "contributors": [
+      "bhushangoel",
+      "JohnnyMu-Cn",
+      "chrisdavidmills",
+      "ahmaazouzi",
+      "gerfolder",
+      "choudh70",
+      "tayyabalishan",
+      "cadorej",
+      "karlhorky",
+      "loretta-arineva",
+      "mariusmucenicu",
+      "riyaz",
+      "dan-nix",
+      "MachineShot",
+      "thenoelman",
+      "redrambles",
+      "jruota",
+      "stephaniehobson",
+      "FishinginaSombrero8",
+      "gabiaad",
+      "Anonymous",
+      "GKilyar",
+      "stockcj",
+      "nmve",
+      "Jeremie",
+      "Cameron-Riecan",
+      "husain100b",
+      "fscholz"
+    ]
+  },
+  "Learn_web_development/Core/Scripting/Image_gallery": {
+    "modified": "2020-07-31T18:38:47.870Z",
+    "contributors": [
+      "Rafael_Green",
+      "chrisdavidmills",
+      "jswisher",
+      "csarami",
+      "jxhdev",
+      "jyjz2008",
+      "Jeremie"
+    ]
+  },
+  "Learn_web_development/Core/Scripting/JSON": {
+    "modified": "2020-10-31T11:57:03.706Z",
+    "contributors": [
+      "randycasburn",
+      "chrisdavidmills",
+      "jswisher",
+      "mariusmucenicu",
+      "thebearingedge",
+      "bripmccann",
+      "shilili",
+      "thekosiguy",
+      "TasosPoursaitides",
+      "dvsgnr",
+      "stephaniehobson",
+      "torazaburo",
+      "DipperP",
+      "qdirks",
+      "systematis",
+      "mememachine666",
+      "nmve",
+      "Jeremie",
+      "fscholz"
+    ]
+  },
+  "Learn_web_development/Core/Scripting/Loops": {
+    "modified": "2020-09-15T14:47:05.302Z",
+    "contributors": [
+      "theRealJennie",
+      "SphinxKnight",
+      "Rafael_Green",
+      "mrmowji",
+      "chrisdavidmills",
+      "The-UCS-Variable",
+      "sideshowbarker",
+      "hhimanshu",
+      "naser-baig",
+      "tayyabalishan",
+      "muhammadghazali",
+      "loretta-arineva",
+      "mariusmucenicu",
+      "walonge",
+      "eremis101",
+      "keshav1245",
+      "4EPTAKA",
+      "Erramyne",
+      "li3097",
+      "sumnercommajohn",
+      "thenoelman",
+      "csarami",
+      "SebastianMaciel",
+      "RundongZou",
+      "FloraFauna",
+      "stephaniehobson",
+      "GowthamPrakaash",
+      "JackZL",
+      "BrunkBeard",
+      "nmve",
+      "Jeremie",
+      "BaderSur",
+      "fscholz"
+    ]
+  },
   "Learn_web_development/Core/Scripting/Math": {
     "modified": "2020-07-16T22:30:23.656Z",
     "contributors": [
@@ -9700,6 +9581,84 @@
       "sngv",
       "Sheppy",
       "Sebastianz"
+    ]
+  },
+  "Learn_web_development/Core/Scripting/Network_requests": {
+    "modified": "2020-09-12T22:58:21.536Z",
+    "contributors": [
+      "JohnnyMu-Cn",
+      "wlt",
+      "timandes",
+      "chrisdavidmills",
+      "joanvalis",
+      "thekosiguy",
+      "sideshowbarker",
+      "ezrinjaz",
+      "aboagyed",
+      "smoothie1998",
+      "stepharr",
+      "JoshApos",
+      "dlwagner",
+      "stephaniehobson",
+      "kriminals",
+      "SphinxKnight",
+      "li-shasha",
+      "fireattack",
+      "marcusgenrich",
+      "Sheppy"
+    ]
+  },
+  "Learn_web_development/Core/Scripting/Object_basics": {
+    "modified": "2020-07-16T22:31:55.445Z",
+    "contributors": [
+      "chrisdavidmills",
+      "tayyabalishan",
+      "jswisher",
+      "FishinginaSombrero8",
+      "nhsz",
+      "gumbol",
+      "rayrojas",
+      "bripmccann",
+      "Battlesquid",
+      "Abhro",
+      "FeruzOripov",
+      "snakecase",
+      "vcastrejont",
+      "muhammadghazali",
+      "MarckK",
+      "RockyAZ",
+      "rajasrijanakiraman",
+      "stephaniehobson",
+      "JonathanPool",
+      "systematis",
+      "dsujeeun",
+      "nmve",
+      "BaderSur",
+      "Jeremie",
+      "fscholz"
+    ]
+  },
+  "Learn_web_development/Core/Scripting/Return_values": {
+    "modified": "2020-08-19T08:02:22.451Z",
+    "contributors": [
+      "wlt",
+      "Rafael_Green",
+      "chrisdavidmills",
+      "xuchunyang",
+      "ppusher",
+      "feeko",
+      "abbasalamin12",
+      "choudh70",
+      "tayyabalishan",
+      "muhammadghazali",
+      "Zearin_Galaurum",
+      "loretta-arineva",
+      "anton-mladenov",
+      "stephaniehobson",
+      "nmve",
+      "rteliczan",
+      "Jeremie",
+      "fscholz"
     ]
   },
   "Learn_web_development/Core/Scripting/Silly_story_generator": {
@@ -9748,9 +9707,33 @@
     "modified": "2020-07-16T22:31:05.831Z",
     "contributors": ["vgiffin", "chrisdavidmills"]
   },
+  "Learn_web_development/Core/Scripting/Test_your_skills:_Conditionals": {
+    "modified": "2020-07-16T22:31:45.710Z",
+    "contributors": ["jpfkd", "jmliu", "chrisdavidmills"]
+  },
+  "Learn_web_development/Core/Scripting/Test_your_skills:_Events": {
+    "modified": "2020-07-16T22:31:46.881Z",
+    "contributors": ["chrisdavidmills"]
+  },
+  "Learn_web_development/Core/Scripting/Test_your_skills:_Functions": {
+    "modified": "2020-07-16T22:31:46.557Z",
+    "contributors": ["chrisdavidmills"]
+  },
+  "Learn_web_development/Core/Scripting/Test_your_skills:_JSON": {
+    "modified": "2020-07-16T22:32:38.003Z",
+    "contributors": ["chrisdavidmills", "blueblots"]
+  },
+  "Learn_web_development/Core/Scripting/Test_your_skills:_Loops": {
+    "modified": "2020-07-16T22:31:46.034Z",
+    "contributors": ["neuroptera", "chrisdavidmills"]
+  },
   "Learn_web_development/Core/Scripting/Test_your_skills:_Math": {
     "modified": "2020-07-31T08:15:10.749Z",
     "contributors": ["chrisdavidmills", "AJMcDee"]
+  },
+  "Learn_web_development/Core/Scripting/Test_your_skills:_Object_basics": {
+    "modified": "2020-12-11T06:18:00.445Z",
+    "contributors": ["chrisdavidmills", "iJacKP", "neuroptera"]
   },
   "Learn_web_development/Core/Scripting/Test_your_skills:_Strings": {
     "modified": "2020-07-16T22:31:05.493Z",

@@ -4,11 +4,11 @@ slug: Learn/JavaScript/Objects/Classes_in_JavaScript
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_programming", "Learn_web_development/Core/Scripting/JSON", "Learn/JavaScript/Objects")}}
 
 In [the last article](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming), we introduced some basic concepts of object-oriented programming (OOP), and discussed an example where we used OOP principles to model professors and students in a school.
 
-We also talked about how it's possible to use [prototypes](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes) and [constructors](/en-US/docs/Learn/JavaScript/Objects/Basics#introducing_constructors) to implement a model like this, and that JavaScript also provides features that map more closely to classical OOP concepts.
+We also talked about how it's possible to use [prototypes](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes) and [constructors](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics#introducing_constructors) to implement a model like this, and that JavaScript also provides features that map more closely to classical OOP concepts.
 
 In this article, we'll go through these features. It's worth keeping in mind that the features described here are not a new way of combining objects: under the hood, they still use prototypes. They're just a way to make it easier to set up a prototype chain.
 
@@ -20,10 +20,10 @@ In this article, we'll go through these features. It's worth keeping in mind tha
         A basic understanding of HTML and CSS,
         familiarity with JavaScript basics (see
         <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> and
-        <a href="/en-US/docs/Learn/JavaScript/Building_blocks"
+        <a href="/en-US/docs/Learn_web_development/Core/Scripting"
           >Building blocks</a
         >) and OOJS basics (see
-        <a href="/en-US/docs/Learn/JavaScript/Objects/Basics"
+        <a href="/en-US/docs/Learn_web_development/Core/Scripting/Object_basics"
           >Introduction to objects</a
         >, <a href="/en-US/docs/Learn/JavaScript/Objects/Object_prototypes">Object prototypes</a>, and <a href="/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming">Object-oriented programming</a>).
       </td>
@@ -65,7 +65,7 @@ The `name;` declaration is optional: you could omit it, and the line `this.name 
 
 You could also initialize the property to a default value when you declare it, with a line like `name = '';`.
 
-The constructor is defined using the {{jsxref("Classes/constructor", "constructor")}} keyword. Just like a [constructor outside a class definition](/en-US/docs/Learn/JavaScript/Objects/Basics#introducing_constructors), it will:
+The constructor is defined using the {{jsxref("Classes/constructor", "constructor")}} keyword. Just like a [constructor outside a class definition](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics#introducing_constructors), it will:
 
 - create a new object
 - bind `this` to the new object, so you can refer to `this` in your constructor code
@@ -214,4 +214,4 @@ You've reached the end of this article, but can you remember the most important 
 ## Summary
 
 In this article, we've gone through the main tools available in JavaScript for writing object-oriented programs. We haven't covered everything here, but this should be enough to get you started. Our [article on Classes](/en-US/docs/Web/JavaScript/Reference/Classes) is a good place to learn more.
-{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_programming", "Learn_web_development/Core/Scripting/JSON", "Learn/JavaScript/Objects")}}

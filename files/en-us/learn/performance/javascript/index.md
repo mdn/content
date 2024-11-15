@@ -42,7 +42,7 @@ To do this, you need to [measure the performance](/en-US/docs/Learn/Performance/
 
 The most performant, least blocking JavaScript you can use is JavaScript that you don't use at all. You should use as little JavaScript as possible. Some tips to bear in mind:
 
-- **You don't always need a framework**: You might be familiar with using a [JavaScript framework](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks). If you are experienced and confident with using this framework, and like all of the tooling it provides, then it might be your go-to tool for building most projects. However, frameworks are JavaScript-heavy. If you are creating a fairly static experience with few JavaScript requirements, you probably don't need that framework. You might be able to implement what you need using a few lines of standard JavaScript.
+- **You don't always need a framework**: You might be familiar with using a [JavaScript framework](/en-US/docs/Learn_web_development/Core/Frameworks_libraries). If you are experienced and confident with using this framework, and like all of the tooling it provides, then it might be your go-to tool for building most projects. However, frameworks are JavaScript-heavy. If you are creating a fairly static experience with few JavaScript requirements, you probably don't need that framework. You might be able to implement what you need using a few lines of standard JavaScript.
 - **Consider a simpler solution**: You might have a flashy, interesting solution to implement, but consider whether your users will appreciate it. Would they prefer something simpler?
 - **Remove unused code:** This may sound obvious, but it is surprising how many developers forget to clean up unused functionality that was added during the development process. You need to be careful and deliberate about what is added and removed. All script gets parsed, whether it is used or not; therefore, a quick win to speed up downloads would be to get rid of any functionality not being used. Consider also that often you will only use a small amount of the functionality available in a framework. Is it possible to create a custom build of the framework that only contains the part that you need?
 - **Consider built-in browser features**: It might be that you can use a feature the browser already has, rather than creating your own via JavaScript. For example:
@@ -280,7 +280,7 @@ elem.removeEventListener("mousemove", handleMouseMove);
 
 Another tip is to use event delegation wherever possible. When you have some code to run in response to a user interacting with any one of a large number of child elements, you can set an event listener on their parent. Events fired on any child element will bubble up to their parent, so you don't need to set the event listener on each child individually. Less event listeners to keep track of means better performance.
 
-See [Event delegation](/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling#event_delegation) for more details and a useful example.
+See [Event delegation](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling#event_delegation) for more details and a useful example.
 
 ## Tips for writing more efficient code
 

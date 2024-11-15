@@ -10,7 +10,7 @@ When writing client-side JavaScript for websites or applications, you will quick
 
 ## Prerequisites
 
-To get the most out of this module, you should have worked your way through the previous JavaScript modules in the series ([First steps](/en-US/docs/Learn/JavaScript/First_steps), [Building blocks](/en-US/docs/Learn/JavaScript/Building_blocks), and [JavaScript objects](/en-US/docs/Learn/JavaScript/Objects)). Those modules typically involve simple API usage, as it is often difficult to write client-side JavaScript examples without them. For this tutorial, we will assume that you are knowledgeable about the core JavaScript language, and we will explore common Web APIs in a bit more detail.
+To get the most out of this module, you should have worked your way through the previous JavaScript modules in the series ([Dynamic scripting with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting), and [JavaScript objects](/en-US/docs/Learn/JavaScript/Objects)). Those modules typically involve simple API usage, as it is often difficult to write client-side JavaScript examples without them. For this tutorial, we will assume that you are knowledgeable about the core JavaScript language, and we will explore common Web APIs in a bit more detail.
 
 Basic knowledge of [HTML](/en-US/docs/Learn/HTML) and [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics) would also be useful.
 
@@ -21,9 +21,9 @@ Basic knowledge of [HTML](/en-US/docs/Learn/HTML) and [CSS](/en-US/docs/Learn_we
 
 - [Introduction to web APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
   - : First up, we'll start by looking at APIs from a high level — what are they, how do they work, how do you use them in your code, and how are they structured? We'll also take a look at what the different main classes of APIs are, and what kind of uses they have.
-- [Manipulating documents](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
+- [DOM scripting introduction](/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting)
   - : When writing web pages and apps, one of the most common things you'll want to do is manipulate web documents in some way. This is usually done by using the Document Object Model (DOM), a set of APIs for controlling HTML and styling information that makes heavy use of the {{domxref("Document")}} object. In this article, we'll look at how to use the DOM in detail, along with some other interesting APIs that can alter your environment in interesting ways.
-- [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+- [Making network requests with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting/Network_requests)
   - : Another very common task in modern websites and applications is retrieving individual data items from the server to update sections of a webpage without having to load an entirely new page. This seemingly small detail has had a huge impact on the performance and behavior of sites. In this article, we'll explain the concept, and look at technologies that make it possible, such as {{domxref("XMLHttpRequest")}} and the [Fetch API](/en-US/docs/Web/API/Fetch_API).
 - [Third party APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
   - : The APIs we've covered so far are built into the browser, but not all APIs are. Many large websites and services such as Google Maps, Facebook, PayPal, etc. provide APIs allowing developers to make use of their data or services (e.g. displaying custom Google Maps on your site, or using Facebook login to log in your users). This article looks at the difference between browser APIs and 3rd party APIs and shows some typical uses of the latter.

@@ -4,7 +4,9 @@ slug: Learn_web_development/Core/Scripting/What_went_wrong
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting")}}
 
 When you built up the "Guess the number" game in the previous article, you may have found that it didn't work. Never fear — this article aims to save you from tearing your hair out over such problems by providing you with some tips on how to find and fix errors in JavaScript programs.
 
@@ -12,16 +14,17 @@ When you built up the "Guess the number" game in the previous article, you may h
   <tbody>
     <tr>
       <th scope="row">Prerequisites:</th>
-      <td>
-        A basic understanding of HTML and CSS, an
-        understanding of what JavaScript is.
-      </td>
+      <td>An understanding of <a href="/en-US/docs/Learn_web_development/Core/Structuring_content">HTML</a> and the <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">fundamentals of CSS</a>, basic experience with writing JavaScript.</td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">Learning outcomes:</th>
       <td>
-        To gain the ability and confidence to start fixing problems in your own
-        code.
+        <ul>
+          <li>Understand the types of error that can occur in JavaScript.</li>
+          <li>Using <code>console.log()</code> to debug errors.</li>
+          <li>Basic experience with using the browser DevTools JavaScript console.</li>
+          <li>Basic familiarity with JavaScript error messages and what they mean.</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -94,7 +97,7 @@ Earlier on in the course we got you to type some simple JavaScript commands into
    It's the same error, but different browsers describe it in a different way.
 
    > [!NOTE]
-   > This error didn't come up as soon as the page was loaded because this error occurred inside a function (inside the `checkGuess() { }` block). As you'll learn in more detail in our later [functions article](/en-US/docs/Learn/JavaScript/Building_blocks/Functions), code inside functions runs in a separate scope than code outside functions. In this case, the code was not run and the error was not thrown until the `checkGuess()` function was run by line 87.
+   > This error didn't come up as soon as the page was loaded because this error occurred inside a function (inside the `checkGuess() { }` block). As you'll learn in more detail in our later [functions article](/en-US/docs/Learn_web_development/Core/Scripting/Functions), code inside functions runs in a separate scope than code outside functions. In this case, the code was not run and the error was not thrown until the `checkGuess()` function was run by line 87.
 
 4. The line number given in the error is 79. Have a look at line 79, and you'll see the following code:
 
@@ -255,4 +258,4 @@ So there we have it, the basics of figuring out errors in simple JavaScript prog
 - There are many other types of errors that aren't listed here; we are compiling a reference that explains what they mean in detail — see the [JavaScript error reference](/en-US/docs/Web/JavaScript/Reference/Errors).
 - If you come across any errors in your code that you aren't sure how to fix after reading this article, you can get help! Ask for help on the [communication channels](/en-US/docs/MDN/Community/Communication_channels). Tell us what your error is, and we'll try to help you. A listing of your code would be useful as well.
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting")}}

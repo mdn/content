@@ -170,7 +170,7 @@ The most important and key piece of advice for using `<iframe>`s is: "Don't use 
 - Following on from the previous point, you'll also need to handle any CSS styling or JavaScript manipulation separately for each different `<iframe>` (unless the embedded pages are from the same origin), which becomes much more complex. You can't target embedded content with CSS and JavaScript applied to the top-level page, or vice versa. This is a sensible security measure that is fundamental to the web. Imagine all the problems you might run into if third-party embedded content could arbitrarily run scripts against any page it was embedded in!
 - Each `<iframe>` would also need to load any shared data and media files separately — you can't share cached assets across different page embeds (again, unless the embedded pages are from the same origin). This can lead to a page using much more bandwidth than you might expect.
 
-It is advisable to put the content into a single page. If you want to pull in new content dynamically as the page changes, it is still better for performance to load it into the same page rather than putting it into an `<iframe>`. You might grab the new data using the {{domxref("Window/fetch", "fetch()")}} method, for example, and then inject it into the page using some DOM scripting. See [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data) and [Manipulating documents](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents) for more information.
+It is advisable to put the content into a single page. If you want to pull in new content dynamically as the page changes, it is still better for performance to load it into the same page rather than putting it into an `<iframe>`. You might grab the new data using the {{domxref("Window/fetch", "fetch()")}} method, for example, and then inject it into the page using some DOM scripting. See [Making network requests with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting/Network_requests) and [DOM scripting introduction](/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting) for more information.
 
 > [!NOTE]
 > If you control the content and it is relatively simple, you could consider using base-64 encoded content in the `src` attribute to populate the `<iframe>`, or even insert raw HTML into the `srcdoc` attribute (See [Iframe Performance Part 2: The Good News](https://medium.com/slices-of-bread/iframe-performance-part-2-the-good-news-26eb53cea429) for more information).
@@ -273,5 +273,5 @@ See the following articles for detailed information on using `rel="preload"`:
 
 ## See also
 
-- [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [Manipulating documents](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
+- [Making network requests with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting/Network_requests)
+- [DOM scripting introduction](/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting)

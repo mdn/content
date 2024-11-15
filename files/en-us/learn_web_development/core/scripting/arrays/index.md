@@ -4,23 +4,28 @@ slug: Learn_web_development/Core/Scripting/Arrays
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}
 
-In the final article of this module, we'll look at arrays — a neat way of storing a list of data items under a single variable name. Here we look at why this is useful, then explore how to create an array, retrieve, add, and remove items stored in an array, and more besides.
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting")}}
+
+In this lesson we'll look at arrays — a neat way of storing a list of data items under a single variable name. Here we look at why this is useful, then explore how to create an array, retrieve, add, and remove items stored in an array, and more besides.
 
 <table>
   <tbody>
     <tr>
       <th scope="row">Prerequisites:</th>
-      <td>
-        A basic understanding of HTML and CSS, an
-        understanding of what JavaScript is.
-      </td>
+      <td>An understanding of <a href="/en-US/docs/Learn_web_development/Core/Structuring_content">HTML</a> and the <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">fundamentals of CSS</a>. familiarity with basic data types such as numbers and strings, as covered in previous lessons.</td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">Learning outcomes:</th>
       <td>
-        To understand what arrays are and how to manipulate them in JavaScript.
+        <ul>
+          <li>What an array is — a structure that holds a list of variables.</li>
+          <li>The syntax of arrays — <code>[a, b, c]</code> and the accessor syntax, <code>myArray[x]</code>.</li>
+          <li>Modifying array values with <code>myArray[x] = y</code>.</li>
+          <li>Array manipulation using common properties and methods such as <code>length</code>, <code>push()</code>, <code>pop()</code>, <code>join()</code>, and <code>split()</code>.</li>
+          <li>Advanced array methods such as <code>forEach()</code>, <code>map()</code>, and <code>filter()</code>.</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -65,7 +70,7 @@ console.log(shopping.length); // 5
 
 ## Accessing and modifying array items
 
-Items in an array are numbered, starting from zero. This number is called the item's _index_. So the first item has index 0, the second has index 1, and so on. You can access individual items in the array using bracket notation and supplying the item's index, in the same way that you [accessed the letters in a string](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods#retrieving_a_specific_string_character).
+Items in an array are numbered, starting from zero. This number is called the item's _index_. So the first item has index 0, the second has index 1, and so on. You can access individual items in the array using bracket notation and supplying the item's index, in the same way that you [accessed the letters in a string](/en-US/docs/Learn_web_development/Core/Scripting/Useful_string_methods#retrieving_a_specific_string_character).
 
 1. Enter the following into your console:
 
@@ -271,9 +276,9 @@ Let's return to the example we described earlier — printing out product names 
 
 1. Below the `// number 1` comment are a number of strings, each one containing a product name and price separated by a colon. We'd like you to turn this into an array and store it in an array called `products`.
 2. Below the `// number 2` comment, start a `for...of()` loop to go through every item in the `products` array.
-3. Below the `// number 3` comment we want you to write a line of code that splits the current array item (`name:price`) into two separate items, one containing just the name and one containing just the price. If you are not sure how to do this, consult the [Useful string methods](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods) article for some help, or even better, look at the [Converting between strings and arrays](#converting_between_strings_and_arrays) section of this article.
-4. As part of the above line of code, you'll also want to convert the price from a string to a number. If you can't remember how to do this, check out the [first strings article](/en-US/docs/Learn/JavaScript/First_steps/Strings#numbers_vs._strings).
-5. There is a variable called `total` that is created and given a value of 0 at the top of the code. Inside the loop (below `// number 4`) we want you to add a line that adds the current item price to that total in each iteration of the loop, so that at the end of the code the correct total is printed onto the invoice. You might need an [assignment operator](/en-US/docs/Learn/JavaScript/First_steps/Math#assignment_operators) to do this.
+3. Below the `// number 3` comment we want you to write a line of code that splits the current array item (`name:price`) into two separate items, one containing just the name and one containing just the price. If you are not sure how to do this, consult the [Useful string methods](/en-US/docs/Learn_web_development/Core/Scripting/Useful_string_methods) article for some help, or even better, look at the [Converting between strings and arrays](#converting_between_strings_and_arrays) section of this article.
+4. As part of the above line of code, you'll also want to convert the price from a string to a number. If you can't remember how to do this, check out the [first strings article](/en-US/docs/Learn_web_development/Core/Scripting/Strings#numbers_vs._strings).
+5. There is a variable called `total` that is created and given a value of 0 at the top of the code. Inside the loop (below `// number 4`) we want you to add a line that adds the current item price to that total in each iteration of the loop, so that at the end of the code the correct total is printed onto the invoice. You might need an [assignment operator](/en-US/docs/Learn_web_development/Core/Scripting/Math#assignment_operators) to do this.
 6. We want you to change the line just below `// number 5` so that the `itemText` variable is made equal to "current item name — $current item price", for example "Shoes — $23.99" in each case, so the correct information for each item is printed on the invoice. This is just simple string concatenation, which should be familiar to you.
 7. Finally, below the `// number 6` comment, you'll need to add a `}` to mark the end of the `for...of()` loop.
 
@@ -671,17 +676,21 @@ textarea.onkeyup = () => {
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Arrays](/en-US/docs/Learn/JavaScript/First_steps/Test_your_skills:_Arrays).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Arrays](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Arrays).
 
 ## Conclusion
 
-After reading through this article, we are sure you will agree that arrays seem pretty darn useful; you'll see them crop up everywhere in JavaScript, often in association with loops in order to do the same thing to every item in an array. We'll be teaching you all the useful basics there are to know about loops in the next module, but for now you should give yourself a clap and take a well-deserved break; you've worked through all the articles in this module!
+After reading through this article, we are sure you will agree that arrays seem pretty darn useful; you'll see them crop up everywhere in JavaScript, often in association with loops in order to do the same thing to every item in an array. We'll be teaching you all about loops later on in the module.
 
-The only thing left to do is work through this module's assessment, which will test your understanding of the articles that came before it.
+In the next article we're giving you a challenge to test your understanding of the articles that came before it.
 
 ## See also
 
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) — an advanced level guide to arrays and their cousins, typed arrays.
-- {{jsxref("Array")}} — the `Array` object reference page — for a detailed reference guide to the features discussed in this page, and many more.
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+  - : An advanced level guide to arrays and their cousins, typed arrays.
+- {{jsxref("Array")}}
+  - : The `Array` object reference page — for a detailed reference guide to the features discussed in this page, and many more.
+- [Aside: Intro to arrays](https://v2.scrimba.com/the-frontend-developer-career-path-c0j/~06e?via=mdn), Scrimba <sup>_MDN Curriculum partner_</sup>
+  - : An interactive lesson providing an introduction to arrays.
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting")}}

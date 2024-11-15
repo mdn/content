@@ -9,7 +9,7 @@ browser-compat: api.EventSource
 
 The **`EventSource`** interface is web content's interface to [server-sent events](/en-US/docs/Web/API/Server-sent_events).
 
-An `EventSource` instance opens a persistent connection to an [HTTP](/en-US/docs/Web/HTTP) server, which sends [events](/en-US/docs/Learn/JavaScript/Building_blocks/Events) in `text/event-stream` format. The connection remains open until closed by calling {{domxref("EventSource.close()")}}.
+An `EventSource` instance opens a persistent connection to an [HTTP](/en-US/docs/Web/HTTP) server, which sends [events](/en-US/docs/Learn_web_development/Core/Scripting/Events) in `text/event-stream` format. The connection remains open until closed by calling {{domxref("EventSource.close()")}}.
 
 {{InheritanceDiagram}}
 

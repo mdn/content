@@ -6,7 +6,7 @@ page-type: learn-module-assessment
 
 {{learnsidebar}}
 
-The aim of this skill test is to assess whether you've understood our [Handling text — strings in JavaScript](/en-US/docs/Learn/JavaScript/First_steps/Strings) and [Useful string methods](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods) articles.
+The aim of this skill test is to assess whether you've understood our [Handling text — strings in JavaScript](/en-US/docs/Learn_web_development/Core/Scripting/Strings) and [Useful string methods](/en-US/docs/Learn_web_development/Core/Scripting/Useful_string_methods) articles.
 
 > [!NOTE]
 > You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).

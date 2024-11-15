@@ -17,7 +17,7 @@ Modern web browsers support a number of ways for websites to store data on the u
       <td>
         JavaScript basics (see
         <a href="/en-US/docs/Learn/JavaScript/First_steps">first steps</a>,
-        <a href="/en-US/docs/Learn/JavaScript/Building_blocks"
+        <a href="/en-US/docs/Learn_web_development/Core/Scripting"
           >building blocks</a
         >,
         <a href="/en-US/docs/Learn/JavaScript/Objects">JavaScript objects</a>),

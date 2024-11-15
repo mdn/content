@@ -88,7 +88,7 @@ These resources are created by forward-thinking companies and web developers who
 
 - [JavaScript first steps](/en-US/docs/Learn/JavaScript/First_steps)
   - : In our first JavaScript module, we first answer some fundamental questions such as "what is JavaScript?", "what does it look like?", and "what can it do?", before moving on to taking you through your first practical experience of writing JavaScript. After that, we discuss some key JavaScript features in detail, such as variables, strings, numbers and arrays.
-- [JavaScript building blocks](/en-US/docs/Learn/JavaScript/Building_blocks)
+- [JavaScript building blocks](/en-US/docs/Learn_web_development/Core/Scripting)
   - : In this module, we continue our coverage of all JavaScript's key fundamental features, turning our attention to commonly-encountered types of code blocks such as conditional statements, loops, functions, and events. You've seen this stuff already in the course, but only in passing — here we'll discuss it all explicitly.
 - [Getting started with JavaScript](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity)
   - : What is JavaScript and how can it help you?

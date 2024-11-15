@@ -247,7 +247,7 @@ A good example of an additional task that a _Web Application_ might perform woul
 
 Server-side website code does not have to return HTML snippets/files in the response. It can instead dynamically create and return other types of files (text, PDF, CSV, etc.) or even data (JSON, XML, etc.).
 
-This is especially relevant for websites that work by fetching content from the server using JavaScript and updating the page dynamically, rather than always loading a new page when new content is to be shown. See [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data) for more on the motivation for this approach, and what this model looks like from the client's point of view.
+This is especially relevant for websites that work by fetching content from the server using JavaScript and updating the page dynamically, rather than always loading a new page when new content is to be shown. See [Making network requests with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting/Network_requests) for more on the motivation for this approach, and what this model looks like from the client's point of view.
 
 ## Web frameworks simplify server-side web programming
 

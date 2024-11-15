@@ -339,7 +339,7 @@ The JavaScript does not need to be changed.
 ### Script loading strategies
 
 All the HTML on a page is loaded in the order in which it appears.
-If you are using JavaScript to manipulate elements on the page (or more accurately, the [Document Object Model](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#the_document_object_model)), your code won't work if the JavaScript is loaded and parsed before the HTML you are trying to do something to.
+If you are using JavaScript to manipulate elements on the page (or more accurately, the [Document Object Model](/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting#the_document_object_model)), your code won't work if the JavaScript is loaded and parsed before the HTML you are trying to do something to.
 
 There are a few different strategies to make sure your JavaScript only runs after the HTML is parsed:
 

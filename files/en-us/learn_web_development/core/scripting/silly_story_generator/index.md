@@ -1,37 +1,20 @@
 ---
-title: Silly story generator
+title: "Challenge: Silly story generator"
 slug: Learn_web_development/Core/Scripting/Silly_story_generator
 page-type: learn-module-assessment
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}
 
-In this assessment you'll be tasked with taking some of the knowledge you've picked up in this module's articles and applying it to creating a fun app that generates random silly stories. Have fun!
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting/Conditionals", "Learn_web_development/Core/Scripting")}}
 
-<table>
-  <tbody>
-    <tr>
-      <th scope="row">Prerequisites:</th>
-      <td>
-        Before attempting this assessment you should have already worked through
-        all the articles in this module.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Objective:</th>
-      <td>
-        To test comprehension of JavaScript fundamentals, such as variables,
-        numbers, operators, strings, and arrays.
-      </td>
-    </tr>
-  </tbody>
-</table>
+In this challenge you'll be tasked with taking some of the knowledge you've picked up in this module's articles and applying it to creating a fun app that generates random silly stories. Have fun!
 
 ## Starting point
 
-To get this assessment started, you should:
+To get this challenge started, you should:
 
-- Go and [grab the HTML file](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/assessment-start/index.html) for the example, save a local copy of it as `index.html` in a new directory somewhere on your computer, and do the assessment locally to begin with. This also has the CSS to style the example contained within it.
+- Go and [grab the HTML file](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/assessment-start/index.html) for the example, save a local copy of it as `index.html` in a new directory somewhere on your computer, and do the challenge locally to begin with. This also has the CSS to style the example contained within it.
 - Go to the [page containing the raw text](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/assessment-start/raw-text.txt) and keep this open in a separate browser tab somewhere. You'll need it later.
 
 Alternatively, you could use an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You could paste the HTML, CSS and JavaScript into one of these online editors. If the online editor you are using doesn't have a separate JavaScript panel, feel free to put it inline in a `<script>` element inside the HTML page.
@@ -79,7 +62,7 @@ Placing the event handler and incomplete function:
 2. Copy the code found underneath the heading "3. EVENT LISTENER AND PARTIAL FUNCTION DEFINITION" and paste it into the bottom of your `main.js` file. This:
 
    - Adds a click event listener to the `randomize` variable so that when the button it represents is clicked, the `result()` function is run.
-   - Adds a partially-completed `result()` function definition to your code. For the remainder of the assessment, you'll be filling in lines inside this function to complete it and make it work properly.
+   - Adds a partially-completed `result()` function definition to your code. For the remainder of the challenge, you'll be filling in lines inside this function to complete it and make it work properly.
 
 Completing the `result()` function:
 
@@ -108,4 +91,4 @@ Completing the `result()` function:
 - [`Math.round()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round) is a built-in JavaScript method that rounds the result of a calculation to the nearest whole number.
 - There are three instances of strings that need to be replaced. You may repeat the `replace()` method multiple times, or you can use `replaceAll()`. Remember, Strings are immutable!
 
-{{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting/Conditionals", "Learn_web_development/Core/Scripting")}}

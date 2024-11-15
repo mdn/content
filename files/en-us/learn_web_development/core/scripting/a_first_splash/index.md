@@ -4,7 +4,9 @@ slug: Learn_web_development/Core/Scripting/A_first_splash
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_is_JavaScript", "Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting")}}
 
 Now you've learned something about the theory of JavaScript and what you can do with it, we are going to give you an idea of what the process of creating a simple JavaScript program is like, by guiding you through a practical tutorial. Here you'll build up a simple "Guess the number" game, step by step.
 
@@ -12,17 +14,15 @@ Now you've learned something about the theory of JavaScript and what you can do 
   <tbody>
     <tr>
       <th scope="row">Prerequisites:</th>
-      <td>
-        A basic understanding of HTML and CSS, an
-        understanding of what JavaScript is.
-      </td>
+      <td>An understanding of <a href="/en-US/docs/Learn_web_development/Core/Structuring_content">HTML</a> and the <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">fundamentals of CSS</a>.</td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">Learning outcomes:</th>
       <td>
-        To have a first bit of experience at writing some JavaScript, and gain
-        at least a basic understanding of what writing a JavaScript program
-        involves.
+        <ul>
+          <li>Thinking like a programmer.</li>
+          <li>Experience of what writing JavaScript is like.</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -51,7 +51,7 @@ Have a go at playing it — familiarize yourself with the game before you move o
 
 Let's imagine your boss has given you the following brief for creating this game:
 
-> I want you to create a simple guess the number type game. It should choose a random number between 1 and 100, then challenge the player to guess the number in 10 turns. After each turn, the player should be told if they are right or wrong, and if they are wrong, whether the guess was too low or too high. It should also tell the player what numbers they previously guessed. The game will end once the player guesses correctly, or once they run out of turns. When the game ends, the player should be given an option to start playing again.
+> I want you to create a simple "guess the number" type game. It should choose a random number between 1 and 100, then challenge the player to guess the number in 10 turns. After each turn, the player should be told if they are right or wrong, and if they are wrong, whether the guess was too low or too high. It should also tell the player what numbers they previously guessed. The game will end once the player guesses correctly, or once they run out of turns. When the game ends, the player should be given an option to start playing again.
 
 Upon looking at this brief, the first thing we can do is to start breaking it down into simple actionable tasks, in as much of a programmer mindset as possible:
 
@@ -144,7 +144,7 @@ In our example:
 - Our final two variables store a guess count of 1 (used to keep track of how many guesses the player has had), and a reference to a reset button that doesn't exist yet (but will later).
 
 > [!NOTE]
-> You'll learn a lot more about variables and constants later on in the course, starting with the article [Storing the information you need — Variables](/en-US/docs/Learn/JavaScript/First_steps/Variables).
+> You'll learn a lot more about variables and constants later on in the course, starting with the article [Storing the information you need — Variables](/en-US/docs/Learn_web_development/Core/Scripting/Variables).
 
 ### Functions
 
@@ -169,7 +169,7 @@ checkGuess();
 After pressing <kbd>Return</kbd>/<kbd>Enter</kbd>, you should see an alert come up that says `I am a placeholder`; we have defined a function in our code that creates an alert whenever we call it.
 
 > [!NOTE]
-> You'll learn a lot more about functions later on in the article [Functions — reusable blocks of code](/en-US/docs/Learn/JavaScript/Building_blocks/Functions).
+> You'll learn a lot more about functions later on in the article [Functions — reusable blocks of code](/en-US/docs/Learn_web_development/Core/Scripting/Functions).
 
 ### Operators
 
@@ -424,7 +424,7 @@ for (const fruit of fruits) {
 
 What happened? The strings `'apples', 'bananas', 'cherries'` were printed out in your console.
 
-This is because of the loop. The line `const fruits = ['apples', 'bananas', 'cherries'];` creates an array. We will work through [a complete Arrays guide](/en-US/docs/Learn/JavaScript/First_steps/Arrays) later in this module, but for now: an array is a collection of items (in this case strings).
+This is because of the loop. The line `const fruits = ['apples', 'bananas', 'cherries'];` creates an array. We will work through [a complete Arrays guide](/en-US/docs/Learn_web_development/Core/Scripting/Arrays) later in this module, but for now: an array is a collection of items (in this case strings).
 
 A `for...of` loop gives you a way to get each item in the array and run some JavaScript on it. The line `for (const fruit of fruits)` says:
 
@@ -516,8 +516,10 @@ Let's play with some browser objects a bit.
 
    Every element on a page has a `style` property, which itself contains an object whose properties contain all the inline CSS styles applied to that element. This allows us to dynamically set new CSS styles on elements using JavaScript.
 
-## Finished for now…
+## Summary
 
-So that's it for building the example. You got to the end — well done! Try your final code out, or [play with our finished version here](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html). If you can't get the example to work, check it against the [source code](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game.html).
+So that's it for building the example. You got to the end — well done! Try your final code out, or [play with our finished version here](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html). If you can't get your version of the example to work, check it against the [source code](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game.html).
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
+The next lesson may also help — in it, we discuss what can go wrong when writing JavaScript code, referring back to the "Guess the number" game in the process.
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_is_JavaScript", "Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting")}}

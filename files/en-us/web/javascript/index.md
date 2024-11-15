@@ -33,7 +33,7 @@ Head over to our [Learning Area JavaScript topic](/en-US/docs/Learn/JavaScript) 
 
 - [JavaScript first steps](/en-US/docs/Learn/JavaScript/First_steps)
   - : Answers some fundamental questions such as "what is JavaScript?", "what does it look like?", and "what can it do?", along with discussing key JavaScript features such as variables, strings, numbers, and arrays.
-- [JavaScript building blocks](/en-US/docs/Learn/JavaScript/Building_blocks)
+- [JavaScript building blocks](/en-US/docs/Learn_web_development/Core/Scripting)
   - : Continues our coverage of JavaScript's key fundamental features, turning our attention to commonly-encountered types of code blocks such as conditional statements, loops, functions, and events.
 - [Introducing JavaScript objects](/en-US/docs/Learn/JavaScript/Objects)
   - : The object-oriented nature of JavaScript is important to understand if you want to go further with your knowledge of the language and write more efficient code, therefore we've provided this module to help you.
@@ -49,7 +49,7 @@ Head over to our [Learning Area JavaScript topic](/en-US/docs/Learn/JavaScript) 
 
 ### Intermediate
 
-- [Understanding client-side JavaScript frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
+- [Introduction to client-side frameworks](/en-US/docs/Learn_web_development/Core/Frameworks_libraries)
   - : JavaScript frameworks are an essential part of modern front-end web development, providing developers with proven tools for building scalable, interactive web applications. This module gives you some fundamental background knowledge about how client-side frameworks work and how they fit into your toolset, before moving on to a series of tutorials covering some of today's most popular ones.
 - [JavaScript language overview](/en-US/docs/Web/JavaScript/Language_overview)
   - : An overview of the basic syntax and semantics of JavaScript for those coming from other programming languages to get up to speed.

@@ -102,7 +102,7 @@ We talked about some of the problems that prompted WAI-ARIA to be created earlie
 - Signposts/Landmarks
   - : ARIA's [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles) attribute values can act as landmarks that either replicate the semantics of HTML elements (e.g., {{htmlelement("nav")}}), or go beyond HTML semantics to provide signposts to different functional areas, for example, `search`, `tablist`, `tab`, `listbox`, etc.
 - Dynamic content updates
-  - : Screen readers tend to have difficulty with reporting constantly changing content; with ARIA we can use `aria-live` to inform screen reader users when an area of content is updated dynamically: for example, by JavaScript in the page [fetching new content from the server and updating the DOM](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data).
+  - : Screen readers tend to have difficulty with reporting constantly changing content; with ARIA we can use `aria-live` to inform screen reader users when an area of content is updated dynamically: for example, by JavaScript in the page [fetching new content from the server and updating the DOM](/en-US/docs/Learn_web_development/Core/Scripting/Network_requests).
 - Enhancing keyboard accessibility
   - : There are built-in HTML elements that have native keyboard accessibility; when other elements are used along with JavaScript to simulate similar interactions, keyboard accessibility and screen reader reporting suffers as a result. Where this is unavoidable, WAI-ARIA provides a means to allow other elements to receive focus (using `tabindex`).
 - Accessibility of non-semantic controls

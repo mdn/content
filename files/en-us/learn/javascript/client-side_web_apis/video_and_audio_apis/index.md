@@ -15,7 +15,7 @@ HTML comes with elements for embedding rich media in documents — {{htmlelement
       <td>
         JavaScript basics (see
         <a href="/en-US/docs/Learn/JavaScript/First_steps">first steps</a>,
-        <a href="/en-US/docs/Learn/JavaScript/Building_blocks"
+        <a href="/en-US/docs/Learn_web_development/Core/Scripting"
           >building blocks</a
         >,
         <a href="/en-US/docs/Learn/JavaScript/Objects">JavaScript objects</a>),

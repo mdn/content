@@ -4,7 +4,9 @@ slug: Learn_web_development/Core/Scripting/Variables
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting")}}
 
 After reading the last couple of articles you should now know what JavaScript is, what it can do for you, how you use it alongside other web technologies, and what its main features look like from a high level. In this article, we will get down to the real basics, looking at how to work with the most basic building blocks of JavaScript — Variables.
 
@@ -12,14 +14,20 @@ After reading the last couple of articles you should now know what JavaScript is
   <tbody>
     <tr>
       <th scope="row">Prerequisites:</th>
-      <td>
-        A basic understanding of HTML and CSS, an
-        understanding of what JavaScript is.
-      </td>
+      <td>An understanding of <a href="/en-US/docs/Learn_web_development/Core/Structuring_content">HTML</a> and the <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">fundamentals of CSS</a>.</td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
-      <td>To gain familiarity with the basics of JavaScript variables.</td>
+      <th scope="row">Learning outcomes:</th>
+      <td>
+        <ul>
+          <li>What variables are and why they are so important.</li>
+          <li>Declaring variables with <code>let</code>, initializing them with values, and reassigning with new values.</li>
+          <li>Creating constants with <code>const</code>.</li>
+          <li>The difference between variables and constants, and when you would use each one.</li>
+          <li>Variable naming best practices.</li>
+          <li>The different types of value that can be stored in variables — strings, numbers, booleans, arrays, and objects.</li>
+        </ul>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -322,8 +330,6 @@ myNumberArray[2]; // should return 40
 
 The square brackets specify an index value corresponding to the position of the value you want returned. You might have noticed that arrays in JavaScript are zero-indexed: the first element is at index 0.
 
-To learn more, see our article on [Arrays](/en-US/docs/Learn/JavaScript/First_steps/Arrays).
-
 ### Objects
 
 In programming, an object is a structure of code that models a real-life object. You can have a simple object that represents a box and contains information about its width, length, and height, or you could have an object that represents a person, and contains data about their name, height, weight, what language they speak, how to say hello to them, and more.
@@ -339,8 +345,6 @@ To retrieve the information stored in the object, you can use the following synt
 ```js
 dog.name;
 ```
-
-For more on this topic, see the [Introducing JavaScript objects](/en-US/docs/Learn/JavaScript/Objects) module.
 
 ## Dynamic typing
 
@@ -422,10 +426,10 @@ This means that if you can initialize a variable when you declare it, and don't 
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: variables](/en-US/docs/Learn/JavaScript/First_steps/Test_your_skills:_variables).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: variables](/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_variables).
 
 ## Summary
 
 By now you should know a reasonable amount about JavaScript variables and how to create them. In the next article, we'll focus on numbers in more detail, looking at how to do basic math in JavaScript.
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Maths", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting")}}
