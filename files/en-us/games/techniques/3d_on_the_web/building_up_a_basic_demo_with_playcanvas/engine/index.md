@@ -109,7 +109,7 @@ Then it adds a `camera` component to it with the light gray `clearColor` — the
 
 The distance values (e.g., for the camera z position) are unitless, and can basically be anything you deem suitable for your scene — millimeters, meters, feet, or miles — it's up to you.
 
-Try saving the file and loading it in your browser. You should now see a gray window. Congratulations!
+Try saving the file and loading it in your browser. You should now see a gray window.
 
 ## Geometry
 

@@ -160,7 +160,7 @@ const basicMaterial = new THREE.MeshBasicMaterial({ color: 0x0095dd });
 
 ## Mesh
 
-To apply the material to a geometry, a mesh is used. This takes on a shape, and adds the specified material to every face:
+To apply the material to a geometry, a mesh is used. This takes a shape, and adds the specified material to every face:
 
 ```js
 const cube = new THREE.Mesh(boxGeometry, basicMaterial);
