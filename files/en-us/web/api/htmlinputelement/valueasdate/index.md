@@ -12,7 +12,7 @@ The **`valueAsDate`** property of the {{DOMxRef("HTMLInputElement")}} interface 
 
 This property can also be set directly, for example to set a default date based on some condition. If the provided value is neither `null` nor a `Date` object, a {{jsxref("TypeError")}} is thrown. If the provided value is `null` or an [invalid date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date), the input value is set to the empty string.
 
-This property always returns `null` when accessed on an input that isn't date- or time-based. When setting this property on such an input, an `InvalidStateError` {{domxref("DOMException")}} is thrown.
+This property always returns `null` when accessed on an input that isn't [date](/en-US/docs/Web/HTML/Element/input/date)- or [time](/en-US/docs/Web/HTML/Element/input/time)-based. When setting this property on such an input, an `InvalidStateError` {{domxref("DOMException")}} is thrown. Firefox additionally supports this property on [datetime-local](/en-US/docs/Web/HTML/Element/input/datetime-local), but Google Chrome does not.
 
 ## Value
 
