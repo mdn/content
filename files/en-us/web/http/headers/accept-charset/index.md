@@ -13,6 +13,8 @@ The HTTP **`Accept-Charset`** {{Glossary("request header")}} was a header that a
 
 UTF-8 is well-supported and the overwhelmingly preferred choice for character encoding. To [guarantee better privacy through less configuration-based entropy](https://www.eff.org/deeplinks/2010/01/primer-information-theory-and-privacy), all browsers omit the `Accept-Charset` header.
 
+`Accept-Charset` was officially deprecated in June 2022 by RFC 9110 section 12.5.2.
+
 Today, `Accept-Charset` is most notable for being one of several [forbidden header names](/en-US/docs/Glossary/Forbidden_header_name).
 
 <table class="properties">
@@ -32,5 +34,6 @@ Today, `Accept-Charset` is most notable for being one of several [forbidden head
 
 - HTTP [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation)
 - [Accept-Charset is no more](https://hsivonen.fi/accept-charset/)
+- [RFC 9110 section 12.5.2 Accept-Charset](https://datatracker.ietf.org/doc/html/rfc9110#section-12.5.2)
 - Header with the result of the content negotiation: {{HTTPHeader("Content-Type")}}
 - Other similar headers: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Accept")}}
