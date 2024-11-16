@@ -8,7 +8,7 @@ browser-compat: api.DOMRect.height
 
 {{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
-The **`height`** property of the **`DOMRect`** interface represents the height of the `DOMRect`.
+The **`height`** property of the {{domxref("DOMRect")}} interface represents the height of the rectangle. The value can be negative.
 
 ## Value
 
