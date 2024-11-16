@@ -35,7 +35,9 @@ If you call `transferToImageBitmap()` and don't intend to pass it to {{domxref("
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Throws if the canvas has transferred to another context scope, for example, to worker; or hasn't set to a context mode via calling {{domxref("OffscreenCanvas.getContext()")}}.
+  - : Throws if:
+      - the canvas has transferred to another context scope, such as a worker
+      - the canvas context mode has not been set by calling {{domxref("OffscreenCanvas.getContext()")}}.
 
 ## Examples
 
