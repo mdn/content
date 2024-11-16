@@ -10,7 +10,7 @@ browser-compat: api.DOMRect.y
 
 The **`y`** property of the {{domxref("DOMRect")}} interface represents the y-coordinate of the rectangle, which is the vertical distance between the viewport's top edge and the rectangle's origin.
 
-When the rectangle's height is non-negative, the rectangle’s vertical origin is the viewport's top edge. If the height has a negative height, the rectangle's vertical origin is the viewport's bottom edge.
+When the rectangle's height is non-negative, the rectangle's vertical origin is the viewport's top edge. If the height has a negative height, the rectangle's vertical origin is the viewport's bottom edge.
 
 ## Value
 
