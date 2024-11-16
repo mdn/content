@@ -152,7 +152,7 @@ document.querySelector("#generate").addEventListener("click", () => {
   const quota = document.querySelector("#quota").value;
   worker.postMessage({
     command: "generate",
-    quota,
+    quota: quota
   });
 });
 
