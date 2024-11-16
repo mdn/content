@@ -8,7 +8,7 @@ browser-compat: api.DOMRect.width
 
 {{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
-The **`width`** property of the **`DOMRect`** interface represents the width of the `DOMRect`.
+The **`width`** property of the {{domxref("DOMRect")}} interface represents the width of the rectangle. The value can be negative.
 
 ## Value
 
