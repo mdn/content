@@ -24,7 +24,7 @@ new DOMRect(x, y, width, height)
   - : The `y` coordinate of the `DOMRect`'s origin.
 - {{domxref("DOMRect.width", "width")}}
   - : The width of the `DOMRect`.
-- {{domxref("DOMRect.height")}}
+- {{domxref("DOMRect.height", "height")}}
   - : The height of the `DOMRect`.
 
 ### Return value
