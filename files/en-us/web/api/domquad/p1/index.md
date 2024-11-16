@@ -8,7 +8,7 @@ browser-compat: api.DOMQuad.p1
 
 {{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
-The **`DOMQuad`** interface's **`p1`** property holds the {{domxref("DOMPoint")}} object that represents one of the four corners of the `DOMQuad`. This point includes the {{domxref("DOMPoint.x")}} (horizontal), {{domxref("DOMPoint.y")}} (vertical), {{domxref("DOMPoint.z")}} (depth), and {{domxref("DOMPoint.w")}} (perspective) coordinates for a point in space.
+The **`DOMQuad`** interface's **`p1`** property holds the {{domxref("DOMPoint")}} object that represents one of the four corners of the `DOMQuad`. When created from {{domxref("DOMQuad.fromRect()")}}, it is the point (x, y).
 
 ## Value
 
