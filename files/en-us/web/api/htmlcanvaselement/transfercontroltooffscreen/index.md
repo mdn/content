@@ -27,7 +27,7 @@ An {{domxref("OffscreenCanvas")}} object.
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Throws if the canvas has been set to a context mode via calling {{domxref("HTMLCanvasElement.getContext()")}} or has transferred its control to offscreen via calling {{domxref("HTMLCanvasElement.transferControlToOffscreen()")}}.
+  - : Throws if the canvas has been set to a context mode by calling {{domxref("HTMLCanvasElement.getContext()")}} or has transferred its control to offscreen by calling {{domxref("HTMLCanvasElement.transferControlToOffscreen()")}}.
 
 ## Examples
 
