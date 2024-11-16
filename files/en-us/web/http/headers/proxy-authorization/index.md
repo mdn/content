@@ -17,7 +17,7 @@ The HTTP **`Proxy-Authorization`** {{Glossary("request header")}} contains the c
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>No</td>
+      <td>Yes</td>
     </tr>
   </tbody>
 </table>
