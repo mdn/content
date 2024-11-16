@@ -8,9 +8,7 @@ browser-compat: api.DOMRectReadOnly.toJSON
 
 {{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
-The {{domxref("DOMRectReadOnly")}} method
-`toJSON()` returns a
-{{Glossary("JSON")}} representation of the `DOMRectReadOnly` object.
+The {{domxref("DOMRectReadOnly")}} method `toJSON()` returns a {{Glossary("JSON")}} representation of the `DOMRectReadOnly` object.
 
 ## Syntax
 
@@ -24,8 +22,7 @@ None.
 
 ### Return value
 
-A new object whose properties are set to the values in the
-`DOMRectReadOnly` on which the method was called.
+A new object whose properties are set to the values in the `DOMRectReadOnly` on which the method was called.
 
 ## Examples
 
