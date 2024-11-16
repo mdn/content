@@ -18,7 +18,7 @@ new DOMRect(x, y, width, height)
 
 ### Parameters
 
-- {{domxref("DOMRect.x")}}
+- {{domxref("DOMRect.x", "x")}}
   - : The `x` coordinate of the `DOMRect`'s origin.
 - {{domxref("DOMRect.y")}}
   - : The `y` coordinate of the `DOMRect`'s origin.
