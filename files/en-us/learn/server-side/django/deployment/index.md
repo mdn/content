@@ -634,7 +634,7 @@ Save these settings and commit them to your GitHub repo.
 You will then need to update the version of your project on PythonAnywhere.
 Assuming you're using your Bash prompt in the folder `<user_name>.pythonanywhere.com`, and you have pushed the changes to the main branch, then you could import them in the Bash prompt using the command:
 
-```Bash
+```bash
 git pull origin main
 ```
 
@@ -830,7 +830,7 @@ You can click the site URL (highlighted above) to open the site in a browser (it
 When the site is opened, at this point you'll see an error debug screen as shown below.
 This is a Django security error that is raised because our source code is not running on an "allowed host".
 
-![A detailed error page with a full traceback of an invalid HTTP_HOST header](site_error_dissallowed_host.png)
+![A detailed error page with a full traceback of an invalid HTTP_HOST header](site_error_disallowed_host.png)
 
 > [!NOTE]
 > This kind of debug information is very useful when you're getting set up, but is a security risk in a deployed site.

@@ -46,12 +46,12 @@ Firefox 10 shipped on January 31, 2012. This article provides information about 
 
 #### Full Screen API
 
-- Support for {{ domxref("Document/fullscreenEnabled") }} has been added.
+- Support for {{ domxref("Document/fullscreenEnabled", "document.fullscreenEnabled") }} has been added.
 - The new {{ cssxref(":-moz-full-screen-ancestor") }} property has been added. This lets you match against elements that are ancestors of an element in full screen mode.
 
 #### Battery API
 
-- Experimental support for {{ domxref("window.navigator.mozBattery") }} has been added (can be enabled setting the preference `dom.battery.enabled` to `true` and will be enabled by default starting with Firefox 11).
+- Experimental support for `navigator.mozBattery` has been added (can be enabled setting the preference `dom.battery.enabled` to `true` and will be enabled by default starting with Firefox 11).
 
 #### Canvas
 

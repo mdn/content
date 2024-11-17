@@ -103,9 +103,9 @@ Symbol.iterator in trees; // returns true
 "PI" in Math; // returns true
 
 // Custom objects
-const mycar = { make: "Honda", model: "Accord", year: 1998 };
-"make" in mycar; // returns true
-"model" in mycar; // returns true
+const myCar = { make: "Honda", model: "Accord", year: 1998 };
+"make" in myCar; // returns true
+"model" in myCar; // returns true
 ```
 
 You must specify an object on the right side of the `in` operator. For example, you can specify a string created with the `String` constructor, but you cannot specify a string literal.
@@ -124,9 +124,9 @@ const color2 = "coral";
 If you delete a property with the [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) operator, the `in` operator returns `false` for that property.
 
 ```js
-const mycar = { make: "Honda", model: "Accord", year: 1998 };
-delete mycar.make;
-"make" in mycar; // returns false
+const myCar = { make: "Honda", model: "Accord", year: 1998 };
+delete myCar.make;
+"make" in myCar; // returns false
 
 const trees = ["redwood", "bay", "cedar", "oak", "maple"];
 delete trees[3];
@@ -136,9 +136,9 @@ delete trees[3];
 If you set a property to {{jsxref("undefined")}} but do not delete it, the `in` operator returns true for that property.
 
 ```js
-const mycar = { make: "Honda", model: "Accord", year: 1998 };
-mycar.make = undefined;
-"make" in mycar; // returns true
+const myCar = { make: "Honda", model: "Accord", year: 1998 };
+myCar.make = undefined;
+"make" in myCar; // returns true
 ```
 
 ```js

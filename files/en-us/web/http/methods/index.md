@@ -10,7 +10,7 @@ browser-compat: http.methods
 
 HTTP defines a set of **request methods** to indicate the purpose of the request and what is expected if the request is successful.
 Although they can also be nouns, these request methods are sometimes referred to as _HTTP verbs_.
-Each request method has it's own semantics, but some characteristics are shared across multiple methods, specifically request methods can be {{glossary("Safe/HTTP", "safe")}}, {{glossary("idempotent")}}, or {{glossary("cacheable")}}.
+Each request method has its own semantics, but some characteristics are shared across multiple methods, specifically request methods can be {{glossary("Safe/HTTP", "safe")}}, {{glossary("idempotent")}}, or {{glossary("cacheable")}}.
 
 - {{HTTPMethod("GET")}}
   - : The `GET` method requests a representation of the specified resource.

@@ -56,7 +56,7 @@ The following code shows examples of the `!` (logical NOT) operator.
 
 It is possible to use a couple of NOT operators in series to explicitly force the
 conversion of any value to the corresponding [boolean primitive](/en-US/docs/Web/JavaScript/Data_structures#boolean_type).
-The conversion is based on the "truthyness" or "falsyness" of the value (see
+The conversion is based on the "truthiness" or "falsiness" of the value (see
 {{Glossary("truthy")}} and {{Glossary("falsy")}}).
 
 The same conversion can be done through the {{jsxref("Boolean/Boolean", "Boolean()")}} function.

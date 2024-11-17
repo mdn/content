@@ -276,27 +276,7 @@ The `KeyboardEvent` interface specification went through numerous draft versions
 
 ### Compatibility notes
 
-- As of Firefox 65, the `keypress` event is no longer fired for [non-printable keys](/en-US/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_function_keys) ([Firefox bug 968056](https://bugzil.la/968056)), except for the
-
-  <kbd>Enter</kbd>
-
-  key, and the
-
-  <kbd>Shift</kbd>
-
-  \+
-
-  <kbd>Enter</kbd>
-
-  and
-
-  <kbd>Ctrl</kbd>
-
-  \+
-
-  <kbd>Enter</kbd>
-
-  key combinations (these were kept for cross-browser compatibility purposes).
+- As of Firefox 65, the `keypress` event is no longer fired for [non-printable keys](/en-US/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_function_keys) ([Firefox bug 968056](https://bugzil.la/968056)), except for the <kbd>Enter</kbd> key, and the <kbd>Shift</kbd> + <kbd>Enter</kbd> and <kbd>Ctrl</kbd> + <kbd>Enter</kbd> key combinations (these were kept for cross-browser compatibility purposes).
 
 ## See also
 

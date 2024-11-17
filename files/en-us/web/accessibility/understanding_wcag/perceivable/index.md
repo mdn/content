@@ -288,7 +288,7 @@ This guideline refers to the ability of content to be consumed by users in multi
             button that can be activated by keyboard or other means.
           </li>
         </ul>
-        <div class="note">
+        <div class="note notecard">
           <p>
             <strong>Note:</strong> Conveying instructions solely by color is
             related, but covered in a different guideline — 1.4.1.

@@ -1261,7 +1261,7 @@ If neither of those can be played, the text "This browser does not support the H
       <td style="vertical-align: top">Safari</td>
     </tr>
     <tr>
-      <th scope="row" style="vertical-align: top">WAV (Waveform Audiofile)</th>
+      <th scope="row" style="vertical-align: top">WAV (Waveform Audio File)</th>
       <td style="vertical-align: top"><code>audio/wav</code></td>
       <td style="vertical-align: top"><code>.wav</code></td>
       <td style="vertical-align: top; border-right: 2px solid #d4dde4">
