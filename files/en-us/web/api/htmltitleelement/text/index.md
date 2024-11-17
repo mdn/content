@@ -32,7 +32,7 @@ Consider the example below:
 
 ```js
 const title = document.querySelector("title");
-console.log(title.text); //yield:  Hello world! <span class="highlight">Isn't this wonderful</span> really?"
+console.log(title.text); // yield:  "Hello world! <span class="highlight">Isn't this wonderful</span> really?"
 ```
 
 As you can see, The 'span' tag and its content were treated as plain text and displayed exactly as they appear in the <title> element, rather than being processed as HTML.
