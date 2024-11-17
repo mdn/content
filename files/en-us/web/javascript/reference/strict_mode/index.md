@@ -110,6 +110,8 @@ Strict mode changes some previously-accepted mistakes into errors. JavaScript wa
 
 Strict mode makes it impossible to accidentally create global variables. In sloppy mode, mistyping a variable in an assignment creates a new property on the global object and continues to "work". Assignments which would accidentally create global variables throw an error in strict mode:
 
+<!-- cSpell:ignore mistypeVarible -->
+
 ```js
 "use strict";
 let mistypeVariable;
@@ -263,7 +265,7 @@ with (obj) {
 }
 ```
 
-The simple alternative of assigning the object to a short name variable, then accessing the corresponding property on that variable, stands ready to replace `with`.
+The alternative of assigning the object to a short name variable, then accessing the corresponding property on that variable, stands ready to replace `with`.
 
 #### Non-leaking eval
 

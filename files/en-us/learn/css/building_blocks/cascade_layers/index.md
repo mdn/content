@@ -72,7 +72,19 @@ For each property, the declaration that "wins" is the one from the origin with p
 
 In the example below, there are two links. The first has no author styles applied, so only user-agent styles are applied (and your personal user styles, if any). The second has [`text-decoration`](/en-US/docs/Web/CSS/text-decoration) and [`color`](/en-US/docs/Web/CSS/color) set by author styles even though the selector in the author stylesheet has a specificity of [`0-0-0`](/en-US/docs/Web/CSS/Specificity#selector_weight_categories). The reason why author styles "win" is because when there are conflicting styles from different origins, the rules from the origin with precedence are applied, irrespective of the specificity in the origin that doesn't have precedence.
 
-{{EmbedGHLiveSample("css-examples/learn/layers/basic-cascade.html", '100%', 500)}}
+```html live-sample___basic-cascade
+<p><a href="https://example.org">User agent styles</a></p>
+<p><a class="author" href="https://example.org">Author styles</a></p>
+```
+
+```css live-sample___basic-cascade
+:where(a.author) {
+  text-decoration: overline;
+  color: red;
+}
+```
+
+{{EmbedLiveSample("basic-cascade")}}
 
 The "competing" selector in the user-agent stylesheet at the time of this writing is `a:any-link`, which has a specificity weight of `0-1-1`. While this is greater than the `0-0-0` selector in the author stylesheet, even if the selector in your current user agent is different, it doesn't matter: the specificity weights from author and user-agent origins are never compared. Learn more about [how specificity weight is calculated](/en-US/docs/Web/CSS/Specificity#how_is_specificity_calculated).
 
@@ -220,9 +232,32 @@ All styles declared outside of a layer are joined together in an implicit layer.
 
 In the line `@layer theme, layout, utilities;`, in which a series of layers were declared, only the `theme` and `utilities` layers were created; `layout` was already created in the first line. Note that this declaration does not change the order of already created layers. There is currently no way to re-order layers once declared.
 
-In the following interactive example, we assign styles to two layers, creating them and naming them in the process. Because they already exist, being created when first used, declaring them on the last line does nothing.
+In the following example, we assign styles to two layers, creating them and naming them in the process. Because they already exist, being created when first used, declaring them on the last line does nothing.
 
-{{EmbedGHLiveSample("css-examples/learn/layers/layer-order.html", '100%', 500)}}
+```html live-sample___layer-order
+<h1>Is this heading underlined?</h1>
+```
+
+```css live-sample___layer-order
+@layer page {
+  h1 {
+    text-decoration: overline;
+    color: red;
+  }
+}
+
+@layer site {
+  h1 {
+    text-decoration: underline;
+    color: green;
+  }
+}
+
+/* this does nothing */
+@layer site, page;
+```
+
+{{EmbedLiveSample("layer-order")}}
 
 Try moving the last line, `@layer site, page;`, to make it the first line. What happens?
 
@@ -230,7 +265,31 @@ Try moving the last line, `@layer site, page;`, to make it the first line. What 
 
 If you define a layer using [media](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) or [feature](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries) queries, and the media is not a match or the feature is not supported, the layer is not created. The example below shows how changing the size of your device or browser may change the layer order. In this example, we create the `site` layer only in wider browsers. We then assign styles to the `page` and `site` layers, in that order.
 
-{{EmbedGHLiveSample("css-examples/learn/layers/media-order.html", '100%', 500)}}
+```html live-sample___media-order
+<h1>Is this heading underlined?</h1>
+```
+
+```css live-sample___media-order
+@media (min-width: 50em) {
+  @layer site;
+}
+
+@layer page {
+  h1 {
+    text-decoration: overline;
+    color: red;
+  }
+}
+
+@layer site {
+  h1 {
+    text-decoration: underline;
+    color: green;
+  }
+}
+```
+
+{{EmbedLiveSample("media-order")}}
 
 In wide screens, the `site` layer is declared in the first line, meaning `site` has less precedence than `page`. Otherwise, `site` has precedence over `page` because it is declared later on narrow screens. If that doesn't work, try changing the `50em` in the media query to `10em` or `100em`.
 
@@ -258,9 +317,9 @@ You can import more than one CSS file into a single layer. The following declara
 You can import styles and create layers based on specific conditions using [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) and [feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries). The following imports a style sheet into an `international` layer only if the browser supports `display: ruby`, and the file being imported is dependent on the width of the screen.
 
 ```css
-@import url("ruby-narrow.css") layer(international) supports(display: ruby) and
+@import url("ruby-narrow.css") layer(international) supports(display: ruby)
   (width < 32rem);
-@import url("ruby-wide.css") layer(international) supports(display: ruby) and
+@import url("ruby-wide.css") layer(international) supports(display: ruby)
   (width >= 32rem);
 ```
 
@@ -349,7 +408,51 @@ Inline important styles again have higher precedence than important styles decla
 
 Transitioning styles have the highest precedence. When a normal property value is being transitioned, it takes precedence over all other property value declarations, even inline important styles; but only while transitioning.
 
-{{EmbedGHLiveSample("css-examples/learn/layers/layer-precedence.html", '100%', 500)}}
+```html live-sample___layer-precedence
+<div>
+  <h1 style="color: yellow; background-color: maroon !important;">
+    Inline styles
+  </h1>
+</div>
+```
+
+```css live-sample___layer-precedence
+@layer A, B;
+
+h1 {
+  font-family: sans-serif;
+  margin: 1em;
+  padding: 0.2em;
+  color: orange;
+  background-color: green;
+  text-decoration: overline pink !important;
+  box-shadow: 5px 5px lightgreen !important;
+}
+
+@layer A {
+  h1 {
+    color: grey;
+    background-color: black !important;
+    text-decoration: line-through grey;
+    box-shadow: -5px -5px lightblue !important;
+    font-style: normal;
+    font-weight: normal !important;
+  }
+}
+
+@layer B {
+  h1 {
+    color: aqua;
+    background: yellow !important;
+    text-decoration: underline aqua;
+    box-shadow: -5px 5px magenta !important;
+    font-style: italic;
+    font-weight: bold !important;
+  }
+}
+```
+
+{{EmbedLiveSample("layer-precedence")}}
 
 In this example, two layers (`A` and `B`) are initially defined using an `@layer` statement at-rule without any styles. The layer styles are defined in two `@layer` block at-rules appearing after the `h1` CSS rule declared outside of any layer.
 

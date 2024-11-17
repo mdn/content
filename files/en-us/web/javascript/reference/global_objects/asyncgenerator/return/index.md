@@ -40,7 +40,7 @@ The `return()` method, when called, can be seen as if a `return value;` statemen
 
 ### Using return()
 
-The following example shows a simple async generator and the `return` method.
+The following example shows an async generator and the `return` method.
 
 ```js
 // An async task. Pretend it's doing something more useful

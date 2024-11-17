@@ -37,8 +37,8 @@ _This interface has no methods of its own, but inherits the methods of its paren
 
 ```js
 function locationHashChanged() {
-  if (location.hash === "#somecoolfeature") {
-    somecoolfeature();
+  if (location.hash === "#some-cool-feature") {
+    someCoolFeature();
   }
 }
 

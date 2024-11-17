@@ -20,7 +20,53 @@ In many cases you will only want to make the background color itself partly tran
 
 Try changing the opacity and alpha channel values in the below examples to see more or less of the background image behind the box.
 
-{{EmbedGHLiveSample("css-examples/howto/opacity.html", '100%', 770)}}
+```html live-sample___opacity
+<div class="wrapper">
+  <div class="box box1">This box uses opacity</div>
+  <div class="box box2">
+    This box has a background color with an alpha channel
+  </div>
+</div>
+```
+
+```css hidden live-sample___opacity
+body {
+  font-family: sans-serif;
+}
+
+.wrapper {
+  height: 200px;
+  display: flex;
+  gap: 20px;
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/balloon.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+}
+
+.box {
+  flex: 1;
+  border: 5px solid #000;
+  border-radius: 0.5em;
+  font-size: 140%;
+  padding: 20px;
+}
+```
+
+```css live-sample___opacity
+.box1 {
+  background-color: #000;
+  color: #fff;
+  opacity: 0.5;
+}
+
+.box2 {
+  background-color: rgb(0 0 0 / 0.5);
+  color: #fff;
+}
+```
+
+{{EmbedLiveSample("opacity", "", "280px")}}
 
 > [!NOTE]
 > Take care that your text retains enough contrast with the background in cases where you are overlaying an image; otherwise you may make the content hard to read.

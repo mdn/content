@@ -173,7 +173,7 @@ For example, the map below defines integrity metadata for the `square.js` module
 
 The following is a "formal" definition of the import map JSON representation.
 
-The import map must be a valid JSON object that can define at most two optional keys: `imports` and `scopes`. Each key's value must be an object, which may be empty.
+The import map must be a valid JSON object that can define any of the optional keys `imports`, `scopes` and `integrity`. Each key's value must be an object, which may be empty.
 
 - `imports` {{optional_inline}}
 

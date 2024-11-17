@@ -147,5 +147,5 @@ For an exhaustive list of options, see the [`Intl.NumberFormat()` constructor](/
 
 ## See also
 
-- [Polyfill of `Intl.NumberFormat` in FormatJS](https://formatjs.io/docs/polyfills/intl-numberformat/)
+- [Polyfill of `Intl.NumberFormat` in FormatJS](https://formatjs.github.io/docs/polyfills/intl-numberformat/)
 - {{jsxref("Intl")}}

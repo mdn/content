@@ -36,9 +36,9 @@ const computePipeline = device.createComputePipeline({
   },
 });
 
-computePipeline.label = "mycomputepipeline";
+computePipeline.label = "my_compute_pipeline";
 
-console.log(computePipeline.label); // "mycomputepipeline"
+console.log(computePipeline.label); // "my_compute_pipeline"
 ```
 
 Setting a label via a {{domxref("GPUDevice.createComputePipeline()")}} call, and then getting it via `GPUComputePipeline.label`:
@@ -54,10 +54,10 @@ const computePipeline = device.createComputePipeline({
     module: shaderModule,
     entryPoint: "main",
   },
-  label: "mycomputepipeline",
+  label: "my_compute_pipeline",
 });
 
-console.log(computePipeline.label); // "mycomputepipeline"
+console.log(computePipeline.label); // "my_compute_pipeline"
 ```
 
 ## Specifications

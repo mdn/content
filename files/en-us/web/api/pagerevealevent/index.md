@@ -2,12 +2,10 @@
 title: PageRevealEvent
 slug: Web/API/PageRevealEvent
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.PageRevealEvent
 ---
 
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+{{APIRef("HTML DOM")}}
 
 The **`PageRevealEvent`** event object is made available inside handler functions for the {{domxref("Window.pagereveal_event", "pagereveal")}} event.
 
@@ -28,12 +26,12 @@ window.onpagehide = () => requestAnimationFrame(() => reveal());
 
 ## Constructor
 
-- {{domxref("PageRevealEvent.PageRevealEvent", "PageRevealEvent()")}} {{experimental_inline}}
+- {{domxref("PageRevealEvent.PageRevealEvent", "PageRevealEvent()")}}
   - : Creates a new `PageRevealEvent` object instance.
 
 ## Instance properties
 
-- {{domxref("PageRevealEvent.viewTransition", "viewTransition")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("PageRevealEvent.viewTransition", "viewTransition")}} {{ReadOnlyInline}}
   - : Contains a {{domxref("ViewTransition")}} object representing the active view transition for the cross-document navigation.
 
 ## Examples
@@ -90,7 +88,7 @@ window.addEventListener("pagereveal", async (e) => {
 ```
 
 > [!NOTE]
-> See [List of Chrome DevRel team members](https://view-transitions.netlify.app/profiles/mpa/) for the live demo this code is taken from.
+> See [List of Chrome DevRel team members](https://view-transitions.chrome.dev/profiles/mpa/) for the live demo this code is taken from.
 
 ## Specifications
 

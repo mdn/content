@@ -314,7 +314,7 @@ const ttfb = time.responseStart - time.navigationStart;
 [Page load time](/en-US/docs/Glossary/Page_load_time) is the time between `navigationStart` and the start of when the load event is sent for the current document. They are only available in the performanceTiming API.
 
 ```js
-let pageloadtime = time.loadEventStart - time.navigationStart;
+let pageloadTime = time.loadEventStart - time.navigationStart;
 ```
 
 ### DNS lookup time
