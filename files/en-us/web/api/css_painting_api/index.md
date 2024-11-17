@@ -30,7 +30,7 @@ The API defines a {{domxref('worklet')}} that can be used to programmatically ge
 - {{domxref('PaintWorkletGlobalScope')}}
   - : The global execution context of the paint worklet.
 - {{domxref('PaintRenderingContext2D')}}
-  - : Implements a subset of the {{domxref('CanvasRenderingContext2D')}} API. It has an output bitmap that is the size of the object it is rendering to.
+  - : The rendering context for drawing to the bitmap for the [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API).
 - {{domxref('PaintSize')}}
   - : Returns the read-only values of the output bitmap's width and height.
 
