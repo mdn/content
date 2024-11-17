@@ -10,7 +10,7 @@ browser-compat: api.console.clear_static
 
 The **`console.clear()`** static method clears the console if possible.
 
-A graphical console, like those in web browsers, will remove all previous messages; a console displaying on a terminal, like the one in Node.js, will attempt to clear it using an escape code or system API, otherwise the method will have no effect (and no error).
+A graphical console, like those in web browsers, will remove all previous messages; a console displaying on a terminal, like the one in Node.js, will attempt to clear it using an escape code or system API; otherwise the method will have no effect (and no error).
 
 ## Syntax
 
