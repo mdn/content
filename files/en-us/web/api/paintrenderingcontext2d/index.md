@@ -9,7 +9,7 @@ browser-compat: api.PaintRenderingContext2D
 
 {{APIRef("CSS Painting API")}}{{SeeCompatTable}}
 
-The **`PaintRenderingContext2D`** interface of the [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API) is a rendering context for drawing to the bitmap for the [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API). It implements a subset of the {{domxref("CanvasRenderingContext2D")}} API.
+The **`PaintRenderingContext2D`** interface of the [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API) is the rendering context for drawing to the bitmap for the [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API). It implements a subset of the {{domxref("CanvasRenderingContext2D")}} API.
 
 The interface is only available in {{domxref("CanvasRenderingContext2D", "paint worklet global scope", "", 1)}}.
 
