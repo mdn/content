@@ -324,50 +324,60 @@ The special value `<all_urls>` matches all URLs under any of the supported schem
   </tbody>
 </table>
 
-### Invalid match patterns
+### Invalid or unmatched patterns
 
 <table class="fullwidth-table standard-table">
   <thead>
     <tr>
-      <th scope="col">Invalid pattern</th>
+      <th scope="col">Pattern</th>
+      <th scope="col">Issue</th>
       <th scope="col">Reason</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code>resource://path/</code></td>
+      <td>Invalid</td>
       <td>Unsupported scheme.</td>
     </tr>
     <tr>
       <td><code>https://mozilla.org</code></td>
+      <td>Invalid</td>
       <td>No path.</td>
     </tr>
     <tr>
       <td><code>https://mozilla.org/#section1</code></td>
-      <td>Contains an unsupported match character.</td>
+      <td>Unmatched</td>
+      <td>Contains a reference fragment: the URL that the pattern is matched against has any reference fragment removed before matching.</td>
     </tr>
     <tr>
       <td><code>https://mozilla.*.org/</code></td>
-      <td>"*" in host must be at the start.</td>
+      <td>Unmatched</td>
+      <td>Is syntactically valid and matches in Chrome but is ignored in Firefox.</td>
     </tr>
     <tr>
       <td><code>https://*zilla.org/</code></td>
+      <td>Invalid</td>
       <td>"*" in host must be the only character or be followed by ".".</td>
     </tr>
     <tr>
       <td><code>http*://mozilla.org/</code></td>
+      <td>Invalid</td>
       <td>"*" in scheme must be the only character.</td>
     </tr>
     <tr>
       <td><code>https://mozilla.org:80/</code></td>
+      <td>Invalid</td>
       <td>Host must not include a port number.</td>
     </tr>
     <tr>
       <td><code>*://*</code></td>
+      <td>Invalid</td>
       <td>Empty path: this should be "<code>*://*/*</code>".</td>
     </tr>
     <tr>
       <td><code>file://*</code></td>
+      <td>Invalid</td>
       <td>Empty path: this should be "<code>file:///*</code>".</td>
     </tr>
   </tbody>
