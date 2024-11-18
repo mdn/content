@@ -62,7 +62,7 @@ Learning outcomes:
 
 Resources:
 
-- [Accessibility overview](https://developer.mozilla.org/docs/Learn/Accessibility)
+- [Accessibility overview](/docs/Learn/Accessibility)
 - [Inclusive design principles](https://inclusivedesignprinciples.org/), inclusivedesignprinciples.org
 
 ## Design briefs
