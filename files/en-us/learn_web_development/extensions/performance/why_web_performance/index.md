@@ -1,10 +1,10 @@
 ---
 title: The "why" of web performance
-slug: Learn/Performance/why_web_performance
+slug: Learn_web_development/Extensions/Performance/why_web_performance
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Performance/What_is_web_performance", "Learn/Performance")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Performance/What_is_web_performance", "Learn_web_development/Extensions/Performance")}}
 
 Web performance is all about making websites fast, including making slow processes _seem_ fast. This article provides an introduction into why web performance is important to site visitors and for your business goals.
 
@@ -73,4 +73,4 @@ Tracking performance is important. Multiple factors, including network speed and
 
 Web performance is important for accessibility and also for other website metrics that serve the goals of an organization or business. Good or bad website performance correlates powerfully to user experience, as well as the overall effectiveness of most sites. This is why you should care about web performance.
 
-{{NextMenu("Learn/Performance/What_is_web_performance", "Learn/Performance")}}
+{{NextMenu("Learn_web_development/Extensions/Performance/What_is_web_performance", "Learn_web_development/Extensions/Performance")}}

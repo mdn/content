@@ -48,7 +48,7 @@ The following is a list of all the topics we cover in the MDN learning area.
   - : Web forms are a potent tool for interacting with users — most commonly, they are used for collecting data from users, or allowing them to control a user interface. In the articles listed below, we'll cover all the essential aspects of structuring, styling, and interacting with web forms.
 - [Accessibility — make the web usable by everyone](/en-US/docs/Learn_web_development/Core/Accessibility)
   - : Accessibility is the practice of making web content available to as many people as possible regardless of disability, device, locale, or other differentiating factors. This topic gives you all you need to know.
-- [Web Performance — making websites fast and responsive](/en-US/docs/Learn/Performance)
+- [Web Performance — making websites fast and responsive](/en-US/docs/Learn_web_development/Extensions/Performance)
   - : Web performance is the art of making sure web applications download fast and are responsive to user interaction, regardless of a user's bandwidth, screen size, network, or device capabilities.
 - [MathML](/en-US/docs/Learn/MathML)
   - : MathML is the language that we can use to write mathematical formulas in web pages using fractions, scripts, radicals, matrices, integrals, series, etc. This topic covers MathML.

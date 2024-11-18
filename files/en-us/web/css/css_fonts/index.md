@@ -153,7 +153,7 @@ The CSS fonts module also supports variable fonts. Unlike regular fonts, where e
 
   - : This article will help you get started with using variable fonts.
 
-- [Improving font performance](/en-US/docs/Learn/Performance/CSS#improving_font_performance)
+- [Improving font performance](/en-US/docs/Learn_web_development/Extensions/Performance/CSS#improving_font_performance)
 
   - : This article, part of the CSS performance guide, discusses font loading, loading only the required glyphs, and defining font display behavior with the `font-display` descriptor.
 

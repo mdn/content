@@ -217,4 +217,4 @@ A [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) allow
 - {{HTMLElement("video")}} element
 - [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types)
 - [Media type and format guide](/en-US/docs/Web/Media/Formats)
-- [Web performance](/en-US/docs/Learn/Performance)
+- [Web performance](/en-US/docs/Learn_web_development/Extensions/Performance)

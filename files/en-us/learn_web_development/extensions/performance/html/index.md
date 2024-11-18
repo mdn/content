@@ -1,10 +1,10 @@
 ---
 title: HTML performance optimization
-slug: Learn/Performance/HTML
+slug: Learn_web_development/Extensions/Performance/HTML
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}} {{PreviousMenuNext("Learn/Performance/javascript_performance", "Learn/Performance/CSS", "Learn/Performance")}}
+{{LearnSidebar}} {{PreviousMenuNext("Learn_web_development/Extensions/Performance/Javascript", "Learn_web_development/Extensions/Performance/CSS", "Learn_web_development/Extensions/Performance")}}
 
 HTML is by default fast and accessible. It is our job, as developers, to ensure that we preserve these two properties when creating or editing HTML code. Complications can occur when, for example, the file size of a {{htmlelement("video")}} embed is too large or when JavaScript parsing blocks the rendering of critical page elements. This article walks you through the key HTML performance features that can drastically improve the quality of your web page.
 
@@ -36,7 +36,7 @@ HTML is by default fast and accessible. It is our job, as developers, to ensure 
 
 The first question you should answer before starting to optimize your HTML is "what do I need to optimize?". Some of the tips and techniques discussed below are good practices that will benefit just about any web project, whereas some are only needed in certain situations. Trying to apply all these techniques everywhere is probably unnecessary, and may be a waste of your time. You should figure out what performance optimizations are actually needed in each project.
 
-To do this, you need to [measure the performance](/en-US/docs/Learn/Performance/Measuring_performance) of your site. As this link shows, there are several different ways to measure performance, some involving sophisticated [performance APIs](/en-US/docs/Web/API/Performance_API). The best way to get started, however, is to learn how to use tools such as built-in browser [network](/en-US/docs/Learn/Performance/Measuring_performance#network_monitor_tools) and [performance](/en-US/docs/Learn/Performance/Measuring_performance#performance_monitor_tools) tools, to examine the parts of the page that are taking a long time to load and need optimizing.
+To do this, you need to [measure the performance](/en-US/docs/Learn_web_development/Extensions/Performance/Measuring_performance) of your site. As this link shows, there are several different ways to measure performance, some involving sophisticated [performance APIs](/en-US/docs/Web/API/Performance_API). The best way to get started, however, is to learn how to use tools such as built-in browser [network](/en-US/docs/Learn_web_development/Extensions/Performance/Measuring_performance#network_monitor_tools) and [performance](/en-US/docs/Learn_web_development/Extensions/Performance/Measuring_performance#performance_monitor_tools) tools, to examine the parts of the page that are taking a long time to load and need optimizing.
 
 ## Key HTML performance issues
 
@@ -269,9 +269,9 @@ See the following articles for detailed information on using `rel="preload"`:
 > [!NOTE]
 > There are other [`rel`](/en-US/docs/Web/HTML/Attributes/rel) values that are also designed to speed up various aspects of page loading: `dns-prefetch`, `preconnect`, `modulepreload`, `prefetch`, and `prerender`. Go to the linked page and find out what they do.
 
-{{PreviousMenuNext("Learn/Performance/javascript_performance", "Learn/Performance/CSS", "Learn/Performance")}}
-
 ## See also
 
 - [Making network requests with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting/Network_requests)
 - [DOM scripting introduction](/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting)
+
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Javascript", "Learn_web_development/Extensions/Performance/CSS", "Learn_web_development/Extensions/Performance")}}

@@ -1,10 +1,10 @@
 ---
 title: JavaScript performance optimization
-slug: Learn/Performance/JavaScript
+slug: Learn_web_development/Extensions/Performance/JavaScript
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/video", "Learn/Performance/HTML", "Learn/Performance")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/video", "Learn_web_development/Extensions/Performance/HTML", "Learn_web_development/Extensions/Performance")}}
 
 It is very important to consider how you are using JavaScript on your websites and think about how to mitigate any performance issues that it might be causing. While images and video account for over 70% of the bytes downloaded for the average website, byte per byte, JavaScript has a greater potential for negative performance impact — it can significantly impact download times, rendering performance, and CPU and battery usage. This article introduces tips and techniques for optimizing JavaScript to enhance the performance of your website.
 
@@ -36,7 +36,7 @@ It is very important to consider how you are using JavaScript on your websites a
 
 The first question you should answer before starting to optimize your code is "what do I need to optimize?". Some of the tips and techniques discussed below are good practices that will benefit just about any web project, whereas some are only needed in certain situations. Trying to apply all these techniques everywhere is probably unnecessary, and may be a waste of your time. You should figure out what performance optimizations are actually needed in each project.
 
-To do this, you need to [measure the performance](/en-US/docs/Learn/Performance/Measuring_performance) of your site. As the previous link shows, there are several different ways to measure performance, some involving sophisticated [performance APIs](/en-US/docs/Web/API/Performance_API). The best way to get started however, is to learn how to use tools such as built-in browser [network](/en-US/docs/Learn/Performance/Measuring_performance#network_monitor_tools) and [performance](/en-US/docs/Learn/Performance/Measuring_performance#performance_monitor_tools) tools, to see what parts of the page load are taking a long time and need optimizing.
+To do this, you need to [measure the performance](/en-US/docs/Learn_web_development/Extensions/Performance/Measuring_performance) of your site. As the previous link shows, there are several different ways to measure performance, some involving sophisticated [performance APIs](/en-US/docs/Web/API/Performance_API). The best way to get started however, is to learn how to use tools such as built-in browser [network](/en-US/docs/Learn_web_development/Extensions/Performance/Measuring_performance#network_monitor_tools) and [performance](/en-US/docs/Learn_web_development/Extensions/Performance/Measuring_performance#performance_monitor_tools) tools, to see what parts of the page load are taking a long time and need optimizing.
 
 ## Optimizing JavaScript downloads
 
@@ -230,7 +230,7 @@ Animations can improve perceived performance, making interfaces feel snappier an
 
 The most obvious piece of animation advice is to use less animations — cut out any non-essential animations, or consider giving your users a preference they can set to turn off animations, for example if they are using a low-powered device or a mobile device with limited battery power.
 
-For essential DOM animations, you are advised to use [CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) where possible, rather than JavaScript animations (the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) provides a way to directly hook into CSS animations using JavaScript). Using the browser to directly perform DOM animations rather than manipulating inline styles using JavaScript is much faster and more efficient. See also [CSS performance optimization > Handling animations](/en-US/docs/Learn/Performance/CSS#handling_animations).
+For essential DOM animations, you are advised to use [CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) where possible, rather than JavaScript animations (the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) provides a way to directly hook into CSS animations using JavaScript). Using the browser to directly perform DOM animations rather than manipulating inline styles using JavaScript is much faster and more efficient. See also [CSS performance optimization > Handling animations](/en-US/docs/Learn_web_development/Extensions/Performance/CSS#handling_animations).
 
 For animations that can't be handled in JavaScript, for example, animating an HTML {{htmlelement("canvas")}}, you are advised to use {{domxref("Window.requestAnimationFrame()")}} rather than older options such as {{domxref("Window.setInterval()")}}. The `requestAnimationFrame()` method is specially designed for handling animation frames efficiently and consistently, for a smooth user experience. The basic pattern looks like this:
 
@@ -328,4 +328,4 @@ There are several general best practices that will make your code run more effic
 - [Optimize long tasks](https://web.dev/articles/optimize-long-tasks) on web.dev (2022)
 - [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial)
 
-{{PreviousMenuNext("Learn/Performance/video", "Learn/Performance/HTML", "Learn/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/video", "Learn_web_development/Extensions/Performance/HTML", "Learn_web_development/Extensions/Performance")}}

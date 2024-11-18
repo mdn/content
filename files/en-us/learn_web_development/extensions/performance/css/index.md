@@ -1,10 +1,10 @@
 ---
 title: CSS performance optimization
-slug: Learn/Performance/CSS
+slug: Learn_web_development/Extensions/Performance/CSS
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/business_case_for_performance", "Learn/Performance")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/html", "Learn_web_development/Extensions/Performance/business_case_for_performance", "Learn_web_development/Extensions/Performance")}}
 
 When developing a website, you need to consider how the browser is handling the CSS on your site. To mitigate any performance issues that CSS might be causing, you should optimize it. For example, you should optimize the CSS to mitigate [render-blocking](/en-US/docs/Glossary/Render_blocking) and minimize the number of required reflows. This article walks you through key CSS performance optimization techniques.
 
@@ -36,7 +36,7 @@ When developing a website, you need to consider how the browser is handling the 
 
 The first question you should answer before starting to optimize your CSS is "what do I need to optimize?". Some of the tips and techniques discussed below are good practices that will benefit just about any web project, whereas some are only needed in certain situations. Trying to apply all these techniques everywhere is probably unnecessary, and may be a waste of your time. You should figure out what performance optimizations are actually needed in each project.
 
-To do this, you need to [measure the performance](/en-US/docs/Learn/Performance/Measuring_performance) of your site. As the previous link shows, there are several different ways to measure performance, some involving sophisticated [performance APIs](/en-US/docs/Web/API/Performance_API). The best way to get started however, is to learn how to use tools such as built-in browser [network](/en-US/docs/Learn/Performance/Measuring_performance#network_monitor_tools) and [performance](/en-US/docs/Learn/Performance/Measuring_performance#performance_monitor_tools) tools, to see what parts of the page load are taking a long time and need optimizing.
+To do this, you need to [measure the performance](/en-US/docs/Learn_web_development/Extensions/Performance/Measuring_performance) of your site. As the previous link shows, there are several different ways to measure performance, some involving sophisticated [performance APIs](/en-US/docs/Web/API/Performance_API). The best way to get started however, is to learn how to use tools such as built-in browser [network](/en-US/docs/Learn_web_development/Extensions/Performance/Measuring_performance#network_monitor_tools) and [performance](/en-US/docs/Learn_web_development/Extensions/Performance/Measuring_performance#performance_monitor_tools) tools, to see what parts of the page load are taking a long time and need optimizing.
 
 ## Optimizing rendering
 
@@ -283,10 +283,10 @@ article {
 }
 ```
 
-{{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/business_case_for_performance", "Learn/Performance")}}
-
 ## See also
 
 - [CSS animation performance](/en-US/docs/Web/Performance/CSS_JavaScript_animation_performance)
 - [Best practices for fonts](https://web.dev/articles/font-best-practices) on web.dev (2022)
 - [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/articles/content-visibility) on web.dev (2022)
+
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/html", "Learn_web_development/Extensions/Performance/business_case_for_performance", "Learn_web_development/Extensions/Performance")}}

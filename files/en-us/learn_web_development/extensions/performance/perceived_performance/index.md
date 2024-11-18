@@ -1,10 +1,10 @@
 ---
 title: Perceived performance
-slug: Learn/Performance/Perceived_performance
+slug: Learn_web_development/Extensions/Performance/Perceived_performance
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/what_is_web_performance", "Learn/Performance/Measuring_performance", "Learn/Performance")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/what_is_web_performance", "Learn_web_development/Extensions/Performance/Measuring_performance", "Learn_web_development/Extensions/Performance")}}
 
 **[Perceived performance](/en-US/docs/Glossary/Perceived_performance)** is a subjective measure of website performance, responsiveness, and reliability. In other words, how fast a website seems to the user. It is harder to quantify and measure than the actual speed of operation, but perhaps even more important.
 
@@ -93,4 +93,4 @@ Making a content request on `keydown` rather than waiting for `keyup` can reduce
 
 By reducing the time that a user has to wait for _useful_ content, and keeping the site responsive and engaging, the users will feel like the site performs better — even the actual time to load resources stays the same.
 
-{{PreviousMenuNext("Learn/Performance/what_is_web_performance", "Learn/Performance/Measuring_performance", "Learn/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/what_is_web_performance", "Learn_web_development/Extensions/Performance/Measuring_performance", "Learn_web_development/Extensions/Performance")}}

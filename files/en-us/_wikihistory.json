@@ -6864,100 +6864,6 @@
       "vishal.jv1511"
     ]
   },
-  "Learn/Performance": {
-    "modified": "2020-11-10T10:19:10.117Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Voulto",
-      "estelle",
-      "dkreitschmann",
-      "roelfjan",
-      "Sheppy",
-      "spencercorwin",
-      "riceh3",
-      "malchata"
-    ]
-  },
-  "Learn/Performance/CSS": {
-    "modified": "2020-11-11T15:16:18.377Z",
-    "contributors": ["chrisdavidmills", "estelle"]
-  },
-  "Learn/Performance/HTML": {
-    "modified": "2020-07-16T22:40:41.921Z",
-    "contributors": [
-      "mfranzke",
-      "arjenlgill",
-      "estelle",
-      "chrisdavidmills",
-      "mikeblume",
-      "ElliotHawkins"
-    ]
-  },
-  "Learn/Performance/JavaScript": {
-    "modified": "2020-08-13T09:15:49.386Z",
-    "contributors": ["bsphair", "estelle"]
-  },
-  "Learn/Performance/Measuring_performance": {
-    "modified": "2020-08-09T18:29:59.520Z",
-    "contributors": ["leslitagordita", "blueblots", "estelle"]
-  },
-  "Learn/Performance/Multimedia": {
-    "modified": "2020-09-28T11:10:56.616Z",
-    "contributors": [
-      "Software202",
-      "estelle",
-      "Schepp",
-      "jennyevans",
-      "rein",
-      "dougsillars",
-      "ryantownsend"
-    ]
-  },
-  "Learn/Performance/Perceived_performance": {
-    "modified": "2020-07-16T22:40:43.307Z",
-    "contributors": ["wilsotobianco", "estelle", "mhilko", "ottoetc"]
-  },
-  "Learn/Performance/Web_Performance_Basics": {
-    "modified": "2020-07-16T22:40:42.703Z",
-    "contributors": [
-      "Sheppy",
-      "estelle",
-      "jdmerriman",
-      "verde79",
-      "PickensC",
-      "santoshjoseph99"
-    ]
-  },
-  "Learn/Performance/What_is_web_performance": {
-    "modified": "2020-07-16T22:40:40.542Z",
-    "contributors": [
-      "estelle",
-      "chrisdavidmills",
-      "kiyayo",
-      "walonge",
-      "anthoniaocc",
-      "minas1",
-      "spencercorwin",
-      "sanunes"
-    ]
-  },
-  "Learn/Performance/business_case_for_performance": {
-    "modified": "2020-10-31T03:19:13.511Z",
-    "contributors": [
-      "sourabhramsingh",
-      "webfelipemaia",
-      "estelle",
-      "anthoniaocc"
-    ]
-  },
-  "Learn/Performance/video": {
-    "modified": "2020-07-16T22:40:45.501Z",
-    "contributors": ["ohaver", "estelle"]
-  },
-  "Learn/Performance/why_web_performance": {
-    "modified": "2020-11-10T07:30:44.012Z",
-    "contributors": ["Voulto", "ohaver", "estelle"]
-  },
   "Learn/Server-side": {
     "modified": "2020-07-16T22:35:54.561Z",
     "contributors": [
@@ -10779,6 +10685,100 @@
       "david_ross",
       "BrunkBeard"
     ]
+  },
+  "Learn_web_development/Extensions/Performance": {
+    "modified": "2020-11-10T10:19:10.117Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Voulto",
+      "estelle",
+      "dkreitschmann",
+      "roelfjan",
+      "Sheppy",
+      "spencercorwin",
+      "riceh3",
+      "malchata"
+    ]
+  },
+  "Learn_web_development/Extensions/Performance/CSS": {
+    "modified": "2020-11-11T15:16:18.377Z",
+    "contributors": ["chrisdavidmills", "estelle"]
+  },
+  "Learn_web_development/Extensions/Performance/HTML": {
+    "modified": "2020-07-16T22:40:41.921Z",
+    "contributors": [
+      "mfranzke",
+      "arjenlgill",
+      "estelle",
+      "chrisdavidmills",
+      "mikeblume",
+      "ElliotHawkins"
+    ]
+  },
+  "Learn_web_development/Extensions/Performance/JavaScript": {
+    "modified": "2020-08-13T09:15:49.386Z",
+    "contributors": ["bsphair", "estelle"]
+  },
+  "Learn_web_development/Extensions/Performance/Measuring_performance": {
+    "modified": "2020-08-09T18:29:59.520Z",
+    "contributors": ["leslitagordita", "blueblots", "estelle"]
+  },
+  "Learn_web_development/Extensions/Performance/Multimedia": {
+    "modified": "2020-09-28T11:10:56.616Z",
+    "contributors": [
+      "Software202",
+      "estelle",
+      "Schepp",
+      "jennyevans",
+      "rein",
+      "dougsillars",
+      "ryantownsend"
+    ]
+  },
+  "Learn_web_development/Extensions/Performance/Perceived_performance": {
+    "modified": "2020-07-16T22:40:43.307Z",
+    "contributors": ["wilsotobianco", "estelle", "mhilko", "ottoetc"]
+  },
+  "Learn_web_development/Extensions/Performance/Web_Performance_Basics": {
+    "modified": "2020-07-16T22:40:42.703Z",
+    "contributors": [
+      "Sheppy",
+      "estelle",
+      "jdmerriman",
+      "verde79",
+      "PickensC",
+      "santoshjoseph99"
+    ]
+  },
+  "Learn_web_development/Extensions/Performance/What_is_web_performance": {
+    "modified": "2020-07-16T22:40:40.542Z",
+    "contributors": [
+      "estelle",
+      "chrisdavidmills",
+      "kiyayo",
+      "walonge",
+      "anthoniaocc",
+      "minas1",
+      "spencercorwin",
+      "sanunes"
+    ]
+  },
+  "Learn_web_development/Extensions/Performance/business_case_for_performance": {
+    "modified": "2020-10-31T03:19:13.511Z",
+    "contributors": [
+      "sourabhramsingh",
+      "webfelipemaia",
+      "estelle",
+      "anthoniaocc"
+    ]
+  },
+  "Learn_web_development/Extensions/Performance/video": {
+    "modified": "2020-07-16T22:40:45.501Z",
+    "contributors": ["ohaver", "estelle"]
+  },
+  "Learn_web_development/Extensions/Performance/why_web_performance": {
+    "modified": "2020-11-10T07:30:44.012Z",
+    "contributors": ["Voulto", "ohaver", "estelle"]
   },
   "Learn_web_development/Getting_started/Environment_setup/Command_line": {
     "modified": "2020-10-18T22:03:14.400Z",

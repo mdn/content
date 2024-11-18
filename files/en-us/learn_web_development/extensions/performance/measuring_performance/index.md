@@ -1,10 +1,10 @@
 ---
 title: Measuring performance
-slug: Learn/Performance/Measuring_performance
+slug: Learn_web_development/Extensions/Performance/Measuring_performance
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}} {{PreviousMenuNext("Learn/Performance/Perceived_performance", "Learn/Performance/Multimedia", "Learn/Performance")}}
+{{LearnSidebar}} {{PreviousMenuNext("Learn_web_development/Extensions/Performance/Perceived_performance", "Learn_web_development/Extensions/Performance/Multimedia", "Learn_web_development/Extensions/Performance")}}
 
 Measuring performance provides an important metric to help you assess the success of your app, site, or web service.
 
@@ -96,4 +96,4 @@ While this article does not dive into using these APIs, it is helpful to know th
 
 This article briefly overviews some tools that can help you measure performance on a web app or site. In the following article, we'll see how you can optimize images on your site to improve its performance.
 
-{{PreviousMenuNext("Learn/Performance/Perceived_performance", "Learn/Performance/Multimedia", "Learn/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Perceived_performance", "Learn_web_development/Extensions/Performance/Multimedia", "Learn_web_development/Extensions/Performance")}}
