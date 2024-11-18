@@ -12,6 +12,8 @@ sidebar:
         title: Compiling_to_wasm
       - link: /WebAssembly/Rust_to_wasm
         title: Compiling_rust_to_wasm
+      - link: /WebAssembly/Haskell_to_wasm
+        title: Compiling_haskell_to_wasm
       - link: /WebAssembly/Using_the_JavaScript_API
         title: JavaScript_API
       - link: /WebAssembly/Understanding_the_text_format
@@ -56,6 +58,7 @@ l10n:
     WebAssembly_concepts: WebAssembly concepts
     Compiling_to_wasm: Compiling from C/C++ to WebAssembly
     Compiling_rust_to_wasm: Compiling from Rust to WebAssembly
+    Compiling_haskell_to_wasm: Compiling from Haskell to WebAssembly
     JavaScript_API: Using the WebAssembly JavaScript API
     Text_format: Understanding WebAssembly text format
     Text_format_to_wasm: Converting WebAssembly text format to wasm

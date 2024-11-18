@@ -42,6 +42,8 @@ And what's even better is that it is being developed as a web standard via the [
   - : A core use-case for WebAssembly is to take the existing ecosystem of C libraries and allow developers to use them on the web.
 - [Compiling from Rust to WebAssembly](/en-US/docs/WebAssembly/Rust_to_Wasm)
   - : If you've written some Rust code, you can compile it into WebAssembly! This tutorial takes you through all you need to know to compile a Rust project to Wasm and use it in an existing web app.
+- [Compiling from Haskell to WebAssembly](/en-US/docs/WebAssembly/Haskell_to_Wasm)
+  - : This guide demonstrates how to compile Haskell code into WebAssembly! You'll learn how to convert a single Haskell source file to WebAssembly and integrate it into a web application. we'll also cover compiling a Haskell Cabal project for WebAssembly.
 - [Loading and running WebAssembly code](/en-US/docs/WebAssembly/Loading_and_running)
   - : After you have a Wasm module, this article covers how to fetch, compile and instantiate it, combining the [WebAssembly JavaScript](/en-US/docs/WebAssembly/JavaScript_interface) API with the [Fetch](/en-US/docs/Web/API/Fetch_API) or [XHR](/en-US/docs/Web/API/XMLHttpRequest) APIs.
 - [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
