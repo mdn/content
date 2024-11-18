@@ -34,7 +34,7 @@ Writing software for the web has become more sophisticated through the ages. Alt
 
 There are some extremely well-established tools that have become common "household names" amongst the development community, and new tools are being written and released every day to solve specific problems. You might even find yourself writing a piece of software to aid your own development process, to solve a specific problem that existing tools don't already seem to handle.
 
-It is easy to become overwhelmed by the sheer number of tools that can be included in a single project. Equally, a single configuration file for a tool like [Webpack](https://webpack.js.org/) can be hundreds of lines long, most of which are magical incantations that seem to do the job but which only a master engineer will fully understand!
+It is easy to become overwhelmed by the sheer number of tools that can be included in a single project. Equally, a single configuration file for a tool like [webpack](https://webpack.js.org/) can be hundreds of lines long, most of which are magical incantations that seem to do the job but which only a master engineer will fully understand!
 
 From time to time, even the most experienced of web developers get stuck on a tooling problem; it is possible to waste hours attempting to get a tooling pipeline working before even touching a single line of application code. If you have found yourself struggling in the past, then don't worry — you are not alone.
 
@@ -84,7 +84,7 @@ You can also find linting tools for other languages, such as [stylelint](https:/
 
 Also known as **version control systems** (VCS), **source code control** is essential for backing work up and working in teams. A typical VCS involves having a local version of the code that you make changes to. You then "push" changes to a "master" version of the code inside a remote repository stored on a server somewhere. There is usually a way of controlling and coordinating what changes are made to the "master" copy of the code, and when, so a team of developers doesn't end up overwriting each other's work all the time.
 
-[Git](https://git-scm.com/) is the source code control system that most people use these days. It is primarily accessed via the command line but can be accessed via friendly user interfaces. With your code in a git repository, you can push it to your own server instance, or use a hosted source control website such as [GitHub](https://github.com/), [GitLab](https://about.gitlab.com/), or [BitBucket](https://bitbucket.org/product/).
+[Git](https://git-scm.com/) is the source code control system that most people use these days. It is primarily accessed via the command line but can be accessed via friendly user interfaces. With your code in a git repository, you can push it to your own server instance, or use a hosted source control website such as [GitHub](https://github.com/), [GitLab](https://about.gitlab.com/), or [Bitbucket](https://bitbucket.org/product/).
 
 We'll be using GitHub in this module. You can find more information about it at [Git and GitHub](/en-US/docs/Learn/Tools_and_testing/GitHub).
 
@@ -119,7 +119,7 @@ Generally, web development is thought of as three languages: [HTML](/en-US/docs/
 
 3. Optimization. This is provided by _bundlers_, which are tools that get your code ready for production, for example by "[tree-shaking](/en-US/docs/Glossary/Tree_shaking)" to make sure only the parts of your code libraries that you are actually using are put into your final production code, or "[minifying](/en-US/docs/Glossary/Minification)" to remove all the whitespace in your production code, making it as small as possible before it is uploaded to a server. For example:
 
-   - [Webpack](https://webpack.js.org/) has been the most popular bundler for a long time, featuring a huge number of plugins and a powerful configuration system. However, it is also known for being quite complex to set up, and is slow compared to more modern alternatives.
+   - [webpack](https://webpack.js.org/) has been the most popular bundler for a long time, featuring a huge number of plugins and a powerful configuration system. However, it is also known for being quite complex to set up, and is slow compared to more modern alternatives.
    - [Vite](https://vite.dev/) is a more modern build tool that is popular for its speed, simplicity, and richness of features.
 
 ### Post development
@@ -149,7 +149,7 @@ There are several other tool types available to use in the post-development stag
 
 There's certainly an order in which the different tooling types apply in the development lifecycle, but rest assured that you don't _have_ to have all of these in place to release a website. In fact, you don't need any of these. However, including some of these tools in your process will improve your own development experience and likely improve the overall quality of your code.
 
-It often takes some time for new developer tools to settle down in their complexity. One of the best-known tools, Webpack, has a reputation for being overly complicated to work with, but in the latest major release, there was a huge push to simplify common usage so the configuration required is reduced down to an absolute minimum.
+It often takes some time for new developer tools to settle down in their complexity. One of the best-known tools, webpack, has a reputation for being overly complicated to work with, but in the latest major release, there was a huge push to simplify common usage so the configuration required is reduced down to an absolute minimum.
 
 There's definitely no silver bullet that will guarantee success with tools, but as your experience increases you'll find workflows that work _for you_ or for your team and their projects. Once all the kinks in the process are flattened out, your toolchain should be something you can forget about and it _should_ just work.
 
@@ -163,7 +163,7 @@ You'll probably need a combination of the following things:
 - A useful specific place to search. General web searches for front-end developer tools are generally useless unless you already know the name of the tool you are searching for.
 
   - If you are using the npm package manager to manage your dependencies for example, it is a good idea to go to the [npm homepage](https://www.npmjs.com/) and search for the type of tool you are looking for, for example try searching for "date" if you want a date formatting utility, or "formatter" if you are searching for a general code formatter. Pay attention to the popularity, quality, and maintenance scores, and how recently the package was last updated. Also click through to the tool pages to find out how many monthly downloads a package has, and whether it has good documentation that you can use to figure out whether it does what you need it to do. Based on these criteria, the [date-fns library](https://www.npmjs.com/package/date-fns) looks like a good date formatting tool to use. You'll see this tool in action and learn more about package managers in general in Chapter 3 of this module.
-  - If you are looking for a plugin to integrate tool functionality into your code editor, look at the code editor's plugins/extensions page — see [VSCode extensions](https://marketplace.visualstudio.com/VSCode), for example. Have a look at the featured extensions on the front page, and again, try searching for the kind of extension you want (or the tool name, for example search for "ESLint" on the VSCode extensions page). When you get results, have a look at information such as how many stars or downloads the extension has, as an indicator of its quality.
+  - If you are looking for a plugin to integrate tool functionality into your code editor, look at the code editor's plugins/extensions page — see [VS Code extensions](https://marketplace.visualstudio.com/vscode), for example. Have a look at the featured extensions on the front page, and again, try searching for the kind of extension you want (or the tool name, for example search for "ESLint" on the VS Code extensions page). When you get results, have a look at information such as how many stars or downloads the extension has, as an indicator of its quality.
 
 - Development-related forums to ask questions on about what tools to use, for example [MDN Learn Discourse](https://discourse.mozilla.org/c/mdn/learn/250), or [Stack Overflow](https://stackoverflow.com/).
 
