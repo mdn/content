@@ -73,7 +73,7 @@ Learning outcomes:
 - Interpreting design brief requirements to produce an implementation.
 - Typical tools designers use to get their message across to developers (e.g. Figma).
 
-## See also 
+## See also
 
 - [Learn UI Design Fundamentals](https://scrimba.com/learn/design?via=mdn), Scrimba <sup>Course Partner</sup>
 - [The Shape of Design](https://shapeofdesignbook.com/chapters/00-introduction/), Frank Chimero
