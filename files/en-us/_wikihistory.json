@@ -9207,22 +9207,6 @@
       "estelle"
     ]
   },
-  "Learn_web_development/Extensions/Forms/Property_compatibility_table_for_form_controls": {
-    "modified": "2020-07-16T22:21:38.501Z",
-    "contributors": [
-      "jasjenand",
-      "chrisdavidmills",
-      "estelle",
-      "kruschk",
-      "Dralyab",
-      "stephaniehobson",
-      "mfluehr",
-      "Jeremie",
-      "kscarfone",
-      "james_oh",
-      "Sheppy"
-    ]
-  },
   "Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data": {
     "modified": "2020-09-13T14:02:27.104Z",
     "contributors": [

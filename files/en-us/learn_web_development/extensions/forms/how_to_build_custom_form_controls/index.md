@@ -2116,4 +2116,3 @@ If you do create alternative controls via radio buttons, your own JavaScript, or
 - **How to build custom form controls**
 - [HTML forms in legacy browsers](/en-US/docs/Learn_web_development/Extensions/Forms/HTML_forms_in_legacy_browsers)
 - [Advanced styling for HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)
-- [Property compatibility table for form controls](/en-US/docs/Learn_web_development/Extensions/Forms/Property_compatibility_table_for_form_controls)

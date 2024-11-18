@@ -520,4 +520,3 @@ input:valid + span::after {
 - {{HTMLElement("input")}}
   - [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text)
   - [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email)
-- [Compatibility of CSS properties](/en-US/docs/Learn_web_development/Extensions/Forms/Property_compatibility_table_for_form_controls)

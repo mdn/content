@@ -431,4 +431,3 @@ You can see good examples of text inputs used in context in our [Your first HTML
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon.
 - [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search)
 - {{HTMLElement("textarea")}}: Multi-line text input
-- [Compatibility of CSS properties](/en-US/docs/Learn_web_development/Extensions/Forms/Property_compatibility_table_for_form_controls)

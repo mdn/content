@@ -462,4 +462,3 @@ You can see a good example of a search form used in context at our [website-aria
 - [HTML Forms](/en-US/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon
 - [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text)
-- [Compatibility of CSS properties](/en-US/docs/Learn_web_development/Extensions/Forms/Property_compatibility_table_for_form_controls)

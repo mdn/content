@@ -143,4 +143,3 @@ After that, we send the `FormData` instance as an HTTP `POST` request, using `fe
 - [How to build custom form widgets](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
 - [HTML forms in legacy browsers](/en-US/docs/Learn_web_development/Extensions/Forms/HTML_forms_in_legacy_browsers)
 - [Advanced styling for HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)
-- [Property compatibility table for form widgets](/en-US/docs/Learn_web_development/Extensions/Forms/Property_compatibility_table_for_form_controls)

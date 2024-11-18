@@ -5344,8 +5344,8 @@
 /en-US/docs/Learn/Forms/How_to_structure_an_HTML_form	/en-US/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form
 /en-US/docs/Learn/Forms/How_to_structure_an_HTML_form/Example	/en-US/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form/Example
 /en-US/docs/Learn/Forms/Other_form_controls	/en-US/docs/Learn_web_development/Extensions/Forms/Other_form_controls
-/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls	/en-US/docs/Learn_web_development/Extensions/Forms/Property_compatibility_table_for_form_controls
-/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_widgets	/en-US/docs/Learn_web_development/Extensions/Forms/Property_compatibility_table_for_form_controls
+/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls	/en-US/docs/Learn_web_development/Extensions/Forms
+/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_widgets	/en-US/docs/Learn_web_development/Extensions/Forms
 /en-US/docs/Learn/Forms/Sending_and_retrieving_form_data	/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data
 /en-US/docs/Learn/Forms/Sending_forms_through_JavaScript	/en-US/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript
 /en-US/docs/Learn/Forms/Styling_HTML_forms	/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms
@@ -5399,7 +5399,7 @@
 /en-US/docs/Learn/HTML/Forms/My_first_HTML_form	/en-US/docs/Learn_web_development/Extensions/Forms/Your_first_form
 /en-US/docs/Learn/HTML/Forms/My_first_HTML_form/Example	/en-US/docs/Learn_web_development/Extensions/Forms/Your_first_form
 /en-US/docs/Learn/HTML/Forms/Other_form_controls	/en-US/docs/Learn_web_development/Extensions/Forms/Other_form_controls
-/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets	/en-US/docs/Learn_web_development/Extensions/Forms/Property_compatibility_table_for_form_controls
+/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets	/en-US/docs/Learn_web_development/Extensions/Forms
 /en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data	/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data
 /en-US/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript	/en-US/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript
 /en-US/docs/Learn/HTML/Forms/Styling_HTML_forms	/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms
@@ -5742,6 +5742,7 @@
 /en-US/docs/Learn_web_development/Core/Styling_basics/Sizing_items_in_CSS	/en-US/docs/Learn_web_development/Core/Styling_basics/Sizing
 /en-US/docs/Learn_web_development/Core/Styling_basics/Styling_tables	/en-US/docs/Learn_web_development/Core/Styling_basics/Tables
 /en-US/docs/Learn_web_development/Core/Styling_basics/The_box_model	/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model
+/en-US/docs/Learn_web_development/Extensions/Forms/Property_compatibility_table_for_form_controls	/en-US/docs/Learn_web_development/Extensions/Forms
 /en-US/docs/Learn_web_development/Getting_started/Basic_setup	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software
 /en-US/docs/Learn_web_development/Getting_started/Your_first_website/CSS_basics	/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content
 /en-US/docs/Learn_web_development/Getting_started/Your_first_website/HTML_basics	/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content
@@ -6774,8 +6775,8 @@
 /en-US/docs/Plugins/Roadmap	/en-US/docs/Glossary/Plugin
 /en-US/docs/Printing	/en-US/docs/Web/CSS/CSS_media_queries/Printing
 /en-US/docs/Properly_Configuring_Server_MIME_Types	/en-US/docs/Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types
-/en-US/docs/Properties_compatibility_table_for_forms_widgets	/en-US/docs/Learn_web_development/Extensions/Forms/Property_compatibility_table_for_form_controls
-/en-US/docs/Property_compatibility_table_for_form_widgets	/en-US/docs/Learn_web_development/Extensions/Forms/Property_compatibility_table_for_form_controls
+/en-US/docs/Properties_compatibility_table_for_forms_widgets	/en-US/docs/Learn_web_development/Extensions/Forms
+/en-US/docs/Property_compatibility_table_for_form_widgets	/en-US/docs/Learn_web_development/Extensions/Forms
 /en-US/docs/Python	/en-US/docs/Learn_web_development/Extensions/Server-side/Django
 /en-US/docs/Python/Virtualenv	https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/virtualenv
 /en-US/docs/Python_binding_for_NSS	https://firefox-source-docs.mozilla.org/security/nss/index.html
