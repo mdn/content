@@ -49,7 +49,7 @@ Invalid frequency values:
 
 ## Browser compatibility
 
-Current no browser supports this feature.
+No browser currently supports this feature.
 
 ## See also
 
