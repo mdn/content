@@ -71,6 +71,7 @@ The MDN [Web Performance Learning Area](/en-US/docs/Learn/Performance) contains 
 - {{glossary('First paint')}}
 - {{glossary('HTTP')}}
 - {{glossary('HTTP_2', 'HTTP/2')}}
+- {{glossary('Interaction to Next Paint')}}
 - {{glossary('Jank')}}
 - {{glossary('Latency')}}
 - {{glossary('Lazy load')}}
