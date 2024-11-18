@@ -19,7 +19,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 The `<summary>` element's contents can be any heading content, plain text, or HTML that can be used within a paragraph.
 
-A `<summary>` element may _only_ be used as the first child of a `<details>` element. When the user clicks on the summary, the parent `<details>` element is toggled open or closed, and then a {{domxref("HTMLDetailsElement/toggle_event", "toggle")}} event is sent to the `<details>` element, which can be used to let you know when this state change occurs.
+A `<summary>` element may _only_ be used as the first child of a `<details>` element. When the user clicks on the summary, the parent `<details>` element is toggled open or closed, and then a {{domxref("HTMLElement/toggle_event", "toggle")}} event is sent to the `<details>` element, which can be used to let you know when this state change occurs.
 
 The content of the `<details>` provides the {{glossary("accessible description")}} for the `<summary>`.
 

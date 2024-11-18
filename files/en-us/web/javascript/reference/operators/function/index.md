@@ -91,6 +91,8 @@ If a function expression is named, the [`name`](/en-US/docs/Web/JavaScript/Refer
 Unlike declarations, the name of the function expressions is read-only.
 
 ```js
+"use strict";
+
 function foo() {
   foo = 1;
 }

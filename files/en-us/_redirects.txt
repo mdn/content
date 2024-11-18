@@ -165,13 +165,6 @@
 /en-US/docs/Bugzilla_(external)	https://bugzilla.mozilla.org/enter_bug.cgi?format=guided
 /en-US/docs/Building_an_Extension	/en-US/docs/Mozilla/Add-ons
 /en-US/docs/CER_temp	/en-US/docs/Web/API/Document/
-/en-US/docs/CN_MDN	/zh-CN/docs/Web
-/en-US/docs/CN_MDN/JavaScript	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create
-/en-US/docs/CN_MDN/JavaScript/About_JavaScript	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/seal
-/en-US/docs/CN_MDN/JavaScript/JavaScript_参考	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed
-/en-US/docs/CN_MDN/JavaScript/Reference	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
-/en-US/docs/CN_MDN/JavaScript/Reference/About_this_Reference	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze
-/en-US/docs/CN_MDN/JavaScript/Reference/Global_Objects	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/isFrozen
 /en-US/docs/CORS_Enabled_Image	/en-US/docs/Web/HTML/CORS_enabled_image
 /en-US/docs/CSS	/en-US/docs/Web/CSS
 /en-US/docs/CSS-2_Quick_Reference	/en-US/docs/Web/CSS
@@ -701,8 +694,6 @@
 /en-US/docs/CSS/flex-shrink	/en-US/docs/Web/CSS/flex-shrink
 /en-US/docs/CSS/flex-wrap	/en-US/docs/Web/CSS/flex-wrap
 /en-US/docs/CSS/float	/en-US/docs/Web/CSS/float
-/en-US/docs/CSS/flood-color	/en-US/docs/Web/SVG/Attribute/flood-color
-/en-US/docs/CSS/flood-opacity	/en-US/docs/Web/SVG/Attribute/flood-opacity
 /en-US/docs/CSS/font	/en-US/docs/Web/CSS/font
 /en-US/docs/CSS/font-family	/en-US/docs/Web/CSS/font-family
 /en-US/docs/CSS/font-feature-settings	/en-US/docs/Web/CSS/font-feature-settings
@@ -733,7 +724,6 @@
 /en-US/docs/CSS/left	/en-US/docs/Web/CSS/left
 /en-US/docs/CSS/length	/en-US/docs/Web/CSS/length
 /en-US/docs/CSS/letter-spacing	/en-US/docs/Web/CSS/letter-spacing
-/en-US/docs/CSS/lighting-color	/en-US/docs/Web/SVG/Attribute/lighting-color
 /en-US/docs/CSS/line-height	/en-US/docs/Web/CSS/line-height
 /en-US/docs/CSS/linear-gradient	/en-US/docs/Web/CSS/gradient/linear-gradient
 /en-US/docs/CSS/list-style	/en-US/docs/Web/CSS/list-style
@@ -6743,7 +6733,6 @@
 /en-US/docs/SVG/polyline	/en-US/docs/Web/SVG/Element/polyline
 /en-US/docs/SVG/rect	/en-US/docs/Web/SVG/Element/rect
 /en-US/docs/SVG/use	/en-US/docs/Web/SVG/Element/use
-/en-US/docs/SVG/教程	/zh-TW/docs/Web/SVG/Tutorial
 /en-US/docs/SVG:Linking	/en-US/docs/Web/SVG/Linking
 /en-US/docs/SVG:Namespaces_Crash_Course	/en-US/docs/Web/SVG/Namespaces_Crash_Course
 /en-US/docs/SVG:Namespaces_Crash_Course:Example	/en-US/docs/Web/SVG/Namespaces_Crash_Course/Example
@@ -6773,7 +6762,6 @@
 /en-US/docs/Same_origin_policy_for_JavaScript	/en-US/docs/Web/Security/Same-origin_policy
 /en-US/docs/Sample_.htaccess_file	/en-US/docs/Learn/Server-side/Apache_Configuration_htaccess
 /en-US/docs/Scripting_plugins	/en-US/docs/Glossary/Plugin
-/en-US/docs/Secciones_y_contornos_de_un_documento_HTML5	/es/docs/Sections_and_Outlines_of_an_HTML5_document
 /en-US/docs/Security/CSP	/en-US/docs/Web/HTTP/CSP
 /en-US/docs/Security/CSP/CSP_policy_directives	/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
 /en-US/docs/Security/CSP/Default_CSP_restrictions	/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
@@ -7692,6 +7680,7 @@
 /en-US/docs/Web/API/CSSUnitValue/CSSUnitValue()	/en-US/docs/Web/API/CSSUnitValue/CSSUnitValue
 /en-US/docs/Web/API/CSSUnitValue/CSSUnitValue.CSSUnitValue	/en-US/docs/Web/API/CSSUnitValue/CSSUnitValue
 /en-US/docs/Web/API/CSSValueList/CSSValueList.length	/en-US/docs/Web/API/CSSValueList/length
+/en-US/docs/Web/API/CSS_Counter_Styles	/en-US/docs/Web/CSS/CSS_counter_styles
 /en-US/docs/Web/API/CSS_Properties_and_Values_API/_Using_the_CSS_properties_and_values_API	/en-US/docs/Web/API/CSS_Properties_and_Values_API/guide
 /en-US/docs/Web/API/CSS_Typed_Object_Model_API	/en-US/docs/Web/API/CSS_Object_Model#CSS_Typed_Object_Model
 /en-US/docs/Web/API/Cache/Cache.addAll()	/en-US/docs/Web/API/Cache/addAll
@@ -8417,6 +8406,7 @@
 /en-US/docs/Web/API/HTMLContentElement.select	/en-US/docs/Web/API/HTMLSlotElement
 /en-US/docs/Web/API/HTMLContentElement/getDistributedNodes	/en-US/docs/Web/API/HTMLSlotElement
 /en-US/docs/Web/API/HTMLContentElement/select	/en-US/docs/Web/API/HTMLSlotElement
+/en-US/docs/Web/API/HTMLDetailsElement/toggle_event	/en-US/docs/Web/API/HTMLElement/toggle_event
 /en-US/docs/Web/API/HTMLDialogElement/close()	/en-US/docs/Web/API/HTMLDialogElement/close
 /en-US/docs/Web/API/HTMLDialogElement/returnValue()	/en-US/docs/Web/API/HTMLDialogElement/returnValue
 /en-US/docs/Web/API/HTMLDialogElement/show()	/en-US/docs/Web/API/HTMLDialogElement/show
@@ -8800,6 +8790,10 @@
 /en-US/docs/Web/API/IndexedDB_API/ObjectStore	/en-US/docs/Web/API/IDBObjectStore
 /en-US/docs/Web/API/IndexedDB_API/Synchronous_API	/en-US/docs/Web/API/IndexedDB_API
 /en-US/docs/Web/API/IndexedDB_API/Transaction	/en-US/docs/Web/API/IDBTransaction
+/en-US/docs/Web/API/InkPresenter	/en-US/docs/Web/API/DelegatedInkTrailPresenter
+/en-US/docs/Web/API/InkPresenter/expectedImprovement	/en-US/docs/Web/API/DelegatedInkTrailPresenter/expectedImprovement
+/en-US/docs/Web/API/InkPresenter/presentationArea	/en-US/docs/Web/API/DelegatedInkTrailPresenter/presentationArea
+/en-US/docs/Web/API/InkPresenter/updateInkTrailStartPoint	/en-US/docs/Web/API/DelegatedInkTrailPresenter/updateInkTrailStartPoint
 /en-US/docs/Web/API/Input.mozGetFileNameArray	/en-US/docs/Web/API/HTMLInputElement
 /en-US/docs/Web/API/Input.mozSetFileNameArray	/en-US/docs/Web/API/HTMLInputElement
 /en-US/docs/Web/API/Input.multiple	/en-US/docs/Web/API/HTMLInputElement/multiple
@@ -10068,9 +10062,7 @@
 /en-US/docs/Web/API/WebGL_API/Creating_3D_objects_using_WebGL	/en-US/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
 /en-US/docs/Web/API/WebGL_API/Cross-Domain_Textures	/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL#Cross-domain_textures
 /en-US/docs/Web/API/WebGL_API/Getting_started_with_WebGL	/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
-/en-US/docs/Web/API/WebGL_API/Getting_started_with_WebGL/Commencer_avec_le_WebGL	/fr/docs/Web/API/WebGL_API/Tutorial/Commencer_avec_WebGL
 /en-US/docs/Web/API/WebGL_API/Lighting_in_WebGL	/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
-/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL/Commencer_avec_le_WebGL	/fr/docs/Web/API/WebGL_API/Tutorial/Commencer_avec_WebGL
 /en-US/docs/Web/API/WebGL_API/Using_shaders_to_apply_color_in_WebGL	/en-US/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 /en-US/docs/Web/API/WebGL_API/Using_textures_in_WebGL	/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 /en-US/docs/Web/API/WebKitCSSMatrix	/en-US/docs/Web/API/DOMMatrix
@@ -11626,8 +11618,6 @@
 /en-US/docs/Web/CSS/flex-line-pack	/en-US/docs/Web/CSS/align-content
 /en-US/docs/Web/CSS/flex-order	/en-US/docs/Web/CSS/order
 /en-US/docs/Web/CSS/flex-pack	/en-US/docs/Web/CSS/justify-content
-/en-US/docs/Web/CSS/flood-color	/en-US/docs/Web/SVG/Attribute/flood-color
-/en-US/docs/Web/CSS/flood-opacity	/en-US/docs/Web/SVG/Attribute/flood-opacity
 /en-US/docs/Web/CSS/font-size/font-optical-sizing	/en-US/docs/Web/CSS/font-optical-sizing
 /en-US/docs/Web/CSS/gradient/conic-gradient()	/en-US/docs/Web/CSS/gradient/conic-gradient
 /en-US/docs/Web/CSS/gradient/linear-gradient()	/en-US/docs/Web/CSS/gradient/linear-gradient
@@ -11651,7 +11641,6 @@
 /en-US/docs/Web/CSS/inset-area_value	/en-US/docs/Web/CSS/position-area_value
 /en-US/docs/Web/CSS/justify-tracks	/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout
 /en-US/docs/Web/CSS/kerning	/en-US/docs/Web/CSS/font-kerning
-/en-US/docs/Web/CSS/lighting-color	/en-US/docs/Web/SVG/Attribute/lighting-color
 /en-US/docs/Web/CSS/linear-gradient	/en-US/docs/Web/CSS/gradient/linear-gradient
 /en-US/docs/Web/CSS/linear-gradient()	/en-US/docs/Web/CSS/gradient/linear-gradient
 /en-US/docs/Web/CSS/margin-new	/en-US/docs/Web/CSS/margin
@@ -11955,7 +11944,7 @@
 /en-US/docs/Web/Events/suspend	/en-US/docs/Web/API/HTMLMediaElement/suspend_event
 /en-US/docs/Web/Events/timeout	/en-US/docs/Web/API/XMLHttpRequest/timeout_event
 /en-US/docs/Web/Events/timeupdate	/en-US/docs/Web/API/HTMLMediaElement/timeupdate_event
-/en-US/docs/Web/Events/toggle	/en-US/docs/Web/API/HTMLDetailsElement/toggle_event
+/en-US/docs/Web/Events/toggle	/en-US/docs/Web/API/HTMLElement/toggle_event
 /en-US/docs/Web/Events/tonechange	/en-US/docs/Web/API/RTCDTMFSender/tonechange_event
 /en-US/docs/Web/Events/touchcancel	/en-US/docs/Web/API/Element/touchcancel_event
 /en-US/docs/Web/Events/touchend	/en-US/docs/Web/API/Element/touchend_event
@@ -13018,7 +13007,6 @@
 /en-US/docs/Web/SVG/polyline	/en-US/docs/Web/SVG/Element/polyline
 /en-US/docs/Web/SVG/rect	/en-US/docs/Web/SVG/Element/rect
 /en-US/docs/Web/SVG/use	/en-US/docs/Web/SVG/Element/use
-/en-US/docs/Web/SVG/教程	/zh-TW/docs/Web/SVG/Tutorial
 /en-US/docs/Web/Security/CSP	/en-US/docs/Web/HTTP/CSP
 /en-US/docs/Web/Security/CSP/CSP_policy_directives	/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
 /en-US/docs/Web/Security/CSP/Default_CSP_restrictions	/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
@@ -13064,7 +13052,6 @@
 /en-US/docs/Web/WebGL/Creating_3D_objects_using_WebGL	/en-US/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
 /en-US/docs/Web/WebGL/Cross-Domain_Textures	/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL#Cross-domain_textures
 /en-US/docs/Web/WebGL/Getting_started_with_WebGL	/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
-/en-US/docs/Web/WebGL/Getting_started_with_WebGL/Commencer_avec_le_WebGL	/fr/docs/Web/API/WebGL_API/Tutorial/Commencer_avec_WebGL
 /en-US/docs/Web/WebGL/Lighting_in_WebGL	/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 /en-US/docs/Web/WebGL/Using_Extensions	/en-US/docs/Web/API/WebGL_API/Using_Extensions
 /en-US/docs/Web/WebGL/Using_shaders_to_apply_color_in_WebGL	/en-US/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
@@ -13231,7 +13218,6 @@
 /en-US/docs/WebGL/Creating_3D_objects_using_WebGL	/en-US/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
 /en-US/docs/WebGL/Cross-Domain_Textures	/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL#Cross-domain_textures
 /en-US/docs/WebGL/Getting_started_with_WebGL	/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
-/en-US/docs/WebGL/Getting_started_with_WebGL/Commencer_avec_le_WebGL	/fr/docs/Web/API/WebGL_API/Tutorial/Commencer_avec_WebGL
 /en-US/docs/WebGL/Lighting_in_WebGL	/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 /en-US/docs/WebGL/Using_Extensions	/en-US/docs/Web/API/WebGL_API/Using_Extensions
 /en-US/docs/WebGL/Using_shaders_to_apply_color_in_WebGL	/en-US/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
@@ -13747,7 +13733,6 @@
 /en-US/docs/transform	/en-US/docs/Web/CSS/transform
 /en-US/docs/typeof	/en-US/docs/Web/JavaScript/Reference/Operators/typeof
 /en-US/docs/var	/en-US/docs/Web/CSS/var
-/en-US/docs/video	/es/docs/Web/HTML/Elemento/video
 /en-US/docs/web/accessibility/aria/aria_techniques/using_the_alertdialog_role/	/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role
 /en-US/docs/web/accessibility/aria/aria_techniques/using_the_article_role/	/en-US/docs/Web/Accessibility/ARIA/Roles/article_role
 /en-US/docs/web/accessibility/aria/aria_techniques/using_the_group_role/	/en-US/docs/Web/Accessibility/ARIA/Roles/group_role
@@ -13816,5 +13801,3 @@
 /en-US/docs/window.window	/en-US/docs/Web/API/Window/window
 /en-US/docs/www_vs_non-www_URLs	/en-US/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs
 /en-US/docs/xml:base	/en-US/docs/Web/API/Node/baseURI
-/en-US/docs/zh-n/JavaScript/Reference/Global_Objects/String/quote	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/quote
-/en-US/docs/zh_cn	/zh-CN/docs/Web
