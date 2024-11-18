@@ -6,8 +6,6 @@ page-type: guide
 
 {{WebAssemblySidebar}}
 
-# Compiling Haskell to WebAssembly: A Step-by-Step Guide
-
 ## Introduction
 
 This guide demonstrates how to compile Haskell code into [WebAssembly](/en-US/docs/WebAssembly) (Wasm). You'll learn how to convert a single Haskell source file to WebAssembly and integrate it into a web application. Additionally, we'll cover compiling a Haskell Cabal project for WebAssembly, including handling data types like strings.
