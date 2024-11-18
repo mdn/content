@@ -67,7 +67,7 @@ When you assign something normally in JavaScript, you use a single equals sign, 
 const myNumber = 0;
 ```
 
-With [Objects](/en-US/docs/Learn/JavaScript/Objects), however, you need to take care to use the correct syntax. The object must be surrounded by curly braces, member names must be separated from their values using colons, and members must be separated by commas. For example:
+With [Objects](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects), however, you need to take care to use the correct syntax. The object must be surrounded by curly braces, member names must be separated from their values using colons, and members must be separated by commas. For example:
 
 ```js
 const myObject = {
@@ -180,9 +180,9 @@ For more information on JavaScript debugging, see [Handling common JavaScript pr
 - [What is bracket notation?](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics#bracket_notation)
 - [How do you get and set the methods and properties of an object?](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics#setting_object_members)
 - [What is `this`, in the context of an object?](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics#what_is_this)
-- [What is object-oriented programming?](/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#object-oriented_programming_from_10000_meters)
-- [What are constructors and instances, and how do you create them?](/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#constructors_and_object_instances)
-- [What different ways are there to create objects in JavaScript?](/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#other_ways_to_create_object_instances)
+- [What is object-oriented programming?](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript#object-oriented_programming_from_10000_meters)
+- [What are constructors and instances, and how do you create them?](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript#constructors_and_object_instances)
+- [What different ways are there to create objects in JavaScript?](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript#other_ways_to_create_object_instances)
 
 ### JSON
 
@@ -203,11 +203,11 @@ For more information on JavaScript debugging, see [Handling common JavaScript pr
 
 ### Object-oriented JavaScript
 
-- [What are object prototypes?](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [What is the constructor property, and how can you use it?](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes#the_constructor_property)
-- [How do you add methods to the constructor?](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes#modifying_prototypes)
-- [How do you create a new constructor that inherits its members from a parent constructor?](/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
-- [When should you use inheritance in JavaScript?](/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#object_member_summary)
+- [What are object prototypes?](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes)
+- [What is the constructor property, and how can you use it?](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes#the_constructor_property)
+- [How do you add methods to the constructor?](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes#modifying_prototypes)
+- [How do you create a new constructor that inherits its members from a parent constructor?](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript)
+- [When should you use inheritance in JavaScript?](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript#object_member_summary)
 
 ### Web APIs
 

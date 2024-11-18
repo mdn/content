@@ -4,7 +4,9 @@ slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_buildi
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 In previous articles we looked at all the essential JavaScript object theory and syntax details, giving you a solid base to start from. In this article we dive into a practical exercise, giving you some more practice in building custom JavaScript objects, with a fun and colorful result.
 
@@ -13,21 +15,15 @@ In previous articles we looked at all the essential JavaScript object theory and
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        A basic understanding of HTML and CSS,
-        familiarity with JavaScript basics (see
-        <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> and
-        <a href="/en-US/docs/Learn_web_development/Core/Scripting"
-          >Building blocks</a
-        >) and OOJS basics (see
-        <a href="/en-US/docs/Learn_web_development/Core/Scripting/Object_basics"
-          >Introduction to objects</a
-        >).
+        Familiarity with JavaScript basics
+        (especially
+        <a href="/en-US/docs/Learn_web_development/Core/Scripting/Object_basics">Object basics</a>) and object-oriented JavaScript concepts covered in previous lessons in this module.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">Learning outcomes:</th>
       <td>
-        To get some practice with using objects and object-oriented techniques
+        Practice using objects and object-oriented techniques
         in a real-world context.
       </td>
     </tr>
@@ -307,7 +303,7 @@ Save and refresh the demo again, and you'll see your balls change color when the
 
 We hope you had fun writing your own real-world random bouncing balls example, using various object and object-oriented techniques from throughout the module! This should have given you some useful practice in using objects, and good real-world context.
 
-That's it for object articles — all that remains now is for you to test your skills in the object assessment.
+That's it for object lessons — all that remains now is for you to test your skills in the module challenge.
 
 ## See also
 
@@ -318,4 +314,4 @@ That's it for object articles — all that remains now is for you to test your s
 - [2D breakout game using pure JavaScript](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) — a great beginner's tutorial showing how to build a 2D game.
 - [2D breakout game using Phaser](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser) — explains the basics of building a 2D game using a JavaScript game library.
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

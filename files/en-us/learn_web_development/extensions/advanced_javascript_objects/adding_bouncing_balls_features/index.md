@@ -1,35 +1,18 @@
 ---
-title: Adding features to our bouncing balls demo
+title: "Challenge: Adding features to our bouncing balls demo"
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features
 page-type: learn-module-assessment
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}
 
-In this assessment, you are expected to use the bouncing balls demo from the previous article as a starting point, and add some new and interesting features to it.
+{{PreviousMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
-<table>
-  <tbody>
-    <tr>
-      <th scope="row">Prerequisites:</th>
-      <td>
-        Before attempting this assessment you should have already worked through
-        all the articles in this module.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Objective:</th>
-      <td>
-        To test comprehension of JavaScript objects and object-oriented
-        constructs
-      </td>
-    </tr>
-  </tbody>
-</table>
+In this challenge, you are expected to use the bouncing balls demo from the previous article as a starting point, and add some new and interesting features to it.
 
 ## Starting point
 
-To get this assessment started, make a local copy of [index-finished.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/bouncing-balls/index-finished.html), [style.css](https://github.com/mdn/learning-area/blob/main/javascript/oojs/bouncing-balls/style.css), and [main-finished.js](https://github.com/mdn/learning-area/blob/main/javascript/oojs/bouncing-balls/main-finished.js) from our last article in a new directory in your local computer.
+To start this challenge, make a local copy of [index-finished.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/bouncing-balls/index-finished.html), [style.css](https://github.com/mdn/learning-area/blob/main/javascript/oojs/bouncing-balls/style.css), and [main-finished.js](https://github.com/mdn/learning-area/blob/main/javascript/oojs/bouncing-balls/main-finished.js) from our last article in a new directory in your local computer.
 
 Alternatively, you could use an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You could paste the HTML, CSS and JavaScript into one of these online editors. If the online editor you are using doesn't have a separate JavaScript panel, feel free to put it inline in a `<script>` element inside the HTML page.
 
@@ -40,7 +23,7 @@ Alternatively, you could use an online editor such as [CodePen](https://codepen.
 
 A couple of pointers before you get started.
 
-- This assessment is quite challenging. Read the whole assessment before you start coding, and take each step slowly and carefully.
+- This challenge is quite difficult. Read all of the instructions before you start coding, and take each step slowly and carefully.
 - It might be a good idea to save a separate copy of the demo after you get each stage working, so you can refer back to it if you find yourself in trouble later on.
 
 ## Project brief
@@ -95,7 +78,7 @@ At this point, try reloading the code — it should work just the same as it did
 
 ### Defining EvilCircle
 
-Now it's time to meet the bad guy — the `EvilCircle()`! Our game is only going to involve one evil circle, but we are still going to define it using a constructor that inherits from `Shape()`, to give you some practice. You might want to add another circle to the app later on that can be controlled by another player, or have several computer-controlled evil circles. You're probably not going to take over the world with a single evil circle, but it will do for this assessment.
+Now it's time to meet the bad guy — the `EvilCircle()`! Our game is only going to involve one evil circle, but we are still going to define it using a constructor that inherits from `Shape()`, to give you some practice. You might want to add another circle to the app later on that can be controlled by another player, or have several computer-controlled evil circles. You're probably not going to take over the world with a single evil circle, but it will do for this challenge.
 
 Create a definition for an `EvilCircle` class. It should inherit from `Shape` using `extends`.
 
@@ -187,4 +170,4 @@ To implement the score counter, follow the following steps:
    - Increment the count and display the updated number of balls each time a ball is added to the scene.
    - Decrement the count and display the updated number of balls each time the evil circle eats a ball (causes it not to exist).
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
+{{PreviousMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

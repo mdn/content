@@ -10,7 +10,7 @@ When writing client-side JavaScript for websites or applications, you will quick
 
 ## Prerequisites
 
-To get the most out of this module, you should have worked your way through the previous JavaScript modules in the series ([Dynamic scripting with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting), and [JavaScript objects](/en-US/docs/Learn/JavaScript/Objects)). Those modules typically involve simple API usage, as it is often difficult to write client-side JavaScript examples without them. For this tutorial, we will assume that you are knowledgeable about the core JavaScript language, and we will explore common Web APIs in a bit more detail.
+To get the most out of this module, you should have worked your way through the previous JavaScript modules in the series ([Dynamic scripting with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting), and [JavaScript objects](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)). Those modules typically involve simple API usage, as it is often difficult to write client-side JavaScript examples without them. For this tutorial, we will assume that you are knowledgeable about the core JavaScript language, and we will explore common Web APIs in a bit more detail.
 
 Basic knowledge of [HTML](/en-US/docs/Learn/HTML) and [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics) would also be useful.
 

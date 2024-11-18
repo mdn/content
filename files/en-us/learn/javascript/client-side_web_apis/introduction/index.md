@@ -20,7 +20,7 @@ First up, we'll start by looking at APIs from a high level — what are they, ho
         <a href="/en-US/docs/Learn_web_development/Core/Scripting"
           >building blocks</a
         >,
-        <a href="/en-US/docs/Learn/JavaScript/Objects">JavaScript objects</a>).
+        <a href="/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects">JavaScript objects</a>).
       </td>
     </tr>
     <tr>
@@ -102,10 +102,10 @@ Different JavaScript APIs work in slightly different ways, but generally, they h
 
 ### They are based on objects
 
-Your code interacts with APIs using one or more [JavaScript objects](/en-US/docs/Learn/JavaScript/Objects), which serve as containers for the data the API uses (contained in object properties), and the functionality the API makes available (contained in object methods).
+Your code interacts with APIs using one or more [JavaScript objects](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects), which serve as containers for the data the API uses (contained in object properties), and the functionality the API makes available (contained in object methods).
 
 > [!NOTE]
-> If you are not already familiar with how objects work, you should go back and work through our [JavaScript objects](/en-US/docs/Learn/JavaScript/Objects) module before continuing.
+> If you are not already familiar with how objects work, you should go back and work through our [JavaScript objects](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects) module before continuing.
 
 Let's return to the example of the Web Audio API — this is a fairly complex API, which consists of a number of objects. The most obvious ones are:
 

@@ -239,7 +239,7 @@ The final part that makes this feature work is the JavaScript code. The `tabs-ma
 
 This code does the following:
 
-- On [window load event](/en-US/docs/Web/API/Window/load_event) it initializes `TabsManual` [class](/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript) for all the `tablist` elements.
+- On [window load event](/en-US/docs/Web/API/Window/load_event) it initializes `TabsManual` [class](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript) for all the `tablist` elements.
 - When a `TabsManual` object is created, in the constructor all the tab and panel references are collected in `tabs` and `tabpanels` variables, so we can easily do things to them later on.
 - The constructor also registers [`click`](/en-US/docs/Web/API/Element/click_event) and [`keydown`](/en-US/docs/Web/API/Element/keydown_event) event handlers on all the tabs. The event handlers include logic about what should happen when a tab is selected using a click or keypress.
 - In the `setSelectedTab(currentTab)` function, the following occurs:

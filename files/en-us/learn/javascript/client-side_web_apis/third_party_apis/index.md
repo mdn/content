@@ -18,7 +18,7 @@ The APIs we've covered so far are built into the browser, but not all APIs are. 
         <a href="/en-US/docs/Learn_web_development/Core/Scripting"
           >building blocks</a
         >,
-        <a href="/en-US/docs/Learn/JavaScript/Objects">JavaScript objects</a>),
+        <a href="/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects">JavaScript objects</a>),
         the
         <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
           >basics of Client-side APIs</a

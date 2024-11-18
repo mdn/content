@@ -4,11 +4,13 @@ slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_Ja
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_programming", "Learn_web_development/Core/Scripting/JSON", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}
 
-In [the last article](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming), we introduced some basic concepts of object-oriented programming (OOP), and discussed an example where we used OOP principles to model professors and students in a school.
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
-We also talked about how it's possible to use [prototypes](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes) and [constructors](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics#introducing_constructors) to implement a model like this, and that JavaScript also provides features that map more closely to classical OOP concepts.
+In the last article, we introduced some basic concepts of object-oriented programming (OOP), and discussed an example where we used OOP principles to model professors and students in a school.
+
+We also talked about how it's possible to use [prototypes](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes) and [constructors](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics#introducing_constructors) to implement a model like this, and that JavaScript also provides features that map more closely to classical OOP concepts.
 
 In this article, we'll go through these features. It's worth keeping in mind that the features described here are not a new way of combining objects: under the hood, they still use prototypes. They're just a way to make it easier to set up a prototype chain.
 
@@ -17,21 +19,19 @@ In this article, we'll go through these features. It's worth keeping in mind tha
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        A basic understanding of HTML and CSS,
-        familiarity with JavaScript basics (see
-        <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> and
-        <a href="/en-US/docs/Learn_web_development/Core/Scripting"
-          >Building blocks</a
-        >) and OOJS basics (see
-        <a href="/en-US/docs/Learn_web_development/Core/Scripting/Object_basics"
-          >Introduction to objects</a
-        >, <a href="/en-US/docs/Learn/JavaScript/Objects/Object_prototypes">Object prototypes</a>, and <a href="/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming">Object-oriented programming</a>).
+        Familiarity with JavaScript basics
+        (especially
+        <a href="/en-US/docs/Learn_web_development/Core/Scripting/Object_basics">Object basics</a>) and object-oriented JavaScript concepts covered in previous lessons in this module.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">Learning outcomes:</th>
       <td>
-        To understand how to use the features JavaScript provides to implement "classical" object-oriented programs.
+        <ul>
+          <li>Creating classes in JavaScript.</li>
+          <li>Creating constructors in JavaScript.</li>
+          <li>Inheritance and encapsulation in JavaScript.</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -209,9 +209,10 @@ myExample.#somePrivateMethod(); // SyntaxError
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Object-oriented JavaScript](/en-US/docs/Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Object-oriented JavaScript](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills:_Object-oriented_JavaScript).
 
 ## Summary
 
 In this article, we've gone through the main tools available in JavaScript for writing object-oriented programs. We haven't covered everything here, but this should be enough to get you started. Our [article on Classes](/en-US/docs/Web/JavaScript/Reference/Classes) is a good place to learn more.
-{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_programming", "Learn_web_development/Core/Scripting/JSON", "Learn/JavaScript/Objects")}}
+
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

@@ -18,7 +18,7 @@ The browser contains some very powerful graphics programming tools, from the Sca
         <a href="/en-US/docs/Learn_web_development/Core/Scripting"
           >building blocks</a
         >,
-        <a href="/en-US/docs/Learn/JavaScript/Objects">JavaScript objects</a>),
+        <a href="/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects">JavaScript objects</a>),
         the
         <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
           >basics of Client-side APIs</a
@@ -43,7 +43,7 @@ This however was still not enough. While you could use [CSS](/en-US/docs/Learn_w
 
 The situation started to improve when browsers began to support the {{htmlelement("canvas")}} element and associated [Canvas API](/en-US/docs/Web/API/Canvas_API) in 2004. As you'll see below, canvas provides some useful tools for creating 2D animations, games, data visualizations, and other types of applications, especially when combined with some of the other APIs the web platform provides, but can be difficult or impossible to make accessible
 
-The below example shows a simple 2D canvas-based bouncing balls animation that we originally met in our [Introducing JavaScript objects](/en-US/docs/Learn/JavaScript/Objects/Object_building_practice) module:
+The below example shows a simple 2D canvas-based bouncing balls animation that we originally met in our [Introducing JavaScript objects](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice) module:
 
 {{EmbedGHLiveSample("learning-area/javascript/oojs/bouncing-balls/index-finished.html", '100%', 500)}}
 

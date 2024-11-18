@@ -4,7 +4,9 @@ slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-orient
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 Object-oriented programming (OOP) is a programming paradigm fundamental to many programming languages, including Java and C++. In this article, we'll provide an overview of the basic concepts of OOP. We'll describe three main concepts: **classes and instances**, **inheritance**, and **encapsulation**. For now, we'll describe these concepts without reference to JavaScript in particular, so all the examples are given in {{Glossary("Pseudocode", "pseudocode")}}.
 
@@ -18,21 +20,18 @@ After that, in JavaScript, we'll look at how constructors and the prototype chai
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Understanding JavaScript functions, familiarity with JavaScript basics
-        (see
-        <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> and
-        <a href="/en-US/docs/Learn_web_development/Core/Scripting"
-          >Building blocks</a
-        >), and OOJS basics (see
-        <a href="/en-US/docs/Learn_web_development/Core/Scripting/Object_basics"
-          >Introduction to objects</a
-        > and <a href="/en-US/docs/Learn/JavaScript/Objects/Object_prototypes">Object prototypes</a>).
+        Familiarity with JavaScript basics
+        (especially
+        <a href="/en-US/docs/Learn_web_development/Core/Scripting/Object_basics">Object basics</a>) and object-oriented JavaScript concepts covered in previous lessons in this module.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">Learning outcomes:</th>
       <td>
-        To understand the basic concepts of class-based object-oriented programming.
+        <ul>
+          <li>Object-oriented programming (OOP) concepts: Classes, instances, inheritance, and encapsulation.</li>
+          <li>How these OOP concepts apply to JavaScript, and what the differences are between it and a language like Java or C++.</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -222,7 +221,7 @@ In languages that don't enforce access like this, programmers use naming convent
 
 In this article, we've described some of the basic features of class-based object-oriented programming as implemented in languages like Java and C++.
 
-In the two previous articles, we looked at a couple of core JavaScript features: [constructors](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics) and [prototypes](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes). These features certainly have some relation to some of the OOP concepts described above.
+In the two previous articles, we looked at a couple of core JavaScript features: [constructors](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics) and [prototypes](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes). These features certainly have some relation to some of the OOP concepts described above.
 
 - **constructors** in JavaScript provide us with something like a class definition, enabling us to define the "shape" of an object, including any methods it contains, in a single place. But prototypes can be used here, too. For example, if a method is defined on a constructor's `prototype` property, then all objects created using that constructor get that method via their prototype, and we don't need to define it in the constructor.
 
@@ -242,4 +241,4 @@ This article has described the basic features of class-based object oriented pro
 
 In the next article, we'll look at the features JavaScript provides to support class-based object-oriented programming.
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

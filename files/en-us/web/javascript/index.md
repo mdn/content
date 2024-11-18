@@ -35,7 +35,7 @@ Head over to our [Learning Area JavaScript topic](/en-US/docs/Learn/JavaScript) 
   - : Answers some fundamental questions such as "what is JavaScript?", "what does it look like?", and "what can it do?", along with discussing key JavaScript features such as variables, strings, numbers, and arrays.
 - [JavaScript building blocks](/en-US/docs/Learn_web_development/Core/Scripting)
   - : Continues our coverage of JavaScript's key fundamental features, turning our attention to commonly-encountered types of code blocks such as conditional statements, loops, functions, and events.
-- [Introducing JavaScript objects](/en-US/docs/Learn/JavaScript/Objects)
+- [Introducing JavaScript objects](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)
   - : The object-oriented nature of JavaScript is important to understand if you want to go further with your knowledge of the language and write more efficient code, therefore we've provided this module to help you.
 - [Asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous)
   - : Discusses asynchronous JavaScript, why it is important, and how it can be used to effectively handle potential blocking operations such as fetching resources from a server.

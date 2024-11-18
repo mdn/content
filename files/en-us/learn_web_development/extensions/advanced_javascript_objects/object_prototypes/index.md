@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 
 {{LearnSidebar}}
 
-{{NextMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming", "Learn_web_development/Extensions")}}
+{{NextMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 Prototypes are the mechanism by which JavaScript objects inherit features from one another. In this article, we explain what a prototype is, how prototype chains work, and how a prototype for an object can be set.
 
@@ -17,14 +17,17 @@ Prototypes are the mechanism by which JavaScript objects inherit features from o
       <td>
         Familiarity with JavaScript basics
         (especially
-        <a href="/en-US/docs/Learn_web_development/Core/Scripting/Object_basics">Object basics</a>.
+        <a href="/en-US/docs/Learn_web_development/Core/Scripting/Object_basics">Object basics</a>).
       </td>
     </tr>
     <tr>
       <th scope="row">Learning outcomes:</th>
       <td>
         <ul>
-          <li></li>
+          <li>The JavaScript prototype chain.</li>
+          <li>The concept of shadowing properties.</li>
+          <li>Setting prototypes.</li>
+          <li>The concepts of prototypes and inheritance.</li>
         </ul>
       </td>
     </tr>
@@ -191,7 +194,7 @@ Here we create:
 - an object `personPrototype`, which has a `greet()` method
 - a `Person()` constructor function which initializes the name of the person to create.
 
-We then put the methods defined in `personPrototype` onto the `Person` function's `prototype` property using [Object.assign](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign).
+We then put the methods defined in `personPrototype` onto the `Person` function's `prototype` property using [`Object.assign`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign).
 
 After this code, objects created using `Person()` will get `Person.prototype` as their prototype, which automatically contains the `greet` method.
 
@@ -241,4 +244,4 @@ This article has covered JavaScript object prototypes, including how prototype o
 
 In the next article we'll look at the concepts underlying object-oriented programming.
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Object_basics", "Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects")}}
+{{NextMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
