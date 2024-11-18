@@ -17,7 +17,7 @@ Working out what tools you should be using can be a difficult process, so we hav
 
 ## Prerequisites
 
-You should really learn the basics of the core [HTML](/en-US/docs/Learn/HTML), [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics), and [JavaScript](/en-US/docs/Learn/JavaScript) languages first before attempting to use many of the tools detailed here. For example, you'll need to know the fundamentals of these languages before you start debugging problems in complex web code, making effective use of JavaScript frameworks, or writing tests and running them against your code using test runners.
+You should really learn the basics of the core [HTML](/en-US/docs/Learn/HTML), [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics), and [JavaScript](/en-US/docs/Learn_web_development/Core/Scripting) languages first before attempting to use many of the tools detailed here. For example, you'll need to know the fundamentals of these languages before you start debugging problems in complex web code, making effective use of JavaScript frameworks, or writing tests and running them against your code using test runners.
 
 In addition, you should start with the first module in this topic, which gives a useful overview of the general area.
 

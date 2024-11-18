@@ -5436,6 +5436,7 @@
 /en-US/docs/Learn/How_web_pages_work	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web
 /en-US/docs/Learn/Index	/en-US/docs/Learn
 /en-US/docs/Learn/Infrastructure	/en-US/docs/Learn/Common_questions
+/en-US/docs/Learn/JavaScript	/en-US/docs/Learn_web_development/Core/Scripting
 /en-US/docs/Learn/JavaScript/Asynchronous	/en-US/docs/Learn_web_development/Extensions/Async_JS
 /en-US/docs/Learn/JavaScript/Asynchronous/Async_await	/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises
 /en-US/docs/Learn/JavaScript/Asynchronous/Async_loops_and_intervals	/en-US/docs/Learn_web_development/Extensions/Async_JS

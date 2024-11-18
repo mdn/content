@@ -10,7 +10,7 @@ This module focuses on testing web projects across different browsers. We look a
 
 ## Prerequisites
 
-You should really learn the basics of the core [HTML](/en-US/docs/Learn/HTML), [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics), and [JavaScript](/en-US/docs/Learn/JavaScript) languages first before attempting to use the tools detailed here.
+You should really learn the basics of the core [HTML](/en-US/docs/Learn/HTML), [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics), and [JavaScript](/en-US/docs/Learn_web_development/Core/Scripting) languages first before attempting to use the tools detailed here.
 
 ## Guides
 

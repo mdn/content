@@ -17,7 +17,7 @@ If you are not sure about committing to learning web development in-depth and wa
 - HTML and CSS
   - : HTML provides structure for web content, whereas CSS provides instructions to style and lay out that content. See [Introduction to HTML](/en-US/docs/Learn_web_development/Code/Structuring_content) and [CSS Styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics) for essential starter information.
 - JavaScript
-  - : JavaScript allows you to code interactive functionality on websites. Begin with [JavaScript first steps](/en-US/docs/Learn/JavaScript/First_steps).
+  - : JavaScript allows you to code interactive functionality on websites. Begin with [Dynamic scripting with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting).
 - Frameworks and tooling
   - : After mastering the essentials of vanilla HTML, CSS, and JavaScript, you should learn about [client-side web development tools](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools), and then consider digging into [client-side JavaScript frameworks](/en-US/docs/Learn_web_development/Core/Frameworks_libraries). You should also consider learning the basic concepts of [server-side website programming](/en-US/docs/Learn/Server-side).
 
@@ -42,7 +42,7 @@ The following is a list of all the topics we cover in the MDN learning area.
   - : HTML is the language that we use to structure the different parts of our content and define what their meaning or purpose is. This topic teaches HTML in detail.
 - [CSS — Styling the web](/en-US/docs/Learn_web_development/Core/Styling_basics)
   - : CSS is the language that we use to control our web content's style and layout, as well as adding behavior like animation. This topic provides comprehensive coverage of CSS.
-- [JavaScript — Dynamic client-side scripting](/en-US/docs/Learn/JavaScript)
+- [JavaScript — Dynamic client-side scripting](/en-US/docs/Learn_web_development/Core/Scripting)
   - : JavaScript is the scripting language used to add dynamic functionality to web pages. This topic teaches all the essentials needed to become comfortable with writing and understanding JavaScript.
 - [Web forms — Working with user data](/en-US/docs/Learn/Forms)
   - : Web forms are a potent tool for interacting with users — most commonly, they are used for collecting data from users, or allowing them to control a user interface. In the articles listed below, we'll cover all the essential aspects of structuring, styling, and interacting with web forms.

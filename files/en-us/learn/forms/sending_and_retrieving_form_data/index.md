@@ -317,7 +317,7 @@ So, how do you fight these threats? This is a topic far beyond this guide, but t
 
 All data that comes to your server must be checked and sanitized. Always. No exception.
 
-- **Escape potentially dangerous characters**. The specific characters you should be cautious with vary depending on the context in which the data is used and the server platform you employ, but all server-side languages have functions for this. Things to watch out for are character sequences that look like executable code (such as [JavaScript](/en-US/docs/Learn/JavaScript) or [SQL](https://en.wikipedia.org/wiki/SQL) commands).
+- **Escape potentially dangerous characters**. The specific characters you should be cautious with vary depending on the context in which the data is used and the server platform you employ, but all server-side languages have functions for this. Things to watch out for are character sequences that look like executable code (such as [JavaScript](/en-US/docs/Learn_web_development/Core/Scripting) or [SQL](https://en.wikipedia.org/wiki/SQL) commands).
 - **Limit the incoming amount of data to allow only what's necessary**.
 - **Sandbox uploaded files**. Store them on a different server and allow access to the file only through a different subdomain or even better through a completely different domain.
 

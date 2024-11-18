@@ -19,7 +19,7 @@ In this article we'll provide a quick introduction to the [Svelte framework](htt
           At minimum, it is recommended that you are familiar with the core
           <a href="/en-US/docs/Learn/HTML">HTML</a>,
           <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS</a>, and
-          <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, and
+          <a href="/en-US/docs/Learn_web_development/Core/Scripting">JavaScript</a> languages, and
           have knowledge of the
           <a
             href="/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"

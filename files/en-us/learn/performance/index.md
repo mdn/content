@@ -18,7 +18,7 @@ It would also be helpful to go a bit deeper into these topics, with modules such
 
 - [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML)
 - [CSS first steps](/en-US/docs/Learn_web_development/Core/Styling_basics)
-- [JavaScript first steps](/en-US/docs/Learn/JavaScript/First_steps)
+- [JavaScript first steps](/en-US/docs/Learn_web_development/Core/Scripting/First_steps)
 
 Once you've worked through this module, you'll probably be excited to go deeper into web performance — you can find a lot of further teachings in our [main MDN Web performance section](/en-US/docs/Web/Performance), including overviews of performance APIs, testing and analysis tools, and performance bottleneck gotchas.
 

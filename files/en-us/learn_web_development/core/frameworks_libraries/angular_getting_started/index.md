@@ -20,7 +20,7 @@ It is now time to look at Google's Angular framework, another popular option tha
       <td>
         Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
         <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS</a>, and
-        <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages,
+        <a href="/en-US/docs/Learn_web_development/Core/Scripting">JavaScript</a> languages,
         knowledge of the
         <a
           href="/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"

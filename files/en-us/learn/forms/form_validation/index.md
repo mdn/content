@@ -18,7 +18,7 @@ This article leads you through basic concepts and examples of client-side form v
         Computer literacy, a reasonable understanding of
         <a href="/en-US/docs/Learn/HTML">HTML</a>,
         <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS</a>, and
-        <a href="/en-US/docs/Learn/JavaScript">JavaScript</a>.
+        <a href="/en-US/docs/Learn_web_development/Core/Scripting">JavaScript</a>.
       </td>
     </tr>
     <tr>

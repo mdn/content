@@ -28,7 +28,7 @@ There are a number of guides within MDN docs. These articles aim to add addition
 
 ## JavaScript
 
-- [JavaScript learning area](/en-US/docs/Learn/JavaScript)
+- [JavaScript learning area](/en-US/docs/Learn_web_development/Core/Scripting)
   - : Whether you are a complete beginner, or hoping to refresh your skills, this is the place to start.
 
 ## Media
