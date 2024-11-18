@@ -12297,7 +12297,7 @@
 /en-US/docs/Web/HTTP/Gecko_user_agent_string_reference	/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox
 /en-US/docs/Web/HTTP/HTTP_response_codes	/en-US/docs/Web/HTTP/Status
 /en-US/docs/Web/HTTP/Headers/Cache-Disposition	/en-US/docs/Web/HTTP/Headers/Content-Disposition
-/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources	/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#source_expression_syntax
+/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources	/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax
 /en-US/docs/Web/HTTP/Headers/Content-Security-Policy/navigate-to	/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
 /en-US/docs/Web/HTTP/Headers/Content-Security-Policy/referrer	/en-US/docs/Web/HTTP/Headers/Referrer-Policy
 /en-US/docs/Web/HTTP/Headers/Content-Security-Policy/require-sri-for	/en-US/docs/Web/HTTP/Headers/Content-Security-Policy

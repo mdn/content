@@ -86,10 +86,7 @@ Fetch directives control the locations from which certain resource types may be 
   - : Specifies valid sources for {{domxref("Worker")}}, {{domxref("SharedWorker")}}, or
     {{domxref("ServiceWorker")}} scripts.
 
-All fetch directives may be specified as one of the following:
-
-- the single value `'none'`, indicating that the specific resource type should be completely blocked
-- one or more _source expression_ values, indicating valid sources for that resource type. See [Source expression syntax](#source_expression_syntax).
+All fetch directives may be specified the single value `'none'`, indicating that the specific resource type should be completely blocked, or as one or more _source expression_ values, indicating valid sources for that resource type. See [Fetch directive syntax](#fetch_directive_syntax) for more details.
 
 #### Fallbacks
 
@@ -170,7 +167,7 @@ Reporting directives control the destination URL for CSP violation reports in `C
   - : Provides the browser with a URL where CSP violation reports should be sent.
     This has been superseded by the [`report-to`](#report-to) directive.
 
-## Source expression syntax
+## Fetch directive syntax
 
 All fetch directives may be specified as one of the following:
 
