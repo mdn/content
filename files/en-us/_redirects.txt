@@ -5288,6 +5288,7 @@
 /en-US/docs/Learn/Choose,_Install_and_set_up_a_text_editor	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors
 /en-US/docs/Learn/Client-side_web_APIs	/en-US/docs/Learn_web_development/Extensions/Client-side_APIs
 /en-US/docs/Learn/Coding-Scripting	/en-US/docs/Learn
+/en-US/docs/Learn/Common_questions	/en-US/docs/Learn_web_development/Howto
 /en-US/docs/Learn/Common_questions/Available_text_editors	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors
 /en-US/docs/Learn/Common_questions/Checking_that_your_web_site_is_working_properly	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Checking_that_your_web_site_is_working_properly
 /en-US/docs/Learn/Common_questions/Common_web_layouts	/en-US/docs/Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts
@@ -5333,8 +5334,8 @@
 /en-US/docs/Learn/Common_questions/What_is_accessibility	/en-US/docs/Learn_web_development/Howto/Design_and_accessibility/What_is_accessibility
 /en-US/docs/Learn/Common_questions/What_software_do_I_need	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need
 /en-US/docs/Learn/Common_questions/set_up_a_local_testing_server	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server
-/en-US/docs/Learn/Composing_for_the_web	/en-US/docs/Learn/Common_questions
-/en-US/docs/Learn/Design_and_Accessibility	/en-US/docs/Learn/Common_questions
+/en-US/docs/Learn/Composing_for_the_web	/en-US/docs/Learn_web_development/Howto
+/en-US/docs/Learn/Design_and_Accessibility	/en-US/docs/Learn_web_development/Howto
 /en-US/docs/Learn/Design_for_all_types_of_users_101	/en-US/docs/Learn_web_development/Howto/Design_and_accessibility/Design_for_all_types_of_users
 /en-US/docs/Learn/Discover_browser_developer_tools	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools
 /en-US/docs/Learn/Discover_browser_development_tools	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools
@@ -5486,7 +5487,7 @@
 /en-US/docs/Learn/How_to_create_an_HTML_document	/en-US/docs/Learn_web_development/Getting_started/Your_first_website
 /en-US/docs/Learn/How_web_pages_work	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web
 /en-US/docs/Learn/Index	/en-US/docs/Learn
-/en-US/docs/Learn/Infrastructure	/en-US/docs/Learn/Common_questions
+/en-US/docs/Learn/Infrastructure	/en-US/docs/Learn_web_development/Howto
 /en-US/docs/Learn/JavaScript	/en-US/docs/Learn_web_development/Core/Scripting
 /en-US/docs/Learn/JavaScript/Asynchronous	/en-US/docs/Learn_web_development/Extensions/Async_JS
 /en-US/docs/Learn/JavaScript/Asynchronous/Async_await	/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises
@@ -5654,11 +5655,11 @@
 /en-US/docs/Learn/Server-side/Server-side_website_programming_first_steps	/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps
 /en-US/docs/Learn/Set_up_a_basic_working_environment	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server
 /en-US/docs/Learn/Skills/Coding-Scripting	/en-US/docs/Learn
-/en-US/docs/Learn/Skills/Composing_for_the_web	/en-US/docs/Learn/Common_questions
-/en-US/docs/Learn/Skills/Design_and_Accessibility	/en-US/docs/Learn/Common_questions
-/en-US/docs/Learn/Skills/Infrastructure	/en-US/docs/Learn/Common_questions
+/en-US/docs/Learn/Skills/Composing_for_the_web	/en-US/docs/Learn_web_development/Howto
+/en-US/docs/Learn/Skills/Design_and_Accessibility	/en-US/docs/Learn_web_development/Howto
+/en-US/docs/Learn/Skills/Infrastructure	/en-US/docs/Learn_web_development/Howto
 /en-US/docs/Learn/Skills/Infrastructure/Understanding_URLs	/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL
-/en-US/docs/Learn/Skills/Web_Mechanics	/en-US/docs/Learn/Common_questions
+/en-US/docs/Learn/Skills/Web_Mechanics	/en-US/docs/Learn_web_development/Howto
 /en-US/docs/Learn/Thinking_before_coding	/en-US/docs/Learn_web_development/Howto/Design_and_accessibility/Thinking_before_coding
 /en-US/docs/Learn/Tools_and_testing	/en-US/docs/Learn_web_development/Extensions/Client-side_tools
 /en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks	/en-US/docs/Learn_web_development/Core/Frameworks_libraries
@@ -5736,7 +5737,7 @@
 /en-US/docs/Learn/WebGL/By_example/Simple_color_animation	/en-US/docs/Web/API/WebGL_API/By_example/Simple_color_animation
 /en-US/docs/Learn/WebGL/By_example/Textures_from_code	/en-US/docs/Web/API/WebGL_API/By_example/Textures_from_code
 /en-US/docs/Learn/WebGL/By_example/Video_textures	/en-US/docs/Web/API/WebGL_API/By_example/Video_textures
-/en-US/docs/Learn/Web_Mechanics	/en-US/docs/Learn/Common_questions
+/en-US/docs/Learn/Web_Mechanics	/en-US/docs/Learn_web_development/Howto
 /en-US/docs/Learn/What_is_AJAX_and_how_does_it_work	/en-US/docs/Learn_web_development/Core/Scripting/Network_requests
 /en-US/docs/Learn/What_is_XML_and_how_it_works	/en-US/docs/Web/XML/XML_introduction
 /en-US/docs/Learn/What_is_a_web_server	/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server
