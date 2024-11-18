@@ -40,7 +40,7 @@ Learning outcomes:
 
 Resources:
 
-- [Fundamental text and font styling](https://developer.mozilla.org/docs/Learn/CSS/Styling_text/Fundamentals)
+- [Fundamental text and font styling](/docs/Learn/CSS/Styling_text/Fundamentals)
 
 ## User-centered design
 
