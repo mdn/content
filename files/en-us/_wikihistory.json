@@ -5872,28 +5872,6 @@
       "fscholz"
     ]
   },
-  "Learn/HTML/Cheatsheet": {
-    "modified": "2020-07-16T22:22:43.887Z",
-    "contributors": [
-      "Yel-Martinez-Consultor-Seo",
-      "sideshowbarker",
-      "verde79",
-      "sksankarraj",
-      "Quantzilla",
-      "Johanancuriel",
-      "SethClydesdale",
-      "arkanciscan",
-      "khalid32",
-      "jswisher",
-      "fachrulrazy",
-      "Andrew_Pfeiffer",
-      "SphinxKnight",
-      "dvincent",
-      "hbloomer",
-      "chadsansing",
-      "Jeremie"
-    ]
-  },
   "Learn/HTML/Multimedia_and_embedding": {
     "modified": "2020-09-06T18:42:31.145Z",
     "contributors": [
@@ -11096,6 +11074,28 @@
       "Grauw",
       "CitizenK",
       "Jens.B"
+    ]
+  },
+  "Learn_web_development/Howto/Solve_HTML_problems/Cheatsheet": {
+    "modified": "2020-07-16T22:22:43.887Z",
+    "contributors": [
+      "Yel-Martinez-Consultor-Seo",
+      "sideshowbarker",
+      "verde79",
+      "sksankarraj",
+      "Quantzilla",
+      "Johanancuriel",
+      "SethClydesdale",
+      "arkanciscan",
+      "khalid32",
+      "jswisher",
+      "fachrulrazy",
+      "Andrew_Pfeiffer",
+      "SphinxKnight",
+      "dvincent",
+      "hbloomer",
+      "chadsansing",
+      "Jeremie"
     ]
   },
   "Learn_web_development/Howto/Solve_HTML_problems/Define_terms_with_HTML": {
