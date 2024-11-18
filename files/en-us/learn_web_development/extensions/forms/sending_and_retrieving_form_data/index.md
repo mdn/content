@@ -52,7 +52,7 @@ The {{HTMLElement("form")}} element defines how the data will be sent. All of it
 
 ### The action attribute
 
-The [`action`](/en-US/docs/Web/HTML/Element/form#action) attribute defines where the data gets sent. Its value must be a valid relative or absolute [URL](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL). If this attribute isn't provided, the data will be sent to the URL of the page containing the form — the current page.
+The [`action`](/en-US/docs/Web/HTML/Element/form#action) attribute defines where the data gets sent. Its value must be a valid relative or absolute [URL](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL). If this attribute isn't provided, the data will be sent to the URL of the page containing the form — the current page.
 
 In this example, the data is sent to an absolute URL — `https://example.com`:
 

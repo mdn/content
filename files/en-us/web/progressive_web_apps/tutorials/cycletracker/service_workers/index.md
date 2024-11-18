@@ -379,7 +379,7 @@ To get a new cache, you can change the [version number](#version_number) and the
 
 You likely don't want to update the version number with every save. Until you are ready to launch a new version of your PWA to production and give everyone a new version of your PWA, instead of changing the version number on save, you can unregister the service worker.
 
-You can unregister a service worker by clicking on the `unregister` button in the [browser developer tools](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools). Hard refreshing the page will re-register the service worker and create a new cache.
+You can unregister a service worker by clicking on the `unregister` button in the [browser developer tools](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools). Hard refreshing the page will re-register the service worker and create a new cache.
 
 ![Firefox developer tools application panel with a stopped service worker and an unregister button](firefox_sw.jpg)
 

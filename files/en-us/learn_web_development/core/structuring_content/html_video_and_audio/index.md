@@ -268,7 +268,7 @@ Here's an example:
 </video>
 ```
 
-In order to try this you need to host the files on a [local HTTP server](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server). In the output in browser, you'll see a video that has subtitles displayed, kind of like this:
+In order to try this you need to host the files on a [local HTTP server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server). In the output in browser, you'll see a video that has subtitles displayed, kind of like this:
 
 ![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 

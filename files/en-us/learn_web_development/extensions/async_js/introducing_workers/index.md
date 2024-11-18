@@ -233,7 +233,7 @@ The first thing the worker does is start listening for messages from the main sc
 The `generatePrimes()` function is just like the synchronous version, except instead of returning a value, we send a message to the main script when we are done. We use the {{domxref("DedicatedWorkerGlobalScope/postMessage", "postMessage()")}} function for this, which like `addEventListener()` is a global function in a worker. As we already saw, the main script is listening for this message and will update the DOM when the message is received.
 
 > [!NOTE]
-> To run this site, you'll have to run a local web server, because file:// URLs are not allowed to load workers. See our guide to [setting up a local testing server](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server). With that done, you should be able to click "Generate primes" and have your main page stay responsive.
+> To run this site, you'll have to run a local web server, because file:// URLs are not allowed to load workers. See our guide to [setting up a local testing server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server). With that done, you should be able to click "Generate primes" and have your main page stay responsive.
 >
 > If you have any problems creating or running the example, you can review the [finished version](https://github.com/mdn/learning-area/tree/main/javascript/asynchronous/workers/finished) and try it [live](https://mdn.github.io/learning-area/javascript/asynchronous/workers/finished/).
 

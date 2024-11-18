@@ -161,7 +161,7 @@ In reality, the separation is not always clear. It is an ideal to aim for where 
 
 Once you've learned the "raw" technologies that can be used to build web pages (such as HTML, CSS, and JavaScript), you'll soon start to come across various tools that can be used to make your work easier or more efficient. Examples include:
 
-- The [developer tools](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) inside modern browsers that can be used to debug your code.
+- The [developer tools](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) inside modern browsers that can be used to debug your code.
 - [Testing tools](/en-US/docs/Learn_web_development/Extensions/Testing) that can be used to run tests to show whether your code is behaving as you intended it to.
 - Libraries and frameworks built on top of JavaScript that allow you to build certain types of website much more quickly and effectively.
 - So-called "Linters", which take a set of rules, look at your code, and highlight places where you haven't followed the rules properly.
@@ -201,6 +201,6 @@ You'll come across the below concepts at some point in your studies.
 ## See also
 
 - [History of the World Wide Web](https://en.wikipedia.org/wiki/History_of_the_World_Wide_Web)
-- [How does the internet work?](/en-US/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)
+- [How does the internet work?](/en-US/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work)
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Web_standards/How_the_web_works", "Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites", "Learn_web_development/Getting_started/Web_standards")}}

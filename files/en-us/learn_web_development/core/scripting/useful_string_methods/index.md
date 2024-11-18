@@ -35,7 +35,7 @@ although the variable itself isn't an object, it still has a large number of pro
 
 **Now, before your brain starts melting, don't worry!** You really don't need to know about most of these early on in your learning journey. But there are a few that you'll potentially use quite often that we'll look at here.
 
-Let's enter some examples into the [browser developer console](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools).
+Let's enter some examples into the [browser developer console](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools).
 
 ## Finding the length of a string
 

@@ -96,7 +96,7 @@ Earlier we used the term "packets" to describe the format in which the data is t
 
 ## See also
 
-- [How the Internet works](/en-US/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)
+- [How the Internet works](/en-US/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work)
 
 ## Credit
 

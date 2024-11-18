@@ -247,7 +247,7 @@ We'd like you to take a copy of [`aria-no-live.html`](https://github.com/mdn/lea
 This will cause a screen reader to read out the content as it is updated.
 
 > [!NOTE]
-> Most browsers will throw a security exception if you try to make an HTTP request from a `file://` URL, e.g. if you just load the file by loading it directly into the browser (via double clicking, etc.). See [how to set up a local testing server](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server).
+> Most browsers will throw a security exception if you try to make an HTTP request from a `file://` URL, e.g. if you just load the file by loading it directly into the browser (via double clicking, etc.). See [how to set up a local testing server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server).
 
 There is an additional consideration here — only the bit of text that updates is read out. It might be nice if we always read out the heading too, so the user can remember what is being read out. To do this, we can add the [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) property to the section. Update your `<section>` opening tag again, like so:
 

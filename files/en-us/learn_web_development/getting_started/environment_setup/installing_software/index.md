@@ -47,7 +47,7 @@ For now, we'll install a couple of desktop web browsers to test our code in. If 
 
 ## Installing a local web server
 
-Some examples will need to be run by a web server to work successfully. You can find out how to do this in [How do you set up a local testing server?](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)
+Some examples will need to be run by a web server to work successfully. You can find out how to do this in [How do you set up a local testing server?](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)
 
 ## What tools do the professionals use?
 
