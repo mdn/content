@@ -59,6 +59,6 @@ The following looks like a scary list, but fortunately, you can get started in w
 - **A graphics editor**, like [GIMP](https://www.gimp.org/), [Figma](https://www.figma.com/), [Paint.NET](https://www.getpaint.net/), [Photoshop](https://www.adobe.com/products/photoshop.html), [Sketch](https://www.sketch.com/) or [XD](https://helpx.adobe.com/support/xd.html), to make images or graphics for your web pages.
 - **A version control system**, to manage files on servers, collaborate on a project with a team, share code and assets and avoid editing conflicts. Right now, [Git](https://git-scm.com/) is the most popular version control system along with the [GitHub](https://github.com/) or [GitLab](https://about.gitlab.com/) hosting service.
 
-For more information about other project-specific tools, especially for client-side web development, see our [Understanding client-side web development tools](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools) guide.
+For more information about other project-specific tools, especially for client-side web development, see our [Understanding client-side web development tools](/en-US/docs/Learn_web_development/Extensions/Client-side_tools) guide.
 
 {{NextMenu("Learn_web_development/Getting_started/Environment_setup/Browsing_the_web", "Learn_web_development/Getting_started/Environment_setup")}}

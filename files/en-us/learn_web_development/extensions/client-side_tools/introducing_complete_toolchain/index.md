@@ -1,10 +1,10 @@
 ---
 title: Introducing a complete toolchain
-slug: Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain
+slug: Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Package_management","Learn/Tools_and_testing/Understanding_client-side_tools/Deployment", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_tools/Package_management","Learn_web_development/Extensions/Client-side_tools/Deployment", "Learn_web_development/Extensions/Client-side_tools")}}
 
 In the final couple of articles in the series, we will solidify your tooling knowledge by walking you through the process of building up a sample case study toolchain. We'll go all the way from setting up a sensible development environment and putting transformation tools in place to actually deploying your app. In this article, we'll introduce the case study, set up our development environment, and set up our code transformation tools.
 
@@ -94,7 +94,7 @@ You can interact with git in a number of different ways, from using the command 
 
 ### Existing project
 
-We'll be building on the project we already started in the previous chapter, so make sure you follow the instructions in [Package management](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) to get the project set up first. To recap, here's what you should have:
+We'll be building on the project we already started in the previous chapter, so make sure you follow the instructions in [Package management](/en-US/docs/Learn_web_development/Extensions/Client-side_tools/Package_management) to get the project set up first. To recap, here's what you should have:
 
 - Node.js and npm installed.
 - A new project called `npm-experiment` (or some other name).
@@ -103,7 +103,7 @@ We'll be building on the project we already started in the previous chapter, so 
 - Some custom scripts defined in package.json.
 - The `index.html` and `src/main.jsx` files created.
 
-As we talked about in [Chapter 1](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview), the toolchain will be structured into the following phases:
+As we talked about in [Chapter 1](/en-US/docs/Learn_web_development/Extensions/Client-side_tools/Overview), the toolchain will be structured into the following phases:
 
 - **Development environment**: The tools that are most fundamental to running your code. This part is already set up in the previous chapter.
 - **Safety net**: Making the software development experience stable and more efficient. We might also refer to this as our development environment.
@@ -353,7 +353,7 @@ export default defineConfig({
 });
 ```
 
-Read the [Vite documentation](https://vite.dev/guide/) for more information on how to configure Vite. Because our site is deployed on GitHub pages, it will be hosted at `https://your-username.github.io/your-repo-name`, so you should set the `base` option according to your GitHub repository's name—but you can always adjust it later when we get to [deployment](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment).
+Read the [Vite documentation](https://vite.dev/guide/) for more information on how to configure Vite. Because our site is deployed on GitHub pages, it will be hosted at `https://your-username.github.io/your-repo-name`, so you should set the `base` option according to your GitHub repository's name—but you can always adjust it later when we get to [deployment](/en-US/docs/Learn_web_development/Extensions/Client-side_tools/Deployment).
 
 ### CSS transformation
 
@@ -430,4 +430,4 @@ At this point during web software development you would usually be crafting your
 
 Instead, we've written an example project for you to use your tools on. We'd suggest that you work through the rest of the chapter using our example code, and then you can try changing the contents of the src directory to your own project and publishing that on GitHub Pages instead! And indeed, deploying to GitHub Pages will be the end goal of the next chapter!
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Package_management","Learn/Tools_and_testing/Understanding_client-side_tools/Deployment", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_tools/Package_management","Learn_web_development/Extensions/Client-side_tools/Deployment", "Learn_web_development/Extensions/Client-side_tools")}}

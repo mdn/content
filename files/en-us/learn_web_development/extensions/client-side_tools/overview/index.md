@@ -1,10 +1,12 @@
 ---
 title: Client-side tooling overview
-slug: Learn/Tools_and_testing/Understanding_client-side_tools/Overview
+slug: Learn_web_development/Extensions/Client-side_tools/Overview
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Understanding_client-side_tools/Command_line", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
+{{LearnSidebar}}
+
+{{NextMenu("Learn_web_development/Extensions/Client-side_tools/Package_management", "Learn_web_development/Extensions/Client-side_tools")}}
 
 In this article, we provide an overview of modern web tooling, what kinds of tools are available and where you'll meet them in the lifecycle of web app development, and how to find help with individual tools.
 
@@ -175,6 +177,6 @@ Again, you'll probably go through several different tools as you search for the 
 
 ## Summary
 
-That rounds off our gentle introduction to the topic of client-side web tooling, from a high level. Next up we provide you with a crash course on the command line, which is where a lot of tooling is invoked from. We'll take a look at what the command line can do and then try installing and using our first tool.
+That rounds off our gentle introduction to the topic of client-side web tooling, from a high level. Next up we will look at package managers.
 
-{{NextMenu("Learn/Tools_and_testing/Understanding_client-side_tools/Command_line", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
+{{NextMenu("Learn_web_development/Extensions/Client-side_tools/Package_management", "Learn_web_development/Extensions/Client-side_tools")}}

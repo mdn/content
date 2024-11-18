@@ -23,7 +23,7 @@ In addition, you should start with the first module in this topic, which gives a
 
 ## Modules
 
-- [Understanding client-side web development tools](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools)
+- [Understanding client-side web development tools](/en-US/docs/Learn_web_development/Extensions/Client-side_tools)
   - : Client-side tooling can be intimidating, but this series of articles aims to illustrate the purpose of some of the most common client-side tool types, explain the tools you can chain together, how to install them using package managers, and control them using the command line. We finish up by providing a complete toolchain example showing you how to get productive.
 - [Understanding client-side JavaScript frameworks](/en-US/docs/Learn_web_development/Core/Frameworks_libraries)
   - : JavaScript frameworks are an essential part of modern front-end web development, providing developers with tried and tested tools for building scalable, interactive web applications. Many modern companies use frameworks as a standard part of their tooling, so many front-end development jobs now require framework experience. This module gives you some fundamental background knowledge about how client-side frameworks work and how they fit into your toolset, before moving on to tutorial series covering some of today's most popular ones.

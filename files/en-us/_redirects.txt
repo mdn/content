@@ -5687,7 +5687,12 @@
 /en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies	/en-US/docs/Learn_web_development/Extensions/Testing/Testing_strategies
 /en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment	/en-US/docs/Learn_web_development/Extensions/Testing/Your_own_automation_environment
 /en-US/docs/Learn/Tools_and_testing/GitHub	/en-US/docs/Learn_web_development/Core/Version_control
+/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools	/en-US/docs/Learn_web_development/Extensions/Client-side_tools
 /en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line
+/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment	/en-US/docs/Learn_web_development/Extensions/Client-side_tools/Deployment
+/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain	/en-US/docs/Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain
+/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview	/en-US/docs/Learn_web_development/Extensions/Client-side_tools/Overview
+/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management	/en-US/docs/Learn_web_development/Extensions/Client-side_tools/Package_management
 /en-US/docs/Learn/Understanding_URLs	/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL
 /en-US/docs/Learn/Understanding_domain_names	/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name
 /en-US/docs/Learn/Understanding_links_on_the_web	/en-US/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks

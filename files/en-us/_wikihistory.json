@@ -6323,34 +6323,6 @@
     "modified": "2020-07-16T22:38:53.469Z",
     "contributors": ["chrisdavidmills", "kruschk", "dylanferguson", "Navin77"]
   },
-  "Learn/Tools_and_testing/Understanding_client-side_tools": {
-    "modified": "2020-07-16T22:39:26.098Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "Learn/Tools_and_testing/Understanding_client-side_tools/Deployment": {
-    "modified": "2020-07-16T22:39:30.122Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain": {
-    "modified": "2020-07-16T22:39:29.585Z",
-    "contributors": ["nicolasguasca1", "chrisdavidmills", "escattone"]
-  },
-  "Learn/Tools_and_testing/Understanding_client-side_tools/Overview": {
-    "modified": "2020-07-16T22:39:26.907Z",
-    "contributors": ["chrisdavidmills", "edieblu", "davidshq"]
-  },
-  "Learn/Tools_and_testing/Understanding_client-side_tools/Package_management": {
-    "modified": "2020-08-29T04:11:46.834Z",
-    "contributors": [
-      "Rafael_Green",
-      "drklee3",
-      "nicolasguasca1",
-      "mrmowji",
-      "chrisdavidmills",
-      "ralaplines1988",
-      "remy"
-    ]
-  },
   "Learn_web_development/Core/Accessibility": {
     "modified": "2020-10-04T00:35:19.095Z",
     "contributors": [
@@ -8876,6 +8848,34 @@
       "stephaniehobson",
       "david_ross",
       "BrunkBeard"
+    ]
+  },
+  "Learn_web_development/Extensions/Client-side_tools": {
+    "modified": "2020-07-16T22:39:26.098Z",
+    "contributors": ["chrisdavidmills"]
+  },
+  "Learn_web_development/Extensions/Client-side_tools/Deployment": {
+    "modified": "2020-07-16T22:39:30.122Z",
+    "contributors": ["chrisdavidmills"]
+  },
+  "Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain": {
+    "modified": "2020-07-16T22:39:29.585Z",
+    "contributors": ["nicolasguasca1", "chrisdavidmills", "escattone"]
+  },
+  "Learn_web_development/Extensions/Client-side_tools/Overview": {
+    "modified": "2020-07-16T22:39:26.907Z",
+    "contributors": ["chrisdavidmills", "edieblu", "davidshq"]
+  },
+  "Learn_web_development/Extensions/Client-side_tools/Package_management": {
+    "modified": "2020-08-29T04:11:46.834Z",
+    "contributors": [
+      "Rafael_Green",
+      "drklee3",
+      "nicolasguasca1",
+      "mrmowji",
+      "chrisdavidmills",
+      "ralaplines1988",
+      "remy"
     ]
   },
   "Learn_web_development/Extensions/Forms": {

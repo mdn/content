@@ -1,10 +1,10 @@
 ---
 title: Deploying our app
-slug: Learn/Tools_and_testing/Understanding_client-side_tools/Deployment
+slug: Learn_web_development/Extensions/Client-side_tools/Deployment
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain", "Learn_web_development/Extensions/Client-side_tools")}}
 
 In the final article in our series, we take the example toolchain we built up in the previous article and add to it so that we can deploy our sample app. We push the code to GitHub, deploy it using GitHub Pages, and even show you how to add a simple test into the process.
 
@@ -127,7 +127,7 @@ Now we have three tasks ahead of us:
    Change the URL to your own repository, and run it now.
 
    > [!NOTE]
-   > After you've chosen your repository name, make sure the `base` option in your `vite.config.js` reflects this name, as mentioned in [the previous chapter](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain#javascript_transformation). Otherwise, the JavaScript and CSS assets will not be linked correctly.
+   > After you've chosen your repository name, make sure the `base` option in your `vite.config.js` reflects this name, as mentioned in [the previous chapter](/en-US/docs/Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain#javascript_transformation). Otherwise, the JavaScript and CSS assets will not be linked correctly.
 
 6. Now we're ready to push our code to GitHub; run the following command now:
 
@@ -280,4 +280,4 @@ For those of you wanting a challenge, consider whether you can optimize some par
 - Could you add more tests to prevent a bad build from deploying, such as [performance audits](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring)?
 - Could you set up a notification to let you know when a new deploy succeeded or failed?
 
-{{PreviousMenu("Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
+{{PreviousMenu("Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain", "Learn_web_development/Extensions/Client-side_tools")}}

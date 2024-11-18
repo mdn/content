@@ -189,7 +189,7 @@ Let's look at some of the other advantages offered by frameworks. As we've allud
 Because each of the frameworks in this module have a large, active community, each framework's ecosystem provides tooling that improves the developer experience. These tools make it easy to add things like testing (to ensure that your application behaves as it should) or linting (to ensure that your code is error-free and stylistically consistent).
 
 > [!NOTE]
-> If you want to find out more details about web tooling concepts, check out our [Client-side tooling overview](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview).
+> If you want to find out more details about web tooling concepts, check out our [Client-side tooling overview](/en-US/docs/Learn_web_development/Extensions/Client-side_tools/Overview).
 
 ### Compartmentalization
 

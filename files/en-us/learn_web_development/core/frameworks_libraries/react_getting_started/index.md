@@ -113,7 +113,7 @@ node -v
 
 If Node is installed, you'll see a version number. If it isn't, you'll see an error message. To install Node, follow the instructions on the [Node.js website](https://nodejs.org/en/).
 
-You may use the Yarn package manager as an alternative to npm but we'll assume you're using npm in this set of tutorials. See [Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) for more information on npm and yarn.
+You may use the Yarn package manager as an alternative to npm but we'll assume you're using npm in this set of tutorials. See [Package management basics](/en-US/docs/Learn_web_development/Extensions/Client-side_tools/Package_management) for more information on npm and yarn.
 
 If you're using Windows, you will need to install some software to give you parity with Unix/macOS terminal in order to use the terminal commands mentioned in this tutorial. **Gitbash** (which comes as part of the [git for Windows toolset](https://gitforwindows.org/)) or **[Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/about)** (**WSL**) are both suitable. See [Command line crash course](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line) for more information on these, and on terminal commands in general.
 
@@ -185,7 +185,7 @@ The **`public`** directory contains static files that will be served directly to
 
 The **`src`** directory is where we'll spend most of our time, as it's where the source code for our application lives. You'll notice that some JavaScript files in this directory end in the extension `.jsx`. This extension is necessary for any file that contains JSX – it tells Vite to turn the JSX syntax into JavaScript that your browser can understand. The `src/assets` directory contains the React logo you saw in the browser.
 
-The `package.json` and `package-lock.json` files contain metadata about our project. These files are not unique to React applications: Vite populated `package.json` for us, and npm created `package-lock.json` for when we installed the app's dependencies. You don't need to understand these files at all to complete this tutorial. However, if you'd like to learn more about them, you can read about [`package.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-json/) and [`package-lock.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-lock-json/) in the npm docs. We also talk about `package.json` in our [Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) tutorial.
+The `package.json` and `package-lock.json` files contain metadata about our project. These files are not unique to React applications: Vite populated `package.json` for us, and npm created `package-lock.json` for when we installed the app's dependencies. You don't need to understand these files at all to complete this tutorial. However, if you'd like to learn more about them, you can read about [`package.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-json/) and [`package-lock.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-lock-json/) in the npm docs. We also talk about `package.json` in our [Package management basics](/en-US/docs/Learn_web_development/Extensions/Client-side_tools/Package_management) tutorial.
 
 ### Customizing our dev script
 

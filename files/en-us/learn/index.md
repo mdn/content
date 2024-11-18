@@ -19,7 +19,7 @@ If you are not sure about committing to learning web development in-depth and wa
 - JavaScript
   - : JavaScript allows you to code interactive functionality on websites. Begin with [Dynamic scripting with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting).
 - Frameworks and tooling
-  - : After mastering the essentials of vanilla HTML, CSS, and JavaScript, you should learn about [client-side web development tools](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools), and then consider digging into [client-side JavaScript frameworks](/en-US/docs/Learn_web_development/Core/Frameworks_libraries). You should also consider learning the basic concepts of [server-side website programming](/en-US/docs/Learn_web_development/Extensions/Server-side).
+  - : After mastering the essentials of vanilla HTML, CSS, and JavaScript, you should learn about [client-side web development tools](/en-US/docs/Learn_web_development/Extensions/Client-side_tools), and then consider digging into [client-side JavaScript frameworks](/en-US/docs/Learn_web_development/Core/Frameworks_libraries). You should also consider learning the basic concepts of [server-side website programming](/en-US/docs/Learn_web_development/Extensions/Server-side).
 
 > [!NOTE]
 > Our [glossary](/en-US/docs/Glossary) provides terminology definitions. Besides, if you have a specific question about web development, our [Common questions](/en-US/docs/Learn/Common_questions) section may have something to help you.
