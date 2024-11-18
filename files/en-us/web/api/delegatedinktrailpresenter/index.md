@@ -1,35 +1,35 @@
 ---
-title: InkPresenter
-slug: Web/API/InkPresenter
+title: DelegatedInkTrailPresenter
+slug: Web/API/DelegatedInkTrailPresenter
 page-type: web-api-interface
 status:
   - experimental
-browser-compat: api.InkPresenter
+browser-compat: api.DelegatedInkTrailPresenter
 ---
 
 {{APIRef("Ink API")}}{{SeeCompatTable}}
 
-The **`InkPresenter`** interface of the [Ink API](/en-US/docs/Web/API/Ink_API) provides the ability to instruct the OS-level compositor to render ink strokes between pointer event dispatches.
+The **`DelegatedInkTrailPresenter`** interface of the [Ink API](/en-US/docs/Web/API/Ink_API) provides the ability to instruct the OS-level compositor to render ink strokes between pointer event dispatches.
 
 {{InheritanceDiagram}}
 
 ## Instance properties
 
-- {{domxref("InkPresenter.expectedImprovement", "expectedImprovement")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("DelegatedInkTrailPresenter.expectedImprovement", "expectedImprovement")}} {{Deprecated_Inline}} {{Non-standard_Inline}} {{ReadOnlyInline}}
   - : Returns a value, in milliseconds, indicating the latency improvement that can be expected using this presenter.
-- {{domxref("InkPresenter.presentationArea", "presentationArea")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxref("DelegatedInkTrailPresenter.presentationArea", "presentationArea")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Returns the {{domxref("Element")}} inside which rendering of ink strokes is confined.
 
 ## Instance methods
 
-- {{domxref("InkPresenter.updateInkTrailStartPoint", "updateInkTrailStartPoint()")}} {{Experimental_Inline}}
+- {{domxref("DelegatedInkTrailPresenter.updateInkTrailStartPoint", "updateInkTrailStartPoint()")}} {{Experimental_Inline}}
   - : Passes the {{domxref("PointerEvent")}} that was used as the last rendering point for the current frame, allowing the OS-level compositor to render a delegated ink trail ahead of the next pointer event being dispatched.
 
 ## Example
 
 In this example, we draw a trail onto a 2D canvas. Near the start of the code, we call {{domxref("Ink.requestPresenter()")}}, passing it the canvas as the presentation area for it to take care of and storing the promise it returns in the `presenter` variable.
 
-Later on, in the `pointermove` event listener, the new position of the trailhead is drawn onto the canvas each time the event fires. In addition, the `InkPresenter` object returned when the `presenter` promise fulfills has its {{domxref("InkPresenter.updateInkTrailStartPoint", "updateInkTrailStartPoint()")}} method invoked; this is passed:
+Later on, in the `pointermove` event listener, the new position of the trailhead is drawn onto the canvas each time the event fires. In addition, the `DelegatedInkTrailPresenter` object returned when the `presenter` promise fulfills has its {{domxref("DelegatedInkTrailPresenter.updateInkTrailStartPoint", "updateInkTrailStartPoint()")}} method invoked; this is passed:
 
 - The last trusted pointer event representing the rendering point for the current frame.
 - A `style` object containing color and diameter settings.
