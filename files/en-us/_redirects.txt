@@ -5638,6 +5638,7 @@
 /en-US/docs/Learn/Skills/Infrastructure/Understanding_URLs	/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL
 /en-US/docs/Learn/Skills/Web_Mechanics	/en-US/docs/Learn/Common_questions
 /en-US/docs/Learn/Thinking_before_coding	/en-US/docs/Learn/Common_questions/Design_and_accessibility/Thinking_before_coding
+/en-US/docs/Learn/Tools_and_testing	/en-US/docs/Learn_web_development/Extensions/Client-side_tools
 /en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks	/en-US/docs/Learn_web_development/Core/Frameworks_libraries
 /en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building	/en-US/docs/Learn_web_development/Core/Frameworks_libraries/Angular_building
 /en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering	/en-US/docs/Learn_web_development/Core/Frameworks_libraries/Angular_filtering
