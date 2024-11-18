@@ -25,7 +25,8 @@ We have created a [contributors task board](https://github.com/orgs/mdn/projects
 
 To contribute, you will need a GitHub account. If you do not already have one, go ahead and [sign up](https://github.com/signup) for an account before continuing. If you are new to GitHub, we encourage you to take the following free, self-paced courses and reading material offered by GitHub. With this knowledge, you can focus on your contributions and learn a new tool at the same time.
 
-> NOTE: Do not feel overwhelmed or like you have to read through and complete _all_ of the course work. With the knowledge gained from the "Introduction to GitHub" course, you will be well on your way.
+> [!NOTE]
+> Do not feel overwhelmed or like you have to read through and complete _all_ of the course work. With the knowledge gained from the "Introduction to GitHub" course, you will be well on your way.
 
 - [Introduction to GitHub](https://github.com/skills/introduction-to-github)
 - [Setting up Git](https://docs.github.com/en/get-started/getting-started-with-git/set-up-git)
