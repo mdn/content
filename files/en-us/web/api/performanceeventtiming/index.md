@@ -13,7 +13,7 @@ The `PerformanceEventTiming` interface of the Event Timing API provides insights
 
 This API enables visibility into slow events by providing event timestamps and duration for certain event types ([see below](#events_exposed)). For example, you can monitor the time between a user action and the start of its event handler, or the time an event handler takes to run.
 
-This API is particularly useful for measuring the {{Glossary("Ineraction to Next Paint")}} (INP): the longest time (minus some outliers) from the point when a user interacts with your app to the point until the browser was actually able to respond to that interaction.
+This API is particularly useful for measuring the {{Glossary("Interaction to Next Paint")}} (INP): the longest time (minus some outliers) from the point when a user interacts with your app to the point until the browser was actually able to respond to that interaction.
 
 You typically work with `PerformanceEventTiming` objects by creating a {{domxref("PerformanceObserver")}} instance and then calling its [`observe()`](/en-US/docs/Web/API/PerformanceObserver/observe) method, passing in `"event"` or `"first-input"` as the value of the [`type`](/en-US/docs/Web/API/PerformanceEntry/entryType) option. The `PerformanceObserver` object's callback will then be called with a list of `PerformanceEventTiming` objects which you can analyze. See the [example below](#getting_event_timing_information) for more.
 
