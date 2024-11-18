@@ -8,7 +8,8 @@ spec-urls: https://datatracker.ietf.org/doc/html/rfc9530
 {{HTTPSidebar}}
 
 The HTTP **`Repr-Digest`** {{Glossary("Request header", "request")}} and {{Glossary("Response header", "response header")}} provides a {{Glossary("digest")}} of the [selected representation](https://www.rfc-editor.org/rfc/rfc9110#section-6.4) of the target resource.
-Variants in {{HTTPHeader("Content-Encoding")}} and {{HTTPHeader("Content-Range")}}, for example, have no influence on the `Repr-Digest` digests, as opposed to the {{HTTPHeader("Content-Digest")}}, which does vary based on such changes to message content.
+
+The representation digest applies to the whole resource rather than the encoding or chunking of the messages that are used to send it. This differs from {HTTPHeader("Content-Digest")}} which applies to the content of a particular message, and is therefore is affected by the {{HTTPHeader("Content-Encoding")}} and {{HTTPHeader("Content-Range")}} of each message.
 Furthermore, [Content Negotiation](/en-US/docs/Web/HTTP/Content_negotiation) can result in different selected representations which results in different representation digests.
 
 <table class="properties">
@@ -46,14 +47,15 @@ Repr-Digest: <digest-algorithm>=<digest-value>,<digest-algorithm>=<digest-value>
 
 ### Usage notes
 
-Usage of digest algorithms which are considered insecure is discouraged as collisions can realistically be forced, rendering the digest's usefulness weak.
+Usage of insecure digest algorithms is discouraged as collisions can realistically be forced, rendering the digest's usefulness weak.
 Unless working with legacy systems (which is unlikely since most will expect the legacy {{HTTPHeader("Digest")}} header and not understand this specification), consider omitting a `Repr-Digest` instead of including one with an insecure digest algorithm.
 
 ## Examples
 
 ### HTTP response where `Repr-Digest` and `Content-Digest` coincide
 
-An HTTP server may send content octets equivalent to the selected representation's octets.
+An HTTP server may send the whole representation unencoded in a single message.
+In this case, `Repr-Digest` and `Content-Digest` have equal values for the same digest algorithms:
 In this case, `Repr-Digest` and `Content-Digest` have equal values for the same digest algorithms:
 
 ```http
@@ -72,7 +74,8 @@ Content-Range: 0-38053/38054
 
 ### HTTP responses where `Repr-Digest` and `Content-Digest` diverge
 
-A static file server may compress an HTML page, meaning the {{HTTPHeader("Content-Digest")}} will have a different value to the `Repr-Digest` header in a response, given the same digest algorithm:
+A server may compress the content for sending.
+In this case {{HTTPHeader("Content-Digest")}} will depend on the {{HTTPHeader("Content-Encoding")}}, and will therefore have a different value to the `Repr-Digest` header in a response:
 
 ```http
 …
