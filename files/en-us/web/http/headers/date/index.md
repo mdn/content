@@ -7,7 +7,7 @@ browser-compat: http.headers.Date
 
 {{HTTPSidebar}}
 
-The HTTP **`Date`** header contains the date and time at which the message originated.
+The HTTP **`Date`** {{Glossary("request header", "request")}} and {{Glossary("response header")}} contains the date and time at which the message originated.
 
 <table class="properties">
   <tbody>

@@ -15,7 +15,7 @@ browser-compat: http.headers.Digest
 > Use {{HTTPHeader("Content-Digest")}} instead.
 > For `id-*` digest algorithms, use {{HTTPHeader("Repr-Digest")}}.
 
-The HTTP **`Digest`** header provides the recipient with a {{Glossary("digest")}} of the {{HTTPHeader("Content-Encoding")}}-encoded _selected representation_.
+The HTTP **`Digest`** {{Glossary("request header")}} and {{Glossary("response header")}} provides the recipient with a {{Glossary("digest")}} of the {{HTTPHeader("Content-Encoding")}}-encoded _selected representation_.
 It can be requested by using the {{HTTPHeader("Want-Digest")}} header.
 
 Representations are different forms of a particular resource that might be returned from a request: for example, the same resource might be formatted in a particular media type such as XML or JSON, localized to a particular written language or geographical region, and/or compressed or otherwise encoded for transmission.

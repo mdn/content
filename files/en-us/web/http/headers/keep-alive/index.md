@@ -7,7 +7,7 @@ browser-compat: http.headers.Keep-Alive
 
 {{HTTPSidebar}}
 
-The HTTP **`Keep-Alive`** header allows the sender to hint how a connection may be used in terms of a timeout and a maximum amount of requests.
+The HTTP **`Keep-Alive`** {{Glossary("request header", "request")}} and {{Glossary("response header")}} allows the sender to hint how a connection may be used in terms of a timeout and a maximum amount of requests.
 
 > [!NOTE]
 > For `Keep-Alive` to have any effect, the message must also include a {{HTTPHeader("Connection", "Connection: keep-alive")}} header.
