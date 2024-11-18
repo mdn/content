@@ -132,7 +132,7 @@ feel free to include multiple definition lists, subsections, and explanations as
 
 ## Description
 
-If there is too much context or notes to include in the opening paragraphs, provide as much detail as necessary here, such as background information, hints for usage, and links to documentation.
+If there is too much content to include in the opening paragraphs, provide as much detail as necessary here, such as background information, hints for usage, and links to documentation.
 
 ## Examples
 
