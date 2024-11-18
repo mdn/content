@@ -74,7 +74,7 @@ There are plans to further extend possible queries by adding the generalized con
 
   - : How to use feature queries to target CSS based on the browser's level of support for web features.
 
-- [Browser feature detection: CSS `@supports`](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection#supports)
+- [Browser feature detection: CSS `@supports`](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection#supports)
 
   - : A look at JavaScript and CSS feature detection, including CSS `@supports`.
 

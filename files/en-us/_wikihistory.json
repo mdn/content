@@ -8004,133 +8004,6 @@
     "modified": "2020-07-16T22:38:53.469Z",
     "contributors": ["chrisdavidmills", "kruschk", "dylanferguson", "Navin77"]
   },
-  "Learn/Tools_and_testing/Cross_browser_testing": {
-    "modified": "2020-07-16T22:38:59.026Z",
-    "contributors": [
-      "chrisdavidmills",
-      "kruschk",
-      "ShivamGoyal1899",
-      "wbamberg",
-      "arai",
-      "prograamer",
-      "hadleyel",
-      "jpetto",
-      "melaniemkwon"
-    ]
-  },
-  "Learn/Tools_and_testing/Cross_browser_testing/Automated_testing": {
-    "modified": "2020-09-24T05:59:58.777Z",
-    "contributors": [
-      "Rafael_Green",
-      "lancespa",
-      "chrisdavidmills",
-      "avocadoras",
-      "kruschk",
-      "jochendelabie",
-      "pulkitsharma07",
-      "harshitpaul",
-      "wbamberg",
-      "ElvisZhu",
-      "KateSturmey",
-      "stephaniehobson",
-      "Memija",
-      "iigmir",
-      "SpikePy",
-      "jpetto",
-      "billmcgee"
-    ]
-  },
-  "Learn/Tools_and_testing/Cross_browser_testing/Feature_detection": {
-    "modified": "2020-07-16T22:39:22.516Z",
-    "contributors": [
-      "ckashby",
-      "mfuji09",
-      "chrisdavidmills",
-      "Igor-Sangin",
-      "kruschk",
-      "tkrotoff",
-      "jcsahnwaldt",
-      "stephaniehobson",
-      "EdwardB"
-    ]
-  },
-  "Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS": {
-    "modified": "2020-07-16T22:39:08.959Z",
-    "contributors": [
-      "chrisdavidmills",
-      "ckashby",
-      "kruschk",
-      "Sheppy",
-      "rahul73690",
-      "enejko",
-      "stephaniehobson",
-      "EdwardB",
-      "abenkovskii",
-      "qdirks"
-    ]
-  },
-  "Learn/Tools_and_testing/Cross_browser_testing/Introduction": {
-    "modified": "2020-07-28T13:00:54.765Z",
-    "contributors": [
-      "liviulupei",
-      "ckashby",
-      "kruschk",
-      "joanmdavis",
-      "daphnemcrossbrowser",
-      "chrisdavidmills",
-      "jochendelabie",
-      "sadhvisingh1",
-      "joaner",
-      "Navin77",
-      "stephaniehobson",
-      "qdirks",
-      "Soupedenuit",
-      "jainarpit",
-      "RyanWng",
-      "0000marcell",
-      "xfq"
-    ]
-  },
-  "Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies": {
-    "modified": "2020-09-21T04:00:14.366Z",
-    "contributors": [
-      "Rafael_Green",
-      "chrisdavidmills",
-      "liviulupei",
-      "AndriiMaliuta",
-      "kruschk",
-      "agnelvishal",
-      "jochendelabie",
-      "harshitpaul",
-      "Navin77",
-      "stephaniehobson",
-      "aarondev8917",
-      "EdwardB",
-      "tsotetsi",
-      "qdirks",
-      "0000marcell"
-    ]
-  },
-  "Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment": {
-    "modified": "2020-12-07T06:18:26.264Z",
-    "contributors": [
-      "BBC-Radiance",
-      "Rafael_Green",
-      "UnorthodoxThing",
-      "chrisdavidmills",
-      "liviulupei",
-      "SphinxKnight",
-      "sjain1992",
-      "kruschk",
-      "jochendelabie",
-      "harshitpaul",
-      "mburleigh",
-      "gabolato",
-      "stephaniehobson",
-      "martianyi",
-      "paulinas"
-    ]
-  },
   "Learn/Tools_and_testing/Understanding_client-side_tools": {
     "modified": "2020-07-16T22:39:26.098Z",
     "contributors": ["chrisdavidmills"]
@@ -10779,6 +10652,133 @@
   "Learn_web_development/Extensions/Performance/why_web_performance": {
     "modified": "2020-11-10T07:30:44.012Z",
     "contributors": ["Voulto", "ohaver", "estelle"]
+  },
+  "Learn_web_development/Extensions/Testing": {
+    "modified": "2020-07-16T22:38:59.026Z",
+    "contributors": [
+      "chrisdavidmills",
+      "kruschk",
+      "ShivamGoyal1899",
+      "wbamberg",
+      "arai",
+      "prograamer",
+      "hadleyel",
+      "jpetto",
+      "melaniemkwon"
+    ]
+  },
+  "Learn_web_development/Extensions/Testing/Automated_testing": {
+    "modified": "2020-09-24T05:59:58.777Z",
+    "contributors": [
+      "Rafael_Green",
+      "lancespa",
+      "chrisdavidmills",
+      "avocadoras",
+      "kruschk",
+      "jochendelabie",
+      "pulkitsharma07",
+      "harshitpaul",
+      "wbamberg",
+      "ElvisZhu",
+      "KateSturmey",
+      "stephaniehobson",
+      "Memija",
+      "iigmir",
+      "SpikePy",
+      "jpetto",
+      "billmcgee"
+    ]
+  },
+  "Learn_web_development/Extensions/Testing/Feature_detection": {
+    "modified": "2020-07-16T22:39:22.516Z",
+    "contributors": [
+      "ckashby",
+      "mfuji09",
+      "chrisdavidmills",
+      "Igor-Sangin",
+      "kruschk",
+      "tkrotoff",
+      "jcsahnwaldt",
+      "stephaniehobson",
+      "EdwardB"
+    ]
+  },
+  "Learn_web_development/Extensions/Testing/HTML_and_CSS": {
+    "modified": "2020-07-16T22:39:08.959Z",
+    "contributors": [
+      "chrisdavidmills",
+      "ckashby",
+      "kruschk",
+      "Sheppy",
+      "rahul73690",
+      "enejko",
+      "stephaniehobson",
+      "EdwardB",
+      "abenkovskii",
+      "qdirks"
+    ]
+  },
+  "Learn_web_development/Extensions/Testing/Introduction": {
+    "modified": "2020-07-28T13:00:54.765Z",
+    "contributors": [
+      "liviulupei",
+      "ckashby",
+      "kruschk",
+      "joanmdavis",
+      "daphnemcrossbrowser",
+      "chrisdavidmills",
+      "jochendelabie",
+      "sadhvisingh1",
+      "joaner",
+      "Navin77",
+      "stephaniehobson",
+      "qdirks",
+      "Soupedenuit",
+      "jainarpit",
+      "RyanWng",
+      "0000marcell",
+      "xfq"
+    ]
+  },
+  "Learn_web_development/Extensions/Testing/Testing_strategies": {
+    "modified": "2020-09-21T04:00:14.366Z",
+    "contributors": [
+      "Rafael_Green",
+      "chrisdavidmills",
+      "liviulupei",
+      "AndriiMaliuta",
+      "kruschk",
+      "agnelvishal",
+      "jochendelabie",
+      "harshitpaul",
+      "Navin77",
+      "stephaniehobson",
+      "aarondev8917",
+      "EdwardB",
+      "tsotetsi",
+      "qdirks",
+      "0000marcell"
+    ]
+  },
+  "Learn_web_development/Extensions/Testing/Your_own_automation_environment": {
+    "modified": "2020-12-07T06:18:26.264Z",
+    "contributors": [
+      "BBC-Radiance",
+      "Rafael_Green",
+      "UnorthodoxThing",
+      "chrisdavidmills",
+      "liviulupei",
+      "SphinxKnight",
+      "sjain1992",
+      "kruschk",
+      "jochendelabie",
+      "harshitpaul",
+      "mburleigh",
+      "gabolato",
+      "stephaniehobson",
+      "martianyi",
+      "paulinas"
+    ]
   },
   "Learn_web_development/Getting_started/Environment_setup/Command_line": {
     "modified": "2020-10-18T22:03:14.400Z",

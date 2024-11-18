@@ -376,7 +376,7 @@ Many other assistive technology types exist, such as:
 
 The following list provides a checklist for you to follow to make sure you've carried out the recommended accessibility testing for your project:
 
-1. Make sure your HTML is as semantically correct as possible. [Validating it](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#validation) is a good start, as is using an [Auditing tool](#auditing_tools).
+1. Make sure your HTML is as semantically correct as possible. [Validating it](/en-US/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML#html_validation) is a good start, as is using an [Auditing tool](#auditing_tools).
 2. Check that your content makes sense when the CSS is turned off.
 3. Make sure your functionality is [keyboard accessible](#using_native_keyboard_accessibility). Test using Tab, Return/Enter, etc.
 4. Make sure your non-text content has [text alternatives](#text_alternatives). An [Auditing tool](#auditing_tools) is good for catching such problems.

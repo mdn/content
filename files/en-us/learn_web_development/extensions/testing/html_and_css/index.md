@@ -1,10 +1,12 @@
 ---
 title: Handling common HTML and CSS problems
-slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
+slug: Learn_web_development/Extensions/Testing/HTML_and_CSS
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn_web_development/Core/Scripting/Debugging_JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Extensions/Testing/Testing_strategies","Learn_web_development/Extensions/Testing/Feature_detection", "Learn_web_development/Extensions/Testing")}}
 
 With the scene set, we'll now look specifically at the common cross-browser problems you will come across in HTML and CSS code, and what tools can be used to prevent problems from happening, or fix problems that occur. This includes linting code, handling CSS prefixes, using browser dev tools to track down problems, using polyfills to add support into browsers, tackling responsive design problems, and more.
 
@@ -18,7 +20,7 @@ With the scene set, we'll now look specifically at the common cross-browser prob
         <a href="/en-US/docs/Learn_web_development/Core/Scripting">JavaScript</a> languages; an idea
         of the high level
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
+          href="/en-US/docs/Learn_web_development/Extensions/Testing/Introduction"
           >principles of cross browser testing</a
         >.
       </td>
@@ -41,7 +43,7 @@ Let's go forth and look at how we can reduce cross browser errors that result fr
 
 ## First things first: fixing general problems
 
-We said in the [first article of this series](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction#testingdiscovery) that a good strategy to begin with is to test in a couple of modern browsers on desktop/mobile, to make sure your code is working generally, before going on to concentrate on the cross browser issues.
+We said in the [first article of this series](/en-US/docs/Learn_web_development/Extensions/Testing/Introduction#testingdiscovery) that a good strategy to begin with is to test in a couple of modern browsers on desktop/mobile, to make sure your code is working generally, before going on to concentrate on the cross browser issues.
 
 In our [Debugging HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML) and [Debugging CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS) articles, we provided some really basic guidance on debugging HTML/CSS — if you are not familiar with the basics, you should definitely study these articles before carrying on.
 
@@ -282,4 +284,4 @@ Aside from that, try searching your favorite search engine for an answer to your
 
 Now you should be familiar with the main types of cross browser HTML and CSS problems that you'll meet in web development, and how to go about fixing them.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn_web_development/Core/Scripting/Debugging_JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Testing/Testing_strategies","Learn_web_development/Extensions/Testing/Feature_detection", "Learn_web_development/Extensions/Testing")}}

@@ -1,10 +1,10 @@
 ---
 title: Setting up your own test automation environment
-slug: Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment
+slug: Learn_web_development/Extensions/Testing/Your_own_automation_environment
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Testing/Automated_testing", "Learn_web_development/Extensions/Testing")}}
 
 In this article, we will teach you how to install your own automation environment and run your own tests using Selenium/WebDriver and a testing library such as selenium-webdriver for Node. We will also look at how to integrate your local testing environment with commercial tools like the ones discussed in the previous article.
 
@@ -17,8 +17,8 @@ In this article, we will teach you how to install your own automation environmen
         <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS</a>, and
         <a href="/en-US/docs/Learn_web_development/Core/Scripting">JavaScript</a> languages; an idea
         of the high-level
-        <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">principles of cross browser testing</a>, and
-        <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing">automated testing</a>.
+        <a href="/en-US/docs/Learn_web_development/Extensions/Testing/Introduction">principles of cross browser testing</a>, and
+        <a href="/en-US/docs/Learn_web_development/Extensions/Testing/Automated_testing">automated testing</a>.
       </td>
     </tr>
     <tr>
@@ -45,7 +45,7 @@ We will cover writing and running Selenium tests using Node.js, as it is quick a
 
 ### Setting up Selenium in Node
 
-1. To start with, set up a new npm project, as discussed in [Setting up Node and npm](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#setting_up_node_and_npm) in the last chapter. Call it something different, like `selenium-test`.
+1. To start with, set up a new npm project, as discussed in [Setting up Node and npm](/en-US/docs/Learn_web_development/Extensions/Testing/Automated_testing#setting_up_node_and_npm) in the last chapter. Call it something different, like `selenium-test`.
 2. Next, we need to install a framework to allow us to work with Selenium from inside Node. We are going to choose selenium's official [selenium-webdriver](https://www.npmjs.com/package/selenium-webdriver), as the documentation seems fairly up-to-date and it is well-maintained. If you want different options, [webdriver.io](https://webdriver.io/) and [nightwatch.js](https://nightwatchjs.org/) are also good choices. To install selenium-webdriver, run the following command, making sure you are inside your project folder:
 
    ```bash
@@ -808,4 +808,4 @@ To get started, see for example:
 
 This module should have proven fun, and should have given you enough of an insight into writing and running automated tests for you to get going with writing your own automated tests.
 
-{{PreviousMenu("Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{PreviousMenu("Learn_web_development/Extensions/Testing/Automated_testing", "Learn_web_development/Extensions/Testing")}}

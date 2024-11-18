@@ -24,6 +24,8 @@ In particular, if you've never done any coding before, we'd recommend the [Your 
   - : In this module, we take a look at {{Glossary("asynchronous")}} {{Glossary("JavaScript")}}, why it is important, and how it can be used to effectively handle potential blocking operations, such as fetching resources from a server.
 - [Web performance](/en-US/docs/Learn_web_development/Extensions/Performance)
   - : Building websites requires HTML, CSS, and JavaScript. To build websites and applications people want to use, which attract and retain users, you need to create a good user experience. Part of good user experience is ensuring the content is quick to load and responsive to user interaction. This is known as **web performance**, and in this module you'll focus on the fundamentals of how to create performant websites.
+- [Testing](/en-US/docs/Learn_web_development/Extensions/Testing)
+  - : Any codebase past a certain level of complexity needs to have a system of tests associated with it, to make sure that as new code is added, the codebase continues to function correctly and performantly, and continues to meet the users' needs. This module lists the fundamentals that you should start with.
 - [Transform and animate CSS](/en-US/docs/Learn_web_development/Extensions/Transform_animate)
   - : Animations are a vital part of a good user experience. Subtle usage can make page designs more interesting and appealing, and also enhance usability and perceived performance.
 - [Security and privacy](/en-US/docs/Learn_web_development/Extensions/Security_privacy)

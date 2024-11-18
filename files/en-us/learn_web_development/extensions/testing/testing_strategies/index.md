@@ -1,10 +1,10 @@
 ---
 title: Strategies for carrying out testing
-slug: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
+slug: Learn_web_development/Extensions/Testing/Testing_strategies
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Testing/Introduction","Learn_web_development/Extensions/Testing/HTML_and_CSS", "Learn_web_development/Extensions/Testing")}}
 
 This article explains how to do cross-browser testing: how to choose which browsers and devices to test, how to actually test those browsers and devices, and how to test with user groups.
 
@@ -18,7 +18,7 @@ This article explains how to do cross-browser testing: how to choose which brows
         <a href="/en-US/docs/Learn_web_development/Core/Scripting">JavaScript</a> languages; an idea
         of the high-level
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
+          href="/en-US/docs/Learn_web_development/Extensions/Testing/Introduction"
           >principles of cross-browser testing</a
         >.
       </td>
@@ -149,7 +149,7 @@ These test criteria are useful, because:
 
 - They give you a set of steps to follow when you are performing tests.
 - They can be easily turned into sets of instructions for user groups to follow when carrying out tests (e.g. "try to activate the button using your mouse, and then the keyboard…") — see [User testing](#user_testing), below.
-- They can also provide a basis for writing automated tests. It is easier to write such tests if you know exactly what you want to test, and what the success conditions are (see [Selenium](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment#selenium), later in the series).
+- They can also provide a basis for writing automated tests. It is easier to write such tests if you know exactly what you want to test, and what the success conditions are (see [Selenium](/en-US/docs/Learn_web_development/Extensions/Testing/Your_own_automation_environment#selenium), later in the series).
 
 ## Putting together a testing lab
 
@@ -283,4 +283,4 @@ After reading this article you should now have a good idea of what you can do to
 
 Next, we'll turn our attention to the actual code issues your testing might uncover, starting with HTML and CSS.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Testing/Introduction","Learn_web_development/Extensions/Testing/HTML_and_CSS", "Learn_web_development/Extensions/Testing")}}

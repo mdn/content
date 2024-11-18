@@ -12,9 +12,9 @@ This article provides a list of best practices to help you make sure your PWA is
 
 ## Adapt to all browsers
 
-Your PWA is based on Web technologies. This means that, on top of being installable on devices, PWAs can run in web browsers too. To ensure compatibility, it's essential to [test your app](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) across various browsers and operating systems.
+Your PWA is based on Web technologies. This means that, on top of being installable on devices, PWAs can run in web browsers too. To ensure compatibility, it's essential to [test your app](/en-US/docs/Learn_web_development/Extensions/Testing) across various browsers and operating systems.
 
-Consider the diverse range of browsers your users may use and cater to a wide spectrum of potential users. Using [feature detection](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection) allows you to deliver a usable experience to the broadest audience.
+Consider the diverse range of browsers your users may use and cater to a wide spectrum of potential users. Using [feature detection](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection) allows you to deliver a usable experience to the broadest audience.
 
 Feature detection also helps with {{Glossary("Progressive Enhancement")}}, a design philosophy that makes it possible to deliver a great experience to as many users as possible.
 

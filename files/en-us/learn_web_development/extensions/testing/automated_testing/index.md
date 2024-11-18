@@ -1,10 +1,10 @@
 ---
 title: Introduction to automated testing
-slug: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
+slug: Learn_web_development/Extensions/Testing/Automated_testing
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Testing/Feature_detection", "Learn_web_development/Extensions/Testing/Your_own_automation_environment", "Learn_web_development/Extensions/Testing")}}
 
 Manually running tests on several browsers and devices, several times per day, can get tedious, and time-consuming. To handle this efficiently, you should become familiar with automation tools. In this article, we look at what is available, how to use task runners, and how to use the basics of commercial browser test automation apps such as Sauce Labs, BrowserStack, and TestingBot.
 
@@ -14,7 +14,7 @@ Manually running tests on several browsers and devices, several times per day, c
       <th scope="row">Prerequisites:</th>
       <td>
         Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS</a>, and <a href="/en-US/docs/Learn_web_development/Core/Scripting">JavaScript</a> languages;
-        an idea of the high level <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">principles of cross-browser testing</a>.
+        an idea of the high level <a href="/en-US/docs/Learn_web_development/Extensions/Testing/Introduction">principles of cross-browser testing</a>.
       </td>
     </tr>
     <tr>
@@ -422,7 +422,7 @@ Let's have a brief look at how we'd access the API using Node.js.
 
 Below we've also provided some other ready-made functions you might find useful when working with the BrowserStack restful API.
 
-This function returns summary details of all automated builds previously created (see the next article for [BrowserStack automated test details](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment#browserstack)):
+This function returns summary details of all automated builds previously created (see the next article for [BrowserStack automated test details](/en-US/docs/Learn_web_development/Extensions/Testing/Your_own_automation_environment#browserstack)):
 
 ```js
 function getBuilds() {
@@ -542,7 +542,7 @@ function getSessionDetails(session) {
 
 #### Advanced: Automated tests
 
-We'll cover [running automated BrowserStack tests](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment#browserstack) in the next article.
+We'll cover [running automated BrowserStack tests](/en-US/docs/Learn_web_development/Extensions/Testing/Your_own_automation_environment#browserstack) in the next article.
 
 ### Sauce Labs
 
@@ -699,4 +699,4 @@ This was quite a ride, but I'm sure you can start to see the benefits of using a
 
 In the next article, we'll look at setting up our own local automation system using Selenium, and how to combine that with services such as Sauce Labs, BrowserStack and TestingBot.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Testing/Feature_detection", "Learn_web_development/Extensions/Testing/Your_own_automation_environment", "Learn_web_development/Extensions/Testing")}}

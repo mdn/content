@@ -5596,8 +5596,15 @@
 /en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists	/en-US/docs/Learn_web_development/Core/Frameworks_libraries/Vue_rendering_lists
 /en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources	/en-US/docs/Learn_web_development/Core/Frameworks_libraries/Vue_resources
 /en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling	/en-US/docs/Learn_web_development/Core/Frameworks_libraries/Vue_styling
+/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing	/en-US/docs/Learn_web_development/Extensions/Testing
 /en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility	/en-US/docs/Learn_web_development/Core/Accessibility/Tooling
+/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing	/en-US/docs/Learn_web_development/Extensions/Testing/Automated_testing
+/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection	/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection
+/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS	/en-US/docs/Learn_web_development/Extensions/Testing/HTML_and_CSS
+/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction	/en-US/docs/Learn_web_development/Extensions/Testing/Introduction
 /en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript	/en-US/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript
+/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies	/en-US/docs/Learn_web_development/Extensions/Testing/Testing_strategies
+/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment	/en-US/docs/Learn_web_development/Extensions/Testing/Your_own_automation_environment
 /en-US/docs/Learn/Tools_and_testing/GitHub	/en-US/docs/Learn_web_development/Core/Version_control
 /en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line
 /en-US/docs/Learn/Understanding_URLs	/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL
