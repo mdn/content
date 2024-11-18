@@ -600,7 +600,7 @@ Some of the things you can do are:
 - Select the terminal button at the bottom of the editor view to open a terminal in the hosting environment.
   You can use this to run commands and tools in the environment.
   For example, you might use `node -v` to check the node version.
-- Interactive debugging in VS Code using the _GLITCH_ extension for VS Code.
+- Interactive debugging in VS Code using the GLITCH extension for VS Code.
 
 ## Example: Hosting on Railway
 
