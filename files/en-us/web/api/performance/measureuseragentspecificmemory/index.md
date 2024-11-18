@@ -105,13 +105,15 @@ Your site needs to be in a [secure context](/en-US/docs/Web/Security/Secure_Cont
 
 Two headers need to be set to cross-origin isolate your site:
 
-- [`Cross-Origin-Opener-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) with `same-origin` as value (protects your origin from attackers)
-- [`Cross-Origin-Embedder-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) with `require-corp` or `credentialless` as value (protects victims from your origin)
+- {{HTTPHeader("Cross-Origin-Opener-Policy")}} with `same-origin` as value (protects your origin from attackers)
+- {{HTTPHeader("Cross-Origin-Embedder-Policy")}} with `require-corp` or `credentialless` as value (protects victims from your origin)
 
 ```http
 Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp
 ```
+
+Also, the {{HTTPHeader("Permissions-Policy")}} header's {{HTTPHeader("Permissions-Policy/cross-origin-isolated","cross-origin-isolated")}} directive must not block use of this feature for current origin.
 
 To check if cross origin isolation has been successful, you can test against the {{domxref("Window.crossOriginIsolated")}} property or the {{domxref("WorkerGlobalScope.crossOriginIsolated")}} property available to window and worker contexts:
 
