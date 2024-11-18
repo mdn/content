@@ -39,7 +39,7 @@ A {{domxref("ToggleEvent")}}. Inherits from {{domxref("Event")}}.
 ## Examples
 
 The examples below demonstrates how the `beforetoggle` event might be used for a {{domxref("Popover_API", "popover", "", "nocode")}} or {{htmlelement("dialog")}} element.
-The same examples would work similarily on the other element types.
+The same examples would work similarly on the other element types.
 
 ### Basic example
 
