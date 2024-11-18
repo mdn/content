@@ -211,4 +211,4 @@ The final result looks like this:
 
 ## See also
 
-- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Compatibility of CSS properties](/en-US/docs/Learn_web_development/Extensions/Forms/Property_compatibility_table_for_form_controls)

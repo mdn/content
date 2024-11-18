@@ -144,7 +144,7 @@ As a general rule, don't trust anything that users enter into forms. Filling out
 
 To protect against this, you should thoroughly sanitize data entered into your forms:
 
-- You should implement client-side validation to inform users when they have entered data in the wrong format. You can do this using built-in HTML form validation features, or you can write your own validation code. See [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation) for more information.
+- You should implement client-side validation to inform users when they have entered data in the wrong format. You can do this using built-in HTML form validation features, or you can write your own validation code. See [Client-side form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation) for more information.
 - You should use output encoding when displaying user input in an application UI to safely display data exactly as a user typed it in and avoid it being executed as code. See [Output encoding](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html#output-encoding) for more information.
 
 You can't rely on client-side validation alone for security — it should be combined with server-side validation. Client-side validation enhances the user experience by providing instant validation feedback without having to wait for a round trip to the server. However, client-side validation is easy for a malicious party to bypass (for example, by turning off JavaScript in the browser to bypass JavaScript-based validation).

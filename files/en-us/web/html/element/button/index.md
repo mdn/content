@@ -7,7 +7,7 @@ browser-compat: html.elements.button
 
 {{HTMLSidebar}}
 
-The **`<button>`** [HTML](/en-US/docs/Web/HTML) element is an interactive element activated by a user with a mouse, keyboard, finger, voice command, or other assistive technology. Once activated, it then performs an action, such as submitting a [form](/en-US/docs/Learn/Forms) or opening a dialog.
+The **`<button>`** [HTML](/en-US/docs/Web/HTML) element is an interactive element activated by a user with a mouse, keyboard, finger, voice command, or other assistive technology. Once activated, it then performs an action, such as submitting a [form](/en-US/docs/Learn_web_development/Extensions/Forms) or opening a dialog.
 
 By default, HTML buttons are presented in a style resembling the platform the {{Glossary("user agent")}} runs on, but you can change buttons' appearance with [CSS](/en-US/docs/Web/CSS).
 
@@ -72,7 +72,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 - `formnovalidate`
 
-  - : If the button is a submit button, this Boolean attribute specifies that the form is not to be [validated](/en-US/docs/Learn/Forms/Form_validation) when it is submitted. If this attribute is specified, it overrides the [`novalidate`](/en-US/docs/Web/HTML/Element/form#novalidate) attribute of the button's form owner.
+  - : If the button is a submit button, this Boolean attribute specifies that the form is not to be [validated](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation) when it is submitted. If this attribute is specified, it overrides the [`novalidate`](/en-US/docs/Web/HTML/Element/form#novalidate) attribute of the button's form owner.
 
     This attribute is also available on [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) and [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit) elements.
 

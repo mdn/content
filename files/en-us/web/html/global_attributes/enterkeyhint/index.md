@@ -14,7 +14,7 @@ is an [enumerated](/en-US/docs/Glossary/Enumerated) attribute defining what acti
 
 ## Description
 
-[Form controls](/en-US/docs/Learn/Forms) (such as [`<textarea>`](/en-US/docs/Web/HTML/Element/textarea)
+[Form controls](/en-US/docs/Learn_web_development/Extensions/Forms) (such as [`<textarea>`](/en-US/docs/Web/HTML/Element/textarea)
 or [`<input>`](/en-US/docs/Web/HTML/Element/input) elements) or elements using
 [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) can specify an
 [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode) attribute to control what kind of virtual keyboard

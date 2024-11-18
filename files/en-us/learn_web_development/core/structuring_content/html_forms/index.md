@@ -82,6 +82,6 @@ That's all for now. We have covered images and captions in detail. In the next a
 
 ## See also
 
-- [Web forms — Working with user data](/en-US/docs/Learn/Forms)
+- [Web forms — Working with user data](/en-US/docs/Learn_web_development/Extensions/Forms)
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Planet_data_table", "Learn_web_development/Core/Structuring_content/Debugging_HTML", "Learn_web_development/Core/Structuring_content")}}

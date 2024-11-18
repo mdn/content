@@ -49,7 +49,7 @@ To see the code for this basic user interface sample, [view the source on GitHub
 
 ## Guides
 
-- [Learn forms: advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling)
+- [Learn forms: advanced form styling](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)
   - : Explains how {{CSSxRef("appearance")}} can be used to style form controls.
 
 ## Related concepts

@@ -401,7 +401,7 @@ This guideline relates to making sure core content is easy to discern from backg
         >,
         and
         <a
-          href="/en-US/docs/Learn/Forms/How_to_structure_a_web_form#multiple_labels"
+          href="/en-US/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form#multiple_labels"
           >Multiple labels</a
         >.
       </td>

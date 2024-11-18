@@ -975,9 +975,9 @@ For more information about adding color to elements in HTML, see:
 
 Also see:
 
-- [Styling HTML forms](/en-US/docs/Learn/Forms/Styling_web_forms)
-- [Advanced styling for HTML forms](/en-US/docs/Learn/Forms/Advanced_form_styling) and
-- the [compatibility table of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls).
+- [Styling HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
+- [Advanced styling for HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling) and
+- the [compatibility table of CSS properties](/en-US/docs/Learn_web_development/Extensions/Forms/Property_compatibility_table_for_form_controls).
 
 ## Additional features
 
@@ -1154,7 +1154,7 @@ The last line, setting the custom validity message to the empty string is vital.
 
 #### Custom validation error example
 
-If you want to present a custom error message when a field fails to validate, you need to use the [Constraint Validation API](/en-US/docs/Learn/Forms/Form_validation#validating_forms_using_javascript) available on `<input>` (and related) elements. Take the following form:
+If you want to present a custom error message when a field fails to validate, you need to use the [Constraint Validation API](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation#validating_forms_using_javascript) available on `<input>` (and related) elements. Take the following form:
 
 ```html
 <form>
@@ -1427,14 +1427,14 @@ Interactive elements such as form input should provide an area large enough that
 ## See also
 
 - [Form constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
-- [Your first HTML form](/en-US/docs/Learn/Forms/Your_first_form)
-- [How to structure an HTML form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
-- [The native form widgets](/en-US/docs/Learn/Forms/Basic_native_form_controls)
-- [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data)
-- [Form data validation](/en-US/docs/Learn/Forms/Form_validation)
-- [How to build custom form widgets](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [HTML forms in legacy browsers](/en-US/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
-- [Styling HTML forms](/en-US/docs/Learn/Forms/Styling_web_forms)
-- [Advanced styling for HTML forms](/en-US/docs/Learn/Forms/Advanced_form_styling)
-- [CSS property compatibility table](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Your first HTML form](/en-US/docs/Learn_web_development/Extensions/Forms/Your_first_form)
+- [How to structure an HTML form](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)
+- [The native form widgets](/en-US/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)
+- [Sending form data](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)
+- [Form data validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [How to build custom form widgets](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
+- [HTML forms in legacy browsers](/en-US/docs/Learn_web_development/Extensions/Forms/HTML_forms_in_legacy_browsers)
+- [Styling HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
+- [Advanced styling for HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)
+- [CSS property compatibility table](/en-US/docs/Learn_web_development/Extensions/Forms/Property_compatibility_table_for_form_controls)
 - [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)

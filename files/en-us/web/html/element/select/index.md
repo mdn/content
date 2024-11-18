@@ -21,7 +21,7 @@ The `<select>` element has some unique attributes you can use to control it, suc
 
 You can further nest {{HTMLElement("option")}} elements inside {{HTMLElement("optgroup")}} elements to create separate groups of options inside the dropdown. You can also include {{HTMLElement("hr")}} elements to create separators that add visual breaks between options.
 
-For further examples, see [The native form widgets: Drop-down content](/en-US/docs/Learn/Forms/Other_form_controls#drop-down_controls).
+For further examples, see [The native form widgets: Drop-down content](/en-US/docs/Learn_web_development/Extensions/Forms/Other_form_controls#drop-down_controls).
 
 ## Attributes
 
@@ -85,8 +85,8 @@ However, these properties don't produce a consistent result across browsers, and
 
 For more useful information on styling `<select>`, see:
 
-- [Styling HTML forms](/en-US/docs/Learn/Forms/Styling_web_forms)
-- [Advanced styling for HTML forms](/en-US/docs/Learn/Forms/Advanced_form_styling)
+- [Styling HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
+- [Advanced styling for HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)
 - The {{cssxref("field-sizing")}} property, which controls how `<select>` elements are sized in relation to their contained options.
 
 ## Accessibility

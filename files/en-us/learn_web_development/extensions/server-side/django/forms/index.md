@@ -29,7 +29,7 @@ In this tutorial, we'll show you how to work with HTML Forms in Django, and, in 
 
 ## Overview
 
-An [HTML Form](/en-US/docs/Learn/Forms) is a group of one or more fields/widgets on a web page, which can be used to collect information from users for submission to a server. Forms are a flexible mechanism for collecting user input because there are suitable widgets for entering many different types of data, including text boxes, checkboxes, radio buttons, date pickers and so on. Forms are also a relatively secure way of sharing data with the server, as they allow us to send data in `POST` requests with cross-site request forgery protection.
+An [HTML Form](/en-US/docs/Learn_web_development/Extensions/Forms) is a group of one or more fields/widgets on a web page, which can be used to collect information from users for submission to a server. Forms are a flexible mechanism for collecting user input because there are suitable widgets for entering many different types of data, including text boxes, checkboxes, radio buttons, date pickers and so on. Forms are also a relatively secure way of sharing data with the server, as they allow us to send data in `POST` requests with cross-site request forgery protection.
 
 While we haven't created any forms in this tutorial so far, we've already encountered them in the Django Admin site — for example, the screenshot below shows a form for editing one of our [Book](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Models) models, comprised of a number of selection lists and text editors.
 
@@ -41,7 +41,7 @@ In this tutorial, we're going to show you a few of the ways you can create and w
 
 ## HTML Forms
 
-First, a brief overview of [HTML Forms](/en-US/docs/Learn/Forms). Consider a simple HTML form, with a single text field for entering the name of some "team", and its associated label:
+First, a brief overview of [HTML Forms](/en-US/docs/Learn_web_development/Extensions/Forms). Consider a simple HTML form, with a single text field for entering the name of some "team", and its associated label:
 
 ![Simple name field example in HTML form](form_example_name_field.png)
 

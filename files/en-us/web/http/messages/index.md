@@ -69,7 +69,7 @@ Not all requests have one: requests with a {{HTTPMethod("GET")}} _[HTTP method](
 Bodies can be broadly divided into two categories:
 
 - Single-resource bodies, consisting of one single file, defined by the two headers: {{HTTPHeader("Content-Type")}} and {{HTTPHeader("Content-Length")}}.
-- [Multiple-resource bodies](/en-US/docs/Web/HTTP/MIME_types#multipartform-data), consisting of a multipart body, each containing a different bit of information. This is typically associated with [HTML Forms](/en-US/docs/Learn/Forms).
+- [Multiple-resource bodies](/en-US/docs/Web/HTTP/MIME_types#multipartform-data), consisting of a multipart body, each containing a different bit of information. This is typically associated with [HTML Forms](/en-US/docs/Learn_web_development/Extensions/Forms).
 
 ## HTTP Responses
 

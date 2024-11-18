@@ -166,7 +166,7 @@ Putting it altogether, within the `<fieldset>`, we include two paragraphs ({{HTM
 </form>
 ```
 
-We encourage you to [learn more about making accessible web forms](/en-US/docs/Learn/Forms).
+We encourage you to [learn more about making accessible web forms](/en-US/docs/Learn_web_development/Extensions/Forms).
 
 ### Temporary hard-coded results text
 

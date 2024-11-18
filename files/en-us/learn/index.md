@@ -44,7 +44,7 @@ The following is a list of all the topics we cover in the MDN learning area.
   - : CSS is the language that we use to control our web content's style and layout, as well as adding behavior like animation. This topic provides comprehensive coverage of CSS.
 - [JavaScript — Dynamic client-side scripting](/en-US/docs/Learn_web_development/Core/Scripting)
   - : JavaScript is the scripting language used to add dynamic functionality to web pages. This topic teaches all the essentials needed to become comfortable with writing and understanding JavaScript.
-- [Web forms — Working with user data](/en-US/docs/Learn/Forms)
+- [Web forms](/en-US/docs/Learn_web_development/Extensions/Forms)
   - : Web forms are a potent tool for interacting with users — most commonly, they are used for collecting data from users, or allowing them to control a user interface. In the articles listed below, we'll cover all the essential aspects of structuring, styling, and interacting with web forms.
 - [Accessibility — make the web usable by everyone](/en-US/docs/Learn_web_development/Core/Accessibility)
   - : Accessibility is the practice of making web content available to as many people as possible regardless of disability, device, locale, or other differentiating factors. This topic gives you all you need to know.

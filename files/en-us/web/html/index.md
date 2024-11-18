@@ -32,7 +32,7 @@ Our [Learn web development](/en-US/docs/Learn_web_development) section's [Struct
 
 ## Advanced topics
 
-- [HTML forms](/en-US/docs/Learn/Forms)
+- [HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms)
   - : Forms are a very important part of the Web — these provide much of the functionality you need for interacting with websites, e.g. registering and logging in, sending feedback, buying products, and more. This module gets you started with creating the client-side/front-end parts of forms.
 - [CORS enabled image](/en-US/docs/Web/HTML/CORS_enabled_image)
   - : The [`crossorigin`](/en-US/docs/Web/HTML/Element/img#crossorigin) attribute, in combination with an appropriate {{glossary("CORS")}} header, allows images defined by the {{HTMLElement("img")}} element to be loaded from foreign origins and used in a {{HTMLElement("canvas")}} element as if they were being loaded from the current origin.

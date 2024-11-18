@@ -131,7 +131,7 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 
   - : Learn how to use the {{CSSXref(":target")}} pseudo-class to style the target element a URL's fragment identifier.
 
-- [Learn: UI pseudo-classes](/en-US/docs/Learn/Forms/UI_pseudo-classes)
+- [Learn: UI pseudo-classes](/en-US/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes)
 
   - : Learn the different UI pseudo-classes available for styling forms in different states.
 

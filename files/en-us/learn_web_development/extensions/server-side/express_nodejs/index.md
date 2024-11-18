@@ -36,7 +36,7 @@ Before starting this module you will need to understand what server-side web pro
 - [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data)
   - : We're now ready to add the pages that display the _LocalLibrary_ website books and other data. The pages will include a home page that shows how many records we have of each model type and list and detail pages for all of our models. Along the way, we'll gain practical experience in getting records from the database and using templates.
 - [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms)
-  - : In this tutorial we'll show you how to work with [HTML Forms](/en-US/docs/Learn/Forms) in Express, using Pug, and in particular how to write forms to create, update, and delete documents from the database.
+  - : In this tutorial we'll show you how to work with [HTML Forms](/en-US/docs/Learn_web_development/Extensions/Forms) in Express, using Pug, and in particular how to write forms to create, update, and delete documents from the database.
 - [Express Tutorial Part 7: Deploying to production](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment)
   - : Now you've created an awesome _LocalLibrary_ website, you're going to want to install it on a public web server so that it can be accessed by library staff and members over the Internet. This article provides an overview of how you might go about finding a host to deploy your website, and what you need to do in order to get your site ready for production.
 

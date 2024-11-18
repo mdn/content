@@ -253,7 +253,7 @@ https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=YOUR-API-KEY-HE
 > You can find more details of what URL parameters can be included at the [NYTimes developer docs](https://developer.nytimes.com/).
 
 > [!NOTE]
-> The example has rudimentary form data validation — the search term field has to be filled in before the form can be submitted (achieved using the `required` attribute), and the date fields have `pattern` attributes specified, which means they won't submit unless their values consist of 8 numbers (`pattern="[0-9]{8}"`). See [Form data validation](/en-US/docs/Learn/Forms/Form_validation) for more details on how these work.
+> The example has rudimentary form data validation — the search term field has to be filled in before the form can be submitted (achieved using the `required` attribute), and the date fields have `pattern` attributes specified, which means they won't submit unless their values consist of 8 numbers (`pattern="[0-9]{8}"`). See [Form data validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation) for more details on how these work.
 
 ### Requesting data from the API
 

@@ -341,7 +341,7 @@ This guideline centers around helping users enter correct information when requi
       </td>
       <td>
         See
-        <a href="/en-US/docs/Learn/Forms/Form_validation"
+        <a href="/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation"
           >Form data validation</a
         >
         for comprehensive validation information, and
@@ -379,7 +379,7 @@ This guideline centers around helping users enter correct information when requi
             >
           </li>
           <li>
-            <a href="/en-US/docs/Learn/Forms/How_to_structure_a_web_form"
+            <a href="/en-US/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form"
               >How to structure an HTML form</a
             >
           </li>

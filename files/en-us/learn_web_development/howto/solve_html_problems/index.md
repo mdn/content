@@ -58,10 +58,10 @@ Beyond the basics, HTML is very rich and offers advanced features for solving co
 
 ### Forms
 
-Forms are a complex HTML structure made to send data from a webpage to a web server. We encourage you to go over our [full dedicated guide](/en-US/docs/Learn/Forms). Here is where you should start:
+Forms are a complex HTML structure made to send data from a webpage to a web server. We encourage you to go over our [full dedicated guide](/en-US/docs/Learn_web_development/Extensions/Forms). Here is where you should start:
 
-- [How to create a simple Web form](/en-US/docs/Learn/Forms/Your_first_form)
-- [How to structure a Web form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
+- [How to create a simple Web form](/en-US/docs/Learn_web_development/Extensions/Forms/Your_first_form)
+- [How to structure a Web form](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)
 
 ### Tabular information
 

@@ -46,7 +46,7 @@ The most performant, least blocking JavaScript you can use is JavaScript that yo
 - **Consider a simpler solution**: You might have a flashy, interesting solution to implement, but consider whether your users will appreciate it. Would they prefer something simpler?
 - **Remove unused code:** This may sound obvious, but it is surprising how many developers forget to clean up unused functionality that was added during the development process. You need to be careful and deliberate about what is added and removed. All script gets parsed, whether it is used or not; therefore, a quick win to speed up downloads would be to get rid of any functionality not being used. Consider also that often you will only use a small amount of the functionality available in a framework. Is it possible to create a custom build of the framework that only contains the part that you need?
 - **Consider built-in browser features**: It might be that you can use a feature the browser already has, rather than creating your own via JavaScript. For example:
-  - Use [built-in client-side form validation](/en-US/docs/Learn/Forms/Form_validation#using_built-in_form_validation).
+  - Use [built-in client-side form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation#using_built-in_form_validation).
   - Use the browser's own {{htmlelement("video")}} player.
   - Use [CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) instead of a JavaScript animation library (see also [Handling animations](#handling_javascript_animations)).
 
