@@ -7,10 +7,13 @@ spec-urls: https://datatracker.ietf.org/doc/html/rfc9530
 
 {{HTTPSidebar}}
 
-The HTTP **`Repr-Digest`** {{Glossary("Request header", "request")}} and {{Glossary("Response header", "response header")}} provides a {{Glossary("digest")}} of the [selected representation](https://www.rfc-editor.org/rfc/rfc9110#section-6.4) of the target resource.
+The HTTP **`Repr-Digest`** {{Glossary("Request header", "request")}} and {{Glossary("Response header", "response header")}} provides a {{Glossary("digest")}} of the selected representation of the target resource.
 
-The representation digest applies to the whole resource rather than the encoding or chunking of the messages that are used to send it. This differs from {HTTPHeader("Content-Digest")}} which applies to the content of a particular message, and is therefore is affected by the {{HTTPHeader("Content-Encoding")}} and {{HTTPHeader("Content-Range")}} of each message.
-Furthermore, [Content Negotiation](/en-US/docs/Web/HTTP/Content_negotiation) can result in different selected representations which results in different representation digests.
+The _selected representation_ is the specific format of a resource chosen through [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation).
+Details about this representation can be determined from the response's {{Glossary("Representation header", "representation headers")}}, such as {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Type")}}, and {{HTTPHeader("Content-Encoding")}}.
+
+The representation digest applies to the whole resource rather than the encoding or chunking of the messages that are used to send it.
+This differs from {{HTTPHeader("Content-Digest")}} which applies to the content of a particular message, and is therefore is affected by the {{HTTPHeader("Content-Encoding")}} and {{HTTPHeader("Content-Range")}} of each message.
 
 <table class="properties">
   <tbody>
@@ -42,10 +45,8 @@ Repr-Digest: <digest-algorithm>=<digest-value>,<digest-algorithm>=<digest-value>
     The insecure (legacy) registered digest algorithms are: `md5`, `sha` (SHA-1), `unixsum`, `unixcksum`, `adler` (ADLER32) and `crc32c`.
 - `<digest-value>`
   - : The digest in bytes of the representation using the `<digest-algorithm>`.
-    The choice of digest algorithm also determines the encoding to use: `sha-512` and `sha-256` use base64 encoding, while some legacy digest algorithms such as `unixsum` use a decimal integer.
+    The choice of digest algorithm also determines the encoding to use: `sha-512` and `sha-256` use {{Glossary("base64")}} encoding, while some legacy digest algorithms such as `unixsum` use a decimal integer.
     In contrast to earlier drafts of the specification, the standard-base64-encoded digest bytes are wrapped in colons (`:`, ASCII 0x3A) as part of the [dictionary syntax](https://www.rfc-editor.org/rfc/rfc8941#name-byte-sequences).
-
-### Usage notes
 
 Usage of insecure digest algorithms is discouraged as collisions can realistically be forced, rendering the digest's usefulness weak.
 Unless working with legacy systems (which is unlikely since most will expect the legacy {{HTTPHeader("Digest")}} header and not understand this specification), consider omitting a `Repr-Digest` instead of including one with an insecure digest algorithm.
@@ -56,7 +57,6 @@ Unless working with legacy systems (which is unlikely since most will expect the
 
 An HTTP server may send the whole representation unencoded in a single message.
 In this case, `Repr-Digest` and `Content-Digest` have equal values for the same digest algorithms:
-In this case, `Repr-Digest` and `Content-Digest` have equal values for the same digest algorithms:
 
 ```http
 …
@@ -64,7 +64,7 @@ Repr-Digest: sha-256=:AEGPTgUMw5e96wxZuDtpfm23RBU3nFwtgY5fw4NYORo=:
 Content-Digest: sha-256=:AEGPTgUMw5e96wxZuDtpfm23RBU3nFwtgY5fw4NYORo=:
 …
 Content-Type: text/yaml
-Content-Encoding: identity
+Content-Encoding: br
 Content-Length: 38054
 Content-Range: 0-38053/38054
 …
@@ -97,7 +97,7 @@ Repr-Digest: sha-256=:AEGPTgUMw5e96wxZuDtpfm23RBU3nFwtgY5fw4NYORo=:, sha-512=:U5
 Content-Digest: sha-256=:rv9Jivc4TmcacLUshzN3OdX7Hz+ORnQRaiTaIKZQ0zk=:
 …
 Content-Type: text/html; charset=utf-8
-Content-Encoding: deflate, deflate, deflate
+Content-Encoding: zstd
 …
 
 [message body]

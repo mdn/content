@@ -45,7 +45,7 @@ A comma separated list of brands in the user agent brand list, and their associa
 The syntax for a single entry has the following format:
 
 ```http
-Sec-CH-UA: "<brand>";v="<significant version>", ...
+Sec-CH-UA: "<brand>";v="<significant version>", …
 ```
 
 ### Directives
@@ -55,7 +55,7 @@ Sec-CH-UA: "<brand>";v="<significant version>", ...
 - `<significant version>`
   - : The "marketing" version number associated with distinguishable web-exposed features.
 
-#### Description
+## Description
 
 A brand is a commercial name for the user agent like: Chromium, Opera, Google Chrome, Microsoft Edge, Firefox, and Safari.
 A user agent might have several associated brands.

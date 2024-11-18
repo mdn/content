@@ -15,6 +15,9 @@ This could be for reasons such as high transfer costs, slow connection speeds, e
 `Save-Data` is a [low entropy hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints), and hence may be sent by the client even if not requested by the server using an {{HTTPHeader("Accept-CH")}} response header.
 Further, it should be used to reduce data sent to the client irrespective of the values of other client hints that indicate network capability, like {{HTTPHeader("Downlink")}} and {{HTTPHeader("RTT")}}.
 
+A value of `On` indicates explicit user opt-in into a reduced data usage mode on the client.
+When communicated to origins, this allows them to deliver alternative content to reduce the data downloaded such as smaller image and video resources, different markup and styling, disabled polling and automatic updates, and so on.
+
 > [!NOTE]
 > Disabling HTTP/2 Server Push ({{RFC("7540", "Server Push", "8.2")}}) may reduce data downloads.
 > Note that this feature is no longer supported by default in most major browser engines.
@@ -52,11 +55,6 @@ Save-Data: <sd-token>
 - `<sd-token>`
   - : A value indicating whether the client wants to opt in to reduced data usage mode.
     `on` indicates yes, while `off` (the default) indicates no.
-
-### Description
-
-A value of `On` indicates explicit user opt-in into a reduced data usage mode on the client.
-When communicated to origins, this allows them to deliver alternative content to reduce the data downloaded such as smaller image and video resources, different markup and styling, disabled polling and automatic updates, and so on.
 
 ## Examples
 
@@ -115,7 +113,7 @@ Content-Type: image/jpeg
 
 ## See also
 
-- CSS @media feature [`prefers-reduced-data`](/en-US/docs/Web/CSS/@media/prefers-reduced-data) {{experimental_inline}}
+- CSS `@media` feature [`prefers-reduced-data`](/en-US/docs/Web/CSS/@media/prefers-reduced-data) {{experimental_inline}}
 - {{HTTPHeader("Vary")}} header which indicates that the content served varies depending on the value of `Save-Data` (see [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Caching#vary))
 - {{domxref("NetworkInformation.saveData")}}
 - [Help Your Users `Save-Data`](https://css-tricks.com/help-users-save-data/) on css-tricks.com

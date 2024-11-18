@@ -52,13 +52,13 @@ Sec-CH-UA-Full-Version-List: "<brand>";v="<full version>", ...
 - `<full version>`
   - : A full version number, such as 98.0.4750.0.
 
-#### Description
+## Description
 
 A brand is a commercial name for the user agent like: Chromium, Opera, Google Chrome, Microsoft Edge, Firefox, and Safari.
 A user agent might have several associated brands.
-For example, Opera, Chrome, and Edge are all based on Chromium, and will provide both brands in the **`Sec-CH-UA-Full-Version-List`** header.
+For example, Opera, Chrome, and Edge are all based on Chromium, and will provide both brands in the `Sec-CH-UA-Full-Version-List` header.
 
-The header therefore allows the server to customize its response based on both shared brands and on particular customizations in their specific respective builds.
+The header allows the server to customize its response based on both shared brands and on particular customizations in their specific respective builds.
 
 ## Examples
 

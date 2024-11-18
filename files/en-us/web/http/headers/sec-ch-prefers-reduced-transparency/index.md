@@ -9,7 +9,7 @@ browser-compat: http.headers.Sec-CH-Prefers-Reduced-Transparency
 
 {{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The HTTP **`Sec-CH-Prefers-Reduced-Transparency`** {{Glossary("request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user_preference_media_features_client_hints) which indicates the user agent's preference for reduced transparency.
+The HTTP **`Sec-CH-Prefers-Reduced-Transparency`** {{Glossary("request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user_preference_media_features_client_hints) that indicates the user agent's preference for reduced transparency.
 
 If a server signals to a client via the {{httpheader("Accept-CH")}} header that it accepts `Sec-CH-Prefers-Reduced-Transparency`, the client can then respond with this header to indicate the user's preference for reduced transparency. The server can send the client appropriately adapted content — for example, CSS or images — to reduce the transparency of the content.
 
