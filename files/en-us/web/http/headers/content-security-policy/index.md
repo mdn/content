@@ -150,11 +150,10 @@ Reporting directives control the destination URL for CSP violation reports in `C
 ### Other directives
 
 - {{CSP("require-trusted-types-for")}} {{experimental_inline}}
-  - : Enforces [Trusted Types](https://w3c.github.io/trusted-types/dist/spec/) at the DOM XSS injection sinks.
+  - : Enforces [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) at the DOM XSS injection sinks.
 - {{CSP("trusted-types")}} {{experimental_inline}}
-  - : Used to specify an allowlist of [Trusted Types](https://w3c.github.io/trusted-types/dist/spec/)
-    policies. Trusted Types allows applications to lock down DOM XSS injection sinks to
-    only accept non-spoofable, typed values in place of strings.
+  - : Used to specify an allowlist of [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) policies.
+    Trusted Types allows applications to lock down DOM XSS injection sinks to only accept non-spoofable, typed values in place of strings.
 - {{CSP("upgrade-insecure-requests")}}
   - : Instructs user agents to treat all of a site's insecure URLs (those served over
     HTTP) as though they have been replaced with secure URLs (those served over HTTPS).
