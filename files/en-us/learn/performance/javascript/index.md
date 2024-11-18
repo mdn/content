@@ -256,7 +256,7 @@ function loop() {
 loop();
 ```
 
-You can find a nice introduction to canvas animations at [Drawing graphics > Animations](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics#animations), and a more in-depth example at [Object building practice](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice). You can also find a full set of canvas tutorials at [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
+You can find a nice introduction to canvas animations at [Drawing graphics > Animations](/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics#animations), and a more in-depth example at [Object building practice](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice). You can also find a full set of canvas tutorials at [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
 
 ## Optimizing event performance
 

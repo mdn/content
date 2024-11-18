@@ -240,7 +240,7 @@ The following guides and tutorials are a great resource to learn how to comprehe
 
 ## See also
 
-- [Drawing graphics](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
+- [Drawing graphics](/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics)
 - [WebGL API](/en-US/docs/Web/API/WebGL_API): Accelerated 2D and 3D graphics on the web
 - [Canvas API](/en-US/docs/Web/API/Canvas_API): 2D drawing for the web
 - [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial)

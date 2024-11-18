@@ -87,7 +87,7 @@ const myObject = {
 - [What is an event?](/en-US/docs/Learn_web_development/Core/Scripting/Events)
 - [What is an object?](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics#object_basics)
 - [What is JSON?](/en-US/docs/Learn_web_development/Core/Scripting/JSON#no_really_what_is_json)
-- [What is a web API?](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction#what_are_apis)
+- [What is a web API?](/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction#what_are_apis)
 - [What is the DOM?](/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting#the_document_object_model)
 
 ## Basic use cases

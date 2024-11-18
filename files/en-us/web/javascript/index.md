@@ -39,7 +39,7 @@ Head over to our [Learning Area JavaScript topic](/en-US/docs/Learn/JavaScript) 
   - : The object-oriented nature of JavaScript is important to understand if you want to go further with your knowledge of the language and write more efficient code, therefore we've provided this module to help you.
 - [Asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous)
   - : Discusses asynchronous JavaScript, why it is important, and how it can be used to effectively handle potential blocking operations such as fetching resources from a server.
-- [Client-side web APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs)
+- [Client-side web APIs](/en-US/docs/Learn_web_development/Extensions/Client-side_APIs)
   - : Explores what APIs are, and how to use some of the most common APIs you'll come across often in your development work.
 
 ### JavaScript guide

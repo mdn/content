@@ -5286,7 +5286,7 @@
 /en-US/docs/Learn/CSS/Using_CSS_in_a_web_page	/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS
 /en-US/docs/Learn/Checking_that_your_web_site_is_working_properly	/en-US/docs/Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_working_properly
 /en-US/docs/Learn/Choose,_Install_and_set_up_a_text_editor	/en-US/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors
-/en-US/docs/Learn/Client-side_web_APIs	/en-US/docs/Learn/JavaScript/Client-side_web_APIs
+/en-US/docs/Learn/Client-side_web_APIs	/en-US/docs/Learn_web_development/Extensions/Client-side_APIs
 /en-US/docs/Learn/Coding-Scripting	/en-US/docs/Learn
 /en-US/docs/Learn/Common_questions/Available_text_editors	/en-US/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors
 /en-US/docs/Learn/Common_questions/Checking_that_your_web_site_is_working_properly	/en-US/docs/Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_working_properly
@@ -5458,8 +5458,14 @@
 /en-US/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions	/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Functions
 /en-US/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Loops	/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Loops
 /en-US/docs/Learn/JavaScript/Building_blocks/conditionals	/en-US/docs/Learn_web_development/Core/Scripting/Conditionals
+/en-US/docs/Learn/JavaScript/Client-side_web_APIs	/en-US/docs/Learn_web_development/Extensions/Client-side_APIs
+/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage	/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Client-side_storage
+/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics	/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics
 /en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data	/en-US/docs/Learn_web_development/Core/Scripting/Network_requests
+/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction	/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction
 /en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents	/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting
+/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs	/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs
+/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs	/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs
 /en-US/docs/Learn/JavaScript/First_steps	/en-US/docs/Learn_web_development/Core/Scripting
 /en-US/docs/Learn/JavaScript/First_steps/A_first_splash	/en-US/docs/Learn_web_development/Core/Scripting/A_first_splash
 /en-US/docs/Learn/JavaScript/First_steps/Arrays	/en-US/docs/Learn_web_development/Core/Scripting/Arrays

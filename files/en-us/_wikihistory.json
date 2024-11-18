@@ -6922,124 +6922,6 @@
       "Sheppy"
     ]
   },
-  "Learn/JavaScript/Client-side_web_APIs": {
-    "modified": "2020-07-16T22:32:38.327Z",
-    "contributors": [
-      "chrisdavidmills",
-      "xuxintao",
-      "thenoelman",
-      "chirag7145",
-      "dvincent",
-      "david_ross",
-      "sideshowbarker",
-      "utkarshbhatt12"
-    ]
-  },
-  "Learn/JavaScript/Client-side_web_APIs/Client-side_storage": {
-    "modified": "2020-09-16T10:15:50.995Z",
-    "contributors": [
-      "chrisdavidmills",
-      "JohnnyMu-Cn",
-      "stevemasta34",
-      "ckashby",
-      "SphinxKnight",
-      "VincentHead",
-      "kruschk",
-      "nsangwan",
-      "sideshowbarker",
-      "Milind-Gawande",
-      "Eduardo06sp",
-      "reddraggone9",
-      "Ilphrin",
-      "Sheppy",
-      "TheHumbleGhost"
-    ]
-  },
-  "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics": {
-    "modified": "2020-09-16T07:38:44.679Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Rafael_Green",
-      "kim.tranberg",
-      "ckashby",
-      "kruschk",
-      "imchriskitchens",
-      "ionicpanda",
-      "2alin",
-      "shivansh11",
-      "stephaniehobson",
-      "TheHumbleGhost",
-      "Sheppy"
-    ]
-  },
-  "Learn/JavaScript/Client-side_web_APIs/Introduction": {
-    "modified": "2020-07-16T22:32:43.814Z",
-    "contributors": [
-      "chrisdavidmills",
-      "A.Faturechi",
-      "ckashby",
-      "CodeDotJS",
-      "kruschk",
-      "syntaxval",
-      "MariCastell",
-      "agnelvishal",
-      "pontusdevelopment",
-      "sideshowbarker",
-      "DToDelete",
-      "peterschussheim",
-      "thenoelman",
-      "McFarJ",
-      "rmorabia",
-      "Serioth",
-      "utkarshbhatt12",
-      "RayannTedds",
-      "stephaniehobson",
-      "Sheppy",
-      "BrunkBeard",
-      "psy054duck",
-      "vaibhav.vgc",
-      "sngv"
-    ]
-  },
-  "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs": {
-    "modified": "2020-07-16T22:32:53.676Z",
-    "contributors": [
-      "UnorthodoxThing",
-      "chrisdavidmills",
-      "kruschk",
-      "ZrSiO4",
-      "markdudevad",
-      "wbamberg",
-      "MPDSilva",
-      "smoothie1998",
-      "sideshowbarker",
-      "RafeyIqbalRahman",
-      "markalanrichards",
-      "SteviBee",
-      "championshuttler",
-      "dlwagner",
-      "minguoITnan",
-      "stephaniehobson"
-    ]
-  },
-  "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs": {
-    "modified": "2020-09-03T10:37:16.888Z",
-    "contributors": [
-      "wlt",
-      "Rafael_Green",
-      "nigelbpeck",
-      "chrisdavidmills",
-      "kruschk",
-      "Sheppy",
-      "roy-vanegas",
-      "kenjwho",
-      "2alin",
-      "dreamerll",
-      "stephaniehobson",
-      "david_ross",
-      "BrunkBeard"
-    ]
-  },
   "Learn/Learning_and_getting_help": {
     "modified": "2020-10-12T05:38:01.632Z",
     "contributors": [
@@ -10811,6 +10693,124 @@
   "Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills:_Object-oriented_JavaScript": {
     "modified": "2020-08-12T12:48:24.778Z",
     "contributors": ["A.Faturechi", "abinashLin", "chrisdavidmills"]
+  },
+  "Learn_web_development/Extensions/Client-side_APIs": {
+    "modified": "2020-07-16T22:32:38.327Z",
+    "contributors": [
+      "chrisdavidmills",
+      "xuxintao",
+      "thenoelman",
+      "chirag7145",
+      "dvincent",
+      "david_ross",
+      "sideshowbarker",
+      "utkarshbhatt12"
+    ]
+  },
+  "Learn_web_development/Extensions/Client-side_APIs/Client-side_storage": {
+    "modified": "2020-09-16T10:15:50.995Z",
+    "contributors": [
+      "chrisdavidmills",
+      "JohnnyMu-Cn",
+      "stevemasta34",
+      "ckashby",
+      "SphinxKnight",
+      "VincentHead",
+      "kruschk",
+      "nsangwan",
+      "sideshowbarker",
+      "Milind-Gawande",
+      "Eduardo06sp",
+      "reddraggone9",
+      "Ilphrin",
+      "Sheppy",
+      "TheHumbleGhost"
+    ]
+  },
+  "Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics": {
+    "modified": "2020-09-16T07:38:44.679Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Rafael_Green",
+      "kim.tranberg",
+      "ckashby",
+      "kruschk",
+      "imchriskitchens",
+      "ionicpanda",
+      "2alin",
+      "shivansh11",
+      "stephaniehobson",
+      "TheHumbleGhost",
+      "Sheppy"
+    ]
+  },
+  "Learn_web_development/Extensions/Client-side_APIs/Introduction": {
+    "modified": "2020-07-16T22:32:43.814Z",
+    "contributors": [
+      "chrisdavidmills",
+      "A.Faturechi",
+      "ckashby",
+      "CodeDotJS",
+      "kruschk",
+      "syntaxval",
+      "MariCastell",
+      "agnelvishal",
+      "pontusdevelopment",
+      "sideshowbarker",
+      "DToDelete",
+      "peterschussheim",
+      "thenoelman",
+      "McFarJ",
+      "rmorabia",
+      "Serioth",
+      "utkarshbhatt12",
+      "RayannTedds",
+      "stephaniehobson",
+      "Sheppy",
+      "BrunkBeard",
+      "psy054duck",
+      "vaibhav.vgc",
+      "sngv"
+    ]
+  },
+  "Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs": {
+    "modified": "2020-07-16T22:32:53.676Z",
+    "contributors": [
+      "UnorthodoxThing",
+      "chrisdavidmills",
+      "kruschk",
+      "ZrSiO4",
+      "markdudevad",
+      "wbamberg",
+      "MPDSilva",
+      "smoothie1998",
+      "sideshowbarker",
+      "RafeyIqbalRahman",
+      "markalanrichards",
+      "SteviBee",
+      "championshuttler",
+      "dlwagner",
+      "minguoITnan",
+      "stephaniehobson"
+    ]
+  },
+  "Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs": {
+    "modified": "2020-09-03T10:37:16.888Z",
+    "contributors": [
+      "wlt",
+      "Rafael_Green",
+      "nigelbpeck",
+      "chrisdavidmills",
+      "kruschk",
+      "Sheppy",
+      "roy-vanegas",
+      "kenjwho",
+      "2alin",
+      "dreamerll",
+      "stephaniehobson",
+      "david_ross",
+      "BrunkBeard"
+    ]
   },
   "Learn_web_development/Getting_started/Environment_setup/Command_line": {
     "modified": "2020-10-18T22:03:14.400Z",

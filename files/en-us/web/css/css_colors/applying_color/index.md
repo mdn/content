@@ -210,4 +210,4 @@ CSS isn't the only web technology that supports color. Other examples include:
 - [CSS color values](/en-US/docs/Web/CSS/CSS_colors/Color_values) guide
 - [Using color wisely](/en-US/docs/Web/CSS/CSS_colors/Using_color_wisely)
 - [CSS color module](/en-US/docs/Web/CSS/CSS_colors)
-- [Drawing graphics](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
+- [Drawing graphics](/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics)

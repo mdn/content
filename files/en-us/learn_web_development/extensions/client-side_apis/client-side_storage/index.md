@@ -1,12 +1,12 @@
 ---
 title: Client-side storage
-slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
+slug: Learn_web_development/Extensions/Client-side_APIs/Client-side_storage
 page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}
 
-{{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics", "Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 Modern web browsers support a number of ways for websites to store data on the user's computer — with the user's permission — then retrieve it when necessary. This lets you persist data for long-term storage, save sites or documents for offline use, retain user-specific settings for your site, and more. This article explains the very basics of how these work.
 
@@ -15,22 +15,19 @@ Modern web browsers support a number of ways for websites to store data on the u
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        JavaScript basics (see
-        <a href="/en-US/docs/Learn/JavaScript/First_steps">first steps</a>,
-        <a href="/en-US/docs/Learn_web_development/Core/Scripting"
-          >building blocks</a
-        >,
-        <a href="/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects">JavaScript objects</a>),
-        the
-        <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
-          >basics of Client-side APIs</a
-        >
+        Familiarity with <a href="/en-US/docs/Learn_web_development/Core/Structuring_content">HTML</a>, <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS</a>, and <a href="/en-US/docs/Learn_web_development/Core/Scripting">JavaScript</a>, especially <a href="/en-US/docs/Learn_web_development/Core/Scripting/Object_basics">JavaScript object basics</a> and core API coverage such as <a href="/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting">DOM scripting</a> and <a href="/en-US/docs/Learn_web_development/Core/Scripting/Network_requests">Network requests</a>.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">Learning outcomes:</th>
       <td>
-        To learn how to use client-side storage APIs to store application data.
+        <ul>
+          <li>The concepts of client-side storage and what the key technologies are to enable it — Web Storage API, cookies, Cache API, and the IndexedDB API.</li>
+          <li>Key use cases — maintaining state across reloads, persisting login and user personalization data, and local/offline working.</li>
+          <li>Using Web Storage for simple key-value pair storage, controlled by JavaScript.</li>
+          <li>Using IndexedDB to store more complex, structured data.</li>
+          <li>Using the Cache API and service workers for offline use-cases.</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -773,4 +770,4 @@ That's it for now. We hope you've found our rundown of client-side storage techn
 - [Cookies](/en-US/docs/Web/HTTP/Cookies)
 - [Service worker API](/en-US/docs/Web/API/Service_Worker_API)
 
-{{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics", "Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}

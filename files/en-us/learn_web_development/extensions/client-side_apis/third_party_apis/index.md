@@ -1,10 +1,12 @@
 ---
 title: Third-party APIs
-slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
+slug: Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Network_requests", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
+{{LearnSidebar}}
+
+{{PreviousMenu("Learn_web_development/Extensions/Client-side_APIs/Client-side_storage", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 The APIs we've covered so far are built into the browser, but not all APIs are. Many large websites and services such as Google Maps, Twitter, Facebook, PayPal, etc. provide APIs allowing developers to make use of their data (e.g. displaying your twitter stream on your blog) or services (e.g. using Facebook login to log in your users). This article looks at the difference between browser APIs and 3rd party APIs and shows some typical uses of the latter.
 
@@ -13,23 +15,18 @@ The APIs we've covered so far are built into the browser, but not all APIs are. 
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        JavaScript basics (see
-        <a href="/en-US/docs/Learn/JavaScript/First_steps">first steps</a>,
-        <a href="/en-US/docs/Learn_web_development/Core/Scripting"
-          >building blocks</a
-        >,
-        <a href="/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects">JavaScript objects</a>),
-        the
-        <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
-          >basics of Client-side APIs</a
-        >
+        Familiarity with <a href="/en-US/docs/Learn_web_development/Core/Structuring_content">HTML</a>, <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS</a>, and <a href="/en-US/docs/Learn_web_development/Core/Scripting">JavaScript</a>, especially <a href="/en-US/docs/Learn_web_development/Core/Scripting/Object_basics">JavaScript object basics</a> and core API coverage such as <a href="/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting">DOM scripting</a> and <a href="/en-US/docs/Learn_web_development/Core/Scripting/Network_requests">Network requests</a>.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">Learning outcomes:</th>
       <td>
-        To learn how third-party APIs work, and how to use them to enhance your
-        websites.
+        <ul>
+          <li>The concepts behind third-party APIs and associated patterns such as API keys.</li>
+          <li>Using a third-party map API.</li>
+          <li>Using a RESTful API.</li>
+          <li>Using Google's YouTube APIs.</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -46,7 +43,7 @@ Let's look at a [Simple Mapquest API example](https://github.com/mdn/learning-ar
 
 ### They are found on third-party servers
 
-Browser APIs are built into the browser — you can access them from JavaScript immediately. For example, the Web Audio API we [saw in the Introductory article](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction#how_do_apis_work) is accessed using the native {{domxref("AudioContext")}} object. For example:
+Browser APIs are built into the browser — you can access them from JavaScript immediately. For example, the Web Audio API we [saw in the Introductory article](/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction#how_do_apis_work) is accessed using the native {{domxref("AudioContext")}} object. For example:
 
 ```js
 const audioCtx = new AudioContext();
@@ -87,7 +84,7 @@ This is all the information the Mapquest API needs to plot a simple map. The ser
 
 ### They usually require API keys
 
-Security for browser APIs tends to be handled by permission prompts, as [discussed in our first article](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction#they_have_additional_security_mechanisms_where_appropriate). The purpose of these is so that the user knows what is going on in the websites they visit and is less likely to fall victim to someone using an API in a malicious way.
+Security for browser APIs tends to be handled by permission prompts, as [discussed in our first article](/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction#they_have_additional_security_mechanisms_where_appropriate). The purpose of these is so that the user knows what is going on in the websites they visit and is less likely to fall victim to someone using an API in a malicious way.
 
 Third party APIs have a slightly different permissions system — they tend to use developer keys to allow developers access to the API functionality, which is more to protect the API vendor than the user.
 
@@ -404,4 +401,4 @@ To get it running, you'll need to:
 
 This article has given you a useful introduction to using third-party APIs to add functionality to your websites.
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Network_requests", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
+{{PreviousMenu("Learn_web_development/Extensions/Client-side_APIs/Client-side_storage", "Learn_web_development/Extensions/Client-side_APIs")}}

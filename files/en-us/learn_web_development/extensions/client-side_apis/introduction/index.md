@@ -1,10 +1,12 @@
 ---
 title: Introduction to web APIs
-slug: Learn/JavaScript/Client-side_web_APIs/Introduction
+slug: Learn_web_development/Extensions/Client-side_APIs/Introduction
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Scripting/DOM_scripting", "Learn/JavaScript/Client-side_web_APIs")}}
+{{LearnSidebar}}
+
+{{NextMenu("Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 First up, we'll start by looking at APIs from a high level — what are they, how do they work, how to use them in your code, and how are they structured? We'll also take a look at what the different main classes of APIs are, and what kind of uses they have.
 
@@ -13,21 +15,16 @@ First up, we'll start by looking at APIs from a high level — what are they, ho
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        A basic understanding of
-        <a href="/en-US/docs/Learn/HTML">HTML</a>,
-        <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS</a>, and JavaScript basics (see
-        <a href="/en-US/docs/Learn/JavaScript/First_steps">first steps</a>,
-        <a href="/en-US/docs/Learn_web_development/Core/Scripting"
-          >building blocks</a
-        >,
-        <a href="/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects">JavaScript objects</a>).
+        Familiarity with <a href="/en-US/docs/Learn_web_development/Core/Structuring_content">HTML</a>, <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS</a>, and <a href="/en-US/docs/Learn_web_development/Core/Scripting">JavaScript</a>, especially <a href="/en-US/docs/Learn_web_development/Core/Scripting/Object_basics">JavaScript object basics</a> and core API coverage such as <a href="/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting">DOM scripting</a> and <a href="/en-US/docs/Learn_web_development/Core/Scripting/Network_requests">Network requests</a>.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">Learning outcomes:</th>
       <td>
-        To gain familiarity with APIs, what they can do, and how you can use
-        them in your code.
+        <ul>
+          <li>What Web APIs are, and what you can do with them.</li>
+          <li>How APIs are used.</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -280,6 +277,6 @@ The Web Audio and {{domxref("HTMLMediaElement")}} APIs are subject to a security
 
 ## Summary
 
-At this point, you should have a good idea of what APIs are, how they work, and what you can do with them in your JavaScript code. You are probably excited to start actually doing some fun things with specific APIs, so let's go! Next up, we'll look at manipulating documents with the Document Object Model (DOM).
+At this point, you should have a good idea of what APIs are, how they work, and what you can do with them in your JavaScript code. You are probably excited to start actually doing some fun things with specific APIs, so let's go! Next up, we'll look at video and audio APIs.
 
-{{NextMenu("Learn_web_development/Core/Scripting/DOM_scripting", "Learn/JavaScript/Client-side_web_APIs")}}
+{{NextMenu("Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}

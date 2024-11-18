@@ -1,10 +1,12 @@
 ---
 title: Drawing graphics
-slug: Learn/JavaScript/Client-side_web_APIs/Drawing_graphics
+slug: Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs", "Learn_web_development/Extensions/Client-side_APIs/Client-side_storage", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 The browser contains some very powerful graphics programming tools, from the Scalable Vector Graphics ([SVG](/en-US/docs/Web/SVG)) language, to APIs for drawing on HTML {{htmlelement("canvas")}} elements, (see [The Canvas API](/en-US/docs/Web/API/Canvas_API) and [WebGL](/en-US/docs/Web/API/WebGL_API)). This article provides an introduction to canvas, and further resources to allow you to learn more.
 
@@ -13,23 +15,17 @@ The browser contains some very powerful graphics programming tools, from the Sca
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        JavaScript basics (see
-        <a href="/en-US/docs/Learn/JavaScript/First_steps">first steps</a>,
-        <a href="/en-US/docs/Learn_web_development/Core/Scripting"
-          >building blocks</a
-        >,
-        <a href="/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects">JavaScript objects</a>),
-        the
-        <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
-          >basics of Client-side APIs</a
-        >
+        Familiarity with <a href="/en-US/docs/Learn_web_development/Core/Structuring_content">HTML</a>, <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS</a>, and <a href="/en-US/docs/Learn_web_development/Core/Scripting">JavaScript</a>, especially <a href="/en-US/docs/Learn_web_development/Core/Scripting/Object_basics">JavaScript object basics</a> and core API coverage such as <a href="/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting">DOM scripting</a> and <a href="/en-US/docs/Learn_web_development/Core/Scripting/Network_requests">Network requests</a>.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">Learning outcomes:</th>
       <td>
-        To learn the basics of drawing on <code>&#x3C;canvas></code> elements
-        using JavaScript.
+        <ul>
+          <li>The concepts and use cases enabled by the APIs covered in this lesson.</li>
+          <li>Basic syntax and usage of <code>&lt;canvas&gt;</code> and associated APIs.</li>
+          <li>Using timers and <code>requestAnimationFrame()</code> to set up animation loops.</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -37,7 +33,7 @@ The browser contains some very powerful graphics programming tools, from the Sca
 
 ## Graphics on the Web
 
-As we talked about in our HTML [Multimedia and embedding](/en-US/docs/Learn/HTML/Multimedia_and_embedding) module, the Web was originally just text, which was very boring, so images were introduced — first via the {{htmlelement("img")}} element and later via CSS properties such as {{cssxref("background-image")}}, and [SVG](/en-US/docs/Web/SVG).
+The Web was originally just text, which was very boring, so images were introduced — first via the {{htmlelement("img")}} element and later via CSS properties such as {{cssxref("background-image")}}, and [SVG](/en-US/docs/Web/SVG).
 
 This however was still not enough. While you could use [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics) and [JavaScript](/en-US/docs/Learn/JavaScript) to animate (and otherwise manipulate) SVG vector images — as they are represented by markup — there was still no way to do the same for bitmap images, and the tools available were rather limited. The Web still had no way to effectively create animations, games, 3D scenes, and other requirements commonly handled by lower level languages such as C++ or Java.
 
@@ -843,4 +839,4 @@ Here we have covered only the real basics of canvas — there is so much more to
 - [Violent theremin](https://github.com/mdn/webaudio-examples/tree/main/violent-theremin) — Uses the Web Audio API to generate sound, and canvas to generate a pretty visualization to go along with it.
 - [Voice change-o-matic](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic) — Uses a canvas to visualize real-time audio data from the Web Audio API.
 
-{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs", "Learn_web_development/Extensions/Client-side_APIs/Client-side_storage", "Learn_web_development/Extensions/Client-side_APIs")}}

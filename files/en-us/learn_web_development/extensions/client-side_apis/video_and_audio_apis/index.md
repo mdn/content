@@ -1,10 +1,12 @@
 ---
 title: Video and Audio APIs
-slug: Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
+slug: Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs/Client-side_storage", "Learn/JavaScript/Client-side_web_APIs")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Introduction", "Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 HTML comes with elements for embedding rich media in documents — {{htmlelement("video")}} and {{htmlelement("audio")}} — which in turn come with their own APIs for controlling playback, seeking, etc. This article shows you how to do common tasks such as creating custom playback controls.
 
@@ -13,22 +15,17 @@ HTML comes with elements for embedding rich media in documents — {{htmlelement
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        JavaScript basics (see
-        <a href="/en-US/docs/Learn/JavaScript/First_steps">first steps</a>,
-        <a href="/en-US/docs/Learn_web_development/Core/Scripting"
-          >building blocks</a
-        >,
-        <a href="/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects">JavaScript objects</a>),
-        the
-        <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
-          >basics of Client-side APIs</a
-        >
+        Familiarity with <a href="/en-US/docs/Learn_web_development/Core/Structuring_content">HTML</a>, <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS</a>, and <a href="/en-US/docs/Learn_web_development/Core/Scripting">JavaScript</a>, especially <a href="/en-US/docs/Learn_web_development/Core/Scripting/Object_basics">JavaScript object basics</a> and core API coverage such as <a href="/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting">DOM scripting</a> and <a href="/en-US/docs/Learn_web_development/Core/Scripting/Network_requests">Network requests</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To learn how to use browser APIs to control video and audio playback.
+        <ul>
+          <li>What codecs are, and the different video and audio formats.</li>
+          <li>Understand key functionality associated with audio and video — play, pause, stop, seeking backward and forward, duration, and current time.</li>
+          <li>Using the <code>HTMLMediaElement</code> API to build a basic custom media player, for better accessibility or more consistency across browsers.</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -464,4 +461,4 @@ Here are some suggestions for ways you could enhance the existing example we've 
 - {{htmlelement("video")}} and {{htmlelement("audio")}} reference pages.
 - [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
 
-{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs/Client-side_storage", "Learn/JavaScript/Client-side_web_APIs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Introduction", "Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics", "Learn_web_development/Extensions/Client-side_APIs")}}
