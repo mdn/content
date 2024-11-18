@@ -18,7 +18,7 @@ Once the form data has been validated on the client-side, it is okay to submit t
           >understanding of HTML</a
         >, and basic knowledge of
         <a href="/en-US/docs/Web/HTTP">HTTP</a> and
-        <a href="/en-US/docs/Learn/Server-side/First_steps"
+        <a href="/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps"
           >server-side programming</a
         >.
       </td>
@@ -44,7 +44,7 @@ At its most basic, the web uses a client/server architecture that can be summari
 An HTML form on a web page is nothing more than a convenient user-friendly way to configure an HTTP request to send data to a server. This enables the user to provide information to be delivered in the HTTP request.
 
 > [!NOTE]
-> To get a better idea of how client-server architectures work, read our [Server-side website programming first steps](/en-US/docs/Learn/Server-side/First_steps) module.
+> To get a better idea of how client-server architectures work, read our [Server-side website programming first steps](/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps) module.
 
 ## On the client side: defining how to send the data
 
@@ -244,19 +244,19 @@ The two templates referenced in the above code are as follows (these need to be 
 - [greeting.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/greeting.html): This template just contains a line that renders the two bits of data passed to it when it is rendered. This is done via the `hello()` function seen above, which runs when the `/hello` URL is navigated to.
 
 > [!NOTE]
-> Again, this code won't work if you just try to load it into a browser directly. Python works a bit differently from PHP — to run this code locally you'll need to [install Python/PIP](/en-US/docs/Learn/Server-side/Django/development_environment#installing_python_3), then install Flask using `pip3 install flask`. At this point, you should be able to run the example using `python3 python-example.py`, then navigate to `localhost:5042` in your browser.
+> Again, this code won't work if you just try to load it into a browser directly. Python works a bit differently from PHP — to run this code locally you'll need to [install Python/PIP](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/development_environment#installing_python_3), then install Flask using `pip3 install flask`. At this point, you should be able to run the example using `python3 python-example.py`, then navigate to `localhost:5042` in your browser.
 
 ### Other languages and frameworks
 
 There are many other server-side technologies you can use for form handling, including Perl, Java, .Net, Ruby, etc. Just pick the one you like best. That said, it's worth noting that it's very uncommon to use these technologies directly because this can be tricky. It's more common to use one of the many high quality frameworks that make handling forms easier, such as:
 
 - Python
-  - [Django](/en-US/docs/Learn/Server-side/Django)
+  - [Django](/en-US/docs/Learn_web_development/Extensions/Server-side/Django)
   - [Flask](https://flask.palletsprojects.com/)
   - [web2py](https://github.com/web2py/web2py) (easiest to get started with)
   - [py4web](https://py4web.com/) (written by the same develops as web2py, has a more Django-like setup)
 - Node.js
-  - [Express](/en-US/docs/Learn/Server-side/Express_Nodejs)
+  - [Express](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs)
   - [Next.js](https://nextjs.org/) (for React apps)
   - [Nuxt](https://nuxt.com/) (for Vue apps)
   - [Remix](https://remix.run/)
@@ -309,7 +309,7 @@ For example:
 
 Each time you send data to a server, you need to consider security. HTML forms are by far the most common server attack vectors (places where attacks can occur). The problems never come from the HTML forms themselves — they come from how the server handles data.
 
-The [Website security](/en-US/docs/Learn/Server-side/First_steps/Website_security) article of our [server-side](/en-US/docs/Learn/Server-side) learning topic discusses several common attacks and potential defenses against them in detail. You should go and check that article out, to get an idea of what's possible.
+The [Website security](/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security) article of our [server-side](/en-US/docs/Learn_web_development/Extensions/Server-side) learning topic discusses several common attacks and potential defenses against them in detail. You should go and check that article out, to get an idea of what's possible.
 
 ### Be paranoid: Never trust your users
 
@@ -333,7 +333,7 @@ If you've worked your way through these tutorials in order, you now know how to 
 
 If you want to learn more about securing a web application, you can dig into these resources:
 
-- [Server-side website programming first steps](/en-US/docs/Learn/Server-side/First_steps)
+- [Server-side website programming first steps](/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps)
 - [The Open Web Application Security Project (OWASP)](https://owasp.org/)
 - [Web Security by Mozilla](https://infosec.mozilla.org/guidelines/web_security)
 

@@ -39,7 +39,7 @@ If the web address path starts with `file://` followed by the path to the file o
 
 Some examples won't run if you open them as local files. This can be due to a variety of reasons, the most likely being:
 
-- **They feature asynchronous requests**. Some browsers (including Chrome) will not run async requests (see [Learn: Making network requests with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting/Network_requests)) if you just run the example from a local file. This is because of security restrictions (for more on web security, read [Website security](/en-US/docs/Learn/Server-side/First_steps/Website_security)).
+- **They feature asynchronous requests**. Some browsers (including Chrome) will not run async requests (see [Learn: Making network requests with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting/Network_requests)) if you just run the example from a local file. This is because of security restrictions (for more on web security, read [Website security](/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)).
 - **They feature a server-side language**. Server-side languages (such as PHP or Python) require a special server to interpret the code and deliver the results.
 - **They include other files**. Browsers commonly treat requests to load resources using the `file://` schema as cross-origin requests.
   So if you load a local file that includes other local files, this may trigger a {{Glossary("CORS")}} error.
@@ -99,7 +99,7 @@ To do this:
    py -3 -V
    ```
 
-2. If Python is not installed, you need to install it. Follow the [download instructions](https://www.python.org/downloads/) in the Python docs (we also have more detailed explanations in our [Django tutorial](/en-US/docs/Learn/Server-side/Django/development_environment#installing_python_3)), then run the above commands again to check if the installation is successful.
+2. If Python is not installed, you need to install it. Follow the [download instructions](https://www.python.org/downloads/) in the Python docs (we also have more detailed explanations in our [Django tutorial](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/development_environment#installing_python_3)), then run the above commands again to check if the installation is successful.
 
 3. If Python is set up, navigate to the directory that contains the website code you want to test, using the `cd` command.
 
@@ -129,8 +129,8 @@ The best approach for working with server side languages, such as Python, PHP, o
 If you're working with a web framework, usually the framework will provide its own development server.
 For example, the following languages/frameworks come with a development server:
 
-- Python web frameworks, such as [Django](/en-US/docs/Learn/Server-side/Django), [Flask](https://flask.palletsprojects.com/), and [Pyramid](https://trypyramid.com/).
-- Node/JavaScript frameworks such as [Express Web Framework (Node.js/JavaScript)](/en-US/docs/Learn/Server-side/Express_Nodejs)
+- Python web frameworks, such as [Django](/en-US/docs/Learn_web_development/Extensions/Server-side/Django), [Flask](https://flask.palletsprojects.com/), and [Pyramid](https://trypyramid.com/).
+- Node/JavaScript frameworks such as [Express Web Framework (Node.js/JavaScript)](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs)
 - PHP has its own [built-in development server](https://www.php.net/manual/en/features.commandline.webserver.php):
 
   ```bash

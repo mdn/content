@@ -58,7 +58,7 @@ Client-side JavaScript, in particular, has many APIs available to it — these a
 
 So above, we talked about what client-side JavaScript APIs are, and how they relate to the JavaScript language. Let's recap this to make it clearer, and also mention where other JavaScript tools fit in:
 
-- JavaScript — A high-level scripting language built into browsers that allows you to implement functionality on web pages/apps. Note that JavaScript is also available in other programming environments, such as [Node](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction).
+- JavaScript — A high-level scripting language built into browsers that allows you to implement functionality on web pages/apps. Note that JavaScript is also available in other programming environments, such as [Node](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction).
 - Browser APIs — constructs built into the browser that sit on top of the JavaScript language and allow you to implement functionality more easily.
 - Third-party APIs — constructs built into third-party platforms (e.g. Disqus, Facebook) that allow you to use some of those platform's functionality in your own web pages (for example, display your Disqus comments on a web page).
 - JavaScript libraries — Usually one or more JavaScript files containing [custom functions](/en-US/docs/Learn_web_development/Core/Scripting/Functions) that you can attach to your web page to speed up or enable writing common functionality. Examples include jQuery, Mootools and React.

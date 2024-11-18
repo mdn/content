@@ -438,7 +438,7 @@ This guideline centers around helping users enter correct information when requi
           <strong>Reversible</strong> — for any view where data can be entered,
           provide an equivalent view that allows you to edit or even delete an
           entry, as appropriate (for example, see
-          <a href="/en-US/docs/Learn/Server-side/Django">Django web framework</a
+          <a href="/en-US/docs/Learn_web_development/Extensions/Server-side/Django">Django web framework</a
           >).
         </p>
         <p>

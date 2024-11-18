@@ -48,8 +48,8 @@ As we said above, you can drastically speed up common tasks such as linting and 
 
 Most tools these days are based on {{Glossary("Node.js")}}, so you'll need to install it along with its counterpart package manager, [`npm`](https://www.npmjs.com/):
 
-1. The easiest way to install and update Node.js and `npm` is via a node version manager: Follow the instructions at [Installing Node](/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment#installing_node) to do so.
-2. Make sure to [test that your installation was successful](/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment#testing_your_nodejs_and_npm_installation) before continuing.
+1. The easiest way to install and update Node.js and `npm` is via a node version manager: Follow the instructions at [Installing Node](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment#installing_node) to do so.
+2. Make sure to [test that your installation was successful](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment#testing_your_nodejs_and_npm_installation) before continuing.
 3. If you previously installed Node.js/`npm`, you should update them to their latest versions. This can be done by using the node version manager to install the latest LTS versions (refer again to the linked instructions above).
 
 To start using Node/npm-based packages on your projects, you need to set up your project directories as npm projects. This is easy to do.

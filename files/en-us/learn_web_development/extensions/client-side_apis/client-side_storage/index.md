@@ -35,7 +35,7 @@ Modern web browsers support a number of ways for websites to store data on the u
 
 ## Client-side storage?
 
-Elsewhere in the MDN learning area, we talked about the difference between [static sites](/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview#static_sites) and [dynamic sites](/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview#dynamic_sites). Most major modern websites are dynamic — they store data on the server using some kind of database (server-side storage), then run [server-side](/en-US/docs/Learn/Server-side) code to retrieve needed data, insert it into static page templates, and serve the resulting HTML to the client to be displayed by the user's browser.
+Elsewhere in the MDN learning area, we talked about the difference between [static sites](/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview#static_sites) and [dynamic sites](/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview#dynamic_sites). Most major modern websites are dynamic — they store data on the server using some kind of database (server-side storage), then run [server-side](/en-US/docs/Learn_web_development/Extensions/Server-side) code to retrieve needed data, insert it into static page templates, and serve the resulting HTML to the client to be displayed by the user's browser.
 
 Client-side storage works on similar principles, but has different uses. It consists of JavaScript APIs that allow you to store data on the client (i.e. on the user's machine) and then retrieve it when needed. This has many distinct uses, such as:
 

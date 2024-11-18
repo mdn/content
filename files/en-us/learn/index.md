@@ -19,7 +19,7 @@ If you are not sure about committing to learning web development in-depth and wa
 - JavaScript
   - : JavaScript allows you to code interactive functionality on websites. Begin with [Dynamic scripting with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting).
 - Frameworks and tooling
-  - : After mastering the essentials of vanilla HTML, CSS, and JavaScript, you should learn about [client-side web development tools](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools), and then consider digging into [client-side JavaScript frameworks](/en-US/docs/Learn_web_development/Core/Frameworks_libraries). You should also consider learning the basic concepts of [server-side website programming](/en-US/docs/Learn/Server-side).
+  - : After mastering the essentials of vanilla HTML, CSS, and JavaScript, you should learn about [client-side web development tools](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools), and then consider digging into [client-side JavaScript frameworks](/en-US/docs/Learn_web_development/Core/Frameworks_libraries). You should also consider learning the basic concepts of [server-side website programming](/en-US/docs/Learn_web_development/Extensions/Server-side).
 
 > [!NOTE]
 > Our [glossary](/en-US/docs/Glossary) provides terminology definitions. Besides, if you have a specific question about web development, our [Common questions](/en-US/docs/Learn/Common_questions) section may have something to help you.
@@ -54,7 +54,7 @@ The following is a list of all the topics we cover in the MDN learning area.
   - : MathML is the language that we can use to write mathematical formulas in web pages using fractions, scripts, radicals, matrices, integrals, series, etc. This topic covers MathML.
 - [Tools and testing](/en-US/docs/Learn/Tools_and_testing)
   - : This topic covers the tools developers use to facilitate their work, such as cross-browser testing tools, linters, formatters, transformation tools, version control systems, deployment tools, and client-side JavaScript frameworks.
-- [Server-side website programming](/en-US/docs/Learn/Server-side)
+- [Server-side website programming](/en-US/docs/Learn_web_development/Extensions/Server-side)
   - : Even if you are concentrating on client-side web development, it is still useful to know how servers and server-side code features work. This topic provides a general introduction to how the server-side works and detailed tutorials showing how to build up a server-side app using two popular frameworks: Django (Python) and Express (Node.js).
 
 ## Tasks and assessments

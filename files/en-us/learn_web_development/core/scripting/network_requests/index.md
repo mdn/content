@@ -146,7 +146,7 @@ verseChoose.value = "Verse 1";
 
 #### Serving your example from a server
 
-Modern browsers will not run HTTP requests if you just run the example from a local file. This is because of security restrictions (for more on web security, read [Website security](/en-US/docs/Learn/Server-side/First_steps/Website_security)).
+Modern browsers will not run HTTP requests if you just run the example from a local file. This is because of security restrictions (for more on web security, read [Website security](/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)).
 
 To get around this, we need to test the example by running it through a local web server. To find out how to do this, read [our guide to setting up a local testing server](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server).
 
@@ -261,6 +261,6 @@ There are however a lot of different subjects discussed in this article, which h
 - [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [Working with JSON data](/en-US/docs/Learn_web_development/Core/Scripting/JSON)
 - [An overview of HTTP](/en-US/docs/Web/HTTP/Overview)
-- [Server-side website programming](/en-US/docs/Learn/Server-side)
+- [Server-side website programming](/en-US/docs/Learn_web_development/Extensions/Server-side)
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/DOM_scripting","Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Core/Scripting")}}

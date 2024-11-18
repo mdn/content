@@ -110,7 +110,7 @@ It is impossible to suggest a single off-the-shelf application server that will 
 Most website developers won't need to create an application server from scratch, because there are so many off-the-shelf solutions, many of which are highly configurable.
 But if you do need to create your own server, then you will probably want to use a server framework, leveraging its existing code and libraries, and extending just the parts that you need in order to meet your use case.
 Only a relatively small number of developers should need to develop a server completely from scratch: for example, in order to meet tight resource constraints on an embedded system.
-If you'd like to experiment with building a server, take a look through the resources in the [Server-side website programming](/en-US/docs/Learn/Server-side) learning pathway.
+If you'd like to experiment with building a server, take a look through the resources in the [Server-side website programming](/en-US/docs/Learn_web_development/Extensions/Server-side) learning pathway.
 
 ## Next steps
 

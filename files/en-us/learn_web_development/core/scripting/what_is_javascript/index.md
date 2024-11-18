@@ -195,7 +195,7 @@ In this module we are explicitly talking about **client-side JavaScript**.
 
 Server-side code on the other hand is run on the server, then its results are downloaded and displayed in the browser.
 Examples of popular server-side web languages include PHP, Python, Ruby, ASP.NET, and even JavaScript!
-JavaScript can also be used as a server-side language, for example in the popular Node.js environment — you can find out more about server-side JavaScript in our [Dynamic Websites – Server-side programming](/en-US/docs/Learn/Server-side) topic.
+JavaScript can also be used as a server-side language, for example in the popular Node.js environment — you can find out more about server-side JavaScript in our [Dynamic Websites – Server-side programming](/en-US/docs/Learn_web_development/Extensions/Server-side) topic.
 
 ### Dynamic versus static code
 

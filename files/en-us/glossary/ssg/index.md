@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-A **static site generator** (SSG) is a software used to generate _static_ websites. A static website is comprised of {{glossary("HTML")}}, {{glossary("CSS")}}, and {{glossary("JavaScript")}} files. Most importantly static sites do not have [server-side logic](/en-US/docs/Learn/Server-side), so for any given URL, all users will receive the same content. Authors write content in any form accepted by the generator, such as Markdown, reStructuredText, HTML, (and sometimes even [React](/en-US/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started), and so on), and the generator compiles them into a set of optimized static files that can be rendered by the browser.
+A **static site generator** (SSG) is a software used to generate _static_ websites. A static website is comprised of {{glossary("HTML")}}, {{glossary("CSS")}}, and {{glossary("JavaScript")}} files. Most importantly static sites do not have [server-side logic](/en-US/docs/Learn_web_development/Extensions/Server-side), so for any given URL, all users will receive the same content. Authors write content in any form accepted by the generator, such as Markdown, reStructuredText, HTML, (and sometimes even [React](/en-US/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started), and so on), and the generator compiles them into a set of optimized static files that can be rendered by the browser.
 
 Static sites are commonly used for blogs, documentation, and other content-driven websites, which don't have data that needs to be fetched or generated server-side. They are fast, secure, and easy to deploy, because they can be served from a {{glossary("CDN")}}.
 

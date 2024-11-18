@@ -352,4 +352,4 @@ MIME types are not the only way to convey document type information:
 
 - [Web media technologies](/en-US/docs/Web/Media)
 - [Guide to media types used on the web](/en-US/docs/Web/Media/Formats)
-- [Properly configuring server MIME types](/en-US/docs/Learn/Server-side/Configuring_server_MIME_types)
+- [Properly configuring server MIME types](/en-US/docs/Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types)

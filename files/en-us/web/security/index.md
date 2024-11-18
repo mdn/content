@@ -80,7 +80,7 @@ These "powerful features" are controlled in the following ways:
 
 ## High-level security considerations
 
-There are many aspects of web security that need to be thought about on the server- and client-side. This section focuses mainly on client-side security considerations. You can find a useful summary of security from a server-side perspective, which also includes descriptions of common attacks to watch out for, at [Website security](/en-US/docs/Learn/Server-side/First_steps/Website_security) (part of our [Server-side website programming](/en-US/docs/Learn/Server-side) learning module).
+There are many aspects of web security that need to be thought about on the server- and client-side. This section focuses mainly on client-side security considerations. You can find a useful summary of security from a server-side perspective, which also includes descriptions of common attacks to watch out for, at [Website security](/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security) (part of our [Server-side website programming](/en-US/docs/Learn_web_development/Extensions/Server-side) learning module).
 
 ### Store client-side data responsibly
 
@@ -140,7 +140,7 @@ Related topics:
 
 ### Sanitize form input
 
-As a general rule, don't trust anything that users enter into forms. Filling out forms online is complicated and tedious, and it is easy for users to enter incorrect data or data in the wrong format. In addition, malicious folks are skilled in the art of entering specific strings of executable code into form fields (for example, SQL or JavaScript). If you're not careful about handling such inputs, they could either execute harmful code on your site or delete your databases. See [SQL injection](/en-US/docs/Learn/Server-side/First_steps/Website_security#sql_injection) for a good example of how this could happen.
+As a general rule, don't trust anything that users enter into forms. Filling out forms online is complicated and tedious, and it is easy for users to enter incorrect data or data in the wrong format. In addition, malicious folks are skilled in the art of entering specific strings of executable code into form fields (for example, SQL or JavaScript). If you're not careful about handling such inputs, they could either execute harmful code on your site or delete your databases. See [SQL injection](/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security#sql_injection) for a good example of how this could happen.
 
 To protect against this, you should thoroughly sanitize data entered into your forms:
 
@@ -171,7 +171,7 @@ Some of these guides are directly related to the [HTTP Observatory](/en-US/obser
 ## See also
 
 - [Privacy on the web](/en-US/docs/Web/Privacy)
-- [Learn: Website security](/en-US/docs/Learn/Server-side/First_steps/Website_security)
+- [Learn: Website security](/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)
 - [Mozilla Security Blog](https://blog.mozilla.org/security/)
 - [OWASP Cheat Sheet series](https://cheatsheetseries.owasp.org/index.html)
 

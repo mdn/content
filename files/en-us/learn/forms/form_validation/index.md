@@ -37,7 +37,7 @@ If it gets to the server and is then rejected, a noticeable delay is caused by a
 However, client-side validation _should not be considered_ an exhaustive security measure! Your apps should always perform validation, including security checks, on any form-submitted data on the _server-side_ **as well** as the client-side, because client-side validation is too easy to bypass, so malicious users can still easily send bad data through to your server.
 
 > [!NOTE]
-> Read [Website security](/en-US/docs/Learn/Server-side/First_steps/Website_security) for an idea of what _could_ happen; implementing server-side validation is somewhat beyond the scope of this module, but you should bear it in mind.
+> Read [Website security](/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security) for an idea of what _could_ happen; implementing server-side validation is somewhat beyond the scope of this module, but you should bear it in mind.
 
 ## What is form validation?
 
@@ -60,7 +60,7 @@ There are three main reasons:
 
 - **We want to get the right data, in the right format.** Our applications won't work properly if our users' data is stored in the wrong format, is incorrect, or is omitted altogether.
 - **We want to protect our users' data**. Forcing our users to enter secure passwords makes it easier to protect their account information.
-- **We want to protect ourselves**. There are many ways that malicious users can misuse unprotected forms to damage the application. See [Website security](/en-US/docs/Learn/Server-side/First_steps/Website_security).
+- **We want to protect ourselves**. There are many ways that malicious users can misuse unprotected forms to damage the application. See [Website security](/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security).
 
   > [!WARNING]
   > Never trust data passed to your server from the client. Even if your form is validating correctly and preventing malformed input on the client-side, a malicious user can still alter the network request.
