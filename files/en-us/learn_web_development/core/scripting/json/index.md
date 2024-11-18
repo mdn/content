@@ -213,7 +213,7 @@ In our function, the first four lines use the Fetch API to fetch the JSON from t
 - we retrieve the response as JSON using the {{domxref("Response/json", "json()")}} function of the `Response` object.
 
 > [!NOTE]
-> The `fetch()` API is **asynchronous**. You can learn about asynchronous functions in detail in our [Asynchronous JavaScript module](/en-US/docs/Learn/JavaScript/Asynchronous), but for now, we'll just say that we need to add the keyword {{jsxref("Statements/async_function", "async")}} before the name of the function that uses the fetch API, and add the keyword {{jsxref("Operators/await", "await")}} before the calls to any asynchronous functions.
+> The `fetch()` API is **asynchronous**. You can learn about asynchronous functions in detail in our [Asynchronous JavaScript module](/en-US/docs/Learn_web_development/Extensions/Async_JS), but for now, we'll just say that we need to add the keyword {{jsxref("Statements/async_function", "async")}} before the name of the function that uses the fetch API, and add the keyword {{jsxref("Operators/await", "await")}} before the calls to any asynchronous functions.
 
 After all that, the `superHeroes` variable will contain the JavaScript object based on the JSON. We are then passing that object to two function calls — the first one fills the `<header>` with the correct data, while the second one creates an information card for each hero on the team, and inserts it into the `<section>`.
 

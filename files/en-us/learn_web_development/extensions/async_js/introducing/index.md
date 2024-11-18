@@ -1,10 +1,12 @@
 ---
 title: Introducing asynchronous JavaScript
-slug: Learn/JavaScript/Asynchronous/Introducing
+slug: Learn_web_development/Extensions/Async_JS/Introducing
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
+{{LearnSidebar}}
+
+{{NextMenu("Learn_web_development/Extensions/Async_JS/Promises", "Learn_web_development/Extensions/Async_JS")}}
 
 In this article, we'll explain what asynchronous programming is, why we need it, and briefly discuss some of the ways asynchronous functions have historically been implemented in JavaScript.
 
@@ -13,14 +15,18 @@ In this article, we'll explain what asynchronous programming is, why we need it,
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        A reasonable understanding of JavaScript
-        fundamentals, including functions and event handlers.
+        A solid understanding of <a href="/en-US/docs/Learn_web_development/Core/Scripting">JavaScript fundamentals</a>.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">Learning outcomes:</th>
       <td>
-        To gain familiarity with what asynchronous JavaScript is, how it differs from synchronous JavaScript, and why we need it.
+        <ul>
+          <li>To gain familiarity with what asynchronous JavaScript is, how it differs from synchronous JavaScript, and why we need it.</li>
+          <li>What synchronous programming is, and why it can sometimes be problematic.</li>
+          <li>How asynchronous programming aims to solve these problems.</li>
+          <li>Event handlers and callback functions, and how they relate to asychronous programming.</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -72,7 +78,7 @@ console.log(greeting);
 
 Here, `makeGreeting()` is a **synchronous function** because the caller has to wait for the function to finish its work and return a value before the caller can continue.
 
-### A long-running synchronous function
+## A long-running synchronous function
 
 What if the synchronous function takes a long time?
 
@@ -130,7 +136,7 @@ document.querySelector("#reload").addEventListener("click", () => {
 
 Try clicking "Generate primes". Depending on how fast your computer is, it will probably take a few seconds before the program displays the "Finished!" message.
 
-### The trouble with long-running synchronous functions
+## The trouble with long-running synchronous functions
 
 The next example is just like the last one, except we added a text box for you to type in. This time, click "Generate primes", and try typing in the text box immediately after.
 
@@ -329,4 +335,4 @@ When we nest callbacks like this, it can also get very hard to handle errors: of
 
 For these reasons, most modern asynchronous APIs don't use callbacks. Instead, the foundation of asynchronous programming in JavaScript is the {{jsxref("Promise")}}, and that's the subject of the next article.
 
-{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
+{{NextMenu("Learn_web_development/Extensions/Async_JS/Promises", "Learn_web_development/Extensions/Async_JS")}}

@@ -1,12 +1,14 @@
 ---
-title: Sequencing animations
-slug: Learn/JavaScript/Asynchronous/Sequencing_animations
+title: "Challenge: Sequencing animations"
+slug: Learn_web_development/Extensions/Async_JS/Sequencing_animations
 page-type: learn-module-assessment
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
+{{LearnSidebar}}
 
-In this assessment you'll update a page to play a series of animations in a sequence. To do this you'll use some of the techniques we learned in the [How to use Promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises) article.
+{{PreviousMenu("Learn_web_development/Extensions/Async_JS/Introducing_workers", "Learn_web_development/Extensions/Async_JS")}}
+
+In this challenge you'll update a page to play a series of animations in a sequence. To do this you'll use some of the techniques we learned in the [How to use Promises](/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises) article.
 
 <table>
   <tbody>
@@ -37,7 +39,7 @@ The only file you'll need to edit is "main.js".
 
 If you open "index.html" in a browser you'll see three images arranged diagonally:
 
-![Screenshot of sequencing-animations assessment page](./sequencing-animations.png)
+![Screenshot of sequencing-animations challenge page](./sequencing-animations.png)
 
 The images are taken from our guide to [Using the Web Animations API](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API).
 
@@ -89,12 +91,12 @@ The `animate()` method returns an {{domxref("Animation")}} object. This object h
 
 We'd like you to try a few different ways to implement this, to reinforce different ways of using promises.
 
-1. First, implement something that works, but has the promise version of the "callback hell" problem we saw in our [discussion of using callbacks](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing#callbacks).
+1. First, implement something that works, but has the promise version of the "callback hell" problem we saw in our [discussion of using callbacks](/en-US/docs/Learn_web_development/Extensions/Async_JS/Introducing#callbacks).
 
-2. Next, implement it as a [promise chain](/en-US/docs/Learn/JavaScript/Asynchronous/Promises#chaining_promises). Note that there are a few different ways you can write this, because of the different forms you can use for an [arrow function](/en-US/docs/Learn_web_development/Core/Scripting/Functions#arrow_functions). Try some different forms. Which is the most concise? Which do you find the most readable?
+2. Next, implement it as a [promise chain](/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises#chaining_promises). Note that there are a few different ways you can write this, because of the different forms you can use for an [arrow function](/en-US/docs/Learn_web_development/Core/Scripting/Functions#arrow_functions). Try some different forms. Which is the most concise? Which do you find the most readable?
 
-3. Finally, implement it using [`async` and `await`](/en-US/docs/Learn/JavaScript/Asynchronous/Promises#async_and_await).
+3. Finally, implement it using [`async` and `await`](/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises#async_and_await).
 
 Remember that `element.animate()` does _not_ return a `Promise`: it returns an `Animation` object with a `finished` property that is a `Promise`.
 
-{{PreviousMenu("Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
+{{PreviousMenu("Learn_web_development/Extensions/Async_JS/Introducing_workers", "Learn_web_development/Extensions/Async_JS")}}

@@ -1,10 +1,12 @@
 ---
 title: Introducing workers
-slug: Learn/JavaScript/Asynchronous/Introducing_workers
+slug: Learn_web_development/Extensions/Async_JS/Introducing_workers
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Extensions/Async_JS/Implementing_a_promise-based_API", "Learn_web_development/Extensions/Async_JS/Sequencing_animations", "Learn_web_development/Extensions/Async_JS")}}
 
 In this final article in our "Asynchronous JavaScript" module, we'll introduce _workers_, which enable you to run some tasks in a separate {{Glossary("Thread", "thread")}} of execution.
 
@@ -13,13 +15,17 @@ In this final article in our "Asynchronous JavaScript" module, we'll introduce _
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        A reasonable understanding of JavaScript
-        fundamentals, including event handling.
+         A solid understanding of <a href="/en-US/docs/Learn_web_development/Core/Scripting">JavaScript fundamentals</a> and asynchronous concepts, as covered in previous lesosns in this module.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
-      <td>To understand how to use web workers.</td>
+      <th scope="row">Learning outcomes:</th>
+      <td>
+        <ul>
+          <li>How to use dedicated web workers, and why.</li>
+          <li>Understand the purpose of other types of web worker, such as shared and service workers.</li>
+        </ul>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -240,7 +246,7 @@ There are other types of workers, though:
 - [_Shared workers_](/en-US/docs/Web/API/SharedWorker) can be shared by several different scripts running in different windows.
 - [_Service workers_](/en-US/docs/Web/API/Service_Worker_API) act like proxy servers, caching resources so that web applications can work when the user is offline. They're a key component of [Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps).
 
-## Conclusion
+## Summary
 
 In this article we've introduced web workers, which enable a web application to offload tasks to a separate thread. The main thread and the worker don't directly share any variables, but communicate by sending messages, which are received by the other side as `message` events.
 
@@ -252,4 +258,4 @@ Workers can be an effective way to keep the main application responsive, althoug
 - [Using service workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Web workers API](/en-US/docs/Web/API/Web_Workers_API)
 
-{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Async_JS/Implementing_a_promise-based_API", "Learn_web_development/Extensions/Async_JS/Sequencing_animations", "Learn_web_development/Extensions/Async_JS")}}

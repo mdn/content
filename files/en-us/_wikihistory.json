@@ -6878,50 +6878,6 @@
       "fscholz"
     ]
   },
-  "Learn/JavaScript/Asynchronous": {
-    "modified": "2020-07-16T22:33:12.530Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wwags33",
-      "82ba10b5e8dc",
-      "Sheppy",
-      "AllenChong"
-    ]
-  },
-  "Learn/JavaScript/Asynchronous/Introducing": {
-    "modified": "2020-11-05T06:58:50.627Z",
-    "contributors": [
-      "chrisdavidmills",
-      "SpartaSixZero",
-      "ptk",
-      "Rafael_Green",
-      "Jmnsrg92",
-      "mariusmucenicu",
-      "tywmick",
-      "mahrr",
-      "ZhenWang-Jen",
-      "pmurzin",
-      "horstmannd",
-      "Sheppy"
-    ]
-  },
-  "Learn/JavaScript/Asynchronous/Promises": {
-    "modified": "2020-09-22T14:49:51.114Z",
-    "contributors": [
-      "jswisher",
-      "manoelbjr",
-      "chrisdavidmills",
-      "A.Faturechi",
-      "jaypatel3998",
-      "ckashby",
-      "Iqbalh11",
-      "tywmick",
-      "SphinxKnight",
-      "sukhbatth",
-      "BIT-zhaoyang",
-      "Sheppy"
-    ]
-  },
   "Learn/Learning_and_getting_help": {
     "modified": "2020-10-12T05:38:01.632Z",
     "contributors": [
@@ -10693,6 +10649,50 @@
   "Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills:_Object-oriented_JavaScript": {
     "modified": "2020-08-12T12:48:24.778Z",
     "contributors": ["A.Faturechi", "abinashLin", "chrisdavidmills"]
+  },
+  "Learn_web_development/Extensions/Async_JS": {
+    "modified": "2020-07-16T22:33:12.530Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wwags33",
+      "82ba10b5e8dc",
+      "Sheppy",
+      "AllenChong"
+    ]
+  },
+  "Learn_web_development/Extensions/Async_JS/Introducing": {
+    "modified": "2020-11-05T06:58:50.627Z",
+    "contributors": [
+      "chrisdavidmills",
+      "SpartaSixZero",
+      "ptk",
+      "Rafael_Green",
+      "Jmnsrg92",
+      "mariusmucenicu",
+      "tywmick",
+      "mahrr",
+      "ZhenWang-Jen",
+      "pmurzin",
+      "horstmannd",
+      "Sheppy"
+    ]
+  },
+  "Learn_web_development/Extensions/Async_JS/Promises": {
+    "modified": "2020-09-22T14:49:51.114Z",
+    "contributors": [
+      "jswisher",
+      "manoelbjr",
+      "chrisdavidmills",
+      "A.Faturechi",
+      "jaypatel3998",
+      "ckashby",
+      "Iqbalh11",
+      "tywmick",
+      "SphinxKnight",
+      "sukhbatth",
+      "BIT-zhaoyang",
+      "Sheppy"
+    ]
   },
   "Learn_web_development/Extensions/Client-side_APIs": {
     "modified": "2020-07-16T22:32:38.327Z",

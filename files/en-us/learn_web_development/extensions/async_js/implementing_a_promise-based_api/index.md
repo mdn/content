@@ -1,10 +1,12 @@
 ---
 title: How to implement a promise-based API
-slug: Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API
+slug: Learn_web_development/Extensions/Async_JS/Implementing_a_promise-based_API
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Extensions/Async_JS/Promises", "Learn_web_development/Extensions/Async_JS/Introducing_workers", "Learn_web_development/Extensions/Async_JS")}}
 
 In the last article we discussed how to use APIs that return promises. In this article we'll look at the other side — how to _implement_ APIs that return promises. This is a much less common task than using promise-based APIs, but it's still worth knowing about.
 
@@ -13,13 +15,12 @@ In the last article we discussed how to use APIs that return promises. In this a
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        A reasonable understanding of JavaScript
-        fundamentals, including event handling and the basics of promises.
+         A solid understanding of <a href="/en-US/docs/Learn_web_development/Core/Scripting">JavaScript fundamentals</a> and asynchronous concepts, as covered in previous lesosns in this module.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
-      <td>To understand how to implement promise-based APIs.</td>
+      <th scope="row">Learning outcomes:</th>
+      <td>Understand how to implement promise-based APIs.</td>
     </tr>
   </tbody>
 </table>
@@ -213,4 +214,4 @@ button.addEventListener("click", async () => {
 - [`Promise()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise)
 - [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises)
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Async_JS/Promises", "Learn_web_development/Extensions/Async_JS/Introducing_workers", "Learn_web_development/Extensions/Async_JS")}}

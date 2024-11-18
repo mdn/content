@@ -1,10 +1,12 @@
 ---
 title: How to use promises
-slug: Learn/JavaScript/Asynchronous/Promises
+slug: Learn_web_development/Extensions/Async_JS/Promises
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Extensions/Async_JS/Introducing", "Learn_web_development/Extensions/Async_JS/Implementing_a_promise-based_API", "Learn_web_development/Extensions/Async_JS")}}
 
 **Promises** are the foundation of asynchronous programming in modern JavaScript. A promise is an object returned by an asynchronous function, which represents the current state of the operation. At the time the promise is returned to the caller, the operation often isn't finished, but the promise object provides methods to handle the eventual success or failure of the operation.
 
@@ -13,18 +15,24 @@ page-type: learn-module-chapter
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        A reasonable understanding of JavaScript
-        fundamentals, including event handling.
+         A solid understanding of <a href="/en-US/docs/Learn_web_development/Core/Scripting">JavaScript fundamentals</a> and asynchronous concepts, as covered in previous lesosns in this module.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
-      <td>To understand how to use promises in JavaScript.</td>
+      <th scope="row">Learning outcomes:</th>
+      <td>
+        <ul>
+          <li>The concepts and fundamentals of using promises in JavaScript.</li>
+          <li>Chaining and combining promises.</li>
+          <li>Handing errors in promises.</li>
+          <li><code>async</code> and <code>await</code>: how they relate to promises, and why they are useful.</li>
+        </ul>
+      </td>
     </tr>
   </tbody>
 </table>
 
-In the [previous article](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing), we talked about the use of callbacks to implement asynchronous functions. With that design, you call the asynchronous function, passing in your callback function. The function returns immediately and calls your callback when the operation is finished.
+In the [previous article](/en-US/docs/Learn_web_development/Extensions/Async_JS/Introducing), we talked about the use of callbacks to implement asynchronous functions. With that design, you call the asynchronous function, passing in your callback function. The function returns immediately and calls your callback when the operation is finished.
 
 With a promise-based API, the asynchronous function starts the operation and returns a {{jsxref("Promise")}} object. You can then attach handlers to this promise object, and these handlers will be executed when the operation has succeeded or failed.
 
@@ -401,7 +409,7 @@ You'll probably use `async` functions a lot where you might otherwise use promis
 
 Keep in mind that just like a promise chain, `await` forces asynchronous operations to be completed in series. This is necessary if the result of the next operation depends on the result of the last one, but if that's not the case then something like `Promise.all()` will be more performant.
 
-## Conclusion
+## Summary
 
 Promises are the foundation of asynchronous programming in modern JavaScript. They make it easier to express and reason about sequences of asynchronous operations without deeply nested callbacks, and they support a style of error handling that is similar to the synchronous `try...catch` statement.
 
@@ -420,4 +428,4 @@ Many modern Web APIs are promise-based, including [WebRTC](/en-US/docs/Web/API/W
 - [We have a problem with promises](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html) by Nolan Lawson
 - [Let's talk about how to talk about promises](https://thenewtoys.dev/blog/2021/02/08/lets-talk-about-how-to-talk-about-promises/)
 
-{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Async_JS/Introducing", "Learn_web_development/Extensions/Async_JS/Implementing_a_promise-based_API", "Learn_web_development/Extensions/Async_JS")}}
