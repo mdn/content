@@ -16,5 +16,4 @@ The time between when content is painted to the page and when all the functional
 
 ## See also
 
-- [requestIdleCallback](/en-US/docs/Web/API/Window/requestIdleCallback)
-- [lazy loading](/en-US/docs/Web/Performance/Lazy_loading)
+- [Interaction to Next Paint is officially a Core Web Vital](https://web.dev/blog/inp-cwv-launch) on web.dev (2024)
