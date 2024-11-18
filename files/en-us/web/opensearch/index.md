@@ -81,11 +81,11 @@ To support autodiscovery, add a `<link>` element for each plugin to the `<head>`
 <link
   rel="search"
   type="application/opensearchdescription+xml"
-  title="searchTitle"
-  href="pluginURL" />
+  title="[searchTitle]"
+  href="[pluginURL]" />
 ```
 
-Replace the bolded items as explained below:
+Replace the items in _\[square brackets\]_ as explained below:
 
 - searchTitle
   - : The name of the search to perform, such as "Search MDC" or "Yahoo! Search". This must match your plugin file's `<ShortName>`.

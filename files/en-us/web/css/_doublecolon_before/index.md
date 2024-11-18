@@ -35,7 +35,7 @@ Using a `::before` pseudo-element to add content is discouraged, as it is not re
 
 ### Adding quotation marks
 
-One simple example of using `::before` pseudo-elements is to provide quotation marks. Here we use both `::before` and {{Cssxref("::after")}} to insert quotation characters.
+One example of using `::before` pseudo-elements is to provide quotation marks. Here we use both `::before` and {{Cssxref("::after")}} to insert quotation characters.
 
 #### HTML
 
@@ -92,7 +92,7 @@ We can style text or images in the {{cssxref("content")}} property almost any wa
 
 ### To-do list
 
-In this example we will create a simple to-do list using pseudo-elements. This method can often be used to add small touches to the UI and improve user experience.
+In this example we will create a to-do list using pseudo-elements. This method can often be used to add small touches to the UI and improve user experience.
 
 #### HTML
 

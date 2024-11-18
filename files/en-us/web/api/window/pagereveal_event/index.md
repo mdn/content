@@ -3,12 +3,10 @@ title: "Window: pagereveal event"
 short-title: pagereveal
 slug: Web/API/Window/pagereveal_event
 page-type: web-api-event
-status:
-  - experimental
 browser-compat: api.Window.pagereveal_event
 ---
 
-{{APIRef("HTML DOM")}}{{seecompattable}}
+{{APIRef("HTML DOM")}}
 
 The **`pagereveal`** event is fired when a document is first rendered, either when loading a fresh document from the network or activating a document (either from [back/forward cache](/en-US/docs/Glossary/bfcache) (bfcache) or [prerender](/en-US/docs/Glossary/Prerender)).
 

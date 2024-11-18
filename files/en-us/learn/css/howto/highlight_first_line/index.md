@@ -18,7 +18,29 @@ A {{cssxref("pseudo-elements", "pseudo-element")}} can take the place of the `<s
 
 In this case we need to use the {{cssxref("::first-line")}} pseudo-element. It selects the first formatted line of each paragraph, meaning that you can style it as you require.
 
-{{EmbedGHLiveSample("css-examples/howto/highlight_first_line.html", '100%', 750)}}
+```html live-sample___highlight_first_line
+<div class="wrapper">
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
+
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+</div>
+```
+
+```css live-sample___highlight_first_line
+.wrapper p::first-line {
+  font-weight: bold;
+  font-size: 130%;
+}
+```
+
+{{EmbedLiveSample("highlight_first_line")}}
 
 > [!NOTE]
 > All pseudo-elements act in this way. They behave as if you had inserted an element into the document, but they do so dynamically based on the content as it displays at runtime.
@@ -27,7 +49,29 @@ In this case we need to use the {{cssxref("::first-line")}} pseudo-element. It s
 
 In the example above, the pseudo-element selects the first line of every paragraph. To select only the first line of the first paragraph, you can combine it with another selector. In this case, we use the {{cssxref(":first-child")}} {{cssxref("pseudo-classes", "pseudo-class")}}. This allows us to select the first line of the first child of `.wrapper` if that first child is a paragraph.
 
-{{EmbedGHLiveSample("css-examples/howto/highlight_first_line2.html", '100%', 700)}}
+```html live-sample___highlight_first_line2
+<div class="wrapper">
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
+
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+</div>
+```
+
+```css live-sample___highlight_first_line2
+.wrapper p:first-child::first-line {
+  font-weight: bold;
+  font-size: 130%;
+}
+```
+
+{{EmbedLiveSample("highlight_first_line2")}}
 
 > [!NOTE]
 > When combining pseudo-elements with other selectors in a [complex](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#complex_selector) or [compound](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector) selector, the pseudo-elements must appear after all the other components in the selector in which they appear.

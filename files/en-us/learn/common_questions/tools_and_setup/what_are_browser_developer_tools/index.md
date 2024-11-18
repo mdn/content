@@ -21,9 +21,8 @@ How do you pull it up? Three ways:
 
 - **_Keyboard:_**
 
-  - **Windows:** _<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>_ or <kbd>F12</kbd>
-
-  - **macOS:** _<kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>I</kbd>_
+  - **Windows:** <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd> or <kbd>F12</kbd>
+  - **macOS:** <kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>I</kbd>
 
 - **_Menu bar:_**
 
@@ -90,7 +89,7 @@ The _box model_ view visually represents the current element's box model, so you
 
 In some browsers, the JavaScript details of the selected element can also be viewed in this panel. In Safari, these are unified under the _Node_ tab, but are in separate tabs in Chrome, Opera, and Edge.
 
-- _Properties_: The {{Glossary("Property (JavaScript)", "properties")}} of the element object.
+- _Properties_: The {{Glossary("Property/JavaScript", "properties")}} of the element object.
 - _Event Listeners_: The [events](/en-US/docs/Web/API/Event) associated with the element.
 
 ### Find out more
