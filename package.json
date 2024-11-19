@@ -14,7 +14,7 @@
     "url": "git+https://github.com/mdn/content.git"
   },
   "engines": {
-    "node": ">=18.20.0"
+    "node": ">=20"
   },
   "type": "module",
   "scripts": {
@@ -51,10 +51,10 @@
     "env-cmd": "10.1.0",
     "fdir": "^6.4.2",
     "gray-matter": "^4.0.3",
-    "husky": "9.1.6",
+    "husky": "9.1.7",
     "js-yaml": "^4.1.0",
     "lint-staged": "15.2.10",
-    "markdownlint-cli2": "0.14.0",
+    "markdownlint-cli2": "0.15.0",
     "markdownlint-rule-search-replace": "1.2.0",
     "prettier": "3.3.3"
   },
