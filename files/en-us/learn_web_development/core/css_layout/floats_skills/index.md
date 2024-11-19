@@ -214,4 +214,4 @@ Other methods might be to use `overflow` or a clearfix hack, however the learnin
 
 ## See also
 
-- [CSS building blocks](/en-US/docs/Learn/CSS/Building_blocks)
+- [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics)

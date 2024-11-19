@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/CSS_layout/Multiple-column_Layout
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout")}}
+{{LearnSidebar}}
 
 The multiple-column layout specification provides you with a method for laying content out in columns, as you might see in a newspaper. This article explains how to use this feature.
 
@@ -498,7 +498,7 @@ body {
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Multicol](/en-US/docs/Learn/CSS/CSS_layout/Multicol_skills).
+You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Multicol](/en-US/docs/Learn_web_development/Core/CSS_layout/Multicol_skills).
 
 ## Summary
 
@@ -508,5 +508,3 @@ You now know how to use the basic features of multiple-column layout, another to
 
 - [CSS Fragmentation](/en-US/docs/Web/CSS/CSS_fragmentation)
 - [Using multi-column layouts](/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
-
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout")}}

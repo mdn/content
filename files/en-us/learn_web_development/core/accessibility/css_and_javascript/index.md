@@ -84,7 +84,7 @@ You should:
 - Make sure your headings stand out from your body text, typically big and bold like the default styling. Your lists should look like lists.
 - Your text color should contrast well with your background color.
 
-See [Headings and paragraphs in HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs) and [Styling text](/en-US/docs/Learn/CSS/Styling_text) for more information.
+See [Headings and paragraphs in HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs) and [CSS text styling](/en-US/docs/Learn_web_development/Core/Text_styling) for more information.
 
 #### Emphasized text
 

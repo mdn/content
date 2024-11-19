@@ -110,4 +110,4 @@ You should add `overflow: hidden` to the `.box` selector:
 
 ## See also
 
-- [CSS building blocks](/en-US/docs/Learn/CSS/Building_blocks)
+- [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics)

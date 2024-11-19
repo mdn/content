@@ -188,4 +188,4 @@ We're testing your understanding of `position: fixed` with a slightly different 
 
 ## See also
 
-- [CSS building blocks](/en-US/docs/Learn/CSS/Building_blocks)
+- [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics)

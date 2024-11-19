@@ -212,5 +212,5 @@ In the following example, two layers are created with no rules applied, then CSS
 - [`revert-layer`](/en-US/docs/Web/CSS/revert-layer)
 - [Introducing the CSS cascade](/en-US/docs/Web/CSS/Cascade)
 - [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
-- [Cascade layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers)
+- [Learn: Cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 - [The future of CSS: Cascade layers](https://www.bram.us/2021/09/15/the-future-of-css-cascade-layers-css-at-layer/) on bram.us (2021)

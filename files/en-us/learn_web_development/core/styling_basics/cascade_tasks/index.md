@@ -128,4 +128,4 @@ You need to remember that unlayered normal styles take precedence over layered n
 
 ## See also
 
-- [CSS building blocks](/en-US/docs/Learn/CSS/Building_blocks)
+- [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics)

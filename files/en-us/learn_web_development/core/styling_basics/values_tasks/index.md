@@ -210,4 +210,4 @@ Use `background-position` with ther `center` keyword and a percentage:
 
 ## See also
 
-- [CSS building blocks](/en-US/docs/Learn/CSS/Building_blocks)
+- [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics)

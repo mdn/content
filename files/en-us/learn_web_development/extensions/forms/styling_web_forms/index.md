@@ -73,7 +73,7 @@ The articles [Advanced form styling](/en-US/docs/Learn_web_development/Extension
 
 ## Styling simple form widgets
 
-The "easy-to-style" widgets in the previous section may be styled using techniques from the articles [Your first form](/en-US/docs/Learn_web_development/Extensions/Forms/Your_first_form) and [CSS building blocks](/en-US/docs/Learn/CSS/Building_blocks). There are also special selectors — [UI pseudo-classes](/en-US/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes) — that enable styling based on the current state of the UI.
+The "easy-to-style" widgets in the previous section may be styled using techniques from the articles [Your first form](/en-US/docs/Learn_web_development/Extensions/Forms/Your_first_form) and [CSS building blocks](/en-US/docs/Learn_web_development/Core/Styling_basics). There are also special selectors — [UI pseudo-classes](/en-US/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes) — that enable styling based on the current state of the UI.
 
 We'll walk through an example at the end of this article — but first, here are some special aspects of form styling that are worth knowing about.
 

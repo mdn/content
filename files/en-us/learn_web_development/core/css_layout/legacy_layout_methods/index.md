@@ -6,8 +6,6 @@ page-type: learn-module-chapter
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
-
 Grid systems are a very common feature used in CSS layouts, and before CSS grid layout they tended to be implemented using floats or other layout features. You imagine your layout as a set number of columns (e.g. 4, 6, or 12), and then fit your content columns inside these imaginary columns. In this article we'll explore how these older methods work, in order that you understand how they were used if you work on an older project.
 
 <table>
@@ -19,8 +17,7 @@ Grid systems are a very common feature used in CSS layouts, and before CSS grid 
         <a href="/en-US/docs/Learn_web_development/Core/Structuring_content"
           >Introduction to HTML</a
         >), and an idea of how CSS works (study
-        <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS Styling basics</a> and
-        <a href="/en-US/docs/Learn/CSS/Building_blocks">Styling boxes</a>.)
+        <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS Styling basics</a>.)
       </td>
     </tr>
     <tr>
@@ -663,5 +660,3 @@ As you can see, we need to write very little CSS when using Skeleton. It deals w
 ## Summary
 
 You now understand how various grid systems are created, which will be useful in working with older sites and in understanding the difference between the native grid of CSS grid layout and these older systems.
-
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}

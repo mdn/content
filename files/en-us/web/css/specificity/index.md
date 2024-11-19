@@ -502,7 +502,7 @@ A few things to remember about specificity:
 - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
 - [Initial](/en-US/docs/Web/CSS/initial_value), [computed](/en-US/docs/Web/CSS/computed_value), [used](/en-US/docs/Web/CSS/used_value), and [actual](/en-US/docs/Web/CSS/actual_value) values
 - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
-- [Building blocks: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
-- [Building blocks: cascade layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers)
+- [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
+- [Learn: cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 - [CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
 - [CSS nesting module](/en-US/docs/Web/CSS/CSS_nesting)

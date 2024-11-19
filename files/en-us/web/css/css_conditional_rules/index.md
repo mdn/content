@@ -70,7 +70,7 @@ There are plans to further extend possible queries by adding the generalized con
 
   - : Introduces media queries, their syntax, and the operators and media features that are used to construct media query expressions.
 
-- [Supporting older browsers: feature queries](/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers#feature_queries)
+- [Supporting older browsers: feature queries](/en-US/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers#feature_queries)
 
   - : How to use feature queries to target CSS based on the browser's level of support for web features.
 

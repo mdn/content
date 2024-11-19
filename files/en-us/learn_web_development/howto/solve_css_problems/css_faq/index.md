@@ -275,4 +275,4 @@ The z-index property specifies the stack order of elements.
 An element with a higher z-index/stack order is always rendered in front of an element with a lower z-index/stack order on the screen. Z-index will only work on elements that have a specified position (`position:absolute`, `position:relative`, or `position:fixed`).
 
 > [!NOTE]
-> For more information, see our [Positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning) learning article, and in particular the [Introducing z-index](/en-US/docs/Learn/CSS/CSS_layout/Positioning#introducing_z-index) section.
+> For more information, see our [Positioning](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning) learning article, and in particular the [Introducing z-index](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning#introducing_z-index) section.

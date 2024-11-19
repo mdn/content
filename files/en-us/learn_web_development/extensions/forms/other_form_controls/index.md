@@ -70,7 +70,7 @@ The ability to resize a `<textarea>` is controlled with the CSS `resize` propert
 - `horizontal`: Allows resizing only horizontally.
 - `vertical`: Allows resizing only vertically.
 - `none`: Allows no resizing.
-- `block` and `inline`: Experimental values that allow resizing in the `block` or `inline` direction only (this varies depending on the directionality of your text; read [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions) if you want to find out more.)
+- `block` and `inline`: Experimental values that allow resizing in the `block` or `inline` direction only (this varies depending on the directionality of your text; read [Handling different text directions](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions) if you want to find out more.)
 
 Play with the interactive example at the top of the {{cssxref("resize")}} reference page for a demonstration of how these work.
 

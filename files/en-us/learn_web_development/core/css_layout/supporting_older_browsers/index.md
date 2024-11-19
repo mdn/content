@@ -7,8 +7,6 @@ browser-compat: css.properties.grid-template-columns
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Legacy_Layout_methods", "Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension", "Learn/CSS/CSS_layout")}}
-
 Visitors to your website may include users who either use older browsers or use browsers that do not support the CSS features you've implemented. This is a common scenario on the web, where new features are continuously being added to CSS. Browsers differ in their support for these features because different browsers tend to prioritize implementing different features. This article explains how you as a web developer can use modern web techniques to ensure that your website remains accessible to users with older technology.
 
 <table>
@@ -20,8 +18,7 @@ Visitors to your website may include users who either use older browsers or use 
         <a href="/en-US/docs/Learn_web_development/Core/Structuring_content"
           >Introduction to HTML</a
         >), and an idea of how CSS works (study
-        <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS Styling basics</a> and
-        <a href="/en-US/docs/Learn/CSS/Building_blocks">Styling boxes</a>.)
+        <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS Styling basics</a>.)
       </td>
     </tr>
     <tr>
@@ -156,7 +153,7 @@ One way is to use an online testing tool such as Sauce Labs, as detailed in the 
 
 You now have the knowledge to provide fallback CSS for older browsers and confidently test for new features. You should now feel confident making use of any new techniques that might come along.
 
-Now that you have worked through our articles on CSS layout, it's time to test your comprehension with our assessment for the module: [Fundamental layout comprehension](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension).
+Now that you have worked through our articles on CSS layout, it's time to test your comprehension with our assessment for the module: [Fundamental layout comprehension](/en-US/docs/Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension).
 
 ## See also
 
@@ -164,5 +161,3 @@ Now that you have worked through our articles on CSS layout, it's time to test y
 - [CSS at-rules](/en-US/docs/Web/CSS/At-rule)
 - [Using feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
 - [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module
-
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Legacy_Layout_methods", "Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension", "Learn/CSS/CSS_layout")}}

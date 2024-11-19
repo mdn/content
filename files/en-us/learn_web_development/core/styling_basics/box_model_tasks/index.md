@@ -170,4 +170,4 @@ After adding `display: inline-block`, the block direction margin, border and pad
 
 ## See also
 
-- [CSS building blocks](/en-US/docs/Learn/CSS/Building_blocks)
+- [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics)

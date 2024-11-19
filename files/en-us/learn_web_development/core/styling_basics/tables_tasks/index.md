@@ -179,5 +179,5 @@ table {
 
 ## See also
 
-- [CSS building blocks](/en-US/docs/Learn/CSS/Building_blocks)
+- [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics)
 - [Web Typography: Designing Tables to be Read, Not Looked At](https://alistapart.com/article/web-typography-tables) on alistapart.com (2017)

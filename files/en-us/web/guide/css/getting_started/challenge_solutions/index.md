@@ -187,7 +187,7 @@ The challenges on page [Styling lists](/en-US/docs/Learn_web_development/Core/Te
 
 ## Boxes
 
-The challenges on page [Boxes](/en-US/docs/Learn/CSS/Building_blocks) are:
+The challenges on page [Boxes](/en-US/docs/Learn_web_development/Core/CSS_layout) are:
 
 ### Ocean border
 
