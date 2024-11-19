@@ -38,7 +38,7 @@ This section lists page types that are specific to a single area of MDN.
 
 ### Learning Area page types
 
-This section lists `page-type` values for pages under [Learn](/en-US/docs/Learn). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
+This section lists `page-type` values for pages under [Learn](/en-US/docs/Learn_web_development). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
 
 - `learn-topic`: an overview of a topic, that is, a collection of modules like [_CSS_](/en-US/docs/Learn_web_development/Core/Styling_basics).
 - `learn-module` an overview of a module, that is, an ordered collection of guides, like [_Structuring content with HTML_](/en-US/docs/Learn_web_development/Core/Structuring_content).

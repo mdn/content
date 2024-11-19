@@ -124,7 +124,7 @@ If the table cannot be broken apart, use a combination of the [`id`](/en-US/docs
 
 ## Examples
 
-The examples below include tables of progressively increasing complexity. For additional examples, including an in-depth tutorial, see the [HTML table basics](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics) series in the [Learn web development](/en-US/docs/Learn) area, where you'll learn how to use the table elements and their attributes to correctly structure your tabular data. A [Styling tables](/en-US/docs/Learn_web_development/Core/Styling_basics/Tables) guide provides table styling information, including common, useful techniques.
+The examples below include tables of progressively increasing complexity. See also our beginner's [Styling tables](/en-US/docs/Learn_web_development/Core/Styling_basics/Tables) guide for table styling information including common, useful techniques.
 
 Since the structure of a `<table>` involves the use of several table-related HTML elements along with various associated attributes, the following examples are intended to provide a simplified explanation that covers the basics and common standards. Additional and more detailed information can be found on the corresponding linked pages.
 

@@ -45,7 +45,7 @@ Here are some examples of URLs:
 
 ```plain
 https://developer.mozilla.org
-https://developer.mozilla.org/en-US/docs/Learn/
+https://developer.mozilla.org/en-US/docs/Learn_web_development/
 https://developer.mozilla.org/en-US/search?q=URL
 ```
 
@@ -134,7 +134,7 @@ All of the following URLs are relative URLs:
 - Scheme-relative URL: `//developer.mozilla.org/en-US/docs/Learn` — only the protocol is missing. The browser will use the same protocol as the one used to load the document hosting that URL.
 - Domain-relative URL: `/en-US/docs/Learn` — the protocol and the domain name are both missing. The browser will use the same protocol and the same domain name as the one used to load the document hosting that URL.
 - Sub-resources: `Common_questions/Web_mechanics/What_is_a_URL` — the protocol and domain name are missing, and the path doesn't begin with `/`. The browser will attempt to find the document in a subdirectory of the one containing the current resource. In this case, we really want to reach this URL: `https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL`.
-- Going back in the directory tree: `../CSS/display` — the protocol and domain name are missing, and the path begins with `..`. This is inherited from the UNIX file system world — to tell the browser we want to go up by one level. Here we want to reach this URL: `https://developer.mozilla.org/en-US/docs/Learn/../CSS/display`, which can be simplified to: `https://developer.mozilla.org/en-US/docs/CSS/display`.
+- Going back in the directory tree: `../CSS/display` — the protocol and domain name are missing, and the path begins with `..`. This is inherited from the UNIX file system world — to tell the browser we want to go up by one level. Here we want to reach this URL: `https://developer.mozilla.org/en-US/docs/Learn_web_development/../Web/CSS/display`, which can be simplified to: `https://developer.mozilla.org/en-US/docs/Web/CSS/display`.
 - Anchor-only: `#semantic_urls` - all parts are missing except the anchor. The browser will use the current document's URL and replace or add the anchor part to it. This is useful when you want to link to a specific part of the current document.
 
 ## Semantic URLs

@@ -17,7 +17,7 @@ The most common form of URI is the Uniform Resource Locator ({{Glossary("URL")}}
 
 ```url
 https://developer.mozilla.org
-https://developer.mozilla.org/en-US/docs/Learn/
+https://developer.mozilla.org/en-US/docs/Learn_web_development/
 https://developer.mozilla.org/en-US/search?q=URL
 ```
 

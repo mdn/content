@@ -5150,6 +5150,7 @@
 /en-US/docs/JavaScript_typed_arrays/Uint16Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array
 /en-US/docs/JavaScript_typed_arrays/Uint32Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array
 /en-US/docs/JavaScript_typed_arrays/Uint8Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array
+/en-US/docs/Learn	/en-US/docs/Learn_web_development
 /en-US/docs/Learn/Accessibility	/en-US/docs/Learn_web_development/Core/Accessibility
 /en-US/docs/Learn/Accessibility/Accessibility_troubleshooting	/en-US/docs/Learn_web_development/Core/Accessibility/Accessibility_troubleshooting
 /en-US/docs/Learn/Accessibility/CSS_and_JavaScript	/en-US/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript
@@ -5287,7 +5288,7 @@
 /en-US/docs/Learn/Checking_that_your_web_site_is_working_properly	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Checking_that_your_web_site_is_working_properly
 /en-US/docs/Learn/Choose,_Install_and_set_up_a_text_editor	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors
 /en-US/docs/Learn/Client-side_web_APIs	/en-US/docs/Learn_web_development/Extensions/Client-side_APIs
-/en-US/docs/Learn/Coding-Scripting	/en-US/docs/Learn
+/en-US/docs/Learn/Coding-Scripting	/en-US/docs/Learn_web_development
 /en-US/docs/Learn/Common_questions	/en-US/docs/Learn_web_development/Howto
 /en-US/docs/Learn/Common_questions/Available_text_editors	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors
 /en-US/docs/Learn/Common_questions/Checking_that_your_web_site_is_working_properly	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Checking_that_your_web_site_is_working_properly
@@ -5339,7 +5340,7 @@
 /en-US/docs/Learn/Design_for_all_types_of_users_101	/en-US/docs/Learn_web_development/Howto/Design_and_accessibility/Design_for_all_types_of_users
 /en-US/docs/Learn/Discover_browser_developer_tools	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools
 /en-US/docs/Learn/Discover_browser_development_tools	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools
-/en-US/docs/Learn/Drafts	/en-US/docs/Learn
+/en-US/docs/Learn/Drafts	/en-US/docs/Learn_web_development
 /en-US/docs/Learn/Drafts/Python	/en-US/docs/Learn_web_development/Extensions/Server-side/Django
 /en-US/docs/Learn/Drafts/Python/First_steps	/en-US/docs/Learn_web_development/Extensions/Server-side/Django
 /en-US/docs/Learn/Dynamic_Websites_–_Server-side_website_programming	/en-US/docs/Learn_web_development/Extensions/Server-side
@@ -5492,7 +5493,7 @@
 /en-US/docs/Learn/How_the_Internet_works	/en-US/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work
 /en-US/docs/Learn/How_to_create_an_HTML_document	/en-US/docs/Learn_web_development/Getting_started/Your_first_website
 /en-US/docs/Learn/How_web_pages_work	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web
-/en-US/docs/Learn/Index	/en-US/docs/Learn
+/en-US/docs/Learn/Index	/en-US/docs/Learn_web_development
 /en-US/docs/Learn/Infrastructure	/en-US/docs/Learn_web_development/Howto
 /en-US/docs/Learn/JavaScript	/en-US/docs/Learn_web_development/Core/Scripting
 /en-US/docs/Learn/JavaScript/Asynchronous	/en-US/docs/Learn_web_development/Extensions/Async_JS
@@ -5585,7 +5586,7 @@
 /en-US/docs/Learn/MathML/First_steps/Text_containers	/en-US/docs/Web/MathML/Guides/Text_containers
 /en-US/docs/Learn/MathML/First_steps/Three_famous_mathematical_formulas	/en-US/docs/Web/MathML/Guides/Three_famous_mathematical_formulas
 /en-US/docs/Learn/Open_a_file_in_a_browser	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files
-/en-US/docs/Learn/Other_learning_material	/en-US/docs/Learn
+/en-US/docs/Learn/Other_learning_material	/en-US/docs/Learn_web_development
 /en-US/docs/Learn/Pages_sites_servers_and_search_engines	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web
 /en-US/docs/Learn/Performance	/en-US/docs/Learn_web_development/Extensions/Performance
 /en-US/docs/Learn/Performance/Animation_performance_and_frame_rate	/en-US/docs/Web/Performance/Animation_performance_and_frame_rate
@@ -5611,7 +5612,7 @@
 /en-US/docs/Learn/Performance/why_web_performance	/en-US/docs/Learn_web_development/Extensions/Performance/why_web_performance
 /en-US/docs/Learn/Python	/en-US/docs/Learn_web_development/Extensions/Server-side/Django
 /en-US/docs/Learn/Python/First_steps	/en-US/docs/Learn_web_development/Extensions/Server-side/Django
-/en-US/docs/Learn/Release_notes	/en-US/docs/Learn
+/en-US/docs/Learn/Release_notes	/en-US/docs/Learn_web_development
 /en-US/docs/Learn/Server-side	/en-US/docs/Learn_web_development/Extensions/Server-side
 /en-US/docs/Learn/Server-side/Apache_Configuration_htaccess	/en-US/docs/Learn_web_development/Extensions/Server-side/Apache_Configuration_htaccess
 /en-US/docs/Learn/Server-side/Configuring_server_MIME_types	/en-US/docs/Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types
@@ -5669,7 +5670,7 @@
 /en-US/docs/Learn/Server-side/Node_server_without_framework	/en-US/docs/Learn_web_development/Extensions/Server-side/Node_server_without_framework
 /en-US/docs/Learn/Server-side/Server-side_website_programming_first_steps	/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps
 /en-US/docs/Learn/Set_up_a_basic_working_environment	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server
-/en-US/docs/Learn/Skills/Coding-Scripting	/en-US/docs/Learn
+/en-US/docs/Learn/Skills/Coding-Scripting	/en-US/docs/Learn_web_development
 /en-US/docs/Learn/Skills/Composing_for_the_web	/en-US/docs/Learn_web_development/Howto
 /en-US/docs/Learn/Skills/Design_and_Accessibility	/en-US/docs/Learn_web_development/Howto
 /en-US/docs/Learn/Skills/Infrastructure	/en-US/docs/Learn_web_development/Howto
@@ -5759,10 +5760,10 @@
 /en-US/docs/Learn/What_is_accessibility	/en-US/docs/Learn_web_development/Howto/Design_and_accessibility/What_is_accessibility
 /en-US/docs/Learn/What_software_do_I_need	/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need
 /en-US/docs/Learn/page_vs_site_vs_server_vs_search_engine	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web
-/en-US/docs/Learn/skills	/en-US/docs/Learn
+/en-US/docs/Learn/skills	/en-US/docs/Learn_web_development
 /en-US/docs/Learn/skills/Infrastructure/Undersanding_URLs	/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL
-/en-US/docs/Learn/tutorial	/en-US/docs/Learn
-/en-US/docs/Learn/tutorial/How_to_build_a_web_site	/en-US/docs/Learn
+/en-US/docs/Learn/tutorial	/en-US/docs/Learn_web_development
+/en-US/docs/Learn/tutorial/How_to_build_a_web_site	/en-US/docs/Learn_web_development
 /en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_formatting	/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features
 /en-US/docs/Learn_web_development/Core/Structuring_content/Creating_hyperlinks	/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links
 /en-US/docs/Learn_web_development/Core/Structuring_content/Document_and_website_structure	/en-US/docs/Learn_web_development/Core/Structuring_content/Structuring_documents
@@ -12571,7 +12572,7 @@
 /en-US/docs/Web/Guide/HTML/XHTML	/en-US/docs/Glossary/XHTML
 /en-US/docs/Web/Guide/Houdini	/en-US/docs/Web/API/Houdini_APIs
 /en-US/docs/Web/Guide/Index	/en-US/docs/Web/Guide
-/en-US/docs/Web/Guide/Introduction_to_Web_development	/en-US/docs/Learn
+/en-US/docs/Web/Guide/Introduction_to_Web_development	/en-US/docs/Learn_web_development
 /en-US/docs/Web/Guide/Mobile	/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design
 /en-US/docs/Web/Guide/Mobile/A_hybrid_approach	/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design
 /en-US/docs/Web/Guide/Mobile/Mobile-friendliness	/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design
@@ -13659,7 +13660,7 @@
 /en-US/docs/Web_Audio_API/Using_Web_Audio_API	/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API
 /en-US/docs/Web_Development	/en-US/docs/Web/Guide
 /en-US/docs/Web_Development/HTTP_cookies	/en-US/docs/Web/HTTP/Cookies
-/en-US/docs/Web_Development/Introduction_to_Web_development	/en-US/docs/Learn
+/en-US/docs/Web_Development/Introduction_to_Web_development	/en-US/docs/Learn_web_development
 /en-US/docs/Web_Development/Mobile	/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design
 /en-US/docs/Web_Development/Mobile/A_hybrid_approach	/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design
 /en-US/docs/Web_Development/Mobile/Mobile-friendliness	/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design
@@ -13669,7 +13670,7 @@
 /en-US/docs/Web_Development/Responsive_Web_design	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web_Development/Responsive_design	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web_Development/Responsive_design/Responsive_design_references	/en-US/docs/Web/Progressive_web_apps
-/en-US/docs/Web_Development2/Introduction_to_Web_development	/en-US/docs/Learn
+/en-US/docs/Web_Development2/Introduction_to_Web_development	/en-US/docs/Learn_web_development
 /en-US/docs/Web_development/Historical_artifacts_to_avoid	/en-US/docs/Learn_web_development/Core/Structuring_content
 /en-US/docs/Web_development/Writing_Forward_Compatible_Websites	/en-US/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript
 /en-US/docs/Web_development/Writing_forward-compatible_websites	/en-US/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript
@@ -14126,7 +14127,7 @@
 /en-US/docs/setAttributeNodeNS	/en-US/docs/Web/API/Element/setAttributeNodeNS
 /en-US/docs/shape-box	/en-US/docs/Web/CSS/shape-outside
 /en-US/docs/shiftKey	/en-US/docs/Web/API/MouseEvent/shiftKey
-/en-US/docs/skills	/en-US/docs/Learn
+/en-US/docs/skills	/en-US/docs/Learn_web_development
 /en-US/docs/slice	/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice
 /en-US/docs/stopPropagation	/en-US/docs/Web/API/Event/stopPropagation
 /en-US/docs/summary	/en-US/docs/Web/API/HTMLTableElement/summary
