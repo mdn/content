@@ -414,7 +414,7 @@ The problem is with the client side of things: parsing of dates with more than 4
 <input type="datetime-local" value="+010000-01-01T05:00" />
 ```
 
-It can be accomplished via attribute and a bit of JavaScript; we need to prepare our code for any number of digits. Do not only prepare for 5 digits. Here is JavaScript code for programmatically setting the value:
+We need to prepare our code for any number of digits — not just 5. The following JavaScript function programmatically sets the value:
 
 ```js
 function setValue(element, date) {
