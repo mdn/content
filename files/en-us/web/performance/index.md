@@ -62,13 +62,11 @@ The MDN [Web Performance Learning Area](/en-US/docs/Learn/Performance) contains 
 - [Client hints](/en-US/docs/Web/HTTP/Client_hints)
 - {{glossary('Code splitting')}}
 - {{glossary('CSSOM')}}
-- {{glossary('Cumulative Layout Shift')}}
+- {{glossary('CLS', 'Cumulative Layout Shifts')}}
 - {{glossary('Domain sharding')}}
 - {{glossary('Effective connection type')}}
 - {{glossary('First Contentful Paint')}}
 - {{glossary('First CPU idle')}}
-- {{glossary('First Input Delay')}}
-- {{glossary('First Meaningful Paint')}}
 - {{glossary('First Paint')}}
 - {{glossary('HTTP')}}
 - {{glossary('HTTP_2', 'HTTP/2')}}
