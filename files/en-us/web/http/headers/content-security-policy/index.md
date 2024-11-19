@@ -45,12 +45,16 @@ Fetch directives control the locations from which certain resource types may be 
   - : Defines the valid sources for [web workers](/en-US/docs/Web/API/Web_Workers_API) and nested browsing contexts loaded using elements such as
     {{HTMLElement("frame")}} and {{HTMLElement("iframe")}}.
 
-    To regulate nested browsing contexts and workers independently of each other, use the {{CSP("frame-src")}} and {{CSP("worker-src")}} directives, respectively.
+    [Fallback](#fallbacks) for `frame-src` and `worker-src`.
 
 - {{CSP("connect-src")}}
   - : Restricts the URLs which can be loaded using script interfaces.
 - {{CSP("default-src")}}
+
   - : Serves as a fallback for the other {{Glossary("Fetch directive", "fetch directives")}}.
+
+    [Fallback](#fallbacks) for all other fetch directives.
+
 - {{CSP("fenced-frame-src")}} {{experimental_inline}}
   - : Specifies valid sources for nested browsing contexts loaded into {{HTMLElement("fencedframe")}} elements.
 - {{CSP("font-src")}}
@@ -70,13 +74,21 @@ Fetch directives control the locations from which certain resource types may be 
 - {{CSP("prefetch-src")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Specifies valid sources to be prefetched or prerendered.
 - {{CSP("script-src")}}
+
   - : Specifies valid sources for JavaScript and WebAssembly resources.
+
+    [Fallback](#fallbacks) for `script-src-elem` and `script-src-attr`.
+
 - {{CSP("script-src-elem")}}
   - : Specifies valid sources for JavaScript {{HTMLElement("script")}} elements.
 - {{CSP("script-src-attr")}}
   - : Specifies valid sources for JavaScript inline event handlers.
 - {{CSP("style-src")}}
+
   - : Specifies valid sources for stylesheets.
+
+    [Fallback](#fallbacks) for `style-src-elem` and `style-src-attr`.
+
 - {{CSP("style-src-elem")}}
   - : Specifies valid sources for stylesheets {{HTMLElement("style")}} elements and
     {{HTMLElement("link")}} elements with `rel="stylesheet"`.
