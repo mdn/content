@@ -1,0 +1,23 @@
+sidebar:
+  - type: section
+    link: /Web/XSLT
+  - type: listSubPages
+    path: /en-US/docs/Web/XSLT/Transforming_XML_with_XSLT
+
+  - type: section
+    link: /Web/XSLT/Element
+  - type: listSubPages
+    path: /en-US/docs/Web/XSLT/Element
+
+  - type: section
+    link: /Web/EXSLT
+  - type: listSubPages
+    path: /en-US/docs/Web/EXSLT
+
+  - type: section
+    link: /Web/XPath/Functions
+  - type: listSubPages
+    path: /en-US/docs/Web/XPath/Functions
+
+  - type: section
+    link: /Web/XPath/Axes

@@ -10,7 +10,7 @@ browser-compat: api.HTMLOptionElement.label
 
 The **`label`** property of the {{domxref("HTMLOptionElement")}} represents the text displayed for an option in a {{htmlelement("select")}} element or as part of a list of suggestions in a {{htmlelement("datalist")}} element. It reflects the {{htmlelement("option")}} element's [`label`](/en-US/docs/Web/HTML/Element/option#label) attribute.
 
-If the attribute if omitted or the empty string, the `label` property returns the element's {{domxref("HTMLOptionElement.text", "text")}} content.
+If the attribute is omitted or the empty string, the `label` property returns the element's {{domxref("HTMLOptionElement.text", "text")}} content.
 
 ## Value
 

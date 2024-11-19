@@ -83,6 +83,7 @@ BMFF
 bootup
 botmaster
 BPTC
+Brotli
 browserless
 BSAC
 bytestream
@@ -880,5 +881,6 @@ yearless
 Zalgo
 zoomable
 ZQSD
+Zstandard
 ZWNBSP
 ZWSP

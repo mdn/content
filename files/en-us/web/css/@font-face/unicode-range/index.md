@@ -45,7 +45,7 @@ The purpose of this descriptor is to allow the font resources to be segmented so
 
 ### Using a different font for a single character
 
-In this example we create a simple HTML containing a single {{HTMLElement("div")}} element, including an ampersand, that we want to style with a different font. To make it obvious, we will use a sans-serif font, _Helvetica_, for the text, and a serif font, _Times New Roman_, for the ampersand.
+In this example, we create a single {{HTMLElement("div")}} element, with a text string that includes an ampersand that we want to style with a different font. To make it obvious, we will use a sans-serif font, _Helvetica_, for the text, and a serif font, _Times New Roman_, for the ampersand.
 
 In the CSS we are in effect defining a completely separate {{cssxref("@font-face")}} that only includes a single character in it, meaning that only this character will be styled with this font. We could also have done this by wrapping the ampersand in a {{HTMLElement("span")}} and applying a different font just to that, but that is an extra element and rule set.
 

@@ -49,6 +49,7 @@ This article provides information about the changes in Firefox 133 that affect d
 - The {{domxref('WorkerNavigator.permissions')}} property is now supported, allowing the [Permissions API](/en-US/docs/Web/API/Permissions_API) to be used in [workers](/en-US/docs/Web/API/Web_Workers_API) as well as the main window thread. ([Firefox bug 1193373](https://bugzil.la/1193373)).
 - The {{domxref("EventSource")}} interface to handle [server-sent events](/en-US/docs/Web/API/Server-sent_events) is now supported in [service workers](/en-US/docs/Web/API/Service_Worker_API). ([Firefox bug 1681218](https://bugzil.la/1681218)).
 - The {{domxref("ImageDecoder")}}, {{domxref("ImageTrackList")}}, and {{domxref("ImageTrack")}} interfaces of the [WebCodecs API](/en-US/docs/Web/API/WebCodecs_API) are now supported, enabling the decoding images from the main and worker threads. ([Firefox bug 1923755](https://bugzil.la/1923755)).
+- The [`beforetoggle`](/en-US/docs/Web/API/HTMLElement/beforetoggle_event) and [`toggle`](/en-US/docs/Web/API/HTMLElement/toggle_event) events of the {{domxref("HTMLElement")}} interface are now fired at {{HTMLElement("dialog")}} elements immediately before and after they are shown or hidden, respectively. The `beforetoggle` can be used, for example, to apply/remove classes that control the animation of a dialog, or reset the state of a dialog form before it is shown. The `toggle` event can be used to get change notification of the open state, which otherwise requires a {{domxref("MutationObserver")}}. ([Firefox bug 1876762](https://bugzil.la/1876762)).
 
 #### DOM
 
@@ -80,6 +81,10 @@ This article provides information about the changes in Firefox 133 that affect d
 ## Experimental web features
 
 These features are newly shipped in Firefox 133 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **contenteditable plaintext-only value:** `dom.element.contenteditable.plaintext-only.enabled`.
+
+  The `plaintext-only` value of the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) global attribute indicates that the element is editable; rich text formatting is disabled and any formatting in pasted text is automatically stripped. ([Firefox bug 1922723](https://bugzil.la/1922723).)
 
 ## Older versions
 
