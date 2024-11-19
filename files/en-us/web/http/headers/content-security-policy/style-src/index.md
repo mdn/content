@@ -49,8 +49,8 @@ This directive may have one of the following values:
     - [`'self'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#self)
     - [`'unsafe-inline'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#unsafe-inline)
     - [`'unsafe-hashes'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#unsafe-hashes)
-    - [`'nonce-NONCE_VALUE'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#nonce-nonce_value)
-    - [`'hash_algorithm-HASH_VALUE'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#hash_algorithm-hash_value)
+    - [`'nonce-<nonce_value>'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#nonce-nonce_value)
+    - [`'<hash_algorithm>-<hash_value>'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#hash_algorithm-hash_value)
     - [`'report-sample'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#report-sample)
 
 ## Examples

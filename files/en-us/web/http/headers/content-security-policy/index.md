@@ -178,7 +178,7 @@ Each source expression takes one of the forms listed below. Note that not all fo
 
 The `<host-source>` and `<scheme-source>` formats must be unquoted, and all other formats must be enclosed in single quotes.
 
-### 'nonce-NONCE_VALUE'
+### 'nonce-\<nonce_value>'
 
 This value consists of the string `nonce-` followed by a {{glossary("Base64", "base64-encoded")}} string. This string is a random value that the server generates for every HTTP response. For example:
 
@@ -196,7 +196,7 @@ See [Nonces](/en-US/docs/Web/HTTP/CSP#nonces) in the CSP guide for more usage in
 
 > [!NOTE] Nonce source expressions are only applicable to {{htmlelement("script")}} and {{htmlelement("style")}} elements.
 
-### 'hash_algorithm-HASH_VALUE'
+### '\<hash_algorithm>-<hash_value>'
 
 This value consists of a string identifying a hash algorithm, followed by `-`, followed by a {{glossary("Base64", "base64-encoded")}} string representing the hash value.
 
