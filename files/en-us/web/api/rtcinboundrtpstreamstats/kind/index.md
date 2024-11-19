@@ -3,7 +3,7 @@ title: "RTCInboundRtpStreamStats: kind property"
 short-title: kind
 slug: Web/API/RTCInboundRtpStreamStats/kind
 page-type: web-api-instance-property
-browser-compat: api.RTCStatsReport.type_remote-inbound-rtp.kind
+browser-compat: api.RTCStatsReport.type_inbound-rtp.kind
 ---
 
 {{APIRef("WebRTC")}}

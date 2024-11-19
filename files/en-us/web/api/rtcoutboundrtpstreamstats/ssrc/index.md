@@ -1,9 +1,9 @@
 ---
 title: "RTCOutboundRtpStreamStats: ssrc property"
 short-title: ssrc
-slug: Web/API/RTCRemoteInboundRtpStreamStats/ssrc
+slug: Web/API/RTCOutboundRtpStreamStats/ssrc
 page-type: web-api-instance-property
-browser-compat: api.RTCStatsReport.type_remote-inbound-rtp.ssrc
+browser-compat: api.RTCStatsReport.type_outbound-rtp.ssrc
 ---
 
 {{APIRef("WebRTC")}}

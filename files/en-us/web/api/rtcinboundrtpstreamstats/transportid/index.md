@@ -3,7 +3,7 @@ title: "RTCInboundRtpStreamStats: transportId property"
 short-title: transportId
 slug: Web/API/RTCInboundRtpStreamStats/transportId
 page-type: web-api-instance-property
-browser-compat: api.RTCStatsReport.type_remote-inbound-rtp.transportId
+browser-compat: api.RTCStatsReport.type_inbound-rtp.transportId
 ---
 
 {{APIRef("WebRTC")}}
