@@ -42,7 +42,7 @@ setStringValue(stringType, stringValue)
     | `CSS_ATTR`   | The value is an {{cssxref("attr", "attr()")}} function. |
     | `CSS_IDENT`  | The value is an identifier.                             |
     | `CSS_STRING` | The value is a {{cssxref("&lt;string&gt;")}}.           |
-    | `CSS_URI`    | The value is a {{cssxref("url", "url()")}}.             |
+    | `CSS_URI`    | The value is a {{cssxref("url_value", "&lt;url&gt;")}}. |
 
 - `stringValue`
   - : A string representing the new string value.

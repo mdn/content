@@ -327,7 +327,7 @@ const myIterable = {
 console.log([...myIterable]); // [1, 2, 3]
 ```
 
-### Simple iterator
+### Basic iterator
 
 Iterators are stateful by nature. If you don't define it as a [generator function](/en-US/docs/Web/JavaScript/Reference/Statements/function*) (as the example above shows), you would likely want to encapsulate the state in a closure.
 
@@ -381,14 +381,14 @@ console.log(it.next().value); // 2
 ### Defining an iterable with a generator
 
 ```js
-function* makeSimpleGenerator(array) {
+function* makeGenerator(array) {
   let nextIndex = 0;
   while (nextIndex < array.length) {
     yield array[nextIndex++];
   }
 }
 
-const gen = makeSimpleGenerator(["yo", "ya"]);
+const gen = makeGenerator(["yo", "ya"]);
 
 console.log(gen.next().value); // 'yo'
 console.log(gen.next().value); // 'ya'

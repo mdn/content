@@ -62,7 +62,7 @@ If the SVG can be labeled by visible text, reference that text with an [`aria-la
 <svg viewBox="0 0 100 125" role="img" aria-labelledby="svgTitle svgDescription">
   <title id="svgTitle">Manual</title>
   <desc id="svgDescription">
-    A non-descript twelve page booklet opened to the middle page
+    A nondescript twelve page booklet opened to the middle page
   </desc>
   <defs>
     <style>

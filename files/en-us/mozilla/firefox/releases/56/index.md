@@ -51,7 +51,7 @@ _No changes._
 
 #### DOM events
 
-- {{domxref("HTMLElement/wheel_event", "onwheel")}} is now available on {{domxref("HTMLElement")}} — it wasn't before ([Firefox bug 1370550](https://bugzil.la/1370550)).
+- {{domxref("Element/wheel_event", "onwheel")}} is now available on {{domxref("HTMLElement")}} — it wasn't before ([Firefox bug 1370550](https://bugzil.la/1370550)).
 
 #### Media and WebRTC
 
@@ -74,7 +74,7 @@ _No changes._
 ### Other
 
 - Gecko now encodes URLs internally as [punycode](https://en.wikipedia.org/wiki/Punycode), to avoid URL encoding problems (see [Firefox bug 945240](https://bugzil.la/945240), also see discussion in [Firefox bug 942074](https://bugzil.la/942074)).
-- Firefox on Windows and macOS can now be made to run in [headless mode](/en-US/docs/Mozilla/Firefox/Headless_mode) using the `-headless` flag (see [Firefox bug 1355150](https://bugzil.la/1355150) and [Firefox bug 1355147](https://bugzil.la/1355147)).
+- Firefox on Windows and macOS can now be made to run in headless mode using the `-headless` flag (see [Firefox bug 1355150](https://bugzil.la/1355150) and [Firefox bug 1355147](https://bugzil.la/1355147)).
 
 ## Removals from the web platform
 

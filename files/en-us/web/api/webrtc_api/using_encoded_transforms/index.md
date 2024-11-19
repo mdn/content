@@ -219,7 +219,7 @@ event.transformer.options.port.onmessage = (event) => {
 ### Triggering a key frame
 
 Raw video is rarely sent or stored because it consumes a lot of space and bandwidth to represent each frame as a complete image.
-Instead, codecs periodically generate a "key frame" that contains enough infomation to construct a full image, and between key frames sends "delta frames" that just include the changes since the last delta frame.
+Instead, codecs periodically generate a "key frame" that contains enough information to construct a full image, and between key frames sends "delta frames" that just include the changes since the last delta frame.
 While this is far more efficient that sending raw video, it means that in order to display the image associated with a particular delta frame, you need the last key frame and all subsequent delta frames.
 
 This can cause a delay for new users joining a WebRTC conference application, because they can't display video until they have received their first key frame.
@@ -259,8 +259,8 @@ event.transformer.options.port.onmessage = (event) => {
   // key is used by the transformer to encrypt frames (not shown)
 
   // Get codec to generate a new key frame using the rid
-  // Here 'rcevent' is the rtctransform event.
-  rcevent.transformer.generateKeyFrame(rid);
+  // Here 'rcEvent' is the rtctransform event.
+  rcEvent.transformer.generateKeyFrame(rid);
 };
 ```
 

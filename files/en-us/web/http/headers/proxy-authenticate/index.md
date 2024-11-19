@@ -7,13 +7,8 @@ browser-compat: http.headers.Proxy-Authenticate
 
 {{HTTPSidebar}}
 
-The HTTP **`Proxy-Authenticate`** response header defines the
-authentication method that should be used to gain access to a resource behind a
-{{Glossary("proxy server")}}. It authenticates the request to the proxy server, allowing
-it to transmit the request further.
-
-The `Proxy-Authenticate` header is sent along with a {{HTTPStatus("407")}}
-`Proxy Authentication Required`.
+The HTTP **`Proxy-Authenticate`** {{Glossary("response header")}} defines the [authentication](/en-US/docs/Web/HTTP/Authentication) method (or {{Glossary("Challenge", "challenge")}}) that should be used to gain access to a resource behind a {{Glossary("proxy server")}}.
+It is sent in a {{HTTPStatus("407", "407 Proxy Authentication Required")}} response so a client can identify itself to a proxy that requires authentication.
 
 <table class="properties">
   <tbody>
@@ -23,7 +18,7 @@ The `Proxy-Authenticate` header is sent along with a {{HTTPStatus("407")}}
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>Yes</td>
     </tr>
   </tbody>
 </table>
@@ -36,12 +31,12 @@ Proxy-Authenticate: <type> realm=<realm>
 
 ## Directives
 
-- \<type>
-  - : [Authentication type](/en-US/docs/Web/HTTP/Authentication#authentication_schemes). A common type is ["Basic"](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme).
+- `<type>`
+  - : [Authentication type](/en-US/docs/Web/HTTP/Authentication#authentication_schemes).
+    A common type is ["Basic"](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme).
     IANA maintains a [list of authentication schemes](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
-- realm=\<realm>
-  - : A description of the protected area, the realm. If no realm is specified, clients
-    often display a formatted host name instead.
+- `realm=<realm>`
+  - : A description of the protected area, the realm. If no realm is specified, clients often display a formatted host name instead.
 
 ## Examples
 
@@ -62,7 +57,6 @@ Proxy-Authenticate: Basic realm="Access to the internal site"
 ## See also
 
 - [HTTP authentication](/en-US/docs/Web/HTTP/Authentication)
-- {{HTTPHeader("Authorization")}}
-- {{HTTPHeader("Proxy-Authorization")}}
+- {{HTTPHeader("Authorization")}}, {{HTTPHeader("Proxy-Authorization")}}
 - {{HTTPHeader("WWW-Authenticate")}}
 - {{HTTPStatus("401")}}, {{HTTPStatus("403")}}, {{HTTPStatus("407")}}

@@ -46,7 +46,7 @@ beginRenderPass(descriptor)
         - `querySet`: The {{domxref("GPUQuerySet")}} that the timestamp will be written to.
 
         > [!NOTE]
-        > To use timestamp queries, the `timestamp-query` {{domxref("GPUSupportedFeatures", "feature", "", "nocode")}} must be enabled in the {{domxref("GPUDevice")}}.
+        > The `timestamp-query` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) needs to be enabled to use timestamp queries.
 
 ### Color attachment object structure
 
@@ -74,6 +74,10 @@ Color attachment objects can have the following properties:
     ```
 
     If `clearValue` is omitted, it defaults to `{r: 0, g: 0, b: 0, a: 0}`.
+
+- `depthSlice` {{optional_inline}}
+
+  - : A number representing the index of the 3D depth slice that will be output to for this color attachment, in the case of a 3D {{domxref("GPUTextureView")}} `view`. When specified, this allows WebGPU to render directly to slices of 3D textures within render passes.
 
 - `loadOp`
 

@@ -23275,10 +23275,6 @@
     "modified": "2020-10-15T22:15:39.291Z",
     "contributors": ["sideshowbarker", "mfuji09", "jpmedley"]
   },
-  "Web/API/CSS_Counter_Styles": {
-    "modified": "2020-10-15T21:49:22.666Z",
-    "contributors": ["wbamberg", "fscholz", "Sebastianz"]
-  },
   "Web/API/CSS_Font_Loading_API": {
     "modified": "2020-12-13T22:13:07.232Z",
     "contributors": [
@@ -37644,16 +37640,6 @@
       "chharvey"
     ]
   },
-  "Web/API/HTMLDetailsElement/toggle_event": {
-    "modified": "2020-10-15T22:11:35.633Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "chrisdavidmills",
-      "mfluehr",
-      "Claas"
-    ]
-  },
   "Web/API/HTMLDialogElement": {
     "modified": "2020-10-15T21:29:11.074Z",
     "contributors": [
@@ -37672,6 +37658,18 @@
       "fscholz",
       "MHasan",
       "dhodder"
+    ]
+  },
+  "Web/API/HTMLDialogElement/cancel_event": {
+    "modified": "2020-10-15T21:43:04.572Z",
+    "contributors": [
+      "mfuji09",
+      "fscholz",
+      "mfluehr",
+      "sideshowbarker",
+      "fgwang",
+      "rolfedh",
+      "cvrebert"
     ]
   },
   "Web/API/HTMLDialogElement/close": {
@@ -65414,10 +65412,6 @@
   "Web/API/Web_Audio_API/Simple_synth": {
     "modified": "2020-06-16T14:49:12.422Z",
     "contributors": ["jmcantrell", "DianeLooney", "Sheppy"]
-  },
-  "Web/API/Web_Audio_API/Tools": {
-    "modified": "2019-03-18T21:37:44.787Z",
-    "contributors": ["chrisdavidmills", "alien35", "Sheppy"]
   },
   "Web/API/Web_Audio_API/Using_AudioWorklet": {
     "modified": "2020-10-11T19:28:05.402Z",

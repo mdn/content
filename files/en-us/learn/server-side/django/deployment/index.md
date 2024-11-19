@@ -473,15 +473,15 @@ We'll also configure the default database and collect static files so that they 
    PythonAnywhere expects you to install applications in a folder named after your site URL.
 
    > [!NOTE]
-   > Because we're using the free account you can only name your account `<your_pythonaware_username>.pythonanywhere.com` (for example, if your username is "Odtsetseg" you will have to put the local library source into a folder named `odtsetseg.pythonanywhere.com`).
+   > Because we're using the free account you can only name your account `<your_pythonanywhere_username>.pythonanywhere.com` (for example, if your username is "Odtsetseg" you will have to put the local library source into a folder named `odtsetseg.pythonanywhere.com`).
 
    Enter the following command to clone your library sources into an appropriately named folder (you will need to replace the username values with your own name):
 
    ```bash
-   git clone https://github.com/<github_username>/django-locallibrary-tutorial.git <pythonaware_username>.pythonanywhere.com
+   git clone https://github.com/<github_username>/django-locallibrary-tutorial.git <your_pythonanywhere_username>.pythonanywhere.com
 
    # Navigate into the new folder
-   cd <pythonaware_username>.pythonanywhere.com
+   cd <your_pythonanywhere_username>.pythonanywhere.com
    ```
 
 5. Install the library dependencies using the `requirements.txt` file:
@@ -634,7 +634,7 @@ Save these settings and commit them to your GitHub repo.
 You will then need to update the version of your project on PythonAnywhere.
 Assuming you're using your Bash prompt in the folder `<user_name>.pythonanywhere.com`, and you have pushed the changes to the main branch, then you could import them in the Bash prompt using the command:
 
-```Bash
+```bash
 git pull origin main
 ```
 
@@ -659,7 +659,7 @@ We're already set up for that, so all we need to do is create the file.
 
 The steps are:
 
-1. Open a PythonAware Bash prompt.
+1. Open a PythonAnywhere Bash prompt.
 2. Navigate to your application directory (replacing `<user-name>` with your own account):
 
    ```bash
@@ -830,7 +830,7 @@ You can click the site URL (highlighted above) to open the site in a browser (it
 When the site is opened, at this point you'll see an error debug screen as shown below.
 This is a Django security error that is raised because our source code is not running on an "allowed host".
 
-![A detailed error page with a full traceback of an invalid HTTP_HOST header](site_error_dissallowed_host.png)
+![A detailed error page with a full traceback of an invalid HTTP_HOST header](site_error_disallowed_host.png)
 
 > [!NOTE]
 > This kind of debug information is very useful when you're getting set up, but is a security risk in a deployed site.

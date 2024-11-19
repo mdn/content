@@ -125,7 +125,7 @@ There are many different types of selectors. The examples above use **element se
       <td>The element(s) on the page with the specified attribute.</td>
       <td>
         <code>img[src]</code><br />selects
-        <code>&#x3C;img src="myimage.png"></code> but not
+        <code>&#x3C;img src="my-image.png"></code> but not
         <code>&#x3C;img></code>
       </td>
     </tr>

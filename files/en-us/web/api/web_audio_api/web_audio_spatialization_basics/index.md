@@ -33,7 +33,7 @@ See the [3D spatialization demo live](https://mdn.github.io/webaudio-examples/sp
 
 The boombox sits inside a room (defined by the edges of the browser viewport), and in this demo, we can move and rotate it with the provided controls.
 When we move the boombox, the sound it produces changes accordingly, panning as it moves to the left or right of the room, or becoming quieter as it is moved away from the user or is rotated so the speakers are facing away from them, etc.
-This is done by setting the different properties of the `PannerNode` object instance in relation to that movement, to emulate spacialization.
+This is done by setting the different properties of the `PannerNode` object instance in relation to that movement, to emulate spatialization.
 
 > [!NOTE]
 > The experience is much better if you use headphones, or have some kind of surround sound system to plug your computer into.
@@ -79,7 +79,7 @@ These two together can nicely set the direction.
 Let's create our {{domxref("PannerNode")}}. This has a whole bunch of properties associated with it. Let's take a look at each of them:
 
 To start we can set the [`panningModel`](/en-US/docs/Web/API/PannerNode/panningModel).
-This is the spacialization algorithm that's used to position the audio in 3D space. We can set this to:
+This is the spatialization algorithm that's used to position the audio in 3D space. We can set this to:
 
 `equalpower` — The default and the general way panning is figured out
 

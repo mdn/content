@@ -168,7 +168,7 @@ You can create "Conditional `catch` blocks" by combining `try...catch` blocks wi
 
 ```js
 try {
-  myroutine(); // may throw three types of exceptions
+  myRoutine(); // may throw three types of exceptions
 } catch (e) {
   if (e instanceof TypeError) {
     // statements to handle TypeError exceptions

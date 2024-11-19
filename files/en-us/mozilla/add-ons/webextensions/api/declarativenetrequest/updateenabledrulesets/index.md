@@ -9,6 +9,9 @@ browser-compat: webextensions.api.declarativeNetRequest.updateEnabledRulesets
 
 Updates the extension's set of static rulesets. The rulesets with IDs listed in `options.disableRulesetIds` are first deactivated, and then the rulesets listed in `options.enableRulesetIds` are activated. Note that the set of enabled static rulesets persists across sessions but not across extension updates, i.e. the [`declarative_net_request.rule_resources` manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request) determines the set of enabled static rulesets on each extension update.
 
+> [!NOTE]
+> In Firefox 132 and earlier, static rulesets don't load after a browser restart when there are no registered static or dynamic rules at install time ([Firefox bug 1921353](https://bugzil.la/1921353)). A workaround is to make sure that the [`declarative_net_request`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request) manifest key contains at least one enabled ruleset.
+
 ## Syntax
 
 ```js-nolint

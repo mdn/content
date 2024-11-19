@@ -39,4 +39,5 @@ inputElement.alt = "A much better description";
 - {{HTMLElement("button")}}
 - {{HTMLElement("input")}}
 - {{HTMLElement("img")}}
-- [Writing good alt text](https://www.wcag.com/blog/good-alt-text-bad-alt-text-making-your-content-perceivable/)
+- [Good alt text, bad alt text — Making your content perceivable](https://www.wcag.com/blog/good-alt-text-bad-alt-text-making-your-content-perceivable/) on WCAG.com (2021)
+- [An alt Decision Tree](https://www.w3.org/WAI/tutorials/images/decision-tree/) on W3C Web Accessibility Initiative (WAI)
