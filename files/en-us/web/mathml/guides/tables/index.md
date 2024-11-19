@@ -1,42 +1,14 @@
 ---
 title: MathML tables
-slug: Learn/MathML/First_steps/Tables
+slug: Web/MathML/Guides/Tables
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Scripts", "Learn/MathML/First_steps/Three_famous_mathematical_formulas", "Learn/MathML/First_steps")}}
+{{MathMLRef}}
+
+{{PreviousMenuNext("Web/MathML/Guides/Scripts", "Web/MathML/Guides/Three_famous_mathematical_formulas", "Web/MathML/Guides")}}
 
 Once all basic math notations are known, it remains to consider tabular layout which can be used for matrix-like expressions and other advanced math layout.
-
-<table>
-  <tbody>
-    <tr>
-      <th scope="row">Prerequisites:</th>
-      <td>
-        <a
-          href="/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
-          >Basic software installed</a
-        >, basic knowledge of
-        <a
-          href="/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
-          >working with files</a
-        >, and HTML basics (study
-        <a href="/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
-          >Basic HTML syntax</a
-        >. and <a href="/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics"
-          >HTML tables</a
-        >)
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Objective:</th>
-      <td>
-        To get familiar with MathML tabular elements and be aware of some
-        use cases.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## MathML tabular elements
 
@@ -304,9 +276,7 @@ Besides representing matrix-like objects, MathML tables are sometimes used for a
 
 In this article, we've reviewed the `<mtable>`, `<mtr>` and `<mtd>` elements which are the equivalent of HTML elements for tables. We have seen how to use them for representing matrix-like objects and how it is sometimes used for advanced layout.
 
-You've nearly finished this module — we only have one more thing to do. In the [three famous mathematical formulas assessment](/en-US/docs/Learn/MathML/First_steps/Three_famous_mathematical_formulas) you'll use your new knowledge to rewrite a small mathematical article using HTML and MathML.
-
-{{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Scripts", "Learn/MathML/First_steps/Three_famous_mathematical_formulas", "Learn/MathML/First_steps")}}
+You've nearly finished this module — we only have one more thing to do. In the [three famous mathematical formulas assessment](/en-US/docs/Web/MathML/Guides/Three_famous_mathematical_formulas) you'll use your new knowledge to rewrite a small mathematical article using HTML and MathML.
 
 ## See also
 
@@ -314,3 +284,5 @@ You've nearly finished this module — we only have one more thing to do. In the
 - [The `<mtable>` element](/en-US/docs/Web/MathML/Element/mtable)
 - [The `<mtr>` element](/en-US/docs/Web/MathML/Element/mtr)
 - [The `<mtd>` element](/en-US/docs/Web/MathML/Element/mtd)
+
+{{PreviousMenuNext("Web/MathML/Guides/Scripts", "Web/MathML/Guides/Three_famous_mathematical_formulas", "Web/MathML/Guides")}}

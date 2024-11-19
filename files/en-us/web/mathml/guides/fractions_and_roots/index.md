@@ -1,44 +1,18 @@
 ---
 title: MathML fractions and roots
-slug: Learn/MathML/First_steps/Fractions_and_roots
+slug: Web/MathML/Guides/Fractions_and_roots
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Text_containers", "Learn/MathML/First_steps/Scripts", "Learn/MathML/First_steps")}}
+{{MathMLRef}}
+
+{{PreviousMenuNext("Web/MathML/Guides/Text_containers", "Web/MathML/Guides/Scripts", "Web/MathML/Guides")}}
 
 Relying on text containers, this article describes how to build more complex MathML expressions by nesting fractions and roots.
 
-<table>
-  <tbody>
-    <tr>
-      <th scope="row">Prerequisites:</th>
-      <td>
-        <a
-          href="/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
-          >Basic software installed</a
-        >, basic knowledge of
-        <a
-          href="/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
-          >working with files</a
-        >, and HTML basics (study
-        <a href="/en-US/docs/Learn_web_development/Core/Structuring_content"
-          >Structuring content with HTML</a
-        >.)
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Objective:</th>
-      <td>
-        To get familiar with MathML elements used for writing fractions and
-        square roots.
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## Subtrees of \<mfrac>, \<msqrt> and \<mroot>
 
-In the [getting started with MathML](/en-US/docs/Learn/MathML/First_steps/Getting_started) article, we've already met the `<mfrac>` element to describe a fraction. Let's consider a basic example which adds new elements for roots (`<msqrt>` and `<mroot>`):
+In the [getting started with MathML](/en-US/docs/Web/MathML/Guides/Getting_started) article, we've already met the `<mfrac>` element to describe a fraction. Let's consider a basic example which adds new elements for roots (`<msqrt>` and `<mroot>`):
 
 ```html
 <math>
@@ -70,7 +44,7 @@ Below is a screenshot of how it is rendered by a browser:
 ![Screenshot of mfrac, msqrt, mroot](mfrac-msqrt-mroot.png)
 
 - We already know that the `<mfrac>` element is rendered as a fraction: The first child (the numerator) is drawn above the second child (the denominator) separated by a horizontal bar.
-- The `<msqrt>` is rendered as a square root: its children are laid out like an [`<mrow>`](/en-US/docs/Learn/MathML/First_steps/Getting_started#grouping_with_the_mrow_element), prefixed by a root symbol √ and completely covered by an overbar.
+- The `<msqrt>` is rendered as a square root: its children are laid out like an [`<mrow>`](/en-US/docs/Web/MathML/Guides/Getting_started#grouping_with_the_mrow_element), prefixed by a root symbol √ and completely covered by an overbar.
 - Finally, the `<mroot>` element is rendered as an nth root: The first element is covered by the radical symbol while the second element is used as the degree of the root and rendered as a prefix superscript.
 
 ### Active learning: nesting different elements
@@ -331,12 +305,12 @@ Some mathematical concepts are sometimes written using fraction-like notations s
 
 ## Summary
 
-In this lesson, we've seen how to build fractions and roots using the `<mfrac>`, `<msqrt>` and `<mroot>` elements. We noticed some special feature of these elements, namely the fraction and radical symbol. We've seen how to use the `linethickness` attribute to draw fractions without bars. In the next article, we will continue with basic math notations and consider [scripts](/en-US/docs/Learn/MathML/First_steps/Scripts).
-
-{{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Text_containers", "Learn/MathML/First_steps/Scripts", "Learn/MathML/First_steps")}}
+In this lesson, we've seen how to build fractions and roots using the `<mfrac>`, `<msqrt>` and `<mroot>` elements. We noticed some special feature of these elements, namely the fraction and radical symbol. We've seen how to use the `linethickness` attribute to draw fractions without bars. In the next article, we will continue with basic math notations and consider [scripts](/en-US/docs/Web/MathML/Guides/Scripts).
 
 ## See also
 
 - [The `<mfrac>` element](/en-US/docs/Web/MathML/Element/mfrac)
 - [The `<msqrt>` element](/en-US/docs/Web/MathML/Element/msqrt)
 - [The `<mroot>` element](/en-US/docs/Web/MathML/Element/mroot)
+
+{{PreviousMenuNext("Web/MathML/Guides/Text_containers", "Web/MathML/Guides/Scripts", "Web/MathML/Guides")}}

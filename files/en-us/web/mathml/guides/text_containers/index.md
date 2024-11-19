@@ -1,41 +1,14 @@
 ---
 title: MathML Text Containers
-slug: Learn/MathML/First_steps/Text_containers
+slug: Web/MathML/Guides/Text_containers
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Getting_started", "Learn/MathML/First_steps/Fractions_and_roots", "Learn/MathML/First_steps")}}
+{{MathMLRef}}
 
-Now that you get a better idea of MathML, we move focus on text containers (variables, numbers, operators, ...) which are used as building blocks of MathML formulas.
+{{PreviousMenuNext("Web/MathML/Guides/Getting_started", "Web/MathML/Guides/Fractions_and_roots", "Web/MathML/Guides")}}
 
-<table>
-  <tbody>
-    <tr>
-      <th scope="row">Prerequisites:</th>
-      <td>
-        <a
-          href="/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
-          >Basic software installed</a
-        >, basic knowledge of
-        <a
-          href="/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
-          >working with files</a
-        >, HTML basics (study
-        <a href="/en-US/docs/Learn_web_development/Core/Structuring_content"
-          >Introduction to HTML</a
-        >) and some CSS notions on text styling (read <a href="/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals">fundamental text and font styling</a> and
-          <a href="/en-US/docs/Learn_web_development/Core/Text_styling/Web_fonts">web fonts</a>).
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Objective:</th>
-      <td>
-        To get familiar with MathML elements used for writing text and be aware
-        of special behaviors.
-      </td>
-    </tr>
-  </tbody>
-</table>
+Now that you have a better idea of MathML, we move focus on text containers (variables, numbers, operators, ...) which are used as building blocks of MathML formulas.
 
 ## Unicode characters for mathematics
 
@@ -63,7 +36,7 @@ Since most of these characters are not part of Basic Latin Unicode block, it is 
 
 ## A bit of semantics
 
-We noticed in the [getting started with MathML](/en-US/docs/Learn/MathML/First_steps/Getting_started) article that the text in MathML formulas are wrapped in specific container elements such as the `<mn>` or `<mo>`. More generally, every text in MathML formulas must be included inside such container elements, called _token_ elements. In addition, MathML provides multiple token elements in order to distinguish different meanings of the text content:
+We noticed in the [getting started with MathML](/en-US/docs/Web/MathML/Guides/Getting_started) article that the text in MathML formulas are wrapped in specific container elements such as the `<mn>` or `<mo>`. More generally, every text in MathML formulas must be included inside such container elements, called _token_ elements. In addition, MathML provides multiple token elements in order to distinguish different meanings of the text content:
 
 - The `<mi>` element, which represents an "identifier" which could be a symbolic name or arbitrary text. Examples: `<mi>x</mi>` (variable), `<mi>cos</mi>` (function name) and `<mi>π</mi>` (symbolic constant).
 - The `<mn>` element represents a "numeric literal" or other data that should be rendered as a numeric literal. Examples: `<mn>2</mn>` (integer), `<mn>0.123</mn>` (decimal number) or `<mn>0xFFEF</mn>` (hexadecimal value).
@@ -464,9 +437,7 @@ As usual, you are invited to read the source code when you are done:
 
 ## Summary
 
-In this article, we have learnt about a few _token_ elements that are used as text containers as well as their different semantics, namely `<mi>` (identifier), `<mn>` (numbers), `<mo>` (operators), `<mtext>` (generic text). We have seen special Unicode characters that are commonly found in math formulas and given an overview of some observable behaviors of the `<mi>` and `<mo>` elements. In the next article, we will see how to rely on _token_ elements to build much complex expressions such as [fractions and roots](/en-US/docs/Learn/MathML/First_steps/Fractions_and_roots).
-
-{{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Getting_started", "Learn/MathML/First_steps/Fractions_and_roots", "Learn/MathML/First_steps")}}
+In this article, we have learnt about a few _token_ elements that are used as text containers as well as their different semantics, namely `<mi>` (identifier), `<mn>` (numbers), `<mo>` (operators), `<mtext>` (generic text). We have seen special Unicode characters that are commonly found in math formulas and given an overview of some observable behaviors of the `<mi>` and `<mo>` elements. In the next article, we will see how to rely on _token_ elements to build much complex expressions such as [fractions and roots](/en-US/docs/Web/MathML/Guides/Fractions_and_roots).
 
 ## See also
 
@@ -474,3 +445,5 @@ In this article, we have learnt about a few _token_ elements that are used as te
 - [The `<mn>` element](/en-US/docs/Web/MathML/Element/mn)
 - [The `<mo>` element](/en-US/docs/Web/MathML/Element/mo)
 - [The `<mtext>` element](/en-US/docs/Web/MathML/Element/mtext)
+
+{{PreviousMenuNext("Web/MathML/Guides/Getting_started", "Web/MathML/Guides/Fractions_and_roots", "Web/MathML/Guides")}}

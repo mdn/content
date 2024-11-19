@@ -23,7 +23,7 @@ Some familiarity with mathematical notations and [TeX](https://en.wikipedia.org/
 
 ## Modules
 
-- [MathML first steps](/en-US/docs/Learn/MathML/First_steps)
+- [MathML first steps](/en-US/docs/Web/MathML/Guides)
   - : MathML is the markup language used to write mathematical formulas in Web pages. This module provides a gentle beginning to your path towards MathML mastery with the basics of how it works, what the syntax looks like, and how you can start using it inside HTML.
 
 ## See also

@@ -1,31 +1,14 @@
 ---
-title: Three famous mathematical formulas
-slug: Learn/MathML/First_steps/Three_famous_mathematical_formulas
+title: "Challenge: Three famous mathematical formulas"
+slug: Web/MathML/Guides/Three_famous_mathematical_formulas
 page-type: learn-module-assessment
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/MathML/First_steps/Tables", "Learn/MathML/First_steps")}}
+{{MathMLRef}}
 
-<table>
-  <tbody>
-    <tr>
-      <th scope="row">Prerequisites:</th>
-      <td>
-        Before attempting this assessment you should have already worked through
-        all the articles in this module, and also have an understanding of HTML
-        basics (study
-        <a href="/en-US/docs/Learn_web_development/Core/Structuring_content"
-          >Introduction to HTML</a
-        >).
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Objective:</th>
-      <td>To have a play with some MathML and test your new-found
-      knowledge.</td>
-    </tr>
-  </tbody>
-</table>
+{{PreviousMenu("Web/MathML/Guides/Tables", "Web/MathML/Guides")}}
+
+With the things you have learned in the last few articles, you should already be able to write relatively sophisticated MathML formulas. This challenge gives you a chance to do that.
 
 ## A small math article
 
@@ -131,4 +114,4 @@ To get this assessment started, you can rely on our usual HTML template. By defa
 - Use the [W3C validator](https://validator.w3.org/nu/) to catch unintended mistakes in your HTML/MathML markup.
 - If you are stuck, or realize how painful it is to write MathML by hand, feel free to use tools to help [write MathML](/en-US/docs/Web/MathML/Authoring) such as [TeXZilla](https://fred-wang.github.io/TeXZilla/).
 
-{{LearnSidebar}}{{PreviousMenu("Learn/MathML/First_steps/Tables", "Learn/MathML/First_steps")}}
+{{PreviousMenu("Web/MathML/Guides/Tables", "Web/MathML/Guides")}}

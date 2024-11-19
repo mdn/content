@@ -5576,6 +5576,13 @@
 /en-US/docs/Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript	/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills:_Object-oriented_JavaScript
 /en-US/docs/Learn/JavaScript/Objects/Test_your_skills:_Object_basics	/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Object_basics
 /en-US/docs/Learn/Learning_and_getting_help	/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help
+/en-US/docs/Learn/MathML/First_steps	/en-US/docs/Web/MathML/Guides
+/en-US/docs/Learn/MathML/First_steps/Fractions_and_roots	/en-US/docs/Web/MathML/Guides/Fractions_and_roots
+/en-US/docs/Learn/MathML/First_steps/Getting_started	/en-US/docs/Web/MathML/Guides/Getting_started
+/en-US/docs/Learn/MathML/First_steps/Scripts	/en-US/docs/Web/MathML/Guides/Scripts
+/en-US/docs/Learn/MathML/First_steps/Tables	/en-US/docs/Web/MathML/Guides/Tables
+/en-US/docs/Learn/MathML/First_steps/Text_containers	/en-US/docs/Web/MathML/Guides/Text_containers
+/en-US/docs/Learn/MathML/First_steps/Three_famous_mathematical_formulas	/en-US/docs/Web/MathML/Guides/Three_famous_mathematical_formulas
 /en-US/docs/Learn/Open_a_file_in_a_browser	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files
 /en-US/docs/Learn/Other_learning_material	/en-US/docs/Learn
 /en-US/docs/Learn/Pages_sites_servers_and_search_engines	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web
