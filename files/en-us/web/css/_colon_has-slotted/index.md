@@ -80,7 +80,7 @@ Here the CSS selector is looking for an element that has the class of `required`
 }
 ```
 
-```html hidden live-sample___highlighting_slots_with_required_content
+```html nolint hidden live-sample___highlighting_slots_with_required_content
 <!-- start define structure of component -->
 <template id="element-details-template">
   <style>
@@ -126,12 +126,12 @@ Here the CSS selector is looking for an element that has the class of `required`
   <details>
     <summary>
       <span>
-        <code class="name required"
-          >&lt;<slot name="element-name">NEED NAME</slot>&gt;</code
-        >
-        <span class="desc required"
-          ><slot name="description">NEED DESCRIPTION</slot></span
-        >
+        <code class="name required">
+          &lt;<slot name="element-name">NEED NAME</slot>&gt;
+        </code>
+        <span class="desc required">
+          <slot name="description">NEED DESCRIPTION</slot>
+        </span>
       </span>
     </summary>
     <div class="attributes">
