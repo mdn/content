@@ -9557,8 +9557,13 @@
 /en-US/docs/Web/API/RTCRtpSendParameters/encodings	/en-US/docs/Web/API/RTCRtpSender/setParameters
 /en-US/docs/Web/API/RTCRtpSender/getCapabilities	/en-US/docs/Web/API/RTCRtpSender/getCapabilities_static
 /en-US/docs/Web/API/RTCRtpSender/getCapabilities()	/en-US/docs/Web/API/RTCRtpSender/getCapabilities_static
+/en-US/docs/Web/API/RTCRtpStreamStats/codecId	/en-US/docs/Web/API/RTCInboundRtpStreamStats
+/en-US/docs/Web/API/RTCRtpStreamStats/firCount	/en-US/docs/Web/API/RTCInboundRtpStreamStats
+/en-US/docs/Web/API/RTCRtpStreamStats/kind	/en-US/docs/Web/API/RTCInboundRtpStreamStats
 /en-US/docs/Web/API/RTCRtpStreamStats/nackCount	/en-US/docs/Web/API/RTCInboundRtpStreamStats/nackCount
 /en-US/docs/Web/API/RTCRtpStreamStats/pliCount	/en-US/docs/Web/API/RTCOutboundRtpStreamStats
+/en-US/docs/Web/API/RTCRtpStreamStats/ssrc	/en-US/docs/Web/API/RTCInboundRtpStreamStats
+/en-US/docs/Web/API/RTCRtpStreamStats/transportId	/en-US/docs/Web/API/RTCInboundRtpStreamStats
 /en-US/docs/Web/API/RTCRtpSynchronizationSource	/en-US/docs/Web/API/RTCRtpReceiver/getSynchronizationSources
 /en-US/docs/Web/API/RTCRtpSynchronizationSource/voiceActivityFlag	/en-US/docs/Web/API/RTCRtpReceiver/getSynchronizationSources
 /en-US/docs/Web/API/RTCRtpTransceiverDirection	/en-US/docs/Web/API/RTCRtpTransceiver/direction
