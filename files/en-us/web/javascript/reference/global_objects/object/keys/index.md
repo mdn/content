@@ -37,7 +37,7 @@ If you need the property values, use {{jsxref("Object.values()")}} instead. If y
 ### Using Object.keys()
 
 ```js
-// Simple array
+// Basic array
 const arr = ["a", "b", "c"];
 console.log(Object.keys(arr)); // ['0', '1', '2']
 

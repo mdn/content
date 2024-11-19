@@ -75,6 +75,10 @@ Color attachment objects can have the following properties:
 
     If `clearValue` is omitted, it defaults to `{r: 0, g: 0, b: 0, a: 0}`.
 
+- `depthSlice` {{optional_inline}}
+
+  - : A number representing the index of the 3D depth slice that will be output to for this color attachment, in the case of a 3D {{domxref("GPUTextureView")}} `view`. When specified, this allows WebGPU to render directly to slices of 3D textures within render passes.
+
 - `loadOp`
 
   - : An enumerated value indicating the load operation to perform on `view` prior to executing the render pass. Possible values are:

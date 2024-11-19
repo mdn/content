@@ -13,7 +13,7 @@ Details describing how a redirect should be performed, as the `redirect` propert
 > A redirect action does not redirect the request, and the request continues as usual when:
 >
 > - the action does not change the request.
-> - the redirect URL is invalid (e.g., the value of {{WebExtAPIRef("declarativeNetRequest.redirect","redirect.regexSubstitution")}} is not a valid URL).
+> - the redirect URL is invalid (e.g., the value of `regexSubstitution` is not a valid URL).
 
 ## Type
 

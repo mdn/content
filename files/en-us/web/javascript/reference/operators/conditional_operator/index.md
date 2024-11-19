@@ -35,7 +35,7 @@ If `condition` is any of these, the result of the conditional expression will be
 
 ## Examples
 
-### A simple example
+### A basic example
 
 ```js
 const age = 26;

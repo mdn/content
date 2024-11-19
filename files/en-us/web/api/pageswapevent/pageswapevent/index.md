@@ -3,12 +3,10 @@ title: "PageSwapEvent: PageSwapEvent() constructor"
 short-title: PageSwapEvent()
 slug: Web/API/PageSwapEvent/PageSwapEvent
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.PageSwapEvent.PageSwapEvent
 ---
 
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+{{APIRef("HTML DOM")}}
 
 The **`PageSwapEvent()`** constructor creates a new
 {{domxref("PageSwapEvent")}} object instance.

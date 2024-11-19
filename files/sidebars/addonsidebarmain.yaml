@@ -1,0 +1,80 @@
+sidebar:
+  - type: section
+    link: /Mozilla/Add-ons/WebExtensions
+    text: WebExtensions
+  - type: section
+    link: https://extensionworkshop.com/documentation/themes/
+    title: Themes
+  - type: section
+    link: https://discourse.mozilla.org/c/add-ons
+    title: Community_and_Support
+
+  - details: closed
+    title: Channels
+    children:
+      - link: https://blog.mozilla.org/addons
+        title: Blog
+      - link: https://discourse.mozilla.org/c/add-ons
+        title: Forums
+      - link: https://stackoverflow.com/questions/tagged/firefox-addon
+        title: Stack_Overflow
+      - link: /Mozilla/Add-ons
+        title: Contact_us
+        hash: "#contact_us"
+
+l10n:
+  en-US:
+    WebExtensions: Browser extensions
+    Themes: Themes
+    Community_and_Support: Community and Support
+    Channels: Channels
+    Blog: Add-ons blog
+    Forums: Add-on forums
+    Stack_Overflow: Stack Overflow
+    Contact_us: Contact us
+    "#contact_us": contact_us
+  fr:
+    WebExtensions: WebExtensions
+    Themes: Thèmes
+    Community_and_Support: Communauté et Support
+    Channels: Canaux de discussions
+    Blog: Blog extensions
+    Forums: Forum extensions
+    Contact_us: Nous contacter
+    "#contact_us": nous_contacter
+  ja:
+    WebExtensions: ブラウザー拡張機能
+    Themes: テーマ
+    Community_and_Support: コミュニティとサポート
+    Channels: チャンネル
+    Blog: ブログ
+    Forums: フォーラム
+    Contact_us: コンタクト
+    "#contact_us": 連絡先
+  ko:
+    WebExtensions: 브라우저 확장 기능
+    Themes: 테마
+    Community_and_Support: 커뮤니티와 지원
+    Channels: 채널
+    Blog: 부가 기능 블로그
+    Forums: 부가 기능 포럼
+    Contact_us: 연락하기
+    "#contact_us": 연락하기
+  zh-CN:
+    WebExtensions: 浏览器扩展程序
+    Themes: 主题
+    Community_and_Support: 社区和支持
+    Channels: 渠道
+    Blog: 附加组件博客
+    Forums: 附加组件论坛
+    Contact_us: 联系我们
+    "#contact_us": 联系我们
+  es:
+    WebExtensions: Extensiones de navegador
+    Themes: Temas
+    Community_and_Support: Comunidad y soporte
+    Channels: Canales de discusión
+    Blog: Blog de complementos
+    Forums: Foro de complementos
+    Contact_us: Contáctenos
+    "#contact_us": Contáctenos

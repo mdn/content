@@ -20,7 +20,7 @@ We have seen in the [introducing example](/en-US/docs/Web/SVG/Tutorial/Getting_S
 
 The `x` and `y` attributes determine where in the viewport the text will appear. The attribute {{SVGAttr("text-anchor")}}, which can have the values `"start"`, `"middle"`, `"end"` or `"inherit"`, decides in which direction the text flows from this point. The attribute {{SVGAttr("dominant-baseline")}} decides the vertical alignment.
 
-Like with the shape elements, text can be colorized with the `fill` attribute and given a stroke with the `stroke` attribute. Both may also refer to gradients or patterns, which makes simple coloring text in SVG very powerful compared to CSS 2.1.
+Like with the shape elements, text can be colorized with the `fill` attribute and given a stroke with the `stroke` attribute. Both may also refer to gradients or patterns, which makes coloring text in SVG very powerful.
 
 ## Setting font properties
 

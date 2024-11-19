@@ -14,17 +14,110 @@ The initial value of the {{cssxref("flex-wrap")}} property is `nowrap`. This mea
 
 In this example, there are ten flex items with a `flex-basis` of `160px` that can grow and shrink. Once there is not enough space to place another 160 pixel item in a row, a new flex line is created. New lines are created as needed until all of the items are placed. As the items can grow, they will expand to fill each row completely. If there is only one item on the final line it will stretch to fill the entire line.
 
-{{EmbedGHLiveSample("css-examples/flexbox/wrapping/row-wrap.html", '100%', 650)}}
+```html live-sample___row-wrap
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
+  <div>Nine</div>
+  <div>Ten</div>
+</div>
+```
+
+```css live-sample___row-wrap
+.box {
+  width: 500px;
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  flex: 1 1 160px;
+}
+```
+
+{{EmbedLiveSample("row-wrap")}}
 
 The same thing happens with flex columns. To wrap and create new columns, the container needs to have a height. In the case of columns, items stretch vertically to fill each column completely.
 
-{{EmbedGHLiveSample("css-examples/flexbox/wrapping/column-wrap.html", '100%', 810)}}
+```html live-sample___column-wrap
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
+  <div>Nine</div>
+  <div>Ten</div>
+</div>
+```
+
+```css live-sample___column-wrap
+.box {
+  border: 2px dotted rgb(96 139 168);
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  flex: 1 1 80px;
+}
+```
+
+{{EmbedLiveSample("column-wrap", "", "320px")}}
 
 ## Wrapping and flex-direction
 
 Wrapping works as you might expect when combined with `flex-direction`. If `flex-direction` is set to `row-reverse` then the items will start from the end edge of the container and lay themselves out in reverse ordered lines.
 
-{{EmbedGHLiveSample("css-examples/flexbox/wrapping/row-reverse-wrap.html", '100%', 750)}}
+```html live-sample___row-reverse-wrap
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
+  <div>Nine</div>
+  <div>Ten</div>
+</div>
+```
+
+```css live-sample___row-reverse-wrap
+.box {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  width: 500px;
+}
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  flex: 1 1 160px;
+}
+```
+
+{{EmbedLiveSample("row-reverse-wrap")}}
 
 Note that the reversing is only happening in the inline, row direction. We start on the right then go onto the second line and again start from the right. We aren't reversing in both directions, starting from the bottom coming up the container!
 
@@ -36,7 +129,37 @@ There are no flexbox features to tell items in one row to line up with items in 
 
 This example demonstrates the difference, using CSS grid layout to create a layout with as many columns of at least `160px` as will fit, distributing the extra space between all columns. We use the same HTML as the [flexbox wrapped row example](#making_things_wrap) above but set `display: grid` on it. Instead of the {{cssxref("flex")}} shorthand, which has no effect outside of flexbox, we set the item's minimum width and ability to grow directly on the container with {{cssxref("grid-template-columns")}}. With CSS grid, the last item stays in its grid cell; grid items don't stretch when there are fewer of them in the last row.
 
-{{EmbedGHLiveSample("css-examples/flexbox/wrapping/grid-example.html", '100%', 700)}}
+```html live-sample___grid-example
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
+  <div>Nine</div>
+  <div>Ten</div>
+</div>
+```
+
+```css live-sample___grid-example
+.box {
+  border: 2px dotted rgb(96 139 168);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  width: 500px;
+}
+
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+```
+
+{{EmbedLiveSample("grid-example")}}
 
 This is the difference between one and two-dimensional layouts. In a one-dimensional layout method like flexbox, we only control the row or column. In a two-dimensional grid layout, we control both at the same time. If you want the space distribution row by row, use Flexbox. If you don't, use CSS grid.
 
@@ -46,7 +169,42 @@ Flexbox-based layouts can be forced to line up as grid systems, but that is not 
 
 In this example, `flex-grow` and `flex-shrink` have been set to `0` to make inflexible flex items. The flexibility is controlled via percentages.
 
-{{EmbedGHLiveSample("css-examples/flexbox/wrapping/flex-grid.html", '100%', 650)}}
+```html live-sample___flex-grid
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
+  <div>Nine</div>
+  <div>Ten</div>
+</div>
+```
+
+```css live-sample___flex-grid
+* {
+  box-sizing: border-box;
+}
+
+.box {
+  width: 500px;
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  flex: 0 0 33.3333%;
+}
+```
+
+{{EmbedLiveSample("flex-grid")}}
 
 This technique allows you to line up flex items on the cross-axis. However, when you catch yourself adding widths to flex items in this way or adding empty flex items to take up space, it is a good indication you may want to switch to CSS grid layout for that component.
 
@@ -58,7 +216,42 @@ The `gap` property is not the only thing that can add space between items. Margi
 
 To see how the `gap` property differs from `margin` in both axes, try changing the `gap` value in the container `.box` and adding a `margin` value to the `.box > *` rule in the stylesheet below. Click the "Reset" button to revert to the previous values.
 
-{{EmbedGHLiveSample("css-examples/flexbox/wrapping/gaps.html", '100%', 830)}}
+```html live-sample___gaps
+<div class="wrapper">
+  <div class="box">
+    <div>One</div>
+    <div>Two</div>
+    <div>Three</div>
+    <div>Four</div>
+    <div>Five</div>
+    <div>Six</div>
+    <div>Seven</div>
+    <div>Eight</div>
+    <div>Nine</div>
+    <div>Ten</div>
+  </div>
+</div>
+```
+
+```css live-sample___gaps
+.wrapper {
+  border: 2px dotted rgb(96 139 168);
+  width: 500px;
+}
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.box > * {
+  flex: 1 1 160px;
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+```
+
+{{EmbedLiveSample("gaps", "", "220px")}}
 
 ## Collapsed items
 
@@ -73,7 +266,32 @@ In the following live example, I have a non-wrapped flex container. The third it
 > [!NOTE]
 > Use Firefox for the below two examples as Chrome and Safari treat collapse as hidden.
 
-{{EmbedGHLiveSample("css-examples/flexbox/wrapping/visibility-collapse.html", '100%', 650)}}
+```html live-sample___visibility-collapse
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div class="hide">Three <br />has <br />extra <br />text</div>
+</div>
+```
+
+```css live-sample___visibility-collapse
+.box {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  width: 600px;
+}
+.box > * {
+  flex: 1 1 200px;
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+.hide {
+  visibility: collapse;
+}
+```
+
+{{EmbedLiveSample("visibility-collapse")}}
 
 When dealing with multiple-line flex containers however you need to understand that the wrapping is re-done _after_ collapsing. So the browser needs to re-do the wrapping behavior to account for the new space that the collapsed item has left in the inline direction.
 
@@ -81,7 +299,41 @@ This means that items might end up on a different line to the one they started o
 
 I have created this behavior in the next live example. You can see how the stretching changes row based on the location of the collapsed item. If you add more content to the second item, it changes row once it gets long enough. That top row then only becomes as tall as a single line of text.
 
-{{EmbedGHLiveSample("css-examples/flexbox/wrapping/wrapped-visibility-collapse.html", '100%', 750)}}
+```html live-sample___wrapped-visibility-collapse
+<div class="box">
+  <div>One</div>
+  <div>Add more text to this box to make it grow</div>
+  <div class="hide">Three <br />has <br />extra <br />text</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
+  <div>Nine</div>
+  <div>Ten</div>
+</div>
+```
+
+```css live-sample___wrapped-visibility-collapse
+.box {
+  border: 2px dotted rgb(96 139 168);
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.box > * {
+  padding: 10px;
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  flex: 1 1 auto;
+}
+.hide {
+  visibility: collapse;
+}
+```
+
+{{EmbedLiveSample("wrapped-visibility-collapse")}}
 
 If this causes a problem for your layout it may require a rethinking of the structure, for example putting each row into a separate flex container in order that they can't shift rows.
 

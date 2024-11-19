@@ -23,10 +23,13 @@ _Also inherits properties from its parent, {{DOMxRef("Element")}}._
   - : Returns a reference to the element's anchor element, or `null` if it doesn't have one.
 - {{DOMxRef("HTMLElement.attributeStyleMap")}} {{ReadOnlyInline}}
   - : A {{DOMxRef("StylePropertyMap")}} representing the declarations of the element's [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute.
-- {{domxref("HTMLElement.autocapitalize", "autocapitalize")}}
+- {{domxref("HTMLElement.autocapitalize")}}
   - : A string that represents the element's capitalization behavior for user input. Valid values are: `none`, `off`, `on`, `characters`, `words`, `sentences`.
 - {{domxref("HTMLElement.autofocus")}}
   - : A boolean value reflecting the [`autofocus`](/en-US/docs/Web/HTML/Element/select#autofocus) HTML global attribute, which indicates whether the control should be focused when the page loads, or when dialog or popover become shown if specified in an element inside {{htmlelement("dialog")}} elements or elements whose popover attribute is set.
+- {{domxref("HTMLElement.autocorrect")}} {{experimental_inline}}
+  - : A boolean that represents whether or not text input by a user should be automatically corrected.
+    This reflects the [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) HTML global attribute.
 - {{DOMxRef("HTMLElement.contentEditable")}}
   - : A string, where a value of `true` means the element is editable and a value of `false` means it isn't.
 - {{DOMxRef("HTMLElement.dataset")}} {{ReadOnlyInline}}
@@ -144,12 +147,12 @@ _Also, inherits events from its parent, {{DOMxRef("Element")}}._
 - {{DOMxRef("HTMLElement/drop_event", "drop")}}
   - : This event is fired when an element or text selection is dropped on a valid drop target.
 
-### Popover events
+### Toggle events
 
 - {{DOMxRef("HTMLElement/beforetoggle_event", "beforetoggle")}}
-  - : Fired when the element is a popover, before it is hidden or shown.
+  - : Fired when the element is a [popover](/en-US/docs/Web/API/Popover_API) or {{htmlelement("dialog")}}, before it is hidden or shown.
 - {{DOMxRef("HTMLElement/toggle_event", "toggle")}}
-  - : Fired when the element is a popover, just after it is hidden or shown.
+  - : Fired when the element is a [popover](/en-US/docs/Web/API/Popover_API), {{htmlelement("dialog")}}, or {{htmlelement("details")}} element, just after it is hidden or shown.
 
 ## Specifications
 

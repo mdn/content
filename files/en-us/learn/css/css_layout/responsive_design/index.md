@@ -135,8 +135,72 @@ In the example below the flex items will each take an equal amount of space in t
 }
 ```
 
-> [!NOTE]
-> As an example, we have built a simple responsive layout above using flexbox. We use a breakpoint to switch to multiple columns when the screen grows, and limit the size of the main content with {{cssxref('max-width')}}: [example](https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html), [source code](https://github.com/mdn/css-examples/blob/main/learn/rwd/flex-based-rwd.html).
+Here's how we could use flexbox with a media query for responsive design.
+
+```html live-sample___flex-based-rwd
+<div class="wrapper">
+  <div class="col1">
+    <p>
+      This layout is responsive. See what happens if you make the browser window
+      wider or narrow.
+    </p>
+  </div>
+  <div class="col2">
+    <p>
+      One November night in the year 1782, so the story runs, two brothers sat
+      over their winter fire in the little French town of Annonay, watching the
+      grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+      were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+      were noted as possessing thoughtful minds and a deep interest in all
+      scientific knowledge and new discovery.
+    </p>
+    <p>
+      Before that night—a memorable night, as it was to prove—hundreds of
+      millions of people had watched the rising smoke-wreaths of their fires
+      without drawing any special inspiration from the fact.
+    </p>
+  </div>
+</div>
+```
+
+```css hidden live-sample___flex-based-rwd
+body {
+  font: 1.2em / 1.5 sans-serif;
+  margin: 20px;
+  padding: 0;
+  background-color: #eee;
+}
+.wrapper {
+  max-width: 960px;
+  margin: 2em auto;
+}
+
+.col1,
+.col2 {
+  background-color: #fff;
+}
+```
+
+```css live-sample___flex-based-rwd
+@media screen and (min-width: 600px) {
+  .wrapper {
+    display: flex;
+  }
+
+  .col1 {
+    flex: 1;
+    margin-right: 5%;
+  }
+
+  .col2 {
+    flex: 2;
+  }
+}
+```
+
+{{EmbedLiveSample("flex-based-rwd", "", "550px")}}
+
+Resize your screen. The layout will change when the size of the above example crosses the 600px width threshold.
 
 ### CSS grid
 
@@ -149,8 +213,63 @@ In CSS grid layout the `fr` unit allows the distribution of available space acro
 }
 ```
 
-> [!NOTE]
-> The grid layout version is even simpler as we can define the columns on the .wrapper: [example](https://mdn.github.io/css-examples/learn/rwd/grid-based-rwd.html), [source code](https://github.com/mdn/css-examples/blob/main/learn/rwd/grid-based-rwd.html).
+Here's how we could use grid layout with a media query for responsive design.
+
+```html live-sample___grid-based-rwd
+<div class="wrapper">
+  <div class="col1">
+    <p>
+      This layout is responsive. See what happens if you make the browser window
+      wider or narrow.
+    </p>
+  </div>
+  <div class="col2">
+    <p>
+      One November night in the year 1782, so the story runs, two brothers sat
+      over their winter fire in the little French town of Annonay, watching the
+      grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+      were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+      were noted as possessing thoughtful minds and a deep interest in all
+      scientific knowledge and new discovery.
+    </p>
+    <p>
+      Before that night—a memorable night, as it was to prove—hundreds of
+      millions of people had watched the rising smoke-wreaths of their fires
+      without drawing any special inspiration from the fact.
+    </p>
+  </div>
+</div>
+```
+
+```css hidden live-sample___grid-based-rwd
+body {
+  font: 1.2em / 1.5 sans-serif;
+  margin: 20px;
+  padding: 0;
+  background-color: #eee;
+}
+.wrapper {
+  max-width: 960px;
+  margin: 2em auto;
+}
+
+.col1,
+.col2 {
+  background-color: #fff;
+}
+```
+
+```css live-sample___grid-based-rwd
+@media screen and (min-width: 600px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 5%;
+  }
+}
+```
+
+{{EmbedLiveSample("grid-based-rwd", "", "550px")}}
 
 ## Responsive images/media
 
@@ -206,16 +325,77 @@ h1 {
 
 We have edited our responsive grid example above to also include responsive type using the method outlined. You can see how the heading switches sizes as the layout goes to the two column version.
 
-On mobile the heading is smaller:
+On mobile the heading is smaller, but on desktop, we see the larger heading size:
 
-![A stacked layout with a small heading size.](mdn-rwd-font-mobile.png)
+```html live-sample___type-rwd
+<div class="wrapper">
+  <div class="col1">
+    <p>
+      This layout is responsive. See what happens if you make the browser window
+      wider or narrow.
+    </p>
+  </div>
+  <div class="col2">
+    <p>
+      One November night in the year 1782, so the story runs, two brothers sat
+      over their winter fire in the little French town of Annonay, watching the
+      grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+      were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+      were noted as possessing thoughtful minds and a deep interest in all
+      scientific knowledge and new discovery.
+    </p>
+    <p>
+      Before that night—a memorable night, as it was to prove—hundreds of
+      millions of people had watched the rising smoke-wreaths of their fires
+      without drawing any special inspiration from the fact.
+    </p>
+  </div>
+</div>
+```
 
-On desktop, however, we see the larger heading size:
+```css live-sample___type-rwd
+html {
+  font-size: 1em;
+}
 
-![A two column layout with a large heading.](mdn-rwd-font-desktop.png)
+body {
+  font:
+    1.2em Helvetica,
+    Arial,
+    sans-serif;
+  margin: 20px;
+  padding: 0;
+  background-color: #eee;
+}
+.wrapper {
+  max-width: 960px;
+  margin: 2em auto;
+}
 
-> [!NOTE]
-> See this example in action: [example](https://mdn.github.io/css-examples/learn/rwd/type-rwd.html), [source code](https://github.com/mdn/css-examples/blob/main/learn/rwd/type-rwd.html).
+h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.col1,
+.col2 {
+  background-color: #fff;
+}
+
+@media screen and (min-width: 600px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 5%;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+}
+```
+
+{{EmbedLiveSample("type-rwd", "", "550px")}}
 
 As this approach to typography shows, you do not need to restrict media queries to only changing the layout of the page. They can be used to tweak any element to make it more usable or attractive at alternate screen sizes.
 
@@ -235,14 +415,67 @@ There is a solution, and it involves using [`calc()`](/en-US/docs/Web/CSS/calc).
 
 ```css
 h1 {
-  font-size: calc(1.5rem + 3vw);
+  font-size: calc(1.5rem + 4vw);
 }
 ```
 
 This means that we only need to specify the font size for the heading once, rather than set it up for mobile and redefine it in the media queries. The font then gradually increases as you increase the size of the viewport.
 
-> [!NOTE]
-> See an example of this in action: [example](https://mdn.github.io/css-examples/learn/rwd/type-vw.html), [source code](https://github.com/mdn/css-examples/blob/main/learn/rwd/type-vw.html).
+```html live-sample___type-vw
+<div class="wrapper">
+  <div class="col1">
+    <h1>Watch my size!</h1>
+    <p>
+      This layout is responsive. See what happens if you make the browser window
+      wider or narrow.
+    </p>
+  </div>
+  <div class="col2">
+    <p>
+      One November night in the year 1782, so the story runs, two brothers sat
+      over their winter fire in the little French town of Annonay, watching the
+      grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+      were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+      were noted as possessing thoughtful minds and a deep interest in all
+      scientific knowledge and new discovery.
+    </p>
+  </div>
+</div>
+```
+
+```css live-sample___type-vw
+body {
+  font: 1.2em / 1.5 sans-serif;
+  margin: 20px;
+  padding: 0;
+  background-color: #eee;
+}
+
+.wrapper {
+  max-width: 960px;
+  margin: 2em auto;
+}
+
+h1 {
+  font-size: calc(1.5rem + 4vw);
+  margin: 0;
+}
+
+.col1,
+.col2 {
+  background-color: #fff;
+}
+
+@media screen and (min-width: 600px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 5%;
+  }
+}
+```
+
+{{EmbedLiveSample("type-vw", "", "550px")}}
 
 ## The viewport meta tag
 
