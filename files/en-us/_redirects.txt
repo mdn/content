@@ -9482,6 +9482,7 @@
 /en-US/docs/Web/API/RTCInboundRtpStreamStats/firCount	/en-US/docs/Web/API/RTCInboundRtpStreamStats
 /en-US/docs/Web/API/RTCInboundRtpStreamStats/lastPacketReceivedTimesta	/en-US/docs/Web/API/RTCInboundRtpStreamStats/lastPacketReceivedTimestamp
 /en-US/docs/Web/API/RTCInboundRtpStreamStats/pliCount	/en-US/docs/Web/API/RTCInboundRtpStreamStats
+/en-US/docs/Web/API/RTCInboundRtpStreamStats/trackId	/en-US/docs/Web/API/RTCInboundRtpStreamStats
 /en-US/docs/Web/API/RTCOfferAnswerOptions	/en-US/docs/Web/API/RTCPeerConnection/createAnswer
 /en-US/docs/Web/API/RTCOfferAnswerOptions/voiceActivityDetection	/en-US/docs/Web/API/RTCPeerConnection/createAnswer
 /en-US/docs/Web/API/RTCOfferOptions	/en-US/docs/Web/API/RTCPeerConnection/createOffer
