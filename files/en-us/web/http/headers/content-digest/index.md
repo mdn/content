@@ -30,19 +30,23 @@ A client can request that a server emit a `Content-Digest` by issuing {{HTTPHead
 
 ## Syntax
 
-`Content-Digest` describes an [RFC8941 dictionary](https://www.rfc-editor.org/rfc/rfc8941#section-3.2) with its keys being names of digest algorithms and its values being the digest in bytes (or an integer digest for legacy digest algorithms).
-
-> [!NOTE]
-> In contrast to earlier drafts of the specification, the standard-base64-encoded digest bytes are wrapped in colons (`:`, ASCII 0x3A) as part of the [dictionary syntax](https://www.rfc-editor.org/rfc/rfc8941#name-byte-sequences).
-
 ```http
-Content-Digest: <digest-algorithm>=:<standard-padded-base64-digest-value>:, ...
-Content-Digest: <digest-algorithm-integer-checksum>=<integer-checksum-value>, ...
+Content-Digest: <digest-algorithm>=<digest-value>
+
+// Multiple digest algorithms
+Content-Digest: <digest-algorithm>=<digest-value>,<digest-algorithm>=<digest-value>, …
 ```
 
 ## Directives
 
-For permissible digest algorithms see {{HTTPHeader("Repr-Digest")}}.
+- `<digest-algorithm>`
+  - : The algorithm used to create a digest of the representation.
+    Only two registered digest algorithms are considered secure: `sha-512` and `sha-256`.
+    The insecure (legacy) registered digest algorithms are: `md5`, `sha` (SHA-1), `unixsum`, `unixcksum`, `adler` (ADLER32) and `crc32c`.
+- `<digest-value>`
+  - : The digest in bytes of the representation using the `<digest-algorithm>`.
+    The choice of digest algorithm also determines the encoding to use: `sha-512` and `sha-256` use {{Glossary("base64")}} encoding, while some legacy digest algorithms such as `unixsum` use a decimal integer.
+    In contrast to earlier drafts of the specification, the standard base64-encoded digest bytes are wrapped in colons (`:`, ASCII 0x3A) as part of the [dictionary syntax](https://www.rfc-editor.org/rfc/rfc8941#name-byte-sequences).
 
 ## Examples
 

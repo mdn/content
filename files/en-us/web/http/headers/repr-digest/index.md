@@ -49,7 +49,7 @@ Repr-Digest: <digest-algorithm>=<digest-value>,<digest-algorithm>=<digest-value>
     In contrast to earlier drafts of the specification, the standard-base64-encoded digest bytes are wrapped in colons (`:`, ASCII 0x3A) as part of the [dictionary syntax](https://www.rfc-editor.org/rfc/rfc8941#name-byte-sequences).
 
 Usage of insecure digest algorithms is discouraged as collisions can realistically be forced, rendering the digest's usefulness weak.
-Unless working with legacy systems (which is unlikely since most will expect the legacy {{HTTPHeader("Digest")}} header and not understand this specification), consider omitting a `Repr-Digest` instead of including one with an insecure digest algorithm.
+Unless working with legacy systems (which is unlikely since most will expect the deprecated `Digest` header and not understand this specification), consider omitting a `Repr-Digest` instead of including one with an insecure digest algorithm.
 
 ## Examples
 

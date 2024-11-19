@@ -144,18 +144,12 @@ For more information, refer to the [CORS documentation](/en-US/docs/Web/HTTP/COR
 
 - {{HTTPHeader("Content-Digest")}} {{experimental_inline}}
   - : Provides a {{Glossary("digest")}} of the stream of octets framed in an HTTP message (the message content) dependent on {{HTTPHeader("Content-Encoding")}} and {{HTTPHeader("Content-Range")}}.
-- {{HTTPHeader("Digest")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : Provides a {{Glossary("digest")}} of the a resource.
-    See {{HTTPHeader("Content-Digest")}} and {{HTTPHeader("Repr-Digest")}}.
 - {{HTTPHeader("Repr-Digest")}} {{experimental_inline}}
   - : Provides a {{Glossary("digest")}} of the selected representation of the target resource before transmission.
     Unlike the {{HTTPHeader("Content-Digest")}}, the digest does not consider {{HTTPHeader("Content-Encoding")}} or {{HTTPHeader("Content-Range")}}.
 - {{HTTPHeader("Want-Content-Digest")}} {{experimental_inline}}
   - : States the wish for a {{HTTPHeader("Content-Digest")}} header.
     It is the `Content-` analogue of {{HTTPHeader("Want-Repr-Digest")}}.
-- {{HTTPHeader("Want-Digest")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : States the wish for a {{HTTPHeader("Digest")}} header.
-    See {{HTTPHeader("Want-Content-Digest")}} and {{HTTPHeader("Want-Repr-Digest")}} instead.
 - {{HTTPHeader("Want-Repr-Digest")}} {{experimental_inline}}
   - : States the wish for a {{HTTPHeader("Repr-Digest")}} header.
     It is the `Repr-` analogue of {{HTTPHeader("Want-Content-Digest")}}.
