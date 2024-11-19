@@ -54819,10 +54819,6 @@
     "modified": "2020-10-15T22:08:45.154Z",
     "contributors": ["Sheppy"]
   },
-  "Web/API/RTCRtpStreamStats/qpSum": {
-    "modified": "2020-10-15T22:09:08.932Z",
-    "contributors": ["sideshowbarker", "Sheppy"]
-  },
   "Web/API/RTCRtpStreamStats/ssrc": {
     "modified": "2020-10-15T22:08:52.056Z",
     "contributors": ["Sheppy"]

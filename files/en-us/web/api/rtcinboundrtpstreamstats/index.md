@@ -34,8 +34,6 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : An integer totaling the number of RTP packets that could not be decrypted. These packets are not counted by {{domxref("RTCInboundRtpStreamStats.packetsDiscarded", "packetsDiscarded")}}.
 - {{domxref("RTCInboundRtpStreamStats.perDscpPacketsReceived", "perDscpPacketsReceived")}}
   - : A record of key-value pairs with strings as the keys mapped to 32-bit integer values, each indicating the total number of packets this receiver has received on this RTP stream from this source for each Differentiated Services Code Point (DSCP).
-- {{domxref("RTCInboundRtpStreamStats.qpSum", "qpSum")}}
-  - : A 64-bit value containing the sum of the QP values for every frame decoded by this RTP receiver. You can determine the average QP per frame by dividing this value by {{domxref("RTCInboundRtpStreamStats.framesDecoded", "framesDecoded")}}. _Valid only for video streams._
 - {{domxref("RTCInboundRtpStreamStats.receiverId", "receiverId")}}
   - : A string indicating which identifies the {{domxref("RTCAudioReceiverStats")}} or {{domxref("RTCVideoReceiverStats")}} object associated with the stream's receiver. This ID is stable across multiple calls to `getStats()`.
 - {{domxref("RTCInboundRtpStreamStats.remoteId", "remoteId")}}
@@ -85,8 +83,10 @@ Their primary purpose is to examine the error resiliency of the connection, as t
 - {{domxref("RTCInboundRtpStreamStats.nackCount", "nackCount")}}
   - : The number of times the receiver notified the sender that one or more RTP packets has been lost by sending a Negative ACKnowledgement (NACK, also called "Generic NACK") packet to the sender. This value is only available to the receiver.
 - {{domxref("RTCInboundRtpStreamStats.qpSum", "qpSum")}}
-  - : The sum of the Quantization Parameter (QP) values associated with every frame received to date on the video track described by this statistics object.
-    In general, the higher this number is, the more heavily compressed the video track was. Combined with {{domxref("RTCReceivedRtpStreamStats.framesDecoded")}} or {{domxref("RTCInboundRtpStreamStats.framesEncoded")}}, you can approximate the average QP over those frames, keeping in mind that codecs often vary the quantizer values even within frames. Also keep in mind that the values of QP can vary from codec to codec, so this value is only potentially useful when compared against the same codec.
+  - : A 64-bit value containing the sum of the QP values for every frame decoded by this RTP receiver to date on the video track described by this statistics object.
+    You can approximate the average QP per frame by dividing this value by {{domxref("RTCInboundRtpStreamStats.framesDecoded", "framesDecoded")}}, keeping in mind that codecs often vary the quantizer values even within frames.
+    Also keep in mind that the values of QP can vary from codec to codec, so this value is only potentially useful when compared against the same codec.
+    _Valid only for video streams._
 
 ### Common instance properties
 
