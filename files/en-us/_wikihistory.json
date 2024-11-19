@@ -54157,10 +54157,6 @@
     "modified": "2020-10-15T22:17:12.448Z",
     "contributors": ["Sheppy"]
   },
-  "Web/API/RTCInboundRtpStreamStats/firCount": {
-    "modified": "2020-10-15T22:17:11.433Z",
-    "contributors": ["Sheppy"]
-  },
   "Web/API/RTCInboundRtpStreamStats/framesDecoded": {
     "modified": "2020-10-15T22:17:13.510Z",
     "contributors": ["Sheppy"]

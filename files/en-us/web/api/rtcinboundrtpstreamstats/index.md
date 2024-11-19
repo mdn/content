@@ -21,8 +21,6 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : An integer value indicating the number of RTP Forward Error Correction (FEC) packets which have been received for this source, for which the error correction payload was discarded.
 - {{domxref("RTCInboundRtpStreamStats.fecPacketsReceived", "fecPacketsReceived")}}
   - : An integer value indicating the total number of RTP FEC packets received for this source. This counter may also be incremented when FEC packets arrive in-band along with media content; this can happen with Opus, for example.
-- {{domxref("RTCInboundRtpStreamStats.firCount", "firCount")}}
-  - : An integer value which indicates the total number of Full Intra Request (FIR) packets which this receiver has sent to the sender. This is an indicator of how often the stream has lagged, requiring frames to be skipped in order to catch up. This value is only available for video streams.
 - {{domxref("RTCInboundRtpStreamStats.framesDecoded", "framesDecoded")}}
   - : A long integer value indicating the total number of frames of video which have been correctly decoded so far for this media source. This is the number of frames that would have been rendered if none were dropped. _Only valid for video streams._
 - {{domxref("RTCInboundRtpStreamStats.lastPacketReceivedTimestamp", "lastPacketReceivedTimestamp")}}
@@ -74,7 +72,8 @@ These statistics are measured at the receiving end of an RTP stream, regardless 
 - {{domxref("RTCInboundRtpStreamStats.kind", "kind")}}
   - : A string whose value is `"audio"` if the associated {{domxref("MediaStreamTrack")}} is audio-only or `"video"` if the track contains video. This value will match that of the media type indicated by {{domxref("RTCCodecStats.codec")}}, as well as the track's {{domxref("MediaStreamTrack.kind", "kind")}} property. Previously called `mediaType`.
 - {{domxref("RTCInboundRtpStreamStats.ssrc", "ssrc")}}
-  - : The 32-bit integer which identifies the source of the RTP packets this `RTCRtpStreamStats` object covers. This value is generated per the {{RFC(3550)}} specification.
+  - : The 32-bit integer which identifies the source of the RTP packets this object provides.
+    This value is generated per the {{RFC(3550)}} specification.
 - {{domxref("RTCInboundRtpStreamStats.trackId", "trackId")}}
   - : A string which uniquely identifies the {{domxref("RTCMediaStreamTrackStats")}} object representing the associated {{domxref("MediaStreamTrack")}}. This is _not_ the same as the value of {{domxref("MediaStreamTrack.id")}}.
 - {{domxref("RTCInboundRtpStreamStats.transportId", "transportId")}}
@@ -92,7 +91,8 @@ Their primary purpose is to examine the error resiliency of the connection, as t
 - {{domxref("RTCInboundRtpStreamStats.pliCount", "pliCount")}}
   - : The number of times the receiving end of the stream sent a Picture Loss Indication (PLI) packet to the sender, indicating that it has lost some amount of encoded video data for one or more frames. Only the receiver has this value, and it's only valid for video tracks.
 - {{domxref("RTCInboundRtpStreamStats.qpSum", "qpSum")}}
-  - : The sum of the Quantization Parameter (QP) values associated with every frame received to date on the video track described by this `RTCRtpStreamStats` object. In general, the higher this number is, the more heavily compressed the video track was. Combined with {{domxref("RTCReceivedRtpStreamStats.framesDecoded")}} or {{domxref("RTCInboundRtpStreamStats.framesEncoded")}}, you can approximate the average QP over those frames, keeping in mind that codecs often vary the quantizer values even within frames. Also keep in mind that the values of QP can vary from codec to codec, so this value is only potentially useful when compared against the same codec.
+  - : The sum of the Quantization Parameter (QP) values associated with every frame received to date on the video track described by this statistics object.
+    In general, the higher this number is, the more heavily compressed the video track was. Combined with {{domxref("RTCReceivedRtpStreamStats.framesDecoded")}} or {{domxref("RTCInboundRtpStreamStats.framesEncoded")}}, you can approximate the average QP over those frames, keeping in mind that codecs often vary the quantizer values even within frames. Also keep in mind that the values of QP can vary from codec to codec, so this value is only potentially useful when compared against the same codec.
 
 ### Common instance properties
 
