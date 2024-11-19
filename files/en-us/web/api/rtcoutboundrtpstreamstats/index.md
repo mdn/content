@@ -13,12 +13,10 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 
 ## Instance properties
 
-<!-- he `RTCOutboundRtpStreamStats` dictionary includes the following properties in addition to those it inherits from {{domxref("RTCSentRtpStreamStats")}}, {{domxref("RTCRtpStreamStats")}}._ -->
+<!-- The `RTCOutboundRtpStreamStats` dictionary includes the following properties in addition to those it inherits from {{domxref("RTCSentRtpStreamStats")}}, {{domxref("RTCRtpStreamStats")}}._ -->
 
 - {{domxref("RTCOutboundRtpStreamStats.averageRtcpInterval", "averageRtcpInterval")}}
   - : A floating-point value indicating the average {{Glossary("RTCP")}} interval between two consecutive compound RTCP packets.
-- {{domxref("RTCOutboundRtpStreamStats.firCount", "firCount")}}
-  - : An integer value which indicates the total number of Full Intra Request (FIR) packets which this {{domxref("RTCRtpSender")}} has sent to the remote {{domxref("RTCRtpReceiver")}}. This is an indicator of how often the stream has lagged, requiring frames to be skipped in order to catch up. _Valid only for video streams._
 - {{domxref("RTCOutboundRtpStreamStats.framesEncoded", "framesEncoded")}}
   - : The number of frames that have been successfully encoded so far for sending on this RTP stream. _Only valid for video streams._
 - {{domxref("RTCOutboundRtpStreamStats.nackCount", "nackCount")}}
