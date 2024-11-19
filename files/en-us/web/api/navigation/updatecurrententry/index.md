@@ -15,13 +15,12 @@ The **`updateCurrentEntry()`** method of the {{domxref("Navigation")}} interface
 ## Syntax
 
 ```js-nolint
-updateCurrentEntry()
 updateCurrentEntry(options)
 ```
 
 ### Parameters
 
-- `options` {{optional_inline}}
+- `options`
   - : An options object containing the following properties:
     - `state`
       - : Developer-defined information to be stored in the associated {{domxref("NavigationHistoryEntry")}} once the navigation is complete, retrievable via {{domxref("NavigationHistoryEntry.getState", "getState()")}}. This can be any data type. You might, for example, wish to store a page visit count for analytics purposes, or store UI state details so the view can be shown exactly as the user last left it. Any data stored in `state` must be [structured-cloneable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).

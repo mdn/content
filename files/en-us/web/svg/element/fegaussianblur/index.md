@@ -25,7 +25,7 @@ This element implements the {{domxref("SVGFEGaussianBlurElement")}} interface.
 
 ## Example
 
-### Simple example
+### Basic example
 
 #### SVG
 
@@ -47,7 +47,7 @@ This element implements the {{domxref("SVGFEGaussianBlurElement")}} interface.
 
 #### Result
 
-{{EmbedLiveSample("Simple_example", "", "130")}}
+{{EmbedLiveSample("Basic_example", "", "130")}}
 
 ### Drop shadow example
 

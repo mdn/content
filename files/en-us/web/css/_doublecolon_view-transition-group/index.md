@@ -71,4 +71,4 @@ In addition, the element's transform is animated from the "old" view state's scr
 ## See also
 
 - [View Transitions API](/en-US/docs/Web/API/View_Transitions_API)
-- [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/)
+- [Smooth transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/)
