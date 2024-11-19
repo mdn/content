@@ -104,3 +104,4 @@ See [`mousemove` event](/en-US/docs/Web/API/Element/mousemove_event#examples) fo
 - {{domxref("Element/mouseenter_event", "mouseenter")}}
 - {{domxref("Element/mouseleave_event", "mouseleave")}}
 - {{domxref("Element/contextmenu_event", "contextmenu")}}
+- {{domxref("Element/pointerup_event", "pointerup")}}

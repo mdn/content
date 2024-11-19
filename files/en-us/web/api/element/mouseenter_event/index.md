@@ -187,3 +187,4 @@ function addListItem(text) {
 - {{domxref("Element/mouseout_event", "mouseout")}}
 - {{domxref("Element/mouseleave_event", "mouseleave")}}
 - {{domxref("Element/contextmenu_event", "contextmenu")}}
+- {{domxref("Element/pointerenter_event", "pointerenter")}}

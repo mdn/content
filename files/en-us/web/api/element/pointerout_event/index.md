@@ -101,3 +101,4 @@ para.onpointerout = (event) => {
   - {{domxref('Element/pointercancel_event', 'pointercancel')}}
   - {{domxref('Element/pointerleave_event', 'pointerleave')}}
   - {{domxref('Element/pointerrawupdate_event', 'pointerrawupdate')}}
+  - {{domxref("Element/mouseout_event", "mouseout")}}
