@@ -10,7 +10,7 @@ page-type: guide
 There are two types of messages: **requests** sent by the client to trigger an action on the server, and **responses**, the answer that the server sends in response to a request.
 
 Developers rarely, if ever, build HTTP messages from scratch.
-Applications such as a browser, proxy, or web server, use software designed to create HTTP messages in a reliable and efficient way.
+Applications such as a browser, proxy, or web server use software designed to create HTTP messages in a reliable and efficient way.
 How messages are created or transformed is controlled via APIs in browsers, configuration files for proxies or servers, or other interfaces.
 
 In HTTP protocol versions up to HTTP/2, messages are text-based, and are relatively straightforward to read and understand after you've familiarized yourself with the format.
@@ -69,7 +69,7 @@ The start-line in HTTP/1.x requests (`POST /users HTTP/1.1` in the example above
 - `<protocol>`
   - : The _HTTP version_, which defines the structure of the remaining message, acting as an indicator of the expected version to use for the response.
     This is almost always `HTTP/1.1`, as `HTTP/0.9` and `HTTP/1.0` are obsolete.
-    In HTTP/2, the protocol version isn't included in messages since it is understood from the connection setup.
+    In HTTP/2 and above, the protocol version isn't included in messages since it is understood from the connection setup.
 
 ### Request targets
 
@@ -206,10 +206,10 @@ In HTTP/1.x, each header is a **case-insensitive** string followed by a colon (`
 
 Like request headers, there are many different headers that can appear in responses, and they are categorized as:
 
-- {{glossary("Response header", "Response headers")}} give additional information about the message which doesn't fit in the status line.
-  For example, headers like {{HTTPHeader("Server"}} include information about the server software, while {{HTTPHeader("Date"}} includes when the response was generated.
-  There is also information about the resource being returned, such as its content type ({{HTTPHeader("Content-Type"}}), or how it should be cached ({{HTTPHeader("Cache-Control"}}).
-- {{glossary("Representation header", "Representation headers")}} are sent in a response if the message has a body and they describe the form of the message data and any encoding applied.
+- {{glossary("Response header", "Response headers")}} that give additional context about the message or add extra logic to how the client should make subsequent requests.
+  For example, headers like {{HTTPHeader("Server")}} include information about the server software, while {{HTTPHeader("Date")}} includes when the response was generated.
+  There is also information about the resource being returned, such as its content type ({{HTTPHeader("Content-Type")}}), or how it should be cached ({{HTTPHeader("Cache-Control")}}).
+- {{glossary("Representation header", "Representation headers")}} if the message has a body, they describe the form of the message data and any encoding applied.
   For example, the same resource might be formatted in a particular media type such as XML or JSON, localized to a particular written language or geographical region, and/or compressed or otherwise encoded for transmission.
   This allows a recipient to understand how to reconstruct the resource as it was before it was transmitted over the network.
 
@@ -222,7 +222,7 @@ If there are problems with the client's request, it's common for the response bo
 Response bodies may be:
 
 - Single-resource bodies defined by the two headers: {{HTTPHeader("Content-Type")}} and {{HTTPHeader("Content-Length")}}, or of unknown length and encoded in chunks with {{HTTPHeader("Transfer-Encoding")}} set to `chunked`.
-- [Multiple-resource bodies](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data), consisting of a body that contains multiple parts, each containing a different piece of information.
+- [Multiple-resource bodies](/en-US/docs/Web/HTTP/MIME_types#multipartform-data), consisting of a body that contains multiple parts, each containing a different piece of information.
   Multipart bodies are typically associated with [HTML Forms](/en-US/docs/Learn/Forms), but may also be sent in response to [Range requests](/en-US/docs/Web/HTTP/Range_requests).
 
 Responses with a status code that answers the request without the need to include message content, such as {{HTTPStatus("201", "201 Created")}} or {{HTTPStatus("204", "204 No Content")}}, do not have a body.
@@ -234,7 +234,7 @@ You can compress message bodies using `gzip` or other compression algorithms, bu
 Headers are often similar or identical in a client-server interaction, but they are repeated in successive messages on a connection.
 There are many known methods to compress repetitive text that are very efficient, which leaves a large amount of bandwidth savings unutilized.
 
-HTTP/1.x also has a problem called Head-of-Line (HOL) blocking on the TCP connection, where a client has to wait for a response from the server before sending the next request.
+HTTP/1.x also has a problem called head-of-line (HOL) blocking, where a client has to wait for a response from the server before sending the next request.
 HTTP [pipelining](/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x#http_pipelining) tried to work around this, but poor support and complexity means it's rarely used and difficult to get right.
 Several connections need to be opened to send requests concurrently; and warm (established and busy) connections are more efficient than cold ones due to TCP slow start.
 
@@ -327,6 +327,15 @@ Digging further into message frames, stream IDs and how the connection is manage
 
 ## Conclusion
 
-This guide gives a general overview of the anatomy of HTTP messages from HTTP/1.X to HTTP/2.
-The HTTP/2 framing mechanism adds a new intermediate layer between the HTTP/1.x syntax and the underlying transport protocol, without fundamentally modifying it, which builds upon proven mechanisms.
-If you've followed the examples and understood the concepts described, you should be able to work with HTTP and understand how applications can use the protocol to send and receive data.
+This guide provides a general overview of the anatomy of HTTP messages, using the HTTP/1.1 format for illustration.
+We also explored HTTP/2 message framing, which introduces a layer between the HTTP/1.x syntax and the underlying transport protocol without fundamentally modifying HTTP's semantics.
+HTTP/2 was introduced to solve the head-of-line blocking issues present in HTTP/1.x by enabling multiplexing of requests.
+
+One issue that remained in HTTP/2 is that head-of-line blocking still exists within TCP, so a performance bottleneck is now at the transport, rather than protocol, level.
+HTTP/3 addresses this limitation by using QUIC, a protocol built on UDP, instead of TCP.
+This change improves performance, reduces connection setup time, and enhances stability on degraded or unreliable networks.
+HTTP/3 retains the same core HTTP semantics, so features like request methods, status codes, and headers remain consistent across all three major HTTP versions.
+
+If you understand HTTP/1.1's semantics, you already have a solid foundation for grasping HTTP/2 and HTTP/3.
+The main difference lies in **how** these semantics are implemented at the transport level.
+By following the examples and concepts in this guide, you should now feel equipped to work with HTTP and understand the meaning of messages, and how applications use HTTP to send and receive data.
