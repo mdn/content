@@ -1,7 +1,7 @@
 ---
 title: JavaScript
 slug: Web/JavaScript
-page-type: landing-page
+page-type: landing-pagea
 ---
 
 {{jsSidebar}}
