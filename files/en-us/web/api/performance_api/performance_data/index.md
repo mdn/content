@@ -33,7 +33,7 @@ A single recorded performance data point is called a _performance entry_ and is 
 The Performance API records various different types of performance data, and the `PerformanceEntry` has an {{domxref("PerformanceEntry.entryType", "entryType")}} property which is a string describing the type of this performance entry:
 
 - `"element"` records how long it takes an element to load and render.
-- `"event"` records how long it took the browser to start running an event handler in response to its trigger, and how long the event handler took to run. Used to Measure {{Glossary("Interaction to Next Paint")}}
+- `"event"` records how long it took the browser to start running an event handler in response to its trigger, and how long the event handler took to run. Used to Measure {{Glossary("Interaction to Next Paint")}}.
 - `"first-input"` records the {{Glossary("First input delay")}}.
 - `"largest-contentful-paint"` records the largest paint during page load.
 - `"layout-shift"` records a metric representing how much the page layout has shifted in each animation frame.
