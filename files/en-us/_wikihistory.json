@@ -5892,108 +5892,6 @@
       "richardzacur"
     ]
   },
-  "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web": {
-    "modified": "2020-10-19T00:06:33.919Z",
-    "contributors": [
-      "gdsimoes",
-      "ralaplines1988",
-      "dd-pardal",
-      "chrisdavidmills",
-      "choudh70",
-      "tayyabalishan",
-      "Zectbumo",
-      "danialtaherifar",
-      "imba-tjd",
-      "mfuji09",
-      "bdeloeste",
-      "deacon",
-      "agnelvishal",
-      "stephaniehobson",
-      "potmpark",
-      "richardzacur",
-      "Andrew_Pfeiffer",
-      "hbloomer"
-    ]
-  },
-  "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies": {
-    "modified": "2020-10-19T05:59:20.512Z",
-    "contributors": [
-      "chrisdavidmills",
-      "gdsimoes",
-      "Sichen-Wang",
-      "TheMageKing",
-      "choudh70",
-      "Elched",
-      "darby",
-      "eremis101",
-      "Wind1808",
-      "RafeyIqbalRahman",
-      "Jesssie",
-      "pradeeprajr93",
-      "juandesouza",
-      "stephaniehobson",
-      "NilSocket",
-      "flash4syth",
-      "BaderSur",
-      "richardzacur"
-    ]
-  },
-  "Learn/HTML/Multimedia_and_embedding/Responsive_images": {
-    "modified": "2020-10-19T20:26:21.787Z",
-    "contributors": [
-      "hamishwillee",
-      "sideshowbarker",
-      "thjbd",
-      "chrisdavidmills",
-      "atd30",
-      "jpfkd",
-      "ramiy",
-      "JonDevOps",
-      "choudh70",
-      "tayyabalishan",
-      "Blacktodreamlight",
-      "Koavf",
-      "clairealyssa",
-      "eremis101",
-      "MNizam0802",
-      "oyenirat",
-      "Flimm",
-      "thenoelman",
-      "chelBot",
-      "dharkness",
-      "demont93",
-      "akshat12",
-      "imi-tating",
-      "msufa",
-      "Audaciter",
-      "stephaniehobson",
-      "dtrueman",
-      "goto.prototype",
-      "richardzacur",
-      "Sheppy",
-      "Jeremie",
-      "hbloomer",
-      "Andrew_Pfeiffer"
-    ]
-  },
-  "Learn/Learning_and_getting_help": {
-    "modified": "2020-10-12T05:38:01.632Z",
-    "contributors": [
-      "chrisdavidmills",
-      "simö",
-      "theRealJennie",
-      "srabatin",
-      "SphinxKnight",
-      "akhila",
-      "Nachec",
-      "mohibk",
-      "dheerajmalik",
-      "mAsterEihaB",
-      "ankit625",
-      "emckean",
-      "vishal.jv1511"
-    ]
-  },
   "Learn_web_development/Core/Accessibility": {
     "modified": "2020-10-04T00:35:19.095Z",
     "contributors": [
@@ -7496,6 +7394,29 @@
       "sockofleas"
     ]
   },
+  "Learn_web_development/Core/Structuring_content/General_embedding_technologies": {
+    "modified": "2020-10-19T05:59:20.512Z",
+    "contributors": [
+      "chrisdavidmills",
+      "gdsimoes",
+      "Sichen-Wang",
+      "TheMageKing",
+      "choudh70",
+      "Elched",
+      "darby",
+      "eremis101",
+      "Wind1808",
+      "RafeyIqbalRahman",
+      "Jesssie",
+      "pradeeprajr93",
+      "juandesouza",
+      "stephaniehobson",
+      "NilSocket",
+      "flash4syth",
+      "BaderSur",
+      "richardzacur"
+    ]
+  },
   "Learn_web_development/Core/Structuring_content/HTML_images": {
     "modified": "2020-11-06T07:13:32.741Z",
     "contributors": [
@@ -7633,6 +7554,29 @@
       "monooran1",
       "PushpitaPikuDey",
       "rolfedh"
+    ]
+  },
+  "Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML": {
+    "modified": "2020-10-19T00:06:33.919Z",
+    "contributors": [
+      "gdsimoes",
+      "ralaplines1988",
+      "dd-pardal",
+      "chrisdavidmills",
+      "choudh70",
+      "tayyabalishan",
+      "Zectbumo",
+      "danialtaherifar",
+      "imba-tjd",
+      "mfuji09",
+      "bdeloeste",
+      "deacon",
+      "agnelvishal",
+      "stephaniehobson",
+      "potmpark",
+      "richardzacur",
+      "Andrew_Pfeiffer",
+      "hbloomer"
     ]
   },
   "Learn_web_development/Core/Structuring_content/Marking_up_a_letter": {
@@ -10523,6 +10467,24 @@
       "pseudosavant",
       "artmees",
       "Andrew_Pfeiffer"
+    ]
+  },
+  "Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help": {
+    "modified": "2020-10-12T05:38:01.632Z",
+    "contributors": [
+      "chrisdavidmills",
+      "simö",
+      "theRealJennie",
+      "srabatin",
+      "SphinxKnight",
+      "akhila",
+      "Nachec",
+      "mohibk",
+      "dheerajmalik",
+      "mAsterEihaB",
+      "ankit625",
+      "emckean",
+      "vishal.jv1511"
     ]
   },
   "Learn_web_development/Getting_started/Web_standards/How_the_web_works": {
@@ -98105,6 +98067,44 @@
       "Tee37",
       "teoli",
       "codemetro"
+    ]
+  },
+  "Web/HTML/Responsive_images": {
+    "modified": "2020-10-19T20:26:21.787Z",
+    "contributors": [
+      "hamishwillee",
+      "sideshowbarker",
+      "thjbd",
+      "chrisdavidmills",
+      "atd30",
+      "jpfkd",
+      "ramiy",
+      "JonDevOps",
+      "choudh70",
+      "tayyabalishan",
+      "Blacktodreamlight",
+      "Koavf",
+      "clairealyssa",
+      "eremis101",
+      "MNizam0802",
+      "oyenirat",
+      "Flimm",
+      "thenoelman",
+      "chelBot",
+      "dharkness",
+      "demont93",
+      "akshat12",
+      "imi-tating",
+      "msufa",
+      "Audaciter",
+      "stephaniehobson",
+      "dtrueman",
+      "goto.prototype",
+      "richardzacur",
+      "Sheppy",
+      "Jeremie",
+      "hbloomer",
+      "Andrew_Pfeiffer"
     ]
   },
   "Web/HTML/microformats": {

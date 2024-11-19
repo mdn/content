@@ -1,10 +1,10 @@
 ---
-title: Adding vector graphics to the web
-slug: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
+title: Including vector graphics in HTML
+slug: Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}
 
 Vector graphics are very useful in many circumstances — they have small file sizes and are highly scalable, so they don't pixelate when zoomed in or blown up to a large size. In this article we'll show you how to include one in your webpage.
 
@@ -167,7 +167,7 @@ You can also open up the SVG file in a text editor, copy the SVG code, and paste
 
 ### How to embed an SVG with an `iframe`
 
-You can open SVG images in your browser just like webpages. So embedding an SVG document with an `<iframe>` is done just like we studied in [From \<object> to \<iframe> — other embedding technologies](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies).
+You can open SVG images in your browser just like webpages. So embedding an SVG document with an `<iframe>` is done just like we studied in [From \<object> to \<iframe> — general embedding technologies](/en-US/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies).
 
 Here's a quick review:
 
@@ -329,8 +329,6 @@ textarea.onkeyup = function () {
 
 This article has provided you with a quick tour of what vector graphics and SVG are, why they are useful to know about, and how to include SVG inside your webpages. It was never intended to be a full guide to learning SVG, just a pointer so you know what SVG is if you meet it in your travels around the Web. So don't worry if you don't feel like you are an SVG expert yet. We've included some links below that might help you if you wish to go and find out more about how it works.
 
-In the last article of this module, we'll explore [responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) in detail, looking at the tools HTML has to allow you to make your images work better across different devices.
-
 ## See also
 
 - [SVG tutorial](/en-US/docs/Web/SVG/Tutorial/Getting_Started) on MDN
@@ -338,5 +336,3 @@ In the last article of this module, we'll explore [responsive images](/en-US/doc
 - [Accessibility benefits of SVG](https://www.w3.org/TR/SVG-access/)
 - [SVG Properties and CSS](https://css-tricks.com/svg-properties-and-css/)
 - [How to scale SVGs](https://css-tricks.com/scale-svg/) (it's not as simple as raster graphics!)
-
-{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}

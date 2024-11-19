@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Handling_different_text_directio
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}
 
 Many of the properties and values that we have encountered so far in our CSS learning have been tied to the physical dimensions of our screen. We create borders on the top, right, bottom, and left of a box, for example. These physical dimensions map very neatly to content that is viewed horizontally, and by default the web tends to support left-to-right languages (e.g. English or French) better than right-to-left languages (such as Arabic).
 
@@ -348,6 +348,3 @@ You've reached the end of this article, but can you remember the most important 
 
 The concepts explained in this lesson are becoming increasingly important in CSS. An understanding of the block and inline direction — and how text flow changes with a change in writing mode — will be very useful going forward. It will help you in understanding CSS even if you never use a writing mode other than a horizontal one.
 
-In the next article, we'll take a good look at [overflow](/en-US/docs/Learn_web_development/Core/Styling_basics/Overflow) in CSS.
-
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}

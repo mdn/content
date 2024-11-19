@@ -56,6 +56,15 @@ Before starting this module, you don't need any previous HTML knowledge, but you
 - [Debugging HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML)
   - : Writing HTML is fine, but what if something goes wrong, and you can't work out where the error in the code is? This article will introduce you to some tools that can help you find and fix errors in HTML.
 
+## Advanced guides
+
+These guides are not part of the learning pathway, but they are interesting nonetheless — you should consider these as stretch goals, to optionally study when you are done with the main Core articles.
+
+- [Including vector graphics in HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)
+  - : Vector graphics are very useful in many circumstances — they have small file sizes and are highly scalable, so they don't pixelate when zoomed in or blown up to a large size. In this article we'll show you how to include one in your webpage.
+- [From object to iframe — general embedding technologies](/en-US/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies)
+  - : Developers commonly think of embedding media such as images, video and audio into web pages. In this article we take somewhat of a sideways step, looking at some elements that allow you to embed a wide variety of content types into your webpages: the {{htmlelement("iframe")}}, {{htmlelement("embed")}} and {{htmlelement("object")}} elements. `<iframe>`s are for embedding other web pages, and the other two allow you to embed external resources such as PDF files.
+
 ## See also
 
 - [Learn HTML and CSS](https://v2.scrimba.com/learn-html-and-css-c0p?via=mdn), Scrimba <sup>_MDN Curriculum partner_</sup>

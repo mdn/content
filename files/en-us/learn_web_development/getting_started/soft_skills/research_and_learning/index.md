@@ -88,4 +88,9 @@ Recommended news and information sites:
 - [Smashing Magazine](https://www.smashingmagazine.com/)
 - [CodeCademy](https://www.codecademy.com/)
 
+## See also
+
+- [Learning and getting help](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help)
+  - : This article provides some hints and tips in that will help you get more out of learning web development, as well as further reading so you can find out more information about each sub-topic should you wish.
+
 {{NextMenu("Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork", "Learn_web_development/Getting_started/Soft_skills")}}

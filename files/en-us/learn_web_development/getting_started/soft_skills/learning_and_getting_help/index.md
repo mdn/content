@@ -1,6 +1,6 @@
 ---
 title: Learning and getting help
-slug: Learn/Learning_and_getting_help
+slug: Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help
 page-type: guide
 ---
 

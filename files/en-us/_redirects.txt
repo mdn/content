@@ -5433,13 +5433,13 @@
 /en-US/docs/Learn/HTML/Forms/Your_first_HTML_form/Example	/en-US/docs/Learn_web_development/Extensions/Forms/Your_first_form
 /en-US/docs/Learn/HTML/HTML_tags	/en-US/docs/Learn_web_development/Core/Structuring_content
 /en-US/docs/Learn/HTML/Howto	/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems
-/en-US/docs/Learn/HTML/Howto/Add_Flash_content_within_a_webpage	/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#The_<embed>_and_<object>_elements
+/en-US/docs/Learn/HTML/Howto/Add_Flash_content_within_a_webpage	/en-US/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies#The_<embed>_and_<object>_elements
 /en-US/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image	/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image
 /en-US/docs/Learn/HTML/Howto/Add_audio_or_video_content_to_a_webpage	/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio
 /en-US/docs/Learn/HTML/Howto/Add_citations_to_webpages	/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#Quotations
 /en-US/docs/Learn/HTML/Howto/Add_images_to_a_webpage	/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images#How_do_we_put_an_image_on_a_webpage
-/en-US/docs/Learn/HTML/Howto/Add_responsive_image_to_a_webpage	/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
-/en-US/docs/Learn/HTML/Howto/Add_vector_image_to_a_webpage	/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
+/en-US/docs/Learn/HTML/Howto/Add_responsive_image_to_a_webpage	/en-US/docs/Web/HTML/Responsive_images
+/en-US/docs/Learn/HTML/Howto/Add_vector_image_to_a_webpage	/en-US/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML
 /en-US/docs/Learn/HTML/Howto/Annotate_images_and_graphics	/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images#Annotating_images_with_figures_and_figure_captions
 /en-US/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages	/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages
 /en-US/docs/Learn/HTML/Howto/Create_a_basic_HTML_document	/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax
@@ -5448,7 +5448,7 @@
 /en-US/docs/Learn/HTML/Howto/Define_terms_with_HTML	/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Define_terms_with_HTML
 /en-US/docs/Learn/HTML/Howto/Display_computer_code_with_HTML	/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#Representing_computer_code
 /en-US/docs/Learn/HTML/Howto/Divide_a_webpage_into_logical_sections	/en-US/docs/Learn_web_development/Core/Structuring_content/Structuring_documents
-/en-US/docs/Learn/HTML/Howto/Embed_a_webpage_within_another_webpage	/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
+/en-US/docs/Learn/HTML/Howto/Embed_a_webpage_within_another_webpage	/en-US/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies
 /en-US/docs/Learn/HTML/Howto/Emphasize_content_or_indicate_that_text_is_important	/en-US/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#Emphasis_and_importance
 /en-US/docs/Learn/HTML/Howto/Mark_abbreviations_and_make_them_understandable	/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#Abbreviations
 /en-US/docs/Learn/HTML/Howto/Set_up_a_proper_title_hierarchy	/en-US/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs
@@ -5469,9 +5469,12 @@
 /en-US/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Links	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_Links
 /en-US/docs/Learn/HTML/Introduction_to_HTML/The_HTML_head	/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata
 /en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML	/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata
+/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web	/en-US/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML
 /en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML	/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images
 /en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images	/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skills:_HTML_images
 /en-US/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page	/en-US/docs/Learn_web_development/Core/Structuring_content/Mozilla_splash_page
+/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies	/en-US/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies
+/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images	/en-US/docs/Web/HTML/Responsive_images
 /en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content	/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio
 /en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding	/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding
 /en-US/docs/Learn/HTML/Tables	/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics
@@ -5570,6 +5573,7 @@
 /en-US/docs/Learn/JavaScript/Objects/Test_your_skills:_JSON	/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_JSON
 /en-US/docs/Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript	/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills:_Object-oriented_JavaScript
 /en-US/docs/Learn/JavaScript/Objects/Test_your_skills:_Object_basics	/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Object_basics
+/en-US/docs/Learn/Learning_and_getting_help	/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help
 /en-US/docs/Learn/Open_a_file_in_a_browser	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files
 /en-US/docs/Learn/Other_learning_material	/en-US/docs/Learn
 /en-US/docs/Learn/Pages_sites_servers_and_search_engines	/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web

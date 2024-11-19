@@ -1,12 +1,12 @@
 ---
 title: Responsive images
-slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
+slug: Web/HTML/Responsive_images
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}
+{{HTMLSidebar}}
 
-In this article, we'll learn about the concept of responsive images — images that work well on devices with widely differing screen sizes, resolutions, and other such features — and look at what tools HTML provides to help implement them. This helps to improve performance across different devices. Responsive images are just one part of [responsive design](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design), a future CSS topic for you to learn.
+In this article, we'll learn about the concept of responsive images — images that work well on devices with widely differing screen sizes, resolutions, and other such features — and look at what tools HTML provides to help implement them. This helps to improve performance across different devices. 
 
 <table class="standard-table">
   <tbody>
@@ -51,7 +51,7 @@ However, issues arise when you start to view the site on a narrow screen device.
 
 An improvement would be to display a cropped version of the image which displays the important details of the image when the site is viewed on a narrow screen. A second cropped image could be displayed for a medium-width screen device, like a tablet. The general problem whereby you want to serve different cropped images in that way, for various layouts, is commonly known as the **art direction problem**.
 
-In addition, there is no need to embed such large images on the page if it is being viewed on a mobile screen. Doing so can waste bandwidth; in particular, mobile users don't want to waste bandwidth by downloading a large image intended for desktop users, when a small image would do for their device. Conversely, a small [raster image](/en-US/docs/Glossary/Raster_image) starts to look grainy when displayed larger than its original size (a raster image is a set number of pixels wide and a set number of pixels tall, as we saw when we looked at [vector graphics](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)). Ideally, multiple resolutions would be made available to the user's web browser. The browser could then determine the optimal resolution to load based on the screen size of the user's device. This is called the **resolution switching problem**.
+In addition, there is no need to embed such large images on the page if it is being viewed on a mobile screen. Doing so can waste bandwidth; in particular, mobile users don't want to waste bandwidth by downloading a large image intended for desktop users, when a small image would do for their device. Conversely, a small [raster image](/en-US/docs/Glossary/Raster_image) starts to look grainy when displayed larger than its original size (a raster image is a set number of pixels wide and a set number of pixels tall). Ideally, multiple resolutions would be made available to the user's web browser. The browser could then determine the optimal resolution to load based on the screen size of the user's device. This is called the **resolution switching problem**.
 
 To make things more complicated, some devices have high resolution screens that need larger images than you might expect to display nicely. This is essentially the same problem, but in a slightly different context.
 
@@ -198,16 +198,13 @@ For this active learning, we're expecting you to be brave and do it alone, mostl
 That's a wrap for responsive images — we hope you enjoyed playing with these new techniques. As a recap, there are two distinct problems we've been discussing here:
 
 - **Art direction**: The problem whereby you want to serve cropped images for different layouts — for example a landscape image showing a full scene for a desktop layout, and a portrait image showing the main subject zoomed in for a mobile layout. You can solve this problem using the {{htmlelement("picture")}} element.
-- **Resolution switching**: The problem whereby you want to serve smaller image files to narrow-screen devices, as they don't need huge images like desktop displays do — and to serve different resolution images to high density/low density screens. You can solve this problem using [vector graphics](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web) (SVG images) and the [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) with [`sizes`](/en-US/docs/Web/HTML/Element/img#sizes) attributes.
-
-This also draws to a close the entire [Multimedia and embedding](/en-US/docs/Learn/HTML/Multimedia_and_embedding) module! The only thing to do now before moving on is to try our [Multimedia and embedding assessment](/en-US/docs/Learn_web_development/Core/Structuring_content/Mozilla_splash_page), and see how you get on. Have fun!
+- **Resolution switching**: The problem whereby you want to serve smaller image files to narrow-screen devices, as they don't need huge images like desktop displays do — and to serve different resolution images to high density/low density screens. You can solve this problem using [vector graphics](/en-US/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML) (SVG images) and the [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) with [`sizes`](/en-US/docs/Web/HTML/Element/img#sizes) attributes.
 
 ## See also
 
+- [Learn: Responsive design](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)
 - [Jason Grigsby's excellent introduction to responsive images](https://cloudfour.com/thinks/responsive-images-101-definitions/)
 - [Responsive Images: If you're just changing resolutions, use srcset](https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/) — includes more explanation of how the browser works out which image to use
 - {{htmlelement("img")}}
 - {{htmlelement("picture")}}
 - {{htmlelement("source")}}
-
-{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}

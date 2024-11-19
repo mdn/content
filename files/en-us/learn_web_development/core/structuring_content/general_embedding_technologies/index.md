@@ -1,12 +1,12 @@
 ---
-title: From object to iframe — other embedding technologies
-slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
+title: From object to iframe — general embedding technologies
+slug: Learn_web_development/Core/Structuring_content/General_embedding_technologies
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}
 
-By now you should really be getting the hang of embedding things into your web pages, including images, video and audio. At this point we'd like to take somewhat of a sideways step, looking at some elements that allow you to embed a wide variety of content types into your webpages: the {{htmlelement("iframe")}}, {{htmlelement("embed")}} and {{htmlelement("object")}} elements. `<iframe>`s are for embedding other web pages, and the other two allow you to embed external resources such as PDF files.
+Developers commonly think of embedding media such as images, video and audio into web pages. In this article we take somewhat of a sideways step, looking at some elements that allow you to embed a wide variety of content types into your webpages: the {{htmlelement("iframe")}}, {{htmlelement("embed")}} and {{htmlelement("object")}} elements. `<iframe>`s are for embedding other web pages, and the other two allow you to embed external resources such as PDF files.
 
 <table>
   <tbody>
@@ -20,10 +20,8 @@ By now you should really be getting the hang of embedding things into your web p
         <a
           href="/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >working with files</a
-        >, familiarity with HTML fundamentals (as covered in
-        <a href="/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
-          >Basic HTML syntax</a
-        >) and the previous articles in this module.
+        >, familiarity with <a href="/en-US/docs/Learn_web_development/Core/Structuring_content/"
+          >HTML fundamentals</a>.
       </td>
     </tr>
     <tr>
@@ -366,14 +364,9 @@ Let's look at an `<object>` example that embeds a PDF into a page (see the [live
 
 PDFs were a necessary stepping stone between paper and digital, but they pose many [accessibility challenges](https://webaim.org/techniques/acrobat/acrobat) and can be hard to read on small screens. They do still tend to be popular in some circles, but it is much better to link to them so they can be downloaded or read on a separate page, rather than embedding them in a webpage.
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Multimedia and embedding](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding).
-
 ## Summary
 
 The topic of embedding other content in web documents can quickly become very complex, so in this article, we've tried to introduce it in a simple, familiar way that will immediately seem relevant, while still hinting at some of the more advanced features of the involved technologies. To start with, you are unlikely to use embedding for much beyond including third-party content like maps and videos on your pages. As you become more experienced, however, you are likely to start finding more uses for them.
 
-There are many other technologies that involve embedding external content besides the ones we discussed here. We saw some in earlier articles, such as {{htmlelement("video")}}, {{htmlelement("audio")}}, and {{htmlelement("img")}}, but there are others to discover, such as {{htmlelement("canvas")}} for JavaScript-generated 2D and 3D graphics, and {{SVGElement("svg")}} for embedding vector graphics. We'll look at [SVG](/en-US/docs/Web/SVG) in the next article of the module.
+There are many other technologies that involve embedding external content besides the ones we discussed here. We saw some in earlier articles, such as {{htmlelement("video")}}, {{htmlelement("audio")}}, and {{htmlelement("img")}}, but there are others to discover, such as {{htmlelement("canvas")}} for JavaScript-generated 2D and 3D graphics, and {{SVGElement("svg")}} for embedding vector graphics.
 
-{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}

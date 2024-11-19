@@ -58,6 +58,17 @@ Before starting this module, you should have a basic work environment set up (as
 - [Challenge: A cool-looking box](/en-US/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box) <sup>Challenge</sup>
   - : In this challenge, you'll get some more practice in creating cool-looking boxes by trying to create an eye-catching box.
 
+## Advanced guides
+
+These guides are not part of the learning pathway, but they are interesting nonetheless — you should consider these as stretch goals, to optionally study when you are done with the main Core articles.
+
+- [Advanced styling effects](/en-US/docs/Learn_web_development/Core/Styling_basics/Advanced_styling_effects)
+  - : This article will give you guidance on how to go about debugging a CSS problem, and show you how the DevTools included in all modern browsers can help you to find out what is going on.
+- [Handling different text directions](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)
+  - : In recent years, CSS has evolved in order to better support different directionality of content, including right-to-left but also top-to-bottom content (such as Japanese) — these different directionalities are called writing modes. As you progress in your study and begin to work with layout, an understanding of writing modes will be very helpful to you, therefore we will introduce them in this article.
+- [Organizing CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Organizing)
+  - : As you start to work on larger stylesheets and big projects you will discover that maintaining a huge CSS file can be challenging. In this article we will take a brief look at some best practices for writing your CSS to make it easily maintainable, and some of the solutions you will find in use by others to help improve maintainability.
+
 ## See also
 
 - [Learn HTML and CSS](https://v2.scrimba.com/learn-html-and-css-c0p?via=mdn), Scrimba <sup>_MDN Curriculum partner_</sup>

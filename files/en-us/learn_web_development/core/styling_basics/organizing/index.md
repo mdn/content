@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Organizing
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}
 
 As you start to work on larger stylesheets and big projects you will discover that maintaining a huge CSS file can be challenging. In this article we will take a brief look at some best practices for writing your CSS to make it easily maintainable, and some of the solutions you will find in use by others to help improve maintainability.
 
@@ -393,13 +393,3 @@ If the partials are all loaded into an index file, as implied above, you can the
 #### Post-processing for optimization
 
 If you are concerned about adding size to your stylesheets, for example, by adding a lot of additional comments and whitespace, then a post-processing step could be to optimize the CSS by stripping out anything unnecessary in the production version. An example of a post-processor solution for doing this would be [cssnano](https://cssnano.github.io/cssnano/).
-
-## Summary
-
-This is the final part of our building blocks module, and as you can see there are many ways in which your exploration of CSS can continue from this point — but now you can go on to testing yourself with our assessments: the first one is linked below.
-
-To learn more about layout in CSS, see the [CSS Layout](/en-US/docs/Learn_web_development/Core/CSS_layout) module.
-
-You should also now have the skills to explore the rest of the [MDN CSS](/en-US/docs/Web/CSS) material. You can look up properties and values, explore our [CSS Cookbook](/en-US/docs/Web/CSS/Layout_cookbook) for patterns to use, or continue reading in some of the specific guides, such as our [Guide to CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout).
-
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks")}}

@@ -115,7 +115,7 @@ HTML
 - [The `<source>` Element](/en-US/docs/Web/HTML/Element/source)
 - [The `<img> srcset` attribute](/en-US/docs/Web/HTML/Element/img#attributes)
 
-  - [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+  - [Responsive images](/en-US/docs/Web/HTML/Responsive_images)
 
 - [Preloading content with `rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload)
 - <https://w3c.github.io/preload/>
