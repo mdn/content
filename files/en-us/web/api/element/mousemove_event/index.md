@@ -181,3 +181,4 @@ function drawLine(context, x1, y1, x2, y2) {
 - {{domxref("Element/mouseenter_event", "mouseenter")}}
 - {{domxref("Element/mouseleave_event", "mouseleave")}}
 - {{domxref("Element/contextmenu_event", "contextmenu")}}
+- {{domxref("Element/pointermove_event", "pointermove")}}
