@@ -7,7 +7,7 @@ browser-compat: http.headers.Via
 
 {{HTTPSidebar}}
 
-The **`Via`** {{glossary("request header", "request")}} and {{glossary("response header")}} header is added by {{Glossary("proxies"}}, both forward and reverse.
+The **`Via`** {{glossary("request header", "request")}} and {{glossary("response header")}} header is added by {{Glossary("proxies")}}, both forward and reverse.
 It is used for tracking message forwards, avoiding request loops, and identifying the protocol capabilities of senders along the request/response chain.
 
 <table class="properties">
