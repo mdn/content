@@ -54827,10 +54827,6 @@
     "modified": "2020-10-15T22:08:45.154Z",
     "contributors": ["Sheppy"]
   },
-  "Web/API/RTCRtpStreamStats/nackCount": {
-    "modified": "2020-10-15T22:08:57.931Z",
-    "contributors": ["sideshowbarker", "Sheppy"]
-  },
   "Web/API/RTCRtpStreamStats/pliCount": {
     "modified": "2020-10-15T22:08:57.878Z",
     "contributors": ["sideshowbarker", "Sheppy"]

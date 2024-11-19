@@ -49,8 +49,6 @@ The following properties are common to all WebRTC statistics objects.
 
 These properties are computed locally, and are only available to the device receiving the media stream. Their primary purpose is to examine the error resiliency of the connection, as they provide information about lost packets, lost frames, and how heavily compressed the data is.
 
-- {{domxref("RTCRtpStreamStats.firCount", "firCount")}}
-  - : A count of the total number of Full Intra Request (FIR) packets received by the sender. This statistic is only available to the device which is receiving the stream and is only available for video tracks. A FIR packet is sent by the receiving end of the stream when it falls behind or has lost packets and is unable to continue decoding the stream; the sending end of the stream receives the FIR packet and responds by sending a full frame instead of a delta frame, thereby letting the receiver "catch up." The higher this number is, the more often a problem of this nature arose, which can be a sign of network congestion or an overburdened receiving device.
 - {{domxref("RTCRtpStreamStats.nackCount", "nackCount")}}
   - : The number of times the receiver notified the sender that one or more RTP packets has been lost by sending a Negative ACKnowledgement (NACK, also called "Generic NACK") packet to the sender. This value is only available to the receiver.
 - {{domxref("RTCRtpStreamStats.pliCount", "pliCount")}}

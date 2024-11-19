@@ -9554,6 +9554,7 @@
 /en-US/docs/Web/API/RTCRtpSendParameters/encodings	/en-US/docs/Web/API/RTCRtpSender/setParameters
 /en-US/docs/Web/API/RTCRtpSender/getCapabilities	/en-US/docs/Web/API/RTCRtpSender/getCapabilities_static
 /en-US/docs/Web/API/RTCRtpSender/getCapabilities()	/en-US/docs/Web/API/RTCRtpSender/getCapabilities_static
+/en-US/docs/Web/API/RTCRtpStreamStats/nackCount	/en-US/docs/Web/API/RTCInboundRtpStreamStats/nackCount
 /en-US/docs/Web/API/RTCRtpSynchronizationSource	/en-US/docs/Web/API/RTCRtpReceiver/getSynchronizationSources
 /en-US/docs/Web/API/RTCRtpSynchronizationSource/voiceActivityFlag	/en-US/docs/Web/API/RTCRtpReceiver/getSynchronizationSources
 /en-US/docs/Web/API/RTCRtpTransceiverDirection	/en-US/docs/Web/API/RTCRtpTransceiver/direction
