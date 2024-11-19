@@ -1,5 +1,5 @@
 ---
-title: First input delay (FID)
+title: First Input Delay (FID)
 slug: Glossary/First_input_delay
 page-type: glossary-definition
 status:

@@ -34,7 +34,7 @@ The Performance API records various different types of performance data, and the
 
 - `"element"` records how long it takes an element to load and render.
 - `"event"` records how long it took the browser to start running an event handler in response to its trigger, and how long the event handler took to run. Used to Measure {{Glossary("Interaction to Next Paint")}}.
-- `"first-input"` records the {{Glossary("First input delay")}}.
+- `"first-input"` records the {{Glossary("First Input Delay")}}.
 - `"largest-contentful-paint"` records the largest paint during page load.
 - `"layout-shift"` records a metric representing how much the page layout has shifted in each animation frame.
 - `"longtask"` records tasks that took 50ms or more.

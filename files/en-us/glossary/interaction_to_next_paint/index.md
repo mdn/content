@@ -8,7 +8,7 @@ page-type: glossary-definition
 
 **Interaction to Next Paint** (INP) measures the responsiveness of a website to user interactions (for example, when they click a link, tap on a button, or use a custom, JavaScript-powered control).
 
-INP was designed by Google as one of the [Core Web Vital](https://web.dev/articles/vitals) metrics, replacing {{Glossary("first input delay")}} (FID) in May 2024. There are two key differences between FID and INP that make INP a more reliable measure of a page's responsiveness:
+INP was designed by Google as one of the [Core Web Vital](https://web.dev/articles/vitals) metrics, replacing {{Glossary("First Input Delay")}} (FID) in May 2024. There are two key differences between FID and INP that make INP a more reliable measure of a page's responsiveness:
 
 - FID measures only the first interaction, whereas INP considers all interactions.
 - FID only measure the input delay of the interaction, while INP measures for longer until the first paint after the interaction processing starts.
