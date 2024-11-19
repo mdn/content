@@ -175,7 +175,7 @@ console.log(cats); // [ <3 empty items> ]
 
 ### Iterating over arrays
 
-A common operation is to iterate over the values of an array, processing each one in some way. The simplest way to do this is as follows:
+A common operation is to iterate over the values of an array, processing each one in some way, as follows:
 
 ```js
 const colors = ["red", "green", "blue"];
@@ -509,7 +509,7 @@ You can transform back and forth between arrays and other data structures.
 
 The {{jsxref("Object.groupBy()")}} method can be used to group the elements of an array, using a test function that returns a string indicating the group of the current element.
 
-Here we have a simple inventory array that contains "food" objects that have a `name` and a `type`.
+Here we have an inventory array that contains "food" objects that have a `name` and a `type`.
 
 ```js
 const inventory = [
