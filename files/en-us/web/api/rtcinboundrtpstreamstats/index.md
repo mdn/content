@@ -59,6 +59,19 @@ These statistics are measured at the receiving end of an RTP stream, regardless 
 - {{domxref("RTCInboundRtpStreamStats.jitter", "jitter")}}
   - : Packet jitter for this synchronizing source, measured in seconds.
 
+### Local-only measurements
+
+These properties are computed locally, and are only available to the device receiving the media stream.
+Their primary purpose is to examine the error resiliency of the connection, as they provide information about lost packets, lost frames, and how heavily compressed the data is.
+
+- {{domxref("RTCInboundRtpStreamStats.nackCount", "nackCount")}}
+  - : The number of times the receiver notified the sender that one or more RTP packets has been lost by sending a Negative ACKnowledgement (NACK, also called "Generic NACK") packet to the sender. This value is only available to the receiver.
+- {{domxref("RTCInboundRtpStreamStats.qpSum", "qpSum")}}
+  - : A 64-bit value containing the sum of the QP values for every frame decoded by this RTP receiver to date on the video track described by this statistics object.
+    You can approximate the average QP per frame by dividing this value by {{domxref("RTCInboundRtpStreamStats.framesDecoded", "framesDecoded")}}, keeping in mind that codecs often vary the quantizer values even within frames.
+    Also keep in mind that the values of QP can vary from codec to codec, so this value is only potentially useful when compared against the same codec.
+    _Valid only for video streams._
+
 ### Common RTP stream statistics
 
 <!-- RTCRtpStreamStats -->
@@ -72,19 +85,6 @@ These statistics are measured at the receiving end of an RTP stream, regardless 
     This value is generated per the {{RFC(3550)}} specification.
 - {{domxref("RTCInboundRtpStreamStats.transportId", "transportId")}}
   - : A string uniquely identifying the object which was inspected to produce the {{domxref("RTCTransportStats")}} object associated with this RTP stream.
-
-### Local-only measurements
-
-These properties are computed locally, and are only available to the device receiving the media stream.
-Their primary purpose is to examine the error resiliency of the connection, as they provide information about lost packets, lost frames, and how heavily compressed the data is.
-
-- {{domxref("RTCInboundRtpStreamStats.nackCount", "nackCount")}}
-  - : The number of times the receiver notified the sender that one or more RTP packets has been lost by sending a Negative ACKnowledgement (NACK, also called "Generic NACK") packet to the sender. This value is only available to the receiver.
-- {{domxref("RTCInboundRtpStreamStats.qpSum", "qpSum")}}
-  - : A 64-bit value containing the sum of the QP values for every frame decoded by this RTP receiver to date on the video track described by this statistics object.
-    You can approximate the average QP per frame by dividing this value by {{domxref("RTCInboundRtpStreamStats.framesDecoded", "framesDecoded")}}, keeping in mind that codecs often vary the quantizer values even within frames.
-    Also keep in mind that the values of QP can vary from codec to codec, so this value is only potentially useful when compared against the same codec.
-    _Valid only for video streams._
 
 ### Common instance properties
 

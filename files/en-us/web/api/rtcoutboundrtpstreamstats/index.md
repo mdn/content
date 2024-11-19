@@ -44,6 +44,17 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 - {{domxref("RTCOutboundRtpStreamStats.trackId", "trackId")}}
   - : The {{domxref("RTCOutboundRtpStreamStats.id", "id")}} of the {{domxref("RTCSenderAudioTrackAttachmentStats")}} or {{domxref("RTCSenderVideoTrackAttachmentStats")}} object containing the current track attachment to the {{domxref("RTCRtpSender")}} responsible for this stream.
 
+### Local-only measurements
+
+These properties are computed locally, and are only available to the device receiving the media stream.
+Their primary purpose is to examine the error resiliency of the connection, as they provide information about lost packets, lost frames, and how heavily compressed the data is.
+
+- {{domxref("RTCOutboundRtpStreamStats.nackCount", "nackCount")}}
+  - : An integer value indicating the total number of Negative ACKnowledgement (NACK) packets this `RTCRtpSender` has received from the remote {{domxref("RTCRtpReceiver")}}.
+- {{domxref("RTCOutboundRtpStreamStats.qpSum", "qpSum")}}
+  - : A 64-bit value containing the sum of the QP values for every frame encoded by this {{domxref("RTCRtpSender")}}.
+    _Valid only for video streams._
+
 ### Common RTP stream statistics
 
 <!-- RTCRtpStreamStats -->
@@ -56,17 +67,6 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : A positive integer that identifies the SSRC of the RTP packets in this stream.
 - {{domxref("RTCOutboundRtpStreamStats.transportId", "transportId")}} {{optional_inline}}
   - : A string that uniquely identifies the object which was inspected to produce the {{domxref("RTCTransportStats")}} object associated with this RTP stream.
-
-### Local-only measurements
-
-These properties are computed locally, and are only available to the device receiving the media stream.
-Their primary purpose is to examine the error resiliency of the connection, as they provide information about lost packets, lost frames, and how heavily compressed the data is.
-
-- {{domxref("RTCOutboundRtpStreamStats.nackCount", "nackCount")}}
-  - : An integer value indicating the total number of Negative ACKnowledgement (NACK) packets this `RTCRtpSender` has received from the remote {{domxref("RTCRtpReceiver")}}.
-- {{domxref("RTCOutboundRtpStreamStats.qpSum", "qpSum")}}
-  - : A 64-bit value containing the sum of the QP values for every frame encoded by this {{domxref("RTCRtpSender")}}.
-    _Valid only for video streams._
 
 ### Common instance properties
 
