@@ -51,6 +51,12 @@ Repr-Digest: <digest-algorithm>=<digest-value>,<digest-algorithm>=<digest-value>
 Usage of insecure digest algorithms is discouraged as collisions can realistically be forced, rendering the digest's usefulness weak.
 Unless working with legacy systems (which is unlikely since most will expect the deprecated `Digest` header and not understand this specification), consider omitting a `Repr-Digest` instead of including one with an insecure digest algorithm.
 
+## Description
+
+A `Digest` header was defined in previous specifications, but it proved problematic as the scope of what the digest applied to was not clear.
+Specifically, it was difficult to distinguish whether a digest applied to the entire resource representation or to the specific content of a HTTP message.
+As such, two separate headers were specified (`Content-Digest` and `Repr-Digest`) to convey HTTP message content digests and resource representation digests, respectively.
+
 ## Examples
 
 ### HTTP response where `Repr-Digest` and `Content-Digest` coincide
