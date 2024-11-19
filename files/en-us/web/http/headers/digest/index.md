@@ -4,16 +4,14 @@ slug: Web/HTTP/Headers/Digest
 page-type: http-header
 status:
   - deprecated
-  - non-standard
 spec-urls: https://www.rfc-editor.org/rfc/rfc3230#section-4.3.2
 ---
 
-{{HTTPSidebar}}{{Deprecated_Header}}{{non-standard_header}}
+{{HTTPSidebar}}{{Deprecated_Header}}
 
 > [!NOTE]
 > This header was removed from the specification in [draft 8](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-digest-headers-08).
-> Use {{HTTPHeader("Content-Digest")}} instead.
-> For `id-*` digest algorithms, use {{HTTPHeader("Repr-Digest")}}.
+> Instead, use {{HTTPHeader("Want-Content-Digest")}} to request a {{HTTPHeader("Content-Digest")}} and {{HTTPHeader("Want-Repr-Digest")}} for a {{HTTPHeader("Repr-Digest")}} header.
 
 The HTTP **`Digest`** {{Glossary("request header")}} and {{Glossary("response header")}} provides the recipient with a {{Glossary("digest")}} of the {{HTTPHeader("Content-Encoding")}}-encoded _selected representation_.
 It can be requested by using the {{HTTPHeader("Want-Digest")}} header.
@@ -72,7 +70,8 @@ Digest: sha-256=X48E9qOokqqrvdts8nOJRJN3OWDUoyWxBf7kbu9DBPE=,id-sha-256=0KJL0PvN
 
 ## Browser compatibility
 
-{{Compat}}
+This header has no specification-defined browser integration ("browser compatibility" does not apply).
+Developers can set and get HTTP headers using `fetch()` in order to provide application-specific implementation behavior.
 
 ## See also
 
