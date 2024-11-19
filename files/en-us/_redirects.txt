@@ -5576,6 +5576,7 @@
 /en-US/docs/Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript	/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills:_Object-oriented_JavaScript
 /en-US/docs/Learn/JavaScript/Objects/Test_your_skills:_Object_basics	/en-US/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Object_basics
 /en-US/docs/Learn/Learning_and_getting_help	/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help
+/en-US/docs/Learn/MathML	/en-US/docs/Web/MathML
 /en-US/docs/Learn/MathML/First_steps	/en-US/docs/Web/MathML/Guides
 /en-US/docs/Learn/MathML/First_steps/Fractions_and_roots	/en-US/docs/Web/MathML/Guides/Fractions_and_roots
 /en-US/docs/Learn/MathML/First_steps/Getting_started	/en-US/docs/Web/MathML/Guides/Getting_started

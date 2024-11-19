@@ -50,7 +50,7 @@ The following is a list of all the topics we cover in the MDN learning area.
   - : Accessibility is the practice of making web content available to as many people as possible regardless of disability, device, locale, or other differentiating factors. This topic gives you all you need to know.
 - [Web Performance — making websites fast and responsive](/en-US/docs/Learn_web_development/Extensions/Performance)
   - : Web performance is the art of making sure web applications download fast and are responsive to user interaction, regardless of a user's bandwidth, screen size, network, or device capabilities.
-- [MathML](/en-US/docs/Learn/MathML)
+- [MathML](/en-US/docs/Web/MathML)
   - : MathML is the language that we can use to write mathematical formulas in web pages using fractions, scripts, radicals, matrices, integrals, series, etc. This topic covers MathML.
 - [Tools and testing](/en-US/docs/Learn/Tools_and_testing)
   - : This topic covers the tools developers use to facilitate their work, such as cross-browser testing tools, linters, formatters, transformation tools, version control systems, deployment tools, and client-side JavaScript frameworks.

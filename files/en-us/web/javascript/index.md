@@ -33,12 +33,6 @@ Head over to our [Learning Area JavaScript topic](/en-US/docs/Learn_web_developm
 
 - [Dynamic scripting with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting)
   - : Continues our coverage of JavaScript's key fundamental features, turning our attention to commonly-encountered types of code blocks such as conditional statements, loops, functions, and events.
-- [Introducing JavaScript objects](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)
-  - : The object-oriented nature of JavaScript is important to understand if you want to go further with your knowledge of the language and write more efficient code, therefore we've provided this module to help you.
-- [Asynchronous JavaScript](/en-US/docs/Learn_web_development/Extensions/Async_JS)
-  - : Discusses asynchronous JavaScript, why it is important, and how it can be used to effectively handle potential blocking operations such as fetching resources from a server.
-- [Client-side web APIs](/en-US/docs/Learn_web_development/Extensions/Client-side_APIs)
-  - : Explores what APIs are, and how to use some of the most common APIs you'll come across often in your development work.
 
 ### JavaScript guide
 
@@ -49,6 +43,12 @@ Head over to our [Learning Area JavaScript topic](/en-US/docs/Learn_web_developm
 
 - [Introduction to client-side frameworks](/en-US/docs/Learn_web_development/Core/Frameworks_libraries)
   - : JavaScript frameworks are an essential part of modern front-end web development, providing developers with proven tools for building scalable, interactive web applications. This module gives you some fundamental background knowledge about how client-side frameworks work and how they fit into your toolset, before moving on to a series of tutorials covering some of today's most popular ones.
+  - [Introducing JavaScript objects](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)
+  - : The object-oriented nature of JavaScript is important to understand if you want to go further with your knowledge of the language and write more efficient code, therefore we've provided this module to help you.
+- [Asynchronous JavaScript](/en-US/docs/Learn_web_development/Extensions/Async_JS)
+  - : Discusses asynchronous JavaScript, why it is important, and how it can be used to effectively handle potential blocking operations such as fetching resources from a server.
+- [Client-side web APIs](/en-US/docs/Learn_web_development/Extensions/Client-side_APIs)
+  - : Explores what APIs are, and how to use some of the most common APIs you'll come across often in your development work.
 - [JavaScript language overview](/en-US/docs/Web/JavaScript/Language_overview)
   - : An overview of the basic syntax and semantics of JavaScript for those coming from other programming languages to get up to speed.
 - [JavaScript data structures](/en-US/docs/Web/JavaScript/Data_structures)
@@ -59,6 +59,7 @@ Head over to our [Learning Area JavaScript topic](/en-US/docs/Learn_web_developm
   - : How different methods that visit a group of object properties one-by-one handle the enumerability and ownership of properties.
 - [Closures](/en-US/docs/Web/JavaScript/Closures)
   - : A closure is the combination of a function and the lexical environment within which that function was declared.
+
 
 ### Advanced
 
