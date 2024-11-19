@@ -8,6 +8,8 @@ page-type: http-header
 
 > [!WARNING]
 > Do not use this header. Browsers omit this header and servers should ignore it.
+>
+> The header was deprecated by [RFC 9110 section 12.5.2 Accept-Charset](https://datatracker.ietf.org/doc/html/rfc9110#section-12.5.2) (June 2022).
 
 The HTTP **`Accept-Charset`** {{Glossary("request header")}} was a header that advertised a client's supported {{glossary("character encoding", "character encodings")}}. It is no longer widely used.
 

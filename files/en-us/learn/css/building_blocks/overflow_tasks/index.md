@@ -9,8 +9,8 @@ page-type: learn-module-assessment
 The aim of this skill test is to assess whether you understand [overflow in CSS and how to manage it](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content).
 
 > [!NOTE]
-> You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
->
+> Click **"Play"** in the code blocks below to edit the examples in the MDN Playground.
+> You can also copy the code (click the clipboard icon) and paste it into an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 > If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Task 1
@@ -19,13 +19,50 @@ In this task, the content is overflowing the box because it has a fixed height. 
 
 ![A small box with a border and a vertical scrollbar.](mdn-overflow1.png)
 
-Try updating the live code below to recreate the finished example:
+Try to update the code below to recreate the finished example:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/overflow/overflow-scroll.html", '100%', 1000)}}
+```html live-sample___overflow-scroll
+<div class="box">
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
 
-> [!CALLOUT]
->
-> [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/overflow/overflow-scroll-download.html) to work in your own editor or in an online editor.
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+</div>
+```
+
+```css live-sample___overflow-scroll
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.box {
+  border: 5px solid black;
+  padding: 1em;
+  height: 200px;
+  width: 300px;
+}
+```
+
+{{EmbedLiveSample("overflow-scroll", "", "450px")}}
+
+<details>
+<summary>Click here to show the solution</summary>
+
+You should add `overflow: auto` so that the box will only gain scrollbars when the content is too large:
+
+```css
+.box {
+  overflow: auto;
+}
+```
+
+</details>
 
 ## Task 2
 
@@ -35,10 +72,42 @@ Your final result should look like the image below:
 
 ![A box with an image which fills the box but does not spill out the edges.](mdn-overflow2.png)
 
-Try updating the live code below to recreate the finished example:
+Try to update the code below to recreate the finished example:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/overflow/overflow-hidden.html", '100%', 1200)}}
+```html live-sample___overflow-hidden
+<div class="box">
+  <img
+    alt="flowers"
+    src="https://mdn.github.io/shared-assets/images/examples/flowers.jpg" />
+</div>
+```
 
-> [!CALLOUT]
->
-> [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/overflow/overflow-hidden-download.html) to work in your own editor or in an online editor.
+```css live-sample___overflow-hidden
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.box {
+  border: 5px solid black;
+  height: 200px;
+  width: 300px;
+}
+```
+
+{{EmbedLiveSample("overflow-hidden", "", "300px")}}
+
+<details>
+<summary>Click here to show the solution</summary>
+
+You should add `overflow: hidden` to the `.box` selector:
+
+```css
+.box {
+  overflow: hidden;
+}
+```
+
+</details>
+
+## See also
+
+- [CSS building blocks](/en-US/docs/Learn/CSS/Building_blocks)

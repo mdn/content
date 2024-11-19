@@ -357,47 +357,13 @@ function handleKeyDown(event) {
 
 The keys and their effects are:
 
-- The
-
-  <kbd>W</kbd>
-
-  key moves the viewer upward by `MOVE_DISTANCE`.
-
-- The
-
-  <kbd>S</kbd>
-
-  key moves the viewer downward by `MOVE_DISTANCE`.
-
-- The
-
-  <kbd>A</kbd>
-
-  key slides the viewer to the left by `MOVE_DISTANCE`.
-
-- The
-
-  <kbd>D</kbd>
-
-  key slides the viewer to the right by `MOVE_DISTANCE`.
-
-- The up arrow key,
-
-  <kbd>↑</kbd>
-
-  , slides the viewer forward by `MOVE_DISTANCE`.
-
-- The down arrow key,
-
-  <kbd>↓</kbd>
-
-  , slides the viewer backward by `MOVE_DISTANCE`.
-
-- The
-
-  <kbd>R</kbd>
-
-  key resets the viewer to their starting position and orientation by resetting the input offsets all to 0.
+- The <kbd>W</kbd> key moves the viewer upward by `MOVE_DISTANCE`.
+- The <kbd>S</kbd> key moves the viewer downward by `MOVE_DISTANCE`.
+- The <kbd>A</kbd> key slides the viewer to the left by `MOVE_DISTANCE`.
+- The <kbd>D</kbd> key slides the viewer to the right by `MOVE_DISTANCE`.
+- The up arrow key, <kbd>↑</kbd>, slides the viewer forward by `MOVE_DISTANCE`.
+- The down arrow key, <kbd>↓</kbd>, slides the viewer backward by `MOVE_DISTANCE`.
+- The <kbd>R</kbd> key resets the viewer to their starting position and orientation by resetting the input offsets all to 0.
 
 These offsets will be applied by the renderer starting with the next frame drawn.
 

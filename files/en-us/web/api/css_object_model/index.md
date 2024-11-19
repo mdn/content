@@ -41,6 +41,7 @@ The values of CSS are represented untyped, that is using {{JSxRef("String")}} ob
 - {{DOMxRef("CSSStyleSheet")}}
 - {{DOMxRef("CSSStyleRule")}}
 - {{DOMxRef("CSSSupportsRule")}}
+- {{DOMXRef("CSSNestedDeclarations")}}
 - {{DOMxRef("FontFace")}}
 - {{DOMxRef("FontFaceSet")}}
 - {{DOMxRef("FontFaceSetLoadEvent")}}

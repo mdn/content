@@ -18,4 +18,53 @@ When you add an image to a page using the HTML {{htmlelement("img")}} element, t
 
 The {{cssxref("object-fit")}} property makes each of these approaches possible. In the example below you can see how different values of `object-fit` work when using the same image. Select the approach that works best for your design.
 
-{{EmbedGHLiveSample("css-examples/howto/object-fit.html", '100%', 800)}}
+```html live-sample___object-fit
+<div class="wrapper">
+  <div class="box box1">
+    <img
+      alt="a colorful hot air balloon against a clear sky"
+      src="https://mdn.github.io/shared-assets/images/examples/balloon.jpg" />
+  </div>
+  <div class="box box2">
+    <img
+      alt="a colorful hot air balloon against a clear sky"
+      src="https://mdn.github.io/shared-assets/images/examples/balloon.jpg" />
+  </div>
+  <div class="box box3">
+    <img
+      alt="a colorful hot air balloon against a clear sky"
+      src="https://mdn.github.io/shared-assets/images/examples/balloon.jpg" />
+  </div>
+</div>
+```
+
+```css live-sample___object-fit
+.wrapper {
+  height: 200px;
+  display: flex;
+  gap: 20px;
+}
+
+.box {
+  border: 5px solid #000;
+}
+
+.box img {
+  width: 100%;
+  height: 100%;
+}
+
+.box1 img {
+  object-fit: cover;
+}
+
+.box2 img {
+  object-fit: contain;
+}
+
+.box3 img {
+  object-fit: fill;
+}
+```
+
+{{EmbedLiveSample("object-fit", "", "220px")}}

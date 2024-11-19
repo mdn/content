@@ -106,6 +106,6 @@ A working version of this example can be [found on Glitch](https://url-api.glitc
 ## See also
 
 - {{domxref("Fetch API", "", "", "nocode")}}
-- CSS {{cssxref("&lt;url&gt;")}} type
+- CSS {{cssxref("url_value", "&lt;url&gt;")}} type
 - {{jsxref("encodeURI", "encodeURI()")}}
 - {{jsxref("encodeURIComponent", "encodeURIComponent()")}}

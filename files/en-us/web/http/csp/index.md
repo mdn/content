@@ -66,7 +66,7 @@ If sanitization does fail, there are various forms the injected malicious code c
 - A {{htmlelement("script")}} tag that links to a malicious source:
 
   ```html
-  <script src="https://evil.com/hacker.js"></script>
+  <script src="https://evil.example.com/hacker.js"></script>
   ```
 
 - A `<script>` tag that includes inline JavaScript:
@@ -97,7 +97,7 @@ If sanitization does fail, there are various forms the injected malicious code c
 
 A CSP can provide protection against all of these. With a CSP, you can:
 
-- define the permitted sources for JavaScript files and other resources, effectively blocking loads from `https://evil.com`
+- define the permitted sources for JavaScript files and other resources, effectively blocking loads from `https://evil.example.com`
 - disable inline script tags
 - allow only script tags which have the correct nonce or hash set
 - disable inline event handlers
@@ -206,7 +206,7 @@ Fetch directives can also use a hash of the script to guarantee its integrity. W
 2. creates a {{glossary("Base64")}} encoding of the result
 3. appends a prefix identifying the hash algorithm used (one of `sha256-`, `sha384-`, or `sha512-`).
 
-If then adds the result to the directive:
+It then adds the result to the directive:
 
 ```http
 Content-Security-Policy: script-src 'sha256-cd9827ad...'
