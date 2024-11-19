@@ -10,7 +10,7 @@ page-type: guide
 There are two types of messages: **requests** sent by the client to trigger an action on the server, and **responses**, the answer that the server sends in response to a request.
 
 Developers rarely, if ever, build HTTP messages from scratch.
-Applications such as a browser, a proxy, or a Web server, use software designed to create HTTP messages in a reliable and efficient way.
+Applications such as a browser, proxy, or web server, use software designed to create HTTP messages in a reliable and efficient way.
 How messages are created or transformed is controlled via APIs in browsers, configuration files for proxies or servers, or other interfaces.
 
 In HTTP protocol versions up to HTTP/2, messages are text-based, and are relatively straightforward to read and understand after you've familiarized yourself with the format.
@@ -42,7 +42,7 @@ The start-line and headers of the HTTP message are collectively known as the _he
 
 ## HTTP requests
 
-Let's look at the following example HTTP POST request that's sent after a user submits a form on a web page:
+Let's look at the following example HTTP `POST` request that's sent after a user submits a form on a web page:
 
 ```http
 POST /users HTTP/1.1
@@ -53,7 +53,7 @@ Content-Length: 50
 name=FirstName%20LastName&email=bsmth%40example.com
 ```
 
-The start-line in HTTP requests (`POST /users HTTP/1.1` in the example above) is called a "request-line" and is made of three parts:
+The start-line in HTTP/1.x requests (`POST /users HTTP/1.1` in the example above) is called a "request-line" and is made of three parts:
 
 ```http
 <method> <request-target> <protocol>
@@ -68,6 +68,8 @@ The start-line in HTTP requests (`POST /users HTTP/1.1` in the example above) is
     It is described in more detail in the [Request targets](#request-targets) section below.
 - `<protocol>`
   - : The _HTTP version_, which defines the structure of the remaining message, acting as an indicator of the expected version to use for the response.
+    This is almost always `HTTP/1.1`, as `HTTP/0.9` and `HTTP/1.0` are obsolete.
+    In HTTP/2, the protocol version isn't included in messages since it is understood from the connection setup.
 
 ### Request targets
 
@@ -204,9 +206,11 @@ In HTTP/1.x, each header is a **case-insensitive** string followed by a colon (`
 
 Like request headers, there are many different headers that can appear in responses, and they are categorized as:
 
-- {{glossary("Response header", "Response headers")}} give additional information about the server which doesn't fit in the status line.
-- {{glossary("Representation header", "Representation headers")}} sent in a response if the message has a body.
-  They describe the original form of the message data and any encoding applied.
+- {{glossary("Response header", "Response headers")}} give additional information about the message which doesn't fit in the status line.
+  For example, headers like {{HTTPHeader("Server"}} include information about the server software, while {{HTTPHeader("Date"}} includes when the response was generated.
+  There is also information about the resource being returned, such as its content type ({{HTTPHeader("Content-Type"}}), or how it should be cached ({{HTTPHeader("Cache-Control"}}).
+- {{glossary("Representation header", "Representation headers")}} are sent in a response if the message has a body and they describe the form of the message data and any encoding applied.
+  For example, the same resource might be formatted in a particular media type such as XML or JSON, localized to a particular written language or geographical region, and/or compressed or otherwise encoded for transmission.
   This allows a recipient to understand how to reconstruct the resource as it was before it was transmitted over the network.
 
 ### Response body
@@ -324,5 +328,5 @@ Digging further into message frames, stream IDs and how the connection is manage
 ## Conclusion
 
 This guide gives a general overview of the anatomy of HTTP messages from HTTP/1.X to HTTP/2.
-If you've followed the examples and understood the concepts described, you should be able to work with HTTP and understand how applications can use the protocol to send and receive data.
 The HTTP/2 framing mechanism adds a new intermediate layer between the HTTP/1.x syntax and the underlying transport protocol, without fundamentally modifying it, which builds upon proven mechanisms.
+If you've followed the examples and understood the concepts described, you should be able to work with HTTP and understand how applications can use the protocol to send and receive data.
