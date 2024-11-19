@@ -5846,52 +5846,6 @@
     "modified": "2020-07-16T22:25:49.147Z",
     "contributors": ["hbloomer", "Jeremie"]
   },
-  "Learn/HTML": {
-    "modified": "2020-10-13T05:26:50.329Z",
-    "contributors": [
-      "gdsimoes",
-      "chrisdavidmills",
-      "alhyrym05",
-      "murphychen",
-      "SphinxKnight",
-      "www-wanglong",
-      "mikeongor693",
-      "RayPL",
-      "RafeyIqbalRahman",
-      "Sheppy",
-      "stephaniehobson",
-      "asger12345",
-      "TornadoIDS",
-      "hadleyel",
-      "jdescottes",
-      "dcondrey",
-      "jsx",
-      "hui",
-      "Jeremie",
-      "Andrew_Pfeiffer",
-      "fscholz"
-    ]
-  },
-  "Learn/HTML/Multimedia_and_embedding": {
-    "modified": "2020-09-06T18:42:31.145Z",
-    "contributors": [
-      "theRealJennie",
-      "chrisdavidmills",
-      "PatientLearner",
-      "tayyabalishan",
-      "choudh70",
-      "ezrinjaz",
-      "aboagyed",
-      "oyenirat",
-      "tamowicz",
-      "sideshowbarker",
-      "xiaofei86",
-      "david_ross",
-      "Looserof7",
-      "yarochewsky",
-      "richardzacur"
-    ]
-  },
   "Learn_web_development/Core/Accessibility": {
     "modified": "2020-10-04T00:35:19.095Z",
     "contributors": [

@@ -38,7 +38,7 @@ The following is a list of all the topics we cover in the MDN learning area.
 
 - [Getting started with the web](/en-US/docs/Learn_web_development/Getting_started/Your_first_website)
   - : Provides a practical introduction to web development for complete beginners.
-- [HTML — Structuring the web](/en-US/docs/Learn/HTML)
+- [HTML — Structuring the web](/en-US/docs/Learn_web_development/Core/Structuring_content)
   - : HTML is the language that we use to structure the different parts of our content and define what their meaning or purpose is. This topic teaches HTML in detail.
 - [CSS — Styling the web](/en-US/docs/Learn_web_development/Core/Styling_basics)
   - : CSS is the language that we use to control our web content's style and layout, as well as adding behavior like animation. This topic provides comprehensive coverage of CSS.

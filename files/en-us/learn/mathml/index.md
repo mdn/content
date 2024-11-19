@@ -13,10 +13,10 @@ Mathematical Markup Language — or {{glossary("MathML")}} — is the markup lan
 
 ## Prerequisites
 
-Before attempting to learn MathML, it is assumed that you have some basic knowledge of [HTML](/en-US/docs/Learn/HTML) and [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics). Consequently, you are strongly advised to get familiar with at least these two technologies first. Start by working through the following modules:
+Before attempting to learn MathML, it is assumed that you have some basic knowledge of [HTML](/en-US/docs/Learn_web_development/Core/Structuring_content) and [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics). Consequently, you are strongly advised to get familiar with at least these two technologies first. Start by working through the following modules:
 
 - [Getting started with the Web](/en-US/docs/Learn_web_development/Getting_started/Your_first_website)
-- [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML)
+- [Structuring content with HTML](/en-US/docs/Learn_web_development/Core/Structuring_contentIntroduction_to_HTML)
 - [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics)
 
 Some familiarity with mathematical notations and [TeX](https://en.wikipedia.org/wiki/TeX) rendering rules might also come in handy, even though required concepts will be explained as needed.

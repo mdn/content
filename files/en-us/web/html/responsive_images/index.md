@@ -8,31 +8,6 @@ page-type: learn-module-chapter
 
 In this article, we'll learn about the concept of responsive images — images that work well on devices with widely differing screen sizes, resolutions, and other such features — and look at what tools HTML provides to help implement them. This helps to improve performance across different devices. 
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="row">Prerequisites:</th>
-      <td>
-        You should already know the
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">basics of HTML</a>
-        and how to
-        <a href="/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images"
-          >add static images to a web page</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Objective:</th>
-      <td>
-        Learn how to use features like
-         <a href="/en-US/docs/Web/HTML/Element/img#srcset"><code>srcset</code></a> and the
-        {{htmlelement("picture")}} element to implement responsive
-        image solutions on websites.
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## Why responsive images?
 
 Let's examine a typical scenario. A typical website may contain a header image and some content images below the header. The header image will likely span the whole of the width of the header, and the content image will fit somewhere inside the content column. Here's a simple example:

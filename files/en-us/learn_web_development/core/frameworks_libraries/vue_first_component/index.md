@@ -17,7 +17,7 @@ Now it's time to dive deeper into Vue, and create our own custom component — w
       <th scope="row">Prerequisites:</th>
       <td>
         <p>
-          Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
+          Familiarity with the core <a href="/en-US/docs/Learn_web_development/Core/Structuring_content">HTML</a>,
           <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS</a>, and
           <a href="/en-US/docs/Learn_web_development/Core/Scripting">JavaScript</a> languages,
           knowledge of the

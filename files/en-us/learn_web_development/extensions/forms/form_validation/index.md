@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Forms/Form_validation
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data", "Learn_web_development/Extensions/Forms")}}
 
 It is important to ensure all required form controls are filled out, in the correct format, before submitting user entered form data to the server. This **client-side form validation** helps ensure data entered matches the requirements set forth in the various form controls.
 
@@ -16,7 +16,7 @@ This article leads you through basic concepts and examples of client-side form v
       <th scope="row">Prerequisites:</th>
       <td>
         Computer literacy, a reasonable understanding of
-        <a href="/en-US/docs/Learn/HTML">HTML</a>,
+        <a href="/en-US/docs/Learn_web_development/Core/Structuring_content">HTML</a>,
         <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS</a>, and
         <a href="/en-US/docs/Learn_web_development/Core/Scripting">JavaScript</a>.
       </td>
@@ -851,7 +851,7 @@ Always remember to help your users correct the data they provide. To that end, b
 Once you have checked that the form is filled out correctly, the form can be submitted.
 We'll cover [sending form data](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data) next.
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data", "Learn_web_development/Extensions/Forms")}}
 
 ### Advanced Topics
 

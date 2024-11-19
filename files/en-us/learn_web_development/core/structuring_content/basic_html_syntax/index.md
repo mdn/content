@@ -764,4 +764,4 @@ At this point, you should understand what HTML looks like, and how it works at a
 
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)
 
-{{NextMenu("Learn/HTML/Introduction_to_HTML/Webpage_metadata", "Learn/HTML/Introduction_to_HTML/Structuring_content")}}
+{{NextMenu("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content")}}

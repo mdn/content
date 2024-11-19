@@ -328,12 +328,6 @@ For more details, see [Adding captions and subtitles to HTML video](/en-US/docs/
 > [!NOTE]
 > Text tracks and transcriptions also help you with {{glossary("SEO")}}, since search engines especially thrive on text. Text tracks even allow search engines to link directly to a spot partway through the video.
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information?
-
-We've not written a new set of assessments for this article, because there are already assessments available in our [HTML Multimedia and embedding](/en-US/docs/Learn/HTML/Multimedia_and_embedding) module that test your knowledge of the information presented here. If you haven't already, go and try out the assessments at [Test your skills: HTML images](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skills:_HTML_images) and [Test your skills: Multimedia and embedding](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding).
-
 ## Summary
 
 This chapter has provided a summary of accessibility concerns for multimedia content, along with some practical solutions.

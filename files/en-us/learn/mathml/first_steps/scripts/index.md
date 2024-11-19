@@ -21,8 +21,8 @@ We continue the review of basic math notations and focus on building MathML elem
           href="/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >working with files</a
         >, and HTML basics (study
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
-          >Introduction to HTML</a
+        <a href="/en-US/docs/Learn_web_development/Core/Structuring_content"
+          >Structuring content with HTML</a
         >.)
       </td>
     </tr>

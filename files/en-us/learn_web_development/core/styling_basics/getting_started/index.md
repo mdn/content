@@ -17,7 +17,7 @@ In this article, we will take a simple HTML document and apply CSS to it, learni
       <td>
         <a href="/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software">Basic software installed</a>, basic knowledge of
         <a href="/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files">working with files</a>, and HTML basics (study
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>.)
+        <a href="/en-US/docs/Learn_web_development/Core/Structuring_content">Introduction to HTML</a>.)
       </td>
     </tr>
     <tr>

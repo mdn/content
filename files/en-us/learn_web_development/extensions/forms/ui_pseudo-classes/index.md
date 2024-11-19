@@ -14,7 +14,7 @@ In the previous articles, we covered the styling of various form controls in a g
       <th scope="row">Prerequisites:</th>
       <td>
         A basic understanding of
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">HTML</a> and
+        <a href="/en-US/docs/Learn_web_development/Core/Structuring_content">HTML</a> and
         <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS</a>, including general
         knowledge of
         <a

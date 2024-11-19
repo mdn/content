@@ -16,7 +16,7 @@ In the last article we completed the development of our app, finished organizing
       <td>
         <p>
           At minimum, it is recommended that you are familiar with the core
-          <a href="/en-US/docs/Learn/HTML">HTML</a>,
+          <a href="/en-US/docs/Learn_web_development/Core/Structuring_content">HTML</a>,
           <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS</a>, and
           <a href="/en-US/docs/Learn_web_development/Core/Scripting">JavaScript</a> languages, and
           have knowledge of the

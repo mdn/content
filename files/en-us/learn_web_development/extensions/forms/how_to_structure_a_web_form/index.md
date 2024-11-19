@@ -13,7 +13,7 @@ With the basics out of the way, we'll now look in more detail at the elements us
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        A basic <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">understanding of HTML</a>.
+        A basic <a href="/en-US/docs/Learn_web_development/Core/Structuring_content">understanding of HTML</a>.
       </td>
     </tr>
     <tr>
@@ -25,7 +25,7 @@ With the basics out of the way, we'll now look in more detail at the elements us
   </tbody>
 </table>
 
-The flexibility of forms makes them one of the most complex structures in [HTML](/en-US/docs/Learn/HTML); you can build any kind of basic form using dedicated form elements and attributes. Using the correct structure when building an HTML form will help ensure that the form is both usable and [accessible](/en-US/docs/Learn_web_development/Core/Accessibility).
+The flexibility of forms makes them one of the most complex structures in [HTML](/en-US/docs/Learn_web_development/Core/Structuring_content); you can build any kind of basic form using dedicated form elements and attributes. Using the correct structure when building an HTML form will help ensure that the form is both usable and [accessible](/en-US/docs/Learn_web_development/Core/Accessibility).
 
 ## The \<form> element
 

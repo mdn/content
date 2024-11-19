@@ -3886,7 +3886,7 @@
 /en-US/docs/HTML/Global_attributes	/en-US/docs/Web/HTML/Global_attributes
 /en-US/docs/HTML/HTML5/Constraint_validation	/en-US/docs/Web/HTML/Constraint_validation
 /en-US/docs/HTML/HTML5/Forms_in_HTML5	/en-US/docs/Learn_web_development/Extensions/Forms
-/en-US/docs/HTML/HTML5/HTML5_Parser	/en-US/docs/Learn/HTML
+/en-US/docs/HTML/HTML5/HTML5_Parser	/en-US/docs/Learn_web_development/Core/Structuring_content
 /en-US/docs/HTML/HTML5/HTML5_Tags_List	/en-US/docs/Web/HTML/Element
 /en-US/docs/HTML/HTML5/HTML5_element_list	/en-US/docs/Web/HTML/Element
 /en-US/docs/HTML/HTML5/Optimizing_Your_Pages_for_Speculative_Parsing	/en-US/docs/Glossary/speculative_parsing
@@ -3905,7 +3905,7 @@
 /en-US/docs/HTML/Inline_elements	/en-US/docs/Glossary/Inline-level_content
 /en-US/docs/HTML/Intro	/en-US/docs/Learn_web_development/Core/Structuring_content
 /en-US/docs/HTML/Introduction	/en-US/docs/Learn_web_development/Core/Structuring_content
-/en-US/docs/HTML/Introduction_to_HTML5	/en-US/docs/Learn/HTML
+/en-US/docs/HTML/Introduction_to_HTML5	/en-US/docs/Learn_web_development/Core/Structuring_content
 /en-US/docs/HTML/Link_types	/en-US/docs/Web/HTML/Attributes/rel
 /en-US/docs/HTML/Manipulating_video_using_canvas	/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas
 /en-US/docs/HTML/Optimizing_Your_Pages_for_Speculative_Parsing	/en-US/docs/Glossary/speculative_parsing
@@ -5401,6 +5401,7 @@
 /en-US/docs/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like	/en-US/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like
 /en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like	/en-US/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like
 /en-US/docs/Learn/GitHub	/en-US/docs/Learn_web_development/Core/Version_control
+/en-US/docs/Learn/HTML	/en-US/docs/Learn_web_development/Core/Structuring_content
 /en-US/docs/Learn/HTML/Cheatsheet	/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Cheatsheet
 /en-US/docs/Learn/HTML/Element	/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems
 /en-US/docs/Learn/HTML/Element/abbr	/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#Abbreviations
@@ -5469,6 +5470,7 @@
 /en-US/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Links	/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_Links
 /en-US/docs/Learn/HTML/Introduction_to_HTML/The_HTML_head	/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata
 /en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML	/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata
+/en-US/docs/Learn/HTML/Multimedia_and_embedding	/en-US/docs/Learn_web_development/Core/Structuring_content
 /en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web	/en-US/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML
 /en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML	/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images
 /en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images	/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skills:_HTML_images
@@ -12500,7 +12502,7 @@
 /en-US/docs/Web/Guide/File_System_API/Introduction	/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction
 /en-US/docs/Web/Guide/Graphics	/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images
 /en-US/docs/Web/Guide/Graphics/Drawing_graphics_with_canvas	/en-US/docs/Web/API/Canvas_API/Tutorial
-/en-US/docs/Web/Guide/HTML	/en-US/docs/Learn/HTML
+/en-US/docs/Web/Guide/HTML	/en-US/docs/Learn_web_development/Core/Structuring_content
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial	/en-US/docs/Web/API/Canvas_API/Tutorial
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial/Applying_styles_and_colors	/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 /en-US/docs/Web/Guide/HTML/Canvas_tutorial/Basic_animations	/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations
@@ -12543,10 +12545,10 @@
 /en-US/docs/Web/Guide/HTML/HTML5	/en-US/docs/Glossary/HTML5
 /en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation	/en-US/docs/Web/HTML/Constraint_validation
 /en-US/docs/Web/Guide/HTML/HTML5/Forms_in_HTML5	/en-US/docs/Learn_web_development/Extensions/Forms
-/en-US/docs/Web/Guide/HTML/HTML5/HTML5_Parser	/en-US/docs/Learn/HTML
+/en-US/docs/Web/Guide/HTML/HTML5/HTML5_Parser	/en-US/docs/Learn_web_development/Core/Structuring_content
 /en-US/docs/Web/Guide/HTML/HTML5/HTML5_Tags_List	/en-US/docs/Web/HTML/Element
 /en-US/docs/Web/Guide/HTML/HTML5/HTML5_element_list	/en-US/docs/Web/HTML/Element
-/en-US/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5	/en-US/docs/Learn/HTML
+/en-US/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5	/en-US/docs/Learn_web_development/Core/Structuring_content
 /en-US/docs/Web/Guide/HTML/HTML5/Optimizing_Your_Pages_for_Speculative_Parsing	/en-US/docs/Glossary/speculative_parsing
 /en-US/docs/Web/Guide/HTML/Hyperlink	/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links
 /en-US/docs/Web/Guide/HTML/Inline_event_handler	/en-US/docs/Learn_web_development/Core/Scripting/Events#Inline_event_handlers_—_don't_use_these

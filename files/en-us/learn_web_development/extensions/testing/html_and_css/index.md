@@ -15,7 +15,7 @@ With the scene set, we'll now look specifically at the common cross-browser prob
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
+        Familiarity with the core <a href="/en-US/docs/Learn_web_development/Core/Structuring_content">HTML</a>,
         <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS</a>, and
         <a href="/en-US/docs/Learn_web_development/Core/Scripting">JavaScript</a> languages; an idea
         of the high level

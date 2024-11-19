@@ -21,7 +21,7 @@ Now that you get a better idea of MathML, we move focus on text containers (vari
           href="/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >working with files</a
         >, HTML basics (study
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/en-US/docs/Learn_web_development/Core/Structuring_content"
           >Introduction to HTML</a
         >) and some CSS notions on text styling (read <a href="/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals">fundamental text and font styling</a> and
           <a href="/en-US/docs/Learn_web_development/Core/Text_styling/Web_fonts">web fonts</a>).

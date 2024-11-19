@@ -12,7 +12,7 @@ There are a number of guides within MDN docs. These articles aim to add addition
 
 ## HTML
 
-- [Structuring the web with HTML](/en-US/docs/Learn/HTML)
+- [Structuring the web with HTML](/en-US/docs/Learn_web_development/Core/Structuring_content)
   - : The HTML learning area offers tutorials to help you learn HTML from the ground up.
 - [HTML basics](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)
   - : This article will give you a basic understanding of HTML. After following this guide, you can further explore the material in the HTML Learning Area.

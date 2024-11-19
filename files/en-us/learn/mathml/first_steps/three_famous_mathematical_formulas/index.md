@@ -14,7 +14,7 @@ page-type: learn-module-assessment
         Before attempting this assessment you should have already worked through
         all the articles in this module, and also have an understanding of HTML
         basics (study
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/en-US/docs/Learn_web_development/Core/Structuring_content"
           >Introduction to HTML</a
         >).
       </td>

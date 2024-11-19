@@ -15,7 +15,7 @@ We'll expand on each of these subtopics in more detail later on in the module.
       <th scope="row">Prerequisites:</th>
       <td>
         A basic
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/en-US/docs/Learn_web_development/Core/Structuring_content"
           >understanding of HTML</a
         >.
       </td>

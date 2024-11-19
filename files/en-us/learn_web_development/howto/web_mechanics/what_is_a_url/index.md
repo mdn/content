@@ -103,7 +103,7 @@ Next follows the _authority_, which is separated from the scheme by the characte
 
 Any URL can be typed right inside the browser's address bar to get to the resource behind it. But this is only the tip of the iceberg!
 
-The {{Glossary("HTML")}} language — [which will be discussed later on](/en-US/docs/Learn/HTML/Introduction_to_HTML) — makes extensive use of URLs:
+The {{Glossary("HTML")}} language (see [Structuring content with HTML](/en-US/docs/Learn_web_development/Core/Structuring_content)) makes extensive use of URLs:
 
 - to create links to other documents with the {{HTMLElement("a")}} element;
 - to link a document with its related resources through various elements such as {{HTMLElement("link")}} or {{HTMLElement("script")}};

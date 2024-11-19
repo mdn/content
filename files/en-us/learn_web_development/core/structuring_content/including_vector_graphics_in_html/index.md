@@ -14,7 +14,7 @@ Vector graphics are very useful in many circumstances — they have small file s
       <th scope="row">Prerequisites:</th>
       <td>
         You should know the
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">basics of HTML</a>
+        <a href="/en-US/docs/Learn_web_development/Core/Structuring_content">basics of HTML</a>
         and how to
         <a href="/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images"
           >insert an image into your document</a

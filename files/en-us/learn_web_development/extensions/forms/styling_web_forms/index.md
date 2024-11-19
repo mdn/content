@@ -14,7 +14,7 @@ In the previous few articles, we showed how to create web forms in HTML. Now, we
       <th scope="row">Prerequisites:</th>
       <td>
         A basic understanding of
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">HTML</a> and
+        <a href="/en-US/docs/Learn_web_development/Core/Structuring_content">HTML</a> and
         <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS Styling basics</a>.
       </td>
     </tr>

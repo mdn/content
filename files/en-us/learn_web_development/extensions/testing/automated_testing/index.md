@@ -13,7 +13,7 @@ Manually running tests on several browsers and devices, several times per day, c
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS</a>, and <a href="/en-US/docs/Learn_web_development/Core/Scripting">JavaScript</a> languages;
+        Familiarity with the core <a href="/en-US/docs/Learn_web_development/Core/Structuring_content">HTML</a>, <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS</a>, and <a href="/en-US/docs/Learn_web_development/Core/Scripting">JavaScript</a> languages;
         an idea of the high level <a href="/en-US/docs/Learn_web_development/Extensions/Testing/Introduction">principles of cross-browser testing</a>.
       </td>
     </tr>

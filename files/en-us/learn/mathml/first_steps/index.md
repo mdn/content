@@ -14,7 +14,7 @@ Before starting this module, you should have:
 
 1. Basic familiarity with using computers and using the Web passively (i.e. looking at it, consuming the content.)
 2. A basic work environment set up, as detailed in [Installing basic software](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software), and an understanding of how to create and manage files, as detailed in [Dealing with files](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files).
-3. Basic familiarity with HTML, as described in [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML).
+3. Basic familiarity with HTML, as described in [Structuring content with HTML](/en-US/docs/Learn_web_development/Core/Structuring_content).
 
 > [!NOTE]
 > If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).

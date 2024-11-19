@@ -14,7 +14,7 @@ Once the form data has been validated on the client-side, it is okay to submit t
       <th scope="row">Prerequisites:</th>
       <td>
         An
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/en-US/docs/Learn_web_development/Core/Structuring_content"
           >understanding of HTML</a
         >, and basic knowledge of
         <a href="/en-US/docs/Web/HTTP">HTTP</a> and

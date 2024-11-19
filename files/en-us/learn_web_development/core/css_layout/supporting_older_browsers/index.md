@@ -17,7 +17,7 @@ Visitors to your website may include users who either use older browsers or use 
       <th scope="row">Prerequisites:</th>
       <td>
         HTML basics (study
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/en-US/docs/Learn_web_development/Core/Structuring_content"
           >Introduction to HTML</a
         >), and an idea of how CSS works (study
         <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS Styling basics</a> and
