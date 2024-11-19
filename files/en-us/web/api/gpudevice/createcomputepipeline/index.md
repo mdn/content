@@ -52,9 +52,11 @@ createComputePipeline(descriptor)
             ```
 
         - `entryPoint` {{optional_inline}}
+
           - : The name of the function in the `module` that this stage will use to perform its work. The corresponding shader function must have the `@compute` attribute to be identified as this entry point. See [Entry Point Declaration](https://gpuweb.github.io/gpuweb/wgsl/#entry-point-decl) for more information.
-            > [!NOTE]
-            > You can omit the `entryPoint` property if your shader code contains a single compute shader entry point function — the browser will use this as the default entry point. If `entryPoint` is omitted and the browser cannot determine a default entry point, a {{domxref("GPUValidationError")}} is generated and the resulting {{domxref("GPUComputePipeline")}} will be invalid.
+
+            You can omit the `entryPoint` property if your shader code contains a single function with the `@compute` attribute set — the browser will use this as the default entry point. If `entryPoint` is omitted and the browser cannot determine a default entry point, a {{domxref("GPUValidationError")}} is generated and the resulting {{domxref("GPUComputePipeline")}} will be invalid.
+
         - `module`
           - : A {{domxref("GPUShaderModule")}} object containing the [WGSL](https://gpuweb.github.io/gpuweb/wgsl/) code that this programmable stage will execute.
 
