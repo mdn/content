@@ -11,7 +11,7 @@ page-type: glossary-definition
 INP was designed by Google as one of the [Core Web Vital](https://web.dev/articles/vitals) metrics, replacing {{Glossary("First Input Delay")}} (FID) in May 2024. There are two key differences between FID and INP that make INP a more reliable measure of a page's responsiveness:
 
 - FID measures only the first interaction, whereas INP considers all interactions.
-- FID only measure the input delay of the interaction, while INP measures for longer until the first paint after the interaction processing starts.
+- FID only measures the input delay of the interaction, whereas INP measures for a longer period until the first paint after the interaction processing starts.
 
 INP measures the worst length of time (minus some outliers), in milliseconds, between the user interaction on a web page and the next frame presentation after that interaction is processed. Scrolling and zooming are not included in this metric. INP is calculated using the [Event Timing API](/en-US/docs/Web/API/PerformanceEventTiming). Asynchronous operations such as network fetches or file reads usually do not delay INP as painting can occur while such operations are handled.
 
