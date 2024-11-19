@@ -54181,10 +54181,6 @@
     "modified": "2020-10-15T22:17:13.721Z",
     "contributors": ["Sheppy"]
   },
-  "Web/API/RTCInboundRtpStreamStats/pliCount": {
-    "modified": "2020-10-15T22:17:12.837Z",
-    "contributors": ["Sheppy"]
-  },
   "Web/API/RTCInboundRtpStreamStats/qpSum": {
     "modified": "2020-10-15T22:17:11.627Z",
     "contributors": ["Sheppy"]
@@ -54223,10 +54219,6 @@
   },
   "Web/API/RTCOutboundRtpStreamStats/perDscpPacketsSent": {
     "modified": "2020-10-15T22:17:15.897Z",
-    "contributors": ["Sheppy"]
-  },
-  "Web/API/RTCOutboundRtpStreamStats/pliCount": {
-    "modified": "2020-10-15T22:17:15.902Z",
     "contributors": ["Sheppy"]
   },
   "Web/API/RTCOutboundRtpStreamStats/qpSum": {
@@ -54826,10 +54818,6 @@
   "Web/API/RTCRtpStreamStats/kind": {
     "modified": "2020-10-15T22:08:45.154Z",
     "contributors": ["Sheppy"]
-  },
-  "Web/API/RTCRtpStreamStats/pliCount": {
-    "modified": "2020-10-15T22:08:57.878Z",
-    "contributors": ["sideshowbarker", "Sheppy"]
   },
   "Web/API/RTCRtpStreamStats/qpSum": {
     "modified": "2020-10-15T22:09:08.932Z",

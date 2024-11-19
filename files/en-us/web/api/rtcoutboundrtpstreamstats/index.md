@@ -23,8 +23,6 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : An integer value indicating the total number of Negative ACKnowledgement (NACK) packets this `RTCRtpSender` has received from the remote {{domxref("RTCRtpReceiver")}}.
 - {{domxref("RTCOutboundRtpStreamStats.perDscpPacketsSent", "perDscpPacketsSent")}}
   - : A record of key-value pairs with strings as the keys mapped to 32-bit integer values, each indicating the total number of packets this `RTCRtpSender` has transmitted for this source for each Differentiated Services Code Point (DSCP).
-- {{domxref("RTCOutboundRtpStreamStats.pliCount", "pliCount")}}
-  - : An integer specifying the number of times the remote receiver has notified this `RTCRtpSender` that some amount of encoded video data for one or more frames has been lost, using Picture Loss Indication (PLI) packets. _Only available for video streams._
 - {{domxref("RTCOutboundRtpStreamStats.qpSum", "qpSum")}}
   - : A 64-bit value containing the sum of the QP values for every frame encoded by this {{domxref("RTCRtpSender")}}. _Valid only for video streams._
 - {{domxref("RTCOutboundRtpStreamStats.qualityLimitationDurations", "qualityLimitationDurations")}} {{experimental_inline}}

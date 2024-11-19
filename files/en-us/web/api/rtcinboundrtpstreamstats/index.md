@@ -34,8 +34,6 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : An integer totaling the number of RTP packets that could not be decrypted. These packets are not counted by {{domxref("RTCInboundRtpStreamStats.packetsDiscarded", "packetsDiscarded")}}.
 - {{domxref("RTCInboundRtpStreamStats.perDscpPacketsReceived", "perDscpPacketsReceived")}}
   - : A record of key-value pairs with strings as the keys mapped to 32-bit integer values, each indicating the total number of packets this receiver has received on this RTP stream from this source for each Differentiated Services Code Point (DSCP).
-- {{domxref("RTCInboundRtpStreamStats.pliCount", "pliCount")}}
-  - : An integer specifying the number of times the receiver has notified the sender that some amount of encoded video data for one or more frames has been lost, using Picture Loss Indication (PLI) packets. This is only available for video streams.
 - {{domxref("RTCInboundRtpStreamStats.qpSum", "qpSum")}}
   - : A 64-bit value containing the sum of the QP values for every frame decoded by this RTP receiver. You can determine the average QP per frame by dividing this value by {{domxref("RTCInboundRtpStreamStats.framesDecoded", "framesDecoded")}}. _Valid only for video streams._
 - {{domxref("RTCInboundRtpStreamStats.receiverId", "receiverId")}}
@@ -84,12 +82,8 @@ These statistics are measured at the receiving end of an RTP stream, regardless 
 These properties are computed locally, and are only available to the device receiving the media stream.
 Their primary purpose is to examine the error resiliency of the connection, as they provide information about lost packets, lost frames, and how heavily compressed the data is.
 
-- {{domxref("RTCInboundRtpStreamStats.firCount", "firCount")}}
-  - : A count of the total number of Full Intra Request (FIR) packets received by the sender. This statistic is only available to the device which is receiving the stream and is only available for video tracks. A FIR packet is sent by the receiving end of the stream when it falls behind or has lost packets and is unable to continue decoding the stream; the sending end of the stream receives the FIR packet and responds by sending a full frame instead of a delta frame, thereby letting the receiver "catch up." The higher this number is, the more often a problem of this nature arose, which can be a sign of network congestion or an overburdened receiving device.
 - {{domxref("RTCInboundRtpStreamStats.nackCount", "nackCount")}}
   - : The number of times the receiver notified the sender that one or more RTP packets has been lost by sending a Negative ACKnowledgement (NACK, also called "Generic NACK") packet to the sender. This value is only available to the receiver.
-- {{domxref("RTCInboundRtpStreamStats.pliCount", "pliCount")}}
-  - : The number of times the receiving end of the stream sent a Picture Loss Indication (PLI) packet to the sender, indicating that it has lost some amount of encoded video data for one or more frames. Only the receiver has this value, and it's only valid for video tracks.
 - {{domxref("RTCInboundRtpStreamStats.qpSum", "qpSum")}}
   - : The sum of the Quantization Parameter (QP) values associated with every frame received to date on the video track described by this statistics object.
     In general, the higher this number is, the more heavily compressed the video track was. Combined with {{domxref("RTCReceivedRtpStreamStats.framesDecoded")}} or {{domxref("RTCInboundRtpStreamStats.framesEncoded")}}, you can approximate the average QP over those frames, keeping in mind that codecs often vary the quantizer values even within frames. Also keep in mind that the values of QP can vary from codec to codec, so this value is only potentially useful when compared against the same codec.
