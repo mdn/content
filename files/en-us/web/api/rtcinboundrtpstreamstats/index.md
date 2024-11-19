@@ -66,9 +66,7 @@ These statistics are measured at the receiving end of an RTP stream, regardless 
 - {{domxref("RTCInboundRtpStreamStats.codecId", "codecId")}}
   - : A string which uniquely identifies the object which was inspected to produce the {{domxref("RTCCodecStats")}} object associated with this {{Glossary("RTP")}} stream.
 - {{domxref("RTCInboundRtpStreamStats.kind", "kind")}}
-  - : A string whose value is `"audio"` if the associated {{domxref("MediaStreamTrack")}} is audio-only or `"video"` if the track contains video.
-    This value will match that of the media type indicated by {{domxref("RTCCodecStats.codec")}}, as well as the track's {{domxref("MediaStreamTrack.kind", "kind")}} property.
-    Previously called `mediaType`.
+  - : A string indicating whether the {{domxref("MediaStreamTrack")}} associated with the stream is an audio or a video track.
 - {{domxref("RTCInboundRtpStreamStats.ssrc", "ssrc")}}
   - : The 32-bit integer which identifies the source of the RTP packets this object provides.
     This value is generated per the {{RFC(3550)}} specification.
