@@ -92,7 +92,16 @@ The resource layout object can be one of the following (see also {{domxref("GPUD
 - `storageTexture`: Indicates that the corresponding {{domxref("GPUBindGroup")}} entry will be a {{domxref("GPUTextureView")}} object. A `storageTexture` resource layout object can contain the following properties:
 
   - `access` {{optional_inline}}
-    - : An enumerated value specifying whether texture views bound to this binding will be bound for read and/or write access. Possible values are currently `"write-only"` and `undefined`, with the intention to add more access modes in the future. If omitted, the default value is `"write-only"`.
+
+    - : An enumerated value specifying whether texture views bound to this binding will be bound for read and/or write access. Possible values are:
+
+      - `"read-only"`: Enables WSGL code to read storage textures.
+      - `"read-write"`: Enables WSGL code to read and write to storage textures.
+      - `"write-only"`: The default value; Enables WSGL code to write to storage textures.
+      - `undefined`: Indicates that the entry is not a `storageTexture` type.
+
+        The `"read-only"` and `"read-write"` values can only be used if the [`"readonly_and_readwrite_storage_textures"`](/en-US/docs/Web/API/WGSLLanguageFeatures#readonly_and_readwrite_storage_textures) WGSL language extension is present in {{domxref("WGSLLanguageFeatures")}}.
+
   - `format`
     - : An enumerated value specifying the required format of texture views bound to this binding. See the specification's [Texture Formats](https://gpuweb.github.io/gpuweb/#enumdef-gputextureformat) section for all the available `format` values.
   - `viewDimension` {{optional_inline}}
