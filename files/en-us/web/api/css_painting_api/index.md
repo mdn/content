@@ -32,7 +32,7 @@ The API defines a {{domxref('worklet')}} that can be used to programmatically ge
 - {{domxref('PaintRenderingContext2D')}}
   - : Implements a subset of the [`CanvasRenderingContext2D`](/en-US/docs/Web/API/CanvasRenderingContext2D) API. It has an output bitmap that is the size of the object it is rendering to.
 - {{domxref('PaintSize')}}
-  - : Returns the read-only values of the output bitmap's width and height.
+  - : Represents the size of the output bitmap that the author should draw.
 
 ## Examples
 
