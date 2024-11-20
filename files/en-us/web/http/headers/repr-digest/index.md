@@ -8,12 +8,14 @@ spec-urls: https://datatracker.ietf.org/doc/html/rfc9530
 {{HTTPSidebar}}
 
 The HTTP **`Repr-Digest`** {{Glossary("Request header", "request")}} and {{Glossary("Response header", "response header")}} provides a {{Glossary("digest")}} of the selected representation of the target resource.
+A `Repr-Digest` is most suited to validate the integrity of partial or multipart messages against the full selected representation.
+For example, in [range requests](/en-US/docs/Web/HTTP/Range_requests), a `Repr-Digest` will always have the same value if only the requested byte ranges differ, whereas the {{HTTPHeader("Content-Digest")}} will be different for each range or part.
 
 The _selected representation_ is the specific format of a resource chosen through [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation).
 Details about this representation can be determined from the response's {{Glossary("Representation header", "representation headers")}}, such as {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Type")}}, and {{HTTPHeader("Content-Encoding")}}.
 
-The representation digest applies to the whole resource rather than the encoding or chunking of the messages that are used to send it.
-This differs from {{HTTPHeader("Content-Digest")}} which applies to the content of a particular message, and is therefore is affected by the {{HTTPHeader("Content-Encoding")}} and {{HTTPHeader("Content-Range")}} of each message.
+The representation digest applies to the whole representation rather than the encoding or chunking of the messages that are used to send it.
+A {{HTTPHeader("Content-Digest")}} applies to the content of a specific message, and will have different values based on the {{HTTPHeader("Content-Encoding")}} and {{HTTPHeader("Content-Range")}} of each message.
 
 <table class="properties">
   <tbody>

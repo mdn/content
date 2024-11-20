@@ -8,12 +8,14 @@ spec-urls: https://datatracker.ietf.org/doc/html/rfc9530#section-2
 {{HTTPSidebar}}
 
 The HTTP **`Content-Digest`** {{Glossary("request header", "request")}} and {{Glossary("response header")}} provides a {{Glossary("digest")}} calculated using a hashing algorithm applied to the message content.
+A recipient can use the `Content-Digest` to validate the HTTP message content for integrity purposes.
 
-A client can request that a server emit a `Content-Digest` by issuing {{HTTPHeader("Want-Content-Digest")}}.
-The `Content-Digest` value will be different based on {{HTTPHeader("Content-Encoding")}} and {{HTTPHeader("Content-Range")}}, but {{HTTPHeader("Transfer-Encoding")}} has no influence on the digest.
+The {{HTTPHeader("Want-Content-Digest")}} field lets a sender request a `Content-Digest` along with their hashing algorithm preferences.
+A content digest will differ based on {{HTTPHeader("Content-Encoding")}} and {{HTTPHeader("Content-Range")}}, but not {{HTTPHeader("Transfer-Encoding")}}.
 
-A `Content-Digest` may be identical to a {{HTTPHeader("Repr-Digest")}} when a representation is sent in a single message (not a partial or multipart message).
-In this context, the _content_ refers to a particular octet sequence of a selected representation of the target resource.
+In certain cases, a {{HTTPHeader("Repr-Digest")}} can be used to validate the integrity of partial or multipart messages against the full representation.
+For example, in [range requests](/en-US/docs/Web/HTTP/Range_requests), a `Repr-Digest` will always have the same value if only the requested byte ranges differ, whereas the content digest will be different.
+For this reason, a `Content-Digest` is identical to a {{HTTPHeader("Repr-Digest")}} when a representation is sent in a single message.
 
 <table class="properties">
   <tbody>
@@ -56,10 +58,64 @@ As such, two separate headers were specified (`Content-Digest` and `Repr-Digest`
 
 ## Examples
 
-```plain
-Content-Digest: sha-256=:W8oN3H3CmE/CBpV6ZPNozV2AIDzzQpWL7CCOXyDyDzI=:
-Content-Digest: unixcksum=916142062
-Content-Digest: md5=:+thA//8pGVGk2VYuJkFNvA==:, unixsum=26869
+### Client requests a SHA-256 Content-Digest
+
+In the following request, a client requests a SHA-256 digest of the message content:
+
+```http
+GET /items/123 HTTP/1.1
+Host: example.com
+Want-Content-Digest: sha-256=10, sha=3
+```
+
+The server responds with a `Content-Digest` of the message content:
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Digest: sha-256=:RK/0qy18MlBSVnWgjwz6lZEWjP/lF5HF9bvEF8FabDg=:
+
+{"hello": "world"}
+```
+
+### Identical Content-Digest and Repr-Digest values
+
+A client requests a resource without a `Want-Content-Digest` field:
+
+```http
+GET /items/123 HTTP/1.1
+Host: example.com
+```
+
+In this case, the server is configured to send unsolicited digest headers in responses.
+Both the `Repr-Digest` and `Content-Digest` fields have matching values:
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 19
+Content-Digest: sha-256=:RK/0qy18MlBSVnWgjwz6lZEWjP/lF5HF9bvEF8FabDg=:
+Repr-Digest: sha-256=:RK/0qy18MlBSVnWgjwz6lZEWjP/lF5HF9bvEF8FabDg=:
+
+{"hello": "world"}
+```
+
+### Diverging Content-Digest and Repr-Digest values
+
+If the same request is repeated as the previous example, but uses a {{HTTPMethod("HEAD")}} method instead of a {{HTTPMethod("GET")}}, the `Repr-Digest` and `Content-Digest` fields will be different:
+
+```http
+GET /items/123 HTTP/1.1
+Host: example.com
+```
+
+The `Repr-Digest` value will be the same as before, but there is no message body, so a different `Content-Digest` would be sent by the server:
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Digest: sha-256=:47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=:
+Repr-Digest: sha-256=:RK/0qy18MlBSVnWgjwz6lZEWjP/lF5HF9bvEF8FabDg=:
 ```
 
 ## Specifications
@@ -76,3 +132,4 @@ Developers can set and get HTTP headers using `fetch()` in order to provide appl
 - {{HTTPHeader("Want-Content-Digest")}} header to request a content digest
 - {{HTTPHeader("Repr-Digest")}}, {{HTTPHeader("Want-Repr-Digest")}} representation digest headers
 - {{HTTPHeader("ETag")}}
+- {{RFC("8792")}}
