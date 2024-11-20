@@ -7,7 +7,11 @@ browser-compat: webextensions.api.cookies.getAll
 
 {{AddonSidebar}}
 
-The **`getAll()`** method of the {{WebExtAPIRef("cookies")}} API retrieves all cookies from a cookie store that matches the details provided.
+The **`getAll()`** method of the {{WebExtAPIRef("cookies")}} API retrieves all cookies from a cookie store that match the details provided.
+
+To use this method, an extension must have the `"cookies"` permission and relevant host permissions. See [`cookie` permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#permissions) for more details.
+
+This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntax
 
