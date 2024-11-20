@@ -14,14 +14,13 @@ The **`formatToParts()`** method of {{jsxref("Intl.NumberFormat")}} instances al
 ## Syntax
 
 ```js-nolint
-formatToParts()
 formatToParts(number)
 ```
 
 ### Parameters
 
-- `number` {{optional_inline}}
-  - : A {{jsxref("Number")}} or {{jsxref("BigInt")}} to format.
+- `number`
+  - : A {{jsxref("Number")}}, {{jsxref("BigInt")}}, or string, to format. Strings are parsed in the same way as in [number conversion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), except that `formatToParts()` will use the exact value that the string represents, avoiding loss of precision during implicitly conversion to a number.
 
 ### Return value
 

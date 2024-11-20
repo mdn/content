@@ -292,6 +292,8 @@ blockquote p::after {
 
 - [Basic concepts of multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)
   - : An overview of the Multiple-column Layout specification
+- [Using multi-column layouts](/en-us/web/css/css_multicol_layout/using_multicol_layouts)
+  - : Guide to using multi-column properties to layout out text.
 - [Styling columns](/en-US/docs/Web/CSS/CSS_multicol_layout/Styling_columns)
   - : How to use column rules and manage the spacing between columns.
 - [Spanning and balancing](/en-US/docs/Web/CSS/CSS_multicol_layout/Spanning_balancing_columns)
