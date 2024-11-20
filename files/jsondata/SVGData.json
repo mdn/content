@@ -1366,7 +1366,12 @@
       "categories": ["gradientElement"],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;script&gt;", "&lt;set&gt;", "&lt;style&gt;"]
+        "elements": [
+          "&lt;animate&gt;",
+          "&lt;script&gt;",
+          "&lt;set&gt;",
+          "&lt;style&gt;"
+        ]
       },
       "attributes": [
         "coreAttributes",
