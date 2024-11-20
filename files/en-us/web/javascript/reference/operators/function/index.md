@@ -74,7 +74,7 @@ If you want to refer to the current function inside the function body, you need 
 
 ```js
 const math = {
-  factit: function factorial(n) {
+  factorial: function factorial(n) {
     console.log(n);
     if (n <= 1) {
       return 1;
@@ -83,7 +83,7 @@ const math = {
   },
 };
 
-math.factit(3); //3;2;1;
+math.factorial(3); //3;2;1;
 ```
 
 If a function expression is named, the [`name`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name) property of the function is set to that name, instead of the implicit name inferred from syntax (such as the variable the function is assigned to).
@@ -91,6 +91,8 @@ If a function expression is named, the [`name`](/en-US/docs/Web/JavaScript/Refer
 Unlike declarations, the name of the function expressions is read-only.
 
 ```js
+"use strict";
+
 function foo() {
   foo = 1;
 }

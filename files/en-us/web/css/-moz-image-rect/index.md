@@ -15,12 +15,12 @@ The **`-moz-image-rect`** value for [CSS](/en-US/docs/Web/CSS) {{CSSxRef("backgr
 ## Syntax
 
 ```css
--moz-image-rect({{CSSxRef("url", "url()")}}, top, right, bottom, left);
+-moz-image-rect(url("my-url"), top, right, bottom, left);
 ```
 
 ### Values
 
-- {{CSSxRef("url", "url()")}}
+- {{CSSxRef("url_value", "&lt;url&gt;")}}
   - : The URI of the image from which to take the sub-image.
 - `top`
   - : The top edge, specified as an {{CSSxRef("&lt;integer&gt;")}} or {{CSSxRef("&lt;percentage&gt;")}}, of the sub-image within the specified image.
@@ -105,7 +105,7 @@ The other corners follow a similar pattern:
 
 ### HTML
 
-The HTML is quite simple:
+We include a container with four boxes:
 
 ```html
 <div id="container" onclick="rotate()">

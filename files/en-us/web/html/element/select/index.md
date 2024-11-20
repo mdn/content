@@ -13,7 +13,7 @@ The **`<select>`** [HTML](/en-US/docs/Web/HTML) element represents a control tha
 
 The above example shows typical `<select>` usage. It is given an `id` attribute to enable it to be associated with a {{htmlelement("label")}} for accessibility purposes, as well as a `name` attribute to represent the name of the associated data point submitted to the server. Each menu option is defined by an {{htmlelement("option")}} element nested inside the `<select>`.
 
-Each `<option>` element should have a [`value`](/en-US/docs/Web/HTML/Element/option#value) attribute containing the data value to submit to the server when that option is selected. If no `value` attribute is included, the value defaults to the text contained inside the element. You can include a [`selected`](/en-US/docs/Web/HTML/Element/option#selected) attribute on an `<option>` element to make it selected by default when the page first loads.
+Each `<option>` element should have a [`value`](/en-US/docs/Web/HTML/Element/option#value) attribute containing the data value to submit to the server when that option is selected. If no `value` attribute is included, the value defaults to the text contained inside the element. You can include a [`selected`](/en-US/docs/Web/HTML/Element/option#selected) attribute on an `<option>` element to make it selected by default when the page first loads. If no `selected` attribute is specified, the first `<option>` element will be selected by default.
 
 A `<select>` element is represented in JavaScript by an {{domxref("HTMLSelectElement")}} object, and this object has a {{domxref("HTMLSelectElement.value", "value")}} property which contains the value of the selected `<option>`.
 
@@ -67,63 +67,15 @@ Mouse users can hold the <kbd>Ctrl</kbd>, <kbd>Command</kbd>, or <kbd>Shift</kbd
 
 Keyboard users can select multiple contiguous items by:
 
-- Focusing on the `<select>` element (e.g. using
-
-  <kbd>Tab</kbd>
-
-  ).
-
-- Selecting an item at the top or bottom of the range they want to select using the
-
-  <kbd>Up</kbd>
-
-  and
-
-  <kbd>Down</kbd>
-
-  cursor keys to go up and down the options.
-
-- Holding down the
-
-  <kbd>Shift</kbd>
-
-  key and then using the
-
-  <kbd>Up</kbd>
-
-  and
-
-  <kbd>Down</kbd>
-
-  cursor keys to increase or decrease the range of items selected.
+- Focusing on the `<select>` element (e.g. using <kbd>Tab</kbd>).
+- Selecting an item at the top or bottom of the range they want to select using the <kbd>Up</kbd> and <kbd>Down</kbd> cursor keys to go up and down the options.
+- Holding down the <kbd>Shift</kbd> key and then using the <kbd>Up</kbd> and <kbd>Down</kbd> cursor keys to increase or decrease the range of items selected.
 
 Keyboard users can select multiple non-contiguous items by:
 
-- Focusing on the `<select>` element (e.g. using
-
-  <kbd>Tab</kbd>
-
-  ).
-
-- Holding down the
-
-  <kbd>Ctrl</kbd>
-
-  key then using the
-
-  <kbd>Up</kbd>
-
-  and
-
-  <kbd>Down</kbd>
-
-  cursor keys to change the "focused" select option, i.e. the one that will be selected if you choose to do so. The "focused" select option is highlighted with a dotted outline, in the same way as a keyboard-focused link.
-
-- Pressing
-
-  <kbd>Space</kbd>
-
-  to select/deselect "focused" select options.
+- Focusing on the `<select>` element (e.g. using <kbd>Tab</kbd>).
+- Holding down the <kbd>Ctrl</kbd> key then using the <kbd>Up</kbd> and <kbd>Down</kbd> cursor keys to change the "focused" select option, i.e. the one that will be selected if you choose to do so. The "focused" select option is highlighted with a dotted outline, in the same way as a keyboard-focused link.
+- Pressing <kbd>Space</kbd> to select/deselect "focused" select options.
 
 ## Styling with CSS
 

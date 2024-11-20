@@ -114,14 +114,11 @@ This may not be desirable, because the receiver of this string may handle Unicod
 ```js
 const rawJSON = JSON.rawJSON('"\\ud83d\\ude04"');
 const objStr = JSON.stringify({ value: rawJSON });
+console.log(objStr); // {"value":"\ud83d\ude04"}
 console.log(JSON.parse(objStr).value); // 😄
 ```
 
-Note that the double backslashes in the `rawJSON` actually represents a single slash character, so the JSON text looks like:
-
-```json-nolint
-{"value":"\ud83d\ude04"}
-```
+Note that the double backslashes in the `rawJSON` actually represents a single slash character.
 
 ## Specifications
 

@@ -40,6 +40,10 @@
 # MDN Firefox Release Notes
 /files/en-us/mozilla/firefox @mdn/core-yari-content
 
+# New templates and sidebars
+/files/jsondata/L10n-Template.json @mdn/core-dev
+/files/sidebars @mdn/core-dev
+
 # ============================= CONTROL FILES ============================= #
 # The CODEOWNERS file must end with these matches: Any pull request changing
 # one or more of these files should be escalated to the owners specified here.

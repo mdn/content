@@ -3,12 +3,10 @@ title: "Window: pageswap event"
 short-title: pageswap
 slug: Web/API/Window/pageswap_event
 page-type: web-api-event
-status:
-  - experimental
 browser-compat: api.Window.pageswap_event
 ---
 
-{{APIRef("HTML DOM")}}{{seecompattable}}
+{{APIRef("HTML DOM")}}
 
 The **`pageswap`** event is fired when you navigate across documents, when the previous document is about to unload.
 
@@ -91,7 +89,7 @@ window.addEventListener("pageswap", async (e) => {
 ```
 
 > [!NOTE]
-> See [List of Chrome DevRel team members](https://view-transitions.netlify.app/profiles/mpa/) for the live demo this code is taken from.
+> See [List of Chrome DevRel team members](https://view-transitions.chrome.dev/profiles/mpa/) for the live demo this code is taken from.
 
 ## Specifications
 

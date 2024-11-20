@@ -8,8 +8,10 @@ page-type: http-header
 
 > [!WARNING]
 > Do not use this header. Browsers omit this header and servers should ignore it.
+>
+> The header was deprecated by [RFC 9110 section 12.5.2 Accept-Charset](https://datatracker.ietf.org/doc/html/rfc9110#section-12.5.2) (June 2022).
 
-The **`Accept-Charset`** request HTTP header was a header that advertised a client's supported {{glossary("character encoding", "character encodings")}}. It is no longer widely used.
+The HTTP **`Accept-Charset`** {{Glossary("request header")}} was a header that advertised a client's supported {{glossary("character encoding", "character encodings")}}. It is no longer widely used.
 
 UTF-8 is well-supported and the overwhelmingly preferred choice for character encoding. To [guarantee better privacy through less configuration-based entropy](https://www.eff.org/deeplinks/2010/01/primer-information-theory-and-privacy), all browsers omit the `Accept-Charset` header.
 
@@ -23,7 +25,7 @@ Today, `Accept-Charset` is most notable for being one of several [forbidden head
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes</td>
+      <td>Yes</td>
     </tr>
   </tbody>
 </table>

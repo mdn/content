@@ -9,7 +9,7 @@ browser-compat: http.headers.Attribution-Reporting-Register-Trigger
 
 {{HTTPSidebar}}{{seecompattable}}
 
-The **`Attribution-Reporting-Register-Trigger`** header registers a page feature as an [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers). This is included as part of a response to a request that included an {{httpheader("Attribution-Reporting-Eligible")}} header.
+The HTTP **`Attribution-Reporting-Register-Trigger`** {{Glossary("response header")}} registers a page feature as an [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers). This header is included as part of a response to a request that contains the {{HTTPHeader("Attribution-Reporting-Eligible")}} header.
 
 See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 
@@ -24,13 +24,13 @@ See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_AP
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
     <tr>
       <th scope="row">
         {{Glossary("CORS-safelisted response header")}}
       </th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -77,7 +77,7 @@ Attribution-Reporting-Register-Trigger: <json-string>
         - `"deduplication_key"` {{optional_inline}}
           - : A string representing a unique key that can be used to prevent attributions from being duplicated — for example if a user were to add the same item to a shopping cart multiple times. See [Prevent duplication in reports](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/prevent-duplication) for more information.
         - `"filters"` {{optional_inline}}
-          - : An object containing filters that perform selective filtering to set `"trigger_data"`, `"priority"`, and `"deduplication_key"` based on the `filter_data` set in a corresponding {{httpheader("Attribution-Reporting-Register-Source")}} header. See [Filters](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#filters) for more information.
+          - : An object containing filters that perform selective filtering to set `"trigger_data"`, `"priority"`, and `"deduplication_key"` based on the `filter_data` set in a corresponding {{HTTPHeader("Attribution-Reporting-Register-Source")}} header. See [Filters](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#filters) for more information.
 
 ## Examples
 
@@ -138,6 +138,6 @@ res.set(
 
 ## See also
 
-- {{httpheader("Attribution-Reporting-Eligible")}}
-- {{httpheader("Attribution-Reporting-Register-Source")}}
+- {{HTTPHeader("Attribution-Reporting-Eligible")}}
+- {{HTTPHeader("Attribution-Reporting-Register-Source")}}
 - [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API)

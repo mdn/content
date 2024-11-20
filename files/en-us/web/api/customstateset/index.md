@@ -485,7 +485,7 @@ Click the element to see a different border being applied as the state changes.
 
 {{EmbedLiveSample("Non-boolean internal states", "100%", 50)}}
 
-## Comptability with `<dashed-ident>` syntax
+## Compatibility with `<dashed-ident>` syntax
 
 Previously custom elements with custom states were selected using a `<dashed-ident>` instead of the [`:state()`](/en-US/docs/Web/CSS/:state) function.
 Browser versions that don't support `:state()` will throw an error when supplied with an ident that is not prefixed with the double dash.

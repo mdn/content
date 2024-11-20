@@ -86,7 +86,7 @@ Assistive technology cannot parse border images. If the image contains informati
 
 In this example, we will apply a diamond pattern to an element's borders. The source for the border image is a ".png" file of 81 by 81 pixels, with three diamonds going vertically and horizontally:
 
-![an example borderimage](border.png)
+![Eight diamonds: four red diamonds, one in each corner, and four orange diamonds, one on each side. The middle is empty.](border.png)
 
 #### HTML
 

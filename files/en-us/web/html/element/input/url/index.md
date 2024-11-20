@@ -24,7 +24,10 @@ See [Validation](#validation) for details on how URLs are validated to ensure th
 
 ## Additional attributes
 
-In addition to the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, `url` inputs support the following attributes.
+In addition to the [global attributes](/en-US/docs/Web/HTML/Global_attributes), and the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, `url` inputs support the following attributes.
+
+> [!NOTE]
+> The [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) global attribute can be added to url inputs, but the stored state is always `off`.
 
 ### list
 
@@ -89,19 +92,6 @@ The [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck) global att
 An input field can have spell-checking enabled if it doesn't have the [readonly](#readonly) attribute set and is not disabled.
 
 The value returned by reading `spellcheck` may not reflect the actual state of spell-checking within a control if the {{Glossary("user agent", "user agent's")}} preferences override the setting.
-
-## Non-standard attributes
-
-The following non-standard attributes are also available on some browsers. As a general rule, you should avoid using them unless it can't be helped.
-
-### autocorrect
-
-A Safari extension, the `autocorrect` attribute is a string that indicates whether to activate automatic correction while the user is editing this field. Permitted values are:
-
-- `on`
-  - : Enable automatic correction of typos, as well as processing of text substitutions if any are configured.
-- `off`
-  - : Disable automatic correction and text substitutions.
 
 ## Using URL inputs
 

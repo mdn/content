@@ -7,7 +7,8 @@ browser-compat: http.headers.Accept-CH
 
 {{HTTPSidebar}}{{securecontext_header}}
 
-The **`Accept-CH`** header may be set by a server to specify which [client hints](/en-US/docs/Web/HTTP/Client_hints) headers a client should include in subsequent requests.
+The HTTP **`Accept-CH`** {{Glossary("response header")}} may be set by a server to specify which [client hint](/en-US/docs/Web/HTTP/Client_hints) headers should be included by the client in subsequent requests.
+To ensure client hints are sent reliably, the `Accept-CH` header should be persisted for all secure requests.
 
 <table class="properties">
   <tbody>
@@ -17,35 +18,37 @@ The **`Accept-CH`** header may be set by a server to specify which [client hints
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
     <tr>
       <th scope="row">
         {{Glossary("CORS-safelisted response header")}}
       </th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
 
-> [!NOTE]
-> Client hints are accessible only on secure origins (via TLS). The `Accept-CH` header should be persisted for all secure requests to ensure client hints are sent reliably.
-
 ## Syntax
 
 ```http
-Accept-CH: <comma separated list of client hint headers>
+Accept-CH: <client-hints-headers>
+
+// Client hint headers in a comma-separated list
+Accept-CH: <ch-header-one>, <ch-header-two>
 ```
 
 ## Examples
+
+### Client hint response headers
+
+The following response headers indicate that the server accepts `Viewport-Width` and `Width` [device client hints](/en-US/docs/Web/HTTP/Client_hints#device_client_hints) in subsequent requests.
+The {{HTTPHeader("Vary")}} header indicates which values were used to [vary the response](/en-US/docs/Web/HTTP/Client_hints#caching_and_client_hints) based on the accepted client hints.
 
 ```http
 Accept-CH: Viewport-Width, Width
 Vary: Viewport-Width, Width
 ```
-
-> [!NOTE]
-> Remember to [vary the response](/en-US/docs/Web/HTTP/Client_hints#caching_and_client_hints) based on the accepted client hints.
 
 ## Specifications
 

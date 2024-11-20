@@ -30,11 +30,11 @@ You can use the following pseudo-elements to customize various parts of the scro
 
 - `::-webkit-scrollbar` — the entire scrollbar.
 - `::-webkit-scrollbar-button` — the buttons on the scrollbar (arrows pointing upwards and downwards that scroll one line at a time).
-- `::-webkit-scrollbar:horizontal{}` — the horizontal scrollbar.
+- `::-webkit-scrollbar:horizontal` — the horizontal scrollbar.
 - `::-webkit-scrollbar-thumb` — the draggable scrolling handle.
 - `::-webkit-scrollbar-track` — the track (progress bar) of the scrollbar, where there is a gray bar on top of a white bar.
 - `::-webkit-scrollbar-track-piece` — the part of the track (progress bar) not covered by the handle.
-- `::-webkit-scrollbar:vertical{}` — the vertical scrollbar.
+- `::-webkit-scrollbar:vertical` — the vertical scrollbar.
 - `::-webkit-scrollbar-corner` — the bottom corner of the scrollbar, where both horizontal and vertical scrollbars meet. This is often the bottom-right corner of the browser window.
 - `::-webkit-resizer` — the draggable resizing handle that appears at the bottom corner of some elements.
 
@@ -128,7 +128,7 @@ The following example shows how to apply colors to scrollbars using {{cssxref("s
 #### HTML
 
 ```html
-<div class="scrollbox">
+<div class="scroll-box">
   <h1>Yoshi</h1>
   <p>
     Yoshi is a fictional dinosaur who appears in video games published by
@@ -149,7 +149,7 @@ The following example shows how to apply colors to scrollbars using {{cssxref("s
 #### CSS
 
 ```css hidden
-.scrollbox {
+.scroll-box {
   overflow: auto;
   width: 20rem;
   height: 5rem;
@@ -162,17 +162,17 @@ The following example shows how to apply colors to scrollbars using {{cssxref("s
 ```css
 /* For browsers that support `scrollbar-*` properties */
 @supports (scrollbar-color: auto) {
-  .scrollbox {
+  .scroll-box {
     scrollbar-color: aquamarine cornflowerblue;
   }
 }
 
 /* Otherwise, use `::-webkit-scrollbar-*` pseudo-elements */
 @supports selector(::-webkit-scrollbar) {
-  .scrollbox::-webkit-scrollbar {
+  .scroll-box::-webkit-scrollbar {
     background: aquamarine;
   }
-  .scrollbox::-webkit-scrollbar-thumb {
+  .scroll-box::-webkit-scrollbar-thumb {
     background: cornflowerblue;
   }
 }
