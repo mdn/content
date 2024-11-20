@@ -99,3 +99,4 @@ See [Using the View Transitions API](/en-US/docs/Web/API/View_Transitions_API/Us
 
 - [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/)
 - [View Transitions API: Creating Smooth Page Transitions](https://stackdiary.com/view-transitions-api/)
+- [View Transitions API: Single Page Apps Without a Framework](https://www.debugbear.com/blog/view-transitions-spa-without-framework)
