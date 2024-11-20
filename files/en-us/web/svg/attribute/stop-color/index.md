@@ -53,4 +53,5 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
+- CSS {{cssxref("stop-color")}} property
 - {{SVGAttr("stop-opacity")}}
