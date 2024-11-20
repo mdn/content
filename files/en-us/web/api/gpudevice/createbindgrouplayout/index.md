@@ -98,9 +98,8 @@ The resource layout object can be one of the following (see also {{domxref("GPUD
       - `"read-only"`: Enables WSGL code to read storage textures.
       - `"read-write"`: Enables WSGL code to read and write to storage textures.
       - `"write-only"`: The default value; Enables WSGL code to write to storage textures.
-      - `undefined`: Indicates that the entry is not a `storageTexture` type.
 
-        The `"read-only"` and `"read-write"` values can only be used if the [`"readonly_and_readwrite_storage_textures"`](/en-US/docs/Web/API/WGSLLanguageFeatures#readonly_and_readwrite_storage_textures) WGSL language extension is present in {{domxref("WGSLLanguageFeatures")}}.
+      The `"read-only"` and `"read-write"` values can only be used if the [`"readonly_and_readwrite_storage_textures"`](/en-US/docs/Web/API/WGSLLanguageFeatures#readonly_and_readwrite_storage_textures) WGSL language extension is present in {{domxref("WGSLLanguageFeatures")}}. If this is not the case, a {{domxref("GPUValidationError")}} is generated and an invalid {{domxref("GPUBindGroupLayout")}} object is returned.
 
   - `format`
     - : An enumerated value specifying the required format of texture views bound to this binding. See the specification's [Texture Formats](https://gpuweb.github.io/gpuweb/#enumdef-gputextureformat) section for all the available `format` values.
@@ -159,6 +158,7 @@ The following criteria must be met when calling **`createBindGroupLayout()`**, o
 - If an entry's resource layout object is a `storageTexture`:
   - Its `viewDimension` is not `"cube"` or `"cube-array"`.
   - Its `format` is a format that supports storage usage.
+- If a `"read-only"` or `"read-write"` `access` value is specified when defining a `storageTexture` resource layout object, the [`"readonly_and_readwrite_storage_textures"`](/en-US/docs/Web/API/WGSLLanguageFeatures#readonly_and_readwrite_storage_textures) WGSL language extension is present in {{domxref("WGSLLanguageFeatures")}}.
 
 ## Examples
 
