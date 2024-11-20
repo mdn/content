@@ -14,7 +14,7 @@ The {{HTTPHeader("Want-Content-Digest")}} field lets a sender request a `Content
 A content digest will differ based on {{HTTPHeader("Content-Encoding")}} and {{HTTPHeader("Content-Range")}}, but not {{HTTPHeader("Transfer-Encoding")}}.
 
 In certain cases, a {{HTTPHeader("Repr-Digest")}} can be used to validate the integrity of partial or multipart messages against the full representation.
-For example, in [range requests](/en-US/docs/Web/HTTP/Range_requests), a `Repr-Digest` will always have the same value if only the requested byte ranges differ, whereas the content digest will be different.
+For example, in [range requests](/en-US/docs/Web/HTTP/Range_requests), a `Repr-Digest` will always have the same value if only the requested byte ranges differ, whereas the content digest will be different for each part.
 For this reason, a `Content-Digest` is identical to a {{HTTPHeader("Repr-Digest")}} when a representation is sent in a single message.
 
 <table class="properties">
@@ -132,4 +132,3 @@ Developers can set and get HTTP headers using `fetch()` in order to provide appl
 - {{HTTPHeader("Want-Content-Digest")}} header to request a content digest
 - {{HTTPHeader("Repr-Digest")}}, {{HTTPHeader("Want-Repr-Digest")}} representation digest headers
 - {{HTTPHeader("ETag")}}
-- {{RFC("8792")}}
