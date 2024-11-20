@@ -993,10 +993,10 @@
           "descriptiveElements",
           "&lt;animate&gt;",
           "&lt;animateTransform&gt;",
-          "&lt;script&gt",
+          "&lt;script&gt;",
           "&lt;set&gt;",
           "&lt;stop&gt;",
-          "&lt;style&gt"
+          "&lt;style&gt;"
         ]
       },
       "attributes": [
@@ -1282,10 +1282,10 @@
           "descriptiveElements",
           "&lt;animate&gt;",
           "&lt;animateTransform&gt;",
-          "&lt;script&gt",
+          "&lt;script&gt;",
           "&lt;set&gt;",
           "&lt;stop&gt;",
-          "&lt;style&gt"
+          "&lt;style&gt;"
         ]
       },
       "attributes": [
