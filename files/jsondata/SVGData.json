@@ -993,25 +993,24 @@
           "descriptiveElements",
           "&lt;animate&gt;",
           "&lt;animateTransform&gt;",
+          "&lt;script&gt",
           "&lt;set&gt;",
-          "&lt;stop&gt;"
+          "&lt;stop&gt;",
+          "&lt;style&gt"
         ]
       },
       "attributes": [
         "coreAttributes",
         "presentationAttributes",
         "xLinkAttributes",
-        "'class'",
-        "'style'",
-        "'externalResourcesRequired'",
         "'gradientUnits'",
         "'gradientTransform'",
+        "'href'",
         "'x1'",
         "'y1'",
         "'x2'",
         "'y2'",
-        "'spreadMethod'",
-        "'xlink:href'"
+        "'spreadMethod'"
       ],
       "interfaces": ["SVGLinearGradientElement"]
     },
@@ -1283,26 +1282,26 @@
           "descriptiveElements",
           "&lt;animate&gt;",
           "&lt;animateTransform&gt;",
+          "&lt;script&gt",
           "&lt;set&gt;",
-          "&lt;stop&gt;"
+          "&lt;stop&gt;",
+          "&lt;style&gt"
         ]
       },
       "attributes": [
         "coreAttributes",
         "presentationAttributes",
         "xLinkAttributes",
-        "'class'",
-        "'style'",
-        "'externalResourcesRequired'",
-        "'gradientUnits'",
-        "'gradientTransform'",
         "'cx'",
         "'cy'",
-        "'r'",
         "'fx'",
         "'fy'",
-        "'spreadMethod'",
-        "'xlink:href'"
+        "'fr'",
+        "'gradientUnits'",
+        "'gradientTransform'",
+        "'href'",
+        "'r'",
+        "'spreadMethod'"
       ],
       "interfaces": ["SVGRadialGradientElement"]
     },
