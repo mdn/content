@@ -51,7 +51,7 @@ Cross-Origin-Opener-Policy: same-origin
 
 See also the {{HTTPHeader("Cross-Origin-Opener-Policy")}} header which you'll need to set to `same-origin` as well.
 
-Also, the {{HTTPHeader("Permissions-Policy")}} header's {{HTTPHeader("Permissions-Policy/cross-origin-isolated","cross-origin-isolated")}} directive must not block use of this feature for current origin.
+Also, the {{HTTPHeader("Permissions-Policy")}} header's {{HTTPHeader("Permissions-Policy/cross-origin-isolated","cross-origin-isolated")}} directive must not block the use of this feature for the current origin.
 
 To check if cross origin isolation has been successful, you can test against the {{domxref("Window.crossOriginIsolated")}} property or the {{domxref("WorkerGlobalScope.crossOriginIsolated")}} property available to window and worker contexts:
 
