@@ -62,7 +62,7 @@ sidebar:
   - type: listSubPages
     details: closed
     title: PermissionsPolicyDirectives
-    path: /en-US/docs/Web/HTTP//Headers/Permissions-Policy
+    path: /en-US/docs/Web/HTTP/Headers/Permissions-Policy
 
   - /Web/HTTP/Resources_and_specifications
 
