@@ -346,14 +346,14 @@ The special value `<all_urls>` matches all URLs under any of the supported schem
       <td>No path.</td>
     </tr>
     <tr>
-      <td><code>https://mozilla.org/#section1</code></td>
+      <td><code>https://www.mozilla.org/#section1</code></td>
       <td>Unmatched</td>
       <td>Contains a reference fragment: the URL that the pattern is matched against has any reference fragment removed before matching.</td>
     </tr>
     <tr>
       <td><code>https://mozilla.*.org/</code></td>
-      <td>Unmatched</td>
-      <td>Is syntactically valid and matches in Chrome but is ignored in Firefox.</td>
+      <td>Invalid</td>
+      <td>"*" in host must be at the start.</td>
     </tr>
     <tr>
       <td><code>https://*zilla.org/</code></td>
@@ -378,7 +378,7 @@ The special value `<all_urls>` matches all URLs under any of the supported schem
     <tr>
       <td><code>file://*</code></td>
       <td>Invalid</td>
-      <td>Empty path: this should be "<code>file:///*</code>".</td>
+      <td>Empty path: this should be "<code>file:///*</code>". <code>file://*</code> is accepted when declared in `host_permissions` in Chrome, which auto-corrects the entry to <code>file:///*</code>.</td>
     </tr>
   </tbody>
 </table>
