@@ -65,7 +65,6 @@ This article provides information about the changes in Firefox 133 that affect d
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
-
 #### WebDriver BiDi
 
 - Added support for the `url` argument for the `network.continueRequest` command, allowing requests to be transparently redirected to another URL ([Firefox bug 1898158](https://bugzil.la/1898158)).
