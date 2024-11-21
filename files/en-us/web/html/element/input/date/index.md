@@ -77,7 +77,7 @@ In this section, we'll look at basic and then more complex uses of `<input type=
 
 ### Basic uses of date
 
-The simplest use of `<input type="date">` involves one `<input>` combined with its {{htmlelement("label")}}, as seen below:
+The most basic use of `<input type="date">` involves one `<input>` combined with its {{htmlelement("label")}}, as seen below:
 
 ```html
 <form action="https://example.com">

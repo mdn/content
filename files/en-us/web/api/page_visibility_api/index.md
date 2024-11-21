@@ -132,5 +132,4 @@ document.addEventListener("visibilitychange", () => {
 
 - {{domxref("Document.visibilityState")}}
 - {{domxref("Document.hidden")}}
-- [PerformanceEventTiming: Reporting the First Input Delay (FID)](/en-US/docs/Web/API/PerformanceEventTiming#reporting_the_first_input_delay_fid)
 - [Timing element visibility with the Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)
