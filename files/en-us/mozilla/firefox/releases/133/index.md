@@ -73,7 +73,7 @@ This article provides information about the changes in Firefox 133 that affect d
 
 - Added support for the `url` argument for the `network.continueRequest` command, allowing requests to be transparently redirected to another URL ([Firefox bug 1898158](https://bugzil.la/1898158)).
 - Updated `browsingContext.print` to throw an `InvalidArgumentError` when used with incorrect dimensions ([Firefox bug 1886382](https://bugzil.la/1886382)).
-- Fixed `script.evaluate` and `script.callFunction` to allow the use `document.open` in sandbox realms ([Firefox bug 1918288](https://bugzil.la/1918288)).
+- Fixed `script.evaluate` and `script.callFunction` to allow the use of `document.open` in sandbox realms ([Firefox bug 1918288](https://bugzil.la/1918288)).
 - Fixed a bug where the `browsingContext.load` event might contain the wrong navigation ID if a same-document navigation occurred during the main navigation ([Firefox bug 1922327](https://bugzil.la/1922327)).
 - Fixed another edge case where commands could fail with an `UnknownError` due to navigation ([Firefox bug 1923899](https://bugzil.la/1923899)).
 
