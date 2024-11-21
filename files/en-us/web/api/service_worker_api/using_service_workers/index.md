@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("Service Workers API")}}
 
-This article provides information on getting started with service workers, including basic architecture, registering a service worker, the installation and activation process for a new service worker, updating your service worker, cache control and custom responses, all in the context of a simple app with offline functionality.
+This article provides information on getting started with service workers, including basic architecture, registering a service worker, the installation and activation process for a new service worker, updating your service worker, cache control and custom responses, all in the context of an app with offline functionality.
 
 ## The premise of service workers
 
