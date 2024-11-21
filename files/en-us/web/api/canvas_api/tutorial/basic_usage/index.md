@@ -119,7 +119,7 @@ Here is how a template would look in action. As shown here, it is initially blan
 
 ## A simple example
 
-To begin, let's take a look at a simple example that draws two intersecting rectangles, one of which has alpha transparency. We'll explore how this works in more detail in later examples.
+To begin, let's take a look at an example that draws two intersecting rectangles, one of which has alpha transparency. We'll explore how this works in more detail in later examples.
 
 ```html
 <!doctype html>

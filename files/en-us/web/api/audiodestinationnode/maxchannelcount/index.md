@@ -18,7 +18,7 @@ An `unsigned long`.
 
 ## Examples
 
-The following would set up a simple audio graph, featuring an `AudioDestinationNode` with `maxChannelCount` of 2:
+The following would set up an audio graph, featuring an `AudioDestinationNode` with `maxChannelCount` of 2:
 
 ```js
 const audioCtx = new AudioContext();
