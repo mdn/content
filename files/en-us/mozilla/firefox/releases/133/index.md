@@ -65,9 +65,6 @@ This article provides information about the changes in Firefox 133 that affect d
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
-#### General
-
-- Added support for action queues to make sure actions are performed sequentially ([Firefox bug 1915798](https://bugzil.la/1915798)).
 
 #### WebDriver BiDi
 
