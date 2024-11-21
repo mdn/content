@@ -44,8 +44,8 @@ Some examples are provided, but the list is not exhaustive.
 
 - `none`
 
-  - : Hides certain features of widgets, such as arrow displayed in select element, indicating that list can be expanded.
-
+  - : If the element is a widget (native form control) it will be forced to use a standardized primitive appearance instead of a platform native appearance (ex: operating system specific). Non-widget elements, including replaced elements like img and video, are unaffected.
+    
 - `auto`
 
   - : Acts as `none` on elements with no special styling.
