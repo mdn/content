@@ -97,7 +97,7 @@ The `<hr>` within a `<select>` should be considered purely decorative, as they a
 
 ### Basic select
 
-The following example creates a very simple dropdown menu, the second option of which is selected by default.
+The following example creates a three-value dropdown menu, the second option of which is selected by default.
 
 ```html
 <!-- The second value will be selected initially -->

@@ -11,7 +11,7 @@ The **`<audio>`** [HTML](/en-US/docs/Web/HTML) element is used to embed sound co
 
 {{EmbedInteractiveExample("pages/tabbed/audio.html","tabbed-standard")}}
 
-The above example shows simple usage of the `<audio>` element. In a similar manner to the {{htmlelement("img")}} element, we include a path to the media we want to embed inside the `src` attribute; we can include other attributes to specify information such as whether we want it to autoplay and loop, whether we want to show the browser's default audio controls, etc.
+The above example shows basic usage of the `<audio>` element. In a similar manner to the {{htmlelement("img")}} element, we include a path to the media we want to embed inside the `src` attribute; we can include other attributes to specify information such as whether we want it to autoplay and loop, whether we want to show the browser's default audio controls, etc.
 
 The content inside the opening and closing `<audio></audio>` tags is shown as a fallback in browsers that don't support the element.
 
@@ -375,10 +375,10 @@ Also it's a good practice to provide some content (such as the direct download l
 
 ### Basic usage
 
-The following example shows simple usage of the `<audio>` element to play an OGG file. It will autoplay due to the `autoplay` attribute—if the page has permission to do so—and also includes fallback content.
+The following example shows basic usage of the `<audio>` element to play an OGG file. It will autoplay due to the `autoplay` attribute—if the page has permission to do so—and also includes fallback content.
 
 ```html
-<!-- Simple audio playback -->
+<!-- Basic audio playback -->
 <audio src="AudioTest.ogg" autoplay>
   <a href="AudioTest.ogg" download="AudioTest.ogg">Download OGG audio</a>.
 </audio>
