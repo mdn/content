@@ -54,6 +54,8 @@ This article provides information about the changes in Firefox 133 that affect d
   This might be used, for example, to send analytics at the end of a session, even if the user navigates away from or closes the page.
 
   Using `fetch()` with `keepalive` has some advantages over using {{domxref("Navigator.sendBeacon()")}} for the same purpose, such as allowing the use of HTTP methods other than [`POST`](/en-US/docs/Web/HTTP/Methods/POST), customizable request properties, and access the server response via the fetch {{jsxref("Promise")}} fulfillment. It is also available in [service workers](/en-US/docs/Web/API/Service_Worker_API). ([Firefox bug 1906952](https://bugzil.la/1906952), [Firefox bug 1923044](https://bugzil.la/1923044)).
+- The [`onwaitingforkey`](/en-US/docs/Web/API/HTMLMediaElement/waitingforkey_event) content attribute can now be specified on {{htmlelement("audio")}}/{{htmlelement("video")}} elements to set an inline event handler for the `waitingforkey` event. ([Firefox bug 1925952](https://bugzil.la/1925952)).
+- {{domxref("ServiceWorkerContainer")}} is now exposed in all worker contexts via {{domxref("WorkerNavigator.serviceWorker")}}, allowing workers to inspect and manage the {{domxref("ServiceWorkerRegistration","service worker registrations","","nocode")}} associated with the current origin. Previously `ServiceWorkerContainer` was only available in the main thread, via {{domxref("Navigator.serviceWorker")}}. ([Firefox bug 1113522](https://bugzil.la/1113522)).
 
 #### DOM
 

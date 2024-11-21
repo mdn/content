@@ -64,7 +64,7 @@ We've already seen the {{htmlelement("title")}} element in action — this can b
 - The {{htmlelement("Heading_Elements", "h1")}} element appears on the page when loaded in the browser — generally this should be used once per page, to mark up the title of your page content (the story title, or news headline, or whatever is appropriate to your usage.)
 - The {{htmlelement("title")}} element is metadata that represents the title of the overall HTML document (not the document's content.)
 
-### Active learning: Inspecting a simple example
+### Active learning: Inspecting an example
 
 1. To start off this active learning, we'd like you to go to our GitHub repo and download a copy of our [title-example.html page](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/title-example.html). To do this, either
 
