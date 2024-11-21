@@ -102,7 +102,7 @@ It's important, however, to note that this is not enough to ensure that the spec
 > [!NOTE]
 > A user can tinker with your HTML behind the scenes, so your site _must not_ use this validation for any security purposes. You _must_ verify the URL on the server-side of any transaction in which the provided text may have any security implications of any kind.
 
-### A simple URL input
+### A basic URL input
 
 This element is implemented as a standard text input field with basic validation features. In its most basic form, a URL input can be implemented like this:
 
@@ -110,7 +110,7 @@ This element is implemented as a standard text input field with basic validation
 <input id="myURL" name="myURL" type="url" />
 ```
 
-{{ EmbedLiveSample('A_simple_URL_input', 600, 40) }}
+{{ EmbedLiveSample('A_basic_URL_input', 600, 40) }}
 
 Notice that it's considered valid when empty and when a single validly-formatted URL address is entered, but is otherwise not considered valid. By adding the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute, only properly-formed URLs are allowed; the input is no longer considered valid when empty.
 

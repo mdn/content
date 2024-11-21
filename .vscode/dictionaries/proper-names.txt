@@ -120,9 +120,11 @@ Darmok
 Datumizer
 davbrito
 Dedalium
+Dedreux
 Deepti
 Degit
 DekiWiki
+Delaville
 Denicola
 DeSandro
 Desaulniers
@@ -222,6 +224,7 @@ Hobson
 hochan
 Hochberg
 Hoenigswald
+Holborn
 Holdem
 Holzman
 Honigswald
@@ -259,6 +262,7 @@ Johansson
 Joomla
 Jory
 Josiel
+Jost
 Joyo
 jpmedley
 JSCAMP
@@ -349,6 +353,7 @@ mcdetect
 McLellan
 McNally
 McVerry
+Megalosaurus
 Meggin
 Mercure
 Merkle

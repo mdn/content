@@ -804,10 +804,11 @@
         "Element: focus",
         "Element: select",
         "Element: show",
-        "HTMLDetailsElement: toggle",
         "HTMLDialogElement: cancel",
         "HTMLDialogElement: close",
         "HTMLElement: input",
+        "HTMLElement: beforetoggle",
+        "HTMLElement: toggle",
         "HTMLFormElement: reset",
         "HTMLFormElement: submit",
         "HTMLInputElement: change",
@@ -914,7 +915,7 @@
     },
     "Ink API": {
       "overview": ["Ink API"],
-      "interfaces": ["Ink", "InkPresenter"],
+      "interfaces": ["DelegatedInkTrailPresenter", "Ink"],
       "methods": [],
       "properties": ["Navigator.ink"],
       "events": []

@@ -37640,16 +37640,6 @@
       "chharvey"
     ]
   },
-  "Web/API/HTMLDetailsElement/toggle_event": {
-    "modified": "2020-10-15T22:11:35.633Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "chrisdavidmills",
-      "mfluehr",
-      "Claas"
-    ]
-  },
   "Web/API/HTMLDialogElement": {
     "modified": "2020-10-15T21:29:11.074Z",
     "contributors": [
@@ -99007,17 +98997,6 @@
   "Web/HTTP/Headers/Accept-CH": {
     "modified": "2020-10-15T22:23:14.705Z",
     "contributors": ["j9t", "Malvoz", "bershanskiy"]
-  },
-  "Web/HTTP/Headers/Accept-Charset": {
-    "modified": "2020-10-15T21:48:48.975Z",
-    "contributors": [
-      "mfuji09",
-      "Tigt",
-      "fscholz",
-      "ottaviano",
-      "Minstel",
-      "teoli"
-    ]
   },
   "Web/HTTP/Headers/Accept-Encoding": {
     "modified": "2020-12-04T01:30:23.076Z",

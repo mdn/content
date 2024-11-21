@@ -106,7 +106,8 @@ Great progress has been made to update IndexedDB to the latest draft specificati
 
 ### Networking
 
-- The HTTP `Accept-Charset` header is no longer sent in HTTP requests. In its absence, servers should respond by sending UTF-8.
+- The HTTP `Accept-Charset` header is no longer sent in HTTP requests.
+  In its absence, servers should respond by sending UTF-8.
 
 ### Developer tools
 
