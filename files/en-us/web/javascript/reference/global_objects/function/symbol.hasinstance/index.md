@@ -33,7 +33,7 @@ func[Symbol.hasInstance](value)
 
 The [`instanceof`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) operator calls the [`[Symbol.hasInstance]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance) method of the right-hand side whenever such a method exists. Because all functions inherit from `Function.prototype` by default, they would all have the `[Symbol.hasInstance]()` method, so most of the time, the `Function.prototype[Symbol.hasInstance]()` method specifies the behavior of `instanceof` when the right-hand side is a function. This method implements the default behavior of the `instanceof` operator (the same algorithm when `constructor` has no `[Symbol.hasInstance]()` method).
 
-Unlike most methods, the `Function.prototype[Symbol.hasInstance]()` property is non-configurable and non-writable. This is a security feature to prevent the underlying target function of a bound function from being obtainable. See [this StackOverflow answer](https://stackoverflow.com/questions/38215027/trying-to-understand-the-official-es6-spec-regarding-symbol-hasinstance/38215392#38215392) for an example.
+Unlike most methods, the `Function.prototype[Symbol.hasInstance]()` property is non-configurable and non-writable. This is a security feature to prevent the underlying target function of a bound function from being obtainable. See [this Stack Overflow answer](https://stackoverflow.com/questions/38215027/trying-to-understand-the-official-es6-spec-regarding-symbol-hasinstance/38215392#38215392) for an example.
 
 ## Examples
 
