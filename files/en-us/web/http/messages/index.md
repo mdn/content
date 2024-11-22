@@ -120,7 +120,7 @@ This line can be quite long in some cases, such as the {{HTTPHEader("Cookie")}} 
 
 ![Example of headers in an HTTP request](https://mdn.github.io/shared-assets/images/diagrams/http/messages/request-headers.svg)
 
-There are many different headers that can appear in requests, but they are categorized as follows:
+Some headers are exclusively used in requests, while others can be sent in both requests and responses, or might have a more specific categorization:
 
 - {{glossary("Request header", "Request headers")}} provide additional context to a request or add extra logic to how it should be treated by a server (e.g., [conditional requests](/en-US/docs/Web/HTTP/Conditional_requests)).
 - {{glossary("Representation header", "Representation headers")}} are sent in a request if the message has a body, and they describe the original form of the message data and any encoding applied.
