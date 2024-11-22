@@ -2,7 +2,7 @@
 title: <frequency>
 slug: Web/CSS/frequency
 page-type: css-type
-browser-compat: css.types.frequency
+spec-urls: https://drafts.csswg.org/css-values/#frequency-value
 ---
 
 {{CSSRef}}
@@ -49,7 +49,7 @@ Invalid frequency values:
 
 ## Browser compatibility
 
-{{Compat}}
+No browser currently supports this feature.
 
 ## See also
 

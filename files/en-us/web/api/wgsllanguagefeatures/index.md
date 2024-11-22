@@ -20,7 +20,12 @@ The `WGSLLanguageFeatures` object is accessed via the {{domxref("GPU.wgslLanguag
 
 ## Available features
 
-The available WGSL language extensions can vary across implementations and physical devices and may also change over time; we have therefore not listed them here. For a complete list, refer to [WGSL language extensions](https://gpuweb.github.io/gpuweb/wgsl/#language-extension) in the WGSL specification.
+The following WGSL language extensions are defined at [WGSL language extensions](https://gpuweb.github.io/gpuweb/wgsl/#language-extension) in the WGSL specification. Bear in mind that the exact set of features available will vary across implementations and physical devices, and may change over time.
+
+| Feature name                                                                                    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <a name="readonly_and_readwrite_storage_textures">`readonly_and_readwrite_storage_textures`</a> | When available, allows the `"read-only"` and `"read-write"` [`storageTexture.access`](/en-US/docs/Web/API/GPUDevice/createBindGroupLayout#access) values to be set when specifying storage texture bind group entry types in a bind group layout. These enable WSGL code to read storage textures, and read/write storage textures, respectively.                                                                                                                                         |
+| <a name="unrestricted_pointer_parameters">`unrestricted_pointer_parameters`</a>                 | <p>Loosens restrictions on pointers being passed to WGSL functions. When available, the following are allowed:</p><ul><li>Parameter pointers to storage, uniform, and workgroup address spaces being passed to user-declared functions.</li><li>Pointers to structure members and array elements being passed to user-declared functions.</li></ul><p>See [Pointers As Function Parameters](https://google.github.io/tour-of-wgsl/types/pointers/passing_pointers/) for more details.</p> |
 
 ## Instance properties
 
@@ -46,11 +51,21 @@ The following methods are available to all read-only [setlike](/en-US/docs/Web/J
 
 ## Examples
 
-```js
-if (!navigator.gpu) {
-  throw Error("WebGPU not supported.");
-}
+### Check whether an extension is available
 
+```js
+if (
+  navigator.gpu.wgslLanguageFeatures.has(
+    "readonly_and_readwrite_storage_textures",
+  )
+) {
+  console.log("Read-only and read-write storage textures are available");
+}
+```
+
+### Return set size and iterate through values
+
+```js
 const wgslFeatures = navigator.gpu.wgslLanguageFeatures;
 
 // Return the size of the set

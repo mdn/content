@@ -16,7 +16,7 @@ The `var()` function cannot be used in property names, selectors or anything els
 ## Syntax
 
 ```css
-/* Simple usage */
+/* Basic usage */
 var(--custom-prop);
 
 /* With fallback */
