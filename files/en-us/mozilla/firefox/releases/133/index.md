@@ -73,6 +73,7 @@ This article provides information about the changes in Firefox 133 that affect d
 
 ## Changes for add-on developers
 
+- {{WebExtAPIRef("cookies.get")}} now orders cookies according to the [5.4 The Cookie Header section of the HTTP State Management Mechanism (RFC 6265)](https://datatracker.ietf.org/doc/html/rfc6265#section-5.4). This impacts call results when a cookie has variants with different path components. Previously, the earliest created cookie was matched by {{WebExtAPIRef("cookies.get")}}, {{WebExtAPIRef("cookies.remove")}}, {{WebExtAPIRef("cookies.set")}}, and {{WebExtAPIRef("cookies.getAll")}}. After this change, the cookie with the longest matching path is returned. ([Firefox bug 1798655](https://bugzil.la/1798655))
 - Fixed a bug in the {{WebExtAPIRef("declarativeNetRequest")}} API that prevented rule registration after a browser restart ([Firefox bug 1921353](https://bugzil.la/1921353)). This bug affected extensions that rely on {{WebExtAPIRef("declarativeNetRequest.updateDynamicRules")}} or {{WebExtAPIRef("declarativeNetRequest.updateEnabledRulesets")}}. This fix has also been backported to Firefox ESR 128.5 and Firefox ESR 115.18.
 
 ### Removals
