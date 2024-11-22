@@ -94,7 +94,7 @@ The terms described go inside {{htmlelement("dt")}} elements. The matching descr
 
 ### A simple example
 
-Here's a simple example describing kinds of food and drink:
+Here's an example describing kinds of food and drink:
 
 ```html
 <dl>

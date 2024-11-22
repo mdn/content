@@ -78,7 +78,7 @@ Loose equality is _symmetric_: `A == B` always has identical semantics to `B == 
    - If one of the operands is a Symbol but the other is not, return `false`.
    - If one of the operands is a Boolean but the other is not, [convert the boolean to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion): `true` is converted to 1, and `false` is converted to 0. Then compare the two operands loosely again.
    - Number to String: [convert the string to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion). Conversion failure results in `NaN`, which will guarantee the equality to be `false`.
-   - Number to BigInt: compare by their numeric value. If the number is ±Infinity or `NaN`, return `false`.
+   - Number to BigInt: compare by their mathematical value. If the number is ±Infinity or `NaN`, return `false`.
    - String to BigInt: convert the string to a BigInt using the same algorithm as the [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) constructor. If conversion fails, return `false`.
 
 Traditionally, and according to ECMAScript, all primitives and objects are loosely unequal to `undefined` and `null`. But most browsers permit a very narrow class of objects (specifically, the `document.all` object for any page), in some contexts, to act as if they _emulate_ the value `undefined`. Loose equality is one such context: `null == A` and `undefined == A` evaluate to true if, and only if, A is an object that _emulates_ `undefined`. In all other cases an object is never loosely equal to `undefined` or `null`.
