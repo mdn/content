@@ -44,7 +44,7 @@ register(scriptURL, options)
 
       - : A string representing a URL that defines a service worker's registration scope; that is, what range of URLs a service worker can control.
 
-        This is usually specified as an URL that is relative to the base URL of the site (e.g. `/some/path/`), so that the resolved scope is the same irrespective of what page the registration code is called from.
+        This is usually specified as a URL that is relative to the base URL of the site (e.g. `/some/path/`), so that the resolved scope is the same irrespective of what page the registration code is called from.
         By default, the `scope` value for a service worker registration is set to the directory where the service worker script is located (by resolving `./` against `scriptURL`).
 
         The scope must specify documents that are in the same directory or more deeply nested than the service worker (if you need a broader scope, this can be permitted via the HTTP `Service-Worker-Allowed` header).
@@ -146,11 +146,11 @@ if ("serviceWorker" in navigator) {
 ```
 
 This scope happens to be the same as the default scope, so the registration applies to exactly the same pages as the example above.
-Note that if we were to run this code after the previous example, browsers should recognise that we're updating an existing registration rather than a new one.
+Note that if we were to run this code after the previous example, browsers should recognize that we're updating an existing registration rather than a new one.
 
 ### Register a service worker using page-relative URLs
 
-There is nothing to stop you using page-relative URLs except that this makes it harder to move your pages around, and it is easy to accidentally create unwanted registrations if you do so.
+There is nothing to stop you from using page-relative URLs except that this makes it harder to move your pages around, and it is easy to accidentally create unwanted registrations if you do so.
 
 In this example the service worker code is at `example.com/product/sw.js`, and the registration code at `example.com/product/description.html`.
 We're using URLs that are relative to the current directory for the scriptURL and the scope, where the current directory is the base URL of the page that is calling `register()` (`example.com/product/`).
