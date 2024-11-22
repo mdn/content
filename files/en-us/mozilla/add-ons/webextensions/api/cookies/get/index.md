@@ -9,8 +9,6 @@ browser-compat: webextensions.api.cookies.get
 
 The **`get()`** method of the {{WebExtAPIRef("cookies")}} API retrieves information about a single cookie, given its name and URL.
 
-To use this method, an extension must have the `"cookies"` permission and relevant host permissions. See [`cookie` permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#permissions) for more details.
-
 If more than one cookie with the same name exists for a given URL, the one with the longest path will be returned. For cookies with the same path length, the cookie with the earliest creation time will be returned. If no matching cookie could be found, `null` is returned.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
