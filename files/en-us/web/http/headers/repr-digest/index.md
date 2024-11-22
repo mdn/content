@@ -8,11 +8,11 @@ spec-urls: https://datatracker.ietf.org/doc/html/rfc9530
 {{HTTPSidebar}}
 
 The HTTP **`Repr-Digest`** {{Glossary("Request header", "request")}} and {{Glossary("Response header", "response header")}} provides a {{Glossary("digest")}} of the selected representation of the target resource.
-A `Repr-Digest` can be used to validate the integrity of partial or multipart messages against the full selected representation.
-For example, in [range requests](/en-US/docs/Web/HTTP/Range_requests), a `Repr-Digest` will always have the same value if only the requested byte ranges differ, whereas the {{HTTPHeader("Content-Digest")}} will be different for each range or part.
+A `Repr-Digest` can be used to validate the integrity of partial or multipart messages against the whole selected representation.
+For example, in [range requests](/en-US/docs/Web/HTTP/Range_requests), a `Repr-Digest` in responses will always have the same value if only the requested byte ranges differ, whereas the {{HTTPHeader("Content-Digest")}} will be different for each range or part.
 
 The _selected representation_ is the specific format of a resource chosen through [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation).
-Details about this representation can be determined from the response's {{Glossary("Representation header", "representation headers")}}, such as {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Type")}}, and {{HTTPHeader("Content-Encoding")}}.
+Details about the representation can be determined from {{Glossary("Representation header", "representation headers")}}, such as {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Type")}}, and {{HTTPHeader("Content-Encoding")}}.
 
 The representation digest applies to the whole representation rather than the encoding or chunking of the messages that are used to send it.
 A {{HTTPHeader("Content-Digest")}} applies to the content of a specific message, and will have different values based on the {{HTTPHeader("Content-Encoding")}} and {{HTTPHeader("Content-Range")}} of each message.
@@ -60,6 +60,27 @@ Specifically, it was difficult to distinguish whether a digest applied to the en
 As such, two separate headers were specified (`Content-Digest` and `Repr-Digest`) to convey HTTP message content digests and resource representation digests, respectively.
 
 ## Examples
+
+### User-agent sending a Repr-Digest in requests
+
+In the following example, a user-agent sends a digest of the message content using SHA-512.
+It sends both a `Content-Digest` and a `Repr-Digest`, which differ from each other because of the `Content-Encoding`:
+
+```http
+POST /bank_transfer HTTP/1.1
+Host: example.com
+Content-Encoding: zstd
+Content-Digest: sha-512=:ABC…=:
+Repr-Digest: sha-512=:DEF…=:
+
+{
+ "recipient": "Alex",
+ "amount": 900000000
+}
+```
+
+The server may calculate a digest of the content it has received and compare the result with the `Content-Digest` or `Repr-Digest` headers to validate the message integrity.
+In requests like the example above, the `Repr-Digest` is more useful to the server as this is calculated over the decoded representation and would be more consistent in different scenarios.
 
 ### HTTP response where `Repr-Digest` and `Content-Digest` coincide
 
@@ -138,7 +159,7 @@ Content-Digest: sha-256=:2IBI7hQn83oTCgB3Z/6apOl91WGoctRfRj/F9gkvVo8=:
 
 ### Unsuccessful HTTP request-response employing `Repr-Digest`
 
-In the following message, a client requests a resource with a specific sha-256 digest:
+In the following message, a user-agent requests a resource with a specific sha-256 digest:
 
 ```http
 GET /api/last-transaction HTTP/1.1
@@ -148,7 +169,7 @@ Repr-Digest: sha-256=:2IBI7hQn83oTCgB3Z/6apOl91WGoctRfRj/F9gkvVo8=:
 ```
 
 A {{HTTPStatus("406", "406 Not Acceptable")}} is returned by the server to indicate the operation failed given a specific digest for the resource.
-A `Repr-Digest` header is included with the SHA-256 digest value that would result in a successful response if the client repeated the request with that value:
+A `Repr-Digest` header is included with the SHA-256 digest value that would result in a successful response if the user-agent repeated the request with that value:
 
 ```http
 HTTP/1.1 406 Not Acceptable
@@ -170,3 +191,4 @@ Developers can set and get HTTP headers using `fetch()` in order to provide appl
 - {{HTTPHeader("Content-Digest")}}, {{HTTPHeader("Want-Content-Digest")}}, {{HTTPHeader("Want-Repr-Digest")}}
 - {{HTTPHeader("ETag")}}
 - {{HTTPHeader("Content-Encoding")}}
+- [Digital Signatures for APIs](https://developer.ebay.com/develop/guides/digital-signatures-for-apis) SDK guide uses `Content-Digest`s for digital signatures in HTTP calls (developer.ebay.com)
