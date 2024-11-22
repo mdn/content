@@ -173,7 +173,7 @@ Support for the `scripts`, `page`, and `service_worker` properties varies betwee
   - supports `background.service_worker`.
   - supports `background.scripts` (or `background.page`) if `service_worker` is not specified.
 
-To illustrate, this is a simple example of a cross-browser extension that supports `scripts` and `service_worker`. The example has this manifest.json file:
+To illustrate, this is an example of a cross-browser extension that supports `scripts` and `service_worker`. The example has this manifest.json file:
 
 ```json
 {
