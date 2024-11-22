@@ -331,7 +331,7 @@ This guide provides a general overview of the anatomy of HTTP messages, using th
 We also explored HTTP/2 message framing, which introduces a layer between the HTTP/1.x syntax and the underlying transport protocol without fundamentally modifying HTTP's semantics.
 HTTP/2 was introduced to solve the head-of-line blocking issues present in HTTP/1.x by enabling multiplexing of requests.
 
-One issue that remained in HTTP/2 is that head-of-line blocking still exists within TCP, so a performance bottleneck is now at the transport, rather than protocol, level.
+One issue that remained in HTTP/2 is that even though head-of-line blocking was fixed in the protocol level, there is still a performance bottleneck due to head-of-line blocking within TCP (at the transport level).
 HTTP/3 addresses this limitation by using QUIC, a protocol built on UDP, instead of TCP.
 This change improves performance, reduces connection setup time, and enhances stability on degraded or unreliable networks.
 HTTP/3 retains the same core HTTP semantics, so features like request methods, status codes, and headers remain consistent across all three major HTTP versions.
