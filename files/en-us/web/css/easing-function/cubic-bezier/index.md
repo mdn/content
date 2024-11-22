@@ -23,21 +23,14 @@ cubic-bezier(0, 0, 1, 1)
 The function accepts the following four parameters, which represent the coordinates of two control points:
 
 - `<x1>`
-
   - : A {{cssxref("&lt;number&gt;")}} representing the x-axis coordinate of the first control point.
     It must be in the `[0, 1]` range.
-
 - `<y1>`
-
   - : A {{cssxref("&lt;number&gt;")}} representing the y-axis coordinate of the first control point.
-
 - `<x2>`
-
   - : A {{cssxref("&lt;number&gt;")}} representing the x-axis coordinate of the second control point.
     It must be in the `[0, 1]` range.
-
 - `<y2>`
-
   - : A {{cssxref("&lt;number&gt;")}} representing the y-axis coordinate of the second control point.
 
 ## Description
@@ -69,7 +62,7 @@ In this example, the red ball bounces out of the box when transitioned from its 
 
 ```html hidden
 <div tabindex="0">
-    <span></span>
+  <span></span>
 </div>
 ```
 
@@ -87,7 +80,7 @@ span {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background:  tomato;
+  background: tomato;
 }
 
 div:hover span,
