@@ -291,7 +291,7 @@ Install the `webpack` dev dependencies:
 npm i -D webpack@5 webpack-cli@5 webpack-dev-server@4 copy-webpack-plugin@11
 ```
 
-Next, we need to configure Webpack. Create `webpack.config.js` and put the following in it:
+Next, we need to configure webpack. Create `webpack.config.js` and put the following in it:
 
 ```js
 const CopyPlugin = require("copy-webpack-plugin");

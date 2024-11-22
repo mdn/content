@@ -50,6 +50,8 @@ This article provides information about the changes in Firefox 133 that affect d
 - The {{domxref("EventSource")}} interface to handle [server-sent events](/en-US/docs/Web/API/Server-sent_events) is now supported in [service workers](/en-US/docs/Web/API/Service_Worker_API). ([Firefox bug 1681218](https://bugzil.la/1681218)).
 - The {{domxref("ImageDecoder")}}, {{domxref("ImageTrackList")}}, and {{domxref("ImageTrack")}} interfaces of the [WebCodecs API](/en-US/docs/Web/API/WebCodecs_API) are now supported, enabling the decoding images from the main and worker threads. ([Firefox bug 1923755](https://bugzil.la/1923755)).
 - The [`beforetoggle`](/en-US/docs/Web/API/HTMLElement/beforetoggle_event) and [`toggle`](/en-US/docs/Web/API/HTMLElement/toggle_event) events of the {{domxref("HTMLElement")}} interface are now fired at {{HTMLElement("dialog")}} elements immediately before and after they are shown or hidden, respectively. The `beforetoggle` can be used, for example, to apply/remove classes that control the animation of a dialog, or reset the state of a dialog form before it is shown. The `toggle` event can be used to get change notification of the open state, which otherwise requires a {{domxref("MutationObserver")}}. ([Firefox bug 1876762](https://bugzil.la/1876762)).
+- The [`onwaitingforkey`](/en-US/docs/Web/API/HTMLMediaElement/waitingforkey_event) content attribute can now be specified on {{htmlelement("audio")}}/{{htmlelement("video")}} elements to set an inline event handler for the `waitingforkey` event. ([Firefox bug 1925952](https://bugzil.la/1925952)).
+- {{domxref("ServiceWorkerContainer")}} is now exposed in all worker contexts via {{domxref("WorkerNavigator.serviceWorker")}}, allowing workers to inspect and manage the {{domxref("ServiceWorkerRegistration","service worker registrations","","nocode")}} associated with the current origin. Previously `ServiceWorkerContainer` was only available in the main thread, via {{domxref("Navigator.serviceWorker")}}. ([Firefox bug 1113522](https://bugzil.la/1113522)).
 
 #### DOM
 
@@ -63,14 +65,23 @@ This article provides information about the changes in Firefox 133 that affect d
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
-#### General
-
 #### WebDriver BiDi
+
+- Added support for the `url` argument for the `network.continueRequest` command, allowing requests to be transparently redirected to another URL ([Firefox bug 1898158](https://bugzil.la/1898158)).
+- Updated `browsingContext.print` to throw an `InvalidArgumentError` when used with incorrect dimensions ([Firefox bug 1886382](https://bugzil.la/1886382)).
+- Fixed `script.evaluate` and `script.callFunction` to allow the use of `document.open` in sandbox realms ([Firefox bug 1918288](https://bugzil.la/1918288)).
+- Fixed a bug where the `browsingContext.load` event might contain the wrong navigation ID if a same-document navigation occurred during the main navigation ([Firefox bug 1922327](https://bugzil.la/1922327)).
+- Fixed another edge case where commands could fail with an `UnknownError` due to navigation ([Firefox bug 1923899](https://bugzil.la/1923899)).
 
 #### Marionette
 
+- Updated Marionette to better handle window positioning on Linux with Wayland ([Firefox bug 1857571](https://bugzil.la/1857571)).
+- Fixed a bug that could leave an empty `style` attribute on an element when trying to click or clear it ([Firefox bug 1922709](https://bugzil.la/1922709)).
+- Updated the error message sent for `UnexpectedAlertOpen` errors to include the text of the corresponding alert ([Firefox bug 1924469](https://bugzil.la/1924469)).
+
 ## Changes for add-on developers
 
+- {{WebExtAPIRef("cookies.get")}} now orders cookies according to the [5.4 The Cookie Header section of the HTTP State Management Mechanism (RFC 6265)](https://datatracker.ietf.org/doc/html/rfc6265#section-5.4). This impacts call results when a cookie has variants with different path components. Previously, the earliest created cookie was matched by {{WebExtAPIRef("cookies.get")}}, {{WebExtAPIRef("cookies.remove")}}, {{WebExtAPIRef("cookies.set")}}, and {{WebExtAPIRef("cookies.getAll")}}. After this change, the cookie with the longest matching path is returned. ([Firefox bug 1798655](https://bugzil.la/1798655))
 - Fixed a bug in the {{WebExtAPIRef("declarativeNetRequest")}} API that prevented rule registration after a browser restart ([Firefox bug 1921353](https://bugzil.la/1921353)). This bug affected extensions that rely on {{WebExtAPIRef("declarativeNetRequest.updateDynamicRules")}} or {{WebExtAPIRef("declarativeNetRequest.updateEnabledRulesets")}}. This fix has also been backported to Firefox ESR 128.5 and Firefox ESR 115.18.
 
 ### Removals
