@@ -107,7 +107,8 @@ This could be for the following reasons:
 
 After your service worker is registered, the browser will attempt to install then activate the service worker for your page/site.
 
-The `install` event is fired when an installation is successfully completed. The `install` event is generally used to populate your browser's offline caching capabilities with the assets you need to run your app offline. To do this, we use Service Worker's storage API — [`cache`](/en-US/docs/Web/API/Cache) — a global object on the service worker that allows us to store assets delivered by responses, and keyed by their requests. This API works in a similar way to the browser's standard cache, but it is specific to your domain. The contents of the cache are kept until you clear them.
+The `install` event is the first event that is fired on service worker installation or update.
+It is emitted just once, immediately after registration is successfully completed, and is generally used to populate your browser's offline caching capabilities with the assets you need to run your app offline. To do this, we use Service Worker's storage API — [`cache`](/en-US/docs/Web/API/Cache) — a global object on the service worker that allows us to store assets delivered by responses, and keyed by their requests. This API works in a similar way to the browser's standard cache, but it is specific to your domain. The contents of the cache are kept until you clear them.
 
 Here's how our service worker handles the `install` event:
 
