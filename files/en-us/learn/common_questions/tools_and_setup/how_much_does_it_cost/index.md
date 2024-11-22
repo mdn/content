@@ -54,7 +54,7 @@ Price does not reliably reflect a text editor's quality or usefulness. You have 
 
 ### Image editors
 
-Your system likely includes a simple image editor, or viewer: Paint on Windows, Eye of Gnome on Ubuntu, Preview on Mac. Those programs are relatively limited, you'll soon want a more robust editor to add layers, effects, and grouping.
+Your system likely includes an image editor, or viewer: Paint on Windows, Eye of Gnome on Ubuntu, Preview on Mac. Those programs are relatively limited, you'll soon want a more robust editor to add layers, effects, and grouping.
 
 Editors can be free ([GIMP](https://www.gimp.org/), [Paint.NET](https://www.getpaint.net/)), moderately expensive ([PaintShop Pro](https://www.paintshoppro.com/), less than $100), or several hundred dollars ([Adobe Photoshop](https://www.adobe.com/products/photoshop.html)).
 

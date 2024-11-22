@@ -29,7 +29,7 @@ A boolean value.
 
 ## Examples
 
-Here we use the `has()` method to see if the padding-top property is present
+Here we use the `has()` method to see if the `padding-top` property is present
 within the button elements style attribute.
 
 ```js
