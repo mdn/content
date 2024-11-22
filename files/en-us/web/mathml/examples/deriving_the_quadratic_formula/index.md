@@ -14,6 +14,7 @@ We take a quadratic equation in its general form, and solve for x.
 
 {{ EmbedLiveSample("Derivation", "", "400px") }}
 
+<!-- prettier-ignore-start -->
 ```html
 <math display="block">
   <semantics>
@@ -481,18 +482,19 @@ We take a quadratic equation in its general form, and solve for x.
     </mtable>
     <!-- Representation in TeX format -->
     <annotation encoding="application/x-tex">
-      \begin{aligned} ax^2 + bx + c &= 0 \\ ax^2 + bx &= -c \\ x^2 +
-      \frac{b}{a}x &= -\frac{c}{a} & \text{\color{red} \small Divide out leading
-      coefficient.} \\ x^2 + \frac{b}{a}x + \left(\frac{b}{2a}\right)^2 &=
-      \frac{-c(4a)}{a(4a)} + \frac{b^2}{4a^2} & \text{\color{red} \small
-      Complete the square.} \\ \left(x + \frac{b}{2a}\right)\left(x +
-      \frac{b}{2a}\right) &= \frac{b^2 - 4ac}{4a^2} & \text{\color{red} \small
-      Discriminant revealed.} \\ \left(x + \frac{b}{2a}\right)^2 &= \frac{b^2 -
-      4ac}{4a^2} \\ x + \frac{b}{2a} &= \sqrt{\frac{b^2 - 4ac}{4a^2}} \\ x &=
-      \frac{-b}{2a} \pm \{C\} \sqrt{\frac{b^2 - 4ac}{4a^2}} & \text{\color{red}
-      \small There's the vertex formula.} \\ x &= \frac{-b \pm \{C\}\sqrt{b^2 -
-      4ac}}{2a} \end{aligned}
+      \begin{aligned}
+      ax^2 + bx + c &= 0 \\
+      ax^2 + bx &= -c \\
+      x^2 + \frac{b}{a}x &= -\frac{c}{a} & \text{\color{red} \small Divide out leading coefficient.} \\
+      x^2 + \frac{b}{a}x + \left(\frac{b}{2a}\right)^2 &= \frac{-c(4a)}{a(4a)} + \frac{b^2}{4a^2} & \text{\color{red} \small Complete the square.} \\
+      \left(x + \frac{b}{2a}\right)\left(x + \frac{b}{2a}\right) &= \frac{b^2 - 4ac}{4a^2} & \text{\color{red} \small Discriminant revealed.} \\
+      \left(x + \frac{b}{2a}\right)^2 &= \frac{b^2 - 4ac}{4a^2} \\
+      x + \frac{b}{2a} &= \sqrt{\frac{b^2 - 4ac}{4a^2}} \\
+      x &= \frac{-b}{2a} \pm \{C\} \sqrt{\frac{b^2 - 4ac}{4a^2}} & \text{\color{red} \small There's the vertex formula.} \\
+      x &= \frac{-b \pm \{C\}\sqrt{b^2 - 4ac}}{2a}
+      \end{aligned}
     </annotation>
   </semantics>
 </math>
 ```
+<!-- prettier-ignore-end -->

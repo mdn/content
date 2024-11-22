@@ -16,6 +16,7 @@ This page outlines the proof of the [Pythagorean theorem](https://en.wikipedia.o
 
 {{ EmbedLiveSample("Proof", "", "100px") }}
 
+<!-- prettier-ignore-start -->
 ```html
 <math display="block">
   <semantics>
@@ -112,9 +113,13 @@ This page outlines the proof of the [Pythagorean theorem](https://en.wikipedia.o
     </mtable>
     <!-- Representation in TeX format -->
     <annotation encoding="application/x-tex">
-      \begin{align*} (a + b)^2 &= c^2 + 4 \cdot \left( \frac{1}{2} ab \right) \\
-      a^2 + 2ab + b^2 &= c^2 + 2ab \\ a^2 + b^2 &= c^2 \end{align*}
+      \begin{aligned}
+      (a + b)^2 &= c^2 + 4 \cdot \left( \frac{1}{2} ab \right) \\
+      a^2 + 2ab + b^2 &= c^2 + 2ab \\
+      a^2 + b^2 &= c^2
+      \end{aligned}
     </annotation>
   </semantics>
 </math>
 ```
+<!-- prettier-ignore-end -->
