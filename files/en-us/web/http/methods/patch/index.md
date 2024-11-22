@@ -117,6 +117,10 @@ ETag: "e0023aa4f"
 
 {{Specifications}}
 
+## Browser compatibility
+
+<!-- TODO -->
+
 ## See also
 
 - [HTTP request methods](/en-US/docs/Web/HTTP/Methods)

@@ -6,37 +6,39 @@ page-type: guide
 
 {{HTTPSidebar}}
 
-HTML {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements allow media presentation without the need for the user to install any plug-ins or other software to do so.
-This guide covers a few server configuration changes that may be necessary for your web server to correctly serve Ogg media files.
+HTML {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements allow media presentation without the need for the user to install extensions or other software.
+This guide covers server configuration that may be necessary to correctly serve Ogg media files.
 This information may also be useful if you encounter other media types your server isn't already configured to recognize.
 
 ## Serve media with the correct MIME type
 
-`*.ogg` and `*.ogv` files containing video (possibly with an audio track as well, of course), should be served with the `video/ogg` MIME type. `*.oga` and `*.ogg` files containing only audio should be served with the `audio/ogg` MIME type.
-
 If you don't know whether the Ogg file contains audio or video, you can serve it with the MIME type `application/ogg`, and the browser will treat it as a video file.
 
-Most servers don't by default serve Ogg media with the correct MIME types, so you'll likely need to add the appropriate configuration for this.
+- `*.ogg` and `*.ogv` files containing video (possibly with an audio track as well, of course), should be served with the `video/ogg` MIME type.
+- `*.oga` and `*.ogg` files containing only audio should be served with the `audio/ogg` MIME type.
+
+Most servers don't serve Ogg media with the correct MIME types by default, so you'll likely need to add the appropriate configuration for this.
 
 For Apache, you can add the following to your configuration:
 
-```plain
+```apacheconf
 AddType audio/ogg .oga
 AddType video/ogg .ogv
 AddType application/ogg .ogg
 ```
 
-You can find specific information about possible media file types and the codecs used within them in our comprehensive [guide to media types and formats on the web](/en-US/docs/Web/Media/Formats). In particular, the article on [media container formats](/en-US/docs/Web/Media/Formats/Containers) will be especially helpful when configuring servers to host media properly.
+You can find specific information about possible media file types and the codecs used within them in our comprehensive [guide to media types and formats on the web](/en-US/docs/Web/Media/Formats). In particular, the article on [media container formats](/en-US/docs/Web/Media/Formats/Containers) is especially helpful when configuring servers to host media properly.
 
-## Handle HTTP 1.1 byte range requests correctly
+## Handle range requests correctly
 
-In order to support seeking and playing back regions of the media that aren't yet downloaded, Firefox uses HTTP 1.1 byte-range requests to retrieve the media from the seek target position.
+In order to support seeking and playing back regions of the media that aren't yet downloaded, you can uses [range requests](/en-US/docs/Web/HTTP/Range_requests) to retrieve the media from the seek target position.
 In addition, it uses byte-range requests to seek to the end of the media (assuming you serve the {{HTTPHeader("Content-Length")}} header) in order to determine the duration of the media.
 
-Your server should accept the {{HTTPHeader("Accept-Ranges")}}`: bytes` HTTP header if it can accept byte-range requests. It must return {{HTTPStatus("206")}}`: Partial content` to all byte range requests; otherwise, browsers can't be sure you actually support byte range requests.
+Your server should accept the {{HTTPHeader("Accept-Ranges")}} header if it can accept range requests.
+It must return {{HTTPStatus("206", "206 Partial Content")}} to all range requests, otherwise browsers can't determine if the server supports range requests.
 Your server must also return `206: Partial Content` for the request `Range: bytes=0-` as well.
 
-For more information, see [HTTP range requests](/en-US/docs/Web/HTTP/Range_requests).
+See [range requests](/en-US/docs/Web/HTTP/Range_requests) for more information.
 
 ## Include regular key frames
 
@@ -49,32 +51,12 @@ By default, [`ffmpeg2theora`](https://gitlab.xiph.org/xiph/ffmpeg2theora) uses o
 
 ## Consider using the preload attribute
 
-The HTML {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements provide the `preload` attribute, which tells the browser to attempt to download the entire media when the page loads. Without `preload`, the browser only downloads enough of the media to display the first video frame, and to determine the media's duration.
+The HTML {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements provide the `preload` attribute, which tells the browser to attempt to download the entire media when the page loads. Without `preload`, the browser downloads enough of the media to display the first video frame, and to determine the media's duration.
 
-`preload` is off by default, so if getting to video is the point of your web page, your users may appreciate it if you include `preload` in your video elements. Using `preload="metadata"` will preload the media file's metadata and possibly the first few frames of video. Setting `payload` to `auto` tells the browser to automatically begin downloading the media as soon as the page is loaded, under the assumption that the user will play it.
+- `preload` is off by default, so if getting to video is the point of your web page, your users may appreciate it if you include `preload` in your video elements.
+- Using `preload="metadata"` will preload the media file's metadata and possibly the first few frames of video. Setting `payload` to `auto` tells the browser to automatically begin downloading the media as soon as the page is loaded, under the assumption that the user will play it.
 
-## Configuration for older Firefox versions
-
-### Serve X-Content-Duration headers
-
-> [!NOTE]
-> As of [Firefox 41](/en-US/docs/Mozilla/Firefox/Releases/41), the `X-Content-Duration` header is no longer supported. See [Firefox bug 1160695](https://bugzil.la/1160695) for more details.
-
-The Ogg format doesn't encapsulate the duration of media, so for the progress bar on the video controls to display the duration of the video, Gecko needs to determine the length of the media using other means.
-
-There are two ways Gecko can do this. The best way is to offer an `X-Content-Duration` header when serving Ogg media files. This header provides the duration of the video in seconds (**not** in HH:MM:SS format) as a floating-point value.
-
-For example, if the video is 1 minute and 32.6 seconds long, this header would be:
-
-```http
-X-Content-Duration: 92.6
-```
-
-If your server provides the `X-Content-Duration` header when serving Ogg media, Gecko doesn't have to do any extra HTTP requests to seek to the end of the file to calculate its duration. This makes the entire process much more efficient as well as more accurate.
-
-As an inferior alternative, Gecko can estimate the video length based on the Content-Length. See next point.
-
-### Don't use HTTP compression for media files
+## Don't use HTTP compression for Ogg media
 
 One common way to reduce the load on a web server is to use [gzip or deflate compression](https://betterexplained.com/articles/how-to-optimize-your-site-with-gzip-compression/) when serving to a supporting web browser.
 
@@ -82,11 +64,11 @@ Although it's unlikely, it's possible the browser may advertise that it supports
 
 Another problem with allowing HTTP compression for media streaming: Apache servers don't send the {{HTTPHeader("Content-Length")}} response header if gzip encoding is used.
 
-### Getting the duration of Ogg media
+## Getting the duration of Ogg media
 
 You can use the `oggz-info` tool to get the media duration; this tool is included with the [`oggz-tools`](https://www.xiph.org/oggz/) package. The output from `oggz-info` looks like this:
 
-```plain
+```bash
 $ oggz-info /g/media/bruce_vs_ironman.ogv
 Content-Duration: 00:01:00.046
 
@@ -107,7 +89,9 @@ Vorbis: serialno 0708996688
         Audio-Channels: 2
 ```
 
-Note that you can't serve up the reported Content-Duration line reported by `oggz-info`, because it's reported in HH:MM:SS format. You'll need to convert it to seconds only, then serve that as your `X-Content-Duration` value. Just parse out the HH, MM, and SS into numbers, then do (HH\*3600)+(MM\*60)+SS to get the value you should report.
+Note that you can't serve up the reported Content-Duration line reported by `oggz-info`, because it's reported in `HH:MM:SS` format.
+You'll need to convert it to seconds, then serve that as your `X-Content-Duration` value.
+You can do this by parsing the `HH`, `MM`, and `SS` segments, then convert to `(HH * 3600) + (MM * 60) + SS` as the value you should report.
 
 It's important to note that it appears that `oggz-info` makes a read pass of the media in order to calculate its duration, so it's a good idea to store the duration value in order to avoid lengthy delays while the value is calculated for every HTTP request of your Ogg media.
 
