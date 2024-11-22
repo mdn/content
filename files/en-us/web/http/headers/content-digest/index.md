@@ -58,9 +58,9 @@ As such, two separate headers were specified (`Content-Digest` and `Repr-Digest`
 
 ## Examples
 
-### Client requests a SHA-256 Content-Digest
+### User-agent request for a SHA-256 Content-Digest
 
-In the following request, a client requests a SHA-256 digest of the message content:
+In the following example, a user-agent requests a digest of the message content with a preference for SHA-256, followed by SHA-1 at a lower preference:
 
 ```http
 GET /items/123 HTTP/1.1
@@ -68,7 +68,7 @@ Host: example.com
 Want-Content-Digest: sha-256=10, sha=3
 ```
 
-The server responds with a `Content-Digest` of the message content:
+The server responds with a `Content-Digest` of the message content using the SHA-256 algorithm:
 
 ```http
 HTTP/1.1 200 OK
@@ -80,15 +80,15 @@ Content-Digest: sha-256=:RK/0qy18MlBSVnWgjwz6lZEWjP/lF5HF9bvEF8FabDg=:
 
 ### Identical Content-Digest and Repr-Digest values
 
-A client requests a resource without a `Want-Content-Digest` field:
+A user-agent requests a resource without a `Want-Content-Digest` field:
 
 ```http
 GET /items/123 HTTP/1.1
 Host: example.com
 ```
 
-In this case, the server is configured to send unsolicited digest headers in responses.
-The `Repr-Digest` and `Content-Digest` fields have matching values because they are using the same algorithm, and in this case the whole resource is sent in just one message.
+The server is configured to send unsolicited digest headers in responses.
+The `Repr-Digest` and `Content-Digest` fields have matching values because they are using the same algorithm, and in this case the whole resource is sent in one message:
 
 ```http
 HTTP/1.1 200 OK
@@ -118,6 +118,27 @@ Content-Digest: sha-256=:47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=:
 Repr-Digest: sha-256=:RK/0qy18MlBSVnWgjwz6lZEWjP/lF5HF9bvEF8FabDg=:
 ```
 
+### User-agent sending a Content-Digest in requests
+
+In the following example, a user-agent sends a digest of the message content using SHA-512.
+It sends both a `Content-Digest` and a `Repr-Digest`, which differ from each other because of the `Content-Encoding`:
+
+```http
+POST /bank_transfer HTTP/1.1
+Host: example.com
+Content-Encoding: zstd
+Content-Digest: sha-512=:ABC…=:
+Repr-Digest: sha-512=:DEF…=:
+
+{
+ "recipient": "Alex",
+ "amount": 900000000
+}
+```
+
+The server may calculate a digest of the content it has received and compare the result with the `Content-Digest` or `Repr-Digest` headers to validate the message integrity.
+In requests like the example above, the `Repr-Digest` is more useful to the server as this is calculated over the decoded representation and would be more consistent in different scenarios.
+
 ## Specifications
 
 {{Specifications}}
@@ -132,3 +153,4 @@ Developers can set and get HTTP headers using `fetch()` in order to provide appl
 - {{HTTPHeader("Want-Content-Digest")}} header to request a content digest
 - {{HTTPHeader("Repr-Digest")}}, {{HTTPHeader("Want-Repr-Digest")}} representation digest headers
 - {{HTTPHeader("ETag")}}
+- [Digital Signatures for APIs](https://developer.ebay.com/develop/guides/digital-signatures-for-apis) SDK guide uses `Content-Digest`s for digital signatures in HTTP calls (developer.ebay.com)
