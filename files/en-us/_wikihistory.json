@@ -23275,10 +23275,6 @@
     "modified": "2020-10-15T22:15:39.291Z",
     "contributors": ["sideshowbarker", "mfuji09", "jpmedley"]
   },
-  "Web/API/CSS_Counter_Styles": {
-    "modified": "2020-10-15T21:49:22.666Z",
-    "contributors": ["wbamberg", "fscholz", "Sebastianz"]
-  },
   "Web/API/CSS_Font_Loading_API": {
     "modified": "2020-12-13T22:13:07.232Z",
     "contributors": [
@@ -37642,16 +37638,6 @@
       "fscholz",
       "rileym7",
       "chharvey"
-    ]
-  },
-  "Web/API/HTMLDetailsElement/toggle_event": {
-    "modified": "2020-10-15T22:11:35.633Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "chrisdavidmills",
-      "mfluehr",
-      "Claas"
     ]
   },
   "Web/API/HTMLDialogElement": {
@@ -99011,17 +98997,6 @@
   "Web/HTTP/Headers/Accept-CH": {
     "modified": "2020-10-15T22:23:14.705Z",
     "contributors": ["j9t", "Malvoz", "bershanskiy"]
-  },
-  "Web/HTTP/Headers/Accept-Charset": {
-    "modified": "2020-10-15T21:48:48.975Z",
-    "contributors": [
-      "mfuji09",
-      "Tigt",
-      "fscholz",
-      "ottaviano",
-      "Minstel",
-      "teoli"
-    ]
   },
   "Web/HTTP/Headers/Accept-Encoding": {
     "modified": "2020-12-04T01:30:23.076Z",

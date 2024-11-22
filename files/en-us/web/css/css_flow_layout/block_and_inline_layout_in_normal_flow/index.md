@@ -48,7 +48,7 @@ As defined in the specification, the margins between two block boxes are what cr
   <p>
     Before that night—a memorable night, as it was to prove—hundreds of millions
     of people had watched the rising smoke-wreaths of their fires without
-    drawing any special inspiration from the fact.”
+    drawing any special inspiration from the fact.
   </p>
 </div>
 ```
@@ -76,7 +76,7 @@ If we set margins on the paragraph element to `0` then the borders will touch.
   <p>
     Before that night—a memorable night, as it was to prove—hundreds of millions
     of people had watched the rising smoke-wreaths of their fires without
-    drawing any special inspiration from the fact.”
+    drawing any special inspiration from the fact.
   </p>
 </div>
 ```
@@ -105,7 +105,7 @@ By default block elements will consume all of the space in the inline direction,
   <p>
     Before that night—a memorable night, as it was to prove—hundreds of millions
     of people had watched the rising smoke-wreaths of their fires without
-    drawing any special inspiration from the fact.”
+    drawing any special inspiration from the fact.
   </p>
 </div>
 ```
@@ -138,7 +138,7 @@ In the example below, the paragraphs have a top margin of `20px` and a bottom ma
   <p>
     Before that night—a memorable night, as it was to prove—hundreds of millions
     of people had watched the rising smoke-wreaths of their fires without
-    drawing any special inspiration from the fact.”
+    drawing any special inspiration from the fact.
   </p>
 </div>
 ```
@@ -169,7 +169,7 @@ In the following example, we have three inline boxes created by a paragraph with
 <p>
   Before that night—<strong>a memorable night</strong>, as it was to
   prove—hundreds of millions of people had watched the rising smoke-wreaths of
-  their fires without drawing any special inspiration from the fact.”
+  their fires without drawing any special inspiration from the fact.
 </p>
 ```
 
@@ -183,7 +183,7 @@ The line box size in the block direction (so the height when working in English)
 <p>
   Before that night—<strong>a memorable night</strong>, as it was to
   prove—hundreds of millions of people had watched the rising smoke-wreaths of
-  their fires without drawing any special inspiration from the fact.”
+  their fires without drawing any special inspiration from the fact.
 </p>
 ```
 
@@ -241,7 +241,7 @@ Browsers display items in block or inline formatting contexts based on what norm
 <p>
   Before that night—<strong>a memorable night</strong>, as it was to
   prove—hundreds of millions of people had watched the rising smoke-wreaths of
-  their fires without drawing any special inspiration from the fact.”
+  their fires without drawing any special inspiration from the fact.
 </p>
 ```
 

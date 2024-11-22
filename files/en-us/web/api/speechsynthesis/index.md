@@ -47,7 +47,7 @@ Listen to this event using [`addEventListener()`](/en-US/docs/Web/API/EventTarge
 
 ## Examples
 
-First, a simple example:
+First, an example:
 
 ```js
 let utterance = new SpeechSynthesisUtterance("Hello world!");

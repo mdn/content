@@ -36,13 +36,14 @@ Together with the {{CSSxRef("@media")}} features {{cssxref("@media/prefers-color
   - {{cssxref("color")}}
   - {{cssxref("color-scheme")}}
   - {{cssxref("column-rule-color")}}
-  - [`fill`](/en-US/docs/Web/SVG/Attribute/fill)
-  - [`flood-color`](/en-US/docs/Web/SVG/Attribute/flood-color)
-  - [`lighting-color`](/en-US/docs/Web/SVG/Attribute/lighting-color)
+  - {{cssxref("fill")}}
+  - {{cssxref("flood-color")}}
+  - {{cssxref("flood-opacity")}}
+  - {{cssxref("lighting-color")}}
   - {{cssxref("outline-color")}}
   - {{cssxref("scrollbar-color")}}
-  - [`stop-color`](/en-US/docs/Web/SVG/Attribute/stop-color)
-  - [`stroke`](/en-US/docs/Web/SVG/Attribute/stroke)
+  - {{cssxref("stop-color")}}
+  - {{cssxref("stroke")}}
   - {{cssxref("text-decoration-color")}}
   - {{cssxref("text-emphasis-color")}}
   - {{cssxref("text-shadow")}}

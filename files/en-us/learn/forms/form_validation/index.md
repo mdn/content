@@ -454,7 +454,7 @@ These automated messages have two drawbacks:
 ![Example of an error message with Firefox in French on an English page](error-firefox-win7.png)
 
 Customizing these error messages is one of the most common use cases of the Constraint Validation API.
-Let's work through a simple example of how to do this.
+Let's work through an example of how to do this.
 
 We'll start with some HTML (feel free to put this in a blank HTML file; use a fresh copy of [fruit-start.html](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-start.html) as a basis, if you like):
 

@@ -62,4 +62,4 @@ During a view transition, `::view-transition-image-pair` has {{cssxref("isolatio
 ## See also
 
 - [View Transitions API](/en-US/docs/Web/API/View_Transitions_API)
-- [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/)
+- [Smooth transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/)
