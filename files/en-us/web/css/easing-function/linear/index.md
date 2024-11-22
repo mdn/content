@@ -27,7 +27,7 @@ The function accepts two or more of the following values, which represent progre
 
   - : Represents a point in time along the duration of the animation or transition.
     At least two values must be specified.
-    The value `0` represents the start of the iteration, and `1` represents the end.
+    The value `0` represents the start of the transition, and `1` represents the end.
     Values outside the `0` to `1` range are also allowed.
 
 - {{cssxref("&lt;percentage&gt;")}} {{optional_inline}}
