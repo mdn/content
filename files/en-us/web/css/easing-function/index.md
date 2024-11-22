@@ -53,7 +53,7 @@ An `<easing-function>` can be one of the following types:
         This keyword value is equivalent to `linear(0, 1)`.
         It can also be represented as `cubic-bezier(0, 0, 1, 1)`.
 
-        ![Graph of "Input progress" to "Output progress" showing a line extending from the origin to (1, 1).](linear.svg)
+        ![Graph of Input progress to Output progress showing a line extending from the origin to (1, 1).](linear.svg)
 
         > [!NOTE]
         > The `linear` keyword is always interpreted as `linear(0, 1)`, whereas the function `linear(0, 1)` is interpreted as `linear(0 0%, 1 100%)`.
@@ -87,7 +87,7 @@ An `<easing-function>` can be one of the following types:
         It indicates that the interpolation starts slowly, speeds up, and then slows down towards the end.
         At the beginning, it behaves like the `ease-in` keyword; at the end, it is like the `ease-out` keyword.
 
-        ![Graphs of "Input progress" to "Output progress", of which "ease" shows a curved line quickly rising from the origin to (1, 1); "ease-in" shows a shallow curved line from the origin that straightens out as it approaches (1, 1); "ease-out" shows a straight diagonal line that slightly curves as it gets close to (1, 1); and "ease-in-out" shows a symmetrical, "S"-shaped line curving from the origin to (1, 1).](ease.svg)
+        ![Graphs of Input progress to Output progress, of which ease shows a curved line quickly rising from the origin to (1, 1); ease-in shows a shallow curved line from the origin that straightens out as it approaches (1, 1); ease-out shows a straight diagonal line that slightly curves as it gets close to (1, 1); and ease-in-out shows a symmetrical, S-shaped line curving from the origin to (1, 1).](ease.svg)
 
     - {{cssxref("easing-function/cubic-bezier", "cubic-bezier()")}}
 
@@ -109,7 +109,7 @@ An `<easing-function>` can be one of the following types:
       - : Represents the easing function `steps(1, jump-end)` or `steps(1, end)`.
         It indicates that the interpolation stays in its initial state until the end, at which point it jumps directly to its final state.
 
-        ![Two graphs of "Input progress" to "Output progress". In the "step-start" graph, an unfilled circle represents the origin point (0,0), with a horizontal line extending from (0, 1) to (1, 1). In the "step-end" graph, a horizontal line extends from the origin to (1, 0), with an unfilled circle at (1,0) and a solid circle at (1, 1).](step.svg)
+        ![Two graphs of Input progress to Output progress. In the step-start graph, an unfilled circle represents the origin point (0, 0), with a horizontal line extending from (0, 1) to (1, 1). In the step-end graph, a horizontal line extends from the origin to (1, 0), with an unfilled circle at (1,0) and a solid circle at (1, 1).](step.svg)
 
     - {{cssxref("easing-function/steps", "steps()")}}
       - : Creates a stair-shaped curve using an {{cssxref("&lt;integer&gt;")}} to specify the number of intervals and an optional optional keyword to control the timing of jumps.

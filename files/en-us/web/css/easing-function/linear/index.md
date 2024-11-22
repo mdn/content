@@ -46,7 +46,7 @@ For example, `linear(0, 0.25, 1)` has linear stops of `0`, `0.25`, and `1`.
 The animation starts at point `0`, moves linearly to `0.25`, and then continues linearly to point `1`.
 Since no percentage is specified, the same duration (`50%`) is used for each segment, that is, from `0` to `0.25` and from `0.25` to `1`.
 
-![Graphs of "Input progress" to "Output progress", of which "linear(0, 0.25, 1)" shows a broken line connecting the origin, (0.5, 0.25), and (1, 1); and "linear(0, 0.25 75%, 1)" shows a broken line connecting the origin, (0.75, 0.25), and (1, 1).](linear_function.svg)
+![Graphs of Input progress to Output progress, of which linear(0, 0.25, 1) shows a broken line connecting the origin, (0.5, 0.25), and (1, 1); and linear(0, 0.25 75%, 1) shows a broken line connecting the origin, (0.75, 0.25), and (1, 1).](linear_function.svg)
 
 By default, the stops are equidistant. For example, if there are five stops, they will occur at 0%, 25%, 50%, 75%, and 100% of the duration. You can use optional percentage values to provide finer control, defining when each progress value should occur and allowing for a more controlled progression of the transition.
 

@@ -45,15 +45,15 @@ The function accepts the following four parameters, which represent the coordina
 The cubic Bézier functions, often called "smooth" easing functions, correlate an input progress to an output progress, both expressed as {{cssxref("&lt;number&gt;")}}s, where `0.0` represents the initial state and `1.0` represents the final state.
 If the cubic Bézier curve is invalid, CSS ignores the whole property.
 
-A cubic Bézier curve is defined by four points: P0, P1, P2, and P3. The points P0 and P3 represent the start and the end of the curve. In CSS, P0 is fixed at `(0, 0)` and P3 is fixed at `(1, 1)`, while P1 and P2 are defined by the function parameters `(<x1>, <y1>)` and `(<x2>, <y2>)` respectively. The x-axis represents input progress and the y-axis represents output progress.
+A cubic Bézier curve is defined by four points: P0, P1, P2, and P3. The points P0 and P3 represent the start and the end of the curve. In CSS, the start point P0 is fixed at `(0, 0)` and the end point P3 is fixed at `(1, 1)`, while intermediate points P1 and P2 are defined by the function parameters `(<x1>, <y1>)` and `(<x2>, <y2>)` respectively. The x-axis represents input progress and the y-axis represents output progress.
 
-![Graph of "Input progress" to "Output progress" showing an "S"-shaped line curving from the origin to (1, 1) with the Bezier control points P1(0.1, 0.6) and P2(0.7, 0.2).](cubic-bezier.svg)
+![Graph of Input progress to Output progress showing an S-shaped line curving from the origin to (1, 1) with the Bezier control points P1(0.1, 0.6) and P2(0.7, 0.2).](cubic-bezier.svg)
 
 Not all cubic Bézier curves are suitable as easing functions because not all are [mathematical functions](https://en.wikipedia.org/wiki/Function_%28mathematics%29); i.e., curves that for a given x-axis coordinate have zero or one value. With P0 and P3 fixed as defined by CSS, a cubic Bézier curve is a function, and is therefore valid, if and only if the x-axis coordinates of P1 and P2 are both in the `[0, 1]` range.
 
-Cubic Bézier curves with the P1 or P2 ordinate outside the `[0, 1]` range can cause the value to go farther than the final state and then return. In animations, for some properties, such as {{cssxref("left")}} or {{cssxref("right")}}, this creates a kind of "bouncing" effect.
+Cubic Bézier curves with the P1 or P2 ordinate outside the `[0, 1]` range can cause the value to go farther than the final state and then return. In animations, this creates a kind of "bouncing" effect.
 
-![Graphs of the easing function "cubic-bezier(0.3, 0.2, 0.2, 1.4)", one of which shows the output progress going above 1 starting from a certain input progress, the other shows the output progress reaching and then staying at 1.](cubic-bezier_out_of_range.svg)
+![Graphs of the easing function cubic-bezier(0.3, 0.2, 0.2, 1.4), one of which shows the output progress going above 1 starting from a certain input progress, the other shows the output progress reaching and then staying at 1.](cubic-bezier_out_of_range.svg)
 
 However, certain properties will restrict the output if it goes outside an allowable range. For example, a color component greater than `255` or smaller than `0` in {{CSSXref("color_value/rgb", "rgb()")}} will be clipped to the closest allowed value (`255` and `0`, respectively). Some `cubic-bezier()` values exhibit this property.
 
@@ -62,6 +62,47 @@ However, certain properties will restrict the output if it goes outside an allow
 {{csssyntax}}
 
 ## Examples
+
+### Bouncing effect
+
+In this example, the red ball bounces out of the box when transitioned from its original position. This is because one of the P2 values, `2.3`, goes beyond the `[0, 1]` range.
+
+```html hidden
+<div tabindex="0">
+    <span></span>
+</div>
+```
+
+```css hidden
+div {
+  margin: 8px auto;
+  padding: 8px;
+  width: 256px;
+  border-radius: 40px;
+  background-color: wheat;
+}
+
+span {
+  display: block;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background:  tomato;
+}
+
+div:hover span,
+div:focus span {
+  translate: 192px 0;
+}
+```
+
+```css
+span {
+  transition: translate 0.3s cubic-bezier(0.3, 0.8, 0.3, 2.3);
+}
+```
+
+{{EmbedLiveSample("Bouncing effect")}}
 
 ### Using the cubic-bezier() function
 
