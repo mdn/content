@@ -34,7 +34,8 @@ The `start_url` manifest member is used to specify the URL that should be opened
 
     If `start_url` is unspecified or the value is invalid (i.e., not a string, not a valid URL, or not same-origin with the page that links to the manifest), the URL of the page that links to the manifest is used.
 
-    If [`scope`](/en-US/docs/Web/Manifest/scope) is not specified in the manifest or `start_url` is not within the specified `scope`, the effective scope will be set to the `start_url` value after removing its filename, query, and fragment.
+    > [!NOTE]
+    > If [`scope`](/en-US/docs/Web/Manifest/scope) is not specified in the manifest it will be inferred from the `start_url` (or effective `start_url` if the value is undefined or invalid).
 
 ## Description
 

@@ -96,7 +96,11 @@ The `scope` is invalid if `start_url` is not a subset of the `scope` URL. For ex
 - **Valid**: `scope` is `/app/`, and `start_url` is `/app/home.html`.
 - **Invalid**: `scope` is `/app/`, and `start_url` is `/index.html`.
 
-If `scope` is missing or invalid, it defaults to the `start_url` value after removing its filename, query, and fragment. For example:
+If `scope` is missing or invalid, it defaults to the `start_url` value after removing its filename, query, and fragment.
+Note that if the `start_url` is also undefined (or invalid) it defaults to the page that links to the manifest.
+This ensures that by default the scope will start from the page that triggered installation.
+
+For example:
 
 - If `start_url` is `https://example.com/app/index.html?user=123#home`, the scope will be `https://example.com/app/`.
 - If `start_url` is `/pages/welcome.html`, the scope will be `/pages/` on the same origin.
