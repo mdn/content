@@ -88,7 +88,7 @@ Host: example.com
 ```
 
 In this case, the server is configured to send unsolicited digest headers in responses.
-Both the `Repr-Digest` and `Content-Digest` fields have matching values:
+The `Repr-Digest` and `Content-Digest` fields have matching values because they are using the same algorithm, and in this case the whole resource is sent in just one message.
 
 ```http
 HTTP/1.1 200 OK
