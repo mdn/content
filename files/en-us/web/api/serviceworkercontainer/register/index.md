@@ -14,7 +14,7 @@ If successful, the registration associates the provided script URL to a _scope_,
 A single registration is created for each unique scope.
 If `register()` is called for a scope that has an existing registration, the registration is updated with any changes to the scriptURL or options.
 If there are no changes, then the existing registration is returned.
-Note that the service worker is installed only on the first registration of a particular scriptURL.
+Note that calling `register()` with the same scope and `scriptURL` does not restart the installation process.
 You can therefore call this method unconditionally from a controlled page: you don't need to first check whether there's an active registration or service worker.
 
 A document can potentially be within the scope of several registrations with different service workers and options.
@@ -85,7 +85,7 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("ServiceWorkerRegistratio
 
   - : The `scriptURL` or `scope URL` is a failure.
     This can happen if the URL can't be resolved to a valid URL or uses a scheme that is not `http:` or `https`.
-    For `scriptURL` it may also happen because the URL cannot be validated using the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API).
+    It may also happen if `scriptURL` is not a {{domxref("TrustedScriptURL")}}, and this is a requirement of the site's [Trusted Types Policy](/en-US/docs/Web/API/Trusted_Types_API).
 
     The exception is also raised if the `scriptURL` or `scope URL` path contains the case-insensitive ASCII "%2f" (`*`) or "%5c" (`=`)
 
