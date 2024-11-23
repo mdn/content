@@ -26,7 +26,10 @@ The following WGSL language extensions are defined at [WGSL language extensions]
 
   - : Allows **DP4a** (Dot Product of 4 Elements and Accumulate) GPU instructions to be used via your WGSL code. These efficiently perform 8-bit integer dot products to accelerate computation, saving memory and network bandwidth and improving performance compared with the equivalent `f32` versions. They are commonly used in machine learning models in inferencing, within AI frameworks.
 
-    Specifically, when `packed_4x8_integer_dot_product` is available, WGSL code can use 32-bit integer scalars packing 4-component vectors of 8-bit integers to be used as inputs to dot product instructions (via the `dot4U8Packed()` and `dot4I8Packed()` built-in functions), and use packing and unpacking instructions with packed 4-component vectors of 8-bit integers (via built-in functions such as `pack4xI8()` and `pack4xI8Clamp()`).
+    Specifically, when `packed_4x8_integer_dot_product` is available, WGSL code can use:
+
+    - 32-bit integer scalars packing 4-component vectors of 8-bit integers to be used as inputs to dot product instructions (via the `dot4U8Packed()` and `dot4I8Packed()` built-in functions).
+    - Packing and unpacking instructions with packed 4-component vectors of 8-bit integers (via built-in functions such as `pack4xI8()` and `pack4xI8Clamp()`).
 
 - `readonly_and_readwrite_storage_textures`
 
