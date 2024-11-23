@@ -88,6 +88,10 @@ User agents handle white space collapsing as follows:
 <h2 class="preserve-breaks">In this case only
   the   line breaks  are  preserved
   in    the          heading       .</h2>
+
+<h2 class="preserve-spaces">In this case only
+  the   spaces       are  preserved
+  in    the          heading       .</h2>
 ```
 <!-- prettier-ignore-end -->
 
@@ -104,6 +108,10 @@ User agents handle white space collapsing as follows:
 
 .preserve-breaks {
   white-space-collapse: preserve-breaks;
+}
+
+.preserve-spaces {
+  white-space-collapse: preserve-spaces;
 }
 
 h2 {
