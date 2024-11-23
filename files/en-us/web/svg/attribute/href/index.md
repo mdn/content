@@ -189,7 +189,7 @@ svg {
 
 {{EmbedLiveSample("image", 200, 250)}}
 
-### linearGradient
+### linearGradient/radialGradient
 
 For {{SVGElement("linearGradient")}} or {{SVGElement("radialGradient")}}, `href` defines URL referring to a template gradient element; to be valid, the reference must be to a different `<linearGradient>` or `<radialGradient>` element.
 
