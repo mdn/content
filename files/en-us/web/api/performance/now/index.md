@@ -92,7 +92,7 @@ Cross-Origin-Embedder-Policy: require-corp
 
 Also, the {{HTTPHeader("Permissions-Policy")}} header's {{HTTPHeader("Permissions-Policy/cross-origin-isolated","cross-origin-isolated")}} directive must not block the use of this feature for the current origin.
 
-These headers ensure a top-level document does not share a browsing context group with
+These headers and permission-policy ensure a top-level document does not share a browsing context group with
 cross-origin documents. COOP process-isolates your document and potential attackers
 can't access to your global object if they were opening it in a popup, preventing a set
 of cross-origin attacks dubbed [XS-Leaks](https://github.com/xsleaks/xsleaks).
