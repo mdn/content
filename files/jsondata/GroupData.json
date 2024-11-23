@@ -1356,6 +1356,21 @@
       ],
       "events": []
     },
+    "Screen Capture extensions": {
+      "overview": ["Screen Capture extensions"],
+      "guides": [
+        "/docs/Web/API/Screen_Capture_extensions/Element_Capture",
+        "/docs/Web/API/Screen_Capture_extensions/Region_Capture"
+      ],
+      "interfaces": [
+        "BrowserCaptureMediaStreamTrack",
+        "CropTarget",
+        "RestrictionTarget"
+      ],
+      "methods": ["MediaDevices.getDisplayMedia()"],
+      "properties": [],
+      "events": []
+    },
     "Screen Orientation API": {
       "overview": ["Screen Orientation API"],
       "guides": ["/docs/Web/API/CSS_Object_Model/Managing_screen_orientation"],
