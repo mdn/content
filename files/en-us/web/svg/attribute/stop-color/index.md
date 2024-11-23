@@ -40,7 +40,7 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-- `<color>`
+- [`<color>`](/en-US/docs/Web/SVG/Content_type#color)
   - : This value indicates a color value.
 
 ## Specifications
