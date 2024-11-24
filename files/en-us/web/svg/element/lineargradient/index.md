@@ -7,7 +7,7 @@ browser-compat: svg.elements.linearGradient
 
 {{SVGRef}}
 
-The **`<linearGradient>`** element lets authors define linear gradients to apply to other SVG elements.
+The **`<linearGradient>`** [SVG](/en-US/docs/Web/SVG) element lets authors define linear gradients to apply to other SVG elements.
 
 ## Example
 
