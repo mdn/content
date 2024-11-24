@@ -6,6 +6,8 @@ page-type: guide
 
 {{DefaultAPISidebar("XMLHttpRequest API")}}
 
+## Receiving binary data
+
 The `responseType` property of the XMLHttpRequest object can be set to change the expected response type from the server. Possible values are the empty string (default), `"arraybuffer"`, `"blob"`, `"document"`, `"json"`, and `"text"`. The `response` property will contain the entity body according to `responseType`, as an `ArrayBuffer`, `Blob`, `Document`, `JSON`, or string. This is `null` if the request is not complete or was not successful.
 
 This example reads an image as a binary file and creates an 8-bit unsigned integer array from the raw bytes. Note that this will not decode the image and read the pixels. You will need a [png decoding library](https://github.com/foliojs/png.js) for that.
@@ -43,33 +45,6 @@ req.onload = (event) => {
 req.send();
 ```
 
-## Receiving binary data in older browsers
-
-The `loadBinaryResource()` function shown below loads binary data from the specified URL, returning it to the caller.
-
-```js
-function loadBinaryResource(url) {
-  const req = new XMLHttpRequest();
-  req.open("GET", url, false);
-
-  // XHR binary charset opt by Marcus Granado 2006 [http://mgran.blogspot.com]
-  req.overrideMimeType("text/plain; charset=x-user-defined");
-  req.send(null);
-  return req.status === 200 ? req.responseText : "";
-}
-```
-
-The magic happens in the `overrideMimeType` function, which forces the browser to treat it as plain text, using a user-defined character set. This tells the browser not to parse it, and to let the bytes pass through unprocessed.
-
-```js
-const fileStream = loadBinaryResource(url);
-const lowestByte = fileStream.charCodeAt(x) & 0xff; // throw away high-order byte (f7)
-```
-
-The example above fetches the byte at offset `x` within the loaded binary data. The valid range for `x` is from 0 to `fileStream.length-1`.
-
-See [downloading binary streams with XMLHttpRequest](https://web.archive.org/web/20071103070418/http://mgran.blogspot.com/2006/08/downloading-binary-streams-with.html) for a detailed explanation.
-
 ## Sending binary data
 
 The `send` method of the XMLHttpRequest has been extended to enable easy transmission of binary data by accepting an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), {{domxref("Blob")}}, or {{domxref("File")}} object.
@@ -106,3 +81,7 @@ This is building a 512-byte array of 8-bit integers and sending it; you can use 
 ## Submitting forms and uploading files
 
 See [`FormData`](/en-US/docs/Web/API/FormData).
+
+## See also
+
+- [Downloading Binary Streams with Javascript XMLHttpRequest](https://web.archive.org/web/20071103070418/http://mgran.blogspot.com/2006/08/downloading-binary-streams-with.html) — explanation of receiving binary data in older browsers.
