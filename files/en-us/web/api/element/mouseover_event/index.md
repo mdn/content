@@ -10,6 +10,8 @@ browser-compat: api.Element.mouseover_event
 
 The **`mouseover`** event is fired at an {{domxref("Element")}} when a pointing device (such as a mouse or trackpad) is used to move the cursor onto the element or one of its child elements.
 
+If the target element has elements inside, `mouseover` and `mouseout` events will fire as the mouse moves over the boundaries of these elemenets. For instance, `mouseout` will fire on the parent as the mouse moves into one of the child elements, because the mouse is not directly over the parent anymore. Because it gets complicated, usually everybody listens for `mouseenter` and `mouseleave` events instead, because those events don't have that problem. `mouseout` and `mouseover` were standardized first, before developers realized this problem. Years later, the enter and leave events were added to the dom. Out and over events still work, but are rarely used.
+
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.

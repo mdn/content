@@ -13,6 +13,9 @@ The **`mousedown`** event is fired at an {{domxref("Element")}} when a pointing 
 > [!NOTE]
 > This differs from the {{domxref("Element/click_event", "click")}} event in that `click` is fired after a full click action occurs; that is, the mouse button is pressed and released while the pointer remains inside the same element. `mousedown` is fired the moment the button is initially pressed.
 
+> [!NOTE]
+> This behavior is different from {{domxref("Element/pointerdown_event", "pointerdown")}} events. MouseDown events fire whenever any button on a mouse is pressed down. `pointerdown` events fire only upon the first button press; subsequent button presses don't fire `pointerdown` events.
+
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
