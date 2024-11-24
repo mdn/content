@@ -10,6 +10,9 @@ browser-compat: api.Element.pointerup_event
 
 The `pointerup` event is fired when a pointer is no longer active. Remember that it is possible to get a [`pointercancel`](/en-US/docs/Web/API/Element/pointercancel_event) event instead.
 
+> [!NOTE]
+> This behavior is different from {{domxref("Element/mouseup_event", "mouseup")}} events. `mouseup` events fire whenever any button on a mouse is released. `pointerup` events fire only upon the last button release; previous button releases, while other buttons are held down, don't fire `pointerup` events.
+
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
