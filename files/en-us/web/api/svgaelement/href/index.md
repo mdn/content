@@ -8,7 +8,7 @@ browser-compat: api.SVGAElement.href
 
 {{APIRef("SVG")}}
 
-The **`SVGAElement.href`** read-only property of the {{domxref("SVGAElement")}} returns an {{domxref("SVGAnimatedString")}} object reflecting the value of the href attribute, and, in certain cases, the {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute. It specifies the target URI associated with the link.
+The **`href`** read-only property of the {{domxref("SVGAElement")}} returns an {{domxref("SVGAnimatedString")}} object reflecting the value of the href attribute, and, in certain cases, the {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute. It specifies the target URI associated with the link.
 
 This property enables access to the URI set for a link within an SVG document.
 
