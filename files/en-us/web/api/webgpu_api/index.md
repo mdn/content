@@ -321,7 +321,8 @@ The app follows a similar structure to the basic rendering demo. We create a {{d
 
 ```js
 // Define global buffer size
-const BUFFER_SIZE = 1000;
+const NUM_ELEMENTS = 1000;
+const BUFFER_SIZE = NUM_ELEMENTS * 4; // Buffer size, in bytes
 
 const shader = `
 @group(0) @binding(0)
@@ -336,7 +337,7 @@ fn main(
   local_id : vec3u,
 ) {
   // Avoid accessing the buffer out of bounds
-  if (global_id.x >= ${BUFFER_SIZE}) {
+  if (global_id.x >= ${NUM_ELEMENTS}) {
     return;
   }
 
@@ -431,7 +432,7 @@ We then signal the end of the render pass command list using {{domxref("GPURende
 ```js
 passEncoder.setPipeline(computePipeline);
 passEncoder.setBindGroup(0, bindGroup);
-passEncoder.dispatchWorkgroups(Math.ceil(BUFFER_SIZE / 64));
+passEncoder.dispatchWorkgroups(Math.ceil(NUM_ELEMENTS / 64));
 
 passEncoder.end();
 ```
@@ -447,7 +448,7 @@ commandEncoder.copyBufferToBuffer(
   0, // Source offset
   stagingBuffer,
   0, // Destination offset
-  BUFFER_SIZE,
+  BUFFER_SIZE, // Length, in bytes
 );
 
 // End frame by passing array of command buffers to command queue for execution
@@ -461,7 +462,7 @@ Once the output data is available in the `stagingBuffer`, we use the {{domxref("
 await stagingBuffer.mapAsync(
   GPUMapMode.READ,
   0, // Offset
-  BUFFER_SIZE, // Length
+  BUFFER_SIZE, // Length, in bytes
 );
 
 const copyArrayBuffer = stagingBuffer.getMappedRange(0, BUFFER_SIZE);
