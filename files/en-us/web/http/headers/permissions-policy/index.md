@@ -107,7 +107,7 @@ You can specify
 
 - {{httpheader('Permissions-Policy/cross-origin-isolated','cross-origin-isolated')}} {{Experimental_Inline}}
 
-  - : Controls whether the current document is allowed to be {{domxref("Window.crossOriginIsolated", "cross-origin isolated", "", 1)}}.
+  - : Controls whether the current document is treated as {{domxref("Window.crossOriginIsolated", "cross-origin isolated", "", 1)}}.
 
 - {{HTTPHeader('Permissions-Policy/display-capture', 'display-capture')}} {{experimental_inline}}
 
