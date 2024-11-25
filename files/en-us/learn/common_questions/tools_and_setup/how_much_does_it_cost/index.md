@@ -46,7 +46,7 @@ When launching a website, you may spend nothing, or your costs may go through th
 
 You likely have a text editor: such as, Notepad on Windows, Gedit on Linux, TextEdit on Mac. You'll have an easier time writing code if you choose an editor that color-codes, checks your syntax, and assists you with code structure.
 
-Many editors are free, for example [Brackets](https://brackets.io/), [Bluefish](https://bluefish.openoffice.nl/index.html), [TextWrangler](https://www.barebones.com/products/textwrangler/), [Eclipse](https://www.eclipse.org/), [Netbeans](https://netbeans.apache.org/), and [Visual Studio Code](https://code.visualstudio.com/). Some, like [Sublime Text](https://www.sublimetext.com/), you can test as long as you like, but you're encouraged to pay. Some, like [PhpStorm](https://www.jetbrains.com/phpstorm/), can cost between a few dozen and 200 dollars, depending on the plan you purchase. Some of them, like [Microsoft Visual Studio](https://visualstudio.microsoft.com/), can cost hundreds, or thousands of dollars; though Visual Studio Community is free for individual developers or open source projects. Often, for-pay editors will have a trial version.
+Many editors are free, for example [Brackets](https://brackets.io/), [Bluefish](https://bluefish.openoffice.nl/index.html), [TextWrangler](https://www.barebones.com/products/textwrangler/), [Eclipse](https://www.eclipse.org/), [NetBeans](https://netbeans.apache.org/), and [Visual Studio Code](https://code.visualstudio.com/). Some, like [Sublime Text](https://www.sublimetext.com/), you can test as long as you like, but you're encouraged to pay. Some, like [PhpStorm](https://www.jetbrains.com/phpstorm/), can cost between a few dozen and 200 dollars, depending on the plan you purchase. Some of them, like [Microsoft Visual Studio](https://visualstudio.microsoft.com/), can cost hundreds, or thousands of dollars; though Visual Studio Community is free for individual developers or open source projects. Often, for-pay editors will have a trial version.
 
 To start, we suggest trying out several editors, to get a sense of which works best for you. If you're only writing simple {{Glossary("HTML")}}, {{Glossary("CSS")}}, and {{Glossary("JavaScript")}}, go with a simple editor.
 
@@ -54,7 +54,7 @@ Price does not reliably reflect a text editor's quality or usefulness. You have 
 
 ### Image editors
 
-Your system likely includes an image editor, or viewer: Paint on Windows, Eye of Gnome on Ubuntu, Preview on Mac. Those programs are relatively limited, you'll soon want a more robust editor to add layers, effects, and grouping.
+Your system likely includes an image editor, or viewer: Paint on Windows, Eye of GNOME on Ubuntu, Preview on Mac. Those programs are relatively limited, you'll soon want a more robust editor to add layers, effects, and grouping.
 
 Editors can be free ([GIMP](https://www.gimp.org/), [Paint.NET](https://www.getpaint.net/)), moderately expensive ([PaintShop Pro](https://www.paintshoppro.com/), less than $100), or several hundred dollars ([Adobe Photoshop](https://www.adobe.com/products/photoshop.html)).
 
@@ -115,9 +115,9 @@ Your domain name has to be purchased through a domain name provider (a registrar
 
 ### Do-it-yourself hosting vs. "packaged" hosting
 
-When you want to publish a website, you could do everything by yourself: set up a database (if needed), Content Management System, or {{Glossary("CMS")}} (like [Wordpress](https://wordpress.org/), [Dotclear](https://dotclear.org/), [spip](https://www.spip.net/en_rubrique25.html), etc.), upload pre-made or your own templates.
+When you want to publish a website, you could do everything by yourself: set up a database (if needed), Content Management System, or {{Glossary("CMS")}} (like [WordPress](https://wordpress.org/), [Dotclear](https://dotclear.org/), [spip](https://www.spip.net/en_rubrique25.html), etc.), upload pre-made or your own templates.
 
-You could use your hosting provider's environment, for roughly ten to fifteen dollars per month, or subscribe directly to a dedicated hosting service with pre-packaged CMSs (e.g., [Wordpress](https://wordpress.com/), [Tumblr](https://www.tumblr.com/), [Blogger](https://www.blogger.com/)). For the latter, you won't have to pay anything, but you may have less control over templating and other options.
+You could use your hosting provider's environment, for roughly ten to fifteen dollars per month, or subscribe directly to a dedicated hosting service with pre-packaged CMSs (e.g., [WordPress](https://wordpress.com/), [Tumblr](https://www.tumblr.com/), [Blogger](https://www.blogger.com/)). For the latter, you won't have to pay anything, but you may have less control over templating and other options.
 
 ### Free hosting vs. paid hosting
 
