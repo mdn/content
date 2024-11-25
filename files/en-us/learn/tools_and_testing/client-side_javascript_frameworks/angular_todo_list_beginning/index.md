@@ -62,18 +62,15 @@ This to-do application has two components — a component as a foundation for yo
 Each component is made up of a TypeScript class, HTML, and CSS.
 TypeScript transpiles, or converts, into JavaScript, which means that your application ultimately ends up in plain JavaScript but you have the convenience of using TypeScript's extended features and streamlined syntax.
 
-### Dynamically change the UI with @if and @for
+### Control flow with @if and @for blocks
 
-This tutorial also covers two important Angular directives for dynamically altering the structure of the DOM.
-A directive is like a command that you can use in your HTML to affect change in your application.
+This tutorial covers two important Angular [control flow blocks](https://angular.dev/guide/templates/control-flow) which tell the framework when and how your templates should be rendered.
+The first block that this tutorial covers is the [`@for`](https://angular.dev/api/core/@for) block which loops through a collection and repeatedly renders the content of a block.
 
-The first directive that this tutorial covers is Angular's iterator, `@for`.
-`@for` can dynamically create DOM elements based on items in an array.
-
-The second directive that you learn in this tutorial is `@if`.
-You can use `@if` to add or remove elements from the DOM based on a condition.
-For example, if users want to edit an item in the to-do list, you can provide them with the means to edit the item.
-If they do not want to edit an item, you can remove the interface for editing.
+The second block that you learn in this tutorial is [`@if`](https://angular.dev/api/core/@if).
+You can use `@if` to display content based on a condition.
+For example, if a user clicks an "edit" button, you can show elements used to edit an item.
+If a user clicks "cancel", you can remove the elements used for editing.
 
 ### Share data between components
 
@@ -178,11 +175,12 @@ To see the list of items in the browser, replace the contents of `app.component.
 </div>
 ```
 
-The `<li>` wrapped under `@for`, a built-in Angular directive that iterates over the items in the `items` array.
-For each item, `@for` creates a new `<li>`.
+The `<li>` is inside a `@for` block that iterates over the items in the `items` array.
+For each item, a new `<li>` is created.
 The double curly braces that contain `item.description` instructs Angular to populate each `<li>` with the text of each item's description.
 
-The `track` keyword in Angular's `@for` directive helps Angular identify which items in an array have changed, been added, or removed. This makes it easier and faster for Angular to update the DOM when the array is modified.
+The `track` keyword in Angular's `@for` block helps Angular identify which items in an array have changed, been added, or removed.
+This makes it easier and faster for Angular to update the DOM when the array is modified.
 
 In the browser, you should see the list of items as follows:
 

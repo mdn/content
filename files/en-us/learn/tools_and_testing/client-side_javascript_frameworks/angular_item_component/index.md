@@ -121,8 +121,8 @@ Angular uses `\{{item.description}}` to retrieve the description of the current 
 The next section explains how components share data in detail.
 
 The next two buttons for editing and deleting the current item are within a `<div>`.
-On this `<div>` is an `@if`, a built-in Angular directive that you can use to dynamically change the structure of the DOM.
-This `@if` means that if `editable` is `false`, this `<div>` is in the DOM. If `editable` is `true`, Angular removes this `<div>` from the DOM.
+On this `<div>` is an `@if` block that you can use to render parts of a template based on a condition.
+This `@if` means that if `editable` is `false`, this `<div>` is rendered in the template. If `editable` is `true`, Angular removes this `<div>` from the DOM.
 
 ```html
 @if (!editable) {
@@ -209,7 +209,7 @@ import { Item } from "../item";
 
 The addition of `Input`, `Output`, and `EventEmitter` allows `ItemComponent` to share data with `AppComponent`.
 By importing `Item`, the `ItemComponent` can understand what an `item` is.
-You can update the `@Component` to use [`CommonModule`](https://angular.dev/api/common/CommonModule) in `app/item/item.component.ts` so that we can use the `@if` directives:
+You can update the `@Component` to use [`CommonModule`](https://angular.dev/api/common/CommonModule) in `app/item/item.component.ts` so that we can use the `@if` blocks:
 
 ```js
 @Component({
@@ -317,13 +317,13 @@ The `<span>` in the `<h2>` uses an `@if` and `@else` to determine whether the `<
 If there is only a single item in the list, the `<span>` shows "item".
 Otherwise, if the length of the `items` array is anything other than `1`, the `<span>` shows "items".
 
-The `@for` - Angular's repeater directive, used to iterate over all of the items in the `items` array.
-Angular's `@for` like `@if`, is another directive that helps you change the structure of the DOM while writing less code.
+The `@for` - Angular's control flow block, used to iterate over all of the items in the `items` array.
+Angular's `@for` like `@if`, is another block that helps you change the structure of the DOM while writing less code.
 For each `item`, Angular repeats the `<li>` and everything within it, which includes `<app-item>`.
 This means that for each item in the array, Angular creates another instance of `<app-item>`.
 For any number of items in the array, Angular would create that many `<li>` elements.
 
-You can wrap other elements such as `<div>`, `<span`, or `<p>` within an `@for` directive.
+You can wrap other elements such as `<div>`, `<span`, or `<p>` within an `@for` block.
 
 The `AppComponent` has a `remove()` method for removing the item, which is bound to the `remove` property in the `ItemComponent`.
 The `item` property in the square brackets, `[]`, binds the value of `i` between the `AppComponent` and the `ItemComponent`.
