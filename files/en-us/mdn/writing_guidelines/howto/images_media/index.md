@@ -91,6 +91,7 @@ Examples:
 ```
 
 While purely decorative images should have an empty `alt`, images added to MDN documentation should have a purpose, and therefore require a non-empty-string description.
+For hints on alt text, see [An alt Decision Tree](https://www.w3.org/WAI/tutorials/images/decision-tree/) to learn how to use an alt attribute for images in various situations.
 
 ## Compressing images
 

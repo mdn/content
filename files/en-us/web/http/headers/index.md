@@ -84,9 +84,6 @@ For more details, refer to the [Content negotiation article](/en-US/docs/Web/HTT
 
 - {{HTTPHeader("Accept")}}
   - : Informs the server about the {{Glossary("MIME_type", "types")}} of data that can be sent back.
-- {{HTTPHeader("Accept-Charset")}} {{deprecated_inline}}
-  - : Advertises a client's supported {{glossary("character encoding", "character encodings")}}.
-    It is deprecated because {{Glossary("UTF-8")}} has become ubiquitous and use of the header makes client fingerprinting easier.
 - {{HTTPHeader("Accept-Encoding")}}
   - : The encoding algorithm, usually a [compression algorithm](/en-US/docs/Web/HTTP/Compression), that can be used on the resource sent back.
 - {{HTTPHeader("Accept-Language")}}

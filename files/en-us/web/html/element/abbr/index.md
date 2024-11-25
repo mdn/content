@@ -77,7 +77,7 @@ To mark up an abbreviation without providing an expansion or description, use `<
 
 ### Styling abbreviations
 
-You can use CSS to set a custom style to be used for abbreviations, as seen in this simple example.
+You can use CSS to set a custom style to be used for abbreviations, as seen in this basic example.
 
 #### HTML
 

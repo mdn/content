@@ -410,7 +410,7 @@ This example plays a video when activated, providing the user with the browser's
 #### HTML
 
 ```html
-<!-- Simple video example -->
+<!-- Basic video example -->
 <!-- 'Big Buck Bunny' licensed under CC 3.0 by the Blender foundation. Hosted by archive.org -->
 <!-- Poster from peach.blender.org -->
 <video

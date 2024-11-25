@@ -81,7 +81,7 @@ This is the content of my excellent blog post. I hope you enjoy it!
 </form>
 ```
 
-Let's also add some simple CSS:
+Let's also add some CSS:
 
 ```css
 html {

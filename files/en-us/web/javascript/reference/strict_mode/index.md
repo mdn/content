@@ -265,7 +265,7 @@ with (obj) {
 }
 ```
 
-The simple alternative of assigning the object to a short name variable, then accessing the corresponding property on that variable, stands ready to replace `with`.
+The alternative of assigning the object to a short name variable, then accessing the corresponding property on that variable, stands ready to replace `with`.
 
 #### Non-leaking eval
 

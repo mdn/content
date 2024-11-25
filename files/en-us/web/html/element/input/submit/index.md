@@ -98,9 +98,9 @@ This attribute is also available on [`<input type="image">`](/en-US/docs/Web/HTM
 
 If you choose to use `<button>` elements to create the buttons in your form, keep this in mind: If the `<button>` is inside a {{HTMLElement("form")}}, that button will be treated as the "submit" button. So you should be in the habit of expressly specifying which button is the submit button.
 
-### A simple submit button
+### A basic submit button
 
-We'll begin by creating a form with a simple submit button:
+We'll begin by creating a form with a basic submit button:
 
 ```html
 <form>
@@ -116,7 +116,7 @@ We'll begin by creating a form with a simple submit button:
 
 This renders like so:
 
-{{EmbedLiveSample("A_simple_submit_button", 650, 100)}}
+{{EmbedLiveSample("A_basic_submit_button", 650, 100)}}
 
 Try entering some text into the text field, and then submitting the form.
 
@@ -167,7 +167,7 @@ Submit buttons don't participate in constraint validation; they have no real val
 
 ## Examples
 
-We've included simple examples above. There isn't really anything more to say about submit buttons. There's a reason this kind of control is sometimes called a "simple button."
+We've included basic examples above. There isn't really anything more to say about submit buttons. There's a reason this kind of control is sometimes called a "simple button."
 
 ## Technical Summary
 

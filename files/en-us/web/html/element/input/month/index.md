@@ -13,7 +13,7 @@ The value is a string whose value is in the format `YYYY-MM`, where `YYYY` is th
 {{EmbedInteractiveExample("pages/tabbed/input-month.html", "tabbed-shorter")}}
 
 The control's UI varies in general from browser to browser; at the moment support is patchy, with only Chrome/Opera and Edge on desktop — and most modern mobile browser versions — having usable implementations.
-In browsers that don't support `month` inputs, the control degrades gracefully to a simple [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text), although there may be automatic validation of the entered text to ensure it's formatted as expected.
+In browsers that don't support `month` inputs, the control degrades gracefully to [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text), although there may be automatic validation of the entered text to ensure it's formatted as expected.
 
 For those of you using a browser that doesn't support `month`, the screenshot below shows what it looks like in Chrome and Opera.
 Clicking the down arrow on the right-hand side brings up a date picker that lets you select the month and year.
@@ -117,7 +117,7 @@ We'll look at basic and more complex uses of `<input type="month">`, then offer 
 
 ### Basic uses of month
 
-The simplest use of `<input type="month">` involves a basic {{HTMLElement("input")}} and {{htmlelement("label")}} element combination, as seen below:
+The most basic use of `<input type="month">` involves a basic {{HTMLElement("input")}} and {{htmlelement("label")}} element combination, as seen below:
 
 ```html
 <form>

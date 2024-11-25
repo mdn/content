@@ -1,7 +1,7 @@
 ---
 title: MathML guides
 slug: Web/MathML/Guides
-page-type: learn-module
+page-type: landing-page
 ---
 
 {{MathMLRef}}

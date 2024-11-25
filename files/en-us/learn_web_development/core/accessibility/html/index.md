@@ -505,6 +505,7 @@ One thing to consider is whether your images have meaning inside your content, o
 
 > [!NOTE]
 > Read [HTML images](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images) and [Responsive images](/en-US/docs/Web/HTML/Responsive_images) for a lot more information about image implementation and best practices.
+> You can also check [An alt Decision Tree](https://www.w3.org/WAI/tutorials/images/decision-tree/) to learn how to use an alt attribute for images in various situations.
 
 If you do want to provide extra contextual information, you should put it in the text surrounding the image, or inside a `title` attribute, as shown above. In this case, most screen readers will read out the alt text, the title attribute, and the filename. In addition, browsers display title text as tooltips when moused over.
 
@@ -621,7 +622,7 @@ Spacing may be created using CSS properties such as {{CSSxRef("margin")}}.
 
 - [Hand tremors and the giant-button-problem - Axess Lab](https://axesslab.com/hand-tremors/)
 
-## Test your skills!
+## Test your skills
 
 You've reached the end of this article, but can you remember the most important information? See [Test your skills: HTML Accessibility](/en-US/docs/Learn_web_development/Core/Accessibility/Test_your_skills:_HTML_accessibility) to verify that you've retained this information before you move on.
 

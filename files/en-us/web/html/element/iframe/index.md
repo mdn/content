@@ -214,7 +214,7 @@ Without this title, they have to navigate into the `<iframe>` to determine what 
 
 ## Examples
 
-### A simple \<iframe>
+### A basic \<iframe>
 
 This example embeds the page at <https://example.org> in an iframe. This is a common use case of iframes: to embed content from another site. For example, the live sample itself, and the [try it](#try_it) example at the top, are both `<iframe>` embeds of content from another MDN site.
 
@@ -231,7 +231,7 @@ This example embeds the page at <https://example.org> in an iframe. This is a co
 
 #### Result
 
-{{ EmbedLiveSample('A_simple_iframe', 640,400)}}
+{{ EmbedLiveSample('A_basic_iframe', 640,400)}}
 
 ### Embedding source code in an \<iframe>
 

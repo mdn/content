@@ -162,6 +162,7 @@ Let's get your image displaying now.
 
 > [!NOTE]
 > If the image is really large and therefore doesn't fit on the screen, don't worry about this. We'll fix this issue in the next article.
+> Find out more in our [accessible multimedia guide](/en-US/docs/Learn_web_development/Core/Accessibility/Multimedia) and [An alt Decision Tree](https://www.w3.org/WAI/tutorials/images/decision-tree/) to learn how to use an alt attribute for images in various situations.
 
 ## Marking up text
 

@@ -58,7 +58,7 @@ text-indent: unset;
 
 ## Examples
 
-### Simple indent
+### Basic indent
 
 #### HTML
 
@@ -84,7 +84,7 @@ p {
 
 #### Result
 
-{{ EmbedLiveSample('Simple_indent','100%','100%') }}
+{{ EmbedLiveSample('Basic_indent','100%','100%') }}
 
 ### Skipping indentation on the first paragraph
 

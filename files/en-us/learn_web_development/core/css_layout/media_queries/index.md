@@ -10,7 +10,7 @@ page-type: learn-module-chapter
 
 The **CSS Media Query** gives you a way to apply CSS only when the browser and device environment matches a rule that you specify, for example "viewport is wider than 480 pixels". Media queries are a key part of responsive web design, as they allow you to create different layouts depending on the size of the viewport, but they can also be used to detect other things about the environment your site is running on, for example whether the user is using a touchscreen rather than a mouse.
 
-In this lesson you will first learn about the syntax used in media queries, and then move on to use them in a working example showing how a simple design might be made responsive.
+In this lesson, you will first learn about the syntax used in media queries, and then move on to use them in examples showing how a basic design might be made responsive.
 
 <table>
   <tbody>
@@ -76,24 +76,22 @@ The following media query will only set the body to 12pt if the page is printed.
 
 > [!NOTE]
 > The media type here is different from the so-called {{glossary("MIME type")}}.
-
-> [!NOTE]
 > There were a number of other media types defined in the Level 3 Media Queries specification; these have been deprecated and should be avoided.
-
-> [!NOTE]
 > Media types are optional; if you do not indicate a media type in your media query, then the media query will default to being for all media types.
 
 ### Media feature rules
 
 After specifying the type, you can then target a media feature with a rule.
+The following examples show how to use different media queries.
+To change the `width` of your screen, change the size of your browser or rotate your handheld device. Alternatively, you can use your browser developer tools' responsive sizing features to simulate different device widths.
 
 #### Width and height
 
 The feature we tend to detect most often in order to create responsive designs (and that has widespread browser support) is viewport width, and we can apply CSS if the viewport is above or below a certain width — or an exact width — using the `min-width`, `max-width`, and `width` media features.
 
-These features are used to create layouts that respond to different screen sizes. For example, to change the body text color to red if the viewport is exactly 600 pixels, you would use the following media query.
+These features are used to create layouts that respond to different screen sizes. For example, to set the body text color to red if the viewport is exactly 600 pixels, you would use the following media query.
 
-```css
+```css live-sample___width
 @media screen and (width: 600px) {
   body {
     color: red;
@@ -101,11 +99,22 @@ These features are used to create layouts that respond to different screen sizes
 }
 ```
 
-[Open this example](https://mdn.github.io/css-examples/learn/media-queries/width.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/main/learn/media-queries/width.html).
+```html live-sample___width
+<p>
+  One November night in the year 1782, so the story runs, two brothers sat over
+  their winter fire in the little French town of Annonay, watching the grey
+  smoke-wreaths from the hearth curl up the wide chimney. Their names were
+  Stephen and Joseph Montgolfier, they were papermakers by trade, and were noted
+  as possessing thoughtful minds and a deep interest in all scientific knowledge
+  and new discovery.
+</p>
+```
+
+{{EmbedLiveSample("width")}}
 
 The `width` (and `height`) media features can be used as ranges, and therefore be prefixed with `min-` or `max-` to indicate that the given value is a minimum, or a maximum. For example, to make the color blue if the viewport is 600 pixels or narrower, use `max-width`:
 
-```css
+```css live-sample___max-width
 @media screen and (max-width: 600px) {
   body {
     color: blue;
@@ -113,7 +122,18 @@ The `width` (and `height`) media features can be used as ranges, and therefore b
 }
 ```
 
-[Open this example](https://mdn.github.io/css-examples/learn/media-queries/max-width.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/main/learn/media-queries/max-width.html).
+```html hidden live-sample___max-width
+<p>
+  One November night in the year 1782, so the story runs, two brothers sat over
+  their winter fire in the little French town of Annonay, watching the grey
+  smoke-wreaths from the hearth curl up the wide chimney. Their names were
+  Stephen and Joseph Montgolfier, they were papermakers by trade, and were noted
+  as possessing thoughtful minds and a deep interest in all scientific knowledge
+  and new discovery.
+</p>
+```
+
+{{EmbedLiveSample("max-width")}}
 
 In practice, using minimum or maximum values is much more useful for responsive design so you will rarely see `width` or `height` used alone.
 
@@ -123,7 +143,7 @@ There are many other media features that you can test for, although some of the 
 
 One well-supported media feature is `orientation`, which allows us to test for portrait or landscape mode. To change the body text color if the device is in landscape orientation, use the following media query.
 
-```css
+```css live-sample___orientation
 @media (orientation: landscape) {
   body {
     color: rebeccapurple;
@@ -131,7 +151,18 @@ One well-supported media feature is `orientation`, which allows us to test for p
 }
 ```
 
-[Open this example](https://mdn.github.io/css-examples/learn/media-queries/orientation.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/main/learn/media-queries/orientation.html).
+```html hidden live-sample___orientation
+<p>
+  One November night in the year 1782, so the story runs, two brothers sat over
+  their winter fire in the little French town of Annonay, watching the grey
+  smoke-wreaths from the hearth curl up the wide chimney. Their names were
+  Stephen and Joseph Montgolfier, they were papermakers by trade, and were noted
+  as possessing thoughtful minds and a deep interest in all scientific knowledge
+  and new discovery.
+</p>
+```
+
+{{EmbedLiveSample("orientation")}}
 
 A standard desktop view has a landscape orientation, and a design that works well in this orientation may not work as well when viewed on a phone or tablet in portrait mode. Testing for orientation can help you to create a layout which is optimized for devices in portrait mode.
 
@@ -139,15 +170,27 @@ A standard desktop view has a landscape orientation, and a design that works wel
 
 As part of the Level 4 specification, the `hover` media feature was introduced. This feature means you can test if the user has the ability to hover over an element, which essentially means they are using some kind of pointing device; touchscreen and keyboard navigation does not hover.
 
-```css
-@media (hover: hover) {
-  body {
-    color: rebeccapurple;
+```css live-sample___hover-example
+@media screen and (hover: hover) {
+  body:hover {
+    color: white;
+    background: black;
   }
 }
 ```
 
-[Open this example](https://mdn.github.io/css-examples/learn/media-queries/hover.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/main/learn/media-queries/hover.html).
+```html hidden live-sample___hover-example
+<p>
+  One November night in the year 1782, so the story runs, two brothers sat over
+  their winter fire in the little French town of Annonay, watching the grey
+  smoke-wreaths from the hearth curl up the wide chimney. Their names were
+  Stephen and Joseph Montgolfier, they were papermakers by trade, and were noted
+  as possessing thoughtful minds and a deep interest in all scientific knowledge
+  and new discovery.
+</p>
+```
+
+{{EmbedLiveSample("hover-example")}}
 
 If we know the user cannot hover, we could display some interactive features by default. For users who can hover, we might choose to make them available when a link is hovered over.
 
@@ -183,7 +226,7 @@ With all of the different possible media queries, you may want to combine them, 
 
 To combine media features you can use `and` in much the same way as we have used `and` above to combine a media type and feature. For example, we might want to test for a `min-width` and `orientation`. The body text will only be blue if the viewport is at least 600 pixels wide and the device is in landscape mode.
 
-```css
+```css live-sample___and
 @media screen and (min-width: 600px) and (orientation: landscape) {
   body {
     color: blue;
@@ -191,13 +234,24 @@ To combine media features you can use `and` in much the same way as we have used
 }
 ```
 
-[Open this example](https://mdn.github.io/css-examples/learn/media-queries/and.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/main/learn/media-queries/and.html).
+```html hidden live-sample___and
+<p>
+  One November night in the year 1782, so the story runs, two brothers sat over
+  their winter fire in the little French town of Annonay, watching the grey
+  smoke-wreaths from the hearth curl up the wide chimney. Their names were
+  Stephen and Joseph Montgolfier, they were papermakers by trade, and were noted
+  as possessing thoughtful minds and a deep interest in all scientific knowledge
+  and new discovery.
+</p>
+```
+
+{{EmbedLiveSample("and")}}
 
 ### "or" logic in media queries
 
 If you have a set of queries, any of which could match, then you can comma separate these queries. In the below example the text will be blue if the viewport is at least 600 pixels wide OR the device is in landscape orientation. If either of these things are true the query matches.
 
-```css
+```css live-sample___or
 @media screen and (min-width: 600px), screen and (orientation: landscape) {
   body {
     color: blue;
@@ -205,13 +259,24 @@ If you have a set of queries, any of which could match, then you can comma separ
 }
 ```
 
-[Open this example](https://mdn.github.io/css-examples/learn/media-queries/or.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/main/learn/media-queries/or.html).
+```html hidden live-sample___or
+<p>
+  One November night in the year 1782, so the story runs, two brothers sat over
+  their winter fire in the little French town of Annonay, watching the grey
+  smoke-wreaths from the hearth curl up the wide chimney. Their names were
+  Stephen and Joseph Montgolfier, they were papermakers by trade, and were noted
+  as possessing thoughtful minds and a deep interest in all scientific knowledge
+  and new discovery.
+</p>
+```
+
+{{EmbedLiveSample("or")}}
 
 ### "not" logic in media queries
 
 You can negate an entire media query by using the `not` operator. This reverses the meaning of the entire media query. Therefore in this next example the text will only be blue if the orientation is portrait.
 
-```css
+```css live-sample___not
 @media not (orientation: landscape) {
   body {
     color: blue;
@@ -219,7 +284,18 @@ You can negate an entire media query by using the `not` operator. This reverses 
 }
 ```
 
-[Open this example](https://mdn.github.io/css-examples/learn/media-queries/not.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/main/learn/media-queries/not.html).
+```html hidden live-sample___not
+<p>
+  One November night in the year 1782, so the story runs, two brothers sat over
+  their winter fire in the little French town of Annonay, watching the grey
+  smoke-wreaths from the hearth curl up the wide chimney. Their names were
+  Stephen and Joseph Montgolfier, they were papermakers by trade, and were noted
+  as possessing thoughtful minds and a deep interest in all scientific knowledge
+  and new discovery.
+</p>
+```
+
+{{EmbedLiveSample("not")}}
 
 You can also use `not` to negate specific expressions.
 
@@ -251,11 +327,107 @@ The view for the very smallest devices is quite often a simple single column of 
 
 The below walkthrough takes you through this approach with a very simple layout. In a production site you are likely to have more things to adjust within your media queries, however the approach would be exactly the same.
 
-### Walkthrough: a simple mobile-first layout
+### Walkthrough: a mobile-first layout
 
 Our starting point is an HTML document with some CSS applied to add background colors to the various parts of the layout.
+You can copy the code from the blocks below into a text editor, save it as an HTML file on your computer, and open it in your browser or click "Play" to render and edit the code in the MDN Playground:
 
-```css
+```html live-sample___walkthrough
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Media Queries: a simple mobile first design, step 1</title>
+  <style>
+    /* Add styles here */
+  </style>
+</head>
+<div class="wrapper">
+  <header>
+    <nav>
+      <ul>
+        <li><a href="">About</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="">Meet the team</a></li>
+        <li><a href="">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <article>
+      <div class="content">
+        <h1>Veggies!</h1>
+        <p>
+          Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh
+          onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+        </p>
+
+        <p>
+          Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot
+          courgette tatsoi pea sprouts fava bean collard greens dandelion okra
+          wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.
+        </p>
+
+        <p>
+          Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+          kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+          winter purslane kale. Celery potato scallion desert raisin horseradish
+          spinach carrot soko. Lotus root water spinach fennel kombu maize
+          bamboo shoot green bean swiss chard seakale pumpkin onion chickpea
+          gram corn pea. Brussels sprout coriander water chestnut gourd swiss
+          chard wakame kohlrabi beetroot carrot watercress. Corn amaranth
+          salsify bunya nuts nori azuki bean chickweed potato bell pepper
+          artichoke.
+        </p>
+
+        <p>
+          Nori grape silver beet broccoli kombu beet greens fava bean potato
+          quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil
+          turnip greens parsnip. Sea lettuce lettuce water chestnut eggplant
+          winter purslane fennel azuki bean earthnut pea sierra leone bologi
+          leek soko chicory celtuce parsley jícama salsify.
+        </p>
+      </div>
+      <aside class="related">
+        <p>
+          All these veggies are brought to you by the
+          <a href="https://veggieipsum.com/">Veggie Ipsum generator</a>.
+        </p>
+      </aside>
+    </article>
+    <aside class="sidebar">
+      <h2>External vegetable-based links</h2>
+      <ul>
+        <li>
+          <a
+            href="https://www.thekitchn.com/how-to-cook-broccoli-5-ways-167323">
+            How to cook broccoli
+          </a>
+        </li>
+        <li>
+          <a href="https://www.bbcgoodfood.com/glossary/swiss-chard">
+            Swiss Chard
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.bbcgoodfood.com/recipes/collection/christmas-parsnip">
+            Christmas Parsnip Recipes
+          </a>
+        </li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2024</p>
+  </footer>
+</div>
+```
+
+The source of the document is ordered in a way that makes the content readable. This is an important first step and one which ensures that if the content were to be read out by a screen reader, it would be understandable.
+Here are some good initial styles we can start with:
+
+```css live-sample___walkthrough
 * {
   box-sizing: border-box;
 }
@@ -311,54 +483,13 @@ article {
 }
 ```
 
-We've made no layout changes, however the source of the document is ordered in a way that makes the content readable. This is an important first step and one which ensures that if the content were to be read out by a screen reader, it would be understandable.
+If we view the layout in Responsive Design Mode in DevTools we can see that it works pretty well as a straightforward mobile view of the site.
 
-```html
-<body>
-  <div class="wrapper">
-    <header>
-      <nav>
-        <ul>
-          <li><a href="">About</a></li>
-          <li><a href="">Contact</a></li>
-          <li><a href="">Meet the team</a></li>
-          <li><a href="">Blog</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <article>
-        <div class="content">
-          <h1>Veggies!</h1>
-          <p>…</p>
-        </div>
-        <aside class="related">
-          <p>…</p>
-        </aside>
-      </article>
-
-      <aside class="sidebar">
-        <h2>External vegetable-based links</h2>
-        <ul>
-          <li>…</li>
-        </ul>
-      </aside>
-    </main>
-
-    <footer><p>&copy;2019</p></footer>
-  </div>
-</body>
-```
-
-This simple layout also works well on mobile. If we view the layout in Responsive Design Mode in DevTools we can see that it works pretty well as a straightforward mobile view of the site.
-
-[Open step 1](https://mdn.github.io/css-examples/learn/media-queries/step1.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/main/learn/media-queries/step1.html).
-
-**If you want to follow on and implement this example as we go, make a local copy of [step1.html](https://github.com/mdn/css-examples/blob/main/learn/media-queries/step1.html) on your computer.**
+{{EmbedLiveSample("walkthrough", "", "600px")}}
 
 From this point, start to drag the Responsive Design Mode view wider until you can see that the line lengths are becoming quite long, and we have space for the navigation to display in a horizontal line. This is where we'll add our first media query. We'll use ems, as this will mean that if the user has increased their text size, the breakpoint will happen at a similar line-length but wider viewport, than someone with a smaller text size.
 
-**Add the below code into the bottom of your step1.html CSS.**
+Add the following to your CSS:
 
 ```css
 @media screen and (min-width: 40em) {
@@ -380,11 +511,9 @@ From this point, start to drag the Responsive Design Mode view wider until you c
 
 This CSS gives us a two-column layout inside the article, of the article content and related information in the aside element. We have also used flexbox to put the navigation into a row.
 
-[Open step 2](https://mdn.github.io/css-examples/learn/media-queries/step2.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/main/learn/media-queries/step2.html).
-
 Let's continue to expand the width until we feel there is enough room for the sidebar to also form a new column. Inside a media query we'll make the main element into a two column grid. We then need to remove the {{cssxref("margin-bottom")}} on the article in order that the two sidebars align with each other, and we'll add a {{cssxref("border")}} to the top of the footer. Typically these small tweaks are the kind of thing you will do to make the design look good at each breakpoint.
 
-**Again, add the below code into the bottom of your step1.html CSS.**
+Add the following CSS to your styles:
 
 ```css
 @media screen and (min-width: 70em) {
@@ -405,9 +534,7 @@ Let's continue to expand the width until we feel there is enough room for the si
 }
 ```
 
-[Open step 3](https://mdn.github.io/css-examples/learn/media-queries/step3.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/main/learn/media-queries/step3.html).
-
-If you look at the final example at different widths you can see how the design responds and works as a single column, two columns, or three columns, depending on the available width. This is a very simple example of a mobile first responsive design.
+If you look at the result at different widths you can see how the design responds and works as a single column, two columns, or three columns, depending on the available width. This is a basic example of a mobile first responsive design.
 
 ## The viewport meta tag
 
@@ -431,7 +558,7 @@ Flexbox, Grid, and multi-column layout all give you ways to create flexible and 
 
 This could be achieved using the following:
 
-```html
+```html live-sample___grid
 <ul class="grid">
   <li>
     <h2>Card 1</h2>
@@ -456,7 +583,10 @@ This could be achieved using the following:
 </ul>
 ```
 
-```css
+```css live-sample___grid
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
 .grid {
   list-style: none;
   margin: 0;
@@ -472,11 +602,11 @@ This could be achieved using the following:
 }
 ```
 
-[Open the grid layout example](https://mdn.github.io/css-examples/learn/media-queries/grid.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/main/learn/media-queries/grid.html).
+{{EmbedLiveSample("grid", "", "350px")}}
 
-With the example open in your browser, make the screen wider and narrower to see the number of column tracks change. The nice thing about this method is that grid is not looking at the viewport width, but the width it has available for this component. It might seem strange to wrap up a section about media queries with a suggestion that you might not need one at all! However, in practice you will find that good use of modern layout methods, enhanced with media queries, will give the best results.
+Make the screen wider and narrower to see the number of column tracks change. The nice thing about this method is that grid is not looking at the viewport width, but the width it has available for this component. It might seem strange to wrap up a section about media queries with a suggestion that you might not need one at all! However, in practice you will find that good use of modern layout methods, enhanced with media queries, will give the best results.
 
-## Test your skills!
+## Test your skills
 
 You've reached the end of this article, but can you remember the most important information? You can find a test to verify that you've retained this information before you move on — see [Test your skills: Responsive web design and media queries](/en-US/docs/Learn_web_development/Core/CSS_layout/rwd_skills).
 
