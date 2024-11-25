@@ -33,7 +33,7 @@ The following WGSL language extensions are defined at [WGSL language extensions]
 
 - `readonly_and_readwrite_storage_textures`
 
-  - : When available, allows the `"read-only"` and `"read-write"` [`storageTexture.access`](/en-US/docs/Web/API/GPUDevice/createBindGroupLayout#access) values to be set when specifying storage texture bind group entry types in a bind group layout. These enable WSGL code to read storage textures, and read/write storage textures, respectively.
+  - : When available, allows the `"read-only"` and `"read-write"` [`storageTexture.access`](/en-US/docs/Web/API/GPUDevice/createBindGroupLayout#access) values to be set when specifying storage texture bind group entry types in a bind group layout. These enable WGSL code to read storage textures, and read/write storage textures, respectively.
 
 - `unrestricted_pointer_parameters`
 
