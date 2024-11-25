@@ -199,7 +199,8 @@ By providing the `d` flag, the indices of each capturing group is returned. This
 const code = `function add(x, y) {
   return x + y;
 }`;
-const functionRegexp = /(function\s+)(?<name>[$_\p{ID_Start}][$\p{ID_Continue}]*)/du;
+const functionRegexp =
+  /(function\s+)(?<name>[$_\p{ID_Start}][$\p{ID_Continue}]*)/du;
 const match = functionRegexp.exec(code);
 const lines = code.split("\n");
 lines.splice(
