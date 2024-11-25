@@ -99613,10 +99613,6 @@
     "modified": "2020-10-15T22:23:16.957Z",
     "contributors": ["mfuji09", "darby", "bershanskiy"]
   },
-  "Web/HTTP/Headers/Digest": {
-    "modified": "2020-10-15T22:21:39.013Z",
-    "contributors": ["ioggstream", "wbamberg"]
-  },
   "Web/HTTP/Headers/ETag": {
     "modified": "2020-10-15T21:48:49.703Z",
     "contributors": [
@@ -100237,10 +100233,6 @@
       "callumgare",
       "teoli"
     ]
-  },
-  "Web/HTTP/Headers/Want-Digest": {
-    "modified": "2020-10-15T22:21:41.704Z",
-    "contributors": ["wbamberg"]
   },
   "Web/HTTP/Headers/Warning": {
     "modified": "2020-10-15T21:48:41.051Z",
