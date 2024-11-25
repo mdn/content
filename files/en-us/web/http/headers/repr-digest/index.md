@@ -8,8 +8,7 @@ spec-urls: https://datatracker.ietf.org/doc/html/rfc9530
 {{HTTPSidebar}}
 
 The HTTP **`Repr-Digest`** {{Glossary("Request header", "request")}} and {{Glossary("Response header", "response header")}} provides a {{Glossary("digest")}} of the selected representation of the target resource.
-A `Repr-Digest` can be used to validate the integrity of partial or multipart messages against the whole selected representation.
-For example, in [range requests](/en-US/docs/Web/HTTP/Range_requests), a `Repr-Digest` in responses will always have the same value if only the requested byte ranges differ, whereas the {{HTTPHeader("Content-Digest")}} will be different for each range or part.
+It can be used validate the integrity of the whole selected representation once it has been received and reconstructed.
 
 The _selected representation_ is the specific format of a resource chosen through [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation).
 Details about the representation can be determined from {{Glossary("Representation header", "representation headers")}}, such as {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Type")}}, and {{HTTPHeader("Content-Encoding")}}.
