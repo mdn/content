@@ -15,7 +15,7 @@ Static sites are commonly used for blogs, documentation, and other content-drive
 - [Introduction to client-side frameworks > static site generators](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction#static_site_generators)
 - [Static site generator](https://en.wikipedia.org/wiki/Static_site_generator) on Wikipedia
 - [Jamstack site generators](https://jamstack.org/generators/)
-- [Wordpress](https://wordpress.com/)
+- [WordPress](https://wordpress.com/)
 - [Docusaurus](https://docusaurus.io/)
 - [Jekyll](https://jekyllrb.com/)
 - [Astro](https://astro.build/)

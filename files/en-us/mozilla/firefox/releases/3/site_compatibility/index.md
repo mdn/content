@@ -14,7 +14,7 @@ See also [Firefox 3 for developers](/en-US/Firefox_3_for_developers).
 
 ### Capturing load event listeners
 
-In Gecko 1.8, it was not possible to set capturing load event listeners on images. In Gecko 1.9, this has been fixed by [Firefox bug 234455](https://bugzil.la/234455). But this can cause problems on websites that incorrectly have their event listeners set to capture the load event. See the discussion in [Webkit bug 335251](https://bugzil.la/335251). To fix this problem, the problematic page in question should not set a capturing load event listener.
+In Gecko 1.8, it was not possible to set capturing load event listeners on images. In Gecko 1.9, this has been fixed by [Firefox bug 234455](https://bugzil.la/234455). But this can cause problems on websites that incorrectly have their event listeners set to capture the load event. See the discussion in [WebKit bug 335251](https://bugzil.la/335251). To fix this problem, the problematic page in question should not set a capturing load event listener.
 
 For example, this:
 
@@ -32,7 +32,7 @@ For an explanation of how event capture works, see [DOM Level 2 Event capture](h
 
 ### `preventBubble` has been removed
 
-In Gecko 1.8, the `preventBubble` method existed on events to prevent events from bubbling upwards. In Gecko 1.9 this method has been removed. Instead, you should use the standard [stopPropagation()](/en-US/docs/Web/API/Event/stopPropagation), which also works fine in Gecko 1.8. The patch in [Firefox bug 330494](https://bugzil.la/330494) made this happen. See also [Webkit bug 105280](https://bugzil.la/105280).
+In Gecko 1.8, the `preventBubble` method existed on events to prevent events from bubbling upwards. In Gecko 1.9 this method has been removed. Instead, you should use the standard [stopPropagation()](/en-US/docs/Web/API/Event/stopPropagation), which also works fine in Gecko 1.8. The patch in [Firefox bug 330494](https://bugzil.la/330494) made this happen. See also [WebKit bug 105280](https://bugzil.la/105280).
 
 ### A few other old event APIs are no longer supported
 
