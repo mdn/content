@@ -15,7 +15,7 @@ The aim of this skill test is to assess whether you understand [images and how t
 
 ## Task 1
 
-In this task, we want you to embed a simple image of some Blueberries into the page. You need to:
+In this task, we want you to embed an image of some Blueberries into the page. You need to:
 
 - Add the path to the image to an appropriate attribute to embed it on the page. The image is called `blueberries.jpg`, and it is in a folder inside the current folder called `images`.
 - Add some alternative text to an appropriate attribute to describe the image, for people that cannot see it.

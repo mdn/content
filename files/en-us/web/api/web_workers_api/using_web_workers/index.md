@@ -53,7 +53,7 @@ const myWorker = new Worker("worker.js");
 ```
 
 > [!NOTE]
-> Bundlers, including [Webpack](https://webpack.js.org/guides/web-workers/), [Vite](https://vite.dev/guide/features.html#web-workers), and [Parcel](https://parceljs.org/languages/javascript/#web-workers), recommend passing URLs that are resolved relative to [`import.meta.url`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta#url) to the `Worker()` constructor. For example:
+> Bundlers, including [webpack](https://webpack.js.org/guides/web-workers/), [Vite](https://vite.dev/guide/features.html#web-workers), and [Parcel](https://parceljs.org/languages/javascript/#web-workers), recommend passing URLs that are resolved relative to [`import.meta.url`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta#url) to the `Worker()` constructor. For example:
 >
 > ```js
 > const myWorker = new Worker(new URL("worker.js", import.meta.url));

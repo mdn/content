@@ -13,7 +13,7 @@ page-type: guide
 
 Microformats use supporting vocabularies to describe objects and name-value pairs to assign values to their properties. The properties are carried in class attributes that can be added to any HTML element, while the data values re-use HTML element content and semantic attributes.
 
-Microformats2 (sometimes referred to as mf2) is an update to microformats that provides a simpler way of annotating HTML structured syntax and vocabularies than previous approaches of using RDFa and microdata. These previous approaches require learning new attributes.
+Microformats2 (sometimes referred to as mf2) is an update to microformats that provides a method of annotating HTML structured syntax and vocabularies than previous approaches of using RDFa and microdata. These previous approaches require learning new attributes.
 
 There are [open source parsing libraries for most languages](https://microformats.org/wiki/microformats2#Parsers) for microformats2.
 

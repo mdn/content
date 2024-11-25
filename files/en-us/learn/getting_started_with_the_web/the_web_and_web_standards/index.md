@@ -94,7 +94,7 @@ The actual syntax for HTTP messages (called requests and responses) is not that 
 
   If we adopted a house-building analogy, HTML would be like the foundations and walls of the house, which give it structure and hold it together.
 
-- Cascading Style Sheets (**CSS**) is a rule-based language used to apply styles to your HTML — for example, setting text and background colors, adding borders, animating things, or laying out a page in a certain way. As a simple example, the following code would turn our HTML paragraph red:
+- Cascading Style Sheets (**CSS**) is a rule-based language used to apply styles to your HTML — for example, setting text and background colors, adding borders, animating things, or laying out a page in a certain way. As an example, the following code would turn our HTML paragraph red:
 
   ```css
   p {

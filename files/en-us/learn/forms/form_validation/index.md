@@ -129,7 +129,7 @@ input:valid {
 
 {{EmbedLiveSample("Simple_start_file", "100%", 80)}}
 
-To begin, make a copy of the [`fruit-start.html` file found on Github](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-start.html) in a new directory on your hard drive.
+To begin, make a copy of the [`fruit-start.html` file found on GitHub](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-start.html) in a new directory on your hard drive.
 
 ### The required attribute
 
@@ -176,7 +176,7 @@ We also added a background gradient when the input is required _and_ invalid. Tr
 
 {{EmbedLiveSample("The_required_attribute", "100%", 80)}}
 
-Try submitting the form from the [live `required` example](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-required.html) without a value. Note how the invalid input gets focus, a default error message ("Please fill out this field") appears, and the form is prevented from being sent. You can also see the [source code on Github](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-required.html).
+Try submitting the form from the [live `required` example](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-required.html) without a value. Note how the invalid input gets focus, a default error message ("Please fill out this field") appears, and the form is prevented from being sent. You can also see the [source code on GitHub](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-required.html).
 
 ### Validating against a regular expression
 
@@ -454,7 +454,7 @@ These automated messages have two drawbacks:
 ![Example of an error message with Firefox in French on an English page](error-firefox-win7.png)
 
 Customizing these error messages is one of the most common use cases of the Constraint Validation API.
-Let's work through a simple example of how to do this.
+Let's work through an example of how to do this.
 
 We'll start with some HTML (feel free to put this in a blank HTML file; use a fresh copy of [fruit-start.html](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-start.html) as a basis, if you like):
 

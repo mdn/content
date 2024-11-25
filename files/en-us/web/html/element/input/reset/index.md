@@ -40,9 +40,9 @@ If you don't specify a `value`, you get a button with the default label (typical
 
 `<input type="reset">` buttons are used to reset forms. If you want to create a custom button and then customize the behavior using JavaScript, you need to use [`<input type="button">`](/en-US/docs/Web/HTML/Element/input/button), or better still, a {{htmlelement("button")}} element.
 
-### A simple reset button
+### A basic reset button
 
-We'll begin by creating a simple reset button:
+We'll begin by creating a basic reset button:
 
 ```html
 <form>
@@ -58,7 +58,7 @@ We'll begin by creating a simple reset button:
 
 This renders like so:
 
-{{EmbedLiveSample("A_simple_reset_button", 650, 100)}}
+{{EmbedLiveSample("A_basic_reset_button", 650, 100)}}
 
 Try entering some text into the text field, and then pressing the reset button.
 
@@ -103,7 +103,7 @@ Buttons don't participate in constraint validation; they have no real value to b
 
 ## Examples
 
-We've included simple examples above. There isn't really anything more to say about reset buttons.
+We've included basic examples above. There isn't really anything more to say about reset buttons.
 
 ## Technical summary
 
