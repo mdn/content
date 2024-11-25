@@ -182,7 +182,7 @@ You've reached the end of this article, but can you remember the most important 
 
 So there we have it — functions are fun, very useful, and although there's a lot to talk about in regards to their syntax and functionality, they are fairly understandable.
 
-If there is anything you didn't understand, feel free to read through the article again, or [contact us](/en-US/docs/Learn#contact_us) to ask for help.
+If there is anything you didn't understand, feel free to read through the article again, or [contact us](/en-US/docs/MDN/Community/Communication_channels) to ask for help.
 
 ## See also
 
