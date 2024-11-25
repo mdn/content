@@ -33,7 +33,7 @@ Code examples should be as self-contained and easy to understand as possible. Th
 Some more general best practices include:
 
 - The code example should be short and ideally show only the feature you are immediately interested in.
-- **Only** include code that is essential for the example. A large amount of non-relevant code can easily distract or confuse the reader. If you want to provide a full, more lengthy example, put it in one of our [GitHub repos](https://github.com/mdn/) (or a JSBin, Codepen, or similar) and then provide the link to the full version above or below the sample.
+- **Only** include code that is essential for the example. A large amount of non-relevant code can easily distract or confuse the reader. If you want to provide a full, more lengthy example, put it in one of our [GitHub repos](https://github.com/mdn/) (or a JS Bin, CodePen, or similar) and then provide the link to the full version above or below the sample.
 - Don't include unnecessary server-side code, libraries, frameworks, preprocessors, and other such dependencies. They make the code less portable and harder to run and understand. Use vanilla code where possible.
 - Don't assume readers' knowledge of any libraries, frameworks, preprocessors, or other non-native features. For example, use class names that make sense within the example rather than class names that make sense to BEM or Bootstrap users.
 - Write your code to be as clean and understandable as possible, even if it is not the most efficient way to write it.
