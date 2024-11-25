@@ -91,8 +91,7 @@ The following example matches any [identifier](/en-US/docs/Web/JavaScript/Refere
 
 ```js
 function isValidIdentifierName(str) {
-  const re =
-    /^(?!(?:break|case|catch)$)[$_\p{ID_Start}][$\p{ID_Continue}]*$/u;
+  const re = /^(?!(?:break|case|catch)$)[$_\p{ID_Start}][$\p{ID_Continue}]*$/u;
   return re.test(str);
 }
 
