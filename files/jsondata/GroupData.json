@@ -1359,8 +1359,7 @@
     "Screen Capture extensions": {
       "overview": ["Screen Capture extensions"],
       "guides": [
-        "/docs/Web/API/Screen_Capture_extensions/Element_Capture",
-        "/docs/Web/API/Screen_Capture_extensions/Region_Capture"
+        "/docs/Web/API/Screen_Capture_extensions/Element_Region_Capture"
       ],
       "interfaces": [
         "BrowserCaptureMediaStreamTrack",
