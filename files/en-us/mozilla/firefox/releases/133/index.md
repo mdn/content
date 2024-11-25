@@ -103,6 +103,10 @@ These features are newly shipped in Firefox 133 but are disabled by default. To 
 
   The `plaintext-only` value of the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) global attribute indicates that the element is editable; rich text formatting is disabled and any formatting in pasted text is automatically stripped. ([Firefox bug 1922723](https://bugzil.la/1922723).)
 
+- **:has-slotted CSS pseudo-class:** `layout.css.has-slotted-selector.enabled`.
+
+  The {{CSSXRef(":has-slotted")}} [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is used to style elements in {{HTMLElement("template")}} that have content added to a {{HTMLElement("slot")}} element when rendering a [web component](/en-US/docs/Web/API/Web_components). ([Firefox bug 1921747](https://bugzil.la/1921747).)
+
 ## Older versions
 
 {{Firefox_for_developers}}
