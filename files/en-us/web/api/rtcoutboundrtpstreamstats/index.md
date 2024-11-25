@@ -13,7 +13,6 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 
 ## Instance properties
 
-
 - {{domxref("RTCOutboundRtpStreamStats.averageRtcpInterval", "averageRtcpInterval")}}
   - : A floating-point value indicating the average {{Glossary("RTCP")}} interval between two consecutive compound RTCP packets.
 - {{domxref("RTCOutboundRtpStreamStats.framesEncoded", "framesEncoded")}}
