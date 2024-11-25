@@ -22,6 +22,8 @@ This article provides information about the changes in Firefox 134 that affect d
 
 ### JavaScript
 
+- Support for the {{jsxref("RegExp.escape()")}} static method that can be used to escape any potential regex syntax characters in a string, returning a new string that can be safely used as a [literal](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character) pattern for the {{jsxref("RegExp/RegExp", "RegExp()")}} constructor. ([Firefox bug 1918235](https://bugzil.la/1918235)).
+
 #### Removals
 
 ### SVG
