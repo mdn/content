@@ -273,7 +273,7 @@ The {{CSSxRef("&lt;basic-shape&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_T
 
 ## Reference functions
 
-The following functions are used as a value of properties to reference a value defined elsewhere.
+The following functions are used as a value of properties to reference a value defined elsewhere:
 
 - {{CSSxRef("attr", "attr()")}}
   - : Uses the attributes defined on HTML element.
@@ -286,7 +286,7 @@ The following functions are used as a value of properties to reference a value d
 
 ## Grid functions
 
-The following functions are used to define a [CSS grid](/en-US/docs/Web/CSS/CSS_grid_layout).
+The following functions are used to define a [CSS grid](/en-US/docs/Web/CSS/CSS_grid_layout):
 
 - {{CSSxRef("fit-content_function", "fit-content()")}}
   - : Clamps a given size to an available size according to the formula `min(maximum size, max(minimum size, argument))`.
@@ -314,18 +314,18 @@ CSS font functions are used with the {{CSSxRef("font-variant-alternates")}} prop
 
 ## Easing functions
 
-The following functions are used as a value in transition and animation properties.
+The following functions are used as a value in transition and animation properties:
 
-- {{cssxref("easing-function#linear_easing_function", "linear()")}}
+- {{cssxref("easing-function/linear", "linear()")}}
   - : Easing function that interpolates linearly between its points.
-- {{cssxref("easing-function#cubic_bezier_easing_function", "cubic-bezier()")}}
+- {{cssxref("easing-function/cubic-bezier", "cubic-bezier()")}}
   - : Easing function that defines a cubic Bézier curve.
-- {{cssxref("easing-function#steps_easing_function", "steps()")}}
+- {{cssxref("easing-function/steps", "steps()")}}
   - : Iteration along a specified number of stops along the transition, displaying each stop for equal lengths of time.
 
 ## Animation functions
 
-The following functions are used as a value of different `animation-timeline` properties. See {{CSSxRef("animation-timeline")}} for more details about these.
+The following functions are used as a value of different {{CSSxRef("animation-timeline")}} properties:
 
 - {{cssxref("animation-timeline/scroll", "scroll()")}}
   - : Sets the {{cssxref("animation-timeline")}} of an element to an _anonymous scroll progress timeline_.

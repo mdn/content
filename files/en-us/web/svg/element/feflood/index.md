@@ -7,7 +7,7 @@ browser-compat: svg.elements.feFlood
 
 {{SVGRef}}
 
-The **`<feFlood>`** SVG filter primitive fills the filter subregion with the color and opacity defined by {{SVGAttr("flood-color")}} and {{SVGAttr("flood-opacity")}}.
+The **`<feFlood>`** [SVG](/en-US/docs/Web/SVG) filter primitive fills the filter subregion with the color and opacity defined by {{SVGAttr("flood-color")}} and {{SVGAttr("flood-opacity")}}.
 
 ## Usage context
 
