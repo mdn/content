@@ -154,7 +154,7 @@ npm run dev -- --open --port 3000
 
 Once the server starts, you should see a new browser tab containing your React app:
 
-![Screenshot of Firefox MacOS open to localhost:3000, showing an application made from Vite's React template](default-vite.png)
+![Screenshot of Firefox macOS open to localhost:3000, showing an application made from Vite's React template](default-vite.png)
 
 ### Application structure
 

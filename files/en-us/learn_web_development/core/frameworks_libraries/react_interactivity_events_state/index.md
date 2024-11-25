@@ -56,7 +56,7 @@ In JSX, the code that describes the UI lives right alongside our event listeners
 </button>
 ```
 
-In this example, we're adding an `onClick` attribute to the {{htmlelement("button")}} element. The value of that attribute is a function that triggers a simple alert. This may seem counter to best practice advice about not writing event listeners in HTML, but remember: JSX is not HTML.
+In this example, we're adding an `onClick` attribute to the {{htmlelement("button")}} element. The value of that attribute is a function that triggers an alert. This may seem counter to best practice advice about not writing event listeners in HTML, but remember: JSX is not HTML.
 
 The `onClick` attribute has special meaning here: it tells React to run a given function when the user clicks on the button. There are a couple of other things to note:
 

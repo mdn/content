@@ -86,13 +86,13 @@ Another phrase you'll hear around open web standards is "don't break the web" â€
 
 The full W3C standards process is deep and academic. For now, you should understand how different individuals and companies get involved in the standards process.
 
-xxx
+<!-- TODO? @chrisdavidmills -->
 
 ## The web standards lifecycle
 
 The different maturity stages are designed to weed out issues (e.g. interoperability issues, patent issues).
 
-xxx
+<!-- TODO? @chrisdavidmills -->
 
 ## Overview of modern web technologies
 

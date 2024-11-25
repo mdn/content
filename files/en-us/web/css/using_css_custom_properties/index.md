@@ -63,7 +63,7 @@ The following example creates a custom property called `--logo-color` which expe
 ```
 
 If you want to define or work with custom properties in JavaScript instead of directly in CSS, there is a corresponding API for this purpose.
-You can read about how this work in the [CSS Properties and Values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API) page.
+You can read about how this works in the [CSS Properties and Values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API) page.
 
 ### Referencing custom properties with `var()`
 

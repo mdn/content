@@ -15,7 +15,7 @@ The aim of this skill test is to assess whether you understand how to [embed vid
 
 ## Task 1
 
-In this task, we want you to embed a simple audio file onto the page. You need to:
+In this task, we want you to embed an audio file onto the page. You need to:
 
 - Add the path to the audio file to an appropriate attribute to embed it on the page. The audio is called `audio.mp3`, and it is in a folder inside the current folder called `media`.
 - Add an attribute to make browsers display some default controls.

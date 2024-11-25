@@ -381,7 +381,7 @@ There are many ways that you can implement rewind and fast-forward functionality
 
 #### Updating the elapsed time
 
-The very last piece of our media player to implement is the time-elapsed displays. To do this we'll run a function to update the time displays every time the {{domxref("HTMLMediaElement/timeupdate_event", "timeupdate")}} event is fired on the `<video>` element. The frequency with which this event fires depends on your browser, CPU power, etc. ([see this StackOverflow post](https://stackoverflow.com/questions/9678177/how-often-does-the-timeupdate-event-fire-for-an-html5-video)).
+The very last piece of our media player to implement is the time-elapsed displays. To do this we'll run a function to update the time displays every time the {{domxref("HTMLMediaElement/timeupdate_event", "timeupdate")}} event is fired on the `<video>` element. The frequency with which this event fires depends on your browser, CPU power, etc. ([see this Stack Overflow post](https://stackoverflow.com/questions/9678177/how-often-does-the-timeupdate-event-fire-for-an-html5-video)).
 
 Add the following `addEventListener()` line just below the others:
 

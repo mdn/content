@@ -379,7 +379,7 @@ As we have already seen, {{cssxref("float")}} and also {{cssxref("clear")}} have
 
 ### Vertical alignment
 
-The alignment property {{cssxref("vertical-align")}} has no effect on a grid item. In layouts using `display: inline-block` or `display: table`, you might use the vertical-align property to perform basic alignment. In your grid layout you then have the far more powerful box alignment properties.
+The alignment property {{cssxref("vertical-align")}} has no effect on a grid item. In layouts using `display: inline-block` or `display: table`, you might use the `vertical-align` property to perform basic alignment. In your grid layout you then have the far more powerful box alignment properties.
 
 ### Multiple-column layout
 

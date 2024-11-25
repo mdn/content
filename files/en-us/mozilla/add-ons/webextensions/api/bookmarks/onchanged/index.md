@@ -51,7 +51,7 @@ Events have three functions:
 function handleChanged(id, changeInfo) {
   console.log(`Item: ${id} changed`);
   console.log(`Title: ${changeInfo.title}`);
-  console.log(`Url: ${changeInfo.url}`);
+  console.log(`URL: ${changeInfo.url}`);
 }
 
 function handleClick() {

@@ -52,7 +52,7 @@ To get around the problem of async requests, we need to test such examples by ru
 
 If you only need HTML, CSS and JavaScript, and no server-side language, the easiest way may be to check for extensions in your code editor. As well as automating installation and set-up for your local HTTP server, they also integrate nicely with your code editors. Testing local files in an HTTP server may be one click away.
 
-For VSCode, you can check the following free extension:
+For VS Code, you can check the following free extension:
 
 - `vscode-preview-server`. You can check it on its [home page](https://marketplace.visualstudio.com/items?itemName=yuichinukiyama.vscode-preview-server).
 

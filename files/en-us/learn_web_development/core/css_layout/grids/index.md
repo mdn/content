@@ -373,7 +373,7 @@ Alternatively, you can also use shorthand properties that let you specify the st
 - {{cssxref("grid-column")}} shorthand for `grid-column-start` and `grid-column-end`
 - {{cssxref("grid-row")}} shorthand for `grid-row-start` and `grid-row-end`
 
-To see this in action, download the [line-based placement starting point file](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/8-placement-starting-point.html) or [see it live here](https://mdn.github.io/learning-area/css/css-layout/grids/8-placement-starting-point.html). It has a defined grid and a simple article outlined. You can see that _auto-placement_ is placing each item into its own cell in the grid.
+To see this in action, download the [line-based placement starting point file](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/8-placement-starting-point.html) or [see it live here](https://mdn.github.io/learning-area/css/css-layout/grids/8-placement-starting-point.html). It has a defined grid and an article outlined. You can see that _auto-placement_ is placing each item into its own cell in the grid.
 
 Let's arrange all of the elements for our site by using the grid lines. Add the following rules to the bottom of your CSS:
 

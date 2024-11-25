@@ -9,7 +9,7 @@ browser-compat: svg.elements.glyph
 
 {{SVGRef}}{{deprecated_header}}
 
-A **`<glyph>`** defines a single glyph in an SVG font.
+The **`<glyph>`** [SVG](/en-US/docs/Web/SVG) element defines a single glyph in an SVG font.
 
 ## Usage context
 

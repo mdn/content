@@ -55,7 +55,7 @@ We'll cover these terms and technologies in more detail as we explore further, b
 - search engine
   - : A web service that helps you find other web pages, such as Google, Bing, Yahoo, or DuckDuckGo. Search engines are normally accessed through a web browser (e.g. you can perform search engine searches directly in the address bar of Firefox, Chrome, etc.) or through a web page (e.g. [bing.com](https://www.bing.com/) or [duckduckgo.com](https://duckduckgo.com/)).
 
-Let's look at a simple analogy — a public library. This is what you would generally do when visiting a library:
+Let's look at an analogy — a public library. This is what you would generally do when visiting a library:
 
 1. Find a search index and look for the title of the book you want.
 2. Make a note of the catalog number of the book.

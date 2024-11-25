@@ -15,7 +15,7 @@ In this module, we take a look at {{Glossary("asynchronous")}} {{Glossary("JavaS
 Asynchronous JavaScript is a fairly advanced topic, and you are advised to work through [Dynamic scripting with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting) modules before attempting this.
 
 > [!NOTE]
-> If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you can try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
+> If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you can try out (most of) the code examples in an online coding program such as [JS Bin](https://jsbin.com/) or [Glitch](https://glitch.com/).
 
 ## Guides and challenges
 

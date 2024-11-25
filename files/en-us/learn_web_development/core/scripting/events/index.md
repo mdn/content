@@ -360,7 +360,7 @@ When you fill in the details and click the submit button, the natural behavior i
 
 The trouble comes when the user has not submitted the data correctly — as a developer, you want to prevent the submission to the server and give an error message saying what's wrong and what needs to be done to put things right.
 Some browsers support automatic form data validation features, but since many don't, you are advised to not rely on those and implement your own validation checks.
-Let's look at a simple example.
+Let's look at an example.
 
 First, a simple HTML form that requires you to enter your first and last name:
 

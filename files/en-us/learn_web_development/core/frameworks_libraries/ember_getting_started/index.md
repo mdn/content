@@ -147,7 +147,7 @@ This generates a production-ready application development environment that inclu
 
 - Development server with live reload.
 - Plugin-architecture that allows for third-party packages to richly enhance your application.
-- The latest JavaScript via Babel and Webpack integration.
+- The latest JavaScript via Babel and webpack integration.
 - Automated testing environment that runs your tests in the browser, allowing you to _test like a user_.
 - Transpilation, and minification, of both CSS and JavaScript for production builds.
 - Conventions for minimizing the differences between applications (allowing easier mental context switching).

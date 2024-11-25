@@ -53,7 +53,7 @@ To help familiarize you with each one, we'll use a combination of all three to g
 
 You can include external CSS files and apply them globally to your app. Let's look at how this is done.
 
-To start with, create a file called `reset.css` in the `src/assets` directory. Files in this folder get processed by Webpack. This means we can use CSS pre-processors (like SCSS) or post-processors (like PostCSS).
+To start with, create a file called `reset.css` in the `src/assets` directory. Files in this folder get processed by webpack. This means we can use CSS pre-processors (like SCSS) or post-processors (like PostCSS).
 
 While this tutorial will not be using such tools, it's good to know that when including such code in the assets folder it will be processed automatically.
 

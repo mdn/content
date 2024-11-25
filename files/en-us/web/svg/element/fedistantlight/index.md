@@ -7,7 +7,7 @@ browser-compat: svg.elements.feDistantLight
 
 {{SVGRef}}
 
-The **`<feDistantLight>`** filter primitive defines a distant light source that can be used within a lighting filter primitive: {{SVGElement("feDiffuseLighting")}} or {{SVGElement("feSpecularLighting")}}.
+The **`<feDistantLight>`** [SVG](/en-US/docs/Web/SVG) filter primitive defines a distant light source that can be used within a lighting filter primitive: {{SVGElement("feDiffuseLighting")}} or {{SVGElement("feSpecularLighting")}}.
 
 ## Usage context
 

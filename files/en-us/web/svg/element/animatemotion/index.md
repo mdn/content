@@ -7,7 +7,7 @@ browser-compat: svg.elements.animateMotion
 
 {{SVGRef}}
 
-The SVG **`<animateMotion>`** element provides a way to define how an element moves along a motion path.
+The **`<animateMotion>`** [SVG](/en-US/docs/Web/SVG) element provides a way to define how an element moves along a motion path.
 
 > [!NOTE]
 > To reuse an existing path, it will be necessary to use an {{SVGElement("mpath")}} element inside the `<animateMotion>` element instead of the {{SVGAttr("path")}} attribute.

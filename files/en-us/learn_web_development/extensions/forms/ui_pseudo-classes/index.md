@@ -215,7 +215,7 @@ You can target form controls using the {{cssxref(":valid")}} and {{cssxref(":inv
 - Controls whose current value is outside the range limits specified by the [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-US/docs/Web/HTML/Element/input#max) attributes are (matched with) `:invalid`, but also matched by {{cssxref(":out-of-range")}}, as you'll see later on.
 - There are some other ways to make an element matched by `:valid`/`:invalid`, as you'll see in the [Client-side form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation) article. But we'll keep things simple for now.
 
-Let's go in and look at a simple example of `:valid`/`:invalid` (see [valid-invalid.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/valid-invalid.html) for the live version, and also check out the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/valid-invalid.html)).
+Let's go in and look at an example of `:valid`/`:invalid` (see [valid-invalid.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/valid-invalid.html) for the live version, and also check out the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/valid-invalid.html)).
 
 As in the previous example, we've got extra `<span>`s to generate content on, which we'll use to provide indicators of valid/invalid data:
 

@@ -198,14 +198,14 @@ At this point, we have a complete skeleton project. The website doesn't actually
      SET DEBUG=express-locallibrary-tutorial:* & npm start
      ```
 
-   - On Windows Powershell, use this command:
+   - On Windows PowerShell, use this command:
 
      ```powershell
      ENV:DEBUG = "express-locallibrary-tutorial:*"; npm start
      ```
 
      > [!NOTE]
-     > Powershell commands are not covered in this tutorial (The provided "Windows" commands assume you're using the Windows CMD prompt.)
+     > PowerShell commands are not covered in this tutorial (The provided "Windows" commands assume you're using the Windows CMD prompt.)
 
    - On macOS or Linux, use this command:
 

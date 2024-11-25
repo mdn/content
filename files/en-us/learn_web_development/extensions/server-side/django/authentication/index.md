@@ -606,7 +606,7 @@ Now that it's possible to loan books to a specific user, go and loan out a numbe
 
 Now we'll add a view for getting the list of all books that have been loaned to the current user. We'll use the same generic class-based list view we're familiar with, but this time we'll also import and derive from `LoginRequiredMixin`, so that only a logged in user can call this view. We will also choose to declare a `template_name`, rather than using the default, because we may end up having a few different lists of BookInstance records, with different views and templates.
 
-Add the following to catalog/views.py:
+Add the following to **catalog/views.py**:
 
 ```python
 from django.contrib.auth.mixins import LoginRequiredMixin

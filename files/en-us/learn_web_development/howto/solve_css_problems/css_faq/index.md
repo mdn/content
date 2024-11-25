@@ -270,7 +270,7 @@ text-stroke: 4px navy;
 
 ## How does z-index relate to positioning?
 
-The z-index property specifies the stack order of elements.
+The `z-index` property specifies the stack order of elements.
 
 An element with a higher z-index/stack order is always rendered in front of an element with a lower z-index/stack order on the screen. Z-index will only work on elements that have a specified position (`position:absolute`, `position:relative`, or `position:fixed`).
 

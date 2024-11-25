@@ -377,7 +377,7 @@ There is one final bit of syntax we want to introduce you to before we get you t
 condition ? run this code : run this code instead
 ```
 
-So let's look at a simple example:
+So let's look at an example:
 
 ```js
 const greeting = isBirthday

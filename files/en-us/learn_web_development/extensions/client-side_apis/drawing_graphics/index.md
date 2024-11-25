@@ -407,7 +407,7 @@ We have so far covered some very basic uses of 2D canvas, but really you won't e
 
 Playing with loops in canvas is rather fun — you can run canvas commands inside a [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for) (or other type of) loop just like any other JavaScript code.
 
-Let's build a simple example.
+Let's build an example.
 
 1. Make another fresh copy of our canvas template ([1_canvas_template](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template)) and open it in your code editor.
 2. Add the following line to the bottom of your JavaScript. This contains a new method, {{domxref("CanvasRenderingContext2D.translate", "translate()")}}, which moves the origin point of the canvas:
@@ -712,7 +712,7 @@ Yes, using one of these means learning another new API (a third party one, in th
 
 ### Recreating our cube
 
-Let's look at a simple example of how to create something with a WebGL library. We'll choose [Three.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js), as it is one of the most popular ones. In this tutorial we'll create the 3D spinning cube we saw earlier.
+Let's look at an example of how to create something with a WebGL library. We'll choose [Three.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js), as it is one of the most popular ones. In this tutorial we'll create the 3D spinning cube we saw earlier.
 
 1. To start with, make a local copy of [threejs-cube/index.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/threejs-cube/index.html) in a new folder, then save a copy of [metal003.png](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/threejs-cube/metal003.png) in the same folder. This is the image we'll use as a surface texture for the cube later on.
 2. Next, create a new file called `script.js`, again in the same folder as before.

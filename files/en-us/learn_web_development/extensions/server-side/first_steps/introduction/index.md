@@ -62,7 +62,7 @@ A dynamic site can return different data for a URL based on information provided
 
 Most of the code to support a dynamic website must run on the server. Creating this code is known as "**server-side programming**" (or sometimes "**back-end scripting**").
 
-The diagram below shows a simple architecture for a _dynamic website_. As in the previous diagram, browsers send HTTP requests to the server, then the server processes the requests and returns appropriate HTTP responses.
+The diagram below shows an architecture for a _dynamic website_. As in the previous diagram, browsers send HTTP requests to the server, then the server processes the requests and returns appropriate HTTP responses.
 
 Requests for _static_ resources are handled in the same way as for static sites (static resources are any files that don't change — typically: CSS, JavaScript, Images, pre-created PDF files, etc.).
 

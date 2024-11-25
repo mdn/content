@@ -63,11 +63,11 @@ That makes deployment quite easy, because you just need to concentrate on your w
 Some developers will choose the increased flexibility provided by IaaS over PaaS, while others will appreciate the reduced maintenance overhead and easier scaling of PaaS. When you're getting started, setting up your website on a PaaS system is much easier, and so that is what we'll do in this tutorial.
 
 > [!NOTE]
-> If you choose a Python/Django-friendly hosting provider they should provide instructions on how to set up a Django website using different configurations of web server, application server, reverse proxy, and so on. (this won't be relevant if you choose a PaaS). For example, there are many step-by-step guides for various configurations in the [Digital Ocean Django community docs](https://www.digitalocean.com/community/tutorials?q=django).
+> If you choose a Python/Django-friendly hosting provider they should provide instructions on how to set up a Django website using different configurations of web server, application server, reverse proxy, and so on. (this won't be relevant if you choose a PaaS). For example, there are many step-by-step guides for various configurations in the [DigitalOcean Django community docs](https://www.digitalocean.com/community/tutorials?q=django).
 
 ## Choosing a hosting provider
 
-There are many hosting providers that are known to either actively support or work well with Django, including: [Heroku](https://www.heroku.com/), [Digital Ocean](https://www.digitalocean.com/), [Railway](https://railway.app/), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](https://aws.amazon.com/), [Azure](https://azure.microsoft.com/en-us/), [Google Cloud](https://cloud.google.com/), [Hetzner](https://www.hetzner.com/), and [Vultr Cloud Compute](https://blogs.vultr.com/new-free-tier-plan) — to name just a few.
+There are many hosting providers that are known to either actively support or work well with Django, including: [Heroku](https://www.heroku.com/), [DigitalOcean](https://www.digitalocean.com/), [Railway](https://railway.app/), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](https://aws.amazon.com/), [Azure](https://azure.microsoft.com/en-us/), [Google Cloud](https://cloud.google.com/), [Hetzner](https://www.hetzner.com/), and [Vultr Cloud Compute](https://blogs.vultr.com/new-free-tier-plan) — to name just a few.
 These vendors provide different types of environments (IaaS, PaaS), and different levels of computing and network resources at different prices.
 
 Some of the things to consider when choosing a host:
@@ -88,7 +88,7 @@ They are however great for testing low traffic sites in a hosted environment, an
 Popular choices in this category include [Vultr Cloud Compute](https://blogs.vultr.com/new-free-tier-plan), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/app-service/linux/), and so on.
 
 Most providers also offer a "basic" tier that is intended for small production sites, and which provide more useful levels of computing power and fewer limitations.
-[Railway](https://railway.app/), [Heroku](https://www.heroku.com/), and [Digital Ocean](https://www.digitalocean.com/) are examples of popular hosting providers that have a relatively inexpensive basic computing tier (in the $5 to $10 USD per month range).
+[Railway](https://railway.app/), [Heroku](https://www.heroku.com/), and [DigitalOcean](https://www.digitalocean.com/) are examples of popular hosting providers that have a relatively inexpensive basic computing tier (in the $5 to $10 USD per month range).
 
 > [!NOTE]
 > Remember that price is not the only selection criterion. If your website is successful, it may turn out that scalability is the most important consideration.
@@ -1005,10 +1005,10 @@ The next step is to read our last few articles, and then complete the assessment
 
   - [CLI](https://docs.railway.app/guides/cli)
 
-- Digital Ocean
+- DigitalOcean
 
   - [How To Serve Django Applications with uWSGI and Nginx on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-uwsgi-and-nginx-on-ubuntu-16-04)
-  - [Other Digital Ocean Django community docs](https://www.digitalocean.com/community/tutorials?q=django)
+  - [Other DigitalOcean Django community docs](https://www.digitalocean.com/community/tutorials?q=django)
 
 - Heroku Docs (similar setup concepts)
 
