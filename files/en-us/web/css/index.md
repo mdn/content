@@ -26,6 +26,7 @@ After CSS 2.1, the scope of the specification increased significantly and the pr
 Our [CSS Learning Area](/en-US/docs/Learn_web_development/Core/Styling_basics) features multiple modules that teach CSS from the ground up — no previous knowledge required.
 
 - [CSS Styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics)
+
   - : CSS (Cascading Style Sheets) is used to style and layout web pages — for example, to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features. This module provides all the CSS fundamentals you'll need for now, including syntax, features, and techniques.
 
 - [CSS styling text](/en-US/docs/Learn_web_development/Core/Text_styling)

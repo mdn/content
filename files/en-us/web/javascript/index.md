@@ -60,7 +60,6 @@ Head over to our [Learning Area JavaScript topic](/en-US/docs/Learn_web_developm
 - [Closures](/en-US/docs/Web/JavaScript/Closures)
   - : A closure is the combination of a function and the lexical environment within which that function was declared.
 
-
 ### Advanced
 
 - [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)

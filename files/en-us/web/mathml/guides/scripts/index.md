@@ -1,7 +1,7 @@
 ---
 title: MathML scripted elements
 slug: Web/MathML/Guides/Scripts
-page-type: learn-module-chapter
+page-type: guide
 ---
 
 {{MathMLRef}}

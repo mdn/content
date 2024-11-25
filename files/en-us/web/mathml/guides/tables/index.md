@@ -1,7 +1,7 @@
 ---
 title: MathML tables
 slug: Web/MathML/Guides/Tables
-page-type: learn-module-chapter
+page-type: guide
 ---
 
 {{MathMLRef}}

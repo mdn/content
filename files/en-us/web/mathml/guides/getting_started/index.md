@@ -1,7 +1,7 @@
 ---
 title: Getting started with MathML
 slug: Web/MathML/Guides/Getting_started
-page-type: learn-module-chapter
+page-type: guide
 ---
 
 {{MathMLRef}}

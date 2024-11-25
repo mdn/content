@@ -1,7 +1,7 @@
 ---
 title: MathML Text Containers
 slug: Web/MathML/Guides/Text_containers
-page-type: learn-module-chapter
+page-type: guide
 ---
 
 {{MathMLRef}}

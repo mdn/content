@@ -1,7 +1,7 @@
 ---
 title: MathML fractions and roots
 slug: Web/MathML/Guides/Fractions_and_roots
-page-type: learn-module-chapter
+page-type: guide
 ---
 
 {{MathMLRef}}
