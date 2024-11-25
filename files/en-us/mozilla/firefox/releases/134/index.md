@@ -22,6 +22,10 @@ This article provides information about the changes in Firefox 134 that affect d
 
 ### JavaScript
 
+- The {{jsxref("Promise.try()")}} convenience method is now supported.
+  The method takes a callback of any kind (a function that returns or throws, synchronously or asynchronously) and wraps its result in a {{jsxref("Promise")}}.
+  This allows you to use promise semantics ({{jsxref("Promise.then", ".then()")}} {{jsxref("Promise.catch", ".catch()")}}) to handle the result from any kind of method. ([Firefox bug 1917879](https://bugzil.la/1917879) and [Firefox bug 1905364](https://bugzil.la/1905364)).
+
 #### Removals
 
 ### SVG
