@@ -54,5 +54,5 @@ el1.insertAdjacentElement("afterend", el2);
 - {{domxref("HTMLTimeElement.dateTime")}}
 - [Date strings](/en-US/docs/Web/HTML/Date_and_time_formats#date_strings)
 - [Local date and time strings](/en-US/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings).
-- {{domxref("Date()")}}
+- {{jsxref("Date")}}
 - {{domxref("Element.insertAdjacentElement()")}}
