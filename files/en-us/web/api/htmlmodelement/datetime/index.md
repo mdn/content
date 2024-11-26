@@ -18,16 +18,20 @@ A string. For valid string formats, see the [`datetime` valid values](/en-US/doc
 
 ## Examples
 
+Given the following HTML:
+
 ```html
 <p>The paragraph <del datetime="2021-11-01">has been</del> changed</p>
 ```
+
+We can get the value of the `dateTime` attribute:
 
 ```js
 const deletion = document.querySelector("del");
 console.log(deletion.dateTime); // "2021-11-01"
 ```
 
-Here, we create an element, set the `dateTime` to the current date, add content, then insert it after the deleted text:
+We can also set the `dateTime` property. Here, we create an element, set the `dateTime` to the current date, add content, then insert it after the deleted text:
 
 ```js
 const  = document.createElement("ins");
