@@ -20,7 +20,7 @@ Our boombox looks like this:
 
 Note the retro cassette deck with a play button, and vol and pan sliders to allow you to alter the volume and stereo panning. We could make this a lot more complex, but this is ideal for simple learning at this stage.
 
-[Check out the final demo here on Codepen](https://codepen.io/Rumyra/pen/qyMzqN/), or see the [source code on GitHub](https://github.com/mdn/webaudio-examples/tree/main/audio-basics).
+[Check out the final demo here on CodePen](https://codepen.io/Rumyra/pen/qyMzqN/), or see the [source code on GitHub](https://github.com/mdn/webaudio-examples/tree/main/audio-basics).
 
 ## Audio graphs
 
@@ -235,7 +235,7 @@ Let's adjust our audio graph again, to connect all the nodes together:
 track.connect(gainNode).connect(panner).connect(audioContext.destination);
 ```
 
-The only thing left to do is give the app a try: [Check out the final demo here on Codepen](https://codepen.io/Rumyra/pen/qyMzqN/).
+The only thing left to do is give the app a try: [Check out the final demo here on CodePen](https://codepen.io/Rumyra/pen/qyMzqN/).
 
 ## Summary
 

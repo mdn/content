@@ -2,9 +2,9 @@
 title: gradientUnits
 slug: Web/SVG/Attribute/gradientUnits
 page-type: svg-attribute
-spec-urls:
-  - https://svgwg.org/svg2-draft/pservers.html#RadialGradientElementGradientUnitsAttribute
-  - https://svgwg.org/svg2-draft/pservers.html#LinearGradientElementGradientUnitsAttribute
+browser-compat:
+  - svg.elements.linearGradient.gradientUnits
+  - svg.elements.radialGradient.gradientUnits
 ---
 
 {{SVGRef}}
@@ -78,3 +78,7 @@ For {{SVGElement("radialGradient")}}, `gradientUnits` defines the coordinate sys
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

@@ -72,7 +72,7 @@ Many code editors have linter plugins. For example, see:
 
 - [SublimeLinter](https://www.sublimelinter.com/) for Sublime Text
 - [Notepad++ linter](https://sourceforge.net/projects/notepad-linter/)
-- [VSCode linters](https://marketplace.visualstudio.com/search?target=vscode&category=Linters&sortBy=Installs)
+- [VS Code linters](https://marketplace.visualstudio.com/search?target=vscode&category=Linters&sortBy=Installs)
 
 ### Browser developer tools
 
