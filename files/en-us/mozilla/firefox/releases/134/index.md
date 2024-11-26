@@ -6,7 +6,7 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 134 that affect developers. Firefox 134 is the current [Nightly version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly) and ships on [January 7, 2025](https://whattrainisitnow.com/release/?version=134).
+This article provides information about the changes in Firefox 134 that affect developers. Firefox 134 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [January 7, 2025](https://whattrainisitnow.com/release/?version=134).
 
 ## Changes for web developers
 
@@ -74,6 +74,9 @@ This article provides information about the changes in Firefox 134 that affect d
 ## Experimental web features
 
 These features are newly shipped in Firefox 134 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **`autocorrect`**: <code>dom.forms.autocorrect</code>.
+  The HTML [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) attribute and {{domxref("HTMLElement.autocorrect")}} property allow autocompletion in editable text elements, including: most kinds of text {{htmlelement("input")}} elements, {{htmlelement("textarea")}} elements, and elements that have the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set ([Firefox bug 1725806](https://bugzil.la/1725806)).
 
 ## Older versions
 
