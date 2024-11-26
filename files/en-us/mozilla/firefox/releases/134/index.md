@@ -22,6 +22,12 @@ This article provides information about the changes in Firefox 134 that affect d
 
 ### JavaScript
 
+- Support for the {{jsxref("RegExp.escape()")}} static method that can be used to escape any potential regex syntax characters in a string, returning a new string that can be safely used as a [literal](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character) pattern for the {{jsxref("RegExp/RegExp", "RegExp()")}} constructor. ([Firefox bug 1918235](https://bugzil.la/1918235)).
+- The {{jsxref("Promise.try()")}} convenience method is now supported.
+  The method takes a callback of any kind (a function that returns or throws, synchronously or asynchronously) and wraps its result in a {{jsxref("Promise")}}.
+  This allows you to use promise semantics ({{jsxref("Promise.then", ".then()")}}, {{jsxref("Promise.catch", ".catch()")}}) to handle the result from any kind of method. ([Firefox bug 1917879](https://bugzil.la/1917879) and [Firefox bug 1905364](https://bugzil.la/1905364)).
+- {{jsxref("Intl.DurationFormat")}} is supported, enabling locale-sensitive formatting of durations. ([Firefox bug 1648139](https://bugzil.la/1648139)).
+
 #### Removals
 
 ### SVG
@@ -37,6 +43,9 @@ This article provides information about the changes in Firefox 134 that affect d
 #### Removals
 
 ### APIs
+
+- The [`PushManager.supportedContentEncodings`](/en-US/docs/Web/API/PushManager/supportedContentEncodings_static) static method is now supported for getting the allowed algorithms for encrypting the payload of a [push message](/en-US/docs/Web/API/Push_API). ([Firefox bug 1497430](https://bugzil.la/1497430)).
+- {{domxref("AudioParam.value")}} now allows the value to be set even during the time that an automated event is scheduled: previously the operation would silently be ignored at those times. ([Firefox bug 1308435](https://bugzil.la/1308435)).
 
 #### DOM
 
