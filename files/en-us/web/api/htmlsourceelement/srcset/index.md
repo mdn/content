@@ -8,9 +8,11 @@ browser-compat: api.HTMLSourceElement.srcset
 
 {{APIRef("HTML DOM")}}
 
-The **`srcset`** property of the {{domxref("HTMLSourceElement")}} interface is a string containing a comma-separated list of candidate images and descriptors. Each list item in the comma-separated list includes the URL of an image resource to use as the source for the element and the circumstances under which that image should be used. Each image in the comma selist one or more image URLs and their descriptorseach specifying image resources to use under given circumstances. Each candidate image is a URL followed by the width of the image with a `'w'` or the pixel density with an `'x'`.
+The **`srcset`** property of the {{domxref("HTMLSourceElement")}} interface is a string containing a comma-separated list of candidate images.
 
-It reflects the `srcset` attribute of the {{HTMLElement("source")}} element nested in a {{htmlelement("picture")}} element. It has no meaning and is ignored when it is nested in an {{htmlelement("audio")}} or {{htmlelement("video")}} element, which use the {{domxref("HTMLSourceElement.src", "src")}} instead.
+Each candidate image includes the URL of an image resource to use as the source for the element and optionally a descriptor indicating the circumstances in which the image should be used. The descriptor is either a number followed by `'w'`, indicating the element width, or a number followed by `'x'`, indicating the device pixel density.
+
+It reflects the `srcset` attribute of the {{HTMLElement("source")}} element nested in a {{htmlelement("picture")}} element. It has no meaning and is ignored when it is nested in an {{htmlelement("audio")}} or {{htmlelement("video")}} element, which use the {{domxref("HTMLSourceElement.src", "src")}} attribute instead.
 
 ## Value
 

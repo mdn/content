@@ -8,7 +8,7 @@ browser-compat: api.HTMLSourceElement.type
 
 {{APIRef("HTML DOM")}}
 
-The **`type`** property of the {{domxref("HTMLSourceElement")}} interface is a string representing the type of media of the resource.
+The **`type`** property of the {{domxref("HTMLSourceElement")}} interface is a string representing the {{glossary("MIME type")}} of the media resource.
 
 It reflects the `type` attribute of the {{HTMLElement("source")}} element.
 
@@ -29,7 +29,6 @@ A string.
 ```js
 const el = document.getElementById("el");
 console.log(el.type); // Output: "video/webp"
-el.type = "image/webp"; // Updates the type value
 ```
 
 ## Specifications

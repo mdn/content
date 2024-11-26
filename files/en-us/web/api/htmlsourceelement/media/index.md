@@ -8,7 +8,7 @@ browser-compat: api.HTMLSourceElement.media
 
 {{APIRef("HTML DOM")}}
 
-The **`media`** property of the {{domxref("HTMLSourceElement")}} interface is a string representing a list of one or more media formats to which the resource applies.
+The **`media`** property of the {{domxref("HTMLSourceElement")}} interface is a string representing the intended destination medium for the resource. The value is a [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), which is a comma separated list of media-types, media-features, and logical operators.
 
 It reflects the `media` attribute of the {{HTMLElement("source")}} element.
 
@@ -50,3 +50,4 @@ el.media = "(min-width: 800px)"; // Updates the media value
 - {{htmlelement("picture")}}
 - {{htmlelement("audio")}}
 - {{htmlelement("video")}}
+- [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
