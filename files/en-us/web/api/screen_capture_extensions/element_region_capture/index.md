@@ -151,11 +151,11 @@ async function startCapture() {
 
 You can see the above code running live at [Screen Capture API example](https://mdn.github.io/dom-examples/screen-capture-api/basic-screen-capture) (also see the [source code](https://github.com/mdn/dom-examples/tree/main/screen-capture-api/basic-screen-capture)).
 
-## Screen capture API issues
+## Screen Capture API issues
 
 Run the live demo above in a [supporting browser](/en-US/docs/Web/API/Screen_Capture_API#browser_compatibility), click "Start Capture", and select the same tab the demo is running in. You will end up seeing the "hall of mirrors effect", as mentioned earlier:
 
-![image](hall-of-mirrors.png)
+![A browser window containing a video capture of that same browser window, meaning that it shows infinite captures inside captures, getting smaller and smaller](hall-of-mirrors.png)
 
 This obviously isn't ideal, and would cause issues in any kind of conferencing application with a built-in "share screen" option.
 
@@ -212,7 +212,7 @@ async function startCapture() {
 
 1. Here, we start by grabbing the media stream as before, using, `mediaDevices.getDisplayMedia()`.
 2. We then isolate the video track from the stream using {{domxref("MediaStream.getVideoTracks()")}}.
-3. We create the necessary `restrictionTarget` object to apply the restriction to the video track by running {{domxref("RestrictionTarget.fromElement()")}}, passing to it the DOM element reference we grabbed earlier.
+3. We create the necessary `restrictionTarget` object to apply the restriction to the video track by running {{domxref("RestrictionTarget.fromElement_static", "RestrictionTarget.fromElement()")}}, passing to it the DOM element reference we grabbed earlier.
 4. We apply the restriction target to the track by calling {{domxref("BrowserCaptureMediaStreamTrack.restrictTo()")}} on it, passing it the `restrictionTarget` object.
 5. Once all the above is done, we then set the `<video>` element's `srcObject` property value to the stream, to start broadcasting it.
 
@@ -302,7 +302,7 @@ async function startCapture() {
 ```
 
 1. As before, we start by grabbing the media stream using `mediaDevices.getDisplayMedia()`, then isolate the video track from the stream using {{domxref("MediaStream.getVideoTracks()")}}.
-2. We create the necessary `cropTarget` object to apply the crop to the video track by running {{domxref("CropTarget.fromElement()")}}, passing to it the DOM element reference we grabbed earlier.
+2. We create the necessary `cropTarget` object to apply the crop to the video track by running {{domxref("CropTarget.fromElement_static", "fromElement()")}}, passing to it the DOM element reference we grabbed earlier.
 3. We apply the crop target to the track by calling {{domxref("BrowserCaptureMediaStreamTrack.cropTo()")}} on it, passing it the `cropTarget` object.
 4. Once all the above is done, we then set the `<video>` element's `srcObject` property value to the stream, to start broadcasting it.
 
@@ -345,3 +345,8 @@ As explained above, the Element Capture captures the element itself, whereas Reg
 This could be a major problem if that content is private, for example message notifications or speaker notes. If you can't guarantee that your app can keep private content from being shared, then you may lose trust in your users.
 
 As a result, it is generally recommended that you use the newer Element Capture API over the older Region Capture API, unless you need to support older browser versions that do not support Element Capture.
+
+## See also
+
+- [Screen Capture extensions](/en-US/docs/Web/API/Screen_Capture_extensions)
+- [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)

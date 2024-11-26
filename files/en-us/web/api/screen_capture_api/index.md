@@ -9,6 +9,9 @@ browser-compat: api.MediaDevices.getDisplayMedia
 
 The Screen Capture API introduces additions to the existing Media Capture and Streams API to let the user select a screen or portion of a screen (such as a window) to capture as a media stream. This stream can then be recorded or shared with others over the network.
 
+> [!NOTE]
+> You can find documentation for extensions to the Screen Capture API — such as the Element Capture and Region Capture APIs — in the [Screen Capture extensions](/en-US/docs/Web/API/Screen_Capture_extensions) section.
+
 ## Screen Capture API concepts and usage
 
 The Screen Capture API is relatively simple to use. Its sole method is {{domxref("MediaDevices.getDisplayMedia()")}}, whose job is to ask the user to select a screen or portion of a screen to capture in the form of a {{domxref("MediaStream")}}.
@@ -88,4 +91,5 @@ The default allowlist is `self`, which lets any content within the same origin u
 ## See also
 
 - [Using the Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
+- [Screen Capture extensions](/en-US/docs/Web/API/Screen_Capture_extensions)
 - {{domxref("MediaDevices.getDisplayMedia()")}}

@@ -34,11 +34,11 @@ See [Using the Element Capture and Region Capture APIs](/en-US/docs/Web/API/Scre
 ## Interfaces
 
 - {{domxref("BrowserCaptureMediaStreamTrack")}}
-  - : Represents a single media stream track; extends the {{domxref("MediaStreamTrack")}} class with methods to limit the part of the stream captured.
+  - : Represents a single video track; extends the {{domxref("MediaStreamTrack")}} class with methods to limit the part of a self-capture stream (for example, a user's screen or window) that is captured.
 - {{domxref("CropTarget")}}
-  - : Provides a static method, {{domxref("CropTarget.fromElement()")}}, which returns a {{domxref("CropTarget")}} instance that can be used to crop the stream to the area in which a specified element is rendered.
+  - : Provides a static method, {{domxref("CropTarget.fromElement_static", "fromElement()")}}, which returns a {{domxref("CropTarget")}} instance that can be used to crop a captured video track to the area in which a specified element is rendered.
 - {{domxref("RestrictionTarget")}}
-  - : Provides a static method, {{domxref("RestrictionTarget.fromElement()")}}, which returns a {{domxref("RestrictionTarget")}} instance that can be used to crop the stream to a specified element.
+  - : Provides a static method, {{domxref("RestrictionTarget.fromElement_static", "fromElement()")}}, which returns a {{domxref("RestrictionTarget")}} instance that can be used to restrict a captured video track to a specified DOM element.
 
 ## Examples
 
@@ -54,5 +54,6 @@ For demos, see our [Screen Capture API demos](https://mdn.github.io/dom-examples
 
 ## See also
 
+- [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
 - [Capture a video stream from any element](https://developer.chrome.com/docs/web-platform/element-capture) on developer.chrome.com (2025)
 - [Better tab sharing with Region Capture](https://developer.chrome.com/docs/web-platform/region-capture) on developer.chrome.com (2023)
