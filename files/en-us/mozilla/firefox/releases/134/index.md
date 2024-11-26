@@ -44,6 +44,8 @@ This article provides information about the changes in Firefox 134 that affect d
 
 ### APIs
 
+- {{domxref("AudioParam.value")}} now allows the value to be set even during the time that an automated event is scheduled: previously the operation would silently be ignored at those times. ([Firefox bug 1308435](https://bugzil.la/1308435)).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
