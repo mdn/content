@@ -35,6 +35,31 @@ This only works when used inside CSS placed within a [shadow DOM](/en-US/docs/We
 
 ## Examples
 
+### Simple example
+
+#### HTML
+
+```html
+<p>
+  <template shadowrootmode="open">
+    <style>
+      :has-slotted {
+        color: tomato;
+      }
+    </style>
+    <slot name="one">Placeholder 1</slot>
+    <slot name="two">Placeholder 2</slot>
+  </template>
+  <span slot="one">Slotted content one</span>
+</p>
+```
+
+#### Result
+
+These results show that the third web component does not have content for the `description` `<slot>`.
+
+{{EmbedLiveSample("simple_examaple",100,300)}}
+
 ### Highlighting slots with required content
 
 This example extends the [Creating a template with some slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots#creating_a_template_with_some_slots) example on the _Using templates and slots_ guide. This example highlights the `<slot>` element that should be filled in to give visual feedback.
