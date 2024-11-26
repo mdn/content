@@ -35,7 +35,7 @@ You can also change the style to `display: block` to remove the disclosure trian
 
 See the [Browser compatibility](#browser_compatibility) section for details, as not all browsers support full functionality of this element yet.
 
-For Webkit-based browsers, such as Safari, it is possible to control the icon display through the non-standard CSS pseudo-element `::-webkit-details-marker`. To remove the disclosure triangle, use `summary::-webkit-details-marker { display: none }`.
+For WebKit-based browsers, such as Safari, it is possible to control the icon display through the non-standard CSS pseudo-element `::-webkit-details-marker`. To remove the disclosure triangle, use `summary::-webkit-details-marker { display: none }`.
 
 ## Examples
 
@@ -43,7 +43,7 @@ Below are some examples showing `<summary>` in use. You can find more examples i
 
 ### Basic example
 
-A simple example showing the use of `<summary>` in a {{HTMLElement("details")}} element:
+A basic example showing the use of `<summary>` in a {{HTMLElement("details")}} element:
 
 ```html
 <details open>

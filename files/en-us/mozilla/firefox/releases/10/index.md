@@ -22,7 +22,7 @@ Firefox 10 shipped on January 31, 2012. This article provides information about 
 
 - The method `WeakMap.set()` now returns `undefined`, instead of itself.
 - A bug was introduced in regular expression handling in Firefox 7; this has been fixed. See [Firefox bug 683838](https://bugzil.la/683838) if you want the gory details.
-- You can no longer use the deprecated EcmaScript for XML (E4X) syntax while in [ECMAScript 5 strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) (that is, after `"use strict;"`).
+- You can no longer use the deprecated ECMAScript for XML (E4X) syntax while in [ECMAScript 5 strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) (that is, after `"use strict;"`).
 
 ### DOM
 
@@ -106,7 +106,8 @@ Great progress has been made to update IndexedDB to the latest draft specificati
 
 ### Networking
 
-- The HTTP `Accept-Charset` header is no longer sent in HTTP requests. In its absence, servers should respond by sending UTF-8.
+- The HTTP `Accept-Charset` header is no longer sent in HTTP requests.
+  In its absence, servers should respond by sending UTF-8.
 
 ### Developer tools
 
