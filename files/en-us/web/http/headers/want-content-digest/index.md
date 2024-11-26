@@ -7,7 +7,7 @@ spec-urls: https://datatracker.ietf.org/doc/html/rfc9530
 
 {{HTTPSidebar}}
 
-The HTTP **`Want-Content-Digest`** {{glossary("request header", "request")}} and {{glossary("response header")}} header indicates that the recipient should send a {{HTTPHeader("Content-Digest")}} header.
+The HTTP **`Want-Content-Digest`** {{glossary("request header", "request")}} and {{glossary("response header")}} indicates that the recipient should send a {{HTTPHeader("Content-Digest")}} header.
 It is the `Content-` analogue of {{HTTPHeader("Want-Repr-Digest")}}.
 
 <table class="properties">

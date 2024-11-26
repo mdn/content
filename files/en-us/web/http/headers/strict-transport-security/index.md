@@ -56,24 +56,23 @@ The `Strict-Transport-Security` header informs the browser that it should never 
 > Once your site is accessed over HTTPS with no certificate errors, the browser knows your site is HTTPS-capable and will honor the `Strict-Transport-Security` header.
 > Browsers do this as attackers may intercept HTTP connections to the site and inject or remove the header.
 
-### An example scenario
+### Strict Transport Security example scenario
 
-You log into a free Wi-Fi access point at an airport and start surfing the web, visiting your online banking service to check your balance and pay a couple of bills.
+Assume you have logged into a free Wi-Fi access point at an airport and start surfing the web, visiting your online banking service to check your balance and pay a couple of bills.
 Unfortunately, the access point you're using is actually a hacker's laptop, and they're intercepting your original HTTP request and redirecting you to a clone of your bank's site instead of the real thing. Now your private data is exposed to the hacker.
 
-Strict Transport Security resolves this problem; as long as you've accessed your bank's website once using HTTPS, and the bank's website uses Strict Transport Security, your
-browser will know to automatically use only HTTPS, which prevents hackers from performing this sort of man-in-the-middle attack.
+Strict Transport Security resolves this problem; as long as you've accessed your bank's website once using HTTPS, and the bank's website uses Strict Transport Security, your browser will know to automatically use only HTTPS, which prevents hackers from performing this sort of man-in-the-middle attack.
 
-### How the browser handles it
+### How the browser handles Strict Transport Security
 
-The first time your site is accessed using HTTPS and it returns the `Strict-Transport-Security` header, the browser records this information, so that future attempts to load the site using HTTP will automatically use HTTPS instead.
+The first time a site is accessed using HTTPS and it returns the `Strict-Transport-Security` header, the browser records this information, so that future attempts to load the site using HTTP will automatically use HTTPS instead.
 
 When the expiration time specified by the `Strict-Transport-Security` header elapses, the next attempt to load the site via HTTP will proceed as normal instead of automatically using HTTPS.
 
-Whenever the Strict-Transport-Security header is delivered to the browser, it will update the expiration time for that site, so sites can refresh this information and prevent the timeout from expiring.
-Should it be necessary to disable Strict Transport Security, setting the `max-age` to 0 (over an https connection) will immediately expire the `Strict-Transport-Security` header, allowing access via http.
+Whenever the `Strict-Transport-Security` header is delivered to the browser, it will update the expiration time for that site, so sites can refresh this information and prevent the timeout from expiring.
+Should it be necessary to disable Strict Transport Security, setting the `max-age` to `0` (over an HTTPS connection) will immediately expire the `Strict-Transport-Security` header, allowing access via HTTP.
 
-## Preloading Strict Transport Security
+### Preloading Strict Transport Security
 
 Google maintains [an HSTS preload service](https://hstspreload.org/).
 By following the guidelines and successfully submitting your domain, you can ensure that browsers will connect to your domain only via secure connections.

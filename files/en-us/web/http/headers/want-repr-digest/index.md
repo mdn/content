@@ -7,7 +7,7 @@ spec-urls: https://datatracker.ietf.org/doc/html/rfc9530
 
 {{HTTPSidebar}}
 
-The HTTP **`Want-Repr-Digest`** {{glossary("request header", "request")}} and {{glossary("response header")}} header indicates that the recipient should send a {{HTTPHeader("Repr-Digest")}} header.
+The HTTP **`Want-Repr-Digest`** {{glossary("request header", "request")}} and {{glossary("response header")}} indicates that the recipient should send a {{HTTPHeader("Repr-Digest")}} header.
 
 <table class="properties">
   <tbody>

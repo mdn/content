@@ -145,6 +145,10 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
       - : Means that the cookie is not sent on cross-site requests, such as on requests to load images or frames, but is sent when a user is navigating to the origin site from an external site (for example, when following a link).
         This is the default behavior if the `SameSite` attribute is not specified.
 
+        > [!WARNING]
+        > Browser implementations vary when `SameSite` is omitted.
+        > See [Browser compatibility](#browser_compatibility) for details.
+
     - `None`
 
       - : Means that the browser sends the cookie with both cross-site and same-site requests.
@@ -176,7 +180,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
 ### Session cookie
 
-**Session cookies** are removed when the client shuts down. Cookies are session cookies if they do not specify the `Expires` or `Max-Age` attribute.
+Session cookies are removed when the client shuts down. Cookies are session cookies if they do not specify the `Expires` or `Max-Age` attribute.
 
 ```http
 Set-Cookie: sessionId=38afes7a8
@@ -184,7 +188,7 @@ Set-Cookie: sessionId=38afes7a8
 
 ### Permanent cookie
 
-**Permanent cookies** are removed at a specific date (`Expires`) or after a specific length of time (`Max-Age`) and not when the client is closed.
+Permanent cookies are removed at a specific date (`Expires`) or after a specific length of time (`Max-Age`) and not when the client is closed.
 
 ```http
 Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT

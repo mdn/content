@@ -63,4 +63,5 @@ Timing-Allow-Origin: https://developer.mozilla.org
 ## See also
 
 - [Resource Timing API](/en-US/docs/Web/API/Performance_API/Resource_timing)
-- {{HTTPHeader("Vary")}}
+- {{HTTPHeader("Server-Timing")}} header
+- {{HTTPHeader("Vary")}} header

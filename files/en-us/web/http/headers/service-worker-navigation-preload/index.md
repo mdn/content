@@ -10,7 +10,7 @@ browser-compat: http.headers.Service-Worker-Navigation-Preload
 The HTTP **`Service-Worker-Navigation-Preload`** {{Glossary("request header")}} indicates that the request was the result of a {{domxref("Window/fetch", "fetch()")}} operation made during service worker navigation preloading.
 It allows a server to respond with a different resource than for a normal `fetch()`.
 
-If a different response may result from setting this header, the server must set {{HTTPHeader("Vary", "Vary: Service-Worker-Navigation-Preload")}} to ensure that different responses are cached.
+If a different response may result from setting this header, the server must include a {{HTTPHeader("Vary", "Vary: Service-Worker-Navigation-Preload")}} header in responses to ensure that different responses are cached.
 
 For more information see {{domxref("NavigationPreloadManager.setHeaderValue()")}} (and {{domxref("NavigationPreloadManager")}}).
 
@@ -42,9 +42,9 @@ Service-Worker-Navigation-Preload: <value>
 
 ## Examples
 
-### Using Service-Worker-Navigation-Preload
+### Service worker navigation preloading headers
 
-The header below is sent by default in requests:
+The following request header is sent by default in navigation preload requests:
 
 ```http
 Service-Worker-Navigation-Preload: true

@@ -7,13 +7,16 @@ browser-compat: http.headers.Trailer
 
 {{HTTPSidebar}}
 
-The HTTP **Trailer** {{glossary("request header", "request")}} and {{glossary("response header")}} allows the sender to include additional
-fields at the end of chunked messages in order to supply metadata that might be
-dynamically generated while the message body is sent, such as a message integrity check,
-digital signature, or post-processing status.
+The HTTP **Trailer** {{glossary("request header", "request")}} and {{glossary("response header")}} allows the sender to include additional fields at the end of chunked messages in order to supply metadata that might be dynamically generated while the message body is sent.
+The content of a trailer field may be a message integrity check, digital signature, or post-processing status.
 
 > [!NOTE]
-> The {{HTTPHeader("TE")}} request header needs to be set to "trailers" to allow trailer fields.
+> The {{HTTPHeader("TE")}} request header needs to be set to `trailers` to allow trailer fields.
+
+> [!WARNING]
+> Developers cannot access HTTP trailers via the Fetch API or XHR.
+> Additionally, browsers ignore HTTP trailers, with the exception of {{HTTPHeader("Server-Timing")}}.
+> See [Browser compatibility](#browser_compatibility) for more information.
 
 <table class="properties">
   <tbody>
@@ -43,21 +46,19 @@ Trailer: header-names
 - `header-names`
 
   - : HTTP header fields which will be present in the trailer part of chunked messages.
-    These header fields are **disallowed**:
+    The following header names are **disallowed**:
 
-    - message framing headers (e.g., {{HTTPHeader("Transfer-Encoding")}} and {{HTTPHeader("Content-Length")}}),
-    - routing headers (e.g., {{HTTPHeader("Host")}}),
-    - request modifiers (e.g., controls and conditionals, like
-      {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Max-Forwards")}}, or {{HTTPHeader("TE")}}),
-    - authentication headers (e.g., {{HTTPHeader("Authorization")}} or {{HTTPHeader("Set-Cookie")}}),
-    - or {{HTTPHeader("Content-Encoding")}}, {{HTTPHeader("Content-Type")}}, {{HTTPHeader("Content-Range")}}, and `Trailer` itself.
+    - {{HTTPHeader("Content-Encoding")}}, {{HTTPHeader("Content-Type")}}, {{HTTPHeader("Content-Range")}}, and `Trailer`
+    - Authentication headers (e.g., {{HTTPHeader("Authorization")}} or {{HTTPHeader("Set-Cookie")}})
+    - Message framing headers (e.g., {{HTTPHeader("Transfer-Encoding")}} and {{HTTPHeader("Content-Length")}})
+    - Routing headers (e.g., {{HTTPHeader("Host")}})
+    - Request modifiers (e.g., controls and conditionals, like {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Max-Forwards")}}, or {{HTTPHeader("TE")}})
 
 ## Examples
 
-### Chunked transfer encoding using a trailing header
+### Chunked response using a trailing header
 
-In this example, the {{HTTPHeader("Expires")}} header is used at the end of the chunked
-message and serves as a trailing header.
+In this example response, the {{HTTPHeader("Expires")}} header is used at the end of the chunked message and serves as a trailing header:
 
 ```http
 HTTP/1.1 200 OK
@@ -88,4 +89,5 @@ Expires: Wed, 21 Oct 2015 07:28:00 GMT\r\n
 
 - {{HTTPHeader("Transfer-Encoding")}}
 - {{HTTPHeader("TE")}}
+- {{HTTPHeader("Server-Timing")}}
 - [Chunked transfer encoding](https://en.wikipedia.org/wiki/Chunked_transfer_encoding)
