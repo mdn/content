@@ -49,7 +49,7 @@ Values of this type are objects that can contain these properties:
 
 Most methods in the cookies API involve a `Cookie` object as an input parameter or as part of the return value. For example, a call to {{WebExtAPIRef("cookies.getAll()")}} returns an array of `Cookie` objects.
 
-This example asks for all cookies, then logs some of the values fron each of the resulting `Cookie` objects:
+This example asks for all cookies, then logs some of the values from each of the resulting `Cookie` objects:
 
 ```js
 function logCookies(cookies) {

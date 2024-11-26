@@ -22,6 +22,7 @@ This article provides information about the changes in Firefox 134 that affect d
 
 ### JavaScript
 
+- Support for the {{jsxref("RegExp.escape()")}} static method that can be used to escape any potential regex syntax characters in a string, returning a new string that can be safely used as a [literal](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character) pattern for the {{jsxref("RegExp/RegExp", "RegExp()")}} constructor. ([Firefox bug 1918235](https://bugzil.la/1918235)).
 - The {{jsxref("Promise.try()")}} convenience method is now supported.
   The method takes a callback of any kind (a function that returns or throws, synchronously or asynchronously) and wraps its result in a {{jsxref("Promise")}}.
   This allows you to use promise semantics ({{jsxref("Promise.then", ".then()")}}, {{jsxref("Promise.catch", ".catch()")}}) to handle the result from any kind of method. ([Firefox bug 1917879](https://bugzil.la/1917879) and [Firefox bug 1905364](https://bugzil.la/1905364)).
