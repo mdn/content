@@ -304,7 +304,7 @@ The following example shows this behavior. The fifth flex item is collapsed, so 
 <div class="box">
   <div>One</div>
   <div>Two is the width of this sentence.</div>
-  <div class="hide">Three <br />is <br />five <br />lines <br/>tall.</div>
+  <div class="hide">Three <br />is <br />five <br />lines <br />tall.</div>
   <div>Four</div>
   <div>Five</div>
   <div>Six</div>
