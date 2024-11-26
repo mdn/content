@@ -44,6 +44,8 @@ This article provides information about the changes in Firefox 134 that affect d
 
 ### APIs
 
+- The [`PushManager.supportedContentEncodings`](/en-US/docs/Web/API/PushManager/supportedContentEncodings_static) static method is now supported for getting the allowed algorithms for encrypting the payload of a [push message](/en-US/docs/Web/API/Push_API). ([Firefox bug 1497430](https://bugzil.la/1497430)).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
