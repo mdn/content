@@ -94,7 +94,7 @@ The **`PublicKeyCredentialCreationOptions`** dictionary represents the object pa
 
 - `excludeCredentials` {{optional_inline}}
 
-  - : An {{jsxref("Array")}} of objects describing existing credentials that are already mapped to this user account (as identified by `user.id`). This is provided by the relying party, and checked by the user agent to avoid creating a new public key credential on an authenticator that already has a credential mapped to the specified user account. for an existing user who already has some. Each item should be of the form:
+  - : An {{jsxref("Array")}} of objects describing existing credentials that are already mapped to this user account (as identified by `user.id`). This is provided by the relying party, and checked by the user agent to avoid creating a new public key credential on an authenticator that already has a credential mapped to the specified user account. Each item should be of the form:
 
     - `id`
 
