@@ -33,9 +33,11 @@ This only works when used inside CSS placed within a [shadow DOM](/en-US/docs/We
 }
 ```
 
-## Examples
+<!-- ## Examples
 
 ### Simple example
+
+This example has two `<slot>` elements, one of which has been assigned some content and the other has not.
 
 #### HTML
 
@@ -44,19 +46,19 @@ This only works when used inside CSS placed within a [shadow DOM](/en-US/docs/We
   <template shadowrootmode="open">
     <style>
       :has-slotted {
-        color: tomato;
+        color: rebeccapurple;
       }
     </style>
     <slot name="one">Placeholder 1</slot>
     <slot name="two">Placeholder 2</slot>
   </template>
-  <span slot="one">Slotted content one</span>
+  <span slot="one">Slotted content</span>
 </p>
 ```
 
 #### Result
 
-These results show that the third web component does not have content for the `description` `<slot>`.
+The `<slot>` element that has been assigned content matched the `:has-slotted` pseudo class and has the `color` value of `rebbecapurple` applied.
 
 {{EmbedLiveSample("simple_example",100,300)}}
 
@@ -106,7 +108,6 @@ Here the CSS selector is looking for an element that has the class of `required`
 ```
 
 ```html nolint hidden live-sample___highlighting_slots_with_required_content
-<!-- start define structure of component -->
 <template id="element-details-template">
   <style>
     details {
@@ -166,8 +167,6 @@ Here the CSS selector is looking for an element that has the class of `required`
   </details>
   <hr />
 </template>
-<!-- end define structure of component -->
-<!-- use component -->
 <element-details>
   <span slot="element-name">template</span>
   <span slot="description"
@@ -218,7 +217,7 @@ customElements.define(
 
 These results show that the third web component does not have content for the `description` `<slot>`.
 
-{{EmbedLiveSample("highlighting_slots_with_required_content",100,300)}}
+{{EmbedLiveSample("highlighting_slots_with_required_content",100,300)}} -->
 
 ## Specifications
 
