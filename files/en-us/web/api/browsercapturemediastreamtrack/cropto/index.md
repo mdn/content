@@ -27,7 +27,7 @@ A {{jsxref("Promise")}} that resolves to {{jsxref("undefined")}}.
 
 The promise will reject if:
 
-- The track [`kind`](/en-US/docs/Web/API/MediaStreamTrack/kind) is not `"video"`, or its [`readyState`](/docs/Web/API/MediaStreamTrack/readyState) is not `"live"`.
+- The track [`kind`](/en-US/docs/Web/API/MediaStreamTrack/kind) is not `"video"`, or its [`readyState`](/en-US/docs/Web/API/MediaStreamTrack/readyState) is not `"live"`.
 - The crop target element no longer exists.
 - The track being cropped has clones or is not a track captured from the user's screen.
 - `CropTarget` is not one of the values specified above.
