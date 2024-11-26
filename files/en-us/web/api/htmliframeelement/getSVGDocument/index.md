@@ -17,7 +17,7 @@ A {{domxref("Document")}}.
 ## Examples
 
 ```js
-const svg = document.getElementById("el").getSVGDocument();
+const svgDoc = document.getElementById("el").getSVGDocument();
 ```
 
 ## Specifications
