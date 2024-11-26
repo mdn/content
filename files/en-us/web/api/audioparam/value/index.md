@@ -8,7 +8,7 @@ browser-compat: api.AudioParam.value
 
 {{APIRef("Web Audio API")}}
 
-The [Web Audio API's](/en-US/docs/Web/API/Web_Audio_API) {{domxref("AudioParam")}} interface property **`value`** gets or sets the value of this {{domxref("AudioParam")}} at the current time.
+The **`value`** property of the {{domxref("AudioParam")}} interface gets or sets the value of this `AudioParam` at the current time.
 Initially, the value is set to {{domxref("AudioParam.defaultValue")}}.
 
 Setting `value` has the same effect as calling {{domxref("AudioParam.setValueAtTime")}} with the time returned by the `AudioContext`'s {{domxref("BaseAudioContext/currentTime", "currentTime")}} property.
@@ -18,7 +18,7 @@ Setting `value` has the same effect as calling {{domxref("AudioParam.setValueAtT
 A floating-point {{jsxref("Number")}} indicating the parameter's value as of the current time.
 This value will be between the values specified by the {{domxref("AudioParam.minValue", "minValue")}} and {{domxref("AudioParam.maxValue", "maxValue")}} properties.
 
-## Usage notes
+## Description
 
 ### Value precision and variation
 
@@ -83,10 +83,6 @@ gainNode.gain.setValueAtTime(0.4, audioCtx.currentTime);
 ## Browser compatibility
 
 {{Compat}}
-
-When changing the gain value of a {{domxref("GainNode")}}, Google Chrome prior to version 64 (January 2018) would perform a smooth interpolation to prevent dezippering.
-Starting with version 64, the value is changed instantly to bring it in line with the Web Audio spec.
-See [Chrome Platform Status](https://chromestatus.com/feature/5287995770929152) for details.
 
 ## See also
 
