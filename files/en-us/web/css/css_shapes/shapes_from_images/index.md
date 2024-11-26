@@ -74,7 +74,6 @@ body {
 img {
   float: left;
   shape-outside: url(https://mdn.github.io/shared-assets/images/examples/star-shape.png);
-  shape-image-threshold: 0.2;
   shape-margin: 20px;
 }
 ```
@@ -93,13 +92,13 @@ DevTools can help you to identify CORS errors. In Chrome the Console will alert 
 
 The {{cssxref("shape-image-threshold")}} property enables the creation of shapes from areas which are not fully transparent. If the value of `shape-image-threshold` is `0.0` (which is the initial value) then the area must be fully transparent. If the value is `1.0` then it is fully opaque. Values in between mean that you can set a semi-transparent area as the defining area.
 
-In the example below I am using a similar image to the initial example, however, in this image the background of the star is not fully transparent, it has a 20% opacity as created in my graphics program. If I set `shape-image-threshold` to `0.3` then I see the shape, if I set it to something smaller than `0.2` I do not get the shape.
+In the example below, the background of the star is not fully transparent, it has a 20% opacity as created in my graphics program. If I set `shape-image-threshold` to `0.2` or greater, then I see the shape, if I set it to something smaller than `0.2` I do not get the shape.
 
 ```html hidden live-sample___threshold
 <div class="box">
   <img
     alt="A red star"
-    src="https://mdn.github.io/shared-assets/images/examples/star-shape.png" />
+    src="https://mdn.github.io/shared-assets/images/examples/star-red-20.png" />
   <p>
     One November night in the year 1782, so the story runs, two brothers sat
     over their winter fire in the little French town of Annonay, watching the
@@ -121,7 +120,7 @@ body {
 
 img {
   float: left;
-  shape-outside: url(https://mdn.github.io/shared-assets/images/examples/star-shape.png);
+  shape-outside: url(https://mdn.github.io/shared-assets/images/examples/star-red-20.png);
   shape-image-threshold: 0.2;
 }
 ```
