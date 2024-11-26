@@ -9,9 +9,7 @@ page-type: guide
 This effort aims to achieve that by providing a partitioned storage location to every website a user visits.
 This article gives an overview of the mechanism, lists the affected APIs and explains how to debug affected sites.
 
-State Partitioning is currently turned on by default in the Firefox Nightly channel.
-A subset of the state partitioning efforts (namely [network partitioning](#network_partitioning)) has been enabled by default in the release channel
-of Firefox since version 85.
+From Firefox 103, State Partitioning is turned on by default.
 
 ## Motivation
 
@@ -32,7 +30,7 @@ Firefox's past cookie policies attempt to mitigate tracking by blocking access t
 For example, our "block all third-party cookies" policy will prevent all domains from accessing certain storage APIs when loaded in a third-party context.
 Our current [default cookie policy](/en-US/docs/Web/Privacy/Storage_Access_Policy) blocks access in a third-party context only for domains classified as trackers.
 
-## State partitioning
+## State Partitioning
 
 State Partitioning is a different approach to preventing cross-site tracking.
 Rather than block access to certain stateful APIs in a third-party context, Firefox provides embedded resources with a separate storage bucket for every top-level website.
@@ -55,7 +53,7 @@ We intend to align our state partitioning implementation with these efforts as t
 ### Status of partitioning in Firefox
 
 - [**Network Partitioning**](#network_partitioning): Enabled by default for all users since Firefox 85.
-- [**Dynamic Partitioning**](#dynamic_partitioning):
+- [**Dynamic Partitioning**](#dynamic_partitioning): Enabled by default for all users since Firefox 103. Prior to that:
   - Since Firefox 86: Enabled for users that have ["Strict" privacy protections](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop#w_strict-enhanced-tracking-protection) enabled.
   - Since Firefox 90: Enabled in private browsing.
 

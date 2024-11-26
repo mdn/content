@@ -199,7 +199,7 @@ Try adding an ordered or unordered list to your example page.
 
 ## Links
 
-Links are very important — they are what makes the web a web! To add a link, we need to use a simple element — {{htmlelement("a")}} — "a" being the short form for "anchor". To make text within your paragraph into a link, follow these steps:
+Links are very important — they are what makes the web a web! To add a link, we need to use an element — {{htmlelement("a")}} — "a" being the short form for "anchor". To make text within your paragraph into a link, follow these steps:
 
 1. Choose some text. We chose the text "Mozilla Manifesto".
 2. Wrap the text in an {{htmlelement("a")}} element, as shown below:

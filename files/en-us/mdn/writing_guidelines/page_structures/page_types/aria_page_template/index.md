@@ -25,7 +25,7 @@ To include the (appropriate) feature status key — [**experimental**](/en-US/do
 
 ### Specifications
 
-In the value of the `spec_urls` front matter metadata key, update the URLs to point to the fragment IDs for the correct sections from the following specifications:
+In the value of the `spec-urls` front matter metadata key, update the URLs to point to the fragment IDs for the correct sections from the following specifications:
 
 - [ARIA](https://w3c.github.io/aria/)
 - [ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/)

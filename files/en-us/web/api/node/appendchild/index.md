@@ -59,7 +59,7 @@ const paragraph = document.body.appendChild(document.createElement("p"));
 // You can append more elements to the paragraph later
 ```
 
-On the other hand, you cannot use `appendChild()` in a [fluent API](https://en.wikipedia.org/wiki/Fluent_interface) fashion (like JQuery).
+On the other hand, you cannot use `appendChild()` in a [fluent API](https://en.wikipedia.org/wiki/Fluent_interface) fashion (like jQuery).
 
 ```js example-bad
 // This doesn't append three paragraphs:

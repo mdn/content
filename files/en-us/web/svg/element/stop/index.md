@@ -7,7 +7,7 @@ browser-compat: svg.elements.stop
 
 {{SVGRef}}
 
-The SVG **`<stop>`** element defines a color and its position to use on a gradient. This element is always a child of a {{SVGElement("linearGradient")}} or {{SVGElement("radialGradient")}} element.
+The **`<stop>`** [SVG](/en-US/docs/Web/SVG) element defines a color and its position to use on a gradient. This element is always a child of a {{SVGElement("linearGradient")}} or {{SVGElement("radialGradient")}} element.
 
 ## Example
 
