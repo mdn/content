@@ -129,7 +129,7 @@ All desktop operating systems come with a basic text editor. These editors are a
             <a href="https://en.wikipedia.org/wiki/Gedit" rel="external"
               >GEdit</a
             >
-            (Gnome)
+            (GNOME)
           </li>
           <li>
             <a
@@ -150,7 +150,7 @@ All desktop operating systems come with a basic text editor. These editors are a
       <td>
         <ul>
           <li><a href="https://www.gnu.org/software/emacs/">Emacs</a></li>
-          <li><a href="https://www.vim.org/" rel="external">Vim</a></li>
+          <li><a href="https://www.vim.org/" rel="external">VIM</a></li>
           <li>
             <a href="https://visualstudio.microsoft.com/">Visual Studio Code</a>
           </li>
@@ -223,7 +223,7 @@ Uploading files to a web server is a very important step while creating a websit
               rel="external"
               >Nautilus/Files</a
             >
-            (Gnome)
+            (GNOME)
           </li>
           <li>
             <a href="https://dolphin.com/" rel="external">Dolphin</a> (KDE)

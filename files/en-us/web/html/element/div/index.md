@@ -30,7 +30,7 @@ The `<div>` element has [an implicit role of `generic`](https://www.w3.org/TR/wa
 
 ## Examples
 
-### A simple example
+### A basic example
 
 ```html
 <div>
@@ -42,7 +42,7 @@ The `<div>` element has [an implicit role of `generic`](https://www.w3.org/TR/wa
 
 #### Result
 
-{{EmbedLiveSample("A_simple_example", 650, 60)}}
+{{EmbedLiveSample("A_basic_example", 650, 60)}}
 
 ### A styled example
 

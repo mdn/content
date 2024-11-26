@@ -30,8 +30,7 @@ If the `start` and `end` values are the same, the selection is equivalent to a c
 ### Exceptions
 
 - If only one argument is provided, a `TypeError` {{domxref("DOMException")}} is thrown.
-- If either argument is not a positive number, a {{domxref("DOMException")}} is thrown.
-- If `start` is greater than `end`, a {{domxref("DOMException")}} is thrown.
+- If either argument is not a non-negative number, a {{domxref("DOMException")}} is thrown.
 
 ## Examples
 

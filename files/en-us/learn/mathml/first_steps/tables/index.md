@@ -23,7 +23,7 @@ Once all basic math notations are known, it remains to consider tabular layout w
         >, and HTML basics (study
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
-        >. and <a href="/en-US/docs/Learn/HTML/Tables"
+        >, and <a href="/en-US/docs/Learn/HTML/Tables"
           >HTML tables</a
         >)
       </td>
