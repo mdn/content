@@ -10,7 +10,7 @@ page-type: guide
 
 The `responseType` property of the XMLHttpRequest object can be set to change the expected response type from the server. Possible values are the empty string (default), `"arraybuffer"`, `"blob"`, `"document"`, `"json"`, and `"text"`. The `response` property will contain the entity body according to `responseType`, as an `ArrayBuffer`, `Blob`, `Document`, `JSON`, or string. This is `null` if the request is not complete or was not successful.
 
-This example reads an image as a binary file and creates an 8-bit unsigned integer array from the raw bytes. Note that this will not decode the image and read the pixels. This can be done with the [ImageDecoder](/en-US/docs/Web/API/ImageDecoder).
+This example reads an image as a binary file and creates an 8-bit unsigned integer array from the raw bytes. Note that this will not decode the image and read the pixels. This can be done with the {{domxref("ImageDecoder")}} interface.
 
 ```js
 const req = new XMLHttpRequest();
