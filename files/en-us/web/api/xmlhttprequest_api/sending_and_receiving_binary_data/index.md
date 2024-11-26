@@ -10,7 +10,7 @@ page-type: guide
 
 The `responseType` property of the XMLHttpRequest object can be set to change the expected response type from the server. Possible values are the empty string (default), `"arraybuffer"`, `"blob"`, `"document"`, `"json"`, and `"text"`. The `response` property will contain the entity body according to `responseType`, as an `ArrayBuffer`, `Blob`, `Document`, `JSON`, or string. This is `null` if the request is not complete or was not successful.
 
-This example reads an image as a binary file and creates an 8-bit unsigned integer array from the raw bytes. Note that this will not decode the image and read the pixels. You will need a [png decoding library](https://github.com/foliojs/png.js) for that.
+This example reads an image as a binary file and creates an 8-bit unsigned integer array from the raw bytes. Note that this will not decode the image and read the pixels. This can be done with the [ImageDecoder](/en-US/docs/Web/API/ImageDecoder).
 
 ```js
 const req = new XMLHttpRequest();
@@ -81,7 +81,3 @@ This is building a 512-byte array of 8-bit integers and sending it; you can use 
 ## Submitting forms and uploading files
 
 See [`FormData`](/en-US/docs/Web/API/FormData).
-
-## See also
-
-- [Downloading Binary Streams with Javascript XMLHttpRequest](https://web.archive.org/web/20071103070418/http://mgran.blogspot.com/2006/08/downloading-binary-streams-with.html) — explanation of receiving binary data in older browsers.
