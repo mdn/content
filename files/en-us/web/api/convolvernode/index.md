@@ -62,7 +62,7 @@ _No specific method; inherits methods from its parent, {{domxref("AudioNode")}}_
 The following example shows basic usage of an AudioContext to create a convolver node.
 
 > [!NOTE]
-> You will need to find an impulse response to complete the example below. See this [Codepen](https://codepen.io/DonKarlssonSan/pen/doVKRE) for an applied example.
+> You will need to find an impulse response to complete the example below. See this [CodePen](https://codepen.io/DonKarlssonSan/pen/doVKRE) for an applied example.
 
 ```js
 let audioCtx = new window.AudioContext();

@@ -39,7 +39,7 @@ Firefox 17 shipped on November 20, 2012. This article lists key changes that are
 - The String methods [link](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/link) and [anchor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/anchor) now escape the `'"'` (quotation mark) ([Firefox bug 352437](https://bugzil.la/352437)).
 - Experimental support for strawman `ParallelArray` object has been implemented ([Firefox bug 778559](https://bugzil.la/778559)).
 - Support to iterate [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)/[`Set`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) ([Firefox bug 725909](https://bugzil.la/725909)).
-- Disabled EcmaScript for XML (E4X), an abandoned JavaScript extension, for web content by default ([Firefox bug 778851](https://bugzil.la/778851)).
+- Disabled ECMAScript for XML (E4X), an abandoned JavaScript extension, for web content by default ([Firefox bug 778851](https://bugzil.la/778851)).
 - `__exposedProps__` must now be set for Chrome JavaScript objects exposed to content. Attempts to access Chrome objects from content without `__exposedProps__` set will fail silently ([Firefox bug 553102](https://bugzil.la/553102)).
 - [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loops now work in terms of `.iterator()` and `.next()` ([Firefox bug 725907](https://bugzil.la/725907)).
 
