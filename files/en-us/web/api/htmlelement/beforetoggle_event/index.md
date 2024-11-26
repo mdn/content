@@ -104,7 +104,7 @@ In this example we use a button to set whether the popover can open or not: in a
 
 #### HTML
 
-The HTML consists of a popover, a button for toggling it open and closed, and a button for setting wether the button can be opened.
+The HTML consists of a popover, a button for toggling it open and closed, and a button for setting whether the button can be opened.
 
 ```html
 <button popovertarget="mypopover">Toggle the popover</button>

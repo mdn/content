@@ -27,7 +27,7 @@ new Worker(url, options)
   - : A string representing the URL of the script the worker will execute. It must obey the same-origin policy. The URL is resolved relative to the current HTML page's location.
 
     > [!NOTE]
-    > Bundlers, including [Webpack](https://webpack.js.org/guides/web-workers/), [Vite](https://vite.dev/guide/features.html#web-workers), and [Parcel](https://parceljs.org/languages/javascript/#web-workers), recommend passing URLs that are relative to [`import.meta.url`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta#url) to the `Worker()` constructor. For example:
+    > Bundlers, including [webpack](https://webpack.js.org/guides/web-workers/), [Vite](https://vite.dev/guide/features.html#web-workers), and [Parcel](https://parceljs.org/languages/javascript/#web-workers), recommend passing URLs that are relative to [`import.meta.url`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta#url) to the `Worker()` constructor. For example:
     >
     > ```js
     > const myWorker = new Worker(new URL("worker.js", import.meta.url));

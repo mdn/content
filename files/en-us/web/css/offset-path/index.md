@@ -298,7 +298,7 @@ The SVG rectangle that defines the path shape is shown here only to visually dem
 - [SVG \<path>](/en-US/docs/Web/SVG/Tutorial/Paths)
 - {{cssxref("basic-shape/path","path()")}}
 - Other demos:
-  - [Examples using various shapes values](https://codepen.io/team/css-tricks/pen/WZdKMq) on Codepen by CSS-Tricks
-  - [Moving a triangle along a curved path](https://codepen.io/ericwilligers/pen/jMbJPp) on Codepen by Eric Willigers
-  - [Moving a pair of scissors along the shape of a house](https://codepen.io/ericwilligers/pen/bwVZNa) on Codepen by Eric Willigers
+  - [Examples using various shapes values](https://codepen.io/team/css-tricks/pen/WZdKMq) on CodePen by CSS-Tricks
+  - [Moving a triangle along a curved path](https://codepen.io/ericwilligers/pen/jMbJPp) on CodePen by Eric Willigers
+  - [Moving a pair of scissors along the shape of a house](https://codepen.io/ericwilligers/pen/bwVZNa) on CodePen by Eric Willigers
   - [Moving multiple pairs of eyes](https://jsfiddle.net/ericwilligers/r1snqdan/) on JSFiddle by Eric Willigers

@@ -36,7 +36,7 @@ seconds.
 
 ## Examples
 
-We have created a simple example that allows you to play three different samples on a
+We have created an example that allows you to play three different samples on a
 constant loop — see [create-delay](https://chrisdavidmills.github.io/create-delay/) (you can also
 [view the source code](https://github.com/chrisdavidmills/create-delay)). If
 you just press the play buttons, the loops will start immediately; if you slide the

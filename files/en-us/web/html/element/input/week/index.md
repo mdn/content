@@ -81,7 +81,7 @@ We'll look at basic and more complex uses of `<input type="week">`, then offer a
 
 ### Basic uses of week
 
-The simplest use of `<input type="week">` involves a basic `<input>` and {{htmlelement("label")}} element combination, as seen below:
+The most basic use of `<input type="week">` involves a basic `<input>` and {{htmlelement("label")}} element combination, as seen below:
 
 ```html
 <form>
