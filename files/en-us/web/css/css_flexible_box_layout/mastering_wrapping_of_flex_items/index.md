@@ -303,10 +303,10 @@ The following example shows this behavior. The fifth flex item is collapsed, so 
 ```html live-sample___wrapped-visibility-collapse
 <div class="box">
   <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four four four four four four four</div>
-  <div class="collapse">Five <br />is <br />taller</div>
+  <div>Two is the width of this sentence.</div>
+  <div class="hide">Three <br />is <br />five <br />lines <br/>tall.</div>
+  <div>Four</div>
+  <div>Five</div>
   <div>Six</div>
   <div>Seven</div>
   <div>Eight</div>
