@@ -58,7 +58,7 @@ This only works when used inside CSS placed within a [shadow DOM](/en-US/docs/We
 
 These results show that the third web component does not have content for the `description` `<slot>`.
 
-{{EmbedLiveSample("simple_examaple",100,300)}}
+{{EmbedLiveSample("simple_example",100,300)}}
 
 ### Highlighting slots with required content
 
