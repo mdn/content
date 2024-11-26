@@ -66,6 +66,9 @@ This article provides information about the changes in Firefox 133 that affect d
 
 #### Removals
 
+- The [`options.shadowRoots`](/en-US/docs/Web/API/Document/caretPositionFromPoint#shadowroots) argument for passing {{domxref("ShadowRoot")}} objects to the {{domxref('Document.caretPositionFromPoint()')}} method has been withdrawn from the release.
+  The feature can be tested in the Nightly release and is expected to re-release in future. ([Firefox bug 1914596](https://bugzil.la/1914596)).
+
 ### WebAssembly
 
 #### Removals
