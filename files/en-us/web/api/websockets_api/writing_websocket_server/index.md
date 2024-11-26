@@ -34,7 +34,7 @@ Methods:
 
 - `Start()`
 - `System.Net.Sockets.TcpClient AcceptTcpClient()`
-  Waits for a Tcp connection, accepts it and returns it as a TcpClient object.
+  Waits for a TCP connection, accepts it and returns it as a TcpClient object.
 
 Here's a barebones server implementation:
 
