@@ -320,7 +320,7 @@ While the [visual result](#result_2) is unchanged from the [previous example tab
             >cell</a
           ></code
         >
-        if a descendant of a {{HTMLElement("table")}} element, and <code
+        if a descendant of a {{HTMLElement("table")}} element, or <code
           ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role"
             >gridcell</a
           ></code
