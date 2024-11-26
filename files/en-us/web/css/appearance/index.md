@@ -44,7 +44,7 @@ Some examples are provided, but the list is not exhaustive.
 
 - `none`
 
-  - : If the element is a widget (native form control) it will be forced to use a standardized primitive appearance instead of a platform native appearance (ex: operating system specific). Non-widget elements, including replaced elements like img and video, are unaffected.
+  - : If the element is a widget (native form control), it will be forced to use a standardized primitive appearance instead of a platform-native or operating system specific appearance, supporting the usual rules of CSS.  This value has no effect on non-widget elements, including replaced elements like {{htmlelement("img")}} and {{htmlelement("video")}}.
 
 - `auto`
 
