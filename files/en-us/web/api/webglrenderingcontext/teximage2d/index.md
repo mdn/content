@@ -756,7 +756,7 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the width of the border. Must be 0.
 - `format`
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the format of the texel data. In WebGL 1, this
-    must be the same as `internalformat` (see above). in WebGL 2, the
+    must be the same as `internalformat` (see above). In WebGL 2, the
     combinations are listed in [this table](https://registry.khronos.org/webgl/specs/latest/2.0/#TEXTURE_TYPES_FORMATS_FROM_DOM_ELEMENTS_TABLE).
 - `type`
 

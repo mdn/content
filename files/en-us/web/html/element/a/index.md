@@ -199,22 +199,31 @@ People experiencing low vision conditions, navigating with the aid of screen rea
 
 #### Link to a non-HTML resource
 
-```html
-<a href="2017-annual-report.ppt">2017 Annual Report (PowerPoint)</a>
-```
-
-If an icon is used to signify link behavior, make sure it has an [_alt text_](/en-US/docs/Web/HTML/Element/img#alt):
+If an icon is used to signify link behavior, make sure it has an [`alt` attribute](/en-US/docs/Web/HTML/Element/img#alt) to describe its purpose. In case the icon is missing, the `alt` attribute's content will still convey the link's behavior.
 
 ```html
-<a target="_blank" href="https://www.wikipedia.org">
-  Wikipedia
-  <img alt="(opens in new tab)" src="newtab.svg" />
-</a>
-
-<a href="2017-annual-report.ppt">
-  2017 Annual Report
-  <img alt="(PowerPoint file)" src="ppt-icon.svg" />
-</a>
+<p>
+  <a href="https://www.wikipedia.org/" target="_blank">
+    Wikipedia
+    <img src="new-tab.svg" width="14" alt="(Opens in new tab)" />
+  </a>
+  <br />
+  <a href="2017-annual-report.ppt">
+    2017 annual report
+    <img src="powerpoint.svg" width="14" alt="(PowerPoint file)" />
+  </a>
+</p>
+<p>
+  <a href="https://www.wikipedia.org/" target="_blank">
+    Wikipedia
+    <img src="missing-icon.svg" width="14" alt="(Opens in new tab)" />
+  </a>
+  <br />
+  <a href="2017-annual-report.ppt">
+    2017 annual report
+    <img src="missing-icon.svg" width="14" alt="(PowerPoint file)" />
+  </a>
+</p>
 ```
 
 ##### Result

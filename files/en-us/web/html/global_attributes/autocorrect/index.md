@@ -127,7 +127,7 @@ if (!("autocorrect" in HTMLElement.prototype)) {
   log("autocorrect not supported");
 } else {
   log(`userNameElement.autocorrect: ${userNameElement.autocorrect}`);
-  log(`userNameElement.autocorrect: ${bioElement.autocorrect}`);
+  log(`bioElement.autocorrect: ${bioElement.autocorrect}`);
 }
 
 resetButton.addEventListener("click", (e) => {
