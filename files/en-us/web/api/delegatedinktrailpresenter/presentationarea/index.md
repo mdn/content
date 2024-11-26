@@ -3,6 +3,8 @@ title: "DelegatedInkTrailPresenter: presentationArea property"
 short-title: presentationArea
 slug: Web/API/DelegatedInkTrailPresenter/presentationArea
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.DelegatedInkTrailPresenter.presentationArea
 ---
 

@@ -11569,7 +11569,8 @@
 /en-US/docs/Web/CSS/clamp()	/en-US/docs/Web/CSS/clamp
 /en-US/docs/Web/CSS/color-adjust	/en-US/docs/Web/CSS/print-color-adjust
 /en-US/docs/Web/CSS/color_value/color()	/en-US/docs/Web/CSS/color_value/color
-/en-US/docs/Web/CSS/color_value/color-contrast()	/en-US/docs/Web/CSS/color_value/color-contrast
+/en-US/docs/Web/CSS/color_value/color-contrast	/en-US/docs/Web/CSS/color_value
+/en-US/docs/Web/CSS/color_value/color-contrast()	/en-US/docs/Web/CSS/color_value
 /en-US/docs/Web/CSS/color_value/color-mix()	/en-US/docs/Web/CSS/color_value/color-mix
 /en-US/docs/Web/CSS/color_value/color_keywords	/en-US/docs/Web/CSS/named-color
 /en-US/docs/Web/CSS/color_value/device-cmyk()	/en-US/docs/Web/CSS/color_value/device-cmyk
@@ -12292,6 +12293,7 @@
 /en-US/docs/Web/HTTP/Headers/Content-Security-Policy/referrer	/en-US/docs/Web/HTTP/Headers/Referrer-Policy
 /en-US/docs/Web/HTTP/Headers/Content-Security-Policy/require-sri-for	/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
 /en-US/docs/Web/HTTP/Headers/Cookie2	/en-US/docs/Web/HTTP/Headers/Cookie
+/en-US/docs/Web/HTTP/Headers/Digest	/en-US/docs/Web/HTTP/Headers/Content-Digest
 /en-US/docs/Web/HTTP/Headers/Feature-Policy	/en-US/docs/Web/HTTP/Headers/Permissions-Policy
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/accelerometer	/en-US/docs/Web/HTTP/Headers/Permissions-Policy/accelerometer
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/ambient-light-sensor	/en-US/docs/Web/HTTP/Headers/Permissions-Policy/ambient-light-sensor
@@ -12337,6 +12339,7 @@
 /en-US/docs/Web/HTTP/Headers/Ranges	/en-US/docs/Web/HTTP/Headers/Range
 /en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite	/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value
 /en-US/docs/Web/HTTP/Headers/Set-Cookie2	/en-US/docs/Web/HTTP/Headers/Set-Cookie
+/en-US/docs/Web/HTTP/Headers/Want-Digest	/en-US/docs/Web/HTTP/Headers/Want-Content-Digest
 /en-US/docs/Web/HTTP/History_of_HTTP_versions	/en-US/docs/Web/HTTP/Evolution_of_HTTP
 /en-US/docs/Web/HTTP/Index	/en-US/docs/Web/HTTP
 /en-US/docs/Web/HTTP/Link_prefetching_FAQ	/en-US/docs/Glossary/Prefetch
