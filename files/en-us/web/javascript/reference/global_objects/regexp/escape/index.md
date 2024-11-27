@@ -65,14 +65,21 @@ function removeDomain(text, domain) {
 }
 
 const input =
-  "Considering using [RegExp.escape()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/escape) to escape special characters in a string.";
+  "Consider using [RegExp.escape()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/escape) to escape special characters in a string.";
 const domain = "developer.mozilla.org";
 console.log(removeDomain(input, domain));
-// Considering using [RegExp.escape()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/escape) to escape special characters in a string.
+// Consider using [RegExp.escape()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/escape) to escape special characters in a string.
 ```
 
-Inserting the `domain` above results in the regular expression literal `https?://developer.mozilla.org(?=/)`, where the "." character is a regex [wildcard](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Wildcard) character. This means the string will match the string with any character in place of the ".", such as `developer-mozilla-org`.
-While we have no problematic strings in the particular input shown here, this is not robust code.
+Inserting the `domain` above results in the regular expression literal `https?://developer.mozilla.org(?=/)`, where the "." character is a regex [wildcard](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Wildcard) character. This means the string will match the string with any character in place of the ".", such as `developer-mozilla-org`. Therefore, it would incorrectly also change the following text:
+
+```js
+const input =
+  "This is not an MDN link: https://developer-mozilla.org/, be careful!";
+const domain = "developer.mozilla.org";
+console.log(removeDomain(input, domain));
+// This is not an MDN link: /, be careful!
+```
 
 To fix this, we can use `RegExp.escape()` to ensure that any user input is treated as a literal pattern:
 
