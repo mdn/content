@@ -47,7 +47,7 @@ The following examples demonstrate various inputs and outputs for the `RegExp.es
 
 ```js
 RegExp.escape("Buy it. use it. break it. fix it.");
-// "Buy\\x20it\\.\\x20use\\x20it\\.\\x20break\\x20it\\.\\x20fix\\x20it\\."
+// "\\x42uy\\x20it\\.\\x20use\\x20it\\.\\x20break\\x20it\\.\\x20fix\\x20it\\."
 RegExp.escape("foo.bar"); // "\\x66oo\\.bar"
 RegExp.escape("foo-bar"); // "\\x66oo\\x2dbar"
 RegExp.escape("foo\nbar"); // "\\x66oo\\nbar"
