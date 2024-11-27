@@ -1,3 +1,5 @@
+# Do not add comments to this file. They will be lost.
+
 sidebar:
   - type: section
     link: /Web/HTML
@@ -6,9 +8,8 @@ sidebar:
     title: Tutorials
   - link: /Learn/Getting_started_with_the_web/HTML_basics
     title: HTML_basics
-
-  - details: closed
-    title: Introduction_to_HTML
+  - title: Introduction_to_HTML
+    details: closed
     children:
       - link: /Learn/HTML/Introduction_to_HTML
         title: Introduction_to_HTML_overview
@@ -30,9 +31,8 @@ sidebar:
         title: Assessment_Marking_up_a_letter
       - link: /Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
         title: Assessment_Structuring_a_page_of_content
-
-  - details: closed
-    title: Multimedia_and_embedding
+  - title: Multimedia_and_embedding
+    details: closed
     children:
       - link: /Learn/HTML/Multimedia_and_embedding
         title: Multimedia_and_embedding_overview
@@ -48,9 +48,8 @@ sidebar:
         title: Responsive_images
       - link: /Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
         title: Assessment_Mozilla_splash_page
-
-  - details: closed
-    title: HTML_tables
+  - title: HTML_tables
+    details: closed
     children:
       - link: /Learn/HTML/Tables
         title: HTML_tables_overview
@@ -60,34 +59,27 @@ sidebar:
         title: HTML_table_advanced_features_and_accessibility
       - link: /Learn/HTML/Tables/Structuring_planet_data
         title: Assessment_Structuring_planet_data
-
   - type: section
     link: /Web/HTML/Reference
     title: Reference
-
   - type: listSubPages
-    details: closed
-    title: HTML_Elements
     path: /en-US/docs/Web/HTML/Element
-
-  - type: listSubPages
+    title: HTML_Elements
     details: closed
-    title: Global_attributes
+  - type: listSubPages
     path: /en-US/docs/Web/HTML/Global_attributes
-
-  - type: listSubPages
+    title: Global_attributes
     details: closed
-    title: Attributes
+  - type: listSubPages
     path: /en-US/docs/Web/HTML/Attributes
-
-  - type: listSubPages
+    title: Attributes
     details: closed
-    title: Input_types
+  - type: listSubPages
     path: /en-US/docs/Web/HTML/Element/input
-
+    title: Input_types
+    details: closed
   - type: section
     title: Guides
-
   - children:
       - link: /Web/HTML/Content_categories
         title: Content_categories
@@ -109,7 +101,6 @@ sidebar:
         title: Viewport_meta_tag
       - link: /Web/HTML/CORS_enabled_image
         title: Allowing_cross-origin_images_and_canvas
-
 l10n:
   en-US:
     Tutorials: Tutorials
@@ -166,21 +157,21 @@ l10n:
     Advanced_text_formatting: Formatage avancé du texte
     Document_and_website_structure: Structure d'un site et d'un document web
     Debugging_HTML: Déboguer du HTML
-    Assessment_Marking_up_a_letter: "Évaluation\_: baliser une lettre"
-    Assessment_Structuring_a_page_of_content: "Évaluation\_: structurer une page de contenu"
+    Assessment_Marking_up_a_letter: "Évaluation : baliser une lettre"
+    Assessment_Structuring_a_page_of_content: "Évaluation : structurer une page de contenu"
     Multimedia_and_embedding: Multimédia et intégration
     Multimedia_and_embedding_overview: Aperçu pour le multimédia et l'intégration
     Images_in_HTML: Images en HTML
     Video_and_audio_content: Contenu audio et vidéo
-    From_object_to_iframe_other_embedding_technologies: "Des objets aux iframes, les autres technologies d'intégration"
+    From_object_to_iframe_other_embedding_technologies: Des objets aux iframes, les autres technologies d'intégration
     Adding_vector_graphics_to_the_web: Ajouter des graphiques vectoriels sur le Web
     Responsive_images: Images responsives
-    Assessment_Mozilla_splash_page: "Évaluation\_: page d'accueil Mozilla"
+    Assessment_Mozilla_splash_page: "Évaluation : page d'accueil Mozilla"
     HTML_tables: Tableaux HTML
     HTML_tables_overview: Aperçu des tableaux HTML
     HTML_table_basics: Bases des tableaux HTML
     HTML_table_advanced_features_and_accessibility: Fonctionnalités avancées et accessibilité des tableaux HTML
-    Assessment_Structuring_planet_data: "Évaluation\_: structurer les données des planètes"
+    Assessment_Structuring_planet_data: "Évaluation : structurer les données des planètes"
     Reference: Références
     HTML_Elements: Éléments HTML
     Global_attributes: Attributs universels
@@ -195,9 +186,7 @@ l10n:
     Microdata: Microdonnées
     microformats: Microformats
     Quirks_Mode_and_Standards_Mode: Mode quirks et mode standard
-    Viewport_meta_tag: >-
-      Utilisation de la balise meta viewport pour contrôler la mise en page sur
-      mobile
+    Viewport_meta_tag: Utilisation de la balise meta viewport pour contrôler la mise en page sur mobile
   ja:
     Tutorials: チュートリアル
     HTML_basics: HTML の基本
