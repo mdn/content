@@ -75,7 +75,7 @@ svg {
 
 You can use this attribute with the SVG elements described in the sections below.
 
-## `<a>`
+### `<a>`
 
 For {{SVGElement("a")}}, `xlink:href` defines the location of the referenced object.
 
