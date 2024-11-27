@@ -65,4 +65,4 @@ Not part of any standard. The standard way to do reflection in CSS is to use the
 ## See also
 
 - The Apple [documentation](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html).
-- The Webkit [specification](https://webkit.org/blog/182/css-reflections/).
+- The WebKit [specification](https://webkit.org/blog/182/css-reflections/).
