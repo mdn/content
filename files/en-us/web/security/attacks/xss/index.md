@@ -165,7 +165,7 @@ In an alternative architecture, the website is implemented as a {{glossary("SPA"
 
 ![Diagram of client-side XSS](client-side-xss.svg)
 
-Although the attack and the result are the same in both cases, the point at which the malicious code is introduced into the HTML document is different: in the first case, it's the server code that is failing to sanitize the blog post comments before including them in the document, and in the second case, it's the front-end code. Note that in the second case, the attack is a stored XSS attack _and_ a DOM-based attack.
+Although the attack and the result are the same in both cases, the point at which the malicious code is introduced into the HTML document is different: in the first case, it's the server code that is failing to sanitize the blog post comments before including them in the document, and in the second case, it's the front-end code. Note that in the second case, the attack is a stored XSS attack _and_ a DOM-based attack: in fact, all client-side attacks are DOM-based attacks.
 
 The distinction between server and client XSS matters because effective defenses against XSS are different depending on where the vulnerability is.
 
@@ -242,21 +242,43 @@ If we pass this to DOMPurify, it will return:
 
 Having a function that can sanitize a given input string is one thing, but finding all the places in a codebase where input strings need to be sanitized can in itself be a very hard problem.
 
-Browsers provide a number of APIs that can result in XSS if used with untrusted input. These functions are sometimes called _unsafe sinks_. For example:
+As we saw when we looked at [DOM-based XSS](#dom-based_xss) attacks, browsers provide a number of APIs that can result in XSS if used with untrusted input. The [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) enables a developer to be sure that on the client side, input is always sanitized before being passed to one of these APIs.
 
-- APIs that generate HTML from a string such as:
-  - {{domxref("Element.innerHTML")}}
-  - the [`srcdoc`](/en-US/docs/Web/HTML/Element/iframe#attr-srcdoc) attribute of the {{htmlelement("iframe")}} element.
-- APIs that execute their string arguments as JavaScript, such as:
-  - [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)
-  - {{domxref("Window.setTimeout()")}}
+The key to enforcing the use of trusted types is the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive. If this directive is set, then passing string arguments to unsafe APIs will throw an exception:
 
-The [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) enables a developer to be sure that unsafe sinks are never passed string arguments. Instead, they are passed objects which were created using a {{domxref("TrustedTypePolicy")}}, which has the opportunity to sanitize the input.
+```js example-bad
+const userInput = "I might be XSS";
+const element = document.querySelector("#container");
+
+element.innerHTML = userInput; // Throws a TypeError
+```
+
+Instead, a developer must pass a _trusted type_ to one of these APIs. A trusted type is an object created from a string by a {{domxref("TrustedTypePolicy")}} object, whose implementation is defined by the developer. For example:
+
+```js example-good
+// Create a policy that can create TrustedHTML values
+// by sanitizing the input strings with DOMPurify library.
+const sanitizer = trustedTypes.createPolicy("my-policy", {
+  createHTML: (input) => DOMPurify.sanitize(input),
+});
+
+const userInput = "I might be XSS";
+const element = document.querySelector("#container");
+
+const trustedHTML = sanitizer.createHTML(userInput);
+element.innerHTML = trustedHTML;
+```
 
 > [!NOTE]
-> The Trusted Types API does not provide a sanitization function: it is a framework in which a developer can be sure that a sanitization function that they provide has been called. A developer could, for example, use DOMPurify as the sanitizer within the Trusted Types framework.
+> The Trusted Types API does not provide a sanitization function: it is a framework in which a developer can be sure that a sanitization function that they provide has been called. In the example above, the developer uses DOMPurify as the sanitizer for HTML sinks, within the Trusted Types framework.
+
+The Trusted Types API does not yet have good cross-browser support, but when it does it will be an important defense against DOM-based XSS attacks.
 
 ### Deploying a CSP
+
+Output encoding and sanitization are all about preventing malicious scripts from getting into a site's pages. One of the main functions of a content security policy is to prevent malicious scripts from being executed even if they are in a site's pages. That is, it is a backup in case the other defenses fail.
+
+The recommended approach to mitigating XSS with a CSP is a [strict CSP](/en-US/docs/Web/HTTP/CSP#strict_csp), which uses a [nonce](/en-US/docs/Web/HTTP/CSP#nonces) or a [hash](/en-US/docs/Web/HTTP/CSP#hashes) to indicate to the browser which scripts it expects to see in the document. If an attacker manages to insert malicious `<script>` elements, then they won't have the correct nonce or hash, and the browser will not execute them. Additionally, various common XSS vectors are disallowed completely: inline event handlers, `javascript:` URLs, and APIs like `eval()` that execute their arguments as JavaScript.
 
 ## See also
 
