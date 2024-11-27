@@ -1,3 +1,5 @@
+# Do not add comments to this file. They will be lost.
+
 sidebar:
   - type: section
     link: /Web/HTTP
@@ -20,8 +22,8 @@ sidebar:
   - /Web/HTTP/Protocol_upgrade_mechanism
   - /Web/HTTP/Proxy_servers_and_tunneling
   - /Web/HTTP/Client_hints
-  - details: closed
-    title: Security
+  - title: Security
+    details: closed
     children:
       - /Web/Security/Practical_implementation_guides
       - link: /en-US/observatory
@@ -33,39 +35,31 @@ sidebar:
       - /Web/HTTP/Headers
   - type: section
     title: Reference
-
   - type: listSubPages
-    details: closed
+    path: /Web/HTTP/Headers
     title: Headers
-    path: /en-US/docs/Web/HTTP/Headers
-
-  - type: listSubPages
     details: closed
+  - type: listSubPages
+    path: /Web/HTTP/Methods
     title: Methods
-    path: /en-US/docs/Web/HTTP/Methods
-
-  - type: listSubPages
     details: closed
+  - type: listSubPages
+    path: /Web/HTTP/Status
     title: Status
-    path: /en-US/docs/Web/HTTP/Status
-
-  - type: listSubPages
     details: closed
+  - type: listSubPages
+    path: /Web/HTTP/Headers/Content-Security-Policy
     title: CSPDirectives
-    path: /en-US/docs/Web/HTTP/Headers/Content-Security-Policy
-
-  - type: listSubPages
     details: closed
+  - type: listSubPages
+    path: /Web/HTTP/CORS/Errors
     title: CORS_errors
-    path: /en-US/docs/Web/HTTP/CORS/Errors
-
-  - type: listSubPages
     details: closed
+  - type: listSubPages
+    path: /Web/HTTP/Headers/Permissions-Policy
     title: PermissionsPolicyDirectives
-    path: /en-US/docs/Web/HTTP/Headers/Permissions-Policy
-
+    details: closed
   - /Web/HTTP/Resources_and_specifications
-
 l10n:
   en-US:
     CORS_errors: CORS errors
@@ -137,4 +131,3 @@ l10n:
     Reference: 参考：
     Security: HTTP 安全
     Status: HTTP 响应状态码
-
