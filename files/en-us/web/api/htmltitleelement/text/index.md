@@ -8,7 +8,10 @@ browser-compat: api.HTMLTitleElement.text
 
 {{APIRef("HTML DOM")}}
 
-The **`text`** property of the {{domxref("HTMLTitleElement")}} interface represents the plain text content of the document's title. It only contains text; if HTML tags are included within the `title` element, they are treated as plain text rather than being interpreted as HTML.
+The **`text`** property of the {{domxref("HTMLTitleElement")}} interface represents the child text content of the document's title as a string. It contains the {{HTMLelement("title")}} element's content as text; if HTML tags are included within the `<title>` element, they are included as part of the string value rather than being parsed as HTML.
+
+Setting a value for the `text` property replaces the entire text contents of the `<title>`.
+
 
 ## Value
 
