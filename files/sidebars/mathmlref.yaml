@@ -12,11 +12,11 @@ sidebar:
   - type: section
     title: Reference
   - type: listSubPages
-    path: /en-US/docs/Web/MathML/Element
+    path: /Web/MathML/Element
     title: Elements
     details: closed
   - type: listSubPages
-    path: /en-US/docs/Web/MathML/Global_attributes
+    path: /Web/MathML/Global_attributes
     title: Global attributes
     details: closed
   - /Web/MathML/Attribute

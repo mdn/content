@@ -63,19 +63,19 @@ sidebar:
     link: /Web/HTML/Reference
     title: Reference
   - type: listSubPages
-    path: /en-US/docs/Web/HTML/Element
+    path: /Web/HTML/Element
     title: HTML_Elements
     details: closed
   - type: listSubPages
-    path: /en-US/docs/Web/HTML/Global_attributes
+    path: /Web/HTML/Global_attributes
     title: Global_attributes
     details: closed
   - type: listSubPages
-    path: /en-US/docs/Web/HTML/Attributes
+    path: /Web/HTML/Attributes
     title: Attributes
     details: closed
   - type: listSubPages
-    path: /en-US/docs/Web/HTML/Element/input
+    path: /Web/HTML/Element/input
     title: Input_types
     details: closed
   - type: section

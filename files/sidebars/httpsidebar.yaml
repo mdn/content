@@ -36,27 +36,27 @@ sidebar:
   - type: section
     title: Reference
   - type: listSubPages
-    path: /en-US/docs/Web/HTTP/Headers
+    path: /Web/HTTP/Headers
     title: Headers
     details: closed
   - type: listSubPages
-    path: /en-US/docs/Web/HTTP/Methods
+    path: /Web/HTTP/Methods
     title: Methods
     details: closed
   - type: listSubPages
-    path: /en-US/docs/Web/HTTP/Status
+    path: /Web/HTTP/Status
     title: Status
     details: closed
   - type: listSubPages
-    path: /en-US/docs/Web/HTTP/Headers/Content-Security-Policy
+    path: /Web/HTTP/Headers/Content-Security-Policy
     title: CSPDirectives
     details: closed
   - type: listSubPages
-    path: /en-US/docs/Web/HTTP/CORS/Errors
+    path: /Web/HTTP/CORS/Errors
     title: CORS_errors
     details: closed
   - type: listSubPages
-    path: /en-US/docs/Web/HTTP/Headers/Permissions-Policy
+    path: /Web/HTTP/Headers/Permissions-Policy
     title: PermissionsPolicyDirectives
     details: closed
   - /Web/HTTP/Resources_and_specifications

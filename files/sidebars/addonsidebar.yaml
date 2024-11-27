@@ -57,7 +57,7 @@ sidebar:
   - type: webExtApi
     title: WebExtensions#API
   - type: listSubPages
-    path: /en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json
+    path: /Mozilla/Add-ons/WebExtensions/manifest.json
     title: WebExtensions#manifest.json
     details: closed
   - title: extension_workshop

@@ -28,11 +28,11 @@ sidebar:
   - type: section
     title: Reference
   - type: listSubPages
-    path: /en-US/docs/Web/SVG/Element
+    path: /Web/SVG/Element
     title: Elements
     details: closed
   - type: listSubPages
-    path: /en-US/docs/Web/SVG/Attribute
+    path: /Web/SVG/Attribute
     title: Attributes
     details: closed
   - type: section

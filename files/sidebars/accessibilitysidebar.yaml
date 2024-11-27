@@ -29,7 +29,7 @@ sidebar:
       - /Learn/Accessibility/Mobile
       - /Learn/Accessibility/Accessibility_troubleshooting
   - type: listSubPages
-    path: /en-US/docs/Web/Accessibility/Understanding_WCAG
+    path: /Web/Accessibility/Understanding_WCAG
     title: WCAG
     details: closed
   - type: section
@@ -45,11 +45,11 @@ sidebar:
       - /Web/Accessibility/ARIA/Multipart_labels
       - /Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs
   - type: listSubPages
-    path: /en-US/docs/Web/Accessibility/ARIA/attributes
+    path: /Web/Accessibility/ARIA/attributes
     title: ARIA states and properties
     details: closed
   - type: listSubPages
-    path: /en-US/docs/Web/Accessibility/ARIA/roles
+    path: /Web/Accessibility/ARIA/roles
     title: ARIA roles
     details: closed
 l10n:
