@@ -1,12 +1,13 @@
+# Do not add comments to this file. They will be lost.
+
 sidebar:
   - type: section
     link: /Web/JavaScript
     title: JavaScript
   - type: section
     title: Tutorials
-
-  - details: closed
-    title: Complete_beginners
+  - title: Complete_beginners
+    details: closed
     children:
       - link: /Learn/Getting_started_with_the_web/JavaScript_basics
         title: Basics
@@ -16,9 +17,8 @@ sidebar:
         title: Building_blocks
       - link: /Learn/JavaScript/Objects
         title: Introducing_objects
-
-  - details: closed
-    title: Guide
+  - title: Guide
+    details: closed
     children:
       - link: /Web/JavaScript/Guide/Introduction
         title: Guide_Introduction
@@ -56,9 +56,8 @@ sidebar:
         title: Guide_Meta
       - link: /Web/JavaScript/Guide/Modules
         title: Guide_Modules
-
-  - details: closed
-    title: Intermediate
+  - title: Intermediate
+    details: closed
     children:
       - link: /Learn/Tools_and_testing/Client-side_JavaScript_frameworks
         title: Frameworks
@@ -74,9 +73,8 @@ sidebar:
         title: Enumerability
       - link: /Web/JavaScript/Closures
         title: Closures
-
-  - details: closed
-    title: Advanced
+  - title: Advanced
+    details: closed
     children:
       - link: /Web/JavaScript/Inheritance_and_the_prototype_chain
         title: Inheritance
@@ -84,55 +82,46 @@ sidebar:
         title: Memory_management
       - link: /Web/JavaScript/Event_loop
         title: Event_loop
-
   - type: section
     link: /Web/JavaScript/Reference
     title: Reference
-
   - type: listSubPages
-    details: closed
+    path: /Web/JavaScript/Reference/Global_Objects
     title: Global_Objects
-    includeParent: true
-    path: /en-US/docs/Web/JavaScript/Reference/Global_Objects
-
-  - type: listSubPages
     details: closed
+    includeParent: true
+  - type: listSubPages
+    path: /Web/JavaScript/Reference/Operators
     title: Operators
-    includeParent: true
-    path: /en-US/docs/Web/JavaScript/Reference/Operators
-
-  - type: listSubPages
     details: closed
+    includeParent: true
+  - type: listSubPages
+    path: /Web/JavaScript/Reference/Statements
     title: Statements
-    includeParent: true
-    path: /en-US/docs/Web/JavaScript/Reference/Statements
-
-  - type: listSubPages
     details: closed
+    includeParent: true
+  - type: listSubPages
+    path: /Web/JavaScript/Reference/Functions
     title: Functions
-    includeParent: true
-    path: /en-US/docs/Web/JavaScript/Reference/Functions
-
-  - type: listSubPages
     details: closed
+    includeParent: true
+  - type: listSubPages
+    path: /Web/JavaScript/Reference/Classes
     title: Classes
-    includeParent: true
-    path: /en-US/docs/Web/JavaScript/Reference/Classes
-
-  - type: listSubPages
     details: closed
+    includeParent: true
+  - type: listSubPages
+    path: /Web/JavaScript/Reference/Regular_expressions
     title: Guide_RegExp
-    includeParent: true
-    path: /en-US/docs/Web/JavaScript/Reference/Regular_expressions
-
-  - type: listSubPages
     details: closed
-    title: Errors
     includeParent: true
-    path: /en-US/docs/Web/JavaScript/Reference/Errors
-
-  - details: closed
-    title: More
+  - type: listSubPages
+    path: /Web/JavaScript/Reference/Errors
+    title: Errors
+    details: closed
+    includeParent: true
+  - title: More
+    details: closed
     children:
       - link: /Web/JavaScript/JavaScript_technologies_overview
         title: Overview
@@ -148,7 +137,6 @@ sidebar:
         title: Trailing_commas
       - link: /Web/JavaScript/Reference/Deprecated_and_obsolete_features
         title: Deprecated_features
-
 l10n:
   en-US:
     Overview: JavaScript technologies overview
