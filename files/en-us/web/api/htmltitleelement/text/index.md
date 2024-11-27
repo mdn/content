@@ -12,7 +12,6 @@ The **`text`** property of the {{domxref("HTMLTitleElement")}} interface represe
 
 Setting a value for the `text` property replaces the entire text contents of the `<title>`.
 
-
 ## Value
 
 A string.
