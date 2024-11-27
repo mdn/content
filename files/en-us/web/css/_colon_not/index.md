@@ -15,7 +15,7 @@ The `:not()` pseudo-class has a number of [quirks, tricks, and unexpected result
 
 ## Syntax
 
-The `:not()` pseudo-class requires a [selector list](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list), a comma-separated list of one or more selectors, as its argument. The list must not contain another negation selector or a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), but any other simple, compound, and complex selectors are allowed.
+The `:not()` pseudo-class requires a [selector list](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list), a comma-separated list of one or more selectors, as its argument. The list must not contain a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), but any other simple, compound, and complex selectors are allowed.
 
 ```css-nolint
 :not(<complex-selector-list>) {
@@ -39,7 +39,7 @@ There are several unusual effects and outcomes when using `:not()` that you shou
 
 ### Using :not() with valid selectors
 
-This example shows some simple cases of using `:not()`.
+This example shows some a few examples of using `:not()`.
 
 #### HTML
 

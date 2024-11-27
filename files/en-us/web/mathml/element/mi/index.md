@@ -92,6 +92,19 @@ This element also accepts the [global MathML attributes](/en-US/docs/Web/MathML/
 
 {{ EmbedLiveSample('mi_example', 400, 100) }}
 
+## Technical summary
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Roles">Implicit ARIA role</a>
+    </th>
+    <td>
+      None
+    </td>
+  </tr>
+</table>
+
 ## Specifications
 
 {{Specifications}}

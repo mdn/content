@@ -9,8 +9,8 @@ page-type: learn-module-assessment
 The aim of this skill test is to assess whether you understand how special elements like [images, media and form elements are treated in CSS](/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements).
 
 > [!NOTE]
-> You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
->
+> Click **"Play"** in the code blocks below to edit the examples in the MDN Playground.
+> You can also copy the code (click the clipboard icon) and paste it into an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 > If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Task 1
@@ -21,31 +21,111 @@ Your final result should look like the image below:
 
 ![An image in a box](mdn-images-object-fit.png)
 
-Try updating the live code below to recreate the finished example:
+Try to update the code below to recreate the finished example so that the image doesn't overflow the box:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/images/object-fit.html", '100%', 1000)}}
+```html live-sample___object-fit
+<div class="box">
+  <img
+    alt="Hot air balloons flying in clear sky, and a crowd of people in the foreground"
+    src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+</div>
+```
 
-> [!CALLOUT]
->
-> [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/images/object-fit-download.html) to work in your own editor or in an online editor.
+```css live-sample___object-fit
+.box {
+  border: 5px solid #000;
+  width: 400px;
+  height: 200px;
+}
+
+img {
+  /* Add styles here */
+}
+```
+
+{{EmbedLiveSample("object-fit", "", "400px")}}
+
+<details>
+<summary>Click here to show the solution</summary>
+
+It is ok if some parts of the image are cropped.
+Using `object-fit: cover` is the best choice, you also need to set the width and height to `100%`:
+
+```css
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+```
+
+</details>
 
 ## Task 2
 
-In this task, you have a simple form. Your task is to make the following changes:
+In this task, you have a basic form. Your task is to make the following changes:
 
-- Use attribute selectors to target the search field and button inside `.myform`.
+- Use attribute selectors to target the search field and button inside `.my-form`.
 - Make the form field and button use the same text size as the rest of the form.
-- Give the form field and button 10 px of padding.
+- Give the form field and button 10px of padding.
 - Give the button a background of `rebeccapurple`, white foreground, no border and rounded corners of 5px.
 
 Your final result should look like the image below:
 
 ![A single line form](mdn-images-form.png)
 
-Try updating the live code below to recreate the finished example:
+Try to update the code below to recreate the finished example:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/images/form.html", '100%', 600)}}
+```html live-sample___form
+<form action="" class="my-form" method="post">
+  <div>
+    <label for="fldSearch">Keywords</label>
+    <input id="fldSearch" name="keywords" type="search" />
+    <input name="btnSubmit" type="submit" value="Search" />
+  </div>
+</form>
+```
 
-> [!CALLOUT]
->
-> [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/images/form-download.html) to work in your own editor or in an online editor.
+```css live-sample___form
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.my-form {
+  border: 2px solid #000;
+  padding: 5px;
+}
+```
+
+{{EmbedLiveSample("form")}}
+
+<details>
+<summary>Click here to show the solution</summary>
+
+Here's an example solution for the task:
+
+```css
+.my-form {
+  border: 2px solid #000;
+  padding: 5px;
+}
+
+.my-form input[type="search"] {
+  padding: 10px;
+  font-size: inherit;
+}
+
+.my-form input[type="submit"] {
+  padding: 10px;
+  font-size: inherit;
+  background-color: rebeccapurple;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+}
+```
+
+</details>
+
+## See also
+
+- [CSS building blocks](/en-US/docs/Learn/CSS/Building_blocks)

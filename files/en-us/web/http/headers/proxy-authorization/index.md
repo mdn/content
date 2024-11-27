@@ -7,10 +7,7 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#field.proxy-authorization
 
 {{HTTPSidebar}}
 
-The HTTP **`Proxy-Authorization`** request header contains the
-credentials to authenticate a user agent to a proxy server, usually after the server has
-responded with a {{HTTPStatus("407")}} `Proxy Authentication Required` status
-and the {{HTTPHeader("Proxy-Authenticate")}} header.
+The HTTP **`Proxy-Authorization`** {{Glossary("request header")}} contains the credentials to authenticate a client with a proxy server, typically after the server has responded with a {{HTTPStatus("407", "407 Proxy Authentication Required")}} status with the {{HTTPHeader("Proxy-Authenticate")}} header.
 
 <table class="properties">
   <tbody>
@@ -20,7 +17,7 @@ and the {{HTTPHeader("Proxy-Authenticate")}} header.
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>Yes</td>
     </tr>
   </tbody>
 </table>
@@ -28,33 +25,37 @@ and the {{HTTPHeader("Proxy-Authenticate")}} header.
 ## Syntax
 
 ```http
-Proxy-Authorization: <type> <credentials>
+Proxy-Authorization: <auth-scheme> <credentials>
 ```
 
 ## Directives
 
-- \<type>
-  - : [Authentication type](/en-US/docs/Web/HTTP/Authentication#authentication_schemes). A common type is ["Basic"](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme).
-    See also the [IANA registry of Authentication schemes](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
-- \<credentials>
-
-  - : The credentials are constructed like this:
-
-    - The username and the password are combined with a colon
-      (`aladdin:opensesame`).
-    - The resulting string is [base64](/en-US/docs/Glossary/Base64)
-      encoded (`YWxhZGRpbjpvcGVuc2VzYW1l`).
-
-    > [!NOTE]
-    > Base64 encoding does not mean encryption or hashing! This
-    > method is as secure as sending the credentials in clear text (base64 is a
-    > reversible encoding). It is preferable to use HTTPS in conjunction with Basic
-    > Authentication.
+- `<auth-scheme>`
+  - : Token indicating the [authentication scheme](/en-US/docs/Web/HTTP/Authentication#authentication_schemes), such as `Basic`, `Bearer`, etc.
+    The [IANA registry of Authentication schemes](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml) maintains a full list of available types.
+- `<credentials>`
+  - : Credentials use for the authentication scheme.
 
 ## Examples
 
+### Basic authentication
+
+In `Basic` auth, credentials are sent in the format `<username>:<password>` (for example, `aladdin:opensesame`).
+The resulting string is then [base64](/en-US/docs/Glossary/Base64) encoded (`YWxhZGRpbjpvcGVuc2VzYW1l`).
+
 ```http
 Proxy-Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
+```
+
+> [!WARNING]
+> Base64 encoding is reversible, and therefore offers no cryptographic security.
+> This method can be considered equivalent to sending the credentials in clear text.
+> {{Glossary("HTTPS")}} is always recommended when using authentication, but is even more so when using `Basic` authentication.
+
+### Bearer authentication (auth token)
+
+```http
+Proxy-Authorization: Bearer kNTktNTA1My00YzLT1234
 ```
 
 ## Specifications

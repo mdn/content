@@ -34,7 +34,7 @@ new ClipboardItem(data, options)
       - : One of the three strings: `unspecified`, `inline` or `attachment`.
         The default is `unspecified`.
 
-        `inline` signifies to apps that recieve the paste that the `ClipboardItem` should be inserted inline at the point of paste. `attachment` signifies to apps that recieve the paste that the `ClipboardItem` should be added as an attachment. `unspecified` doesn't signify any information to apps that recieve the paste.
+        `inline` signifies to apps that receive the paste that the `ClipboardItem` should be inserted inline at the point of paste. `attachment` signifies to apps that receive the paste that the `ClipboardItem` should be added as an attachment. `unspecified` doesn't signify any information to apps that receive the paste.
 
 > [!NOTE]
 > You can also work with text via the {{domxref("Clipboard.readText()")}} and {{domxref("Clipboard.writeText()")}} methods of the {{domxref("Clipboard")}} interface.
@@ -61,7 +61,7 @@ async function writeClipImg() {
       ]);
       console.log("Fetched image copied.");
     } else {
-      console.log("image png is not suported");
+      console.log("image png is not supported");
     }
   } catch (err) {
     console.error(err.name, err.message);
