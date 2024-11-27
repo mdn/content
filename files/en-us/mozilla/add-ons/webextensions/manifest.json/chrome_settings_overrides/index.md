@@ -158,7 +158,7 @@ The `chrome_settings_overrides` key is an object that may have the following pro
           <dt><code>prepopulated_id</code> {{optional_inline}}</dt>
           <dd>The ID of a built-in search engine to use.</dd>
           <dt><code>search_url_get_params</code> {{optional_inline}}</dt>
-          <dd>String: GET parameters to send to <code>search_url</code>.</dd>
+          <dd>String: GET parameters to send to <code>search_url</code>. Available only in Firefox, for optimal cross-browser compatibility use <code>search_url</code> instead.</dd>
           <dt><code>search_url_post_params</code> {{optional_inline}}</dt>
           <dd>String: POST parameters to send to <code>search_url</code>.</dd>
           <dt><code>suggest_url</code> {{optional_inline}}</dt>
@@ -166,7 +166,7 @@ The `chrome_settings_overrides` key is an object that may have the following pro
             String: URL used for search suggestions. This must be an HTTPS URL.
           </dd>
           <dt><code>suggest_url_get_params</code> {{optional_inline}}</dt>
-          <dd>String: GET parameters to send to <code>suggest_url</code>.</dd>
+          <dd>String: GET parameters to send to <code>suggest_url</code>. Available only in Firefox, for optimal cross-browser compatibility use <code>suggest_url</code> instead.</dd>
           <dt><code>suggest_url_post_params</code> {{optional_inline}}</dt>
           <dd>String: POST parameters to send to <code>suggest_url</code>.</dd>
         </dl>
