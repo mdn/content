@@ -49,7 +49,7 @@ registerPaint(
 );
 ```
 
-In this class example we have defined a single context option with the `contextOptions()` function: we returned a simple object stating alpha transparency is allowed.
+In this class example we have defined a single context option with the `contextOptions()` function: we returned an object stating alpha transparency is allowed.
 
 We have then used the `paint()` function to paint to our canvas.
 

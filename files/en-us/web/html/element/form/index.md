@@ -25,8 +25,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `accept-charset`
 
-  - : Space-separated {{Glossary("character encoding", "character encodings")}} the server accepts. The browser uses them in the order in which they are listed. The default value means [the same encoding as the page](/en-US/docs/Web/HTTP/Headers/Content-Encoding).
-    (In previous versions of HTML, character encodings could also be delimited by commas.)
+  - : The {{Glossary("character encoding")}} accepted by the server.
+    The specification allows a single case-insensitive value of `"UTF-8"`, reflecting the ubiquity of this encoding (historically multiple character encodings could be specified as a comma-separated or space-separated list).
 
 - `autocapitalize`
 

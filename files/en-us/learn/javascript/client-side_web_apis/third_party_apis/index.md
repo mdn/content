@@ -388,7 +388,7 @@ We also built another example for you to study and learn from — see our [YouTu
 
 This example is interesting because it shows two related third-party APIs being used together to build an app. The first one is a RESTful API, while the second one works more like Mapquest (with API-specific methods, etc.). It is worth noting however that both of the APIs require a JavaScript library to be applied to the page. The RESTful API has functions available to handle making the HTTP requests and returning the results.
 
-![A screenshot of a sample Youtube video search using two related APIs. The left side of the image has a sample search query using the YouTube Data API. The right side of the image displays the search results using the Youtube Iframe Player API.](youtube-example.png)
+![A screenshot of a sample YouTube video search using two related APIs. The left side of the image has a sample search query using the YouTube Data API. The right side of the image displays the search results using the YouTube Iframe Player API.](youtube-example.png)
 
 We are not going to say too much more about this example in the article — [the source code](https://github.com/mdn/learning-area/tree/main/javascript/apis/third-party-apis/youtube) has detailed comments inserted inside it to explain how it works.
 

@@ -32,7 +32,7 @@ The `BluetoothRemoteGattCharacteristic` interface of the [Web Bluetooth API](/en
   - : Returns a {{JSxRef("Promise")}} that resolves to an {{JSxRef("Array")}} of all {{DOMxRef("BluetoothRemoteGATTDescriptor")}} objects for a given descriptor UUID.
 - {{DOMxRef("BluetoothRemoteGATTCharacteristic.readValue()")}} {{Experimental_Inline}}
   - : Returns a {{JSxRef("Promise")}} that resolves to an {{JSxRef("DataView")}} holding a duplicate of the `value` property if it is available and supported. Otherwise it throws an error.
-- {{DOMxRef("BluetoothRemoteGATTCharacteristic.writeValue()")}} {{Deprecated_Inline}} {{experimental_inline}}
+- {{DOMxRef("BluetoothRemoteGATTCharacteristic.writeValue()")}} {{Deprecated_Inline}}
   - : Sets the `value` property to the bytes contained in a given {{JSxRef("ArrayBuffer")}}, [writes the characteristic value with optional response](https://webbluetoothcg.github.io/web-bluetooth/#writecharacteristicvalue), and returns the resulting {{JSxRef("Promise")}}.
 - {{DOMxRef("BluetoothRemoteGATTCharacteristic.writeValueWithResponse()")}} {{Experimental_Inline}}
   - : Sets the `value` property to the bytes contained in a given {{JSxRef("ArrayBuffer")}}, [writes the characteristic value with required response](https://webbluetoothcg.github.io/web-bluetooth/#writecharacteristicvalue), and returns the resulting {{JSxRef("Promise")}}.

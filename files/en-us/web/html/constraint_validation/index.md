@@ -24,7 +24,7 @@ For a basic introduction to these concepts, with examples, see the [Form validat
 In HTML, basic constraints are declared in two ways:
 
 - By choosing the most semantically appropriate value for the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute of the {{ HTMLElement("input") }} element, e.g., choosing the `email` type automatically creates a constraint that checks whether the value is a valid email address.
-- By setting values on validation-related attributes, allowing basic constraints to be described in a simple way, without the need for JavaScript.
+- By setting values on validation-related attributes, allowing basic constraints to be described without the need for JavaScript.
 
 ### Semantic input types
 
@@ -298,7 +298,7 @@ The postal code format varies from one country to another. Not only do most coun
 > [!NOTE]
 > This is not a comprehensive postal code validation library, but rather a demonstration of the key concepts.
 
-As an example, we will add a script checking the constraint validation for this simple form:
+As an example, we will add a script checking the constraint validation for a form:
 
 ```html
 <form>

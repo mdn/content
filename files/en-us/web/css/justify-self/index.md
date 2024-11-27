@@ -119,7 +119,7 @@ This property can take one of three different forms:
 
 ## Examples
 
-### Simple demonstration
+### Basic demonstration
 
 In the following example we have a simple 2 x 2 grid layout. Initially the grid container is given a `justify-items` value of `stretch` — the default — which causes the grid items to stretch across the entire width of their cells.
 
@@ -183,7 +183,7 @@ span {
 
 #### Result
 
-{{EmbedLiveSample('Simple_demonstration', '100%', 200)}}
+{{EmbedLiveSample('Basic_demonstration', '100%', 200)}}
 
 ## Specifications
 

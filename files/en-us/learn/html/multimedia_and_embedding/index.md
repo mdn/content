@@ -13,14 +13,14 @@ We've looked at a lot of text so far in this course, but the web would be really
 Before starting this module, you should have a reasonable understanding of the basics of HTML, as previously covered in [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML). If you have not worked through this module (or something similar), work through it first, then come back!
 
 > [!NOTE]
-> If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
+> If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JS Bin](https://jsbin.com/) or [Glitch](https://glitch.com/).
 
 ## Guides
 
 This module contains the following articles, which will take you through all the fundamentals of embedding multimedia on webpages.
 
 - [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-  - : There are other types of multimedia to consider, but it is logical to start with the humble {{htmlelement("img")}} element used to embed a simple image in a webpage. In this article we'll look at how to use it in more depth, including basics, annotating it with captions using {{htmlelement("figure")}}, and how it relates to CSS background images.
+  - : There are other types of multimedia to consider, but it is logical to start with the humble {{htmlelement("img")}} element used to embed an image in a webpage. In this article we'll look at how to use it in more depth, including basics, annotating it with captions using {{htmlelement("figure")}}, and how it relates to CSS background images.
 - [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
   - : Next, we'll look at how to use the HTML {{htmlelement("video")}} and {{htmlelement("audio")}} elements to embed video and audio on our pages, including basics, providing access to different file formats to different browsers, adding captions and subtitles, and how to add fallbacks for older browsers.
 - [From \<object> to \<iframe> — other embedding technologies](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)

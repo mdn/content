@@ -59,7 +59,7 @@ Other hosting providers support Express as part of a _Platform as a Service_ (_P
 Some developers will choose the increased flexibility provided by IaaS over PaaS, while others will appreciate the reduced maintenance overhead and easier scaling of PaaS. When you're getting started, setting up your website on a PaaS system is much easier, so that is what we'll do in this tutorial.
 
 > [!NOTE]
-> If you choose a Node/Express-friendly hosting provider they should provide instructions on how to set up an Express website using different configurations of web server, application server, reverse proxy, etc. For example, there are many step-by-step guides for various configurations in the [Digital Ocean Node community docs](https://www.digitalocean.com/community/tutorials?q=node).
+> If you choose a Node/Express-friendly hosting provider they should provide instructions on how to set up an Express website using different configurations of web server, application server, reverse proxy, etc. For example, there are many step-by-step guides for various configurations in the [DigitalOcean Node community docs](https://www.digitalocean.com/community/tutorials?q=node).
 
 ## Choosing a hosting provider
 
@@ -86,7 +86,7 @@ They are however great for testing low-traffic sites in a hosted environment, an
 Popular choices in this category include [Glitch](https://glitch.com/), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/app-service/linux/), etc.
 
 Most providers also offer a "basic" or "hobby" tier that is intended for small production sites, and which provide more useful levels of computing power and fewer limitations.
-[Railway](https://railway.app/), [Heroku](https://www.heroku.com/), [Digital Ocean](https://www.digitalocean.com/) and [Python Anywhere](https://www.pythonanywhere.com/) are examples of popular hosting providers that have a relatively inexpensive basic computing tier (in the $5 to $10 USD per month range).
+[Railway](https://railway.app/), [Heroku](https://www.heroku.com/), [DigitalOcean](https://www.digitalocean.com/) and [Python Anywhere](https://www.pythonanywhere.com/) are examples of popular hosting providers that have a relatively inexpensive basic computing tier (in the $5 to $10 USD per month range).
 
 > [!NOTE]
 > Remember that price is not the only selection criterion.
@@ -248,7 +248,7 @@ const helmet = require("helmet");
 const app = express();
 
 // Add helmet to the middleware chain.
-// Set CSP headers to allow our Bootstrap and Jquery to be served
+// Set CSP headers to allow our Bootstrap and jQuery to be served
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
@@ -600,7 +600,7 @@ Some of the things you can do are:
 - Select the terminal button at the bottom of the editor view to open a terminal in the hosting environment.
   You can use this to run commands and tools in the environment.
   For example, you might use `node -v` to check the node version.
-- Interactive debugging in VSCode using the _GLITCH extension for VSCode_.
+- Interactive debugging in VS Code using the GLITCH extension for VS Code.
 
 ## Example: Hosting on Railway
 
@@ -790,7 +790,7 @@ That's the end of this tutorial on setting up Express apps in production, and al
 
   - [CLI](https://docs.railway.app/guides/cli)
 
-- Digital Ocean
+- DigitalOcean
 
   - [Express](https://www.digitalocean.com/community/tutorials?q=express) tutorials
   - [Node.js](https://www.digitalocean.com/community/tutorials?q=node.js) tutorials

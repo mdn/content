@@ -221,7 +221,7 @@ This will make it easier to submit a pull request for your changes.
 
 #### Linting edited files
 
-To ensure that all MDN documents follow the same formatting, we use both [Prettier](https://www.prettier.io) and [Markdownlint](https://github.com/DavidAnson/markdownlint) to format and lint Markdown files. This helps us enforce uniform styling across all documents with minimal reviewer intervention.
+To ensure that all MDN documents follow the same formatting, we use both [Prettier](https://www.prettier.io) and [MarkdownLint](https://github.com/DavidAnson/markdownlint) to format and lint Markdown files. This helps us enforce uniform styling across all documents with minimal reviewer intervention.
 
 If you have a [local checkout](#forking-and-cloning-the-repository) of the repository and have [installed the dependencies](#preparing-the-project), or you are using [github.dev](https://github.dev), a pre-commit hook will be installed which automatically runs while making a commit. To save some headache and improve your work flow while authoring, you may wish to [configure your editor to automatically run Prettier](https://prettier.io/docs/en/editors.html). Alternatively, you may run `yarn fix:md` in the command line to manually format all Markdown files.
 

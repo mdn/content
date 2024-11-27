@@ -16,7 +16,7 @@ The `counter()` function is generally used within [pseudo-element](/en-US/docs/W
 ## Syntax
 
 ```css
-/* Simple usage */
+/* Basic usage */
 counter(counter-name);
 
 /* changing the counter display */

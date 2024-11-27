@@ -237,7 +237,7 @@ Saturation is not brightness. Brightness refers to how much white or black is mi
 
 ### Saturation and luminance
 
-There is a loss of saturation at the extremes of luminance and the extremes of black and white. In NASA's [effect of luminance on saturation](https://colorusage.arc.nasa.gov/design_lum_1.php), they point out that there is a loss of saturation at low luminances. and also, "…the loss of saturation at high luminances–the colors converge on white."
+There is a loss of saturation at the extremes of luminance and the extremes of black and white. In NASA's [effect of luminance on saturation](https://colorusage.arc.nasa.gov/design_lum_1.php), they point out that there is a loss of saturation at low luminances, and also, "…the loss of saturation at high luminances–the colors converge on white."
 
 ## Color combinations
 

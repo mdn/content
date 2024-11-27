@@ -38,7 +38,7 @@ There are two types of controller you'll encounter with VR hardware:
 
 Now onto some code. Let's look first at the basics of how we get access to VR controllers with the Gamepad API. There are a few strange nuances to bear in mind here, so it is worth taking a look.
 
-We've written up a simple example to demonstrate — see our [vr-controller-basic-info](https://github.com/mdn/webvr-tests/blob/main/webvr/vr-controller-basic-info/index.html) source code ([see it running live here also](https://mdn.github.io/webvr-tests/webvr/vr-controller-basic-info/)). This demo outputs information on the VR displays and gamepads connected to your computer.
+We've written up an example to demonstrate — see our [vr-controller-basic-info](https://github.com/mdn/webvr-tests/blob/main/webvr/vr-controller-basic-info/index.html) source code ([see it running live here also](https://mdn.github.io/webvr-tests/webvr/vr-controller-basic-info/)). This demo outputs information on the VR displays and gamepads connected to your computer.
 
 ### Getting the display information
 

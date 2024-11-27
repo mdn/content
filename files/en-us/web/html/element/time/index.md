@@ -160,7 +160,7 @@ The _datetime value_ (the machine-readable value of the datetime) is the value o
 
 ## Examples
 
-### Simple example
+### Basic example
 
 #### HTML
 
@@ -170,7 +170,7 @@ The _datetime value_ (the machine-readable value of the datetime) is the value o
 
 #### Result
 
-{{EmbedLiveSample('Simple_example', 250, 80)}}
+{{EmbedLiveSample('Basic_example', 250, 80)}}
 
 ### `datetime` example
 

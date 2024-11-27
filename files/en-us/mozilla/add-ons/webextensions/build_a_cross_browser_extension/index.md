@@ -125,7 +125,7 @@ There are also differences between the [Content Security Policy (CSP) for conten
 
 As part of its implementation of Manifest V3, Chrome replaced background pages with extension service workers. Firefox retains the use of background pages, while Safari supports background pages and service workers.
 
-For more information, see the [browser support](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background#browser_support) section on the `"background"` manifest key page. This includes a simple example of how to implement a cross-browser script.
+For more information, see the [browser support](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background#browser_support) section on the `"background"` manifest key page. This includes an example of how to implement a cross-browser script.
 
 ### Manifest keys
 

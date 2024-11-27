@@ -71,7 +71,7 @@ A **time limit** is any process that happens without user initiation after a set
 Options for adjusting time requirements include:
 
 - Allowing the user to turn off or adjust the time to at least 10 times the original limit before encountering it.
-- Alerting the user and providing a buffer of at least 20 seconds to extend the timeout duration by a factor of 10 with a simple action, such as hitting the space bar.
+- Alerting the user and providing a buffer of at least 20 seconds to extend the timeout duration by a factor of 10 with an action, such as hitting the space bar.
 
 Provide a toggle on content that allows users to enable a longer session time limit, or no session time limit at all. Examples of timed content include forms, timed reading exercises, and training materials. If the time limit is longer than 20 hours, accommodations are not required.
 

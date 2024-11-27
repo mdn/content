@@ -7,7 +7,7 @@ browser-compat: svg.elements.a
 
 {{SVGRef}}
 
-The **\<a>** SVG element creates a hyperlink to other web pages, files, locations in the same page, email addresses, or any other URL. It is very similar to HTML's {{htmlelement("a")}} element.
+The **`<a>`** [SVG](/en-US/docs/Web/SVG) element creates a hyperlink to other web pages, files, locations in the same page, email addresses, or any other URL. It is very similar to HTML's {{htmlelement("a")}} element.
 
 SVG's `<a>` element is a container, which means you can create a link around text (like in HTML) but also around any shape.
 

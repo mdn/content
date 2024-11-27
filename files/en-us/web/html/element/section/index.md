@@ -30,7 +30,7 @@ To reiterate, each `<section>` should be identified, typically by including a he
 
 ## Examples
 
-### Simple usage example
+### Basic usage example
 
 #### Before
 

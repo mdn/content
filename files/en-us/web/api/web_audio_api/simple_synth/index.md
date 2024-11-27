@@ -578,7 +578,7 @@ function noteReleased(event) {
 
 #### Changing the main volume
 
-The volume slider in the settings bar provides a simple interface to change the gain value on the main gain node, thereby changing the loudness of all playing notes. The `changeVolume()` method is the handler for the {{domxref("HTMLElement/change_event", "change")}} event on the slider.
+The volume slider in the settings bar provides an interface to change the gain value on the main gain node, thereby changing the loudness of all playing notes. The `changeVolume()` method is the handler for the {{domxref("HTMLElement/change_event", "change")}} event on the slider.
 
 ```js
 function changeVolume(event) {

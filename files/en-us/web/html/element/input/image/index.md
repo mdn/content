@@ -214,7 +214,7 @@ The following example shows the same button as before, but included in the conte
 
 #### CSS
 
-And now some simple CSS to make the basic elements sit more neatly:
+And now some CSS to make the basic elements sit more neatly:
 
 ```css
 div {

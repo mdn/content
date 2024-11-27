@@ -234,7 +234,7 @@ false.true = ""; // TypeError
 
 #### Duplicate property names
 
-Duplicate property names used to be considered a {{jsxref("SyntaxError")}} in strict mode. With the introduction of [computed property names](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer), making duplication possible at runtime, this restriction was removed in ES2015.
+Duplicate property names used to be considered a {{jsxref("SyntaxError")}} in strict mode. With the introduction of [computed property names](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names), making duplication possible at runtime, this restriction was removed in ES2015.
 
 ```js
 "use strict";

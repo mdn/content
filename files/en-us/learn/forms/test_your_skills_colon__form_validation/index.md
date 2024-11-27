@@ -46,7 +46,7 @@ Again, to help you might want to consider adding some simple CSS to show when a 
 
 ## Form validation 3
 
-In our final task for this set, we are providing you with a similar example to what you saw in the accompanying article — a simple email address entry input. We would like you to use the constraint validation API, plus some form validation attributes, to program some custom error messages.
+In our final task for this set, we are providing you with a similar example to what you saw in the accompanying article — an email address entry input. We would like you to use the constraint validation API, plus some form validation attributes, to program some custom error messages.
 
 1. Make the input mandatory to fill in, and give it a minimum length of 10 characters.
 2. Add an event listener that checks whether the inputted value is an email address, and whether it is long enough. If it doesn't look like an email address or is too short, provide the user with appropriate custom error messages.

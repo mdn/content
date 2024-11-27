@@ -28,7 +28,7 @@ However, to get new lines, you must also set the {{cssxref("white-space")}} prop
 ### Examples of valid strings
 
 ```css
-/* Simple strings */
+/* Basic strings */
 "This string is demarcated by double quotes."
 'This string is demarcated by single quotes.'
 

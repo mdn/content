@@ -486,7 +486,7 @@ responsible for actually responding to the event.
 
 ### Event listener with an arrow function
 
-This example demonstrates a simple event listener implemented using arrow function
+This example demonstrates an event listener implemented using arrow function
 notation.
 
 #### HTML

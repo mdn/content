@@ -279,7 +279,7 @@ an extended quotation.&#x3C;/blockquote></pre
       <td id="details-example">
         <pre class="brush: html">
 &#x3C;details>
-  &#x3C;summary>Html Cheat Sheet&#x3C;/summary>
+  &#x3C;summary>HTML Cheat Sheet&#x3C;/summary>
   &#x3C;p>Inline elements&#x3C;/p>
   &#x3C;p>Block elements&#x3C;/p>
 &#x3C;/details></pre

@@ -138,7 +138,7 @@ Let's write a plain paragraph, apply no styles, and inspect a few of its CSS pro
 
 ```html
 <p>
-   This is a paragraph with some content. Open up this example in Codepen or
+   This is a paragraph with some content. Open up this example in CodePen or
    JSFiddle, and change some features. Try adding some CSS, such as a width
    for this paragraph, or adding a CSS property to the ofInterest array.
 </p>

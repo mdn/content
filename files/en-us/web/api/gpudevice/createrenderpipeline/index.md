@@ -52,7 +52,7 @@ The `depthStencil` object can contain the following properties:
   - : A number representing the maximum depth bias of a fragment. If omitted, `depthBiasClamp` defaults to 0.
 - `depthBiasSlopeScale` {{optional_inline}}
   - : A number representing a depth bias that scales with the fragment's slope. If omitted, `depthBiasSlopeScale` defaults to 0.
-- `depthCompare`
+- `depthCompare` {{optional_inline}}
 
   - : An enumerated value specifying the comparison operation used to test fragment depths against `depthStencilAttachment` depth values. Possible values are:
 
@@ -65,8 +65,14 @@ The `depthStencil` object can contain the following properties:
     - `"greater-equal"`: A provided value passes the comparison test if it is greater than or equal to the sampled value.
     - `"always"`: Comparison tests always pass.
 
-- `depthWriteEnabled`
+    `depthCompare` is not required if the specified `format` does not have a depth component, or if the comparison operation is not used.
+
+- `depthWriteEnabled` {{optional_inline}}
+
   - : A boolean. A value of `true` specifies that the {{domxref("GPURenderPipeline")}} can modify `depthStencilAttachment` depth values after creation. Setting it to `false` means it cannot.
+
+    `depthWriteEnabled` is not required if the specified `format` does not have a depth component.
+
 - `format`
   - : An enumerated value specifying the `depthStencilAttachment` format that the {{domxref("GPURenderPipeline")}} will be compatible with. See the specification's [Texture Formats](https://gpuweb.github.io/gpuweb/#enumdef-gputextureformat) section for all the available `format` values.
 - `stencilBack` {{optional_inline}}
@@ -133,8 +139,12 @@ The `fragment` object contains an array of objects, each of which can contain th
     }
     ```
 
-- `entryPoint`
+- `entryPoint` {{optional_inline}}
+
   - : The name of the function in the `module` that this stage will use to perform its work. The corresponding shader function must have the `@fragment` attribute to be identified as this entry point. See [Entry Point Declaration](https://gpuweb.github.io/gpuweb/wgsl/#entry-point-decl) for more information.
+
+    You can omit the `entryPoint` property if your shader code contains a single function with the `@fragment` attribute set — the browser will use this as the default entry point. If `entryPoint` is omitted and the browser cannot determine a default entry point, a {{domxref("GPUValidationError")}} is generated and the resulting {{domxref("GPURenderPipeline")}} will be invalid.
+
 - `module`
   - : A {{domxref("GPUShaderModule")}} object containing the [WGSL](https://gpuweb.github.io/gpuweb/wgsl/) code that this programmable stage will execute.
 - `targets`
@@ -313,8 +323,12 @@ The `vertex` object can contain the following properties:
     }
     ```
 
-- `entryPoint`
+- `entryPoint` {{optional_inline}}
+
   - : The name of the function in the `module` that this stage will use to perform its work. The corresponding shader function must have the `@vertex` attribute to be identified as this entry point. See [Entry Point Declaration](https://gpuweb.github.io/gpuweb/wgsl/#entry-point-decl) for more information.
+
+    You can omit the `entryPoint` property if your shader code contains a single function with the `@vertex` attribute set — the browser will use this as the default entry point. If `entryPoint` is omitted and the browser cannot determine a default entry point, a {{domxref("GPUValidationError")}} is generated and the resulting {{domxref("GPURenderPipeline")}} will be invalid.
+
 - `module`
   - : A {{domxref("GPUShaderModule")}} object containing the [WGSL](https://gpuweb.github.io/gpuweb/wgsl/) code that this programmable stage will execute.
 - `buffers` {{optional_inline}}
@@ -358,8 +372,11 @@ The following criteria must be met when calling **`createRenderPipeline()`**, ot
   - For each `target`, `writeMask`'s numeric equivalent is less than 16.
   - If any of the used blend factor operations use the source alpha channel (for example `"src-alpha-saturated"`), the output has an alpha channel (that is, it must be a `vec4`).
   - If the `src1`, `one-minus-src1`, `src1-alpha`, or `one-minus-src1-alpha` blend factor operations are used, the `dual-source-blending` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) is enabled.
+  - If the `entryPoint` property is omitted, the shader code contains a single fragment shader entry point function for the browser to use as the default entry point.
 - For `primitive` objects:
   - If the `unclippedDepth` property is used, the `depth-clip-control` [feature](/en-US/docs/Web/API/GPUSupportedFeatures) is enabled.
+- For `vertex` objects:
+  - If the `entryPoint` property is omitted, the shader code contains a single vertex shader entry point function for the browser to use as the default entry point.
 
 ## Examples
 
@@ -368,7 +385,7 @@ The following criteria must be met when calling **`createRenderPipeline()`**, ot
 
 ### Basic example
 
-Our [basic render demo](https://mdn.github.io/dom-examples/webgpu-render-demo/) provides a simple example of the construction of a valid render pipeline descriptor object, which is then used to create a {{domxref("GPURenderPipeline")}} via a `createRenderPipeline()` call.
+Our [basic render demo](https://mdn.github.io/dom-examples/webgpu-render-demo/) provides an example of the construction of a valid render pipeline descriptor object, which is then used to create a {{domxref("GPURenderPipeline")}} via a `createRenderPipeline()` call.
 
 ```js
 // ...

@@ -86,7 +86,7 @@ HTTP messages can be read and understood by humans, providing easier testing for
 ### HTTP is extensible
 
 Introduced in HTTP/1.0, [HTTP headers](/en-US/docs/Web/HTTP/Headers) make this protocol easy to extend and experiment with.
-New functionality can even be introduced by a simple agreement between a client and a server about a new header's semantics.
+New functionality can even be introduced by an agreement between a client and a server about a new header's semantics.
 
 ### HTTP is stateless, but not sessionless
 

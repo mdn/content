@@ -24,7 +24,7 @@ If you plan to use {{domxref("HTMLElement.dataset")}}, the portion of the attrib
 
 ### Usage
 
-By adding `data-*` attributes, even ordinary HTML elements can become rather complex and powerful program-objects. For example, a space-ship "[sprite](<https://en.wikipedia.org/wiki/Sprite_(computer_graphics)>)_"_ in a game could be a simple {{HTMLElement("img")}} element with a [`class`](/en-US/docs/Web/HTML/Global_attributes/class) attribute and several `data-*` attributes:
+By adding `data-*` attributes, even ordinary HTML elements can become rather complex and powerful program-objects. For example, a space-ship "[sprite](<https://en.wikipedia.org/wiki/Sprite_(computer_graphics)>)_"_ in a game could just be an {{HTMLElement("img")}} element with a [`class`](/en-US/docs/Web/HTML/Global_attributes/class) attribute and several `data-*` attributes:
 
 ```html
 <img

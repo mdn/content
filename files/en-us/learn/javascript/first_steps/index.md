@@ -17,7 +17,7 @@ Before starting this module, you don't need any previous JavaScript knowledge, b
 - [Introduction to CSS](/en-US/docs/Learn/CSS/First_steps).
 
 > [!NOTE]
-> If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
+> If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JS Bin](https://jsbin.com/) or [Glitch](https://glitch.com/).
 
 ## Guides
 

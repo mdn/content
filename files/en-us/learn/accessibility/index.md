@@ -27,7 +27,7 @@ The Firefox Accessibility Inspector is a very useful tool for checking out acces
 To get the most out of this module, it would be a good idea to either work through at least the first two modules of the [HTML](/en-US/docs/Learn/HTML), [CSS](/en-US/docs/Learn/CSS), and [JavaScript](/en-US/docs/Learn/JavaScript) topics, or perhaps even better, work through the relevant parts of the accessibility module as you work through the related technology topics.
 
 > [!NOTE]
-> If you are working on a computer/tablet/other devices where you don't have the ability to create your own files, you can try out most of the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
+> If you are working on a computer/tablet/other devices where you don't have the ability to create your own files, you can try out most of the code examples in an online coding program such as [JS Bin](https://jsbin.com/) or [Glitch](https://glitch.com/).
 
 ## Guides
 

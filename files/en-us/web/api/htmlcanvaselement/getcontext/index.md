@@ -117,7 +117,7 @@ If the context identifier is not supported, or the canvas has already been set t
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Throws if the canvas has transferred its control to offscreen via calling `HTMLCanvasElement.transferControlToOffscreen()`.
+  - : Throws if the canvas has transferred its control to offscreen by calling {{domxref("HTMLCanvasElement.transferControlToOffscreen()")}}.
 
 ## Examples
 

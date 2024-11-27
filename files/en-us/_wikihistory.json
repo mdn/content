@@ -98998,17 +98998,6 @@
     "modified": "2020-10-15T22:23:14.705Z",
     "contributors": ["j9t", "Malvoz", "bershanskiy"]
   },
-  "Web/HTTP/Headers/Accept-Charset": {
-    "modified": "2020-10-15T21:48:48.975Z",
-    "contributors": [
-      "mfuji09",
-      "Tigt",
-      "fscholz",
-      "ottaviano",
-      "Minstel",
-      "teoli"
-    ]
-  },
   "Web/HTTP/Headers/Accept-Encoding": {
     "modified": "2020-12-04T01:30:23.076Z",
     "contributors": [
@@ -99623,10 +99612,6 @@
   "Web/HTTP/Headers/Device-Memory": {
     "modified": "2020-10-15T22:23:16.957Z",
     "contributors": ["mfuji09", "darby", "bershanskiy"]
-  },
-  "Web/HTTP/Headers/Digest": {
-    "modified": "2020-10-15T22:21:39.013Z",
-    "contributors": ["ioggstream", "wbamberg"]
   },
   "Web/HTTP/Headers/ETag": {
     "modified": "2020-10-15T21:48:49.703Z",
@@ -100248,10 +100233,6 @@
       "callumgare",
       "teoli"
     ]
-  },
-  "Web/HTTP/Headers/Want-Digest": {
-    "modified": "2020-10-15T22:21:41.704Z",
-    "contributors": ["wbamberg"]
   },
   "Web/HTTP/Headers/Warning": {
     "modified": "2020-10-15T21:48:41.051Z",

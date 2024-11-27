@@ -46,7 +46,7 @@ Similarly, it is better to display a "loading animation" as soon as a user click
 
 There is no single metric or test that can be run on a site to evaluate how a user "feels". However, there are a number of metrics that can be "helpful indicators":
 
-- [First paint](/en-US/docs/Glossary/First_paint)
+- [First Paint](/en-US/docs/Glossary/First_paint)
   - : The time to start of first paint operation. Note that this change may not be visible; it can be a simple background color update or something even less noticeable.
 - [First Contentful Paint](/en-US/docs/Glossary/First_contentful_paint) (FCP)
   - : The time until first significant rendering (e.g. of text, foreground or background image, canvas or SVG, etc.). Note that this content is not necessarily useful or meaningful.

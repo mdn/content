@@ -48,7 +48,7 @@ Other reasons to use LIVE profile over Ondemand for VOD content may be:
 
 This profile will allow switching between streams 'on demand' - that is to say that you only need provide a set of contiguous files and specify the bandwidth for each one and the appropriate file will be chosen automatically.
 
-Here's a simple example that provides an audio track representation and four separate video representations.
+Here's an example that provides an audio track representation and four separate video representations.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

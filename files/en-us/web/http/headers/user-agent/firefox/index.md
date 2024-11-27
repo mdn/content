@@ -60,7 +60,7 @@ Windows user agents have the following variations, where _x.y_ is the Windows NT
 | Windows NT on x86 or aarch64 CPU | Mozilla/5.0 (Windows NT _x_._y_; rv:10.0) Gecko/20100101 Firefox/10.0             |
 | Windows NT on x64 CPU            | Mozilla/5.0 (Windows NT _x_._y_; Win64; x64; rv:10.0) Gecko/20100101 Firefox/10.0 |
 
-## MacOS
+## macOS
 
 Here, _x.y_ is the version of macOS (for instance, macOS 10.15). Starting in Firefox 87, Firefox caps the reported macOS version number to 10.15, so macOS 11.0 Big Sur and later will be reported as "10.15" in the User-Agent string. ARM-based Macs will be reported as "Intel" in the User-Agent string.
 

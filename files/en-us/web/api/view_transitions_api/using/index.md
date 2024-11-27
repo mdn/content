@@ -499,7 +499,7 @@ To ensure that your initial HTML has been parsed and will always render consiste
 - `href="#element-id"` to indicate the ID of the element you want to render block.
 - `blocking="render"` to render block the specified HTML.
 
-Let's explore what this looks like with a simple example HTML document:
+Let's explore what this looks like with an example HTML document:
 
 ```html-nolint
 <!doctype html>

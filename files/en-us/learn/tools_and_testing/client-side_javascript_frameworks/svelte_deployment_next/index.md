@@ -198,7 +198,7 @@ To deploy our app, follow these steps.
 4. Accept all the defaults, and you'll be fine.
 5. Once it has finished deploying, go to the "Production" URL in your browser, and you'll see the app deployed!
 
-You can also [import a Svelte git project](https://vercel.com/import/svelte) into Vercel from [GitHub](https://github.com/), [GitLab](https://about.gitlab.com/), or [BitBucket](https://bitbucket.org/product/).
+You can also [import a Svelte git project](https://vercel.com/import/svelte) into Vercel from [GitHub](https://github.com/), [GitLab](https://about.gitlab.com/), or [Bitbucket](https://bitbucket.org/product/).
 
 > [!NOTE]
 > You can globally install Vercel with `npm i -g vercel` so you don't have to use `npx` to run it.
@@ -326,7 +326,7 @@ There are a number of different ways to get support and interact with the Svelte
 - [@sveltejs](https://x.com/sveltejs): The official Twitter account.
 - [@sveltesociety](https://x.com/sveltesociety): Svelte community Twitter account.
 - [Svelte Recipes](https://github.com/svelte-society/recipes-mvp#recipes-mvp): Community-driven repository of recipes, tips, and best practices to solve common problems.
-- [Svelte questions on StackOverflow](https://stackoverflow.com/questions/tagged/svelte): Questions with the `svelte` tag at SO.
+- [Svelte questions on Stack Overflow](https://stackoverflow.com/questions/tagged/svelte): Questions with the `svelte` tag at SO.
 - [Svelte reddit community](https://www.reddit.com/r/sveltejs/): Svelte community discussion and content rating site at reddit.
 - [Svelte DEV community](https://dev.to/t/svelte): A collection of Svelte-related technical articles and tutorials from the DEV.to community.
 

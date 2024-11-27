@@ -46,7 +46,7 @@ Try updating the live code below to recreate the finished example:
 
 ## JavaScript accessibility 1
 
-In our final task here, you have some JavaScripting to do. We have a simple app that presents a list of animal names. Clicking one of the animal names causes a further description of that animal to appear in a box below the list.
+In our final task here, you have some JavaScripting to do. We have an app that presents a list of animal names. Clicking one of the animal names causes a further description of that animal to appear in a box below the list.
 
 But it is not very accessible — in its current state you can only operate it with the mouse. We'd like you to add to the HTML and JavaScript to make it keyboard accessible too.
 

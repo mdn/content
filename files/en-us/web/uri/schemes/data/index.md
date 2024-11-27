@@ -97,7 +97,7 @@ lots of text…
 - Formatting in HTML
   - : A `data` URL provides a file within a file, which can potentially be very wide relative to the width of the enclosing document. As a URL, the `data` should be formattable with whitespace (linefeed, tab, or spaces), but there are practical issues that arise [when using base64 encoding](https://bugzil.la/73026#c12).
 - Length limitations
-  - : Browsers are not required to support any particular maximum length of data. For example, the Opera 11 browser limited URLs to 65535 characters long which limits `data` URLs to 65529 characters (65529 characters being the length of the encoded data, not the source, if you use the plain `data:`, without specifying a MIME type). Firefox version 97 and newer supports `data` URLs of up to 32MB (before 97 the limit was close to 256MB). Chromium objects to URLs over 512MB, and Webkit (Safari) to URLs over 2048MB.
+  - : Browsers are not required to support any particular maximum length of data. For example, the Opera 11 browser limited URLs to 65535 characters long which limits `data` URLs to 65529 characters (65529 characters being the length of the encoded data, not the source, if you use the plain `data:`, without specifying a MIME type). Firefox version 97 and newer supports `data` URLs of up to 32MB (before 97 the limit was close to 256MB). Chromium objects to URLs over 512MB, and WebKit (Safari) to URLs over 2048MB.
 - Lack of error handling
   - : Invalid parameters in media, or typos when specifying `'base64'`, are ignored, but no error is provided.
 - No support for query strings, etc.

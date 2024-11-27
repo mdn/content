@@ -7,7 +7,7 @@ browser-compat: svg.elements.feMergeNode
 
 {{SVGRef}}
 
-The `feMergeNode` takes the result of another filter to be processed by its parent {{ SVGElement("feMerge") }}.
+The **`<feMergeNode>`** [SVG](/en-US/docs/Web/SVG) takes the result of another filter to be processed by its parent {{ SVGElement("feMerge") }}.
 
 ## Usage context
 

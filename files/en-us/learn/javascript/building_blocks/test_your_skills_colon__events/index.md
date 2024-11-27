@@ -22,7 +22,7 @@ We haven't explicitly taught this yet in the course, but you'll have seen some e
 
 ## Events 1
 
-In our first events-related task, you need to create a simple event handler that causes the text inside the button (`btn`) to change when it is clicked on, and change back when it is clicked again.
+In our first events-related task, you need to create an event handler that causes the text inside the button (`btn`) to change when it is clicked on, and change back when it is clicked again.
 
 The HTML should not be changed; just the JavaScript.
 

@@ -122,7 +122,7 @@ An {{HTMLElement("input")}} element with a `type="button"` declaration and a val
 <label>Click me <input type="text" /></label>
 ```
 
-{{EmbedLiveSample('Simple_label_example', '200', '50')}}
+{{EmbedLiveSample('Defining an implicit label', '200', '50')}}
 
 ### Defining an explicit label with the "for" attribute
 

@@ -161,7 +161,7 @@ Vue lets you run methods at various stages of this lifecycle using **lifecycle m
 10. `deactivated()` — Only used in components wrapped in a special `keep-alive` tag. Runs after the component is deactivated.
 
 > [!NOTE]
-> The Vue Docs provide a [nice diagram for visualizing when these hooks happen](https://vuejs.org/guide/essentials/lifecycle.html#lifecycle-diagram). This article from the [Digital Ocean Community Blog dives into the lifecycle methods more deeply](https://www.digitalocean.com/community/tutorials/vuejs-component-lifecycle).
+> The Vue Docs provide a [nice diagram for visualizing when these hooks happen](https://vuejs.org/guide/essentials/lifecycle.html#lifecycle-diagram). This article from the [DigitalOcean Community Blog dives into the lifecycle methods more deeply](https://www.digitalocean.com/community/tutorials/vuejs-component-lifecycle).
 
 Now that we've gone over the lifecycle methods, let's use one to trigger focus when our `ToDoItemEditForm` component is mounted.
 

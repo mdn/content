@@ -173,7 +173,7 @@ Once you have TypeScript configured, you can start using it from a Svelte compon
 > [!NOTE]
 > Using TypeScript in component markup sections is not supported in Svelte 4, which this guide is based on.
 > So while you can use JavaScript from the markup, you'll have to use TypeScript in the `<script lang='ts'>` section.
-> Typescript in component markup is allowed from Svelte 5.
+> TypeScript in component markup is allowed from Svelte 5.
 
 ## Improved developer experience with TypeScript
 

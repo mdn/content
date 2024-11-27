@@ -18,7 +18,7 @@ To link an external stylesheet, you'd include a `<link>` element inside your {{H
 <link href="main.css" rel="stylesheet" />
 ```
 
-This simple example provides the path to the stylesheet inside an `href` attribute, and a [`rel`](/en-US/docs/Web/HTML/Attributes/rel) attribute with a value of `stylesheet`. The `rel` stands for "relationship", and is one of the key features of the `<link>` element — the value denotes how the item being linked to is related to the containing document.
+This example provides the path to the stylesheet inside an `href` attribute and a [`rel`](/en-US/docs/Web/HTML/Attributes/rel) attribute with a value of `stylesheet`. The `rel` stands for "relationship", and is one of the key features of the `<link>` element — the value denotes how the item being linked to is related to the containing document.
 
 There are a number of other common types you'll come across. For example, a link to the site's favicon:
 

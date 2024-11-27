@@ -13,7 +13,7 @@ The **`<select>`** [HTML](/en-US/docs/Web/HTML) element represents a control tha
 
 The above example shows typical `<select>` usage. It is given an `id` attribute to enable it to be associated with a {{htmlelement("label")}} for accessibility purposes, as well as a `name` attribute to represent the name of the associated data point submitted to the server. Each menu option is defined by an {{htmlelement("option")}} element nested inside the `<select>`.
 
-Each `<option>` element should have a [`value`](/en-US/docs/Web/HTML/Element/option#value) attribute containing the data value to submit to the server when that option is selected. If no `value` attribute is included, the value defaults to the text contained inside the element. You can include a [`selected`](/en-US/docs/Web/HTML/Element/option#selected) attribute on an `<option>` element to make it selected by default when the page first loads.
+Each `<option>` element should have a [`value`](/en-US/docs/Web/HTML/Element/option#value) attribute containing the data value to submit to the server when that option is selected. If no `value` attribute is included, the value defaults to the text contained inside the element. You can include a [`selected`](/en-US/docs/Web/HTML/Element/option#selected) attribute on an `<option>` element to make it selected by default when the page first loads. If no `selected` attribute is specified, the first `<option>` element will be selected by default.
 
 A `<select>` element is represented in JavaScript by an {{domxref("HTMLSelectElement")}} object, and this object has a {{domxref("HTMLSelectElement.value", "value")}} property which contains the value of the selected `<option>`.
 
@@ -97,7 +97,7 @@ The `<hr>` within a `<select>` should be considered purely decorative, as they a
 
 ### Basic select
 
-The following example creates a very simple dropdown menu, the second option of which is selected by default.
+The following example creates a three-value dropdown menu, the second option of which is selected by default.
 
 ```html
 <!-- The second value will be selected initially -->

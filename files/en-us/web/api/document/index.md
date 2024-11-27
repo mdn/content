@@ -196,7 +196,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Creates a new element with the given tag name.
 - {{DOMxRef("Document.createElementNS()")}}
   - : Creates a new element with the given tag name and namespace URI.
-- {{DOMxRef("Document.createEvent()")}}
+- {{DOMxRef("Document.createEvent()")}} {{deprecated_inline}}
   - : Creates an event object.
 - {{DOMxRef("Document.createNodeIterator()")}}
   - : Creates a {{DOMxRef("NodeIterator")}} object.

@@ -15,7 +15,7 @@ The aim of this skill test is to assess whether you've understood our [HTML: A g
 
 ## HTML accessibility 1
 
-In this task we will test your understanding of text semantics, and why they are good for accessibility. The given text is a simple information panel with action buttons, but the HTML is really bad.
+In this task we will test your understanding of text semantics, and why they are good for accessibility. The given text is an information panel with action buttons, but the HTML is really bad.
 
 We want you to update it use appropriate semantic HTML. You don't need to worry too much about recreating the _exact_ same look and text sizing, as long as the semantics are good.
 
@@ -61,7 +61,7 @@ Try updating the live code below to recreate the finished example:
 
 ## HTML accessibility 4
 
-In our final HTML accessibility task, you are given a simple image gallery, which has some accessibility problems. Can you fix them?
+In our final HTML accessibility task, you are given an image gallery, which has some accessibility problems. Can you fix them?
 
 - The header image has an accessibility issue, and so do the gallery images.
 - You could take the header image further and implement it using CSS for arguably better accessibility. Why is this better, and what would a solution look like?

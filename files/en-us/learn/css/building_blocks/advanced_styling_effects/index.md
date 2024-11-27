@@ -429,7 +429,7 @@ The `circle()` function is just one of a few basic shapes that are defined, howe
 
 ## -webkit-background-clip: text
 
-Another feature we thought we'd mention briefly is the `text` value for {{cssxref("background-clip")}}. When used along with the proprietary `-webkit-text-fill-color: transparent;` feature, this allows you to clip background images to the shape of the element's text, making for some nice effects. This is not an official standard, but has been implemented across multiple browsers, as it is popular, and used fairly widely by developers. When used in this context, both of the properties would require a `-webkit-` vendor prefix, even for non-Webkit/Chrome-based browsers.
+Another feature we thought we'd mention briefly is the `text` value for {{cssxref("background-clip")}}. When used along with the proprietary `-webkit-text-fill-color: transparent;` feature, this allows you to clip background images to the shape of the element's text, making for some nice effects. This is not an official standard, but has been implemented across multiple browsers, as it is popular, and used fairly widely by developers. When used in this context, both of the properties would require a `-webkit-` vendor prefix, even for non-WebKit/Chrome-based browsers.
 You can see this in action in the live sample below:
 
 ```html live-sample___webkit-background-clip

@@ -75,7 +75,7 @@ Below is a screenshot of how it is rendered by a browser:
 
 ### Active learning: nesting different elements
 
-Here is a simple exercise to verify whether you understood the relation between a MathML subtree and its visual rendering. The document contains a MathML formula and you must check all subtrees corresponding to a subtree in that MathML formula. Once you are done, you can inspect the source of the MathML formula and verify if it matches your expectation.
+Here is an exercise to verify whether you understood the relation between a MathML subtree and its visual rendering. The document contains a MathML formula and you must check all subtrees corresponding to a subtree in that MathML formula. Once you are done, you can inspect the source of the MathML formula and verify if it matches your expectation.
 
 ```html hidden
 <!doctype html>

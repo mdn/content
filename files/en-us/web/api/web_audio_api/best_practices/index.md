@@ -44,7 +44,7 @@ But what does that mean in practice? A user gesture has been interpreted to mean
 
 When you create an audio context (either offline or online) it is created with a `state`, which can be `suspended`, `running`, or `closed`.
 
-When working with an {{domxref("AudioContext")}}, if you create the audio context from inside a `click` event the state should automatically be set to `running`. Here is a simple example of creating the context from inside a `click` event:
+When working with an {{domxref("AudioContext")}}, if you create the audio context from inside a `click` event the state should automatically be set to `running`. Here is an example of creating the context from inside a `click` event:
 
 ```js
 const button = document.querySelector("button");

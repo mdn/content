@@ -1,12 +1,17 @@
 ---
-title: First input delay
+title: First Input Delay (FID)
 slug: Glossary/First_input_delay
 page-type: glossary-definition
+status:
+  - deprecated
 ---
 
 {{GlossarySidebar}}
 
-**First input delay** (FID) measures the time from when a user first interacts with your site (i.e. when they click a link, tap on a button, or use a custom, JavaScript-powered control) to the time when the browser is actually able to respond to that interaction.
+**First input delay** (FID) measures the time from when a user first interacts with your site (for example, when they click a link, tap on a button, or use a custom, JavaScript-powered control) to the time when the browser is actually able to respond to that interaction.
+
+> [!WARNING]
+> FID was designed by Google as one of the [Core Web Vital](https://web.dev/articles/vitals) metrics but was replaced by {{Glossary("Interaction to Next Paint")}} (INP) [in May 2024](https://web.dev/blog/inp-cwv-launch).
 
 It is the length of time, in milliseconds, between the first user interaction on a web page and the browser's response to that interaction. Scrolling and zooming are not included in this metric.
 
@@ -14,5 +19,4 @@ The time between when content is painted to the page and when all the functional
 
 ## See also
 
-- [requestIdleCallback](/en-US/docs/Web/API/Window/requestIdleCallback)
-- [lazy loading](/en-US/docs/Web/Performance/Lazy_loading)
+- [Interaction to Next Paint is officially a Core Web Vital](https://web.dev/blog/inp-cwv-launch) on web.dev (2024)

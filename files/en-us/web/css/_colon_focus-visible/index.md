@@ -51,7 +51,7 @@ This example presents three pairs of controls. Each pair consists of a [`text`](
 
 - The first pair does not add any custom styles for focus states, and shows the default case.
 - The second pair adds styles using the `:focus` pseudo-class.
-- The third pair add styles using the `:focus-visible` pseudo-class.
+- The third pair adds styles using the `:focus-visible` pseudo-class.
 
 ```html
 <input type="text" value="Default styles" /><br />

@@ -20,7 +20,7 @@ Before starting this module, you should have:
 4. An understanding of the basics of CSS, as discussed in the [CSS first steps](/en-US/docs/Learn/CSS/First_steps) module.
 
 > [!NOTE]
-> If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
+> If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JS Bin](https://jsbin.com/) or [Glitch](https://glitch.com/).
 
 ## Guides
 

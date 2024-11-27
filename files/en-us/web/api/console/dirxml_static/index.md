@@ -36,5 +36,5 @@ None ({{jsxref("undefined")}}).
 ## See also
 
 - [Microsoft Edge's documentation for `console.dirxml()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#dirxml)
-- [Node.JS documentation for `console.dirxml()`](https://nodejs.org/docs/latest/api/console.html#consoledirxmldata)
+- [Node.js documentation for `console.dirxml()`](https://nodejs.org/docs/latest/api/console.html#consoledirxmldata)
 - [Google Chrome's documentation for `console.dirxml()`](https://developer.chrome.com/docs/devtools/console/api/#dirxml)

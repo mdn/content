@@ -45,7 +45,7 @@ var {
 
 ### Basic example
 
-Here's a simple example, using `<var>` to denote variable names in a mathematical equation.
+Here's a basic example, using `<var>` to denote variable names in a mathematical equation.
 
 ```html
 <p>A simple equation: <var>x</var> = <var>y</var> + 2</p>
