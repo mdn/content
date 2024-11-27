@@ -18,6 +18,10 @@ Therefore, the user's privacy must be kept in mind when deploying this header.
 
 The alternative and de-facto standard versions of this header are the {{HTTPHeader("X-Forwarded-For")}}, {{HTTPHeader("X-Forwarded-Host")}} and {{HTTPHeader("X-Forwarded-Proto")}} headers.
 
+> [!NOTE]
+> If upstream services rely on `X-Forwarded-*` headers, replacing them outright with `Forwarded` could lead to compatibility issues.
+> Verify that frameworks, middleware, and any third-party tools support the standardized version before deploying this header as a replacement.
+
 <table class="properties">
   <tbody>
     <tr>

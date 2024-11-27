@@ -8,11 +8,15 @@ status:
 
 {{HTTPSidebar}}
 
-The HTTP **`X-Forwarded-Proto`** (XFP) {{Glossary("request header")}} is a de-facto standard header for identifying the protocol (HTTP or HTTPS) that a client used to connect to your proxy or load balancer.
-Your server access logs contain the protocol used between the server and the load balancer, but not the protocol used between the client and the load balancer.
+The HTTP **`X-Forwarded-Proto`** (XFP) {{Glossary("request header")}} is a de-facto standard header for identifying the protocol (HTTP or HTTPS) that a client used to connect to a {{Glossary("Proxy_server", "proxy")}} or load balancer.
+A standardized version of this header is the HTTP {{HTTPHeader("Forwarded")}} header.
+
+Server access logs contain the protocol used between the server and the load balancer, but not the protocol used between the client and the load balancer.
 To determine the protocol used between the client and the load balancer, the `X-Forwarded-Proto` request header can be used.
 
-A standardized version of this header is the HTTP {{HTTPHeader("Forwarded")}} header.
+> [!NOTE]
+> The standardized `Forwarded` header may replace the `X-Forwarded-Proto` header, although you should verify that frameworks, middleware, and any third-party tools support it.
+> If upstream services rely on `X-Forwarded-*` headers, replacing them outright with `Forwarded` could lead to compatibility issues.
 
 <table class="properties">
   <tbody>
@@ -40,11 +44,17 @@ X-Forwarded-Proto: <protocol>
 
 ## Examples
 
+### X-Forwarded-Proto client protocol
+
+The following header indicates that the original request was made over HTTPS before being forwarded by a proxy or load balancer:
+
 ```http
 X-Forwarded-Proto: https
 ```
 
-Other non-standard forms:
+### Non-standard forms
+
+The following forms may be seen in request headers:
 
 ```http
 # Microsoft

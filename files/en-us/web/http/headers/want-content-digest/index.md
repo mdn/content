@@ -2,13 +2,17 @@
 title: Want-Content-Digest
 slug: Web/HTTP/Headers/Want-Content-Digest
 page-type: http-header
-spec-urls: https://datatracker.ietf.org/doc/html/rfc9530
+spec-urls: https://datatracker.ietf.org/doc/html/rfc9530#section-4
 ---
 
 {{HTTPSidebar}}
 
-The HTTP **`Want-Content-Digest`** {{glossary("request header", "request")}} and {{glossary("response header")}} indicates that the recipient should send a {{HTTPHeader("Content-Digest")}} header.
-It is the `Content-` analogue of {{HTTPHeader("Want-Repr-Digest")}}.
+The HTTP **`Want-Content-Digest`** {{glossary("request header", "request")}} and {{glossary("response header")}} indicates a preference for the recipient to send a {{HTTPHeader("Content-Digest")}} integrity header in messages associated with the request URI and representation metadata.
+
+The header includes hashing algorithm preferences that the recipient can use in subsequent messages.
+The preferences only serve as a hint, and the recipient may ignore the algorithm choices, or the integrity headers entirely.
+
+Some implementations may send unsolicited `Content-Digest` headers without requiring a `Want-Content-Digest` header in a previous message.
 
 <table class="properties">
   <tbody>
@@ -26,15 +30,15 @@ It is the `Content-` analogue of {{HTTPHeader("Want-Repr-Digest")}}.
 ## Syntax
 
 ```http
-Want-Content-Digest: <algorithm>=<preference>
+Want-Content-Digest: <digest-algorithm>=<preference>
 ```
 
 ## Directives
 
-`Want-Content-Digest` describes an [RFC8941 dictionary](https://www.rfc-editor.org/rfc/rfc8941#section-3.2) with its keys being hashing algorithms and its values being the integers `0` (meaning "not acceptable") or `1` to `9` (conveying ascending, relative, weighted preference).
-
-- `<algorithm>`
-  - : For permissible digest algorithms see {{HTTPHeader("Repr-Digest")}}.
+- `<digest-algorithm>`
+  - : The algorithm used to create a digest of the message content.
+    Only two registered digest algorithms are considered secure: `sha-512` and `sha-256`.
+    The insecure (legacy) registered digest algorithms are: `md5`, `sha` (SHA-1), `unixsum`, `unixcksum`, `adler` (ADLER32) and `crc32c`.
 - `<preference>`
   - : An integer from 0 to 9 where `0` means "not acceptable", and the values `1` to `9` convey ascending, relative, weighted preference.
     In contrast to earlier drafts of the specifications, the weighting is _not_ declared via `q` [quality values](/en-US/docs/Glossary/Quality_values).
@@ -69,3 +73,4 @@ Developers can set and get HTTP headers using `fetch()` in order to provide appl
 ## See also
 
 - {{HTTPHeader("Content-Digest")}}, {{HTTPHeader("Repr-Digest")}}, {{HTTPHeader("Want-Repr-Digest")}} digest headers
+- [Digital Signatures for APIs](https://developer.ebay.com/develop/guides/digital-signatures-for-apis) SDK guide uses `Content-Digest`s for digital signatures in HTTP calls (developer.ebay.com)

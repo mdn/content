@@ -8,7 +8,7 @@ status:
 
 {{HTTPSidebar}}
 
-The HTTP **`X-Powered-By`** {{Glossary("Response header")}} is a non-standard header for identifying the application or framework that generated the response.
+The HTTP **`X-Powered-By`** {{Glossary("response header")}} is a non-standard header for identifying the application or framework that generated the response.
 
 <table class="properties">
   <tbody>
@@ -36,7 +36,9 @@ X-Powered-By: <application>
 
 ## Examples
 
-### Express response headers
+### Express X-Powered-By header
+
+Express applications will usually include the `X-Powered-By` header in responses with the string `express` as the field value:
 
 ```http
 X-Powered-By: express
@@ -49,7 +51,5 @@ Not part of any current specification.
 ## See also
 
 - {{HTTPHeader("Forwarded")}}
-- {{HTTPHeader("X-Forwarded-Host")}}
-- {{HTTPHeader("X-Forwarded-For")}}
-- {{HTTPHeader("X-Forwarded-Proto")}}
+- {{HTTPHeader("X-Forwarded-Host")}}, {{HTTPHeader("X-Forwarded-For")}}, {{HTTPHeader("X-Forwarded-Proto")}} headers
 - {{HTTPHeader("Via")}}
