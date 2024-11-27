@@ -113,9 +113,7 @@ We take a quadratic equation in its general form, and solve for x.
         </mtd>
         <mtd>
           <mrow>
-            <mtext style="color: red; font-size: smaller">
-              Divide out leading coefficient.
-            </mtext>
+            <mtext style="color: red; font-size: smaller">Divide out leading coefficient.</mtext>
           </mrow>
         </mtd>
       </mtr>
@@ -201,9 +199,7 @@ We take a quadratic equation in its general form, and solve for x.
         </mtd>
         <mtd>
           <mrow>
-            <mtext style="color: red; font-size: smaller">
-              Complete the square.
-            </mtext>
+            <mtext style="color: red; font-size: smaller">Complete the square.</mtext>
           </mrow>
         </mtd>
       </mtr>
@@ -267,9 +263,7 @@ We take a quadratic equation in its general form, and solve for x.
         </mtd>
         <mtd>
           <mrow>
-            <mtext style="color: red; font-size: smaller">
-              Discriminant revealed.
-            </mtext>
+            <mtext style="color: red; font-size: smaller">Discriminant revealed.</mtext>
           </mrow>
         </mtd>
       </mtr>
@@ -431,9 +425,7 @@ We take a quadratic equation in its general form, and solve for x.
         </mtd>
         <mtd>
           <mrow>
-            <mtext style="color: red; font-size: smaller">
-              There's the vertex formula.
-            </mtext>
+            <mtext style="color: red; font-size: smaller">There's the vertex formula.</mtext>
           </mrow>
         </mtd>
       </mtr>
