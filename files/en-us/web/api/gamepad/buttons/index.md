@@ -28,14 +28,12 @@ An array of {{domxref("gamepadButton")}} objects.
 
 ## Examples
 
-The following code is taken from a Gamepad API [button demo](https://chrisdavidmills.github.io/gamepad-buttons/). Depending on the type of button, we need to access the {{domxref("GamepadButton.value")}} or {{domxref("GamepadButton.pressed")}} properties. This
+Depending on the type of button, we need to access the {{domxref("GamepadButton.value")}} or {{domxref("GamepadButton.pressed")}} properties. This
 example supports both:
 
 ```js
 function gameLoop() {
   const gp = navigator.getGamepads()[0];
-  let a = 0;
-  let b = 0;
 
   if (gp.buttons[0].value > 0 || gp.buttons[0].pressed) {
     b--;
@@ -47,10 +45,10 @@ function gameLoop() {
     a--;
   }
 
-  ball.style.left = `${a * 2}px`;
+  ball.style.left = `${a * 2}px`; // ball is a UI widget
   ball.style.top = `${b * 2}px`;
 
-  const start = rAF(gameLoop);
+  requestAnimationFrame(gameLoop);
 }
 ```
 
