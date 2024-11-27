@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.RegExp.escape
 
 The **`RegExp.escape()`** static method [escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions#escape_sequences) any potential regex syntax characters in a string, and returns a new string that can be safely used as a [literal](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character) pattern for the {{jsxref("RegExp/RegExp", "RegExp()")}} constructor.
 
-Always prefer this function to a manual search & replace using, for example, {{jsxref("String.prototype.replaceAll()")}}, because `RegExp.escape()` can handle more edge cases and use the right escape sequence that doesn't cause syntax errors in certain contexts.
+When dynamically creating a {{jsxref("RegExp")}} with user-provided content, always consider using this function to sanitize the input, unless the input is actually intended to contain regex syntax. In addition, don't try to re-implement its functionality by, for example, using {{jsxref("String.prototype.replaceAll()")}} to insert a `\` before all syntax characters, because `RegExp.escape()` can handle more edge cases and use the right escape sequence that doesn't cause syntax errors in certain contexts.
 
 ## Syntax
 
