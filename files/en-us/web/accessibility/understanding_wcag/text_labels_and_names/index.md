@@ -14,7 +14,7 @@ In image maps, give each {{htmlelement("area")}} element an `alt` attribute cont
 
 ### Examples
 
-The following example show a simple image map (taken from [H24: Providing text alternatives for the area elements of image maps](https://www.w3.org/TR/WCAG20-TECHS/H24.html)):
+The following example show an image map (taken from [H24: Providing text alternatives for the area elements of image maps](https://www.w3.org/TR/WCAG20-TECHS/H24.html)):
 
 ```html
 <img

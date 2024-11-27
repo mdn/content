@@ -61,9 +61,9 @@ article[data-columns="4"] {
 }
 ```
 
-You can see all this working together [in this JSBin example](https://jsbin.com/ujiday/2/edit).
+You can see all this working together [in this JS Bin example](https://jsbin.com/ujiday/2/edit).
 
-Data attributes can also be stored to contain information that is constantly changing, like scores in a game. Using the CSS selectors and JavaScript access here this allows you to build some nifty effects without having to write your own display routines. See [this screencast](https://www.youtube.com/watch?v=On_WyUB1gOk) for an example using generated content and CSS transitions ([JSBin example](https://jsbin.com/atawaz/3/edit)).
+Data attributes can also be stored to contain information that is constantly changing, like scores in a game. Using the CSS selectors and JavaScript access here this allows you to build some nifty effects without having to write your own display routines. See [this screencast](https://www.youtube.com/watch?v=On_WyUB1gOk) for an example using generated content and CSS transitions ([JS Bin example](https://jsbin.com/atawaz/3/edit)).
 
 Data values are strings. Number values must be quoted in the selector for the styling to take effect.
 

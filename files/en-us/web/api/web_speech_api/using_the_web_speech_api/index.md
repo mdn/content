@@ -199,7 +199,7 @@ The HTML and CSS are again pretty trivial, containing a title, some instructions
 <h1>Speech synthesizer</h1>
 
 <p>
-  Enter some text in the input below and press return to hear it. change voices
+  Enter some text in the input below and press return to hear it. Change voices
   using the dropdown menu.
 </p>
 

@@ -46,4 +46,4 @@ If a time limit needs to be in place, for example, for security reasons, the use
 - [ARIA: `marquee` role](/en-US/docs/Web/Accessibility/ARIA/Roles/marquee_role)
 - [ARIA: `status` role](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role)
 - [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
-- [`timer` example on Codepen](https://codepen.io/heydon/pres/NGgNjZ) by Heydon Pickering
+- [`timer` example on CodePen](https://codepen.io/heydon/pres/NGgNjZ) by Heydon Pickering

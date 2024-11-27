@@ -719,7 +719,7 @@ The following example pages show two different ways to structure your CSS. The f
 
 ```html hidden live-sample___sample-page-example
 <div class="container container1">
-  <h1>Moby Dick</h1>
+  <h1>Moby-Dick</h1>
   <h2>CHAPTER 1. Loomings.</h2>
   <p>
     Call me Ishmael. Some years ago—never mind how long precisely–having little
@@ -737,7 +737,7 @@ The following example pages show two different ways to structure your CSS. The f
 </div>
 <hr />
 <div class="container container2 demo2">
-  <h1>Moby Dick</h1>
+  <h1>Moby-Dick</h1>
   <h2>CHAPTER 1. (hover here)</h2>
   <p>
     Call me Ishmael. Some years ago—never mind how long precisely–having little
