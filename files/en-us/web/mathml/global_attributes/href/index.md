@@ -13,7 +13,7 @@ The **`href`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) crea
 
 ## Example
 
-The first equation is a link to the Wikipedia article about the [mass-energy equivalence](https://en.wikipedia.org/wiki/Mass-energy_equivalence). The square root part of the second equation is a link to the [SageMath](https://sagecell.sagemath.org/?z=eJwrLiwq0TCOM9I2iTPSBAAeqgPO) calculation it.
+The first equation links to the Wikipedia article about the [mass-energy equivalence](https://en.wikipedia.org/wiki/Mass-energy_equivalence). The square root part of the second equation is a link to the [SageMath](https://sagecell.sagemath.org/?z=eJwrLiwq0TCOM9I2iTPSBAAeqgPO) calculation.
 
 > [!NOTE]
 > You should avoid nesting MathML elements with the `href` attributes, just like {{htmlelement("a")}} elements, as is will lead to user confusion and accessibility issues.
