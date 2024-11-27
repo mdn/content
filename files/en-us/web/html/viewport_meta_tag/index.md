@@ -46,6 +46,15 @@ The basic attributes of the "viewport" `<meta>` element include:
 - `interactive-widget`
   - : Specifies the effect that interactive UI widgets, such as a virtual keyboard, have on the page's viewports. Valid values: `resizes-visual`, `resizes-content`, or `overlays-content`. Default: `resizes-visual`.
 
+> [!NOTE]
+> Multiple attributes can be added separated by commas.
+
+```html
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, interactive-widget=overlays-content" />
+```
+
 > [!WARNING]
 > Usage of `user-scalable=no` can cause accessibility issues to users with visual impairments such as low vision. [WCAG](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) requires a minimum of 2× scaling; however, the best practice is to enable a 5× zoom.
 
@@ -81,6 +90,10 @@ Allowed values are:
   - : The {{Glossary("viewport")}} gets resized by the interactive widget.
 - `overlays-content`
   - : Neither the {{Glossary("viewport")}} nor the {{Glossary("visual viewport")}} gets resized by the interactive widget.
+
+```html
+<meta name="viewport" content="interactive-widget=resizes-content" />
+```
 
 When the {{Glossary("viewport")}} gets resized, the initial [containing block](/en-US/docs/Web/CSS/Containing_block) also gets resized, thereby affecting the computed size of [viewport units](/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport).
 
