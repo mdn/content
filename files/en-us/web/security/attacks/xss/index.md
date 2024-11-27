@@ -176,7 +176,7 @@ If you need to include external input in your site's pages, there are two main d
 1. Using _output encoding_ and _sanitization_ to prevent input from becoming executable.
 2. Using a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) (CSP) to tell the browser which JavaScript or CSS resources it should be allowed to execute. This is a backup defense: if the first defense fails, so executable input makes it into a page, then a properly configured CSP should prevent the browser from executing it.
 
-### Output encoding and sanitization
+### Output encoding
 
 _Output encoding_ is the process by which characters in the input string that potentially make it dangerous are escaped, so they are treated as text instead of being treated as part of a language like HTML.
 
@@ -199,7 +199,7 @@ What's safe in one context may be unsafe in another, and it's necessary to under
 - **HTML contexts**: input inserted between the tags of most HTML elements (except for {{htmlelement("style")}} or {{htmlelement("script")}}) is in the HTML context, as in the example above, and the encoding applied by template engines is mostly concerned with this context.
 - **HTML attribute contexts**: inserting input as HTML attribute values is sometimes safe and sometimes not, depending on the attribute. In particular, event handler attributes like `onblur` are unsafe, as is the [`src`](/en-US/docs/Web/HTML/Element/iframe#src) attribute of the {{htmlelement("iframe")}} element.
 
-  It's important to quote placeholders for inserted attribute values, or an attacker my be able to insert an additional unsafe attribute in the value provided. For example, this template does not quote an inserted value:
+  It's important to quote placeholders for inserted attribute values, or an attacker may be able to insert an additional unsafe attribute in the value provided. For example, this template does not quote an inserted value:
 
   ```django example-bad
   <div class=\{{ my_class }}>...</div>
@@ -213,15 +213,48 @@ What's safe in one context may be unsafe in another, and it's necessary to under
 
 - **JavaScript and CSS contexts**: inserting input inside {{htmlelement("script")}} or {{htmlelement("style")}} tags is almost always unsafe.
 
-Templating engines typically allow developers to disable output encoding, when developers want to insert content as HTML, not text. In this case it's up to the developer to ensure that the content is safe: for example, by sanitizing it.
+### Sanitization
 
-_Sanitization_ is the
+Templating engines typically allow developers to disable output encoding. This is necessary when developers want to insert untrusted content as HTML, not text. In this case it's up to the developer to ensure that the content is safe: for example, by sanitizing it.
 
-With all this in mind, we can list some principles for defending against XSS, when you have to include untrusted content in pages:
+_Sanitization_ is the process of removing unsafe features from a string of HTML: for example, {{htmlelement("script")}} tags or inline event handlers. Since sanitization, like output encoding, is difficult to get right, it's advisable to use a reputable third-party library for it, and [DOMPurify](https://github.com/cure53/DOMPurify) is recommended by many experts including [OWASP](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html#html-sanitization).
 
-- Sanitize any input that you can't encode
+For example, consider a string of HTML like:
+
+```html
+<div>
+  <img src="x" onerror="alert('hello!')" />
+  <script>
+    alert("hello!");
+  </script>
+</div>
+```
+
+If we pass this to DOMPurify, it will return:
+
+```html
+<div>
+  <img src="x" />
+</div>
+```
 
 ### Trusted types
+
+Having a function that can sanitize a given input string is one thing, but finding all the places in a codebase where input strings need to be sanitized can in itself be a very hard problem.
+
+Browsers provide a number of APIs that can result in XSS if used with untrusted input. These functions are sometimes called _unsafe sinks_. For example:
+
+- APIs that generate HTML from a string such as:
+  - {{domxref("Element.innerHTML")}}
+  - the [`srcdoc`](/en-US/docs/Web/HTML/Element/iframe#attr-srcdoc) attribute of the {{htmlelement("iframe")}} element.
+- APIs that execute their string arguments as JavaScript, such as:
+  - [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)
+  - {{domxref("Window.setTimeout()")}}
+
+The [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) enables a developer to be sure that unsafe sinks are never passed string arguments. Instead, they are passed objects which were created using a {{domxref("TrustedTypePolicy")}}, which has the opportunity to sanitize the input.
+
+> [!NOTE]
+> The Trusted Types API does not provide a sanitization function: it is a framework in which a developer can be sure that a sanitization function that they provide has been called. A developer could, for example, use DOMPurify as the sanitizer within the Trusted Types framework.
 
 ### Deploying a CSP
 
