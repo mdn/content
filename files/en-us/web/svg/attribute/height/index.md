@@ -2,12 +2,15 @@
 title: height
 slug: Web/SVG/Attribute/height
 page-type: svg-attribute
-spec-urls:
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-height
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-height
-  - https://drafts.fxtf.org/css-masking-1/#element-attrdef-mask-height
-  - https://svgwg.org/svg2-draft/geometry.html#Sizing
-  - https://svgwg.org/svg2-draft/pservers.html#PatternElementHeightAttribute
+browser-compat:
+  - svg.elements.filter.height
+  - svg.elements.foreignObject.height
+  - svg.elements.image.height
+  - svg.elements.mask.height
+  - svg.elements.pattern.height
+  - svg.elements.rect.height
+  - svg.elements.svg.height
+  - svg.elements.use.height
 ---
 
 {{SVGRef}}
@@ -42,7 +45,7 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement('svg')}}
 - {{SVGElement('use')}}
 
-## Example
+## Examples
 
 ```css hidden
 html,
@@ -61,9 +64,13 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample("Example", '100%', 200)}}
+{{EmbedLiveSample("Examples", '100%', 200)}}
 
-## feBlend
+## Elements
+
+You can use this attribute with the SVG elements described in the sections below.
+
+### `<feBlend>`
 
 For {{SVGElement('feBlend')}}, `height` defines the vertical length for the rendering area of the primitive.
 
@@ -94,7 +101,7 @@ For {{SVGElement('feBlend')}}, `height` defines the vertical length for the rend
   </tbody>
 </table>
 
-## feColorMatrix
+### `<feColorMatrix>`
 
 For {{SVGElement('feColorMatrix')}}, `height` defines the vertical length for the rendering area of the primitive.
 
@@ -125,7 +132,7 @@ For {{SVGElement('feColorMatrix')}}, `height` defines the vertical length for th
   </tbody>
 </table>
 
-## feComponentTransfer
+### `<feComponentTransfer>`
 
 For {{SVGElement('feComponentTransfer')}}, `height` defines the vertical length for the rendering area of the primitive.
 
@@ -156,7 +163,7 @@ For {{SVGElement('feComponentTransfer')}}, `height` defines the vertical length 
   </tbody>
 </table>
 
-## feComposite
+### `<feComposite>`
 
 For {{SVGElement('feComposite')}}, `height` defines the vertical length for the rendering area of the primitive.
 
@@ -187,7 +194,7 @@ For {{SVGElement('feComposite')}}, `height` defines the vertical length for the 
   </tbody>
 </table>
 
-## feConvolveMatrix
+### `<feConvolveMatrix>`
 
 For {{SVGElement('feConvolveMatrix')}}, `height` defines the vertical length for the rendering area of the primitive.
 
@@ -218,7 +225,7 @@ For {{SVGElement('feConvolveMatrix')}}, `height` defines the vertical length for
   </tbody>
 </table>
 
-## feDiffuseLighting
+### `<feDiffuseLighting>`
 
 For {{SVGElement('feDiffuseLighting')}}, `height` defines the vertical length for the rendering area of the primitive.
 
@@ -249,7 +256,7 @@ For {{SVGElement('feDiffuseLighting')}}, `height` defines the vertical length fo
   </tbody>
 </table>
 
-## feDisplacementMap
+### `<feDisplacementMap>`
 
 For {{SVGElement('feDisplacementMap')}}, `height` defines the vertical length for the rendering area of the primitive.
 
@@ -280,7 +287,7 @@ For {{SVGElement('feDisplacementMap')}}, `height` defines the vertical length fo
   </tbody>
 </table>
 
-## feDropShadow
+### `<feDropShadow>`
 
 For {{SVGElement('feDropShadow')}}, `height` defines the vertical length for the rendering area of the primitive.
 
@@ -311,7 +318,7 @@ For {{SVGElement('feDropShadow')}}, `height` defines the vertical length for the
   </tbody>
 </table>
 
-## feFlood
+### `<feFlood>`
 
 For {{SVGElement('feFlood')}}, `height` defines the vertical length for the rendering area of the primitive.
 
@@ -342,7 +349,7 @@ For {{SVGElement('feFlood')}}, `height` defines the vertical length for the rend
   </tbody>
 </table>
 
-## feGaussianBlur
+### `<feGaussianBlur>`
 
 For {{SVGElement('feGaussianBlur')}}, `height` defines the vertical length for the rendering area of the primitive.
 
@@ -373,7 +380,7 @@ For {{SVGElement('feGaussianBlur')}}, `height` defines the vertical length for t
   </tbody>
 </table>
 
-## feImage
+### `<feImage>`
 
 For {{SVGElement('feImage')}}, `height` defines the vertical length for the rendering area of the primitive.
 
@@ -404,7 +411,7 @@ For {{SVGElement('feImage')}}, `height` defines the vertical length for the rend
   </tbody>
 </table>
 
-## feMerge
+### `<feMerge>`
 
 For {{SVGElement('feMerge')}}, `height` defines the vertical length for the rendering area of the primitive.
 
@@ -435,7 +442,7 @@ For {{SVGElement('feMerge')}}, `height` defines the vertical length for the rend
   </tbody>
 </table>
 
-## feMorphology
+### `<feMorphology>`
 
 For {{SVGElement('feMorphology')}}, `height` defines the vertical length for the rendering area of the primitive.
 
@@ -466,7 +473,7 @@ For {{SVGElement('feMorphology')}}, `height` defines the vertical length for the
   </tbody>
 </table>
 
-## feOffset
+### `<feOffset>`
 
 For {{SVGElement('feOffset')}}, `height` defines the vertical length for the rendering area of the primitive.
 
@@ -497,7 +504,7 @@ For {{SVGElement('feOffset')}}, `height` defines the vertical length for the ren
   </tbody>
 </table>
 
-## feSpecularLighting
+### `<feSpecularLighting>`
 
 For {{SVGElement('feSpecularLighting')}}, `height` defines the vertical length for the rendering area of the primitive.
 
@@ -528,7 +535,7 @@ For {{SVGElement('feSpecularLighting')}}, `height` defines the vertical length f
   </tbody>
 </table>
 
-## feTile
+### `<feTile>`
 
 For {{SVGElement('feTile')}}, `height` defines the vertical length for the rendering area of the primitive.
 
@@ -559,7 +566,7 @@ For {{SVGElement('feTile')}}, `height` defines the vertical length for the rende
   </tbody>
 </table>
 
-## feTurbulence
+### `<feTurbulence>`
 
 For {{SVGElement('feTurbulence')}}, `height` defines the vertical length for the rendering area of the primitive.
 
@@ -590,7 +597,7 @@ For {{SVGElement('feTurbulence')}}, `height` defines the vertical length for the
   </tbody>
 </table>
 
-## filter
+### `<filter>`
 
 For {{SVGElement('filter')}}, `height` defines the vertical length for the rendering area of the filter.
 
@@ -621,7 +628,7 @@ For {{SVGElement('filter')}}, `height` defines the vertical length for the rende
   </tbody>
 </table>
 
-## foreignObject
+### `<foreignObject>`
 
 For {{SVGElement('foreignObject')}}, `height` defines the vertical length for the rendering area for the referenced document.
 
@@ -656,7 +663,7 @@ For {{SVGElement('foreignObject')}}, `height` defines the vertical length for th
 > [!NOTE]
 > Starting with SVG2, `height` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for `<foreignObject>`.
 
-## image
+### `<image>`
 
 For {{SVGElement('image')}}, `height` defines the vertical length for the image.
 
@@ -691,7 +698,7 @@ For {{SVGElement('image')}}, `height` defines the vertical length for the image.
 > [!NOTE]
 > Starting with SVG2, `height` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for images.
 
-## mask
+### `<mask>`
 
 For {{SVGElement('mask')}}, `height` defines the vertical length of its area of effect. The exact effect of this attribute is influenced by the {{SVGAttr('maskUnits')}} attribute.
 
@@ -722,7 +729,7 @@ For {{SVGElement('mask')}}, `height` defines the vertical length of its area of 
   </tbody>
 </table>
 
-## pattern
+### `<pattern>`
 
 For {{SVGElement('pattern')}}, `height` defines the vertical length of the tile pattern. The exact effect of this attribute is influenced by the {{SVGAttr('patternUnits')}} and {{SVGAttr('patternTransform')}} attributes.
 
@@ -747,7 +754,7 @@ For {{SVGElement('pattern')}}, `height` defines the vertical length of the tile 
   </tbody>
 </table>
 
-## rect
+### `<rect>`
 
 For {{SVGElement('rect')}}, `height` defines the vertical length for the rectangle.
 
@@ -782,7 +789,7 @@ For {{SVGElement('rect')}}, `height` defines the vertical length for the rectang
 > [!NOTE]
 > Starting with SVG2, `height` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for rectangles.
 
-## svg
+### `<svg>`
 
 For {{SVGElement('svg')}}, `height` defines the vertical length for the rendering area of the SVG viewport.
 
@@ -820,7 +827,7 @@ For {{SVGElement('svg')}}, `height` defines the vertical length for the renderin
 > [!NOTE]
 > Starting with SVG2, `height` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for `<svg>`.
 
-## use
+### `<use>`
 
 For {{SVGElement('use')}}, `height` defines the vertical length for the referenced element.
 
@@ -860,3 +867,7 @@ For {{SVGElement('use')}}, `height` defines the vertical length for the referenc
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

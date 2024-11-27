@@ -4,7 +4,22 @@ slug: Web/SVG/Attribute/xlink:href
 page-type: svg-attribute
 status:
   - deprecated
-browser-compat: svg.elements.a.xlink_href
+browser-compat:
+  - svg.elements.a.xlink_href
+  - svg.elements.cursor.xlink_href
+  - svg.elements.feImage.xlink_href
+  - svg.elements.filter.xlink_href
+  - svg.elements.font-face-uri.xlink_href
+  - svg.elements.glyphRef.xlink_href
+  - svg.elements.image.xlink_href
+  - svg.elements.linearGradient.xlink_href
+  - svg.elements.mpath.xlink_href
+  - svg.elements.pattern.xlink_href
+  - svg.elements.radialGradient.xlink_href
+  - svg.elements.script.xlink_href
+  - svg.elements.textPath.xlink_href
+  - svg.elements.tref.xlink_href
+  - svg.elements.use.xlink_href
 ---
 
 {{SVGRef}}{{Deprecated_Header}}
@@ -36,7 +51,7 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("tref")}}
 - {{SVGElement("use")}}
 
-## Example
+## Examples
 
 ```css hidden
 html,
@@ -54,9 +69,13 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample("Example", "320", "100")}}
+{{EmbedLiveSample("Examples", "320", "100")}}
 
-## a
+## Elements
+
+You can use this attribute with the SVG elements described in the sections below.
+
+## `<a>`
 
 For {{SVGElement("a")}}, `xlink:href` defines the location of the referenced object.
 
@@ -81,7 +100,7 @@ For {{SVGElement("a")}}, `xlink:href` defines the location of the referenced obj
   </tbody>
 </table>
 
-## animate, animateMotion, animateTransform, set
+### `<animate>`, `<animateMotion>`, `<animateTransform>`, `<set>`
 
 For {{SVGElement("animate")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, and {{SVGElement("set")}}, `xlink:href` defines the reference to the element which is the target of this animation and which therefore will be modified over time.
 
@@ -114,7 +133,7 @@ Refer to the descriptions of the individual animation elements for any restricti
   </tbody>
 </table>
 
-## cursor
+### `<cursor>`
 
 For {{SVGElement("cursor")}}, `xlink:href` defines the reference to the file or element which provides the image of the cursor.
 
@@ -141,7 +160,7 @@ For {{SVGElement("cursor")}}, `xlink:href` defines the reference to the file or 
   </tbody>
 </table>
 
-## feImage
+### `<feImage>`
 
 For {{SVGElement("feImage")}}, `xlink:href` defines the reference to the image source.
 
@@ -166,7 +185,7 @@ For {{SVGElement("feImage")}}, `xlink:href` defines the reference to the image s
   </tbody>
 </table>
 
-## filter
+### `<filter>`
 
 For {{SVGElement("filter")}}, `xlink:href` defines the reference to another `<filter>` element within the current SVG document fragment. Any attributes which are defined on the referenced `<filter>` element which are not defined on this element are inherited by this element. If this element has no defined filter nodes, and the referenced element has defined filter nodes (possibly due to its own `xlink:href` attribute), then this element inherits the filter nodes defined from the referenced `<filter>` element. Inheritance can be indirect to an arbitrary level; thus, if the referenced `<filter>` element inherits attributes or its filter node specification due to its own `xlink:href` attribute, then the current element can inherit those attributes or filter node specifications.
 
@@ -191,7 +210,7 @@ For {{SVGElement("filter")}}, `xlink:href` defines the reference to another `<fi
   </tbody>
 </table>
 
-## font-face-uri
+### `<font-face-uri>`
 
 For {{SVGElement("font-face-uri")}}, `xlink:href` defines the location of the referenced font.
 
@@ -216,7 +235,7 @@ For {{SVGElement("font-face-uri")}}, `xlink:href` defines the location of the re
   </tbody>
 </table>
 
-## glyphRef
+### `<glyphRef>`
 
 For {{SVGElement("glyphRef")}}, `xlink:href` defines to a {{SVGElement("glyph")}} element in an SVG document fragment. The referenced `<glyph>` is rendered as an alternate glyph.
 
@@ -241,7 +260,7 @@ For {{SVGElement("glyphRef")}}, `xlink:href` defines to a {{SVGElement("glyph")}
   </tbody>
 </table>
 
-## image
+### `<image>`
 
 For {{SVGElement("image")}}, `xlink:href` defines the location of the referenced image.
 
@@ -266,7 +285,7 @@ For {{SVGElement("image")}}, `xlink:href` defines the location of the referenced
   </tbody>
 </table>
 
-## linearGradient
+### `<linearGradient>`
 
 For {{SVGElement("linearGradient")}}, `xlink:href` defines the reference to a different `<linearGradient>` or {{SVGElement("radialGradient")}} element within the current SVG document fragment. Any `<linearGradient>` attributes which are defined on the referenced element which are not defined on this element are inherited by this element. If this element has no defined gradient stops, and the referenced element does (possibly due to its own `xlink:href` attribute), then this element inherits the gradient stop from the referenced element. Inheritance can be indirect to an arbitrary level; thus, if the referenced element inherits attribute or gradient stops due to its own `xlink:href` attribute, then the current element can inherit those attributes or gradient stops.
 
@@ -291,7 +310,7 @@ For {{SVGElement("linearGradient")}}, `xlink:href` defines the reference to a di
   </tbody>
 </table>
 
-## mpath
+### `<mpath>`
 
 For {{SVGElement("mpath")}}, `xlink:href` defines the reference to the {{SVGElement("path")}} element which defines the motion path.
 
@@ -316,7 +335,7 @@ For {{SVGElement("mpath")}}, `xlink:href` defines the reference to the {{SVGElem
   </tbody>
 </table>
 
-## pattern
+### `<pattern>`
 
 For {{SVGElement("pattern")}}, `xlink:href` defines the reference to a different `<pattern>` element within the current SVG document fragment. Any attributes which are defined on the referenced element which are not defined on this element are inherited by this element. If this element has no children, and the referenced element does (possibly due to its own `xlink:href` attribute), then this element inherits the children from the referenced element. Inheritance can be indirect to an arbitrary level; thus, if the referenced element inherits attributes or children due to its own `xlink:href` attribute, then the current element can inherit those attributes or children.
 
@@ -341,7 +360,7 @@ For {{SVGElement("pattern")}}, `xlink:href` defines the reference to a different
   </tbody>
 </table>
 
-## radialGradient
+### `<radialGradient>`
 
 For {{SVGElement("radialGradient")}}, `xlink:href` defines the to a different {{SVGElement("linearGradient")}} or `<radialGradient>` element within the current SVG document fragment. Any `<radialGradient>` attributes which are defined on the referenced element which are not defined on this element are inherited by this element. If this element has no defined gradient stops, and the referenced element does (possibly due to its own `xlink:href` attribute), then this element inherits the gradient stop from the referenced element. Inheritance can be indirect to an arbitrary level; thus, if the referenced element inherits attribute or gradient stops due to its own `xlink:href` attribute, then the current element can inherit those attributes or gradient stops.
 
@@ -366,7 +385,7 @@ For {{SVGElement("radialGradient")}}, `xlink:href` defines the to a different {{
   </tbody>
 </table>
 
-## script
+### `<script>`
 
 For {{SVGElement("script")}}, `xlink:href` defines a reference to an external resource containing the script code.
 
@@ -391,7 +410,7 @@ For {{SVGElement("script")}}, `xlink:href` defines a reference to an external re
   </tbody>
 </table>
 
-## textPath
+### `<textPath>`
 
 For {{SVGElement("textPath")}}, `xlink:href` defines a reference to the {{SVGElement("path")}} element onto which the glyphs will be rendered.
 
@@ -416,7 +435,7 @@ For {{SVGElement("textPath")}}, `xlink:href` defines a reference to the {{SVGEle
   </tbody>
 </table>
 
-## use
+### `<use>`
 
 For {{SVGElement("use")}}, `xlink:href` defines the location of the referenced object.
 
@@ -441,7 +460,7 @@ For {{SVGElement("use")}}, `xlink:href` defines the location of the referenced o
   </tbody>
 </table>
 
-## tref
+### `<tref>`
 
 For {{SVGElement("tref")}}, `xlink:href` defines a reference to an element whose character data content shall be used as character data for this `<tref>` element.
 

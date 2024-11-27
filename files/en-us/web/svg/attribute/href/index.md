@@ -7,6 +7,7 @@ browser-compat:
   - svg.elements.animate.href
   - svg.elements.animateMotion.href
   - svg.elements.animateTransform.href
+  - svg.elements.cursor.href
   - svg.elements.feImage.href
   - svg.elements.image.href
   - svg.elements.linearGradient.href
@@ -32,6 +33,7 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("animate")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
+- {{SVGElement("cursor")}}
 - {{SVGElement("feImage")}}
 - {{SVGElement("image")}}
 - {{SVGElement("linearGradient")}}
@@ -63,7 +65,9 @@ svg {
 
 {{EmbedLiveSample("Example", "320", "100")}}
 
-## In SVG
+## Elements
+
+You can use this attribute with the SVG elements described in the sections below.
 
 ### a
 

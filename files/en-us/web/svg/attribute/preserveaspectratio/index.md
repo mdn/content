@@ -2,9 +2,12 @@
 title: preserveAspectRatio
 slug: Web/SVG/Attribute/preserveAspectRatio
 page-type: svg-attribute
-spec-urls:
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-feimage-preserveaspectratio
-  - https://svgwg.org/svg2-draft/coords.html#PreserveAspectRatioAttribute
+browser-compat:
+  - svg.elements.svg.preserveAspectRatio
+  - svg.elements.symbol.preserveAspectRatio
+  - svg.elements.image.preserveAspectRatio
+  - svg.elements.feImage.preserveAspectRatio
+  - svg.elements.view.preserveAspectRatio
 ---
 
 {{SVGRef}}
@@ -12,6 +15,16 @@ spec-urls:
 The **`preserveAspectRatio`** attribute indicates how an element with a viewBox providing a given {{glossary("aspect ratio")}} must fit into a viewport with a different aspect ratio.
 
 The aspect ratio of an SVG image is defined by the {{SVGAttr('viewBox')}} attribute. Therefore, if `viewBox` isn't set, the `preserveAspectRatio` attribute has no effect on SVG's scaling (except in the case of the {{SVGElement('image')}} element, where `preserveAspectRatio` behaves differently as described below).
+
+You can use this attribute with the following SVG elements:
+
+- {{SVGElement("svg")}}
+- {{SVGElement("symbol")}}
+- {{SVGElement("image")}}
+- {{SVGElement("feImage")}}
+- {{SVGElement("marker")}}
+- {{SVGElement("pattern")}}
+- {{SVGElement("view")}}
 
 ## Syntax
 
@@ -533,17 +546,9 @@ rect:active {
 
 ## Elements
 
-You can use this attribute with the following SVG elements:
+You can use this attribute with the SVG elements described in the sections below.
 
-- {{SVGElement("svg")}}
-- {{SVGElement("symbol")}}
-- {{SVGElement("image")}}
-- {{SVGElement("feImage")}}
-- {{SVGElement("marker")}}
-- {{SVGElement("pattern")}}
-- {{SVGElement("view")}}
-
-### feImage
+### `<feImage>`
 
 For {{SVGElement('feImage')}}, `preserveAspectRatio` defines how the referenced image should fit in the rectangle define by the `<feImage>` element.
 
@@ -564,7 +569,7 @@ For {{SVGElement('feImage')}}, `preserveAspectRatio` defines how the referenced 
   </tbody>
 </table>
 
-### image
+### `<image>`
 
 For {{SVGElement('image')}}, `preserveAspectRatio` defines how the referenced image should fit in the rectangle define by the `<image>` element.
 
@@ -585,7 +590,7 @@ For {{SVGElement('image')}}, `preserveAspectRatio` defines how the referenced im
   </tbody>
 </table>
 
-### marker
+### `<marker>`
 
 For {{SVGElement('marker')}}, `preserveAspectRatio` indicates if a uniform scaling must be performed to fit the element viewport.
 
@@ -606,7 +611,7 @@ For {{SVGElement('marker')}}, `preserveAspectRatio` indicates if a uniform scali
   </tbody>
 </table>
 
-### pattern
+### `<pattern>`
 
 For {{SVGElement('pattern')}}, `preserveAspectRatio` indicates if a uniform scaling must be performed to fit the element viewport.
 
@@ -627,7 +632,7 @@ For {{SVGElement('pattern')}}, `preserveAspectRatio` indicates if a uniform scal
   </tbody>
 </table>
 
-### svg
+### `<svg>`
 
 For {{SVGElement('svg')}}, `preserveAspectRatio` indicates if a uniform scaling must be performed to fit the element viewport.
 
@@ -648,7 +653,7 @@ For {{SVGElement('svg')}}, `preserveAspectRatio` indicates if a uniform scaling 
   </tbody>
 </table>
 
-### symbol
+### `<symbol>`
 
 For {{SVGElement('symbol')}}, `preserveAspectRatio` indicates if a uniform scaling must be performed to fit the element viewport.
 
@@ -669,7 +674,7 @@ For {{SVGElement('symbol')}}, `preserveAspectRatio` indicates if a uniform scali
   </tbody>
 </table>
 
-### view
+### `<view>`
 
 For {{SVGElement('view')}}, `preserveAspectRatio` indicates if a uniform scaling must be performed to fit the element viewport.
 
@@ -693,3 +698,7 @@ For {{SVGElement('view')}}, `preserveAspectRatio` indicates if a uniform scaling
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

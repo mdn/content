@@ -2,20 +2,67 @@
 title: "y"
 slug: Web/SVG/Attribute/y
 page-type: svg-attribute
-spec-urls:
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-y
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fespotlight-y
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fepointlight-y
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-y
-  - https://drafts.fxtf.org/css-masking-1/#element-attrdef-mask-y
-  - https://svgwg.org/svg2-draft/geometry.html#Y
-  - https://svgwg.org/svg2-draft/pservers.html#PatternElementYAttribute
-  - https://svgwg.org/svg2-draft/text.html#TextElementYAttribute
+browser-compat:
+  - svg.elements.cursor.y
+  - svg.elements.fePointLight.y
+  - svg.elements.feSpotLight.y
+  - svg.elements.filter.y
+  - svg.elements.foreignObject.y
+  - svg.elements.glyphRef.y
+  - svg.elements.image.y
+  - svg.elements.mask.y
+  - svg.elements.pattern.y
+  - svg.elements.rect.y
+  - svg.elements.svg.y
+  - svg.elements.text.y
+  - svg.elements.tspan.y
+  - svg.elements.use.y
 ---
 
 {{SVGRef}}
 
 The **`y`** attribute defines a y-axis coordinate in the user coordinate system.
+
+You can use this attribute with the following SVG elements:
+
+- {{SVGElement("cursor")}}
+- {{SVGElement("feBlend")}}
+- {{SVGElement("feColorMatrix")}}
+- {{SVGElement("feComponentTransfer")}}
+- {{SVGElement("feComposite")}}
+- {{SVGElement("feConvolveMatrix")}}
+- {{SVGElement("feDiffuseLighting")}}
+- {{SVGElement("feDisplacementMap")}}
+- {{SVGElement("feDropShadow")}}
+- {{SVGElement("feFlood")}}
+- {{SVGElement("feFuncA")}}
+- {{SVGElement("feFuncB")}}
+- {{SVGElement("feFuncG")}}
+- {{SVGElement("feFuncR")}}
+- {{SVGElement("feGaussianBlur")}}
+- {{SVGElement("feImage")}}
+- {{SVGElement("feMerge")}}
+- {{SVGElement("feMergeNode")}}
+- {{SVGElement("feMorphology")}}
+- {{SVGElement("feOffset")}}
+- {{SVGElement("fePointLight")}}
+- {{SVGElement("feSpecularLighting")}}
+- {{SVGElement("feSpotLight")}}
+- {{SVGElement("feTile")}}
+- {{SVGElement("feTurbulence")}}
+- {{SVGElement("filter")}}
+- {{SVGElement("foreignObject")}}
+- {{SVGElement("glyphRef")}}
+- {{SVGElement("image")}}
+- {{SVGElement("mask")}}
+- {{SVGElement("pattern")}}
+- {{SVGElement("pattern")}}
+- {{SVGElement("rect")}}
+- {{SVGElement("svg")}}
+- {{SVGElement("text")}}
+- {{SVGElement("tref")}}
+- {{SVGElement("tspan")}}
+- {{SVGElement("use")}}
 
 ## Elements
 
@@ -1323,3 +1370,7 @@ svg {
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
