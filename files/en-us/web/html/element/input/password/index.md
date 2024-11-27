@@ -33,7 +33,10 @@ If the [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) attribute is spec
 
 ## Additional attributes
 
-In addition to the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, password field inputs support the following attributes.
+In addition to the [global attributes](/en-US/docs/Web/HTML/Global_attributes), and the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, password field inputs support the following attributes.
+
+> [!NOTE]
+> The [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) global attribute can be added to password inputs, but the stored state is always `off`.
 
 ### maxlength
 
@@ -84,7 +87,7 @@ This does _not_ set a limit on how many characters the user can enter into the f
 
 Password input boxes generally work just like other textual input boxes; the main difference is the obscuring of the content to prevent people near the user from reading the password.
 
-### A simple password input
+### A basic password input
 
 Here we see the most basic password input, with a label established using the {{HTMLElement("label")}} element.
 
@@ -93,7 +96,7 @@ Here we see the most basic password input, with a label established using the {{
 <input id="userPassword" type="password" />
 ```
 
-{{EmbedLiveSample("A_simple_password_input", 600, 40)}}
+{{EmbedLiveSample("A_basic_password_input", 600, 40)}}
 
 ### Allowing autocomplete
 
@@ -229,7 +232,7 @@ The [`inputmode`](/en-US/docs/Web/HTML/Element/input#inputmode) is set to `numer
 
 #### JavaScript
 
-This is just some simple code to display the entered SSN onscreen so you can see it. Obviously this defeats the purpose of a password field, but it's helpful for experimenting with the `pattern`.
+The JavaScript displays the entered SSN onscreen so you can see it. This defeats the purpose of a password field, but it helps experiment with the `pattern`.
 
 ```js
 const ssn = document.getElementById("ssn");

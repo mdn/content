@@ -52,21 +52,21 @@ The following HTTP response instructs the receiving browser to store a pair of c
 ```http
 HTTP/2.0 200 OK
 Content-Type: text/html
-Set-Cookie: yummy_cookie=choco
+Set-Cookie: yummy_cookie=chocolate
 Set-Cookie: tasty_cookie=strawberry
 
 [page content]
 ```
 
 > [!NOTE]
-> Find out how to use the `Set-Cookie` header in various server-side languages/frameworks: [PHP](https://www.php.net/manual/en/function.setcookie.php), [Node.JS](https://nodejs.org/dist/latest-v14.x/docs/api/http.html#http_response_setheader_name_value), [Python](https://docs.python.org/3/library/http.cookies.html), [Ruby on Rails](https://api.rubyonrails.org/classes/ActionDispatch/Cookies.html).
+> Find out how to use the `Set-Cookie` header in various server-side languages/frameworks: [PHP](https://www.php.net/manual/en/function.setcookie.php), [Node.js](https://nodejs.org/dist/latest-v14.x/docs/api/http.html#http_response_setheader_name_value), [Python](https://docs.python.org/3/library/http.cookies.html), [Ruby on Rails](https://api.rubyonrails.org/classes/ActionDispatch/Cookies.html).
 
 When a new request is made, the browser usually sends previously stored cookies for the current domain back to the server within a {{HTTPHeader("Cookie")}} HTTP header:
 
 ```http
 GET /sample_page.html HTTP/2.0
 Host: www.example.org
-Cookie: yummy_cookie=choco; tasty_cookie=strawberry
+Cookie: yummy_cookie=chocolate; tasty_cookie=strawberry
 ```
 
 ### Removal: defining the lifetime of a cookie
@@ -109,7 +109,7 @@ There are several reasons why you might want to do this, for example if a user h
 In the browser, you can create new cookies via JavaScript using the {{domxref("Document.cookie")}} property, or the asynchronous {{domxref("Cookie_Store_API", "Cookie Store API", "", "nocode")}}. Note that all examples below use `Document.cookie`, as it is the most widely supported/established option.
 
 ```js
-document.cookie = "yummy_cookie=choco";
+document.cookie = "yummy_cookie=chocolate";
 document.cookie = "tasty_cookie=strawberry";
 ```
 
@@ -117,7 +117,7 @@ You can also access existing cookies and set new values for them, provided the [
 
 ```js
 console.log(document.cookie);
-// logs "yummy_cookie=choco; tasty_cookie=strawberry"
+// logs "yummy_cookie=chocolate; tasty_cookie=strawberry"
 
 document.cookie = "yummy_cookie=blueberry";
 
@@ -143,7 +143,7 @@ Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly
 
 - A cookie with the `Secure` attribute is only sent to the server with an encrypted request over the HTTPS protocol. It's never sent with unsecured HTTP (except on localhost), which means {{Glossary("MitM", "man-in-the-middle")}} attackers can't access it easily. Insecure sites (with `http:` in the URL) can't set cookies with the `Secure` attribute. However, don't assume that `Secure` prevents all access to sensitive information in cookies. For example, someone with access to the client's hard disk (or JavaScript if the `HttpOnly` attribute isn't set) can read and modify the information.
 
-- A cookie with the `HttpOnly` attribute can't be modified by JavaScript, for example using {{domxref("Document.cookie")}}; it can only be modified when it reaches the server. Cookies that persist user sessions for example should have the `HttpOnly` attribute set — it would be really insecure to make them available to JavaScript. This precaution helps mitigate cross-site scripting ([XSS](/en-US/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss)) attacks.
+- A cookie with the `HttpOnly` attribute can't be accessed by JavaScript, for example using {{domxref("Document.cookie")}}; it can only be accessed when it reaches the server. Cookies that persist user sessions for example should have the `HttpOnly` attribute set — it would be really insecure to make them available to JavaScript. This precaution helps mitigate cross-site scripting ([XSS](/en-US/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss)) attacks.
 
 > [!NOTE]
 > Depending on the application, you may want to use an opaque identifier that the server looks up rather than storing sensitive information directly in cookies, or investigate alternative authentication/confidentiality mechanisms such as [JSON Web Tokens](https://jwt.io/).

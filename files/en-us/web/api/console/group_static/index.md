@@ -13,8 +13,8 @@ The **`console.group()`** static method creates a new inline group in the [Web c
 ## Syntax
 
 ```js-nolint
-group()
-group(label)
+console.group()
+console.group(label)
 ```
 
 ### Parameters
@@ -64,5 +64,5 @@ See [Using groups in the console](/en-US/docs/Web/API/console#using_groups_in_th
 - {{domxref("console/groupEnd_static", "console.groupEnd()")}}
 - {{domxref("console/groupCollapsed_static", "console.groupCollapsed()")}}
 - [Microsoft Edge's documentation for `console.group()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#group)
-- [Node.JS documentation for `console.group()`](https://nodejs.org/docs/latest/api/console.html#consolegrouplabel)
+- [Node.js documentation for `console.group()`](https://nodejs.org/docs/latest/api/console.html#consolegrouplabel)
 - [Google Chrome's documentation for `console.group()`](https://developer.chrome.com/docs/devtools/console/api/#group)

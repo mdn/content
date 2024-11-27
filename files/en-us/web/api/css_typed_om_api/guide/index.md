@@ -138,7 +138,7 @@ Let's write a plain paragraph, apply no styles, and inspect a few of its CSS pro
 
 ```html
 <p>
-   This is a paragraph with some content. Open up this example in Codepen or
+   This is a paragraph with some content. Open up this example in CodePen or
    JSFiddle, and change some features. Try adding some CSS, such as a width
    for this paragraph, or adding a CSS property to the ofInterest array.
 </p>
@@ -263,7 +263,7 @@ button {
   display: inline-block;
   padding: var(--unit) calc(var(--unit) * 2);
   width: calc(30% + 20px);
-  background: no-repeat 5% center url(magicwand.png) var(--mainColor);
+  background: no-repeat 5% center url(magic-wand.png) var(--mainColor);
   border: 4px solid var(--mainColor);
   border-radius: 2px;
   font-size: calc(var(--unit) * 2);
@@ -308,7 +308,7 @@ console.log(transform.is2D); // true
 let bgImage = allComputedStyles.get("background-image");
 
 console.log(bgImage); // CSSImageValue
-console.log(bgImage.toString()); // url("magicwand.png")
+console.log(bgImage.toString()); // url("magic-wand.png")
 
 // CSSUnparsedValue
 let unit = allComputedStyles.get("--unit");
@@ -396,10 +396,10 @@ Our button has one background image: a magic wand.
 const bgImage = allComputedStyles.get("background-image");
 
 console.log(bgImage); // CSSImageValue
-console.log(bgImage.toString()); // url("magicwand.png")
+console.log(bgImage.toString()); // url("magic-wand.png")
 ```
 
-When we `get()` the `'background-image'`, a {{domxref('CSSImageValue')}} is returned. While we used the CSS {{cssxref('background')}} shorthand property, the inherited {{jsxref("Object/toString", "Object.prototype.toString()")}} method, shows we returned only the image, `'url("magicwand.png")'`.
+When we `get()` the `'background-image'`, a {{domxref('CSSImageValue')}} is returned. While we used the CSS {{cssxref('background')}} shorthand property, the inherited {{jsxref("Object/toString", "Object.prototype.toString()")}} method, shows we returned only the image, `'url("magic-wand.png")'`.
 
 Notice that the value returned is the absolute path to the image — this is returned even if the original `url()` value was relative. Had the background image been a gradient or multiple background images, `.get('background-image')` would have returned a `CSSStyleValue`. The `CSSImageValue` is returned only if there is a single image, and only if that single image declaration is a URL.
 

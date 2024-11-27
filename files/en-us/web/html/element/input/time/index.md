@@ -18,8 +18,12 @@ While the control's user interface appearance is based on the browser and operat
 You can set a default value for the input by including a valid time in the [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute when creating the `<input>` element, like so:
 
 ```html
-<label for="appt-time">Choose an appointment time: </label>
-<input id="appt-time" type="time" name="appt-time" value="13:30" />
+<label for="appointment-time">Choose an appointment time: </label>
+<input
+  id="appointment-time"
+  type="time"
+  name="appointment-time"
+  value="13:30" />
 ```
 
 {{ EmbedLiveSample('Setting_the_value_attribute', 600, 60) }}
@@ -39,7 +43,7 @@ The `value` of the `time` input is always in 24-hour format that includes leadin
 
 In this example, you can see the time input's value by entering a time and seeing how it changes afterward.
 
-First, a look at the HTML. This is simple enough, with the label and input as we've seen before, but with the addition of a {{HTMLElement("p")}} element with a {{HTMLElement("span")}} to display the value of the `time` input:
+First, a look at the HTML. We include a label and input, and add a {{HTMLElement("p")}} element with a {{HTMLElement("span")}} to display the value of the `time` input:
 
 ```html
 <form>
@@ -114,12 +118,12 @@ When `any` is set as the value for `step`, the default 60 seconds is used, and t
 
 ### Basic uses of time
 
-The simplest use of `<input type="time">` involves a basic `<input>` and {{htmlelement("label")}} element combination, as seen below:
+The most basic use of `<input type="time">` involves a basic `<input>` and {{htmlelement("label")}} element combination, as seen below:
 
 ```html
 <form>
-  <label for="appt-time">Choose an appointment time: </label>
-  <input id="appt-time" type="time" name="appt-time" />
+  <label for="appointment-time">Choose an appointment time: </label>
+  <input id="appointment-time" type="time" name="appointment-time" />
 </form>
 ```
 
@@ -137,8 +141,8 @@ It takes an integer value defining the number of seconds you want to increment b
 
 ```html
 <form>
-  <label for="appt-time">Choose an appointment time: </label>
-  <input id="appt-time" type="time" name="appt-time" step="2" />
+  <label for="appointment-time">Choose an appointment time: </label>
+  <input id="appointment-time" type="time" name="appointment-time" step="2" />
 </form>
 ```
 
@@ -156,10 +160,15 @@ You can use the [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-
 
 ```html
 <form>
-  <label for="appt-time">
+  <label for="appointment-time">
     Choose an appointment time (opening hours 12:00 to 18:00):
   </label>
-  <input id="appt-time" type="time" name="appt-time" min="12:00" max="18:00" />
+  <input
+    id="appointment-time"
+    type="time"
+    name="appointment-time"
+    min="12:00"
+    max="18:00" />
   <span class="validity"></span>
 </form>
 ```
@@ -226,13 +235,13 @@ Let's look at an example; here we've set minimum and maximum times, and also mad
 ```html
 <form>
   <div>
-    <label for="appt-time">
+    <label for="appointment-time">
       Choose an appointment time (opening hours 12:00 to 18:00):
     </label>
     <input
-      id="appt-time"
+      id="appointment-time"
       type="time"
-      name="appt-time"
+      name="appointment-time"
       min="12:00"
       max="18:00"
       required />
@@ -259,13 +268,13 @@ In this example, we create an interface element for choosing time using the nati
 
 ```html
 <form>
-  <label for="appt-time">
+  <label for="appointment-time">
     Choose an appointment time (opening hours 12:00 to 18:00):
   </label>
   <input
-    id="appt-time"
+    id="appointment-time"
     type="time"
-    name="appt-time"
+    name="appointment-time"
     min="12:00"
     max="18:00"
     required />

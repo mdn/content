@@ -215,10 +215,10 @@ In this example, the {{svgelement("svg")}} element creates a house with a chimne
   offset-path: path(
     "M900,190  L993,245 V201  A11,11 0 0,1 1004,190  H1075  A11,11 0 0,1 1086,201  V300  L1294,423 H1216  A11,11 0 0,0 1205,434  V789  A11,11 0 0,1 1194,800  H606  A11,11 0 0,1 595,789  V434  A11,11 0 0,0 584,423  H506 L900,190"
   );
-  animation: followpath 4s linear infinite;
+  animation: follow-path 4s linear infinite;
 }
 
-@keyframes followpath {
+@keyframes follow-path {
   to {
     offset-distance: 100%;
   }
@@ -298,7 +298,7 @@ The SVG rectangle that defines the path shape is shown here only to visually dem
 - [SVG \<path>](/en-US/docs/Web/SVG/Tutorial/Paths)
 - {{cssxref("basic-shape/path","path()")}}
 - Other demos:
-  - [Examples using various shapes values](https://codepen.io/team/css-tricks/pen/WZdKMq) on Codepen by CSS-Tricks
-  - [Moving a triangle along a curved path](https://codepen.io/ericwilligers/pen/jMbJPp) on Codepen by Eric Willigers
-  - [Moving a pair of scissors along the shape of a house](https://codepen.io/ericwilligers/pen/bwVZNa) on Codepen by Eric Willigers
+  - [Examples using various shapes values](https://codepen.io/team/css-tricks/pen/WZdKMq) on CodePen by CSS-Tricks
+  - [Moving a triangle along a curved path](https://codepen.io/ericwilligers/pen/jMbJPp) on CodePen by Eric Willigers
+  - [Moving a pair of scissors along the shape of a house](https://codepen.io/ericwilligers/pen/bwVZNa) on CodePen by Eric Willigers
   - [Moving multiple pairs of eyes](https://jsfiddle.net/ericwilligers/r1snqdan/) on JSFiddle by Eric Willigers

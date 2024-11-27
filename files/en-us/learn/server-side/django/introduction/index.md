@@ -69,7 +69,7 @@ Django is now a thriving, collaborative open source project, with many thousands
 
 ## How popular is Django?
 
-There isn't any readily-available and definitive measurement of popularity of server-side frameworks (although you can estimate popularity using mechanisms like counting the number of GitHub projects and StackOverflow questions for each platform). A better question is whether Django is "popular enough" to avoid the problems of unpopular platforms. Is it continuing to evolve? Can you get help if you need it? Is there an opportunity for you to get paid work if you learn Django?
+There isn't any readily-available and definitive measurement of popularity of server-side frameworks (although you can estimate popularity using mechanisms like counting the number of GitHub projects and Stack Overflow questions for each platform). A better question is whether Django is "popular enough" to avoid the problems of unpopular platforms. Is it continuing to evolve? Can you get help if you need it? Is there an opportunity for you to get paid work if you learn Django?
 
 Based on the number of high profile sites that use Django, the number of people contributing to the codebase, and the number of people providing both free and paid for support, then yes, Django is a popular framework!
 
@@ -220,7 +220,7 @@ The code snippet shows what the HTML template called by the `render()` function 
   {% if youngest_teams %}
     <ul>
       {% for team in youngest_teams %}
-        <li>\{\{ team.team_name \}\}</li>
+        <li>\{{ team.team_name }}</li>
       {% endfor %}
     </ul>
   {% else %}

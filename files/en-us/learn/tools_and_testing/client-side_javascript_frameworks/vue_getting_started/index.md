@@ -71,7 +71,7 @@ To use Vue in an existing site, you can drop one of the following [`<script>`](/
   <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
   ```
 
-However, this approach has some limitations. To build more complex apps, you'll want to use the [Vue npm package](https://www.npmjs.com/package/vue). This will let you use advanced features of Vue and use tools like Vite or WebPack. To make building apps with Vue easier, there is a CLI scaffolding tool [create-vue](https://github.com/vuejs/create-vue) to streamline the development process. To use `create-vue` you will need:
+However, this approach has some limitations. To build more complex apps, you'll want to use the [Vue npm package](https://www.npmjs.com/package/vue). This will let you use advanced features of Vue and use tools like Vite or webpack. To make building apps with Vue easier, there is a CLI scaffolding tool [create-vue](https://github.com/vuejs/create-vue) to streamline the development process. To use `create-vue` you will need:
 
 1. Node.js 20 installed.
 2. [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/) or [yarn](https://yarnpkg.com/).
@@ -135,7 +135,7 @@ If everything went successfully, the CLI should have created a series of files a
 - `package.json`: This file contains the list of dependencies for your project, as well as some metadata and `eslint` configuration.
 - `yarn.lock`: If you chose `yarn` as your package manager, this file will be generated with a list of all the dependencies and sub-dependencies that your project needs.
 - `jsconfig.json`: This is a config file for [Visual Studio Code](https://code.visualstudio.com/docs/languages/jsconfig) and gives context for VS Code on your project structure and assists auto-completion.
-- `vite.config.js`: This is the configuration file for the [Vite](https://vitejs.dev/) development server that builds and serves your project on your local machine.
+- `vite.config.js`: This is the configuration file for the [Vite](https://vite.dev/) development server that builds and serves your project on your local machine.
   The Vite server watches source files for changes and can hot-reload the project while you make changes.
 - `public`: This directory contains static assets that are published during build.
   - `favicon.ico`: This is the favicon for your app. Currently, it's the Vue logo.
@@ -145,7 +145,7 @@ If everything went successfully, the CLI should have created a series of files a
   - `main.js`: this is the entry point to your application. Currently, this file initializes your Vue application and signifies which HTML element in the `index.html` file your app should be attached to. This file is often where you register global components or additional Vue libraries.
   - `App.vue`: this is the top-level component in your Vue app. See below for more explanation of Vue components.
   - `components`: this directory is where you keep your components. Currently, it just has one example component.
-  - `assets`: this directory is for storing static assets like CSS and images. Because these files are in the source directory, they can be processed by Webpack. This means you can use pre-processors like [Sass/SCSS](https://sass-lang.com/) or [Stylus](https://stylus-lang.com/).
+  - `assets`: this directory is for storing static assets like CSS and images. Because these files are in the source directory, they can be processed by webpack. This means you can use pre-processors like [Sass/SCSS](https://sass-lang.com/) or [Stylus](https://stylus-lang.com/).
 
 > [!NOTE]
 > Depending on the options you select when creating a new project, there might be other directories present (for example, if you choose a router, you will also have a `views` directory).
@@ -154,7 +154,7 @@ If everything went successfully, the CLI should have created a series of files a
 
 Like in many front-end frameworks, components are a central part of building apps in Vue. These components let you break a large application into discrete building blocks that can be created and managed separately, and transfer data between each other as required. These small blocks can help you reason about and test your code.
 
-While some frameworks encourage you to separate your template, logic, and styling code into separate files, Vue takes the opposite approach. Using [Single File Components (SFC)](https://vuejs.org/guide/scaling-up/sfc.html), Vue lets you group your templates, corresponding script, and CSS all together in a single file ending in `.vue`. These files are processed by a JS build tool (such as Vite or Webpack), which means you can take advantage of build-time tooling in your project. This allows you to use tools like Babel, TypeScript, SCSS and more to create more sophisticated components.
+While some frameworks encourage you to separate your template, logic, and styling code into separate files, Vue takes the opposite approach. Using [Single File Components (SFC)](https://vuejs.org/guide/scaling-up/sfc.html), Vue lets you group your templates, corresponding script, and CSS all together in a single file ending in `.vue`. These files are processed by a JS build tool (such as Vite or webpack), which means you can take advantage of build-time tooling in your project. This allows you to use tools like Babel, TypeScript, SCSS and more to create more sophisticated components.
 
 Let's look inside the `src` folder in the project we created with the CLI and inspect your first `.vue` file: `App.vue`.
 

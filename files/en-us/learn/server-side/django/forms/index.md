@@ -181,7 +181,7 @@ The arguments that are common to most fields are listed below (these have sensib
 
 #### Validation
 
-Django provides numerous places where you can validate your data. The easiest way to validate a single field is to override the method `clean_<fieldname>()` for the field you want to check. So for example, we can validate that entered `renewal_date` values are between now and 4 weeks by implementing `clean_renewal_date()` as shown below.
+Django provides numerous places where you can validate your data. The easiest way to validate a single field is to override the method `clean_<field_name>()` for the field you want to check. So for example, we can validate that entered `renewal_date` values are between now and 4 weeks by implementing `clean_renewal_date()` as shown below.
 
 Update your forms.py file so it looks like this:
 

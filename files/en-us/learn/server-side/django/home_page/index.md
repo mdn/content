@@ -419,7 +419,7 @@ In the next article we'll build upon this knowledge to create the remaining four
 
 - [Writing your first Django app, part 3: Views and Templates](https://docs.djangoproject.com/en/5.0/intro/tutorial03/) (Django docs)
 - [URL dispatcher](https://docs.djangoproject.com/en/5.0/topics/http/urls/) (Django docs)
-- [View functions](https://docs.djangoproject.com/en/5.0/topics/http/views/) (DJango docs)
+- [View functions](https://docs.djangoproject.com/en/5.0/topics/http/views/) (Django docs)
 - [Templates](https://docs.djangoproject.com/en/5.0/topics/templates/) (Django docs)
 - [Managing static files](https://docs.djangoproject.com/en/5.0/howto/static-files/) (Django docs)
 - [Django shortcut functions](https://docs.djangoproject.com/en/5.0/topics/http/shortcuts/#django.shortcuts.render) (Django docs)

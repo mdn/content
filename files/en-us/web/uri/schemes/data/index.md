@@ -14,17 +14,17 @@ browser-compat: http.data-url
 
 ## Syntax
 
-Data URLs are composed of four parts: a prefix (`data:`), a [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) indicating the type of data, an optional `base64` token if non-textual, and the data itself:
+Data URLs are composed of four parts: a prefix (`data:`), a [MIME type](/en-US/docs/Web/HTTP/MIME_types) indicating the type of data, an optional `base64` token if non-textual, and the data itself:
 
 ```plain
-data:[<mediatype>][;base64],<data>
+data:[<media-type>][;base64],<data>
 ```
 
-The `mediatype` is a [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) string, such as `'image/jpeg'` for a JPEG image file. If omitted, defaults to `text/plain;charset=US-ASCII`
+The `media-type` is a [MIME type](/en-US/docs/Web/HTTP/MIME_types) string, such as `'image/jpeg'` for a JPEG image file. If omitted, defaults to `text/plain;charset=US-ASCII`
 
 If the data contains [characters defined in RFC 3986 as reserved characters](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2), or contains space characters, newline characters, or other non-printing characters, those characters must be {{Glossary("Percent-encoding", "percent-encoded")}}.
 
-If the data is textual, you can embed the text (using the appropriate entities or escapes based on the enclosing document's type). Otherwise, you can specify `base64` to embed base64-encoded binary data. You can find more info on MIME types [here](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) and [here](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types).
+If the data is textual, you can embed the text (using the appropriate entities or escapes based on the enclosing document's type). Otherwise, you can specify `base64` to embed base64-encoded binary data. You can find more info on MIME types [here](/en-US/docs/Web/HTTP/MIME_types) and [here](/en-US/docs/Web/HTTP/MIME_types/Common_types).
 
 A few examples:
 
@@ -97,7 +97,7 @@ lots of text…
 - Formatting in HTML
   - : A `data` URL provides a file within a file, which can potentially be very wide relative to the width of the enclosing document. As a URL, the `data` should be formattable with whitespace (linefeed, tab, or spaces), but there are practical issues that arise [when using base64 encoding](https://bugzil.la/73026#c12).
 - Length limitations
-  - : Browsers are not required to support any particular maximum length of data. For example, the Opera 11 browser limited URLs to 65535 characters long which limits `data` URLs to 65529 characters (65529 characters being the length of the encoded data, not the source, if you use the plain `data:`, without specifying a MIME type). Firefox version 97 and newer supports `data` URLs of up to 32MB (before 97 the limit was close to 256MB). Chromium objects to URLs over 512MB, and Webkit (Safari) to URLs over 2048MB.
+  - : Browsers are not required to support any particular maximum length of data. For example, the Opera 11 browser limited URLs to 65535 characters long which limits `data` URLs to 65529 characters (65529 characters being the length of the encoded data, not the source, if you use the plain `data:`, without specifying a MIME type). Firefox version 97 and newer supports `data` URLs of up to 32MB (before 97 the limit was close to 256MB). Chromium objects to URLs over 512MB, and WebKit (Safari) to URLs over 2048MB.
 - Lack of error handling
   - : Invalid parameters in media, or typos when specifying `'base64'`, are ignored, but no error is provided.
 - No support for query strings, etc.
@@ -111,7 +111,7 @@ lots of text…
 
 ## Browser compatibility
 
-{{compat}}
+{{Compat}}
 
 ## See also
 
@@ -119,5 +119,5 @@ lots of text…
 - {{Glossary("Percent-encoding")}}
 - {{domxref("WorkerGlobalScope.atob()", "atob()")}}
 - {{domxref("WorkerGlobalScope.btoa()", "btoa()")}}
-- CSS {{CSSXref("url", "url()")}}
+- CSS {{CSSXref("url_value", "&lt;url&gt;")}}
 - {{Glossary("URI")}}

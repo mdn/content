@@ -55,7 +55,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 
-- `blocking` {{Experimental_Inline}}
+- `blocking`
 
   - : This attribute explicitly indicates that certain operations should be blocked on the fetching of the script. The operations that are to be blocked must be a space-separated list of blocking tokens listed below.
     - `render`: The rendering of content on the screen is blocked.
@@ -81,14 +81,19 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `fetchpriority`
 
-  - : Provides a hint of the relative priority to use when fetching an external script. Allowed values:
+  - : Provides a hint of the relative priority to use when fetching an external script.
+    Allowed values:
 
     - `high`
-      - : Signals a high-priority fetch relative to other external scripts.
+      - : Fetch the external script at a high priority relative to other external scripts.
     - `low`
-      - : Signals a low-priority fetch relative to other external scripts.
+      - : Fetch the external script at a low priority relative to other external scripts.
     - `auto`
-      - : Default: Signals automatic determination of fetch priority relative to other external scripts.
+      - : Don't set a preference for the fetch priority.
+        This is the default.
+        It is used if no value or an invalid value is set.
+
+    See {{domxref("HTMLScriptElement.fetchPriority")}} for more information.
 
 - `integrity`
   - : This attribute contains inline metadata that a user agent can use to verify that a fetched resource has been delivered without unexpected manipulation. The attribute must not specified when the `src` attribute is not specified. See [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity).
@@ -122,7 +127,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - **Attribute is not set (default), an empty string, or a JavaScript MIME type**
       - : Indicates that the script is a "classic script", containing JavaScript code.
         Authors are encouraged to omit the attribute if the script refers to JavaScript code rather than specify a MIME type.
-        JavaScript MIME types are [listed in the IANA media types specification](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript).
+        JavaScript MIME types are [listed in the IANA media types specification](/en-US/docs/Web/HTTP/MIME_types#textjavascript).
     - [`importmap`](/en-US/docs/Web/HTML/Element/script/type/importmap)
       - : This value indicates that the body of the element contains an import map.
         The import map is a JSON object that developers can use to control how the browser resolves module specifiers when importing [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps).

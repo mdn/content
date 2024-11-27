@@ -198,14 +198,14 @@ At this point, we have a complete skeleton project. The website doesn't actually
      SET DEBUG=express-locallibrary-tutorial:* & npm start
      ```
 
-   - On Windows Powershell, use this command:
+   - On Windows PowerShell, use this command:
 
      ```powershell
      ENV:DEBUG = "express-locallibrary-tutorial:*"; npm start
      ```
 
      > [!NOTE]
-     > Powershell commands are not covered in this tutorial (The provided "Windows" commands assume you're using the Windows CMD prompt.)
+     > PowerShell commands are not covered in this tutorial (The provided "Windows" commands assume you're using the Windows CMD prompt.)
 
    - On macOS or Linux, use this command:
 
@@ -284,7 +284,7 @@ We can now start the server in almost exactly the same way as previously, but us
 > [!NOTE]
 > Now if you edit any file in the project the server will restart (or you can restart it by typing `rs` on the command prompt at any time). You will still need to reload the browser to refresh the page.
 >
-> We now have to call `npm run <scriptname>` rather than just `npm start`, because "start" is actually an npm command that is mapped to the named script. We could have replaced the command in the _start_ script but we only want to use _nodemon_ during development, so it makes sense to create a new script command.
+> We now have to call `npm run <script-name>` rather than just `npm start`, because "start" is actually an npm command that is mapped to the named script. We could have replaced the command in the _start_ script but we only want to use _nodemon_ during development, so it makes sense to create a new script command.
 >
 > The `serverstart` command added to the scripts in the **package.json** above is a very good example. Using this approach means you no longer have to type a long command to start the server. Note that the particular command added to the script works for macOS or Linux only.
 

@@ -21,7 +21,7 @@ You can optionally supply an argument to name the profile. Doing so enables you 
 ## Syntax
 
 ```js-nolint
-profileEnd(profileName)
+console.profileEnd(profileName)
 ```
 
 ### Parameters

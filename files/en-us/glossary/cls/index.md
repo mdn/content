@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-**Cumulative Layout Shift (CLS)** is a usability metric for websites, designed by Google as one of the [Core Web Vital](https://web.dev/explore/learn-core-web-vitals) metrics.
+**Cumulative Layout Shift (CLS)** is a usability metric for websites, designed by Google as one of the [Core Web Vital](https://web.dev/articles/vitals) metrics.
 
 It measures the extent to which users encounter unexpected layout shifts, in which elements of the page are moved in an unexpected way: that is, that are not the result of a user action like pressing a button or part of an animation.
 

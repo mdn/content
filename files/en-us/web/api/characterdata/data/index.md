@@ -45,9 +45,9 @@ output.value = comment.data;
 
 ```js
 const span = document.querySelector("span");
-const textnode = span.nextSibling;
+const textNode = span.nextSibling;
 
-textnode.data = "This text has been set using 'textnode.data'.";
+textNode.data = "This text has been set using 'textNode.data'.";
 ```
 
 {{EmbedLiveSample("Setting_the_content_of_a_text_node_using_data", "100%", 50)}}

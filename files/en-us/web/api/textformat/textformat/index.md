@@ -29,7 +29,7 @@ new TextFormat(options)
       - : A number representing the end position of the text range that needs to be formatted.
     - `underlineStyle`
       - : A string representing the underline style of the text range that needs to be formatted.
-    - `underlinerThickness`
+    - `underlineThickness`
       - : A string representing the underline thickness of the text range that needs to be formatted.
 
 ## Specifications

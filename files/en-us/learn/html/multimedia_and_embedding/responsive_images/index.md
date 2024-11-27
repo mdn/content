@@ -35,7 +35,7 @@ In this article, we'll learn about the concept of responsive images — images t
 
 ## Why responsive images?
 
-Let's examine a typical scenario. A typical website may contain a header image and some content images below the header. The header image will likely span the whole of the width of the header, and the content image will fit somewhere inside the content column. Here's a simple example:
+Let's examine a typical scenario. A typical website may contain a header image and some content images below the header. The header image will likely span the whole of the width of the header, and the content image will fit somewhere inside the content column. Here's an example:
 
 ![Our example site as viewed on a wide screen - here the first image works OK, as it is big enough to see the detail in the center.](picture-element-wide.png)
 
@@ -91,15 +91,7 @@ The `srcset` and `sizes` attributes look complicated, but they're not too hard t
 
 1. An **image filename** (`elva-fairy-480w.jpg`)
 2. A space
-3. The image's **intrinsic width in pixels** (`480w`) — note that this uses the `w` unit, not `px` as you might expect. An image's [intrinsic size](/en-US/docs/Glossary/Intrinsic_Size) is its real size, which can be found by inspecting the image file on your computer (for example, on a Mac you can select the image in Finder and press
-
-   <kbd>Cmd</kbd>
-
-   \+
-
-   <kbd>I</kbd>
-
-   to bring up the info screen).
+3. The image's **intrinsic width in pixels** (`480w`) — note that this uses the `w` unit, not `px` as you might expect. An image's [intrinsic size](/en-US/docs/Glossary/Intrinsic_Size) is its real size, which can be found by inspecting the image file on your computer (for example, on a Mac you can select the image in Finder and press <kbd>Cmd</kbd> + <kbd>I</kbd> to bring up the info screen).
 
 **`sizes`** defines a set of media conditions (e.g. screen widths) and indicates what image size would be best to choose, when certain media conditions are true — these are the hints we talked about earlier. In this case, before each comma we write:
 

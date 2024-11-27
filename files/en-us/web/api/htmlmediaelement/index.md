@@ -81,7 +81,7 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
 - {{domxref("HTMLMediaElement.src")}}
   - : A string that reflects the [`src`](/en-US/docs/Web/HTML/Element/video#src) HTML attribute, which contains the URL of a media resource to use.
 - {{domxref("HTMLMediaElement.srcObject")}}
-  - : A {{domxref('MediaStream')}} representing the media to play or that has played in the current `HTMLMediaElement`, or `null` if not assigned.
+  - : An object which serves as the source of the media associated with the {{domxref("HTMLMediaElement")}}, or `null` if not assigned.
 - {{domxref("HTMLMediaElement.textTracks")}} {{ReadOnlyInline}}
   - : Returns a {{domxref('TextTrackList')}} object containing the list of {{domxref("TextTrack")}} objects contained in the element.
 - {{domxref("HTMLMediaElement.videoTracks")}} {{ReadOnlyInline}}
@@ -155,7 +155,7 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
 - {{domxref("HTMLMediaElement.emptied_event", 'emptied')}}
   - : Fired when the media has become empty; for example, when the media has already been loaded (or partially loaded), and the {{domxref("HTMLMediaElement.load()")}} method is called to reload it.
 - {{domxref("HTMLMediaElement.encrypted_event", 'encrypted')}}
-  - : Fired when initialization data is found in the media, indicating that it is encrypted.
+  - : Fired when initialization data is found in the media that indicates the media is encrypted.
 - {{domxref("HTMLMediaElement.ended_event", 'ended')}}
   - : Fired when playback stops when end of the media (\<audio> or \<video>) is reached or because no further data is available.
 - {{domxref("HTMLMediaElement.error_event", 'error')}}
@@ -190,6 +190,8 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
   - : Fired when the volume has changed.
 - {{domxref("HTMLMediaElement.waiting_event", 'waiting')}}
   - : Fired when playback has stopped because of a temporary lack of data.
+- {{domxref("HTMLMediaElement.waitingforkey_event", 'waitingforkey')}}
+  - : Fired when playback is first blocked while waiting for a key.
 
 ## Specifications
 

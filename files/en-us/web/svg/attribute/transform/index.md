@@ -158,8 +158,8 @@ The `translate(<x> [<y>])` transform function moves the object by `x` and `y`. I
 In other words:
 
 ```plain
-xnew = xold + <x>
-ynew = yold + <y>
+xNew = xOld + <x>
+yNew = yOld + <y>
 ```
 
 #### Example

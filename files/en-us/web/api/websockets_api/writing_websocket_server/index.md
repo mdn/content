@@ -22,10 +22,10 @@ WebSockets communicate over a [TCP (Transmission Control Protocol)](https://en.w
 Constructor:
 
 ```cs
-TcpListener(System.Net.IPAddress localaddr, int port)
+TcpListener(System.Net.IPAddress localAddr, int port)
 ```
 
-`localaddr` specifies the IP of the listener, and `port` specifies the port.
+`localAddr` specifies the IP of the listener, and `port` specifies the port.
 
 > [!NOTE]
 > To create an `IPAddress` object from a `string`, use the `Parse` static method of `IPAddress`.
@@ -34,7 +34,7 @@ Methods:
 
 - `Start()`
 - `System.Net.Sockets.TcpClient AcceptTcpClient()`
-  Waits for a Tcp connection, accepts it and returns it as a TcpClient object.
+  Waits for a TCP connection, accepts it and returns it as a TcpClient object.
 
 Here's a barebones server implementation:
 
@@ -221,12 +221,12 @@ for (int i = 0; i < encoded.Length; i++) {
 
 ## Put together
 
-### wsserver.cs
+### ws-server.cs
 
 ```cs
 //
-// csc wsserver.cs
-// wsserver.exe
+// csc ws-server.cs
+// ws-server.exe
 
 using System;
 using System.Net;
@@ -265,16 +265,16 @@ class Server {
                 // 3. Compute SHA-1 and Base64 hash of the new value
                 // 4. Write the hash back as the value of "Sec-WebSocket-Accept" response header in an HTTP response
                 string swk = Regex.Match(s, "Sec-WebSocket-Key: (.*)").Groups[1].Value.Trim();
-                string swka = swk + "258EAFA5-E914-47DA-95CA-C5AB0DC85B11";
-                byte[] swkaSha1 = System.Security.Cryptography.SHA1.Create().ComputeHash(Encoding.UTF8.GetBytes(swka));
-                string swkaSha1Base64 = Convert.ToBase64String(swkaSha1);
+                string swkAndSalt = swk + "258EAFA5-E914-47DA-95CA-C5AB0DC85B11";
+                byte[] swkAndSaltSha1 = System.Security.Cryptography.SHA1.Create().ComputeHash(Encoding.UTF8.GetBytes(swkAndSalt));
+                string swkAndSaltSha1Base64 = Convert.ToBase64String(swkAndSaltSha1);
 
                 // HTTP/1.1 defines the sequence CR LF as the end-of-line marker
                 byte[] response = Encoding.UTF8.GetBytes(
                     "HTTP/1.1 101 Switching Protocols\r\n" +
                     "Connection: Upgrade\r\n" +
                     "Upgrade: websocket\r\n" +
-                    "Sec-WebSocket-Accept: " + swkaSha1Base64 + "\r\n\r\n");
+                    "Sec-WebSocket-Accept: " + swkAndSaltSha1Base64 + "\r\n\r\n");
 
                 stream.Write(response, 0, response.Length);
             } else {

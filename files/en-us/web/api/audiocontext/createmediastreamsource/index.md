@@ -71,7 +71,7 @@ if (navigator.mediaDevices) {
       const audioCtx = new AudioContext();
       const source = audioCtx.createMediaStreamSource(stream);
 
-      // Create a biquadfilter
+      // Create a biquad filter
       const biquadFilter = audioCtx.createBiquadFilter();
       biquadFilter.type = "lowshelf";
       biquadFilter.frequency.value = 1000;

@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.DOMMatrix
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 The **`DOMMatrix`** interface represents 4×4 matrices, suitable for 2D and 3D operations including rotation and translation. It is a mutable version of the {{domxref("DOMMatrixReadOnly")}} interface.
 
@@ -55,8 +55,6 @@ _This interface includes the following methods, as well as the methods it inheri
   - : Modifies the matrix by pre-multiplying it with the specified `DOMMatrix`. This is equivalent to the dot product `B⋅A`, where matrix `A` is the source matrix and `B` is the matrix given as an input to the method. Returns itself.
 - {{domxref("DOMMatrix.translateSelf()")}}
   - : Modifies the matrix by applying the specified vector. The default vector is `[0, 0, 0]`. Returns itself.
-- {{domxref("DOMMatrix.scaleNonUniformSelf()")}} {{deprecated_inline}}
-  - : Modifies the matrix by applying the specified scaling on the X, Y, and Z axes, centered at the given origin. By default, the Y and Z axes' scaling factors are both `1`, but the scaling factor for X must be specified. The default origin is `(0, 0, 0)`. Returns itself.
 - {{domxref("DOMMatrix.scaleSelf()")}}
   - : Modifies the matrix by applying the specified scaling factors, with the center located at the specified origin. Also returns itself. By default, the scaling factor is `1` for all three axes, and the origin is `(0, 0, 0)`. Returns itself.
 - {{domxref("DOMMatrix.scale3dSelf()")}}

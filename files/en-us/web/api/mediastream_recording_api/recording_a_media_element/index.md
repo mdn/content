@@ -141,7 +141,7 @@ function wait(delayInMS) {
 }
 ```
 
-The `wait()` function returns a new {{jsxref("Promise")}} which resolves once the specified number of milliseconds have elapsed. It works by using an [arrow function](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) which calls {{domxref("setTimeout()")}}, specifying the promise's resolution handler as the timeout handler function. That lets us use promise syntax when using timeouts, which can be very handy when chaining promises, as we'll see later.
+The `wait()` function returns a new {{jsxref("Promise")}} which resolves once the specified number of milliseconds have elapsed. It works by using an [arrow function](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) which calls {{domxref("Window.setTimeout", "setTimeout()")}}, specifying the promise's resolution handler as the timeout handler function. That lets us use promise syntax when using timeouts, which can be very handy when chaining promises, as we'll see later.
 
 ### Starting media recording
 

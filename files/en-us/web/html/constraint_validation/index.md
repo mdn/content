@@ -24,7 +24,7 @@ For a basic introduction to these concepts, with examples, see the [Form validat
 In HTML, basic constraints are declared in two ways:
 
 - By choosing the most semantically appropriate value for the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute of the {{ HTMLElement("input") }} element, e.g., choosing the `email` type automatically creates a constraint that checks whether the value is a valid email address.
-- By setting values on validation-related attributes, allowing basic constraints to be described in a simple way, without the need for JavaScript.
+- By setting values on validation-related attributes, allowing basic constraints to be described without the need for JavaScript.
 
 ### Semantic input types
 
@@ -298,14 +298,14 @@ The postal code format varies from one country to another. Not only do most coun
 > [!NOTE]
 > This is not a comprehensive postal code validation library, but rather a demonstration of the key concepts.
 
-As an example, we will add a script checking the constraint validation for this simple form:
+As an example, we will add a script checking the constraint validation for a form:
 
 ```html
 <form>
-  <label for="ZIP">ZIP : </label>
-  <input type="text" id="ZIP" />
-  <label for="Country">Country : </label>
-  <select id="Country">
+  <label for="postal-code">Postal Code: </label>
+  <input type="text" id="postal-code" />
+  <label for="country">Country: </label>
+  <select id="country">
     <option value="ch">Switzerland</option>
     <option value="fr">France</option>
     <option value="de">Germany</option>
@@ -322,45 +322,45 @@ This displays the following form:
 First, we write a function checking the constraint itself:
 
 ```js
-function checkZIP() {
-  // For each country, defines the pattern that the ZIP has to follow
+function checkPostalCode() {
+  // For each country, defines the pattern that the postal code has to follow
   const constraints = {
     ch: [
       "^(CH-)?\\d{4}$",
-      "Switzerland ZIPs must have exactly 4 digits: e.g. CH-1950 or 1950",
+      "Swiss postal codes must have exactly 4 digits: e.g. CH-1950 or 1950",
     ],
     fr: [
       "^(F-)?\\d{5}$",
-      "France ZIPs must have exactly 5 digits: e.g. F-75012 or 75012",
+      "French postal codes must have exactly 5 digits: e.g. F-75012 or 75012",
     ],
     de: [
       "^(D-)?\\d{5}$",
-      "Germany ZIPs must have exactly 5 digits: e.g. D-12345 or 12345",
+      "German postal codes must have exactly 5 digits: e.g. D-12345 or 12345",
     ],
     nl: [
       "^(NL-)?\\d{4}\\s*([A-RT-Z][A-Z]|S[BCE-RT-Z])$",
-      "Netherland ZIPs must have exactly 4 digits, followed by 2 letters except SA, SD and SS",
+      "Dutch postal codes must have exactly 4 digits, followed by 2 letters except SA, SD and SS",
     ],
   };
 
   // Read the country id
-  const country = document.getElementById("Country").value;
+  const country = document.getElementById("country").value;
 
   // Get the NPA field
-  const ZIPField = document.getElementById("ZIP");
+  const postalCodeField = document.getElementById("postal-code");
 
   // Build the constraint checker
   const constraint = new RegExp(constraints[country][0], "");
   console.log(constraint);
 
   // Check it!
-  if (constraint.test(ZIPField.value)) {
-    // The ZIP follows the constraint, we use the ConstraintAPI to tell it
-    ZIPField.setCustomValidity("");
+  if (constraint.test(postalCodeField.value)) {
+    // The postal code follows the constraint, we use the ConstraintAPI to tell it
+    postalCodeField.setCustomValidity("");
   } else {
-    // The ZIP doesn't follow the constraint, we use the ConstraintAPI to
+    // The postal code doesn't follow the constraint, we use the ConstraintAPI to
     // give a message about the format required for this country
-    ZIPField.setCustomValidity(constraints[country][1]);
+    postalCodeField.setCustomValidity(constraints[country][1]);
   }
 }
 ```
@@ -369,8 +369,8 @@ Then we link it to the **onchange** event for the {{ HTMLElement("select") }} an
 
 ```js
 window.onload = () => {
-  document.getElementById("Country").onchange = checkZIP;
-  document.getElementById("ZIP").oninput = checkZIP;
+  document.getElementById("country").onchange = checkPostalCode;
+  document.getElementById("postal-code").oninput = checkPostalCode;
 };
 ```
 
@@ -381,8 +381,8 @@ Another common constraint is to limit the size of a file to be uploaded. Checkin
 Here is the HTML part:
 
 ```html
-<label for="FS">Select a file smaller than 75 kB : </label>
-<input type="file" id="FS" />
+<label for="fs">Select a file smaller than 75 kB: </label>
+<input type="file" id="fs" />
 ```
 
 This displays:
@@ -393,20 +393,20 @@ The JavaScript reads the file selected, uses the `File.size()` method to get its
 
 ```js
 function checkFileSize() {
-  const FS = document.getElementById("FS");
-  const files = FS.files;
+  const fs = document.getElementById("fs");
+  const files = fs.files;
 
   // If there is (at least) one file selected
   if (files.length > 0) {
-    if (files[0].size > 75 * 1024) {
+    if (files[0].size > 75 * 1000) {
       // Check the constraint
-      FS.setCustomValidity("The selected file must not be larger than 75 kB");
-      FS.reportValidity();
+      fs.setCustomValidity("The selected file must not be larger than 75 kB");
+      fs.reportValidity();
       return;
     }
   }
   // No custom constraint violation
-  FS.setCustomValidity("");
+  fs.setCustomValidity("");
 }
 ```
 
@@ -414,7 +414,7 @@ Finally, we hook the method with the correct event:
 
 ```js
 window.onload = () => {
-  document.getElementById("FS").onchange = checkFileSize;
+  document.getElementById("fs").onchange = checkFileSize;
 };
 ```
 

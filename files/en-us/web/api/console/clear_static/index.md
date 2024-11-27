@@ -8,12 +8,14 @@ browser-compat: api.console.clear_static
 
 {{APIRef("Console API")}}
 
-The **`console.clear()`** static method clears the console if the console allows it. A graphical console, like those running on browsers, will allow it; a console displaying on the terminal, like the one running on Node, will not support it, and will have no effect (and no error).
+The **`console.clear()`** static method clears the console if possible.
+
+A graphical console, like those in web browsers, will remove all previous messages; a console displaying on a terminal, like the one in Node.js, will attempt to clear it using an escape code or system API; otherwise the method will have no effect (and no error).
 
 ## Syntax
 
 ```js-nolint
-clear()
+console.clear()
 ```
 
 ### Parameters
@@ -35,5 +37,5 @@ None ({{jsxref("undefined")}}).
 ## See also
 
 - [Microsoft Edge's documentation for `console.clear()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#clear)
-- [Node.JS documentation for `console.clear()`](https://nodejs.org/docs/latest/api/console.html#consoleclear)
+- [Node.js documentation for `console.clear()`](https://nodejs.org/docs/latest/api/console.html#consoleclear)
 - [Google Chrome's documentation for `console.clear()`](https://developer.chrome.com/docs/devtools/console/api/#clear)

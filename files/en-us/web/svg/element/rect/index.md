@@ -7,7 +7,7 @@ browser-compat: svg.elements.rect
 
 {{SVGRef}}
 
-The **`<rect>`** element is a [basic SVG shape](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes) that draws rectangles, defined by their position, width, and height. The rectangles may have their corners rounded.
+The **`<rect>`** [SVG](/en-US/docs/Web/SVG) element is a [basic SVG shape](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes) that draws rectangles, defined by their position, width, and height. The rectangles may have their corners rounded.
 
 ## Example
 
@@ -21,7 +21,7 @@ svg {
 
 ```html
 <svg viewBox="0 0 220 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- Simple rectangle -->
+  <!-- Regular rectangle -->
   <rect width="100" height="100" />
 
   <!-- Rounded corner rectangle -->

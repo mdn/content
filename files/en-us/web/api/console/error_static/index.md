@@ -13,10 +13,10 @@ The **`console.error()`** static method outputs a message to the console at the 
 ## Syntax
 
 ```js-nolint
-error(val1)
-error(val1, /* …, */ valN)
-error(msg)
-error(msg, subst1, /* …, */ substN)
+console.error(val1)
+console.error(val1, /* …, */ valN)
+console.error(msg)
+console.error(msg, subst1, /* …, */ substN)
 ```
 
 ### Parameters
@@ -45,5 +45,5 @@ None ({{jsxref("undefined")}}).
 ## See also
 
 - [Microsoft Edge's documentation for `console.error()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#error)
-- [Node.JS documentation for `console.error()`](https://nodejs.org/docs/latest/api/console.html#consoleerrordata-args)
+- [Node.js documentation for `console.error()`](https://nodejs.org/docs/latest/api/console.html#consoleerrordata-args)
 - [Google Chrome's documentation for `console.error()`](https://developer.chrome.com/docs/devtools/console/api/#error)

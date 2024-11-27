@@ -20,7 +20,7 @@ Strict mode makes several changes to normal JavaScript semantics:
 
 ## Invoking strict mode
 
-Strict mode applies to _entire scripts_ or to _individual functions_. It doesn't apply to [block statements](/en-US/docs/Web/JavaScript/Reference/Statements/block) enclosed in `{}` braces; attempting to apply it to such contexts does nothing. [`eval`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) code, [`Function`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function) code, [event handler](/en-US/docs/Web/HTML/Attributes#event_handler_attributes) attributes, strings passed to [`setTimeout()`](/en-US/docs/Web/API/setTimeout), and related functions are either function bodies or entire scripts, and invoking strict mode in them works as expected.
+Strict mode applies to _entire scripts_ or to _individual functions_. It doesn't apply to [block statements](/en-US/docs/Web/JavaScript/Reference/Statements/block) enclosed in `{}` braces; attempting to apply it to such contexts does nothing. [`eval`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) code, [`Function`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function) code, [event handler](/en-US/docs/Web/HTML/Attributes#event_handler_attributes) attributes, strings passed to {{domxref("Window.setTimeout", "setTimeout()")}}, and related functions are either function bodies or entire scripts, and invoking strict mode in them works as expected.
 
 ### Strict mode for scripts
 
@@ -109,6 +109,8 @@ Strict mode changes some previously-accepted mistakes into errors. JavaScript wa
 #### Assigning to undeclared variables
 
 Strict mode makes it impossible to accidentally create global variables. In sloppy mode, mistyping a variable in an assignment creates a new property on the global object and continues to "work". Assignments which would accidentally create global variables throw an error in strict mode:
+
+<!-- cSpell:ignore mistypeVarible -->
 
 ```js
 "use strict";
@@ -232,7 +234,7 @@ false.true = ""; // TypeError
 
 #### Duplicate property names
 
-Duplicate property names used to be considered a {{jsxref("SyntaxError")}} in strict mode. With the introduction of [computed property names](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer), making duplication possible at runtime, this restriction was removed in ES2015.
+Duplicate property names used to be considered a {{jsxref("SyntaxError")}} in strict mode. With the introduction of [computed property names](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names), making duplication possible at runtime, this restriction was removed in ES2015.
 
 ```js
 "use strict";
@@ -263,7 +265,7 @@ with (obj) {
 }
 ```
 
-The simple alternative of assigning the object to a short name variable, then accessing the corresponding property on that variable, stands ready to replace `with`.
+The alternative of assigning the object to a short name variable, then accessing the corresponding property on that variable, stands ready to replace `with`.
 
 #### Non-leaking eval
 

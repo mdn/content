@@ -395,7 +395,7 @@ const obj = {
 // Setting "num" on globalThis to show how it is NOT used.
 globalThis.num = 42;
 
-// A simple traditional function to operate on "this"
+// A traditional function to operate on "this"
 const add = function (a, b, c) {
   return this.num + a + b + c;
 };
@@ -425,7 +425,7 @@ const boundAdd = add.bind(obj);
 console.log(boundAdd(1, 2, 3)); // 48
 ```
 
-Perhaps the greatest benefit of using arrow functions is with methods like {{domxref("setTimeout()")}} and {{domxref("EventTarget/addEventListener()", "EventTarget.prototype.addEventListener()")}} that usually require some kind of closure, `call()`, `apply()`, or `bind()` to ensure that the function is executed in the proper scope.
+Perhaps the greatest benefit of using arrow functions is with methods like {{domxref("Window.setTimeout", "setTimeout()")}} and {{domxref("EventTarget.addEventListener()", "EventTarget.prototype.addEventListener()")}} that usually require some kind of closure, `call()`, `apply()`, or `bind()` to ensure that the function is executed in the proper scope.
 
 With traditional function expressions, code like this does not work as expected:
 

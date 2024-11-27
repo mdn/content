@@ -18,7 +18,7 @@ The **`font-variation-settings`** [CSS](/en-US/docs/Web/CSS) property provides l
 font-variation-settings: normal;
 
 /* Set values for variable font axis names */
-font-variation-settings: "XHGT" 0.7;
+font-variation-settings: "xhgt" 0.7;
 
 /* Global values */
 font-variation-settings: inherit;
@@ -103,15 +103,173 @@ You can find a number of other variable font examples in our [Variable fonts gui
 
 ### Controlling variable font weight (wght)
 
-You can edit the CSS in the example below to play with different font weight values. See what happens when you specify a value outside the weight range.
+Click "Play" in the code blocks below to edit the example in the MDN Playground.Edit the CSS to play with different font weight values. See what happens when you specify a value outside the weight range.
 
-{{EmbedGHLiveSample("css-examples/variable-fonts/weight.html", '100%', 940)}}
+```html hidden live-sample___variable-fonts-weight-example
+<div>
+  <p class="p1">Weight</p>
+  <span>(font-weight: 625)</span>
+</div>
+<div>
+  <p class="p2">Weight</p>
+  <span>(font-variation-settings: "wght" 625)</span>
+</div>
+<div class="adjustable">
+  <p class="p3">Weight</p>
+  (font-variation-settings: "wght" <span id="angle-text">625</span>)<br />
+  <label for="text-axis">Adjust Weight: </label>
+  <input
+    type="range"
+    id="text-axis"
+    name="text-axis"
+    min="300"
+    max="900"
+    value="625" />
+</div>
+```
+
+```css hidden live-sample___variable-fonts-weight-example
+@font-face {
+  font-family: "Amstelvar VF";
+  src: url("https://mdn.github.io/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.woff2")
+    format("woff2-variations");
+  font-weight: 300 900;
+  font-stretch: 35% 100%;
+  font-style: normal;
+  font-display: swap;
+}
+
+p {
+  font:
+    1.2em "Amstelvar VF",
+    Georgia,
+    serif;
+  font-size: 4rem;
+  margin: 1rem;
+  display: inline-block;
+}
+
+.adjustable {
+  border: 1px dashed;
+  --text-axis: 625;
+}
+```
+
+```css live-sample___variable-fonts-weight-example
+/* weight range is 300 to 900 */
+.p1 {
+  font-weight: 625;
+}
+
+/* weight range is 300 to 900 */
+.p2 {
+  font-variation-settings: "wght" 625;
+}
+
+/* Adjust with slider & custom property */
+.p3 {
+  font-variation-settings: "wght" var(--text-axis);
+}
+```
+
+```js hidden live-sample___variable-fonts-weight-example
+const angle = document.querySelector("#text-axis");
+const text = document.querySelector("#angle-text");
+const adjustable = document.querySelector(".adjustable");
+
+angle.addEventListener("input", (e) => {
+  const angle = e.target.value;
+  text.innerText = angle;
+  adjustable.style.setProperty("--text-axis", angle);
+});
+```
+
+{{EmbedLiveSample("variable-fonts-weight-example", "", "450px")}}
 
 ### Controlling variable font slant (slnt)
 
-You can edit the CSS in the example below to play with different font slant/oblique values.
+Click "Play" in the code blocks below to edit the example in the MDN Playground.Edit the CSS to play with different font slant/oblique values.
 
-{{EmbedGHLiveSample("css-examples/variable-fonts/slant.html", '100%', 940)}}
+```html hidden live-sample___variable-fonts-slant-example
+<div>
+  <p class="p1">Slant</p>
+  <span>(font-style: oblique 14deg)</span>
+</div>
+<div>
+  <p class="p2">Slant</p>
+  <span>(font-variation-settings: 'slnt' 12)</span>
+</div>
+<div class="adjustable">
+  <p class="p3">Slant</p>
+  (font-variation-settings: 'slnt' <span id="angle-text">5</span>)<br />
+  <label for="text-axis">Adjust Weight: </label>
+  <input
+    type="range"
+    id="text-axis"
+    name="text-axis"
+    min="0"
+    max="12"
+    value="5" />
+</div>
+```
+
+```css hidden live-sample___variable-fonts-slant-example
+@font-face {
+  font-family: "Roboto VF";
+  src: url("https://mdn.github.io/shared-assets/fonts/variable-fonts/Roboto-VF.woff2")
+    format("woff2-variations");
+  font-weight: 100 900;
+  font-stretch: 75% 100%;
+  font-style: oblique 0deg 12deg;
+  font-display: swap;
+}
+
+p {
+  font:
+    1.2em "Roboto VF",
+    Helvetica,
+    sans-serif;
+  font-size: 4rem;
+  margin: 1rem;
+  display: inline-block;
+}
+
+.adjustable {
+  border: 1px dashed;
+  --text-axis: 5;
+}
+```
+
+```css live-sample___variable-fonts-slant-example
+/* slant range is from 0deg to 12deg */
+.p1 {
+  font-style: oblique 14deg;
+}
+
+/* slant range is from 0 to 12 */
+.p2 {
+  font-variation-settings: "slnt" 12;
+}
+
+/* Adjust with slider & custom property */
+.p3 {
+  font-variation-settings: "slnt" var(--text-axis);
+}
+```
+
+```js hidden live-sample___variable-fonts-slant-example
+const angle = document.querySelector("#text-axis");
+const text = document.querySelector("#angle-text");
+const adjustable = document.querySelector(".adjustable");
+
+angle.addEventListener("input", (e) => {
+  const angle = e.target.value;
+  text.innerText = angle;
+  adjustable.style.setProperty("--text-axis", angle);
+});
+```
+
+{{EmbedLiveSample("variable-fonts-slant-example", "", "450px")}}
 
 ## Specifications
 

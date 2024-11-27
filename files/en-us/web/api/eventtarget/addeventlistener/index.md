@@ -74,7 +74,7 @@ addEventListener(type, listener, useCapture)
         `listener` would be automatically removed when invoked. If not specified, defaults to `false`.
     - `passive` {{optional_inline}}
 
-      - : A boolean value that, if `true`, indicates that the function specified by `listener` will never call {{domxref("Event.preventDefault", "preventDefault()")}}. If a passive listener does call `preventDefault()`, the user agent will do nothing other than generate a console warning.
+      - : A boolean value that, if `true`, indicates that the function specified by `listener` will never call {{domxref("Event.preventDefault", "preventDefault()")}}. If a passive listener calls `preventDefault()`, nothing will happen and a console warning may be generated.
 
         If this option is not specified it defaults to `false` – except that in browsers other than Safari, it defaults to `true` for {{domxref("Element/wheel_event", "wheel")}}, {{domxref("Element/mousewheel_event", "mousewheel")}}, {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} events. See [Using passive listeners](#using_passive_listeners) to learn more.
 
@@ -95,7 +95,7 @@ addEventListener(type, listener, useCapture)
 
     > [!NOTE]
     > For event listeners attached to the event target, the event is in the target phase, rather than the capturing and bubbling phases.
-    > Event listeners in the _capturing_ phase are called before event listeners in any non-capturing phases.
+    > Event listeners in the _capturing_ phase are called before event listeners in the target and bubbling phases.
 
 - `wantsUntrusted` {{optional_inline}} {{non-standard_inline}}
   - : A Firefox (Gecko)-specific parameter. If `true`, the listener receives
@@ -132,80 +132,6 @@ function handleEvent(event) {
   }
 }
 ```
-
-### Safely detecting option support
-
-In older versions of the DOM specification, the third parameter of
-`addEventListener()` was a Boolean value indicating whether or not to use
-capture. Over time, it became clear that more options were needed. Rather than adding
-more parameters to the function (complicating things enormously when dealing with
-optional values), the third parameter was changed to an object that can contain various
-properties defining the values of options to configure the process of removing the event
-listener.
-
-Because older browsers (as well as some not-too-old browsers) still assume the third
-parameter is a Boolean, you need to build your code to handle this scenario
-intelligently. You can do this by using feature detection for each of the options you're
-interested in.
-
-For example, if you want to check for the `passive` option:
-
-```js
-let passiveSupported = false;
-
-try {
-  const options = {
-    get passive() {
-      // This function will be called when the browser
-      // attempts to access the passive property.
-      passiveSupported = true;
-      return false;
-    },
-  };
-
-  window.addEventListener("test", null, options);
-  window.removeEventListener("test", null, options);
-} catch (err) {
-  passiveSupported = false;
-}
-```
-
-This creates an `options` object with a getter function for the
-`passive` property; the getter sets a flag,
-`passiveSupported`, to `true` if it gets called. That
-means that if the browser checks the value of the `passive` property on the
-`options` object, `passiveSupported` will be
-set to `true`; otherwise, it will remain `false`. We then call
-`addEventListener()` to set up a fake event handler, specifying those
-options, so that the options will be checked if the browser recognizes an object as the
-third parameter. Then, we call [`removeEventListener()`](/en-US/docs/Web/API/EventTarget/removeEventListener) to clean up after
-ourselves. (Note that `handleEvent()` is ignored on event listeners that
-aren't called.)
-
-You can check whether any option is supported this way. Just add a getter for that
-option using code similar to what is shown above.
-
-Then, when you want to create an actual event listener that uses the options in
-question, you can do something like this:
-
-```js
-someElement.addEventListener(
-  "mouseup",
-  handleMouseUp,
-  passiveSupported ? { passive: true } : false,
-);
-```
-
-Here we're adding a listener for the {{domxref("Element/mouseup_event", "mouseup")}}
-event on the element `someElement`. For the third parameter, if
-`passiveSupported` is `true`, we're specifying an
-`options` object with `passive` set to
-`true`; otherwise, we know that we need to pass a Boolean, and we pass
-`false` as the value of the `useCapture` parameter.
-
-You can learn more in the [Implementing feature detection](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection) documentation and the explainer about
-[`EventListenerOptions`](https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md#feature-detection)
-from the [Web Incubator Community Group](https://wicg.github.io/admin/charter.html).
 
 ### The value of "this" within the handler
 
@@ -426,12 +352,6 @@ Since it can't be canceled, event listeners can't block page rendering anyway.
 
 See [Improving scroll performance using passive listeners](#improving_scroll_performance_using_passive_listeners) for an example showing the effect of passive listeners.
 
-### Older browsers
-
-In older browsers that don't support the `options` parameter to
-`addEventListener()`, attempting to use it prevents the use of the
-`useCapture` argument without proper use of [feature detection](#safely_detecting_option_support).
-
 ## Examples
 
 ### Add a simple listener
@@ -566,7 +486,7 @@ responsible for actually responding to the event.
 
 ### Event listener with an arrow function
 
-This example demonstrates a simple event listener implemented using arrow function
+This example demonstrates an event listener implemented using arrow function
 notation.
 
 #### HTML
@@ -753,10 +673,6 @@ function nonePassiveHandler(event) {
 Click the outer, middle, inner containers respectively to see how the options work.
 
 {{ EmbedLiveSample('Example_of_options_usage', 600, 630) }}
-
-Before using a particular value in the `options` object, it's a
-good idea to ensure that the user's browser supports it, since these are an addition
-that not all browsers have supported historically. See [Safely detecting option support](#safely_detecting_option_support) for details.
 
 ### Event listener with multiple options
 

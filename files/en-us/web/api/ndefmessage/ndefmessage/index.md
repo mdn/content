@@ -33,7 +33,7 @@ new NDEFMessage(records)
     - `lang` {{optional_inline}}
       - : A valid language tag according to {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
     - `mediaType` {{optional_inline}}
-      - : A valid [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types).
+      - : A valid [MIME type](/en-US/docs/Web/HTTP/MIME_types).
     - `recordType`
 
       - : A string indicating the type of data stored in `data`. It must be one of the following values:
@@ -47,7 +47,7 @@ new NDEFMessage(records)
           - : An empty {{domxref("NDEFRecord")}}.
 
         - `"mime"`
-          - : A valid [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types).
+          - : A valid [MIME type](/en-US/docs/Web/HTTP/MIME_types).
         - `"smart-poster"`
           - : A smart poster as defined by the [NDEF-SMARTPOSTER](https://w3c.github.io/web-nfc/#bib-ndef-smartposter) specification.
         - `"text"`

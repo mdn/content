@@ -20,7 +20,7 @@ A **function definition** (also called a **function declaration**, or **function
 - A list of parameters to the function, enclosed in parentheses and separated by commas.
 - The JavaScript statements that define the function, enclosed in curly braces, `{ /* … */ }`.
 
-For example, the following code defines a simple function named `square`:
+For example, the following code defines a function named `square`:
 
 ```js
 function square(number) {
@@ -39,15 +39,15 @@ function myFunc(theObject) {
   theObject.make = "Toyota";
 }
 
-const mycar = {
+const myCar = {
   make: "Honda",
   model: "Accord",
   year: 1998,
 };
 
-console.log(mycar.make); // "Honda"
-myFunc(mycar);
-console.log(mycar.make); // "Toyota"
+console.log(myCar.make); // "Honda"
+myFunc(myCar);
+console.log(myCar.make); // "Toyota"
 ```
 
 When you pass an array as a parameter, if the function changes any of the array's values, that change is visible outside the function, as shown in the following example:

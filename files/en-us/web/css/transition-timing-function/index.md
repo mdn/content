@@ -58,7 +58,7 @@ transition-timing-function: unset;
 
   - : Each {{cssxref("&lt;easing-function&gt;")}} represents the easing function to link to the corresponding property to transition, as defined in {{ cssxref("transition-property") }}.
 
-    The non-step keyword values (ease, linear, ease-in-out, etc.) each represent cubic Bézier curve with fixed four point values, with the cubic-bezier() function value allowing for a non-predefined value. The step easing functions divides the input time into a specified number of intervals that are equal in length. It is defined by a number of steps and a step position.
+    The non-step keyword values (ease, linear, ease-in-out, etc.) each represent cubic Bézier curve with fixed four point values, with the cubic-bezier() function value allowing for a non-predefined value. The step easing functions divide the input time into a specified number of intervals that are equal in length. It is defined by a number of steps and a step position.
 
     - `ease`
       - : Equal to `cubic-bezier(0.25, 0.1, 0.25, 1.0)`, the default value, increases in velocity towards the middle of the transition, slowing back down at the end.
@@ -72,7 +72,7 @@ transition-timing-function: unset;
       - : Equal to `cubic-bezier(0.42, 0, 0.58, 1.0)`, starts transitioning slowly, speeds up, and then slows down again.
     - `cubic-bezier(p1, p2, p3, p4)`
       - : An author-defined cubic-Bezier curve, where the p1 and p3 values must be in the range of 0 to 1.
-    - `steps(n, <jumpterm>)`
+    - `steps(n, <jump-term>)`
 
       - : Displays the transition along _n stops along the transition, displaying each stop for_ equal lengths of time. For example, if _n_ is 5, there are 5 steps. Whether the transition holds temporarily at 0%, 20%, 40%, 60% and 80%, on the 20%, 40%, 60%, 80% and 100%, or makes 5 stops between the 0% and 100% along the transition, or makes 5 stops including the 0% and 100% marks (on the 0%, 25%, 50%, 75%, and 100%) depends on which of the following jump terms is used:
 
@@ -85,9 +85,9 @@ transition-timing-function: unset;
         - `jump-both`
           - : Includes pauses at both the 0% and 100% marks, effectively adding a step during the transition time.
         - `start`
-          - : Same as `jump-start.`
+          - : Same as `jump-start`.
         - `end`
-          - : Same as `jump-end.`
+          - : Same as `jump-end`.
 
     - `step-start`
       - : Equal to `steps(1, jump-start)`
@@ -115,9 +115,9 @@ Consider providing a mechanism for pausing or disabling animation, as well as us
 ```html hidden
 <div class="parent">
   <div class="ease">ease</div>
-  <div class="easein">ease-in</div>
-  <div class="easeout">ease-out</div>
-  <div class="easeinout">ease-in-out</div>
+  <div class="ease-in">ease-in</div>
+  <div class="ease-out">ease-out</div>
+  <div class="ease-in-out">ease-in-out</div>
   <div class="linear">linear</div>
   <div class="cb">cubic-bezier(0.2,-2,0.8,2)</div>
 </div>
@@ -162,13 +162,13 @@ const intervalID = setInterval(updateTransition, 10000);
 .ease {
   transition-timing-function: ease;
 }
-.easein {
+.ease-in {
   transition-timing-function: ease-in;
 }
-.easeout {
+.ease-out {
   transition-timing-function: ease-out;
 }
-.easeinout {
+.ease-in-out {
   transition-timing-function: ease-in-out;
 }
 .linear {

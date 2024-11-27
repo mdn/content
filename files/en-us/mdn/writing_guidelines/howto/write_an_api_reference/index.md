@@ -105,7 +105,7 @@ Examples:
   Usually only instance methods exist, in which case you can put these under the title "Methods".
 - We do not document inherited properties and methods of the interface: they are listed on the respective parent interface. We do hint at their existence though.
 - We do document properties and methods defined in mixins. Please see the [contribution guide for mixins](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file#mixins) for more details.
-- Special methods like the stringifier (`toString()`) and the jsonizer (`toJSON()`) are also listed if they do exist.
+- Special methods like the stringifier (`toString()`) and the jsonifier (`toJSON()`) are also listed if they do exist.
 - Named constructors (like `Image()` for {{domxref("HTMLImageElement")}}) are also listed, if relevant.
 
 #### Constructor pages
@@ -221,7 +221,7 @@ The features of a landing page are outlined below:
 1. **Description**: the first paragraph of the landing page should provide a short, concise description of the API's overarching purpose.
 2. **Concepts and usage section**: The next section should be titled "\[name of API] concepts and usage", and provide an overview of all the main functionality that the API provides, what problems it solves, and how it works — all at a high level. This section should be fairly short, and not go into code or specific implementation details.
 3. **List of interfaces**: This section should be titled "\[name of API] interfaces", and provide links to the reference page for each interface that makes up the API, along with a short description of what each one does. See the "Referencing other API features with the \\{{domxref}} macro" section for a quicker way to create new pages.
-4. **Examples**: This section should show a simple use case or two for the API.
+4. **Examples**: This section should show a use case or two for the API.
 5. **Specifications table**: At this point you need to include a specifications table — see the "Creating a spec reference table" section for more details.
 6. **Browser compatibility**: Now you need to include a browser compatibility table. See [Compatibility tables](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) for details.
 7. **See also**: The "See also" section is a good place to include further links that may be useful when learning about this technology, including MDN (and external) tutorials, examples, libraries, etc.

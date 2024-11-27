@@ -216,7 +216,7 @@ The Web Audio API has a lot of different filter/effects that can be applied to a
 #### HTML
 
 ```html
-<video id="my-video" controls src="myvideo.mp4" type="video/mp4"></video>
+<video id="my-video" controls src="my-video.mp4" type="video/mp4"></video>
 ```
 
 #### JavaScript
@@ -324,7 +324,7 @@ source.connect(convolver);
 convolver.connect(context.destination);
 ```
 
-See this [Codepen](https://codepen.io/a2sheppy/pen/JjPgVYL) for an applied (but very, very silly; like, little kids will giggle kind of silly) example.
+See this [CodePen](https://codepen.io/a2sheppy/pen/JjPgVYL) for an applied (but very, very silly; like, little kids will giggle kind of silly) example.
 
 ### Spatial audio
 

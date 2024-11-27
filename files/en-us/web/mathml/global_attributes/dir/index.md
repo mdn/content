@@ -9,11 +9,24 @@ browser-compat: mathml.global_attributes.dir
 
 The **`dir`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) is an [enumerated](/en-US/docs/Glossary/Enumerated) attribute that indicates the directionality of the MathML element.
 
-## Syntax
+## Example
+
+```css hidden
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+}
+```
 
 ```html
 <!-- Moroccan style -->
-<math dir="ltr">
+<math display="block" dir="ltr">
   <msqrt>
     <mi>س</mi>
   </msqrt>
@@ -25,7 +38,7 @@ The **`dir`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) is an
 </math>
 
 <!-- Maghreb/Machrek style -->
-<math dir="rtl">
+<math display="block" dir="rtl">
   <msqrt>
     <mi>س</mi>
   </msqrt>
@@ -35,6 +48,15 @@ The **`dir`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) is an
     <mi>ب</mi>
   </msup>
 </math>
+```
+
+{{ EmbedLiveSample("Example", "", 150) }}
+
+## Syntax
+
+```html-nolint
+<math dir="ltr">
+<math dir="rtl">
 ```
 
 ### Values
@@ -60,4 +82,4 @@ The **`dir`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) is an
 
 - All [global attributes](/en-US/docs/Web/MathML/Global_attributes).
 - {{cssxref("direction")}}
-- The HTML [`dir`](/en-US/docs/Web/HTML/Global_attributes#dir) global attribute
+- The HTML [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir) global attribute

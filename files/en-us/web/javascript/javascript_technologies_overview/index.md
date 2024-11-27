@@ -67,7 +67,7 @@ The [WebIDL specification](https://webidl.spec.whatwg.org/) provides the glue be
 
 The Document Object Model (DOM) is a cross-platform, **language-independent convention** for representing and interacting with objects in HTML, XHTML and XML documents. Objects in the **DOM tree** may be addressed and manipulated by using methods on the objects. The [W3C](/en-US/docs/Glossary/W3C) standardizes the Core Document Object Model, which defines language-agnostic interfaces that abstract HTML and XML documents as objects, and also defines mechanisms to manipulate this abstraction. Among the things defined by the DOM, we can find:
 
-- The document structure, a tree model, and the DOM Event architecture in [DOM core](https://dom.spec.whatwg.org/): [`Node`](/en-US/docs/Web/API/Node), [`Element`](/en-US/docs/Web/API/Element), [`DocumentFragment`](/en-US/docs/Web/API/DocumentFragment), [`Document`](/en-US/docs/Web/API/Document), [`DOMImplementation`](/en-US/docs/Web/API/DOMImplementation), [`Event`](/en-US/docs/Web/API/Event), [`EventTarget`](/en-US/docs/Web/API/EventTarget), …
+- The document structure, a tree model, and the DOM Event architecture in [DOM core](https://dom.spec.whatwg.org/): {{domxref("Node")}}, {{domxref("Element")}}, {{domxref("DocumentFragment")}}, {{domxref("Document")}}, {{domxref("DOMImplementation")}}, {{domxref("Event")}}, {{domxref("EventTarget")}}, …
 - A less rigorous definition of the DOM Event Architecture, as well as specific events in [DOM events](https://w3c.github.io/uievents/).
 - Other things such as [DOM Traversal](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html) and [DOM Range](https://dom.spec.whatwg.org/#ranges).
 
@@ -75,15 +75,15 @@ From the ECMAScript point of view, objects defined in the DOM specification are 
 
 ### HTML DOM
 
-[HTML](https://html.spec.whatwg.org/multipage/), the Web's markup language, is specified in terms of the DOM. Layered above the abstract concepts defined in DOM Core, HTML also defines the _meaning_ of elements. The HTML DOM includes such things as the `className` property on HTML elements, or APIs such as [`document.body`](/en-US/docs/Web/API/Document/body).
+[HTML](https://html.spec.whatwg.org/multipage/), the Web's markup language, is specified in terms of the DOM. Layered above the abstract concepts defined in DOM Core, HTML also defines the _meaning_ of elements. The HTML DOM includes such things as the `className` property on HTML elements, or APIs such as {{domxref("Document.body")}}.
 
-The HTML specification also defines restrictions on documents; for example, it requires all children of a [`<ul>`](/en-US/docs/Web/HTML/Element/ul) element, which represents an unordered list, to be [`<li>`](/en-US/docs/Web/HTML/Element/li) elements, as those represent list items. In general, it also forbids using elements and attributes that aren't defined in a standard.
+The HTML specification also defines restrictions on documents; for example, it requires all children of a {{htmlelement("ul")}} element, which represents an unordered list, to be {{htmlelement("li")}} elements, as those represent list items. In general, it also forbids using elements and attributes that aren't defined in a standard.
 
-Looking for the [`Document`](/en-US/docs/Web/API/Document) object, [`Window`](/en-US/docs/Web/API/Window) object, and the other DOM elements? Read the [DOM documentation](/en-US/docs/Web/API/Document_Object_Model).
+Looking for the {{domxref("Document")}} object, {{domxref("Window")}} object, and the other DOM elements? Read the [DOM documentation](/en-US/docs/Web/API/Document_Object_Model).
 
 ## Other notable APIs
 
-- The [`setTimeout`](/en-US/docs/Web/API/setTimeout) and [`setInterval`](/en-US/docs/Web/API/setInterval) functions were first specified on the [`Window`](/en-US/docs/Web/API/Window) interface in HTML Standard.
+- The {{domxref("Window.setTimeout", "setTimeout()")}} and {{domxref("Window.setInterval", "setInterval()")}} functions were first specified on the {{domxref("Window")}} interface in HTML Standard.
 - [XMLHttpRequest](https://xhr.spec.whatwg.org/) makes it possible to send asynchronous HTTP requests.
 - The [Fetch API](https://fetch.spec.whatwg.org/) provides a more ergonomic abstraction for network requests.
 - The [CSS Object Model](https://drafts.csswg.org/cssom/) abstract CSS rules as objects.
@@ -92,7 +92,7 @@ Looking for the [`Document`](/en-US/docs/Web/API/Document) object, [`Window`](/e
 - [Canvas 2D Context](https://html.spec.whatwg.org/multipage//#2dcontext) is a drawing API for [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas).
 - The [WebAssembly interface](https://webassembly.github.io/spec/js-api/) provides utilities for communication between JavaScript code and [WebAssembly](/en-US/docs/WebAssembly) modules.
 
-Non-browser environments (like Node.js) often do not have DOM APIs — because they don't interact with a document — but they still usually implement many web APIs, such as [`fetch()`](/en-US/docs/Web/API/Window/fetch) and [`setTimeout()`](/en-US/docs/Web/API/setTimeout).
+Non-browser environments (like Node.js) often do not have DOM APIs — because they don't interact with a document — but they still usually implement many web APIs, such as {{domxref("Window.fetch", "fetch()")}} and {{domxref("Window.setTimeout", "setTimeout()")}}.
 
 ## JavaScript implementations
 
@@ -156,10 +156,10 @@ Helpful tools for writing and debugging your JavaScript code.
   - : Edit JavaScript, CSS, and HTML and get live results. Use external resources and collaborate with your team online.
 - [Plunker](https://plnkr.co/)
   - : Plunker is an online community for creating, collaborating on, and sharing your web development ideas. Edit your JavaScript, CSS, and HTML files and get live results and file structure.
-- [JSBin](https://jsbin.com/)
+- [JS Bin](https://jsbin.com/)
   - : JS Bin is an open-source collaborative web development debugging tool.
-- [Codepen](https://codepen.io/)
-  - : Codepen is another collaborative web development tool used as a live result playground.
+- [CodePen](https://codepen.io/)
+  - : CodePen is another collaborative web development tool used as a live result playground.
 - [StackBlitz](https://stackblitz.com/)
   - : StackBlitz is another online playground/debugging tool, which can host and deploy full-stack applications using React, Angular, etc.
 - [RunJS](https://runjs.app/)

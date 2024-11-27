@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
-Manually running tests on several browsers and devices, several times per day, can get tedious, and time-consuming. To handle this efficiently, you should become familiar with automation tools. In this article, we look at what is available, how to use task runners, and how to use the basics of commercial browser test automation apps such as LambdaTest, Sauce Labs, BrowserStack, and TestingBot.
+Manually running tests on several browsers and devices, several times per day, can get tedious, and time-consuming. To handle this efficiently, you should become familiar with automation tools. In this article, we look at what is available, how to use task runners, and how to use the basics of commercial browser test automation apps such as Sauce Labs, BrowserStack, and TestingBot.
 
 <table>
   <tbody>
@@ -33,7 +33,7 @@ Throughout this module we have detailed loads of different ways in which you can
 We agree — testing all the things we've looked at in previous articles manually can be a real pain. Fortunately, there are tools to help us automate some of this pain away. There are two main ways in which we can automate the tests we've been talking about in this module:
 
 1. Use a task runner such as [Grunt](https://gruntjs.com/) or [Gulp](https://gulpjs.com/), or [npm scripts](https://docs.npmjs.com/misc/scripts/) to run tests and clean up code during your build process. This is a great way to perform tasks like linting and minifying code, adding in CSS prefixes or transpiling nascent JavaScript features for maximum cross-browser reach, and so on.
-2. Use a browser automation system like [Selenium](https://www.selenium.dev/) to run specific tests on installed browsers and return results, alerting you to failures in browsers as they crop up. Commercial cross-browser testing apps like [Sauce Labs](https://saucelabs.com/) and [BrowserStack](https://www.browserstack.com/) are based on Selenium, but allow you to access their set up remotely using a simple interface, saving you the hassle of setting up your own testing system.
+2. Use a browser automation system like [Selenium](https://www.selenium.dev/) to run specific tests on installed browsers and return results, alerting you to failures in browsers as they crop up. Commercial cross-browser testing apps like [Sauce Labs](https://saucelabs.com/) and [BrowserStack](https://www.browserstack.com/) are based on Selenium, but allow you to access their set up remotely using an interface, saving you the hassle of setting up your own testing system.
 
 We will look at how to set up your own Selenium-based testing system in the next article. In this article, we'll look at how to set up a task runner, and use the basic functionality of commercial systems like the ones mentioned above.
 
@@ -46,25 +46,11 @@ As we said above, you can drastically speed up common tasks such as linting and 
 
 ### Setting up Node and npm
 
-Most tools these days are based on {{Glossary("Node.js")}}, so you'll need to install it from [nodejs.org](https://nodejs.org/):
+Most tools these days are based on {{Glossary("Node.js")}}, so you'll need to install it along with its counterpart package manager, [`npm`](https://www.npmjs.com/):
 
-1. Download the installer for your system from the above site. (If you already have Node and npm installed, jump to point 4)
-2. Install it like you would any other program. Note that Node comes with [Node Package Manager](https://www.npmjs.com/) (npm), which allows you to easily install packages, share your own packages with others, and run useful scripts on your projects.
-3. Once the install completes, test that node is installed by typing the following into the terminal, which returns the installed versions of Node and npm:
-
-   ```bash
-   node -v
-   npm -v
-   ```
-
-4. If you've got Node/npm already installed, you should update them to their latest versions. To update Node, the most reliable way is to download and install an updated installer package from their website (see link above). To update npm, use the following command in your terminal:
-
-   ```bash
-   npm install npm@latest -g
-   ```
-
-> [!NOTE]
-> If the above command fails with permissions errors, [Fixing npm permissions](https://docs.npmjs.com/getting-started/fixing-npm-permissions/) should sort you out.
+1. The easiest way to install and update Node.js and `npm` is via a node version manager: Follow the instructions at [Installing Node](/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment#installing_node) to do so.
+2. Make sure to [test that your installation was successful](/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment#testing_your_nodejs_and_npm_installation) before continuing.
+3. If you previously installed Node.js/`npm`, you should update them to their latest versions. This can be done by using the node version manager to install the latest LTS versions (refer again to the linked instructions above).
 
 To start using Node/npm-based packages on your projects, you need to set up your project directories as npm projects. This is easy to do.
 
@@ -339,39 +325,224 @@ There are many other task runners available. We certainly aren't trying to say t
 
 Now let's look at commercial third-party browser testing services and what they can do for us.
 
-The basic premise with such applications is that the company that runs each one has a huge server farm that can run many different tests. When you use this service, you provide a URL of the page you want to test along with information, such as what browsers you want it tested in. The app then configures a new VM with the OS and browser you specified, and returns the test results in the form of screenshots, videos, log files, text, etc.
+When you use these kinds of services, you provide a URL of the page you want to test along with information, such as what browsers you want it tested in. The app then configures a new VM with the OS and browser you specified, and returns the test results in the form of screenshots, videos, log files, text, etc. This is very useful, and way more convenient than having to set up all the OS/browser combinations by yourself.
 
 You can then step up a gear, using an API to access functionality programmatically, which means that such apps can be combined with task runners, such as your own local Selenium environments and others, to create automated tests.
 
 > [!NOTE]
-> There are other commercial browser testing systems available but in this article, we'll focus on LambdaTest, Sauce Labs, and BrowserStack. We're not saying that these are necessarily the best tools available, but they are good ones that are simple for beginners to get up and running with.
+> There are other commercial browser testing systems available but in this article, we'll focus on BrowserStack, Sauce Labs, and TestingBot. We're not saying that these are necessarily the best tools available, but they are good ones that are simple for beginners to get up and running with.
 
-### LambdaTest
+### BrowserStack
 
-#### Getting started with LambdaTest
+#### Getting started with BrowserStack
 
-1. Let's get started by [signing up on LambdaTest](https://accounts.lambdatest.com/register) for free.
+To get started:
+
+1. Create a [BrowserStack trial account](https://www.browserstack.com/users/sign_up).
 2. Sign in. This should happen automatically after you verify your email address.
-
-> [!NOTE]
-> Unlike other cloud-based cross browser testing service providers, LambdaTest offers a freemium account where you get lifetime access to their platform. The only difference between their premium and their freemium plan is on the amount of consumption. For automation testing through their Selenium Grid, LambdaTest offers 60 minutes per month of free testing.
+3. Click the _Live_ link in the top nav menu to go to Live Manual Testing.
 
 #### The basics: Manual tests
 
-Once you sign in to LambdaTest, you will be routed to the LambdaTest Dashboard. The dashboard will provide you details related to how many minutes you have consumed, how many concurrent sessions are running, your total number of tests to date, and more.
+The BrowserStack Live dashboard allows you to choose what device and browser you want to test on — platforms on the left, devices on the right. Select a device to see the choice of browsers available on that device.
 
-1. To start off with manual testing you need to select the **"Real Time Testing"** tab from the left navigation menu.
-   ![LambdaTest Dashboard](lambdatest-dashboard.png)
-2. As you click on the **Real Time Testing** you will be directed to a screen where you can choose the browser configuration, browser version, OS, and screen resolution with which you want to test your website.
-   ![Real Time Testing](mark-as-bug-1.png)
-3. As you click on the Start button, a loading screen will appear, providing you with a VM (Virtual Machine) based on your configurations. Once loaded, you can perform live, interactive cross-browser testing with a website.
-   [![Mark as bug](mark-as-bug-2.png)](https://web.archive.org/web/20210608014707if_/https://www.lambdatest.com/support/docs/wp-content/uploads/2019/03/mark-as-bug-2.png)
-   If you notice an issue with the UI, then you can share it with your colleagues by capturing a screenshot of your VM with the screenshot button. You can also record a video of your test session by hitting the recorder button in your test session.
-4. With the in-built image editor, highlight your screenshot before you push it to your colleagues.![Highlight a bug](mark-as-bug-3.png)
-5. Using the mark as bug button you can push bugs to numerous third-party tools such as Jira, Asana, Trello, and more. That way you can log a bug directly from your test session on LambdaTest to your project management instance. Check out all the [third-party LambdaTest integrations](https://www.lambdatest.com/integrations).
+![Test Choices](browserstack-test-choices-sized.png)
 
-> [!NOTE]
-> All the videos and images captured inside a test session are captured inside the gallery, test logs, and issue tracker at LambdaTest.
+Clicking on one of those browser icons will load up your choice of platform, device, and browser — choose one now, and give it a try.
+
+![Test Devices](browserstack-test-device-sized.png)
+
+You can enter URLs into the address bar, scroll up and down by dragging with the mouse, and use appropriate gestures (for example, pinch/zoom, two fingers to scroll) on the touchpads of supporting devices like MacBooks. Not all features are available on all devices.
+
+You'll also see a menu that allows you to control the session.
+
+![Test Menu](browserstack-test-menu-sized.png)
+
+The available features vary depending on what browser is loaded, and can include controls for:
+
+- Displaying information on the current browser
+- Switching to other browsers
+- Testing localhost URLs
+- Setting zoom level and toggling orientation
+- Saving and loading bookmarks
+- Capturing/annotating screenshots and filing bug reports
+- Accessing browser DevTools
+- Changing reported location
+- Throttling the network
+- Accessing screen readers
+
+#### Advanced: The BrowserStack API
+
+BrowserStack also has a [restful API](https://www.browserstack.com/docs/automate/api-reference/selenium/introduction) that allows you to programmatically retrieve details of your account plan, sessions, builds, etc.
+
+Let's have a brief look at how we'd access the API using Node.js.
+
+1. First, set up a new npm project to test this out, as detailed in [Setting up Node and npm](#setting_up_node_and_npm). Use a different directory name than before, like `bstack-test` for example.
+2. Create a new file inside your project root called `call_bstack.js` and give it the following content:
+
+   ```js
+   const axios = require("axios");
+
+   const bsUser = "BROWSERSTACK_USERNAME";
+   const bsKey = "BROWSERSTACK_ACCESS_KEY";
+   const baseUrl = `https://${bsUser}:${bsKey}@www.browserstack.com/automate/`;
+
+   function getPlanDetails() {
+     axios.get(`${baseUrl}plan.json`).then((response) => {
+       console.log(response.data);
+     });
+     /* Response:
+       {
+         automate_plan: <string>,
+         terminal_access: <string>.
+         parallel_sessions_running: <int>,
+         team_parallel_sessions_max_allowed: <int>,
+         parallel_sessions_max_allowed: <int>,
+         queued_sessions: <int>,
+         queued_sessions_max_allowed: <int>
+       }
+       */
+   }
+
+   getPlanDetails();
+   ```
+
+3. Replace the placeholders for BrowserStack username and access key with your actual values. These can be retrieved from your [BrowserStack Account & Profile Details](https://www.browserstack.com/accounts/profile/details), under the _Authentication & Security_ section.
+4. Install the [axios](https://www.npmjs.com/package/axios) module we are using in the code to handle sending HTTP requests by running the following command in your terminal (we chose axios because it is simple, popular, and well-supported):
+
+   ```bash
+   npm install axios
+   ```
+
+5. Make sure your JavaScript file is saved, and run it by executing the following command in your terminal. You should see an object printed to the terminal containing your BrowserStack plan details.
+
+   ```bash
+   node call_bstack
+   ```
+
+Below we've also provided some other ready-made functions you might find useful when working with the BrowserStack restful API.
+
+This function returns summary details of all automated builds previously created (see the next article for [BrowserStack automated test details](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment#browserstack)):
+
+```js
+function getBuilds() {
+  axios.get(`${baseUrl}builds.json`).then((response) => {
+    console.log(response.data);
+  });
+
+  /* Response:
+  [
+    {
+      automation_build: {
+        name: <string>,
+        hashed_id: <string>,
+        duration: <int>,
+        status: <string>,
+        build_tag: <string>,
+        public_url: <string>
+      }
+    },
+    {
+      automation_build: {
+        name: <string>,
+        hashed_id: <string>,
+        duration: <int>,
+        status: <string>,
+        build_tag: <string>,
+        public_url: <string>
+      }
+    },
+    // …
+  ]
+  */
+}
+```
+
+This function returns details on the specific sessions for a particular build:
+
+```js
+function getSessionsInBuild(build) {
+  const buildId = build.automation_build.hashed_id;
+  axios.get(`${baseUrl}builds/${buildId}/sessions.json`).then((response) => {
+    console.log(response.data);
+  });
+  /* Response:
+  [
+    {
+      automation_session: {
+        name: <string>,
+        duration: <int>,
+        os: <string>,
+        os_version: <string>,
+        browser_version: <string>,
+        browser: <string>,
+        device: <string>,
+        status: <string>,
+        hashed_id: <string>,
+        reason: <string>,
+        build_name: <string>,
+        project_name: <string>,
+        logs: <string>,
+        browser_url: <string>,
+        public_url: <string>,
+        appium_logs_url: <string>,
+        video_url: <string>,
+        browser_console_logs_url: <string>,
+        har_logs_url: <string>,
+        selenium_logs_url: <string>
+      }
+    },
+    {
+      automation_session: {
+        // …
+      }
+    },
+    // …
+  ]
+  */
+}
+```
+
+The following function returns the details for one particular session:
+
+```js
+function getSessionDetails(session) {
+  const sessionId = session.automation_session.hashed_id;
+  axios.get(`${baseUrl}sessions/${sessionId}.json`).then((response) => {
+    console.log(response.data);
+  });
+  /* Response:
+  {
+    automation_session: {
+      name: <string>,
+      duration: <int>,
+      os: <string>,
+      os_version: <string>,
+      browser_version: <string>,
+      browser: <string>,
+      device: <string>,
+      status: <string>,
+      hashed_id: <string>,
+      reason: <string>,
+      build_name: <string>,
+      project_name: <string>,
+      logs: <string>,
+      browser_url: <string>,
+      public_url: <string>,
+      appium_logs_url: <string>,
+      video_url: <string>,
+      browser_console_logs_url: <string>,
+      har_logs_url: <string>,
+      selenium_logs_url: <string>
+    }
+  }
+  */
+}
+```
+
+#### Advanced: Automated tests
+
+We'll cover [running automated BrowserStack tests](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment#browserstack) in the next article.
 
 ### Sauce Labs
 
@@ -418,7 +589,7 @@ Let's have a brief look at how we'd access the API using Node.js and [node-sauce
    npm install saucelabs
    ```
 
-3. Create a new file inside your project root called `call_sauce.js`. give it the following contents:
+3. Create a new file inside your project root called `call_sauce.js`. Give it the following contents:
 
    ```js
    const SauceLabs = require("saucelabs").default;
@@ -452,229 +623,6 @@ Let's have a brief look at how we'd access the API using Node.js and [node-sauce
 #### Advanced: Automated tests
 
 We'll cover actually running automated Sauce Lab tests in the next article.
-
-### BrowserStack
-
-#### Getting started with BrowserStack
-
-Let's get started with a BrowserStack Trial.
-
-1. Create a [BrowserStack trial account](https://www.browserstack.com/users/sign_up).
-2. Sign in. This should happen automatically after you verify your email address.
-3. When you first sign in, you should be on the Live testing page; if not, click the _Live_ link in the top nav menu.
-4. If you are on Firefox or Chrome, you'll be prompted to Install a browser extension in a dialog titled "Enable Local Testing" — click the _Install_ button to proceed. On other browsers you'll still be able to use some of the features (generally via Flash), but you might not get the full experience.
-
-#### The basics: Manual tests
-
-The BrowserStack Live dashboard allows you to choose what device and browser you want to test on — Platforms in the left column, devices on the right. When you mouse over or click on each device, you get a choice of browsers available on that device.
-
-![Test Choices](browserstack-test-choices-sized.png)
-
-Clicking on one of those browser icons will load up your choice of platform/device/browser — choose one now, and give it a try.
-
-![Test Devices](browserstack-test-device-sized.png)
-
-> [!NOTE]
-> The blue device icon next to some of the mobile device choices signals that you will be testing on a real device; choices without that icon will be run on an emulator.
-
-You'll find that you can enter URLs into the address bar, and use the other controls like you'd expect on a real device. You can even do things like copy and paste from the device to your clipboard, scroll up and down by dragging with the mouse, or use appropriate gestures (e.g. pinch/zoom, two fingers to scroll) on the touchpads of supporting devices (e.g. MacBook). Note that not all features are available on all devices.
-
-You'll also see a menu that allows you to control the session.
-
-![Test Menu](browserstack-test-menu-sized.png)
-
-The features here are as follows:
-
-- _Switch_ — Change to another platform/device/browser combination.
-- Orientation (looks like a Reload icon) — Switch orientation between portrait and landscape.
-- Fit to screen (looks like a full screen icon) — Fill the testing areas as much as possible with the device.
-- Capture a bug (looks like a camera) — Takes a screenshot, then allows you to annotate and save it.
-- Issue tracker (looks like a deck of cards) — View previously captured bugs/screenshots.
-- Settings (cog icon) — Allows you to alter general settings for the session.
-- Help (question mark) — Accesses help/support functions.
-- _Devtools_ — Allows you to use your browser's devtools to directly debug or manipulate the page being shown in the test browser. This currently only works when testing the Safari browser on iOS devices.
-- _Device info_ — Displays information about the testing device.
-- _Features_ — Shows you what features the current configuration supports, e.g. copy to clipboard, gesture support, etc.
-- _Stop_ — Ends the session.
-
-> [!NOTE]
-> This is already very useful, and way more convenient than having to set up all these emulators and virtual machines by yourself.
-
-#### Other basic features
-
-If you go back to the main BrowserStack page, you'll find a couple of other useful basic features under the _More_ menu option:
-
-- _Responsive_: Enter a URL and press _Generate_, and BrowserStack will load that URL on multiple devices with different viewport sizes. Within each device you can further adjust settings like monitor size, to get a good idea of how your site's layout works across different form factors.
-- _Screenshots_: Enter a URL, choose the browsers/devices/platforms you are interested in, then press _Generate screenshots_ — BrowserStack will take screenshots of your site in all those different browsers then make them available to you to view and download.
-
-#### Advanced: The BrowserStack API
-
-BrowserStack also has a [restful API](https://www.browserstack.com/docs/automate/api-reference/selenium/introduction) that allows you to programmatically retrieve details of your account plan, sessions, builds, etc.
-
-It has several clients available to allow you to make calls to the API using your favorite environment, be it PHP, Java, Node.js, etc.
-
-Let's have a brief look at how we'd access the API using Node.js.
-
-1. First, set up a new npm project to test this out, as detailed in [Setting up Node and npm](#setting_up_node_and_npm). Use a different directory name than before, like `bstack-test` for example.
-2. Create a new file inside your project root called `call_bstack.js`. give it the following contents:
-
-   ```js
-   const request = require("request");
-
-   const bsUser = "BROWSERSTACK_USERNAME";
-   const bsKey = "BROWSERSTACK_ACCESS_KEY";
-   const baseUrl = `https://${bsUser}:${bsKey}@www.browserstack.com/automate/`;
-
-   function getPlanDetails() {
-     request({ uri: `${baseUrl}plan.json` }, (err, res, body) => {
-       console.log(JSON.parse(body));
-     });
-     /* Response:
-       {
-         automate_plan: <string>,
-         parallel_sessions_running: <int>,
-         team_parallel_sessions_max_allowed: <int>,
-         parallel_sessions_max_allowed: <int>,
-         queued_sessions: <int>,
-         queued_sessions_max_allowed: <int>
-       }
-     */
-   }
-
-   getPlanDetails();
-   ```
-
-3. You'll need to fill in your BrowserStack username and API key in the indicated places. These can be retrieved from your [BrowserStack Account & Profile Details](https://www.browserstack.com/accounts/profile/details), under the Authentication & Security section. Fill these in now.
-4. Make sure everything is saved, and run your file like so:
-
-   ```bash
-   node call_bstack
-   ```
-
-Below we've also provided some other ready-made functions you might find useful when working with the BrowserStack restful API.
-
-```js
-function getBuilds() {
-  request({ uri: `${baseUrl}builds.json` }, (err, res, body) => {
-    console.log(JSON.parse(body));
-  });
-  /* Response:
-  [
-    {
-      automation_build: {
-        name: <string>,
-        duration: <int>,
-        status: <string>,
-        hashed_id: <string>
-      }
-    },
-    {
-      automation_build: {
-        name: <string>,
-        duration: <int>,
-        status: <string>,
-        hashed_id: <string>
-      }
-    },
-    // …
-  ]
-  */
-}
-
-function getSessionsInBuild(build) {
-  const buildId = build.automation_build.hashed_id;
-  request(
-    { uri: `${baseUrl}builds/${buildId}/sessions.json` },
-    (err, res, body) => {
-      console.log(JSON.parse(body));
-    },
-  );
-  /* Response:
-  [
-    {
-      automation_session: {
-        name: <string>,
-        duration: <int>,
-        os: <string>,
-        os_version: <string>,
-        browser_version: <string>,
-        browser: <string>,
-        device: <string>,
-        status: <string>,
-        hashed_id: <string>,
-        reason: <string>,
-        build_name: <string>,
-        project_name: <string>,
-        logs: <string>,
-        browser_url: <string>,
-        public_url: <string>,
-        video_url: <string>,
-        browser_console_logs_url: <string>,
-        har_logs_url: <string>
-      }
-    },
-    {
-      automation_session: {
-        name: <string>,
-        duration: <int>,
-        os: <string>,
-        os_version: <string>,
-        browser_version: <string>,
-        browser: <string>,
-        device: <string>,
-        status: <string>,
-        hashed_id: <string>,
-        reason: <string>,
-        build_name: <string>,
-        project_name: <string>,
-        logs: <string>,
-        browser_url: <string>,
-        public_url: <string>,
-        video_url: <string>,
-        browser_console_logs_url: <string>,
-        har_logs_url: <string>
-      }
-    },
-    // …
-  ]
-  */
-}
-
-function getSessionDetails(session) {
-  const sessionId = session.automation_session.hashed_id;
-  request({ uri: `${baseUrl}sessions/${sessionId}.json` }, (err, res, body) => {
-    console.log(JSON.parse(body));
-  });
-  /* Response:
-  {
-    automation_session: {
-      name: <string>,
-      duration: <int>,
-      os: <string>,
-      os_version: <string>,
-      browser_version: <string>,
-      browser: <string>,
-      device: <string>,
-      status: <string>,
-      hashed_id: <string>,
-      reason: <string>,
-      build_name: <string>,
-      project_name: <string>,
-      logs: <string>,
-      browser_url: <string>,
-      public_url: <string>,
-      video_url: <string>,
-      browser_console_logs_url: <string>,
-      har_logs_url: <string>
-    }
-  }
-  */
-}
-```
-
-#### Advanced: Automated tests
-
-We'll cover actually running automated BrowserStack tests in the next article.
 
 ### TestingBot
 
@@ -719,7 +667,7 @@ Below is an example on how to interact with the TestingBot API with the NodeJS c
    npm install testingbot-api
    ```
 
-3. Create a new file inside your project root called `tb.js`. give it the following contents:
+3. Create a new file inside your project root called `tb.js`. Give it the following contents:
 
    ```js
    const TestingBot = require("testingbot-api");

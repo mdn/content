@@ -13,10 +13,10 @@ The **`console.warn()`** static method outputs a warning message to the console 
 ## Syntax
 
 ```js-nolint
-warn(val1)
-warn(val1, /* …, */ valN)
-warn(msg)
-warn(msg, subst1, /* …, */ substN)
+console.warn(val1)
+console.warn(val1, /* …, */ valN)
+console.warn(msg)
+console.warn(msg, subst1, /* …, */ substN)
 ```
 
 ### Parameters
@@ -45,5 +45,5 @@ None ({{jsxref("undefined")}}).
 ## See also
 
 - [Microsoft Edge's documentation for `console.warn()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#warn)
-- [Node.JS documentation for `console.warn()`](https://nodejs.org/docs/latest/api/console.html#consolewarndata-args)
+- [Node.js documentation for `console.warn()`](https://nodejs.org/docs/latest/api/console.html#consolewarndata-args)
 - [Google Chrome's documentation for `console.warn()`](https://developer.chrome.com/docs/devtools/console/api/#warn)

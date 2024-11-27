@@ -34,7 +34,7 @@ Using an `::after` pseudo-element to add content is discouraged, as it is not re
 
 ## Examples
 
-### Simple usage
+### Basic usage
 
 Let's create two classes: one for boring paragraphs and one for exciting ones. We can use these classes to add pseudo-elements to the end of paragraphs.
 
@@ -51,18 +51,20 @@ Let's create two classes: one for boring paragraphs and one for exciting ones. W
 ```css
 .exciting-text::after {
   content: " <- EXCITING!";
-  color: green;
+  color: darkgreen;
+  font-weight: bolder;
 }
 
 .boring-text::after {
   content: " <- BORING";
-  color: red;
+  color: darkviolet;
+  font-weight: bolder;
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample('Simple_usage', 500, 150)}}
+{{EmbedLiveSample('Basic_usage', 500, 150)}}
 
 ### Decorative example
 

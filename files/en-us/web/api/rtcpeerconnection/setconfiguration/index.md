@@ -59,7 +59,7 @@ In this example, it has already been determined that ICE restart is needed, and 
 const restartConfig = {
   iceServers: [
     {
-      urls: "turn:asia.myturnserver.net",
+      urls: "turn:asia.turn-server.net",
       username: "allie@oopcode.com",
       credential: "topsecretpassword",
     },

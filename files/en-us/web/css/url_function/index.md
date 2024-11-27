@@ -15,7 +15,7 @@ The **`url()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Fu
 > In CSS Level 1, the `url()` functional notation described only true URLs. In CSS Level 2, the definition of `url()` was extended to describe any URI, whether a URL or a URN. Confusingly, this meant that `url()` could be used to create a `<uri>` CSS data type. This change was not only awkward but, debatably, unnecessary, since URNs are almost never used in actual CSS. To alleviate the confusion, CSS Level 3 returned to the narrower, initial definition. Now, `url()` denotes only true `<url>`s.
 
 ```css
-/* Simple usage */
+/* Basic usage */
 url("https://example.com/images/myImg.jpg");
 url('https://example.com/images/myImg.jpg');
 url(https://example.com/images/myImg.jpg);
@@ -26,10 +26,10 @@ url(#IDofSVGpath);
 /* associated properties */
 background-image: url("star.gif");
 list-style-image: url('../images/bullet.jpg');
-content: url("pdficon.jpg");
-cursor: url(mycursor.cur);
+content: url("my-icon.jpg");
+cursor: url(my-cursor.cur);
 border-image-source: url(/media/diamonds.png);
-src: url('fantasticfont.woff');
+src: url('fantastic-font.woff');
 offset-path: url(#path);
 mask-image: url("masks.svg#mask1");
 

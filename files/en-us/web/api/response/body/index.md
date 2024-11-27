@@ -6,13 +6,13 @@ page-type: web-api-instance-property
 browser-compat: api.Response.body
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`body`** read-only property of the {{domxref("Response")}} interface is a {{domxref("ReadableStream")}} of the body contents.
 
 ## Value
 
-A {{domxref("ReadableStream")}}, or else [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) for any `Response` object [constructed](/en-US/docs/Web/API/Response/Response) with a null [`body`](/en-US/docs/Web/API/Response/Response#body) property, or for any actual [HTTP response](/en-US/docs/Web/HTTP/Messages#http_responses) that has no [body](/en-US/docs/Web/HTTP/Messages#body_2).
+A {{domxref("ReadableStream")}}, or else [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) for any `Response` object [constructed](/en-US/docs/Web/API/Response/Response) with a null [`body`](/en-US/docs/Web/API/Response/Response#body) property, or for any actual [HTTP response](/en-US/docs/Web/HTTP/Messages#http_responses) that has no [body](/en-US/docs/Web/HTTP/Messages#response_body).
 
 The stream is a [readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams), which supports zero-copy reading using a {{domxref("ReadableStreamBYOBReader")}}.
 

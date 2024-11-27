@@ -2,9 +2,9 @@
 title: r
 slug: Web/SVG/Attribute/r
 page-type: svg-attribute
-spec-urls:
-  - https://svgwg.org/svg2-draft/geometry.html#R
-  - https://svgwg.org/svg2-draft/pservers.html#RadialGradientElementRAttribute
+browser-compat:
+  - svg.elements.circle.r
+  - svg.elements.radialGradient.r
 ---
 
 {{SVGRef}}
@@ -16,7 +16,7 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("circle")}}
 - {{SVGElement("radialGradient")}}
 
-When the value is set as a percentage, it refers to the normalized diagonal of the current SVG viewport.
+Percentages refer to the normalized diagonal of the current SVG viewport, which is calculated as <math><mfrac><msqrt><mrow><msup><mi>&lt;width&gt;</mi><mn>2</mn></msup><mo>+</mo><msup><mi>&lt;height&gt;</mi><mn>2</mn></msup></mrow></msqrt><msqrt><mn>2</mn></msqrt></mfrac></math>.
 
 ## Example
 
@@ -107,12 +107,6 @@ The gradient will be drawn such that the **100%** gradient stop is mapped to the
             >&#x3C;length></a
           ></strong
         >
-        |
-        <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
-        >
       </td>
     </tr>
     <tr>
@@ -129,3 +123,7 @@ The gradient will be drawn such that the **100%** gradient stop is mapped to the
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

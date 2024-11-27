@@ -134,7 +134,7 @@ elem.addEventListener("click", () => {
 In this case, the interaction occurs and the browser stores the source data when `Window.open()` is invoked, and the browser receives the response.
 
 > [!NOTE]
-> When setting up a [`click`](/en-US/docs/Web/API/Element/click_event) event like in the above example, it is advisable to set it on a control where a click is expected, such as a {{htmlelement("button")}} or {{htmlelement("a")}} element. This makes more sense semantically, and is more accessible to both screenreader and keyboard users.
+> When setting up a [`click`](/en-US/docs/Web/API/Element/click_event) event like in the above example, it is advisable to set it on a control where a click is expected, such as a {{htmlelement("button")}} or {{htmlelement("a")}} element. This makes more sense semantically, and is more accessible to both screen reader and keyboard users.
 
 > [!NOTE]
 > To register an attribution source via `open()`, it must be called with [transient activation](/en-US/docs/Glossary/Transient_activation) (i.e. inside a user interaction event handler such as `click`) within five seconds of user interaction.
@@ -167,7 +167,7 @@ The browser stores the attribution source data when the browser receives the res
 A {{htmlelement("script")}} example might look like so:
 
 ```html
-<script src="advertising-script.js" attributionsrc />
+<script src="advertising-script.js" attributionsrc></script>
 ```
 
 Or via the {{domxref("HTMLScriptElement.attributionSrc")}} property:

@@ -119,7 +119,7 @@ browser.runtime.onMessage.addListener(handleMessage);
 
 If you need to exchange messages between the content scripts running in the target window and a devtools document, it's a good idea to use the {{WebExtAPIRef("runtime.connect()")}} and {{WebExtAPIRef("runtime.onConnect")}} to set up a connection between the background page and the devtools document. The background page can then maintain a mapping between tab IDs and {{WebExtAPIRef("runtime.Port")}} objects, and use this to route messages between the two scopes.
 
-![The background page tab ID is connected to the content script on the content page by a runtime.sendmessage() object. The Port of the background page is connected to the port of the Devtools document by a port.postMessage() object.](devtools-content-scripts.png)
+![The background page tab ID is connected to the content script on the content page by a runtime.sendMessage() object. The Port of the background page is connected to the port of the DevTools document by a port.postMessage() object.](devtools-content-scripts.png)
 
 ## Limitations of the devtools APIs
 

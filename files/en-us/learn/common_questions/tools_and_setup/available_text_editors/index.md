@@ -246,7 +246,7 @@ Here are some popular editors:
         >
       </td>
       <td>
-        <a href="https://www.sublimetext.com/docs/">Official</a>,<a
+        <a href="https://www.sublimetext.com/docs/">Official</a>, <a
           href="https://docs.sublimetext.io/"
         >
           Unofficial</a
@@ -302,7 +302,7 @@ Here are some popular editors:
       <td>No</td>
     </tr>
     <tr>
-      <td><a href="https://www.vim.org/" rel="external">Vim</a></td>
+      <td><a href="https://www.vim.org/" rel="external">VIM</a></td>
       <td>
         <a
           href="https://vimdoc.sourceforge.net/htmldoc/uganda.html#license"
@@ -340,7 +340,7 @@ Here are some popular editors:
         <a href="https://code.visualstudio.com/docs/supporting/faq">FAQ</a>
       </td>
       <td><a href="https://code.visualstudio.com/docs">Documentation</a></td>
-      <td><a href="https://marketplace.visualstudio.com/VSCode">Yes</a></td>
+      <td><a href="https://marketplace.visualstudio.com/vscode">Yes</a></td>
     </tr>
   </tbody>
 </table>

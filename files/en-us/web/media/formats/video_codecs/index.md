@@ -1459,12 +1459,7 @@ However, few web browsers support MPEG-2 without the support of a plugin, and wi
     <tr>
       <th scope="row">Container support</th>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mpegmpeg-2">MPEG</a>,
-        MPEG-TS (MPEG Transport Stream),
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#quicktime"
-          >QuickTime</a
-        >
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpegmpeg-2">MPEG</a>, MPEG-TS (MPEG Transport Stream), <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>, <a href="/en-US/docs/Web/Media/Formats/Containers#quicktime">QuickTime</a>
       </td>
     </tr>
     <tr>
@@ -1477,27 +1472,20 @@ However, few web browsers support MPEG-2 without the support of a plugin, and wi
     <tr>
       <th scope="row">Supporting/Maintaining organization</th>
       <td>
-        <a href="https://mpeg.chiariglione.org/">MPEG</a> /
-        <a href="https://www.itu.int/">ITU</a>
+        <a href="https://mpeg.chiariglione.org/">MPEG</a> / <a href="https://www.itu.int/">ITU</a>
       </td>
     </tr>
     <tr>
       <th scope="row">Specification</th>
       <td>
-        <a href="https://www.itu.int/rec/T-REC-H.262"
-          >https://www.itu.int/rec/T-REC-H.262</a
-        ><br /><a href="https://www.iso.org/standard/61152.html"
-          >https://www.iso.org/standard/61152.html</a
-        >
+        <a href="https://www.itu.int/rec/T-REC-H.262">https://www.itu.int/rec/T-REC-H.262</a><br /><a href="https://www.iso.org/standard/61152.html">https://www.iso.org/standard/61152.html</a>
       </td>
     </tr>
     <tr>
       <th scope="row">Licensing</th>
       <td>
-        Proprietary; all patents have expired worldwide with the exception of in
-        Malaysia and the Philippines as of April 1, 2019, so MPEG-2 can be used
-        freely outside those two countries. Patents are licensed by
-        <a href="https://www.via-la.com/licensing-2/mpeg-2/">Via LA</a>.
+        Proprietary; all patents have expired worldwide with the exception of in Malaysia (as of October 1, 2024), so MPEG-2 can be used freely outside of Malaysia.
+        Patents are licensed by <a href="https://www.via-la.com/licensing-2/mpeg-2/">Via LA</a>.
       </td>
     </tr>
   </tbody>
@@ -1506,7 +1494,7 @@ However, few web browsers support MPEG-2 without the support of a plugin, and wi
 ### Theora
 
 > [!WARNING]
-> This code is no longer longer recommended.
+> This codec is no longer recommended.
 > It has extremely small usage, and support is being removed from browsers.
 
 **[Theora](https://en.wikipedia.org/wiki/Theora)**, developed by [Xiph.org](https://xiph.org/), is an open and free video codec which may be used without royalties or licensing. Theora is comparable in quality and compression rates to MPEG-4 Part 2 Visual and AVC, making it a very good if not top-of-the-line choice for video encoding. But its status as being free from any licensing concerns and its relatively low CPU resource requirements make it a popular choice for many software and web projects. The low CPU impact is particularly useful since there are no hardware decoders available for Theora.
@@ -1917,7 +1905,7 @@ This is the case even though some of the lossy codecs have a lossless mode avail
 To prepare video for archival purposes from outside your website or app, use a utility that performs compression on the original uncompressed video data. For example, the free [x264](https://www.videolan.org/developers/x264.html) utility can be used to encode video in [AVC](#avc_h.264) format using a very high bit rate:
 
 ```bash
-x264 --crf 18 -preset ultrafast --output outfilename.mp4 infile
+x264 --crf 18 -preset ultrafast --output out-file.mp4 infile
 ```
 
 While other codecs may have better best-case quality levels when compressing the video by a significant margin, their encoders tend to be slow enough that the nearly-lossless encoding you get with this compression is vastly faster at about the same overall quality level.

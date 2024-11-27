@@ -15,7 +15,7 @@ The aim of this skill test is to assess whether you understand how to [embed vid
 
 ## Task 1
 
-In this task, we want you to embed a simple audio file onto the page. You need to:
+In this task, we want you to embed an audio file onto the page. You need to:
 
 - Add the path to the audio file to an appropriate attribute to embed it on the page. The audio is called `audio.mp3`, and it is in a folder inside the current folder called `media`.
 - Add an attribute to make browsers display some default controls.
@@ -54,7 +54,7 @@ Try updating the live code below to recreate the finished example:
 
 In this task, we want you to:
 
-- Embed a PDF into the page. The PDF is called `mypdf.pdf`, and is contained in the `media` folder.
+- Embed a PDF into the page. The PDF is called `my-pdf.pdf`, and is contained in the `media` folder.
 - Go to a sharing site like YouTube or Google Maps, and embed a video or other media item into the page.
 
 Try updating the live code below to recreate the finished example:

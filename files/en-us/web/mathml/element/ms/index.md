@@ -13,15 +13,6 @@ The **`<ms>`** [MathML](/en-US/docs/Web/MathML) element represents a **string** 
 
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
 
-Some browsers may also support the following deprecated attributes and will render the content of the `<ms>` element surrounded by the specified opening and closing quotes:
-
-- `lquote`
-
-  - : The opening quote to enclose the content. The default value is `&quot;`.
-
-- `rquote`
-  - : The closing quote to enclose the content. The default value is `&quot;`.
-
 ## Examples
 
 ### Default rendering
@@ -43,6 +34,19 @@ Some browsers may also support the following deprecated attributes and will rend
 ```
 
 {{ EmbedLiveSample('legacy_quote_attributes', 700, 200, "", "") }}
+
+## Technical summary
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Roles">Implicit ARIA role</a>
+    </th>
+    <td>
+      None
+    </td>
+  </tr>
+</table>
 
 ## Specifications
 

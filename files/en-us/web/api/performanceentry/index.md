@@ -5,11 +5,11 @@ page-type: web-api-interface
 browser-compat: api.PerformanceEntry
 ---
 
-{{APIRef("Performance API")}} {{AvailableInWorkers}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`PerformanceEntry`** object encapsulates a single performance metric that is part of the browser's performance timeline.
 
-The Performance API offers built-in metrics which are specialized subclasses of `PerformanceEntry`. This includes entries for resource loading, event timing, {{Glossary("first input delay")}} (FID), and more.
+The Performance API offers built-in metrics which are specialized subclasses of `PerformanceEntry`. This includes entries for resource loading, event timing, and more.
 
 A performance entry can also be created by calling the {{domxref("Performance.mark()")}} or {{domxref("Performance.measure()")}} methods at an explicit point in an application. This allows you to add your own metrics to the performance timeline.
 

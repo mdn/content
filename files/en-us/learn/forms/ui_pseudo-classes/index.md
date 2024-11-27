@@ -39,15 +39,7 @@ The original pseudo-classes (from [CSS 2.1](https://www.w3.org/TR/CSS21/selector
 
 - {{cssxref(":hover")}}: Selects an element only when it is being hovered over by a mouse pointer.
 - {{cssxref(":focus")}}: Selects an element only when it is focused (i.e. by being tabbed to via the keyboard).
-- {{cssxref(":active")}}: selects an element only when it is being activated (i.e. while it is being clicked on, or when the
-
-  <kbd>Return</kbd>
-
-  /
-
-  <kbd>Enter</kbd>
-
-  key is being pressed down in the case of a keyboard activation).
+- {{cssxref(":active")}}: selects an element only when it is being activated (i.e. while it is being clicked on, or when the <kbd>Return</kbd> / <kbd>Enter</kbd> key is being pressed down in the case of a keyboard activation).
 
 These basic pseudo-classes should be familiar to you now. [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) provide several other pseudo-classes related to HTML forms. These provide several useful targeting conditions that you can take advantage of. We'll discuss these in more detail in the sections below, but briefly, the main ones we'll be looking at are:
 
@@ -223,7 +215,7 @@ You can target form controls using the {{cssxref(":valid")}} and {{cssxref(":inv
 - Controls whose current value is outside the range limits specified by the [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-US/docs/Web/HTML/Element/input#max) attributes are (matched with) `:invalid`, but also matched by {{cssxref(":out-of-range")}}, as you'll see later on.
 - There are some other ways to make an element matched by `:valid`/`:invalid`, as you'll see in the [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation) article. But we'll keep things simple for now.
 
-Let's go in and look at a simple example of `:valid`/`:invalid` (see [valid-invalid.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/valid-invalid.html) for the live version, and also check out the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/valid-invalid.html)).
+Let's go in and look at an example of `:valid`/`:invalid` (see [valid-invalid.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/valid-invalid.html) for the live version, and also check out the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/valid-invalid.html)).
 
 As in the previous example, we've got extra `<span>`s to generate content on, which we'll use to provide indicators of valid/invalid data:
 
@@ -357,8 +349,8 @@ Let's have a look at an example that does just this. First of all, the HTML is a
       <input id="address1" name="address1" type="text" required />
     </div>
     <div>
-      <label for="pcode1">Zip/postal code: </label>
-      <input id="pcode1" name="pcode1" type="text" required />
+      <label for="zip-code1">Zip/postal code: </label>
+      <input id="zip-code1" name="zip-code1" type="text" required />
     </div>
   </fieldset>
   <fieldset id="billing">
@@ -378,10 +370,10 @@ Let's have a look at an example that does just this. First of all, the HTML is a
       <input id="address2" name="address2" type="text" disabled required />
     </div>
     <div>
-      <label for="pcode2" class="billing-label disabled-label">
+      <label for="zip-code2" class="billing-label disabled-label">
         Zip/postal code:
       </label>
-      <input id="pcode2" name="pcode2" type="text" disabled required />
+      <input id="zip-code2" name="zip-code2" type="text" disabled required />
     </div>
   </fieldset>
 
@@ -397,12 +389,12 @@ input[type="text"]:disabled {
   border: 1px solid #ccc;
 }
 
-.disabled-label {
+label:has(+ :disabled) {
   color: #aaa;
 }
 ```
 
-We've directly selected the inputs we want to disable using `input[type="text"]:disabled`, but we also wanted to gray out the corresponding text labels. These weren't quite as easy to select, so we've used a class to provide them with that styling.
+We've directly selected the inputs we want to disable using `input[type="text"]:disabled`, but we also wanted to gray out the corresponding text labels. As the labels are right before their inputs, we selected those using the pseudo-class [`:has`](/en-US/docs/Web/CSS/:has).
 
 Now finally, we've used some JavaScript to toggle the disabling of the billing address fields:
 
@@ -422,20 +414,10 @@ document.addEventListener(
 function toggleBilling() {
   // Select the billing text fields
   const billingItems = document.querySelectorAll('#billing input[type="text"]');
-  // Select the billing text labels
-  const billingLabels = document.querySelectorAll(".billing-label");
 
-  // Toggle the billing text fields and labels
+  // Toggle the billing text fields
   for (let i = 0; i < billingItems.length; i++) {
     billingItems[i].disabled = !billingItems[i].disabled;
-
-    if (
-      billingLabels[i].getAttribute("class") === "billing-label disabled-label"
-    ) {
-      billingLabels[i].setAttribute("class", "billing-label");
-    } else {
-      billingLabels[i].setAttribute("class", "billing-label disabled-label");
-    }
   }
 }
 ```
@@ -448,7 +430,7 @@ You can see the example in action below (also [see it live here](https://mdn.git
 
 ### Read-only and read-write
 
-In a similar manner to `:disabled` and `:enabled`, the `:read-only` and `:read-write` pseudo-classes target two states that form inputs toggle between. Read-only inputs have their values submitted to the server, but the user can't edit them, whereas read-write means they can be edited — their default state.
+In a similar manner to `:disabled` and `:enabled`, the `:read-only` and `:read-write` pseudo-classes target two states that form inputs toggle between. As with disabled inputs, the user can't edit read-only inputs. However, unlike disabled inputs, read-only input values will be submitted to the server. Read-write means they can be edited — their default state.
 
 An input is set to read-only using the `readonly` attribute. As an example, imagine a confirmation page where the developer has sent the details filled in on previous pages over to this page, with the aim of getting the user to check them all in one place, add any final data that is needed, and then confirm the order by submitting. At this point, all the final form data can be sent to the server in one go.
 
@@ -463,7 +445,7 @@ A fragment of the HTML is as follows — note the readonly attribute:
 </div>
 ```
 
-If you try the live example, you'll see that the top set of form elements are not focusable, however, the values are submitted when the form is submitted. We've styled the form controls using the `:read-only` and `:read-write` pseudo-classes, like so:
+If you try the live example, you'll see that the top set of form elements are not editable, however, the values are submitted when the form is submitted. We've styled the form controls using the `:read-only` and `:read-write` pseudo-classes, like so:
 
 ```css
 input:read-only,
