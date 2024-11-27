@@ -171,8 +171,64 @@ The distinction between server and client XSS matters because effective defenses
 
 ## Defenses against XSS
 
-### Do you need an XSS defense?
+If you need to include external input in your site's pages, there are two main defenses against XSS:
 
-### Sanitizing input
+1. Using _output encoding_ and _sanitization_ to prevent input from becoming executable.
+2. Using a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) (CSP) to tell the browser which JavaScript or CSS resources it should be allowed to execute. This is a backup defense: if the first defense fails, so executable input makes it into a page, then a properly configured CSP should prevent the browser from executing it.
 
-### Implementing a CSP
+### Output encoding and sanitization
+
+_Output encoding_ is the process by which characters in the input string that potentially make it dangerous are escaped, so they are treated as text instead of being treated as part of a language like HTML.
+
+This is the appropriate choice when you want to treat input as text, for example, because your website uses templates that interpolate input into content, as in this [Django template](https://docs.djangoproject.com/en/5.1/ref/templates/language/) excerpt:
+
+```django
+<p>You searched for \{{ search_term }}.</p>
+```
+
+Most modern templating engines automatically perform output encoding. For example, if you pass `<img src=x onerror=alert('hello!')>` into the Django template above, it will be rendered as text:
+
+![Screenshot of Django template output with escaped HTML](django-output.png)
+
+One of the most important parts of preventing XSS attacks is to use a well-regarded templating engine which performs robust output encoding, and read its documentation to understand any caveats about the protection it offers.
+
+The browser uses different rules to process different parts of a web page — HTML elements and their content, HTML attributes, inline styles, inline scripts. These are called contexts, and the type of encoding that needs to be done is different depending on the context in which the input is being interpolated.
+
+What's safe in one context may be unsafe in another, and it's necessary to understand the context in which you are including untrusted content, and to implement any special handling that this demands.
+
+- **HTML contexts**: input inserted between the tags of most HTML elements (except for {{htmlelement("style")}} or {{htmlelement("script")}}) is in the HTML context, as in the example above, and the encoding applied by template engines is mostly concerned with this context.
+- **HTML attribute contexts**: inserting input as HTML attribute values is sometimes safe and sometimes not, depending on the attribute. In particular, event handler attributes like `onblur` are unsafe, as is the [`src`](/en-US/docs/Web/HTML/Element/iframe#src) attribute of the {{htmlelement("iframe")}} element.
+
+  It's important to quote placeholders for inserted attribute values, or an attacker my be able to insert an additional unsafe attribute in the value provided. For example, this template does not quote an inserted value:
+
+  ```django example-bad
+  <div class=\{{ my_class }}>...</div>
+  ```
+
+  An attacker can exploit this to inject an event handler attribute, by using input like `some_id onmouseover="alert('XSS!')"`. To prevent the attack, we can quote the placeholder:
+
+  ```django example-good
+    <div class="\{{ my_class }}">...</div>
+  ```
+
+- **JavaScript and CSS contexts**: inserting input inside {{htmlelement("script")}} or {{htmlelement("style")}} tags is almost always unsafe.
+
+Templating engines typically allow developers to disable output encoding, when developers want to insert content as HTML, not text. In this case it's up to the developer to ensure that the content is safe: for example, by sanitizing it.
+
+_Sanitization_ is the
+
+With all this in mind, we can list some principles for defending against XSS, when you have to include untrusted content in pages:
+
+- Sanitize any input that you can't encode
+
+### Trusted types
+
+### Deploying a CSP
+
+## See also
+
+- [Cross Site Scripting Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html) at [owasp.org](https://owasp.org/)
+
+<section id="Quick_links">
+{{ListSubpages("/en-US/docs/Web/Security", "1", "0", "1")}}
+</section>
