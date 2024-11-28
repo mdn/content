@@ -11,7 +11,7 @@ browser-compat: html.elements.input.type_datetime-local
 
 {{EmbedInteractiveExample("pages/tabbed/input-datetime-local.html", "tabbed-shorter")}}
 
-The control's UI varies in general from browser to browser. In browsers with no support, these degrade gracefully to simple [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text) controls.
+The control's UI varies in general from browser to browser. In browsers with no support, these degrade gracefully as if [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text) were set.
 
 The control is intended to represent _a local date and time_, not necessarily _the user's local date and time_. In other words, the input allows any valid combination of year, month, day, hour, and minute—even if such a combination is invalid in the user's local time zone (such as the one hour within a daylight saving time spring-forward transition gap).
 
@@ -174,7 +174,7 @@ input:valid + span::after {
 
 ### Basic uses of datetime-local
 
-The simplest use of `<input type="datetime-local">` involves a basic `<input>` and {{htmlelement("label")}} element combination, as seen below:
+The most basic use of `<input type="datetime-local">` involves a basic `<input>` and {{htmlelement("label")}} element combination, as seen below:
 
 ```html
 <form>

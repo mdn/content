@@ -16,7 +16,7 @@ This in turn allows the browser to increase or decrease the priority, and potent
 The property should be used sparingly, as excessive or incorrect prioritization can degrade performance.
 
 The fetch priority can be used to complement [preloading](/en-US/docs/Web/HTML/Attributes/rel/preload), allowing a developer to boost the priority of a resource ahead of less-impactful resources that are by default preloaded with a higher priority.
-For example, if a particular image significantly contributes to the website's {{glossary("Largest contentful paint")}} (LCP) it might be set to be preloaded and with a high fetch priority.
+For example, if a particular image significantly contributes to the website's {{glossary("Largest Contentful Paint")}} (LCP) it might be set to be preloaded and with a high fetch priority.
 
 Note that both the internal priority of any fetch operation, and the impact of `fetchPriority` on the priority, are entirely browser dependent.
 
