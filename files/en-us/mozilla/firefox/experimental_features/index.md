@@ -1348,17 +1348,17 @@ This includes: `SVGPathSegList`, [SVGPathElement.getPathSegAtLength()](/en-US/do
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>132</td>
+      <td>134</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>132</td>
+      <td>134</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Release</th>
-      <td>132</td>
+      <td>134</td>
       <td>No</td>
     </tr>
     <tr>
