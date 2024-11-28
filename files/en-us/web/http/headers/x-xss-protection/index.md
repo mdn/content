@@ -16,7 +16,7 @@ browser-compat: http.headers.X-XSS-Protection
 The HTTP **`X-XSS-Protection`** {{Glossary("response header")}} was a feature of Internet Explorer, Chrome and Safari that stopped pages from loading when they detected reflected cross-site scripting ({{Glossary("Cross-site_scripting", "XSS")}}) attacks.
 These protections are largely unnecessary in modern browsers when sites implement a strong {{HTTPHeader("Content-Security-Policy")}} that disables the use of inline JavaScript (`'unsafe-inline'`).
 
-In terms of web platform support:
+In terms of browser support:
 
 - Chrome has [removed their XSS Auditor](https://chromestatus.com/feature/5021976655560704)
 - Firefox has not, and [will not implement `X-XSS-Protection`](https://bugzil.la/528661)

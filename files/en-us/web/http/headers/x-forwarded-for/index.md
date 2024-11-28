@@ -9,7 +9,8 @@ status:
 {{HTTPSidebar}}
 
 The HTTP **`X-Forwarded-For`** (XFF) {{Glossary("request header")}} is a de-facto standard header for identifying the originating IP address of a client connecting to a web server through a {{Glossary("proxy server")}}.
-A standardized version of this header is the HTTP {{HTTPHeader("Forwarded")}} header.
+
+A standardized version of this header is the HTTP {{HTTPHeader("Forwarded")}} header, although it's much less frequently deployed.
 
 > [!WARNING]
 > Improper use of this header can be a security risk.
@@ -66,10 +67,6 @@ That's especially true if the final proxy is a load balancer which is part of th
 To provide a more useful client IP address to the server, the `X-Forwarded-For` request header is used.
 
 For detailed guidance on using `X-Forwarded-For`, see the [Parsing](#parsing) and [Selecting an IP address](#selecting_an_ip_address) sections.
-
-> [!NOTE]
-> The standardized `Forwarded` header may replace the `X-Forwarded-For` header, although you should verify that frameworks, middleware, and any third-party tools support it.
-> If upstream services rely on `X-Forwarded-*` headers, replacing them outright with `Forwarded` could lead to compatibility issues.
 
 ### Security and privacy concerns
 
@@ -148,7 +145,6 @@ Not part of any current specification. The standardized version of this header i
 
 ## See also
 
-- {{HTTPHeader("Forwarded")}}
-- {{HTTPHeader("X-Forwarded-Host")}}
-- {{HTTPHeader("X-Forwarded-Proto")}}
+- {{HTTPHeader("X-Forwarded-Host")}}, {{HTTPHeader("X-Forwarded-Proto")}} headers
 - {{HTTPHeader("Via")}}
+- {{HTTPHeader("Forwarded")}}

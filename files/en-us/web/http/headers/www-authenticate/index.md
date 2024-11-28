@@ -37,64 +37,74 @@ The client is expected to select the most secure of the challenges it understand
 
 ## Syntax
 
-At least one challenge must be specified.
-Multiple challenges may be specified, comma-separated, in a single header, or in individual headers:
+A comma-separated list of one or more authentication challenges:
 
 ```http
-// Challenges specified in single header
-WWW-Authenticate: challenge1, ..., challengeN
-
-// Challenges specified in multiple headers
-WWW-Authenticate: challenge1
-...
-WWW-Authenticate: challengeN
+WWW-Authenticate = #challenge
 ```
 
-A single challenge has the following format. Note that the scheme token (`<auth-scheme>`) is mandatory.
-The presence of `realm`, `token68` and any other parameters depends on the definition of the selected scheme.
+Where a `challenge` has the following syntax:
+
+```http
+challenge = <auth-scheme> [ 1*SP ( <token68> / #<auth-param> ) ]
+```
+
+Meaning the following variations are possible:
 
 ```http
 // Possible challenge formats (scheme dependent)
 WWW-Authenticate: <auth-scheme>
-WWW-Authenticate: <auth-scheme> realm=<realm>
-WWW-Authenticate: <auth-scheme> token68
-WWW-Authenticate: <auth-scheme> auth-param1=token1, ..., auth-paramN=auth-paramN-token
-WWW-Authenticate: <auth-scheme> realm=<realm> token68
-WWW-Authenticate: <auth-scheme> realm=<realm> token68 auth-param1=auth-param1-token , ..., auth-paramN=auth-paramN-token
-WWW-Authenticate: <auth-scheme> realm=<realm> auth-param1=auth-param1-token, ..., auth-paramN=auth-paramN-token
-WWW-Authenticate: <auth-scheme> token68 auth-param1=auth-param1-token, ..., auth-paramN=auth-paramN-token
+WWW-Authenticate: <auth-scheme> <realm>
+WWW-Authenticate: <auth-scheme> <token68>
+WWW-Authenticate: <auth-scheme> <auth-param>, …, <auth-param>
+WWW-Authenticate: <auth-scheme> <realm> <token68>
+WWW-Authenticate: <auth-scheme> <realm> <token68> <auth-param>, …, <auth-param>
+WWW-Authenticate: <auth-scheme> <realm> <auth-param>, …, <auth-param>
+WWW-Authenticate: <auth-scheme> <token68> <auth-param>, …, <auth-param>
 ```
 
-For example, [Basic authentication](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme) requires `realm` and allows for optional use of `charset` key, but does not support `token68`.
+The presence of `<realm>`, `<token68>` and any other parameters depends on the selected scheme.
+For example, [Basic authentication](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme) requires `<realm>` and allows for optional use of `charset` key, but does not support `<token68>`:
 
 ```http
-WWW-Authenticate: Basic realm=<realm>
-WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
+WWW-Authenticate: Basic <realm>
+WWW-Authenticate: Basic <realm>, charset="UTF-8"
+```
+
+Multiple challenges may be specified in a single header, or in separate `WWW-Authenticate` headers:
+
+```http
+// Multiple challenges specified in a single header
+WWW-Authenticate: challenge1, …, challengeN
+
+// Challenges in multiple headers
+WWW-Authenticate: challenge1
+…
+WWW-Authenticate: challengeN
 ```
 
 ## Directives
 
 - `<auth-scheme>`
-
-  - : The [Authentication scheme](/en-US/docs/Web/HTTP/Authentication#authentication_schemes). Some of the more common types are (case-insensitive): [`Basic`](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme), `Digest`, `Negotiate` and `AWS4-HMAC-SHA256`.
-
-    > [!NOTE]
-    > For more information/options see [HTTP Authentication > Authentication schemes](/en-US/docs/Web/HTTP/Authentication#authentication_schemes)
-
+  - : The [Authentication scheme](/en-US/docs/Web/HTTP/Authentication#authentication_schemes).
+    Some of the more common types are (case-insensitive): [`Basic`](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme), `Digest`, `Negotiate` and `AWS4-HMAC-SHA256`.
 - `<realm>` {{optional_inline}}
-  - : A string describing a protected area.
-    A realm allows a server to partition up the areas it protects (if supported by a scheme that allows such partitioning).
+  - : The string `realm` followed by `=` and a quoted string describing a protected area, for example `realm="staging environment"`.
+    A realm allows a server to partition the areas it protects (if supported by a scheme that allows such partitioning).
     Some clients show this value to the user to inform them about which particular credentials are required — though most browsers stopped doing so to counter phishing.
     The only reliably supported character set for this value is `us-ascii`.
     If no realm is specified, clients often display a formatted hostname instead.
 - `<token68>` {{optional_inline}}
-  - : A token that may be useful for some schemes. The token allows the 66 unreserved URI characters plus a few others.
+  - : A token that may be useful for some schemes.
+    The token allows the 66 unreserved URI characters plus a few others.
     According to the specification, it can hold a base64, base64url, base32, or base16 (hex) encoding, with or without padding, but excluding whitespace.
+- `<auth-param>`
+  - See below
 
-Other than `<auth-scheme>` and the key `realm`, authorization parameters are specific to each [authentication scheme](/en-US/docs/Web/HTTP/Authentication#authentication_schemes).
+Other than `auth-scheme` and the key `realm`, authorization parameters are specific to each [authentication scheme](/en-US/docs/Web/HTTP/Authentication#authentication_schemes).
 Generally you will need to check the relevant specifications for these (keys for a small subset of schemes are listed below).
 
-### Basic
+### Basic authentication
 
 - `<realm>`
   - : As [above](#realm).
@@ -104,7 +114,7 @@ Generally you will need to check the relevant specifications for these (keys for
     The only allowed value is the case-insensitive string "UTF-8".
     This does not relate to the encoding of the realm string.
 
-### Digest
+### Digest authentication
 
 - `<realm>` {{optional_inline}}
   - : String indicating which username/password to use.
@@ -141,11 +151,11 @@ Generally you will need to check the relevant specifications for these (keys for
 ### HTTP Origin-Bound Authentication (HOBA)
 
 - `<challenge>`
-  - : A set of pairs in the format of '\<len\>:\<value\>' concatenated together to be given to a client.
+  - : A set of pairs in the format of '`<len>`:`<value>`' concatenated together to be given to a client.
     The challenge is made of up a nonce, algorithm, origin, realm, key identifier, and the challenge.
 - `<max-age>`
   - : The number of seconds from the time the HTTP response is emitted for which responses to this challenge can be accepted.
-- `realm` {{optional_inline}}
+- `<realm>` {{optional_inline}}
   - : As above in the [directives](#directives) section.
 
 ## Examples
@@ -155,7 +165,7 @@ Generally you will need to check the relevant specifications for these (keys for
 A server that only supports basic authentication might have a `WWW-Authenticate` response header which looks like this:
 
 ```http
-WWW-Authenticate: Basic realm="Access to the staging site", charset="UTF-8"
+WWW-Authenticate: Basic realm="Staging server", charset="UTF-8"
 ```
 
 A user-agent receiving this header would first prompt the user for their username and password, and then re-request the resource: this time including the (encoded) credentials in the {{HTTPHeader("Authorization")}} header.
@@ -165,7 +175,7 @@ The {{HTTPHeader("Authorization")}} header might look like this:
 Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 ```
 
-For `"Basic"` authentication the credentials are constructed by first combining the username and the password with a colon (`aladdin:opensesame`), and then by encoding the resulting string in [`base64`](/en-US/docs/Glossary/Base64) (`YWxhZGRpbjpvcGVuc2VzYW1l`).
+For `Basic` authentication, the credentials are constructed by first combining the username and the password with a colon (`aladdin:opensesame`), and then by encoding the resulting string in [`base64`](/en-US/docs/Glossary/Base64) (`YWxhZGRpbjpvcGVuc2VzYW1l`).
 
 > [!NOTE]
 > See also [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) for examples on how to configure Apache or Nginx servers to password protect your site with HTTP basic authentication.

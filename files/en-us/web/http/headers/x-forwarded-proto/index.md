@@ -9,14 +9,11 @@ status:
 {{HTTPSidebar}}
 
 The HTTP **`X-Forwarded-Proto`** (XFP) {{Glossary("request header")}} is a de-facto standard header for identifying the protocol (HTTP or HTTPS) that a client used to connect to a {{Glossary("Proxy_server", "proxy")}} or load balancer.
-A standardized version of this header is the HTTP {{HTTPHeader("Forwarded")}} header.
 
 Server access logs contain the protocol used between the server and the load balancer, but not the protocol used between the client and the load balancer.
 To determine the protocol used between the client and the load balancer, the `X-Forwarded-Proto` request header can be used.
 
-> [!NOTE]
-> The standardized `Forwarded` header may replace the `X-Forwarded-Proto` header, although you should verify that frameworks, middleware, and any third-party tools support it.
-> If upstream services rely on `X-Forwarded-*` headers, replacing them outright with `Forwarded` could lead to compatibility issues.
+A standardized version of this header is the HTTP {{HTTPHeader("Forwarded")}} header, although it's much less frequently deployed.
 
 <table class="properties">
   <tbody>
@@ -71,6 +68,5 @@ Not part of any current specification. The standardized version of this header i
 
 ## See also
 
+- {{HTTPHeader("X-Forwarded-Host")}}, {{HTTPHeader("X-Forwarded-For")}} headers
 - {{HTTPHeader("Forwarded")}}
-- {{HTTPHeader("X-Forwarded-For")}}
-- {{HTTPHeader("X-Forwarded-Host")}}

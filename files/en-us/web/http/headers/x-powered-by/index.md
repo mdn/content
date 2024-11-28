@@ -32,7 +32,7 @@ X-Powered-By: <application>
 ## Directives
 
 - `<application>`
-  - : The server application or framework.
+  - : A string describing the server application or framework.
 
 ## Examples
 
@@ -50,6 +50,6 @@ Not part of any current specification.
 
 ## See also
 
-- {{HTTPHeader("Forwarded")}}
 - {{HTTPHeader("X-Forwarded-Host")}}, {{HTTPHeader("X-Forwarded-For")}}, {{HTTPHeader("X-Forwarded-Proto")}} headers
 - {{HTTPHeader("Via")}}
+- {{HTTPHeader("Forwarded")}}
