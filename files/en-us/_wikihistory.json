@@ -69300,23 +69300,6 @@
       "louisremi"
     ]
   },
-  "Web/API/Window/updateCommands": {
-    "modified": "2020-10-15T21:15:49.672Z",
-    "contributors": [
-      "mfuji09",
-      "lucian95",
-      "SphinxKnight",
-      "forivall",
-      "fscholz",
-      "MHasan",
-      "teoli",
-      "iamanupmenon",
-      "utkarsh_shah",
-      "Sheppy",
-      "Mgjbot",
-      "Maian"
-    ]
-  },
   "Web/API/Window/visualViewport": {
     "modified": "2020-10-15T21:57:59.692Z",
     "contributors": ["chrisdavidmills", "connorshea", "jpmedley"]
