@@ -2230,7 +2230,7 @@
 /en-US/docs/DOM/window.toolbar	/en-US/docs/Web/API/Window/toolbar
 /en-US/docs/DOM/window.top	/en-US/docs/Web/API/Window/top
 /en-US/docs/DOM/window.unescape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/unescape
-/en-US/docs/DOM/window.updateCommands	/en-US/docs/Web/API/Window/updateCommands
+/en-US/docs/DOM/window.updateCommands	/en-US/docs/Web/API/Window
 /en-US/docs/DOM/window.window	/en-US/docs/Web/API/Window/window
 /en-US/docs/DOM:CDATASection	/en-US/docs/Web/API/CDATASection
 /en-US/docs/DOM:CSS	/en-US/docs/Web/CSS/Reference
@@ -2652,7 +2652,7 @@
 /en-US/docs/DOM:window.toolbar	/en-US/docs/Web/API/Window/toolbar
 /en-US/docs/DOM:window.top	/en-US/docs/Web/API/Window/top
 /en-US/docs/DOM:window.unescape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/unescape
-/en-US/docs/DOM:window.updateCommands	/en-US/docs/Web/API/Window/updateCommands
+/en-US/docs/DOM:window.updateCommands	/en-US/docs/Web/API/Window
 /en-US/docs/DOM:window.window	/en-US/docs/Web/API/Window/window
 /en-US/docs/DOMParser	/en-US/docs/Web/API/DOMParser
 /en-US/docs/DOMTokenList.supports()	/en-US/docs/Web/API/DOMTokenList/supports
@@ -3369,7 +3369,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.statusbar	/en-US/docs/Web/API/Window/statusbar
 /en-US/docs/Document_Object_Model_(DOM)/window.toolbar	/en-US/docs/Web/API/Window/toolbar
 /en-US/docs/Document_Object_Model_(DOM)/window.unescape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/unescape
-/en-US/docs/Document_Object_Model_(DOM)/window.updateCommands	/en-US/docs/Web/API/Window/updateCommands
+/en-US/docs/Document_Object_Model_(DOM)/window.updateCommands	/en-US/docs/Web/API/Window
 /en-US/docs/Document_Object_Model_(DOM)/window.window	/en-US/docs/Web/API/Window/window
 /en-US/docs/Domain_name	/en-US/docs/Glossary/Domain_name
 /en-US/docs/DragDrop	/en-US/docs/Web/API/HTML_Drag_and_Drop_API
@@ -10599,6 +10599,7 @@
 /en-US/docs/Web/API/Window/transitionend_event	/en-US/docs/Web/API/Element/transitionend_event
 /en-US/docs/Web/API/Window/transitionrun_event	/en-US/docs/Web/API/Element/transitionrun_event
 /en-US/docs/Web/API/Window/transitionstart_event	/en-US/docs/Web/API/Element/transitionstart_event
+/en-US/docs/Web/API/Window/updateCommands	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/Window/vrdisplayblur_event	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/Window/vrdisplayfocus_event	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/Window/vrdisplaypointerrestricted_event	/en-US/docs/Web/API/Window
@@ -11327,7 +11328,7 @@
 /en-US/docs/Web/API/window.toolbar	/en-US/docs/Web/API/Window/toolbar
 /en-US/docs/Web/API/window.top	/en-US/docs/Web/API/Window/top
 /en-US/docs/Web/API/window.unescape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/unescape
-/en-US/docs/Web/API/window.updateCommands	/en-US/docs/Web/API/Window/updateCommands
+/en-US/docs/Web/API/window.updateCommands	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/window.window	/en-US/docs/Web/API/Window/window
 /en-US/docs/Web/API/window/onscroll	/en-US/docs/Web/API/Element/scroll_event
 /en-US/docs/Web/API/window/onscroll-temp	/en-US/docs/Web/API/Element/scroll_event
