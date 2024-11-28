@@ -12,6 +12,10 @@ browser-compat: api.SerialPort.close
 
 The **`SerialPort.close()`** method of the {{domxref("SerialPort")}} interface returns a {{jsxref("Promise")}} that resolves when the port closes.
 
+## Description
+
+`close()` closes the serial port if previously-locked {{domxref("SerialPort.readable")}} and {{domxref("SerialPort.writable")}} members are unlocked, meaning the `releaseLock()` methods have been called for their respective reader and writer. However, in some cases it is not that simple, for example when continuously reading data from a serial device using a loop. See [Close a serial port](https://developer.chrome.com/docs/capabilities/serial#close-port) for more guidance.
+
 ## Syntax
 
 ```js-nolint
