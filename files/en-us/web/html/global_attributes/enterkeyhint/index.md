@@ -59,7 +59,7 @@ The `enterkeyhint` attribute is an [enumerated](/en-US/docs/Glossary/Enumerated)
       <td>
         Typically meaning to take the user to the target of the text they typed.
       </td>
-      <td><kbd>Open</kbd></td>
+      <td><kbd>Go</kbd></td>
     </tr>
     <tr>
       <td><code>enterkeyhint="next"</code></td>
