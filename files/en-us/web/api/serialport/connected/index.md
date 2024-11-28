@@ -25,7 +25,21 @@ The following snippet invokes {{domxref("Serial.requestPort()")}} when the user 
 ```js
 requestPortButton.onclick = async () => {
   const port = await navigator.serial.requestPort();
-  log(`Requested serial port. Connected: ${port.connected}`);
+  console.log(`Requested serial port. Connected: ${port.connected}`);
+};
+```
+
+### Logging connection status on connect and disconnect
+
+You can use the following snippet to log the connection status when the {{domxref("SerialPort.connect_event", "connect")}} and {{domxref("SerialPort.disconnect_event", "disconnect")}} events fire:
+
+```js
+navigator.serial.onconnect = ({ target: port }) => {
+  console.log(`onconnect event fired. Connected: ${port.connected}`);
+};
+
+navigator.serial.ondisconnect = ({ target: port }) => {
+  console.log(`ondisconnect event fired. Connected: ${port.connected}`);
 };
 ```
 
