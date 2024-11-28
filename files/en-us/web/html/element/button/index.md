@@ -18,7 +18,28 @@ By default, HTML buttons are presented in a style resembling the platform the {{
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
 - `autofocus`
+
   - : This Boolean attribute specifies that the button should have input [focus](/en-US/docs/Web/API/HTMLElement/focus) when the page loads. **Only one element in a document can have this attribute.**
+
+- `command` {{experimental_inline}}
+
+  - : Specifies the action to be performed on an element being controlled by a control `<button>`, specified via the `commandfor` attribute. The possible values are:
+
+    - `"show-modal"`
+      - : The button will show a {{htmlelement("dialog")}} as modal. If the dialog is already modal, no action will be taken.
+    - `"close"`
+      - : The button will close a {{htmlelement("dialog")}} element. If the dialog is already closed, no action will be taken.
+    - `"show-popover"`
+      - : The button will show a hidden popover. If you try to show an already showing popover, no action will be taken. See {{domxref("Popover API", "Popover API", "", "nocode")}} for more details.
+    - `"hide-popover"`
+      - : The button will hide a showing popover. If you try to hide an already hidden popover, no action will be taken. See {{domxref("Popover API", "Popover API", "", "nocode")}} for more details.
+    - `"toggle-popover"`
+      - : The button will toggle a popover between showing and hidden. If the popover is hidden, it will be shown; if the popover is showing, it will be hidden. See {{domxref("Popover API", "Popover API", "", "nocode")}} for more details.
+    - Custom values
+      - : This attribute can represent custom values that are prefixed with a two hyphen characters (`--`). Buttons with a custom value will dispatch the {{domxref("CommandEvent")}} on the controlled element.
+
+- `commandfor` {{experimental_inline}}
+  - : Turns a {{htmlelement("button")}} element into a button, controlling the given interactive element; takes the ID of the element to control as its value.
 - [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled)
   - : This Boolean attribute prevents the user from interacting with the button: it cannot be pressed or focused.
 - `form`

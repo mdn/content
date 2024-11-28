@@ -33,7 +33,7 @@ Throughout this module we have detailed loads of different ways in which you can
 We agree — testing all the things we've looked at in previous articles manually can be a real pain. Fortunately, there are tools to help us automate some of this pain away. There are two main ways in which we can automate the tests we've been talking about in this module:
 
 1. Use a task runner such as [Grunt](https://gruntjs.com/) or [Gulp](https://gulpjs.com/), or [npm scripts](https://docs.npmjs.com/misc/scripts/) to run tests and clean up code during your build process. This is a great way to perform tasks like linting and minifying code, adding in CSS prefixes or transpiling nascent JavaScript features for maximum cross-browser reach, and so on.
-2. Use a browser automation system like [Selenium](https://www.selenium.dev/) to run specific tests on installed browsers and return results, alerting you to failures in browsers as they crop up. Commercial cross-browser testing apps like [Sauce Labs](https://saucelabs.com/) and [BrowserStack](https://www.browserstack.com/) are based on Selenium, but allow you to access their set up remotely using a simple interface, saving you the hassle of setting up your own testing system.
+2. Use a browser automation system like [Selenium](https://www.selenium.dev/) to run specific tests on installed browsers and return results, alerting you to failures in browsers as they crop up. Commercial cross-browser testing apps like [Sauce Labs](https://saucelabs.com/) and [BrowserStack](https://www.browserstack.com/) are based on Selenium, but allow you to access their set up remotely using an interface, saving you the hassle of setting up your own testing system.
 
 We will look at how to set up your own Selenium-based testing system in the next article. In this article, we'll look at how to set up a task runner, and use the basic functionality of commercial systems like the ones mentioned above.
 
@@ -369,7 +369,7 @@ The available features vary depending on what browser is loaded, and can include
 - Accessing browser DevTools
 - Changing reported location
 - Throttling the network
-- Accessing screenreaders
+- Accessing screen readers
 
 #### Advanced: The BrowserStack API
 
@@ -589,7 +589,7 @@ Let's have a brief look at how we'd access the API using Node.js and [node-sauce
    npm install saucelabs
    ```
 
-3. Create a new file inside your project root called `call_sauce.js`. give it the following contents:
+3. Create a new file inside your project root called `call_sauce.js`. Give it the following contents:
 
    ```js
    const SauceLabs = require("saucelabs").default;
@@ -667,7 +667,7 @@ Below is an example on how to interact with the TestingBot API with the NodeJS c
    npm install testingbot-api
    ```
 
-3. Create a new file inside your project root called `tb.js`. give it the following contents:
+3. Create a new file inside your project root called `tb.js`. Give it the following contents:
 
    ```js
    const TestingBot = require("testingbot-api");

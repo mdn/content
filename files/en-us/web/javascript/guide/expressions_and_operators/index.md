@@ -831,8 +831,8 @@ The shorthand assignment operator `+=` can also be used to concatenate strings.
 For example,
 
 ```js
-let mystring = "alpha";
-mystring += "bet"; // evaluates to "alphabet" and assigns this value to mystring.
+let myString = "alpha";
+myString += "bet"; // evaluates to "alphabet" and assigns this value to myString.
 ```
 
 ## Conditional (ternary) operator
@@ -1024,9 +1024,9 @@ const myString = new String("coral");
 "length" in myString; // returns true
 
 // Custom objects
-const mycar = { make: "Honda", model: "Accord", year: 1998 };
-"make" in mycar; // returns true
-"model" in mycar; // returns true
+const myCar = { make: "Honda", model: "Accord", year: 1998 };
+"make" in myCar; // returns true
+"model" in myCar; // returns true
 ```
 
 ### instanceof
@@ -1070,8 +1070,8 @@ this.propertyName;
 Suppose a function called `validate` validates an object's `value` property, given the object and the high and low values:
 
 ```js
-function validate(obj, lowval, hival) {
-  if (obj.value < lowval || obj.value > hival) {
+function validate(obj, lowVal, highVal) {
+  if (obj.value < lowVal || obj.value > highVal) {
     console.log("Invalid Value!");
   }
 }

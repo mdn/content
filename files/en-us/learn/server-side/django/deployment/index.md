@@ -63,11 +63,11 @@ That makes deployment quite easy, because you just need to concentrate on your w
 Some developers will choose the increased flexibility provided by IaaS over PaaS, while others will appreciate the reduced maintenance overhead and easier scaling of PaaS. When you're getting started, setting up your website on a PaaS system is much easier, and so that is what we'll do in this tutorial.
 
 > [!NOTE]
-> If you choose a Python/Django-friendly hosting provider they should provide instructions on how to set up a Django website using different configurations of web server, application server, reverse proxy, and so on. (this won't be relevant if you choose a PaaS). For example, there are many step-by-step guides for various configurations in the [Digital Ocean Django community docs](https://www.digitalocean.com/community/tutorials?q=django).
+> If you choose a Python/Django-friendly hosting provider they should provide instructions on how to set up a Django website using different configurations of web server, application server, reverse proxy, and so on. (this won't be relevant if you choose a PaaS). For example, there are many step-by-step guides for various configurations in the [DigitalOcean Django community docs](https://www.digitalocean.com/community/tutorials?q=django).
 
 ## Choosing a hosting provider
 
-There are many hosting providers that are known to either actively support or work well with Django, including: [Heroku](https://www.heroku.com/), [Digital Ocean](https://www.digitalocean.com/), [Railway](https://railway.app/), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](https://aws.amazon.com/), [Azure](https://azure.microsoft.com/en-us/), [Google Cloud](https://cloud.google.com/), [Hetzner](https://www.hetzner.com/), and [Vultr Cloud Compute](https://blogs.vultr.com/new-free-tier-plan) — to name just a few.
+There are many hosting providers that are known to either actively support or work well with Django, including: [Heroku](https://www.heroku.com/), [DigitalOcean](https://www.digitalocean.com/), [Railway](https://railway.app/), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](https://aws.amazon.com/), [Azure](https://azure.microsoft.com/en-us/), [Google Cloud](https://cloud.google.com/), [Hetzner](https://www.hetzner.com/), and [Vultr Cloud Compute](https://blogs.vultr.com/new-free-tier-plan) — to name just a few.
 These vendors provide different types of environments (IaaS, PaaS), and different levels of computing and network resources at different prices.
 
 Some of the things to consider when choosing a host:
@@ -88,7 +88,7 @@ They are however great for testing low traffic sites in a hosted environment, an
 Popular choices in this category include [Vultr Cloud Compute](https://blogs.vultr.com/new-free-tier-plan), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/app-service/linux/), and so on.
 
 Most providers also offer a "basic" tier that is intended for small production sites, and which provide more useful levels of computing power and fewer limitations.
-[Railway](https://railway.app/), [Heroku](https://www.heroku.com/), and [Digital Ocean](https://www.digitalocean.com/) are examples of popular hosting providers that have a relatively inexpensive basic computing tier (in the $5 to $10 USD per month range).
+[Railway](https://railway.app/), [Heroku](https://www.heroku.com/), and [DigitalOcean](https://www.digitalocean.com/) are examples of popular hosting providers that have a relatively inexpensive basic computing tier (in the $5 to $10 USD per month range).
 
 > [!NOTE]
 > Remember that price is not the only selection criterion. If your website is successful, it may turn out that scalability is the most important consideration.
@@ -473,15 +473,15 @@ We'll also configure the default database and collect static files so that they 
    PythonAnywhere expects you to install applications in a folder named after your site URL.
 
    > [!NOTE]
-   > Because we're using the free account you can only name your account `<your_pythonaware_username>.pythonanywhere.com` (for example, if your username is "Odtsetseg" you will have to put the local library source into a folder named `odtsetseg.pythonanywhere.com`).
+   > Because we're using the free account you can only name your account `<your_pythonanywhere_username>.pythonanywhere.com` (for example, if your username is "Odtsetseg" you will have to put the local library source into a folder named `odtsetseg.pythonanywhere.com`).
 
    Enter the following command to clone your library sources into an appropriately named folder (you will need to replace the username values with your own name):
 
    ```bash
-   git clone https://github.com/<github_username>/django-locallibrary-tutorial.git <pythonaware_username>.pythonanywhere.com
+   git clone https://github.com/<github_username>/django-locallibrary-tutorial.git <your_pythonanywhere_username>.pythonanywhere.com
 
    # Navigate into the new folder
-   cd <pythonaware_username>.pythonanywhere.com
+   cd <your_pythonanywhere_username>.pythonanywhere.com
    ```
 
 5. Install the library dependencies using the `requirements.txt` file:
@@ -634,7 +634,7 @@ Save these settings and commit them to your GitHub repo.
 You will then need to update the version of your project on PythonAnywhere.
 Assuming you're using your Bash prompt in the folder `<user_name>.pythonanywhere.com`, and you have pushed the changes to the main branch, then you could import them in the Bash prompt using the command:
 
-```Bash
+```bash
 git pull origin main
 ```
 
@@ -659,7 +659,7 @@ We're already set up for that, so all we need to do is create the file.
 
 The steps are:
 
-1. Open a PythonAware Bash prompt.
+1. Open a PythonAnywhere Bash prompt.
 2. Navigate to your application directory (replacing `<user-name>` with your own account):
 
    ```bash
@@ -830,7 +830,7 @@ You can click the site URL (highlighted above) to open the site in a browser (it
 When the site is opened, at this point you'll see an error debug screen as shown below.
 This is a Django security error that is raised because our source code is not running on an "allowed host".
 
-![A detailed error page with a full traceback of an invalid HTTP_HOST header](site_error_dissallowed_host.png)
+![A detailed error page with a full traceback of an invalid HTTP_HOST header](site_error_disallowed_host.png)
 
 > [!NOTE]
 > This kind of debug information is very useful when you're getting set up, but is a security risk in a deployed site.
@@ -1005,10 +1005,10 @@ The next step is to read our last few articles, and then complete the assessment
 
   - [CLI](https://docs.railway.app/guides/cli)
 
-- Digital Ocean
+- DigitalOcean
 
   - [How To Serve Django Applications with uWSGI and Nginx on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-uwsgi-and-nginx-on-ubuntu-16-04)
-  - [Other Digital Ocean Django community docs](https://www.digitalocean.com/community/tutorials?q=django)
+  - [Other DigitalOcean Django community docs](https://www.digitalocean.com/community/tutorials?q=django)
 
 - Heroku Docs (similar setup concepts)
 

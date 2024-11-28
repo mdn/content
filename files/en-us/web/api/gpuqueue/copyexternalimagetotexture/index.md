@@ -28,7 +28,7 @@ copyExternalImageToTexture(source, destination, copySize)
   - : An object representing the source to write to the destination, and its origin. This can take the following properties:
 
     - `source`
-      - : An object providing the source of the snapshot to copy. This can be an {{domxref("ImageBitmap")}}, {{domxref("HTMLVideoElement")}}, {{domxref("VideoFrame")}}, {{domxref("HTMLCanvasElement")}}, or {{domxref("OffscreenCanvas")}}. The image source data is captured at the exact moment `copyExternalImageToTexture()` is invoked.
+      - : An object providing the source of the snapshot to copy. This can be an {{domxref("HTMLCanvasElement")}}, {{domxref("HTMLImageElement")}}, {{domxref("HTMLVideoElement")}}, {{domxref("ImageBitmap")}}, {{domxref("ImageData")}}, {{domxref("OffscreenCanvas")}}, or {{domxref("VideoFrame")}} object. The image source data is captured at the exact moment `copyExternalImageToTexture()` is invoked.
     - `origin` {{optional_inline}}
 
       - : An object or array specifying the origin of the copy — the top-left corner of the source sub-region to copy from. Together with `copySize`, this defines the full extent of the source sub-region. The `x` and `y` values default to 0 if any of all of `origin` is omitted.

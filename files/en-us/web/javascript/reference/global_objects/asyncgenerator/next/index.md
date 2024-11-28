@@ -36,7 +36,7 @@ A {{jsxref("Promise")}} which when resolved returns an {{jsxref("Object")}} with
 
 ### Using next()
 
-The following example shows a simple generator and the object that the `next` method returns:
+The following example shows a generator and the object that the `next` method returns:
 
 ```js
 // An async task. Pretend it's doing something more useful

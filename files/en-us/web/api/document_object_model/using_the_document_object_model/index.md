@@ -116,7 +116,7 @@ root.appendChild(body);
 
 ## How can I learn more?
 
-Now that you are familiar with the basic concepts of the DOM, you may want to learn about the more about fundamental features of the Document API by reading [how to traverse an HTML table with JavaScript and DOM interfaces](/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces).
+Now that you are familiar with the basic concepts of the DOM, you may want to learn more about the fundamental features of the Document API by reading [how to traverse an HTML table with JavaScript and DOM interfaces](/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces).
 
 ## See also
 

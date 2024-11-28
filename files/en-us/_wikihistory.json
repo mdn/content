@@ -23275,10 +23275,6 @@
     "modified": "2020-10-15T22:15:39.291Z",
     "contributors": ["sideshowbarker", "mfuji09", "jpmedley"]
   },
-  "Web/API/CSS_Counter_Styles": {
-    "modified": "2020-10-15T21:49:22.666Z",
-    "contributors": ["wbamberg", "fscholz", "Sebastianz"]
-  },
   "Web/API/CSS_Font_Loading_API": {
     "modified": "2020-12-13T22:13:07.232Z",
     "contributors": [
@@ -37644,16 +37640,6 @@
       "chharvey"
     ]
   },
-  "Web/API/HTMLDetailsElement/toggle_event": {
-    "modified": "2020-10-15T22:11:35.633Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "chrisdavidmills",
-      "mfluehr",
-      "Claas"
-    ]
-  },
   "Web/API/HTMLDialogElement": {
     "modified": "2020-10-15T21:29:11.074Z",
     "contributors": [
@@ -37672,6 +37658,18 @@
       "fscholz",
       "MHasan",
       "dhodder"
+    ]
+  },
+  "Web/API/HTMLDialogElement/cancel_event": {
+    "modified": "2020-10-15T21:43:04.572Z",
+    "contributors": [
+      "mfuji09",
+      "fscholz",
+      "mfluehr",
+      "sideshowbarker",
+      "fgwang",
+      "rolfedh",
+      "cvrebert"
     ]
   },
   "Web/API/HTMLDialogElement/close": {
@@ -69302,23 +69300,6 @@
       "louisremi"
     ]
   },
-  "Web/API/Window/updateCommands": {
-    "modified": "2020-10-15T21:15:49.672Z",
-    "contributors": [
-      "mfuji09",
-      "lucian95",
-      "SphinxKnight",
-      "forivall",
-      "fscholz",
-      "MHasan",
-      "teoli",
-      "iamanupmenon",
-      "utkarsh_shah",
-      "Sheppy",
-      "Mgjbot",
-      "Maian"
-    ]
-  },
   "Web/API/Window/visualViewport": {
     "modified": "2020-10-15T21:57:59.692Z",
     "contributors": ["chrisdavidmills", "connorshea", "jpmedley"]
@@ -99000,17 +98981,6 @@
     "modified": "2020-10-15T22:23:14.705Z",
     "contributors": ["j9t", "Malvoz", "bershanskiy"]
   },
-  "Web/HTTP/Headers/Accept-Charset": {
-    "modified": "2020-10-15T21:48:48.975Z",
-    "contributors": [
-      "mfuji09",
-      "Tigt",
-      "fscholz",
-      "ottaviano",
-      "Minstel",
-      "teoli"
-    ]
-  },
   "Web/HTTP/Headers/Accept-Encoding": {
     "modified": "2020-12-04T01:30:23.076Z",
     "contributors": [
@@ -99625,10 +99595,6 @@
   "Web/HTTP/Headers/Device-Memory": {
     "modified": "2020-10-15T22:23:16.957Z",
     "contributors": ["mfuji09", "darby", "bershanskiy"]
-  },
-  "Web/HTTP/Headers/Digest": {
-    "modified": "2020-10-15T22:21:39.013Z",
-    "contributors": ["ioggstream", "wbamberg"]
   },
   "Web/HTTP/Headers/ETag": {
     "modified": "2020-10-15T21:48:49.703Z",
@@ -100250,10 +100216,6 @@
       "callumgare",
       "teoli"
     ]
-  },
-  "Web/HTTP/Headers/Want-Digest": {
-    "modified": "2020-10-15T22:21:41.704Z",
-    "contributors": ["wbamberg"]
   },
   "Web/HTTP/Headers/Warning": {
     "modified": "2020-10-15T21:48:41.051Z",

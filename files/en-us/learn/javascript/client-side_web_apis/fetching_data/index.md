@@ -57,7 +57,7 @@ This is a common pattern for data-driven sites such as Amazon, YouTube, eBay, an
 - Less data is downloaded on each update, meaning less wasted bandwidth. This may not be such a big issue on a desktop on a broadband connection, but it's a major issue on mobile devices and in countries that don't have ubiquitous fast internet service.
 
 > [!NOTE]
-> In the early days, this general technique was known as [Asynchronous](/en-US/docs/Glossary/Asynchronous) JavaScript and XML ([Ajax](/en-US/docs/Glossary/AJAX)), because it tended to request XML data. This is normally not the case these days (you'd be more likely to request JSON), but the result is still the same, and the term "Ajax" is still often used to describe the technique.
+> In the early days, this general technique was known as [Asynchronous](/en-US/docs/Glossary/Asynchronous) JavaScript and XML ([AJAX](/en-US/docs/Glossary/AJAX)), because it tended to request XML data. This is normally not the case these days (you'd be more likely to request JSON), but the result is still the same, and the term "AJAX" is still often used to describe the technique.
 
 To speed things up even further, some sites also store assets and data on the user's computer when they are first requested, meaning that on subsequent visits they use the local versions instead of downloading fresh copies every time the page is first loaded. The content is only reloaded from the server when it has been updated.
 
@@ -196,6 +196,8 @@ To handle errors, we chain a `.catch()` block onto the end of the chain. This ru
 However, a complete website would handle this error more gracefully by displaying a message on the user's screen and perhaps offering options to remedy the situation, but we don't need anything more than a simple `console.error()`.
 
 You can test the failure case yourself:
+
+<!-- cSpell:ignore produc -->
 
 1. Make a local copy of the example files.
 2. Run the code through a web server (as described above, in [Serving your example from a server](#serving_your_example_from_a_server)).

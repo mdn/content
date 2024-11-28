@@ -42,7 +42,7 @@ _The following events are delivered to `MediaQueryList` objects:_
 
 ## Examples
 
-This simple example creates a `MediaQueryList` and then sets up a listener to detect when the media query status changes, running a custom function when it does to change the appearance of the page.
+This example creates a `MediaQueryList` and then sets up a listener to detect when the media query status changes, running a custom function when it does to change the appearance of the page.
 
 ```js
 const para = document.querySelector("p");

@@ -104,7 +104,7 @@ async function init() {
 
   const device = await adapter.requestDevice({
     defaultQueue: {
-      label: "myqueue",
+      label: "my_queue",
     },
     requiredFeatures,
     requiredLimits,

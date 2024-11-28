@@ -79,8 +79,8 @@ While Django expects developers to define a list of URL mappings between a URL p
 ```python
 urlpatterns = [
     url(r'^$', views.index),
-    # example: /best/myteamname/5/
-    url(r'^best/(?P<team_name>\w.+?)/(?P<team_number>[0-9]+)/$', views.best),
+    # example: /best/my_team_name/5/
+    url(r'^best/(?P<team_name>\w+?)/(?P<team_number>[0-9]+)/$', views.best),
 ]
 ```
 
@@ -158,7 +158,7 @@ The code snippet below shows how this works. Continuing the "youngest team" exam
     {% if youngest_teams %}
       <ul>
         {% for team in youngest_teams %}
-          <li>\{\{ team.team_name \}\}</li>
+          <li>\{{ team.team_name }}</li>
         {% endfor %}
       </ul>
     {% else %}

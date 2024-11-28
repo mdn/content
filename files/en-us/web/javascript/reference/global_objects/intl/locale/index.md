@@ -117,6 +117,6 @@ console.log(us12hour.hourCycle); // Prints "h12"
 
 ## See also
 
-- [Polyfill of `Intl.Locale` in FormatJS](https://formatjs.io/docs/polyfills/intl-locale/)
+- [Polyfill of `Intl.Locale` in FormatJS](https://formatjs.github.io/docs/polyfills/intl-locale/)
 - {{jsxref("Intl")}}
 - [Canonical Unicode Locale Identifiers](https://www.unicode.org/reports/tr35/#Canonical_Unicode_Locale_Identifiers) in the Unicode locale data markup language spec

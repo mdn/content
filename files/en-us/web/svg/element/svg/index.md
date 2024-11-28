@@ -7,7 +7,7 @@ browser-compat: svg.elements.svg
 
 {{SVGRef}}
 
-The `svg` element is a container that defines a new coordinate system and [viewport](/en-US/docs/Web/SVG/Attribute/viewBox). It is used as the outermost element of SVG documents, but it can also be used to embed an SVG fragment inside an SVG or HTML document.
+The **`<svg>`** [SVG](/en-US/docs/Web/SVG) element is a container that defines a new coordinate system and [viewport](/en-US/docs/Web/SVG/Attribute/viewBox). It is used as the outermost element of SVG documents, but it can also be used to embed an SVG fragment inside an SVG or HTML document.
 
 > [!NOTE]
 > The `xmlns` attribute is only required on the outermost `svg` element of _SVG documents_, or inside HTML documents with XML serialization. It is unnecessary for inner `svg` elements or inside HTML documents with HTML serialization.
@@ -55,7 +55,7 @@ In this example, the `height` and `width` attributes on the `svg` element are se
 ```
 
 ```html-nolint
-<svg viewbox='0 0 400 400' xmlns='http://www.w3.org/2000/svg' height='60vmin' width='60vmin'>
+<svg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg' height='60vmin' width='60vmin'>
   <rect x='0' y='0' width='50%' height='50%' fill='tomato' opacity='0.75' />
   <rect x='25%' y='25%' width='50%' height='50%' fill='slategrey' opacity='0.75' />
   <rect x='50%' y='50%' width='50%' height='50%' fill='olive' opacity='0.75' />

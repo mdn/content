@@ -7,10 +7,10 @@ browser-compat: css.properties.overflow-wrap
 
 {{CSSRef}}
 
-> [!WARNING]
-> The property was originally a nonstandard and unprefixed Microsoft extension called `word-wrap`, and was implemented by most browsers with the same name. It has since been renamed to `overflow-wrap`, with `word-wrap` being an alias.
-
 The **`overflow-wrap`** [CSS](/en-US/docs/Web/CSS) property applies to text, setting whether the browser should insert line breaks within an otherwise unbreakable string to prevent text from overflowing its line box.
+
+> [!NOTE]
+> The property was originally a nonstandard and unprefixed Microsoft extension called `word-wrap`, and was implemented by most browsers with the same name. It has since been renamed to `overflow-wrap`, with `word-wrap` being an alias.
 
 {{EmbedInteractiveExample("pages/css/overflow-wrap.html")}}
 

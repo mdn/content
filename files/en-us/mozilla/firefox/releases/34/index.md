@@ -73,16 +73,16 @@ _No change._
 - The non-standard [Device Storage API](/en-US/docs/Web/API/Device_Storage_API) is now also enabled for privileged apps installed on Android ([Firefox bug 886627](https://bugzil.la/886627)).
 - Web Crypto API has been enabled by default ([Firefox bug 1074001](https://bugzil.la/1074001)).
 - The {{domxref("MediaStreamTrack.stop()")}} method has been added ([Firefox bug 1057955](https://bugzil.la/1057955)).
-- Our experimental implementation of EME continues. The {{domxref("MediaKeySession.getUsableKeyIds()")}} method has been added ([Firefox bug 1057171](https://bugzil.la/1057171)).
+- Our experimental implementation of EME continues. The `MediaKeySession.getUsableKeyIds()` method has been added ([Firefox bug 1057171](https://bugzil.la/1057171)).
 - Regarding [WebRTC](/en-US/docs/Web/API/WebRTC_API):
 
-  - an experiment implementation of {{domxref("RTPSender")}} and {{domxref("RTPReceiver")}} working with {{domxref("RTCPeerConnection")}} has landed ([Firefox bug 1032835](https://bugzil.la/1032835)).
-  - application window sharing has been added to {{domxref("Navigation.getUserMedia()")}} ([Firefox bug 1036653](https://bugzil.la/1036653)) and {{domxref("MediaTrackConstraintSet")}} now supports `browserWindow` and `scrollWithPage` allowing to chose the tab of a window that has to be shared without showing the tab chooser dialog ([Firefox bug 1041700](https://bugzil.la/1041700)).
+  - an experiment implementation of `RTPSender` and `RTPReceiver` working with {{domxref("RTCPeerConnection")}} has landed ([Firefox bug 1032835](https://bugzil.la/1032835)).
+  - application window sharing has been added to {{domxref("Navigator.getUserMedia()")}} ([Firefox bug 1036653](https://bugzil.la/1036653)) and {{domxref("MediaTrackConstraintSet")}} now supports `browserWindow` and `scrollWithPage` allowing to chose the tab of a window that has to be shared without showing the tab chooser dialog ([Firefox bug 1041700](https://bugzil.la/1041700)).
   - `"browser"` is now an accepted value of MediaSourceEnum, used to define constraints ([Firefox bug 1041493](https://bugzil.la/1041493)).
 
 - For Web Components, event retargeting is now implemented ([Firefox bug 887541](https://bugzil.la/887541)).
 - The {{domxref("Headers")}} interface has been implemented ([Firefox bug 1029620](https://bugzil.la/1029620)). It is controlled by the `dom.fetch.enabled` preference which is set to `false` by default.
-- Regarding our experimental implementation of Web Animations, the {{domxref("AnimationEffect")}} interface has been added, with the single {{domxref("AnimationEffect.name")}} property ([Firefox bug 1045993](https://bugzil.la/1045993)). Web Animations is not activated by default and is controlled by the `dom.animations-api.core.enabled` preference.
+- Regarding our experimental implementation of Web Animations, the {{domxref("AnimationEffect")}} interface has been added, with the single `AnimationEffect.name` property ([Firefox bug 1045993](https://bugzil.la/1045993)). Web Animations is not activated by default and is controlled by the `dom.animations-api.core.enabled` preference.
 - CSSOM View smooth scrolling methods have been added: {{domxref("Window.scroll()")}}, {{domxref("Window.scrollTo()")}}, and {{domxref("Window.scrollBy()")}} ([Firefox bug 1022818](https://bugzil.la/1022818)).
 - The non-standard `MozSmsSegmentInfo` is no more visible on the global object [Firefox bug 916607](https://bugzil.la/916607).
 

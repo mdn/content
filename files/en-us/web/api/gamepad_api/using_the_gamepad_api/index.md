@@ -123,7 +123,7 @@ The {{ domxref("Gamepad") }} object's properties are as follows:
 
 ### Using button information
 
-Let's look at a simple example that displays connection information for one gamepad (it ignores subsequent gamepad connections) and allows you to move a ball around the screen using the four gamepad buttons on the right-hand side of the gamepad. You can [view the demo live](https://chrisdavidmills.github.io/gamepad-buttons/), and [find the source code](https://github.com/chrisdavidmills/gamepad-buttons/tree/master) on GitHub.
+Let's look at an example that displays connection information for one gamepad (it ignores subsequent gamepad connections) and allows you to move a ball around the screen using the four gamepad buttons on the right-hand side of the gamepad. You can [view the demo live](https://chrisdavidmills.github.io/gamepad-buttons/), and [find the source code](https://github.com/chrisdavidmills/gamepad-buttons/tree/master) on GitHub.
 
 To start with, we declare some variables: The `gamepadInfo` paragraph that the connection info is written into, the `ball` that we want to move, the `start` variable that acts as the ID for `requestAnimation Frame`, the `a` and `b` variables that act as position modifiers for moving the ball, and the shorthand variables that will be used for the {{ domxref("Window.requestAnimationFrame", "requestAnimationFrame()") }} and {{ domxref("Window.cancelAnimationFrame", "cancelAnimationFrame()") }} cross browser forks.
 
@@ -193,16 +193,16 @@ function gameLoop() {
 This example shows how to use the {{domxref("Gamepad")}} object, as well as the {{domxref("Window/gamepadconnected_event", "gamepadconnected")}} and {{domxref("Window/gamepaddisconnected_event", "gamepaddisconnected")}} events to display the state of all gamepads connected to the system. The example is based on a [Gamepad demo](https://luser.github.io/gamepadtest/), which has the [source code available on GitHub](https://github.com/luser/gamepadtest).
 
 ```js
-let loopstarted = false;
+let loopStarted = false;
 
 window.addEventListener("gamepadconnected", (evt) => {
-  addgamepad(evt.gamepad);
+  addGamepad(evt.gamepad);
 });
 window.addEventListener("gamepaddisconnected", (evt) => {
-  removegamepad(evt.gamepad);
+  removeGamepad(evt.gamepad);
 });
 
-function addgamepad(gamepad) {
+function addGamepad(gamepad) {
   const d = document.createElement("div");
   d.setAttribute("id", `controller${gamepad.index}`);
 
@@ -242,13 +242,13 @@ function addgamepad(gamepad) {
   }
 
   document.body.append(d);
-  if (!loopstarted) {
+  if (!loopStarted) {
     requestAnimationFrame(updateStatus);
-    loopstarted = true;
+    loopStarted = true;
   }
 }
 
-function removegamepad(gamepad) {
+function removeGamepad(gamepad) {
   document.querySelector(`#controller${gamepad.index}`).remove();
 }
 

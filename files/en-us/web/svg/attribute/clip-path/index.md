@@ -101,7 +101,7 @@ svg {
     <tr>
       <th scope="row">Value</th>
       <td>
-        {{cssxref('url')}} | [ {{cssxref('basic-shape')}} ||
+        {{CSSXref("url_value", "&lt;url&gt;")}} | [ {{cssxref('basic-shape')}} ||
         <code>&#x3C;geometry-box></code> ] | <code>none</code>
       </td>
     </tr>

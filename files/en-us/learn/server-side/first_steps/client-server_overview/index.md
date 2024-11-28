@@ -78,7 +78,6 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
 Referer: https://developer.mozilla.org/en-US/
 Accept-Encoding: gzip, deflate, sdch, br
-Accept-Charset: ISO-8859-1,UTF-8;q=0.7,*;q=0.7
 Accept-Language: en-US,en;q=0.8,es;q=0.6
 Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; csrftoken=zIPUJsAZv6pcgCBJSCj1zU6pQZbfMUAT; dwf_section_edit=False; dwf_sg_task_completion=False; _gat=1; _ga=GA1.2.1688886003.1471911953; ffo=true
 ```
@@ -98,7 +97,7 @@ For example, you can see here that:
 
 - My browser (`User-Agent`) is Mozilla Firefox (`Mozilla/5.0`).
 - It can accept gzip compressed information (`Accept-Encoding: gzip`).
-- It can accept the specified set of characters (`Accept-Charset: ISO-8859-1,UTF-8;q=0.7,*;q=0.7`) and languages (`Accept-Language: en-US,en;q=0.8,es;q=0.6`).
+- It can accept the specified languages (`Accept-Language: en-US,en;q=0.8,es;q=0.6`).
 - The `Referer` line indicates the address of the web page that contained the link to this resource (i.e. the origin of the request, `https://developer.mozilla.org/en-US/`).
 
 HTTP requests can also have a body, but it is empty in this case.
@@ -129,7 +128,7 @@ X-Cache-Info: caching
 Content-Length: 41823
 
 <!doctype html>
-<html lang="en-US" dir="ltr" class="redesign no-js"  data-ffo-opensanslight=false data-ffo-opensans=false >
+<html lang="en-US" dir="ltr" class="redesign no-js" data-ffo-opensanslight=false data-ffo-opensans=false >
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -194,7 +193,7 @@ Content-Length: 0
 
 ## Static sites
 
-A _static site_ is one that returns the same hard coded content from the server whenever a particular resource is requested. So for example if you have a page about a product at `/static/myproduct1.html`, this same page will be returned to every user. If you add another similar product to your site you will need to add another page (e.g. `myproduct2.html`) and so on. This can start to get really inefficient — what happens when you get to thousands of product pages? You would repeat a lot of code across each page (the basic page template, structure, etc.), and if you wanted to change anything about the page structure — like add a new "related products" section for example — then you'd have to change every page individually.
+A _static site_ is one that returns the same hard coded content from the server whenever a particular resource is requested. So for example if you have a page about a product at `/static/my-product1.html`, this same page will be returned to every user. If you add another similar product to your site you will need to add another page (e.g. `my-product2.html`) and so on. This can start to get really inefficient — what happens when you get to thousands of product pages? You would repeat a lot of code across each page (the basic page template, structure, etc.), and if you wanted to change anything about the page structure — like add a new "related products" section for example — then you'd have to change every page individually.
 
 > [!NOTE]
 > Static sites are excellent when you have a small number of pages and you want to send the same content to every user. However they can have a significant cost to maintain as the number of pages becomes larger.

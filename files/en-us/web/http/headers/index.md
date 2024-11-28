@@ -84,9 +84,6 @@ For more details, refer to the [Content negotiation article](/en-US/docs/Web/HTT
 
 - {{HTTPHeader("Accept")}}
   - : Informs the server about the {{Glossary("MIME_type", "types")}} of data that can be sent back.
-- {{HTTPHeader("Accept-Charset")}} {{deprecated_inline}}
-  - : Advertises a client's supported {{glossary("character encoding", "character encodings")}}.
-    It is deprecated because {{Glossary("UTF-8")}} has become ubiquitous and use of the header makes client fingerprinting easier.
 - {{HTTPHeader("Accept-Encoding")}}
   - : The encoding algorithm, usually a [compression algorithm](/en-US/docs/Web/HTTP/Compression), that can be used on the resource sent back.
 - {{HTTPHeader("Accept-Language")}}
@@ -144,18 +141,12 @@ For more information, refer to the [CORS documentation](/en-US/docs/Web/HTTP/COR
 
 - {{HTTPHeader("Content-Digest")}} {{experimental_inline}}
   - : Provides a {{Glossary("digest")}} of the stream of octets framed in an HTTP message (the message content) dependent on {{HTTPHeader("Content-Encoding")}} and {{HTTPHeader("Content-Range")}}.
-- {{HTTPHeader("Digest")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : Provides a {{Glossary("digest")}} of the a resource.
-    See {{HTTPHeader("Content-Digest")}} and {{HTTPHeader("Repr-Digest")}}.
 - {{HTTPHeader("Repr-Digest")}} {{experimental_inline}}
   - : Provides a {{Glossary("digest")}} of the selected representation of the target resource before transmission.
     Unlike the {{HTTPHeader("Content-Digest")}}, the digest does not consider {{HTTPHeader("Content-Encoding")}} or {{HTTPHeader("Content-Range")}}.
 - {{HTTPHeader("Want-Content-Digest")}} {{experimental_inline}}
   - : States the wish for a {{HTTPHeader("Content-Digest")}} header.
     It is the `Content-` analogue of {{HTTPHeader("Want-Repr-Digest")}}.
-- {{HTTPHeader("Want-Digest")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : States the wish for a {{HTTPHeader("Digest")}} header.
-    See {{HTTPHeader("Want-Content-Digest")}} and {{HTTPHeader("Want-Repr-Digest")}} instead.
 - {{HTTPHeader("Want-Repr-Digest")}} {{experimental_inline}}
   - : States the wish for a {{HTTPHeader("Repr-Digest")}} header.
     It is the `Repr-` analogue of {{HTTPHeader("Want-Content-Digest")}}.

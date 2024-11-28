@@ -34,40 +34,77 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 The following example uses the "toggle" `actiontype`:
 
-```html
-<p>
-  Try clicking this formula several times:
+```css hidden
+html,
+body {
+  height: 100%;
+}
 
-  <math display="block">
-    <maction actiontype="toggle">
-      <mfrac>
-        <mn>6</mn>
-        <mn>8</mn>
-      </mfrac>
+body {
+  display: grid;
+  place-content: center;
+}
 
-      <mfrac>
-        <mrow>
-          <mn>3</mn>
-          <mo>×</mo>
-          <mn>2</mn>
-        </mrow>
-        <mrow>
-          <mn>4</mn>
-          <mo>×</mo>
-          <mn>2</mn>
-        </mrow>
-      </mfrac>
+math {
+  font-size: 1.5em;
+}
 
-      <mfrac>
-        <mn>3</mn>
-        <mn>4</mn>
-      </mfrac>
-    </maction>
-  </math>
-</p>
+maction {
+  padding: 0.5em;
+  cursor: pointer;
+}
 ```
 
+```html
+<p>Try clicking this formula several times:</p>
+<math display="block">
+  <maction actiontype="toggle">
+    <mfrac>
+      <mn>6</mn>
+      <mn>8</mn>
+    </mfrac>
+
+    <mfrac>
+      <mrow>
+        <mn>3</mn>
+        <mo>×</mo>
+        <mn>2</mn>
+      </mrow>
+      <mrow>
+        <mn>4</mn>
+        <mo>×</mo>
+        <mn>2</mn>
+      </mrow>
+    </mfrac>
+
+    <mfrac>
+      <mn>3</mn>
+      <mn>4</mn>
+    </mfrac>
+  </maction>
+</math>
+```
+
+Sample rendering:
+
+![MathML toggle action example](toggle.gif)
+
+Rendering in your browser:
+
 {{EmbedLiveSample('Examples', 700, 200)}}
+
+## Technical summary
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Roles">Implicit ARIA role</a>
+    </th>
+    <td>
+      None
+    </td>
+  </tr>
+</table>
 
 ## Specifications
 

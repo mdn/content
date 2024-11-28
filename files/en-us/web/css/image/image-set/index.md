@@ -68,30 +68,53 @@ Browsers do not provide any special information on background images to assistiv
 
 This example shows how to use [`image-set()`](https://drafts.csswg.org/css-images-4/#funcdef-image-set) to provide two alternative {{cssxref("background-image")}} options, chosen depending on the resolution needed: a normal version and a high-resolution version.
 
-{{EmbedGHLiveSample("css-examples/images/image-set.html", '100%', 600)}}
+```html live-sample___image-set-example
+<div class="box"></div>
+```
 
-> [!NOTE]
-> In the above example, the `-webkit` prefixed version is also used to support Chrome and Safari. In Firefox 90, support was added for `-webkit-image-set()` as an alias to `image-set()` (in order to provide compat where developers had not added the standard property).
+```css live-sample___image-set-example
+.box {
+  width: 400px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-image: image-set(
+    url("https://mdn.github.io/shared-assets/images/examples/balloons-small.jpg")
+      1x,
+    url("https://mdn.github.io/shared-assets/images/examples/balloons-landscape.jpg")
+      2x
+  );
+}
+```
+
+{{EmbedLiveSample("image-set-example", "", "250px")}}
 
 ### Using image-set() to provide alternative image formats
 
 In the next example the `type()` function is used to serve the image in AVIF and JPEG formats. If the browser supports avif, it will choose that version. Otherwise it will use the jpeg version.
 
-{{EmbedGHLiveSample("css-examples/images/image-set-type.html", '100%', 600)}}
+```html live-sample___image-set-type-example
+<div class="box"></div>
+```
 
-#### Providing a fallback
-
-There is no inbuilt fallback for `image-set()`; therefore to include a {{cssxref("background-image")}} for those browsers that do not support the function, a separate declaration is required before the line using `image-set()`.
-
-```css
+```css live-sample___image-set-type-example
 .box {
-  background-image: url("large-balloons.jpg");
+  width: 400px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   background-image: image-set(
-    "large-balloons.avif" type("image/avif"),
-    "large-balloons.jpg" type("image/jpeg")
+    "https://mdn.github.io/shared-assets/images/examples/balloons-landscape.avif"
+      type("image/avif"),
+    "https://mdn.github.io/shared-assets/images/examples/balloons-landscape.jpg"
+      type("image/jpeg")
   );
 }
 ```
+
+{{EmbedLiveSample("image-set-type-example", "", "250px")}}
 
 ## Specifications
 

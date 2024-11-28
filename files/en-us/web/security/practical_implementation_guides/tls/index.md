@@ -68,8 +68,8 @@ APIs or websites not intended for public access should entirely disable the use 
 
 To fix the "different hosts" problem:
 
-1. First, redirect from http://example.com/ to https://example.com/.
-2. Next, redirect from https://example.com/ to https://example.org/.
+1. First, redirect from http\://example.com/ to https\://example.com/.
+2. Next, redirect from https\://example.com/ to https\://example.org/.
 
 ### Examples
 

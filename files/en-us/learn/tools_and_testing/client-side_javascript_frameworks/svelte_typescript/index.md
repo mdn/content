@@ -173,7 +173,7 @@ Once you have TypeScript configured, you can start using it from a Svelte compon
 > [!NOTE]
 > Using TypeScript in component markup sections is not supported in Svelte 4, which this guide is based on.
 > So while you can use JavaScript from the markup, you'll have to use TypeScript in the `<script lang='ts'>` section.
-> Typescript in component markup is allowed from Svelte 5.
+> TypeScript in component markup is allowed from Svelte 5.
 
 ## Improved developer experience with TypeScript
 
@@ -200,6 +200,8 @@ Clicking _Install all_ will install Svelte for VS Code.
 We can also see that the `setupTypeScript.js` file made a couple of changes to our project. The `main.js` file has been renamed to `main.ts`, which means that VS Code can provide hover-information on our Svelte components:
 
 ![VS Code screenshot showing that when hovering on a component, it gives you hints](03-vscode-hints-in-main-ts.png)
+
+<!-- cSpell:ignore traget -->
 
 We also get type checking for free. If we pass an unknown property in the options parameter of the `App` constructor (for example a typo like `traget` instead of `target`), TypeScript will complain:
 
@@ -692,7 +694,7 @@ Next we'll take care of the `actions.js` file.
 
 Now we have to migrate the `stores.js` and `localStore.js` files to TypeScript.
 
-Tip: the script `npm run check`, which uses the [`svelte-check`](https://github.com/sveltejs/language-tools/tree/master/packages/svelte-check) tool, will only check our application's `.svelte` files. If you want to also check the `.ts` files, you can run `npm run check && npx tsc --noemit`, which tells the TypeScript compiler to check for errors without generating the `.js` output files. You could even add a script to your `package.json` file that runs that command.
+Tip: the script `npm run check`, which uses the [`svelte-check`](https://github.com/sveltejs/language-tools/tree/master/packages/svelte-check) tool, will only check our application's `.svelte` files. If you want to also check the `.ts` files, you can run `npm run check && npx tsc --noEmit`, which tells the TypeScript compiler to check for errors without generating the `.js` output files. You could even add a script to your `package.json` file that runs that command.
 
 We'll start with `stores.js`.
 

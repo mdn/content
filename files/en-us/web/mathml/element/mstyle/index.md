@@ -17,15 +17,15 @@ The **`<mstyle>`** [MathML](/en-US/docs/Web/MathML) element is used to change th
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes) as well as the following deprecated attributes:
 
 - `background` {{deprecated_inline}} {{Non-standard_Inline}}
-  - : Use {{cssxref("background-color")}} instead.
+  - : Use CSS property {{cssxref("background-color")}} instead.
 - `color` {{deprecated_inline}} {{Non-standard_Inline}}
-  - : Use {{cssxref("color")}} instead.
+  - : Use CSS property {{cssxref("color")}} instead.
 - `fontsize` {{deprecated_inline}} {{Non-standard_Inline}}
-  - : Use {{cssxref("font-size")}} instead.
+  - : Use CSS property {{cssxref("font-size")}} instead.
 - `fontstyle` {{deprecated_inline}} {{Non-standard_Inline}}
-  - : Use {{cssxref("font-style")}} instead.
+  - : Use CSS property {{cssxref("font-style")}} instead.
 - `fontweight` {{deprecated_inline}} {{Non-standard_Inline}}
-  - : Use {{cssxref("font-weight")}} instead.
+  - : Use CSS property {{cssxref("font-weight")}} instead.
 
 ## Examples
 
@@ -86,6 +86,19 @@ The following example shows a formula with [`font-size`](/en-US/docs/Web/CSS/fon
 ```
 
 {{EmbedLiveSample('Legacy script attributes', 700, 400)}}
+
+## Technical summary
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Roles">Implicit ARIA role</a>
+    </th>
+    <td>
+      None
+    </td>
+  </tr>
+</table>
 
 ## Specifications
 
