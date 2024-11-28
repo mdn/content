@@ -55,7 +55,7 @@ The _scheme_ component may take one of two forms:
 
 ### host
 
-The _host_ component may take one of three forms:
+The _host_ component may take one of these forms:
 
 <table class="fullwidth-table standard-table">
   <thead>
@@ -74,13 +74,22 @@ The _host_ component may take one of three forms:
       <td>The given host and any of its subdomains.</td>
     </tr>
     <tr>
+      <td><code>*.</code> followed by part of the hostnamp plus a port number.</td>
+      <td>The given host and any of its subdomains for the specified port number.</td>
+    </tr>
+    <tr>
       <td>A complete hostname, without wildcards.</td>
-      <td>Only the given host.</td>
+      <td>Only the host.</td>
+    </tr>
+    <tr>
+      <td>A complete hostname, without wildcards, plus a port number.</td>
+      <td>Only the host for the specified port number.</td>
     </tr>
   </tbody>
 </table>
 
-_host_ must not include a port number.
+> [!NOTE]
+> Firefox doesn't support the inclusion of a port number due to.([Firefox bug 1362809](https://bugzil.la/1362809)) and ([Firefox bug 1468162](https://bugzil.la/1468162)).
 
 _host_ is optional only if the _scheme_ is "file".
 
@@ -367,8 +376,8 @@ The special value `<all_urls>` matches all URLs under any of the supported schem
     </tr>
     <tr>
       <td><code>https://mozilla.org:80/</code></td>
-      <td>Invalid</td>
-      <td>Host must not include a port number.</td>
+      <td>Unmatched</td>
+      <td>Port number must match the protocol.</td>
     </tr>
     <tr>
       <td><code>*://*</code></td>
