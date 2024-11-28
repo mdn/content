@@ -38,7 +38,7 @@ console.log(title.text); // "Hello world! <span class="highlight">Isn't this won
 title.text = "Update the title";
 ```
 
-As you can see, the `span` tag and its content were treated as plain text and displayed exactly as they appear in the `title` element, rather than being processed as HTML.
+As you can see, the `span` tag remained unparsed; the `<title>` element's contents were treated as plain text and returned exactly as they appear in the `title` element.
 
 ## Specifications
 
