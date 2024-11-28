@@ -11,7 +11,7 @@ browser-compat: html.global_attributes.autocorrect
 
 The **`autocorrect`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is an [enumerated](/en-US/docs/Glossary/Enumerated) attribute that controls whether autocorrection of editable text is enabled for spelling and/or punctuation errors.
 
-The specific autocorrection behaviour, including which words are substituted, depends on the user-agent and the services provided by the underlying device.
+The specific autocorrection behavior, including which words are substituted, depends on the user agent and the services provided by the underlying device.
 For example, on macOS a user agent might rely on [registered replacement text and punctuation](https://support.apple.com/en-vn/guide/mac-help/mh35735/mac).
 Other devices and browsers may use a different approach.
 

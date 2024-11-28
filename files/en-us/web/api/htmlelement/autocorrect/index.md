@@ -12,7 +12,7 @@ browser-compat: api.HTMLElement.autocorrect
 
 The **`autocorrect`** property of the {{domxref("HTMLElement")}} interface controls whether or not autocorrection of editable text is enabled for spelling and/or punctuation errors.
 
-The specific autocorrection behaviour, including which words are substituted, depends on the user-agent and the services provided by the underlying device.
+The specific autocorrection behavior, including which words are substituted, depends on the user agent and the services provided by the underlying device.
 For example, on macOS a user agent might rely on [registered replacement text and punctuation](https://support.apple.com/en-vn/guide/mac-help/mh35735/mac).
 Other devices and browsers may use a different approach.
 
