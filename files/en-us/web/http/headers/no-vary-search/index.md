@@ -61,7 +61,7 @@ No-Vary-Search: key-order, params, except=("param1")
 
 ### Allowing responses from URLs with differently ordered params to match the same cache entry
 
-If you have for example a search page that stores its search criteria in URL parameters, and you can't guarantee that the parameters will be added to the URL in the same order each time, you can allow responses from URLs that are identical except for the order of the parameters to match the same cache entry using `key-order`:
+If you have a search page that stores search criteria in URL parameters, and you can't guarantee that the parameters will be added to the URL in the same order each time, you can allow responses from URLs that are identical except for the order of the parameters to match the same cache entry using `key-order`:
 
 ```http
 No-Vary-Search: key-order
@@ -101,7 +101,7 @@ No-Vary-Search: params=("id")
 
 ### Allowing responses from URLs with multiple different params to match the same cache entry
 
-Say you also had URL parameters that sorted the list of users on the page in ascending or descending alphabetical order, and specified the language to display the UI strings in, for example `/users?id=345&order=asc&lang=fr`.
+Assume you have URL parameters that sorted the list of users on the page in ascending or descending alphabetical order, and specified the language to display the UI strings in, for example `/users?id=345&order=asc&lang=fr`.
 
 You could get the browser to ignore all of these when considering cache matching like so:
 

@@ -8,7 +8,6 @@ browser-compat: http.headers.TE
 {{HTTPSidebar}}
 
 The HTTP **`TE`** {{Glossary("request header")}} specifies the transfer encodings the user agent is willing to accept.
-
 Some people informally consider "`Accept-Transfer-Encoding`" to be a more intuitive name for this header.
 
 Note that `chunked` is always acceptable for HTTP/1.1 recipients and you don't have to specify `chunked` using the `TE` header.

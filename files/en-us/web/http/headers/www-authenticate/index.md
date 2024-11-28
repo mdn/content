@@ -39,13 +39,13 @@ The client is expected to select the most secure of the challenges it understand
 
 A comma-separated list of one or more authentication challenges:
 
-```http
+```plain
 WWW-Authenticate = #challenge
 ```
 
 Where a `challenge` has the following syntax:
 
-```http
+```plain
 challenge = <auth-scheme> [ 1*SP ( <token68> / #<auth-param> ) ]
 ```
 
