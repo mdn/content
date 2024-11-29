@@ -180,7 +180,6 @@ const displayMediaOptions = {
   video: {
     displaySurface: "window",
   },
-  audio: false,
   preferCurrentTab: true,
 };
 ```
@@ -286,7 +285,6 @@ const displayMediaOptions = {
   video: {
     displaySurface: "window",
   },
-  audio: false,
   preferCurrentTab: true,
 };
 
