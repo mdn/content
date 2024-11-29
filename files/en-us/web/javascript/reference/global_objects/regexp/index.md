@@ -115,6 +115,11 @@ Note that several of the `RegExp` properties have both long and short (Perl-like
 - [`RegExp[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species)
   - : The constructor function that is used to create derived objects.
 
+## Static methods
+
+- {{jsxref("RegExp.escape()")}}
+  - : [Escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions#escape_sequences) any potential regex syntax characters in a string, and returns a new string that can be safely used as a [literal](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character) pattern for the {{jsxref("RegExp/RegExp", "RegExp()")}} constructor.
+
 ## Instance properties
 
 These properties are defined on `RegExp.prototype` and shared by all `RegExp` instances.
