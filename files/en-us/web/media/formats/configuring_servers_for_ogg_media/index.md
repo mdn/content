@@ -1,10 +1,10 @@
 ---
 title: Configuring servers for Ogg media
-slug: Web/HTTP/Configuring_servers_for_Ogg_media
+slug: Web/Media/Formats/Configuring_servers_for_Ogg_media
 page-type: guide
 ---
 
-{{HTTPSidebar}}
+{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
 HTML {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements allow media presentation without the need for the user to install extensions or other software.
 This guide covers server configuration that may be necessary to correctly serve Ogg media files.
@@ -27,7 +27,7 @@ AddType video/ogg .ogv
 AddType application/ogg .ogg
 ```
 
-You can find specific information about possible media file types and the codecs used within them in our comprehensive [guide to media types and formats on the web](/en-US/docs/Web/Media/Formats). In particular, the article on [media container formats](/en-US/docs/Web/Media/Formats/Containers) is especially helpful when configuring servers to host media properly.
+The article on [media container formats](/en-US/docs/Web/Media/Formats/Containers) is especially helpful when configuring servers to host media properly.
 
 ## Handle range requests correctly
 
@@ -97,6 +97,5 @@ It's important to note that it appears that `oggz-info` makes a read pass of the
 
 ## See also
 
-- [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
 - [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 - [Codecs in common media types](/en-US/docs/Web/Media/Formats/codecs_parameter)

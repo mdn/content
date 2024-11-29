@@ -98759,24 +98759,6 @@
       "teoli"
     ]
   },
-  "Web/HTTP/Configuring_servers_for_Ogg_media": {
-    "modified": "2019-09-10T19:10:12.290Z",
-    "contributors": [
-      "Sheppy",
-      "fscholz",
-      "bholley",
-      "chrisdavidmills",
-      "teoli",
-      "kscarfone",
-      "Dikrib",
-      "Sephr",
-      "BenB",
-      "cpearce",
-      "Zcorpan",
-      "Varmaa",
-      "sorinelpusti"
-    ]
-  },
   "Web/HTTP/Connection_management_in_HTTP_1.x": {
     "modified": "2019-11-27T11:05:48.174Z",
     "contributors": [
@@ -122591,6 +122573,24 @@
   "Web/Media/Formats/Audio_concepts": {
     "modified": "2020-06-01T18:13:20.323Z",
     "contributors": ["atd30", "Sheppy"]
+  },
+  "Web/Media/Formats/Configuring_servers_for_Ogg_media": {
+    "modified": "2019-09-10T19:10:12.290Z",
+    "contributors": [
+      "Sheppy",
+      "fscholz",
+      "bholley",
+      "chrisdavidmills",
+      "teoli",
+      "kscarfone",
+      "Dikrib",
+      "Sephr",
+      "BenB",
+      "cpearce",
+      "Zcorpan",
+      "Varmaa",
+      "sorinelpusti"
+    ]
   },
   "Web/Media/Formats/Containers": {
     "modified": "2020-04-18T23:02:19.945Z",
