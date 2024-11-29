@@ -129,7 +129,7 @@ input:valid {
 
 {{EmbedLiveSample("Simple_start_file", "100%", 80)}}
 
-To begin, make a copy of the [`fruit-start.html` file found on Github](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-start.html) in a new directory on your hard drive.
+To begin, make a copy of the [`fruit-start.html` file found on GitHub](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-start.html) in a new directory on your hard drive.
 
 ### The required attribute
 
@@ -176,7 +176,7 @@ We also added a background gradient when the input is required _and_ invalid. Tr
 
 {{EmbedLiveSample("The_required_attribute", "100%", 80)}}
 
-Try submitting the form from the [live `required` example](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-required.html) without a value. Note how the invalid input gets focus, a default error message ("Please fill out this field") appears, and the form is prevented from being sent. You can also see the [source code on Github](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-required.html).
+Try submitting the form from the [live `required` example](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-required.html) without a value. Note how the invalid input gets focus, a default error message ("Please fill out this field") appears, and the form is prevented from being sent. You can also see the [source code on GitHub](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-required.html).
 
 ### Validating against a regular expression
 

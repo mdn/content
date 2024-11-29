@@ -33,7 +33,10 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 ## Instance methods
 
-_No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
+_Also inherits methods from its parent interface, {{domxref("HTMLElement")}}._
+
+- {{domxref("HTMLEmbedElement.getSVGDocument()")}}
+  - : Returns the embedded SVG as a {{domxref("Document")}}.
 
 ## Specifications
 

@@ -156,10 +156,10 @@ Helpful tools for writing and debugging your JavaScript code.
   - : Edit JavaScript, CSS, and HTML and get live results. Use external resources and collaborate with your team online.
 - [Plunker](https://plnkr.co/)
   - : Plunker is an online community for creating, collaborating on, and sharing your web development ideas. Edit your JavaScript, CSS, and HTML files and get live results and file structure.
-- [JSBin](https://jsbin.com/)
+- [JS Bin](https://jsbin.com/)
   - : JS Bin is an open-source collaborative web development debugging tool.
-- [Codepen](https://codepen.io/)
-  - : Codepen is another collaborative web development tool used as a live result playground.
+- [CodePen](https://codepen.io/)
+  - : CodePen is another collaborative web development tool used as a live result playground.
 - [StackBlitz](https://stackblitz.com/)
   - : StackBlitz is another online playground/debugging tool, which can host and deploy full-stack applications using React, Angular, etc.
 - [RunJS](https://runjs.app/)

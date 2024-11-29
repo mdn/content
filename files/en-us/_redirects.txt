@@ -2230,7 +2230,7 @@
 /en-US/docs/DOM/window.toolbar	/en-US/docs/Web/API/Window/toolbar
 /en-US/docs/DOM/window.top	/en-US/docs/Web/API/Window/top
 /en-US/docs/DOM/window.unescape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/unescape
-/en-US/docs/DOM/window.updateCommands	/en-US/docs/Web/API/Window/updateCommands
+/en-US/docs/DOM/window.updateCommands	/en-US/docs/Web/API/Window
 /en-US/docs/DOM/window.window	/en-US/docs/Web/API/Window/window
 /en-US/docs/DOM:CDATASection	/en-US/docs/Web/API/CDATASection
 /en-US/docs/DOM:CSS	/en-US/docs/Web/CSS/Reference
@@ -2652,7 +2652,7 @@
 /en-US/docs/DOM:window.toolbar	/en-US/docs/Web/API/Window/toolbar
 /en-US/docs/DOM:window.top	/en-US/docs/Web/API/Window/top
 /en-US/docs/DOM:window.unescape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/unescape
-/en-US/docs/DOM:window.updateCommands	/en-US/docs/Web/API/Window/updateCommands
+/en-US/docs/DOM:window.updateCommands	/en-US/docs/Web/API/Window
 /en-US/docs/DOM:window.window	/en-US/docs/Web/API/Window/window
 /en-US/docs/DOMParser	/en-US/docs/Web/API/DOMParser
 /en-US/docs/DOMTokenList.supports()	/en-US/docs/Web/API/DOMTokenList/supports
@@ -3369,7 +3369,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.statusbar	/en-US/docs/Web/API/Window/statusbar
 /en-US/docs/Document_Object_Model_(DOM)/window.toolbar	/en-US/docs/Web/API/Window/toolbar
 /en-US/docs/Document_Object_Model_(DOM)/window.unescape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/unescape
-/en-US/docs/Document_Object_Model_(DOM)/window.updateCommands	/en-US/docs/Web/API/Window/updateCommands
+/en-US/docs/Document_Object_Model_(DOM)/window.updateCommands	/en-US/docs/Web/API/Window
 /en-US/docs/Document_Object_Model_(DOM)/window.window	/en-US/docs/Web/API/Window/window
 /en-US/docs/Domain_name	/en-US/docs/Glossary/Domain_name
 /en-US/docs/DragDrop	/en-US/docs/Web/API/HTML_Drag_and_Drop_API
@@ -10205,6 +10205,7 @@
 /en-US/docs/Web/API/Window/transitionend_event	/en-US/docs/Web/API/Element/transitionend_event
 /en-US/docs/Web/API/Window/transitionrun_event	/en-US/docs/Web/API/Element/transitionrun_event
 /en-US/docs/Web/API/Window/transitionstart_event	/en-US/docs/Web/API/Element/transitionstart_event
+/en-US/docs/Web/API/Window/updateCommands	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/Window/vrdisplayblur_event	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/Window/vrdisplayfocus_event	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/Window/vrdisplaypointerrestricted_event	/en-US/docs/Web/API/Window
@@ -10933,7 +10934,7 @@
 /en-US/docs/Web/API/window.toolbar	/en-US/docs/Web/API/Window/toolbar
 /en-US/docs/Web/API/window.top	/en-US/docs/Web/API/Window/top
 /en-US/docs/Web/API/window.unescape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/unescape
-/en-US/docs/Web/API/window.updateCommands	/en-US/docs/Web/API/Window/updateCommands
+/en-US/docs/Web/API/window.updateCommands	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/window.window	/en-US/docs/Web/API/Window/window
 /en-US/docs/Web/API/window/onscroll	/en-US/docs/Web/API/Element/scroll_event
 /en-US/docs/Web/API/window/onscroll-temp	/en-US/docs/Web/API/Element/scroll_event
@@ -11569,7 +11570,8 @@
 /en-US/docs/Web/CSS/clamp()	/en-US/docs/Web/CSS/clamp
 /en-US/docs/Web/CSS/color-adjust	/en-US/docs/Web/CSS/print-color-adjust
 /en-US/docs/Web/CSS/color_value/color()	/en-US/docs/Web/CSS/color_value/color
-/en-US/docs/Web/CSS/color_value/color-contrast()	/en-US/docs/Web/CSS/color_value/color-contrast
+/en-US/docs/Web/CSS/color_value/color-contrast	/en-US/docs/Web/CSS/color_value
+/en-US/docs/Web/CSS/color_value/color-contrast()	/en-US/docs/Web/CSS/color_value
 /en-US/docs/Web/CSS/color_value/color-mix()	/en-US/docs/Web/CSS/color_value/color-mix
 /en-US/docs/Web/CSS/color_value/color_keywords	/en-US/docs/Web/CSS/named-color
 /en-US/docs/Web/CSS/color_value/device-cmyk()	/en-US/docs/Web/CSS/color_value/device-cmyk
@@ -12292,6 +12294,7 @@
 /en-US/docs/Web/HTTP/Headers/Content-Security-Policy/referrer	/en-US/docs/Web/HTTP/Headers/Referrer-Policy
 /en-US/docs/Web/HTTP/Headers/Content-Security-Policy/require-sri-for	/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
 /en-US/docs/Web/HTTP/Headers/Cookie2	/en-US/docs/Web/HTTP/Headers/Cookie
+/en-US/docs/Web/HTTP/Headers/Digest	/en-US/docs/Web/HTTP/Headers/Content-Digest
 /en-US/docs/Web/HTTP/Headers/Feature-Policy	/en-US/docs/Web/HTTP/Headers/Permissions-Policy
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/accelerometer	/en-US/docs/Web/HTTP/Headers/Permissions-Policy/accelerometer
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/ambient-light-sensor	/en-US/docs/Web/HTTP/Headers/Permissions-Policy/ambient-light-sensor
@@ -12337,6 +12340,7 @@
 /en-US/docs/Web/HTTP/Headers/Ranges	/en-US/docs/Web/HTTP/Headers/Range
 /en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite	/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value
 /en-US/docs/Web/HTTP/Headers/Set-Cookie2	/en-US/docs/Web/HTTP/Headers/Set-Cookie
+/en-US/docs/Web/HTTP/Headers/Want-Digest	/en-US/docs/Web/HTTP/Headers/Want-Content-Digest
 /en-US/docs/Web/HTTP/History_of_HTTP_versions	/en-US/docs/Web/HTTP/Evolution_of_HTTP
 /en-US/docs/Web/HTTP/Index	/en-US/docs/Web/HTTP
 /en-US/docs/Web/HTTP/Link_prefetching_FAQ	/en-US/docs/Glossary/Prefetch
