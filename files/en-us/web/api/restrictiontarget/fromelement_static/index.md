@@ -43,6 +43,11 @@ The promise will reject if the restriction target element is not eligible for re
 ## Examples
 
 ```js
+// Options for getDisplayMedia()
+const displayMediaOptions = {
+  preferCurrentTab: true,
+};
+
 // Create restriction target from DOM element
 const demoElem = document.querySelector("#demo");
 const restrictionTarget = await RestrictionTarget.fromElement(demoElem);

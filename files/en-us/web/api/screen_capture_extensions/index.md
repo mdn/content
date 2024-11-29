@@ -44,6 +44,8 @@ See [Using the Element Capture and Region Capture APIs](/en-US/docs/Web/API/Scre
 
 For demos, see our [Screen Capture API demos](https://mdn.github.io/dom-examples/screen-capture-api) GitHub directory. See [Using the Element Capture and Region Capture APIs](/en-US/docs/Web/API/Screen_Capture_extensions/Element_Region_Capture) for code explanation.
 
+See also [Element Capture Demo](https://element-capture-demo.glitch.me/).
+
 ## Specifications
 
 {{Specifications}}

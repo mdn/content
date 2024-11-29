@@ -282,6 +282,14 @@ const demoElem = document.querySelector("#demo");
 Now let's examine the Region Capture demo's `startCapture()` function:
 
 ```js
+const displayMediaOptions = {
+  video: {
+    displaySurface: "window",
+  },
+  audio: false,
+  preferCurrentTab: true,
+};
+
 async function startCapture() {
   logElem.textContent = "";
 
@@ -289,7 +297,7 @@ async function startCapture() {
     const stream =
       await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
     const [track] = stream.getVideoTracks();
-    const cropTarget = await CropTarget.fromElement(demoArea);
+    const cropTarget = await CropTarget.fromElement(demoElem);
     await track.cropTo(cropTarget);
 
     videoElem.srcObject = stream;
@@ -350,3 +358,4 @@ As a result, it is generally recommended that you use the newer Element Capture 
 
 - [Screen Capture extensions](/en-US/docs/Web/API/Screen_Capture_extensions)
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
+- [Element Capture Demo](https://element-capture-demo.glitch.me/)

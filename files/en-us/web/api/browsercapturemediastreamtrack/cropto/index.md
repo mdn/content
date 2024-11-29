@@ -38,9 +38,14 @@ The promise will reject if:
 ### Basic cropping example
 
 ```js
+// Options for getDisplayMedia()
+const displayMediaOptions = {
+  preferCurrentTab: true,
+};
+
 // Create crop target from DOM element
 const demoElem = document.querySelector("#demo");
-const cropTarget = await CropTarget.fromElement(demoArea);
+const cropTarget = await CropTarget.fromElement(demoElem);
 
 // Capture video stream from user's webcam and isolate video track
 const stream =

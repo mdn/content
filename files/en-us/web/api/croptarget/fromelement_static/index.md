@@ -30,9 +30,14 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("CropTarget")}} object inst
 ## Examples
 
 ```js
+// Options for getDisplayMedia()
+const displayMediaOptions = {
+  preferCurrentTab: true,
+};
+
 // Create crop target from DOM element
 const demoElem = document.querySelector("#demo");
-const cropTarget = await CropTarget.fromElement(demoArea);
+const cropTarget = await CropTarget.fromElement(demoElem);
 
 // Capture video stream from user's webcam and isolate video track
 const stream =

@@ -21,6 +21,11 @@ The **`RestrictionTarget`** interface of the {{domxref("Screen Capture extension
 ## Examples
 
 ```js
+// Options for getDisplayMedia()
+const displayMediaOptions = {
+  preferCurrentTab: true,
+};
+
 // Create restriction target from DOM element
 const demoElem = document.querySelector("#demo");
 const restrictionTarget = await RestrictionTarget.fromElement(demoElem);
