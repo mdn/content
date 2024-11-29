@@ -74,7 +74,7 @@ The _host_ component may take one of these forms:
       <td>The given host and any of its subdomains.</td>
     </tr>
     <tr>
-      <td><code>*.</code> followed by part of the hostnamp plus a port number.</td>
+      <td><code>*.</code> followed by part of the hostname plus a port number.</td>
       <td>The given host and any of its subdomains for the specified port number.</td>
     </tr>
     <tr>
