@@ -1,32 +1,30 @@
+# Do not add comments to this file. They will be lost.
+
 sidebar:
   - type: section
     link: /Web/MathML
-
   - type: section
     title: Guides
   - children:
       - link: /Web/MathML/Authoring
       - link: /Web/MathML/Fonts
       - link: /Web/MathML/Values
-
   - type: section
     title: Reference
   - type: listSubPages
+    path: /Web/MathML/Element
     title: Elements
     details: closed
-    path: /en-US/docs/Web/MathML/Element
   - type: listSubPages
+    path: /Web/MathML/Global_attributes
     title: Global attributes
     details: closed
-    path: /en-US/docs/Web/MathML/Global_attributes
   - /Web/MathML/Attribute
-
   - type: section
     title: Examples
   - children:
       - link: /Web/MathML/Examples/Deriving_the_Quadratic_Formula
       - link: /Web/MathML/Examples/MathML_Pythagorean_Theorem
-
 l10n:
   en-US:
     Reference: Reference

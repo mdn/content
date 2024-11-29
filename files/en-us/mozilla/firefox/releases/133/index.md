@@ -12,7 +12,7 @@ This article provides information about the changes in Firefox 133 that affect d
 
 ### HTML
 
-No notable changes
+- The [`viewport <meta>` tag](/en-US/docs/Web/HTML/Viewport_meta_tag) now supports the [`interactive-widgets`](/en-US/docs/Web/HTML/Viewport_meta_tag#the_effect_of_interactive_ui_widgets) attribute, this influences the size of the viewport when common UI widgets, such as virtual keyboards, are added to the screen. ([Firefox bug 1831649](https://bugzil.la/1831649) and [Firefox bug 1920755](https://bugzil.la/1920755)).
 
 ### CSS
 
@@ -41,7 +41,6 @@ No notable changes
 
 - The [`onwaitingforkey`](/en-US/docs/Web/API/HTMLMediaElement/waitingforkey_event) content attribute can now be specified on {{htmlelement("audio")}}/{{htmlelement("video")}} elements to set an inline event handler for the `waitingforkey` event. ([Firefox bug 1925952](https://bugzil.la/1925952)).
 - {{domxref("ServiceWorkerContainer")}} is now exposed in all worker contexts via {{domxref("WorkerNavigator.serviceWorker")}}, allowing workers to inspect and manage the {{domxref("ServiceWorkerRegistration","service worker registrations","","nocode")}} associated with the current origin. Previously `ServiceWorkerContainer` was only available in the main thread, via {{domxref("Navigator.serviceWorker")}}. ([Firefox bug 1113522](https://bugzil.la/1113522)).
-- The {{domxref("ImageDecoder")}}, {{domxref("ImageTrackList")}}, and {{domxref("ImageTrack")}} interfaces of the [WebCodecs API](/en-US/docs/Web/API/WebCodecs_API) are now supported, enabling the decoding images from the main and worker threads. ([Firefox bug 1923755](https://bugzil.la/1923755)).
 - The [`name`](/en-US/docs/Web/API/PerformanceNavigationTiming#performanceentry.name) property of `PerformanceNavigationTiming` now omits [text fragments](/en-US/docs/Web/URI/Fragment/Text_fragments) from the returned URL, matching the specification. This kind of {{domxref("PerformanceResourceTiming")}} object is returned by {{domxref("Performance.getEntries()")}} for entries with an {{domxref("PerformanceEntry/entryType", "entryType")}} of `navigation`. ([Firefox bug 1919565](https://bugzil.la/1919565)).
 
 #### Removals
