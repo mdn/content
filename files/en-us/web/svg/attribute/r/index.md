@@ -2,9 +2,9 @@
 title: r
 slug: Web/SVG/Attribute/r
 page-type: svg-attribute
-spec-urls:
-  - https://svgwg.org/svg2-draft/geometry.html#R
-  - https://svgwg.org/svg2-draft/pservers.html#RadialGradientElementRAttribute
+browser-compat:
+  - svg.elements.circle.r
+  - svg.elements.radialGradient.r
 ---
 
 {{SVGRef}}
@@ -107,12 +107,6 @@ The gradient will be drawn such that the **100%** gradient stop is mapped to the
             >&#x3C;length></a
           ></strong
         >
-        |
-        <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
-        >
       </td>
     </tr>
     <tr>
@@ -129,3 +123,7 @@ The gradient will be drawn such that the **100%** gradient stop is mapped to the
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

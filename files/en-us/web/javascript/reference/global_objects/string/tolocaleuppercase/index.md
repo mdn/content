@@ -42,7 +42,7 @@ follow the default case mappings in Unicode, there may be a different result.
 Also notice that conversion is not necessarily a 1:1 character mapping, as some
 characters might result in two (or even more) characters when transformed to upper-case.
 Therefore the length of the result string can differ from the input length. This also
-implies that the conversion is not stable, so i.E. the following can return
+implies that the conversion is not stable, so for example the following can return
 `false`:
 `x.toLocaleLowerCase() === x.toLocaleUpperCase().toLocaleLowerCase()`
 
