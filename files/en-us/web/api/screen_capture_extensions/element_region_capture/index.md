@@ -173,7 +173,7 @@ To use the Element Capture API, we first grab a reference to a DOM element that 
 const demoElem = document.querySelector("#demo");
 ```
 
-Next, in the options object passed into `getDisplayMedia()` when we invoke it, we set [`preferCurrentTab: true`](/en-US/docs/Web/API/MediaDevices/getDisplayMedia#prefercurrenttab). This instructs the browser to offer the user's current tab as the most prominent capture source in the dialog that asks them what to share. Chrome, for example, only gives them this option.
+Next, in the options object passed into `getDisplayMedia()` when we invoke it, we set [`preferCurrentTab: true`](/en-US/docs/Web/API/MediaDevices/getDisplayMedia#prefercurrenttab). This hint suggests that the browser should offer the user's current tab as the most prominent capture source in the dialog that asks them what to share. Chrome, for example, only gives them this option when `preferCurrentTab: true` is set.
 
 ```js
 const displayMediaOptions = {
