@@ -19,8 +19,8 @@ A string.
 ## Examples
 
 ```js
-// https://developer.mozilla.org/en-US/docs/Web/API/Location/hash#examples
-const result = location.hash; // Returns '#examples'
+const result = location.hash; // https://developer.mozilla.org/en-US/docs/Web/API/Location/hash#examples
+console.log(result);  // Output: '#examples'
 ```
 
 ## Specifications
