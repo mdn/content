@@ -220,7 +220,7 @@ p.nine {
 
 #### Result
 
-{{embedlivesample("Setting font-weight ranges", "", 400)}}
+{{embedlivesample("Setting font-weight ranges", "", 500)}}
 
 The `seven` paragraph uses the extra bold font. While `font-weight: 700` matches both the `FiraSans-Bold` and `FiraSans-ExtraBold` declarations, as the FiraSans-ExtraBold is declared later, it overrides the `FiraSans-Bold` for that value.
 
