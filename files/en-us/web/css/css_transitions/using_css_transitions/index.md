@@ -300,28 +300,56 @@ The code renders as follows:
 
 Transitions are a great tool to make things look much smoother without having to do anything to your JavaScript functionality. Take the following example.
 
-```html
+```html live-sample___js-transitions
 <p>Click anywhere to move the ball</p>
 <div id="foo" class="ball"></div>
+
+<script>
+  // Make the ball move to a certain position:
+  const f = document.getElementById("foo");
+  document.addEventListener(
+    "click",
+    (ev) => {
+      f.style.transform = `translateY(${ev.clientY - 25}px)`;
+      f.style.transform += `translateX(${ev.clientX - 25}px)`;
+    },
+    false,
+  );
+</script>
 ```
 
-Using JavaScript you can make the effect of moving the ball to a certain position happen:
+With CSS, you can smooth the styles applied through JavaScript. Add a transition to the element and any change will happen smoothly:
 
-```js
-const f = document.getElementById("foo");
-document.addEventListener(
-  "click",
-  (ev) => {
-    f.style.transform = `translateY(${ev.clientY - 25}px)`;
-    f.style.transform += `translateX(${ev.clientX - 25}px)`;
-  },
-  false,
-);
+```css hidden live-sample___js-transitions
+body {
+  background-color: #fff;
+  color: #333;
+  font:
+    1.2em / 1.5 Helvetica Neue,
+    Helvetica,
+    Arial,
+    sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin-top: 3em;
+}
+
+main {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 660px;
+  height: 400px;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
 ```
 
-With CSS you can make it smooth without any extra effort. Add a transition to the element and any change will happen smoothly:
-
-```css
+```css live-sample___js-transitions
 .ball {
   border-radius: 25px;
   width: 50px;
@@ -334,7 +362,7 @@ With CSS you can make it smooth without any extra effort. Add a transition to th
 }
 ```
 
-{{EmbedGHLiveSample("css-examples/transitions/js-transitions.html", '100%', 500)}}
+{{EmbedLiveSample("js-transitions", "", "400px")}}
 
 ### Detecting the start and completion of a transition
 

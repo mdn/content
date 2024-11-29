@@ -1,8 +1,9 @@
+# Do not add comments to this file. They will be lost.
+
 sidebar:
   - type: section
     link: /WebAssembly
     title: WebAssembly_home_page
-
   - title: Tutorials
     details: open
     children:
@@ -22,7 +23,6 @@ sidebar:
         title: Loading_and_running
       - link: /WebAssembly/Exported_functions
         title: Exported_functions
-
   - title: JavaScript_interface
     details: open
     children:
@@ -48,7 +48,6 @@ sidebar:
         code: true
       - link: /WebAssembly/JavaScript_interface/RuntimeError
         code: true
-
 l10n:
   en-US:
     WebAssembly_home_page: WebAssembly home page
