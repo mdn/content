@@ -14,7 +14,7 @@ Typically, a developer will want to use fonts from a single font family in a ran
 To declare the font to be used for a range of font weights, declare a space-separated pair of font-weight values as the value for the `font-weight` descriptor. When CSS rules set a font weight by setting the {{cssxref("font-weight")}} property or the {{cssxref("font")}} shorthand property, the appropriate font will then be used.
 
 For example, if the descriptor is `font-weight: 400 600;`, when the property is `font-weight: 450` or `font-weight: 550`, that font will be use for that font-family.
-Whether the font is a static or a [variable font](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide), the font matching the range will be used. In this case, if the font is a static font, `450` and `550` will apear the same. If the font is a variable font, the latter will be bolder.
+Whether the font is a static or a [variable font](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide), the font matching the range will be used. In this case, if the font is a static font, `450` and `550` will appear the same. If the font is a variable font, the latter will be bolder.
 
 The descriptor is the same for all fonts, but the range you'll set for a variable font will generally be greater, possibly even `1 1000` to use the same font for all font weight property values.
 
