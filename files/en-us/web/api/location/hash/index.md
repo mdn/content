@@ -20,7 +20,7 @@ A string.
 
 ```js
 const result = location.hash; // https://developer.mozilla.org/en-US/docs/Web/API/Location/hash#examples
-console.log(result);  // Output: '#examples'
+console.log(result); // Output: '#examples'
 ```
 
 ## Specifications
