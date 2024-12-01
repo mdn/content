@@ -14,22 +14,52 @@ request.
 
 ## Value
 
-A {{domxref("DOMException")}} or `null` if there is no error. The following error names are returned
-in the exception object:
+A {{domxref("DOMException")}} or `null` if there is no error. The following error names can be returned
+in the exception object, depending on what caused the error.
+
+### Transaction errors
 
 - `AbortError`
-  - : If you abort the transaction, then all requests still in progress receive this error.
+  - : Thrown if you abort the transaction, then all requests still in progress receive this error.
+- `ReadOnlyError`
+  - : Thrown if the mutating operation was attempted in a read-only transaction.
+- `SyntaxError`
+  - : Thrown in the `keyPath` argument contains an invalid key path.
+- `TransactionInactiveError`
+  - : Thrown if a request was placed against a transaction which is currently not active, or which is finished.
+
+### Data integrity errors
+
 - `ConstraintError`
-  - : If you insert data that doesn't conform to a constraint.
-    It's an exception type for creating stores and indexes.
-    You get this error, for example, if you try to add a new key that already exists in the record.
+  - : Thrown if you insert data that doesn't conform to a constraint when creating stores and indexes.
+    For example, you will get this error if you try to add a new key that already exists in the record.
+- `DataError`
+  - : Thrown if data provided to an operation does not meet requirements.
+- `DataCloneError`
+  - : Thrown if the data being stored could not be cloned by the internal structured cloning algorithm.
+- `InvalidAccessError`
+  - : Thrown if an invalid operation was performed on an object.
+- `InvalidStateError`
+  - : Thrown if an operation was called on an object on which it is not allowed or at a time when it is not allowed, or if a request is made on a source object that has been deleted or removed. For example, if a result is accessed before the corresponding request is completed.
 - `QuotaExceededError`
-  - : If you run out of disk quota and the user declined to grant you more space.
-- `UnknownError`
-  - : If the operation failed for reasons unrelated to the database itself.
-    A failure due to disk IO errors is such an example.
+  - : Thrown if you run out of disk quota and the user declined to grant the application more space.
 - `VersionError`
-  - : If you try to open a database with a version lower than the one it already has.
+  - : Thrown if you try to open a database with a version lower than the one it already has.
+
+### Large value read failure errors
+
+Large IndexedDB values are not stored directly in the underlying database; instead, they are stored as separate files that are accessed via a reference stored in the database. This category of errors can occur due to transient causes such as low memory and unrecoverable causes such as source blob files being deleted. Separate blob files containing IndexedDB data can end up being deleted because they show up as opaque files to users when they are using disk space recovery programs.
+
+Possible corrective actions for such unrecoverable cases might include notifying the user, deleting the entry from the DB, then attempting to re-fetch the data from the server.
+
+Errors in this caregory are as follows. More recent browser versions have changed the error types thrown and improved the error messages to help developers distinguish between transient and unrecoverable cases.
+
+- `NotFoundError` or `NotReadableError`
+  - : Thrown for unrecoverable errors.
+- `DataError` or `UnknownError`
+  - : Thrown for transient errors, including general disk IO errors.
+
+### Related errors
 
 In addition to the error codes sent to the {{ domxref("IDBRequest") }} object,
 asynchronous operations can also raise exceptions. The list describes problems that
