@@ -120,7 +120,7 @@ ETag: "e0023aa4f"
 ## Browser compatibility
 
 The browser doesn't use the `PATCH` method for user-initiated actions, so "browser compatibility" doesn't apply.
-Developers can set this request method using `fetch()`.
+Developers can set this request method using [`fetch()`](/en-US/docs/Web/API/Window/fetch).
 
 ## See also
 
