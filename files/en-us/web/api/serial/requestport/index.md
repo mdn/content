@@ -109,7 +109,7 @@ const port = await navigator.serial.requestPort({
 });
 ```
 
-You can also use the `bluetoothServiceClassIdfilter` key when calling `requestPort()` to prompt the user with a list of filtered Bluetooth serial ports identified by Service Class IDs:
+You can also use the `bluetoothServiceClassId` filter key when calling `requestPort()` to prompt the user with a list of filtered Bluetooth serial ports identified by Service Class IDs:
 
 ```js
 const myBluetoothServiceUuid = "01234567-89ab-cdef-0123-456789abcdef";
