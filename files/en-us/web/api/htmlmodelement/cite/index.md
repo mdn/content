@@ -8,7 +8,7 @@ browser-compat: api.HTMLModElement.cite
 
 {{ApiRef("HTML DOM")}}
 
-The **`cite`** property of the {{domxref("HTMLModElement")}} interface indicates the URL of the resource explaining the modification. It reflects the `cite` attribute of the  {{HTMLElement("del")}} element and {{HTMLElement("ins")}} elements.
+The **`cite`** property of the {{domxref("HTMLModElement")}} interface indicates the URL of the resource explaining the modification. It reflects the `cite` attribute of the {{HTMLElement("del")}} element and {{HTMLElement("ins")}} elements.
 
 ## Value
 
