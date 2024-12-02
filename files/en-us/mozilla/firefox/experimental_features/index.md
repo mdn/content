@@ -22,7 +22,7 @@ Experimental features can be enabled or disabled using the [Firefox Configuratio
 
 ### Autocorrection of editable text elements
 
-The HTML [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) attribute (and correspoinding {{domxref("HTMLElement.autocorrect")}} property) allow autocompletion in editable text elements including: most kinds of text {{htmlelement("input")}} elements, {{htmlelement("textarea")}} elements, and elements that have the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set ([Firefox bug 1725806](https://bugzil.la/1725806)).
+The HTML [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) attribute (and corresponding {{domxref("HTMLElement.autocorrect")}} property) allow autocompletion in editable text elements including: most kinds of text {{htmlelement("input")}} elements, {{htmlelement("textarea")}} elements, and elements that have the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set ([Firefox bug 1725806](https://bugzil.la/1725806)).
 
 <table>
   <thead>
@@ -1454,6 +1454,55 @@ The {{domxref("CloseWatcher")}} interface allows developers to implement UI comp
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>dom.closewatcher.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### Trusted Types API
+
+The [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) provides mechanisms to ensure that functions that can potentially be used as vectors for XSS attacks are only able to be called with data that has been validated or sanitized.
+
+> [!NOTE]
+> At the time of writing not enough of the API has been implemented for it to be effectively testable.
+> This note will be removed once it is ready.
+
+This subset of the API has been implemented:
+
+- {{domxref("TrustedTypePolicyFactory")}}:
+  - {{domxref("TrustedTypePolicyFactory/getAttributeType", "getAttributeType()")}} and {{domxref("TrustedTypePolicyFactory/getPropertyType", "getPropertyType()")}} ([Firefox bug 1917783](https://bugzil.la/1917783), [Firefox bug 1917784](https://bugzil.la/1917784)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>133</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>133</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>133</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>133</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.security.trusted_types.enabled</code></td>
     </tr>
   </tbody>
 </table>
