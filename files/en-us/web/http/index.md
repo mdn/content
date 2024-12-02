@@ -93,7 +93,7 @@ Beginners are encouraged to start with the foundational guides before exploring 
 - [Browser detection using the user agent](/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent)
   - : It's very rarely a good idea to use user agent sniffing to detect a browser, but there are edge cases that require it.
     This document will guide you in doing this as correctly as possible when this is necessary, with an emphasis on considerations to make before embarking on this route.
-- [Configuring servers for Ogg media](/en-US/docs/Web/HTTP/Configuring_servers_for_Ogg_media)
+- [Configuring servers for Ogg media](/en-US/docs/Web/Media/Formats/Configuring_servers_for_Ogg_media)
   - : This guide covers a few server configuration changes that may be necessary for your web server to correctly serve Ogg media files.
     This information may also be useful if you encounter other media types your server isn't already configured to recognize.
 
