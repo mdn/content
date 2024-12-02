@@ -2,7 +2,7 @@
 title: DELETE
 slug: Web/HTTP/Methods/DELETE
 page-type: http-method
-browser-compat: http.methods.DELETE
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110.html#name-delete
 ---
 
 {{HTTPSidebar}}
@@ -111,7 +111,8 @@ Content-Length: 1234
 
 ## Browser compatibility
 
-{{Compat}}
+The browser doesn't use the `DELETE` method for user-initiated actions, so "browser compatibility" doesn't apply.
+Developers can set this request method using [`fetch()`](/en-US/docs/Web/API/Window/fetch).
 
 ## See also
 

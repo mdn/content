@@ -71,7 +71,7 @@ body {
 }
 ```
 
-{{EmbedLiveSample("stiky-footer-example", "", "400px")}}
+{{EmbedLiveSample("sticky-footer-example", "", "400px")}}
 
 > [!NOTE]
 > In this example and the following one we are using a wrapper set to `min-height: 100%`. You can also achieve this for a full page by setting a {{cssxref("min-height")}} of `100vh` on the {{htmlelement("body")}} and then using it as your grid container.
@@ -142,7 +142,7 @@ body {
 }
 ```
 
-{{EmbedLiveSample("stiky-footer-flexbox-example", "", "400px")}}
+{{EmbedLiveSample("sticky-footer-flexbox-example", "", "400px")}}
 
 The flexbox example starts out in the same way, but we use `display:flex` rather than `display:grid` on the `.wrapper`; we also set `flex-direction` to `column`. Then we set our main content to `flex-grow: 1` and the other two elements to `flex-shrink: 0` — this prevents them from shrinking smaller when content fills the main area.
 

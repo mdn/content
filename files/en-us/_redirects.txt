@@ -1110,7 +1110,7 @@
 /en-US/docs/Common_CSS_Questions	/en-US/docs/Learn_web_development/Howto/Solve_CSS_problems/CSS_FAQ
 /en-US/docs/Common_XSLT_Errors	/en-US/docs/Web/XSLT/Common_errors
 /en-US/docs/Configuring_Build_Options	https://firefox-source-docs.mozilla.org/setup/configuring_build_options.html
-/en-US/docs/Configuring_servers_for_Ogg_media	/en-US/docs/Web/HTTP/Configuring_servers_for_Ogg_media
+/en-US/docs/Configuring_servers_for_Ogg_media	/en-US/docs/Web/Media/Formats/Configuring_servers_for_Ogg_media
 /en-US/docs/Consistent_List_Indentation	/en-US/docs/Web/CSS/CSS_lists/Consistent_list_indentation
 /en-US/docs/Const_statement	/en-US/docs/Web/JavaScript/Reference/Statements/const
 /en-US/docs/Content_negotiation	/en-US/docs/Web/HTTP/Content_negotiation
@@ -12674,6 +12674,7 @@
 /en-US/docs/Web/HTTP/Basics_of_HTTP/Resource_URLs	/en-US/docs/Web/URI/Schemes/resource
 /en-US/docs/Web/HTTP/CORS/Errors/Reason:_CORS_header_‘Origin’_cannot_be_added	/en-US/docs/Web/HTTP/CORS/Errors/CORSOriginHeaderNotAdded
 /en-US/docs/Web/HTTP/Caching_FAQ	/en-US/docs/Web/HTTP/Caching
+/en-US/docs/Web/HTTP/Configuring_servers_for_Ogg_media	/en-US/docs/Web/Media/Formats/Configuring_servers_for_Ogg_media
 /en-US/docs/Web/HTTP/Controlling_DNS_prefetching	/en-US/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control
 /en-US/docs/Web/HTTP/Cookies/Cookie_Prefixes	/en-US/docs/Web/HTTP/Cookies#Cookie_prefixes
 /en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)	/en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy

@@ -540,4 +540,4 @@ Some media file types let you provide more specific information using the [`code
 - {{htmlelement("audio")}}
 - [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [Manipulating video using canvas](/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
-- [Configuring servers for Ogg media](/en-US/docs/Web/HTTP/Configuring_servers_for_Ogg_media)
+- [Configuring servers for Ogg media](/en-US/docs/Web/Media/Formats/Configuring_servers_for_Ogg_media)

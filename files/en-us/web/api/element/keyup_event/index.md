@@ -93,7 +93,7 @@ function logKey(e) {
 
 ### keyup events with IME
 
-Since Firefox 65, the [`keydown`](/en-US/docs/Web/API/Element/keydown_event) and `keyup` events are now fired during {{glossary("IME")}} composition, to improve cross-browser compatibility for CJKT users ([Firefox bug 354358](https://bugzil.la/354358)). To ignore all `keyup` events that are part of composition, do something like this:
+Since Firefox 65, the [`keydown`](/en-US/docs/Web/API/Element/keydown_event) and `keyup` events are now fired during {{glossary("Input method editor")}} composition, to improve cross-browser compatibility for CJKT users ([Firefox bug 354358](https://bugzil.la/354358)). To ignore all `keyup` events that are part of composition, do something like this:
 
 ```js
 eventTarget.addEventListener("keyup", (event) => {

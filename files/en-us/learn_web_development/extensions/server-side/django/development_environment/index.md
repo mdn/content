@@ -407,7 +407,7 @@ For this tutorial we'll hosting our code on [GitHub](https://github.com/), one o
 
 > [!NOTE]
 > Using SCM tools is good software development practice!
-> Ths instructions provide a basic introduction to git and GitHub.
+> These instructions provide a basic introduction to git and GitHub.
 > To learn more, see [Learning Git](https://docs.github.com/en/get-started/start-your-journey/git-and-github-learning-resources).
 
 ### Key concepts
