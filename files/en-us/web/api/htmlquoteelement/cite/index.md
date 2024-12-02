@@ -12,13 +12,13 @@ The **`cite`** property of the {{domxref("HTMLQuoteElement")}} interface indicat
 
 ## Value
 
-A string; a URL.
+A string representing a URL.
 
 ## Example
 
 ```js
 const quote = document.querySelector("q");
-console.log(`Orignal source: ${quote.cite}`); // the current value
+console.log(`Original source: ${quote.cite}`); // the current value
 quote.cite = "https://example.com/quotes"; // updates the value
 ```
 
