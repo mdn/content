@@ -19,6 +19,8 @@ Instances of this interface may be obtained by calling methods of the {{domxref(
 
 ## Instance properties
 
+- {{domxref("SerialPort.connected")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a boolean value that indicates whether the port is logically connected to the device.
 - {{domxref("SerialPort.readable")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("ReadableStream")}} for receiving data from the device connected to the port.
 - {{domxref("SerialPort.writable")}} {{ReadOnlyInline}} {{Experimental_Inline}}
@@ -42,9 +44,9 @@ Instances of this interface may be obtained by calling methods of the {{domxref(
 ## Events
 
 - {{domxref("SerialPort.connect_event", "connect")}} {{Experimental_Inline}}
-  - : An event fired when the port has connected to the device.
+  - : Fired when the port connects to the device.
 - {{domxref("SerialPort.disconnect_event", "disconnect")}} {{Experimental_Inline}}
-  - : An event fired when the port has disconnected from the device.
+  - : Fired when the port disconnects from the device.
 
 ## Examples
 
