@@ -27,9 +27,9 @@ Instances of this interface may be obtained by calling methods of the {{domxref(
 ## Instance methods
 
 - {{domxref("SerialPort.forget()")}} {{Experimental_Inline}}
-  - : Returns a {{jsxref("Promise")}} that resolves when the port closes and is forgotten.
+  - : Returns a {{jsxref("Promise")}} that resolves when access to the serial port is revoked. Calling this "forgets" the device, resetting any previously-set permissions so the calling site can no longer communicate with the port.
 - {{domxref("SerialPort.getInfo()")}} {{Experimental_Inline}}
-  - : Returns an object containing properties of the port.
+  - : Returns an object containing identifying information for the device available via the port.
 - {{domxref("SerialPort.open()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves when the port is opened. By default the port is opened with 8 data bits, 1 stop bit and no parity checking.
 - {{domxref("SerialPort.setSignals()")}} {{Experimental_Inline}}
