@@ -1,0 +1,49 @@
+---
+title: "DOMTokenList: toString() method"
+short-title: toString()
+slug: Web/API/DOMTokenList/toString
+page-type: web-api-instance-method
+browser-compat: api.DOMTokenList.toString
+---
+
+{{APIRef("DOM")}}
+
+The **`toString()`** {{Glossary("stringifier")}} of the {{domxref("DOMTokenList")}} interface returns the values of the token list serialized as a string. Bing that a `DOMTokenList` represents a set of space-separated tokens, the values in the returned string are space-separated. The return value is equal to the {{domxref("DOMTokenList.value")}} property.
+
+## Syntax
+
+```js-nolint
+toString()
+```
+
+### Parameters
+
+None.
+
+### Return value
+
+A string; the values of the list separated by spaces.
+
+## Examples
+
+```js
+const el = document.getElementById("#myId"),
+  cls = el.classList;
+el.className = "shop empty-cart"; // sets some classes
+cls.add("logged-in", "dark-mode"); // add two more classes
+console.dir(cls); // DOMTokenList(4) [ "shop", "empty-cart", "logged-in", "dark-mode" ]
+console.log(cls.toString()); // "shop empty-cart logged-in dark-mode"
+```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- {{domxref("DOMTokenList")}}
+- {{domxref("DOMTokenList.add()")}}
