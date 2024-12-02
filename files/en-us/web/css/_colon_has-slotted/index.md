@@ -72,4 +72,4 @@ The `<slot>` element that has been assigned content matched the `:has-slotted` p
 
 - HTML {{HTMLElement("template")}} element
 - HTML {{HTMLElement("slot")}} element
-- CSS {{CSSXRef("::slotted")}} pseudo-element
+- {{CSSXRef("::slotted")}}
