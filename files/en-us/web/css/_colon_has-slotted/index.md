@@ -35,11 +35,9 @@ This only works when used inside CSS placed within a [shadow DOM](/en-US/docs/We
 
 ## Examples
 
-### Simple example
-
 This example has two `<slot>` elements, one of which has been assigned some content and the other has not.
 
-#### HTML
+### HTML
 
 ```html
 <p>
@@ -56,9 +54,9 @@ This example has two `<slot>` elements, one of which has been assigned some cont
 </p>
 ```
 
-#### Result
+### Result
 
-The `<slot>` element that has been assigned content matched the `:has-slotted` pseudo class and has the `color` value of `rebbecapurple` applied.
+The `<slot>` element that has been assigned content matched the `:has-slotted` pseudo-class and has the `color` value of `rebbecapurple` applied.
 
 {{EmbedLiveSample("simple_example",100,300)}}
 
