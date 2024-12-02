@@ -2,10 +2,12 @@
 title: ":current"
 slug: Web/CSS/:current
 page-type: css-pseudo-class
+status:
+  - experimental
 spec-urls: https://drafts.csswg.org/selectors/#the-current-pseudo
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`:current`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selector is a time-dimensional pseudo-class that represents an element or the ancestor of an element that is currently being displayed. For example, this pseudo-class can be used to represent a video that is being displayed with captions by [WebVTT](/en-US/docs/Web/API/WebVTT_API).
 
