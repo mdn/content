@@ -5154,6 +5154,7 @@
 /en-US/docs/Learn/Accessibility/What_is_accessibility	/en-US/docs/Learn_web_development/Core/Accessibility/What_is_accessibility
 /en-US/docs/Learn/Advanced_layouts_with_flexbox	/en-US/docs/Glossary/Flexbox
 /en-US/docs/Learn/Anatomy_of_a_web_page	/en-US/docs/Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts
+/en-US/docs/Learn/CSS	/en-US/docs/Learn_web_development/Core/Styling_basics
 /en-US/docs/Learn/CSS/Basic_text_styling_in_CSS	/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals
 /en-US/docs/Learn/CSS/Basics	/en-US/docs/Learn_web_development/Core/Styling_basics
 /en-US/docs/Learn/CSS/Basics/Box_model	/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model
@@ -5208,6 +5209,7 @@
 /en-US/docs/Learn/CSS/CSS_layout/Media_queries	/en-US/docs/Learn_web_development/Core/CSS_layout/Media_queries
 /en-US/docs/Learn/CSS/CSS_layout/Multicol_skills	/en-US/docs/Learn_web_development/Core/CSS_layout/Multicol_skills
 /en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout	/en-US/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout
+/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow	/en-US/docs/Learn_web_development/Core/CSS_layout/Introduction
 /en-US/docs/Learn/CSS/CSS_layout/Position_skills	/en-US/docs/Learn_web_development/Core/CSS_layout/Position_skills
 /en-US/docs/Learn/CSS/CSS_layout/Positioning	/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning
 /en-US/docs/Learn/CSS/CSS_layout/Practical_positioning_examples	/en-US/docs/Learn_web_development/Core/CSS_layout/Practical_positioning_examples
@@ -5663,7 +5665,7 @@
 /en-US/docs/Learn/Skills/Infrastructure/Understanding_URLs	/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL
 /en-US/docs/Learn/Skills/Web_Mechanics	/en-US/docs/Learn_web_development/Howto
 /en-US/docs/Learn/Thinking_before_coding	/en-US/docs/Learn_web_development/Howto/Design_and_accessibility/Thinking_before_coding
-/en-US/docs/Learn/Tools_and_testing	/en-US/docs/Learn_web_development/Extensions/Client-side_tools
+/en-US/docs/Learn/Tools_and_testing	/en-US/docs/Learn_web_development/Extensions/Testing
 /en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks	/en-US/docs/Learn_web_development/Core/Frameworks_libraries
 /en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building	/en-US/docs/Learn_web_development/Core/Frameworks_libraries/Angular_building
 /en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering	/en-US/docs/Learn_web_development/Core/Frameworks_libraries/Angular_filtering
