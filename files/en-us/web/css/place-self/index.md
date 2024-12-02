@@ -164,8 +164,8 @@ span {
 
 ## See also
 
-- The {{cssxref("align-self")}} property
-- The {{cssxref("justify-self")}} property
+- {{cssxref("align-self")}}
+- {{cssxref("justify-self")}}
 - [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
 - [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
 - [Box alignment in CSS grid layouts](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
