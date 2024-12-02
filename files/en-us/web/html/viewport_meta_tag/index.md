@@ -21,7 +21,7 @@ However, this mechanism is not so good for pages that are optimized for narrow s
 
 ## Viewport basics
 
-A typical mobile-optimized site contains something like the following:
+The viewport is a comma-separated list of feature and value pairs. A typical mobile-optimized site contains something like the following:
 
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -81,6 +81,10 @@ Allowed values are:
   - : The {{Glossary("viewport")}} gets resized by the interactive widget.
 - `overlays-content`
   - : Neither the {{Glossary("viewport")}} nor the {{Glossary("visual viewport")}} gets resized by the interactive widget.
+
+```html
+<meta name="viewport" content="interactive-widget=resizes-content" />
+```
 
 When the {{Glossary("viewport")}} gets resized, the initial [containing block](/en-US/docs/Web/CSS/Containing_block) also gets resized, thereby affecting the computed size of [viewport units](/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport).
 
