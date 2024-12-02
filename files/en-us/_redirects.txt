@@ -1110,7 +1110,7 @@
 /en-US/docs/Common_CSS_Questions	/en-US/docs/Learn/CSS/Howto/CSS_FAQ
 /en-US/docs/Common_XSLT_Errors	/en-US/docs/Web/XSLT/Common_errors
 /en-US/docs/Configuring_Build_Options	https://firefox-source-docs.mozilla.org/setup/configuring_build_options.html
-/en-US/docs/Configuring_servers_for_Ogg_media	/en-US/docs/Web/HTTP/Configuring_servers_for_Ogg_media
+/en-US/docs/Configuring_servers_for_Ogg_media	/en-US/docs/Web/Media/Formats/Configuring_servers_for_Ogg_media
 /en-US/docs/Consistent_List_Indentation	/en-US/docs/Web/CSS/CSS_lists/Consistent_list_indentation
 /en-US/docs/Const_statement	/en-US/docs/Web/JavaScript/Reference/Statements/const
 /en-US/docs/Content_negotiation	/en-US/docs/Web/HTTP/Content_negotiation
@@ -2230,7 +2230,7 @@
 /en-US/docs/DOM/window.toolbar	/en-US/docs/Web/API/Window/toolbar
 /en-US/docs/DOM/window.top	/en-US/docs/Web/API/Window/top
 /en-US/docs/DOM/window.unescape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/unescape
-/en-US/docs/DOM/window.updateCommands	/en-US/docs/Web/API/Window/updateCommands
+/en-US/docs/DOM/window.updateCommands	/en-US/docs/Web/API/Window
 /en-US/docs/DOM/window.window	/en-US/docs/Web/API/Window/window
 /en-US/docs/DOM:CDATASection	/en-US/docs/Web/API/CDATASection
 /en-US/docs/DOM:CSS	/en-US/docs/Web/CSS/Reference
@@ -2652,7 +2652,7 @@
 /en-US/docs/DOM:window.toolbar	/en-US/docs/Web/API/Window/toolbar
 /en-US/docs/DOM:window.top	/en-US/docs/Web/API/Window/top
 /en-US/docs/DOM:window.unescape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/unescape
-/en-US/docs/DOM:window.updateCommands	/en-US/docs/Web/API/Window/updateCommands
+/en-US/docs/DOM:window.updateCommands	/en-US/docs/Web/API/Window
 /en-US/docs/DOM:window.window	/en-US/docs/Web/API/Window/window
 /en-US/docs/DOMParser	/en-US/docs/Web/API/DOMParser
 /en-US/docs/DOMTokenList.supports()	/en-US/docs/Web/API/DOMTokenList/supports
@@ -3369,7 +3369,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.statusbar	/en-US/docs/Web/API/Window/statusbar
 /en-US/docs/Document_Object_Model_(DOM)/window.toolbar	/en-US/docs/Web/API/Window/toolbar
 /en-US/docs/Document_Object_Model_(DOM)/window.unescape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/unescape
-/en-US/docs/Document_Object_Model_(DOM)/window.updateCommands	/en-US/docs/Web/API/Window/updateCommands
+/en-US/docs/Document_Object_Model_(DOM)/window.updateCommands	/en-US/docs/Web/API/Window
 /en-US/docs/Document_Object_Model_(DOM)/window.window	/en-US/docs/Web/API/Window/window
 /en-US/docs/Domain_name	/en-US/docs/Glossary/Domain_name
 /en-US/docs/DragDrop	/en-US/docs/Web/API/HTML_Drag_and_Drop_API
@@ -9479,13 +9479,18 @@
 /en-US/docs/Web/API/RTCIceTransport/onselectedcandidatepairchange	/en-US/docs/Web/API/RTCIceTransport/selectedcandidatepairchange_event
 /en-US/docs/Web/API/RTCIceTransport/onstatechange	/en-US/docs/Web/API/RTCIceTransport/statechange_event
 /en-US/docs/Web/API/RTCIceTransportState	/en-US/docs/Web/API/RTCIceTransport/state
+/en-US/docs/Web/API/RTCInboundRtpStreamStats/firCount	/en-US/docs/Web/API/RTCInboundRtpStreamStats
 /en-US/docs/Web/API/RTCInboundRtpStreamStats/lastPacketReceivedTimesta	/en-US/docs/Web/API/RTCInboundRtpStreamStats/lastPacketReceivedTimestamp
+/en-US/docs/Web/API/RTCInboundRtpStreamStats/pliCount	/en-US/docs/Web/API/RTCInboundRtpStreamStats
+/en-US/docs/Web/API/RTCInboundRtpStreamStats/trackId	/en-US/docs/Web/API/RTCInboundRtpStreamStats
 /en-US/docs/Web/API/RTCOfferAnswerOptions	/en-US/docs/Web/API/RTCPeerConnection/createAnswer
 /en-US/docs/Web/API/RTCOfferAnswerOptions/voiceActivityDetection	/en-US/docs/Web/API/RTCPeerConnection/createAnswer
 /en-US/docs/Web/API/RTCOfferOptions	/en-US/docs/Web/API/RTCPeerConnection/createOffer
 /en-US/docs/Web/API/RTCOfferOptions/iceRestart	/en-US/docs/Web/API/RTCPeerConnection/createOffer
+/en-US/docs/Web/API/RTCOutboundRtpStreamStats/firCount	/en-US/docs/Web/API/RTCOutboundRtpStreamStats
 /en-US/docs/Web/API/RTCOutboundRtpStreamStats/lastPacketSentTimestamp	/en-US/docs/Web/API/RTCOutboundRtpStreamStats
 /en-US/docs/Web/API/RTCOutboundRtpStreamStats/perDscpPacketsReceived	/en-US/docs/Web/API/RTCOutboundRtpStreamStats/perDscpPacketsSent
+/en-US/docs/Web/API/RTCOutboundRtpStreamStats/pliCount	/en-US/docs/Web/API/RTCOutboundRtpStreamStats
 /en-US/docs/Web/API/RTCPeerConnection.addStream	/en-US/docs/Web/API/RTCPeerConnection/addStream
 /en-US/docs/Web/API/RTCPeerConnection.close	/en-US/docs/Web/API/RTCPeerConnection/close
 /en-US/docs/Web/API/RTCPeerConnection.getIdentityAssertion	/en-US/docs/Web/API/RTCPeerConnection/getIdentityAssertion
@@ -9552,6 +9557,13 @@
 /en-US/docs/Web/API/RTCRtpSendParameters/encodings	/en-US/docs/Web/API/RTCRtpSender/setParameters
 /en-US/docs/Web/API/RTCRtpSender/getCapabilities	/en-US/docs/Web/API/RTCRtpSender/getCapabilities_static
 /en-US/docs/Web/API/RTCRtpSender/getCapabilities()	/en-US/docs/Web/API/RTCRtpSender/getCapabilities_static
+/en-US/docs/Web/API/RTCRtpStreamStats/codecId	/en-US/docs/Web/API/RTCInboundRtpStreamStats
+/en-US/docs/Web/API/RTCRtpStreamStats/firCount	/en-US/docs/Web/API/RTCInboundRtpStreamStats
+/en-US/docs/Web/API/RTCRtpStreamStats/kind	/en-US/docs/Web/API/RTCInboundRtpStreamStats
+/en-US/docs/Web/API/RTCRtpStreamStats/nackCount	/en-US/docs/Web/API/RTCInboundRtpStreamStats/nackCount
+/en-US/docs/Web/API/RTCRtpStreamStats/pliCount	/en-US/docs/Web/API/RTCOutboundRtpStreamStats
+/en-US/docs/Web/API/RTCRtpStreamStats/ssrc	/en-US/docs/Web/API/RTCInboundRtpStreamStats
+/en-US/docs/Web/API/RTCRtpStreamStats/transportId	/en-US/docs/Web/API/RTCInboundRtpStreamStats
 /en-US/docs/Web/API/RTCRtpSynchronizationSource	/en-US/docs/Web/API/RTCRtpReceiver/getSynchronizationSources
 /en-US/docs/Web/API/RTCRtpSynchronizationSource/voiceActivityFlag	/en-US/docs/Web/API/RTCRtpReceiver/getSynchronizationSources
 /en-US/docs/Web/API/RTCRtpTransceiverDirection	/en-US/docs/Web/API/RTCRtpTransceiver/direction
@@ -10205,6 +10217,7 @@
 /en-US/docs/Web/API/Window/transitionend_event	/en-US/docs/Web/API/Element/transitionend_event
 /en-US/docs/Web/API/Window/transitionrun_event	/en-US/docs/Web/API/Element/transitionrun_event
 /en-US/docs/Web/API/Window/transitionstart_event	/en-US/docs/Web/API/Element/transitionstart_event
+/en-US/docs/Web/API/Window/updateCommands	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/Window/vrdisplayblur_event	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/Window/vrdisplayfocus_event	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/Window/vrdisplaypointerrestricted_event	/en-US/docs/Web/API/Window
@@ -10933,7 +10946,7 @@
 /en-US/docs/Web/API/window.toolbar	/en-US/docs/Web/API/Window/toolbar
 /en-US/docs/Web/API/window.top	/en-US/docs/Web/API/Window/top
 /en-US/docs/Web/API/window.unescape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/unescape
-/en-US/docs/Web/API/window.updateCommands	/en-US/docs/Web/API/Window/updateCommands
+/en-US/docs/Web/API/window.updateCommands	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/window.window	/en-US/docs/Web/API/Window/window
 /en-US/docs/Web/API/window/onscroll	/en-US/docs/Web/API/Element/scroll_event
 /en-US/docs/Web/API/window/onscroll-temp	/en-US/docs/Web/API/Element/scroll_event
@@ -12280,6 +12293,7 @@
 /en-US/docs/Web/HTTP/Basics_of_HTTP/Resource_URLs	/en-US/docs/Web/URI/Schemes/resource
 /en-US/docs/Web/HTTP/CORS/Errors/Reason:_CORS_header_‘Origin’_cannot_be_added	/en-US/docs/Web/HTTP/CORS/Errors/CORSOriginHeaderNotAdded
 /en-US/docs/Web/HTTP/Caching_FAQ	/en-US/docs/Web/HTTP/Caching
+/en-US/docs/Web/HTTP/Configuring_servers_for_Ogg_media	/en-US/docs/Web/Media/Formats/Configuring_servers_for_Ogg_media
 /en-US/docs/Web/HTTP/Controlling_DNS_prefetching	/en-US/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control
 /en-US/docs/Web/HTTP/Cookies/Cookie_Prefixes	/en-US/docs/Web/HTTP/Cookies#Cookie_prefixes
 /en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)	/en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy
