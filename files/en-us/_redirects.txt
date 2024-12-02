@@ -5186,6 +5186,7 @@
 /en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements	/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements
 /en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseuso-classes_and_Pseudo-elements	/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements
 /en-US/docs/Learn/CSS/Building_blocks/Selectors/Selectors_Tasks	/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors/Selectors_Tasks
+/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors	/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors
 /en-US/docs/Learn/CSS/Building_blocks/Selectors/Writing_Modes_Tasks	/en-US/docs/Learn_web_development/Core/Styling_basics/Writing_Modes_Tasks
 /en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS	/en-US/docs/Learn_web_development/Core/Styling_basics/Sizing
 /en-US/docs/Learn/CSS/Building_blocks/Sizing_tasks	/en-US/docs/Learn_web_development/Core/Styling_basics/Sizing_tasks
