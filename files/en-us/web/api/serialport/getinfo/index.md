@@ -30,7 +30,7 @@ An object containing the following properties:
   - : If the port is part of a USB device, this property is an unsigned short integer that identifies the device's vendor. If not, it is `undefined`.
 - `usbProductId`
   - : If the port is part of a USB device, this property is an unsigned short integer that identifies the USB device. If not, it is `undefined`.
-- `bluetoothServiceClassId`
+- `bluetoothServiceClassId` {{experimental_inline}}
   - : If the port is a Bluetooth RFCOMM service, this property is an unsigned long integer or string representing the device's Bluetooth service class ID. If not, it is `undefined`.
 
 ## Example
