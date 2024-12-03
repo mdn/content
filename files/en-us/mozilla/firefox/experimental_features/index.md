@@ -1136,8 +1136,8 @@ The CSS {{cssxref("letter-spacing")}} property now splits the specified letter s
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>127</td>
-      <td>No</td>
+      <td>128</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Beta</th>
