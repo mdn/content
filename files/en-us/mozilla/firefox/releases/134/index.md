@@ -18,6 +18,8 @@ This article provides information about the changes in Firefox 134 that affect d
 
 ### CSS
 
+- The {{CSSXRef("align-self")}} and {{CSSXRef("justify-self")}} CSS properties and {{CSSXRef("place-self")}} CSS shorthand property are now supported for [absolutely positioned](/en-US/docs/Learn/CSS/CSS_layout/Positioning#absolute_positioning) elements. ([Firefox bug 1920160](https://bugzil.la/1920160)).
+
 #### Removals
 
 ### JavaScript
