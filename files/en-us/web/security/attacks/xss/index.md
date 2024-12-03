@@ -194,7 +194,7 @@ Most modern templating engines automatically perform output encoding. For exampl
 
 One of the most important parts of preventing XSS attacks is to use a well-regarded templating engine which performs robust output encoding, and read its documentation to understand any caveats about the protection it offers.
 
-#### Contexts
+#### Document contexts
 
 Even if you're using a templating engine, like Django, which automatically encodes HTML, you need to be aware of where in the document you are including untrusted content. For example, suppose you have a Django template like this:
 
@@ -207,12 +207,12 @@ In this context, the browser is evaluating the input as HTML. So you need to pro
 However, suppose the template is like this:
 
 ```django
-<div onmouseover="\{{ my_input }}"></div>
+<div \{{ my_input }}></div>
 ```
 
-The `my_input` variable is is going to be treated as JavaScript by the browser, because it's an HTML event handler attribute. Now if `my_input` is `alert("XSS")`, then the encoding Django provides won't protect you.
+The `my_input` variable is is going to be treated as an HTML attribute by the browser. Now if `my_input` is `onmouseover="alert('XSS')"`, then the HTML encoding that Django provides won't protect you.
 
-The browser uses different rules to process different parts of a web page — HTML elements and their content, HTML attributes, inline styles, inline scripts. These are called contexts, and the type of encoding that needs to be done is different depending on the context in which the input is being interpolated.
+The browser uses different rules to process different parts of a web page — HTML elements and their content, HTML attributes, inline styles, inline scripts. The type of encoding that needs to be done is different depending on the context in which the input is being interpolated.
 
 What's safe in one context may be unsafe in another, and it's necessary to understand the context in which you are including untrusted content, and to implement any special handling that this demands.
 
@@ -225,7 +225,7 @@ What's safe in one context may be unsafe in another, and it's necessary to under
   <div class=\{{ my_class }}>...</div>
   ```
 
-  An attacker can exploit this to inject an event handler attribute, by using input like `some_id onmouseover="alert('XSS!')"`. To prevent the attack, we can quote the placeholder:
+  An attacker can exploit this to inject an event handler attribute, by using input like `some_id onmouseover="alert('XSS!')"`. To prevent the attack, quote the placeholder:
 
   ```django example-good
     <div class="\{{ my_class }}">...</div>
