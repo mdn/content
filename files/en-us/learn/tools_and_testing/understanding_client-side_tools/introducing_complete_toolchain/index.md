@@ -64,7 +64,7 @@ For our sample project, we'll be using a toolchain specifically designed to aid 
 
 ## Checking prerequisites
 
-You should have most of the softwares already if you've been following along with the previous chapters. Here's what you should have before proceeding to the real setup steps. They only need to be done once and you don't need to repeat these again for future projects.
+You should have most of the pieces of software already if you've been following along with the previous chapters. Here's what you should have before proceeding to the real setup steps. They only need to be done once and you don't need to repeat these again for future projects.
 
 ### Creating a GitHub account
 
