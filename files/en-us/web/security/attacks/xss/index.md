@@ -4,15 +4,17 @@ slug: Web/Security/Attacks/XSS
 page-type: guide
 ---
 
-A cross-site scripting (XSS) attack is one in which an attacker is able to execute their code in the context of the target website.
+A cross-site scripting (XSS) attack is one in which an attacker is able to get a target site to execute malicious code as though it was part of the website.
 
-A web browser downloads code from many different websites and runs it on the user's computer. Some of these websites may be highly trustworthy, and the user may use them for sensitive operations, such as financial transactions or medical advice. With others, such as a casual gaming site, the user may have no such trust relationship. The foundation of the browser's security model is that these sites should be kept separate from each other, so code from one site should not be able to access objects or {{glossary("credential", "credentials")}} in another site. This is called the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
+## Overview
+
+A web browser downloads code from many different websites and runs it on the user's computer. Some of these websites will be highly trustworthy, and the user may use them for sensitive operations, such as financial transactions or medical advice. With others, such as a casual gaming site, the user may have no such trust relationship. The foundation of the browser's security model is that these sites should be kept separate from each other, so code from one site should not be able to access objects or {{glossary("credential", "credentials")}} in another site. This is called the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
 
 ![Diagram of 2 sites in the browsers, in separate worlds](same-origin.svg)
 
-In a successful XSS attack, the attacker is able to subvert the same-origin policy, executing their code in the context of the target site. The code can then do anything that the site's own code can do, including, for example:
+In a successful XSS attack, the attacker is able to subvert the same-origin policy by tricking the target site into executing malicious code within its own context, as though it were same-origin. The code can then do anything that the site's own code can do, including, for example:
 
-- access all the content of the site's loaded pages, and any content in local storage
+- access and/or modify all the content of the site's loaded pages, and any content in local storage
 - make HTTP requests with the user's credentials, enabling them to impersonate the user or access sensitive data
 
 ![Diagram of attacker code running in target website](xss.svg)
@@ -72,7 +74,7 @@ XSS attacks are commonly divided into three categories: _reflected XSS_, _stored
 
 A reflected XSS attack is one in which an HTTP request contains the malicious JavaScript, and the server mistakenly includes that JavaScript in the page it returns to the client. The client then loads the page and runs the JavaScript, and the attack succeeds.
 
-For example, consider a website with a search function. The search page might look like this:
+For example, consider a website with a search function. The HTML for the search page might look like this:
 
 ```html
 <h1>Search</h1>
@@ -95,14 +97,12 @@ The server wants to display a list of search results, with a title indicating wh
 ```js
 app.get("/results", (req, res) => {
   const searchQuery = req.query.search;
-  const results = ""; // getResults(searchQuery);
+  const results = getResults(searchQuery); // Implementation not shown
   res.send(`
    <h1>You searched for ${searchQuery}</h1>
    <p>Here are the results: ${results}</p>`);
 });
 ```
-
-(For simplicity, we've omitted the code that fetches the results.)
 
 To exploit this vulnerability, an attacker sends the user a link like this:
 
@@ -122,7 +122,7 @@ This is a lot like our first example, except the vulnerability is in the server,
 
 ### Stored XSS
 
-A stored XSS attack is functionally just like a reflected XSS attack, except the malicious JavaScript injected by the attacker is stored by the website, and served up to the user every time the page is accessed.
+A stored XSS attack is functionally just like a reflected XSS attack, except the malicious JavaScript injected by the attacker is stored by the website, and served up to every user who accesses the page.
 
 For example, a website might include a blog that allows comments. Since anyone can make comments, they constitute input that may be crafted by an attacker. If the website does not sanitize blog comments, then when a user accesses a page in the blog that includes these comments, the code in the comment may be executed in the user's context.
 
@@ -217,7 +217,7 @@ What's safe in one context may be unsafe in another, and it's necessary to under
 
 Templating engines typically allow developers to disable output encoding. This is necessary when developers want to insert untrusted content as HTML, not text. In this case it's up to the developer to ensure that the content is safe: for example, by sanitizing it.
 
-_Sanitization_ is the process of removing unsafe features from a string of HTML: for example, {{htmlelement("script")}} tags or inline event handlers. Since sanitization, like output encoding, is difficult to get right, it's advisable to use a reputable third-party library for it, and [DOMPurify](https://github.com/cure53/DOMPurify) is recommended by many experts including [OWASP](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html#html-sanitization).
+_Sanitization_ is the process of removing unsafe features from a string of HTML: for example, {{htmlelement("script")}} tags or inline event handlers. Since sanitization, like output encoding, is difficult to get right, it's advisable to use a reputable third-party library for it. [DOMPurify](https://github.com/cure53/DOMPurify) is recommended by many experts including [OWASP](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html#html-sanitization).
 
 For example, consider a string of HTML like:
 
