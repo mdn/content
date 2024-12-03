@@ -70,26 +70,18 @@ The _host_ component may take one of these forms:
       <td>Any host.</td>
     </tr>
     <tr>
-      <td><code>*.</code> followed by part of the hostname.</td>
-      <td>The given host and any of its subdomains.</td>
+      <td><code>*.</code> followed by part of the hostname, optionally, including a port.</td>
+      <td>The given host (and port) and any of its subdomains.</td>
     </tr>
     <tr>
-      <td><code>*.</code> followed by part of the hostname plus a port number.</td>
-      <td>The given host and any of its subdomains for the specified port number.</td>
-    </tr>
-    <tr>
-      <td>A complete hostname, without wildcards.</td>
-      <td>Only the host.</td>
-    </tr>
-    <tr>
-      <td>A complete hostname, without wildcards, plus a port number.</td>
-      <td>Only the host for the specified port number.</td>
+      <td>A complete hostname, without wildcards, optionally, including a port.</td>
+      <td>Only the host (and port).</td>
     </tr>
   </tbody>
 </table>
 
 > [!NOTE]
-> Firefox doesn't support the inclusion of a port number due to.([Firefox bug 1362809](https://bugzil.la/1362809)) and ([Firefox bug 1468162](https://bugzil.la/1468162)).
+> Firefox doesn't support the inclusion of a port number due to ([Firefox bug 1362809](https://bugzil.la/1362809)) and ([Firefox bug 1468162](https://bugzil.la/1468162)).
 
 _host_ is optional only if the _scheme_ is "file".
 
@@ -104,9 +96,6 @@ After that, it may subsequently contain any combination of the `*` wildcard and 
 The value for the _path_ matches against the string which is the URL path plus the [URL query string](https://en.wikipedia.org/wiki/Query_string). This includes the `?` between the two, if the query string is present in the URL. For example, if you want to match URLs on any domain where the URL path ends with `foo.bar`, then you need to use an array of Match Patterns like `["*://*/*foo.bar", "*://*/*foo.bar?*"]`. The `?*` is needed, rather than just `bar*`, in order to anchor the ending `*` as applying to the URL query string and not some portion of the URL path.
 
 Neither the [URL fragment identifier](https://en.wikipedia.org/wiki/Fragment_identifier) nor the `#` that precedes it are considered as part of the _path_ and are ignored during pattern matching. A match pattern containing `#` will fail to match with any URL.
-
-> [!NOTE]
-> The path pattern string should not include a port number. Adding a port, as in: `http://localhost:1234/*` causes the match pattern to be ignored. However, `http://localhost:1234` will match with `http://localhost/*`.
 
 ### \<all_urls>
 
@@ -202,6 +191,22 @@ The special value `<all_urls>` matches all URLs under any of the supported schem
       </td>
     </tr>
     <tr>
+    <tr>
+      <td>
+        <p><code>https://mozilla.org:8080/</code></p>
+        <p>
+          Match all HTTPS URLs that are hosted at "mozilla.org/" on port 8080.
+          Note: Ports are supported in Chrome, not in Firefox.
+        </p>
+      </td>
+      <td>
+        <p><code>https://mozilla.org:8080/</code></p>
+      </td>
+      <td>
+        <p><code>http://a.mozilla.org/</code><br />(unmatched host)</p>
+        <p><code>http://mozilla.org:8081</code><br />(unmatched host)</p>
+      </td>
+    </tr>
       <td>
         <p><code>ftp://mozilla.org/</code></p>
         <p>Match only "ftp://mozilla.org/".</p>
@@ -373,11 +378,6 @@ The special value `<all_urls>` matches all URLs under any of the supported schem
       <td><code>http*://mozilla.org/</code></td>
       <td>Invalid</td>
       <td>"*" in scheme must be the only character.</td>
-    </tr>
-    <tr>
-      <td><code>https://mozilla.org:80/</code></td>
-      <td>Unmatched</td>
-      <td>Port number must match the protocol.</td>
     </tr>
     <tr>
       <td><code>*://*</code></td>
