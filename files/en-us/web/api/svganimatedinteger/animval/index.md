@@ -28,14 +28,18 @@ A read-only `long` integer representing the animated value of the attribute.
 ## Examples
 
 ```js
-// Assume an existing SVG element with an animated integer attribute
-const feTurbulence = document.querySelector("feTurbulence");
+// Create an SVG element with an integer attribute
+const svgNamespace = "http://www.w3.org/2000/svg";
+const feTurbulence = document.createElementNS(svgNamespace, "feTurbulence");
+
+// Set the animatable 'numOctaves' attribute
+feTurbulence.setAttribute("numOctaves", "4");
 
 // Access the SVGAnimatedInteger object
 const animatedInteger = feTurbulence.numOctaves;
 
 // Get the animated value (read-only)
-console.log(animatedInteger.animVal); // Outputs the current animated value
+console.log(animatedInteger.animVal); // Outputs the current animated value, e.g., 4
 ```
 
 ## Specifications
