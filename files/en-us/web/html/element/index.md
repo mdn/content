@@ -30,7 +30,7 @@ Metadata contains information about the page. This includes information about st
 | {{HTMLElement("link")}}  | Specifies relationships between the current document and an external resource. This element is most commonly used to link to CSS but is also used to establish site icons (both "favicon" style icons and icons for the home screen and apps on mobile devices) among other things. |
 | {{HTMLElement("meta")}}  | Represents {{Glossary("Metadata","metadata")}} that cannot be represented by other HTML meta-related elements, like {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} and {{HTMLElement("title")}}.                             |
 | {{HTMLElement("style")}} | Contains style information for a document or part of a document. It contains CSS, which is applied to the contents of the document containing this element.                                                                                                                         |
-| {{HTMLElement("title")}} | Defines the document's title that is shown in a {{glossary("Browser", "browser")}}'s title bar or a page's tab. It only contains text; tags within the element are ignored.                                                                                                         |
+| {{HTMLElement("title")}} | Defines the document's title that is shown in a {{glossary("Browser", "browser")}}'s title bar or a page's tab. It only contains text; HTML tags within the element, if any, are also treated as plain text.                                                                        |
 
 ## Sectioning root
 
