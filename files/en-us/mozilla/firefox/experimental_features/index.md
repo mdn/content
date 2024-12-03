@@ -2379,7 +2379,7 @@ In order to help mitigate man-in-the-middle (MitM) attacks caused by Flash conte
 
 ### Insecure page labeling
 
-These two preferences add a "Not secure" text label in the address bar next to the traditional lock icon when a page is loaded insecurely (that is, using {{Glossary("HTTP")}} rather than {{Glossary("HTTPS")}}). See [Firefox bug 1335970](https://bugzil.la/1335970) for more details.
+The two `security.insecure_connection_text_*` preferences add a "Not secure" text label in the address bar next to the traditional lock icon when a page is loaded insecurely (that is, using {{Glossary("HTTP")}} rather than {{Glossary("HTTPS")}}). The `browser.urlbar.trimHttps` preference trims the `https:` prefix from address bar URLS. See [Firefox bug 1853418](https://bugzil.la/1853418) for more details.
 
 <table>
   <thead>
@@ -2392,8 +2392,8 @@ These two preferences add a "Not secure" text label in the address bar next to t
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>60</td>
-      <td>No</td>
+      <td>121</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
@@ -2413,10 +2413,9 @@ These two preferences add a "Not secure" text label in the address bar next to t
     <tr>
       <th>Preference name</th>
       <td colspan="2">
-        <code>security.insecure_connection_text.enabled</code> for normal
-        browsing mode;
-        <code>security.insecure_connection_text.pbmode.enabled</code> for
-        private browsing mode
+        <code>security.insecure_connection_text.enabled</code> for normal browsing mode;
+        <code>security.insecure_connection_text.pbmode.enabled</code> for private browsing mode
+        <code>browser.urlbar.trimHttps</code> for trimming https prefix
       </td>
     </tr>
   </tbody>
