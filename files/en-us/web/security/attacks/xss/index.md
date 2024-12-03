@@ -202,7 +202,7 @@ Even if you're using a templating engine, like Django, which automatically encod
 <div>\{{ my_input }}</div>
 ```
 
-In this context, the browser is evaluating the input as HTML. So you need to protect against the case where `my_input` is something like `<img src=x onerror="alert('XSS')">`. That is, where `my_input` is something that is treated as HTML by the browser. Django encodes certain characters to prevent this: for example, `<` is converted to `&lt;`, and `>` is converted to `&gt;`.
+In this context, the browser is evaluating the input as HTML. So you need to protect against the case where `my_input` is something like `<img src=x onerror="alert('XSS')">`. That is, where `my_input` is something that is treated as HTML by the browser. The output encoding built into Django prevents this attack, by encoding characters like `<` and `>`.
 
 However, suppose the template is like this:
 
@@ -210,13 +210,13 @@ However, suppose the template is like this:
 <div \{{ my_input }}></div>
 ```
 
-The `my_input` variable is is going to be treated as an HTML attribute by the browser. Now if `my_input` is `onmouseover="alert('XSS')"`, then the HTML encoding that Django provides won't protect you.
+The `my_input` variable will be treated as an HTML attribute by the browser. In this case, if `my_input` is `onmouseover="alert('XSS')"`, then the output encoding that Django provides won't prevent the attack.
 
 The browser uses different rules to process different parts of a web page — HTML elements and their content, HTML attributes, inline styles, inline scripts. The type of encoding that needs to be done is different depending on the context in which the input is being interpolated.
 
 What's safe in one context may be unsafe in another, and it's necessary to understand the context in which you are including untrusted content, and to implement any special handling that this demands.
 
-- **HTML contexts**: input inserted between the tags of most HTML elements (except for {{htmlelement("style")}} or {{htmlelement("script")}}) is in the HTML context, as in the example above, and the encoding applied by template engines is mostly concerned with this context.
+- **HTML contexts**: input inserted between the tags of most HTML elements (except for {{htmlelement("style")}} or {{htmlelement("script")}}) is in the HTML context, and the encoding applied by template engines is mostly concerned with this context.
 - **HTML attribute contexts**: inserting input as HTML attribute values is sometimes safe and sometimes not, depending on the attribute. In particular, event handler attributes like `onblur` are unsafe, as is the [`src`](/en-US/docs/Web/HTML/Element/iframe#src) attribute of the {{htmlelement("iframe")}} element.
 
   It's also important to quote placeholders for inserted attribute values, or an attacker may be able to insert an additional unsafe attribute in the value provided. For example, this template does not quote an inserted value:
