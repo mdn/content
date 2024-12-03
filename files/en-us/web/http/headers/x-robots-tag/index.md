@@ -147,7 +147,7 @@ The following response has two `X-Robots-Tag` headers, each with an indexing rul
 HTTP/1.1 200 OK
 Date: Tue, 03 Dec 2024 17:08:49 GMT
 X-Robots-Tag: noimageindex
-X-Robots-Tag: unavailable_after: 25 Jun 2010 15:00:00 PST
+X-Robots-Tag: unavailable_after: Wed, 03 Dec 2025 13:09:53 GMT
 ```
 
 ### Specifying user agents
