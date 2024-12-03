@@ -642,8 +642,9 @@ See ([Firefox bug 1808410](https://bugzil.la/1808410)) for more details.
 
 ### Vendor-prefixed transform properties
 
-The `-moz-` prefixed [CSS transform](/en-US/docs/Web/CSS/CSS_transforms) properties have been disabled in the Nightly release via the `layout.css.prefixes.transforms` preference being set to `false`. ([Firefox bug 1855763](https://bugzil.la/1855763)).
-Specifically, the disabled properties are:
+The `-moz-` prefixed [CSS transform](/en-US/docs/Web/CSS/CSS_transforms) properties can be disabled by setting the `layout.css.prefixes.transforms` preference to `false`. The intent is to disable these once the standard CSS zoom properties are well supported. ([Firefox bug 1886134](https://bugzil.la/1886134), [Firefox bug 1855763](https://bugzil.la/1855763)).
+
+Specifically, this preference will disable the following prefixed properties:
 
 - `-moz-backface-visibility`
 - `-moz-perspective`
@@ -664,7 +665,7 @@ Specifically, the disabled properties are:
     <tr>
       <th>Nightly</th>
       <td>120</td>
-      <td>No</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
@@ -685,55 +686,6 @@ Specifically, the disabled properties are:
       <th>Preference name</th>
       <td colspan="2">
       <code>layout.css.prefixes.transforms</code>
-    </td>
-    </tr>
-  </tbody>
-</table>
-
-### Vendor-prefixed transition properties
-
-The `-moz-` prefixed [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) properties have been disabled in the Nightly release via the `layout.css.prefixes.transitions` preference being set to `false`. ([Firefox bug 1855763](https://bugzil.la/1855763)).
-Specifically, the disabled properties are:
-
-- `-moz-transition`
-- `-moz-transition-delay`
-- `-moz-transition-duration`
-- `-moz-transition-property`
-- `-moz-transition-timing-function`
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>120</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>120</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>120</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>120</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">
-      <code>layout.css.prefixes.transitions</code>
     </td>
     </tr>
   </tbody>
