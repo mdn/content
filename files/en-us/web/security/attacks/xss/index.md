@@ -194,6 +194,24 @@ Most modern templating engines automatically perform output encoding. For exampl
 
 One of the most important parts of preventing XSS attacks is to use a well-regarded templating engine which performs robust output encoding, and read its documentation to understand any caveats about the protection it offers.
 
+#### Contexts
+
+Even if you're using a templating engine, like Django, which automatically encodes HTML, you need to be aware of where in the document you are including untrusted content. For example, suppose you have a Django template like this:
+
+```django
+<div>\{{ my_input }}</div>
+```
+
+In this context, the browser is evaluating the input as HTML. So you need to protect against the case where `my_input` is something like `<img src=x onerror="alert('XSS')">`. That is, where `my_input` is something that is treated as HTML by the browser. Django encodes certain characters to prevent this: for example, `<` is converted to `&lt;`, and `>` is converted to `&gt;`.
+
+However, suppose the template is like this:
+
+```django
+<div onmouseover="\{{ my_input }}"></div>
+```
+
+The `my_input` variable is is going to be treated as JavaScript by the browser, because it's an HTML event handler attribute. Now if `my_input` is `alert("XSS")`, then the encoding Django provides won't protect you.
+
 The browser uses different rules to process different parts of a web page — HTML elements and their content, HTML attributes, inline styles, inline scripts. These are called contexts, and the type of encoding that needs to be done is different depending on the context in which the input is being interpolated.
 
 What's safe in one context may be unsafe in another, and it's necessary to understand the context in which you are including untrusted content, and to implement any special handling that this demands.
@@ -201,7 +219,7 @@ What's safe in one context may be unsafe in another, and it's necessary to under
 - **HTML contexts**: input inserted between the tags of most HTML elements (except for {{htmlelement("style")}} or {{htmlelement("script")}}) is in the HTML context, as in the example above, and the encoding applied by template engines is mostly concerned with this context.
 - **HTML attribute contexts**: inserting input as HTML attribute values is sometimes safe and sometimes not, depending on the attribute. In particular, event handler attributes like `onblur` are unsafe, as is the [`src`](/en-US/docs/Web/HTML/Element/iframe#src) attribute of the {{htmlelement("iframe")}} element.
 
-  It's important to quote placeholders for inserted attribute values, or an attacker may be able to insert an additional unsafe attribute in the value provided. For example, this template does not quote an inserted value:
+  It's also important to quote placeholders for inserted attribute values, or an attacker may be able to insert an additional unsafe attribute in the value provided. For example, this template does not quote an inserted value:
 
   ```django example-bad
   <div class=\{{ my_class }}>...</div>
