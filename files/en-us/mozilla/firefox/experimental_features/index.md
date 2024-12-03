@@ -20,6 +20,46 @@ Experimental features can be enabled or disabled using the [Firefox Configuratio
 
 ## HTML
 
+### Autocorrection of editable text elements
+
+The HTML [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) attribute (and corresponding {{domxref("HTMLElement.autocorrect")}} property) allow autocorrection in editable text elements including: most kinds of text {{htmlelement("input")}} elements, {{htmlelement("textarea")}} elements, and elements that have the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set ([Firefox bug 1725806](https://bugzil.la/1725806)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>134</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>134</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>134</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>134</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.forms.autocorrect</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ### Layout for input type="search"
 
 Layout for `input type="search"` has been updated. This causes a search field to have a clear icon once someone starts typing in it, to match other browser implementations. (See [Firefox bug 558594](https://bugzil.la/558594) for more details.)
@@ -1288,6 +1328,46 @@ This includes: `SVGPathSegList`, [SVGPathElement.getPathSegAtLength()](/en-US/do
 
 ## JavaScript
 
+### Intl.DurationFormat
+
+{{jsxref("Intl.DurationFormat")}} enables locale-sensitive formatting of durations. ([Firefox bug 1648139](https://bugzil.la/1648139)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>134</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>134</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>134</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>134</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2">NA</td>
+    </tr>
+  </tbody>
+</table>
+
 ### JSON.parse with source
 
 The [`JSON.parse` source text access proposal](https://github.com/tc39/proposal-json-parse-with-source) extends [`JSON.parse`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) behavior to provide features to mitigate issues around loss of precision when converting values such as large floats and date values between JavaScript values and JSON text. ([Firefox bug 1913085](https://bugzil.la/1913085), [Firefox bug 1925334](https://bugzil.la/1925334)).
@@ -1414,6 +1494,55 @@ The {{domxref("CloseWatcher")}} interface allows developers to implement UI comp
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>dom.closewatcher.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### Trusted Types API
+
+The [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) provides mechanisms to ensure that functions that can potentially be used as vectors for XSS attacks are only able to be called with data that has been validated or sanitized.
+
+> [!NOTE]
+> At the time of writing not enough of the API has been implemented for it to be effectively testable.
+> This note will be removed once it is ready.
+
+This subset of the API has been implemented:
+
+- {{domxref("TrustedTypePolicyFactory")}}:
+  - {{domxref("TrustedTypePolicyFactory/getAttributeType", "getAttributeType()")}} and {{domxref("TrustedTypePolicyFactory/getPropertyType", "getPropertyType()")}} ([Firefox bug 1917783](https://bugzil.la/1917783), [Firefox bug 1917784](https://bugzil.la/1917784)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>133</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>133</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>133</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>133</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.security.trusted_types.enabled</code></td>
     </tr>
   </tbody>
 </table>

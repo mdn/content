@@ -29,19 +29,19 @@
         ]
       },
       "attributes": [
+        "ariaAttributes",
         "conditionalProcessingAttributes",
         "coreAttributes",
-        "graphicalEventAttributes",
         "presentationAttributes",
         "xLinkAttributes",
-        "'class'",
-        "'style'",
-        "'externalResourcesRequired'",
-        "'transform'",
-        "'xlink:show'",
-        "'xlink:actuate'",
-        "'xlink:href'",
-        "'target'"
+        "'href'",
+        "'target'",
+        "'download'",
+        "'ping'",
+        "'rel'",
+        "'hreflang'",
+        "'type'",
+        "'referrerpolicy'"
       ],
       "interfaces": ["SVGAElement"]
     },
@@ -1365,7 +1365,12 @@
       "categories": ["gradientElement"],
       "content": {
         "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["&lt;animate&gt;", "&lt;set&gt;"]
+        "elements": [
+          "&lt;animate&gt;",
+          "&lt;script&gt;",
+          "&lt;set&gt;",
+          "&lt;style&gt;"
+        ]
       },
       "attributes": [
         "coreAttributes",

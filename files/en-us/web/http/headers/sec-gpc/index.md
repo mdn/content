@@ -4,12 +4,11 @@ slug: Web/HTTP/Headers/Sec-GPC
 page-type: http-header
 status:
   - experimental
-  - non-standard
 browser-compat: http.headers.Sec-GPC
 spec-urls: https://privacycg.github.io/gpc-spec/
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}{{non-standard_header}}
+{{HTTPSidebar}}{{SeeCompatTable}}
 
 The HTTP **`Sec-GPC`** {{Glossary("request header")}} is part of the [Global Privacy Control](https://globalprivacycontrol.org/) (GPC) mechanism to indicate whether the user consents to a website or service selling or sharing their personal information with third parties.
 
