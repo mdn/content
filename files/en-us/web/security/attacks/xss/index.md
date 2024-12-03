@@ -57,6 +57,8 @@ When the user clicks the link:
 3. The page then assigns this value to the `welcome` element's `innerHTML` property, which creates a new {{htmlelement("img")}} element, which has a `src` attribute value of `x`.
 4. Since the `src` value generates an error, the `onerror` [event handler property](/en-US/docs/Learn/JavaScript/Building_blocks/Events#inline_event_handlers_—_dont_use_these) is executed, and the attacker gets to run its code in the page.
 
+In this case the code just displays an alert, but in a real banking website, the attacker code would be able to do anything that the bank's own front-end code could.
+
 There are two features of this code that make it vulnerable to XSS, and these two features are common to all XSS vulnerabilities:
 
 1. it uses input that could have been crafted by an attacker: in this case, the URL parameter
