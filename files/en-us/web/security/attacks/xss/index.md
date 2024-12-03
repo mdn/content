@@ -46,8 +46,7 @@ Let's say this page is served from `https://my-bank.com/welcome`. To exploit the
 
 ```html
 <a href="https://my-bank.com/welcome?user=<img src=x onerror=alert('hello!')>">
-  Win a free iPad!</a
->
+  Win a free iPad!</a>
 ```
 
 When the user clicks the link:
