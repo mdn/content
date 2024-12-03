@@ -87,269 +87,82 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 
 ```css
 #div {
-  width: 300px;
-  height: 300px;
+  width: 150px;
+  height: 150px;
   background: url("br.png"), url("tr.png");
   background-blend-mode: normal;
 }
 ```
 
+Set other values for `background-blend-mode`, you will get different results.
+
 {{ EmbedLiveSample('Example using "normal"', "300", "350") }}
 
-### Example using "multiply"
+### Comparison between different values
 
 ```html hidden
-<div id="div"></div>
+<div class="container"></div>
 ```
 
 ```css
-#div {
-  width: 300px;
-  height: 300px;
+.container {
+  width: 600px;
+  height: 600px;
+  display: grid;
+  grid-template: repeat(4, 150px) / repeat(4, 150px);
+}
+
+.container div {
+  position: relative;
+  width: 150px;
+  height: 150px;
   background: url("br.png"), url("tr.png");
-  background-blend-mode: multiply;
+}
+
+.container div p {
+  position: absolute;
+  top: 0;
+  right: 2px;
+  color: red;
+  text-align: center;
 }
 ```
 
-{{ EmbedLiveSample('Example using "multiply"', "300", "350") }}
+```js
+const containerElem = document.querySelector(".container");
+const list = [
+  "normal",
+  "multiply",
+  "screen",
+  "overlay",
+  "darken",
+  "lighten",
+  "color-dodge",
+  "color-burn",
+  "hard-light",
+  "soft-light",
+  "difference",
+  "exclusion",
+  "hue",
+  "saturation",
+  "color",
+  "luminosity",
+];
 
-### Example using "screen"
+list.forEach((item) => {
+  const divElem = document.createElement("div");
+  divElem.style.backgroundBlendMode = item;
+  containerElem.appendChild(divElem);
 
-```html hidden
-<div id="div"></div>
+  const textElem = document.createElement("p");
+  textElem.innerText = item;
+  divElem.appendChild(textElem);
+});
 ```
 
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: screen;
-}
-```
+Create multiple `div` elements by traversaing a list and set different `backgroundBlendMode` value for each.
 
-{{ EmbedLiveSample('Example using "screen"', "300", "350") }}
-
-### Example using "overlay"
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: overlay;
-}
-```
-
-{{ EmbedLiveSample('Example using "overlay"', "300", "350") }}
-
-### Example using "darken"
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: darken;
-}
-```
-
-{{ EmbedLiveSample('Example using "darken"', "300", "350") }}
-
-### Example using "lighten"
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: lighten;
-}
-```
-
-{{ EmbedLiveSample('Example using "lighten"', "300", "350") }}
-
-### Example using "color-dodge"
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: color-dodge;
-}
-```
-
-{{ EmbedLiveSample('Example using "color-dodge"', "300", "350") }}
-
-### Example using "color-burn"
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: color-burn;
-}
-```
-
-{{ EmbedLiveSample('Example using "color-burn"', "300", "350") }}
-
-### Example using "hard-light"
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: hard-light;
-}
-```
-
-{{ EmbedLiveSample('Example using "hard-light"', "300", "350") }}
-
-### Example using "soft-light"
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: soft-light;
-}
-```
-
-{{ EmbedLiveSample('Example using "soft-light"', "300", "350") }}
-
-### Example using "difference"
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: difference;
-}
-```
-
-{{ EmbedLiveSample('Example using "difference"', "300", "350") }}
-
-### Example using "exclusion"
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: exclusion;
-}
-```
-
-{{ EmbedLiveSample('Example using "exclusion"', "300", "350") }}
-
-### Example using "hue"
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: hue;
-}
-```
-
-{{ EmbedLiveSample('Example using "hue"', "300", "350") }}
-
-### Example using "saturation"
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: saturation;
-}
-```
-
-{{ EmbedLiveSample('Example using "saturation"', "300", "350") }}
-
-### Example using "color"
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: color;
-}
-```
-
-{{ EmbedLiveSample('Example using "color"', "300", "350") }}
-
-### Example using "luminosity"
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: luminosity;
-}
-```
-
-{{ EmbedLiveSample('Example using "luminosity"', "300", "350") }}
+{{ EmbedLiveSample('Comparison between different values', "600", "600") }}
 
 ### Blend mode comparison
 
