@@ -940,15 +940,15 @@
   resolved "https://registry.yarnpkg.com/@mdn/bcd-utils-api/-/bcd-utils-api-0.0.7.tgz#555e80c33df520df068943e6b18ebc07f0e24d19"
   integrity sha512-IHkkypEjlIkBkx4mJ2//Xbzog9M/Lzne1Sl8db2cIHJ/5pe3NCqSLwSchmqzcUN+/WJr/U+V3tNAbWunk2xZcA==
 
-"@mdn/browser-compat-data@^5.6.19":
-  version "5.6.19"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.6.19.tgz#4822e7c27bd4da16de8d229a5c157ae436401442"
-  integrity sha512-nov43xmgYccY9ePMQfqPD29ASOKbOhn3iOJxA5reOfC3wLbEM5an8Sn6A3Th1TuD3XfXc0hjrFQYbJ3qhyPhhQ==
+"@mdn/browser-compat-data@^5.6.20":
+  version "5.6.20"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.6.20.tgz#7ead33170b82fbdd6d0967182b9e7da6b9e8ef14"
+  integrity sha512-TOxHxwNNtZ+HWnmhBgBCKYwevIqxi5HOshnBg7Fac3R95EFGm3ir0HDUG1ujBG3i8zjXimp3GZK1lfsjkbmydg==
 
-"@mdn/rari@^0.0.25":
-  version "0.0.25"
-  resolved "https://registry.yarnpkg.com/@mdn/rari/-/rari-0.0.25.tgz#719b6a72eb8239dca48b6bf090f1f38490380be7"
-  integrity sha512-5r1P9CAGLC93O6hZgc2fdO0Z4B/uI8PbAworRRlMthPlXUjyiyfIdzijwGCkr8JN5H6950oCLfjwJAEd4NGUPQ==
+"@mdn/rari@^0.0.26":
+  version "0.0.26"
+  resolved "https://registry.yarnpkg.com/@mdn/rari/-/rari-0.0.26.tgz#dd2814f246aeab3d874ad971dd22257200612629"
+  integrity sha512-B2GuJOmuv+MapB7O0xoh8fzrkWI3Lo0Yq7M5S8bfNVU5NunSIZwzJsYFZ0VeRTBuAkWxYb6BO1l5Rq31HWu9gQ==
   dependencies:
     extract-zip "^2.0.1"
     https-proxy-agent "^7.0.2"
@@ -956,10 +956,10 @@
     proxy-from-env "^1.1.0"
     tar "^7.4.3"
 
-"@mdn/yari@3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-3.0.0.tgz#88f446b1c1a11ee55e07704826c25ddd42b2b581"
-  integrity sha512-miC1AOjJkr6AZlTfo/wZQ/+GJEfwWxEWoX3+ak1CfcfGvmLE0kpn9A4zW5fyrfc/ElBhzatVBZQxNIzcffGStQ==
+"@mdn/yari@3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-3.0.1.tgz#ee958fcefc28acc4bffacb708a19ecb277d98143"
+  integrity sha512-4HM0z3Q+a//WzOt08GuehYX88TPcfJ7tTB0eAQ0hA1YG321XfOLijopFGOCp6vly0K3AngqDnsxy7m1OiiL21w==
   dependencies:
     "@caporal/core" "^2.0.7"
     "@codemirror/lang-css" "^6.3.1"
@@ -971,8 +971,8 @@
     "@inquirer/prompts" "^7.1.0"
     "@lit/react" "^1.0.6"
     "@mdn/bcd-utils-api" "^0.0.7"
-    "@mdn/browser-compat-data" "^5.6.19"
-    "@mdn/rari" "^0.0.25"
+    "@mdn/browser-compat-data" "^5.6.20"
+    "@mdn/rari" "^0.0.26"
     "@mozilla/glean" "5.0.3"
     "@sentry/node" "^8.41.0"
     "@stripe/stripe-js" "^4.10.0"
@@ -987,7 +987,7 @@
     codemirror "^6.0.1"
     compression "^1.7.5"
     compute-baseline "^0.1.1"
-    concurrently "^9.0.1"
+    concurrently "^9.1.0"
     cookie "^0.7.2"
     cookie-parser "^1.4.7"
     css-tree "^2.3.1"
@@ -2772,7 +2772,7 @@ concat-stream@^1.4.7:
     readable-stream "^2.2.2"
     typedarray "^0.0.6"
 
-concurrently@^9.0.1:
+concurrently@^9.1.0:
   version "9.1.0"
   resolved "https://registry.yarnpkg.com/concurrently/-/concurrently-9.1.0.tgz#8da6d609f4321752912dab9be8710232ac496aa0"
   integrity sha512-VxkzwMAn4LP7WyMnJNbHN5mKV9L2IbyDjpzemKr99sXNR3GqRNMMHdm7prV1ws9wg7ETj6WUkNOigZVsptwbgg==

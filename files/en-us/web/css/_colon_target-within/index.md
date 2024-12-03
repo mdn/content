@@ -4,7 +4,7 @@ slug: Web/CSS/:target-within
 page-type: css-pseudo-class
 status:
   - experimental
-browser-compat: css.selectors.target-within
+spec-urls: https://drafts.csswg.org/selectors/#target-within-pseudo
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -85,7 +85,7 @@ p:target i {
 
 ## Browser compatibility
 
-{{Compat}}
+Currently, no browsers have implemented this feature.
 
 ## See also
 
