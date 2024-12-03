@@ -1,0 +1,49 @@
+---
+title: "SVGAnimatedRect: baseVal property"
+short-title: baseVal
+slug: Web/API/SVGAnimatedRect/baseVal
+page-type: web-api-instance-property
+browser-compat: api.SVGAnimatedRect.baseVal
+---
+
+{{APIRef("SVG")}}
+
+The **`SVGAnimatedRect.baseVal`** read-only property of the {{domxref("SVGAnimatedRect")}} interface represents the current non-animated value of the `viewBox` attribute. It returns a `DOMRect` object that reflects the current static rectangle value of the `viewBox` attribute, including the x, y, width, and height values.
+
+## Value
+
+A {{domxref("DOMRect")}} object representing the current non-animated value of the `viewBox` attribute.
+
+- The `DOMRect` object contains the x, y, width, and height values of the rectangle.
+
+## Examples
+
+```html
+<svg viewBox="0 0 200 100" id="mySvg">
+  <rect width="100" height="100" fill="blue" />
+</svg>
+
+<script>
+  const svgElement = document.getElementById("mySvg");
+  const animatedRect = svgElement.viewBox.baseVal;
+
+  // Access the non-animated base value
+  console.log(animatedRect.x); // 0
+  console.log(animatedRect.y); // 0
+  console.log(animatedRect.width); // 200
+  console.log(animatedRect.height); // 100
+</script>
+```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- {{domxref("SVGAnimatedRect.animVal")}}
+- {{domxref("DOMRect")}}
