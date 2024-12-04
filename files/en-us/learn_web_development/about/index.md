@@ -109,3 +109,27 @@ This resource is free for anyone to use. If you find it useful, we request that 
 The web development industry is changing constantly and rapidly. To keep our recommendations current, we will review our material regularly, update our [changelog](/en-US/docs/Learn_web_development/Changelog), and make an announcement every year, contacting the creators of known conforming courses to let them know the course has changed and encourage them to review/update their courses as appropriate.
 
 We intend to do this in Q2 each year, to give educators time over Q2/Q3 to implement changes before the start of the following academic year.
+
+## Frequently asked questions
+
+### Scrimba partnership questions
+
+#### How does MDN know Scrimba's courses are high quality and follow best practices?
+
+Scrimba already had a great reputation before we started talking to them about a partnership. However, we didn't just take the community's word for it. We did an extensive review of Scrimba's [Frontend Developer Career Path](https://v2.scrimba.com/the-frontend-developer-career-path-c0j:details?via=mdn) (FDCP) and provided them with feedback on possible improvements, focusing on increasing coverage of best practices and conformance to our [Core modules](/en-US/docs/Learn_web_development/Core). Scrimba implemented all of our feedback, and the FDCP is even better than it was before. Now that it conforms to our Curriculum Core, we are confident it aligns with MDN standards.
+
+#### Is MDN sharing user data with Scrimba?
+
+We prioritize user privacy and transparency. The only information MDN shares with Scrimba is user navigation to Scrimba from MDN, and this happens through their own actions by following a link that is marked as external.
+
+In cases where we embed Scrimba content on MDN, Scrimba won't see user data until a user chooses to interact with Scrimba's content.
+
+#### Scrimba's content isn't free. Doesn't this conflict with MDN's philosophy of providing free content?
+
+A lot of Scrimba's content requires a paid subscription, but they also offer several complete courses that are free to access after you register.
+
+It is also worth pointing out that Scrimba's courses are not necessary to make use of MDN Learn Web Development — they are an enhancement for those who wish to pay for a structured course that covers our curriculum core. You can still learn all our learning outcomes for free by working through our articles.
+
+#### Is a certification awarded on completing Scrimba's Frontend Developer Career Path?
+
+Yes, once you complete all the topics in the Frontend Developer Career Path, you can access a certificate of completion to share with potential employers or include in your portfolio. See [Where can I find my completion certificate?](https://forum.scrimba.com/t/where-can-i-find-my-completion-certificate/43?via=mdn) for more information.
