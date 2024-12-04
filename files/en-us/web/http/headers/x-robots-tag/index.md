@@ -69,10 +69,8 @@ X-Robots-Tag: <indexing-rules>
     - `max-image-preview: <setting>`
 
       - : The maximum size of an image preview for this page in a search results.
-        If you don't specify the `max-image-preview` rule, search engines may show an image preview of the default size.
-        If you don't want search engines to use larger thumbnail images, specify a `max-image-preview` value of `standard` or `none`.
-
-        Accepted `<setting>` values:
+        If omitted, search engines may show an image preview of the default size.
+        If you don't want search engines to use larger thumbnail images, specify a `max-image-preview` value of `standard` or `none`. Values include:
 
         - `none`
           - : No image preview is to be shown.
