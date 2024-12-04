@@ -8,7 +8,7 @@ browser-compat: api.SVGAnimatedTransformList.animVal
 
 {{APIRef("SVG")}}
 
-The **`SVGAnimatedTransformList.animVal`** read-only property of the {{domxref("SVGAnimatedTransformList")}} interface represents the animated value of the `transform` attribute of an SVG element.
+The **`animVal`** read-only property of the {{domxref("SVGAnimatedTransformList")}} interface represents the animated value of the `transform` attribute of an SVG element.
 
 This property provides access to the current value of the `transform` attribute during an animation. If the transform is not currently being animated, `animVal` will return the same value as `baseVal`.
 
