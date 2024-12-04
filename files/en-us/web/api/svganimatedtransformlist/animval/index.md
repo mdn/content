@@ -10,7 +10,7 @@ browser-compat: api.SVGAnimatedTransformList.animVal
 
 The **`animVal`** read-only property of the {{domxref("SVGAnimatedTransformList")}} interface represents the animated value of the `transform` attribute of an SVG element.
 
-This property provides access to the current value of the `transform` attribute during an animation. If the transform is not currently being animated, `animVal` will return the same value as `baseVal`.
+This property reflects the SVG element's {{SVGAttr("transform")}}, the {{SVGElement("linearGradient")}} or {{SVGElement("radialGradient")}} element's {{SVGAttr("gradientTransform")}} attribute, or the {{SVGElement("pattern")}} element's {{SVGAttr("patternTransform")}} attribute as a readonly {{ domxref("SVGTransformList") }}, providing access to the dynamically updated {{ domxref("SVGTransform") }} for each transform function during an animation. If no animation is active, this property will return the same value as `baseVal`.
 
 ## Value
 
