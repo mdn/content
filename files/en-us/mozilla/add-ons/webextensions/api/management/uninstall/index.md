@@ -49,18 +49,16 @@ Uninstall the add-on whose ID is "addon-id" and ask the user to confirm. In the 
 ```js
 let id = "addon-id";
 
-const uninstall = () => {
-  function onCanceled(error) {
-    console.log(`Canceled: ${error}`);
-  }
+function onCanceled(error) {
+  console.log(`Canceled: ${error}`);
+}
 
-  function onUninstalled() {
-    console.log("Uninstalled");
-  }
+function onUninstalled() {
+  console.log("Uninstalled");
+}
 
-  let uninstalling = chrome.management.uninstall(id);
-  uninstalling.then(onUninstalled, onCanceled);
-};
+let uninstalling = browser.management.uninstall(id);
+uninstalling.then(onUninstalled, onCanceled);
 ```
 
 {{WebExtExamples}}
