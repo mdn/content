@@ -269,7 +269,7 @@ async function sendMessage(message) {
   const header = Buffer.from(new Uint32Array([message.length]).buffer);
   const stdout = process.stdout;
   await stdout.write(header);
-  await stdout.write(Buffer.from(message));
+  await stdout.write(message);
 }
 
 while (true) {
