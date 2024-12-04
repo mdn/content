@@ -6,9 +6,19 @@ sidebar:
   - type: section
     title: Guides
   - children:
-      - link: /Web/MathML/Authoring
-      - link: /Web/MathML/Fonts
-      - link: /Web/MathML/Values
+      - title: Beginner's_guides
+        link: /Web/MathML/Guides
+        details: closed
+        children:
+          - /Web/MathML/Guides/Getting_started
+          - /Web/MathML/Guides/Text_containers
+          - /Web/MathML/Guides/Fractions_and_roots
+          - /Web/MathML/Guides/Scripts
+          - /Web/MathML/Guides/Tables
+          - /Web/MathML/Guides/Three_famous_mathematical_formulas
+      - /Web/MathML/Authoring
+      - /Web/MathML/Fonts
+      - /Web/MathML/Values
   - type: section
     title: Reference
   - type: listSubPages
@@ -32,6 +42,7 @@ l10n:
     Global attributes: Global attributes
     Guides: Guides
     Examples: Examples
+    Beginner's_guides: Beginner's guides
   fr:
     Reference: Références
     Elements: Éléments

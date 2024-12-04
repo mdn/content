@@ -1,5 +1,5 @@
 ---
-title: MathML guides
+title: MathML beginner's guides
 slug: Web/MathML/Guides
 page-type: landing-page
 ---
@@ -8,7 +8,7 @@ page-type: landing-page
 
 The following guides provide a gentle beginning to your path towards MathML mastery with the basics of how it works, what the syntax looks like, and how you can start using it inside HTML.
 
-## Beginner's guides
+## Guides
 
 - [Getting started with MathML](/en-US/docs/Web/MathML/Guides/Getting_started)
   - : In this article, we will take a simple HTML document and see how to add MathML formulas into it, introducing a few elements along the way.
