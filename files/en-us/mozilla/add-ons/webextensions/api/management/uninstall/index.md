@@ -36,7 +36,7 @@ let uninstalling = browser.management.uninstall(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be rejected with an error message if the user canceled uninstall.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be rejected with an error message if the user canceled the uninstallation.
 
 ## Browser compatibility
 
@@ -44,14 +44,14 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ## Examples
 
-Uninstall the add-on whose ID is "addon-id" and ask the user to confirm. In the callback, we check whether the user cancelled uninstallation, or if the uninstallation succeeded.
+Uninstall the add-on whose ID is "addon-id" and ask the user to confirm. In the callback, we check whether the user canceled the uninstallation, or if the operation succeeded.
 
 ```js
 let id = "addon-id";
 
 const uninstall = () => {
     function onCanceled(error) {
-        console.log(`Cancelled: ${error}`);
+        console.log(`Canceled: ${error}`);
     }
 
     function onUninstalled() {
