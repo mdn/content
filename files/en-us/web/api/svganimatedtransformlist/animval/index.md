@@ -26,7 +26,7 @@ const rect = document.getElementById("myRect");
 const animTransforms = rect.transform.animVal;
 
 // Log the animated transforms to the console
-console.log(animTransforms);
+console.dir(animTransforms);
 ```
 
 ## Specifications
