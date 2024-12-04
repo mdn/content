@@ -27,12 +27,14 @@ For more information about JavaScript specifications and related technologies, s
 
 Learn how to program in JavaScript with guides and tutorials.
 
-### For complete beginners
+### For beginners
 
-Head over to our [Learning Area JavaScript topic](/en-US/docs/Learn_web_development/Core/Scripting) if you want to learn JavaScript but have no previous experience with JavaScript or programming. The complete modules available there are as follows:
-
+- [Your first website: Adding interactivity](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity)
+  - : This article provides a brief tour of what JavaScript is and how to use it, aimed at people who are completely new to web development.
 - [Dynamic scripting with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting)
-  - : Continues our coverage of JavaScript's key fundamental features, turning our attention to commonly-encountered types of code blocks such as conditional statements, loops, functions, and events.
+  - : Our [Learn web development](/en-US/docs/Learn_web_development) section's JavaScript module teaches all the JavaScript fundamentals from the ground up.
+- [JavaScript frameworks and libraries](/en-US/docs/Learn_web_development/Core/Frameworks_libraries)
+  - : JavaScript frameworks are an essential part of modern front-end web development, providing developers with tried and tested tools for building scalable, interactive web applications. Many modern companies use frameworks as a standard part of their tooling, so many front-end development jobs now require framework experience. In this set of articles, we aim to give you a comfortable starting point to help you begin learning frameworks.
 
 ### JavaScript guide
 
@@ -41,12 +43,10 @@ Head over to our [Learning Area JavaScript topic](/en-US/docs/Learn_web_developm
 
 ### Intermediate
 
-- [Introduction to client-side frameworks](/en-US/docs/Learn_web_development/Core/Frameworks_libraries)
-  - : JavaScript frameworks are an essential part of modern front-end web development, providing developers with proven tools for building scalable, interactive web applications. This module gives you some fundamental background knowledge about how client-side frameworks work and how they fit into your toolset, before moving on to a series of tutorials covering some of today's most popular ones.
-  - [Introducing JavaScript objects](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)
+- [Advanced JavaScript objects](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)
   - : The object-oriented nature of JavaScript is important to understand if you want to go further with your knowledge of the language and write more efficient code, therefore we've provided this module to help you.
 - [Asynchronous JavaScript](/en-US/docs/Learn_web_development/Extensions/Async_JS)
-  - : Discusses asynchronous JavaScript, why it is important, and how it can be used to effectively handle potential blocking operations such as fetching resources from a server.
+  - : In this module, we take a look at {{Glossary("asynchronous")}} JavaScript, why it is important, and how it can be used to effectively handle potential blocking operations, such as fetching resources from a server.
 - [Client-side web APIs](/en-US/docs/Learn_web_development/Extensions/Client-side_APIs)
   - : Explores what APIs are, and how to use some of the most common APIs you'll come across often in your development work.
 - [JavaScript language overview](/en-US/docs/Web/JavaScript/Language_overview)

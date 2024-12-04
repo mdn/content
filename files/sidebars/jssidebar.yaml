@@ -6,17 +6,15 @@ sidebar:
     title: JavaScript
   - type: section
     title: Tutorials
-  - title: Complete_beginners
+  - title: Beginners
     details: closed
     children:
-      - link: /Learn/Getting_started_with_the_web/JavaScript_basics
-        title: Basics
-      - link: /Learn/JavaScript/First_steps
-        title: First_steps
-      - link: /Learn/JavaScript/Building_blocks
-        title: Building_blocks
-      - link: /Learn/JavaScript/Objects
-        title: Introducing_objects
+      - link: /Learn_web_development/Getting_started/Your_first_website/Adding_interactivity
+        title: Adding_interactivity
+      - link: /Learn_web_development/Core/Scripting
+        title: Dynamic_scripting_with_JavaScript
+      - link: /Learn_web_development/Core/Frameworks_libraries
+        title: JavaScript_frameworks_and_libraries
   - title: Guide
     details: closed
     children:
@@ -59,10 +57,12 @@ sidebar:
   - title: Intermediate
     details: closed
     children:
-      - link: /Learn/Tools_and_testing/Client-side_JavaScript_frameworks
-        title: Frameworks
-      - link: /Learn/JavaScript/Client-side_web_APIs
-        title: Client-side_APIs
+      - link: /Learn_web_development/Extensions/Advanced_JavaScript_objects
+        title: Advanced JavaScript objects
+      - link: /Learn_web_development/Extensions/Async_JS
+        title: Asynchronous_JavaScript
+      - link: /Learn_web_development/Extensions/Client-side_APIs
+        title: Client-side_web_APIs
       - link: /Web/JavaScript/Language_overview
         title: Language_overview
       - link: /Web/JavaScript/Data_structures
@@ -160,13 +160,14 @@ l10n:
     Guide_Iterators_generators: Iterators and generators
     Guide_Meta: Meta programming
     Guide_Modules: JavaScript modules
-    Complete_beginners: Complete beginners
-    Basics: JavaScript basics
-    First_steps: JavaScript first steps
-    Building_blocks: JavaScript building blocks
+    Beginners: Beginners
+    Adding_interactivity: "Your first website: Adding interactivity"
+    Dynamic_scripting_with_JavaScript: Dynamic scripting with JavaScript
+    JavaScript_frameworks_and_libraries: JavaScript frameworks and libraries
     Intermediate: Intermediate
-    Introducing_objects: Introducing JavaScript objects
-    Client-side_APIs: Client-side web APIs
+    Advanced_JavaScript_objects: Advanced JavaScript objects
+    Asynchronous_JavaScript: Asynchronous JavaScript
+    Client-side_web_APIs: Client-side web APIs
     Frameworks: Client-side JavaScript frameworks
     Language_overview: Language overview
     Data_structures: JavaScript data structures
