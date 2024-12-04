@@ -13,7 +13,7 @@ You can use this attribute with the following SVG elements:
 
 - {{SVGElement('pattern')}}
 
-## Example
+## Examples
 
 ```css hidden
 html,
@@ -41,9 +41,13 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample("Example", '100%', 300)}}
+{{EmbedLiveSample("Examples", '100%', 300)}}
 
-## pattern
+## Elements
+
+You can use this attribute with the SVG elements described in the sections below.
+
+### `<pattern>`
 
 For {{SVGElement('pattern')}}, `patternTransform` defines a list of [transform definitions](/en-US/docs/Web/SVG/Attribute/transform#transform_functions) that are applied to a pattern tile.
 
