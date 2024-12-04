@@ -17,18 +17,12 @@ An HTML element is set off from other text in a document by "tags", which consis
 
 The articles below can help you learn more about HTML.
 
-## Key resources
-
-- HTML Introduction
-  - : If you're new to web development, be sure to read our [HTML Basics](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content) article to learn what HTML is and how to use it.
-- HTML Tutorials
-  - : For articles about how to use HTML, as well as tutorials and complete examples, check out our [HTML Learning Area](/en-US/docs/Learn_web_development/Core/Structuring_content).
-- HTML Reference
-  - : In our extensive [HTML reference](/en-US/docs/Web/HTML/Reference) section, you'll find the details about every element and attribute in HTML.
-
 ## Beginner's tutorials
 
-Our [Learn web development](/en-US/docs/Learn_web_development) section's [Structuring content with HTML module](Learn_web_development/Core/Structuring_content) teaches HTML from the ground up — no previous knowledge required.
+- [Your first website: Creating the content](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)
+  - : This article provides a brief tour of what HTML is and how to use it, aimed at people who are completely new to web development.
+- [Structuring content with HTML](Learn_web_development/Core/Structuring_content)
+  - : Our [Learn web development](/en-US/docs/Learn_web_development) section's HTML module teaches all the HTML fundamentals from the ground up.
 
 ## Advanced topics
 
