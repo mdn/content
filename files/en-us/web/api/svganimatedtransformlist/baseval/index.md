@@ -8,7 +8,7 @@ browser-compat: api.SVGAnimatedTransformList.baseVal
 
 {{APIRef("SVG")}}
 
-The **`SVGAnimatedTransformList.baseVal`** read-only property of the {{domxref("SVGAnimatedTransformList")}} interface represents the non-animated value of the `transform` attribute of an SVG element.
+The **`baseVal`** read-only property of the {{domxref("SVGAnimatedTransformList")}} interface represents the non-animated value of the `transform` attribute of an SVG element.
 
 This property provides access to the static value of the `transform` attribute, as set by the `transform` or similar presentation attributes (such as `gradientTransform` or `patternTransform`) of an SVG element.
 
