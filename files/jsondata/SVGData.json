@@ -29,19 +29,19 @@
         ]
       },
       "attributes": [
+        "ariaAttributes",
         "conditionalProcessingAttributes",
         "coreAttributes",
-        "graphicalEventAttributes",
         "presentationAttributes",
         "xLinkAttributes",
-        "'class'",
-        "'style'",
-        "'externalResourcesRequired'",
-        "'transform'",
-        "'xlink:show'",
-        "'xlink:actuate'",
-        "'xlink:href'",
-        "'target'"
+        "'href'",
+        "'target'",
+        "'download'",
+        "'ping'",
+        "'rel'",
+        "'hreflang'",
+        "'type'",
+        "'referrerpolicy'"
       ],
       "interfaces": ["SVGAElement"]
     },

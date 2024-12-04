@@ -1,16 +1,16 @@
+# Do not add comments to this file. They will be lost.
+
 sidebar:
   - type: section
     link: /Mozilla/Add-ons/WebExtensions
-    text: WebExtensions
   - type: section
     link: https://extensionworkshop.com/documentation/themes/
     title: Themes
   - type: section
     link: https://discourse.mozilla.org/c/add-ons
     title: Community_and_Support
-
-  - details: closed
-    title: Channels
+  - title: Channels
+    details: closed
     children:
       - link: https://blog.mozilla.org/addons
         title: Blog
@@ -19,9 +19,8 @@ sidebar:
       - link: https://stackoverflow.com/questions/tagged/firefox-addon
         title: Stack_Overflow
       - link: /Mozilla/Add-ons
-        title: Contact_us
         hash: "#contact_us"
-
+        title: Contact_us
 l10n:
   en-US:
     WebExtensions: Browser extensions

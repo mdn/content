@@ -44,7 +44,7 @@ let authorizing = browser.identity.launchWebAuthFlow(
   - : `object`. Options for the flow, containing the following properties:
 
     - `url`
-      - : `string`. The URL offered by the OAuth2 service provider to get an access token. The details of this URL should be given in the documentation for the service provider in question, but the URL parameters should always include:
+      - : `string`. The URL offered by the OAuth2 service provider to get an access token. The details of this URL should be given in the documentation for the service provider in question, but the URL parameters should always include: the [redirect URL](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/identity#getting_the_redirect_url) and the extension's [client ID](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/identity#registering_your_add-on).
     - `redirect_uri` {{optional_inline}}
       - : `string`. This represents the URI your extension is redirected to when the flow has finished. Not required for the flow to work on the browser side if it matches the generated redirect URL. See [Getting the redirect URL](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/identity#getting_the_redirect_url).
     - `interactive` {{optional_inline}}

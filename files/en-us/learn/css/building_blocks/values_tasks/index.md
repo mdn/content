@@ -196,7 +196,7 @@ Try to update the code below to recreate the finished example:
 <details>
 <summary>Click here to show the solution</summary>
 
-Use `background-position` with ther `center` keyword and a percentage:
+Use `background-position` with the `center` keyword and a percentage:
 
 ```css
 .box {
