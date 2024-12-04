@@ -26,7 +26,7 @@ const rect = document.getElementById("myRect");
 const baseTransforms = rect.transform.baseVal;
 
 // Log the base transforms to the console
-console.log(baseTransforms);
+console.dir(baseTransforms);
 ```
 
 ## Specifications
