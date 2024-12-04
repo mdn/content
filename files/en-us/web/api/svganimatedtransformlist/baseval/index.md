@@ -10,7 +10,7 @@ browser-compat: api.SVGAnimatedTransformList.baseVal
 
 The **`baseVal`** read-only property of the {{domxref("SVGAnimatedTransformList")}} interface represents the non-animated value of the `transform` attribute of an SVG element.
 
-This property provides access to the static value of the `transform` attribute, as set by the `transform` or similar presentation attributes (such as `gradientTransform` or `patternTransform`) of an SVG element.
+This property reflects the SVG element's {{SVGAttr("transform")}}, the {{SVGElement("linearGradient")}} or {{SVGElement("radialGradient")}} element's {{SVGAttr("gradientTransform")}} attribute, or the {{SVGElement("pattern")}} element's {{SVGAttr("patternTransform")}} attribute value as a readonly {{ domxref("SVGTransformList") }}, providing access to a static {{ domxref("SVGTransform") }} for each transform function set on the SVG element.
 
 ## Value
 
