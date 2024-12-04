@@ -152,14 +152,12 @@ We added a margin the size of the widest box-shadow to ensure the shadow doesn't
 ```css
 p {
   box-shadow:
-    0 0 0 2em #f4aab9,
+    0 0 0 2em #7efa5c,
     0 0 0 4em #66ccff;
   margin: 4em;
   padding: 1em;
 }
 ```
-
-<!-- these colors are intentionally pink and blue. WCAG requires color contrast between text and background, not between border colors. -->
 
 #### Result
 
