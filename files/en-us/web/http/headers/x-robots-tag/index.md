@@ -90,7 +90,7 @@ X-Robots-Tag: <indexing-rules>
           - : No video length limit.
     - `notranslate`
       - : Don't offer translation of this page in search results.
-        If you don't specify this rule, search engines may provide a translation of the title link and snippet of a result for results that aren't in the language of the search query.
+        If omitted, search engines may translate the search result title and snippet into the language of the search query.
     - `noimageindex`
       - : Do not index images on this page.
         If you don't specify this value, images on the page may be indexed and shown in search results.
