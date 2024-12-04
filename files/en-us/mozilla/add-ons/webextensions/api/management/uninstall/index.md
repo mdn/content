@@ -44,19 +44,23 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ## Examples
 
-Uninstall the add-on whose ID is "my-addon-id", asking the user to confirm. In the callback, check whether the user canceled uninstallation.
-
-Note that we haven't passed a fulfillment handler because if uninstallation succeeds, the add-on is no longer around to handle it.
+Uninstall the add-on whose ID is "addon-id" and ask the user to confirm. In the callback, we check whether the user cancelled uninstallation, or if the uninstallation succeeded.
 
 ```js
-let id = "my-addon-id";
+let id = "addon-id";
 
-function onCanceled(error) {
-  console.log(`Uninstall canceled: ${error}`);
+const uninstall = () => {
+    function onCanceled(error) {
+        console.log(`Cancelled: ${error}`);
+    }
+
+    function onUninstalled() {
+        console.log("Uninstalled");
+    }
+
+    let uninstalling = chrome.management.uninstall(id);
+    uninstalling.then(onUninstalled, onCanceled);
 }
-
-let uninstalling = browser.management.uninstall(id);
-uninstalling.then(null, onCanceled);
 ```
 
 {{WebExtExamples}}
