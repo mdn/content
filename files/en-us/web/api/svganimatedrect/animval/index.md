@@ -8,7 +8,7 @@ browser-compat: api.SVGAnimatedRect.animVal
 
 {{APIRef("SVG")}}
 
-The **`SVGAnimatedRect.animVal`** read-only property of the {{domxref("SVGAnimatedRect")}} interface represents the current animated value of the `viewBox` attribute. If the attribute is being animated, `animVal` reflects the current state of the animation. If no animation is applied, `animVal` will be identical to `baseVal`.
+The **`animVal`** read-only property of the {{domxref("SVGAnimatedRect")}} interface represents the current animated value of the `viewBox` attribute. If the attribute is being animated, `animVal` reflects the current state of the animation. If no animation is applied, `animVal` will be identical to `baseVal`.
 
 ## Value
 
@@ -29,10 +29,10 @@ A {{domxref("DOMRectReadOnly")}} object representing the animated value of the `
   const animatedRect = svgElement.viewBox.animVal;
 
   // Log the animated value (assuming an animation is applied)
-  console.log(animatedRect.x); // Will show the current animated x value
-  console.log(animatedRect.y); // Will show the current animated y value
-  console.log(animatedRect.width); // Will show the current animated width
-  console.log(animatedRect.height); // Will show the current animated height
+  console.log(animatedRect.x);
+  console.log(animatedRect.y);
+  console.log(animatedRect.width);
+  console.log(animatedRect.height);
 </script>
 ```
 

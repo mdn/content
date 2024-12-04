@@ -8,7 +8,7 @@ browser-compat: api.SVGAnimatedRect.baseVal
 
 {{APIRef("SVG")}}
 
-The **`SVGAnimatedRect.baseVal`** read-only property of the {{domxref("SVGAnimatedRect")}} interface represents the current non-animated value of the `viewBox` attribute. It returns a `DOMRect` object that reflects the current static rectangle value of the `viewBox` attribute, including the x, y, width, and height values.
+The **`baseVal`** read-only property of the {{domxref("SVGAnimatedRect")}} interface represents the current non-animated value of the `viewBox` attribute. It returns a {{domxref("DOMRect")}} object that reflects the current static rectangle value of the `viewBox` attribute, including the x, y, width, and height values.
 
 ## Value
 
