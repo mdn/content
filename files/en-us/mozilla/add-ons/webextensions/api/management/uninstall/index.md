@@ -54,13 +54,13 @@ const uninstall = () => {
         console.log(`Canceled: ${error}`);
     }
 
-    function onUninstalled() {
-        console.log("Uninstalled");
-    }
+  function onUninstalled() {
+    console.log("Uninstalled");
+  }
 
-    let uninstalling = chrome.management.uninstall(id);
-    uninstalling.then(onUninstalled, onCanceled);
-}
+  let uninstalling = chrome.management.uninstall(id);
+  uninstalling.then(onUninstalled, onCanceled);
+};
 ```
 
 {{WebExtExamples}}
