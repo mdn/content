@@ -50,9 +50,9 @@ Uninstall the add-on whose ID is "addon-id" and ask the user to confirm. In the 
 let id = "addon-id";
 
 const uninstall = () => {
-    function onCanceled(error) {
-        console.log(`Canceled: ${error}`);
-    }
+  function onCanceled(error) {
+    console.log(`Canceled: ${error}`);
+  }
 
   function onUninstalled() {
     console.log("Uninstalled");
