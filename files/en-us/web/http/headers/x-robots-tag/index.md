@@ -93,7 +93,7 @@ X-Robots-Tag: <indexing-rules>
         If omitted, search engines may translate the search result title and snippet into the language of the search query.
     - `noimageindex`
       - : Do not index images on this page.
-        If you don't specify this value, images on the page may be indexed and shown in search results.
+        If omitted, images on the page may be indexed and shown in search results.
     - `unavailable_after: <date/time>`
 
       - : Requests not to show this page in search results after the specified `<date/time>`.
