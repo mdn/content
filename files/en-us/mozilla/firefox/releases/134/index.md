@@ -50,6 +50,8 @@ This article provides information about the changes in Firefox 134 that affect d
 
 #### Media, WebRTC, and Web Audio
 
+- WebRTC simulcast of screen-shared video with the [VP8 codec](/en-US/docs/Web/Media/Formats/Video_codecs#vp8) is now supported (simulcast from other video sources has been enabled for a long time). More precisely, {{domxref("MediaStreamTrack")}} objects for screen and window capture (for example, from {{domxref("MediaDevices.getDisplayMedia()")}}), can now be encoded as multiple simulcast layers when using VP8. ([Firefox bug 1692873](https://bugzil.la/1692873)).
+
 #### Removals
 
 ### WebAssembly
