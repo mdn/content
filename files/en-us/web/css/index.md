@@ -12,33 +12,16 @@ CSS is among the core languages of the **open web** and is standardized across W
 
 After CSS 2.1, the scope of the specification increased significantly and the progress on different CSS modules started to differ so much, that it became more effective to [develop and release recommendations separately per module](https://www.w3.org/Style/CSS/current-work). Instead of versioning the CSS specification, W3C now periodically takes a snapshot of [the latest stable state of the CSS specification](https://www.w3.org/TR/css/) and individual modules progress. CSS modules now have version numbers, or levels, such as [CSS Color Module Level 5](https://drafts.csswg.org/css-color-5/).
 
-## Key resources
-
-- CSS Introduction
-  - : If you're new to web development, be sure to read our [CSS basics](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content) article to learn what CSS is and how to use it.
-- CSS Tutorials
-  - : Our [CSS learning area](/en-US/docs/Learn_web_development/Core/Styling_basics) contains a wealth of tutorials to take you from beginner level to proficiency, covering all the fundamentals.
-- CSS Reference
-  - : Our [CSS reference](/en-US/docs/Web/CSS/Reference) describes every property and concept of CSS.
-
 ## Tutorials
 
-Our [CSS Learning Area](/en-US/docs/Learn_web_development/Core/Styling_basics) features multiple modules that teach CSS from the ground up — no previous knowledge required.
-
-- [CSS Styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics)
-
-  - : CSS (Cascading Style Sheets) is used to style and layout web pages — for example, to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features. This module provides all the CSS fundamentals you'll need for now, including syntax, features, and techniques.
-
-- [CSS styling text](/en-US/docs/Learn_web_development/Core/Text_styling)
-
-  - : With the basics of the CSS language covered, the next CSS topic for you to concentrate on is styling text — one of the most common things you'll do with CSS. Here we look at text styling fundamentals, including setting font, boldness, italics, line and letter spacing, drop shadows, and other text features. We round off the module by looking at applying custom fonts to your page, and styling lists and links.
-
+- [Your first website: Styling the content](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content)
+  - : This article provides a brief tour of what CSS is and how to use it, aimed at people who are completely new to web development.
+- [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics)
+  - : Our [Learn web development](/en-US/docs/Learn_web_development) section's CSS basics module teaches CSS fundamentals from the ground up.
+- [CSS text styling](/en-US/docs/Learn_web_development/Core/Text_styling)
+  - : Here we look at fundamentals including setting font, boldness, italics, line and letter spacing, drop shadows, and other text features. We round off the module by looking at applying custom fonts to your page, and styling lists and links.
 - [CSS layout](/en-US/docs/Learn_web_development/Core/CSS_layout)
-
-  - : At this point we've already looked at CSS fundamentals, how to style text, and how to style and manipulate the boxes that your content sits inside. Now it's time to look at how to place your boxes in the right place in relation to the viewport, and to each other. We have covered the necessary prerequisites so we can now dive deep into CSS layout, looking at different display settings, modern layout tools like flexbox, CSS grid, and positioning, and some of the legacy techniques you might still want to know about.
-
-- [Solve common CSS problems](/en-US/docs/Learn_web_development/Howto/Solve_CSS_problems)
-  - : This module provides links to sections of content explaining how to use CSS to solve common problems when creating a web page.
+  - : Now it's time to look at how to correctly lay out your boxes in relation to one another, and the browser viewport. This module looks at floats, positioning, other modern layout tools, and building responsive designs that will adapt to different devices, screen sizes, and resolutions.
 
 ## Reference
 

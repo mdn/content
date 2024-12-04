@@ -4,7 +4,7 @@ sidebar:
   - type: section
     link: /Web/HTML
   - type: section
-    link: /Learn/HTML
+    link: /Learn_web_development/Core/Structuring_content
     title: Tutorials
   - link: /Learn_web_development/Getting_started/Your_first_website/Creating_the_content
     title: Creating_the_content
