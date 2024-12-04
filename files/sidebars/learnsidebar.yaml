@@ -301,6 +301,8 @@ sidebar:
       - /Learn_web_development/Howto/Design_and_accessibility
   - title: Resources_for_educators
     link: /en-US/docs/Learn_web_development/Educators
+  - title: Changelog
+    link: /en-US/docs/Learn_web_development/Changelog
 l10n:
   en-US:
     Getting_started_modules: Getting started modules
@@ -335,3 +337,4 @@ l10n:
     Further_resources: Further resources
     How_to_solve_common_problems: How to solve common problems
     Resources_for_educators: Resources for educators
+    Changelog: Changelog
