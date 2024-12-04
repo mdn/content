@@ -107,7 +107,7 @@ X-Robots-Tag: <indexing-rules>
 ## Description
 
 Indexing rules via `<meta name="robots">` and `X-Robots-Tag` are discovered when a URL is crawled.
-Most crawlers support any rule in a `X-Robots-Tag` HTTP header that can be used in a `<meta name="robots">` tag.
+Most crawlers support rules in the `X-Robots-Tag` HTTP header that can be used in a `<meta name="robots">` tag.
 
 In the case of conflicting robots rules, the more restrictive rule applies.
 For example, if a page has both `max-snippet:50` and `nosnippet` rules, the `nosnippet` rule will apply.
@@ -116,7 +116,7 @@ Some values are mutually exclusive, like `index` and `noindex`, or `follow` and 
 In these cases the crawler's behavior is undefined and may vary.
 
 > [!NOTE]
-> It's possible that `X-Robots-Tag` rules may not be treated the same by all search engines.
+> The `X-Robots-Tag` rules may not be treated the same by all search engines.
 
 ### Interaction with robots.txt
 
@@ -166,8 +166,6 @@ Not part of any current specification.
 
 ## See also
 
-- {{HTTPHeader("Forwarded")}}
-- {{HTTPHeader("X-Forwarded-For")}}
 - {{Glossary("Search engine")}}
 - {{RFC("9309", "Robots Exclusion Protocol")}}
 - [Using the X-Robots-Tag HTTP header](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag#xrobotstag) on developers.google.com
