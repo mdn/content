@@ -1,5 +1,5 @@
 ---
-title: Accessibility tooling and assitive technology
+title: Accessibility tooling and assistive technology
 slug: Learn_web_development/Core/Accessibility/Tooling
 page-type: learn-module-chapter
 ---
