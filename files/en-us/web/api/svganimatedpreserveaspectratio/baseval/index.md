@@ -10,7 +10,7 @@ browser-compat: api.SVGAnimatedPreserveAspectRatio.baseVal
 
 The **`baseVal`** read-only property of the {{domxref("SVGAnimatedPreserveAspectRatio")}} interface represents the base (non-animated) value of the `preserveAspectRatio` attribute of an SVG element.
 
-This property provides access to the current value of the `preserveAspectRatio` attribute before any animation is applied. It is returned as an {{domxref("SVGPreserveAspectRatio")}} object.
+This property reflects the current value of the {{SVGAttr("preserveAspectRatio")}} attribute before any animation is applied. It is returned as an {{domxref("SVGPreserveAspectRatio")}} object.
 
 ## Value
 

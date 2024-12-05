@@ -10,7 +10,7 @@ browser-compat: api.SVGAnimatedPreserveAspectRatio.animVal
 
 The **`animVal`** read-only property of the {{domxref("SVGAnimatedPreserveAspectRatio")}} interface represents the current animated value of the `preserveAspectRatio` attribute of an SVG element.
 
-This property provides access to the animated state of the `preserveAspectRatio` attribute during an animation. If the attribute is not currently being animated, `animVal` will be the same as `baseVal`.
+This property reflects the animated state of the {{SVGAttr("preserveAspectRatio")}} attribute during an animation. If the attribute is not currently being animated, `animVal` will be the same as `baseVal`.
 
 ## Value
 
