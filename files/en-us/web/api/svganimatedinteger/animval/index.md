@@ -8,7 +8,7 @@ browser-compat: api.SVGAnimatedInteger.animVal
 
 {{APIRef("SVG")}}
 
-The **`animVal`** property of the {{domxref("SVGAnimatedInteger")}} interface represents the animated value of an integer attribute. If no animation is applied, `animVal` equals `baseVal`.
+The **`animVal`** property of the {{domxref("SVGAnimatedInteger")}} interface represents the animated value of an [`<integer>`](/en-US/docs/Web/SVG/Content_type#integer). If no animation is applied, `animVal` equals `baseVal`.
 
 For attributes that accept two integers, `animVal` reflects either the first or second integer, depending on the associated object.
 
@@ -28,9 +28,7 @@ A read-only `long` integer representing the animated value of the attribute.
 ## Examples
 
 ```js
-// Create an SVG element with an integer attribute
-const svgNamespace = "http://www.w3.org/2000/svg";
-const feTurbulence = document.createElementNS(svgNamespace, "feTurbulence");
+const feTurbulence = document.querySelector("[feTurbulence]");
 
 // Set the animatable 'numOctaves' attribute
 feTurbulence.setAttribute("numOctaves", "4");

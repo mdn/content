@@ -8,7 +8,7 @@ browser-compat: api.SVGAnimatedInteger.baseVal
 
 {{APIRef("SVG")}}
 
-The **`baseVal`** property of the {{domxref("SVGAnimatedInteger")}} interface represents the base (non-animated) value of an animatable integer attribute.
+The **`baseVal`** property of the {{domxref("SVGAnimatedInteger")}} interface represents the base (non-animated) value of an animatable [`<integer>`](/en-US/docs/Web/SVG/Content_type#integer).
 
 For attributes that accept a single integer value, `baseVal` reflects the current value of the attribute. For attributes accepting an integer followed by an optional second integer, it reflects the current value of one of the two integers, depending on the context.
 
@@ -36,9 +36,7 @@ A `long` integer representing the base (non-animated) value of the reflected att
 ## Examples
 
 ```js
-// Create an SVG element with an integer attribute
-const svgNamespace = "http://www.w3.org/2000/svg";
-const feTurbulence = document.createElementNS(svgNamespace, "feTurbulence");
+const feTurbulence = document.querySelector("[feTurbulence]");
 
 // Set the animatable 'numOctaves' attribute
 feTurbulence.setAttribute("numOctaves", "4");
