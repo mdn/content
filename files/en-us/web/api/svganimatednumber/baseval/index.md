@@ -10,24 +10,7 @@ browser-compat: api.SVGAnimatedNumber.baseVal
 
 The **`baseVal`** property of the {{domxref("SVGAnimatedNumber")}} interface represents the base (non-animated) value of an animatable numeric attribute.
 
-For attributes that accept a single numeric value, `baseVal` reflects the current value of the attribute. For attributes accepting a numeric value followed by an optional second numeric value, it reflects the current value of one of the two numbers, depending on the context.
-
-## Steps for Accessing or Setting baseVal
-
-1. **Getting `baseVal`**:
-
-   - Retrieve the value of the reflected attribute, or use its initial value if not present or invalid.
-   - If the attribute accepts two numeric values:
-     - If this object reflects the first number, return the first value.
-     - If this object reflects the second number, return the second value if explicitly specified, or the implicit value as defined by the attribute.
-   - Otherwise, return the single numeric value of the attribute.
-
-2. **Setting `baseVal`**:
-   - Assign the new value to `baseVal`.
-   - Construct a list of numeric values to represent the updated attribute value:
-     - If the attribute accepts two numeric values, update either the first or second number as reflected by the object, preserving the other.
-     - Otherwise, set the attribute to the new single numeric value.
-   - Serialize the list of numbers joined and separated by a single `U+0020` SPACE character and set it as the content attribute.
+This property reflects the static (non-animated) state of the {{SVGAttr("radius")}} attribute of the {{SVGElement("circle")}} or {{SVGElement("ellipse")}} elements, the {{SVGAttr("opacity")}} attribute of an {{SVGElement("SVGElement")}}, the {{SVGAttr("width")}} and {{SVGAttr("height")}} attributes of the {{SVGElement("rect")}} element, or similar attributes, providing access to the base value unaffected by any ongoing animations.
 
 ## Value
 

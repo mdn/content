@@ -10,15 +10,7 @@ browser-compat: api.SVGAnimatedNumber.animVal
 
 The **`animVal`** read-only property of the {{domxref("SVGAnimatedNumber")}} interface represents the animated value of an SVG element's numeric attribute.
 
-For attributes that accept a single numeric value, `animVal` provides the current animated value. For attributes accepting a numeric value followed by an optional second numeric value, it reflects the animated value of one of the numbers, depending on the context.
-
-## Steps for Accessing animVal
-
-1. **Getting `animVal`**:
-
-   - Retrieve the value of the reflected attribute.
-   - If the attribute is currently being animated, `animVal` reflects the real-time animation value.
-   - If not animated, `animVal` is identical to {{domxref("SVGAnimatedNumber.baseVal")}}.
+This property reflects the animated state of the {{SVGAttr("radius")}} attribute of the {{SVGElement("circle")}} or {{SVGElement("ellipse")}} elements, the {{SVGAttr("opacity")}} attribute of an {{SVGElement("SVGElement")}}, the {{SVGAttr("width")}} and {{SVGAttr("height")}} attributes of the {{SVGElement("rect")}} element, or similar attributes, providing access to the current animated value during animations.
 
 ## Value
 
