@@ -56,7 +56,7 @@ Code completion and help.
 
 Find and replace, often with the ability to use regular expressions to make the functionality more powerful (e.g. keep a specific string beginning and end, but replace the substring in between).
 
-Integration with version control is often provided (see also [Version control](#))
+Integration with version control is often provided (see the [Version control module](/en-US/docs/Learn_web_development/Core/Version_control)).
 
 ## Enhancing your code editor with extensions
 
