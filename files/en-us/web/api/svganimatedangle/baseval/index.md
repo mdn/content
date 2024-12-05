@@ -8,13 +8,13 @@ browser-compat: api.SVGAnimatedAngle.baseVal
 
 {{APIRef("SVG")}}
 
-The **`SVGAnimatedAngle.baseVal`** read-only property of the {{domxref("SVGAnimatedAngle")}} interface represents the base (non-animated) value of the associated `<angle>` attribute on an SVG element.
+The **`baseVal`** read-only property of the {{domxref("SVGAnimatedAngle")}} interface represents the base (non-animated) value of the associated [`<angle>`](/en-US/docs/Web/SVG/Content_type#angle) on an SVG element. This property is used to retrieve the static value of the `<angle>`, unaffected by any ongoing animations.
 
-This property is used to retrieve the static value of the `<angle>` attribute, unaffected by any ongoing animations.
+This property reflects the `<angle>` value of the {{SVGattr("orient")}} attribute of the SVG {{SVGElement("marker")}} element, which is the same as the {{domxref("SVGMarkerElement.orientAngle")}} property.
 
 ## Value
 
-An {{domxref("SVGAngle")}} object representing the base value of the `<angle>` attribute.
+An {{domxref("SVGAngle")}} object representing the base value of the [`<angle>`](/en-US/docs/Web/SVG/Content_type#angle) content type.
 
 - The value is unaffected by animations, representing the initial state of the angle.
 - The unit type of the angle can be retrieved from {{domxref("SVGAngle.unitType")}}.
@@ -22,11 +22,7 @@ An {{domxref("SVGAngle")}} object representing the base value of the `<angle>` a
 ## Examples
 
 ```js
-// Create an SVG marker element
-const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-const marker = document.createElementNS("http://www.w3.org/2000/svg", "marker");
-svg.appendChild(marker);
-document.body.appendChild(svg);
+const marker = document.querySelector("[orient]");
 
 // Set the orient attribute with an angle
 marker.setAttribute("orient", "90");
