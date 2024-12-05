@@ -20,7 +20,7 @@ An {{domxref("SVGTransformList")}} object that represents the current, non-anima
 
 ```js
 // Get the rectangle element
-const rect = document.getElementById("myRect");
+const rect = document.querySelector("rect");
 
 // Access the non-animated transform list of the element
 const baseTransforms = rect.transform.baseVal;

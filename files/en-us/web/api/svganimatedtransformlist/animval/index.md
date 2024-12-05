@@ -20,7 +20,7 @@ An {{domxref("SVGTransformList")}} object that reflects the current animated val
 
 ```js
 // Get the rectangle element
-const rect = document.getElementById("myRect");
+const rect = document.querySelector("rect");
 
 // Access the animated transform list (if any)
 const animTransforms = rect.transform.animVal;
