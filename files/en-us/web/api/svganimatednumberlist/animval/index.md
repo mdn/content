@@ -8,7 +8,7 @@ browser-compat: api.SVGAnimatedNumberList.animVal
 
 {{APIRef("SVG")}}
 
-The **`animVal`** read-only property of the {{domxref("SVGAnimatedNumberList")}} interface represents the current animated value of an animatable attribute that accepts a list of `<number>` values.
+The **`animVal`** read-only property of the {{domxref("SVGAnimatedNumberList")}} interface represents the current animated value of an animatable attribute that accepts a list of [`<number>`](/en-US/docs/Web/SVG/Content_type#number) values.
 
 This property provides access to the animated state of the attribute, reflecting the current animation value during an animation. If the attribute is not currently being animated, `animVal` will be the same as `baseVal`.
 

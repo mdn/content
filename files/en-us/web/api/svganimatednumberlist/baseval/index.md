@@ -8,7 +8,7 @@ browser-compat: api.SVGAnimatedNumberList.baseVal
 
 {{APIRef("SVG")}}
 
-The **`baseVal`** read-only property of the {{domxref("SVGAnimatedNumberList")}} interface represents the base (non-animated) value of an animatable attribute that accepts a list of `<number>` values.
+The **`baseVal`** read-only property of the {{domxref("SVGAnimatedNumberList")}} interface represents the base (non-animated) value of an animatable attribute that accepts a list of [`<number>`](/en-US/docs/Web/SVG/Content_type#number) values.
 
 This property provides access to the initial or static value of the associated attribute as a live {{domxref("SVGNumberList")}} object, which can be modified to update the attribute.
 
