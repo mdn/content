@@ -10,17 +10,13 @@ browser-compat: api.SVGAngle.newValueSpecifiedUnits
 
 The `newValueSpecifiedUnits()` method of the {{domxref("SVGAngle")}} interface allows you to set the angle's value in a specified unit type. This method is used when you want to provide a unit alongside the numeric value of the angle.
 
-## Description
-
-The method sets the `SVGAngle`'s value by specifying both the unit type and the numeric value. The unit type can be one of several predefined constants such as degrees, radians, or gradians. If the {{domxref("SVGAngle.unitType")}} is unknown or unsupported, an error is thrown.
-
 ## Syntax
 
 ```js
 svgAngle.newValueSpecifiedUnits(unitType, valueInSpecifiedUnits);
 ```
 
-## Parameters
+### Parameters
 
 - **{{domxref("SVGAngle.unitType")}}**
   A constant representing the unit type for the angle. This can be one of the following:
@@ -33,25 +29,20 @@ svgAngle.newValueSpecifiedUnits(unitType, valueInSpecifiedUnits);
 - **{{domxref("SVGAngle.valueInSpecifiedUnits")}}**
   The numeric factor for the angle value, expressed in the specified unit type (e.g., a number for degrees, radians, or gradians).
 
-## Behavior
+### Return Value
 
-1. **On Calling `newValueSpecifiedUnits()`**:
+A reference to the updated {{domxref("SVGAngle")}} object.
 
-   - If the `SVGAngle` object is read-only, a {{domxref("DOMException")}} with code `NO_MODIFICATION_ALLOWED_ERR` is thrown.
-   - If `unitType` is `SVG_ANGLETYPE_UNKNOWN` or any unsupported unit type, a {{domxref("DOMException")}} with code `NOT_SUPPORTED_ERR` is thrown.
-   - If `unitType` is `SVG_ANGLETYPE_UNSPECIFIED`, the angle is set as a unitless number (the value is directly set as `valueInSpecifiedUnits`).
-   - Otherwise, the angle is updated with the numeric factor `valueInSpecifiedUnits` and the unit is set according to the `unitType`.
+If the `newValueSpecifiedUnits()` method is successfully called, the `SVGAngle` object's `valueInSpecifiedUnits` is updated to the specified numeric factor, and the `unitType` is set to the provided unit type. For `SVG_ANGLETYPE_UNSPECIFIED`, the angle is treated as a unitless number. When the `SVGAngle` reflects a base value of an attribute, the corresponding attribute is re-serialized to reflect the updated angle.
 
-2. **Reserialization**
-   If the `SVGAngle` reflects the base value of a reflected attribute (or an element of the base value), the reflected attribute is re-serialized to reflect the updated angle.
+### Exceptions
 
-## Exceptions
+This method may raise a {{domxref("DOMException")}} of one of the following types:
 
-- **`NO_MODIFICATION_ALLOWED_ERR`**
-  Thrown if the `SVGAngle` object is read-only and modification is attempted.
-
-- **`NOT_SUPPORTED_ERR`**
-  Thrown if the `unitType` is not a valid value or is `SVG_ANGLETYPE_UNKNOWN`.
+- `NO_MODIFICATION_ALLOWED_ERR` {{domxref("DOMException")}}
+  - : Thrown if the `SVGAngle` object is read-only and modification is attempted.
+- `NOT_SUPPORTED_ERR` {{domxref("DOMException")}}
+  - : Thrown if the `unitType` is not a valid value or is `SVG_ANGLETYPE_UNKNOWN`.
 
 ## Examples
 

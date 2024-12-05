@@ -10,17 +10,13 @@ browser-compat: api.SVGAngle.convertToSpecifiedUnits
 
 The `convertToSpecifiedUnits()` method of the {{domxref("SVGAngle")}} interface allows you to convert the angle's value to a specified unit type. This method is used when you want to convert an angle from its current unit type to another specified unit.
 
-## Description
-
-The method converts the `SVGAngle`'s value to the desired unit type, which can be one of several predefined constants like degrees, radians, or gradians. The `SVGAngle`'s current value is converted into the specified unit type.
-
 ## Syntax
 
 ```js
 svgAngle.convertToSpecifiedUnits(unitType);
 ```
 
-## Parameters
+### Parameters
 
 - **{{domxref("SVGAngle.unitType")}}**
   A constant representing the unit type to which the angle's value should be converted. This can be one of the following:
@@ -29,24 +25,20 @@ svgAngle.convertToSpecifiedUnits(unitType);
   - `SVG_ANGLETYPE_GRAD` — Gradians
   - `SVG_ANGLETYPE_UNSPECIFIED` — Unitless (a number only)
 
-## Behavior
+### Return Value
 
-1. **On Calling `convertToSpecifiedUnits()`**:
+A reference to the updated {{domxref("SVGAngle")}} object.
 
-   - If the `SVGAngle` object is read-only, a {{domxref("DOMException")}} with code `NO_MODIFICATION_ALLOWED_ERR` is thrown.
-   - If `unitType` is `SVG_ANGLETYPE_UNKNOWN` or any unsupported unit type, a {{domxref("DOMException")}} with code `NOT_SUPPORTED_ERR` is thrown.
-   - The method converts the current value of the `SVGAngle` to the specified `unitType` and updates its value accordingly.
+When the `convertToSpecifiedUnits()` method is successfully called, the `SVGAngle` object's `valueInSpecifiedUnits` is converted to match the specified `unitType`, and its value is updated accordingly. If the `SVGAngle` reflects the base value of an attribute, the corresponding attribute is re-serialized to reflect the updated angle.
 
-2. **Reserialization**
-   If the `SVGAngle` reflects the base value of a reflected attribute (or an element of the base value), the reflected attribute is re-serialized to reflect the updated angle.
+### Exceptions
 
-## Exceptions
+This method may raise a {{domxref("DOMException")}} of one of the following types:
 
-- **`NO_MODIFICATION_ALLOWED_ERR`**
-  Thrown if the `SVGAngle` object is read-only and modification is attempted.
-
-- **`NOT_SUPPORTED_ERR`**
-  Thrown if the `unitType` is not a valid value or is `SVG_ANGLETYPE_UNKNOWN`.
+- `NO_MODIFICATION_ALLOWED_ERR` {{domxref("DOMException")}}
+  - : Thrown if the `SVGAngle` object is read-only and modification is attempted.
+- `NOT_SUPPORTED_ERR` {{domxref("DOMException")}}
+  - : Thrown if the `unitType` is not a valid value or is `SVG_ANGLETYPE_UNKNOWN`.
 
 ## Examples
 
