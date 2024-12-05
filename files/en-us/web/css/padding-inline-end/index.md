@@ -38,9 +38,9 @@ padding-inline-end: unset;
 
 ## Description
 
-The `padding-inline-end` property is defined in the specification as taking the same values as the {{cssxref("padding-top")}} property. However, visually it appears like {{cssxref("padding-right")}}, {{cssxref("padding-left")}}, `padding-top`, or {{cssxref("padding-bottom")}} property depending on the values set for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
+The `padding-inline-end` property takes the same values as physical padding properties such as {{cssxref("padding-top")}}. However, it can be equivalent to {{cssxref("padding-right")}}, {{cssxref("padding-left")}}, `padding-top`, or {{cssxref("padding-bottom")}} depending on the values set for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 
-It relates to {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, and {{cssxref("padding-inline-start")}}, which define the other paddings of the element.
+It relates to {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, and {{cssxref("padding-inline-start")}}, which define the other padding values of the element.
 
 ## Formal definition
 
