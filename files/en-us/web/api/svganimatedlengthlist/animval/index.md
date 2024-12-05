@@ -8,7 +8,7 @@ browser-compat: api.SVGAnimatedLengthList.animVal
 
 {{APIRef("SVG")}}
 
-The **`SVGAnimatedLengthList.animVal`** read-only property of the {{domxref("SVGAnimatedLengthList")}} interface represents the animated value of an attribute that accepts a list of `<length>`, `<percentage>`, or `<number>` values.
+The **`animVal`** read-only property of the {{domxref("SVGAnimatedLengthList")}} interface represents the animated value of an attribute that accepts a list of [`<length>`](/en-US/docs/Web/SVG/Content_type#length), [`<percentage>`](/en-US/docs/Web/SVG/Content_type#percentage), or [`<number>`](/en-US/docs/Web/SVG/Content_type#number) values.
 
 This property provides access to the current animated state of the attribute as a live {{domxref("SVGLengthList")}} object.
 
