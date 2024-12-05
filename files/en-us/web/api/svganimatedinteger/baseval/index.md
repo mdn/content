@@ -8,7 +8,7 @@ browser-compat: api.SVGAnimatedInteger.baseVal
 
 {{APIRef("SVG")}}
 
-The **`SVGAnimatedInteger.baseVal`** property of the {{domxref("SVGAnimatedInteger")}} interface represents the base (non-animated) value of an animatable integer attribute.
+The **`baseVal`** property of the {{domxref("SVGAnimatedInteger")}} interface represents the base (non-animated) value of an animatable integer attribute.
 
 For attributes that accept a single integer value, `baseVal` reflects the current value of the attribute. For attributes accepting an integer followed by an optional second integer, it reflects the current value of one of the two integers, depending on the context.
 

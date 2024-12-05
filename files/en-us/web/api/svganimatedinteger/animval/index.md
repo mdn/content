@@ -8,7 +8,7 @@ browser-compat: api.SVGAnimatedInteger.animVal
 
 {{APIRef("SVG")}}
 
-The **`SVGAnimatedInteger.animVal`** property of the {{domxref("SVGAnimatedInteger")}} interface represents the animated value of an integer attribute. If no animation is applied, `animVal` equals `baseVal`.
+The **`animVal`** property of the {{domxref("SVGAnimatedInteger")}} interface represents the animated value of an integer attribute. If no animation is applied, `animVal` equals `baseVal`.
 
 For attributes that accept two integers, `animVal` reflects either the first or second integer, depending on the associated object.
 
