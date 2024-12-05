@@ -17,6 +17,28 @@ spec-urls:
 
 The **`y`** attribute defines a y-axis coordinate in the user coordinate system.
 
+## Examples
+
+This example contains three {{SVGElement("rect")}} elements, each with a `y` value smaller than the previous value.
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg">
+  <rect y="220" x="20" width="60" height="60" fill="red" />
+  <rect y="120" x="20" width="60" height="60" fill="yellow" />
+  <rect y="20" x="20" width="60" height="60" fill="purple" />
+</svg>
+```
+
+{{EmbedLiveSample("Examples", '100%', 200)}}
+
 ## Elements
 
 You can use this attribute with the SVG elements described in the sections below.
@@ -1297,28 +1319,6 @@ For {{SVGElement('use')}}, `y` defines the y coordinate of the upper left corner
 
 > [!NOTE]
 > Declaring a `<length>` or `<percentage>` value in CSS using the {{cssxref("y")}} _geometry property_ overrides the y-axis coordinate of the `<use>` set by the `y` attribute in some browsers. This behavior is at-risk.
-
-## Examples
-
-This example contains three {{SVGElement("rect")}} elements, each with a `y` value smaller than the previous value.
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg">
-  <rect y="220" x="20" width="60" height="60" fill="red" />
-  <rect y="120" x="20" width="60" height="60" fill="yellow" />
-  <rect y="20" x="20" width="60" height="60" fill="purple" />
-</svg>
-```
-
-{{EmbedLiveSample("Examples", '100%', 200)}}
 
 ## Specifications
 
