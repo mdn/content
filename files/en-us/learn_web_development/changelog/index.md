@@ -12,7 +12,7 @@ A major update to the Learn web development section was started in November 2024
 
 Specifically:
 
-- The content is the same, but it has been rearranged to follow the same leasrning pathway structure as the Curriculum. In a few cases, content was deemed not suitable for a beginner audience and has been migrated to other parts of MDN.
+- The content is the same, but it has been rearranged to follow the same learning pathway structure as the Curriculum. In a few cases, content was deemed not suitable for a beginner audience and has been migrated to other parts of MDN.
 - Specific learning outcomes have been added to the top of most of the articles, to match the learning outcomes detailed in the Curriculum.
 - Other features from the Curriculum have been migrated across to the Learn Web Development section, such as the [About](/en-US/docs/Learn_web_development/About) page and [Resources for educators](/en-US/docs/Learn_web_development/Educators).
 
