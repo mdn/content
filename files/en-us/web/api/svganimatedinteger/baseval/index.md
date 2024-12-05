@@ -19,7 +19,7 @@ A `long` integer representing the base (non-animated) value of the reflected att
 ## Examples
 
 ```js
-const feTurbulence = document.querySelector("[feTurbulence]");
+const feTurbulence = document.querySelector("feTurbulence");
 
 // Set the animatable 'numOctaves' attribute
 feTurbulence.setAttribute("numOctaves", "4");

@@ -19,7 +19,7 @@ A read-only `long` integer representing the animated value of the attribute.
 ## Examples
 
 ```js
-const feTurbulence = document.querySelector("[feTurbulence]");
+const feTurbulence = document.querySelector("feTurbulence");
 
 // Set the animatable 'numOctaves' attribute
 feTurbulence.setAttribute("numOctaves", "4");
