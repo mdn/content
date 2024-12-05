@@ -20,15 +20,15 @@ Every `SVGAngle` object operates in one of two modes:
 
 ## Constants
 
-- `SVG_ANGLETYPE_UNKNOWN`
+- `SVG_ANGLETYPE_UNKNOWN` = `0`
   - : Some unknown type of value.
-- `SVG_ANGLETYPE_UNSPECIFIED`
+- `SVG_ANGLETYPE_UNSPECIFIED` = `1`
   - : A unitless {{cssxref("&lt;number&gt;")}} interpreted as a value in degrees.
-- `SVG_ANGLETYPE_DEG`
+- `SVG_ANGLETYPE_DEG` = `2`
   - : An {{cssxref("&lt;angle&gt;")}} with a `deg` unit.
-- `SVG_ANGLETYPE_RAD`
+- `SVG_ANGLETYPE_RAD` = `3`
   - : An {{cssxref("&lt;angle&gt;")}} with a `rad` unit.
-- `SVG_ANGLETYPE_GRAD`
+- `SVG_ANGLETYPE_GRAD` = `4`
   - : An {{cssxref("&lt;angle&gt;")}} with a `grad` unit.
 
 ## Instance properties
