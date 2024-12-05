@@ -8,7 +8,7 @@ browser-compat: api.SVGAnimatedNumber.baseVal
 
 {{APIRef("SVG")}}
 
-The **`SVGAnimatedNumber.baseVal`** property of the {{domxref("SVGAnimatedNumber")}} interface represents the base (non-animated) value of an animatable numeric attribute.
+The **`baseVal`** property of the {{domxref("SVGAnimatedNumber")}} interface represents the base (non-animated) value of an animatable numeric attribute.
 
 For attributes that accept a single numeric value, `baseVal` reflects the current value of the attribute. For attributes accepting a numeric value followed by an optional second numeric value, it reflects the current value of one of the two numbers, depending on the context.
 
@@ -36,9 +36,7 @@ A `float` representing the base (non-animated) value of the reflected attribute.
 ## Examples
 
 ```js
-// Create an SVG element with a numeric attribute
-const svgNamespace = "http://www.w3.org/2000/svg";
-const path = document.createElementNS(svgNamespace, "path");
+const path = document.querySelector("path");
 
 // Set the animatable 'pathLength' attribute
 path.setAttribute("pathLength", "10");

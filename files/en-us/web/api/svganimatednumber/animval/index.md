@@ -8,7 +8,7 @@ browser-compat: api.SVGAnimatedNumber.animVal
 
 {{APIRef("SVG")}}
 
-The **`SVGAnimatedNumber.animVal`** read-only property of the {{domxref("SVGAnimatedNumber")}} interface represents the animated value of an SVG attribute that takes a single `<number>` or one part of an attribute accepting a `<number>` followed by an optional second `<number>`.
+The **`animVal`** read-only property of the {{domxref("SVGAnimatedNumber")}} interface represents the animated value of an SVG attribute that takes a single [`<number>`](/en-US/docs/Web/SVG/Content_type#number) or one part of an attribute accepting a `<number>` followed by an optional second `<number>`.
 
 ## Steps for Accessing animVal
 
@@ -25,9 +25,7 @@ A `float` representing the animated value of the reflected attribute.
 ## Examples
 
 ```js
-// Create an SVG element and animate a numeric attribute
-const svgNamespace = "http://www.w3.org/2000/svg";
-const rect = document.createElementNS(svgNamespace, "rect");
+const rect = document.querySelector("rect");
 rect.setAttribute("width", "100");
 
 // Access the SVGAnimatedNumber object
