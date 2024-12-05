@@ -8,7 +8,7 @@ browser-compat: api.SVGAnimatedBoolean.baseVal
 
 {{APIRef("SVG")}}
 
-The **`SVGAnimatedBoolean.baseVal`** property of the {{domxref("SVGAnimatedBoolean")}} interface reflects the base (non-animated) boolean value of the associated SVG attribute. It is writable and represents the current value before any animations are applied.
+The **`baseVal`** property of the {{domxref("SVGAnimatedBoolean")}} interface reflects the base (non-animated) boolean value of the associated SVG attribute. It is writable and represents the current value before any animations are applied.
 
 ## Value
 

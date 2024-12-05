@@ -8,7 +8,7 @@ browser-compat: api.SVGAnimatedBoolean.animVal
 
 {{APIRef("SVG")}}
 
-The **`SVGAnimatedBoolean.animVal`** read-only property of the {{domxref("SVGAnimatedBoolean")}} interface represents the current animated value of the associated SVG attribute. If there are no animations, `animVal` is the same as {{domxref("SVGAnimatedBoolean.baseVal")}}.
+The **`animVal`** read-only property of the {{domxref("SVGAnimatedBoolean")}} interface represents the current animated value of the associated SVG attribute. If there are no animations, `animVal` is the same as {{domxref("SVGAnimatedBoolean.baseVal")}}.
 
 ## Value
 
