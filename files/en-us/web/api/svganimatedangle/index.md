@@ -67,7 +67,7 @@ The `SVGAnimatedAngle` interface is used for attributes of basic type [\<angle>]
       </td>
     </tr>
     <tr>
-      <td><code>{{domxref("SVGAnimatedAngle.baseVal")}}</code></td>
+      <td><code>{{domxref("SVGAnimatedAngle.animVal")}}</code></td>
       <td>{{ domxref("SVGAngle") }}</td>
       <td>
         A read only {{ domxref("SVGAngle") }} representing the current

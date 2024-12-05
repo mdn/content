@@ -24,12 +24,14 @@ An {{domxref("SVGAngle")}} object representing the animated value of the [`<angl
 ```js
 const marker = document.querySelector("[orient]");
 
-// Set the orient attribute with an angle and start an animation
+// Set an initial angle for the orient attribute
 marker.setAttribute("orient", "45");
-const animAngle = marker.orientAngle.animVal;
 
-console.log(animAngle.value); // Outputs the current animated value of the angle
-console.log(animAngle.unitType); // Outputs the unit type (e.g., SVG_ANGLETYPE_DEG)
+// Access the animated value of the angle
+const animAngle = marker.orientAngle.animVal; // an SVGAngle object
+
+console.log(animAngle.value); // Output: 45 (current animated value of the angle)
+console.log(animAngle.unitType); // Output: 2 (constant for SVG_ANGLETYPE_DEG)
 ```
 
 ## Specifications

@@ -26,10 +26,10 @@ const marker = document.querySelector("[orient]");
 
 // Set the orient attribute with an angle
 marker.setAttribute("orient", "90");
-const baseAngle = marker.orientAngle.baseVal;
+const baseAngle = marker.orientAngle.baseVal; // an SVGAngle object
 
-console.log(baseAngle.value); // Outputs 90
-console.log(baseAngle.unitType); // Outputs the unit type (e.g., SVG_ANGLETYPE_DEG)
+console.log(baseAngle.value); // Output: 90
+console.log(baseAngle.unitType); // Output: 1 (constant for SVG_ANGLETYPE_UNSPECIFIED)
 ```
 
 ## Specifications
