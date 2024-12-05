@@ -56,8 +56,8 @@ angle.newValueSpecifiedUnits(SVGAngle.SVG_ANGLETYPE_RAD, Math.PI / 2);
 angle.convertToSpecifiedUnits(SVGAngle.SVG_ANGLETYPE_DEG);
 
 // Retrieve the angle's value in degrees
-console.log(angle.value); // Outputs: 90
-console.log(angle.unitType); // Outputs: 2 (SVG_ANGLETYPE_DEG)
+console.log(angle.value); // Output: 90
+console.log(angle.unitType); // Output: 2 (SVG_ANGLETYPE_DEG)
 ```
 
 Attempting to convert to an unsupported unit type
@@ -71,7 +71,7 @@ try {
   // Attempt to convert to an invalid unit type
   angle.convertToSpecifiedUnits(SVGAngle.SVG_ANGLETYPE_UNKNOWN);
 } catch (e) {
-  console.error(e.name); // Outputs: NotSupportedError
+  console.error(e.name); // Output: NotSupportedError
 }
 ```
 

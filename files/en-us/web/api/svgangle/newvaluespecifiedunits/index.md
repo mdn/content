@@ -57,8 +57,8 @@ const angle = svg.createSVGAngle();
 angle.newValueSpecifiedUnits(SVGAngle.SVG_ANGLETYPE_DEG, 45);
 
 // Retrieve the angle's value in degrees
-console.log(angle.value); // Outputs: 45
-console.log(angle.unitType); // Outputs: 2 (SVG_ANGLETYPE_DEG)
+console.log(angle.value); // Output: 45
+console.log(angle.unitType); // Output: 2 (SVG_ANGLETYPE_DEG)
 ```
 
 Setting an angle in radians
@@ -72,8 +72,8 @@ const angle = svg.createSVGAngle();
 angle.newValueSpecifiedUnits(SVGAngle.SVG_ANGLETYPE_RAD, Math.PI / 2);
 
 // Retrieve the angle's value
-console.log(angle.value); // Outputs: 90
-console.log(angle.unitType); // Outputs: 3 (SVG_ANGLETYPE_RAD)
+console.log(angle.value); // Output: 90
+console.log(angle.unitType); // Output: 3 (SVG_ANGLETYPE_RAD)
 ```
 
 Setting an angle in gradians
@@ -87,8 +87,8 @@ const angle = svg.createSVGAngle();
 angle.newValueSpecifiedUnits(SVGAngle.SVG_ANGLETYPE_GRAD, 100);
 
 // Retrieve the angle's value in gradians
-console.log(angle.value); // Outputs: 90
-console.log(angle.unitType); // Outputs: 4 (SVG_ANGLETYPE_GRAD)
+console.log(angle.value); // Output: 90
+console.log(angle.unitType); // Output: 4 (SVG_ANGLETYPE_GRAD)
 ```
 
 Attempting to set an unsupported unit type
@@ -102,7 +102,7 @@ try {
   // Attempt to set an invalid unit type
   angle.newValueSpecifiedUnits(SVGAngle.SVG_ANGLETYPE_UNKNOWN, 45);
 } catch (e) {
-  console.error(e.name); // Outputs: NotSupportedError
+  console.error(e.name); // Output: NotSupportedError
 }
 ```
 
