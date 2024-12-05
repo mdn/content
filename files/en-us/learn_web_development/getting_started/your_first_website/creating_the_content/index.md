@@ -1,5 +1,5 @@
 ---
-title: Creating the content
+title: "HTML: Creating the content"
 slug: Learn_web_development/Getting_started/Your_first_website/Creating_the_content
 page-type: tutorial-chapter
 ---
@@ -271,6 +271,6 @@ If you have followed all the instructions in this article, you should end up wit
 
 If you get stuck, you can always compare your work with our [finished example code](https://github.com/mdn/beginner-html-site/blob/main/index.html) on GitHub.
 
-Here, we have only really scratched the surface of HTML. You'll learn a lot more in our [Core modules](/en-US/docs/Learn_web_development/Core).
+Here, we have only really scratched the surface of HTML. You'll learn a lot more in our [Structuring content with HTML](/en-US/docs/Learn_web_development/Core/Structuring_content) Core module.
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website")}}

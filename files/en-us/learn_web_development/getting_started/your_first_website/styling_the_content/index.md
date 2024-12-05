@@ -1,5 +1,5 @@
 ---
-title: Styling the content
+title: "CSS: Styling the content"
 slug: Learn_web_development/Getting_started/Your_first_website/Styling_the_content
 page-type: tutorial-chapter
 ---
@@ -328,6 +328,6 @@ If you followed all the instructions in this article, you should have a page tha
 
 (You can [view our version here](https://mdn.github.io/beginner-html-site-styled/).) If you get stuck, you can always compare your work with our [finished example code on GitHub](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css).
 
-In this exercise, we have just scratched the surface of CSS. Our [Core modules](/en-US/docs/Learn_web_development/Core) will cover it in a lot more detail.
+In this article, we have just scratched the surface of CSS. Our [Core modules](/en-US/docs/Learn_web_development/Core), starting with the [CSS styling basics module](/en-US/docs/Learn_web_development/Core/Styling_basics), will cover it in a lot more detail.
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Your_first_website")}}

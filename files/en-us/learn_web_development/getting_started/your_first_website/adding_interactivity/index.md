@@ -1,5 +1,5 @@
 ---
-title: Adding interactivity
+title: "JavaScript: Adding interactivity"
 slug: Learn_web_development/Getting_started/Your_first_website/Adding_interactivity
 page-type: tutorial-chapter
 ---
@@ -491,7 +491,7 @@ If you have followed all the instructions in this article, you should end up wit
 
 If you get stuck, you can compare your work with our [finished example code on GitHub](https://github.com/mdn/beginner-html-site-scripted/blob/main/scripts/main.js).
 
-We have just scratched the surface of JavaScript. You'll find a lot more JavaScript in our [Core modules](/en-US/docs/Learn_web_development/Core).
+We have just scratched the surface of JavaScript in this article. You'll find a lot more JavaScript in our [Core](/en-US/docs/Learn_web_development/Core) and [Extension](/en-US/docs/Learn_web_development/Extensions) modules, starting at [Dynamic scripting with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting).
 
 ## See also
 
