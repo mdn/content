@@ -58,7 +58,7 @@ Before starting this module, you should have a basic work environment set up (as
 - [Challenge: A cool-looking box](/en-US/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box) <sup>Challenge</sup>
   - : In this challenge, you'll get some more practice in creating cool-looking boxes by trying to create an eye-catching box.
 
-## Advanced guides
+## Additional guides
 
 These guides are not part of the learning pathway, but they are interesting nonetheless — you should consider these as stretch goals, to optionally study when you are done with the main Core articles.
 

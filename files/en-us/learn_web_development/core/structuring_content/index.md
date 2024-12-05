@@ -56,7 +56,7 @@ Before starting this module, you don't need any previous HTML knowledge, but you
 - [Debugging HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML)
   - : Writing HTML is fine, but what if something goes wrong, and you can't work out where the error in the code is? This article will introduce you to some tools that can help you find and fix errors in HTML.
 
-## Advanced guides
+## Additional guides
 
 These guides are not part of the learning pathway, but they are interesting nonetheless — you should consider these as stretch goals, to optionally study when you are done with the main Core articles.
 

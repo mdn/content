@@ -36,7 +36,7 @@ Before starting this module, you should be familiar with [HTML](/en-US/docs/Lear
 - [Fundamental layout comprehension](/en-US/docs/Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension) <sup>Challenge</sup>
   - : A challenge to test your knowledge of different layout methods by laying out a webpage.
 
-## Advanced guides
+## Additional guides
 
 These guides are not part of the learning pathway, but they are interesting nonetheless — you should consider these as stretch goals, to optionally study when you are done with the main Core articles.
 
