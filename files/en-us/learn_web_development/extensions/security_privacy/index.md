@@ -6,10 +6,10 @@ page-type: learn-module
 
 {{LearnSidebar}}
 
-It is vital to have an understanding of how you can and should protect your data and your user's data from would-be attackers who may try to steal it. This module covers both hardening websites to make it more difficult to steal data, and collecting user data in a respectful way that avoids tracking them or sharing it with unsuitable third parties.
-
 > [!NOTE]
 > As you'll see below, this module is currently only a curriculum outline/syllabus, with some links provided to starter guides. We are intending to convert this into a full course in the future, as time allows.
+
+It is vital to have an understanding of how you can and should protect your data and your user's data from would-be attackers who may try to steal it. This module covers both hardening websites to make it more difficult to steal data, and collecting user data in a respectful way that avoids tracking them or sharing it with unsuitable third parties.
 
 ## Prerequisites
 
@@ -20,6 +20,7 @@ Before starting this module, you should be familiar with [HTML](/en-US/docs/Lear
 ### 5.1 Security and privacy basics
 
 > [!NOTE]
+>
 > - Conforming to all of the criteria in this module is not going to result in a student being a qualified security engineer, but equally it is important for web developers to understand the basics of web security and privacy.
 > - It is also important for students to understand that a lot of security issues are caused by problems with server-side code, or a combination of client-side and server-side code. A lot of code should present very few security risks, provided the browser is doing its job properly.
 
@@ -98,9 +99,9 @@ Learning outcomes:
 
 ## Resources
 
-- [Security on the web](https://developer.mozilla.org/docs/Web/Security)
-- [Website security](https://developer.mozilla.org/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)
-- [Privacy on the web](https://developer.mozilla.org/docs/Web/Privacy)
+- [Security on the web](/en-US/docs/Web/Security)
+- [Website security](/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)
+- [Privacy on the web](/en-US/docs/Web/Privacy)
 - [Complete guide to GDPR compliance](https://gdpr.eu/), gdpr.eu
 
 ## See also

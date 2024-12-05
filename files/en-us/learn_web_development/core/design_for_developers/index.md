@@ -8,12 +8,12 @@ page-type: learn-module
 
 {{NextMenu("Learn_web_development/Core/Version_control", "Learn_web_development/Core")}}
 
+> [!NOTE]
+> As you'll see below, this module is currently only a curriculum outline/syllabus. We are intending to convert this into a full course in the future, as time allows.
+
 The idea of this module is to (re-)introduce developers to design thinking. They may not want to work as designers, but having some basic user experience and design theory is good for everyone involved in building websites, no matter what their role. At the very least, even the most technical, "non-designer" developer should understand design briefs, why things are designed as they are, and be able to get into the mindset of the user. And it'll help them make their portfolios look better.
 
 In addition, front-end developers are often tasked with doing various bits of design work on projects. Clients and employers often assume that they can do it because they are involved with the visual elements of the website. Historically, "web developer" used to be more of a hybrid designer/developer role than it is today.
-
-> [!NOTE]
-> As you'll see below, this module is currently only a curriculum outline/syllabus. We are intending to convert this into a full course in the future, as time allows.
 
 ## Prerequisites
 

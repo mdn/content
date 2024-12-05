@@ -8,6 +8,9 @@ page-type: tutorial-chapter
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Soft_skills/Research_and_learning", "Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes", "Learn_web_development/Getting_started/Soft_skills")}}
 
+> [!NOTE]
+> The content in this article is currently incomplete, sorry about that! We are working hard to improve the MDN Learn Web Development section, and will have this article finished soon.
+
 As a professional in the web industry, you are going to have to work with other people on projects during multiple phases — brainstorming ideas, writing proposals, implementing code, and more. This article looks at how to work together with others.
 
 <table>

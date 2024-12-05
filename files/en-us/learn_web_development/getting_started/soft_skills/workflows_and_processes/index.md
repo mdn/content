@@ -8,6 +8,9 @@ page-type: tutorial-chapter
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork", "Learn_web_development/Getting_started/Soft_skills/Job_interviews", "Learn_web_development/Getting_started/Soft_skills")}}
 
+> [!NOTE]
+> The content in this article is currently incomplete, sorry about that! We are working hard to improve the MDN Learn Web Development section, and will have this article finished soon.
+
 Beginners often focus on specific individual aspects of technology, but miss out on the bigger picture of an overall project. This article provides some of that high-level context.
 
 <table>

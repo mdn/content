@@ -8,10 +8,10 @@ page-type: tutorial-chapter
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Browsing_the_web", "Learn_web_development/Getting_started/Environment_setup/Dealing_with_files", "Learn_web_development/Getting_started/Environment_setup")}}
 
-Previously, we told you to install a code editor, as you'll need one to work through this pathway. In this article we look at code editors in more detail, giving you an idea of what they can do for you.
-
 > [!NOTE]
-> In this article, we are assuming that you have [Visual Studio Code](https://code.visualstudio.com/) installed. If you don't have a code editor installed, install Visual Studio Code now. If you want to use another code editor, that's fine. It won't work exactly the same way as Visual Studio Code, but many of the core features will probably be similar.
+> The content in this article is currently incomplete, sorry about that! We are working hard to improve the MDN Learn Web Development section, and will have this article finished soon.
+
+Previously, we told you to install a code editor, as you'll need one to work through this pathway. In this article we look at code editors in more detail, giving you an idea of what they can do for you.
 
 <table>
   <tbody>
@@ -40,7 +40,7 @@ Binary file editors like Microsoft Word are unsuitable for editing code. You nee
 
 Default OS plain text editors can be OK, for example, TextEdit on macOS, or Notepad on Windows, but they also have limitations.
 
-You are better off with a fully-fledged code editor like VSCode (multiplatform, free), Sublime Text (multiplatform, not free) or Notepad++ (Windows, free).
+You are better off with a fully-fledged code editor like [Visual Studio Code](https://code.visualstudio.com/) (multiplatform, free), Sublime Text (multiplatform, not free) or Notepad++ (Windows, free). We would recommend Visual Studio Code, as it is the editor we mostly use. If you want to use another code editor, that's fine. It won't work exactly the same way as Visual Studio Code, but many of the core features will probably be similar.
 
 Integrated Development Environments (IDEs) such as Visual Studio (Windows, not free), NetBeans (multiplatform, free), and WebStorm (multiplatform, not free) tend to have more features than simple code editors but tend to be more complex than what you need at this stage in your learning journey.
 

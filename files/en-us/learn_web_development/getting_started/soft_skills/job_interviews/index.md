@@ -8,6 +8,9 @@ page-type: tutorial-chapter
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes", "Learn_web_development/Core", "Learn_web_development/Getting_started/Soft_skills")}}
 
+> [!NOTE]
+> The content in this article is currently incomplete, sorry about that! We are working hard to improve the MDN Learn Web Development section, and will have this article finished soon.
+
 Technical job interviews can be very demanding, and some have quite specific requirements. Finding the right jobs to apply for in the first place can be challenging! This job provides some tips and resources to help.
 
 <table>

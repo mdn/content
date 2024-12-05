@@ -8,6 +8,9 @@ page-type: tutorial-chapter
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Web_standards/How_the_web_works", "Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites", "Learn_web_development/Getting_started/Web_standards")}}
 
+> [!NOTE]
+> The content in this article is currently incomplete, sorry about that! We are working hard to improve the MDN Learn Web Development section, and will have this article finished soon.
+
 This article provides some useful background on the web and web standards — how they came about, what web standard technologies are, and how they work together.
 
 <table>

@@ -8,6 +8,9 @@ page-type: tutorial-chapter
 
 {{NextMenu("Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork", "Learn_web_development/Getting_started/Soft_skills")}}
 
+> [!NOTE]
+> The content in this article is currently incomplete, sorry about that! We are working hard to improve the MDN Learn Web Development section, and will have this article finished soon.
+
 There is a lot to know as a web developer, and you are constantly learning. But how do you find out what you need to know most effectively? This article provides useful tips on research and learning.
 
 <table>

@@ -8,6 +8,9 @@ page-type: learn-module-chapter
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/What_is_Accessibility","Learn_web_development/Core/Accessibility/HTML", "Learn_web_development/Core/Accessibility")}}
 
+> [!NOTE]
+> The content in this article is currently incomplete, sorry about that! We are working hard to improve the MDN Learn Web Development section, and will have this article finished soon.
+
 Next we turn our attention to accessibility tooling, providing information on the kinds of tools you can use to help solve accessibility issues, and the assistive technologies used by people with disabilities as they browse the web. You'll be using these tools throughout subsequent articles.
 
 <table>

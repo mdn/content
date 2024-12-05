@@ -8,6 +8,9 @@ page-type: tutorial-chapter
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Installing_software", "Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup")}}
 
+> [!NOTE]
+> The content in this article is currently incomplete, sorry about that! We are working hard to improve the MDN Learn Web Development section, and will have this article finished soon.
+
 By this point in the module, you should have at least two web browsers installed on your computer. This article goes a little deeper into using browsers, looking at how a web browser works, the difference between some of the common items you'll interact with, and how to search for information.
 
 > [!NOTE]
