@@ -8,7 +8,7 @@ status:
 
 {{HTTPSidebar}}
 
-The **`X-Robots-Tag`** {{Glossary("response header")}} is a de-facto standard header for requesting how {{glossary("Crawler", "crawlers")}} should index URLs.
+The **`X-Robots-Tag`** {{Glossary("response header")}} defines how {{glossary("Crawler", "crawlers")}} should index URLs. While not part of any specification, it is a de-facto standard method for communicating with search bots, web crawlers, and similar user agents.
 Search-related crawlers use the rules from the `X-Robots-Tag` header to adjust how to present web pages or other resources in search results.
 
 Indexing rules defined via `<meta name="robots">` tags and `X-Robots-Tag` headers are discovered when a URL is crawled.
