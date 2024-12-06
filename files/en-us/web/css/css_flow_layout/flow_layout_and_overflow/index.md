@@ -269,6 +269,6 @@ Whether you are in continuous media on the web or in a Paged Media format such a
 
 ## See also
 
-- [Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content) guide
+- [Overflowing content](/en-US/docs/Learn_web_development/Core/Styling_basics/Overflow) guide
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
 - [CSS containment](/en-US/docs/Web/CSS/CSS_containment) module

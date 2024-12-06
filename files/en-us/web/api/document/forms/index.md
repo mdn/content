@@ -102,5 +102,5 @@ const selectFormElement = document.forms[index].elements[index];
 
 ## See also
 
-- [HTML forms](/en-US/docs/Learn/Forms)
+- [HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("form")}} and the {{domxref("HTMLFormElement")}} interface

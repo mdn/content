@@ -49,7 +49,7 @@ Our demo also features:
 When you look through the source code of [our demo's main JavaScript file](https://github.com/mdn/webvr-tests/blob/main/webvr/raw-webgl-example/webgl-demo.js), you can easily find the WebVR-specific parts by searching for the string "WebVR" in preceding comments.
 
 > [!NOTE]
-> To find out more about basic JavaScript and WebGL, consult our [JavaScript learning material](/en-US/docs/Learn/JavaScript), and our [WebGL Tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
+> To find out more about basic JavaScript and WebGL, consult our [JavaScript learning material](/en-US/docs/Learn_web_development/Core/Scripting), and our [WebGL Tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
 ## How does it work?
 

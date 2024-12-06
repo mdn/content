@@ -37,4 +37,4 @@ btnEl.formTarget = "_self";
 - {{domxref("HTMLButtonElement.formNoValidate")}}
 - {{domxref("HTMLButtonElement.formMethod")}}
 - {{domxref("HTMLFormElement.target")}}
-- [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data)
+- [Sending form data](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)

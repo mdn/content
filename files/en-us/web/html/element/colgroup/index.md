@@ -233,7 +233,7 @@ table {
 
 ## See also
 
-- [Learn: HTML tables](/en-US/docs/Learn/HTML/Tables)
+- [Learn: HTML table basics](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 - {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}}: Other table-related elements
 - {{cssxref("background-color")}}: CSS property to set the background color of each column group cell
 - {{cssxref("border")}}: CSS property to control borders of column group cells

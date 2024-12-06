@@ -27,20 +27,14 @@ For more information about JavaScript specifications and related technologies, s
 
 Learn how to program in JavaScript with guides and tutorials.
 
-### For complete beginners
+### For beginners
 
-Head over to our [Learning Area JavaScript topic](/en-US/docs/Learn/JavaScript) if you want to learn JavaScript but have no previous experience with JavaScript or programming. The complete modules available there are as follows:
-
-- [JavaScript first steps](/en-US/docs/Learn/JavaScript/First_steps)
-  - : Answers some fundamental questions such as "what is JavaScript?", "what does it look like?", and "what can it do?", along with discussing key JavaScript features such as variables, strings, numbers, and arrays.
-- [JavaScript building blocks](/en-US/docs/Learn/JavaScript/Building_blocks)
-  - : Continues our coverage of JavaScript's key fundamental features, turning our attention to commonly-encountered types of code blocks such as conditional statements, loops, functions, and events.
-- [Introducing JavaScript objects](/en-US/docs/Learn/JavaScript/Objects)
-  - : The object-oriented nature of JavaScript is important to understand if you want to go further with your knowledge of the language and write more efficient code, therefore we've provided this module to help you.
-- [Asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous)
-  - : Discusses asynchronous JavaScript, why it is important, and how it can be used to effectively handle potential blocking operations such as fetching resources from a server.
-- [Client-side web APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs)
-  - : Explores what APIs are, and how to use some of the most common APIs you'll come across often in your development work.
+- [Your first website: Adding interactivity](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity)
+  - : This article provides a brief tour of what JavaScript is and how to use it, aimed at people who are completely new to web development.
+- [Dynamic scripting with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting)
+  - : Our [Learn web development](/en-US/docs/Learn_web_development) section's JavaScript module teaches all the JavaScript fundamentals from the ground up.
+- [JavaScript frameworks and libraries](/en-US/docs/Learn_web_development/Core/Frameworks_libraries)
+  - : JavaScript frameworks are an essential part of modern front-end web development, providing developers with tried and tested tools for building scalable, interactive web applications. Many modern companies use frameworks as a standard part of their tooling, so many front-end development jobs now require framework experience. In this set of articles, we aim to give you a comfortable starting point to help you begin learning frameworks.
 
 ### JavaScript guide
 
@@ -49,8 +43,12 @@ Head over to our [Learning Area JavaScript topic](/en-US/docs/Learn/JavaScript) 
 
 ### Intermediate
 
-- [Understanding client-side JavaScript frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
-  - : JavaScript frameworks are an essential part of modern front-end web development, providing developers with proven tools for building scalable, interactive web applications. This module gives you some fundamental background knowledge about how client-side frameworks work and how they fit into your toolset, before moving on to a series of tutorials covering some of today's most popular ones.
+- [Advanced JavaScript objects](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)
+  - : The object-oriented nature of JavaScript is important to understand if you want to go further with your knowledge of the language and write more efficient code, therefore we've provided this module to help you.
+- [Asynchronous JavaScript](/en-US/docs/Learn_web_development/Extensions/Async_JS)
+  - : In this module, we take a look at {{Glossary("asynchronous")}} JavaScript, why it is important, and how it can be used to effectively handle potential blocking operations, such as fetching resources from a server.
+- [Client-side web APIs](/en-US/docs/Learn_web_development/Extensions/Client-side_APIs)
+  - : Explores what APIs are, and how to use some of the most common APIs you'll come across often in your development work.
 - [JavaScript language overview](/en-US/docs/Web/JavaScript/Language_overview)
   - : An overview of the basic syntax and semantics of JavaScript for those coming from other programming languages to get up to speed.
 - [JavaScript data structures](/en-US/docs/Web/JavaScript/Data_structures)

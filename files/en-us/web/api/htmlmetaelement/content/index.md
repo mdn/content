@@ -55,4 +55,4 @@ document.head.appendChild(meta);
 - {{HTMLElement("meta")}}
 - {{domxref("HTMLMetaElement.name")}}
 - {{domxref("HTMLMetaElement.httpEquiv")}}
-- [Learn: Metadata in HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#metadata_the_meta_element)
+- [Learn: Metadata in HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#metadata_the_meta_element)

@@ -35,7 +35,7 @@ The `DELETE` method has no defined semantics for the message body, so this shoul
     </tr>
     <tr>
       <th scope="row">
-        Allowed in <a href="/en-US/docs/Learn/Forms">HTML forms</a>
+        Allowed in <a href="/en-US/docs/Learn_web_development/Extensions/Forms">HTML forms</a>
       </th>
       <td>No</td>
     </tr>

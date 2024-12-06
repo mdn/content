@@ -33,7 +33,7 @@ they are read or written:
     when to capitalize the property's "{{Glossary("camel_case", "camel-cased")}}" name.
 
 In addition to the information below, you'll find a how-to guide for using HTML data
-attributes in our article [_Using data attributes_](/en-US/docs/Learn/HTML/Howto/Use_data_attributes).
+attributes in our article [_Using data attributes_](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes).
 
 ### Name conversion
 
@@ -130,5 +130,5 @@ if (el.dataset.someDataAttr === undefined) {
 
 - The HTML [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*) class
   of global attributes
-- [Using data attributes](/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
+- [Using data attributes](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)
 - {{DOMxRef("Element.getAttribute()")}} and {{DOMxRef("Element.setAttribute()")}}

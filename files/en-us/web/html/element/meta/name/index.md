@@ -259,4 +259,4 @@ The [WHATWG Wiki MetaExtensions page](https://wiki.whatwg.org/wiki/MetaExtension
 ## See also
 
 - [Viewport `<meta>` tag](/en-US/docs/Web/HTML/Viewport_meta_tag)
-- [Metadata: the `<meta>` element](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#metadata_the_meta_element) in [What's in the head? Metadata in HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
+- [Metadata: the `<meta>` element](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#metadata_the_meta_element)

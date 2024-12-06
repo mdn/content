@@ -84,7 +84,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `no-referrer-when-downgrade`
       - : The {{HTTPHeader("Referer")}} header will not be sent to {{Glossary("origin")}}s without {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
     - `origin`
-      - : The sent referrer will be limited to the origin of the referring page: its [scheme](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, and {{Glossary("port")}}.
+      - : The sent referrer will be limited to the origin of the referring page: its [scheme](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, and {{Glossary("port")}}.
     - `origin-when-cross-origin`
       - : The referrer sent to other origins will be limited to the scheme, the host, and the port. Navigations on the same origin will still include the path.
     - `same-origin`

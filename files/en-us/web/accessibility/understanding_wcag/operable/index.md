@@ -35,12 +35,12 @@ This guideline covers the necessity of making core website functionality availab
       </td>
       <td>
         See
-        <a href="/en-US/docs/Learn/Accessibility/HTML#ui_controls"
+        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#ui_controls"
           >UI controls</a
         >
         and
         <a
-          href="/en-US/docs/Learn/Accessibility/HTML#building_keyboard_accessibility_back_in"
+          href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#building_keyboard_accessibility_back_in"
           >Building keyboard accessibility back in</a
         >
       </td>
@@ -72,12 +72,12 @@ This guideline covers the necessity of making core website functionality availab
       </td>
       <td>
         See
-        <a href="/en-US/docs/Learn/Accessibility/HTML#ui_controls"
+        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#ui_controls"
           >UI controls</a
         >
         and
         <a
-          href="/en-US/docs/Learn/Accessibility/HTML#building_keyboard_accessibility_back_in"
+          href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#building_keyboard_accessibility_back_in"
           >Building keyboard accessibility back in</a
         >
       </td>
@@ -289,7 +289,7 @@ The conformance criteria under this guideline relate to ways in which users can 
       <td>
         See
         <a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_a_title"
+          href="/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#adding_a_title"
           >Adding a title</a
         >.
       </td>
@@ -303,13 +303,13 @@ The conformance criteria under this guideline relate to ways in which users can 
       </td>
       <td>
         See
-        <a href="/en-US/docs/Learn/Accessibility/HTML#ui_controls"
+        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#ui_controls"
           >UI controls</a
         >
         for general advice on tabbing to controls. If you need to place elements
         in an unusual layout, it is better to make sure the source order is
         sensible, then use CSS features like
-        <a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">positioning</a>
+        <a href="/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning">positioning</a>
         to handle the layout.
       </td>
     </tr>
@@ -326,7 +326,7 @@ The conformance criteria under this guideline relate to ways in which users can 
       </td>
       <td>
         See
-        <a href="/en-US/docs/Learn/Accessibility/HTML#meaningful_text_labels"
+        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#meaningful_text_labels"
           >Meaningful text labels</a
         >. Also note that you should minimize instances where multiple copies of
         the same text are linked to different places. This can cause problems
@@ -352,15 +352,15 @@ The conformance criteria under this guideline relate to ways in which users can 
         Most of these mechanisms can be created using simple HTML features, for
         example see
         <a
-          href="/en-US/docs/Learn/Forms/HTML5_input_types#search_field"
+          href="/en-US/docs/Learn_web_development/Extensions/Forms/HTML5_input_types#search_field"
           >Search field</a
         >,
         <a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#active_learning_creating_a_navigation_menu"
+          href="/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links#active_learning_creating_a_navigation_menu"
           >Creating a navigation menu</a
         >,
         <a
-          href="/en-US/docs/Learn/CSS/Styling_text/Styling_links#styling_links_as_buttons"
+          href="/en-US/docs/Learn_web_development/Core/Text_styling/Styling_links#styling_links_as_buttons"
           >Styling links as buttons</a
         >.
       </td>
@@ -375,18 +375,18 @@ The conformance criteria under this guideline relate to ways in which users can 
       <td>
         <p>
           See
-          <a href="/en-US/docs/Learn/Accessibility/HTML#ui_controls"
+          <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#ui_controls"
             >UI controls</a
           >,
-          <a href="/en-US/docs/Learn/Accessibility/HTML#meaningful_text_labels"
+          <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#meaningful_text_labels"
             >Meaningful text labels</a
           >,
           <a
-            href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#the_basics_headings_and_paragraphs"
+            href="/en-US/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
             >The basics of headings and paragraphs</a
           >,
           <a
-            href="/en-US/docs/Learn/Forms/How_to_structure_a_web_form#the_label_element"
+            href="/en-US/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form#the_label_element"
             >The &#x3C;label> element</a
           >.
         </p>
@@ -409,8 +409,8 @@ The conformance criteria under this guideline relate to ways in which users can 
       <td>
         See
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#using_native_keyboard_accessibility"
-          >Using native keyboard accessibility</a
+          href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#ui_controls"
+          >UI controls</a
         >.
       </td>
     </tr>
@@ -432,7 +432,7 @@ The conformance criteria under this guideline relate to ways in which users can 
       </td>
       <td>
         See
-        <a href="/en-US/docs/Learn/Accessibility/HTML#meaningful_text_labels"
+        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#meaningful_text_labels"
           >Meaningful text labels</a
         >. Also note that you should minimize instances where multiple copies of
         the same text are linked to different places. This can cause problems
@@ -458,7 +458,7 @@ The conformance criteria under this guideline relate to ways in which users can 
         <p>
           See
           <a
-            href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#the_basics_headings_and_paragraphs"
+            href="/en-US/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
             >The basics of headings and paragraphs</a
           >.
         </p>

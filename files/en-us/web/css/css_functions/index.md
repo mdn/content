@@ -342,4 +342,4 @@ The anchor positioning functions are used when positioning and sizing anchor-pos
 ## See also
 
 - [CSS Values and Units](/en-US/docs/Web/CSS/CSS_Values_and_Units)
-- [Introduction to CSS: Values and Units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

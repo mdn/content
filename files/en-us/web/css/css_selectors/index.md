@@ -123,15 +123,15 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 
   - : Lists the pseudo-classes, selectors that allow the selection of elements based on state information that is not contained in the document tree, defined in the various CSS modules and HTML.
 
-- [Learn: CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
+- [Learn: CSS selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
 
-  - : Part of CSS building blocks, includes tutorials on [Type, class, and ID selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors), [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors), [Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements), [Combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators), [Cascade, specificity, and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance), and [Cascade layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers).
+  - : Part of CSS building blocks, includes tutorials on [Type, class, and ID selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors), [Attribute selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors), [Pseudo-classes and pseudo-elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements), [Combinators](/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators), [Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts), and [Cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers).
 
 - [Using the `:target` pseudo-class in selectors](/en-US/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors)
 
   - : Learn how to use the {{CSSXref(":target")}} pseudo-class to style the target element a URL's fragment identifier.
 
-- [Learn: UI pseudo-classes](/en-US/docs/Learn/Forms/UI_pseudo-classes)
+- [Learn: UI pseudo-classes](/en-US/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes)
 
   - : Learn the different UI pseudo-classes available for styling forms in different states.
 

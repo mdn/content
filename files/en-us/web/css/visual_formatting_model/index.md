@@ -155,7 +155,7 @@ Read more about [flow layout](/en-US/docs/Web/CSS/CSS_flow_layout) in CSS.
 
 In the float model, a box is first laid out according to the normal flow, then taken out of the flow and positioned, typically to the left or right. Content may flow along the side of a float.
 
-Find out more about [floats](/en-US/docs/Learn/CSS/CSS_layout/Floats).
+Find out more about [floats](/en-US/docs/Learn_web_development/Core/CSS_layout/Floats).
 
 ### Absolute positioning
 

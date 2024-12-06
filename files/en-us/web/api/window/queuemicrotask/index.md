@@ -86,6 +86,6 @@ MyElement.prototype.loadData = function (url) {
 - {{domxref("WorkerGlobalScope.queueMicrotask()")}}
 - [Polyfill of `queueMicrotask()` in `core-js`](https://github.com/zloirock/core-js#queuemicrotask)
 - [Using microtasks in JavaScript with queueMicrotask()](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide)
-- [Asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous)
+- [Asynchronous JavaScript](/en-US/docs/Learn_web_development/Extensions/Async_JS)
 - [queueMicrotask explainer](https://github.com/fergald/docs/blob/master/explainers/queueMicrotask.md)
 - [Tasks, microtasks, queues and schedules](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/) by Jake Archibald
