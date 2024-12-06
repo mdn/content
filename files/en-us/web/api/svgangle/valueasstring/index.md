@@ -34,20 +34,6 @@ console.log(angle.valueAsString); // Output: "1.57rad"
 console.log(Math.round(angle.value)); // Output: 90 (since 1.57 radians is approximately 90 degrees)
 ```
 
-### Parsing an invalid value
-
-```js
-try {
-  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-  const angle = svg.createSVGAngle();
-
-  // Attempt to set an invalid valueAsString
-  angle.valueAsString = "invalidValue"; // Throws a SyntaxError
-} catch (e) {
-  console.error(e); // Output: SyntaxError
-}
-```
-
 ## Specifications
 
 {{Specifications}}
@@ -58,6 +44,5 @@ try {
 
 ## See also
 
-- {{domxref("SVGAngle.value")}}
-- {{domxref("SVGAngle.unitType")}}
-- {{domxref("SVGAngle.valueInSpecifiedUnits")}}
+- [`<number>`](/en-US/docs/Web/SVG/Content_type#number)
+- [`<angle>`](/en-US/docs/Web/SVG/Content_type#angle)

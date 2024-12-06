@@ -31,24 +31,6 @@ console.log(angle.valueInSpecifiedUnits); // Output: 90
 console.log(angle.value); // Output: 90 (with the same unit, degrees)
 ```
 
-### Attempting to modify a read-only `SVGAngle` object
-
-```js
-try {
-  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-  const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-
-  rect.setAttribute("transform", "rotate(45)");
-  svg.appendChild(rect);
-
-  // Access the animVal (read-only)
-  const angle = rect.transform.baseVal.getItem(0).angle;
-  angle.valueInSpecifiedUnits = 90; // Throws an error
-} catch (e) {
-  console.error(e.name); // Output: NoModificationAllowedError
-}
-```
-
 ## Specifications
 
 {{Specifications}}
@@ -59,6 +41,5 @@ try {
 
 ## See also
 
-- {{domxref("SVGAngle.value")}}
-- {{domxref("SVGAngle.unitType")}}
-- {{domxref("SVGAngle.valueAsString")}}
+- {{domxref("SVGAnimatedAngle")}}
+- {{domxref("Document.createElementNS()")}}

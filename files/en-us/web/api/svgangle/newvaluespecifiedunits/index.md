@@ -18,7 +18,7 @@ svgAngle.newValueSpecifiedUnits(unitType, valueInSpecifiedUnits);
 
 ### Parameters
 
-- **{{domxref("SVGAngle.unitType")}}**
+- **{{domxref("SVGAngle.unitType", "unitType")}}**
   A constant representing the unit type for the angle. This can be one of the following:
 
   - `SVG_ANGLETYPE_DEG` — Degrees
@@ -26,7 +26,7 @@ svgAngle.newValueSpecifiedUnits(unitType, valueInSpecifiedUnits);
   - `SVG_ANGLETYPE_GRAD` — Gradians
   - `SVG_ANGLETYPE_UNSPECIFIED` — Unitless (a number only)
 
-- **{{domxref("SVGAngle.valueInSpecifiedUnits")}}**
+- **{{domxref("SVGAngle.valueInSpecifiedUnits", "valueInSpecifiedUnits")}}**
   The numeric factor for the angle value, expressed in the specified unit type (e.g., a number for degrees, radians, or gradians).
 
 ### Return value
@@ -37,7 +37,7 @@ If the `newValueSpecifiedUnits()` method is successfully called, the `SVGAngle` 
 
 ## Examples
 
-Setting an angle in degrees
+### Setting an angle in degrees
 
 ```js
 // Create an SVGAngle object
@@ -52,7 +52,7 @@ console.log(angle.value); // Output: 45
 console.log(angle.unitType); // Output: 2 (SVG_ANGLETYPE_DEG)
 ```
 
-Setting an angle in radians
+### Setting an angle in radians
 
 ```js
 // Create an SVGAngle object
@@ -67,7 +67,7 @@ console.log(angle.value); // Output: 90
 console.log(angle.unitType); // Output: 3 (SVG_ANGLETYPE_RAD)
 ```
 
-Setting an angle in gradians
+### Setting an angle in gradians
 
 ```js
 // Create an SVGAngle object
@@ -82,21 +82,6 @@ console.log(angle.value); // Output: 90
 console.log(angle.unitType); // Output: 4 (SVG_ANGLETYPE_GRAD)
 ```
 
-Attempting to set an unsupported unit type
-
-```js
-try {
-  // Create an SVGAngle object
-  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-  const angle = svg.createSVGAngle();
-
-  // Attempt to set an invalid unit type
-  angle.newValueSpecifiedUnits(SVGAngle.SVG_ANGLETYPE_UNKNOWN, 45);
-} catch (e) {
-  console.error(e.name); // Output: NotSupportedError
-}
-```
-
 ## Specifications
 
 {{Specifications}}
@@ -107,6 +92,5 @@ try {
 
 ## See also
 
-- {{domxref("SVGAngle.unitType")}}
-- {{domxref("SVGAngle.valueInSpecifiedUnits")}}
-- {{domxref("SVGAngle.convertToSpecifiedUnits")}}
+- {{domxref("SVGAnimatedAngle")}}
+- {{domxref("Document.createElementNS()")}}

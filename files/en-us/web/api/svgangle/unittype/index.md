@@ -47,6 +47,5 @@ console.log(angle.unitType); // Output: 2 (SVG_ANGLETYPE_DEG)
 
 ## See also
 
-- {{domxref("SVGAngle.value")}}
-- {{domxref("SVGAngle.valueInSpecifiedUnits")}}
-- {{domxref("SVGAngle.valueAsString")}}
+- {{domxref("DOMMatrix")}}
+- {{domxref("SVGAnimatedAngle")}}

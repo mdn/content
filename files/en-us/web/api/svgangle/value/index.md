@@ -30,24 +30,6 @@ angle.value = 90;
 console.log(angle.value); // Output: 90
 ```
 
-Attempting to modify a read-only `SVGAngle` object will result in an error:
-
-```js
-try {
-  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-  const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-
-  rect.setAttribute("transform", "rotate(45)");
-  svg.appendChild(rect);
-
-  // Access the animVal (read-only)
-  const angle = rect.transform.baseVal.getItem(0).angle;
-  angle.value = 90; // Throws an error
-} catch (e) {
-  console.error(e.name); // Output: NoModificationAllowedError
-}
-```
-
 ## Specifications
 
 {{Specifications}}
@@ -58,6 +40,5 @@ try {
 
 ## See also
 
-- {{domxref("SVGAngle.unitType")}}
-- {{domxref("SVGAngle.valueInSpecifiedUnits")}}
-- {{domxref("SVGAngle.valueAsString")}}
+- {{domxref("SVGAnimatedAngle")}}
+- {{domxref("SVGTransform")}}
