@@ -266,11 +266,10 @@ async function readFullAsync(length, buffer = new Uint8Array(65536)) {
 }
 
 async function sendMessage(message) {
-  const header = new Uint32Array([message.length]);
-  const stdout = await fs.open(`/proc/${process.pid}/fd/1`, "w");
+  const header = Buffer.from(new Uint32Array([message.length]).buffer);
+  const stdout = process.stdout;
   await stdout.write(header);
   await stdout.write(message);
-  await stdout.close();
 }
 
 while (true) {
