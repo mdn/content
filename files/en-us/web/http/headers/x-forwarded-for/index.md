@@ -67,21 +67,19 @@ For detailed guidance on using `X-Forwarded-For`, see the [Parsing](#parsing) an
 This header exposes privacy-sensitive information by design, such as the IP address of the client.
 Therefore, the user's privacy must be kept in mind when using this header.
 
-The `X-Forwarded-For` header is untrustworthy when no **trusted reverse proxy** (e.g., a load balancer) is between the client and server.
-If the client and all proxies are trusted and well-behaved, the list of IP addresses in the header has the meaning described in the [Directives](#directives) section.
-If there's any risk that the client or any proxy is malicious or misconfigured, it's possible a part or all of the header may be spoofed, may have an unexpected format or contents.
-
-If trusted reverse proxies are between the client and server, the final `X-Forwarded-For` IP addresses (one for each trusted proxy) are trustworthy, as they were added by trusted proxies.
-This is true as long as the server is _only_ accessible through those proxies and not also directly from the internet.
+If you know that all proxies in the request chain are trusted (i.e., you control them) and are configured correctly, the parts of the header added by your proxies can be trusted.
+If any proxy is malicious or misconfigured, any part of the header not added by a trusted proxy may be spoofed or may have an unexpected format or contents.
+If the server can be directly connected to from the internet — even if it is also behind a trusted reverse proxy — **no part** of the `X-Forwarded-For` IP list can be considered trustworthy or safe for security-related uses.
 
 Any security-related use of `X-Forwarded-For` (such as for rate limiting or IP-based access control) _must only_ use IP addresses added by a trusted proxy.
 Using untrustworthy values can result in rate-limiter avoidance, access-control bypass, memory exhaustion, or other negative security or availability consequences.
 
-Conversely, leftmost (untrusted) values must only be used for cases where there is no negative impact from the possibility of using spoofed values.
+Leftmost (untrusted) values must only be used for cases where there is no negative impact from using spoofed values.
 
 ### Parsing
 
-Improper parsing of the `X-Forwarded-For` header can result in spoofed values being used for security-related purposes, resulting in the negative consequences mentioned above.
+Improper parsing of the `X-Forwarded-For` header may have a negative security impact with consequences as described in the previous section.
+For this reason, the following points should be considered when parsing the header values.
 
 There may be multiple `X-Forwarded-For` headers present in a request.
 The IP addresses in these headers must be treated as a single list, starting with the first IP address of the first header and continuing to the last IP address of the last header.
@@ -92,7 +90,7 @@ There are two ways of making this single list:
 
 It is insufficient to use only one of multiple `X-Forwarded-For` headers.
 
-Some reverse proxies will automatically join multiple `X-Forwarded-For` headers into one, but it is safest to not assume that this is the case.
+Some reverse proxies will automatically join multiple `X-Forwarded-For` headers into one, but it is safer not to assume that this is the case.
 
 ### Selecting an IP address
 
@@ -117,10 +115,7 @@ There are two common methods:
     The `X-Forwarded-For` IP list is searched from the rightmost, skipping all addresses that are on the trusted proxy list.
     The first non-matching address is the target address.
 
-The first trustworthy `X-Forwarded-For` IP address may belong to an untrusted intermediate proxy rather than the actual client computer, but it is the only IP suitable for security uses.
-
-> [!NOTE]
-> If the server can be directly connected to from the internet — even if it is also behind a trusted reverse proxy — **no part** of the `X-Forwarded-For` IP list can be considered trustworthy or safe for security-related uses.
+The first trustworthy `X-Forwarded-For` IP address may belong to an untrusted intermediate proxy rather than the actual client, but it is the only IP suitable to identify a client for security purposes.
 
 ## Examples
 
