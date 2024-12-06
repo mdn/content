@@ -30,7 +30,7 @@ marker.setAttribute("orient", "45");
 // Access the animated value of the angle
 const animAngle = marker.orientAngle.animVal; // an SVGAngle object
 
-console.log(animAngle.value); // Output: 45 (current animated value of the angle)
+console.log(animAngle.value); // Output: 45 (If not animating. Otherwise, the current animated value of the angle)
 console.log(animAngle.unitType); // Output: 2 (constant for SVG_ANGLETYPE_DEG)
 ```
 
