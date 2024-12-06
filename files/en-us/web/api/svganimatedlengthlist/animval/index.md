@@ -29,5 +29,7 @@ An {{domxref("SVGLengthList")}} object representing the animated value of the at
 
 ## See also
 
-- {{domxref("SVGAnimatedLengthList")}}
+- [`<length>`](/en-US/docs/Web/SVG/Content_type#length)
+- [`<percentage>`](/en-US/docs/Web/SVG/Content_type#percentage)
+- [`<number>`](/en-US/docs/Web/SVG/Content_type#number)
 - {{domxref("SVGLengthList")}}
