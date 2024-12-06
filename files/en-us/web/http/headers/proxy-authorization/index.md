@@ -39,7 +39,7 @@ Proxy-Authorization: <auth-scheme> <credentials>
     Generally, you will need to check the relevant specifications for the format.
 
 > [!NOTE]
-> See {{HTTPHEader("Authorization")}} for more details.
+> See {{HTTPHeader("Authorization")}} for more details.
 
 ## Examples
 

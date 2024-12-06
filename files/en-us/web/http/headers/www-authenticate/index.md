@@ -40,7 +40,8 @@ The client is expected to select the most secure of the challenges it understand
 A comma-separated list of one or more authentication challenges:
 
 ```plain
-WWW-Authenticate = #challenge
+WWW-Authenticate = <challenge>
+WWW-Authenticate = <challenge>, <challenge>, …
 ```
 
 Where a `challenge` has the following syntax:

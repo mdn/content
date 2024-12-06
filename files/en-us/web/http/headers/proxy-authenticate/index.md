@@ -25,8 +25,11 @@ It is sent in a {{HTTPStatus("407", "407 Proxy Authentication Required")}} respo
 
 ## Syntax
 
+A comma-separated list of one or more authentication challenges:
+
 ```plain
-Proxy-Authenticate = #challenge
+Proxy-Authenticate = <challenge>
+Proxy-Authenticate = <challenge>, <challenge>, …
 ```
 
 Where a `challenge` has the following syntax:
@@ -51,7 +54,7 @@ Proxy-Authenticate: Basic realm="Dev", charset="UTF-8"
 - `<token68>` {{optional_inline}}
   - : A token that may be useful for some schemes.
     The token allows the 66 unreserved URI characters plus a few others.
-    According to the specification, it can hold a {{glossary("base64")}}, base64url, base32, or base16 (hex) encoding, with or without padding, but excluding whitespace.
+    The token can be {{glossary("base64")}}, base64url, base32, or base16 (hex) encoded, with or without padding, but excluding whitespace.
 - `<auth-param>` {{optional_inline}}
   - : An authentication parameter whose format depends on the `<auth-scheme>`.
     `<realm>` is described below as it's a common authentication parameter among many auth schemes.
