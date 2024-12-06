@@ -42,15 +42,6 @@ X-Content-Type-Options: nosniff
     `style` and the MIME type is not `text/css`,
     or of type `script` and the MIME type is not a [JavaScript MIME type](https://html.spec.whatwg.org/multipage/scripting.html#javascript-mime-type).
 
-## Description
-
-This header was introduced by Microsoft in IE 8 as a way for webmasters to block content sniffing that was happening and could transform non-executable MIME types into executable MIME types.
-Since then, other browsers have introduced it, even if their MIME sniffing algorithms were less aggressive.
-
-Starting with Firefox 72, top-level documents also avoid MIME sniffing (if {{HTTPHeader("Content-type")}} is provided).
-This can cause HTML web pages to be downloaded instead of being rendered when they are served with a MIME type other than `text/html`.
-Both headers should be set correctly to avoid this.
-
 ## Specifications
 
 {{Specifications}}

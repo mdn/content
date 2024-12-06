@@ -11,18 +11,13 @@ browser-compat: http.headers.X-XSS-Protection
 {{HTTPSidebar}}{{Non-standard_header}}{{deprecated_header}}
 
 > [!WARNING]
-> Even though this feature can protect users of older web browsers that don't yet support {{Glossary("CSP")}}, in some cases, **XSS protection can create XSS vulnerabilities** in otherwise safe websites. See the [Security considerations](#security_considerations) section below for more information.
+> Even though this feature can protect users of older web browsers that don't support {{Glossary("CSP")}}, in some cases, **`X-XSS-Protection` can create XSS vulnerabilities** in otherwise safe websites.
+> See the [Security considerations](#security_considerations) section below for more information.
 
 The HTTP **`X-XSS-Protection`** {{Glossary("response header")}} was a feature of Internet Explorer, Chrome and Safari that stopped pages from loading when they detected reflected cross-site scripting ({{Glossary("Cross-site_scripting", "XSS")}}) attacks.
 These protections are largely unnecessary in modern browsers when sites implement a strong {{HTTPHeader("Content-Security-Policy")}} that disables the use of inline JavaScript (`'unsafe-inline'`).
 
-In terms of browser support:
-
-- Chrome has [removed their XSS Auditor](https://chromestatus.com/feature/5021976655560704)
-- Firefox has not, and [will not implement `X-XSS-Protection`](https://bugzil.la/528661)
-- Edge has [retired their XSS filter](https://blogs.windows.com/windows-insider/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/)
-
-This means that if you do not need to support legacy browsers, it is recommended that you use [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) without allowing `unsafe-inline` scripts instead.
+It is recommended that you use [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) instead of XSS filtering.
 
 <table class="properties">
   <tbody>

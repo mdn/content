@@ -17,7 +17,7 @@ The HTTP **`X-Powered-By`** {{Glossary("response header")}} is a non-standard he
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden response header name")}}</th>
       <td>No</td>
     </tr>
   </tbody>
