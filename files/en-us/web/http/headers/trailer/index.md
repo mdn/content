@@ -8,7 +8,6 @@ browser-compat: http.headers.Trailer
 {{HTTPSidebar}}
 
 The HTTP **Trailer** {{glossary("request header", "request")}} and {{glossary("response header")}} allows the sender to include additional fields at the end of chunked messages in order to supply metadata that might be dynamically generated while the message body is sent.
-The content of a trailer field may be a message integrity check, digital signature, or post-processing status.
 
 > [!NOTE]
 > The {{HTTPHeader("TE")}} request header needs to be set to `trailers` to allow trailer fields.
@@ -56,25 +55,19 @@ Trailer: header-names
 
 ## Examples
 
-### Chunked response using a trailing header
+### Server-Timing as HTTP trailer
 
-In this example response, the {{HTTPHeader("Expires")}} header is used at the end of the chunked message and serves as a trailing header:
+Some browsers support showing server timing data in developer tools when the {{HTTPHeader("Server-Timing")}} header is sent as a trailer.
+In the following response, the `Trailer` header is used to indicate that a `Server-Timing` header will follow the response body.
+A metric `custom-metric` with a duration of `123.4` milliseconds is sent:
 
 ```http
 HTTP/1.1 200 OK
-Content-Type: text/plain
 Transfer-Encoding: chunked
-Trailer: Expires
+Trailer: Server-Timing
 
-7\r\n
-Mozilla\r\n
-9\r\n
-Developer\r\n
-7\r\n
-Network\r\n
-0\r\n
-Expires: Wed, 21 Oct 2015 07:28:00 GMT\r\n
-\r\n
+--- response body ---
+Server-Timing: custom-metric;dur=123.4
 ```
 
 ## Specifications
@@ -87,7 +80,7 @@ Expires: Wed, 21 Oct 2015 07:28:00 GMT\r\n
 
 ## See also
 
+- {{HTTPHeader("Server-Timing")}}
 - {{HTTPHeader("Transfer-Encoding")}}
 - {{HTTPHeader("TE")}}
-- {{HTTPHeader("Server-Timing")}}
 - [Chunked transfer encoding](https://en.wikipedia.org/wiki/Chunked_transfer_encoding)

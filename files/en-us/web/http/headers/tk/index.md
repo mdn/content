@@ -5,6 +5,7 @@ page-type: http-header
 status:
   - deprecated
   - non-standard
+spec-urls: https://www.w3.org/TR/tracking-dnt/
 ---
 
 {{HTTPSidebar}}{{Deprecated_header}}{{non-standard_header}}
@@ -82,7 +83,7 @@ Tk: N
 
 ## Specifications
 
-The discontinued [Tracking Preference Expression (DNT)](https://www.w3.org/TR/tracking-dnt/#response-header-field) specification.
+{{specifications}}
 
 ## See also
 

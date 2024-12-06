@@ -17,7 +17,7 @@ When present on a response to a {{HTTPMethod("HEAD")}} request that has no body,
 
 > [!WARNING]
 > HTTP/2 disallows all uses of the `Transfer-Encoding` header other than the HTTP/2 specific value `"trailers"`.
-> HTTP/2 and later provides other, more efficient, mechanisms for data streaming than chunked transfer.
+> HTTP/2 and later provide more efficient mechanisms for data streaming than chunked transfer.
 > Usage of the header in HTTP/2 may likely result in a specific `protocol error`.
 
 <table class="properties">

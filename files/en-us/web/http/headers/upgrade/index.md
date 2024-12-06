@@ -31,16 +31,19 @@ For example, it can be used by a client to upgrade a connection from HTTP/1.1 to
 
 ## Syntax
 
+A comma-separated list of one or more protocols:
+
 ```http
 Upgrade: <protocol>[/<protocol_version>]
+Upgrade: <protocol>[/<protocol_version>], <protocol>[/<protocol_version>], …
 ```
 
 ## Directives
 
 - `<protocol>`
   - : Protocols are listed, comma-separated, in order of descending preference.
-    - `<protocol_version>` {{optional_inline}}
-      - : An optional protocol version may be provided prefixed with a `/` forward slash.
+- `<protocol_version>` {{optional_inline}}
+  - : An optional protocol version may be provided prefixed with a `/` forward slash.
 
 ## Description
 

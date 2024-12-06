@@ -37,24 +37,44 @@ The client is expected to select the most secure of the challenges it understand
 
 ## Syntax
 
-A comma-separated list of one or more authentication challenges:
-
-```plain
-WWW-Authenticate = <challenge>
-WWW-Authenticate = <challenge>, <challenge>, …
+```http
+WWW-Authenticate: <challenge>
 ```
 
-Where a `challenge` has the following syntax:
+Where a `<challenge>` is comprised of an `<auth-scheme>`, followed by an optional `<token68>` or a comma-separated list of `<auth-params>`:
 
 ```plain
-challenge = <auth-scheme> [ 1*SP ( <token68> / #<auth-param> ) ]
+challenge = <auth-scheme> <auth-param>, <auth-paramN>, …
+challenge = <auth-scheme> <token68>
 ```
 
-The presence of `<token68>` and other authentication parameters depends on the selected `<auth-scheme>`.
-For example, [Basic authentication](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme) requires a `<realm>`, and allows for optional use of `charset` key, but does not support `<token68>`:
+For example:
+
+```http
+WWW-Authenticate: <auth-scheme>
+WWW-Authenticate: <auth-scheme> token68
+WWW-Authenticate: <auth-scheme> auth-param1=param-token1
+WWW-Authenticate: <auth-scheme> auth-param1=param-token1, …, auth-paramN=param-tokenN
+```
+
+The presence of a token68 or authentication parameters depends on the selected `<auth-scheme>`.
+For example, [Basic authentication](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme) requires a `<realm>`, and allows for optional use of `charset` key, but does not support a token68:
 
 ```http
 WWW-Authenticate: Basic realm="Dev", charset="UTF-8"
+```
+
+Multiple challenges can be sent in a comma-separated list
+
+```http
+WWW-Authenticate: <challenge>, <challengeN>, …
+```
+
+Multiple headers can also be sent in a single response:
+
+```http
+WWW-Authenticate: <challenge>
+WWW-Authenticate: <challengeN>
 ```
 
 ## Directives
@@ -63,10 +83,6 @@ WWW-Authenticate: Basic realm="Dev", charset="UTF-8"
   - : A case-insensitive token indicating the [Authentication scheme](/en-US/docs/Web/HTTP/Authentication#authentication_schemes) used.
     Some of the more common types are [`Basic`](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme), `Digest`, `Negotiate` and `AWS4-HMAC-SHA256`.
     IANA maintains a [list of authentication schemes](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml), but there are other schemes offered by host services.
-- `<token68>` {{optional_inline}}
-  - : A token that may be useful for some schemes.
-    The token allows the 66 unreserved URI characters plus a few others.
-    According to the specification, it can hold a {{glossary("base64")}}, base64url, base32, or base16 (hex) encoding, with or without padding, but excluding whitespace.
 - `<auth-param>` {{optional_inline}}
   - : An authentication parameter whose format depends on the `<auth-scheme>`.
     `<realm>` is described below as it's a common authentication parameter among many auth schemes.
@@ -76,6 +92,11 @@ WWW-Authenticate: Basic realm="Dev", charset="UTF-8"
         Some clients show this value to the user to inform them about which particular credentials are required — though most browsers stopped doing so to counter phishing.
         The only reliably supported character set for this value is `us-ascii`.
         If no realm is specified, clients often display a formatted hostname instead.
+- `<token68>` {{optional_inline}}
+  - : A token that may be useful for some schemes.
+    The token allows the 66 unreserved URI characters plus a few others.
+    It can hold a {{glossary("base64")}}, base64url, base32, or base16 (hex) encoding, with or without padding, but excluding whitespace.
+    The token68 alternative to auth-param lists is supported for consistency with legacy authentication schemes.
 
 Generally, you will need to check the relevant specifications for the authentication parameters needed for each `<auth-scheme>`.
 The following sections describe token and auth parameters for some common auth schemes.
