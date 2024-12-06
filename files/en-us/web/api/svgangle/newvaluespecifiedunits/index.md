@@ -29,20 +29,11 @@ svgAngle.newValueSpecifiedUnits(unitType, valueInSpecifiedUnits);
 - **{{domxref("SVGAngle.valueInSpecifiedUnits")}}**
   The numeric factor for the angle value, expressed in the specified unit type (e.g., a number for degrees, radians, or gradians).
 
-### Return Value
+### Return value
 
 A reference to the updated {{domxref("SVGAngle")}} object.
 
 If the `newValueSpecifiedUnits()` method is successfully called, the `SVGAngle` object's `valueInSpecifiedUnits` is updated to the specified numeric factor, and the `unitType` is set to the provided unit type. For `SVG_ANGLETYPE_UNSPECIFIED`, the angle is treated as a unitless number. When the `SVGAngle` reflects a base value of an attribute, the corresponding attribute is re-serialized to reflect the updated angle.
-
-### Exceptions
-
-This method may raise a {{domxref("DOMException")}} of one of the following types:
-
-- `NO_MODIFICATION_ALLOWED_ERR` {{domxref("DOMException")}}
-  - : Thrown if the `SVGAngle` object is read-only and modification is attempted.
-- `NOT_SUPPORTED_ERR` {{domxref("DOMException")}}
-  - : Thrown if the `unitType` is not a valid value or is `SVG_ANGLETYPE_UNKNOWN`.
 
 ## Examples
 

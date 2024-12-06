@@ -10,8 +10,6 @@ browser-compat: api.SVGAngle.value
 
 The `value` property of the {{domxref("SVGAngle")}} interface represents the numeric value of the angle in **degrees**. Setting this property automatically updates the {{domxref("SVGAngle.valueInSpecifiedUnits")}} and {{domxref("SVGAngle.valueAsString")}} attributes of the `SVGAngle` object.
 
-A {{domxref("DOMException")}} with code `NO_MODIFICATION_ALLOWED_ERR` is thrown if the `SVGAngle` object is read-only.
-
 ## Value
 
 A floating-point number indicating the angle value in degrees.

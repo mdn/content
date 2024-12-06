@@ -10,8 +10,6 @@ browser-compat: api.SVGAngle.valueInSpecifiedUnits
 
 The `valueInSpecifiedUnits` property of the {{domxref("SVGAngle")}} interface represents the numeric factor of the angle's value. It provides access to the angle value **without its unit**, allowing you to retrieve or modify the numeric portion of the angle while preserving its associated unit.
 
-If the `SVGAngle` object is **read-only**, setting the `valueInSpecifiedUnits` will throw a {{domxref("DOMException")}} with code `NO_MODIFICATION_ALLOWED_ERR`.
-
 ## Value
 
 A floating-point number representing the numeric factor of the angle.

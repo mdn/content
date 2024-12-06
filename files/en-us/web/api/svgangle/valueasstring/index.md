@@ -10,10 +10,6 @@ browser-compat: api.SVGAngle.valueAsString
 
 The `valueAsString` property of the {{domxref("SVGAngle")}} interface represents the angle's value as a **string**. This string reflects the angle's numeric value and unit (if applicable), and is formatted in a way that can be parsed back to a [`<number>`](/en-US/docs/Web/SVG/Content_type#number) or [`<angle>`](/en-US/docs/Web/SVG/Content_type#angle) using CSS syntax.
 
-If the `SVGAngle` object is **read-only**, setting the `valueAsString` property will throw a {{domxref("DOMException")}} with code `NO_MODIFICATION_ALLOWED_ERR`.
-
-If the string value cannot be parsed as a valid number or angle, the `valueAsString` property will throw a {{domxref("DOMException")}} with code `SYNTAX_ERR`.
-
 ## Value
 
 A string representing the value of the angle, including the numeric factor and the appropriate unit (if applicable).
