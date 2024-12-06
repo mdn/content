@@ -16,8 +16,6 @@ This property reflects the SVG element's {{SVGAttr("viewBox")}} attribute value 
 
 A {{domxref("DOMRect")}} object representing the current non-animated value of the `viewBox` attribute.
 
-- The `DOMRect` object contains the x, y, width, and height values of the rectangle.
-
 ## Examples
 
 ```html
@@ -47,5 +45,5 @@ A {{domxref("DOMRect")}} object representing the current non-animated value of t
 
 ## See also
 
-- {{domxref("SVGAnimatedRect.animVal")}}
+- {{SVGAttr("viewBox")}}
 - {{domxref("DOMRect")}}

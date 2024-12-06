@@ -16,9 +16,6 @@ This property reflects the SVG element's {{SVGAttr("viewBox")}} attribute value 
 
 A {{domxref("DOMRectReadOnly")}} object representing the animated value of the `viewBox` attribute.
 
-- If the `viewBox` attribute is being animated, `animVal` reflects the animated rectangle's x, y, width, and height.
-- If no animation is applied, `animVal` is identical to `baseVal`.
-
 ## Examples
 
 ```html
@@ -48,5 +45,5 @@ A {{domxref("DOMRectReadOnly")}} object representing the animated value of the `
 
 ## See also
 
-- {{domxref("SVGAnimatedRect.baseVal")}}
+- {{SVGAttr("viewBox")}}
 - {{domxref("DOMRectReadOnly")}}
