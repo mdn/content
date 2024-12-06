@@ -39,26 +39,32 @@ sidebar:
     path: /Web/HTTP/Headers
     title: Headers
     details: closed
+    code: true
   - type: listSubPages
     path: /Web/HTTP/Methods
     title: Methods
     details: closed
+    code: true
   - type: listSubPages
     path: /Web/HTTP/Status
     title: Status
     details: closed
+    code: true
   - type: listSubPages
     path: /Web/HTTP/Headers/Content-Security-Policy
     title: CSPDirectives
     details: closed
+    code: true
   - type: listSubPages
     path: /Web/HTTP/CORS/Errors
     title: CORS_errors
     details: closed
+    code: true
   - type: listSubPages
     path: /Web/HTTP/Headers/Permissions-Policy
     title: PermissionsPolicyDirectives
     details: closed
+    code: true
   - /Web/HTTP/Resources_and_specifications
 l10n:
   en-US:

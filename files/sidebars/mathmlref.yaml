@@ -25,10 +25,12 @@ sidebar:
     path: /Web/MathML/Element
     title: Elements
     details: closed
+    code: true
   - type: listSubPages
     path: /Web/MathML/Global_attributes
     title: Global attributes
     details: closed
+    code: true
   - /Web/MathML/Attribute
   - type: section
     title: Examples
