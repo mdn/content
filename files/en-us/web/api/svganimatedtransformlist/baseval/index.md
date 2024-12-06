@@ -39,6 +39,5 @@ console.dir(baseTransforms);
 
 ## See also
 
-- {{domxref("SVGAnimatedTransformList.animVal")}}
 - {{domxref("SVGTransformList")}}
 - {{domxref("SVGTransform")}}
