@@ -109,7 +109,7 @@ The following keywords were defined in earlier versions of the CSS Color Module.
 - `WindowFrame` {{Deprecated_Inline}}
   - : Window frame. Same as `ButtonBorder`.
 - `WindowText` {{Deprecated_Inline}}
-  - : Text in windows. Should be used with the `Window` background color. Same as `Canvas`.
+  - : Text in windows. Should be used with the `Window` background color. Same as `CanvasText`.
 
 ## Examples
 
