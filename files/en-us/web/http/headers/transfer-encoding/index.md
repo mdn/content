@@ -50,9 +50,10 @@ Transfer-Encoding: gzip, chunked
 ## Directives
 
 - `chunked`
-  - : Data is sent in a series of chunks. The {{HTTPHeader("Content-Length")}} header is omitted in this case and at the beginning of each chunk you need to add the length of the current chunk in hexadecimal format, followed by `\r\n` and then the chunk itself, followed by another `\r\n`.
-    The terminating chunk is a regular chunk, with the exception that its length is zero.
-    It is followed by the trailer, which consists of a (possibly empty) sequence of header fields.
+  - : Data is sent in a series of chunks.
+    Content can be sent in streams of unknown size to be transferred as a sequence of length-delimited buffers, so the sender can keep a connection open, and let the recipient know when it has received the entire message.
+    The {{HTTPHeader("Content-Length")}} header must be omitted, and at the beginning of each chunk, a string of hex digits indicate the size of the chunk-data in octets, followed by `\r\n` and then the chunk itself, followed by another `\r\n`.
+    The terminating chunk is a zero-length chunk.
 - `compress`
   - : A format using the [Lempel-Ziv-Welch](https://en.wikipedia.org/wiki/LZW) (LZW) algorithm.
     The value name was taken from the UNIX _compress_ program, which implemented this algorithm.

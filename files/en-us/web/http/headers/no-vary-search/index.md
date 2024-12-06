@@ -135,5 +135,4 @@ No-Vary-Search: params, except=("id")
 
 ## See also
 
-- [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API)
 - [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}} header

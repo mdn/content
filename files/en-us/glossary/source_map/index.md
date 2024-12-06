@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-A **source map** is a file that maps transformed code back to a source, enabling the browser to reconstruct the original source code and show that reconstructed code in the debugger.
+A **source map** is a file that maps between minified or transformed code received by the browser and its original unmodified form, allowing the original code to be reconstructed and used when debugging.
 
 The JavaScript code executed by the browser has often been transformed in some way from the original source created by a developer.
 For example, sources are often combined and minified to make delivering them from the server more efficient.

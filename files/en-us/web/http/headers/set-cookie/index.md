@@ -146,7 +146,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
         This is the default behavior if the `SameSite` attribute is not specified.
 
         > [!WARNING]
-        > Browser implementations vary when `SameSite` is omitted.
+        > Not all browsers set `SameSite=Lax` by default.
         > See [Browser compatibility](#browser_compatibility) for details.
 
     - `None`

@@ -55,21 +55,21 @@ Server-Timing: db;dur=53, app;dur=47.2
 - `<timing-metric>`
   - : A comma-separated list of one or more metrics with the following components separated by semi-colons:
     - `<name>`
-      - : A name component as a token (cannot contain spaces or special characters).
+      - : A name token (no spaces or special characters) for the metric that is implementation-specific or defined by the server, like `cacheHit`.
     - `<duration>` {{optional_inline}}
-      - : A duration component consisting of the string `dur`, followed by `=`, followed by a value, like `dur=23.2`.
+      - : A duration as the string `dur`, followed by `=`, followed by a value, like `dur=23.2`.
     - `<description>` {{optional_inline}}
-      - : A description component consisting of the string `desc`, followed by `=`, followed by a value as a token or a quoted string, like `desc=prod` or `desc="DB lookup"`.
+      - : A description as the string `desc`, followed by `=`, followed by a value as a token or a quoted string, like `desc=prod` or `desc="DB lookup"`.
 
-The specification advises that names and descriptions should be kept as short as possible (use abbreviations and omit optional values where possible) to minimize the HTTP overhead.
+Names and descriptions should be kept as short as possible (for example, use abbreviations and omit optional values) to minimize HTTP data overhead.
 
 ## Description
 
 ### Privacy and security
 
 The `Server-Timing` header may expose potentially sensitive application and infrastructure information.
-Consider to control which metrics are returned when and to whom on the server side.
-For example, you could only show metrics to authenticated users and nothing to the public.
+Decide which metrics to send, when to send them, and who should see them based on the use case.
+For example, you may decide to only show metrics to authenticated users and nothing on public responses.
 
 ### PerformanceServerTiming interface
 

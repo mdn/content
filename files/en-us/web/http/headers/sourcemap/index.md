@@ -7,7 +7,7 @@ browser-compat: http.headers.SourceMap
 
 {{HTTPSidebar}}
 
-The HTTP **`SourceMap`** {{Glossary("response header")}} links generated code to a {{Glossary("source map")}}, enabling the browser to reconstruct the original source and present the reconstructed original in the debugger.
+The HTTP **`SourceMap`** {{Glossary("response header")}} provides the location of a {{Glossary("source map")}} for the resource.
 
 The HTTP `SourceMap` header has precedence over a source annotation (`sourceMappingURL=path-to-map.js.map`), and if both are present, the header URL is used to resolve the source map file.
 
@@ -50,7 +50,7 @@ SourceMap: /path/to/file.js.map
 <optimized-javascript>
 ```
 
-Developer tools use the mappings between optimized code and the original source to improve readability, which can make debugging easier.
+Developer tools use the source map to reconstruct the original source from the optimized JavaScript returned in the response, allowing developers to debug the original code rather than the format that has been optimized for sending.
 
 ## Specifications
 
