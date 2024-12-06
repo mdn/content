@@ -29,4 +29,5 @@ When setting, the reflected attribute is set to `"true"` if the value is `true` 
 
 ## See also
 
-- {{domxref("SVGAnimatedBoolean.animVal")}}
+- {{domxref("SVGElement")}}
+- {{domxref("SVGAnimationElement")}}

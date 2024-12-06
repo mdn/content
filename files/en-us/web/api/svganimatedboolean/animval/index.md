@@ -29,4 +29,5 @@ This property is read-only and reflects the current animation state of the attri
 
 ## See also
 
-- {{domxref("SVGAnimatedBoolean.baseVal")}}
+- {{domxref("SVGElement")}}
+- {{domxref("SVGAnimationElement")}}
