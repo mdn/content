@@ -14,11 +14,16 @@ The **`unitType`** property of the {{domxref("SVGAngle")}} interface that repres
 
 An **unsigned short** indicating the angle type, represented by one of the following constants:
 
-- `SVG_ANGLETYPE_UNKNOWN` (0): The angle type is unknown or not specified.
-- `SVG_ANGLETYPE_UNSPECIFIED` (1): A unitless number, interpreted as degrees.
-- `SVG_ANGLETYPE_DEG` (2): The angle is specified in degrees (`deg`).
-- `SVG_ANGLETYPE_RAD` (3): The angle is specified in radians (`rad`).
-- `SVG_ANGLETYPE_GRAD` (4): The angle is specified in gradians (`grad`).
+- `SVG_ANGLETYPE_UNKNOWN` = `0`
+  - : An unknown type of value.
+- `SVG_ANGLETYPE_UNSPECIFIED` = `1`
+  - : A unitless [`<number>`](/en-US/docs/Web/SVG/Content_type#number) interpreted as a value in degrees.
+- `SVG_ANGLETYPE_DEG` = `2`
+  - : An [`<angle>`](/en-US/docs/Web/SVG/Content_type#angle) with a `deg` unit.
+- `SVG_ANGLETYPE_RAD` = `3`
+  - : An [`<angle>`](/en-US/docs/Web/SVG/Content_type#angle) with a `rad` unit.
+- `SVG_ANGLETYPE_GRAD` = `4`
+  - : An [`<angle>`](/en-US/docs/Web/SVG/Content_type#angle) with a `grad` unit.
 
 ## Examples
 
