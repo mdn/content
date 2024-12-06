@@ -47,4 +47,3 @@ console.log(rect.getAttribute("points")); // Output: "10,15 25,30"
 ## See also
 
 - {{domxref("SVGAnimatedNumber")}}
-- {{domxref("SVGAnimatedLengthList")}}

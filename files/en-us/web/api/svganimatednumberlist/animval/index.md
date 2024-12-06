@@ -45,4 +45,3 @@ console.log(points.animVal); // Outputs the animated state, if any
 ## See also
 
 - {{domxref("SVGAnimatedNumber")}}
-- {{domxref("SVGAnimatedLengthList")}}
