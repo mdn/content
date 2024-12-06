@@ -13,7 +13,7 @@ The HTTP **`X-Forwarded-Proto`** (XFP) {{Glossary("request header")}} is a de-fa
 Server access logs contain the protocol used between the server and the load balancer, but not the protocol used between the client and the load balancer.
 To determine the protocol used between the client and the load balancer, the `X-Forwarded-Proto` request header can be used.
 
-A standardized version of this header is the HTTP {{HTTPHeader("Forwarded")}} header, although it's much less frequently deployed.
+A standardized version of this header is the HTTP {{HTTPHeader("Forwarded")}} header, although it's much less frequently used.
 
 <table class="properties">
   <tbody>

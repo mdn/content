@@ -10,7 +10,7 @@ status:
 
 The HTTP **`X-Forwarded-For`** (XFF) {{Glossary("request header")}} is a de-facto standard header for identifying the originating IP address of a client connecting to a web server through a {{Glossary("proxy server")}}.
 
-A standardized version of this header is the HTTP {{HTTPHeader("Forwarded")}} header, although it's much less frequently deployed.
+A standardized version of this header is the HTTP {{HTTPHeader("Forwarded")}} header, although it's much less frequently used.
 
 > [!WARNING]
 > Improper use of this header can be a security risk.
@@ -31,23 +31,17 @@ A standardized version of this header is the HTTP {{HTTPHeader("Forwarded")}} he
 
 ## Syntax
 
-For example:
-
 ```http
-// An IPV6 client IP
-X-Forwarded-For: 2001:db8:85a3:8d3:1319:8a2e:370:7348
-
-// An IPV4 client IP
-X-Forwarded-For: 203.0.113.195
-
-// An IPV4 client IP and an IPV6 proxy IP
-X-Forwarded-For: 203.0.113.195, 2001:db8:85a3:8d3:1319:8a2e:370:7348
+X-Forwarded-For: <client>, <proxy>
+X-Forwarded-For: <client>, <proxy>, …, <proxy>
 ```
 
-Using the following syntax:
+For example, an IPV6 client IP in the first header, an IPV4 client IP in the second header, and an IPV4 client IP and an IPV6 proxy IP in the third example:
 
 ```http
-X-Forwarded-For: <client>, <proxy>[, <proxy>]
+X-Forwarded-For: 2001:db8:85a3:8d3:1319:8a2e:370:7348
+X-Forwarded-For: 203.0.113.195
+X-Forwarded-For: 203.0.113.195, 2001:db8:85a3:8d3:1319:8a2e:370:7348
 ```
 
 ## Directives
@@ -56,7 +50,7 @@ X-Forwarded-For: <client>, <proxy>[, <proxy>]
   - : The client IP address.
 - `<proxy>`
   - : A proxy IP address.
-    If a request goes through multiple proxies, the IP addresses of each successive proxy is listed.
+    If a request goes through multiple proxies, the IP addresses of each successive proxy are listed.
     This means that the rightmost IP address is the IP address of the most recent proxy and the leftmost IP address is the address of the originating client (assuming well-behaved client and proxies).
 
 ## Description
@@ -71,7 +65,7 @@ For detailed guidance on using `X-Forwarded-For`, see the [Parsing](#parsing) an
 ### Security and privacy concerns
 
 This header exposes privacy-sensitive information by design, such as the IP address of the client.
-Therefore, the user's privacy must be kept in mind when deploying this header.
+Therefore, the user's privacy must be kept in mind when using this header.
 
 The `X-Forwarded-For` header is untrustworthy when no **trusted reverse proxy** (e.g., a load balancer) is between the client and server.
 If the client and all proxies are trusted and well-behaved, the list of IP addresses in the header has the meaning described in the [Directives](#directives) section.
