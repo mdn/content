@@ -118,7 +118,7 @@ Most crawlers support rules in the `X-Robots-Tag` HTTP header that can be used i
 
 In the case of conflicting robot rules within the `X-Robots-Tag` or between the `X-Robots-Tag` HTTP header and the `<meta name="robots">` tag, the more restrictive rule applies.
 For example, if a page has both `max-snippet:50` and `nosnippet` rules, the `nosnippet` rule will apply.
-Indexing rules are not applied if paths are blocked from being crawled by a `robots.txt` file.
+Indexing rules won't be discovered or applied if paths are blocked from being crawled by a `robots.txt` file.
 
 Some values are mutually exclusive, such as `index` and `noindex`, or `follow` and `nofollow`.
 In these cases, the crawler's behavior is undefined and may vary.
