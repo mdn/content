@@ -1,0 +1,71 @@
+---
+title: "ShadowRoot: elementsFromPoint() method"
+short-title: elementsFromPoint()
+slug: Web/API/ShadowRoot/elementsFromPoint
+page-type: web-api-instance-method
+browser-compat: api.ShadowRoot.elementsFromPoint
+---
+
+{{APIRef("DOM")}}{{Non-standard_Header}}
+
+The **`elementsFromPoint()`** method of the {{domxref("ShadowRoot")}} interface returns an array of all the shadow root elements
+at the specified coordinates (relative to the viewport). The elements are ordered from the topmost descendant to the bottommost element.
+
+It operates in a similar way to the {{domxref("ShadowRoot.elementFromPoint", "elementFromPoint()")}} method. Some browsers return only the shadow root elements present at that location. Other browsers include elements outside of the {{glossary("shadow DOM")}}, from the topmost shadow DOM element to the document root node, such as the {{htmlelement("html")}} or {{SVGElement("svg")}} root element. In these browsers, it operates similar to the {{domxref("Document.elementsFromPoint", "elementFromPoint()")}} method, but with the ability to cross the [shadow boundary](/en-US/docs/Glossary/Shadow_tree).
+
+## Syntax
+
+```js-nolint
+elementsFromPoint(x, y)
+```
+
+### Parameters
+
+- `x`
+  - : The horizontal coordinate of a point.
+- `y`
+  - : The vertical coordinate of a point.
+
+### Return value
+
+An array of {{domxref('Element')}} objects.
+
+## Examples
+
+```js
+let customElem = document.querySelector("my-custom-element");
+let shadow = customElem.shadowRoot;
+let msg = "";
+let elements = shadow.elementsFromPoint(20, 20);
+elements.forEach((el, i) => {
+  msg += el.localName;
+  if (i < elements.length - 1) {
+    msg += " < ";
+  }
+});
+if (msg) {
+  console.log(msg);
+} else {
+  console.log("The custom element had no descendants at x: 20, y: 20.");
+}
+```
+
+If `<my-custom-element>` is near the top left corner of the viewport, and contains a single `<div>`, the above may return either of the following, depending on the browser implementation:
+
+```plain
+div
+div > my-custom-element > body > html
+```
+
+## Specifications
+
+Not part of any standard.
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- {{DOMxRef("ShadowRoot.elementFromPoint()")}}
+- {{DOMxRef("Document.elementsFromPoint()")}}
