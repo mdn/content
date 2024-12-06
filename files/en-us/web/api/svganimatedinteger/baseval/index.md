@@ -47,4 +47,8 @@ console.log(feTurbulence.getAttribute("numOctaves")); // Outputs: "6"
 
 ## See also
 
-- {{domxref("SVGAnimatedInteger.animVal")}}
+- [`<integer>`](/en-US/docs/Web/SVG/Content_type#integer)
+- {{SVGAttr("numOctaves")}}
+- {{SVGAttr("order")}}
+- {{SVGElement("feTurbulence")}}
+- {{SVGElement("feConvolveMatrix")}}

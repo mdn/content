@@ -56,14 +56,14 @@ The `SVGAnimatedInteger` interface is used for attributes of basic type [\<integ
   </thead>
   <tbody>
     <tr>
-      <td><code>{{domxref("SVGAnimatedInteger.baseVal")}}</code></td>
+      <td><code>{{domxref("SVGAnimatedInteger.baseVal", "baseVal")}}</code></td>
       <td>long</td>
       <td>
         The base value of the given attribute before applying any animations.
       </td>
     </tr>
     <tr>
-      <td><code>{{domxref("SVGAnimatedInteger.animVal")}}</code></td>
+      <td><code>{{domxref("SVGAnimatedInteger.animVal", "animVal")}}</code></td>
       <td>long</td>
       <td>
         If the given attribute or property is being animated, contains the

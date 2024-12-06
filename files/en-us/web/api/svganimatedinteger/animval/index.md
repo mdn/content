@@ -41,4 +41,8 @@ console.log(animatedInteger.animVal); // Outputs the current animated value, e.g
 
 ## See also
 
-- {{domxref("SVGAnimatedInteger.baseVal")}}
+- [`<integer>`](/en-US/docs/Web/SVG/Content_type#integer)
+- {{SVGAttr("numOctaves")}}
+- {{SVGAttr("order")}}
+- {{SVGElement("feTurbulence")}}
+- {{SVGElement("feConvolveMatrix")}}
