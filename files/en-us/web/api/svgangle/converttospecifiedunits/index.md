@@ -18,12 +18,12 @@ svgAngle.convertToSpecifiedUnits(unitType);
 
 ### Parameters
 
-- **{{domxref("SVGAngle.unitType")}}**
-  A constant representing the unit type to which the angle's value should be converted. This can be one of the following:
-  - `SVG_ANGLETYPE_DEG` — Degrees
-  - `SVG_ANGLETYPE_RAD` — Radians
-  - `SVG_ANGLETYPE_GRAD` — Gradians
-  - `SVG_ANGLETYPE_UNSPECIFIED` — Unitless (a number only)
+- `unitType`
+  - : A constant representing the unit type to which the angle's value should be converted. This must be one of the constant values defined for the {{domxref("SVGAngle.unitType")}} property, with the exception of `SVG_ANGLETYPE_UNKNOWN`.
+    - `SVGAngle.SVG_ANGLETYPE_DEG`: convert to degrees
+    - `SVGAngle.SVG_ANGLETYPE_RAD`: convert to radians
+    - `SVGAngle.SVG_ANGLETYPE_GRAD`: convert to gradians
+    - `SVGAngle.SVG_ANGLETYPE_UNSPECIFIED`: convert to a unitless number, interpreted as degrees
 
 ### Return Value
 
