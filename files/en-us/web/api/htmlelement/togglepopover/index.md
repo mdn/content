@@ -22,14 +22,24 @@ When `togglePopover()` is called on an element with the [`popover`](/en-US/docs/
 
 ```js-nolint
 togglePopover(force)
+togglePopover(options)
 ```
 
 ### Parameters
 
-- `force`
+- `force` {{optional_inline}}
   - : A boolean, which causes `togglePopover()` to behave like {{domxref("HTMLElement.showPopover", "showPopover()")}} or {{domxref("HTMLElement.hidePopover", "hidePopover()")}}, except that it doesn't throw an exception if the popover is already in the target state.
     - If set to `true`, the popover is shown if it was initially hidden. If it was initially shown, nothing happens.
     - If set to `false`, the popover is hidden if it was initially shown. If it was initially hidden, nothing happens.
+- `options` {{optional_inline}}
+  - : An object with the following properties:
+    - `force` {{optional_inline}}
+      - : A boolean, which causes `togglePopover()` to behave like {{domxref("HTMLElement.showPopover", "showPopover()")}} or {{domxref("HTMLElement.hidePopover", "hidePopover()")}}, except that it doesn't throw an exception if the popover is already in the target state.
+        - If set to `true`, the popover is shown if it was initially hidden. If it was initially shown, nothing happens.
+        - If set to `false`, the popover is hidden if it was initially shown. If it was initially hidden, nothing happens.
+    - `source` {{optional_inline}}
+      - An {{domxref("HTMLElement")}} that triggered the popover, if any. This provides all the same functionality that using
+        [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) would provide.
 
 ### Return value
 
