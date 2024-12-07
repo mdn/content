@@ -28,7 +28,7 @@ feTurbulence.setAttribute("numOctaves", "4");
 const animatedInteger = feTurbulence.numOctaves;
 
 // Get the animated value (read-only)
-console.log(animatedInteger.animVal); // Outputs the current animated value, e.g., 4
+console.log(animatedInteger.animVal); // Output: 4 (the current animated value)
 ```
 
 ## Specifications

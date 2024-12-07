@@ -28,13 +28,13 @@ feTurbulence.setAttribute("numOctaves", "4");
 const animatedInteger = feTurbulence.numOctaves;
 
 // Get the base value
-console.log(animatedInteger.baseVal); // Outputs: 4
+console.log(animatedInteger.baseVal); // Output: 4
 
 // Modify the base value
 animatedInteger.baseVal = 6;
 
 // Verify the reflected attribute value
-console.log(feTurbulence.getAttribute("numOctaves")); // Outputs: "6"
+console.log(feTurbulence.getAttribute("numOctaves")); // Output: "6"
 ```
 
 ## Specifications
