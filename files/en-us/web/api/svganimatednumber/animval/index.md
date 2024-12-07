@@ -26,7 +26,7 @@ rect.setAttribute("width", "100");
 const animatedWidth = rect.width;
 
 // Simulate animation (for example, through CSS or JS)
-console.log(animatedWidth.animVal); // Outputs: 100 (or animated value if in motion)
+console.log(animatedWidth.animVal); // Output: 100 (animated value in motion)
 ```
 
 ## Specifications

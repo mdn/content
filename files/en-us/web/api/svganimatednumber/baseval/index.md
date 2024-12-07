@@ -28,13 +28,13 @@ path.setAttribute("pathLength", "10");
 const animatedNumber = path.pathLength;
 
 // Get the base value
-console.log(animatedNumber.baseVal); // Outputs: 10
+console.log(animatedNumber.baseVal); // Output: 10
 
 // Modify the base value
 animatedNumber.baseVal = 15;
 
 // Verify the reflected attribute value
-console.log(path.getAttribute("pathLength")); // Outputs: "15"
+console.log(path.getAttribute("pathLength")); // Output: "15"
 ```
 
 ## Specifications
