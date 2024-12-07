@@ -17,8 +17,6 @@ A `boolean` representing the animated value of the reflected attribute:
 - `true` if the animated value of the attribute is `"true"`.
 - `false` if the animated value is `"false"` or not present.
 
-This property is read-only and reflects the current animation state of the attribute.
-
 ## Specifications
 
 {{Specifications}}

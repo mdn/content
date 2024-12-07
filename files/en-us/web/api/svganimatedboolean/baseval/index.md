@@ -17,8 +17,6 @@ A `boolean` representing the base value of the reflected attribute:
 - `true` if the reflected attribute is `"true"`.
 - `false` if the reflected attribute is `"false"` or not present.
 
-When setting, the reflected attribute is set to `"true"` if the value is `true` and `"false"` otherwise.
-
 ## Specifications
 
 {{Specifications}}
