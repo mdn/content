@@ -16,9 +16,6 @@ This property provides access to the current animated state of the attribute as 
 
 An {{domxref("SVGLengthList")}} object representing the animated value of the attribute. The list contains one or more items corresponding to the individual lengths, percentages, or numbers specified in the attribute.
 
-- If the attribute is being animated, `animVal` reflects the animation's progress in real time.
-- If the attribute is not animated, `animVal` is identical to {{domxref("SVGAnimatedLengthList.baseVal")}}.
-
 ## Specifications
 
 {{Specifications}}

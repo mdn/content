@@ -14,9 +14,7 @@ This property provides access to the initial or static value of the associated a
 
 ## Value
 
-An {{domxref("SVGLengthList")}} object representing the base value of the attribute. The list contains one or more items corresponding to the individual lengths, percentages, or numbers specified in the attribute.
-
-- Changes to the `SVGLengthList` reflected by `baseVal` directly update the attribute on the SVG element.
+An {{domxref("SVGLengthList")}} object representing the base value of the attribute.
 
 ## Specifications
 
