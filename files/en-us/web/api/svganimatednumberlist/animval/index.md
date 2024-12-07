@@ -30,8 +30,7 @@ rect.setAttribute("points", "10,10 20,10 20,20 10,20");
 // Access the SVGAnimatedNumberList object
 const points = rect.points;
 
-// Get the animated value (during an animation)
-console.log(points.animVal); // Outputs the animated state, if any
+console.dir(points.animVal); // the animated state
 ```
 
 ## Specifications
