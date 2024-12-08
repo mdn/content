@@ -18,12 +18,9 @@ A string.
 
 ## Examples
 
-```html
-<a id="myAnchor" href="/en-US/docs/Location.href#examples">Examples</a>
-<script>
-  const anchor = document.getElementById("myAnchor");
-  console.log(anchor.hash); // '#examples'
-</script>
+```js
+const result = location.hash; // https://developer.mozilla.org/en-US/docs/Web/API/Location/hash#examples
+console.log(result); // Output: '#examples'
 ```
 
 ## Specifications
