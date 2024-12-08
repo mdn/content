@@ -244,7 +244,7 @@ The [WHATWG Wiki MetaExtensions page](https://wiki.whatwg.org/wiki/MetaExtension
   > - The `robots` `<meta>` tag and `robots.txt` file serve different purposes: `robots.txt` controls the crawling of pages, and does not affect indexing or other behavior controlled by `robots` meta. A page that can't be crawled may still be indexed if it is referenced by another document.
   > - If you want to remove a page, `noindex` will work, but only after the robot visits the page again. Ensure that the `robots.txt` file is not preventing revisits.
   > - Some values are mutually exclusive, like `index` and `noindex`, or `follow` and `nofollow`. In these cases the robot's behavior is undefined and may vary between them.
-  > - Some crawler robots, like Google, Yahoo and Bing, support the same values for the HTTP header `X-Robots-Tag`; this allows non-HTML documents like images to use these rules.
+  > - Some crawler robots, like Google, Yahoo and Bing, support the same values for the HTTP header {{HTTPHeader("X-Robots-Tag")}}; this allows non-HTML documents like images to use these rules.
 
 <!-- ## Technical summary -->
 
