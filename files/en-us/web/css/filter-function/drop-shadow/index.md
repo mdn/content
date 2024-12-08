@@ -38,6 +38,9 @@ drop-shadow(5px 5px 15px red)
 /* The order of color and length values can be changed */
 /* drop-shadow( <color> <length> <length> <length> ) */
 drop-shadow(#e23 0.5rem 0.5rem 1rem)
+
+/* You can pass multiple drop-shadow's to a filter to stack them */
+drop-shadow(10px 10px red) drop-shadow(-5px -5px yellow)
 ```
 
 The `drop-shadow()` function accepts a parameter of type `<shadow>` (defined in the {{cssxref("box-shadow")}} property), with the exception that the `inset` keyword and `spread` parameters are not allowed.
@@ -64,6 +67,7 @@ The `drop-shadow()` function accepts a parameter of type `<shadow>` (defined in 
 <div>drop-shadow(16px 16px red)</div>
 <div>drop-shadow(red 1rem 1rem 10px)</div>
 <div>drop-shadow(-16px -16px red)</div>
+<div>drop-shadow(1px 1px red) drop-shadow(1px -1px red) drop-shadow(-1px 1px red) drop-shadow(-1px -1px red)</div>
 ```
 
 ```css
@@ -93,6 +97,14 @@ div:nth-child(3) {
 
 div:nth-child(4) {
   filter: drop-shadow(-16px -16px red);
+}
+
+div:nth-child(5) {
+  filter:
+    drop-shadow(1px 1px red)
+    drop-shadow(1px -1px red)
+    drop-shadow(-1px 1px red)
+    drop-shadow(-1px -1px red);
 }
 ```
 
