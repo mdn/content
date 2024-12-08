@@ -156,7 +156,7 @@ All we need to do is to go through the video's `textTracks`, reading their prope
 let subtitlesMenu;
 if (video.textTracks) {
   const df = document.createDocumentFragment();
-  const subtitlesMenu = df.appendChild(document.createElement("ul"));
+  subtitlesMenu = df.appendChild(document.createElement("ul"));
   subtitlesMenu.className = "subtitles-menu";
   subtitlesMenu.appendChild(createMenuItem("subtitles-off", "", "Off"));
   for (let i = 0; i < video.textTracks.length; i++) {
