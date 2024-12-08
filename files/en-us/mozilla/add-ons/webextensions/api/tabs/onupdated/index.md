@@ -141,11 +141,11 @@ browser.tabs.onUpdated.addListener(handleUpdated);
 
 ### Filtering examples
 
-Log changes only to tabs whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by `https://developer.mozilla.org/*` or `https://mozilla.social/@mdn`:
+Log changes only to tabs whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by `https://developer.mozilla.org/*` or `https://mastodon.social/@mdn`:
 
 ```js
 const pattern1 = "https://developer.mozilla.org/*";
-const pattern2 = "https://mozilla.social/@mdn";
+const pattern2 = "https://mastodon.social/@mdn";
 
 const filter = {
   urls: [pattern1, pattern2],
@@ -176,11 +176,11 @@ function handleUpdated(tabId, changeInfo, tabInfo) {
 browser.tabs.onUpdated.addListener(handleUpdated, filter);
 ```
 
-Combine both the previous filters, log only when the `pinned` property of tabs changes for tabs whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by `https://developer.mozilla.org/*` or `https://mozilla.social/@mdn`:
+Combine both the previous filters, log only when the `pinned` property of tabs changes for tabs whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by `https://developer.mozilla.org/*` or `https://mastodon.social/@mdn`:
 
 ```js
 const pattern1 = "https://developer.mozilla.org/*";
-const pattern2 = "https://mozilla.social/@mdn";
+const pattern2 = "https://mastodon.social/@mdn";
 
 const filter = {
   urls: [pattern1, pattern2],
@@ -196,11 +196,11 @@ function handleUpdated(tabId, changeInfo, tabInfo) {
 browser.tabs.onUpdated.addListener(handleUpdated, filter);
 ```
 
-Log changes only when the `pinned` property of tabs changes for tabs whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by `https://developer.mozilla.org/*` or `https://mozilla.social/@mdn` where the tab was part of the current browser window when the update event fired:
+Log changes only when the `pinned` property of tabs changes for tabs whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by `https://developer.mozilla.org/*` or `https://mastodon.social/@mdn` where the tab was part of the current browser window when the update event fired:
 
 ```js
 const pattern1 = "https://developer.mozilla.org/*";
-const pattern2 = "https://mozilla.social/@mdn";
+const pattern2 = "https://mastodon.social/@mdn";
 
 const filter = {
   urls: [pattern1, pattern2],
