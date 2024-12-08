@@ -30,6 +30,19 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 ### The last separator is repeated (`,`)
 
+```css hidden
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+}
+```
+
 ```html
 <math display="block">
   <mfenced open="{" close="}" separators=";;,">
@@ -42,13 +55,28 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 </math>
 ```
 
-Sample rendering: ![{a;b;c,d,e}](mfenced01.png)
+Sample rendering:
+
+![{a;b;c,d,e}](mfenced-repeated.svg)
 
 Rendering in your browser:
 
 {{ EmbedLiveSample('mfenced_example1', 700, 200, "", "") }}
 
 ### All excess is ignored (`,`)
+
+```css hidden
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+}
+```
 
 ```html
 <math display="block">
@@ -62,7 +90,9 @@ Rendering in your browser:
 </math>
 ```
 
-Sample rendering: ![[a|b|c|d|e]](mfenced02.png)
+Sample rendering:
+
+![[a|b|c|d|e]](mfenced-ignored.svg)
 
 Rendering in your browser:
 
