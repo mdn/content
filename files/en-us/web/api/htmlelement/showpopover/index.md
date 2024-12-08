@@ -15,12 +15,16 @@ When `showPopover()` is called on an element with the [`popover`](/en-US/docs/We
 ## Syntax
 
 ```js-nolint
-showPopover()
+showPopover(options)
 ```
 
 ### Parameters
 
-None.
+- `options` {{optional_inline}}
+  - : An object with the following properties:
+    - `source` {{optional_inline}}
+      - An {{domxref("HTMLElement")}} that triggered the popover, if any. This provides all the same functionality that using
+        [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) would provide.
 
 ### Return value
 
