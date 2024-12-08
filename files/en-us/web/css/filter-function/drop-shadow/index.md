@@ -105,10 +105,11 @@ div:nth-child(4) {
 }
 
 div:nth-child(5) {
-  filter: drop-shadow(1px 1px red)
-          drop-shadow(1px -1px red)
-          drop-shadow(-1px 1px red)
-          drop-shadow(-1px -1px red);
+  filter:
+    drop-shadow(1px 1px red)
+    drop-shadow(1px -1px red)
+    drop-shadow(-1px 1px red)
+    drop-shadow(-1px -1px red);
 }
 ```
 
