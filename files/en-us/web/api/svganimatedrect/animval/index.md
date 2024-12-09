@@ -22,8 +22,9 @@ A {{domxref("DOMRectReadOnly")}} object representing the animated value of the `
 <svg viewBox="0 0 200 100" id="mySvg">
   <rect width="100" height="100" fill="blue" />
 </svg>
+```
 
-<script>
+```js
   const svgElement = document.getElementById("mySvg");
   const animatedRect = svgElement.viewBox.animVal;
 

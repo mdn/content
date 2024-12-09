@@ -22,17 +22,17 @@ A {{domxref("DOMRect")}} object representing the current non-animated value of t
 <svg viewBox="0 0 200 100" id="mySvg">
   <rect width="100" height="100" fill="blue" />
 </svg>
+```
 
-<script>
-  const svgElement = document.getElementById("mySvg");
-  const animatedRect = svgElement.viewBox.baseVal;
+```js
+const svgElement = document.getElementById("mySvg");
+const animatedRect = svgElement.viewBox.baseVal;
 
-  // Access the non-animated base value
-  console.log(animatedRect.x); // 0
-  console.log(animatedRect.y); // 0
-  console.log(animatedRect.width); // 200
-  console.log(animatedRect.height); // 100
-</script>
+// Access the non-animated base value
+console.log(animatedRect.x); // 0
+console.log(animatedRect.y); // 0
+console.log(animatedRect.width); // 200
+console.log(animatedRect.height); // 100
 ```
 
 ## Specifications
