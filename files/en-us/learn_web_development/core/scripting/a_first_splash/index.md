@@ -424,7 +424,7 @@ for (const fruit of fruits) {
 
 What happened? The strings `'apples', 'bananas', 'cherries'` were printed out in your console.
 
-This is because of the loop. The line `const fruits = ['apples', 'bananas', 'cherries'];` creates an array. We will work through [a complete Arrays guide](/en-US/docs/Learn_web_development/Core/Scripting/Arrays) later in this module, but for now: an array is a collection of items (in this case strings).
+This is because of the loop. The line `const fruits = ['apples', 'bananas', 'cherries'];` creates an array. We will work through [a complete Arrays tutorial](/en-US/docs/Learn_web_development/Core/Scripting/Arrays) later in this module, but for now: an array is a collection of items (in this case strings).
 
 A `for...of` loop gives you a way to get each item in the array and run some JavaScript on it. The line `for (const fruit of fruits)` says:
 

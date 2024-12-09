@@ -17,7 +17,7 @@ Any codebase past a certain level of complexity needs to have a system of tests 
 
 Before starting this module, You should really have learnt the fundamentals of [HTML](/en-US/docs/Learn_web_development/Core/Structuring_content), [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics), and [JavaScript](/en-US/docs/Learn_web_development/Core/Scripting).
 
-## Guides
+## Tutorials
 
 - [Introduction to cross browser testing](/en-US/docs/Learn_web_development/Extensions/Testing/Introduction)
   - : This article starts the module off by providing an overview of the topic of cross browser testing, answering questions such as "what is cross browser testing?", "what are the most common types of problems you'll encounter?", and "what are the main approaches for testing, identifying, and fixing problems?"

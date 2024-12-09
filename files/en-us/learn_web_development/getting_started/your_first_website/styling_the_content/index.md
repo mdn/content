@@ -170,7 +170,7 @@ There are many different types of selectors. The examples above use **element se
   </tbody>
 </table>
 
-There are many more selectors to discover. To learn more, see the MDN [Selectors guide](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors).
+There are many more selectors to discover. To learn more, see our selectors tutorials, starting with [Basic selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors).
 
 ## Fonts and text
 

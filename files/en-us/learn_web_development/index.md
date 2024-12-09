@@ -8,7 +8,7 @@ page-type: landing-page
 
 ## The essential skillset for new front-end developers
 
-Welcome to MDN **Learning Web Development** (also known as **Learn**). This resource provides a structured set of guides teaching the essential skills and practices for being a successful front-end developer, along with challenges and further recommended resources.
+Welcome to MDN **Learning Web Development** (also known as **Learn**). This resource provides a structured set of tutorials teaching the essential skills and practices for being a successful front-end developer, along with challenges and further recommended resources.
 
 ## About Learn web development
 
@@ -24,9 +24,9 @@ Welcome to MDN **Learning Web Development** (also known as **Learn**). This reso
 ## Don't know where to get started?
 
 - Never coded before?
-  - : Our [Getting started modules](/en-US/docs/Learn_web_development/Getting_started), provide setup guides and essential concepts and background information for complete beginners. You should start here if you are a complete beginner (i.e. you've not installed a code editor or written any code yet).
+  - : Our [Getting started modules](/en-US/docs/Learn_web_development/Getting_started), provide setup tutorials and essential concepts and background information for complete beginners. You should start here if you are a complete beginner (i.e. you've not installed a code editor or written any code yet).
 - Want to master the essentials?
-  - : Our [Core modules](/en-US/docs/Learn_web_development/Core) provide a structured set of guides teaching the essential skills and practices for being a successful front-end developer.
+  - : Our [Core modules](/en-US/docs/Learn_web_development/Core) provide a structured set of tutorials teaching the essential skills and practices for being a successful front-end developer.
 - Beyond the basics?
   - : Our [Extension modules](/en-US/docs/Learn_web_development/Extensions) cover useful additional skills to learn as you start to expand your knowledge and develop specialisms. Go onto these after you finish our Core.
 - Working at a school?

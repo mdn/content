@@ -19,7 +19,7 @@ It would also be helpful to have some familiarity with [HTML](/en-US/docs/Learn_
 > [!NOTE]
 > If you are working on a device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
 
-## Guides
+## Tutorials
 
 - [Introduction to web APIs](/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction)
   - : First up, we'll start by looking at APIs from a high level — what are they, how do they work, how do you use them in your code, and how are they structured? We'll also take a look at what the different main classes of APIs are, and what kind of uses they have.

@@ -19,7 +19,7 @@ Before starting this module, You should really have learnt the fundamentals of [
 > [!NOTE]
 > If you are working on a computer/tablet/other devices where you are not able to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
 
-## Guides and challenges
+## Tutorials and challenges
 
 - [Object prototypes](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes)
   - : Prototypes are the mechanism by which JavaScript objects inherit features from one another, and they work differently from inheritance mechanisms in classical object-oriented programming languages. In this article, we explore how prototype chains work.

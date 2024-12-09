@@ -12,7 +12,7 @@ This module provides a series of articles that will help you master the essentia
 
 ## Prerequisites
 
-Before starting this module, you should at least work through our [Introduction to HTML](/en-US/docs/Learn_web_development/Core/Structuring_content). At this point you should find the [Introductory guides](#introductory_guides) easy to understand, and also be able to make use of our [Basic native form controls](/en-US/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls) guide.
+Before starting this module, you should at least work through our [Introduction to HTML](/en-US/docs/Learn_web_development/Core/Structuring_content). At this point you should find the [Introductory tutorials](#introductory_tutorials) easy to understand, and also be able to make use of our [Basic native form controls](/en-US/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls) tutorial.
 
 Mastering forms however requires more than just HTML knowledge — you also need to learn some specific techniques to style form controls, and some scripting knowledge is required to handle things like validation and creating custom form controls. Therefore, before you look at the other sections listed below we'd recommend that you go away and learn some [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics) and [JavaScript](/en-US/docs/Learn_web_development/Core/Scripting) first.
 
@@ -21,7 +21,7 @@ The above text is a good indicator as to why we've put web forms into its own st
 > [!NOTE]
 > If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JS Bin](https://jsbin.com/) or [Glitch](https://glitch.com/).
 
-## Introductory guides
+## Introductory tutorials
 
 - [Your first form](/en-US/docs/Learn_web_development/Extensions/Forms/Your_first_form)
   - : The first article in our series provides your very first experience of creating a web form, including designing a simple form, implementing it using the right HTML elements, adding some very simple styling via CSS, and how data is sent to a server.
@@ -37,7 +37,7 @@ The above text is a good indicator as to why we've put web forms into its own st
 - [Other form controls](/en-US/docs/Learn_web_development/Extensions/Forms/Other_form_controls)
   - : Next we take a look at all the non-`<input>` form controls and associated tools, such as {{htmlelement('select')}}, {{htmlelement('textarea')}}, {{htmlelement('meter')}}, and {{htmlelement('progress')}}.
 
-## Form styling guides
+## Form styling tutorials
 
 - [Styling web forms](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
   - : This article provides an introduction to styling forms with CSS, including all the basics you might need to know for basic styling tasks.

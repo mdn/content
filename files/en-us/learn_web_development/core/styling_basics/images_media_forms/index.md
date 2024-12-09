@@ -189,7 +189,7 @@ You won't study layout until a later module. For now, just keep in mind that rep
 
 ## Form elements
 
-Form elements can be a tricky issue when it comes to styling with CSS. The [Web Forms extensions module](/en-US/docs/Learn_web_development/Extensions/Forms) contains detailed guides to the trickier aspects of styling certain form input type, which we will not go into here. There are, however, a few key basics worth highlighting in this section.
+Form elements can be a tricky issue when it comes to styling with CSS. The [Web Forms extensions module](/en-US/docs/Learn_web_development/Extensions/Forms) covers the trickier aspects of styling certain form input types, which we will not go into here. There are, however, a few key basics worth highlighting in this section.
 
 Many form controls are added to your page by way of the [`<input>`](/en-US/docs/Web/HTML/Element/input) element — this defines simple form fields such as text inputs, through to more complex fields such as color and date pickers. There are some additional elements, such as [`<textarea>`](/en-US/docs/Web/HTML/Element/textarea) for multiline text input, and also elements used to contain and label parts of forms such as [`<fieldset>`](/en-US/docs/Web/HTML/Element/fieldset) and [`<legend>`](/en-US/docs/Web/HTML/Element/legend).
 

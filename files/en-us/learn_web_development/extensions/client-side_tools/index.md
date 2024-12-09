@@ -14,7 +14,7 @@ Client-side tooling can be intimidating, but this series of articles aims to ill
 
 Before starting this module, You should have learnt the fundamentals of [HTML](/en-US/docs/Learn_web_development/Core/Structuring_content), [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics), and [JavaScript](/en-US/docs/Learn_web_development/Core/Scripting). You should also be comfortable with using [the terminal/command line](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line).
 
-## Guides
+## Tutorials
 
 - [Client-side tooling overview](/en-US/docs/Learn_web_development/Extensions/Client-side_tools/Overview)
   - : In this article we provide an overview of modern web tooling, what kinds of tools are available and where you'll meet them in the lifecycle of web app development, and how to find help with individual tools.

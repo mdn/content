@@ -17,7 +17,7 @@ Before starting this module, you should have a basic work environment set up (as
 > [!NOTE]
 > If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
 
-## Guides and challenges
+## Tutorials and challenges
 
 - [What is CSS?](/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS)
   - : CSS allows you to create great-looking web pages, but how does it work under the hood? This article explains what CSS, what the basic syntax looks like, and how your browser applies CSS to HTML to style it.
@@ -48,7 +48,7 @@ Before starting this module, you should have a basic work environment set up (as
 - [Images, media, and form elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Images_media_forms)
   - : In this lesson we will take a look at how certain special elements are treated in CSS. Images, other media, and form elements behave a little differently from regular boxes in terms of your ability to style them with CSS. Understanding what is and isn't possible can save some frustration, and this lesson will highlight some of the main things that you need to know.
 - [Styling tables](/en-US/docs/Learn_web_development/Core/Styling_basics/Tables)
-  - : Styling an HTML table isn't the most glamorous job in the world, but sometimes we all have to do it. This article provides a guide to making HTML tables look good, with some specific table styling techniques highlighted.
+  - : Styling an HTML table isn't the most glamorous job in the world, but sometimes we all have to do it. This article explains how to make HTML tables look good, with some specific table styling techniques highlighted.
 - [Debugging CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS)
   - : This article will give you guidance on how to go about debugging a CSS problem, and show you how the DevTools included in all modern browsers can help you to find out what is going on.
 - [Challenge: Fundamental CSS comprehension](/en-US/docs/Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension) <sup>Challenge</sup>
@@ -58,9 +58,9 @@ Before starting this module, you should have a basic work environment set up (as
 - [Challenge: A cool-looking box](/en-US/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box) <sup>Challenge</sup>
   - : In this challenge, you'll get some more practice in creating cool-looking boxes by trying to create an eye-catching box.
 
-## Additional guides
+## Additional tutorials
 
-These guides are not part of the learning pathway, but they are interesting nonetheless — you should consider these as stretch goals, to optionally study when you are done with the main Core articles.
+These tutorials are not part of the learning pathway, but they are interesting nonetheless — you should consider these as stretch goals, to optionally study when you are done with the main Core articles.
 
 - [Advanced styling effects](/en-US/docs/Learn_web_development/Core/Styling_basics/Advanced_styling_effects)
   - : This article will give you guidance on how to go about debugging a CSS problem, and show you how the DevTools included in all modern browsers can help you to find out what is going on.

@@ -17,7 +17,7 @@ You should be familiar with [HTML](/en-US/docs/Learn_web_development/Core/Struct
 > [!NOTE]
 > If you are working on a computer/tablet/other devices where you don't have the ability to create your own files, you can try out most of the code examples in an online coding program such as [JS Bin](https://jsbin.com/) or [Glitch](https://glitch.com/).
 
-## Guides and challenges
+## Tutorials and challenges
 
 - [What is accessibility?](/en-US/docs/Learn_web_development/Core/Accessibility/What_is_accessibility)
   - : This article starts off the module with a good look at what accessibility is — this includes what groups of people we need to consider and why, what tools different people use to interact with the web, and how we can make accessibility part of our web development workflow.

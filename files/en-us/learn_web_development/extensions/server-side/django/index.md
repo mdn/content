@@ -19,7 +19,7 @@ A general knowledge of programming concepts and [Python](/en-US/docs/Glossary/Py
 > [!NOTE]
 > Python is one of the easiest programming languages for novices to read and understand. That said, if you want to understand this module better, there are numerous free books and tutorials available on the internet to help you out (new programmers might want to check out the [Python for Non Programmers](https://wiki.python.org/moin/BeginnersGuide/NonProgrammers) page on the python.org wiki).
 
-## Guides
+## Tutorials
 
 - [Django introduction](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Introduction)
   - : In this first Django article we answer the question "What is Django?" and give you an overview of what makes this web framework special. We'll outline the main features, including some advanced functionality that we won't have time to cover in detail in this module. We'll also show you some of the main building blocks of a Django application, to give you an idea of what it can do before you set it up and start playing.
@@ -52,7 +52,7 @@ A general knowledge of programming concepts and [Python](/en-US/docs/Glossary/Py
 
 ## Assessments
 
-The following assessment will test your understanding of how to create a website using Django, as described in the guides listed above.
+The following assessment will test your understanding of how to create a website using Django, as described in the tutorials listed above.
 
 - [DIY Django mini blog](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/django_assessment_blog)
   - : In this assessment you'll use some of the knowledge you've learned from this module to create your own blog.

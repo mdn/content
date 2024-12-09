@@ -17,7 +17,7 @@ Before starting this module, you should be familiar with [HTML](/en-US/docs/Lear
 > [!NOTE]
 > If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
 
-## Guides and challenges
+## Tutorials and challenges
 
 - [Fundamental text and font styling](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals)
   - : In this article we go through all the basics of text/font styling in detail, including setting font weight, family and style, font shorthand, text alignment and other effects, and line and letter spacing.

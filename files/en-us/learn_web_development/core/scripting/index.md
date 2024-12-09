@@ -17,7 +17,7 @@ Before starting this module, you don't need any previous JavaScript knowledge, b
 > [!NOTE]
 > If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
 
-## Guides and challenges
+## Tutorials and challenges
 
 - [What is JavaScript?](/en-US/docs/Learn_web_development/Core/Scripting/What_is_JavaScript)
   - : Welcome to the MDN beginner's JavaScript course! In this first article we will look at JavaScript from a high level, answering questions such as "what is it?", and "what is it doing?", and making sure you are comfortable with JavaScript's purpose.
@@ -50,7 +50,7 @@ Before starting this module, you don't need any previous JavaScript knowledge, b
 - [Introduction to events](/en-US/docs/Learn_web_development/Core/Scripting/Events)
   - : In this article, we discuss some important concepts surrounding events, and look at the fundamentals of how they work in browsers.
 - [Event bubbling](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling)
-  - : This guide introduces the concepts of event bubbling, event capture, and event delegation, which are all about what happens when you add a listener to an element that contains another element, and an event then happens to the contained element.
+  - : This article introduces the concepts of event bubbling, event capture, and event delegation, which are all about what happens when you add a listener to an element that contains another element, and an event then happens to the contained element.
 - [Challenge: Image gallery](/en-US/docs/Learn_web_development/Core/Scripting/Image_gallery) <sup>Challenge</sup>
   - : Now that we've looked at the fundamental building blocks of JavaScript, we'll test your knowledge of loops, functions, conditionals and events by getting you to build a fairly common item you'll see on a lot of websites — a JavaScript-powered image gallery.
 - [Object basics](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics)

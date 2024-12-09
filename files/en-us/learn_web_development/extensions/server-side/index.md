@@ -6,7 +6,7 @@ page-type: learn-topic
 
 {{LearnSidebar}}
 
-The **_Dynamic Websites_** – **Server-side programming** topic is a series of modules that show how to create dynamic websites; websites that deliver customized information in response to HTTP requests. The modules provide a general introduction to server-side programming, along with specific beginner-level guides on how to use the Django (Python) and Express (Node.js/JavaScript) web frameworks to create basic applications.
+The **_Dynamic Websites_** – **Server-side programming** topic is a series of modules that show how to create dynamic websites; websites that deliver customized information in response to HTTP requests. The modules provide a general introduction to server-side programming, along with specific beginner-level tutorials on how to use the Django (Python) and Express (Node.js/JavaScript) web frameworks to create basic applications.
 
 Most major websites use some kind of server-side technology to dynamically display data as required. For example, imagine how many products are available on Amazon, and imagine how many posts have been written on Facebook. Displaying all of these using different static pages would be extremely inefficient, so instead such sites display static templates (built using [HTML](/en-US/docs/Learn_web_development/Core/Structuring_content), [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics), and [JavaScript](/en-US/docs/Learn_web_development/Core/Scripting)), and then dynamically update the data displayed inside those templates when needed, such as when you want to view a different product on Amazon.
 

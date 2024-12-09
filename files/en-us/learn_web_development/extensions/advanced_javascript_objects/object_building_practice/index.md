@@ -307,7 +307,7 @@ That's it for object lessons — all that remains now is for you to test your sk
 
 ## See also
 
-- [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial) — a beginner's guide to using 2D canvas.
+- [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial) — a beginner's 2D canvas tutorial.
 - [requestAnimationFrame()](/en-US/docs/Web/API/Window/requestAnimationFrame)
 - [2D collision detection](/en-US/docs/Games/Techniques/2D_collision_detection)
 - [3D collision detection](/en-US/docs/Games/Techniques/3D_collision_detection)

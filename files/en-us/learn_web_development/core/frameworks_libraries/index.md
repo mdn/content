@@ -29,7 +29,7 @@ You should really learn the basics of the core web languages first before attemp
 
 Your code will be richer and more professional as a result, and you'll be able to troubleshoot problems with more confidence if you understand the fundamental web platform features that the frameworks are building on top of.
 
-## Introductory guides
+## Introductory tutorials
 
 - [Introduction to client-side frameworks](/en-US/docs/Learn_web_development/Core/Frameworks_libraries/Introduction)
   - : We begin our look at frameworks with a general overview of the area, looking at a brief history of JavaScript and frameworks, why frameworks exist and what they give us, how to start thinking about choosing a framework to learn, and what alternatives there are to client-side frameworks.
@@ -150,9 +150,7 @@ Your code will be richer and more professional as a result, and you'll be able t
 
 ## Which frameworks did we choose?
 
-We are publishing our initial set of articles with guides focusing on five frameworks. Four of them are very popular and well-established — React/ReactDOM, Ember, Vue, and Angular — whereas Svelte is a comparative newcomer that shows a lot of promise and has gained a lot of recent popularity.
-
-There is a variety of reasons for this:
+We cover five frameworks in our tutorials — Angular, Ember, React/ReactDOM, Svelte, and Vue:
 
 - They are popular choices that will be around for a while — like with any software tool, it is good to stick with actively-developed choices that are likely to not be discontinued next week, and which will be desirable additions to your skill set when looking for a job.
 - They have strong communities and good documentation. It is very important to be able to get help with learning a complex subject, especially when you are just starting out.
@@ -160,3 +158,5 @@ There is a variety of reasons for this:
 - As a beginner, trying to choose what to focus on out of the huge number of choices available is a very real problem. Keeping the list short is therefore helpful.
 
 We want to say this upfront — we've **not** chosen the frameworks we are focusing on because we think they are the best, or because we endorse them in any way. We just think they score highly on the above criteria.
+
+{{NextMenu("Learn_web_development/Core/Frameworks_libraries/Introduction", "Learn_web_development/Core")}}

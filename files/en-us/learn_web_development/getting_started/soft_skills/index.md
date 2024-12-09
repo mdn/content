@@ -14,7 +14,7 @@ This module provides recommendations of soft skills you can aim to get better at
 
 This module is mainly theoretical, and assumes no specific practical knowledge of web technologies. However, we would still recommend that you work through the preceding modules in order before tackling this one.
 
-## Guides
+## Tutorials
 
 - [Research and learning](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning)
   - : There is a lot to know as a web developer, and you are constantly learning. But how do you find out what you need to know most effectively? This article provides useful tips on research and learning.

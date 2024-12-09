@@ -18,7 +18,7 @@ This module assumes no prior knowledge of web technologies, but you should alrea
 
 If this is not the case, we'd suggest that you run through the [Environment setup](/en-US/docs/Learn_web_development/Getting_started/Environment_setup) module first.
 
-## Guides
+## Tutorials
 
 - [What will your website look like?](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like)
 

@@ -24,7 +24,7 @@ If you need to refresh yourself on such basics, we'd recommend the following res
 - [macOS User Guide](https://support.apple.com/guide/mac-help/welcome/mac), Apple (2024)
 - [Official Ubuntu documentation](https://help.ubuntu.com/), ubuntu.com (2024)
 
-## Guides
+## Tutorials
 
 - [Installing software](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software)
   - : In this article, we show you what tools you need to do simple web development and how to install them properly. We'll set you up with the bare minimum of tools for now, including a text editor and some modern web browsers.

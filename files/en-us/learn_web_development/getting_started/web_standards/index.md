@@ -18,10 +18,10 @@ General resources:
 
 This module is mainly theoretical, and assumes no specific practical knowledge of web technologies. However, you will understand it better and get more out of it if you understand the basics of what the main web technologies are used for. We'd suggest that you work through the [Your first website](/en-US/docs/Learn_web_development/Getting_started/Your_first_website) module first, if you have not done so already.
 
-## Guides
+## Tutorials
 
 - [How the web works](/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works)
-  - : This guide provides a simplified view of what happens when you view a webpage in a web browser on your computer or phone.
+  - : This article provides a simplified view of what happens when you view a webpage in a web browser on your computer or phone.
 - [The web standards model](/en-US/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model)
   - : This article provides some useful background on the web and web standards — how they came about, what web standard technologies are, and how they work together.
 - [How browsers load websites](/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites)

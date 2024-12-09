@@ -162,7 +162,7 @@ If you want to follow along with this example, make a local copy of our [postcar
 
 ### The HTML
 
-The HTML is only slightly more involved than the example we used in [the first article of this guide](/en-US/docs/Learn_web_development/Extensions/Forms/Your_first_form); it just has a few extra IDs and a heading.
+The HTML is only slightly more involved than the example we used in [Your first form](/en-US/docs/Learn_web_development/Extensions/Forms/Your_first_form); it just has a few extra IDs and a heading.
 
 ```html
 <form>

@@ -17,7 +17,7 @@ Before starting this module, you should be familiar with [HTML](/en-US/docs/Lear
 > [!NOTE]
 > If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
 
-## Guides and challenges
+## Tutorials and challenges
 
 - [Introduction to CSS layout](/en-US/docs/Learn_web_development/Core/CSS_layout/Introduction)
   - : This lesson recaps some of the CSS layout features we've already touched upon in previous modules, such as different {{cssxref("display")}} values, as well as introducing some of the concepts we'll be covering throughout this module. It also covers the concept of normal flow in depth.
@@ -36,9 +36,9 @@ Before starting this module, you should be familiar with [HTML](/en-US/docs/Lear
 - [Fundamental layout comprehension](/en-US/docs/Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension) <sup>Challenge</sup>
   - : A challenge to test your knowledge of different layout methods by laying out a webpage.
 
-## Additional guides
+## Additional tutorials
 
-These guides are not part of the learning pathway, but they are interesting nonetheless — you should consider these as stretch goals, to optionally study when you are done with the main Core articles.
+These tutorials are not part of the learning pathway, but they are interesting nonetheless — you should consider these as stretch goals, to optionally study when you are done with the main Core articles.
 
 - [Multiple-column layout](/en-US/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
   - : The multiple-column layout specification provides you with a method for laying content out in columns, as you might see in a newspaper. This article explains how to use this feature.

@@ -22,7 +22,7 @@ However, you should understand something about the workings of websites and web 
 
 With the basic understanding that you gain from this preparation, you'll be ready to work your way through the modules in this section.
 
-## Guides
+## Tutorials
 
 - [Introduction to the server-side](/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Introduction)
   - : Welcome to the MDN beginner's server-side programming course! The first article examines server-side programming from a high level, answering questions such as "What is it?", "How does it differ from client-side programming?", and "Why it is so useful?". After reading this, you will understand the additional capabilities available to websites through server-side coding.
