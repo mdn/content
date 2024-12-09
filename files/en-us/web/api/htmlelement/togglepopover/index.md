@@ -38,8 +38,8 @@ togglePopover(options)
         - If set to `true`, the popover is shown if it was initially hidden. If it was initially shown, nothing happens.
         - If set to `false`, the popover is hidden if it was initially shown. If it was initially hidden, nothing happens.
     - `source` {{optional_inline}}
-      - An {{domxref("HTMLElement")}} that triggered the popover, if any. This provides all the same functionality that using
-        [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) would provide.
+      - An {{domxref("HTMLElement")}} that triggered the popover, if any.
+        This provides all the same functionality that using [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) would provide.
 
 ### Return value
 
