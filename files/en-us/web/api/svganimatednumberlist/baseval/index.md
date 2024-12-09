@@ -16,8 +16,6 @@ This property reflects the {{SVGElement("rect")}}, {{SVGElement("polygon")}}, or
 
 An {{domxref("SVGNumberList")}} object representing the base value of the attribute. The list contains one or more numbers corresponding to the individual number values specified in the attribute.
 
-- Changes to the `SVGNumberList` reflected by `baseVal` directly update the attribute on the SVG element.
-
 ## Examples
 
 ```js

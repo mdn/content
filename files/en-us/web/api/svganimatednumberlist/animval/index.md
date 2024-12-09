@@ -16,9 +16,6 @@ This property reflects the {{SVGElement("rect")}}, {{SVGElement("polygon")}}, or
 
 An {{domxref("SVGNumberList")}} object representing the animated value of the attribute. The list contains one or more numbers corresponding to the individual number values specified in the attribute.
 
-- If the attribute is animated, `animVal` reflects the current state of the animation.
-- If the attribute is not animated, `animVal` will be the same as the `baseVal`.
-
 ## Examples
 
 ```js
