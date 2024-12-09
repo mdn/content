@@ -9,7 +9,7 @@ browser-compat: css.types.mod
 
 The **`mod()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) returns a modulus left over when the first parameter is divided by the second parameter, similar to the JavaScript [remainder operator (`%`)](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder). The modulus is the value left over when one operand, the dividend, is divided by a second operand, the divisor. It always takes the sign of the divisor.
 
-> For example, the CSS `mod(21, -4)` function returns the remainder of `-1`. When dividing 21 by -4, the result is 5 with a remainder of -1. The full calculation is `21 / -4 = -4 * 5 - 1`.
+The calculation is `a - (Math.floor(a / b) * b)`. For example, the CSS `mod(21, -4)` function returns the remainder of `-3`. The full calculation is `21 - (Math.floor(21 / -4) * -4)`. When dividing `21` by `-4`, the result is `-5.25`. This is floored to `-6`. Multiplying `-6` by `-4` is `24`. Subtracting this `24` from the original `21`, the remainder is -3.
 
 ## Syntax
 

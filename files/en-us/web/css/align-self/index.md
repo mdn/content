@@ -145,4 +145,6 @@ div:nth-child(3) {
 - [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
 - [Box alignment in CSS grid layouts](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
 - [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment)
-- The {{cssxref("align-items")}} property
+- {{cssxref("align-items")}}
+- {{cssxref("justify-self")}}
+- {{cssxref("place-self")}}

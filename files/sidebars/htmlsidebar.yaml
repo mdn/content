@@ -66,10 +66,12 @@ sidebar:
     path: /Web/HTML/Element
     title: HTML_Elements
     details: closed
+    code: true
   - type: listSubPages
     path: /Web/HTML/Global_attributes
     title: Global_attributes
     details: closed
+    code: true
   - type: listSubPages
     path: /Web/HTML/Attributes
     title: Attributes
@@ -78,6 +80,7 @@ sidebar:
     path: /Web/HTML/Element/input
     title: Input_types
     details: closed
+    code: true
   - type: section
     title: Guides
   - children:

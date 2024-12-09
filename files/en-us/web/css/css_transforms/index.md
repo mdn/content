@@ -699,7 +699,7 @@ The cube in the above example is comprised of six `<div>` elements, all of which
 - {{cssxref("transform-function/skewX", "skewX()")}}
 - {{cssxref("transform-function/skewY", "skewY()")}}
 - {{cssxref("transform-function/translate", "translate()")}}
-- {{cssxref("transform-function/translate3d", "translate()")}}
+- {{cssxref("transform-function/translate3d", "translate3d()")}}
 - {{cssxref("transform-function/translateX", "translateX()")}}
 - {{cssxref("transform-function/translateY", "translateY()")}}
 - {{cssxref("transform-function/translateZ", "translateZ()")}}

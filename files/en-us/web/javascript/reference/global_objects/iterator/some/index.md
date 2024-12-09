@@ -52,8 +52,7 @@ const isEven = (x) => x % 2 === 0;
 console.log(fibonacci().some(isEven)); // true
 
 const isNegative = (x) => x < 0;
-const isPositive = (x) => x > 0;
-console.log(fibonacci().take(10).some(isPositive)); // false
+console.log(fibonacci().take(10).some(isNegative)); // false
 console.log(fibonacci().some(isNegative)); // Never completes
 ```
 

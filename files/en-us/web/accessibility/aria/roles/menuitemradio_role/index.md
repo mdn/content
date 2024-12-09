@@ -68,7 +68,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 - [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) role
   - : Container for a group of `menuitem` elements, including `menuitemradio` elements within a `menu` or `menubar`.
 - [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) (Required)
-  - : Set to `true`, `false`, or `mixed`, it indicates the current "checked" state of the menuitemradio
+  - : Set to `true` or `false`, it indicates the current "checked" state of the menuitemradio
 
 ### Keyboard interactions
 

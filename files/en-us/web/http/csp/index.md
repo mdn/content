@@ -581,7 +581,7 @@ The server handling these requests can then store or process the incoming report
 
 ## See also
 
-- [Mitigate cross-site scripting with a strict Content Security Policy](https://web.dev/strict-csp) on web.dev (2024)
+- [Mitigate cross-site scripting with a strict Content Security Policy](https://web.dev/articles/strict-csp) on web.dev (2024)
 - [Content Security Policy: A successful mess between hardening and mitigation](https://infocondb.org/con/locomocosec/locomocosec-2019/content-security-policy-a-successful-mess-between-hardening-and-mitigation)
 - [Content Security Policy Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html) on owasp.org
 - [CSP Evaluator](https://csp-evaluator.withgoogle.com/)

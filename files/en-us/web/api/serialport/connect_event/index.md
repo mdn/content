@@ -10,9 +10,20 @@ browser-compat: api.SerialPort.connect_event
 
 {{APIRef("Web Serial API")}}{{SecureContext_Header}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
 
-The **`connect`** event of the {{domxref("SerialPort")}} interface is fired when a port has connected to the device. This event is only fired for ports associated with removable devices such as those connected via USB.
+The **`connect`** event of the {{domxref("SerialPort")}} interface is fired when the port connects to the device.
 
-This event bubbles to the instance of {{domxref("Serial")}} that returned this interface.
+## Description
+
+More specifically, the `connect` event fires when the port becomes **logically connected** to the device after a user grants permission for a site to access the port following a {{domxref("Serial.requestPort()")}} call:
+
+- In the case of a wired serial port, this occurs when the port is physically connected to the device, for example via USB.
+- In the case of a wireless serial port (for example, Bluetooth RFCOMM), this occurs when the port makes one or more active connections to the device (for example via Bluetooth L2CAP channels).
+
+### Bubbling
+
+This event bubbles to the instance of {{domxref("Serial")}} that returned this interface. The `event.target` property refers to the {{domxref('SerialPort')}} object that bubbles up.
+
+For more information, see [Event bubbling](/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling).
 
 ## Syntax
 
@@ -27,12 +38,6 @@ onconnect = (event) => {};
 ## Event type
 
 A generic {{domxref("Event")}}.
-
-## Bubbling
-
-This event bubbles to {{domxref("Serial")}}. The `event.target` property refers to the {{domxref('SerialPort')}} object that bubbles up.
-
-For more information, see [Event bubbling](/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling).
 
 ## Examples
 

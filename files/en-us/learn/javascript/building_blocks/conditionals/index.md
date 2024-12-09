@@ -607,7 +607,7 @@ h2 {
   </head>
   <body>
     ${outputBody}
-    <script>${code}</script>
+    <script>${code}<${"/"}script>
   </body>
 </html>`;
 }
@@ -797,7 +797,7 @@ function outputDocument(code) {
   </head>
   <body>
     ${outputBody}
-    <script>${code}</script>
+    <script>${code}<${"/"}script>
   </body>
 </html>`;
 }

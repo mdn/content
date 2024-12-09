@@ -58,7 +58,7 @@ Several of the links above go to the same section; that's because those media ty
 
 ### AV1
 
-The syntax of the `codecs` parameter for AV1 is defined the [AV1 Codec ISO Media File Format Binding](https://aomediacodec.github.io/av1-isobmff/) specification, section 5: [Codecs Parameter String](https://aomediacodec.github.io/av1-isobmff/#codecsparam).
+The syntax of the `codecs` parameter for AV1 is defined in the [AV1 Codec ISO Media File Format Binding](https://aomediacodec.github.io/av1-isobmff/) specification, section 5: [Codecs Parameter String](https://aomediacodec.github.io/av1-isobmff/#codecsparam).
 
 ```plain
 av01.P.LLT.DD[.M.CCC.cp.tc.mc.F]

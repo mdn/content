@@ -284,6 +284,7 @@ iconset
 idents
 IERS
 IMSC
+inferencing
 infobar
 infobox
 infoboxes

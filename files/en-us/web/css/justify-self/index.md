@@ -195,6 +195,8 @@ span {
 
 ## See also
 
-- {{CSSxRef("justify-items")}}
 - [Box alignment in CSS grid layouts](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
 - [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module
+- {{CSSxRef("justify-items")}}
+- {{cssxref("align-self")}}
+- {{cssxref("place-self")}}

@@ -594,6 +594,7 @@ reflectionchange
 removestream
 replacewithcommas
 replacewithspaces
+RFCOMM
 RGBX
 RGUI
 richlistbox

@@ -2,7 +2,7 @@
 title: repeating-radial-gradient()
 slug: Web/CSS/gradient/repeating-radial-gradient
 page-type: css-function
-browser-compat: css.types.image.gradient.repeating-radial-gradient
+browser-compat: css.types.gradient.repeating-radial-gradient
 ---
 
 {{CSSRef}}

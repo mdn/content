@@ -15,9 +15,15 @@ The **`<view>`** [SVG](/en-US/docs/Web/SVG) element defines a particular view of
 
 ## Attributes
 
-- {{SVGAttr("viewBox")}}
 - {{SVGAttr("preserveAspectRatio")}}
+  - : This attribute defines how the SVG fragment must be deformed if it is embedded in a container with a different {{glossary("aspect ratio")}}.
+    _Value type_: (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ; _Default value_: `xMidYMid meet`; _Animatable_: **yes**
+- {{SVGAttr("viewBox")}}
+  - : This attribute defines the bound of the SVG viewport for the pattern fragment.
+    _Value type_: **[\<list-of-numbers>](/en-US/docs/Web/SVG/Content_type#list-of-ts)** ; _Default value_: none; _Animatable_: **yes**
 - {{SVGAttr("zoomAndPan")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : This attribute specifies whether the SVG document can be magnified and panned.
+    _Value type_: **disable | magnify** ; _Default value_: magnify; _Animatable_: **no**
 
 ## Example
 
@@ -49,10 +55,6 @@ The **`<view>`** [SVG](/en-US/docs/Web/SVG) element defines a particular view of
 ### Result
 
 {{EmbedLiveSample("Example", "85ch", "240px")}}
-
-## DOM Interface
-
-This element implements the {{domxref("SVGViewElement")}} interface.
 
 ## Specifications
 

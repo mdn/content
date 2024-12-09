@@ -31,10 +31,12 @@ sidebar:
     path: /Web/SVG/Element
     title: Elements
     details: closed
+    code: true
   - type: listSubPages
     path: /Web/SVG/Attribute
     title: Attributes
     details: closed
+    code: true
   - type: section
     title: Guides
   - children:
