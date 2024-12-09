@@ -109,7 +109,8 @@ To exploit this vulnerability, an attacker sends the user a link like this:
 
 ```html
 <a href="http://example.org/results?search=<img src=x onerror=alert('hello')">
-  Win a free iPad!</a>
+  Win a free iPad!</a
+>
 ```
 
 When the user clicks the link:
