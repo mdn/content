@@ -218,7 +218,6 @@ This feature renders control characters (Unicode category Cc) other than _tab_ (
     <tr>
       <th>Preference name</th>
       <td colspan="2">
-        <code>layout.css.control-characters.enabled</code> or
         <code>layout.css.control-characters.visible</code>
       </td>
     </tr>
