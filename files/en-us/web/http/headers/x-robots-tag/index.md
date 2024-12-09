@@ -16,7 +16,7 @@ Indexing rules defined via `<meta name="robots">` tags and `X-Robots-Tag` header
 Specifying indexing rules in a HTTP header is useful for non-HTML documents like images, PDFs, or other media.
 
 > [!NOTE]
-> Only cooperative robots follow these rules, and a crawler still needs to access the resource to read them (see [Interaction with robots.txt](#interaction_with_robots.txt)).
+> Only cooperative robots follow these rules, and a crawler still needs to access the resource to read headers and meta tags (see [Interaction with robots.txt](#interaction_with_robots.txt)).
 > If you want to prevent bandwidth consumption by crawlers, a restrictive {{Glossary("robots.txt")}} file is more effective than indexing rules as it blocks resources from being crawled entirely.
 
 <table class="properties">
