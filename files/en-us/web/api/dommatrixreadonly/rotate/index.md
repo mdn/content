@@ -8,7 +8,7 @@ browser-compat: api.DOMMatrixReadOnly.rotate
 
 {{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
-The `rotate()` method of the {{domxref("DOMMatrixReadOnly")}} interface is a transformation method that returns a new {{domxref("DOMMatrix.()")}} created by rotating the source matrix around each of its axes by the specified number of degrees. The original matrix is not altered.
+The `rotate()` method of the {{domxref("DOMMatrixReadOnly")}} interface is a transformation method that returns a new {{domxref("DOMMatrix")}} created by rotating the source matrix around each of its axes by the specified number of degrees. The original matrix is not altered.
 
 To mutate the matrix as you rotate it, see {{domxref("DOMMatrix.rotateSelf()")}}
 
