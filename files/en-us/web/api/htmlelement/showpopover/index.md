@@ -10,7 +10,8 @@ browser-compat: api.HTMLElement.showPopover
 
 The **`showPopover()`** method of the {{domxref("HTMLElement")}} interface shows a {{domxref("Popover_API", "popover", "", "nocode")}} element (i.e. one that has a valid [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute) by adding it to the {{glossary("top layer")}}.
 
-When `showPopover()` is called on an element with the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute that is currently hidden, a {{domxref("HTMLElement/beforetoggle_event", "beforetoggle")}} event will be fired, followed by the popover showing, and then the {{domxref("HTMLElement/toggle_event", "toggle")}} event firing. If the element is already showing, an error will be thrown.
+When `showPopover()` is called on an element with the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute that is currently hidden, a {{domxref("HTMLElement/beforetoggle_event", "beforetoggle")}} event will be fired, followed by the popover showing, and then the {{domxref("HTMLElement/toggle_event", "toggle")}} event firing.
+If the element is already showing, an error will be thrown.
 
 ## Syntax
 
@@ -23,7 +24,7 @@ showPopover(options)
 - `options` {{optional_inline}}
   - : An object with the following properties:
     - `source` {{optional_inline}}
-      - An {{domxref("HTMLElement")}} that triggered the popover, if any.
+      - : An {{domxref("HTMLElement")}} that triggered the popover, if any.
         This provides all the same functionality that using [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) would provide.
 
 ### Return value
