@@ -16,6 +16,7 @@ If the element is already showing, an error will be thrown.
 ## Syntax
 
 ```js-nolint
+showPopover()
 showPopover(options)
 ```
 
