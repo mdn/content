@@ -2306,50 +2306,6 @@ The Network Monitor displays information for [server-sent](/en-US/docs/Web/API/S
   </tbody>
 </table>
 
-### CSS browser compatibility tooltips
-
-The CSS Rules View can display browser compatibility tooltips next to any CSS properties that have known issues. For more information see: [Examine and edit HTML > Browser Compat Warnings](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#browser-compat-warnings).
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>81</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>81</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>81</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>81</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">
-        <code
-          >devtools.inspector.ruleview.inline-compatibility-warning.enabled</code
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## See also
 
 - [Firefox developer release notes](/en-US/docs/Mozilla/Firefox/Releases)
