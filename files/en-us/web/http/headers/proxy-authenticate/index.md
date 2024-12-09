@@ -34,7 +34,7 @@ Proxy-Authenticate: <challenge>
 Where a `<challenge>` is comprised of an `<auth-scheme>`, followed by an optional `<token68>` or a comma-separated list of `<auth-params>`:
 
 ```plain
-challenge = <auth-scheme> <auth-param>, <auth-paramN>, …
+challenge = <auth-scheme> <auth-param>, …, <auth-paramN>
 challenge = <auth-scheme> <token68>
 ```
 
