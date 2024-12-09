@@ -10,7 +10,7 @@ browser-compat: css.at-rules.document
 
 {{CSSRef}}{{Deprecated_header}}{{Non-standard_header}}
 
-The **`@document`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) restricts the style rules contained within it based on the URL of the document. It is designed primarily for user-defined style sheets, though it can be used on author-defined style sheets, too.
+The **`@document`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) restricts the style rules contained within it based on the URL of the document. It is designed primarily for user-defined style sheets (see [userChrome.css](https://www.userchrome.org/what-is-userchrome-css.html)), though it can be used on author-defined style sheets, too.
 
 ```css
 @document url("https://www.example.com/")
