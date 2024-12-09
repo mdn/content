@@ -8,9 +8,9 @@ browser-compat: api.SVGAnimatedRect.animVal
 
 {{APIRef("SVG")}}
 
-The **`animVal`** read-only property of the {{domxref("SVGAnimatedRect")}} interface represents the current animated value of the `viewBox` attribute of an SVG element.
+The **`animVal`** read-only property of the {{domxref("SVGAnimatedRect")}} interface represents the current animated value of the `viewBox` attribute of an SVG element as a read-only {{domxref("DOMRectReadOnly")}} object. It provides access to the rectangle's dynamic state, including the `x`, `y`, `width`, and `height` values during the animation.
 
-This property reflects the SVG element's {{SVGAttr("viewBox")}} attribute value as a read-only {{domxref("DOMRectReadOnly")}} object. If the `viewBox` attribute is being animated, animVal provides access to the rectangle's dynamic state, including the x, y, width, and height values during the animation. If no animation is applied, `animVal` will be identical to {{domxref("SVGAnimatedRect.baseVal")}}.
+If no animation is applied, the `animVal` property reflects the SVG element's {{SVGAttr("viewBox")}} attribute value and will be identical to {{domxref("SVGAnimatedRect.baseVal")}}.
 
 ## Value
 
