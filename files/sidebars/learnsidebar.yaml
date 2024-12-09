@@ -287,7 +287,6 @@ sidebar:
   - title: Security_and_privacy
     link: /Learn_web_development/Extensions/Security_privacy
   - type: section
-    link: /Learn_web_development/Howto
     title: Further_resources
   - title: How_to_solve_common_problems
     link: /Learn_web_development/Howto
