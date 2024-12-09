@@ -35,7 +35,7 @@ A comma-separated list of one or more protocols:
 
 ```http
 Upgrade: <protocol>[/<protocol_version>]
-Upgrade: <protocol>[/<protocol_version>], <protocol>[/<protocol_version>], …
+Upgrade: <protocol>[/<protocol_version>], …, <protocolN>[/<protocol_versionN>]
 ```
 
 ## Directives

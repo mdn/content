@@ -32,13 +32,13 @@ Some implementations may send unsolicited `Repr-Digest` headers without requirin
 A comma-separated list of one or more hashing algorithms:
 
 ```http
-Want-Repr-Digest: <digest-algorithm>=<preference>
-Want-Repr-Digest: <digest-algorithm>=<preference>, <digest-algorithm>=<preference>, …
+Want-Repr-Digest: <algorithm>=<preference>
+Want-Repr-Digest: <algorithm>=<preference>, …, <algorithmN>=<preferenceN>
 ```
 
 ## Directives
 
-- `<digest-algorithm>`
+- `<algorithm>`
   - : The requested algorithm to create a digest of the representation.
     Only two registered digest algorithms are considered secure: `sha-512` and `sha-256`.
     The insecure (legacy) registered digest algorithms are: `md5`, `sha` (SHA-1), `unixsum`, `unixcksum`, `adler` (ADLER32) and `crc32c`.

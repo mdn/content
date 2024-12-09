@@ -44,7 +44,7 @@ WWW-Authenticate: <challenge>
 Where a `<challenge>` is comprised of an `<auth-scheme>`, followed by an optional `<token68>` or a comma-separated list of `<auth-params>`:
 
 ```plain
-challenge = <auth-scheme> <auth-param>, <auth-paramN>, …
+challenge = <auth-scheme> <auth-param>, …, <auth-paramN>
 challenge = <auth-scheme> <token68>
 ```
 
@@ -57,8 +57,8 @@ WWW-Authenticate: <auth-scheme> auth-param1=param-token1
 WWW-Authenticate: <auth-scheme> auth-param1=param-token1, …, auth-paramN=param-tokenN
 ```
 
-The presence of a token68 or authentication parameters depends on the selected `<auth-scheme>`.
-For example, [Basic authentication](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme) requires a `<realm>`, and allows for optional use of `charset` key, but does not support a token68:
+The presence of a `token68` or authentication parameters depends on the selected `<auth-scheme>`.
+For example, [Basic authentication](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme) requires a `<realm>`, and allows for optional use of `charset` key, but does not support a `token68`:
 
 ```http
 WWW-Authenticate: Basic realm="Dev", charset="UTF-8"
@@ -67,7 +67,7 @@ WWW-Authenticate: Basic realm="Dev", charset="UTF-8"
 Multiple challenges can be sent in a comma-separated list
 
 ```http
-WWW-Authenticate: <challenge>, <challengeN>, …
+WWW-Authenticate: <challenge>, …, <challengeN>
 ```
 
 Multiple headers can also be sent in a single response:
@@ -101,7 +101,7 @@ WWW-Authenticate: <challengeN>
 Generally, you will need to check the relevant specifications for the authentication parameters needed for each `<auth-scheme>`.
 The following sections describe token and auth parameters for some common auth schemes.
 
-### Basic authentication
+### Basic authentication directives
 
 - `<realm>`
   - : A `<realm>` as [described above](#realm).
@@ -111,7 +111,7 @@ The following sections describe token and auth parameters for some common auth s
     The only allowed value is the case-insensitive string `UTF-8`.
     This does not relate to the encoding of the realm string.
 
-### Digest authentication
+### Digest authentication directives
 
 - `<realm>` {{optional_inline}}
   - : A `<realm>` as [described above](#realm) indicating which username/password to use.

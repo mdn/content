@@ -33,7 +33,7 @@ A standardized version of this header is the HTTP {{HTTPHeader("Forwarded")}} he
 
 ```http
 X-Forwarded-For: <client>, <proxy>
-X-Forwarded-For: <client>, <proxy>, …, <proxy>
+X-Forwarded-For: <client>, <proxy>, …, <proxyN>
 ```
 
 For example, an IPV6 client IP in the first header, an IPV4 client IP in the second header, and an IPV4 client IP and an IPV6 proxy IP in the third example:

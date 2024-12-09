@@ -47,8 +47,8 @@ Proxy-Authenticate: <auth-scheme> auth-param1=param-token1
 Proxy-Authenticate: <auth-scheme> auth-param1=param-token1, …, auth-paramN=param-tokenN
 ```
 
-The presence of a token68 or authentication parameters depends on the selected `<auth-scheme>`.
-For example, [Basic authentication](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme) requires a `<realm>`, and allows for optional use of `charset` key, but does not support a token68:
+The presence of a `token68` or authentication parameters depends on the selected `<auth-scheme>`.
+For example, [Basic authentication](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme) requires a `<realm>`, and allows for optional use of `charset` key, but does not support a `token68`:
 
 ```http
 Proxy-Authenticate: Basic realm="Dev", charset="UTF-8"
@@ -73,7 +73,7 @@ Proxy-Authenticate: Basic realm="Dev", charset="UTF-8"
   - : A token that may be useful for some schemes.
     The token allows the 66 unreserved URI characters plus a few others.
     It can hold a {{glossary("base64")}}, base64url, base32, or base16 (hex) encoding, with or without padding, but excluding whitespace.
-    The token68 alternative to auth-param lists is supported for consistency with legacy authentication schemes.
+    The `token68` alternative to auth-param lists is supported for consistency with legacy authentication schemes.
 
 Generally, you will need to check the relevant specifications for the authentication parameters needed for each `<auth-scheme>`.
 

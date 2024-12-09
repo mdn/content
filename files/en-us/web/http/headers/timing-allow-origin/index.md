@@ -26,7 +26,7 @@ The HTTP **`Timing-Allow-Origin`** {{Glossary("response header")}} specifies ori
 
 ```http
 Timing-Allow-Origin: *
-Timing-Allow-Origin: <origin>[, <origin>]*
+Timing-Allow-Origin: <origin>, …, <originN>
 ```
 
 ## Directives

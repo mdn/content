@@ -28,9 +28,11 @@ The same `Vary` header value should be used on all responses for a given URL, in
 
 ## Syntax
 
+Either `*` as a wildcard, or one or more header names in a comma-separated list:
+
 ```http
 Vary: *
-Vary: <header-name>, <header-name>, ...
+Vary: <header-name>, …, <header-nameN>
 ```
 
 ## Directives
@@ -38,7 +40,7 @@ Vary: <header-name>, <header-name>, ...
 - `*` (wildcard)
   - : Factors other than request headers influenced the generation of this response. Implies that the response is uncacheable.
 - `<header-name>`
-  - : A comma-separated list of request header names that could have influenced the generation of this response.
+  - : A request header name that could have influenced the generation of this response.
 
 ## Specifications
 

@@ -32,13 +32,13 @@ Some implementations may send unsolicited `Content-Digest` headers without requi
 A comma-separated list of one or more hashing algorithms:
 
 ```http
-Want-Content-Digest: <digest-algorithm>=<preference>
-Want-Content-Digest: <digest-algorithm>=<preference>, <digest-algorithm>=<preference>, …
+Want-Content-Digest: <algorithm>=<preference>
+Want-Content-Digest: <algorithm>=<preference>, …, <algorithmN>=<preferenceN>
 ```
 
 ## Directives
 
-- `<digest-algorithm>`
+- `<algorithm>`
   - : The requested algorithm to create a digest of the message content.
     Only two registered digest algorithms are considered secure: `sha-512` and `sha-256`.
     The insecure (legacy) registered digest algorithms are: `md5`, `sha` (SHA-1), `unixsum`, `unixcksum`, `adler` (ADLER32) and `crc32c`.

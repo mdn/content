@@ -30,7 +30,7 @@ It is used to surface backend server timing metrics (for example, database read/
 Server-Timing: <timing-metric>
 
 // Multiple metrics as a comma-separated list
-Server-Timing: <timing-metric>, <timing-metric>
+Server-Timing: <timing-metric>, …, <timing-metricN>
 ```
 
 A `<timing-metric>` has a name, and may include an optional duration and an optional description.
