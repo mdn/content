@@ -140,7 +140,7 @@ sidebar:
 l10n:
   en-US:
     Overview: JavaScript technologies overview
-    Tutorials: Tutorials
+    Tutorials: Tutorials and guides
     Guide: JavaScript Guide
     Guide_Introduction: Introduction
     Guide_Grammar: Grammar and types
@@ -160,7 +160,7 @@ l10n:
     Guide_Iterators_generators: Iterators and generators
     Guide_Meta: Meta programming
     Guide_Modules: JavaScript modules
-    Beginners: Beginners
+    Beginners: Beginner's tutorials
     Adding_interactivity: "Your first website: Adding interactivity"
     Dynamic_scripting_with_JavaScript: Dynamic scripting with JavaScript
     JavaScript_frameworks_and_libraries: JavaScript frameworks and libraries

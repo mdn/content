@@ -12,7 +12,7 @@ CSS is among the core languages of the **open web** and is standardized across W
 
 After CSS 2.1, the scope of the specification increased significantly and the progress on different CSS modules started to differ so much, that it became more effective to [develop and release recommendations separately per module](https://www.w3.org/Style/CSS/current-work). Instead of versioning the CSS specification, W3C now periodically takes a snapshot of [the latest stable state of the CSS specification](https://www.w3.org/TR/css/) and individual modules progress. CSS modules now have version numbers, or levels, such as [CSS Color Module Level 5](https://drafts.csswg.org/css-color-5/).
 
-## Tutorials
+## Beginner's tutorials
 
 - [Your first website: Styling the content](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content)
   - : This article provides a brief tour of what CSS is and how to use it, aimed at people who are completely new to web development.

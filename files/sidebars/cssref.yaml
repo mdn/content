@@ -6,7 +6,7 @@ sidebar:
     title: CSS
   - type: section
     link: /Learn/CSS
-    title: Tutorials
+    title: Beginners
   - link: /Learn_web_development/Getting_started/Your_first_website/Styling_the_content
     title: Styling_the_content
   - title: CSS_styling_basics
@@ -282,7 +282,7 @@ sidebar:
       - /Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
 l10n:
   en-US:
-    Tutorials: Tutorials
+    Beginners: Beginner's tutorials
     Styling_the_content: "Your first website: Styling the content"
     CSS_styling_basics: CSS styling basics
     CSS_text_styling: CSS text styling

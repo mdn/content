@@ -24,7 +24,7 @@ The articles below can help you learn more about HTML.
 - [Structuring content with HTML](Learn_web_development/Core/Structuring_content)
   - : Our [Learn web development](/en-US/docs/Learn_web_development) section's HTML module teaches all the HTML fundamentals from the ground up.
 
-## Advanced topics
+## Guides
 
 - [HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms)
   - : Forms are a very important part of the Web — these provide much of the functionality you need for interacting with websites, e.g. registering and logging in, sending feedback, buying products, and more. This module gets you started with creating the client-side/front-end parts of forms.

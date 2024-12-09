@@ -23,11 +23,9 @@ JavaScript documentation of core language features (pure [ECMAScript](/en-US/doc
 
 For more information about JavaScript specifications and related technologies, see [JavaScript technologies overview](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview).
 
-## Tutorials
+## Beginner's tutorials
 
-Learn how to program in JavaScript with guides and tutorials.
-
-### For beginners
+Learn how to program in JavaScript from the ground up with our beginner's tutorials.
 
 - [Your first website: Adding interactivity](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity)
   - : This article provides a brief tour of what JavaScript is and how to use it, aimed at people who are completely new to web development.
@@ -36,7 +34,9 @@ Learn how to program in JavaScript with guides and tutorials.
 - [JavaScript frameworks and libraries](/en-US/docs/Learn_web_development/Core/Frameworks_libraries)
   - : JavaScript frameworks are an essential part of modern front-end web development, providing developers with tried and tested tools for building scalable, interactive web applications. Many modern companies use frameworks as a standard part of their tooling, so many front-end development jobs now require framework experience. In this set of articles, we aim to give you a comfortable starting point to help you begin learning frameworks.
 
-### JavaScript guide
+## JavaScript guides
+
+### Fundamental language guides
 
 - [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
   - : A much more detailed guide to the JavaScript language, aimed at those with previous programming experience either in JavaScript or another language.

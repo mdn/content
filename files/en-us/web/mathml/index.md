@@ -18,7 +18,7 @@ Below you will find links to documentation, examples, and tools to work with Mat
 > [!NOTE]
 > It is highly recommended that developers and authors switch to MathML Core, perhaps relying on other web technologies to cover missing use cases. The Math WG is maintaining a set of [MathML polyfills](https://github.com/w3c/mathml-polyfills) to facilitate that transition.
 
-## Beginner's guides
+## Beginner's tutorials
 
 - [Getting started with MathML](/en-US/docs/Web/MathML/Guides/Getting_started)
   - : In this article, we will take a simple HTML document and see how to add MathML formulas into it, introducing a few elements along the way.
@@ -33,18 +33,23 @@ Below you will find links to documentation, examples, and tools to work with Mat
 - [Three famous mathematical formulas](/en-US/docs/Web/MathML/Guides/Three_famous_mathematical_formulas) <sup>Challenge</sup>
   - : With the things you have learned in the last few articles, you should already be able to write relatively sophisticated MathML formulas. This challenge gives you a chance to do that.
 
+## Guides
+
+- [Authoring MathML](/en-US/docs/Web/MathML/Authoring)
+  - : Suggestions and tips for writing MathML, including suggested MathML editors and how to integrate their output into Web content.
+- [Fonts for MathML](/en-US/docs/Web/MathML/Fonts)
+  - : How users can install such math fonts to properly display MathML in browsers.
+
 ## MathML reference
 
 - [MathML element reference](/en-US/docs/Web/MathML/Element)
   - : Details about each MathML element and compatibility information for desktop and mobile browsers.
 - [MathML attribute reference](/en-US/docs/Web/MathML/Attribute)
   - : Information about MathML attributes that modify the appearance or behavior of elements.
+- [MathML attribute values](/en-US/docs/Web/MathML/Attribute)
+  - : Further information about MathML atribute values.
 - [MathML examples](/en-US/docs/Web/MathML/Examples)
   - : MathML samples and examples to help you understand how it works.
-- [Authoring MathML](/en-US/docs/Web/MathML/Authoring)
-  - : Suggestions and tips for writing MathML, including suggested MathML editors and how to integrate their output into Web content.
-- [Fonts for MathML](/en-US/docs/Web/MathML/Fonts)
-  - : How users can install such math fonts to properly display MathML in browsers.
 
 ## Getting help from the community
 
