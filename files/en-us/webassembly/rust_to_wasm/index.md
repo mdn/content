@@ -59,16 +59,23 @@ First, we have `Cargo.toml`; this is the file that we use to configure our build
 Next, Cargo has generated some Rust code for us in `src/lib.rs`:
 
 ```rust
+pub fn add(left: u64, right: u64) -> u64 {
+    left + right
+}
+
 #[cfg(test)]
 mod tests {
+    use super::*;
+
     #[test]
     fn it_works() {
-        assert_eq!(2 + 2, 4);
+        let result = add(2, 2);
+        assert_eq!(result, 4);
     }
 }
 ```
 
-We won't use this test code at all, so go ahead and delete it.
+We won't use this generated code at all, so go ahead and delete it.
 
 ### Let's write some Rust
 
@@ -162,7 +169,7 @@ authors = ["Your Name <you@example.com>"]
 description = "A sample project with wasm-pack"
 license = "MIT/Apache-2.0"
 repository = "https://github.com/yourgithubusername/hello-wasm"
-edition = "2018"
+edition = "2021"
 
 [lib]
 crate-type = ["cdylib"]
