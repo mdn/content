@@ -22,43 +22,43 @@ A `<system-color>` value can be used anywhere a [`<color>`](/en-US/docs/Web/CSS/
 Note that these keywords are _case insensitive_, but are listed here with mixed case for readability.
 
 - `AccentColor`
-  - : Background of accented user interface controls
+  - : Background of accented user interface controls.
 - `AccentColorText`
-  - : Text of accented user interface controls
+  - : Text of accented user interface controls.
 - `ActiveText`
-  - : Text of active links
+  - : Text of active links.
 - `ButtonBorder`
-  - : Base border color of controls
+  - : Base border color of controls.
 - `ButtonFace`
-  - : Background color of controls
+  - : Background color of controls.
 - `ButtonText`
-  - : Text color of controls
+  - : Text color of controls.
 - `Canvas`
-  - : Background of application content or documents
+  - : Background of application content or documents.
 - `CanvasText`
-  - : Text color in application content or documents
+  - : Text color in application content or documents.
 - `Field`
-  - : Background of input fields
+  - : Background of input fields.
 - `FieldText`
-  - : Text in input fields
+  - : Text in input fields.
 - `GrayText`
-  - : Text color for disabled items (e.g. a disabled control)
+  - : Text color for disabled items (for example, a disabled control).
 - `Highlight`
-  - : Background of selected items
+  - : Background of selected items.
 - `HighlightText`
-  - : Text color of selected items
+  - : Text color of selected items.
 - `LinkText`
-  - : Text of non-active, non-visited links
+  - : Text of non-active, non-visited links.
 - `Mark`
-  - : Background of text that has been specially marked (such as by the HTML `mark` element)
+  - : Background of text that has been specially marked (such as by the HTML `mark` element).
 - `MarkText`
-  - : Text that has been specially marked (such as by the HTML `mark` element)
+  - : Text that has been specially marked (such as by the HTML `mark` element).
 - `SelectedItem`
-  - : Background of selected items, for example, a selected checkbox
+  - : Background of selected items, for example, a selected checkbox.
 - `SelectedItemText`
-  - : Text of selected items
+  - : Text of selected items.
 - `VisitedText`
-  - : Text of visited links
+  - : Text of visited links.
 
 ### Deprecated system color keywords
 
