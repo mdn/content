@@ -1602,49 +1602,6 @@ See [Firefox bug 1703961](https://bugzil.la/1703961) for more details.
   </tbody>
 </table>
 
-### Service Workers
-
-#### Preloading of service worker resources on navigation
-
-The {{domxref("NavigationPreloadManager")}} interface can be used to enable preloading of resources when navigating to a page.
-Preloading occurs in parallel with worker bootup, reducing the total time from start of navigation until resources are fetched.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>99</td>
-      <td>yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>97</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>97</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>97</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.serviceWorkers.navigationPreload.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ### WebVR API
 
 #### WebVR API (Disabled)
