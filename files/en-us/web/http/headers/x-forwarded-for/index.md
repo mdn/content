@@ -137,3 +137,4 @@ Not part of any current specification. The standardized version of this header i
 - {{HTTPHeader("X-Forwarded-Host")}}, {{HTTPHeader("X-Forwarded-Proto")}} headers
 - {{HTTPHeader("Via")}}
 - {{HTTPHeader("Forwarded")}}
+- [What is X-Forwarded-For and when can you trust it?](https://httptoolkit.com/blog/what-is-x-forwarded-for/) httptoolkit.com (2024)
