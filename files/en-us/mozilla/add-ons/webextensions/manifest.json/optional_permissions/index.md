@@ -52,8 +52,6 @@ These are the same as the host permissions you can specify in the [`permissions`
 
 ## API permissions
 
-Optional permissions are either permissions available for use in the [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) key or optional-only permissions. (At the time of writing, November 2024, no optional-only permissions were generally available.)
-
 The optional API permissions are:
 
 - `activeTab`
@@ -108,7 +106,14 @@ These optional permissions are granted silently, without a user prompt:
 - `webRequestFilterResponse`
 - `webRequestFilterResponse.serviceWorkerScript`
 
-## Example
+### Optional-only permissions
+
+Optional permissions are generally available for use in the [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) key so they can be requested at install time. However, browsers support the concept of optional-only permissions, permissions that can only be requested at runtime using the {{webextapiref("permissions.request()")}} API. In addition, optional-only permissions must be requested individually and alone through the {{webextapiref("permissions.request()")}} API.
+
+> [!NOTE]
+> No optional-only permissions were generally available at the time of writing, November 2024.
+
+## Examples
 
 ```json
  "optional_permissions": ["*://developer.mozilla.org/*"]

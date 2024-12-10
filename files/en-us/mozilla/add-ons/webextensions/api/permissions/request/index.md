@@ -13,7 +13,7 @@ The `Permissions` argument can contain an `origins` property, an array of [host 
 
 Requested permissions must be defined in the [`optional_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) manifest.json key. The `origins` property can include permissions matching a subset of the hosts matched by an optional permission. For example, if `optional_permissions` include `"*://mozilla.org/"`, then `permissions.origins` can include `"https://developer.mozilla.org/"`.
 
-Requests for optional-only permissions can't include any other optional permissions.
+Requests for [optional-only permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions#optional-only_permissions) can't include any other optional permissions.
 
 The request can only be made inside the handler for a [user action](/en-US/docs/Mozilla/Add-ons/WebExtensions/User_actions). Unless all the permissions requested are ones granted silently, the browser asks the user whether to grant the requested permissions. One request is made for all requested permissions: either all permissions are granted or none are.
 
