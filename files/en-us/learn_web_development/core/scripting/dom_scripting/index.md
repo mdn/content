@@ -87,7 +87,7 @@ Nodes are also referred to by their position in the tree relative to other nodes
 - **Child node**: A node _directly_ inside another node. For example, `IMG` is a child of `SECTION` in the above example.
 - **Descendant node**: A node _anywhere_ inside another node. For example, `IMG` is a child of `SECTION` in the above example, and it is also a descendant. `IMG` is not a child of `BODY`, as it is two levels below it in the tree, but it is a descendant of `BODY`.
 - **Parent node**: A node which has another node inside it. For example, `BODY` is the parent node of `SECTION` in the above example.
-- **Sibling nodes**: Nodes that sit on the same level in the DOM tree. For example, `IMG` and `P` are siblings in the above example.
+- **Sibling nodes**: Nodes that sit on the same level under the same parent node in the DOM tree. For example, `IMG` and `P` are siblings in the above example.
 
 It is useful to familiarize yourself with this terminology before working with the DOM, as a number of the code terms you'll come across make use of them. You'll also come across them in CSS (e.g. descendant selector, child selector).
 

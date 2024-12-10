@@ -38,16 +38,22 @@ Permissions-Policy: <directive>=<allowlist>
 
   - : An allowlist is a list of origins that takes one or more of the following values contained in parentheses, separated by spaces:
 
-    - `*`: The feature will be allowed in this document, and all nested browsing contexts (`<iframe>`s) regardless of their origin.
-    - `()` (empty allowlist): The feature is disabled in top-level and nested browsing contexts. The equivalent for `<iframe>` `allow` attributes is `'none'`.
-    - `self`: The feature will be allowed in this document, and in all nested browsing contexts (`<iframe>`s) in the same origin only. The feature is not allowed in cross-origin documents in nested browsing contexts. `self` can be considered shorthand for `https://your-site.example.com`. The equivalent for `<iframe>` `allow` attributes is `self`.
-    - `src`: The feature will be allowed in this `<iframe>`, as long as the document loaded into it comes from the same origin as the URL in its {{HTMLElement('iframe','src','#Attributes')}} attribute. This value is only used in the `<iframe>` `allow` attribute, and is the _default_ `allowlist` value in `<iframe>`s.
-    - `"<origin>"`: The feature is allowed for specific origins (for example, `"https://a.example.com"`). Origins should be separated by spaces. Note that origins in `<iframe>` allow attributes are not quoted.
+    - `*` (wildcard)
+      - : The feature will be allowed in this document, and all nested browsing contexts (`<iframe>`s) regardless of their origin.
+    - `()` (empty allowlist)
+      - : The feature is disabled in top-level and nested browsing contexts. The equivalent for `<iframe>` `allow` attributes is `'none'`.
+    - `self`
+      - : The feature will be allowed in this document, and in all nested browsing contexts (`<iframe>`s) in the same origin only. The feature is not allowed in cross-origin documents in nested browsing contexts. `self` can be considered shorthand for `https://your-site.example.com`. The equivalent for `<iframe>` `allow` attributes is `self`.
+    - `src`
+      - : The feature will be allowed in this `<iframe>`, as long as the document loaded into it comes from the same origin as the URL in its {{HTMLElement('iframe','src','#Attributes')}} attribute. This value is only used in the `<iframe>` `allow` attribute, and is the _default_ `allowlist` value in `<iframe>`s.
+    - `"<origin>"`
+      - : The feature is allowed for specific origins (for example, `"https://a.example.com"`). Origins should be separated by spaces. Note that origins in `<iframe>` allow attributes are not quoted.
 
     The values `*` and `()` may only be used on their own, while `self` and `src` may be used in combination with one or more origins.
 
     > [!NOTE]
-    > Directives have a default allowlist, which is always one of `*`, `self`, or `none` for the `Permissions-Policy` HTTP header, and governs the default behavior if they are not explicitly listed in a policy. These are specified on the individual [directive reference pages](#directives). For `<iframe>` `allow` attributes, the default behavior is always `src`.
+    > Directives have a default allowlist, which is always one of `*`, `self`, or `none` for the `Permissions-Policy` HTTP header, and governs the default behavior if they are not explicitly listed in a policy.
+    > These are specified on the individual [directive reference pages](#directives). For `<iframe>` `allow` attributes, the default behavior is always `src`.
 
 Where supported, you can include wildcards in Permissions Policy origins. This means that instead of having to explicitly specify several different subdomains in an allowlist, you can specify them all in a single origin with a wildcard.
 
