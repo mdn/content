@@ -56,7 +56,7 @@ This map file contains not only mappings between the original SCSS and the gener
 }
 ```
 
-This allows browser DevTools not only show the resulted CSS in the inspector, but also link to the specific line in the source SCSS file and show it:
+The source map allows the browser's DevTools to link to specific lines in the original SCSS file and display the source code:
 
 ![Firefox DevTools focused on the li element in the DOM inspector. The style panel shows transformed CSS without nesting and a link to the third line of the index.scss file.](inspector.png)
 
