@@ -132,3 +132,7 @@ No-Vary-Search: params, except=("id")
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}} header

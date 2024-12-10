@@ -17,7 +17,7 @@ These resources are created by forward-thinking companies and web developers who
 
 ### Introductory level
 
-- [Structuring content with HTML](Learn_web_development/Core/Structuring_content)
+- [Structuring content with HTML](/en-US/docs/Learn_web_development/Core/Structuring_content)
   - : Our introductory HTML learning module teaches HTML from the ground up — no previous knowledge required. It sets the stage, getting you used to important concepts and syntax, looking at applying HTML to text, how to create hyperlinks, and how to use HTML to structure a webpage.
 - [Creating a Simple Web Page with HTML](https://www.theblogstarter.com/html-for-beginners/)
   - : An HTML guide for beginners that includes explanations of common tags, including HTML tags. Also includes a step-by-step guide to creating a basic web page with code examples.

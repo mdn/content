@@ -7,10 +7,10 @@ browser-compat: http.headers.User-Agent
 
 {{HTTPSidebar}}
 
-The **User-Agent** {{Glossary("request header")}} is a characteristic string that lets servers and network peers identify the application, operating system, vendor, and/or version of the requesting {{Glossary("user agent")}}.
+The HTTP **User-Agent** {{Glossary("request header")}} is a characteristic string that lets servers and network peers identify the application, operating system, vendor, and/or version of the requesting {{Glossary("user agent")}}.
 
 > [!WARNING]
-> Please read [Browser detection using the user agent](/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent) for why serving different Web pages or services to different browsers is usually a bad idea.
+> See [Browser detection using the user agent](/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent) for reasons why serving different content to different browsers is usually a bad idea.
 
 <table class="properties">
   <tbody>
@@ -20,7 +20,7 @@ The **User-Agent** {{Glossary("request header")}} is a characteristic string tha
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -39,11 +39,11 @@ User-Agent: Mozilla/5.0 (<system-information>) <platform> (<platform-details>) <
 
 ### Directives
 
-- \<product>
+- `<product>`
   - : A product identifier — its name or development codename.
-- \<product-version>
+- `<product-version>`
   - : Version number of the product.
-- \<comment>
+- `<comment>`
   - : Zero or more comments containing more details. For example, sub-product information.
 
 ## Firefox UA string
