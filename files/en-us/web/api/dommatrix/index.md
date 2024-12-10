@@ -24,10 +24,6 @@ This interface should be available inside [web workers](/en-US/docs/Web/API/Web_
 
 _This interface inherits properties from {{domxref("DOMMatrixReadOnly")}}, though some of these properties are altered to be mutable._
 
-- `is2D` {{ReadOnlyInline}}
-  - : A Boolean flag whose value is `true` if the matrix was initialized as a 2D matrix. If `false`, the matrix is 3D.
-- {{domxref("DOMMatrix.isIdentity")}} {{ReadOnlyInline}}
-  - : A Boolean whose value is `true` if the matrix is the [identity matrix](https://en.wikipedia.org/wiki/Identity_matrix).
 - `m11`, `m12`, `m13`, `m14`, `m21`, `m22`, `m23`, `m24`, `m31`, `m32`, `m33`, `m34`, `m41`, `m42`, `m43`, `m44`
   - : Double-precision floating-point values representing each component of a 4×4 matrix, where `m11` through `m14` are the first column, `m21` through `m24` are the second column, and so forth.
 - `a`, `b`, `c`, `d`, `e`, `f`
@@ -107,4 +103,5 @@ The `DOMMatrix` interface is designed with the intent that it will be used for a
 
 ## See also
 
-- Its non-modifiable counterpart, {{domxref("DOMMatrixReadOnly")}}
+- {{domxref("DOMMatrixReadOnly.is2D")}}
+- {{domxref("DOMMatrixReadOnly.isIdentity")}}
