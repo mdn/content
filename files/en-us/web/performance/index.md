@@ -14,7 +14,7 @@ There are tools, APIs, and best practices that help us measure and improve web p
 
 ## Key performance guides
 
-{{LandingPageListSubpages}}
+{{SubpagesWithSummaries}}
 
 ## Beginner's tutorials
 
