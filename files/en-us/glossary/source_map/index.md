@@ -6,13 +6,60 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-A **source map** is a file that maps between minified or transformed code received by the browser and its original unmodified form, allowing the original code to be reconstructed and used when debugging.
+A **source map** is a non-standard {{Glossary("JSON")}} file format that maps between minified or transformed code received by the browser and its original unmodified form, allowing the original code to be reconstructed and used when debugging.
 
-The JavaScript code executed by the browser has often been transformed in some way from the original source created by a developer.
-For example, sources are often combined and minified to make delivering them from the server more efficient.
-Additionally, JavaScript running on a page is often machine-generated, such as compiled from a language like TypeScript.
+Code executed by the browser is often transformed in some way from the original source created by a developer. There are several reasons for this:
+
+- To make delivering code from the server more efficient by combining and minifying source files.
+- To support older browsers by transforming modern features into older equivalents.
+- To use more feature-rich languages that browsers don't understand, like {{Glossary("TypeScript")}} or [Sass](https://sass-lang.com/).
 
 In these situations, debugging the original source is much easier than the source in the transformed state that the browser has downloaded.
+
+## Example
+
+For example, consider this SCSS syntax of Sass:
+
+```scss
+ul {
+  list-style: none;
+  li {
+    display: inline;
+  }
+}
+```
+
+During the build process, before delivering the CSS to the browser, the SCSS is transformed into CSS and a source map file `index.css.map` is generated and linked from the CSS file in the comment at the end:
+
+```css
+ul {
+  list-style: none;
+}
+ul li {
+  display: inline;
+}
+
+/*# sourceMappingURL=index.css.map */
+```
+
+This map file contains not only mappings between the original SCSS and the generated CSS but also the original SCSS source code in encoded form. It's ignored by the browser's CSS parser but used by browser's DevTools:
+
+```json
+{
+  "version": 3,
+  "sourceRoot": "",
+  "sources": ["index.scss"],
+  "names": [],
+  "mappings": "AAAA;EACC;;AACA;EACC",
+  "file": "index.css"
+}
+```
+
+This allows browser DevTools not only show the resulted CSS in the inspector, but also link to the specific line in the source SCSS file and show it:
+
+![Firefox DevTools focused on the li element in the DOM inspector. The style panel shows transformed CSS without nesting and a link to the third line of the index.scss file.](inspector.png)
+
+![Firefox DevTools with the index.scss file opened in the style editor. The editor is focused on the source code's third line in SCSS format with nesting.](style-editor.png)
 
 ## See also
 
