@@ -10,8 +10,7 @@ browser-compat: api.IDBRequest.error
 
 The **`error`** read-only property of the
 {{domxref("IDBRequest")}} interface returns the error in the event of an unsuccessful
-request. If the request is not completed, the error is not available and an `InvalidStateError` exception is
-thrown.
+request.
 
 ## Value
 
@@ -22,26 +21,38 @@ These errors are asynchronous, meaning that they can't be handled via [`try...ca
 - `AbortError`
   - : If you abort the transaction, then all requests still in progress receive this error.
 - `ConstraintError`
-  - : Received if you insert data that doesn't conform to a constraint when creating stores and indexes.
-    For example, you will get this error if you try to add a new key that already exists in the record.
-- `DataError` or `UnknownError`
-  - : Received for transient read failure errors, including general disk IO errors. See "Large value read failure errors" below for more details.
-- `NotFoundError` or `NotReadableError`
-  - : Received for unrecoverable read failure errors. See "Large value read failure errors" below for more details.
+  - : Received if you insert data that doesn't conform to a constraint when populating stores.
+    For example, you will get this error if you try to add a new key that already exists in the store.
+- `NotReadableError`
+  - : Received for unrecoverable read failure errors. Specifically, this error signals that the record is present in the database, but the value could not be retrieved. See [Transient and unrecoverable read errors](#transient_and_unrecoverable_read_errors) below for more details.
 - `QuotaExceededError`
   - : Received if the application runs out of disk quota. In some cases, browsers prompt the user for more space, and the error is received if they decline the request. In other cases, the browser uses heuristics to determine whether more space can be assigned.
+- `UnknownError`
+  - : Received for transient read failure errors, including general disk IO errors. See [Transient and unrecoverable read errors](#transient_and_unrecoverable_read_errors) below for more details.
 - `VersionError`
   - : If you try to open a database with a version lower than the one it already has, this error is received.
 
-### Large value read failure errors
+### Transient and unrecoverable read errors
 
-Large value read failure errors occur when an IndexedDB stores large blob values (for example, audio files for an offline podcast app), and then subsequently fails to read those values. This category of errors can occur due to transient causes such as low memory and unrecoverable causes such as source blob files being deleted.
+Read errors occur when an IndexedDB stores large blob values (for example, audio files for an offline podcast app), and then subsequently fails to read those values even though the associated records are still in the database.
 
-Different IndexedDB implementations store large values in different ways. For example, in Chrome, large IndexedDB values are not stored directly in the underlying database; instead, they are stored as separate files that are accessed via a reference stored in the database. It has been observed that these separate files can end up being deleted because they show up as opaque files to users when they are using disk space recovery programs.
+This category of errors can occur due to:
+
+- Transient causes such as low memory, represented in the spec by the `UnknownError` type.
+- Unrecoverable causes such as source blob files being deleted, represented in the spec by the `NotReadableError` type.
+
+> [!NOTE]
+> The errors that represent these cases may vary across browsers. Check the [browser compatibility information](#browser_compatibility) for more details.
+
+Such errors can manifest in different ways depending on browser, operating system, etc. For example, different IndexedDB implementations store large values in different ways. In Chrome, large IndexedDB values are not stored directly in the underlying database; instead, they are stored as separate files that are accessed via a reference stored in the database. It has been observed that these separate files can end up being deleted because they show up as opaque files to users when they are using disk space recovery programs, resulting in unrecoverable read errors when the IndexedDB is next accessed.
 
 Possible corrective actions for such cases might include notifying the user, deleting the entry from the database, then attempting to re-fetch the data from the server.
 
-More recent browser versions have changed the error types and improved the error messages to help developers distinguish between transient and unrecoverable cases.
+### Exceptions
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown when attempting to access the property if the request
+    is not completed, and therefore the error is not available.
 
 ## Examples
 
