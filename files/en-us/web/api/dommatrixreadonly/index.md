@@ -20,7 +20,7 @@ This interface should be available inside [web workers](/en-US/docs/Web/API/Web_
 
 _This interface doesn't inherit any properties._
 
-- `is2D` {{ReadOnlyInline}}
+- {{domxref("DOMMatrixReadOnly.is2D")}} {{ReadOnlyInline}}
   - : A Boolean flag whose value is `true` if the matrix was initialized as a 2D matrix. If `false`, the matrix is 3D.
 - `isIdentity` {{ReadOnlyInline}}
   - : A Boolean whose value is `true` if the matrix is the [identity matrix](https://en.wikipedia.org/wiki/Identity_matrix). The identity matrix is one in which every value is `0` _except_ those on the main diagonal from top-left to bottom-right corner (in other words, where the offsets in each direction are equal).
