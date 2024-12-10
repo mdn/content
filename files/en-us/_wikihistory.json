@@ -53567,10 +53567,6 @@
     "modified": "2020-10-15T22:13:26.613Z",
     "contributors": ["Sheppy"]
   },
-  "Web/API/RTCIceCandidateStats/deleted": {
-    "modified": "2020-10-15T22:15:50.914Z",
-    "contributors": ["Sheppy"]
-  },
   "Web/API/RTCIceCandidateStats/port": {
     "modified": "2020-10-15T22:15:52.213Z",
     "contributors": ["Sheppy"]
