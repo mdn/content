@@ -73,7 +73,7 @@ tabbed-custom-element::part(tab):hover {
   color: white;
 }
 
-tabbed-custom-element::part(tab active) {
+tabbed-custom-element::part(tab):active {
   border-color: blue !important;
 }
 ```
