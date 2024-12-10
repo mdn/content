@@ -44,7 +44,7 @@ console.log(matrix.rotate(30).isIdentity); // output: false
 
 ## See also
 
-- {{domxref("DOMMatrix.isIdentity")}}
+- {{domxref("DOMMatrix")}} interface
 - {{domxref("CSSMatrixComponent")}} interface
 - {{domxref("CanvasRenderingContext2D")}} interface
 - CSS {{cssxref("transform-function/matrix()")}} function
