@@ -11,7 +11,7 @@ Asks the user for the permissions listed in the {{WebExtAPIRef("permissions.Perm
 
 The `Permissions` argument can contain an `origins` property, an array of [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions), a `permissions` property, an array of [API permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions), or both.
 
-Requested permissions must be defined in the [`optional_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) manifest.json key. The `origins` property can include permissions matching a subset of the hosts matched by an optional permission. For example, if `optional_permissions` include `"\*://mozilla.org/"`, then `permissions.origins` can include "https\://developer.m.zilla.org/".
+Requested permissions must be defined in the [`optional_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) manifest.json key. The `origins` property can include permissions matching a subset of the hosts matched by an optional permission. For example, if `optional_permissions` include `"*://mozilla.org/"`, then `permissions.origins` can include `"https://developer.mozilla.org/"`.
 
 Requests for optional-only permissions can't include any other optional permissions.
 
