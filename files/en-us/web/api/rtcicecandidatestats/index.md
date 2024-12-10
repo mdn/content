@@ -27,9 +27,6 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
   - : A string specifying the protocol (`tcp` or `udp`) used to transmit data on the `port`.
 - {{domxref("RTCIceCandidateStats.transportId", "transportId")}}
   - : A string uniquely identifying the transport object that was inspected in order to obtain the {{domxref("RTCTransportStats")}} associated with the candidate corresponding to these statistics.
-- {{domxref("RTCIceCandidateStats.url", "url")}} {{optional_inline}}
-  - : For local candidates, the `url` property is the {{Glossary("URL")}} of the {{Glossary("ICE")}} server from which the candidate was received.
-    This URL matches the one included in the {{domxref("RTCPeerConnectionIceEvent")}} object representing the {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} event that delivered the candidate to the local peer.
 
 ### Common instance properties
 

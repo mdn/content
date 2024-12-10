@@ -53587,10 +53587,6 @@
     "modified": "2020-10-15T22:15:52.263Z",
     "contributors": ["sideshowbarker", "Sheppy"]
   },
-  "Web/API/RTCIceCandidateStats/url": {
-    "modified": "2020-10-15T22:15:52.214Z",
-    "contributors": ["guo-sun", "Sheppy"]
-  },
   "Web/API/RTCIceParameters": {
     "modified": "2020-10-15T22:06:42.205Z",
     "contributors": ["Sheppy"]
