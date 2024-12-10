@@ -93,4 +93,4 @@ if (done) {
 
 - [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
 - [Relational operators](/en-US/docs/Web/JavaScript/Reference/Operators#relational_operators)
-- [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [Learn: Making decisions in your code — conditionals](/en-US/docs/Learn_web_development/Core/Scripting/Conditionals)

@@ -99,7 +99,7 @@ pieces, often with different MIME types; they can also be used — especially in
 scenarios — to represent multiple, separate files which are all part of the same
 transaction. They represent a **composite document**.
 
-Except for `multipart/form-data`, used in the {{HTTPMethod("POST")}} method of [HTML Forms](/en-US/docs/Learn/Forms), and `multipart/byteranges`, used with {{HTTPStatus("206")}} `Partial Content` to send part of a document, HTTP doesn't handle multipart documents in a special way: the message is transmitted to the browser (which will likely
+Except for `multipart/form-data`, used in the {{HTTPMethod("POST")}} method of [HTML Forms](/en-US/docs/Learn_web_development/Extensions/Forms), and `multipart/byteranges`, used with {{HTTPStatus("206")}} `Partial Content` to send part of a document, HTTP doesn't handle multipart documents in a special way: the message is transmitted to the browser (which will likely
 show a "Save As" window if it doesn't know how to display the document).
 
 There are two multipart types:
@@ -211,7 +211,7 @@ For more information on common media types, see the [Common MIME types](/en-US/d
 
 ### multipart/form-data
 
-The `multipart/form-data` type can be used when sending the values of a completed [HTML Form](/en-US/docs/Learn/Forms) from browser to server.
+The `multipart/form-data` type can be used when sending the values of a completed [HTML Form](/en-US/docs/Learn_web_development/Extensions/Forms) from browser to server.
 
 As a multipart document format, it consists of different parts, delimited by a boundary (a string starting with a double dash `--`).
 Each part is its own entity with its own HTTP headers, {{HTTPHeader("Content-Disposition")}}, and {{HTTPHeader("Content-Type")}} for file uploading fields.
@@ -352,4 +352,4 @@ MIME types are not the only way to convey document type information:
 
 - [Web media technologies](/en-US/docs/Web/Media)
 - [Guide to media types used on the web](/en-US/docs/Web/Media/Formats)
-- [Properly configuring server MIME types](/en-US/docs/Learn/Server-side/Configuring_server_MIME_types)
+- [Properly configuring server MIME types](/en-US/docs/Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types)

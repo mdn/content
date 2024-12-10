@@ -30,7 +30,7 @@ We also included two additional WCAG resources focused on making sites [keyboard
 
 This introductory documentation is intended to provide practical information to help you build better, more accessible websites. However, we are not lawyers, and none of this constitutes legal advice. If you are worried about the legal implications of web accessibility, we recommend that you check the specific legislation governing accessibility for the web and public resources in your country or locale and seek the advice of a qualified lawyer.
 
-[What is accessibility?](/en-US/docs/Learn/Accessibility/What_is_accessibility) and particularity the [Accessibility guidelines and the law](/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_guidelines_and_the_law) section provide more related information.
+[What is accessibility?](/en-US/docs/Learn_web_development/Core/Accessibility/What_is_accessibility) and particularity the [Accessibility guidelines and the law](/en-US/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_guidelines_and_the_law) section provide more related information.
 
 ## See also
 

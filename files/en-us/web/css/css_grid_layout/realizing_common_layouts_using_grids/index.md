@@ -605,7 +605,7 @@ This technique of using auto-placement with some rules applied to certain items 
 The best way to learn to use grid layout is to continue to build examples like the ones we have covered here. Pick something that you normally build using your framework of choice, or using floats, and see if you can build it using grid. Don't forget to find examples that are impossible to build with current methods. That might mean taking inspiration from magazines or other non-web sources. Grid Layout opens up possibilities that we have not had before, we don't need to be tied to the same old layouts to use it.
 
 - [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout)
-- [CSS Layout: Grids](/en-US/docs/Learn/CSS/CSS_layout/Grids)
+- [CSS Layout: Grids](/en-US/docs/Learn_web_development/Core/CSS_layout/Grids)
 - [A complete guide to CSS grid](https://css-tricks.com/snippets/css/complete-guide-grid/) on CSS-Tricks (2023)
 - [Grid by example](https://gridbyexample.com/)
 - [CSS grid website layout examples](https://www.quackit.com/css/grid/examples/css_grid_website_layout_examples.cfm) on quackit.com

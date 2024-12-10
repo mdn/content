@@ -328,5 +328,5 @@ An address in Japan is typically **written in one line**, in an order from the l
 - The {{htmlelement("select")}} element
 - The {{htmlelement("textarea")}} element
 - The {{htmlelement("form")}} element
-- [HTML forms](/en-US/docs/Learn/Forms)
+- [HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms)
 - All [global attributes](/en-US/docs/Web/HTML/Global_attributes)

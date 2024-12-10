@@ -105,7 +105,7 @@ span {
 
 ### Block box fragments
 
-The following example shows how block elements with box decoration look when they contain line breaks in a [multi-column layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout).
+The following example shows how block elements with box decoration look when they contain line breaks in a [multi-column layout](/en-US/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout).
 Notice how the result of `box-decoration-break: slice` would be the equivalent of the first {{htmlelement("div")}} if stacked vertically.
 
 ```css hidden

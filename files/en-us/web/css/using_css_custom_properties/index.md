@@ -25,7 +25,7 @@ The following sections describe how to use these two methods.
 
 ### Using a prefix of two dashes (`--`)
 
-A custom property prefixed with two dashes begins with `--`, followed by the property name (e.g., `--my-property`), and a property value that can be any [valid CSS value](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units).
+A custom property prefixed with two dashes begins with `--`, followed by the property name (e.g., `--my-property`), and a property value that can be any [valid CSS value](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units).
 Like any other property, this is written inside a ruleset.
 The following example shows how to create a custom property `--main-bg-color` and uses a [`<named-color>`](/en-US/docs/Web/CSS/named-color) value of `brown`:
 
@@ -438,7 +438,7 @@ div {
 
 ## Invalid custom properties
 
-Each CSS property can be assigned a defined [set of values](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units).
+Each CSS property can be assigned a defined [set of values](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units).
 If you try to assign a value to a property that is outside its set of valid values, it's considered _invalid_.
 
 When the browser encounters an invalid value for a regular CSS property (for example, a value of `16px` for the {{cssxref("color")}} property), it discards the declaration, and elements are assigned the values that they would have had if the declaration did not exist.

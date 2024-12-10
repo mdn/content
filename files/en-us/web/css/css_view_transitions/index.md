@@ -79,4 +79,4 @@ The **CSS view transitions** module defines the behavior of the [View Transition
 
 - [Pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements)
 - [Functional pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#functional_pseudo-classes)
-- [CSS building blocks: Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+- [Learn: Pseudo-classes and pseudo-elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)

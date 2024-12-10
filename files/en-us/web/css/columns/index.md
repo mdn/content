@@ -96,4 +96,4 @@ The `columns` property may be specified as one or two of the values listed below
 - {{cssxref("widows")}}
 - {{cssxref("orphans")}}
 - [Paged media](/en-US/docs/Web/CSS/CSS_paged_media)
-- [Multiple-column Layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- [Learn: Multiple-column Layout](/en-US/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)

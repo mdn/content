@@ -198,7 +198,7 @@ An example HTTP request:
 Requests consist of the following elements:
 
 - An HTTP [method](/en-US/docs/Web/HTTP/Methods), usually a verb like {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}}, or a noun like {{HTTPMethod("OPTIONS")}} or {{HTTPMethod("HEAD")}} that defines the operation the client wants to perform.
-  Typically, a client wants to fetch a resource (using `GET`) or post the value of an [HTML form](/en-US/docs/Learn/Forms) (using `POST`), though more operations may be needed in other cases.
+  Typically, a client wants to fetch a resource (using `GET`) or post the value of an [HTML form](/en-US/docs/Learn_web_development/Extensions/Forms) (using `POST`), though more operations may be needed in other cases.
 - The path of the resource to fetch; the URL of the resource stripped from elements that are obvious from the context, for example without the {{Glossary("protocol")}} (`http://`), the {{Glossary("domain")}} (here, `developer.mozilla.org`), or the TCP {{Glossary("port")}} (here, `80`).
 - The version of the HTTP protocol.
 - Optional [headers](/en-US/docs/Web/HTTP/Headers) that convey additional information for the servers.

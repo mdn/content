@@ -36,6 +36,6 @@ For more information about reading and writing properties, see [working with obj
 ## See also
 
 - [Property (programming)](<https://en.wikipedia.org/wiki/Property_(programming)>) on Wikipedia
-- [Introduction to object-oriented JavaScript](/en-US/docs/Learn/JavaScript/Objects)
+- [Introduction to object-oriented JavaScript](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)
 - [Object properties](/en-US/docs/Web/JavaScript/Data_structures#properties)
 - [Enumerability and ownership of properties](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
