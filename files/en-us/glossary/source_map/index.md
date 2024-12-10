@@ -12,7 +12,7 @@ Code executed by the browser is often transformed in some way from the original 
 
 - To make delivering code from the server more efficient by combining and minifying source files.
 - To support older browsers by transforming modern features into older equivalents.
-- To use more feature-rich languages that browsers don't understand, like {{Glossary("TypeScript")}} or [Sass](https://sass-lang.com/).
+- To use languages that browsers don't support, like {{Glossary("TypeScript")}} or [Sass](https://sass-lang.com/).
 
 In these situations, debugging the original source is much easier than the source in the transformed state that the browser has downloaded.
 
@@ -29,7 +29,8 @@ ul {
 }
 ```
 
-During the build process, before delivering the CSS to the browser, the SCSS is transformed into CSS and a source map file `index.css.map` is generated and linked from the CSS file in the comment at the end:
+During the build process, the SCSS is transformed into CSS.
+A source map file `index.css.map` is generated and linked to from the CSS in a comment at the end:
 
 ```css
 ul {
