@@ -18,7 +18,7 @@ A string indicating the DTLS role.
 This will be one of:
 
 - `client`
-  - : The peer will initiate the DTLS handshake.
+  - : The peer initiated the DTLS handshake.
 - `server`
   - : The peer waited for the DTLS handshake.
 - `unknown`
