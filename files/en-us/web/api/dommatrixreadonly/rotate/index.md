@@ -39,7 +39,7 @@ Returns a [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix).
 ## Examples
 
 ```js
-const matrix = new DOMMatrixReadOnly(); // create a matrix
+const matrix = new DOMMatrix(); // create a matrix
 console.log(matrix.toString()); // output: "matrix(1, 0, 0, 1, 0, 0)"
 const rotated = matrix.rotate(30); // rotate it and assign to rotated
 console.log(matrix.toString()); // output: "matrix(1, 0, 0, 1, 0, 0)" (original value)
