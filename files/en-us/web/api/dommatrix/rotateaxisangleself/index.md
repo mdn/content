@@ -1,0 +1,77 @@
+---
+title: "DOMMatrix: rotateAxisAngleSelf() method"
+short-title: rotateAxisAngleSelf()
+slug: Web/API/DOMMatrix/rotateAxisAngleSelf
+page-type: web-api-instance-method
+browser-compat: api.DOMMatrix.rotateAxisAngleSelf
+---
+
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
+
+The `rotateAxisAngleSelf()` method of the {{domxref("DOMMatrix")}} interface is a transformation method that returns a new {{domxref("DOMMatrix")}} created by rotating the source matrix by the given vector and angle. The original matrix is not altered.
+
+To rotate a matrix without mutating it, see {{domxref("DOMMatrix.rotateAxisAngleSelf()")}}
+
+## Syntax
+
+```js-nolint
+DOMMatrix.rotateAxisAngleSelf()
+DOMMatrix.rotateAxisAngleSelf(rotX)
+DOMMatrix.rotateAxisAngleSelf(rotX, rotY)
+DOMMatrix.rotateAxisAngleSelf(rotX, rotY, rotZ)
+DOMMatrix.rotateAxisAngleSelf(rotX, rotY, rotZ, angle)
+```
+
+### Parameters
+
+- `rotX`
+  - : A number; the x-coordinate of the vector denoting the axis of rotation
+- `rotY` {{optional_inline}}
+  - : A number; the y-coordinate of the vector denoting the axis of rotation. If undefined, the `rotX` value is used. If non-zero, [`is2D`](/en-US/docs/Web/API/DOMMatrix#is2d) is false.
+- `rotZ` {{optional_inline}}
+  - : A number; the z-coordinate of the vector denoting the axis of rotation. If undefined, the `rotX` value is used. If non-zero, [`is2D`](/en-US/docs/Web/API/DOMMatrix#is2d) is false.
+- `angle` {{optional_inline}}
+  - : A number; the angle of the rotation around the axis vector, in degrees.
+
+### Return value
+
+Returns itself; the [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix) with the axis-rotation applied.
+
+## Examples
+
+```js
+const matrix = new DOMMatrix(); // create a matrix
+console.log(matrix.rotateAxisAngleSelf(10, 20, 30, 45).toString());
+// "matrix3d(0.728, 0.609, -0.315, 0, -0.525, 0.791, 0.315, 0, 0.441, -0.063, 0.895, 0, 0, 0, 0, 1)"
+console.log(matrix.toString());
+// "matrix3d(0.728, 0.609, -0.315, 0, -0.525, 0.791, 0.315, 0, 0.441, -0.063, 0.895, 0, 0, 0, 0, 1)"
+```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- {{domxref("DOMMatrixReadOnly.rotateAxisAngle()")}}
+- {{domxref("DOMMatrix.rotateSelf()")}}
+- {{domxref("DOMMatrix.rotateFromVectorSelf()")}}
+- CSS {{cssxref("transform")}} property
+- CSS {{cssxref("rotate")}} property
+- CSS {{cssxref("transform-function")}} functions
+  - {{cssxref("transform-function/rotate", "rotate()")}}
+  - {{cssxref("transform-function/rotate3d", "rotate3d()")}}
+  - {{cssxref("transform-function/rotateX", "rotateX()")}}
+  - {{cssxref("transform-function/rotateY", "rotateY()")}}
+  - {{cssxref("transform-function/rotateZ", "rotateZ()")}}
+- [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms) module
+- SVG [`transform`](/en-US/docs/Web/SVG/Attribute/transform) attribute
+- {{domxref("CanvasRenderingContext2D")}} interface methods
+  - {{domxref("CanvasRenderingContext2D.rotate()")}}
+  - {{domxref("CanvasRenderingContext2D.transform()")}}
+  - {{domxref("CanvasRenderingContext2D.setTransform()")}}
+  - {{domxref("CanvasRenderingContext2D.resetTransform()")}}
