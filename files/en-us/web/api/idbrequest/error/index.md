@@ -14,28 +14,45 @@ request.
 
 ## Value
 
-A {{domxref("DOMException")}} or `null` if there is no error. The following error names are returned
-in the exception object:
+A {{domxref("DOMException")}} or `null` if there is no error. The exception object will have one of the following names, depending on what caused the error.
+
+These errors are asynchronous, meaning that they can't be handled via [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch). However, if an `IDBRequest` has an {{domxref("IDBRequest.error", "error")}} event handler assigned, you can still inspect such errors by querying the request's `error` property via the event object, for example [`event.target.error.name`](/en-US/docs/Web/API/DOMException/name) or [`event.target.error.message`](/en-US/docs/Web/API/DOMException/message).
 
 - `AbortError`
   - : If you abort the transaction, then all requests still in progress receive this error.
 - `ConstraintError`
-  - : If you insert data that doesn't conform to a constraint.
-    It's an exception type for creating stores and indexes.
-    You get this error, for example, if you try to add a new key that already exists in the record.
+  - : Received if you insert data that doesn't conform to a constraint when populating stores.
+    For example, you will get this error if you try to add a new key that already exists in the store.
+- `NotReadableError`
+  - : Received for unrecoverable read failure errors. Specifically, this error signals that the record is present in the database, but the value could not be retrieved. See [Transient and unrecoverable read errors](#transient_and_unrecoverable_read_errors) below for more details.
 - `QuotaExceededError`
-  - : If you run out of disk quota and the user declined to grant you more space.
+  - : Received if the application runs out of disk quota. In some cases, browsers prompt the user for more space, and the error is received if they decline the request. In other cases, the browser uses heuristics to determine whether more space can be assigned.
 - `UnknownError`
-  - : If the operation failed for reasons unrelated to the database itself.
-    A failure due to disk IO errors is such an example.
+  - : Received for transient read failure errors, including general disk IO errors. See [Transient and unrecoverable read errors](#transient_and_unrecoverable_read_errors) below for more details.
 - `VersionError`
-  - : If you try to open a database with a version lower than the one it already has.
+  - : If you try to open a database with a version lower than the one it already has, this error is received.
 
-In addition to the error codes sent to the {{ domxref("IDBRequest") }} object,
-asynchronous operations can also raise exceptions. The list describes problems that
-could occur when the request is being executed, but you might also encounter other
-problems when the request is being made. For example, if the result is accessed
-while the request is not completed, the `InvalidStateError` exception is thrown.
+### Transient and unrecoverable read errors
+
+Read errors occur when an IndexedDB stores large blob values (for example, audio files for an offline podcast app), and then subsequently fails to read those values even though the associated records are still in the database.
+
+This category of errors can occur due to:
+
+- Transient causes such as low memory, represented in the spec by the `UnknownError` type.
+- Unrecoverable causes such as source blob files being deleted, represented in the spec by the `NotReadableError` type.
+
+> [!NOTE]
+> The errors that represent these cases may vary across browsers. Check the [browser compatibility information](#browser_compatibility) for more details.
+
+Such errors can manifest in different ways depending on browser, operating system, etc. For example, different IndexedDB implementations store large values in different ways. In Chrome, large IndexedDB values are not stored directly in the underlying database; instead, they are stored as separate files that are accessed via a reference stored in the database. It has been observed that these separate files can end up being deleted because they show up as opaque files to users when they are using disk space recovery programs, resulting in unrecoverable read errors when the IndexedDB is next accessed.
+
+Possible corrective actions for such cases might include notifying the user, deleting the entry from the database, then attempting to re-fetch the data from the server.
+
+### Exceptions
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown when attempting to access the property if the request
+    is not completed, and therefore the error is not available.
 
 ## Examples
 
@@ -78,7 +95,8 @@ objectStoreTitleRequest.onsuccess = () => {
 objectStoreTitleRequest.onerror = () => {
   // If an error occurs with the request, log what it is
   console.log(
-    `There has been an error with retrieving your data: ${objectStoreTitleRequest.error}`,
+    `There has been an error with retrieving your data:
+    ${objectStoreTitleRequest.error.name}: ${objectStoreTitleRequest.error.message}`,
   );
 };
 ```
