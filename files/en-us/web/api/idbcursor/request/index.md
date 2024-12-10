@@ -14,6 +14,11 @@ The **`request`** read-only property of the {{domxref("IDBCursor")}} interface r
 
 An {{domxref("IDBRequest")}} object instance.
 
+### Exceptions
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the cursor is already advancing.
+
 ## Examples
 
 When you open a cursor, the `request` property is then available on that cursor object, to tell you what request object the cursor originated from. For example:

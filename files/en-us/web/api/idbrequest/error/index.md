@@ -10,32 +10,38 @@ browser-compat: api.IDBRequest.error
 
 The **`error`** read-only property of the
 {{domxref("IDBRequest")}} interface returns the error in the event of an unsuccessful
-request.
+request. If the request is not completed, the error is not available and an `InvalidStateError` exception is
+thrown.
 
 ## Value
 
-A {{domxref("DOMException")}} or `null` if there is no error. The following error names are returned
-in the exception object:
+A {{domxref("DOMException")}} or `null` if there is no error. The exception object will have one of the following names, depending on what caused the error.
+
+These errors are asynchronous, meaning that they can't be handled via [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch). However, if an `IDBRequest` has an {{domxref("IDBRequest.error", "error")}} event handler assigned, you can still inspect such errors by querying the request's `error` property via the event object, for example [`event.target.error.name`](/en-US/docs/Web/API/DOMException/name) or [`event.target.error.message`](/en-US/docs/Web/API/DOMException/message).
 
 - `AbortError`
   - : If you abort the transaction, then all requests still in progress receive this error.
 - `ConstraintError`
-  - : If you insert data that doesn't conform to a constraint.
-    It's an exception type for creating stores and indexes.
-    You get this error, for example, if you try to add a new key that already exists in the record.
+  - : Received if you insert data that doesn't conform to a constraint when creating stores and indexes.
+    For example, you will get this error if you try to add a new key that already exists in the record.
+- `DataError` or `UnknownError`
+  - : Received for transient read failure errors, including general disk IO errors. See "Large value read failure errors" below for more details.
+- `NotFoundError` or `NotReadableError`
+  - : Received for unrecoverable read failure errors. See "Large value read failure errors" below for more details.
 - `QuotaExceededError`
-  - : If you run out of disk quota and the user declined to grant you more space.
-- `UnknownError`
-  - : If the operation failed for reasons unrelated to the database itself.
-    A failure due to disk IO errors is such an example.
+  - : Received if the application runs out of disk quota. In some cases, browsers prompt the user for more space, and the error is received if they decline the request. In other cases, the browser uses heuristics to determine whether more space can be assigned.
 - `VersionError`
-  - : If you try to open a database with a version lower than the one it already has.
+  - : If you try to open a database with a version lower than the one it already has, this error is received.
 
-In addition to the error codes sent to the {{ domxref("IDBRequest") }} object,
-asynchronous operations can also raise exceptions. The list describes problems that
-could occur when the request is being executed, but you might also encounter other
-problems when the request is being made. For example, if the result is accessed
-while the request is not completed, the `InvalidStateError` exception is thrown.
+### Large value read failure errors
+
+Large value read failure errors occur when an IndexedDB stores large blob values (for example, audio files for an offline podcast app), and then subsequently fails to read those values. This category of errors can occur due to transient causes such as low memory and unrecoverable causes such as source blob files being deleted.
+
+Different IndexedDB implementations store large values in different ways. For example, in Chrome, large IndexedDB values are not stored directly in the underlying database; instead, they are stored as separate files that are accessed via a reference stored in the database. It has been observed that these separate files can end up being deleted because they show up as opaque files to users when they are using disk space recovery programs.
+
+Possible corrective actions for such cases might include notifying the user, deleting the entry from the database, then attempting to re-fetch the data from the server.
+
+More recent browser versions have changed the error types and improved the error messages to help developers distinguish between transient and unrecoverable cases.
 
 ## Examples
 
@@ -78,7 +84,8 @@ objectStoreTitleRequest.onsuccess = () => {
 objectStoreTitleRequest.onerror = () => {
   // If an error occurs with the request, log what it is
   console.log(
-    `There has been an error with retrieving your data: ${objectStoreTitleRequest.error}`,
+    `There has been an error with retrieving your data:
+    ${objectStoreTitleRequest.error.name}: ${objectStoreTitleRequest.error.message}`,
   );
 };
 ```
