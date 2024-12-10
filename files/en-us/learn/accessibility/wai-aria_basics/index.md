@@ -256,8 +256,176 @@ There is an additional consideration here — only the bit of text that updates 
 
 The `aria-atomic="true"` attribute tells screen readers to read out the entire element contents as one atomic unit, not just the bits that were updated.
 
-> [!NOTE]
-> You can see the finished example at [`aria-live.html`](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-live.html) ([see it running live](https://mdn.github.io/learning-area/accessibility/aria/aria-live.html)).
+#### Finished example
+
+```html live-sample___aria-live
+<section aria-live="assertive" aria-atomic="true">
+  <h1>Random quote</h1>
+  <blockquote>
+    <p></p>
+  </blockquote>
+</section>
+```
+
+```css live-sample___aria-live
+html {
+  font-family: sans-serif;
+}
+
+h1 {
+  letter-spacing: 2px;
+}
+
+p {
+  line-height: 1.6;
+}
+
+section {
+  padding: 10px;
+  width: calc(100% - 20px);
+  background: #666;
+  text-shadow: 1px 1px 1px black;
+  color: white;
+  min-height: 160px;
+}
+```
+
+```js hidden live-sample___aria-live
+let quotes = [
+  {
+    quote: "Life is about making an impact, not making an income.",
+    author: "Kevin Kruse",
+  },
+  {
+    quote: "Whatever the mind of man can conceive and believe, it can achieve.",
+    author: "Napoleon Hill",
+  },
+  {
+    quote: "Strive not to be a success, but rather to be of value.",
+    author: "Albert Einstein",
+  },
+  {
+    quote:
+      "Two roads diverged in a wood, and I—I took the one less traveled by, And that has made all the difference",
+    author: "Robert Frost",
+  },
+  {
+    quote: "I attribute my success to this: I never gave or took any excuse.",
+    author: "Florence Nightingale",
+  },
+  {
+    quote: "You miss 100% of the shots you don’t take.",
+    author: "Wayne Gretzky",
+  },
+  {
+    quote:
+      "I’ve missed more than 9000 shots in my career. I’ve lost almost 300 games. 26 times I’ve been trusted to take the game winning shot and missed. I’ve failed over and over and over again in my life. And that is why I succeed.",
+    author: "Michael Jordan",
+  },
+  {
+    quote:
+      "The most difficult thing is the decision to act, the rest is merely tenacity.",
+    author: "Amelia Earhart",
+  },
+  {
+    quote: "Every strike brings me closer to the next home run.",
+    author: "Babe Ruth",
+  },
+  {
+    quote: "Definiteness of purpose is the starting point of all achievement.",
+    author: "W. Clement Stone",
+  },
+  {
+    quote: "Life isn’t about getting and having, it’s about giving and being.",
+    author: "Kevin Kruse",
+  },
+  {
+    quote: "Life is what happens to you while you’re busy making other plans.",
+    author: "John Lennon",
+  },
+  {
+    quote: "We become what we think about.",
+    author: "Earl Nightingale",
+  },
+  {
+    quote:
+      "Twenty years from now you will be more disappointed by the things that you didn’t do than by the ones you did do, so throw off the bowlines, sail away from safe harbor, catch the trade winds in your sails.  Explore, Dream, Discover.",
+    author: "Mark Twain",
+  },
+  {
+    quote: "Life is 10% what happens to me and 90% of how I react to it.",
+    author: "Charles Swindoll",
+  },
+  {
+    quote:
+      "The most common way people give up their power is by thinking they don’t have any.",
+    author: "Alice Walker",
+  },
+  {
+    quote: "The mind is everything. What you think you become.",
+    author: "Buddha",
+  },
+  {
+    quote:
+      "The best time to plant a tree was 20 years ago. The second best time is now.",
+    author: "Chinese Proverb",
+  },
+  {
+    quote: "An unexamined life is not worth living.",
+    author: "Socrates",
+  },
+  {
+    quote: "Eighty percent of success is showing up.",
+    author: "Woody Allen",
+  },
+  {
+    quote:
+      "Your time is limited, so don’t waste it living someone else’s life.",
+    author: "Steve Jobs",
+  },
+  {
+    quote: "Winning isn’t everything, but wanting to win is.",
+    author: "Vince Lombardi",
+  },
+  {
+    quote:
+      "I am not a product of my circumstances. I am a product of my decisions.",
+    author: "Stephen Covey",
+  },
+  {
+    quote:
+      "Every child is an artist. The problem is how to remain an artist once he grows up.",
+    author: "Pablo Picasso",
+  },
+  {
+    quote:
+      "You can never cross the ocean until you have the courage to lose sight of the shore.",
+    author: "Christopher Columbus",
+  },
+  {
+    quote:
+      "I love deadlines. I love the whooshing noise they make as they go by.",
+    author: "Douglas Adams",
+  },
+];
+```
+
+```js live-sample___aria-live
+const quotePara = document.querySelector("section p");
+
+let quoteJson = quotes; // the list of quotes is hidden but can be seen when clicking play
+let numOfQuotes = quoteJson.length;
+console.log(numOfQuotes);
+
+window.setInterval(showQuote, 10000);
+
+function showQuote() {
+  let random = Math.floor(Math.random() * numOfQuotes);
+  quotePara.textContent = `${quoteJson[6].quote} -- ${quoteJson[6].author}`;
+}
+```
+
+{{EmbedLiveSample("aria-live", "100", "180")}}
 
 > [!NOTE]
 > The [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) property is also quite useful for controlling what gets read out when a live region is updated. You can for example only get content additions or removals read out.
