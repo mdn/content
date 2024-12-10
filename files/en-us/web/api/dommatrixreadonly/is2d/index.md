@@ -43,7 +43,7 @@ console.log(matrix.rotate(10, 20, 1).is2D); // output: false
 ## See also
 
 - {{domxref("CSSTransformValue.is2D")}}
-- {{domxref("CSSTransformComponent.is2D)}}
+- {{domxref("CSSTransformComponent.is2D")}}
 - CSS {{cssxref("transform-function")}} functions
 - CSS {{cssxref("transform")}} property
 - [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms) module
