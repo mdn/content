@@ -1,0 +1,32 @@
+---
+title: "SVGAnimatedLengthList: baseVal property"
+short-title: baseVal
+slug: Web/API/SVGAnimatedLengthList/baseVal
+page-type: web-api-instance-property
+browser-compat: api.SVGAnimatedLengthList.baseVal
+---
+
+{{APIRef("SVG")}}
+
+The **`baseVal`** read-only property of the {{domxref("SVGAnimatedLengthList")}} interface represents the base (non-animated) value of an animatable attribute that accepts a list of [`<length>`](/en-US/docs/Web/SVG/Content_type#length), [`<percentage>`](/en-US/docs/Web/SVG/Content_type#percentage), or [`<number>`](/en-US/docs/Web/SVG/Content_type#number) values.
+
+This property provides access to the initial or static value of the associated attribute as a live {{domxref("SVGLengthList")}} object, which can be modified to update the attribute.
+
+## Value
+
+An {{domxref("SVGLengthList")}} object representing the base value of the attribute.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- [`<length>`](/en-US/docs/Web/SVG/Content_type#length)
+- [`<percentage>`](/en-US/docs/Web/SVG/Content_type#percentage)
+- [`<number>`](/en-US/docs/Web/SVG/Content_type#number)
+- {{domxref("SVGLengthList")}}
