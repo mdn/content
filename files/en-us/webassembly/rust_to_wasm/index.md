@@ -15,7 +15,7 @@ There are two main use cases for Rust and WebAssembly:
 - Build an entire application — an entire web app based in Rust.
 - Build a part of an application — using Rust in an existing JavaScript frontend.
 
-For now, the Rust team is focusing on the latter case, and so that's what we cover here. For the former case, check out projects like [`yew`](https://github.com/yewstack/yew).
+For now, the Rust team is focusing on the latter case, and so that's what we cover here. For the former case, check out projects like [`yew`](https://github.com/yewstack/yew) and [leptos](https://github.com/leptos-rs/leptos).
 
 In this tutorial, we build a package using `wasm-pack`, a tool for building JavaScript packages in Rust. This package will contain only WebAssembly and JavaScript code, and so the users of the package won't need Rust installed. They may not even notice that it's written in Rust.
 
@@ -85,7 +85,7 @@ Let's put this code into `src/lib.rs` instead:
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
-extern {
+extern "C" {
     pub fn alert(s: &str);
 }
 
@@ -123,7 +123,7 @@ The next part looks like this:
 
 ```rust
 #[wasm_bindgen]
-extern {
+extern "C" {
     pub fn alert(s: &str);
 }
 ```
@@ -190,13 +190,13 @@ Now that we've got everything set up, let's build the package.
 We'll be using the generated code in a native ES module and in Node.js.
 For this purpose, we'll use the [`--target` argument](https://rustwasm.github.io/docs/wasm-pack/commands/build.html#target) in `wasm-pack build` to specify what kind of WebAssembly and JavaScript is generated.
 
-Firstly, run the following command:
+Firstly, run the following command inside your `hello-wasm` directory:
 
 ```bash
 wasm-pack build --target web
 ```
 
-This does a number of things (and they take a lot of time, especially the first time you run `wasm-pack`). To learn about them in detail, check out [this blog post on Mozilla Hacks](https://hacks.mozilla.org/2018/04/hello-wasm-pack/). In short, `wasm-pack build`:
+This does a number of things. To learn about them in detail, check out [this blog post on Mozilla Hacks](https://hacks.mozilla.org/2018/04/hello-wasm-pack/). In short, `wasm-pack build`:
 
 1. Compiles your Rust code to WebAssembly.
 2. Runs `wasm-bindgen` on that WebAssembly, generating a JavaScript file that wraps up that WebAssembly file into a module the browser can understand.
@@ -205,10 +205,6 @@ This does a number of things (and they take a lot of time, especially the first 
 5. Copies your `README.md` (if you have one) into the package.
 
 The end result? You have a package inside the `pkg` directory.
-
-#### A digression about code size
-
-If you check out the generated WebAssembly code size, it may be a few hundred kilobytes. We haven't instructed Rust to optimize for size at all, and doing so cuts down on the size _a lot_. This is beyond the scope of this tutorial, but if you'd like to learn more, check out the Rust WebAssembly Working Group's documentation on [Shrinking .wasm Size](https://rustwasm.github.io/book/game-of-life/code-size.html#shrinking-wasm-size).
 
 ## Using the package on the web
 
@@ -282,12 +278,11 @@ We now have an npm package, written in Rust, but compiled to WebAssembly. It's r
 
 Let's build a website that uses our new npm package. Many people use npm packages through various bundler tools, and we'll be using one of them, `webpack`, in this tutorial. It's only a bit complex, and shows a realistic use-case.
 
-Let's move back out of the `pkg` directory, and make a new directory, `site`, to try this out.
+Let's make a new directory, `site`, inside your `hello-wasm` directory to try this out.
 We haven't published the package to the npm registry yet, so we can install it from a local version using `npm i /path/to/package`.
 You may use [`npm link`](https://docs.npmjs.com/cli/v10/commands/npm-link/), but installing from a local path is convenient for the purposes of this demo:
 
 ```bash
-cd ..
 mkdir site && cd site
 npm i ../pkg
 ```
@@ -295,7 +290,7 @@ npm i ../pkg
 Install the `webpack` dev dependencies:
 
 ```bash
-npm i -D webpack@5 webpack-cli@5 webpack-dev-server@4 copy-webpack-plugin@11
+npm i -D webpack@5 webpack-cli@5 webpack-dev-server@5 copy-webpack-plugin@12
 ```
 
 Next, we need to configure webpack. Create `webpack.config.js` and put the following in it:
@@ -334,10 +329,10 @@ In your `package.json`, you can add `build` and `serve` scripts that will run we
     "hello-wasm": "file:../pkg"
   },
   "devDependencies": {
-    "copy-webpack-plugin": "^11.0.0",
-    "webpack": "^5.89.0",
+    "copy-webpack-plugin": "^12.0.2",
+    "webpack": "^5.97.1",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.1"
+    "webpack-dev-server": "^5.1.0"
   }
 }
 ```
@@ -370,9 +365,9 @@ Finally, we need to add a HTML file to load the JavaScript. Create an `index.htm
 The `hello-wasm/site` directory should look like this:
 
 ```plain
+├── node_modules
 ├── index.html
 ├── index.js
-├── node_modules
 ├── package-lock.json
 ├── package.json
 └── webpack.config.js
@@ -386,19 +381,18 @@ npm run serve
 
 This starts a web server and opens `http://localhost:8080`. You should see an alert box appears on the screen, with `Hello, WebAssembly with npm!` in it. We've successfully used the Rust module with npm!
 
-If you would like to use your WebAssembly outside of local development, you can publish the package using the `pack` and `publish` commands:
+If you would like to use your WebAssembly outside of local development, you can publish the package using the `pack` and `publish` commands inside your `hello-wasm` directory:
 
 ```bash
 wasm-pack pack
 npm notice
 npm notice 📦  hello-wasm@0.1.0
-npm notice === Tarball Contents ===
-npm notice 1.6kB  README.md
-npm notice 2.5kB  hello_wasm_bg.js
-npm notice 17.5kB hello_wasm_bg.wasm
-npm notice 115B   hello_wasm.d.ts
-npm notice 157B   hello_wasm.js
-npm notice 531B   package.json
+npm notice Tarball Contents
+npm notice 2.9kB hello_wasm_bg.js
+npm notice 16.7kB hello_wasm_bg.wasm
+npm notice 85B hello_wasm.d.ts
+npm notice 182B hello_wasm.js
+npm notice 549B package.json
 ...
 hello-wasm-0.1.0.tgz
 [INFO]: 🎒  packed up your package!
