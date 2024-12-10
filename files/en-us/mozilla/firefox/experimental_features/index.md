@@ -218,7 +218,6 @@ This feature renders control characters (Unicode category Cc) other than _tab_ (
     <tr>
       <th>Preference name</th>
       <td colspan="2">
-        <code>layout.css.control-characters.enabled</code> or
         <code>layout.css.control-characters.visible</code>
       </td>
     </tr>
@@ -945,47 +944,7 @@ The {{CSSXRef(":has-slotted")}} [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classe
 
 ## SVG
 
-### SVGPathSeg APIs
-
-The SVGPathSeg APIs are being unshipped, and have been placed behind a preference.
-This includes: `SVGPathSegList`, [SVGPathElement.getPathSegAtLength()](/en-US/docs/Web/API/SVGPathElement), `SVGAnimatedPathData`.
-(See [Firefox bug 1388931](https://bugzil.la/1388931) for more details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version removed</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>97</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>97</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>97</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>97</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.svg.pathSeg.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
+None.
 
 ## JavaScript
 
@@ -1209,46 +1168,6 @@ This subset of the API has been implemented:
 </table>
 
 ### Graphics: Canvas, WebGL, and WebGPU
-
-#### Hit regions
-
-Whether the mouse coordinates are within a particular area on the canvas is a common problem to solve. The hit region API allows you to define an area of your canvas and provides another possibility to expose interactive content on a canvas to accessibility tools.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>30</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>30</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>30</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>30</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>canvas.hitregions.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
 
 #### WebGL: Draft extensions
 
