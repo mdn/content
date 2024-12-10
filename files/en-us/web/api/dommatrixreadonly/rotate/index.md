@@ -30,7 +30,7 @@ DOMMatrixReadOnly.rotate(rotX, rotY, rotZ)
 - `rotZ` {{optional_inline}}
   - : A number; the z-coordinate of the vector denoting the axis of rotation
 
-If only one parameter is passed, `rotZ` is the value of `rotX`, and both `rotx` and `rotY` are `0`, and the rotation is a 2D rotation. If `rotX` and `rotY` are non-zero, the [`is_2d`](/en-US/docs/Web/API/DOMMatrixReadOnly#is2d) is `false`.
+If only one parameter is passed, `rotZ` is the value of `rotX`, and both `rotx` and `rotY` are `0`, and the rotation is a 2D rotation. If `rotX` and `rotY` are non-zero, the [`is_2D`](/en-US/docs/Web/API/DOMMatrixReadOnly/is2D) property is `false`.
 
 ### Return value
 
