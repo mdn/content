@@ -15,16 +15,18 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 
 - {{domxref("RTCIceCandidateStats.address", "address")}} {{optional_inline}}
   - : A string containing the address of the candidate. This value may be an IPv4 address, an IPv6 address, or a fully-qualified domain name. This property was previously named `ip` and only accepted IP addresses.
+    Corresponds to {{domxref("RTCIceCandidate.address")}}.
 - {{domxref("RTCIceCandidateStats.candidateType", "candidateType")}}
   - : A string matching one of the values in [`RTCIceCandidate.type`](/en-US/docs/Web/API/RTCIceCandidate/type#value), indicating what kind of candidate the object provides statistics for.
-- {{domxref("RTCIceCandidateStats.deleted", "deleted")}} {{optional_inline}}
-  - : A Boolean value indicating whether or not the candidate has been released or deleted; the default value is `false`. For local candidates, its value is `true` if the candidate has been deleted or released. For host candidates, `true` means that any network resources (usually a network socket) associated with the candidate have already been released. For {{Glossary("TURN")}} candidates, the TURN allocation is no longer active for deleted candidates. This property is not present for remote candidates.
 - {{domxref("RTCIceCandidateStats.port", "port")}} {{optional_inline}}
   - : The network port number used by the candidate.
+    Corresponds to {{domxref("RTCIceCandidate.port")}}.
 - {{domxref("RTCIceCandidateStats.priority", "priority")}} {{optional_inline}}
-  - : The candidate's priority, corresponding to {{domxref("RTCIceCandidate.priority")}}.
+  - : The candidate's priority.
+    Corresponds to {{domxref("RTCIceCandidate.priority")}}.
 - {{domxref("RTCIceCandidateStats.protocol", "protocol")}} {{optional_inline}}
   - : A string specifying the protocol (`tcp` or `udp`) used to transmit data on the `port`.
+    Corresponds to {{domxref("RTCIceCandidate.protocol")}}.
 - {{domxref("RTCIceCandidateStats.transportId", "transportId")}}
   - : A string uniquely identifying the transport object that was inspected in order to obtain the {{domxref("RTCTransportStats")}} associated with the candidate corresponding to these statistics.
 
