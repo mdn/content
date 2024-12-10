@@ -44,8 +44,8 @@ console.log(matrix.rotate(10, 20, 1).is2D); // output: false
 
 - {{domxref("CSSTransformValue.is2D")}}
 - {{domxref("CSSTransformComponent.is2D)}}
-- CSS {{cssxref("transform")}} property
 - CSS {{cssxref("transform-function")}} functions
+- CSS {{cssxref("transform")}} property
 - [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms) module
 - SVG [`transform`](/en-US/docs/Web/SVG/Attribute/transform) attribute
-- {{domxref("CanvasRenderingContext2D")}} interface methods
+- {{domxref("CanvasRenderingContext2D")}} interface
