@@ -7,9 +7,9 @@ browser-compat: css.selectors.details-content
 
 {{CSSRef}}
 
-The **`::details-content`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the contents of an {{HTMLElement("details") }}.
+The **`::details-content`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the expandable/collapsible contents of a {{HTMLElement("details")}} element.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-element-details-content.html", "tabbed-shorter")}}
+[//]: # '{{EmbedInteractiveExample("pages/tabbed/pseudo-element-details-content.html", "tabbed-shorter")}}'
 
 ## Syntax
 
@@ -38,6 +38,40 @@ details::details-content {
 }
 ```
 
+#### Result
+
+{{EmbedLiveSample("Basic_example", "100%", 150)}}
+
+### Transition example
+
+#### HTML
+
+```html
+<details>
+  <summary>Click me</summary>
+  <p>Here is some content</p>
+</details>
+```
+
+#### CSS
+
+```css
+details::details-content {
+  opacity: 0;
+  transition:
+    content-visibility 300ms allow-discrete,
+    opacity 300ms;
+}
+
+details[open]::details-content {
+  opacity: 1;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("Transition_example", "100%", 150)}}
+
 ## Specifications
 
 {{Specifications}}
@@ -49,3 +83,4 @@ details::details-content {
 ## See also
 
 - [`<details>`](/en-US/docs/Web/HTML/Element/details)
+- [`<summary>`](/en-US/docs/Web/HTML/Element/summary)
