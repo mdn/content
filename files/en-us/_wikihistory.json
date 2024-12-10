@@ -53583,10 +53583,6 @@
     "modified": "2020-10-15T22:12:42.943Z",
     "contributors": ["Sheppy"]
   },
-  "Web/API/RTCIceCandidateStats/relayProtocol": {
-    "modified": "2020-10-15T22:12:42.881Z",
-    "contributors": ["Sheppy"]
-  },
   "Web/API/RTCIceCandidateStats/transportId": {
     "modified": "2020-10-15T22:15:52.263Z",
     "contributors": ["sideshowbarker", "Sheppy"]
