@@ -161,8 +161,8 @@ The following example contains two `X-Robots-Tag` headers which ask that `google
 ```http
 HTTP/1.1 200 OK
 Date: Tue, 03 Dec 2024 17:08:49 GMT
-X-Robots-Tag: googlebot: nofollow
 X-Robots-Tag: BadBot: noindex, nofollow
+X-Robots-Tag: googlebot: nofollow
 ```
 
 In the response below, the same indexing rules are defined, but in a single header.
