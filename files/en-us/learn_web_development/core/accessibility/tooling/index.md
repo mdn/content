@@ -379,15 +379,15 @@ Many other assistive technology types exist, such as:
 
 The following list provides a checklist for you to follow to make sure you've carried out the recommended accessibility testing for your project:
 
-1. Make sure your HTML is as semantically correct as possible. [Validating it](/en-US/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML#html_validation) is a good start, as is using an [Auditing tool](#auditing_tools).
+1. Make sure your HTML is as semantically correct as possible. [Validating it](/en-US/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML#html_validation) is a good start, as is using an [auditing tool](#auditing_tools).
 2. Check that your content makes sense when the CSS is turned off.
-3. Make sure your functionality is [keyboard accessible](#using_native_keyboard_accessibility). Test using Tab, Return/Enter, etc.
-4. Make sure your non-text content has [text alternatives](#text_alternatives). An [Auditing tool](#auditing_tools) is good for catching such problems.
-5. Make sure your site's [color contrast](#color_and_color_contrast) is acceptable, using a suitable checking tool.
-6. Make sure [hidden content](#hiding_content) is visible by screen readers.
+3. Make sure your functionality is keyboard accessible (see [UI controls](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#ui_controls) for more details). Test using Tab, Return/Enter, etc.
+4. Make sure your non-text content has [text alternatives](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#text_alternatives). An [auditing tool](#auditing_tools) is good for catching such problems.
+5. Make sure your site's [color contrast](/en-US/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#color_and_color_contrast) is acceptable, using a suitable checking tool.
+6. Make sure [hidden content](/en-US/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#hiding_things) is visible by screen readers.
 7. Make sure that functionality is usable without JavaScript wherever possible.
 8. Use ARIA to improve accessibility where appropriate.
-9. Run your site through an [Auditing tool](#auditing_tools).
+9. Run your site through an [auditing tool](#auditing_tools).
 10. Test it with a screen reader.
 11. Include an accessibility policy/statement somewhere findable on your site to say what you did.
 
