@@ -29,15 +29,16 @@ Returns a new [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix) containing the result
 ## Examples
 
 ```js
-const matrix = new DOMMatrix().rotate(30);
+const matrix = new DOMMatrix().translate(3, 22);
+const otherMatrix = new DOMMatrix().translateSelf(15, 45);
 
-console.log(matrix.toString());
-// output: matrix(0.866, 0.5, -0.5, 0.866, 0, 0)
+console.log(matrix.toString()); // output: matrix(1, 0, 0, 1, 3, 22)
+console.log(otherMatrix.toString()); // output: matrix(1, 0, 0, 1, 15, 45)
 
-matrix.preMultiplySelf(matrix);
+matrix.preMultiplySelf(otherMatrix);
 
-console.log(matrix.toString());
-// output: matrix(0.5, 0.866, -0.866, 0.5, 0, 0)
+console.log(matrix.toString()); // output: matrix(1, 0, 0, 1, 18, 67)
+console.log(otherMatrix.toString()); // output: matrix(1, 0, 0, 1, 15, 45)
 ```
 
 ## Specifications

@@ -31,13 +31,10 @@ Returns a new [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix) containing the result
 ## Examples
 
 ```js
-const matrix = new DOMMatrixReadOnly().rotate(30);
+const matrix = new DOMMatrixReadOnly().translate(13, 21);
 const multipliedMatrix = matrix.multiply(matrix);
-
-console.log(matrix.toString());
-// output: matrix(0.866, 0.5, -0.5, 0.866, 0, 0)
-console.log(multipliedMatrix.toString());
-// output: matrix(0.5, 0.866, -0.866, 0.5, 0, 0)
+console.log(matrix.toString()); // output: matrix(1, 0, 0, 1, 13, 21)
+console.log(multipliedMatrix.toString()); // output: matrix(1, 0, 0, 1, 26, 42)
 ```
 
 ## Specifications

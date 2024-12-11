@@ -39,7 +39,7 @@ console.log(matrix.toString());
 matrix.multiplySelf(matrix);
 
 console.log(matrix.toString());
-// output: matrix(0.5, 0.866, -0.866, 0.5, 0, 0)
+// output: matrix(0.5, 0.866, -0.866, 0.5, 0, 0) (a 60deg rotation)
 ```
 
 ## Specifications
