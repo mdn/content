@@ -186,7 +186,7 @@ It is possible to process/render an audio graph very quickly in the background â
 
 ## Guides and tutorials
 
-{{LandingPageListSubpages}}
+{{SubpagesWithSummaries}}
 
 ## Examples
 
