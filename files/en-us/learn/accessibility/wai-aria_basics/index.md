@@ -123,28 +123,232 @@ See our section on [testing screen readers](/en-US/docs/Learn/Tools_and_testing/
 
 ### Signposts/Landmarks
 
-WAI-ARIA adds the [`role` attribute](https://www.w3.org/TR/wai-aria-1.1/#role_definitions) to browsers, which allows you to add extra semantic value to elements on your site wherever they are needed. The first major area in which this is useful is providing information for screen readers so that their users can find common page elements. Let's look at an example — our [website-no-roles](https://github.com/mdn/learning-area/tree/main/accessibility/aria/website-no-roles) example ([see it live](https://mdn.github.io/learning-area/accessibility/aria/website-no-roles/)) has the following structure:
+WAI-ARIA adds the [`role` attribute](https://www.w3.org/TR/wai-aria-1.1/#role_definitions) to browsers, which allows you to add extra semantic value to elements on your site wherever they are needed. The first major area in which this is useful is providing information for screen readers so that their users can find common page elements. This example has the following structure:
 
-```html
+```html live-sample___aria-website-no-roles
 <header>
-  <h1>…</h1>
+  <h1>Header</h1>
+
+  <!-- Even is it's not mandatory, it's common practice to put the main navigation menu within the main header -->
+
   <nav>
     <ul>
-      …
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Team</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Contact</a></li>
     </ul>
+
+    <!-- A Search form is another common non-linear way to navigate through a website. -->
+
     <form>
-      <!-- search form -->
+      <input type="search" name="q" placeholder="Search query" />
+      <input type="submit" value="Go!" />
     </form>
   </nav>
 </header>
 
+<!-- Here is our page's main content -->
 <main>
-  <article>…</article>
-  <aside>…</aside>
+  <!-- It contains an article -->
+  <article>
+    <h2>Article heading</h2>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam
+      lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam viverra
+      nec consectetur ant hendrerit. Donec et mollis dolor. Praesent et diam
+      eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue
+      enim, ut porta lorem lacinia consectetur.
+    </p>
+
+    <h3>subsection</h3>
+
+    <p>
+      Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum
+      dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut
+      turpis felis, pulvinar a semper sed, adipiscing id dolor.
+    </p>
+  </article>
+
+  <!-- the aside content can also be nested within the main content -->
+  <aside>
+    <h2>Related</h2>
+
+    <ul>
+      <li><a href="#">Oh I do like to be beside the seaside</a></li>
+      <li><a href="#">Oh I do like to be beside the sea</a></li>
+      <li><a href="#">Although in the North of England</a></li>
+      <li><a href="#">It never stops raining</a></li>
+      <li><a href="#">Oh well...</a></li>
+    </ul>
+  </aside>
 </main>
 
-<footer>…</footer>
+<!-- And here is our main footer that is used across all the pages of our website -->
+
+<footer>
+  <p>©Copyright 2050 by nobody. All rights reversed.</p>
+</footer>
 ```
+
+```css hidden live-sample___aria-website-no-roles
+/* || General setup */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  background-color: #a9a9a9;
+}
+
+body {
+  width: max(70vw, 90%);
+  margin: 0 auto;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* || typography */
+
+h1,
+h2,
+h3 {
+  font-family: "Sonsie One", cursive;
+  color: #2a2a2a;
+}
+
+p,
+input,
+li {
+  font-family: "Open Sans Condensed", sans-serif;
+  color: #2a2a2a;
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 10px black;
+}
+
+h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 2.2rem;
+}
+
+p,
+li {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+/* || header layout */
+
+header {
+  margin-bottom: 10px;
+}
+
+nav,
+article,
+aside,
+footer {
+  background-color: white;
+  padding: 1%;
+}
+
+nav {
+  background-color: ff80ff;
+  display: flex;
+  gap: 2vw;
+  @media (width <= 650px) {
+    flex-direction: column;
+  }
+}
+
+nav ul {
+  padding: 0;
+  list-style-type: none;
+  flex: 2;
+  display: flex;
+  gap: 2vw;
+}
+
+nav li {
+  display: inline;
+  text-align: center;
+}
+
+nav a {
+  display: inline-block;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+}
+
+nav form {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+input {
+  font-size: 1.6rem;
+  height: 32px;
+}
+
+input[type="search"] {
+  flex: 3;
+}
+
+input[type="submit"] {
+  flex: 1;
+  margin-left: 1rem;
+  background: #333;
+  border: 0;
+  color: white;
+}
+
+/* || main layout */
+
+main {
+  display: flex;
+  gap: 2vw;
+  @media (width <= 650px) {
+    flex-direction: column;
+  }
+}
+
+article {
+  flex: 4;
+}
+
+aside {
+  flex: 1;
+  background-color: #ff80ff;
+}
+
+aside li {
+  padding-bottom: 10px;
+}
+
+footer {
+  margin-top: 10px;
+}
+```
+
+{{EmbedLiveSample("aria-website-no-roles", "100", "850")}}
 
 If you try testing the example with a screen reader in a modern browser, you'll already get some useful information. For example, VoiceOver gives you the following:
 
@@ -161,7 +365,243 @@ If you go to VoiceOver's landmarks menu (accessed using VoiceOver key + U and th
 
 However, we could do better here. The search form is a really important landmark that people will want to find, but it is not listed in the landmarks menu or treated like a notable landmark beyond the actual input being called out as a search input (`<input type="search">`).
 
-Let's improve it by the use of some ARIA features. First, we'll add some [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles) attributes to our HTML structure. You can try taking a copy of our original files (see [`index.html`](https://github.com/mdn/learning-area/blob/main/accessibility/aria/website-no-roles/index.html) and [`style.css`](https://github.com/mdn/learning-area/blob/main/accessibility/aria/website-no-roles/style.css)), or navigating to our [website-aria-roles](https://github.com/mdn/learning-area/tree/main/accessibility/aria/website-aria-roles) example ([see it live](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)), which has a structure like this:
+Let's improve it by the use of some ARIA features.
+
+```html live-sample___aria-website-roles
+<header>
+  <h1>Header</h1>
+
+  <!-- Even is it's not mandatory, it's common practice to put the main navigation menu within the main header -->
+
+  <nav role="navigation">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Our team</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <!-- A Search form is another common non-linear way to navigate through a website. -->
+
+    <form role="search">
+      <input
+        type="search"
+        name="q"
+        placeholder="Search query"
+        aria-label="Search through site content" />
+      <input type="submit" value="Go!" />
+    </form>
+  </nav>
+</header>
+
+<!-- Here is our page's main content -->
+<main>
+  <!-- It contains an article -->
+  <article role="article">
+    <h2>Article heading</h2>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam
+      lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam viverra
+      nec consectetur ant hendrerit. Donec et mollis dolor. Praesent et diam
+      eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue
+      enim, ut porta lorem lacinia consectetur.
+    </p>
+
+    <h3>subsection</h3>
+
+    <p>
+      Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum
+      dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut
+      turpis felis, pulvinar a semper sed, adipiscing id dolor.
+    </p>
+
+    <p>
+      Pelientesque auctor nisi id magna consequat sagittis. Curabitur dapibus,
+      enim sit amet elit pharetra tincidunt feugiat nist imperdiet. Ut convallis
+      libero in urna ultrices accumsan. Donec sed odio eros.
+    </p>
+  </article>
+
+  <!-- the aside content can also be nested within the main content -->
+  <aside role="complementary">
+    <h2>Related</h2>
+    <ul>
+      <li><a href="#">Oh I do like to be beside the seaside</a></li>
+      <li><a href="#">Oh I do like to be beside the sea</a></li>
+      <li><a href="#">Although in the North of England</a></li>
+      <li><a href="#">It never stops raining</a></li>
+      <li><a href="#">Oh well...</a></li>
+    </ul>
+  </aside>
+</main>
+
+<!-- And here is our main footer that is used across all the pages of our website -->
+
+<footer>
+  <p>©Copyright 2050 by nobody. All rights reversed.</p>
+</footer>
+```
+
+```css hidden live-sample___aria-website-roles
+/* || General setup */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  background-color: #a9a9a9;
+}
+
+body {
+  width: max(70vw, 90%);
+  margin: 0 auto;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* || typography */
+
+h1,
+h2,
+h3 {
+  font-family: "Sonsie One", cursive;
+  color: #2a2a2a;
+}
+
+p,
+input,
+li {
+  font-family: "Open Sans Condensed", sans-serif;
+  color: #2a2a2a;
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 10px black;
+}
+
+h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 2.2rem;
+}
+
+p,
+li {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+/* || header layout */
+
+header {
+  margin-bottom: 10px;
+}
+
+nav,
+article,
+aside,
+footer {
+  background-color: white;
+  padding: 1%;
+}
+
+nav {
+  background-color: ff80ff;
+  display: flex;
+  gap: 2vw;
+  @media (width <= 650px) {
+    flex-direction: column;
+  }
+}
+
+nav ul {
+  padding: 0;
+  list-style-type: none;
+  flex: 2;
+  display: flex;
+  gap: 2vw;
+}
+
+nav li {
+  display: inline;
+  text-align: center;
+}
+
+nav a {
+  display: inline-block;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+}
+
+nav form {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+input {
+  font-size: 1.6rem;
+  height: 32px;
+}
+
+input[type="search"] {
+  flex: 3;
+}
+
+input[type="submit"] {
+  flex: 1;
+  margin-left: 1rem;
+  background: #333;
+  border: 0;
+  color: white;
+}
+
+/* || main layout */
+
+main {
+  display: flex;
+  gap: 2vw;
+  @media (width <= 650px) {
+    flex-direction: column;
+  }
+}
+
+article {
+  flex: 4;
+}
+
+aside {
+  flex: 1;
+  background-color: #ff80ff;
+}
+
+aside li {
+  padding-bottom: 10px;
+}
+
+footer {
+  margin-top: 10px;
+}
+```
+
+{{EmbedLiveSample("aria-website-roles", "100", "850")}}
+
+Firstly, we added some [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles) attributes to our HTML structure, which has a structure like this:
 
 ```html
 <header>
