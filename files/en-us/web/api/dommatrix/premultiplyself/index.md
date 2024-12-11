@@ -1,22 +1,20 @@
 ---
-title: "DOMMatrix: multiply() method"
-short-title: multiply()
-slug: Web/API/DOMMatrix/multiply
+title: "DOMMatrix: preMultiplySelf() method"
+short-title: preMultiplySelf()
+slug: Web/API/DOMMatrix/preMultiplySelf
 page-type: web-api-instance-method
-browser-compat: api.DOMMatrix.multiply
+browser-compat: api.DOMMatrix.preMultiplySelf
 ---
 
 {{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
-The **`multiply()`** method of the {{domxref("DOMMatrix")}} interface multiplies a matrix by the matrix parameter, computing the dot product of the original matrix and the specified matrix: `A⋅B`. If no matrix is specified as the multiplier, the matrix is multiplied by a matrix in which every element is `0` _except_ the bottom-right corner and the element immediately above and to its left: `m33` and `m34`. These have the default value of `1`.
-
-To multiply a matrix without mutating it, see {{domxref("DOMMatrixReadOnly.multiply()")}}
+The **`preMultiplySelf()`** method of the {{domxref("DOMMatrix")}} interface Modifies the matrix by pre-multiplying it with the specified `DOMMatrix`. This is equivalent to the dot product `B⋅A`, where matrix `A` is the source matrix and `B` is the matrix given as an input to the method. If no matrix is specified as the multiplier, the matrix is multiplied by a matrix in which every element is `0` _except_ the bottom-right corner and the element immediately above and to its left: `m33` and `m34`. These have the default value of `1`.git
 
 ## Syntax
 
 ```js-nolint
-  DOMMatrix.multiply( )
-  DOMMatrix.multiply( otherMatrix )
+  DOMMatrix.preMultiplySelf( )
+  DOMMatrix.preMultiplySelf( otherMatrix )
 ```
 
 ### Parameters
@@ -36,7 +34,7 @@ const matrix = new DOMMatrix().rotate(30);
 console.log(matrix.toString());
 // output: matrix(0.866, 0.5, -0.5, 0.866, 0, 0)
 
-matrix.multiply(matrix);
+matrix.preMultiplySelf(matrix);
 
 console.log(matrix.toString());
 // output: matrix(0.5, 0.866, -0.866, 0.5, 0, 0)
@@ -52,7 +50,7 @@ console.log(matrix.toString());
 
 ## See also
 
+- {{domxref("DOMMatrix.multiplySelf()")}}
 - {{domxref("DOMMatrixReadOnly.multiply()")}}
-- {{domxref("DOMMatrix.preMultiplySelf()")}}
 - CSS {{CSSxRef("transform-function/matrix", "matrix()")}} function
 - CSS {{CSSxRef("transform-function/matrix3d", "matrix3d()")}} function
