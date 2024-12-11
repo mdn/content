@@ -46,28 +46,19 @@ Integrated Development Environments (IDEs) such as Visual Studio (Windows, not f
 
 ## Basic code editor functionality
 
-Open and edit code files.
-
-Syntax highlighting.
-
-Auto-indentation and other simple syntax fixes.
-
-Code completion and help.
-
-Find and replace, often with the ability to use regular expressions to make the functionality more powerful (e.g. keep a specific string beginning and end, but replace the substring in between).
-
-Integration with version control is often provided (see the [Version control module](/en-US/docs/Learn_web_development/Core/Version_control)).
+- Open and edit code files.
+- Syntax highlighting.
+- Auto-indentation and other simple syntax fixes.
+- Code completion and help.
+- Find and replace, often with the ability to use regular expressions to make the functionality more powerful (e.g. keep a specific string beginning and end, but replace the substring in between).
+- Integration with version control is often provided (see the [Version control module](/en-US/docs/Learn_web_development/Core/Version_control)).
 
 ## Enhancing your code editor with extensions
 
-Language-specific extensions such as code completion, highlighting, linting, and debugging. This can apply to specific languages such as JavaScript, Python, or Go, or language/framework abstractions such as [TypeScript](https://www.typescriptlang.org/) or [JSX](https://react.dev/learn/writing-markup-with-jsx).
-
-GitHub/version control extensions, if not provided by default.
-
-Theme and color scheme extensions.
-
-Productivity extensions like code snippets and scaffolding generators.
-
-AI-powered code suggestion tools such as GitHub Copilot. Be aware that, while useful, AI tools have no reasoning skill, and frequently provide answers that are misleading or just plain wrong. You shouldn't just assume that AI answers are correct, and test them/verify them with other sources.
+- Language-specific extensions such as code completion, highlighting, linting, and debugging. This can apply to specific languages such as JavaScript, Python, or Go, or language/framework abstractions such as [TypeScript](https://www.typescriptlang.org/) or [JSX](https://react.dev/learn/writing-markup-with-jsx).
+- GitHub/version control extensions, if not provided by default.
+- Theme and color scheme extensions.
+- Productivity extensions like code snippets and scaffolding generators.
+- AI-powered code suggestion tools such as GitHub Copilot. Be aware that, while useful, AI tools have no reasoning skill, and frequently provide answers that are misleading or just plain wrong. You shouldn't just assume that AI answers are correct, and test them/verify them with other sources.
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Browsing_the_web", "Learn_web_development/Getting_started/Environment_setup/Dealing_with_files", "Learn_web_development/Getting_started/Environment_setup")}}
