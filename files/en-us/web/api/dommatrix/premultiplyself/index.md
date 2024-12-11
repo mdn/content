@@ -24,7 +24,7 @@ The **`preMultiplySelf()`** method of the {{domxref("DOMMatrix")}} interface Mod
 
 ### Return value
 
-Returns a new [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix) containing the results of the applied multiplications.
+Returns itself; a [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix) updated to results of the applied multiplications.
 
 ## Examples
 

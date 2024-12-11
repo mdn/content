@@ -26,7 +26,7 @@ To multiply a matrix without mutating it, see {{domxref("DOMMatrixReadOnly.multi
 
 ### Return value
 
-Returns a new [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix) containing the results of the applied multiplications.
+Returns itself; the [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix) updated to the results of the applied multiplications.
 
 ## Examples
 
