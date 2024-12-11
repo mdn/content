@@ -7,7 +7,7 @@ browser-compat: http.headers.Upgrade-Insecure-Requests
 
 {{HTTPSidebar}}
 
-The HTTP **`Upgrade-Insecure-Requests`** request header sends a signal to the server expressing the client's preference for an encrypted and authenticated response, and that it can successfully handle the {{CSP("upgrade-insecure-requests")}} [CSP](/en-US/docs/Web/HTTP/CSP) directive.
+The HTTP **`Upgrade-Insecure-Requests`** {{Glossary("request header")}} sends a signal to the server indicating the client's preference for an encrypted and authenticated response, and that the client can successfully handle the {{CSP("upgrade-insecure-requests")}} [CSP](/en-US/docs/Web/HTTP/CSP) directive.
 
 <table class="properties">
   <tbody>
@@ -17,7 +17,7 @@ The HTTP **`Upgrade-Insecure-Requests`** request header sends a signal to the se
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -25,10 +25,17 @@ The HTTP **`Upgrade-Insecure-Requests`** request header sends a signal to the se
 ## Syntax
 
 ```http
-Upgrade-Insecure-Requests: 1
+Upgrade-Insecure-Requests: <boolean>
 ```
 
+## Directives
+
+- `<boolean>`
+  - : `1` indicates 'true' and is the only valid value for this field.
+
 ## Examples
+
+### Using Upgrade-Insecure-Requests
 
 A client's request signals to the server that it supports the upgrade mechanisms of {{CSP("upgrade-insecure-requests")}}:
 
@@ -57,3 +64,4 @@ Vary: Upgrade-Insecure-Requests
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - CSP {{CSP("upgrade-insecure-requests")}} directive
+- [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}} header
