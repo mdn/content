@@ -207,11 +207,9 @@ The improved semantics of the search form have shown what is made possible when 
 
 Content loaded into the DOM can be easily accessed using a screen reader, from textual content to alternative text attached to images. Traditional static websites with largely text content are therefore easy to make accessible for people with visual impairments.
 
-The problem is that modern web apps are often not just static text — they often update parts of the page by fetching new content from the server and updating the DOM. These are sometimes referred to as **live regions**.
+The problem is that modern web apps are often not just static text — they often update parts of the page by fetching new content from the server (in this example we are using a static array of quotes) and updating the DOM. These are sometimes referred to as **live regions**.
 
-Let's look at a quick example — see [`aria-no-live.html`](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-no-live.html) (also [see it running live](https://mdn.github.io/learning-area/accessibility/aria/aria-no-live.html)). In this example, we have a simple random quote box:
-
-```html
+```html live-sample___aria-no-live
 <section>
   <h1>Random quote</h1>
   <blockquote>
@@ -220,11 +218,61 @@ Let's look at a quick example — see [`aria-no-live.html`](https://github.com/m
 </section>
 ```
 
-Our JavaScript uses the {{domxref("Window.fetch", "fetch()")}} API to load a JSON file via containing a series of random quotes and their authors. Once that is done, we start up a {{domxref("Window.setInterval", "setInterval()")}} loop that loads a new random quote into the quote box every 10 seconds:
+```css live-sample___aria-no-live
+html {
+  font-family: sans-serif;
+}
 
-```js
-const intervalID = setInterval(showQuote, 10000);
+h1 {
+  letter-spacing: 2px;
+}
+
+p {
+  line-height: 1.6;
+}
+
+section {
+  padding: 10px;
+  width: calc(100% - 20px);
+  background: #666;
+  text-shadow: 1px 1px 1px black;
+  color: white;
+  min-height: 160px;
+}
 ```
+
+```js live-sample___aria-no-live
+let quotes = [
+  {
+    quote:
+      "Every child is an artist. The problem is how to remain an artist once he grows up.",
+    author: "Pablo Picasso",
+  },
+  {
+    quote:
+      "You can never cross the ocean until you have the courage to lose sight of the shore.",
+    author: "Christopher Columbus",
+  },
+  {
+    quote:
+      "I love deadlines. I love the whooshing noise they make as they go by.",
+    author: "Douglas Adams",
+  },
+];
+```
+
+```js live-sample___aria-no-live
+const quotePara = document.querySelector("section p");
+
+window.setInterval(showQuote, 10000);
+
+function showQuote() {
+  let random = Math.floor(Math.random() * quotes.length);
+  quotePara.textContent = `${quotes[random].quote} -- ${quotes[random].author}`;
+}
+```
+
+{{EmbedLiveSample("aria-no-live", "100", "180")}}
 
 This works OK, but it is not good for accessibility — the content update is not detected by screen readers, so their users would not know what is going on. This is a fairly trivial example, but just imagine if you were creating a complex UI with lots of constantly updating content, like a chat room, or a strategy game UI, or a live updating shopping cart display — it would be impossible to use the app in any effective way without some kind of way of alerting the user to the updates.
 
@@ -237,16 +285,13 @@ WAI-ARIA, fortunately, provides a useful mechanism to provide these alerts — t
 - `assertive`
   - : Updates should be announced to the user as soon as possible.
 
-We'd like you to take a copy of [`aria-no-live.html`](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-no-live.html) and [`quotes.json`](https://github.com/mdn/learning-area/blob/main/accessibility/aria/quotes.json), and update your `<section>` opening tag as follows:
+Here we update the `<section>` opening tag as follows:
 
 ```html
 <section aria-live="assertive">…</section>
 ```
 
 This will cause a screen reader to read out the content as it is updated.
-
-> [!NOTE]
-> Most browsers will throw a security exception if you try to make an HTTP request from a `file://` URL, e.g. if you just load the file by loading it directly into the browser (via double clicking, etc.). See [how to set up a local testing server](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server).
 
 There is an additional consideration here — only the bit of text that updates is read out. It might be nice if we always read out the heading too, so the user can remember what is being read out. To do this, we can add the [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) property to the section. Update your `<section>` opening tag again, like so:
 
@@ -255,8 +300,6 @@ There is an additional consideration here — only the bit of text that updates 
 ```
 
 The `aria-atomic="true"` attribute tells screen readers to read out the entire element contents as one atomic unit, not just the bits that were updated.
-
-#### Finished example
 
 ```html live-sample___aria-live
 <section aria-live="assertive" aria-atomic="true">
@@ -290,108 +333,8 @@ section {
 }
 ```
 
-```js hidden live-sample___aria-live
+```js live-sample___aria-live
 let quotes = [
-  {
-    quote: "Life is about making an impact, not making an income.",
-    author: "Kevin Kruse",
-  },
-  {
-    quote: "Whatever the mind of man can conceive and believe, it can achieve.",
-    author: "Napoleon Hill",
-  },
-  {
-    quote: "Strive not to be a success, but rather to be of value.",
-    author: "Albert Einstein",
-  },
-  {
-    quote:
-      "Two roads diverged in a wood, and I—I took the one less traveled by, And that has made all the difference",
-    author: "Robert Frost",
-  },
-  {
-    quote: "I attribute my success to this: I never gave or took any excuse.",
-    author: "Florence Nightingale",
-  },
-  {
-    quote: "You miss 100% of the shots you don’t take.",
-    author: "Wayne Gretzky",
-  },
-  {
-    quote:
-      "I’ve missed more than 9000 shots in my career. I’ve lost almost 300 games. 26 times I’ve been trusted to take the game winning shot and missed. I’ve failed over and over and over again in my life. And that is why I succeed.",
-    author: "Michael Jordan",
-  },
-  {
-    quote:
-      "The most difficult thing is the decision to act, the rest is merely tenacity.",
-    author: "Amelia Earhart",
-  },
-  {
-    quote: "Every strike brings me closer to the next home run.",
-    author: "Babe Ruth",
-  },
-  {
-    quote: "Definiteness of purpose is the starting point of all achievement.",
-    author: "W. Clement Stone",
-  },
-  {
-    quote: "Life isn’t about getting and having, it’s about giving and being.",
-    author: "Kevin Kruse",
-  },
-  {
-    quote: "Life is what happens to you while you’re busy making other plans.",
-    author: "John Lennon",
-  },
-  {
-    quote: "We become what we think about.",
-    author: "Earl Nightingale",
-  },
-  {
-    quote:
-      "Twenty years from now you will be more disappointed by the things that you didn’t do than by the ones you did do, so throw off the bowlines, sail away from safe harbor, catch the trade winds in your sails.  Explore, Dream, Discover.",
-    author: "Mark Twain",
-  },
-  {
-    quote: "Life is 10% what happens to me and 90% of how I react to it.",
-    author: "Charles Swindoll",
-  },
-  {
-    quote:
-      "The most common way people give up their power is by thinking they don’t have any.",
-    author: "Alice Walker",
-  },
-  {
-    quote: "The mind is everything. What you think you become.",
-    author: "Buddha",
-  },
-  {
-    quote:
-      "The best time to plant a tree was 20 years ago. The second best time is now.",
-    author: "Chinese Proverb",
-  },
-  {
-    quote: "An unexamined life is not worth living.",
-    author: "Socrates",
-  },
-  {
-    quote: "Eighty percent of success is showing up.",
-    author: "Woody Allen",
-  },
-  {
-    quote:
-      "Your time is limited, so don’t waste it living someone else’s life.",
-    author: "Steve Jobs",
-  },
-  {
-    quote: "Winning isn’t everything, but wanting to win is.",
-    author: "Vince Lombardi",
-  },
-  {
-    quote:
-      "I am not a product of my circumstances. I am a product of my decisions.",
-    author: "Stephen Covey",
-  },
   {
     quote:
       "Every child is an artist. The problem is how to remain an artist once he grows up.",
@@ -413,15 +356,11 @@ let quotes = [
 ```js live-sample___aria-live
 const quotePara = document.querySelector("section p");
 
-let quoteJson = quotes; // the list of quotes is hidden but can be seen when clicking play
-let numOfQuotes = quoteJson.length;
-console.log(numOfQuotes);
-
 window.setInterval(showQuote, 10000);
 
 function showQuote() {
-  let random = Math.floor(Math.random() * numOfQuotes);
-  quotePara.textContent = `${quoteJson[6].quote} -- ${quoteJson[6].author}`;
+  let random = Math.floor(Math.random() * quotes.length);
+  quotePara.textContent = `${quotes[random].quote} -- ${quotes[random].author}`;
 }
 ```
 
