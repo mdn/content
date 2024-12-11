@@ -174,6 +174,16 @@ Date: Tue, 03 Dec 2024 17:08:49 GMT
 X-Robots-Tag: BadBot: noindex, nofollow, googlebot: nofollow
 ```
 
+For situations where multiple crawlers are specified along with different rules, the search engine will use the sum of the negative rules.
+For example:
+
+```http
+X-Robots-Tag: nofollow
+X-Robots-Tag: googlebot: noindex
+```
+
+The page containing these headers will be interpreted as having a `noindex, nofollow` rule when crawled by `googlebot`.
+
 ## Specifications
 
 Not part of any current specification.
