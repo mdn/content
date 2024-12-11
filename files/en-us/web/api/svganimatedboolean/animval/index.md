@@ -14,7 +14,7 @@ Some boolean SVG attributes, such as [`preserveAlpha`](/en-US/docs/Web/SVG/Attri
 
 ## Value
 
-A boolean; the value of the animatable boolean attribute:
+A boolean; the value of the animatable boolean attribute.
 
 ## Specifications
 
