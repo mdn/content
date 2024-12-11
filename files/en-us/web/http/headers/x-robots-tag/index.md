@@ -38,7 +38,7 @@ One or more indexing rules as a comma-separated list:
 
 ```http
 X-Robots-Tag: <indexing-rule>
-X-Robots-Tag: <indexing-rule>, <indexing-rule>, …
+X-Robots-Tag: <indexing-rule>, …, <indexing-ruleN>
 ```
 
 An optional `<bot-name>:` specifies the user agent that the subsequent rules should apply to:
