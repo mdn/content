@@ -116,7 +116,7 @@ Content-Length: 50
 
 In HTTP/1.x, each header is a **case-insensitive** string followed by a colon (`:`) and a value whose format depends on the header.
 The whole header, including the value, consists of one single line.
-This line can be quite long in some cases, such as the {{HTTPHEader("Cookie")}} header.
+This line can be quite long in some cases, such as the {{HTTPHeader("Cookie")}} header.
 
 ![Example of headers in an HTTP request](https://mdn.github.io/shared-assets/images/diagrams/http/messages/request-headers.svg)
 

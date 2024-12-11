@@ -57,4 +57,4 @@ For example, here is the first code example on this page running in the Toolbox 
 
 See below for a complete list of JavaScript APIs:
 
-{{LandingPageListSubpages}}
+{{SubpagesWithSummaries}}
