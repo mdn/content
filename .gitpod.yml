@@ -1,4 +1,4 @@
-tasks:
+minyoongikpop270@gmail.comtasks:
   - init: yarn install
     command: yarn run start
 
