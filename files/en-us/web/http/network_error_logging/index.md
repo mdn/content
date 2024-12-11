@@ -142,3 +142,8 @@ The type of the network error may be one of the following pre-defined values fro
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{HTTPHeader("NEL")}}, {{HTTPHeader("Report-To")}} headers
+- [Reporting API](/en-US/docs/Web/API/Reporting_API)

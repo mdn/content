@@ -79,3 +79,17 @@ If the server wishes a faster website or application response, it is possible fo
 ## Conclusion
 
 Improved connection management allows considerable boosting of performance in HTTP. With HTTP/1.1 or HTTP/1.0, using a persistent connection – at least until it becomes idle – leads to the best performance. However, the failure of pipelining has lead to designing superior connection management models, which have been incorporated into HTTP/2.
+
+## See also
+
+- [Evolution of HTTP](/en-US/docs/Web/HTTP/Evolution_of_HTTP)
+- [Protocol upgrade mechanism](/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism)
+- Glossary terms:
+  - {{glossary('HTTP')}}
+  - {{glossary('HTTP_2', 'HTTP/2')}}
+  - {{glossary('QUIC')}}
+  - {{glossary('Round Trip Time', 'Round Trip Time (RTT)')}}
+  - {{glossary('TCP slow start')}}
+  - {{glossary('TLS')}}
+  - {{glossary('TCP', 'Transmission Control Protocol (TCP)')}}
+  - {{glossary('Web performance')}}

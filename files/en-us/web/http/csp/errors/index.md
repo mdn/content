@@ -44,3 +44,8 @@ When you see any of the following messages logged in the browser devtools consol
 - Duplicate %1$S directives detected. All but the first instance will be ignored.
 - Directive '%1$S' has been deprecated. Please use directive 'worker-src' to control workers, or directive 'frame-src' to control frames respectively.
 - Couldn't parse invalid sandbox flag '%1$S'
+
+## See also
+
+- [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) guide
+- {{HTTPHeader("Content-Security-Policy")}} HTTP header
