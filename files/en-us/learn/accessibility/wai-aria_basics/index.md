@@ -490,11 +490,203 @@ Now when you try this using a screen reader, you'll have buttons be reported usi
 
 There are a whole host of other [roles](/en-US/docs/Web/Accessibility/ARIA/Roles) that can identify non-semantic element structures as common UI features that go beyond what's available in standard HTML, for example [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role), [`slider`](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role), [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role), [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role). You can see several useful examples in the [Deque university code library](https://dequeuniversity.com/library/) to give you an idea of how such controls can be made accessible.
 
-Let's go through an example of our own. We'll return to our simple absolutely-positioned tabbed interface (see [Hiding things](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#hiding_things) in our CSS and JavaScript accessibility article), which you can find at [Tabbed info box example](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/tabbed-info-box.html) (see [source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/tabbed-info-box.html)).
+Let's go through an example of our own. We'll return to our simple absolutely-positioned tabbed interface (see [Hiding things](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#hiding_things) in our CSS and JavaScript accessibility article), which you can find at [Tabbed info box example](/en-US/docs/Learn/CSS/CSS_layout/Practical_positioning_examples#a_fixed_position_tabbed_info-box).
 
 This example as-is works fine in terms of keyboard accessibility — you can happily tab between the different tabs and select them to show the tab contents. It is also fairly accessible too — you can scroll through the content and use the headings to navigate, even if you can't see what is happening on screen. It is however not that obvious what the content is — a screen reader currently reports the content as a list of links, and some content with three headings. It doesn't give you any idea of what the relationship is between the content. Giving the user more clues as to the structure of the content is always good.
 
-To improve things, we've created a new version of the example called [`aria-tabbed-info-box.html`](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-tabbed-info-box.html) ([see it running live](https://mdn.github.io/learning-area/accessibility/aria/aria-tabbed-info-box.html)). We've updated the structure of the tabbed interface like so:
+To improve things, we've created a new version of the example.
+
+```html live-sample___aria-tabbed-info-box
+<section class="info-box">
+  <ul role="tablist">
+    <li
+      class="active"
+      role="tab"
+      aria-selected="true"
+      aria-setsize="3"
+      aria-posinset="1"
+      tabindex="0">
+      Tab 1
+    </li>
+    <li
+      role="tab"
+      aria-selected="false"
+      aria-setsize="3"
+      aria-posinset="2"
+      tabindex="0">
+      Tab 2
+    </li>
+    <li
+      role="tab"
+      aria-selected="false"
+      aria-setsize="3"
+      aria-posinset="3"
+      tabindex="0">
+      Tab 3
+    </li>
+  </ul>
+  <div class="panels">
+    <article class="active-panel" role="tabpanel" aria-hidden="false">
+      <h2>The first tab</h2>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+        turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Vestibulum
+        et orci scelerisque, vulputate tellus quis, lobortis dui. Vivamus varius
+        libero at ipsum mattis efficitur ut nec nisl. Nullam eget tincidunt
+        metus. Donec ultrices, urna maximus consequat aliquet, dui neque
+        eleifend lorem, a auctor libero turpis at sem. Aliquam ut porttitor
+        urna. Nulla facilisi.
+      </p>
+    </article>
+    <article role="tabpanel" aria-hidden="true">
+      <h2>The second tab</h2>
+
+      <p>
+        This tab hasn't got any Lorem Ipsum in it. But the content isn't very
+        exciting all the same.
+      </p>
+    </article>
+    <article role="tabpanel" aria-hidden="true">
+      <h2>The third tab</h2>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+        turpis nibh, porttitor nec venenatis eu, pulvinar in augue. And now an
+        ordered list: how exciting!
+      </p>
+
+      <ol>
+        <li>dui neque eleifend lorem, a auctor libero turpis at sem.</li>
+        <li>Aliquam ut porttitor urna.</li>
+        <li>Nulla facilisi</li>
+      </ol>
+    </article>
+  </div>
+</section>
+```
+
+```css live-sample___aria-tabbed-info-box
+/* General setup */
+html {
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* info-box setup */
+
+.info-box {
+  width: calc(100% - 20px);
+  height: 400px;
+  margin: 0 auto;
+}
+
+/* styling info-box tabs */
+
+ul[role="tablist"] {
+  padding-left: 0;
+  margin-top: 0;
+}
+
+li[role="tab"] {
+  float: left;
+  list-style-type: none;
+  width: calc(100% / 3);
+  display: inline-block;
+  line-height: 3;
+  background-color: red;
+  color: black;
+  text-align: center;
+}
+
+li[role="tab"]:focus,
+li[role="tab"]:hover {
+  background-color: #a60000;
+  color: white;
+}
+
+li[role="tab"].active {
+  background-color: #a60000;
+  color: white;
+}
+
+/* styling info-box panels */
+
+.info-box .panels {
+  clear: both;
+  position: relative;
+  height: 352px;
+}
+
+.info-box article {
+  background-color: #a60000;
+  color: white;
+  position: absolute;
+  padding: 10px;
+  height: 352px;
+  top: 0;
+  left: 0;
+}
+
+.info-box .active-panel {
+  z-index: 1;
+}
+```
+
+```js live-sample___aria-tabbed-info-box
+let tabs = document.querySelectorAll(".info-box li");
+let panels = document.querySelectorAll(".info-box article");
+
+for (let i = 0; i < tabs.length; i++) {
+  let tab = tabs[i];
+  setTabHandler(tab);
+}
+
+function setTab(e) {
+  if (e.type === "keypress" && e.keyCode !== 13) {
+    return;
+  }
+
+  let tabPos = Number(this.getAttribute("aria-posinset")) - 1;
+  for (let i = 0; i < tabs.length; i++) {
+    if (tabs[i].getAttribute("class")) {
+      tabs[i].removeAttribute("class");
+    }
+
+    tabs[i].setAttribute("aria-selected", "false");
+  }
+
+  this.setAttribute("class", "active");
+  this.setAttribute("aria-selected", "true");
+
+  for (let i = 0; i < panels.length; i++) {
+    if (panels[i].getAttribute("class")) {
+      panels[i].removeAttribute("class");
+    }
+
+    panels[i].setAttribute("aria-hidden", "true");
+  }
+
+  panels[tabPos].setAttribute("class", "active-panel");
+  panels[tabPos].setAttribute("aria-hidden", "false");
+}
+
+function setTabHandler(tab) {
+  tab.addEventListener("click", setTab);
+  tab.addEventListener("keypress", setTab);
+}
+```
+
+{{EmbedLiveSample("aria-tabbed-info-box", "100", "420")}}
+
+We've updated the structure of the tabbed interface like so:
 
 ```html
 <ul role="tablist">
@@ -532,7 +724,7 @@ To improve things, we've created a new version of the example called [`aria-tabb
 ```
 
 > [!NOTE]
-> The most striking change here is that we've removed the links that were originally present in the example, and just used the list items as the tabs — this was done because it makes things less confusing for screen reader users (the links don't really take you anywhere; they just change the view), and it allows the setsize/position in set features to work better — when these were put on the links, the browser kept reporting "1 of 1" all the time, not "1 of 3", "2 of 3", etc.
+> The most striking change here is that we've removed the links that were originally present in the [example](/en-US/docs/Learn/CSS/CSS_layout/Practical_positioning_examples#a_fixed_position_tabbed_info-box), and just used the list items as the tabs — this was done because it makes things less confusing for screen reader users (the links don't really take you anywhere; they just change the view), and it allows the setsize/position in set features to work better — when these were put on the links, the browser kept reporting "1 of 1" all the time, not "1 of 3", "2 of 3", etc.
 
 ARIA features used include:
 
