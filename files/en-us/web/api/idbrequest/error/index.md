@@ -30,7 +30,7 @@ These errors are asynchronous, meaning that they can't be handled via [`try...ca
 - `UnknownError`
   - : Received for transient read failure errors, including general disk IO errors. See [Transient and unrecoverable read errors](#transient_and_unrecoverable_read_errors) below for more details.
 - `VersionError`
-  - : If you try to open a database with a version lower than the one it already has, this error is received.
+  - : Received if you try to open a database with a version lower than the one it already has.
 
 ### Transient and unrecoverable read errors
 
