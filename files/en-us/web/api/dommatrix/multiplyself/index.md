@@ -53,6 +53,6 @@ console.log(matrix.toString());
 ## See also
 
 - {{domxref("DOMMatrixReadOnly.multiply()")}}
-- {{domxref("DOMMatrixReadOnly.preMultiply()")}}
+- {{domxref("DOMMatrix.preMultiply()")}}
 - CSS {{CSSxRef("transform-function/matrix", "matrix()")}} function
 - CSS {{CSSxRef("transform-function/matrix3d", "matrix3d()")}} function
