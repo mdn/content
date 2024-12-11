@@ -1006,17 +1006,11 @@ To improve things, we've created a new version of the example.
 </section>
 ```
 
-```css live-sample___aria-tabbed-info-box
+```css hidden live-sample___aria-tabbed-info-box
 /* General setup */
-html {
-  font-family: sans-serif;
-}
-
-* {
-  box-sizing: border-box;
-}
-
 body {
+  font-family: sans-serif;
+  box-sizing: border-box;
   margin: 0;
 }
 
