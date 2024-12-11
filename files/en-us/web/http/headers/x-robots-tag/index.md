@@ -45,7 +45,7 @@ An optional `<bot-name>:` specifies the user agent that the subsequent rules sho
 
 ```http
 X-Robots-Tag: <indexing-rule>, <bot-name>: <indexing-rule>
-X-Robots-Tag: <bot-name>: <indexing-rule>, <indexing-rule>, …
+X-Robots-Tag: <bot-name>: <indexing-rule>, …, <indexing-ruleN>
 ```
 
 See [Specifying user agents](#specifying_user_agents) for an example.
