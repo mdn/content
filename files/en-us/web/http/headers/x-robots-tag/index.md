@@ -12,7 +12,7 @@ The **`X-Robots-Tag`** {{Glossary("response header")}} defines how {{glossary("C
 While not part of any specification, it is a de-facto standard method for communicating with search bots, web crawlers, and similar user agents.
 Search-related crawlers use the rules from the `X-Robots-Tag` header to adjust how to present web pages or other resources in search results.
 
-Indexing rules defined via `<meta name="robots">` tags and `X-Robots-Tag` headers are discovered when a URL is crawled.
+Indexing rules defined via `<meta name="robots">` elements and `X-Robots-Tag` headers are discovered when a URL is crawled.
 Specifying indexing rules in a HTTP header is useful for non-HTML documents like images, PDFs, or other media.
 
 > [!NOTE]
@@ -71,7 +71,7 @@ Any of the following indexing rules may be used:
     If omitted, search engines may generate a text snippet and video preview based on information found on the page.
     To exclude certain sections of your content from appearing in search result snippets, use the [`data-nosnippet` HTML attribute](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag#data-nosnippet-attr).
 - `indexifembedded`
-  - : A search engine is allowed to index the content of a page if it's embedded in another page through iframes or similar HTML tags, in spite of a `noindex` rule.
+  - : A search engine is allowed to index the content of a page if it's embedded in another page through iframes or similar HTML elements, in spite of a `noindex` rule.
     `indexifembedded` only has an effect if it's accompanied by `noindex`.
 - `max-snippet: <number>`
   - : Use a maximum of `<number>` characters as a textual snippet for this search result.
@@ -114,9 +114,9 @@ Any of the following indexing rules may be used:
 ## Description
 
 Indexing rules via `<meta name="robots">` and `X-Robots-Tag` are discovered when a URL is crawled.
-Most crawlers support rules in the `X-Robots-Tag` HTTP header that can be used in a `<meta name="robots">` tag.
+Most crawlers support rules in the `X-Robots-Tag` HTTP header that can be used in a `<meta name="robots">` element.
 
-In the case of conflicting robot rules within the `X-Robots-Tag` or between the `X-Robots-Tag` HTTP header and the `<meta name="robots">` tag, the more restrictive rule applies.
+In the case of conflicting robot rules within the `X-Robots-Tag` or between the `X-Robots-Tag` HTTP header and the `<meta name="robots">` element, the more restrictive rule applies.
 For example, if a page has both `max-snippet:50` and `nosnippet` rules, the `nosnippet` rule will apply.
 Indexing rules won't be discovered or applied if paths are blocked from being crawled by a `robots.txt` file.
 
