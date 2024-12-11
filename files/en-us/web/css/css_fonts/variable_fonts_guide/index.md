@@ -322,7 +322,8 @@ p {
 ```css live-sample___variable-fonts-italic-example
 /* italic range is 0 or 1 */
 .p1 {
-  font-synthesis: none;
+  /* uncomment following line to prevent synthesized italics */
+  /* font-synthesis: none; */
   font-style: italic;
 }
 
