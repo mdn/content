@@ -98,5 +98,5 @@ console.log(matrix.translate(22, 55, 66).toJSON());
 
 ## See also
 
-- {{domxref("DOMMatrixReadOnly.toJSON()")}}
+- {{domxref("DOMMatrixReadOnly.toString()")}}
 - {{domxref("DOMMatrix.setMatrixValue()")}}
