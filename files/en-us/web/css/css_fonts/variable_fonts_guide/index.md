@@ -322,7 +322,7 @@ p {
 ```
 
 ```css live-sample___variable-fonts-italic-example
-/* italic range is 0 or 1 */
+/* font-style: italic, with and without font-synthesis */
 .p1 {
   font-style: italic;
 }
