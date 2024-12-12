@@ -23,7 +23,7 @@ The **`setMatrixValue()`** method of the {{domxref("DOMMatrix")}} interface repl
 
 ### Return value
 
-Returns itself; the [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix) with new values.
+Returns itself; the [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix) with updated values.
 
 ## Examples
 
