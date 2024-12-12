@@ -37,7 +37,7 @@ DOMMatrix.scale3dSelf(scale, originX, originY, originZ);
 
 ### Return value
 
-Returns a {{domxref("DOMMatrix")}}
+Returns itself; a {{domxref("DOMMatrix")}}.
 
 ## Examples
 
