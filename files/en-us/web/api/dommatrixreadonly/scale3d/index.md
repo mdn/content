@@ -36,7 +36,7 @@ DOMMatrixReadOnly.scale3d(scale, originX, originY, originZ);
 
 ### Return value
 
-Returns a {{domxref("DOMMatrix")}}
+Returns a {{domxref("DOMMatrix")}}.
 
 ## Examples
 
