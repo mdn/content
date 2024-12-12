@@ -34,7 +34,7 @@ If only one parameter is passed, `rotZ` is the value of `rotX`, and both `rotx` 
 
 ### Return value
 
-Returns a [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix).
+A [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix).
 
 ## Examples
 
