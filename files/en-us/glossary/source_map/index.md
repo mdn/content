@@ -15,7 +15,7 @@ Code executed by the browser is often transformed in some way from the original 
 - To use languages that browsers don't support, like {{Glossary("TypeScript")}} or [Sass](https://sass-lang.com/).
 
 In these situations, debugging the original source is much easier than the source in the transformed state that the browser has downloaded.
-Browsers detect a source map via the {{HTTPHeader("SourceMap")}} HTTP header for a resource, or a `sourceMappingURL` annotation in the generated code. 
+Browsers detect a source map via the {{HTTPHeader("SourceMap")}} HTTP header for a resource, or a `sourceMappingURL` annotation in the generated code.
 
 ## Example
 
