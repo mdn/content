@@ -8,7 +8,7 @@ browser-compat: api.DOMMatrixReadOnly.inverse
 
 {{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
-The **`inverse()`** method of the {{domxref("DOMMatrixReadOnly")}} interface creates a new matrix being the result of the inverse of the original matrix. If the matrix cannot be inverted, the new matrix's components are all set to `NaN` and its {{domxref("DOMMatrixReadOnly.is2D", "is2D")}} property is set to `false`. The original matrix is not changed.
+The **`inverse()`** method of the {{domxref("DOMMatrixReadOnly")}} interface creates a new matrix which is the inverse of the original matrix. If the matrix cannot be inverted, the new matrix's components are all set to `NaN` and its {{domxref("DOMMatrixReadOnly.is2D", "is2D")}} property is set to `false`. The original matrix is not changed.
 
 To mutate the matrix as you invert it, see {{domxref("DOMMatrix.invertSelf()")}}
 
