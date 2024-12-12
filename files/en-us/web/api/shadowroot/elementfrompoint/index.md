@@ -29,7 +29,7 @@ elementFromPoint(x, y)
 
 ### Return value
 
-The topmost shadowRoot {{domxref("Element")}} object located at the specified coordinates, if any.
+An {{domxref("Element")}}; the topmost shadowRoot object located at the specified coordinates, if any.
 
 ## Examples
 
