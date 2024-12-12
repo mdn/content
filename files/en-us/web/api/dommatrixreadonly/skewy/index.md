@@ -26,8 +26,7 @@ DOMMatrixReadOnly.skewY(sY)
 
 ### Return value
 
-Returns itself; the [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix) skewed along the Y-axis by the given
-angle.
+A [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix).
 
 ## Examples
 
