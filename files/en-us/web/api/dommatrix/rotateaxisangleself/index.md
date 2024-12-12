@@ -35,7 +35,7 @@ DOMMatrix.rotateAxisAngleSelf(rotX, rotY, rotZ, angle)
 
 ### Return value
 
-Returns itself; the [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix) with the axis-rotation applied.
+A [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix).
 
 ## Examples
 
