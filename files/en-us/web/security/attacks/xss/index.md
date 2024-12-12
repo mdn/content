@@ -24,9 +24,13 @@ All XSS attacks depend on a website doing two things:
 1. accepting some input that could have been crafted by an attacker
 2. including this input in a page without _sanitizing_ it: that is, without ensuring that it won't be executable as JavaScript.
 
-## An XSS example
+## Two XSS examples
 
-Suppose the website for the user's bank is `my-bank.com`. The user is typically signed into it, and code in the website can access the user's account details and perform transactions. The website wants to display a welcome message, personalized for the current user. It displays the welcome in a {{htmlelement("Heading_Elements", "heading")}} element:
+In this section we'll go through two example pages that are vulnerable to an XSS attack.
+
+### Code injection in the front end
+
+In this example, suppose the website for the user's bank is `my-bank.example.com`. The user is typically signed into it, and code in the website can access the user's account details and perform transactions. The website wants to display a welcome message, personalized for the current user. It displays the welcome in a {{htmlelement("Heading_Elements", "heading")}} element:
 
 ```html
 <h1 id="welcome"></h1>
@@ -42,11 +46,13 @@ const welcome = document.querySelector("#welcome");
 welcome.innerHTML = `Welcome back, ${user}!`;
 ```
 
-Let's say this page is served from `https://my-bank.com/welcome`. To exploit the vulnerability, an attacker sends the user a link like this:
+Let's say this page is served from `https://my-bank.example.com/welcome`. To exploit the vulnerability, an attacker sends the user a link like this:
 
 ```html
-<a href="https://my-bank.com/welcome?user=<img src=x onerror=alert('hello!')>">
-  Win a free iPad!</a>
+<a
+  href="https://my-bank.example.com/welcome?user=<img src=x onerror=alert('hello!')>">
+  Get a free kitten!</a
+>
 ```
 
 When the user clicks the link:
@@ -58,24 +64,9 @@ When the user clicks the link:
 
 In this case the code just displays an alert, but in a real banking website, the attacker code would be able to do anything that the bank's own front-end code could.
 
-There are two features of this code that make it vulnerable to XSS, and these two features are common to all XSS vulnerabilities:
+### Code injection in the back end
 
-1. it uses input that could have been crafted by an attacker: in this case, the URL parameter
-2. it includes the input in the page without sanitizing it: in this case, by directly assigning the URL parameter value to the {{domxref("Element.innerHTML")}} property.
-
-To prevent this attack, the page should sanitize the input. It could do this by explicitly encoding characters like <kbd><</kbd> before assigning the input to `innerHTML`. Alternatively (and more likely, if HTML is not required), the website could assign the input to the element's {{domxref("Node.textContent", "textContent")}} property instead, which will just assign the value as text.
-
-In this page we'll explore the different types of XSS attacks, and the different methods that can be used to counter them.
-
-## Types of XSS
-
-XSS attacks are commonly divided into three categories: _reflected XSS_, _stored XSS_, and _DOM-based XSS_. We'll describe them here: however, knowing or defining the categories is not as important as understanding where and how XSS attacks can originate, as this affects the ways they can be countered. Another useful taxonomy, which is related to this categorization but a little different, is whether they are client-side or server-side: that is whether the vulnerability is in the server or in the front-end code.
-
-### Reflected XSS
-
-A reflected XSS attack is one in which an HTTP request contains the malicious JavaScript, and the server mistakenly includes that JavaScript in the page it returns to the client. The client then loads the page and runs the JavaScript, and the attack succeeds.
-
-For example, consider a website with a search function. The HTML for the search page might look like this:
+In this example, consider a website with a search function. The HTML for the search page might look like this:
 
 ```html
 <h1>Search</h1>
@@ -109,7 +100,7 @@ To exploit this vulnerability, an attacker sends the user a link like this:
 
 ```html
 <a href="http://example.org/results?search=<img src=x onerror=alert('hello')">
-  Win a free iPad!</a
+  Get a free kitten!</a
 >
 ```
 
@@ -119,63 +110,39 @@ When the user clicks the link:
 2. The server extracts the URL parameter value and embeds it in the page.
 3. The server returns the page to the browser, which runs it.
 
-This is a lot like our first example, except the vulnerability is in the server, not the front-end code. The same pattern applies here though: the website accepts input that could have been crafted by the attacker, and includes that input in the page without sanitizing it.
+## Anatomy of an XSS attack
 
-### Stored XSS
+Like all XSS attacks, these two examples are possible because the website:
 
-A stored XSS attack is functionally just like a reflected XSS attack, except the malicious JavaScript injected by the attacker is stored by the website, and served up to every user who accesses the page.
+1. Uses input that could have been crafted by an attacker
+2. Includes the input in the page without sanitizing it.
 
-For example, a website might include a blog that allows comments. Since anyone can make comments, they constitute input that may be crafted by an attacker. If the website does not sanitize blog comments, then when a user accesses a page in the blog that includes these comments, the code in the comment may be executed in the user's context.
+Both these examples use the same vector for the malicious input: the URL parameter. However, there are other vectors that attackers can use.
 
-### DOM-based XSS
+For example, consider a blog with comments. In a case like this, the website:
 
-A DOM-based XSS attack happens when a website's front-end takes some input that could have been crafted by an attacker, and without sanitizing it, passes it to an API that could result in the input becoming executable. APIs like this are referred to as _injection sinks_.
+1. Allows anyone to submit comments using a {{htmlelement("form")}} element
+2. Stores the comments in a database
+3. Includes the comments in the that the website serves to other users.
 
-The first XSS example we saw in this page is an example of DOM-based XSS, in which the injection sink is the {{domxref("Element.innerHTML")}} property.
+If the comments are not sanitized, then they are potential vectors for XSS. This kind of attack is sometimes called _stored_ or _persistent_ XSS, and is particularly severe, because the infected content will be served to all users who access the page, every time they access it.
 
-Some injection sinks modify the DOM, and can make input executable by injecting {{htmlelement("script")}} tags, `javascript:` URLs, or inline event handlers. For example:
+### Client and server XSS
 
-- {{domxref("Element.innerHTML")}}
-- {{domxref("Element.outerHTML")}}
-- {{domxref("Element.insertAdjacentHTML()")}}
-- {{domxref("Document.write()")}}
+One big difference between the two examples is that the malicious code is injected in different parts of the website's codebase, and this is a reflection of each website's architecture.
 
-Other injection sinks directly execute their arguments as JavaScript. For example:
+A website that uses client-side rendering, such as an {{glossary("SPA", "single-page app")}}, modifies pages in the browser, using web APIs such as {{domxref("document.createElement()")}} to do so, either directly, or indirectly through a framework like React. It's in the course of this process that XSS injection will happen. That's what we see in the first example: the malicious code is injected in the front end, by a script running in the page assigning the URL parameter value to the {{domxref("Element.innerHTML")}} property, which interprets its value as HTML code.
 
-- [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)
-- {{domxref("Window.setTimeout()")}} and {{domxref("Window.setInterval()")}}
+A website that uses server-side rendering builds pages on the server, using a framework like Django or Express, most commonly by inserting values into page templates. XSS injection, if it happens, will happen in the server during the templating process. That's what we see in the second example: the code is injected in the back end, by the Express code inserting the URL parameter value into the document it's returning. The XSS attack code then runs when the browser evaluates the page.
 
-APIs provided by third-party frameworks or libraries can also contain injection sinks. For example:
-
-- [`dangerouslySetInnerHTML()`](https://react.dev/reference/react-dom/components/common#dangerously-setting-the-inner-html) in React
-- [`html()`](https://api.jquery.com/html/) in jQuery
-
-### Client versus server XSS
-
-Alongside the three categories described above — reflected, stored, and DOM-based XSS — is a different but overlapping taxonomy, which distinguishes attacks based on whether they take place in the server side or the client side of a website.
-
-DOM-based XSS is always a client-side attack, but reflected and stored XSS may be either server-side or client-side, depending on the website's architecture.
-
-For example, consider a stored XSS attack which uses blog post comments to inject malicous code.
-
-In one architecture, the user navigates to the blog post by following a normal link. The browser makes an HTTP GET request to the server, which retrieves the blog post and comments from a database, then feeds them into a template to construct the response as an HTML document. The browser receives the HTML document containing the malicious code, and renders it.
-
-![Diagram of server-side XSS](server-side-xss.svg)
-
-In an alternative architecture, the website is implemented as a {{glossary("SPA", "single-page app")}}. When the user navigates to the blog post, the navigation is handled by the front-end JavaScript code. This code might get the blog post and comments from the server as JSON using the {{domxref("Window.fetch()", "fetch()")}} API, and then render them as HTML client-side.
-
-![Diagram of client-side XSS](client-side-xss.svg)
-
-Although the attack and the result are the same in both cases, the point at which the malicious code is introduced into the HTML document is different: in the first case, it's the server code that is failing to sanitize the blog post comments before including them in the document, and in the second case, it's the front-end code. Note that in the second case, the attack is a stored XSS attack _and_ a DOM-based attack: in fact, all client-side attacks are DOM-based attacks.
-
-The distinction between server and client XSS matters because effective defenses against XSS are different depending on where the vulnerability is.
+In both cases, the general approach to defense is the same, and we'll go into this in detail in the next section. However, the specific tools and APIs you'll use will be different.
 
 ## Defenses against XSS
 
 If you need to include external input in your site's pages, there are two main defenses against XSS:
 
-1. Using _output encoding_ and _sanitization_ to prevent input from becoming executable.
-2. Using a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) (CSP) to tell the browser which JavaScript or CSS resources it should be allowed to execute. This is a backup defense: if the first defense fails, so executable input makes it into a page, then a properly configured CSP should prevent the browser from executing it.
+1. Use _output encoding_ and _sanitization_ to prevent input from becoming executable. If you're rendering content in the browser, you can use the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) to ensure that input is being passed through a sanitization function before being included in the page.
+2. Use a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) (CSP) to tell the browser which JavaScript or CSS resources it should be allowed to execute. This is a backup defense: if the first defense fails, so executable input makes it into a page, then a properly configured CSP should prevent the browser from executing it.
 
 ### Output encoding
 
@@ -191,11 +158,25 @@ Most modern templating engines automatically perform output encoding. For exampl
 
 ![Screenshot of Django template output with escaped HTML](django-output.png)
 
+Similarly, if you're doing client-side rendering with React, values embedded in JSX are automatically encoded. For example, consider a JSX component like this:
+
+```jsx
+import React from "react";
+
+export function App(props) {
+  return <div>Hello, {props.name}</div>;
+}
+```
+
+If we pass `<img src=x onerror=alert('XSS')>` into `props.name`, it will be rendered as:
+
+![Screenshot of JSX component output with escaped HTML](jsx-output.png)
+
 One of the most important parts of preventing XSS attacks is to use a well-regarded templating engine which performs robust output encoding, and read its documentation to understand any caveats about the protection it offers.
 
 #### Document contexts
 
-Even if you're using a templating engine, like Django, which automatically encodes HTML, you need to be aware of where in the document you are including untrusted content. For example, suppose you have a Django template like this:
+Even if you're using a templating engine which automatically encodes HTML, you need to be aware of where in the document you are including untrusted content. For example, suppose you have a Django template like this:
 
 ```django
 <div>\{{ my_input }}</div>
@@ -234,7 +215,9 @@ What's safe in one context may be unsafe in another, and it's necessary to under
 
 ### Sanitization
 
-Templating engines typically allow developers to disable output encoding. This is necessary when developers want to insert untrusted content as HTML, not text. In this case it's up to the developer to ensure that the content is safe: for example, by sanitizing it.
+Templating engines typically allow developers to disable output encoding. This is necessary when developers want to insert untrusted content as HTML, not text. For example, in Django, the [`safe`](https://docs.djangoproject.com/en/5.0/ref/templates/language/#how-to-turn-it-off) filter disables output encoding, and in React, [`dangerouslySetInnerHTML`](https://react.dev/reference/react-dom/components/common#dangerously-setting-the-inner-html) has the same effect.
+
+In this case it's up to the developer to ensure that the content is safe, by sanitizing it.
 
 _Sanitization_ is the process of removing unsafe features from a string of HTML: for example, {{htmlelement("script")}} tags or inline event handlers. Since sanitization, like output encoding, is difficult to get right, it's advisable to use a reputable third-party library for it. [DOMPurify](https://github.com/cure53/DOMPurify) is recommended by many experts including [OWASP](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html#html-sanitization).
 
@@ -261,7 +244,21 @@ If we pass this to DOMPurify, it will return:
 
 Having a function that can sanitize a given input string is one thing, but finding all the places in a codebase where input strings need to be sanitized can in itself be a very hard problem.
 
-As we saw when we looked at [DOM-based XSS](#dom-based_xss) attacks, browsers provide a number of APIs that can result in XSS if used with untrusted input. The [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) enables a developer to be sure that on the client side, input is always sanitized before being passed to one of these APIs.
+If you're implementing client-side rendering in the browser, there are a number of Web APIs that are unsafe if called with unsanitized untrusted content.
+
+For example, the following APIs interpret their string arguments as HTML and use it to update the page DOM:
+
+- {{domxref("Element.innerHTML")}} (which is also used internally by React's `dangerouslySetInnerHTML`)
+- {{domxref("Element.outerHTML")}}
+- {{domxref("Element.insertAdjacentHTML()")}}
+- {{domxref("Document.write()")}}
+
+Other APIs directly execute their arguments as JavaScript. For example:
+
+- [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)
+- {{domxref("Window.setTimeout()")}} and {{domxref("Window.setInterval()")}}
+
+The [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) enables a developer to be sure that input is always sanitized before being passed to one of these APIs.
 
 The key to enforcing the use of trusted types is the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive. If this directive is set, then passing string arguments to unsafe APIs will throw an exception:
 
