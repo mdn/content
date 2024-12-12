@@ -14,15 +14,15 @@ A web browser downloads code from many different websites and runs it on the use
 
 In a successful XSS attack, the attacker is able to subvert the same-origin policy by tricking the target site into executing malicious code within its own context, as though it were same-origin. The code can then do anything that the site's own code can do, including, for example:
 
-- access and/or modify all the content of the site's loaded pages, and any content in local storage
-- make HTTP requests with the user's credentials, enabling them to impersonate the user or access sensitive data
+- Access and/or modify all the content of the site's loaded pages, and any content in local storage
+- Make HTTP requests with the user's credentials, enabling them to impersonate the user or access sensitive data
 
 ![Diagram of attacker code running in target website](xss.svg)
 
 All XSS attacks depend on a website doing two things:
 
-1. accepting some input that could have been crafted by an attacker
-2. including this input in a page without _sanitizing_ it: that is, without ensuring that it won't be executable as JavaScript.
+1. Accepting some input that could have been crafted by an attacker
+2. Including this input in a page without _sanitizing_ it: that is, without ensuring that it won't be executable as JavaScript.
 
 ## Two XSS examples
 
