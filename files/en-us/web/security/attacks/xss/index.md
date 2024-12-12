@@ -296,6 +296,15 @@ Output encoding and sanitization are all about preventing malicious scripts from
 
 The recommended approach to mitigating XSS with a CSP is a [strict CSP](/en-US/docs/Web/HTTP/CSP#strict_csp), which uses a [nonce](/en-US/docs/Web/HTTP/CSP#nonces) or a [hash](/en-US/docs/Web/HTTP/CSP#hashes) to indicate to the browser which scripts it expects to see in the document. If an attacker manages to insert malicious `<script>` elements, then they won't have the correct nonce or hash, and the browser will not execute them. Additionally, various common XSS vectors are disallowed completely: inline event handlers, `javascript:` URLs, and APIs like `eval()` that execute their arguments as JavaScript.
 
+### Defense summary checklist
+
+We can summarise the defenses above as follows:
+
+- When interpolating input into a page, either in the browser or in the server, use a templating engine that performs output encoding.
+- Be aware of the context in which you are interpolating input, and ensure that the appropriate output encoding will be performed in that context.
+- If you need to include input as HTML, sanitize it using a reputable library. If you're doing this in the browser, use the trusted types framework to ensure that input is being processed by your sanitization function.
+- Implement a strict CSP.
+
 ## See also
 
 - [Cross Site Scripting Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html) at [owasp.org](https://owasp.org/)
