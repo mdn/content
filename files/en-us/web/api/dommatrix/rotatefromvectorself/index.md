@@ -10,7 +10,7 @@ browser-compat: api.DOMMatrix.rotateFromVectorSelf
 
 The `rotateFromVectorSelf()` method of the {{domxref("DOMMatrix")}} interface is a mutable transformation method that modifies a matrix. It modifies the matrix by rotating the matrix by the angle between the specified vector and `(1, 0)`. The rotation angle is determined by the angle between the vector `(1,0)T` and `(x,y)T` in the clockwise direction, or `(+/-)arctan(y/x)`. If `x` and `y` are both `0`, the angle is specified as `0`, returning the altered {{domxref("DOMMatrix")}}.
 
-To rotate a matrix by the angle between the specified vector and `(1, 0)` without mutating it,, see {{domxref("DOMMatrixReadOnly.rotateFromVector()")}}
+To rotate a matrix from a vector without mutating it, see {{domxref("DOMMatrixReadOnly.rotateFromVector()")}}
 
 ## Syntax
 
@@ -29,7 +29,7 @@ DOMMatrix.rotateFromVectorSelf(rotX, rotY)
 
 ### Return value
 
-Returns a [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix).
+Returns itself; the updated [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix).
 
 ## Examples
 
