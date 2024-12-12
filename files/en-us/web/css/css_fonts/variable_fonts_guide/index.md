@@ -272,6 +272,8 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground.
 <div>
   <p class="p1">Italic</p>
   <span>(font-style: italic)</span>
+  <p class=".p1-no-synthesis">Italic</p>
+  <span>(font-style: italic; font-synthesis: none)</span>
 </div>
 <div>
   <p class="p2">Italic</p>
@@ -322,15 +324,18 @@ p {
 ```css live-sample___variable-fonts-italic-example
 /* italic range is 0 or 1 */
 .p1 {
-  /* uncomment following line to prevent synthesized italics */
-  /* font-synthesis: none; */
   font-style: italic;
+}
+
+.p1-no-synthesis {
+  font-style: italic;
+  font-synthesis: none;
 }
 
 /* italic range is 0 or 1 */
 .p2 {
-  font-synthesis: none;
   font-variation-settings: "ital" 1;
+  font-synthesis: none;
 }
 
 /* Adjust with slider & custom property */
