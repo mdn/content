@@ -26,7 +26,7 @@ To mutate the matrix as you multiply it, see {{domxref("DOMMatrix.multiplySelf()
 
 ### Return value
 
-A {{domxref("DOMMatrixReadOnly")}}.
+A {{domxref("DOMMatrix")}}.
 
 ## Examples
 
