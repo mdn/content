@@ -33,7 +33,7 @@ A string; the values of the list separated by commas, within `matrix()` or `matr
 ```js
 const matrix = new DOMMatrixReadOnly();
 console.log(matrix.translate(20, 30).toString()); // matrix(1, 0, 0, 1, 20, 30)
-console.log(matrix.translate(30, 40, 50)); // matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 30, 40, 50, 1)
+console.log(matrix.translate(30, 40, 50).toString()); // matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 30, 40, 50, 1)
 console.log(matrix.skewY(15).skewX(5).rotate(3).translate(20, 50).toString());
 // matrix(1.003, 0.321, 0.035, 1.01, 21.816, 56.824)
 console.log(
