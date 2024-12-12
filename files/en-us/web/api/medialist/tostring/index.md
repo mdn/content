@@ -22,7 +22,7 @@ None.
 
 ### Return value
 
-A string; the media list values, separated by commas.
+A string; a space-separated list of media values.
 
 ## Examples
 
