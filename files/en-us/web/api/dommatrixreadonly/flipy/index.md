@@ -18,7 +18,7 @@ The **`flipY()`** method of the {{domxref("DOMMatrixReadOnly")}} interface creat
 
 ### Return value
 
-Returns a [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix).
+A [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix).
 
 ## Examples
 
