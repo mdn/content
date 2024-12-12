@@ -26,7 +26,7 @@ DOMMatrixReadOnly.skewX(sX)
 
 ### Return value
 
-Returns a [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix).
+A [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix).
 
 ## Examples
 
