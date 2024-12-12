@@ -22,7 +22,7 @@ None.
 
 ### Return value
 
-A string; the values of the list separated by spaces.
+A string; a space-separated list of values.
 
 ## Examples
 
