@@ -20,7 +20,7 @@ To mutate the matrix as you invert it, see {{domxref("DOMMatrix.invertSelf()")}}
 
 ### Return value
 
-Returns a [`DOMMatrix`](/en-US/docs/Web/API/DOMMatrix).
+A {{domxref("DOMMatrix")}}.
 
 ## Examples
 
