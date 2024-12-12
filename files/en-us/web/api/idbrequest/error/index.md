@@ -34,19 +34,17 @@ These errors are asynchronous, meaning that they can't be handled via [`try...ca
 
 ### Transient and unrecoverable read errors
 
-Read errors occur when an IndexedDB stores large blob values (for example, audio files for an offline podcast app), and then subsequently fails to read those values even though the associated records are still in the database.
+Read errors occur when an IndexedDB stores values and then subsequently fails to read those values even though the associated records are still in the database.
 
-This category of errors can occur due to:
+Read errors can be one of two types — **transient** or **unrecoverable**:
 
-- Transient causes such as low memory, represented in the spec by the `UnknownError` type.
-- Unrecoverable causes such as source blob files being deleted, represented in the spec by the `NotReadableError` type.
+Transient read errors are signalled by an `UnknownError` type, and are usually caused by low memory. This shouldn't be a problem for small databases. To avoid low memory situations in large databases, try to split up database access to only load the records you need at any one time, for example using specific [key ranges](/en-US/docs/Web/API/IDBKeyRange) relating to a user's search query or a pagination mechanism. If a low memory error is hit, the user may be asked to close other applications to free up space at the OS-level.
 
-> [!NOTE]
-> The errors that represent these cases may vary across browsers. Check the [browser compatibility information](#browser_compatibility) for more details.
+Unrecoverable read errors are signalled by a `NotReadableError` type, and are caused by source files being deleted.
 
-Such errors can manifest in different ways depending on browser, operating system, etc. For example, different IndexedDB implementations store large values in different ways. In Chrome, large IndexedDB values are not stored directly in the underlying database; instead, they are stored as separate files that are accessed via a reference stored in the database. It has been observed that these separate files can end up being deleted because they show up as opaque files to users when they are using disk space recovery programs, resulting in unrecoverable read errors when the IndexedDB is next accessed.
+For example, some browsers store large values (for example, audio file blobs for an offline podcast app) as separate files that are accessed via a reference stored in the database. It has been observed that these separate files can end up being deleted because they show up as opaque files to users when they are using disk space recovery programs, resulting in unrecoverable read errors when the IndexedDB is next accessed.
 
-Possible corrective actions for such cases might include notifying the user, deleting the entry from the database, then attempting to re-fetch the data from the server.
+Possible corrective actions for unrecoverable read errors might include notifying the user, deleting the entry from the database, then attempting to re-fetch the data from the server.
 
 ### Exceptions
 
