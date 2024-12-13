@@ -202,7 +202,7 @@ However, suppose the template is like this:
 <div \{{ my_input }}></div>
 ```
 
-The `my_input` variable will be treated as an HTML attribute by the browser. In this case, if `my_input` is `onmouseover="alert('XSS')"`, then the output encoding that Django provides won't prevent the attack.
+In this context the browser will treat the `my_input` variable as an HTML attribute. If `my_input` is `onmouseover="alert('XSS')"`, the output encoding provided by Django won't prevent the attack.
 
 The browser uses different rules to process different parts of a web page — HTML elements and their content, HTML attributes, inline styles, inline scripts. The type of encoding that needs to be done is different depending on the context in which the input is being interpolated.
 
