@@ -23,6 +23,7 @@ sidebar:
         title: Loading_and_running
       - link: /WebAssembly/Exported_functions
         title: Exported_functions
+      - link: /WebAssembly/JavaScript_builtins
   - title: JavaScript_interface
     details: open
     children:
