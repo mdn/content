@@ -19,6 +19,8 @@ is the most efficient, optimized way to load Wasm code.
 
 ```js-nolint
 WebAssembly.instantiateStreaming(source, importObject)
+WebAssembly.instantiateStreaming(source, compileOptions)
+WebAssembly.instantiateStreaming(source, importObject, compileOptions)
 ```
 
 ### Parameters
@@ -34,6 +36,12 @@ WebAssembly.instantiateStreaming(source, importObject)
     else a
     [`WebAssembly.LinkError`](/en-US/docs/WebAssembly/JavaScript_interface/LinkError)
     is thrown.
+- `compileOptions` {{optional_inline}}
+  - : An object containing compilation options. Properties can include:
+    - `builtins`
+      - : An array of strings that enables the usage of [WebAssembly JavaScript builtins](/en-US/docs/WebAssembly/JavaScript_builtins) in the compiled wasm module. The strings define the types of builtin you want to enable. Currently the only available value is `"js-string"`, which enables JavaScript string builtins.
+    - `importedStringConstants` {{optional_inline}}
+      - : A string specifying an identifier for imported global string constants. This property needs to be specified if you wish to use imported global string constants in the wasm module.
 
 ### Return value
 
@@ -82,6 +90,30 @@ exported function invoked.
 > [!NOTE]
 > For this to work, `.wasm` files should be returned
 > with an `application/wasm` MIME type by the server.
+
+### Enabling WebAssembly JavaScript builtins
+
+This example enables JavaScript string builtins and imported global string constants when compiling and instantiating the wasm module, before running the exported `main()` function (which logs `"hello world!"` to the console). [See it running live](https://mdn.github.io/webassembly-examples/js-builtin-examples/instantiate-streaming/).
+
+```js
+const importObject = {
+  // Regular import
+  m: {
+    log: console.log,
+  },
+};
+
+const compileOptions = {
+  builtins: ["js-string"], // Enable JavaScript string builtins
+  importedStringConstants: "#", // Enable imported global string constants
+};
+
+WebAssembly.instantiateStreaming(
+  fetch("log-concat.wasm"),
+  importObject,
+  compileOptions,
+).then((result) => result.instance.exports.main());
+```
 
 ## Specifications
 

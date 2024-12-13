@@ -18,6 +18,7 @@ This function is useful if it is necessary to compile a module before it can be 
 
 ```js-nolint
 WebAssembly.compile(bufferSource)
+WebAssembly.compile(bufferSource, compileOptions)
 ```
 
 ### Parameters
@@ -25,6 +26,12 @@ WebAssembly.compile(bufferSource)
 - `bufferSource`
   - : A [typed array](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) or {{jsxref("ArrayBuffer")}}
     containing the binary code of the Wasm module you want to compile.
+- `compileOptions` {{optional_inline}}
+  - : An object containing compilation options. Properties can include:
+    - `builtins`
+      - : An array of strings that enables the usage of [WebAssembly JavaScript builtins](/en-US/docs/WebAssembly/JavaScript_builtins) in the compiled wasm module. The strings define the types of builtin you want to enable. Currently the only available value is `"js-string"`, which enables JavaScript string builtins.
+    - `importedStringConstants` {{optional_inline}}
+      - : A string specifying an identifier for imported global string constants. This property needs to be specified if you wish to use imported global string constants in the wasm module.
 
 ### Return value
 
@@ -58,6 +65,30 @@ fetch("simple.wasm")
 > You'll probably want to use
 > [`WebAssembly.compileStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/compileStreaming_static) in most cases, as it is more efficient
 > than `compile()`.
+
+### Enabling WebAssembly JavaScript builtins
+
+This example enables JavaScript string builtins and imported global string constants when compiling the wasm module, before instantiating it and running the exported `main()` function (which logs `"hello world!"` to the console). [See it running live](https://mdn.github.io/webassembly-examples/js-builtin-examples/compile/).
+
+```js
+const importObject = {
+  // Regular import
+  m: {
+    log: console.log,
+  },
+};
+
+const compileOptions = {
+  builtins: ["js-string"], // Enable JavaScript string builtins
+  importedStringConstants: "#", // Enable imported global string constants
+};
+
+fetch("log-concat.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => WebAssembly.compile(bytes, compileOptions))
+  .then((module) => WebAssembly.instantiate(module, importObject))
+  .then((instance) => instance.exports.main());
+```
 
 ## Specifications
 
