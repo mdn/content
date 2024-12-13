@@ -31,7 +31,7 @@ Usage of this header is less common since Adobe Flash Player and Microsoft Silve
 ## Syntax
 
 ```http
-X-Permitted-Cross-Domain-Policies: <permitted-cross-domain-policies>
+X-Permitted-Cross-Domain-Policies: <permitted-cross-domain-policy>
 ```
 
 ## Directives
