@@ -123,7 +123,7 @@ For example, consider a blog with comments. In a case like this, the website:
 
 1. Allows anyone to submit comments using a {{htmlelement("form")}} element
 2. Stores the comments in a database
-3. Includes the comments in the that the website serves to other users.
+3. Includes the comments in pages that the website serves to other users.
 
 If the comments are not sanitized, then they are potential vectors for XSS. This kind of attack is sometimes called _stored_ or _persistent_ XSS, and is particularly severe, because the infected content will be served to all users who access the page, every time they access it.
 
