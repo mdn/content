@@ -98,7 +98,7 @@ Set other values for `background-blend-mode`, you will get different results.
 
 {{ EmbedLiveSample('Example using "normal"', "300", "300") }}
 
-### Comparison between different values
+### Comparison between different values with `background-blend-mode`
 
 ```html hidden
 <div class="container"></div>
@@ -115,18 +115,19 @@ Set other values for `background-blend-mode`, you will get different results.
 }
 
 .container > div {
-  padding-left: 15px;
   border-right: 1px solid #d8d8d8;
   border-bottom: 1px solid #d8d8d8;
 }
 
 .container div div {
+  margin-left: 15px;
   width: 150px;
   height: 150px;
   background: url("br.png"), url("tr.png");
 }
 
 .container div p {
+  line-height: 30px;
   margin: 0;
   color: #a33333;
   text-align: center;
@@ -172,7 +173,121 @@ list.forEach((item) => {
 
 Create multiple `div` elements by traversaing a list and set different `backgroundBlendMode` value for each.
 
-{{ EmbedLiveSample('Comparison between different values', "720", "760") }}
+{{ EmbedLiveSample('Comparison between different values with `background-blend-mode`', "720", "760") }}
+
+### Comparison between different values with `mix-blend-mode`
+
+```html hidden
+<div class="container"></div>
+```
+
+```css hidden
+.container {
+  width: 640px;
+  height: 800px;
+  display: grid;
+  grid: auto-flow 160px / repeat(4, 160px);
+  border-top: 1px solid #d8d8d8;
+  border-left: 1px solid #d8d8d8;
+}
+
+.container > div {
+  border-right: 1px solid #d8d8d8;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.container > div > div {
+  position: relative;
+  margin-left: 20px;
+  width: 120px;
+  height: 120px;
+}
+
+.container div p {
+  margin: 0;
+  line-height: 30px;
+  color: #a33333;
+  text-align: center;
+}
+.circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  position: absolute;
+}
+
+.circle-1 {
+  background: red;
+}
+
+.circle-2 {
+  background: lightgreen;
+  left: 40px;
+}
+
+.circle-3 {
+  background: blue;
+  left: 20px;
+  top: 40px;
+}
+
+.isolate {
+  isolation: isolate; /* Without isolation, the background color will be taken into account */
+  position: relative;
+}
+```
+
+```js hidden
+const list = [
+  "normal",
+  "multiply",
+  "screen",
+  "overlay",
+  "darken",
+  "lighten",
+  "color-dodge",
+  "color-burn",
+  "hard-light",
+  "soft-light",
+  "difference",
+  "exclusion",
+  "hue",
+  "saturation",
+  "color",
+  "luminosity",
+  "plus-darker",
+  "plus-lighter",
+];
+
+const containerElem = document.querySelector(".container");
+
+list.forEach((item) => {
+  const innerElem = document.createElement("div");
+  innerElem.innerHTML = `
+    <div class="circle circle-1"></div>
+    <div class="circle circle-2"></div>
+    <div class="circle circle-3"></div>
+  `;
+
+  innerElem.querySelectorAll(".circle").forEach((circle) => {
+    circle.style.mixBlendMode = item;
+  });
+
+  const textElem = document.createElement("p");
+  textElem.innerText = item;
+
+  const outerElem = document.createElement("div");
+  outerElem.appendChild(textElem);
+  outerElem.appendChild(innerElem);
+
+  containerElem.appendChild(outerElem);
+});
+```
+
+In the following example, we create multiple `div` elements by traversaing a list and set different `mixBlendMode` value for each.
+
+{{ EmbedLiveSample('Comparison between different values with `mix-blend-mode`', "640", "800") }}
 
 ### Blend mode comparison
 
