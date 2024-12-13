@@ -8,12 +8,12 @@ status:
 
 {{HTTPSidebar}}
 
-The HTTP **`X-Permitted-Cross-Domain-Policies`** {{Glossary("response header")}} enables a server to override the meta-policy for a site, controlling whether site resources can be accessed cross-origin by a document running in a web client like Adobe Acrobat or Microsoft Silverlight.
+The HTTP **`X-Permitted-Cross-Domain-Policies`** {{Glossary("response header")}} defines a meta-policy that controls whether site resources can be accessed cross-origin by a document running in a web client like Adobe Acrobat or Microsoft Silverlight.
 
 It can be used in cases where the website needs to declare a cross-domain policy, but cannot write to the root directory of the domain.
 
 Usage of this header is less common since Adobe Flash Player and Microsoft Silverlight have been deprecated.
-Note however that some security testing tools will still check for the presence of a `X-Permitted-Cross-Domain-Policies: none` header because it can mitigate the risk of an unwanted policy file added to your site by accident or through malicious actions.
+Some security testing tools will still check for the presence of a `X-Permitted-Cross-Domain-Policies: none` header because it can mitigate the risk of an overly-permissive policy file added to your site by accident or through malicious actions.
 
 <table class="properties">
   <tbody>
@@ -56,8 +56,9 @@ Web clients such as Adobe Acrobat or Apache Flex can load web documents, which m
 Access is restricted to same-site resources by default, due to the [same origin policy](/en-US/docs/Web/Security/Same-origin_policy), but cross-origin sites may choose to make some or all of their resources available to clients cross-origin using special files, referred to as a cross-domain policy files.
 
 A "master" cross-domain policy file may be defined as `crossdomain.xml` file in the root of the domain, for example: `http://example.com/crossdomain.xml`.
-The master file defines the _meta-policy_ for the whole site using the `permitted-cross-domain-policies` attribute of the `site-control` tag.
-The meta-policy controls whether any policies are allowed, and the conditions for the the other "sub" cross-domain policy files to be used. These other policy files might be created in particular directories to specify access over the files in their given directory tree.
+The master file defines the _meta-policy_ for the whole site using the `permitted-cross-domain-policies` attribute of the `<site-control>` tag.
+The meta-policy controls whether any policies are allowed, and the conditions for the other "sub" cross-domain policy files to be used.
+These other policy files might be created in particular directories to specify access over the files in their given directory tree.
 
 For example, this is the least permissive master policy definition, which does not permit any access, and does not allow the use of other "sub" policy files.
 
@@ -69,10 +70,10 @@ For example, this is the least permissive master policy definition, which does n
 </cross-domain-policy>
 ```
 
-The HTTP **`X-Permitted-Cross-Domain-Policies`** header can be used to override the meta-policy defined in the master cross-domain policy file.
+The `X-Permitted-Cross-Domain-Policies` header can specify a meta-policy for the HTTP response it's included in or override a meta-policy defined in the master cross-domain policy file, if present.
 It takes the same values as the file's `permitted-cross-domain-policies` attribute and additionally `none-this-response`.
 
-Most commonly this will be used to prevent any access to site resources, in cases where the developer does not have access to create a master cross-domain policy file in the site root.
+Most commonly, it's used to prevent any access to site resources in cases where the developer does not have access to create a master cross-domain policy file in the site root.
 
 ## Examples
 
