@@ -154,7 +154,19 @@ This is the appropriate choice when you want to treat input as text, for example
 <p>You searched for \{{ search_term }}.</p>
 ```
 
-Most modern templating engines automatically perform output encoding. For example, if you pass `<img src=x onerror=alert('XSS!')>` into the Django template above, it will be rendered as text:
+Most modern templating engines automatically perform output encoding. For example, Django's templating engine performs the following conversions:
+
+- `<` is converted to `&lt;`
+
+- `>` is converted to `&gt;`
+
+- `'` is converted to `&#x27;`
+
+- `"` is converted to `&quot;`
+
+- `&` is converted to `&amp;`
+
+This means that if you pass `<img src=x onerror=alert('XSS!')>` into the Django template above, it will be rendered as text:
 
 > You searched for &lt;img src=x onerror=alert('XSS!')&gt;.
 
