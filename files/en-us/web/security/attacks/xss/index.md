@@ -154,9 +154,9 @@ This is the appropriate choice when you want to treat input as text, for example
 <p>You searched for \{{ search_term }}.</p>
 ```
 
-Most modern templating engines automatically perform output encoding. For example, if you pass `<img src=x onerror=alert('hello!')>` into the Django template above, it will be rendered as text:
+Most modern templating engines automatically perform output encoding. For example, if you pass `<img src=x onerror=alert('XSS!')>` into the Django template above, it will be rendered as text:
 
-![Screenshot of Django template output with escaped HTML](django-output.png)
+> You searched for &lt;img src=x onerror=alert('XSS!')&gt;.
 
 Similarly, if you're doing client-side rendering with React, values embedded in JSX are automatically encoded. For example, consider a JSX component like this:
 
@@ -164,13 +164,13 @@ Similarly, if you're doing client-side rendering with React, values embedded in 
 import React from "react";
 
 export function App(props) {
-  return <div>Hello, {props.name}</div>;
+  return <div>Hello, {props.name}!</div>;
 }
 ```
 
-If we pass `<img src=x onerror=alert('XSS')>` into `props.name`, it will be rendered as:
+If we pass `<img src=x onerror=alert('XSS!')>` into `props.name`, it will be rendered as:
 
-![Screenshot of JSX component output with escaped HTML](jsx-output.png)
+> Hello, &lt;img src=x onerror=alert('XSS!')&gt;!
 
 One of the most important parts of preventing XSS attacks is to use a well-regarded templating engine which performs robust output encoding, and read its documentation to understand any caveats about the protection it offers.
 
