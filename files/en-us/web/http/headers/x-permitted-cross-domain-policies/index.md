@@ -52,7 +52,14 @@ X-Permitted-Cross-Domain-Policies: <permitted-cross-domain-policy>
 
 ## Description
 
-Policy files are defined in a `crossdomain.xml` file, typically located at the root of the domain (`http://example.com/crossdomain.xml`) and define policies as so (the least permissive master policy definition):
+Web clients such as Adobe Acrobat or Apache Flex can load web documents, which may in turn load resources from the same site or other sites.
+Access is restricted to same-site resources by default, due to the [same origin policy](/en-US/docs/Web/Security/Same-origin_policy), but cross-origin sites may choose to make some or all of their resources available to clients cross-origin using special files, referred to as a cross-domain policy files.
+
+A "master" cross-domain policy file may be defined as `crossdomain.xml` file in the root of the domain, for example: `http://example.com/crossdomain.xml`.
+The master file defines the _meta-policy_ for the whole site using the `permitted-cross-domain-policies` attribute of the  `site-control` tag.
+The meta-policy controls whether any policies are allowed, and the conditions for the the other "sub" cross-domain policy files to be used. These other policy files might be created in particular directories to specify access over the files in their given directory tree.
+
+For example, this is the least permissive master policy definition, which does not permit any access, and does not allow the use of other "sub" policy files.
 
 ```xml
 <?xml version="1.0"?>
@@ -62,8 +69,10 @@ Policy files are defined in a `crossdomain.xml` file, typically located at the r
 </cross-domain-policy>
 ```
 
-Instead of relying on policy files, clients may check for the `X-Permitted-Cross-Domain-Policies` header to detect a meta-policy.
-The purpose of the HTTP header is for cases where people wish to declare a cross-domain policy, but cannot write to the root directory of the domain.
+The HTTP **`X-Permitted-Cross-Domain-Policies`** header can be used to override the meta-policy defined in the master cross-domain policy file.
+It takes the same values as the file's `permitted-cross-domain-policies` attribute and additionally `none-this-response`.
+
+Most commonly this will be used to prevent any access to site resources, in cases where the developer does not have access to create a master cross-domain policy file in the site root.
 
 ## Examples
 
