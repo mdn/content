@@ -98,4 +98,3 @@ When a CSS stylesheet is requested, via the `<link rel="stylesheet">` HTML eleme
 ## See also
 
 - [Content negotiation](/en-US/docs/Web/HTTP/Content_negotiation)
-- {{HTTPHeader("Accept")}}, {{HTTPHeader("Vary")}} headers

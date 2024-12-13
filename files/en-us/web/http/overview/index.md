@@ -242,7 +242,3 @@ Session flow remains basic, allowing it to be investigated and debugged with a [
   - {{glossary('HTTP')}}
   - {{glossary('HTTP_2', 'HTTP/2')}}
   - {{glossary('QUIC')}}
-  - {{glossary('Round Trip Time', 'Round Trip Time (RTT)')}}
-  - {{glossary('TCP slow start')}}
-  - {{glossary('TLS')}}
-  - {{glossary('TCP', 'Transmission Control Protocol (TCP)')}}

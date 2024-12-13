@@ -47,5 +47,4 @@ When you see any of the following messages logged in the browser devtools consol
 
 ## See also
 
-- [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) guide
 - {{HTTPHeader("Content-Security-Policy")}} HTTP header

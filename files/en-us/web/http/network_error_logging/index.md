@@ -145,5 +145,4 @@ The type of the network error may be one of the following pre-defined values fro
 
 ## See also
 
-- {{HTTPHeader("NEL")}}, {{HTTPHeader("Report-To")}} headers
 - [Reporting API](/en-US/docs/Web/API/Reporting_API)

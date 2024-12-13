@@ -104,4 +104,3 @@ Unfortunately, the HTTP standard doesn't specify the format of the page for choo
 ## See also
 
 - [Caching](/en-US/docs/Web/HTTP/Caching)
-- {{HTTPHeader("Vary")}} header
