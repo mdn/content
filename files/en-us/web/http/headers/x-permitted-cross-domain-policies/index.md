@@ -56,7 +56,7 @@ Web clients such as Adobe Acrobat or Apache Flex can load web documents, which m
 Access is restricted to same-site resources by default, due to the [same origin policy](/en-US/docs/Web/Security/Same-origin_policy), but cross-origin sites may choose to make some or all of their resources available to clients cross-origin using special files, referred to as a cross-domain policy files.
 
 A "master" cross-domain policy file may be defined as `crossdomain.xml` file in the root of the domain, for example: `http://example.com/crossdomain.xml`.
-The master file defines the _meta-policy_ for the whole site using the `permitted-cross-domain-policies` attribute of the  `site-control` tag.
+The master file defines the _meta-policy_ for the whole site using the `permitted-cross-domain-policies` attribute of the `site-control` tag.
 The meta-policy controls whether any policies are allowed, and the conditions for the the other "sub" cross-domain policy files to be used. These other policy files might be created in particular directories to specify access over the files in their given directory tree.
 
 For example, this is the least permissive master policy definition, which does not permit any access, and does not allow the use of other "sub" policy files.
@@ -83,7 +83,6 @@ If you don't need to load application data in clients such as Adobe Flash Player
 ```http
 X-Permitted-Cross-Domain-Policies: none
 ```
-
 
 ## Specifications
 
