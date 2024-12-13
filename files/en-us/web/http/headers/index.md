@@ -8,7 +8,7 @@ page-type: landing-page
 {{HTTPSidebar}}
 
 **HTTP headers** let the client and the server pass additional information with a message in a request or response.
-In HTTP/1.X, a header is a case-insensitive name followed by a colon, then by its value like `Allow: POST`.
+In HTTP/1.X, a header is a case-insensitive name followed by a colon, then optional whitespace which will be ignored, and finally by its value (for example: `Allow: POST`).
 In HTTP/2 and above, headers are displayed in lowercase when viewed in developer tools, like `accept: */*`, and prefixed with a colon for a special group of [pseudo-headers](/en-US/docs/Web/HTTP/Messages#pseudo-headers), like `:status: 200`.
 You can find more information on the syntax in each protocol version in the [HTTP messages](/en-US/docs/Web/HTTP/Messages) page.
 
