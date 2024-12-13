@@ -237,7 +237,6 @@ Session flow remains basic, allowing it to be investigated and debugged with a [
 ## See also
 
 - [Evolution of HTTP](/en-US/docs/Web/HTTP/Evolution_of_HTTP)
-- [Protocol upgrade mechanism](/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism)
 - Glossary terms:
   - {{glossary('HTTP')}}
   - {{glossary('HTTP_2', 'HTTP/2')}}
