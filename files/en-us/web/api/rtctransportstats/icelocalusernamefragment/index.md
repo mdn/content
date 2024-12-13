@@ -13,7 +13,7 @@ The **`iceLocalUsernameFragment`** property of the {{domxref("RTCTransportStats"
 ## Value
 
 A string containing the username fragment that uniquely identifies the ongoing ICE session on the transport.
-The same fragment is used to identify the section for any communication with the STUN server.
+The same fragment is used to identify the session for any communication with the STUN server.
 The string may be up to 256 characters long, and has no default value.
 
 This has the same values as the corresponding local {{domxref("RTCIceCandidate.usernameFragment")}} property.
