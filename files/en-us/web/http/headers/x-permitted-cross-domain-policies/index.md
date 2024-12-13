@@ -8,12 +8,12 @@ status:
 
 {{HTTPSidebar}}
 
-The HTTP **`X-Permitted-Cross-Domain-Policies`** {{Glossary("response header")}} specifies if a cross-domain policy file (`crossdomain.xml`) is allowed.
+The HTTP **`X-Permitted-Cross-Domain-Policies`** {{Glossary("response header")}} enables a server to override the meta-policy for a site, controlling whether site resources can be accessed cross-origin by a document running in a web client like Adobe Acrobat or Microsoft Silverlight.
 
-A cross-domain policy file may grant clients, such as Adobe Acrobat or Apache Flex, permission to handle data across domains that would otherwise be restricted due to the [Same-Origin Policy](/en-US/docs/Web/Security/Same-origin_policy).
-The `X-Permitted-Cross-Domain-Policies` header overrides such policy files so that clients still block unwanted requests.
+It can be used in cases where the website needs to declare a cross-domain policy, but cannot write to the root directory of the domain.
 
 Usage of this header is less common since Adobe Flash Player and Microsoft Silverlight have been deprecated.
+Note however that some security testing tools will still check for the presence of a `X-Permitted-Cross-Domain-Policies: none` header because it can mitigate the risk of an unwanted policy file added to your site by accident or through malicious actions.
 
 <table class="properties">
   <tbody>
