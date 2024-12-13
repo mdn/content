@@ -31,7 +31,7 @@ These statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} 
   - : A string indicating the current {{domxref("RTCDtlsTransport.state","state")}} of the underlying {{domxref("RTCDtlsTransport")}}.
     This is one of: `new`, `connecting`, `connected`, `closed`, `failed`.
 - {{domxref("RTCTransportStats.iceLocalUsernameFragment", "iceLocalUsernameFragment")}} {{optional_inline}} {{experimental_inline}}
-  - : A string indicating the local username fragment used in message validation procedures for this transport.
+  - : A string indicating the local username fragment that uniquely identifies the ICE interaction session managed by this transport.
     This is the same value as the local {{domxref("RTCIceCandidate.usernameFragment")}}, and will change if the connection is renegotiated.
 - {{domxref("RTCTransportStats.iceRole", "iceRole")}} {{optional_inline}} {{experimental_inline}}
   - : A string indicating the [ICE `role`](/en-US/docs/Web/API/RTCIceTransport/role) of the underlying {{domxref("RTCDtlsTransport.iceTransport")}}.
