@@ -273,7 +273,7 @@ But if the server determines the requested resource should now have a different 
 
 ### Force Revalidation
 
-If you do not want a response to be reused, but instead want to always fetch the latest content from the server, you can use the `no-cache` directive to force validation.
+If you do not want a response to be reused, but instead want to always validate the latest content with the server, you can use the `no-cache` directive to force validation.
 
 By adding `Cache-Control: no-cache` to the response along with `Last-Modified` and `ETag` — as shown below — the client will receive a `200 OK` response if the requested resource has been updated, or will otherwise receive a `304 Not Modified` response if the requested resource has not been updated.
 
