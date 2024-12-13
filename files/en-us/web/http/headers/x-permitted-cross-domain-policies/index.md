@@ -84,7 +84,6 @@ If you don't need to load application data in clients such as Adobe Flash Player
 X-Permitted-Cross-Domain-Policies: none
 ```
 
-Some security testing tools will check for the presence of a `X-Permitted-Cross-Domain-Policies: none` header because it can mitigate the risk of an unwanted policy file added to your site by accident or through malicious actions.
 
 ## Specifications
 
