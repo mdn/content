@@ -96,7 +96,7 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 
 Set other values for `background-blend-mode`, you will get different results.
 
-{{ EmbedLiveSample('Example using "normal"', "300", "350") }}
+{{ EmbedLiveSample('Example using "normal"', "300", "300") }}
 
 ### Comparison between different values
 
@@ -106,30 +106,34 @@ Set other values for `background-blend-mode`, you will get different results.
 
 ```css
 .container {
-  width: 600px;
-  height: 600px;
+  width: 720px;
+  height: 760px;
   display: grid;
-  grid-template: repeat(4, 150px) / repeat(4, 150px);
+  grid: auto-flow 190px / repeat(4, 180px);
+  border-top: 1px solid #d8d8d8;
+  border-left: 1px solid #d8d8d8;
 }
 
-.container div {
-  position: relative;
+.container > div {
+  padding-left: 15px;
+  border-right: 1px solid #d8d8d8;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.container div div {
   width: 150px;
   height: 150px;
   background: url("br.png"), url("tr.png");
 }
 
 .container div p {
-  position: absolute;
-  top: 0;
-  right: 2px;
-  color: red;
+  margin: 0;
+  color: #a33333;
   text-align: center;
 }
 ```
 
 ```js
-const containerElem = document.querySelector(".container");
 const list = [
   "normal",
   "multiply",
@@ -149,20 +153,26 @@ const list = [
   "luminosity",
 ];
 
+const containerElem = document.querySelector(".container");
+
 list.forEach((item) => {
-  const divElem = document.createElement("div");
-  divElem.style.backgroundBlendMode = item;
-  containerElem.appendChild(divElem);
+  const innerElem = document.createElement("div");
+  innerElem.style.backgroundBlendMode = item;
 
   const textElem = document.createElement("p");
   textElem.innerText = item;
-  divElem.appendChild(textElem);
+
+  const outerElem = document.createElement("div");
+  outerElem.appendChild(textElem);
+  outerElem.appendChild(innerElem);
+
+  containerElem.appendChild(outerElem);
 });
 ```
 
 Create multiple `div` elements by traversaing a list and set different `backgroundBlendMode` value for each.
 
-{{ EmbedLiveSample('Comparison between different values', "600", "600") }}
+{{ EmbedLiveSample('Comparison between different values', "720", "760") }}
 
 ### Blend mode comparison
 
