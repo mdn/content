@@ -101,9 +101,9 @@ fetch("log-concat.wasm")
 
 The JavaScript:
 
-- Defines an `importObject` that specifies a function `"log"` at a namespace `"m"` to import into the wasm module during instantiation. It's the {{jsxref("console.log()")}} function.
+- Defines an `importObject` that specifies a function `"log"` at a namespace `"m"` to import into the wasm module during instantiation. It's the {{domxref("console.log()")}} function.
 - Defines a `compileOptions` function that includes the `builtins` and `importedStringConstants` properties. As discussed earlier, this is needed to enable builts and imported global string constants.
-- Uses {{domxref("fetch()")}} to fetch the wasm module (`log-concat.wasm`), converts the response to an {{jsxref("ArrayBuffer")}} using {{domxref("Response.arrayBuffer")}}, then compiles and instantiates the wasm module using [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate_static).
+- Uses {{domxref("Window.fetch", "fetch()")}} to fetch the wasm module (`log-concat.wasm`), converts the response to an {{jsxref("ArrayBuffer")}} using {{domxref("Response.arrayBuffer")}}, then compiles and instantiates the wasm module using [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate_static).
 - Calls the `main()` function exported from the wasm module.
 
 ### The wasm module

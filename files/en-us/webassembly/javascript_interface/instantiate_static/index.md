@@ -60,7 +60,7 @@ WebAssembly.instantiate(bufferSource, importObject, compileOptions);
 A `Promise` that resolves to a `ResultObject` which contains two
 fields:
 
-- `module`: A [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) object representing the compiled WebAssembly module. This `Module` can be instantiated again, shared via {{domxref("Worker.postMessage", "postMessage()")}}, or [cached](/en-US/docs/WebAssembly/Caching_modules).
+- `module`: A [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) object representing the compiled WebAssembly module. This `Module` can be instantiated again, shared via {{domxref("Worker.postMessage", "postMessage()")}}, or [cached](/en-US/docs/Web/Progressive_web_apps/Guides/Caching).
 - `instance`: A [`WebAssembly.Instance`](/en-US/docs/WebAssembly/JavaScript_interface/Instance) object that contains all the [Exported WebAssembly functions](/en-US/docs/WebAssembly/Exported_functions).
 
 #### Exceptions
