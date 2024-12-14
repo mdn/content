@@ -69,9 +69,9 @@ The magic of workers happens via the {{domxref("Worker.postMessage", "postMessag
 [first, second].forEach(input => {
   input.onchange = function() {
     myWorker.port.postMessage([first.value, second.value]);
-    console.log('Message posted to worker');
-  }
-})
+    console.log("Message posted to worker");
+  };
+});
 ```
 
 So here we have two {{htmlelement("input")}} elements represented by the variables `first` and `second`; when the value of either is changed, `myWorker.postMessage([first.value,second.value])` is used to send the value inside both to the worker, as an array. You can send pretty much anything you like in the message.
