@@ -42,10 +42,6 @@ Note: The SVG [`<polygon>`](/en-US/docs/Web/SVG/Element/polygon) element has sep
 
 Returns a {{cssxref("basic-shape")}} value.
 
-## Formal syntax
-
-{{CSSSyntax}}
-
 ## Description
 
 You can create almost any shape with the `polygon()` function by specifying the coordinates of its points. The order in which you define the points matters and can result in different shapes. The `polygon()` function requires at least 3 points, which creates a triangle, but there's no upper limit.
