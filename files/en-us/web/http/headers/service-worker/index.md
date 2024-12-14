@@ -1,0 +1,50 @@
+---
+title: Service-Worker
+slug: Web/HTTP/Headers/Service-Worker
+page-type: http-header
+browser-compat: http.headers.Service-Worker
+spec-urls: https://www.w3.org/TR/service-workers/#service-worker
+---
+
+{{HTTPSidebar}}
+
+The HTTP **`Service-Worker`** {{Glossary("request header")}} is included in fetches for a service worker's script resource.
+This header helps administrators log service worker script requests for monitoring purposes.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Request header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
+
+## Syntax
+
+```http
+Service-Worker: script
+```
+
+## Directives
+
+- `script`
+  - : The only specified value this header may have.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- [Service worker API](/en-US/docs/Web/API/Service_Worker_API)
+- [Using service workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- {{domxref("ServiceWorkerRegistration")}}

@@ -316,7 +316,10 @@ Headers used by the [WebSockets API](/en-US/docs/Web/API/WebSockets_API) in the 
   - : Indicates how long the user agent should wait before making a follow-up request.
 - {{HTTPHeader("Server-Timing")}}
   - : Communicates one or more metrics and descriptions for the given request-response cycle.
-- `Service-Worker-Allowed`
+- {{HTTPHeader("Service-Worker")}}
+  - : Included in fetches for a service worker's script resource.
+    This header helps administrators log service worker script requests for monitoring purposes.
+- {{HTTPHeader("Service-Worker-Allowed")}}
   - : Used to remove the [path restriction](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers#why_is_my_service_worker_failing_to_register) by including this header [in the response of the Service Worker script](https://w3c.github.io/ServiceWorker/#service-worker-script-response).
 - {{HTTPHeader("SourceMap")}}
   - : Links to a {{Glossary("source map")}} so that debuggers can step through original source code instead of generated or transformed code.
