@@ -143,7 +143,7 @@ attr(data-something, "default");
 - `<fallback>`
   - : The value to be used if the associated attribute is missing or contains an invalid value. If not set, CSS will use the default value defined for each `<type-or-unit>`.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 
