@@ -29,7 +29,7 @@ You can use different units for each value in your expression, if you wish. You 
 - You can (and often need to) combine `min()` and `max()` values, or use `min()` within a `clamp()` or `calc()` function.
 - You can provide more than two arguments, if you have multiple constraints to apply.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 
