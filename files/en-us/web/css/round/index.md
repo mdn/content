@@ -113,7 +113,6 @@ div.box {
   width: 100px;
   height: 100px;
   background: lightblue;
-  padding: 5px;
   --rounding-interval: 25px;
 }
 ```
