@@ -16,7 +16,7 @@ It reflects the value of the [`writingsuggestions`](/en-US/docs/Web/HTML/Global_
 
 An enumerated value; possible values are:
 
-- `"true"` or an empty string (`""`)
+- `"true"`
   - : The browser automatically shows the virtual keyboard when the user taps or focuses the element.
 - `"false"`
   - : The browser does not automatically show the virtual keyboard: showing/hiding the virtual keyboard is handled manually by the script.
@@ -29,7 +29,7 @@ The following example shows how to disable writing suggestions offered by user a
 const element = document.querySelector("input");
 
 // writing suggestions offered by user agents will be disabled by script manually on this input
-element.writingSuggestions = "true";
+element.writingSuggestions = "false";
 ```
 
 ## Specifications
