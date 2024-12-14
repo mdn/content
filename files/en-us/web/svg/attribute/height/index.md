@@ -45,7 +45,7 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement('svg')}}
 - {{SVGElement('use')}}
 
-## Examples
+## Example
 
 ```css hidden
 html,
@@ -64,7 +64,7 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample("Examples", '100%', 200)}}
+{{EmbedLiveSample("Example", '100%', 200)}}
 
 ## Elements
 
