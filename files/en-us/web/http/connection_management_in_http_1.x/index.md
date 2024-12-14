@@ -40,7 +40,7 @@ Short-lived connections have two major hitches: the time taken to establish a ne
 
 A persistent connection is one which remains open for a period of time, and can be reused for several requests, saving the need for a new TCP handshake, and utilizing TCP's performance enhancing capabilities. This connection will not stay open forever: idle connections are closed after some time (a server may use the {{HTTPHeader("Keep-Alive")}} header to specify a minimum time the connection should be kept open).
 
-Persistent connections also have drawbacks; even when idling they consume server resources, and under heavy load, {{glossary("DoS attack", "DoS attacks")}} can be conducted. In such cases, using non-persistent connections, which are closed as soon as they are idle, can provide better performance.
+Persistent connections also have drawbacks; even when idling they consume server resources, and under heavy load, {{Glossary("Denial of Service", "DoS attacks")}} can be conducted. In such cases, using non-persistent connections, which are closed as soon as they are idle, can provide better performance.
 
 HTTP/1.0 connections are not persistent by default. Setting {{HTTPHeader("Connection")}} to anything other than `close`, usually `retry-after`, will make them persistent.
 
@@ -61,7 +61,7 @@ By default, [HTTP](/en-US/docs/Web/HTTP) requests are issued sequentially. The n
 
 Pipelining is the process to send successive requests, over the same persistent connection, without waiting for the answer. This avoids latency of the connection. Theoretically, performance could also be improved if two HTTP requests were to be packed into the same TCP message. The typical [MSS](https://en.wikipedia.org/wiki/Maximum_segment_size) (Maximum Segment Size), is big enough to contain several simple requests, although the demand in size of HTTP requests continues to grow.
 
-Not all types of HTTP requests can be pipelined: only {{glossary("idempotent")}} methods, that is {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, {{HTTPMethod("PUT")}} and {{HTTPMethod("DELETE")}}, can be replayed safely. Should a failure happen, the pipeline content can be repeated.
+Not all types of HTTP requests can be pipelined: only {{Glossary("idempotent")}} methods, that is {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, {{HTTPMethod("PUT")}} and {{HTTPMethod("DELETE")}}, can be replayed safely. Should a failure happen, the pipeline content can be repeated.
 
 Today, every HTTP/1.1-compliant proxy and server should support pipelining, though many have limitations in practice: a significant reason no modern browser activates this feature by default.
 
@@ -70,7 +70,7 @@ Today, every HTTP/1.1-compliant proxy and server should support pipelining, thou
 > [!NOTE]
 > Unless you have a very specific immediate need, don't use this deprecated technique; switch to HTTP/2 instead. In HTTP/2, domain sharding is no longer useful: the HTTP/2 connection is able to handle parallel unprioritized requests very well. Domain sharding is even detrimental to performance. Most HTTP/2 implementations use a technique called [connection coalescing](https://daniel.haxx.se/blog/2016/08/18/http2-connection-coalescing/) to revert eventual domain sharding.
 
-As an HTTP/1.x connection is serializing requests, even without any ordering, it can't be optimal without large enough available bandwidth. As a solution, browsers open several connections to each domain, sending parallel requests. Default was once 2 to 3 connections, but this has now increased to a more common use of 6 parallel connections. There is a risk of triggering [DoS](/en-US/docs/Glossary/DOS_attack) protection on the server side if attempting more than this number.
+As an HTTP/1.x connection is serializing requests, even without any ordering, it can't be optimal without large enough available bandwidth. As a solution, browsers open several connections to each domain, sending parallel requests. Default was once 2 to 3 connections, but this has now increased to a more common use of 6 parallel connections. There is a risk of triggering {{Glossary("Denial of Service", "DoS")}} protection on the server side if attempting more than this number.
 
 If the server wishes a faster website or application response, it is possible for the server to force the opening of more connections. For example, instead of having all resources on the same domain, say `www.example.com`, it could split over several domains, `www1.example.com`, `www2.example.com`, `www3.example.com`. Each of these domains resolves to the _same_ server, and the Web browser will open 6 connections to each (in our example, boosting the connections to 18). This technique is called _domain sharding_.
 
