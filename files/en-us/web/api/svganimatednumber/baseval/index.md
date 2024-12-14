@@ -18,23 +18,24 @@ A `float` representing the base (non-animated) value of the reflected attribute.
 
 ## Examples
 
-```js
-const path = document.querySelector("path");
+```html
+<path d="M 0,40 h100" pathLength="90" id="path">
+  <animate
+    attributeName="pathLength"
+    values="50; 90; 50;"
+    dur="10s"
+    repeatCount="indefinite" />
+</path>
+```
 
-// Set the animatable 'pathLength' attribute
-path.setAttribute("pathLength", "10");
+```js
+const path = document.getElementById("path");
 
 // Access the SVGAnimatedNumber object
-const animatedNumber = path.pathLength;
+const animatedPathLength = path.pathLength;
 
 // Get the base value
-console.log(animatedNumber.baseVal); // Output: 10
-
-// Modify the base value
-animatedNumber.baseVal = 15;
-
-// Verify the reflected attribute value
-console.log(path.getAttribute("pathLength")); // Output: "15"
+console.log(animatedPathLength.baseVal); // Output: 90
 ```
 
 ## Specifications
