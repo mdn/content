@@ -2,7 +2,7 @@
 title: image()
 slug: Web/CSS/image/image
 page-type: css-function
-spec_urls: https://drafts.csswg.org/css-images-4/#funcdef-image
+spec-urls: https://drafts.csswg.org/css-images-4/#funcdef-image
 ---
 
 {{CSSRef}}
