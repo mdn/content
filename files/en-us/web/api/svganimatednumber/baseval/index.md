@@ -40,7 +40,7 @@ console.log(path.pathLength.baseVal); // output: 90
 
 The `baseVal` reflect that value of the `pathLength` attribute. We also use the `baseVal` property to access the base (non-animating) value of the animating `pathLength`.
 
-To access the current value of the {{domxref("SVGGeometryElement.pathLength", "pathLength")}} value as it animates, use the {{domxref("SVGAnimatedNumber.animVal")}} property. 
+To access the current value of the {{domxref("SVGGeometryElement.pathLength", "pathLength")}} value as it animates, use the {{domxref("SVGAnimatedNumber.animVal")}} property.
 
 ## Specifications
 
