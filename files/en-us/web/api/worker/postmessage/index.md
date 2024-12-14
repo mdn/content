@@ -51,9 +51,9 @@ const myWorker = new Worker("worker.js");
 [first, second].forEach(input => {
   input.onchange = function() {
     myWorker.port.postMessage([first.value, second.value]);
-    console.log('Message posted to worker');
-  }
-})
+    console.log("Message posted to worker");
+  };
+});
 ```
 
 For a full example, see our [simple worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker) ([run example](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)).
