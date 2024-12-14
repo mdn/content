@@ -19,7 +19,7 @@ A `float` representing the animated value of the reflected attribute.
 ## Examples
 
 ```html
-<path d="M 0,40 h100" pathLength="90" id="pth">
+<path d="M 0,40 h100" pathLength="90" id="path">
   <animate
     attributeName="pathLength"
     values="50; 90; 50;"
@@ -29,14 +29,12 @@ A `float` representing the animated value of the reflected attribute.
 ```
 
 ```js
-const rect = document.querySelector("rect");
-rect.setAttribute("width", "100");
+const path = document.getElementById("path");
 
-// Access the SVGAnimatedNumber object
-const animatedWidth = rect.width;
+// Access the SVGAnimatedNumber object for the pathLength attribute
+const animatedPathLength = path.pathLength;
 
-// Simulate animation (for example, through CSS or JS)
-console.log(animatedWidth.animVal); // Output: 100 (animated value in motion)
+console.log(animatedPathLength.animVal); // Output: The current animated value
 ```
 
 ## Specifications
