@@ -10,13 +10,15 @@ browser-compat: api.SVGAnimatedNumber.animVal
 
 The **`animVal`** read-only property of the {{domxref("SVGAnimatedNumber")}} interface represents the animated value of an SVG element's numeric attribute.
 
-This property reflects the animated state of the {{SVGAttr("radius")}} attribute of the {{SVGElement("circle")}} or {{SVGElement("ellipse")}} elements, the {{SVGAttr("opacity")}} attribute of an {{SVGElement("SVGElement")}}, the {{SVGAttr("width")}} and {{SVGAttr("height")}} attributes of the {{SVGElement("rect")}} element, or similar attributes, providing access to the current animated value during animations.
+Some animatable SVG attributes accept a single number, such as the {{SVGAttr("radius")}} attribute of the {{SVGElement("circle")}} or {{SVGElement("ellipse")}} elements and the {{SVGAttr("width")}} and {{SVGAttr("height")}} attributes of the {{SVGElement("rect")}} element, and many others. The `animVal` attribute provides access to the current animated value of the animatable numeric attribute during animations.
 
 ## Value
 
-A `float` representing the animated value of the reflected attribute.
+A `number`; the current value of the animated attribute as a float.
 
 ## Examples
+
+This example includes a {{SVGElement("path")}} element with a nested {{SVGElement("animate")}} element that animates the value of the {{SVGElement("pathLength")}} attribute:
 
 ```html
 <path d="M 0,40 h100" pathLength="90" id="path">
@@ -29,13 +31,13 @@ A `float` representing the animated value of the reflected attribute.
 ```
 
 ```js
-const path = document.getElementById("path");
+const path = document.querySelector("path");
 
-// Access the SVGAnimatedNumber object for the pathLength attribute
-const animatedPathLength = path.pathLength;
-
-console.log(animatedPathLength.animVal); // Output: The current animated value
+console.log(path.pathLength.animVal); // output: 50
+console.log(path.pathLength.baseVal); // output: 90
 ```
+
+We use the `animVal` property to access the current value of the animating `pathLength`, while the {{domxref("SVGAnimatedNumber.baseVal")}} reflects the base (non-animating) value of the {{domxref("SVGGeometryElement.pathLength", "pathLength")}}.
 
 ## Specifications
 
