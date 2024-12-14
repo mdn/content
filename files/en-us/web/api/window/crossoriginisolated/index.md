@@ -26,7 +26,7 @@ A document will be cross-origin isolated if it is returned with an HTTP response
 - {{HTTPHeader("Cross-Origin-Opener-Policy")}} header with the directive `same-origin`.
 - {{HTTPHeader("Cross-Origin-Embedder-Policy")}} header with the directive `require-corp` or `credentialless`.
 
-Also, the {{HTTPHeader("Permissions-Policy")}} header's {{HTTPHeader("Permissions-Policy/cross-origin-isolated","cross-origin-isolated")}} directive must not block the use of this feature for the current origin.
+Note that if the {{HTTPHeader("Permissions-Policy")}} header's {{HTTPHeader("Permissions-Policy/cross-origin-isolated","cross-origin-isolated")}} directive blocks the document to be cross-origin isolated, `Window.crossOriginIsolated` will always return `false` and the document will not be able to use the APIs listed above with reduced restrictions, irrespective of the {{HTTPHeader("Cross-Origin-Opener-Policy")}} and {{HTTPHeader("Cross-Origin-Embedder-Policy")}} response headers.
 
 ## Value
 

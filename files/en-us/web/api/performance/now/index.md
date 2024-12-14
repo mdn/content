@@ -90,7 +90,7 @@ Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp
 ```
 
-Also, the {{HTTPHeader("Permissions-Policy")}} header's {{HTTPHeader("Permissions-Policy/cross-origin-isolated","cross-origin-isolated")}} directive must not block the use of this feature for the current origin.
+Note that if the {{HTTPHeader("Permissions-Policy")}} header's {{HTTPHeader("Permissions-Policy/cross-origin-isolated","cross-origin-isolated")}} directive blocks the document to be cross-origin isolated, `Performance.now()` will always return with lower resolution value, irrespective of the {{HTTPHeader("Cross-Origin-Opener-Policy")}} and {{HTTPHeader("Cross-Origin-Embedder-Policy")}} response headers.
 
 These headers and permission-policy ensure a top-level document does not share a browsing context group with
 cross-origin documents. COOP process-isolates your document and potential attackers

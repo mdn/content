@@ -146,7 +146,7 @@ Cross-Origin-Embedder-Policy: require-corp
 
 See also the {{HTTPHeader("Cross-Origin-Embedder-Policy")}} header which you'll need to set to `require-corp` or `credentialless` as well.
 
-Also, the {{HTTPHeader("Permissions-Policy")}} header's {{HTTPHeader("Permissions-Policy/cross-origin-isolated","cross-origin-isolated")}} directive must not block the use of this feature for the current origin.
+Note that if the {{HTTPHeader("Permissions-Policy")}} header's {{HTTPHeader("Permissions-Policy/cross-origin-isolated","cross-origin-isolated")}} directive blocks the document to be cross-origin isolated, `Window.crossOriginIsolated` will always return `false` and the document will not be able to use the APIs listed above with reduced restrictions, irrespective of the {{HTTPHeader("Cross-Origin-Opener-Policy")}} and {{HTTPHeader("Cross-Origin-Embedder-Policy")}} response headers.
 
 To check if cross-origin isolation has been successful, you can test against the {{domxref("Window.crossOriginIsolated")}} property or the {{domxref("WorkerGlobalScope.crossOriginIsolated")}} property available to window and worker contexts:
 
