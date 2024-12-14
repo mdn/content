@@ -27,10 +27,10 @@ WebAssembly.compileStreaming(source, compileOptions)
   - : A [`Response`](/en-US/docs/Web/API/Response) object or a promise that will fulfill with one, representing the underlying source of a Wasm module you want to stream and compile.
 - `compileOptions` {{optional_inline}}
   - : An object containing compilation options. Properties can include:
-    - `builtins`
-      - : An array of strings that enables the usage of [WebAssembly JavaScript builtins](/en-US/docs/WebAssembly/JavaScript_builtins) in the compiled wasm module. The strings define the types of builtin you want to enable. Currently the only available value is `"js-string"`, which enables JavaScript string builtins.
+    - `builtins` {{optional_inline}}
+      - : An array of strings that enables the usage of [WebAssembly JavaScript builtins](/en-US/docs/WebAssembly/JavaScript_builtins) in the compiled wasm module. The strings define the builtins you want to enable. Currently the only available value is `"js-string"`, which enables JavaScript string builtins.
     - `importedStringConstants` {{optional_inline}}
-      - : A string specifying an identifier for imported global string constants. This property needs to be specified if you wish to use imported global string constants in the wasm module.
+      - : A string specifying a namespace for imported global string constants. This property needs to be specified if you wish to use imported global string constants in the wasm module.
 
 ### Return value
 

@@ -14,25 +14,27 @@ This article explains how builtins work and which ones are available, then provi
 
 ## Problems with importing JavaScript functions
 
-There are several problems with importing functions from JavaScript to WebAssembly modules:
+There are several reasons why importing functions from JavaScript to WebAssembly modules introduce significant performance overheads:
 
 - Existing APIs require a conversion to handle differences around the [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) value, which WebAssembly function `import` calls leave as `undefined`.
 - Certain primitives use JavaScript operators such as [`===`](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) and [`<`](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than) that cannot be imported.
 - Most JavaScript functions are extremely permissive of the types of values they accept, and it's desirable to leverage WebAssembly's type system to remove those checks and coercions wherever we can.
 
-Considering these problems, creating built-in definitions that adapt existing JavaScript primitives to WebAssembly is simpler, more flexible, and better for performance than importing them.
+Considering these problems, creating built-in definitions that adapt existing JavaScript functionality to WebAssembly is simpler and better for performance than importing it.
 
-## WebAssembly JavaScript builtin types
+## Available WebAssembly JavaScript builtins
 
-The first builtin types to be implemented are {{jsxref("String")}} operations. This is because the most pressing use case is languages that would benefit from using the JavaScript `String` type to implement their strings. You can find a list of the `String` operations with builtin equivalents defined for them at [JS String Builtin API](https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md#js-string-builtin-api).
+The first builtin operations to be implemented are {{jsxref("String")}} operations. This is because the most pressing use case is languages that would benefit from using the JavaScript `String` type to implement their strings. You can find a list of the `String` operations with builtin equivalents defined for them at [JS String Builtin API](https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md#js-string-builtin-api).
 
-Other primitive types are likely to be supported via builtins in the future.
+Other builtins are likely to be supported in the future.
 
 ## How do you use builtins?
 
-Builtins work in a similar way to functions imported from JavaScript, except that you are using standard wasm function equivalents for performing JavaScript operations that are defined in a reserved namespace (`wasm:`). This being the case, browsers can predict and generate optimal code for them.
+Builtins work in a similar way to functions imported from JavaScript, except that you are using standard wasm function equivalents for performing JavaScript operations that are defined in a reserved namespace (`wasm:`). This being the case, browsers can predict and generate optimal code for them. This section summarizes how to use them.
 
-Builtins are enabled at compile-time by specifying the `builtins` property during compilation. This goes inside the `compileOptions` object, and its value is an array of the builtin types you want to enable:
+### JavaScript API features
+
+Builtins are enabled at compile-time by specifying the `builtins` property during compilation. This goes inside the `compileOptions` object, and its value is an array of the builtins you want to enable:
 
 ```js
 WebAssembly.compile(bytes, { builtins: ["js-string"] });
@@ -47,7 +49,7 @@ The `compileOptions` object is available to the following functions:
 - [`WebAssembly.validate()`](/en-US/docs/WebAssembly/JavaScript_interface/validate_static)
 - The [`WebAssembly.Module()`](/en-US/docs/WebAssembly/JavaScript_interface/Module/Module) constructor
 
-You can also include the `importedStringConstants` property inside `compileOptions`, which enables and specifies an identifier for imported global string constants to be used by the builtins:
+If you want to use imported global string constants with your builtins, you can also include the `importedStringConstants` property inside `compileOptions`. This selects an import namespace for imported global string constants that the engine will populate automatically:
 
 ```js
 WebAssembly.compile(bytes, {
@@ -56,14 +58,23 @@ WebAssembly.compile(bytes, {
 });
 ```
 
-> [!NOTE]
-> The above example uses `"#"` as the imported global identifier for illustrative purposes. In production, however, it is best practice to use the empty string to save on module file size. The identifier is repeated for every string literal, and real-world modules can have tens of thousands of them, so the saving can be significant.
+You don't have to use imported global string constants along with builtins; they are two separate features. Howeever, they are often used together.
 
-Over in your webassembly module, you can now import string literals, specifying the same identifier, and import builtins of the types specified in the `compileOptions` object from the `wasm:` namespace (in this case, the [`concat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat) function; see also the [equivalent built-in definition](https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md#wasmjs-string-concat)).
+> [!NOTE]
+> The above example uses `"#"` as the imported global string namespace for illustrative purposes. In production, however, it is best practice to use the empty string to save on module file size. The namespace is repeated for every string literal, and real-world modules can have tens of thousands of them, so the saving can be significant. This choice is made by the authors of the toolchain that will generate the wasm modules. Once you have a `.wasm` file and want to embed it in your JavaScript, you can't freely choose this namespace any more; you have to use what the `.wasm` file expects.
+
+### WebAssembly module features
+
+Over in your webassembly module, you can now import string literals, specifying the same namespace you specified in `importedStringConstants` over in the JavaScript:
 
 ```wasm
 (global $h (import "#" "hello ") externref)
 (global $w (import "#" "world!") externref)
+```
+
+You can also import builtins as specified in the `compileOptions` object from the `wasm:` namespace (in this case, the [`concat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat) function; see also the [equivalent built-in definition](https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md#wasmjs-string-concat)):
+
+```wasm
 (func $concat (import "wasm:js-string" "concat")
     (param externref externref) (result (ref extern)))
 ```
@@ -89,8 +100,8 @@ const importObject = {
 };
 
 const compileOptions = {
-  builtins: ["js-string"], // Opt-in to get magic imported functions
-  importedStringConstants: "#", // Opt-in to get magic imported globals
+  builtins: ["js-string"], // Enable JavaScript string builtins
+  importedStringConstants: "#", // Enable imported global string constants
 };
 
 fetch("log-concat.wasm")
@@ -124,7 +135,7 @@ The text representation of our WebAssembly module code looks like this:
 
 This code:
 
-- Imports two global string constants, `"hello "` and `"world!"`, with the `"#"` identifier as specified in the JavaScript. They are given names of `$h` and `$w`.
+- Imports two global string constants, `"hello "` and `"world!"`, with the `"#"` namespace as specified in the JavaScript. They are given names of `$h` and `$w`.
 - Imports the [`concat`](https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md#wasmjs-string-concat) builtin from the `wasm:` namespace, giving it a name of `$concat` and specifying that it has two parameters and a return value.
 - Imports the imported `"log"` function from the `"m"` namespace, as specified in the JavaScript `importObject` object, giving it a name of `$log` and specifying that it has a parameter. We decided to include a regular import as well as a builtin in the example, to show you how the two approaches compare.
 - Defines a function that will be exported with the name `"main"`. This function calls `$log`, passing it a `$concat` call as a parameter. The `$concat` call is passed the `$h` and `$w` global string constants as parameters.
