@@ -20,9 +20,11 @@ A `float` representing the animated value of the reflected attribute.
 
 ```html
 <path d="M 0,40 h100" pathLength="90" id="pth">
-  <animate attributeName="pathLength"
-      values="50; 90; 50;" dur="10s"
-      repeatCount="indefinite" />
+  <animate
+    attributeName="pathLength"
+    values="50; 90; 50;"
+    dur="10s"
+    repeatCount="indefinite" />
 </path>
 ```
 
