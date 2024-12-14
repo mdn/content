@@ -33,7 +33,8 @@ This example includes a {{SVGElement("path")}} element with a nested {{SVGElemen
 ```js
 const path = document.querySelector("path");
 
-console.log(path.pathLength.animVal); // output: 50
+console.log(path.pathLength.baseVal); // output: 90
+path.pathLength.baseVal = 50; // updates the value
 console.log(path.pathLength.baseVal); // output: 90
 ```
 
