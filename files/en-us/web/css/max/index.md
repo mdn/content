@@ -28,7 +28,7 @@ You can use different units for each value in your expression. You may also use 
 - The expression can be values combining the addition ( + ), subtraction ( - ), multiplication ( \* ) and division ( / ) operators, using standard operator precedence rules. Make sure to put a space on each side of the + and - operands. The operands in the expression may be any \<length> syntax value.
 - You can (and often need to) combine `min()` and `max()` values, or use `max()` within a `clamp()` or `calc()` function.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 
