@@ -32,7 +32,7 @@ let uninstalling = browser.management.uninstall(
 <!---->
 
 - If `id` is the calling add-on's ID, `showConfirmDialog` defaults to `false`.
-- If `id` is an ID of a different add-on, the `showConfirmDialog` option is ignored and the confirmation dialog is always shown.
+- If `id` is the ID of a different add-on, the `showConfirmDialog` option is ignored and the confirmation dialog is always shown.
 
 ### Return value
 
@@ -44,7 +44,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ## Examples
 
-Uninstall the add-on whose ID is "addon-id" and ask the user to confirm. In the callback, we check whether the user canceled the uninstallation, or if the operation succeeded.
+Uninstall the add-on whose ID is "addon-id" and ask the user to confirm. In the callback, we check whether the user canceled the uninstallation or if the operation succeeded.
 
 ```js
 let id = "addon-id";
