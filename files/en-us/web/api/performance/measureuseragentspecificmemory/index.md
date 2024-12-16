@@ -101,21 +101,9 @@ An example return value looks like this:
 
 ## Security requirements
 
-Your site needs to be in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+To use this method your document must be in a [secure context](/en-US/docs/Web/Security/Secure_Contexts) and {{domxref("Window.crossOriginIsolated","cross-origin isolated","","nocode")}}.
 
-Two headers need to be set to cross-origin isolate your site:
-
-- {{HTTPHeader("Cross-Origin-Opener-Policy")}} with `same-origin` as value (protects your origin from attackers)
-- {{HTTPHeader("Cross-Origin-Embedder-Policy")}} with `require-corp` or `credentialless` as value (protects victims from your origin)
-
-```http
-Cross-Origin-Opener-Policy: same-origin
-Cross-Origin-Embedder-Policy: require-corp
-```
-
-Note that if the {{HTTPHeader("Permissions-Policy")}} header's {{HTTPHeader("Permissions-Policy/cross-origin-isolated","cross-origin-isolated")}} directive blocks the document to be cross-origin isolated, `Performance.measureUserAgentSpecificMemory()` will always not be exposed, irrespective of the {{HTTPHeader("Cross-Origin-Opener-Policy")}} and {{HTTPHeader("Cross-Origin-Embedder-Policy")}} response headers.
-
-To check if cross origin isolation has been successful, you can test against the {{domxref("Window.crossOriginIsolated")}} property or the {{domxref("WorkerGlobalScope.crossOriginIsolated")}} property available to window and worker contexts:
+You can use the {{domxref("Window.crossOriginIsolated")}} and {{domxref("WorkerGlobalScope.crossOriginIsolated")}} properties in window and worker contexts to check if the method is considered cross-origin isolated with respect to this method, respectively:
 
 ```js
 if (crossOriginIsolated) {

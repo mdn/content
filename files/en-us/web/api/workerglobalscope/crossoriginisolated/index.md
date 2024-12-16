@@ -26,13 +26,36 @@ A document will be cross-origin isolated if it is returned with an HTTP response
 - {{HTTPHeader("Cross-Origin-Opener-Policy")}} header with the directive `same-origin`.
 - {{HTTPHeader("Cross-Origin-Embedder-Policy")}} header with the directive `require-corp` or `credentialless`.
 
-Note that the {{HTTPHeader("Permissions-Policy")}} header's {{HTTPHeader("Permissions-Policy/cross-origin-isolated","cross-origin-isolated")}} directive should not block the document to be cross-origin isolated.
+Access to the APIs must also be allowed by the `Permissions-Policy` {{HTTPHeader("Permissions-Policy/cross-origin-isolated","cross-origin-isolated")}}.
+Otherwise `crossOriginIsolated` property will return `false`, and access to the the document will not be able to use the APIs listed above with reduced restrictions.
 
 ## Value
 
 A boolean value.
 
 ## Examples
+
+### Cross-origin isolating a document
+
+To cross-origin isolate a document:
+
+- Set the {{HTTPHeader("Cross-Origin-Opener-Policy")}} HTTP header to `same-origin`:
+
+  ```http
+  Cross-Origin-Opener-Policy: same-origin
+  ```
+
+- Set the {{HTTPHeader("Cross-Origin-Embedder-Policy")}} HTTP header to `require-corp` or `credentialless`:
+
+  ```http
+  Cross-Origin-Embedder-Policy: require-corp
+  Cross-Origin-Embedder-Policy: credentialless
+  ```
+
+- The {{HTTPHeader("Permissions-Policy/cross-origin-isolated","cross-origin-isolated")}} directive of the {{HTTPHeader("Permissions-Policy")}} header must not block access to the feature.
+  Note that the default value of the directive is `self`, so the feature will be granted by default to cross-origin isolated documents.
+
+### Checking if the document is cross-origin isolated
 
 ```js
 const myWorker = new Worker("worker.js");
