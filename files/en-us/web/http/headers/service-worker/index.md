@@ -3,7 +3,6 @@ title: Service-Worker
 slug: Web/HTTP/Headers/Service-Worker
 page-type: http-header
 browser-compat: http.headers.Service-Worker
-spec-urls: https://www.w3.org/TR/service-workers/#service-worker
 ---
 
 {{HTTPSidebar}}
@@ -45,6 +44,5 @@ Service-Worker: script
 
 ## See also
 
+- {{HTTPHeader("Service-Worker-Allowed")}} header
 - [Service worker API](/en-US/docs/Web/API/Service_Worker_API)
-- [Using service workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- {{domxref("ServiceWorkerRegistration")}}
