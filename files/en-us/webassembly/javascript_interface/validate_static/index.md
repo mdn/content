@@ -26,7 +26,7 @@ WebAssembly.validate(bufferSource, compileOptions)
 - `compileOptions` {{optional_inline}}
   - : An object containing compilation options. This parameter is included on the `validate()` method so that it can be used to validate modules when the compilation options are present (for example, to implement feature detection). Properties can include:
     - `builtins` {{optional_inline}}
-      - : An array of strings that enables the usage of [WebAssembly JavaScript builtins](/en-US/docs/WebAssembly/JavaScript_builtins) in the compiled wasm module. The strings define the builtins you want to enable. Currently the only available value is `"js-string"`, which enables JavaScript string builtins.
+      - : An array of strings that enables the usage of [WebAssembly JavaScript builtins](/en-US/docs/WebAssembly/JavaScript_builtins) in the compiled Wasm module. The strings define the builtins you want to enable. Currently the only available value is `"js-string"`, which enables JavaScript string builtins.
     - `importedStringConstants` {{optional_inline}}
       - : A string specifying a namespace for imported global string constants. This property needs to be specified if you wish to use imported global string constants in the wasm module.
 
