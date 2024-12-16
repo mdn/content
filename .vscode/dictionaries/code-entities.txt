@@ -364,7 +364,6 @@ layers.offmainthreadcomposition
 leavepictureinpicture
 legacycaller
 lepc
-leptos
 levelchange
 libfdk_aac
 libvorbis
@@ -596,7 +595,6 @@ reflectionchange
 removestream
 replacewithcommas
 replacewithspaces
-RFCOMM
 RGBX
 RGUI
 richlistbox
