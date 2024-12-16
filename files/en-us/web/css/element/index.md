@@ -26,6 +26,10 @@ where:
 - _id_
   - : The ID of an element to use as the background, specified using the HTML attribute #_id_ on the element.
 
+## Formal syntax
+
+{{CSSSyntax}}
+
 ## Examples
 
 These examples work in builds of Firefox that support `-moz-element()`.
