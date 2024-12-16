@@ -30,7 +30,7 @@ Other builtins are likely to be supported in the future.
 
 ## How do you use builtins?
 
-Builtins work in a similar way to functions imported from JavaScript, except that you are using standard wasm function equivalents for performing JavaScript operations that are defined in a reserved namespace (`wasm:`). This being the case, browsers can predict and generate optimal code for them. This section summarizes how to use them.
+Builtins work in a similar way to functions imported from JavaScript, except that you are using standard Wasm function equivalents for performing JavaScript operations that are defined in a reserved namespace (`wasm:`). This being the case, browsers can predict and generate optimal code for them. This section summarizes how to use them.
 
 ### JavaScript API features
 
