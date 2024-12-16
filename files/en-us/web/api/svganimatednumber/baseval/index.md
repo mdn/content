@@ -10,7 +10,7 @@ browser-compat: api.SVGAnimatedNumber.baseVal
 
 The **`baseVal`** property of the {{domxref("SVGAnimatedNumber")}} interface represents the base (non-animated) value of an animatable numeric attribute.
 
-Some animateable SVG attributes accept a single numeric value, such as the {{SVGAttr("radius")}} attribute of the {{SVGElement("circle")}} or {{SVGElement("ellipse")}} elements and the {{SVGAttr("width")}} and {{SVGAttr("height")}} attributes of the {{SVGElement("rect")}} element, and many others. The `baseVal` property reflects and updates the base, or non-animated, value of the numeric attribute.
+Some animatable SVG attributes accept a single numeric value, such as the {{SVGAttr("radius")}} attribute of the {{SVGElement("circle")}} or {{SVGElement("ellipse")}} elements and the {{SVGAttr("width")}} and {{SVGAttr("height")}} attributes of the {{SVGElement("rect")}} element, and many others. The `baseVal` property reflects and updates the base, or non-animated, value of the numeric attribute.
 
 ## Value
 
