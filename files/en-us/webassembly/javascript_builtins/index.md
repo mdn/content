@@ -18,7 +18,7 @@ There are several reasons why importing functions from JavaScript to WebAssembly
 
 - Existing APIs require a conversion to handle differences around the [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) value, which WebAssembly function `import` calls leave as `undefined`.
 - Certain primitives use JavaScript operators such as [`===`](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) and [`<`](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than) that cannot be imported.
-- Most JavaScript functions are extremely permissive of the types of values they accept, and it's desirable to leverage WebAssembly's type system to remove those checks and coercions wherever we can.
+- Most JavaScript functions are extremely permissive of the types of values they accept, and it's desirable to leverage WebAssembly's type system to remove those checks and coercions wherever possible.
 
 Considering these problems, creating built-in definitions that adapt existing JavaScript functionality to WebAssembly is simpler and better for performance than importing it.
 
