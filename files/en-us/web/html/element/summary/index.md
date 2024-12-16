@@ -176,7 +176,10 @@ The CSS includes the `[open]` [attribute selector](/en-US/docs/Web/CSS/Attribute
 <details>
   <summary>On optimism</summary>
   <p>
-    <q>Optimism is the faith that leads to achievement; nothing can be done without hope.</q>
+    <q
+      >Optimism is the faith that leads to achievement; nothing can be done
+      without hope.</q
+    >
   </p>
 </details>
 ```
