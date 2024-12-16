@@ -74,7 +74,7 @@ _This interface doesn't inherit any methods. None of the following methods alter
 - {{domxref("DOMMatrixReadOnly.toJSON()")}}
   - : Returns a JSON representation of the `DOMMatrixReadOnly` object.
 - {{domxref("DOMMatrixReadOnly.toString()")}}
-  - : Creates and returns a string which contains a string representation of the matrix in CSS matrix syntax, using the appropriate CSS matrix notation.
+  - : Creates and returns a string representation of the matrix in CSS matrix syntax, using the appropriate CSS matrix notation.
 - {{domxref("DOMMatrixReadOnly.transformPoint()")}}
   - : Transforms the specified point using the matrix, returning a new {{domxref("DOMPoint")}} object containing the transformed point. Neither the matrix nor the original point are altered.
 - {{domxref("DOMMatrixReadOnly.translate()")}}
