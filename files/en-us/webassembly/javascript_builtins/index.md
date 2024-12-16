@@ -61,7 +61,7 @@ WebAssembly.compile(bytes, {
 You don't have to use imported global string constants along with builtins; they are two separate features. However, they are often used together.
 
 > [!NOTE]
-> The above example uses `"#"` as the imported global string namespace for illustrative purposes. In production, however, it is best practice to use the empty string to save on module file size. The namespace is repeated for every string literal, and real-world modules can have tens of thousands of them, so the saving can be significant. This choice is made by the authors of the toolchain that will generate the wasm modules. Once you have a `.wasm` file and want to embed it in your JavaScript, you can't freely choose this namespace any more; you have to use what the `.wasm` file expects.
+> The above example uses `"#"` as the imported global string namespace for illustrative purposes. In production, however, it is best practice to use the empty string to save on module file size. The namespace is repeated for every string literal, and real-world modules can have tens of thousands of them, so the saving can be significant. This choice is made by the authors of the toolchain that will generate the Wasm modules. Once you have a `.wasm` file and want to embed it in your JavaScript, you can't freely choose this namespace any more; you have to use what the `.wasm` file expects.
 
 ### WebAssembly module features
 
