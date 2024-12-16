@@ -209,4 +209,3 @@ Defined in {{RFC("9114")}}, [HTTP/3 is supported by most major browsers](https:/
   - {{glossary('Round Trip Time', 'Round Trip Time (RTT)')}}
   - {{glossary('TCP slow start')}}
   - {{glossary('TCP', 'Transmission Control Protocol (TCP)')}}
-  - {{glossary('Web performance')}}
