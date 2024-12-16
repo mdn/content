@@ -62,7 +62,7 @@ fetch("simple.wasm")
 
 ### Validating a module with WebAssembly JavaScript builtins enabled
 
-This example validates a wasm module with JavaScript string builtins and imported global string constants enabled, logging `"wasm module valid: true"` to the console if it is valid, and `"wasm module valid: false"` if it isn't. [See it running live](https://mdn.github.io/webassembly-examples/js-builtin-examples/validate/).
+This example validates a Wasm module with JavaScript string builtins and imported global string constants enabled, logging `"wasm module valid: true"` to the console if it is valid, and `"wasm module valid: false"` if it isn't. [See it running live](https://mdn.github.io/webassembly-examples/js-builtin-examples/validate/).
 
 ```js
 const compileOptions = {
