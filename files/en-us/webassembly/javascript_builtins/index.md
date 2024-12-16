@@ -14,7 +14,7 @@ This article explains how builtins work and which ones are available, then provi
 
 ## Problems with importing JavaScript functions
 
-There are several reasons why importing functions from JavaScript to WebAssembly modules introduce significant performance overheads:
+There are several reasons why importing functions from JavaScript to WebAssembly modules introduces significant performance overheads:
 
 - Existing APIs require a conversion to handle differences around the [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) value, which WebAssembly function `import` calls leave as `undefined`.
 - Certain primitives use JavaScript operators such as [`===`](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) and [`<`](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than) that cannot be imported.
