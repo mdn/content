@@ -274,3 +274,9 @@ In summary, we recommend looking for the string `Mobi` anywhere in the User Agen
 
 > [!NOTE]
 > If the device is large enough that it's not marked with `Mobi`, you should serve your desktop site (which, as a best practice, should support touch input anyway, as more desktop machines are appearing with touchscreens).
+
+## See also
+
+- [CSS Media Queries](/en-US/docs/Web/CSS/CSS_media_queries)
+- [HTTP Client hints](/en-US/docs/Web/HTTP/Client_hints)
+- [Implementing feature detection](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
