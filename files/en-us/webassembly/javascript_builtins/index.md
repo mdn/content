@@ -6,7 +6,7 @@ page-type: guide
 
 {{WebAssemblySidebar}}
 
-WebAssembly JavaScript builtins are wasm equivalents of JavaScript operations that provide a way to use JavaScript features inside wasm modules without having to import JavaScript glue code to provide a bridge between JavaScript and WebAssembly values and calling conventions.
+WebAssembly JavaScript builtins are Wasm equivalents of JavaScript operations that provide a way to use JavaScript features inside Wasm modules without having to import JavaScript glue code to provide a bridge between JavaScript and WebAssembly values and calling conventions.
 
 This provides performance improvements — importing glue code for primitives such as {{jsxref("String")}} can come with a significant overhead. WebAssembly and most languages that target it expect a tight sequence of inline operations rather than an indirect function call, which is how regular imported functions work.
 
