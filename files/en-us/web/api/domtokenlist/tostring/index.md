@@ -8,7 +8,7 @@ browser-compat: api.DOMTokenList.toString
 
 {{APIRef("DOM")}}
 
-The **`toString()`** {{Glossary("stringifier")}} method of the {{domxref("DOMTokenList")}} interface returns the values of the token list serialized as a string. The return value is equal to the {{domxref("DOMTokenList.value")}} property.
+The **`toString()`** {{Glossary("stringifier")}} method of the {{domxref("DOMTokenList")}} interface returns the values of the token list serialized as a string. The return value is a space-separated list of tokens equal to the {{domxref("DOMTokenList.value")}} property.
 
 ## Syntax
 
@@ -22,7 +22,7 @@ None.
 
 ### Return value
 
-A string; a space-separated list of values.
+A string.
 
 ## Examples
 

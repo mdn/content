@@ -8,7 +8,7 @@ browser-compat: api.MediaList.toString
 
 {{APIRef("CSSOM")}}
 
-The **`toString()`** {{Glossary("stringifier")}} method of the {{domxref("MediaList")}} interface returns a string representing the object's values, in the same format as the {{domxref("MediaList.mediaText")}} property.
+The **`toString()`** {{Glossary("stringifier")}} method of the {{domxref("MediaList")}} interface returns a string representing the object's values. The value is a comma-separated list of media values in the same format as the {{domxref("MediaList.mediaText")}} property.
 
 ## Syntax
 
@@ -22,7 +22,7 @@ None.
 
 ### Return value
 
-A string; a space-separated list of media values.
+A string.
 
 ## Examples
 
@@ -59,6 +59,5 @@ console.log(mediaList.toString());
 
 - {{domxref("MediaList.mediaText")}}
 - {{domxref("MediaList.appendMedium()")}}
-- {{domxref("MediaList")}}
 - [Media queries](/en-US/docs/Web/CSS/CSS_media_queries)
 - [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
