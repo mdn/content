@@ -19,7 +19,7 @@ The **`setMatrixValue()`** method of the {{domxref("DOMMatrix")}} interface repl
 ### Parameters
 
 - `transformList`
-  - : The list of comma separated transform values as a `DOMString` matrix.
+  - : The list of comma-separated transform values as a `DOMString` matrix.
 
 ### Return value
 
