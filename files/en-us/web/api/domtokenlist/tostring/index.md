@@ -47,5 +47,5 @@ console.log(classes.toString());
 
 ## See also
 
-- {{domxref("DOMTokenList")}}
+- {{domxref("Element.classList")}}
 - {{domxref("DOMTokenList.add()")}}
