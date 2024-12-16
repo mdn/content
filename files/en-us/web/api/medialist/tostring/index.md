@@ -27,18 +27,21 @@ A string; a space-separated list of media values.
 ## Examples
 
 ```js
-const SS = document.styleSheets[0]; // the document's first stylesheet
-const ML = SS.media; // the mediaList of the stylesheet
-// set the `media` text to a media query value
-ss.mediaText = "SCREEN AND (140PX <= WIDTH <= 380PX)";
-// add a second media value
-ML.appendMedium("SCREEN AND (MAX-HEIGHT: 400PX) AND (ORIENTATION: LANDSCAPE))");
-// erroniously, add a media query twice
-ML.appendMedium("SCREEN AND (MAX-HEIGHT: 400PX) AND (ORIENTATION: LANDSCAPE))");
-console.log(ML.toString()); // "screen and (140px <= width <= 380px), screen and (max-height: 400px) and (orientation: landscape)"
-```
+const styleSheets = document.styleSheets[0]; // the document's first stylesheet
+const mediaList = styleSheets.media; // the mediaList of the stylesheet
 
-Media list values are lowercase. When stringified, the values are separated by a comma followed by a space.
+// set the `media` text to a media query value
+styleSheets.mediaText = "SCREEN AND (140PX <= WIDTH <= 380PX)";
+
+// add a second media value
+mediaList.appendMedium("SCREEN AND (MAX-HEIGHT: 400PX) AND (ORIENTATION: LANDSCAPE))");
+
+// erroneously, add the same media query again
+mediaList.appendMedium("SCREEN AND (MAX-HEIGHT: 400PX) AND (ORIENTATION: LANDSCAPE))");
+
+console.log(mediaList.toString());
+// "screen and (140px <= width <= 380px), screen and (max-height: 400px) and (orientation: landscape)" 
+```
 
 ## Specifications
 
