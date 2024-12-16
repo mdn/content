@@ -93,7 +93,7 @@ exported function invoked.
 
 ### Enabling WebAssembly JavaScript builtins
 
-This example enables JavaScript string builtins and imported global string constants when compiling and instantiating the wasm module, before running the exported `main()` function (which logs `"hello world!"` to the console). [See it running live](https://mdn.github.io/webassembly-examples/js-builtin-examples/instantiate-streaming/).
+This example enables JavaScript string builtins and imported global string constants when compiling and instantiating the Wasm module, before running the exported `main()` function (which logs `"hello world!"` to the console). [See it running live](https://mdn.github.io/webassembly-examples/js-builtin-examples/instantiate-streaming/).
 
 ```js
 const importObject = {
