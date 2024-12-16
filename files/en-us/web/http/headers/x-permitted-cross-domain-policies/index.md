@@ -70,7 +70,7 @@ For example, this is the least permissive master policy definition, which does n
 </cross-domain-policy>
 ```
 
-The `X-Permitted-Cross-Domain-Policies` header can specify a meta-policy for the HTTP response it's included in or override a meta-policy defined in the master cross-domain policy file, if present.
+The `X-Permitted-Cross-Domain-Policies` header can specify a meta-policy for the HTTP response it's included in, or override a meta-policy defined in the master cross-domain policy file, if present.
 It takes the same values as the file's `permitted-cross-domain-policies` attribute and additionally `none-this-response`.
 
 Most commonly, it's used to prevent any access to site resources in cases where the developer does not have access to create a master cross-domain policy file in the site root.
