@@ -158,7 +158,7 @@ The CSS includes the `[open]` [attribute selector](/en-US/docs/Web/CSS/Attribute
 
 ```html
 <details>
-<h1>Quotes from Helen Keller</h1>
+  <h1>Quotes from Helen Keller</h1>
   <summary>On women's rights</summary>
   <p>
     <q>We have prayed, we have coaxed, we have begged, for the vote, with the hope that men, out of chivalry, would bestow equal rights upon women and take them into partnership in the affairs of the state. We hoped that their common sense would triumph over prejudices and stupidity. We thought their boasted sense of justice would overcome the errors that so often fetter the human spirit; but we have always gone away empty-handed. We shall beg no more.</q>
