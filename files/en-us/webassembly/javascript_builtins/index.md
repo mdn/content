@@ -65,7 +65,7 @@ You don't have to use imported global string constants along with builtins; they
 
 ### WebAssembly module features
 
-Over in your webassembly module, you can now import string literals, specifying the same namespace you specified in `importedStringConstants` over in the JavaScript:
+Over in your WebAssembly module, you can now import string literals, specifying the same namespace you specified in `importedStringConstants` over in the JavaScript:
 
 ```wasm
 (global $h (import "#" "hello ") externref)
