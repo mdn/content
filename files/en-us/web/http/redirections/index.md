@@ -232,3 +232,9 @@ Sometimes, the server won't detect it: a redirection loop can spread over severa
 In both cases, the user can't do much (unless corruption is happening on their side, like a mismatch of cache or cookies).
 
 It is important to avoid redirection loops, as they completely break the user experience.
+
+## See also
+
+- [3XX redirection](/en-US/docs/Web/HTTP/Status#redirection_messages) response statuses
+- {{HTTPHeader("Location")}} header
+- {{domxref("window.location")}} property for redirection using JavaScript

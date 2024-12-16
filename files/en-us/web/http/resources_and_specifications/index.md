@@ -53,3 +53,12 @@ HTTP was first specified in the early 1990s. Designed with extensibility in mind
 | [Reporting API](https://wicg.github.io/reporting/)                                                                                                 | `Report-To` header                                                                                                                                                                                                                                    | Draft                    |
 | [Draft spec](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-expect-ct-01)                                                                | Expect-CT Extension for HTTP                                                                                                                                                                                                                          | IETF Draft               |
 | {{rfc(7486)}}                                                                                                                                      | HTTP Origin-Bound Auth (HOBA)                                                                                                                                                                                                                         | Experimental             |
+
+## See also
+
+- [Evolution of HTTP](/en-US/docs/Web/HTTP/Evolution_of_HTTP)
+- Glossary terms:
+  - {{glossary('HTTP')}}
+  - {{glossary('HTTP_2', 'HTTP/2')}}
+  - {{glossary('QUIC')}}
+  - {{glossary('TCP', 'Transmission Control Protocol (TCP)')}}
