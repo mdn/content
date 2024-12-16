@@ -28,7 +28,7 @@ The following example shows how to disable writing suggestions offered by user a
 ```js
 const element = document.querySelector("input");
 
-// writing suggestions offered by user agents will be disabled by script manually on this input
+// disable user agent writing suggestions offered
 element.writingSuggestions = "false";
 ```
 
