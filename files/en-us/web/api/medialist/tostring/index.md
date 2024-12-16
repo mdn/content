@@ -8,7 +8,7 @@ browser-compat: api.MediaList.toString
 
 {{APIRef("CSSOM")}}
 
-The **`toString()`** {{Glossary("stringifier")}} method of the {{domxref("MediaList")}} API returns a string representing the array-like `MediaList` object values, a list of one or more media formats, as text. The return value is the same as {{domxref("MediaList.mediaText")}} stringifier property.
+The **`toString()`** {{Glossary("stringifier")}} method of the {{domxref("MediaList")}} interface returns a string representing the object's values, in the same format as the {{domxref("MediaList.mediaText")}} property.
 
 ## Syntax
 
