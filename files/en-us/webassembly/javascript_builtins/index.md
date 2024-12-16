@@ -81,7 +81,7 @@ You can also import builtins as specified in the `compileOptions` object from th
 
 ## Builtins example
 
-Let's work through a basic but complete example to show how builtins are used. This example will define a function inside a wasm module that concatenates two strings together and prints the result to the console, then export it. We will then call the exported function from JavaScript.
+Let's work through a basic but complete example to show how builtins are used. This example will define a function inside a Wasm module that concatenates two strings together and prints the result to the console, then export it. We will then call the exported function from JavaScript.
 
 The example we'll be referring to uses the [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate_static) function on the webpage to handle the compilation and instantiation; you can find this and other examples on our `webassembly-examples` repo — see [`js-builtin-examples`](https://github.com/mdn/webassembly-examples/tree/main/js-builtin-examples).
 
