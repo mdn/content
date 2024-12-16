@@ -39,7 +39,7 @@ console.log(`m41: ${float32[12]}, m42: ${float32[13]}, m43: ${float32[14]}`); //
 
 ### Single precision
 
-There are multiple ways to access the values of a matrix. This example rotates a matrix by 30deg, saving the rotated state to {{domxref("DOMMatrixReadOnly.toJSON()")}} and toFloat32 a u values of the matrix ("a" and "b")
+There are multiple ways to access the values of a matrix. This example rotates a matrix by 30deg, saving the rotated state as a JSON object using the {{domxref("DOMMatrixReadOnly.toJSON()")}} method and as a single-precision array using the `toFloat32Array()` method.
 
 ```js
 const matrix = new DOMMatrixReadOnly();
