@@ -3,9 +3,9 @@ title: Protocol upgrade mechanism
 slug: Web/HTTP/Protocol_upgrade_mechanism
 page-type: guide
 spec-urls:
+  - https://www.rfc-editor.org/rfc/rfc6455
   - https://www.rfc-editor.org/rfc/rfc7230
   - https://www.rfc-editor.org/rfc/rfc7540
-  - https://www.rfc-editor.org/rfc/rfc6455
 ---
 
 {{HTTPSidebar}}
