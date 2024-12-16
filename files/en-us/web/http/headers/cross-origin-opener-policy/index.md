@@ -147,7 +147,7 @@ Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp
 ```
 
-You can use the {{domxref("Window.crossOriginIsolated")}} and {{domxref("WorkerGlobalScope.crossOriginIsolated")}} properties to check if the features are restricted in window and worker contexts, respectively:
+You can use the {{domxref("Window.crossOriginIsolated")}} and {{domxref("WorkerGlobalScope.crossOriginIsolated")}} properties to check if a document is cross-origin isolated, and hence whether or not the features are restricted:
 
 ```js
 const myWorker = new Worker("worker.js");

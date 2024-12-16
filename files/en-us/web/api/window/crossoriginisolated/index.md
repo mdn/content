@@ -19,7 +19,7 @@ Cross-origin isolated documents operate with fewer restrictions when using the f
 
 - {{JSxRef("SharedArrayBuffer")}} can be created and sent via a {{DOMxRef("Window.postMessage()")}} or a {{DOMxRef("MessagePort.postMessage()")}} call.
 - {{DOMxRef("Performance.now()")}} offers better precision.
-- {{DOMxRef("Performance.measureUserAgentSpecificMemory()")}} can be accessed.
+- {{DOMxRef("Performance.measureUserAgentSpecificMemory()")}} can be called.
 
 A document will be cross-origin isolated if it is returned with an HTTP response that includes the headers:
 
@@ -27,7 +27,7 @@ A document will be cross-origin isolated if it is returned with an HTTP response
 - {{HTTPHeader("Cross-Origin-Embedder-Policy")}} header with the directive `require-corp` or `credentialless`.
 
 Access to the APIs must also be allowed by the `Permissions-Policy` {{HTTPHeader("Permissions-Policy/cross-origin-isolated","cross-origin-isolated")}}.
-Otherwise `crossOriginIsolated` property will return `false`, and access to the the document will not be able to use the APIs listed above with reduced restrictions.
+Otherwise `crossOriginIsolated` property will return `false`, and the document will not be able to use the APIs listed above with reduced restrictions.
 
 ## Value
 

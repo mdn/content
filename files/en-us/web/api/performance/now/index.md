@@ -69,7 +69,7 @@ To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glos
 - Resolution in isolated contexts: 5 microseconds
 - Resolution in non-isolated contexts: 100 microseconds
 
-You can use the {{domxref("Window.crossOriginIsolated")}} and {{domxref("WorkerGlobalScope.crossOriginIsolated")}} properties in window and worker contexts, respectively, to check if the method is considered cross-origin isolated with respect to this method:
+You can use the {{domxref("Window.crossOriginIsolated")}} and {{domxref("WorkerGlobalScope.crossOriginIsolated")}} properties to check if the document is cross-origin isolated:
 
 ```js
 if (crossOriginIsolated) {

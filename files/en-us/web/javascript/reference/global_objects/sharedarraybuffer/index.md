@@ -34,7 +34,7 @@ Shared memory and high-resolution timers were effectively [disabled at the start
 In 2020, a new, secure approach has been standardized to re-enable shared memory.
 
 To use shared memory your document must be in a [secure context](/en-US/docs/Web/Security/Secure_Contexts) and {{domxref("Window.crossOriginIsolated","cross-origin isolated","","nocode")}}.
-You can use the {{domxref("Window.crossOriginIsolated")}} and {{domxref("WorkerGlobalScope.crossOriginIsolated")}} properties in window and worker contexts to check if the method is considered cross-origin isolated with respect to this method, respectively:
+You can use the {{domxref("Window.crossOriginIsolated")}} and {{domxref("WorkerGlobalScope.crossOriginIsolated")}} properties to check if the document is cross-origin isolated:
 
 ```js
 const myWorker = new Worker("worker.js");
