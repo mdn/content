@@ -143,7 +143,7 @@ This code:
 To get your local example working:
 
 1. Save the WebAssembly module code shown above into a text file called `log-concat.wat`, in the same directory as your HTML/JavaScript.
-2. Compile it into a WebAssembly module (`log-concat.wasm`) using the `wasm-as` tool, which is part of the [Binaryen library](https://github.com/WebAssembly/binaryen) (see the [build instructions](https://github.com/WebAssembly/binaryen?tab=readme-ov-file#building)). You'll need to run `wasm-as` with reference types and GC enabled for these examples to compile successfully:
+2. Compile it into a WebAssembly module (`log-concat.wasm`) using the `wasm-as` tool, which is part of the [Binaryen library](https://github.com/WebAssembly/binaryen) (see the [build instructions](https://github.com/WebAssembly/binaryen?tab=readme-ov-file#building)). You'll need to run `wasm-as` with reference types and garbage collection (GC) enabled for these examples to compile successfully:
 
    ```sh
    wasm-as --enable-reference-types -–enable-gc log-concat.wat
