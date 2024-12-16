@@ -7,7 +7,7 @@ browser-compat: javascript.operators.yield_star
 
 {{jsSidebar("Operators")}}
 
-The **`yield*`** operator is used to delegate to another [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) object, such as a {{jsxref("Generator")}}. Inside an async generator, it can also delegate to an `AsyncIterator`, such as a {{jsxref("AsyncGenerator")}}.
+The **`yield*`** operator can be used within generator (sync or async) functions to delegate to another [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) object, such as a {{jsxref("Generator")}}. Inside async generator functions, it can additionally be used to delegate to another async iterable object, such as an {{jsxref("AsyncGenerator")}}.
 
 {{EmbedInteractiveExample("pages/js/expressions-yieldasterisk.html")}}
 
@@ -114,22 +114,22 @@ console.log(gen.next()); // {value: 3, done: false} done is false because g5 gen
 console.log(gen.next()); // {value: 'foo', done: true}
 ```
 
-### Use with Async Generators
+### Use with async generators
 
 ```js
 async function* g1() {
-    await Promise.resolve(0);
-    yield "foo";
+  await Promise.resolve(0);
+  yield "foo";
 }
 
-function* g2():
-   yield "bar"
+function* g2() {
+  yield "bar";
 }
 
-async unction* g3() {
-    // Can use yield* on both async and regular interators
-    yield* g1();
-    yield* g2();
+async function* g3() {
+  // Can use yield* on both async and regular interators
+  yield* g1();
+  yield* g2();
 }
 
 const gen = g4();
