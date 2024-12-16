@@ -64,7 +64,11 @@ CSP can also be used to provide granular control over:
      base-uri 'none';
    ```
 
-This does however weaken the protection offered by strict CSPs. You must make sure that the scripts you are loading are trustworthy. 4. Refactor patterns disallowed by the strict CSP, such as inline event handlers and `eval()`. For example, replace inline event handlers with [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) calls inside scripts. 5. If you are still having trouble with certain items, you can consider widening the policy to be more permissive, adding specific sources as highlighted during testing; for example, `style-src 'self' https://example.com/`. A very permissive policy such as `default-src https:` still provides some protection, disabling unsafe inline/`eval()` and only allow loading of resources (images, fonts, scripts, etc.) over HTTPS, but it is very weak compared to a strict CSP.
+   > [!NOTE]
+   > This does however weaken the protection offered by strict CSPs. You must make sure that the scripts you are loading are trustworthy.
+
+4. Refactor patterns disallowed by the strict CSP, such as inline event handlers and `eval()`. For example, replace inline event handlers with [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) calls inside scripts.
+5. If you are still having trouble with certain items, you can consider widening the policy to be more permissive, adding specific sources as highlighted during testing; for example, `style-src 'self' https://example.com/`. A more permissive policy such as `default-src https:` still provides some protection, disabling unsafe inline/`eval()` and only allow loading of resources (images, fonts, scripts, etc.) over HTTPS, but it is very weak compared to a strict CSP.
 
 Keep the following points in mind:
 
