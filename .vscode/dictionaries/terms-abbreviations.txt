@@ -562,6 +562,7 @@ retarget
 retargeted
 retargeting
 retargetings
+RFCOMM
 RGTC
 roadmaps
 Rockhopper

@@ -144,7 +144,7 @@ After reviewing all of the above better alternatives to user agent sniffing, the
 
 One such case is using user agent sniffing as a fallback when detecting if the device has a touch screen. See the [Mobile Device Detection](#mobile_device_detection) section for more information.
 
-Another such case is for fixing bugs in browsers that do not automatically update. WebKit (on iOS) is a perfect example. Apple forces all of the browsers on IOS to use WebKit internally, thus the user has no way to get a better more updated browser on older devices. Most bugs can be detected, but some bugs take more effort to detect than others. In such cases, it might be beneficial to use user agent sniffing to save on performance. For example, WebKit 6 has a bug whereby when the device orientation changes, the browser might not fire [`MediaQueryList`](/en-US/docs/Web/API/MediaQueryList) listeners when it should. To overcome this bug, observe the code below.
+Another such case is for fixing bugs in browsers that do not automatically update. WebKit (on iOS) is a perfect example. Apple forces all of the browsers on iOS to use WebKit internally, thus the user has no way to get a better more updated browser on older devices. Most bugs can be detected, but some bugs take more effort to detect than others. In such cases, it might be beneficial to use user agent sniffing to save on performance. For example, WebKit 6 has a bug whereby when the device orientation changes, the browser might not fire [`MediaQueryList`](/en-US/docs/Web/API/MediaQueryList) listeners when it should. To overcome this bug, observe the code below.
 
 ```js
 const UA = navigator.userAgent;
