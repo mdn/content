@@ -82,7 +82,7 @@ fetch("simple.wasm")
 
 ### Enabling WebAssembly JavaScript builtins
 
-This example enables JavaScript string builtins and imported global string constants when compiling a wasm module via the `Module()` constructor, which is then instantiated via [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate_static). It then calls the exported `main()` function, which logs `"hello world!"` to the console. [See it running live](https://mdn.github.io/webassembly-examples/js-builtin-examples/module-constructor/).
+This example enables JavaScript string builtins and imported global string constants when compiling a Wasm module via the `Module()` constructor, which is then instantiated via [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate_static). It then calls the exported `main()` function, which logs `"hello world!"` to the console. [See it running live](https://mdn.github.io/webassembly-examples/js-builtin-examples/module-constructor/).
 
 ```js
 const importObject = {
