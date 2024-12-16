@@ -87,7 +87,7 @@ Therefore, to detect this feature you can define a module that's _invalid_ with 
   (function (import "wasm:js-string" "cast")))
 ```
 
-Without builtins, the module is valid, because you can import any function with any signature you want (in this case: no parameters and no return values). With Builtins, the module is invalid, because the now-special-cased `"wasm:js-string" "cast"` function must have a specific signature (an `externref` parameter and a non-nullable `(ref extern)` return value).
+Without builtins, the module is valid, because you can import any function with any signature you want (in this case: no parameters and no return values). With builtins, the module is invalid, because the now-special-cased `"wasm:js-string" "cast"` function must have a specific signature (an `externref` parameter and a non-nullable `(ref extern)` return value).
 
 You can then try validating this module as before, but note how the result is negated with the `!` operator — remember that builtins are supported if the module is _invalid_:
 
