@@ -27,11 +27,11 @@ A string; a space-separated list of media values.
 ## Examples
 
 ```js
-const styleSheets = document.styleSheets[0]; // the document's first stylesheet
-const mediaList = styleSheets.media; // the mediaList of the stylesheet
+const firstStyleSheet = document.styleSheets[0]; // the document's first stylesheet
+const mediaList = firstStyleSheet.media; // the mediaList of the stylesheet
 
 // set the `media` text to a media query value
-styleSheets.mediaText = "SCREEN AND (140PX <= WIDTH <= 380PX)";
+mediaList.mediaText = "SCREEN AND (140PX <= WIDTH <= 380PX)";
 
 // add a second media value
 mediaList.appendMedium(
