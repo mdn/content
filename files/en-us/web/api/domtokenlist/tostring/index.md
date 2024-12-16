@@ -27,12 +27,14 @@ A string; a space-separated list of values.
 ## Examples
 
 ```js
-const el = document.getElementById("#myId"),
-  cls = el.classList;
-el.className = "shop empty-cart"; // sets some classes
-cls.add("logged-in", "dark-mode"); // add two more classes
-console.dir(cls); // DOMTokenList(4) [ "shop", "empty-cart", "logged-in", "dark-mode" ]
-console.log(cls.toString()); // "shop empty-cart logged-in dark-mode"
+const element = document.createElement("div");
+const classes = element.classList;
+
+element.className = "shop empty-cart";
+classes.add("logged-in", "dark-mode");
+
+console.log(classes.toString());
+// "shop empty-cart logged-in dark-mode"
 ```
 
 ## Specifications
