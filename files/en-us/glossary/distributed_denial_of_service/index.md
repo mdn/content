@@ -1,5 +1,5 @@
 ---
-title: Distributed Denial of Service
+title: Distributed Denial of Service (DDoS)
 slug: Glossary/Distributed_Denial_of_Service
 page-type: glossary-definition
 ---
@@ -27,4 +27,4 @@ The United States Computer Emergency Readiness Team (US-CERT) defines symptoms o
 
 ## See also
 
-- [Distributed DoS](https://en.wikipedia.org/wiki/Denial-of-service_attack#Distributed_DoS) attack on Wikipedia
+- [Distributed DoS attack](https://en.wikipedia.org/wiki/Denial-of-service_attack#Distributed_DoS) on Wikipedia
