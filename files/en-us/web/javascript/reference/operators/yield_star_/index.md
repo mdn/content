@@ -127,7 +127,7 @@ function* g2() {
 }
 
 async function* g3() {
-  // Can use yield* on both async and regular interators
+  // Can use yield* on both async and sync iterators
   yield* g1();
   yield* g2();
 }
