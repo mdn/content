@@ -139,12 +139,9 @@ Note that using {{HTTPHeader("Transfer-Encoding")}} and compression at the hop l
 
 ## See also
 
-- [Caching](/en-US/docs/Web/HTTP/Caching)
-- {{HTTPHeader("Vary")}} header
 - Glossary terms:
   - {{glossary("Brotli compression")}}
   - {{Glossary("Gzip compression")}}
   - {{glossary("Lossless compression")}}
   - {{glossary("Lossy compression")}}
   - {{Glossary("Zstandard compression")}}
-  - {{glossary('Web performance')}}

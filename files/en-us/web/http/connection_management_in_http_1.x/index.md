@@ -83,7 +83,6 @@ Improved connection management allows considerable boosting of performance in HT
 ## See also
 
 - [Evolution of HTTP](/en-US/docs/Web/HTTP/Evolution_of_HTTP)
-- [Protocol upgrade mechanism](/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism)
 - Glossary terms:
   - {{glossary('HTTP')}}
   - {{glossary('HTTP_2', 'HTTP/2')}}
@@ -92,4 +91,3 @@ Improved connection management allows considerable boosting of performance in HT
   - {{glossary('TCP slow start')}}
   - {{glossary('TLS')}}
   - {{glossary('TCP', 'Transmission Control Protocol (TCP)')}}
-  - {{glossary('Web performance')}}

@@ -237,4 +237,4 @@ It is important to avoid redirection loops, as they completely break the user ex
 
 - [3XX redirection](/en-US/docs/Web/HTTP/Status#redirection_messages) response statuses
 - {{HTTPHeader("Location")}} header
-- {{domxref("window.location")}} property
+- {{domxref("window.location")}} property for redirection using JavaScript
