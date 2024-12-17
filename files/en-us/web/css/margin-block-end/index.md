@@ -22,6 +22,10 @@ margin-block-end: 5%; /* relative to the nearest block container's width */
 /* Keyword values */
 margin-block-end: auto;
 
+/* anchor-size() values */
+margin-block-end: anchor-size(inline);
+margin-block-end: calc(anchor-size(--myAnchor block, 20px) / 4);
+
 /* Global values */
 margin-block-end: inherit;
 margin-block-end: initial;

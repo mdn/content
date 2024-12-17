@@ -21,6 +21,8 @@ inset-inline-start: 3px;
 inset-inline-start: 2.4em;
 inset-inline-start: anchor(self-end);
 inset-inline-start: calc(anchor(--myAnchor 50%) + 10px);
+inset-inline-start: anchor-size(width);
+inset-inline-start: anchor-size(--myAnchor height, 100px);
 
 /* <percentage>s of the width or height of the containing block */
 inset-inline-start: 10%;

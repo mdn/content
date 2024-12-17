@@ -30,6 +30,10 @@ margin-inline: 10px; /* sets both start and end values */
 /* Keyword values */
 margin-inline: auto;
 
+/* anchor-size() values */
+margin-inline: anchor-size(width);
+margin-inline: calc(anchor-size(self-block) / 5) auto;
+
 /* Global values */
 margin-inline: inherit;
 margin-inline: initial;

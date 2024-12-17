@@ -22,6 +22,10 @@ margin-inline-start: 5%; /* relative to the nearest block container's width */
 /* Keyword values */
 margin-inline-start: auto;
 
+/* anchor-size() values */
+margin-inline-start: anchor-size(block);
+margin-inline-start: calc(anchor-size(--myAnchor width, 30px) / 4);
+
 /* Global values */
 margin-inline-start: inherit;
 margin-inline-start: initial;
