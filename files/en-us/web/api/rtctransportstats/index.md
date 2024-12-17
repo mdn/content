@@ -54,30 +54,10 @@ These statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} 
 - {{domxref("RTCTransportStats.selectedCandidatePairId", "selectedCandidatePairId")}} {{optional_inline}}
   - : A string containing the unique identifier for the object that was inspected to produce the {{domxref("RTCIceCandidatePairStats")}} associated with this transport.
 - {{domxref("RTCTransportStats.srtpCipher", "srtpCipher")}} {{optional_inline}}
-
-  - : A string indicating the descriptive name of the protection profile used for the [Secure Real-time Transport Protocol (SRTP)](/en-US/docs/Glossary/RTP) transport, as defined in the "Profile" column of the [IANA DTLS-SRTP protection profile registry](https://www.iana.org/assignments/srtp-protection/srtp-protection.xhtml#srtp-protection-1) and [RFC5764](https://www.rfc-editor.org/rfc/rfc5764.html#section-4.1.2).
-
-    For example `"AES_CM_128_HMAC_SHA1_80"` specifies the following profile, where `maximum_lifetime` is the maximum number of packets that can be protected by a single set of keys.
-
-    ```plain
-    SRTP_AES128_CM_HMAC_SHA1_80
-     cipher: AES_128_CM
-     cipher_key_length: 128
-     cipher_salt_length: 112
-     maximum_lifetime: 2^31
-     auth_function: HMAC-SHA1
-     auth_key_length: 160
-     auth_tag_length: 80
-    ```
-
+  - : A string indicating the descriptive name of the protection profile used for the [Secure Real-time Transport Protocol (SRTP)](/en-US/docs/Glossary/RTP) transport.
 - {{domxref("RTCTransportStats.tlsVersion", "tlsVersion")}} {{optional_inline}}
-
   - : A string containing the negotiated TLS version.
     This is present for DTLS transports, and only exists after DTLS has been negotiated.
-
-    The value comes from the DTLS handshake `ServerHello.version`, and is represented as four upper case hexadecimal digits, where the digits represent the two bytes of the version.
-    Note however that the bytes might not map directly to version numbers.
-    For example, DTLS represents version 1.2 as `'FEFD'` which numerically is `{254, 253}`.
 
 ### Common instance properties
 
