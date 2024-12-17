@@ -10,10 +10,6 @@ browser-compat: api.SVGAngle.unitType
 
 The **`unitType`** property of the {{domxref("SVGAngle")}} interface that represents the type of value the `SVGAngle` holds. This is determined by one of the predefined constants of the `SVGAngle` interface.
 
-## Value
-
-An **unsigned short** indicating the angle type, represented by one of the following constants:
-
 - `SVG_ANGLETYPE_UNKNOWN` = `0`
   - : An unknown type of value.
 - `SVG_ANGLETYPE_UNSPECIFIED` = `1`
@@ -24,6 +20,10 @@ An **unsigned short** indicating the angle type, represented by one of the follo
   - : An [`<angle>`](/en-US/docs/Web/SVG/Content_type#angle) with a `rad` unit.
 - `SVG_ANGLETYPE_GRAD` = `4`
   - : An [`<angle>`](/en-US/docs/Web/SVG/Content_type#angle) with a `grad` unit.
+
+## Value
+
+An `unsigned short`; the angle type.
 
 ## Examples
 
