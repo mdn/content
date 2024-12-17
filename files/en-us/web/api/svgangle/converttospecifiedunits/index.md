@@ -12,8 +12,8 @@ The `convertToSpecifiedUnits()` method of the {{domxref("SVGAngle")}} interface 
 
 This function will:
 
-- set the {{domxref("SVGAngle.unitType", "unitType")}} property to the given unit type.
-- update the {{domxref("SVGAngle.valueInSpecifiedUnits", "valueInSpecifiedUnits")}} and {{domxref("SVGAngle.valueAsString", "valueAsString")}} properties so the angle value is represented in the given unit type.
+- Set the {{domxref("SVGAngle.unitType", "unitType")}} property to the given unit type
+- Update the {{domxref("SVGAngle.valueInSpecifiedUnits", "valueInSpecifiedUnits")}} and {{domxref("SVGAngle.valueAsString", "valueAsString")}} properties so the angle value is represented in the given unit type
 
 ## Syntax
 
