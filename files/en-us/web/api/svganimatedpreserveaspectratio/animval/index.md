@@ -12,10 +12,7 @@ The **`animVal`** read-only property of the {{domxref("SVGAnimatedPreserveAspect
 
 ## Value
 
-An {{domxref("SVGPreserveAspectRatio")}} object that represents the animated value of the `preserveAspectRatio` attribute.
-
-- If the attribute is animated, `animVal` reflects the current animation state.
-- If the attribute is not animated, `animVal` will be identical to `baseVal`.
+An {{domxref("SVGPreserveAspectRatio")}} object; the animated value of the `preserveAspectRatio` attribute.
 
 ## Specifications
 

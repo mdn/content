@@ -12,7 +12,7 @@ The **`baseVal`** read-only property of the {{domxref("SVGAnimatedPreserveAspect
 
 ## Value
 
-An {{domxref("SVGPreserveAspectRatio")}} object that represents the non-animated value of the `preserveAspectRatio` attribute.
+An {{domxref("SVGPreserveAspectRatio")}} object; the non-animated value of the `preserveAspectRatio` attribute.
 
 ## Specifications
 
