@@ -50,40 +50,15 @@ In this article, you'll work through a series of exercises to help you understan
 <section>
   <article>
     <h2>First article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
+    <p>Content…</p>
   </article>
   <article>
     <h2>Second article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
+    <p>Content…</p>
   </article>
   <article>
     <h2>Third article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
-    <p>
-      Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat ennui.
-      Organic small batch paleo 8-bit. Intelligentsia umami wayfarers pickled,
-      asymmetrical kombucha letterpress kitsch leggings cold-pressed squid
-      chartreuse put a bird on it. Listicle pickled man bun cornhole heirloom
-      art party.
-    </p>
+    <p>Content…</p>
   </article>
 </section>
 ```
@@ -114,7 +89,7 @@ article {
 /* Add your flexbox CSS below here */
 ```
 
-{{EmbedLiveSample("flexbox_0", "100", "540")}}
+{{EmbedLiveSample("flexbox_0", "100", "415")}}
 
 You'll see that we have a {{htmlelement("header")}} element with a top level heading inside it and a {{htmlelement("section")}} element containing three {{htmlelement("article")}}s. We're going to use these to create a fairly standard three column layout.
 
@@ -129,40 +104,15 @@ To start with, we need to select which elements are to be laid out as flexible b
 <section>
   <article>
     <h2>First article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
+    <p>Content…</p>
   </article>
   <article>
     <h2>Second article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
+    <p>Content…</p>
   </article>
   <article>
     <h2>Third article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
-    <p>
-      Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat ennui.
-      Organic small batch paleo 8-bit. Intelligentsia umami wayfarers pickled,
-      asymmetrical kombucha letterpress kitsch leggings cold-pressed squid
-      chartreuse put a bird on it. Listicle pickled man bun cornhole heirloom
-      art party.
-    </p>
+    <p>Content…</p>
   </article>
 </section>
 ```
@@ -201,7 +151,7 @@ section {
 
 This causes the `<section>` element to become a **flex container** and its children become **flex items**. This is what it looks like:
 
-{{EmbedLiveSample("flexbox_1", "100", "470")}}
+{{EmbedLiveSample("flexbox_1", "100", "210")}}
 
 This single declaration gives us everything we need. Incredible, right? We have a multiple column layout with equal-sized columns, and the columns are all the same height. This is because the default values given to flex items (the children of the flex container) are set up to solve common problems such as this.
 
@@ -252,123 +202,51 @@ One issue that arises when you have a fixed width or height in your layout is th
 <section>
   <article>
     <h2>First article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
+    <p>Content…</p>
   </article>
   <article>
     <h2>Second article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
+    <p>Content…</p>
   </article>
   <article>
     <h2>Third article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
+    <p>Content…</p>
   </article>
   <article>
     <h2>Fourth article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
+    <p>Content…</p>
   </article>
   <article>
     <h2>Fifth article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
+    <p>Content…</p>
   </article>
   <article>
     <h2>Sixth article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
+    <p>Content…</p>
   </article>
   <article>
     <h2>Seventh article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
+    <p>Content…</p>
   </article>
   <article>
     <h2>Eighth article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
+    <p>Content…</p>
   </article>
   <article>
     <h2>Ninth article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
+    <p>Content…</p>
   </article>
   <article>
     <h2>Tenth article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
+    <p>Content…</p>
   </article>
   <article>
     <h2>Eleventh article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
+    <p>Content…</p>
   </article>
   <article>
     <h2>Twelfth article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
+    <p>Content…</p>
   </article>
 </section>
 ```
@@ -400,7 +278,7 @@ section {
 }
 ```
 
-{{EmbedLiveSample("flex-wrap_0", "100", "400")}}
+{{EmbedLiveSample("flex-wrap_0", "100", "230")}}
 
 Here we see that the children are indeed breaking out of their container. By default, the browser tries to place all the flex items in a single row if the `flex-direction` is set to `row` or a single column if the `flex-direction` is set to `column`.
 
@@ -411,123 +289,51 @@ Here we see that the children are indeed breaking out of their container. By def
 <section>
   <article>
     <h2>First article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
+    <p>Content…</p>
   </article>
   <article>
     <h2>Second article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
+    <p>Content…</p>
   </article>
   <article>
     <h2>Third article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
+    <p>Content…</p>
   </article>
   <article>
     <h2>Fourth article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
+    <p>Content…</p>
   </article>
   <article>
     <h2>Fifth article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
+    <p>Content…</p>
   </article>
   <article>
     <h2>Sixth article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
+    <p>Content…</p>
   </article>
   <article>
     <h2>Seventh article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
+    <p>Content…</p>
   </article>
   <article>
     <h2>Eighth article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
+    <p>Content…</p>
   </article>
   <article>
     <h2>Ninth article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
+    <p>Content…</p>
   </article>
   <article>
     <h2>Tenth article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
+    <p>Content…</p>
   </article>
   <article>
     <h2>Eleventh article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
+    <p>Content…</p>
   </article>
   <article>
     <h2>Twelfth article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
+    <p>Content…</p>
   </article>
 </section>
 ```
@@ -609,40 +415,15 @@ Let's now return to our first example and look at how we can control what propor
 <section>
   <article>
     <h2>First article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
+    <p>Content…</p>
   </article>
   <article>
     <h2>Second article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
+    <p>Content…</p>
   </article>
   <article>
     <h2>Third article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
-    <p>
-      Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat ennui.
-      Organic small batch paleo 8-bit. Intelligentsia umami wayfarers pickled,
-      asymmetrical kombucha letterpress kitsch leggings cold-pressed squid
-      chartreuse put a bird on it. Listicle pickled man bun cornhole heirloom
-      art party.
-    </p>
+    <p>Content…</p>
   </article>
 </section>
 ```
@@ -681,7 +462,7 @@ article {
 }
 ```
 
-{{EmbedLiveSample("flexbox_2", "100", "470")}}
+{{EmbedLiveSample("flexbox_2", "100", "210")}}
 
 This is a unitless proportion value that dictates how much available space along the main axis each flex item will take up compared to other flex items. In this case, we're giving each {{htmlelement("article")}} element the same value (a value of `1`), which means they'll all take up an equal amount of the spare space left after properties like padding and margin have been set. This value is proportionally shared among the flex items: giving each flex item a value of `400000` would have exactly the same effect.
 
@@ -692,40 +473,15 @@ This is a unitless proportion value that dictates how much available space along
 <section>
   <article>
     <h2>First article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
+    <p>Content…</p>
   </article>
   <article>
     <h2>Second article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
+    <p>Content…</p>
   </article>
   <article>
     <h2>Third article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
-    <p>
-      Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat ennui.
-      Organic small batch paleo 8-bit. Intelligentsia umami wayfarers pickled,
-      asymmetrical kombucha letterpress kitsch leggings cold-pressed squid
-      chartreuse put a bird on it. Listicle pickled man bun cornhole heirloom
-      art party.
-    </p>
+    <p>Content…</p>
   </article>
 </section>
 ```
@@ -767,7 +523,7 @@ article:nth-of-type(3) {
 }
 ```
 
-{{EmbedLiveSample("flexbox_3", "100", "410")}}
+{{EmbedLiveSample("flexbox_3", "100", "210")}}
 
 Now when you refresh, you'll see that the third {{htmlelement("article")}} takes up twice as much of the available width as the other two. There are now four proportion units available in total (since 1 + 1 + 2 = 4). The first two flex items have one unit each, so they each take 1/4 of the available space. The third one has two units, so it takes up 2/4 of the available space (or one-half).
 
@@ -780,40 +536,15 @@ You can also specify a minimum size value within the flex value. Try updating yo
 <section>
   <article>
     <h2>First article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
+    <p>Content…</p>
   </article>
   <article>
     <h2>Second article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
+    <p>Content…</p>
   </article>
   <article>
     <h2>Third article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
-    <p>
-      Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat ennui.
-      Organic small batch paleo 8-bit. Intelligentsia umami wayfarers pickled,
-      asymmetrical kombucha letterpress kitsch leggings cold-pressed squid
-      chartreuse put a bird on it. Listicle pickled man bun cornhole heirloom
-      art party.
-    </p>
+    <p>Content…</p>
   </article>
 </section>
 ```
@@ -856,7 +587,7 @@ article:nth-of-type(3) {
 
 This basically states, "Each flex item will first be given `100px` of the available space. After that, the rest of the available space will be shared according to the proportion units." You'll see a difference in how the space is shared.
 
-{{EmbedLiveSample("flexbox_4", "100", "410")}}
+{{EmbedLiveSample("flexbox_4", "100", "210")}}
 
 All the flex items have a minimum width of 100 pixels—set using 'flex'. The value of flex for first two flex items is 1 and for the third item is 2. This splits the remaining space in the flex container into 4 proportion units. One unit is assigned to each of the first two flex items and 2 units are assigned to the third flex item, making the third flex item wider than the other two, which are of the same width.
 
@@ -1059,23 +790,11 @@ It's possible to create some pretty complex layouts with flexbox. It's perfectly
 <section>
   <article>
     <h2>First article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
+    <p>Content…</p>
   </article>
   <article>
     <h2>Second article</h2>
-    <p>
-      Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-      fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-      belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-      single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-      leggings salvia iPhone photo booth health goth gastropub hammock.
-    </p>
+    <p>Content…</p>
   </article>
   <article>
     <div>
@@ -1086,22 +805,10 @@ It's possible to create some pretty complex layouts with flexbox. It's perfectly
       <button>Blush</button>
     </div>
     <div>
-      <p>
-        Tacos actually microdosing, pour-over semiotics banjo chicharrones retro
-        fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork
-        belly, everyday carry ennui pickled sriracha normcore hashtag polaroid
-        single-origin coffee cold-pressed. PBR&B tattooed trust fund twee,
-        leggings salvia iPhone photo booth health goth gastropub hammock.
-      </p>
+      <p>Paragraph one content…</p>
     </div>
     <div>
-      <p>
-        Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat
-        ennui. Organic small batch paleo 8-bit. Intelligentsia umami wayfarers
-        pickled, asymmetrical kombucha letterpress kitsch leggings cold-pressed
-        squid chartreuse put a bird on it. Listicle pickled man bun cornhole
-        heirloom art party.
-      </p>
+      <p>Paragraph two content…</p>
     </div>
   </article>
 </section>
@@ -1154,7 +861,7 @@ button {
 }
 ```
 
-{{EmbedLiveSample("flex-nesting", "100", "490")}}
+{{EmbedLiveSample("flex-nesting", "100", "290")}}
 
 This complex layout has a few flex items that are also flex containers. The HTML for this is fairly straightforward. We've got a {{htmlelement("section")}} element containing three {{htmlelement("article")}}s. The third {{htmlelement("article")}} contains three {{htmlelement("div")}}s, and the first {{htmlelement("div")}} contains five {{htmlelement("button")}}s:
 
