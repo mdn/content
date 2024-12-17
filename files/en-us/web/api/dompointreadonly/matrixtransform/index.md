@@ -1,5 +1,5 @@
 ---
-title: "DOMPointReadOnly: matrixTransform() static method"
+title: "DOMPointReadOnly: matrixTransform()"
 short-title: matrixTransform()
 slug: Web/API/DOMPointReadOnly/matrixTransform
 page-type: web-api-static-method
