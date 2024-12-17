@@ -2,7 +2,7 @@
 title: 205 Reset Content
 slug: Web/HTTP/Reference/Status/205
 page-type: http-status-code
-spec-urls: https://httpwg.org/specs/rfc9110.html#status.205
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.205
 ---
 
 {{HTTPSidebar}}
@@ -51,11 +51,6 @@ Date: Wed, 26 Jun 2024 12:00:00 GMT
 ## Specifications
 
 {{Specifications}}
-
-## Compatibility notes
-
-Browser behaviors differ if this response erroneously includes a body on persistent connections.
-See [`204 No Content` compatibility notes](/en-US/docs/Web/HTTP/Reference/Status/204#compatibility_notes) for more details.
 
 ## See also
 
