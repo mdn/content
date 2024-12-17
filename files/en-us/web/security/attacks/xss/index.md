@@ -28,7 +28,7 @@ All XSS attacks depend on a website doing two things:
 
 In this section we'll go through two example pages that are vulnerable to an XSS attack.
 
-### Code injection in the front end
+### Code injection in the browser
 
 In this example, suppose the website for the user's bank is `my-bank.example.com`. The user is typically signed into it, and code in the website can access the user's account details and perform transactions. The website wants to display a welcome message, personalized for the current user. It displays the welcome in a {{htmlelement("Heading_Elements", "heading")}} element:
 
@@ -64,7 +64,7 @@ When the user clicks the link:
 
 In this case the code just displays an alert, but in a real banking website, the attacker code would be able to do anything that the bank's own front-end code could.
 
-### Code injection in the back end
+### Code injection in the server
 
 In this example, consider a website with a search function. The HTML for the search page might look like this:
 
@@ -131,9 +131,9 @@ If the comments are not sanitized, then they are potential vectors for XSS. This
 
 One big difference between the two examples is that the malicious code is injected in different parts of the website's codebase, and this is a reflection of each website's architecture.
 
-A website that uses client-side rendering, such as an {{glossary("SPA", "single-page app")}}, modifies pages in the browser, using web APIs such as {{domxref("document.createElement()")}} to do so, either directly, or indirectly through a framework like React. It's in the course of this process that XSS injection will happen. That's what we see in the first example: the malicious code is injected in the front end, by a script running in the page assigning the URL parameter value to the {{domxref("Element.innerHTML")}} property, which interprets its value as HTML code.
+A website that uses client-side rendering, such as an {{glossary("SPA", "single-page app")}}, modifies pages in the browser, using web APIs such as {{domxref("document.createElement()")}} to do so, either directly, or indirectly through a framework like React. It's in the course of this process that XSS injection will happen. That's what we see in the first example: the malicious code is injected in the browser, by a script running in the page assigning the URL parameter value to the {{domxref("Element.innerHTML")}} property, which interprets its value as HTML code.
 
-A website that uses server-side rendering builds pages on the server, using a framework like Django or Express, most commonly by inserting values into page templates. XSS injection, if it happens, will happen in the server during the templating process. That's what we see in the second example: the code is injected in the back end, by the Express code inserting the URL parameter value into the document it's returning. The XSS attack code then runs when the browser evaluates the page.
+A website that uses server-side rendering builds pages on the server, using a framework like Django or Express, most commonly by inserting values into page templates. XSS injection, if it happens, will happen in the server during the templating process. That's what we see in the second example: the code is injected in the server, by the Express code inserting the URL parameter value into the document it's returning. The XSS attack code then runs when the browser evaluates the page.
 
 In both cases, the general approach to defense is the same, and we'll go into this in detail in the next section. However, the specific tools and APIs you'll use will be different.
 
@@ -166,7 +166,7 @@ Most modern templating engines automatically perform output encoding. For exampl
 
 - `&` is converted to `&amp;`
 
-This means that if you pass `<img src=x onerror=alert('XSS!')>` into the Django template above, it will be converted to `&lt;img src=x onerror=alert(&#x27;XSS!&#x27;)&gt;`, which is _rendered_ as the entered text:
+This means that if you pass `<img src=x onerror=alert('XSS!')>` into the Django template above, it will be converted to `&lt;img src=x onerror=alert(&#x27;XSS!&#x27;)&gt;`, which is displayed as the following text:
 
 > You searched for &lt;img src=x onerror=alert('XSS!')&gt;.
 
