@@ -535,8 +535,7 @@ Congratulations, you've completed the first step in your Express/Node journey! Y
 Of course Express is deliberately a very lightweight web application framework, so much of its benefit and potential comes from third party libraries and features. We'll look at those in more detail in the following articles. In our next article we're going to look at setting up a Node development environment, so that you can start seeing some Express code in action.
 
 ## See also
-
-- [Venkat.R - Manage Multiple Node versions](https://medium.com/@ramsunvtech/manage-multiple-node-versions-e3245d5ede44)
+- [Node.js version manager] (https://github.com/Schniz/fnm)
 - [Modules](https://nodejs.org/api/modules.html#modules_modules) (Node API docs)
 - [Express](https://expressjs.com/) (home page)
 - [Basic routing](https://expressjs.com/en/starter/basic-routing.html) (Express docs)
