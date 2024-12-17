@@ -8,12 +8,7 @@ browser-compat: api.SVGAngle.unitType
 
 {{APIRef("SVG")}}
 
-The **`unitType`** property of the {{domxref("SVGAngle")}} interface that represents the type of value the `SVGAngle` holds. This must be one of the constant values defined for the {{domxref("SVGAngle.unitType", "unitType")}} property, with the exception of `SVG_ANGLETYPE_UNKNOWN`.
-
-- `SVGAngle.SVG_ANGLETYPE_DEG`: convert to degrees
-- `SVGAngle.SVG_ANGLETYPE_RAD`: convert to radians
-- `SVGAngle.SVG_ANGLETYPE_GRAD`: convert to gradians
-- `SVGAngle.SVG_ANGLETYPE_UNSPECIFIED`: convert to a unitless number, interpreted as degrees
+The **`unitType`** property of the {{domxref("SVGAngle")}} interface that represents the type of value the `SVGAngle` holds. It takes one of the `SVG_ANGLETYPE_*` constants defined on this interface.
 
 ## Value
 
