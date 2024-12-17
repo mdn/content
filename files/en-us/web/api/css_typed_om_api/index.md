@@ -89,7 +89,7 @@ The {{domxref('CSSKeywordValue')}} interface of the CSS Typed Object Model API c
     - {{domxref('CSSNumericValue.add')}} - Adds supplied numbers to the `CSSNumericValue`.
     - {{domxref('CSSNumericValue.sub')}} - Subtracts supplied numbers to the `CSSNumericValue`.
     - {{domxref('CSSNumericValue.mul')}} - Multiplies supplied numbers to the `CSSNumericValue`.
-    - {{domxref('CSSNumericValue.div')}} - Divides a supplied number by other numbers, throwing an error if 0.
+    - {{domxref('CSSNumericValue.div')}} - Divides the `CSSNumericValue` by the supplied value, throwing an error if `0`.
     - {{domxref('CSSNumericValue.min')}} - Returns the minimum value passed
     - {{domxref('CSSNumericValue.max')}} - Returns the maximum value passed
     - {{domxref('CSSNumericValue.equals')}} - Returns true if all the values are the exact same type and value, in the same order. Otherwise, false
