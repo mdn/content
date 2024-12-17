@@ -18,7 +18,7 @@ This function will:
 ## Syntax
 
 ```js
-svgAngle.convertToSpecifiedUnits(unitType);
+svgAngle.convertToSpecifiedUnits(unitType)
 ```
 
 ### Parameters
