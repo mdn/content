@@ -8,7 +8,7 @@ browser-compat: api.SVGAngle.convertToSpecifiedUnits
 
 {{APIRef("SVG")}}
 
-The `convertToSpecifiedUnits()` method of the {{domxref("SVGAngle")}} interface allows you to convert the angle's value to a specified unit type.
+The `convertToSpecifiedUnits()` method of the {{domxref("SVGAngle")}} interface allows you to convert the angle's value to the specified unit type.
 
 This function will:
 
