@@ -7,10 +7,13 @@ page-type: landing-page
 
 {{HTTPSidebar}}
 
-**HTTP headers** let the client and the server pass additional information with an HTTP request or response. An HTTP header consists of its case-insensitive name followed by a colon (`:`), then by its value. {{Glossary("Whitespace")}} before the value is ignored.
+**HTTP headers** let the client and the server pass additional information with a message in a request or response.
+In HTTP/1.X, a header is a case-insensitive name followed by a colon, then optional whitespace which will be ignored, and finally by its value (for example: `Allow: POST`).
+In HTTP/2 and above, headers are displayed in lowercase when viewed in developer tools (`accept: */*`), and prefixed with a colon for a special group of [pseudo-headers](/en-US/docs/Web/HTTP/Messages#pseudo-headers) (`:status: 200`).
+You can find more information on the syntax in each protocol version in the [HTTP messages](/en-US/docs/Web/HTTP/Messages) page.
 
-Custom proprietary headers have historically been used with an `X-` prefix, but this convention was deprecated in June 2012 because of the inconveniences it caused when nonstandard fields became standard in [RFC 6648](https://datatracker.ietf.org/doc/html/rfc6648); others are listed in the [IANA HTTP Field Name Registry](https://www.iana.org/assignments/http-fields/http-fields.xhtml), whose original content was defined in [RFC 4229](https://datatracker.ietf.org/doc/html/rfc4229).
-The IANA registry lists headers, including [information about their status](https://github.com/protocol-registries/http-fields?tab=readme-ov-file#choosing-the-right-status), which may be "permanent" (standards-defined), "provisional" (new), "deprecated" (use not recommended), or "obsolete" (no longer in use).
+Custom proprietary headers have historically been used with an `X-` prefix, but this convention was deprecated in 2012 because of the inconveniences it caused when nonstandard fields became standard in [RFC 6648](https://datatracker.ietf.org/doc/html/rfc6648); others are listed in the [IANA HTTP Field Name Registry](https://www.iana.org/assignments/http-fields/http-fields.xhtml), whose original content was defined in [RFC 4229](https://datatracker.ietf.org/doc/html/rfc4229).
+The IANA registry lists headers, including [information about their status](https://github.com/protocol-registries/http-fields?tab=readme-ov-file#choosing-the-right-status).
 
 Headers can be grouped according to their contexts:
 
@@ -239,7 +242,8 @@ Range requests are useful for applications like media players that support rando
 - {{HTTPHeader("X-Frame-Options")}} (XFO)
   - : Indicates whether a browser should be allowed to render a page in a {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} or {{HTMLElement("object")}}.
 - {{HTTPHeader("X-Permitted-Cross-Domain-Policies")}}
-  - : Specifies if a cross-domain policy file (`crossdomain.xml`) is allowed. The file may define a policy to grant clients, such as Adobe's Flash Player (now obsolete), Adobe Acrobat, Microsoft Silverlight (now obsolete), or Apache Flex, permission to handle data across domains that would otherwise be restricted due to the [Same-Origin Policy](/en-US/docs/Web/Security/Same-origin_policy). See the [Cross-domain Policy File Specification](https://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/CrossDomain_PolicyFile_Specification.pdf) for more information.
+  - : A cross-domain policy file may grant clients, such as Adobe Acrobat or Apache Flex (among others), permission to handle data across domains that would otherwise be restricted due to the [Same-Origin Policy](/en-US/docs/Web/Security/Same-origin_policy).
+    The `X-Permitted-Cross-Domain-Policies` header overrides such policy files so that clients still block unwanted requests.
 - {{HTTPHeader("X-Powered-By")}}
   - : May be set by hosting environments or other frameworks and contains information about them while not providing any usefulness to the application or its visitors. Unset this header to avoid exposing potential vulnerabilities.
 - {{HTTPHeader("X-XSS-Protection")}}
