@@ -166,7 +166,7 @@ Most modern templating engines automatically perform output encoding. For exampl
 
 - `&` is converted to `&amp;`
 
-This means that if you pass `<img src=x onerror=alert('XSS!')>` into the Django template above, it will be rendered as text:
+This means that if you pass `<img src=x onerror=alert('XSS!')>` into the Django template above, it will be converted to `&lt;img src=x onerror=alert(&#x27;XSS!&#x27;)&gt;`, which is _rendered_ as the entered text:
 
 > You searched for &lt;img src=x onerror=alert('XSS!')&gt;.
 
