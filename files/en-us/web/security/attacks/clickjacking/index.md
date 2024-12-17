@@ -4,7 +4,7 @@ slug: Web/Security/Attacks/Clickjacking
 page-type: guide
 ---
 
-In a clickjacking attack, an attacker tricks the user into interacting with a target site in a way that they didn't intend.
+In a **clickjacking** attack, an attacker tricks the user into interacting with a target site in a way that they didn't intend.
 
 To do this, the attacker creates a decoy site which embeds the user's target site inside an {{htmlelement("iframe")}} element. The attacker's site hides the `<iframe>`, and aligns some decoy elements so they appear in the same place as elements in the target site that trigger sensitive actions. When the user tries to interact with these decoy elements, they are inadvertently interacting with the target site instead, and may be tricked into performing actions with the target site which they did not intend.
 
@@ -56,7 +56,7 @@ There are two relevant tools here:
 - The [`frame-ancestors` directive](/en-US/docs/Web/HTTP/CSP#clickjacking_protection) in a [content security policy](/en-US/docs/Web/HTTP/CSP)
 - The {{httpheader("X-Frame-Options")}} response header.
 
-The `frame-ancestors` directive is a replacement for `X-Frame-Options`. By setting `X-Frame-Options` as well as `frame-ancestors`, you can prevent embedding in browsers that don't support `frame-ancestors`. However, [browser support for `frame-ancestors` is very good](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors#browser_compatibility), so this is not a major concern.
+The `frame-ancestors` directive is a replacement for `X-Frame-Options`. By setting `X-Frame-Options` as well as `frame-ancestors`, you can prevent embedding in browsers that don't support `frame-ancestors`. As [browser support for `frame-ancestors` is very good](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors#browser_compatibility), this is not a major concern.
 
 If `frame-ancestors` and `X-Frame-Options` are both set, then browsers that support `frame-ancestors` will ignore `X-Frame-Options`.
 
