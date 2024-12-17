@@ -12,15 +12,15 @@ The `valueAsString` property of the {{domxref("SVGAngle")}} interface represents
 
 ## Value
 
-A string representing the value of the angle, including the numeric factor and the appropriate unit (if applicable).
+A `string`; the value of the angle.
 
 ## Examples
 
 ### Setting and retrieving `valueAsString`
 
 ```js
-// Create an SVGAngle object
-const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+// Get an SVGAngle object
+const svg = document.querySelector("svg");
 const angle = svg.createSVGAngle();
 
 // Set the value using valueAsString in degrees
@@ -46,3 +46,4 @@ console.log(Math.round(angle.value)); // Output: 90 (since 1.57 radians is appro
 
 - [`<number>`](/en-US/docs/Web/SVG/Content_type#number)
 - [`<angle>`](/en-US/docs/Web/SVG/Content_type#angle)
+- {{domxref("SVGAnimatedAngle")}}

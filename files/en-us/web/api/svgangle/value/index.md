@@ -12,13 +12,13 @@ The `value` property of the {{domxref("SVGAngle")}} interface represents the num
 
 ## Value
 
-A floating-point number indicating the angle value in degrees.
+A `number`, the angle value in degrees as a float.
 
 ## Examples
 
 ```js
-// Create an SVGAngle object
-const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+// Get an SVGAngle object
+const svg = document.querySelector("svg");
 const angle = svg.createSVGAngle();
 
 // Set the value
@@ -41,4 +41,3 @@ console.log(angle.value); // Output: 90
 ## See also
 
 - {{domxref("SVGAnimatedAngle")}}
-- {{domxref("SVGTransform")}}

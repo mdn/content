@@ -30,10 +30,11 @@ An **unsigned short** indicating the angle type, represented by one of the follo
 Here's an example of how to access the `unitType` property:
 
 ```js
+// Get an SVGAngle object
+const svg = document.querySelector("svg");
+
 // Assume `angle` is an instance of SVGAngle
-const angle = document
-  .createElementNS("http://www.w3.org/2000/svg", "svg")
-  .createSVGAngle();
+const angle = svg.createSVGAngle();
 
 // Set the angle value
 angle.newValueSpecifiedUnits(SVGAngle.SVG_ANGLETYPE_DEG, 45);
@@ -52,5 +53,4 @@ console.log(angle.unitType); // Output: 2 (SVG_ANGLETYPE_DEG)
 
 ## See also
 
-- {{domxref("DOMMatrix")}}
 - {{domxref("SVGAnimatedAngle")}}

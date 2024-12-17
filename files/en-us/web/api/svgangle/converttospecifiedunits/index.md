@@ -39,8 +39,8 @@ None ({{jsxref('undefined')}}).
 ### Converting an angle to degrees
 
 ```js
-// Create an SVGAngle object
-const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+// Get an SVGAngle object
+const svg = document.querySelector("svg");
 const angle = svg.createSVGAngle();
 
 // Set the angle's value in radians (Math.PI / 2)
@@ -69,4 +69,3 @@ console.log(angle.unitType); // Output: 2 (SVG_ANGLETYPE_DEG)
 ## See also
 
 - {{domxref("SVGAnimatedAngle")}}
-- {{domxref("Document.createElementNS()")}}

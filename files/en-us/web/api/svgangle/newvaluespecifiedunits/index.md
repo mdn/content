@@ -31,17 +31,15 @@ svgAngle.newValueSpecifiedUnits(unitType, valueInSpecifiedUnits)
 
 ### Return value
 
-A reference to the updated {{domxref("SVGAngle")}} object.
-
-If the `newValueSpecifiedUnits()` method is successfully called, the `SVGAngle` object's `valueInSpecifiedUnits` is updated to the specified numeric factor, and the `unitType` is set to the provided unit type. For `SVG_ANGLETYPE_UNSPECIFIED`, the angle is treated as a unitless number. When the `SVGAngle` reflects a base value of an attribute, the corresponding attribute is re-serialized to reflect the updated angle.
+None ({{jsxref('undefined')}}).
 
 ## Examples
 
 ### Setting an angle in degrees
 
 ```js
-// Create an SVGAngle object
-const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+// Get an SVGAngle object
+const svg = document.querySelector("svg");
 const angle = svg.createSVGAngle();
 
 // Set the angle's value in degrees using newValueSpecifiedUnits()
@@ -55,8 +53,8 @@ console.log(angle.unitType); // Output: 2 (SVG_ANGLETYPE_DEG)
 ### Setting an angle in radians
 
 ```js
-// Create an SVGAngle object
-const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+// Get an SVGAngle object
+const svg = document.querySelector("svg");
 const angle = svg.createSVGAngle();
 
 // Set the angle's value in radians using newValueSpecifiedUnits()
@@ -70,8 +68,8 @@ console.log(angle.unitType); // Output: 3 (SVG_ANGLETYPE_RAD)
 ### Setting an angle in gradians
 
 ```js
-// Create an SVGAngle object
-const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+// Get an SVGAngle object
+const svg = document.querySelector("svg");
 const angle = svg.createSVGAngle();
 
 // Set the angle's value in gradians using newValueSpecifiedUnits()
@@ -93,4 +91,3 @@ console.log(angle.unitType); // Output: 4 (SVG_ANGLETYPE_GRAD)
 ## See also
 
 - {{domxref("SVGAnimatedAngle")}}
-- {{domxref("Document.createElementNS()")}}

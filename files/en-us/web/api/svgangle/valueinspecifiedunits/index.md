@@ -12,13 +12,13 @@ The `valueInSpecifiedUnits` property of the {{domxref("SVGAngle")}} interface re
 
 ## Value
 
-A floating-point number representing the numeric factor of the angle.
+A `number`; the numeric factor of the angle as a float.
 
 ## Examples
 
 ```js
-// Create an SVGAngle object
-const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+// Get an SVGAngle object
+const svg = document.querySelector("svg");
 const angle = svg.createSVGAngle();
 
 // Set the value of the angle in degrees
@@ -28,7 +28,6 @@ console.log(angle.valueInSpecifiedUnits); // Output: 45
 // Update the numeric factor of the angle
 angle.valueInSpecifiedUnits = 90;
 console.log(angle.valueInSpecifiedUnits); // Output: 90
-console.log(angle.value); // Output: 90 (with the same unit, degrees)
 ```
 
 ## Specifications
@@ -42,4 +41,3 @@ console.log(angle.value); // Output: 90 (with the same unit, degrees)
 ## See also
 
 - {{domxref("SVGAnimatedAngle")}}
-- {{domxref("Document.createElementNS()")}}
