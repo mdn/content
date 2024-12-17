@@ -12,8 +12,8 @@ The `newValueSpecifiedUnits()` method of the {{domxref("SVGAngle")}} interface a
 
 ## Syntax
 
-```js
-svgAngle.newValueSpecifiedUnits(unitType, valueInSpecifiedUnits);
+```js-nolint
+svgAngle.newValueSpecifiedUnits(unitType, valueInSpecifiedUnits)
 ```
 
 ### Parameters
