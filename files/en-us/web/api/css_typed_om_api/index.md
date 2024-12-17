@@ -67,7 +67,7 @@ The {{domxref('CSSKeywordValue')}} interface of the CSS Typed Object Model API c
 
 CSSStyleValue is the base class through which all CSS values are expressed. Subclasses include:
 
-- {{domxref('CSSImageValue')}} objects
+- {{domxref('CSSImageValue')}}
   - : An interface representing values for properties that take an image, for example [`background-image`](/en-US/docs/Web/CSS/background-image), [`list-style-image`](/en-US/docs/Web/CSS/list-style-image), or [`border-image-source`](/en-US/docs/Web/CSS/border-image-source).
 - {{domxref('CSSKeywordValue')}}
   - : An interface which creates an object to represent CSS keywords and other identifiers. When used where a string is expected, it will return the value of CSSKeyword.value.
