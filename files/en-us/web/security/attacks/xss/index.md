@@ -194,7 +194,7 @@ Even if you're using a templating engine which automatically encodes HTML, you n
 <div>\{{ my_input }}</div>
 ```
 
-In this context, the browser is evaluating the input as HTML. So you need to protect against the case where `my_input` is something like `<img src=x onerror="alert('XSS')">`. That is, where `my_input` is something that is treated as HTML by the browser. The output encoding built into Django prevents this attack, by encoding characters like `<` and `>`.
+In this context, the input is inside `<div>` tags, so the browser evaluates it as HTML. So you need to protect against the case where `my_input` is HTML that defines executable code, such as `<img src=x onerror="alert('XSS')">`. The output encoding built into Django prevents this attack, by encoding characters like `<` and `>` as the HTML entities `&lt;` and `&gt;`.
 
 However, suppose the template is like this:
 
