@@ -65,5 +65,6 @@ The source map allows the browser's DevTools to link to specific lines in the or
 
 ## See also
 
+- [Source map format specification](https://tc39.es/ecma426/2024/)
 - HTTP {{HTTPHeader("SourceMap")}} response header
 - [Firefox Developer Tools: using a source map](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)
