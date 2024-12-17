@@ -32,7 +32,7 @@ svgAngle.convertToSpecifiedUnits(unitType)
 
 ### Return value
 
-A reference to the updated {{domxref("SVGAngle")}} object.
+None ({{jsxref('undefined')}}).
 
 ## Examples
 
