@@ -14,7 +14,7 @@ This property reflects the {{SVGAttr("numOctaves")}} attribute of the {{SVGEleme
 
 ## Value
 
-A read-only `long` integer representing the animated value of the attribute.
+A `long`; the animated value of the attribute.
 
 ## Examples
 
@@ -44,5 +44,3 @@ console.log(animatedInteger.animVal); // Output: 4 (the current animated value)
 - [`<integer>`](/en-US/docs/Web/SVG/Content_type#integer)
 - {{SVGAttr("numOctaves")}}
 - {{SVGAttr("order")}}
-- {{SVGElement("feTurbulence")}}
-- {{SVGElement("feConvolveMatrix")}}

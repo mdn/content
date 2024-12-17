@@ -14,7 +14,7 @@ This property reflects the {{SVGAttr("numOctaves")}} attribute of the {{SVGEleme
 
 ## Value
 
-A `long` integer representing the base (non-animated) value of the reflected attribute.
+A `long`; the base (non-animated) value of the reflected attribute.
 
 ## Examples
 
@@ -50,5 +50,3 @@ console.log(feTurbulence.getAttribute("numOctaves")); // Output: "6"
 - [`<integer>`](/en-US/docs/Web/SVG/Content_type#integer)
 - {{SVGAttr("numOctaves")}}
 - {{SVGAttr("order")}}
-- {{SVGElement("feTurbulence")}}
-- {{SVGElement("feConvolveMatrix")}}
