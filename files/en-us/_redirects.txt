@@ -3557,6 +3557,7 @@
 /en-US/docs/Glossary/Bézier_curve	/en-US/docs/Glossary/Bezier_curve
 /en-US/docs/Glossary/CSS_property	/en-US/docs/Glossary/property/CSS
 /en-US/docs/Glossary/Cleartext	/en-US/docs/Glossary/Plaintext
+/en-US/docs/Glossary/Clickjacking	/en-US/docs/Web/Security/Attacks/Clickjacking
 /en-US/docs/Glossary/Client_hints	/en-US/docs/Web/HTTP/Client_hints
 /en-US/docs/Glossary/Condition	/en-US/docs/Glossary/Conditional
 /en-US/docs/Glossary/Content_type	/en-US/docs/Glossary/MIME_type

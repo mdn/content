@@ -49,6 +49,23 @@ If the user tries to click "Click here for a free kitten!", they will actually b
 
 ## Clickjacking defenses
 
-Clickjacking depends on the target website being embedded in the attacker's decoy site inside an `<iframe>`, and the defense is to disallow this by deploying a [content security policy](/en-US/docs/Web/HTTP/CSP) that [sets the `frame-ancestors` directive](/en-US/docs/Web/HTTP/CSP#clickjacking_protection). This enables you to control the sites that are allowed to embed a page in an `<iframe>` or to deny embedding entirely.
+Clickjacking depends on the target website being embedded in the attacker's decoy site inside an `<iframe>`. The main defense is to disallow or at least control this capability.
 
-The `frame-ancestors` directive is a replacement for the {{httpheader("X-Frame-Options")}} response header.
+There are two relevant tools here:
+
+- The [`frame-ancestors` directive](/en-US/docs/Web/HTTP/CSP#clickjacking_protection) in a [content security policy](/en-US/docs/Web/HTTP/CSP)
+- The {{httpheader("X-Frame-Options")}} response header.
+
+The `frame-ancestors` directive is a replacement for `X-Frame-Options`. By setting `X-Frame-Options` as well as `frame-ancestors`, you can prevent embedding in browsers that don't support `frame-ancestors`. However, [browser support for `frame-ancestors` is very good](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors#browser_compatibility), so this is not a major concern.
+
+If `frame-ancestors` and `X-Frame-Options` are both set, then browsers that support `frame-ancestors` will ignore `X-Frame-Options`.
+
+As an additional partial mitigation, sites should set the [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) cookie attribute for session cookies to `Lax` or `Strict`. Requests from embedded contexts such as `<iframe>` elements that are not {{glossary("Site", "same-site")}} with the top-level document will not include these cookies, and the server will therefore not treat the request as coming from a logged-in user.
+
+## See also
+
+- [Clickjacking Defense Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Clickjacking_Defense_Cheat_Sheet.html) at [owasp.org](https://owasp.org/)
+
+<section id="Quick_links">
+{{ListSubpages("/en-US/docs/Web/Security", "1", "0", "1")}}
+</section>
