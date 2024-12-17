@@ -32,13 +32,12 @@ These statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} 
     This is one of: `new`, `connecting`, `connected`, `closed`, `failed`.
 - {{domxref("RTCTransportStats.iceLocalUsernameFragment", "iceLocalUsernameFragment")}} {{optional_inline}} {{experimental_inline}}
   - : A string indicating the local username fragment that uniquely identifies the ICE interaction session managed by this transport.
-    This is the same value as the local {{domxref("RTCIceCandidate.usernameFragment")}}, and will change if the connection is renegotiated.
 - {{domxref("RTCTransportStats.iceRole", "iceRole")}} {{optional_inline}} {{experimental_inline}}
-  - : A string indicating the [ICE `role`](/en-US/docs/Web/API/RTCIceTransport/role) of the underlying {{domxref("RTCDtlsTransport.iceTransport")}}.
-    This is one of: [`controlled`](/en-US/docs/Web/API/RTCIceTransport/role#controlled), [`controlling`](/en-US/docs/Web/API/RTCIceTransport/role#controlling), and [`unknown`](/en-US/docs/Web/API/RTCIceTransport/role#unknown).
+  - : A string indicating the ICE [`role`](/en-US/docs/Web/API/RTCIceTransport/role) of the underlying {{domxref("RTCIceTransport")}}.
+    This is one of: `controlled`, `controlling`, or `unknown`.
 - {{domxref("RTCTransportStats.iceState", "iceState")}} {{optional_inline}} {{experimental_inline}}
   - : A string indicating the current {{domxref("RTCIceTransport.state","state")}} of the underlying {{domxref("RTCIceTransport")}}.
-    This is one of: [`new`](/en-US/docs/Web/API/RTCIceTransport/state#new), [`checking`](/en-US/docs/Web/API/RTCIceTransport/state#checking), [`connected`](/en-US/docs/Web/API/RTCIceTransport/state#connected), [`completed`](/en-US/docs/Web/API/RTCIceTransport/state#completed), [`disconnected`](/en-US/docs/Web/API/RTCIceTransport/state#disconnected), [`failed`](/en-US/docs/Web/API/RTCIceTransport/state#failed), and [`closed`](/en-US/docs/Web/API/RTCIceTransport/state#closed).
+    This is one of: `new`, `checking`, `connected`, `completed`, `disconnected`, `failed`, or `closed`.
 - {{domxref("RTCTransportStats.localCertificateId", "localCertificateId")}} {{optional_inline}}
   - : A string containing the id of the local certificate used by this transport.
     Only present for DTLS transports, and after DTLS has been negotiated.
