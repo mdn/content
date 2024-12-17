@@ -116,7 +116,7 @@ Content-Length: 50
 
 In HTTP/1.x, each header is a **case-insensitive** string followed by a colon (`:`) and a value whose format depends on the header.
 The whole header, including the value, consists of one single line.
-This line can be quite long in some cases, such as the {{HTTPHEader("Cookie")}} header.
+This line can be quite long in some cases, such as the {{HTTPHeader("Cookie")}} header.
 
 ![Example of headers in an HTTP request](https://mdn.github.io/shared-assets/images/diagrams/http/messages/request-headers.svg)
 
@@ -339,3 +339,12 @@ HTTP/3 retains the same core HTTP semantics, so features like request methods, s
 If you understand HTTP/1.1's semantics, you already have a solid foundation for grasping HTTP/2 and HTTP/3.
 The main difference lies in **how** these semantics are implemented at the transport level.
 By following the examples and concepts in this guide, you should now feel equipped to work with HTTP and understand the meaning of messages, and how applications use HTTP to send and receive data.
+
+## See also
+
+- [Evolution of HTTP](/en-US/docs/Web/HTTP/Evolution_of_HTTP)
+- [Protocol upgrade mechanism](/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism)
+- Glossary terms:
+  - {{glossary('HTTP')}}
+  - {{glossary('HTTP_2', 'HTTP/2')}}
+  - {{glossary('QUIC')}}

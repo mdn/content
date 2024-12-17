@@ -233,3 +233,11 @@ The client-server structure, combined with the ability to add headers, allows HT
 
 Though HTTP/2 adds some complexity by embedding HTTP messages in frames to improve performance, the basic structure of messages has stayed the same since HTTP/1.0.
 Session flow remains basic, allowing it to be investigated and debugged with a [HTTP network monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html).
+
+## See also
+
+- [Evolution of HTTP](/en-US/docs/Web/HTTP/Evolution_of_HTTP)
+- Glossary terms:
+  - {{glossary('HTTP')}}
+  - {{glossary('HTTP_2', 'HTTP/2')}}
+  - {{glossary('QUIC')}}
