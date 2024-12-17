@@ -8,10 +8,11 @@ browser-compat: api.DOMPointReadOnly.matrixTransform
 
 {{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
-The static **`matrixTransform()`** method of the {{domxref("DOMPointReadOnly")}} interface applies a matrix transform specified as an object to the DOMPointReadOnly object, creates and returning a new `DOMPointReadOnly` object. If the matrix passed as a parameter is 2D (the {{domxref(DOMMatrix.is_2d)}}is `true`) then this is a 2D transformation and the point's `z` coordinate will be `0` and point's `w` perspective will be `1`. Otherwise this is a 3D transformation.
+The static **`matrixTransform()`** method of the {{domxref("DOMPointReadOnly")}} interface applies a matrix transform specified as an object to the DOMPointReadOnly object, creates and returning a new `DOMPointReadOnly` object. Neither the matrix nor the point are altered.
 
-You can also create a new `DOMPointReadOnly` object using the
-{{domxref("DOMPointReadOnly.DOMPointReadOnly", "DOMPointReadOnly()")}} constructor.
+If the matrix passed as a parameter is 2D (the {{domxref(DOMMatrix.is_2d)}}is `true`) then this is a 2D transformation and the point's `z` coordinate will be `0` and point's `w` perspective will be `1`. Otherwise this is a 3D transformation.
+
+You can also create a new `DOMPoint` with a point and matrix with the {{domxref("DOMMatrixReadOnly.transformPoint()")}} method.
 
 ## Syntax
 
@@ -67,4 +68,5 @@ const transformedPoint = point.matrixTransform(matrix3D); // DOMPoint {x: 5, y: 
 
 - {{domxref("DOMPoint")}}
 - {{domxref("DOMMatrix")}}
+- {{domxref("DOMMatrixReadOnly.transformPoint()")}}
 - CSS {{cssxref("transform-function/matrix", "matrix()")}} and {{cssxref("transform-function/matrix3d", "matrix3d()")}} functions
