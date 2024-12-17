@@ -32,7 +32,8 @@ Service-Worker: script
 ## Directives
 
 - `script`
-  - : The only specified value this header may have.
+  - : A value indicating that this is a script. 
+    This is the only allowed directive for this header.
 
 ## Specifications
 

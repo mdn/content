@@ -175,7 +175,7 @@ if ("serviceWorker" in navigator) {
 ### Using Service-Worker-Allowed to increase service worker scope
 
 A service worker can't have a scope broader than its own location, unless the server specifies a broader maximum scope in a {{HTTPHeader("Service-Worker-Allowed")}} header on the service worker script.
-It's appropriate to use the `scope` option when you need a _narrower_ scope than the default.
+Use the `scope` option when you need a _narrower_ scope than the default.
 
 The following code, if included in `example.com/index.html`, at the root of a site, would only apply to resources under `example.com/product`.
 
@@ -195,8 +195,8 @@ if ("serviceWorker" in navigator) {
 }
 ```
 
-Servers can change the default maximum scope by setting the `Service-Worker-Allowed` header on the service worker script.
-In this case, the `scope` option can be narrower than the header value, but potentially larger than the service worker's location.
+As noted above, servers can change the default scope by setting the `Service-Worker-Allowed` header on the service worker script.
+This allows the `scope` option to be set outside the path defined by the service worker's location.
 
 The following code, if included in `example.com/product/index.html`, would apply to all resources under `example.com` if the server set the `Service-Worker-Allowed` header to `/` or `https://example.com/` when serving `sw.js`. If the server doesn't set the header, the service worker registration will fail, as the requested `scope` is too broad.
 

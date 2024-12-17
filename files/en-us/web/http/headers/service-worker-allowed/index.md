@@ -11,9 +11,9 @@ The HTTP **`Service-Worker-Allowed`** {{Glossary("response header")}} is used to
 
 By default, the [`scope`](/en-US/docs/Web/API/ServiceWorkerContainer/register#scope) for a service worker registration is the directory where the service worker script is located.
 For example, if the script `sw.js` is located in `/js/sw.js`, it can only control URLs under `/js/` by default.
-Servers can change the default maximum allowed scope by setting the `Service-Worker-Allowed` header if a service worker needs to control a broader range of URLs beyond its own directory.
+Servers can use the `Service-Worker-Allowed` header to allow a service worker to control URLs outside of its own directory.
 
-A service worker intercepts all network requests within its scope so you should avoid using overly-broad scopes unless necessary.
+A service worker intercepts all network requests within its scope, so you should avoid using overly-broad scopes unless necessary.
 
 <table class="properties">
   <tbody>
@@ -43,7 +43,7 @@ Service-Worker-Allowed: <scope>
 
 ### Using Service-Worker-Allowed to broaden service worker scope
 
-The JavaScript example below is included in `example.com/product/index.html`, and attempts to register a service worker with a scope that applies to all resources under `example.com/`.
+The JavaScript example below is included in `example.com/product/index.html`, and attempts to [register](/en-US/docs/Web/API/ServiceWorkerContainer/register) a service worker with a scope that applies to all resources under `example.com/`.
 
 ```js
 navigator.serviceWorker.register("./sw.js", { scope: "/" }).then(
@@ -81,3 +81,4 @@ If the server doesn't set the header, the service worker registration will fail,
 - {{HTTPHeader("Service-Worker")}} header
 - [Service worker API](/en-US/docs/Web/API/Service_Worker_API)
 - {{domxref("ServiceWorkerRegistration")}}
+- [Why is my service worker failing to register](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers#why_is_my_service_worker_failing_to_register) in _Using Service Workers_.
