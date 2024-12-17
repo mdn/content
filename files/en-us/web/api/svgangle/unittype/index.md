@@ -8,18 +8,12 @@ browser-compat: api.SVGAngle.unitType
 
 {{APIRef("SVG")}}
 
-The **`unitType`** property of the {{domxref("SVGAngle")}} interface that represents the type of value the `SVGAngle` holds. This is determined by one of the predefined constants of the `SVGAngle` interface.
+The **`unitType`** property of the {{domxref("SVGAngle")}} interface that represents the type of value the `SVGAngle` holds. This must be one of the constant values defined for the {{domxref("SVGAngle.unitType", "unitType")}} property, with the exception of `SVG_ANGLETYPE_UNKNOWN`.
 
-- `SVG_ANGLETYPE_UNKNOWN` = `0`
-  - : An unknown type of value.
-- `SVG_ANGLETYPE_UNSPECIFIED` = `1`
-  - : A unitless [`<number>`](/en-US/docs/Web/SVG/Content_type#number) interpreted as a value in degrees.
-- `SVG_ANGLETYPE_DEG` = `2`
-  - : An [`<angle>`](/en-US/docs/Web/SVG/Content_type#angle) with a `deg` unit.
-- `SVG_ANGLETYPE_RAD` = `3`
-  - : An [`<angle>`](/en-US/docs/Web/SVG/Content_type#angle) with a `rad` unit.
-- `SVG_ANGLETYPE_GRAD` = `4`
-  - : An [`<angle>`](/en-US/docs/Web/SVG/Content_type#angle) with a `grad` unit.
+- `SVGAngle.SVG_ANGLETYPE_DEG`: convert to degrees
+- `SVGAngle.SVG_ANGLETYPE_RAD`: convert to radians
+- `SVGAngle.SVG_ANGLETYPE_GRAD`: convert to gradians
+- `SVGAngle.SVG_ANGLETYPE_UNSPECIFIED`: convert to a unitless number, interpreted as degrees
 
 ## Value
 
