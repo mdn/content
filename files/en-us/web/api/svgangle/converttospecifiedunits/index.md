@@ -18,7 +18,7 @@ This function will:
 ## Syntax
 
 ```js
-svgAngle.convertToSpecifiedUnits(unitType)
+svgAngle.convertToSpecifiedUnits(unitType);
 ```
 
 ### Parameters
@@ -68,5 +68,5 @@ console.log(angle.unitType); // Output: 2 (SVG_ANGLETYPE_DEG)
 
 ## See also
 
-- {{domxref("SVGElement")}}
-- {{domxref("DOMMatrix")}}
+- {{domxref("SVGAnimatedAngle")}}
+- {{domxref("Document.createElementNS()")}}
