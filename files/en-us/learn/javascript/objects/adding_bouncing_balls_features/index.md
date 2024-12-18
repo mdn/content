@@ -68,7 +68,7 @@ The `Ball` class should be made to derive from `Shape` using `extends`. The cons
 - initialize its own `color` and `size` properties from the parameters it is given.
 
 > [!NOTE]
-> Make sure to create the `Shape` class above the existing `Ball` class otherwise you'll get the following error. `Uncaught ReferenceError: Cannot access 'Shape' before initialization`
+> Make sure to create the `Shape` class above the existing `Ball` class, otherwise you'll get some error like: "Uncaught ReferenceError: Cannot access 'Shape' before initialization"
 
 The `Ball` constructor should define a new property called `exists`, which is used to track whether the balls exist in the program (have not been eaten by the evil circle). This should be a boolean (`true`/`false`), initialized to `true` in the constructor.
 
