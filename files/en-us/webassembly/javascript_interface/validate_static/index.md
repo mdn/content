@@ -102,7 +102,7 @@ fetch("module.wasm")
   .then((result) => console.log(`Builtins available: ${!result}`));
 ```
 
-The above module code is so short that you could just validate the literal bytes. A feature detection function could look like so:
+The above module code is so short that you could just validate the literal bytes rather than downloading the module. A feature detection function could look like so:
 
 ```js
 function JsStringBuiltinsSupported() {
