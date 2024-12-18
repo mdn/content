@@ -412,7 +412,6 @@ l10n:
     Web_forms_advanced: Erweiterte Techniken für Webformulare
     Accessibility_—_Make_the_web_usable_by_everyone: Barrierefreiheit — Das Web für alle nutzbar machen
     Accessibility_guides: Barrierefreiheitsleitfäden
-    Accessibility_assessment: Barrierefreiheitseinschätzung
     Performance: Leistung — Websites schnell und reaktionsschnell machen
     Performance_guides: Leitfäden zur Leistung
     MathML_Writing_mathematics: MathML — Schreiben von Mathematik mit MathML
@@ -458,7 +457,6 @@ l10n:
     Web_forms_advanced: Advanced web form techniques
     Accessibility_—_Make_the_web_usable_by_everyone: Accessibility — Make the web usable by everyone
     Accessibility_guides: Accessibility guides
-    Accessibility_assessment: Accessibility assessment
     Performance: Performance — Making websites fast and responsive
     Performance_guides: Performance guides
     MathML_Writing_mathematics: MathML — Writing mathematics with MathML
@@ -482,7 +480,7 @@ l10n:
     Further_resources: Further resources
     Common_questions: Common questions
   pt-BR:
-    Complete_beginners_start_here: "Completos iniciantes, comecem por aqui!"
+    Complete_beginners_start_here: Completos iniciantes, comecem por aqui!
     Getting_started_with_the_web: Iniciando na Internet
     HTML_Structuring_the_web: HTML — Estruturando a Web
     Introduction_to_HTML: Introdução ao HTML
@@ -504,7 +502,6 @@ l10n:
     Web_forms_advanced: Advanced web form techniques
     Accessibility_—_Make_the_web_usable_by_everyone: Acessibilidade — Faça a Internet usável por qualquer pessoa
     Accessibility_guides: Guias de acessibilidade
-    Accessibility_assessment: Avaliando a acessibilidade
     Tools_and_testing: Ferramentas e teste
     Cross_browser_testing: Testes entre navegadores
     Git_and_GitHub: Git and GitHub
@@ -543,7 +540,6 @@ l10n:
     Web_forms_advanced: Advanced web form techniques
     Accessibility_—_Make_the_web_usable_by_everyone: Доступность — сделайте веб удобным для всех
     Accessibility_guides: Руководства по обеспечению доступности
-    Accessibility_assessment: "Задание: Доступность"
     Tools_and_testing: Инструменты и тестирование
     Cross_browser_testing: Кроссбраузерное тестирование
     Git_and_GitHub: Git и GitHub
@@ -583,7 +579,6 @@ l10n:
     Web_forms_advanced: Web 表单进阶
     Accessibility_—_Make_the_web_usable_by_everyone: 无障碍——使每个人都能使用 Web
     Accessibility_guides: 无障碍指南
-    Accessibility_assessment: 无障碍测评
     Performance: 性能——使网站快速响应
     Performance_guides: 性能指南
     MathML_Writing_mathematics: MathML——使用 MathML 语言撰写数学表达式
@@ -629,7 +624,6 @@ l10n:
     Web_forms_advanced: 深入網頁表單
     Accessibility_—_Make_the_web_usable_by_everyone: 無障礙網頁 — 每個人都可以使用的網頁
     Accessibility_guides: 無障礙網頁指南
-    Accessibility_assessment: 無障礙網頁評估
     Tools_and_testing: 工具與測試
     Cross_browser_testing: 跨瀏覽器測試
     Git_and_GitHub: Git and GitHub
@@ -669,7 +663,6 @@ l10n:
     Web_forms_advanced: Fonctionnalités avancées des formulaires
     Accessibility_—_Make_the_web_usable_by_everyone: Accessibilité — Rendre le Web utilisable par toutes et tous
     Accessibility_guides: Guides sur l'accessibilité
-    Accessibility_assessment: Évaluation de l'accessibilité
     MathML_Writing_mathematics: MathML — Écrire des formules mathématiques sur le Web
     MathML_first_steps: Premiers pas en MathML
     Tools_and_testing: Outils et tests
@@ -711,7 +704,6 @@ l10n:
     Web_forms_advanced: 高度なウェブフォームテクニック
     Accessibility_—_Make_the_web_usable_by_everyone: アクセシビリティ — 誰もウェブを利用できるようにする
     Accessibility_guides: アクセシビリティガイド
-    Accessibility_assessment: Accessibility assessment
     Performance: パフォーマンス — ウェブサイトを高速かつ応答性の高いものにする
     Performance_guides: パフォーマンスガイド
     MathML_Writing_mathematics: MathML — MathML を使用して数学を記述する
@@ -757,7 +749,6 @@ l10n:
     Web_forms_advanced: 고급 form
     Accessibility_—_Make_the_web_usable_by_everyone: 접근성 - 모두를 위한 웹 만들기
     Accessibility_guides: 접근성 안내서
-    Accessibility_assessment: "과제: 접근성 평가"
     MathML_Writing_mathematics: MathML — MathML을 이용해 수학 쓰기
     MathML_first_steps: MathML 첫 걸음
     Tools_and_testing: 도구과 테스트

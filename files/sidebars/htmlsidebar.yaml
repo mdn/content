@@ -203,8 +203,8 @@ l10n:
     Advanced_text_formatting: Formatage avancé du texte
     Document_and_website_structure: Structure d'un site et d'un document web
     Debugging_HTML: Déboguer du HTML
-    Assessment_Marking_up_a_letter: "Évaluation\_: baliser une lettre"
-    Assessment_Structuring_a_page_of_content: "Évaluation\_: structurer une page de contenu"
+    Assessment_Marking_up_a_letter: "Évaluation : baliser une lettre"
+    Assessment_Structuring_a_page_of_content: "Évaluation : structurer une page de contenu"
     Multimedia_and_embedding: Multimédia et intégration
     Multimedia_and_embedding_overview: Aperçu pour le multimédia et l'intégration
     Images_in_HTML: Images en HTML
@@ -212,12 +212,12 @@ l10n:
     From_object_to_iframe_other_embedding_technologies: Des objets aux iframes, les autres technologies d'intégration
     Adding_vector_graphics_to_the_web: Ajouter des graphiques vectoriels sur le Web
     Responsive_images: Images responsives
-    Assessment_Mozilla_splash_page: "Évaluation\_: page d'accueil Mozilla"
+    Assessment_Mozilla_splash_page: "Évaluation : page d'accueil Mozilla"
     HTML_tables: Tableaux HTML
     HTML_tables_overview: Aperçu des tableaux HTML
     HTML_table_basics: Bases des tableaux HTML
     HTML_table_advanced_features_and_accessibility: Fonctionnalités avancées et accessibilité des tableaux HTML
-    Assessment_Structuring_planet_data: "Évaluation\_: structurer les données des planètes"
+    Assessment_Structuring_planet_data: "Évaluation : structurer les données des planètes"
     Reference: Références
     HTML_Elements: Éléments HTML
     Global_attributes: Attributs universels
@@ -327,7 +327,7 @@ l10n:
     From_object_to_iframe_other_embedding_technologies: De objeto a iframe — outras tecnologias de incorporação
     Adding_vector_graphics_to_the_web: Adicionando gráficos vetoriais à Web
     Responsive_images: Imagens responsivas
-    Assessment_Mozilla_splash_page: "Avaliação: Página \"splash\" da Mozilla"
+    Assessment_Mozilla_splash_page: 'Avaliação: Página "splash" da Mozilla'
     HTML_tables: Tabelas HTML
     HTML_tables_overview: Visão geral sobre tabelas HTML
     HTML_table_basics: O básico sobre Tabelas HTML

@@ -216,7 +216,6 @@ l10n:
     WebExtensions#Concepts: Основные понятия
     WebExtensions#User_Interface: Пользовательский интерфейс
     WebExtensions#How_to: How to
-    WebExtensions#Firefox_workflow: Firefox workflow
     WebExtensions#API: Обзор JavaScript API
     WebExtensions#manifest.json: Manifest keys
     extension_workshop: Extension Workshop

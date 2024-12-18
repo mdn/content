@@ -307,19 +307,17 @@ l10n:
   de:
     Tutorials: Tutorials
     CSS_first_steps: CSS erste Schritte
-    CSS_first_steps_overview: CSS erste Schritte (Übersicht)
-    Assessment_Styling_a_biography_page: 'Aufgabe: Gestaltung einer Biografie-Seite'
+    Assessment_Styling_a_biography_page: "Aufgabe: Gestaltung einer Biografie-Seite"
     CSS_building_blocks: CSS Bausteine
-    CSS_building_blocks_overview: CSS Bausteine (Übersicht)
-    Assessment_Fundamental_CSS_comprehension: 'Aufgabe: Grundlegendes CSS-Verständnis'
-    Assessment_Creating_fancy_letterheaded_paper: 'Aufgabe: Erstellung von schickem Briefpapier'
-    Assessment_A_cool_looking_box: 'Aufgabe: Eine cool aussehende Box'
+    Assessment_Fundamental_CSS_comprehension: "Aufgabe: Grundlegendes CSS-Verständnis"
+    Assessment_Creating_fancy_letterheaded_paper: "Aufgabe: Erstellung von schickem Briefpapier"
+    Assessment_A_cool_looking_box: "Aufgabe: Eine cool aussehende Box"
     Styling_text: Textgestaltung
     Styling_text_overview: Textgestaltung (Übersicht)
-    Assessment_Typesetting_a_community_school_homepage: 'Aufgabe: Satz einer Community-Schulhomepage'
+    Assessment_Typesetting_a_community_school_homepage: "Aufgabe: Satz einer Community-Schulhomepage"
     CSS_layout: CSS-Layout
     CSS_layout_overview: CSS-Layout (Übersicht)
-    Assessment_Fundamental_Layout_Comprehension: 'Aufgabe: Grundlegendes Layout-Verständnis'
+    Assessment_Fundamental_Layout_Comprehension: "Aufgabe: Grundlegendes Layout-Verständnis"
     Combinators: Kombinatoren
     Guides: Leitfäden
     Animations: Animationen
@@ -328,7 +326,7 @@ l10n:
     Box_alignment_in_block_layout: Box-Ausrichtung im Block-Layout
     Box_model: Box-Modell
     Colors: Farben
-    Color_contrast: 'Barrierefreiheit: Farbkontrast'
+    Color_contrast: "Barrierefreiheit: Farbkontrast"
     Columns: Spalten
     Conditional_rules: Bedingte Regeln
     Containment: Containment
@@ -353,10 +351,8 @@ l10n:
   en-US:
     Tutorials: Tutorials
     CSS_first_steps: CSS first steps
-    CSS_first_steps_overview: CSS first steps overview
     Assessment_Styling_a_biography_page: "Assessment: Styling a biography page"
     CSS_building_blocks: CSS building blocks
-    CSS_building_blocks_overview: CSS building blocks overview
     Assessment_Fundamental_CSS_comprehension: "Assessment: Fundamental CSS comprehension"
     Assessment_Creating_fancy_letterheaded_paper: "Assessment: Creating fancy letterheaded paper"
     Assessment_A_cool_looking_box: "Assessment: A cool-looking box"
@@ -398,9 +394,7 @@ l10n:
     Tools: Tools
   fr:
     CSS_first_steps: Premiers pas en CSS
-    CSS_first_steps_overview: Aperçu des premiers pas en CSS
     CSS_building_blocks: Les briques composant CSS
-    CSS_building_blocks_overview: Aperçu des briques composant CSS
     Styling_text: Mettre en forme du texte
     Styling_text_overview: Aperçu de la mise en forme du texte
     CSS_layout: Dispositions CSS
@@ -432,10 +426,8 @@ l10n:
   ja:
     Tutorials: チュートリアル
     CSS_first_steps: CSS の第一歩
-    CSS_first_steps_overview: CSS の第一歩の概要
     Assessment_Styling_a_biography_page: "評価課題: 経歴ページのスタイル設定"
     CSS_building_blocks: CSS の構成要素
-    CSS_building_blocks_overview: CSS の構成要素の概要
     Assessment_Fundamental_CSS_comprehension: "評価課題: CSS の基本的な理解度"
     Assessment_Creating_fancy_letterheaded_paper: "評価課題: 素敵なレターヘッドの便箋の作成"
     Assessment_A_cool_looking_box: "評価課題: かっこいいボックス"
@@ -450,10 +442,8 @@ l10n:
   ko:
     Tutorials: 자습서
     CSS_first_steps: CSS 첫 번째 단계
-    CSS_first_steps_overview: CSS 첫 번째 단계
     Assessment_Styling_a_biography_page: "과제: 프로필 페이지 만들기"
     CSS_building_blocks: CSS 구성요소
-    CSS_building_blocks_overview: CSS 구성요소
     Assessment_Fundamental_CSS_comprehension: "과제: 기본적인 CSS 이해"
     Assessment_Creating_fancy_letterheaded_paper: "과제: 이쁜 레터 모양 종이 만들기"
     Assessment_A_cool_looking_box: "과제: 멋진 박스 만들기 "
@@ -490,10 +480,8 @@ l10n:
   pt-BR:
     Tutorials: Tutoriais
     CSS_first_steps: CSS - primeiros passos
-    CSS_first_steps_overview: Visão geral das primeiras etapas com CSS
     Assessment_Styling_a_biography_page: "Avaliação: Estilizando uma página biográfica"
     CSS_building_blocks: CSS building blocks
-    CSS_building_blocks_overview: CSS building blocks overview
     Assessment_Fundamental_CSS_comprehension: "Assessment: Fundamental CSS comprehension"
     Assessment_Creating_fancy_letterheaded_paper: "Assessment: Creating fancy letterheaded paper"
     Assessment_A_cool_looking_box: "Assessment: A cool-looking box"
@@ -508,10 +496,8 @@ l10n:
   ru:
     Tutorials: Уроки
     CSS_first_steps: Введение в CSS
-    CSS_first_steps_overview: Введение в CSS
     Assessment_Styling_a_biography_page: "Assessment: Styling a biography page"
     CSS_building_blocks: Устройство CSS
-    CSS_building_blocks_overview: Устройство CSS
     Assessment_Fundamental_CSS_comprehension: "Assessment: Fundamental CSS comprehension"
     Assessment_Creating_fancy_letterheaded_paper: "Assessment: Creating fancy letterheaded paper"
     Assessment_A_cool_looking_box: "Assessment: A cool-looking box"
@@ -548,10 +534,8 @@ l10n:
   zh-CN:
     Tutorials: 教程
     CSS_first_steps: CSS 第一步
-    CSS_first_steps_overview: CSS 第一步概述
     Assessment_Styling_a_biography_page: 测验：为传记页面添加样式
     CSS_building_blocks: CSS 构建
-    CSS_building_blocks_overview: CSS 构建基础概述
     Assessment_Fundamental_CSS_comprehension: 测验：基本的 CSS 理解
     Assessment_Creating_fancy_letterheaded_paper: 测验：创建精美的信纸
     Assessment_A_cool_looking_box: 测验：一个漂亮的盒子
@@ -593,10 +577,8 @@ l10n:
   zh-TW:
     Tutorials: 教程
     CSS_first_steps: CSS first steps
-    CSS_first_steps_overview: CSS first steps overview
     Assessment_Styling_a_biography_page: "Assessment: Styling a biography page"
     CSS_building_blocks: CSS building blocks
-    CSS_building_blocks_overview: CSS building blocks overview
     Assessment_Fundamental_CSS_comprehension: "Assessment: Fundamental CSS comprehension"
     Assessment_Creating_fancy_letterheaded_paper: "Assessment: Creating fancy letterheaded paper"
     Assessment_A_cool_looking_box: "Assessment: A cool-looking box"
