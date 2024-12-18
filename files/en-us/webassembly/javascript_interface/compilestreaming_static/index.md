@@ -28,9 +28,9 @@ WebAssembly.compileStreaming(source, compileOptions)
 - `compileOptions` {{optional_inline}}
   - : An object containing compilation options. Properties can include:
     - `builtins` {{optional_inline}}
-      - : An array of strings that enables the usage of [WebAssembly JavaScript builtins](/en-US/docs/WebAssembly/JavaScript_builtins) in the compiled Wasm module. The strings define the builtins you want to enable. Currently the only available value is `"js-string"`, which enables JavaScript string builtins.
+      - : An array of strings that enables the usage of [JavaScript builtins](/en-US/docs/WebAssembly/JavaScript_builtins) in the compiled Wasm module. The strings define the builtins you want to enable. Currently the only available value is `"js-string"`, which enables JavaScript string builtins.
     - `importedStringConstants` {{optional_inline}}
-      - : A string specifying a namespace for imported global string constants. This property needs to be specified if you wish to use imported global string constants in the Wasm module.
+      - : A string specifying a namespace for [imported global string constants](/en-US/docs/WebAssembly/Imported_string_constants). This property needs to be specified if you wish to use imported global string constants in the Wasm module.
 
 ### Return value
 
@@ -62,9 +62,9 @@ WebAssembly.compileStreaming(fetch("simple.wasm"))
 The resulting module instance is then instantiated using
 [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate_static), and the exported function invoked.
 
-### Enabling WebAssembly JavaScript builtins
+### Enabling JavaScript builtins and global string imports
 
-This example enables JavaScript string builtins and imported global string constants when compiling the Wasm module, before instantiating it and running the exported `main()` function (which logs `"hello world!"` to the console). [See it running live](https://mdn.github.io/webassembly-examples/js-builtin-examples/compile-streaming/).
+This example enables JavaScript string builtins and imported global string constants when compiling the Wasm module with `compileStreaming()`, before instantiating it with [`instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate_static) then running the exported `main()` function (which logs `"hello world!"` to the console). [See it running live](https://mdn.github.io/webassembly-examples/js-builtin-examples/compile-streaming/).
 
 ```js
 const importObject = {

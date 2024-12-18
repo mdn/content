@@ -8,33 +8,46 @@ page-type: guide
 
 WebAssembly JavaScript builtins are Wasm equivalents of JavaScript operations that provide a way to use JavaScript features inside Wasm modules without having to import JavaScript glue code to provide a bridge between JavaScript and WebAssembly values and calling conventions.
 
-This provides performance improvements — importing glue code for primitives such as {{jsxref("String")}} can come with a significant overhead. WebAssembly and most languages that target it expect a tight sequence of inline operations rather than an indirect function call, which is how regular imported functions work.
-
 This article explains how builtins work and which ones are available, then provides a usage example.
 
 ## Problems with importing JavaScript functions
 
-There are several reasons why importing functions from JavaScript to WebAssembly modules introduces significant performance overheads:
+For many JavaScript features, regular imports work OK. However, importing glue code for primitives such as {{jsxref("String")}}, {{jsxref("ArrayBuffer")}}, and {{jsxref("Map")}} comes with significant performance overheads. In such cases, WebAssembly and most languages that target it expect a tight sequence of inline operations rather than an indirect function call, which is how regular imported functions work.
+
+Specifically, importing functions from JavaScript to WebAssembly modules creates performance problems for the following reasons:
 
 - Existing APIs require a conversion to handle differences around the [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) value, which WebAssembly function `import` calls leave as `undefined`.
 - Certain primitives use JavaScript operators such as [`===`](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) and [`<`](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than) that cannot be imported.
 - Most JavaScript functions are extremely permissive of the types of values they accept, and it's desirable to leverage WebAssembly's type system to remove those checks and coercions wherever possible.
 
-Considering these problems, creating built-in definitions that adapt existing JavaScript functionality to WebAssembly is simpler and better for performance than importing it.
+Considering these problems, creating built-in definitions that adapt existing JavaScript functionality such as {{jsxref("String")}} primitives to WebAssembly is simpler and better for performance than importing it and relying on indirect function calls.
 
 ## Available WebAssembly JavaScript builtins
 
-The first builtin operations to be implemented are {{jsxref("String")}} operations. This is because the most pressing use case is languages that would benefit from using the JavaScript `String` type to implement their strings. You can find a list of the `String` operations with builtin equivalents defined for them at [JS String Builtin API](https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md#js-string-builtin-api).
+The below sections detail the available builtins. Other builtins are likely to be supported in the future.
 
-Other builtins are likely to be supported in the future.
+### String operations
+
+The {{jsxref("String")}} operations with builtin equivalents are:
+
+- {{jsxref("String.fromCharCode()")}} (`"wasm:js-string" "fromCharCode"`)
+- {{jsxref("String.fromCodePoint()")}} (`"wasm:js-string" "fromCodePoint"`)
+- {{jsxref("String.prototype.charCodeAt()")}} (`"wasm:js-string" "charCodeAt"`)
+- {{jsxref("String.prototype.codePointAt()")}} (`"wasm:js-string" "codePointAt"`)
+- {{jsxref("String.prototype.length")}} (`"wasm:js-string" "length"`)
+- {{jsxref("String.prototype.concat()")}} (`"wasm:js-string" "concat"`)
+- {{jsxref("String.prototype.substring()")}} (`"wasm:js-string" "substring"`)
+- {{jsxref("String.prototype.localeCompare()")}} (`"wasm:js-string" "compare"`)
+
+You can find a full list of the defined builtins, along with Wasm code listings, at [JS String Builtin API](https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md#js-string-builtin-api).
 
 ## How do you use builtins?
 
 Builtins work in a similar way to functions imported from JavaScript, except that you are using standard Wasm function equivalents for performing JavaScript operations that are defined in a reserved namespace (`wasm:`). This being the case, browsers can predict and generate optimal code for them. This section summarizes how to use them.
 
-### JavaScript API features
+### JavaScript API
 
-Builtins are enabled at compile-time by specifying the `builtins` property during compilation. This goes inside the `compileOptions` object, and its value is an array of the builtins you want to enable:
+Builtins are enabled at compile-time by specifying the `compileOptions.builtins` property as an argument when calling methods to compile and/or instantiate a module. Its value is an array of strings that identify the sets of builtins you want to enable:
 
 ```js
 WebAssembly.compile(bytes, { builtins: ["js-string"] });
@@ -49,35 +62,56 @@ The `compileOptions` object is available to the following functions:
 - [`WebAssembly.validate()`](/en-US/docs/WebAssembly/JavaScript_interface/validate_static)
 - The [`WebAssembly.Module()`](/en-US/docs/WebAssembly/JavaScript_interface/Module/Module) constructor
 
-If you want to use imported global string constants with your builtins, you can also include the `importedStringConstants` property inside `compileOptions`. This selects an import namespace for imported global string constants that the engine will populate automatically:
-
-```js
-WebAssembly.compile(bytes, {
-  builtins: ["js-string"],
-  importedStringConstants: "#",
-});
-```
-
-You don't have to use imported global string constants along with builtins; they are two separate features. However, they are often used together.
-
-> [!NOTE]
-> The above example uses `"#"` as the imported global string namespace for illustrative purposes. In production, however, it is best practice to use the empty string to save on module file size. The namespace is repeated for every string literal, and real-world modules can have tens of thousands of them, so the saving can be significant. This choice is made by the authors of the toolchain that will generate the Wasm modules. Once you have a `.wasm` file and want to embed it in your JavaScript, you can't freely choose this namespace any more; you have to use what the `.wasm` file expects.
-
 ### WebAssembly module features
 
-Over in your WebAssembly module, you can now import string literals, specifying the same namespace you specified in `importedStringConstants` over in the JavaScript:
-
-```wasm
-(global $h (import "#" "hello ") externref)
-(global $w (import "#" "world!") externref)
-```
-
-You can also import builtins as specified in the `compileOptions` object from the `wasm:` namespace (in this case, the [`concat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat) function; see also the [equivalent built-in definition](https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md#wasmjs-string-concat)):
+Over in your WebAssembly module, you can now import builtins as specified in the `compileOptions` object from the `wasm:` namespace (in this case, the [`concat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat) function; see also the [equivalent built-in definition](https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md#wasmjs-string-concat)):
 
 ```wasm
 (func $concat (import "wasm:js-string" "concat")
     (param externref externref) (result (ref extern)))
 ```
+
+## Feature detecting builtins
+
+When using builtins, type checks will be stricter than when they are not present — certain rules are imposed on the builtin imports.
+
+Therefore, to write feature detection code for builtins you can define a module that's _invalid_ with the feature present, and _valid_ without it. You then return `true` when validation fails, to indicate support. A basic module that will achieve this is as follows:
+
+```wasm
+(module
+  (function (import "wasm:js-string" "cast")))
+```
+
+Without builtins, the module is valid, because you can import any function with any signature you want (in this case: no parameters and no return values). With builtins, the module is invalid, because the now-special-cased `"wasm:js-string" "cast"` function must have a specific signature (an `externref` parameter and a non-nullable `(ref extern)` return value).
+
+You can then try validating this module with the [validate()](/en-US/docs/WebAssembly/JavaScript_interface/validate_static) method, but note how the result is negated with the `!` operator — remember that builtins are supported if the module is _invalid_:
+
+```js
+const compileOptions = {
+  builtins: ["js-string"],
+};
+
+fetch("module.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => WebAssembly.validate(bytes, compileOptions))
+  .then((result) => console.log(`Builtins available: ${!result}`));
+```
+
+The above module code is so short that you could just validate the literal bytes rather than downloading the module. A feature detection function could look like so:
+
+```js
+function JsStringBuiltinsSupported() {
+  let bytes = new Uint8Array([
+    0, 97, 115, 109, 1, 0, 0, 0, 1, 4, 1, 96, 0, 0, 2, 23, 1, 14, 119, 97, 115,
+    109, 58, 106, 115, 45, 115, 116, 114, 105, 110, 103, 4, 99, 97, 115, 116, 0,
+    0,
+  ]);
+  return !WebAssembly.validate(bytes, { builtins: ["js-string"] });
+}
+```
+
+> [!NOTE]
+> In many cases it is not necessary to feature detect builtins. Another option could be to provide regular imports alongside the builtins, and supporting browsers will just ignore the fallbacks.
 
 ## Builtins example
 
@@ -85,7 +119,7 @@ Let's work through a basic but complete example to show how builtins are used. T
 
 The example we'll be referring to uses the [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate_static) function on the webpage to handle the compilation and instantiation; you can find this and other examples on our `webassembly-examples` repo — see [`js-builtin-examples`](https://github.com/mdn/webassembly-examples/tree/main/js-builtin-examples).
 
-You can build up the example by following the steps below; also [see it running live](https://mdn.github.io/webassembly-examples/js-builtin-examples/instantiate/).
+You can build up the example by following the steps below. In addition, you can [see it running live](https://mdn.github.io/webassembly-examples/js-builtin-examples/instantiate/) — open your browser's JavaScript console to see the example output.
 
 ### JavaScript
 
@@ -113,7 +147,9 @@ fetch("log-concat.wasm")
 The JavaScript:
 
 - Defines an `importObject` that specifies a function `"log"` at a namespace `"m"` to import into the Wasm module during instantiation. It's the {{domxref("console.log()")}} function.
-- Defines a `compileOptions` object that includes the `builtins` and `importedStringConstants` properties. As discussed earlier, this is needed to enable builtins and imported global string constants.
+- Defines a `compileOptions` object that includes:
+  - the `builtins` property to enable string builtins.
+  - the `importedStringConstants` property to enable [imported global string constants](/en-US/docs/WebAssembly/Imported_string_constants).
 - Uses {{domxref("Window.fetch", "fetch()")}} to fetch the Wasm module (`log-concat.wasm`), converts the response to an {{jsxref("ArrayBuffer")}} using {{domxref("Response.arrayBuffer")}}, then compiles and instantiates the Wasm module using [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate_static).
 - Calls the `main()` function exported from the Wasm module.
 
