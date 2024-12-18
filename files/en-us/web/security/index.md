@@ -153,12 +153,12 @@ Any reputable server-side framework will provide functionality for validating fo
 
 ### Protect against clickjacking
 
-In a [clickjacking](/en-US/docs/Glossary/Clickjacking) attack, a user is fooled into clicking a UI element that performs an action different from what the user expects, often resulting in the user's confidential information being passed to a malicious third party. This risk is inherent in embedded third-party content, so make sure you trust what is being embedded into your site. Additionally, be aware that clickjacking can be combined with phishing techniques. You can read about phishing in the previous section [Protect user identity and manage logins](#protect_user_identity_and_manage_logins).
+In a [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) attack, a user is fooled into clicking a UI element that performs an action different from what the user expects, often resulting in the user's confidential information being passed to a malicious third party. This risk is inherent in embedded third-party content, so make sure you trust what is being embedded into your site. Additionally, be aware that clickjacking can be combined with phishing techniques. You can read about phishing in the previous section [Protect user identity and manage logins](#protect_user_identity_and_manage_logins).
 
 The following features can help guard against clickjacking:
 
 - [HTTP X-Frame-Options](/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
-  - : The **`X-Frame-Options`** [HTTP](/en-US/docs/Web/HTTP) response header can be used to indicate whether a browser should be allowed to render a page in a [`<frame>`](/en-US/docs/Web/HTML/Element/frame), [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), [`<embed>`](/en-US/docs/Web/HTML/Element/embed) or [`<object>`](/en-US/docs/Web/HTML/Element/object). Sites can use this to avoid [clickjacking](/en-US/docs/Glossary/Clickjacking) attacks, by ensuring that their content is not embedded into other sites.
+  - : The **`X-Frame-Options`** [HTTP](/en-US/docs/Web/HTTP) response header can be used to indicate whether a browser should be allowed to render a page in a [`<frame>`](/en-US/docs/Web/HTML/Element/frame), [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), [`<embed>`](/en-US/docs/Web/HTML/Element/embed) or [`<object>`](/en-US/docs/Web/HTML/Element/object). Sites can use this to avoid clickjacking attacks, by ensuring that their content is not embedded into other sites.
 - [CSP: frame-ancestors](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors)
   - : The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`frame-ancestors`** directive specifies valid parents that may embed a page using {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, or {{HTMLElement("embed")}}.
 

@@ -34,7 +34,7 @@ sidebar:
     title: WCAG
     details: closed
   - type: section
-    link: Web/Accessibility/ARIA
+    link: /Web/Accessibility/ARIA
     title: ARIA
   - title: ARIA_guides
     details: closed
