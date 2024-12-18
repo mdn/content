@@ -661,11 +661,12 @@ The basic syntax is the same, but the font technology can be specified, and allo
     format("woff2-variations");
   font-weight: 125 950;
   font-stretch: 75% 125%;
+
   font-style: normal;
 }
 ```
 
-In this case, the `normal` value indicates that this font file should be used when in a style rule the `font-family` property is `MyVariableFontName` and the [font-style](/en-US/docs/Web/CSS/font-style) property is `normal`. The `oblique 0deg` and `oblique 0deg 20deg` values, because of the `0deg`, also indicate the font has normal upright glyphs.
+In this case, the `normal` value indicates that this font file should be used when in a style rule the `font-family` property is `MyVariableFontName` and the [font-style](/en-US/docs/Web/CSS/font-style) property is `normal`. The `font-style: oblique 0deg` and `font-style: oblique 0deg 20deg` declarations, because of the `0deg`, could also be used instead to indicate that the font has normal upright glyphs.
 
 #### Example for a font that contains only italics and no upright characters
 
@@ -676,11 +677,12 @@ In this case, the `normal` value indicates that this font file should be used wh
     format("woff2-variations");
   font-weight: 125 950;
   font-stretch: 75% 125%;
+
   font-style: italic;
 }
 ```
 
-In this case, the `italic` value indicates that this font file should be used when in a style rule the `font-family` property is `MyVariableFontName` and the [font-style](/en-US/docs/Web/CSS/font-style) property is `italic`. The `oblique 14deg` value also indicates the font has italic glyphs.
+In this case, the `italic` value indicates that this font file should be used when in a style rule the `font-family` property is `MyVariableFontName` and the [font-style](/en-US/docs/Web/CSS/font-style) property is `italic`. The `font-style: oblique 14deg` declaration could also be used instead to indicate that the font has italic glyphs.
 
 #### Example for a font that contains an oblique (slant) axis
 
@@ -691,6 +693,7 @@ In this case, the `italic` value indicates that this font file should be used wh
     format("woff2-variations");
   font-weight: 125 950;
   font-stretch: 75% 125%;
+
   font-style: oblique 0deg 12deg;
 }
 ```
