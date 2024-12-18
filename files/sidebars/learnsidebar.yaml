@@ -389,6 +389,52 @@ sidebar:
       - /Learn/Common_questions/Tools_and_setup
       - /Learn/Common_questions/Design_and_accessibility
 l10n:
+  de:
+    Complete_beginners_start_here: Komplette Anfänger beginnen hier!
+    Getting_started_with_the_web: Erste Schritte mit dem Web
+    HTML_Structuring_the_web: HTML — Strukturierung des Webs
+    Introduction_to_HTML: Einführung in HTML
+    Multimedia_and_embedding: Multimedia und Einbettung
+    HTML_tables: HTML-Tabellen
+    CSS_Styling_the_web: CSS — Gestaltung des Webs
+    CSS_first_steps: CSS erste Schritte
+    CSS_building_blocks: CSS-Bausteine
+    Styling_text: Textgestaltung
+    CSS_layout: CSS-Layout
+    JavaScript_dynamic_client-side_scripting: JavaScript — Dynamisches clientseitiges Skripting
+    JavaScript_first_steps: JavaScript erste Schritte
+    JavaScript_building_blocks: JavaScript-Bausteine
+    Introducing_JavaScript_objects: Einführung in JavaScript-Objekte
+    Asynchronous_JavaScript: Asynchrones JavaScript
+    Client-side_web_APIs: Client-seitige Web-APIs
+    Web_forms: Webformulare — Arbeiten mit Benutzerdaten
+    Web_forms_core: Grundlagen der Webformulare
+    Web_forms_advanced: Erweiterte Techniken für Webformulare
+    Accessibility_—_Make_the_web_usable_by_everyone: Barrierefreiheit — Das Web für alle nutzbar machen
+    Accessibility_guides: Barrierefreiheitsleitfäden
+    Accessibility_assessment: Barrierefreiheitseinschätzung
+    Performance: Leistung — Websites schnell und reaktionsschnell machen
+    Performance_guides: Leitfäden zur Leistung
+    MathML_Writing_mathematics: MathML — Schreiben von Mathematik mit MathML
+    MathML_first_steps: MathML erste Schritte
+    Games_Developing_for_web: Spiele — Entwicklung von Spielen für das Web
+    Guides_and_tutorials: Anleitungen und Tutorials
+    Tools_and_testing: Werkzeuge und Tests
+    Cross_browser_testing: Cross-Browser-Tests
+    Git_and_GitHub: Git und GitHub
+    Client-side_web_development_tools: Client-seitige Webentwicklungstools
+    Introduction_to_client-side_frameworks: Einführung in client-seitige Frameworks
+    React: React
+    Ember: Ember
+    Vue: Vue
+    Svelte: Svelte
+    Angular: Angular
+    Server-side_website_programming: Server-seitige Webprogrammierung
+    First_steps: Erste Schritte
+    Django_web_framework_(Python): Django Web-Framework (Python)
+    Express_Web_Framework_(Node.js_JavaScript): Express Web-Framework (Node.js/JavaScript)
+    Further_resources: Weitere Ressourcen
+    Common_questions: Häufige Fragen
   en-US:
     Complete_beginners_start_here: Complete beginners start here!
     Getting_started_with_the_web: Getting started with the web
@@ -436,7 +482,7 @@ l10n:
     Further_resources: Further resources
     Common_questions: Common questions
   pt-BR:
-    Complete_beginners_start_here: Completos iniciantes, comecem por aqui!
+    Complete_beginners_start_here: "Completos iniciantes, comecem por aqui!"
     Getting_started_with_the_web: Iniciando na Internet
     HTML_Structuring_the_web: HTML — Estruturando a Web
     Introduction_to_HTML: Introdução ao HTML
@@ -601,7 +647,7 @@ l10n:
     Further_resources: 更多資源
     Common_questions: 常見問題
   fr:
-    Complete_beginners_start_here: Vous débutez ? Commencez ici !
+    Complete_beginners_start_here: Vous débutezxa0? Commencez icixa0!
     Getting_started_with_the_web: Démarrer avec le Web
     HTML_Structuring_the_web: HTML — Structurer le Web
     Introduction_to_HTML: Introduction à HTML
