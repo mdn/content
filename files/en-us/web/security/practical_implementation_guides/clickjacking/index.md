@@ -10,7 +10,7 @@ The [Content Security Policy](/en-US/docs/Web/HTTP/CSP) [`frame-ancestors`](/en-
 
 ## Problem
 
-[Clickjacking](/en-US/docs/Glossary/Clickjacking) is an attack whereby malicious sites trick users into clicking links or UI elements by making them appear like a trusted site the user is familiar with. This is usually done by embedding part or all of the trusted site into the malicious site via an `<iframe>`. A button, link, or other UI feature is then positioned on top of that content to make the user think they are interacting with their trusted site, when in fact they are interacting with the malicious site.
+[Clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) is an attack whereby malicious sites trick users into clicking links or UI elements by making them appear like a trusted site the user is familiar with. This is usually done by embedding part or all of the trusted site into the malicious site via an `<iframe>`. A button, link, or other UI feature is then positioned on top of that content to make the user think they are interacting with their trusted site, when in fact they are interacting with the malicious site.
 
 ## Solution
 

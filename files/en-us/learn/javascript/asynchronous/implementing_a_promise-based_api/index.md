@@ -76,7 +76,7 @@ So we can implement `alarm()` like this:
 function alarm(person, delay) {
   return new Promise((resolve, reject) => {
     if (delay < 0) {
-      throw new Error("Alarm delay must not be negative");
+      reject(new Error("Alarm delay must not be negative"));
     }
     setTimeout(() => {
       resolve(`Wake up, ${person}!`);
@@ -87,7 +87,7 @@ function alarm(person, delay) {
 
 This function creates and returns a new `Promise`. Inside the executor for the promise, we:
 
-- check that `delay` is not negative, and throw an error if it is.
+- check that `delay` is not negative, and call `reject`, passing in a custom error if it is.
 
 - call `setTimeout()`, passing a callback and `delay`. The callback will be called when the timer expires, and in the callback we call `resolve`, passing in our `"Wake up!"` message.
 
@@ -130,7 +130,7 @@ const output = document.querySelector("#output");
 function alarm(person, delay) {
   return new Promise((resolve, reject) => {
     if (delay < 0) {
-      throw new Error("Alarm delay must not be negative");
+      reject(new Error("Alarm delay must not be negative"));
     }
     setTimeout(() => {
       resolve(`Wake up, ${person}!`);
@@ -188,7 +188,7 @@ const output = document.querySelector("#output");
 function alarm(person, delay) {
   return new Promise((resolve, reject) => {
     if (delay < 0) {
-      throw new Error("Alarm delay must not be negative");
+      reject(new Error("Alarm delay must not be negative"));
     }
     setTimeout(() => {
       resolve(`Wake up, ${person}!`);
