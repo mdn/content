@@ -2,12 +2,10 @@
 title: "@view-transition"
 slug: Web/CSS/@view-transition
 page-type: css-at-rule
-status:
-  - experimental
 browser-compat: css.at-rules.view-transition
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`@view-transition`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) is used to opt in the current and destination documents to undergo a [view transition](/en-US/docs/Web/API/View_Transitions_API), in the case of a cross-document navigation.
 
