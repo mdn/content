@@ -10,7 +10,7 @@ browser-compat: api.SVGRectElement.x
 
 The **`x`** read-only property of the {{domxref("SVGRectElement")}} interface describes the horizontal coordinate of the position of an SVG rectangle as a {{domxref("SVGAnimatedLength")}}. The `<coordinate>` is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the x-axis. Its syntax is the same as that for [`<length>`](/en-US/docs/Web/SVG/Content_type#length).
 
-It reflects the {{SVGElement("rect")}} element's {{SVGAttr("x")}} presentational attribute value. The CSS {{cssxref("x")}} property takes precedence over the SVG `x` presentational attribute, so the value may not reflect the elements appearance. The default value is `0`.
+It reflects the {{SVGElement("rect")}} element's {{SVGAttr("x")}} geometric attribute value. The CSS {{cssxref("x")}} property takes precedence over the SVG `x` geometric attribute, so the value may not reflect the elements appearance. The default value is `0`.
 
 ## Value
 
