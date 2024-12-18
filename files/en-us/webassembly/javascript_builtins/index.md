@@ -87,7 +87,7 @@ The example we'll be referring to uses the [`WebAssembly.instantiate()`](/en-US/
 
 You can build up the example by following the steps below; also [see it running live](https://mdn.github.io/webassembly-examples/js-builtin-examples/instantiate/).
 
-### The JavaScript
+### JavaScript
 
 The JavaScript for the example is shown below. To test this locally, include it in an HTML page using a method of your chooosing (for example, inside {{htmlelement("script")}} tags, or in an external `.js` file referenced via `<script src="">`).
 
