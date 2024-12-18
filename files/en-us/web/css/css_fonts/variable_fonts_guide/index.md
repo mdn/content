@@ -666,7 +666,7 @@ The basic syntax is the same, but the font technology can be specified, and allo
 }
 ```
 
-In this case, the `normal` value indicates that this font file should be used when in a style rule the `font-family` property is `MyVariableFontName` and the [font-style](/en-US/docs/Web/CSS/font-style) property is `normal`. The `font-style: oblique 0deg` and `font-style: oblique 0deg 20deg` declarations, because of the `0deg`, could also be used instead to indicate that the font has normal upright glyphs.
+In this case, the `normal` value indicates that this font file should be used when in a style rule the `font-family` property is `MyVariableFontName` and the [font-style](/en-US/docs/Web/CSS/font-style) property is `normal`. The `font-style: oblique 0deg` or `font-style: oblique 0deg 20deg` declarations, because of the `0deg`, could also be used instead to indicate that the font has normal upright glyphs.
 
 #### Example for a font that contains only italics and no upright characters
 
