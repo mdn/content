@@ -267,6 +267,10 @@ The item creating the cross-size is set to `visibility: collapse`, which collaps
 
 > [!NOTE]
 > Use Firefox for the example below as other common browsers treat `collapse` as `hidden`.
+> 
+```html hidden live-sample___visibility-collapse
+<p><label><input type="checkbox"> Toggle <code>visibility</code> value</label></p>
+```
 
 ```html live-sample___visibility-collapse
 <div class="box">
@@ -290,6 +294,12 @@ The item creating the cross-size is set to `visibility: collapse`, which collaps
 }
 .hide {
   visibility: collapse;
+}
+```
+
+```css hidden live-sample___visibility-collapse
+p:has(:checked) + div .collapse {
+  visibility: visible;
 }
 ```
 
@@ -341,17 +351,18 @@ The following example shows this behavior. The third flex item is collapsed, so 
   visibility: collapse;
 }
 ```
+
 ```css hidden live-sample___wrapped-visibility-collapse
 p:has(:checked) + div .collapse {
   visibility: visible;
 }
 ```
 
-{{EmbedLiveSample("wrapped-visibility-collapse", "", "400")}}
+{{EmbedLiveSample("wrapped-visibility-collapse", "", "300")}}
 
-If this causes a problem for your layout it may require a rethinking of the structure, for example putting each row into a separate flex container in order that they can't shift rows.
+If this causes a problem for your layout, it may require a rethinking of the structure, for example, putting each row into a separate flex container so that they can't shift rows.
 
 ### Using `visibility: hidden` and `display: none`
 
-In previous live example, try using `visibility: hidden` or `display: none` instead of `visibility: collapse`. Using `visibility: hidden`, the item is made invisible but the box is kept in the formatting structure, so it still behaves as if it were part of the layout.
+In the previous live examples, try using `visibility: hidden` or `display: none` instead of `visibility: collapse`. Using `visibility: hidden`, the item is made invisible, but the box is kept in the formatting structure, so it still behaves as if it were part of the layout.
 When you use `display: none`, the item is completely removed from the formatting structure. Not only is it invisible but the structure is removed as well. This means counters ignore it and things like transitions do not run.
