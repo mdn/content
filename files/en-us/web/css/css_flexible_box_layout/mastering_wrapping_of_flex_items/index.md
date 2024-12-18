@@ -313,7 +313,9 @@ The following example shows this behavior. The third flex item is collapsed, so 
 > Use Firefox for the example below as other common browsers treat `collapse` as `hidden`.
 
 ```html hidden live-sample___wrapped-visibility-collapse
-<p><label><input type="checkbox"> Toggle <code>visibility</code> value</label></p>
+<p>
+  <label><input type="checkbox" /> Toggle <code>visibility</code> value</label>
+</p>
 ```
 
 ```html live-sample___wrapped-visibility-collapse
@@ -351,6 +353,7 @@ The following example shows this behavior. The third flex item is collapsed, so 
   visibility: collapse;
 }
 ```
+
 
 ```css hidden live-sample___wrapped-visibility-collapse
 p:has(:checked) + div .collapse {
