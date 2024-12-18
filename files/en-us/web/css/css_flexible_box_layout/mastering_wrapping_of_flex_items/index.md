@@ -267,6 +267,7 @@ The item creating the cross-size is set to `visibility: collapse`, which collaps
 
 > [!NOTE]
 > Use Firefox for the example below as other common browsers treat `collapse` as `hidden`.
+
 ```html hidden live-sample___visibility-collapse
 <p>
   <label><input type="checkbox" /> Toggle <code>visibility</code> value</label>
