@@ -193,7 +193,7 @@ You'll see that this puts the items back in a column layout, much like they were
 
 ## Wrapping
 
-One issue that arises when you have a fixed width or height in your layout is that eventually your flexbox children will overflow their container, breaking the layout. In the following example we have 12 {{htmlelement("section")}}s, which don't fit so there is a horizontal scroll.
+One issue that arises when you have a fixed width or height in your layout is that eventually your flexbox children will overflow their container, breaking the layout. In the following example we have 5 {{htmlelement("article")}}s, which don't fit, because they have a `min-width` of `400px`, so there is a horizontal scroll.
 
 ```html hidden live-sample___flex-wrap_0
 <header>
@@ -220,34 +220,6 @@ One issue that arises when you have a fixed width or height in your layout is th
     <h2>Fifth article</h2>
     <p>Content…</p>
   </article>
-  <article>
-    <h2>Sixth article</h2>
-    <p>Content…</p>
-  </article>
-  <article>
-    <h2>Seventh article</h2>
-    <p>Content…</p>
-  </article>
-  <article>
-    <h2>Eighth article</h2>
-    <p>Content…</p>
-  </article>
-  <article>
-    <h2>Ninth article</h2>
-    <p>Content…</p>
-  </article>
-  <article>
-    <h2>Tenth article</h2>
-    <p>Content…</p>
-  </article>
-  <article>
-    <h2>Eleventh article</h2>
-    <p>Content…</p>
-  </article>
-  <article>
-    <h2>Twelfth article</h2>
-    <p>Content…</p>
-  </article>
 </section>
 ```
 
@@ -267,6 +239,7 @@ h1 {
   margin: 0;
 }
 article {
+  min-width: 400px;
   padding: 10px;
   margin: 10px;
   background: aqua;
@@ -307,34 +280,6 @@ Here we see that the children are indeed breaking out of their container. By def
     <h2>Fifth article</h2>
     <p>Content…</p>
   </article>
-  <article>
-    <h2>Sixth article</h2>
-    <p>Content…</p>
-  </article>
-  <article>
-    <h2>Seventh article</h2>
-    <p>Content…</p>
-  </article>
-  <article>
-    <h2>Eighth article</h2>
-    <p>Content…</p>
-  </article>
-  <article>
-    <h2>Ninth article</h2>
-    <p>Content…</p>
-  </article>
-  <article>
-    <h2>Tenth article</h2>
-    <p>Content…</p>
-  </article>
-  <article>
-    <h2>Eleventh article</h2>
-    <p>Content…</p>
-  </article>
-  <article>
-    <h2>Twelfth article</h2>
-    <p>Content…</p>
-  </article>
 </section>
 ```
 
@@ -354,6 +299,7 @@ h1 {
   margin: 0;
 }
 article {
+  min-width: 400px;
   padding: 10px;
   margin: 10px;
   background: aqua;
@@ -373,17 +319,9 @@ section {
 }
 ```
 
-Also, add the following declaration to your {{htmlelement("article")}} rule:
+You'll see that the layout looks much better with this included:
 
-```css live-sample___flex-wrap_1
-article {
-  flex: 200px;
-}
-```
-
-Try this now. You'll see that the layout looks much better with this included:
-
-{{EmbedLiveSample("flex-wrap_1", "100", "400")}}
+{{EmbedLiveSample("flex-wrap_1", "100", "430")}}
 
 We now have multiple rows. Each row has as many flexbox children fitted into it as is sensible. Any overflow is moved down to the next line. The `flex: 200px` declaration set on the articles means that each will be at least `200px` wide. We'll discuss this property in more detail later on. You might also notice that the last few children on the last row are each made wider so that the entire row is still filled.
 
