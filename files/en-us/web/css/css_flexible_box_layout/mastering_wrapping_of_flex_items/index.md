@@ -302,6 +302,10 @@ The following example shows this behavior. The third flex item is collapsed, so 
 > [!NOTE]
 > Use Firefox for the example below as other common browsers treat `collapse` as `hidden`.
 
+```html hidden live-sample___wrapped-visibility-collapse
+<p><label><input type="checkbox"> Toggle <code>visibility</code> value</label></p>
+```
+
 ```html live-sample___wrapped-visibility-collapse
 <div class="box">
   <div>One</div>
@@ -337,8 +341,13 @@ The following example shows this behavior. The third flex item is collapsed, so 
   visibility: collapse;
 }
 ```
+```css hidden live-sample___wrapped-visibility-collapse
+p:has(:checked) + div .collapse {
+  visibility: visible;
+}
+```
 
-{{EmbedLiveSample("wrapped-visibility-collapse")}}
+{{EmbedLiveSample("wrapped-visibility-collapse", "", "400")}}
 
 If this causes a problem for your layout it may require a rethinking of the structure, for example putting each row into a separate flex container in order that they can't shift rows.
 
