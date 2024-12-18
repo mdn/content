@@ -83,6 +83,22 @@ sidebar:
       - link: https://chat.mozilla.org/#/room/%23addons:mozilla.org
         title: Chat
 l10n:
+  de:
+    WebExtensions#Getting_started: Erste Schritte
+    WebExtensions#Concepts: Konzepte
+    WebExtensions#User_Interface: Benutzeroberfläche
+    WebExtensions#How_to: Anleitungen
+    WebExtensions#API: JavaScript-APIs
+    WebExtensions#manifest.json: Manifest-Schlüssel
+    extension_workshop: Erweiterungs-Workshop
+    extension_workshop_develop: Entwickeln
+    extension_workshop_publish: Veröffentlichen
+    extension_workshop_manage: Verwalten
+    extension_workshop_enterprise: Unternehmen
+    Channels: Kanäle
+    Blog: Add-ons Blog
+    Forums: Add-ons Forum
+    Chat: Add-ons Chat
   en-US:
     WebExtensions#Getting_started: Getting started
     WebExtensions#Concepts: Concepts
@@ -103,7 +119,7 @@ l10n:
     WebExtensions#Getting_started: Commencer
     WebExtensions#Concepts: Concepts
     WebExtensions#User_Interface: Interface utilisateur
-    WebExtensions#How_to: Mode d'emploi
+    WebExtensions#How_to: Mode d"emploi
     WebExtensions#API: Les API JavaScript
     WebExtensions#manifest.json: Clés de manifeste
     extension_workshop: Atelier des extensions
