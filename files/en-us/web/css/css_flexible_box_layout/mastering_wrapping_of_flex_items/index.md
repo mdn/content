@@ -278,7 +278,7 @@ The item creating the cross-size is set to `visibility: collapse`, which collaps
 <div class="box">
   <div>One</div>
   <div>Two</div>
-  <div class="hide">Three <br />has <br />extra <br />text</div>
+  <div class="collapse">Three <br />has <br />extra <br />text</div>
 </div>
 ```
 
@@ -294,7 +294,7 @@ The item creating the cross-size is set to `visibility: collapse`, which collaps
   border-radius: 5px;
   background-color: rgb(96 139 168 / 0.2);
 }
-.hide {
+.collapse {
   visibility: collapse;
 }
 ```
