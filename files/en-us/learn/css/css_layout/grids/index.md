@@ -76,7 +76,7 @@ body {
 
 {{EmbedLiveSample('simple-grid_0', '100%', "310") }}
 
-Similar to how you define flexbox, you define a grid layout by setting the value of the {{cssxref("display")}} property to `grid`. As in the case of flexbox, the `display: grid` property transforms all the direct children of the container into grid items. Add the following CSS to your file:
+Similar to how you define flexbox, you define a grid layout by setting the value of the {{cssxref("display")}} property to `grid`. As in the case of flexbox, the `display: grid` property transforms all the direct children of the container into grid items. We have added the following CSS to the file:
 
 ```html hidden live-sample___simple-grid_1
 <div class="container">
@@ -177,7 +177,7 @@ body {
 }
 ```
 
-Change your track listing to the following definition, creating three `1fr` tracks:
+Here we change the track listing to the following definition, creating three `1fr` tracks:
 
 ```css live-sample___grid-fr-unit_0
 .container {
@@ -262,7 +262,7 @@ body {
 }
 ```
 
-Now change your track listing to the following definition, creating one `2fr` two `1fr` tracks:
+Here we add the `gap` property to create gaps between the tracks with a value of `20px:
 
 ```css live-sample___grid-gap
 .container {
@@ -279,7 +279,7 @@ These gaps can be any length unit or percentage, but not an `fr` unit.
 ### Repeating track listings
 
 You can repeat all or merely a section of your track listing using the CSS `repeat()` function.
-Change your track listing to the following:
+Here we change the track listing to the following:
 
 ```html hidden live-sample___grid-repeat
 <div class="container">
@@ -304,8 +304,6 @@ body {
   border: 2px solid rgb(79 185 227);
 }
 ```
-
-Now change your track listing to the following definition, creating one `2fr` two `1fr` tracks:
 
 ```css live-sample___grid-repeat
 .container {
@@ -353,8 +351,6 @@ body {
 }
 ```
 
-Now change your track listing to the following definition, creating one `2fr` two `1fr` tracks:
-
 ```css live-sample___grid-auto
 .container {
   display: grid;
@@ -370,7 +366,7 @@ Now change your track listing to the following definition, creating one `2fr` tw
 
 Our 100-pixel tall tracks won't be very useful if we add content into those tracks that is taller than 100 pixels, in which case it would cause an overflow. It might be better to have tracks that are _at least_ 100 pixels tall and can still expand if more content becomes added. A fairly basic fact about the web is that you never really know how tall something is going to be — additional content or larger font sizes can cause problems with designs that attempt to be pixel perfect in every dimension.
 
-The {{cssxref("minmax", "minmax()")}} function lets us set a minimum and maximum size for a track, for example, `minmax(100px, auto)`. The minimum size is 100 pixels, but the maximum is `auto`, which will expand to accommodate more content. Try changing `grid-auto-rows` to use a minmax value:
+The {{cssxref("minmax", "minmax()")}} function lets us set a minimum and maximum size for a track, for example, `minmax(100px, auto)`. The minimum size is 100 pixels, but the maximum is `auto`, which will expand to accommodate more content. Here we change the `grid-auto-rows` to use a `minmax()` value:
 
 ```html hidden live-sample___grid-minmax_0
 <div class="container">
@@ -396,8 +392,6 @@ body {
 }
 ```
 
-Now change your track listing to the following definition, creating one `2fr` two `1fr` tracks:
-
 ```css live-sample___grid-minmax_0
 .container {
   display: grid;
@@ -413,9 +407,7 @@ If you add extra content, you'll see that the track expands to allow it to fit. 
 
 ### As many columns as will fit
 
-We can combine some of the lessons we've learned about track listing, repeat notation, and {{cssxref("minmax", "minmax()")}} to create a useful pattern. Sometimes it's helpful to be able to ask grid to create as many columns as will fit into the container. We do this by setting the value of `grid-template-columns` using the {{cssxref("repeat", "repeat()")}} function, but instead of passing in a number, pass in the keyword `auto-fit`. For the second parameter of the function we use `minmax()` with a minimum value equal to the minimum track size that we would like to have and a maximum of `1fr`.
-
-Try this in your file now using the CSS below:
+We can combine some of the lessons we've learned about track listing, repeat notation, and {{cssxref("minmax", "minmax()")}} to create a useful pattern. Sometimes it's helpful to be able to ask grid to create as many columns as will fit into the container. We do this by setting the value of `grid-template-columns` using the {{cssxref("repeat", "repeat()")}} function, but instead of passing in a number, pass in the keyword [`auto-fit`](/en-US/docs/Web/CSS/repeat#auto-fit). For the second parameter of the function we use `minmax()` with a minimum value equal to the minimum track size that we would like to have and a maximum of `1fr`.
 
 ```html hidden live-sample___grid-minmax_1
 <div class="container">
@@ -441,8 +433,6 @@ body {
 }
 ```
 
-Now change your track listing to the following definition, creating one `2fr` two `1fr` tracks:
-
 ```css live-sample___grid-minmax_1
 .container {
   display: grid;
@@ -452,7 +442,7 @@ Now change your track listing to the following definition, creating one `2fr` tw
 }
 ```
 
-{{EmbedLiveSample('grid-minmax_1', '100%', "180") }}
+{{EmbedLiveSample('grid-minmax_1', '100%', "210") }}
 
 This works because grid is creating as many 230-pixel columns as will fit into the container, then sharing whatever space is leftover among all the columns. The maximum is `1fr` which, as we already know, distributes space evenly between tracks.
 
@@ -495,7 +485,6 @@ Alternatively, you can also use shorthand properties that let you specify the st
   grid-template-columns: 1fr 3fr;
   gap: 20px;
 }
-
 header,
 footer {
   border-radius: 5px;
@@ -504,7 +493,6 @@ footer {
   color: whitesmoke;
   text-align: center;
 }
-
 aside {
   border-right: 1px solid rebeccapurple;
 }
@@ -538,7 +526,6 @@ Let's arrange all of the elements for our site by using the grid lines. Add the 
   grid-template-columns: 1fr 3fr;
   gap: 20px;
 }
-
 header,
 footer {
   border-radius: 5px;
@@ -547,7 +534,6 @@ footer {
   color: whitesmoke;
   text-align: center;
 }
-
 aside {
   border-right: 1px solid rebeccapurple;
 }
@@ -558,24 +544,21 @@ header {
   grid-column: 1 / 3;
   grid-row: 1;
 }
-
 main {
   grid-column: 2;
   grid-row: 2;
 }
-
 aside {
   grid-column: 1;
   grid-row: 2;
 }
-
 footer {
   grid-column: 1 / 3;
   grid-row: 3;
 }
 ```
 
-Now the {{htmlelement("header")}} and {{htmlelement("footer")}} are set to `1 / 3`, which means to start at column `1` and span `3` columns.
+Now the {{htmlelement("header")}} and {{htmlelement("footer")}} are set to `1 / 3`, which means to start at line `1` and ends at line `3`.
 
 {{EmbedLiveSample('grid-placement_1', '100%', "230") }}
 
@@ -608,7 +591,6 @@ An alternative way to arrange items on your grid is to use the {{cssxref("grid-t
   grid-template-columns: 1fr 3fr;
   gap: 20px;
 }
-
 header,
 footer {
   border-radius: 5px;
@@ -617,7 +599,6 @@ footer {
   color: whitesmoke;
   text-align: center;
 }
-
 aside {
   border-right: 1px solid rebeccapurple;
 }
@@ -633,25 +614,21 @@ aside {
   grid-template-columns: 1fr 3fr;
   gap: 20px;
 }
-
 header {
   grid-area: header;
 }
-
 main {
   grid-area: content;
 }
-
 aside {
   grid-area: sidebar;
 }
-
 footer {
   grid-area: footer;
 }
 ```
 
-Here we are using the {{CSSXRef("grid-template-areas")}} property to define how the 3 rows are laid out. The first row has a value of `header header`, the second `sidebar content` and the third `footer footer`. We are then using the {{CSSXRef("grid-area")}} property to define what is placed in the `grid-template-areas`.
+Here we are using the {{CSSXRef("grid-template-areas")}} property to define how the 3 rows are laid out. The first row has a value of `header header`, the second `sidebar content` and the third `footer footer`. We are then using the {{CSSXRef("grid-area")}} property to define where elements are placed in the `grid-template-areas`.
 
 {{EmbedLiveSample('grid-placement_2', '100%', "230") }}
 
@@ -668,7 +645,7 @@ You can play around with our layout, changing the footer to only sit underneath 
 ## Nesting grids and subgrid
 
 It's possible to nest a grid within another grid, creating a ["subgrid"](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid).
-You can do this by setting the `display: grid` property on a grid item.
+You can do this by setting the `display: grid` property on an item in the parent grid.
 
 Let's expand on the previous example by adding a container for articles and using a nested grid to control the layout of multiple articles.
 While we're using only one column in the nested grid, we can define the rows to be split in a 4:3:3 ratio by using the `grid-template-rows` property.
@@ -810,7 +787,7 @@ We've added `subgrid` to inherit the parent grid's column tracks while adding a 
 Numerous grid frameworks are available, offering a 12 or 16-column grid, to help with laying out your content.
 The good news is that you probably won't need any third-party frameworks to help you create grid-based layouts — grid functionality is already included in the specification and is supported by most modern browsers.
 
-[Download the starting point file](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/11-grid-system-starting-point.html). This has a container with a 12-column grid defined and the same markup we used in the previous two examples. We can now use line-based placement to place our content on the 12-column grid.
+This has a container with a 12-column grid defined, using `grid-template-columns: repeat(12, 1fr);`, and the same markup we used in the previous two examples. We can now use line-based placement to place our content on the 12-column grid.
 
 ```html hidden live-sample___grid-frameworks
 <div class="container">
@@ -830,9 +807,6 @@ The good news is that you probably won't need any third-party frameworks to help
 ```css hidden live-sample___grid-frameworks
 .container {
   font-family: sans-serif;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 20px;
 }
 
 header,
@@ -843,28 +817,30 @@ footer {
   color: whitesmoke;
   text-align: center;
 }
-
 aside {
   border-right: 1px solid rebeccapurple;
 }
 ```
 
 ```css live-sample___grid-frameworks
+.container {
+  font-family: sans-serif;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+}
 header {
   grid-column: 1 / 13;
   grid-row: 1;
 }
-
 main {
   grid-column: 4 / 13;
   grid-row: 2;
 }
-
 aside {
   grid-column: 1 / 4;
   grid-row: 2;
 }
-
 footer {
   grid-column: 1 / 13;
   grid-row: 3;
