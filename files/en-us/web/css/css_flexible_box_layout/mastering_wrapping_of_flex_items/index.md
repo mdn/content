@@ -261,7 +261,7 @@ The flexbox specification details what should happen if a flex item is collapsed
 
 This behavior is useful if you want to target flex items using JavaScript to show and hide content for example. The example in the specification demonstrates one such pattern.
 
-In the following live example, the non-wrapping flex container contains a row with three flex items that are set to flex to equal sizes. The third item has multiple lines of content, growing the container. The default for `align-items` is `normal`; for flex items, `normal` behaves as `stretch`, so all the items stretch by default, filling the container's cross-size height. 
+In the following live example, the non-wrapping flex container contains a row with three flex items that are set to flex to equal sizes. The third item has multiple lines of content, growing the container. The default for `align-items` is `normal`; for flex items, `normal` behaves as `stretch`, so all the items stretch by default, filling the container's cross-size height.
 
 The item creating the cross-size is set to `visibility: collapse`, which collapses or hides the flex item, depending on the browser. In either case, the flex container retains a _strut_ of the cross-size even though it is not visible. This way, if the item is made visible, the cross-size of the single-line flex container will not change. If you remove `visibility: collapse` from the CSS or change the value to `visible`, you will see the item appear, and the main-size space is redistributed between non-collapsed items, while the cross-size remains unchanged.
 
