@@ -28,6 +28,12 @@ sidebar:
       - link: /Web/MathML/Examples/Deriving_the_Quadratic_Formula
       - link: /Web/MathML/Examples/MathML_Pythagorean_Theorem
 l10n:
+  de:
+    Reference: Referenz
+    Elements: Elemente
+    Global attributes: Globale Attribute
+    Guides: Anleitungen
+    Examples: Beispiele
   en-US:
     Reference: Reference
     Elements: Elements

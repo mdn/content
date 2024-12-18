@@ -67,6 +67,44 @@ sidebar:
     code: true
   - /Web/HTTP/Resources_and_specifications
 l10n:
+  de:
+    HTTP: HTTP
+    HTTPGuide: HTTP-Leitfaden
+    Basics: Grundlagen von HTTP
+    Overview: Übersicht über HTTP
+    Evolution: Entwicklung von HTTP
+    ResourcesURI: Ressourcen und URIs
+    Identifying: Identifizieren von Ressourcen im Web
+    DataURLs: Daten-URLs
+    MIMETypes: Einführung in MIME-Typen
+    ListMIMETypes: Gängige MIME-Typen
+    WWWorNotWWW: Auswahl zwischen www und nicht-www URLs
+    Messages: HTTP-Nachrichten
+    Session: Eine typische HTTP-Sitzung
+    Connection1x: Verbindungsverwaltung in HTTP/1.x
+    Ranges: HTTP-Bereichsanfragen
+    Redirects: HTTP-Weiterleitungen
+    Conditionals: HTTP-Bedingte Anfragen
+    ContentNego: HTTP-Inhaltsverhandlung
+    Headers: HTTP-Header
+    Response_codes: Antwortcodes
+    Compression: HTTP-Komprimierung
+    Cookies: HTTP-Cookies
+    Caching: HTTP-Caching
+    CORS: HTTP-Zugriffskontrolle (CORS)
+    Resources: HTTP-Spezifikationen
+    Permissions_Policy: Berechtigungsrichtlinie
+    Guides: Anleitungen
+    Reference: Referenzen
+    Methods: HTTP-Anfragemethoden
+    Status: HTTP-Antwortstatuscodes
+    CSPDirectives: CSP-Direktiven
+    CORS_errors: CORS-Fehler
+    PermissionsPolicyDirectives: Permissions-Policy Direktiven
+    Security: HTTP-Sicherheit
+    Authentication: HTTP-Authentifizierung
+    ProtocolUpgradeMech: Protokoll-Upgrade-Mechanismus
+    CSP: Content Security Policy (CSP)
   en-US:
     CORS_errors: CORS errors
     CSPDirectives: CSP directives
@@ -75,7 +113,7 @@ l10n:
     Methods: HTTP request methods
     PermissionsPolicyDirectives: Permissions-Policy directives
     Reference: References
-    Security: HTTP security
+    Security: Security and privacy
     Status: HTTP response status codes
   es:
     CORS_errors: Errores de CORS
