@@ -117,7 +117,7 @@ The JavaScript:
 - Uses {{domxref("Window.fetch", "fetch()")}} to fetch the Wasm module (`log-concat.wasm`), converts the response to an {{jsxref("ArrayBuffer")}} using {{domxref("Response.arrayBuffer")}}, then compiles and instantiates the Wasm module using [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate_static).
 - Calls the `main()` function exported from the Wasm module.
 
-### The Wasm module
+### Wasm module
 
 The text representation of our WebAssembly module code looks like this:
 
