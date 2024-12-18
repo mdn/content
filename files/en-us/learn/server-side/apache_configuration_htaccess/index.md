@@ -367,7 +367,7 @@ The following might not be a good idea if you use "real" subdomains for certain 
 
 ## Frame options
 
-The example below sends the `X-Frame-Options` response header with DENY as the value, informing browsers not to display the content of the web page in any frame to protect the website against [clickjacking](/en-US/docs/Glossary/Clickjacking).
+The example below sends the `X-Frame-Options` response header with DENY as the value, informing browsers not to display the content of the web page in any frame to protect the website against [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking).
 
 This might not be the best setting for everyone. You should read about [the other two possible values for the `X-Frame-Options` header](https://datatracker.ietf.org/doc/html/rfc7034#section-2.1): `SAMEORIGIN` and `ALLOW-FROM`.
 
@@ -467,7 +467,7 @@ Be aware that Strict Transport Security is not revokable, and you must ensure be
 3. Only allows form submissions are from the current origin with: `form-action 'self'`
 4. Prevents all websites (including your own) from embedding your webpages within e.g. the `<iframe>` or `<object>` element by setting: `frame-ancestors 'none'`.
 
-   - The `frame-ancestors` directive helps avoid [clickjacking](/en-US/docs/Glossary/Clickjacking) attacks and is similar to the `X-Frame-Options` header
+   - The `frame-ancestors` directive helps avoid [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) attacks and is similar to the `X-Frame-Options` header
    - Browsers that support the CSP header will ignore `X-Frame-Options` if `frame-ancestors` is also specified
 
 5. Forces the browser to treat all the resources that are served over HTTP as if they were loaded securely over HTTPS by setting the `upgrade-insecure-requests` directive

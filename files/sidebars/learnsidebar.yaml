@@ -2,7 +2,7 @@
 
 sidebar:
   - type: section
-    link: Getting_started_with_the_web
+    link: /Learn/Getting_started_with_the_web
     title: Complete_beginners_start_here
   - title: Getting_started_with_the_web
     details: closed
@@ -17,7 +17,7 @@ sidebar:
       - /Learn/Getting_started_with_the_web/Publishing_your_website
       - /Learn/Getting_started_with_the_web/How_the_Web_works
   - type: section
-    link: HTML
+    link: /Learn/HTML
     title: HTML_Structuring_the_web
   - title: Introduction_to_HTML
     details: closed
@@ -50,7 +50,7 @@ sidebar:
       - /Learn/HTML/Tables/Advanced
       - /Learn/HTML/Tables/Structuring_planet_data
   - type: section
-    link: CSS
+    link: /Learn/CSS
     title: CSS_Styling_the_web
   - title: CSS_first_steps
     details: closed
@@ -112,7 +112,7 @@ sidebar:
       - /Learn/CSS/CSS_layout/Supporting_Older_Browsers
       - /Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension
   - type: section
-    link: JavaScript
+    link: /Learn/JavaScript
     title: JavaScript_dynamic_client-side_scripting
   - title: JavaScript_first_steps
     details: closed
@@ -171,7 +171,7 @@ sidebar:
       - /Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
       - /Learn/JavaScript/Client-side_web_APIs/Client-side_storage
   - type: section
-    link: Forms
+    link: /Learn/Forms
     title: Web_forms
   - title: Web_forms_core
     details: closed
@@ -195,7 +195,7 @@ sidebar:
       - /Learn/Forms/Property_compatibility_table_for_form_controls
       - /Learn/Forms/HTML_forms_in_legacy_browsers
   - type: section
-    link: Accessibility
+    link: /Learn/Accessibility
     title: Accessibility_—_Make_the_web_usable_by_everyone
   - title: Accessibility_guides
     details: closed
@@ -209,7 +209,7 @@ sidebar:
       - /Learn/Accessibility/Mobile
       - /Learn/Accessibility/Accessibility_troubleshooting
   - type: section
-    link: Performance
+    link: /Learn/Performance
     title: Performance
   - title: Performance_guides
     details: closed
@@ -226,7 +226,7 @@ sidebar:
       - /Learn/Performance/CSS
       - /Learn/Performance/business_case_for_performance
   - type: section
-    link: MathML
+    link: /Learn/MathML
     title: MathML_Writing_mathematics
   - title: MathML_first_steps
     details: closed
@@ -249,7 +249,7 @@ sidebar:
       - /Games/Tutorials
       - /Games/Publishing_games
   - type: section
-    link: Tools_and_testing
+    link: /Learn/Tools_and_testing
     title: Tools_and_testing
   - title: Client-side_web_development_tools
     details: closed
@@ -333,7 +333,7 @@ sidebar:
       - /Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
       - /Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment
   - type: section
-    link: Server-side
+    link: /Learn/Server-side
     title: Server-side_website_programming
   - title: First_steps
     details: closed
@@ -376,7 +376,7 @@ sidebar:
       - /Learn/Server-side/Express_Nodejs/forms
       - /Learn/Server-side/Express_Nodejs/deployment
   - type: section
-    link: Common_questions
+    link: /Learn/Common_questions
     title: Further_resources
   - title: Common_questions
     details: closed
