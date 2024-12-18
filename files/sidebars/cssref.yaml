@@ -304,14 +304,55 @@ sidebar:
       - /Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator
       - /Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
 l10n:
+  de:
+    Tutorials: Tutorials
+    CSS_first_steps: CSS erste Schritte
+    Assessment_Styling_a_biography_page: "Aufgabe: Gestaltung einer Biografie-Seite"
+    CSS_building_blocks: CSS Bausteine
+    Assessment_Fundamental_CSS_comprehension: "Aufgabe: Grundlegendes CSS-Verständnis"
+    Assessment_Creating_fancy_letterheaded_paper: "Aufgabe: Erstellung von schickem Briefpapier"
+    Assessment_A_cool_looking_box: "Aufgabe: Eine cool aussehende Box"
+    Styling_text: Textgestaltung
+    Styling_text_overview: Textgestaltung (Übersicht)
+    Assessment_Typesetting_a_community_school_homepage: "Aufgabe: Satz einer Community-Schulhomepage"
+    CSS_layout: CSS-Layout
+    CSS_layout_overview: CSS-Layout (Übersicht)
+    Assessment_Fundamental_Layout_Comprehension: "Aufgabe: Grundlegendes Layout-Verständnis"
+    Combinators: Kombinatoren
+    Guides: Leitfäden
+    Animations: Animationen
+    Backgrounds_and_Borders: Hintergründe und Rahmen
+    Resizing_background_images: Hintergrundbilder skalieren
+    Box_alignment_in_block_layout: Box-Ausrichtung im Block-Layout
+    Box_model: Box-Modell
+    Colors: Farben
+    Color_contrast: "Barrierefreiheit: Farbkontrast"
+    Columns: Spalten
+    Conditional_rules: Bedingte Regeln
+    Containment: Containment
+    CSSOM_view: CSSOM-Ansicht
+    Flexbox: Flexbox
+    Flow_layout: Fluss-Layout
+    Fonts: Schriftarten
+    Grid: Raster
+    Images: Bilder
+    Lists_and_counters: Listen und Zähler
+    Logical_properties: Logische Eigenschaften
+    Math_functions: Mathematische Funktionen
+    Media_queries: Media-Abfragen
+    Nesting: Verschachteln von Stilregeln
+    Positioning: Positionierung
+    Scroll_snap: Scroll-Snap
+    Shapes: Formen
+    Text: Text
+    Transforms: Transformationen
+    Transitions: Übergänge
+    Tools: Werkzeuge
   en-US:
     Tutorials: Tutorials
-    CSS_basics: CSS basics
     CSS_first_steps: CSS first steps
-    CSS_first_steps_overview: CSS first steps overview
     Assessment_Styling_a_biography_page: "Assessment: Styling a biography page"
     CSS_building_blocks: CSS building blocks
-    CSS_building_blocks_overview: CSS building blocks overview
     Assessment_Fundamental_CSS_comprehension: "Assessment: Fundamental CSS comprehension"
     Assessment_Creating_fancy_letterheaded_paper: "Assessment: Creating fancy letterheaded paper"
     Assessment_A_cool_looking_box: "Assessment: A cool-looking box"
@@ -321,16 +362,14 @@ l10n:
     CSS_layout: CSS layout
     CSS_layout_overview: CSS layout overview
     Assessment_Fundamental_Layout_Comprehension: "Assessment: Fundamental layout comprehension"
+    Combinators: Combinators
     Guides: Guides
     Animations: Animations
     Backgrounds_and_Borders: Backgrounds and Borders
     Resizing_background_images: Resizing background images
-    Box_alignment: Box alignment
     Box_alignment_in_block_layout: Box alignment in block layout
     Box_model: Box model
     Colors: Colors
-    Applying_color_to_HTML_elements_using_CSS: Applying color to HTML elements
-    Web_Accessibility_Understanding_Colors_and_Luminance: "Accessibility: Understanding colors and luminance"
     Color_contrast: "Accessibility: Color contrast"
     Columns: Columns
     Conditional_rules: Conditional rules
@@ -352,5 +391,202 @@ l10n:
     Text: Text
     Transforms: Transforms
     Transitions: Transitions
-    Layout_cookbook: Layout cookbook
     Tools: Tools
+  fr:
+    CSS_first_steps: Premiers pas en CSS
+    CSS_building_blocks: Les briques composant CSS
+    Styling_text: Mettre en forme du texte
+    Styling_text_overview: Aperçu de la mise en forme du texte
+    CSS_layout: Dispositions CSS
+    CSS_layout_overview: Aperçu des dispositions CSS
+    Guides: Guides
+    Animations: Animations
+    Backgrounds_and_Borders: Arrière-plans et bordures
+    Resizing_background_images: Redimensionner les images d'arrière-plan
+    Box_alignment_in_block_layout: Alignement des boîtes avec la disposition en bloc
+    Box_model: Modèle de boîte
+    Columns: Colonnes
+    Conditional_rules: Règles conditionnelles
+    CSSOM_view: Vue CSSOM
+    Flexbox: Boîtes flexibles
+    Flow_layout: Disposition de flux
+    Fonts: Polices
+    Grid: Grille
+    Images: Images
+    Lists_and_counters: Listes et compteurs
+    Logical_properties: Propriétés logiques
+    Media_queries: Requêtes média
+    Positioning: Positionnement
+    Scroll_snap: Ancrage du défilement
+    Shapes: Formes
+    Text: Texte
+    Transforms: Transformations
+    Transitions: Transitions
+    Tools: Outils
+  ja:
+    Tutorials: チュートリアル
+    CSS_first_steps: CSS の第一歩
+    Assessment_Styling_a_biography_page: "評価課題: 経歴ページのスタイル設定"
+    CSS_building_blocks: CSS の構成要素
+    Assessment_Fundamental_CSS_comprehension: "評価課題: CSS の基本的な理解度"
+    Assessment_Creating_fancy_letterheaded_paper: "評価課題: 素敵なレターヘッドの便箋の作成"
+    Assessment_A_cool_looking_box: "評価課題: かっこいいボックス"
+    Styling_text: テキストの装飾
+    Styling_text_overview: テキストの装飾の概要
+    Assessment_Typesetting_a_community_school_homepage: "評価課題: コミュニティスクールのホームページの組版"
+    CSS_layout: CSS レイアウト
+    CSS_layout_overview: CSS レイアウトの概要
+    Assessment_Fundamental_Layout_Comprehension: "評価課題: 基礎的なレイアウトの理解"
+    Flexbox: フレックスボックス
+    Positioning: 位置指定
+  ko:
+    Tutorials: 자습서
+    CSS_first_steps: CSS 첫 번째 단계
+    Assessment_Styling_a_biography_page: "과제: 프로필 페이지 만들기"
+    CSS_building_blocks: CSS 구성요소
+    Assessment_Fundamental_CSS_comprehension: "과제: 기본적인 CSS 이해"
+    Assessment_Creating_fancy_letterheaded_paper: "과제: 이쁜 레터 모양 종이 만들기"
+    Assessment_A_cool_looking_box: "과제: 멋진 박스 만들기 "
+    Styling_text: 텍스트 꾸미기
+    Styling_text_overview: 텍스트 꾸미기
+    Assessment_Typesetting_a_community_school_homepage: "과제: 학교 홈페이지 만들기"
+    CSS_layout: CSS 레이아웃
+    CSS_layout_overview: CSS 레이아웃
+    Assessment_Fundamental_Layout_Comprehension: 과제 기본적인 레이아웃 사용하기
+    Guides: 안내서
+    Animations: 애니메이션
+    Backgrounds_and_Borders: 배경과 보더
+    Resizing_background_images: 배경 이미지 크기 조정하기
+    Box_alignment_in_block_layout: 블록 레이아웃 박스 정렬하기
+    Box_model: 박스 모델
+    Columns: 열
+    Conditional_rules: CSS에서 규칙 정의하기
+    CSSOM_view: CSSOM view
+    Flexbox: 플렉스박스
+    Flow_layout: 플로 레이아웃
+    Fonts: 글꼴
+    Grid: 그리드
+    Images: 이미지
+    Lists_and_counters: 리스트와 카운터
+    Logical_properties: Logical 속성
+    Media_queries: 미디어 쿼리
+    Positioning: 위치 잡기
+    Scroll_snap: 스크롤 스냅
+    Shapes: 도형
+    Text: 텍스트
+    Transforms: 변형
+    Transitions: 트랜지션
+    Tools: 도구
+  pt-BR:
+    Tutorials: Tutoriais
+    CSS_first_steps: CSS - primeiros passos
+    Assessment_Styling_a_biography_page: "Avaliação: Estilizando uma página biográfica"
+    CSS_building_blocks: CSS building blocks
+    Assessment_Fundamental_CSS_comprehension: "Assessment: Fundamental CSS comprehension"
+    Assessment_Creating_fancy_letterheaded_paper: "Assessment: Creating fancy letterheaded paper"
+    Assessment_A_cool_looking_box: "Assessment: A cool-looking box"
+    Styling_text: Estilização de textos
+    Styling_text_overview: Visão geral da Estilização de textos
+    Assessment_Typesetting_a_community_school_homepage: "Avaliação: Tipografia para a página inicial da escola pública local"
+    CSS_layout: Esquemas CSS
+    CSS_layout_overview: Visão geral de esquemas CSS
+    Assessment_Fundamental_Layout_Comprehension: "Assessment: Fundamental Layout Comprehension"
+    Flexbox: Flexbox
+    Positioning: Posicionamento
+  ru:
+    Tutorials: Уроки
+    CSS_first_steps: Введение в CSS
+    Assessment_Styling_a_biography_page: "Assessment: Styling a biography page"
+    CSS_building_blocks: Устройство CSS
+    Assessment_Fundamental_CSS_comprehension: "Assessment: Fundamental CSS comprehension"
+    Assessment_Creating_fancy_letterheaded_paper: "Assessment: Creating fancy letterheaded paper"
+    Assessment_A_cool_looking_box: "Assessment: A cool-looking box"
+    Styling_text: Стилизация текста
+    Styling_text_overview: Стилизация текста
+    Assessment_Typesetting_a_community_school_homepage: "Задание: Стилизирование школьного сайта"
+    CSS_layout: CSS макет
+    CSS_layout_overview: CSS макет
+    Assessment_Fundamental_Layout_Comprehension: "Задание: Фундаментальное понимание раскладки"
+    Guides: Руководства
+    Animations: Анимации
+    Backgrounds_and_Borders: Фоны и границы
+    Resizing_background_images: Изменение размера фоновых изображений
+    Box_alignment_in_block_layout: Выравнивание в блочной раскладке
+    Box_model: Блочная модель
+    Columns: Колонки
+    Conditional_rules: Условные конструкции
+    CSSOM_view: CSSOM View
+    Flexbox: Флексбокс
+    Flow_layout: Потоковая раскладка
+    Fonts: Шрифты
+    Grid: Грид
+    Images: Изображения
+    Lists_and_counters: Списки и счетчики
+    Logical_properties: Логические свойства
+    Media_queries: Медиа-запросы
+    Positioning: Позиционирование
+    Scroll_snap: Scroll snap
+    Shapes: Фигуры
+    Text: Текст
+    Transforms: Трансформации
+    Transitions: Переходы
+    Tools: Инструменты
+  zh-CN:
+    Tutorials: 教程
+    CSS_first_steps: CSS 第一步
+    Assessment_Styling_a_biography_page: 测验：为传记页面添加样式
+    CSS_building_blocks: CSS 构建
+    Assessment_Fundamental_CSS_comprehension: 测验：基本的 CSS 理解
+    Assessment_Creating_fancy_letterheaded_paper: 测验：创建精美的信纸
+    Assessment_A_cool_looking_box: 测验：一个漂亮的盒子
+    Styling_text: 样式化文本
+    Styling_text_overview: 样式化文本概述
+    Assessment_Typesetting_a_community_school_homepage: 测验：排版社区大学首页
+    CSS_layout: CSS 布局概述
+    CSS_layout_overview: CSS 布局概述
+    Assessment_Fundamental_Layout_Comprehension: 测验：对布局基础知识的理解
+    Combinators: 关系选择器
+    Guides: 指南
+    Animations: 动画
+    Backgrounds_and_Borders: 背景和边框
+    Resizing_background_images: 重设背景图片的大小
+    Box_alignment_in_block_layout: 块布局中的盒对齐方式
+    Box_model: 盒模型
+    Colors: 颜色
+    Color_contrast: Web 无障碍：色彩对比度
+    Columns: 多列
+    Conditional_rules: 条件规则
+    CSSOM_view: CSS 对象模型视图
+    Flexbox: 弹性盒布局
+    Flow_layout: 流式布局
+    Fonts: 字体
+    Grid: 网格布局
+    Images: 图片
+    Lists_and_counters: 列表和计数器
+    Logical_properties: 逻辑属性
+    Math_functions: 数学函数
+    Media_queries: 媒体查询
+    Nesting: 嵌套样式规则
+    Positioning: 定位
+    Scroll_snap: 滚动吸附
+    Shapes: 形状
+    Text: 文本
+    Transforms: 变换
+    Transitions: 过渡
+    Tools: 工具
+  zh-TW:
+    Tutorials: 教程
+    CSS_first_steps: CSS first steps
+    Assessment_Styling_a_biography_page: "Assessment: Styling a biography page"
+    CSS_building_blocks: CSS building blocks
+    Assessment_Fundamental_CSS_comprehension: "Assessment: Fundamental CSS comprehension"
+    Assessment_Creating_fancy_letterheaded_paper: "Assessment: Creating fancy letterheaded paper"
+    Assessment_A_cool_looking_box: "Assessment: A cool-looking box"
+    Styling_text: 樣式化文字
+    Styling_text_overview: 樣式化文字概述
+    Assessment_Typesetting_a_community_school_homepage: 練習：設定社區大學首頁的版面
+    CSS_layout: CSS 版面配置
+    CSS_layout_overview: CSS 版面配置概述
+    Assessment_Fundamental_Layout_Comprehension: "Assessment: Fundamental Layout Comprehension"
+    Flexbox: 彈性區塊
+    Positioning: 定位
