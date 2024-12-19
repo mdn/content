@@ -32,7 +32,7 @@ page-type: mdn-writing-guide
 \{{MDNSidebar}}
 ```
 
-The frontmatter is the content between the dashes. Including the `\{{MDNSidebar}}` macro call in the source causes the system to look for a YAML file with the same name inside the `files/sidebars` directory. If it find one, it automatically takes care of rendering the sidebar and placing it on the page as one or more ordered lists ({{htmlelement("ol")}} elements).
+The frontmatter is the content between the dashes. Including the `\{{MDNSidebar}}` macro call in the source causes the system to look for a YAML file with the same name inside the `files/sidebars` directory. If it finds one, it automatically takes care of rendering the sidebar and placing it on the page as one or more ordered lists ({{htmlelement("ol")}} elements).
 
 Try navigating around the sidebar, before returning to this page. You'll notice that generally when navigating to a page, the link list for the section you are currently in will be expanded, whereas the others will be collapsed, and the page you are on is highlighted.
 
