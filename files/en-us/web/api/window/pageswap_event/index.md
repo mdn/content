@@ -101,5 +101,5 @@ window.addEventListener("pageswap", async (e) => {
 
 ## See also
 
-- [Using the View Transition API](/en-US/docs/Web/API/View_Transition_APIUsing)
+- [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Using)
 - {{domxref("Window.pagereveal_event", "pagereveal")}} event

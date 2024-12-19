@@ -48,7 +48,7 @@ The **CSS view transitions** module defines the behavior of the [View Transition
 
 ## Guides
 
-- [Using the View Transition API](/en-US/docs/Web/API/View_Transition_APIUsing)
+- [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Using)
 
   - : Explains how to create view transitions and customize transition animations, including manipulating active view transitions.
 
