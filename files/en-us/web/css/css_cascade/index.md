@@ -61,8 +61,8 @@ The opposite also occurs. Sometimes there are no declarations defining the value
   - [author origin](/en-US/docs/Web/CSS/Cascade#author_stylesheets)
   - [user origin](/en-US/docs/Web/CSS/Cascade#user_stylesheets)
 - [Declaring layers](/en-US/docs/Web/CSS/@import#importing_css_rules_into_a_cascade_layer)
-  - [named layer](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers#the_layer_statement_at-rule_for_named_layers)
-  - [anonymous layer](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers#the_layer_block_at-rule_for_named_and_anonymous_layers)
+  - [named layer](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers#the_layer_statement_at-rule_for_named_layers)
+  - [anonymous layer](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers#the_layer_block_at-rule_for_named_and_anonymous_layers)
 - Glossary: {{glossary("style origin")}}
 
 ## Guides
@@ -71,11 +71,11 @@ The opposite also occurs. Sometimes there are no declarations defining the value
 
   - : Guide to the cascade algorithm that defines how user agents combine property values originating from different sources.
 
-- [Learn: Cascade, specificity, and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [Learn: Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 
   - : The most fundamental concepts of CSS — the cascade, specificity, and inheritance — which control how CSS is applied to HTML and how conflicts are resolved.
 
-- [Learn: Cascade layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers)
+- [Learn: Cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 
   - : Introduction to [cascade layers](/en-US/docs/Web/CSS/@layer), a more advanced feature that builds on the fundamental concepts of the [CSS cascade](/en-US/docs/Web/CSS/Cascade) and [CSS specificity](/en-US/docs/Web/CSS/Specificity).
 

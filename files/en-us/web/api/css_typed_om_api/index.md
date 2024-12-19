@@ -24,33 +24,33 @@ CSS Typed OM both allows for the performant manipulation of values assigned to C
 The {{domxref('CSSStyleValue')}} interface of the CSS Typed Object Model API is the base class of all CSS values accessible through the Typed OM API. An instance of this class may be used anywhere a string is expected.
 
 - {{domxref('CSSStyleValue/parse_static', 'CSSStyleValue.parse()')}}
-  - : The parse() method of the CSSStyleValue interface allows a CSSNumericValue to be constructed from a CSS string. It sets a specific CSS property to the specified values and returns the first value as a CSSStyleValue object.
+  - : The `parse()` method of the `CSSStyleValue` interface allows a `CSSNumericValue` to be constructed from a CSS string. It sets a specific CSS property to the specified values and returns the first value as a `CSSStyleValue` object.
 - {{domxref('CSSStyleValue.parseAll_static', 'CSSStyleValue.parseAll()')}}
-  - : The parseAll() method of the CSSStyleValue interface sets all occurrences of a specific CSS property to the specified value and returns an array of CSSStyleValue objects, each containing one of the supplied values.
+  - : The `parseAll()` method of the `CSSStyleValue` interface sets all occurrences of a specific CSS property to the specified value and returns an array of `CSSStyleValue` objects, each containing one of the supplied values.
 
 ### `StylePropertyMap`
 
-The {{domxref('StylePropertyMap')}} interface of the CSS Typed Object Model API provides a representation of a CSS declaration block that is an alternative to CSSStyleDeclaration.
+The {{domxref('StylePropertyMap')}} interface of the CSS Typed Object Model API provides a representation of a CSS declaration block that is an alternative to `CSSStyleDeclaration`.
 
 - {{domxref('StylePropertyMap.set()')}}
-  - : Method of StylePropertyMap interface that changes the CSS declaration with the given property to the value given.
+  - : Method of `StylePropertyMap` interface that changes the CSS declaration with the given property to the value given.
 - {{domxref('StylePropertyMap.append()')}}
-  - : Method that adds a new CSS declaration to the StylePropertyMap with the given property and value.
+  - : Method that adds a new CSS declaration to the `StylePropertyMap` with the given property and value.
 - {{domxref('StylePropertyMap.delete()')}}
-  - : Method that removes the CSS declaration with the given property from the StylePropertyMap.
+  - : Method that removes the CSS declaration with the given property from the `StylePropertyMap`.
 - {{domxref('StylePropertyMap.clear()')}}
-  - : Method that removes all declarations in the StylePropertyMap.
+  - : Method that removes all declarations in the `StylePropertyMap`.
 
 ### `CSSUnparsedValue`
 
 The {{domxref('CSSUnparsedValue')}} interface of the CSS Typed Object Model API represents property values that reference custom properties. It consists of a list of string fragments and variable references.
 
 - {{domxref("CSSUnparsedValue.CSSUnparsedValue", "CSSUnparsedValue()")}} constructor
-  - : Creates a new CSSUnparsedValue object which represents property values that reference custom properties.
+  - : Creates a new `CSSUnparsedValue` object which represents property values that reference custom properties.
 - {{domxref('CSSUnparsedValue.entries()')}}
-  - : Method returning an array of a given object's own enumerable property \[key, value] pairs in the same order as that provided by a for...in loop (the difference being that a for-in loop enumerates properties in the prototype chain as well).
+  - : Method returning an array of a given object's own enumerable property `[key, value]` pairs in the same order as that provided by a `for...in` loop (the difference being that a for-in loop enumerates properties in the prototype chain as well).
 - {{domxref('CSSUnparsedValue.forEach()')}}
-  - : Method executing a provided function once for each element of the CSSUnparsedValue.
+  - : Method executing a provided function once for each element of the `CSSUnparsedValue`.
 - {{domxref('CSSUnparsedValue.keys()')}}
   - : Method returning a new _array iterator_ object that contains the keys for each index in the array.
 
@@ -61,16 +61,16 @@ The {{domxref('CSSKeywordValue')}} interface of the CSS Typed Object Model API c
 - {{domxref("CSSKeywordValue.CSSKeywordValue", "CSSKeywordValue()")}} constructor
   - : Constructor creates a new {{domxref("CSSKeywordValue.CSSKeywordValue", "CSSKeywordValue()")}} object which represents CSS keywords and other identifiers.
 - {{domxref('CSSKeywordValue.value()')}}
-  - : Property of the CSSKeywordValue interface returning or setting the value of the CSSKeywordValue.
+  - : Property of the `CSSKeywordValue` interface returning or setting the value of the `CSSKeywordValue`.
 
 ## CSSStyleValue Interfaces
 
-CSSStyleValue is the base class through which all CSS values are expressed. Subclasses include:
+{{domxref('CSSStyleValue')}} is the base class through which all CSS values are expressed. Subclasses include:
 
-- {{domxref('CSSImageValue')}} objects
+- {{domxref('CSSImageValue')}}
   - : An interface representing values for properties that take an image, for example [`background-image`](/en-US/docs/Web/CSS/background-image), [`list-style-image`](/en-US/docs/Web/CSS/list-style-image), or [`border-image-source`](/en-US/docs/Web/CSS/border-image-source).
 - {{domxref('CSSKeywordValue')}}
-  - : An interface which creates an object to represent CSS keywords and other identifiers. When used where a string is expected, it will return the value of CSSKeyword.value.
+  - : An interface which creates an object to represent CSS keywords and other identifiers. When used where a string is expected, it will return the value of `CSSKeyword.value`.
 - {{domxref('CSSMathValue')}}
 
   - : A tree of subclasses representing numeric values that are more complicated than a single value and unit, including:
@@ -89,7 +89,7 @@ CSSStyleValue is the base class through which all CSS values are expressed. Subc
     - {{domxref('CSSNumericValue.add')}} - Adds supplied numbers to the `CSSNumericValue`.
     - {{domxref('CSSNumericValue.sub')}} - Subtracts supplied numbers to the `CSSNumericValue`.
     - {{domxref('CSSNumericValue.mul')}} - Multiplies supplied numbers to the `CSSNumericValue`.
-    - {{domxref('CSSNumericValue.div')}} - Divides a supplied number by other numbers, throwing an error if 0.
+    - {{domxref('CSSNumericValue.div')}} - Divides the `CSSNumericValue` by the supplied value, throwing an error if `0`.
     - {{domxref('CSSNumericValue.min')}} - Returns the minimum value passed
     - {{domxref('CSSNumericValue.max')}} - Returns the maximum value passed
     - {{domxref('CSSNumericValue.equals')}} - Returns true if all the values are the exact same type and value, in the same order. Otherwise, false

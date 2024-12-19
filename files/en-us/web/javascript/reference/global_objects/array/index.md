@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array
 
 {{JSRef}}
 
-The **`Array`** object, as with arrays in other programming languages, enables [storing a collection of multiple items under a single variable name](/en-US/docs/Learn/JavaScript/First_steps/Arrays), and has members for [performing common array operations](#examples).
+The **`Array`** object, as with arrays in other programming languages, enables [storing a collection of multiple items under a single variable name](/en-US/docs/Learn_web_development/Core/Scripting/Arrays), and has members for [performing common array operations](#examples).
 
 ## Description
 
@@ -378,7 +378,7 @@ These properties are own properties of each `Array` instance.
 This section provides some examples of common array operations in JavaScript.
 
 > [!NOTE]
-> If you're not yet familiar with array basics, consider first reading [JavaScript First Steps: Arrays](/en-US/docs/Learn/JavaScript/First_steps/Arrays), which [explains what arrays are](/en-US/docs/Learn/JavaScript/First_steps/Arrays#what_is_an_array), and includes other examples of common array operations.
+> If you're not yet familiar with array basics, consider first reading [JavaScript First Steps: Arrays](/en-US/docs/Learn_web_development/Core/Scripting/Arrays), which [explains what arrays are](/en-US/docs/Learn_web_development/Core/Scripting/Arrays#what_is_an_array), and includes other examples of common array operations.
 
 ### Create an array
 

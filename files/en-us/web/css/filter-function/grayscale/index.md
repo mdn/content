@@ -22,6 +22,10 @@ grayscale(amount)
 - `amount`
   - : Amount of the input image that is converted to grayscale. It is specified as a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}}. A value of `100%` changes the input completely to grayscale, while a value of `0%` leaves the input unchanged. Values between `0%` and `100%` have linear multipliers on the effect. If the `grayscale()` filter is present with no parameter, the default value is `1`. The initial value used for {{Glossary("interpolation")}} is `0`.
 
+## Formal syntax
+
+{{CSSSyntax}}
+
 ## Examples
 
 ### Examples of correct values for grayscale()

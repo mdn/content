@@ -9,7 +9,7 @@ page-type: landing-page
 The CSS layout cookbook aims to bring together recipes for common layout patterns, things you might need to implement in your own sites. In addition to providing code you can use as a starting point in your projects, these recipes highlight the different ways layout specifications can be used, and the choices you can make as a developer.
 
 > [!NOTE]
-> If you are new to CSS layout then you might first like to take a look at our [CSS layout learning module](/en-US/docs/Learn/CSS/CSS_layout), as this will give you the basic grounding you need to make use of the recipes here.
+> If you are new to CSS layout then you might first like to take a look at our [CSS layout learning module](/en-US/docs/Learn_web_development/Core/CSS_layout), as this will give you the basic grounding you need to make use of the recipes here.
 
 ## The Recipes
 
