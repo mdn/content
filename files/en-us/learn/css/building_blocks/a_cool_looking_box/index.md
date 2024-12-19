@@ -32,7 +32,34 @@ In this assessment, you'll get some more practice in creating cool-looking boxes
 
 To get this assessment started, you should:
 
-- Make local copies of the starting [HTML](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/cool-information-box-start/index.html) and [CSS](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/cool-information-box-start/style.css) — save them as `index.html` and `style.css` in a new directory.
+- Copy the HTML and CSS — save them as `index.html` and `style.css` in a new directory.
+
+### HTML
+
+```html
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Cool box</title>
+    <!-- your css link goes here -->
+  </head>
+  <body>
+    <div>This is a cool box</div>
+  </body>
+</html>
+```
+
+### CSS
+
+```css
+html {
+  font-family: sans-serif;
+}
+
+/* Your CSS below here */
+```
 
 Alternatively, you could use an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 You could paste the HTML and fill in the CSS into one of these online editors.
