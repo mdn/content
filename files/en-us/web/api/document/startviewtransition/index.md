@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Document.startViewTransition
 ---
 
-{{APIRef("View Transitions API")}}
+{{APIRef("View Transition API")}}
 
 The **`startViewTransition()`** method of the {{domxref("Document")}} interface starts a new same-document (SPA) [view transition](/en-US/docs/Web/API/View_Transition_API) and returns a {{domxref("ViewTransition")}} object to represent it.
 
@@ -32,7 +32,7 @@ A {{domxref("ViewTransition")}} object instance.
 
 ### Basic usage
 
-In our [Basic SPA View Transitions demo](https://mdn.github.io/dom-examples/view-transitions/spa/), the `updateView()` function handles both browsers that do and don't support the View Transitions API. In supporting browsers, we invoke `startViewTransition()` to trigger the view transition process without worrying about the return value.
+In our [Basic SPA View Transitions demo](https://mdn.github.io/dom-examples/view-transitions/spa/), the `updateView()` function handles both browsers that do and don't support the View Transition API. In supporting browsers, we invoke `startViewTransition()` to trigger the view transition process without worrying about the return value.
 
 ```js
 function updateView(event) {
@@ -71,4 +71,4 @@ function updateView(event) {
 
 ## See also
 
-- [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/)
+- [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/)

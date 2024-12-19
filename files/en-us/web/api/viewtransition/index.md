@@ -5,9 +5,9 @@ page-type: web-api-interface
 browser-compat: api.ViewTransition
 ---
 
-{{APIRef("View Transitions API")}}
+{{APIRef("View Transition API")}}
 
-The **`ViewTransition`** interface of the {{domxref("View Transitions API", "View Transitions API", "", "nocode")}} represents an active view transition, and provides functionality to react to the transition reaching different states (e.g. ready to run the animation, or animation finished) or skip the transition altogether.
+The **`ViewTransition`** interface of the {{domxref("View Transition API", "View Transition API", "", "nocode")}} represents an active view transition, and provides functionality to react to the transition reaching different states (e.g. ready to run the animation, or animation finished) or skip the transition altogether.
 
 This object type is made available in the following ways:
 
@@ -108,4 +108,4 @@ This animation also requires the following CSS, to turn off the default CSS anim
 
 ## See also
 
-- [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/)
+- [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/)

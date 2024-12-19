@@ -1,14 +1,14 @@
 ---
-title: Using the View Transitions API
+title: Using the View Transition API
 slug: Web/API/View_Transition_API/Using
 page-type: guide
 status:
   - experimental
 ---
 
-{{DefaultAPISidebar("View Transitions API")}}
+{{DefaultAPISidebar("View Transition API")}}
 
-This article explains the theory behind how the [View Transitions API](/en-US/docs/Web/API/View_Transition_API) works, how to create view transitions and customize the transition animations, and how to manipulate active view transitions. This covers view transitions for both DOM state updates in a single-page app (SPA), and navigating between documents in a multi-page app (MPA).
+This article explains the theory behind how the [View Transition API](/en-US/docs/Web/API/View_Transition_API)) works, how to create view transitions and customize the transition animations, and how to manipulate active view transitions. This covers view transitions for both DOM state updates in a single-page app (SPA), and navigating between documents in a multi-page app (MPA).
 
 ## The view transition process
 
@@ -287,7 +287,7 @@ figcaption {
 
 This works because, by default, `::view-transition-group` transitions `width` and `height` between the old and new views with a smooth scale. We just needed to set a fixed `height` on both states to make it work.
 
-> **Note:** [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/) contains several other customization examples.
+> **Note:** [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/) contains several other customization examples.
 
 ## Controlling view transitions with JavaScript
 

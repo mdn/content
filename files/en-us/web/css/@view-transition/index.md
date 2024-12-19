@@ -100,6 +100,6 @@ See this [transitions multi-page app](https://mdn.github.io/dom-examples/view-tr
 - {{cssxref("::view-transition-old", "::view-transition-old()")}}
 - {{cssxref("::view-transition-group", "::view-transition-group()")}}
 - {{cssxref("::view-transition-image-pair", "::view-transition-image-pair()")}}
-- [View Transitions API](/en-US/docs/Web/API/View_Transition_API)
+- [View Transition API](/en-US/docs/Web/API/View_Transition_API)
 - [CSS at-rules](/en-US/docs/Web/CSS/At-rule)
 - [CSS at-rule functions](/en-US/docs/Web/CSS/At-rule-functions)
