@@ -9,7 +9,7 @@ page-type: tutorial-chapter
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Planet_data_table", "Learn_web_development/Core/Structuring_content/Debugging_HTML", "Learn_web_development/Core/Structuring_content")}}
 
 > [!NOTE]
-> The content in this article is currently incomplete, sorry about that! We are working hard to improve the MDN Learn Web Development section, and will have this article finished soon.
+> The content in this article is currently incomplete, sorry about that! We are working hard to improve the MDN Learn Web Development section, and we will have places marked as incomplete ("TODO") finished soon.
 
 HTML forms and buttons are powerful tools for interacting with users — most commonly they are used for collecting data from users or allowing them to control a user interface. In this article we provide an introduction to the basics of forms and buttons.
 
@@ -52,11 +52,11 @@ HTML forms and buttons are powerful tools for interacting with users — most co
 
 ## Buttons
 
-xx
+TODO
 
 ## Common input types
 
-xx
+TODO
 
 ## Accessible forms
 
@@ -65,7 +65,7 @@ xx
 
 ## Other control types
 
-xx
+TODO
 
 ## Client-side form validation
 
@@ -73,11 +73,11 @@ Client-side form validation is really a usability enhancement, to be used alongs
 
 ## The `<form>` element
 
-xx
+TODO
 
 ## Test your skills!
 
-xx
+TODO
 
 ## Summary
 

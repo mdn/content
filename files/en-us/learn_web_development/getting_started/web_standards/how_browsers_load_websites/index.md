@@ -9,7 +9,7 @@ page-type: tutorial-chapter
 {{PreviousMenuNext("Learn_web_development/Getting_started/Web_standards/The_web_standards_model", "Learn_web_development/Getting_started/Soft_skills", "Learn_web_development/Getting_started/Web_standards")}}
 
 > [!NOTE]
-> The content in this article is currently incomplete, sorry about that! We are working hard to improve the MDN Learn Web Development section, and will have this article finished soon.
+> The content in this article is currently incomplete, sorry about that! We are working hard to improve the MDN Learn Web Development section, and we will have places marked as incomplete ("TODO") finished soon.
 
 In this article, we talk through the rendering process of a website — when a browser has received the files and assets that make up a website, how are they put together to create the finished experience that the user sees?
 

@@ -9,7 +9,7 @@ page-type: tutorial-chapter
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Browsing_the_web", "Learn_web_development/Getting_started/Environment_setup/Dealing_with_files", "Learn_web_development/Getting_started/Environment_setup")}}
 
 > [!NOTE]
-> The content in this article is currently incomplete, sorry about that! We are working hard to improve the MDN Learn Web Development section, and will have this article finished soon.
+> The content in this article is currently incomplete, sorry about that! We are working hard to improve the MDN Learn Web Development section, and we will have places marked as incomplete ("TODO") finished soon.
 
 Previously, we told you to install a code editor, as you'll need one to work through this pathway. In this article we look at code editors in more detail, giving you an idea of what they can do for you.
 

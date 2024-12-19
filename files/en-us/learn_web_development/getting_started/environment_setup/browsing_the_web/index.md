@@ -9,7 +9,7 @@ page-type: tutorial-chapter
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Installing_software", "Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup")}}
 
 > [!NOTE]
-> The content in this article is currently incomplete, sorry about that! We are working hard to improve the MDN Learn Web Development section, and will have this article finished soon.
+> The content in this article is currently incomplete, sorry about that! We are working hard to improve the MDN Learn Web Development section, and we will have places marked as incomplete ("TODO") finished soon.
 
 By this point in the module, you should have at least two web browsers installed on your computer. This article goes a little deeper into using browsers, looking at how a web browser works, the difference between some of the common items you'll interact with, and how to search for information.
 
@@ -39,7 +39,7 @@ By this point in the module, you should have at least two web browsers installed
 
 ## How the web works: the basics
 
-xx
+TODO
 
 ## The difference between web page, website, web server, and search engine
 
@@ -116,6 +116,6 @@ Here is an instance of Firefox showing a Google search box as its default startu
 
 ## Searching for information
 
-xx
+TODO
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Installing_software", "Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup")}}
