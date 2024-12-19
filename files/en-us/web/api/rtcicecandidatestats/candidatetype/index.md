@@ -8,15 +8,7 @@ browser-compat: api.RTCStatsReport.type_local-candidate.candidateType
 
 {{APIRef("WebRTC")}}
 
-The {{domxref("RTCIceCandidateStats")}} interface's
-**`candidateType`** property is a string that indicates the
-type of {{Glossary("ICE")}} candidate the object represents.
-
-## Syntax
-
-```js-nolint
-rtcIceCandidateStats.candidateType
-```
+The **`candidateType`** property of the {{domxref("RTCIceCandidateStats")}} dictionary is a string that indicates the type of {{Glossary("ICE")}} candidate the object represents.
 
 ### Value
 
