@@ -48,6 +48,8 @@ The available {{jsxref("String")}} builtins are:
   - : Equivalent to {{jsxref("String.prototype.codePointAt()")}}.
 - `"wasm:js-string" "equals"`
   - : Compares two string values for [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality), returning `1` if they are equal, and `0` if not.
+    > [!NOTE]
+    > The `"equals"` function is the only string builtin that doesn't throw for `null` inputs, so Wasm modules don't need to check for `null` values before calling it. All the other functions have no reasonable way to handle `null` inputs, so they throw for them.
 - `"wasm:js-string" "fromCharCode"`
   - : Equivalent to {{jsxref("String.fromCharCode()")}}.
 - `"wasm:js-string" "fromCharCodeArray"`
