@@ -98,14 +98,14 @@ A service worker fails to register for one of the following reasons:
 - You are not running your application in a [secure context](/en-US/docs/Web/Security/Secure_Contexts) (over HTTPS).
 - The path of the service worker file is incorrect.
   The path must be relative to the origin, not an app's root directory.
-  In our example, the worker is at `https://bncb2v.csb.app/sw.js`, and the app's root is `https://bncb2v.csb.app/`, so the service worker must be `/sw.js`.
+  In our example, the worker is at `https://bncb2v.csb.app/sw.js`, and the app's root is `https://bncb2v.csb.app/`, so the service worker must be specified as `/sw.js`.
 - The path to your service worker points to a service worker of a different origin to your app.
-- The service worker registration contained a `scope` option broader than permitted.
-  The maximum scope for a service worker is the directory where the worker is located.
-  In other words, if the script `sw.js` is located in `/js/sw.js`, it can only control URLs under `/js/` by default.
-  The maximum scope for a service worker can be broadened with the {{HTTPHeader("Service-Worker-Allowed")}} header.
+- The service worker registration contains a `scope` option broader than permitted by the worker path.
+  The default scope for a service worker is the directory where the worker is located.
+  In other words, if the script `sw.js` is located in `/js/sw.js`, it can only control URLs in (or nested within) the `/js/` path by default.
+  The scope for a service worker can be broadened (or narrowed) with the {{HTTPHeader("Service-Worker-Allowed")}} header.
 - Browser-specific settings are enabled, such as blocking all cookies, private browsing mode, automatic cookie deletion on close, etc.
-  See [serviceWorker.register() browser compatibility](/en-US/docs/Web/API/ServiceWorkerContainer/register#browser_compatibility) for more information.
+  See [`serviceWorker.register()` browser compatibility](/en-US/docs/Web/API/ServiceWorkerContainer/register#browser_compatibility) for more information.
 
 ### Install and activate: populating your cache
 
