@@ -26,13 +26,11 @@ margin-block: 10px 20px; /* An absolute length */
 margin-block: 1em 2em; /* relative to the text size */
 margin-block: 5% 2%; /* relative to the nearest block container's width */
 margin-block: 10px; /* sets both start and end values */
+margin-block: anchor-size(inline);
+margin-block: calc(anchor-size(width) / 4) 1em;
 
 /* Keyword values */
 margin-block: auto;
-
-/* anchor-size() values */
-margin-block: anchor-size(inline);
-margin-block: calc(anchor-size(width) / 4) 1em;
 
 /* Global values */
 margin-block: inherit;

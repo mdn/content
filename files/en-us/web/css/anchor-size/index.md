@@ -29,11 +29,11 @@ block-size: anchor-size(--myAnchor block);
 width: anchor-size(--myAnchor width, 50%);
 block-size: anchor-size(--myAnchor block, 200px);
 
-/* Positioning relative to anchor side */
+/* positioning relative to anchor side */
 left: anchor-size(width);
 inset-inline-end: anchor-size(--myAnchor height, 100px);
 
-/* Setting margin relative to anchor side */
+/* setting margin relative to anchor side */
 margin-left: calc(anchor-size(width) / 4);
 margin-block-start: anchor-size(--myAnchor self-block, 20px);
 ```
@@ -53,7 +53,7 @@ The parameters are:
   - : The [`anchor-name`](/en-US/docs/Web/CSS/anchor-name) property value of an anchor element you want to set the element's size, position, or margins relative to. This is a `<dashed-ident>` value. If omitted, the element's default anchor is used.
 
     > [!NOTE]
-    > Specifying an `<anchor-name>` inside an `anchor-size()` function neither associates nor tethers an element to an anchor; it only sets the anchor that the element's property values should be set relative to.
+    > Specifying an `<anchor-name>` inside an `anchor-size()` function neither associates nor tethers an element to an anchor; it only defines which anchor the element's property values should be set relative to.
 
 - `<anchor-size>` {{optional_inline}}
 
@@ -98,9 +98,13 @@ Returns a {{cssxref("length")}} value.
 
 ## Description
 
-The `anchor-size()` function enables a positioned element's sizing, position, and margin values to be expressed in terms of an anchor element's dimensions; it returns a {{cssxref("length")}} value representing the dimension of a specific anchor element the positioned element's property values are being set relative to. It is a valid value for [sizing, inset, and margin properties](#properties_that_accept_anchor-size_function_values) set on anchor-positioned elements.
+The `anchor-size()` function enables a positioned element's sizing, position, and margin values to be expressed in terms of an anchor element's dimensions; it returns a {{cssxref("length")}} value representing the dimension of a specific anchor element the positioned element's property values are set relative to. It is a valid value for [sizing, inset, and margin properties](#properties_that_accept_anchor-size_function_values) set on anchor-positioned elements.
 
-The length returned is the vertical or horizontal size of an anchor element or its containing block. The dimension used is defined by the `<anchor-size>` parameter. If that parameter is omitted, the dimension used will match the axis of the sizing, position, or margin property is it set on.
+The length returned is the vertical or horizontal size of an anchor element or its containing block. The dimension used is defined by the `<anchor-size>` parameter. If that parameter is omitted, the dimension used will match the axis of the sizing, position, or margin property is it set on. So for example:
+
+- `width: anchor-size()` is equivalent to `width: anchor-size(width)`.
+- `top: anchor-size()` is equivalent to `top: anchor-size(height)`.
+- `margin-inline-end: anchor-size()` is equivalent to `margin-inline-end: anchor-size(self-inline)`. `margin-inline-end: anchor-size()` is also equivalent to `margin-inline-end: anchor-size(width)` in horizontal writing modes, or `margin-inline-end: anchor-size(height)` in vertical writing modes.
 
 The anchor element used as the basis for the dimension length is the element with the `anchor-name` specified in the `<anchor-name>` parameter. If more than one element has the same anchor name, the last element with that anchor name in the DOM order is used.
 
