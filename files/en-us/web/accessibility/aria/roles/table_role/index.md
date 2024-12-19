@@ -145,6 +145,6 @@ none
 
 ## See also
 
-- [HTML table element](/en-US/docs/Learn/HTML/Tables/Advanced)
-- [HTML table tutorial](/en-US/docs/Learn/HTML/Tables/Basics)
+- [Learn: HTML table accessibility](/en-US/docs/Learn_web_development/Core/Structuring_content/Table_accessibility)
+- [Learn: HTML table basics](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 - [ARIA: `grid` role](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role)

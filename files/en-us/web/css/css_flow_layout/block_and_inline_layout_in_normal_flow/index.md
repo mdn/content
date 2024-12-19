@@ -260,6 +260,6 @@ In this guide, we have looked at how elements display in normal flow, as block a
 ## See also
 
 - [CSS Basic Box Model](/en-US/docs/Web/CSS/CSS_box_model)
-- _[Normal Flow](/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)_ - Learn Layout
+- [Learn: Normal Flow](/en-US/docs/Learn_web_development/Core/CSS_layout/Introduction#normal_layout_flow)
 - [Inline-level elements](/en-US/docs/Glossary/Inline-level_content)
 - [Block-level elements](/en-US/docs/Glossary/Block-level_content)

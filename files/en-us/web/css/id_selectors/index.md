@@ -98,4 +98,4 @@ The ID selectors in the following rules are not valid CSS identifiers, and will 
 ## See also
 
 - [CSS Selectors](/en-US/docs/Web/CSS/CSS_selectors)
-- [Learn CSS: Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
+- [Learn CSS: Basic selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)

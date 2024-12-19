@@ -35,7 +35,7 @@ The difference between `PUT` and {{HTTPMethod("POST")}} is that `PUT` is {{Gloss
     </tr>
     <tr>
       <th scope="row">
-        Allowed in <a href="/en-US/docs/Learn/Forms">HTML forms</a>
+        Allowed in <a href="/en-US/docs/Learn_web_development/Extensions/Forms">HTML forms</a>
       </th>
       <td>No</td>
     </tr>

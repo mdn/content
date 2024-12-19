@@ -41,4 +41,4 @@ inputElement.formMethod = "post";
 - {{domxref("HTMLFormElement.method")}}
 - [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit)
 - [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image)
-- [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data)
+- [Sending form data](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)

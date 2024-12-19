@@ -170,7 +170,7 @@ For this approach to work, it must not be possible for an attacker to guess the 
 
 This in turn means that the server cannot serve static HTML, because it must insert a new nonce each time. Typically the server would use a templating engine to insert the nonce.
 
-Here's a snippet of [Express](/en-US/docs/Learn/Server-side/Express_Nodejs) code to demonstrate:
+Here's a snippet of [Express](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs) code to demonstrate:
 
 ```js
 function content(nonce) {

@@ -10,7 +10,7 @@ browser-compat: api.ResizeObserver
 The **`ResizeObserver`** interface reports changes to the dimensions of an {{domxref('Element')}}'s content or border box, or the bounding box of an {{domxref('SVGElement')}}.
 
 > [!NOTE]
-> The content box is the box in which content can be placed, meaning the border box minus the padding and border width. The border box encompasses the content, padding, and border. See [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model) for further explanation.
+> The content box is the box in which content can be placed, meaning the border box minus the padding and border width. The border box encompasses the content, padding, and border. See [The box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model) for further explanation.
 
 ## Constructor
 
@@ -169,7 +169,7 @@ window.addEventListener("error", (e) => {
 
 ## See also
 
-- [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
+- [Learn: The box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model)
 - {{domxref('PerformanceObserver')}}
 - {{domxref('IntersectionObserver')}} (part of the [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API))
 - Upcoming [container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries) may be a viable alternative for implementing responsive design.
