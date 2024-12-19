@@ -8,7 +8,11 @@ page-type: mdn-writing-guide
 
 MDN pages all include sidebars. Most of them are created using a standard system that defines data structures in YAML files, and includes sidebars on pages using macro calls.
 
-In this guide, you will learn how these sidebars work so you can edit existing sidebars and create new ones as required. We'll also detail thes that don't yet use the standard system.
+In this guide, you will learn how these sidebars work so you can edit existing sidebars and create new ones as required. We'll also detail those that don't yet use the standard system.
+
+> [!NOTE]
+> If you're editing sidebars, you can use `yarn tool` commands for formatting and syncing with redirects.
+> See [Yari's CLI Tool](https://github.com/mdn/yari/blob/main/docs/cli-tool.md) documentation for information.
 
 ## How sidebars work
 
