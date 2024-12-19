@@ -138,6 +138,59 @@ sidebar:
       - link: /Web/JavaScript/Reference/Deprecated_and_obsolete_features
         title: Deprecated_features
 l10n:
+  de:
+    Overview: JavaScript-Technologie (Übersicht)
+    Tutorials: Tutorials
+    Guide: JavaScript-Handbuch
+    Guide_Introduction: Einführung
+    Guide_Grammar: Grammatik und Typen
+    Guide_Control_flow: Steuerfluss und Fehlerbehandlung
+    Guide_Loops: Schleifen und Iteration
+    Guide_Functions: Funktionen
+    Guide_Expressions: Ausdrücke und Operatoren
+    Guide_Numbers: Zahlen und Daten
+    Guide_Text: Textformatierung
+    Guide_RegExp: Reguläre Ausdrücke
+    Guide_Indexed_collections: Indexierte Sammlungen
+    Guide_keyed_collections: Gekennzeichnete Sammlungen
+    Guide_Objects: Arbeiten mit Objekten
+    Guide_Classes: Verwendung von Klassen
+    Guide_Promises: Verwendung von Promises
+    Guide_Typed_arrays: Typisierte Arrays in JavaScript
+    Guide_Iterators_generators: Iteratoren und Generatoren
+    Guide_Meta: Metaprogrammierung
+    Guide_Modules: JavaScript-Module
+    Complete_beginners: Komplette Anfänger
+    Basics: JavaScript-Grundlagen
+    First_steps: Erste Schritte in JavaScript
+    Building_blocks: JavaScript-Bausteine
+    Intermediate: Mittelstufe
+    Introducing_objects: Einführung in JavaScript-Objekte
+    Client-side_APIs: Client-seitige Web-APIs
+    Frameworks: Client-seitige JavaScript-Frameworks
+    Language_overview: Sprachübersicht
+    Data_structures: JavaScript-Datenstrukturen
+    Equality: Gleichheitsvergleiche und Gleichheit
+    Closures: Closures
+    Advanced: Fortgeschritten
+    Inheritance: Vererbung und die Prototypenkette
+    Strict_mode: Strenger Modus
+    Memory_management: Speicherverwaltung
+    Event_loop: Konkurrenzmodell und Ereignisschleife
+    Reference: Referenzen
+    Global_Objects: Eingebaute Objekte
+    Operators: Ausdrücke und Operatoren
+    Statements: Anweisungen und Deklarationen
+    Functions: Funktionen
+    Classes: Klassen
+    Errors: Fehler
+    More: Sonstiges
+    Lexical_grammar: Lexikalische Grammatik
+    Enumerability: Aufzählbarkeit und Eigentum von Eigenschaften
+    Iteration_protocols: Iterationsprotokolle
+    Template_strings: Vorlagenliterale
+    Trailing_commas: Abschließende Kommas
+    Deprecated_features: Veraltete Funktionen
   en-US:
     Overview: JavaScript technologies overview
     Tutorials: Tutorials
@@ -187,7 +240,6 @@ l10n:
     More: Misc
     Lexical_grammar: Lexical grammar
     Enumerability: Enumerability and ownership of properties
-    Data_types: Data types and data structures
     Iteration_protocols: Iteration protocols
     Template_strings: Template literals
     Trailing_commas: Trailing commas
@@ -241,7 +293,6 @@ l10n:
     More: Ещё
     Lexical_grammar: Лексическая грамматика
     Enumerability: Перечисляемость и принадлежность свойств
-    Data_types: Типы и структуры данных
     Iteration_protocols: Протоколы перебора
     Template_strings: Шаблонные строки
     Trailing_commas: Висящие запятые
@@ -295,7 +346,6 @@ l10n:
     More: Divers
     Lexical_grammar: Grammaire lexicale
     Enumerability: Rattachement des propriétés
-    Data_types: Types et structures de données
     Iteration_protocols: Protocoles d'itération
     Template_strings: Gabarits de chaînes de caractères
     Trailing_commas: Virgules finales
@@ -349,7 +399,6 @@ l10n:
     More: 更多
     Lexical_grammar: 词法文法
     Enumerability: 属性的可枚举性和所有权
-    Data_types: 数据类型和数据解构
     Iteration_protocols: 迭代协议
     Template_strings: 模板字符串
     Trailing_commas: 尾后逗号
@@ -403,7 +452,6 @@ l10n:
     More: その他
     Lexical_grammar: 字句文法
     Enumerability: プロパティの列挙可能性と所有権
-    Data_types: データ型とデータ構造
     Iteration_protocols: 反復処理プロトコル
     Template_strings: テンプレート文字列
     Trailing_commas: 末尾のカンマ
@@ -457,7 +505,6 @@ l10n:
     More: 기타
     Lexical_grammar: Lexical 문법
     Enumerability: 열거성과 속성의 소유권
-    Data_types: 데이터 타입과 자료구조
     Iteration_protocols: Iteration 프로토콜
     Template_strings: 템플릿 리터럴
     Trailing_commas: Trailing commas
@@ -511,7 +558,6 @@ l10n:
     More: Mais conteúdo
     Lexical_grammar: Gramática léxica
     Enumerability: Enumerabilidade e domínio de propriedades
-    Data_types: Tipos de dados e estruturas de dados
     Iteration_protocols: Protocolos de iteração
     Template_strings: Template literals
     Trailing_commas: Trailing commas

@@ -33,7 +33,7 @@ sidebar:
     title: WCAG
     details: closed
   - type: section
-    link: Web/Accessibility/ARIA
+    link: /Web/Accessibility/ARIA
     title: ARIA
   - title: ARIA_guides
     details: closed
@@ -53,6 +53,15 @@ sidebar:
     title: ARIA roles
     details: closed
 l10n:
+  de:
+    Accessibility: Barrierefreiheit
+    Guides: Anleitungen
+    Learn: Barrierefreiheit lernen
+    ARIA: ARIA
+    ARIA_guides: ARIA-Anleitungen
+    ARIA states and properties: ARIA-Zustände und -Eigenschaften
+    ARIA roles: ARIA-Rollen
+    WCAG: WCAG
   en-US:
     Accessibility: Accessibility
     Guides: Guides

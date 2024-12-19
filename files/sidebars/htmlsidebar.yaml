@@ -105,6 +105,49 @@ sidebar:
       - link: /Web/HTML/CORS_enabled_image
         title: Allowing_cross-origin_images_and_canvas
 l10n:
+  de:
+    Tutorials: Tutorials
+    HTML_basics: HTML-Grundlagen
+    Introduction_to_HTML: Einführung in HTML
+    Introduction_to_HTML_overview: Übersicht zur Einführung in HTML
+    Getting_started_with_HTML: Erste Schritte mit HTML
+    Whats_in_the_head_metadata_in_HTML: Was ist im Kopf? Metadaten in HTML
+    HTML_text_fundamentals: Grundlagen der HTML-Texte
+    Creating_hyperlinks: Erstellen von Hyperlinks
+    Advanced_text_formatting: Erweiterte Textformatierung
+    Document_and_website_structure: Dokument- und Webseitenstruktur
+    Debugging_HTML: Debugging von HTML
+    Assessment_Marking_up_a_letter: "Aufgabe: Briefauszeichnung"
+    Assessment_Structuring_a_page_of_content: "Aufgabe: Strukturierung einer Inhaltsseite"
+    Multimedia_and_embedding: Multimedia und Einbettung
+    Multimedia_and_embedding_overview: Übersicht zu Multimedia und Einbettung
+    Images_in_HTML: Bilder in HTML
+    Video_and_audio_content: Video- und Audioinhalte
+    From_object_to_iframe_other_embedding_technologies: Von Object zu Iframe - andere Einbettungstechnologien
+    Adding_vector_graphics_to_the_web: Hinzufügen von Vektorgrafiken zum Web
+    Responsive_images: Responsive Bilder
+    Assessment_Mozilla_splash_page: "Aufgabe: Mozilla-Startseite"
+    HTML_tables: HTML-Tabellen
+    HTML_tables_overview: Übersicht zu HTML-Tabellen
+    HTML_table_basics: Grundlagen der HTML-Tabellen
+    HTML_table_advanced_features_and_accessibility: Erweiterte Funktionen und Zugänglichkeit von HTML-Tabellen
+    Assessment_Structuring_planet_data: "Aufgabe: Strukturierung von Planetendaten"
+    Reference: Referenzen
+    HTML_Elements: HTML-Elemente
+    Global_attributes: Globale Attribute
+    Attributes: Attribute
+    Input_types: <code>&lt;input&gt;</code>-Typen
+    Guides: Anleitungen
+    Content_categories: Inhaltskategorien
+    Block-level_elements: Block-Elemente
+    Inline_elements: Inline-Elemente
+    Quirks_Mode_and_Standards_Mode: Quirks-Modus und Standards-Modus
+    Date_and_time_formats: Datums- und Zeitformate in HTML
+    Constraint_validation: Einschränkungsvalidierung
+    Microdata: Mikrodaten
+    Microformats: Mikroformate
+    Viewport_meta_tag: Viewport-Meta-Tag
+    Allowing_cross-origin_images_and_canvas: Erlauben der Cross-Origin-Nutzung von Bildern und Canvas
   en-US:
     Tutorials: Tutorials
     HTML_basics: HTML basics
@@ -139,15 +182,15 @@ l10n:
     Input_types: <code>&lt;input&gt;</code> types
     Guides: Guides
     Content_categories: Content categories
-    Allowing_cross-origin_images_and_canvas: Allowing cross-origin use of images and canvas
     Block-level_elements: Block-level elements
     Inline_elements: Inline elements
+    Quirks_Mode_and_Standards_Mode: Quirks Mode and Standards Mode
     Date_and_time_formats: Date and time formats used in HTML
     Constraint_validation: Constraint validation
     Microdata: Microdata
     Microformats: Microformats
-    Quirks_Mode_and_Standards_Mode: Quirks Mode and Standards Mode
     Viewport_meta_tag: Viewport meta tag
+    Allowing_cross-origin_images_and_canvas: Allowing cross-origin use of images and canvas
   fr:
     Tutorials: Tutoriels
     HTML_basics: Notions élémentaires de HTML
@@ -182,14 +225,13 @@ l10n:
     Input_types: Types <code>&lt;input&gt;</code>
     Guides: Guides
     Content_categories: Catégories de contenu
-    Allowing_cross-origin_images_and_canvas: Autoriser les images et canevas provenant d'autres origines
     Block-level_elements: Éléments de bloc
     Inline_elements: Éléments en ligne
+    Quirks_Mode_and_Standards_Mode: Mode quirks et mode standard
     Date_and_time_formats: Formats de date et d'heure utilisés en HTML
     Microdata: Microdonnées
-    microformats: Microformats
-    Quirks_Mode_and_Standards_Mode: Mode quirks et mode standard
     Viewport_meta_tag: Utilisation de la balise meta viewport pour contrôler la mise en page sur mobile
+    Allowing_cross-origin_images_and_canvas: Autoriser les images et canevas provenant d'autres origines
   ja:
     Tutorials: チュートリアル
     HTML_basics: HTML の基本
@@ -221,11 +263,6 @@ l10n:
     HTML_Elements: HTML 要素
     Global_attributes: グローバル属性
     Input_types: <code>&lt;input&gt;</code> 型
-    Documentation: ドキュメント
-    Useful_lists: 有用なリスト
-    Index: 前ページの索引
-    Contribute: 協力
-    The_MDN_project: MDN プロジェクト
     Content_categories: コンテンツカテゴリー
     Constraint_validation: 制約検証
   ko:
@@ -261,14 +298,14 @@ l10n:
     Attributes: 속성
     Input_types: <code>&lt;input&gt;</code> types
     Guides: "안내서:"
-    Allowing_cross-origin_images_and_canvas: cross-origin이 가능한 이미지와 캔버스
     Block-level_elements: 블록 단위 요소
     Inline_elements: 인라인 요소
+    Quirks_Mode_and_Standards_Mode: 쿼크모드와 표준모드
     Date_and_time_formats: HTML의 날짜와 시간 형식
     Microdata: Microdata
     Microformats: Microformats
-    Quirks_Mode_and_Standards_Mode: 쿼크모드와 표준모드
     Viewport_meta_tag: 뷰포트 메타 태그
+    Allowing_cross-origin_images_and_canvas: cross-origin이 가능한 이미지와 캔버스
   pt-BR:
     Tutorials: Tutoriais
     HTML_basics: O básico de HTML
@@ -303,14 +340,13 @@ l10n:
     Input_types: Tipos de <code>&lt;input&gt;</code>
     Guides: Guides
     Content_categories: Categorias de conteúdo
-    Allowing_cross-origin_images_and_canvas: CORS habilitar imagens
     Block-level_elements: Elementos block-level
     Inline_elements: Elementos inline
+    Quirks_Mode_and_Standards_Mode: Quirks Mode e Standards Mode
     Date_and_time_formats: Date and time formats used in HTML
     Microdata: Microdata
-    microformats: Microformatos
-    Quirks_Mode_and_Standards_Mode: Quirks Mode e Standards Mode
     Viewport_meta_tag: Viewport meta tag
+    Allowing_cross-origin_images_and_canvas: CORS habilitar imagens
   ru:
     Tutorials: Уроки
     HTML_basics: Основы HTML
@@ -345,15 +381,14 @@ l10n:
     Input_types: Типы <code>&lt;input&gt;</code>
     Guides: Путеводитель
     Content_categories: Категории контента
-    Allowing_cross-origin_images_and_canvas: Разрешение использования изображений из разных источников и canvas
     Block-level_elements: Блочные элементы
     Inline_elements: Строчные элементы
+    Quirks_Mode_and_Standards_Mode: Режим совместимости (Quirks Mode) и стандартный режим (Standards Mode)
     Date_and_time_formats: Date and time formats used in HTML
     Constraint_validation: Валидация ограничений
     Microdata: Microdata
-    microformats: Microformats
-    Quirks_Mode_and_Standards_Mode: Режим совместимости (Quirks Mode) и стандартный режим (Standards Mode)
     Viewport_meta_tag: Viewport meta tag
+    Allowing_cross-origin_images_and_canvas: Разрешение использования изображений из разных источников и canvas
   zh-CN:
     Tutorials: 教程
     HTML_basics: HTML 基础
@@ -388,12 +423,12 @@ l10n:
     Input_types: <code>&lt;input&gt;</code> 类型
     Guides: 指南：
     Content_categories: 内容分类
-    Allowing_cross-origin_images_and_canvas: 允许图片和 canvas 跨源使用
     Block-level_elements: 块级元素
     Inline_elements: 行级元素
+    Quirks_Mode_and_Standards_Mode: 怪异模式和标准模式
     Date_and_time_formats: HTML 中使用的日期与时间格式
     Constraint_validation: 约束验证
     Microdata: 微数据
     Microformats: 微格式
-    Quirks_Mode_and_Standards_Mode: 怪异模式和标准模式
     Viewport_meta_tag: Viewport meta 标签
+    Allowing_cross-origin_images_and_canvas: 允许图片和 canvas 跨源使用
