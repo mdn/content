@@ -8,7 +8,7 @@ page-type: guide
 
 The creation of web forms has always been a complex task. While marking up the form itself is easy, checking whether each field has a valid and coherent value is more difficult, and informing the user about the problem may become a headache. [HTML5](/en-US/docs/Glossary/HTML5) introduced new mechanisms for forms: it added new semantic types for the {{ HTMLElement("input") }} element and _constraint validation_ to ease the work of checking the form content on the client side. Basic, usual constraints can be checked, without the need for JavaScript, by setting new attributes; more complex constraints can be tested using the Constraint Validation API.
 
-For a basic introduction to these concepts, with examples, see the [Form validation tutorial](/en-US/docs/Learn/Forms/Form_validation).
+For a basic introduction to these concepts, with examples, see the [Form validation tutorial](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation).
 
 > [!NOTE]
 > HTML Constraint validation doesn't remove the need for validation on the _server side_. Even though far fewer invalid form requests are to be expected, invalid ones can still be sent in many ways:
@@ -30,10 +30,10 @@ In HTML, basic constraints are declared in two ways:
 
 The intrinsic constraints for the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute are:
 
-| Input type                                                         | Constraint description                                                                                                                                                      | Associated violation                                                                    |
-| ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| [`<input type="URL">`](/en-US/docs/Web/HTML/Element/input/url)     | The value must be an absolute [URL](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL), as defined in the [URL Living Standard](https://url.spec.whatwg.org/). | **[TypeMismatch](/en-US/docs/Web/API/ValidityState/typeMismatch)** constraint violation |
-| [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email) | The value must be a syntactically valid email address, which generally has the format `username@hostname.tld` but can also be local such as `username@hostname`.            | **[TypeMismatch](/en-US/docs/Web/API/ValidityState/typeMismatch)** constraint violation |
+| Input type                                                         | Constraint description                                                                                                                                                           | Associated violation                                                                    |
+| ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| [`<input type="URL">`](/en-US/docs/Web/HTML/Element/input/url)     | The value must be an absolute [URL](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL), as defined in the [URL Living Standard](https://url.spec.whatwg.org/). | **[TypeMismatch](/en-US/docs/Web/API/ValidityState/typeMismatch)** constraint violation |
+| [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email) | The value must be a syntactically valid email address, which generally has the format `username@hostname.tld` but can also be local such as `username@hostname`.                 | **[TypeMismatch](/en-US/docs/Web/API/ValidityState/typeMismatch)** constraint violation |
 
 For both of these input types, if the [`multiple`](/en-US/docs/Web/HTML/Element/input#multiple) attribute is set, several values can be set, as a comma-separated list. If any of these do not satisfy the condition described here, the **Type mismatch** constraint violation is triggered.
 

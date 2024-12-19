@@ -47,4 +47,4 @@ For each of these Boolean properties, a value of `true` indicates that the speci
 ## See also
 
 - [Guide: Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
-- [Tutorial: Form data validation](/en-US/docs/Learn/Forms/Form_validation)
+- [Tutorial: Form data validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)

@@ -135,4 +135,4 @@ Some browsers (such as Firefox) set the default {{cssxref("opacity")}} of placeh
 
 - The {{cssxref(":placeholder-shown")}} pseudo-class styles an element that _has_ an active placeholder.
 - Related HTML elements: {{HTMLElement("input")}}, {{HTMLElement("textarea")}}
-- [HTML forms](/en-US/docs/Learn/Forms)
+- [HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms)
