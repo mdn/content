@@ -12,7 +12,7 @@ spec-urls:
 
 The **CSS media queries** module enables testing and querying of viewport values and browser or device features, to conditionally apply CSS styles based on the current user environment. Media queries are used in the CSS `@media` rule and other contexts and languages such as HTML and JavaScript.
 
-Media queries are a key component of [responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design). They enable conditional setting of CSS styles depending on the presence or value of device characteristics. It's common to use a media query based on {{Glossary("viewport")}} size to set appropriate layouts on devices with different screen sizes — for example three columns on a wide screen or a single column on a narrow screen.
+Media queries are a key component of [responsive design](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design). They enable conditional setting of CSS styles depending on the presence or value of device characteristics. It's common to use a media query based on {{Glossary("viewport")}} size to set appropriate layouts on devices with different screen sizes — for example three columns on a wide screen or a single column on a narrow screen.
 
 Other common examples include increasing the font size and hiding navigation menus when printing a page, adjusting the padding between paragraphs when a page is viewed in portrait or landscape mode, or increasing the size of buttons to provide a larger hit area on touchscreens.
 
@@ -86,7 +86,7 @@ When designing reusable HTML components, you may also use [container queries](/e
 
   - : Introduces media queries, their syntax, and the operators and media features used to construct media query expressions.
 
-- [Beginner's guide to media queries](/en-US/docs/Learn/CSS/CSS_layout/Media_queries)
+- [Learn: Media query fundamentals](/en-US/docs/Learn_web_development/Core/CSS_layout/Media_queries)
 
   - : Introduction to media queries and approaches for using them to create responsive designs.
 
@@ -102,7 +102,7 @@ When designing reusable HTML components, you may also use [container queries](/e
 
   - : Tips and techniques for helping improve web content printer output.
 
-- [Learn: responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [Responsive images](/en-US/docs/Web/HTML/Responsive_images)
 
   - : Learn how to use media queries with `sizes` to implement responsive image solutions on websites.
 

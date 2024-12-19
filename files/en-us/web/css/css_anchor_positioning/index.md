@@ -110,6 +110,6 @@ In addition, the specification provides CSS-only mechanisms to:
 
 ## See also
 
-- [Learn: CSS positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning)
+- [Learn: CSS positioning](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning)
 - [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module
-- [Sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+- [Learn: Sizing items in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Sizing)
