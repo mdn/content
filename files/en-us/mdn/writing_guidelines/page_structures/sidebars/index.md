@@ -42,7 +42,7 @@ Some of the other standard sidebars that you will commonly encounter are as foll
 
 - `\{{CSSRef}}`
 
-  - : Present on every [CSS](/en-US/docs/Web/CSS/) page.
+  - : Present on every [CSS](/en-US/docs/Web/CSS) page.
 
 - `\{{GlossarySidebar}}`
 
