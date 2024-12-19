@@ -8,8 +8,8 @@ sidebar:
     children:
       - link: /Learn_web_development/Getting_started/Your_first_website/Creating_the_content
         title: Creating_the_content
-      - title: Structuring_content_with_HTML
-        link: /Learn_web_development/Core/Structuring_content
+      - link: /Learn_web_development/Core/Structuring_content
+        title: Structuring_content_with_HTML
         details: closed
         children:
           - /Learn_web_development/Core/Structuring_content/Basic_HTML_syntax
@@ -77,32 +77,6 @@ sidebar:
     code: true
 l10n:
   de:
-    Tutorials: Tutorials
-    HTML_basics: HTML-Grundlagen
-    Introduction_to_HTML: Einführung in HTML
-    Introduction_to_HTML_overview: Übersicht zur Einführung in HTML
-    Getting_started_with_HTML: Erste Schritte mit HTML
-    Whats_in_the_head_metadata_in_HTML: Was ist im Kopf? Metadaten in HTML
-    HTML_text_fundamentals: Grundlagen der HTML-Texte
-    Creating_hyperlinks: Erstellen von Hyperlinks
-    Advanced_text_formatting: Erweiterte Textformatierung
-    Document_and_website_structure: Dokument- und Webseitenstruktur
-    Debugging_HTML: Debugging von HTML
-    Assessment_Marking_up_a_letter: "Aufgabe: Briefauszeichnung"
-    Assessment_Structuring_a_page_of_content: "Aufgabe: Strukturierung einer Inhaltsseite"
-    Multimedia_and_embedding: Multimedia und Einbettung
-    Multimedia_and_embedding_overview: Übersicht zu Multimedia und Einbettung
-    Images_in_HTML: Bilder in HTML
-    Video_and_audio_content: Video- und Audioinhalte
-    From_object_to_iframe_other_embedding_technologies: Von Object zu Iframe - andere Einbettungstechnologien
-    Adding_vector_graphics_to_the_web: Hinzufügen von Vektorgrafiken zum Web
-    Responsive_images: Responsive Bilder
-    Assessment_Mozilla_splash_page: "Aufgabe: Mozilla-Startseite"
-    HTML_tables: HTML-Tabellen
-    HTML_tables_overview: Übersicht zu HTML-Tabellen
-    HTML_table_basics: Grundlagen der HTML-Tabellen
-    HTML_table_advanced_features_and_accessibility: Erweiterte Funktionen und Zugänglichkeit von HTML-Tabellen
-    Assessment_Structuring_planet_data: "Aufgabe: Strukturierung von Planetendaten"
     Reference: Referenzen
     HTML_Elements: HTML-Elemente
     Global_attributes: Globale Attribute

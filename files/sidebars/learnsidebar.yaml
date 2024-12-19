@@ -4,8 +4,8 @@ sidebar:
   - type: section
     link: /Learn_web_development/Getting_started
     title: Getting_started_modules
-  - title: Environment_setup
-    link: /Learn_web_development/Getting_started/Environment_setup
+  - link: /Learn_web_development/Getting_started/Environment_setup
+    title: Environment_setup
     details: closed
     children:
       - /Learn_web_development/Getting_started/Environment_setup/Installing_software
@@ -13,8 +13,8 @@ sidebar:
       - /Learn_web_development/Getting_started/Environment_setup/Code_editors
       - /Learn_web_development/Getting_started/Environment_setup/Dealing_with_files
       - /Learn_web_development/Getting_started/Environment_setup/Command_line
-  - title: Your_first_website
-    link: /Learn_web_development/Getting_started/Your_first_website
+  - link: /Learn_web_development/Getting_started/Your_first_website
+    title: Your_first_website
     details: closed
     children:
       - /Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like
@@ -22,15 +22,15 @@ sidebar:
       - /Learn_web_development/Getting_started/Your_first_website/Styling_the_content
       - /Learn_web_development/Getting_started/Your_first_website/Adding_interactivity
       - /Learn_web_development/Getting_started/Your_first_website/Publishing_your_website
-  - title: Web_standards
-    link: /Learn_web_development/Getting_started/Web_standards
+  - link: /Learn_web_development/Getting_started/Web_standards
+    title: Web_standards
     details: closed
     children:
       - /Learn_web_development/Getting_started/Web_standards/How_the_web_works
       - /Learn_web_development/Getting_started/Web_standards/The_web_standards_model
       - /Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites
-  - title: Soft_skills
-    link: /Learn_web_development/Getting_started/Soft_skills
+  - link: /Learn_web_development/Getting_started/Soft_skills
+    title: Soft_skills
     details: closed
     children:
       - /Learn_web_development/Getting_started/Soft_skills/Research_and_learning
@@ -40,8 +40,8 @@ sidebar:
   - type: section
     link: /Learn_web_development/Core
     title: Core_modules
-  - title: Structuring_content_with_HTML
-    link: /Learn_web_development/Core/Structuring_content
+  - link: /Learn_web_development/Core/Structuring_content
+    title: Structuring_content_with_HTML
     details: closed
     children:
       - /Learn_web_development/Core/Structuring_content/Basic_HTML_syntax
@@ -62,8 +62,8 @@ sidebar:
       - /Learn_web_development/Core/Structuring_content/Planet_data_table
       - /Learn_web_development/Core/Structuring_content/HTML_forms
       - /Learn_web_development/Core/Structuring_content/Debugging_HTML
-  - title: CSS_styling_basics
-    link: /Learn_web_development/Core/Styling_basics
+  - link: /Learn_web_development/Core/Styling_basics
+    title: CSS_styling_basics
     details: closed
     children:
       - /Learn_web_development/Core/Styling_basics/What_is_CSS
@@ -85,8 +85,8 @@ sidebar:
       - /Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
       - /Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
       - /Learn_web_development/Core/Styling_basics/Cool-looking_box
-  - title: CSS_text_styling
-    link: /Learn_web_development/Core/Text_styling
+  - link: /Learn_web_development/Core/Text_styling
+    title: CSS_text_styling
     details: closed
     children:
       - /Learn_web_development/Core/Text_styling/Fundamentals
@@ -94,8 +94,8 @@ sidebar:
       - /Learn_web_development/Core/Text_styling/Styling_links
       - /Learn_web_development/Core/Text_styling/Web_fonts
       - /Learn_web_development/Core/Text_styling/Typesetting_a_homepage
-  - title: CSS_layout
-    link: /Learn_web_development/Core/CSS_layout
+  - link: /Learn_web_development/Core/CSS_layout
+    title: CSS_layout
     details: closed
     children:
       - /Learn_web_development/Core/CSS_layout/Introduction
@@ -106,8 +106,8 @@ sidebar:
       - /Learn_web_development/Core/CSS_layout/Responsive_Design
       - /Learn_web_development/Core/CSS_layout/Media_queries
       - /Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension
-  - title: Dynamic_scripting_with_JavaScript
-    link: /Learn_web_development/Core/Scripting
+  - link: /Learn_web_development/Core/Scripting
+    title: Dynamic_scripting_with_JavaScript
     details: closed
     children:
       - /Learn_web_development/Core/Scripting/What_is_JavaScript
@@ -132,8 +132,8 @@ sidebar:
       - /Learn_web_development/Core/Scripting/Network_requests
       - /Learn_web_development/Core/Scripting/JSON
       - /Learn_web_development/Core/Scripting/Debugging_JavaScript
-  - title: JavaScript_frameworks_and_libraries
-    link: /Learn_web_development/Core/Frameworks_libraries
+  - link: /Learn_web_development/Core/Frameworks_libraries
+    title: JavaScript_frameworks_and_libraries
     details: closed
     children:
       - /Learn_web_development/Core/Frameworks_libraries/Introduction
@@ -145,8 +145,8 @@ sidebar:
       - /Learn_web_development/Core/Frameworks_libraries/React_interactivity_filtering_conditional_rendering
       - /Learn_web_development/Core/Frameworks_libraries/React_accessibility
       - /Learn_web_development/Core/Frameworks_libraries/React_resources
-  - title: Accessibility
-    link: /Learn_web_development/Core/Accessibility
+  - link: /Learn_web_development/Core/Accessibility
+    title: Accessibility
     details: closed
     children:
       - /Learn_web_development/Core/Accessibility/What_is_accessibility
@@ -157,15 +157,15 @@ sidebar:
       - /Learn_web_development/Core/Accessibility/Multimedia
       - /Learn_web_development/Core/Accessibility/Mobile
       - /Learn_web_development/Core/Accessibility/Accessibility_troubleshooting
-  - title: Design_for_developers
-    link: /Learn_web_development/Core/Design_for_developers
-  - title: Version_control
-    link: /Learn_web_development/Core/Version_control
+  - link: /Learn_web_development/Core/Design_for_developers
+    title: Design_for_developers
+  - link: /Learn_web_development/Core/Version_control
+    title: Version_control
   - type: section
     link: /Learn_web_development/Extensions
     title: Extension_modules
-  - title: Advanced JavaScript objects
-    link: /Learn_web_development/Extensions/Advanced_JavaScript_objects
+  - link: /Learn_web_development/Extensions/Advanced_JavaScript_objects
+    title: Advanced JavaScript objects
     details: closed
     children:
       - /Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes
@@ -173,8 +173,8 @@ sidebar:
       - /Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript
       - /Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice
       - /Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features
-  - title: Client-side_web_APIs
-    link: /Learn_web_development/Extensions/Client-side_APIs
+  - link: /Learn_web_development/Extensions/Client-side_APIs
+    title: Client-side_web_APIs
     details: closed
     children:
       - /Learn_web_development/Extensions/Client-side_APIs/Introduction
@@ -182,8 +182,8 @@ sidebar:
       - /Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics
       - /Learn_web_development/Extensions/Client-side_APIs/Client-side_storage
       - /Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs
-  - title: Asynchronous_JavaScript
-    link: /Learn_web_development/Extensions/Async_JS
+  - link: /Learn_web_development/Extensions/Async_JS
+    title: Asynchronous_JavaScript
     details: closed
     children:
       - /Learn_web_development/Extensions/Async_JS/Introducing
@@ -192,8 +192,8 @@ sidebar:
       - /Learn_web_development/Extensions/Async_JS/Implementing_a_promise-based_API
       - /Learn_web_development/Extensions/Async_JS/Introducing_workers
       - /Learn_web_development/Extensions/Async_JS/Sequencing_animations
-  - title: Web_forms
-    link: /Learn_web_development/Extensions/Forms
+  - link: /Learn_web_development/Extensions/Forms
+    title: Web_forms
     details: closed
     children:
       - /Learn_web_development/Extensions/Forms/Your_first_form
@@ -206,28 +206,28 @@ sidebar:
       - /Learn_web_development/Extensions/Forms/UI_pseudo-classes
       - /Learn_web_development/Extensions/Forms/Form_validation
       - /Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data
-  - title: Understanding_client-side_tools
-    link: /Learn_web_development/Extensions/Client-side_tools
+  - link: /Learn_web_development/Extensions/Client-side_tools
+    title: Understanding_client-side_tools
     details: closed
     children:
       - /Learn_web_development/Extensions/Client-side_tools/Overview
       - /Learn_web_development/Extensions/Client-side_tools/Package_management
       - /Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain
       - /Learn_web_development/Extensions/Client-side_tools/Deployment
-  - title: Server-side_websites
-    link: /Learn_web_development/Extensions/Server-side
+  - link: /Learn_web_development/Extensions/Server-side
+    title: Server-side_websites
     details: closed
     children:
-      - title: Server-side_first_steps
-        link: /Learn_web_development/Extensions/Server-side/First_steps
+      - link: /Learn_web_development/Extensions/Server-side/First_steps
+        title: Server-side_first_steps
         details: closed
         children:
           - /Learn_web_development/Extensions/Server-side/First_steps/Introduction
           - /Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview
           - /Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks
           - /Learn_web_development/Extensions/Server-side/First_steps/Website_security
-      - title: Django_web_framework_(Python)
-        link: /Learn_web_development/Extensions/Server-side/Django
+      - link: /Learn_web_development/Extensions/Server-side/Django
+        title: Django_web_framework_(Python)
         details: closed
         children:
           - /Learn_web_development/Extensions/Server-side/Django/Introduction
@@ -245,8 +245,8 @@ sidebar:
           - /Learn_web_development/Extensions/Server-side/Django/Deployment
           - /Learn_web_development/Extensions/Server-side/Django/web_application_security
           - /Learn_web_development/Extensions/Server-side/Django/django_assessment_blog
-      - title: Express_web_framework_(Node.js)
-        link: /Learn_web_development/Extensions/Server-side/Express_Nodejs
+      - link: /Learn_web_development/Extensions/Server-side/Express_Nodejs
+        title: Express_web_framework_(Node.js)
         details: closed
         children:
           - /Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction
@@ -258,8 +258,8 @@ sidebar:
           - /Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data
           - /Learn_web_development/Extensions/Server-side/Express_Nodejs/forms
           - /Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment
-  - title: Web_performance
-    link: /Learn_web_development/Extensions/Performance
+  - link: /Learn_web_development/Extensions/Performance
+    title: Web_performance
     details: closed
     children:
       - /Learn_web_development/Extensions/Performance/why_web_performance
@@ -272,8 +272,8 @@ sidebar:
       - /Learn_web_development/Extensions/Performance/HTML
       - /Learn_web_development/Extensions/Performance/CSS
       - /Learn_web_development/Extensions/Performance/business_case_for_performance
-  - title: Testing
-    link: /Learn_web_development/Extensions/Testing
+  - link: /Learn_web_development/Extensions/Testing
+    title: Testing
     details: closed
     children:
       - /Learn_web_development/Extensions/Testing/Introduction
@@ -282,14 +282,14 @@ sidebar:
       - /Learn_web_development/Extensions/Testing/Feature_detection
       - /Learn_web_development/Extensions/Testing/Automated_testing
       - /Learn_web_development/Extensions/Testing/Your_own_automation_environment
-  - title: Transform_and_animate_CSS
-    link: /Learn_web_development/Extensions/Transform_animate
-  - title: Security_and_privacy
-    link: /Learn_web_development/Extensions/Security_privacy
+  - link: /Learn_web_development/Extensions/Transform_animate
+    title: Transform_and_animate_CSS
+  - link: /Learn_web_development/Extensions/Security_privacy
+    title: Security_and_privacy
   - type: section
     title: Further_resources
-  - title: How_to_solve_common_problems
-    link: /Learn_web_development/Howto
+  - link: /Learn_web_development/Howto
+    title: How_to_solve_common_problems
     details: closed
     children:
       - /Learn_web_development/Howto/Solve_HTML_problems
@@ -298,58 +298,20 @@ sidebar:
       - /Learn_web_development/Howto/Web_mechanics
       - /Learn_web_development/Howto/Tools_and_setup
       - /Learn_web_development/Howto/Design_and_accessibility
-  - title: About
-    link: /en-US/docs/Learn_web_development/About
-  - title: Resources_for_educators
-    link: /en-US/docs/Learn_web_development/Educators
-  - title: Changelog
-    link: /en-US/docs/Learn_web_development/Changelog
+  - link: /Learn_web_development/About
+    title: About
+  - link: /Learn_web_development/Educators
+    title: Resources_for_educators
+  - link: /Learn_web_development/Changelog
+    title: Changelog
 l10n:
   de:
-    Complete_beginners_start_here: Komplette Anfänger beginnen hier!
-    Getting_started_with_the_web: Erste Schritte mit dem Web
-    HTML_Structuring_the_web: HTML — Strukturierung des Webs
-    Introduction_to_HTML: Einführung in HTML
-    Multimedia_and_embedding: Multimedia und Einbettung
-    HTML_tables: HTML-Tabellen
-    CSS_Styling_the_web: CSS — Gestaltung des Webs
-    CSS_first_steps: CSS erste Schritte
-    CSS_building_blocks: CSS-Bausteine
-    Styling_text: Textgestaltung
     CSS_layout: CSS-Layout
-    JavaScript_dynamic_client-side_scripting: JavaScript — Dynamisches clientseitiges Skripting
-    JavaScript_first_steps: JavaScript erste Schritte
-    JavaScript_building_blocks: JavaScript-Bausteine
-    Introducing_JavaScript_objects: Einführung in JavaScript-Objekte
     Asynchronous_JavaScript: Asynchrones JavaScript
     Client-side_web_APIs: Client-seitige Web-APIs
     Web_forms: Webformulare — Arbeiten mit Benutzerdaten
-    Web_forms_core: Grundlagen der Webformulare
-    Web_forms_advanced: Erweiterte Techniken für Webformulare
-    Accessibility_—_Make_the_web_usable_by_everyone: Barrierefreiheit — Das Web für alle nutzbar machen
-    Accessibility_guides: Barrierefreiheitsleitfäden
-    Performance: Leistung — Websites schnell und reaktionsschnell machen
-    Performance_guides: Leitfäden zur Leistung
-    MathML_Writing_mathematics: MathML — Schreiben von Mathematik mit MathML
-    MathML_first_steps: MathML erste Schritte
-    Games_Developing_for_web: Spiele — Entwicklung von Spielen für das Web
-    Guides_and_tutorials: Anleitungen und Tutorials
-    Tools_and_testing: Werkzeuge und Tests
-    Cross_browser_testing: Cross-Browser-Tests
-    Git_and_GitHub: Git und GitHub
-    Client-side_web_development_tools: Client-seitige Webentwicklungstools
-    Introduction_to_client-side_frameworks: Einführung in client-seitige Frameworks
-    React: React
-    Ember: Ember
-    Vue: Vue
-    Svelte: Svelte
-    Angular: Angular
-    Server-side_website_programming: Server-seitige Webprogrammierung
-    First_steps: Erste Schritte
     Django_web_framework_(Python): Django Web-Framework (Python)
-    Express_Web_Framework_(Node.js_JavaScript): Express Web-Framework (Node.js/JavaScript)
     Further_resources: Weitere Ressourcen
-    Common_questions: Häufige Fragen
   en-US:
     Getting_started_modules: Getting started modules
     Environment_setup: Environment setup
@@ -367,7 +329,6 @@ l10n:
     Design_for_developers: Design for developers
     Version_control: Version control
     Extension_modules: Extension modules
-    Advanced_JavaScript_objects: Advanced JavaScript objects
     Client-side_web_APIs: Client-side web APIs
     Asynchronous_JavaScript: Asynchronous JavaScript
     Web_forms: Web forms
@@ -385,292 +346,52 @@ l10n:
     About: About
     Resources_for_educators: Resources for educators
     Changelog: Changelog
-    Common_questions: Common questions
   pt-BR:
-    Complete_beginners_start_here: Completos iniciantes, comecem por aqui!
-    Getting_started_with_the_web: Iniciando na Internet
-    HTML_Structuring_the_web: HTML — Estruturando a Web
-    Introduction_to_HTML: Introdução ao HTML
-    Multimedia_and_embedding: Multimídia e incorporação
-    HTML_tables: Tabelas HTML
-    CSS_Styling_the_web: CSS — Estilizando a Web
-    CSS_first_steps: CSS - primeiros passos
-    CSS_building_blocks: CSS building blocks
-    Styling_text: Estilização de textos
     CSS_layout: Esquemas CSS
-    JavaScript_dynamic_client-side_scripting: JavaScript — Uma linguagem de script dinâmica para aplicações cliente
-    JavaScript_first_steps: Primeiros passos com JavaScript
-    JavaScript_building_blocks: Programando em JavaScript
-    Introducing_JavaScript_objects: Introdução Objetos em JavaScript
     Asynchronous_JavaScript: Asynchronous JavaScript
     Client-side_web_APIs: APIs Web na aplicação Cliente
     Web_forms: Web forms — Working with user data
-    Web_forms_core: Web form building blocks
-    Web_forms_advanced: Advanced web form techniques
-    Accessibility_—_Make_the_web_usable_by_everyone: Acessibilidade — Faça a Internet usável por qualquer pessoa
-    Accessibility_guides: Guias de acessibilidade
-    Tools_and_testing: Ferramentas e teste
-    Cross_browser_testing: Testes entre navegadores
-    Git_and_GitHub: Git and GitHub
-    Client-side_web_development_tools: Client-side web development tools
-    Introduction_to_client-side_frameworks: Introduction to client-side frameworks
-    React: React
-    Ember: Ember
-    Vue: Vue
-    Svelte: Svelte
-    Server-side_website_programming: Programação de servidores de Aplicação
-    First_steps: Primeiros passos
     Django_web_framework_(Python): Framework Web Django (Python)
-    Express_Web_Framework_(Node.js_JavaScript): Framework Web Express (Node.js/JavaScript)
     Further_resources: Mais recursos
-    Common_questions: Questões gerais
   ru:
-    Complete_beginners_start_here: Новички начинают здесь!
-    Getting_started_with_the_web: Начало работы с Вебом
-    HTML_Structuring_the_web: HTML — структура Веба
-    Introduction_to_HTML: Введение в HTML
-    Multimedia_and_embedding: Мультимедиа и встраивание
-    HTML_tables: HTML таблицы
-    CSS_Styling_the_web: CSS — стилизирование Веба
-    CSS_first_steps: Введение в CSS
-    CSS_building_blocks: Устройство CSS
-    Styling_text: Стилизирование текста
     CSS_layout: CSS макет
-    JavaScript_dynamic_client-side_scripting: JavaScript — динамический клиентский скриптинг
-    JavaScript_first_steps: Первые шаги в JavaScript
-    JavaScript_building_blocks: Блоки в JavaScript
-    Introducing_JavaScript_objects: Введение в объекты JavaScript
     Asynchronous_JavaScript: Асинхронный JavaScript
     Client-side_web_APIs: Клиентский веб API
     Web_forms: HTML-формы — работа с пользовательскими данными
-    Web_forms_core: Руководство по HTML-формам
-    Web_forms_advanced: Advanced web form techniques
-    Accessibility_—_Make_the_web_usable_by_everyone: Доступность — сделайте веб удобным для всех
-    Accessibility_guides: Руководства по обеспечению доступности
-    Tools_and_testing: Инструменты и тестирование
-    Cross_browser_testing: Кроссбраузерное тестирование
-    Git_and_GitHub: Git и GitHub
-    Client-side_web_development_tools: Client-side web development tools
-    Introduction_to_client-side_frameworks: Introduction to client-side frameworks
-    React: React
-    Ember: Ember
-    Vue: Vue
-    Svelte: Svelte
-    Angular: Angular
-    Server-side_website_programming: Программирование серверной части сайта
-    First_steps: Первые шаги
     Django_web_framework_(Python): Веб-фреймворк Django (Python)
-    Express_Web_Framework_(Node.js_JavaScript): Веб-фреймворк Express (Node.js/JavaScript)
     Further_resources: Дальнейшее чтение
-    Common_questions: Общие вопросы
   zh-CN:
-    Complete_beginners_start_here: 新手请从这开始！
-    Getting_started_with_the_web: Web 入门
-    HTML_Structuring_the_web: HTML——构建 Web
-    Introduction_to_HTML: HTML 介绍
-    Multimedia_and_embedding: 多媒体与嵌入
-    HTML_tables: HTML 表格
-    CSS_Styling_the_web: CSS——设计 Web
-    CSS_first_steps: CSS 第一步
-    CSS_building_blocks: CSS 基础
-    Styling_text: 样式化文本
     CSS_layout: CSS 排版
-    JavaScript_dynamic_client-side_scripting: JavaScript——用户端动态脚本
-    JavaScript_first_steps: JavaScript 第一步
-    JavaScript_building_blocks: JavaScript 基础
-    Introducing_JavaScript_objects: JavaScript 对象介绍
     Asynchronous_JavaScript: 异步 JavaScript
     Client-side_web_APIs: 客户端 Web API
     Web_forms: Web 表单——与用户数据打交道
-    Web_forms_core: Web 表单核心
-    Web_forms_advanced: Web 表单进阶
-    Accessibility_—_Make_the_web_usable_by_everyone: 无障碍——使每个人都能使用 Web
-    Accessibility_guides: 无障碍指南
-    Performance: 性能——使网站快速响应
-    Performance_guides: 性能指南
-    MathML_Writing_mathematics: MathML——使用 MathML 语言撰写数学表达式
-    MathML_first_steps: MathML 第一步
-    Games_Developing_for_web: 游戏——开发 Web 游戏
-    Guides_and_tutorials: 指南和基础教程
-    Tools_and_testing: 工具与测试
-    Cross_browser_testing: 跨浏览器测试
-    Git_and_GitHub: Git 和 GitHub
-    Client-side_web_development_tools: 客户端 web 开发工具
-    Introduction_to_client-side_frameworks: 客户端框架介绍
-    React: React
-    Ember: Ember
-    Vue: Vue
-    Svelte: Svelte
-    Angular: Angular
-    Server-side_website_programming: 服务端网页编程
-    First_steps: 第一步
     Django_web_framework_(Python): Django Web 框架（Python）
-    Express_Web_Framework_(Node.js_JavaScript): Express Web 框架（Node.js/JavaScript）
     Further_resources: 更多资源
-    Common_questions: 常见问题
   zh-TW:
-    Complete_beginners_start_here: 全新手請從這開始！
-    Getting_started_with_the_web: Web 入門
-    HTML_Structuring_the_web: HTML — 架構 Web
-    Introduction_to_HTML: HTML 介紹
-    Multimedia_and_embedding: 多媒體與嵌入
-    HTML_tables: HTML 表格
-    CSS_Styling_the_web: CSS — 設計 Web 的風格
-    CSS_first_steps: 初探 CSS
-    CSS_building_blocks: CSS 組件
-    Styling_text: 樣式化文字
     CSS_layout: CSS 版面配置
-    JavaScript_dynamic_client-side_scripting: JavaScript — 動態的用戶端指令
-    JavaScript_first_steps: JavaScript 第一步
-    JavaScript_building_blocks: JavaScript 基礎要件
-    Introducing_JavaScript_objects: JavaScript 物件介紹
     Asynchronous_JavaScript: 非同步的 JavaScript
     Client-side_web_APIs: 客戶端 web APIs
     Web_forms: 網頁表單-與使用者資料合作
-    Web_forms_core: 核心的表單學習途徑
-    Web_forms_advanced: 深入網頁表單
-    Accessibility_—_Make_the_web_usable_by_everyone: 無障礙網頁 — 每個人都可以使用的網頁
-    Accessibility_guides: 無障礙網頁指南
-    Tools_and_testing: 工具與測試
-    Cross_browser_testing: 跨瀏覽器測試
-    Git_and_GitHub: Git and GitHub
-    Client-side_web_development_tools: Client-side web development tools
-    Introduction_to_client-side_frameworks: 介紹前端框架
-    React: React
-    Ember: Ember
-    Vue: Vue
-    Svelte: Svelte
-    Angular: Angular
-    Server-side_website_programming: 伺服端網站程式設計
-    First_steps: 第一步
     Django_web_framework_(Python): Django 網站框架 (Python)
-    Express_Web_Framework_(Node.js_JavaScript): Express 網站框架 (Node.js/JavaScript)
     Further_resources: 更多資源
-    Common_questions: 常見問題
   fr:
-    Complete_beginners_start_here: Vous débutez&nbsp;? Commencez ici&nbsp;!
-    Getting_started_with_the_web: Démarrer avec le Web
-    HTML_Structuring_the_web: HTML — Structurer le Web
-    Introduction_to_HTML: Introduction à HTML
-    Multimedia_and_embedding: Multimédia et contenu embarqué
-    HTML_tables: Tableaux HTML
-    CSS_Styling_the_web: CSS — Mettre en forme le Web
-    CSS_first_steps: Premiers pas en CSS
-    CSS_building_blocks: Blocs de construction CSS
-    Styling_text: Mise en forme du texte
     CSS_layout: Disposition en CSS
-    JavaScript_dynamic_client-side_scripting: JavaScript — Scripts et dynamisme côté client
-    JavaScript_first_steps: Premiers pas en JavaScript
-    JavaScript_building_blocks: Blocs de construction JavaScript
-    Introducing_JavaScript_objects: Introduction aux objets JavaScript
     Asynchronous_JavaScript: JavaScript asynchrone
     Client-side_web_APIs: Les API web côté client
     Web_forms: Formulaires web — Travailler avec les données des utilisateur·rice·s
-    Web_forms_core: Parcours sur les fondamentaux des formulaires web
-    Web_forms_advanced: Fonctionnalités avancées des formulaires
-    Accessibility_—_Make_the_web_usable_by_everyone: Accessibilité — Rendre le Web utilisable par toutes et tous
-    Accessibility_guides: Guides sur l'accessibilité
-    MathML_Writing_mathematics: MathML — Écrire des formules mathématiques sur le Web
-    MathML_first_steps: Premiers pas en MathML
-    Tools_and_testing: Outils et tests
-    Cross_browser_testing: Tests entre les différents navigateurs
-    Git_and_GitHub: Git et GitHub
-    Client-side_web_development_tools: Outils pour le développement web côté client
-    Introduction_to_client-side_frameworks: Introduction aux frameworks côté client
-    React: React
-    Ember: Ember
-    Vue: Vue
-    Svelte: Svelte
-    Angular: Angular
-    Server-side_website_programming: Programmation web côté serveur
-    First_steps: Premiers pas
     Django_web_framework_(Python): Django (Python)
-    Express_Web_Framework_(Node.js_JavaScript): Express (Node.js/JavaScript)
     Further_resources: Ressources complémentaires
-    Common_questions: Questions fréquentes
   ja:
-    Complete_beginners_start_here: 完全な初心者はこちらから!
-    Getting_started_with_the_web: ウェブ入門
-    HTML_Structuring_the_web: HTML — ウェブの構造化
-    Introduction_to_HTML: HTML概論
-    Multimedia_and_embedding: マルチメディアと埋め込み
-    HTML_tables: HTML 表
-    CSS_Styling_the_web: CSS — ウェブのスタイル設定
-    CSS_first_steps: CSS の第一歩
-    CSS_building_blocks: CSS の構成要素
-    Styling_text: テキストの装飾
     CSS_layout: CSS レイアウト
-    JavaScript_dynamic_client-side_scripting: JavaScript — 動的クライアントサイドスクリプト
-    JavaScript_first_steps: JavaScript の第一歩
-    JavaScript_building_blocks: JavaScript の構成要素
-    Introducing_JavaScript_objects: JavaScript オブジェクトの紹介
     Asynchronous_JavaScript: 非同期 JavaScript
     Client-side_web_APIs: クライアントサイド Web API
     Web_forms: ウェブフォーム — ユーザーデータの操作
-    Web_forms_core: ウェブフォームの構成要素
-    Web_forms_advanced: 高度なウェブフォームテクニック
-    Accessibility_—_Make_the_web_usable_by_everyone: アクセシビリティ — 誰もウェブを利用できるようにする
-    Accessibility_guides: アクセシビリティガイド
-    Performance: パフォーマンス — ウェブサイトを高速かつ応答性の高いものにする
-    Performance_guides: パフォーマンスガイド
-    MathML_Writing_mathematics: MathML — MathML を使用して数学を記述する
-    MathML_first_steps: MathML の最初のステップ
-    Games_Developing_for_web: ゲーム — ウェブ用ゲームの開発
-    Guides_and_tutorials: ガイドとチュートリアル
-    Tools_and_testing: ツールとテスト
-    Cross_browser_testing: ブラウザー横断テスト
-    Git_and_GitHub: Git と GitHub
-    Client-side_web_development_tools: クライアントサイドウェブ開発ツール
-    Introduction_to_client-side_frameworks: クライアントサイドフレームワークの概要
-    React: React
-    Ember: Ember
-    Vue: Vue
-    Svelte: Svelte
-    Angular: Angular
-    Server-side_website_programming: サーバーサイドウェブサイトプログラミング
-    First_steps: サーバーサイドのウェブサイトプログラミングの第一歩
     Django_web_framework_(Python): Django ウェブフレームワーク (Python)
-    Express_Web_Framework_(Node.js_JavaScript): Express ウェブフレームワーク (Node.js/JavaScript)
     Further_resources: その他のリソース
-    Common_questions: よくある質問
   ko:
-    Complete_beginners_start_here: 입문자들은 여기서부터 시작하세요!
-    Getting_started_with_the_web: Web과 함께 시작하기
-    HTML_Structuring_the_web: HTML — 웹 구성
-    Introduction_to_HTML: HTML 입문서
-    Multimedia_and_embedding: 멀티미디어와 임베딩
-    HTML_tables: HTML 테이블
-    CSS_Styling_the_web: CSS — 웹 꾸미기
-    CSS_first_steps: CSS 첫 번째 단계
-    CSS_building_blocks: CSS 구성요소
-    Styling_text: 텍스트 꾸미기
     CSS_layout: CSS 레이아웃
-    JavaScript_dynamic_client-side_scripting: JavaScript — 동적 클라이언트 사이드 스크립트 언어
-    JavaScript_first_steps: JavaScript 첫걸음
-    JavaScript_building_blocks: JavaScript 구성요소
-    Introducing_JavaScript_objects: JavaScript 객체
     Asynchronous_JavaScript: JavaScript의 비동기성
     Client-side_web_APIs: 클라이언트 사이드 웹 API
     Web_forms: 웹 Form — 사용자 데이터 사용하기
-    Web_forms_core: 웹 form 핵심
-    Web_forms_advanced: 고급 form
-    Accessibility_—_Make_the_web_usable_by_everyone: 접근성 - 모두를 위한 웹 만들기
-    Accessibility_guides: 접근성 안내서
-    MathML_Writing_mathematics: MathML — MathML을 이용해 수학 쓰기
-    MathML_first_steps: MathML 첫 걸음
-    Tools_and_testing: 도구과 테스트
-    Cross_browser_testing: 크로스 브라우저 테스팅
-    Git_and_GitHub: Git과 GitHub
-    Client-side_web_development_tools: 클라이언트 사이드 웹 개발 도구
-    Introduction_to_client-side_frameworks: 클라이언트 사이드 프레임워크 소개
-    React: React
-    Ember: Ember
-    Vue: Vue
-    Svelte: Svelte
-    Angular: Angular
-    Server-side_website_programming: 서버 사이드 웹사이트 프로그래밍
-    First_steps: 첫 걸음
     Django_web_framework_(Python): Django 웹 프레임워크 (Python)
-    Express_Web_Framework_(Node.js_JavaScript): Express 웹 프레임워크 (Node.js/JavaScript)
     Further_resources: 추가 자료
-    Common_questions: 자주 묻는 질문

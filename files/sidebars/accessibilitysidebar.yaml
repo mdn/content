@@ -4,8 +4,8 @@ sidebar:
   - type: section
     link: /Web/Accessibility
     title: Accessibility
-  - title: Beginners
-    link: /Learn_web_development/Core/Accessibility
+  - link: /Learn_web_development/Core/Accessibility
+    title: Beginners
     details: closed
     children:
       - /Learn_web_development/Core/Accessibility/What_is_accessibility
@@ -57,7 +57,6 @@ l10n:
   de:
     Accessibility: Barrierefreiheit
     Guides: Anleitungen
-    Learn: Barrierefreiheit lernen
     ARIA: ARIA
     ARIA_guides: ARIA-Anleitungen
     ARIA states and properties: ARIA-Zustände und -Eigenschaften

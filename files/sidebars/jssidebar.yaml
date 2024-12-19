@@ -160,14 +160,7 @@ l10n:
     Guide_Iterators_generators: Iteratoren und Generatoren
     Guide_Meta: Metaprogrammierung
     Guide_Modules: JavaScript-Module
-    Complete_beginners: Komplette Anfänger
-    Basics: JavaScript-Grundlagen
-    First_steps: Erste Schritte in JavaScript
-    Building_blocks: JavaScript-Bausteine
     Intermediate: Mittelstufe
-    Introducing_objects: Einführung in JavaScript-Objekte
-    Client-side_APIs: Client-seitige Web-APIs
-    Frameworks: Client-seitige JavaScript-Frameworks
     Language_overview: Sprachübersicht
     Data_structures: JavaScript-Datenstrukturen
     Equality: Gleichheitsvergleiche und Gleichheit
@@ -218,10 +211,8 @@ l10n:
     Dynamic_scripting_with_JavaScript: Dynamic scripting with JavaScript
     JavaScript_frameworks_and_libraries: JavaScript frameworks and libraries
     Intermediate: Intermediate
-    Advanced_JavaScript_objects: Advanced JavaScript objects
     Asynchronous_JavaScript: Asynchronous JavaScript
     Client-side_web_APIs: Client-side web APIs
-    Frameworks: Client-side JavaScript frameworks
     Language_overview: Language overview
     Data_structures: JavaScript data structures
     Equality: Equality comparisons and sameness
@@ -267,14 +258,7 @@ l10n:
     Guide_Iterators_generators: Итераторы и генераторы
     Guide_Meta: Метапрограммирование
     Guide_Modules: Модули JavaScript
-    Complete_beginners: Базовые
-    Basics: Основы JavaScript
-    First_steps: Первые шаги в JavaScript
-    Building_blocks: Структурные элементы JavaScript
     Intermediate: Средние
-    Introducing_objects: Введение в объекты JavaScript
-    Client-side_APIs: Клиентский API веба
-    Frameworks: Понимание JavaScript-фреймворков для фронтенда
     Language_overview: Language overview
     Data_structures: Структуры данных JavaScript
     Equality: Проверки на равенство и когда их использовать
@@ -320,14 +304,7 @@ l10n:
     Guide_Iterators_generators: Itérateurs et générateurs
     Guide_Meta: Métaprogrammation
     Guide_Modules: Modules JavaScript
-    Complete_beginners: Débutant
-    Basics: Les bases en JavaScript
-    First_steps: Premiers pas en JavaScript
-    Building_blocks: Les briques JavaScript
     Intermediate: Intermédiaire
-    Introducing_objects: Introduction aux objets JavaScript
-    Client-side_APIs: Les API web côté client
-    Frameworks: Les frameworks JavaScript côté client
     Language_overview: Language overview
     Data_structures: Structures de données en JavaScript
     Equality: Différents tests d'égalité
@@ -373,14 +350,7 @@ l10n:
     Guide_Iterators_generators: 迭代器和生成器
     Guide_Meta: 元编程
     Guide_Modules: JavaScript 模块
-    Complete_beginners: 快速入门
-    Basics: JavaScript 基础知识
-    First_steps: JavaScript 第一步
-    Building_blocks: 构建 JavaScript 代码块
     Intermediate: 中级
-    Introducing_objects: 介绍 JavaScript 对象
-    Client-side_APIs: 客户端 Web API
-    Frameworks: 客户端 JavaScript 框架
     Language_overview: 语言概述
     Data_structures: JavaScript 数据结构
     Equality: 如何正确判断相等性
@@ -426,14 +396,7 @@ l10n:
     Guide_Iterators_generators: イテレーターとジェネレーター
     Guide_Meta: メタプログラミング
     Guide_Modules: JavaScript モジュール
-    Complete_beginners: 初級編
-    Basics: JavaScript の基礎
-    First_steps: JavaScript の第一歩
-    Building_blocks: JavaScript の構成要素
     Intermediate: 中級編
-    Introducing_objects: JavaScript オブジェクト入門
-    Client-side_APIs: クライアントサイド Web API
-    Frameworks: クライアントサイド JavaScript フレームワーク
     Language_overview: Language overview
     Data_structures: JavaScript のデータ構造
     Equality: 等値比較と同一性
@@ -479,14 +442,7 @@ l10n:
     Guide_Iterators_generators: 반복기와 생성기
     Guide_Meta: 메타 프로그래밍
     Guide_Modules: JavaScript 모듈
-    Complete_beginners: 입문서
-    Basics: JavaScript 기본
-    First_steps: JavaScript 첫걸음
-    Building_blocks: JavaScript 구성요소
     Intermediate: 중급서
-    Introducing_objects: JavaScript 객체 소개
-    Client-side_APIs: 클라이언트 사이드 웹 API
-    Frameworks: 클라이언트 사이드 JavaScript 프레임워크
     Language_overview: JavaScript 재입문하기 (JS ​자습서)
     Data_structures: JavaScript의 타입과 자료구조
     Equality: 동치 비교 및 동일성
@@ -532,14 +488,7 @@ l10n:
     Guide_Iterators_generators: Iteradores e geradores
     Guide_Meta: Metaprogramação
     Guide_Modules: JavaScript modules
-    Complete_beginners: Completos iniciantes
-    Basics: O básico de JavaScript
-    First_steps: Primeiros passos com JavaScript
-    Building_blocks: Blocos de construção de JavaScript
     Intermediate: Intermediário
-    Introducing_objects: Introdução a objetos JavaScript
-    Client-side_APIs: APIs Web para aplicações Cliente
-    Frameworks: Client-side JavaScript frameworks
     Language_overview: Language overview
     Data_structures: Estruturas de dados de JavaScript
     Equality: Comparadores de igualdade e semelhança

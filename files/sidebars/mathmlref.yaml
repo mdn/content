@@ -4,8 +4,8 @@ sidebar:
   - type: section
     link: /Web/MathML
   - children:
-      - title: Beginners
-        link: /Web/MathML/Guides
+      - link: /Web/MathML/Guides
+        title: Beginners
         details: closed
         children:
           - /Web/MathML/Guides/Getting_started
