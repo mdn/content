@@ -80,8 +80,15 @@ In addition, the specification provides CSS-only mechanisms to:
   - {{cssxref("inline-size")}}
   - {{cssxref("min-block-size")}}
   - {{cssxref("min-inline-size")}}
+  - {{cssxref("block-size")}}
   - {{cssxref("max-block-size")}}
   - {{cssxref("max-inline-size")}}
+  - {{cssxref("margin-block")}}
+  - {{cssxref("margin-block-end")}}
+  - {{cssxref("margin-block-start")}}
+  - {{cssxref("margin-inline")}}
+  - {{cssxref("margin-inline-end")}}
+  - {{cssxref("margin-inline-start")}}
   - [Inset properties](/en-US/docs/Glossary/Inset_properties) glossary term
 - [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module:
   - {{cssxref("top")}}
@@ -95,7 +102,11 @@ In addition, the specification provides CSS-only mechanisms to:
   - {{cssxref("min-height")}}
   - {{cssxref("max-width")}}
   - {{cssxref("max-height")}}
-  - {{cssxref("block-size")}}
+  - {{cssxref("margin")}}
+  - {{cssxref("margin-bottom")}}
+  - {{cssxref("margin-left")}}
+  - {{cssxref("margin-right")}}
+  - {{cssxref("margin-top")}}
 - [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module:
   - {{cssxref("align-items")}}
   - {{cssxref("align-self")}}
