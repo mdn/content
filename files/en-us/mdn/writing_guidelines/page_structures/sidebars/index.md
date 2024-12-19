@@ -214,7 +214,7 @@ The links to those pages would be grouped into a child list structure like this:
   - CORS-safelisted request header
   - CORS-safelisted response header
 
-More realistic examples can be found in the [CSS](/en-US/docs/Web/CSS/) sidebar definition (see [`cssref.yaml`](https://github.com/mdn/content/blob/main/files/sidebars/cssref.yaml)), where `listSubPagesGrouped` is used to group together links of related shorthand and longhand properties. The list item that generates the properties sidebar menu looks like this:
+More realistic examples can be found in the [CSS](/en-US/docs/Web/CSS) sidebar definition (see [`cssref.yaml`](https://github.com/mdn/content/blob/main/files/sidebars/cssref.yaml)), where `listSubPagesGrouped` is used to group together links of related shorthand and longhand properties. The list item that generates the properties sidebar menu looks like this:
 
 ```yaml
 - type: listSubPagesGrouped
