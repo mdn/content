@@ -6,7 +6,7 @@ page-type: guide
 
 Events are signals fired inside the browser window that notify of changes in the browser or operating system environment. Programmers can create _event handler_ code that will run when an event fires, allowing web pages to respond appropriately to change.
 
-This page provides a very brief "reminder" of how to work with events and event handlers. New developers should instead read [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events).
+This page provides a very brief "reminder" of how to work with events and event handlers. New developers should instead read [Introduction to events](/en-US/docs/Learn_web_development/Core/Scripting/Events).
 
 ## What are the available events?
 
@@ -19,7 +19,7 @@ You can use the [Event reference](/en-US/docs/Web/Events#event_index) to find ou
 There are two recommended approaches for registering handlers. Event handler code can be made to run when an event is triggered by assigning it to the target element's corresponding _onevent_ property, or by registering the handler as a listener for the element using the {{domxref("EventTarget.addEventListener", "addEventListener()")}} method. In either case the handler will receive an object that conforms to the [`Event` interface](/en-US/docs/Web/API/Event) (or a [derived interface](/en-US/docs/Web/API/Event#introduction)). The main difference is that multiple event handlers can be added (or removed) using the event listener methods.
 
 > [!WARNING]
-> A third approach for setting event handlers using HTML onevent attributes is not recommended! They inflate the markup and make it less readable and harder to debug. For more information see [Inline event handlers](/en-US/docs/Learn/JavaScript/Building_blocks/Events#inline_event_handlers_—_dont_use_these).
+> A third approach for setting event handlers using HTML onevent attributes is not recommended! They inflate the markup and make it less readable and harder to debug. For more information see [Inline event handlers](/en-US/docs/Learn_web_development/Core/Scripting/Events#inline_event_handlers_—_dont_use_these).
 
 ### Using onevent properties
 
@@ -88,7 +88,7 @@ controller.abort(); // removes any/all event handlers associated with this contr
 
 <section id="Quick_links">
   <ol>
-    <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
+    <li><a href="/en-US/docs/Learn_web_development/Core/Scripting/Events">Introduction to events</a></li>
     <li><a href="/en-US/docs/Web/Events">Event reference</a></li>
   </ol>
 </section>
