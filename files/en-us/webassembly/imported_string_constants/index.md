@@ -59,8 +59,8 @@ And the accompanying `importObject` like this:
 importObject = {
   ...,
   string_constants: {
-    hello: "hello ",
-    world: "world!",
+    "hello ": "hello ",
+    "world!": "world!",
     ...
   },
 };
@@ -78,7 +78,7 @@ Imported global string constants are enabled by including the `compileOptions.im
 
 ```js
 WebAssembly.compile(bytes, {
-  importedStringConstants: "#",
+  importedStringConstants: "string_constants",
 });
 ```
 
@@ -98,15 +98,17 @@ The `compileOptions` object is available to the following functions:
 Over in your WebAssembly module, you can now import string literals, specifying the same namespace you specified in `importedStringConstants` over in the JavaScript:
 
 ```wasm
-(global $h (import "#" "hello ") externref)
-(global $w (import "#" "world!") externref)
+(global $h (import "string_constants" "hello ") externref)
+(global $w (import "string_constants" "world!") externref)
 ```
 
-The Wasm engine then looks at all the imported globals in the `#` namespace, and creates a string equal to each specified import name. The only reason you wouldn't use this is if you explicitly needed the import names to be different to the actual strings, which isn't very likely.
+The Wasm engine then looks at all the imported globals in the `string_constants` namespace, and creates a string equal to each specified import name.
 
 ### A note on namespace choices
 
-The above example uses `"#"` as the imported global string namespace for illustrative purposes. In production, however, it is best practice to use the empty string (`""`) to save on module file size. The namespace is repeated for every string literal, and real-world modules can have thousands of them, so the saving can be significant.
+The above example uses `"string_constants"` as the imported global string namespace for illustrative purposes. In production, however, it is best practice to use the empty string (`""`) to save on module file size. The namespace is repeated for every string literal, and real-world modules can have thousands of them, so the saving can be significant.
+
+If you are already using the `""` namespace for some other purpose, you should consider using a single-character namespace for your strings such as `"s"`, `"'"`, or `"#"`.
 
 The namespace choice is generally made by the authors of the toolchain that will generate the Wasm modules. Once you have a `.wasm` file and want to embed it in your JavaScript, you can't freely choose this namespace any more; you have to use what the `.wasm` file expects.
 
@@ -126,7 +128,7 @@ const importObject = {
 
 const compileOptions = {
   builtins: ["js-string"], // Enable JavaScript string builtins
-  importedStringConstants: "#", // Enable imported global string constants
+  importedStringConstants: "string_constants", // Enable imported global string constants
 };
 
 fetch("log-concat.wasm")
@@ -139,8 +141,8 @@ The text representation of our WebAssembly module code looks like this — notic
 
 ```wasm
 (module
-  (global $h (import "#" "hello ") externref)
-  (global $w (import "#" "world!") externref)
+  (global $h (import "string_constants" "hello ") externref)
+  (global $w (import "string_constants" "world!") externref)
   (func $concat (import "wasm:js-string" "concat")
     (param externref externref) (result (ref extern)))
   (func $log (import "m" "log") (param externref))

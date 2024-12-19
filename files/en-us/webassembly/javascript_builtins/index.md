@@ -28,16 +28,45 @@ The below sections detail the available builtins. Other builtins are likely to b
 
 ### String operations
 
-The {{jsxref("String")}} operations with builtin equivalents are:
+The available {{jsxref("String")}} builtins are:
 
-- {{jsxref("String.fromCharCode()")}} (`"wasm:js-string" "fromCharCode"`)
-- {{jsxref("String.fromCodePoint()")}} (`"wasm:js-string" "fromCodePoint"`)
-- {{jsxref("String.prototype.charCodeAt()")}} (`"wasm:js-string" "charCodeAt"`)
-- {{jsxref("String.prototype.codePointAt()")}} (`"wasm:js-string" "codePointAt"`)
-- {{jsxref("String.prototype.length")}} (`"wasm:js-string" "length"`)
-- {{jsxref("String.prototype.concat()")}} (`"wasm:js-string" "concat"`)
-- {{jsxref("String.prototype.substring()")}} (`"wasm:js-string" "substring"`)
-- {{jsxref("String.prototype.localeCompare()")}} (`"wasm:js-string" "compare"`)
+- `"wasm:js-string" "cast"`
+
+  - : Throws an error if the provided value is not a string. Roughly equivalent to:
+
+    ```js
+    if (typeof obj !== "string") throw new WebAssembly.RuntimeError();
+    ```
+
+- `"wasm:js-string" "compare"`
+  - : Compares two string values and determines their order. Returns `-1` if the first string is [less than](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than) the second, `1` if the first string is [greater than](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than) the second, and `0` if the strings are [strictly equal](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality).
+- `"wasm:js-string" "concat"`
+  - : Equivalent to {{jsxref("String.prototype.concat()")}}.
+- `"wasm:js-string" "charCodeAt"`
+  - : Equivalent to {{jsxref("String.prototype.charCodeAt()")}}.
+- `"wasm:js-string" "codePointAt"`
+  - : Equivalent to {{jsxref("String.prototype.codePointAt()")}}.
+- `"wasm:js-string" "equals"`
+  - : Compares two string values for [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality), returning `1` if they are equal, and `0` if not.
+- `"wasm:js-string" "fromCharCode"`
+  - : Equivalent to {{jsxref("String.fromCharCode()")}}.
+- `"wasm:js-string" "fromCharCodeArray"`
+  - : Creates a string from a Wasm array of `i16` values.
+- `"wasm:js-string" "fromCodePoint"`
+  - : Equivalent to {{jsxref("String.fromCodePoint()")}}.
+- `"wasm:js-string" "intoCharCodeArray"`
+  - : Writes a string's char codes into a Wasm array of `i16` values.
+- `"wasm:js-string" "length"`
+  - : Equivalent to {{jsxref("String.prototype.length")}}.
+- `"wasm:js-string" "substring"`
+  - : Equivalent to {{jsxref("String.prototype.substring()")}}.
+- `"wasm:js-string" "test"`
+
+  - : Returns `0` if the provided value is not a string, or `1` if it is a string. Roughly equivalent to:
+
+    ```js
+    typeof obj === "string";
+    ```
 
 You can find a full list of the defined builtins, along with Wasm code listings, at [JS String Builtin API](https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md#js-string-builtin-api).
 
@@ -135,7 +164,7 @@ const importObject = {
 
 const compileOptions = {
   builtins: ["js-string"], // Enable JavaScript string builtins
-  importedStringConstants: "#", // Enable imported global string constants
+  importedStringConstants: "string_constants", // Enable imported global string constants
 };
 
 fetch("log-concat.wasm")
@@ -159,8 +188,8 @@ The text representation of our WebAssembly module code looks like this:
 
 ```wasm
 (module
-  (global $h (import "#" "hello ") externref)
-  (global $w (import "#" "world!") externref)
+  (global $h (import "string_constants" "hello ") externref)
+  (global $w (import "string_constants" "world!") externref)
   (func $concat (import "wasm:js-string" "concat")
     (param externref externref) (result (ref extern)))
   (func $log (import "m" "log") (param externref))
@@ -171,7 +200,7 @@ The text representation of our WebAssembly module code looks like this:
 
 This code:
 
-- Imports two global string constants, `"hello "` and `"world!"`, with the `"#"` namespace as specified in the JavaScript. They are given names of `$h` and `$w`.
+- Imports two global string constants, `"hello "` and `"world!"`, with the `"string_constants"` namespace as specified in the JavaScript. They are given names of `$h` and `$w`.
 - Imports the [`concat`](https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md#wasmjs-string-concat) builtin from the `wasm:` namespace, giving it a name of `$concat` and specifying that it has two parameters and a return value.
 - Imports the imported `"log"` function from the `"m"` namespace, as specified in the JavaScript `importObject` object, giving it a name of `$log` and specifying that it has a parameter. We decided to include a regular import as well as a builtin in the example, to show you how the two approaches compare.
 - Defines a function that will be exported with the name `"main"`. This function calls `$log`, passing it a `$concat` call as a parameter. The `$concat` call is passed the `$h` and `$w` global string constants as parameters.

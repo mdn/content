@@ -45,7 +45,7 @@ new WebAssembly.Module(bufferSource, compileOptions)
     - `importedStringConstants` {{optional_inline}}
       - : A string specifying a namespace for [imported global string constants](/en-US/docs/WebAssembly/Imported_string_constants). This property needs to be specified if you wish to use imported global string constants in the Wasm module.
 
-#### Exceptions
+### Exceptions
 
 - If the parameter is not of the correct type or structure, a
   {{jsxref("TypeError")}} is thrown.
@@ -94,7 +94,7 @@ const importObject = {
 
 const compileOptions = {
   builtins: ["js-string"], // Enable JavaScript string builtins
-  importedStringConstants: "#", // Enable imported global string constants
+  importedStringConstants: "string_constants", // Enable imported global string constants
 };
 
 fetch("log-concat.wasm")
