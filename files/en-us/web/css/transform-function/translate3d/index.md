@@ -61,6 +61,10 @@ translate3d(tx, ty, tz)
   </tbody>
 </table>
 
+## Formal syntax
+
+{{CSSSyntax}}
+
 ## Examples
 
 ### Using a single axis translation
