@@ -1,6 +1,6 @@
 ---
 title: Using the View Transitions API
-slug: Web/API/View_Transitions_API/Using
+slug: Web/API/View_Transition_API/Using
 page-type: guide
 status:
   - experimental
@@ -8,7 +8,7 @@ status:
 
 {{DefaultAPISidebar("View Transitions API")}}
 
-This article explains the theory behind how the [View Transitions API](/en-US/docs/Web/API/View_Transitions_API) works, how to create view transitions and customize the transition animations, and how to manipulate active view transitions. This covers view transitions for both DOM state updates in a single-page app (SPA), and navigating between documents in a multi-page app (MPA).
+This article explains the theory behind how the [View Transitions API](/en-US/docs/Web/API/View_Transition_API) works, how to create view transitions and customize the transition animations, and how to manipulate active view transitions. This covers view transitions for both DOM state updates in a single-page app (SPA), and navigating between documents in a multi-page app (MPA).
 
 ## The view transition process
 
@@ -125,7 +125,7 @@ Our [View Transitions MPA demo](https://mdn.github.io/dom-examples/view-transiti
 
 ## Customizing your animations
 
-The View Transitions pseudo-elements have default [CSS Animations](/en-US/docs/Web/CSS/CSS_animations) applied (which are detailed in their [reference pages](/en-US/docs/Web/API/View_Transitions_API#pseudo-elements)).
+The View Transitions pseudo-elements have default [CSS Animations](/en-US/docs/Web/CSS/CSS_animations) applied (which are detailed in their [reference pages](/en-US/docs/Web/API/View_Transition_API#pseudo-elements)).
 
 Most appearance transitions are given a default smooth cross-fade animation, as mentioned above. There are some exceptions:
 

@@ -16,7 +16,7 @@ This object type is made available in the following ways:
   - In the outgoing page via the {{domxref("Window.pageswap_event", "pageswap")}} event object's {{domxref("PageSwapEvent.viewTransition")}} property.
   - In the inbound page via the {{domxref("Window.pagereveal_event", "pagereveal")}} event object's {{domxref("PageRevealEvent.viewTransition")}} property.
 
-When a view transition is triggered by a `startViewTransition()` call (or a page navigation in the case of MPA transitions), a sequence of steps is followed as explained in [The view transition process](/en-US/docs/Web/API/View_Transitions_API/Using#the_view_transition_process). This also explains when the different promises fulfill.
+When a view transition is triggered by a `startViewTransition()` call (or a page navigation in the case of MPA transitions), a sequence of steps is followed as explained in [The view transition process](/en-US/docs/Web/API/View_Transition_API/Using#the_view_transition_process). This also explains when the different promises fulfill.
 
 ## Instance properties
 

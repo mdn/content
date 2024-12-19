@@ -1,6 +1,6 @@
 ---
 title: View Transitions API
-slug: Web/API/View_Transitions_API
+slug: Web/API/View_Transition_API
 page-type: web-api-overview
 browser-compat:
   - api.Document.startViewTransition
@@ -30,7 +30,7 @@ The View Transitions API provides an easy way of handling the required view chan
 
 Creating a view transition that uses the browser's default transition animations is very quick to do, and there are features that allow you to both customize the transition animation and manipulate the view transition itself (for example specify circumstances under which the animation is skipped), for both SPA and MPA view transitions.
 
-See [Using the View Transitions API](/en-US/docs/Web/API/View_Transitions_API/Using) for more information.
+See [Using the View Transitions API](/en-US/docs/Web/API/View_Transition_API/Using) for more information.
 
 ## Interfaces
 
