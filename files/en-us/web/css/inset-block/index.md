@@ -28,7 +28,7 @@ inset-block: 3px 10px;
 inset-block: 2.4em 3em;
 inset-block: 10px; /* value applied to start and end */
 inset-block: auto anchor(start);
-inset-block: calc(anchor(--myAnchor 50%) + 10px) auto;
+inset-block: 10em anchor-size(--myAnchor height, 10%);
 
 /* <percentage>s of the width or height of the containing block */
 inset-block: 10% 5%;

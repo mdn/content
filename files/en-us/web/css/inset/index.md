@@ -33,7 +33,8 @@ inset: 4px 8px; /* top/bottom left/right */
 inset: 5px 15px 10px; /* top left/right bottom */
 inset: 2.4em 3em 3em 3em; /* top right bottom left */
 inset: calc(anchor(50%) + 10px) anchor(self-start) auto auto;
-inset: auto auto anchor(center) anchor(self-end);
+inset: anchor-size(block) calc(anchor(50%) + 10px) auto
+  calc(anchor-size(width) / 4);
 
 /* <percentage>s of the width (left/right) or height (top/bottom) of the containing block */
 inset: 10% 5% 5% 5%;

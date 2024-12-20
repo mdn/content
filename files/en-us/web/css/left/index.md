@@ -17,8 +17,8 @@ The **`left`** [CSS](/en-US/docs/Web/CSS) property participates in specifying th
 /* <length> values */
 left: 3px;
 left: 2.4em;
-left: calc(anchor(right) + 20px);
 left: anchor(--myAnchor 50%);
+left: calc(anchor-size(--myAnchor inline, 100px) * 2);
 
 /* <percentage>s of the width of the containing block */
 left: 10%;
@@ -38,11 +38,11 @@ left: unset;
 
 - {{cssxref("&lt;length&gt;")}}
 
-  - : A negative, null, or positive {{cssxref("&lt;length&gt;")}} that represents:
+  - : A negative, null, or positive {{cssxref("&lt;length&gt;")}}:
 
-    - for _absolutely positioned elements_, the distance to the left edge of the containing block.
-    - for [_anchor-positioned elements_](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#using_inset_properties_with_anchor_function_values), the {{cssxref("anchor()")}} function resolves to a {{cssxref("&lt;length&gt;")}} value relative to the position of the associated _anchor element_'s left or right edge.
-    - for _relatively positioned elements_, the distance that the element is moved to the right of its normal position.
+    - for _absolutely positioned elements_, it represents the distance to the left edge of the containing block.
+    - for _anchor-positioned elements_, the {{cssxref("anchor()")}} function resolves to a {{cssxref("&lt;length&gt;")}} value relative to the position of the associated _anchor element_'s left or right edge (see [Using inset properties with `anchor()` function values](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#using_inset_properties_with_anchor_function_values)), and the {{cssxref("anchor-size()")}} function resolves to a {{cssxref("&lt;length&gt;")}} value relative to the associated anchor element's width or height (see [Setting element position based on anchor size](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#setting_element_position_based_on_anchor_size)).
+    - for _relatively positioned elements_, it represents the distance that the element is moved to the right of its normal position.
 
 - {{cssxref("&lt;percentage&gt;")}}
   - : A {{cssxref("&lt;percentage&gt;")}} of the containing block's width.
