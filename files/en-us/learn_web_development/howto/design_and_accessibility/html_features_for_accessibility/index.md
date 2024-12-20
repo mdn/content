@@ -4,7 +4,7 @@ slug: Learn_web_development/Howto/Design_and_accessibility/HTML_features_for_acc
 page-type: learn-faq
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 The following content describes specific features of HTML that should be used to make a web page more accessible to people with different disabilities.
 
