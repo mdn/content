@@ -23,7 +23,7 @@ isPointInFill(point)
 ### Parameters
 
 - `point`
-  - : A DOMPointInit object interpreted as a point in the local coordinate system
+  - : A {{domxref("DOMPointInit")}} object interpreted as a point in the local coordinate system
     of the element.
 
 ### Return value
@@ -45,8 +45,8 @@ A boolean indicating whether the given point is within the fill or not.
     cx="50"
     cy="50"
     r="45"
-    fill="white"
-    stroke="black"
+    fill="rgb(0 0 0 / 25%)"
+    stroke="rgb(0 0 0 / 50%)"
     stroke-width="10" />
 </svg>
 ```
@@ -57,21 +57,21 @@ A boolean indicating whether the given point is within the fill or not.
 const svg = document.getElementsByTagName("svg")[0];
 const circle = document.getElementById("circle");
 const points = [
-  ["10", "10"],
-  ["40", "30"],
-  ["70", "40"],
-  ["15", "75"],
-  ["83", "83"],
+  [10, 10],
+  [40, 30],
+  [70, 40],
+  [15, 75],
+  [83, 83],
 ];
 
 for (const point of points) {
   let isPointInFill;
 
   try {
-    const pointObj = new DOMPoint(point[0], point[1]);
+    const pointObj = { x: point[0], y: point[1] };
     isPointInFill = circle.isPointInFill(pointObj);
   } catch (e) {
-    // Fallback for browsers that don't support DOMPoint as an argument
+    // Fallback for browsers that don't support DOMPointInit as an argument
     const pointObj = svg.createSVGPoint();
     pointObj.x = point[0];
     pointObj.y = point[1];
@@ -84,10 +84,16 @@ for (const point of points) {
     "http://www.w3.org/2000/svg",
     "circle",
   );
-  pointEl.style.cx = point[0];
-  pointEl.style.cy = point[1];
-  pointEl.style.r = 5;
-  pointEl.style.fill = isPointInFill ? "seagreen" : "rgb(255 0 0 / 50%)";
+  pointEl.cx.baseVal.value = point[0];
+  pointEl.cy.baseVal.value = point[1];
+  pointEl.r.baseVal.value = 5;
+  if (isPointInFill) {
+    pointEl.setAttribute("fill", "rgb(0 170 0 / 50%)");
+    pointEl.setAttribute("stroke", "rgb(0 170 0)");
+  } else {
+    pointEl.setAttribute("fill", "rgb(170 0 0 / 50%)");
+    pointEl.setAttribute("stroke", "rgb(170 0 0)");
+  }
   svg.appendChild(pointEl);
 }
 ```
