@@ -71,6 +71,10 @@ scaleX(s)
   </tbody>
 </table>
 
+## Formal syntax
+
+{{CSSSyntax}}
+
 ## Examples
 
 ### HTML

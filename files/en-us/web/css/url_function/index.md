@@ -85,11 +85,9 @@ The **`url()`** function can be included as a value for
 - `<url-modifier>`
   - : In the future, the `url()` function may support specifying a modifier, an identifier or a functional notation, which alters the meaning of the URL string. This is not supported and not fully defined in the specification.
 
-### Formal syntax
+## Formal syntax
 
-```plain
-url( <string> <url-modifier>* )
-```
+{{CSSSyntax("url")}}
 
 ## Examples
 
