@@ -70,3 +70,8 @@ Connection: close
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Connection management in HTTP/1.x](/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x)
+- [Protocol upgrade mechanism](/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism)

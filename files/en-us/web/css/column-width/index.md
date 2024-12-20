@@ -86,5 +86,5 @@ The `column-width` property is specified as one of the values listed below.
 
 ## See also
 
-- [Multiple-column Layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout) (Learn Layout)
+- [Learn: Multiple-column Layout](/en-US/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout) (Learn Layout)
 - [Basic Concepts of Multicol](/en-US/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)

@@ -44,7 +44,7 @@ Another implicit indication that `PATCH` is supported is the {{HTTPHeader("Accep
     </tr>
     <tr>
       <th scope="row">
-        Allowed in <a href="/en-US/docs/Learn/Forms">HTML forms</a>
+        Allowed in <a href="/en-US/docs/Learn_web_development/Extensions/Forms">HTML forms</a>
       </th>
       <td>No</td>
     </tr>
@@ -116,6 +116,11 @@ ETag: "e0023aa4f"
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+The browser doesn't use the `PATCH` method for user-initiated actions, so "browser compatibility" doesn't apply.
+Developers can set this request method using [`fetch()`](/en-US/docs/Web/API/Window/fetch).
 
 ## See also
 

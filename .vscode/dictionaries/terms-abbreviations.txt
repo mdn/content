@@ -284,6 +284,7 @@ iconset
 idents
 IERS
 IMSC
+inferencing
 infobar
 infobox
 infoboxes
@@ -561,6 +562,7 @@ retarget
 retargeted
 retargeting
 retargetings
+RFCOMM
 RGTC
 roadmaps
 Rockhopper

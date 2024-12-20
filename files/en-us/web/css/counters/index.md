@@ -43,7 +43,7 @@ The return value is a string containing all the values of all the counters in th
 > [!NOTE]
 > For information about non-concatenated counters, see the {{cssxref("counter", "counter()")}} function, which omits the `<string>` as a parameter.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 

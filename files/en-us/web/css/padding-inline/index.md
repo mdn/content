@@ -48,7 +48,7 @@ The `padding-inline` property may be specified with one or two values. If one va
 
 ## Description
 
-Values for this property correspond to the {{cssxref("padding-top")}} and {{cssxref("padding-bottom")}}, or {{cssxref("padding-right")}}, and {{cssxref("padding-left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
+The padding values specified by `padding-inline` can be equivalent to the {{cssxref("padding-top")}} and {{cssxref("padding-bottom")}} properties or the {{cssxref("padding-right")}} and {{cssxref("padding-left")}} properties, depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 
 ## Formal definition
 

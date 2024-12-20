@@ -200,8 +200,6 @@ The {{CSSxRef("color_value","&lt;color&gt;")}} CSS [data type](/en-US/docs/Web/C
   - : Specifies a particular, specified colorspace rather than the implicit sRGB colorspace.
 - {{CSSxRef("color_value/color-mix", "color-mix()")}}
   - : Mixes two color values in a given colorspace by a given amount.
-- {{CSSxRef("color_value/color-contrast", "color-contrast()")}}
-  - : Selects the highest color contrast from a list of colors, compare to a base color value.
 - {{CSSxRef("color_value/device-cmyk", "device-cmyk()")}}
   - : Defines CMYK colors in a device-dependent way.
 - {{CSSXref("color_value/light-dark", "light-dark()")}}
@@ -344,4 +342,4 @@ The anchor positioning functions are used when positioning and sizing anchor-pos
 ## See also
 
 - [CSS Values and Units](/en-US/docs/Web/CSS/CSS_Values_and_Units)
-- [Introduction to CSS: Values and Units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Learn: Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
