@@ -58,9 +58,42 @@ Content:Learn:
   - changed-files:
       - all-globs-to-any-file:
           - files/en-us/learn_web_development/**
+          - "!files/en-us/learn_web_development/core/css_layout/**"
+          - "!files/en-us/learn_web_development/core/styling_basics/**"
+          - "!files/en-us/learn_web_development/core/text_styling/**"
+          - "!files/en-us/learn_web_development/core/design_for_developers/**"
+          - "!files/en-us/learn_web_development/core/frameworks_libraries/**"
+          - "!files/en-us/learn_web_development/core/scripting/**"
+          - "!files/en-us/learn_web_development/core/structuring_content/**"
   - changed-files:
       - any-glob-to-any-file:
           - files/en-us/web/tutorials/**
+Content:Learn:Accessibility:
+  - changed-files:
+      - any-glob-to-any-file:
+          - files/en-us/learn_web_development/core/accessibility/**
+Content:Learn:CSS:
+  - changed-files:
+      - any-glob-to-any-file:
+          - files/en-us/learn_web_development/core/css_layout/**
+          - files/en-us/learn_web_development/core/styling_basics/**
+          - files/en-us/learn_web_development/core/text_styling/**
+Content:Learn:Design:
+  - changed-files:
+      - any-glob-to-any-file:
+          - files/en-us/learn_web_development/core/design_for_developers/**
+Content:Learn:Frameworks:
+  - changed-files:
+      - any-glob-to-any-file:
+          - files/en-us/learn_web_development/core/frameworks_libraries/**
+Content:Learn:JavaScript:
+  - changed-files:
+      - any-glob-to-any-file:
+          - files/en-us/learn_web_development/core/scripting/**
+Content:Learn:HTML:
+  - changed-files:
+      - any-glob-to-any-file:
+          - files/en-us/learn_web_development/core/structuring_content/**
 Content:Manifest:
   - changed-files:
       - any-glob-to-any-file:
