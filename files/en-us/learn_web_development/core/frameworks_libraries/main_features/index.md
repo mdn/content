@@ -253,7 +253,7 @@ The problem of passing data through many layers of components is called prop dri
 
 To circumvent prop drilling, frameworks provide functionality known as dependency injection, which is a way to get certain data directly to the components that need it, without passing it through intervening levels. Each framework implements dependency injection under a different name, and in a different way, but the effect is ultimately the same.
 
-Angular calls this process [dependency injection](https://angular.io/guide/dependency-injection); Vue has [`provide()` and `inject()` component methods](https://v2.vuejs.org/v2/api/#provide-inject); React has a [Context API](https://react.dev/learn/passing-data-deeply-with-context); Ember shares state through [services](https://guides.emberjs.com/release/services/).
+Angular calls this process [dependency injection](https://angular.dev/guide/di/dependency-injection); Vue has [`provide()` and `inject()` component methods](https://v2.vuejs.org/v2/api/#provide-inject); React has a [Context API](https://react.dev/learn/passing-data-deeply-with-context); Ember shares state through [services](https://guides.emberjs.com/release/services/).
 
 ### Lifecycle
 
