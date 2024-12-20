@@ -26,7 +26,7 @@ A document will be cross-origin isolated if it is returned with an HTTP response
 - {{HTTPHeader("Cross-Origin-Opener-Policy")}} header with the directive `same-origin`.
 - {{HTTPHeader("Cross-Origin-Embedder-Policy")}} header with the directive `require-corp` or `credentialless`.
 
-Access to the APIs must also be allowed by the `Permissions-Policy` {{HTTPHeader("Permissions-Policy/cross-origin-isolated","cross-origin-isolated")}}.
+Access to the APIs must also be allowed by the `Permissions-Policy` {{HTTPHeader("Permissions-Policy/cross-origin-isolated", "cross-origin-isolated")}}.
 Otherwise `crossOriginIsolated` property will return `false`, and the document will not be able to use the APIs listed above with reduced restrictions.
 
 ## Value
@@ -53,7 +53,7 @@ To cross-origin isolate a document:
   ```
 
 - The {{HTTPHeader("Permissions-Policy/cross-origin-isolated","cross-origin-isolated")}} directive of the {{HTTPHeader("Permissions-Policy")}} header must not block access to the feature.
-  Note that the default value of the directive is `self`, so the permission will be granted to cross-origin isolated documents by default.
+  Note that the default allowlist of the directive is `self`, so the permission will be granted by default to cross-origin isolated documents.
 
 ### Checking if the document is cross-origin isolated
 
