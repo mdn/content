@@ -50,7 +50,7 @@ Some of the other standard sidebars that you will commonly encounter are as foll
 
 - `\{{LearnSidebar}}`
 
-  - : Present on every page within the [Learn web development section](/en-US/docs/Learn).
+  - : Present on every page within the [Learn web development section](/en-US/docs/Learn_web_development).
 
 - `\{{HTMLSidebar}}`
 
@@ -101,7 +101,7 @@ sidebar:
 
 ### Section titles
 
-A section title is a sidebar item rendered at a larger font size than normal sidebar items. This is commonly used as a title at the top of a sidebar that links to the landing page for that section of docs, or as a section divider in the case of particular large sidebars (as seen in the [Learn web development section](/en-US/docs/Learn).)
+A section title is a sidebar item rendered at a larger font size than normal sidebar items. This is commonly used as a title at the top of a sidebar that links to the landing page for that section of docs, or as a section divider in the case of particular large sidebars (as seen in the [Learn web development section](/en-US/docs/Learn_web_development).)
 
 A section title is defined by including a `type` key with a value of `section` in the list item. For example:
 
