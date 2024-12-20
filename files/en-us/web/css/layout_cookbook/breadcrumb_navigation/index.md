@@ -39,7 +39,7 @@ body {
   padding: 0 0.5rem;
 }
 
-.breadcrumb ul {
+.breadcrumb ol {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
