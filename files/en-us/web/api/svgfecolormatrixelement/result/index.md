@@ -36,7 +36,7 @@ console.log(filterName.baseVa); // the filter's assigned name
 
 ## See also
 
-- {{domxref("SVGFEColorMatrixElement.in")}}
+- {{domxref("SVGFEColorMatrixElement.in1")}}
 - {{cssxref("custom-ident")}} data type
 - CSS {{cssxref("blend-mode")}} data type
 - CSS {{cssxref("mix-blend-mode")}} property
