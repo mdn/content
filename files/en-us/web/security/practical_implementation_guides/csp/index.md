@@ -10,7 +10,7 @@ The [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Po
 
 ## Problem
 
-The main problem this article focuses on is Cross-site scripting ({{Glossary("Cross-site_scripting", "XSS")}}) attacks. These are generally due to a lack of control and awareness of the sources from which site resources are loaded. This problem gets more difficult to manage as sites become larger and more complex and increasingly rely on third-party resources such as JavaScript libraries.
+The main problem this article focuses on is cross-site scripting ({{Glossary("Cross-site_scripting", "XSS")}}) attacks. These are generally due to a lack of control and awareness of the sources from which site resources are loaded. This problem gets more difficult to manage as sites become larger and more complex and increasingly rely on third-party resources such as JavaScript libraries.
 
 > [!NOTE]
 > CSP is one part of a complete strategy for protecting against XSS attacks. There are other factors involved, such as [output encoding](/en-US/docs/Web/Security/Attacks/XSS#output_encoding) and [sanitization](/en-US/docs/Web/Security/Attacks/XSS#sanitization), which are also important.
