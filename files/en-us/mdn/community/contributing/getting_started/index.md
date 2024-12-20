@@ -36,7 +36,7 @@ To contribute, you will need a GitHub account. If you do not already have one, g
 ### Additional reading and learning material
 
 - [Basic etiquette for open source projects](/en-US/docs/MDN/Community/Open_source_etiquette): If you've never contributed to an open source project before, we encourage you to read this document.
-- [Learn web development](/en-US/docs/Learn): If you are new to HTML, CSS, JavaScript, we have some great content to help you get started.
+- [Learn web development](/en-US/docs/Learn_web_development): If you are new to HTML, CSS, JavaScript, we have some great content to help you get started.
 - [Deep dive into collaborating with pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests)
 
 Some writing-specific contribution opportunities will require a reasonable understanding of the English language. That said, do not let perfect be the enemy of "good enough." Even if your grammar isn't good, don't worry about it! We have a team of people who aim to ensure that MDN's contents are as good as possible. In addition, someone will be along to ensure your work is tidy and well-written.

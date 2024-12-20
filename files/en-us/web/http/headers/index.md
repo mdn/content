@@ -242,7 +242,8 @@ Range requests are useful for applications like media players that support rando
 - {{HTTPHeader("X-Frame-Options")}} (XFO)
   - : Indicates whether a browser should be allowed to render a page in a {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} or {{HTMLElement("object")}}.
 - {{HTTPHeader("X-Permitted-Cross-Domain-Policies")}}
-  - : Specifies if a cross-domain policy file (`crossdomain.xml`) is allowed. The file may define a policy to grant clients, such as Adobe's Flash Player (now obsolete), Adobe Acrobat, Microsoft Silverlight (now obsolete), or Apache Flex, permission to handle data across domains that would otherwise be restricted due to the [Same-Origin Policy](/en-US/docs/Web/Security/Same-origin_policy). See the [Cross-domain Policy File Specification](https://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/CrossDomain_PolicyFile_Specification.pdf) for more information.
+  - : A cross-domain policy file may grant clients, such as Adobe Acrobat or Apache Flex (among others), permission to handle data across domains that would otherwise be restricted due to the [Same-Origin Policy](/en-US/docs/Web/Security/Same-origin_policy).
+    The `X-Permitted-Cross-Domain-Policies` header overrides such policy files so that clients still block unwanted requests.
 - {{HTTPHeader("X-Powered-By")}}
   - : May be set by hosting environments or other frameworks and contains information about them while not providing any usefulness to the application or its visitors. Unset this header to avoid exposing potential vulnerabilities.
 - {{HTTPHeader("X-XSS-Protection")}}
@@ -316,7 +317,10 @@ Headers used by the [WebSockets API](/en-US/docs/Web/API/WebSockets_API) in the 
   - : Indicates how long the user agent should wait before making a follow-up request.
 - {{HTTPHeader("Server-Timing")}}
   - : Communicates one or more metrics and descriptions for the given request-response cycle.
-- `Service-Worker-Allowed`
+- {{HTTPHeader("Service-Worker")}}
+  - : Included in fetches for a service worker's script resource.
+    This header helps administrators log service worker script requests for monitoring purposes.
+- {{HTTPHeader("Service-Worker-Allowed")}}
   - : Used to remove the [path restriction](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers#why_is_my_service_worker_failing_to_register) by including this header [in the response of the Service Worker script](https://w3c.github.io/ServiceWorker/#service-worker-script-response).
 - {{HTTPHeader("SourceMap")}}
   - : Links to a {{Glossary("source map")}} so that debuggers can step through original source code instead of generated or transformed code.
