@@ -59,7 +59,7 @@ style.cssPropertyName = "value";
 
 In this example we have three buttons, which can be pressed to dynamically alter our box paragraph's border, background color, and text color to random values (see the live example at the end of this section).
 
-We know that the rule we want to alter to do this is contained inside the second stylesheet applied to the page, so we grab a reference to it using [`document.styleSheets[1]`](/en-US/docs/Web/API/Document/styleSheets).
+We know that the rule we want to alter to do this is contained inside the first stylesheet applied to the page (actually the frame in which this example is rendered), so we grab a reference to it using [`document.styleSheets[0]`](/en-US/docs/Web/API/Document/styleSheets).
 We then loop through the different rules contained inside the stylesheet, which are contained in the array found at [`stylesheet.cssRules`](/en-US/docs/Web/API/CSSStyleSheet/cssRules);
 for each one, we check whether its [`CSSStyleRule.selectorText`](/en-US/docs/Web/API/CSSStyleRule/selectorText) property is equal to the selector `.box p`, which indicates it is the one we want.
 
@@ -148,7 +148,7 @@ function randomColor() {
   return `rgb(${random(0, 255)} ${random(0, 255)} ${random(0, 255)})`;
 }
 
-const stylesheet = document.styleSheets[1];
+const stylesheet = document.styleSheets[0];
 const boxParaRule = [...stylesheet.cssRules].find(
   (r) => r.selectorText === ".box p",
 );
