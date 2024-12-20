@@ -19,7 +19,7 @@ x <= y
 
 ## Description
 
-The operands are compared using the same algorithm as the [Less than](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than) operator, with the operands swapped and the result negated. `x <= y` is generally equivalent to `!(y < x)`, except for two cases where `x <= y` and `x > y` are both `false`:
+The operands are compared using the same algorithm as the [Greater than](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than) operator, with the operands swapped and the result negated. `x <= y` is generally equivalent to `!(y > x)`, except for two cases where `x <= y` and `x > y` are both `false`:
 
 - If one of the operands gets converted to a BigInt, while the other gets converted to a string that cannot be converted to a BigInt value (it throws a [syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_BigInt_syntax) when passed to [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt)).
 - If one of the operands gets converted to `NaN`. (For example, strings that cannot be converted to numbers, or `undefined`.)
