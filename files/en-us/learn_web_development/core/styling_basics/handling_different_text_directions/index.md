@@ -347,4 +347,3 @@ You've reached the end of this article, but can you remember the most important 
 ## Summary
 
 The concepts explained in this lesson are becoming increasingly important in CSS. An understanding of the block and inline direction — and how text flow changes with a change in writing mode — will be very useful going forward. It will help you in understanding CSS even if you never use a writing mode other than a horizontal one.
-

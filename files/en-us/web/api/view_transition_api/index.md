@@ -1,6 +1,6 @@
 ---
-title: View Transitions API
-slug: Web/API/View_Transitions_API
+title: View Transition API
+slug: Web/API/View_Transition_API
 page-type: web-api-overview
 browser-compat:
   - api.Document.startViewTransition
@@ -8,9 +8,9 @@ browser-compat:
 spec-urls: https://drafts.csswg.org/css-view-transitions/
 ---
 
-{{DefaultAPISidebar("View Transitions API")}}
+{{DefaultAPISidebar("View Transition API")}}
 
-The **View Transitions API** provides a mechanism for easily creating animated transitions between different website views. This includes animating between DOM states in a single-page app (SPA), and animating the navigation between documents in a multi-page app (MPA).
+The **View Transition API** provides a mechanism for easily creating animated transitions between different website views. This includes animating between DOM states in a single-page app (SPA), and animating the navigation between documents in a multi-page app (MPA).
 
 ## Concepts and usage
 
@@ -26,11 +26,11 @@ However, creating view transitions on the web has historically been difficult:
     Accessibility issues like loss of reading position, focus confusion, and strange live region announcement behavior can also result from having the new and old content both present in the DOM at once.
 - Cross-document view transitions (i.e. across navigations between different pages in MPAs) have historically been impossible.
 
-The View Transitions API provides an easy way of handling the required view changes and transition animations for both the above use cases.
+The View Transition API provides an easy way of handling the required view changes and transition animations for both the above use cases.
 
 Creating a view transition that uses the browser's default transition animations is very quick to do, and there are features that allow you to both customize the transition animation and manipulate the view transition itself (for example specify circumstances under which the animation is skipped), for both SPA and MPA view transitions.
 
-See [Using the View Transitions API](/en-US/docs/Web/API/View_Transitions_API/Using) for more information.
+See [Using the View Transition API](/en-US/docs/Web/API/View_Transition_API/Using) for more information.
 
 ## Interfaces
 
@@ -84,7 +84,7 @@ See [Using the View Transitions API](/en-US/docs/Web/API/View_Transitions_API/Us
 
 - [Basic View Transitions SPA demo](https://mdn.github.io/dom-examples/view-transitions/spa/): A basic image gallery demo with view transitions, featuring separate animations between old and new images, and old and new captions.
 - [Basic View Transitions MPA demo](https://mdn.github.io/dom-examples/view-transitions/mpa/): A sample two-page site that demonstrates usage of cross-document (MPA) view transitions, providing a custom "swipe up" transition when the two pages are navigated between.
-- [HTTP 203 playlist](https://http203-playlist.netlify.app/): A video player demo app that features several different SPA view transitions, many of which are explained in [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/).
+- [HTTP 203 playlist](https://http203-playlist.netlify.app/): A video player demo app that features several different SPA view transitions, many of which are explained in [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/).
 - [List of Chrome DevRel team members](https://view-transitions.chrome.dev/profiles/mpa/): A basic team profile pages app that demonstrates how to use the {{domxref("Window.pagereveal_event", "pagereveal")}} and {{domxref("Window.pageswap_event", "pageswap")}} events to customize the outgoing and inbound animations of a cross-document view transition based on the "from" and "to" URLs.
 
 ## Specifications
@@ -97,5 +97,6 @@ See [Using the View Transitions API](/en-US/docs/Web/API/View_Transitions_API/Us
 
 ## See also
 
-- [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/)
-- [View Transitions API: Creating Smooth Page Transitions](https://stackdiary.com/view-transitions-api/)
+- [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/) on developer.chrome.com (2024)
+- [View Transition API: Creating Smooth Page Transitions](https://stackdiary.com/view-transitions-api/) on stackdiary.com (2023)
+- [View Transitions API: Single Page Apps Without a Framework](https://www.debugbear.com/blog/view-transitions-spa-without-framework) on www.debugbear.com (2024)

@@ -429,7 +429,6 @@ We are not expecting you to understand all of these areas now, but it certainly 
 
 Next up, you'll find a challenge that will test your understanding of the last few topics.
 
-
 ## See also
 
 - [domevents.dev](https://domevents.dev/)

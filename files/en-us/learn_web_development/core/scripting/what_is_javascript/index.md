@@ -130,7 +130,7 @@ There's a lot more available, too! However, don't get over excited just yet. You
 
 Here we'll actually start looking at some code, and while doing so, explore what actually happens when you run some JavaScript in your page.
 
-Let's briefly recap the story of what happens when you load a web page in a browser (first talked about in our [What is CSS?](/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#how_is_css_applied_to_HTML) article). When you load a web page in your browser, you are running your code (the HTML, CSS, and JavaScript) inside an execution environment (the browser tab). This is like a factory that takes in raw materials (the code) and outputs a product (the web page).
+Let's briefly recap the story of what happens when you load a web page in a browser (first talked about in our [What is CSS?](/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#how_is_css_applied_to_html) article). When you load a web page in your browser, you are running your code (the HTML, CSS, and JavaScript) inside an execution environment (the browser tab). This is like a factory that takes in raw materials (the code) and outputs a product (the web page).
 
 ![HTML, CSS and JavaScript code come together to create the content in the browser tab when the page is loaded](execution.png)
 

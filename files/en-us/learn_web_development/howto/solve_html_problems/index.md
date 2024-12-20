@@ -45,7 +45,7 @@ One of the main reasons for HTML is making navigation easy with {{Glossary("hype
 
 HTML only sets up document structure. To solve presentation issues, use {{glossary("CSS")}}, or use scripting to make your page interactive.
 
-- [How to use CSS within a webpage](/en-US/docs/Learn_web_development/Core/Styling_basics/Getting_started#adding_CSS_to_our_document)
+- [How to use CSS within a webpage](/en-US/docs/Learn_web_development/Core/Styling_basics/Getting_started#adding_css_to_our_document)
 - [How to use JavaScript within a webpage](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_JavaScript_within_a_webpage)
 
 ### Embedded content
@@ -97,6 +97,6 @@ HTML is not monolingual. It provides tools to handle common internationalization
 
 - [How to author fast-loading HTML pages](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages)
 
-## See also 
+## See also
 
 - [HTML Cheatsheet](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Cheatsheet)

@@ -279,4 +279,4 @@ In summary, we recommend looking for the string `Mobi` anywhere in the User Agen
 
 - [CSS Media Queries](/en-US/docs/Web/CSS/CSS_media_queries)
 - [HTTP Client hints](/en-US/docs/Web/HTTP/Client_hints)
-- [Implementing feature detection](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
+- [Implementing feature detection](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection)

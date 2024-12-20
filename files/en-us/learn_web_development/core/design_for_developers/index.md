@@ -40,7 +40,7 @@ Learning outcomes:
 
 Resources:
 
-- [Fundamental text and font styling](/docs/Learn_web_development/Core/Text_styling/Fundamentals)
+- [Fundamental text and font styling](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals)
 
 ## User-centered design
 
@@ -62,7 +62,7 @@ Learning outcomes:
 
 Resources:
 
-- [Accessibility overview](/docs/Learn/Accessibility)
+- [Accessibility overview](/en-US/docs/Learn_web_development/Core/Accessibility)
 - [Inclusive design principles](https://inclusivedesignprinciples.org/), inclusivedesignprinciples.org
 
 ## Design briefs
