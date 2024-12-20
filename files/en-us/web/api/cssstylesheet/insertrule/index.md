@@ -32,7 +32,7 @@ insertRule(rule, index)
     rule must contain depends on its type:
 
     - **For [rule-sets](/en-US/docs/Web/CSS/Syntax#css_statements)**, both
-      a [selector](/en-US/docs/Learn/CSS/Building_blocks/Selectors) and a
+      a [selector](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) and a
       style declaration.
     - **For [at-rules](/en-US/docs/Web/CSS/At-rule)**, both an
       at-identifier and the rule content.

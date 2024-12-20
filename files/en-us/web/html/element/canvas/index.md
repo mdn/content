@@ -178,4 +178,4 @@ ctx.fillRect(10, 10, 100, 100);
 - [WebGL](/en-US/docs/Web/API/WebGL_API) API
 - {{HTMLElement("img")}}
 - [SVG](/en-US/docs/Web/SVG)
-- [Using HTML audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)

@@ -36,4 +36,4 @@ btnEl.formAction = "/cgi-bin/publish";
 - {{domxref("HTMLButtonElement.formMethod")}}
 - {{domxref("HTMLButtonElement.formNoValidate")}}
 - {{domxref("HTMLButtonElement.formTarget")}}
-- [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data)
+- [Sending form data](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)

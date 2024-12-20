@@ -1743,10 +1743,46 @@ See [Firefox bug 1697647](https://bugzil.la/1697647) for more details.
 
 ### Prioritized Task Scheduling API
 
-The [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) provides a standardized way to prioritize all tasks belonging to an application, whether they defined in a website developer's code, or in third party libraries and frameworks.
+The [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) provides a standardized way to prioritize all tasks belonging to an application, whether they defined in a website developer's code, or in third party libraries and frameworks. ([Firefox bug 1734997](https://bugzil.la/1734997))
 
-This is enabled on Firefox Nightly (only) from Firefox 101.
-No preference is provided to allow it to be enabled in other releases.
+This feature was enabled on Firefox Nightly in Firefox 101.
+Support in Firefox Nightly 135 has been temporarily disabled in order to avoid [breakage in-the-wild](https://bugzil.la/1937232).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version changed</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>101</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>101</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>101</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>101</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.enable_web_task_scheduling</code></td>
+    </tr>
+  </tbody>
+</table>
 
 ### Notifications API
 

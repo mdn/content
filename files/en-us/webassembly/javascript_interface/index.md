@@ -44,14 +44,14 @@ The primary uses for the `WebAssembly` object are:
 
 ## Static methods
 
-- [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate_static)
-  - : The primary API for compiling and instantiating WebAssembly code, returning both a `Module` and its first `Instance`.
-- [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static)
-  - : Compiles and instantiates a WebAssembly module directly from a streamed underlying source, returning both a `Module` and its first `Instance`.
 - [`WebAssembly.compile()`](/en-US/docs/WebAssembly/JavaScript_interface/compile_static)
   - : Compiles a [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) from WebAssembly binary code, leaving instantiation as a separate step.
 - [`WebAssembly.compileStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/compileStreaming_static)
   - : compiles a [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) directly from a streamed underlying source, leaving instantiation as a separate step.
+- [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate_static)
+  - : The primary API for compiling and instantiating WebAssembly code, returning both a `Module` and its first `Instance`.
+- [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static)
+  - : Compiles and instantiates a WebAssembly module directly from a streamed underlying source, returning both a `Module` and its first `Instance`.
 - [`WebAssembly.validate()`](/en-US/docs/WebAssembly/JavaScript_interface/validate_static)
   - : Validates a given typed array of WebAssembly binary code, returning whether the bytes are valid WebAssembly code (`true`) or not (`false`).
 

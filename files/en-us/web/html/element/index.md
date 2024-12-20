@@ -11,7 +11,7 @@ This page lists all the {{Glossary("HTML")}} {{Glossary("Element","elements")}},
 They are grouped by function to help you find what you have in mind easily. An alphabetical list of all elements is provided in the sidebar on every element's page as well as this one.
 
 > [!NOTE]
-> For more information about the basics of HTML elements and attributes, see [the section on elements in the Introduction to HTML article](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#anatomy_of_an_html_element).
+> For more information about the basics of HTML elements and attributes, see [Anatomy of an HTML element](/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#anatomy_of_an_html_element).
 
 ## Main root
 
@@ -187,11 +187,11 @@ The elements here are used to create and handle tabular data.
 
 ## Forms
 
-HTML provides several elements that can be used together to create forms that the user can fill out and submit to the website or application. Further information about this available in the [HTML forms guide](/en-US/docs/Learn/Forms).
+HTML provides several elements that can be used together to create forms that the user can fill out and submit to the website or application. Further information about this available in the [HTML forms guide](/en-US/docs/Learn_web_development/Extensions/Forms).
 
 | Element                     | Description                                                                                                                                                                                                                                                                                                                                                |
 | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{HTMLElement("button")}}   | An interactive element activated by a user with a mouse, keyboard, finger, voice command, or other assistive technology. Once activated, it performs an action, such as submitting a [form](/en-US/docs/Learn/Forms) or opening a dialog.                                                                                                                  |
+| {{HTMLElement("button")}}   | An interactive element activated by a user with a mouse, keyboard, finger, voice command, or other assistive technology. Once activated, it performs an action, such as submitting a [form](/en-US/docs/Learn_web_development/Extensions/Forms) or opening a dialog.                                                                                       |
 | {{HTMLElement("datalist")}} | Contains a set of {{HTMLElement("option")}} elements that represent the permissible or recommended options available to choose from within other controls.                                                                                                                                                                                                 |
 | {{HTMLElement("fieldset")}} | Used to group several controls as well as labels ({{HTMLElement("label")}}) within a web form.                                                                                                                                                                                                                                                             |
 | {{HTMLElement("form")}}     | Represents a document section containing interactive controls for submitting information.                                                                                                                                                                                                                                                                  |

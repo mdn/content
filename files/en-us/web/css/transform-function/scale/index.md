@@ -82,6 +82,10 @@ scale(sx, sy)
   </tbody>
 </table>
 
+## Formal syntax
+
+{{CSSSyntax}}
+
 ## Accessibility
 
 Scaling/zooming animations are problematic for accessibility, as they are a common trigger for certain types of

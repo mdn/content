@@ -22,8 +22,16 @@ sidebar:
         hash: "#contact_us"
         title: Contact_us
 l10n:
+  de:
+    Themes: Themen
+    Community_and_Support: Community und Support
+    Channels: Kanäle
+    Blog: Add-ons Blog
+    Forums: Add-ons Foren
+    Stack_Overflow: Stack Overflow
+    Contact_us: Kontakt
+    "#contact_us": Kontakt
   en-US:
-    WebExtensions: Browser extensions
     Themes: Themes
     Community_and_Support: Community and Support
     Channels: Channels
@@ -33,47 +41,46 @@ l10n:
     Contact_us: Contact us
     "#contact_us": contact_us
   fr:
-    WebExtensions: WebExtensions
     Themes: Thèmes
     Community_and_Support: Communauté et Support
     Channels: Canaux de discussions
     Blog: Blog extensions
     Forums: Forum extensions
+    Stack_Overflow: Stack Overflow
     Contact_us: Nous contacter
     "#contact_us": nous_contacter
   ja:
-    WebExtensions: ブラウザー拡張機能
     Themes: テーマ
     Community_and_Support: コミュニティとサポート
     Channels: チャンネル
     Blog: ブログ
     Forums: フォーラム
+    Stack_Overflow: Stack Overflow
     Contact_us: コンタクト
     "#contact_us": 連絡先
   ko:
-    WebExtensions: 브라우저 확장 기능
     Themes: 테마
     Community_and_Support: 커뮤니티와 지원
     Channels: 채널
     Blog: 부가 기능 블로그
     Forums: 부가 기능 포럼
+    Stack_Overflow: Stack Overflow
     Contact_us: 연락하기
     "#contact_us": 연락하기
   zh-CN:
-    WebExtensions: 浏览器扩展程序
     Themes: 主题
     Community_and_Support: 社区和支持
     Channels: 渠道
     Blog: 附加组件博客
     Forums: 附加组件论坛
+    Stack_Overflow: Stack Overflow
     Contact_us: 联系我们
-    "#contact_us": 联系我们
   es:
-    WebExtensions: Extensiones de navegador
     Themes: Temas
     Community_and_Support: Comunidad y soporte
     Channels: Canales de discusión
     Blog: Blog de complementos
     Forums: Foro de complementos
+    Stack_Overflow: Stack Overflow
     Contact_us: Contáctenos
     "#contact_us": Contáctenos
