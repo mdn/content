@@ -42,7 +42,7 @@ svg {
 
 - {{SVGAttr("type")}}
   - : This attribute defines type of the style sheet language to use as a media type string.
-    _Value type_: [**`<content-type>`**](https://www.ietf.org/rfc/rfc2046.txt); _Default value_: `text/css`; _Animatable_: **no**
+    _Value type_: [**`<media-type>`**](/en-US/docs/Glossary/MIME_type); _Default value_: `text/css`; _Animatable_: **no**
 - {{SVGAttr("media")}}
   - : This attribute defines to which {{cssxref('@media', 'media')}} the style applies.
     _Value type_: [**`<media-query-list>`**](/en-US/docs/Web/CSS/@media#syntax); _Default value_: `all`; _Animatable_: **no**
