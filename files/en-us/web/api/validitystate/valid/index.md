@@ -82,4 +82,4 @@ userInput.addEventListener("input", () => {
 
 - ValidityState [badInput](/en-US/docs/Web/API/ValidityState/badInput), [customError](/en-US/docs/Web/API/ValidityState/customError) properties.
 - [Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
-- [Forms: Data form validation](/en-US/docs/Learn/Forms/Form_validation)
+- [Forms: Data form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)

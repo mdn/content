@@ -14,7 +14,7 @@ The URL API is a component of the URL standard, which defines what constitutes a
 
 ## Concepts and usage
 
-The majority of the URL standard is taken up by the [definition of a URL](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL) and how it is structured and parsed. Also covered are definitions of various terms related to addressing of computers on a network, and the algorithms for parsing IP addresses and DOM addresses are specified. More interesting to most developers is the API itself.
+The majority of the URL standard is taken up by the [definition of a URL](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL) and how it is structured and parsed. Also covered are definitions of various terms related to addressing of computers on a network, and the algorithms for parsing IP addresses and DOM addresses are specified. More interesting to most developers is the API itself.
 
 ### Accessing URL components
 

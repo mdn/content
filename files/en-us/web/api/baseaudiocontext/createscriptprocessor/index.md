@@ -47,7 +47,7 @@ createScriptProcessor(bufferSize, numberOfInputChannels, numberOfOutputChannels)
     Values of up to 32 are supported.
 
 > [!WARNING]
-> Webkit currently (version 31) requires that a valid
+> WebKit currently (version 31) requires that a valid
 > `bufferSize` be passed when calling this method.
 
 > [!NOTE]

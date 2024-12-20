@@ -90,3 +90,9 @@ IANA is the official registry of MIME media types and maintains a [list of all t
 | `.3gp`          | [3GPP](https://en.wikipedia.org/wiki/3GP_and_3G2) audio/video container                    | `video/3gpp`; `audio/3gpp` if it doesn't contain video                                                                                                                                                                                                                                                                                                                                                    |
 | `.3g2`          | [3GPP2](https://en.wikipedia.org/wiki/3GP_and_3G2) audio/video container                   | `video/3gpp2`; `audio/3gpp2` if it doesn't contain video                                                                                                                                                                                                                                                                                                                                                  |
 | `.7z`           | [7-zip](https://en.wikipedia.org/wiki/7-Zip) archive                                       | `application/x-7z-compressed`                                                                                                                                                                                                                                                                                                                                                                             |
+
+## See also
+
+- [MIME sniffing](/en-US/docs/Web/HTTP/MIME_types#mime_sniffing)
+- {{HTTPHeader("X-Content-Type-Options")}}
+- {{HTTPHeader("Content-Type")}}

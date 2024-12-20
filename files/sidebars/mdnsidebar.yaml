@@ -1,0 +1,152 @@
+# Do not add comments to this file. They will be lost.
+
+sidebar:
+  - type: section
+    link: /MDN
+  - title: community_guidelines
+    details: closed
+    children:
+      - /MDN/Community
+      - title: contributing_to_mdn_web_docs
+        details: closed
+        children:
+          - /MDN/Community/Contributing
+          - /MDN/Community/Contributing/Getting_started
+          - /MDN/Community/Contributing/Our_repositories
+          - /MDN/Community/Contributing/Translated_content
+          - /MDN/Community/Contributing/Security_vulnerability_response
+      - /MDN/Community/Open_source_etiquette
+      - /MDN/Community/Communication_channels
+      - /MDN/Community/Discussions
+      - /MDN/Community/Learn_forum
+      - /MDN/Community/Issues
+      - /MDN/Community/Pull_requests
+      - /MDN/Community/Roles_teams
+  - title: writing_guide
+    details: closed
+    children:
+      - /MDN/Writing_guidelines
+      - /MDN/Writing_guidelines/What_we_write
+      - /MDN/Writing_guidelines/Writing_style_guide
+      - title: how_to_guides
+        details: closed
+        children:
+          - /MDN/Writing_guidelines/Howto
+          - /MDN/Writing_guidelines/Howto/Images_media
+          - /MDN/Writing_guidelines/Howto/Creating_moving_deleting
+          - /MDN/Writing_guidelines/Howto/Document_a_CSS_property
+          - /MDN/Writing_guidelines/Howto/Document_an_HTTP_header
+          - /MDN/Writing_guidelines/Howto/Document_web_errors
+          - /MDN/Writing_guidelines/Howto/Research_technology
+          - /MDN/Writing_guidelines/Howto/JSON_Structured_data
+          - /MDN/Writing_guidelines/Howto/Write_an_api_reference
+          - /MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
+          - /MDN/Writing_guidelines/Howto/Markdown_in_MDN
+      - title: page_structures
+        details: closed
+        children:
+          - /MDN/Writing_guidelines/Page_structures
+          - /MDN/Writing_guidelines/Page_structures/Banners_and_notices
+          - /MDN/Writing_guidelines/Page_structures/Code_examples
+          - /MDN/Writing_guidelines/Page_structures/Compatibility_tables
+          - /MDN/Writing_guidelines/Page_structures/Live_samples
+          - /MDN/Writing_guidelines/Page_structures/Page_types
+          - /MDN/Writing_guidelines/Page_structures/Sidebars
+          - /MDN/Writing_guidelines/Page_structures/Specification_tables
+          - /MDN/Writing_guidelines/Page_structures/Syntax_sections
+          - /MDN/Writing_guidelines/Page_structures/Macros
+          - /MDN/Writing_guidelines/Page_structures/Feature_status
+      - /MDN/Writing_guidelines/Attrib_copyright_license
+      - /MDN/Writing_guidelines/Experimental_deprecated_obsolete
+  - title: advisory_board
+    details: closed
+    children:
+      - /MDN/MDN_Product_Advisory_Board
+      - /MDN/MDN_Product_Advisory_Board/Membership
+  - title: history
+    details: closed
+    children:
+      - /MDN/At_ten
+      - /MDN/At_ten/History_of_MDN
+  - /MDN/Changelog
+l10n:
+  de:
+    history: Geschichte
+    advisory_board: Product Advisory Board
+    community_guidelines: Gemeinschaftsrichtlinien
+    contributing_to_mdn_web_docs: Beiträge zu MDN Web Docs
+    writing_guide: Schreibanleitung
+    how_to_guides: Anleitungen
+    page_structures: Seitenstrukturen
+  en-US:
+    history: History
+    advisory_board: Advisory Board
+    community_guidelines: Community guidelines
+    contributing_to_mdn_web_docs: Contributing to MDN Web Docs
+    writing_guide: Writing guidelines
+    how_to_guides: How-to guides
+    page_structures: Page structures
+  es:
+    history: History
+    advisory_board: Advisory Board
+    community_guidelines: Community guidelines
+    contributing_to_mdn_web_docs: Contributing to MDN Web Docs
+    writing_guide: Writing guidelines
+    how_to_guides: How-to guides
+    page_structures: Page structures
+  fr:
+    history: History
+    advisory_board: Advisory Board
+    community_guidelines: Règles de la communauté
+    contributing_to_mdn_web_docs: Contributing to MDN Web Docs
+    writing_guide: Writing guidelines
+    how_to_guides: How-to guides
+    page_structures: Page structures
+  ja:
+    history: History
+    advisory_board: Advisory Board
+    community_guidelines: Community guidelines
+    contributing_to_mdn_web_docs: Contributing to MDN Web Docs
+    writing_guide: Writing guidelines
+    how_to_guides: How-to guides
+    page_structures: Page structures
+  ko:
+    history: History
+    advisory_board: Advisory Board
+    community_guidelines: 커뮤니티 지침
+    contributing_to_mdn_web_docs: MDN에 기여하기
+    writing_guide: Writing guidelines
+    how_to_guides: How-to guides
+    page_structures: Page structures
+  pt-BR:
+    history: History
+    advisory_board: Advisory Board
+    community_guidelines: Community guidelines
+    contributing_to_mdn_web_docs: Contributing to MDN Web Docs
+    writing_guide: Writing guidelines
+    how_to_guides: How-to guides
+    page_structures: Page structures
+  ru:
+    history: History
+    advisory_board: Advisory Board
+    community_guidelines: Community guidelines
+    contributing_to_mdn_web_docs: Contributing to MDN Web Docs
+    writing_guide: Writing guidelines
+    how_to_guides: How-to guides
+    page_structures: Page structures
+  zh-CN:
+    history: History
+    advisory_board: Advisory Board
+    community_guidelines: 社区指南
+    contributing_to_mdn_web_docs: 为 MDN 做贡献
+    writing_guide: 撰写指南
+    how_to_guides: MDN 写作指南
+    page_structures: 页面结构
+  zh-TW:
+    history: History
+    advisory_board: Advisory Board
+    community_guidelines: Community guidelines
+    contributing_to_mdn_web_docs: Contributing to MDN Web Docs
+    writing_guide: Writing guidelines
+    how_to_guides: How-to guides
+    page_structures: Page structures

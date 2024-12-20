@@ -92,7 +92,7 @@ cases:
       <th scope="row">Key Order</th>
       <td>
         <p>
-          The keys in <code>Map</code> are ordered in a simple, straightforward
+          The keys in <code>Map</code> are ordered in a straightforward
           way: A <code>Map</code> object iterates entries, keys, and values in
           the order of entry insertion.
         </p>

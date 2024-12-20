@@ -6,13 +6,13 @@ page-type: guide
 
 {{DefaultAPISidebar("WebGL")}}{{PreviousNext("Learn/WebGL/By_example/Color_masking","Learn/WebGL/By_example/Canvas_size_and_WebGL")}}
 
-In this example, we see how to draw simple rectangles and squares using WebGL scissoring operations. Scissoring establishes a clipping region outside which drawing will not occur.
+In this example, we see how to draw rectangles and squares using WebGL scissoring operations. Scissoring establishes a clipping region outside which drawing will not occur.
 
 ## Clearing the drawing buffer when scissoring applies
 
 {{EmbedLiveSample("Clearing_the_drawing_buffer_when_scissoring_applies",660,425)}}
 
-This is a simple demonstration of a rendering with {{domxref("WebGLRenderingContext.scissor","scissor()")}}.
+This is a demonstration of a rendering with {{domxref("WebGLRenderingContext.scissor","scissor()")}}.
 
 Although the {{domxref("WebGLRenderingContext.clear","clear()")}} drawing command writes the clear color (set by {{domxref("WebGLRenderingContext.clearColor","clearColor()")}}) to all pixels in the drawing buffer, {{domxref("WebGLRenderingContext.scissor","scissor()")}} defines a mask that only allows pixels inside the specified rectangular area to be updated.
 

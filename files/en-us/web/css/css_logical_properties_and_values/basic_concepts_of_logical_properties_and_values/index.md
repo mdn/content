@@ -26,7 +26,52 @@ If instead of the `width` property, the logical property {{CSSxRef("inline-size"
 
 You can try this out in the live example below. Change `writing-mode` from `vertical-rl` to `horizontal-tb` on `.grid` to see how the different properties change the layout.
 
-{{EmbedGHLiveSample("css-examples/logical/intro-grid-example.html", '100%', 700)}}
+```html live-sample___intro-grid-example
+<div class="grid">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+</div>
+```
+
+```css hidden live-sample___intro-grid-example
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+}
+
+.grid > * {
+  border-radius: 5px;
+  border: 2px solid rgb(96 139 168 / 0.4);
+  background-color: rgb(96 139 168 / 0.2);
+  padding: 10px;
+}
+
+.grid :nth-child(1) {
+  align-self: start;
+}
+
+.grid :nth-child(2) {
+  justify-self: end;
+}
+```
+
+```css live-sample___intro-grid-example
+.grid {
+  writing-mode: vertical-rl;
+  inline-size: 400px;
+}
+```
+
+{{EmbedLiveSample("intro-grid-example", "", "450px")}}
 
 When working with a site in a writing mode other than a horizontal, top-to-bottom one, or when using writing modes for creative reasons, being able to relate to the flow of the content makes a lot of sense.
 

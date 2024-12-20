@@ -69,7 +69,7 @@ Check out the subject of each discussion category below so that you can start yo
         <a href="https://github.com/mdn/content">content</a> on MDN Web Docs.
         <em>Note:</em> This is not the place to ask for coding assistance.
         If you're stuck, a good place to start is our
-        <a href="/en-US/docs/Learn">Learn Web Development</a> area.
+        <a href="/en-US/docs/Learn_web_development">Learn Web Development</a> area.
       </td>
     </tr>
     <tr>

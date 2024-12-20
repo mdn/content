@@ -9,7 +9,19 @@ browser-compat: http.headers.Sec-CH-UA
 
 {{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The **`Sec-CH-UA`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) request header provides the user-agent's branding and significant version information.
+The HTTP **`Sec-CH-UA`** {{Glossary("request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) which provides the user-agent's branding and significant version information.
+
+The `Sec-CH-UA` header provides the brand and significant version for each brand associated with the browser in a comma-separated list.
+The header therefore allows the server to customize its response based on both shared brands and on particular customizations in their respective versions.
+
+`Sec-CH-UA` is a [low entropy hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints).
+Unless blocked by a user agent permission policy, it is sent by default, without the server opting in by sending {{HTTPHeader("Accept-CH")}}.
+
+The header may include "fake" brands in any position and with any name.
+This is a feature designed to prevent servers from rejecting unknown user agents outright, forcing user agents to lie about their brand identity.
+
+> [!NOTE]
+> The {{HTTPHeader("Sec-CH-UA-Full-Version-List")}} header is the same as `Sec-CH-UA`, but includes the full version number rather than the significant version number for each brand.
 
 <table class="properties">
   <tbody>
@@ -22,29 +34,10 @@ The **`Sec-CH-UA`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#u
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes</td>
+      <td>Yes (<code>Sec-</code> prefix)</td>
     </tr>
   </tbody>
 </table>
-
-The **`Sec-CH-UA`** header provides the brand and significant version for each brand associated with the browser in a comma-separated list.
-
-A brand is a commercial name for the user agent like: Chromium, Opera, Google Chrome, Microsoft Edge, Firefox, and Safari.
-A user agent might have several associated brands.
-For example, Opera, Chrome, and Edge are all based on Chromium, and will provide both brands in the **`Sec-CH-UA`** header.
-
-The _significant version_ is the "marketing" version identifier that is used to distinguish between major releases of the brand.
-For example a Chromium build with _full version number_ "96.0.4664.45" has a significant version number of "96".
-
-The header therefore allows the server to customize its response based on both shared brands and on particular customizations in their respective versions.
-
-`Sec-CH-UA` is a [low entropy hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints).
-Unless blocked by a user agent permission policy, it is sent by default, without the server opting in by sending {{HTTPHeader("Accept-CH")}}.
-
-The header may include "fake" brands in any position and with any name.
-This is a feature designed to prevent servers from rejecting unknown user agents outright, forcing user agents to lie about their brand identity.
-
-> **Note:** {{HTTPHeader("Sec-CH-UA-Full-Version-List")}} is the same as **`Sec-CH-UA`**, but includes the full version number rather than the significant version number for each brand.
 
 ## Syntax
 
@@ -52,7 +45,7 @@ A comma separated list of brands in the user agent brand list, and their associa
 The syntax for a single entry has the following format:
 
 ```http
-Sec-CH-UA: "<brand>";v="<significant version>", ...
+Sec-CH-UA: "<brand>";v="<significant version>", …
 ```
 
 ### Directives
@@ -62,7 +55,18 @@ Sec-CH-UA: "<brand>";v="<significant version>", ...
 - `<significant version>`
   - : The "marketing" version number associated with distinguishable web-exposed features.
 
+## Description
+
+A brand is a commercial name for the user agent like: Chromium, Opera, Google Chrome, Microsoft Edge, Firefox, and Safari.
+A user agent might have several associated brands.
+For example, Opera, Chrome, and Edge are all based on Chromium, and will provide both brands in the `Sec-CH-UA` header.
+
+The _significant version_ is the "marketing" version identifier that is used to distinguish between major releases of the brand.
+For example a Chromium build with _full version number_ "96.0.4664.45" has a significant version number of "96".
+
 ## Examples
+
+### Different Sec-CH-UA brands
 
 `Sec-CH-UA` is a [low entropy hint](/en-US/docs/Web/HTTP/Client_hints#low_entropy_hints).
 Unless explicitly blocked by a user agent policy, it will be sent in all requests (without the server having to opt in by sending {{HTTPHeader("Accept-CH")}}).
@@ -99,6 +103,6 @@ Sec-CH-UA: "Opera";v="81", " Not;A Brand";v="99", "Chromium";v="95"
 
 - [Client hints](/en-US/docs/Web/HTTP/Client_hints)
 - [User-Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API)
-- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)
 - {{HTTPHeader("Accept-CH")}}
-- [HTTP Caching > Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}}
+- [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}}
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)

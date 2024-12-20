@@ -136,3 +136,12 @@ sequenceDiagram
 In practice, hop-by-hop compression is transparent for the server and the client, and is rarely used. {{HTTPHeader("TE")}} and {{HTTPHeader("Transfer-Encoding")}} are mostly used to send a response by chunks, allowing to start transmitting a resource without knowing its length.
 
 Note that using {{HTTPHeader("Transfer-Encoding")}} and compression at the hop level is so rare that most servers, like Apache, Nginx, or IIS, have no easy way to configure it. Such configuration usually happens at the proxy level.
+
+## See also
+
+- Glossary terms:
+  - {{glossary("Brotli compression")}}
+  - {{Glossary("Gzip compression")}}
+  - {{glossary("Lossless compression")}}
+  - {{glossary("Lossy compression")}}
+  - {{Glossary("Zstandard compression")}}

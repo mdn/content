@@ -45,7 +45,7 @@ An {{jsxref("Object")}} with two properties:
 
 ### Using next()
 
-The following example shows a simple generator and the object that the
+The following example shows a generator and the object that the
 `next` method returns:
 
 ```js

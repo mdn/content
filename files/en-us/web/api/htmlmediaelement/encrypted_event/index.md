@@ -8,7 +8,7 @@ browser-compat: api.HTMLMediaElement.encrypted_event
 
 {{APIRef("Encrypted Media Extensions")}}
 
-The `encrypted` event is fired when initialization data is found in the media, indicating that it is encrypted.
+The `encrypted` event is fired when initialization data is found in the media that indicates it is encrypted.
 
 This event is not cancelable and does not bubble.
 

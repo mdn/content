@@ -30,7 +30,7 @@ new TextUpdateEvent(type, options)
     - `updateRangeEnd`
       - : A number representing the offset of the last character within the editable region text that needs to be updated.
     - `text`
-      - : A string representing the text that needs to be inserted or deleted.
+      - : A string representing the text that needs to be inserted.
     - `selectionStart`
       - : A number representing the offset of the selection start within the editable region text.
     - `selectionEnd`

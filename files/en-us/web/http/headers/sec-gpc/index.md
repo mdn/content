@@ -4,17 +4,15 @@ slug: Web/HTTP/Headers/Sec-GPC
 page-type: http-header
 status:
   - experimental
-  - non-standard
 browser-compat: http.headers.Sec-GPC
 spec-urls: https://privacycg.github.io/gpc-spec/
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}{{non-standard_header}}
+{{HTTPSidebar}}{{SeeCompatTable}}
 
-The **`Sec-GPC`** ([**G**lobal **P**rivacy **C**ontrol](https://globalprivacycontrol.org/)) request header indicates whether the user consents to a website or service selling or sharing their personal information with third parties.
+The HTTP **`Sec-GPC`** {{Glossary("request header")}} is part of the [Global Privacy Control](https://globalprivacycontrol.org/) (GPC) mechanism to indicate whether the user consents to a website or service selling or sharing their personal information with third parties.
 
 The specification does not define how the user can withdraw or grant consent for website.
-Where possible the mechanism will be indicated in the [browser compatibility](#browser_compatibility) section below.
 
 <table class="properties">
   <tbody>
@@ -24,7 +22,7 @@ Where possible the mechanism will be indicated in the [browser compatibility](#b
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes</td>
+      <td>Yes (<code>Sec-</code> prefix)</td>
     </tr>
   </tbody>
 </table>
@@ -32,14 +30,14 @@ Where possible the mechanism will be indicated in the [browser compatibility](#b
 ## Syntax
 
 ```http
-Sec-GPC: 1
+Sec-GPC: <preference>
 ```
 
 ## Directives
 
-The `Sec-GPC` is header is sent with a value of `1` if the user has indicated that they prefer their information not be shared with, or sold to, third parties.
-
-Otherwise, the header is not sent, which indicates that either the user has not made a decision or the user is okay with their information being shared with or sold to third parties.
+- `<preference>`
+  - : A value of `1` means the user has indicated that they prefer their information not be shared with, or sold to, third parties.
+    Otherwise, the header is not sent, which indicates that either the user has not made a decision or the user is okay with their information being shared with or sold to third parties.
 
 ## Examples
 

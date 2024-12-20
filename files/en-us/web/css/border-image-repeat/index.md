@@ -7,7 +7,7 @@ browser-compat: css.properties.border-image-repeat
 
 {{CSSRef}}
 
-The **`border-image-repeat`** [CSS](/en-US/docs/Web/CSS) property defines how the [edge regions](/en-US/docs/Web/CSS/border-image-slice#edge-regions) and [middle region](/en-US/docs/Web/CSS/border-image-slice#middle-region) of a source image are adjusted to fit the dimensions of an element's [border image](/en-US/docs/Web/CSS/border-image). The middle region can be displayed by using the keyword "fill" in the border-image-slice property.
+The **`border-image-repeat`** [CSS](/en-US/docs/Web/CSS) property defines how the [edge regions](/en-US/docs/Web/CSS/border-image-slice#edge-regions) and [middle region](/en-US/docs/Web/CSS/border-image-slice#middle-region) of a source image are adjusted to fit the dimensions of an element's [border image](/en-US/docs/Web/CSS/border-image). The middle region can be displayed by using the keyword "fill" in the {{cssxref("border-image-slice")}} property.
 
 {{EmbedInteractiveExample("pages/css/border-image-repeat.html")}}
 
@@ -108,5 +108,5 @@ repetition.addEventListener("change", (evt) => {
 ## See also
 
 - [Backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders)
-- [Learn CSS: Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [Learn CSS: Backgrounds and borders](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
 - [Border images in CSS: A key focus area for Interop 2023](/en-US/blog/border-images-interop-2023/) on MDN blog (2023)

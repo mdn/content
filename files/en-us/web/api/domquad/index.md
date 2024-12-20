@@ -16,15 +16,21 @@ A `DOMQuad` is a collection of four `DOMPoint`s defining the corners of an arbit
 
 ## Instance properties
 
-- p1,p2,p3,p4 {{ReadOnlyInline}}
-  - : are {{domxref("DOMPoint")}} objects for each of the `DOMQuad` object's four corners.
+- {{domxref("DOMQuad.p1")}} {{ReadOnlyInline}}
+  - : A {{domxref("DOMPoint")}} representing one corner of the `DOMQuad`.
+- {{domxref("DOMQuad.p2")}} {{ReadOnlyInline}}
+  - : A {{domxref("DOMPoint")}} representing one corner of the `DOMQuad`.
+- {{domxref("DOMQuad.p3")}} {{ReadOnlyInline}}
+  - : A {{domxref("DOMPoint")}} representing one corner of the `DOMQuad`.
+- {{domxref("DOMQuad.p4")}} {{ReadOnlyInline}}
+  - : A {{domxref("DOMPoint")}} representing one corner of the `DOMQuad`.
 
 ## Instance methods
 
 - {{domxref("DOMQuad.fromRect()")}}
   - : Returns a new `DOMQuad` object based on the passed set of coordinates.
 - {{domxref("DOMQuad.fromQuad()")}}
-  - : Returns a new `DOMQuad` object based on the passed set of coordinates.
+  - : Returns a new `DOMQuad` object or a set of quadrilateral coordinates based on the provided input.
 - {{domxref("DOMQuad.getBounds()")}}
   - : Returns a {{domxref("DOMRect")}} object with the coordinates and dimensions of the `DOMQuad` object.
 - {{domxref("DOMQuad.toJSON()")}}

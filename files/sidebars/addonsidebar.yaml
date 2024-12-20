@@ -1,0 +1,229 @@
+# Do not add comments to this file. They will be lost.
+
+sidebar:
+  - type: section
+    link: /Mozilla/Add-ons/WebExtensions
+  - title: WebExtensions#Getting_started
+    details: closed
+    children:
+      - /Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
+      - /Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
+      - /Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
+      - /Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
+      - /Mozilla/Add-ons/WebExtensions/Examples
+      - /Mozilla/Add-ons/WebExtensions/What_next
+  - title: WebExtensions#Concepts
+    details: closed
+    children:
+      - /Mozilla/Add-ons/WebExtensions/API
+      - /Mozilla/Add-ons/WebExtensions/Content_scripts
+      - /Mozilla/Add-ons/WebExtensions/Background_scripts
+      - /Mozilla/Add-ons/WebExtensions/Match_patterns
+      - /Mozilla/Add-ons/WebExtensions/Working_with_files
+      - /Mozilla/Add-ons/WebExtensions/Internationalization
+      - /Mozilla/Add-ons/WebExtensions/Content_Security_Policy
+      - /Mozilla/Add-ons/WebExtensions/Native_messaging
+      - /Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations
+      - /Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
+  - title: WebExtensions#User_Interface
+    details: closed
+    children:
+      - /Mozilla/Add-ons/WebExtensions/user_interface
+      - /Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
+      - /Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
+      - /Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
+      - /Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
+      - /Mozilla/Add-ons/WebExtensions/user_interface/Options_pages
+      - /Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
+      - /Mozilla/Add-ons/WebExtensions/user_interface/Notifications
+      - /Mozilla/Add-ons/WebExtensions/user_interface/Omnibox
+      - /Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
+  - title: WebExtensions#How_to
+    details: closed
+    children:
+      - /Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
+      - /Mozilla/Add-ons/WebExtensions/Modify_a_web_page
+      - /Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page
+      - /Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts
+      - /Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
+      - /Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
+      - /Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
+      - /Mozilla/Add-ons/WebExtensions/Work_with_the_Bookmarks_API
+      - /Mozilla/Add-ons/WebExtensions/Work_with_the_Cookies_API
+      - /Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities
+      - /Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
+      - /Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
+      - /Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
+  - type: webExtApi
+    title: WebExtensions#API
+  - type: listSubPages
+    path: /Mozilla/Add-ons/WebExtensions/manifest.json
+    title: WebExtensions#manifest.json
+    details: closed
+  - title: extension_workshop
+    details: closed
+    children:
+      - link: https://extensionworkshop.com/documentation/develop/
+        title: extension_workshop_develop
+      - link: https://extensionworkshop.com/documentation/publish/
+        title: extension_workshop_publish
+      - link: https://extensionworkshop.com/documentation/manage/
+        title: extension_workshop_manage
+      - link: https://extensionworkshop.com/documentation/enterprise/
+        title: extension_workshop_enterprise
+  - type: section
+    link: /Mozilla/Add-ons/Contact_us
+  - title: Channels
+    details: closed
+    children:
+      - link: https://blog.mozilla.org/addons
+        title: Blog
+      - link: https://discourse.mozilla.org/c/add-ons
+        title: Forums
+      - link: https://chat.mozilla.org/#/room/%23addons:mozilla.org
+        title: Chat
+l10n:
+  de:
+    WebExtensions#Getting_started: Erste Schritte
+    WebExtensions#Concepts: Konzepte
+    WebExtensions#User_Interface: Benutzeroberfläche
+    WebExtensions#How_to: Anleitungen
+    WebExtensions#API: JavaScript-APIs
+    WebExtensions#manifest.json: Manifest-Schlüssel
+    extension_workshop: Erweiterungs-Workshop
+    extension_workshop_develop: Entwickeln
+    extension_workshop_publish: Veröffentlichen
+    extension_workshop_manage: Verwalten
+    extension_workshop_enterprise: Unternehmen
+    Channels: Kanäle
+    Blog: Add-ons Blog
+    Forums: Add-ons Forum
+    Chat: Add-ons Chat
+  en-US:
+    WebExtensions#Getting_started: Getting started
+    WebExtensions#Concepts: Concepts
+    WebExtensions#User_Interface: User interface
+    WebExtensions#How_to: How to
+    WebExtensions#API: JavaScript APIs
+    WebExtensions#manifest.json: Manifest keys
+    extension_workshop: Extension Workshop
+    extension_workshop_develop: Develop
+    extension_workshop_publish: Publish
+    extension_workshop_manage: Manage
+    extension_workshop_enterprise: Enterprise
+    Channels: Channels
+    Blog: Add-ons blog
+    Forums: Add-ons forum
+    Chat: Add-ons chat
+  fr:
+    WebExtensions#Getting_started: Commencer
+    WebExtensions#Concepts: Concepts
+    WebExtensions#User_Interface: Interface utilisateur
+    WebExtensions#How_to: Mode d'emploi
+    WebExtensions#API: Les API JavaScript
+    WebExtensions#manifest.json: Clés de manifeste
+    extension_workshop: Atelier des extensions
+    extension_workshop_develop: Développer
+    extension_workshop_publish: Publier
+    extension_workshop_manage: Gérer
+    extension_workshop_enterprise: Entreprise
+    Channels: Canaux de discussions
+    Blog: Blog sur les extensions
+    Forums: Forum sur les extensions
+    Chat: Discussion sur les extensions
+  ja:
+    WebExtensions#Getting_started: 始めましょう
+    WebExtensions#Concepts: 概念
+    WebExtensions#User_Interface: ユーザーインターフェイス
+    WebExtensions#How_to: 逆引きリファレンス
+    WebExtensions#API: JavaScript APIs
+    WebExtensions#manifest.json: Manifest keys
+    extension_workshop: Extension Workshop
+    extension_workshop_develop: Develop
+    extension_workshop_publish: Publish
+    extension_workshop_manage: Manage
+    extension_workshop_enterprise: Enterprise
+    Channels: チャンネル
+    Blog: ブログ
+    Forums: フォーラム
+    Chat: Add-ons chat
+  ko:
+    WebExtensions#Getting_started: 시작하기
+    WebExtensions#Concepts: 개념
+    WebExtensions#User_Interface: 사용자 인터페이스
+    WebExtensions#How_to: 방법
+    WebExtensions#API: JavaScript APIs
+    WebExtensions#manifest.json: Manifest 키
+    extension_workshop: Extension Workshop
+    extension_workshop_develop: Develop
+    extension_workshop_publish: Publish
+    extension_workshop_manage: Manage
+    extension_workshop_enterprise: Enterprise
+    Channels: 채널
+    Blog: 부가 기능 블로그
+    Forums: 부가 기능 포럼
+    Chat: Add-ons chat
+  zh-CN:
+    WebExtensions#Getting_started: 开始
+    WebExtensions#Concepts: 概念
+    WebExtensions#User_Interface: 用户界面
+    WebExtensions#How_to: 怎么做
+    WebExtensions#API: JavaScript API
+    WebExtensions#manifest.json: 清单键
+    extension_workshop: Extension Workshop
+    extension_workshop_develop: Develop
+    extension_workshop_publish: Publish
+    extension_workshop_manage: Manage
+    extension_workshop_enterprise: Enterprise
+    Channels: 渠道
+    Blog: 附加组件博客
+    Forums: 附加组件论坛
+    Chat: 附加组件聊天
+  pt-BR:
+    WebExtensions#Getting_started: Começando
+    WebExtensions#Concepts: Conceitos
+    WebExtensions#User_Interface: Interface de usuário
+    WebExtensions#How_to: Como
+    WebExtensions#API: APIs JavaScript
+    WebExtensions#manifest.json: Chaves Manifest
+    extension_workshop: Workshop de extensões
+    extension_workshop_develop: Desenvolver
+    extension_workshop_publish: Publicar
+    extension_workshop_manage: Gerenciar
+    extension_workshop_enterprise: Empreendimento
+    Channels: Canais
+    Blog: Blog de complementos
+    Forums: Fóruns complementares
+    Chat: Add-ons chat
+  es:
+    WebExtensions#Getting_started: Comenzar
+    WebExtensions#Concepts: Conceptos
+    WebExtensions#User_Interface: Interfaz de usuario
+    WebExtensions#How_to: Cómo hacer
+    WebExtensions#API: API de JavaScript
+    WebExtensions#manifest.json: Claves de manifiesto
+    extension_workshop: Taller de Extensión
+    extension_workshop_develop: Desarrollar
+    extension_workshop_publish: Publish
+    extension_workshop_manage: Gestionar
+    extension_workshop_enterprise: Empresa
+    Channels: Canales de discusión
+    Blog: Blog de complementos
+    Forums: Foro de complementos
+    Chat: Chat de complementos
+  ru:
+    WebExtensions#Getting_started: Начало работы
+    WebExtensions#Concepts: Основные понятия
+    WebExtensions#User_Interface: Пользовательский интерфейс
+    WebExtensions#How_to: How to
+    WebExtensions#API: Обзор JavaScript API
+    WebExtensions#manifest.json: Manifest keys
+    extension_workshop: Extension Workshop
+    extension_workshop_develop: Develop
+    extension_workshop_publish: Publish
+    extension_workshop_manage: Manage
+    extension_workshop_enterprise: Enterprise
+    Channels: Channels
+    Blog: Add-ons blog
+    Forums: Add-ons forum
+    Chat: Add-ons chat

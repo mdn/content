@@ -38,9 +38,9 @@ brightness(2) /* Brightness of input is doubled */
 brightness(200%)
 ```
 
-### Formal syntax
+## Formal syntax
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Examples
 

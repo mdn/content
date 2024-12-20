@@ -106,7 +106,7 @@ Take the following HTML:
 
 In this somewhat-contrived example, we have two articles that each contain a section, an aside, and a footer. They differ by the classes used to mark the child elements.
 
-To make selecting the links inside them simpler, but still distinct, we _could_ use `:is()` or `:where()`, in the following manner:
+To group the selection of links, while keeping the `is-styling` and `where-styling` styles distinct, we _could_ use `:is()` or `:where()`, in the following manner:
 
 ```css
 html {
@@ -123,7 +123,7 @@ html {
 }
 ```
 
-However, what if we later want to override the color of links in the footers using a simple selector?
+However, what if we later want to override the color of links in the footers using a compound selector made up of low-specificity type selectors?
 
 ```css
 footer a {
@@ -133,7 +133,7 @@ footer a {
 
 This won't work for the red links, because the selectors inside `:is()` count towards the specificity of the overall selector, and class selectors have a higher specificity than element selectors.
 
-However, selectors inside `:where()` have specificity 0, so the orange footer link will be overridden by our simple selector.
+However, selectors inside `:where()` have specificity 0, so the orange footer link will be overridden by our type-only compound selector.
 
 > [!NOTE]
 > You can also find this example on GitHub; see [is-where](https://mdn.github.io/css-examples/is-where/).

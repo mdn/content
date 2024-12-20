@@ -72,6 +72,10 @@ rotate(a)
   </tbody>
 </table>
 
+## Formal syntax
+
+{{CSSSyntax}}
+
 ## Examples
 
 ### Basic example

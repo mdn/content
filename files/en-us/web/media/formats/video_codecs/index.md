@@ -1494,7 +1494,7 @@ However, few web browsers support MPEG-2 without the support of a plugin, and wi
 ### Theora
 
 > [!WARNING]
-> This code is no longer longer recommended.
+> This codec is no longer recommended.
 > It has extremely small usage, and support is being removed from browsers.
 
 **[Theora](https://en.wikipedia.org/wiki/Theora)**, developed by [Xiph.org](https://xiph.org/), is an open and free video codec which may be used without royalties or licensing. Theora is comparable in quality and compression rates to MPEG-4 Part 2 Visual and AVC, making it a very good if not top-of-the-line choice for video encoding. But its status as being free from any licensing concerns and its relatively low CPU resource requirements make it a popular choice for many software and web projects. The low CPU impact is particularly useful since there are no hardware decoders available for Theora.

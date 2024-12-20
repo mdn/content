@@ -12,7 +12,7 @@ This chapter introduces collections of data which are indexed by a key; `Map` an
 
 ### Map object
 
-A {{jsxref("Map")}} object is a simple key/value map and can iterate its elements in insertion order.
+A {{jsxref("Map")}} object is a key/value map that can iterate its elements in insertion order.
 
 The following code shows some basic operations with a `Map`. See also the {{jsxref("Map")}} reference page for more examples and the complete API. You can use a {{jsxref("Statements/for...of", "for...of")}} loop to return an array of `[key, value]` for each iteration.
 

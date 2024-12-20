@@ -45,4 +45,4 @@ console.log(el.dataset.id); // "1234567890"
 ## See also
 
 - [`data-*`](/en-US/docs/Web/SVG/Attribute/data-*) SVG attributes
-- [Using data attributes](/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
+- [Using data attributes](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)

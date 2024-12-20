@@ -92,7 +92,7 @@ function round(n, upperBound, lowerBound) {
 
 ### A structure error further up confused the meaning
 
-Sometimes, the error is caused by some structure issues not directly next to the error location, so you need to look around for potential errors. For example, you intended to declare a method of an object, but you declared it as a propety instead:
+Sometimes, the error is caused by some structure issues not directly next to the error location, so you need to look around for potential errors. For example, you intended to declare a method of an object, but you declared it as a property instead:
 
 ```js-nolint example-bad
 const MyComponent = {

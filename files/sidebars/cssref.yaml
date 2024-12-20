@@ -1,0 +1,471 @@
+# Do not add comments to this file. They will be lost.
+
+sidebar:
+  - type: section
+    link: /Web/CSS
+    title: CSS
+  - type: section
+    link: /Learn_web_development/Core/Styling_basics
+    title: Beginners
+  - link: /Learn_web_development/Getting_started/Your_first_website/Styling_the_content
+    title: Styling_the_content
+  - link: /Learn_web_development/Core/Styling_basics
+    title: CSS_styling_basics
+    details: closed
+    children:
+      - /Learn_web_development/Core/Styling_basics/What_is_CSS
+      - /Learn_web_development/Core/Styling_basics/Getting_started
+      - /Learn_web_development/Core/Styling_basics/Styling_a_bio_page
+      - /Learn_web_development/Core/Styling_basics/Basic_selectors
+      - /Learn_web_development/Core/Styling_basics/Attribute_selectors
+      - /Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements
+      - /Learn_web_development/Core/Styling_basics/Combinators
+      - /Learn_web_development/Core/Styling_basics/Box_model
+      - /Learn_web_development/Core/Styling_basics/Handling_conflicts
+      - /Learn_web_development/Core/Styling_basics/Values_and_units
+      - /Learn_web_development/Core/Styling_basics/Sizing
+      - /Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
+      - /Learn_web_development/Core/Styling_basics/Overflow
+      - /Learn_web_development/Core/Styling_basics/Images_media_forms
+      - /Learn_web_development/Core/Styling_basics/Tables
+      - /Learn_web_development/Core/Styling_basics/Debugging_CSS
+      - /Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
+      - /Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
+      - /Learn_web_development/Core/Styling_basics/Cool-looking_box
+  - link: /Learn_web_development/Core/Text_styling
+    title: CSS_text_styling
+    details: closed
+    children:
+      - /Learn_web_development/Core/Text_styling/Fundamentals
+      - /Learn_web_development/Core/Text_styling/Styling_lists
+      - /Learn_web_development/Core/Text_styling/Styling_links
+      - /Learn_web_development/Core/Text_styling/Web_fonts
+      - /Learn_web_development/Core/Text_styling/Typesetting_a_homepage
+  - link: /Learn_web_development/Core/CSS_layout
+    title: CSS_layout
+    details: closed
+    children:
+      - /Learn_web_development/Core/CSS_layout/Introduction
+      - /Learn_web_development/Core/CSS_layout/Floats
+      - /Learn_web_development/Core/CSS_layout/Positioning
+      - /Learn_web_development/Core/CSS_layout/Flexbox
+      - /Learn_web_development/Core/CSS_layout/Grids
+      - /Learn_web_development/Core/CSS_layout/Responsive_Design
+      - /Learn_web_development/Core/CSS_layout/Media_queries
+      - /Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension
+  - type: section
+    link: /Web/CSS/Reference
+  - type: listSubPages
+    path: /Web/CSS
+    title: Modules
+    tags: css-module
+    details: closed
+  - type: listSubPagesGrouped
+    path: /Web/CSS
+    title: Properties
+    tags:
+      - css-property
+      - css-shorthand-property
+    details: closed
+  - type: listSubPages
+    path: /Web/CSS
+    title: Selectors
+    tags: css-selector
+    details: closed
+  - type: listSubPages
+    path: /Web/CSS
+    title: Combinators
+    tags: css-combinator
+    details: closed
+  - type: listSubPages
+    path: /Web/CSS
+    title: Pseudo-classes
+    tags: css-pseudo-class
+    details: closed
+  - type: listSubPages
+    path: /Web/CSS
+    title: Pseudo-elements
+    tags: css-pseudo-element
+    details: closed
+  - type: listSubPages
+    path: /Web/CSS
+    title: At-rules
+    tags: css-at-rule
+    details: closed
+  - type: listSubPages
+    path: /Web/CSS
+    title: Functions
+    tags: css-function
+    details: closed
+  - type: listSubPages
+    path: /Web/CSS
+    title: Types
+    tags: css-type
+    details: closed
+  - type: section
+    title: Guides
+  - title: Animations
+    details: closed
+    children:
+      - /Web/CSS/CSS_Animations/Using_CSS_animations
+  - title: Backgrounds_and_Borders
+    details: closed
+    children:
+      - /Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
+      - link: /Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
+        title: Resizing_background_images
+  - title: Box alignment
+    details: closed
+    children:
+      - link: /Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables
+        title: Box_alignment_in_block_layout
+      - /Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox
+      - /Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout
+      - /Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Multi-column_Layout
+  - title: Box_model
+    details: closed
+    children:
+      - /Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
+      - /Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
+  - title: Colors
+    details: closed
+    children:
+      - link: /Web/CSS/CSS_colors/Applying_color
+        title: Applying_color_to_HTML_elements
+      - /Web/CSS/CSS_colors/Color_values
+      - /Web/CSS/CSS_colors/Relative_colors
+      - /Web/CSS/CSS_colors/Using_color_wisely
+      - link: /Web/Accessibility/Understanding_Colors_and_Luminance
+        title: Accessibility_Understanding_colors_and_luminance"
+      - link: /Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
+        title: Color_contrast
+  - title: Columns
+    details: closed
+    children:
+      - /Web/CSS/CSS_Multicol_Layout/Basic_concepts
+      - /Web/CSS/CSS_Multicol_Layout/Styling_columns
+      - /Web/CSS/CSS_Multicol_Layout/Spanning_balancing_columns
+      - /Web/CSS/CSS_Multicol_Layout/Handling_overflow_in_multicol_layout
+      - /Web/CSS/CSS_Multicol_Layout/Handling_content_breaks_in_multicol_layout
+  - title: Conditional_rules
+    details: closed
+    children:
+      - /Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries
+  - title: Containment
+    details: closed
+    children:
+      - /Web/CSS/CSS_Containment/Using_CSS_containment
+      - /Web/CSS/CSS_Containment/Container_queries
+      - /Web/CSS/CSS_Containment/Container_size_and_style_queries
+  - title: CSSOM_view
+    details: closed
+    children:
+      - /Web/CSS/CSSOM_View/Coordinate_systems
+  - title: Flexbox
+    details: closed
+    children:
+      - /Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
+      - /Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods
+      - /Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
+      - /Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items
+      - /Web/CSS/CSS_Flexible_Box_Layout/Controlling_ratios_of_flex_items_along_the_main_axis
+      - /Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
+      - /Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
+  - title: Flow_layout
+    details: closed
+    children:
+      - /Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow
+      - /Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow
+      - /Web/CSS/CSS_Flow_Layout/Introduction_to_formatting_contexts
+      - /Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes
+      - /Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow
+  - title: Fonts
+    details: closed
+    children:
+      - /Web/CSS/CSS_Fonts/OpenType_fonts_guide
+      - /Web/CSS/CSS_Fonts/Variable_Fonts_Guide
+  - title: Grid
+    details: closed
+    children:
+      - /Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
+      - /Web/CSS/CSS_Grid_Layout/Relationship_of_grid_layout_with_other_layout_methods
+      - /Web/CSS/CSS_Grid_Layout/Grid_layout_using_line-based_placement
+      - /Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
+      - /Web/CSS/CSS_Grid_Layout/Grid_layout_using_named_grid_lines
+      - /Web/CSS/CSS_Grid_Layout/Auto-placement_in_grid_layout
+      - /Web/CSS/CSS_Grid_Layout/Box_alignment_in_grid_layout
+      - /Web/CSS/CSS_Grid_Layout/Grids_logical_values_and_writing_modes
+      - /Web/CSS/CSS_Grid_Layout/Grid_layout_and_accessibility
+      - /Web/CSS/CSS_Grid_Layout/Grid_layout_and_progressive_enhancement
+      - /Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_grids
+      - /Web/CSS/CSS_Grid_Layout/Subgrid
+      - /Web/CSS/CSS_Grid_Layout/Masonry_Layout
+  - title: Images
+    details: closed
+    children:
+      - /Web/CSS/CSS_Images/Using_CSS_gradients
+  - title: Lists_and_counters
+    details: closed
+    children:
+      - /Web/CSS/CSS_Counter_Styles/Using_CSS_counters
+      - /Web/CSS/CSS_Lists/Consistent_list_indentation
+  - title: Logical_properties
+    details: closed
+    children:
+      - /Web/CSS/CSS_Logical_Properties_and_Values/Basic_concepts_of_logical_properties_and_values
+      - /Web/CSS/CSS_Logical_Properties_and_Values/Floating_and_positioning
+      - /Web/CSS/CSS_Logical_Properties_and_Values/Margins_borders_padding
+      - /Web/CSS/CSS_Logical_Properties_and_Values/Sizing
+  - title: Math_functions
+    details: closed
+    children:
+      - /Web/CSS/CSS_Functions/Using_CSS_math_functions
+  - title: Media_queries
+    details: closed
+    children:
+      - /Web/CSS/CSS_Media_Queries/Using_media_queries
+      - /Web/CSS/CSS_Media_Queries/Using_Media_Queries_for_Accessibility
+      - /Web/CSS/CSS_Media_Queries/Testing_media_queries
+      - /Web/CSS/CSS_Media_Queries/Printing
+  - title: Nesting
+    details: closed
+    children:
+      - /Web/CSS/CSS_Nesting/Using_CSS_nesting
+      - /Web/CSS/CSS_Nesting/Nesting_at-rules
+      - /Web/CSS/CSS_Nesting/Nesting_and_specificity
+  - title: Positioning
+    details: closed
+    children:
+      - /Web/CSS/CSS_Positioned_Layout/Understanding_z-index
+  - title: Scroll_snap
+    details: closed
+    children:
+      - /Web/CSS/CSS_Scroll_Snap/Basic_concepts
+  - title: Shapes
+    details: closed
+    children:
+      - /Web/CSS/CSS_Shapes/Overview_of_Shapes
+      - /Web/CSS/CSS_Shapes/From_box_values
+      - /Web/CSS/CSS_Shapes/Basic_Shapes
+      - /Web/CSS/CSS_Shapes/Shapes_From_Images
+  - title: Text
+    details: closed
+    children:
+      - /Web/CSS/CSS_Text/Wrapping_Breaking_Text
+  - title: Transforms
+    details: closed
+    children:
+      - /Web/CSS/CSS_Transforms/Using_CSS_transforms
+  - title: Transitions
+    details: closed
+    children:
+      - /Web/CSS/CSS_Transitions/Using_CSS_transitions
+  - type: section
+    link: /Web/CSS/Layout_cookbook
+  - children:
+      - /Web/CSS/Layout_cookbook/Media_objects
+      - /Web/CSS/Layout_cookbook/Column_layouts
+      - /Web/CSS/Layout_cookbook/Center_an_element
+      - /Web/CSS/Layout_cookbook/Sticky_footers
+      - /Web/CSS/Layout_cookbook/Split_Navigation
+      - /Web/CSS/Layout_cookbook/Breadcrumb_Navigation
+      - /Web/CSS/Layout_cookbook/List_group_with_badges
+      - /Web/CSS/Layout_cookbook/Pagination
+      - /Web/CSS/Layout_cookbook/Card
+      - /Web/CSS/Layout_cookbook/Grid_wrapper
+  - type: section
+    title: Tools
+  - children:
+      - /Web/CSS/CSS_Colors/Color_picker_tool
+      - /Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
+      - /Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator
+      - /Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
+l10n:
+  de:
+    CSS_layout: CSS-Layout
+    Combinators: Kombinatoren
+    Guides: Leitfäden
+    Animations: Animationen
+    Backgrounds_and_Borders: Hintergründe und Rahmen
+    Resizing_background_images: Hintergrundbilder skalieren
+    Box_alignment_in_block_layout: Box-Ausrichtung im Block-Layout
+    Box_model: Box-Modell
+    Colors: Farben
+    Color_contrast: "Barrierefreiheit: Farbkontrast"
+    Columns: Spalten
+    Conditional_rules: Bedingte Regeln
+    Containment: Containment
+    CSSOM_view: CSSOM-Ansicht
+    Flexbox: Flexbox
+    Flow_layout: Fluss-Layout
+    Fonts: Schriftarten
+    Grid: Raster
+    Images: Bilder
+    Lists_and_counters: Listen und Zähler
+    Logical_properties: Logische Eigenschaften
+    Math_functions: Mathematische Funktionen
+    Media_queries: Media-Abfragen
+    Nesting: Verschachteln von Stilregeln
+    Positioning: Positionierung
+    Scroll_snap: Scroll-Snap
+    Shapes: Formen
+    Text: Text
+    Transforms: Transformationen
+    Transitions: Übergänge
+    Tools: Werkzeuge
+  en-US:
+    Beginners: Beginner's tutorials
+    Styling_the_content: "Your first website: Styling the content"
+    CSS_styling_basics: CSS styling basics
+    CSS_text_styling: CSS text styling
+    CSS_layout: CSS layout
+    Guides: Guides
+    Animations: Animations
+    Backgrounds_and_Borders: Backgrounds and Borders
+    Resizing_background_images: Resizing background images
+    Box_alignment_in_block_layout: Box alignment in block layout
+    Box_model: Box model
+    Colors: Colors
+    Color_contrast: "Accessibility: Color contrast"
+    Columns: Columns
+    Conditional_rules: Conditional rules
+    Containment: Containment
+    CSSOM_view: CSSOM view
+    Flexbox: Flexbox
+    Flow_layout: Flow layout
+    Fonts: Fonts
+    Grid: Grid
+    Images: Images
+    Lists_and_counters: Lists and counters
+    Logical_properties: Logical properties
+    Math_functions: Math functions
+    Media_queries: Media queries
+    Nesting: Nesting style rules
+    Positioning: Positioning
+    Scroll_snap: Scroll snap
+    Shapes: Shapes
+    Text: Text
+    Transforms: Transforms
+    Transitions: Transitions
+    Tools: Tools
+  fr:
+    CSS_layout: Dispositions CSS
+    Guides: Guides
+    Animations: Animations
+    Backgrounds_and_Borders: Arrière-plans et bordures
+    Resizing_background_images: Redimensionner les images d'arrière-plan
+    Box_alignment_in_block_layout: Alignement des boîtes avec la disposition en bloc
+    Box_model: Modèle de boîte
+    Columns: Colonnes
+    Conditional_rules: Règles conditionnelles
+    CSSOM_view: Vue CSSOM
+    Flexbox: Boîtes flexibles
+    Flow_layout: Disposition de flux
+    Fonts: Polices
+    Grid: Grille
+    Images: Images
+    Lists_and_counters: Listes et compteurs
+    Logical_properties: Propriétés logiques
+    Media_queries: Requêtes média
+    Positioning: Positionnement
+    Scroll_snap: Ancrage du défilement
+    Shapes: Formes
+    Text: Texte
+    Transforms: Transformations
+    Transitions: Transitions
+    Tools: Outils
+  ja:
+    CSS_layout: CSS レイアウト
+    Flexbox: フレックスボックス
+    Positioning: 位置指定
+  ko:
+    CSS_layout: CSS 레이아웃
+    Guides: 안내서
+    Animations: 애니메이션
+    Backgrounds_and_Borders: 배경과 보더
+    Resizing_background_images: 배경 이미지 크기 조정하기
+    Box_alignment_in_block_layout: 블록 레이아웃 박스 정렬하기
+    Box_model: 박스 모델
+    Columns: 열
+    Conditional_rules: CSS에서 규칙 정의하기
+    CSSOM_view: CSSOM view
+    Flexbox: 플렉스박스
+    Flow_layout: 플로 레이아웃
+    Fonts: 글꼴
+    Grid: 그리드
+    Images: 이미지
+    Lists_and_counters: 리스트와 카운터
+    Logical_properties: Logical 속성
+    Media_queries: 미디어 쿼리
+    Positioning: 위치 잡기
+    Scroll_snap: 스크롤 스냅
+    Shapes: 도형
+    Text: 텍스트
+    Transforms: 변형
+    Transitions: 트랜지션
+    Tools: 도구
+  pt-BR:
+    CSS_layout: Esquemas CSS
+    Flexbox: Flexbox
+    Positioning: Posicionamento
+  ru:
+    CSS_layout: CSS макет
+    Guides: Руководства
+    Animations: Анимации
+    Backgrounds_and_Borders: Фоны и границы
+    Resizing_background_images: Изменение размера фоновых изображений
+    Box_alignment_in_block_layout: Выравнивание в блочной раскладке
+    Box_model: Блочная модель
+    Columns: Колонки
+    Conditional_rules: Условные конструкции
+    CSSOM_view: CSSOM View
+    Flexbox: Флексбокс
+    Flow_layout: Потоковая раскладка
+    Fonts: Шрифты
+    Grid: Грид
+    Images: Изображения
+    Lists_and_counters: Списки и счетчики
+    Logical_properties: Логические свойства
+    Media_queries: Медиа-запросы
+    Positioning: Позиционирование
+    Scroll_snap: Scroll snap
+    Shapes: Фигуры
+    Text: Текст
+    Transforms: Трансформации
+    Transitions: Переходы
+    Tools: Инструменты
+  zh-CN:
+    CSS_layout: CSS 布局概述
+    Combinators: 关系选择器
+    Guides: 指南
+    Animations: 动画
+    Backgrounds_and_Borders: 背景和边框
+    Resizing_background_images: 重设背景图片的大小
+    Box_alignment_in_block_layout: 块布局中的盒对齐方式
+    Box_model: 盒模型
+    Colors: 颜色
+    Color_contrast: Web 无障碍：色彩对比度
+    Columns: 多列
+    Conditional_rules: 条件规则
+    CSSOM_view: CSS 对象模型视图
+    Flexbox: 弹性盒布局
+    Flow_layout: 流式布局
+    Fonts: 字体
+    Grid: 网格布局
+    Images: 图片
+    Lists_and_counters: 列表和计数器
+    Logical_properties: 逻辑属性
+    Math_functions: 数学函数
+    Media_queries: 媒体查询
+    Nesting: 嵌套样式规则
+    Positioning: 定位
+    Scroll_snap: 滚动吸附
+    Shapes: 形状
+    Text: 文本
+    Transforms: 变换
+    Transitions: 过渡
+    Tools: 工具
+  zh-TW:
+    CSS_layout: CSS 版面配置
+    Flexbox: 彈性區塊
+    Positioning: 定位

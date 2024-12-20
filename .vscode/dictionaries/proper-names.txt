@@ -120,9 +120,11 @@ Darmok
 Datumizer
 davbrito
 Dedalium
+Dedreux
 Deepti
 Degit
 DekiWiki
+Delaville
 Denicola
 DeSandro
 Desaulniers
@@ -222,6 +224,7 @@ Hobson
 hochan
 Hochberg
 Hoenigswald
+Holborn
 Holdem
 Holzman
 Honigswald
@@ -259,6 +262,7 @@ Johansson
 Joomla
 Jory
 Josiel
+Jost
 Joyo
 jpmedley
 JSCAMP
@@ -310,6 +314,7 @@ Leitura
 Lemieux
 Lempel
 Lennart
+leptos
 Lesh
 Lexi
 Leyla
@@ -349,6 +354,7 @@ mcdetect
 McLellan
 McNally
 McVerry
+Megalosaurus
 Meggin
 Mercure
 Merkle
@@ -406,6 +412,7 @@ Nyquist
 Nystrom
 OASYS
 octocat
+Oddbird
 Odelola
 Odenwald
 Oeschger
@@ -500,6 +507,7 @@ Shireen
 sideshowbarker
 Silverlight
 Sintel
+Siouxsie
 Siri
 Sitepoint
 Sivonen

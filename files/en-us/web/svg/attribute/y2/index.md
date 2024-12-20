@@ -2,9 +2,9 @@
 title: y2
 slug: Web/SVG/Attribute/y2
 page-type: svg-attribute
-spec-urls:
-  - https://svgwg.org/svg2-draft/shapes.html#LineElementY2Attribute
-  - https://svgwg.org/svg2-draft/pservers.html#LinearGradientElementY2Attribute
+browser-compat:
+  - svg.elements.line.y2
+  - svg.elements.linearGradient.y2
 ---
 
 {{SVGRef}}
@@ -86,18 +86,6 @@ For {{SVGElement('linearGradient')}}, `y2` defines the y coordinate of the endin
             >&#x3C;length></a
           ></strong
         >
-        |
-        <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
-        >
-        |
-        <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#number"
-            >&#x3C;number></a
-          ></strong
-        >
       </td>
     </tr>
     <tr>
@@ -172,3 +160,7 @@ svg {
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

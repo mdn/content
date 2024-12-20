@@ -14,7 +14,7 @@ JavaScript's [String](/en-US/docs/Glossary/String) type is used to represent tex
 
 ### String literals
 
-You can create simple strings using either single or double quotes:
+You can declare strings in source code using either single or double quotes:
 
 ```js-nolint
 'foo'
@@ -41,7 +41,7 @@ The Unicode escape sequences require at least four hexadecimal digits following 
 
 #### Unicode code point escapes
 
-With Unicode code point escapes, any character can be escaped using hexadecimal numbers so that it is possible to use Unicode code points up to `0x10FFFF`. With simple Unicode escapes it is often necessary to write the surrogate halves separately to achieve the same result.
+With Unicode code point escapes, any character can be escaped using hexadecimal numbers so that it is possible to use Unicode code points up to `0x10FFFF`. With the four-digit Unicode escapes it is often necessary to write the surrogate halves separately to achieve the same result.
 
 See also {{jsxref("String.fromCodePoint()")}} or {{jsxref("String.prototype.codePointAt()")}}.
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.ViewTransition.skipTransition
 ---
 
-{{APIRef("View Transitions API")}}
+{{APIRef("View Transition API")}}
 
 The **`skipTransition()`** method of the
 {{domxref("ViewTransition")}} interface skips the animation part of the view transition, but doesn't skip running the associated view update.
@@ -61,4 +61,4 @@ document.addEventListener("pagereveal", (event) => {
 
 ## See also
 
-- [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/)
+- [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/)

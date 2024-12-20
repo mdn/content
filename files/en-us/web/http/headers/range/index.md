@@ -13,7 +13,7 @@ If the server sends back ranges, it uses the {{HTTPStatus("206", "206 Partial Co
 If the ranges are invalid, the server returns the {{HTTPStatus("416", "416 Range Not Satisfiable")}} error.
 
 A server that doesn't support range requests may ignore the `Range` header and return the whole resource with a {{HTTPStatus("200")}} status code.
-Older browsers used a response header of {{HTTPHeader("Accept-Ranges", "Accept-Ranges: none")}} to disable features like 'pause' or 'resume' in download managers, but since ignoring the `Range` header has the same effect as `Accept-Ranges: none`, the header is rarely used in this way.
+Older browsers used a response header of {{HTTPHeader("Accept-Ranges", "Accept-Ranges: none")}} to disable features like 'pause' or 'resume' in download managers, but since a server ignoring the `Range` header has the same meaning as responding with `Accept-Ranges: none`, the header is rarely used in this way.
 
 Currently only [`bytes` units are registered](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#range-units) which are _offsets_ (zero-indexed & inclusive).
 If the requested data has a [content coding](/en-US/docs/Web/HTTP/Headers/Content-Encoding) applied, each byte range represents the encoded sequence of bytes, not the bytes that would be obtained after decoding.
@@ -38,7 +38,7 @@ The header is a [CORS-safelisted request header](/en-US/docs/Glossary/CORS-safel
 ```http
 Range: <unit>=<range-start>-
 Range: <unit>=<range-start>-<range-end>
-Range: <unit>=<range-start>-<range-end>, <range-start>-<range-end>, …
+Range: <unit>=<range-start>-<range-end>, …, <range-startN>-<range-endN>
 Range: <unit>=-<suffix-length>
 ```
 

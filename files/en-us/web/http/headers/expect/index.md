@@ -7,23 +7,14 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#field.expect
 
 {{HTTPSidebar}}
 
-The **`Expect`** HTTP request header indicates expectations
-that need to be met by the server to handle the request successfully.
+The HTTP **`Expect`** {{Glossary("request header")}} indicates that there are expectations that need to be met by the server in order to handle the complete request successfully.
 
-Upon `Expect: 100-continue`, the server responds with:
+When a request has an `Expect: 100-continue` header, a server sends a {{HTTPStatus("100", "100 Continue")}} response to indicate that the server is ready or capable of receiving the rest of the request content.
+Waiting for a `100` response can be helpful if a client anticipates that an error is likely, for example, when sending state-changing operations without previously verified authentication credentials.
 
-- {{HTTPStatus("100")}} (Continue) if the information from the request header is insufficient to
-  resolve the response and the client should proceed with sending the body.
-- {{HTTPStatus("417")}} (Expectation Failed) if the server cannot meet the expectation
+A {{HTTPStatus("417", "417 Expectation Failed")}} response is returned if the server cannot meet the expectation, or any other status otherwise (e.g., a [4XX](/en-US/docs/Web/HTTP/Status#client_error_responses) status for a client error, or a [2XX](/en-US/docs/Web/HTTP/Status#successful_responses) status if the request can be resolved successfully without further processing).
 
-or any other status otherwise (e.g. a 4xx status for a client error, or a 2xx status if the
-request can be resolved successfully without further processing).
-
-For example, the server may reject a request if its {{HTTPHeader("Content-Length")}} is
-too large.
-
-No common browsers send the `Expect` header, but some other clients such as
-cURL do so by default.
+None of the more common browsers send the `Expect` header, but some clients (command-line tools) do so by default.
 
 <table class="properties">
   <tbody>
@@ -33,7 +24,7 @@ cURL do so by default.
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes</td>
+      <td>Yes</td>
     </tr>
   </tbody>
 </table>
@@ -49,16 +40,13 @@ Expect: 100-continue
 There is only one defined expectation:
 
 - `100-continue`
-  - : Informs recipients that the client is about to send a (presumably large) message
-    body in this request and wishes to receive a {{HTTPStatus("100")}} (Continue) interim
-    response.
+  - : Informs recipients that the client is about to send a (presumably large) message body in this request and wishes to receive a {{HTTPStatus("100", "100 Continue")}} interim response.
 
 ## Examples
 
 ### Large message body
 
-A client sends a request with `Expect` header and waits for the server to respond
-before sending the message body.
+A client sends a request with `Expect` header and waits for the server to respond before sending the message body.
 
 ```http
 PUT /somewhere/fun HTTP/1.1
@@ -68,8 +56,17 @@ Content-Length: 1234567890987
 Expect: 100-continue
 ```
 
-The server checks the headers and generates the response.
-The server sends {{HTTPStatus("100")}} (Continue), which instructs the client to send the message body.
+The server checks the headers and generates the response, where a {{HTTPStatus("100", "100 Continue")}} instructs the client to send the message body:
+
+```http
+HTTP/1.1 100 Continue
+```
+
+The client completes the request by sending the actual data:
+
+```http
+[Video data as content for PUT request]
+```
 
 ## Specifications
 

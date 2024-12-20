@@ -39,7 +39,7 @@ The cosine of an `angle` will always return a number between `−1` and `1`.
 
 - If `angle` is `infinity`, `-infinity`, or `NaN`, the result is `NaN`.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 

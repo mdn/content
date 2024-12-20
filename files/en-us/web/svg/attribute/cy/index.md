@@ -2,9 +2,10 @@
 title: cy
 slug: Web/SVG/Attribute/cy
 page-type: svg-attribute
-spec-urls:
-  - https://svgwg.org/svg2-draft/geometry.html#CY
-  - https://svgwg.org/svg2-draft/pservers.html#RadialGradientElementCYAttribute
+browser-compat:
+  - svg.elements.circle.cy
+  - svg.elements.ellipse.cy
+  - svg.elements.radialGradient.cy
 ---
 
 {{SVGRef}}
@@ -101,7 +102,9 @@ For {{SVGElement('radialGradient')}}, `cy` defines the y-axis coordinate of the 
   <tbody>
     <tr>
       <th scope="row">Value</th>
-      <td>{{cssxref("length-percentage")}}</td>
+      <td>
+        <strong><a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a></strong>
+      </td>
     </tr>
     <tr>
       <th scope="row">Default value</th>
@@ -175,6 +178,10 @@ svg {
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

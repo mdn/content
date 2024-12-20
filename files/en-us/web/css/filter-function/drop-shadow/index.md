@@ -92,7 +92,7 @@ div:nth-child(3) {
 }
 
 div:nth-child(4) {
-  filter: drop-shadow(-16px -6px red);
+  filter: drop-shadow(-16px -16px red);
 }
 ```
 

@@ -143,9 +143,9 @@ This rule sizes the positioned element's inline size to 4 times the anchor eleme
 }
 ```
 
-### Formal syntax
+## Formal syntax
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Examples
 

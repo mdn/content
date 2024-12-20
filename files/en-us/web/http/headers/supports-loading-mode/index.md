@@ -9,7 +9,7 @@ browser-compat: http.headers.Supports-Loading-Mode
 
 {{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
 
-The **`Supports-Loading-Mode`** header allows a response to opt-in to being loaded in a novel, higher-risk context that it would otherwise fail to be loaded in.
+The HTTP **`Supports-Loading-Mode`** {{Glossary("response header")}} allows a response to opt-in to being loaded in a novel, higher-risk context that it would otherwise fail to be loaded in.
 
 <table class="properties">
   <tbody>
@@ -19,13 +19,13 @@ The **`Supports-Loading-Mode`** header allows a response to opt-in to being load
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
     <tr>
       <th scope="row">
         {{Glossary("CORS-safelisted response header")}}
       </th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -33,7 +33,7 @@ The **`Supports-Loading-Mode`** header allows a response to opt-in to being load
 ## Syntax
 
 ```http
-Supports-Loading-Mode: <comma-separated list of client hint headers>
+Supports-Loading-Mode: <client-hint-headers>
 ```
 
 ## Directives

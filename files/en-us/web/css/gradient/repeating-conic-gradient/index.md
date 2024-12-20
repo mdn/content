@@ -2,7 +2,7 @@
 title: repeating-conic-gradient()
 slug: Web/CSS/gradient/repeating-conic-gradient
 page-type: css-function
-browser-compat: css.types.image.gradient.repeating-conic-gradient
+browser-compat: css.types.gradient.repeating-conic-gradient
 ---
 
 {{CSSRef}}
@@ -41,7 +41,7 @@ repeating-conic-gradient(in hsl shorter hue, red, blue 90deg, green 180deg)
   - : An {{Glossary("interpolation")}} hint defining how the gradient progresses between adjacent color stops. The length defines at which point between two color stops the gradient color should reach the midpoint of the color transition. If omitted, the midpoint of the color transition is the midpoint between two color stops.
 
 > [!NOTE]
-> Rendering of [color stops in CSS gradients](#gradient_with_multiple_color_stops) follows the same rules as color stops in [SVG gradients](/en-US/docs/Web/SVG/Tutorial/Gradients).
+> Rendering of color stops in repeating conic gradients follows the same rules as [color stops in linear gradients](/en-US/docs/Web/CSS/gradient/linear-gradient#composition_of_a_linear_gradient).
 
 ## Description
 
@@ -99,9 +99,9 @@ If two or more color stops are at the same location, the transition will be a ha
 
 While you can mix and match different angle units, don't. It makes CSS hard to read.
 
-### Formal syntax
+## Formal syntax
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Accessibility
 

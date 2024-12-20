@@ -16,7 +16,7 @@ The first step in this introductory [PWA tutorial](/en-US/docs/Web/Progressive_w
 
 We create an HTML file, with meta data in the head and a static web page containing a form and a placeholder to display user inputted data. We'll then add an external CSS stylesheet to improve the site's appearance.
 
-To complete this tutorial, it is helpful to have a basic level of understanding of [HTML](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics), [CSS](/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics), and [JavaScript](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics). If you're not familiar with these, MDN is the home of [Getting Started](/en-US/docs/Learn/Getting_started_with_the_web), an introduction to web development series.
+To complete this tutorial, it is helpful to have a basic level of understanding of [HTML](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content), [CSS](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content), and [JavaScript](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity). If you're not familiar with these, MDN is the home of [Getting Started](/en-US/docs/Learn_web_development/Getting_started/Your_first_website), an introduction to web development series.
 
 In the next sections, we'll set up a [local development environment](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection) and take a look at our progress before adding [JavaScript functionality](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality) to convert the static content created in this section into a functional web application. Once we have a functioning app we will have something that we can progressively enhance into a PWA that is installable and works offline.
 
@@ -82,7 +82,7 @@ The root {{HTMLelement("html")}} tags wrap all the content with the [`lang`](/en
 
 The {{HTMLelement("head")}} contains machine-readable information about the web application that's not visible to readers except for the `<title>`, which is displayed as the heading of the browser tab.
 
-The `<head>` includes all the [meta data](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML). The first two bits of information in your `<head>` should always be the character set definition, which defines the [character encoding](/en-US/docs/Glossary/Character_encoding), and the [viewport](/en-US/docs/Web/HTML/Viewport_meta_tag) {{HTMLelement("meta")}} tag, which ensures the page renders at the width of the viewport and isn't shrunken down when loaded on very small screens.
+The `<head>` includes all the [metadata](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata). The first two bits of information in your `<head>` should always be the character set definition, which defines the [character encoding](/en-US/docs/Glossary/Character_encoding), and the [viewport](/en-US/docs/Web/HTML/Viewport_meta_tag) {{HTMLelement("meta")}} tag, which ensures the page renders at the width of the viewport and isn't shrunken down when loaded on very small screens.
 
 ```html
 <head>
@@ -166,7 +166,7 @@ Putting it altogether, within the `<fieldset>`, we include two paragraphs ({{HTM
 </form>
 ```
 
-We encourage you to [learn more about making accessible web forms](/en-US/docs/Learn/Forms).
+We encourage you to [learn more about making accessible web forms](/en-US/docs/Learn_web_development/Extensions/Forms).
 
 ### Temporary hard-coded results text
 
@@ -317,13 +317,13 @@ li:nth-of-type(even) {
 }
 ```
 
-If any of the above CSS still looks unfamiliar to you, you can look up the [CSS properties](/en-US/docs/Glossary/Property/CSS) and [selectors](/en-US/docs/Web/CSS/CSS_selectors), or work through the [getting started with CSS](/en-US/docs/Learn/CSS/First_steps/Getting_started) learning path.
+If any of the above CSS still looks unfamiliar to you, you can look up the [CSS properties](/en-US/docs/Glossary/Property/CSS) and [selectors](/en-US/docs/Web/CSS/CSS_selectors), or work through the [CSS Styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics) module.
 
 Whether you use the above CSS verbatim, edit the above styles to your preference, or write your own CSS from scratch, include all the CSS in a new file and save it as [`style.css`](https://github.com/mdn/pwa-examples/blob/main/cycletracker/html_and_css/style.css) in the same directory as your `index.html` file.
 
 ### Finishing the static HTML and CSS for our PWA
 
-Before moving on, [comment](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#html_comments) out or delete the fake past period data and header:
+Before moving on, [comment](/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#html_comments) out or delete the fake past period data and header:
 
 ```html
 <section id="past-periods">

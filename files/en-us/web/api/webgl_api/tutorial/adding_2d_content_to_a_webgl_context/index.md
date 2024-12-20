@@ -23,7 +23,6 @@ This project uses the [glMatrix](https://glmatrix.net/) library to perform its m
   <head>
     <meta charset="utf-8" />
     <title>WebGL Demo</title>
-    <link rel="stylesheet" href="./webgl.css" type="text/css" />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"
       integrity="sha512-zhHQR0/H5SEBL3Wn6yYSaTTZej12z0hVZKOv3TwCUXT1z5qeqGcXJLLrbERYRScEDDpYIJhPC1fk31gqR783iQ=="

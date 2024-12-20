@@ -14,6 +14,31 @@ The **`mathbackground`** [global attribute](/en-US/docs/Web/MathML/Global_attrib
 > [!NOTE]
 > Use CSS for styling MathML whenever possible. The `mathbackground` attribute should only be included for applications that are not CSS-aware and will be overridden by the CSS `background-color` property value, if set.
 
+## Example
+
+```css hidden
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  align-items: center;
+  font-size: 1.5rem;
+}
+```
+
+```html
+<math display="block" mathbackground="wheat">
+  <msqrt>
+    <mi>x</mi>
+  </msqrt>
+</math>
+```
+
+{{EmbedLiveSample("Example", "", 150)}}
+
 ## Syntax
 
 ```html-nolint

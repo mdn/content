@@ -7,7 +7,7 @@ browser-compat: html.global_attributes.writingsuggestions
 
 {{HTMLSidebar("Global_attributes")}}
 
-The **`writingsuggestions`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is an {{glossary("enumerated")}} attribute indicating if browser-provided writing suggestions should be enabled on the element or not.
+The **`writingsuggestions`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is an {{glossary("enumerated")}} attribute indicating if browser-provided writing suggestions should be enabled under the scope of the element or not.
 
 Some browsers provide writing suggestions to users as they type in editable fields. Suggestions usually appear as greyed-out text positioned after the text cursor, completing the user's sentence. While this can be helpful to users, developers might want to turn writing suggestions off in some cases, such as when providing site-specific writing suggestions.
 

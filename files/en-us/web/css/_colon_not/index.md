@@ -39,7 +39,7 @@ There are several unusual effects and outcomes when using `:not()` that you shou
 
 ### Using :not() with valid selectors
 
-This example shows some simple cases of using `:not()`.
+This example shows some a few examples of using `:not()`.
 
 #### HTML
 
@@ -151,7 +151,7 @@ If `:invalid-pseudo-class` was a valid selector, the first two rules above would
 ## See also
 
 - [Pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes)
-- [Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+- [Learn: Pseudo-classes and pseudo-elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
 - Other functional CSS pseudo-classes:
 
   - {{cssxref(":has", ":has()")}}

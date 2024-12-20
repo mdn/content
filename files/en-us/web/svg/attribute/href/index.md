@@ -2,7 +2,21 @@
 title: href
 slug: Web/SVG/Attribute/href
 page-type: svg-attribute
-browser-compat: svg.global_attributes.href
+browser-compat:
+  - svg.elements.a.href
+  - svg.elements.animate.href
+  - svg.elements.animateMotion.href
+  - svg.elements.animateTransform.href
+  - svg.elements.feImage.href
+  - svg.elements.image.href
+  - svg.elements.linearGradient.href
+  - svg.elements.mpath.href
+  - svg.elements.pattern.href
+  - svg.elements.radialGradient.href
+  - svg.elements.script.href
+  - svg.elements.set.href
+  - svg.elements.textPath.href
+  - svg.elements.use.href
 ---
 
 {{SVGRef}}
@@ -175,9 +189,9 @@ svg {
 
 {{EmbedLiveSample("image", 200, 250)}}
 
-### linearGradient
+### linearGradient/radialGradient
 
-For {{SVGElement("linearGradient")}}, `href` defines URL referring to a template gradient element; to be valid, the reference must be to a different `<linearGradient>` or {{SVGElement("radialGradient")}} element.
+For {{SVGElement("linearGradient")}} or {{SVGElement("radialGradient")}}, `href` defines URL referring to a template gradient element; to be valid, the reference must be to a different `<linearGradient>` or `<radialGradient>` element.
 
 <table class="properties">
   <tbody>
@@ -228,31 +242,6 @@ For {{SVGElement("mpath")}}, `href` defines a URL referring to the {{SVGElement(
 ### pattern
 
 For {{SVGElement("pattern")}}, `href` defines a URL referring to a different `<pattern>` element within the current SVG document. Any attributes which are defined on the referenced element which are not defined on this element are inherited by this element. If this element has no children, and the referenced element does (possibly due to its own `href` attribute), then this element inherits the children from the referenced element. Inheritance can be indirect to an arbitrary level; thus, if the referenced element inherits attributes or children due to its own `href` attribute, then the current element can inherit those attributes or children. On the {{SVGElement("pattern")}} element, the `href` attribute is animatable.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#url">&#x3C;url></a></code
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><em>None</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
-
-### radialGradient
-
-For {{SVGElement("radialGradient")}}, `href` defines URL referring to a template gradient element; to be valid, the reference must be to a different {{SVGElement("linearGradient")}} or `<radialGradient>` element.
 
 <table class="properties">
   <tbody>

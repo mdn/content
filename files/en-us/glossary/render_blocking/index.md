@@ -12,5 +12,5 @@ The most common causes of render-blocking are initially-loaded CSS or JavaScript
 
 ## See also
 
-- [CSS performance optimization](/en-US/docs/Learn/Performance/CSS)
-- [JavaScript performance optimization](/en-US/docs/Learn/Performance/JavaScript)
+- [CSS performance optimization](/en-US/docs/Learn_web_development/Extensions/Performance/CSS)
+- [JavaScript performance optimization](/en-US/docs/Learn_web_development/Extensions/Performance/JavaScript)

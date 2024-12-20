@@ -40,7 +40,7 @@ svg {
 
 ```html
 <svg viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg">
-  <!-- Simple color stroke -->
+  <!-- Basic color stroke -->
   <circle cx="5" cy="5" r="4" fill="none" stroke="green" />
 
   <!-- Stroke a circle with a gradient -->

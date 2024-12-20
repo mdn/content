@@ -371,10 +371,10 @@ CubeDemo.prototype.computeModelMatrix = function (now) {
   //Scale down by 50%
   const scale = MDN.scaleMatrix(0.5, 0.5, 0.5);
 
-  // Rotate a slight tilt
+  // Rotate around X according to time
   const rotateX = MDN.rotateXMatrix(now * 0.0003);
 
-  // Rotate according to time
+  // Rotate around Y according to time slightly faster
   const rotateY = MDN.rotateYMatrix(now * 0.0005);
 
   // Move slightly down

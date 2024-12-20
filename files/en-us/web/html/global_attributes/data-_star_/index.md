@@ -24,7 +24,7 @@ If you plan to use {{domxref("HTMLElement.dataset")}}, the portion of the attrib
 
 ### Usage
 
-By adding `data-*` attributes, even ordinary HTML elements can become rather complex and powerful program-objects. For example, a space-ship "[sprite](<https://en.wikipedia.org/wiki/Sprite_(computer_graphics)>)_"_ in a game could be a simple {{HTMLElement("img")}} element with a [`class`](/en-US/docs/Web/HTML/Global_attributes/class) attribute and several `data-*` attributes:
+By adding `data-*` attributes, even ordinary HTML elements can become rather complex and powerful program-objects. For example, a space-ship "[sprite](<https://en.wikipedia.org/wiki/Sprite_(computer_graphics)>)_"_ in a game could just be an {{HTMLElement("img")}} element with a [`class`](/en-US/docs/Web/HTML/Global_attributes/class) attribute and several `data-*` attributes:
 
 ```html
 <img
@@ -39,7 +39,7 @@ By adding `data-*` attributes, even ordinary HTML elements can become rather com
   onclick="spaceships[this.dataset.shipId].blasted()" />
 ```
 
-For a more in-depth tutorial about using HTML data attributes, see [Using data attributes](/en-US/docs/Learn/HTML/Howto/Use_data_attributes).
+For a more in-depth tutorial about using HTML data attributes, see [Using data attributes](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes).
 
 ## Specifications
 
@@ -53,4 +53,4 @@ For a more in-depth tutorial about using HTML data attributes, see [Using data a
 
 - All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 - The {{domxref("HTMLElement.dataset")}} property that allows to access and modify these values.
-- [Using data attributes](/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
+- [Using data attributes](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)

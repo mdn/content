@@ -8,11 +8,20 @@ page-type: glossary-definition
 
 A **forbidden header name** is the name of any [HTTP header](/en-US/docs/Web/HTTP/Headers) that cannot be modified programmatically; specifically, an HTTP **request** header name (in contrast with a {{Glossary("Forbidden response header name")}}).
 
-Modifying such headers is forbidden because the user agent retains full control over them. Names starting with `Sec-` are reserved for creating new headers safe from {{glossary("API","APIs")}} that grant developers control over headers, such as {{domxref("Window/fetch", "fetch()")}}.
+Modifying such headers is forbidden because the user agent retains full control over them.
+For example, the {{HTTPHeader("Date")}} header is a forbidden header name, so this code cannot set the message `Date` field:
 
+```js example-bad
+fetch("https://httpbin.org/get", {
+  headers: {
+    Date: new Date().toUTCString(),
+  },
+});
+```
+
+Names starting with `Sec-` are reserved for creating new headers safe from {{glossary("API","APIs")}} that grant developers control over headers, such as {{domxref("Window/fetch", "fetch()")}}.
 Forbidden header names start with `Proxy-` or `Sec-`, or are one of the following names:
 
-- {{HTTPHeader("Accept-Charset")}}
 - {{HTTPHeader("Accept-Encoding")}}
 - {{HTTPHeader("Access-Control-Request-Headers")}}
 - {{HTTPHeader("Access-Control-Request-Method")}}
@@ -26,8 +35,8 @@ Forbidden header names start with `Proxy-` or `Sec-`, or are one of the followin
 - {{HTTPHeader("Keep-Alive")}}
 - {{HTTPHeader("Origin")}}
 - {{HTTPHeader("Permissions-Policy")}}
-- `Proxy-`
-- `Sec-`
+- `Proxy-` headers
+- `Sec-` headers
 - {{HTTPHeader("Referer")}}
 - {{HTTPHeader("TE")}}
 - {{HTTPHeader("Trailer")}}

@@ -42,9 +42,9 @@ You can feel free to style the `<fieldset>` and `<legend>` in any way you want t
 
 ## Examples
 
-### Simple fieldset
+### Basic fieldset
 
-This example shows a really simple `<fieldset>` example, with a `<legend>`, and a single control inside it.
+This example includes a `<fieldset>` with a `<legend>`, with a single control inside it.
 
 ```html
 <form action="#">
@@ -58,7 +58,7 @@ This example shows a really simple `<fieldset>` example, with a `<legend>`, and 
 
 #### Result
 
-{{ EmbedLiveSample('Simple_fieldset', '100%', '80') }}
+{{ EmbedLiveSample('Basic_fieldset', '100%', '80') }}
 
 ### Disabled fieldset
 

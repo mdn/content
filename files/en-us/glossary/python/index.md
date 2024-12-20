@@ -18,7 +18,7 @@ Python is developed under an OSI-approved open source license, making it freely 
 - [Official Python docs tutorials](https://docs.python.org/3/tutorial/index.html)
 - [Tutorials Point Python tutorial](https://www.tutorialspoint.com/python/index.htm)
 - [AlphaCodingSkills Python Tutorial](https://www.alphacodingskills.com/python/python-tutorial.php)
-- [Django Web Framework (Python)](/en-US/docs/Learn/Server-side/Django) on MDN
+- [Django Web Framework (Python)](/en-US/docs/Learn_web_development/Extensions/Server-side/Django) on MDN
 - Related glossary terms:
   - {{Glossary("Java")}}
   - {{Glossary("JavaScript")}}

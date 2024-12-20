@@ -66,6 +66,8 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLObjectElement.checkValidity()")}}
   - : Always returns `true` because {{HTMLElement("object")}} elements are never candidates for constraint validation.
+- {{domxref("HTMLObjectElement.getSVGDocument()")}}
+  - : Returns the embedded SVG as a {{domxref("Document")}}.
 - {{domxref("HTMLObjectElement.reportValidity()")}}
   - : Always returns `true` because {{HTMLElement("object")}} elements are never candidates for constraint validation.
 - {{domxref("HTMLObjectElement.setCustomValidity()")}}

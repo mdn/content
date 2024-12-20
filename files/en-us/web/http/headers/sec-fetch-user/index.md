@@ -7,7 +7,7 @@ browser-compat: http.headers.Sec-Fetch-User
 
 {{HTTPSidebar}}
 
-The **`Sec-Fetch-User`** {{Glossary("Fetch metadata request header", "fetch metadata request header")}} is only sent for requests initiated by user activation, and its value will always be `?1`.
+The HTTP **`Sec-Fetch-User`** {{Glossary("fetch metadata request header")}} is sent for requests initiated by user activation, and its value is always `?1`.
 
 A server can use this header to identify whether a navigation request from a document, iframe, etc., was originated by the user.
 
@@ -19,13 +19,13 @@ A server can use this header to identify whether a navigation request from a doc
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes (prefix <code>Sec-</code>)</td>
+      <td>Yes (<code>Sec-</code> prefix)</td>
     </tr>
     <tr>
       <th scope="row">
         {{Glossary("CORS-safelisted request header")}}
       </th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -41,6 +41,8 @@ Sec-Fetch-User: ?1
 The value will always be `?1`. When a request is triggered by something other than a user activation, the spec requires browsers to omit the header completely.
 
 ## Examples
+
+### Using Sec-Fetch-User
 
 If a user clicks on a page link to another page on the same origin, the resulting request would have the following headers:
 
@@ -61,11 +63,6 @@ Sec-Fetch-User: ?1
 
 ## See also
 
-- Related headers
-
-  - {{HTTPHeader("Sec-Fetch-Dest")}}
-  - {{HTTPHeader("Sec-Fetch-Mode")}}
-  - {{HTTPHeader("Sec-Fetch-Site")}}
-
+- {{HTTPHeader("Sec-Fetch-Dest")}}, {{HTTPHeader("Sec-Fetch-Mode")}}, {{HTTPHeader("Sec-Fetch-Site")}} fetch metadata request headers
 - [Protect your resources from web attacks with Fetch Metadata](https://web.dev/articles/fetch-metadata) (web.dev)
 - [Fetch Metadata Request Headers playground](https://secmetadata.appspot.com/) (secmetadata.appspot.com)

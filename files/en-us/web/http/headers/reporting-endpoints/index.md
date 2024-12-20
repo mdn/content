@@ -42,7 +42,7 @@ For more details on setting up CSP reporting, see the [Content Security Policy (
 
 ```http
 Reporting-Endpoints: <endpoint>
-Reporting-Endpoints: <endpoint>, <endpoint>
+Reporting-Endpoints: <endpoint>, …, <endpointN>
 ```
 
 - `<endpoint>`

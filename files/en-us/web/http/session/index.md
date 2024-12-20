@@ -63,7 +63,7 @@ name=Joe%20User&request=Send%20me%20one%20of%20your%20catalogue
 HTTP defines a set of [request methods](/en-US/docs/Web/HTTP/Methods) indicating the desired action to be performed upon a resource. Although they can also be nouns, these requests methods are sometimes referred as HTTP verbs. The most common requests are `GET` and `POST`:
 
 - The {{HTTPMethod("GET")}} method requests a data representation of the specified resource. Requests using `GET` should only retrieve data.
-- The {{HTTPMethod("POST")}} method sends data to a server so it may change its state. This is the method often used for [HTML Forms](/en-US/docs/Learn/Forms).
+- The {{HTTPMethod("POST")}} method sends data to a server so it may change its state. This is the method often used for [HTML Forms](/en-US/docs/Learn_web_development/Extensions/Forms).
 
 ## Structure of a server response
 

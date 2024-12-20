@@ -146,7 +146,23 @@ One or more `<repeat-style>` values, separated by commas.
 
 ### Setting repeat for a single mask
 
-{{EmbedGHLiveSample("css-examples/masking/mask-repeat.html", '100%', 700)}}
+```html live-sample___mask-repeat-example
+<div class="masked"></div>
+```
+
+```css live-sample___mask-repeat-example
+.masked {
+  width: 250px;
+  height: 250px;
+  background: blue linear-gradient(red, blue);
+  margin-bottom: 10px;
+
+  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-repeat: repeat;
+}
+```
+
+{{EmbedLiveSample("mask-repeat-example", "", "300px")}}
 
 ### Multiple mask image support
 

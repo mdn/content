@@ -75,7 +75,7 @@ of that generator's code, they will just return an object of this form:
 
 ## Examples
 
-### Simple example
+### Basic example
 
 ```js
 function* idMaker() {

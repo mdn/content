@@ -44,9 +44,9 @@ Only a small subset of CSS properties can be used with the `::first-letter` pseu
 
 ## Examples
 
-### Simple drop cap
+### Basic drop cap
 
-In this example we will use the `::first-letter` pseudo-element to create a simple drop cap effect on the first letter of the paragraph coming right after the `<h2>`.
+In this example we will use the `::first-letter` pseudo-element to create a drop cap effect on the first letter of the paragraph coming right after the `<h2>`.
 
 #### HTML
 
@@ -86,7 +86,7 @@ h2 + p::first-letter {
 
 #### Result
 
-{{ EmbedLiveSample('Simple_drop_cap', '100%', 350) }}
+{{ EmbedLiveSample('Basic_drop_cap', '100%', 350) }}
 
 ### Effect on special punctuation and non-Latin characters
 

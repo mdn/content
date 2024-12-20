@@ -35,7 +35,7 @@ The inverse cosine of an `number` will always return an {{cssxref("&lt;angle&gt;
 - If `number` is less than `-1` or greater than `1`, the result is `NaN`.
 - If `number` is exactly `1`, the result is `0`.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 

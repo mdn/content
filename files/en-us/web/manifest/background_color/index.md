@@ -17,7 +17,7 @@ This color appears in the application window before your application's styleshee
 "background_color": "aliceblue"
 
 /* Using hexadecimal value */
-"background_color": "#f0fbff
+"background_color": "#f0fbff"
 
 /* Using RGB value */
 "background_color": "rgb(240 248 255)"

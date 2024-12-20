@@ -2,7 +2,7 @@
 title: conic-gradient()
 slug: Web/CSS/gradient/conic-gradient
 page-type: css-function
-browser-compat: css.types.image.gradient.conic-gradient
+browser-compat: css.types.gradient.conic-gradient
 ---
 
 {{CSSRef}}
@@ -53,7 +53,7 @@ conic-gradient(
   - : An {{Glossary("interpolation")}} hint defining how the gradient progresses between adjacent color stops. The length defines at which point between two color stops the gradient color should reach the midpoint of the color transition. If omitted, the midpoint of the color transition is the midpoint between two color stops.
 
 > [!NOTE]
-> Rendering of [color stops in CSS gradients](#gradient_with_multiple_color_stops) follows the same rules as color stops in [SVG gradients](/en-US/docs/Web/SVG/Tutorial/Gradients).
+> Rendering of color stops in conic gradients follows the same rules as [color stops in linear gradients](/en-US/docs/Web/CSS/gradient/linear-gradient#composition_of_a_linear_gradient).
 
 ## Description
 

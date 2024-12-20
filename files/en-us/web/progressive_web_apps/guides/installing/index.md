@@ -26,7 +26,7 @@ Browsers enable saving, editing, moving, deleting, and otherwise managing bookma
 
 ### Add to home screen
 
-Smartphones, starting with the iPhone in 2007, added "save to home screen" functionality. For regular (non-PWA) websites, this feature is similar to bookmarks, but instead of adding the favicon and title of the page to the bookmarks menu — a browser feature — favoriting in this manner [adds an icon](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site) to the OS's home screen.
+Smartphones, starting with the iPhone in 2007, added "save to home screen" functionality. For regular (non-PWA) websites, this feature is similar to bookmarks, but instead of adding the favicon and title of the page to the bookmarks menu — a browser feature — favoriting in this manner [adds an icon](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#adding_custom_icons_to_your_site) to the OS's home screen.
 
 Adding a non-PWA site to the home screen does not install the website on the device. Rather, it adds the developer-defined icon to the home screen, that, when clicked, opens the bookmarked link in the default browser.
 
@@ -56,7 +56,7 @@ When the user selects the icon, the browser displays a prompt asking if they wan
 
 Once installed, the PWA will behave like other applications that are installed on the OS. For example, on macOS, the icon will appear in the dock, and will have the same icon options as other applications:
 
-![PWA icon in the doc on MacOS](dock.jpg)
+![PWA icon in the doc on macOS](dock.jpg)
 
 On most desktop browsers, the install prompt is in the URL bar. On mobile, the install prompt is generally found in the menu of browser options. No matter the browser or OS, the installation needs to be confirmed.
 
@@ -64,7 +64,7 @@ On most desktop browsers, the install prompt is in the URL bar. On mobile, the i
 
 Once installed, the PWA behaves just like other installed applications: clicking on the application icon opens the PWA, even when the user is offline.
 
-Installation is supported on all modern desktop and mobile devices. Whether the PWA can be installed by the browser on the operating system differs by browser/operating system combination. Most browsers support installing PWAs on all operating systems—ChromeOS, MacOS, Windows, Android, Linux, etc.—directly or when an extension is installed.
+Installation is supported on all modern desktop and mobile devices. Whether the PWA can be installed by the browser on the operating system differs by browser/operating system combination. Most browsers support installing PWAs on all operating systems—ChromeOS, macOS, Windows, Android, Linux, etc.—directly or when an extension is installed.
 
 Firefox requires a [PWA extension](https://addons.mozilla.org/en-US/firefox/addon/pwas-for-firefox/).
 

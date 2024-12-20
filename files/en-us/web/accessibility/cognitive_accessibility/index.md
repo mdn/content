@@ -71,7 +71,7 @@ A **time limit** is any process that happens without user initiation after a set
 Options for adjusting time requirements include:
 
 - Allowing the user to turn off or adjust the time to at least 10 times the original limit before encountering it.
-- Alerting the user and providing a buffer of at least 20 seconds to extend the timeout duration by a factor of 10 with a simple action, such as hitting the space bar.
+- Alerting the user and providing a buffer of at least 20 seconds to extend the timeout duration by a factor of 10 with an action, such as hitting the space bar.
 
 Provide a toggle on content that allows users to enable a longer session time limit, or no session time limit at all. Examples of timed content include forms, timed reading exercises, and training materials. If the time limit is longer than 20 hours, accommodations are not required.
 
@@ -272,10 +272,10 @@ The above are good design practices. They will benefit everyone.
 ## See also
 
 - [Accessibility Guidelines](https://extensionworkshop.com/documentation/develop/build-an-accessible-extension/)
-- [What is accessibility](/en-US/docs/Learn/Accessibility/What_is_accessibility)
+- [What is accessibility](/en-US/docs/Learn_web_development/Core/Accessibility/What_is_accessibility)
 - [Accessibility for seizure disorders](/en-US/docs/Web/Accessibility/Seizure_disorders)
 - [Understanding WCAG Guidelines](/en-US/docs/Web/Accessibility/Understanding_WCAG)
-- [Accessibility overview](/en-US/docs/Learn/Accessibility)
+- [Accessibility overview](/en-US/docs/Learn_web_development/Core/Accessibility)
 - [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/), including [cognitive accessibility guidelines](#wcag_guidelines)
 - [The W3C's Cognitive and Learning Disabilities Accessibility Task Force](https://www.w3.org/WAI/GL/task-forces/coga/)
 - [WebAIM Cognitive information](https://webaim.org/articles/cognitive/)

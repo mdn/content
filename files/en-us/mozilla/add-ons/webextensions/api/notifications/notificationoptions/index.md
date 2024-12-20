@@ -25,7 +25,7 @@ The first three properties - `type`, `title`, `message` - are mandatory in {{Web
 - `title`
   - : `string`. The notification's title.
 - `iconUrl` {{optional_inline}}
-  - : `string`. A URL pointing to an icon to display in the notification. The URL can be: a data URL, a blob URL, a http or https URL, or the [relative URL of a file within the extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#relative_urls). When using an SVG image, ensure that the image includes height and width attributes, for example, `<svg width="96" height="96"…`. Otherwise, the image may not display.
+  - : `string`. A URL pointing to an icon to display in the notification. The URL can be: a data URL, a blob URL, a http or https URL, or the relative URL of a file within the extension. When using an SVG image, ensure that the image includes height and width attributes, for example, `<svg width="96" height="96"…`. Otherwise, the image may not display.
 - `contextMessage` {{optional_inline}}
   - : `string`. Supplementary content to display.
 - `priority` {{optional_inline}}

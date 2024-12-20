@@ -53,7 +53,24 @@ For the composition the current mask layer is referred to as _source_, while all
 
 ### Compositing mask layers with addition
 
-{{EmbedGHLiveSample("css-examples/masking/mask-composite.html", '100%', 550)}}
+```html live-sample___mask-composite-example
+<div class="masked"></div>
+```
+
+```css live-sample___mask-composite-example
+.masked {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+
+  mask-image: url(https://mdn.github.io/shared-assets/images/examples/mdn.svg),
+    url(https://mdn.github.io/shared-assets/images/examples/mask-star.svg);
+  mask-size: 100% 100%;
+  mask-composite: subtract;
+}
+```
+
+{{EmbedLiveSample("mask-composite-example", "", "150px")}}
 
 ## Specifications
 

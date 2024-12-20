@@ -40,7 +40,7 @@ The JavaScript code passes the media query to match into {{DOMxRef("Window.match
 <span class="mq-value"></span>
 ```
 
-A simple `<span>` to receive the output.
+A `<span>` to receive the output.
 
 ```css hidden
 .mq-value {

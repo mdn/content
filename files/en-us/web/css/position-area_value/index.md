@@ -2,10 +2,12 @@
 title: <position-area>
 slug: Web/CSS/position-area_value
 page-type: css-type
+status:
+  - experimental
 browser-compat: css.properties.position-area
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`<position-area>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) defines the cell or spanned cells of a **position-area grid**, a 3x3 grid whose center cell is an anchor element.
 

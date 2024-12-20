@@ -17,10 +17,10 @@ The **`Date.UTC()`** static method accepts parameters representing the date and 
 Date.UTC(year)
 Date.UTC(year, monthIndex)
 Date.UTC(year, monthIndex, day)
-Date.UTC(year, monthIndex, day, hour)
-Date.UTC(year, monthIndex, day, hour, minute)
-Date.UTC(year, monthIndex, day, hour, minute, second)
-Date.UTC(year, monthIndex, day, hour, minute, second, millisecond)
+Date.UTC(year, monthIndex, day, hours)
+Date.UTC(year, monthIndex, day, hours, minutes)
+Date.UTC(year, monthIndex, day, hours, minutes, seconds)
+Date.UTC(year, monthIndex, day, hours, minutes, seconds, milliseconds)
 ```
 
 ### Parameters

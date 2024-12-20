@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.CSSCounterStyleRule
 ---
 
-{{APIRef("CSS Counter Styles")}}
+{{APIRef("CSSOM")}}
 
 The **`CSSCounterStyleRule`** interface represents an {{CSSxRef("@counter-style")}} [at-rule](/en-US/docs/Web/CSS/At-rule).
 
@@ -54,3 +54,4 @@ _This interface doesn't implement any specific method but inherits methods from 
 
 - {{CSSxRef("@counter-style")}}
 - [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
+- [Using CSS counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) guide

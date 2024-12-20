@@ -7,7 +7,7 @@ browser-compat: svg.elements.animate
 
 {{SVGRef}}
 
-The SVG **`<animate>`** element provides a way to animate an attribute of an element over time.
+The **`<animate>`** [SVG](/en-US/docs/Web/SVG) element provides a way to animate an attribute of an element over time.
 
 ## Example
 

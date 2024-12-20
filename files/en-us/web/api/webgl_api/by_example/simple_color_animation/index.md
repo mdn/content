@@ -12,7 +12,7 @@ A very basic color animation created using {{Glossary("WebGL")}}, performed by c
 
 {{EmbedLiveSample("Color_animation_with_clear",660,425)}}
 
-This example provides a simple illustration of color animation with {{Glossary("WebGL")}}, as well as user interaction. The user can start, stop and restart the animation by clicking the button.
+This example provides an illustration of color animation with {{Glossary("WebGL")}}, as well as user interaction. The user can start, stop and restart the animation by clicking the button.
 
 This time we put the {{Glossary("WebGL")}} function calls within a timer event handler. A click event handler additionally enables the basic user interaction of starting and stopping the animation. The timer and the timer handler function establish the animation loop, a set of drawing commands that are executed at a regular period (typically, every frame; in this case, once per second).
 

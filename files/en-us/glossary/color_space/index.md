@@ -40,7 +40,7 @@ The `rgb()` color function is not the only color function that can represent the
 
 - `display-p3` color space
 
-  - : Defined by Apple, the **Display P3** color space combines the DCI-P3 color gamut, the D65 whitepoint, and sRGB gamma curve. It is a wide gamut space typical of current wide-gamut monitors, enabling more vibrant greens and reds than the sRGB color gamut. The `display-p3` is based on `r`, `g`, and `b`, with in-gamut values ranging from `0` to `1`. The whitepoint is D65.
+  - : Defined by Apple, the [**Display P3**](https://www.color.org/chardata/rgb/DisplayP3.xalter), color space combines the DCI-P3 color gamut, the D65 whitepoint, and sRGB gamma curve. It is a wide gamut space typical of current wide-gamut monitors, enabling more vibrant greens and reds than the sRGB color gamut. The `display-p3` is based on `r`, `g`, and `b`, with in-gamut values ranging from `0` to `1`. The whitepoint is D65.
 
 - `a98-rgb` color space
 

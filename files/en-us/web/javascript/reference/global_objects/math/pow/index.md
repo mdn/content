@@ -52,7 +52,7 @@ Because `pow()` is a static method of `Math`, use it as `Math.pow()`, rather tha
 ### Using Math.pow()
 
 ```js
-// Simple cases
+// Basic cases
 Math.pow(7, 2); // 49
 Math.pow(7, 3); // 343
 Math.pow(2, 10); // 1024

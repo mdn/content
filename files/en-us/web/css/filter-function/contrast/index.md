@@ -38,9 +38,9 @@ contrast(2)  /* Double contrast */
 contrast(200%)
 ```
 
-### Formal syntax
+## Formal syntax
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Examples
 

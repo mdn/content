@@ -40,4 +40,4 @@ When writing a shell code block:
 
 ## See also
 
-[Django server-side development docs](/en-US/docs/Learn/Server-side/Django) show good practice presentation of shell prompt commands.
+[Django server-side development docs](/en-US/docs/Learn_web_development/Extensions/Server-side/Django) show good practice presentation of shell prompt commands.

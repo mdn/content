@@ -78,7 +78,7 @@ The completion of the handler determines the settled state of the new promise.
 - If the handler throws an error, the new promise is rejected with the thrown error.
 - If the initial promise has no corresponding handler attached, the new promise will settle to the same state as the initial promise — that is, without a rejection handler, a rejected promise stays rejected with the same reason.
 
-For example, in the code above, if `myPromise` rejects, `handleRejectedA` will be called, and if `handleRejectedA` completes normally (without throwing or returning a rejected promise), the promise returned by the first `then` will be fulfilled instead of staying rejected. Therefore, if an error must be handled immediately, but we want to maintain the error state down the chain, we must throw an error of some type in the rejection handler. On the other hand, in the absence of an immediate need, it is simpler to leave out error handling until the final `catch()` handler.
+For example, in the code above, if `myPromise` rejects, `handleRejectedA` will be called, and if `handleRejectedA` completes normally (without throwing or returning a rejected promise), the promise returned by the first `then` will be fulfilled instead of staying rejected. Therefore, if an error must be handled immediately, but we want to maintain the error state down the chain, we must throw an error of some type in the rejection handler. On the other hand, in the absence of an immediate need, we can leave out error handling until the final `catch()` handler.
 
 ```js
 myPromise
@@ -221,11 +221,13 @@ These properties are defined on `Promise.prototype` and shared by all `Promise` 
 
 ### Basic Example
 
+In this example, we use `setTimeout(...)` to simulate async code.
+In reality, you will probably be using something like XHR or an HTML API.
+
 ```js
 const myFirstPromise = new Promise((resolve, reject) => {
-  // We call resolve(...) when what we were doing asynchronously was successful, and reject(...) when it failed.
-  // In this example, we use setTimeout(...) to simulate async code.
-  // In reality, you will probably be using something like XHR or an HTML API.
+  // We call resolve(...) when what we were doing asynchronously
+  // was successful, and reject(...) when it failed.
   setTimeout(() => {
     resolve("Success!"); // Yay! Everything went well!
   }, 250);
@@ -373,7 +375,68 @@ btn.addEventListener("click", testPromise);
 
 ### Loading an image with XHR
 
-Another simple example using `Promise` and {{domxref("XMLHttpRequest")}} to load an image is available at the MDN GitHub [js-examples](https://github.com/mdn/js-examples/tree/main/promises-test) repository. You can also [see it in action](https://mdn.github.io/js-examples/promises-test/). Each step is commented on and allows you to follow the Promise and XHR architecture closely.
+Another example using `Promise` and {{domxref("XMLHttpRequest")}} to load an image is shown below.
+Each step is commented on and allows you to follow the Promise and XHR architecture closely.
+
+```html hidden live-sample___promises
+<h1>Promise example</h1>
+```
+
+```js live-sample___promises
+function imgLoad(url) {
+  // Create new promise with the Promise() constructor;
+  // This has as its argument a function with two parameters, resolve and reject
+  return new Promise((resolve, reject) => {
+    // XHR to load an image
+    const request = new XMLHttpRequest();
+    request.open("GET", url);
+    request.responseType = "blob";
+    // When the request loads, check whether it was successful
+    request.onload = () => {
+      if (request.status === 200) {
+        // If successful, resolve the promise by passing back the request response
+        resolve(request.response);
+      } else {
+        // If it fails, reject the promise with an error message
+        reject(
+          Error(
+            `Image didn't load successfully; error code: + ${request.statusText}`,
+          ),
+        );
+      }
+    };
+    // Handle network errors
+    request.onerror = () => reject(new Error("There was a network error."));
+    // Send the request
+    request.send();
+  });
+}
+
+// Get a reference to the body element, and create a new image object
+const body = document.querySelector("body");
+const myImage = new Image();
+const imgUrl =
+  "https://mdn.github.io/shared-assets/images/examples/round-balloon.png";
+
+// Call the function with the URL we want to load, then chain the
+// promise then() method with two callbacks
+imgLoad(imgUrl).then(
+  (response) => {
+    // The first runs when the promise resolves, with the request.response
+    // specified within the resolve() method.
+    const imageURL = URL.createObjectURL(response);
+    myImage.src = imageURL;
+    body.appendChild(myImage);
+  },
+  (error) => {
+    // The second runs when the promise
+    // is rejected, and logs the Error specified with the reject() method.
+    console.log(error);
+  },
+);
+```
+
+{{embedlivesample("promises", "", "240px")}}
 
 ### Incumbent settings object tracking
 

@@ -147,7 +147,7 @@ label {
 
 ## Combinators
 
-[CSS Combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators) can also be used with or without the `&` nesting selector.
+[CSS Combinators](/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators) can also be used with or without the `&` nesting selector.
 
 ### Example
 
@@ -386,6 +386,46 @@ In the following CSS, we are creating the styles for `.card` and `.card h2`. The
 
 {{EmbedLiveSample('Appending_nesting_selector','100%','250')}}
 
+## Nested declarations rule
+
+The nested declaration rule is that CSS rules are parsed in the order that they are written in the CSS document.
+
+With the following CSS:
+
+```css
+.foo {
+  background-color: silver;
+  @media (screen) {
+    color: tomato;
+  }
+  color: black;
+}
+```
+
+The `background-color` is parsed first and set to silver, then the `@media` rule is evaluated, and finally the `color`.
+
+The CSSOM parses the CSS in the following way:
+
+```txt
+↳ CSSStyleRule
+  .style
+    - background-color: silver
+  ↳ CSSMediaRule
+    ↳ CSSNestedDeclarations
+      .style (CSSStyleDeclaration, 1) =
+      - color: tomato
+  ↳ CSSNestedDeclarations
+    .style (CSSStyleDeclaration, 1) =
+      - color: black
+```
+
+Note that in order to preserve the parsing order, all the rules before nesting are handled as top-level `CSSRules`, while any top level rules after nesting are represented as `CSSNestedDeclarations`.
+That's why the `color-black` is inside a nested declaration even though it is a top level declaration in the original document.
+
+> [!NOTE]
+> Support for the rule was added with {{domxref("CSSNestedDeclarations")}}.
+> Browsers that [do not support this interface](/en-US/docs/Web/API/CSSNestedDeclarations#browser_compatibility) this interface may parse nested rules in the wrong order.
+
 ## Concatenation (is not possible)
 
 In CSS preprocessors such as [Sass](https://sass-lang.com/), it is possible to use nesting to join strings to create new classes. This is common in CSS methodologies such as [BEM](https://getbem.com/naming/).
@@ -401,7 +441,7 @@ In CSS preprocessors such as [Sass](https://sass-lang.com/), it is possible to u
 ```
 
 > [!WARNING]
-> This is not possible in CSS nesting: when a [combinator](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators) is not used, the nested selector is treated as a [type selector](/en-US/docs/Web/CSS/Type_selectors). Allowing concatenation would break this.
+> This is not possible in CSS nesting: when a [combinator](/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators) is not used, the nested selector is treated as a [type selector](/en-US/docs/Web/CSS/Type_selectors). Allowing concatenation would break this.
 
 In [compound selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector), the type selector must come first. Writing `&Element` (a [type selector](/en-US/docs/Web/CSS/Type_selectors)) makes the CSS selector, and the entire selector block, invalid. As the type selector must come first, the compound selector must be written as `Element&`.
 
@@ -442,3 +482,5 @@ In the following example, there is an invalid selector (`%` is not a valid chara
 - [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector)
 - [Nesting `@` at-rules](/en-US/docs/Web/CSS/CSS_nesting/Nesting_at-rules)
 - [Nesting and specificity](/en-US/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)
+- {{domxref("CSSNestedDeclarations")}}
+- [The Nested Declarations Rule](https://drafts.csswg.org/css-nesting-1/#nested-declarations-rule)

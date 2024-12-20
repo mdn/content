@@ -7,7 +7,8 @@ browser-compat: svg.elements.textPath
 
 {{SVGRef}}
 
-To render text along the shape of a {{SVGElement("path")}}, enclose the text in a **`<textPath>`** element that has an {{SVGAttr("href")}} attribute with a reference to the {{SVGElement("path")}} element.
+The **`<textPath>`** [SVG](/en-US/docs/Web/SVG) element is used to render text along the shape of a {{SVGElement("path")}} element.
+The text must be enclosed in the `<textPath>` element and its {{SVGAttr("href")}} attribute is used to reference the desired `<path>`.
 
 ## Example
 

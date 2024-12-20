@@ -83,6 +83,7 @@ BMFF
 bootup
 botmaster
 BPTC
+Brotli
 browserless
 BSAC
 bytestream
@@ -283,6 +284,7 @@ iconset
 idents
 IERS
 IMSC
+inferencing
 infobar
 infobox
 infoboxes
@@ -560,6 +562,7 @@ retarget
 retargeted
 retargeting
 retargetings
+RFCOMM
 RGTC
 roadmaps
 Rockhopper
@@ -880,5 +883,6 @@ yearless
 Zalgo
 zoomable
 ZQSD
+Zstandard
 ZWNBSP
 ZWSP

@@ -2,9 +2,9 @@
 title: x2
 slug: Web/SVG/Attribute/x2
 page-type: svg-attribute
-spec-urls:
-  - https://svgwg.org/svg2-draft/shapes.html#LineElementX2Attribute
-  - https://svgwg.org/svg2-draft/pservers.html#LinearGradientElementX2Attribute
+browser-compat:
+  - svg.elements.line.x2
+  - svg.elements.linearGradient.x2
 ---
 
 {{SVGRef}}
@@ -86,18 +86,6 @@ For {{SVGElement('linearGradient')}}, `x2` defines the x coordinate of the endin
             >&#x3C;length></a
           ></strong
         >
-        |
-        <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
-        >
-        |
-        <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#number"
-            >&#x3C;number></a
-          ></strong
-        >
       </td>
     </tr>
     <tr>
@@ -170,3 +158,7 @@ svg {
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

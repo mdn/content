@@ -2,6 +2,10 @@
 title: Protocol upgrade mechanism
 slug: Web/HTTP/Protocol_upgrade_mechanism
 page-type: guide
+spec-urls:
+  - https://www.rfc-editor.org/rfc/rfc6455
+  - https://www.rfc-editor.org/rfc/rfc7230
+  - https://www.rfc-editor.org/rfc/rfc7540
 ---
 
 {{HTTPSidebar}}
@@ -141,12 +145,15 @@ Sec-WebSocket-Accept: hash
 - `hash`
   - : If a {{HTTPHeader("Sec-WebSocket-Key")}} header was provided, the value of this header is computed by taking the value of the key, concatenating the string "258EAFA5-E914-47DA-95CA-C5AB0DC85B11" to it, taking the [SHA-1](https://en.wikipedia.org/wiki/SHA-1) hash of that concatenated string, resulting in a 20-byte value. That value is then [base64](/en-US/docs/Glossary/Base64) encoded to obtain the value of this property.
 
-## References
+## Specifications
+
+{{specifications}}
+
+## See also
 
 - [WebSocket API](/en-US/docs/Web/API/WebSocket)
-- [HTTP](/en-US/docs/Web/HTTP)
-- Specifications and RFCs:
-
-  - {{RFC(7230)}}
-  - {{RFC(6455)}}
-  - {{RFC(7540)}}
+- [Evolution of HTTP](/en-US/docs/Web/HTTP/Evolution_of_HTTP)
+- Glossary terms:
+  - {{glossary('HTTP')}}
+  - {{glossary('HTTP_2', 'HTTP/2')}}
+  - {{glossary('QUIC')}}

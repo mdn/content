@@ -94,3 +94,7 @@ When a CSS stylesheet is requested, via the `<link rel="stylesheet">` HTML eleme
 | Konqueror 4.6  | `text/css,*/*;q=0.1`                                                                                                                |
 
 \[1] See [bug 170789](https://bugzil.la/170789).
+
+## See also
+
+- [Content negotiation](/en-US/docs/Web/HTTP/Content_negotiation)

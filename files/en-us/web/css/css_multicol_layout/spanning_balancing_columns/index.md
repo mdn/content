@@ -16,11 +16,89 @@ Any descendant element of the multicol container may be turned into a spanner, i
 
 In the example below, the `<h2>` element is set to `column-span: all` and spans all of the columns.
 
-{{EmbedGHLiveSample("css-examples/multicol/spanning/h2-span.html", '100%', 800)}}
+```html live-sample___h2-span
+<div class="container">
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens
+    corn soko endive gumbo gourd.
+  </p>
+  <h2>A heading</h2>
+  <p>
+    Parsley shallot courgette tatsoi pea sprouts fava bean collard greens
+    dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko
+    zucchini.
+  </p>
+  <p>
+    Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+    kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter
+    purslane kale. Celery potato scallion desert raisin horseradish spinach
+    carrot soko.
+  </p>
+</div>
+```
+
+```css live-sample___h2-span
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.container {
+  column-width: 250px;
+}
+
+h2 {
+  column-span: all;
+  background-color: #4d4e53;
+  color: #fff;
+}
+```
+
+{{EmbedLiveSample("h2-span", "", "420px")}}
 
 In this second example, the heading is inside an {{HTMLElement("article")}} element, yet still spans the content as expected.
 
-{{EmbedGHLiveSample("css-examples/multicol/spanning/nested-h2-span.html", '100%', 800)}}
+```html live-sample___nested-h2-span
+<div class="container">
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens
+    corn soko endive gumbo gourd.
+  </p>
+  <article>
+    <h2>A heading</h2>
+    <p>
+      Parsley shallot courgette tatsoi pea sprouts fava bean collard greens
+      dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko
+      zucchini.
+    </p>
+    <p>
+      Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+      kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+      winter purslane kale. Celery potato scallion desert raisin horseradish
+      spinach carrot soko.
+    </p>
+  </article>
+</div>
+```
+
+```css live-sample___nested-h2-span
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.container {
+  column-width: 250px;
+}
+
+h2 {
+  column-span: all;
+  background-color: #4d4e53;
+  color: #fff;
+}
+```
+
+{{EmbedLiveSample("nested-h2-span", "", "420px")}}
 
 When a spanner is introduced, it breaks the flow of columns; columns restart after the spanner, effectively creating a new set of column boxes. The content does not jump over a spanning element.
 
@@ -32,7 +110,51 @@ The `column-span` can have only two values. The initial value `none` means the i
 
 If the spanning element is inside another element with margins, padding, and a border or background color, the box may appear above the spanner with the rest of the content being displayed below. For this reason, care should be taken when setting an element to span all the columns, ensuring this scenario is accounted for.
 
-{{EmbedGHLiveSample("css-examples/multicol/spanning/mpb-span.html", '100%', 800)}}
+```html hidden live-sample___mpb-span
+<div class="container">
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens
+    corn soko endive gumbo gourd.
+  </p>
+  <article>
+    <h2>A heading</h2>
+    <p>
+      Parsley shallot courgette tatsoi pea sprouts fava bean collard greens
+      dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko
+      zucchini.
+    </p>
+    <p>
+      Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+      kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+      winter purslane kale. Celery potato scallion desert raisin horseradish
+      spinach carrot soko.
+    </p>
+  </article>
+</div>
+```
+
+```css live-sample___mpb-span
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+article {
+  border: 1px solid red;
+  padding: 10px;
+}
+
+.container {
+  column-width: 250px;
+}
+h2 {
+  background-color: #4d4e53;
+  color: #fff;
+  column-span: all;
+}
+```
+
+{{EmbedLiveSample("mpb-span", "", "420px")}}
 
 Additionally, if a spanning element appears later in the content, it can cause unexpected or unwanted behavior when there is not enough content to create columns after the spanner. Use spanning carefully and test at various breakpoints to make sure you get the effect you intended.
 
@@ -46,11 +168,80 @@ The other balancing value, `balance-all`, balances all columns in fragmented con
 
 The columns in this example contain an image and some text, which are balanced. The image, which cannot break, is in the first column. The other columns are balanced, filling with equal amounts of text.
 
-{{EmbedGHLiveSample("css-examples/multicol/balancing/balance.html", '100%', 550)}}
+```html live-sample___balance
+<div class="container">
+  <img
+    alt="Multiple hot air balloons in a clear sky, a crowd of spectators gather in the foreground."
+    src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion.
+  </p>
+</div>
+```
+
+```css live-sample___balance
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+h2 {
+  background-color: #4d4e53;
+  color: #fff;
+}
+img {
+  max-width: 100%;
+}
+.container {
+  column-width: 200px;
+  column-fill: balance;
+  height: 250px;
+}
+```
+
+{{EmbedLiveSample("balance", "", "250px")}}
 
 The `auto` value for `column-fill` fills a column sequentially, filling the first column in the inline-start direction, before placing content in subsequent columns, rather than balancing and filling all the columns equally. In this example, we changed `column-fill` to `auto`. The columns are filled to the height of the container, leaving empty columns at the end.
 
-{{EmbedGHLiveSample("css-examples/multicol/balancing/auto.html", '100%', 550)}}
+```html hidden live-sample___auto
+<div class="container">
+  <img
+    alt="Multiple hot air balloons in a clear sky, a crowd of spectators gather in the foreground."
+    src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion.
+  </p>
+</div>
+```
+
+```css live-sample___auto
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+h2 {
+  background-color: #4d4e53;
+  color: #fff;
+}
+img {
+  max-width: 100%;
+}
+
+.container {
+  column-width: 150px;
+  column-fill: auto;
+  height: 250px;
+}
+```
+
+{{EmbedLiveSample("auto", "", "250px")}}
 
 ## Next steps
 

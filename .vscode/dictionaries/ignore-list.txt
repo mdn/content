@@ -54,6 +54,7 @@ bologi
 bookinst
 BOOKINSTANCE
 bookinstances
+Bookmarksgrove
 boooo
 booooed
 borderify
@@ -79,6 +80,7 @@ coegdfgfddffbgning
 Confecta
 consectetuer
 consetetur
+Consonantia
 constructio
 cooluser
 crashextensions
@@ -106,6 +108,7 @@ Donnalidon
 draft-ietf-httpbis
 DSWbdfnrstvw
 dubby
+Duden
 dXNlcm5hbWU6cGFzc3dvcmQ
 eirmod
 elitr
@@ -145,6 +148,7 @@ GNF576746573fhdg4737dh4
 gogerychwyrndrobwllllantysiliogogogoch
 Graece
 gubergren
+harborside
 hellonode
 HEXDIG
 hexdigit
@@ -186,6 +190,7 @@ liZhYMsy8MGgxUny6Q8NCoH9xSiviwLFfK
 Llanfair
 LLLLLLLLLLLLLLLLRRRRRRRRRRRRRRRR
 locallibrary
+Loomings
 loopend
 LRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLR
 LROR
@@ -222,6 +227,7 @@ opensas
 opensesame
 OPQRTUVXYZ
 Owww
+paradisematic
 pdfs
 Pelientesque
 plep
@@ -239,6 +245,7 @@ quaxxor
 quickbrownfox
 quxyz
 rebum
+regelialia
 rheeeeet
 ricebean
 s3pPLMBiTxaQ9kYGzzhZRbK
@@ -269,6 +276,8 @@ todomvc
 tomatillo
 topsecretpassword
 traa
+TURO
+TUROPC
 Tweety
 UCCE
 ultricied
@@ -283,6 +292,7 @@ verticillata
 Vivie
 vobis
 vocant
+Vokalia
 voluptua
 wakame
 wanderview

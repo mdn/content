@@ -33,9 +33,9 @@ A `class` expression is very similar to, and has almost the same syntax as, a [`
 
 ## Examples
 
-### A simple class expression
+### A basic class expression
 
-This is just a simple anonymous class expression which you can refer to using the variable `Foo`.
+This is just an anonymous class expression which you can refer to using the variable `Foo`.
 
 ```js
 const Foo = class {

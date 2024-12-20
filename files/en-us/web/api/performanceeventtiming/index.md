@@ -13,7 +13,7 @@ The `PerformanceEventTiming` interface of the Event Timing API provides insights
 
 This API enables visibility into slow events by providing event timestamps and duration for certain event types ([see below](#events_exposed)). For example, you can monitor the time between a user action and the start of its event handler, or the time an event handler takes to run.
 
-This API is particularly useful for measuring the {{Glossary("first input delay")}} (FID): the time from the point when a user first interacts with your app to the point when the browser is actually able to respond to that interaction.
+This API is particularly useful for measuring the {{Glossary("Interaction to Next Paint")}} (INP): the longest time (minus some outliers) from the point when a user interacts with your app to the point until the browser was actually able to respond to that interaction.
 
 You typically work with `PerformanceEventTiming` objects by creating a {{domxref("PerformanceObserver")}} instance and then calling its [`observe()`](/en-US/docs/Web/API/PerformanceObserver/observe) method, passing in `"event"` or `"first-input"` as the value of the [`type`](/en-US/docs/Web/API/PerformanceEntry/entryType) option. The `PerformanceObserver` object's callback will then be called with a list of `PerformanceEventTiming` objects which you can analyze. See the [example below](#getting_event_timing_information) for more.
 
@@ -185,67 +185,6 @@ You can also set a different [`durationThreshold`](/en-US/docs/Web/API/Performan
 
 ```js
 observer.observe({ type: "event", durationThreshold: 16, buffered: true });
-```
-
-### Reporting the First Input Delay (FID)
-
-The {{Glossary("first input delay")}} or FID, measures the time from when a user first interacts with a page (i.e. when they click a link or tap on a button) to the time when the browser is actually able to begin processing event handlers in response to that interaction.
-
-```js
-// Keep track of whether (and when) the page was first hidden, see:
-// https://github.com/w3c/page-visibility/issues/29
-// NOTE: ideally this check would be performed in the document <head>
-// to avoid cases where the visibility state changes before this code runs.
-let firstHiddenTime = document.visibilityState === "hidden" ? 0 : Infinity;
-document.addEventListener(
-  "visibilitychange",
-  (event) => {
-    firstHiddenTime = Math.min(firstHiddenTime, event.timeStamp);
-  },
-  { once: true },
-);
-
-// Sends the passed data to an analytics endpoint. This code
-// uses `/analytics`; you can replace it with your own URL.
-function sendToAnalytics(data) {
-  const body = JSON.stringify(data);
-  // Use `navigator.sendBeacon()` if available,
-  // falling back to `fetch()`.
-  (navigator.sendBeacon && navigator.sendBeacon("/analytics", body)) ||
-    fetch("/analytics", { body, method: "POST", keepalive: true });
-}
-
-// Use a try/catch instead of feature detecting `first-input`
-// support, since some browsers throw when using the new `type` option.
-// https://webkit.org/b/209216
-try {
-  function onFirstInputEntry(entry) {
-    // Only report FID if the page wasn't hidden prior to
-    // the entry being dispatched. This typically happens when a
-    // page is loaded in a background tab.
-    if (entry.startTime < firstHiddenTime) {
-      const fid = entry.processingStart - entry.startTime;
-
-      // Report the FID value to an analytics endpoint.
-      sendToAnalytics({ fid });
-    }
-  }
-
-  // Create a PerformanceObserver that calls
-  // `onFirstInputEntry` for each entry.
-  const po = new PerformanceObserver((entryList) => {
-    entryList.getEntries().forEach(onFirstInputEntry);
-  });
-
-  // Observe entries of type `first-input`, including buffered entries,
-  // i.e. entries that occurred before calling `observe()` below.
-  po.observe({
-    type: "first-input",
-    buffered: true,
-  });
-} catch (e) {
-  // Do nothing if the browser doesn't support this API.
-}
 ```
 
 ## Specifications

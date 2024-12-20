@@ -36,9 +36,9 @@ hue-rotate(3.14159rad)
 hue-rotate(0.5turn)
 ```
 
-### Formal syntax
+## Formal syntax
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Examples
 

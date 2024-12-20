@@ -18,7 +18,7 @@ This is an intermediate level tutorial; before attempting it you should already 
 
 - [Vanilla JavaScript](/en-US/docs/Web/JavaScript)
 - [Node](https://nodejs.org/en)
-- [Express](/en-US/docs/Learn/Server-side/Express_Nodejs)
+- [Express](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs)
 - [HTML](/en-US/docs/Web/HTML)
 
 Before you get started, you'll want to make sure you've [installed node](https://nodejs.org/en/download/package-manager) and [Yarn](https://classic.yarnpkg.com/en/docs/install) (the instructions in later articles assume Yarn, but you can feel free to use [npm](https://docs.npmjs.com/getting-started/) or another manager if you'd prefer).

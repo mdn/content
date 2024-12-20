@@ -29,7 +29,9 @@ A {{jsxref("Promise")}} that resolves with an array of {{domxref("SerialPort")}}
 ### Exceptions
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : The returned `Promise` rejects with this error if a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) blocks the use of this feature or a user permission prompt was denied.
+  - : The returned `Promise` rejects with this error in either of the following situations:
+    - A {{httpheader('Permissions-Policy/serial','serial')}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) blocks the use of this feature.
+    - A user permission prompt was denied.
 
 ## Examples
 

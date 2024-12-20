@@ -395,7 +395,7 @@ const obj = {
 // Setting "num" on globalThis to show how it is NOT used.
 globalThis.num = 42;
 
-// A simple traditional function to operate on "this"
+// A traditional function to operate on "this"
 const add = function (a, b, c) {
   return this.num + a + b + c;
 };

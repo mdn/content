@@ -19,11 +19,11 @@ it includes the element's padding, but not its border, margin or
 vertical scrollbar (if present). It can also include the width of pseudo-elements such
 as {{cssxref("::before")}} or {{cssxref("::after")}}. If the element's content can fit
 without a need for horizontal scrollbar, its `scrollWidth` is equal to
-{{domxref("Element.clientWidth", "clientWidth")}}
+{{domxref("Element.clientWidth", "clientWidth")}}.
 
 > [!NOTE]
 > This property will round the value to an integer. If you need a fractional value,
-> use {{ domxref("element.getBoundingClientRect()") }}.
+> use {{domxref("Element.getBoundingClientRect()")}}.
 
 ## Value
 

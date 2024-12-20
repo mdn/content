@@ -93,7 +93,7 @@ The native messaging manifest is a file with a name that matches the string pass
       <td>
         <p>Path to the native application.</p>
         <p>
-          On Windows, this may be relative to the manifest itself. On MacOS and
+          On Windows, this may be relative to the manifest itself. On macOS and
           Linux, it must be absolute.
         </p>
       </td>

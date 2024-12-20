@@ -12,7 +12,7 @@ In this step-by-step tutorial, we create a simple mobile **MDN Breakout** game w
 
 Every step has editable, live samples available to play with, so you can see what the intermediate stages should look like. You will learn the basics of using the Phaser framework to implement fundamental game mechanics like rendering and moving images, collision detection, control mechanisms, framework-specific helper functions, animations and tweens, and winning and losing states.
 
-To get the most out of this series of articles you should already have basic to intermediate [JavaScript](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics) knowledge. After working through this tutorial, you should be able to build your own simple Web games with Phaser.
+To get the most out of this series of articles you should already have basic to intermediate [JavaScript](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity) knowledge. After working through this tutorial, you should be able to build your own simple Web games with Phaser.
 
 ![Gameplay screen from the game MDN Breakout created with Phaser where you can use your paddle to bounce the ball and destroy the brick field, with keeping the points and lives.](mdn-breakout-phaser.png)
 

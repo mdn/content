@@ -32,7 +32,7 @@ The angle in radians (between -π and π, inclusive) between the positive x-axis
 
 The `Math.atan2()` method measures the counterclockwise angle θ, in radians, between the positive x-axis and the point `(x, y)`. Note that the arguments to this function pass the y-coordinate first and the x-coordinate second.
 
-![A simple diagram showing the angle returned by atan2(y, x)](atan2.png)
+![A diagram showing the angle returned by atan2(y, x)](atan2.png)
 
 `Math.atan2()` is passed separate `x` and `y` arguments, while [`Math.atan()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/atan) is passed the ratio of those two arguments. `Math.atan2(y, x)` differs from `Math.atan(y / x)` in the following cases:
 

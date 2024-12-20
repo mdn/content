@@ -38,6 +38,11 @@ The **`DOMRectReadOnly`** interface specifies the standard properties (also used
 - {{domxref("DOMRectReadOnly/fromRect_static", "DOMRectReadOnly.fromRect()")}}
   - : Creates a new `DOMRectReadOnly` object with a given location and dimensions.
 
+## Instance methods
+
+- {{domxref("DOMRectReadOnly.toJSON()")}}
+  - : Returns a JSON representation of the `DOMRectReadOnly` object.
+
 ## Specifications
 
 {{Specifications}}

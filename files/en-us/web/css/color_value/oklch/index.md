@@ -33,7 +33,7 @@ Below are descriptions of the allowed values for both absolute and [relative col
 
 > [!NOTE]
 > Usually when percentage values have a numeric equivalent in CSS, `100%` is equal to the number `1`.
-> This is not the case for `oklch()`. Here `100%` is equal to the number `100` for the `L` value and `0.4` for the `C` value.
+> This is not the case for all of the `oklch()` component values. Here, `100%` is equal to `0.4` for the `C` value.
 
 #### Absolute value syntax
 

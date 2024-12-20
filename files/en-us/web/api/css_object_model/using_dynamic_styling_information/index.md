@@ -16,32 +16,27 @@ To get to the `style` objects from the `document`, you can use the {{domxref("Do
 
 ## Modify a stylesheet rule with CSSOM
 
-In this example the background of the page is set to red using CSS. The JavaScript then accesses the property using the CSSOM and changes the background to blue.
+In this example the background of the page is set to `red` using CSS. The JavaScript then accesses the property using the CSSOM and changes the background to `cornflowerblue`.
 
-```html
-<html lang="en">
-  <head>
-    <title>Modifying a stylesheet rule with CSSOM</title>
-    <style>
-      body {
-        background-color: red;
-      }
-    </style>
-    <script>
-      const stylesheet = document.styleSheets[0];
-      stylesheet.cssRules[0].style.backgroundColor = "aqua";
-    </script>
-  </head>
-  <body>
-    The stylesheet declaration for the body's background color is modified via
-    JavaScript.
-  </body>
-</html>
+```html live-sample___modify-rule
+<p>The stylesheet declaration for the body is modified via JavaScript.</p>
 ```
 
-### Result
+```css live-sample___modify-rule
+body {
+  background-color: red;
+  font: 1.2em / 1.5 sans-serif;
+  color: white;
+  padding: 1em;
+}
+```
 
-{{EmbedGHLiveSample("css-examples/cssom/modify-rule.html", '100%', 120)}}
+```js live-sample___modify-rule
+const stylesheet = document.styleSheets[1];
+stylesheet.cssRules[0].style.backgroundColor = "cornflowerblue";
+```
+
+{{EmbedLiveSample("modify-rule")}}
 
 The list of properties available in the DOM from the `style` property is given on the [DOM CSS Properties List](/en-US/docs/Web/CSS/Reference) page.
 

@@ -7,7 +7,7 @@ browser-compat: css.properties.flex-grow
 
 {{CSSRef}}
 
-The **`flex-grow`** [CSS](/en-US/docs/Web/CSS) property sets the flex grow factor, which specifies how much of the flex container's [**positive free space**](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis), if any, should be assigned to the flex item's [main size](/en-US/docs/Learn/CSS/CSS_layout/Flexbox#the_flex_model).
+The **`flex-grow`** [CSS](/en-US/docs/Web/CSS) property sets the flex grow factor, which specifies how much of the flex container's [**positive free space**](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis), if any, should be assigned to the flex item's [main size](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox#the_flex_model).
 
 When the flex-container's main size is larger than the combined main sizes of its flex items, this positive free space can be distributed among the flex items, with each item's growth being their growth factor value as a proportion of the sum total of all the flex items' flex grow factors.
 
@@ -39,7 +39,7 @@ The `flex-grow` property is specified as a single `<number>`.
 
 This property specifies how much of the remaining space in the flex container should be assigned to the item (the flex grow factor).
 
-The [main size](/en-US/docs/Learn/CSS/CSS_layout/Flexbox#the_flex_model) is either the width or height of the item, depending on the {{cssxref("flex-direction")}} value.
+The [main size](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox#the_flex_model) is either the width or height of the item, depending on the {{cssxref("flex-direction")}} value.
 
 The remaining space, or positive free space, is the size of the flex container minus the size of all flex items' sizes together. If all sibling items have the same flex grow factor, then all items will receive the same share of remaining space. The common practice is to set `flex-grow: 1`, but setting the flex grow factor for all the flex items to `88`, `100`, `1.2`, or any other value greater than `0` will produce the same result: the value is a ratio.
 

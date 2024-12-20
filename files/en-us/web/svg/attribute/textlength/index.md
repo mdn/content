@@ -66,7 +66,7 @@ svg {
 
 ## Interactive example
 
-Let's create a simple example that presents text you can resize using an {{HTMLElement("input")}} element of type [`"range"`](/en-US/docs/Web/HTML/Element/input/range).
+This example presents text you can resize using an {{HTMLElement("input")}} element of type [`"range"`](/en-US/docs/Web/HTML/Element/input/range).
 
 ### CSS
 
@@ -114,7 +114,7 @@ First, a {{SVGElement("rect")}} element is used to create and stroke a rectangle
 
 ### HTML
 
-The HTML is also simple, with only two displayed elements contained inside a grouping {{HTMLElement("div")}}:
+The HTML includes two displayed elements contained inside a grouping {{HTMLElement("div")}}:
 
 ```html
 <div class="controls">

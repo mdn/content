@@ -98,7 +98,7 @@ let max = Math.max.apply(null, numbers);
 
 let min = Math.min.apply(null, numbers);
 
-// vs. simple loop based algorithm
+// vs. loop based algorithm
 max = -Infinity;
 min = +Infinity;
 

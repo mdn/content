@@ -80,7 +80,7 @@ const foo = "bar";​
 // SyntaxError: illegal character
 ```
 
-When inspecting this code in an editor like Vim, you can see that there is actually a
+When inspecting this code in an editor like VIM, you can see that there is actually a
 [zero-width space (ZWSP) (U+200B)](https://en.wikipedia.org/wiki/Zero-width_space) character.
 
 ```js-nolint

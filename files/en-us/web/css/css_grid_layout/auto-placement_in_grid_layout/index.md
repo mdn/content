@@ -13,6 +13,9 @@ In addition to the ability to place items accurately onto a created grid, the CS
 If you give the items no placement information they will position themselves on the grid, one in each grid cell.
 
 ```css hidden
+body {
+  font: 1.2em sans-serif;
+}
 * {
   box-sizing: border-box;
 }
@@ -50,7 +53,7 @@ If you give the items no placement information they will position themselves on 
 </div>
 ```
 
-{{ EmbedLiveSample('Default_placement', '500', '230') }}
+{{EmbedLiveSample('Default_placement')}}
 
 ## Default rules for auto-placement
 
@@ -63,6 +66,9 @@ The default for automatically created rows in the implicit grid is for them to b
 You can however control the size of these rows with the property `grid-auto-rows`. To cause all created rows to be 100 pixels tall for example you would use:
 
 ```css hidden
+body {
+  font: 1.2em sans-serif;
+}
 * {
   box-sizing: border-box;
 }
@@ -101,13 +107,16 @@ You can however control the size of these rows with the property `grid-auto-rows
 }
 ```
 
-{{ EmbedLiveSample('Sizing_rows_in_the_implicit_grid', '500', '330') }}
+{{EmbedLiveSample('Sizing_rows_in_the_implicit_grid', '500', '230')}}
 
 ### Sizing rows using minmax()
 
 You can use {{cssxref("minmax","minmax()")}} in your value for {{cssxref("grid-auto-rows")}} enabling the creation of rows that are a minimum size but then grow to fit content if it is taller.
 
 ```css hidden
+body {
+  font: 1.2em sans-serif;
+}
 * {
   box-sizing: border-box;
 }
@@ -149,13 +158,16 @@ You can use {{cssxref("minmax","minmax()")}} in your value for {{cssxref("grid-a
 }
 ```
 
-{{ EmbedLiveSample('Sizing_rows_using_minmax', '500', '330') }}
+{{EmbedLiveSample('Sizing_rows_using_minmax', '500', '330')}}
 
 ### Sizing rows using a track listing
 
 You can also pass in a track listing, this will repeat. The following track listing will create an initial implicit row track as 100 pixels and a second as `200px`. This will continue for as long as content is added to the implicit grid.
 
 ```css hidden
+body {
+  font: 1.2em sans-serif;
+}
 * {
   box-sizing: border-box;
 }
@@ -197,7 +209,7 @@ You can also pass in a track listing, this will repeat. The following track list
 }
 ```
 
-{{ EmbedLiveSample('Sizing_rows_using_a_track_listing', '500', '450') }}
+{{EmbedLiveSample('Sizing_rows_using_a_track_listing', '500', '450')}}
 
 ### Auto-placement by column
 
@@ -216,6 +228,9 @@ In this next example I have created a grid with three row tracks of 200 pixels h
 ```
 
 ```css hidden
+body {
+  font: 1.2em sans-serif;
+}
 * {
   box-sizing: border-box;
 }
@@ -248,7 +263,7 @@ In this next example I have created a grid with three row tracks of 200 pixels h
 </div>
 ```
 
-{{ EmbedLiveSample('Auto-placement_by_column', '500', '700') }}
+{{EmbedLiveSample('Auto-placement_by_column', '500', '650')}}
 
 ## The order of auto placed items
 
@@ -263,6 +278,9 @@ Grid places items that have not been given a grid position in what is described 
 The first thing grid will do is place any items that have a position. In the example below I have 12 grid items. Item 2 and item 5 have been placed using line based placement on the grid. You can see how those items are placed and the other items then auto-place in the spaces. The auto-placed items will place themselves before the placed items in DOM order, they don't start after the position of a placed item that comes before them.
 
 ```css hidden
+body {
+  font: 1.2em sans-serif;
+}
 * {
   box-sizing: border-box;
 }
@@ -316,7 +334,7 @@ The first thing grid will do is place any items that have a position. In the exa
 }
 ```
 
-{{ EmbedLiveSample('Items_with_placement_properties', '500', '500') }}
+{{EmbedLiveSample('Items_with_placement_properties', '500', '500')}}
 
 ### Deal with items that span tracks
 
@@ -325,6 +343,9 @@ You can use placement properties while still taking advantage of auto-placement.
 You can see how this then leaves gaps in the grid, as for the auto-placed items if grid comes across an item that doesn't fit into a track, it will move to the next row until it finds a space the item can fit in.
 
 ```css hidden
+body {
+  font: 1.2em sans-serif;
+}
 * {
   box-sizing: border-box;
 }
@@ -382,7 +403,7 @@ You can see how this then leaves gaps in the grid, as for the auto-placed items 
 }
 ```
 
-{{ EmbedLiveSample('Deal_with_items_that_span_tracks', '500', '800') }}
+{{EmbedLiveSample('Deal_with_items_that_span_tracks', '500', '800')}}
 
 ### Filling in the gaps
 
@@ -393,6 +414,9 @@ To do this, add the property {{cssxref("grid-auto-flow")}} with a value of `dens
 Having done this, grid will now backfill the gaps, as it moves through the grid it leaves gaps as before, but then if it finds an item that will fit in a previous gap it will pick it up and take it out of DOM order to place it in the gap. As with any other reordering in grid this does not change the logical order. Tab order for example, will still follow the document order. We will take a look at the potential accessibility issues of grid layout in the [Grid layout and accessibility guide](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility), but you should take care when creating this disconnect between the visual order and display order.
 
 ```css hidden
+body {
+  font: 1.2em sans-serif;
+}
 * {
   box-sizing: border-box;
 }
@@ -451,7 +475,7 @@ Having done this, grid will now backfill the gaps, as it moves through the grid 
 }
 ```
 
-{{ EmbedLiveSample('Filling_in_the_gaps', '500', '730') }}
+{{EmbedLiveSample('Filling_in_the_gaps', '500', '730')}}
 
 ### Anonymous grid items
 
@@ -473,11 +497,88 @@ Auto-placement is useful whenever you have a collection of items. That could be 
 
 Try removing the line `grid-auto-flow: dense` to see the content reflow to leave gaps in the layout.
 
-{{EmbedGHLiveSample("css-examples/grid/docs/autoplacement.html", '100%', 1200)}}
+```html live-sample___autoplacement
+<ul class="wrapper">
+  <li>
+    <img
+      alt="A colorful hot air balloon against a clear sky"
+      src="https://mdn.github.io/shared-assets/images/examples/balloon.jpg" />
+  </li>
+  <li class="landscape">
+    <img
+      alt="Three hot air balloons against a clear sky, as seen from the ground"
+      src="https://mdn.github.io/shared-assets/images/examples/balloons-small.jpg" />
+  </li>
+  <li class="landscape">
+    <img
+      alt="Three hot air balloons against a clear sky, as seen from the ground"
+      src="https://mdn.github.io/shared-assets/images/examples/balloons-small.jpg" />
+  </li>
+  <li class="landscape">
+    <img
+      alt="Three hot air balloons against a clear sky, as seen from the ground"
+      src="https://mdn.github.io/shared-assets/images/examples/balloons-small.jpg" />
+  </li>
+  <li>
+    <img
+      alt="A colorful hot air balloon against a clear sky"
+      src="https://mdn.github.io/shared-assets/images/examples/balloon.jpg" />
+  </li>
+  <li>
+    <img
+      alt="A colorful hot air balloon against a clear sky"
+      src="https://mdn.github.io/shared-assets/images/examples/balloon.jpg" />
+  </li>
+</ul>
+```
+
+```css hidden live-sample___autoplacement
+body {
+  font: 1.2em sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  list-style: none;
+  margin: 1em auto;
+  padding: 0;
+  max-width: 800px;
+}
+.wrapper li {
+  border: 1px solid #ccc;
+}
+
+.wrapper li img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+```
+
+```css live-sample___autoplacement
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(120px, 1fr));
+  gap: 10px;
+  grid-auto-flow: dense;
+}
+
+.wrapper li.landscape {
+  grid-column-end: span 2;
+}
+```
+
+{{EmbedLiveSample("autoplacement", "", "500px")}}
 
 Auto-placement can also help you lay out interface items which do have logical order. An example is the definition list in this next example. Definition lists are an interesting challenge to style as they are flat, there is nothing wrapping the groups of `dt` and `dd` items. In my example I am allowing auto-placement to place the items, however I have classes that start a `dt` in column 1, and `dd` in column 2, this ensure that terms go on one side and definitions on the other - no matter how many of each we have.
 
-```css hidden
+```css hidden live-sample___use-cases-for-auto-placement
+body {
+  font: 1.2em sans-serif;
+}
 * {
   box-sizing: border-box;
 }
@@ -489,23 +590,23 @@ Auto-placement can also help you lay out interface items which do have logical o
 }
 ```
 
-```html
+```html live-sample___use-cases-for-auto-placement
 <div class="wrapper">
   <dl>
     <dt>Mammals</dt>
     <dd>Cat</dd>
     <dd>Dog</dd>
     <dd>Mouse</dd>
-    <dt>Fish</dt>
-    <dd>Guppy</dd>
     <dt>Birds</dt>
     <dd>Pied Wagtail</dd>
     <dd>Owl</dd>
+    <dt>Fish</dt>
+    <dd>Guppy</dd>
   </dl>
 </div>
 ```
 
-```css
+```css live-sample___use-cases-for-auto-placement
 dl {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -522,7 +623,7 @@ dd {
 }
 ```
 
-{{ EmbedLiveSample('Use_cases_for_auto-placement', '500', '230') }}
+{{EmbedLiveSample('use-cases-for-auto-placement', '500', '230')}}
 
 ## What can't we do with auto-placement (yet)?
 

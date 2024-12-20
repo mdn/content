@@ -53,7 +53,7 @@ The template that matches the root node outputs the article's title and then say
 To try out the example:
 
 1. Create a directory in your file system and inside it create the files `example.xml` and `example.xsl` listed above
-2. [Start a local server](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#running_a_simple_local_http_server) in the directory containing the files.
+2. [Start a local server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server#running_a_simple_local_http_server) in the directory containing the files.
    This allows you to browse the files in the directory as though they were hosted on the internet.
 
    > [!WARNING]

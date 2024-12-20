@@ -7,7 +7,7 @@ browser-compat: svg.elements.feColorMatrix
 
 {{SVGRef}}
 
-The **`<feColorMatrix>`** SVG filter element changes colors based on a transformation matrix. Every pixel's color value `[R,G,B,A]` is [matrix multiplied](https://en.wikipedia.org/wiki/Matrix_multiplication) by a 5 by 5 color matrix to create new color `[R',G',B',A']`.
+The **`<feColorMatrix>`** [SVG](/en-US/docs/Web/SVG) filter element changes colors based on a transformation matrix. Every pixel's color value `[R,G,B,A]` is [matrix multiplied](https://en.wikipedia.org/wiki/Matrix_multiplication) by a 5 by 5 color matrix to create new color `[R',G',B',A']`.
 
 > [!NOTE]
 > The prime symbol **`'`** is used in mathematics indicate the result of a transformation.

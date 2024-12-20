@@ -147,7 +147,7 @@ _Escape sequences_ in regexes refer to any kind of syntax formed by `\` followed
 [VCC]: /en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v-mode_character_class
 [WBA]: /en-US/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion
 
-`\` followed by any other digit character becomes a [legacy octal escape sequence](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#escape_sequences), which is forbidden in [Unicode-aware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode).
+`\` followed by `0` and another digit becomes a [legacy octal escape sequence](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#escape_sequences), which is forbidden in [Unicode-aware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode). `\` followed by any other digit sequence becomes a [backreference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Backreference).
 
 In addition, `\` can be followed by some non-letter-or-digit characters, in which case the escape sequence is always a [character escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape) representing the escaped character itself:
 

@@ -74,6 +74,10 @@ perspective(d)
   </tbody>
 </table>
 
+## Formal syntax
+
+{{CSSSyntax}}
+
 ## Examples
 
 ### HTML

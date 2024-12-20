@@ -16,7 +16,7 @@ The `counter()` function is generally used within [pseudo-element](/en-US/docs/W
 ## Syntax
 
 ```css
-/* Simple usage */
+/* Basic usage */
 counter(counter-name);
 
 /* changing the counter display */
@@ -38,7 +38,7 @@ The `counter()` function accepts up to two parameters. The first parameter is th
 > [!NOTE]
 > To join the counter values when nesting counters, use the {{cssxref("counters", "counters()")}} function, which provides an additional {{cssxref("string")}} parameter.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 

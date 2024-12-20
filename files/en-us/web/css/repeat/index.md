@@ -118,6 +118,10 @@ There is a fourth form, `<name-repeat>`, which is used to add line names to subg
 - `min-content`
   - : Represents the largest min-content contribution of the grid items occupying the grid track.
 
+## Formal syntax
+
+{{CSSSyntax}}
+
 ## Examples
 
 ### Specifying grid columns using repeat()

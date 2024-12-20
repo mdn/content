@@ -20,7 +20,7 @@ Using the languages of the web, we will create a fully functioning application t
 
 - Use standard and open web technologies
 
-  - : Historically, for an application to be installable on an OS, such as Windows, iOS, MacOS, Linux, and Android, the applications are developed in OS-supported programming languages, like C#, .Net, Objective C, Swift, Kotlin, Java, or Python. PWAs are based on a different model: they use a single code base, written using standard open web technologies (HTML, CSS, and JavaScript) that work across OSes.
+  - : Historically, for an application to be installable on an OS, such as Windows, iOS, macOS, Linux, and Android, the applications are developed in OS-supported programming languages, like C#, .Net, Objective C, Swift, Kotlin, Java, or Python. PWAs are based on a different model: they use a single code base, written using standard open web technologies (HTML, CSS, and JavaScript) that work across OSes.
 
 - No compiling required
 

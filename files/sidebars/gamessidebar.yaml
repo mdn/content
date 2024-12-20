@@ -1,0 +1,541 @@
+# Do not add comments to this file. They will be lost.
+
+sidebar:
+  - title: Introduction
+    details: closed
+    children:
+      - link: /Games/Introduction
+        title: Introduction
+      - link: /Games/Anatomy
+        title: Anatomy
+  - title: APIs_for_game_development
+    details: closed
+    children:
+      - link: /Web/API/Canvas_API
+        title: Canvas
+      - link: /Web/CSS
+        title: CSS
+      - link: /Web/API/Fullscreen_API
+        title: Full_Screen
+      - link: /Web/API/Gamepad_API
+        title: Gamepad
+      - link: /Web/API/IndexedDB_API
+        title: IndexedDB
+      - link: /Web/JavaScript
+        title: JavaScript
+      - link: /Web/API/Pointer_Lock_API
+        title: Pointer_Lock
+      - link: /Web/SVG
+        title: SVG
+      - link: /Web/JavaScript/Reference/Global_Objects/TypedArray
+        title: Typed_Arrays
+      - link: /Web/API/Web_Audio_API
+        title: Web_Audio
+      - link: /Web/API/WebGL_API
+        title: WebGL
+      - link: /Web/API/WebRTC_API
+        title: WebRTC
+      - link: /Web/API/WebSockets_API
+        title: Web_Sockets
+      - link: /Web/API/WebVR_API
+        title: WebVR
+      - link: /Web/API/Web_Workers_API
+        title: Web_Workers
+      - link: /Web/API/XMLHttpRequest
+        title: XMLHttpRequest
+  - title: Techniques
+    details: closed
+    children:
+      - link: /Games/Techniques/Async_scripts
+        title: Using_async_scripts_for_asm.js
+      - link: /Web/Performance/Optimizing_startup_performance
+        title: Optimizing_startup_performance
+      - link: /Games/Techniques/WebRTC_data_channels
+        title: Using_WebRTC_peer-to-peer_data_channels
+      - link: /Games/Techniques/Audio_for_Web_Games
+        title: Audio_for_Web_Games
+      - link: /Games/Techniques/2D_collision_detection
+        title: 2D_collision_detection
+      - link: /Games/Techniques/Tilemaps
+        title: Tiles_and_tilemaps_overview
+  - title: 3D_games_on_the_Web
+    details: closed
+    children:
+      - link: /Games/Techniques/3D_on_the_web
+        title: 3D_games_on_the_Web_overview
+      - link: /Games/Techniques/3D_on_the_web/Basic_theory
+        title: Explaining_basic_3D_theory
+      - link: /Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame
+        title: Building_up_a_basic_demo_with_A-Frame
+      - link: /Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js
+        title: Building_up_a_basic_demo_with_Babylon.js
+      - link: /Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas
+        title: Building_up_a_basic_demo_with_PlayCanvas
+      - link: /Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js
+        title: Building_up_a_basic_demo_with_Three.js
+      - link: /Games/Techniques/3D_on_the_web/WebXR
+        title: WebXR_guide
+      - link: /Games/Techniques/3D_collision_detection
+        title: 3D_collision_detection
+      - link: /Games/Techniques/3D_collision_detection/Bounding_volume_collision_detection_with_THREE.js
+        title: Bounding_volume_collision_detection_with_THREE.js
+  - title: Implementing_game_control_mechanisms
+    details: closed
+    children:
+      - link: /Games/Techniques/Control_mechanisms
+        title: Control_mechanisms
+      - link: /Games/Techniques/Control_mechanisms/Mobile_touch
+        title: Mobile_touch
+      - link: /Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard
+        title: Desktop_with_mouse_and_keyboard
+      - link: /Games/Techniques/Control_mechanisms/Desktop_with_gamepad
+        title: Desktop_with_gamepad
+      - link: /Games/Techniques/Control_mechanisms/Other
+        title: Other
+  - title: Tutorials
+    details: closed
+    children:
+      - link: /Games/Tutorials/2D_Breakout_game_pure_JavaScript
+        title: 2D_breakout_game_using_pure_JavaScript
+      - link: /Games/Tutorials/2D_breakout_game_Phaser
+        title: 2D_breakout_game_using_Phaser
+      - link: /Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
+        title: 2D_maze_game_with_device_orientation
+      - link: https://mozdevs.github.io/html5-games-workshop/en/guides/platformer/start-here/
+        title: 2D_platform_game_using_Phaser
+  - title: Publishing_games
+    details: closed
+    children:
+      - link: /Games/Publishing_games
+        title: Publishing_games_overview
+      - link: /Games/Publishing_games/Game_distribution
+        title: Game_distribution
+      - link: /Games/Publishing_games/Game_promotion
+        title: Game_promotion
+      - link: /Games/Publishing_games/Game_monetization
+        title: Game_monetization
+l10n:
+  de:
+    Introduction: Einführung
+    Anatomy: Anatomie
+    APIs_for_game_development: APIs für die Spieleentwicklung
+    Canvas: Canvas
+    CSS: CSS
+    Full_Screen: Vollbild
+    Gamepad: Gamepad
+    IndexedDB: IndexedDB
+    JavaScript: JavaScript
+    Pointer_Lock: Pointer Lock
+    SVG: SVG
+    Typed_Arrays: Typisierte Arrays
+    Web_Audio: Web Audio
+    WebGL: WebGL
+    WebRTC: WebRTC
+    Web_Sockets: WebSockets
+    WebVR: WebVR
+    Web_Workers: Web Workers
+    XMLHttpRequest: XMLHttpRequest
+    Techniques: Techniken
+    Using_async_scripts_for_asm.js: Verwendung asynchroner Skripte für asm.js
+    Optimizing_startup_performance: Optimierung der Startleistung
+    Using_WebRTC_peer-to-peer_data_channels: Verwendung von WebRTC Peer-to-Peer-Datenkanälen
+    Audio_for_Web_Games: Audio für Webspiele
+    2D_collision_detection: 2D-Kollisionserkennung
+    Tiles_and_tilemaps_overview: Überblick über Kacheln und Kachelkarten
+    3D_games_on_the_Web: 3D-Spiele im Web
+    3D_games_on_the_Web_overview: Überblick über 3D-Spiele im Web
+    Explaining_basic_3D_theory: Erklärung der grundlegenden 3D-Theorie
+    Building_up_a_basic_demo_with_A-Frame: Aufbau einer einfachen Demo mit A-Frame
+    Building_up_a_basic_demo_with_Babylon.js: Aufbau einer einfachen Demo mit Babylon.js
+    Building_up_a_basic_demo_with_PlayCanvas: Aufbau einer einfachen Demo mit PlayCanvas
+    Building_up_a_basic_demo_with_Three.js: Aufbau einer einfachen Demo mit Three.js
+    WebXR_guide: WebXR-Anleitung
+    3D_collision_detection: 3D-Kollisionserkennung
+    Bounding_volume_collision_detection_with_THREE.js: Erkennung von Kollisionen mit Begrenzungsvolumen mit THREE.js
+    Implementing_game_control_mechanisms: Implementierung von Spielsteuerungsmechanismen
+    Control_mechanisms: Steuermechanismen
+    Mobile_touch: Mobile Berührung
+    Desktop_with_mouse_and_keyboard: Desktop mit Maus und Tastatur
+    Desktop_with_gamepad: Desktop mit Gamepad
+    Other: Andere
+    Tutorials: Anleitungen
+    2D_breakout_game_using_pure_JavaScript: 2D-Breakout-Spiel mit purem JavaScript
+    2D_breakout_game_using_Phaser: 2D-Breakout-Spiel mit Phaser
+    2D_maze_game_with_device_orientation: 2D-Labyrinth-Spiel mit Geräteorientierung
+    2D_platform_game_using_Phaser: 2D-Plattformspiel mit Phaser
+    Publishing_games: Veröffentlichung von Spielen
+    Publishing_games_overview: Überblick über die Veröffentlichung von Spielen
+    Game_distribution: Spielverteilung
+    Game_promotion: Spielwerbung
+    Game_monetization: Spielmonetarisierung
+  en-US:
+    Introduction: Introduction
+    Anatomy: Anatomy
+    APIs_for_game_development: APIs for game development
+    Canvas: Canvas
+    CSS: CSS
+    Full_Screen: Full screen
+    Gamepad: Gamepad
+    IndexedDB: IndexedDB
+    JavaScript: JavaScript
+    Pointer_Lock: Pointer Lock
+    SVG: SVG
+    Typed_Arrays: Typed Arrays
+    Web_Audio: Web Audio
+    WebGL: WebGL
+    WebRTC: WebRTC
+    Web_Sockets: WebSockets
+    WebVR: WebVR
+    Web_Workers: Web Workers
+    XMLHttpRequest: XMLHttpRequest
+    Techniques: Techniques
+    Using_async_scripts_for_asm.js: Using async scripts for asm.js
+    Optimizing_startup_performance: Optimizing startup performance
+    Using_WebRTC_peer-to-peer_data_channels: Using WebRTC peer-to-peer data channels
+    Audio_for_Web_Games: Audio for Web Games
+    2D_collision_detection: 2D collision detection
+    Tiles_and_tilemaps_overview: Tiles and tilemaps overview
+    3D_games_on_the_Web: 3D games on the Web
+    3D_games_on_the_Web_overview: 3D games on the Web overview
+    Explaining_basic_3D_theory: Explaining basic 3D theory
+    Building_up_a_basic_demo_with_A-Frame: Building up a basic demo with A-Frame
+    Building_up_a_basic_demo_with_Babylon.js: Building up a basic demo with Babylon.js
+    Building_up_a_basic_demo_with_PlayCanvas: Building up a basic demo with PlayCanvas
+    Building_up_a_basic_demo_with_Three.js: Building up a basic demo with Three.js
+    WebXR_guide: WebXR
+    3D_collision_detection: 3D collision detection
+    Bounding_volume_collision_detection_with_THREE.js: Bounding volume collision detection with THREE.js
+    Implementing_game_control_mechanisms: Implementing game control mechanisms
+    Control_mechanisms: Control mechanisms
+    Mobile_touch: Mobile touch
+    Desktop_with_mouse_and_keyboard: Desktop with mouse and keyboard
+    Desktop_with_gamepad: Desktop with gamepad
+    Other: Other
+    Tutorials: Tutorials
+    2D_breakout_game_using_pure_JavaScript: 2D breakout game using pure JavaScript
+    2D_breakout_game_using_Phaser: 2D breakout game using Phaser
+    2D_maze_game_with_device_orientation: 2D maze_game with device orientation
+    2D_platform_game_using_Phaser: 2D platform game using Phaser
+    Publishing_games: Publishing games
+    Publishing_games_overview: Publishing games overview
+    Game_distribution: Game distribution
+    Game_promotion: Game promotion
+    Game_monetization: Game monetization
+  fr:
+    Introduction: Introduction
+    Anatomy: Anatomie d'un jeu vidéo
+    APIs_for_game_development: API pour le développement de jeux
+    Canvas: Canvas
+    CSS: CSS
+    Full_Screen: Full Screen (plein écran)
+    Gamepad: Gamepad (manette)
+    IndexedDB: IndexedDB
+    JavaScript: JavaScript
+    Pointer_Lock: Pointer Lock (verrou de pointeur)
+    SVG: SVG
+    Typed_Arrays: Typed Arrays (tableaux typés)
+    Web_Audio: Web Audio
+    WebGL: WebGL
+    WebRTC: WebRTC
+    Web_Sockets: WebSockets
+    WebVR: WebVR (réalité virtuelle)
+    Web_Workers: Web Workers
+    XMLHttpRequest: XMLHttpRequest
+    Techniques: Techniques
+    Using_async_scripts_for_asm.js: Utiliser des scripts asynchrones pour asm.js
+    Optimizing_startup_performance: Optimiser les performances de démarrage
+    Using_WebRTC_peer-to-peer_data_channels: Utiliser WebRTC - canaux de données pair-à-pair
+    Audio_for_Web_Games: Audio pour les jeux web
+    2D_collision_detection: Détection de collision 2D
+    Tiles_and_tilemaps_overview: Carreaux et carrelages
+    3D_games_on_the_Web: Jeux 3D sur le Web
+    3D_games_on_the_Web_overview: Aperçu des jeux 3D sur le Web
+    Explaining_basic_3D_theory: Théorie de base sur la 3D
+    Building_up_a_basic_demo_with_A-Frame: Construire une démo avec A-Frame
+    Building_up_a_basic_demo_with_Babylon.js: Construire une démo avec Babylon.js
+    Building_up_a_basic_demo_with_PlayCanvas: Construire une démo avec PlayCanvas
+    Building_up_a_basic_demo_with_Three.js: Construire une démo avec Three.js
+    WebXR_guide: WebXR (réalité virtuelle)
+    3D_collision_detection: Détection de collision en 3D
+    Bounding_volume_collision_detection_with_THREE.js: Détection de collision de volumes avec THREE.js
+    Implementing_game_control_mechanisms: Mise en place des contrôles du jeu
+    Control_mechanisms: Aperçu des mécanismes de contrôle du jeu
+    Mobile_touch: Commandes tactiles mobiles
+    Desktop_with_mouse_and_keyboard: Commandes à la souris et au clavier
+    Desktop_with_gamepad: Commandes à la manette
+    Other: Contrôles non conventionnels
+    Tutorials: Tutoriels
+    2D_breakout_game_using_pure_JavaScript: Jeu de casse-briques 2D avec du pur JavaScript
+    2D_breakout_game_using_Phaser: Jeu de casse-tête 2D avec Phaser
+    2D_maze_game_with_device_orientation: Jeu de labyrinthe 2D avec orientation du périphérique
+    2D_platform_game_using_Phaser: Jeu de plateforme 2D avec Phaser
+    Publishing_games: Publication de jeux
+    Publishing_games_overview: Aperçu des outils de publication des jeux
+    Game_distribution: Distribution des jeux
+    Game_promotion: Promotion des jeux
+    Game_monetization: Monétisation des jeux
+  ja:
+    Introduction: Web のゲーム開発紹介
+    Anatomy: ビデオゲームとの違い
+    APIs_for_game_development: ツール
+    Canvas: Canvas
+    CSS: CSS
+    Full_Screen: Full screen
+    Gamepad: Gamepad
+    IndexedDB: IndexedDB
+    JavaScript: JavaScript
+    Pointer_Lock: Pointer Lock
+    SVG: SVG
+    Typed_Arrays: Typed Arrays
+    Web_Audio: Web Audio
+    WebGL: WebGL
+    WebRTC: WebRTC
+    Web_Sockets: WebSockets
+    WebVR: WebVR
+    Web_Workers: Web Workers
+    XMLHttpRequest: XMLHttpRequest
+    Techniques: ゲーム開発テクニック
+    Using_async_scripts_for_asm.js: asm.js の同期スクリプトを利用する
+    Optimizing_startup_performance: 起動パフォーマンスを最適化する
+    Using_WebRTC_peer-to-peer_data_channels: ピア通信チャンネルとして WebRTC を利用する
+    Audio_for_Web_Games: Web ゲーム向けの音
+    2D_collision_detection: 2D 衝突検出
+    Tiles_and_tilemaps_overview: タイルとタイルマップの概要
+    3D_games_on_the_Web: Web上の 3D ゲームの概要
+    3D_games_on_the_Web_overview: Web上の 3D ゲームの概要
+    Explaining_basic_3D_theory: 基本の 3D理論の説明
+    Building_up_a_basic_demo_with_A-Frame: A-Frame
+    Building_up_a_basic_demo_with_Babylon.js: Babylon.js
+    Building_up_a_basic_demo_with_PlayCanvas: PlayCanvas を利用した基本的なデモの制作
+    Building_up_a_basic_demo_with_Three.js: Three.js を使った基本的なデモ製作
+    WebXR_guide: WebXR
+    3D_collision_detection: 3D 衝突検出の概要
+    Bounding_volume_collision_detection_with_THREE.js: THREE.js を使ったバウンディングボリューム衝突検出
+    Implementing_game_control_mechanisms: Implementing game control mechanisms
+    Control_mechanisms: Control mechanisms
+    Mobile_touch: Mobile touch
+    Desktop_with_mouse_and_keyboard: Desktop with mouse and keyboard
+    Desktop_with_gamepad: Desktop with gamepad
+    Other: Other
+    Tutorials: チュートリアル
+    2D_breakout_game_using_pure_JavaScript: そのままの JavaScript を使ったブロックくずしゲーム
+    2D_breakout_game_using_Phaser: Phaser を使ったブロックくずしゲーム
+    2D_maze_game_with_device_orientation: デバイス回転方向を使った 2D 迷路ゲーム
+    2D_platform_game_using_Phaser: Phaser を使った 2D プラットフォームゲーム
+    Publishing_games: ゲームを公開する
+    Publishing_games_overview: ゲームを公開するには
+    Game_distribution: ゲームの配信
+    Game_promotion: ゲームのプロモーション
+    Game_monetization: ゲームのマネタイズ
+  ko:
+    Introduction: 웹 게임 개발 소개
+    Anatomy: 비디오 게임 구조 파악하기
+    APIs_for_game_development: 게임 개발에 필요한 API
+    Canvas: Canvas
+    CSS: CSS
+    Full_Screen: 전체 화면
+    Gamepad: 게임패드
+    IndexedDB: IndexedDB
+    JavaScript: JavaScript
+    Pointer_Lock: Pointer Lock
+    SVG: SVG
+    Typed_Arrays: 형식화 배열
+    Web_Audio: 웹 오디오
+    WebGL: WebGL
+    WebRTC: WebRTC
+    Web_Sockets: 웹 소켓
+    WebVR: WebVR
+    Web_Workers: Web Workers
+    XMLHttpRequest: XMLHttpRequest
+    Techniques: 기술
+    Using_async_scripts_for_asm.js: asm.js를 위해 async 스크립트 사용하기
+    Optimizing_startup_performance: 시작 단계 성능 최적화 하기
+    Using_WebRTC_peer-to-peer_data_channels: 피어-투-피어 데이터 채널을 위해 WebRTC 사용하기
+    Audio_for_Web_Games: 웹 게임을 위한 오디오
+    2D_collision_detection: 2D 충돌 감지
+    Tiles_and_tilemaps_overview: 타일과 타일맵 개요
+    3D_games_on_the_Web: 웹 3D 게임
+    3D_games_on_the_Web_overview: 웹 3D 게임
+    Explaining_basic_3D_theory: 기본적인 3D 이론
+    Building_up_a_basic_demo_with_A-Frame: A-Frame를 사용하여 데모 만들기
+    Building_up_a_basic_demo_with_Babylon.js: Babylon.js를 사용하여 데모 만들기
+    Building_up_a_basic_demo_with_PlayCanvas: PlayCanvas를 사용하여 데모 만들기
+    Building_up_a_basic_demo_with_Three.js: Three.js를 사용하여 데모 만들기
+    WebXR_guide: WebXR
+    3D_collision_detection: 3D 충돌 감지
+    Bounding_volume_collision_detection_with_THREE.js: THREE.js를 사용한 충돌 용적 감지
+    Implementing_game_control_mechanisms: 게임 제어 원리 적용하기
+    Control_mechanisms: 제어 원리
+    Mobile_touch: 모바일 터치
+    Desktop_with_mouse_and_keyboard: 데스크톱과 마우스와 키보드
+    Desktop_with_gamepad: 데스크톱과 게임패드
+    Other: 기타
+    Tutorials: 자습서
+    2D_breakout_game_using_pure_JavaScript: 순수 자바스크립트를 사용한 2D 게임
+    2D_breakout_game_using_Phaser: Phaser를 사용한 2D 게임
+    2D_maze_game_with_device_orientation: 기기 수평/수직 기능을 활용한 2D 주사위 게임
+    2D_platform_game_using_Phaser: 2D platform game using Phaser
+    Publishing_games: 게임 배포하기
+    Publishing_games_overview: 게임 배포하기 개요
+    Game_distribution: 게임 배포하기
+    Game_promotion: 게임 홍보하기
+    Game_monetization: 게임 결제기능
+  pt-BR:
+    Introduction: Introdução
+    Anatomy: Anatomia de um video game
+    APIs_for_game_development: APIs para desenvolvimento de jogos
+    Canvas: Canvas
+    CSS: CSS
+    Full_Screen: Full screen
+    Gamepad: Gamepad
+    IndexedDB: IndexedDB
+    JavaScript: JavaScript
+    Pointer_Lock: Pointer Lock
+    SVG: SVG
+    Typed_Arrays: Typed Arrays
+    Web_Audio: Web Audio
+    WebGL: WebGL
+    WebRTC: WebRTC
+    Web_Sockets: WebSockets
+    WebVR: WebVR
+    Web_Workers: Web Workers
+    XMLHttpRequest: XMLHttpRequest
+    Techniques: Técnicas
+    Using_async_scripts_for_asm.js: Usando async scripts para&nbsp;asm.js
+    Optimizing_startup_performance: Otimizando a performance de startup
+    Using_WebRTC_peer-to-peer_data_channels: Usando canais de dados WebRTC peer-to-peer
+    Audio_for_Web_Games: Audio para Jogos Web
+    2D_collision_detection: Detecção de colisão 2D
+    Tiles_and_tilemaps_overview: Visão geral de Tiles e tilemaps
+    3D_games_on_the_Web: Visão geral de jogos 3D na Web
+    3D_games_on_the_Web_overview: Visão geral de jogos 3D na Web
+    Explaining_basic_3D_theory: Explicando teoria básica 3D
+    Building_up_a_basic_demo_with_A-Frame: Desenvolvendo um demo básico com A-Frame
+    Building_up_a_basic_demo_with_Babylon.js: Desenvolvendo um demo básico com Babylon.js
+    Building_up_a_basic_demo_with_PlayCanvas: Desenvolvendo um demo básico com PlayCanvas
+    Building_up_a_basic_demo_with_Three.js: Desenvolvendo um demo básico com Three.js
+    WebXR_guide: WebXR
+    3D_collision_detection: Detecção de colisão 3D
+    Bounding_volume_collision_detection_with_THREE.js: BDetecção da quantidade de&nbsp;choque de colisão com THREE.js
+    Implementing_game_control_mechanisms: Implementando mecanismos de controle de jogo
+    Control_mechanisms: Visão geral de mecanismos de controle de jogo
+    Mobile_touch: Controles de toque Mobile
+    Desktop_with_mouse_and_keyboard: Controles de rato e teclado em Desktop
+    Desktop_with_gamepad: Controle de gamepad em Desktop
+    Other: Other
+    Tutorials: Tutoriais
+    2D_breakout_game_using_pure_JavaScript: Jogo 2D usando JavaScript puro
+    2D_breakout_game_using_Phaser: Jogo 2D usando Phaser
+    2D_maze_game_with_device_orientation: Jogo labirinto 2D com device orientation
+    2D_platform_game_using_Phaser: Plataforma de jogo 2D usando Phaser
+    Publishing_games: Publicando jogos
+    Publishing_games_overview: Visão geral sobre publicação de jogos
+    Game_distribution: Distribuição de Jogos
+    Game_promotion: Promoção de Jogos
+    Game_monetization: Monetização de Jogos
+  ru:
+    Introduction: Введение
+    Anatomy: Анатомия видеоигры
+    APIs_for_game_development: API для разработки игр
+    Canvas: Canvas
+    CSS: CSS
+    Full_Screen: Full screen
+    Gamepad: Gamepad
+    IndexedDB: IndexedDB
+    JavaScript: JavaScript
+    Pointer_Lock: Pointer Lock
+    SVG: SVG
+    Typed_Arrays: Typed Arrays
+    Web_Audio: Web Audio
+    WebGL: WebGL
+    WebRTC: WebRTC
+    Web_Sockets: WebSockets
+    WebVR: WebVR
+    Web_Workers: Web Workers
+    XMLHttpRequest: XMLHttpRequest
+    Techniques: Техники
+    Using_async_scripts_for_asm.js: Асинхронные скрипты для asm.js
+    Optimizing_startup_performance: Оптимизация запуска
+    Using_WebRTC_peer-to-peer_data_channels: Использование WebRTC для передачи данных
+    Audio_for_Web_Games: Аудио для веб-игр
+    2D_collision_detection: Обнаружение столкновений в 2D
+    Tiles_and_tilemaps_overview: Обзор тайлов и тайловых карт
+    3D_games_on_the_Web: 3D игры в Интернете
+    3D_games_on_the_Web_overview: Обзор 3D игр в Интернете
+    Explaining_basic_3D_theory: Объяснение основ теории 3D
+    Building_up_a_basic_demo_with_A-Frame: Создание базового демо с помощью A-Frame
+    Building_up_a_basic_demo_with_Babylon.js: Создание базового демо с помощью Babylon.js
+    Building_up_a_basic_demo_with_PlayCanvas: Создание базового демо с помощью PlayCanvas
+    Building_up_a_basic_demo_with_Three.js: Создание базового демо с помощью Three.js
+    WebXR_guide: WebXR
+    3D_collision_detection: Обнаружение столкновений в 3D
+    Bounding_volume_collision_detection_with_THREE.js: Обнаружение столкновений объёмных фигур с помощью Three.js
+    Implementing_game_control_mechanisms: Реализация механизмов управления игрой
+    Control_mechanisms: Механизмы управления
+    Mobile_touch: Управление на мобильных устройствах
+    Desktop_with_mouse_and_keyboard: Управление с помощью мыши и клавиатуры
+    Desktop_with_gamepad: Управление с помощью геймпада
+    Other: Другие
+    Tutorials: Практические руководства
+    2D_breakout_game_using_pure_JavaScript: 2D игра Breakout на чистом JavaScript
+    2D_breakout_game_using_Phaser: 2D игра Breakout на Phaser
+    2D_maze_game_with_device_orientation: 2D игра Maze с использованием ориентации устройства
+    2D_platform_game_using_Phaser: 2D платформер на Phaser
+    Publishing_games: Публикация игр
+    Publishing_games_overview: Обзор публикации игр
+    Game_distribution: Распространение игр
+    Game_promotion: Продвижение игр
+    Game_monetization: Монетизация игр
+  zh-CN:
+    Introduction: 简介
+    Anatomy: 剖析
+    APIs_for_game_development: 游戏开发用到的 API
+    Canvas: Canvas
+    CSS: CSS
+    Full_Screen: 全屏
+    Gamepad: 游戏控制器
+    IndexedDB: IndexedDB
+    JavaScript: JavaScript
+    Pointer_Lock: 指针锁定
+    SVG: SVG
+    Typed_Arrays: 类型数组
+    Web_Audio: Web 音频
+    WebGL: WebGL
+    WebRTC: WebRTC
+    Web_Sockets: WebSocket
+    WebVR: WebVR
+    Web_Workers: Web Worker
+    XMLHttpRequest: XMLHttpRequest
+    Techniques: 技术
+    Using_async_scripts_for_asm.js: 使用 asm.js 中的异步脚本
+    Optimizing_startup_performance: 优化启动性能
+    Using_WebRTC_peer-to-peer_data_channels: 使用 WebRTC 点对点数据通道
+    Audio_for_Web_Games: Web 游戏的音频
+    2D_collision_detection: 2D 碰撞检测
+    Tiles_and_tilemaps_overview: 平铺和平铺贴图概述
+    3D_games_on_the_Web: Web 中的 3D 游戏
+    3D_games_on_the_Web_overview: 概述
+    Explaining_basic_3D_theory: 基本的 3D 理论
+    Building_up_a_basic_demo_with_A-Frame: 使用 A-Frame 构建基础演示
+    Building_up_a_basic_demo_with_Babylon.js: 使用 Babylon.js 构建基础演示
+    Building_up_a_basic_demo_with_PlayCanvas: 使用 PlayCanvas 构建基础演示
+    Building_up_a_basic_demo_with_Three.js: 使用 Three.js 构建基础演示
+    WebXR_guide: WebXR
+    3D_collision_detection: 3D 碰撞检测
+    Bounding_volume_collision_detection_with_THREE.js: 使用 THREE.js 进行边界体积碰撞检测
+    Implementing_game_control_mechanisms: 实现游戏控制机制
+    Control_mechanisms: 控制机制
+    Mobile_touch: 移动端触摸
+    Desktop_with_mouse_and_keyboard: 通过鼠标和键盘控制的桌面端
+    Desktop_with_gamepad: 通过游戏手柄控制的桌面端
+    Other: 其他
+    Tutorials: 教程
+    2D_breakout_game_using_pure_JavaScript: 使用纯 JavaScript 实现 2D 打砖块游戏
+    2D_breakout_game_using_Phaser: 使用 Phaser 实现 2D 打砖块游戏
+    2D_maze_game_with_device_orientation: 具有设备方向检测功能的 2D 迷宫游戏
+    2D_platform_game_using_Phaser: 使用 Phaser 实现 2D 平板游戏
+    Publishing_games: 发布游戏
+    Publishing_games_overview: 概述
+    Game_distribution: 游戏分发
+    Game_promotion: 游戏推广
+    Game_monetization: 游戏盈利

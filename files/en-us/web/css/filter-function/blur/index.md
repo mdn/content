@@ -52,6 +52,10 @@ filter: url(#blur11); /* with embedded SVG */
 filter: url(folder/fileName.svg#blur11); /* external svg filter definition */
 ```
 
+## Formal syntax
+
+{{CSSSyntax}}
+
 ## Examples
 
 This example shows three images: the image with a `blur()` filter function applied, the image with the equivalent SVG blur function applied, and the original images for comparison:
