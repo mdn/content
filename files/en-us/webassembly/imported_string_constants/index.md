@@ -10,7 +10,7 @@ WebAssembly imported global string constants make working with JavaScript string
 
 This article explains how imported global string constants work.
 
-## Problems with traditional string imports
+## The problem with traditional string imports
 
 Let's start by exploring how string imports have traditionally worked in WebAssembly. In a Wasm module, you could import a couple of strings from a namespace called `"string_constants"` with the following snippet:
 
@@ -68,9 +68,9 @@ importObject = {
 
 Looking at the above code, it makes sense to let the browser automate away some of this boilerplate, and that's exactly what the imported global string constants feature does.
 
-## How do you use imported global string constants?
+## Using imported global string constants
 
-Now we'll look at how imported global string constants improve on the above situation.
+Now we'll look at how imported global string constants are used.
 
 ### JavaScript API
 

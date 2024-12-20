@@ -30,7 +30,7 @@ The below sections detail the available builtins. Other builtins are likely to b
 
 The available {{jsxref("String")}} builtins are:
 
-- `"wasm:js-string" "cast"`
+- [`"wasm:js-string" "cast"`](https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md#wasmjs-string-cast)
 
   - : Throws an error if the provided value is not a string. Roughly equivalent to:
 
@@ -38,39 +38,37 @@ The available {{jsxref("String")}} builtins are:
     if (typeof obj !== "string") throw new WebAssembly.RuntimeError();
     ```
 
-- `"wasm:js-string" "compare"`
+- [`"wasm:js-string" "compare"`](https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md#wasmjs-string-compare)
   - : Compares two string values and determines their order. Returns `-1` if the first string is [less than](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than) the second, `1` if the first string is [greater than](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than) the second, and `0` if the strings are [strictly equal](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality).
-- `"wasm:js-string" "concat"`
+- [`"wasm:js-string" "concat"`](https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md#wasmjs-string-concat)
   - : Equivalent to {{jsxref("String.prototype.concat()")}}.
-- `"wasm:js-string" "charCodeAt"`
+- [`"wasm:js-string" "charCodeAt"`](https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md#wasmjs-string-charcodeat)
   - : Equivalent to {{jsxref("String.prototype.charCodeAt()")}}.
-- `"wasm:js-string" "codePointAt"`
+- [`"wasm:js-string" "codePointAt"`](https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md#wasmjs-string-codepointat)
   - : Equivalent to {{jsxref("String.prototype.codePointAt()")}}.
-- `"wasm:js-string" "equals"`
+- [`"wasm:js-string" "equals"`](https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md#wasmjs-string-equals)
   - : Compares two string values for [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality), returning `1` if they are equal, and `0` if not.
     > [!NOTE]
     > The `"equals"` function is the only string builtin that doesn't throw for `null` inputs, so Wasm modules don't need to check for `null` values before calling it. All the other functions have no reasonable way to handle `null` inputs, so they throw for them.
-- `"wasm:js-string" "fromCharCode"`
+- [`"wasm:js-string" "fromCharCode"`](https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md#wasmjs-string-fromcharcode)
   - : Equivalent to {{jsxref("String.fromCharCode()")}}.
-- `"wasm:js-string" "fromCharCodeArray"`
+- [`"wasm:js-string" "fromCharCodeArray"`](https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md#wasmjs-string-fromcharcodearray)
   - : Creates a string from a Wasm array of `i16` values.
-- `"wasm:js-string" "fromCodePoint"`
+- [`"wasm:js-string" "fromCodePoint"`](https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md#wasmjs-string-fromcodepoint)
   - : Equivalent to {{jsxref("String.fromCodePoint()")}}.
-- `"wasm:js-string" "intoCharCodeArray"`
+- [`"wasm:js-string" "intoCharCodeArray"`](https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md#wasmjs-string-intocharcodearray)
   - : Writes a string's char codes into a Wasm array of `i16` values.
-- `"wasm:js-string" "length"`
+- [`"wasm:js-string" "length"`](https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md#wasmjs-string-length)
   - : Equivalent to {{jsxref("String.prototype.length")}}.
-- `"wasm:js-string" "substring"`
+- [`"wasm:js-string" "substring"`](https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md#wasmjs-string-substring)
   - : Equivalent to {{jsxref("String.prototype.substring()")}}.
-- `"wasm:js-string" "test"`
+- [`"wasm:js-string" "test"`](https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md#wasmjs-string-test)
 
   - : Returns `0` if the provided value is not a string, or `1` if it is a string. Roughly equivalent to:
 
     ```js
     typeof obj === "string";
     ```
-
-You can find a full list of the defined builtins, along with Wasm code listings, at [JS String Builtin API](https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md#js-string-builtin-api).
 
 ## How do you use builtins?
 
@@ -115,7 +113,7 @@ Therefore, to write feature detection code for builtins you can define a module 
 
 Without builtins, the module is valid, because you can import any function with any signature you want (in this case: no parameters and no return values). With builtins, the module is invalid, because the now-special-cased `"wasm:js-string" "cast"` function must have a specific signature (an `externref` parameter and a non-nullable `(ref extern)` return value).
 
-You can then try validating this module with the [validate()](/en-US/docs/WebAssembly/JavaScript_interface/validate_static) method, but note how the result is negated with the `!` operator — remember that builtins are supported if the module is _invalid_:
+You can then try validating this module with the [`validate()`](/en-US/docs/WebAssembly/JavaScript_interface/validate_static) method, but note how the result is negated with the `!` operator — remember that builtins are supported if the module is _invalid_:
 
 ```js
 const compileOptions = {
@@ -142,7 +140,7 @@ function JsStringBuiltinsSupported() {
 ```
 
 > [!NOTE]
-> In many cases it is not necessary to feature detect builtins. Another option could be to provide regular imports alongside the builtins, and supporting browsers will just ignore the fallbacks.
+> In many cases there are alternatives to feature detecting builtins. Another option could be to provide regular imports alongside the builtins, and supporting browsers will just ignore the fallbacks.
 
 ## Builtins example
 
@@ -177,7 +175,7 @@ fetch("log-concat.wasm")
 
 The JavaScript:
 
-- Defines an `importObject` that specifies a function `"log"` at a namespace `"m"` to import into the Wasm module during instantiation. It's the {{domxref("console.log()")}} function.
+- Defines an `importObject` that specifies a function `"log"` at a namespace `"m"` to import into the Wasm module during instantiation. It's the {{domxref("console.log_static", "console.log()")}} function.
 - Defines a `compileOptions` object that includes:
   - the `builtins` property to enable string builtins.
   - the `importedStringConstants` property to enable [imported global string constants](/en-US/docs/WebAssembly/Imported_string_constants).
@@ -222,6 +220,6 @@ To get your local example working:
    wasm-as -all log-concat.wat
    ```
 
-3. Load your example HTML page in a [supporting browser](/en-US/docs/WebAssembly/JavaScript_interface/instantiate_static#browser_compatibility) using a [local HTTP server](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#running_a_simple_local_http_server).
+3. Load your example HTML page in a [supporting browser](/en-US/docs/WebAssembly/JavaScript_interface/instantiate_static#browser_compatibility) using a [local HTTP server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server#running_a_simple_local_http_server).
 
 The result should be a blank webpage, with `"hello world!"` logged to the JavaScript console, generated by an exported Wasm function. The logging was done using a function imported from JavaScript, while the concatenation of the two original strings was done by a builtin.
