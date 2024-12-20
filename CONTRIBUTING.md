@@ -200,7 +200,7 @@ This will make it easier to submit a pull request for your changes.
 2. Open a browser and navigate to the equivalent pages you've changed.
    If you changed `files/en-us/web/javascript/index.md`, you would navigate to `http://localhost:5042/en-us/docs/web/javascript` in your browser, for example.
 
-3. Check for detected flaws at the top of the previewed page. Some flaws may be autmatically fixable.
+3. Check for detected flaws at the top of the previewed page. Some flaws may be automatically fixable.
 
 4. Commit your changes to the branch (our example is using the `fix-typo` branch) and push the changes to your fork's remote:
 
