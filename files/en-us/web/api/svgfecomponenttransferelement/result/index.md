@@ -38,6 +38,6 @@ console.log(filterName.baseVa); // the filter's assigned name
 
 ## See also
 
-- {{domxref("SVGFEComponentTransferElement.in")}}
+- {{domxref("SVGFEComponentTransferElement.in1")}}
 - {{SVGElement("feFuncR")}}, {{SVGElement("feFuncG")}}, {{SVGElement("feFuncB")}}, {{SVGElement("feFuncA")}} elements
 - {{cssxref("custom-ident")}} data type
