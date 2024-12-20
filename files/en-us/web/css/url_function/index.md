@@ -87,7 +87,7 @@ The **`url()`** function can be included as a value for
 
 ## Formal syntax
 
-{{CSSSyntax}}
+{{CSSSyntax("url")}}
 
 ## Examples
 
