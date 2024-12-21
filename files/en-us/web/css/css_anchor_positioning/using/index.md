@@ -705,7 +705,7 @@ left: anchor-size(width);
 inset-inline-end: anchor-size(--myAnchor height, 100px);
 ```
 
-This doesn't position an element relative to the position of its anchor like the [`anchor()`](/en-US/docs/Web/CSS/anchor) function or {{cssxref("position-area")}} property do (see [Positioning elements relative to their anchor](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#positioning_elements_relative_to_their_anchor), above); the element won't change its position when its anchor does. Instead, the element will be positioned according to the normal rules of [`absolute`](/en-US/docs/Web/CSS/position#absolute) or [`fixed`](/en-US/docs/Web/CSS/position#fixed) positioning.
+This doesn't position an element relative to the position of its anchor like the [`anchor()`](/en-US/docs/Web/CSS/anchor) function or {{cssxref("position-area")}} property do (see [Positioning elements relative to their anchor](#positioning_elements_relative_to_their_anchor), above); the element won't change its position when its anchor does. Instead, the element will be positioned according to the normal rules of [`absolute`](/en-US/docs/Web/CSS/position#absolute) or [`fixed`](/en-US/docs/Web/CSS/position#fixed) positioning.
 
 This can be useful in some situations. For example, if your anchor element can only move vertically, and always remains next to the edge of its closest positioned ancestor horizontally, you could use `left: anchor-size(width)` to cause the anchor-positioned element to always be positioned to the right of its anchor, even if the anchor width changes.
 
