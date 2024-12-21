@@ -23,6 +23,10 @@ _This interface also inherits properties from its parent, {{domxref("SVGElement"
   - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("patternContentUnits")}} attribute of the given {{SVGElement("pattern")}} element. Takes one of the constants defined in {{domxref("SVGUnitTypes")}}.
 - {{domxref("SVGPatternElement.patternTransform")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedTransformList")}} corresponding to the {{SVGAttr("patternTransform")}} attribute of the given {{SVGElement("pattern")}} element.
+- {{domxref("SVGPatternElement.viewBox")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedRect")}} corresponding to the {{SVGAttr("viewBox")}} attribute of the given {{SVGElement("pattern")}} element.
+- {{domxref("SVGPatternElement.preserveAspectRatio")}} {{ReadOnlyInline}}
+  - : An {{domxref("SVGAnimatedPreserveAspectRatio")}} corresponding to the {{SVGAttr("preserveAspectRatio")}} attribute of the given {{SVGElement("pattern")}} element.
 - {{domxref("SVGPatternElement.x")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("x")}} attribute of the given {{SVGElement("pattern")}} element.
 - {{domxref("SVGPatternElement.y")}} {{ReadOnlyInline}}
