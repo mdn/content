@@ -4,7 +4,7 @@ slug: Learn_web_development/Howto/Tools_and_setup/Available_text_editors
 page-type: learn-faq
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 In this article we highlight some things to think about when installing a text editor for web development.
 
