@@ -12,7 +12,7 @@ The **`patternTransform`** read-only property of the {{domxref("SVGPatternElemen
 
 ## Value
 
-An {{domxref("SVGAnimatedTransformList")}} object, which contains the list of transformations applied to the pattern.
+An {{domxref("SVGAnimatedTransformList")}} object.
 
 ## Example
 
