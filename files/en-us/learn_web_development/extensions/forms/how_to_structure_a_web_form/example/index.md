@@ -125,7 +125,7 @@ form {
   border-radius: 1em;
 }
 
-div + div {
+p + p {
   margin-top: 1em;
 }
 
@@ -135,7 +135,7 @@ label span {
 }
 
 input,
-textarea {
+fieldset {
   font: 1em sans-serif;
   width: 250px;
   box-sizing: border-box;
@@ -151,18 +151,6 @@ input[type="radio"] {
 input:focus,
 textarea:focus {
   border-color: #000;
-}
-
-textarea {
-  vertical-align: top;
-  height: 5em;
-  resize: vertical;
-}
-
-fieldset {
-  width: 250px;
-  box-sizing: border-box;
-  border: 1px solid #999;
 }
 
 button {
