@@ -284,6 +284,8 @@ These properties are defined on `Date.prototype` and shared by all `Date` instan
   - : Returns a string with a locality-sensitive representation of the time portion of this date, based on system settings.
 - {{jsxref("Date.prototype.toString()")}}
   - : Returns a string representing the specified `Date` object. Overrides the {{jsxref("Object.prototype.toString()")}} method.
+- {{jsxref("Date.prototype.toTemporalInstant()")}}
+  - : TODO
 - {{jsxref("Date.prototype.toTimeString()")}}
   - : Returns the "time" portion of the `Date` as a human-readable string.
 - {{jsxref("Date.prototype.toUTCString()")}}
