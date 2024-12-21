@@ -3,10 +3,12 @@ title: "Document: write() method"
 short-title: write()
 slug: Web/API/Document/write
 page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.Document.write
 ---
 
-{{ApiRef("DOM")}}
+{{ApiRef("DOM")}}{{deprecated_header}}
 
 > [!WARNING]
 > Use of the `document.write()` method is strongly discouraged.
