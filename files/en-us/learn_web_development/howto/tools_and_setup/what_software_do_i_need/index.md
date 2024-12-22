@@ -4,7 +4,7 @@ slug: Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need
 page-type: learn-faq
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/en-US/docs/Learn_web_development/Howto")}}
 
 In this article, we lay out which software components you need when you're editing, uploading, or viewing a website.
 
