@@ -9,9 +9,9 @@ browser-compat: http.headers.Permissions-Policy.cross-origin-isolated
 
 {{HTTPSidebar}} {{SeeCompatTable}}
 
-The HTTP {{HTTPHeader("Permissions-Policy")}} header `cross-origin-isolated` directive controls whether the current document is allowed to use {{domxref("Window.crossOriginIsolated", "APIs that require cross-origin isolation", "", 1)}}.
+The HTTP {{HTTPHeader("Permissions-Policy")}} header `cross-origin-isolated` directive controls whether the current document is allowed to use APIs that require {{domxref("Window.crossOriginIsolated", "cross-origin isolation", "", "nocode")}}.
 
-Specifically, where a defined policy blocks use of this feature, the {{domxref("Window.crossOriginIsolated")}} and {{domxref("WorkerGlobalScope.crossOriginIsolated")}} properties will always return `false`, and the document will not benefit from reduced restrictions on the use of some APIs that are granted only to cross-origin-isolated documents.
+Specifically, where a defined policy blocks use of this feature, the {{domxref("Window.crossOriginIsolated")}} and {{domxref("WorkerGlobalScope.crossOriginIsolated")}} properties will always return `false`, and the document will not benefit from reduced restrictions on the use of some APIs that are granted only to cross-origin isolated documents.
 This is true regardless of the {{HTTPHeader("Cross-Origin-Embedder-Policy")}} and {{HTTPHeader("Cross-Origin-Opener-Policy")}} headers, and whether the document would have been cross-origin isolated had the permission been granted.
 
 The APIs that require this permission include the use of {{jsxref("SharedArrayBuffer")}} objects and {{domxref("Performance.now()")}} with unthrottled timers — see {{domxref("Window.crossOriginIsolated")}} for information about other restricted APIs.

@@ -44,7 +44,7 @@ Cross-Origin-Embedder-Policy: unsafe-none | require-corp | credentialless
 
 Certain features, such as access to {{jsxref("SharedArrayBuffer")}} objects or using {{domxref("Performance.now()")}} with unthrottled timers, are only available if your document is {{domxref("Window.crossOriginIsolated","cross-origin isolated","","nocode")}}.
 
-To use these these features in a document you will need to set the COEP header with a value of `require-corp` or `credentialless`, and the {{HTTPHeader("Cross-Origin-Opener-Policy")}} header to `same-origin`.
+To use these features in a document, you will need to set the COEP header with a value of `require-corp` or `credentialless`, and the {{HTTPHeader("Cross-Origin-Opener-Policy")}} header to `same-origin`.
 In addition the feature must not be blocked by {{HTTPHeader("Permissions-Policy/cross-origin-isolated","Permissions-Policy: cross-origin-isolated")}}.
 
 ```http

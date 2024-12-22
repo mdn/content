@@ -139,7 +139,7 @@ The table below shows the opener behaviour for the different directive values.
 
 Certain features, such as access to {{jsxref("SharedArrayBuffer")}} objects or using {{domxref("Performance.now()")}} with unthrottled timers, are only available if your document is {{domxref("Window.crossOriginIsolated","cross-origin isolated","","nocode")}}.
 
-To use these these features in a document you will need to set the COOP header to `same-origin` and the {{HTTPHeader("Cross-Origin-Embedder-Policy")}} header to `require-corp` (or `credentialless`).
+To use these features in a document, you will need to set the COOP header to `same-origin` and the {{HTTPHeader("Cross-Origin-Embedder-Policy")}} header to `require-corp` (or `credentialless`).
 In addition the feature must not be blocked by {{HTTPHeader("Permissions-Policy/cross-origin-isolated","Permissions-Policy: cross-origin-isolated")}}.
 
 ```http
