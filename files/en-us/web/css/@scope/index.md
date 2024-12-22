@@ -23,6 +23,8 @@ The `@scope` at-rule contains one or more rulesets (termed **scoped style rules*
    }
    ```
 
+   The scope's upper bound is inclusive and its lower bound is exclusive. To change these, you can combine either selector with a universal child selector. For example, `@scope (scope root) to (scope limit > *)` would make both upper and lower bounds inclusive, `@scope (scope root > *) to (scope limit)` would make both bounds exclusive, while `@scope (scope root > *) to (scope limit > *)` would give an exclusive upper bound and inclusive lower bound.
+
 2. As inline styles included inside a {{htmlelement("style")}} element in your HTML, in which case the prelude is omitted, and the enclosed ruleset is automatically scoped to the `<style>` element's enclosing parent element.
 
    ```html
@@ -34,6 +36,8 @@ The `@scope` at-rule contains one or more rulesets (termed **scoped style rules*
      </style>
    </parent-element>
    ```
+   
+   It is also possible to combine an inline `@scope` with a scope limit selector, as in `@scope to (scope limit) { ... }`.
 
 ## Description
 
