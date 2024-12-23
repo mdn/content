@@ -36,7 +36,6 @@ The `@scope` at-rule contains one or more rulesets (termed **scoped style rules*
      </style>
    </parent-element>
    ```
-   
    It is also possible to combine an inline `@scope` with a scope limit selector, as in `@scope to (scope limit) { ... }`.
 
 ## Description
