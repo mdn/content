@@ -16,7 +16,7 @@ The HTTP **`Cross-Origin-Embedder-Policy`** (COEP) {{Glossary("response header")
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden response header name")}}</th>
       <td>No</td>
     </tr>
   </tbody>
@@ -31,12 +31,24 @@ Cross-Origin-Embedder-Policy: unsafe-none | require-corp | credentialless
 ### Directives
 
 - `unsafe-none`
-  - : This is the default value. Allows the document to fetch cross-origin resources without giving explicit permission through the CORS protocol or the {{HTTPHeader("Cross-Origin-Resource-Policy")}} header.
+  - : Allows the document to load cross-origin resources without giving explicit permission through the CORS protocol or the {{HTTPHeader("Cross-Origin-Resource-Policy")}} header.
+    This is the default value.
 - `require-corp`
+
   - : A document can only load resources from the same origin, or resources explicitly marked as loadable from another origin.
-    If a cross origin resource supports CORS, the [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute or the {{HTTPHeader("Cross-Origin-Resource-Policy")}} header must be used to load it without being blocked by COEP.
+
+    Cross-origin resource loading will be blocked by COEP unless:
+
+    - The resource is requested in `no-cors` mode and the response includes a {{HTTPHeader("Cross-Origin-Resource-Policy")}} header that allows it to be loaded into the document origin.
+    - The resource is requested in `cors` mode (the HTML [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute is set) and the resource supports CORS.
+
 - `credentialless`
-  - : [no-cors](/en-US/docs/Web/API/Request/mode) cross-origin requests are sent without credentials. In particular, it means Cookies are omitted from the request, and ignored from the response. The responses are allowed **without** an explicit permission via the {{HTTPHeader("Cross-Origin-Resource-Policy")}} header. [Navigate](/en-US/docs/Web/API/Request/mode) responses behave similarly as the `require-corp` mode: They require {{HTTPHeader("Cross-Origin-Resource-Policy")}} response header.
+
+  - : A document can load cross-origin resources that are requested in [`no-cors` mode](/en-US/docs/Web/API/Request/mode) **without** an explicit permission via the {{HTTPHeader("Cross-Origin-Resource-Policy")}} header.
+    In this case requests are sent without credentials: cookies are omitted in the request, and ignored in the response.
+
+    The cross-origin loading behaviour for other [request modes](/en-US/docs/Web/API/Request/mode#cors) is the same as for [`require-corp`](#require-corp).
+    For example, a cross-origin resource requested in `cors` mode must support (and be permitted by) CORS.
 
 ## Examples
 
@@ -68,7 +80,9 @@ if (crossOriginIsolated) {
 
 ### Avoiding COEP blockage with CORS
 
-If you enable COEP using `require-corp` and have a cross origin resource that needs to be loaded, it needs to support [CORS](/en-US/docs/Web/HTTP/CORS) and you need to explicitly mark the resource as loadable from another origin to avoid blockage from COEP. For example, you can use the [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute for this image from a third-party site:
+If you enable COEP using `require-corp` and want to embed a cross origin resource that supports [CORS](/en-US/docs/Web/HTTP/CORS), you will need to explicitly specify the HTML [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute so that it is requested in `cors` mode.
+
+For example, you would you this approach to fetch an image from a third-party site that supports CORS:
 
 ```html
 <img src="https://thirdparty.com/img.png" crossorigin />
