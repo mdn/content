@@ -10,7 +10,7 @@ This article provides a basic guide to using the [Permissions API](/en-US/docs/W
 
 ## The trouble with asking for permission…
 
-Permissions on the Web are a necessary evil, but they are not much fun to deal with as developers.
+Permissions on the Web aren't necessary evil, but they are not much fun to deal with as developers.
 
 Historically, different APIs handle their own permissions inconsistently — for example the [Notifications API](/en-US/docs/Web/API/Notifications_API) had its own methods for checking the permission status and requesting permission, whereas the [Geolocation API](/en-US/docs/Web/API/Geolocation_API) did not.
 
