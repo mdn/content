@@ -1303,28 +1303,6 @@ For {{SVGElement('use')}}, `x` defines the x coordinate of the upper left corner
 > Declaring a `<length>` or `<percentage>` value in CSS using the {{cssxref("x")}} _geometry property_ overrides the x-axis coordinate of the `<use>` set by the `x` attribute in some browsers.
 > This behavior is non-standard, deprecated, and likely to be removed in future browser versions.
 
-## Examples
-
-This example contains three {{SVGElement("rect")}} elements, each with an `x` value smaller than the previous value.
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
-  <rect x="220" y="20" width="60" height="60" fill="red" />
-  <rect x="120" y="20" width="60" height="60" fill="yellow" />
-  <rect x="20" y="20" width="60" height="60" fill="blue" />
-</svg>
-```
-
-{{EmbedLiveSample("Examples", '100%', 200)}}
-
 ## Specifications
 
 {{Specifications}}
