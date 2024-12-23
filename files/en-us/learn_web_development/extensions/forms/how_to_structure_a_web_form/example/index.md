@@ -125,10 +125,6 @@ form {
   border-radius: 1em;
 }
 
-p + p {
-  margin-top: 1em;
-}
-
 label span {
   display: inline-block;
   text-align: right;
@@ -148,9 +144,8 @@ input[type="radio"] {
   border: none;
 }
 
-input:focus,
-textarea:focus {
-  border-color: #000;
+input:focus {
+  background-color: yellow;
 }
 
 button {
