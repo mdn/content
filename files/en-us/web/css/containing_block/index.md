@@ -257,7 +257,7 @@ p {
 - {{cssxref("aspect-ratio")}} property
 - {{cssxref("box-sizing")}} property
 - {{cssxref("min-content")}} and {{cssxref("max-content")}} size values
-- [Building block: sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+- [Learn: sizing items in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Sizing)
 - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module
 - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
