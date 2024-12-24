@@ -148,6 +148,10 @@ The following descriptors can be used within the container condition:
 - `width`
   - : The width of the container expressed as a {{cssxref("length")}} value.
 
+## Formal syntax
+
+{{csssyntax}}
+
 ## Examples
 
 ### Setting styles based on a container's size
