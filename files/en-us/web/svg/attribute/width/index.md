@@ -2,17 +2,64 @@
 title: width
 slug: Web/SVG/Attribute/width
 page-type: svg-attribute
-spec-urls:
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-width
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-width
-  - https://drafts.fxtf.org/css-masking-1/#element-attrdef-mask-width
-  - https://svgwg.org/svg2-draft/geometry.html#Sizing
-  - https://svgwg.org/svg2-draft/pservers.html#PatternElementWidthAttribute
+browser-compat:
+  - svg.elements.filter.width
+  - svg.elements.foreignObject.width
+  - svg.elements.image.width
+  - svg.elements.mask.width
+  - svg.elements.pattern.width
+  - svg.elements.rect.width
+  - svg.elements.svg.width
+  - svg.elements.use.width
 ---
 
 {{SVGRef}}
 
 The **`width`** attribute defines the horizontal length of an element in the user coordinate system.
+
+## Examples
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+This example includes three {{SVGElement("rect")}} elements with varied `width` attribute values. The first `<rect>` has a `width="0"` set. SVG elements with a width of `0` or less are not rendered.
+
+```html
+<svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- With a width of 0 or less, nothing will be rendered -->
+  <rect
+    x="0"
+    y="0"
+    width="0"
+    height="90"
+    fill="red"
+    stroke-width="5"
+    stroke="black" />
+  <rect
+    x="0"
+    y="100"
+    width="60"
+    height="90"
+    fill="red"
+    stroke-width="5"
+    stroke="black" />
+  <rect
+    x="0"
+    y="200"
+    width="100%"
+    height="90"
+    fill="red"
+    stroke-width="5"
+    stroke="black" />
+</svg>
+```
+
+{{EmbedLiveSample("Examples", '100%', 200)}}
 
 ## Elements
 
@@ -862,50 +909,10 @@ For {{SVGElement('use')}}, `width` defines the horizontal length for the referen
 > [!NOTE]
 > Starting with SVG2, `width` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for used elements.
 
-## Examples
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-This example includes three {{SVGElement("rect")}} elements with varied `width` attribute values. The first `<rect>` has a `width="0"` set. SVG elements with a width of `0` or less are not rendered.
-
-```html
-<svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg">
-  <!-- With a width of 0 or less, nothing will be rendered -->
-  <rect
-    x="0"
-    y="0"
-    width="0"
-    height="90"
-    fill="red"
-    stroke-width="5"
-    stroke="black" />
-  <rect
-    x="0"
-    y="100"
-    width="60"
-    height="90"
-    fill="red"
-    stroke-width="5"
-    stroke="black" />
-  <rect
-    x="0"
-    y="200"
-    width="100%"
-    height="90"
-    fill="red"
-    stroke-width="5"
-    stroke="black" />
-</svg>
-```
-
-{{EmbedLiveSample("Examples", '100%', 200)}}
-
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
