@@ -2324,6 +2324,10 @@
       "inh": "",
       "impl": []
     },
+    "NavigatorLogin": {
+      "inh": "",
+      "impl": []
+    },
     "NavigatorManagedData": {
       "inh": "EventTarget",
       "impl": []
@@ -3074,6 +3078,10 @@
     },
     "SharedStorageWorkletGlobalScope": {
       "inh": "WorkletGlobalScope",
+      "impl": []
+    },
+    "SharedStorageWorkletNavigator": {
+      "inh": "",
       "impl": []
     },
     "SharedWorker": {
