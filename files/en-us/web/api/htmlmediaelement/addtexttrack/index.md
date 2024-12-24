@@ -60,5 +60,5 @@ console.log(newTrack.cues[0].text);
 - {{domxref("TextTrack")}}
 - [WebVTT API](/en-US/docs/Web/API/WebVTT_API)
 - [Web media technologies](/en-US/docs/Web/Media)
-- Learning: [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- Learning: [Video and audio content](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

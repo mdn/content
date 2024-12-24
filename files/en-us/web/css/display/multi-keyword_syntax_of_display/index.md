@@ -29,11 +29,50 @@ As an example, when we use `display: flex` we create a block-level container, wi
 
 The live example below has a `<span>` with `display: flex` applied. It has become a block-level box taking up all available space in the inline direction. You can now use `justify-content: space-between` to put this space between the two flex items.
 
-{{EmbedGHLiveSample("css-examples/display/multi-keyword/span-flex.html", '100%', 440)}}
+```html live-sample___span-flex
+<span class="flex"> Some text <em>emphasized text</em> </span>
+```
+
+```css live-sample___span-flex
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.flex {
+  border: 5px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+}
+```
+
+{{EmbedLiveSample("span-flex")}}
 
 It's also possible to create inline flex containers. If you use the single value `inline-flex` you will have an inline-level box with flex children. The children behave in the same way as the flex children of a block-level container. The only thing that has changed is that the parent is now an inline-level box. It therefore behaves like other inline-level things, and doesn't take up the full width (or size in the inline dimension) that a block-level box does. This means that some following text could come up alongside the flex container.
 
-{{EmbedGHLiveSample("css-examples/display/multi-keyword/inline-flex.html", '100%', 440)}}
+```html live-sample___inline-flex
+<div class="flex">
+  <div>One</div>
+  <div>Two</div>
+</div>
+Text following the flex container.
+```
+
+```css live-sample___inline-flex
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.flex > div {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+
+.flex {
+  border: 5px solid #ccc;
+  display: inline-flex;
+}
+```
+
+{{EmbedLiveSample("inline-flex")}}
 
 The same is true when working with grid layout. Using `display: grid` will give you a block-level box, which creates a grid formatting context for the direct children. Using `display: inline-grid` will create an inline-level box, which creates a grid formatting context for the children.
 
@@ -43,7 +82,50 @@ As you can see from the above explanation, the `display` property has considerab
 
 This means that instead of setting `display: flex` to create a block-level box with flex children, we use `display: block flex`. Instead of `display: inline-flex` to create an inline-level box with flex children, we use `display: inline flex`. The example below demonstrates these values.
 
-{{EmbedGHLiveSample("css-examples/display/multi-keyword/multi-keyword-flex.html", '100%', 640)}}
+```html live-sample___multi-keyword-flex
+<h1>Multiple values for display</h1>
+
+<div class="flex flex1">
+  <div>Item One</div>
+  <div>Item Two</div>
+  <div>Item Three</div>
+</div>
+
+<p>The first example is a block element with flex children.</p>
+
+<div class="flex flex2">
+  <div>Item One</div>
+  <div>Item Two</div>
+  <div>Item Three</div>
+</div>
+The second example is an inline element with flex children.
+```
+
+```css live-sample___multi-keyword-flex
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.flex {
+  border: 5px solid #ccc;
+  gap: 10px;
+}
+
+.flex > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+
+.flex1 {
+  display: block flex;
+}
+
+.flex2 {
+  display: inline flex;
+}
+```
+
+{{EmbedLiveSample("multi-keyword-flex", "", "300px")}}
 
 There are mappings for all of the existing values of `display`; the most common ones are listed in the table below. To see a full list take a look at the table found in the [`display` property specification](https://drafts.csswg.org/css-display/#display-value-summary).
 
@@ -69,7 +151,7 @@ The elements that we should focus on are the "parent", "child", and "sibling" `<
 What's notable about this layout is that there is no content between the parent and child elements, and the child element has a top margin applied.
 You might expect the top margin to effectively push the child element down within the parent element, but what happens instead is something called [_margin collapse_](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing).
 In this case, the margin of the child element extends well above the parent's bounding box and pushes the parent element further down the page.
-This is easier to see if you inspect the box model of the child element [in your browser's developer tools](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#use_browser_devtools_to_view_the_box_model).
+This is easier to see if you inspect the box model of the child element [in your browser's developer tools](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#use_browser_devtools_to_view_the_box_model).
 
 Change the selected option in the `<select>` element to see the effect of different `display` values.
 You can use any value with `flow-root` to create a new formatting context for the parent, making the child element margin relative to its parent's outer edge and avoiding the margin collapse.
@@ -143,13 +225,37 @@ p {
 
 {{EmbedLiveSample("display_block_flow-root_and_display_inline_flow-root", '90%', 380)}}
 
-The `flow-root` value makes sense if you think about block and inline layout, which is sometimes called [normal flow](/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow). Our HTML page creates a new formatting context (floats and margins cannot extend out from the boundaries) and our content lays out in normal flow, using block and inline layout, unless we change the value of `display` to use some other formatting context. Creating a grid or flex container also creates a new formatting context (a grid or flex formatting context, respectively.) These also contain everything inside them. However, if you want to contain floats and margins but continue using block and inline layout, you can create a new flow root, and start over with block and inline layout. From that point downwards everything is contained inside the new flow root.
+The `flow-root` value makes sense if you think about block and inline layout, which is sometimes called [normal flow](/en-US/docs/Learn_web_development/Core/CSS_layout/Introduction#normal_layout_flow). Our HTML page creates a new formatting context (floats and margins cannot extend out from the boundaries) and our content lays out in normal flow, using block and inline layout, unless we change the value of `display` to use some other formatting context. Creating a grid or flex container also creates a new formatting context (a grid or flex formatting context, respectively.) These also contain everything inside them. However, if you want to contain floats and margins but continue using block and inline layout, you can create a new flow root, and start over with block and inline layout. From that point downwards everything is contained inside the new flow root.
 
 This is why `display: flow-root` can be written using the multi-keyword syntax `display: block flow-root`. You are creating a block formatting context, with a block-level box and children participating in normal flow. What about the matched pair `display: inline flow-root`? This is the current way of describing `display: inline-block`.
 
 The value `display: inline-block` has been around since the early days of CSS. The reason we tend to use it is to allow padding to push inline items away from an element, when creating navigation items for example, or when wanting to add a background with padding to an inline element as in the example below.
 
-{{EmbedGHLiveSample("css-examples/display/multi-keyword/inline-block.html", '100%', 440)}}
+```html live-sample___inline-block
+<p>
+  This paragraph has a span <span class="inline-block">with padding</span> it is
+  an inline-block so the padding is contained and pushes the other line boxes
+  away.
+</p>
+```
+
+```css live-sample___inline-block
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+p {
+  border: 2px dashed;
+  width: 300px;
+}
+.inline-block {
+  background-color: rgb(0 0 0 / 0.4);
+  color: #fff;
+  padding: 10px;
+  display: inline-block;
+}
+```
+
+{{EmbedLiveSample("inline-block", "", "200px")}}
 
 An element with `display: inline-block` however, will also contain floats. It contains everything inside the inline-level box. Therefore `display: inline-block` does exactly what `display: flow-root` does, but with an inline-level, rather than a block-level box. The two-value syntax accurately describes what is happening with this value. In the example above, you can change `display: inline-block` to `display: inline flow-root` and get the same result.
 

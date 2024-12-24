@@ -1,8 +1,10 @@
+# Do not add comments to this file. They will be lost.
+
 sidebar:
   - type: section
     link: /Mozilla/Add-ons/WebExtensions
-  - details: closed
-    title: WebExtensions#Getting_started
+  - title: WebExtensions#Getting_started
+    details: closed
     children:
       - /Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
       - /Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
@@ -10,8 +12,8 @@ sidebar:
       - /Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
       - /Mozilla/Add-ons/WebExtensions/Examples
       - /Mozilla/Add-ons/WebExtensions/What_next
-  - details: closed
-    title: WebExtensions#Concepts
+  - title: WebExtensions#Concepts
+    details: closed
     children:
       - /Mozilla/Add-ons/WebExtensions/API
       - /Mozilla/Add-ons/WebExtensions/Content_scripts
@@ -23,8 +25,8 @@ sidebar:
       - /Mozilla/Add-ons/WebExtensions/Native_messaging
       - /Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations
       - /Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
-  - details: closed
-    title: WebExtensions#User_Interface
+  - title: WebExtensions#User_Interface
+    details: closed
     children:
       - /Mozilla/Add-ons/WebExtensions/user_interface
       - /Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
@@ -36,8 +38,8 @@ sidebar:
       - /Mozilla/Add-ons/WebExtensions/user_interface/Notifications
       - /Mozilla/Add-ons/WebExtensions/user_interface/Omnibox
       - /Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
-  - details: closed
-    title: WebExtensions#How_to
+  - title: WebExtensions#How_to
+    details: closed
     children:
       - /Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
       - /Mozilla/Add-ons/WebExtensions/Modify_a_web_page
@@ -55,11 +57,11 @@ sidebar:
   - type: webExtApi
     title: WebExtensions#API
   - type: listSubPages
+    path: /Mozilla/Add-ons/WebExtensions/manifest.json
     title: WebExtensions#manifest.json
     details: closed
-    path: /en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json
-  - details: closed
-    title: extension_workshop
+  - title: extension_workshop
+    details: closed
     children:
       - link: https://extensionworkshop.com/documentation/develop/
         title: extension_workshop_develop
@@ -71,8 +73,8 @@ sidebar:
         title: extension_workshop_enterprise
   - type: section
     link: /Mozilla/Add-ons/Contact_us
-  - details: closed
-    title: Channels
+  - title: Channels
+    details: closed
     children:
       - link: https://blog.mozilla.org/addons
         title: Blog
@@ -80,8 +82,23 @@ sidebar:
         title: Forums
       - link: https://chat.mozilla.org/#/room/%23addons:mozilla.org
         title: Chat
-
 l10n:
+  de:
+    WebExtensions#Getting_started: Erste Schritte
+    WebExtensions#Concepts: Konzepte
+    WebExtensions#User_Interface: Benutzeroberfläche
+    WebExtensions#How_to: Anleitungen
+    WebExtensions#API: JavaScript-APIs
+    WebExtensions#manifest.json: Manifest-Schlüssel
+    extension_workshop: Erweiterungs-Workshop
+    extension_workshop_develop: Entwickeln
+    extension_workshop_publish: Veröffentlichen
+    extension_workshop_manage: Verwalten
+    extension_workshop_enterprise: Unternehmen
+    Channels: Kanäle
+    Blog: Add-ons Blog
+    Forums: Add-ons Forum
+    Chat: Add-ons Chat
   en-US:
     WebExtensions#Getting_started: Getting started
     WebExtensions#Concepts: Concepts
@@ -199,7 +216,6 @@ l10n:
     WebExtensions#Concepts: Основные понятия
     WebExtensions#User_Interface: Пользовательский интерфейс
     WebExtensions#How_to: How to
-    WebExtensions#Firefox_workflow: Firefox workflow
     WebExtensions#API: Обзор JavaScript API
     WebExtensions#manifest.json: Manifest keys
     extension_workshop: Extension Workshop
