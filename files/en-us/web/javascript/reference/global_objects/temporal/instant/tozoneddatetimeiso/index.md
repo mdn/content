@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.Instant.toZonedDateTimeISO
 
 {{JSRef}}
 
-The **`toZonedDateTimeISO()`** method of {{jsxref("Temporal.Instant")}} instances TODO
+The **`toZonedDateTimeISO()`** method of {{jsxref("Temporal.Instant")}} instances returns a new {{jsxref("Temporal.ZonedDateTime")}} object representing this instant in the specified time zone using the ISO 8601 calendar system.
 
 ## Syntax
 

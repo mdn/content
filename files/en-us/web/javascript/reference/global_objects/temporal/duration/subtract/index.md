@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.Duration.subtract
 
 {{JSRef}}
 
-The **`subtract()`** method of {{jsxref("Temporal.Duration")}} instances TODO
+The **`subtract()`** method of {{jsxref("Temporal.Duration")}} instances returns a new `Temporal.Duration` object with the difference between this duration and a given duration. Equivalent to [adding](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration/add) the [negated](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration/negated) value of the other duration.
 
 ## Syntax
 

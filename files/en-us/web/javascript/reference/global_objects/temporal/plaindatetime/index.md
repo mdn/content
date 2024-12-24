@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainDateTime
 
 {{JSRef}}
 
-The **`Temporal.PlainDateTime`** object TODO
+The **`Temporal.PlainDateTime`** object represents a date (calendar date) and time (wall-clock time) without a timezone. It is fundamentally represented as a combination of a [date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate) (with an associated calendar system) and a [time](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime).
 
 ## Constructor
 
@@ -16,10 +16,10 @@ The **`Temporal.PlainDateTime`** object TODO
 
 ## Static methods
 
-- {{jsxref("Temporal/PlainDateTime/compare", "Temporal.PlainDateTime.compare()")}}
-  - : TODO
-- {{jsxref("Temporal/PlainDateTime/from", "Temporal.PlainDateTime.from()")}}
-  - : TODO
+- {{jsxref("Temporal.PlainDateTime.compare()")}}
+  - : Returns a number (-1, 0, 1) indicating whether the first datetime comes before, is the same as, or comes after the second datetime. Equivalent to first comparing their dates, then their times in case of a tie.
+- {{jsxref("Temporal.PlainDateTime.from()")}}
+  - : Creates a new `Temporal.PlainDateTime` object from another `Temporal.PlainDateTime` object, an object with date and time properties, or an ISO 8601 string.
 
 ## Instance properties
 

@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainTime.from
 
 {{JSRef}}
 
-The **`Temporal.PlainTime.from()`** static method TODO
+The **`Temporal.PlainTime.from()`** static method creates a new `Temporal.PlainTime` object from another `Temporal.PlainTime` object, an object with time properties, or an ISO 8601 string.
 
 ## Syntax
 

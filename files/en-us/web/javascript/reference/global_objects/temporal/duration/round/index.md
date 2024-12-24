@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.Duration.round
 
 {{JSRef}}
 
-The **`round()`** method of {{jsxref("Temporal.Duration")}} instances TODO
+The **`round()`** method of {{jsxref("Temporal.Duration")}} instances returns a new `Temporal.Duration` object with the duration rounded to the given smallest unit and/or balanced to the given largest unit.
 
 ## Syntax
 

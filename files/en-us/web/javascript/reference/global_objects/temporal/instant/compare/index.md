@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.Instant.compare
 
 {{JSRef}}
 
-The **`Temporal.Instant.compare()`** static method TODO
+The **`Temporal.Instant.compare()`** static method returns a number (-1, 0, 1) indicating whether the first instant comes before, is the same as, or comes after the second instant. Equivalent to comparing the {{jsxref("Temporal/Instant/epochNanoseconds", "epochNanoseconds")}} of the two instants.
 
 ## Syntax
 

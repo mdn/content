@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.Duration.sign
 
 {{JSRef}}
 
-The **`sign`** accessor property of {{jsxref("Temporal.Duration")}} instances TODO
+The **`sign`** accessor property of {{jsxref("Temporal.Duration")}} instances returns `1` if this duration is positive, `-1` if negative, and `0` if zero.
 
 ## Description
 

@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainMonthDay
 
 {{JSRef}}
 
-The **`Temporal.PlainMonthDay`** object TODO
+The **`Temporal.PlainMonthDay`** object represents the month and day of a calendar date, without a year or timezone; for example, an event on a calendar that recurs every year and happens during the whole day. It is fundamentally represented as an ISO 8601 calendar date, with year, month, and day fields, and an associated calendar system. The year is used to disambiguate the month-day in some calendar systems.
 
 ## Constructor
 
@@ -16,8 +16,8 @@ The **`Temporal.PlainMonthDay`** object TODO
 
 ## Static methods
 
-- {{jsxref("Temporal/PlainMonthDay/from", "Temporal.PlainMonthDay.from()")}}
-  - : TODO
+- {{jsxref("Temporal.PlainMonthDay.from()")}}
+  - : Creates a new `Temporal.PlainMonthDay` object from another `Temporal.PlainMonthDay` object, an object with month and day properties, or an ISO 8601 string.
 
 ## Instance properties
 

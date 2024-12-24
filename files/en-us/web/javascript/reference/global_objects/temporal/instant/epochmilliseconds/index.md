@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.Instant.epochMilliseconds
 
 {{JSRef}}
 
-The **`epochMilliseconds`** accessor property of {{jsxref("Temporal.Instant")}} instances TODO
+The **`epochMilliseconds`** accessor property of {{jsxref("Temporal.Instant")}} instances returns an integer representing the number of milliseconds elapsed since the Unix epoch (midnight at the beginning of January 1, 1970, UTC) to this instant. Equivalent to dividing `epochNanoseconds` by `1e6` and flooring it.
 
 ## Description
 

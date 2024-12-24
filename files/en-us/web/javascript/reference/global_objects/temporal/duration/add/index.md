@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.Duration.add
 
 {{JSRef}}
 
-The **`add()`** method of {{jsxref("Temporal.Duration")}} instances TODO
+The **`add()`** method of {{jsxref("Temporal.Duration")}} instances returns a new `Temporal.Duration` object with the sum of this duration and a given duration. The result is balanced.
 
 ## Syntax
 

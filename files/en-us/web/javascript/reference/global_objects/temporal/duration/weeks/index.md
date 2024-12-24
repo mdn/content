@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.Duration.weeks
 
 {{JSRef}}
 
-The **`weeks`** accessor property of {{jsxref("Temporal.Duration")}} instances TODO
+The **`weeks`** accessor property of {{jsxref("Temporal.Duration")}} instances returns an integer representing the number of weeks in the duration.
 
 ## Description
 

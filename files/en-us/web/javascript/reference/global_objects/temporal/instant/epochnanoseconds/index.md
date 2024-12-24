@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.Instant.epochNanoseconds
 
 {{JSRef}}
 
-The **`epochNanoseconds`** accessor property of {{jsxref("Temporal.Instant")}} instances TODO
+The **`epochNanoseconds`** accessor property of {{jsxref("Temporal.Instant")}} instances returns a {{jsxref("BigInt")}} representing the number of nanoseconds elapsed since the Unix epoch (midnight at the beginning of January 1, 1970, UTC) to this instant.
 
 ## Description
 

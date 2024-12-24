@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainDate.compare
 
 {{JSRef}}
 
-The **`Temporal.PlainDate.compare()`** static method TODO
+The **`Temporal.PlainDate.compare()`** static method returns a number (-1, 0, 1) indicating whether the first date comes before, is the same as, or comes after the second date. Equivalent to comparing the year, month, and day fields of the underlying ISO 8601 dates.
 
 ## Syntax
 

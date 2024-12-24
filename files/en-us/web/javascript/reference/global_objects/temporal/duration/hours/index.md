@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.Duration.hours
 
 {{JSRef}}
 
-The **`hours`** accessor property of {{jsxref("Temporal.Duration")}} instances TODO
+The **`hours`** accessor property of {{jsxref("Temporal.Duration")}} instances returns an integer representing the number of hours in the duration.
 
 ## Description
 

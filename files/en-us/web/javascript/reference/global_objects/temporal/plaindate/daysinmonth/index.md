@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainDate.daysInMonth
 
 {{JSRef}}
 
-The **`daysInMonth`** accessor property of {{jsxref("Temporal.PlainDate")}} instances TODO
+The **`daysInMonth`** accessor property of {{jsxref("Temporal.PlainDate")}} instances returns a positive integer representing the number of days in the month of this date.
 
 ## Description
 

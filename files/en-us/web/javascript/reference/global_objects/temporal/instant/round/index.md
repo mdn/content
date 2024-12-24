@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.Instant.round
 
 {{JSRef}}
 
-The **`round()`** method of {{jsxref("Temporal.Instant")}} instances TODO
+The **`round()`** method of {{jsxref("Temporal.Instant")}} instances returns a new `Temporal.Instant` object representing this instant rounded to the given unit.
 
 ## Syntax
 

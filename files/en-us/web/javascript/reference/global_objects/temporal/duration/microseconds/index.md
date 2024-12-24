@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.Duration.microseconds
 
 {{JSRef}}
 
-The **`microseconds`** accessor property of {{jsxref("Temporal.Duration")}} instances TODO
+The **`microseconds`** accessor property of {{jsxref("Temporal.Duration")}} instances returns an integer representing the number of microseconds in the duration.
 
 ## Description
 

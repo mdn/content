@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.Duration.from
 
 {{JSRef}}
 
-The **`Temporal.Duration.from()`** static method TODO
+The **`Temporal.Duration.from()`** static method creates a new `Temporal.Duration` object from another `Temporal.Duration` object, an object with duration properties, or an ISO 8601 string.
 
 ## Syntax
 

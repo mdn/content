@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.Instant.fromEpochMilliseconds
 
 {{JSRef}}
 
-The **`Temporal.Instant.fromEpochMilliseconds()`** static method TODO
+The **`Temporal.Instant.fromEpochMilliseconds()`** static method creates a new `Temporal.Instant` object from the number of milliseconds since the Unix epoch (midnight at the beginning of January 1, 1970, UTC).
 
 ## Syntax
 

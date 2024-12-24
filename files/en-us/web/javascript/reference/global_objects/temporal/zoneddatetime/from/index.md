@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.ZonedDateTime.from
 
 {{JSRef}}
 
-The **`Temporal.ZonedDateTime.from()`** static method TODO
+The **`Temporal.ZonedDateTime.from()`** static method creates a new `Temporal.ZonedDateTime` object from another `Temporal.ZonedDateTime` object, an object with date, time, and timezone properties, or an ISO 8601 string.
 
 ## Syntax
 

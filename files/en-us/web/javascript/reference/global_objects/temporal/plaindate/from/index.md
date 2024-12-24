@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainDate.from
 
 {{JSRef}}
 
-The **`Temporal.PlainDate.from()`** static method TODO
+The **`Temporal.PlainDate.from()`** static method creates a new `Temporal.PlainDate` object from another `Temporal.PlainDate` object, an object with date properties, or an ISO 8601 string.
 
 ## Syntax
 

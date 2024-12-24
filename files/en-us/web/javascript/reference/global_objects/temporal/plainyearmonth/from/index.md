@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainYearMonth.from
 
 {{JSRef}}
 
-The **`Temporal.PlainYearMonth.from()`** static method TODO
+The **`Temporal.PlainYearMonth.from()`** static method creates a new `Temporal.PlainYearMonth` object from another `Temporal.PlainYearMonth` object, an object with year and month properties, or an ISO 8601 string.
 
 ## Syntax
 

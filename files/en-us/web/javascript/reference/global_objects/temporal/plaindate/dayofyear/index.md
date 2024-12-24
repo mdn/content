@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainDate.dayOfYear
 
 {{JSRef}}
 
-The **`dayOfYear`** accessor property of {{jsxref("Temporal.PlainDate")}} instances TODO
+The **`dayOfYear`** accessor property of {{jsxref("Temporal.PlainDate")}} instances returns a positive integer representing the 1-based day index in the year of this date. The first day of this year is `1`, and the last day is the {{jsxref("Temporal/PlainDate/daysInYear", "daysInYear")}}.
 
 ## Description
 

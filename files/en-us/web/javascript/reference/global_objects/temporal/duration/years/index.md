@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.Duration.years
 
 {{JSRef}}
 
-The **`years`** accessor property of {{jsxref("Temporal.Duration")}} instances TODO
+The **`years`** accessor property of {{jsxref("Temporal.Duration")}} instances returns an integer representing the number of years in the duration.
 
 ## Description
 

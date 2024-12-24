@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainDateTime.compare
 
 {{JSRef}}
 
-The **`Temporal.PlainDateTime.compare()`** static method TODO
+The **`Temporal.PlainDateTime.compare()`** static method returns a number (-1, 0, 1) indicating whether the first datetime comes before, is the same as, or comes after the second datetime. Equivalent to first comparing their dates, then their times in case of a tie.
 
 ## Syntax
 

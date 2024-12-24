@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainDate.calendarId
 
 {{JSRef}}
 
-The **`calendarId`** accessor property of {{jsxref("Temporal.PlainDate")}} instances TODO
+The **`calendarId`** accessor property of {{jsxref("Temporal.PlainDate")}} instances returns a string representing the calendar used to interpret the internal ISO 8601 date.
 
 ## Description
 

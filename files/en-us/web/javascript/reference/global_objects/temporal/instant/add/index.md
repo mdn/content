@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.Instant.add
 
 {{JSRef}}
 
-The **`add()`** method of {{jsxref("Temporal.Instant")}} instances TODO
+The **`add()`** method of {{jsxref("Temporal.Instant")}} instances representing adding a given duration (in a form convertible by {{jsxref("Temporal.Duration.from()")}}) to this instant.
 
 ## Syntax
 

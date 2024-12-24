@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.Duration.negated
 
 {{JSRef}}
 
-The **`negated()`** method of {{jsxref("Temporal.Duration")}} instances TODO
+The **`negated()`** method of {{jsxref("Temporal.Duration")}} instances returns a new `Temporal.Duration` object with the negated value of this duration (all fields keep the same magnitude, but sign becomes reversed).
 
 ## Syntax
 

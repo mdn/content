@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.Duration.compare
 
 {{JSRef}}
 
-The **`Temporal.Duration.compare()`** static method TODO
+The **`Temporal.Duration.compare()`** static method returns a number (-1, 0, 1) indicating whether the first duration is shorter, equal to, or longer than the second duration.
 
 ## Syntax
 

@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.Duration.nanoseconds
 
 {{JSRef}}
 
-The **`nanoseconds`** accessor property of {{jsxref("Temporal.Duration")}} instances TODO
+The **`nanoseconds`** accessor property of {{jsxref("Temporal.Duration")}} instances returns an integer representing the number of nanoseconds in the duration.
 
 ## Description
 

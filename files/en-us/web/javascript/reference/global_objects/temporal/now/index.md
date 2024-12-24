@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.Now
 
 {{JSRef}}
 
-The **`Temporal.Now`** object TODO
+The **`Temporal.Now`** object provides methods for getting the current time in various formats.
 
 ## Static properties
 
@@ -16,17 +16,17 @@ The **`Temporal.Now`** object TODO
 
 ## Static methods
 
-- {{jsxref("Temporal/Now/instant", "Temporal.Now.instant()")}}
+- {{jsxref("Temporal.Now.instant()")}}
   - : TODO
-- {{jsxref("Temporal/Now/plainDateISO", "Temporal.Now.plainDateISO()")}}
+- {{jsxref("Temporal.Now.plainDateISO()")}}
   - : TODO
-- {{jsxref("Temporal/Now/plainDateTimeISO", "Temporal.Now.plainDateTimeISO()")}}
+- {{jsxref("Temporal.Now.plainDateTimeISO()")}}
   - : TODO
-- {{jsxref("Temporal/Now/plainTimeISO", "Temporal.Now.plainTimeISO()")}}
+- {{jsxref("Temporal.Now.plainTimeISO()")}}
   - : TODO
-- {{jsxref("Temporal/Now/timeZoneId", "Temporal.Now.timeZoneId()")}}
+- {{jsxref("Temporal.Now.timeZoneId()")}}
   - : TODO
-- {{jsxref("Temporal/Now/zonedDateTimeISO", "Temporal.Now.zonedDateTimeISO()")}}
+- {{jsxref("Temporal.Now.zonedDateTimeISO()")}}
   - : TODO
 
 ## Specifications

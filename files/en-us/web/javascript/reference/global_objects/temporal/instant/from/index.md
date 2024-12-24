@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.Instant.from
 
 {{JSRef}}
 
-The **`Temporal.Instant.from()`** static method TODO
+The **`Temporal.Instant.from()`** static method creates a new `Temporal.Instant` object from another `Temporal.Instant` object, or an ISO 8601 string.
 
 ## Syntax
 

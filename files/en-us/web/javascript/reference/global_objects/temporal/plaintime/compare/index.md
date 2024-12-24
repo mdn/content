@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainTime.compare
 
 {{JSRef}}
 
-The **`Temporal.PlainTime.compare()`** static method TODO
+The **`Temporal.PlainTime.compare()`** static method returns a number (-1, 0, 1) indicating whether the first time comes before, is the same as, or comes after the second time. Equivalent to comparing the hour, minute, second, millisecond, microsecond, and nanosecond fields one by one.
 
 ## Syntax
 

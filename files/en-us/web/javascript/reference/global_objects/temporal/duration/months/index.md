@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.Duration.months
 
 {{JSRef}}
 
-The **`months`** accessor property of {{jsxref("Temporal.Duration")}} instances TODO
+The **`months`** accessor property of {{jsxref("Temporal.Duration")}} instances returns an integer representing the number of months in the duration.
 
 ## Description
 

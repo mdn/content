@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainTime
 
 {{JSRef}}
 
-The **`Temporal.PlainTime`** object TODO
+The **`Temporal.PlainTime`** object represents a time without a date or timezone; for example, a recurring event that happens at the same time every day. It is fundamentally represented as a combination of hour, minute, second, millisecond, microsecond, and nanosecond values.
 
 ## Constructor
 
@@ -16,10 +16,10 @@ The **`Temporal.PlainTime`** object TODO
 
 ## Static methods
 
-- {{jsxref("Temporal/PlainTime/compare", "Temporal.PlainTime.compare()")}}
-  - : TODO
-- {{jsxref("Temporal/PlainTime/from", "Temporal.PlainTime.from()")}}
-  - : TODO
+- {{jsxref("Temporal.PlainTime.compare()")}}
+  - : Returns a number (-1, 0, 1) indicating whether the first time comes before, is the same as, or comes after the second time. Equivalent to comparing the hour, minute, second, millisecond, microsecond, and nanosecond fields one by one.
+- {{jsxref("Temporal.PlainTime.from()")}}
+  - : Creates a new `Temporal.PlainTime` object from another `Temporal.PlainTime` object, an object with time properties, or an ISO 8601 string.
 
 ## Instance properties
 
