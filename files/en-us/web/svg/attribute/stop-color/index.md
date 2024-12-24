@@ -2,7 +2,7 @@
 title: stop-color
 slug: Web/SVG/Attribute/stop-color
 page-type: svg-attribute
-browser-compat: svg.elements.stop.stop-color
+browser-compat: svg.global_attributes.stop-color
 ---
 
 {{SVGRef}}
