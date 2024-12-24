@@ -318,7 +318,7 @@ The {{htmlelement("body")}} is a **block** element, meaning it takes up space on
 Finally, we include `max-width: 100%;` to make sure that, if the image is larger than the `width` set on the body (600 pixels), it will be displayed at this width, and no bigger.
 
 > [!NOTE]
-> Don't be too concerned if you don't completely understand `display: block;` and the differences between a block element and an inline element, or `max-width: 100%;`. They will make more sense as you continue your study of CSS. You can find more information about these propeties on MDN's {{cssxref("display")}} and {{cssxref("max-width")}} reference pages.
+> Don't be too concerned if you don't completely understand `display: block;` and the differences between a block element and an inline element, or `max-width: 100%;`. They will make more sense as you continue your study of CSS. You can find more information about these properties on MDN's {{cssxref("display")}} and {{cssxref("max-width")}} reference pages.
 
 ## Conclusion
 

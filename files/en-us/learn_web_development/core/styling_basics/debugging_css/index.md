@@ -183,7 +183,7 @@ That's it for all the lessons in this module. To finish it off, we'll test your 
 
 ## See also
 
-- [Firefox > Examing and edit CSS](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html), Firefox Source Docs
+- [Firefox > Examine and edit CSS](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html), Firefox Source Docs
 - [Chrome > View and change CSS](https://developer.chrome.com/docs/devtools/css/), developer.chrome.com
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension", "Learn_web_development/Core/Styling_basics")}}
