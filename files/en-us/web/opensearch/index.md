@@ -8,7 +8,7 @@ page-type: guide
 
 The **[OpenSearch description format](https://github.com/dewitt/opensearch)** can be used to describe the web interface of a search engine. This allows a website to describe a search engine for itself, so that a browser or other client application can use that search engine. OpenSearch is supported by (at least) Firefox, Edge, Safari, and Chrome. (See [Reference Material](#reference_material) for links to other browsers' documentation.)
 
-Firefox also supports additional features not in the OpenSearch standard, such as search suggestions and the `<SearchForm>` element. This article focuses on creating OpenSearch-compatible search plugins that support these additional Firefox features.
+Firefox also supports additional features not in the OpenSearch standard, such as search suggestions. This article focuses on creating OpenSearch-compatible search plugins that support these additional Firefox features.
 
 OpenSearch description files can be advertised as described in [Autodiscovery of search plugins](#autodiscovery_of_search_plugins).
 
@@ -28,7 +28,6 @@ The XML file that describes a search engine follows the basic template below. Se
   <Image width="16" height="16" type="image/x-icon">[https://example.com/favicon.ico]</Image>
   <Url type="text/html" template="[searchURL]"/>
   <Url type="application/x-suggestions+json" template="[suggestionURL]"/>
-  <moz:SearchForm>[https://example.com/search]</moz:SearchForm>
 </OpenSearchDescription>
 ```
 
