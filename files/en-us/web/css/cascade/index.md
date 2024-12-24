@@ -247,9 +247,9 @@ The layer order of precedence is inverted for styles declared as `!important`. I
 
 ### Inline styles
 
-Only relevant to author styles are inline styles, declared with the `style` attribute. Normal inline styles take precedence over any other normal author styles, no matter the specificity of the selector, unless the property is animated or transitioned. If `line-height: 2;` were declared in a `:root body p` selector block in any of the five imported stylesheets, the line height would still be `1.6`.
+Only relevant to author styles are inline styles, declared with the `style` attribute. Normal inline styles take precedence over any other normal author styles, no matter the specificity of the selector. If `line-height: 2;` were declared in a `:root body p` selector block in any of the five imported stylesheets, the line height would still be `1.6`. Normal inline styles do not take precedence over animated or transitioned properties.
 
-Important inline styles take precedence over all other author styles, regardless of whether they are important, inline, or layered. Important styles also take precedence over animated properties, but not transitioned properties. Three things can override an important inline style:
+Important inline styles take precedence over all other author styles, regardless of whether they are important, inline, or layered. Important inline styles also take precedence over animated properties, but not transitioned properties. Three things can override an important inline style:
 
 - An important user style.
 - An important user agent style.
