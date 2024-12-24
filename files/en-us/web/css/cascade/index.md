@@ -65,7 +65,11 @@ The cascading algorithm determines how to find the value to apply for each prope
 4. **Scoping proximity**: When two selectors in the origin layer with precedence have the same specificity, the property value within scoped rules with the smallest number of hops up the DOM hierarchy to the scope root wins. See [How `@scope` conflicts are resolved](/en-US/docs/Web/CSS/@scope#how_scope_conflicts_are_resolved) for more details and an example.
 5. **Order of appearance**: In the origin with precedence, if there are competing values for a property that are in style block matching selectors of equal specificity and scoping proximity, the last declaration in the style order is applied.
 
-The cascade is in ascending order, meaning animations take precedence over normal values, whether those values are declared in user, author, or user-agent styles, important values take precedence over animations, whether those values are declared in user, author, or user-agent styles, and transitions take precedence over important values.
+The cascade is in ascending order, meaning:
+
+- Animations take precedence over normal values, whether declared in user, author, or user-agent styles.
+- Important values take precedence over animations, whether declared in user, author, or user-agent styles.
+- Transitions take precedence over important values.
 
 > **Note:** **Transitions and animations**
 >
@@ -237,7 +241,7 @@ The "All unlayered styles" in the list below (normal author style precedence - o
 
 In all origin types, normal styles contained in layers have the lowest precedence. In our example, the normal styles associated with the first declared layer (A) have lower precedence than normal styles in the second declared layer (B), which have lower precedence than normal styles in the third declared layer (C). These layered styles have lower precedence than all normal unlayered styles, which includes normal styles from `unlayeredStyles.css`, `moreUnlayeredStyles.css`, and the `color` of `p` in the `<style>` itself.
 
-If any of the layered styles in A, B, or C, have selectors with higher specificity matching an element, similar to `:root body p { color: black; }`, it doesn't matter. Those declarations are removed from consideration because of _origin_; normal layered styles have less precedence than normal unlayered styles. If, however, the more specific selector `:root body p { color: black;}` was found in `unlayeredStyles.css`, as both _origin and importance_ have the same precedence, _specificity_ would mean the more specific, black declaration would win.
+If any layered styles in A, B, or C have selectors with higher specificity matching an element, similar to `:root body p { color: black; }`, it doesn't matter. Those declarations are removed from consideration because of _origin_; normal layered styles have less precedence than normal unlayered styles. If, however, the more specific selector `:root body p { color: black; }` was found in `unlayeredStyles.css`, as both _origin and importance_ have the same precedence, _specificity_ would mean the more specific, black declaration would win.
 
 The layer order of precedence is inverted for styles declared as `!important`. Important declarations found in a layer take precedence over important declarations found outside of a layer. Important declarations found in the first layer (A) take precedence over important declarations found in layer B, which take precedence over important declarations found in layer C, which take precedence over important declarations found outside of a layer.
 
@@ -245,7 +249,11 @@ The layer order of precedence is inverted for styles declared as `!important`. I
 
 Only relevant to author styles are inline styles, declared with the `style` attribute. Normal inline styles take precedence over any other normal author styles, no matter the specificity of the selector, unless the property is animated or transitioned. If `line-height: 2;` were declared in a `:root body p` selector block in any of the five imported stylesheets, the line height would still be `1.6`.
 
-Important inline styles take precedence over any other author styles, important or not, inline or not, layered or not. Important styles also take precedence over animated properties but not transitioned properties. Three things can override an important inline style: 1) an important user style, 2) an important user agent style, or 3) a transitioned property.
+Important inline styles take precedence over all other author styles, regardless of whether they are important, inline, or layered. Important styles also take precedence over animated properties, but not transitioned properties. Three things can override an important inline style:
+
+- An important user style.
+- An important user agent style.
+- A transitioned property.
 
 ### Importance and layers
 
@@ -350,7 +358,7 @@ Presentational attributes cannot be declared `!important`.
 
 ## CSS animations and the cascade
 
-[CSS animations](/en-US/docs/Web/CSS/CSS_animations), using {{cssxref("@keyframes")}} at-rules, define animations between states. `@keyframes` don't cascade, meaning that at any given time CSS takes values from only one single `@keyframes` and never mixes multiple ones together. If multiple `@keyframes` are defined with the same animation name, the last defined `@keyframes` in the origin and layer with the greatest precedence is used, and the other `@keyframes` are ignored, even if they animate different properties.
+[CSS animations](/en-US/docs/Web/CSS/CSS_animations), using {{cssxref("@keyframes")}} at-rules, define animations between states. `@keyframes` don't cascade, meaning that at any given time CSS takes values from only one single set of `@keyframes` and never mixes multiple ones. If multiple sets of `@keyframes` are defined with the same animation name, the last defined set in the origin and layer with the greatest precedence is used. Other `@keyframes` are ignored, even if they animate different properties.
 
 ```css
 p {
