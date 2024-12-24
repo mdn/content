@@ -6,45 +6,74 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-An **IIFE** (Immediately Invoked Function Expression) is a {{glossary("JavaScript")}} {{glossary("function")}} that runs as soon as it is defined.
+An **IIFE** (Immediately Invoked Function Expression) is an idiom in which a {{glossary("JavaScript")}} {{glossary("function")}} runs as soon as it is defined.
 The name IIFE is promoted by Ben Alman in [his blog](https://web.archive.org/web/20171201033208/http://benalman.com/news/2010/11/immediately-invoked-function-expression/#iife).
 
 ```js
+// standard IIFE
 (function () {
-  // …
+  // statements…
 })();
 
+// IIFE with arguments
+(function (a, b) {
+  console.log(a + b);
+  return a * b;
+})(1, 2); // logs 3. evaluates to 2.
+
+// arrow function variant
 (() => {
-  // …
+  // statements…
 })();
 
+// async IIFE
 (async () => {
-  // …
+  // statements…
 })();
+
+// IIFE being used to initialize a variable
+const value = (() => {
+  const randomValue = Math.random();
+  if (randomValue > 0.5) {
+    return "heads";
+  } else {
+    return "tails";
+  }
+}());
 ```
 
 It is a design pattern which is also known as a {{glossary("Self-Executing Anonymous Function")}} and contains two major parts:
 
-1. The first is the anonymous function with lexical scope enclosed within the [grouping operator](/en-US/docs/Web/JavaScript/Reference/Operators/Grouping) `()`. This prevents accessing variables within the IIFE idiom as well as polluting the global scope.
-2. The second part creates the immediately invoked function expression `()` through which the JavaScript engine will directly interpret the function.
+1. A [function _expression_](/en-US/docs/Web/JavaScript/Reference/Operators/function). This usually needs to be [enclosed in parentheses](/en-US/docs/Web/JavaScript/Reference/Operators/Grouping) in order to be parsed correctly.
+
+2. Immediately _calling_ the function expression. Arguments may be provided,
+   though IIFEs without arguments are more common.
+
+IIFEs are a common pattern used to execute arbitrarily many statements in their own scope (and possibly return a value), in a location that requires a single expression.
+They are similar to, but much more powerful than, the [comma operator](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator), which can only execute multiple expressions and, therefore, does not provide a way to use local variables or control flow statements.
 
 ## Use cases
 
-### Avoid polluting the global namespace
+### Avoid polluting the global namespace in script code
 
 Because our application could include many functions and global variables from different source files, it's
-important to limit the number of global variables. If we have some initiation code that we don't need to use
-again, we could use the IIFE pattern. As we will not reuse the code again, using IIFE in this case is better than
+important to limit the number of variables at the top level of a script
+(this advice [does not apply to module code](/en-US/docs/Web/JavaScript/Guide/Modules#other_differences_between_modules_and_classic_scripts)).
+If we have some initialization code that we don't need to use
+again, we could use the IIFE pattern. As we will not reuse the code again, using an IIFE in this case is better than
 using a function declaration or a function expression.
 
 ```js
-(() => {
-  // some initiation code
-  let firstVariable;
-  let secondVariable;
+// top-level of a script (not a module)
+
+var globalVariable = (() => {
+  // some initialization code
+  let firstVariable = something();
+  let secondVariable = somethingElse();
+  return firstVariable + secondVariable;
 })();
 
-// firstVariable and secondVariable will be discarded after the function is executed.
+// firstVariable and secondVariable cannot be accessed outside of the function body.
 ```
 
 ### Execute an async function
@@ -152,9 +181,51 @@ console.log(i); // Uncaught ReferenceError: i is not defined.
 
 When clicked, these buttons alert 0 and 1.
 
+### Control flow statements in expression positions
+
+IIFEs enable us to use language constructs such as `switch` in an expression.
+
+```js
+someObject.property = (() => {
+  switch (someVariable) {
+    case 0:
+      return "zero";
+    case 1:
+      return "one";
+    default:
+      return "unknown";
+  }
+})();
+```
+
+This approach can be especially useful in scenarios where you want to make a variable `const`, but
+are forced to use `let` or `var` during initialization:
+
+```js
+let onlyAssignedOnce;
+try {
+  onlyAssignedOnce = someFunctionThatMightThrow();
+} catch (e) {
+  onlyAssignedOnce = null;
+}
+```
+
+Using IIFEs, we can make the variable `const`:
+
+```js
+const onlyAssignedOnce = (() => {
+  try {
+    return someFunctionThatMightThrow();
+  } catch (e) {
+    return null;
+  }
+})();
+```
+
 ## See also
 
 - [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) (Wikipedia)
+- [Comma Operator](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator)
 - Related glossary terms:
   - {{Glossary("Function")}}
   - {{Glossary("Self-Executing Anonymous Function")}}

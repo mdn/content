@@ -24,7 +24,7 @@ expr1, expr2, expr3/* , … */
 
 ## Description
 
-You can use the comma operator when you want to include multiple expressions in a location that requires a single expression. The most common usage of this operator is to supply multiple updaters in a `for` loop.
+You can use the comma operator when you want to include multiple expressions in a location that requires a single expression. The most common usage of this operator is to supply multiple updaters in a `for` loop. For an idiom allowing multiple _statements_ in a location that requires a single expression, you may use an [IIFE](/en-US/docs/Glossary/IIFE).
 
 Because all expressions except the last are evaluated and then discarded, these expressions must have side effects to be useful. Common expressions that have side effects are assignments, function calls, and [`++`](/en-US/docs/Web/JavaScript/Reference/Operators/Increment) and [`--`](/en-US/docs/Web/JavaScript/Reference/Operators/Decrement) operators. Others may also have side effects if they invoke [getters](/en-US/docs/Web/JavaScript/Reference/Functions/get) or trigger [type coercions](/en-US/docs/Web/JavaScript/Data_structures#type_coercion).
 
@@ -148,3 +148,4 @@ globalThis.isDirectEval = false;
 ## See also
 
 - [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for)
+- [IIFE](/en-US/docs/Glossary/IIFE)
