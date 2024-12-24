@@ -49,7 +49,7 @@ Let's start by taking a quick look at the key things we are dealing with, then w
 
 ### Cascade
 
-Stylesheets [**cascade**](/en-US/docs/Web/CSS/Cascade) — at a very simple level, this means that the origin, the cascade layer, and the order of CSS rules matter. When two rules both have equal specificity, the one that is defined last in the stylesheet is the one that will be used.
+Stylesheets [**cascade**](/en-US/docs/Web/CSS/Cascade) — at a very simple level, this means that the origin and the order of CSS rules matter. When two rules both have equal specificity, the one that is defined last in the stylesheet is the one that will be used. There are other concepts that have an effect, such as [cascade layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers), but these are more advanced and we won't cover them in any detail here.
 
 In the below example, we have two rules that could apply to the `<h1>` element. The `<h1>` content ends up being colored blue. This is because both the rules are from the same source, have an identical element selector, and therefore, carry the same specificity, but the last one in the source order wins.
 
@@ -479,17 +479,15 @@ Let's walk through this to see what's happening — try removing some of the pro
 4. The 2nd element _does_ get the red background color, but no border. Why? Because of the `!important` flag in the second rule. Adding the `!important` flag after `border: none` means that this declaration will win over the `border` value in the previous rule, even though the ID selector has higher specificity.
 
 > [!NOTE]
-> The only way to override an important declaration is to include another important declaration with the _same specificity_ later in the source order, or one with higher specificity, or to include an important declaration in a prior cascade layer (we haven't covered cascade layers yet).
+> The only way to override an important declaration is to include another important declaration with the _same specificity_ later in the source order, or one with higher specificity.
 
 One situation in which you may have to use the `!important` flag is when you are working on a CMS where you can't edit the core CSS modules, and you really want to override an inline style or an important declaration that can't be overridden in any other way. But really, don't use it if you can avoid it.
 
 ## The effect of CSS location
 
-Finally, it is important to note that the precedence of a CSS declaration depends on what stylesheet and cascade layer it is specified in.
+Finally, it is important to note that the precedence of a CSS declaration depends on what stylesheet it is specified in.
 
 It is possible for users to set custom stylesheets to override the developer's styles. For example, a visually impaired user might want to set the font size on all web pages they visit to be double the normal size to allow for easier reading.
-
-It is also possible to declare developer styles in cascade layers: you can make non-layered styles override styles declared in layers or you can make styles declared in later layers override styles from earlier declared layers. For example, as a developer you may not be able to edit a third-party stylesheet, but you can import the external stylesheet into a cascade layer so that all of your styles easily override the imported styles without worrying about third-party selector specificity.
 
 ### Order of overriding declarations
 
