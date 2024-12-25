@@ -260,8 +260,6 @@ The following query evaluates to true and applies the declared style if the cont
 
 ### Container style queries
 
-{{CSSRef}}{{SeeCompatTable}}
-
 Container queries can also evaluate the computed style of the container element. A _container style query_ is a `@container` query that uses one or more `style()` functional notations. The boolean syntax and logic combining style features into a style query is the same as for [CSS feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries).
 
 ```css
