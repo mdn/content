@@ -40,7 +40,7 @@ To minimize the scope for cookie vulnerabilities on your site, limit access to c
     - `SameSite=Strict`: Only send the cookie in same-site contexts (navigations and other requests). Cookies are omitted in cross-site requests (e.g. embedding images or other resources from other sites) and cross-site navigation (e.g. when following a link from a different web page). This is a very strict setting, but it does provide strong [CSRF](/en-US/docs/Web/Security/Practical_implementation_guides/CSRF_prevention) protection, so use this value if possible.
     - `SameSite=Lax`: Send the cookie in same-site requests and when navigating _to_ your website. This should be used if `Strict` is too restrictive.
 
-    Both of the above values are useful in protecting against [Clickjacking](/en-US/docs/Glossary/Clickjacking) attacks in cases that rely on the user being authenticated.
+    Both of the above values are useful in protecting against [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) attacks in cases that rely on the user being authenticated.
 
     > [!NOTE]
     > In theory, `SameSite=Strict` should be more useful than it is in practice. It often breaks navigations — for example, users clicking a link to a website on which they are already logged in (i.e. a valid session cookie is set) appear not to be logged in, because the browser has deliberately omitted the session cookie. The best middle ground is to use `SameSite=Strict` only on tokens where CSRF is a concern or use `SameSite=Strict` everywhere, but reload the page and do a cookie check in JavaScript if there's an indication that the user is logged in but required cookies are not being sent.

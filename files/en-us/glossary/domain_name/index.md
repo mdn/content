@@ -11,4 +11,4 @@ A **domain name** is a website's address on the {{Glossary("Internet")}}. Domain
 ## See also
 
 - [Domain name](https://en.wikipedia.org/wiki/Domain_name) on Wikipedia
-- [Understanding domain names](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
+- [Understanding domain names](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)

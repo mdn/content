@@ -132,7 +132,7 @@ Provide instructions to help users understand how to complete the form and use i
 - [`max`](/en-US/docs/Web/HTML/Attributes/max)
 - [`min`](/en-US/docs/Web/HTML/Attributes/min)
 - [Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
-- [Form validation](/en-US/docs/Learn/Forms/Form_validation)
+- [Form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - {{domxref('validityState.stepMismatch')}}
 - {{cssxref(':out-of-range')}}
 - {{htmlelement('input')}}

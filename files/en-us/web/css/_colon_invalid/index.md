@@ -176,5 +176,5 @@ By default, Gecko does not apply a style to the `:invalid` pseudo-class. However
 
 - Other validation-related pseudo-classes: {{ cssxref(":required") }}, {{ cssxref(":optional") }}, {{ cssxref(":valid") }}
 - Related Mozilla pseudo-classes: {{cssxref(":user-invalid")}}, {{cssxref(":-moz-submit-invalid")}}
-- [Form data validation](/en-US/docs/Learn/Forms/Form_validation)
+- [Form data validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - Accessing the [validity state](/en-US/docs/Web/API/ValidityState) from JavaScript
