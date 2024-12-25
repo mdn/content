@@ -789,6 +789,18 @@ const error = email.nextElementSibling;
 // As per the HTML Specification
 const emailRegExp =
   /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+// create a function that checks if the email is valid,
+// sets class names and returns a boolean
+const isValidEmail = () => {
+  const isValid = email.value.length === 0 || emailRegExp.test(email.value);
+  // set class name to indicate validity
+  email.className = isValid ? "valid" : "invalid";
+  // if email is valid, clear the span element
+  // and assign ".error" to the class name
+  error.textContent = "";
+  error.className = "error";
+  return isValid;
+};
 
 // Now we can rebuild our validation constraint
 // Because we do not rely on CSS pseudo-class, we have to
@@ -796,35 +808,22 @@ const emailRegExp =
 window.addEventListener("load", () => {
   // Here, we test if the field is empty (remember, the field is not required)
   // If it is not, we check if its content is a well-formed email address.
-  const isValid = email.value.length === 0 || emailRegExp.test(email.value);
-  email.className = isValid ? "valid" : "invalid";
+  isValidEmail();
 });
 
 // This defines what happens when the user types in the field
 email.addEventListener("input", () => {
-  const isValid = email.value.length === 0 || emailRegExp.test(email.value);
-  if (isValid) {
-    email.className = "valid";
-    error.textContent = "";
-    error.className = "error";
-  } else {
-    email.className = "invalid";
-  }
+  isValidEmail();
 });
 
 // This defines what happens when the user tries to submit the data
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const isValid = email.value.length === 0 || emailRegExp.test(email.value);
-  if (!isValid) {
-    email.className = "invalid";
+  isValidEmail();
+  if (!isValidEmail()) {
     error.textContent = "I expect an email, darling!";
     error.className = "error active";
-  } else {
-    email.className = "valid";
-    error.textContent = "";
-    error.className = "error";
   }
 });
 ```
