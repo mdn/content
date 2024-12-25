@@ -12,7 +12,7 @@ The `value` property of the {{domxref("SVGAngle")}} interface represents the num
 
 ## Value
 
-A `number`, the angle value in degrees as a float.
+An `integer`; the angle value in degrees as a float.
 
 ## Examples
 

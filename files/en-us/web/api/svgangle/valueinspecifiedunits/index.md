@@ -12,7 +12,7 @@ The `valueInSpecifiedUnits` property of the {{domxref("SVGAngle")}} interface re
 
 ## Value
 
-A `number`; the numeric factor of the angle as a float.
+An `integer`; the numeric factor of the angle as a float.
 
 ## Examples
 
