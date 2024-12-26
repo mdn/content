@@ -43,6 +43,6 @@ Because both [primitive conversion](/en-US/docs/Web/JavaScript/Data_structures#p
 ## See also
 
 - {{jsxref("Temporal.PlainMonthDay")}}
-- {{jsxref("Temporal.PlainMonthDay.prototype.toString()")}}
-- {{jsxref("Temporal.PlainMonthDay.prototype.toJSON()")}}
-- {{jsxref("Temporal.PlainMonthDay.prototype.toLocaleString()")}}
+- {{jsxref("Temporal/PlainMonthDay/toString", "Temporal.PlainMonthDay.prototype.toString()")}}
+- {{jsxref("Temporal/PlainMonthDay/toJSON", "Temporal.PlainMonthDay.prototype.toJSON()")}}
+- {{jsxref("Temporal/PlainMonthDay/toLocaleString", "Temporal.PlainMonthDay.prototype.toLocaleString()")}}

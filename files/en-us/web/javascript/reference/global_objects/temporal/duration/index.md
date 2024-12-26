@@ -51,7 +51,7 @@ const startingPoint = Temporal.PlainDate.from("2021-01-01"); // ISO 8601 calenda
 startingPoint.add(dur1).add(dur2).since(startingPoint); // "P396D"
 ```
 
-Other operations, including `round()`, `total()`, and `compare()`, take a `relativeTo` option to provide the necessary calendar and reference time information. This option can be a {{jsxref("Temporal.PlainDate")}}, {{jsxref("Temporal.PlainDateTime")}}, {{jsxref("Temporal.ZonedDateTime")}}, or otherwise an object or string that's convertible using {{jsxref("Temporal.ZonedDateTime.from()")}} (if the `timeZone` option is provided or the string contains timezone annotation) or {{jsxref("Temporal.PlainDateTime.from()")}}. A plain date(time) only provides the calendar information (and the time itself does not matter), while a zoned datetime also provides an instant to account for any occasional changes such as daylight saving time.
+Other operations, including `round()`, `total()`, and `compare()`, take a `relativeTo` option to provide the necessary calendar and reference time information. This option can be a {{jsxref("Temporal.PlainDate")}}, {{jsxref("Temporal.PlainDateTime")}}, {{jsxref("Temporal.ZonedDateTime")}}, or otherwise an object or string that's convertible using {{jsxref("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}} (if the `timeZone` option is provided or the string contains timezone annotation) or {{jsxref("Temporal/PlainDateTime/from", "Temporal.PlainDateTime.from()")}}. A plain date(time) only provides the calendar information (and the time itself does not matter), while a zoned datetime also provides an instant to account for any occasional changes such as daylight saving time.
 
 Note that `days` to `hours` conversion is also technically ambiguous because the length of a day may vary due to offset changes, such as daylight saving time. You can provide a zoned `relativeTo` to account for these changes; otherwise 24-hour days are assumed.
 
@@ -78,9 +78,9 @@ Because a duration is a difference between two time points, it can be positive, 
 
 ## Static methods
 
-- {{jsxref("Temporal.Duration.compare()")}}
+- {{jsxref("Temporal/Duration/compare", "Temporal.Duration.compare()")}}
   - : Returns a number (-1, 0, 1) indicating whether the first duration is shorter, equal to, or longer than the second duration.
-- {{jsxref("Temporal.Duration.from()")}}
+- {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}
   - : Creates a new `Temporal.Duration` object from another `Temporal.Duration` object, an object with duration properties, or an ISO 8601 string.
 
 ## Instance properties
@@ -121,13 +121,13 @@ These properties are defined on `Temporal.Duration.prototype` and shared by all 
 - {{jsxref("Temporal/Duration/abs", "Temporal.Duration.prototype.abs()")}}
   - : Returns a new `Temporal.Duration` object with the absolute value of this duration (all fields keep the same magnitude, but sign becomes positive).
 - {{jsxref("Temporal/Duration/add", "Temporal.Duration.prototype.add()")}}
-  - : Returns a new `Temporal.Duration` object with the sum of this duration and a given duration (in a form convertible by {{jsxref("Temporal.Duration.from()")}}). The result is [balanced](#duration_balancing).
+  - : Returns a new `Temporal.Duration` object with the sum of this duration and a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}). The result is [balanced](#duration_balancing).
 - {{jsxref("Temporal/Duration/negated", "Temporal.Duration.prototype.negated()")}}
   - : Returns a new `Temporal.Duration` object with the negated value of this duration (all fields keep the same magnitude, but sign becomes reversed).
 - {{jsxref("Temporal/Duration/round", "Temporal.Duration.prototype.round()")}}
   - : Returns a new `Temporal.Duration` object with the duration rounded to the given smallest unit and/or [balanced](#duration_balancing) to the given largest unit.
 - {{jsxref("Temporal/Duration/subtract", "Temporal.Duration.prototype.subtract()")}}
-  - : Returns a new `Temporal.Duration` object with the difference between this duration and a given duration (in a form convertible by {{jsxref("Temporal.Duration.from()")}}). Equivalent to [adding](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration/add) the [negated](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration/negated) value of the other duration.
+  - : Returns a new `Temporal.Duration` object with the difference between this duration and a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}). Equivalent to [adding](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration/add) the [negated](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration/negated) value of the other duration.
 - {{jsxref("Temporal/Duration/toJSON", "Temporal.Duration.prototype.toJSON()")}}
   - : TODO
 - {{jsxref("Temporal/Duration/toLocaleString", "Temporal.Duration.prototype.toLocaleString()")}}

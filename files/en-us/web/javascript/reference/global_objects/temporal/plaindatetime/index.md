@@ -16,9 +16,9 @@ The **`Temporal.PlainDateTime`** object represents a date (calendar date) and ti
 
 ## Static methods
 
-- {{jsxref("Temporal.PlainDateTime.compare()")}}
+- {{jsxref("Temporal/PlainDateTime/compare", "Temporal.PlainDateTime.compare()")}}
   - : Returns a number (-1, 0, 1) indicating whether the first datetime comes before, is the same as, or comes after the second datetime. Equivalent to first comparing their dates, then their times in case of a tie.
-- {{jsxref("Temporal.PlainDateTime.from()")}}
+- {{jsxref("Temporal/PlainDateTime/from", "Temporal.PlainDateTime.from()")}}
   - : Creates a new `Temporal.PlainDateTime` object from another `Temporal.PlainDateTime` object, an object with date and time properties, or an ISO 8601 string.
 
 ## Instance properties

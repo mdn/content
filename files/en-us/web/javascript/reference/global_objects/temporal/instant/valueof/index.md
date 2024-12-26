@@ -30,7 +30,7 @@ None.
 
 ## Description
 
-Because both [primitive conversion](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion) and [number conversion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) call `valueOf()` before `toString()`, if `valueOf()` is absent, then an expression like `instant1 > instant2` would implicitly compare them as strings, which may have unexpected results. By throwing a `TypeError`, `Temporal.Instant` instances prevent such implicit conversions. You need to explicitly convert them to numbers using {{jsxref("Temporal/Instant/epochNanoseconds", "Temporal.Instant.prototype.epochNanoseconds")}}, or use the {{jsxref("Temporal.Instant.compare()")}} static method to compare them.
+Because both [primitive conversion](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion) and [number conversion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) call `valueOf()` before `toString()`, if `valueOf()` is absent, then an expression like `instant1 > instant2` would implicitly compare them as strings, which may have unexpected results. By throwing a `TypeError`, `Temporal.Instant` instances prevent such implicit conversions. You need to explicitly convert them to numbers using {{jsxref("Temporal/Instant/epochNanoseconds", "Temporal.Instant.prototype.epochNanoseconds")}}, or use the {{jsxref("Temporal/Instant/compare", "Temporal.Instant.compare()")}} static method to compare them.
 
 ## Specifications
 
@@ -43,6 +43,6 @@ Because both [primitive conversion](/en-US/docs/Web/JavaScript/Data_structures#p
 ## See also
 
 - {{jsxref("Temporal.Instant")}}
-- {{jsxref("Temporal.Instant.prototype.toString()")}}
-- {{jsxref("Temporal.Instant.prototype.toJSON()")}}
-- {{jsxref("Temporal.Instant.prototype.toLocaleString()")}}
+- {{jsxref("Temporal/Instant/toString", "Temporal.Instant.prototype.toString()")}}
+- {{jsxref("Temporal/Instant/toJSON", "Temporal.Instant.prototype.toJSON()")}}
+- {{jsxref("Temporal/Instant/toLocaleString", "Temporal.Instant.prototype.toLocaleString()")}}

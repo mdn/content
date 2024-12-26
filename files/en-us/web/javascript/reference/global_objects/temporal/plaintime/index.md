@@ -16,9 +16,9 @@ The **`Temporal.PlainTime`** object represents a time without a date or timezone
 
 ## Static methods
 
-- {{jsxref("Temporal.PlainTime.compare()")}}
+- {{jsxref("Temporal/PlainTime/compare", "Temporal.PlainTime.compare()")}}
   - : Returns a number (-1, 0, 1) indicating whether the first time comes before, is the same as, or comes after the second time. Equivalent to comparing the hour, minute, second, millisecond, microsecond, and nanosecond fields one by one.
-- {{jsxref("Temporal.PlainTime.from()")}}
+- {{jsxref("Temporal/PlainTime/from", "Temporal.PlainTime.from()")}}
   - : Creates a new `Temporal.PlainTime` object from another `Temporal.PlainTime` object, an object with time properties, or an ISO 8601 string.
 
 ## Instance properties

@@ -19,7 +19,7 @@ Temporal.Duration.compare(duration1, duration2, options)
 ### Parameters
 
 - `duration1`
-  - : A string, an object, or a {{jsxref("Temporal.Duration")}} instance representing a duration to add to this duration. It is converted to a `Temporal.Duration` object using the same algorithm as {{jsxref("Temporal.Duration.from()")}}.
+  - : A string, an object, or a {{jsxref("Temporal.Duration")}} instance representing a duration to add to this duration. It is converted to a `Temporal.Duration` object using the same algorithm as {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}.
 - `duration2`
   - : Same as `duration1`.
 - `options` {{optional_inline}}

@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.Instant.subtract
 
 {{JSRef}}
 
-The **`subtract()`** method of {{jsxref("Temporal.Instant")}} instances returns a new `Temporal.Instant` object representing subtracting a given duration (in a form convertible by {{jsxref("Temporal.Duration.from()")}}) from this instant.
+The **`subtract()`** method of {{jsxref("Temporal.Instant")}} instances returns a new `Temporal.Instant` object representing subtracting a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}) from this instant.
 
 ## Syntax
 

@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.Instant.since
 
 {{JSRef}}
 
-The **`since()`** method of {{jsxref("Temporal.Instant")}} instances returns a new {{jsxref("Temporal.Duration")}} object representing the duration from another instant (in a form convertible by {{jsxref("Temporal.Instant.from()")}}) to this instant. The duration is positive if the other instant is before this instant, and negative if after.
+The **`since()`** method of {{jsxref("Temporal.Instant")}} instances returns a new {{jsxref("Temporal.Duration")}} object representing the duration from another instant (in a form convertible by {{jsxref("Temporal/Instant/from", "Temporal.Instant.from()")}}) to this instant. The duration is positive if the other instant is before this instant, and negative if after.
 
 ## Syntax
 

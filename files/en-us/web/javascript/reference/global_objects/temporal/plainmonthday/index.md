@@ -16,7 +16,7 @@ The **`Temporal.PlainMonthDay`** object represents the month and day of a calend
 
 ## Static methods
 
-- {{jsxref("Temporal.PlainMonthDay.from()")}}
+- {{jsxref("Temporal/PlainMonthDay/from", "Temporal.PlainMonthDay.from()")}}
   - : Creates a new `Temporal.PlainMonthDay` object from another `Temporal.PlainMonthDay` object, an object with month and day properties, or an ISO 8601 string.
 
 ## Instance properties

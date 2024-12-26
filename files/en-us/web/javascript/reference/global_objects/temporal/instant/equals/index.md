@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.Instant.equals
 
 {{JSRef}}
 
-The **`equals()`** method of {{jsxref("Temporal.Instant")}} instances returns `true` if this instant is equal to another instant (in a form convertible by {{jsxref("Temporal.Instant.from()")}}), and `false` otherwise. Equivalent to `Temporal.Instant.compare(this, other) === 0`.
+The **`equals()`** method of {{jsxref("Temporal.Instant")}} instances returns `true` if this instant is equal to another instant (in a form convertible by {{jsxref("Temporal/Instant/from", "Temporal.Instant.from()")}}), and `false` otherwise. Equivalent to `Temporal.Instant.compare(this, other) === 0`.
 
 ## Syntax
 

@@ -16,9 +16,9 @@ The **`Temporal.PlainYearMonth`** object represents the year and month of a cale
 
 ## Static methods
 
-- {{jsxref("Temporal.PlainYearMonth.compare()")}}
+- {{jsxref("Temporal/PlainYearMonth/compare", "Temporal.PlainYearMonth.compare()")}}
   - : Returns a number (-1, 0, 1) indicating whether the first year-month comes before, is the same as, or comes after the second year-month. Equivalent to comparing the year, month, and day fields of the underlying ISO 8601 dates.
-- {{jsxref("Temporal.PlainYearMonth.from()")}}
+- {{jsxref("Temporal/PlainYearMonth/from", "Temporal.PlainYearMonth.from()")}}
   - : Creates a new `Temporal.PlainYearMonth` object from another `Temporal.PlainYearMonth` object, an object with year and month properties, or an ISO 8601 string.
 
 ## Instance properties

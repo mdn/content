@@ -16,9 +16,9 @@ The **`Temporal.ZonedDateTime`** object represents a date and time with a timezo
 
 ## Static methods
 
-- {{jsxref("Temporal.ZonedDateTime.compare()")}}
+- {{jsxref("Temporal/ZonedDateTime/compare", "Temporal.ZonedDateTime.compare()")}}
   - : Returns a number (-1, 0, 1) indicating whether the first datetime comes before, is the same as, or comes after the second datetime. Equivalent to comparing the {{jsxref("Temporal/ZonedDateTime/epochNanoseconds", "epochNanoseconds")}} of the two datetimes.
-- {{jsxref("Temporal.ZonedDateTime.from()")}}
+- {{jsxref("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}}
   - : Creates a new `Temporal.ZonedDateTime` object from another `Temporal.ZonedDateTime` object, an object with date, time, and timezone properties, or an ISO 8601 string.
 
 ## Instance properties
