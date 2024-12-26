@@ -27,6 +27,11 @@ SVGTransform.setScale(sx, sy)
 
 None ({{jsxref('undefined')}}).
 
+### Exceptions
+
+- `NoModificationAllowedError` {{domxref("DOMException")}}
+  - : Thrown if the attribute or the {{domxref("SVGTransform")}} object is read-only.
+
 ## Examples
 
 ### Scaling an SVG Element

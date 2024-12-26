@@ -25,6 +25,11 @@ SVGTransform.setSkewY(angle)
 
 None ({{jsxref('undefined')}}).
 
+### Exceptions
+
+- `NoModificationAllowedError` {{domxref("DOMException")}}
+  - : Thrown if the attribute or the {{domxref("SVGTransform")}} object is read-only.
+
 ## Examples
 
 ### Skewing an SVG Element Along the Y-Axis
