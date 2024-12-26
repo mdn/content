@@ -95,8 +95,10 @@ Mobile browsers further help with the user experience by showing a special keybo
 In its most basic form, a number input can be implemented like this:
 
 ```html
-<label for="ticketNum">Number of tickets you would like to buy:</label>
-<input id="ticketNum" type="number" name="ticketNum" value="0" />
+<label>
+  Number of tickets you would like to buy:
+  <input type="number" name="ticketNum" value="0" />
+</label>
 ```
 
 {{EmbedLiveSample('A_basic_number_input', 600, 40)}}
@@ -217,15 +219,16 @@ The following example exhibits all of the above features, as well as using some 
 ```html
 <form>
   <div>
-    <label for="balloons">Number of balloons to order (multiples of 10):</label>
-    <input
-      id="balloons"
-      type="number"
-      name="balloons"
-      step="10"
-      min="0"
-      max="100"
-      required />
+    <label>
+      Number of balloons to order (multiples of 10):
+      <input
+        type="number"
+        name="balloons"
+        step="10"
+        min="0"
+        max="100"
+        required />
+    </label>
     <span class="validity"></span>
   </div>
   <div>
@@ -292,24 +295,36 @@ The HTML looks like this:
 ```html
 <form>
   <div class="metersInputGroup">
-    <label for="meters">Enter your height — meters:</label>
-    <input
-      id="meters"
-      type="number"
-      name="meters"
-      step="0.01"
-      min="0"
-      placeholder="e.g. 1.78"
-      required />
+    <label>
+      Enter your height — meters:
+      <input
+        type="number"
+        id="meters"
+        name="meters"
+        step="0.01"
+        min="0"
+        placeholder="e.g. 1.78"
+        required />
+    </label>
     <span class="validity"></span>
   </div>
   <div class="feetInputGroup" style="display: none;">
     <span>Enter your height — </span>
-    <label for="feet">feet:</label>
-    <input id="feet" type="number" name="feet" min="0" step="1" />
+    <label>
+      feet:
+      <input type="number" id="feet" name="feet" min="0" step="1" />
+    </label>
     <span class="validity"></span>
-    <label for="inches">inches:</label>
-    <input id="inches" type="number" name="inches" min="0" max="11" step="1" />
+    <label>
+      inches:
+      <input
+        type="number"
+        id="inches"
+        name="inches"
+        min="0"
+        max="11"
+        step="1" />
+    </label>
     <span class="validity"></span>
   </div>
   <div>

@@ -22,12 +22,10 @@ A string representing the value of the date entered into the input. The format o
 You can set a default value for the input by including a date and time inside the [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute, like so:
 
 ```html
-<label for="party">Enter a date and time for your party booking:</label>
-<input
-  id="party"
-  type="datetime-local"
-  name="party-date"
-  value="2017-06-01T08:30" />
+<label>
+  Enter a date and time for your party booking:
+  <input type="datetime-local" name="party-date" value="2017-06-01T08:30" />
+</label>
 ```
 
 {{ EmbedLiveSample('Value', 600, 60) }}
@@ -178,8 +176,10 @@ The most basic use of `<input type="datetime-local">` involves a basic `<input>`
 
 ```html
 <form>
-  <label for="party">Enter a date and time for your party booking:</label>
-  <input id="party" type="datetime-local" name="party-date" />
+  <label>
+    Enter a date and time for your party booking:
+    <input type="datetime-local" name="party-date" />
+  </label>
 </form>
 ```
 
@@ -191,13 +191,14 @@ You can use the [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-
 
 ```html
 <form>
-  <label for="party">Enter a date and time for your party booking:</label>
-  <input
-    id="party"
-    type="datetime-local"
-    name="party-date"
-    min="2024-06-01T08:30"
-    max="2024-06-30T16:30" />
+  <label>
+    Enter a date and time for your party booking:
+    <input
+      type="datetime-local"
+      name="party-date"
+      min="2024-06-01T08:30"
+      max="2024-06-30T16:30" />
+  </label>
 </form>
 ```
 

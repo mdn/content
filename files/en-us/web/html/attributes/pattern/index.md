@@ -99,15 +99,16 @@ The example below restricts the value to 4-8 characters and requires that it con
 ```html
 <form>
   <div>
-    <label for="uname">Choose a username: </label>
-    <input
-      type="text"
-      id="uname"
-      name="name"
-      required
-      size="45"
-      pattern="[a-z]{4,8}"
-      title="4 to 8 lowercase letters" />
+    <label>
+      Choose a username:
+      <input
+        type="text"
+        name="name"
+        required
+        size="45"
+        pattern="[a-z]{4,8}"
+        title="4 to 8 lowercase letters" />
+    </label>
     <span class="validity"></span>
     <p>Usernames must be lowercase and 4-8 characters in length.</p>
   </div>

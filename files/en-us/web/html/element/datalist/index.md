@@ -38,8 +38,10 @@ Recommended values in types {{HTMLElement("input/text", "text")}}, {{HTMLElement
 Typically the right side of a control will also have an arrow pointing to the presence of predefined values.
 
 ```html
-<label for="myBrowser">Choose a browser from this list:</label>
-<input list="browsers" id="myBrowser" name="myBrowser" />
+<label>
+  Choose a browser from this list:
+  <input list="browsers" name="myBrowser" />
+</label>
 <datalist id="browsers">
   <option value="Chrome"></option>
   <option value="Firefox"></option>
@@ -75,8 +77,10 @@ Predefined values can be shown there, allowing the user to quickly fill the cont
 The recommended values in the {{HTMLElement("input/range", "range")}} type will be shown as series of hash marks that the user can easily select.
 
 ```html
-<label for="tick">Tip amount:</label>
-<input type="range" list="tickmarks" min="0" max="100" id="tick" name="tick" />
+<label>
+  Tip amount:
+  <input type="range" list="tickmarks" min="0" max="100" name="tick" />
+</label>
 <datalist id="tickmarks">
   <option value="0"></option>
   <option value="10"></option>
@@ -92,8 +96,10 @@ The recommended values in the {{HTMLElement("input/range", "range")}} type will 
 The {{HTMLElement("input/color", "color")}} type can show predefined colors in a browser-provided interface.
 
 ```html
-<label for="colors">Pick a color (preferably a red tone):</label>
-<input type="color" list="redColors" id="colors" />
+<label>
+  Pick a color (preferably a red tone):
+  <input type="color" list="redColors" />
+</label>
 <datalist id="redColors">
   <option value="#800000"></option>
   <option value="#8B0000"></option>

@@ -30,8 +30,10 @@ Alternatively, you can nest the `<input>` directly inside the `<label>`, in whic
 The form control that a label is labeling is called the _labeled control_ of the label element. Multiple labels can be associated with the same form control:
 
 ```html
-<label for="username">Enter your username:</label>
-<input id="username" name="username" type="text" />
+<label>
+  Enter your username:
+  <input name="username" type="text" />
+</label>
 <label for="username">Forgot your username?</label>
 ```
 
@@ -127,8 +129,10 @@ An {{HTMLElement("input")}} element with a `type="button"` declaration and a val
 ### Defining an explicit label with the "for" attribute
 
 ```html
-<label for="username">Click me to focus on the input field</label>
-<input type="text" id="username" />
+<label>
+  Click me to focus on the input field
+  <input type="text" />
+</label>
 ```
 
 {{EmbedLiveSample('Using_the_for_attribute', '200', '50')}}

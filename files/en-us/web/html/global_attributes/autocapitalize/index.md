@@ -44,40 +44,46 @@ Possible values are:
 
 <form>
   <div>
-    <label for="default">Default: no autocapitalize set</label>
-    <input type="text" id="default" name="default" />
+    <label>
+      Default: no autocapitalize set
+      <input type="text" name="default" />
+    </label>
   </div>
   <div>
-    <label for="off">autocapitalize="off"</label>
-    <input type="text" id="off" name="off" autocapitalize="off" />
+    <label>
+      autocapitalize="off"
+      <input type="text" name="off" autocapitalize="off" />
+    </label>
   </div>
   <div>
-    <label for="none">autocapitalize="none"</label>
-    <input type="text" id="none" name="none" autocapitalize="none" />
+    <label>
+      autocapitalize="none"
+      <input type="text" name="none" autocapitalize="none" />
+    </label>
   </div>
   <div>
-    <label for="on">autocapitalize="on"</label>
-    <input type="text" id="on" name="on" autocapitalize="on" />
+    <label>
+      autocapitalize="on"
+      <input type="text" name="on" autocapitalize="on" />
+    </label>
   </div>
   <div>
-    <label for="sentences">autocapitalize="sentences"</label>
-    <input
-      type="text"
-      id="sentences"
-      name="sentences"
-      autocapitalize="sentences" />
+    <label>
+      autocapitalize="sentences"
+      <input type="text" name="sentences" autocapitalize="sentences" />
+    </label>
   </div>
   <div>
-    <label for="words">autocapitalize="words"</label>
-    <input type="text" id="words" name="words" autocapitalize="words" />
+    <label>
+      autocapitalize="words"
+      <input type="text" name="words" autocapitalize="words" />
+    </label>
   </div>
   <div>
-    <label for="characters">autocapitalize="characters"</label>
-    <input
-      type="text"
-      id="characters"
-      name="characters"
-      autocapitalize="characters" />
+    <label>
+      autocapitalize="characters"
+      <input type="text" name="characters" autocapitalize="characters" />
+    </label>
   </div>
   <div>
     <label for="characters-ta">autocapitalize="characters" on textarea</label>

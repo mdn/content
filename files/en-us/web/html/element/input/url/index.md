@@ -283,19 +283,22 @@ input:valid + span::after {
 ```html
 <form>
   <div>
-    <label for="myURL">Enter the problem website address:</label>
-    <input
-      id="myURL"
-      name="myURL"
-      type="url"
-      required
-      pattern=".*\.myco\..*"
-      title="The URL must be in a Myco domain" />
+    <label>
+      Enter the problem website address:
+      <input
+        name="myURL"
+        type="url"
+        required
+        pattern=".*\.myco\..*"
+        title="The URL must be in a Myco domain" />
+    </label>
     <span class="validity"></span>
   </div>
   <div>
-    <label for="myComment">What is the problem?</label>
-    <input id="myComment" name="myComment" type="text" required />
+    <label>
+      What is the problem?
+      <input name="myComment" type="text" required />
+    </label>
     <span class="validity"></span>
   </div>
   <div>

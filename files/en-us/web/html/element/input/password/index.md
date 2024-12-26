@@ -92,8 +92,10 @@ Password input boxes generally work just like other textual input boxes; the mai
 Here we see the most basic password input, with a label established using the {{HTMLElement("label")}} element.
 
 ```html
-<label for="userPassword">Password: </label>
-<input id="userPassword" type="password" />
+<label>
+  Password:
+  <input id="userPassword" type="password" />
+</label>
 ```
 
 {{EmbedLiveSample("A_basic_password_input", 600, 40)}}
@@ -112,8 +114,10 @@ To allow the user's password manager to automatically enter the password, specif
   - : Allow the browser or password manager to automatically enter a new password for the site; this is used on "change your password" and "new user" forms, on the field asking the user for a new password. The new password may be generated in a variety of ways, depending on the password manager in use. It may fill in a new suggested password, or it might show the user an interface for creating one.
 
 ```html
-<label for="userPassword">Password:</label>
-<input id="userPassword" type="password" autocomplete="current-password" />
+<label>
+  Password:
+  <input id="userPassword" type="password" autocomplete="current-password" />
+</label>
 ```
 
 {{EmbedLiveSample("Allowing_autocomplete", 600, 40)}}
@@ -123,8 +127,10 @@ To allow the user's password manager to automatically enter the password, specif
 To tell the user's browser that the password field must have a valid value before the form can be submitted, specify the Boolean [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute.
 
 ```html
-<label for="userPassword">Password: </label>
-<input id="userPassword" type="password" required />
+<label>
+  Password:
+  <input id="userPassword" type="password" required />
+</label>
 <input type="submit" value="Submit" />
 ```
 
@@ -135,8 +141,10 @@ To tell the user's browser that the password field must have a valid value befor
 If your recommended (or required) password syntax rules would benefit from an alternate text entry interface than the standard keyboard, you can use the [`inputmode`](/en-US/docs/Web/HTML/Element/input#inputmode) attribute to request a specific one. The most obvious use case for this is if the password is required to be numeric (such as a PIN). Mobile devices with virtual keyboards, for example, may opt to switch to a numeric keypad layout instead of a full keyboard, to make entering the password easier. If the PIN is for one-time use, set the [`autocomplete`](/en-US/docs/Web/HTML/Element/input#autocomplete) attribute to either `off` or `one-time-code` to suggest that it's not saved.
 
 ```html
-<label for="pin">PIN: </label>
-<input id="pin" type="password" inputmode="numeric" />
+<label>
+  PIN:
+  <input id="pin" type="password" inputmode="numeric" />
+</label>
 ```
 
 {{EmbedLiveSample("Specifying_an_input_mode", 600, 40)}}
@@ -146,14 +154,16 @@ If your recommended (or required) password syntax rules would benefit from an al
 As usual, you can use the [`minlength`](/en-US/docs/Web/HTML/Element/input#minlength) and [`maxlength`](/en-US/docs/Web/HTML/Element/input#maxlength) attributes to establish minimum and maximum acceptable lengths for the password. This example expands on the previous one by specifying that the user's PIN must be at least four and no more than eight digits. The [`size`](/en-US/docs/Web/HTML/Element/input#size) attribute is used to ensure that the password entry control is eight characters wide.
 
 ```html
-<label for="pin">PIN:</label>
-<input
-  id="pin"
-  type="password"
-  inputmode="numeric"
-  minlength="4"
-  maxlength="8"
-  size="8" />
+<label>
+  PIN:
+  <input
+    id="pin"
+    type="password"
+    inputmode="numeric"
+    minlength="4"
+    maxlength="8"
+    size="8" />
+</label>
 ```
 
 {{EmbedLiveSample("Setting_length_requirements", 600, 40)}}
@@ -165,8 +175,10 @@ As with other textual entry controls, you can use the {{domxref("HTMLInputElemen
 #### HTML
 
 ```html
-<label for="userPassword">Password: </label>
-<input id="userPassword" type="password" size="12" />
+<label>
+  Password:
+  <input id="userPassword" type="password" size="12" />
+</label>
 <button id="selectAll">Select All</button>
 ```
 
@@ -191,13 +203,14 @@ If your application has character set restrictions or any other requirement for 
 In this example, only values consisting of at least four and no more than eight hexadecimal digits are valid.
 
 ```html
-<label for="hexId">Hex ID: </label>
-<input
-  id="hexId"
-  type="password"
-  pattern="[0-9a-fA-F]{4,8}"
-  title="Enter an ID consisting of 4-8 hexadecimal digits"
-  autocomplete="new-password" />
+<label>
+  Hex ID:
+  <input
+    type="password"
+    pattern="[0-9a-fA-F]{4,8}"
+    title="Enter an ID consisting of 4-8 hexadecimal digits"
+    autocomplete="new-password" />
+</label>
 ```
 
 {{EmbedLiveSample("Validation", 600, 40)}}
@@ -211,16 +224,18 @@ This example only accepts input which matches the format for a [valid United Sta
 #### HTML
 
 ```html
-<label for="ssn">SSN:</label>
-<input
-  type="password"
-  id="ssn"
-  inputmode="numeric"
-  minlength="9"
-  maxlength="12"
-  pattern="(?!000)([0-6]\d{2}|7([0-6]\d|7[012]))([ -])?(?!00)\d\d\3(?!0000)\d{4}"
-  required
-  autocomplete="off" />
+<label>
+  SSN:
+  <input
+    type="password"
+    id="ssn"
+    inputmode="numeric"
+    minlength="9"
+    maxlength="12"
+    pattern="(?!000)([0-6]\d{2}|7([0-6]\d|7[012]))([ -])?(?!00)\d\d\3(?!0000)\d{4}"
+    required
+    autocomplete="off" />
+</label>
 <br />
 <label for="ssn">Value:</label>
 <span id="current"></span>

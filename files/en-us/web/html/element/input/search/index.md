@@ -304,16 +304,17 @@ The example below requires that the entered value be 4–8 characters in length.
 ```html
 <form>
   <div>
-    <label for="mySearch">Search for user</label>
-    <input
-      type="search"
-      id="mySearch"
-      name="q"
-      placeholder="User IDs are 4–8 characters in length"
-      required
-      size="30"
-      minlength="4"
-      maxlength="8" />
+    <label>
+      Search for user
+      <input
+        type="search"
+        name="q"
+        placeholder="User IDs are 4–8 characters in length"
+        required
+        size="30"
+        minlength="4"
+        maxlength="8" />
+    </label>
     <button>Search</button>
     <span class="validity"></span>
   </div>
@@ -353,15 +354,16 @@ Let's look at an example. Say we wanted to provide a product ID search form, and
 ```html
 <form>
   <div>
-    <label for="mySearch">Search for product by ID:</label>
-    <input
-      type="search"
-      id="mySearch"
-      name="q"
-      placeholder="two letters followed by four numbers"
-      required
-      size="30"
-      pattern="[A-z]{2}[0-9]{4}" />
+    <label>
+      Search for product by ID:
+      <input
+        type="search"
+        name="q"
+        placeholder="two letters followed by four numbers"
+        required
+        size="30"
+        pattern="[A-z]{2}[0-9]{4}" />
+    </label>
     <button>Search</button>
     <span class="validity"></span>
   </div>

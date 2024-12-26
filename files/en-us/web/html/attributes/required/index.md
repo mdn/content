@@ -47,12 +47,16 @@ Provide an indication to users informing them the form control is required. Ensu
 ```html
 <form>
   <div class="group">
-    <input type="text" />
-    <label>Normal</label>
+    <label>
+      <input type="text" />
+      Normal
+    </label>
   </div>
   <div class="group">
-    <input type="text" required />
-    <label>Required</label>
+    <label>
+      <input type="text" required />
+      Required
+    </label>
   </div>
   <input type="submit" />
 </form>

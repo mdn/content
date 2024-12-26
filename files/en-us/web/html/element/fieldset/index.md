@@ -69,12 +69,16 @@ This example shows a disabled `<fieldset>` with two controls inside it. Note how
   <fieldset disabled>
     <legend>Disabled login fieldset</legend>
     <div>
-      <label for="name">Name: </label>
-      <input type="text" id="name" value="Chris" />
+      <label>
+        Name:
+        <input type="text" value="Chris" />
+      </label>
     </div>
     <div>
-      <label for="pwd">Archetype: </label>
-      <input type="password" id="pwd" value="Wookie" />
+      <label>
+        Archetype:
+        <input type="password" value="Wookie" />
+      </label>
     </div>
   </fieldset>
 </form>

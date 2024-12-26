@@ -185,8 +185,10 @@ The HTML looks like so:
 ```html
 <form>
   <div class="nativeDatePicker">
-    <label for="bday">Enter your birthday:</label>
-    <input type="date" id="bday" name="bday" />
+    <label>
+      Enter your birthday:
+      <input type="date" name="bday" />
+    </label>
     <span class="validity"></span>
   </div>
 </form>
