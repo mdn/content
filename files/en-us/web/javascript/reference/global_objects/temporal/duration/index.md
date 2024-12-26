@@ -59,13 +59,11 @@ Note that `days` to `hours` conversion is also technically ambiguous because the
 
 There are many ways to represent the same duration: for example, "1 minute and 30 seconds" and "90 seconds" are equivalent. However, depending on the context, one representation may be more appropriate than the other. Therefore, generally, the `Duration` object preserves the input values as much as possible, so that when you format it, it will be displayed as you expect.
 
-More formally, each component of a duration has its optimal range; hours should be from 0 to 23, minutes from 0 to 59, and so on. When a component overflows its optimal range, the excess is "carried" into the next larger component. To carry over, we need to answer the question of "how many X are in a Y?", which is a complicated question for [calendar units](#calendar_durations). Also note that by default, `days` are directly carried into `months`. The weeks unit is only carried into if explicitly requested.
+Each component of a duration has its optimal range; hours should be from 0 to 23, minutes from 0 to 59, and so on. When a component overflows its optimal range, the excess may be "carried" into the next larger component. To carry over, we need to answer the question of "how many X are in a Y?", which is a complicated question for [calendar units](#calendar_durations), so in this case a calendar is needed. Also note that by default, `days` are directly carried into `months`; the weeks unit is only carried into if explicitly requested. If we carry as much as possible, the eventual result where all components are within their optimal range is called a "balanced" duration. Unbalanced durations usually come in the "top-heavy" form, where the largest unit is unbalanced (e.g., "27 hours and 30 minutes"); other forms, such as "23 hours and 270 minutes", are rarely seen.
 
-If we carry as much as possible, the eventual result where all components are within their optimal range is called a "balanced" duration. Unbalanced durations usually come in the "top-heavy" form, where the largest unit is unbalanced (e.g., "27 hours and 30 minutes"); other forms, such as "23 hours and 270 minutes", are rarely seen.
+The {{jsxref("Temporal/Duration/round", "round()")}} method always balances the duration into the "top-heavy" form, up to the `largestUnit` option. With a manual `largestUnit` option that's large enough, you can fully balance the duration. Similarly, the {{jsxref("Temporal/Duration/add", "add()")}} and {{jsxref("Temporal/Duration/subtract", "subtract()")}} methods balance the result duration to the largest unit of the input durations.
 
-The {{jsxref("Temporal/Duration/round", "round()")}} method always balances the duration into the "top-heavy" form, up to the `largestUnit` option. With a manual `largestUnit` option that's large enough, you can fully balance the duration, such as "90 seconds" to "1 minute and 30 seconds". Similarly, the {{jsxref("Temporal/Duration/add", "add()")}} and {{jsxref("Temporal/Duration/subtract", "subtract()")}} methods balance the result duration to the largest unit of the input durations, or to the `largestUnit` option if provided.
-
-Note that because the ISO 8601 duration format represents subsecond components as one single fraction number, it is not possible to preserve unbalanced subsecond components during serialization using the default format. For example, "1000 milliseconds" is serialized as `"PT1S"`, and then deserialized as "1 second". If you need to preserve the subsecond components, you need to serialize it as JSON instead.
+Note that because the ISO 8601 duration format represents subsecond components as one single fraction number, it is not possible to preserve unbalanced subsecond components during serialization using the default format. For example, "1000 milliseconds" is serialized as `"PT1S"`, and then deserialized as "1 second". If you need to preserve the subsecond components' magnitudes, you need to manually serialize it as a JSON object instead (because by default the {{jsxref("Temporal/Duration/toJSON", "toJSON()")}} method serializes the duration in the ISO 8601 format).
 
 ### Duration sign
 
@@ -129,11 +127,11 @@ These properties are defined on `Temporal.Duration.prototype` and shared by all 
 - {{jsxref("Temporal/Duration/subtract", "Temporal.Duration.prototype.subtract()")}}
   - : Returns a new `Temporal.Duration` object with the difference between this duration and a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}). Equivalent to [adding](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration/add) the [negated](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration/negated) value of the other duration.
 - {{jsxref("Temporal/Duration/toJSON", "Temporal.Duration.prototype.toJSON()")}}
-  - : TODO
+  - : Returns a string representing this duration in the same [ISO 8601 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#iso_8601_duration_format) as calling {{jsxref("Temporal/Duration/toString", "toString()")}}.
 - {{jsxref("Temporal/Duration/toLocaleString", "Temporal.Duration.prototype.toLocaleString()")}}
-  - : TODO
+  - : Returns a string with a language-sensitive representation of this duration. In implementations with [`Intl.DurationFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat) support, this method simply calls `Intl.DurationFormat`.
 - {{jsxref("Temporal/Duration/toString", "Temporal.Duration.prototype.toString()")}}
-  - : TODO
+  - : Returns a string representing this duration in the [ISO 8601 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#iso_8601_duration_format).
 - {{jsxref("Temporal/Duration/total", "Temporal.Duration.prototype.total()")}}
   - : Returns a number representing the total duration in the given unit.
 - {{jsxref("Temporal/Duration/valueOf", "Temporal.Duration.prototype.valueOf()")}}
