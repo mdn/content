@@ -21,19 +21,19 @@ None.
 
 ### Return value
 
-TODO
-
-### Exceptions
-
-TODO
-
-## Description
-
-TODO
+A new `Temporal.Duration` object with the absolute value of this duration, which is either the same as this duration if it is already positive, or its [negation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration/negated) if it is negative.
 
 ## Examples
 
-TODO
+### Using abs()
+
+```js
+const d1 = Temporal.Duration.from({ hours: 1, minutes: 30 });
+const d2 = Temporal.Duration.from({ hours: -1, minutes: -30 });
+
+console.log(d1.abs()); // "PT1H30M"
+console.log(d2.abs()); // "PT1H30M"
+```
 
 ## Specifications
 
@@ -45,4 +45,6 @@ TODO
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal.Duration")}}
+- {{jsxref("Temporal/Duration/negated", "Temporal.Duration.prototype.negated()")}}
+- {{jsxref("Temporal/Duration/sign", "Temporal.Duration.prototype.sign")}}

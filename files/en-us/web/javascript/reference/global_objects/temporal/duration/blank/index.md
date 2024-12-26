@@ -9,13 +9,19 @@ browser-compat: javascript.builtins.Temporal.Duration.blank
 
 The **`blank`** accessor property of {{jsxref("Temporal.Duration")}} instances returns a boolean that is `true` if this duration represents a zero duration, and `false` otherwise. Equivalent to `duration.sign === 0`.
 
-## Description
-
-TODO
-
 ## Examples
 
-TODO
+### Using blank
+
+```js
+const d1 = Temporal.Duration.from({ hours: 1, minutes: 30 });
+const d2 = Temporal.Duration.from({ hours: -1, minutes: -30 });
+const d3 = Temporal.Duration.from({ hours: 0 });
+
+console.log(d1.blank); // false
+console.log(d2.blank); // false
+console.log(d3.blank); // true
+```
 
 ## Specifications
 
@@ -27,4 +33,5 @@ TODO
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal.Duration")}}
+- {{jsxref("Temporal/Duration/sign", "Temporal.Duration.prototype.sign")}}

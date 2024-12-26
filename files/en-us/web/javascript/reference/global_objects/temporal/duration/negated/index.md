@@ -21,19 +21,19 @@ None.
 
 ### Return value
 
-TODO
-
-### Exceptions
-
-TODO
-
-## Description
-
-TODO
+A new `Temporal.Duration` object, where all fields have the same magnitude as this duration, but the sign is reversed (positive fields become negative, and vice versa).
 
 ## Examples
 
-TODO
+### Using negated()
+
+```js
+const d1 = Temporal.Duration.from({ hours: 1, minutes: 30 });
+const d2 = Temporal.Duration.from({ hours: -1, minutes: -30 });
+
+console.log(d1.negated()); // "-PT1H30M"
+console.log(d2.negated()); // "PT1H30M"
+```
 
 ## Specifications
 
@@ -45,4 +45,6 @@ TODO
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal.Duration")}}
+- {{jsxref("Temporal/Duration/abs", "Temporal.Duration.prototype.abs()")}}
+- {{jsxref("Temporal/Duration/sign", "Temporal.Duration.prototype.sign")}}

@@ -89,7 +89,7 @@ These properties are defined on `Temporal.PlainDate.prototype` and shared by all
 - {{jsxref("Temporal/PlainDate/until", "Temporal.PlainDate.prototype.until()")}}
   - : TODO
 - {{jsxref("Temporal/PlainDate/valueOf", "Temporal.PlainDate.prototype.valueOf()")}}
-  - : TODO
+  - : Throws a {{jsxref("TypeError")}}, which prevents `Temporal.PlainDate` instances from being [implicitly converted to primitives](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion) when used in arithmetic or comparison operations.
 - {{jsxref("Temporal/PlainDate/with", "Temporal.PlainDate.prototype.with()")}}
   - : TODO
 - {{jsxref("Temporal/PlainDate/withCalendar", "Temporal.PlainDate.prototype.withCalendar()")}}

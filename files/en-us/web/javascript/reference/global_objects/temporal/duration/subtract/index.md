@@ -18,23 +18,32 @@ subtract(other)
 ### Parameters
 
 - `other`
-  - : TODO
+  - : A string, an object, or a {{jsxref("Temporal.Duration")}} instance representing a duration to add to this duration. It is converted to a `Temporal.Duration` object using the same algorithm as {{jsxref("Temporal.Duration.from()")}}.
 
 ### Return value
 
-TODO
+A new `Temporal.Duration` object representing the difference of this duration and `other`.
 
 ### Exceptions
 
-TODO
-
-## Description
-
-TODO
+- {{jsxref("RangeError")}}
+  - : Thrown in one of the following cases:
+    - Either `this` or `other` is a [calendar duration](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#calendar_durations) (it has a non-zero `years`, `months`, or `weeks`), because calendar durations are ambiguous without a calendar and time reference.
+    - The difference of `this` and `other` overflows the maximum or underflows the minimum representable duration, which is ±2<sup>53</sup> seconds.
 
 ## Examples
 
-TODO
+### Using subtract()
+
+```js
+const d1 = Temporal.Duration.from({ hours: 1, minutes: 30 });
+const d2 = Temporal.Duration.from({ hours: -1, minutes: -20 });
+
+const d3 = d1.subtract(d2);
+console.log(d3); // "PT2H50M"
+```
+
+For more examples and caveats, see the [`add()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration/add) method.
 
 ## Specifications
 
@@ -46,4 +55,6 @@ TODO
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal.Duration")}}
+- {{jsxref("Temporal/Duration/add", "Temporal.Duration.prototype.add()")}}
+- {{jsxref("Temporal/Duration/negated", "Temporal.Duration.prototype.negated()")}}

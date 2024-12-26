@@ -63,7 +63,7 @@ These properties are defined on `Temporal.PlainTime.prototype` and shared by all
 - {{jsxref("Temporal/PlainTime/until", "Temporal.PlainTime.prototype.until()")}}
   - : TODO
 - {{jsxref("Temporal/PlainTime/valueOf", "Temporal.PlainTime.prototype.valueOf()")}}
-  - : TODO
+  - : Throws a {{jsxref("TypeError")}}, which prevents `Temporal.PlainTime` instances from being [implicitly converted to primitives](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion) when used in arithmetic or comparison operations.
 - {{jsxref("Temporal/PlainTime/with", "Temporal.PlainTime.prototype.with()")}}
   - : TODO
 

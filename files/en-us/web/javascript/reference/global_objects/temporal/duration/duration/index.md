@@ -9,6 +9,8 @@ browser-compat: javascript.builtins.Temporal.Duration.Duration
 
 The **`Temporal.Duration()`** constructor creates {{jsxref("Temporal.Duration")}} objects.
 
+Like all other `Temporal` classes, you should usually construct `Temporal.Duration` objects using the {{jsxref("Temporal.Duration.from()")}} static method, which can handle a variety of input types.
+
 ## Syntax
 
 ```js-nolint
@@ -25,44 +27,51 @@ new Temporal.Duration(years, months, weeks, days, hours, minutes, seconds, milli
 new Temporal.Duration(years, months, weeks, days, hours, minutes, seconds, milliseconds, microseconds, nanoseconds)
 ```
 
+> **Note:** `Temporal.Duration()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+
 ### Parameters
 
 - `years` {{optional_inline}}
-  - : TODO
+  - : Number of years, or `undefined` (which is treated as `0`).
 - `months` {{optional_inline}}
-  - : TODO
+  - : Number of months, or `undefined` (which is treated as `0`).
 - `weeks` {{optional_inline}}
-  - : TODO
+  - : Number of weeks, or `undefined` (which is treated as `0`).
 - `days` {{optional_inline}}
-  - : TODO
+  - : Number of days, or `undefined` (which is treated as `0`).
 - `hours` {{optional_inline}}
-  - : TODO
+  - : Number of hours, or `undefined` (which is treated as `0`).
 - `minutes` {{optional_inline}}
-  - : TODO
+  - : Number of minutes, or `undefined` (which is treated as `0`).
 - `seconds` {{optional_inline}}
-  - : TODO
+  - : Number of seconds, or `undefined` (which is treated as `0`).
 - `milliseconds` {{optional_inline}}
-  - : TODO
+  - : Number of milliseconds, or `undefined` (which is treated as `0`).
 - `microseconds` {{optional_inline}}
-  - : TODO
+  - : Number of microseconds, or `undefined` (which is treated as `0`).
 - `nanoseconds` {{optional_inline}}
-  - : TODO
+  - : Number of nanoseconds, or `undefined` (which is treated as `0`).
 
 ### Return value
 
-TODO
+A new `Temporal.Duration` object, possibly [unbalanced](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#duration_balancing), with the specified components.
 
 ### Exceptions
 
-TODO
-
-## Description
-
-TODO
+- {{jsxref("RangeError")}}
+  - : Thrown in one of the following cases:
+    - Any of the parameters is not an integer (including non-finite values).
+    - A [calendar unit](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#calendar_durations) (years, months, weeks) has an absolute value ≥ 2<sup>32</sup>.
+    - The non-calendar part of the duration (days and below), when expressed in seconds, has an absolute value ≥ 2<sup>53</sup>.
 
 ## Examples
 
-TODO
+### Using Temporal.Duration()
+
+```js
+const d = new Temporal.Duration(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+console.log(d); // "P1Y2M3W4DT5H6M7.00800901S"
+```
 
 ## Specifications
 
@@ -74,4 +83,5 @@ TODO
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal.Duration")}}
+- {{jsxref("Temporal.Duration.from()")}}
