@@ -480,7 +480,7 @@ Responsive design refers to a site or application design that responds to the en
 
 It has also become much easier to achieve responsive designs with the help of the layout methods you have learned in these lessons. If you are new to web development today you have many more tools at your disposal than in the early days of responsive design. It is therefore worth checking the age of any materials you are using. While the historical articles are still useful, modern use of CSS and HTML makes it far easier to create elegant and useful designs, no matter what device your visitor views the site with.
 
-Next, we will studey media queries in more detail and show how to use them to solve some common problems.
+Next, we will study media queries in more detail and show how to use them to solve some common problems.
 
 ## See also
 
