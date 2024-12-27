@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.Now.timeZoneId
 
 {{JSRef}}
 
-The **`Temporal.Now.timeZoneId()`** static method TODO
+The **`Temporal.Now.timeZoneId()`** static method returns a [time zone identifier](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/from#timezone) representing the system's current time zone. Most systems will return a primary time zone identifier such as `"America/New_York"`, though offset time zone identifier such as `"-04:00"` is possible too. This is the default time zone used by the other `Temporal.Now` methods.
 
 ## Syntax
 
@@ -21,19 +21,17 @@ None.
 
 ### Return value
 
-TODO
+A valid [time zone identifier](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/from#timezone) representing the system's current time zone.
 
-### Exceptions
-
-TODO
-
-## Description
-
-TODO
+If the implementation does not support time zones, the method always returns `"UTC"`.
 
 ## Examples
 
-TODO
+### Getting the system's current time zone
+
+```js
+console.log(Temporal.Now.timeZoneId()); // e.g.: "America/New_York"
+```
 
 ## Specifications
 
@@ -45,4 +43,4 @@ TODO
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal.Now")}}

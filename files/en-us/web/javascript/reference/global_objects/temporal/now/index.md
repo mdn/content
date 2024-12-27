@@ -9,6 +9,38 @@ browser-compat: javascript.builtins.Temporal.Now
 
 The **`Temporal.Now`** object provides methods for getting the current time in various formats.
 
+## Description
+
+Most fundamentally, the system time is returned by the operating system as a time since the Unix epoch (usually millisecond-level precision, but might be nanosecond-level too). {{jsxref("Temporal.Now.instant")}} returns this time as a {{jsxref("Temporal.Instant")}} object.
+
+Then, this instant can further be interpreted in a time zone (which is the system time zone {{jsxref("Temporal/Now/timeZoneId", "Temporal.Now.timeZoneId()")}} by default) in the same fashion as {{jsxref("Temporal/Instant/toZonedDateTimeISO", "Temporal.Instant.prototype.toZonedDateTimeISO()")}}. {{jsxref("Temporal/Now/zonedDateTimeISO", "Temporal.Now.zonedDateTimeISO()")}} returns this interpretation as a {{jsxref("Temporal.ZonedDateTime")}} object. Then, you can get different parts of the date and time, such as the date, time, or date and time together, using {{jsxref("Temporal/Now/plainDateISO", "Temporal.Now.plainDateISO()")}}, {{jsxref("Temporal/Now/plainTimeISO", "Temporal.Now.plainTimeISO()")}}, and {{jsxref("Temporal/Now/plainDateTimeISO", "Temporal.Now.plainDateTimeISO()")}}, respectively.
+
+For example, if the computer is set to the time zone "America/New_York", then `Temporal.Now.zonedDateTimeISO()` may return a zoned datetime like: `2021-08-01T10:40:12.345-04:00[America/New_York]`. Then, `Temporal.Now.plainTimeISO()` may return the time part of this zoned datetime: `10:40:12.345`. However, if you call `Temporal.Now.plainTimeISO("UTC")`, it will return the time part of the zoned datetime in the UTC time zone: `14:40:12.345`. This is especially useful for cross-system communication where the other end may be expecting the time in a different time zone.
+
+### Reduced time precision
+
+To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of the `Temporal.Now()` functions might get rounded depending on browser settings. In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 2ms. You can also enable `privacy.resistFingerprinting`, in which case the precision will be 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.
+
+For example, with reduced time precision, the result of `Temporal.Now.instant().epochMilliseconds` will always be a multiple of 2, or a multiple of 100 (or `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`) with `privacy.resistFingerprinting` enabled.
+
+```js
+// reduced time precision (2ms) in Firefox 60
+Temporal.Now.instant().epochMilliseconds;
+// Might be:
+// 1519211809934
+// 1519211810362
+// 1519211811670
+// …
+
+// reduced time precision with `privacy.resistFingerprinting` enabled
+Temporal.Now.instant().epochMilliseconds;
+// Might be:
+// 1519129853500
+// 1519129858900
+// 1519129864400
+// …
+```
+
 ## Static properties
 
 - `Temporal.Now[Symbol.toStringTag]`
@@ -17,17 +49,17 @@ The **`Temporal.Now`** object provides methods for getting the current time in v
 ## Static methods
 
 - {{jsxref("Temporal/Now/instant", "Temporal.Now.instant()")}}
-  - : TODO
+  - : Returns the current time as a {{jsxref("Temporal.Instant")}} object.
 - {{jsxref("Temporal/Now/plainDateISO", "Temporal.Now.plainDateISO()")}}
-  - : TODO
+  - : Returns the current date as a {{jsxref("Temporal.PlainDate")}} object, in the ISO 8601 calendar and the specified time zone.
 - {{jsxref("Temporal/Now/plainDateTimeISO", "Temporal.Now.plainDateTimeISO()")}}
-  - : TODO
+  - : Returns the current date and time as a {{jsxref("Temporal.PlainDateTime")}} object, in the ISO 8601 calendar and the specified time zone.
 - {{jsxref("Temporal/Now/plainTimeISO", "Temporal.Now.plainTimeISO()")}}
-  - : TODO
+  - : Returns the current time as a {{jsxref("Temporal.PlainTime")}} object, in the specified time zone.
 - {{jsxref("Temporal/Now/timeZoneId", "Temporal.Now.timeZoneId()")}}
-  - : TODO
+  - : Returns a [time zone identifier](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/from#timezone) representing the system's current time zone.
 - {{jsxref("Temporal/Now/zonedDateTimeISO", "Temporal.Now.zonedDateTimeISO()")}}
-  - : TODO
+  - : Returns the current date and time as a {{jsxref("Temporal.ZonedDateTime")}} object, in the ISO 8601 calendar and the specified time zone.
 
 ## Specifications
 
@@ -39,4 +71,9 @@ The **`Temporal.Now`** object provides methods for getting the current time in v
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal")}}
+- {{jsxref("Temporal.Instant")}}
+- {{jsxref("Temporal.PlainDate")}}
+- {{jsxref("Temporal.PlainDateTime")}}
+- {{jsxref("Temporal.PlainTime")}}
+- {{jsxref("Temporal.ZonedDateTime")}}

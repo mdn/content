@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.Now.plainDateISO
 
 {{JSRef}}
 
-The **`Temporal.Now.plainDateISO()`** static method TODO
+The **`Temporal.Now.plainDateISO()`** static method returns the current date as a {{jsxref("Temporal.PlainDate")}} object, in the ISO 8601 calendar and the specified time zone.
 
 ## Syntax
 
@@ -19,23 +19,30 @@ Temporal.Now.plainDateISO(timeZone)
 ### Parameters
 
 - `timeZone` {{optional_inline}}
-  - : TODO
+  - : Either a string or a {{jsxref("Temporal.ZonedDateTime")}} instance representing the time zone to interpret the system time in. If a `Temporal.ZonedDateTime` instance, its time zone is used. If a string, it must be a valid [time zone identifier](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/from#timezone).
 
 ### Return value
 
-TODO
+The current date in the specified time zone, as a {{jsxref("Temporal.PlainDate")}} object using the ISO 8601 calendar.
 
 ### Exceptions
 
-TODO
-
-## Description
-
-TODO
+- {{jsxref("RangeError")}}
+  - : Thrown if the time zone is invalid.
 
 ## Examples
 
-TODO
+### Using Temporal.Now.plainDateISO()
+
+```js
+// The current date in the system's time zone
+const date = Temporal.Now.plainDateISO();
+console.log(date); // e.g.: 2021-10-01
+
+// The current date in the "America/New_York" time zone
+const dateInNewYork = Temporal.Now.plainDateISO("America/New_York");
+console.log(dateInNewYork); // e.g.: 2021-09-30
+```
 
 ## Specifications
 
@@ -47,4 +54,5 @@ TODO
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal.Now")}}
+- {{jsxref("Temporal.PlainDate")}}
