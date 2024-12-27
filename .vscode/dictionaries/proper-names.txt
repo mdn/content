@@ -3,6 +3,7 @@ a11ysupport
 Academind
 Acrosync
 Addy
+Adham
 Adilah
 Akhgari
 alastairc
@@ -14,6 +15,7 @@ Amorim
 AMPPS
 Amstelvar
 Anand
+ANDI
 Andreessen
 Andrzej
 Anek
@@ -56,6 +58,7 @@ Bloggs
 Bocoup
 Boonie
 bottosson
+Boulton
 Brians
 Browserleaks
 Browsershots
@@ -65,6 +68,7 @@ BugZilla
 Bundlesize
 Bunyakovsky
 Burson
+Butterick
 Buzzcocks
 Bynens
 Bézier
@@ -81,6 +85,7 @@ Caterina
 Chadha
 Chakra
 Chamakh
+Chimero
 Chloé
 chrisdavidmills
 chrismills
@@ -101,6 +106,7 @@ Colomb
 ColorZilla
 Conde
 Condei
+COPPA
 Corber
 Cortana
 Coursera
@@ -116,6 +122,7 @@ Célestes
 Dahlkemper
 Dailymotion
 Danilo
+Dannaway
 Darmok
 Datumizer
 davbrito
@@ -172,6 +179,7 @@ Esben
 ethertank
 Exljbris
 Fairchild
+FDCP
 ffconf
 FileZilla
 Firefogg
@@ -220,6 +228,7 @@ Hidde
 Highrise
 Hildy
 hmatrjp
+Hobday
 Hobson
 hochan
 Hochberg
@@ -471,6 +480,7 @@ Rekapi
 Remy
 Resig
 Rhiana
+Riazhskikh
 Rigby
 Rocher
 Rohini
