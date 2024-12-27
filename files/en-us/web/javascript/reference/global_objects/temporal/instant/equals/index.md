@@ -18,23 +18,21 @@ equals(other)
 ### Parameters
 
 - `other`
-  - : TODO
+  - : A string or a {{jsxref("Temporal.Instant")}} instance representing the other instant to compare. It is converted to a `Temporal.Instant` object using the same algorithm as {{jsxref("Temporal/Instant/from", "Temporal.Instant.from()")}}.
 
 ### Return value
 
-TODO
-
-### Exceptions
-
-TODO
-
-## Description
-
-TODO
+`true` if this instant is equal to `other` by nanoseconds, `false` otherwise.
 
 ## Examples
 
-TODO
+### Using equals()
+
+```js
+const instant1 = Temporal.Instant.from("2021-08-01T12:34:56Z");
+const instant2 = Temporal.Instant.fromEpochMilliseconds(1627821296000);
+console.log(instant1.equals(instant2)); // true
+```
 
 ## Specifications
 
@@ -46,4 +44,5 @@ TODO
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal.Instant")}}
+- {{jsxref("Temporal/Instant/compare", "Temporal.Instant.compare()")}}

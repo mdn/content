@@ -18,23 +18,31 @@ toZonedDateTimeISO(timeZone)
 ### Parameters
 
 - `timeZone`
-  - : TODO
+  - : Either a string or a {{jsxref("Temporal.ZonedDateTime")}} instance representing the time zone to use. If a `Temporal.ZonedDateTime` instance, its time zone is used. If a string, it must be a valid [time zone identifier](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/from#timezone).
 
 ### Return value
 
-TODO
+A new {{jsxref("Temporal.ZonedDateTime")}} object representing this instant in the specified time zone using the ISO 8601 calendar system.
 
 ### Exceptions
 
-TODO
-
-## Description
-
-TODO
+- {{jsxref("RangeError")}}
+  - : Thrown if the time zone name is invalid.
+- {{jsxref("TypeError")}}
+  - : Thrown if `timeZone` is not a string or a `Temporal.ZonedDateTime` instance.
 
 ## Examples
 
-TODO
+### Using toZonedDateTimeISO()
+
+```js
+const instant = Temporal.Instant.from("2021-08-01T12:34:56.123456789Z");
+const zonedDateTime = instant.toZonedDateTimeISO("America/New_York");
+console.log(zonedDateTime.toString()); // 2021-08-01T08:34:56.123456789-04:00[America/New_York]
+
+const localDateTime = instant.toZonedDateTimeISO(Temporal.Now.timeZoneId());
+console.log(zonedDateTime.toString()); // This instant in your timezone
+```
 
 ## Specifications
 
@@ -46,4 +54,6 @@ TODO
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal.Instant")}}
+- {{jsxref("Temporal.ZonedDateTime")}}
+- {{jsxref("Temporal/ZonedDateTime/toInstant", "Temporal.ZonedDateTime.prototype.toInstant()")}}

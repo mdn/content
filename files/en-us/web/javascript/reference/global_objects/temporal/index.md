@@ -20,9 +20,9 @@ JavaScript has had the {{jsxref("Date")}} object for handling date and time sinc
 The important lesson to preface the whole introduction is that **date handling is complex**. One of the fundamental flaws of `Date` is that it tries to simplify the model too much and in the process introduces too many footguns. Let's start with the first principles of how dates are represented. If we want to speak about a unique instant in history, there are two ways to do so:
 
 - As a timestamp: the number of milliseconds or nanoseconds elapsed since a fixed point in time (known as the _epoch_). `Date` objects are fundamentally timestamps.
-- As a combination of components: era, year, month, day, hour, minute, second, millisecond, and nanosecond. The era, year, month, and day identifiers only make sense with reference to a _calendar system_. The whole combination maps to a unique instant in history when associated with a timezone. `Date` objects provide methods for reading and modifying these components.
+- As a combination of components: year, month, day, hour, minute, second, millisecond, and nanosecond. The year, month, and day identifiers only make sense with reference to a _calendar system_. The whole combination maps to a unique instant in history when associated with a time zone. `Date` objects provide methods for reading and modifying these components.
 
-Timezone underlies a significant number of date-related bugs. When interacting with a `Date` via the "combination of components" model, the time can only be in two timezones: UTC and local (device), and there's no way to specify an arbitrary timezone. Also lacking is the concept of "no timezone": this is known as a _calendar date_ (for dates) or _wall-clock time_ (for times), which is a time you "read off a calendar or clock". For example, if you are setting a daily wake up alarm, you will want to set it to "8:00AM" regardless of whether it is daylight saving time or not, whether you have traveled to a different time zone, etc.
+Time zone underlies a significant number of date-related bugs. When interacting with a `Date` via the "combination of components" model, the time can only be in two time zones: UTC and local (device), and there's no way to specify an arbitrary time zone. Also lacking is the concept of "no time zone": this is known as a _calendar date_ (for dates) or _wall-clock time_ (for times), which is a time you "read off a calendar or clock". For example, if you are setting a daily wake up alarm, you will want to set it to "8:00AM" regardless of whether it is daylight saving time or not, whether you have traveled to a different time zone, etc.
 
 A second feature lacking from `Date` is the calendar system. Most people may be familiar with the Gregorian calendar, where there are two eras: BC and AD, there are 12 months, each month has a different number of days, there's a leap year every 4 years, etc. However, some of these concepts may not apply when you are working with another calendar system, such as the Hebrew calendar, the Chinese calendar, the Japanese calendar, etc. With `Date`, you can only work with the Gregorian calendar model.
 
@@ -36,11 +36,11 @@ There are many other undesirable legacies about `Date`, such as all setters bein
 - Representing a time point:
   - Representing a unique instant in history:
     - As a timestamp: {{jsxref("Temporal.Instant")}}
-    - As a datetime component combination paired with a timezone: {{jsxref("Temporal.ZonedDateTime")}}
-  - Representing a timezone-unaware date/time (which are all prefixed with "Plain"):
-    - Date (era, year, month, day) + time (hour, minute, second, millisecond, nanosecond): {{jsxref("Temporal.PlainDateTime")}} (Note: `ZonedDateTime` is equivalent to `PlainDateTime` plus a timezone)
-      - Date (era, year, month, day): {{jsxref("Temporal.PlainDate")}}
-        - Era, year, month: {{jsxref("Temporal.PlainYearMonth")}}
+    - As a datetime component combination paired with a time zone: {{jsxref("Temporal.ZonedDateTime")}}
+  - Representing a time zone-unaware date/time (which are all prefixed with "Plain"):
+    - Date (year, month, day) + time (hour, minute, second, millisecond, nanosecond): {{jsxref("Temporal.PlainDateTime")}} (Note: `ZonedDateTime` is equivalent to `PlainDateTime` plus a time zone)
+      - Date (year, month, day): {{jsxref("Temporal.PlainDate")}}
+        - Year, month: {{jsxref("Temporal.PlainYearMonth")}}
         - Month, day: {{jsxref("Temporal.PlainMonthDay")}}
       - Time (hour, minute, second, millisecond, nanosecond): {{jsxref("Temporal.PlainTime")}}
 
@@ -167,17 +167,17 @@ With these two tables, you should have a basic idea of how to navigate the `Temp
 - {{jsxref("Temporal.Now")}}
   - : Provides methods for getting the current time in various formats.
 - {{jsxref("Temporal.PlainDate")}}
-  - : Represents a date without a time or timezone (a calendar date); for example, an event on a calendar which happens during the whole day no matter which time zone it's happening in. It is fundamentally represented as an ISO 8601 calendar date, with year, month, and day fields, and an associated calendar system.
+  - : Represents a date without a time or time zone (a calendar date); for example, an event on a calendar which happens during the whole day no matter which time zone it's happening in. It is fundamentally represented as an ISO 8601 calendar date, with year, month, and day fields, and an associated calendar system.
 - {{jsxref("Temporal.PlainDateTime")}}
-  - : Represents a date (calendar date) and time (wall-clock time) without a timezone. It is fundamentally represented as a combination of a [date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate) (with an associated calendar system) and a [time](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime).
+  - : Represents a date (calendar date) and time (wall-clock time) without a time zone. It is fundamentally represented as a combination of a [date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate) (with an associated calendar system) and a [time](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime).
 - {{jsxref("Temporal.PlainMonthDay")}}
-  - : Represents the month and day of a calendar date, without a year or timezone; for example, an event on a calendar that recurs every year and happens during the whole day. It is fundamentally represented as an ISO 8601 calendar date, with year, month, and day fields, and an associated calendar system. The year is used to disambiguate the month-day in some calendar systems.
+  - : Represents the month and day of a calendar date, without a year or time zone; for example, an event on a calendar that recurs every year and happens during the whole day. It is fundamentally represented as an ISO 8601 calendar date, with year, month, and day fields, and an associated calendar system. The year is used to disambiguate the month-day in some calendar systems.
 - {{jsxref("Temporal.PlainTime")}}
-  - : Represents a time without a date or timezone; for example, a recurring event that happens at the same time every day. It is fundamentally represented as a combination of hour, minute, second, millisecond, microsecond, and nanosecond values.
+  - : Represents a time without a date or time zone; for example, a recurring event that happens at the same time every day. It is fundamentally represented as a combination of hour, minute, second, millisecond, microsecond, and nanosecond values.
 - {{jsxref("Temporal.PlainYearMonth")}}
-  - : Represents the year and month of a calendar date, without a day or timezone; for example, an event on a calendar that happens during the whole month. It is fundamentally represented as an ISO 8601 calendar date, with year, month, and day fields, and an associated calendar system. The day is used to disambiguate the year-month in some calendar systems.
+  - : Represents the year and month of a calendar date, without a day or time zone; for example, an event on a calendar that happens during the whole month. It is fundamentally represented as an ISO 8601 calendar date, with year, month, and day fields, and an associated calendar system. The day is used to disambiguate the year-month in some calendar systems.
 - {{jsxref("Temporal.ZonedDateTime")}}
-  - : Represents a date and time with a timezone. It is fundamentally represented as a combination of an [instant](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Instant), a time zone, and a calendar system.
+  - : Represents a date and time with a time zone. It is fundamentally represented as a combination of an [instant](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Instant), a time zone, and a calendar system.
 - `Temporal[Symbol.toStringTag]`
   - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Temporal"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 

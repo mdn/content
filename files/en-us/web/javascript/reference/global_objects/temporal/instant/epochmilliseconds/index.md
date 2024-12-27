@@ -7,15 +7,21 @@ browser-compat: javascript.builtins.Temporal.Instant.epochMilliseconds
 
 {{JSRef}}
 
-The **`epochMilliseconds`** accessor property of {{jsxref("Temporal.Instant")}} instances returns an integer representing the number of milliseconds elapsed since the Unix epoch (midnight at the beginning of January 1, 1970, UTC) to this instant. Equivalent to dividing `epochNanoseconds` by `1e6` and flooring it.
+The **`epochMilliseconds`** accessor property of {{jsxref("Temporal.Instant")}} instances returns an integer representing the number of milliseconds elapsed since the Unix epoch (midnight at the beginning of January 1, 1970, UTC) to this instant. Equivalent to dividing `epochNanoseconds` by `1e6` and flooring the result.
 
-## Description
-
-TODO
+The set accessor of `epochMilliseconds` is `undefined`. You cannot change this property directly.
 
 ## Examples
 
-TODO
+### Using epochMilliseconds
+
+```js
+const instant = Temporal.Instant.from("2021-08-01T12:34:56.789Z");
+console.log(instant.epochMilliseconds); // 1627821296789
+
+const instant2 = Temporal.Instant.from("1969-08-01T12:34:56.789Z");
+console.log(instant2.epochMilliseconds); // -13173903211
+```
 
 ## Specifications
 
@@ -27,4 +33,6 @@ TODO
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal.Instant")}}
+- {{jsxref("Temporal/Instant/epochNanoseconds", "Temporal.Instant.prototype.epochNanoseconds")}}
+- {{jsxref("Temporal/Instant/fromEpochMilliseconds", "Temporal.Instant.fromEpochMilliseconds()")}}

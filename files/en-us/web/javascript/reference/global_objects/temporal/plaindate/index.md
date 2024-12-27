@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainDate
 
 {{JSRef}}
 
-The **`Temporal.PlainDate`** object represents a date without a time or timezone (a calendar date); for example, an event on a calendar which happens during the whole day no matter which time zone it's happening in. It is fundamentally represented as an ISO 8601 calendar date, with year, month, and day fields, and an associated calendar system.
+The **`Temporal.PlainDate`** object represents a date without a time or time zone (a calendar date); for example, an event on a calendar which happens during the whole day no matter which time zone it's happening in. It is fundamentally represented as an ISO 8601 calendar date, with year, month, and day fields, and an associated calendar system.
 
 ## Constructor
 

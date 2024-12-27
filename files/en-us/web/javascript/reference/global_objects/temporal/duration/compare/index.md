@@ -19,7 +19,7 @@ Temporal.Duration.compare(duration1, duration2, options)
 ### Parameters
 
 - `duration1`
-  - : A string, an object, or a {{jsxref("Temporal.Duration")}} instance representing a duration to add to this duration. It is converted to a `Temporal.Duration` object using the same algorithm as {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}.
+  - : A string, an object, or a {{jsxref("Temporal.Duration")}} instance representing the first duration to compare. It is converted to a `Temporal.Duration` object using the same algorithm as {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}.
 - `duration2`
   - : Same as `duration1`.
 - `options` {{optional_inline}}
@@ -95,7 +95,7 @@ console.log(
 ); // 1
 ```
 
-### Sorting a list of durations
+### Sorting an array of durations
 
 The purpose of this `compare()` function is to act as a comparator to be passed to {{jsxref("Array.prototype.sort()")}} and related functions.
 
@@ -123,4 +123,4 @@ console.log(durations.map((d) => d.toString()));
 ## See also
 
 - {{jsxref("Temporal.Duration")}}
-- {{jsxref("Temporal/Duration/subtract", "Temporal.Duration.subtract()")}}
+- {{jsxref("Temporal/Duration/subtract", "Temporal.Duration.prototype.subtract()")}}

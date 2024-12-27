@@ -9,6 +9,8 @@ browser-compat: javascript.builtins.Temporal.Instant.fromEpochMilliseconds
 
 The **`Temporal.Instant.fromEpochMilliseconds()`** static method creates a new `Temporal.Instant` object from the number of milliseconds since the Unix epoch (midnight at the beginning of January 1, 1970, UTC).
 
+To convert a {{jsxref("Date")}} object to a `Temporal.Instant` object, use {{jsxref("Date.prototype.toTemporalInstant()")}} instead.
+
 ## Syntax
 
 ```js-nolint
@@ -18,23 +20,25 @@ Temporal.Instant.fromEpochMilliseconds(epochMilliseconds)
 ### Parameters
 
 - `epochMilliseconds`
-  - : TODO
+  - : A number representing the number of milliseconds since the Unix epoch. Internally, it is converted to a BigInt and multiplied by `1e6` to get the number of nanoseconds.
 
 ### Return value
 
-TODO
+A new `Temporal.Instant` object representing the instant in time specified by `epochMilliseconds`.
 
 ### Exceptions
 
-TODO
-
-## Description
-
-TODO
+- {{jsxref("RangeError")}}
+  - : Thrown if `epochMilliseconds` is outside the range of a representable instant, which is ±10<sup>8</sup> days (±8.64e15 milliseconds), or if it cannot be converted to a BigInt (e.g., not an integer).
 
 ## Examples
 
-TODO
+### Using Temporal.Instant.fromEpochMilliseconds()
+
+```js
+const instant = Temporal.Instant.fromEpochMilliseconds(0);
+console.log(instant.toString()); // 1970-01-01T00:00:00Z
+```
 
 ## Specifications
 
@@ -46,4 +50,8 @@ TODO
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal.Instant")}}
+- {{jsxref("Temporal/Instant/epochMilliseconds", "Temporal.Instant.prototype.epochMilliseconds")}}
+- {{jsxref("Temporal/Instant/from", "Temporal.Instant.from()")}}
+- {{jsxref("Temporal/Instant/fromEpochNanoseconds", "Temporal.Instant.fromEpochNanoseconds()")}}
+- {{jsxref("Date.prototype.toTemporalInstant()")}}

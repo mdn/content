@@ -18,25 +18,43 @@ Temporal.Instant.compare(instant1, instant2)
 ### Parameters
 
 - `instant1`
-  - : TODO
+  - : A string or a {{jsxref("Temporal.Instant")}} instance representing the first instant to compare. It is converted to a `Temporal.Instant` object using the same algorithm as {{jsxref("Temporal/Instant/from", "Temporal.Instant.from()")}}.
 - `instant2`
-  - : TODO
+  - : Same as `instant1`.
 
 ### Return value
 
-TODO
-
-### Exceptions
-
-TODO
-
-## Description
-
-TODO
+Returns `-1` if `instant1` comes before `instant2`, `0` if they are the same, and `1` if `instant1` comes after.
 
 ## Examples
 
-TODO
+### Using Temporal.Instant.compare()
+
+```js
+const instant1 = Temporal.Instant.from("2021-08-01T12:34:56Z");
+const instant2 = Temporal.Instant.from("2021-08-01T12:34:56Z");
+
+console.log(Temporal.Instant.compare(instant1, instant2)); // 0
+
+const instant3 = Temporal.Instant.from("2021-08-01T13:34:56Z");
+console.log(Temporal.Instant.compare(instant1, instant3)); // -1
+```
+
+### Sorting an array of instants
+
+The purpose of this `compare()` function is to act as a comparator to be passed to {{jsxref("Array.prototype.sort()")}} and related functions.
+
+```js
+const instants = [
+  Temporal.Instant.from("2021-08-01T12:34:56Z"),
+  Temporal.Instant.from("2021-08-01T12:34:56+01:00"),
+  Temporal.Instant.from("2021-08-01T12:34:56-01:00"),
+];
+
+instants.sort(Temporal.Instant.compare);
+console.log(instants.map((instant) => instant.toString()));
+// [ '2021-08-01T11:34:56Z', '2021-08-01T12:34:56Z', '2021-08-01T13:34:56Z' ]
+```
 
 ## Specifications
 
@@ -48,4 +66,4 @@ TODO
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal.Instant")}}

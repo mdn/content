@@ -9,6 +9,34 @@ browser-compat: javascript.builtins.Temporal.Instant
 
 The **`Temporal.Instant`** object represents a unique point in history, with nanosecond precision. It is fundamentally represented as the number of nanoseconds since the Unix epoch (midnight at the beginning of January 1, 1970, UTC), without any time zone or calendar system.
 
+## Description
+
+`Temporal.Instant` is semantically the same as {{jsxref("Date")}}. They both encapsulate a single point in time, but `Temporal.Instant` is more precise because it stores nanoseconds rather than milliseconds. `Temporal.Instant` also avoids pitfalls of `Date` because it does not assume any calendar or time zone information—if you want to read any date or time information such as year or month, you need to convert it to a {{jsxref("Temporal.ZonedDateTime")}} first, using {{jsxref("Temporal/Instant/toZonedDateTimeISO()", "toZonedDateTimeISO()")}}.
+
+You can convert from `Date` to `Temporal.Instant` using the {{jsxref("Date.prototype.toTemporalInstant()")}} method, which should be preferred over other methods such as `Temporal.Instant.fromEpochMilliseconds()` because the former involves less user code and may be more optimized. You can also convert from `Temporal.Instant` to `Date` using its epoch milliseconds, such as `new Date(instant.epochMilliseconds)`.
+
+### ISO 8601 format
+
+`Instant` objects can be serialized and parsed using the [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601). The string has the following form (spaces are only for readability and should not be present in the actual string):
+
+```plain
+date T time offset annotations
+```
+
+Where:
+
+- `date` consists of `year`, `month`, `day`, separated by either nothing or `-`.
+  - `year` is either a four-digit number, or a six-digit number with a `+` or `-` sign.
+  - `month` must be a two-digit number from `01` to `12`.
+  - `day` must be a two-digit number from `01` to `31`.
+- `T` is the date-time separator, which can be `T`, `t`, or a space.
+- `time` consists of `hour`, and optionally `minute`, and optionally `second`, separated by either nothing or `:`.
+  - `hour` must be a two-digit number from `00` to `23`.
+  - `minute` must be a two-digit number from `00` to `59`.
+  - `second` must be a two-digit number from `00` to `59`. It may optionally be followed by a `.` or `,` and one to nine digits.
+- `offset` is either the UTC designator `Z` or `z`, or an offset from UTC in the form `+` or `-` followed by the same format as `time`.
+- `annotations`, including time zone names, are ignored. See [`Temporal.ZonedDateTime`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#iso_8601_format) for more information.
+
 ## Constructor
 
 - {{jsxref("Temporal/Instant/Instant", "Temporal.Instant()")}}

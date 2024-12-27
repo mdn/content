@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.ZonedDateTime
 
 {{JSRef}}
 
-The **`Temporal.ZonedDateTime`** object represents a date and time with a timezone. It is fundamentally represented as a combination of an [instant](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Instant), a time zone, and a calendar system.
+The **`Temporal.ZonedDateTime`** object represents a date and time with a time zone. It is fundamentally represented as a combination of an [instant](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Instant), a time zone, and a calendar system.
 
 ## Constructor
 
@@ -19,7 +19,7 @@ The **`Temporal.ZonedDateTime`** object represents a date and time with a timezo
 - {{jsxref("Temporal/ZonedDateTime/compare", "Temporal.ZonedDateTime.compare()")}}
   - : Returns a number (-1, 0, 1) indicating whether the first datetime comes before, is the same as, or comes after the second datetime. Equivalent to comparing the {{jsxref("Temporal/ZonedDateTime/epochNanoseconds", "epochNanoseconds")}} of the two datetimes.
 - {{jsxref("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}}
-  - : Creates a new `Temporal.ZonedDateTime` object from another `Temporal.ZonedDateTime` object, an object with date, time, and timezone properties, or an ISO 8601 string.
+  - : Creates a new `Temporal.ZonedDateTime` object from another `Temporal.ZonedDateTime` object, an object with date, time, and time zone properties, or an ISO 8601 string.
 
 ## Instance properties
 

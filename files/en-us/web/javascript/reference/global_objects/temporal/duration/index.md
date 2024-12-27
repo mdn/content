@@ -16,10 +16,10 @@ The **`Temporal.Duration`** object represents a difference between two time poin
 `Duration` objects can be serialized and parsed using the [ISO 8601 duration format](https://en.wikipedia.org/wiki/ISO_8601#Durations). The string has the following form:
 
 ```plain
-PnYnMnWnDTnHnMnS
+±PnYnMnWnDTnHnMnS
 ```
 
-Where any uppercase letter is a literal character, and any lowercase `n` represents the number of years (`Y`), months (`M`), weeks (`W`), days (`D`), hours (`H`), minutes (`M`), or seconds (`S`), respectively. Only the seconds component may have a fractional part led by a dot, such as `0.0021S`. Any zero components may be omitted, but at least one component should be present (even if it has value zero, in which case the duration is zero). The `P` at the beginning is a literal character that stands for "period". The `T` is a literal character that separates the date part from the time part, which should be present if and only if there's at least one component after it. Here are some examples:
+Where any uppercase letter is a literal character, and any lowercase `n` represents the number of years (`Y`), months (`M`), weeks (`W`), days (`D`), hours (`H`), minutes (`M`), or seconds (`S`), respectively. Only the seconds component may have a fractional part led by a dot, such as `0.0021S`. Any zero components may be omitted, but at least one component should be present (even if it has value zero, in which case the duration is zero). The `P` at the beginning is a literal character that stands for "period". The `T` is a literal character that separates the date part from the time part, which should be present if and only if there's at least one component after it. The string can optionally start with a sign: `+` or `-`, or have no signs (which implies positive). Here are some examples:
 
 | ISO 8601           | Meaning                                                                  |
 | ------------------ | ------------------------------------------------------------------------ |
@@ -35,7 +35,7 @@ Where any uppercase letter is a literal character, and any lowercase `n` represe
 | `P0D`              | Zero                                                                     |
 
 > [!NOTE]
-> According to the ISO 8601-1 standard, weeks are not allowed to appear together with any other units, and durations can only be positive. As extensions to the standard, ISO 8601-2 allows a sign character at the start of the string, and allows combining weeks with other units. Therefore, if your duration is serialized to a string like `P3W1D`, `+P1M`, or `-P1M`, note that other programs may not accept it.
+> According to the ISO 8601-1 standard, weeks are not allowed to appear together with any other units, and durations can only be positive. As extensions to the standard, ISO 8601-2, which Temporal uses, allows a sign character at the start of the string, and allows combining weeks with other units. Therefore, if your duration is serialized to a string like `P3W1D`, `+P1M`, or `-P1M`, note that other programs may not accept it.
 
 ### Calendar durations
 
@@ -51,7 +51,7 @@ const startingPoint = Temporal.PlainDate.from("2021-01-01"); // ISO 8601 calenda
 startingPoint.add(dur1).add(dur2).since(startingPoint); // "P396D"
 ```
 
-Other operations, including `round()`, `total()`, and `compare()`, take a `relativeTo` option to provide the necessary calendar and reference time information. This option can be a {{jsxref("Temporal.PlainDate")}}, {{jsxref("Temporal.PlainDateTime")}}, {{jsxref("Temporal.ZonedDateTime")}}, or otherwise an object or string that's convertible using {{jsxref("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}} (if the `timeZone` option is provided or the string contains timezone annotation) or {{jsxref("Temporal/PlainDateTime/from", "Temporal.PlainDateTime.from()")}}. A plain date(time) only provides the calendar information (and the time itself does not matter), while a zoned datetime also provides an instant to account for any occasional changes such as daylight saving time.
+Other operations, including `round()`, `total()`, and `compare()`, take a `relativeTo` option to provide the necessary calendar and reference time information. This option can be a {{jsxref("Temporal.PlainDate")}}, {{jsxref("Temporal.PlainDateTime")}}, {{jsxref("Temporal.ZonedDateTime")}}, or otherwise an object or string that's convertible using {{jsxref("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}} (if the `timeZone` option is provided or the string contains time zone annotation) or {{jsxref("Temporal/PlainDateTime/from", "Temporal.PlainDateTime.from()")}}.
 
 Note that `days` to `hours` conversion is also technically ambiguous because the length of a day may vary due to offset changes, such as daylight saving time. You can provide a zoned `relativeTo` to account for these changes; otherwise 24-hour days are assumed.
 
