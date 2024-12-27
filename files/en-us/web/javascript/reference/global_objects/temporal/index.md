@@ -11,20 +11,24 @@ The **`Temporal`** object enables date and time management in various scenarios,
 
 ## Description
 
+Unlike most global objects, `Temporal` is not a constructor. You cannot use it with the [`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new) or invoke the `Temporal` object as a function. All properties and methods of `Temporal` are static (just like the {{jsxref("Math")}} object).
+
 `Temporal` has an intricate and powerful API. It exposes over 200 utility methods via several classes, so it could appear very complex. We will provide a high-level overview of how these APIs are related to each other.
 
 ### Background and concepts
 
 JavaScript has had the {{jsxref("Date")}} object for handling date and time since its first days. However, the `Date` API is based on the poorly designed `java.util.Date` class from Java, which was already removed from Java since 2000s; but, because of JavaScript's goal of backward compatibility, `Date` sticks around in the language.
 
-The important lesson to preface the whole introduction is that **date handling is complex**. One of the fundamental flaws of `Date` is that it tries to simplify the model too much and in the process introduces too many footguns. Let's start with the first principles of how dates are represented. If we want to speak about a unique instant in history, there are two ways to do so:
+The important lesson to preface the whole introduction is that **date handling is complex**. Most of the problems of `Date` are fixable by adding more methods, but a fundamental design flaw remains: it exposes so many methods on the same object that developers are often confused about what to use, leading to unexpected pitfalls. A well-designed API not only needs to do more, but also should do _less_ with each level of abstraction, because preventing misuse is as important as enabling use cases.
 
-- As a timestamp: the number of milliseconds or nanoseconds elapsed since a fixed point in time (known as the _epoch_). `Date` objects are fundamentally timestamps.
-- As a combination of components: year, month, day, hour, minute, second, millisecond, and nanosecond. The year, month, and day identifiers only make sense with reference to a _calendar system_. The whole combination maps to a unique instant in history when associated with a time zone. `Date` objects provide methods for reading and modifying these components.
+`Date` objects wear two hats simultaneously:
 
-Time zone underlies a significant number of date-related bugs. When interacting with a `Date` via the "combination of components" model, the time can only be in two time zones: UTC and local (device), and there's no way to specify an arbitrary time zone. Also lacking is the concept of "no time zone": this is known as a _calendar date_ (for dates) or _wall-clock time_ (for times), which is a time you "read off a calendar or clock". For example, if you are setting a daily wake up alarm, you will want to set it to "8:00AM" regardless of whether it is daylight saving time or not, whether you have traveled to a different time zone, etc.
+- As a [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date): the number of milliseconds or nanoseconds elapsed since a fixed point in time (known as the _epoch_).
+- As a combination of [components](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_components_and_time_zones): year, month, day, hour, minute, second, millisecond, and nanosecond. The year, month, and day identifiers only make sense with reference to a _calendar system_. The whole combination maps to a unique instant in history when associated with a time zone. `Date` objects provide methods for reading and modifying these components.
 
-A second feature lacking from `Date` is the calendar system. Most people may be familiar with the Gregorian calendar, where there are two eras: BC and AD, there are 12 months, each month has a different number of days, there's a leap year every 4 years, etc. However, some of these concepts may not apply when you are working with another calendar system, such as the Hebrew calendar, the Chinese calendar, the Japanese calendar, etc. With `Date`, you can only work with the Gregorian calendar model.
+[Time zone](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets) underlies a significant number of date-related bugs. When interacting with a `Date` via the "combination of components" model, the time can only be in two time zones: UTC and local (device), and there's no way to specify an arbitrary time zone. Also lacking is the concept of "no time zone": this is known as a _calendar date_ (for dates) or _wall-clock time_ (for times), which is a time you "read off a calendar or clock". For example, if you are setting a daily wake up alarm, you will want to set it to "8:00AM" regardless of whether it is daylight saving time or not, whether you have traveled to a different time zone, etc.
+
+A second feature lacking from `Date` is the [calendar system](#calendars). Most people may be familiar with the Gregorian calendar, where there are two eras: BC and AD, there are 12 months, each month has a different number of days, there's a leap year every 4 years, etc. However, some of these concepts may not apply when you are working with another calendar system, such as the Hebrew calendar, the Chinese calendar, the Japanese calendar, etc. With `Date`, you can only work with the Gregorian calendar model.
 
 There are many other undesirable legacies about `Date`, such as all setters being mutating (which often causes unwanted side effects), the [datetime string format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format) being impossible to parse in a consistent way, etc. In the end, the best solution is to build a new API from scratch, which is what `Temporal` is.
 
@@ -48,7 +52,7 @@ Furthermore, there's also another utility namespace, {{jsxref("Temporal.Now")}},
 
 ### Shared class interface
 
-There are many classes in the `Temporal` namespace, but they share many similar methods. The following methods are available on all classes:
+There are many classes in the `Temporal` namespace, but they share many similar methods. The following table lists all methods of each class (except [conversion methods](#conversion_between_classes)):
 
 <table>
 <thead>
@@ -124,6 +128,115 @@ There are many classes in the `Temporal` namespace, but they share many similar 
 <td>{{jsxref("Temporal/PlainYearMonth/toJSON", "toJSON()")}}<br>{{jsxref("Temporal/PlainYearMonth/toLocaleString", "toLocaleString()")}}<br>{{jsxref("Temporal/PlainYearMonth/toString", "toString()")}}<br>{{jsxref("Temporal/PlainYearMonth/valueOf", "valueOf()")}}</td>
 <td>{{jsxref("Temporal/PlainMonthDay/toJSON", "toJSON()")}}<br>{{jsxref("Temporal/PlainMonthDay/toLocaleString", "toLocaleString()")}}<br>{{jsxref("Temporal/PlainMonthDay/toString", "toString()")}}<br>{{jsxref("Temporal/PlainMonthDay/valueOf", "valueOf()")}}</td>
 </tr>
+<tr>
+<th>Others</th>
+<td>N/A</td>
+<td>{{jsxref("Temporal/ZonedDateTime/getTimeZoneTransition", "getTimeZoneTransition()")}}<br>{{jsxref("Temporal/ZonedDateTime/startOfDay", "startOfDay()")}}</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+
+The following table summarizes which properties are available on each class, giving you a sense of what information each class can represent.
+
+<table>
+<thead>
+<tr>
+<td></td>
+<th><code>Instant</code></th>
+<th><code>ZonedDateTime</code></th>
+<th><code>PlainDateTime</code></th>
+<th><code>PlainDate</code></th>
+<th><code>PlainTime</code></th>
+<th><code>PlainYearMonth</code></th>
+<th><code>PlainMonthDay</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>Calendar</th>
+<td>N/A</td>
+<td>{{jsxref("Temporal/ZonedDateTime/calendarId", "calendarId")}}</td>
+<td>{{jsxref("Temporal/PlainDateTime/calendarId", "calendarId")}}</td>
+<td>{{jsxref("Temporal/PlainDate/calendarId", "calendarId")}}</td>
+<td>N/A</td>
+<td>{{jsxref("Temporal/PlainYearMonth/calendarId", "calendarId")}}</td>
+<td>{{jsxref("Temporal/PlainMonthDay/calendarId", "calendarId")}}</td>
+</tr>
+<tr>
+<th>Year-related</th>
+<td>N/A</td>
+<td>{{jsxref("Temporal/ZonedDateTime/era", "era")}}<br>{{jsxref("Temporal/ZonedDateTime/eraYear", "eraYear")}}<br>{{jsxref("Temporal/ZonedDateTime/year", "year")}}<br>{{jsxref("Temporal/ZonedDateTime/inLeapYear", "inLeapYear")}}<br>{{jsxref("Temporal/ZonedDateTime/monthsInYear", "monthsInYear")}}<br>{{jsxref("Temporal/ZonedDateTime/daysInYear", "daysInYear")}}</td>
+<td>{{jsxref("Temporal/PlainDateTime/era", "era")}}<br>{{jsxref("Temporal/PlainDateTime/eraYear", "eraYear")}}<br>{{jsxref("Temporal/PlainDateTime/year", "year")}}<br>{{jsxref("Temporal/PlainDateTime/inLeapYear", "inLeapYear")}}<br>{{jsxref("Temporal/PlainDateTime/monthsInYear", "monthsInYear")}}<br>{{jsxref("Temporal/PlainDateTime/daysInYear", "daysInYear")}}</td>
+<td>{{jsxref("Temporal/PlainDate/era", "era")}}<br>{{jsxref("Temporal/PlainDate/eraYear", "eraYear")}}<br>{{jsxref("Temporal/PlainDate/year", "year")}}<br>{{jsxref("Temporal/PlainDate/inLeapYear", "inLeapYear")}}<br>{{jsxref("Temporal/PlainDate/monthsInYear", "monthsInYear")}}<br>{{jsxref("Temporal/PlainDate/daysInYear", "daysInYear")}}</td>
+<td>N/A</td>
+<td>{{jsxref("Temporal/PlainYearMonth/era", "era")}}<br>{{jsxref("Temporal/PlainYearMonth/eraYear", "eraYear")}}<br>{{jsxref("Temporal/PlainYearMonth/year", "year")}}<br>{{jsxref("Temporal/PlainYearMonth/inLeapYear", "inLeapYear")}}<br>{{jsxref("Temporal/PlainYearMonth/monthsInYear", "monthsInYear")}}<br>{{jsxref("Temporal/PlainYearMonth/daysInYear", "daysInYear")}}</td>
+<td>N/A</td>
+</tr>
+<tr>
+<th>Month-related</th>
+<td>N/A</td>
+<td>{{jsxref("Temporal/ZonedDateTime/month", "month")}}<br>{{jsxref("Temporal/ZonedDateTime/monthCode", "monthCode")}}<br>{{jsxref("Temporal/ZonedDateTime/daysInMonth", "daysInMonth")}}</td>
+<td>{{jsxref("Temporal/PlainDateTime/month", "month")}}<br>{{jsxref("Temporal/PlainDateTime/monthCode", "monthCode")}}<br>{{jsxref("Temporal/PlainDateTime/daysInMonth", "daysInMonth")}}</td>
+<td>{{jsxref("Temporal/PlainDate/month", "month")}}<br>{{jsxref("Temporal/PlainDate/monthCode", "monthCode")}}<br>{{jsxref("Temporal/PlainDate/daysInMonth", "daysInMonth")}}</td>
+<td>N/A</td>
+<td>{{jsxref("Temporal/PlainYearMonth/month", "month")}}<br>{{jsxref("Temporal/PlainYearMonth/monthCode", "monthCode")}}<br>{{jsxref("Temporal/PlainYearMonth/daysInMonth", "daysInMonth")}}</td>
+<td>{{jsxref("Temporal/PlainMonthDay/monthCode", "monthCode")}}</td>
+</tr>
+<tr>
+<th>Week-related</th>
+<td>N/A</td>
+<td>{{jsxref("Temporal/ZonedDateTime/weekOfYear", "weekOfYear")}}<br>{{jsxref("Temporal/ZonedDateTime/yearOfWeek", "yearOfWeek")}}<br>{{jsxref("Temporal/ZonedDateTime/daysInWeek", "daysInWeek")}}</td>
+<td>{{jsxref("Temporal/PlainDateTime/weekOfYear", "weekOfYear")}}<br>{{jsxref("Temporal/PlainDateTime/yearOfWeek", "yearOfWeek")}}<br>{{jsxref("Temporal/PlainDateTime/daysInWeek", "daysInWeek")}}</td>
+<td>{{jsxref("Temporal/PlainDate/weekOfYear", "weekOfYear")}}<br>{{jsxref("Temporal/PlainDate/yearOfWeek", "yearOfWeek")}}<br>{{jsxref("Temporal/PlainDate/daysInWeek", "daysInWeek")}}</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<th>Day-related</th>
+<td>N/A</td>
+<td>{{jsxref("Temporal/ZonedDateTime/day", "day")}}<br>{{jsxref("Temporal/ZonedDateTime/dayOfWeek", "dayOfWeek")}}<br>{{jsxref("Temporal/ZonedDateTime/dayOfYear", "dayOfYear")}}<br>{{jsxref("Temporal/ZonedDateTime/hoursInDay", "hoursInDay")}}</td>
+<td>{{jsxref("Temporal/PlainDateTime/day", "day")}}<br>{{jsxref("Temporal/PlainDateTime/dayOfWeek", "dayOfWeek")}}<br>{{jsxref("Temporal/PlainDateTime/dayOfYear", "dayOfYear")}}</td>
+<td>{{jsxref("Temporal/PlainDate/day", "day")}}<br>{{jsxref("Temporal/PlainDate/dayOfWeek", "dayOfWeek")}}<br>{{jsxref("Temporal/PlainDate/dayOfYear", "dayOfYear")}}</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>{{jsxref("Temporal/PlainMonthDay/day", "day")}}</td>
+</tr>
+<tr>
+<th>Time components</th>
+<td>N/A</td>
+<td>{{jsxref("Temporal/ZonedDateTime/hour", "hour")}}<br>{{jsxref("Temporal/ZonedDateTime/minute", "minute")}}<br>{{jsxref("Temporal/ZonedDateTime/second", "second")}}<br>{{jsxref("Temporal/ZonedDateTime/millisecond", "millisecond")}}<br>{{jsxref("Temporal/ZonedDateTime/microsecond", "microsecond")}}<br>{{jsxref("Temporal/ZonedDateTime/nanosecond", "nanosecond")}}</td>
+<td>{{jsxref("Temporal/PlainDateTime/hour", "hour")}}<br>{{jsxref("Temporal/PlainDateTime/minute", "minute")}}<br>{{jsxref("Temporal/PlainDateTime/second", "second")}}<br>{{jsxref("Temporal/PlainDateTime/millisecond", "millisecond")}}<br>{{jsxref("Temporal/PlainDateTime/microsecond", "microsecond")}}<br>{{jsxref("Temporal/PlainDateTime/nanosecond", "nanosecond")}}</td>
+<td>N/A</td>
+<td>{{jsxref("Temporal/PlainTime/hour", "hour")}}<br>{{jsxref("Temporal/PlainTime/minute", "minute")}}<br>{{jsxref("Temporal/PlainTime/second", "second")}}<br>{{jsxref("Temporal/PlainTime/millisecond", "millisecond")}}<br>{{jsxref("Temporal/PlainTime/microsecond", "microsecond")}}<br>{{jsxref("Temporal/PlainTime/nanosecond", "nanosecond")}}</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<th>Time zone</th>
+<td>N/A</td>
+<td>{{jsxref("Temporal/ZonedDateTime/timeZoneId", "timeZoneId")}}<br>{{jsxref("Temporal/ZonedDateTime/offset", "offset")}}<br>{{jsxref("Temporal/ZonedDateTime/offsetNanoseconds", "offsetNanoseconds")}}</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<th>Epoch time</th>
+<td>{{jsxref("Temporal/Instant/epochMilliseconds", "epochMilliseconds")}}<br>{{jsxref("Temporal/Instant/epochNanoseconds", "epochNanoseconds")}}</td>
+<td>{{jsxref("Temporal/ZonedDateTime/epochMilliseconds", "epochMilliseconds")}}<br>{{jsxref("Temporal/ZonedDateTime/epochNanoseconds", "epochNanoseconds")}}</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
 </tbody>
 </table>
 
@@ -156,7 +269,57 @@ The table below summarizes all conversion methods that exist on each class.
 </tbody>
 </table>
 
-With these two tables, you should have a basic idea of how to navigate the `Temporal` API.
+With these tables, you should have a basic idea of how to navigate the `Temporal` API.
+
+### Calendars
+
+A calendar is a way to organize days, typically into periods of weeks, months, years, and eras. Most of the world uses the Gregorian calendar, but there are many other calendars in use, especially in religious and cultural contexts. {{jsxref("Intl/Locale/getCalendars", "Intl.Locale.prototype.getCalendars()")}} lists most of the calendars likely to be supported by browsers. Here we provide a brief overview of how calendar systems are formed to help you internalize what factors may vary between calendars.
+
+There are three most prominent periodic events on Earth: its rotation around the sun (365.242 days for one revolution), the moon's rotation around Earth (29.5 days from new moon to new moon), and its rotation around its axis (24 hours from sunrise to sunrise). Every culture has the same measure of a "day", which is 24 hours. Occasional changes such as daylight saving time are not part of the calendar, but are part of the offset.
+
+- Some calendars primarily define one year as 365.242 days on average, by defining years to have 365 days, and adding an extra day, the _leap day_, about every 4 years. Then, the year may be further divided into parts called months. These calendars are called _solar calendars_. The Gregorian calendar and the Solar Hijri calendar are solar calendars.
+- Some calendars primarily define one month as 29.5 days on average, by defining months to alternate between 29 and 30 days. Then, 12 months may be grouped into a year of 354 days. These calendars are called _lunar calendars_. The Islamic calendar is a lunar calendar. Because a lunar year is artificial and does not correlate with the season cycle, lunar calendars are generally rarer.
+- Some calendars also primarily define months based on lunar cycles, like lunar calendars. Then, to compensate for the 11-day discrepancy with the solar year, an extra month, the _leap month_, is added about every 3 years. These calendars are called _lunisolar calendars_. The Hebrew calendar and the Chinese calendar are lunisolar calendars.
+
+In `Temporal`, every date under one calendar system is uniquely identified by three components: `year`, `month`, and `day`. `year` is an integer that may be zero or negative, which increases monotonously with time. The year `1` (or `0`, if it exists) is known as the calendar epoch, and is arbitrary for each calendar. `month` is an integer that increments by 1 every time, starting at `1` and ending at `date.monthsInYear`, then resetting back to `1` as the year advances. `day` is also a positive integer, but it may not start at 1 or increment by 1 every time, because political changes may cause days to be skipped or repeated. But in general, `day` monotonously increases and resets as the month advances.
+
+In addition to `year`, a year can also be uniquely identified by the combination of `era` and `eraYear`, for calendars that use eras. For example, the Gregorian calendar uses the era "CE" (Common Era) and "BCE" (Before Common Era), and the year `-1` is the same as `{ era: "bce", eraYear: 1 }`. `era` is a lowercase string, and `eraYear` is an arbitrary integer that may be zero or negative, or even decrease with time (usually for the oldest era).
+
+> [!NOTE]
+> Always use `era` and `eraYear` as a pair; don't use one property without also using the other. In addition, to avoid conflicts, don't combine `year` and `era`/`eraYear` when designating a year. Pick one year representation and use it consistently.
+>
+> Be careful of the following incorrect assumptions about years:
+>
+> - Don't assume that `era` and `eraYear` are always present; they may be `undefined`.
+> - Don't assume that `era` is a user-friendly string; use `toLocaleString()` to format your date instead.
+> - Don't assume that two `year` values from different calendars are comparable; use the `compare()` static method instead.
+> - Don't assume that years have 365/366 days and 12 months; use `daysInYear` and `monthsInYear` instead.
+> - Don't assume that leap years (`inLeapYear` is `true`) have one extra day; they may have an extra month.
+
+In addition to `month`, a month in a year can also be uniquely identified by the `monthCode`. `monthCode` usually maps to the month's name, but `month` does not. For example, in the case of lunisolar calendars, two months with the same `monthCode`, where one belongs to a leap year and the other one does not, will have different `month` values if they come after the leap month, due to the insertion of an extra month.
+
+> [!NOTE]
+> To avoid conflicts, don't combine `month` and `monthCode` when designating a month. Pick one month representation and use it consistently. `month` is more useful if you need the order of months in a year (e.g., when looping through the months), while `monthCode` is more useful if you need the name of the month (e.g., when storing birthdays).
+>
+> Be careful of the following incorrect assumptions about months:
+>
+> - Don't assume that `monthCode` and `month` always correspond.
+> - Don't assume the number of days in a month; use `daysInMonth` instead.
+> - Don't assume that `monthCode` is a user-friendly string; use `toLocaleString()` to format your date instead.
+> - Generally, don't cache the name of months in an array or object. Even though `monthCode` usually maps to the month's name within one calendar, we recommend always computing the month's name using, for example, `date.toLocaleString("en-US", { calendar: date.calendarId, month: "long" })`.
+
+In addition to `day` (which is a month-based index), a day in a year can also be uniquely identified by the `dayOfYear`. `dayOfYear` is a positive integer that increments by 1 every time, starting at `1` and ending at `date.daysInYear`.
+
+The concept of a "week" is not connected with any astronomical event, but is a cultural construct. Therefore, weeks can have 4, 5, 6, 8, or more days, or not even a fixed number of days. To get the specific number of days of the week of a date, use the date's `daysInWeek`. `Temporal` identifies weeks by the combination of `weekOfYear` and `yearOfWeek`. `weekOfYear` is a positive integer that increments by 1 every time, starting at `1`, then resetting back to `1` as the year advances. `yearOfWeek` is generally the same as `year`, but may be different at the start or end of each year, because one week may cross two years, and `yearOfWeek` picks one of the two years based on the calendar's rules.
+
+> [!NOTE]
+> Always use `weekOfYear` and `yearOfWeek` as a pair; don't use `weekOfYear` and `year`.
+>
+> Be careful of the following incorrect assumptions about weeks:
+>
+> - Don't assume that `weekOfYear` and `yearOfWeek` are always present; they may be `undefined`.
+> - Don't assume that weeks are always 7 days long; use `daysInWeek` instead.
+> - Note that the current `Temporal` API does not support year-week dates, so you can't construct dates using these properties or serialize dates to year-week representations. They are only informational properties.
 
 ## Static properties
 

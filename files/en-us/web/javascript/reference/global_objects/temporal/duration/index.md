@@ -13,13 +13,13 @@ The **`Temporal.Duration`** object represents a difference between two time poin
 
 ### ISO 8601 duration format
 
-`Duration` objects can be serialized and parsed using the [ISO 8601 duration format](https://en.wikipedia.org/wiki/ISO_8601#Durations). The string has the following form:
+`Duration` objects can be serialized and parsed using the [ISO 8601 duration format](https://en.wikipedia.org/wiki/ISO_8601#Durations) (with some extensions specified by ECMAScript). The string has the following form:
 
 ```plain
 ±PnYnMnWnDTnHnMnS
 ```
 
-Where any uppercase letter is a literal character, and any lowercase `n` represents the number of years (`Y`), months (`M`), weeks (`W`), days (`D`), hours (`H`), minutes (`M`), or seconds (`S`), respectively. Only the seconds component may have a fractional part led by a dot, such as `0.0021S`. Any zero components may be omitted, but at least one component should be present (even if it has value zero, in which case the duration is zero). The `P` at the beginning is a literal character that stands for "period". The `T` is a literal character that separates the date part from the time part, which should be present if and only if there's at least one component after it. The string can optionally start with a sign: `+` or `-`, or have no signs (which implies positive). Here are some examples:
+Where any uppercase letter is a literal character (can be either uppercase or lowercase), and any lowercase `n` represents the number of years (`Y`), months (`M`), weeks (`W`), days (`D`), hours (`H`), minutes (`M`), or seconds (`S`), respectively. The `P` at the beginning is a literal character that stands for "period". The `T` is a literal character that separates the date part from the time part, which should be present if and only if there's at least one component after it. Only the last time component may have a fractional part of 1 to 9 digits, led by a dot or a comma, such as `PT0.0021S` or `PT1.1H`. Any zero components may be omitted, but at least one component should be present (even if it has value zero, in which case the duration is zero). The string can optionally start with a sign: `+` or `-`, or have no signs (which implies positive). Here are some examples:
 
 | ISO 8601           | Meaning                                                                  |
 | ------------------ | ------------------------------------------------------------------------ |
@@ -39,7 +39,7 @@ Where any uppercase letter is a literal character, and any lowercase `n` represe
 
 ### Calendar durations
 
-A _calendar duration_ is one that contains any of the calendar units: weeks, months, and years. A non-calendar duration is portable and can participate in datetime arithmetic without any calendar information, because they unambiguously represent a fixed amount of time. However, a calendar duration is not portable because the number of days in a month or year depends on the calendar system and the reference time point. Therefore, attempting to perform any arithmetic operation on a calendar durations throws an error because durations don't keep track of a calendar themselves. For example, if we are in May of the Gregorian calendar, then "1 month" is "31 days", but if we are in April, then "1 month" becomes "30 days". To add or subtract calendar durations, you need to add them to dates instead (which, by nature of date calculations, returns you a non-calendar duration):
+A _calendar duration_ is one that contains any of the [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars) units: weeks, months, and years. A non-calendar duration is portable and can participate in datetime arithmetic without any calendar information, because they unambiguously represent a fixed amount of time. However, a calendar duration is not portable because the number of days in a month or year depends on the calendar system and the reference time point. Therefore, attempting to perform any arithmetic operation on a calendar durations throws an error because durations don't keep track of a calendar themselves. For example, if we are in May of the Gregorian calendar, then "1 month" is "31 days", but if we are in April, then "1 month" becomes "30 days". To add or subtract calendar durations, you need to add them to dates instead (which, by nature of date calculations, returns you a non-calendar duration):
 
 ```js
 const dur1 = Temporal.Duration.from({ years: 1 });
