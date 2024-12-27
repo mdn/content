@@ -24,8 +24,7 @@ browser-compat: webextensions.manifest.web_accessible_resources
     <tr>
       <th scope="row">Example</th>
       <td>
-        <pre class="brush: json">
-"web_accessible_resources": [
+        <pre class="brush: json">"web_accessible_resources": [
   "images/my-image.png"
 ]</pre
         >

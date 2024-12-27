@@ -24,8 +24,7 @@ browser-compat: webextensions.manifest.declarative_net_request
     <tr>
       <th scope="row">Example</th>
       <td>
-        <pre class="brush: json">
-"declarative_net_request" : {
+        <pre class="brush: json">"declarative_net_request" : {
   "rule_resources" : [{
     "id": "ruleset",
     "enabled": true,

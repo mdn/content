@@ -24,8 +24,7 @@ browser-compat: webextensions.manifest.user_scripts
     <tr>
       <th scope="row">Example</th>
       <td>
-        <pre class="brush: json">
-  "user_scripts": {
+        <pre class="brush: json">  "user_scripts": {
     "api_script": "apiscript.js",
   }
 </pre

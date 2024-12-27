@@ -24,8 +24,7 @@ browser-compat: webextensions.manifest.content_scripts
     <tr>
       <th scope="row">Example</th>
       <td>
-        <pre class="brush: json">
-"content_scripts": [
+        <pre class="brush: json">"content_scripts": [
   {
     "matches": ["*://*.mozilla.org/*"],
     "js": ["borderify.js"]
@@ -163,8 +162,7 @@ Details of all the keys you can include are given in the table below.
           if you include jQuery here followed by another content script, like
           this:
         </p>
-        <pre class="brush: json">
-"js": ["jquery.js", "my-content-script.js"]</pre
+        <pre class="brush: json">"js": ["jquery.js", "my-content-script.js"]</pre
         >
         <p>Then, <code>"my-content-script.js"</code> can use jQuery.</p>
         <p>
@@ -198,8 +196,7 @@ Details of all the keys you can include are given in the table below.
           For example, suppose you have a <code>content_scripts</code> key like
           this:
         </p>
-        <pre class="brush: json">
-  "content_scripts": [
+        <pre class="brush: json">  "content_scripts": [
     {
       "js": ["my-script.js"],
       "matches": ["https://example.org/"],

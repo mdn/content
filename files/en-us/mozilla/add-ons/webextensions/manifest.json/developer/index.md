@@ -24,8 +24,7 @@ browser-compat: webextensions.manifest.developer
     <tr>
       <th scope="row">Example</th>
       <td>
-        <pre class="brush: json">
-"developer": {
+        <pre class="brush: json">"developer": {
   "name": "Walt Whitman",
   "url": "https://en.wikipedia.org/wiki/Walt_Whitman"
 }</pre

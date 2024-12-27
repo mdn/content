@@ -61,8 +61,7 @@ default locations of Firefox are:
             >which(1)</a
           >:
         </p>
-        <pre class="brush: plain">
-% which firefox
+        <pre class="brush: plain">% which firefox
 /usr/bin/firefox
 </pre
         >

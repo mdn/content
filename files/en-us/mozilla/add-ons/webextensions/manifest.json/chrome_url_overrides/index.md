@@ -24,8 +24,7 @@ browser-compat: webextensions.manifest.chrome_url_overrides
     <tr>
       <th scope="row">Example</th>
       <td>
-        <pre class="brush: json">
-  "chrome_url_overrides" : {
+        <pre class="brush: json">  "chrome_url_overrides" : {
     "newtab": "my-new-tab.html"
   }</pre
         >

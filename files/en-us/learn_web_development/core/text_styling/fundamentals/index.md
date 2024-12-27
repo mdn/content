@@ -210,8 +210,7 @@ The five names are defined as follows:
       </td>
       <td id="serif-example">
         <pre class="brush: html hidden">My big red elephant</pre>
-        <pre class="brush: css hidden">
-body {
+        <pre class="brush: css hidden">body {
   font-family: serif;
 }</pre
         >
@@ -223,8 +222,7 @@ body {
       <td>Fonts that don't have serifs.</td>
       <td id="sans-serif-example">
         <pre class="brush: html hidden">My big red elephant</pre>
-        <pre class="brush: css hidden">
-body {
+        <pre class="brush: css hidden">body {
   font-family: sans-serif;
 }</pre
         >
@@ -239,8 +237,7 @@ body {
       </td>
       <td id="monospace-example">
         <pre class="brush: html hidden">My big red elephant</pre>
-        <pre class="brush: css hidden">
-body {
+        <pre class="brush: css hidden">body {
   font-family: monospace;
 }</pre
         >
@@ -255,8 +252,7 @@ body {
       </td>
       <td id="cursive-example">
         <pre class="brush: html hidden">My big red elephant</pre>
-        <pre class="brush: css hidden">
-body {
+        <pre class="brush: css hidden">body {
   font-family: cursive;
 }</pre
         >
@@ -268,8 +264,7 @@ body {
       <td>Fonts that are intended to be decorative.</td>
       <td id="fantasy-example">
         <pre class="brush: html hidden">My big red elephant</pre>
-        <pre class="brush: css hidden">
-body {
+        <pre class="brush: css hidden">body {
   font-family: fantasy;
 }</pre
         >

@@ -24,8 +24,7 @@ browser-compat: webextensions.manifest.theme_experiment
     <tr>
       <th scope="row">Example</th>
       <td>
-        <pre class="brush: json">
-"theme_experiment": {
+        <pre class="brush: json">"theme_experiment": {
   "stylesheet": "style.css",
   "colors": {
     "popup_affordance": "--arrowpanel-dimmed"
