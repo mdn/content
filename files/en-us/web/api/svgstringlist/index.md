@@ -89,12 +89,12 @@ An `SVGStringList` object can be designated as read only, which means that attem
   </thead>
   <tbody>
     <tr>
-      <td><code>numberOfItems</code></td>
+      <td><code>{{domxref("SVGStringList.numberOfItems", "numberOfItems")}}</code></td>
       <td><code>unsigned long</code></td>
       <td>The number of items in the list.</td>
     </tr>
     <tr>
-      <td><code>length</code></td>
+      <td><code>{{domxref("SVGStringList.length", "length")}}</code></td>
       <td><code>unsigned long</code></td>
       <td>
         A mirror of the value in <code>numberOfItems</code>, for consistency
@@ -117,7 +117,7 @@ An `SVGStringList` object can be designated as read only, which means that attem
   <tbody>
     <tr>
       <td>
-        <code><strong>clear</strong>()</code>
+        <code><strong>{{domxref("SVGStringList.clear", "clear")}}</strong>()</code>
       </td>
       <td><em>void</em></td>
       <td>
@@ -138,7 +138,7 @@ An `SVGStringList` object can be designated as read only, which means that attem
     </tr>
     <tr>
       <td>
-        <code><strong>initialize</strong>(string <em>newItem</em>)</code>
+        <code><strong>{{domxref("SVGStringList.initialize", "initialize")}}</strong>(string <em>newItem</em>)</code>
       </td>
       <td>string</td>
       <td>
@@ -163,7 +163,7 @@ An `SVGStringList` object can be designated as read only, which means that attem
     </tr>
     <tr>
       <td>
-        <code><strong>getItem</strong>(number <em>index</em>)</code>
+        <code><strong>{{domxref("SVGStringList.getItem", "getItem")}}</strong>(number <em>index</em>)</code>
       </td>
       <td>string</td>
       <td>
@@ -186,7 +186,7 @@ An `SVGStringList` object can be designated as read only, which means that attem
     <tr>
       <td>
         <code
-          ><strong>insertItemBefore</strong>(string <em>newItem</em>, number <em>index</em>)</code>
+          ><strong>{{domxref("SVGStringList.insertItemBefore", "insertItemBefore")}}</strong>(string <em>newItem</em>, number <em>index</em>)</code>
       </td>
       <td>string</td>
       <td>
@@ -215,7 +215,7 @@ An `SVGStringList` object can be designated as read only, which means that attem
     <tr>
       <td>
         <code
-          ><strong>replaceItem</strong>(string <em>newItem</em>, number <em>index</em>)</code
+          ><strong>{{domxref("SVGStringList.replaceItem", "replaceItem")}}</strong>(string <em>newItem</em>, number <em>index</em>)</code
         >
       </td>
       <td>string</td>
@@ -247,7 +247,7 @@ An `SVGStringList` object can be designated as read only, which means that attem
     <tr>
       <td>
         <code
-          ><strong>removeItem</strong>(in unsigned long <em>index</em>)</code
+          ><strong>{{domxref("SVGStringList.removeItem", "removeItem")}}</strong>(in unsigned long <em>index</em>)</code
         >
       </td>
       <td>string</td>
@@ -272,7 +272,7 @@ An `SVGStringList` object can be designated as read only, which means that attem
     <tr>
       <td>
         <code
-          ><strong>appendItem</strong>(string <em>newItem</em>)</code
+          ><strong>{{domxref("SVGStringList.appendItem", "appendItem")}}</strong>(string <em>newItem</em>)</code
         >
       </td>
       <td>string</td>
