@@ -8,7 +8,9 @@ browser-compat: api.SVGSVGElement.animationsPaused
 
 {{APIRef("SVG")}}
 
-The `animationsPaused()` method of the {{domxref("SVGSVGElement")}} interface returns `true` if this SVG document fragment is in a paused state.
+The `animationsPaused()` method of the {{domxref("SVGSVGElement")}} interface checks whether the animations in the SVG document fragment are currently paused.
+
+The method returns `true` if this SVG document fragment is in a paused state.
 
 ## Syntax
 
@@ -22,34 +24,49 @@ None.
 
 ### Return value
 
-A long; the index of the character that corresponds to the position.
+A boolean.
 
 ## Examples
 
-### Finding the Character at a Specific Position
+### Checking if Animations are Paused
 
 ```html
-<svg width="200" height="100">
-  <text id="exampleText" x="10" y="40" font-size="16">Hello, SVG World!</text>
+<svg id="exampleSVG" width="200" height="100">
+  <circle cx="50" cy="50" r="30" fill="blue">
+    <animate
+      attributeName="cx"
+      from="50"
+      to="150"
+      dur="2s"
+      repeatCount="indefinite" />
+  </circle>
 </svg>
+
+<button id="pauseBtn">Pause/Resume Animations</button>
+<pre id="status"></pre>
 ```
 
 ```js
-const textElement = document.getElementById("exampleText");
+const svgElement = document.getElementById("exampleSVG");
+const pauseButton = document.getElementById("pauseBtn");
+const statusDisplay = document.getElementById("status");
 
-// Create a DOMPoint for the position (30, 40)
-const point = new DOMPoint(30, 40);
+function updateStatus() {
+  const isPaused = svgElement.animationsPaused();
+  statusDisplay.textContent = `Animations paused: ${isPaused}`;
+}
 
-// Get the character at the specified position
-const charIndex = textElement.animationsPaused(point);
+pauseButton.addEventListener("click", () => {
+  if (svgElement.animationsPaused()) {
+    svgElement.unpauseAnimations();
+  } else {
+    svgElement.pauseAnimations();
+  }
+  updateStatus();
+});
 
-console.log(charIndex); // Output: 2 (for character "l")
-
-// Check with a point where no character is present
-const offPoint = new DOMPoint(300, 40);
-const offCharIndex = textElement.animationsPaused(offPoint);
-
-console.log(offCharIndex); // Output: -1 (no character found)
+// Initialize the status display
+updateStatus();
 ```
 
 ## Specifications
@@ -59,3 +76,8 @@ console.log(offCharIndex); // Output: -1 (no character found)
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("SVGSVGElement.pauseAnimations()")}}
+- {{domxref("SVGSVGElement.unpauseAnimations()")}}
