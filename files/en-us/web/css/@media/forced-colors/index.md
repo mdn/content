@@ -59,7 +59,7 @@ There are some cases where the user agent does not force the values for the abov
 
 When {{cssxref("forced-color-adjust")}} is set to `none` on an element, none of the forced color values will apply, and author styles will be applied as normal. Additionally, the backplate for text will be disabled.
 
-When {{cssxref("forced-color-adjust")}} is set to `preserve-parent-color` on an element, and the {{cssxref("color")}} property does not inherit from its parentl then the element will behave the same as set `preserve-parent-color` to `none`.
+When {{cssxref("forced-color-adjust")}} is set to `preserve-parent-color` on an element, and the {{cssxref("color")}} property on the element does not inherit from its parent, then the element will behave the same as set `preserve-parent-color` to `none`.
 
 When a {{cssxref("system-color", "system color", "", 1)}} is specified, it will be used instead of the value that would otherwise have been forced.
 
