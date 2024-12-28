@@ -75,7 +75,7 @@ The first rule of ARIA use is "if you can use a native feature with the semantic
 
 ```html
 <label for="temperature">Oven Temperature</label>
-<input type="range" id="temperature" value="205" min="70" max="250" step="5"/>
+<input type="range" id="temperature" value="205" min="70" max="250" step="5" />
 ```
 
 If we employ native HTML semantics with {{HTMLElement('input')}} we get styles and semantics for free.
