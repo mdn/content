@@ -50,4 +50,4 @@ An [example](/en-US/docs/Web/CSS/:nth-child#styling_a_table_column) is available
 
 - {{cssxref("vertical-align")}}
 - {{cssxref(":nth-child()")}}
-- [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
+- [Learn: Styling tables](/en-US/docs/Learn_web_development/Core/Styling_basics/Tables)

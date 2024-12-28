@@ -10,7 +10,7 @@ Accessible Rich Internet Applications (**ARIA**) define ways to make the web mor
 This page lists the guides that you can use to help improve the accessibility of web page features such as tables, forms, and keyboard-navigation.
 
 - [Designing accessible forms](https://www.w3.org/WAI/tutorials/forms/)
-- [Understanding WAI-ARIA basics](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics)
+- [Understanding WAI-ARIA basics](/en-US/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics)
 - [Creating keyboard-navigable JavaScript widgets](/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
 - [Using ARIA for labels with embedded fields inside them](/en-US/docs/Web/Accessibility/ARIA/Multipart_labels)
 - [Managing focus in composite widgets](https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/) (`aria-activedescendant` vs. roving tabindex)
