@@ -8,7 +8,7 @@ browser-compat: api.SVGTextContentElement.getCharNumAtPosition
 
 {{APIRef("SVG")}}
 
-The `getCharNumAtPosition()` method of the {{domxref("SVGTextContentElement")}} interface the represents the character which caused a text glyph to be rendered at a given position in the coordinate system. Because the relationship between characters and glyphs is not one-to-one, only the first character of the relevant typographic character is returned.
+The `getCharNumAtPosition()` method of the {{domxref("SVGTextContentElement")}} interface represents the character which caused a text glyph to be rendered at a given position in the coordinate system. Because the relationship between characters and glyphs is not one-to-one, only the first character of the relevant typographic character is returned.
 
 If no character is found at the specified position, `-1` is returned.
 
