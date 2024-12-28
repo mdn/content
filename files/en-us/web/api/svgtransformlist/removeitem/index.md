@@ -8,7 +8,7 @@ browser-compat: api.SVGTransformList.removeItem
 
 {{APIRef("SVG")}}
 
-The `removeItem()` method of the {{domxref("SVGTransformList")}} interface removes an existing item in the list.
+The `removeItem()` method of the {{domxref("SVGTransformList")}} interface removes an existing item from the list.
 
 ## Syntax
 
