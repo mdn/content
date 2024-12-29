@@ -214,7 +214,7 @@ value: 26.66666603088379, valueInSpecifiedUnits 8: 0.277777761220932, valueAsStr
   </thead>
   <tbody>
     <tr>
-      <td><code>unitType</code></td>
+      <td><code>{{domxref("SVGLength.unitType", "unitType")}}</code></td>
       <td>unsigned short</td>
       <td>
         The type of the value as specified by one of the
@@ -222,7 +222,7 @@ value: 26.66666603088379, valueInSpecifiedUnits 8: 0.277777761220932, valueAsStr
       </td>
     </tr>
     <tr>
-      <td><code>value</code></td>
+      <td><code>{{domxref("SVGLength.value", "value")}}</code></td>
       <td>float</td>
       <td>
         <p>
@@ -241,7 +241,7 @@ value: 26.66666603088379, valueInSpecifiedUnits 8: 0.277777761220932, valueAsStr
       </td>
     </tr>
     <tr>
-      <td><code>valueInSpecifiedUnits</code></td>
+      <td><code>{{domxref("SVGLength.valueInSpecifiedUnits", "valueInSpecifiedUnits")}}</code></td>
       <td>float</td>
       <td>
         <p>
@@ -260,7 +260,7 @@ value: 26.66666603088379, valueInSpecifiedUnits 8: 0.277777761220932, valueAsStr
       </td>
     </tr>
     <tr>
-      <td><code>valueAsString</code></td>
+      <td><code>{{domxref("SVGLength.valueAsString", "valueAsString")}}</code></td>
       <td>string</td>
       <td>
         <p>
@@ -304,7 +304,7 @@ value: 26.66666603088379, valueInSpecifiedUnits 8: 0.277777761220932, valueAsStr
     <tr>
       <td>
         <code
-          ><strong>newValueSpecifiedUnits</strong>(in unsigned short
+          ><strong>{{domxref("SVGLength.newValueSpecifiedUnits", "newValueSpecifiedUnits")}}</strong>(in unsigned short
           <var>unitType</var>, in float <var>valueInSpecifiedUnits</var>)</code
         >
       </td>
@@ -335,7 +335,7 @@ value: 26.66666603088379, valueInSpecifiedUnits 8: 0.277777761220932, valueAsStr
     <tr>
       <td>
         <code
-          ><strong>convertToSpecifiedUnits</strong>(in unsigned short
+          ><strong>{{domxref("SVGLength.convertToSpecifiedUnits", "convertToSpecifiedUnits")}}</strong>(in unsigned short
           <var>unitType</var>)</code
         >
       </td>
