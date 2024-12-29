@@ -12,6 +12,10 @@ The **`y`** read-only property of the {{domxref("SVGFESpotLightElement")}} inter
 
 It reflects the {{SVGAttr("x")}} attribute of the {{SVGElement("feSpotLight")}} element., which can be used to define the light source in a spotlight effect. The attribute is a [`<number>`](/en-US/docs/Web/SVG/Content_type#number). The default value is `0`.
 
+## Value
+
+An {{domxref("SVGAnimatedNumber")}}.
+
 ## Example
 
 ```js
