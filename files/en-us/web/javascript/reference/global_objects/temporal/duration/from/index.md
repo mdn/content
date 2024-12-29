@@ -61,10 +61,10 @@ A new `Temporal.Duration` object, possibly [unbalanced](/en-US/docs/Web/JavaScri
 
 ```js
 const d1 = Temporal.Duration.from({ hours: 1, minutes: 30 });
-console.log(d1); // "PT1H30M"
+console.log(d1.toString()); // "PT1H30M"
 
 const d2 = Temporal.Duration.from({ months: 1, days: 2 });
-console.log(d2); // "P1M2D"
+console.log(d2.toString()); // "P1M2D"
 
 // Uncommon because unbalanced, but valid
 const unbalanced = Temporal.Duration.from({
@@ -72,10 +72,10 @@ const unbalanced = Temporal.Duration.from({
   minutes: 100,
   seconds: 100,
 });
-console.log(unbalanced); // "PT100H100M100S"
+console.log(unbalanced.toString()); // "PT100H100M100S"
 
 const neg = Temporal.Duration.from({ hours: -1, minutes: -30 });
-console.log(neg); // "-PT1H30M"
+console.log(neg.toString()); // "-PT1H30M"
 ```
 
 ### Creating a duration from a string
@@ -90,7 +90,7 @@ console.log(d.hours); // 5
 ```js
 const d1 = Temporal.Duration.from({ hours: 1, minutes: 30 });
 const d2 = Temporal.Duration.from(d1);
-console.log(d2); // "PT1H30M"
+console.log(d2.toString()); // "PT1H30M"
 ```
 
 ## Specifications
@@ -105,3 +105,4 @@ console.log(d2); // "PT1H30M"
 
 - {{jsxref("Temporal.Duration")}}
 - {{jsxref("Temporal/Duration/Duration", "Temporal.Duration()")}}
+- {{jsxref("Temporal/Duration/with", "Temporal.Duration.prototype.with()")}}

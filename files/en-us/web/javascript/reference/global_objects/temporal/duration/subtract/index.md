@@ -40,7 +40,7 @@ const d1 = Temporal.Duration.from({ hours: 1, minutes: 30 });
 const d2 = Temporal.Duration.from({ hours: -1, minutes: -20 });
 
 const d3 = d1.subtract(d2);
-console.log(d3); // "PT2H50M"
+console.log(d3.toString()); // "PT2H50M"
 ```
 
 For more examples and caveats, see the [`add()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration/add) method.

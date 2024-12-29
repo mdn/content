@@ -23,19 +23,24 @@ You can convert from `Date` to `Temporal.Instant` using the {{jsxref("Date.proto
 date T time offset annotations
 ```
 
-Where:
+- `date`
+  - : Consists of `year`, `month`, `day`, separated by either nothing or `-`.
+    - `year` is either a four-digit number, or a six-digit number with a `+` or `-` sign.
+    - `month` must be a two-digit number from `01` to `12`.
+    - `day` must be a two-digit number from `01` to `31`.
+- `T`
+  - : The date-time separator, which can be `T`, `t`, or a space.
+- `time`
+  - : Consists of `hour`, and optionally `minute`, and optionally `second`, separated by either nothing or `:`.
+    - `hour` must be a two-digit number from `00` to `23`.
+    - `minute` must be a two-digit number from `00` to `59`.
+    - `second` must be a two-digit number from `00` to `59`. It may optionally be followed by a `.` or `,` and one to nine digits.
+- `offset`
+  - : Either the UTC designator `Z` or `z`, or an offset from UTC in the form `+` or `-` followed by the same format as `time`, except `second` is not allowed.
+- `annotations` {{optional_inline}}
+  - : ALl annotations, including time zone names, are ignored. See [`Temporal.ZonedDateTime`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#iso_8601_format) for more information.
 
-- `date` consists of `year`, `month`, `day`, separated by either nothing or `-`.
-  - `year` is either a four-digit number, or a six-digit number with a `+` or `-` sign.
-  - `month` must be a two-digit number from `01` to `12`.
-  - `day` must be a two-digit number from `01` to `31`.
-- `T` is the date-time separator, which can be `T`, `t`, or a space.
-- `time` consists of `hour`, and optionally `minute`, and optionally `second`, separated by either nothing or `:`.
-  - `hour` must be a two-digit number from `00` to `23`.
-  - `minute` must be a two-digit number from `00` to `59`.
-  - `second` must be a two-digit number from `00` to `59`. It may optionally be followed by a `.` or `,` and one to nine digits.
-- `offset` is either the UTC designator `Z` or `z`, or an offset from UTC in the form `+` or `-` followed by the same format as `time`, except `second` is not allowed.
-- `annotations`, including time zone names, are ignored. See [`Temporal.ZonedDateTime`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#iso_8601_format) for more information.
+When serializing, the output is always in the form `YYYY-MM-DDTHH:MM:SS.sssssssssZ`, with configuration for fractional second digits. `YYYY` may be the extended six-digit year if the year is outside the range of four digits.
 
 ## Constructor
 
@@ -69,7 +74,7 @@ These properties are defined on `Temporal.Instant.prototype` and shared by all `
 ## Instance methods
 
 - {{jsxref("Temporal/Instant/add", "Temporal.Instant.prototype.add()")}}
-  - : Returns a new `Temporal.Instant` object representing adding a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}) to this instant.
+  - : Returns a new `Temporal.Instant` object representing this instant moved forward by a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}).
 - {{jsxref("Temporal/Instant/equals", "Temporal.Instant.prototype.equals()")}}
   - : Returns `true` if this instant is equal to another instant (in a form convertible by {{jsxref("Temporal/Instant/from", "Temporal.Instant.from()")}}), and `false` otherwise. Equivalent to `Temporal.Instant.compare(this, other) === 0`.
 - {{jsxref("Temporal/Instant/round", "Temporal.Instant.prototype.round()")}}
@@ -77,13 +82,13 @@ These properties are defined on `Temporal.Instant.prototype` and shared by all `
 - {{jsxref("Temporal/Instant/since", "Temporal.Instant.prototype.since()")}}
   - : Returns a new {{jsxref("Temporal.Duration")}} object representing the duration from another instant (in a form convertible by {{jsxref("Temporal/Instant/from", "Temporal.Instant.from()")}}) to this instant. The duration is positive if the other instant is before this instant, and negative if after.
 - {{jsxref("Temporal/Instant/subtract", "Temporal.Instant.prototype.subtract()")}}
-  - : Returns a new `Temporal.Instant` object representing subtracting a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}) from this instant.
+  - : Returns a new `Temporal.Instant` object representing this instant moved backward by a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}).
 - {{jsxref("Temporal/Instant/toJSON", "Temporal.Instant.prototype.toJSON()")}}
-  - : Returns a string representing this instant in the same [ISO 8601 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Instant#iso_8601_format) as calling {{jsxref("Temporal/Instant/toString", "toString()")}}.
+  - : Returns a string representing this instant in the same [ISO 8601 format](#iso_8601_format) as calling {{jsxref("Temporal/Instant/toString", "toString()")}}.
 - {{jsxref("Temporal/Instant/toLocaleString", "Temporal.Instant.prototype.toLocaleString()")}}
   - : Returns a string with a language-sensitive representation of this instant. In implementations with [`Intl.DateTimeFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) support, this method simply calls `Intl.DateTimeFormat`.
 - {{jsxref("Temporal/Instant/toString", "Temporal.Instant.prototype.toString()")}}
-  - : Returns a string representing this instant in the [ISO 8601 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Instant#iso_8601_format) using the specified time zone.
+  - : Returns a string representing this instant in the [ISO 8601 format](#iso_8601_format) using the specified time zone.
 - {{jsxref("Temporal/Instant/toZonedDateTimeISO", "Temporal.Instant.prototype.toZonedDateTimeISO()")}}
   - : Returns a new {{jsxref("Temporal.ZonedDateTime")}} object representing this instant in the specified time zone using the ISO 8601 calendar system.
 - {{jsxref("Temporal/Instant/until", "Temporal.Instant.prototype.until()")}}
@@ -101,4 +106,6 @@ These properties are defined on `Temporal.Instant.prototype` and shared by all `
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal")}}
+- {{jsxref("Temporal.Duration")}}
+- {{jsxref("Temporal.ZonedDateTime")}}

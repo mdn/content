@@ -7,34 +7,47 @@ browser-compat: javascript.builtins.Temporal.PlainDate.subtract
 
 {{JSRef}}
 
-The **`subtract()`** method of {{jsxref("Temporal.PlainDate")}} instances TODO
+The **`subtract()`** method of {{jsxref("Temporal.PlainDate")}} instances returns a new `Temporal.PlainDate` object representing this date moved backward by a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}).
+
+If you want to subtract two dates and get a duration, use {{jsxref("Temporal/PlainDate/since", "since()")}} or {{jsxref("Temporal/PlainDate/until", "until()")}} instead.
 
 ## Syntax
 
 ```js-nolint
 subtract(duration)
+subtract(duration, options)
 ```
 
-### Parameters
-
 - `duration`
-  - : TODO
+  - : A string, an object, or a {{jsxref("Temporal.Duration")}} instance representing a duration to subtract from this date. It is converted to a `Temporal.Duration` object using the same algorithm as {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}.
+- `options` {{optional_inline}}
+  - : An object containing the following property:
+    - `overflow` {{optional_inline}}
+      - : A string specifying the behavior when a date component is out of range. Possible values are:
+        - `"constrain"` (default)
+          - : The date component is clamped to the valid range.
+        - `"reject"`
+          - : A {{jsxref("RangeError")}} is thrown if the date component is out of range.
 
 ### Return value
 
-TODO
-
-### Exceptions
-
-TODO
+A new `Temporal.PlainDate` object representing the date specified by the original date, minus the duration.
 
 ## Description
 
-TODO
+Subtracting a duration is equivalent to [adding](Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/add) its [negation](Web/JavaScript/Reference/Global_Objects/Temporal/Duration/negated), so all the same considerations apply.
 
 ## Examples
 
-TODO
+### Subtracting a duration
+
+```js
+const start = Temporal.PlainDate.from("2022-01-01");
+const end = start.subtract({ years: 1, months: 2, weeks: 3, days: 4 });
+console.log(end.toString()); // 2020-10-25
+```
+
+For more examples, see {{jsxref("Temporal/PlainDate/add", "add()")}}.
 
 ## Specifications
 
@@ -46,4 +59,8 @@ TODO
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal.PlainDate")}}
+- {{jsxref("Temporal.Duration")}}
+- {{jsxref("Temporal/PlainDate/add", "Temporal.PlainDate.prototype.add()")}}
+- {{jsxref("Temporal/PlainDate/since", "Temporal.Instant.prototype.since()")}}
+- {{jsxref("Temporal/PlainDate/until", "Temporal.PlainDate.prototype.until()")}}

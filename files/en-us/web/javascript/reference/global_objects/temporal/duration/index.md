@@ -19,7 +19,16 @@ The **`Temporal.Duration`** object represents a difference between two time poin
 ±PnYnMnWnDTnHnMnS
 ```
 
-Where any uppercase letter is a literal character (can be either uppercase or lowercase), and any lowercase `n` represents the number of years (`Y`), months (`M`), weeks (`W`), days (`D`), hours (`H`), minutes (`M`), or seconds (`S`), respectively. The `P` at the beginning is a literal character that stands for "period". The `T` is a literal character that separates the date part from the time part, which should be present if and only if there's at least one component after it. Only the last time component may have a fractional part of 1 to 9 digits, led by a dot or a comma, such as `PT0.0021S` or `PT1.1H`. Any zero components may be omitted, but at least one component should be present (even if it has value zero, in which case the duration is zero). The string can optionally start with a sign: `+` or `-`, or have no signs (which implies positive). Here are some examples:
+- `±` {{optional_inline}}
+  - : An optional sign character (`+` or `-`), which represents positive or negative duration. Default is positive.
+- `P`
+  - : A literal character `P` or `p` that stands for "period".
+- `nY`, `nM`, `nW`, `nD`, `nH`, `nM`, `nS`
+  - : A number followed by a literal character, which represents the number of years (`Y`), months (`M`), weeks (`W`), days (`D`), hours (`H`), minutes (`M`), or seconds (`S`), respectively. All except the last existing component must be an integer. The last component, if it is a time component (hours, minutes, or seconds), may have a fractional part of 1 to 9 digits, led by a dot or a comma, such as `PT0.0021S` or `PT1.1H`. Any zero components may be omitted, but at least one component should be present (even if it has value zero, in which case the duration is zero).
+- `T`
+  - : A literal character `T` or `t` that separates the date part from the time part, which should be present if and only if there's at least one component after it.
+
+Here are some examples:
 
 | ISO 8601           | Meaning                                                                  |
 | ------------------ | ------------------------------------------------------------------------ |
@@ -37,6 +46,8 @@ Where any uppercase letter is a literal character (can be either uppercase or lo
 > [!NOTE]
 > According to the ISO 8601-1 standard, weeks are not allowed to appear together with any other units, and durations can only be positive. As extensions to the standard, ISO 8601-2, which Temporal uses, allows a sign character at the start of the string, and allows combining weeks with other units. Therefore, if your duration is serialized to a string like `P3W1D`, `+P1M`, or `-P1M`, note that other programs may not accept it.
 
+When serializing, the output respects the stored components as much as possible, preserving [unbalanced](#duration_balancing) components. However, subsecond components are serialized as a single fractional second, so their precise values, if unbalanced may be lost. The plus sign is omitted for positive durations. The zero duration is always serialized as `PT0S`.
+
 ### Calendar durations
 
 A _calendar duration_ is one that contains any of the [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars) units: weeks, months, and years. A non-calendar duration is portable and can participate in datetime arithmetic without any calendar information, because they unambiguously represent a fixed amount of time. However, a calendar duration is not portable because the number of days in a month or year depends on the calendar system and the reference time point. Therefore, attempting to perform any arithmetic operation on a calendar durations throws an error because durations don't keep track of a calendar themselves. For example, if we are in May of the Gregorian calendar, then "1 month" is "31 days", but if we are in April, then "1 month" becomes "30 days". To add or subtract calendar durations, you need to add them to dates instead (which, by nature of date calculations, returns you a non-calendar duration):
@@ -45,7 +56,7 @@ A _calendar duration_ is one that contains any of the [calendar](/en-US/docs/Web
 const dur1 = Temporal.Duration.from({ years: 1 });
 const dur2 = Temporal.Duration.from({ months: 1 });
 
-dur1.add(dur2); // RangeError: For years, months, or weeks arithmetic, use date arithmetic relative to a starting point
+dur1.add(dur2); // RangeError: can't compare durations when "relativeTo" is undefined
 
 const startingPoint = Temporal.PlainDate.from("2021-01-01"); // ISO 8601 calendar
 startingPoint.add(dur1).add(dur2).since(startingPoint); // "P396D"
@@ -127,11 +138,11 @@ These properties are defined on `Temporal.Duration.prototype` and shared by all 
 - {{jsxref("Temporal/Duration/subtract", "Temporal.Duration.prototype.subtract()")}}
   - : Returns a new `Temporal.Duration` object with the difference between this duration and a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}). Equivalent to [adding](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration/add) the [negated](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration/negated) value of the other duration.
 - {{jsxref("Temporal/Duration/toJSON", "Temporal.Duration.prototype.toJSON()")}}
-  - : Returns a string representing this duration in the same [ISO 8601 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#iso_8601_duration_format) as calling {{jsxref("Temporal/Duration/toString", "toString()")}}.
+  - : Returns a string representing this duration in the same [ISO 8601 format](#iso_8601_duration_format) as calling {{jsxref("Temporal/Duration/toString", "toString()")}}.
 - {{jsxref("Temporal/Duration/toLocaleString", "Temporal.Duration.prototype.toLocaleString()")}}
   - : Returns a string with a language-sensitive representation of this duration. In implementations with [`Intl.DurationFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat) support, this method simply calls `Intl.DurationFormat`.
 - {{jsxref("Temporal/Duration/toString", "Temporal.Duration.prototype.toString()")}}
-  - : Returns a string representing this duration in the [ISO 8601 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#iso_8601_duration_format).
+  - : Returns a string representing this duration in the [ISO 8601 format](#iso_8601_duration_format).
 - {{jsxref("Temporal/Duration/total", "Temporal.Duration.prototype.total()")}}
   - : Returns a number representing the total duration in the given unit.
 - {{jsxref("Temporal/Duration/valueOf", "Temporal.Duration.prototype.valueOf()")}}

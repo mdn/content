@@ -7,15 +7,62 @@ browser-compat: javascript.builtins.Temporal.PlainDate.day
 
 {{JSRef}}
 
-The **`day`** accessor property of {{jsxref("Temporal.PlainDate")}} instances returns a positive integer representing the 1-based day index in the month of this date. The first day of this month is `1`, and the last day is the {{jsxref("Temporal/PlainDate/daysInMonth", "daysInMonth")}}.
+The **`day`** accessor property of {{jsxref("Temporal.PlainDate")}} instances returns a positive integer representing the 1-based day index in the month of this date, which is the same day number you would see on a calendar. [Calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 
-## Description
+It generally starts at 1 and is continuous, but not always. If you want to loop through all the days in a month, first use {{jsxref("Temporal/PlainDate/with", "with()")}} with `{ day: 1 }` (which sets to the beginning of the month, even if the actual number is not `1`), then repeatedly use {{jsxref("Temporal/PlainDate/add", "add()")}} with `{ days: 1 }`, until the month changes.
 
-TODO
+The set accessor of `calendarId` is `undefined`. You cannot change this property directly. Use the {{jsxref("Temporal/PlainDate/with", "with()")}} method to create a new `Temporal.PlainDate` object with the desired new value.
 
 ## Examples
 
-TODO
+### Using day
+
+```js
+const date = Temporal.PlainDate.from("2021-07-01"); // ISO 8601 calendar
+console.log(date.day); // 1
+
+const date2 = Temporal.PlainDate.from("2021-07-01[u-ca=chinese]");
+console.log(date2.day); // 22; it is May 22 in the Chinese calendar
+```
+
+### Looping through all days in a month
+
+```js
+const month = Temporal.PlainDate.from("2021-07-14"); // An arbitrary date in the month
+for (
+  let day = month.with({ day: 1 });
+  day.month === month.month;
+  day = day.add({ days: 1 })
+) {
+  console.log(day.day);
+}
+```
+
+TODO: example of non-contiguous days?
+
+### Changing day
+
+```js
+const date = Temporal.PlainDate.from("2021-07-01");
+const newDate = date.with({ day: 15 });
+console.log(newDate.toString()); // 2021-07-15
+```
+
+You can also use {{jsxref("Temporal/PlainDate/add", "add()")}} or {{jsxref("Temporal/PlainDate/subtract", "subtract()")}} to move a certain number of days from the current date.
+
+```js
+const date = Temporal.PlainDate.from("2021-07-01");
+const newDate = date.add({ days: 14 });
+console.log(newDate.toString()); // 2021-07-15
+```
+
+By default, `with()` constrains the day to the range of valid values. So you can use `{ day: 1 }` to set the day to the first day of the month, even if the first day does not have the number `1`. Similarly, both of the following will set the day to the last day of the month:
+
+```js
+const date = Temporal.PlainDate.from("2021-07-01");
+const lastDay = date.with({ day: date.daysInMonth }); // 2021-07-31
+const lastDay2 = date.with({ day: Number.MAX_VALUE }); // 2021-07-31
+```
 
 ## Specifications
 
@@ -27,4 +74,12 @@ TODO
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal.PlainDate")}}
+- {{jsxref("Temporal/PlainDate/with", "Temporal.PlainDate.prototype.with()")}}
+- {{jsxref("Temporal/PlainDate/add", "Temporal.PlainDate.prototype.add()")}}
+- {{jsxref("Temporal/PlainDate/subtract", "Temporal.PlainDate.prototype.subtract()")}}
+- {{jsxref("Temporal/PlainDate/year", "Temporal.PlainDate.prototype.year")}}
+- {{jsxref("Temporal/PlainDate/month", "Temporal.PlainDate.prototype.month")}}
+- {{jsxref("Temporal/PlainDate/daysInMonth", "Temporal.PlainDate.prototype.daysInMonth")}}
+- {{jsxref("Temporal/PlainDate/dayOfWeek", "Temporal.PlainDate.prototype.dayOfWeek")}}
+- {{jsxref("Temporal/PlainDate/dayOfYear", "Temporal.PlainDate.prototype.dayOfYear")}}

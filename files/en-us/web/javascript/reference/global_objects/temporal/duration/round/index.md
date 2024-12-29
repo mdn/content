@@ -57,7 +57,7 @@ The `round()` method performs two operations: rounding and balancing. It does th
 ```js
 const duration = Temporal.Duration.from({ hours: 1, minutes: 30, seconds: 15 });
 const roundedDuration = duration.round("minute");
-console.log(roundedDuration); // "PT1H30M"
+console.log(roundedDuration.toString()); // "PT1H30M"
 ```
 
 ### Avoiding larger units

@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainDate.toPlainYearMonth
 
 {{JSRef}}
 
-The **`toPlainYearMonth()`** method of {{jsxref("Temporal.PlainDate")}} instances TODO
+The **`toPlainYearMonth()`** method of {{jsxref("Temporal.PlainDate")}} instances returns a new {{jsxref("Temporal.PlainYearMonth")}} object representing the {{jsxref("Temporal/PlainDate/year", "year")}} and {{jsxref("Temporal/PlainDate/month", "month")}} of this date in the same calendar system.
 
 ## Syntax
 
@@ -21,19 +21,17 @@ None.
 
 ### Return value
 
-TODO
-
-### Exceptions
-
-TODO
-
-## Description
-
-TODO
+A new `Temporal.PlainYearMonth` object representing the {{jsxref("Temporal/PlainDate/year", "year")}} and {{jsxref("Temporal/PlainDate/month", "month")}} of this date in the same calendar system.
 
 ## Examples
 
-TODO
+### Using toPlainYearMonth()
+
+```js
+const date = Temporal.PlainDate.from("2021-07-01");
+const yearMonth = date.toPlainYearMonth();
+console.log(yearMonth.toString()); // 2021-07
+```
 
 ## Specifications
 
@@ -45,4 +43,8 @@ TODO
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal.PlainDate")}}
+- {{jsxref("Temporal.PlainYearMonth")}}
+- {{jsxref("Temporal/PlainDate/toPlainDateTime", "Temporal.PlainDate.prototype.toPlainDateTime()")}}
+- {{jsxref("Temporal/PlainDate/toPlainMonthDay", "Temporal.PlainDate.prototype.toPlainMonthDay()")}}
+- {{jsxref("Temporal/PlainDate/toZonedDateTime", "Temporal.PlainDate.prototype.toZonedDateTime()")}}

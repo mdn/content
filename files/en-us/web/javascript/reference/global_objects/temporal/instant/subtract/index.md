@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.Instant.subtract
 
 {{JSRef}}
 
-The **`subtract()`** method of {{jsxref("Temporal.Instant")}} instances returns a new `Temporal.Instant` object representing subtracting a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}) from this instant.
+The **`subtract()`** method of {{jsxref("Temporal.Instant")}} instances returns a new `Temporal.Instant` object representing this instant moved backward by a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}).
 
 If you want to subtract two instants and get a duration, use {{jsxref("Temporal/Instant/since", "since()")}} or {{jsxref("Temporal/Instant/until", "until()")}} instead.
 
@@ -35,7 +35,7 @@ A new {{jsxref("Temporal.Instant")}} object representing subtracting `duration` 
 
 ## Description
 
-Subtracting a duration is equivalent to [adding](Web/JavaScript/Reference/Global_Objects/Temporal/Instant/add) the [negation](Web/JavaScript/Reference/Global_Objects/Temporal/Duration/negated) of the duration, so all the same considerations apply.
+Subtracting a duration is equivalent to [adding](Web/JavaScript/Reference/Global_Objects/Temporal/Instant/add) its [negation](Web/JavaScript/Reference/Global_Objects/Temporal/Duration/negated), so all the same considerations apply.
 
 ## Examples
 

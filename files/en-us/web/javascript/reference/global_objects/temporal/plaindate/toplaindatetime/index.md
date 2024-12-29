@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainDate.toPlainDateTime
 
 {{JSRef}}
 
-The **`toPlainDateTime()`** method of {{jsxref("Temporal.PlainDate")}} instances TODO
+The **`toPlainDateTime()`** method of {{jsxref("Temporal.PlainDate")}} instances returns a new {{jsxref("Temporal.PlainDateTime")}} object representing this date and a supplied time in the same calendar system.
 
 ## Syntax
 
@@ -19,23 +19,28 @@ toPlainDateTime(plainTime)
 ### Parameters
 
 - `plainTime` {{optional_inline}}
-  - : TODO
+  - : A string, an object, or a {{jsxref("Temporal.PlainTime")}} instance representing the time component of the resulting `PlainDateTime`. It is converted to a `Temporal.PlainTime` object using the same algorithm as {{jsxref("Temporal/PlainTime/from", "Temporal.PlainTime.from()")}}. Defaults to `"00:00:00"`.
 
 ### Return value
 
-TODO
-
-### Exceptions
-
-TODO
-
-## Description
-
-TODO
+A new `Temporal.PlainDateTime` object representing the date and time specified by this date and `plainTime`, interpreted in the calendar system of this date.
 
 ## Examples
 
-TODO
+### Using toPlainDateTime()
+
+```js
+const date = Temporal.PlainDate.from("2021-07-01");
+const dateTime = date.toPlainDateTime("12:34:56");
+console.log(dateTime.toString()); // 2021-07-01T12:34:56
+
+const midnight = date.toPlainDateTime();
+console.log(midnight.toString()); // 2021-07-01T00:00:00
+
+const date2 = Temporal.PlainDate.from("2021-07-01[u-ca=chinese]");
+const dateTime2 = date2.toPlainDateTime("12:34:56");
+console.log(dateTime2.toString()); // 2021-07-01T12:34:56[u-ca=chinese]
+```
 
 ## Specifications
 
@@ -47,4 +52,10 @@ TODO
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal.PlainDate")}}
+- {{jsxref("Temporal.PlainDateTime")}}
+- {{jsxref("Temporal.PlainTime")}}
+- {{jsxref("Temporal/PlainDate/toPlainMonthDay", "Temporal.PlainDate.prototype.toPlainMonthDay()")}}
+- {{jsxref("Temporal/PlainDate/toPlainYearMonth", "Temporal.PlainDate.prototype.toPlainYearMonth()")}}
+- {{jsxref("Temporal/PlainDate/toZonedDateTime", "Temporal.PlainDate.prototype.toZonedDateTime()")}}
+- {{jsxref("Temporal/PlainTime/toPlainDateTime", "Temporal.PlainTime.prototype.toPlainDateTime()")}}

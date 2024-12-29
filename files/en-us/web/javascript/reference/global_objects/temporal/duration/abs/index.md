@@ -31,8 +31,8 @@ A new `Temporal.Duration` object with the absolute value of this duration, which
 const d1 = Temporal.Duration.from({ hours: 1, minutes: 30 });
 const d2 = Temporal.Duration.from({ hours: -1, minutes: -30 });
 
-console.log(d1.abs()); // "PT1H30M"
-console.log(d2.abs()); // "PT1H30M"
+console.log(d1.abs().toString()); // "PT1H30M"
+console.log(d2.abs().toString()); // "PT1H30M"
 ```
 
 ## Specifications

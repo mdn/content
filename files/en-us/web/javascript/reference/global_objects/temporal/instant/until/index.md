@@ -21,7 +21,7 @@ until(other, options)
 ### Parameters
 
 - `other`
-  - : A string or a {{jsxref("Temporal.Instant")}} instance representing an instant to subtract from this instant. It is converted to a `Temporal.Instant` object using the same algorithm as {{jsxref("Temporal/Instant/from", "Temporal.Instant.from()")}}.
+  - : A string or a {{jsxref("Temporal.Instant")}} instance representing an instant to subtract this instant from. It is converted to a `Temporal.Instant` object using the same algorithm as {{jsxref("Temporal/Instant/from", "Temporal.Instant.from()")}}.
 - `options` {{optional_inline}}
   - : The same options as [`since()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Instant/since#options).
 

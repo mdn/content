@@ -31,8 +31,8 @@ A new `Temporal.Duration` object, where all fields have the same magnitude as th
 const d1 = Temporal.Duration.from({ hours: 1, minutes: 30 });
 const d2 = Temporal.Duration.from({ hours: -1, minutes: -30 });
 
-console.log(d1.negated()); // "-PT1H30M"
-console.log(d2.negated()); // "PT1H30M"
+console.log(d1.negated().toString()); // "-PT1H30M"
+console.log(d2.negated().toString()); // "PT1H30M"
 ```
 
 ## Specifications

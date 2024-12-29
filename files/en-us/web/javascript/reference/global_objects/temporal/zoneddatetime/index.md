@@ -48,23 +48,31 @@ When a `Temporal` API returns a time zone identifier, it always returns named id
 `ZonedDateTime` objects can be serialized and parsed using the [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601) (with some extensions specified by ECMAScript). The string has the following form (spaces are only for readability and should not be present in the actual string):
 
 ```plain
+date tzAnnotation annotations
+date T time tzAnnotation annotations
 date T time offset tzAnnotation annotations
 ```
 
-Where:
+- `date`
+  - : Consists of `year`, `month`, `day`, separated by either nothing or `-`.
+    - `year` is either a four-digit number, or a six-digit number with a `+` or `-` sign.
+    - `month` must be a two-digit number from `01` to `12`.
+    - `day` must be a two-digit number from `01` to `31`.
+- `T` {{optional_inline}}
+  - : The date-time separator, which can be `T`, `t`, or a space.
+- `time` {{optional_inline}}
+  - : Consists of `hour`, and optionally `minute`, and optionally `second`, separated by either nothing or `:`.
+    - `hour` must be a two-digit number from `00` to `23`.
+    - `minute` must be a two-digit number from `00` to `59`.
+    - `second` must be a two-digit number from `00` to `59`. It may optionally be followed by a `.` or `,` and one to nine digits.
+- `offset` {{optional_inline}}
+  - : Either the UTC designator `Z` or `z`, or an offset from UTC in the form `+` or `-` followed by the same format as `time`, except `second` is not allowed.
+- `tzAnnotation`
+  - : In the form of `[timeZoneIdentifier]`, where `timeZoneIdentifier` is a time zone identifier (named or offset) as described above. The annotation may have a _critical flag_ by prefixing the identifier with `!`: e.g., `[!America/New_York]`. This flag is ignored by JavaScript but may be used by other systems.
+- `annotations` {{optional_inline}}
+  - : All in the form of `[key=value]`. The only annotation key that is currently supported is `u-ca`, which specifies the calendar. For the calendar annotation only, the annotation may have a _critical flag_ by prefixing the key with `!`: e.g., `[!u-ca=iso8601]`. With the critical flag set, the parser will throw an error the annotations contain two or more calendar annotations, but is otherwise ignored.
 
-- `date` consists of `year`, `month`, `day`, separated by either nothing or `-`.
-  - `year` is either a four-digit number, or a six-digit number with a `+` or `-` sign.
-  - `month` must be a two-digit number from `01` to `12`.
-  - `day` must be a two-digit number from `01` to `31`.
-- `T` is the date-time separator, which can be `T`, `t`, or a space.
-- `time` consists of `hour`, and optionally `minute`, and optionally `second`, separated by either nothing or `:`. It is optional, and if omitted, `T` and `offset` should be omitted too.
-  - `hour` must be a two-digit number from `00` to `23`.
-  - `minute` must be a two-digit number from `00` to `59`.
-  - `second` must be a two-digit number from `00` to `59`. It may optionally be followed by a `.` or `,` and one to nine digits.
-- `offset` is either the UTC designator `Z` or `z`, or an offset from UTC in the form `+` or `-` followed by the same format as `time`, except `second` is not allowed. It is optional.
-- `tzAnnotation` is an annotation in the form of `[timeZoneIdentifier]`, where `timeZoneIdentifier` is a time zone identifier (named or offset) as described above. The annotation may have a _critical flag_ by prefixing the identifier with `!`: e.g., `[!America/New_York]`. This flag is ignored by JavaScript but may be used by other systems.
-- `annotations` are all in the form of `[key=value]`. The only annotation key that is currently supported is `u-ca`, which specifies the calendar. For the calendar annotation only, the annotation may have a _critical flag_ by prefixing the key with `!`: e.g., `[!u-ca=iso8601]`. With the critical flag set, the parser will throw an error the annotations contain two or more calendar annotations, but is otherwise ignored.
+When serializing, the output is always in the form `YYYY-MM-DDTHH:MM:SS.sssssssss±HH:MM[tz_id][u-ca=calendar_id]`, with configuration for fractional second digits, whether to display the offset/time zone ID/calendar ID, and whether to add a critical flag for the annotations. `YYYY` may be the extended six-digit year if the year is outside the range of four digits.
 
 ### Ambiguity and gaps from local time to UTC time
 

@@ -7,15 +7,38 @@ browser-compat: javascript.builtins.Temporal.PlainDate.daysInMonth
 
 {{JSRef}}
 
-The **`daysInMonth`** accessor property of {{jsxref("Temporal.PlainDate")}} instances returns a positive integer representing the number of days in the month of this date.
+The **`daysInMonth`** accessor property of {{jsxref("Temporal.PlainDate")}} instances returns a positive integer representing the number of days in the month of this date. [Calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 
-## Description
-
-TODO
+The set accessor of `daysInMonth` is `undefined`. You cannot change this property directly.
 
 ## Examples
 
-TODO
+### Using daysInMonth
+
+```js
+const date = Temporal.PlainDate.from("2021-07-01");
+console.log(date.daysInMonth); // 31
+
+const date2 = Temporal.PlainDate.from("2021-02-01");
+console.log(date2.daysInMonth); // 28; 2021 is not a leap year
+
+const date3 = Temporal.PlainDate.from("2020-02-01");
+console.log(date3.daysInMonth); // 29; 2020 is a leap year
+
+const date4 = Temporal.PlainDate.from("2021-04-01[u-ca=chinese]");
+console.log(date4.month); // 2
+console.log(date4.daysInMonth); // 30; the Chinese 2nd month has 30 days
+```
+
+### Changing to the second last day of the month
+
+You can use `daysInMonth` to change to the second last day of the month:
+
+```js
+const date = Temporal.PlainDate.from("2021-07-01");
+const secondLastDay = date.with({ day: date.daysInMonth - 1 });
+console.log(secondLastDay.toString()); // 2021-07-30
+```
 
 ## Specifications
 
@@ -27,4 +50,12 @@ TODO
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal.PlainDate")}}
+- {{jsxref("Temporal/PlainDate/with", "Temporal.PlainDate.prototype.with()")}}
+- {{jsxref("Temporal/PlainDate/add", "Temporal.PlainDate.prototype.add()")}}
+- {{jsxref("Temporal/PlainDate/subtract", "Temporal.PlainDate.prototype.subtract()")}}
+- {{jsxref("Temporal/PlainDate/year", "Temporal.PlainDate.prototype.year")}}
+- {{jsxref("Temporal/PlainDate/month", "Temporal.PlainDate.prototype.month")}}
+- {{jsxref("Temporal/PlainDate/day", "Temporal.PlainDate.prototype.day")}}
+- {{jsxref("Temporal/PlainDate/daysInWeek", "Temporal.PlainDate.prototype.daysInWeek")}}
+- {{jsxref("Temporal/PlainDate/daysInYear", "Temporal.PlainDate.prototype.daysInYear")}}

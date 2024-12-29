@@ -112,6 +112,16 @@ console.log(durations.map((d) => d.toString()));
 // [ 'PT1H', 'PT1H30M', 'PT1H45M', 'PT2H' ]
 ```
 
+Pass options like this:
+
+```js
+durations.sort((a, b) =>
+  Temporal.Duration.compare(a, b, {
+    relativeTo: Temporal.Now.zonedDateTimeISO(),
+  }),
+);
+```
+
 ## Specifications
 
 {{Specifications}}

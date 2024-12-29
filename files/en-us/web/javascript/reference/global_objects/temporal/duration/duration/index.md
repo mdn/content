@@ -70,7 +70,7 @@ A new `Temporal.Duration` object, possibly [unbalanced](/en-US/docs/Web/JavaScri
 
 ```js
 const d = new Temporal.Duration(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-console.log(d); // "P1Y2M3W4DT5H6M7.00800901S"
+console.log(d.toString()); // "P1Y2M3W4DT5H6M7.00800901S"
 ```
 
 ## Specifications

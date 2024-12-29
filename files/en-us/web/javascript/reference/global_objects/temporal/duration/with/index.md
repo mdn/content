@@ -36,7 +36,7 @@ with(info)
 
 ### Return value
 
-Returns a new `Temporal.Duration` object, where the fields specified in `info` that are not `undefined` are replaced by the corresponding values, and the rest of the fields are copied from the original duration.
+A new `Temporal.Duration` object, where the fields specified in `info` that are not `undefined` are replaced by the corresponding values, and the rest of the fields are copied from the original duration.
 
 ### Exceptions
 
@@ -83,3 +83,7 @@ console.log(d2.seconds); // 100; remains unbalanced
 ## See also
 
 - {{jsxref("Temporal.Duration")}}
+- {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}
+- {{jsxref("Temporal/Duration/add", "Temporal.Duration.prototype.add()")}}
+- {{jsxref("Temporal/Duration/subtract", "Temporal.Duration.prototype.subtract()")}}
+- {{jsxref("Temporal/Duration/round", "Temporal.Duration.prototype.round()")}}

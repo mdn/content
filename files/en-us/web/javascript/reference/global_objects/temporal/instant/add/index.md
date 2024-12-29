@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.Instant.add
 
 {{JSRef}}
 
-The **`add()`** method of {{jsxref("Temporal.Instant")}} instances representing adding a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}) to this instant.
+The **`add()`** method of {{jsxref("Temporal.Instant")}} instances returns a new `Temporal.Instant` object representing this instant moved forward by a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}).
 
 ## Syntax
 
@@ -36,6 +36,8 @@ A new {{jsxref("Temporal.Instant")}} object representing adding `duration` to th
 In essence, the `add()` method first gets the number of nanoseconds represented by `duration`, adds it to this instant's {{jsxref("Temporal/Instant/epochNanoseconds", "epochNanoseconds")}}, and then creates a new `Temporal.Instant` object from the result. Therefore, the duration must unambiguously represent a fixed amount of time.
 
 If you want to add a calendar duration, the addition must be performed in the context of a calendar and a time zone to account for the variable lengths of months, years, and days (because of daylight saving time). In this case, convert the instant to a {{jsxref("Temporal.ZonedDateTime")}} object, add the duration, and then convert the result back to an instant.
+
+Adding a duration is equivalent to [subtracting](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Instant/subtract) its [negation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/negated).
 
 ## Examples
 

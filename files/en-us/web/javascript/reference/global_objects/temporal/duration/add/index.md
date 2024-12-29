@@ -48,7 +48,7 @@ const d1 = Temporal.Duration.from({ hours: 1, minutes: 30 });
 const d2 = Temporal.Duration.from({ hours: -1, minutes: -20 });
 
 const d3 = d1.add(d2);
-console.log(d3); // "PT10M"
+console.log(d3.toString()); // "PT10M"
 ```
 
 ### Adding calendar durations
@@ -57,11 +57,11 @@ console.log(d3); // "PT10M"
 const d1 = Temporal.Duration.from({ days: 1 });
 const d2 = Temporal.Duration.from({ months: 1 });
 
-d1.add(d2); // RangeError: For years, months, or weeks arithmetic, use date arithmetic relative to a starting point
+d1.add(d2); // RangeError: can't compare durations when "relativeTo" is undefined
 
 const start = Temporal.PlainDateTime.from("2022-01-01T00:00"); // ISO 8601 calendar
 const result = start.add(d1).add(d2).since(start);
-console.log(result); // "P32D"
+console.log(result.toString()); // "P32D"
 ```
 
 ## Specifications
