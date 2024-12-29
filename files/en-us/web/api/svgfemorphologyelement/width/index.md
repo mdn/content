@@ -35,5 +35,3 @@ console.log(horizontalSize.baseVal.value); // the `width` value
 ## See also
 
 - {{domxref("SVGFEMorphologyElement.height")}}
-- CSS {{cssxref("blend-mode")}} data type
-- CSS {{cssxref("mix-blend-mode")}} property
