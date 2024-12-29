@@ -9,6 +9,37 @@ browser-compat: javascript.builtins.Temporal.PlainDateTime
 
 The **`Temporal.PlainDateTime`** object represents a date (calendar date) and time (wall-clock time) without a time zone. It is fundamentally represented as a combination of a [date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate) (with an associated calendar system) and a [time](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime).
 
+## Description
+
+### ISO 8601 format
+
+`PlainDateTime` objects can be serialized and parsed using the [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601) (with some extensions specified by ECMAScript). The string has the following form (spaces are only for readability and should not be present in the actual string):
+
+```plain
+YYYY-MM-DD T HH:MM:SS.sssssssss [u-ca=calendar_id]
+```
+
+- `YYYY`
+  - : Either a four-digit number, or a six-digit number with a `+` or `-` sign.
+- `MM`
+  - : A two-digit number from `01` to `12`.
+- `DD`
+  - : A two-digit number from `01` to `31`. The `YYYY`, `MM`, and `DD` components can be separated by `-` or nothing.
+- `T` {{optional_inline}}
+  - : The date-time separator, which can be `T`, `t`, or a space. Present if and only if `HH` is present.
+- `HH` {{optional_inline}}
+  - : A two-digit number from `00` to `23`. Defaults to `00`.
+- `MM` {{optional_inline}}
+  - : A two-digit number from `00` to `59`. Defaults to `00`.
+- `SS.sssssssss` {{optional_inline}}
+  - : A two-digit number from `00` to `59`. May optionally be followed by a `.` or `,` and one to nine digits. Defaults to `00`. The `HH`, `MM`, and `SS` components can be separated by `:` or nothing. You can omit either just `SS` or both `SS` and `MM`, so the time can be one of three forms: `HH`, `HH:MM`, or `HH:MM:SS.sssssssss`.
+- `[u-ca=calendar_id]` {{optional_inline}}
+  - : Replace `calendar_id` with the calendar to use. May have a _critical flag_ by prefixing the key with `!`: e.g., `[!u-ca=iso8601]`. This flag generally tells other systems that it cannot be ignored if they don't support it. The `Temporal` parser will throw an error if the annotations contain two or more calendar annotations and one of them is critical. Defaults to `[u-ca=iso8601]`. Note that the `YYYY-MM-DD` is always interpreted in ISO and then converted to the specified calendar.
+
+As an input, you may optionally include the offset and time zone identifier, in the same format as [`ZonedDateTime`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#iso_8601_format), but they will be ignored. Note that the offset must _not_ be `Z`. Other annotations in the `[key=value]` format are also ignored, and they must not have the critical flag.
+
+When serializing, you can configure the fractional second digits, whether to display the calendar ID, and whether to add a critical flag for it.
+
 ## Constructor
 
 - {{jsxref("Temporal/PlainDateTime/PlainDateTime", "Temporal.PlainDateTime()")}}
@@ -17,7 +48,7 @@ The **`Temporal.PlainDateTime`** object represents a date (calendar date) and ti
 ## Static methods
 
 - {{jsxref("Temporal/PlainDateTime/compare", "Temporal.PlainDateTime.compare()")}}
-  - : Returns a number (-1, 0, 1) indicating whether the first datetime comes before, is the same as, or comes after the second datetime. Equivalent to first comparing their dates, then their times in case of a tie.
+  - : Returns a number (-1, 0, 1) indicating whether the first date-time comes before, is the same as, or comes after the second date-time. Equivalent to first comparing their dates, then their times in case of a tie.
 - {{jsxref("Temporal/PlainDateTime/from", "Temporal.PlainDateTime.from()")}}
   - : Creates a new `Temporal.PlainDateTime` object from another `Temporal.PlainDateTime` object, an object with date and time properties, or an ISO 8601 string.
 

@@ -7,16 +7,16 @@ browser-compat: javascript.builtins.Temporal.Duration
 
 {{JSRef}}
 
-The **`Temporal.Duration`** object represents a difference between two time points, which can be used in datetime arithmetic. It is fundamentally represented as a combination of years, months, weeks, days, hours, minutes, seconds, milliseconds, microseconds, and nanoseconds values.
+The **`Temporal.Duration`** object represents a difference between two time points, which can be used in date/time arithmetic. It is fundamentally represented as a combination of years, months, weeks, days, hours, minutes, seconds, milliseconds, microseconds, and nanoseconds values.
 
 ## Description
 
 ### ISO 8601 duration format
 
-`Duration` objects can be serialized and parsed using the [ISO 8601 duration format](https://en.wikipedia.org/wiki/ISO_8601#Durations) (with some extensions specified by ECMAScript). The string has the following form:
+`Duration` objects can be serialized and parsed using the [ISO 8601 duration format](https://en.wikipedia.org/wiki/ISO_8601#Durations) (with some extensions specified by ECMAScript). The string has the following form (spaces are only for readability and should not be present in the actual string):
 
 ```plain
-±PnYnMnWnDTnHnMnS
+±P nY nM nW nD T nH nM nS
 ```
 
 - `±` {{optional_inline}}
@@ -50,7 +50,7 @@ When serializing, the output respects the stored components as much as possible,
 
 ### Calendar durations
 
-A _calendar duration_ is one that contains any of the [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars) units: weeks, months, and years. A non-calendar duration is portable and can participate in datetime arithmetic without any calendar information, because they unambiguously represent a fixed amount of time. However, a calendar duration is not portable because the number of days in a month or year depends on the calendar system and the reference time point. Therefore, attempting to perform any arithmetic operation on a calendar durations throws an error because durations don't keep track of a calendar themselves. For example, if we are in May of the Gregorian calendar, then "1 month" is "31 days", but if we are in April, then "1 month" becomes "30 days". To add or subtract calendar durations, you need to add them to dates instead (which, by nature of date calculations, returns you a non-calendar duration):
+A _calendar duration_ is one that contains any of the [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars) units: weeks, months, and years. A non-calendar duration is portable and can participate in date/time arithmetic without any calendar information, because they unambiguously represent a fixed amount of time. However, a calendar duration is not portable because the number of days in a month or year depends on the calendar system and the reference time point. Therefore, attempting to perform any arithmetic operation on a calendar durations throws an error because durations don't keep track of a calendar themselves. For example, if we are in May of the Gregorian calendar, then "1 month" is "31 days", but if we are in April, then "1 month" becomes "30 days". To add or subtract calendar durations, you need to add them to dates instead (which, by nature of date calculations, returns you a non-calendar duration):
 
 ```js
 const dur1 = Temporal.Duration.from({ years: 1 });

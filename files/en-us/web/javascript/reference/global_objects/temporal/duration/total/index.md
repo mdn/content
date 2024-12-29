@@ -40,7 +40,7 @@ A floating-point number representing the total duration in the given unit. May b
 
 ## Description
 
-If a `relativeTo` is provided, the result is calculated by adding the duration to the starting point, finding the difference between the result and the starting point (in nanoseconds), and then converting the difference to the requested unit by dividing by the appropriate number of nanoseconds per unit. Providing a zoned datetime allows daylight saving time and other time zone changes to be taken into account too; otherwise, 24-hour days are assumed.
+If a `relativeTo` is provided, the result is calculated by adding the duration to the starting point, finding the difference between the result and the starting point (in nanoseconds), and then converting the difference to the requested unit by dividing by the appropriate number of nanoseconds per unit. Providing a zoned date-time allows daylight saving time and other time zone changes to be taken into account too; otherwise, 24-hour days are assumed.
 
 If `relativeTo` is not provided, the result is calculated by converting the duration to nanoseconds and dividing by the appropriate number of nanoseconds per unit.
 

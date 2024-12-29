@@ -39,7 +39,7 @@ Returns `-1` if `duration1` is shorter than `duration2`, `0` if they are equal, 
 
 ## Description
 
-If `relativeTo` is a zoned datetime, and either `duration1` or `duration2` is a calendar duration, the result is calculated by adding the durations to the starting point, and then comparing the resulting instants. Otherwise, the comparison is done by converting both of them to nanoseconds (assuming 24-hour days, and using the calendar of `relativeTo` if necessary) and comparing the results.
+If `relativeTo` is a zoned date-time, and either `duration1` or `duration2` is a calendar duration, the result is calculated by adding the durations to the starting point, and then comparing the resulting instants. Otherwise, the comparison is done by converting both of them to nanoseconds (assuming 24-hour days, and using the calendar of `relativeTo` if necessary) and comparing the results.
 
 ## Examples
 

@@ -38,8 +38,6 @@ for (
 }
 ```
 
-TODO: example of non-contiguous days?
-
 ### Changing day
 
 ```js

@@ -20,27 +20,29 @@ You can convert from `Date` to `Temporal.Instant` using the {{jsxref("Date.proto
 `Instant` objects can be serialized and parsed using the [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601) (with some extensions specified by ECMAScript). The string has the following form (spaces are only for readability and should not be present in the actual string):
 
 ```plain
-date T time offset annotations
+YYYY-MM-DD T HH:MM:SS.sssssssss Z/±HH:MM
 ```
 
-- `date`
-  - : Consists of `year`, `month`, `day`, separated by either nothing or `-`.
-    - `year` is either a four-digit number, or a six-digit number with a `+` or `-` sign.
-    - `month` must be a two-digit number from `01` to `12`.
-    - `day` must be a two-digit number from `01` to `31`.
+- `YYYY`
+  - : Either a four-digit number, or a six-digit number with a `+` or `-` sign.
+- `MM`
+  - : A two-digit number from `01` to `12`.
+- `DD`
+  - : A two-digit number from `01` to `31`. The `YYYY`, `MM`, and `DD` components can be separated by `-` or nothing.
 - `T`
   - : The date-time separator, which can be `T`, `t`, or a space.
-- `time`
-  - : Consists of `hour`, and optionally `minute`, and optionally `second`, separated by either nothing or `:`.
-    - `hour` must be a two-digit number from `00` to `23`.
-    - `minute` must be a two-digit number from `00` to `59`.
-    - `second` must be a two-digit number from `00` to `59`. It may optionally be followed by a `.` or `,` and one to nine digits.
-- `offset`
-  - : Either the UTC designator `Z` or `z`, or an offset from UTC in the form `+` or `-` followed by the same format as `time`, except `second` is not allowed.
-- `annotations` {{optional_inline}}
-  - : ALl annotations, including time zone names, are ignored. See [`Temporal.ZonedDateTime`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#iso_8601_format) for more information.
+- `HH`
+  - : A two-digit number from `00` to `23`.
+- `MM` {{optional_inline}}
+  - : A two-digit number from `00` to `59`. Defaults to `00`.
+- `SS.sssssssss` {{optional_inline}}
+  - : A two-digit number from `00` to `59`. May optionally be followed by a `.` or `,` and one to nine digits. Defaults to `00`. The `HH`, `MM`, and `SS` components can be separated by `:` or nothing. You can omit either just `SS` or both `SS` and `MM`, so the time can be one of three forms: `HH`, `HH:MM`, or `HH:MM:SS.sssssssss`.
+- `Z/±HH:MM`
+  - : Either the UTC designator `Z` or `z`, or an offset from UTC in the form `+` or `-` followed by the same format as the previous `HH:MM`: a two-digit number from `00` to `23`, and a two-digit number from `00` to `59`, separated by `:` or nothing.
 
-When serializing, the output is always in the form `YYYY-MM-DDTHH:MM:SS.sssssssssZ`, with configuration for fractional second digits. `YYYY` may be the extended six-digit year if the year is outside the range of four digits.
+As an input, you may optionally include the time zone identifier and calendar, in the same format as [`ZonedDateTime`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#iso_8601_format), but they will be ignored. Other annotations in the `[key=value]` format are also ignored, and they must not have the critical flag.
+
+When serializing, you can configure the fractional second digits and offset.
 
 ## Constructor
 

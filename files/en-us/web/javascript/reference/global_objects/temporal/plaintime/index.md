@@ -9,6 +9,25 @@ browser-compat: javascript.builtins.Temporal.PlainTime
 
 The **`Temporal.PlainTime`** object represents a time without a date or time zone; for example, a recurring event that happens at the same time every day. It is fundamentally represented as a combination of hour, minute, second, millisecond, microsecond, and nanosecond values.
 
+### ISO 8601 format
+
+`PlainTime` objects can be serialized and parsed using the [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601) (with some extensions specified by ECMAScript). The string has the following form (spaces are only for readability and should not be present in the actual string):
+
+```plain
+HH:MM:SS.sssssssss
+```
+
+- `HH`
+  - : A two-digit number from `00` to `23`. It may be prefixed by the time designator `T` or `t`.
+- `MM` {{optional_inline}}
+  - : A two-digit number from `00` to `59`. Defaults to `00`.
+- `SS.sssssssss` {{optional_inline}}
+  - : A two-digit number from `00` to `59`. May optionally be followed by a `.` or `,` and one to nine digits. Defaults to `00`. The `HH`, `MM`, and `SS` components can be separated by `:` or nothing. You can omit either just `SS` or both `SS` and `MM`, so the time can be one of three forms: `HH`, `HH:MM`, or `HH:MM:SS.sssssssss`.
+
+As an input, you may optionally include the date, offset, time zone identifier, and calendar, in the same format as [`PlainDateTime`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime#iso_8601_format), but they will be ignored. A date-only string will be rejected. Other annotations in the `[key=value]` format are also ignored, and they must not have the critical flag.
+
+When serializing, you can configure the fractional second digits.
+
 ## Constructor
 
 - {{jsxref("Temporal/PlainTime/PlainTime", "Temporal.PlainTime()")}}

@@ -37,7 +37,7 @@ In essence, the `add()` method first gets the number of nanoseconds represented 
 
 If you want to add a calendar duration, the addition must be performed in the context of a calendar and a time zone to account for the variable lengths of months, years, and days (because of daylight saving time). In this case, convert the instant to a {{jsxref("Temporal.ZonedDateTime")}} object, add the duration, and then convert the result back to an instant.
 
-Adding a duration is equivalent to [subtracting](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Instant/subtract) its [negation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/negated).
+Adding a duration is equivalent to [subtracting](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Instant/subtract) its [negation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration/negated).
 
 ## Examples
 

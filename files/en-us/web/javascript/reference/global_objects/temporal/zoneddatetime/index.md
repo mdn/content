@@ -48,31 +48,33 @@ When a `Temporal` API returns a time zone identifier, it always returns named id
 `ZonedDateTime` objects can be serialized and parsed using the [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601) (with some extensions specified by ECMAScript). The string has the following form (spaces are only for readability and should not be present in the actual string):
 
 ```plain
-date tzAnnotation annotations
-date T time tzAnnotation annotations
-date T time offset tzAnnotation annotations
+YYYY-MM-DD T HH:MM:SS.sssssssss Z/±HH:MM [time_zone_id] [u-ca=calendar_id]
 ```
 
-- `date`
-  - : Consists of `year`, `month`, `day`, separated by either nothing or `-`.
-    - `year` is either a four-digit number, or a six-digit number with a `+` or `-` sign.
-    - `month` must be a two-digit number from `01` to `12`.
-    - `day` must be a two-digit number from `01` to `31`.
+- `YYYY`
+  - : Either a four-digit number, or a six-digit number with a `+` or `-` sign.
+- `MM`
+  - : A two-digit number from `01` to `12`.
+- `DD`
+  - : A two-digit number from `01` to `31`. The `YYYY`, `MM`, and `DD` components can be separated by `-` or nothing.
 - `T` {{optional_inline}}
-  - : The date-time separator, which can be `T`, `t`, or a space.
-- `time` {{optional_inline}}
-  - : Consists of `hour`, and optionally `minute`, and optionally `second`, separated by either nothing or `:`.
-    - `hour` must be a two-digit number from `00` to `23`.
-    - `minute` must be a two-digit number from `00` to `59`.
-    - `second` must be a two-digit number from `00` to `59`. It may optionally be followed by a `.` or `,` and one to nine digits.
-- `offset` {{optional_inline}}
-  - : Either the UTC designator `Z` or `z`, or an offset from UTC in the form `+` or `-` followed by the same format as `time`, except `second` is not allowed.
-- `tzAnnotation`
-  - : In the form of `[timeZoneIdentifier]`, where `timeZoneIdentifier` is a time zone identifier (named or offset) as described above. The annotation may have a _critical flag_ by prefixing the identifier with `!`: e.g., `[!America/New_York]`. This flag is ignored by JavaScript but may be used by other systems.
-- `annotations` {{optional_inline}}
-  - : All in the form of `[key=value]`. The only annotation key that is currently supported is `u-ca`, which specifies the calendar. For the calendar annotation only, the annotation may have a _critical flag_ by prefixing the key with `!`: e.g., `[!u-ca=iso8601]`. With the critical flag set, the parser will throw an error the annotations contain two or more calendar annotations, but is otherwise ignored.
+  - : The date-time separator, which can be `T`, `t`, or a space. Present if and only if `HH` is present.
+- `HH` {{optional_inline}}
+  - : A two-digit number from `00` to `23`. Defaults to `00`.
+- `MM` {{optional_inline}}
+  - : A two-digit number from `00` to `59`. Defaults to `00`.
+- `SS.sssssssss` {{optional_inline}}
+  - : A two-digit number from `00` to `59`. May optionally be followed by a `.` or `,` and one to nine digits. Defaults to `00`. The `HH`, `MM`, and `SS` components can be separated by `:` or nothing. You can omit either just `SS` or both `SS` and `MM`, so the time can be one of three forms: `HH`, `HH:MM`, or `HH:MM:SS.sssssssss`.
+- `Z/±HH:MM` {{optional_inline}}
+  - : Either the UTC designator `Z` or `z`, or an offset from UTC in the form `+` or `-` followed by the same format as the previous `HH:MM`: a two-digit number from `00` to `23`, and a two-digit number from `00` to `59`, separated by `:` or nothing. If omitted, the offset is derived from the time zone identifier. If present, then the time must be provided too.
+- `[time_zone_id]`
+  - : Replace `time_zone_id` with the time zone identifier (named or offset) as described above. May have a _critical flag_ by prefixing the identifier with `!`: e.g., `[!America/New_York]`. This flag generally tells other systems that it cannot be ignored if they don't support it.
+- `[u-ca=calendar_id]` {{optional_inline}}
+  - : Replace `calendar_id` with the calendar to use. May have a _critical flag_ by prefixing the key with `!`: e.g., `[!u-ca=iso8601]`. This flag generally tells other systems that it cannot be ignored if they don't support it. The `Temporal` parser will throw an error if the annotations contain two or more calendar annotations and one of them is critical. Defaults to `[u-ca=iso8601]`. Note that the `YYYY-MM-DD` is always interpreted in ISO and then converted to the specified calendar.
 
-When serializing, the output is always in the form `YYYY-MM-DDTHH:MM:SS.sssssssss±HH:MM[tz_id][u-ca=calendar_id]`, with configuration for fractional second digits, whether to display the offset/time zone ID/calendar ID, and whether to add a critical flag for the annotations. `YYYY` may be the extended six-digit year if the year is outside the range of four digits.
+As an input, other annotations in the `[key=value]` format are ignored, and they must not have the critical flag.
+
+When serializing, you can configure the fractional second digits, whether to display the offset/time zone ID/calendar ID, and whether to add a critical flag for the annotations.
 
 ### Ambiguity and gaps from local time to UTC time
 
@@ -127,7 +129,7 @@ When constructing a `ZonedDateTime` from an ISO 8601 string or when updating it 
 ## Static methods
 
 - {{jsxref("Temporal/ZonedDateTime/compare", "Temporal.ZonedDateTime.compare()")}}
-  - : Returns a number (-1, 0, 1) indicating whether the first datetime comes before, is the same as, or comes after the second datetime. Equivalent to comparing the {{jsxref("Temporal/ZonedDateTime/epochNanoseconds", "epochNanoseconds")}} of the two datetimes.
+  - : Returns a number (-1, 0, 1) indicating whether the first date-time comes before, is the same as, or comes after the second date-time. Equivalent to comparing the {{jsxref("Temporal/ZonedDateTime/epochNanoseconds", "epochNanoseconds")}} of the two datetimes.
 - {{jsxref("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}}
   - : Creates a new `Temporal.ZonedDateTime` object from another `Temporal.ZonedDateTime` object, an object with date, time, and time zone properties, or an ISO 8601 string.
 

@@ -30,7 +30,7 @@ The important lesson to preface the whole introduction is that **date handling i
 
 A second feature lacking from `Date` is the [calendar system](#calendars). Most people may be familiar with the Gregorian calendar, where there are two eras: BC and AD, there are 12 months, each month has a different number of days, there's a leap year every 4 years, etc. However, some of these concepts may not apply when you are working with another calendar system, such as the Hebrew calendar, the Chinese calendar, the Japanese calendar, etc. With `Date`, you can only work with the Gregorian calendar model.
 
-There are many other undesirable legacies about `Date`, such as all setters being mutating (which often causes unwanted side effects), the [datetime string format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format) being impossible to parse in a consistent way, etc. In the end, the best solution is to build a new API from scratch, which is what `Temporal` is.
+There are many other undesirable legacies about `Date`, such as all setters being mutating (which often causes unwanted side effects), the [date time string format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format) being impossible to parse in a consistent way, etc. In the end, the best solution is to build a new API from scratch, which is what `Temporal` is.
 
 ### API overview
 
@@ -40,7 +40,7 @@ There are many other undesirable legacies about `Date`, such as all setters bein
 - Representing a time point:
   - Representing a unique instant in history:
     - As a timestamp: {{jsxref("Temporal.Instant")}}
-    - As a datetime component combination paired with a time zone: {{jsxref("Temporal.ZonedDateTime")}}
+    - As a date-time component combination paired with a time zone: {{jsxref("Temporal.ZonedDateTime")}}
   - Representing a time zone-unaware date/time (which are all prefixed with "Plain"):
     - Date (year, month, day) + time (hour, minute, second, millisecond, nanosecond): {{jsxref("Temporal.PlainDateTime")}} (Note: `ZonedDateTime` is equivalent to `PlainDateTime` plus a time zone)
       - Date (year, month, day): {{jsxref("Temporal.PlainDate")}}
@@ -324,7 +324,7 @@ The concept of a "week" is not connected with any astronomical event, but is a c
 ## Static properties
 
 - {{jsxref("Temporal.Duration")}}
-  - : Represents a difference between two time points, which can be used in datetime arithmetic. It is fundamentally represented as a combination of years, months, weeks, days, hours, minutes, seconds, milliseconds, microseconds, and nanoseconds values.
+  - : Represents a difference between two time points, which can be used in date/time arithmetic. It is fundamentally represented as a combination of years, months, weeks, days, hours, minutes, seconds, milliseconds, microseconds, and nanoseconds values.
 - {{jsxref("Temporal.Instant")}}
   - : Represents a unique point in history, with nanosecond precision. It is fundamentally represented as the number of nanoseconds since the Unix epoch (midnight at the beginning of January 1, 1970, UTC), without any time zone or calendar system.
 - {{jsxref("Temporal.Now")}}

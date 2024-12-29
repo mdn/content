@@ -9,6 +9,27 @@ browser-compat: javascript.builtins.Temporal.PlainYearMonth
 
 The **`Temporal.PlainYearMonth`** object represents the year and month of a calendar date, without a day or time zone; for example, an event on a calendar that happens during the whole month. It is fundamentally represented as an ISO 8601 calendar date, with year, month, and day fields, and an associated calendar system. The day is used to disambiguate the year-month in some calendar systems.
 
+## Description
+
+### ISO 8601 format
+
+`PlainYearMonth` objects can be serialized and parsed using the [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601) (with some extensions specified by ECMAScript). The string has the following form (spaces are only for readability and should not be present in the actual string):
+
+```plain
+YYYY-MM [u-ca=calendar_id]
+```
+
+- `YYYY`
+  - : Either a four-digit number, or a six-digit number with a `+` or `-` sign.
+- `MM`
+  - : A two-digit number from `01` to `12`. The `YYYY` and `MM` components can be separated by `-` or nothing.
+- `[u-ca=calendar_id]` {{optional_inline}}
+  - : Replace `calendar_id` with the calendar to use. May have a _critical flag_ by prefixing the key with `!`: e.g., `[!u-ca=iso8601]`. This flag generally tells other systems that it cannot be ignored if they don't support it. The `Temporal` parser will throw an error if the annotations contain two or more calendar annotations and one of them is critical. Defaults to `[u-ca=iso8601]`. Note that the `MM-DD` is always interpreted in ISO and then converted to the specified calendar.
+
+As an input, you may optionally include the day, time, offset, and time zone identifier, in the same format as [`PlainDateTime`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime#iso_8601_format), but they will be ignored. Other annotations in the `[key=value]` format are also ignored, and they must not have the critical flag.
+
+When serializing, you can configure whether to display the calendar ID, and whether to add a critical flag for it.
+
 ## Constructor
 
 - {{jsxref("Temporal/PlainYearMonth/PlainYearMonth", "Temporal.PlainYearMonth()")}}
