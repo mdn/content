@@ -9,6 +9,8 @@ browser-compat: javascript.builtins.Temporal.PlainTime.PlainTime
 
 The **`Temporal.PlainTime()`** constructor creates {{jsxref("Temporal.PlainTime")}} objects.
 
+Like all other `Temporal` classes, you should usually construct `Temporal.PlainTime` objects using the {{jsxref("Temporal/PlainTime/from", "Temporal.PlainTime.from()")}} static method, which can handle a variety of input types.
+
 ## Syntax
 
 ```js-nolint
@@ -20,6 +22,8 @@ new Temporal.PlainTime(hour, minute, second, millisecond)
 new Temporal.PlainTime(hour, minute, second, millisecond, microsecond)
 new Temporal.PlainTime(hour, minute, second, millisecond, microsecond, nanosecond)
 ```
+
+> **Note:** `Temporal.PlainTime()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

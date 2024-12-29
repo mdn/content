@@ -9,6 +9,8 @@ browser-compat: javascript.builtins.Temporal.PlainDateTime.PlainDateTime
 
 The **`Temporal.PlainDateTime()`** constructor creates {{jsxref("Temporal.PlainDateTime")}} objects.
 
+Like all other `Temporal` classes, you should usually construct `Temporal.PlainDateTime` objects using the {{jsxref("Temporal/PlainDateTime/from", "Temporal.PlainDateTime.from()")}} static method, which can handle a variety of input types.
+
 ## Syntax
 
 ```js-nolint
@@ -21,6 +23,8 @@ new Temporal.PlainDateTime(year, month, day, hour, minute, second, millisecond, 
 new Temporal.PlainDateTime(year, month, day, hour, minute, second, millisecond, microsecond, nanosecond)
 new Temporal.PlainDateTime(year, month, day, hour, minute, second, millisecond, microsecond, nanosecond, calendar)
 ```
+
+> **Note:** `Temporal.PlainDateTime()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

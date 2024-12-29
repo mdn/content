@@ -37,9 +37,24 @@ The time zones are stored in the [IANA Time Zone Database](https://www.iana.org/
 - A _time zone definition_ in the form of a table that maps UTC date/time ranges (including future ranges) to specific offsets.
 - Zero or more _non-primary time zone identifiers_ that are aliases to the primary time zone identifier. These are usually historical names that are no longer in use, but are kept for compatibility reasons. See {{jsxref("Intl/Locale/getTimeZones", "Intl.Locale.prototype.getTimeZones")}} for more information.
 
-When a `Temporal` API accepts a _time zone identifier_, in addition to primary time zone identifiers and non-primary time zone identifiers, it also accepts an _offset time zone identifier_, which is in the form of: a `+` or `-` sign, followed by two digits for the hour, then optionally two digits for the minute, separated from the hour by either a colon `:` or no separator. For example, `+05:30`, `-08`, `+0600` are all valid offsets. Named identifiers are matched case-insensitively.
+When a `Temporal` API accepts a _time zone identifier_, in addition to primary time zone identifiers and non-primary time zone identifiers, it also accepts an _offset time zone identifier_, which is in the time zone offset format specified below, except that subminute components are not allowed. For example, `+05:30`, `-08`, `+0600` are all valid offsets identifiers. Named identifiers are matched case-insensitively.
 
 When a `Temporal` API returns a time zone identifier, it always returns named identifiers in the preferred case, and offset identifiers in the form `+HH:MM` or `-HH:MM`.
+
+When a `Temporal` API accepts a _time zone offset_, it is in the following form:
+
+```plain
+±HH:MM:SS.sssssssss
+```
+
+- The string starts with either `+` or `-`.
+- `HH` is a two-digit number from `00` to `23`.
+- `MM` is a two-digit number from `00` to `59`.
+- `SS.sssssssss` is a two-digit number from `00` to `59`, optionally followed by a `.` or `,` and one to nine digits.
+
+The `HH`, `MM`, and `SS` components can be separated by `:` or nothing. You can omit either just `SS` or both `SS` and `MM`, so the offset can be one of three forms: `±HH`, `±HH:MM`, or `±HH:MM:SS.sssssssss`. This allows specifying offsets at the nanosecond precision.
+
+Note that subminute offset is not allowed as a time zone identifier, and may not be universally supported by other systems.
 
 `ZonedDateTime` is the only `Temporal` class that is time zone-aware. All other classes are time zone-unaware, where `Instant` represents an exact time, and `PlainDateTime`, `PlainDate`, `PlainTime`, `PlainYearMonth`, and `PlainMonthDay` represent a calendar date or wall-clock time.
 
@@ -48,7 +63,7 @@ When a `Temporal` API returns a time zone identifier, it always returns named id
 `ZonedDateTime` objects can be serialized and parsed using the [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601) (with some extensions specified by ECMAScript). The string has the following form (spaces are only for readability and should not be present in the actual string):
 
 ```plain
-YYYY-MM-DD T HH:MM:SS.sssssssss Z/±HH:MM [time_zone_id] [u-ca=calendar_id]
+YYYY-MM-DD T HH:MM:SS.sssssssss Z/±HH:MM:SS.sssssssss [time_zone_id] [u-ca=calendar_id]
 ```
 
 - `YYYY`
@@ -65,8 +80,8 @@ YYYY-MM-DD T HH:MM:SS.sssssssss Z/±HH:MM [time_zone_id] [u-ca=calendar_id]
   - : A two-digit number from `00` to `59`. Defaults to `00`.
 - `SS.sssssssss` {{optional_inline}}
   - : A two-digit number from `00` to `59`. May optionally be followed by a `.` or `,` and one to nine digits. Defaults to `00`. The `HH`, `MM`, and `SS` components can be separated by `:` or nothing. You can omit either just `SS` or both `SS` and `MM`, so the time can be one of three forms: `HH`, `HH:MM`, or `HH:MM:SS.sssssssss`.
-- `Z/±HH:MM` {{optional_inline}}
-  - : Either the UTC designator `Z` or `z`, or an offset from UTC in the form `+` or `-` followed by the same format as the previous `HH:MM`: a two-digit number from `00` to `23`, and a two-digit number from `00` to `59`, separated by `:` or nothing. If omitted, the offset is derived from the time zone identifier. If present, then the time must be provided too.
+- `Z/±HH:MM:SS.sssssssss` {{optional_inline}}
+  - : Either the UTC designator `Z` or `z`, or an offset from UTC in the form `+` or `-` followed by the same format as the time component. Note that subminute precision may be unsupported by other systems. If omitted, the offset is derived from the time zone identifier. If present, then the time must be provided too.
 - `[time_zone_id]`
   - : Replace `time_zone_id` with the time zone identifier (named or offset) as described above. May have a _critical flag_ by prefixing the identifier with `!`: e.g., `[!America/New_York]`. This flag generally tells other systems that it cannot be ignored if they don't support it.
 - `[u-ca=calendar_id]` {{optional_inline}}
@@ -164,7 +179,7 @@ These properties are defined on `Temporal.ZonedDateTime.prototype` and shared by
 - {{jsxref("Temporal/ZonedDateTime/hour", "Temporal.ZonedDateTime.prototype.hour")}}
   - : TODO
 - {{jsxref("Temporal/ZonedDateTime/hoursInDay", "Temporal.ZonedDateTime.prototype.hoursInDay")}}
-  - : TODO
+  - : Returns a positive integer representing the number of hours in the day of this date in the time zone. It may be more or less than 24 in the case of offset changes such as daylight saving time.
 - {{jsxref("Temporal/ZonedDateTime/inLeapYear", "Temporal.ZonedDateTime.prototype.inLeapYear")}}
   - : TODO
 - {{jsxref("Temporal/ZonedDateTime/microsecond", "Temporal.ZonedDateTime.prototype.microsecond")}}
@@ -182,13 +197,13 @@ These properties are defined on `Temporal.ZonedDateTime.prototype` and shared by
 - {{jsxref("Temporal/ZonedDateTime/nanosecond", "Temporal.ZonedDateTime.prototype.nanosecond")}}
   - : TODO
 - {{jsxref("Temporal/ZonedDateTime/offset", "Temporal.ZonedDateTime.prototype.offset")}}
-  - : TODO
+  - : Returns a string representing the [offset](#time_zones_and_offsets) used to interpret the internal instant, in the form `±HH:MM` (or `±HH:MM:SS.sssssssss` with as much subminute precision as necessary).
 - {{jsxref("Temporal/ZonedDateTime/offsetNanoseconds", "Temporal.ZonedDateTime.prototype.offsetNanoseconds")}}
-  - : TODO
+  - : Returns an integer representing the [offset](#time_zones_and_offsets) used to interpret the internal instant, as a number of nanoseconds (positive or negative).
 - {{jsxref("Temporal/ZonedDateTime/second", "Temporal.ZonedDateTime.prototype.second")}}
   - : TODO
 - {{jsxref("Temporal/ZonedDateTime/timeZoneId", "Temporal.ZonedDateTime.prototype.timeZoneId")}}
-  - : TODO
+  - : Returns a string representing the [time zone identifier](#time_zones_and_offsets) used to interpret the internal instant. It uses the same string used when constructing the `Temporal.ZonedDateTime` object, which is either an IANA time zone name or a fixed offset.
 - {{jsxref("Temporal/ZonedDateTime/weekOfYear", "Temporal.ZonedDateTime.prototype.weekOfYear")}}
   - : TODO
 - {{jsxref("Temporal/ZonedDateTime/year", "Temporal.ZonedDateTime.prototype.year")}}
@@ -205,13 +220,13 @@ These properties are defined on `Temporal.ZonedDateTime.prototype` and shared by
 - {{jsxref("Temporal/ZonedDateTime/equals", "Temporal.ZonedDateTime.prototype.equals()")}}
   - : TODO
 - {{jsxref("Temporal/ZonedDateTime/getTimeZoneTransition", "Temporal.ZonedDateTime.prototype.getTimeZoneTransition()")}}
-  - : TODO
+  - : Returns a {{jsxref("Temporal.ZonedDateTime")}} object representing the first instant after or before this instant at which the time zone's UTC offset changes, or `null` if there is no such transition. This is useful for finding out the offset rules of a time zone, such as its daylight saving time pattern.
 - {{jsxref("Temporal/ZonedDateTime/round", "Temporal.ZonedDateTime.prototype.round()")}}
   - : TODO
 - {{jsxref("Temporal/ZonedDateTime/since", "Temporal.ZonedDateTime.prototype.since()")}}
   - : TODO
 - {{jsxref("Temporal/ZonedDateTime/startOfDay", "Temporal.ZonedDateTime.prototype.startOfDay()")}}
-  - : TODO
+  - : Returns a {{jsxref("Temporal.ZonedDateTime")}} object representing the first instant of this date in the time zone. It usually has a time of `00:00:00`, but may be different if the midnight doesn't exist due to offset changes, in which case the first time that exists is returned.
 - {{jsxref("Temporal/ZonedDateTime/subtract", "Temporal.ZonedDateTime.prototype.subtract()")}}
   - : TODO
 - {{jsxref("Temporal/ZonedDateTime/toInstant", "Temporal.ZonedDateTime.prototype.toInstant()")}}
