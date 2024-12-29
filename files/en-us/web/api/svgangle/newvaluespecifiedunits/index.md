@@ -8,7 +8,7 @@ browser-compat: api.SVGAngle.newValueSpecifiedUnits
 
 {{APIRef("SVG")}}
 
-The `newValueSpecifiedUnits()` method of the {{domxref("SVGAngle")}} interface allows you to set the angle's value in a specified unit type. This method is used when you want to provide a unit alongside the numeric value of the angle.
+The `newValueSpecifiedUnits()` method of the {{domxref("SVGAngle")}} interface resets the value as a number with an associated {{domxref("SVGAngle.unitType", "unitType")}}, thereby replacing the values for all of the attributes on the object.
 
 ## Syntax
 
@@ -32,6 +32,17 @@ svgAngle.newValueSpecifiedUnits(unitType, valueInSpecifiedUnits)
 ### Return value
 
 None ({{jsxref('undefined')}}).
+
+### Exceptions
+
+This method may raise a {{domxref("DOMException")}} of one of the following types:
+
+- `NotSupportedError` {{domxref("DOMException")}}
+
+  - : Thrown if `unitType` is `SVG_ANGLETYPE_UNKNOWN` or not a valid unit type constant.
+
+- `NoModificationAllowedError` {{domxref("DOMException")}}
+  - : Thrown if {{domxref("SVGAngle")}} corresponds to a read-only attribute or when the object itself is read-only.
 
 ## Examples
 

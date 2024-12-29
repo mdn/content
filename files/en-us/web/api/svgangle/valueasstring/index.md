@@ -8,7 +8,9 @@ browser-compat: api.SVGAngle.valueAsString
 
 {{APIRef("SVG")}}
 
-The `valueAsString` property of the {{domxref("SVGAngle")}} interface represents the angle's value as a **string**. This string reflects the angle's numeric value and unit (if applicable), and is formatted in a way that can be parsed back to a [`<number>`](/en-US/docs/Web/SVG/Content_type#number) or [`<angle>`](/en-US/docs/Web/SVG/Content_type#angle) using CSS syntax.
+The `valueAsString` property of the {{domxref("SVGAngle")}} interface represents the angle's value as a **string**, in the units expressed by {{domxref("SVGAngle.unitType", "unitType")}}.
+
+Setting this attribute will cause {{domxref("SVGAngle.value", "value")}}, {{domxref("SVGAngle.valueInSpecifiedUnits", "valueInSpecifiedUnits")}}, and {{domxref("SVGAngle.unitType", "unitType")}} to be updated automatically to reflect this setting.
 
 ## Value
 
@@ -44,6 +46,5 @@ console.log(Math.round(angle.value)); // Output: 90 (since 1.57 radians is appro
 
 ## See also
 
-- [`<number>`](/en-US/docs/Web/SVG/Content_type#number)
 - [`<angle>`](/en-US/docs/Web/SVG/Content_type#angle)
 - {{domxref("SVGAnimatedAngle")}}

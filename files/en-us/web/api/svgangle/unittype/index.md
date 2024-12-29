@@ -8,7 +8,7 @@ browser-compat: api.SVGAngle.unitType
 
 {{APIRef("SVG")}}
 
-The **`unitType`** property of the {{domxref("SVGAngle")}} interface that represents the type of value the `SVGAngle` holds. It takes one of the `SVG_ANGLETYPE_*` constants defined on this interface.
+The **`unitType`** property of the {{domxref("SVGAngle")}} interface that represents type of the value as specified by one of the `SVG_ANGLETYPE_*` constants defined on this interface.
 
 ## Value
 
