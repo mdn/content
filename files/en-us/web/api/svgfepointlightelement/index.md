@@ -15,12 +15,6 @@ The **`SVGFEPointLightElement`** interface corresponds to the {{SVGElement("fePo
 
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
-- {{domxref("SVGFEPointLightElement.height")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("height")}} attribute of the given element.
-- {{domxref("SVGFEPointLightElement.width")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("width")}} attribute of the given element.
-- {{domxref("SVGFEPointLightElement.result")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("result")}} attribute of the given element.
 - {{domxref("SVGFEPointLightElement.x")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("x")}} attribute of the given element.
 - {{domxref("SVGFEPointLightElement.y")}} {{ReadOnlyInline}}
