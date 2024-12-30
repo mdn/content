@@ -18,6 +18,8 @@ subtract(duration)
 subtract(duration, options)
 ```
 
+### Parameters
+
 - `duration`
   - : A string, an object, or a {{jsxref("Temporal.Duration")}} instance representing a duration to subtract from this date. It is converted to a `Temporal.Duration` object using the same algorithm as {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}.
 - `options` {{optional_inline}}

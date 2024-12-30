@@ -7,7 +7,9 @@ browser-compat: javascript.builtins.Temporal.PlainYearMonth.with
 
 {{JSRef}}
 
-The **`with()`** method of {{jsxref("Temporal.PlainYearMonth")}} instances TODO
+The **`with()`** method of {{jsxref("Temporal.PlainYearMonth")}} instances returns a new `Temporal.PlainYearMonth` object representing this year-month with some fields replaced by new values. Because all `Temporal` objects are designed to be immutable, this method essentially functions as the setter for the year-month's fields.
+
+There's no obvious way to create a new `Temporal.PlainYearMonth` object with a different calendar that represents the same year-month, so to replace its `calendarId` property, you need to convert it to a {{jsxref("Temporal.PlainDate")}} object first using {{jsxref("Temporal/PlainYearMonth/toPlainDate", "toPlainDate()")}}, change the calendar, and then convert it back.
 
 ## Syntax
 
@@ -19,25 +21,51 @@ with(info, options)
 ### Parameters
 
 - `info`
-  - : TODO
+  - : An object containing at least one of the following properties (in the order they are retrieved and validated):
+    - `era` and `eraYear` {{optional_inline}}
+      - : A string and an integer that correspond to the {{jsxref("Temporal/PlainYearMonth/era", "era")}} and {{jsxref("Temporal/PlainYearMonth/eraYear", "eraYear")}} properties. Are only used if the calendar system has eras. `era` and `eraYear` must be provided simultaneously. If all of `era`, `eraYear`, and `year` are provided, they must be consistent.
+    - `month` {{optional_inline}}
+      - : Corresponds to the {{jsxref("Temporal/PlainYearMonth/month", "month")}} property. Must be positive regardless of the `overflow` option.
+    - `monthCode` {{optional_inline}}
+      - : Corresponds to the {{jsxref("Temporal/PlainYearMonth/monthCode", "monthCode")}} property. If both `month` and `monthCode` are provided, they must be consistent.
+    - `year` {{optional_inline}}
+      - : Corresponds to the {{jsxref("Temporal/PlainYearMonth/year", "year")}} property.
 - `options` {{optional_inline}}
-  - : TODO
+  - : An object containing the following property:
+    - `overflow` {{optional_inline}}
+      - : A string specifying the behavior when a date component is out of range. Possible values are:
+        - `"constrain"` (default)
+          - : The date component is [clamped](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate#invalid_date_clamping) to the valid range.
+        - `"reject"`
+          - : A {{jsxref("RangeError")}} is thrown if the date component is out of range.
 
 ### Return value
 
-TODO
+A new `Temporal.PlainYearMonth` object, where the fields specified in `info` that are not `undefined` are replaced by the corresponding values, and the rest of the fields are copied from the original date.
 
 ### Exceptions
 
-TODO
-
-## Description
-
-TODO
+- {{jsxref("TypeError")}}
+  - : Thrown in one of the following cases:
+    - `info` is not an object.
+    - `options` is not an object or `undefined`.
+- {{jsxref("RangeError")}}
+  - : Thrown in one of the following cases:
+    - The provided properties that specify the same component are inconsistent.
+    - The provided non-numerical properties are not valid, for example, if `monthCode` is never a valid month code in this calendar.
+    - The provided numerical properties are out of range, and `options.overflow` is set to `"reject"`.
 
 ## Examples
 
-TODO
+### Using with()
+
+```js
+const ym = Temporal.PlainYearMonth.from("2021-07");
+const newYM = ym.with({ year: 2024 });
+console.log(newYM.toString()); // "2024-07"
+```
+
+For more examples, see the documentation for the individual properties that can be set using `with()`.
 
 ## Specifications
 
@@ -49,4 +77,5 @@ TODO
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal.PlainYearMonth")}}
+- {{jsxref("Temporal/PlainYearMonth/from", "Temporal.PlainYearMonth.from()")}}

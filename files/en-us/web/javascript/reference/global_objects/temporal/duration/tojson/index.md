@@ -63,5 +63,6 @@ const obj = JSON.parse(jsonStr, (key, value) => {
 ## See also
 
 - {{jsxref("Temporal.Duration")}}
+- {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}
 - {{jsxref("Temporal/Duration/toString", "Temporal.Duration.prototype.toString()")}}
 - {{jsxref("Temporal/Duration/toLocaleString", "Temporal.Duration.prototype.toLocaleString()")}}

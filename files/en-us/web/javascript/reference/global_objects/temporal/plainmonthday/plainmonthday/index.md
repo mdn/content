@@ -21,6 +21,9 @@ new Temporal.PlainMonthDay(month, day, calendar, referenceYear)
 
 > **Note:** `Temporal.PlainMonthDay()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
+> [!WARNING]
+> Avoid using the `calendar` and `referenceYear` parameters, because {{jsxref("Temporal/PlainMonthDay/equals", "equals()")}} will consider the reference year for equality, causing two equivalent month-days to be considered different if they have different reference years. To create a `Temporal.PlainMonthDay` object with a non-ISO calendar, use the {{jsxref("Temporal/PlainMonthDay/from", "Temporal.PlainMonthDay.from()")}} static method.
+
 ### Parameters
 
 - `month`
@@ -44,7 +47,7 @@ The same ISO month-day can represent different dates in different years with non
   - : Thrown if `calendar` is not a string or `undefined`.
 - {{jsxref("RangeError")}}
   - : Thrown in one of the following cases:
-    - `month` or `day` is not a finite number, or do not represent a valid date in the ISO calendar system.
+    - `referenceYear`, `month`, or `day` is not a finite number, or do not represent a valid date in the ISO calendar system.
     - `calendar` is not a valid calendar identifier.
 
 ## Examples
@@ -60,6 +63,18 @@ console.log(md2.toString()); // 1972-07-01[u-ca=chinese]
 
 const md3 = new Temporal.PlainMonthDay(7, 1, "chinese", 2021);
 console.log(md3.toString()); // 2021-07-01[u-ca=chinese]
+```
+
+### Improper usage
+
+You should avoid using the `calendar` and `referenceYear` parameters, unless you know that the `referenceYear` is the canonical reference year that would be selected by `Temporal.PlainMonthDay.from()` for the same month-day.
+
+```js
+const md = new Temporal.PlainMonthDay(7, 1, "chinese", 2021);
+const md2 = Temporal.PlainMonthDay.from("2021-07-01[u-ca=chinese]");
+console.log(md.equals(md2)); // false
+console.log(md.toString()); // 2021-07-01[u-ca=chinese]
+console.log(md2.toString()); // 1972-07-02[u-ca=chinese]
 ```
 
 ## Specifications

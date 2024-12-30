@@ -43,7 +43,7 @@ This example shows how `Temporal.PlainDate` can be serialized as JSON without ex
 
 ```js
 const date = Temporal.PlainDate.from({ year: 2021, month: 8, day: 1 });
-const dateStr = JSON.stringify({ date }); // '{"date":"2021-08-01"}'
+const jsonStr = JSON.stringify({ date }); // '{"date":"2021-08-01"}'
 const obj = JSON.parse(jsonStr, (key, value) => {
   if (key === "date") {
     return Temporal.PlainDate.from(value);
@@ -63,5 +63,6 @@ const obj = JSON.parse(jsonStr, (key, value) => {
 ## See also
 
 - {{jsxref("Temporal.PlainDate")}}
+- {{jsxref("Temporal/PlainDate/from", "Temporal.PlainDate.from()")}}
 - {{jsxref("Temporal/PlainDate/toString", "Temporal.PlainDate.prototype.toString()")}}
 - {{jsxref("Temporal/PlainDate/toLocaleString", "Temporal.PlainDate.prototype.toLocaleString()")}}

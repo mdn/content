@@ -17,7 +17,7 @@ toPlainDate(yearInfo)
 
 ### Parameters
 
-- `yearInfo` {{optional_inline}}
+- `yearInfo`
   - : An object representing the year component of the resulting `PlainDate`, containing the following properties (in the order they are retrieved and validated):
     - `era` and `eraYear`
       - : A string and an integer that correspond to the {{jsxref("Temporal/PlainDate/era", "era")}} and {{jsxref("Temporal/PlainDate/eraYear", "eraYear")}} properties. Are only used if the calendar system has eras. `era` and `eraYear` must be provided simultaneously. If they are not provided, then `year` must be provided. If all of `era`, `eraYear`, and `year` are provided, they must be consistent.
@@ -26,7 +26,14 @@ toPlainDate(yearInfo)
 
 ### Return value
 
-A new `Temporal.PlainDate` object representing the date specified by this month-day and the year in `yearInfo`, interpreted in the calendar system of this date.
+A new `Temporal.PlainDate` object representing the date specified by this month-day and the year in `yearInfo`, interpreted in the calendar system of this month-day.
+
+### Exceptions
+
+- {{jsxref("RangeError")}}
+  - : Thrown if any of the options is invalid.
+- {{jsxref("TypeError")}}
+  - : Thrown if `yearInfo` is not an object.
 
 ## Examples
 

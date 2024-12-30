@@ -31,7 +31,7 @@ add(duration, options)
 
 ### Return value
 
-A new `Temporal.PlainDate` object representing the date specified by the original date, plus the duration.
+A new `Temporal.PlainDate` object representing the date specified by the original `PlainDate`, plus the duration.
 
 ## Description
 
@@ -83,7 +83,7 @@ console.log(end.toString()); // 2021-02-28
 const end2 = start.add({ months: 1, days: 31 });
 console.log(end2.toString()); // 2021-03-31
 
-// Compare:
+// Compare with the same addition in a different order that results in no overflow:
 const end3 = start.add({ days: 31 }).add({ months: 1 });
 console.log(end3.toString()); // 2021-04-03
 ```

@@ -33,7 +33,6 @@ Returns `-1` if `date1` comes before `date2`, `0` if they are the same, and `1` 
 ```js
 const date1 = Temporal.PlainDate.from("2021-08-01");
 const date2 = Temporal.PlainDate.from("2021-08-02");
-
 console.log(Temporal.PlainDate.compare(date1, date2)); // -1
 
 const date3 = Temporal.PlainDate.from("2021-07-31");

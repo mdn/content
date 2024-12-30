@@ -21,7 +21,7 @@ The set accessor of `calendarId` is `undefined`. You cannot change this property
 const md = Temporal.PlainMonthDay.from("07-01");
 console.log(md.calendarId); // "iso8601"; default
 
-const md2 = Temporal.PlainMonthDay.from("07-01[u-ca=chinese]");
+const md2 = Temporal.PlainMonthDay.from("2021-07-01[u-ca=chinese]");
 console.log(md2.calendarId); // "chinese"
 ```
 
@@ -33,13 +33,13 @@ const newMD = md
   .toPlainDate({ year: 2021 })
   .withCalendar("chinese")
   .toPlainMonthDay();
-console.log(newMD.monthCode, newMD.day); // "M05", 22
+console.log(newMD.monthCode, newMD.day); // "M05" 22
 
 const newMD2 = md
   .toPlainDate({ year: 2022 })
   .withCalendar("chinese")
   .toPlainMonthDay();
-console.log(newMD2.monthCode, newMD2.day); // "M06", 3
+console.log(newMD2.monthCode, newMD2.day); // "M06" 3
 ```
 
 ## Specifications

@@ -31,7 +31,7 @@ round(options)
     - `roundingMode` {{optional_inline}}
       - : A string representing the rounding mode specifying to round up or down in various scenarios. See [`Intl.NumberFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#roundingmode). Defaults to `"halfExpand"`.
     - `smallestUnit` {{optional_inline}}
-      - : Any of the temporal units: `"year"`, `"month"`, `"week"`, `"day"`, `"hour"`, `"minute"`, `"second"`, `"millisecond"`, `"microsecond"`, `"nanosecond"`, or their plural forms. Defaults to `"nanosecond"`. Fractional parts of the `smallestUnit` will be rounded according to the `roundingIncrement` and `roundingMode` settings. Must be smaller or equal to `largestUnit`. At least one of `smallestUnit` and `largestUnit` must be provided.
+      - : Any of the temporal units: `"year"`, `"month"`, `"week"`, `"day"`, `"hour"`, `"minute"`, `"second"`, `"millisecond"`, `"microsecond"`, `"nanosecond"`, or their plural forms. Defaults to `"nanosecond"`. For units larger than `"nanosecond"`, fractional parts of the `smallestUnit` will be rounded according to the `roundingIncrement` and `roundingMode` settings. Must be smaller or equal to `largestUnit`. At least one of `smallestUnit` and `largestUnit` must be provided.
 
 ### Return value
 
@@ -49,6 +49,8 @@ The `round()` method performs two operations: rounding and balancing. It does th
 1. It makes sure the duration is balanced. If a component is above its preferred maximum (24 hours per day, 60 minutes per hour, etc.), the excess is carried over to the next larger unit, until we reach `largestUnit`. For example, "24 hours 90 minutes" becomes "25 hours 30 minutes" if `largestUnit` is `"auto"`, and "1 day 1 hour 30 minutes" if `largestUnit` is `"day"`.
 2. For all components larger than `largestUnit`, they are carried down into `largestUnit`; for example, "2 hours 30 minutes" becomes "150 minutes" if `largestUnit` is `"minute"`.
 3. For all components smaller than `smallestUnit`, they are carried up into `smallestUnit` as a fractional part, and then rounded according to the `roundingIncrement` and `roundingMode` settings. For example, "1 hour 30 minutes" becomes "1.5 hours" if `smallestUnit` is `"hour"`, and then rounded to "2 hours" using the default settings.
+
+[Calendar units](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#calendar_units) have uneven lengths. Their lengths are resolved relative to a starting point. For example, a duration of "2 years" in the Gregorian calendar may be 730 days or 731 days long, depending on whether it moves through a leap year or not. When rounding to a calendar unit, we first get the exact date-time represented by `relativeTo + duration`, then round it down and up according to `smallestUnit` and `roundingIncrement` to get two candidates. Then, we choose the candidate according to the `roundingMode` setting, and finally subtract `relativeTo` to get the final duration.
 
 ## Examples
 

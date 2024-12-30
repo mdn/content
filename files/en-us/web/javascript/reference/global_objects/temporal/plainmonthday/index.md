@@ -109,3 +109,4 @@ console.log(
 
 - {{jsxref("Temporal")}}
 - {{jsxref("Temporal.PlainDate")}}
+- {{jsxref("Temporal.PlainYearMonth")}}

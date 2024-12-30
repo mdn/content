@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Temporal.PlainDateTime.daysInYear
 
 The **`daysInYear`** accessor property of {{jsxref("Temporal.PlainDateTime")}} instances returns a positive integer representing the number of days in the year of this date. It is [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 
-The set accessor of `daysInWeek` is `undefined`. You cannot change this property directly.
+The set accessor of `daysInYear` is `undefined`. You cannot change this property directly.
 
 For general information and more examples, see {{jsxref("Temporal/PlainDate/daysInYear", "Temporal.PlainDate.prototype.daysInYear")}}.
 

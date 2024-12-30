@@ -40,7 +40,7 @@ Temporal.PlainMonthDay.from(info, options)
 
       Other `Temporal` objects, such as {{jsxref("Temporal.PlainDate")}}, {{jsxref("Temporal.PlainDateTime")}} and {{jsxref("Temporal.ZonedDateTime")}}, conform to this shape and can be used as well.
 
-    - An [ISO 8601](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate#iso_8601_format) string containing a date and optionally a calendar. If the calendar is not `iso8601`, a year is required.
+    - An [ISO 8601](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainMonthDay#iso_8601_format) string containing a date and optionally a calendar. If the calendar is not `iso8601`, a year is required.
 
 - `options` {{optional_inline}}
   - : An object containing the following property:
@@ -59,6 +59,8 @@ Each `PlainMonthDay` stores a whole ISO 8601 date internally, which has the same
 
 For example, for Gregorian-derived calendars, the reference year is 1972. For the Hebrew calendar, the reference year is 1972 in the Gregorian calendar, but if the month is Adar I (`M05L`), which is a leap month, the reference year is 1970 (5730 in Hebrew calendar) instead, because the next leap year is 1973 (5733 in Hebrew calendar), which is after 1972.
 
+This reference year canonicalization ensures that {{jsxref("Temporal/PlainMonthDay/equals", "equals()")}} can directly compare the underlying ISO dates without extra computation.
+
 ### Exceptions
 
 - {{jsxref("TypeError")}}
@@ -69,7 +71,7 @@ For example, for Gregorian-derived calendars, the reference year is 1972. For th
 - {{jsxref("RangeError")}}
   - : Thrown in one of the following cases:
     - The provided properties that specify the same component are inconsistent.
-    - The provided non-numerical properties are not valid, for example, `monthCode` is not a valid month code.
+    - The provided non-numerical properties are not valid, for example, if `monthCode` is never a valid month code in this calendar.
     - The provided numerical properties are out of range, and `options.overflow` is set to `"reject"`.
 
 ## Examples

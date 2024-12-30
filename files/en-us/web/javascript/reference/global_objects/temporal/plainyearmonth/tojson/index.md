@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainYearMonth.toJSON
 
 {{JSRef}}
 
-The **`toJSON()`** method of {{jsxref("Temporal.PlainYearMonth")}} instances TODO
+The **`toJSON()`** method of {{jsxref("Temporal.PlainYearMonth")}} instances returns a string representing this year-month in the same [ISO 8601 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth#iso_8601_format) as calling {{jsxref("Temporal/PlainYearMonth/toString", "toString()")}}.
 
 ## Syntax
 
@@ -21,19 +21,36 @@ None.
 
 ### Return value
 
-TODO
-
-### Exceptions
-
-TODO
+A string representing the given date in the [ISO 8601 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth#iso_8601_format), with the calendar annotation included if it is not ISO 8601.
 
 ## Description
 
-TODO
+The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `Temporal.PlainYearMonth` object is stringified. This method is generally intended to, by default, usefully serialize `Temporal.PlainYearMonth` objects during [JSON](/en-US/docs/Glossary/JSON) serialization, which can then be deserialized using the {{jsxref("Temporal/PlainYearMonth/from", "Temporal.PlainYearMonth.from()")}} function as the reviver of {{jsxref("JSON.parse()")}}.
 
 ## Examples
 
-TODO
+### Using toJSON()
+
+```js
+const ym = Temporal.PlainYearMonth.from({ year: 2021, month: 8 });
+const ymStr = date.toJSON(); // '2021-08'
+const ym2 = Temporal.PlainYearMonth.from(ymStr);
+```
+
+### JSON serialization and parsing
+
+This example shows how `Temporal.PlainYearMonth` can be serialized as JSON without extra effort, and how to parse it back.
+
+```js
+const ym = Temporal.PlainYearMonth.from({ year: 2021, month: 8 });
+const ymStr = JSON.stringify({ event: ym }); // '{"event":"2021-08"}'
+const obj = JSON.parse(ymStr, (key, value) => {
+  if (key === "event") {
+    return Temporal.PlainYearMonth.from(value);
+  }
+  return value;
+});
+```
 
 ## Specifications
 
@@ -45,4 +62,7 @@ TODO
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal.PlainYearMonth")}}
+- {{jsxref("Temporal/PlainYearMonth/from", "Temporal.PlainYearMonth.from()")}}
+- {{jsxref("Temporal/PlainYearMonth/toString", "Temporal.PlainYearMonth.prototype.toString()")}}
+- {{jsxref("Temporal/PlainYearMonth/toLocaleString", "Temporal.PlainYearMonth.prototype.toLocaleString()")}}

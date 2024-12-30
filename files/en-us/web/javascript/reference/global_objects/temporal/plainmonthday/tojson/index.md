@@ -43,7 +43,7 @@ This example shows how `Temporal.PlainMonthDay` can be serialized as JSON withou
 
 ```js
 const md = Temporal.PlainMonthDay.from({ month: 8, day: 1 });
-const mdStr = JSON.stringify({ birthday: md }); // '{"birthday":"08-01"}'
+const jsonStr = JSON.stringify({ birthday: md }); // '{"birthday":"08-01"}'
 const obj = JSON.parse(jsonStr, (key, value) => {
   if (key === "birthday") {
     return Temporal.PlainMonthDay.from(value);
@@ -63,5 +63,6 @@ const obj = JSON.parse(jsonStr, (key, value) => {
 ## See also
 
 - {{jsxref("Temporal.PlainMonthDay")}}
+- {{jsxref("Temporal/PlainMonthDay/from", "Temporal.PlainMonthDay.from()")}}
 - {{jsxref("Temporal/PlainMonthDay/toString", "Temporal.PlainMonthDay.prototype.toString()")}}
 - {{jsxref("Temporal/PlainMonthDay/toLocaleString", "Temporal.PlainMonthDay.prototype.toLocaleString()")}}

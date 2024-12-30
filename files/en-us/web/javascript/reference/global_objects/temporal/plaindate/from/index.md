@@ -36,7 +36,7 @@ Temporal.PlainDate.from(info, options)
       - `month`
         - : Corresponds to the {{jsxref("Temporal/PlainDate/month", "month")}} property. Must be positive regardless of the `overflow` option.
       - `monthCode`
-        - : Corresponds to the {{jsxref("Temporal/PlainDate/monthCode", "monthCode")}} property. If both `month` and `monthCode` are provided, they must be consistent.
+        - : Corresponds to the {{jsxref("Temporal/PlainDate/monthCode", "monthCode")}} property. If it is not provided, then `month` must be provided. If both `month` and `monthCode` are provided, they must be consistent.
       - `year`
         - : Corresponds to the {{jsxref("Temporal/PlainDate/year", "year")}} property.
 
@@ -65,7 +65,7 @@ A new `Temporal.PlainDate` object, representing the date specified by `info` in 
 - {{jsxref("RangeError")}}
   - : Thrown in one of the following cases:
     - The provided properties that specify the same component are inconsistent.
-    - The provided non-numerical properties are not valid, for example, `monthCode` is not a valid month code.
+    - The provided non-numerical properties are not valid, for example, if `monthCode` is never a valid month code in this calendar.
     - The provided numerical properties are out of range, and `options.overflow` is set to `"reject"`.
 
 ## Examples

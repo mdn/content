@@ -32,4 +32,4 @@ For general information and more examples, see {{jsxref("Temporal/PlainDate/year
 - {{jsxref("Temporal/PlainDateTime/dayOfWeek", "Temporal.PlainDateTime.prototype.dayOfWeek")}}
 - {{jsxref("Temporal/PlainDateTime/daysInWeek", "Temporal.PlainDateTime.prototype.daysInWeek")}}
 - {{jsxref("Temporal/PlainDateTime/daysInYear", "Temporal.PlainDateTime.prototype.daysInYear")}}
-- {{jsxref("Temporal.PlainDate/yearOfWeek", "Temporal.PlainDate.prototype.yearOfWeek")}}
+- {{jsxref("Temporal/PlainDate/yearOfWeek", "Temporal.PlainDate.prototype.yearOfWeek")}}
