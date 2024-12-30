@@ -8,7 +8,7 @@ page-type: glossary-definition
 
 In computer networking, **head-of-line blocking** (_HOL blocking_) refers to a performance bottleneck that occurs when a queue of packets is held up by the first packet in the queue, even though other packets in the queue could be processed.
 
-In HTTP/1.1, HOL blocking can occur when a client sends multiple requests to a {{glossary("server")}} without waiting for the responses. The server processes the requests in order, but if the response to the first request is delayed, the responses to subsequent requests are also delayed. HTTP/2 addresses this issue through request multiplexing, eliminating HOL blocking in the application layer, but it still exists at the transport ({{glossary("TCP")}} layer.
+In HTTP/1.1, HOL blocking can occur when a client sends multiple requests to a {{glossary("server")}} without waiting for the responses. The server processes the requests in order, but if the response to the first request is delayed, the responses to subsequent requests are also delayed. HTTP/2 addresses this issue through request multiplexing, eliminating HOL blocking in the application layer, but it still exists at the transport ({{glossary("TCP")}}) layer.
 
 ## See also
 
