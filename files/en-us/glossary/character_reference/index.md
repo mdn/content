@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-An {{glossary("HTML")}} **character reference** is a {{glossary("escaping text", "escape sequence")}} of {{glossary("character", "characters")}} that is used to represent another character in the rendered web page.
+An {{glossary("HTML")}} **character reference** is an {{glossary("escaping text", "escape sequence")}} of {{glossary("character", "characters")}} that is used to represent another character in the rendered web page.
 
 Character references are used as replacements for characters that are reserved in HTML, such as the less-than (`<`) and greater-than (`>`) symbols used by the HTML parser to identify element {{Glossary('tag','tags')}}, or `"` or `'` within attributes, which may be enclosed by those characters.
 They can also be used for invisible characters that would otherwise be impossible to type, including non-breaking spaces, control characters like left-to-right and right-to-left marks, and for characters that are hard to type on a standard keyboard.
