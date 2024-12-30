@@ -38,7 +38,7 @@ This guideline focuses on making text content as understandable as possible.
       <td>
         See
         <a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#setting_the_primary_language_of_the_document"
+          href="/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#setting_the_primary_language_of_the_document"
           >Setting the primary language of the document</a
         >.
       </td>
@@ -71,7 +71,7 @@ This guideline focuses on making text content as understandable as possible.
         link to when they appear, or at the very least provide definitions
         somewhere in the surrounding text, or in a
         <a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#description_lists"
+          href="/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#description_lists"
           >description list</a
         >
         at the bottom of the page.
@@ -100,7 +100,7 @@ This guideline focuses on making text content as understandable as possible.
       <td>
         See
         <a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#abbreviations"
+          href="/en-US/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#abbreviations"
           >Abbreviations</a
         >.
       </td>
@@ -145,7 +145,7 @@ This guideline focuses on making text content as understandable as possible.
       <td>
         See
         <a
-          href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content"
+          href="/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio"
           >Video and audio content</a
         >, and
         <a
@@ -192,7 +192,7 @@ This guideline focuses on making user interfaces intuitive and understandable.
         <code>Element</code>'s {{domxref("Element.focus_event", "focus")}} event contains some
         useful information. Also see
         <a
-          href="/en-US/docs/Learn/Accessibility/HTML#building_keyboard_accessibility_back_in"
+          href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#building_keyboard_accessibility_back_in"
           >Building keyboard accessibility back in</a
         >
         for some useful implementation ideas.
@@ -235,12 +235,12 @@ This guideline focuses on making user interfaces intuitive and understandable.
       </td>
       <td>
         See
-        <a href="/en-US/docs/Learn/Accessibility/HTML#page_layouts"
+        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#page_layouts"
           >Page layouts</a
         >
         for information on modern markup for layouts. See also
         <a
-          href="/en-US/docs/Learn/CSS/Styling_text/Styling_links#styling_links_as_buttons"
+          href="/en-US/docs/Learn_web_development/Core/Text_styling/Styling_links#styling_links_as_buttons"
           >Styling links as buttons</a
         >
         for a useful accessible navigation menu example.
@@ -260,7 +260,7 @@ This guideline focuses on making user interfaces intuitive and understandable.
       <td>
         "Labels" can refer to descriptive information in text content, or HTML
         form labels. See
-        <a href="/en-US/docs/Learn/Accessibility/HTML#meaningful_text_labels"
+        <a href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#meaningful_text_labels"
           >Meaningful text labels</a
         >
         for more information.
@@ -341,12 +341,12 @@ This guideline centers around helping users enter correct information when requi
       </td>
       <td>
         See
-        <a href="/en-US/docs/Learn/Forms/Form_validation"
+        <a href="/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation"
           >Form data validation</a
         >
         for comprehensive validation information, and
         <a
-          href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics#dynamic_content_updates"
+          href="/en-US/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics#dynamic_content_updates"
           >WAI-ARIA: Dynamic content updates</a
         >
         for information on live regions.
@@ -374,12 +374,12 @@ This guideline centers around helping users enter correct information when requi
         <ul>
           <li>
             <a
-              href="/en-US/docs/Learn/Accessibility/HTML#meaningful_text_labels"
+              href="/en-US/docs/Learn_web_development/Core/Accessibility/HTML#meaningful_text_labels"
               >Meaningful text labels</a
             >
           </li>
           <li>
-            <a href="/en-US/docs/Learn/Forms/How_to_structure_a_web_form"
+            <a href="/en-US/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form"
               >How to structure an HTML form</a
             >
           </li>
@@ -438,7 +438,7 @@ This guideline centers around helping users enter correct information when requi
           <strong>Reversible</strong> — for any view where data can be entered,
           provide an equivalent view that allows you to edit or even delete an
           entry, as appropriate (for example, see
-          <a href="/en-US/docs/Learn/Server-side/Django">Django web framework</a
+          <a href="/en-US/docs/Learn_web_development/Extensions/Server-side/Django">Django web framework</a
           >).
         </p>
         <p>

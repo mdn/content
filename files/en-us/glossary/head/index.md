@@ -11,4 +11,4 @@ The **Head** is the part of an {{glossary("HTML")}} document that contains {{glo
 ## See also
 
 - {{htmlelement("head")}} element reference on MDN
-- [The HTML \<head>](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML) on the MDN Learning Area
+- [What's in the head? Webpage metadata](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata) on the MDN Learning Area

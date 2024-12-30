@@ -57,7 +57,7 @@ Returns a {{CSSxREF("&lt;number&gt;")}}, {{CSSxREF("&lt;dimension&gt;")}}, or {{
 - If `dividend` is `infinite`, the result is `NaN`.
 - If `divisor` is positive the result is positive (`0⁺`), and if `divisor` is negative the result is negative (`0⁻`).
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 

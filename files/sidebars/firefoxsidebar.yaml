@@ -18,6 +18,14 @@ sidebar:
   - link: https://firefox-source-docs.mozilla.org/
     title: Firefox_documentation
 l10n:
+  de:
+    Firefox_releases: Firefox-Veröffentlichungen
+    Firefox_release_notes_developer: Firefox-Hinweise für Entwickler
+    Experimental_features_firefox: Experimentelle Funktionen in Firefox
+    Add-ons: Add-ons
+    Browser_extensions: Browser-Erweiterungen
+    Themes: Themen
+    Firefox_documentation: Firefox-Dokumentation
   en-US:
     Firefox_releases: Firefox releases
     Firefox_release_notes_developer: Firefox release notes for developers

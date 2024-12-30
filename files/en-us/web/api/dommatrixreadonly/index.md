@@ -74,15 +74,7 @@ _This interface doesn't inherit any methods. None of the following methods alter
 - {{domxref("DOMMatrixReadOnly.toJSON()")}}
   - : Returns a JSON representation of the `DOMMatrixReadOnly` object.
 - {{domxref("DOMMatrixReadOnly.toString()")}}
-
-  - : Creates and returns a string which contains a string representation of the matrix in CSS matrix syntax, using the appropriate CSS matrix notation. See the {{cssxref("transform-function/matrix", "matrix()")}} CSS function for details on this syntax.
-
-    For a 2D matrix, the elements `a` through `f` are listed, for a total of six values and the form `matrix(a, b, c, d, e, f)`.
-
-    For a 3D matrix, the returned string contains all 16 elements and takes the form `matrix3d(m11, m12, m13, m14, m21, m22, m23, m24, m31, m32, m33, m34, m41, m42, m43, m44)`. See the CSS {{cssxref("transform-function/matrix3d", "matrix3d()")}} function for details on the 3D notation's syntax.
-
-    Throws an `InvalidStateError` exception if any of the elements in the matrix are non-finite (even if, in the case of a 2D matrix, the non-finite values are in elements not used by the 2D matrix representation).
-
+  - : Creates and returns a string representation of the matrix in CSS matrix syntax, using the appropriate CSS matrix notation.
 - {{domxref("DOMMatrixReadOnly.transformPoint()")}}
   - : Transforms the specified point using the matrix, returning a new {{domxref("DOMPoint")}} object containing the transformed point. Neither the matrix nor the original point are altered.
 - {{domxref("DOMMatrixReadOnly.translate()")}}
