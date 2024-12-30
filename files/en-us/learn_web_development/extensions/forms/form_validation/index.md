@@ -716,7 +716,7 @@ The HTML is almost the same; we just removed the HTML validation features.
       <span>Please enter an email address:</span>
     </label>
     <input type="text" id="mail" name="mail" />
-    <span class="error" aria-live="polite"></span>
+    <span id="error" aria-live="polite"></span>
   </p>
   <button>Submit</button>
 </form>
@@ -786,12 +786,12 @@ const form = document.querySelector("form");
 const email = document.getElementById("mail");
 const error = document.getElementById("error");
 
-// Check if the email is valid
-const isValidEmail = () => {
-  // Regular expression for email validation as per HTML specification
+// Regular expression for email validation as per HTML specification
   const emailRegExp =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
+// Check if the email is valid
+const isValidEmail = () => { 
   const validity = email.value.length !== 0 && emailRegExp.test(email.value);
   return validity;
 };
