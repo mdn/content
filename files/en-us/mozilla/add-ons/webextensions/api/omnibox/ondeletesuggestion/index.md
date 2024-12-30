@@ -8,7 +8,7 @@ browser-compat: webextensions.api.omnibox.onDeleteSuggestion
 {{AddonSidebar}}
 
 Fired whenever the user deletes a suggestion.
-A suggestion can be deleted when the property `deletable` of {{WebExtAPIRef("omnibox.SuggestResult","SuggestResult")}} is set to true.
+A suggestion can be deleted when the property `deletable` of a {{WebExtAPIRef("omnibox.SuggestResult","SuggestResult")}} is set to true.
 
 ## Syntax
 
