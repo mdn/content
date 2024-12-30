@@ -786,12 +786,13 @@ const form = document.querySelector("form");
 const email = document.getElementById("mail");
 const error = email.nextElementSibling;
 
-// As per the HTML Specification
-const emailRegExp =
-  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 // create a function that checks if the email is valid,
 // sets class names and returns a boolean
 const isValidEmail = () => {
+  // As per the HTML Specification
+  const emailRegExp =
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
   const isValid = email.value.length === 0 || emailRegExp.test(email.value);
   // set class name to indicate validity
   email.className = isValid ? "valid" : "invalid";
