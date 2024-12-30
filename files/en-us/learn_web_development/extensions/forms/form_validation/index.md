@@ -791,7 +791,7 @@ const emailRegExp =
   /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
 // Check if the email is valid
-const isValidEmail = () => { 
+const isValidEmail = () => {
   const validity = email.value.length !== 0 && emailRegExp.test(email.value);
   return validity;
 };
