@@ -49,7 +49,7 @@ The following code snippet shows the creation of a {{domxref("Worker")}} object 
 const myWorker = new Worker("worker.js");
 
 [first, second].forEach((input) => {
-  input.onchange = function () {
+  input.onchange = () => {
     myWorker.port.postMessage([first.value, second.value]);
     console.log("Message posted to worker");
   };

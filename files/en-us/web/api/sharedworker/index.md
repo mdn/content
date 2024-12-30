@@ -61,7 +61,7 @@ When the port is started, both scripts post messages to the worker and handle me
 
 ```js
 [first, second].forEach((input) => {
-  input.onchange = function () {
+  input.onchange = () => {
     myWorker.port.postMessage([first.value, second.value]);
     console.log("Message posted to worker");
   };

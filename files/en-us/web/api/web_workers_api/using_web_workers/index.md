@@ -67,7 +67,7 @@ The magic of workers happens via the {{domxref("Worker.postMessage", "postMessag
 
 ```js
 [first, second].forEach((input) => {
-  input.onchange = function () {
+  input.onchange = () => {
     myWorker.port.postMessage([first.value, second.value]);
     console.log("Message posted to worker");
   };
