@@ -11,6 +11,8 @@ The **`Temporal.PlainDate`** object represents a date without a time or time zon
 
 ## Description
 
+A `PlainDate` is essentially the date part of a {{jsxref("Temporal.PlainDateTime")}} object, with the time information removed. Because the date and time information don't have much interaction, all general information about date properties is documented here.
+
 ### ISO 8601 format
 
 `PlainDate` objects can be serialized and parsed using the [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601) (with some extensions specified by ECMAScript). The string has the following form (spaces are only for readability and should not be present in the actual string):
@@ -31,6 +33,15 @@ YYYY-MM-DD [u-ca=calendar_id]
 As an input, you may optionally include the time, offset, and time zone identifier, in the same format as [`PlainDateTime`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime#iso_8601_format), but they will be ignored. Other annotations in the `[key=value]` format are also ignored, and they must not have the critical flag.
 
 When serializing, you can configure whether to display the calendar ID, and whether to add a critical flag for it.
+
+### Invalid date clamping
+
+The {{jsxref("Temporal/PlainDate/from", "Temporal.PlainDate.from()")}}, {{jsxref("Temporal/PlainDate/with", "Temporal.PlainDate.prototype.with()")}}, {{jsxref("Temporal/PlainDate/add", "Temporal.PlainDate.prototype.add()")}}, {{jsxref("Temporal/PlainDate/subtract", "Temporal.PlainDate.prototype.subtract()")}} methods, and the counterparts in other `Temporal` objects, allow constructing dates using calendar-specific properties. The date components may be out of range. In the ISO calendar, this is always an _overflow_, such as the month being greater than 12 or the day being greater than the number of days, and fixing it would only involve clamping the value to the maximum allowed value. In other calendars, the invalid case may be more complex. When using the `overflow: "constrain"` option, invalid dates are fixed to a valid one in the following way:
+
+- If the day doesn't exist but the month does: pick the closest day in the same month. If there are two equally-close dates in that month, pick the later one.
+- If the month is a leap month that doesn't exist in the year: pick another date according to the cultural conventions of that calendar's users. Usually this will result in the same day in the month before or after where that month would normally fall in a leap year.
+- If the month doesn't exist in the year for other reasons: pick the closest date that is still in the same year. If there are two equally-close dates in that year, pick the later one.
+- If the entire year doesn't exist: pick the closest date in a different year. If there are two equally-close dates, pick the later one.
 
 ## Constructor
 
@@ -90,7 +101,7 @@ These properties are defined on `Temporal.PlainDate.prototype` and shared by all
 - {{jsxref("Temporal/PlainDate/add", "Temporal.PlainDate.prototype.add()")}}
   - : Returns a new `Temporal.PlainDate` object representing this date moved forward by a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}).
 - {{jsxref("Temporal/PlainDate/equals", "Temporal.PlainDate.prototype.equals()")}}
-  - : Returns `true` if this date is equal to another date (in a form convertible by {{jsxref("Temporal/PlainDate/from", "Temporal.PlainDate.from()")}}), and `false` otherwise. They are compared both by their date values and their calendars.
+  - : Returns `true` if this date is equivalent in value to another date (in a form convertible by {{jsxref("Temporal/PlainDate/from", "Temporal.PlainDate.from()")}}), and `false` otherwise. They are compared both by their date values and their calendars.
 - {{jsxref("Temporal/PlainDate/since", "Temporal.PlainDate.prototype.since()")}}
   - : Returns a new {{jsxref("Temporal.Duration")}} object representing the duration from another date (in a form convertible by {{jsxref("Temporal/PlainDate/from", "Temporal.PlainDate.from()")}}) to this date. The duration is positive if the other date is before this date, and negative if after.
 - {{jsxref("Temporal/PlainDate/subtract", "Temporal.PlainDate.prototype.subtract()")}}

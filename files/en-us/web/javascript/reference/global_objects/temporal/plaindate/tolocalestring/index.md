@@ -23,14 +23,10 @@ toLocaleString(locales, options)
 
 The `locales` and `options` parameters customize the behavior of the function and let applications specify the language whose formatting conventions should be used.
 
-In implementations that support the [`Intl.DateTimeFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat), these parameters correspond exactly to the [`Intl.DateTimeFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) constructor's parameters. Implementations without `Intl.DateTimeFormat` support are asked to ignore both parameters, making the locale used and the form of the string returned entirely implementation-dependent.
+In implementations that support the [`Intl.DateTimeFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat), these parameters correspond exactly to the [`Intl.DateTimeFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) constructor's parameters. Implementations without `Intl.DateTimeFormat` support return the exact same string as {{jsxref("Temporal/PlainDate/toString", "toString()")}}, ignoring both parameters.
 
 - `locales` {{optional_inline}}
-
   - : A string with a BCP 47 language tag, or an array of such strings. Corresponds to the [`locales`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#locales) parameter of the `Intl.DateTimeFormat()` constructor.
-
-    In implementations without `Intl.DateTimeFormat` support, this parameter is ignored and the host's locale is usually used.
-
 - `options` {{optional_inline}}
 
   - : An object adjusting the output format. Corresponds to the [`options`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options) parameter of the `Intl.DateTimeFormat()` constructor. If this date's calendar is not `"iso8601"`, the `calendar` option must be provided with the same value; otherwise, if this date's calendar is `"iso8601"`, the `calendar` option can be any value. Regarding the [date-time component options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#date-time_component_options) and the style shortcuts (`dateStyle` and `timeStyle`), the options should follow one of these forms:
@@ -38,8 +34,6 @@ In implementations that support the [`Intl.DateTimeFormat` API](/en-US/docs/Web/
     - Provide none of them: `year`, `month`, and `day` will default to `"numeric"`.
     - Provide `dateStyle` only.
     - Provide some date-time component options, where at least one of them is a date option (`weekday`, `year`, `month`, `day`). Only the specified date components will be included in the output.
-
-    In implementations without `Intl.DateTimeFormat` support, this parameter is ignored.
 
 See the [`Intl.DateTimeFormat()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) for details on these parameters and how to use them.
 
@@ -71,11 +65,12 @@ const date = Temporal.PlainDate.from("2021-08-01");
 console.log(date.toLocaleString()); // 8/1/2021 (assuming en-US locale)
 ```
 
-If the date's calendar is not ISO 8601, when formatting, the `calendar` option must be provided with the same value.
+If the date's calendar doesn't match the locale's default calendar, and the date's calendar is not `iso8601`, an explicit `calendar` option must be provided with the same value.
 
 ```js
-const date = Temporal.PlainDate.from("2021-08-01", { calendar: "gregory" });
-date.toLocaleString("en-US", { calendar: "gregory" }); // 8/1/2021
+const date = Temporal.PlainDate.from("2021-08-01[u-ca=japanese]");
+// The ja-JP locale uses the Gregorian calendar by default
+date.toLocaleString("ja-JP", { calendar: "japanese" }); // R3/8/1
 ```
 
 ### Using toLocaleString() with options
@@ -103,7 +98,7 @@ date.toLocaleString("en-US", { year: "numeric", month: "long" }); // August 2021
 
 ## See also
 
-- {{jsxref("Temporal.Instant")}}
+- {{jsxref("Temporal.PlainDate")}}
 - {{jsxref("Intl.DateTimeFormat")}}
-- {{jsxref("Temporal/Instant/toJSON", "Temporal.Instant.prototype.toJSON()")}}
-- {{jsxref("Temporal/Instant/toString", "Temporal.Instant.prototype.toString()")}}
+- {{jsxref("Temporal/PlainDate/toJSON", "Temporal.PlainDate.prototype.toJSON()")}}
+- {{jsxref("Temporal/PlainDate/toString", "Temporal.PlainDate.prototype.toString()")}}

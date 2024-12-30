@@ -7,11 +7,14 @@ browser-compat: javascript.builtins.Temporal.PlainDate.day
 
 {{JSRef}}
 
-The **`day`** accessor property of {{jsxref("Temporal.PlainDate")}} instances returns a positive integer representing the 1-based day index in the month of this date, which is the same day number you would see on a calendar. [Calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
+The **`day`** accessor property of {{jsxref("Temporal.PlainDate")}} instances returns a positive integer representing the 1-based day index in the month of this date, which is the same day number you would see on a calendar. It is [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 
 It generally starts at 1 and is continuous, but not always. If you want to loop through all the days in a month, first use {{jsxref("Temporal/PlainDate/with", "with()")}} with `{ day: 1 }` (which sets to the beginning of the month, even if the actual number is not `1`), then repeatedly use {{jsxref("Temporal/PlainDate/add", "add()")}} with `{ days: 1 }`, until the month changes.
 
-The set accessor of `calendarId` is `undefined`. You cannot change this property directly. Use the {{jsxref("Temporal/PlainDate/with", "with()")}} method to create a new `Temporal.PlainDate` object with the desired new value.
+> [!NOTE]
+> Usually, the day index only changes when transitioning from one calendar system into another, such as [from the Julian to the Gregorian calendar](https://en.wikipedia.org/wiki/Adoption_of_the_Gregorian_calendar). In practice, all currently built-in calendars are [proleptic](https://en.wikipedia.org/wiki/Proleptic_Gregorian_calendar), meaning the calendar system is extended indefinitely into the past and future. Assuming `day` is non-continuous guards against future introductions of non-proleptic calendars.
+
+The set accessor of `day` is `undefined`. You cannot change this property directly. Use the {{jsxref("Temporal/PlainDate/with", "with()")}} method to create a new `Temporal.PlainDate` object with the desired new value.
 
 ## Examples
 
@@ -54,13 +57,15 @@ const newDate = date.add({ days: 14 });
 console.log(newDate.toString()); // 2021-07-15
 ```
 
-By default, `with()` constrains the day to the range of valid values. So you can use `{ day: 1 }` to set the day to the first day of the month, even if the first day does not have the number `1`. Similarly, both of the following will set the day to the last day of the month:
+By default, `with()` constrains the day to the range of valid values. So you can use `{ day: 1 }` to set the day to the first day of the month, even if the first day does not have the number `1`. Similarly, the following will set the day to the last day of the month:
 
 ```js
 const date = Temporal.PlainDate.from("2021-07-01");
-const lastDay = date.with({ day: date.daysInMonth }); // 2021-07-31
-const lastDay2 = date.with({ day: Number.MAX_VALUE }); // 2021-07-31
+const lastDay = date.with({ day: Number.MAX_VALUE }); // 2021-07-31
 ```
+
+> [!NOTE]
+> Avoid using {{jsxref("Temporal/PlainDate/daysInMonth", "daysInMonth")}} to set the day to the last day of the month. The last day of the month is not always the same as the number of days in the month, in the rare case where a month may have a few days skipped.
 
 ## Specifications
 

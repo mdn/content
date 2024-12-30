@@ -23,19 +23,12 @@ toLocaleString(locales, options)
 
 The `locales` and `options` parameters customize the behavior of the function and let applications specify the language whose formatting conventions should be used.
 
-In implementations that support the [`Intl.DurationFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat), these parameters correspond exactly to the [`Intl.DurationFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/DurationFormat) constructor's parameters. Implementations without `Intl.DurationFormat` support are asked to ignore both parameters, making the locale used and the form of the string returned entirely implementation-dependent.
+In implementations that support the [`Intl.DurationFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat), these parameters correspond exactly to the [`Intl.DurationFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/DurationFormat) constructor's parameters. Implementations without `Intl.DurationFormat` support return the exact same string as {{jsxref("Temporal/Duration/toString", "toString()")}}, ignoring both parameters.
 
 - `locales` {{optional_inline}}
-
   - : A string with a BCP 47 language tag, or an array of such strings. Corresponds to the [`locales`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/DurationFormat#locales) parameter of the `Intl.DurationFormat()` constructor.
-
-    In implementations without `Intl.DurationFormat` support, this parameter is ignored and the host's locale is usually used.
-
 - `options` {{optional_inline}}
-
   - : An object adjusting the output format. Corresponds to the [`options`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/DurationFormat#options) parameter of the `Intl.DurationFormat()` constructor.
-
-    In implementations without `Intl.DurationFormat` support, this parameter is ignored.
 
 See the [`Intl.DurationFormat()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/DurationFormat) for details on these parameters and how to use them.
 

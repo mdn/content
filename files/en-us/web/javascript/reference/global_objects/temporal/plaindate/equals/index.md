@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainDate.equals
 
 {{JSRef}}
 
-The **`equals()`** method of {{jsxref("Temporal.PlainDate")}} instances returns `true` if this date is equal to another date (in a form convertible by {{jsxref("Temporal/PlainDate/from", "Temporal.PlainDate.from()")}}), and `false` otherwise. They are compared both by their date values and their calendars.
+The **`equals()`** method of {{jsxref("Temporal.PlainDate")}} instances returns `true` if this date is equivalent in value to another date (in a form convertible by {{jsxref("Temporal/PlainDate/from", "Temporal.PlainDate.from()")}}), and `false` otherwise. They are compared both by their date values and their calendars, so two dates from different calendars may be considered equal by {{jsxref("Temporal/PlainDate/compare", "Temporal.PlainDate.compare()")}} but not by `equals()`.
 
 ## Syntax
 
@@ -31,13 +31,13 @@ equals(other)
 ```js
 const date1 = Temporal.PlainDate.from("2021-08-01");
 const date2 = Temporal.PlainDate.from({ year: 2021, month: 8, day: 1 });
-console.log(instant1.equals(instant2)); // true
+console.log(date1.equals(date2)); // true
 
 const date3 = Temporal.PlainDate.from("2021-08-01[u-ca=japanese]");
-console.log(instant1.equals(instant3)); // false
+console.log(date1.equals(date3)); // false
 
 const date4 = Temporal.PlainDate.from("2021-08-02");
-console.log(instant1.equals(instant4)); // false
+console.log(date1.equals(date4)); // false
 ```
 
 ## Specifications

@@ -83,7 +83,7 @@ Because a duration is a difference between two time points, it can be positive, 
 ## Constructor
 
 - {{jsxref("Temporal/Duration/Duration", "Temporal.Duration()")}}
-  - : Creates a new `Temporal.Duration` object.
+  - : Creates a new `Temporal.Duration` object by directly supplying the underlying data.
 
 ## Static methods
 

@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainDate.year
 
 {{JSRef}}
 
-The **`year`** accessor property of {{jsxref("Temporal.PlainDate")}} instances returns an integer representing the number of years of this date relative to the start of a calendar-specific epoch year. [Calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
+The **`year`** accessor property of {{jsxref("Temporal.PlainDate")}} instances returns an integer representing the number of years of this date relative to the start of a calendar-specific epoch year. It is [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 
 This property has the same function as the {{jsxref("Temporal/PlainDate/era", "era")}}/{{jsxref("Temporal/PlainDate/eraYear", "eraYear")}} pair as a unique identifier of a year in a calendar. Usually year 1 is either the first year of the latest era or the ISO 8601 year `0001`. Because `year` is relative to the start of the epoch year, not the epoch date, if the epoch is in the middle of the year, the year will have the same value before and after the start date of the era.
 

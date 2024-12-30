@@ -40,20 +40,20 @@ Temporal.PlainDate.from(info, options)
       - `year`
         - : Corresponds to the {{jsxref("Temporal/PlainDate/year", "year")}} property.
 
-    - An [ISO 8601](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate#iso_8601_format) string representing a duration.
+    - An [ISO 8601](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate#iso_8601_format) string containing a date and optionally a calendar.
 
 - `options` {{optional_inline}}
   - : An object containing the following property:
     - `overflow` {{optional_inline}}
       - : A string specifying the behavior when a date component is out of range. Possible values are:
         - `"constrain"` (default)
-          - : The date component is clamped to the valid range.
+          - : The date component is [clamped](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate#invalid_date_clamping) to the valid range.
         - `"reject"`
           - : A {{jsxref("RangeError")}} is thrown if the date component is out of range.
 
 ### Return value
 
-A new `Temporal.PlainDate` object, representing the date specified by `info` (in the specified `calendar`), interpreted in the calendar system specified by `calendar`.
+A new `Temporal.PlainDate` object, representing the date specified by `info` in the specified `calendar`.
 
 ### Exceptions
 

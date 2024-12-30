@@ -33,7 +33,7 @@ When serializing, you can configure whether to display the calendar ID, and whet
 ## Constructor
 
 - {{jsxref("Temporal/PlainYearMonth/PlainYearMonth", "Temporal.PlainYearMonth()")}}
-  - : Creates a new `Temporal.PlainYearMonth` object.
+  - : Creates a new `Temporal.PlainYearMonth` object by directly supplying the underlying data.
 
 ## Static methods
 

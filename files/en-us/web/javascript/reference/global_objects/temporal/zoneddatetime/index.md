@@ -139,7 +139,7 @@ When constructing a `ZonedDateTime` from an ISO 8601 string or when updating it 
 ## Constructor
 
 - {{jsxref("Temporal/ZonedDateTime/ZonedDateTime", "Temporal.ZonedDateTime()")}}
-  - : Creates a new `Temporal.ZonedDateTime` object.
+  - : Creates a new `Temporal.ZonedDateTime` object by directly supplying the underlying data.
 
 ## Static methods
 

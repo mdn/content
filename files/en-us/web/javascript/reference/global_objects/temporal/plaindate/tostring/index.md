@@ -33,7 +33,7 @@ toString(options)
 
 ### Return value
 
-A string in the [ISO 8601 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Instant#iso_8601_format) representing this date. The calendar annotation is included as specified.
+A string in the [ISO 8601 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate#iso_8601_format) representing this date. The calendar annotation is included as specified.
 
 ### Exceptions
 

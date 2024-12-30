@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Temporal.PlainDateTime.PlainDateTime
 
 The **`Temporal.PlainDateTime()`** constructor creates {{jsxref("Temporal.PlainDateTime")}} objects.
 
-Like all other `Temporal` classes, you should usually construct `Temporal.PlainDateTime` objects using the {{jsxref("Temporal/PlainDateTime/from", "Temporal.PlainDateTime.from()")}} static method, which can handle a variety of input types.
+This constructor allows you to create instances by directly supplying the underlying data. Like all other `Temporal` classes, you should usually construct `Temporal.PlainDateTime` objects using the {{jsxref("Temporal/PlainDateTime/from", "Temporal.PlainDateTime.from()")}} static method, which can handle a variety of input types.
 
 ## Syntax
 

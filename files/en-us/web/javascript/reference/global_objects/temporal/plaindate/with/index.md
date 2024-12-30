@@ -37,7 +37,7 @@ with(info, options)
     - `overflow` {{optional_inline}}
       - : A string specifying the behavior when a date component is out of range. Possible values are:
         - `"constrain"` (default)
-          - : The date component is clamped to the valid range.
+          - : The date component is [clamped](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate#invalid_date_clamping) to the valid range.
         - `"reject"`
           - : A {{jsxref("RangeError")}} is thrown if the date component is out of range.
 

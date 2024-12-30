@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainDate.monthsInYear
 
 {{JSRef}}
 
-The **`monthsInYear`** accessor property of {{jsxref("Temporal.PlainDate")}} instances returns a positive integer representing the number of months in the year of this date. [Calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
+The **`monthsInYear`** accessor property of {{jsxref("Temporal.PlainDate")}} instances returns a positive integer representing the number of months in the year of this date. It is [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 
 For the ISO 8601 calendar, this is always 12, but in other calendar systems it may differ. For example, in calendars using leap months, leap years will have one more month than common years.
 

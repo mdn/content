@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Temporal.PlainYearMonth.PlainYearMonth
 
 The **`Temporal.PlainYearMonth()`** constructor creates {{jsxref("Temporal.PlainYearMonth")}} objects.
 
-Like all other `Temporal` classes, you should usually construct `Temporal.PlainYearMonth` objects using the {{jsxref("Temporal/PlainYearMonth/from", "Temporal.PlainYearMonth.from()")}} static method, which can handle a variety of input types.
+This constructor allows you to create instances by directly supplying the underlying data. Like all other `Temporal` classes, you should usually construct `Temporal.PlainYearMonth` objects using the {{jsxref("Temporal/PlainYearMonth/from", "Temporal.PlainYearMonth.from()")}} static method, which can handle a variety of input types.
 
 ## Syntax
 

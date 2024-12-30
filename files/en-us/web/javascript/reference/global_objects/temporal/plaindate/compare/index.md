@@ -34,10 +34,10 @@ Returns `-1` if `date1` comes before `date2`, `0` if they are the same, and `1` 
 const date1 = Temporal.PlainDate.from("2021-08-01");
 const date2 = Temporal.PlainDate.from("2021-08-02");
 
-console.log(Temporal.Instant.compare(instant1, instant2)); // -1
+console.log(Temporal.PlainDate.compare(date1, date2)); // -1
 
-const instant3 = Temporal.Instant.from("2021-07-31");
-console.log(Temporal.Instant.compare(instant1, instant3)); // 1
+const date3 = Temporal.PlainDate.from("2021-07-31");
+console.log(Temporal.PlainDate.compare(date1, date3)); // 1
 ```
 
 ### Comparing dates in different calendars

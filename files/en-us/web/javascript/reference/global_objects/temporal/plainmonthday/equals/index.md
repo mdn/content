@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainMonthDay.equals
 
 {{JSRef}}
 
-The **`equals()`** method of {{jsxref("Temporal.PlainMonthDay")}} instances TODO
+The **`equals()`** method of {{jsxref("Temporal.PlainMonthDay")}} instances returns `true` if this month-day is equivalent in value to another month-day (in a form convertible by {{jsxref("Temporal/PlainMonthDay/from", "Temporal.PlainMonthDay.from()")}}), and `false` otherwise. They are compared both by their date values and their calendars.
 
 ## Syntax
 
@@ -18,23 +18,27 @@ equals(other)
 ### Parameters
 
 - `other`
-  - : TODO
+  - : A string, an object, or a {{jsxref("Temporal.PlainMonthDay")}} instance representing the other month-day to compare. It is converted to a `Temporal.PlainMonthDay` object using the same algorithm as {{jsxref("Temporal/PlainMonthDay/from", "Temporal.PlainMonthDay.from()")}}.
 
 ### Return value
 
-TODO
-
-### Exceptions
-
-TODO
-
-## Description
-
-TODO
+`true` if this month-day is equal to `other` both in their date value and their calendar, `false` otherwise.
 
 ## Examples
 
-TODO
+### Using equals()
+
+```js
+const md1 = Temporal.PlainMonthDay.from("2021-08-01");
+const md2 = Temporal.PlainMonthDay.from({ year: 2020, month: 8, day: 1 }); // Year doesn't matter
+console.log(md1.equals(md2)); // true
+
+const md3 = Temporal.PlainMonthDay.from("2021-08-01[u-ca=japanese]");
+console.log(md1.equals(md3)); // false
+
+const md4 = Temporal.PlainDate.from("2021-08-02");
+console.log(md1.equals(md4)); // false
+```
 
 ## Specifications
 
@@ -46,4 +50,4 @@ TODO
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal.PlainMonthDay")}}

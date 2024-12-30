@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Temporal.PlainMonthDay.PlainMonthDay
 
 The **`Temporal.PlainMonthDay()`** constructor creates {{jsxref("Temporal.PlainMonthDay")}} objects.
 
-Like all other `Temporal` classes, you should usually construct `Temporal.PlainMonthDay` objects using the {{jsxref("Temporal/PlainMonthDay/from", "Temporal.PlainMonthDay.from()")}} static method, which can handle a variety of input types.
+This constructor allows you to create instances by directly supplying the underlying data. Like all other `Temporal` classes, you should usually construct `Temporal.PlainMonthDay` objects using the {{jsxref("Temporal/PlainMonthDay/from", "Temporal.PlainMonthDay.from()")}} static method, which can handle a variety of input types.
 
 ## Syntax
 
@@ -24,29 +24,43 @@ new Temporal.PlainMonthDay(month, day, calendar, referenceYear)
 ### Parameters
 
 - `month`
-  - : TODO
+  - : A number, truncated to an integer, representing the month in the ISO calendar system.
 - `day`
-  - : TODO
+  - : A number, truncated to an integer, representing the day of the month in the ISO calendar system.
 - `calendar` {{optional_inline}}
-  - : TODO
+  - : A string representing the [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars) to use. Note that irrespective of the `calendar`, the `referenceYear`, `month`, and `day` must be in the ISO 8601 calendar system. Defaults to `"iso8601"`.
 - `referenceYear` {{optional_inline}}
-  - : TODO
+  - : A number, truncated to an integer, representing the year in the ISO calendar system. Defaults to `1972`.
 
 ### Return value
 
-TODO
+A new `Temporal.PlainMonthDay` object, representing the month-day of the date specified by `referenceYear`, `month`, `day` (in the ISO calendar), interpreted in the calendar system specified by `calendar`.
+
+The same ISO month-day can represent different dates in different years with non-ISO calendars. Therefore, you virtually always want to specify a `referenceYear` when using a non-ISO calendar.
 
 ### Exceptions
 
-TODO
-
-## Description
-
-TODO
+- {{jsxref("TypeError")}}
+  - : Thrown if `calendar` is not a string or `undefined`.
+- {{jsxref("RangeError")}}
+  - : Thrown in one of the following cases:
+    - `month` or `day` is not a finite number, or do not represent a valid date in the ISO calendar system.
+    - `calendar` is not a valid calendar identifier.
 
 ## Examples
 
-TODO
+### Using Temporal.PlainMonthDay()
+
+```js
+const md = new Temporal.PlainMonthDay(7, 1);
+console.log(md.toString()); // 07-01
+
+const md2 = new Temporal.PlainMonthDay(7, 1, "chinese");
+console.log(md2.toString()); // 1972-07-01[u-ca=chinese]
+
+const md3 = new Temporal.PlainMonthDay(7, 1, "chinese", 2021);
+console.log(md3.toString()); // 2021-07-01[u-ca=chinese]
+```
 
 ## Specifications
 
@@ -58,4 +72,5 @@ TODO
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal.PlainMonthDay")}}
+- {{jsxref("Temporal/PlainMonthDay/from", "Temporal.PlainMonthDay.from()")}}

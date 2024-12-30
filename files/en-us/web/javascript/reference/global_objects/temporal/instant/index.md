@@ -47,7 +47,7 @@ When serializing, you can configure the fractional second digits and offset.
 ## Constructor
 
 - {{jsxref("Temporal/Instant/Instant", "Temporal.Instant()")}}
-  - : Creates a new `Temporal.Instant` object.
+  - : Creates a new `Temporal.Instant` object by directly supplying the underlying data.
 
 ## Static methods
 

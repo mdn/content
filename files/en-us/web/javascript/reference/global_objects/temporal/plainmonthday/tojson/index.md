@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainMonthDay.toJSON
 
 {{JSRef}}
 
-The **`toJSON()`** method of {{jsxref("Temporal.PlainMonthDay")}} instances TODO
+The **`toJSON()`** method of {{jsxref("Temporal.PlainMonthDay")}} instances returns a string representing this month-day in the same [ISO 8601 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainMonthDay#iso_8601_format) as calling {{jsxref("Temporal/PlainMonthDay/toString", "toString()")}}.
 
 ## Syntax
 
@@ -21,19 +21,36 @@ None.
 
 ### Return value
 
-TODO
-
-### Exceptions
-
-TODO
+A string representing the given month-day in the [ISO 8601 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainMonthDay#iso_8601_format), with the year and calendar annotation included if it is not ISO 8601.
 
 ## Description
 
-TODO
+The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `Temporal.PlainMonthDay` object is stringified. This method is generally intended to, by default, usefully serialize `Temporal.PlainMonthDay` objects during [JSON](/en-US/docs/Glossary/JSON) serialization, which can then be deserialized using the {{jsxref("Temporal/PlainMonthDay/from", "Temporal.PlainMonthDay.from()")}} function as the reviver of {{jsxref("JSON.parse()")}}.
 
 ## Examples
 
-TODO
+### Using toJSON()
+
+```js
+const md = Temporal.PlainMonthDay.from({ month: 8, day: 1 });
+const mdStr = md.toJSON(); // '08-01'
+const md2 = Temporal.PlainMonthDay.from(mdStr);
+```
+
+### JSON serialization and parsing
+
+This example shows how `Temporal.PlainMonthDay` can be serialized as JSON without extra effort, and how to parse it back.
+
+```js
+const md = Temporal.PlainMonthDay.from({ month: 8, day: 1 });
+const mdStr = JSON.stringify({ birthday: md }); // '{"birthday":"08-01"}'
+const obj = JSON.parse(jsonStr, (key, value) => {
+  if (key === "birthday") {
+    return Temporal.PlainMonthDay.from(value);
+  }
+  return value;
+});
+```
 
 ## Specifications
 
@@ -45,4 +62,6 @@ TODO
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal.PlainMonthDay")}}
+- {{jsxref("Temporal/PlainMonthDay/toString", "Temporal.PlainMonthDay.prototype.toString()")}}
+- {{jsxref("Temporal/PlainMonthDay/toLocaleString", "Temporal.PlainMonthDay.prototype.toLocaleString()")}}

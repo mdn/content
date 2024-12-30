@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Temporal.ZonedDateTime.ZonedDateTime
 
 The **`Temporal.ZonedDateTime()`** constructor creates {{jsxref("Temporal.ZonedDateTime")}} objects.
 
-Like all other `Temporal` classes, you should usually construct `Temporal.ZonedDateTime` objects using the {{jsxref("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}} static method, which can handle a variety of input types.
+This constructor allows you to create instances by directly supplying the underlying data. Like all other `Temporal` classes, you should usually construct `Temporal.ZonedDateTime` objects using the {{jsxref("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}} static method, which can handle a variety of input types.
 
 ## Syntax
 

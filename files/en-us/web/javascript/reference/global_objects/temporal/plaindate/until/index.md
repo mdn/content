@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainDate.until
 
 {{JSRef}}
 
-The **`until()`** method of {{jsxref("Temporal.PlainDate")}} instances returns a new {{jsxref("Temporal.Duration")}} object representing the duration from this date to another date (in a form convertible by {{jsxref("Temporal/Instant/from", "Temporal.Instant.from()")}}). The duration is positive if the other date is after this date, and negative if before.
+The **`until()`** method of {{jsxref("Temporal.PlainDate")}} instances returns a new {{jsxref("Temporal.Duration")}} object representing the duration from this date to another date (in a form convertible by {{jsxref("Temporal/PlainDate/from", "Temporal.PlainDate.from()")}}). The duration is positive if the other date is after this date, and negative if before.
 
 This method does `other - this`. To do `this - other`, use the {{jsxref("Temporal/PlainDate/since", "since()")}} method.
 

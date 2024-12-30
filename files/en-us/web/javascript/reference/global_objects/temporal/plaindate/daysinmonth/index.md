@@ -7,7 +7,9 @@ browser-compat: javascript.builtins.Temporal.PlainDate.daysInMonth
 
 {{JSRef}}
 
-The **`daysInMonth`** accessor property of {{jsxref("Temporal.PlainDate")}} instances returns a positive integer representing the number of days in the month of this date. [Calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
+The **`daysInMonth`** accessor property of {{jsxref("Temporal.PlainDate")}} instances returns a positive integer representing the number of days in the month of this date. It is [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
+
+Note that the days in month is not always equal to the {{jsxref("Temporal/PlainDate/day", "day")}} of the last day of the month, in the rare case where a month may have a few days skipped.
 
 The set accessor of `daysInMonth` is `undefined`. You cannot change this property directly.
 
@@ -37,6 +39,16 @@ You can use `daysInMonth` to change to the second last day of the month:
 ```js
 const date = Temporal.PlainDate.from("2021-07-01");
 const secondLastDay = date.with({ day: date.daysInMonth - 1 });
+console.log(secondLastDay.toString()); // 2021-07-30
+```
+
+This is not totally safe, though, because `daysInMonth` is not guaranteed to have any connection with the day index. Here's a safer way to get the second last day:
+
+```js
+const date = Temporal.PlainDate.from("2021-07-01");
+const secondLastDay = date
+  .with({ day: Number.MAX_SAFE_INTEGER })
+  .subtract({ days: 1 });
 console.log(secondLastDay.toString()); // 2021-07-30
 ```
 

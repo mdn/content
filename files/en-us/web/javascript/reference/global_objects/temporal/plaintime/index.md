@@ -31,7 +31,7 @@ When serializing, you can configure the fractional second digits.
 ## Constructor
 
 - {{jsxref("Temporal/PlainTime/PlainTime", "Temporal.PlainTime()")}}
-  - : Creates a new `Temporal.PlainTime` object.
+  - : Creates a new `Temporal.PlainTime` object by directly supplying the underlying data.
 
 ## Static methods
 
