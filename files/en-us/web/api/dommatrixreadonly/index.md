@@ -68,9 +68,9 @@ _This interface doesn't inherit any methods. None of the following methods alter
 - {{domxref("DOMMatrixReadOnly.skewY()")}}
   - : Returns a new {{domxref("DOMMatrix")}} created by applying the specified skew transformation to the source matrix along its Y-axis. The original matrix is not modified.
 - {{domxref("DOMMatrixReadOnly.toFloat32Array()")}}
-  - : Returns a new {{jsxref("Float32Array")}} containing all 16 elements which comprise the matrix as an array of single-precision floating-point numbers.
+  - : Returns a new {{jsxref("Float32Array")}} of single-precision floating-point numbers, containing all 16 elements which comprise the matrix.
 - {{domxref("DOMMatrixReadOnly.toFloat64Array()")}}
-  - : Returns a new {{jsxref("Float64Array")}} containing all 16 elements which comprise the matrix as an array of double-precision floating-point numbers.
+  - : Returns a new {{jsxref("Float64Array")}} of double-precision floating-point numbers, containing all 16 elements which comprise the matrix.
 - {{domxref("DOMMatrixReadOnly.toJSON()")}}
   - : Returns a JSON representation of the `DOMMatrixReadOnly` object.
 - {{domxref("DOMMatrixReadOnly.toString()")}}
