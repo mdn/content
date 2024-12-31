@@ -6,9 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-An **escape character** is a {{glossary("character")}} that invokes an alternative interpretation of the following character in a sequence, signaling that the following character should be interpreted differently.
-
-In many programming languages, an escape character also forms some **escape sequences** that has a special meaning rather than the literal characters, marked by one or more preceding characters and possibly terminating characters.
+An **escape character** is a {{glossary("character")}} that causes one or more characters that follow it to be interpreted differently. This forms an **escape sequence**, which is often used to represent a character that has an alternative meaning when printed literally, such as the quote character in a string literal. Escape sequences can have other usage too, especially in [regular expressions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions#escape_sequences).
 
 - In {{glossary("JavaScript")}} [regexes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape), [string literals](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals), and [identifiers](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers), we can use the backslash (`\`) to escape characters like `\'`, `\"`, `\u0026`, etc.
 - In {{glossary("CSS")}} identifiers, we can use the backslash (`\`) to escape characters like `\\`, `\n`, `\26`, etc. See [escaping characters](/en-US/docs/Web/CSS/ident#escaping_characters) for more information.
