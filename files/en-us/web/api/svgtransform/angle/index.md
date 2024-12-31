@@ -8,7 +8,7 @@ browser-compat: api.SVGTransform.angle
 
 {{APIRef("SVG")}}
 
-The **`angle`** read-only property of the {{domxref("SVGTransform")}} interface represents the `angle` of the transformation in degrees.
+The **`angle`** read-only property of the {{domxref("SVGTransform")}} interface represents the angle of the transformation in degrees.
 
 For `SVG_TRANSFORM_ROTATE`, `SVG_TRANSFORM_SKEWX`, and `SVG_TRANSFORM_SKEWY`, `angle` reflects the transformation's rotation or skewing angle.
 
