@@ -8,7 +8,7 @@ browser-compat: api.DOMPointReadOnly.matrixTransform
 
 {{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
-The static **`matrixTransform()`** method of the {{domxref("DOMPointReadOnly")}} interface applies a matrix transform specified as an object to the DOMPointReadOnly object, creates and returning a new `DOMPointReadOnly` object. Neither the matrix nor the point are altered.
+The static **`matrixTransform()`** method of the {{domxref("DOMPointReadOnly")}} interface applies a matrix transform specified as an object to the DOMPointReadOnly object, creating and returning a new `DOMPointReadOnly` object. Neither the matrix nor the point are altered.
 
 If the matrix passed as a parameter is 2D (the {{domxref("DOMMatrix.is_2d")}}is `true`) then this is a 2D transformation and the point's `z` coordinate will be `0` and point's `w` perspective will be `1`. Otherwise this is a 3D transformation.
 
