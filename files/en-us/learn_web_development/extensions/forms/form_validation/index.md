@@ -822,12 +822,7 @@ const initializeValidation = () => {
 const handleInput = () => {
   const emailInput = isValidEmail();
   setEmailClass(emailInput);
-
-  // Hide error message if it's being shown
-  if (error.className) {
-    error.textContent = "";
-    error.removeAttribute("class");
-  }
+  updateError(emailInput);
 };
 
 // Handle form submission to show error if email is invalid
