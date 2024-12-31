@@ -7,7 +7,9 @@ browser-compat: javascript.builtins.Date.toTemporalInstant
 
 {{JSRef}}
 
-The **`toTemporalInstant()`** method of {{jsxref("Date")}} instances TODO
+The **`toTemporalInstant()`** method of {{jsxref("Date")}} instances returns a new {{jsxref("Temporal.Instant")}} object with the same {{jsxref("Temporal/Instant/epochMilliseconds", "epochMilliseconds")}} value as this date's [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
+
+Use this method to convert legacy `Date` code to the `Temporal` API, then further convert it to other {{jsxref("Temporal")}} classes as necessary.
 
 ## Syntax
 
@@ -21,15 +23,21 @@ None.
 
 ### Return value
 
-TODO
-
-## Description
-
-TODO
+A new {{jsxref("Temporal.Instant")}} object with the same {{jsxref("Temporal/Instant/epochMilliseconds", "epochMilliseconds")}} value as this date's timestamp. Its {{jsxref("Temporal/Instant/microsecond", "microsecond")}} and {{jsxref("Temporal/Instant/nanosecond", "nanosecond")}} fields are always `0`.
 
 ## Examples
 
-TODO
+### Using toTemporalInstant()
+
+```js
+const legacyDate = new Date("2021-07-01T12:34:56.789Z");
+const instant = legacyDate.toTemporalInstant();
+
+// Further convert it to other objects
+const zdt = instant.toZonedDateTimeISO("UTC");
+const date = zdt.toPlainDate();
+console.log(date.toString()); // 2021-07-01
+```
 
 ## Specifications
 
@@ -41,4 +49,6 @@ TODO
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal.Instant")}}
+- {{jsxref("Temporal.ZonedDateTime")}}
+- {{jsxref("Temporal/Instant/fromEpochMilliseconds", "Temporal.Instant.fromEpochMilliseconds()")}}

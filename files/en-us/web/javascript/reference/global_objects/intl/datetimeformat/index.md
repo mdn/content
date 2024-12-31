@@ -186,3 +186,13 @@ console.log(usedOptions.timeZone);
 
 - [Polyfill of `Intl.DateTimeFormat` in FormatJS](https://formatjs.github.io/docs/polyfills/intl-datetimeformat/)
 - {{jsxref("Intl")}}
+- {{jsxref("Date.prototype.toLocaleString()")}}
+- {{jsxref("Date.prototype.toLocaleDateString()")}}
+- {{jsxref("Date.prototype.toLocaleTimeString()")}}
+- {{domxref("Temporal/Instant/toLocaleString", "Temporal.Instant.prototype.toLocaleString()")}}
+- {{domxref("Temporal/PlainDate/toLocaleString", "Temporal.PlainDate.prototype.toLocaleString()")}}
+- {{domxref("Temporal/PlainDateTime/toLocaleString", "Temporal.PlainDateTime.prototype.toLocaleString()")}}
+- {{domxref("Temporal/PlainTime/toLocaleString", "Temporal.PlainTime.prototype.toLocaleString()")}}
+- {{domxref("Temporal/PlainYearMonth/toLocaleString", "Temporal.PlainYearMonth.prototype.toLocaleString()")}}
+- {{domxref("Temporal/PlainMonthDay/toLocaleString", "Temporal.PlainMonthDay.prototype.toLocaleString()")}}
+- {{domxref("Temporal/ZonedDateTime/toLocaleString", "Temporal.ZonedDateTime.prototype.toLocaleString()")}}

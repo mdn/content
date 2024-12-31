@@ -26,7 +26,7 @@ Everything else is known as an [Object](/en-US/docs/Web/JavaScript/Data_structur
 
 - {{jsxref("Function")}}
 - {{jsxref("Array")}}
-- {{jsxref("Date")}}
+- {{jsxref("Map")}}
 - {{jsxref("RegExp")}}
 - {{jsxref("Error")}}
 

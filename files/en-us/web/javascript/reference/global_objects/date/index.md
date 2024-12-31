@@ -10,7 +10,7 @@ browser-compat: javascript.builtins.Date
 JavaScript **`Date`** objects represent a single moment in time in a platform-independent format. `Date` objects encapsulate an integral number that represents milliseconds since the midnight at the beginning of January 1, 1970, UTC (the _epoch_).
 
 > [!NOTE]
-> TC39 is working on [Temporal](https://tc39.es/proposal-temporal/docs/index.html), a new Date/Time API. Read more about it on the [Igalia blog](https://blogs.igalia.com/compilers/2020/06/23/dates-and-times-in-javascript/). It is not yet ready for production use!
+> With the introduction of the {{jsxref("Temporal")}} API, the `Date` object is considered a legacy feature. If the [browser compatibility](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#browser_compatibility) for `Temporal` is acceptable for your application, consider using `Temporal` for new code, and migrating existing code to use `Temporal` instead. We will be writing a usage guide soon!
 
 ## Description
 
@@ -285,7 +285,7 @@ These properties are defined on `Date.prototype` and shared by all `Date` instan
 - {{jsxref("Date.prototype.toString()")}}
   - : Returns a string representing the specified `Date` object. Overrides the {{jsxref("Object.prototype.toString()")}} method.
 - {{jsxref("Date.prototype.toTemporalInstant()")}}
-  - : TODO
+  - : Returns a new {{jsxref("Temporal.Instant")}} object with the same {{jsxref("Temporal/Instant/epochMilliseconds", "epochMilliseconds")}} value as this date's [timestamp](#the_epoch_timestamps_and_invalid_date).
 - {{jsxref("Date.prototype.toTimeString()")}}
   - : Returns the "time" portion of the `Date` as a human-readable string.
 - {{jsxref("Date.prototype.toUTCString()")}}

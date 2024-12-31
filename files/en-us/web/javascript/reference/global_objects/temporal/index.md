@@ -275,7 +275,7 @@ With these tables, you should have a basic idea of how to navigate the `Temporal
 
 A calendar is a way to organize days, typically into periods of weeks, months, years, and eras. Most of the world uses the Gregorian calendar, but there are many other calendars in use, especially in religious and cultural contexts. {{jsxref("Intl/Locale/getCalendars", "Intl.Locale.prototype.getCalendars()")}} lists most of the calendars likely to be supported by browsers. Here we provide a brief overview of how calendar systems are formed to help you internalize what factors may vary between calendars.
 
-There are three most prominent periodic events on Earth: its rotation around the sun (365.242 days for one revolution), the moon's rotation around Earth (29.5 days from new moon to new moon), and its rotation around its axis (24 hours from sunrise to sunrise). Every culture has the same measure of a "day", which is 24 hours. Occasional changes such as daylight saving time are not part of the calendar, but are part of the offset.
+There are three most prominent periodic events on Earth: its rotation around the sun (365.242 days for one revolution), the moon's rotation around Earth (29.5 days from new moon to new moon), and its rotation around its axis (24 hours from sunrise to sunrise). Every culture has the same measure of a "day", which is 24 hours. Occasional changes such as daylight saving time are not part of the calendar, but are part of the [time zone](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets)'s information.
 
 - Some calendars primarily define one year as 365.242 days on average, by defining years to have 365 days, and adding an extra day, the _leap day_, about every 4 years. Then, the year may be further divided into parts called months. These calendars are called _solar calendars_. The Gregorian calendar and the Solar Hijri calendar are solar calendars.
 - Some calendars primarily define one month as 29.5 days on average, by defining months to alternate between 29 and 30 days. Then, 12 months may be grouped into a year of 354 days. These calendars are called _lunar calendars_. The Islamic calendar is a lunar calendar. Because a lunar year is artificial and does not correlate with the season cycle, lunar calendars are generally rarer.
@@ -354,4 +354,6 @@ The concept of a "week" is not connected with any astronomical event, but is a c
 
 ## See also
 
-- TODO
+- {{jsxref("Intl.DateTimeFormat")}}
+- {{jsxref("Intl.RelativeTimeFormat")}}
+- {{jsxref("Intl.DurationFormat")}}
