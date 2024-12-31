@@ -38,5 +38,4 @@ console.log(ym.daysInYear); // 365
 - {{jsxref("Temporal/PlainYearMonth/subtract", "Temporal.PlainYearMonth.prototype.subtract()")}}
 - {{jsxref("Temporal/PlainYearMonth/year", "Temporal.PlainYearMonth.prototype.year")}}
 - {{jsxref("Temporal/PlainYearMonth/daysInMonth", "Temporal.PlainYearMonth.prototype.daysInMonth")}}
-- {{jsxref("Temporal/PlainYearMonth/daysInWeek", "Temporal.PlainYearMonth.prototype.daysInWeek")}}
 - {{jsxref("Temporal/PlainDate/daysInYear", "Temporal.PlainDate.prototype.daysInYear")}}

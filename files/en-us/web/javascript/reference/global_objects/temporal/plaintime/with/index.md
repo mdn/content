@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainTime.with
 
 {{JSRef}}
 
-The **`with()`** method of {{jsxref("Temporal.PlainTime")}} instances TODO
+The **`with()`** method of {{jsxref("Temporal.PlainTime")}} instances returns a new `Temporal.PlainTime` object representing this time with some fields replaced by new values. Because all `Temporal` objects are designed to be immutable, this method essentially functions as the setter for the time's fields.
 
 ## Syntax
 
@@ -19,25 +19,51 @@ with(info, options)
 ### Parameters
 
 - `info`
-  - : TODO
+
+  - : An object containing at least one of the following properties (in the order they are retrieved and validated):
+
+    - {{jsxref("Temporal/PlainTime/hour", "hour")}}
+    - {{jsxref("Temporal/PlainTime/microsecond", "microsecond")}}
+    - {{jsxref("Temporal/PlainTime/millisecond", "millisecond")}}
+    - {{jsxref("Temporal/PlainTime/minute", "minute")}}
+    - {{jsxref("Temporal/PlainTime/nanosecond", "nanosecond")}}
+    - {{jsxref("Temporal/PlainTime/second", "second")}}
+
+    They are truncated to be integers. Out-of-range values are handled by the `overflow` option.
+
 - `options` {{optional_inline}}
-  - : TODO
+  - : An object containing the following property:
+    - `overflow` {{optional_inline}}
+      - : A string specifying the behavior when a time component is out of range. Possible values are:
+        - `"constrain"` (default)
+          - : The time component is clamped to the valid range.
+        - `"reject"`
+          - : A {{jsxref("RangeError")}} is thrown if the time component is out of range.
 
 ### Return value
 
-TODO
+A new `Temporal.PlainTime` object, where the fields specified in `info` that are not `undefined` are replaced by the corresponding values, and the rest of the fields are copied from the original time.
 
 ### Exceptions
 
-TODO
-
-## Description
-
-TODO
+- {{jsxref("TypeError")}}
+  - : Thrown in one of the following cases:
+    - `info` is not an object with at least one recognized property or a string.
+    - `options` is not an object or `undefined`.
+- {{jsxref("RangeError")}}
+  - : Thrown if the provided numerical properties are out of range, and `options.overflow` is set to `"reject"`.
 
 ## Examples
 
-TODO
+### Using with()
+
+```js
+const time = Temporal.PlainTime.from("12:34:56.123456789");
+const newTime = time.with({ hour: 23 });
+console.log(newTime.toString()); // '23:34:56.123456789'
+```
+
+For more examples, see the documentation for the individual properties that can be set using `with()`.
 
 ## Specifications
 
@@ -49,4 +75,7 @@ TODO
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal.PlainTime")}}
+- {{jsxref("Temporal/PlainTime/from", "Temporal.PlainTime.from()")}}
+- {{jsxref("Temporal/PlainTime/add", "Temporal.PlainTime.prototype.add()")}}
+- {{jsxref("Temporal/PlainTime/subtract", "Temporal.PlainTime.prototype.subtract()")}}

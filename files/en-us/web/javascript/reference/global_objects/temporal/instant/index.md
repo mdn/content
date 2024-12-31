@@ -78,7 +78,7 @@ These properties are defined on `Temporal.Instant.prototype` and shared by all `
 - {{jsxref("Temporal/Instant/add", "Temporal.Instant.prototype.add()")}}
   - : Returns a new `Temporal.Instant` object representing this instant moved forward by a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}).
 - {{jsxref("Temporal/Instant/equals", "Temporal.Instant.prototype.equals()")}}
-  - : Returns `true` if this instant is equal to another instant (in a form convertible by {{jsxref("Temporal/Instant/from", "Temporal.Instant.from()")}}), and `false` otherwise. Equivalent to `Temporal.Instant.compare(this, other) === 0`.
+  - : Returns `true` if this instant is equivalent in value to another instant (in a form convertible by {{jsxref("Temporal/Instant/from", "Temporal.Instant.from()")}}), and `false` otherwise. They are compared by their epoch nanoseconds. Equivalent to `Temporal.Instant.compare(this, other) === 0`.
 - {{jsxref("Temporal/Instant/round", "Temporal.Instant.prototype.round()")}}
   - : Returns a new `Temporal.Instant` object representing this instant rounded to the given unit.
 - {{jsxref("Temporal/Instant/since", "Temporal.Instant.prototype.since()")}}

@@ -28,33 +28,35 @@ new Temporal.PlainTime(hour, minute, second, millisecond, microsecond, nanosecon
 ### Parameters
 
 - `hour` {{optional_inline}}
-  - : TODO
+  - : A number, truncated to an integer, representing the hour component.
 - `minute` {{optional_inline}}
-  - : TODO
+  - : A number, truncated to an integer, representing the minute component.
 - `second` {{optional_inline}}
-  - : TODO
+  - : A number, truncated to an integer, representing the second component.
 - `millisecond` {{optional_inline}}
-  - : TODO
+  - : A number, truncated to an integer, representing the millisecond component.
 - `microsecond` {{optional_inline}}
-  - : TODO
+  - : A number, truncated to an integer, representing the microsecond component.
 - `nanosecond` {{optional_inline}}
-  - : TODO
+  - : A number, truncated to an integer, representing the nanosecond component.
 
 ### Return value
 
-TODO
+A new `Temporal.PlainTime` object, representing the time specified by the parameters.
 
 ### Exceptions
 
-TODO
-
-## Description
-
-TODO
+- {{jsxref("RangeError")}}
+  - : Thrown if any of the components is not a finite number, or they don't represent a valid time.
 
 ## Examples
 
-TODO
+### Using Temporal.PlainTime()
+
+```js
+const time = new Temporal.PlainTime(12, 34, 56, 123, 456, 789);
+console.log(time.toString()); // 12:34:56.123456789
+```
 
 ## Specifications
 
@@ -66,4 +68,5 @@ TODO
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal.PlainTime")}}
+- {{jsxref("Temporal/PlainTime/from", "Temporal.PlainTime.from()")}}

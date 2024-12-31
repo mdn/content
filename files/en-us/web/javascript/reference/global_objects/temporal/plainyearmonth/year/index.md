@@ -38,6 +38,5 @@ console.log(ym.year); // 2021
 - {{jsxref("Temporal/PlainYearMonth/subtract", "Temporal.PlainYearMonth.prototype.subtract()")}}
 - {{jsxref("Temporal/PlainYearMonth/era", "Temporal.PlainYearMonth.prototype.era")}}
 - {{jsxref("Temporal/PlainYearMonth/eraYear", "Temporal.PlainYearMonth.prototype.eraYear")}}
-- {{jsxref("Temporal/PlainYearMonth/yearOfWeek", "Temporal.PlainYearMonth.prototype.yearOfWeek")}}
 - {{jsxref("Temporal/PlainYearMonth/month", "Temporal.PlainYearMonth.prototype.month")}}
 - {{jsxref("Temporal/PlainDate/year", "Temporal.PlainDate.prototype.year")}}

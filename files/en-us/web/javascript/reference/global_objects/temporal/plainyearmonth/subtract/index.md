@@ -33,7 +33,7 @@ subtract(duration, options)
 
 ### Return value
 
-A new `Temporal.PlainDate` object representing the date specified by the original date, minus the duration.
+A new `Temporal.PlainYearMonth` object representing the year-month specified by the original `PlainYearMonth`, minus the duration.
 
 ## Description
 

@@ -18,25 +18,38 @@ Temporal.PlainTime.compare(time1, time2)
 ### Parameters
 
 - `time1`
-  - : TODO
+  - : A string, an object, or a {{jsxref("Temporal.PlainTime")}} instance representing the first time to compare. It is converted to a `Temporal.PlainTime` object using the same algorithm as {{jsxref("Temporal/PlainTime/from", "Temporal.PlainTime.from()")}}.
 - `time2`
-  - : TODO
+  - : Same as `time1`.
 
 ### Return value
 
-TODO
-
-### Exceptions
-
-TODO
-
-## Description
-
-TODO
+Returns `-1` if `time1` comes before `time2`, `0` if they are the same, and `1` if `time2` comes after.
 
 ## Examples
 
-TODO
+### Using Temporal.PlainTime.compare()
+
+```js
+const time1 = Temporal.PlainTime.from("12:34:56");
+const time2 = Temporal.PlainTime.from("12:34:57");
+console.log(Temporal.PlainTime.compare(time1, time2)); // -1
+
+const time3 = Temporal.PlainTime.from("11:34:56");
+console.log(Temporal.PlainTime.compare(time1, time3)); // 1
+```
+
+### Sorting an array of times
+
+The purpose of this `compare()` function is to act as a comparator to be passed to {{jsxref("Array.prototype.sort()")}} and related functions.
+
+```js
+const times = ["12:34:56", "11:34:56", "12:34:57"];
+
+times.sort(Temporal.PlainTime.compare);
+console.log(times);
+// [ "11:34:56", "12:34:56", "12:34:57" ]
+```
 
 ## Specifications
 
@@ -48,4 +61,5 @@ TODO
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal.PlainTime")}}
+- {{jsxref("Temporal/PlainTime/equals", "Temporal.PlainTime.prototype.equals()")}}
