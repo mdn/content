@@ -8,11 +8,11 @@ browser-compat: api.SVGElement.nonce
 
 {{APIRef("SVG")}}
 
-The **`nonce`** property of the {{DOMxRef("SVGElement")}} interface returns the cryptographic number used once that is used by [Content Security Policy](/en-US/docs/Web/HTTP/CSP) to determine whether a given fetch will be allowed to proceed.
+The **`nonce`** property of the {{DOMxRef("SVGElement")}} interface returns the nonce that is used by [Content Security Policy](/en-US/docs/Web/HTTP/CSP) to determine whether a given fetch will be allowed to proceed.
 
 ## Value
 
-A String; the cryptographic `nonce`, or an empty string if no `nonce` is set.
+A String; the cryptographic nonce, or an empty string if no nonce is set.
 
 ## Examples
 
