@@ -428,7 +428,7 @@ Add this just above your `taskList` constant declaration:
 
 ```jsx
 function toggleTaskCompleted(id) {
-  console.log(tasks[0]);
+  console.log(props.tasks[0]);
 }
 ```
 
