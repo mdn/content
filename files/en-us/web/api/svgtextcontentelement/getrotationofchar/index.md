@@ -8,7 +8,7 @@ browser-compat: api.SVGTextContentElement.getRotationOfChar
 
 {{APIRef("SVG")}}
 
-The `getRotationOfChar()` method of the {{domxref("SVGTextContentElement")}} interface the represents the rotation of typographic character.
+The `getRotationOfChar()` method of the {{domxref("SVGTextContentElement")}} interface the represents the rotation of a typographic character.
 
 ## Syntax
 
