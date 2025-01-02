@@ -7,15 +7,32 @@ browser-compat: javascript.builtins.Temporal.ZonedDateTime.epochMilliseconds
 
 {{JSRef}}
 
-The **`epochMilliseconds`** accessor property of {{jsxref("Temporal.ZonedDateTime")}} instances TODO
+The **`epochMilliseconds`** accessor property of {{jsxref("Temporal.ZonedDateTime")}} instances returns an integer representing the number of milliseconds elapsed since the Unix epoch (midnight at the beginning of January 1, 1970, UTC) to this instant. Equivalent to dividing `epochNanoseconds` by `1e6` and flooring the result.
 
-## Description
-
-TODO
+The set accessor of `epochMilliseconds` is `undefined`. You cannot change this property directly. To create a new `Temporal.ZonedDateTime` object with the desired new `epochMilliseconds` value, use the {{jsxref("Temporal/ZonedDateTime/add", "add()")}} or {{jsxref("Temporal/ZonedDateTime/subtract", "subtract()")}} method with the appropriate duration.
 
 ## Examples
 
-TODO
+### Using epochMilliseconds
+
+```js
+const instant = Temporal.ZonedDateTime.from("2021-08-01T12:34:56.789Z[UTC]");
+console.log(instant.epochMilliseconds); // 1627821296789
+
+const instant2 = Temporal.ZonedDateTime.from("1969-08-01T12:34:56.789Z[UTC]");
+console.log(instant2.epochMilliseconds); // -13173903211
+```
+
+### Creating a ZonedDateTime object from an epochMilliseconds value
+
+You can create a `Temporal.ZonedDateTime` object from an `epochMilliseconds` value by first constructing a `Temporal.Instant` object using {{jsxref("Temporal/Instant/fromEpochMilliseconds", "Temporal.Instant.fromEpochMilliseconds()")}}, and then converting it to a `Temporal.ZonedDateTime` object using {{jsxref("Temporal/Instant/toZonedDateTimeISO", "Temporal.Instant.prototype.toZonedDateTimeISO()")}}:
+
+```js
+const epochMilliseconds = 1627821296789;
+const instant = Temporal.Instant.fromEpochMilliseconds(epochMilliseconds);
+const zdt = instant.toZonedDateTimeISO("UTC");
+console.log(zdt.toString()); // 2021-08-01T12:34:56.789+00:00[UTC]
+```
 
 ## Specifications
 
@@ -27,4 +44,5 @@ TODO
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal.ZonedDateTime")}}
+- {{jsxref("Temporal/ZonedDateTime/epochNanoseconds", "Temporal.ZonedDateTime.prototype.epochNanoseconds")}}

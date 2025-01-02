@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Temporal.Instant.epochNanoseconds
 
 The **`epochNanoseconds`** accessor property of {{jsxref("Temporal.Instant")}} instances returns a {{jsxref("BigInt")}} representing the number of nanoseconds elapsed since the Unix epoch (midnight at the beginning of January 1, 1970, UTC) to this instant.
 
-The set accessor of `epochNanoseconds` is `undefined`. You cannot change this property directly.
+The set accessor of `epochNanoseconds` is `undefined`. You cannot change this property directly. To create a new `Temporal.Instant` object with the desired new `epochNanoseconds` value, use the {{jsxref("Temporal/Instant/add", "add()")}} or {{jsxref("Temporal/Instant/subtract", "subtract()")}} method with the appropriate duration.
 
 ## Examples
 

@@ -11,7 +11,9 @@ The **`Temporal.ZonedDateTime`** object represents a date and time with a time z
 
 ## Description
 
-A `ZonedDateTime` functions as a bridge between an exact time and a wall-clock time: it simultaneously represents an instant in history (like a {{jsxref("Temporal.Instant")}}) and a local time (like a {{jsxref("Temporal.PlainDateTime")}}). It does so by storing the instant, the time zone, and the calendar system. The time zone is used to convert between the instant and the local time, and the calendar system is used to interpret the local time.
+A `ZonedDateTime` functions as a bridge between an exact time and a wall-clock time: it simultaneously represents an instant in history (like a {{jsxref("Temporal.Instant")}}) and a local, wall-clock time (like a {{jsxref("Temporal.PlainDateTime")}}). It does so by storing the instant, the time zone, and the calendar system. The time zone is used to convert between the instant and the local time, and the calendar system is used to interpret the local time.
+
+`ZonedDateTime` is the only `Temporal` class that is time zone-aware. The addition of a time zone makes `ZonedDateTime` objects have important behavior differences from {{jsxref("Temporal.PlainDateTime")}} objects. Namely, you can no longer assume that "the time 1 minute afterwards" is the same every day, or that a day has 24 hours. In the worst case, an entire day may be missing from the local calendar. Below, we offer a quick overview of time zones and offsets and how they affect conversion between UTC time and local time.
 
 ### Time zones and offsets
 
@@ -54,9 +56,7 @@ When a `Temporal` API accepts a _time zone offset_, it is in the following form:
 
 The `HH`, `MM`, and `SS` components can be separated by `:` or nothing. You can omit either just `SS` or both `SS` and `MM`, so the offset can be one of three forms: `±HH`, `±HH:MM`, or `±HH:MM:SS.sssssssss`. This allows specifying offsets at the nanosecond precision.
 
-Note that subminute offset is not allowed as a time zone identifier, and may not be universally supported by other systems.
-
-`ZonedDateTime` is the only `Temporal` class that is time zone-aware. All other classes are time zone-unaware, where `Instant` represents an exact time, and `PlainDateTime`, `PlainDate`, `PlainTime`, `PlainYearMonth`, and `PlainMonthDay` represent a calendar date or wall-clock time.
+Note that subminute offset (such as `+12:30:15`) is not allowed as a time zone identifier, and may not be universally supported by other systems in the serialization format.
 
 ### ISO 8601 format
 
@@ -127,7 +127,7 @@ When constructing a `ZonedDateTime` from an ISO 8601 string or when updating it 
 - `use`
   - : Use the offset whenever it's provided, ignoring the time zone identifier. This keeps the same exact time as originally calculated when we stored the time.
 - `ignore`
-  - : Use the time zone identifier whenever it's provided, ignoring the offset. This keeps the same local time as originally calculated when we stored the time. Note that this causes the same local time interpretation ambiguity, which is resolved using the `disambiguation` option.
+  - : Use the time zone identifier whenever it's provided, ignoring the offset. This keeps the same local time as originally calculated when we stored the time. Note that this causes the same local time interpretation ambiguity as demonstrated above, which is resolved using the `disambiguation` option.
 - `reject`
   - : Throw a `RangeError` whenever there is a conflict between the offset and the time zone identifier. This is the default for {{jsxref("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}}.
 - `prefer`
@@ -153,63 +153,63 @@ When constructing a `ZonedDateTime` from an ISO 8601 string or when updating it 
 These properties are defined on `Temporal.ZonedDateTime.prototype` and shared by all `Temporal.ZonedDateTime` instances.
 
 - {{jsxref("Temporal/ZonedDateTime/calendarId", "Temporal.ZonedDateTime.prototype.calendarId")}}
-  - : TODO
+  - : Returns a string representing the [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars) used to interpret the internal ISO 8601 date.
 - {{jsxref("Object/constructor", "Temporal.ZonedDateTime.prototype.constructor")}}
   - : The constructor function that created the instance object. For `Temporal.ZonedDateTime` instances, the initial value is the {{jsxref("Temporal/ZonedDateTime/ZonedDateTime", "Temporal.ZonedDateTime()")}} constructor.
 - {{jsxref("Temporal/ZonedDateTime/day", "Temporal.ZonedDateTime.prototype.day")}}
-  - : TODO
+  - : Returns a positive integer representing the 1-based day index in the month of this date, which is the same day number you would see on a calendar. [Calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 - {{jsxref("Temporal/ZonedDateTime/dayOfWeek", "Temporal.ZonedDateTime.prototype.dayOfWeek")}}
-  - : TODO
+  - : Returns a positive integer representing the 1-based day index in the week of this date. Days in a week are numbered sequentially from `1` to {{jsxref("Temporal/ZonedDateTime/daysInWeek", "daysInWeek")}}, with each number mapping to its name. [Calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 - {{jsxref("Temporal/ZonedDateTime/dayOfYear", "Temporal.ZonedDateTime.prototype.dayOfYear")}}
-  - : TODO
+  - : Returns a positive integer representing the 1-based day index in the year of this date. The first day of this year is `1`, and the last day is the {{jsxref("Temporal/ZonedDateTime/daysInYear", "daysInYear")}}. [Calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 - {{jsxref("Temporal/ZonedDateTime/daysInMonth", "Temporal.ZonedDateTime.prototype.daysInMonth")}}
-  - : TODO
+  - : Returns a positive integer representing the number of days in the month of this date. [Calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 - {{jsxref("Temporal/ZonedDateTime/daysInWeek", "Temporal.ZonedDateTime.prototype.daysInWeek")}}
-  - : TODO
+  - : Returns a positive integer representing the number of days in the week of this date. [Calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 - {{jsxref("Temporal/ZonedDateTime/daysInYear", "Temporal.ZonedDateTime.prototype.daysInYear")}}
-  - : TODO
+  - : Returns a positive integer representing the number of days in the year of this date. [Calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 - {{jsxref("Temporal/ZonedDateTime/epochMilliseconds", "Temporal.ZonedDateTime.prototype.epochMilliseconds")}}
-  - : TODO
+  - : Returns an integer representing the number of milliseconds elapsed since the Unix epoch (midnight at the beginning of January 1, 1970, UTC) to this instant. Equivalent to dividing `epochNanoseconds` by `1e6` and flooring the result.
 - {{jsxref("Temporal/ZonedDateTime/epochNanoseconds", "Temporal.ZonedDateTime.prototype.epochNanoseconds")}}
-  - : TODO
+  - : Returns a {{jsxref("BigInt")}} representing the number of nanoseconds elapsed since the Unix epoch (midnight at the beginning of January 1, 1970, UTC) to this instant.
 - {{jsxref("Temporal/ZonedDateTime/era", "Temporal.ZonedDateTime.prototype.era")}}
-  - : TODO
+  - : Returns a calendar-specific lowercase string representing the era of this date, or `undefined` if the calendar does not use eras (e.g. ISO 8601). `era` and `eraYear` together uniquely identify a year in a calendar, in the same way as `year` does. [Calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 - {{jsxref("Temporal/ZonedDateTime/eraYear", "Temporal.ZonedDateTime.prototype.eraYear")}}
-  - : TODO
+  - : Returns a non-negative integer representing the year of this date within the era, or `undefined` if the calendar does not use eras (e.g. ISO 8601). The year index usually starts from 1 (more common) or 0, and years in an era can decrease with time (e.g. Gregorian BCE). `era` and `eraYear` together uniquely identify a year in a calendar, in the same way as `year` does. [Calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 - {{jsxref("Temporal/ZonedDateTime/hour", "Temporal.ZonedDateTime.prototype.hour")}}
-  - : TODO
+  - : Returns a integer from 0 to 23 representing the hour component of this time.
 - {{jsxref("Temporal/ZonedDateTime/hoursInDay", "Temporal.ZonedDateTime.prototype.hoursInDay")}}
   - : Returns a positive integer representing the number of hours in the day of this date in the time zone. It may be more or less than 24 in the case of offset changes such as daylight saving time.
 - {{jsxref("Temporal/ZonedDateTime/inLeapYear", "Temporal.ZonedDateTime.prototype.inLeapYear")}}
-  - : TODO
+  - : Returns a boolean indicating whether this date is in a leap year. A leap year is a year that has more days (a leap day or leap month) than a common year. [Calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 - {{jsxref("Temporal/ZonedDateTime/microsecond", "Temporal.ZonedDateTime.prototype.microsecond")}}
-  - : TODO
+  - : Returns a integer from 0 to 999 representing the microsecond (10<sup>-6</sup> second) component of this time.
 - {{jsxref("Temporal/ZonedDateTime/millisecond", "Temporal.ZonedDateTime.prototype.millisecond")}}
-  - : TODO
+  - : Returns a integer from 0 to 999 representing the millisecond (10<sup>-3</sup> second) component of this time.
 - {{jsxref("Temporal/ZonedDateTime/minute", "Temporal.ZonedDateTime.prototype.minute")}}
-  - : TODO
+  - : Returns a integer from 0 to 59 representing the minute component of this time.
 - {{jsxref("Temporal/ZonedDateTime/month", "Temporal.ZonedDateTime.prototype.month")}}
-  - : TODO
+  - : Returns a positive integer representing the 1-based month index in the year of this date. The first month of this year is `1`, and the last month is the {{jsxref("Temporal/ZonedDateTime/monthsInYear", "monthsInYear")}}. [Calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 - {{jsxref("Temporal/ZonedDateTime/monthCode", "Temporal.ZonedDateTime.prototype.monthCode")}}
-  - : TODO
+  - : Returns a calendar-specific string representing the month of this date. [Calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 - {{jsxref("Temporal/ZonedDateTime/monthsInYear", "Temporal.ZonedDateTime.prototype.monthsInYear")}}
-  - : TODO
+  - : Returns a positive integer representing the number of months in the year of this date. [Calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 - {{jsxref("Temporal/ZonedDateTime/nanosecond", "Temporal.ZonedDateTime.prototype.nanosecond")}}
-  - : TODO
+  - : Returns a integer from 0 to 999 representing the nanosecond (10<sup>-9</sup> second) component of this time.
 - {{jsxref("Temporal/ZonedDateTime/offset", "Temporal.ZonedDateTime.prototype.offset")}}
   - : Returns a string representing the [offset](#time_zones_and_offsets) used to interpret the internal instant, in the form `±HH:MM` (or `±HH:MM:SS.sssssssss` with as much subminute precision as necessary).
 - {{jsxref("Temporal/ZonedDateTime/offsetNanoseconds", "Temporal.ZonedDateTime.prototype.offsetNanoseconds")}}
   - : Returns an integer representing the [offset](#time_zones_and_offsets) used to interpret the internal instant, as a number of nanoseconds (positive or negative).
 - {{jsxref("Temporal/ZonedDateTime/second", "Temporal.ZonedDateTime.prototype.second")}}
-  - : TODO
+  - : Returns a integer from 0 to 59 representing the second component of this time.
 - {{jsxref("Temporal/ZonedDateTime/timeZoneId", "Temporal.ZonedDateTime.prototype.timeZoneId")}}
   - : Returns a string representing the [time zone identifier](#time_zones_and_offsets) used to interpret the internal instant. It uses the same string used when constructing the `Temporal.ZonedDateTime` object, which is either an IANA time zone name or a fixed offset.
 - {{jsxref("Temporal/ZonedDateTime/weekOfYear", "Temporal.ZonedDateTime.prototype.weekOfYear")}}
-  - : TODO
+  - : Returns a positive integer representing the 1-based week index in the {{jsxref("Temporal/ZonedDateTime/yearOfWeek", "yearOfWeek")}} of this date, or `undefined` if the calendar does not have a well-defined week system. The first week of the year is `1`. [Calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 - {{jsxref("Temporal/ZonedDateTime/year", "Temporal.ZonedDateTime.prototype.year")}}
-  - : TODO
+  - : Returns an integer representing the number of years of this date relative to the start of a calendar-specific epoch year. [Calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 - {{jsxref("Temporal/ZonedDateTime/yearOfWeek", "Temporal.ZonedDateTime.prototype.yearOfWeek")}}
-  - : TODO
+  - : Returns an integer representing the year to be paired with the {{jsxref("Temporal/ZonedDateTime/weekOfYear", "weekOfYear")}} of this date, or `undefined` if the calendar does not have a well-defined week system. [Calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 - `Temporal.ZonedDateTime.prototype[Symbol.toStringTag]`
   - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Temporal.ZonedDateTime"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
@@ -266,4 +266,9 @@ These properties are defined on `Temporal.ZonedDateTime.prototype` and shared by
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal")}}
+- {{jsxref("Temporal.Duration")}}
+- {{jsxref("Temporal.Instant")}}
+- {{jsxref("Temporal.PlainDateTime")}}
+- {{jsxref("Temporal.PlainDate")}}
+- {{jsxref("Temporal.PlainTime")}}

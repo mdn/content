@@ -14,13 +14,14 @@ This method will replace all time properties, defaulting to `0` if unspecified. 
 ## Syntax
 
 ```js-nolint
+withPlainTime()
 withPlainTime(plainTime)
 ```
 
 ### Parameters
 
-- `plainTime`
-  - : A string, an object, or a {{jsxref("Temporal.PlainTime")}} instance representing the new time. It is converted to a `Temporal.PlainTime` object using the same algorithm as {{jsxref("Temporal/PlainTime/from", "Temporal.PlainTime.from()")}}.
+- `plainTime` {{optional_inline}}
+  - : A string, an object, or a {{jsxref("Temporal.PlainTime")}} instance representing the new time. It is converted to a `Temporal.PlainTime` object using the same algorithm as {{jsxref("Temporal/PlainTime/from", "Temporal.PlainTime.from()")}}. If not specified, the time part is set to `00:00:00`.
 
 ### Return value
 
@@ -41,6 +42,10 @@ console.log(newDT.toString()); // "2021-07-01T13:45:00"
 // for the with() method, they would be copied from the original date-time
 const newDT2 = dt.withPlainTime({ hour: 13 });
 console.log(newDT2.toString()); // "2021-07-01T13:00:00"
+
+// You can pass nothing to set the time to midnight
+const newDT3 = dt.withPlainTime();
+console.log(newDT3.toString()); // "2021-07-01T00:00:00"
 ```
 
 ## Specifications

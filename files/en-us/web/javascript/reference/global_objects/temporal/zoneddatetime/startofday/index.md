@@ -9,6 +9,8 @@ browser-compat: javascript.builtins.Temporal.ZonedDateTime.startOfDay
 
 The **`startOfDay()`** method of {{jsxref("Temporal.ZonedDateTime")}} instances returns a {{jsxref("Temporal.ZonedDateTime")}} object representing the first instant of this date in the time zone. It usually has a time of `00:00:00`, but may be different if the midnight doesn't exist due to offset changes, in which case the first time that exists is returned.
 
+It is equivalent to calling {{jsxref("Temporal/ZonedDateTime/withPlainTime", "withPlainTime()")}} with no arguments.
+
 ## Syntax
 
 ```js-nolint
