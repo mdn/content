@@ -29,8 +29,8 @@ they are read or written:
     `Z`) are converted to lowercase.
 - In JavaScript
   - : The property name of a custom data attribute is the same as the HTML attribute
-    without the `data-` prefix, and removes single dashes (`-`) for
-    when to capitalize the property's "{{Glossary("camel_case", "camel-cased")}}" name.
+    without the `data-` prefix, and single dashes (`-`) are removed, with the following
+    character capitalized to form the property's camel-cased name.
 
 In addition to the information below, you'll find a how-to guide for using HTML data
 attributes in our article [_Using data attributes_](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes).
