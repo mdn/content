@@ -8,7 +8,7 @@ browser-compat: api.SVGTransformList.createSVGTransformFromMatrix
 
 {{APIRef("SVG")}}
 
-The `createSVGTransformFromMatrix()` method of the {{domxref("SVGTransformList")}} interface creates an {{domxref("SVGTransform")}} object which is initialized to transform of type `SVG_TRANSFORM_MATRIX` and whose values are the given matrix.
+The `createSVGTransformFromMatrix()` method of the {{domxref("SVGTransformList")}} interface creates an {{domxref("SVGTransform")}} object which is initialized to a transform of type `SVG_TRANSFORM_MATRIX` and whose values are the given matrix.
 
 The values from the parameter matrix are copied; the matrix parameter is not adopted as `SVGTransform::matrix`.
 
