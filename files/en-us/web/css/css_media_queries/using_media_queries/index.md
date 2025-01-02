@@ -187,13 +187,13 @@ For more [Media feature](/en-US/docs/Web/CSS/@media#media_features) examples, pl
 ## Creating complex media queries
 
 Sometimes you may want to create a media query that depends on multiple conditions. This is where the _logical operators_ come in: `not`, `and`, and `only`.
-Furthermore, you can combine multiple media queries into a _comma-separated list_; this allows you to apply the same styles in different situations, with the contained media queries evaluated as a logical disjunction (logical `or` composition).
+Furthermore, you can combine multiple media queries into a comma-separated list; this allows you to apply the same styles in different situations, with the contained media queries evaluated as a logical `or` composition: interpreted as if each media query were within parentheses with an `or` between them.
 
 In the previous example, we saw the `and` operator used to group a media _type_ with a media _feature_.
-The `and` operator can also combine multiple media features, within a single media query, as a logical conjunction.
-The `not` operator negates a media query, or a media _feature_ when used with brackets, basically reversing their normal meanings.
-The `only` operator prevents older browsers from applying the styles without evaluating the media _feature_ expressions.
-Lastly, the `or` operator can, under certain conditions, be used to combine multiple media features, within a single media query, as a logical disjunction.
+The `and` operator can also combine multiple media features within a single media query.
+The `not` operator negates a media query, or a media feature when used with brackets, basically reversing their normal meanings.
+The `or` operator can, under certain conditions, be used to combine multiple media features within a single media query.
+Lastly, the `only` operator was used to prevent older browsers from applying the styles without evaluating the media feature expressions but it has no effect in modern browsers.
 
 > [!NOTE]
 > In most cases, the `all` media type is used by default when no other type is specified.
@@ -323,7 +323,7 @@ For example, the following query tests for devices that have a monochrome displa
 }
 ```
 
-Note that you cannot use the `or` operator on the same level as the `and` and `not` operators. You have to use brackets to group sub-expressions of media features to clarify the order of evaluation.
+Note that you cannot use the `or` operator on the same level as the `and` and `not` operators. You can either separate the media features with a comma or use parenthesis to group sub-expressions of media features to clarify the order of evaluation.
 
 For example, the following query specifies that the `and` operator takes precedence over the `or` operator:
 
