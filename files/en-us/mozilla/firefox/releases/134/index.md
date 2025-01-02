@@ -65,7 +65,7 @@ This article provides information about the changes in Firefox 134 that affect d
 
 #### WebDriver BiDi
 
-- Implemented the `browser.getClientWindows` command, which allows to retrieve information about the currently opened top-level browser windows ([Firefox bug 1855025](https://bugzilla.mozilla.org/show_bug.cgi?id=1855025))
+- Implemented the `browser.getClientWindows` command, which allows to retrieve information about the currently opened browser windows ([Firefox bug 1855025](https://bugzilla.mozilla.org/show_bug.cgi?id=1855025))
 - Added support for the `initiatorType` and `destination` fields to all network events ([Firefox bug 1904892](https://bugzilla.mozilla.org/show_bug.cgi?id=1904892) and [Firefox bug 1933331](https://bugzilla.mozilla.org/show_bug.cgi?id=1933331)). They allow to understand why and how the request was created.
 - The `browsingContext.navigationStarted` event is no longer emitted when the initial about:blank page is loaded for a new top-level browsing context ([Firefox bug 1922014](https://bugzilla.mozilla.org/show_bug.cgi?id=1922014))
 - We fixed a bug where the `requestTime` of network events would sometimes be set to 0 ([Firefox bug 1930849](https://bugzilla.mozilla.org/show_bug.cgi?id=1930849))
