@@ -45,7 +45,7 @@ In general, you should:
 1. Choose a place to store your projects. This is where all your website projects will live.
 2. Inside this first folder, create other folders to store each project in. For example, you could call your first project `test-site` (or something more imaginative).
 
-Choose a place now to store you projects. Inside your chosen place, create a new folder called `web-projects`.
+Choose a place now to store your projects. Inside your chosen place, create a new folder called `web-projects`.
 
 ## An aside on casing and spacing
 
@@ -53,7 +53,7 @@ You'll notice that throughout MDN, we ask you to name folders and files complete
 
 1. Many computers, particularly web servers, are case-sensitive. So for example, if you put an image on your website at `test-site/MyImage.jpg` and then in a different file you try to reference the image with `test-site/myimage.jpg`, it may not work.
 2. There are many ways in which using spaces in file names creates issues:
-   - When you invoke commands in the commend line, you have to put quotes around file names with spaces in them, or the path will be interpreted as two separate items.
+   - When you invoke commands in the command line, you have to put quotes around file names with spaces in them, or the path will be interpreted as two separate items.
    - Some programming languages (for example, Python) do not work well with spaces in file names in certain circumstances (for example, if these files are modules to be imported).
 
 File names also map to URLs. For example, if you have a file called `my_file.html` at the root of your server-served directory, generally it will be accessible at `https://example.com/my_file.html` by most web servers' default behavior. Some servers will replace the spaces in your filenames with "%20" (the character code for spaces in URLs), which can create subtle bugs with some server-side logic if they assume that file names and URLs match perfectly.
