@@ -11765,7 +11765,6 @@
 /en-US/docs/Web/CSS/::cue-region	/en-US/docs/Web/API/WebVTT_API
 /en-US/docs/Web/CSS/:@-moz-document	/en-US/docs/Web/CSS/@document
 /en-US/docs/Web/CSS/:any	/en-US/docs/Web/CSS/:is
-/en-US/docs/Web/CSS/:closed	/en-US/docs/Web/CSS/:popover-open
 /en-US/docs/Web/CSS/:dir()	/en-US/docs/Web/CSS/:dir
 /en-US/docs/Web/CSS/:host()	/en-US/docs/Web/CSS/:host_function
 /en-US/docs/Web/CSS/:lang()	/en-US/docs/Web/CSS/:lang
@@ -11778,7 +11777,6 @@
 /en-US/docs/Web/CSS/:nth-last-col	/en-US/docs/Web/CSS/:nth-last-of-type
 /en-US/docs/Web/CSS/:nth-last-of-type()	/en-US/docs/Web/CSS/:nth-last-of-type
 /en-US/docs/Web/CSS/:nth-of-type()	/en-US/docs/Web/CSS/:nth-of-type
-/en-US/docs/Web/CSS/:open	/en-US/docs/Web/CSS/:popover-open
 /en-US/docs/Web/CSS/@-moz-document	/en-US/docs/Web/CSS/@document
 /en-US/docs/Web/CSS/@font-face/font-variant	/en-US/docs/Web/CSS/@font-face
 /en-US/docs/Web/CSS/@media/update-frequency	/en-US/docs/Web/CSS/@media/update

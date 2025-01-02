@@ -106,7 +106,7 @@ To exploit this vulnerability, an attacker sends the user a link like this:
 
 When the user clicks the link:
 
-1. The browser sends a GET request to the server. The request's URL parameter contains the malicous code.
+1. The browser sends a GET request to the server. The request's URL parameter contains the malicious code.
 2. The server extracts the URL parameter value and embeds it in the page.
 3. The server returns the page to the browser, which runs it.
 
@@ -310,7 +310,7 @@ The recommended approach to mitigating XSS with a CSP is a [strict CSP](/en-US/d
 
 ### Defense summary checklist
 
-We can summarise the defenses above as follows:
+We can summarize the defenses above as follows:
 
 - When interpolating input into a page, either in the browser or in the server, use a templating engine that performs output encoding.
 - Be aware of the context in which you are interpolating input, and ensure that the appropriate output encoding will be performed in that context.

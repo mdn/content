@@ -5,6 +5,7 @@ aaba
 aabaac
 aabbcc
 aabbccdd
+AACA
 aacbbbcac
 abaac
 abbbbbc
@@ -110,6 +111,7 @@ DSWbdfnrstvw
 dubby
 Duden
 dXNlcm5hbWU6cGFzc3dvcmQ
+EACC
 eirmod
 elitr
 ERHGDFy
@@ -144,6 +146,7 @@ futurelibrary.no
 gaesamplesite
 gims
 globalprivacycontrol.org
+glossarysidebar.yaml
 GNF576746573fhdg4737dh4
 gogerychwyrndrobwllllantysiliogogogoch
 Graece
@@ -182,6 +185,7 @@ kitchensink
 lambdatest
 Latine
 latinmodern-math
+learntocodewith.me
 leopardskin
 letmein
 libpkcs11testmodule
@@ -198,6 +202,7 @@ magis
 Mand
 manis
 Markmarkimark
+mdnsidebar.yaml
 megastore
 meinheld
 montecarlo

@@ -36,7 +36,7 @@ If this is not the case, we'd suggest that you run through the [Environment setu
 
   - : JavaScript is a programming language that adds interactivity to websites. This happens in games, in the behavior of responses when buttons are pressed or with data entry on forms, with dynamic styling, with animation, etc. This article helps you get started with JavaScript and furthers your understanding of what is possible.
 
-- [Publishing your webaite](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
+- [Publishing your website](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
 
   - : Once you finish writing the code and organizing the files that make up your website, you need to put it all online so people can find it. This article explains how to get your sample website online with little effort.
 

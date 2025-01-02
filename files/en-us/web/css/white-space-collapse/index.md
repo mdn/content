@@ -50,6 +50,9 @@ The `white-space-collapse` property is specified as a single keyword chosen from
 
 > **Note:** _Segment break characters_ are characters such as line feeds that cause text to break onto new lines.
 
+> [!NOTE]
+> The [CSS text](/en-US/docs/Web/CSS/CSS_text) module defines a `discard` value for the `white-space-collapse` property to discard all white space in the element, however, this is not supported in any browsers.
+
 ## Collapsing of white space
 
 User agents handle white space collapsing as follows:
