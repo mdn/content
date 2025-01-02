@@ -27,7 +27,7 @@ SVGNumberList.replaceItem(newItem, index)
 - `newItem`
   - : A {{domxref("SVGNumber")}} item that is inserted into the list.
 - `index`
-  - : An `integer`; the index where the new item should replace the existing one, as an unsigned long.
+  - : An integer; the index where the new item should replace the existing one, as an unsigned long.
 
 ### Return value
 

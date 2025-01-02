@@ -12,7 +12,7 @@ The **`numberOfItems`** read-only property of the {{domxref("SVGNumberList")}} i
 
 ## Value
 
-An `integer`; the number of {{domxref("SVGNumber")}} objects in the list as an unsigned long.
+An integer; the number of {{domxref("SVGNumber")}} objects in the list as an unsigned long.
 
 ## Specifications
 

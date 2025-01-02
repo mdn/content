@@ -31,7 +31,7 @@ SVGNumberList.insertItemBefore(newItem, index)
 - `newItem`
   - : An {{domxref("SVGNumber")}} item that is inserted into the list.
 - `index`
-  - : An `integer`; the index where the new item should be inserted as an unsigned long.
+  - : An integer; the index where the new item should be inserted as an unsigned long.
 
 ### Return value
 

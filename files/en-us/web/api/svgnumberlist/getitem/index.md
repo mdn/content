@@ -23,7 +23,7 @@ SVGNumberList.getItem(index)
 ### Parameters
 
 - `index`
-  - : An `integer`; the index of the specified item as an unsigned long.
+  - : An integer; the index of the specified item as an unsigned long.
 
 ### Return value
 

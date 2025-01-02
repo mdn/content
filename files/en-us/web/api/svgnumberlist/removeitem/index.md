@@ -19,7 +19,7 @@ SVGNumberList.removeItem(index)
 ### Parameters
 
 - `index`
-  - : An `integer`; the index of the item to be removed as an unsigned long.
+  - : An integer; the index of the item to be removed as an unsigned long.
 
 ### Return value
 
