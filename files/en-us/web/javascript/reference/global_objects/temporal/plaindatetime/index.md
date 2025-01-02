@@ -110,37 +110,37 @@ These properties are defined on `Temporal.PlainDateTime.prototype` and shared by
 ## Instance methods
 
 - {{jsxref("Temporal/PlainDateTime/add", "Temporal.PlainDateTime.prototype.add()")}}
-  - : TODO
+  - : Returns a new `Temporal.PlainDateTime` object representing this date-time moved forward by a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}).
 - {{jsxref("Temporal/PlainDateTime/equals", "Temporal.PlainDateTime.prototype.equals()")}}
-  - : TODO
+  - : Returns `true` if this date-time is equivalent in value to another date-time (in a form convertible by {{jsxref("Temporal/PlainDate/from", "Temporal.PlainDate.from()")}}), and `false` otherwise. They are compared both by their date and time values and their calendars, so two date-times from different calendars may be considered equal by {{jsxref("Temporal/PlainDateTime/compare", "Temporal.PlainDateTime.compare()")}} but not by `equals()`.
 - {{jsxref("Temporal/PlainDateTime/round", "Temporal.PlainDateTime.prototype.round()")}}
-  - : TODO
+  - : Returns a new `Temporal.PlainDateTime` object representing this date-time rounded to the given unit.
 - {{jsxref("Temporal/PlainDateTime/since", "Temporal.PlainDateTime.prototype.since()")}}
-  - : TODO
+  - : Returns a new {{jsxref("Temporal.Duration")}} object representing the duration from another date-time (in a form convertible by {{jsxref("Temporal/PlainDateTime/from", "Temporal.PlainDateTime.from()")}}) to this date-time. The duration is positive if the other date-time is before this date-time, and negative if after.
 - {{jsxref("Temporal/PlainDateTime/subtract", "Temporal.PlainDateTime.prototype.subtract()")}}
-  - : TODO
+  - : Returns a new `Temporal.PlainDateTime` object representing this date-time moved backward by a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}).
 - {{jsxref("Temporal/PlainDateTime/toJSON", "Temporal.PlainDateTime.prototype.toJSON()")}}
-  - : TODO
+  - : Returns a string representing this date-time in the same [ISO 8601 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime#iso_8601_format) as calling {{jsxref("Temporal/PlainDateTime/toString", "toString()")}}.
 - {{jsxref("Temporal/PlainDateTime/toLocaleString", "Temporal.PlainDateTime.prototype.toLocaleString()")}}
-  - : TODO
+  - : Returns a string with a language-sensitive representation of this date-time.
 - {{jsxref("Temporal/PlainDateTime/toPlainDate", "Temporal.PlainDateTime.prototype.toPlainDate()")}}
-  - : TODO
+  - : Returns a new {{jsxref("Temporal.PlainDate")}} object representing the date part (year, month, day) of this date-time in the same calendar system.
 - {{jsxref("Temporal/PlainDateTime/toPlainTime", "Temporal.PlainDateTime.prototype.toPlainTime()")}}
-  - : TODO
+  - : Returns a new {{jsxref("Temporal.PlainTime")}} object representing the time part (hour, minute, second, and subsecond components) of this date-time.
 - {{jsxref("Temporal/PlainDateTime/toString", "Temporal.PlainDateTime.prototype.toString()")}}
-  - : TODO
+  - : Returns a string representing this date-time in the [ISO 8601 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime#iso_8601_format).
 - {{jsxref("Temporal/PlainDateTime/toZonedDateTime", "Temporal.PlainDateTime.prototype.toZonedDateTime()")}}
-  - : TODO
+  - : Returns a new {{jsxref("Temporal.ZonedDateTime")}} instance representing the same date-time as this plain date-time, but in the specified time zone.
 - {{jsxref("Temporal/PlainDateTime/until", "Temporal.PlainDateTime.prototype.until()")}}
-  - : TODO
+  - : Returns a new {{jsxref("Temporal.Duration")}} object representing the duration from this date-time to another date-time (in a form convertible by {{jsxref("Temporal/PlainDateTime/from", "Temporal.PlainDateTime.from()")}}). The duration is positive if the other date-time is after this date-time, and negative if before.
 - {{jsxref("Temporal/PlainDateTime/valueOf", "Temporal.PlainDateTime.prototype.valueOf()")}}
   - : Throws a {{jsxref("TypeError")}}, which prevents `Temporal.PlainDateTime` instances from being [implicitly converted to primitives](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion) when used in arithmetic or comparison operations.
 - {{jsxref("Temporal/PlainDateTime/with", "Temporal.PlainDateTime.prototype.with()")}}
-  - : TODO
+  - : Returns a new `Temporal.PlainDateTime` object representing this date-time with some fields replaced by new values.
 - {{jsxref("Temporal/PlainDateTime/withCalendar", "Temporal.PlainDateTime.prototype.withCalendar()")}}
-  - : TODO
+  - : Returns a new `Temporal.PlainDateTime` object representing this date-time interpreted in the new calendar system.
 - {{jsxref("Temporal/PlainDateTime/withPlainTime", "Temporal.PlainDateTime.prototype.withPlainTime()")}}
-  - : TODO
+  - : Returns a new `Temporal.PlainDateTime` object representing this date-time with the time part entirely replaced by the new time (in a form convertible by {{jsxref("Temporal/PlainTime/from", "Temporal.PlainTime.from()")}})
 
 ## Specifications
 
@@ -152,4 +152,8 @@ These properties are defined on `Temporal.PlainDateTime.prototype` and shared by
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal")}}
+- {{jsxref("Temporal.Duration")}}
+- {{jsxref("Temporal.PlainDate")}}
+- {{jsxref("Temporal.PlainTime")}}
+- {{jsxref("Temporal.ZonedDateTime")}}

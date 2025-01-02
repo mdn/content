@@ -45,7 +45,7 @@ Temporal.PlainMonthDay.from(info, options)
 - `options` {{optional_inline}}
   - : An object containing the following property:
     - `overflow` {{optional_inline}}
-      - : A string specifying the behavior when a date component is out of range. Possible values are:
+      - : A string specifying the behavior when a date component is out of range (when using the object `info`). Possible values are:
         - `"constrain"` (default)
           - : The date component is [clamped](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate#invalid_date_clamping) to the valid range.
         - `"reject"`

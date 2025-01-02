@@ -46,7 +46,7 @@ Subtracting a duration is equivalent to [adding](Web/JavaScript/Reference/Global
 ```js
 const start = Temporal.PlainDate.from("2022-01-01");
 const end = start.subtract({ years: 1, months: 2, weeks: 3, days: 4 });
-console.log(end.toString()); // 2020-10-25
+console.log(end.toString()); // 2020-10-07
 ```
 
 For more examples, see {{jsxref("Temporal/PlainDate/add", "add()")}}.

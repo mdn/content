@@ -49,7 +49,7 @@ A new {{jsxref("Temporal.Duration")}} object representing the duration _since_ `
 ### Using since()
 
 ```js
-const lastUpdated = Temporal.PlainDate.from("2022-01");
+const lastUpdated = Temporal.PlainYearMonth.from("2022-01");
 const now = Temporal.Now.plainDateISO().toPlainYearMonth();
 const duration = now.since(lastUpdated);
 console.log(`Last updated ${duration.toLocaleString("en-US")} ago`);

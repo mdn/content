@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainDateTime.toJSON
 
 {{JSRef}}
 
-The **`toJSON()`** method of {{jsxref("Temporal.PlainDateTime")}} instances TODO
+The **`toJSON()`** method of {{jsxref("Temporal.PlainDateTime")}} instances returns a string representing this date-time in the same [ISO 8601 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime#iso_8601_format) as calling {{jsxref("Temporal/PlainDateTime/toString", "toString()")}}.
 
 ## Syntax
 
@@ -21,19 +21,36 @@ None.
 
 ### Return value
 
-TODO
-
-### Exceptions
-
-TODO
+A string representing the given date-time in the [ISO 8601 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime#iso_8601_format), with the calendar annotation included if it is not ISO 8601.
 
 ## Description
 
-TODO
+The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `Temporal.PlainDateTime` object is stringified. This method is generally intended to, by default, usefully serialize `Temporal.PlainDateTime` objects during [JSON](/en-US/docs/Glossary/JSON) serialization, which can then be deserialized using the {{jsxref("Temporal/PlainDateTime/from", "Temporal.PlainDateTime.from()")}} function as the reviver of {{jsxref("JSON.parse()")}}.
 
 ## Examples
 
-TODO
+### Using toJSON()
+
+```js
+const dt = Temporal.PlainDateTime.from({ year: 2021, month: 8, day: 1 });
+const dtStr = dt.toJSON(); // '2021-08-01T00:00:00'
+const dt2 = Temporal.PlainDateTime.from(dtStr);
+```
+
+### JSON serialization and parsing
+
+This example shows how `Temporal.PlainDateTime` can be serialized as JSON without extra effort, and how to parse it back.
+
+```js
+const dt = Temporal.PlainDateTime.from({ year: 2021, month: 8, day: 1 });
+const jsonStr = JSON.stringify({ nextBilling: dt }); // '{"nextBilling":"2021-08-01T00:00:00"}'
+const obj = JSON.parse(jsonStr, (key, value) => {
+  if (key === "nextBilling") {
+    return Temporal.PlainDateTime.from(value);
+  }
+  return value;
+});
+```
 
 ## Specifications
 
@@ -45,4 +62,7 @@ TODO
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal.PlainDateTime")}}
+- {{jsxref("Temporal/PlainDateTime/from", "Temporal.PlainDateTime.from()")}}
+- {{jsxref("Temporal/PlainDateTime/toString", "Temporal.PlainDateTime.prototype.toString()")}}
+- {{jsxref("Temporal/PlainDateTime/toLocaleString", "Temporal.PlainDateTime.prototype.toLocaleString()")}}

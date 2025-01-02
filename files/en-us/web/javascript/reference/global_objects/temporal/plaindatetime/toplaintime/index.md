@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainDateTime.toPlainTime
 
 {{JSRef}}
 
-The **`toPlainTime()`** method of {{jsxref("Temporal.PlainDateTime")}} instances TODO
+The **`toPlainTime()`** method of {{jsxref("Temporal.PlainDateTime")}} instances returns a new {{jsxref("Temporal.PlainTime")}} object representing the time part (hour, minute, second, and subsecond components) of this date-time.
 
 ## Syntax
 
@@ -21,19 +21,17 @@ None.
 
 ### Return value
 
-TODO
-
-### Exceptions
-
-TODO
-
-## Description
-
-TODO
+A new `Temporal.PlainTime` object representing the time part (hour, minute, second, and subsecond components) of this date-time.
 
 ## Examples
 
-TODO
+### Using toPlainTime()
+
+```js
+const dt = Temporal.PlainDateTime.from("2021-07-01T12:34:56");
+const time = dt.toPlainTime();
+console.log(time.toString()); // '12:34:56'
+```
 
 ## Specifications
 
@@ -45,4 +43,7 @@ TODO
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal.PlainDateTime")}}
+- {{jsxref("Temporal.PlainTime")}}
+- {{jsxref("Temporal/PlainDateTime/toPlainDate", "Temporal.PlainDateTime.prototype.toPlainDate()")}}
+- {{jsxref("Temporal/PlainDateTime/toZonedDateTime", "Temporal.PlainDate.prototype.toZonedDateTime()")}}

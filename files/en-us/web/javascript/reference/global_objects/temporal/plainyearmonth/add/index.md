@@ -55,7 +55,7 @@ const end = start.add({ years: 1, months: 2, weeks: 3, days: 4 });
 console.log(end.toString()); // 2022-03
 
 const end2 = start.add({ years: -1, months: -2, weeks: -3, days: -4 });
-console.log(end2.toString()); // 2019-10
+console.log(end2.toString()); // 2019-11
 
 const distance = Temporal.PlainYearMonth.from("2020-01").until("2021-01"); // 366 days
 const end3 = start.add(distance);

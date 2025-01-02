@@ -24,7 +24,7 @@ withCalendar(calendar)
 
 ### Return value
 
-A new `Temporal.PlainDate` object, representing the date specified by the original date, interpreted in the new calendar system.
+A new `Temporal.PlainDate` object, representing the date specified by the original `PlainDate`, interpreted in the new calendar system.
 
 ### Exceptions
 

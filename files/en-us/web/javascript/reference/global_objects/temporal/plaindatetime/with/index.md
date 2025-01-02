@@ -7,7 +7,9 @@ browser-compat: javascript.builtins.Temporal.PlainDateTime.with
 
 {{JSRef}}
 
-The **`with()`** method of {{jsxref("Temporal.PlainDateTime")}} instances TODO
+The **`with()`** method of {{jsxref("Temporal.PlainDateTime")}} instances returns a new `Temporal.PlainDateTime` object representing this date-time with some fields replaced by new values. Because all `Temporal` objects are designed to be immutable, this method essentially functions as the setter for the date-time's fields.
+
+To replace the {{jsxref("Temporal/PlainDateTime/calendarId", "calendarId")}} property, use the {{jsxref("Temporal/PlainDateTime/withCalendar", "withCalendar()")}} method instead.
 
 ## Syntax
 
@@ -19,25 +21,43 @@ with(info, options)
 ### Parameters
 
 - `info`
-  - : TODO
+  - : An object containing properties that are accepted by either {{jsxref("Temporal/PlainDate/with", "Temporal.PlainDate.prototype.with()")}} (`era`, `eraYear`, `year`, `month`, `monthCode`, `day`) or {{jsxref("Temporal/PlainTime/with", "Temporal.PlainTime.prototype.with()")}} (`hour`, `minute`, `second`, `millisecond`, `microsecond`, `nanosecond`).
 - `options` {{optional_inline}}
-  - : TODO
+  - : An object containing the following property:
+    - `overflow` {{optional_inline}}
+      - : A string specifying the behavior when a date component is out of range. Possible values are:
+        - `"constrain"` (default)
+          - : The date component is [clamped](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate#invalid_date_clamping) to the valid range.
+        - `"reject"`
+          - : A {{jsxref("RangeError")}} is thrown if the date component is out of range.
 
 ### Return value
 
-TODO
+A new `Temporal.PlainDateTime` object, where the fields specified in `info` that are not `undefined` are replaced by the corresponding values, and the rest of the fields are copied from the original date-time.
 
 ### Exceptions
 
-TODO
-
-## Description
-
-TODO
+- {{jsxref("TypeError")}}
+  - : Thrown in one of the following cases:
+    - `info` is not an object.
+    - `options` is not an object or `undefined`.
+- {{jsxref("RangeError")}}
+  - : Thrown in one of the following cases:
+    - The provided properties that specify the same component are inconsistent.
+    - The provided non-numerical properties are not valid, for example, if `monthCode` is never a valid month code in this calendar.
+    - The provided numerical properties are out of range, and `options.overflow` is set to `"reject"`.
 
 ## Examples
 
-TODO
+### Using with()
+
+```js
+const dt = Temporal.PlainDateTime.from("2021-07-01T12:34:56");
+const newDT = dt.with({ hour: 13 });
+console.log(newDT.toString()); // "2021-07-01T13:34:56"
+```
+
+For more examples, see the documentation for the individual properties that can be set using `with()`.
 
 ## Specifications
 
@@ -49,4 +69,9 @@ TODO
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal.PlainDateTime")}}
+- {{jsxref("Temporal/PlainDateTime/withCalendar", "Temporal.PlainDateTime.prototype.withCalendar()")}}
+- {{jsxref("Temporal/PlainDateTime/withPlainTime", "Temporal.PlainDateTime.prototype.withPlainTime()")}}
+- {{jsxref("Temporal/PlainDateTime/from", "Temporal.PlainDateTime.from()")}}
+- {{jsxref("Temporal/PlainDateTime/add", "Temporal.PlainDateTime.prototype.add()")}}
+- {{jsxref("Temporal/PlainDateTime/subtract", "Temporal.PlainDateTime.prototype.subtract()")}}

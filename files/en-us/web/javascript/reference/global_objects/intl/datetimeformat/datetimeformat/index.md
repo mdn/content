@@ -161,7 +161,7 @@ The date-time component styles requested may not directly correspond to a valid 
 #### Style shortcuts
 
 - `dateStyle`
-  - : The [date formatting style](https://cldr.unicode.org/translation/date-time/date-time-patterns#h.aa5zjyepm6vh) to use. Possible values are `"full"`, `"long"`, `"medium"`, and `"short"`. It expands to styles for `weekday`, `day`, `month`, `year`, and `era`, with the exact combination of values depending on the locale.
+  - : The [date formatting style](https://cldr.unicode.org/translation/date-time/date-time-patterns#h.aa5zjyepm6vh) to use. Possible values are `"full"`, `"long"`, `"medium"`, and `"short"`. It expands to styles for `weekday`, `day`, `month`, `year`, and `era`, with the exact combination of values depending on the locale. When formatting objects such as {{jsxref("Temporal.PlainDate")}}, {{jsxref("Temporal.PlainYearMonth")}}, and {{jsxref("Temporal.PlainMonthDay")}}, `dateStyle` will resolve to only those fields relevant to the object.
 - `timeStyle`
   - : The [time formatting style](https://cldr.unicode.org/translation/date-time/date-time-patterns#h.588vo3awdscu) to use. Possible values are `"full"`, `"long"`, `"medium"`, and `"short"`. It expands to styles for `hour`, `minute`, `second`, and `timeZoneName`, with the exact combination of values depending on the locale.
 

@@ -49,22 +49,23 @@ A new {{jsxref("Temporal.Duration")}} object representing the duration _since_ `
 ### Using since()
 
 ```js
-const lastUpdated = Temporal.PlainDate.from("2022-01-01");
+const date = Temporal.PlainDate.from("2022-12-25");
 const now = Temporal.Now.plainDateISO();
-const duration = now.since(lastUpdated);
-console.log(`Last updated ${duration.toLocaleString("en-US")} ago`);
-// Expected output: "Last updated [number] days ago"
+const duration = now.since(date);
+const formatter = new Intl.DurationFormat("en-US", { style: "long" });
+console.log(`It's been ${formatter.format(duration)} since that Christmas...`);
+// Expected output: "It's been [number] days since that Christmas..."
 
-const duration2 = now.since(lastUpdated, { smallestUnit: "month" });
-console.log(`Last updated ${duration2.toLocaleString("en-US")} ago`);
-// Expected output: "Last updated [number] months ago"
+const duration2 = now.since(date, { smallestUnit: "month" });
+console.log(`It's been ${formatter.format(duration2)} since that Christmas...`);
+// Expected output: "It's been [number] months since that Christmas..."
 
-const duration3 = now.since(lastUpdated, {
+const duration3 = now.since(date, {
   largestUnit: "year",
   smallestUnit: "month",
 });
-console.log(`Last updated ${duration3.toLocaleString("en-US")} ago`);
-// Expected output: "Last updated [number] years, [number] months ago"
+console.log(`It's been ${formatter.format(duration3)} since that Christmas...`);
+// Expected output: "It's been [number] years, [number] months since that Christmas..."
 ```
 
 ### Rounding the result
