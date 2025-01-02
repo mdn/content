@@ -74,7 +74,7 @@ This article provides information about the changes in Firefox 134 that affect d
 
 #### Marionette
 
-- Extensions can now be installed and uninstalled on GeckoView (Firefox for Android) ([Firefox bug 1806135](https://bugzilla.mozilla.org/show_bug.cgi?id=1806135)).
+- WebExtensions can now be installed and uninstalled in GeckoView (Firefox for Android) ([Firefox bug 1806135](https://bugzilla.mozilla.org/show_bug.cgi?id=1806135)).
 - The `Addon:Install` command can now be used to install extensions enabled in Private Browsing mode ([Firefox bug 1810718](https://bugzilla.mozilla.org/show_bug.cgi?id=1810718))
 
 ## Changes for add-on developers
