@@ -10,7 +10,7 @@ browser-compat: api.SVGTransformList.consolidate
 
 The `consolidate()` method of the {{domxref("SVGTransformList")}} interface consolidates the list of separate {{domxref("SVGTransform")}} objects by multiplying the equivalent transformation matrices together to result in a list consisting of a single `SVGTransform` object of type `SVG_TRANSFORM_MATRIX`.
 
-The consolidation operation creates new `SVGTransform` object as the first and only item in the list.
+The consolidation operation creates a new `SVGTransform` object as the first and only item in the list.
 
 The returned item is the item itself and not a copy. Any changes made to the item are immediately reflected in the list.
 
