@@ -424,7 +424,7 @@ That's why the `color-black` is inside a nested declaration even though it is a 
 
 > [!NOTE]
 > Support for the rule was added with {{domxref("CSSNestedDeclarations")}}.
-> Browsers that [do not support this interface](/en-US/docs/Web/API/CSSNestedDeclarations#browser_compatibility) this interface may parse nested rules in the wrong order.
+> Browsers that [do not support this interface](/en-US/docs/Web/API/CSSNestedDeclarations#browser_compatibility) may parse nested rules in the wrong order.
 
 ## Concatenation (is not possible)
 
