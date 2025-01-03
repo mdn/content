@@ -25,6 +25,7 @@ Temporal.PlainTime.from(info, options)
     - A {{jsxref("Temporal.PlainTime")}} instance, which creates a copy of the instance.
     - A {{jsxref("Temporal.PlainDateTime")}} instance, which provides the time in the same fashion as {{jsxref("Temporal/PlainDateTime/toPlainDate", "Temporal.PlainDateTime.prototype.toPlainTime()")}}.
     - A {{jsxref("Temporal.ZonedDateTime")}} instance, which provides the time in the same fashion as {{jsxref("Temporal/ZonedDateTime/toPlainDate", "Temporal.ZonedDateTime.prototype.toPlainTime()")}}.
+    - An [ISO 8601](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime#iso_8601_format) string containing a time.
     - An object containing at least one of the following properties (in the order they are retrieved and validated):
 
       - {{jsxref("Temporal/PlainTime/hour", "hour")}}
@@ -35,8 +36,6 @@ Temporal.PlainTime.from(info, options)
       - {{jsxref("Temporal/PlainTime/second", "second")}}
 
       They are truncated to be integers. Out-of-range values are handled by the `overflow` option.
-
-    - An [ISO 8601](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime#iso_8601_format) string containing a time.
 
 - `options` {{optional_inline}}
   - : An object containing the following property:

@@ -23,15 +23,7 @@ since(other, options)
 - `other`
   - : A string or a {{jsxref("Temporal.Instant")}} instance representing an instant to subtract from this instant. It is converted to a `Temporal.Instant` object using the same algorithm as {{jsxref("Temporal/Instant/from", "Temporal.Instant.from()")}}.
 - `options` {{optional_inline}}
-  - : An object containing some or all of the following properties (in the order they are retrieved and validated):
-    - `largestUnit` {{optional_inline}}
-      - : A string representing the largest unit to include in the output. The value must be one of the following: `"hour"`, `"minute"`, `"second"`, `"millisecond"`, `"microsecond"`, `"nanosecond"`, or their plural forms, or the value `"auto"` which means `"second"` or `smallestUnit`, whichever is greater. Defaults to `"auto"`. The result will not contain units larger than this; for example, if the largest unit is `"minute"`, then "1 hour 30 minutes" will become "90 minutes".
-    - `roundingIncrement` {{optional_inline}}
-      - : A number (truncated to an integer) representing the rounding increment in the given `smallestUnit`. Defaults to `1`. The increment must be a divisor of the maximum value of the unit; for example, if the unit is hours, the increment must be a divisor of 24 and must not be 24 itself, which means it can be 1, 2, 3, 4, 6, 8, or 12.
-    - `roundingMode` {{optional_inline}}
-      - : A string specifying how to round off the fractional part of `smallestUnit`. See [`Intl.NumberFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#roundingmode). Defaults to `"trunc"`.
-    - `smallestUnit` {{optional_inline}}
-      - : A string representing the smallest unit to include in the output. The value must be one of the following: `"hour"`, `"minute"`, `"second"`, `"millisecond"`, `"microsecond"`, `"nanosecond"`, or their plural forms. Defaults to `"nanosecond"`. For units larger than `"nanosecond"`, fractional parts of the `smallestUnit` will be [rounded](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration/round) according to the `roundingIncrement` and `roundingMode` settings. Must be smaller or equal to `largestUnit`.
+  - : An object containing the options for {{jsxref("Temporal/Duration/round", "Temporal.Duration.prototype.round()")}}, which includes `largestUnit`, `roundingIncrement`, `roundingMode`, and `smallestUnit`. `largestUnit` and `smallestUnit` only accept the units: `"hour"`, `"minute"`, `"second"`, `"millisecond"`, `"microsecond"`, `"nanosecond"`, or their plural forms. For `largestUnit`, the default value `"auto"` means `"second"` or `smallestUnit`, whichever is greater. For `smallestUnit`, the default value is `"nanosecond"`.
 
 ### Return value
 

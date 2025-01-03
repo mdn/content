@@ -22,6 +22,7 @@ Temporal.Duration.from(info)
   - : One of the following:
 
     - A {{jsxref("Temporal.Duration")}} instance, which creates a copy of the instance.
+    - An [ISO 8601](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#iso_8601_duration_format) string representing a duration.
     - An object containing at least one of the following properties (in the order they are retrieved and validated):
 
       - {{jsxref("Temporal/Duration/days", "days")}}
@@ -36,8 +37,6 @@ Temporal.Duration.from(info)
       - {{jsxref("Temporal/Duration/years", "years")}}
 
       Each property should contain an integer number value. The resulting duration must not have [mixed signs](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#duration_sign), so all of these properties must have the same sign (or zero). Missing properties are treated as zero.
-
-    - An [ISO 8601](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#iso_8601_duration_format) string representing a duration.
 
 ### Return value
 

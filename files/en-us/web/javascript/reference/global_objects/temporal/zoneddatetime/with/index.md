@@ -21,9 +21,7 @@ with(info, options)
 ### Parameters
 
 - `info`
-  - : An object containing properties that are accepted by either {{jsxref("Temporal/PlainDate/with", "Temporal.PlainDate.prototype.with()")}} (`era`, `eraYear`, `year`, `month`, `monthCode`, `day`) or {{jsxref("Temporal/PlainTime/with", "Temporal.PlainTime.prototype.with()")}} (`hour`, `minute`, `second`, `millisecond`, `microsecond`, `nanosecond`). The following property can be provided too:
-    - `offset` {{optional_inline}}
-      - : A offset string, in the same format as the [ISO 8601](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#iso_8601_format) offset, representing the offset from UTC. If omitted, it will be calculated from the time zone and the date-time. `"Z"` is not allowed.
+  - : An object containing at least one of the properties recognized by {{jsxref("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}} (except `calendar`): `day`, `era` and `eraYear`, `hour`, `microsecond`, `millisecond`, `minute`, `month`, `monthCode`, `nanosecond`, `offset`, `second`, `year`. Unspecified properties use the values from the original date-time. You only need to provide one of `month` or `monthCode`, and one of `era` and `eraYear` or `year`, and the other will be updated accordingly.
 - `options` {{optional_inline}}
   - : An object containing some or all of the following properties (in the order they are retrieved and validated):
     - `disambiguation` {{optional_inline}}

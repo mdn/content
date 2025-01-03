@@ -92,5 +92,5 @@ console.log(months.map((d) => d.toString()));
 
 ## See also
 
-- {{jsxref("Temporal.PlainDate")}}
-- {{jsxref("Temporal/PlainDate/equals", "Temporal.PlainDate.prototype.equals()")}}
+- {{jsxref("Temporal.PlainYearMonth")}}
+- {{jsxref("Temporal/PlainYearMonth/equals", "Temporal.PlainYearMonth.prototype.equals()")}}

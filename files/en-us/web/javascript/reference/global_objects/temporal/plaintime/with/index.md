@@ -19,18 +19,7 @@ with(info, options)
 ### Parameters
 
 - `info`
-
-  - : An object containing at least one of the following properties (in the order they are retrieved and validated):
-
-    - {{jsxref("Temporal/PlainTime/hour", "hour")}}
-    - {{jsxref("Temporal/PlainTime/microsecond", "microsecond")}}
-    - {{jsxref("Temporal/PlainTime/millisecond", "millisecond")}}
-    - {{jsxref("Temporal/PlainTime/minute", "minute")}}
-    - {{jsxref("Temporal/PlainTime/nanosecond", "nanosecond")}}
-    - {{jsxref("Temporal/PlainTime/second", "second")}}
-
-    They are truncated to be integers. Out-of-range values are handled by the `overflow` option.
-
+  - : An object containing at least one of the properties recognized by {{jsxref("Temporal/PlainTime/from", "Temporal.PlainTime.from()")}}: `hour`, `microsecond`, `millisecond`, `minute`, `nanosecond`, `second`. Unspecified properties use the values from the original time.
 - `options` {{optional_inline}}
   - : An object containing the following property:
     - `overflow` {{optional_inline}}

@@ -21,7 +21,7 @@ with(info, options)
 ### Parameters
 
 - `info`
-  - : An object containing properties that are accepted by either {{jsxref("Temporal/PlainDate/with", "Temporal.PlainDate.prototype.with()")}} (`era`, `eraYear`, `year`, `month`, `monthCode`, `day`) or {{jsxref("Temporal/PlainTime/with", "Temporal.PlainTime.prototype.with()")}} (`hour`, `minute`, `second`, `millisecond`, `microsecond`, `nanosecond`).
+  - : An object containing at least one of the properties recognized by {{jsxref("Temporal/PlainDateTime/from", "Temporal.PlainDateTime.from()")}} (except `calendar`): `day`, `era` and `eraYear`, `hour`, `microsecond`, `millisecond`, `minute`, `month`, `monthCode`, `nanosecond`, `second`, `year`. Unspecified properties use the values from the original date-time. You only need to provide one of `month` or `monthCode`, and one of `era` and `eraYear` or `year`, and the other will be updated accordingly.
 - `options` {{optional_inline}}
   - : An object containing the following property:
     - `overflow` {{optional_inline}}

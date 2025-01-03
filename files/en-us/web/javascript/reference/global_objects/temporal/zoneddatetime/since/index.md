@@ -23,15 +23,7 @@ since(other, options)
 - `other`
   - : A string, an object, or a {{jsxref("Temporal.ZonedDateTime")}} instance representing a date-time to subtract from this date-time. It is converted to a `Temporal.ZonedDateTime` object using the same algorithm as {{jsxref("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}}. It must have the same calendar as `this`.
 - `options` {{optional_inline}}
-  - : An object containing some or all of the following properties (in the order they are retrieved and validated):
-    - `largestUnit` {{optional_inline}}
-      - : A string representing the largest unit to include in the output. The value must be one of the following: `"year"`, `"month"`, `"week"`, `"day"`, `"hour"`, `"minute"`, `"second"`, `"millisecond"`, `"microsecond"`, `"nanosecond"`, or their plural forms, or the value `"auto"` which means `"hour"` or `smallestUnit`, whichever is greater. Defaults to `"auto"`. The result will not contain units larger than this; for example, if the largest unit is `"month"`, then "1 year 2 months" will become "14 months". Note that using [units larger than `"hour"`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#calendar_durations) may make the duration not portable to other calendars, dates, or time zones.
-    - `roundingIncrement` {{optional_inline}}
-      - : A number (truncated to an integer) representing the rounding increment in the given `smallestUnit`. Defaults to `1`. Must be in the inclusive range of 1 to 1e9.
-    - `roundingMode` {{optional_inline}}
-      - : A string specifying how to round off the fractional part of `smallestUnit`. See [`Intl.NumberFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#roundingmode). Defaults to `"trunc"`.
-    - `smallestUnit` {{optional_inline}}
-      - : A string representing the smallest unit to include in the output. The value must be one of the following: `"year"`, `"month"`, `"week"`, `"day"`, `"hour"`, `"minute"`, `"second"`, `"millisecond"`, `"microsecond"`, `"nanosecond"`, or their plural forms. Defaults to `"nanosecond"`. For units larger than `"nanosecond"`, fractional parts of the `smallestUnit` will be [rounded](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration/round) according to the `roundingIncrement` and `roundingMode` settings. Must be smaller or equal to `largestUnit`.
+  - : An object containing the options for {{jsxref("Temporal/Duration/round", "Temporal.Duration.prototype.round()")}}, which includes `largestUnit`, `roundingIncrement`, `roundingMode`, and `smallestUnit`. `largestUnit` and `smallestUnit` accept all possible units. For `largestUnit`, the default value `"auto"` means `"hour"` or `smallestUnit`, whichever is greater. For `smallestUnit`, the default value is `"nanosecond"`. The current date is used as the `relativeTo` option. Note that using [units larger than `"hour"`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#calendar_durations) may make the duration not portable to other calendars, dates, or time zones.
 
 ### Return value
 

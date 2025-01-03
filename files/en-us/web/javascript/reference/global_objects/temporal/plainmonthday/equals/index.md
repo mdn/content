@@ -38,7 +38,7 @@ console.log(md1.equals(md2)); // true
 const md3 = Temporal.PlainMonthDay.from("2021-08-01[u-ca=japanese]");
 console.log(md1.equals(md3)); // false
 
-const md4 = Temporal.PlainDate.from("2021-08-02");
+const md4 = Temporal.PlainMonthDay.from("2021-08-02");
 console.log(md1.equals(md4)); // false
 ```
 

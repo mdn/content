@@ -21,17 +21,7 @@ with(info, options)
 ### Parameters
 
 - `info`
-  - : An object containing at least one of the following properties (in the order they are retrieved and validated):
-    - `day` {{optional_inline}}
-      - : An integer that corresponds to the {{jsxref("Temporal/PlainDate/day", "day")}} property. Must be positive regardless of the `overflow` option.
-    - `era` and `eraYear` {{optional_inline}}
-      - : A string and an integer that correspond to the {{jsxref("Temporal/PlainDate/era", "era")}} and {{jsxref("Temporal/PlainDate/eraYear", "eraYear")}} properties. Are only used if the calendar system has eras. `era` and `eraYear` must be provided simultaneously. If all of `era`, `eraYear`, and `year` are provided, they must be consistent.
-    - `month` {{optional_inline}}
-      - : Corresponds to the {{jsxref("Temporal/PlainDate/month", "month")}} property. Must be positive regardless of the `overflow` option.
-    - `monthCode` {{optional_inline}}
-      - : Corresponds to the {{jsxref("Temporal/PlainDate/monthCode", "monthCode")}} property. If both `month` and `monthCode` are provided, they must be consistent.
-    - `year` {{optional_inline}}
-      - : Corresponds to the {{jsxref("Temporal/PlainDate/year", "year")}} property.
+  - : An object containing at least one of the properties recognized by {{jsxref("Temporal/PlainDate/from", "Temporal.PlainDate.from()")}} (except `calendar`): `day`, `era` and `eraYear`, `month`, `monthCode`, `year`. Unspecified properties use the values from the original date. You only need to provide one of `month` or `monthCode`, and one of `era` and `eraYear` or `year`, and the other will be updated accordingly.
 - `options` {{optional_inline}}
   - : An object containing the following property:
     - `overflow` {{optional_inline}}
@@ -62,7 +52,7 @@ A new `Temporal.PlainDate` object, where the fields specified in `info` that are
 ### Using with()
 
 ```js
-const date = new Temporal.PlainDate(2021, 7, 6);
+const date = Temporal.PlainDate.from("2021-07-06");
 const newDate = date.with({ day: date.daysInMonth });
 console.log(newDate.toString()); // 2021-07-31
 ```

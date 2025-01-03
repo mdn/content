@@ -46,4 +46,4 @@ console.log(time.toString()); // '12:34:56'
 - {{jsxref("Temporal.PlainDateTime")}}
 - {{jsxref("Temporal.PlainTime")}}
 - {{jsxref("Temporal/PlainDateTime/toPlainDate", "Temporal.PlainDateTime.prototype.toPlainDate()")}}
-- {{jsxref("Temporal/PlainDateTime/toZonedDateTime", "Temporal.PlainDate.prototype.toZonedDateTime()")}}
+- {{jsxref("Temporal/PlainDateTime/toZonedDateTime", "Temporal.PlainDateTime.prototype.toZonedDateTime()")}}

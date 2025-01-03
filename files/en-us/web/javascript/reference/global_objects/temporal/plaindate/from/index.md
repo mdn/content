@@ -25,6 +25,7 @@ Temporal.PlainDate.from(info, options)
     - A {{jsxref("Temporal.PlainDate")}} instance, which creates a copy of the instance.
     - A {{jsxref("Temporal.PlainDateTime")}} instance, which provides the calendar date in the same fashion as {{jsxref("Temporal/PlainDateTime/toPlainDate", "Temporal.PlainDateTime.prototype.toPlainDate()")}}.
     - A {{jsxref("Temporal.ZonedDateTime")}} instance, which provides the calendar date in the same fashion as {{jsxref("Temporal/ZonedDateTime/toPlainDate", "Temporal.ZonedDateTime.prototype.toPlainDate()")}}.
+    - An [ISO 8601](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate#iso_8601_format) string containing a date and optionally a calendar.
     - An object containing the following properties (in the order they are retrieved and validated):
 
       - `calendar` {{optional_inline}}
@@ -41,8 +42,6 @@ Temporal.PlainDate.from(info, options)
         - : Corresponds to the {{jsxref("Temporal/PlainDate/year", "year")}} property.
 
       The info should explicitly specify a year (as `year` or `era` and `eraYear`), a month (as `month` or `monthCode`), and a day.
-
-    - An [ISO 8601](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate#iso_8601_format) string containing a date and optionally a calendar.
 
 - `options` {{optional_inline}}
   - : An object containing the following property:

@@ -53,7 +53,7 @@ toString(options)
 
 ### Return value
 
-A string in the [ISO 8601 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime#iso_8601_format) representing this date-time. The offset and calendar/time zone annotations are included as specified.
+A string in the [ISO 8601 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#iso_8601_format) representing this date-time. The offset and calendar/time zone annotations are included as specified.
 
 ### Exceptions
 

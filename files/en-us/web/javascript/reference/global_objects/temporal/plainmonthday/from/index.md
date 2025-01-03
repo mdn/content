@@ -23,6 +23,7 @@ Temporal.PlainMonthDay.from(info, options)
   - : One of the following:
 
     - A {{jsxref("Temporal.PlainMonthDay")}} instance, which creates a copy of the instance.
+    - An [ISO 8601](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainMonthDay#iso_8601_format) string containing a date and optionally a calendar. If the calendar is not `iso8601`, a year is required.
     - An object containing the following properties (in the order they are retrieved and validated):
 
       - `calendar` {{optional_inline}}
@@ -39,8 +40,6 @@ Temporal.PlainMonthDay.from(info, options)
         - : An integer used to disambiguate `month` if provided, because for some calendars, the same `month` can mean different `monthCode` in different years. See {{jsxref("Temporal/PlainDate/year", "year")}} of `PlainDate`. If a year is provided, then the `overflow` option validates the month-day in the given year, not just any year.
 
       Other `Temporal` objects, such as {{jsxref("Temporal.PlainDate")}}, {{jsxref("Temporal.PlainDateTime")}} and {{jsxref("Temporal.ZonedDateTime")}}, conform to this shape and can be used as well.
-
-    - An [ISO 8601](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainMonthDay#iso_8601_format) string containing a date and optionally a calendar. If the calendar is not `iso8601`, a year is required.
 
 - `options` {{optional_inline}}
   - : An object containing the following property:

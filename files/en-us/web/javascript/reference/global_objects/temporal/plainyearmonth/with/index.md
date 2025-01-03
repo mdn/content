@@ -21,15 +21,7 @@ with(info, options)
 ### Parameters
 
 - `info`
-  - : An object containing at least one of the following properties (in the order they are retrieved and validated):
-    - `era` and `eraYear` {{optional_inline}}
-      - : A string and an integer that correspond to the {{jsxref("Temporal/PlainYearMonth/era", "era")}} and {{jsxref("Temporal/PlainYearMonth/eraYear", "eraYear")}} properties. Are only used if the calendar system has eras. `era` and `eraYear` must be provided simultaneously. If all of `era`, `eraYear`, and `year` are provided, they must be consistent.
-    - `month` {{optional_inline}}
-      - : Corresponds to the {{jsxref("Temporal/PlainYearMonth/month", "month")}} property. Must be positive regardless of the `overflow` option.
-    - `monthCode` {{optional_inline}}
-      - : Corresponds to the {{jsxref("Temporal/PlainYearMonth/monthCode", "monthCode")}} property. If both `month` and `monthCode` are provided, they must be consistent.
-    - `year` {{optional_inline}}
-      - : Corresponds to the {{jsxref("Temporal/PlainYearMonth/year", "year")}} property.
+  - : An object containing at least one of the properties recognized by {{jsxref("Temporal/PlainYearMonth/from", "Temporal.PlainYearMonth.from()")}} (except `calendar`): `era` and `eraYear`, `month`, `monthCode`, `year`. Unspecified properties use the values from the original year-month. You only need to provide one of `month` or `monthCode`, and one of `era` and `eraYear` or `year`, and the other will be updated accordingly.
 - `options` {{optional_inline}}
   - : An object containing the following property:
     - `overflow` {{optional_inline}}

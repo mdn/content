@@ -23,7 +23,7 @@ until(other, options)
 - `other`
   - : A string, an object, or a {{jsxref("Temporal.ZonedDateTime")}} instance representing a date-time to subtract this date-time from. It is converted to a `Temporal.ZonedDateTime` object using the same algorithm as {{jsxref("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}}. It must have the same calendar as `this`.
 - `options` {{optional_inline}}
-  - : The same options as [`since()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/since#options).
+  - : The same options as [`since()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/since#options).
 
 ### Return value
 
@@ -46,7 +46,7 @@ const flight = Temporal.ZonedDateTime.from(
   "2024-12-21T13:31:00-05:00[America/New_York]",
 );
 const now = Temporal.Now.zonedDateTimeISO("America/New_York").round("second");
-if (Temporal.PlainDateTime.compare(flight, now) < 0) {
+if (Temporal.ZonedDateTime.compare(flight, now) < 0) {
   console.error(
     "The flight is already in the past. The result may not make sense.",
   );

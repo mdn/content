@@ -23,6 +23,7 @@ Temporal.PlainYearMonth.from(info, options)
   - : One of the following:
 
     - A {{jsxref("Temporal.PlainYearMonth")}} instance, which creates a copy of the instance.
+    - An [ISO 8601](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth#iso_8601_format) string containing a date and optionally a calendar. If the calendar is not `iso8601`, a day is required.
     - An object containing the following properties (in the order they are retrieved and validated):
       - `calendar` {{optional_inline}}
         - : A string that corresponds to the {{jsxref("Temporal/PlainYearMonth/calendarId", "calendarId")}} property. Defaults to `"iso8601"`. All other properties are interpreted in this calendar system (unlike the {{jsxref("Temporal/PlainYearMonth/PlainYearMonth", "Temporal.PlainYearMonth()")}} constructor, which interprets the values in the ISO calendar system).
@@ -34,7 +35,6 @@ Temporal.PlainYearMonth.from(info, options)
         - : Corresponds to the {{jsxref("Temporal/PlainYearMonth/monthCode", "monthCode")}} property. If it is not provided, then `month` must be provided. If both `month` and `monthCode` are provided, they must be consistent.
       - `year`
         - : Corresponds to the {{jsxref("Temporal/PlainYearMonth/year", "year")}} property.
-    - An [ISO 8601](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth#iso_8601_format) string containing a date and optionally a calendar. If the calendar is not `iso8601`, a day is required.
 
 - `options` {{optional_inline}}
   - : An object containing the following property:
@@ -132,6 +132,6 @@ Temporal.PlainYearMonth.from({ year: 2021, month: 13 }, { overflow: "reject" });
 
 ## See also
 
-- {{jsxref("Temporal.PlainMonthDay")}}
-- {{jsxref("Temporal/PlainMonthDay/PlainMonthDay", "Temporal.PlainMonthDay()")}}
-- {{jsxref("Temporal/PlainMonthDay/with", "Temporal.PlainMonthDay.prototype.with()")}}
+- {{jsxref("Temporal.PlainYearMonth")}}
+- {{jsxref("Temporal/PlainYearMonth/PlainYearMonth", "Temporal.PlainYearMonth()")}}
+- {{jsxref("Temporal/PlainYearMonth/with", "Temporal.PlainYearMonth.prototype.with()")}}

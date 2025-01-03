@@ -21,17 +21,7 @@ with(info, options)
 ### Parameters
 
 - `info`
-  - : An object containing at least one of the following properties (in the order they are retrieved and validated):
-    - `day` {{optional_inline}}
-      - : An integer that corresponds to the {{jsxref("Temporal/PlainMonthDay/day", "day")}} property. Must be positive regardless of the `overflow` option.
-    - `era` and `eraYear` {{optional_inline}}
-      - : A string and an integer that can be used instead of `year`. See {{jsxref("Temporal/PlainDate/era", "era")}} and {{jsxref("Temporal/PlainDate/eraYear", "eraYear")}} of `PlainDate`. Are only used if the calendar system has eras. `era` and `eraYear` must be provided simultaneously. If all of `era`, `eraYear`, and `year` are provided, they must be consistent.
-    - `month` {{optional_inline}}
-      - : A positive integer that can be used instead of `monthCode`. See {{jsxref("Temporal/PlainDate/month", "month")}} of `PlainDate`. Must be positive regardless of the `overflow` option. If `month` is provided, and the calendar is not `iso8601`, then `year` (or `era` + `eraYear` as a substitution) must be provided too, because the same `month` may map to multiple possible `monthCode` values in different years.
-    - `monthCode` {{optional_inline}}
-      - : Corresponds to the {{jsxref("Temporal/PlainMonthDay/monthCode", "monthCode")}} property. If both `month` and `monthCode` are provided, they must be consistent.
-    - `year` {{optional_inline}}
-      - : An integer used to disambiguate `month` if provided, because for some calendars, the same `month` can mean different `monthCode` in different years. See {{jsxref("Temporal/PlainDate/year", "year")}} of `PlainDate`. If a year is provided, then the `overflow` option validates the month-day in the given year, not just any year.
+  - : An object containing at least one of the properties recognized by {{jsxref("Temporal/PlainMonthDay/from", "Temporal.PlainMonthDay.from()")}} (except `calendar`): `day`, `era` and `eraYear`, `month`, `monthCode`, `year`. Unspecified properties use the values from the original month-day. You need to provide the year if and only if you provide `month` and the calendar is not `iso8601`. You only need to provide one of `month` or `monthCode`, and one of `era` and `eraYear` or `year`, and the other will be updated accordingly.
 - `options` {{optional_inline}}
   - : An object containing the following property:
     - `overflow` {{optional_inline}}

@@ -23,15 +23,7 @@ since(other, options)
 - `other`
   - : A string, an object, or a {{jsxref("Temporal.PlainYearMonth")}} instance representing a year-month to subtract from this year-month. It is converted to a `Temporal.PlainYearMonth` object using the same algorithm as {{jsxref("Temporal/PlainYearMonth/from", "Temporal.PlainYearMonth.from()")}}. It must have the same calendar as `this`.
 - `options` {{optional_inline}}
-  - : An object containing some or all of the following properties (in the order they are retrieved and validated):
-    - `largestUnit` {{optional_inline}}
-      - : A string representing the largest unit to include in the output. The value must be one of the following: `"year"`, `"month"`, or their plural forms, or the value `"auto"` which means `"year"`. Defaults to `"auto"`. The result will not contain units larger than this; for example, if the largest unit is `"month"`, then "1 year 2 months" will become "14 months". Note that the result is always a [calendar duration](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#calendar_durations) and is not portable to other calendars or dates.
-    - `roundingIncrement` {{optional_inline}}
-      - : A number (truncated to an integer) representing the rounding increment in the given `smallestUnit`. Defaults to `1`. Must be in the inclusive range of 1 to 1e9.
-    - `roundingMode` {{optional_inline}}
-      - : A string specifying how to round off the fractional part of `smallestUnit`. See [`Intl.NumberFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#roundingmode). Defaults to `"trunc"`.
-    - `smallestUnit` {{optional_inline}}
-      - : A string representing the smallest unit to include in the output. The value must be one of the following: `"year"`, `"month"`, or their plural forms. Defaults to `"month"`. For units larger than `"month"`, fractional parts of the `smallestUnit` will be [rounded](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration/round) according to the `roundingIncrement` and `roundingMode` settings. Must be smaller or equal to `largestUnit`.
+  - : An object containing the options for {{jsxref("Temporal/Duration/round", "Temporal.Duration.prototype.round()")}}, which includes `largestUnit`, `roundingIncrement`, `roundingMode`, and `smallestUnit`. `largestUnit` and `smallestUnit` only accept the units: `"year"`, `"month"`, or their plural forms. For `largestUnit`, the default value `"auto"` means `"year"`. For `smallestUnit`, the default value is `"month"`. The current date is used as the `relativeTo` option.
 
 ### Return value
 

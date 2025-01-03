@@ -18,21 +18,7 @@ with(info)
 ### Parameters
 
 - `info`
-
-  - : An object containing at least one of the following properties (in the order they are retrieved and validated):
-
-    - {{jsxref("Temporal/Duration/days", "days")}}
-    - {{jsxref("Temporal/Duration/hours", "hours")}}
-    - {{jsxref("Temporal/Duration/microseconds", "microseconds")}}
-    - {{jsxref("Temporal/Duration/milliseconds", "milliseconds")}}
-    - {{jsxref("Temporal/Duration/minutes", "minutes")}}
-    - {{jsxref("Temporal/Duration/months", "months")}}
-    - {{jsxref("Temporal/Duration/nanoseconds", "nanoseconds")}}
-    - {{jsxref("Temporal/Duration/seconds", "seconds")}}
-    - {{jsxref("Temporal/Duration/weeks", "weeks")}}
-    - {{jsxref("Temporal/Duration/years", "years")}}
-
-    Each property should contain an integer number value. The resulting duration must not have [mixed signs](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#duration_sign), so all of these properties must have the same sign (or zero), and must be the same as the original duration, unless you are replacing every non-zero field.
+  - : An object containing at least one of the properties recognized by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}: `years`, `months`, `weeks`, `days`, `hours`, `minutes`, `seconds`, `milliseconds`, `microseconds`, `nanoseconds`. Unspecified properties use the values from the original duration.
 
 ### Return value
 
