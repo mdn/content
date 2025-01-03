@@ -1,5 +1,5 @@
 ---
-title: MDN Web Docs Localization
+title: MDN Web Docs localization
 slug: MDN/Community/Translated_content
 page-type: mdn-community-guide
 ---
@@ -8,7 +8,7 @@ page-type: mdn-community-guide
 
 Since December 14th 2020, MDN has been running on the new GitHub-based [Yari platform](https://github.com/mdn/yari). This has a lot of advantages for MDN, but we've needed to make radical changes to the way in which we handle localization. This is because we've ended up with a lot of unmaintained and out-of-date content in our non-English locales, and we want to manage it better in the future.
 
-We have archived all locales, EXCEPT for the ones listed below, meaning that they are read-only on GitHub and cannot be viewed on MDN. The active locales have dedicated teams taking responsibility for maintaining them.
+We have archived all locales, **except** for the ones listed below, meaning that they are read-only on GitHub and cannot be viewed on MDN. The active locales have dedicated teams taking responsibility for maintaining them.
 
 ## How to contribute
 
