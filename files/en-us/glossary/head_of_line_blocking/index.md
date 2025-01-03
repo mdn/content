@@ -12,7 +12,8 @@ In HTTP/1.1, HOL blocking can occur when a client sends multiple requests to a {
 
 ## See also
 
-- [Head-of-line blocking](https://en.wikipedia.org/wiki/Head-of-line_blocking) on Wikipedia
 - Related glossary terms
   - {{glossary("HTTP")}}, {{glossary("HTTP 2", "HTTP/2")}}
   - {{glossary("TCP")}}
+- [Populating the page: how browsers work](/en-US/docs/Web/Performance/How_browsers_work)
+- [Head-of-line blocking](https://en.wikipedia.org/wiki/Head-of-line_blocking) on Wikipedia
