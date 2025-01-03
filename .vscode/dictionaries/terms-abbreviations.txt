@@ -95,7 +95,6 @@ catchable
 CAVLC
 CCPA
 CCPL
-CDLR
 CELP
 CGATS
 cheatsheet
