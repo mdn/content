@@ -27,11 +27,18 @@ A string with one of the following values:
 In this example the `aria-multiselectable` attribute on the element with an ID of `listbox1` is set to "true" indicating that this input accepts multiple selected items. Using `ariaMultiSelectable` we update the value to "false".
 
 ```html
-<div role="listbox" tabindex="0" id="listbox1"
-  aria-multiselectable="true" aria-labelledby="listbox1label" aria-activedescendant="listbox1-1">
-  <div role="option" id="listbox1-1" class="selected" aria-selected="true">Green</div>
+<div
+  role="listbox"
+  tabindex="0"
+  id="listbox1"
+  aria-multiselectable="true"
+  aria-labelledby="listbox1label"
+  aria-activedescendant="listbox1-1">
+  <div role="option" id="listbox1-1" class="selected" aria-selected="true">
+    Green
+  </div>
   <div role="option" id="listbox1-2">Orange</div>
-  <div role="option" id="listbox1-3">Red</div<
+  <div role="option" id="listbox1-3">Red</div>
 </div>
 ```
 

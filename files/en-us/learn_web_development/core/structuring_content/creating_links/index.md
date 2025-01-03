@@ -36,7 +36,7 @@ This article shows the syntax required to make a link, and discusses link best p
           <li>Path syntax in detail — slashes, single dot, and double dot.</li>
           <li>Link states and why they are important — <code>:hover</code>, <code>:focus</code>, <code>:visited</code>, and <code>:active</code>.</li>
           <li>Inline and block-level links.</li>
-          <li>Understanding the benefits of writing good link text, such as better accessibility for screenreader users, and potential positive SEO effects.</li>
+          <li>Understanding the benefits of writing good link text, such as better accessibility for screen reader users, and potential positive SEO effects.</li>
         </ul>
       </td>
     </tr>

@@ -300,7 +300,7 @@ The `Document` interface for HTML documents inherit from the {{DOMxRef("HTMLDocu
   - : Returns true if the formatting command is supported on the current range.
 - {{DOMxRef("Document.queryCommandValue()")}} {{Deprecated_Inline}}
   - : Returns the current value of the current range for a formatting command.
-- {{DOMxRef("Document.write()")}}
+- {{DOMxRef("Document.write()")}} {{deprecated_inline}}
   - : Writes text in a document.
 - {{DOMxRef("Document.writeln()")}}
   - : Writes a line of text in a document.
