@@ -6,7 +6,7 @@ page-type: mdn-community-guide
 
 {{MDNSidebar}}
 
-If you've not worked on an open source project (OSP) before, it is a good idea to read this article before starting to contribute to MDN Web Docs (or other open source projects).
+If you've not worked on an open source project (OSP) before, it is a good idea to read this article before starting to contribute to MDN Web Docs and other open source projects.
 There are a few behaviors to adopt that will help you and the other project contributors feel valued and safe, and stay productive.
 
 This article won't teach you everything about contributing to open source; the aim is to cover foundational topics for taking part in open source communities.
