@@ -20,13 +20,13 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground:
 
 ```html live-sample___breadcrumb-example
 <nav aria-label="Breadcrumb" class="breadcrumb">
-  <ul>
+  <ol>
     <li><a href="#">Home</a></li>
     <li><a href="#">Category</a></li>
     <li><a href="#">Sub Category</a></li>
     <li><a href="#">Type</a></li>
     <li><span aria-current="page">Product</span></li>
-  </ul>
+  </ol>
 </nav>
 ```
 
@@ -39,7 +39,7 @@ body {
   padding: 0 0.5rem;
 }
 
-.breadcrumb ul {
+.breadcrumb ol {
   display: flex;
   flex-wrap: wrap;
   list-style: none;

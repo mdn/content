@@ -87,13 +87,16 @@ Add markup for managing items by replacing the placeholder content in `item.comp
     [checked]="item.done" />
   <label [for]="item.description">\{{item.description}}</label>
 
-  <div class="btn-wrapper" *ngIf="!editable">
+  @if (!editable) {
+  <div class="btn-wrapper">
     <button class="btn" (click)="editable = !editable">Edit</button>
     <button class="btn btn-warn" (click)="remove.emit()">Delete</button>
   </div>
+  }
 
   <!-- This section shows only if user clicks Edit button -->
-  <div *ngIf="editable">
+  @if (editable) {
+  <div>
     <input
       class="sm-text-input"
       placeholder="edit item"
@@ -108,6 +111,7 @@ Add markup for managing items by replacing the placeholder content in `item.comp
       </button>
     </div>
   </div>
+  }
 </div>
 ```
 
@@ -117,25 +121,28 @@ Angular uses `\{{item.description}}` to retrieve the description of the current 
 The next section explains how components share data in detail.
 
 The next two buttons for editing and deleting the current item are within a `<div>`.
-On this `<div>` is an `*ngIf`, a built-in Angular directive that you can use to dynamically change the structure of the DOM.
-This `*ngIf` means that if `editable` is `false`, this `<div>` is in the DOM. If `editable` is `true`, Angular removes this `<div>` from the DOM.
+On this `<div>` is an `@if` block that you can use to render parts of a template based on a condition.
+This `@if` means that if `editable` is `false`, this `<div>` is rendered in the template. If `editable` is `true`, Angular removes this `<div>` from the DOM.
 
 ```html
-<div class="btn-wrapper" *ngIf="!editable">
+@if (!editable) {
+<div class="btn-wrapper">
   <button class="btn" (click)="editable = !editable">Edit</button>
   <button class="btn btn-warn" (click)="remove.emit()">Delete</button>
 </div>
+}
 ```
 
 When a user clicks the **Edit** button, `editable` becomes true, which removes this `<div>` and its children from the DOM.
 If, instead of clicking **Edit**, a user clicks **Delete**, the `ItemComponent` raises an event that notifies the `AppComponent` of the deletion.
 
-An `*ngIf` is also on the next `<div>`, but is set to an `editable` value of `true`.
+An `@if` is also on the next `<div>`, but is set to an `editable` value of `true`.
 In this case, if `editable` is `true`, Angular puts the `<div>` and its child `<input>` and `<button>` elements in the DOM.
 
 ```html
 <!-- This section shows only if user clicks Edit button -->
-<div *ngIf="editable">
+@if (editable) {
+<div>
   <input
     class="sm-text-input"
     placeholder="edit item"
@@ -150,6 +157,7 @@ In this case, if `editable` is `true`, Angular puts the `<div>` and its child `<
     </button>
   </div>
 </div>
+}
 ```
 
 With `[value]="item.description"`, the value of the `<input>` is bound to the `description` of the current item.
@@ -201,7 +209,7 @@ import { Item } from "../item";
 
 The addition of `Input`, `Output`, and `EventEmitter` allows `ItemComponent` to share data with `AppComponent`.
 By importing `Item`, the `ItemComponent` can understand what an `item` is.
-You can update the `@Component` to use [`CommonModule`](https://angular.io/api/common/CommonModule) in `app/item/item.component.ts` so that we can use the `ngIf` directives:
+You can update the `@Component` to use [`CommonModule`](https://angular.dev/api/common/CommonModule) in `app/item/item.component.ts` so that we can use the `@if` blocks:
 
 ```js
 @Component({
@@ -233,7 +241,7 @@ export class ItemComponent {
 ```
 
 The `editable` property helps toggle a section of the template where a user can edit an item.
-`editable` is the same property in the HTML as in the `*ngIf` statement, `*ngIf="editable"`.
+`editable` is the same property in the HTML as in the `@if` statement, `@if(editable)`.
 When you use a property in the template, you must also declare it in the class.
 
 `@Input()`, `@Output()`, and `EventEmitter` facilitate communication between your two components.
@@ -253,7 +261,7 @@ This `description` is the same string from the `<input>` with the `#editedItem` 
 If the user doesn't enter a value but clicks **Save**, `saveItem()` returns nothing and does not update the `description`.
 If you didn't have this `if` statement, the user could click **Save** with nothing in the HTML `<input>`, and the `description` would become an empty string.
 
-If a user enters text and clicks save, `saveItem()` sets `editable` to false, which causes the `*ngIf` in the template to remove the edit feature and render the **Edit** and **Delete** buttons again.
+If a user enters text and clicks save, `saveItem()` sets `editable` to false, which causes the `@if` in the template to remove the edit feature and render the **Edit** and **Delete** buttons again.
 
 Though the application should compile at this point, you need to use the `ItemComponent` in `AppComponent` so you can see the new features in the browser.
 
@@ -279,14 +287,15 @@ Replace the current unordered list `<ul>` in `app.component.html` with the follo
 ```html
 <h2>
   \{{items.length}}
-  <span *ngIf="items.length === 1; else elseBlock">item</span>
-  <ng-template #elseBlock>items</ng-template>
+  <span> @if (items.length === 1) { item } @else { items } </span>
 </h2>
 
 <ul>
-  <li *ngFor="let i of items">
-    <app-item (remove)="remove(i)" [item]="i"></app-item>
+  @for (item of items; track item.description) {
+  <li>
+    <app-item (remove)="remove(item)" [item]="item"></app-item>
   </li>
+  }
 </ul>
 ```
 
@@ -297,26 +306,24 @@ Change the `imports` in `app.component.ts` to include `ItemComponent` as well as
   standalone: true,
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrl: './app.component.css',
   imports: [CommonModule, ItemComponent],
 })
 ```
 
 The double curly brace syntax, `\{{}}`, in the `<h2>` interpolates the length of the `items` array and displays the number.
 
-The `<span>` in the `<h2>` uses an `*ngIf` and `else` to determine whether the `<h2>` should say "item" or "items".
-If there is only a single item in the list, the `<span>` containing "item" displays.
-Otherwise, if the length of the `items` array is anything other than `1`, the `<ng-template>`, which we've named `elseBlock`, with the syntax `#elseBlock`, shows instead of the `<span>`.
-You can use Angular's `<ng-template>` when you don't want content to render by default.
-In this case, when the length of the `items` array is not `1`, the `*ngIf` shows the `elseBlock` and not the `<span>`.
+The `<span>` in the `<h2>` uses an `@if` and `@else` to determine whether the `<h2>` should say "item" or "items".
+If there is only a single item in the list, the `<span>` shows "item".
+Otherwise, if the length of the `items` array is anything other than `1`, the `<span>` shows "items".
 
-The `<li>` uses Angular's repeater directive, `*ngFor`, to iterate over all of the items in the `items` array.
-Angular's `*ngFor` like `*ngIf`, is another directive that helps you change the structure of the DOM while writing less code.
+The `@for` - Angular's control flow block, used to iterate over all of the items in the `items` array.
+Angular's `@for` like `@if`, is another block that helps you change the structure of the DOM while writing less code.
 For each `item`, Angular repeats the `<li>` and everything within it, which includes `<app-item>`.
 This means that for each item in the array, Angular creates another instance of `<app-item>`.
 For any number of items in the array, Angular would create that many `<li>` elements.
 
-You can use an `*ngFor` on other elements, too, such as `<div>`, `<span>`, or `<p>`, to name a few.
+You can wrap other elements such as `<div>`, `<span`, or `<p>` within an `@for` block.
 
 The `AppComponent` has a `remove()` method for removing the item, which is bound to the `remove` property in the `ItemComponent`.
 The `item` property in the square brackets, `[]`, binds the value of `i` between the `AppComponent` and the `ItemComponent`.

@@ -10,7 +10,7 @@ Our **Extension modules** constitute useful additional skills to learn as web de
 
 ## Prerequisites
 
-While there is no specific prequisite knowledge for starting any of these modules, it is advisable that you work through our [Core modules](/en-US/docs/Learn_web_development/Core) first, if you are a newcomer to web technologies.
+While there is no specific prerequisite knowledge for starting any of these modules, it is advisable that you work through our [Core modules](/en-US/docs/Learn_web_development/Core) first, if you are a newcomer to web technologies.
 
 In particular, if you've never done any coding before, we'd recommend the [Your first website](/en-US/docs/Learn_web_development/Getting_started/Your_first_website) module, which introduces you web technologies very gently and takes you through the process of building a simple website.
 

@@ -73,9 +73,9 @@ The HTTP server also lets you access the app at your computer's IP address from 
 At this point, you've built a basic application, but your Angular journey is just beginning.
 You can learn more by exploring the Angular documentation, such as:
 
-- [Tour of Heroes](https://angular.io/tutorial): An in-depth tutorial highlighting Angular features, such as using services, navigation, and getting data from a server.
-- The Angular [Components](https://angular.io/guide/component-overview) guides: A series of articles that cover topics such as lifecycle, component interaction, and view encapsulation.
-- The [Forms](https://angular.io/guide/forms-overview) guides: Articles that guide you through building reactive forms in Angular, validating input, and building dynamic forms.
+- [Tutorials](https://angular.dev/tutorials): An in-depth tutorial highlighting Angular features, such as using services, navigation, and getting data from a server.
+- The Angular [Components](https://angular.dev/guide/components) guides: A series of articles that cover topics such as lifecycle, component interaction, and view encapsulation.
+- The [Forms](https://angular.dev/guide/forms) guides: Articles that guide you through building reactive forms in Angular, validating input, and building dynamic forms.
 
 ## Summary
 

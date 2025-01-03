@@ -11,7 +11,7 @@ page-type: learn-module-chapter
 It is now time to look at Google's Angular framework, another popular option that you'll come across often. In this article we look at what Angular has to offer, install the prerequisites and set up a sample app, and look at Angular's basic architecture.
 
 > [!NOTE]
-> This tutorial targets [Angular version 17](https://v17.angular.io/guide/update-to-version-17) and was last revised in March 2024 (`Angular CLI: 17.3.0`).
+> This tutorial targets [Angular version 18](https://angular.dev/overview) and was last revised in August 2024 (`Angular CLI: 18.2.1`).
 
 <table>
   <tbody>
@@ -50,13 +50,13 @@ When you build applications with Angular, you're taking advantage of a platform 
 
 Before you start exploring the Angular platform, you should know about the Angular CLI. The Angular CLI is the fastest, easiest, and recommended way to develop Angular applications. The Angular CLI makes a number of tasks easy. Here are some example commands that you'll use frequently:
 
-| Command                                          | Description                                                           |
-| ------------------------------------------------ | --------------------------------------------------------------------- |
-| [`ng build`](https://angular.io/cli/build)       | Compiles an Angular app into an output directory.                     |
-| [`ng serve`](https://angular.io/cli/serve)       | Builds and serves your application, rebuilding on file changes.       |
-| [`ng generate`](https://angular.io/cli/generate) | Generates or modifies files based on a schematic.                     |
-| [`ng test`](https://angular.io/cli/test)         | Runs unit tests on a given project.                                   |
-| [`ng e2e`](https://angular.io/cli/e2e)           | Builds and serves an Angular application, then runs end-to-end tests. |
+| Command                                           | Description                                                           |
+| ------------------------------------------------- | --------------------------------------------------------------------- |
+| [`ng build`](https://angular.dev/cli/build)       | Compiles an Angular app into an output directory.                     |
+| [`ng serve`](https://angular.dev/cli/serve)       | Builds and serves your application, rebuilding on file changes.       |
+| [`ng generate`](https://angular.dev/cli/generate) | Generates or modifies files based on a schematic.                     |
+| [`ng test`](https://angular.dev/cli/test)         | Runs unit tests on a given project.                                   |
+| [`ng e2e`](https://angular.dev/cli/e2e)           | Builds and serves an Angular application, then runs end-to-end tests. |
 
 You'll find the Angular CLI to be a valuable tool for building out your applications.
 
@@ -70,7 +70,7 @@ To install Angular on your local system, you need the following:
 
 - **Node.js**
 
-  Angular requires a [active LTS or maintenance LTS](https://nodejs.org/en/about/previous-releases) version of Node.js. For information about specific version requirements, see the [Version compatibility](https://angular.io/guide/versions) page.
+  Angular requires a [active LTS or maintenance LTS](https://nodejs.org/en/about/previous-releases) version of Node.js. For information about specific version requirements, see the [Version compatibility](https://angular.dev/reference/versions) page.
 
   For more information on installing Node.js, see [nodejs.org](https://nodejs.org/en/download/package-manager).
   If you are unsure what version of Node.js runs on your system, run `node -v` in a terminal window.
@@ -92,7 +92,7 @@ npm install -g @angular/cli
 ```
 
 Angular CLI commands all start with `ng`, followed by what you'd like the CLI to do.
-Create a new directory where you want to build your app, and switch to the directory in the terminal. Then use the following [`ng new`](https://angular.io/cli/new) command to create a new application called `todo`:
+Create a new directory where you want to build your app, and switch to the directory in the terminal. Then use the following [`ng new`](https://angular.dev/cli/new) command to create a new application called `todo`:
 
 ```bash
 ng new todo --routing=false --style=css --ssr=false
@@ -102,11 +102,11 @@ The `ng new` command creates a minimal starter Angular application.
 The additional flags, `--routing` and `--style`, and `--ssr` define how to handle navigation and styles in the application, and configures server-side rendering.
 This tutorial describes these features later in more detail.
 
-The first time you run `ng`, you may be asked if you want to enable terminal [autocompletion](https://angular.io/cli/completion) and analytics.
+The first time you run `ng`, you may be asked if you want to enable terminal [autocompletion](https://angular.dev/cli/completion) and analytics.
 Autocompletion is convenient because pressing <kbd>TAB</kbd> while typing `ng` commands will show possible options and will autocomplete arguments.
 
 You can also decide if you want to allow analytics about the CLI usage to be sent to Angular maintainers at Google.
-To find out more about analytics, see the [Angular `ng analytics` CLI documentation](https://angular.io/cli/analytics).
+To find out more about analytics, see the [Angular `ng analytics` CLI documentation](https://angular.dev/cli/analytics).
 
 To run your `todo` application, navigate into your new project with the `cd` command and run `ng serve`:
 
@@ -149,7 +149,7 @@ In this way, you are using the best practices from the very beginning.
 The Angular CLI also generates a file for component testing called `app.component.spec.ts`, but this tutorial doesn't go into testing, so you can ignore that file.
 Whenever you generate a component, the CLI creates these files in a directory with the name you specify and we'll see an example of that later.
 
-To learn more about testing, see the [Angular testing guide](https://angular.io/guide/testing).
+To learn more about testing, see the [Angular testing guide](https://angular.dev/guide/testing).
 
 ## The structure of an Angular application
 
@@ -179,9 +179,10 @@ import { Component } from "@angular/core";
 @Component({
   selector: "app-item",
   standalone: true,
+  imports: [],
   // the following metadata specifies the location of the other parts of the component
   templateUrl: "./item.component.html",
-  styleUrls: ["./item.component.css"],
+  styleUrl: "./item.component.css",
 })
 export class ItemComponent {
   // code goes here
@@ -246,8 +247,9 @@ import { Component } from "@angular/core";
 @Component({
   selector: "app-root",
   standalone: true,
+  imports: [],
   template: "<h1>\{{ title }}</h1>",
-  styleUrls: ["./app.component.css"],
+  styleUrl: "./app.component.css",
 })
 export class AppComponent {
   title = "To do application";
@@ -275,13 +277,14 @@ To include the styles directly in the component decorator, use the `styles` prop
 })
 ```
 
-Typically, a component uses styles in a separate file using the `styleUrls` property:
+Typically, a component uses styles in a separate file.
+You can use the `styleUrl` property with the path to the CSS file as a string or `styleUrls` with an array of strings if there are multiple CSS stylesheets you want to include:
 
 ```js
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrl: './app.component.css'
 })
 ```
 
@@ -289,11 +292,10 @@ With component-specific styles, you can organize your CSS so that it is easily m
 
 ### Standalone components
 
-It's recommended to [make components standalone](https://angular.io/guide/component-overview#creating-a-component-manually-1) unless a project already makes use of [NgModules](https://angular.io/guide/ngmodules) (Angular modules) to organize code.
-This tutorial uses [standalone components](https://angular.io/guide/standalone-components) which are easier to start with.
+It's recommended to [make components standalone](https://angular.dev/guide/components/importing#standalone-components) unless a project already makes use of [NgModules](https://angular.dev/guide/ngmodules) (Angular modules) to organize code.
+This tutorial uses [standalone components](https://angular.dev/guide/components/importing#standalone-components) which are easier to start with.
 
-It's common to import [`CommonModule`](https://angular.io/api/common/CommonModule) so that your component can make use of common [directives](https://angular.io/api/common#directives) and [pipes](https://angular.io/api/common#pipes).
-This tutorial makes use of `ngFor` and `ngIf`, so we can make sure they're available like so:
+It's common to import [`CommonModule`](https://angular.dev/api/common/CommonModule) so that your component can make use of common [directives](https://angular.dev/guide/directives) and [pipes](https://angular.dev/guide/pipes).
 
 ```js
 import { Component } from "@angular/core";
@@ -303,7 +305,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrl: './app.component.css',
   imports: [CommonModule],
 })
 ```

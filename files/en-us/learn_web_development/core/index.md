@@ -10,7 +10,7 @@ Our **Core modules** cover topics that we feel every web developer should have a
 
 ## Prerequisites
 
-While there is no prequisite knowledge for starting this set of modules, we would recommend that you familiarize yourself with your computer, make sure you've got a basic set of required applications installed (such as web browsers and a code editor), and do some background reading on the web and web technologies, if you have no already done so. All these topics are covered in our [Getting started modules](/en-US/docs/Learn_web_development/Getting_started).
+While there is no prerequisite knowledge for starting this set of modules, we would recommend that you familiarize yourself with your computer, make sure you've got a basic set of required applications installed (such as web browsers and a code editor), and do some background reading on the web and web technologies, if you have no already done so. All these topics are covered in our [Getting started modules](/en-US/docs/Learn_web_development/Getting_started).
 
 In particular, if you've never done any coding before, we'd recommend the [Your first website](/en-US/docs/Learn_web_development/Getting_started/Your_first_website) module, which introduces you web technologies very gently and takes you through the process of building a simple website.
 
@@ -32,7 +32,7 @@ In particular, if you've never done any coding before, we'd recommend the [Your 
   - : Access to web content such as public services, education, e-commerce sites, and entertainment is a human right. No one should be excluded based on disability, race, geography, or other human characteristics. This module discusses the best practices and techniques you should learn to make your websites as accessible as possible.
 - [Design for developers](/en-US/docs/Learn_web_development/Core/Design_for_developers)
   - : The idea of this module is to (re-)introduce developers to design thinking. They may not want to work as designers, but having some basic user experience and design theory is good for everyone involved in building websites, no matter what their role. At the very least, even the most technical, "non-designer" developer should understand design briefs, why things are designed as they are, and be able to get into the mindset of the user. And it'll help them make their portfolios look better.
-- [Version_control](/en-US/docs/Learn_web_development/Core/Version_control)
+- [Version control](/en-US/docs/Learn_web_development/Core/Version_control)
   - : Version control tools are an essential part of modern workflows, for backing up and collaborating on codebases. This module takes you through the essentials of version control using Git and GitHub.
 
 ## See also
