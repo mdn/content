@@ -1,5 +1,6 @@
 ---
-title: How to write an entry in the glossary
+title: How to add a glossary entry
+short-title: Add a glossary entry
 slug: MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
 page-type: mdn-writing-guide
 ---

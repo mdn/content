@@ -1,5 +1,6 @@
 ---
 title: Writing style guide
+short-title: Style guide
 slug: MDN/Writing_guidelines/Writing_style_guide
 page-type: mdn-writing-guide
 ---

@@ -1,5 +1,6 @@
 ---
 title: How to write in Markdown
+short-title: Write in Markdown
 slug: MDN/Writing_guidelines/Howto/Markdown_in_MDN
 page-type: mdn-writing-guide
 ---
@@ -98,7 +99,7 @@ On MDN, writers will use code fences for example code blocks. They must specify 
   - `django` - Django templates
   - `svelte` - Svelte templates
   - `handlebars` - Handlebars templates
-  - `pug` - [Pug templates](https://pugjs.org/api/getting-started.html) (which may be used by [Express](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Template_primer))
+  - `pug` - [Pug templates](https://pugjs.org/api/getting-started.html) (which may be used by [Express](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer))
 - Other
   - `plain` - Plain text
   - `diff` - Diff file
