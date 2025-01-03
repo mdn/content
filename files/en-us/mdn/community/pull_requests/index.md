@@ -1,5 +1,5 @@
 ---
-title: Pull request submission and review guidelines
+title: Pull request submission and reviews
 slug: MDN/Community/Pull_requests
 page-type: mdn-community-guide
 ---

@@ -6,9 +6,10 @@ page-type: mdn-community-guide
 
 {{MDNSidebar}}
 
-If you've not worked on an open source project (OSP) before, it is a good idea to read this article before starting to contribute to MDN Web Docs (or other open source projects). There are a few best practices to adopt that will help ensure that you and the other project contributors feel valued and safe, and stay productive.
+If you've not worked on an open source project (OSP) before, it is a good idea to read this article before starting to contribute to MDN Web Docs (or other open source projects).
+There are a few behaviors to adopt that will help you and the other project contributors feel valued and safe, and stay productive.
 
-This article won't teach you everything about contributing to open source; the aim here is more to give you some good starting points to think about as you get started with open source contributions.
+This article won't teach you everything about contributing to open source; the aim is to cover foundational topics for taking part in open source communities.
 
 ## Think about why you are contributing to an OSP
 
@@ -82,7 +83,7 @@ In many cases, things are like they are on OSPs for a reason. You should read th
 
 ## Read the manual
 
-Good OSPs will always make contributor documentation readily available. On GitHub projects, it is usually in the repo's CONTRIBUTING.md file, or sometimes in the project's README.md file. Being a documentation project, MDN content has a [README](https://github.com/mdn/content/blob/main/README.md) and a decent set of contributor docs on the site itself (see [Contributing to MDN Web Docs](/en-US/docs/MDN/Community/Contributing)).
+Good OSPs will always make contributor documentation readily available. On GitHub projects, it is usually in the repo's CONTRIBUTING.md file, or sometimes in the project's README.md file. Being a documentation project, MDN content has a [README](https://github.com/mdn/content/blob/main/README.md) and a decent set of contributor docs on the site itself (see [Contributing to MDN Web Docs](/en-US/docs/MDN/Community)).
 
 Don't be afraid to ask for help, but ALWAYS try to find the answer to your question first before asking. This way you build up your knowledge of the project and become more independent, and don't put unnecessary burden on the other contributors.
 

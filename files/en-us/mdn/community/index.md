@@ -40,6 +40,6 @@ By participating in and contributing to any of our projects in-person or online,
 
 We are a small team working hard to keep up with the documentation demands of a continuously changing web ecosystem.
 Unfortunately, we can't help with general support questions, such as troubleshooting code.
-If you're learning, the [Learn web development](/en-US/docs/Learn_web_development) is a great start, and you can post coding questions or search for answers on [Stack Overflow](https://stackoverflow.com/questions/).
+If you're learning, the [Learn web development](/en-US/docs/Learn) is a great start, and you can post coding questions or search for answers on [Stack Overflow](https://stackoverflow.com/questions/).
 
 Issues, discussions, or pull requests on MDN repositories asking for general support will be directed here and may be closed and locked.

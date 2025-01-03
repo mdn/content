@@ -6,7 +6,7 @@ page-type: mdn-writing-guide
 
 {{MDNSidebar}}
 
-MDN Web Doc's content is available free of charge and is available under various open-source licenses.
+MDN Web Docs content is available free of charge and is available under various open-source licenses.
 
 ## Using MDN Web Docs content
 
