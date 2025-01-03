@@ -141,7 +141,7 @@ sidebar:
       - title: contributing_to_mdn_web_docs
         details: closed
         children:
-          - /MDN/Community/Contributing
+          - /MDN/Community
           - /MDN/Community/Getting_started
           - /MDN/Community/Our_repositories
           - /MDN/Community/Translated_content

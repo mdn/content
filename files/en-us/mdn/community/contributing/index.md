@@ -1,6 +1,6 @@
 ---
 title: Contributing to MDN Web Docs
-slug: MDN/Community/Contributing
+slug: MDN/Community
 page-type: mdn-community-guide
 ---
 
