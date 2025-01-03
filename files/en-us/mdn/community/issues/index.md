@@ -32,7 +32,7 @@ Avoid doing the following:
 
 ### Before filing an issue
 
-If you think you've found a bug with the content on MDN Web Docs or with the look and feel of the website, search the current open issues in the [relevant repository](/en-US/docs/MDN/Community/Contributing/Our_repositories) and make sure nobody else has reported the issue.
+If you think you've found a bug with the content on MDN Web Docs or with the look and feel of the website, search the current open issues in the [relevant repository](/en-US/docs/MDN/Community/Our_repositories) and make sure nobody else has reported the issue.
 
 ### Reporting an issue
 

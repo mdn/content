@@ -56,7 +56,7 @@ You can use the forums listed below for discussing code problems.
 
 ## Localization channels
 
-Each localization team has its own [method of communication](/en-US/docs/MDN/Community/Contributing/Translated_content).
+Each localization team has its own [method of communication](/en-US/docs/MDN/Community/Translated_content).
 
 ## Email
 

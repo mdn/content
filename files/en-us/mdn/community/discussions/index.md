@@ -1,5 +1,5 @@
 ---
-title: Community discussions
+title: GitHub Discussions
 slug: MDN/Community/Discussions
 page-type: mdn-community-guide
 ---

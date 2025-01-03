@@ -142,10 +142,10 @@ sidebar:
         details: closed
         children:
           - /MDN/Community/Contributing
-          - /MDN/Community/Contributing/Getting_started
-          - /MDN/Community/Contributing/Our_repositories
-          - /MDN/Community/Contributing/Translated_content
-          - /MDN/Community/Contributing/Security_vulnerability_response
+          - /MDN/Community/Getting_started
+          - /MDN/Community/Our_repositories
+          - /MDN/Community/Translated_content
+          - /MDN/Community/Security_vulnerability_response
       - /MDN/Community/Open_source_etiquette
       - /MDN/Community/Communication_channels
       - /MDN/Community/Discussions

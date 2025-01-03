@@ -1,6 +1,6 @@
 ---
 title: MDN Web Docs changelog
-slug: MDN/Changelog
+slug: MDN/Writing_guidelines/Changelog
 page-type: guide
 ---
 

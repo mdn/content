@@ -90,7 +90,7 @@ Of course, the docs won't always be perfect. If an explanation is hard to find o
 
 ## Find out where to ask questions
 
-Always find out where the best place is to ask questions. Good OSPs will always make this clear in their docs (see [Get in touch](/en-US/docs/MDN/Community#get_in_touch)). If you want to ask general questions, then always make use of these channels. Don't just file an issue on GitHub for every question, as it adds noise to the project (see "Make progress, not noise" below).
+Always find out where the best place is to ask questions. Good OSPs will always make this clear in their docs (see [Get in touch](/en-US/docs/MDN/Community/Communication_channels)). If you want to ask general questions, then always make use of these channels. Don't just file an issue on GitHub for every question, as it adds noise to the project (see "Make progress, not noise" below).
 
 ## Make progress, not noise
 
