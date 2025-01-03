@@ -53,7 +53,7 @@ For most APIs, when providing a time zone identifier, you can also provide anoth
 
 While the IANA database changes from time to time, [the Unicode CLDR database (which browsers use) keeps old time zone names for stability purposes](https://unicode.org/reports/tr35/#Time_Zone_Identifiers). For example, here are a few notable name changes:
 
-| Current IANA primary identifier  | CDLR database          |
+| Current IANA primary identifier  | CLDR database          |
 | -------------------------------- | ---------------------- |
 | `America/Argentina/Buenos_Aires` | `America/Buenos_Aires` |
 | `Asia/Kolkata`                   | `Asia/Calcutta`        |
