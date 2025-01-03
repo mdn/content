@@ -1,5 +1,6 @@
 ---
 title: MDN Web Docs localization
+short-title: Localization
 slug: MDN/Community/Translated_content
 page-type: mdn-community-guide
 ---
