@@ -93,15 +93,19 @@ A single service worker can control many pages. Each time a page within your sco
 
 #### Why is my service worker failing to register?
 
-This could be for the following reasons:
+A service worker fails to register for one of the following reasons:
 
-- You are not running your application through HTTPS.
-- The path to your service worker file is not written correctly — it needs to be written relative to the origin, not your app's root directory. In our example, the worker is at `https://bncb2v.csb.app/sw.js`, and the app's root is `https://bncb2v.csb.app/`. But the path needs to be written as `/sw.js`.
-- It is also not allowed to point to a service worker of a different origin than that of your app.
-- The service worker will only catch requests from clients under the service worker's scope.
-- The max scope for a service worker is the location of the worker (in other words if the script `sw.js` is located in `/js/sw.js`, it can only control URLs under `/js/` by default). A list of max scopes for that worker can be specified with the `Service-Worker-Allowed` header.
-- In Firefox, Service Worker APIs are hidden and cannot be used when the user is in [private browsing mode](https://bugzil.la/1320796), or when history is disabled, or if cookies are cleared when Firefox is closed.
-- In Chrome, registration fails when the "Block all cookies (not recommended)" option is enabled.
+- You are not running your application in a [secure context](/en-US/docs/Web/Security/Secure_Contexts) (over HTTPS).
+- The path of the service worker file is incorrect.
+  The path must be relative to the origin, not an app's root directory.
+  In our example, the worker is at `https://bncb2v.csb.app/sw.js`, and the app's root is `https://bncb2v.csb.app/`, so the service worker must be specified as `/sw.js`.
+- The path to your service worker points to a service worker of a different origin to your app.
+- The service worker registration contains a `scope` option broader than permitted by the worker path.
+  The default scope for a service worker is the directory where the worker is located.
+  In other words, if the script `sw.js` is located in `/js/sw.js`, it can only control URLs in (or nested within) the `/js/` path by default.
+  The scope for a service worker can be broadened (or narrowed) with the {{HTTPHeader("Service-Worker-Allowed")}} header.
+- Browser-specific settings are enabled, such as blocking all cookies, private browsing mode, automatic cookie deletion on close, etc.
+  See [`serviceWorker.register()` browser compatibility](/en-US/docs/Web/API/ServiceWorkerContainer/register#browser_compatibility) for more information.
 
 ### Install and activate: populating your cache
 
@@ -452,3 +456,4 @@ self.addEventListener("activate", (event) => {
 
 - [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
+- {{HTTPHeader("Service-Worker-Allowed")}} HTTP header

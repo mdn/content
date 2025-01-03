@@ -23,7 +23,7 @@ port attached to the context at the other end of the channel.
 In the following code block, you can see a new channel being created using the
 {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} constructor. When the
 IFrame has loaded, we pass `port2` to the IFrame using
-{{domxref("MessagePort.postMessage")}} along with a message. The
+{{domxref("Window.postMessage()")}} along with a message. The
 `handleMessage` handler then responds to a message being sent back from the
 IFrame (using {{domxref("MessagePort.message_event", "onmessage")}}), putting it into a paragraph.
 {{domxref("MessageChannel.port1", "port1")}} is listened to, to check when the message arrives.

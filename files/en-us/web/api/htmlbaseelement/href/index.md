@@ -8,7 +8,7 @@ browser-compat: api.HTMLBaseElement.href
 
 {{APIRef("HTML DOM")}}
 
-The **`href`** property of the {{domxref("HTMLBaseElement")}} interface contains a string that is the URL to use as the base for [relative URLs](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#absolute_urls_vs._relative_urls).
+The **`href`** property of the {{domxref("HTMLBaseElement")}} interface contains a string that is the URL to use as the base for [relative URLs](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL#absolute_urls_vs._relative_urls).
 
 It reflects the `href` attribute of the {{HTMLElement("base")}} element.
 

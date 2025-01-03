@@ -102,7 +102,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 `<textarea>` is a [replaced element](/en-US/docs/Web/CSS/Replaced_element) — it has intrinsic dimensions, like a raster image. By default, its {{cssxref("display")}} value is `inline-block`. Compared to other form elements it is relatively easy to style, with its box model, fonts, color scheme, etc. being easily manipulable using regular CSS.
 
-[Styling HTML forms](/en-US/docs/Learn/Forms/Styling_web_forms) provides some useful tips on styling `<textarea>`s.
+[Styling HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms) provides some useful tips on styling `<textarea>`s.
 
 ### Baseline inconsistency
 

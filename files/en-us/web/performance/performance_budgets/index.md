@@ -33,11 +33,11 @@ The warning level allows you to be proactive and plan any tech debt, while not b
 
 The error level is an upper bound limit, where changes will have a negative and noticeable impact.
 
-In order to begin, you need to first measure the devices and connection speeds where your users are coming from (e.g. A \~$_200_ Android device over a 3G connection), using multiple [tools](/en-US/docs/Learn/Performance/Web_Performance_Basics). These time-based metrics will translate into file-size budgets.
+In order to begin, you need to first measure the devices and connection speeds where your users are coming from (e.g. A \~$_200_ Android device over a 3G connection), using multiple [tools](/en-US/docs/Learn_web_development/Extensions/Performance/Web_Performance_Basics). These time-based metrics will translate into file-size budgets.
 
 A default baseline to reduce bounce rate is to achieve [Time to Interactive under 5 seconds in 3G/4G, and under 2 seconds for subsequent loads](https://infrequently.org/2017/10/can-you-afford-it-real-world-web-performance-budgets/). However, based on the specific goals and content of your site, you might choose to focus on other metrics.
 
-For a text-heavy site such as a blog or a news site, the [First Contentful Paint](/en-US/docs/Glossary/First_contentful_paint) metric could reflect more closely the user behavior. (i.e. How fast can users start reading), which will inform file specific budgets (e.g. Font size), and their optimizations. (e.g. Using [font-display](/en-US/docs/Web/CSS/@font-face/font-display) to improve [Perceived Performance](/en-US/docs/Learn/Performance/Perceived_performance)).
+For a text-heavy site such as a blog or a news site, the [First Contentful Paint](/en-US/docs/Glossary/First_contentful_paint) metric could reflect more closely the user behavior. (i.e. How fast can users start reading), which will inform file specific budgets (e.g. Font size), and their optimizations. (e.g. Using [font-display](/en-US/docs/Web/CSS/@font-face/font-display) to improve [Perceived Performance](/en-US/docs/Learn_web_development/Extensions/Performance/Perceived_performance)).
 
 The ultimate value of a Performance Budget is to correlate the impact of Performance on business or product goals. When defining metrics, you should focus on [User Experience](https://extensionworkshop.com/documentation/develop/user-experience-best-practices/), which will dictate not only the bounce or conversion rate but how likely is that user to return.
 

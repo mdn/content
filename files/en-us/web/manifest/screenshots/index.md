@@ -142,7 +142,7 @@ This example shows how to add screenshots for a meal planning app for different 
 ```json
 {
   "name": "Meal Planner",
-  "screenshots": "screenshots": [
+  "screenshots": [
     {
       "src": "screenshots/desktop-home.webp",
       "sizes": "1920x1080",

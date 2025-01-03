@@ -12,7 +12,7 @@ The **`securitypolicyviolation`** event is fired when a [Content Security Policy
 
 The event is fired on the document when there is a violation of the document CSP policy (and may also bubble from elements in the document).
 
-This event [bubbles](/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling) to the {{domxref("Window")}} object, and is [composed](/en-US/docs/Web/API/Event/composed).
+This event [bubbles](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling) to the {{domxref("Window")}} object, and is [composed](/en-US/docs/Web/API/Event/composed).
 
 > [!NOTE]
 > You should add the handler for this event to a top level object (i.e. {{domxref("Window")}} or {{domxref("Document")}}).
