@@ -70,7 +70,6 @@ When you're ready to open a pull request, follow these guidelines:
 - **Don't make grammar-only changes:**
   MDN Web Docs contains technical documentation; you should not suggest prose style changes except where grammar is incorrect.
 - **Don't unnecessarily add or remove line breaks** on pages that follow a certain formatting style.
-- **Don't enable auto-merge.**
 
 ### After you open a pull request
 
