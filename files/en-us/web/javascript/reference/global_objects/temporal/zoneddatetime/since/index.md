@@ -7,7 +7,9 @@ browser-compat: javascript.builtins.Temporal.ZonedDateTime.since
 
 {{JSRef}}
 
-The **`since()`** method of {{jsxref("Temporal.ZonedDateTime")}} instances TODO
+The **`since()`** method of {{jsxref("Temporal.ZonedDateTime")}} instances returns a new {{jsxref("Temporal.Duration")}} object representing the duration from another date-time (in a form convertible by {{jsxref("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}}) to this date-time. The duration is positive if the other date-time is before this date-time, and negative if after.
+
+This method does `this - other`. To do `other - this`, use the {{jsxref("Temporal/ZonedDateTime/until", "until()")}} method.
 
 ## Syntax
 
@@ -19,25 +21,83 @@ since(other, options)
 ### Parameters
 
 - `other`
-  - : TODO
+  - : A string, an object, or a {{jsxref("Temporal.ZonedDateTime")}} instance representing a date-time to subtract from this date-time. It is converted to a `Temporal.ZonedDateTime` object using the same algorithm as {{jsxref("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}}. It must have the same calendar as `this`.
 - `options` {{optional_inline}}
-  - : TODO
+  - : An object containing some or all of the following properties (in the order they are retrieved and validated):
+    - `largestUnit` {{optional_inline}}
+      - : A string representing the largest unit to include in the output. The value must be one of the following: `"year"`, `"month"`, `"week"`, `"day"`, `"hour"`, `"minute"`, `"second"`, `"millisecond"`, `"microsecond"`, `"nanosecond"`, or their plural forms, or the value `"auto"` which means `"hour"` or `smallestUnit`, whichever is greater. Defaults to `"auto"`. The result will not contain units larger than this; for example, if the largest unit is `"month"`, then "1 year 2 months" will become "14 months". Note that using [units larger than `"hour"`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration#calendar_durations) may make the duration not portable to other calendars, dates, or time zones.
+    - `roundingIncrement` {{optional_inline}}
+      - : A number (truncated to an integer) representing the rounding increment in the given `smallestUnit`. Defaults to `1`. Must be in the inclusive range of 1 to 1e9.
+    - `roundingMode` {{optional_inline}}
+      - : A string specifying how to round off the fractional part of `smallestUnit`. See [`Intl.NumberFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#roundingmode). Defaults to `"trunc"`.
+    - `smallestUnit` {{optional_inline}}
+      - : A string representing the smallest unit to include in the output. The value must be one of the following: `"year"`, `"month"`, `"week"`, `"day"`, `"hour"`, `"minute"`, `"second"`, `"millisecond"`, `"microsecond"`, `"nanosecond"`, or their plural forms. Defaults to `"nanosecond"`. For units larger than `"nanosecond"`, fractional parts of the `smallestUnit` will be [rounded](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Duration/round) according to the `roundingIncrement` and `roundingMode` settings. Must be smaller or equal to `largestUnit`.
 
 ### Return value
 
-TODO
+A new {{jsxref("Temporal.Duration")}} object representing the duration _since_ `other` to this date-time. The duration is positive if `other` is before this date-time, and negative if after.
 
 ### Exceptions
 
-TODO
+- {{jsxref("RangeError")}}
+  - : Thrown in one of the following cases:
+    - `other` has a different calendar than `this`.
+    - Any of the options is invalid.
+    - `other` has a different time zone than `this`, and `largestUnit` is `"day"` or above.
 
 ## Description
 
-TODO
+The duration returned is a "hybrid" duration. This means that the duration's date portion represents full calendar days like {{jsxref("Temporal/PlainDateTime/since", "Temporal.PlainDateTime.prototype.since()")}} would return, while its time portion represents real-world elapsed time like {{jsxref("Temporal/Instant/since", "Temporal.Instant.prototype.since()")}} would return. This "hybrid duration" approach automatically adjusts for DST and matches widely-adopted industry standards like [RFC 5545 (iCalendar)](https://datatracker.ietf.org/doc/html/rfc5545). See below for examples.
 
 ## Examples
 
-TODO
+### Offset transitions
+
+When transitions happen, a day may not have exactly 24 hours.
+
+```js
+const start = Temporal.ZonedDateTime.from(
+  "2024-11-03T01:00:00-04:00[America/New_York]",
+);
+const end = Temporal.ZonedDateTime.from(
+  "2024-11-04T01:00:00-05:00[America/New_York]",
+);
+console.log(end.since(start).toString()); // PT25H
+console.log(end.since(start, { largestUnit: "day" }).toString()); // PT1D
+
+const start2 = Temporal.ZonedDateTime.from(
+  "2024-03-10T01:00:00-05:00[America/New_York]",
+);
+const end2 = Temporal.ZonedDateTime.from(
+  "2024-03-11T01:00:00-04:00[America/New_York]",
+);
+console.log(end2.since(start2).toString()); // PT23H
+console.log(end2.since(start2, { largestUnit: "day" }).toString()); // PT1D
+```
+
+For this reason, the returned duration is purely time-based with no date portion by default, so that it stays unambiguous.
+
+### Different time zones
+
+The time portion of the returned duration is purely based on instants and is not affected by time zones. However, if you want to include any date units like `day`, then the start and end must be in the same time zone.
+
+```js
+const start = Temporal.ZonedDateTime.from(
+  "2024-11-03T01:00:00-04:00[America/New_York]",
+);
+// Peru does not use DST so its offset remains -05:00 year-round
+const end = Temporal.ZonedDateTime.from(
+  "2024-11-04T01:00:00-05:00[America/Lima]",
+);
+
+end.since(start); // PT25H
+end.since(start, { largestUnit: "day" }); // RangeError: time zones "America/Lima" and "America/New_York" aren't compatible
+
+end.withTimeZone("America/New_York").since(start, { largestUnit: "day" }); // P1D
+end.since(start.withTimeZone("America/Lima"), { largestUnit: "day" }); // P1D1H
+```
+
+For more examples about how to use `since()`, especially with rounding, see {{jsxref("Temporal/PlainDate/since", "Temporal.PlainDate.prototype.since()")}} and {{jsxref("Temporal/PlainTime/since", "Temporal.PlainTime.prototype.since()")}}.
 
 ## Specifications
 
@@ -49,4 +109,8 @@ TODO
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal.ZonedDateTime")}}
+- {{jsxref("Temporal.Duration")}}
+- {{jsxref("Temporal/ZonedDateTime/add", "Temporal.ZonedDateTime.prototype.add()")}}
+- {{jsxref("Temporal/ZonedDateTime/subtract", "Temporal.ZonedDateTime.prototype.subtract()")}}
+- {{jsxref("Temporal/ZonedDateTime/until", "Temporal.ZonedDateTime.prototype.until()")}}

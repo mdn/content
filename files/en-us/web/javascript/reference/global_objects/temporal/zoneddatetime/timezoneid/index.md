@@ -7,9 +7,12 @@ browser-compat: javascript.builtins.Temporal.ZonedDateTime.timeZoneId
 
 {{JSRef}}
 
-The **`timeZoneId`** accessor property of {{jsxref("Temporal.ZonedDateTime")}} instances returns a string representing the [time zone identifier](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets) used to interpret the internal instant. It uses the same string used when constructing the `Temporal.ZonedDateTime` object, which is either an IANA time zone name or a fixed offset.
+The **`timeZoneId`** accessor property of {{jsxref("Temporal.ZonedDateTime")}} instances returns a string representing the [time zone identifier](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets) used to interpret the internal instant. The string is either a named identifier in the preferred case (such as `"America/New_York"`), or an offset in the form `"±hh:mm"`. Aliases are not canonicalized to the primary identifier.
 
 The set accessor of `timeZoneId` is `undefined`. You cannot change this property directly. Use the {{jsxref("Temporal/ZonedDateTime/withTimeZone", "withTimeZone()")}} method to create a new `Temporal.ZonedDateTime` object with the desired new value.
+
+> [!NOTE]
+> This string is not intended for display to users. Use {{jsxref("Temporal/ZonedDateTime/toLocaleString", "toLocaleString()")}} with the appropriate options to get a localized string.
 
 ## Examples
 
@@ -28,7 +31,7 @@ const dt3 = dt2.withTimeZone("Asia/Shanghai");
 console.log(dt3.timeZoneId); // "Asia/Shanghai"
 ```
 
-Unlike the `timeZone` returned by {{jsxref("Intl/DatetimeFormat/resolvedOptions", "Intl.DateTimeFormat.prototype.resolvedOptions()")}}, the `timeZoneId` is never canonicalized.
+Unlike the `timeZone` returned by {{jsxref("Intl/DatetimeFormat/resolvedOptions", "Intl.DateTimeFormat.prototype.resolvedOptions()")}}, the `timeZoneId` is never canonicalized to the primary identifier.
 
 ```js
 const dt = Temporal.ZonedDateTime.from(
@@ -39,6 +42,18 @@ const dt2 = Temporal.ZonedDateTime.from(
 );
 console.log(dt.timeZoneId); // "Asia/Ho_Chi_Minh"
 console.log(dt2.timeZoneId); // "Asia/Saigon"
+```
+
+However, presentational differences will get canonicalized.
+
+```js
+const dt = Temporal.ZonedDateTime.from(
+  "2021-07-01T12:00:00+07:00[asia/ho_chi_minh]",
+);
+console.log(dt.timeZoneId); // "Asia/Ho_Chi_Minh"
+
+const dt2 = Temporal.ZonedDateTime.from("2021-07-01T12:00:00+07:00[+07]");
+console.log(dt2.timeZoneId); // "+07:00"
 ```
 
 ## Specifications

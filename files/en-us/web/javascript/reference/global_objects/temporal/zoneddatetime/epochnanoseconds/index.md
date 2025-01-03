@@ -11,6 +11,8 @@ The **`epochNanoseconds`** accessor property of {{jsxref("Temporal.ZonedDateTime
 
 The set accessor of `epochNanoseconds` is `undefined`. You cannot change this property directly. To create a new `Temporal.ZonedDateTime` object with the desired new `epochNanoseconds` value, use the {{jsxref("Temporal/ZonedDateTime/add", "add()")}} or {{jsxref("Temporal/ZonedDateTime/subtract", "subtract()")}} method with the appropriate duration.
 
+An instant can only represent ±10<sup>8</sup> days around the epoch, which is ±8.64e21 nanoseconds. Attempts to set `epochNanosecond` beyond this boundary throws a {{jsxref("RangeError")}}.
+
 ## Examples
 
 ### Using epochNanoseconds
@@ -25,12 +27,11 @@ console.log(instant2.epochNanoseconds); // -13173903211000000n
 
 ### Creating a ZonedDateTime object from an epochNanoseconds value
 
-You can create a `Temporal.ZonedDateTime` object from an `epochNanoseconds` value by first constructing a `Temporal.Instant` object using {{jsxref("Temporal/Instant/fromEpochNanoseconds", "Temporal.Instant.fromEpochNanoseconds()")}}, and then converting it to a `Temporal.ZonedDateTime` object using {{jsxref("Temporal/Instant/toZonedDateTimeISO", "Temporal.Instant.prototype.toZonedDateTimeISO()")}}:
+You can create a `Temporal.ZonedDateTime` object from an `epochNanoseconds` value using the {{jsxref("Temporal/ZonedDateTime/ZonedDateTime", "Temporal.ZonedDateTime()")}} constructor.
 
 ```js
 const epochNanoseconds = 1627821296789000000n;
-const instant = Temporal.Instant.fromEpochNanoseconds(epochNanoseconds);
-const zdt = instant.toZonedDateTimeISO("UTC");
+const zdt = new Temporal.ZonedDateTime(epochNanoseconds, "UTC");
 console.log(zdt.toString()); // 2021-08-01T12:34:56.789+00:00[UTC]
 ```
 

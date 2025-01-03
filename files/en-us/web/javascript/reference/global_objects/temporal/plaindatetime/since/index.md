@@ -35,7 +35,7 @@ since(other, options)
 
 ### Return value
 
-A new {{jsxref("Temporal.PlainDateTime")}} object representing the duration _since_ `other` to this date-time. The duration is positive if `other` is before this date-time, and negative if after.
+A new {{jsxref("Temporal.Duration")}} object representing the duration _since_ `other` to this date-time. The duration is positive if `other` is before this date-time, and negative if after.
 
 ### Exceptions
 

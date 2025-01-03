@@ -7,7 +7,10 @@ browser-compat: javascript.builtins.Temporal.ZonedDateTime.toPlainDateTime
 
 {{JSRef}}
 
-The **`toPlainDateTime()`** method of {{jsxref("Temporal.ZonedDateTime")}} instances TODO
+The **`toPlainDateTime()`** method of {{jsxref("Temporal.ZonedDateTime")}} instances returns a new {{jsxref("Temporal.PlainDateTime")}} object representing the date and time portions of this date-time. Only the time zone information is removed.
+
+> [!WARNING]
+> After a `Temporal.ZonedDateTime` is converted to `Temporal.PlainDateTime`, it will no longer be aware of its time zone. This means that subsequent operations like arithmetic or with will not adjust for DST and may not yield the same results as equivalent operations with `Temporal.ZonedDateTime`. However, unless you perform those operations across a time zone offset transition, it's impossible to notice the difference. Therefore, be very careful when performing this conversion because subsequent results may look correct most of the time while failing around time zone transitions like when DST starts or ends.
 
 ## Syntax
 
@@ -21,19 +24,19 @@ None.
 
 ### Return value
 
-TODO
-
-### Exceptions
-
-TODO
-
-## Description
-
-TODO
+A new {{jsxref("Temporal.PlainDateTime")}} object representing the date and time portions of this date-time.
 
 ## Examples
 
-TODO
+### Using toPlainDateTime()
+
+```js
+const zdt = Temporal.ZonedDateTime.from(
+  "2021-07-01T12:34:56.987654321-04:00[America/New_York]",
+);
+const plainDateTime = zdt.toPlainDateTime();
+console.log(plainDateTime.toString()); // 2021-07-01T12:34:56.987654321
+```
 
 ## Specifications
 
@@ -45,4 +48,9 @@ TODO
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal.ZonedDateTime")}}
+- {{jsxref("Temporal.PlainDateTime")}}
+- {{jsxref("Temporal/ZonedDateTime/toPlainDate", "Temporal.ZonedDateTime.prototype.toPlainDate()")}}
+- {{jsxref("Temporal/ZonedDateTime/toPlainTime", "Temporal.ZonedDateTime.prototype.toPlainTime()")}}
+- {{jsxref("Temporal/ZonedDateTime/toInstant", "Temporal.ZonedDateTime.prototype.toInstant()")}}
+- {{jsxref("Temporal/PlainDateTime/toZonedDateTime", "Temporal.PlainDateTime.prototype.toZonedDateTime()")}}

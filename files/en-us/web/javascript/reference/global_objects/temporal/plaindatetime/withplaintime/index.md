@@ -61,4 +61,5 @@ console.log(newDT3.toString()); // "2021-07-01T00:00:00"
 - {{jsxref("Temporal.PlainDateTime")}}
 - {{jsxref("Temporal/PlainDateTime/with", "Temporal.PlainDateTime.prototype.with()")}}
 - {{jsxref("Temporal/PlainDateTime/withCalendar", "Temporal.PlainDateTime.prototype.withCalendar()")}}
+- {{jsxref("Temporal/PlainDateTime/toPlainTime", "Temporal.PlainDateTime.prototype.toPlainTime()")}}
 - {{jsxref("Temporal/PlainDateTime/from", "Temporal.PlainDateTime.from()")}}

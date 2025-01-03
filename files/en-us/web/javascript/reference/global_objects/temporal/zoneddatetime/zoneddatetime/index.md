@@ -23,27 +23,31 @@ new Temporal.ZonedDateTime(epochNanoseconds, timeZone, calendar)
 ### Parameters
 
 - `epochNanoseconds`
-  - : TODO
+  - : A [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) that corresponds to the {{jsxref("Temporal/ZonedDateTime/epochNanoseconds", "epochNanoseconds")}} property.
 - `timeZone`
-  - : TODO
+  - : A string that corresponds to the {{jsxref("Temporal/ZonedDateTime/timeZoneId", "timeZoneId")}} property.
 - `calendar` {{optional_inline}}
-  - : TODO
+  - : A string that corresponds to the {{jsxref("Temporal/ZonedDateTime/calendarId", "calendarId")}} property. Defaults to `"iso8601"`.
 
 ### Return value
 
-TODO
+A new `Temporal.ZonedDateTime` object, representing the specific instant specified by the parameters.
 
 ### Exceptions
 
-TODO
-
-## Description
-
-TODO
+- {{jsxref("TypeError")}}
+  - : Thrown if `timeZone` or `calendar` is not a string.
+- {{jsxref("RangeError")}}
+  - : Thrown if any parameter is not within the valid range.
 
 ## Examples
 
-TODO
+### Using Temporal.ZonedDateTime()
+
+```js
+const zdt = new Temporal.ZonedDateTime(0n, "America/New_York");
+console.log(zdt.toString()); // '1969-12-31T19:00:00-05:00[America/New_York]'
+```
 
 ## Specifications
 
@@ -55,4 +59,5 @@ TODO
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal.ZonedDateTime")}}
+- {{jsxref("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}}

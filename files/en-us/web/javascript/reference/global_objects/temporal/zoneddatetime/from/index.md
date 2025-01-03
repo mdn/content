@@ -19,25 +19,116 @@ Temporal.ZonedDateTime.from(info, options)
 ### Parameters
 
 - `info`
-  - : TODO
+  - : One of the following:
+    - A {{jsxref("Temporal.ZonedDateTime")}} instance, which creates a copy of the instance.
+    - An object containing properties that are accepted by either {{jsxref("Temporal/PlainDate/from", "Temporal.PlainDate.from()")}} (`calendar`, `era`, `eraYear`, `year`, `month`, `monthCode`, `day`) or {{jsxref("Temporal/PlainTime/from", "Temporal.PlainTime.from()")}} (`hour`, `minute`, `second`, `millisecond`, `microsecond`, `nanosecond`). The info should explicitly specify a year (as `year` or `era` and `eraYear`), a month (as `month` or `monthCode`), and a day; others are optional and will be set to their default values. The following properties should be provided too:
+      - `timeZone`
+        - : Either a string or a {{jsxref("Temporal.ZonedDateTime")}} instance representing the time zone to use. If a `Temporal.ZonedDateTime` instance, its time zone is used. If a string, it must be a valid [time zone identifier](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets). The time properties are interpreted in this time zone.
+      - `offset` {{optional_inline}}
+        - : A offset string, in the same format as the [ISO 8601](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#iso_8601_format) offset, representing the offset from UTC. If omitted, it will be calculated from the time zone and the date-time. `"Z"` is not allowed.
+    - An [ISO 8601](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#iso_8601_format) string containing a date, optionally a time, optionally an offset, a time zone annotation, and optionally a calendar.
 - `options` {{optional_inline}}
-  - : TODO
+  - : An object containing some or all of the following properties (in the order they are retrieved and validated):
+    - `disambiguation` {{optional_inline}}
+      - : What to do if the local date-time is ambiguous in the given time zone (there are more than one instants with such local time, or the local time does not exist). Possible values are `"compatible"`, `"earlier"`, `"later"`, and `"reject"`. Defaults to `"compatible"`. For more information about these values, see [ambiguity and gaps from local time to UTC time](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#ambiguity_and_gaps_from_local_time_to_utc_time).
+    - `offset` {{optional_inline}}
+      - : What to do if the offset is explicitly provided in `info` but the offset is invalid for the given time zone in the given local time. Possible values are `"use"`, `"ignore"`, `"reject"`, and `"prefer"`. Defaults to `"reject"`. For more information about these values, see [offset ambiguity](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#offset_ambiguity).
+    - `overflow` {{optional_inline}}
+      - : A string specifying the behavior when a date component is out of range (when using the object `info`). Possible values are:
+        - `"constrain"` (default)
+          - : The date component is [clamped](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate#invalid_date_clamping) to the valid range.
+        - `"reject"`
+          - : A {{jsxref("RangeError")}} is thrown if the date component is out of range.
 
 ### Return value
 
-TODO
+A new `Temporal.ZonedDateTime` object, representing the date and time specified by `info` in the specified `calendar` and `timeZone`.
 
 ### Exceptions
 
-TODO
-
-## Description
-
-TODO
+- {{jsxref("TypeError")}}
+  - : Thrown in one of the following cases:
+    - `info` is not an object or a string.
+    - `options` is not an object or `undefined`.
+    - The provided properties are insufficient to unambiguously determine a date. You usually need to provide a `year` (or `era` and `eraYear`), and a `month` (or `monthCode`), and a `day`.
+- {{jsxref("RangeError")}}
+  - : Thrown in one of the following cases:
+    - The provided properties that specify the same component are inconsistent.
+    - The provided non-numerical properties are not valid, for example, if `monthCode` is never a valid month code in this calendar.
+    - The provided numerical properties are out of range, and `options.overflow` is set to `"reject"`.
 
 ## Examples
 
-TODO
+### Creating a ZonedDateTime from an object
+
+```js
+// Year + month + day + hour + minute + second
+const zdt = Temporal.ZonedDateTime.from({
+  timeZone: "America/New_York",
+  year: 2021,
+  month: 7,
+  day: 1,
+  hour: 12,
+  minute: 34,
+  second: 56,
+});
+console.log(dt.toString()); // "2021-07-01T12:34:56-04:00[America/New_York]"
+```
+
+### Creating a PlainDateTime from a string
+
+```js
+const zdt = Temporal.ZonedDateTime.from(
+  "2021-07-01T12:34:56-04:00[America/New_York]",
+);
+console.log(zdt.toLocaleString()); // "7/1/2021, 12:34:56 PM EDT" (assuming en-US locale)
+
+// Time given as UTC, and converted to local
+const zdt2 = Temporal.ZonedDateTime.from(
+  "2021-07-01T12:34:56Z[America/New_York]",
+);
+console.log(zdt2.toString()); // "2021-07-01T08:34:56-04:00[America/New_York]"
+```
+
+### Local time disambiguation
+
+See [ambiguity and gaps from local time to UTC time](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#ambiguity_and_gaps_from_local_time_to_utc_time) for an introduction to this situation.
+
+```js
+const localTimeNotExist = "2024-03-10T02:05:00[America/New_York]";
+// For non-existent times, "compatible" is equivalent to "later"
+const zdt = Temporal.ZonedDateTime.from(localTimeNotExist);
+console.log(zdt.toString()); // "2024-03-10T03:05:00-04:00[America/New_York]"
+
+const zdt2 = Temporal.ZonedDateTime.from(localTimeNotExist, {
+  disambiguation: "earlier",
+});
+console.log(zdt2.toString()); // "2024-03-10T01:05:00-05:00[America/New_York]"
+
+const localTimeAmbiguous = "2024-11-03T01:05:00[America/New_York]";
+// For ambiguous times, "compatible" is equivalent to "earlier"
+const zdt3 = Temporal.ZonedDateTime.from(localTimeAmbiguous);
+console.log(zdt3.toString()); // "2024-11-03T01:05:00-04:00[America/New_York]"
+
+const zdt4 = Temporal.ZonedDateTime.from(localTimeAmbiguous, {
+  disambiguation: "later",
+});
+console.log(zdt4.toString()); // "2024-11-03T01:05:00-05:00[America/New_York]"
+```
+
+### Resolving offset ambiguity
+
+See [offset ambiguity](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#offset_ambiguity) for an introduction to this situation.
+
+```js
+const offsetAmbiguous = "2019-12-23T12:00:00-02:00[America/Sao_Paulo]";
+
+Temporal.ZonedDateTime.from(offsetAmbiguous); // RangeError: date-time can't be represented in the given time zone
+Temporal.ZonedDateTime.from(offsetAmbiguous, { offset: "use" }); // "2019-12-23T11:00:00-03:00[America/Sao_Paulo]"
+Temporal.ZonedDateTime.from(offsetAmbiguous, { offset: "ignore" }); // "2019-12-23T12:00:00-03:00[America/Sao_Paulo]"
+```
+
+For more examples, especially regarding different calendars and overflow settings, see {{jsxref("Temporal/PlainDate/from", "Temporal.PlainDate.from()")}} and {{jsxref("Temporal/PlainTime/from", "Temporal.PlainTime.from()")}}.
 
 ## Specifications
 
@@ -49,4 +140,6 @@ TODO
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal.ZonedDateTime")}}
+- {{jsxref("Temporal/ZonedDateTime/ZonedDateTime", "Temporal.ZonedDateTime()")}}
+- {{jsxref("Temporal/ZonedDateTime/with", "Temporal.ZonedDateTime.prototype.with()")}}

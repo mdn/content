@@ -11,6 +11,8 @@ The **`epochNanoseconds`** accessor property of {{jsxref("Temporal.Instant")}} i
 
 The set accessor of `epochNanoseconds` is `undefined`. You cannot change this property directly. To create a new `Temporal.Instant` object with the desired new `epochNanoseconds` value, use the {{jsxref("Temporal/Instant/add", "add()")}} or {{jsxref("Temporal/Instant/subtract", "subtract()")}} method with the appropriate duration.
 
+An instant can only represent ±10<sup>8</sup> days around the epoch, which is ±8.64e21 nanoseconds. Attempts to set `epochNanosecond` beyond this boundary throws a {{jsxref("RangeError")}}.
+
 ## Examples
 
 ### Using epochNanoseconds

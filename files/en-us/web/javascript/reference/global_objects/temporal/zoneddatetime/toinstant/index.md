@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.ZonedDateTime.toInstant
 
 {{JSRef}}
 
-The **`toInstant()`** method of {{jsxref("Temporal.ZonedDateTime")}} instances TODO
+The **`toInstant()`** method of {{jsxref("Temporal.ZonedDateTime")}} instances returns a new {{jsxref("Temporal.Instant")}} object representing the instant of this date-time.
 
 ## Syntax
 
@@ -21,19 +21,19 @@ None.
 
 ### Return value
 
-TODO
-
-### Exceptions
-
-TODO
-
-## Description
-
-TODO
+A new {{jsxref("Temporal.Instant")}} object representing the instant of this date-time.
 
 ## Examples
 
-TODO
+### Using toInstant()
+
+```js
+const zdt = Temporal.ZonedDateTime.from(
+  "2021-07-01T12:34:56.987654321-04:00[America/New_York]",
+);
+const instant = zdt.toInstant();
+console.log(instant.toString()); // 2021-07-01T16:34:56.987654321Z
+```
 
 ## Specifications
 
@@ -45,4 +45,9 @@ TODO
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal.ZonedDateTime")}}
+- {{jsxref("Temporal.Instant")}}
+- {{jsxref("Temporal/ZonedDateTime/toPlainDate", "Temporal.ZonedDateTime.prototype.toPlainDate()")}}
+- {{jsxref("Temporal/ZonedDateTime/toPlainTime", "Temporal.ZonedDateTime.prototype.toPlainTime()")}}
+- {{jsxref("Temporal/ZonedDateTime/toPlainDateTime", "Temporal.ZonedDateTime.prototype.toPlainDateTime()")}}
+- {{jsxref("Temporal/Instant/toZonedDateTimeISO", "Temporal.Instant.prototype.toZonedDateTimeISO()")}}

@@ -35,35 +35,48 @@ To know the offset, we need two pieces of information, the _time zone_, and the 
 
 The time zones are stored in the [IANA Time Zone Database](https://www.iana.org/time-zones). Each IANA time zone has:
 
-- A _primary time zone identifier_ that uniquely identifies the time zone. It usually refers to a geographic area anchored by a city (e.g. `Europe/Paris` or `Africa/Kampala`), but can also denote single-offset time zones like `UTC` (a consistent `+00:00` offset) or `Etc/GMT+5` (which for historical reasons is a negative offset `-05:00`).
+- A _primary time zone identifier_ that uniquely identifies the time zone. It usually refers to a geographic area anchored by a city (e.g. `Europe/Paris` or `Africa/Kampala`), but can also denote single-offset time zones like `UTC` (a consistent `+00:00` offset) or `Etc/GMT+5` (which for historical reasons is a negative offset `-05:00`). For historical reasons, the primary name for the UTC time zone is `UTC`, though in IANA it is `Etc/UTC`.
 - A _time zone definition_ in the form of a table that maps UTC date/time ranges (including future ranges) to specific offsets.
-- Zero or more _non-primary time zone identifiers_ that are aliases to the primary time zone identifier. These are usually historical names that are no longer in use, but are kept for compatibility reasons. See {{jsxref("Intl/Locale/getTimeZones", "Intl.Locale.prototype.getTimeZones")}} for more information.
+- Zero or more _non-primary time zone identifiers_ that are aliases to the primary time zone identifier. These are usually historical names that are no longer in use, but are kept for compatibility reasons. See below for more information.
 
-When a `Temporal` API accepts a _time zone identifier_, in addition to primary time zone identifiers and non-primary time zone identifiers, it also accepts an _offset time zone identifier_, which is in the time zone offset format specified below, except that subminute components are not allowed. For example, `+05:30`, `-08`, `+0600` are all valid offsets identifiers. Named identifiers are matched case-insensitively.
+As input, named identifiers are matched case-insensitively. Internally, they are stored in their preferred case, and non-primary identifiers will _not_ be converted to their primary identifier.
 
-When a `Temporal` API returns a time zone identifier, it always returns named identifiers in the preferred case, and offset identifiers in the form `+HH:MM` or `-HH:MM`.
+> [!NOTE]
+> When setting the time zone name, you rarely want to set it to `"UTC"`. `ZonedDateTime` is intended to be displayed to users, but no human lives in the "UTC" time zone. If you don't know the time zone at construction time but know the wall-clock time, use a {{jsxref("Temporal.PlainDateTime")}}. If you know the exact instant, use a {{jsxref("Temporal.Instant")}}.
 
-When a `Temporal` API accepts a _time zone offset_, it is in the following form:
+When a `Temporal` API accepts a _time zone identifier_, in addition to primary time zone identifiers and non-primary time zone identifiers, it also accepts an _offset time zone identifier_, which is in the same form as the offset, except subminute precision is not allowed. For example, `+05:30`, `-08`, `+0600` are all valid offsets identifiers. Internally, offset identifiers are stored in the `±HH:mm` form.
 
-```plain
-±HH:MM:SS.sssssssss
-```
+> [!NOTE]
+> Avoid using offset identifiers if there is a unique region to use. Even if a region has always used a single offset, it is better to use the named identifier to guard against past and future political changes to the offset.
 
-- The string starts with either `+` or `-`.
-- `HH` is a two-digit number from `00` to `23`.
-- `MM` is a two-digit number from `00` to `59`.
-- `SS.sssssssss` is a two-digit number from `00` to `59`, optionally followed by a `.` or `,` and one to nine digits.
+For most APIs, when providing a time zone identifier, you can also provide another `ZonedDateTime` instance, whose `timeZoneId` will get used. You can also provide a full ISO 8601 date/time string, which must contain a time zone annotation, or an offset (as `Z` or `±HH:mm`).
 
-The `HH`, `MM`, and `SS` components can be separated by `:` or nothing. You can omit either just `SS` or both `SS` and `MM`, so the offset can be one of three forms: `±HH`, `±HH:MM`, or `±HH:MM:SS.sssssssss`. This allows specifying offsets at the nanosecond precision.
+While the IANA database changes from time to time, [the Unicode CLDR database (which browsers use) keeps old time zone names for stability purposes](https://unicode.org/reports/tr35/#Time_Zone_Identifiers). For example, here are a few notable name changes:
 
-Note that subminute offset (such as `+12:30:15`) is not allowed as a time zone identifier, and may not be universally supported by other systems in the serialization format.
+| Current IANA primary identifier  | CDLR database          |
+| -------------------------------- | ---------------------- |
+| `America/Argentina/Buenos_Aires` | `America/Buenos_Aires` |
+| `Asia/Kolkata`                   | `Asia/Calcutta`        |
+| `Asia/Ho_Chi_Minh`               | `Asia/Saigon`          |
+| `Europe/Kyiv`                    | `Europe/Kiev`          |
+
+For more information, check the [CLDR database](https://github.com/unicode-org/cldr-json/blob/main/cldr-json/cldr-bcp47/bcp47/timezone.json). (IANA names are marked with `"_iana"`, if different.)
+
+To eliminate redundancy, JavaScript APIs that return time zone identifiers may choose to canonicalize non-primary time zone identifiers to their primary time zone identifiers. Such cases include:
+
+- {{jsxref("Temporal/Now/timeZoneId", "Temporal.Now.timeZoneId()")}}
+- {{jsxref("Intl/Locale/getTimeZones", "Intl.Locale.prototype.getTimeZones()")}}
+- {{jsxref("Intl/DateTimeFormat/resolvedOptions", "Temporal.DateTimeFormat.prototype.resolvedOptions()")}} (`timeZone` option)
+- {{jsxref("Intl.supportedValuesOf()")}} (`timeZone` option)
+
+Firefox has always been overriding these legacy names, while others have not (Safari and Chrome). There is [an effort in TC39 to properly handle these canonical identifiers](https://github.com/tc39/proposal-canonical-tz), which also contains links to related CLDR issues.
 
 ### ISO 8601 format
 
 `ZonedDateTime` objects can be serialized and parsed using the [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601) (with some extensions specified by ECMAScript). The string has the following form (spaces are only for readability and should not be present in the actual string):
 
 ```plain
-YYYY-MM-DD T HH:MM:SS.sssssssss Z/±HH:MM:SS.sssssssss [time_zone_id] [u-ca=calendar_id]
+YYYY-MM-DD T HH:mm:ss.sssssssss Z/±HH:mm:ss.sssssssss [time_zone_id] [u-ca=calendar_id]
 ```
 
 - `YYYY`
@@ -76,12 +89,12 @@ YYYY-MM-DD T HH:MM:SS.sssssssss Z/±HH:MM:SS.sssssssss [time_zone_id] [u-ca=cale
   - : The date-time separator, which can be `T`, `t`, or a space. Present if and only if `HH` is present.
 - `HH` {{optional_inline}}
   - : A two-digit number from `00` to `23`. Defaults to `00`.
-- `MM` {{optional_inline}}
+- `mm` {{optional_inline}}
   - : A two-digit number from `00` to `59`. Defaults to `00`.
-- `SS.sssssssss` {{optional_inline}}
-  - : A two-digit number from `00` to `59`. May optionally be followed by a `.` or `,` and one to nine digits. Defaults to `00`. The `HH`, `MM`, and `SS` components can be separated by `:` or nothing. You can omit either just `SS` or both `SS` and `MM`, so the time can be one of three forms: `HH`, `HH:MM`, or `HH:MM:SS.sssssssss`.
-- `Z/±HH:MM:SS.sssssssss` {{optional_inline}}
-  - : Either the UTC designator `Z` or `z`, or an offset from UTC in the form `+` or `-` followed by the same format as the time component. Note that subminute precision may be unsupported by other systems. If omitted, the offset is derived from the time zone identifier. If present, then the time must be provided too.
+- `ss.sssssssss` {{optional_inline}}
+  - : A two-digit number from `00` to `59`. May optionally be followed by a `.` or `,` and one to nine digits. Defaults to `00`. The `HH`, `mm`, and `ss` components can be separated by `:` or nothing. You can omit either just `ss` or both `ss` and `mm`, so the time can be one of three forms: `HH`, `HH:mm`, or `HH:mm:ss.sssssssss`.
+- `Z/±HH:mm:ss.sssssssss` {{optional_inline}}
+  - : Either the UTC designator `Z` or `z`, or an offset from UTC in the form `+` or `-` followed by the same format as the time component. Note that subminute precision may be unsupported by other systems. If omitted, the offset is derived from the time zone identifier. If present, then the time must be provided too. `Z` is not the same as `+00:00`: the former means that the time is given in UTC form regardless of the time zone identifier, while the latter means that the time is given in local time which happens to be UTC+0, and will be validated against the time zone identifier via the [`offset` option](#offset_ambiguity).
 - `[time_zone_id]`
   - : Replace `time_zone_id` with the time zone identifier (named or offset) as described above. May have a _critical flag_ by prefixing the identifier with `!`: e.g., `[!America/New_York]`. This flag generally tells other systems that it cannot be ignored if they don't support it.
 - `[u-ca=calendar_id]` {{optional_inline}}
@@ -93,7 +106,7 @@ When serializing, you can configure the fractional second digits, whether to dis
 
 ### Ambiguity and gaps from local time to UTC time
 
-Given a time zone, conversion from UTC to local time is straightforward: you first get the offset using the time zone name and the instant, then add the offset to the instant. The reverse is not true: conversion from local time to UTC time is ambiguous, because one local time can correspond to zero, one, or many UTC times. Consider the most common cause: daylight saving time transitions. Take New York as an example. Its standard offset is UTC-5, but during DST, all clocks are set forward by an hour, so the offset becomes UTC-4. In the US, transitions happen at 2:00 AM local time, so consider these two transition days:
+Given a time zone, conversion from UTC to local time is straightforward: you first get the offset using the time zone name and the instant, then add the offset to the instant. The reverse is not true: conversion from local time to UTC time, without an explicit offset, is ambiguous, because one local time can correspond to zero, one, or many UTC times. Consider the most common cause: daylight saving time transitions. Take New York as an example. Its standard offset is UTC-5, but during DST, all clocks are set forward by an hour, so the offset becomes UTC-4. In the US, transitions happen at 2:00 AM local time, so consider these two transition days:
 
 | UTC time             | New York time             |
 | -------------------- | ------------------------- |
@@ -118,20 +131,27 @@ When constructing a `ZonedDateTime` from a local time (using {{jsxref("Temporal/
 - `reject`
   - : Throw a `RangeError` whenever there is an ambiguity or a gap.
 
+There are several cases where there's no ambiguity when constructing a `ZonedDateTime`:
+
+- If the time is specified in UTC via the `Z` offset.
+- If the offset is explicitly provided and used (see below).
+
 ### Offset ambiguity
 
-We already demonstrated how ambiguity may arise from interpreting a local time in a time zone. There's another source of ambiguity with `ZonedDateTime`, because it stores the offset information twice: once as the offset, and once as the time zone identifier. These two may be in conflict, and it is an unavoidable real-world issue: if you store a time in the future, with an anticipated offset, then before that time comes, the time zone definition may have changed due to political reasons. For example, suppose in 2018, I set a reminder at the time `2019-12-23T12:00:00-02:00[America/Sao_Paulo]` (which is a daylight saving time; Brazil is in the southern hemisphere, so it enters DST in October and exits in February). But before that time comes, in early 2019, Brazil decides to stop observing DST, so the real offset becomes `-03:00`. Should the reminder now still fire at noon (respect time zone identifier), or should it fire at 11:00 AM (respect offset)?
+We already demonstrated how ambiguity may arise from interpreting a local time in a time zone, without providing an explicit offset. However, if you provide an explicit offset, then another conflict arises: between the offset as specified, and the offset as calculated from the time zone and the local time. This is an unavoidable real-world issue: if you store a time in the future, with an anticipated offset, then before that time comes, the time zone definition may have changed due to political reasons. For example, suppose in 2018, I set a reminder at the time `2019-12-23T12:00:00-02:00[America/Sao_Paulo]` (which is a daylight saving time; Brazil is in the southern hemisphere, so it enters DST in October and exits in February). But before that time comes, in early 2019, Brazil decides to stop observing DST, so the real offset becomes `-03:00`. Should the reminder now still fire at noon (respect time zone identifier), or should it fire at 11:00 AM (respect offset)?
 
 When constructing a `ZonedDateTime` from an ISO 8601 string or when updating it using the {{jsxref("Temporal/ZonedDateTime/with", "with()")}} method, the behavior for offset ambiguity is configurable via the `offset` option:
 
 - `use`
-  - : Use the offset whenever it's provided, ignoring the time zone identifier. This keeps the same exact time as originally calculated when we stored the time.
+  - : Use the offset to calculate the exact time. This keeps the same exact time as originally calculated when we stored the time. The time zone identifier is still used to then infer the correct offset and convert the exact time to local time.
 - `ignore`
-  - : Use the time zone identifier whenever it's provided, ignoring the offset. This keeps the same local time as originally calculated when we stored the time. Note that this causes the same local time interpretation ambiguity as demonstrated above, which is resolved using the `disambiguation` option.
+  - : Use the time zone identifier to re-calculate the offset, ignoring what's specified. This keeps the same local time as originally calculated when we stored the time. Note that this causes the same local time interpretation ambiguity as demonstrated above, which is resolved using the `disambiguation` option.
 - `reject`
   - : Throw a `RangeError` whenever there is a conflict between the offset and the time zone identifier. This is the default for {{jsxref("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}}.
 - `prefer`
-  - : Use the offset if it's valid, otherwise calculate the offset from the time zone identifier. This is the default for {{jsxref("Temporal/ZonedDateTime/with", "Temporal.ZonedDateTime.prototype.with()")}} (see the method for more details).
+  - : Use the offset if it's valid, otherwise calculate the offset from the time zone identifier. This is the default for {{jsxref("Temporal/ZonedDateTime/with", "Temporal.ZonedDateTime.prototype.with()")}} (see the method for more details). This is different from `ignore` because in the case of local time ambiguity, the offset is used to resolve it rather than the `disambiguation` option.
+
+Note that the `Z` offset does not mean `+00:00`; it is always considered valid regardless of the time zone. The time is interpreted as a UTC time, and the time zone identifier is then used to convert it to local time.
 
 > [!NOTE]
 > Although {{jsxref("Temporal/Instant/from", "Temporal.Instant.from()")}} also takes an ISO 8601 string in the same form, there is no ambiguity because it always ignores the time zone identifier and reads the offset only.
@@ -197,7 +217,7 @@ These properties are defined on `Temporal.ZonedDateTime.prototype` and shared by
 - {{jsxref("Temporal/ZonedDateTime/nanosecond", "Temporal.ZonedDateTime.prototype.nanosecond")}}
   - : Returns a integer from 0 to 999 representing the nanosecond (10<sup>-9</sup> second) component of this time.
 - {{jsxref("Temporal/ZonedDateTime/offset", "Temporal.ZonedDateTime.prototype.offset")}}
-  - : Returns a string representing the [offset](#time_zones_and_offsets) used to interpret the internal instant, in the form `±HH:MM` (or `±HH:MM:SS.sssssssss` with as much subminute precision as necessary).
+  - : Returns a string representing the [offset](#time_zones_and_offsets) used to interpret the internal instant, in the form `±HH:mm` (or `±HH:mm:ss.sssssssss` with as much subminute precision as necessary).
 - {{jsxref("Temporal/ZonedDateTime/offsetNanoseconds", "Temporal.ZonedDateTime.prototype.offsetNanoseconds")}}
   - : Returns an integer representing the [offset](#time_zones_and_offsets) used to interpret the internal instant, as a number of nanoseconds (positive or negative).
 - {{jsxref("Temporal/ZonedDateTime/second", "Temporal.ZonedDateTime.prototype.second")}}
@@ -216,45 +236,45 @@ These properties are defined on `Temporal.ZonedDateTime.prototype` and shared by
 ## Instance methods
 
 - {{jsxref("Temporal/ZonedDateTime/add", "Temporal.ZonedDateTime.prototype.add()")}}
-  - : TODO
+  - : Returns a new `Temporal.ZonedDateTime` object representing this date-time moved forward by a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}).
 - {{jsxref("Temporal/ZonedDateTime/equals", "Temporal.ZonedDateTime.prototype.equals()")}}
-  - : TODO
+  - : Returns `true` if this date-time is equivalent in value to another date-time (in a form convertible by {{jsxref("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}}), and `false` otherwise. They are compared both by their instant values, time zones, and their calendars, so two date-times from different calendars or time zones may be considered equal by {{jsxref("Temporal/ZonedDateTime/compare", "Temporal.ZonedDateTime.compare()")}} but not by `equals()`.
 - {{jsxref("Temporal/ZonedDateTime/getTimeZoneTransition", "Temporal.ZonedDateTime.prototype.getTimeZoneTransition()")}}
-  - : Returns a {{jsxref("Temporal.ZonedDateTime")}} object representing the first instant after or before this instant at which the time zone's UTC offset changes, or `null` if there is no such transition. This is useful for finding out the offset rules of a time zone, such as its daylight saving time pattern.
+  - : Returns a `Temporal.ZonedDateTime` object representing the first instant after or before this instant at which the time zone's UTC offset changes, or `null` if there is no such transition. This is useful for finding out the offset rules of a time zone, such as its daylight saving time pattern.
 - {{jsxref("Temporal/ZonedDateTime/round", "Temporal.ZonedDateTime.prototype.round()")}}
-  - : TODO
+  - : Returns a new `Temporal.ZonedDateTime` object representing this date-time rounded to the given unit.
 - {{jsxref("Temporal/ZonedDateTime/since", "Temporal.ZonedDateTime.prototype.since()")}}
-  - : TODO
+  - : Returns a new {{jsxref("Temporal.Duration")}} object representing the duration from another date-time (in a form convertible by {{jsxref("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}}) to this date-time. The duration is positive if the other date-time is before this date-time, and negative if after.
 - {{jsxref("Temporal/ZonedDateTime/startOfDay", "Temporal.ZonedDateTime.prototype.startOfDay()")}}
-  - : Returns a {{jsxref("Temporal.ZonedDateTime")}} object representing the first instant of this date in the time zone. It usually has a time of `00:00:00`, but may be different if the midnight doesn't exist due to offset changes, in which case the first time that exists is returned.
+  - : Returns a `Temporal.ZonedDateTime` object representing the first instant of this date in the time zone. It usually has a time of `00:00:00`, but may be different if the midnight doesn't exist due to offset changes, in which case the first time that exists is returned.
 - {{jsxref("Temporal/ZonedDateTime/subtract", "Temporal.ZonedDateTime.prototype.subtract()")}}
-  - : TODO
+  - : Returns a new `Temporal.ZonedDateTime` object representing this date-time moved backward by a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}).
 - {{jsxref("Temporal/ZonedDateTime/toInstant", "Temporal.ZonedDateTime.prototype.toInstant()")}}
-  - : TODO
+  - : Returns a new {{jsxref("Temporal.Instant")}} object representing the instant of this date-time.
 - {{jsxref("Temporal/ZonedDateTime/toJSON", "Temporal.ZonedDateTime.prototype.toJSON()")}}
-  - : TODO
+  - : Returns a string representing this date-time in the same [ISO 8601 format](#iso_8601_format) as calling {{jsxref("Temporal/ZonedDateTime/toString", "toString()")}}.
 - {{jsxref("Temporal/ZonedDateTime/toLocaleString", "Temporal.ZonedDateTime.prototype.toLocaleString()")}}
-  - : TODO
+  - : Returns a string with a language-sensitive representation of this date-time.
 - {{jsxref("Temporal/ZonedDateTime/toPlainDate", "Temporal.ZonedDateTime.prototype.toPlainDate()")}}
-  - : TODO
+  - : Returns a new {{jsxref("Temporal.PlainDate")}} object representing the date portion of this date-time.
 - {{jsxref("Temporal/ZonedDateTime/toPlainDateTime", "Temporal.ZonedDateTime.prototype.toPlainDateTime()")}}
-  - : TODO
+  - : Returns a new {{jsxref("Temporal.PlainDateTime")}} object representing the date and time portions of this date-time. Only the time zone information is removed.
 - {{jsxref("Temporal/ZonedDateTime/toPlainTime", "Temporal.ZonedDateTime.prototype.toPlainTime()")}}
-  - : TODO
+  - : Returns a new {{jsxref("Temporal.PlainTime")}} object representing the time portion of this date-time.
 - {{jsxref("Temporal/ZonedDateTime/toString", "Temporal.ZonedDateTime.prototype.toString()")}}
-  - : TODO
+  - : Returns a string representing this date-time in the [ISO 8601 format](#iso_8601_format).
 - {{jsxref("Temporal/ZonedDateTime/until", "Temporal.ZonedDateTime.prototype.until()")}}
-  - : TODO
+  - : Returns a new {{jsxref("Temporal.Duration")}} object representing the duration from this date-time to another date-time (in a form convertible by {{jsxref("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}}). The duration is positive if the other date-time is after this date-time, and negative if before.
 - {{jsxref("Temporal/ZonedDateTime/valueOf", "Temporal.ZonedDateTime.prototype.valueOf()")}}
   - : Throws a {{jsxref("TypeError")}}, which prevents `Temporal.ZonedDateTime` instances from being [implicitly converted to primitives](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion) when used in arithmetic or comparison operations.
 - {{jsxref("Temporal/ZonedDateTime/with", "Temporal.ZonedDateTime.prototype.with()")}}
-  - : TODO
+  - : Returns a new `Temporal.ZonedDateTime` object representing this date-time with some fields replaced by new values.
 - {{jsxref("Temporal/ZonedDateTime/withCalendar", "Temporal.ZonedDateTime.prototype.withCalendar()")}}
-  - : TODO
+  - : Returns a new `Temporal.ZonedDateTime` object representing this date-time interpreted in the new calendar system.
 - {{jsxref("Temporal/ZonedDateTime/withPlainTime", "Temporal.ZonedDateTime.prototype.withPlainTime()")}}
-  - : TODO
+  - : Returns a new `Temporal.ZonedDateTime` object representing this date-time with the time part entirely replaced by the new time (in a form convertible by {{jsxref("Temporal/PlainTime/from", "Temporal.PlainTime.from()")}})
 - {{jsxref("Temporal/ZonedDateTime/withTimeZone", "Temporal.ZonedDateTime.prototype.withTimeZone()")}}
-  - : TODO
+  - : Returns a new `Temporal.ZonedDateTime` object representing the same instant as this date-time but in the new time zone.
 
 ## Specifications
 

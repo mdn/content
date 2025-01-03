@@ -7,7 +7,9 @@ browser-compat: javascript.builtins.Temporal.ZonedDateTime.withCalendar
 
 {{JSRef}}
 
-The **`withCalendar()`** method of {{jsxref("Temporal.ZonedDateTime")}} instances TODO
+The **`withCalendar()`** method of {{jsxref("Temporal.ZonedDateTime")}} instances returns a new `Temporal.ZonedDateTime` object representing this date-time interpreted in the new calendar system. Because all `Temporal` objects are designed to be immutable, this method essentially functions as the setter for the date-time's {{jsxref("Temporal/ZonedDateTime/calendarId", "calendarId")}} property.
+
+To replace the date-time component properties, use the {{jsxref("Temporal/ZonedDateTime/with", "with()")}} method. To replace its time zone, use the {{jsxref("Temporal/ZonedDateTime/withTimeZone", "withTimeZone()")}} method.
 
 ## Syntax
 
@@ -18,23 +20,29 @@ withCalendar(calendar)
 ### Parameters
 
 - `calendar`
-  - : TODO
+  - : A string that corresponds to the {{jsxref("Temporal/ZonedDateTime/calendarId", "calendarId")}} property.
 
 ### Return value
 
-TODO
+A new `Temporal.ZonedDateTime` object, representing the date-time specified by the original `ZonedDateTime`, interpreted in the new calendar system.
 
 ### Exceptions
 
-TODO
-
-## Description
-
-TODO
+- {{jsxref("TypeError")}}
+  - : Thrown if `calendar` is not a string.
+- {{jsxref("RangeError")}}
+  - : Thrown if `calendar` is not a valid calendar identifier.
 
 ## Examples
 
-TODO
+### Using withCalendar()
+
+```js
+const dt = Temporal.ZonedDateTime.from("2021-07-01T12:34:56[America/New_York]");
+const newDT = dt.withCalendar("islamic");
+console.log(newDT.toLocaleString("en-US", { calendar: "islamic" }));
+// 11/21/1442 AH, 12:34:56 PM EDT
+```
 
 ## Specifications
 
@@ -46,4 +54,9 @@ TODO
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal.ZonedDateTime")}}
+- {{jsxref("Temporal/ZonedDateTime/with", "Temporal.ZonedDateTime.prototype.with()")}}
+- {{jsxref("Temporal/ZonedDateTime/withTimeZone", "Temporal.ZonedDateTime.prototype.withTimeZone()")}}
+- {{jsxref("Temporal/ZonedDateTime/withPlainTime", "Temporal.ZonedDateTime.prototype.withPlainTime()")}}
+- {{jsxref("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}}
+- {{jsxref("Temporal/ZonedDateTime/calendarId", "Temporal.ZonedDateTime.prototype.calendarId")}}

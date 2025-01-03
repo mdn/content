@@ -20,7 +20,7 @@ You can convert from `Date` to `Temporal.Instant` using the {{jsxref("Date.proto
 `Instant` objects can be serialized and parsed using the [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601) (with some extensions specified by ECMAScript). The string has the following form (spaces are only for readability and should not be present in the actual string):
 
 ```plain
-YYYY-MM-DD T HH:MM:SS.sssssssss Z/±HH:MM:SS.sssssssss
+YYYY-MM-DD T HH:mm:ss.sssssssss Z/±HH:mm:ss.sssssssss
 ```
 
 - `YYYY`
@@ -33,12 +33,12 @@ YYYY-MM-DD T HH:MM:SS.sssssssss Z/±HH:MM:SS.sssssssss
   - : The date-time separator, which can be `T`, `t`, or a space.
 - `HH`
   - : A two-digit number from `00` to `23`.
-- `MM` {{optional_inline}}
+- `mm` {{optional_inline}}
   - : A two-digit number from `00` to `59`. Defaults to `00`.
-- `SS.sssssssss` {{optional_inline}}
-  - : A two-digit number from `00` to `59`. May optionally be followed by a `.` or `,` and one to nine digits. Defaults to `00`. The `HH`, `MM`, and `SS` components can be separated by `:` or nothing. You can omit either just `SS` or both `SS` and `MM`, so the time can be one of three forms: `HH`, `HH:MM`, or `HH:MM:SS.sssssssss`.
-- `Z/±HH:MM:SS.sssssssss`
-  - : Either the UTC designator `Z` or `z`, or an offset from UTC in the form `+` or `-` followed by the same format as the time component. Note that subminute precision may be unsupported by other systems.
+- `ss.sssssssss` {{optional_inline}}
+  - : A two-digit number from `00` to `59`. May optionally be followed by a `.` or `,` and one to nine digits. Defaults to `00`. The `HH`, `mm`, and `ss` components can be separated by `:` or nothing. You can omit either just `ss` or both `ss` and `mm`, so the time can be one of three forms: `HH`, `HH:mm`, or `HH:mm:ss.sssssssss`.
+- `Z/±HH:mm:ss.sssssssss`
+  - : Either the UTC designator `Z` or `z`, or an offset from UTC in the form `+` or `-` followed by the same format as the time component. Note that subminute precision may be unsupported by other systems. If an offset is provided, the time is interpreted in the specified offset.
 
 As an input, you may optionally include the time zone identifier and calendar, in the same format as [`ZonedDateTime`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#iso_8601_format), but they will be ignored. Other annotations in the `[key=value]` format are also ignored, and they must not have the critical flag.
 

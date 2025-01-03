@@ -29,41 +29,46 @@ new Temporal.PlainDateTime(year, month, day, hour, minute, second, millisecond, 
 ### Parameters
 
 - `year`
-  - : TODO
+  - : A number, truncated to an integer, representing the year in the ISO calendar system.
 - `month`
-  - : TODO
+  - : A number, truncated to an integer, representing the month in the ISO calendar system.
 - `day`
-  - : TODO
+  - : A number, truncated to an integer, representing the day of the month in the ISO calendar system.
 - `hour` {{optional_inline}}
-  - : TODO
+  - : A number, truncated to an integer, representing the hour component.
 - `minute` {{optional_inline}}
-  - : TODO
+  - : A number, truncated to an integer, representing the minute component.
 - `second` {{optional_inline}}
-  - : TODO
+  - : A number, truncated to an integer, representing the second component.
 - `millisecond` {{optional_inline}}
-  - : TODO
+  - : A number, truncated to an integer, representing the millisecond component.
 - `microsecond` {{optional_inline}}
-  - : TODO
+  - : A number, truncated to an integer, representing the microsecond component.
 - `nanosecond` {{optional_inline}}
-  - : TODO
+  - : A number, truncated to an integer, representing the nanosecond component.
 - `calendar` {{optional_inline}}
-  - : TODO
+  - : A string representing the [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars) to use. Note that irrespective of the `calendar`, the `year`, `month`, and `day` must be in the ISO 8601 calendar system. Defaults to `"iso8601"`.
 
 ### Return value
 
-TODO
+A new `Temporal.PlainDateTime` object, representing the date-time specified by the parameters.
 
 ### Exceptions
 
-TODO
-
-## Description
-
-TODO
+- {{jsxref("RangeError")}}
+  - : Thrown if any of the components is not a finite number, or they don't represent a valid date-time.
 
 ## Examples
 
-TODO
+### Using Temporal.PlainDateTime()
+
+```js
+const dt = new Temporal.PlainDateTime(2021, 7, 1);
+console.log(dt.toString()); // 2021-07-01T00:00:00
+
+const dt2 = new Temporal.PlainDateTime(2021, 7, 1, 0, 0, 0, 0, 0, 0, "hebrew");
+console.log(dt2.toString()); // 2021-07-01T00:00:00[u-ca=hebrew]
+```
 
 ## Specifications
 
@@ -75,4 +80,5 @@ TODO
 
 ## See also
 
-- TODO
+- {{jsxref("Temporal.PlainDateTime")}}
+- {{jsxref("Temporal/PlainDateTime/from", "Temporal.PlainDateTime.from()")}}

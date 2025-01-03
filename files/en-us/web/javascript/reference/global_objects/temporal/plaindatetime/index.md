@@ -13,12 +13,14 @@ The **`Temporal.PlainDateTime`** object represents a date (calendar date) and ti
 
 A `PlainDateTime` is essentially the combination of a {{jsxref("Temporal.PlainDate")}} and a {{jsxref("Temporal.PlainTime")}}. Because the date and time information don't have much interaction, all general information about date properties is documented in the `PlainDate` object, and all general information about time properties is documented in the `PlainTime` object.
 
+If the date-time represents a specific instant that should remain invariant across time zones, you should use the {{jsxref("Temporal.ZonedDateTime")}} object instead. Use `PlainDateTime` when you need to represent an event happening at a specific wall-clock time that may be a different instant in different time zones.
+
 ### ISO 8601 format
 
 `PlainDateTime` objects can be serialized and parsed using the [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601) (with some extensions specified by ECMAScript). The string has the following form (spaces are only for readability and should not be present in the actual string):
 
 ```plain
-YYYY-MM-DD T HH:MM:SS.sssssssss [u-ca=calendar_id]
+YYYY-MM-DD T HH:mm:ss.sssssssss [u-ca=calendar_id]
 ```
 
 - `YYYY`
@@ -31,10 +33,10 @@ YYYY-MM-DD T HH:MM:SS.sssssssss [u-ca=calendar_id]
   - : The date-time separator, which can be `T`, `t`, or a space. Present if and only if `HH` is present.
 - `HH` {{optional_inline}}
   - : A two-digit number from `00` to `23`. Defaults to `00`.
-- `MM` {{optional_inline}}
+- `mm` {{optional_inline}}
   - : A two-digit number from `00` to `59`. Defaults to `00`.
-- `SS.sssssssss` {{optional_inline}}
-  - : A two-digit number from `00` to `59`. May optionally be followed by a `.` or `,` and one to nine digits. Defaults to `00`. The `HH`, `MM`, and `SS` components can be separated by `:` or nothing. You can omit either just `SS` or both `SS` and `MM`, so the time can be one of three forms: `HH`, `HH:MM`, or `HH:MM:SS.sssssssss`.
+- `ss.sssssssss` {{optional_inline}}
+  - : A two-digit number from `00` to `59`. May optionally be followed by a `.` or `,` and one to nine digits. Defaults to `00`. The `HH`, `mm`, and `ss` components can be separated by `:` or nothing. You can omit either just `ss` or both `ss` and `mm`, so the time can be one of three forms: `HH`, `HH:mm`, or `HH:mm:ss.sssssssss`.
 - `[u-ca=calendar_id]` {{optional_inline}}
   - : Replace `calendar_id` with the calendar to use. May have a _critical flag_ by prefixing the key with `!`: e.g., `[!u-ca=iso8601]`. This flag generally tells other systems that it cannot be ignored if they don't support it. The `Temporal` parser will throw an error if the annotations contain two or more calendar annotations and one of them is critical. Defaults to `[u-ca=iso8601]`. Note that the `YYYY-MM-DD` is always interpreted in ISO and then converted to the specified calendar.
 
