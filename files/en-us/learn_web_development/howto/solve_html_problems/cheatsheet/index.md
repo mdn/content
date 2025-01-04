@@ -29,8 +29,7 @@ An "element" is a single part of a webpage. Some elements are large and hold sma
       <td>A link</td>
       <td>{{HTMLElement("a")}}</td>
       <td id="a-example">
-        <pre class="brush: html">
-&#x3C;a href="https://example.org">
+        <pre class="brush: html">&#x3C;a href="https://example.org">
 A link to example.org&#x3C;/a>.</pre
         >
         {{EmbedLiveSample("a-example", 100, 60)}}
@@ -48,8 +47,7 @@ A link to example.org&#x3C;/a>.</pre
       <td>An inline container</td>
       <td>{{HTMLElement("span")}}</td>
       <td id="span-example">
-        <pre class="brush: html">
-Used to group elements: for example,
+        <pre class="brush: html">Used to group elements: for example,
 to &#x3C;span style="color:blue">style
 them&#x3C;/span>.</pre
         >
@@ -68,8 +66,7 @@ them&#x3C;/span>.</pre
       <td>Italic text</td>
       <td>{{HTMLElement("i")}}</td>
       <td id="i-example">
-        <pre class="brush: html">
-Mark a phrase in &#x3C;i>italics&#x3C;/i>.</pre
+        <pre class="brush: html">Mark a phrase in &#x3C;i>italics&#x3C;/i>.</pre
         >
         {{EmbedLiveSample("i-example", 100, 60)}}
       </td>
@@ -118,8 +115,7 @@ Mark a phrase in &#x3C;i>italics&#x3C;/i>.</pre
       <td>Small text</td>
       <td>{{HTMLElement("small")}}</td>
       <td id="small-example">
-        <pre class="brush: html">
-Used to represent the &#x3C;small>small
+        <pre class="brush: html">Used to represent the &#x3C;small>small
 print &#x3C;/small>of a document.</pre
         >
         {{EmbedLiveSample("small-example", 100, 60)}}
@@ -129,8 +125,7 @@ print &#x3C;/small>of a document.</pre
       <td>Address</td>
       <td>{{HTMLElement("address")}}</td>
       <td id="address-example">
-        <pre class="brush: html">
-&#x3C;address>Main street 67&#x3C;/address></pre
+        <pre class="brush: html">&#x3C;address>Main street 67&#x3C;/address></pre
         >
         {{EmbedLiveSample("address-example", 100, 60)}}
       </td>
@@ -139,8 +134,7 @@ print &#x3C;/small>of a document.</pre
       <td>Textual citation</td>
       <td>{{HTMLElement("cite")}}</td>
       <td id="cite-example">
-        <pre class="brush: html">
-For more monsters,
+        <pre class="brush: html">For more monsters,
 see &#x3C;cite>The Monster Book of Monsters&#x3C;/cite>.</pre
         >
         {{EmbedLiveSample("cite-example", 100, 60)}}
@@ -174,8 +168,7 @@ see &#x3C;cite>The Monster Book of Monsters&#x3C;/cite>.</pre
       <td>A possible line break</td>
       <td>{{HTMLElement("wbr")}}</td>
       <td id="wbr-example">
-        <pre class="brush: html">
-&#x3C;div style="width: 200px">
+        <pre class="brush: html">&#x3C;div style="width: 200px">
   Llanfair&#x3C;wbr>pwllgwyngyll&#x3C;wbr>gogerychwyrndrobwllllantysiliogogogoch.
 &#x3C;/div></pre
         >
@@ -186,8 +179,7 @@ see &#x3C;cite>The Monster Book of Monsters&#x3C;/cite>.</pre
       <td>Date</td>
       <td>{{HTMLElement("time")}}</td>
       <td id="time-example">
-        <pre class="brush: html">
-Used to format the date. For example:
+        <pre class="brush: html">Used to format the date. For example:
 &#x3C;time datetime="2020-05-24">
 published on 23-05-2020&#x3C;/time>.</pre
         >
@@ -198,8 +190,7 @@ published on 23-05-2020&#x3C;/time>.</pre
       <td>Code format</td>
       <td>{{HTMLElement("code")}}</td>
       <td id="code-example">
-        <pre class="brush: html">
-This text is in normal format,
+        <pre class="brush: html">This text is in normal format,
 but &#x3C;code>this text is in code
 format&#x3C;/code>.</pre
         >
@@ -210,8 +201,7 @@ format&#x3C;/code>.</pre
       <td>Audio</td>
       <td>{{HTMLElement("audio")}}</td>
       <td id="audio-example">
-        <pre class="brush: html">
-&#x3C;audio controls>
+        <pre class="brush: html">&#x3C;audio controls>
   &#x3C;source src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3" type="audio/mpeg">
 &#x3C;/audio>
         </pre>
@@ -222,8 +212,7 @@ format&#x3C;/code>.</pre
       <td>Video</td>
       <td>{{HTMLElement("video")}}</td>
       <td id="video-example">
-        <pre class="brush: html">
-&#x3C;video controls width="250"
+        <pre class="brush: html">&#x3C;video controls width="250"
   src="https://archive.org/download/ElephantsDream/ed_hd.ogv" >
   &#x3C;a href="https://archive.org/download/ElephantsDream/ed_hd.ogv">Download OGV video&#x3C;/a>
 &#x3C;/video></pre
@@ -254,8 +243,7 @@ format&#x3C;/code>.</pre
       <td>A simple paragraph</td>
       <td>{{HTMLElement("p")}}</td>
       <td id="p-example">
-        <pre class="brush: html">
-&#x3C;p>I'm a paragraph&#x3C;/p>
+        <pre class="brush: html">&#x3C;p>I'm a paragraph&#x3C;/p>
 &#x3C;p>I'm another paragraph&#x3C;/p></pre
         >
         {{EmbedLiveSample("p-example", 100, 150)}}
@@ -265,8 +253,7 @@ format&#x3C;/code>.</pre
       <td>An extended quotation</td>
       <td>{{HTMLElement("blockquote")}}</td>
       <td id="blockquote-example">
-        <pre class="brush: html">
-They said:
+        <pre class="brush: html">They said:
 &#x3C;blockquote>The blockquote element indicates
 an extended quotation.&#x3C;/blockquote></pre
         >
@@ -277,8 +264,7 @@ an extended quotation.&#x3C;/blockquote></pre
       <td>Additional information</td>
       <td>{{HTMLElement("details")}}</td>
       <td id="details-example">
-        <pre class="brush: html">
-&#x3C;details>
+        <pre class="brush: html">&#x3C;details>
   &#x3C;summary>HTML Cheat Sheet&#x3C;/summary>
   &#x3C;p>Inline elements&#x3C;/p>
   &#x3C;p>Block elements&#x3C;/p>
@@ -336,8 +322,7 @@ an extended quotation.&#x3C;/blockquote></pre
         {{HTMLElement("Heading_Elements", "&lt;h1&gt;-&lt;h6&gt;")}}
       </td>
       <td id="h1-h6-example">
-        <pre class="brush: html">
-&#x3C;h1> This is Heading 1 &#x3C;/h1>
+        <pre class="brush: html">&#x3C;h1> This is Heading 1 &#x3C;/h1>
 &#x3C;h2> This is Heading 2 &#x3C;/h2>
 &#x3C;h3> This is Heading 3 &#x3C;/h3>
 &#x3C;h4> This is Heading 4 &#x3C;/h4>

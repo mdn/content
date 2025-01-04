@@ -24,8 +24,7 @@ browser-compat: webextensions.manifest.commands
     <tr>
       <th scope="row">Example</th>
       <td>
-        <pre class="brush: json">
-"commands": {
+        <pre class="brush: json">"commands": {
   "toggle-feature": {
     "suggested_key": {
       "default": "Ctrl+Shift+Y",

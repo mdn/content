@@ -24,8 +24,7 @@ browser-compat: webextensions.manifest.omnibox
     <tr>
       <th scope="row">Example</th>
       <td>
-        <pre class="brush: json">
-"omnibox": {
+        <pre class="brush: json">"omnibox": {
   "keyword": "mdn"
 }</pre
         >

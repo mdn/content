@@ -24,8 +24,7 @@ browser-compat: webextensions.manifest.page_action
     <tr>
       <th scope="row">Example</th>
       <td>
-        <pre class="brush: json">
-"page_action": {
+        <pre class="brush: json">"page_action": {
   "default_icon": {
     "19": "button/geo-19.png",
     "38": "button/geo-38.png"
@@ -107,8 +106,7 @@ The `page_action` key is an object that may have any of three properties, all op
           38×38 pixels), and specify them in an object with properties named
           <code>"19"</code> and <code>"38"</code>, like this:
         </p>
-        <pre class="brush: json">
-    "default_icon": {
+        <pre class="brush: json">    "default_icon": {
       "19": "geo-19.png",
       "38": "geo-38.png"
     }</pre
@@ -219,8 +217,7 @@ The `page_action` key is an object that may have any of three properties, all op
           will override the patterns in <code>show_matches</code>.
         </p>
         <p>For example, consider a value like:</p>
-        <pre class="brush: json">
-"page_action": {
+        <pre class="brush: json">"page_action": {
   "show_matches": ["https://*.mozilla.org/*"],
   "hide_matches": ["https://developer.mozilla.org/*"]
 }</pre

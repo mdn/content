@@ -24,8 +24,7 @@ browser-compat: webextensions.manifest.homepage_url
     <tr>
       <th scope="row">Example</th>
       <td>
-        <pre class="brush: json">
-"homepage_url": "https://example.org/my-addon"</pre
+        <pre class="brush: json">"homepage_url": "https://example.org/my-addon"</pre
         >
       </td>
     </tr>

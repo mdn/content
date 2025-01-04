@@ -24,8 +24,7 @@ browser-compat: webextensions.manifest.theme
     <tr>
       <th scope="row">Example</th>
       <td>
-        <pre class="brush: json">
-"theme": {
+        <pre class="brush: json">"theme": {
   "images": {
     "theme_frame": "images/sun.jpg"
   },
@@ -243,8 +242,7 @@ All these properties can be specified as either a string containing any valid [C
         </div>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "colors": {
     "frame": "black",
     "tab_background_text": "white",
@@ -269,8 +267,7 @@ All these properties can be specified as either a string containing any valid [C
         <p>The color of the background of the pressed toolbar buttons.</p>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "colors": {
      "frame": "black",
      "tab_background_text": "white",
@@ -288,8 +285,7 @@ All these properties can be specified as either a string containing any valid [C
         <p>The color of the background of the toolbar buttons on hover.</p>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "colors": {
      "frame": "black",
      "tab_background_text": "white",
@@ -315,8 +311,7 @@ All these properties can be specified as either a string containing any valid [C
         </div>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "colors": {
      "frame": "black",
      "tab_background_text": "white",
@@ -345,8 +340,7 @@ All these properties can be specified as either a string containing any valid [C
         </div>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "colors": {
      "frame": "black",
      "tab_background_text": "white",
@@ -368,8 +362,7 @@ All these properties can be specified as either a string containing any valid [C
         </p>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "colors": {
      "frame": "red",
      "tab_background_text": "white"
@@ -391,8 +384,7 @@ All these properties can be specified as either a string containing any valid [C
         </p>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "colors": {
      "frame": "red",
      "frame_inactive": "gray",
@@ -415,8 +407,7 @@ All these properties can be specified as either a string containing any valid [C
         <p>The new tab page background color.</p>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "colors": {
      "ntp_background": "red"
   }
@@ -432,8 +423,7 @@ All these properties can be specified as either a string containing any valid [C
         <p>The new tab page card background color.</p>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "colors": {
      "ntp_card_background": "red"
   }
@@ -455,8 +445,7 @@ All these properties can be specified as either a string containing any valid [C
         </div>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "colors": {
      "ntp_text": "red"
   }
@@ -475,8 +464,7 @@ All these properties can be specified as either a string containing any valid [C
         </p>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "colors": {
      "frame": "black",
      "tab_background_text": "white",
@@ -494,8 +482,7 @@ All these properties can be specified as either a string containing any valid [C
         <p>The border color of popups.</p>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "colors": {
      "frame": "black",
      "tab_background_text": "white",
@@ -525,8 +512,7 @@ All these properties can be specified as either a string containing any valid [C
         </div>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "colors": {
      "frame": "black",
      "tab_background_text": "white",
@@ -551,8 +537,7 @@ All these properties can be specified as either a string containing any valid [C
         </div>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "colors": {
      "frame": "black",
      "tab_background_text": "white",
@@ -577,8 +562,7 @@ All these properties can be specified as either a string containing any valid [C
         </div>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "colors": {
      "frame": "black",
      "tab_background_text": "white",
@@ -597,8 +581,7 @@ All these properties can be specified as either a string containing any valid [C
         <p>The background color of the sidebar.</p>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "colors": {
      "sidebar": "red",
      "sidebar_highlight": "white",
@@ -617,8 +600,7 @@ All these properties can be specified as either a string containing any valid [C
         <p>The border and splitter color of the browser sidebar</p>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "colors": {
      "sidebar_border": "red"
   }
@@ -634,8 +616,7 @@ All these properties can be specified as either a string containing any valid [C
         <p>The background color of highlighted rows in built-in sidebars</p>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "colors": {
      "sidebar_highlight": "red",
      "sidebar_highlight_text": "white"
@@ -658,8 +639,7 @@ All these properties can be specified as either a string containing any valid [C
         </div>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "colors": {
     "sidebar_highlight": "pink",
     "sidebar_highlight_text": "red",
@@ -682,8 +662,7 @@ All these properties can be specified as either a string containing any valid [C
         </div>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "colors": {
      "sidebar": "red",
      "sidebar_highlight": "white",
@@ -710,8 +689,7 @@ All these properties can be specified as either a string containing any valid [C
         <p>The color of the vertical separator of the background tabs.</p>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "colors": {
      "frame": "black",
      "tab_background_text": "white",
@@ -745,8 +723,7 @@ All these properties can be specified as either a string containing any valid [C
         </div>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "colors": {
     "frame": "black",
     "toolbar": "white",
@@ -764,8 +741,7 @@ All these properties can be specified as either a string containing any valid [C
         <p>The color of the selected tab line.</p>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "colors": {
      "frame": "black",
      "tab_background_text": "white",
@@ -783,8 +759,7 @@ All these properties can be specified as either a string containing any valid [C
         <p>The color of the tab loading indicator and the tab loading burst.</p>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "colors": {
      "frame": "black",
      "tab_background_text": "white",
@@ -806,8 +781,7 @@ All these properties can be specified as either a string containing any valid [C
         </p>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "images": {
   "theme_frame": "weta.png"
 },
@@ -839,8 +813,7 @@ All these properties can be specified as either a string containing any valid [C
         </div>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "images": {
   "theme_frame": "weta.png"
 },
@@ -866,8 +839,7 @@ All these properties can be specified as either a string containing any valid [C
         <p>This also sets the background color of the "Find" bar.</p>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "colors": {
     "frame": "black",
     "toolbar": "red",
@@ -888,8 +860,7 @@ All these properties can be specified as either a string containing any valid [C
         </p>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "colors": {
     "frame": "black",
     "tab_background_text": "white",
@@ -913,8 +884,7 @@ All these properties can be specified as either a string containing any valid [C
         </p>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "colors": {
     "frame": "black",
     "tab_background_text": "white",
@@ -936,8 +906,7 @@ All these properties can be specified as either a string containing any valid [C
         </p>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "colors": {
     "frame": "black",
     "toolbar": "black",
@@ -958,8 +927,7 @@ All these properties can be specified as either a string containing any valid [C
         <p>The focused border color for fields in the toolbar.</p>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "colors": {
     "frame": "black",
     "toolbar": "black",
@@ -983,8 +951,7 @@ All these properties can be specified as either a string containing any valid [C
         </p>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "colors": {
     "frame": "black",
     "toolbar": "black",
@@ -1006,8 +973,7 @@ All these properties can be specified as either a string containing any valid [C
         the URL bar (and the search bar, if it's configured to be separate).
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "colors": {
     "toolbar_field": "rgb(255 255 255 / 91%)",
     "toolbar_field_text": "rgb(0 100 0)",
@@ -1045,8 +1011,7 @@ All these properties can be specified as either a string containing any valid [C
         </div>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "colors": {
     "toolbar_field": "rgb(255 255 255 / 91%)",
     "toolbar_field_text": "rgb(0 100 0)",
@@ -1084,8 +1049,7 @@ All these properties can be specified as either a string containing any valid [C
         </p>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "colors": {
     "frame": "black",
     "toolbar": "black",
@@ -1119,8 +1083,7 @@ All these properties can be specified as either a string containing any valid [C
         </div>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "colors": {
     "frame": "black",
     "toolbar": "black",
@@ -1149,8 +1112,7 @@ All these properties can be specified as either a string containing any valid [C
         </div>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "colors": {
     "frame": "black",
     "toolbar": "black",
@@ -1180,8 +1142,7 @@ All these properties can be specified as either a string containing any valid [C
         </div>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "colors": {
     "frame": "black",
     "tab_background_text": "white",
@@ -1203,8 +1164,7 @@ All these properties can be specified as either a string containing any valid [C
         </p>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "colors": {
     "frame": "black",
     "tab_background_text": "white",
@@ -1226,8 +1186,7 @@ All these properties can be specified as either a string containing any valid [C
         </p>
         <details open>
           <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
+          <pre class="brush: json">"theme": {
   "colors": {
     "frame": "black",
     "tab_background_text": "white",

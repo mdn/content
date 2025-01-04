@@ -51,8 +51,7 @@ Most styles are automatically applied, but some elements require you to add the 
         >
       </td>
       <td>
-        <pre class="brush: html">
-&#x3C;button class="browser-style">Click me&#x3C;/button></pre
+        <pre class="brush: html">&#x3C;button class="browser-style">Click me&#x3C;/button></pre
         >
       </td>
     </tr>
@@ -67,8 +66,7 @@ Most styles are automatically applied, but some elements require you to add the 
         </p>
       </td>
       <td>
-        <pre class="brush: html">
-&#x3C;select class="browser-style" name="select">
+        <pre class="brush: html">&#x3C;select class="browser-style" name="select">
   &#x3C;option value="value1">Value 1&#x3C;/option>
   &#x3C;option value="value2" selected>Value 2&#x3C;/option>
   &#x3C;option value="value3">Value 3&#x3C;/option>
@@ -85,8 +83,7 @@ Most styles are automatically applied, but some elements require you to add the 
         >
       </td>
       <td>
-        <pre class="brush: html">
-&#x3C;textarea class="browser-style">Write here&#x3C;/textarea></pre
+        <pre class="brush: html">&#x3C;textarea class="browser-style">Write here&#x3C;/textarea></pre
         >
       </td>
     </tr>
@@ -98,8 +95,7 @@ Most styles are automatically applied, but some elements require you to add the 
         >
       </td>
       <td>
-        <pre class="brush: html">
-&#x3C;div class="browser-style">
+        <pre class="brush: html">&#x3C;div class="browser-style">
   &#x3C;input type="radio" id="op1" name="choices" value="op1"/>
   &#x3C;label for="op1">Option 1&#x3C;/label>
 
@@ -144,8 +140,7 @@ The [legacy Firefox Style Guide](https://firefoxux.github.io/StyleGuide/#/naviga
     <tr>
       <td>Header</td>
       <td>
-        <pre class="brush: html">
-&#x3C;header class="panel-section panel-section-header">
+        <pre class="brush: html">&#x3C;header class="panel-section panel-section-header">
   &#x3C;div class="icon-section-header">&#x3C;img src="image.svg"/>&#x3C;/div>
   &#x3C;div class="text-section-header">Header&#x3C;/div>
 &#x3C;/header></pre
@@ -155,8 +150,7 @@ The [legacy Firefox Style Guide](https://firefoxux.github.io/StyleGuide/#/naviga
     <tr>
       <td>Footer</td>
       <td>
-        <pre class="brush: html">
-&#x3C;footer class="panel-section panel-section-footer">
+        <pre class="brush: html">&#x3C;footer class="panel-section panel-section-footer">
   &#x3C;button class="panel-section-footer-button">Cancel&#x3C;/button>
   &#x3C;div class="panel-section-footer-separator">&#x3C;/div>
   &#x3C;button class="panel-section-footer-button default">Confirm&#x3C;/button>
@@ -167,8 +161,7 @@ The [legacy Firefox Style Guide](https://firefoxux.github.io/StyleGuide/#/naviga
     <tr>
       <td>Tabs</td>
       <td>
-        <pre class="brush: html">
-&#x3C;div class="panel-section panel-section-tabs">
+        <pre class="brush: html">&#x3C;div class="panel-section panel-section-tabs">
   &#x3C;button class="panel-section-tabs-button selected">Tab&#x3C;/button>
   &#x3C;div class="panel-section-tabs-separator">&#x3C;/div>
   &#x3C;button class="panel-section-tabs-button">Tab&#x3C;/button>
@@ -181,8 +174,7 @@ The [legacy Firefox Style Guide](https://firefoxux.github.io/StyleGuide/#/naviga
     <tr>
       <td>Form</td>
       <td>
-        <pre class="brush: html">
-&#x3C;div class="panel-section panel-section-formElements">
+        <pre class="brush: html">&#x3C;div class="panel-section panel-section-formElements">
   &#x3C;div class="panel-formElements-item">
     &#x3C;label for="name01">Label:&#x3C;/label>
     &#x3C;input type="text" value="Name" id="name01" />
@@ -207,8 +199,7 @@ The [legacy Firefox Style Guide](https://firefoxux.github.io/StyleGuide/#/naviga
     <tr>
       <td>Menu</td>
       <td>
-        <pre class="brush: html">
-&#x3C;div class="panel-section panel-section-list">
+        <pre class="brush: html">&#x3C;div class="panel-section panel-section-list">
   &#x3C;div class="panel-list-item">
     &#x3C;div class="icon">&#x3C;/div>
     &#x3C;div class="text">List Item&#x3C;/div>

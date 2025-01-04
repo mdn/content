@@ -24,8 +24,7 @@ browser-compat: webextensions.manifest.storage
     <tr>
       <th scope="row">Example</th>
       <td>
-        <pre class="brush: json">
-"storage": {
+        <pre class="brush: json">"storage": {
   "managed_schema": "schema.json"
 }</pre
         >
