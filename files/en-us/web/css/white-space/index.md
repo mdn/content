@@ -30,7 +30,7 @@ white-space: pre-wrap;
 white-space: pre-line;
 white-space: break-spaces;
 
-/* white-space-collapse and text-wrap shorthand values */
+/* white-space-collapse and text-wrap-mode shorthand values */
 white-space: collapse balance;
 white-space: preserve nowrap;
 
@@ -44,7 +44,7 @@ white-space: unset;
 
 ### Values
 
-`white-space` property values can be specified as a single keyword chosen from the list of values below, or two values representing shorthand for the {{CSSxRef("white-space-collapse")}} and {{cssxref("text-wrap")}} properties.
+`white-space` property values can be specified as a single keyword chosen from the list of values below, or two values representing shorthand for the {{CSSxRef("white-space-collapse")}} and {{cssxref("text-wrap-mode")}} properties.
 
 - `normal`
   - : Sequences of white space are [collapsed](#collapsing_of_white_space). Newline characters in the source are handled the same as other white spaces. Lines are broken as necessary to fill line boxes.

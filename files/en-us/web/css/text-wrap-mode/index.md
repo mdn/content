@@ -7,7 +7,10 @@ browser-compat: css.properties.text-wrap-mode
 
 {{CSSRef}}
 
-The **`text-wrap-mode`** [CSS](/en-US/docs/Web/CSS) property controls whether the text inside an element is wrapped. The different values provide alternate ways of wrapping the content of a block element. It can also be set, and reset, using the {{CSSXRef("text-wrap")}} shorthand.
+The **`text-wrap-mode`** [CSS](/en-US/docs/Web/CSS) property controls whether the text inside an element is wrapped. The different values provide alternate ways of wrapping the content of a block element. It can also be set, and reset, using the {{CSSXRef("text-wrap")}} shorthand or the {{CSSXRef("text-wrap-mode")}} shorthand.
+
+> [!NOTE]
+> The {{CSSxRef("white-space-collapse")}} and `text-wrap-mode` properties can be declared together using the {{CSSxRef("white-space")}} shorthand property.
 
 > [!NOTE]
 > The name of this property is a placeholder, pending the CSSWG finding a better name.
@@ -47,9 +50,6 @@ This property specifies whether lines may wrap at unforced soft wrap opportuniti
 {{CSSSyntax}}
 
 ## Examples
-
-> [!NOTE]
-> Check the browser support for this property.
 
 ### Wrapping content
 
