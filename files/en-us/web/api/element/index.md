@@ -296,6 +296,8 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - {{domxref("Element/afterscriptexecute_event","afterscriptexecute")}} {{Non-standard_Inline}}
   - : Fired when a script has been executed.
+- {{domxref("Element/input_event","input")}}
+  - : Fires when an element's value is changed as a direct result of a user action.
 - {{domxref("Element/beforematch_event", "beforematch")}} {{Experimental_Inline}}
   - : Fires on an element that is in the [_hidden until found_](/en-US/docs/Web/HTML/Global_attributes/hidden) state, when the browser is about to reveal its content because the user has found the content through the "find in page" feature or through fragment navigation.
 - {{domxref("Element/beforescriptexecute_event","beforescriptexecute")}} {{Non-standard_Inline}}
