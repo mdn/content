@@ -29,7 +29,8 @@ white-space: pre-wrap;
 white-space: pre-line;
 
 /* white-space-collapse and text-wrap-mode shorthand values */
-white-space: collapse balance;
+white-space: wrap;
+white-space: collapse;
 white-space: preserve nowrap;
 
 /* Global values */
