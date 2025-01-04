@@ -49,7 +49,7 @@ The `@view-transition` at-rule is specified in the CSS for both your current and
 }
 ```
 
-In addition to the `@view-transition` at-rule, we define two {{cssxref("@keyframe")}} animations and use the {{cssxref("animation")}} shorthand property to apply those keyframe animations to the elements in the outbound ({{cssxref("::view-transition-old()")}}) and inbound ({{cssxref("::view-transition-new()")}}) pages that we want to animate.
+In addition to the `@view-transition` at-rule, we use the {{cssxref("@keyframes")}} at-rule to define two keyframe animations and use the {{cssxref("animation")}} shorthand property to apply those keyframe animations to the elements in the outbound ({{cssxref("::view-transition-old()")}}) and inbound ({{cssxref("::view-transition-new()")}}) pages that we want to animate.
 
 ```css
 /* Create a custom animation */
