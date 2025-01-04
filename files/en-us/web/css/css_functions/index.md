@@ -97,6 +97,8 @@ Each of the pages below contains detailed information about a math function's sy
 
 - {{CSSxRef("calc", "calc()")}}
   - : Performs basic arithmetic calculations on numerical values.
+- {{CSSxRef("calc-size", "calc-size()")}}
+  - : Perform calculations on intrinsic size values such as `auto`, `fit-content`, and `max-content` which not supported by the regular `calc()` function.
 
 ### Comparison functions
 
@@ -277,7 +279,7 @@ The following functions are used as a value of properties to reference a value d
   - : Uses the attributes defined on HTML element.
 - {{CSSxRef("env", "env()")}}
   - : Uses the user-agent defined as environment variable.
-- {{cssxref("url_value", "&lt;url&gt;")}}
+- {{cssxref("url_function", "url()")}}
   - : Uses a file from the specified URL.
 - {{CSSxRef("var", "var()")}}
   - : Uses the custom property value instead of any part of a value of another property.
@@ -312,7 +314,7 @@ CSS font functions are used with the {{CSSxRef("font-variant-alternates")}} prop
 
 ## Easing functions
 
-The following functions are used as a value in transition and animation properties:
+The {{CSSxRef("&lt;easing-function&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_Types) represents a mathematical function. It is used in transition and animation properties:
 
 - {{cssxref("easing-function/linear", "linear()")}}
   - : Easing function that interpolates linearly between its points.
@@ -338,6 +340,13 @@ The anchor positioning functions are used when positioning and sizing anchor-pos
   - : Returns a length relative to the position of the edges of an anchor-positioned element's associated anchor element.
 - {{cssxref("anchor-size", "anchor-size()")}}
   - : Returns a length relative to the size of the associated anchor element.
+
+## Motion path functions
+
+The following functions are used as a value of different {{CSSxRef("offset-path")}} properties:
+
+- {{cssxref("ray", "ray()")}}
+  - : Defines the `offset-path` line segment that an animated element can follow.
 
 ## See also
 
