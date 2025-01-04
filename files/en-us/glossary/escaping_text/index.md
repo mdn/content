@@ -1,6 +1,6 @@
 ---
-title: Escaping Text
-slug: Glossary/Escaping_Text
+title: Escaping Character
+slug: Glossary/Escaping_Character
 page-type: glossary-definition
 ---
 
