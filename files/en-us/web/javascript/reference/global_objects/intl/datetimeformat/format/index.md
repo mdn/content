@@ -20,7 +20,7 @@ format(date)
 ### Parameters
 
 - `date`
-  - : The date to format.
+  - : The date to format. Can be a {{jsxref("Date")}} or {{jsxref("Temporal.PlainDateTime")}}; can be a {{jsxref("Temporal.PlainTime")}}, {{jsxref("Temporal.PlainDate")}}, {{jsxref("Temporal.PlainYearMonth")}}, or {{jsxref("Temporal.PlainMonthDay")}}, if the `DateTimeFormat` object was configured to print at least one relevant part of the date. Note that {{jsxref("Temporal.ZonedDateTime")}} always throws a `TypeError`; use {{jsxref("Temporal/ZonedDateTime/toLocaleString", "Temporal.ZonedDateTime.prototype.toLocaleString()")}} instead.
 
 ### Return value
 
@@ -75,6 +75,3 @@ console.log(formatted.join("; "));
 ## See also
 
 - {{jsxref("Intl.DateTimeFormat")}}
-- {{jsxref("Date.prototype.toLocaleString()")}}
-- {{jsxref("Date.prototype.toLocaleDateString()")}}
-- {{jsxref("Date.prototype.toLocaleTimeString()")}}

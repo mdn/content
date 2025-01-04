@@ -1,0 +1,57 @@
+---
+title: Temporal.Instant.fromEpochNanoseconds()
+slug: Web/JavaScript/Reference/Global_Objects/Temporal/Instant/fromEpochNanoseconds
+page-type: javascript-static-method
+browser-compat: javascript.builtins.Temporal.Instant.fromEpochNanoseconds
+---
+
+{{JSRef}}
+
+The **`Temporal.Instant.fromEpochNanoseconds()`** static method creates a new `Temporal.Instant` object from the number of nanoseconds since the Unix epoch (midnight at the beginning of January 1, 1970, UTC).
+
+To convert a {{jsxref("Date")}} object to a `Temporal.Instant` object, use {{jsxref("Date.prototype.toTemporalInstant()")}} instead.
+
+## Syntax
+
+```js-nolint
+Temporal.Instant.fromEpochNanoseconds(epochNanoseconds)
+```
+
+### Parameters
+
+- `epochNanoseconds`
+  - : A [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) representing the number of nanoseconds since the Unix epoch.
+
+### Return value
+
+A new `Temporal.Instant` object representing the instant in time specified by `epochNanoseconds`.
+
+### Exceptions
+
+- {{jsxref("RangeError")}}
+  - : Thrown if `epochNanoseconds` is outside the range of a representable instant, which is ±10<sup>8</sup> days (±8.64e21 nanoseconds).
+
+## Examples
+
+### Using Temporal.Instant.fromEpochNanoseconds()
+
+```js
+const instant = Temporal.Instant.fromEpochNanoseconds(0n);
+console.log(instant.toString()); // 1970-01-01T00:00:00Z
+```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- {{jsxref("Temporal.Instant")}}
+- {{jsxref("Temporal/Instant/epochNanoseconds", "Temporal.Instant.prototype.epochNanoseconds")}}
+- {{jsxref("Temporal/Instant/from", "Temporal.Instant.from()")}}
+- {{jsxref("Temporal/Instant/fromEpochMilliseconds", "Temporal.Instant.fromEpochMilliseconds()")}}
+- {{jsxref("Date.prototype.toTemporalInstant()")}}
