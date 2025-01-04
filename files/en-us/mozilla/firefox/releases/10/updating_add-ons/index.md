@@ -12,7 +12,8 @@ Although a lot of things have changed in Firefox 10 that, in theory, can cause a
 
 The first and most important thing to note is that starting in Firefox 10, add-ons are assumed to be compatible by default. Unless you use the [`<em:strictCompatibility>`](/en-US/docs/Install_Manifests#strictcompatibility) flag in your manifest, Firefox will no longer mark your add-on as incompatible after an upgrade to Firefox 10 or later. You can use that flag to ensure that an add-on that is likely to break will not try to run in updated copies of Firefox. It's worth noting that add-ons that have binary components will always be strictly checked for compatibility, since binary components always need to be recompiled for each major Firefox release.
 
-> **Note:** You should still test your add-on on Firefox 10, even in the world of compatibility by default. Read over the rest of this article to see if there's anything you need to change.
+> [!NOTE]
+> You should still test your add-on on Firefox 10, even in the world of compatibility by default. Read over the rest of this article to see if there's anything you need to change.
 
 ## DOM changes
 
@@ -20,17 +21,11 @@ Some obsolete APIs have been removed from the DOM:
 
 - {{ domxref("Node.isSameNode()") }}
   - : This is the removal that has the most likelihood to affect add-on developers, as it was fairly commonly used. You can now use the JavaScript `===` operator to compare nodes instead of this obsolete method. This method was made obsolete by the DOM4 specification.
-- {{ domxref("text.isElementContentWhitespace") }}
-
-  `text.replaceWholeText()`
+- `text.isElementContentWhitespace`, `text.replaceWholeText()`
 
   - : These APIs were rendered obsolete by the DOM4 specification.
 
-- {{ domxref("Document.xmlEncoding") }}
-
-  {{ domxref("Document.xmlStandalone") }}
-
-  {{ domxref("Document.xmlVersion") }}
+- {{ domxref("Document.xmlEncoding") }}, {{ domxref("Document.xmlStandalone") }}, {{ domxref("Document.xmlVersion") }}
 
   - : All of these APIs were rendered obsolete by the DOM4 specification. They were most frequently being used to detect whether the document being displayed was HTML or XML. See the article for {{ domxref("Document.xmlVersion") }} for a recommended way to test for this going forward.
 

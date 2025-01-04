@@ -7,7 +7,7 @@ browser-compat: css.selectors.class
 
 {{CSSRef}}
 
-The [CSS](/en-US/docs/Web/CSS) **class selector** matches elements based on the contents of their [`class`](/en-US/docs/Web/HTML/Global_attributes#class) attribute.
+The [CSS](/en-US/docs/Web/CSS) **class selector** matches elements based on the contents of their [`class`](/en-US/docs/Web/HTML/Global_attributes/class) attribute.
 
 ```css
 /* All elements with class="spacious" */
@@ -122,4 +122,4 @@ The class selectors in the following rules are not valid CSS identifiers, and wi
 ## See also
 
 - [CSS Selectors](/en-US/docs/Web/CSS/CSS_selectors)
-- [Learn CSS: Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
+- [Learn CSS: Basic selectors](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)

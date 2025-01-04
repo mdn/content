@@ -31,7 +31,8 @@ In terms of stacking contexts, DIV #1 and DIV #3 are assimilated into the root e
   - DIV #2 (`z-index`: 1)
   - DIV #4 (`z-index`: 2)
 
-> **Note:** DIV #1 and DIV #3 are not translucent. It is important to remember that assigning an opacity less than 1 to a positioned element implicitly creates a stacking context, just like adding a `z-index` value. And this example shows what happens when a parent element does not create a stacking context.
+> [!NOTE]
+> DIV #1 and DIV #3 are not translucent. It is important to remember that assigning an opacity less than 1 to a positioned element implicitly creates a stacking context, just like adding a `z-index` value. And this example shows what happens when a parent element does not create a stacking context.
 
 ## Example
 
@@ -109,7 +110,7 @@ In terms of stacking contexts, DIV #1 and DIV #3 are assimilated into the root e
 
 ## See also
 
-- [Stacking without the z-index property](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index): The stacking rules that apply when `z-index` is not used.
+- [Stacking without the `z-index` property](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index): The stacking rules that apply when `z-index` is not used.
 - [Stacking floating elements](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements): How floating elements are handled with stacking.
 - [Using z-index](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index): How to use `z-index` to change default stacking.
 - [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context): Notes on the stacking context.

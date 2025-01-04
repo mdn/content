@@ -33,7 +33,8 @@ The `real` and `imag` arrays must have the same length, otherwise an error is th
     - `disableNormalization`
       - : If set to `true`, normalization is disabled for the periodic wave. The default is `false`.
 
-> **Note:** If normalized, the resulting wave will have a maximum absolute peak value of 1.
+> [!NOTE]
+> If normalized, the resulting wave will have a maximum absolute peak value of 1.
 
 ### Return value
 

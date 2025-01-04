@@ -118,5 +118,5 @@ span {
 ## See also
 
 - {{cssxref("outline")}}
-- {{cssxref("outline-color")}}
 - {{cssxref("outline-style")}}
+- {{cssxref("outline-color")}}

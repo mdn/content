@@ -95,7 +95,7 @@ If the TLS handshake starts to become slow or unresponsive for some reason, the 
 
 ## See also
 
-- The [Mozilla SSL Configuration Generator](https://ssl-config.mozilla.org) and [Cipherlist.eu](https://cipherlist.eu/) can help you generate configuration files for your server to secure your site.
+- The [Mozilla SSL Configuration Generator](https://ssl-config.mozilla.org/) and [Cipherlist.eu](https://cipherlist.eu/) can help you generate configuration files for your server to secure your site.
 - The Mozilla Operations Security (OpSec) team maintains a wiki page with [reference TLS configurations](https://wiki.mozilla.org/Security/Server_Side_TLS).
 - Use [HTTP Observatory](/en-US/observatory) and [SSL Labs](https://www.ssllabs.com/ssltest/) to test how secure a site's HTTP/TLS configuration is.
 - [Secure Contexts](/en-US/docs/Web/Security/Secure_Contexts)

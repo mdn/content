@@ -7,6 +7,8 @@ browser-compat: html.global_attributes.is
 
 {{HTMLSidebar("Global_attributes")}}
 
+> **Note:** [Safari does not plan to support custom built-in elements](https://github.com/WebKit/standards-positions/issues/97) and [browser vendors are exploring alternative solutions to customizing built-ins](https://github.com/WICG/webcomponents/issues/1029). Check the [browser compatibility](#browser_compatibility) section for support information.
+
 The **`is`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) allows you to specify that a standard HTML element should behave like a defined custom built-in element (see [Using custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements) for more details).
 
 This attribute can only be used if the specified custom element name has been successfully [defined](/en-US/docs/Web/API/CustomElementRegistry/define) in the current document, and extends the element type it is being applied to.

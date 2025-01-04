@@ -28,7 +28,7 @@ _Inherits properties from its parent, {{DOMxRef("DOMException")}}._
 ## Examples
 
 ```js
-const url = "notaurl";
+const url = "not-a-url";
 
 async function initTransport(url) {
   try {

@@ -70,11 +70,14 @@ You can use SVG and the browser will scale your icon appropriately. There are cu
    }
    ```
 
-> **Note:** Only Firefox is known to support SVG icons. Chromium has a bug about [unsupported SVG icons](https://crbug.com/29683).
+> [!NOTE]
+> Only Firefox is known to support SVG icons. Chromium has a bug about [unsupported SVG icons](https://crbug.com/29683).
 
-> **Note:** Remember to include the `xmlns` attribute when creating the SVG. Otherwise, Firefox won't be able to display the icon.
+> [!NOTE]
+> Remember to include the `xmlns` attribute when creating the SVG. Otherwise, Firefox won't be able to display the icon.
 
-> **Note:** If you are using a program like Inkscape for creating SVG, you might want to save it as a "plain SVG". Firefox might be confused by various special namespaces and not display your icon.
+> [!NOTE]
+> If you are using a program like Inkscape for creating SVG, you might want to save it as a "plain SVG". Firefox might be confused by various special namespaces and not display your icon.
 
 ## Browser compatibility
 

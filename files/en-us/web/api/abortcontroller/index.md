@@ -28,7 +28,8 @@ You can create a new `AbortController` object using the {{domxref("AbortControll
 
 ## Examples
 
-> **Note:** There are additional examples in the {{domxref("AbortSignal")}} reference.
+> [!NOTE]
+> There are additional examples in the {{domxref("AbortSignal")}} reference.
 
 In the following snippet, we aim to download a video using the [Fetch API](/en-US/docs/Web/API/Fetch_API).
 

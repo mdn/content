@@ -11,7 +11,8 @@ browser-compat: api.Document.hasFocus
 The **`hasFocus()`** method of the {{domxref("Document")}} interface returns a boolean value indicating whether the document or any element inside the document has focus.
 This method can be used to determine whether the active element in a document has focus.
 
-> **Note:** When viewing a document, an element with focus is always the [active element](/en-US/docs/Web/API/Document/activeElement) in the document, but an active element does not necessarily have focus.
+> [!NOTE]
+> When viewing a document, an element with focus is always the [active element](/en-US/docs/Web/API/Document/activeElement) in the document, but an active element does not necessarily have focus.
 > For example, an active element within a popup window that is not the foreground doesn't have focus.
 
 ## Syntax

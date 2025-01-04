@@ -23,9 +23,9 @@ of(code)
 
   - : The `code` to provide depends on the `type`:
 
-    - If the type is "region", `code` should be either an [two-letter ISO 3166 region code](https://www.iso.org/iso-3166-country-codes.html), or a [three-digit UN M49 geographic region](https://unstats.un.org/unsd/methodology/m49/). It is required to follow the [`unicode_region_subtag`](https://unicode.org/reports/tr35/#unicode_region_subtag) grammar.
+    - If the type is "region", `code` should be either an [two-letter ISO 3166 region code](https://www.iso.org/iso-3166-country-codes.html), or a [three-digit UN M49 geographic region](https://unstats.un.org/unsd/methodology/m49/). It is required to follow the [`unicode_region_subtag`](https://unicode.org/reports/tr35/#unicode_region_subtag) grammar. Use uppercase codes (e.g., `"US"`), because lowercase ones (e.g., `"us"`) may not work reliably everywhere.
     - If the type is "script", `code` should be an [four-letter ISO 15924 script code](https://unicode.org/iso15924/iso15924-codes.html). It is required to follow the [`unicode_script_subtag`](https://unicode.org/reports/tr35/#unicode_script_subtag) grammar.
-    - If the type is "language", `code` should be a _languageCode_ \["-" _scriptCode_] \["-" _regionCode_ ] \*("-" _variant_ ) subsequence of the [`unicode_language_id`](https://unicode.org/reports/tr35/#Unicode_language_identifier) grammar. _languageCode_ is either a two-letter ISO 639-1 language code or a three-letter ISO 639-2 language code.
+    - If the type is "language", `code` should be matched by the [`unicode_language_id`](https://unicode.org/reports/tr35/#Unicode_language_identifier) nonterminal.
     - If the type is "currency", `code` should be a [three-letter ISO 4217 currency code](https://www.iso.org/iso-4217-currency-codes.html). It is required to have exactly three alphabetic characters.
     - If the type is "dateTimeField", `code` should be one of: `"era"`, `"year"`, `"quarter"`, `"month"`, `"weekOfYear"`, `"weekday"`, `"day"`, `"dayPeriod"`, `"hour"`, `"minute"`, `"second"`, `"timeZoneName"`.
     - If the type is "calendar", `code` should be a [calendar key](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar). It is required to follow the `type` grammar of a [Unicode locale identifier](https://unicode.org/reports/tr35/#32-unicode-locale-identifier).
@@ -54,6 +54,18 @@ languageNames.of("fr"); // "French"
 
 const currencyNames = new Intl.DisplayNames("en", { type: "currency" });
 currencyNames.of("EUR"); // "Euro"
+
+const languageNamesStandard = new Intl.DisplayNames("fr", {
+  type: "language",
+  languageDisplay: "standard",
+});
+languageNamesStandard.of("fr-CA"); // "français (Canada)"
+
+const languageNamesDialect = new Intl.DisplayNames("fr", {
+  type: "language",
+  languageDisplay: "dialect",
+});
+languageNamesDialect.of("fr-CA"); // "français canadien"
 ```
 
 ### Using fallback

@@ -28,13 +28,13 @@ document.queryCommandEnabled(command)
 ### Return value
 
 Returns a boolean value which is `true` if the command is enabled
-and `false` if the command isn't`.`
+and `false` if the command isn't.
 
 ## Notes
 
-- For '`cut`' and '`copy`' commands the method only returns true
+- For `"cut"` and `"copy"` commands the method only returns true
   when called from a user-initiated thread.
-- The `'paste'` command return `false` not only if the feature
+- The `"paste"` command return `false` not only if the feature
   is unavailable, but also if the script calling it has insufficient privileges to
   perform the action.
 

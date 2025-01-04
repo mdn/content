@@ -11,7 +11,8 @@ The **`ClipboardItem`** interface of the [Clipboard API](/en-US/docs/Web/API/Cli
 
 The benefit of having the **`ClipboardItem`** interface to represent data, is that it enables developers to cope with the varying scope of file types and data.
 
-> **Note:** To work with text see the {{domxref("Clipboard.readText()")}} and {{domxref("Clipboard.writeText()")}} methods of the {{domxref("Clipboard")}} interface.
+> [!NOTE]
+> To work with text see the {{domxref("Clipboard.readText()")}} and {{domxref("Clipboard.writeText()")}} methods of the {{domxref("Clipboard")}} interface.
 
 ## Constructor
 
@@ -52,7 +53,7 @@ If it is, we fetch the image with the ["Fetch API"](/en-US/docs/Web/API/Fetch_AP
 async function writeClipImg() {
   try {
     if (ClipboardItem.supports("image/svg+xml")) {
-      const imgURL = "/myimage.svg";
+      const imgURL = "/my-image.svg";
       const data = await fetch(imgURL);
       const blob = await data.blob();
       await navigator.clipboard.write([

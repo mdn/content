@@ -21,8 +21,9 @@ We'll discuss each of these features in this guide. First, though, we'll discuss
 
 For a web app to be promoted for installation by a supporting browser, it needs to meet some technical requirements. We can consider these the minimum requirements for a web app to be a PWA.
 
-> **Note:** While not a requirement for a PWA to be installable, many PWAs use [service workers](/en-US/docs/Web/API/Service_Worker_API) to provide an offline experience.
-> See the [CycleTracker: Service workers](en-us/web/progressive_web_apps/tutorials/cycletracker/service_workers/index.md) tutorial for more information.
+> [!NOTE]
+> While not a requirement for a PWA to be installable, many PWAs use [service workers](/en-US/docs/Web/API/Service_Worker_API) to provide an offline experience.
+> See the [CycleTracker: Service workers](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers) tutorial for more information.
 
 ### The web app manifest
 
@@ -66,9 +67,9 @@ Chromium-based browsers, including Google Chrome, Samsung Internet, and Microsof
 - [`icons`](/en-US/docs/Web/Manifest/icons) must contain a 192px and a 512px icon
 - [`start_url`](/en-US/docs/Web/Manifest/start_url)
 - [`display`](/en-US/docs/Web/Manifest/display) and/or [`display_override`](/en-US/docs/Web/Manifest/display_override)
-- [`prefer-related-application`](/en-US/docs/Web/Manifest/prefer_related_applications) must be `false` or not present
+- [`prefer_related_applications`](/en-US/docs/Web/Manifest/prefer_related_applications) must be `false` or not present
 
-For a full description of every member, see the [web app manifest reference documentation](/en-US/docs/Web/Manifest).
+For a full description of every member, see the [Web app manifest](/en-US/docs/Web/Manifest) reference documentation.
 
 ### HTTPS, localhost, or loopback are required
 
@@ -84,7 +85,7 @@ If your app meets the installability prerequisites, you can package it and distr
 
 - [How to publish a PWA to the Google Play Store](https://chromeos.dev/en/publish/pwa-in-play)
 - [How to publish a PWA to the Microsoft Store](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/microsoft-store)
-- [How to publish a PWA to the Meta Quest Store](https://developer.oculus.com/documentation/web/pwa-submit-app/)
+- [How to publish a PWA to the Meta Quest Store](https://developers.meta.com/horizon/documentation/web/pwa-submit-app/)
 
 The [PWABuilder](https://docs.pwabuilder.com/#/builder/quick-start) is a tool to simplify the process of packaging and publishing a PWA for various app stores. It supports the Google Play Store, Microsoft Store, Meta Quest Store, and iOS App Store.
 

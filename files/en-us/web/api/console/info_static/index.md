@@ -13,10 +13,10 @@ The **`console.info()`** static method outputs a message to the console at the "
 ## Syntax
 
 ```js-nolint
-info(val1)
-info(val1, /* …, */ valN)
-info(msg)
-info(msg, subst1, /* …, */ substN)
+console.info(val1)
+console.info(val1, /* …, */ valN)
+console.info(msg)
+console.info(msg, subst1, /* …, */ substN)
 ```
 
 ### Parameters
@@ -45,5 +45,5 @@ None ({{jsxref("undefined")}}).
 ## See also
 
 - [Microsoft Edge's documentation for `console.info()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#info)
-- [Node.JS documentation for `console.info()`](https://nodejs.org/docs/latest/api/console.html#consoleinfodata-args)
+- [Node.js documentation for `console.info()`](https://nodejs.org/docs/latest/api/console.html#consoleinfodata-args)
 - [Google Chrome's documentation for `console.info()`](https://developer.chrome.com/docs/devtools/console/api/#info)

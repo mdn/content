@@ -24,7 +24,8 @@ class name {
 }
 ```
 
-> **Note:** An [expression statement](/en-US/docs/Web/JavaScript/Reference/Statements/Expression_statement) cannot begin with the keyword `class` to avoid ambiguity with a [`class` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/class). The `class` keyword only begins an expression when it appears in a context that cannot accept statements.
+> [!NOTE]
+> An [expression statement](/en-US/docs/Web/JavaScript/Reference/Statements/Expression_statement) cannot begin with the keyword `class` to avoid ambiguity with a [`class` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/class). The `class` keyword only begins an expression when it appears in a context that cannot accept statements.
 
 ## Description
 
@@ -32,9 +33,9 @@ A `class` expression is very similar to, and has almost the same syntax as, a [`
 
 ## Examples
 
-### A simple class expression
+### A basic class expression
 
-This is just a simple anonymous class expression which you can refer to using the variable `Foo`.
+This is just an anonymous class expression which you can refer to using the variable `Foo`.
 
 ```js
 const Foo = class {

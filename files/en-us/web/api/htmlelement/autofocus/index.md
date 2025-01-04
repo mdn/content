@@ -12,7 +12,8 @@ The **`autofocus`** property of the {{domxref("HTMLElement")}} interface represe
 
 Only one form-associated element inside a document, or a {{htmlelement("dialog")}} element, or an element whose `popover` attribute is set, can have this attribute specified. If there are several, the first element with the attribute set inserted, usually the first such element on the page, gets the initial focus.
 
-> **Note:** Setting this property doesn't set the focus to the associated element: it merely tells the browser to focus to it when _the element is inserted_ in the document. Setting it after the insertion, that is most of the time after the document load, has no visible effect.
+> [!NOTE]
+> Setting this property doesn't set the focus to the associated element: it merely tells the browser to focus to it when _the element is inserted_ in the document. Setting it after the insertion, that is most of the time after the document load, has no visible effect.
 
 ## Value
 

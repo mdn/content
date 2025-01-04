@@ -12,11 +12,9 @@ The **`RTCEncodedAudioFrame`** of the [WebRTC API](/en-US/docs/Web/API/WebRTC_AP
 The interface provides methods and properties to get metadata about the frame, allowing its format and order in the sequence of frames to be determined.
 The `data` property gives access to the encoded frame data as a buffer, which might be encrypted, or otherwise modified by a transform.
 
-> **Note:** This feature is available in [_Dedicated_ Web Workers](/en-US/docs/Web/API/Web_Workers_API#worker_types).
-
 ## Instance properties
 
-- {{domxref("RTCEncodedAudioFrame.timestamp")}} {{ReadOnlyInline}}
+- {{domxref("RTCEncodedAudioFrame.timestamp")}} {{ReadOnlyInline}} {{deprecated_inline}} {{non-standard_inline}}
   - : Returns the timestamp at which sampling of the frame started.
 - {{domxref("RTCEncodedAudioFrame.data")}}
   - : Return a buffer containing the encoded frame data.
@@ -30,8 +28,8 @@ The `data` property gives access to the encoded frame data as a buffer, which mi
 
 This code snippet shows a handler for the `rtctransform` event in a {{domxref("Worker")}} that implements a {{domxref("TransformStream")}}, and pipes encoded frames through it from the `event.transformer.readable` to `event.transformer.writable` (`event.transformer` is a {{domxref("RTCRtpScriptTransformer")}}, the worker-side counterpart of {{domxref("RTCRtpScriptTransform")}}).
 
-If the tranformer is inserted into an audio stream, the `transform()` method is called with a `RTCEncodedAudioFrame` whenever a new frame is enqueued on `event.transformer.readable`.
-The `transform()` method shows how this might be read, modified using a fictional encryption function, and then enqueued on the controller (this ultimately pipes it through to the `event.transformer.writable`, and then back into the WebRTC pipline).
+If the transformer is inserted into an audio stream, the `transform()` method is called with a `RTCEncodedAudioFrame` whenever a new frame is enqueued on `event.transformer.readable`.
+The `transform()` method shows how this might be read, modified using a fictional encryption function, and then enqueued on the controller (this ultimately pipes it through to the `event.transformer.writable`, and then back into the WebRTC pipeline).
 
 ```js
 addEventListener("rtctransform", (event) => {

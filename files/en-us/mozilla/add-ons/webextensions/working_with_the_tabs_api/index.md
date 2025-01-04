@@ -18,7 +18,8 @@ In this how-to article we'll look at:
 
 We then conclude by looking at some other, miscellaneous features offered by the API.
 
-> **Note:** There are some Tab API features covered elsewhere. These are the methods you can use to manipulate tab content with scripts ({{WebExtAPIRef("tabs.connect")}}, {{WebExtAPIRef("tabs.sendMessage")}}, and {{WebExtAPIRef("tabs.executeScript")}}). If you want more information on these methods, see the Concepts article [Content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) and the how-to guide [Modify a web page](/en-US/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page).
+> [!NOTE]
+> There are some Tab API features covered elsewhere. These are the methods you can use to manipulate tab content with scripts ({{WebExtAPIRef("tabs.connect")}}, {{WebExtAPIRef("tabs.sendMessage")}}, and {{WebExtAPIRef("tabs.executeScript")}}). If you want more information on these methods, see the Concepts article [Content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) and the how-to guide [Modify a web page](/en-US/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page).
 
 ## Permissions and the Tabs API
 
@@ -76,7 +77,7 @@ To see how {{WebExtAPIRef("tabs.query()")}} and {{WebExtAPIRef("tabs.Tab")}} are
     }
     ```
 
-    > **Note:**
+    > [!NOTE]
     >
     > - **`tabs.html` is defined as the `default_popup` in `browser_action`.** It is displayed whenever the user clicks the extension's toolbar icon.
     > - **Permissions includes tabs.** This is needed to support the tab list feature, as the extension reads the title of the tabs for display in the popup.
@@ -199,7 +200,7 @@ Finally, the document fragment is written to the `<div id="tabs-list">` element:
 Another related example feature is the "Alert active tab" info option that dumps all the {{WebExtAPIRef("tabs.Tab")}} object properties for the active tab into an alert:
 
 ```js
-else if (e.target.id === "tabs-alertinfo") {
+else if (e.target.id === "tabs-alert-info") {
   callOnActiveTab((tab) => {
     let props = "";
     for (const item in tab) {
@@ -239,7 +240,8 @@ The following functions are available:
 - update the tab's URL—effectively browse to a new page—({{WebExtAPIRef("tabs.update()")}}).
 - reload the tab's page ({{WebExtAPIRef("tabs.reload()")}}).
 
-> **Note:** These functions all require the ID (or IDs) of the tab they are manipulating:
+> [!NOTE]
+> These functions all require the ID (or IDs) of the tab they are manipulating:
 >
 > - {{WebExtAPIRef("tabs.duplicate()")}}
 > - {{WebExtAPIRef("tabs.remove()")}}
@@ -276,7 +278,7 @@ But first, here is a demonstration of the feature in action:
 
     <a href="#" id="tabs-duplicate">Duplicate active tab</a><br />
     <a href="#" id="tabs-reload">Reload active tab</a><br />
-    <a href="#" id="tabs-alertinfo">Alert active tab info</a><br />
+    <a href="#" id="tabs-alert-info">Alert active tab info</a><br />
     ```
 
 - tabs.js

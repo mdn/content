@@ -7,7 +7,7 @@ browser-compat: css.selectors.target
 
 {{CSSRef}}
 
-The **`:target`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents a unique element (the _target element_) with an [`id`](/en-US/docs/Web/HTML/Global_attributes#id) matching the URL's fragment.
+The **`:target`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents a unique element (the _target element_) with an [`id`](/en-US/docs/Web/HTML/Global_attributes/id) matching the URL's fragment.
 
 ```css
 /* Selects an element with an ID matching the current URL's fragment */
@@ -36,7 +36,8 @@ The following element would be selected by a `:target` selector when the current
 }
 ```
 
-> **Note:** Due to [a possible bug in the CSS specification](https://discourse.wicg.io/t/target-css-does-not-work-because-shadowroot-does-not-set-a-target-element/2070), `:target` doesn't work within a [web component](/en-US/docs/Web/API/Web_components) because the [shadow root](/en-US/docs/Web/API/ShadowRoot) doesn't pass the target element down to the shadow tree.
+> [!NOTE]
+> Due to [a possible bug in the CSS specification](https://discourse.wicg.io/t/target-css-does-not-work-because-shadowroot-does-not-set-a-target-element/2070/), `:target` doesn't work within a [web component](/en-US/docs/Web/API/Web_components) because the [shadow root](/en-US/docs/Web/API/ShadowRoot) doesn't pass the target element down to the shadow tree.
 
 ## Examples
 

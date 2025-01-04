@@ -2,14 +2,12 @@
 title: Iterator.prototype.filter()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/filter
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Iterator.filter
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{JSRef}}
 
-The **`filter()`** method of {{jsxref("Iterator")}} instances returns a new [iterator helper](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helpers) that yields only those elements of the iterator for which the provided callback function returns `true`.
+The **`filter()`** method of {{jsxref("Iterator")}} instances returns a new [iterator helper object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helper_objects) that yields only those elements of the iterator for which the provided callback function returns `true`.
 
 ## Syntax
 
@@ -28,11 +26,11 @@ filter(callbackFn)
 
 ### Return value
 
-A new [iterator helper](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helpers). Each time the iterator helper's `next()` method is called, it returns the next element in the iterator for which the callback function returns `true`. When the underlying iterator is completed, the iterator helper is also completed (the `next()` method produces `{ value: undefined, done: true }`).
+A new [iterator helper object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helper_objects). Each time the iterator helper's `next()` method is called, it returns the next element in the iterator for which the callback function returns `true`. When the underlying iterator is completed, the iterator helper object is also completed (the `next()` method produces `{ value: undefined, done: true }`).
 
 ## Description
 
-The main advantage of iterator helpers over array methods is their ability to work with infinite iterators. With infinite iterators, `filter()` allows you to iterate over only those elements that satisfy a given condition.
+The main advantage of iterator helpers over array methods is that they are lazy, meaning that they only produce the next value when requested. This avoids unnecessary computation and also allows them to be used with infinite iterators.
 
 ## Examples
 

@@ -14,6 +14,10 @@ The **`value`** attribute _MUST_ return the last value from which it was set. Th
 
 The `onchange` attribute is an [event handler](https://www.w3.org/TR/presentation-api/#dfn-event-handler) whose corresponding [event handler event type](https://www.w3.org/TR/presentation-api/#dfn-event-handler-event-type) is `change`.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

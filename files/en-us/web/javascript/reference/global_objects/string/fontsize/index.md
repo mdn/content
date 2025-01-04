@@ -11,7 +11,8 @@ browser-compat: javascript.builtins.String.fontsize
 
 The **`fontsize()`** method of {{jsxref("String")}} values creates a string that embeds this string in a {{HTMLElement("font")}} element (`<font size="...">str</font>`), which causes this string to be displayed in the specified font size.
 
-> **Note:** All [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods) are deprecated and only standardized for compatibility purposes. For the case of `fontsize()`, the `<font>` element itself has been removed from the HTML specification and shouldn't be used anymore. Web developers should use [CSS](/en-US/docs/Web/CSS) properties instead.
+> [!NOTE]
+> All [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods) are deprecated and only standardized for compatibility purposes. For the case of `fontsize()`, the `<font>` element itself has been removed from the HTML specification and shouldn't be used anymore. Web developers should use [CSS](/en-US/docs/Web/CSS) properties instead.
 
 ## Syntax
 
@@ -50,7 +51,8 @@ This will create the following HTML:
 <font size="7">Hello, world</font>
 ```
 
-> **Warning:** This markup is invalid, because `font` is no longer a valid element.
+> [!WARNING]
+> This markup is invalid, because `font` is no longer a valid element.
 
 Instead of using `fontsize()` and creating HTML text directly, you should use CSS to manipulate fonts. For example, you can manipulate {{cssxref("font-size")}} through the {{domxref("HTMLElement/style", "element.style")}} attribute:
 

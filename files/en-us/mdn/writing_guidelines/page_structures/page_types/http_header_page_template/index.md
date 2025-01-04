@@ -2,7 +2,6 @@
 title: HTTP header page template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/HTTP_header_page_template
 page-type: mdn-writing-guide
-browser-compat: path.to.feature.NameOfTheHeader
 ---
 
 {{MDNSidebar}}
@@ -45,6 +44,9 @@ browser-compat: path.to.feature.NameOfTheHeader
 >     Note that you may first need to create/update an entry for the HTTP header in our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a>, and the entry for the header will need to include specification information.
 >     See our [guide on how to do this](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
 >
+>     Browser compatibility does not apply for HTTP headers where no specific implementation is provided (such as automatically adding a request header to some requests or changing behavior based on data in a response header).
+>     For these cases, remove the browser-compat key and value.
+>
 > ---
 >
 > **Top-of-page macros**
@@ -70,8 +72,15 @@ browser-compat: path.to.feature.NameOfTheHeader
 
 {{httpsidebar}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-The summary paragraph — start by naming the http header and saying what it does.
-This should ideally be one or two short sentences.
+The first sentence of the page must follow this format:
+
+> The HTTP **`header-name`** (header type) is used for X in Y circumstances.
+
+The 'header type' should say if it's a {{Glossary("request header")}}, a {{Glossary("response header")}}, or if it may be either.
+The summary paragraph should ideally be one or two short sentences.
+
+You can mention notable gotchas or common pitfalls in this section, linking to examples or more detailed documentation (guides, etc.) in this section.
+Two or three paragraphs in this section is appropriate, and if there are substantial usage notes to include, use a "Description" section after "Directives" below.
 
 <table class="properties">
   <tbody>
@@ -86,13 +95,13 @@ This should ideally be one or two short sentences.
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes or no</td>
+      <td>"Yes" or "No"</td>
     </tr>
     <tr>
       <th scope="row">
         {{Glossary("CORS-safelisted response header")}}
       </th>
-      <td>yes or no</td>
+      <td>"Yes" or "No"</td>
     </tr>
   </tbody>
 </table>
@@ -121,17 +130,22 @@ Multiple directives are comma-separated (delete information as appropriate).
 If the header has a lot of available directives,
 feel free to include multiple definition lists, subsections, and explanations as appropriate.
 
+## Description
+
+If there is too much content to include in the opening paragraphs, provide as much detail as necessary here, such as background information, hints for usage, and links to documentation.
+
 ## Examples
 
 Note that we use the plural "Examples" even if the page only contains one example.
 
 ### A descriptive heading
 
-Each example must have an H3 heading (`###`) naming the example. The heading should be descriptive of what the example is doing. For example, "A simple example" does not say anything about the example and therefore, not a good heading. The heading should be concise. For a longer description, use the paragraph after the heading.
+Each example **must** have an H3 heading (`###`) naming the example. The heading should be descriptive of what the example is doing. For example, "A simple example" does not say anything about the example and therefore, not a good heading. The heading should be concise. For a longer description, use the paragraph after the heading.
 
 See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples) for more information.
 
-> **Note:** Sometimes you will want to link to examples given on another page.
+> [!NOTE]
+> Sometimes you will want to link to examples given on another page.
 >
 > **Scenario 1:** If you have some examples on this page and some more examples on another page:
 >
@@ -156,7 +170,7 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 > ```md
 > ## Examples
 >
-> For examples of this API, see [the page on fetch()](https://example.org).
+> For examples of this API, see [the page on fetch()](https://example.org/).
 > ```
 
 ## Specifications
@@ -167,13 +181,21 @@ _To use this macro, remove the backticks and backslash in the markdown file._
 
 ## Browser compatibility
 
+_If the browser has no specific handling for the header, remove the macro below._
+_Otherwise, to use this macro, remove the backticks and backslash in the markdown file._
+
 `\{{Compat}}`
 
-_To use this macro, remove the backticks and backslash in the markdown file._
+_If the browser has specific handling for the header, remove the text below:_
+
+This header has no specification-defined user-agent integration ("browser compatibility" does not apply).
+Developers can set and get HTTP headers using `fetch()` in order to provide application-specific implementation behavior.
 
 ## See also
 
 Include links to reference pages and guides related to the current HTTP header. For more guidelines, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.
+You can link to relevant response statuses like `\{{HTTPStatus("123", "123 Response Status")}}` and headers like `\{{HTTPHeader("Header-Name")}}`.
+You may group related statuses and headers in a single list item for brevity.
 
 - link1
 - link2

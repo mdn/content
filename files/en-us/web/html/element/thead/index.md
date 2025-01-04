@@ -25,7 +25,7 @@ The following attributes are deprecated and should not be used. They are documen
 
 - `bgcolor` {{deprecated_inline}}
 
-  - : Defines the background color of each head cell. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a '`#`', or a [color keyword](/en-US/docs/Web/CSS/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
+  - : Defines the background color of each head cell. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a `#`, or a [color keyword](/en-US/docs/Web/CSS/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
 
 - `char` {{deprecated_inline}}
 
@@ -245,7 +245,7 @@ tbody > tr > td:last-of-type {
       <th scope="row">Tag omission</th>
       <td>
         The start tag is mandatory. The end tag may be omitted if the
-        {{HTMLElement("thead")}} element is immediately followed by a
+        <code>&lt;thead&gt;</code> element is immediately followed by a
         {{HTMLElement("tbody")}} or {{HTMLElement("tfoot")}}
         element.
       </td>
@@ -254,7 +254,7 @@ tbody > tr > td:last-of-type {
       <th scope="row">Permitted parents</th>
       <td>
         A {{HTMLElement("table")}} element. The
-        {{HTMLElement("thead")}} must appear after any
+        <code>&lt;thead&gt;</code> must appear after any
         {{HTMLElement("caption")}} and
         {{HTMLElement("colgroup")}} elements, even implicitly defined,
         but before any {{HTMLElement("tbody")}},
@@ -293,7 +293,7 @@ tbody > tr > td:last-of-type {
 
 ## See also
 
-- [Learn: HTML tables](/en-US/docs/Learn/HTML/Tables)
+- [Learn: HTML table basics](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 - {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("tr")}}: Other table-related elements
 - {{cssxref("background-color")}}: CSS property to set the background color of each head cell
 - {{cssxref("border")}}: CSS property to control borders of head cells

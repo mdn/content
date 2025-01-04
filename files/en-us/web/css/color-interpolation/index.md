@@ -26,7 +26,7 @@ color-interpolation: linearRGB;
   - : Indicates that color interpolation should occur in the sRGB color space.
     Defaults to this initial value if no `color-interpolation` property is set.
 - `linearRGB`
-  - : Indicates that color interpolation should occur in the linearized RGB color space as described in [the sRGB specification](https://webstore.iec.ch/publication/6169).
+  - : Indicates that color interpolation should occur in the linearized RGB color space as described in [the sRGB specification](https://webstore.iec.ch/en/publication/6169).
 
 ## Formal definition
 

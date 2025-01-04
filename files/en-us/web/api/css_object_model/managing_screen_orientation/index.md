@@ -133,7 +133,8 @@ And here's the result
   </tbody>
 </table>
 
-> **Note:** The orientation media query actually applies based on the orientation of the browser window (or iframe) not the orientation of the device.
+> [!NOTE]
+> The orientation media query actually applies based on the orientation of the browser window (or iframe) not the orientation of the device.
 
 ## Locking the screen orientation
 
@@ -163,7 +164,8 @@ screen.orientation.lock();
 
 It returns a [promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves after the lock succeeds.
 
-> **Note:** A screen lock is web application dependent. If application A is locked to `landscape` and application B is locked to `portrait`, switching from application A to B or B to A will not fire a `change` event on `ScreenOrientation` because both applications will keep the orientation they had.
+> [!NOTE]
+> A screen lock is web application dependent. If application A is locked to `landscape` and application B is locked to `portrait`, switching from application A to B or B to A will not fire a `change` event on `ScreenOrientation` because both applications will keep the orientation they had.
 >
 > However, locking the orientation can fire an `change` event if the orientation had to be changed to satisfy the lock requirements.
 

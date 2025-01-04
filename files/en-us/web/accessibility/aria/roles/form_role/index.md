@@ -19,16 +19,18 @@ The `form` role can be used to identify a group of elements on a page that provi
 
 This is a form that collects and saves a user's contact information.
 
-> **Warning:** Use an HTML {{htmlelement("form")}} element to contain your form controls, rather than the ARIA `form` role, unless you have a very good reason.
+> [!WARNING]
+> Use an HTML {{htmlelement("form")}} element to contain your form controls, rather than the ARIA `form` role, unless you have a very good reason.
 > The HTML `<form>` element is sufficient to tell assistive technologies that there is a form.
 
 ## Description
 
 A `form` [landmark](/en-US/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles) identifies a region of content that contains a collection of items and objects that, as a whole, combine to create a form when no other named landmark is appropriate (e.g. [`main`](/en-US/docs/Web/Accessibility/ARIA/Roles/main_role) or [`search`](/en-US/docs/Web/Accessibility/ARIA/Roles/search_role)).
 
-> **Note:** Using the {{HTMLElement('form')}} element will automatically communicate a section of content as a `form` landmark, if it is provided an accessible name. Developers should always prefer using the correct semantic HTML element over using ARIA.
+> [!NOTE]
+> Using the {{HTMLElement('form')}} element will automatically communicate a section of content as a `form` landmark, if it is provided an accessible name. Developers should always prefer using the correct semantic HTML element over using ARIA.
 
-Use the HTML {{HTMLElement('form')}} element if possible. The `<form>` element defines a `form` landmark when it has an accessible name (e.g. [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby), [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`title`](/en-US/docs/Web/HTML/Global_attributes#title)). Make sure to have a unique label on each form in a document to help users understand the purpose of the form. This label should be visible to all users, not just assistive technology users. Use the `search` landmark instead of the `form` landmark when the form is used for search functionality.
+Use the HTML {{HTMLElement('form')}} element if possible. The `<form>` element defines a `form` landmark when it has an accessible name (e.g. [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby), [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`title`](/en-US/docs/Web/HTML/Global_attributes/title)). Make sure to have a unique label on each form in a document to help users understand the purpose of the form. This label should be visible to all users, not just assistive technology users. Use the `search` landmark instead of the `form` landmark when the form is used for search functionality.
 
 Use the `role="form"` to identify a region of the page; do not use it to identify every form field. Even if you are using the form landmark instead of `<form>`, you are encouraged to use native HTML form controls like {{HTMLElement('button')}}, {{HTMLElement('input')}}, {{HTMLElement('select')}}, and {{HTMLElement('textarea')}}.
 
@@ -43,7 +45,7 @@ No role specific keyboard interactions
 ### Required JavaScript features
 
 - `onsubmit`
-  - : The onSubmit event handler handles the event raised when the form is submitted. Anything that is not a `<form>` cannot be submitted, therefore you would have to use JavaScript to build an alternative data submission mechanism, for example with {{domxref("fetch()")}}.
+  - : The onSubmit event handler handles the event raised when the form is submitted. Anything that is not a `<form>` cannot be submitted, therefore you would have to use JavaScript to build an alternative data submission mechanism, for example with {{domxref("Window/fetch", "fetch()")}}.
 
 ## Examples
 

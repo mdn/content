@@ -24,7 +24,7 @@ SyntaxError: Invalid character '\u201c' (Safari)
 
 There is an invalid character that the interpreter doesn't understand. You should either put it in a string literal or replace it with another character. Use an editor that supports syntax highlighting and carefully check your code
 against mismatches like a minus sign (`-`) versus a dash (`–`)
-or simple quotes (`"`) versus non-standard quotation marks (`"`).
+or simple quotes (`"`) versus non-standard quotation marks (`“`).
 
 ## Examples
 
@@ -80,7 +80,7 @@ const foo = "bar";​
 // SyntaxError: illegal character
 ```
 
-When inspecting this code in an editor like Vim, you can see that there is actually a
+When inspecting this code in an editor like VIM, you can see that there is actually a
 [zero-width space (ZWSP) (U+200B)](https://en.wikipedia.org/wiki/Zero-width_space) character.
 
 ```js-nolint

@@ -13,8 +13,8 @@ The **`console.count()`** static method logs the number of times that this parti
 ## Syntax
 
 ```js-nolint
-count()
-count(label)
+console.count()
+console.count(label)
 ```
 
 ### Parameters
@@ -89,5 +89,5 @@ We're now maintaining separate counts based only on the value of `label`.
 ## See also
 
 - [Microsoft Edge's documentation for `console.count()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#count)
-- [Node.JS documentation for `console.count()`](https://nodejs.org/docs/latest/api/console.html#consolecountlabel)
+- [Node.js documentation for `console.count()`](https://nodejs.org/docs/latest/api/console.html#consolecountlabel)
 - [Google Chrome's documentation for `console.count()`](https://developer.chrome.com/docs/devtools/console/api/#count)

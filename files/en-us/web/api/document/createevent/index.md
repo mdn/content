@@ -3,12 +3,15 @@ title: "Document: createEvent() method"
 short-title: createEvent()
 slug: Web/API/Document/createEvent
 page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.Document.createEvent
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{deprecated_header}}
 
-> **Warning:** Many methods used with `createEvent`, such as `initCustomEvent`, are deprecated.
+> [!WARNING]
+> Many methods used with `createEvent`, such as `initCustomEvent`, are deprecated.
 > Use [event constructors](/en-US/docs/Web/API/CustomEvent) instead.
 
 Creates an [event](/en-US/docs/Web/API/Event) of the type specified. The

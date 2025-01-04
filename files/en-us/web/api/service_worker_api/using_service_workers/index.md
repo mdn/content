@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("Service Workers API")}}
 
-This article provides information on getting started with service workers, including basic architecture, registering a service worker, the installation and activation process for a new service worker, updating your service worker, cache control and custom responses, all in the context of a simple app with offline functionality.
+This article provides information on getting started with service workers, including basic architecture, registering a service worker, the installation and activation process for a new service worker, updating your service worker, cache control and custom responses, all in the context of an app with offline functionality.
 
 ## The premise of service workers
 
@@ -88,25 +88,31 @@ This registers a service worker, which runs in a worker context, and therefore h
 
 A single service worker can control many pages. Each time a page within your scope is loaded, the service worker is installed against that page and operates on it. Bear in mind therefore that you need to be careful with global variables in the service worker script: each page doesn't get its own unique worker.
 
-> **Note:** One great thing about service workers is that if you use feature detection like we've shown above, browsers that don't support service workers can just use your app online in the normal expected fashion.
+> [!NOTE]
+> One great thing about service workers is that if you use feature detection like we've shown above, browsers that don't support service workers can just use your app online in the normal expected fashion.
 
 #### Why is my service worker failing to register?
 
-This could be for the following reasons:
+A service worker fails to register for one of the following reasons:
 
-- You are not running your application through HTTPS.
-- The path to your service worker file is not written correctly — it needs to be written relative to the origin, not your app's root directory. In our example, the worker is at `https://bncb2v.csb.app/sw.js`, and the app's root is `https://bncb2v.csb.app/`. But the path needs to be written as `/sw.js`.
-- It is also not allowed to point to a service worker of a different origin than that of your app.
-- The service worker will only catch requests from clients under the service worker's scope.
-- The max scope for a service worker is the location of the worker (in other words if the script `sw.js` is located in `/js/sw.js`, it can only control URLs under `/js/` by default). A list of max scopes for that worker can be specified with the `Service-Worker-Allowed` header.
-- In Firefox, Service Worker APIs are hidden and cannot be used when the user is in [private browsing mode](https://bugzil.la/1320796), or when history is disabled, or if cookies are cleared when Firefox is closed.
-- In Chrome, registration fails when the "Block all cookies (not recommended)" option is enabled.
+- You are not running your application in a [secure context](/en-US/docs/Web/Security/Secure_Contexts) (over HTTPS).
+- The path of the service worker file is incorrect.
+  The path must be relative to the origin, not an app's root directory.
+  In our example, the worker is at `https://bncb2v.csb.app/sw.js`, and the app's root is `https://bncb2v.csb.app/`, so the service worker must be specified as `/sw.js`.
+- The path to your service worker points to a service worker of a different origin to your app.
+- The service worker registration contains a `scope` option broader than permitted by the worker path.
+  The default scope for a service worker is the directory where the worker is located.
+  In other words, if the script `sw.js` is located in `/js/sw.js`, it can only control URLs in (or nested within) the `/js/` path by default.
+  The scope for a service worker can be broadened (or narrowed) with the {{HTTPHeader("Service-Worker-Allowed")}} header.
+- Browser-specific settings are enabled, such as blocking all cookies, private browsing mode, automatic cookie deletion on close, etc.
+  See [`serviceWorker.register()` browser compatibility](/en-US/docs/Web/API/ServiceWorkerContainer/register#browser_compatibility) for more information.
 
 ### Install and activate: populating your cache
 
 After your service worker is registered, the browser will attempt to install then activate the service worker for your page/site.
 
-The `install` event is fired when an installation is successfully completed. The `install` event is generally used to populate your browser's offline caching capabilities with the assets you need to run your app offline. To do this, we use Service Worker's storage API — [`cache`](/en-US/docs/Web/API/Cache) — a global object on the service worker that allows us to store assets delivered by responses, and keyed by their requests. This API works in a similar way to the browser's standard cache, but it is specific to your domain. The contents of the cache are kept until you clear them.
+The `install` event is the first event that is fired on service worker installation or update.
+It is emitted just once, immediately after registration is successfully completed, and is generally used to populate your browser's offline caching capabilities with the assets you need to run your app offline. To do this, we use Service Worker's storage API — [`cache`](/en-US/docs/Web/API/Cache) — a global object on the service worker that allows us to store assets delivered by responses, and keyed by their requests. This API works in a similar way to the browser's standard cache, but it is specific to your domain. The contents of the cache are kept until you clear them.
 
 Here's how our service worker handles the `install` event:
 
@@ -384,7 +390,8 @@ Note that in this example we download and cache the same data for the resource w
 
 If your service worker has previously been installed, but then a new version of the worker is available on refresh or page load, the new version is installed in the background, but not yet activated. It is only activated when there are no longer any pages loaded that are still using the old service worker. As soon as there are no more such pages still loaded, the new service worker activates.
 
-> **Note:** It is possible to bypass this by using [`Clients.claim()`](/en-US/docs/Web/API/Clients/claim).
+> [!NOTE]
+> It is possible to bypass this by using [`Clients.claim()`](/en-US/docs/Web/API/Clients/claim).
 
 You'll want to update your `install` event listener in the new service worker to something like this (notice the new version number):
 
@@ -449,3 +456,4 @@ self.addEventListener("activate", (event) => {
 
 - [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
+- {{HTTPHeader("Service-Worker-Allowed")}} HTTP header

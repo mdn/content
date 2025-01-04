@@ -12,14 +12,14 @@ There are a number of guides within MDN docs. These articles aim to add addition
 
 ## HTML
 
-- [Structuring the web with HTML](/en-US/docs/Learn/HTML)
+- [Structuring the web with HTML](/en-US/docs/Learn_web_development/Core/Structuring_content)
   - : The HTML learning area offers tutorials to help you learn HTML from the ground up.
-- [HTML basics](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
+- [HTML basics](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)
   - : This article will give you a basic understanding of HTML. After following this guide, you can further explore the material in the HTML Learning Area.
 
 ## CSS
 
-- [Learn to style HTML using CSS](/en-US/docs/Learn/CSS)
+- [Learn to style HTML using CSS](/en-US/docs/Learn_web_development/Core/Styling_basics)
   - : Our complete CSS tutorial, taking you from first steps through styling text, creating layouts, and more.
 - [CSS Layout Guides](/en-US/docs/Web/Guide/CSS/CSS_Layout)
   - : There are a large number of guides to CSS Layout across MDN, this page collects them all together.
@@ -28,7 +28,7 @@ There are a number of guides within MDN docs. These articles aim to add addition
 
 ## JavaScript
 
-- [JavaScript learning area](/en-US/docs/Learn/JavaScript)
+- [JavaScript learning area](/en-US/docs/Learn_web_development/Core/Scripting)
   - : Whether you are a complete beginner, or hoping to refresh your skills, this is the place to start.
 
 ## Media
@@ -41,7 +41,7 @@ There are a number of guides within MDN docs. These articles aim to add addition
 ## APIs
 
 - [Using FormData objects](/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-  - : The [`FormData`](/en-US/docs/Web/API/FormData) object lets you compile a set of key/value pairs to send using {{domxref("fetch()")}}. It's primarily intended for sending form data, but can be used independently of forms to transmit keyed data. The transmission is in the same format that the form's `submit()` method would use to send the data if the form's encoding type were set to "multipart/form-data".
+  - : The [`FormData`](/en-US/docs/Web/API/FormData) object lets you compile a set of key/value pairs to send using {{domxref("Window/fetch", "fetch()")}}. It's primarily intended for sending form data, but can be used independently of forms to transmit keyed data. The transmission is in the same format that the form's `submit()` method would use to send the data if the form's encoding type were set to "multipart/form-data".
 - [Progressive web apps](/en-US/docs/Web/Progressive_web_apps#core_pwa_guides)
   - : Progressive web apps (PWAs) use modern web APIs along with traditional progressive enhancement strategy to create cross-platform web applications. These apps work everywhere and provide several features that give them the same user experience advantages as native apps. This set of guides tells you all you need to know about PWAs.
 - [Parsing and serializing XML](/en-US/docs/Web/XML/Parsing_and_serializing_XML)
@@ -54,7 +54,7 @@ There are a number of guides within MDN docs. These articles aim to add addition
 
 ## Mobile web development
 
-- [Mobile web development](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
+- [Learn: Responsive design](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)
   - : This article provides an overview of some main techniques needed to design websites that work well on mobile devices.
 
 ## Fonts
@@ -66,5 +66,5 @@ There are a number of guides within MDN docs. These articles aim to add addition
 
 ## User interface development
 
-- [User input methods and controls](/en-US/docs/Learn/Forms/User_input_methods)
+- [User input methods and controls](/en-US/docs/Learn_web_development/Extensions/Forms/User_input_methods)
   - : User input goes beyond just a mouse and keyboard: think of touchscreens for example. This article provides recommendations for managing user input and implementing controls in open web apps, along with FAQs, real-world examples, and links to further information for anyone needing more detailed information on the underlying technologies.

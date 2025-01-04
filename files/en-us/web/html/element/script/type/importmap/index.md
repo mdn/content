@@ -86,7 +86,7 @@ Note that in this case the property and mapped path must both have a trailing fo
   {
     "imports": {
       "shapes/": "./module/shapes/",
-      "othershapes/": "https://example.com/modules/shapes/"
+      "other-shapes/": "https://example.com/modules/shapes/"
     }
   }
 </script>
@@ -125,7 +125,7 @@ You can use the `scopes` key to provide mappings that are only used if the scrip
 If the URL of the loading script matches the supplied path, the mapping associated with the scope will be used.
 This allows different versions of the module to be used depending on what code is doing the importing.
 
-For example, the map below will only use the scoped map if the loading module has a URL that includes the path: "/modules/customshapes/".
+For example, the map below will only use the scoped map if the loading module has a URL that includes the path: "/modules/custom-shapes/".
 
 ```html
 <script type="importmap">
@@ -134,7 +134,7 @@ For example, the map below will only use the scoped map if the loading module ha
       "square": "./module/shapes/square.js"
     },
     "scopes": {
-      "/modules/customshapes/": {
+      "/modules/custom-shapes/": {
         "square": "https://example.com/modules/shapes/square.js"
       }
     }
@@ -173,7 +173,7 @@ For example, the map below defines integrity metadata for the `square.js` module
 
 The following is a "formal" definition of the import map JSON representation.
 
-The import map must be a valid JSON object that can define at most two optional keys: `imports` and `scopes`. Each key's value must be an object, which may be empty.
+The import map must be a valid JSON object that can define any of the optional keys `imports`, `scopes` and `integrity`. Each key's value must be an object, which may be empty.
 
 - `imports` {{optional_inline}}
 

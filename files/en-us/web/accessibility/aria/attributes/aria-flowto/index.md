@@ -17,7 +17,8 @@ The global `aria-flowto` attribute lets the author indicate to assistive technol
 
 When `aria-flowto` has a single [id](/en-US/docs/Web/HTML/Global_attributes/id) reference, it allows assistive technologies to, at the user's request, go to the element targeted via that `id` instead of reading the document in the order of the DOM. When the `aria-flowto` value uses a space separated list of multiple `id` references, assistive technology can provide the user with a list of path choices, with each `id` referenced being a choice. The path choice names are determined by the accessible name of each target element of the `aria-flowto` attribute.
 
-> **Note:** Setting `aria-flowto` does not impact the content's tab order. It only provides users the option to follow a content path that doesn't match the DOM order when using tech that supports this attribute.
+> [!NOTE]
+> Setting `aria-flowto` does not impact the content's tab order. It only provides users the option to follow a content path that doesn't match the DOM order when using tech that supports this attribute.
 
 ## Values
 

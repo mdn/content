@@ -8,7 +8,8 @@ page-type: guide
 
 **Variable fonts** are an evolution of the OpenType font specification that enables many different variations of a typeface to be incorporated into a single file, rather than having a separate font file for every width, weight, or style. They let you access all the variations contained in a given font file via CSS and a single {{cssxref("@font-face")}} reference. This article will give you all you need to know to get you started using variable fonts.
 
-> **Note:** To use variable fonts on your operating system, you need to make sure that it is up to date. For example, Linux OSes need the latest Linux Freetype version, and macOS prior to High Sierra (10.13) does not support variable fonts. If your operating system is not up to date, you will not be able to use variable fonts in web pages or the Firefox Developer Tools.
+> [!NOTE]
+> To use variable fonts on your operating system, you need to make sure that it is up to date. For example, Linux OSes need the latest Linux Freetype version, and macOS prior to High Sierra (10.13) does not support variable fonts. If your operating system is not up to date, you will not be able to use variable fonts in web pages or the Firefox Developer Tools.
 
 ## Variable Fonts: what they are, and how they differ
 
@@ -71,15 +72,95 @@ font-weight: 375;
 font-variation-settings: "wght" 375;
 ```
 
-The following live example's CSS can be edited to allow you to play with font-weight values.
+Click "Play" in the code blocks below to edit the example in the MDN Playground. Edit the CSS code to play with font-weight values.
 
-{{EmbedGHLiveSample("css-examples/variable-fonts/weight.html", '100%', 520)}}
+```html hidden live-sample___variable-fonts-weight-example
+<div>
+  <p class="p1">Weight</p>
+  <span>(font-weight: 625)</span>
+</div>
+<div>
+  <p class="p2">Weight</p>
+  <span>(font-variation-settings: "wght" 625)</span>
+</div>
+<div class="adjustable">
+  <p class="p3">Weight</p>
+  (font-variation-settings: "wght" <span id="angle-text">625</span>)<br />
+  <label for="text-axis">Adjust Weight: </label>
+  <input
+    type="range"
+    id="text-axis"
+    name="text-axis"
+    min="300"
+    max="900"
+    value="625" />
+</div>
+```
+
+```css hidden live-sample___variable-fonts-weight-example
+@font-face {
+  font-family: "Amstelvar VF";
+  src: url("https://mdn.github.io/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.woff2")
+    format("woff2-variations");
+  font-weight: 300 900;
+  font-stretch: 35% 100%;
+  font-style: normal;
+  font-display: swap;
+}
+
+p {
+  font:
+    1.2em "Amstelvar VF",
+    Georgia,
+    serif;
+  font-size: 4rem;
+  margin: 1rem;
+  display: inline-block;
+}
+
+.adjustable {
+  border: 1px dashed;
+  --text-axis: 625;
+}
+```
+
+```css live-sample___variable-fonts-weight-example
+/* weight range is 300 to 900 */
+.p1 {
+  font-weight: 625;
+}
+
+/* weight range is 300 to 900 */
+.p2 {
+  font-variation-settings: "wght" 625;
+}
+
+/* Adjust with slider & custom property */
+.p3 {
+  font-variation-settings: "wght" var(--text-axis);
+}
+```
+
+```js hidden live-sample___variable-fonts-weight-example
+const angle = document.querySelector("#text-axis");
+const text = document.querySelector("#angle-text");
+const adjustable = document.querySelector(".adjustable");
+
+angle.addEventListener("input", (e) => {
+  const angle = e.target.value;
+  text.innerText = angle;
+  adjustable.style.setProperty("--text-axis", angle);
+});
+```
+
+{{EmbedLiveSample("variable-fonts-weight-example", "", "450px")}}
 
 ### Width
 
 Width (represented by the `wdth` tag) defines the design axis of how narrow or wide (condensed or extended, in typographic terms) the letterforms can be. This is typically set in CSS using the {{cssxref("font-stretch")}} property, with values expressed as a percentage above or below 'normal' (100%), any number greater than 0 is technically valid—though it is far more likely that the range would fall closer to the 100% mark, such as 75%-125%. If a number value supplied is outside the range encoded in the font, the browser should render the font at the closest value allowed.
 
-> **Note:** The % symbol is not used when utilizing `font-variation-settings`.
+> [!NOTE]
+> The % symbol is not used when utilizing `font-variation-settings`.
 
 ```css
 font-stretch: 115%;
@@ -87,9 +168,89 @@ font-stretch: 115%;
 font-variation-settings: "wdth" 115;
 ```
 
-The following live example's CSS can be edited to allow you to play with font width values.
+Click "Play" in the code blocks below to edit the example in the MDN Playground. Edit the CSS code to play with font-width values.
 
-{{EmbedGHLiveSample("css-examples/variable-fonts/width.html", '100%', 520)}}
+```html hidden live-sample___variable-fonts-width-example
+<div>
+  <p class="p1">Width</p>
+  <span>(font-stretch: 60%)</span>
+</div>
+<div>
+  <p class="p2">Width</p>
+  <span>(font-variation-settings: "wdth" 60)</span>
+</div>
+<div class="adjustable">
+  <p class="p3">Width</p>
+  (font-variation-settings: "wdth" <span id="angle-text">60</span>)<br />
+
+  <label for="text-axis">Adjust Width: </label>
+  <input
+    type="range"
+    id="text-axis"
+    name="text-axis"
+    min="55"
+    max="100"
+    value="60" />
+</div>
+```
+
+```css hidden live-sample___variable-fonts-width-example
+@font-face {
+  font-family: "Amstelvar VF";
+  src: url("https://mdn.github.io/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.woff2")
+    format("woff2-variations");
+  font-weight: 300 900;
+  font-stretch: 35% 100%;
+  font-style: normal;
+  font-display: swap;
+}
+
+p {
+  font:
+    1.2em "Amstelvar VF",
+    Georgia,
+    serif;
+  font-size: 4rem;
+  margin: 1rem;
+  display: inline-block;
+}
+
+.adjustable {
+  border: 1px dashed;
+  --text-axis: 60;
+}
+```
+
+```css live-sample___variable-fonts-width-example
+/* width range is 55% to 100% */
+.p1 {
+  font-stretch: 60%;
+}
+
+/* width range is an integer from 55 to 100 */
+.p2 {
+  font-variation-settings: "wdth" 60;
+}
+
+/* Adjust with slider & custom property */
+.p3 {
+  font-variation-settings: "wdth" var(--text-axis);
+}
+```
+
+```js hidden live-sample___variable-fonts-width-example
+const angle = document.querySelector("#text-axis");
+const text = document.querySelector("#angle-text");
+const adjustable = document.querySelector(".adjustable");
+
+angle.addEventListener("input", (e) => {
+  const angle = e.target.value;
+  text.innerText = angle;
+  adjustable.style.setProperty("--text-axis", angle);
+});
+```
+
+{{EmbedLiveSample("variable-fonts-width-example", "", "450px")}}
 
 ### Italic
 
@@ -105,25 +266,187 @@ font-variation-settings: "ital" 1;
 font-synthesis: none;
 ```
 
-The following live example's CSS can be edited to allow you to play with font italics.
+Click "Play" in the code blocks below to edit the example in the MDN Playground. Edit the CSS code to play with font-italics.
 
-{{EmbedGHLiveSample("css-examples/variable-fonts/italic.html", '100%', 520)}}
+```html hidden live-sample___variable-fonts-italic-example
+<div>
+  <p class="p1">Italic</p>
+  <span>(font-style: italic)</span>
+  <p class=".p1-no-synthesis">Italic</p>
+  <span>(font-style: italic; font-synthesis: none)</span>
+</div>
+<div>
+  <p class="p2">Italic</p>
+  <span>(font-variation-settings: "ital" 1)</span>
+</div>
+<div class="adjustable">
+  <p class="p3">Italic</p>
+  (font-variation-settings: "ital" <span id="angle-text">1</span>)<br />
+
+  <label for="slant-angle">Adjust Italic: </label>
+  <input
+    type="range"
+    id="text-axis"
+    name="text-axis"
+    min="0"
+    max="1"
+    value="1" />
+</div>
+```
+
+```css hidden live-sample___variable-fonts-italic-example
+@font-face {
+  font-family: "Jost VF";
+  src: url("https://mdn.github.io/shared-assets/fonts/variable-fonts/jost-VF.woff2")
+    format("woff2-variations");
+  font-weight: 300 900;
+  font-stretch: 75% 150%;
+  font-display: swap;
+}
+
+p {
+  font:
+    1.2em "Jost VF",
+    Helvetica,
+    Arial,
+    sans-serif;
+  font-size: 4rem;
+  margin: 1rem;
+  display: inline-block;
+}
+
+.adjustable {
+  border: 1px dashed;
+  --text-axis: 1;
+}
+```
+
+```css live-sample___variable-fonts-italic-example
+/* font-style: italic, with and without font-synthesis */
+.p1 {
+  font-style: italic;
+}
+
+.p1-no-synthesis {
+  font-style: italic;
+  font-synthesis: none;
+}
+
+/* italic range is 0 or 1 */
+.p2 {
+  font-variation-settings: "ital" 1;
+  font-synthesis: none;
+}
+
+/* Adjust with slider & custom property */
+.p3 {
+  font-synthesis: none;
+  font-variation-settings: "ital" var(--text-axis);
+}
+```
+
+```js hidden live-sample___variable-fonts-italic-example
+const angle = document.querySelector("#text-axis");
+const text = document.querySelector("#angle-text");
+const adjustable = document.querySelector(".adjustable");
+
+angle.addEventListener("input", (e) => {
+  const angle = e.target.value;
+  text.innerText = angle;
+  adjustable.style.setProperty("--text-axis", angle);
+});
+```
+
+{{EmbedLiveSample("variable-fonts-italic-example", "", "450px")}}
 
 ### Slant
 
-Slant (represented by the `slnt` tag), or as it's often referred to, 'oblique' — is different from true italics in that it changes the angle of the letterforms but doesn't perform any kind of character substitution. It is also variable, in that it is expressed as a numeric range. This allows the font to be varied anywhere along that axis. The allowed range is generally 0 (upright) to 20 degrees — any number value along that range can be supplied, so the font can be slanted just a tiny bit. However, any value from -90 to 90 degrees is valid.
+Slant (represented by the `slnt` tag), or as it's often referred to, 'oblique' — is different from true italics in that it changes the angle of the letterforms but doesn't perform any kind of character substitution. It is also variable, in that it is expressed as a numeric range. This allows the font to be varied anywhere along the slant axis. The allowed range is from -90 to 90 degrees.
 
-> **Note:** The `deg` keyword is not used when utilizing `font-variation-settings`.
+The two properties that can control the slant are [`font-style`](/en-US/docs/Web/CSS/font-style) and [`font-variation-settings`](/en-US/docs/Web/CSS/font-variation-settings). The following two property declarations are the same:
 
-```css
+```plain
 font-style: oblique 14deg;
 
-font-variation-settings: "slnt" 14;
+font-variation-settings: "slnt" -14;
 ```
 
-The following live example's CSS can be edited to allow you to play with font slant/oblique values.
+Prefer the `font-style` property over the `font-variation-settings` property. The `deg` keyword is not used when using the `font-variation-settings` property. Also, in the case of the `font-variation-settings` property, a positive angle means a counter-clockwise slant.
 
-{{EmbedGHLiveSample("css-examples/variable-fonts/slant.html", '100%', 520)}}
+In the following live example, you can adjust the slant.
+
+```html hidden live-sample___slant-example
+<div>
+  <p class="font-style">Slant</p>
+  <span>(font-style: oblique 5deg)</span>
+</div>
+<div>
+  <p class="font-variation">Slant</p>
+  <span>(font-variation-settings: 'slnt' -5)</span>
+</div>
+<div class="adjustable-box">
+  <p class="adjustable">Slant</p>
+  (font-variation-settings: 'slnt' <span id="angle-text">-5</span>)<br />
+
+  <label for="slant-angle">Adjust Slant: </label>
+  <input
+    type="range"
+    name="range-slider"
+    value="5"
+    id="slant-angle"
+    min="-15"
+    max="15" />
+</div>
+```
+
+```css hidden live-sample___slant-example
+@font-face {
+  font-family: "SlantFont";
+  font-style: oblique -15 15;
+  src: url("https://mdn.github.io/shared-assets/fonts/font_with_slant_axis.woff2")
+    format("woff2");
+}
+
+p {
+  font-family: "SlantFont";
+  display: inline-block;
+  margin: 1rem;
+  font-size: 4rem;
+}
+
+.adjustable-box {
+  border: 1px dashed;
+  --text-axis: -5;
+}
+```
+
+```css live-sample___slant-example
+.font-style {
+  font-style: oblique 5deg;
+}
+
+.font-variation {
+  font-variation-settings: "slnt" -5;
+}
+
+.adjustable {
+  font-variation-settings: "slnt" var(--slant-angle);
+}
+```
+
+```js hidden live-sample___slant-example
+const angle = document.querySelector("#slant-angle");
+const text = document.querySelector("#angle-text");
+const adjustable = document.querySelector(".adjustable");
+
+angle.addEventListener("input", (e) => {
+  const angle = -1 * e.target.value;
+  text.innerText = angle;
+  adjustable.style.setProperty("--slant-angle", angle);
+});
+```
+
+{{EmbedLiveSample("slant-example", "", "400")}}
 
 ### Optical size
 
@@ -141,9 +464,97 @@ font-optical-sizing: auto;
 font-variation-settings: "opsz" 36;
 ```
 
-The following live example's CSS can be edited to allow you to play with optical size values.
+Click "Play" in the code blocks below to edit the example in the MDN Playground. Edit the CSS code to play with optical size values.
 
-{{EmbedGHLiveSample("css-examples/variable-fonts/optical-sizing.html", '100%', 1020)}}
+```html hidden live-sample___optical-sizing-example
+<div>
+  <p class="p1">Optical Size</p>
+  <span>(font-optical-sizing: none)</span>
+</div>
+<div>
+  <p class="p2">Optical Size</p>
+  <span>(font-optical-sizing: auto)</span>
+</div>
+<div>
+  <p class="p3">Optical Size</p>
+  <span>(font-variation-settings: "opsz" 64)</span>
+</div>
+
+<div class="adjustable">
+  <p class="p4">Optical Size</p>
+  (font-variation-settings: "opsz" <span id="angle-text">-64</span>)<br />
+
+  <label for="slant-angle">Adjust Optical Sizing: </label>
+  <input
+    type="range"
+    name="text-axis"
+    value="64"
+    id="text-axis"
+    min="8"
+    max="144" />
+</div>
+```
+
+```css hidden live-sample___optical-sizing-example
+@font-face {
+  font-family: "Amstelvar VF";
+  src: url("https://mdn.github.io/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.woff2")
+    format("woff2-variations");
+  font-weight: 300 900;
+  font-stretch: 75% 150%;
+  font-style: normal;
+  font-display: swap;
+}
+
+p {
+  font:
+    1.2em "Amstelvar VF",
+    Georgia,
+    serif;
+  font-size: 4rem;
+  margin: 1rem;
+  display: inline-block;
+}
+
+.adjustable {
+  border: 1px dashed;
+  --text-axis: 64;
+}
+```
+
+```css live-sample___optical-sizing-example
+.p1 {
+  font-optical-sizing: none;
+}
+/* font-optical-sizing can be auto or none */
+.p2 {
+  font-optical-sizing: auto;
+}
+
+/* optical range is from 8 to 144 */
+.p3 {
+  font-variation-settings: "opsz" 64;
+}
+
+/* Adjust with slider & custom property */
+.p4 {
+  font-variation-settings: "opsz" var(--text-axis);
+}
+```
+
+```js hidden live-sample___optical-sizing-example
+const angle = document.querySelector("#text-axis");
+const text = document.querySelector("#angle-text");
+const adjustable = document.querySelector(".adjustable");
+
+angle.addEventListener("input", (e) => {
+  const angle = e.target.value;
+  text.innerText = angle;
+  adjustable.style.setProperty("--text-axis", angle);
+});
+```
+
+{{EmbedLiveSample("optical-sizing-example", "", "550px")}}
 
 ### Custom axes
 
@@ -157,9 +568,83 @@ Grade may become one of the more common custom axes as it has a known history in
 font-variation-settings: "GRAD" 88;
 ```
 
-The following live example's CSS can be edited to allow you to play with font grade values.
+Click "Play" in the code blocks below to edit the example in the MDN Playground. Edit the CSS code to play with font-grade values.
 
-{{EmbedGHLiveSample("css-examples/variable-fonts/grade.html", '100%', 520)}}
+```html hidden live-sample___grade-example
+<div>
+  <p class="p1">Grade</p>
+  <span>(font-variation-settings: 'GRAD' 88)</span>
+</div>
+
+<div class="adjustable">
+  <p class="p2">Grade</p>
+  (font-variation-settings: 'GRAD' <span id="angle-text">88</span>)<br />
+
+  <label for="slant-angle">Adjust Grade: </label>
+  <input
+    type="range"
+    name="text-axis"
+    value="88"
+    id="text-axis"
+    min="88"
+    max="150" />
+</div>
+```
+
+```css hidden live-sample___grade-example
+@font-face {
+  font-family: "Amstelvar VF";
+  src: url("https://mdn.github.io/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.woff2")
+    format("woff2-variations");
+  font-weight: 300 900;
+  font-stretch: 75% 150%;
+  font-style: normal;
+  font-display: swap;
+}
+
+p {
+  font:
+    1.2em "Amstelvar VF",
+    Georgia,
+    serif;
+  font-size: 64px;
+  margin: 1rem;
+  display: inline-block;
+}
+
+.adjustable {
+  border: 1px dashed;
+  --text-axis: 88;
+}
+```
+
+```css live-sample___grade-example
+/* grade range is 88 to 150 */
+.p1 {
+  font-size: 64px;
+  font-variation-settings: "GRAD" 88;
+}
+
+/* Adjust with slider & custom property */
+.p2 {
+  font-size: 64px;
+  font-variation-settings: "GRAD" var(--text-axis);
+}
+```
+
+```js hidden live-sample___grade-example
+const angle = document.querySelector("#text-axis");
+const text = document.querySelector("#angle-text");
+const adjustable = document.querySelector(".adjustable");
+
+angle.addEventListener("input", (e) => {
+  const angle = e.target.value;
+  text.innerText = angle;
+  adjustable.style.setProperty("--text-axis", angle);
+});
+```
+
+{{EmbedLiveSample("grade-example", "", "300px")}}
 
 ### Using a variable font: @font-face changes
 
@@ -172,54 +657,54 @@ The basic syntax is the same, but the font technology can be specified, and allo
 ```css
 @font-face {
   font-family: "MyVariableFontName";
-  src: url("path/to/font/file/myvariablefont.woff2") format("woff2-variations");
+  src: url("path/to/font/file/my-variable-font.woff2")
+    format("woff2-variations");
   font-weight: 125 950;
   font-stretch: 75% 125%;
+
   font-style: normal;
 }
 ```
 
-#### Example for a font that includes both upright and italics
-
-```css
-@font-face {
-  font-family: "MyVariableFontName";
-  src: url("path/to/font/file/myvariablefont.woff2") format("woff2-variations");
-  font-weight: 125 950;
-  font-stretch: 75% 125%;
-  font-style: oblique 0deg 20deg;
-}
-```
-
-> **Note:** there is no set specific value for the upper-end degree measurement in this case; they indicate that there is an axis so the browser can know to render upright or italic (remember that italics are only on or off)
+In this case, the `font-style: normal` declaration indicates that this font file should be used when `font-family` is set to `MyVariableFontName` and [`font-style`](/en-US/docs/Web/CSS/font-style) is set to `normal`. As an alternative, you could use `font-style: oblique 0deg` or `font-style: oblique 0deg 20deg` to indicate that the font has normal upright glyphs (indicated by `0deg`).
 
 #### Example for a font that contains only italics and no upright characters
 
 ```css
 @font-face {
   font-family: "MyVariableFontName";
-  src: url("path/to/font/file/myvariablefont.woff2") format("woff2-variations");
+  src: url("path/to/font/file/my-variable-font.woff2")
+    format("woff2-variations");
   font-weight: 125 950;
   font-stretch: 75% 125%;
+
   font-style: italic;
 }
 ```
+
+In this case, the `font-style: italic` declaration indicates that this font file should be used when `font-family` is set to `MyVariableFontName` and [`font-style`](/en-US/docs/Web/CSS/font-style) is set to `italic`. As an alternative, you could use `font-style: oblique 14deg` to indicate that the font has italic glyphs.
 
 #### Example for a font that contains an oblique (slant) axis
 
 ```css
 @font-face {
   font-family: "MyVariableFontName";
-  src: url("path/to/font/file/myvariablefont.woff2") format("woff2-variations");
+  src: url("path/to/font/file/my-variable-font.woff2")
+    format("woff2-variations");
   font-weight: 125 950;
   font-stretch: 75% 125%;
+
   font-style: oblique 0deg 12deg;
 }
 ```
 
-> **Note:** Not all browsers have implemented the full syntax for font format, so test carefully. All browsers that support variable fonts will still render them if you set the format to just the file format, rather than format-variations (i.e. `woff2` instead of `woff2-variations`), but it's best to use the proper syntax if possible.
+In this case, the `oblique 0deg 12deg` value indicates that this font file should be used when in a style rule the `font-family` property is `MyVariableFontName` and the [font-style](/en-US/docs/Web/CSS/font-style) property is oblique with an angle between zero and 12 degrees inclusive.
 
-> **Note:** Supplying value ranges for `font-weight`, `font-stretch`, and `font-style` will keep the browser from attempting to render an axis outside that range if you are using the appropriate attribute (i.e. `font-weight` or `font-stretch`), but will not block you from supplying an invalid value via `font-variation-settings`, so use with care.
+> [!NOTE]
+> Not all browsers have implemented the full syntax for font format, so test carefully. All browsers that support variable fonts will still render them if you set the format to just the file format, rather than format-variations (i.e. `woff2` instead of `woff2-variations`), but it's best to use the proper syntax if possible.
+
+> [!NOTE]
+> Supplying value ranges for `font-weight`, `font-stretch`, and `font-style` will keep the browser from attempting to render an axis outside that range if you are using the appropriate attribute (i.e. `font-weight` or `font-stretch`), but will not block you from supplying an invalid value via `font-variation-settings`, so use with care.
 
 ## Working with older browsers
 
@@ -239,17 +724,134 @@ h1 {
 
 ## Sample pages
 
-The following example pages show two different ways to structure your CSS. The first uses the standard attributes wherever possible. The second example uses CSS Custom Properties to set values for a `font-variation-settings` string and shows how you can more easily update single variable values by overriding a single variable rather than rewriting the whole string. Note the hover effect on the `h2`, which only alters the grade axis custom property value.
+The following example pages show two different ways to structure your CSS. The first uses the standard attributes wherever possible. The second example uses CSS Custom Properties to set values for a `font-variation-settings` string and shows how you can more easily update single variable values by overriding a single variable rather than rewriting the whole string. Note the hover effect on the `h2`, which only alters the grade axis custom property value. Click "Play" in the code blocks below to edit the example in the MDN Playground:
 
-{{EmbedGHLiveSample("css-examples/variable-fonts/sample-page.html", '100%', 1220)}}
+```html hidden live-sample___sample-page-example
+<div class="container container1">
+  <h1>Moby-Dick</h1>
+  <h2>CHAPTER 1. Loomings.</h2>
+  <p>
+    Call me Ishmael. Some years ago—never mind how long precisely–having little
+    or no money in my purse, and nothing particular to interest me on shore, I
+    thought I would sail about a little and see the watery part of the world. It
+    is a way I have of driving off the spleen and regulating the circulation.
+    Whenever I find myself growing grim about the mouth; whenever it is a damp,
+    drizzly November in my soul; whenever I find myself involuntarily pausing
+    before coffin warehouses, and bringing up the rear of every funeral I meet;
+    and especially whenever my hypos get such an upper hand of me, that it
+    requires a strong moral principle to prevent me from deliberately stepping
+    into the street, and methodically knocking people’s hats off then, I account
+    it high time to get to sea as soon as I can.
+  </p>
+</div>
+<hr />
+<div class="container container2 demo2">
+  <h1>Moby-Dick</h1>
+  <h2>CHAPTER 1. (hover here)</h2>
+  <p>
+    Call me Ishmael. Some years ago—never mind how long precisely–having little
+    or no money in my purse, and nothing particular to interest me on shore, I
+    thought I would sail about a little and see the watery part of the world. It
+    is a way I have of driving off the spleen and regulating the circulation.
+    Whenever I find myself growing grim about the mouth; whenever it is a damp,
+    drizzly November in my soul; whenever I find myself involuntarily pausing
+    before coffin warehouses, and bringing up the rear of every funeral I meet;
+    and especially whenever my hypos get such an upper hand of me, that it
+    requires a strong moral principle to prevent me from deliberately stepping
+    into the street, and methodically knocking people’s hats off then, I account
+    it high time to get to sea as soon as I can.
+  </p>
+</div>
+```
+
+```css hidden live-sample___sample-page-example
+@font-face {
+  font-family: "Amstelvar VF";
+  src: url("https://mdn.github.io/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.woff2")
+    format("woff2-variations");
+  font-weight: 300 900;
+  font-stretch: 75% 150%;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font:
+    1.2em "Amstelvar VF",
+    Georgia,
+    serif;
+  margin: 20px;
+  padding: 0;
+}
+
+.container * {
+  margin: 0.5rem auto 1rem;
+  max-width: 42rem;
+}
+```
+
+```css live-sample___sample-page-example
+.container1 h1 {
+  font-optical-sizing: auto;
+  font-size: 5rem;
+  font-stretch: 85%;
+  font-weight: 450;
+}
+.container1 h2 {
+  font-optical-sizing: auto;
+  font-size: 2.25rem;
+  font-stretch: 90%;
+  font-weight: 575;
+}
+.container1 p {
+  font-optical-sizing: auto;
+  font-size: 1rem;
+  font-stretch: 100%;
+  font-weight: 375;
+}
+.demo2 {
+  --text-wght: 375;
+  --text-wdth: 100;
+  --text-opsz: 16;
+  --text-GRAD: 88;
+}
+.container2 > * {
+  font-size: 5rem;
+  font-variation-settings:
+    "wght" var(--text-wght),
+    "wdth" var(--text-wdth),
+    "opsz" var(--text-opsz),
+    "GRAD" var(--text-GRAD);
+}
+.container2 h1 {
+  --text-wght: 450;
+  --text-wdth: 85;
+  --text-opsz: 80;
+  font-size: 5rem;
+}
+.container2 h2 {
+  --text-wght: 575;
+  --text-wdth: 95;
+  --text-opsz: 36;
+  font-size: 2.25rem;
+}
+.container2 h2:hover {
+  --text-GRAD: 130;
+}
+.container2 p {
+  font-size: 1rem;
+}
+```
+
+{{EmbedLiveSample("sample-page-example", "", "850px")}}
 
 ## Resources
 
 - [W3C CSS Fonts Module 4 Specification](https://drafts.csswg.org/css-fonts-4/) (editor's draft)
 - [W3C GitHub issue queue](https://github.com/w3c/csswg-drafts/issues)
-- [Microsoft Open Type Variations introduction](https://docs.microsoft.com/typography/opentype/spec/otvaroverview)
-- [Microsoft OpenType Design-Variation Axis Tag Registry](https://docs.microsoft.com/typography/opentype/spec/dvaraxisreg)
-- [Wakamai Fondue](https://wakamaifondue.com) (a site that will tell you what your font can do via a simple drag-and-drop inspection interface)
-- [Axis Praxis](https://www.axis-praxis.org) (the original variable fonts playground site)
-- [V-Fonts.com](https://v-fonts.com) (a catalog of variable fonts and where to get them)
-- [Font Playground](https://play.typedetail.com) (another playground for variable fonts with some very unique approaches to user interface)
+- [Microsoft Open Type Variations introduction](https://learn.microsoft.com/en-us/typography/opentype/spec/otvaroverview)
+- [Microsoft OpenType Design-Variation Axis Tag Registry](https://learn.microsoft.com/en-us/typography/opentype/spec/dvaraxisreg)
+- [Wakamai Fondue](https://wakamaifondue.com/) (a site that will tell you what your font can do via a simple drag-and-drop inspection interface)
+- [Axis Praxis](https://www.axis-praxis.org/) (the original variable fonts playground site)
+- [V-Fonts.com](https://v-fonts.com/) (a catalog of variable fonts and where to get them)
+- [Font Playground](https://play.typedetail.com/) (another playground for variable fonts with some very unique approaches to user interface)

@@ -7,25 +7,31 @@ page-type: guide
 {{GamesSidebar}}
 
 Built for modern browsers, **PlayCanvas** is a fully-featured 3D game engine with resource loading, an entity and component system, advanced graphics manipulation, collision and physics engine (built with [ammo.js](https://github.com/kripken/ammo.js/)), audio, and facilities to handle control inputs from various devices (including gamepads).
-
 That's quite an impressive list of features — let's see some in action.
 
-![PlayCanvas engine repository on GitHub.](playcanvas-github.png)
+We build a basic demo first — a cube rendered on the screen. If you have already worked through our [Building up a basic demo with Three.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js) article (or you are familiar with other 3D libraries) you'll notice that PlayCanvas has similar concepts: camera, light and objects.
 
-We will try putting together a simple demo first — a cube rendered on the screen. If you have already worked through our [Building up a basic demo with Three.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js) article (or you are familiar with other 3D libraries) you'll notice that PlayCanvas works on similar concepts: camera, light and objects.
+> [!NOTE]
+> This guide was last updated in November 2024, and is compatible with PlayCanvas version `2.2.2`.
 
-## Environment setup
+## Development setup
 
-To start developing with PlayCanvas, you don't need much. You should start off by:
+To start developing with PlayCanvas, make sure you are using a modern browser with good [WebGL](/en-US/docs/Web/API/WebGL_API) support.
+It's useful to keep the [PlayCanvas documentation](https://developer.playcanvas.com/en/user-manual/) in a separate tab while you're working.
 
-- Making sure you are using a modern browser with good [WebGL](/en-US/docs/Web/API/WebGL_API) support, such as the latest Firefox or Chrome.
-- Creating a directory to store your experiments in.
-- Saving a copy of the [latest PlayCanvas engine](https://code.playcanvas.com/playcanvas-latest.js) inside your directory.
-- Opening the [PlayCanvas documentation](https://developer.playcanvas.com/en/user-manual/) in a separate tab — it is useful to refer to.
+If you're developing locally in an IDE, make a directory to store your experiments in and save a copy of the [latest PlayCanvas engine](https://code.playcanvas.com/playcanvas-latest.js) inside that directory.
+Alternatively, you can load PlayCanvas from a CDN:
 
-## HTML structure
+```html
+<script src="https://cdn.jsdelivr.net/npm/playcanvas@2.2.2/build/playcanvas.min.js"></script>
+```
 
-Here's the HTML structure we will use.
+If you don't want to develop locally, you can use an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+With these editors, you can add `https://cdn.babylonjs.com/babylon.js` as a JavaScript source so it's available in your code.
+
+### HTML starter for PlayCanvas
+
+If you're building your project locally in an IDE, here's the HTML structure to get started:
 
 ```html
 <!doctype html>
@@ -34,30 +40,35 @@ Here's the HTML structure we will use.
     <meta charset="utf-8" />
     <title>MDN Games: PlayCanvas demo</title>
     <style>
-      body {
+      html,
+      body,
+      canvas {
         margin: 0;
         padding: 0;
-      }
-      canvas {
         width: 100%;
         height: 100%;
+        font-size: 0;
       }
     </style>
   </head>
   <body>
+    <!--  The local copy of PlayCanvas -->
     <script src="playcanvas-latest.js"></script>
+    <!--  or loaded via CDN: -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/playcanvas@2.2.2/build/playcanvas.min.js"></script> -->
+
     <canvas id="application-canvas"></canvas>
     <script>
       const canvas = document.getElementById("application-canvas");
-      /* all our JavaScript code goes here */
+      /* All of our JavaScript code goes here */
     </script>
   </body>
 </html>
 ```
 
-It contains some basic information like the document {{htmlelement("title")}}, and some CSS to set the width and height of the {{htmlelement("canvas")}} element that PlayCanvas will use to 100% so that it will fill the entire available viewport space. The first {{htmlelement("script")}} element includes the PlayCanvas library in the page; we will write our example code in the second one. There is one helper variable already included, which will store a reference to the {{htmlelement("canvas")}} element.
+It contains information like the document {{htmlelement("title")}}, and some CSS to set the width and height of the {{htmlelement("canvas")}} element (that PlayCanvas will use) to 100%, so that it will fill the entire available viewport space. The first {{htmlelement("script")}} element includes the PlayCanvas library in the page; we will write our example code in the second one. There is one variable already included, which will store a reference to the {{htmlelement("canvas")}} element.
 
-Before reading on, copy this code to a new text file and save it in your working directory as `index.html`.
+If you're developing in an IDE, copy this code to a new text file and save it in your working directory as `index.html`.
 
 ## PlayCanvas application
 
@@ -79,7 +90,7 @@ app.setCanvasResolution(pc.RESOLUTION_AUTO);
 
 ## Camera
 
-Now when the setup code is in place we need to think about implementing the standard scene components: camera, lights and objects. Let's start with the camera — add these lines to your code, below the previous ones.
+Now that the setup code is in place, we need to think about implementing the standard scene components: camera, lights and objects. Let's start with the camera — add these lines to your code, below the previous ones.
 
 ```js
 const camera = new pc.Entity();
@@ -92,14 +103,13 @@ camera.setPosition(0, 0, 7);
 ```
 
 The code above will create a new `Entity`.
-
-> **Note:** An Entity is any object used in the scene — it can be an object like a box, cylinder or cone, but it can also be a camera, light or sound source.
+An Entity is any object used in the scene — it can be an object like a box, cylinder or cone, but it can also be a camera, light or sound source.
 
 Then it adds a `camera` component to it with the light gray `clearColor` — the color will be visible as the background. Next, the `camera` object is added to the root of our application and positioned to be 7 units away from the center of the scene on the `z` axis. This allows us to make some space to visualize the objects that we will create later on.
 
-> **Note:** The distance values (e.g. for the camera z position) are unitless, and can basically be anything you deem suitable for your scene — millimeters, meters, feet, or miles — it's up to you.
+The distance values (e.g., for the camera z position) are unitless, and can basically be anything you deem suitable for your scene — millimeters, meters, feet, or miles — it's up to you.
 
-Try saving the file and loading it in your browser. You should now see a gray window. Congratulations!
+Try saving the file and loading it in your browser. You should now see a gray window.
 
 ## Geometry
 
@@ -114,7 +124,8 @@ box.rotate(10, 15, 0);
 
 It will create an `Entity` with the `box` model component and add it to the root of the application, our scene. We also rotate the box a bit to show that it's actually a 3D cube and not a square.
 
-The cube is visible, but it is completely. To make it look better we need to shine some light onto it.
+The cube is visible, but it is completely dark.
+To make it look better we need to shine some light onto it.
 
 ## Lights
 
@@ -133,35 +144,87 @@ It will create a light `Entity` component and add it to the scene. We can rotate
 app.scene.ambientLight = new pc.Color(0.2, 0.2, 0.2);
 ```
 
-The code above assign a dark grey ambient light for the whole scene. The box look better now, but it could get some colors to look even better - for that we need to create material for it.
+The code above assign a dark grey ambient light for the whole scene. The box looks better now, but it could get some colors to look even better - for that we need to create material for it.
 
 ## Material
 
-This example uses an older [material](https://developer.playcanvas.com/user-manual/assets/types/material/) called "Phong Material" (supported as of PlayCanvas Engine v1.65.0).
-To use `PhongMaterial`, add the following lines below the previous code:
+This example uses a material called [Standard material](https://api.playcanvas.com/classes/Engine.StandardMaterial.html), which is the main, general purpose material that is most often used for rendering.
+Add the following lines to your code:
 
 ```js
-const boxMaterial = new pc.PhongMaterial();
+const boxMaterial = new pc.StandardMaterial();
 boxMaterial.diffuse.set(0, 0.58, 0.86);
 boxMaterial.update();
 box.model.model.meshInstances[0].material = boxMaterial;
 ```
 
 By diffusing the light on the object, we can give it its own color — we'll choose a nice familiar blue.
+In PlayCanvas, the color channel values are provided as floats in the range `0-1`, instead of integers of `0-255` as you might be used to using on the Web.
 
-> **Note:** In PlayCanvas, the color channel values are provided as floats in the range `0-1`, instead of integers of `0-255` as you might be used to using on the Web.
+After the material is created and its color is set, it has to be updated so that our changes are applied. Then all we need to do is set the `box`'s material to the newly created `boxMaterial`.
 
-After the material is created and its color is set, it has to be updated so our changes are going to be applied. Then all we need to do is set the `box`'s material to the newly created `boxMaterial`.
+## PlayCanvas shape example
 
-Congratulations, you've created your first object in a 3D environment using PlayCanvas! It was easier than you thought, right? Here's how it should look:
+If you've followed everything so far without any problems, you've created your first object in a 3D environment using PlayCanvas! It was easier than you thought, right?
+Your code should look like the following live sample.
+You can click "Play" to view and edit the code in the MDN Playground:
 
-![Blue cube on a gray background rendered with PlayCanvas.](cube-playcanvas.png)
+```html hidden live-sample___play-canvas-intro
+<canvas id="application-canvas"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/playcanvas@2.2.2/build/playcanvas.min.js"></script>
+```
 
-And here's the code we have created so far:
+```js hidden live-sample___play-canvas-intro
+const canvas = document.getElementById("application-canvas");
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/cqs6pg3x/","","350")}}
+// Start and init Application
+const app = new pc.Application(canvas);
+app.start();
+app.setCanvasFillMode(pc.FILLMODE_FILL_WINDOW);
+app.setCanvasResolution(pc.RESOLUTION_AUTO);
 
-You can also [check it out on GitHub](https://github.com/end3r/MDN-Games-3D/blob/gh-pages/PlayCanvas/cube.html).
+// Create camera
+const camera = new pc.Entity();
+camera.addComponent("camera", { clearColor: new pc.Color(0.8, 0.8, 0.8) });
+app.root.addChild(camera);
+camera.setPosition(0, 0, 7);
+
+// Create cube
+const box = new pc.Entity();
+box.addComponent("model", { type: "box" });
+app.root.addChild(box);
+box.rotate(10, 15, 0);
+
+// Create light
+const light = new pc.Entity();
+light.addComponent("light");
+light.rotate(45, 0, 0);
+app.root.addChild(light);
+app.scene.ambientLight = new pc.Color(0.2, 0.2, 0.2);
+
+// Create cube's material
+const boxMaterial = new pc.StandardMaterial();
+boxMaterial.diffuse.set(0, 0.58, 0.86);
+boxMaterial.update();
+box.model.model.meshInstances[0].material = boxMaterial;
+
+window.addEventListener("resize", function () {
+  app.resizeCanvas(canvas.width, canvas.height);
+});
+```
+
+```css hidden live-sample___play-canvas-intro
+body,
+canvas {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+}
+```
+
+{{embedlivesample("play-canvas-intro", "", "400px")}}
 
 ## More shapes
 
@@ -187,7 +250,7 @@ cylinder.rotate(15, 0, 0);
 This looks very similar to the code we used for creating a cube, but instead of the `box` component we are adding a `cylinder`. It is also rotated around the `x` axis to show it's actually a 3D shape. To make the cylinder have a color, let's say yellow, we need to create the material for it, as before. Add the following lines:
 
 ```js
-const cylinderMaterial = new pc.PhongMaterial();
+const cylinderMaterial = new pc.StandardMaterial();
 cylinderMaterial.diffuse.set(1, 0.58, 0);
 cylinderMaterial.update();
 cylinder.model.model.meshInstances[0].material = cylinderMaterial;
@@ -203,7 +266,7 @@ cone.addComponent("model", { type: "cone" });
 app.root.addChild(cone);
 cone.translate(2, 0, 0);
 
-const coneMaterial = new pc.PhongMaterial();
+const coneMaterial = new pc.StandardMaterial();
 coneMaterial.diffuse.set(0.9, 0.9, 0.9);
 coneMaterial.update();
 cone.model.model.meshInstances[0].material = coneMaterial;
@@ -211,11 +274,7 @@ cone.model.model.meshInstances[0].material = coneMaterial;
 
 The code above will create a new `cone`, add it to the `app` and move it by 2 units to the right so it's not overlapping the cylinder. Then the material is created, given a gray color, and assigned to the cone `Entity`.
 
-Here's how it should look right now:
-
-![Shapes: blue cube, yellow cylinder and gray cone on a light gray background rendered with PlayCanvas.](shapes-playcanvas.png)
-
-This works, but it is a bit boring. In a game something is usually happening — we can see animations and such — so let's try to breathe a little life into those shapes by animating them.
+This is good progress, but we can make it more exciting! In a game something is usually happening — we can see animations and such — so let's try to breathe a little life into those shapes by animating them.
 
 ## Animation
 
@@ -263,14 +322,99 @@ cone.setPosition(2, Math.sin(timer * 2), 0);
 
 This will move the `cone` up and down by applying the `sin` value to the `y` axis on each frame, with a little bit of adjustment to make it look cooler. Try changing the value to see how it affects the animation.
 
-## Conclusion
+## PlayCanvas example with animation
 
-Here's the final code listing, along with a viewable live example:
+Here's the final code with animated shapes.
+You can click "Play" to edit the example in the MDN Playground:
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/auvcLoc4/","","350")}}
+```html hidden live-sample___play-canvas-animation
+<canvas id="application-canvas"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/playcanvas@2.2.2/build/playcanvas.min.js"></script>
+```
 
-You can also [see it on GitHub](https://github.com/end3r/MDN-Games-3D/blob/gh-pages/PlayCanvas/shapes.html) and [fork the repository](https://github.com/end3r/MDN-Games-3D/) if you want to play with it yourself locally. Now you know the basics of PlayCanvas engine; happy experimentation!
+```js hidden live-sample___play-canvas-animation
+const canvas = document.getElementById("application-canvas");
+
+// Start and init Application
+const app = new pc.Application(canvas);
+app.start();
+app.setCanvasFillMode(pc.FILLMODE_FILL_WINDOW);
+app.setCanvasResolution(pc.RESOLUTION_AUTO);
+
+// Create camera
+const camera = new pc.Entity();
+camera.addComponent("camera", { clearColor: new pc.Color(0.8, 0.8, 0.8) });
+app.root.addChild(camera);
+camera.setPosition(0, 0, 7);
+
+// Create cube
+const box = new pc.Entity();
+box.addComponent("model", { type: "box" });
+app.root.addChild(box);
+box.rotate(10, 15, 0);
+
+// Create light
+const light = new pc.Entity();
+light.addComponent("light");
+light.rotate(45, 0, 0);
+app.root.addChild(light);
+app.scene.ambientLight = new pc.Color(0.2, 0.2, 0.2);
+
+// Create cube's material
+const boxMaterial = new pc.StandardMaterial();
+boxMaterial.diffuse.set(0, 0.58, 0.86);
+boxMaterial.update();
+box.model.model.meshInstances[0].material = boxMaterial;
+box.translate(-2, 0, 0);
+
+// Create cylinder
+const cylinder = new pc.Entity();
+cylinder.addComponent("model", { type: "cylinder" });
+app.root.addChild(cylinder);
+cylinder.rotate(15, 0, 0);
+
+// Create cylinder's material
+const cylinderMaterial = new pc.StandardMaterial();
+cylinderMaterial.diffuse.set(1, 0.58, 0);
+cylinderMaterial.update();
+cylinder.model.model.meshInstances[0].material = cylinderMaterial;
+
+// Create cone
+const cone = new pc.Entity();
+cone.addComponent("model", { type: "cone" });
+app.root.addChild(cone);
+cone.translate(2, 0, 0);
+
+// Create cone's material
+const coneMaterial = new pc.StandardMaterial();
+coneMaterial.diffuse.set(0.9, 0.9, 0.9);
+coneMaterial.update();
+cone.model.model.meshInstances[0].material = coneMaterial;
+
+// Animate shapes
+let timer = 0;
+app.on("update", function (deltaTime) {
+  timer += deltaTime;
+  box.rotate(deltaTime * 10, deltaTime * 20, deltaTime * 3);
+  cylinder.setLocalScale(1, Math.abs(Math.sin(timer)), 1);
+  cone.setPosition(2, Math.sin(timer * 2), 0);
+});
+```
+
+```css hidden live-sample___play-canvas-animation
+body,
+canvas {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+}
+```
+
+{{embedlivesample("play-canvas-animation", "", "400px")}}
 
 ## Summary
 
-Now you can continue reading the [PlayCanvas editor](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas/editor) article, go back to the [Building up a basic demo with PlayCanvas](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas) page, or go back a level higher to the main [3D Games on the Web](/en-US/docs/Games/Techniques/3D_on_the_web) page.
+Now you know the basics of PlayCanvas engine; happy experimentation!
+You can continue reading the [PlayCanvas editor](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas/editor) article, go back to the [Building up a basic demo with PlayCanvas](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas) page, or go back a level higher to the main [3D Games on the Web](/en-US/docs/Games/Techniques/3D_on_the_web) page.

@@ -76,7 +76,8 @@ function foo() {
 foo().a = 1;
 ```
 
-> **Note:** In Firefox and Safari, the first example produces a `ReferenceError` in non-strict mode, and a `SyntaxError` in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode). Chrome throws a runtime `ReferenceError` for both strict and non-strict modes.
+> [!NOTE]
+> In Firefox and Safari, the first example produces a `ReferenceError` in non-strict mode, and a `SyntaxError` in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode). Chrome throws a runtime `ReferenceError` for both strict and non-strict modes.
 
 ### Using optional chaining as assignment target
 

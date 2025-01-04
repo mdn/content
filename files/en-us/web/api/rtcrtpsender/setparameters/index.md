@@ -58,7 +58,7 @@ setParameters(parameters)
         - `rid`
 
           - : A string which, if set, specifies an _RTP stream ID_ (_RID_) to be sent using the RID header extension.
-            This parameter cannot be modified using {{domxref("RTCRtpSender.setParameters", "setParameters()")}}.
+            This parameter cannot be modified using `setParameters()`.
             Its value can only be set when the transceiver is first created.
 
         - `scaleResolutionDownBy`

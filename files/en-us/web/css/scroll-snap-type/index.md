@@ -7,9 +7,13 @@ browser-compat: css.properties.scroll-snap-type
 
 {{CSSRef}}
 
-The **`scroll-snap-type`** [CSS](/en-US/docs/Web/CSS) property sets how strictly snap points are enforced on the scroll container in case there is one.
+The **`scroll-snap-type`** [CSS](/en-US/docs/Web/CSS) property is set on a {{glossary("scroll container")}}, opting it into scroll snapping by setting the direction and strictness of snap point enforcement within the [snap port](/en-US/docs/Glossary/Scroll_snap#snapport).
 
 {{EmbedInteractiveExample("pages/css/scroll-snap-type.html")}}
+
+If the content in the scroll port changes — for example, if content is added, moved, deleted, or resized — the scroll container will re-snap to the previously snapped content if that content is still present.
+
+If the value of a scroll snap-related property, such as `scroll-snap-type` or {{cssxref("scroll-margin")}}, is changed, the scroll container will re-snap based on the current value of `scroll-snap-type`.
 
 Specifying any precise animations or physics used to enforce those snap points is not covered by this property but instead left up to the user agent.
 
@@ -59,8 +63,6 @@ scroll-snap-type: unset;
 - `proximity`
   - : The visual viewport of this scroll container may snap to a snap position if it isn't currently scrolled. The user agent decides if it snaps or not based on scroll parameters. This is the default snap strictness if any snap axis is specified.
 
-> **Note:** If the content in the snap port is changed (e.g. added, moved, deleted, or resized) or the value of any scroll snap-related property (e.g. `scroll-snap-type` or `scroll-margin`) is changed, the scroll container will be [resnapped](https://drafts.csswg.org/css-scroll-snap/#re-snap) according to the latest value of `scroll-snap-type`.
-
 ## Formal definition
 
 {{CSSInfo}}
@@ -76,90 +78,90 @@ scroll-snap-type: unset;
 #### HTML
 
 ```html
-<div class="holster">
-  <div class="container x mandatory-scroll-snapping" dir="ltr">
+<main>
+  <section class="x mandatory-scroll-snapping" dir="ltr">
     <div>X Mand. LTR</div>
     <div>2</div>
     <div>3</div>
     <div>4</div>
     <div>5</div>
-  </div>
-  <div class="container x proximity-scroll-snapping" dir="ltr">
+  </section>
+  <section class="x proximity-scroll-snapping" dir="ltr">
     <div>X Prox. LTR</div>
     <div>2</div>
     <div>3</div>
     <div>4</div>
     <div>5</div>
-  </div>
-  <div class="container y mandatory-scroll-snapping" dir="ltr">
+  </section>
+  <section class="y mandatory-scroll-snapping" dir="ltr">
     <div>Y Mand. LTR</div>
     <div>2</div>
     <div>3</div>
     <div>4</div>
     <div>5</div>
-  </div>
-  <div class="container y proximity-scroll-snapping" dir="ltr">
+  </section>
+  <section class="y proximity-scroll-snapping" dir="ltr">
     <div>Y Prox. LTR</div>
     <div>2</div>
     <div>3</div>
     <div>4</div>
     <div>5</div>
-  </div>
-  <div class="container x mandatory-scroll-snapping" dir="rtl">
+  </section>
+  <section class="x mandatory-scroll-snapping" dir="rtl">
     <div>X Mand. RTL</div>
     <div>2</div>
     <div>3</div>
     <div>4</div>
     <div>5</div>
-  </div>
-  <div class="container x proximity-scroll-snapping" dir="rtl">
+  </section>
+  <section class="x proximity-scroll-snapping" dir="rtl">
     <div>X Prox. RTL</div>
     <div>2</div>
     <div>3</div>
     <div>4</div>
     <div>5</div>
-  </div>
-  <div class="container y mandatory-scroll-snapping" dir="rtl">
+  </section>
+  <section class="y mandatory-scroll-snapping" dir="rtl">
     <div>Y Mand. RTL</div>
     <div>2</div>
     <div>3</div>
     <div>4</div>
     <div>5</div>
-  </div>
-  <div class="container y proximity-scroll-snapping" dir="rtl">
+  </section>
+  <section class="y proximity-scroll-snapping" dir="rtl">
     <div>Y Prox. RTL</div>
     <div>2</div>
     <div>3</div>
     <div>4</div>
     <div>5</div>
-  </div>
-</div>
+  </section>
+</main>
 ```
 
 #### CSS
 
 ```css hidden
-.holster {
+main {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-flow: column nowrap;
   font-family: monospace;
 }
-.container {
+section {
   display: flex;
   margin: 1em auto;
   outline: 1px dashed lightgray;
   flex: none;
   overflow: auto;
 }
-.container.x {
+.x {
   width: 100%;
   height: 128px;
   flex-flow: row nowrap;
   overflow-y: hidden;
 }
-.container.y {
+.y {
   width: 256px;
   height: 256px;
   flex-flow: column nowrap;
@@ -182,7 +184,7 @@ scroll-snap-type: unset;
   scroll-snap-type: y proximity;
 }
 
-.container > div {
+div {
   text-align: center;
   scroll-snap-align: center;
   flex: none;
@@ -190,13 +192,13 @@ scroll-snap-type: unset;
 ```
 
 ```css hidden
-.x.container > div {
+.x div {
   line-height: 128px;
   font-size: 64px;
   width: 100%;
   height: 128px;
 }
-.y.container > div {
+.y div {
   line-height: 256px;
   font-size: 128px;
   width: 256px;
@@ -204,16 +206,16 @@ scroll-snap-type: unset;
 }
 
 /* appearance fixes */
-.y.container > div:first-child {
+.y div:first-child {
   line-height: 1.3;
   font-size: 64px;
 }
 
 /* coloration */
-.container > div:nth-child(even) {
+div:nth-child(even) {
   background-color: #87ea87;
 }
-.container > div:nth-child(odd) {
+div:nth-child(odd) {
   background-color: #87ccea;
 }
 ```
@@ -232,5 +234,9 @@ scroll-snap-type: unset;
 
 ## See also
 
+- Other scroll port properties: {{cssxref("scroll-margin")}}, {{cssxref("scroll-padding")}}
+- Scroll-child properties: {{cssxref("scroll-snap-align")}}, {{cssxref("scroll-margin")}}, {{cssxref("scroll-snap-stop")}}
+- [Basic concepts of CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap/Basic_concepts)
+- [Using scroll snap events](/en-US/docs/Web/CSS/CSS_scroll_snap/Using_scroll_snap_events)
 - [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap)
 - [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.crypto
 ---
 
-{{APIRef("Web Crypto API")}}
+{{APIRef("Web Crypto API")}}{{AvailableInWorkers("worker")}}
 
 The **`crypto`** read-only property of the {{domxref("WorkerGlobalScope")}} interface returns the {{domxref("Crypto")}} object for this worker. This object gives workers access to certain cryptographic related services.
 

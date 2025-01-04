@@ -6,9 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.PerformanceObserverEntryList.getEntriesByName
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
-The **`getEntriesByName()`** method of the {{domxref("PerformanceObserverEntryList")}} interface returns a list of explicitly observed {{domxref("PerformanceEntry","performance entry", '', 'true')}} objects for a given {{domxref("PerformanceEntry.name","name")}} and {{domxref("PerformanceEntry.entryType","entry type")}}. The list's members are determined by the set of {{domxref("PerformanceEntry.entryType","entry types", '', 'entry')}} specified in the call to the {{domxref("PerformanceObserver.observe","observe()")}} method. The list is available in the observer's callback function (as the first parameter in the callback).
+The **`getEntriesByName()`** method of the {{domxref("PerformanceObserverEntryList")}} interface returns a list of explicitly observed {{domxref("PerformanceEntry")}} objects for a given {{domxref("PerformanceEntry.name","name")}} and {{domxref("PerformanceEntry.entryType","entryType")}}. The list's members are determined by the set of {{domxref("PerformanceEntry.entryType","entry types", '', 'entry')}} specified in the call to the {{domxref("PerformanceObserver.observe","observe()")}} method. The list is available in the observer's callback function (as the first parameter in the callback).
 
 ## Syntax
 

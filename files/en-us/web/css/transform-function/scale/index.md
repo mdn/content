@@ -21,7 +21,8 @@ When a coordinate value is outside the \[-1, 1] range, the element grows along t
 shrinks. A negative value results in a [point reflection](https://en.wikipedia.org/wiki/Point_reflection)
 in that dimension. The value `1` has no effect.
 
-> **Note:** The `scale()` function only scales in 2D. To scale in 3D, use
+> [!NOTE]
+> The `scale()` function only scales in 2D. To scale in 3D, use
 > [`scale3d()`](/en-US/docs/Web/CSS/transform-function/scale3d) instead.
 
 ## Syntax
@@ -81,7 +82,11 @@ scale(sx, sy)
   </tbody>
 </table>
 
-## Accessibility concerns
+## Formal syntax
+
+{{CSSSyntax}}
+
+## Accessibility
 
 Scaling/zooming animations are problematic for accessibility, as they are a common trigger for certain types of
 migraine. If you need to include such animations on your website, you should provide a control to allow users to turn

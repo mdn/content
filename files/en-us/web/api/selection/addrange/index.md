@@ -28,7 +28,8 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-> **Note:** Currently only Firefox supports multiple selection ranges, other browsers will not
+> [!NOTE]
+> Currently only Firefox supports multiple selection ranges, other browsers will not
 > add new ranges to the selection if it already contains one.
 
 ### HTML
@@ -48,13 +49,13 @@ let button = document.querySelector("button");
 
 button.addEventListener("click", () => {
   const selection = window.getSelection();
-  const strongs = document.getElementsByTagName("strong");
+  const strongElems = document.getElementsByTagName("strong");
 
   if (selection.rangeCount > 0) {
     selection.removeAllRanges();
   }
 
-  for (const node of strongs) {
+  for (const node of strongElems) {
     const range = document.createRange();
     range.selectNode(node);
     selection.addRange(range);

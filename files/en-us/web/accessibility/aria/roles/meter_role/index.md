@@ -9,7 +9,8 @@ spec-urls: https://www.w3.org/TR/wai-aria-1.2/#meter
 
 The `meter` role is used to identify an element being used as a meter.
 
-> **Note:** Where possible, it is recommended that you use a native {{HTMLElement("meter")}} element rather than the `meter` role, as native elements are more widely supported by user agents and assistive technology.
+> [!NOTE]
+> Where possible, it is recommended that you use a native {{HTMLElement("meter")}} element rather than the `meter` role, as native elements are more widely supported by user agents and assistive technology.
 
 ## Description
 

@@ -23,6 +23,16 @@ be set to the {{domxref("HTMLAnchorElement/href", "href")}} of the parent's
 In cross-origin requests, it's the {{domxref("HTMLAnchorElement/origin", "origin")}} of the parent's `Window.location` by default.
 For more information, see the [Referrer-Policy: strict-origin-when-cross-origin](/en-US/docs/Web/HTTP/Headers/Referrer-Policy#strict-origin-when-cross-origin) documentation.
 
+## Examples
+
+The following will log a string containing the document's referrer.
+
+```js
+console.log(document.referrer);
+```
+
+If the user navigated to the page via a link like `<a href="https://www.w3.org/">W3</a>`, then it will output the previous domain like `developer.mozilla.org`. If the user navigated to the page directly, it will output an empty string.
+
 ## Specifications
 
 {{Specifications}}

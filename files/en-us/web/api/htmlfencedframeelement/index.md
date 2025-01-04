@@ -20,7 +20,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLFencedFrameElement.allow")}} {{experimental_inline}}
   - : Gets and sets the value of the corresponding `<fencedframe>` `allow` attribute, which represents a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) applied to the content when it is first embedded.
 - {{domxref("HTMLFencedFrameElement.config")}} {{experimental_inline}}
-  - : a {{domxref("FencedFrameConfig")}} object, which represents the navigation of a {{htmlelement("fencedframe")}}, i.e. what content will be displayed in it. A `FencedFrameConfig` is returned from a source such as the [Protected Audience API](https://developer.chrome.com/docs/privacy-sandbox/fledge/).
+  - : a {{domxref("FencedFrameConfig")}} object, which represents the navigation of a {{htmlelement("fencedframe")}}, i.e. what content will be displayed in it. A `FencedFrameConfig` is returned from a source such as the [Protected Audience API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience).
 - {{domxref("HTMLFencedFrameElement.height")}} {{experimental_inline}}
   - : Gets and sets the value of the corresponding `<fencedframe>` `height` attribute, which specifies the height of the element.
 - {{domxref("HTMLFencedFrameElement.width")}} {{experimental_inline}}
@@ -28,7 +28,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 ## Examples
 
-To set what content will be shown in a `<fencedframe>`, a utilizing API (such as [Protected Audience](https://developer.chrome.com/docs/privacy-sandbox/fledge/) or [Shared Storage](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/)) generates a {{domxref("FencedFrameConfig")}} object, which is then set as the value of the `<fencedframe>`'s `config` property.
+To set what content will be shown in a `<fencedframe>`, a utilizing API (such as [Protected Audience](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience) or [Shared Storage](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage)) generates a {{domxref("FencedFrameConfig")}} object, which is then set as the value of the `<fencedframe>`'s `config` property.
 
 The following example gets a `FencedFrameConfig` from a Protected Audience API's ad auction, which is then used to display the winning ad in a `<fencedframe>`:
 
@@ -54,5 +54,5 @@ frame.config = frameConfig;
 
 ## See also
 
-- [Fenced frames](https://developer.chrome.com/docs/privacy-sandbox/fenced-frame/) on developer.chrome.com
-- [The Privacy Sandbox](https://developer.chrome.com/docs/privacy-sandbox/) on developer.chrome.com
+- [Fenced frames](https://developers.google.com/privacy-sandbox/private-advertising/fenced-frame) on developers.google.com
+- [The Privacy Sandbox](https://developers.google.com/privacy-sandbox) on developers.google.com

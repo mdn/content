@@ -9,7 +9,8 @@ browser-compat: webextensions.api.windows.onFocusChanged
 
 Fired when the currently focused window changes. Will be {{WebExtAPIRef('windows.WINDOW_ID_NONE')}} if all browser windows have lost focus.
 
-> **Note:** In Windows and some Linux window managers, WINDOW_ID_NONE will always be sent immediately preceding a switch from one browser window to another.
+> [!NOTE]
+> In Windows and some Linux window managers, WINDOW_ID_NONE will always be sent immediately preceding a switch from one browser window to another.
 
 ## Syntax
 
@@ -55,7 +56,8 @@ browser.windows.onFocusChanged.addListener((windowId) => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/windows/#event-onFocusChanged) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows#event-onFocusChanged) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

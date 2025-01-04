@@ -14,6 +14,7 @@ Kebab-cased words are often simply referred to as _hyphenated_.
 
 ## See also
 
-- [Camel case](/en-US/docs/Glossary/Camel_case)
-- [Snake case](/en-US/docs/Glossary/Snake_case)
+- Related glossary terms:
+  - {{Glossary("Camel case")}}
+  - {{Glossary("Snake case")}}
 - [typescript-eslint rule: `naming-convention`](https://typescript-eslint.io/rules/naming-convention/)

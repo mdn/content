@@ -24,10 +24,12 @@ replace(url)
 ### Parameters
 
 - `url`
-  - : A string containing the URL of the page to navigate to.
+  - : A string or any other object with a {{Glossary("stringifier")}}, such as a {{domxref("URL")}} object, containing the URL of the page to navigate to.
 
 ### Exceptions
 
+- `SecurityError` {{domxref("DOMException")}}
+  - : Browsers throttle navigations and may throw this error, generate a warning, or ignore the call if it's called too frequently.
 - `SyntaxError` {{domxref("DOMException")}}
   - : Thrown if the provided `url` parameter is not a valid URL.
 

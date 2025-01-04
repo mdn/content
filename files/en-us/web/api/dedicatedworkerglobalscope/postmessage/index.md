@@ -23,27 +23,23 @@ The main scope that spawned the worker can send back information to the thread t
 
 ```js-nolint
 postMessage(message)
-postMessage(message, options)
 postMessage(message, transfer)
+postMessage(message, options)
 ```
 
 ### Parameters
 
 - `message`
 
-  - : The object to deliver to the main thread; this will be in the data field in the event delivered to the {{domxref("Worker.message_event")}}.
+  - : The object to deliver to the main thread; this will be in the data field in the event delivered to the {{domxref("Window/message_event", "message")}} event.
     This may be any value or JavaScript object handled by the [structured clone](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) algorithm, which includes cyclical references.
 
-- `options` {{optional_inline}}
-
-  - : An optional object containing a `transfer` field with an [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to transfer ownership of. If the ownership of an object is transferred, it becomes unusable in the context it was sent from and it becomes available only to the main thread it was sent to.
-
 - `transfer` {{optional_inline}}
-
-  - : An optional ordered [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to transfer ownership of.
-    If the ownership of an object is transferred, it becomes unusable in the context it was sent from and it becomes available only to the main thread it was sent to.
-
-    Only [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) can be transferred.
+  - : An optional [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to transfer ownership of. The ownership of these objects is given to the destination side and they are no longer usable on the sending side. These transferable objects should be attached to the message; otherwise they would be moved but not actually accessible on the receiving end.
+- `options` {{optional_inline}}
+  - : An optional object containing the following properties:
+    - `transfer` {{optional_inline}}
+      - : Has the same meaning as the `transfer` parameter.
 
 ### Return value
 

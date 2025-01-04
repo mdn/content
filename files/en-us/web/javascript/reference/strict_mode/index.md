@@ -7,7 +7,8 @@ spec-urls: https://tc39.es/ecma262/multipage/strict-mode-of-ecmascript.html
 
 {{jsSidebar("More")}}
 
-> **Note:** Sometimes you'll see the default, non-strict mode referred to as _[sloppy mode](/en-US/docs/Glossary/Sloppy_mode)_. This isn't an official term, but be aware of it, just in case.
+> [!NOTE]
+> Sometimes you'll see the default, non-strict mode referred to as _[sloppy mode](/en-US/docs/Glossary/Sloppy_mode)_. This isn't an official term, but be aware of it, just in case.
 
 JavaScript's strict mode is a way to _opt in_ to a restricted variant of JavaScript, thereby implicitly opting-out of "[sloppy mode](/en-US/docs/Glossary/Sloppy_mode)". Strict mode isn't just a subset: it _intentionally_ has different semantics from normal code. Browsers not supporting strict mode will run strict mode code with different behavior from browsers that do, so don't rely on strict mode without feature-testing for support for the relevant aspects of strict mode. Strict mode code and non-strict mode code can coexist, so scripts can opt into strict mode incrementally.
 
@@ -19,7 +20,7 @@ Strict mode makes several changes to normal JavaScript semantics:
 
 ## Invoking strict mode
 
-Strict mode applies to _entire scripts_ or to _individual functions_. It doesn't apply to [block statements](/en-US/docs/Web/JavaScript/Reference/Statements/block) enclosed in `{}` braces; attempting to apply it to such contexts does nothing. [`eval`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) code, [`Function`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function) code, [event handler](/en-US/docs/Web/HTML/Attributes#event_handler_attributes) attributes, strings passed to [`setTimeout()`](/en-US/docs/Web/API/setTimeout), and related functions are either function bodies or entire scripts, and invoking strict mode in them works as expected.
+Strict mode applies to _entire scripts_ or to _individual functions_. It doesn't apply to [block statements](/en-US/docs/Web/JavaScript/Reference/Statements/block) enclosed in `{}` braces; attempting to apply it to such contexts does nothing. [`eval`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) code, [`Function`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function) code, [event handler](/en-US/docs/Web/HTML/Attributes#event_handler_attributes) attributes, strings passed to {{domxref("Window.setTimeout", "setTimeout()")}}, and related functions are either function bodies or entire scripts, and invoking strict mode in them works as expected.
 
 ### Strict mode for scripts
 
@@ -108,6 +109,8 @@ Strict mode changes some previously-accepted mistakes into errors. JavaScript wa
 #### Assigning to undeclared variables
 
 Strict mode makes it impossible to accidentally create global variables. In sloppy mode, mistyping a variable in an assignment creates a new property on the global object and continues to "work". Assignments which would accidentally create global variables throw an error in strict mode:
+
+<!-- cSpell:ignore mistypeVarible -->
 
 ```js
 "use strict";
@@ -231,14 +234,15 @@ false.true = ""; // TypeError
 
 #### Duplicate property names
 
-Duplicate property names used to be considered a {{jsxref("SyntaxError")}} in strict mode. With the introduction of [computed property names](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer), making duplication possible at runtime, this restriction was removed in ES2015.
+Duplicate property names used to be considered a {{jsxref("SyntaxError")}} in strict mode. With the introduction of [computed property names](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names), making duplication possible at runtime, this restriction was removed in ES2015.
 
 ```js
 "use strict";
 const o = { p: 1, p: 2 }; // syntax error prior to ECMAScript 2015
 ```
 
-> **Note:** Making code that used to error become non-errors is always considered backwards-compatible. This is a good part of the language being strict about throwing errors: it leaves room for future semantic changes.
+> [!NOTE]
+> Making code that used to error become non-errors is always considered backwards-compatible. This is a good part of the language being strict about throwing errors: it leaves room for future semantic changes.
 
 ### Simplifying scope management
 
@@ -261,7 +265,7 @@ with (obj) {
 }
 ```
 
-The simple alternative of assigning the object to a short name variable, then accessing the corresponding property on that variable, stands ready to replace `with`.
+The alternative of assigning the object to a short name variable, then accessing the corresponding property on that variable, stands ready to replace `with`.
 
 #### Non-leaking eval
 

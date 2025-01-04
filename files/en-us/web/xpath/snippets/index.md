@@ -80,7 +80,7 @@ console.log(results.length);
 
 ### docEvaluateArray
 
-The following is a simple utility function to get (ordered) XPath results into an array, regardless of whether there is a special need for namespace resolvers, etc. It avoids the more complex syntax of [`document.evaluate()`](/en-US/docs/Web/API/Document/evaluate) for cases when it is not required as well as the need to use the special iterators on [`XPathResult`](/en-US/docs/Web/API/XPathResult) (by returning an array instead).
+The following is a utility function to get (ordered) XPath results into an array, regardless of whether there is a special need for namespace resolvers, etc. It avoids the more complex syntax of [`document.evaluate()`](/en-US/docs/Web/API/Document/evaluate) for cases when it is not required as well as the need to use the special iterators on [`XPathResult`](/en-US/docs/Web/API/XPathResult) (by returning an array instead).
 
 #### Example: Defining a simple `docEvaluateArray()` utility function
 
@@ -119,17 +119,17 @@ The following function allows one to pass an element and an XML document to find
 ```js
 function getXPathForElement(el, xml) {
   let xpath = "";
-  let pos, tempitem2;
+  let pos, tempItem2;
 
   while (el !== xml.documentElement) {
     pos = 0;
-    tempitem2 = el;
-    while (tempitem2) {
-      if (tempitem2.nodeType === 1 && tempitem2.nodeName === el.nodeName) {
+    tempItem2 = el;
+    while (tempItem2) {
+      if (tempItem2.nodeType === 1 && tempItem2.nodeName === el.nodeName) {
         // If it is ELEMENT_NODE of the same name
         pos += 1;
       }
-      tempitem2 = tempitem2.previousSibling;
+      tempItem2 = tempItem2.previousSibling;
     }
 
     xpath = `*[name()='${el.nodeName}' and namespace-uri()='${

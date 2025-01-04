@@ -26,7 +26,7 @@ In order to not bother the programmer with allocations, JavaScript will automati
 
 ```js
 const n = 123; // allocates memory for a number
-const s = "azerty"; // allocates memory for a string
+const s = "string"; // allocates memory for a string
 
 const o = {
   a: 1,
@@ -35,7 +35,7 @@ const o = {
 
 // (like object) allocates memory for the array and
 // contained values
-const a = [1, null, "abra"];
+const a = [1, null, "str2"];
 
 function f(a) {
   return a + 2;
@@ -64,14 +64,14 @@ const e = document.createElement("div"); // allocates a DOM element
 Some methods allocate new values or objects:
 
 ```js
-const s = "azerty";
+const s = "string";
 const s2 = s.substr(0, 3); // s2 is a new string
 // Since strings are immutable values,
 // JavaScript may decide to not allocate memory,
 // but just store the [0, 3] range.
 
-const a = ["ouais ouais", "nan nan"];
-const a2 = ["generation", "nan nan"];
+const a = ["yeah yeah", "no no"];
+const a2 = ["generation", "no no"];
 const a3 = a.concat(a2);
 // new array with 4 elements being
 // the concatenation of a and a2 elements.
@@ -101,7 +101,8 @@ In this context, the notion of an "object" is extended to something broader than
 
 ### Reference-counting garbage collection
 
-> **Note:** no modern JavaScript engine uses reference-counting for garbage collection anymore.
+> [!NOTE]
+> No modern JavaScript engine uses reference-counting for garbage collection anymore.
 
 This is the most naïve garbage collection algorithm. This algorithm reduces the problem from determining whether or not an object is still needed to determining if an object still has any other objects referencing it. An object is said to be "garbage", or collectible if there are zero references pointing to it.
 
@@ -179,7 +180,7 @@ The max amount of available heap memory can be increased with a flag:
 node --max-old-space-size=6000 index.js
 ```
 
-We can also expose the garbage collector for debugging memory issues using a flag and the [Chrome Debugger](https://nodejs.org/en/docs/guides/debugging-getting-started/):
+We can also expose the garbage collector for debugging memory issues using a flag and the [Chrome Debugger](https://nodejs.org/en/learn/getting-started/debugging):
 
 ```bash
 node --expose-gc --inspect index.js
@@ -215,7 +216,8 @@ If `key` is stored as an actual reference, it would create a cyclic reference an
 
 As a rough mental model, think of a `WeakMap` as the following implementation:
 
-> **Warning:** This is not a polyfill nor is anywhere close to how it's implemented in the engine (which hooks into the garbage collection mechanism).
+> [!WARNING]
+> This is not a polyfill nor is anywhere close to how it's implemented in the engine (which hooks into the garbage collection mechanism).
 
 ```js
 class MyWeakMap {

@@ -7,13 +7,15 @@ browser-compat: http.headers.Trailer
 
 {{HTTPSidebar}}
 
-The **Trailer** response header allows the sender to include additional
-fields at the end of chunked messages in order to supply metadata that might be
-dynamically generated while the message body is sent, such as a message integrity check,
-digital signature, or post-processing status.
+The HTTP **Trailer** {{glossary("request header", "request")}} and {{glossary("response header")}} allows the sender to include additional fields at the end of chunked messages in order to supply metadata that might be dynamically generated while the message body is sent.
 
-> **Note:** The {{HTTPHeader("TE")}} request header needs to be set to "trailers" to allow
-> trailer fields.
+> [!NOTE]
+> The {{HTTPHeader("TE")}} request header needs to be set to `trailers` to allow trailer fields.
+
+> [!WARNING]
+> Developers cannot access HTTP trailers via the Fetch API or XHR.
+> Additionally, browsers ignore HTTP trailers, with the exception of {{HTTPHeader("Server-Timing")}}.
+> See [Browser compatibility](#browser_compatibility) for more information.
 
 <table class="properties">
   <tbody>
@@ -22,12 +24,12 @@ digital signature, or post-processing status.
       <td>
         {{Glossary("Request header")}},
         {{Glossary("Response header")}},
-        {{Glossary("Payload header")}}
+        {{Glossary("Content header")}}
       </td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>yes</td>
+      <td>Yes</td>
     </tr>
   </tbody>
 </table>
@@ -43,41 +45,29 @@ Trailer: header-names
 - `header-names`
 
   - : HTTP header fields which will be present in the trailer part of chunked messages.
-    These header fields are **disallowed**:
+    The following header names are **disallowed**:
 
-    - message framing headers (e.g., {{HTTPHeader("Transfer-Encoding")}} and
-      {{HTTPHeader("Content-Length")}}),
-    - routing headers (e.g., {{HTTPHeader("Host")}}),
-    - request modifiers (e.g., controls and conditionals, like
-      {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Max-Forwards")}}, or
-      {{HTTPHeader("TE")}}),
-    - authentication headers (e.g., {{HTTPHeader("Authorization")}} or
-      {{HTTPHeader("Set-Cookie")}}),
-    - or {{HTTPHeader("Content-Encoding")}}, {{HTTPHeader("Content-Type")}},
-      {{HTTPHeader("Content-Range")}}, and `Trailer` itself.
+    - {{HTTPHeader("Content-Encoding")}}, {{HTTPHeader("Content-Type")}}, {{HTTPHeader("Content-Range")}}, and `Trailer`
+    - Authentication headers (e.g., {{HTTPHeader("Authorization")}} or {{HTTPHeader("Set-Cookie")}})
+    - Message framing headers (e.g., {{HTTPHeader("Transfer-Encoding")}} and {{HTTPHeader("Content-Length")}})
+    - Routing headers (e.g., {{HTTPHeader("Host")}})
+    - Request modifiers (e.g., controls and conditionals, like {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Max-Forwards")}}, or {{HTTPHeader("TE")}})
 
 ## Examples
 
-### Chunked transfer encoding using a trailing header
+### Server-Timing as HTTP trailer
 
-In this example, the {{HTTPHeader("Expires")}} header is used at the end of the chunked
-message and serves as a trailing header.
+Some browsers support showing server timing data in developer tools when the {{HTTPHeader("Server-Timing")}} header is sent as a trailer.
+In the following response, the `Trailer` header is used to indicate that a `Server-Timing` header will follow the response body.
+A metric `custom-metric` with a duration of `123.4` milliseconds is sent:
 
 ```http
 HTTP/1.1 200 OK
-Content-Type: text/plain
 Transfer-Encoding: chunked
-Trailer: Expires
+Trailer: Server-Timing
 
-7\r\n
-Mozilla\r\n
-9\r\n
-Developer\r\n
-7\r\n
-Network\r\n
-0\r\n
-Expires: Wed, 21 Oct 2015 07:28:00 GMT\r\n
-\r\n
+--- response body ---
+Server-Timing: custom-metric;dur=123.4
 ```
 
 ## Specifications
@@ -90,6 +80,7 @@ Expires: Wed, 21 Oct 2015 07:28:00 GMT\r\n
 
 ## See also
 
+- {{HTTPHeader("Server-Timing")}}
 - {{HTTPHeader("Transfer-Encoding")}}
 - {{HTTPHeader("TE")}}
 - [Chunked transfer encoding](https://en.wikipedia.org/wiki/Chunked_transfer_encoding)

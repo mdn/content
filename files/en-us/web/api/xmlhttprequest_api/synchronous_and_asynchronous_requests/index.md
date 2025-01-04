@@ -127,7 +127,8 @@ Here, we're specifying a timeout of 2000 ms.
 
 ## Synchronous request
 
-> **Warning:** Synchronous XHR requests often cause hangs on the web, especially with poor network conditions or when the remote server is slow to respond. Synchronous XHR is now deprecated and should be avoided in favor of asynchronous requests.
+> [!WARNING]
+> Synchronous XHR requests often cause hangs on the web, especially with poor network conditions or when the remote server is slow to respond. Synchronous XHR is now deprecated and should be avoided in favor of asynchronous requests.
 
 All new XHR features such as `timeout` or `abort` are not allowed for synchronous XHR. Doing so will raise an `InvalidAccessError`.
 
@@ -196,7 +197,8 @@ self.onmessage = (event) => {
 };
 ```
 
-> **Note:** The effect is asynchronous, because of the use of the `Worker`.
+> [!NOTE]
+> The effect is asynchronous, because of the use of the `Worker`.
 
 This pattern can be useful, for example in order to interact with the server in the background, or to preload content. See [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) for examples and details.
 

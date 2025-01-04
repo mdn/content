@@ -11,7 +11,8 @@ browser-compat: api.CSSPrimitiveValue
 
 The **`CSSPrimitiveValue`** interface derives from the {{DOMxRef("CSSValue")}} interface and represents the current computed value of a CSS property.
 
-> **Note:** This interface was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
+> [!NOTE]
+> This interface was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
 > not implement it.
 >
 > To achieve your purpose, you can use:
@@ -60,7 +61,7 @@ _Inherits properties from its parent, {{DOMxRef("CSSValue")}}_.
     | `CSS_S`          | The value is a {{CSSxRef("&lt;time&gt;")}} in seconds. The value can be obtained by using the `getFloatValue()` method.                                                      |
     | `CSS_STRING`     | The value is a {{CSSxRef("&lt;string&gt;")}}. The value can be obtained by using the `getStringValue()` method.                                                              |
     | `CSS_UNKNOWN`    | The value is not a recognized CSS2 value. The value can only be obtained by using the {{DOMxRef("CSSValue.cssText", "cssText")}} attribute.                                  |
-    | `CSS_URI`        | The value is a {{CSSxRef("url", "url()")}}. The value can be obtained by using the `getStringValue()` method.                                                                |
+    | `CSS_URI`        | The value is a {{cssxref("url_value", "&lt;url&gt;")}}. The value can be obtained by using the `getStringValue()` method.                                                    |
 
 ## Instance methods
 

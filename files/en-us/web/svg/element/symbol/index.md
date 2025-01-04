@@ -7,7 +7,7 @@ browser-compat: svg.elements.symbol
 
 {{SVGRef}}
 
-The **`<symbol>`** element is used to define graphical template objects which can be instantiated by a {{SVGElement("use")}} element.
+The **`<symbol>`** [SVG](/en-US/docs/Web/SVG) element is used to define graphical template objects which can be instantiated by a {{SVGElement("use")}} element.
 
 The use of `<symbol>` elements for graphics that are used multiple times in the same document adds structure and semantics. Documents that are rich in structure may be rendered graphically, as speech, or as Braille, and thus promote accessibility.
 
@@ -76,7 +76,8 @@ svg {
 
 {{svginfo}}
 
-> **Note:** A `<symbol>` element itself is not meant to be rendered. Only instances of a `<symbol>` element (i.e., a reference to a `<symbol>` by a {{SVGElement("use")}} element) are rendered. That means that some browsers could refuse to directly display a `<symbol>` element even if the CSS {{cssxref('display')}} property tells otherwise.
+> [!NOTE]
+> A `<symbol>` element itself is not meant to be rendered. Only instances of a `<symbol>` element (i.e., a reference to a `<symbol>` by a {{SVGElement("use")}} element) are rendered. That means that some browsers could refuse to directly display a `<symbol>` element even if the CSS {{cssxref('display')}} property tells otherwise.
 
 ## Specifications
 

@@ -34,7 +34,8 @@ _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}
 
 ## Deprecated properties
 
-> **Warning:** These properties have been deprecated and should no longer be used. They are documented primarily to help understand older code bases.
+> [!WARNING]
+> These properties have been deprecated and should no longer be used. They are documented primarily to help understand older code bases.
 
 - {{domxref("HTMLTableCellElement.align")}} {{deprecated_inline}}
   - : A string containing the value of the [`align`](/en-US/docs/Web/HTML/Element/td#align) attribute, if present, or empty string if not set. It can be used to set the alignment of the element's contents to the surrounding context of `"left"`, `"right"`, and `"center"`. Use the CSS {{cssxref("text-align")}} property instead.

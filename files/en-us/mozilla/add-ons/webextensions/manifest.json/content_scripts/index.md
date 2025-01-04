@@ -221,7 +221,7 @@ Details of all the keys you can include are given in the table below.
           <p>
             Note that in Firefox, content scripts won't be injected into empty
             iframes at <code>"document_start"</code>, even if you specify that
-            value in <code><a href="#run_at">run_at</a></code> .
+            value in <code><a href="#run_at">run_at</a></code>.
           </p>
         </div>
       </td>

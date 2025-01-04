@@ -44,7 +44,8 @@ const arr3 = [];
 arr3.length = arrayLength;
 ```
 
-> **Note:** In the above code, `arrayLength` must be a `Number`. Otherwise, an array with a single element (the provided value) will be created. Calling `arr.length` will return `arrayLength`, but the array doesn't contain any elements. A {{jsxref("Statements/for...in", "for...in")}} loop will not find any property on the array.
+> [!NOTE]
+> In the above code, `arrayLength` must be a `Number`. Otherwise, an array with a single element (the provided value) will be created. Calling `arr.length` will return `arrayLength`, but the array doesn't contain any elements. A {{jsxref("Statements/for...in", "for...in")}} loop will not find any property on the array.
 
 In addition to a newly defined variable as shown above, arrays can also be assigned as a property of a new or an existing object:
 
@@ -102,7 +103,8 @@ const myArray = ["Wind", "Rain", "Fire"];
 
 You can refer to the first element of the array as `myArray[0]`, the second element of the array as `myArray[1]`, etc… The index of the elements begins with zero.
 
-> **Note:** You can also use [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) to access other properties of the array, like with an object.
+> [!NOTE]
+> You can also use [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) to access other properties of the array, like with an object.
 >
 > ```js
 > const arr = ["one", "two", "three"];
@@ -121,7 +123,8 @@ emp[1] = "Phil Lesh";
 emp[2] = "August West";
 ```
 
-> **Note:** If you supply a non-integer value to the array operator in the code above, a property will be created in the object representing the array, instead of an array element.
+> [!NOTE]
+> If you supply a non-integer value to the array operator in the code above, a property will be created in the object representing the array, instead of an array element.
 >
 > ```js
 > const arr = [];
@@ -172,7 +175,7 @@ console.log(cats); // [ <3 empty items> ]
 
 ### Iterating over arrays
 
-A common operation is to iterate over the values of an array, processing each one in some way. The simplest way to do this is as follows:
+A common operation is to iterate over the values of an array, processing each one in some way, as follows:
 
 ```js
 const colors = ["red", "green", "blue"];
@@ -392,7 +395,8 @@ a.forEach((element) => {
 
 The `forEach` method (and others below) that take a callback are known as _iterative methods_, because they iterate over the entire array in some fashion. Each one takes an optional second argument called `thisArg`. If provided, `thisArg` becomes the value of the `this` keyword inside the body of the callback function. If not provided, as with other cases where a function is invoked outside of an explicit object context, `this` will refer to the global object ([`window`](/en-US/docs/Web/API/Window), [`globalThis`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis), etc.) when the function is [not strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode), or `undefined` when the function is strict.
 
-> **Note:** The `sort()` method introduced above is not an iterative method, because its callback function is only used for comparison and may not be called in any particular order based on element order. `sort()` does not accept the `thisArg` parameter either.
+> [!NOTE]
+> The `sort()` method introduced above is not an iterative method, because its callback function is only used for comparison and may not be called in any particular order based on element order. `sort()` does not accept the `thisArg` parameter either.
 
 The [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) method returns a new array of the return value from executing `callback` on every array item.
 
@@ -505,7 +509,7 @@ You can transform back and forth between arrays and other data structures.
 
 The {{jsxref("Object.groupBy()")}} method can be used to group the elements of an array, using a test function that returns a string indicating the group of the current element.
 
-Here we have a simple inventory array that contains "food" objects that have a `name` and a `type`.
+Here we have an inventory array that contains "food" objects that have a `name` and a `type`.
 
 ```js
 const inventory = [

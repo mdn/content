@@ -35,7 +35,8 @@ Each element with `role="cell"` MUST be nested in a container element with [`rol
 
 A cell can contain a number of property attributes clarifying the cell's position within the tabular data structure, including [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex), [`aria-colspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colspan), [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex), and [`aria-rowspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan).
 
-> **Note:** Using the native HTML table element ({{HTMLElement('table')}}) element, along with the table row element ({{HTMLElement('tr')}}), and table cell element ({{HTMLElement('td')}}), whenever possible, is strongly encouraged.
+> [!NOTE]
+> Using the native HTML table element ({{HTMLElement('table')}}) element, along with the table row element ({{HTMLElement('tr')}}), and table cell element ({{HTMLElement('td')}}), whenever possible, is strongly encouraged.
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -44,7 +45,7 @@ A cell can contain a number of property attributes clarifying the cell's positio
 - [role="row"](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
   - : An element with `role="row"` is a row of cells within a tabular structure. A row contains one or more cells, grid cells, column headers, or row headers within a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role) or `treegrid`, and optionally within a [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role).
 - [role="rowgroup"](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role)
-  - : `Row` is a required cell parent. `Rowgroup` is an optional contextual row parent. It establishes a relationship between descendant rows. It is a structural equivalent to the [`thead`](/en-US/docs/Web/HTML/Element/thead), [`tfoot`](/en-US/docs/Web/HTML/Element/tfoot), and [`tbody`](/en-US/docs/Web/HTML/Element/tbody) elements in an [HTML `table`](/en-US/docs/Learn/HTML/Tables/Basics) element.
+  - : `Row` is a required cell parent. `Rowgroup` is an optional contextual row parent. It establishes a relationship between descendant rows. It is a structural equivalent to the [`thead`](/en-US/docs/Web/HTML/Element/thead), [`tfoot`](/en-US/docs/Web/HTML/Element/tfoot), and [`tbody`](/en-US/docs/Web/HTML/Element/tbody) elements in an [HTML `table`](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics) element.
 - [role="table"](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)
   - : One of the three possible contexts (along with `grid` and `treegrid`) in which you'll find a row containing cells. Table identifies the cell as being part of a non-interactive table structure containing data arranged in rows and columns, similar to the native HTML [`<table>`](/en-US/docs/Web/HTML/Element/table) element.
 - [role="grid"](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role)
@@ -126,7 +127,7 @@ The above is a non-semantic ARIA table with five of 81 rows present in the DOM: 
 
 ## Best practices
 
-Only use {{HTMLElement('table')}}, {{HTMLElement('tbody')}}, {{HTMLElement('thead')}}, {{HTMLElement('tr')}}, {{HTMLElement('th')}}, {{HTMLElement('td')}}, etc., for data table structure. You can add ARIA roles to ensure accessibility should the native semantics of the table be removed, such as with CSS. A relevant use case for the ARIA table role is when the native semantics of a table are overridden by [CSS's display property, such as by display: grid](/en-US/docs/Web/CSS/display#accessibility_concerns). In this case, you can use the ARIA table roles to add the semantics back in.
+Only use {{HTMLElement('table')}}, {{HTMLElement('tbody')}}, {{HTMLElement('thead')}}, {{HTMLElement('tr')}}, {{HTMLElement('th')}}, {{HTMLElement('td')}}, etc., for data table structure. You can add ARIA roles to ensure accessibility should the native semantics of the table be removed, such as with CSS. A relevant use case for the ARIA table role is when the native semantics of a table are overridden by [CSS's display property, such as by display: grid](/en-US/docs/Web/CSS/display#accessibility). In this case, you can use the ARIA table roles to add the semantics back in.
 
 ```html
 <table
@@ -166,7 +167,7 @@ Only use {{HTMLElement('table')}}, {{HTMLElement('tbody')}}, {{HTMLElement('thea
 </table>
 ```
 
-Above is the semantic way of writing a table. The ARIA roles are not necessary if the native semantics of the table, and therefore the table rows, have not been altered, such as through [the display property](/en-US/docs/Web/CSS/display#accessibility_concerns).
+Above is the semantic way of writing a table. The ARIA roles are not necessary if the native semantics of the table, and therefore the table rows, have not been altered, such as through [the display property](/en-US/docs/Web/CSS/display#accessibility).
 
 ### Added benefits
 
@@ -182,5 +183,5 @@ When applied to a {{HTMLElement('td')}}, it returns cell semantics to the elemen
 - [`role="gridcell"`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
 - [HTML `<td>` element](/en-US/docs/Web/HTML/Element/td)
 - [HTML `<th>` element](/en-US/docs/Web/HTML/Element/th)
-- [HTML table advanced features and accessibility](/en-US/docs/Learn/HTML/Tables/Advanced)
-- [HTML table basics](/en-US/docs/Learn/HTML/Tables/Basics)
+- [Learn: HTML table accessibility](/en-US/docs/Learn_web_development/Core/Structuring_content/Table_accessibility)
+- [Learn: HTML table basics](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)

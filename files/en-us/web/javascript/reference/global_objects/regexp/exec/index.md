@@ -104,7 +104,8 @@ Found abb. Next match starts at 3
 Found ab. Next match starts at 9
 ```
 
-> **Warning:** There are many pitfalls that can lead to this becoming an infinite loop!
+> [!WARNING]
+> There are many pitfalls that can lead to this becoming an infinite loop!
 >
 > - Do _not_ place the regular expression literal (or {{jsxref("RegExp")}} constructor) within the `while` condition — it will recreate the regex for every iteration and reset {{jsxref("RegExp/lastIndex", "lastIndex")}}.
 > - Be sure that the [global (`g`) flag](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags) is set, or `lastIndex` will never be advanced.

@@ -146,7 +146,7 @@ li {
   margin-bottom: 12px;
 }
 div {
-  background-image: url(starsolid.gif);
+  background-image: url(star-solid.gif);
   width: 160px;
   height: 70px;
 }
@@ -173,7 +173,7 @@ div {
 
 /* Multiple images */
 .seven {
-  background-image: url(starsolid.gif), url(favicon32.png);
+  background-image: url(star-solid.gif), url(favicon32.png);
   background-repeat: repeat-x, repeat-y;
   height: 144px;
 }
@@ -195,7 +195,7 @@ In this example, each list item is matched with a different value of `background
 
 ## See also
 
-- The other {{cssxref("background")}} shorthand components: {{cssxref("background-attachment")}}, {{cssxref("background-clip")}}{{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-origin")}}, {{cssxref("background-position")}} ({{cssxref("background-position-x")}} and {{cssxref("background-position-y")}}), and {{cssxref("background-size")}}
+- The other {{cssxref("background")}} shorthand components: {{cssxref("background-attachment")}}, {{cssxref("background-clip")}}, {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-origin")}}, {{cssxref("background-position")}} ({{cssxref("background-position-x")}} and {{cssxref("background-position-y")}}), and {{cssxref("background-size")}}
 - [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
 - [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds) module
 - [Understanding aspect ratios](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)

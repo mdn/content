@@ -13,6 +13,8 @@ The `@font-feature-values` at-rule may be used either at the top level of your C
 
 ## Syntax
 
+Each `@font-feature-values` block contains a list of either feature value blocks (listed below), or the {{cssxref("@font-feature-values/font-display", "font-display")}} descriptor.
+
 ### Feature value blocks
 
 - `@swash`

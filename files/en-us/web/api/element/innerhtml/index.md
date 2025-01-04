@@ -17,7 +17,7 @@ To insert the HTML into the document rather than replace the contents of an elem
 The serialization of the DOM tree read from the property does not include {{glossary("shadow tree", "shadow roots")}} — if you want to get a HTML string that includes shadow roots, you must instead use the {{domxref("Element.getHTML()")}} or {{domxref("ShadowRoot.getHTML()")}} methods.
 Similarly, when setting element content using `innerHTML`, the HTML string is parsed into DOM elements that do not contain shadow roots.
 
-So for example [`<template>`](/en-US/docs/Web/HTML/Element/template) is parsed into as {{domxref("HTMLTemplateElement")}}, whether or not the [`shadowrootmode`](/en-US/docs/Web/HTML/Element/template#shadowrootmode) attribute is specfied
+So for example [`<template>`](/en-US/docs/Web/HTML/Element/template) is parsed into as {{domxref("HTMLTemplateElement")}}, whether or not the [`shadowrootmode`](/en-US/docs/Web/HTML/Element/template#shadowrootmode) attribute is specified
 In order to set an element's contents from an HTML string that includes declarative shadow roots, you must use either {{domxref("Element.setHTMLUnsafe()")}} or {{domxref("ShadowRoot.setHTMLUnsafe()")}}.
 
 ## Value
@@ -47,13 +47,15 @@ let contents = myElement.innerHTML;
 
 This lets you look at the HTML markup of the element's content nodes.
 
-> **Note:** The returned HTML or XML fragment is generated based on the current contents of the element, so the markup and formatting of the returned fragment is likely not to match the original page markup.
+> [!NOTE]
+> The returned HTML or XML fragment is generated based on the current contents of the element, so the markup and formatting of the returned fragment is likely not to match the original page markup.
 
 ### Replacing the contents of an element
 
 Setting the value of `innerHTML` lets you easily replace the existing contents of an element with new content.
 
-> **Warning:** This is a [security risk](#security_considerations) if the string to be inserted might contain potentially malicious content.
+> [!WARNING]
+> This is a [security risk](#security_considerations) if the string to be inserted might contain potentially malicious content.
 > When inserting user-supplied data you should always consider using a sanitizer library, in order to sanitize the content before it is inserted.
 
 For example, you can erase the entire contents of a document by clearing the contents of the document's {{domxref("Document.body", "body")}} attribute:
@@ -140,7 +142,8 @@ For that reason, it is recommended that instead of `innerHTML` you use:
 
 - {{domxref("Node.textContent")}} when inserting plain text, as this inserts it as raw text rather than parsing it as HTML.
 
-> **Warning:** If your project is one that will undergo any form of security review, using `innerHTML` most likely will result in your code being rejected.
+> [!WARNING]
+> If your project is one that will undergo any form of security review, using `innerHTML` most likely will result in your code being rejected.
 > For example, [if you use `innerHTML`](https://wiki.mozilla.org/Add-ons/Reviewers/Guide/Reviewing#Step_2:_Automatic_validation) in a [browser extension](/en-US/docs/Mozilla/Add-ons/WebExtensions) and submit
 > the extension to [addons.mozilla.org](https://addons.mozilla.org/), it may be rejected in the review process.
 > Please see [Safely inserting external content into a page](/en-US/docs/Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page) for alternative methods.

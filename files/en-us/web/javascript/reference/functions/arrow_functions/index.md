@@ -61,7 +61,8 @@ async (param1, param2, ...paramN) => {
 
 Let's decompose a traditional anonymous function down to the simplest arrow function step-by-step. Each step along the way is a valid arrow function.
 
-> **Note:** Traditional function expressions and arrow functions have more differences than their syntax. We will introduce their behavior differences in more detail in the next few subsections.
+> [!NOTE]
+> Traditional function expressions and arrow functions have more differences than their syntax. We will introduce their behavior differences in more detail in the next few subsections.
 
 ```js-nolint
 // Traditional anonymous function
@@ -238,7 +239,8 @@ class C {
 }
 ```
 
-> **Note:** Class fields are defined on the _instance_, not on the _prototype_, so every instance creation would create a new function reference and allocate a new closure, potentially leading to more memory usage than a normal unbound method.
+> [!NOTE]
+> Class fields are defined on the _instance_, not on the _prototype_, so every instance creation would create a new function reference and allocate a new closure, potentially leading to more memory usage than a normal unbound method.
 
 For similar reasons, the [`call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call), [`apply()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply), and [`bind()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) methods are not useful when called on arrow functions, because arrow functions establish `this` based on the scope the arrow function is defined within, and the `this` value does not change based on how the function is invoked.
 
@@ -255,7 +257,8 @@ function foo(n) {
 foo(3); // 3 + 3 = 6
 ```
 
-> **Note:** You cannot declare a variable called `arguments` in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode#making_eval_and_arguments_simpler), so the code above would be a syntax error. This makes the scoping effect of `arguments` much easier to comprehend.
+> [!NOTE]
+> You cannot declare a variable called `arguments` in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode#making_eval_and_arguments_simpler), so the code above would be a syntax error. This makes the scoping effect of `arguments` much easier to comprehend.
 
 In most cases, using [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
 is a good alternative to using an `arguments` object.
@@ -392,7 +395,7 @@ const obj = {
 // Setting "num" on globalThis to show how it is NOT used.
 globalThis.num = 42;
 
-// A simple traditional function to operate on "this"
+// A traditional function to operate on "this"
 const add = function (a, b, c) {
   return this.num + a + b + c;
 };
@@ -422,7 +425,7 @@ const boundAdd = add.bind(obj);
 console.log(boundAdd(1, 2, 3)); // 48
 ```
 
-Perhaps the greatest benefit of using arrow functions is with methods like {{domxref("setTimeout()")}} and {{domxref("EventTarget/addEventListener()", "EventTarget.prototype.addEventListener()")}} that usually require some kind of closure, `call()`, `apply()`, or `bind()` to ensure that the function is executed in the proper scope.
+Perhaps the greatest benefit of using arrow functions is with methods like {{domxref("Window.setTimeout", "setTimeout()")}} and {{domxref("EventTarget.addEventListener()", "EventTarget.prototype.addEventListener()")}} that usually require some kind of closure, `call()`, `apply()`, or `bind()` to ensure that the function is executed in the proper scope.
 
 With traditional function expressions, code like this does not work as expected:
 

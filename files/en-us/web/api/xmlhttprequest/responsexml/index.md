@@ -13,17 +13,18 @@ a {{domxref("Document")}} containing the HTML or XML retrieved by the request; o
 `null` if the request was unsuccessful, has not yet been sent, or if the data
 can't be parsed as XML or HTML.
 
-> **Note:** The name `responseXML` is an artifact of this
+> [!NOTE]
+> The name `responseXML` is an artifact of this
 > property's history; it works for both HTML and XML.
 
-Usually, the response is parsed as "`text/xml`". If the
+Usually, the response is parsed as `"text/xml"`. If the
 {{domxref("XMLHttpRequest.responseType", "responseType")}} is set to
-"`document`" and the request was made asynchronously, instead the response is
-parsed as "`text/html`". `responseXML` is `null` for
-any other types of data, as well as for [`data:` URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs).
+`"document"` and the request was made asynchronously, instead the response is
+parsed as `"text/html"`. `responseXML` is `null` for
+any other types of data, as well as for [`data:` URLs](/en-US/docs/Web/URI/Schemes/data).
 
 If the server doesn't specify the {{HTTPHeader("Content-Type")}} as
-"`text/xml`" or "`application/xml`", you can use
+`"text/xml"` or `"application/xml"`, you can use
 {{domxref("XMLHttpRequest.overrideMimeType()")}} to parse it as XML anyway.
 
 This property isn't available to workers.

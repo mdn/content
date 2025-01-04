@@ -25,7 +25,8 @@ The possible values are:
 
 ## Usage notes
 
-> **Note:** In Firefox, the `loading` attribute must be defined before the `src` attribute, otherwise it has no effect ([Firefox bug 1647077](https://bugzil.la/1647077)).
+> [!NOTE]
+> In Firefox, the `loading` attribute must be defined before the `src` attribute, otherwise it has no effect ([Firefox bug 1647077](https://bugzil.la/1647077)).
 
 ### JavaScript must be enabled
 
@@ -86,6 +87,6 @@ function addImageToList(url) {
 ## See also
 
 - The {{HTMLElement("img")}} element
-- [Web performance](/en-US/docs/Learn/Performance) in the MDN Learning Area
+- [Web performance](/en-US/docs/Learn_web_development/Extensions/Performance) in the MDN Learning Area
 - [Lazy loading](/en-US/docs/Web/Performance/Lazy_loading) in the MDN web
   performance guide

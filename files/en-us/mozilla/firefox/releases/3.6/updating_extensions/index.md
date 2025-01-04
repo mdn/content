@@ -49,4 +49,5 @@ Support for the obsolete `contents.rdf` method for registering chrome has been r
 
 Make sure you include a [chrome.manifest](/en-US/docs/Chrome_Registration) in your XPI.
 
-> **Note:** Add-ons that are already installed using the old contents.rdf method for registering chrome will continue to function if already installed. Make sure that you test your add-on by actually removing and reinstalling it to ensure that the install works after updating it to use an install manifest.
+> [!NOTE]
+> Add-ons that are already installed using the old contents.rdf method for registering chrome will continue to function if already installed. Make sure that you test your add-on by actually removing and reinstalling it to ensure that the install works after updating it to use an install manifest.

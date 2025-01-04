@@ -17,7 +17,8 @@ The `aria-invalid` attribute can be used with any typical HTML form element, and
 
 The attribute should be set with JavaScript as a result of a validation process. If a value is determined to be invalid or out-of-range, set `aria-invalid="true"` **and** tell the user there is an error. For better user experience, provide suggestions for how the error can be corrected. Do not set `aria-invalid="true"` on empty required elements until after the user attempts to submit the form. They may still be working on filling it out.
 
-> **Note:** When `aria-invalid` is used in conjunction with the `aria-required` attribute, `aria-invalid` should not be set to true before the form is submitted - only in response to validation.
+> [!NOTE]
+> When `aria-invalid` is used in conjunction with the `aria-required` attribute, `aria-invalid` should not be set to true before the form is submitted - only in response to validation.
 
 There are currently four values: in addition to `true` and `false` we have `grammar` which can be used when a grammatical error is detected and `spelling` for spelling errors. If the attribute is not present, or its value is false, or its value is an empty string, the default value of false applies. Any other value is treated as if `true` were set.
 
@@ -148,4 +149,4 @@ Inherited into role:
 - [`aria-errormessage`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage)
 - CSS {{CSSXRef(':valid')}} pseudoclass
 - CSS {{CSSXRef(':invalid')}} pseudoclass
-- [Form Validation](/en-US/docs/Learn/Forms/Form_validation) tutorial
+- [Form Validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation) tutorial

@@ -19,7 +19,7 @@ A boolean that is `true` if the `ValidityState` is not set and the `required` at
 ### Missing required input value
 
 The following example checks the validity of a [numeric input element](/en-US/docs/Web/HTML/Element/input/number).
-Constraints have been added using the [`min` attribute](/en-US/docs/Web/HTML/Element/input/number#min) which sets a minimum value of `18` for the input, and the [`required` attribute](/en-US/docs/Web/HTML/Element/input/number#required) which disallows empty values.
+Constraints have been added using the [`min` attribute](/en-US/docs/Web/HTML/Element/input/number#min) which sets a minimum value of `18` for the input, and the [`required` attribute](/en-US/docs/Web/HTML/Attributes/required) which disallows empty values.
 If the user enters any value that's not a number greater than 17, the element fails constraint validation, and the styles matching {{cssxref(":invalid")}} are applied.
 
 ```css
@@ -79,5 +79,5 @@ userInput.addEventListener("input", () => {
 
 - ValidityState [badInput](/en-US/docs/Web/API/ValidityState/badInput), [valid](/en-US/docs/Web/API/ValidityState/valid) properties.
 - [Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
-- [Forms: Data form validation](/en-US/docs/Learn/Forms/Form_validation)
+- [Forms: Data form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)

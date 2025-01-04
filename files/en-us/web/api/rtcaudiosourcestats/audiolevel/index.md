@@ -15,7 +15,8 @@ The **`audioLevel`** property of the {{domxref("RTCAudioSourceStats")}} dictiona
 The level is averaged over some small implementation-dependent interval.
 Users can alternatively calculate the average audio level over some arbitrary duration using the algorithm described in the [`RTCAudioSourceStats` description](/en-US/docs/Web/API/RTCAudioSourceStats#description).
 
-> **Note:** For audio levels of remotely sourced tracks, see {{domxref("RTCInboundRtpStreamStats.audioLevel")}}.
+> [!NOTE]
+> For audio levels of remotely sourced tracks, see {{domxref("RTCInboundRtpStreamStats.audioLevel")}}.
 
 ## Value
 

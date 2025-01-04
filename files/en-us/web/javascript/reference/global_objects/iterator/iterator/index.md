@@ -2,12 +2,10 @@
 title: Iterator() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/Iterator
 page-type: javascript-constructor
-status:
-  - experimental
 browser-compat: javascript.builtins.Iterator.Iterator
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{JSRef}}
 
 The **`Iterator()`** constructor is intended to be used as the [superclass](/en-US/docs/Web/JavaScript/Reference/Classes/extends) of other classes that create iterators. It throws an error when constructed by itself.
 
@@ -42,7 +40,7 @@ You can also use {{jsxref("Iterator.from()")}} to create an `Iterator` instance 
 
 ### Subclassing Iterator
 
-The following example defines a custom data structure, `Range`, which allows iteration. The simplest way to make an object iterable is to provide an [`[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) method in the form of a generator function:
+The following example defines a custom data structure, `Range`, which allows iteration. To make an object iterable, we can provide an [`[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) method in the form of a generator function:
 
 ```js
 class Range {

@@ -25,7 +25,7 @@ The first three properties - `type`, `title`, `message` - are mandatory in {{Web
 - `title`
   - : `string`. The notification's title.
 - `iconUrl` {{optional_inline}}
-  - : `string`. A URL pointing to an icon to display in the notification. The URL can be: a data URL, a blob URL, a http or https URL, or the [relative URL of a file within the extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#relative_urls). When using an SVG image, ensure that the image includes height and width attributes, for example, `<svg width="96" height="96"…`. Otherwise, the image may not display.
+  - : `string`. A URL pointing to an icon to display in the notification. The URL can be: a data URL, a blob URL, a http or https URL, or the relative URL of a file within the extension. When using an SVG image, ensure that the image includes height and width attributes, for example, `<svg width="96" height="96"…`. Otherwise, the image may not display.
 - `contextMessage` {{optional_inline}}
   - : `string`. Supplementary content to display.
 - `priority` {{optional_inline}}
@@ -43,7 +43,7 @@ The first three properties - `type`, `title`, `message` - are mandatory in {{Web
 
 - `imageUrl`
 
-  - : `string`. A URL pointing to an image to use in the notification. The URL can be: a data URL, a blob URL, or the [relative URL](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#relative_urls) of a file within the extension. When using an SVG image, ensure that the image includes height and width attributes, for example, `<svg width="96" height="96"…`. Otherwise, the image may not display.
+  - : `string`. A URL pointing to an image to use in the notification. The URL can be: a data URL, a blob URL, or the relative URL of a file within the extension. When using an SVG image, ensure that the image includes height and width attributes, for example, `<svg width="96" height="96"…`. Otherwise, the image may not display.
 
     _This property is only permitted if `type` is `"image"`. In this case, it is mandatory if the `NotificationOptions` is used in {{WebExtAPIRef("notifications.create()")}}, and optional if it is used in {{WebExtAPIRef("notifications.update()")}}._
 
@@ -72,4 +72,5 @@ Note that `appIconMaskUrl` and `isClickable` are not supported.
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/notifications/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications) API.

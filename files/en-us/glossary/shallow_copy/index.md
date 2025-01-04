@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-A **shallow copy** of an object is a copy whose properties share the same [references](/en-US/docs/Glossary/Object_reference) (point to the same underlying values) as those of the source object from which the copy was made. As a result, when you change either the source or the copy, you may also cause the other object to change too. That behavior contrasts with the behavior of a [deep copy](/en-US/docs/Glossary/Deep_copy), in which the source and copy are completely independent.
+A **shallow copy** of an object is a copy whose properties share the same {{Glossary("object reference", "references")}} (point to the same underlying values) as those of the source object from which the copy was made. As a result, when you change either the source or the copy, you may also cause the other object to change too. That behavior contrasts with the behavior of a {{Glossary("deep copy")}}, in which the source and copy are completely independent.
 
 More formally, two objects `o1` and `o2` are shallow copies if:
 
@@ -15,9 +15,9 @@ More formally, two objects `o1` and `o2` are shallow copies if:
 3. The values of their properties are equal.
 4. Their prototype chains are equal.
 
-See also [the definition of _structural equivalence_](/en-US/docs/Glossary/Deep_copy).
+See also the definition of _{{Glossary("deep copy", "structural equivalence")}}_.
 
-The copy of an object whose properties all have primitive values fits the definition of both a [deep copy](/en-US/docs/Glossary/Deep_copy) and a shallow copy. It is somewhat useless to talk about the depth of such a copy, though, because it has no nested properties and we usually talk about deep copying in the context of mutating nested properties.
+The copy of an object whose properties all have primitive values fits the definition of both a {{Glossary("deep copy")}} and a shallow copy. It is somewhat useless to talk about the depth of such a copy, though, because it has no nested properties and we usually talk about deep copying in the context of mutating nested properties.
 
 For shallow copies, only the top-level properties are copied, not the values of nested objects. Therefore:
 
@@ -57,4 +57,5 @@ console.log(JSON.stringify(ingredientsList));
 
 ## See also
 
-- [Deep copy](/en-US/docs/Glossary/Deep_copy)
+- Related glossary terms:
+  - {{Glossary("Deep copy")}}

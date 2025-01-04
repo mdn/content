@@ -13,10 +13,11 @@ browser-compat: html.elements.xmp
 
 The **`<xmp>`** [HTML](/en-US/docs/Web/HTML) element renders text between the start and end tags without interpreting the HTML in between and using a monospaced font. The HTML2 specification recommended that it should be rendered wide enough to allow 80 characters per line.
 
-> **Note:** Do not use this element.
+> [!NOTE]
+> Do not use this element.
 >
 > - It has been deprecated since HTML3.2 and was not implemented in a consistent way. It was completely removed from current HTML.
-> - Use the {{HTMLElement("pre")}} element or, if semantically adequate, the {{HTMLElement("code")}} element instead. Note that you will need to escape the '`<`' character as '`&lt;`' and the '`&`' character as '`&amp;`' to make sure they are not interpreted as markup.
+> - Use the {{HTMLElement("pre")}} element or, if semantically adequate, the {{HTMLElement("code")}} element instead. Note that you will need to escape the `<` character as `&lt;` and the `&` character as `&amp;` to make sure they are not interpreted as markup.
 > - A monospaced font can also be obtained on any element, by applying an adequate [CSS](/en-US/docs/Web/CSS) style using `monospace` as the generic-font value for the {{cssxref("font-family")}} property.
 
 ## Attributes
@@ -40,4 +41,4 @@ This element implements the {{domxref('HTMLElement')}} interface.
 ## See also
 
 - The {{HTMLElement("pre")}} and {{HTMLElement("code")}} elements to be used instead.
-- The {{HTMLElement("plaintext")}} element, similar to {{HTMLElement("xmp")}} but also obsolete.
+- The {{HTMLElement("plaintext")}} element, similar to `<xmp>` but also obsolete.

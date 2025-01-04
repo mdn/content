@@ -7,7 +7,8 @@ browser-compat: css.properties.page-break-before
 
 {{CSSRef}}
 
-> **Warning:** This property has been replaced by the {{cssxref("break-before")}} property.
+> [!WARNING]
+> This property has been replaced by the {{cssxref("break-before")}} property.
 
 The **`page-break-before`** [CSS](/en-US/docs/Web/CSS) property adjusts page breaks _before_ the current element.
 

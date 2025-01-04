@@ -7,7 +7,7 @@ status:
 browser-compat: api.GPUSampler
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPUSampler`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents an object that can control how shaders transform and filter texture resource data.
 
@@ -35,7 +35,7 @@ const sampler = device.createSampler({
 });
 ```
 
-The WebGPU samples [Shadow Mapping sample](https://webgpu.github.io/webgpu-samples/samples/shadowMapping) uses comparison samplers to sample from a depth texture to render shadows.
+The WebGPU samples [Shadow Mapping sample](https://webgpu.github.io/webgpu-samples/samples/shadowMapping/) uses comparison samplers to sample from a depth texture to render shadows.
 
 ## Specifications
 

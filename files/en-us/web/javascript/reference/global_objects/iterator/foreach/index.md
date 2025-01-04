@@ -2,12 +2,10 @@
 title: Iterator.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/forEach
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Iterator.forEach
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{JSRef}}
 
 The **`forEach()`** method of {{jsxref("Iterator")}} instances is similar to {{jsxref("Array.prototype.forEach()")}}: it executes a provided function once for each element produced by the iterator.
 
@@ -32,7 +30,7 @@ forEach(callbackFn)
 
 ## Description
 
-`forEach()` iterates the iterator and invokes the `callbackFn` function once for each element. Unlike most other iterator helper methods, it does not work well with infinite iterators, because it is not lazy.
+`forEach()` iterates the iterator and invokes the `callbackFn` function once for each element. Unlike most other iterator helper methods, it does not work with infinite iterators, because it is not lazy.
 
 ## Examples
 

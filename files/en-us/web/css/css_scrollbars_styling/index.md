@@ -2,9 +2,6 @@
 title: CSS scrollbars styling
 slug: Web/CSS/CSS_scrollbars_styling
 page-type: css-module
-browser-compat:
-  - css.properties.scrollbar-color
-  - css.properties.scrollbar-width
 spec-urls: https://drafts.csswg.org/css-scrollbars/
 ---
 
@@ -61,7 +58,8 @@ for us to breathe.
 
 {{EmbedLiveSample("Scrollbar_styling_in_action")}}
 
-> **Note:** When customizing scrollbars, ensure that the thumb and track have enough contrast with the surrounding background. Also ensure that the scrollbar hit area is large enough for people who use touch input.
+> [!NOTE]
+> When customizing scrollbars, ensure that the thumb and track have enough contrast with the surrounding background. Also ensure that the scrollbar hit area is large enough for people who use touch input.
 
 ## Reference
 

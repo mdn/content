@@ -42,7 +42,7 @@ The techniques below describe each composite role as well as their required and 
 - [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role) (including [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role) role)
 - [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role)
 - [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role)
-- [`radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role) (see [`radio role`](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role))
+- [`radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role) (see [`radio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role))
 - [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role) (including [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) and [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role) roles)
 - [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role)
 - [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
@@ -163,4 +163,4 @@ The techniques below describe each composite role as well as their required and 
 
 ### MicrosoftEdge-specific properties
 
-- [`x-ms-aria-flowfrom`](/en-US/docs/Web/Accessibility/ARIA) {{Non-standard_Inline}}
+- `x-ms-aria-flowfrom` {{Non-standard_Inline}}

@@ -5,7 +5,7 @@ page-type: landing-page
 spec-urls: https://html.spec.whatwg.org/multipage/indices.html#events-2
 ---
 
-[Events](/en-US/docs/Learn/JavaScript/Building_blocks/Events) are fired to notify code of "interesting changes" that may affect code execution. These can arise from user interactions such as using a mouse or resizing a window, changes in the state of the underlying environment (e.g. low battery or media events from the operating system), and other causes.
+[Events](/en-US/docs/Learn_web_development/Core/Scripting/Events) are fired to notify code of "interesting changes" that may affect code execution. These can arise from user interactions such as using a mouse or resizing a window, changes in the state of the underlying environment (e.g. low battery or media events from the operating system), and other causes.
 
 Each event is represented by an object that is based on the {{domxref("Event")}} interface, and may have additional custom fields and/or functions to provide information about what happened. The documentation for every event has a table (near the top) that includes a link to the associated event interface, and other relevant information. A full list of the different event types is given in [Event > Interfaces based on Event](/en-US/docs/Web/API/Event#introduction).
 
@@ -487,7 +487,7 @@ This topic provides an index to the main _sorts_ of events you might be interest
           <a href="/en-US/docs/Web/API/MouseEvent">computer mouse</a>.
         </p>
         <p>
-          Used to notify when the mouse is clicked, doubleclicked, up and down
+          Used to notify when the mouse is clicked, double-clicked, up and down
           events, right-click, movement in and out of an element, text
           selection, etc.
         </p>
@@ -621,7 +621,7 @@ This topic provides an index to the main _sorts_ of events you might be interest
       </td>
       <td>
         Events fired on
-        <a href="/en-US/docs/Web/API/WebSocket#events"><code>Websocket</code></a
+        <a href="/en-US/docs/Web/API/WebSocket#events"><code>WebSocket</code></a
         >.
       </td>
     </tr>
@@ -826,6 +826,6 @@ This topic provides an index to the main _sorts_ of events you might be interest
 
 <section id="Quick_links">
   <ol>
-    <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
+    <li><a href="/en-US/docs/Learn_web_development/Core/Scripting/Events">Introduction to events</a></li>
   </ol>{{ListSubpages}}
 </section>

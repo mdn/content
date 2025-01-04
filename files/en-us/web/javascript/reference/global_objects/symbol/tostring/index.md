@@ -52,7 +52,8 @@ Symbol.for("foo").toString(); // "Symbol(foo)"
 
 The only way to make JavaScript implicitly call `toString()` instead of [`[Symbol.toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive) on a symbol wrapper object is by [deleting](/en-US/docs/Web/JavaScript/Reference/Operators/delete) the `[Symbol.toPrimitive]()` method first.
 
-> **Warning:** You should not do this in practice. Never mutate built-in objects unless you know exactly what you're doing.
+> [!WARNING]
+> You should not do this in practice. Never mutate built-in objects unless you know exactly what you're doing.
 
 ```js
 delete Symbol.prototype[Symbol.toPrimitive];

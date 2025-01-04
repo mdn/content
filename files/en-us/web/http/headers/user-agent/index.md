@@ -7,9 +7,10 @@ browser-compat: http.headers.User-Agent
 
 {{HTTPSidebar}}
 
-The **User-Agent** {{Glossary("request header")}} is a characteristic string that lets servers and network peers identify the application, operating system, vendor, and/or version of the requesting {{Glossary("user agent")}}.
+The HTTP **User-Agent** {{Glossary("request header")}} is a characteristic string that lets servers and network peers identify the application, operating system, vendor, and/or version of the requesting {{Glossary("user agent")}}.
 
-> **Warning:** Please read [Browser detection using the user agent](/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent) for why serving different Web pages or services to different browsers is usually a bad idea.
+> [!WARNING]
+> See [Browser detection using the user agent](/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent) for reasons why serving different content to different browsers is usually a bad idea.
 
 <table class="properties">
   <tbody>
@@ -19,7 +20,7 @@ The **User-Agent** {{Glossary("request header")}} is a characteristic string tha
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -38,11 +39,11 @@ User-Agent: Mozilla/5.0 (<system-information>) <platform> (<platform-details>) <
 
 ### Directives
 
-- \<product>
+- `<product>`
   - : A product identifier — its name or development codename.
-- \<product-version>
+- `<product-version>`
   - : Version number of the product.
-- \<comment>
+- `<comment>`
   - : Zero or more comments containing more details. For example, sub-product information.
 
 ## Firefox UA string
@@ -50,14 +51,14 @@ User-Agent: Mozilla/5.0 (<system-information>) <platform> (<platform-details>) <
 For more on Firefox- and Gecko-based user agent strings, see the [Firefox user agent string reference](/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox). The UA string of Firefox is broken down into 4 components:
 
 ```plain
-Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion
+Mozilla/5.0 (platform; rv:gecko-version) Gecko/gecko-trail Firefox/firefox-version
 ```
 
 1. `Mozilla/5.0` is the general token that says that the browser is Mozilla-compatible. For historical reasons, almost every browser today sends it.
-2. **_platform_** describes the native platform that the browser is running on (Windows, Mac, Linux, Android, etc.) and if it is a mobile phone. {{Glossary("Firefox OS")}} phones say `Mobile` — the web is the platform. Note that **_platform_** can consist of multiple "`;`"-separated tokens. See below for further details and examples.
-3. **rv:_geckoversion_** indicates the release version of Gecko (such as "_17.0_"). In recent browsers, **_geckoversion_** is the same as **_firefoxversion_**.
-4. **_Gecko/geckotrail_** indicates that the browser is based on Gecko. (On the desktop, **_geckotrail_** is always the fixed string `20100101`.)
-5. **_Firefox/firefoxversion_** indicates that the browser is Firefox and provides the version (such as "_17.0_").
+2. **_platform_** describes the native platform that the browser is running on (Windows, Mac, Linux, Android, etc.) and if it is a mobile phone. {{Glossary("Firefox OS")}} phones say `Mobile` — the web is the platform. Note that **_platform_** can consist of multiple `;`-separated tokens. See below for further details and examples.
+3. **rv:_gecko-version_** indicates the release version of Gecko (such as "_17.0_"). In recent browsers, **_gecko-version_** is the same as **_firefox-version_**.
+4. **_Gecko/gecko-trail_** indicates that the browser is based on Gecko. (On the desktop, **_gecko-trail_** is always the fixed string `20100101`.)
+5. **_Firefox/firefox-version_** indicates that the browser is Firefox and provides the version (such as "_17.0_").
 
 ### Examples
 

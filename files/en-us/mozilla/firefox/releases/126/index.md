@@ -59,9 +59,10 @@ No notable changes.
 
 #### Media, WebRTC, and Web Audio
 
-#### Removals
+##### Removals
 
-- The marquee events [`bounce`](/en-US/docs/Web/API/HTMLMarqueeElement#bounce), [`finish`](/en-US/docs/Web/API/HTMLMarqueeElement#finish), and [`start`](/en-US/docs/Web/API/HTMLMarqueeElement#start) have been removed from [`HTMLMarqueeElement`](/en-US/docs/Web/API/HTMLMarqueeElement), along with the corresponding [event handler attributes](/en-US/docs/Web/HTML/Element/marquee#event_handlers) defined on the [`<marquee>` HTML element](/en-US/docs/Web/HTML/Element/marquee) ([Firefox bug 1689705](https://bugzil.la/1689705)).
+- The [`<marquee>` HTML element](/en-US/docs/Web/HTML/Element/marquee) events [`bounce`](/en-US/docs/Web/API/HTMLMarqueeElement#bounce), [`finish`](/en-US/docs/Web/API/HTMLMarqueeElement#finish), and [`start`](/en-US/docs/Web/API/HTMLMarqueeElement#start) have been removed from [`HTMLMarqueeElement`](/en-US/docs/Web/API/HTMLMarqueeElement), along with the corresponding [event handler attributes](/en-US/docs/Web/API/HTMLMarqueeElement#events) ([Firefox bug 1689705](https://bugzil.la/1689705)).
+- The [Theora](/en-US/docs/Web/Media/Formats/Video_codecs#theora) codec was disabled by default, and will be removed in a future release ([Firefox bug 1860492](https://bugzil.la/1860492)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -81,8 +82,6 @@ No notable changes.
 - The [`options_page` manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_page) is provided as an alias of the [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) key. This has been provided to offer extensions better compatibility with Chrome ([Firefox bug 1816960](https://bugzil.la/1816960)).
 - The {{WebExtAPIRef("tabs.captureVisibleTab")}} method is now also enabled by the `activeTab` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions), providing compatibility with Chrome and Safari ([Firefox bug 1784920](https://bugzil.la/1784920)).
 
-### Other
-
 ## Experimental web features
 
 These features are newly shipped in Firefox 126 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
@@ -93,7 +92,7 @@ These features are newly shipped in Firefox 126 but are disabled by default. To 
 
 - **CSS `shape()` function:** `layout.css.basic-shape-shape.enabled`.
 
-  You can use the [`shape()`](/en-US/docs/Web/CSS/basic-shape/shape) function to define shapes in the {{cssxref("clip-path")}} and {{cssxref("offset-path")}} properties. This function gives you more fine-grained control over the shapes you can define and offers several advantages over the `{{cssxref("path","path()")}}` function ([Firefox bug 1823463](https://bugzil.la/1823463) for `shape()` function support in `clip-path`, [Firefox bug 1884424](https://bugzil.la/1884424) for `shape()` function support in `offset-path`, [Firefox bug 1884425](https://bugzil.la/1884425) for `shape()` interpolation support).
+  You can use the {{cssxref("basic-shape/shape","shape()")}} function to define shapes in the {{cssxref("clip-path")}} and {{cssxref("offset-path")}} properties. This function gives you more fine-grained control over the shapes you can define and offers several advantages over the {{cssxref("basic-shape/path","path()")}} function ([Firefox bug 1823463](https://bugzil.la/1823463) for `shape()` function support in `clip-path`, [Firefox bug 1884424](https://bugzil.la/1884424) for `shape()` function support in `offset-path`, [Firefox bug 1884425](https://bugzil.la/1884425) for `shape()` interpolation support).
 
 ## Older versions
 

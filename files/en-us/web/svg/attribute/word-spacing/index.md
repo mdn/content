@@ -13,7 +13,8 @@ If a {{cssxref("length")}} is provided without a unit identifier (e.g. an unqual
 
 If a \<length> is provided with one of the unit identifiers (e.g. .25em or 1%), then the browser converts the \<length> into a corresponding value in the current user coordinate system.
 
-> **Note:** As a presentation attribute, `word-spacing` can be used as a CSS property. See the {{cssxref("word-spacing", "CSS word-spacing")}} property for more information.
+> [!NOTE]
+> As a presentation attribute, `word-spacing` can be used as a CSS property. See the CSS {{cssxref("word-spacing")}} property for more information.
 
 ## Elements
 
@@ -76,4 +77,4 @@ svg {
 
 ## See also
 
-- {{cssxref("word-spacing", "CSS word-spacing")}}
+- CSS {{cssxref("word-spacing")}} property

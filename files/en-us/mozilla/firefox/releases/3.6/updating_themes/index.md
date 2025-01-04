@@ -10,15 +10,15 @@ This article intends to help theme authors update Firefox-3.5-compatible themes 
 
 ## Chrome registration change
 
-[`contents.rdf` is not supported anymore](https://www.oxymoronical.com/blog/2009/06/Farewell-contentsrdf), you need to use `chrome.manifest` instead.
+[`contents.rdf` is not supported anymore](https://www.oxymoronical.com/blog/2009/06/Farewell-contentsrdf/), you need to use `chrome.manifest` instead.
 
-## Emptytext styling
+## Empty text styling
 
 XUL textboxes don't have the `empty` attribute anymore, but `isempty` instead. So instead of `textbox[empty="true"]`, you need to use `textbox[isempty="true"]`.
 
 ## Right-to-left UI support
 
-The `[chromedir="rtl"]` and `[chromedir="ltr"]` selectors have been obsoleted and won't work anymore on most elements. Instead, you need to use the new {{ cssxref(":-moz-locale-dir_rtl") }} and {{ cssxref(":-moz-locale-dir_ltr") }} selectors. See also: [Making sure your theme works with RTL locales](/en-US/docs/Making_Sure_Your_Theme_Works_with_RTL_Locales).
+The `[chromedir="rtl"]` and `[chromedir="ltr"]` selectors have been obsoleted and won't work anymore on most elements. Instead, you need to use the new {{ cssxref(":-moz-locale-dir_rtl", ":-moz-locale-dir(rtl)") }} and {{ cssxref(":-moz-locale-dir_ltr", ":-moz-locale-dir(ltr)") }} selectors. See also: [Making sure your theme works with RTL locales](/en-US/docs/Making_Sure_Your_Theme_Works_with_RTL_Locales).
 
 ## Cross-platform tabbed browser styling
 

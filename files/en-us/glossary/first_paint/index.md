@@ -1,5 +1,5 @@
 ---
-title: First paint
+title: First Paint (FP)
 slug: Glossary/First_paint
 page-type: glossary-definition
 ---
@@ -10,7 +10,8 @@ page-type: glossary-definition
 
 ## See also
 
-- [First contentful paint](/en-US/docs/Glossary/First_contentful_paint)
 - [`PerformancePaintTiming`](/en-US/docs/Web/API/PerformancePaintTiming)
-- [Largest Contentful Paint](/en-US/docs/Glossary/Largest_contentful_paint)
-- [First meaningful paint](/en-US/docs/Glossary/First_meaningful_paint)
+- Related glossary terms:
+  - {{Glossary("First Contentful Paint")}}
+  - {{Glossary("Largest Contentful Paint")}}
+  - {{Glossary("First Meaningful Paint")}}

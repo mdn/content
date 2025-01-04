@@ -54,7 +54,7 @@ Listen to this event using {{domxref("EventTarget.addEventListener", "addEventLi
 
 The following snippet shows how we might use a signal to abort downloading a video using the [Fetch API](/en-US/docs/Web/API/Fetch_API).
 
-We first create an abort controller using the {{domxref("AbortController.AbortController","AbortController()")}} constructor, then grab a reference to its associated {{domxref("AbortSignal")}} object using the {{domxref("AbortController.signal")}} property.
+We first create an abort controller using the {{domxref("AbortController.AbortController","AbortController()")}} constructor, then grab a reference to its associated `AbortSignal` object using the {{domxref("AbortController.signal")}} property.
 
 When the [fetch request](/en-US/docs/Web/API/Window/fetch) is initiated, we pass in the `AbortSignal` as an option inside the request's options object (the `{signal}` below). This associates the signal and controller with the fetch request, and allows us to abort it by calling {{domxref("AbortController.abort()")}}.
 Below you can see that the fetch operation is aborted in the second event listener, which triggered when the abort button (`abortBtn`) is clicked.
@@ -116,7 +116,7 @@ If you need to abort the operation on timeout then you can use the static {{domx
 This returns an `AbortSignal` that will automatically timeout after a certain number of milliseconds.
 
 The code snippet below shows how you would either succeed in downloading a file, or handle a timeout error after 5 seconds.
-Note that when there is a timeout the `fetch()` promise rejects with a "`TimeoutError`" `DOMException`.
+Note that when there is a timeout the `fetch()` promise rejects with a `TimeoutError` `DOMException`.
 This allows code to differentiate between timeouts (for which user notification is probably required), and user aborts.
 
 ```js
@@ -133,8 +133,6 @@ try {
     console.error(
       "Fetch aborted by user action (browser stop button, closing tab, etc.",
     );
-  } else if (err.name === "TypeError") {
-    console.error("AbortSignal.timeout() method is not supported");
   } else {
     // A network error, or some other problem.
     console.error(`Error: type: ${err.name}, message: ${err.message}`);
@@ -144,7 +142,7 @@ try {
 
 ### Aborting a fetch with timeout or explicit abort
 
-If you want to abort from multiple signals, you can use {{domxref("AbortSignal/any_static", "AbortSignal.any()")}} to combine them into a single signal. The following example shows this using {{domxref("fetch")}}:
+If you want to abort from multiple signals, you can use {{domxref("AbortSignal/any_static", "AbortSignal.any()")}} to combine them into a single signal. The following example shows this using {{domxref("Window/fetch", "fetch")}}:
 
 ```js
 try {
@@ -167,7 +165,8 @@ try {
 }
 ```
 
-> **Note:** Unlike when using {{domxref("AbortSignal/timeout_static", "AbortSignal.timeout()")}}, there is no way to tell whether the final abort was caused by a timeout.
+> [!NOTE]
+> Unlike when using {{domxref("AbortSignal/timeout_static", "AbortSignal.timeout()")}}, there is no way to tell whether the final abort was caused by a timeout.
 
 ### Implementing an abortable API
 

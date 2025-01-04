@@ -1,124 +1,350 @@
 ---
-title: HTTP Messages
+title: HTTP messages
 slug: Web/HTTP/Messages
 page-type: guide
 ---
 
 {{HTTPSidebar}}
 
-HTTP messages are how data is exchanged between a server and a client. There are two types of messages: _requests_ sent by the client to trigger an action on the server, and _responses_, the answer from the server.
+**HTTP messages** are the mechanism used to exchange data between a server and a client in the HTTP protocol.
+There are two types of messages: **requests** sent by the client to trigger an action on the server, and **responses**, the answer that the server sends in response to a request.
 
-Web developers, or webmasters, rarely craft these textual HTTP messages themselves: software, a Web browser, proxy, or Web server, perform this action. They provide HTTP messages through config files (for proxies or servers), APIs (for browsers), or other interfaces.
+Developers rarely, if ever, build HTTP messages from scratch.
+Applications such as a browser, proxy, or web server use software designed to create HTTP messages in a reliable and efficient way.
+How messages are created or transformed is controlled via APIs in browsers, configuration files for proxies or servers, or other interfaces.
 
-![From a user-, script-, or server- generated event, an HTTP/1.x msg is generated, and if HTTP/2 is in use, it is binary framed into an HTTP/2 stream, then sent.](httpmsg2.png)
+In HTTP protocol versions up to HTTP/2, messages are text-based, and are relatively straightforward to read and understand after you've familiarized yourself with the format.
+In HTTP/2, messages are wrapped in binary framing, which makes them slightly harder to read without certain tools.
+However the underlying semantics of the protocol are the same, so you can learn the structure and meaning of HTTP messages based on the text-based format of HTTP/1.x messages, and apply this understanding to HTTP/2 and beyond.
 
-HTTP requests, and responses, share similar structure and are composed of:
+This guide uses HTTP/1.1 messages for readability, and explains the structure of HTTP messages using the HTTP/1.1 format.
+We highlight some differences that you might need for describing HTTP/2 in the final section.
 
-1. A _start-line_ describing the requests to be implemented, or its status of whether successful or a failure. This is always a single line.
-2. An optional set of _HTTP headers_ specifying the request, or describing the body included in the message.
-3. A blank line indicating all meta-information for the request has been sent.
-4. An optional _body_ containing data associated with the request (like content of an HTML form), or the document associated with a response. The presence of the body and its size is specified by the start-line and HTTP headers.
+> [!NOTE]
+> You can see HTTP messages in a browser's **Network** tab in the developer tools, or if you print HTTP messages to the console using CLI tools such as [curl](https://curl.se/), for example.
 
-The start-line and HTTP headers of the HTTP message are collectively known as the _head_ of the requests, whereas its payload is known as the _body_.
+## Anatomy of an HTTP message
 
-![Requests and responses share a common structure in HTTP](httpmsgstructure2.png)
+To understand how HTTP messages work, we'll look at HTTP/1.1 messages and examine the structure.
+The following illustration shows what messages in HTTP/1.1 look like:
 
-## HTTP Requests
+![Requests and responses share a common structure in HTTP](https://mdn.github.io/shared-assets/images/diagrams/http/messages/http-message-anatomy.svg)
 
-### Request line
+Both requests and responses share a similar structure:
 
-> **Note:** The start-line is called the "request-line" in requests.
+1. A _start-line_ is a single line that describes the HTTP version along with the request method or the outcome of the request.
+2. An optional set of _HTTP headers_ containing metadata that describes the message. For example, a request for a resource might include the allowed formats of that resource, while the response might include headers to indicate the actual format returned.
+3. An empty line indicating the metadata of the message is complete.
+4. An optional _body_ containing data associated with the message. This might be POST data to send to the server in a request, or some resource returned to the client in a response.
+   Whether a message contains a body or not is determined by the start-line and HTTP headers.
 
-HTTP requests are messages sent by the client to initiate an action on the server. Their _request-line_ contain three elements:
+The start-line and headers of the HTTP message are collectively known as the _head_ of the requests, and the part afterwards that contains its content is known as the _body_.
 
-1. An _[HTTP method](/en-US/docs/Web/HTTP/Methods)_, a verb (like {{HTTPMethod("GET")}}, {{HTTPMethod("PUT")}} or {{HTTPMethod("POST")}}) or a noun (like {{HTTPMethod("HEAD")}} or {{HTTPMethod("OPTIONS")}}), that describes the action to be performed. For example, `GET` indicates that a resource should be fetched or `POST` means that data is pushed to the server (creating or modifying a resource, or generating a temporary document to send back).
-2. The _request target_, usually a {{glossary("URL")}}, or the absolute path of the protocol, port, and domain are usually characterized by the request context. The format of this request target varies between different HTTP methods. It can be
+## HTTP requests
 
-   - An absolute path, ultimately followed by a `'?'` and query string. This is the most common form, known as the _origin form_, and is used with `GET`, `POST`, `HEAD`, and `OPTIONS` methods.
-     - `POST / HTTP/1.1`
-     - `GET /background.png HTTP/1.0`
-     - `HEAD /test.html?query=alibaba HTTP/1.1`
-     - `OPTIONS /anypage.html HTTP/1.0`
-   - A complete URL, known as the _absolute form_, is mostly used with `GET` when connected to a proxy.
-     `GET https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages HTTP/1.1`
-   - The authority component of a URL, consisting of the domain name and optionally the port (prefixed by a `':'`), is called the _authority form_. It is only used with `CONNECT` when setting up an HTTP tunnel.
-     `CONNECT developer.mozilla.org:80 HTTP/1.1`
-   - The _asterisk form_, a simple asterisk (`'*'`) is used with `OPTIONS`, representing the server as a whole.
-     `OPTIONS * HTTP/1.1`
+Let's look at the following example HTTP `POST` request that's sent after a user submits a form on a web page:
 
-3. The _HTTP version_, which defines the structure of the remaining message, acting as an indicator of the expected version to use for the response.
+```http
+POST /users HTTP/1.1
+Host: example.com
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 50
 
-### Headers
+name=FirstName%20LastName&email=bsmth%40example.com
+```
 
-[HTTP headers](/en-US/docs/Web/HTTP/Headers) from a request follow the same basic structure of an HTTP header: a case-insensitive string followed by a colon (`':'`) and a value whose structure depends upon the header. The whole header, including the value, consists of one single line, which can be quite long.
+The start-line in HTTP/1.x requests (`POST /users HTTP/1.1` in the example above) is called a "request-line" and is made of three parts:
 
-Many different headers can appear in requests. They can be divided in several groups:
+```http
+<method> <request-target> <protocol>
+```
 
-- {{glossary("General header", "General headers")}}, like {{HTTPHeader("Via")}}, apply to the message as a whole.
-- {{glossary("Request header", "Request headers")}}, like {{HTTPHeader("User-Agent")}} or {{HTTPHeader("Accept")}}, modify the request by specifying it further (like {{HTTPHeader("Accept-Language")}}), by giving context (like {{HTTPHeader("Referer")}}), or by conditionally restricting it (like {{HTTPHeader("If-None-Match")}}).
-- {{glossary("Representation header", "Representation headers")}} like {{HTTPHeader("Content-Type")}} that describe the original format of the message data and any encoding applied (only present if the message has a body).
+- `<method>`
+  - : The [HTTP method](/en-US/docs/Web/HTTP/Methods) (also known as an _HTTP verb_) is one of a set of defined words that describes the meaning of the request and the desired outcome.
+    For example, `GET` indicates that the client would like to receive a resource in return, and `POST` means that the client is sending data to a server.
+- `<request-target>`
+  - : The request target is usually an absolute or relative {{glossary("URL")}}, and is characterized by the context of the request.
+    The format of the request target depends on the HTTP method used and the request context.
+    It is described in more detail in the [Request targets](#request-targets) section below.
+- `<protocol>`
+  - : The _HTTP version_, which defines the structure of the remaining message, acting as an indicator of the expected version to use for the response.
+    This is almost always `HTTP/1.1`, as `HTTP/0.9` and `HTTP/1.0` are obsolete.
+    In HTTP/2 and above, the protocol version isn't included in messages since it is understood from the connection setup.
 
-![Example of headers in an HTTP request](http_request_headers3.png)
+### Request targets
 
-### Body
+There are a few ways of describing a request target, but by far the most common is the "origin form".
+Here's a list of the types of targets and when they are used:
 
-The final part of the request is its body. Not all requests have one: requests fetching resources like `GET` or `HEAD` usually don't need a body. Requests that send data to the server to create a resource, such as `PUT` or `POST` requests, typically require a body with the data used to fulfill the request (for instance, HTML form data).
+1. In _origin form_, the recipient combines an absolute path with the information in the {{HTTPHeader("Host")}} header.
+   A query string can be appended to the path for additional information (usually in `key=value` format).
+   This is used with `GET`, `POST`, `HEAD`, and `OPTIONS` methods:
 
-Bodies can be broadly divided into two categories:
+   ```http
+   GET /en-US/docs/Web/HTTP/Messages HTTP/1.1
+   ```
 
-- Single-resource bodies, consisting of one single file, defined by the two headers: {{HTTPHeader("Content-Type")}} and {{HTTPHeader("Content-Length")}}.
-- [Multiple-resource bodies](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data), consisting of a multipart body, each containing a different bit of information. This is typically associated with [HTML Forms](/en-US/docs/Learn/Forms).
+2. The _absolute form_ is a complete URL, including the authority, and is used with `GET` when connecting to a proxy:
 
-## HTTP Responses
+   ```http
+   GET https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages HTTP/1.1
+   ```
 
-### Status line
+3. The _authority form_ is the authority and port separated by a colon (`:`).
+   It is only used with the {{HTTPMethod("CONNECT")}} method when setting up an HTTP tunnel:
 
-> **Note:** The start-line is called the "status line" in responses.
+   ```http
+   CONNECT developer.mozilla.org:443 HTTP/1.1
+   ```
 
-The start line of an HTTP response, called the _status line_, contains the following information:
+4. The _asterisk form_ is only used with `OPTIONS` when you want to represent the server as a whole (`*`) as opposed to a named resource:
 
-1. The _protocol version_, usually `HTTP/1.1`, but can also be `HTTP/1.0`.
-2. A [_status code_](/en-US/docs/Web/HTTP/Status), indicating success or failure of the request. Common status codes are {{HTTPStatus("200")}}, {{HTTPStatus("404")}}, or {{HTTPStatus("302")}}.
-3. A _status text_. A brief, purely informational, textual description of the status code to help a human understand the HTTP message.
+   ```http
+   OPTIONS * HTTP/1.1
+   ```
 
-A typical status line looks like: `HTTP/1.1 404 Not Found`.
+### Request headers
 
-### Headers
+Headers are metadata sent with a request after the start line and before the body.
+In the [form submission example](#http_requests) above, they are the following lines of the message:
 
-[HTTP headers](/en-US/docs/Web/HTTP/Headers) for responses follow the same structure as any other header: a case-insensitive string followed by a colon (`':'`) and a value whose structure depends upon the type of the header. The whole header, including its value, presents as a single line.
+```http
+Host: example.com
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 50
+```
 
-Many different headers can appear in responses. These can be divided into several groups:
+In HTTP/1.x, each header is a **case-insensitive** string followed by a colon (`:`) and a value whose format depends on the header.
+The whole header, including the value, consists of one single line.
+This line can be quite long in some cases, such as the {{HTTPHeader("Cookie")}} header.
 
-- {{glossary("General header", "General headers")}}, like {{HTTPHeader("Via")}}, apply to the whole message.
-- {{glossary("Response header", "Response headers")}}, like {{HTTPHeader("Vary")}} and {{HTTPHeader("Accept-Ranges")}}, give additional information about the server which doesn't fit in the status line.
-- {{glossary("Representation header", "Representation headers")}} like {{HTTPHeader("Content-Type")}} that describe the original format of the message data and any encoding applied (only present if the message has a body).
+![Example of headers in an HTTP request](https://mdn.github.io/shared-assets/images/diagrams/http/messages/request-headers.svg)
 
-![Example of headers in an HTTP response](http_response_headers3.png)
+Some headers are exclusively used in requests, while others can be sent in both requests and responses, or might have a more specific categorization:
 
-### Body
+- {{glossary("Request header", "Request headers")}} provide additional context to a request or add extra logic to how it should be treated by a server (e.g., [conditional requests](/en-US/docs/Web/HTTP/Conditional_requests)).
+- {{glossary("Representation header", "Representation headers")}} are sent in a request if the message has a body, and they describe the original form of the message data and any encoding applied.
+  This allows the recipient to understand how to reconstruct the resource as it was before it was transmitted over the network.
 
-The last part of a response is the body. Not all responses have one: responses with a status code that sufficiently answers the request without the need for corresponding payload (like {{HTTPStatus("201")}} **`Created`** or {{HTTPStatus("204")}} **`No Content`**) usually don't.
+### Request body
 
-Bodies can be broadly divided into three categories:
+The request body is the part of a request that carries information to the server.
+Only `PATCH`, `POST`, and `PUT` requests have a body.
+In the [form submission example](#http_requests), this part is the body:
 
-- Single-resource bodies, consisting of a single file of known length, defined by the two headers: {{HTTPHeader("Content-Type")}} and {{HTTPHeader("Content-Length")}}.
-- Single-resource bodies, consisting of a single file of unknown length, encoded by chunks with {{HTTPHeader("Transfer-Encoding")}} set to `chunked`.
-- [Multiple-resource bodies](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data), consisting of a multipart body, each containing a different section of information. These are relatively rare.
+```http
+name=FirstName%20LastName&email=bsmth%40example.com
+```
 
-## HTTP/2 Frames
+The body in the form submission request contains a relatively small amount of information as `key=value` pairs, but a request body could contain other types of data that the server expects:
 
-HTTP/1.x messages have a few drawbacks for performance:
+```json
+{
+  "firstName": "Brian",
+  "lastName": "Smith",
+  "email": "bsmth@example.com",
+  "more": "data"
+}
+```
 
-- Headers, unlike bodies, are uncompressed.
-- Headers are often very similar from one message to the next one, yet still repeated across connections.
-- Although HTTP/1.1 has [pipelining](/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x#http_pipelining), it's not activated by default in most browsers, and doesn't allow for multiplexing (i.e. sending requests concurrently). Several connections need opening on the same server to send requests concurrently; and warm TCP connections are more efficient than cold ones.
+or data in multiple parts:
 
-HTTP/2 introduces an extra step: it divides HTTP/1.x messages into frames which are embedded in a stream. Data and header frames are separated, which allows header compression. Several streams can be combined together, a process called _multiplexing_, allowing more efficient use of underlying TCP connections.
+```http
+--delimiter123
+Content-Disposition: form-data; name="field1"
 
-![HTTP/2 modifies the HTTP message to divide them in frames (part of a single stream), allowing for more optimization.](binary_framing2.png)
+value1
+--delimiter123
+Content-Disposition: form-data; name="field2"; filename="example.txt"
 
-HTTP frames are now transparent to Web developers. This is an additional step in HTTP/2, between HTTP/1.1 messages and the underlying transport protocol. No changes are needed in the APIs used by Web developers to utilize HTTP frames; when available in both the browser and the server, HTTP/2 is switched on and used.
+Text file contents
+--delimiter123--
+```
+
+## HTTP responses
+
+Responses are the HTTP messages a server sends back in reply to a request.
+The response lets the client know what the outcome of the request was.
+Here's an example HTTP/1.1 response to a `POST` request that created a new user:
+
+```http
+HTTP/1.1 201 Created
+Content-Type: application/json
+Location: http://example.com/users/123
+
+{
+  "message": "New user created",
+  "user": {
+    "id": 123,
+    "firstName": "Example",
+    "lastName": "Person",
+    "email": "bsmth@example.com"
+  }
+}
+```
+
+The start-line (`HTTP/1.1 201 Created` above) is called a "status line" in responses, and has three parts:
+
+```http
+<protocol> <status-code> <status-text>
+```
+
+- `<protocol>`
+  - : The _HTTP version_ of the remaining message.
+- `<status-code>`
+  - : A numeric [status code](/en-US/docs/Web/HTTP/Status) that indicates whether the request succeeded or failed.
+    Common status codes are {{HTTPStatus("200")}}, {{HTTPStatus("404")}}, or {{HTTPStatus("302")}}.
+- `<status-text>`
+  - : The status text is a brief, purely informational, textual description of the status code to help a human understand the HTTP message.
+
+### Response headers
+
+Response headers are the metadata sent with a response.
+In HTTP/1.x, each header is a **case-insensitive** string followed by a colon (`:`) and a value whose format depends upon which header is used.
+
+![Example of headers in an HTTP response](https://mdn.github.io/shared-assets/images/diagrams/http/messages/response-headers.svg)
+
+Like request headers, there are many different headers that can appear in responses, and they are categorized as:
+
+- {{glossary("Response header", "Response headers")}} that give additional context about the message or add extra logic to how the client should make subsequent requests.
+  For example, headers like {{HTTPHeader("Server")}} include information about the server software, while {{HTTPHeader("Date")}} includes when the response was generated.
+  There is also information about the resource being returned, such as its content type ({{HTTPHeader("Content-Type")}}), or how it should be cached ({{HTTPHeader("Cache-Control")}}).
+- {{glossary("Representation header", "Representation headers")}} if the message has a body, they describe the form of the message data and any encoding applied.
+  For example, the same resource might be formatted in a particular media type such as XML or JSON, localized to a particular written language or geographical region, and/or compressed or otherwise encoded for transmission.
+  This allows a recipient to understand how to reconstruct the resource as it was before it was transmitted over the network.
+
+### Response body
+
+A response body is included in most messages when responding to a client.
+In successful requests, the response body contains the data that the client asked for in a `GET` request.
+If there are problems with the client's request, it's common for the response body to describe why the request failed, and hint as to whether it's permanent or temporary.
+
+Response bodies may be:
+
+- Single-resource bodies defined by the two headers: {{HTTPHeader("Content-Type")}} and {{HTTPHeader("Content-Length")}}, or of unknown length and encoded in chunks with {{HTTPHeader("Transfer-Encoding")}} set to `chunked`.
+- [Multiple-resource bodies](/en-US/docs/Web/HTTP/MIME_types#multipartform-data), consisting of a body that contains multiple parts, each containing a different piece of information.
+  Multipart bodies are typically associated with [HTML Forms](/en-US/docs/Learn_web_development/Extensions/Forms), but may also be sent in response to [Range requests](/en-US/docs/Web/HTTP/Range_requests).
+
+Responses with a status code that answers the request without the need to include message content, such as {{HTTPStatus("201", "201 Created")}} or {{HTTPStatus("204", "204 No Content")}}, do not have a body.
+
+## HTTP/2 messages
+
+HTTP/1.x uses text-based messages that are straightforward to read and construct, but as a result have a few downsides.
+You can compress message bodies using `gzip` or other compression algorithms, but not headers.
+Headers are often similar or identical in a client-server interaction, but they are repeated in successive messages on a connection.
+There are many known methods to compress repetitive text that are very efficient, which leaves a large amount of bandwidth savings unutilized.
+
+HTTP/1.x also has a problem called head-of-line (HOL) blocking, where a client has to wait for a response from the server before sending the next request.
+HTTP [pipelining](/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x#http_pipelining) tried to work around this, but poor support and complexity means it's rarely used and difficult to get right.
+Several connections need to be opened to send requests concurrently; and warm (established and busy) connections are more efficient than cold ones due to TCP slow start.
+
+In HTTP/1.1 if you want to make two requests in parallel, you have to open two connections:
+
+![Making two HTTP requests to a server in parallel](https://mdn.github.io/shared-assets/images/diagrams/http/messages/http-1-connection.png)
+
+This means that browsers are limited in the number of resources that they can download and render at the same time, which has typically been limited to 6 parallel connections.
+
+HTTP/2 allows you to use a single TCP connection for multiple requests and responses at the same time.
+This is done by wrapping messages into a binary frame and sending the requests and responses in a numbered **stream** on a connection.
+Data and header frames are handled separately, which allows headers to be compressed via an algorithm called HPACK.
+Using the same TCP connection to handle multiple requests at the same time is called _multiplexing_.
+
+![Multiplexing requests and responses in HTTP/2 using a single TCP connection.](https://mdn.github.io/shared-assets/images/diagrams/http/messages/http-2-connection.png)
+
+Requests are not necessarily sequential: stream 9 doesn't have to wait for stream 7 to finish, for instance.
+The data from multiple streams are usually interleaved on the connection, so stream 9 and 7 can be received by the client at the same time.
+There's a mechanism for the protocol to set a priority for each stream or resource.
+Low-priority resources take up less bandwidth than higher-priority resources when they're being sent over different streams, or they could effectively be sent sequentially on the same connection if there are critical resources that should be handled first.
+
+In general, despite all of the improvements and abstractions added over HTTP/1.x, virtually no changes are needed in the APIs used by developers to make use of HTTP/2 over HTTP/1.x.
+When HTTP/2 is available in both the browser and the server, it is switched on and used automatically.
+
+### Pseudo-headers
+
+One notable change to messages in HTTP/2 are the use of pseudo-headers.
+Where HTTP/1.x used the message start-line, HTTP/2 uses special pseudo-header fields beginning with `:`.
+In requests, there are the following pseudo-headers:
+
+- `:method` - the HTTP method.
+- `:scheme` - the scheme portion of the target URI, which is often HTTP(S).
+- `:authority` - the authority portion of the target URI.
+- `:path` - the path and query parts of the target URI.
+
+In responses, there is only one pseudo-header, and that's the `:status` which provides the code of the response.
+
+We can make a HTTP/2 request using [nghttp](https://github.com/nghttp2/nghttp2) to fetch `example.com`, which will print out the request in a form that's more readable.
+You can make the request using this command where the `-n` option discards the downloaded data and `-v` is for 'verbose' output, showing reception and transmission of frames:
+
+```bash
+nghttp -nv https://www.example.com
+```
+
+If you look down through the output, you'll see the timing for each frame transmitted and received:
+
+```plain
+[  0.123] <send|recv> <frame-type> <frame-details>
+```
+
+We don't have to go into too much detail on this output, but look out for the `HEADERS` frame in the format `[  0.123] send HEADERS frame ...`.
+In the lines after the header transmission, you will see the following lines:
+
+```http
+[  0.447] send HEADERS frame ...
+          ...
+          :method: GET
+          :path: /
+          :scheme: https
+          :authority: www.example.com
+          accept: */*
+          accept-encoding: gzip, deflate
+          user-agent: nghttp2/1.61.0
+```
+
+This should look familiar if you're already comfortable working with HTTP/1.x and the concepts covered in the earlier section of this guide still apply.
+This is the binary frame with the `GET` request for `example.com`, converted into a readable form by `nghttp`.
+If you look further down the output of the command, you will see the `:status` pseudo-header in one of the streams received from the server:
+
+```http
+[  0.433] recv (stream_id=13) :status: 200
+[  0.433] recv (stream_id=13) content-encoding: gzip
+[  0.433] recv (stream_id=13) age: 112721
+[  0.433] recv (stream_id=13) cache-control: max-age=604800
+[  0.433] recv (stream_id=13) content-type: text/html; charset=UTF-8
+[  0.433] recv (stream_id=13) date: Fri, 13 Sep 2024 12:56:07 GMT
+[  0.433] recv (stream_id=13) etag: "3147526947+gzip"
+...
+```
+
+And if you remove the timing and stream ID from this message, it should be even more familiar:
+
+```http
+:status: 200
+content-encoding: gzip
+age: 112721
+```
+
+Digging further into message frames, stream IDs and how the connection is managed is beyond the scope of this guide, but for the purpose of understanding and debugging HTTP/2 messages, you should be well-equipped using the knowledge and tools in this article.
 
 ## Conclusion
 
-HTTP messages are the key in using HTTP; their structure is simple, and they are highly extensible. The HTTP/2 framing mechanism adds a new intermediate layer between the HTTP/1.x syntax and the underlying transport protocol, without fundamentally modifying it: building upon proven mechanisms.
+This guide provides a general overview of the anatomy of HTTP messages, using the HTTP/1.1 format for illustration.
+We also explored HTTP/2 message framing, which introduces a layer between the HTTP/1.x syntax and the underlying transport protocol without fundamentally modifying HTTP's semantics.
+HTTP/2 was introduced to solve the {{glossary("head of line blocking", "head-of-line blocking")}} issues present in HTTP/1.x by enabling multiplexing of requests.
+
+One issue that remained in HTTP/2 is that even though head-of-line blocking was fixed in the protocol level, there is still a performance bottleneck due to head-of-line blocking within TCP (at the transport level).
+HTTP/3 addresses this limitation by using QUIC, a protocol built on UDP, instead of TCP.
+This change improves performance, reduces connection setup time, and enhances stability on degraded or unreliable networks.
+HTTP/3 retains the same core HTTP semantics, so features like request methods, status codes, and headers remain consistent across all three major HTTP versions.
+
+If you understand HTTP/1.1's semantics, you already have a solid foundation for grasping HTTP/2 and HTTP/3.
+The main difference lies in **how** these semantics are implemented at the transport level.
+By following the examples and concepts in this guide, you should now feel equipped to work with HTTP and understand the meaning of messages, and how applications use HTTP to send and receive data.
+
+## See also
+
+- [Evolution of HTTP](/en-US/docs/Web/HTTP/Evolution_of_HTTP)
+- [Protocol upgrade mechanism](/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism)
+- Glossary terms:
+  - {{glossary('HTTP')}}
+  - {{glossary('HTTP_2', 'HTTP/2')}}
+  - {{glossary('QUIC')}}

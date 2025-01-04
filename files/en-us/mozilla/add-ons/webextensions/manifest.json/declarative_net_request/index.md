@@ -42,7 +42,8 @@ Specify static rulesets for use with {{WebExtAPIRef("declarativeNetRequest")}}. 
 
 See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#permissions">Permissions</a> for more information on permission requirements.
 
-> **Note:** A rule containing unrecognized properties is loaded if it is otherwise valid, that is, unrecognized properties are ignored. Before Firefox 128, a rule with unrecognized properties was considered invalid and not loaded.
+> [!NOTE]
+> A rule containing unrecognized properties is loaded if it is otherwise valid, that is, unrecognized properties are ignored. Before Firefox 128, a rule with unrecognized properties was considered invalid and not loaded.
 
 ## Syntax
 

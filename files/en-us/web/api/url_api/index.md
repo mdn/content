@@ -14,7 +14,7 @@ The URL API is a component of the URL standard, which defines what constitutes a
 
 ## Concepts and usage
 
-The majority of the URL standard is taken up by the [definition of a URL](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL) and how it is structured and parsed. Also covered are definitions of various terms related to addressing of computers on a network, and the algorithms for parsing IP addresses and DOM addresses are specified. More interesting to most developers is the API itself.
+The majority of the URL standard is taken up by the [definition of a URL](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL) and how it is structured and parsed. Also covered are definitions of various terms related to addressing of computers on a network, and the algorithms for parsing IP addresses and DOM addresses are specified. More interesting to most developers is the API itself.
 
 ### Accessing URL components
 
@@ -33,19 +33,19 @@ The snippet above creates a `URL` object for the article you're reading right no
 Most of the properties of `URL` are settable; you can write new values to them to alter the URL represented by the object. For example, to create a URL and set its username:
 
 ```js
-let myUsername = "someguy";
+let myUsername = "some-guy";
 let addr = new URL("https://example.com/login");
 addr.username = myUsername;
 ```
 
-Setting the value of {{domxref("URL.username", "username")}} not only sets that property's value, but it updates the overall URL. After executing the code snippet above, the value returned by {{domxref("URL.href", "href")}} is `https://someguy@example.com/login`. This is true for any of the writable properties.
+Setting the value of {{domxref("URL.username", "username")}} not only sets that property's value, but it updates the overall URL. After executing the code snippet above, the value returned by {{domxref("URL.href", "href")}} is `https://some-guy@example.com/login`. This is true for any of the writable properties.
 
 ### Queries
 
-The {{domxref("URL.search", "search")}} property on a `URL` contains the query string portion of the URL. For example, if the URL is `https://example.com/login?user=someguy&page=news`, then the value of the `search` property is `?user=someguy&page=news`. You can also look up the values of individual parameters with the {{domxref("URLSearchParams")}} object's {{domxref("URLSearchParams.get", "get()")}} method:
+The {{domxref("URL.search", "search")}} property on a `URL` contains the query string portion of the URL. For example, if the URL is `https://example.com/login?user=some-guy&page=news`, then the value of the `search` property is `?user=some-guy&page=news`. You can also look up the values of individual parameters with the {{domxref("URLSearchParams")}} object's {{domxref("URLSearchParams.get", "get()")}} method:
 
 ```js
-let addr = new URL("https://example.com/login?user=someguy&page=news");
+let addr = new URL("https://example.com/login?user=some-guy&page=news");
 try {
   loginUser(addr.searchParams.get("user"));
   gotoPage(addr.searchParams.get("page"));
@@ -93,7 +93,7 @@ function fillTableWithParameters(tbl) {
 }
 ```
 
-A working version of this example can be [found on Glitch](https://url-api.glitch.me). Just add parameters to the URL when loading the page to see them in the table. For instance, try [`https://url-api.glitch.me?from=mdn&excitement=high&likelihood=inconceivable`](https://url-api.glitch.me?from=mdn&excitement=high&likelihood=inconceivable).
+A working version of this example can be [found on Glitch](https://url-api.glitch.me/). Just add parameters to the URL when loading the page to see them in the table. For instance, try [`https://url-api.glitch.me?from=mdn&excitement=high&likelihood=inconceivable`](https://url-api.glitch.me?from=mdn&excitement=high&likelihood=inconceivable).
 
 ## Specifications
 
@@ -106,6 +106,6 @@ A working version of this example can be [found on Glitch](https://url-api.glitc
 ## See also
 
 - {{domxref("Fetch API", "", "", "nocode")}}
-- CSS {{cssxref("&lt;url&gt;")}} type
+- CSS {{cssxref("url_value", "&lt;url&gt;")}} type
 - {{jsxref("encodeURI", "encodeURI()")}}
 - {{jsxref("encodeURIComponent", "encodeURIComponent()")}}

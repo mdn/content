@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.checkFramebufferStatus
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.checkFramebufferStatus()`** method
 of the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns the completeness

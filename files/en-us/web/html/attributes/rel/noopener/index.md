@@ -2,7 +2,9 @@
 title: rel=noopener
 slug: Web/HTML/Attributes/rel/noopener
 page-type: html-attribute-value
-browser-compat: html.elements.a.rel.noopener
+browser-compat:
+  - html.elements.a.rel.noopener
+  - html.elements.area.rel.noopener
 ---
 
 {{HTMLSidebar}}
@@ -13,7 +15,8 @@ This is especially useful when opening untrusted links, in order to ensure they 
 
 Note that when `noopener` is used, nonempty target names other than `_top`, `_self`, and `_parent` are all treated like `_blank` in terms of deciding whether to open a new window/tab.
 
-> **Note:** Setting `target="_blank"` on `<a>` elements now implicitly provides the same `rel` behavior as setting `rel="noopener"` which does not set `window.opener`. See [browser compatibility](/en-US/docs/Web/HTML/Element/a#browser_compatibility) for support status.
+> [!NOTE]
+> Setting `target="_blank"` on `<a>`, `<area>` and `<form>` elements implicitly provides the same `rel` behavior as setting `rel="noopener"` which does not set `window.opener`.
 
 ## Specifications
 

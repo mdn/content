@@ -3,23 +3,21 @@ title: X-XSS-Protection
 slug: Web/HTTP/Headers/X-XSS-Protection
 page-type: http-header
 status:
+  - deprecated
   - non-standard
 browser-compat: http.headers.X-XSS-Protection
 ---
 
-{{HTTPSidebar}}{{Non-standard_header}}
+{{HTTPSidebar}}{{Non-standard_header}}{{deprecated_header}}
 
-The HTTP **`X-XSS-Protection`** response header was a feature of Internet Explorer, Chrome and Safari that stopped pages from loading when they detected reflected cross-site scripting ({{Glossary("Cross-site_scripting", "XSS")}}) attacks. These protections are largely unnecessary in modern browsers when sites implement a strong {{HTTPHeader("Content-Security-Policy")}} that disables the use of inline JavaScript (`'unsafe-inline'`).
+> [!WARNING]
+> Even though this feature can protect users of older web browsers that don't support {{Glossary("CSP")}}, in some cases, **`X-XSS-Protection` can create XSS vulnerabilities** in otherwise safe websites.
+> See the [Security considerations](#security_considerations) section below for more information.
 
-> **Warning:** Even though this feature can protect users of older web browsers that don't yet support {{Glossary("CSP")}}, in some cases, **XSS protection can create XSS vulnerabilities** in otherwise safe websites. See the section below for more information.
+The HTTP **`X-XSS-Protection`** {{Glossary("response header")}} was a feature of Internet Explorer, Chrome and Safari that stopped pages from loading when they detected reflected cross-site scripting ({{Glossary("Cross-site_scripting", "XSS")}}) attacks.
+These protections are largely unnecessary in modern browsers when sites implement a strong {{HTTPHeader("Content-Security-Policy")}} that disables the use of inline JavaScript (`'unsafe-inline'`).
 
-> **Note:**
->
-> - Chrome has [removed their XSS Auditor](https://chromestatus.com/feature/5021976655560704)
-> - Firefox has not, and [will not implement `X-XSS-Protection`](https://bugzil.la/528661)
-> - Edge has [retired their XSS filter](https://blogs.windows.com/windows-insider/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/)
->
-> This means that if you do not need to support legacy browsers, it is recommended that you use [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) without allowing `unsafe-inline` scripts instead.
+It is recommended that you use [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) instead of XSS filtering.
 
 <table class="properties">
   <tbody>
@@ -29,7 +27,7 @@ The HTTP **`X-XSS-Protection`** response header was a feature of Internet Explor
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
-      <td>no</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -43,16 +41,20 @@ X-XSS-Protection: 1; mode=block
 X-XSS-Protection: 1; report=<reporting-uri>
 ```
 
-- 0
+## Directives
+
+- `0`
   - : Disables XSS filtering.
-- 1
+- `1`
   - : Enables XSS filtering (usually default in browsers). If a cross-site scripting attack is detected, the browser will sanitize the page (remove the unsafe parts).
-- 1; mode=block
+- `1; mode=block`
   - : Enables XSS filtering. Rather than sanitizing the page, the browser will prevent rendering of the page if an attack is detected.
-- 1; report=\<reporting-URI> (Chromium only)
+- `1; report=<reporting-URI>` (Chromium only)
   - : Enables XSS filtering. If a cross-site scripting attack is detected, the browser will sanitize the page and report the violation. This uses the functionality of the CSP {{CSP("report-uri")}} directive to send a report.
 
-## Vulnerabilities caused by XSS filtering
+## Security considerations
+
+### Vulnerabilities caused by XSS filtering
 
 Consider the following excerpt of HTML code for a webpage:
 
@@ -111,6 +113,6 @@ Not part of any specifications or drafts.
 ## See also
 
 - {{HTTPHeader("Content-Security-Policy")}}
-- [Controlling the XSS Filter – Microsoft](https://docs.microsoft.com/archive/blogs/ieinternals/controlling-the-xss-filter)
+- [Controlling the XSS Filter – Microsoft](https://learn.microsoft.com/en-us/archive/blogs/ieinternals/controlling-the-xss-filter)
 - [Understanding XSS Auditor – Virtue Security](https://www.virtuesecurity.com/understanding-xss-auditor/)
 - [The misunderstood X-XSS-Protection – blog.innerht.ml](https://web.archive.org/web/20230527023943/https://blog.innerht.ml/the-misunderstood-x-xss-protection/)

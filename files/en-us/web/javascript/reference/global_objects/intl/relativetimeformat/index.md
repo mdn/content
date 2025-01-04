@@ -90,6 +90,6 @@ rtf.formatToParts(100, "day");
 
 ## See also
 
-- [Polyfill of `Intl.RelativeTimeFormat` in FormatJS](https://formatjs.io/docs/polyfills/intl-relativetimeformat/)
+- [Polyfill of `Intl.RelativeTimeFormat` in FormatJS](https://formatjs.github.io/docs/polyfills/intl-relativetimeformat/)
 - {{jsxref("Intl")}}
 - [`Intl.RelativeTimeFormat`](https://v8.dev/features/intl-relativetimeformat) on v8.dev (2018)

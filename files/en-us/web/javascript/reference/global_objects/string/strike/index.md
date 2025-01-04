@@ -11,7 +11,8 @@ browser-compat: javascript.builtins.String.strike
 
 The **`strike()`** method of {{jsxref("String")}} values creates a string that embeds this string in a {{HTMLElement("strike")}} element (`<strike>str</strike>`), which causes this string to be displayed as struck-out text.
 
-> **Note:** All [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods) are deprecated and only standardized for compatibility purposes. For the case of `strike()`, the `<strike>` element itself has been removed from the HTML specification and shouldn't be used anymore. Web developers should use the {{HTMLElement("del")}} for deleted content or the {{HTMLElement("s")}} for content that is no longer accurate or no longer relevant instead.
+> [!NOTE]
+> All [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods) are deprecated and only standardized for compatibility purposes. For the case of `strike()`, the `<strike>` element itself has been removed from the HTML specification and shouldn't be used anymore. Web developers should use the {{HTMLElement("del")}} for deleted content or the {{HTMLElement("s")}} for content that is no longer accurate or no longer relevant instead.
 
 ## Syntax
 
@@ -45,7 +46,8 @@ This will create the following HTML:
 <strike>Hello, world</strike>
 ```
 
-> **Warning:** This markup is invalid, because `strike` is no longer a valid element.
+> [!WARNING]
+> This markup is invalid, because `strike` is no longer a valid element.
 
 Instead of using `strike()` and creating HTML text directly, you should use DOM APIs such as [`document.createElement()`](/en-US/docs/Web/API/Document/createElement). For example:
 

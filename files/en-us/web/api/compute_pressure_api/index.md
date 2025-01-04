@@ -28,7 +28,7 @@ Fast and delightful web applications should balance workloads when the system's 
 
 ### Pressure source types
 
-In your web app or website, different tasks are fighting for the processing time of different processing units (CPU, GPU, and other specialized proccessing units). The current version of the Compute Pressure API specification defines two main source types that can be queried to gather pressure information:
+In your web app or website, different tasks are fighting for the processing time of different processing units (CPU, GPU, and other specialized processing units). The current version of the Compute Pressure API specification defines two main source types that can be queried to gather pressure information:
 
 - `"thermals"` represents the global thermal state of the entire system.
 - `"cpu"` represents the average pressure of the central processing unit (CPU) across all its cores. This state can be affected by other apps and sites than the observing site.
@@ -64,7 +64,7 @@ The Compute Pressure API is [policy-controlled](/en-US/docs/Web/HTTP/Permissions
 The following interfaces are present in the Compute Pressure API and the API surface is similar to other observers, such as {{domxref("IntersectionObserver")}}, {{domxref("MutationObserver")}}, or {{domxref("PerformanceObserver")}}.
 
 - {{domxref("PressureObserver")}} {{experimental_inline}}
-  - : Notifies when the system's pressure changes for a specfied number of sources (e.g. the CPU) at a predefined sample interval.
+  - : Notifies when the system's pressure changes for a specified number of sources (e.g. the CPU) at a predefined sample interval.
 - {{domxref("PressureRecord")}}
   - : Describes the pressure trend at a specific moment of transition.
 
@@ -112,4 +112,4 @@ try {
 
 ## See also
 
-- [Compute Pressure demo](https://w3c.github.io/compute-pressure/demo/), which uses Mandelbrot sets and workers to create artifical pressure for test purposes.
+- [Compute Pressure demo](https://w3c.github.io/compute-pressure/demo/), which uses Mandelbrot sets and workers to create artificial pressure for test purposes.

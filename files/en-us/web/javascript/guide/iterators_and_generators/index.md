@@ -32,7 +32,7 @@ The most common iterator in JavaScript is the Array iterator, which returns each
 
 While it is easy to imagine that all iterators could be expressed as arrays, this is not true. Arrays must be allocated in their entirety, but iterators are consumed only as necessary. Because of this, iterators can express sequences of unlimited size, such as the range of integers between `0` and {{jsxref("Infinity")}}.
 
-Here is an example which can do just that. It allows creation of a simple range iterator which defines a sequence of integers from `start` (inclusive) to `end` (exclusive) spaced `step` apart. Its final return value is the size of the sequence it created, tracked by the variable `iterationCount`.
+Here is an example which can do just that. It allows creation of a range iterator which defines a sequence of integers from `start` (inclusive) to `end` (exclusive) spaced `step` apart. Its final return value is the size of the sequence it created, tracked by the variable `iterationCount`.
 
 ```js
 function makeRangeIterator(start = 0, end = Infinity, step = 1) {
@@ -69,7 +69,8 @@ while (!result.done) {
 console.log("Iterated over sequence of size:", result.value); // [5 numbers returned, that took interval in between: 0 to 10]
 ```
 
-> **Note:** It is not possible to know reflectively whether a particular object is an iterator. If you need to do this, use [Iterables](#iterables).
+> [!NOTE]
+> It is not possible to know reflectively whether a particular object is an iterator. If you need to do this, use [Iterables](#iterables).
 
 ## Generator functions
 
@@ -192,9 +193,10 @@ a;
 
 Generators compute their `yield`ed values _on demand_, which allows them to efficiently represent sequences that are expensive to compute (or even infinite sequences, as demonstrated above).
 
-The {{jsxref("Generator/next", "next()")}} method also accepts a value, which can be used to modify the internal state of the generator. A value passed to `next()` will be received by `yield` .
+The {{jsxref("Generator/next", "next()")}} method also accepts a value, which can be used to modify the internal state of the generator. A value passed to `next()` will be received by `yield`.
 
-> **Note:** A value passed to the _first_ invocation of `next()` is always ignored.
+> [!NOTE]
+> A value passed to the _first_ invocation of `next()` is always ignored.
 
 Here is the fibonacci generator using `next(x)` to restart the sequence:
 

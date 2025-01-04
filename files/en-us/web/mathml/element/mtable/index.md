@@ -45,7 +45,8 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 - `width` {{Non-standard_Inline}}
   - : A {{cssxref("length-percentage")}} indicating the width of the entire table.
 
-> **Note:** For the `width` attribute, some browsers may also accept [legacy MathML lengths](/en-US/docs/Web/MathML/Values#legacy_mathml_lengths).
+> [!NOTE]
+> For the `width` attribute, some browsers may also accept [legacy MathML lengths](/en-US/docs/Web/MathML/Values#legacy_mathml_lengths).
 
 ## Examples
 
@@ -73,6 +74,19 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 ```
 
 {{EmbedLiveSample('Alignment with row number')}}
+
+## Technical summary
+
+<table class="properties">
+  <tr>
+    <th scope="row">
+      <a href="/en-US/docs/Web/Accessibility/ARIA/Roles">Implicit ARIA role</a>
+    </th>
+    <td>
+      None
+    </td>
+  </tr>
+</table>
 
 ## Specifications
 

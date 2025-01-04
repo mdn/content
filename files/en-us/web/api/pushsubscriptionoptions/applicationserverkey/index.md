@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.PushSubscriptionOptions.applicationServerKey
 ---
 
-{{DefaultAPISidebar("Push API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
+{{APIRef("Push API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`applicationServerKey`** read-only property of the {{domxref("PushSubscriptionOptions")}} interface contains the public key used by the push server.
 

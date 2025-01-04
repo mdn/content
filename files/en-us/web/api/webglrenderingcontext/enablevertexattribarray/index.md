@@ -6,13 +6,14 @@ page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.enableVertexAttribArray
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The {{domxref("WebGLRenderingContext")}} method
 **`enableVertexAttribArray()`**, part of the [WebGL API](/en-US/docs/Web/API/WebGL_API), turns on the generic vertex
 attribute array at the specified index into the list of attribute arrays.
 
-> **Note:** You can disable the attribute array by calling
+> [!NOTE]
+> You can disable the attribute array by calling
 > {{domxref("WebGLRenderingContext.disableVertexAttribArray", "disableVertexAttribArray()")}}.
 
 In WebGL, values that apply to a specific vertex are stored in [attributes](/en-US/docs/Web/API/WebGL_API/Data#attributes). These are only
@@ -77,7 +78,8 @@ gl.vertexAttribPointer(
 gl.drawArrays(gl.TRIANGLES, 0, vertexCount);
 ```
 
-> **Note:** This code snippet is taken from [the function `animateScene()`](/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example#drawing_and_animating_the_scene) in "A basic 2D WebGL animation example." See
+> [!NOTE]
+> This code snippet is taken from [the function `animateScene()`](/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example#drawing_and_animating_the_scene) in "A basic 2D WebGL animation example." See
 > that article for the full sample and to see the resulting animation in action.
 
 This code sets the buffer of vertexes that will be used to draw the triangles of the

@@ -39,7 +39,8 @@ Renegotiation is triggered by sending a {{domxref("RTCPeerConnection.negotiation
 The method does nothing if the transceiver is already stopped.
 You can check whether it has stopped by comparing {{domxref("RTCRtpTransceiver.currentDirection", "currentDirection")}} to `"stopped"`.
 
-> **Note:** Earlier versions of the specification used the deprecated {{domxref("RTCRtpTransceiver.stopped", "stopped")}} {{deprecated_inline}} property to indicate if the transceiver has stopped.
+> [!NOTE]
+> Earlier versions of the specification used the deprecated {{domxref("RTCRtpTransceiver.stopped", "stopped")}} {{deprecated_inline}} property to indicate if the transceiver has stopped.
 
 ## Specifications
 

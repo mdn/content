@@ -2,7 +2,6 @@
 title: CSS property page template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_template
 page-type: mdn-writing-guide
-browser-compat: css.properties.NameOfTheProperty
 ---
 
 {{MDNSidebar}}
@@ -34,7 +33,7 @@ browser-compat: css.properties.NameOfTheProperty
 >     For example, the [`background-color`](/en-US/docs/Web/CSS/background-color) property has a title of _background-color_.
 > - **slug**
 >   - : The `slug` value is the end of the URL path after `https://developer.mozilla.org/en-US/docs/`. This will be formatted as `Web/CSS/NameOfTheProperty`.
->     For example, the slug for the [`background-color`](/en-US/docs/Web/CSS/background-color) property is `Web/CSS/background-color`. For a multi-word component such as `Getting_started` in a slug, the slug should use an underscore as in `/en-US/docs/Learn/HTML/Getting_started`.
+>     For example, the slug for the [`background-color`](/en-US/docs/Web/CSS/background-color) property is `Web/CSS/background-color`. For a multi-word component such as `Getting_started` in a slug, the slug should use an underscore as in `/en-US/docs/Learn_web_development/Core/Structuring_content`.
 > - **page-type**
 >   - : The `page-type` value for CSS properties is `css-property`. For a shorthand CSS property, the value is `css-shorthand-property`. For example, the `page-type` value for the [animation](/en-US/docs/Web/CSS/animation) property is `css-shorthand-property` because it is a shorthand property, whereas the `page-type` value for the [animation-delay](/en-US/docs/Web/CSS/animation-delay) property is `css-property`.
 > - **status**
@@ -125,6 +124,10 @@ _To use this macro, remove the backticks and backslash in the markdown file._
 
 _To use this macro, remove the backticks and backslash in the markdown file._
 
+## Accessibility
+
+This is an optional section. Include accessibility guidelines, best practices, and potential concerns that developers should be aware of while using this property. You can also include workarounds or solutions where applicable.
+
 ## Examples
 
 Note that we use the plural "Examples" even if the page only contains one example.
@@ -135,7 +138,8 @@ Each example must have an H3 heading (`###`) naming the example. The heading sho
 
 See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples) for more information.
 
-> **Note:** Sometimes you will want to link to examples given on another page.
+> [!NOTE]
+> Sometimes you will want to link to examples given on another page.
 >
 > **Scenario 1:** If you have some examples on this page and some more examples on another page:
 >
@@ -160,12 +164,8 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 > ```md
 > ## Examples
 >
-> For examples of this API, see [the page on fetch()](https://example.org).
+> For examples of this API, see [the page on fetch()](https://example.org/).
 > ```
-
-## Accessibility concerns
-
-This is an optional section. You can include any warnings here for accessibility concerns that developers should be aware of while using this property. You can also include workarounds for these accessibility concerns if there are any.
 
 ## Specifications
 

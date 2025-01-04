@@ -6,7 +6,8 @@ page-type: guide
 
 IMSC allows you to add subtitles or captions to your online video. In this article we'll take you through what you need to get started, including basic document structure, and the basics of how to style, time, and position subtitles.
 
-> **Note:** IMSC can be used for any kind of timed text you might want to include on a web document, not just for subtitles and captions. But because subtitles and captions represent the most common use cases for IMSC, we will focus on those. For readability we only use the term subtitles. In the technical context we describe, the term "subtitles" is interchangeable with "captions".
+> [!NOTE]
+> IMSC can be used for any kind of timed text you might want to include on a web document, not just for subtitles and captions. But because subtitles and captions represent the most common use cases for IMSC, we will focus on those. For readability we only use the term subtitles. In the technical context we describe, the term "subtitles" is interchangeable with "captions".
 
 ## So what is IMSC?
 
@@ -15,15 +16,17 @@ IMSC is a markup language you can use to define timed text for adding subtitles 
 If you are not already familiar with XML or HTML, read up on them first and then come back here:
 
 - [XML Introduction](/en-US/docs/Web/XML/XML_introduction)
-- [HTML Basics](/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
+- [HTML Basics](/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)
 
-> **Note:** If you want to know what you can do with IMSC in real-world scenarios have a look at the expanded example at the end of this tutorial.
+> [!NOTE]
+> If you want to know what you can do with IMSC in real-world scenarios have a look at the expanded example at the end of this tutorial.
 
 ## Minimal IMSC document
 
 IMSC is always specified as a complete XML document. As a file it should have the extension "_ttml_".
 
-> **Note:** IMSC does not have native support in browsers at this current moment, but the [imscJS](https://github.com/sandflow/imscJS) polyfill can be used to bridge this gap. All the examples below are rendered by using imscJS. It creates dynamically HTML and CSS from an IMSC XML document.
+> [!NOTE]
+> IMSC does not have native support in browsers at this current moment, but the [imscJS](https://github.com/sandflow/imscJS) polyfill can be used to bridge this gap. All the examples below are rendered by using imscJS. It creates dynamically HTML and CSS from an IMSC XML document.
 
 Let's look at a minimal IMSC document and how it is rendered:
 
@@ -52,7 +55,8 @@ This includes the following new attributes:
 
 Play around with the second values in the code sample and push the reload button when you are ready.
 
-> **Note:** The end times in IMSC are not "inclusive". The subtitle "Hello, I am Mork from Ork." is not shown anymore when it reaches the second value in time.
+> [!NOTE]
+> The end times in IMSC are not "inclusive". The subtitle "Hello, I am Mork from Ork." is not shown anymore when it reaches the second value in time.
 
 You can also use the `dur` attribute for timing:
 
@@ -83,7 +87,8 @@ Try setting some other colors for the text and background colors:
 - You can use other color schemes like `rgb(0 255 255)`.
 - Finally, try semi-transparent variations, like `rgb(0 0 0 / .8)`.
 
-> **Note:** Don't worry for now about namespaces. We will explain the meaning of `xmlns:tts` and `tts:backgroundColor` in a separate guide.
+> [!NOTE]
+> Don't worry for now about namespaces. We will explain the meaning of `xmlns:tts` and `tts:backgroundColor` in a separate guide.
 
 As explained in the [IMSC Styling](/en-US/docs/Related/IMSC/Styling) guide, it is possible to define a collection of styling properties that can be used any number of times. The style `s1` below is applied three times:
 

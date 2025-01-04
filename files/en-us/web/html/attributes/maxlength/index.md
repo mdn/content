@@ -1,5 +1,6 @@
 ---
 title: "HTML attribute: maxlength"
+short-title: maxlength
 slug: Web/HTML/Attributes/maxlength
 page-type: html-attribute
 browser-compat:
@@ -43,5 +44,5 @@ While the browser will generally prevent user from entering more text than the m
 - [`size`](/en-US/docs/Web/HTML/Attributes/size)
 - [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern)
 - [Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
-- [Form validation](/en-US/docs/Learn/Forms/Form_validation)
+- [Form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - {{htmlelement('input')}}

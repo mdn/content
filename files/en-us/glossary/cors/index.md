@@ -37,4 +37,4 @@ The [same-origin security policy](/en-US/docs/Web/Security/Same-origin_policy) f
 
 - [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS)
 - [Cross-origin resource sharing](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) on Wikipedia
-- [Fetch specification](https://fetch.spec.whatwg.org)
+- [Fetch specification](https://fetch.spec.whatwg.org/)

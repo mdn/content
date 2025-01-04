@@ -87,7 +87,8 @@ In this `tablist` example, the first `tab` is selected:
 </div>
 ```
 
-> **Note:** ARIA only modifies the accessibility tree for an element and how assistive technology presents the content to users. ARIA doesn't change anything about an element's function or behavior.
+> [!NOTE]
+> ARIA only modifies the accessibility tree for an element and how assistive technology presents the content to users. ARIA doesn't change anything about an element's function or behavior.
 
 ## Values
 

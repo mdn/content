@@ -23,44 +23,45 @@ Only then does the agreed-upon configuration take effect.
 
 ```js-nolint
 setRemoteDescription(sessionDescription)
+
+// deprecated
+setRemoteDescription(sessionDescription, successCallback, errorCallback)
 ```
 
 ### Parameters
 
 - `sessionDescription`
-  - : An {{domxref("RTCSessionDescriptionInit")}} or {{domxref("RTCSessionDescription")}} which specifies the remote peer's current offer or answer.
-    This value is an offer or answer received from the remote peer through your implementation of
 
-The `sessionDescription` parameter is technically of type `RTCSessionDescriptionInit`, but because {{domxref("RTCSessionDescription")}} serializes to be indistinguishable from `RTCSessionDescriptionInit`, you can also pass in an `RTCSessionDescription`.
-This lets you simplify code such as the following:
+  - : An object which specifies the remote peer's current offer or answer. It should contain the following properties:
 
-```js
-myPeerConnection
-  .setRemoteDescription(new RTCSessionDescription(description))
-  .then(() => createMyStream());
-```
+    - `type`
+      - : A string indicating the type of the session description. See {{domxref("RTCSessionDescription.type")}}.
+    - `sdp` {{optional_inline}}
+      - : A string containing the SDP describing the session. If sdp is not provided, it defaults to an empty string. If `type` is `"rollback"`, `sdp` must be null or an empty string. See {{domxref("RTCSessionDescription.sdp")}}.
 
-to be:
+    You can also pass an actual {{domxref("RTCSessionDescription")}} instance, but there's no difference. For this reason, the `RTCSessionDescription` constructor is deprecated.
 
-```js
-myPeerConnection.setRemoteDescription(description).then(() => createMyStream());
-```
+In older code and documentation, you may see a callback-based version of this function used.
+This has been deprecated and its use is _strongly_ discouraged.
+You should update any existing code to use the {{jsxref("Promise")}}-based version of `setRemoteDescription()` instead.
+The parameters for the older form of `setRemoteDescription()` are described below, to aid in updating existing code.
 
-Using [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)/[`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) syntax, you can further simplify this to:
+- `successCallback` {{deprecated_inline}}
+  - : A JavaScript {{jsxref("Function")}} which accepts no input parameters to be called once the description has been successfully set.
+    At that time, the offer can be sent to a remote peer via the signaling server.
+- `errorCallback` {{deprecated_inline}}
+  - : A function matching the signature `RTCPeerConnectionErrorCallback` which gets called if the description can't be set.
+    It is passed a single {{domxref("DOMException")}} object explaining why the request failed.
 
-```js
-await myPeerConnection.setRemoteDescription(description);
-createMyStream();
-```
-
-Since it's unnecessary, the {{domxref("RTCSessionDescription.RTCSessionDescription", "RTCSessionDescription()")}} constructor is deprecated.
+This deprecated form of the method returns instantaneously without waiting for the actual setting to be done: in case of success, the `successCallback` will be called; in case of failure, the `errorCallback` will be called.
 
 ### Return value
 
 A {{jsxref("Promise")}} which is fulfilled once the value of the connection's {{domxref("RTCPeerConnection.remoteDescription", "remoteDescription")}} is successfully changed or rejected if the change cannot be applied (for example, if the specified description is incompatible with one or both of the peers on the connection).
 The promise fulfillment handler receives no input parameters.
 
-> **Note:** The process of changing descriptions actually involves intermediary steps handled by the WebRTC layer to ensure that an active connection can be changed without losing the connection if the change does not succeed.
+> [!NOTE]
+> The process of changing descriptions actually involves intermediary steps handled by the WebRTC layer to ensure that an active connection can be changed without losing the connection if the change does not succeed.
 > See [Pending and current descriptions](/en-US/docs/Web/API/WebRTC_API/Connectivity#pending_and_current_descriptions) in the WebRTC Connectivity page for more details on this process.
 
 ### Exceptions
@@ -79,7 +80,14 @@ The following exceptions are reported to the rejection handler for the promise r
   - : Returned with the {{domxref("RTCError.errorDetail", "errorDetail")}} set to `sdp-syntax-error` if the {{Glossary("SDP")}} specified by {{domxref("RTCSessionDescription.sdp")}} is not valid.
     The error object's {{domxref("RTCError.sdpLineNumber", "sdpLineNumber")}} property indicates the line number within the SDP on which the syntax error was detected.
 - {{jsxref("TypeError")}}
-  - : Returned if the specified `RTCSessionDescriptionInit` or `RTCSessionDescription` object is missing the {{domxref("RTCSessionDescription.type", "type")}} property, or no description parameter was provided at all.
+  - : Returned if the `sessionDescription` is missing the {{domxref("RTCSessionDescription.type", "type")}} property, or no description parameter was provided at all.
+
+When using the deprecated callback-based version of `setRemoteDescription()`, the following exceptions may occur:
+
+- `InvalidStateError` {{deprecated_inline}}
+  - : The connection's {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is `"closed"`, indicating that the connection is not currently open, so negotiation cannot take place.
+- `InvalidSessionDescriptionError` {{deprecated_inline}}
+  - : The `sessionDescription` parameter is invalid.
 
 ## Usage notes
 
@@ -93,38 +101,8 @@ This begins a new negotiation session, with the newly-established offer as the s
 Upon starting the new negotiation with the newly-established offer, the local peer is now the callee, even if it was previously the caller.
 This happens instead of throwing an exception, thereby reducing the number of potential errors which might occur, and simplifies the processing you need to do when you receive an offer, by eliminating the need to handle the offer/answer process differently depending on whether the local peer is the caller or callee.
 
-> **Note:** Earlier implementations of WebRTC would throw an exception if an offer was set outside a `stable` or `have-remote-offer` state.
-
-## Deprecated syntax
-
-In older code and documentation, you may see a callback-based version of this function used.
-This has been deprecated and its use is _strongly_ discouraged.
-You should update any existing code to use the {{jsxref("Promise")}}-based version of `setRemoteDescription()` instead.
-The parameters for the older form of `setRemoteDescription()` are described below, to aid in updating existing code.
-
-```js
-pc.setRemoteDescription(sessionDescription, successCallback, errorCallback);
-```
-
-### Parameters
-
-- `successCallback` {{deprecated_inline}}
-  - : A JavaScript {{jsxref("Function")}} which accepts no input parameters to be called once the description has been successfully set.
-    At that time, the offer can be sent to a remote peer via the signaling server.
-- `errorCallback` {{deprecated_inline}}
-  - : A function matching the signature `RTCPeerConnectionErrorCallback` which gets called if the description can't be set.
-    It is passed a single {{domxref("DOMException")}} object explaining why the request failed.
-
-This deprecated form of the method returns instantaneously without waiting for the actual setting to be done: in case of success, the `successCallback` will be called; in case of failure, the `errorCallback` will be called.
-
-### Exceptions
-
-When using the deprecated callback-based version of `setRemoteDescription()`, the following exceptions may occur:
-
-- `InvalidStateError` {{deprecated_inline}}
-  - : The connection's {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is `"closed"`, indicating that the connection is not currently open, so negotiation cannot take place.
-- `InvalidSessionDescriptionError` {{deprecated_inline}}
-  - : The {{domxref("RTCSessionDescription")}} specified by the `sessionDescription` parameter is invalid.
+> [!NOTE]
+> Earlier implementations of WebRTC would throw an exception if an offer was set outside a `stable` or `have-remote-offer` state.
 
 ## Examples
 
@@ -169,3 +147,4 @@ When our promise fulfillment handler is called, indicating that this has been do
 - {{domxref("RTCPeerConnection.remoteDescription")}},
   {{domxref("RTCPeerConnection.pendingRemoteDescription")}},
   {{domxref("RTCPeerConnection.currentRemoteDescription")}}
+- {{domxref("RTCSessionDescription")}}

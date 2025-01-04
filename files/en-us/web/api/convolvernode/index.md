@@ -9,7 +9,8 @@ browser-compat: api.ConvolverNode
 
 The `ConvolverNode` interface is an {{domxref("AudioNode")}} that performs a Linear Convolution on a given {{domxref("AudioBuffer")}}, often used to achieve a reverb effect. A `ConvolverNode` always has exactly one input and one output.
 
-> **Note:** For more information on the theory behind Linear Convolution, see the [Convolution article on Wikipedia](https://en.wikipedia.org/wiki/Convolution).
+> [!NOTE]
+> For more information on the theory behind Linear Convolution, see the [Convolution article on Wikipedia](https://en.wikipedia.org/wiki/Convolution).
 
 {{InheritanceDiagram}}
 
@@ -60,7 +61,8 @@ _No specific method; inherits methods from its parent, {{domxref("AudioNode")}}_
 
 The following example shows basic usage of an AudioContext to create a convolver node.
 
-> **Note:** You will need to find an impulse response to complete the example below. See this [Codepen](https://codepen.io/DonKarlssonSan/pen/doVKRE) for an applied example.
+> [!NOTE]
+> You will need to find an impulse response to complete the example below. See this [CodePen](https://codepen.io/DonKarlssonSan/pen/doVKRE) for an applied example.
 
 ```js
 let audioCtx = new window.AudioContext();

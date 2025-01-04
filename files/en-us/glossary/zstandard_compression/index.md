@@ -17,7 +17,9 @@ For browser support, see [Content-Encoding: Browser compatibility](/en-US/docs/W
 - Related glossary terms:
   - {{glossary("Lossless compression")}}
   - {{glossary("Lossy compression")}}
-- [Zstandard RFC](https://tools.ietf.org/html/rfc8878)
+  - {{glossary("Brotli compression")}}
+  - {{glossary("Gzip compression")}}
+- [Zstandard RFC](https://datatracker.ietf.org/doc/html/rfc8878)
 - [Zstandard home page](https://facebook.github.io/zstd/)
 - [Zstandard GitHub repository](https://github.com/facebook/zstd)
 - [Zstandard](https://en.wikipedia.org/wiki/Zstandard) on Wikipedia

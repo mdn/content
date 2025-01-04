@@ -55,7 +55,7 @@ jobs:
 
       - name: Install Python poetry
         if: ${{ env.HAS_ARTIFACT }}
-        uses: snok/install-poetry@v1.3
+        uses: snok/install-poetry@v1.4
         with:
           virtualenvs-create: true
           virtualenvs-in-project: true

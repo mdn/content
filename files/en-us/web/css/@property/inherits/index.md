@@ -7,25 +7,20 @@ browser-compat: css.at-rules.property.inherits
 
 {{CSSRef}}
 
-The **`inherits`** [CSS](/en-US/docs/Web/CSS) descriptor is required when using the {{cssxref("@property")}} [at-rule](/en-US/docs/Web/CSS/At-rule) and controls whether the custom property registration specified by `@property` inherits by default.
+The **`inherits`** [CSS](/en-US/docs/Web/CSS) descriptor of the {{cssxref("@property")}} [at-rule](/en-US/docs/Web/CSS/At-rule) controls whether or not the registered [CSS custom property](/en-US/docs/Web/CSS/--*) inherits by default.
+It is a required descriptor; if missing or invalid, the entire `@property` rule is invalid and ignored.
 
 ## Syntax
 
 ```css
-@property --property-name {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #c0ffee;
-}
+/* Custom property does not inherit values */
+inherits: false;
 
-@property --property-name {
-  syntax: "<color>";
-  inherits: true;
-  initial-value: #c0ffee;
-}
+/* Custom property inherits values */
+inherits: true;
 ```
 
-## Values
+### Values
 
 - `true`
   - : The property inherits by default.
@@ -42,9 +37,9 @@ The **`inherits`** [CSS](/en-US/docs/Web/CSS) descriptor is required when using 
 
 ## Examples
 
-Add type checking to `--my-color` {{cssxref('--*', 'custom property')}}, as a color, a default value, and not allow it to inherit its value:
+### Setting inheritance behavior of a custom property
 
-Using [CSS](/en-US/docs/Web/CSS) {{cssxref('@property')}} [at-rule](/en-US/docs/Web/CSS/At-rule):
+This example shows how to define a custom property `--my-color` that does not inherit its value from its parent elements:
 
 ```css
 @property --my-color {
@@ -75,6 +70,7 @@ window.CSS.registerProperty({
 
 ## See also
 
+- Other {{cssxref("@property")}} descriptors: {{cssxref("@property/initial-value", "initial-value")}} and {{cssxref("@property/syntax","syntax")}}
 - [CSS Properties and Values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API)
 - [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
 - [CSS Typed Object Model](/en-US/docs/Web/API/CSS_Typed_OM_API)

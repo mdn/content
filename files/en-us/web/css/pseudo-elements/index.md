@@ -31,13 +31,14 @@ p::first-line {
 }
 ```
 
-Double colons (`::`) are used for pseudo-elements. This distinguishes pseudo-elements from [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) that use single colon (`:`) in their notation.
+Double colons (`::`) are used for pseudo-elements. This distinguishes pseudo-elements from [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) that use a single colon (`:`) in their notation.
 
-You can use only one pseudo-element in a selector. The pseudo-element must appear after all the other components in the [complex](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#complex_selector) or [compound](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector) selector in which it appears. For example, you can select a paragraph's first line using `p::first-line` but not the first-line's children or a hovered first line. So both `p::first-line > *` and `p::first-line:hover` are invalid.
+Pseudo-elements do not exist independently. The element of which a pseudo-element is a part is called its _originating element_. A pseudo-element must appear after all the other components in the [complex](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#complex_selector) or [compound](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector) selector. The last element in the selector is the originating element of the pseudo-element. For example, you can select a paragraph's first line using `p::first-line` but not the first-line's children. So `p::first-line > *` is invalid.
 
-While it is not possible to select an element based on its _state_ by using pseudo-elements, a pseudo-element can be used to select and style a part of an element that already has a state applied to it. For example, `p:hover::first-line` selects the first line (pseudo-element) of a paragraph when the paragraph itself is being hovered (pseudo-class).
+A pseudo-element can be selected based on the current state of the originating element. For example, `p:hover::first-line` selects the first line (pseudo-element) of a paragraph when the paragraph itself is being hovered (pseudo-class).
 
-> **Note:** When a [selector list](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list) contains an invalid selector, the entire style block is ignored.
+> [!NOTE]
+> When a [selector list](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list) contains an invalid selector, the entire style block is ignored.
 
 ## List of pseudo-elements
 
@@ -91,13 +92,14 @@ T
 
 V
 
-- {{cssxref("::view-transition")}} {{Experimental_Inline}}
-- {{cssxref("::view-transition-image-pair()")}} {{Experimental_Inline}}
-- {{cssxref("::view-transition-group()")}} {{Experimental_Inline}}
-- {{cssxref("::view-transition-new()")}} {{Experimental_Inline}}
-- {{cssxref("::view-transition-old()")}} {{Experimental_Inline}}
+- {{cssxref("::view-transition")}}
+- {{cssxref("::view-transition-image-pair()")}}
+- {{cssxref("::view-transition-group()")}}
+- {{cssxref("::view-transition-new()")}}
+- {{cssxref("::view-transition-old()")}}
 
-> **Note:** Browsers support the single colon syntax only for the original four pseudo-elements: `::before`, `::after`, `::first-line`, and `::first-letter`.
+> [!NOTE]
+> Browsers support the single colon syntax only for the original four pseudo-elements: `::before`, `::after`, `::first-line`, and `::first-letter`.
 
 ## Specifications
 
@@ -108,4 +110,4 @@ V
 - [CSS pseudo-element](/en-US/docs/Web/CSS/CSS_pseudo-elements) module
 - [Pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes)
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
-- [CSS building blocks: Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+- [Learn: Pseudo-classes and pseudo-elements](/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)

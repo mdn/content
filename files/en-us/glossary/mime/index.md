@@ -11,5 +11,6 @@ Initially used for email attachments, it has become the de facto standard to def
 
 ## See also
 
-- [MIME-Type](/en-US/docs/Glossary/MIME_type)
 - [MIME](https://en.wikipedia.org/wiki/MIME) on Wikipedia
+- Related glossary terms:
+  - {{Glossary("MIME Type")}}

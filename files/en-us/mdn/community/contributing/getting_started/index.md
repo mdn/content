@@ -23,19 +23,20 @@ We have created a [contributors task board](https://github.com/orgs/mdn/projects
 
 ### Getting ready to contribute
 
-To contribute, you will need a GitHub account. If you do not already have one, go ahead and [sign up](https://github.com/signup) for an account before continuing. If you are new to GitHub, we encourage you to take the following free, self-paced courses and reading material offered by GitHub. With this knowledge, you can focus on your contributions and not learn a new tool at the same time.
+To contribute, you will need a GitHub account. If you do not already have one, go ahead and [sign up](https://github.com/signup) for an account before continuing. If you are new to GitHub, we encourage you to take the following free, self-paced courses and reading material offered by GitHub. With this knowledge, you can focus on your contributions without the burden of learning a new tool at the same time.
 
-> NOTE: Do not feel overwhelmed or like you have to read through and complete _all_ of the course work. With the knowledge gained from the "Introduction to GitHub" course, you will be well on your way.
+> [!NOTE]
+> Do not feel overwhelmed or like you have to read through and complete _all_ of the course work. With the knowledge gained from the "Introduction to GitHub" course, you will be well on your way.
 
 - [Introduction to GitHub](https://github.com/skills/introduction-to-github)
-- [Setting up Git](https://docs.github.com/en/get-started/quickstart/set-up-git)
-- [GitHub workflow](https://docs.github.com/en/get-started/quickstart/github-flow)
+- [Setting up Git](https://docs.github.com/en/get-started/getting-started-with-git/set-up-git)
+- [GitHub workflow](https://docs.github.com/en/get-started/using-github/github-flow)
 - [Using Markdown](https://github.com/skills/communicate-using-markdown)
 
 ### Additional reading and learning material
 
 - [Basic etiquette for open source projects](/en-US/docs/MDN/Community/Open_source_etiquette): If you've never contributed to an open source project before, we encourage you to read this document.
-- [Learn web development](/en-US/docs/Learn): If you are new to HTML, CSS, JavaScript, we have some great content to help you get started.
+- [Learn web development](/en-US/docs/Learn_web_development): If you are new to HTML, CSS, JavaScript, we have some great content to help you get started.
 - [Deep dive into collaborating with pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests)
 
 Some writing-specific contribution opportunities will require a reasonable understanding of the English language. That said, do not let perfect be the enemy of "good enough." Even if your grammar isn't good, don't worry about it! We have a team of people who aim to ensure that MDN's contents are as good as possible. In addition, someone will be along to ensure your work is tidy and well-written.
@@ -46,6 +47,6 @@ This ensures that two people do not work on the same issue, and you will know wh
 
 ### Contributions
 
-When contributing, you agree to make your contributions available under the [Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/4.0/) (or an alternative license already specified by the page you are editing). In addition, code samples are available under [Creative Commons CC-0](https://creativecommons.org/share-your-work/public-domain/cc0/) (a Public Domain dedication).
+When contributing, you agree to make your contributions available under the [Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/4.0/) (or an alternative license already specified by the page you are editing). In addition, code samples are available under [Creative Commons CC-0](https://creativecommons.org/public-domain/cc0/) (a Public Domain dedication).
 
 > If you have any questions or concerns about anything discussed here, please [contact us](/en-US/docs/MDN/Community/Communication_channels).

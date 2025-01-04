@@ -51,7 +51,8 @@ place-content: unset;
 
 The first value is the {{CSSxRef("align-content")}} property value, the second the {{CSSxRef("justify-content")}} one.
 
-> **Note:** If the second value is not present, the first value is used for both, provided it is a valid value for both. If it is invalid for one or the other, the whole value will be invalid.
+> [!NOTE]
+> If the second value is not present, the first value is used for both, provided it is a valid value for both. If it is invalid for one or the other, the whole value will be invalid.
 
 ### Values
 

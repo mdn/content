@@ -67,7 +67,7 @@ The `Set` object provides some methods that allow you to compose sets like you w
       <td>
         <math><semantics><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><annotation encoding="TeX">A\cup B</annotation></semantics></math>
       </td>
-      <td style="margin:0;padding:0"><img src="union/diagram.svg" alt="A Venn diagram where two circles overlap. The symmetric difference of A and B is the region contained by either or both circles." style="margin:0;border:0;border-radius:0" width="200" /></td>
+      <td style="margin:0;padding:0"><img src="union/diagram.svg" alt="A Venn diagram where two circles overlap. The union of A and B is the region contained by either or both circles." style="margin:0;border:0;border-radius:0" width="200" /></td>
     </tr>
     <tr>
       <td>{{jsxref("Set/isDisjointFrom", "A.isDisjointFrom(B)")}}</td>
@@ -83,7 +83,7 @@ The `Set` object provides some methods that allow you to compose sets like you w
       <td>
         <math><semantics><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow><annotation encoding="TeX">A\subseteq B</annotation></semantics></math>
       </td>
-      <td style="margin:0;padding:0"><img src="isSubsetOf/diagram.svg" alt="A Venn diragram with two circles. A is a subset of B because A is completely contained in B." style="margin:0;border:0;border-radius:0" width="200" /></td>
+      <td style="margin:0;padding:0"><img src="isSubsetOf/diagram.svg" alt="A Venn diagram with two circles. A is a subset of B because A is completely contained in B." style="margin:0;border:0;border-radius:0" width="200" /></td>
     </tr>
     <tr>
       <td>{{jsxref("Set/isSupersetOf", "A.isSupersetOf(B)")}}</td>
@@ -118,7 +118,8 @@ const b = new Map([
 console.log(a.union(b)); // Set(4) {1, 2, 3, 4}
 ```
 
-> **Note:** The set-like protocol invokes the `keys()` method instead of [`[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator) to produce elements. This is to make maps valid set-like objects, because for maps, the iterator produces _entries_ but the `has()` method takes _keys_.
+> [!NOTE]
+> The set-like protocol invokes the `keys()` method instead of [`[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator) to produce elements. This is to make maps valid set-like objects, because for maps, the iterator produces _entries_ but the `has()` method takes _keys_.
 
 [Arrays](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) are not set-like because they don't have a `has()` method or the `size` property, and their `keys()` method produces indices instead of elements. {{jsxref("WeakSet")}} objects are also not set-like because they don't have a `keys()` method.
 

@@ -11,7 +11,8 @@ browser-compat: api.MediaStream.addTrack
 The **`addTrack()`** method of the {{domxref("MediaStream")}} interface adds a new track to the
 stream. The track is specified as a parameter of type {{domxref("MediaStreamTrack")}}.
 
-> **Note:** If the specified track is already in the stream's track set, this method has no
+> [!NOTE]
+> If the specified track is already in the stream's track set, this method has no
 > effect.
 
 ## Syntax

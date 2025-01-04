@@ -7,9 +7,14 @@ browser-compat: webextensions.api.cookies.get
 
 {{AddonSidebar}}
 
-The **`get()`** method of the {{WebExtAPIRef("cookies")}} API retrieves information about a single cookie, given its name and URL.
+The **`get()`** method of the {{WebExtAPIRef("cookies")}} API retrieves information about a cookie, given the cookie's name and URL.
 
-If more than one cookie with the same name exists for a given URL, the one with the longest path will be returned. For cookies with the same path length, the cookie with the earliest creation time will be returned. If no matching cookie could be found, `null` is returned.
+To use this method, an extension must have the `"cookies"` permission and relevant host permissions. See [`cookie` permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#permissions) for more details.
+
+If there is more than one cookie with the same name for a URL, the cookie with the longest path is returned. For cookies with the same path length, the cookie with the earliest creation time is returned. If no matching cookie is found, `null` is returned.
+
+> [!NOTE]
+> Before Firefox 133, when there was more than one cookie with the same name, Firefox returned the cookie with the earliest creation time.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
@@ -25,7 +30,7 @@ let getting = browser.cookies.get(
 
 - `details`
 
-  - : An `object` containing details that can be used to match a cookie to be retrieved. It can include the following properties:
+  - : An `object` containing details that are used to match a cookie to be retrieved. It can include these properties:
 
     - `firstPartyDomain` {{optional_inline}}
       - : A `string` representing the first-party domain with which the cookie to retrieve is associated. This property must be supplied if the browser has first-party isolation enabled. See [First-party isolation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation).
@@ -39,21 +44,17 @@ let getting = browser.cookies.get(
           - : A `string` representing the first-party URL of the top-level site storage partition containing the cookie.
 
     - `storeId` {{optional_inline}}
-      - : A `string` representing the ID of the {{WebExtAPIRef("cookies.CookieStore", "cookie store")}} in which to look for the cookie (as returned by {{WebExtAPIRef("cookies.getAllCookieStores()")}}). By default, the current execution context's cookie store will be used.
+      - : A `string` representing the ID of the [cookie store](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore) in which to look for the cookie (as returned by {{WebExtAPIRef("cookies.getAllCookieStores()")}}). By default, the current execution context's cookie store is used.
     - `url`
-      - : A `string` representing the URL with which the cookie to retrieve is associated. This argument may be a full URL, in which case any data following the URL path (e.g. the query string) is ignored. If [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) for this URL are not specified in the extension's [manifest file](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json), the API call will fail.
+      - : A `string` representing the URL with which the cookie to retrieve is associated. This argument may be a full URL, in which case any data following the URL path (e.g., the query string) is ignored. If [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) for this URL are not specified in the extension's [manifest file](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json), the API call fails.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('cookies.Cookie', 'Cookie')}} object containing details about the cookie, or `null` if the cookie was not found.
-
-## Browser compatibility
-
-{{Compat}}
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with a {{WebExtAPIRef('cookies.Cookie', 'Cookie')}} object containing details about the cookie, or `null` if the cookie is not found.
 
 ## Examples
 
-This example tries to get the cookie named "favorite-color", associated with the URL for the currently active tab:
+This example tries to get the cookie named "favorite-color" associated with the URL for the active tab:
 
 ```js
 function logCookie(cookie) {
@@ -79,7 +80,12 @@ getActive.then(getCookie);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/cookies/#method-get) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
+## Browser compatibility
+
+{{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies#method-get) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -7,7 +7,8 @@ browser-compat: javascript.builtins.SharedArrayBuffer.SharedArrayBuffer
 
 {{JSRef}}
 
-> **Note:** The `SharedArrayBuffer` constructor may not always be globally available unless certain [security requirements](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements) are met.
+> [!NOTE]
+> The `SharedArrayBuffer` constructor may not always be globally available unless certain [security requirements](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements) are met.
 
 The **`SharedArrayBuffer()`** constructor creates {{jsxref("SharedArrayBuffer")}} objects.
 
@@ -64,7 +65,8 @@ const buffer = new SharedArrayBuffer(8, { maxByteLength: 16 });
 buffer.grow(12);
 ```
 
-> **Note:** It is recommended that `maxByteLength` is set to the smallest value possible for your use case. It should never exceed `1073741824` (1GB), to reduce the risk of out-of-memory errors.
+> [!NOTE]
+> It is recommended that `maxByteLength` is set to the smallest value possible for your use case. It should never exceed `1073741824` (1GB), to reduce the risk of out-of-memory errors.
 
 ## Specifications
 

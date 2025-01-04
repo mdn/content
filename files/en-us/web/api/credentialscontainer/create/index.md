@@ -8,7 +8,7 @@ browser-compat: api.CredentialsContainer.create
 
 {{APIRef("Credential Management API")}}{{SecureContext_Header}}
 
-The **`create()`** method of the {{domxref("CredentialsContainer")}} interface creates a new {{glossary("credential")}}, which can then be stored and later used to authenticate users via {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}}.
+The **`create()`** method of the {{domxref("CredentialsContainer")}} interface creates a new {{glossary("credential")}}, which can then be stored and later retrieved using the {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} method. The retrieved credential can then be used by a website to authenticate a user.
 
 This method supports three different types of credential:
 
@@ -32,7 +32,7 @@ create(options)
   - : An object that contains options for the requested new `Credentials` object. It can contain the following properties:
 
     - `signal` {{optional_inline}}
-      - : An {{domxref("AbortSignal")}} object instance that allows an ongoing `create()` operation to be aborted. An aborted operation may complete normally (generally if the abort was received after the operation finished) or reject with an "`AbortError`" {{domxref("DOMException")}}.
+      - : An {{domxref("AbortSignal")}} object instance that allows an ongoing `create()` operation to be aborted. An aborted operation may complete normally (generally if the abort was received after the operation finished) or reject with an `AbortError` {{domxref("DOMException")}}.
 
     Each of the following properties represents a _credential type_ being created. One and only one of them must be specified:
 
@@ -44,7 +44,8 @@ create(options)
 
       - : A {{domxref("PublicKeyCredentialCreationOptions")}} object containing requirements for creating a public key credential. Causes the `create()` call to request that the user agent creates new credentials via an authenticator — either for registering a new account or for associating a new asymmetric key pair with an existing account.
 
-        > **Note:** Usage of `create()` with the `publicKey` parameter may be blocked by a {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
+        > [!NOTE]
+        > Usage of `create()` with the `publicKey` parameter may be blocked by a {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
 
 ### Return value
 
@@ -166,7 +167,8 @@ navigator.credentials.create({ publicKey }).then((publicKeyCredential) => {
 
 Some of this data will need to be stored on the server for future authentication operations against this credential — for example the public key, the algorithm used, and the permissible transports.
 
-> **Note:** See [Creating a key pair and registering a user](/en-US/docs/Web/API/Web_Authentication_API#creating_a_key_pair_and_registering_a_user) for more information about how the overall flow works.
+> [!NOTE]
+> See [Creating a key pair and registering a user](/en-US/docs/Web/API/Web_Authentication_API#creating_a_key_pair_and_registering_a_user) for more information about how the overall flow works.
 
 ## Specifications
 

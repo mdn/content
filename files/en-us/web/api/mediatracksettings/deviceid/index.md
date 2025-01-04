@@ -42,7 +42,8 @@ source will share the same ID for any given origin, so
 for `deviceId`. That makes the device ID not useful for any changes to
 constraints when calling {{domxref("MediaStreamTrack.applyConstraints()")}}.
 
-> **Note:** An exception to the rule that device IDs are the same across browsing sessions:
+> [!NOTE]
+> An exception to the rule that device IDs are the same across browsing sessions:
 > private browsing mode will use a different ID, and will change it each browsing
 > session.
 

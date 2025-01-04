@@ -25,7 +25,8 @@ Other elements can be used in tandem with `<kbd>` to represent more specific sce
 - Nesting a `<kbd>` element inside a {{HTMLElement("samp")}} element represents input that has been echoed back to the user by the system. See [Echoed input](#echoed_input), below, for an example.
 - Nesting a `<samp>` element inside a `<kbd>` element, on the other hand, represents input which is based on text presented by the system, such as the names of menus and menu items, or the names of buttons displayed on the screen. See the example under [Representing onscreen input options](#representing_onscreen_input_options) below.
 
-> **Note:** You can define a custom style to override the browser's default font selection for the `<kbd>` element, although the user's preferences may potentially override your CSS.
+> [!NOTE]
+> You can define a custom style to override the browser's default font selection for the `<kbd>` element, although the user's preferences may potentially override your CSS.
 
 ## Examples
 
@@ -33,8 +34,8 @@ Other elements can be used in tandem with `<kbd>` to represent more specific sce
 
 ```html
 <p>
-  Use the command <kbd>help mycommand</kbd> to view documentation for the
-  command "mycommand".
+  Use the command <kbd>help my-command</kbd> to view documentation for the
+  command "my-command".
 </p>
 ```
 
@@ -61,9 +62,10 @@ First, let's look at what this looks like as just plain HTML.
 
 This wraps the entire key sequence in an outer `<kbd>` element, then each individual key within its own, in order to denote the components of the sequence.
 
-> **Note:** You don't need to do all this wrapping; you can choose to simplify it by leaving out the external `<kbd>` element. In other words, simplifying this to just `<kbd>Ctrl</kbd>+<kbd>N</kbd>` would be perfectly valid.
+> [!NOTE]
+> You don't need to do all this wrapping; you can choose to simplify it by leaving out the external `<kbd>` element. In other words, simplifying this to just `<kbd>Ctrl</kbd>+<kbd>N</kbd>` would be perfectly valid.
 >
-> **Note:** Depending on your style sheet, though, you may find it useful to do this kind of nesting.
+> Depending on your style sheet, though, you may find it useful to do this kind of nesting.
 
 ##### Result
 

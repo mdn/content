@@ -13,7 +13,8 @@ is a legacy alias the [for the `===` strict equality operator](/en-US/docs/Web/J
 That is, it tests whether two nodes are the same
 (in other words, whether they reference the same object).
 
-> **Note:** There is no need to use `isSameNode()`; instead use the `===` strict equality operator.
+> [!NOTE]
+> There is no need to use `isSameNode()`; instead use the `===` strict equality operator.
 
 ## Syntax
 
@@ -25,7 +26,8 @@ isSameNode(otherNode)
 
 - `otherNode`
   - : The {{domxref("Node")}} to test against.
-    > **Note:** This parameter is not optional, but can be set to `null`.
+    > [!NOTE]
+    > This parameter is not optional, but can be set to `null`.
 
 ### Return value
 

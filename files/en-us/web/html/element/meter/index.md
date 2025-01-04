@@ -19,7 +19,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : The current numeric value. This must be between the minimum and maximum values (`min` attribute and `max` attribute) if they are specified. If unspecified or malformed, the value is `0`. If specified, but not within the range given by the `min` attribute and `max` attribute, the value is equal to the nearest end of the range.
 
-    > **Note:** Unless the `value` attribute is between `0` and `1` (inclusive), the `min` and `max` attributes should define the range so that the `value` attribute's value is within it.
+    > [!NOTE]
+    > Unless the `value` attribute is between `0` and `1` (inclusive), the `min` and `max` attributes should define the range so that the `value` attribute's value is within it.
 
 - [`min`](/en-US/docs/Web/HTML/Attributes/min)
   - : The lower numeric bound of the measured range. This must be less than the maximum value (`max` attribute), if specified. If unspecified, the minimum value is `0`.
@@ -36,7 +37,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ## Examples
 
-### Simple Example
+### Basic Example
 
 #### HTML
 
@@ -46,7 +47,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 #### Result
 
-{{EmbedLiveSample("Simple_example", 300, 60)}}
+{{EmbedLiveSample("Basic_example", 300, 60)}}
 
 ### High and low range example
 

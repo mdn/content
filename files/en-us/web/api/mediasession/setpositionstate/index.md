@@ -70,7 +70,7 @@ function updatePositionState() {
 }
 ```
 
-We can use this function when updating {{domxref('MediaMetadata', 'media session metadata')}} and within callbacks for actions, such as below.
+We can use this function when updating {{domxref('MediaMetadata')}} and within callbacks for actions, such as below.
 
 ```js
 navigator.mediaSession.setActionHandler("seekbackward", (details) => {

@@ -24,7 +24,7 @@ Before diving in and writing huge chunks of CSS, plan your styles carefully. Wha
 
 ### Use flexible/relative units
 
-For maximum flexibility over the widest possible range of devices, it is a good idea to size containers, padding, etc. using relative units like ems and rems or percentages and viewport units if you want them to vary depending on viewport width. You can read some more about this in our [guide to CSS values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#relative_length_units).
+For maximum flexibility over the widest possible range of devices, it is a good idea to size containers, padding, etc. using relative units like ems and rems or percentages and viewport units if you want them to vary depending on viewport width. You can read some more about this in our [guide to CSS values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#relative_length_units).
 
 ### Don't use preprocessors
 
@@ -118,14 +118,14 @@ Usually, when teaching the specifics of CSS syntax, it is clearer and more obvio
   ```css
   /* duration | timing-function | delay | iteration-count
     direction | fill-mode | play-state | name */
-  animation: 3s ease-in 1s 2 reverse both paused slidein;
+  animation: 3s ease-in 1s 2 reverse both paused slide-in;
   ```
 
   In this example, the first value that can be parsed as a [`<time>`](/en-US/docs/Web/CSS/time) is assigned to the [`animation-duration`](/en-US/docs/Web/CSS/animation-duration) property, and the second value that can be parsed as time is assigned to [`animation-delay`](/en-US/docs/Web/CSS/animation-delay). (For more information, see [animation syntax](/en-US/docs/Web/CSS/animation#syntax) details.)
 
 ## Mobile-first media queries
 
-In a stylesheet that contains [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) styles for different target viewport sizes, first include the narrow screen/mobile styling before any other media queries are encountered. Add styling for wider viewport sizes via successive media queries. Following this rule has many advantages that are explained in the [Mobile First](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) article.
+In a stylesheet that contains [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) styles for different target viewport sizes, first include the narrow screen/mobile styling before any other media queries are encountered. Add styling for wider viewport sizes via successive media queries. Following this rule has many advantages that are explained in [Responsive design](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design).
 
 ```css example-good
 /* Default CSS layout for narrow screens */

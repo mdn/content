@@ -1,5 +1,6 @@
 ---
 title: "HTML attribute: pattern"
+short-title: pattern
 slug: Web/HTML/Attributes/pattern
 page-type: html-attribute
 browser-compat: html.elements.input.pattern
@@ -29,7 +30,8 @@ Some of the input types supporting the pattern attribute, notably the {{HTMLElem
 
 If the input's value is not the empty string and the value does not match the entire regular expression, there is a constraint violation reported by the {{domxref('ValidityState')}} object's {{domxref('ValidityState.patternMismatch','patternMismatch')}} property being `true`.
 
-> **Note:** If the `pattern` attribute is specified with no value, its value is implicitly the empty string. Thus, **any non-empty** input `value` will result in constraint violation.
+> [!NOTE]
+> If the `pattern` attribute is specified with no value, its value is implicitly the empty string. Thus, **any non-empty** input `value` will result in constraint violation.
 
 ### Usability and accessibility considerations
 
@@ -90,7 +92,7 @@ If we had used [`minlength`](/en-US/docs/Web/HTML/Attributes/minlength) and [`ma
 
 ### Specifying a pattern
 
-You can use the [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) attribute to specify a regular expression that the inputted value must match in order to be considered valid (see [Validating against a regular expression](/en-US/docs/Learn/Forms/Form_validation#validating_against_a_regular_expression) for a simple crash course on using regular expressions to validate inputs).
+You can use the [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) attribute to specify a regular expression that the inputted value must match in order to be considered valid (see [Validating against a regular expression](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation#validating_against_a_regular_expression) for a crash course on using regular expressions to validate inputs).
 
 The example below restricts the value to 4-8 characters and requires that it contain only lower-case letters.
 
@@ -158,5 +160,5 @@ This renders like so:
 ## See also
 
 - [Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
-- [Forms: Data form validation](/en-US/docs/Learn/Forms/Form_validation)
+- [Forms: Data form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)

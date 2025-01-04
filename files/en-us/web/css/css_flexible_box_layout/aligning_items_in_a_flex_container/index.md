@@ -8,13 +8,38 @@ page-type: guide
 
 One of the reasons flexbox is so useful is that it enables proper alignment, including providing a quick method of vertically centering elements. In this guide, we will take a thorough look at how the alignment and justification properties work in flexbox.
 
+## Using alignment in flexbox
+
 Flexbox provides several properties to control alignment and spacing, with `align-items` and `justify-content` being fundamental for centering elements. To center an element, we use the {{cssxref("align-items")}} property to align the item on the {{glossary("cross axis")}}, which in this case is the [block axis](/en-US/docs/Glossary/Flow_relative_values) running vertically. We use {{cssxref("justify-content")}} to align the item on the main axis, which in this case is the inline axis running horizontally.
 
 ![The cross axis is the vertical axis and the main axis is the horizontal axis.](align1.png)
 
 Change the size of the container or nested element in the code example below. The nested element always remains centered.
 
-{{EmbedGHLiveSample("css-examples/flexbox/alignment/intro.html", '100%', 700)}}
+```html live-sample___intro
+<div class="box">
+  <div></div>
+</div>
+```
+
+```css live-sample___intro
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dotted rgb(96 139 168);
+}
+
+.box div {
+  width: 100px;
+  height: 100px;
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+```
+
+{{EmbedLiveSample("intro")}}
 
 ## Properties for controlling alignment in flexbox
 
@@ -54,7 +79,31 @@ We can use other values to control how the items align:
 
 In the example below, the value of `align-items` is `stretch`. Try the other values and see how the items align against each other in the flex container.
 
-{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-items.html", '100%', 520)}}
+```html live-sample___align-items
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three <br />has <br />extra <br />text</div>
+</div>
+```
+
+```css live-sample___align-items
+.box {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  align-items: stretch;
+}
+
+.box div {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(96 139 168 / 0.2);
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+}
+```
+
+{{EmbedLiveSample("align-items")}}
 
 ### Aligning one item with `align-self`
 
@@ -62,7 +111,37 @@ The `align-items` property sets the `align-self` property on all of the flex ite
 
 In this next live example, the flex container has `align-items: flex-start`, which means the items are all aligned to the start of the cross axis. Using the `first-child` selector, the first item is set to `align-self: stretch`. Another item with the `selected` class has `align-self: center` set. Change the value of `align-items` or change the values of `align-self` on the individual items to see how this works.
 
-{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-self.html", '100%', 650)}}
+```html live-sample___align-self
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div class="selected">Three</div>
+  <div>Four</div>
+</div>
+```
+
+```css live-sample___align-self
+.box {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  align-items: flex-start;
+  height: 200px;
+}
+.box div {
+  background-color: rgb(96 139 168 / 0.2);
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  padding: 20px;
+}
+.box > *:first-child {
+  align-self: stretch;
+}
+.box .selected {
+  align-self: center;
+}
+```
+
+{{EmbedLiveSample("align-self", "", "250px")}}
 
 ### Changing the main axis
 
@@ -76,7 +155,38 @@ Keeping the same writing mode, when the `flex-direction` is changed to `column`,
 
 You can try this out in the example below, which has a flex container with `flex-direction: column` yet otherwise is exactly the same as the previous example.
 
-{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-self-column.html", '100%', 730)}}
+```html live-sample___align-self-column
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div class="selected">Three</div>
+  <div>Four</div>
+</div>
+```
+
+```css live-sample___align-self-column
+.box {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 200px;
+}
+.box div {
+  background-color: rgb(96 139 168 / 0.2);
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  padding: 20px;
+}
+.box > *:first-child {
+  align-self: stretch;
+}
+.box .selected {
+  align-self: center;
+}
+```
+
+{{EmbedLiveSample("align-self-column", "", "300px")}}
 
 ## Aligning content on the cross axis with the `align-content` property
 
@@ -89,7 +199,7 @@ The `align-content` property takes the following values:
 - `align-content: flex-start`
 - `align-content: flex-end`
 - `align-content: start`
-- `align-content: fend`
+- `align-content: end`
 - `align-content: center`
 - `align-content: space-between`
 - `align-content: space-around`
@@ -104,11 +214,90 @@ In the live example below, the flex container has a height of `400 pixels`, whic
 
 Try out the other values to see how the `align-content` property works.
 
-{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-content.html", '100%', 850)}}
+```html live-sample___align-content
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
+</div>
+```
+
+```css live-sample___align-content
+.box {
+  width: 450px;
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  flex-wrap: wrap;
+  height: 300px;
+  align-content: space-between;
+}
+
+.box > * {
+  padding: 20px;
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  flex: 1 1 100px;
+}
+
+.box div {
+  background-color: rgb(96 139 168 / 0.2);
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  padding: 20px;
+}
+```
+
+{{EmbedLiveSample("align-content", "", "380px")}}
 
 Once again we can switch our `flex-direction` to `column` in order to see how this property behaves when we are working by column. As before, we need enough space in the cross axis to have some free space after displaying all of the items.
 
-{{EmbedGHLiveSample("css-examples/flexbox/alignment/align-content-column.html", '100%', 860)}}
+```html live-sample___align-content-column
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
+</div>
+```
+
+```css live-sample___align-content-column
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 400px;
+  height: 300px;
+  align-content: space-between;
+  border: 2px dotted rgb(96 139 168);
+}
+
+.box > * {
+  padding: 20px;
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  flex: 1 1 100px;
+}
+
+.box div {
+  background-color: rgb(96 139 168 / 0.2);
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  padding: 20px;
+}
+```
+
+{{EmbedLiveSample("align-content-column", "", "380px")}}
 
 ## Aligning content on the main axis
 
@@ -135,11 +324,61 @@ The `baseline` values aren't relevant in this dimension. Otherwise, `justify-con
 
 In the example below, the value of `justify-content` is `space-between`. The available space after displaying the items is distributed between the items. The left and right item line up flush with the start and end.
 
-{{EmbedGHLiveSample("css-examples/flexbox/alignment/justify-content.html", '100%', 480)}}
+```html live-sample___justify-content
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+</div>
+```
+
+```css live-sample___justify-content
+.box {
+  display: flex;
+  justify-content: space-between;
+  border: 2px dotted rgb(96 139 168);
+}
+
+.box > * {
+  padding: 20px;
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+```
+
+{{EmbedLiveSample("justify-content")}}
 
 If the main axis is in the block direction because `flex-direction` is set to `column`, then `justify-content` will distribute space between items in that dimension as long as there is space in the flex container to distribute.
 
-{{EmbedGHLiveSample("css-examples/flexbox/alignment/justify-content-column.html", '100%', 880)}}
+```html live-sample___justify-content-column
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+</div>
+```
+
+```css live-sample___justify-content-column
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 300px;
+  border: 2px dotted rgb(96 139 168);
+}
+
+.box > * {
+  padding: 20px;
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+```
+
+{{EmbedLiveSample("justify-content-column", "", "380px")}}
 
 ### Alignment and writing modes
 
@@ -153,7 +392,32 @@ However if the writing mode is right-to-left as in Arabic, the items will line u
 
 The live example below has the `direction` property set to `rtl` to force a right-to-left flow for our items. You can remove this, or change the values of `justify-content` to see how flexbox behaves when the start of the inline direction is on the right.
 
-{{EmbedGHLiveSample("css-examples/flexbox/alignment/justify-content-writing-mode.html", '100%', 440)}}
+```html live-sample___justify-content-writing-mode
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+</div>
+```
+
+```css live-sample___justify-content-writing-mode
+.box {
+  direction: rtl;
+  display: flex;
+  justify-content: flex-end;
+  border: 2px dotted rgb(96 139 168);
+}
+
+.box > * {
+  padding: 20px;
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+```
+
+{{EmbedLiveSample("justify-content-writing-mode")}}
 
 ## Alignment and `flex-direction`
 
@@ -161,7 +425,32 @@ The direction of `start` of the line will also change if you change the `flex-di
 
 In this next example, `flex-direction: row-reverse` and `justify-content: flex-end` define the direction and location of the items within the flex container. In a left to right language, the items line up on the left. Try changing `flex-direction: row-reverse` to `flex-direction: row`. You will see that the items now move to the right-hand side, and the visual order of the items is reversed.
 
-{{EmbedGHLiveSample("css-examples/flexbox/alignment/justify-content-reverse.html", '100%', 440)}}
+```html live-sample___justify-content-reverse
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+</div>
+```
+
+```css live-sample___justify-content-reverse
+.box {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  border: 2px dotted rgb(96 139 168);
+}
+
+.box > * {
+  padding: 20px;
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+```
+
+{{EmbedLiveSample("justify-content-reverse")}}
 
 While this may all seem a little confusing, the rule to remember is that unless you do something to change it, flex items lay themselves out in the direction that words are laid out in the language of your document along the inline, row axis. `start` and `flex-start` will be where the beginning of a sentence of text would start.
 
@@ -191,7 +480,34 @@ In this live example, item 4 is separated from the first three items by setting 
 
 In this live example, the flex items are arranged in a row with the basic flex values, and the class `push`, set on the fourth item, applies `margin-left: auto` to that item. Try removing the class on the fourth item or adding the class to a different item to see how it works.
 
-{{EmbedGHLiveSample("css-examples/flexbox/alignment/auto-margins.html", '100%', 470)}}
+```html live-sample___auto-margins
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div class="push">Four</div>
+  <div>Five</div>
+</div>
+```
+
+```css live-sample___auto-margins
+.box {
+  display: flex;
+  border: 2px dotted rgb(96 139 168);
+}
+
+.box > * {
+  padding: 20px;
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+.push {
+  margin-left: auto;
+}
+```
+
+{{EmbedLiveSample("auto-margins")}}
 
 ## Creating gaps between items
 
@@ -200,7 +516,36 @@ To create a gap between flex items, use the {{cssxref("gap")}}, {{cssxref("colum
 The {{cssxref("gap")}} property is a shorthand that sets both `row-gap` and `column-gap`.
 The gap between flex items or between flex line depends on the direction. If the {{cssxref("flex-direction")}} property creates rows, the first value defines the gap between flex lines, and the second value defines the gap between items within each line. With columns (when `flex-direction` is set to `column` or `column-reverse`), the first value defines the gap between flex items, and the second value defines the gaps between flex lines.
 
-{{EmbedGHLiveSample("css-examples/box-alignment/flexbox/gap.html", '100%', 700)}}
+```html live-sample___gap
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+</div>
+```
+
+```css live-sample___gap
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  column-gap: 2em;
+  border: 2px dotted rgb(96 139 168);
+}
+
+.box > * {
+  flex: 1;
+  padding: 20px;
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+```
+
+{{EmbedLiveSample("gap")}}
 
 ## See also
 

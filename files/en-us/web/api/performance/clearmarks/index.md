@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Performance.clearMarks
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`clearMarks()`** method removes all or specific {{domxref("PerformanceMark")}} objects from the browser's performance timeline.
 
@@ -20,7 +20,7 @@ clearMarks(name)
 ### Parameters
 
 - `name` {{optional_inline}}
-  - : A string representing the {{domxref("PerformanceEntry.name", "name")}} of the {{domxref("PerformanceMark")}} object. If this argument is omitted, all entries with an {{domxref("PerformanceEntry.entryType","entryType")}} of "`mark`" will be removed.
+  - : A string representing the {{domxref("PerformanceEntry.name", "name")}} of the {{domxref("PerformanceMark")}} object. If this argument is omitted, all entries with an {{domxref("PerformanceEntry.entryType","entryType")}} of `"mark"` will be removed.
 
 ### Return value
 

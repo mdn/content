@@ -20,7 +20,7 @@ Using the languages of the web, we will create a fully functioning application t
 
 - Use standard and open web technologies
 
-  - : Historically, for an application to be installable on an OS, such as Windows, iOS, MacOS, Linux, and Android, the applications are developed in OS-supported programming languages, like C#, .Net, Objective C, Swift, Kotlin, Java, or Python. PWAs are based on a different model: they use a single code base, written using standard open web technologies (HTML, CSS, and JavaScript) that work across OSes.
+  - : Historically, for an application to be installable on an OS, such as Windows, iOS, macOS, Linux, and Android, the applications are developed in OS-supported programming languages, like C#, .Net, Objective C, Swift, Kotlin, Java, or Python. PWAs are based on a different model: they use a single code base, written using standard open web technologies (HTML, CSS, and JavaScript) that work across OSes.
 
 - No compiling required
 
@@ -28,7 +28,7 @@ Using the languages of the web, we will create a fully functioning application t
 
 - Available anywhere and everywhere
 
-  - : Single-OS-only applications are distributed to users through downloads, often in proprietary app stores. They are available through a vendor like the Apple App Store, [Google Play](https://play.google.com/store/apps), [Microsoft Store](https://apps.microsoft.com/store/apps), or similar. PWAs don't have these requirements. If you want to distribute your CycleTracker app, you won't require an intermediary. A user can access your app by visiting its online version. But if you want, it is possible to distribute your PWA on the Play Store and App Store, undifferentiated from other iOS or Android apps.
+  - : Single-OS-only applications are distributed to users through downloads, often in proprietary app stores. They are available through a vendor like the Apple App Store, [Google Play](https://play.google.com/store/apps), [Microsoft Store](https://apps.microsoft.com/), or similar. PWAs don't have these requirements. If you want to distribute your CycleTracker app, you won't require an intermediary. A user can access your app by visiting its online version. But if you want, it is possible to distribute your PWA on the Play Store and App Store, undifferentiated from other iOS or Android apps.
 
 - Easy for the user to install
 

@@ -9,7 +9,8 @@ browser-compat: css.types.position
 
 The **`<position>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) denotes a two-dimensional coordinate used to set a location relative to an element box. It is used in the {{cssxref("background-position")}}, {{cssxref("object-position")}}, {{cssxref("mask-position")}} {{cssxref("offset-position")}}, {{cssxref("offset-anchor")}} and {{cssxref("transform-origin")}} properties.
 
-> **Note:** The final position described by the `<position>` value does not need to be inside the element's box.
+> [!NOTE]
+> The final position described by the `<position>` value does not need to be inside the element's box.
 
 ## Syntax
 
@@ -38,7 +39,8 @@ value value              /* A value for each direction (horizontal then vertical
 keyword value keyword value /* Each value is an offset from the keyword that precedes it */
 ```
 
-> **Note:** The {{cssxref("background-position")}} property also accepts a three-value syntax. This is not allowed in other properties that use `<position>`.
+> [!NOTE]
+> The {{cssxref("background-position")}} property also accepts a three-value syntax. This is not allowed in other properties that use `<position>`.
 
 ## Interpolation
 
@@ -83,7 +85,7 @@ bottom top
 ## See also
 
 - [CSS Values and Units](/en-US/docs/Web/CSS/CSS_Values_and_Units)
-- [CSS Values and Units introduction](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Learn: CSS Values and units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - {{cssxref("background-position")}}
 - {{cssxref("gradient/radial-gradient", "radial-gradient()")}}
 - {{cssxref("gradient/conic-gradient", "conic-gradient()")}}

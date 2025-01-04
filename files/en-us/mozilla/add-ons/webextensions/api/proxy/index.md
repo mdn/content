@@ -13,13 +13,15 @@ The advantage of the {{WebExtAPIRef("proxy.onRequest")}} approach is that the co
 
 Apart from this API, extensions can also use the [`browserSettings.proxyConfig`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/settings) property to configure global proxy settings.
 
-> **Note:** Chrome, Edge, and Opera have [an extension API also called "proxy"](https://developer.chrome.com/docs/extensions/reference/proxy/) which is functionally similar to this API, in that extensions can use it to implement a proxying policy. However, the design of the Chrome API is completely different to this API. Because this API is incompatible with the Chrome `proxy` API, this API is only available through the `browser` namespace.
+> [!NOTE]
+> Chrome, Edge, and Opera have [an extension API also called "proxy"](https://developer.chrome.com/docs/extensions/reference/api/proxy) which is functionally similar to this API, in that extensions can use it to implement a proxying policy. However, the design of the Chrome API is completely different to this API. Because this API is incompatible with the Chrome `proxy` API, this API is only available through the `browser` namespace.
 
 To use this API you need to have the "proxy" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). Also, where you want to intercept requests, you also need [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the URLs of intercepted requests.
 
 The "proxy" permission requires `"strict_min_version"` to be set to "91.1.0" or above. To use this permission, add or update the [`"browser_specific_settings"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in your [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) to specify a minimum Firefox version. See [Securing the proxy API for Firefox add-ons](https://blog.mozilla.org/security/2021/10/25/securing-the-proxy-api-for-firefox-add-ons/) for more information.
 
-> **Note:** The browser can make speculative connections, where it determines that a request to a URI may be coming soon. This type of connection does not provide valid tab information, so request details such as `tabId`, `frameId`, `parentFrameId`, etc. are inaccurate. These connections have a {{WebExtAPIRef("webRequest.ResourceType")}} of `speculative`.
+> [!NOTE]
+> The browser can make speculative connections, where it determines that a request to a URI may be coming soon. This type of connection does not provide valid tab information, so request details such as `tabId`, `frameId`, `parentFrameId`, etc. are inaccurate. These connections have a {{WebExtAPIRef("webRequest.ResourceType")}} of `speculative`.
 
 ## Types
 

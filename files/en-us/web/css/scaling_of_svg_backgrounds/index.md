@@ -19,7 +19,8 @@ The algorithm can for the most part be summarized by these four rules. There are
 
 It's worth noting that the sizing algorithm only cares about the image's dimensions and proportions, or lack thereof. An SVG image with fixed dimensions will be treated just like a raster image of the same size.
 
-> **Note:** If you are trying to stretch your SVG to a different {{glossary("aspect ratio")}} with CSS—for example in order to stretch it over the page background—make sure your SVG includes `preserveAspectRatio="none"`. Find out more about {{svgattr("preserveAspectRatio")}}.
+> [!NOTE]
+> If you are trying to stretch your SVG to a different {{glossary("aspect ratio")}} with CSS—for example in order to stretch it over the page background—make sure your SVG includes `preserveAspectRatio="none"`. Find out more about {{svgattr("preserveAspectRatio")}}.
 
 ## Source image examples
 
@@ -65,7 +66,8 @@ This image doesn't specify either a width or a height; instead, it specifies an 
 
 Now let's see some examples of what happens as we apply different scaling to these images. In each of the examples below, the enclosing rectangles are 300 pixels wide and 200 pixels tall. In addition, the backgrounds have {{ cssxref("background-repeat") }} set to no-repeat for clarity.
 
-> **Note:** The screenshots below show the **expected** rendering. Not all browsers currently render these correctly.
+> [!NOTE]
+> The screenshots below show the **expected** rendering. Not all browsers currently render these correctly.
 
 ### Specifying fixed lengths for both dimensions
 

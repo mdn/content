@@ -15,7 +15,8 @@ The `aria-valuenow` attribute defines the current value for range widgets. It is
 
 When creating a range type role, including [`meter`](/en-US/docs/Web/Accessibility/ARIA/Roles/meter_role), [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role), [`slider`](/en-US/docs/Web/Accessibility/ARIA/Roles/slider_role), and [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role) on a non-semantic element, the `aria-valuenow` enables defining a current numeric value between the minimum and maximum values. The minimum and maximum values are defined with [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) and [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax).
 
-> **Warning:** The [`range`](/en-US/docs/Web/Accessibility/ARIA/Roles/range_role) role itself should **NOT** be used as it is an ["abstract"](/en-US/docs/Web/Accessibility/ARIA/Roles#6._abstract_roles). The `aria-valuenow` attribute is used on all of the range roles subtypes.
+> [!WARNING]
+> The [`range`](/en-US/docs/Web/Accessibility/ARIA/Roles/range_role) role itself should **NOT** be used as it is an ["abstract"](/en-US/docs/Web/Accessibility/ARIA/Roles#6._abstract_roles). The `aria-valuenow` attribute is used on all of the range roles subtypes.
 
 ```html
 <p id="birthyearLabel">What year were you born?</p>
@@ -73,12 +74,8 @@ When the value to be announced, either the actual value or the value as a percen
 The first rule of ARIA use is "if you can use a native feature with the semantics and behavior you require already built in, instead of repurposing an element and **adding** an ARIA role, state or property to make it accessible, then do so."
 
 ```html
-<label for="temperature">
-  Oven Temperature
-</p>
-<input type="range" id="temperature"
-  value="205" min="70" max="250" step="5"/>
-</meter>
+<label for="temperature">Oven Temperature</label>
+<input type="range" id="temperature" value="205" min="70" max="250" step="5" />
 ```
 
 If we employ native HTML semantics with {{HTMLElement('input')}} we get styles and semantics for free.

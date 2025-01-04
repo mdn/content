@@ -2,12 +2,8 @@
 title: Cookies Having Independent Partitioned State (CHIPS)
 slug: Web/Privacy/Privacy_sandbox/Partitioned_cookies
 page-type: guide
-status:
-  - experimental
 browser-compat: http.headers.Set-Cookie.Partitioned
 ---
-
-{{SeeCompatTable}}
 
 **Cookies Having Independent Partitioned State** (**CHIPS**, also known as **Partitioned cookies**) allows developers to opt a cookie into partitioned storage, with a separate cookie jar per top-level site.
 
@@ -32,7 +28,8 @@ Browsers with CHIPS support provide a new attribute for the {{httpheader("Set-Co
 Set-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;
 ```
 
-> **Note:** Partitioned cookies must be set with `Secure`. In addition, you can use the `__Host` prefix when setting partitioned cookies to bind them only to the current domain or subdomain, and this is recommended if you don't need to share cookies between subdomains.
+> [!NOTE]
+> Partitioned cookies must be set with `Secure`. In addition, you can use the `__Host` prefix when setting partitioned cookies to bind them only to the current domain or subdomain, and this is recommended if you don't need to share cookies between subdomains.
 
 With `Partitioned` set, third-party cookies are stored using two keys, the host key and a new **partition key**. The partition key is based on the scheme and {{Glossary("eTLD", "eTLD+1")}} of the top-level URL the browser was visiting when the request was made to the URL endpoint that set the cookie.
 
@@ -42,7 +39,8 @@ Revisiting our example:
 2. The storage key for the cookie would now be `{("https://site-a.example"), ("3rd-party.example")}`.
 3. When the user visits `https://site-b.example`, which also embeds `https://3rd-party.example`, this new embedded instance is no longer able to access the cookie because the partition key doesn't match.
 
-> **Note:** CHIPS is similar to the [state partitioning mechanism](/en-US/docs/Web/Privacy/State_Partitioning) implemented by Firefox. The difference is that state partitioning partitions cookie storage and retrieval into separate cookie jars for each top-level site, without a mechanism to allow opt-in to third-party cookies if desired. As browsers start to phase out third-party cookie usage, there are still valid, non-tracking uses of third-party cookies that need to be permitted while developers begin to handle this change.
+> [!NOTE]
+> CHIPS is similar to the [state partitioning mechanism](/en-US/docs/Web/Privacy/State_Partitioning) implemented by Firefox. The difference is that state partitioning partitions cookie storage and retrieval into separate cookie jars for each top-level site, without a mechanism to allow opt-in to third-party cookies if desired. As browsers start to phase out third-party cookie usage, there are still valid, non-tracking uses of third-party cookies that need to be permitted while developers begin to handle this change.
 
 ## CHIPS and subdomains
 
@@ -62,7 +60,7 @@ CHIPS still allows third-party content embedded across different subdomains of a
 
 ## See also
 
-- [Cookies Having Independent Partitioned State (CHIPS) on developer.chrome.com](https://developer.chrome.com/docs/privacy-sandbox/chips/)
+- [Cookies Having Independent Partitioned State (CHIPS)](https://developers.google.com/privacy-sandbox/cookies/chips) on developers.google.com
 - [CHIPS Explainer](https://github.com/privacycg/CHIPS)
 
 <section id="Quick_links">

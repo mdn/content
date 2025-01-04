@@ -44,7 +44,8 @@ Real Time Messaging Protocol (RTMP) is a proprietary protocol developed by Macro
 
 ### RTSP
 
-> **Note:** Real Time Streaming Protocol (RTSP) controls media sessions between endpoints and is often used together with Real-time Transport Protocol (RTP) and with Real-time Control Protocol (RTCP) for media stream delivery. Using RTP with RTCP allows for adaptive streaming. This is not yet supported natively in most browsers.
+> [!NOTE]
+> Real Time Streaming Protocol (RTSP) controls media sessions between endpoints and is often used together with Real-time Transport Protocol (RTP) and with Real-time Control Protocol (RTCP) for media stream delivery. Using RTP with RTCP allows for adaptive streaming. This is not yet supported natively in most browsers.
 >
 > Some vendors implement propriety transport protocols, such as RealNetworks and their Real Data Transport (RDT).
 
@@ -52,7 +53,8 @@ Real Time Messaging Protocol (RTMP) is a proprietary protocol developed by Macro
 
 RTSP 2.0 is currently in development and is not backward compatible with RTSP 1.0.
 
-> **Warning:** Although the {{ htmlelement("audio") }} and {{ htmlelement("video") }} tags are protocol agnostic, no browser currently supports anything other than HTTP without requiring plugins, although this looks set to change. Protocols other than HTTP may also be subject to blocking from firewalls or proxy servers.
+> [!WARNING]
+> Although the {{ htmlelement("audio") }} and {{ htmlelement("video") }} tags are protocol agnostic, no browser currently supports anything other than HTTP without requiring plugins, although this looks set to change. Protocols other than HTTP may also be subject to blocking from firewalls or proxy servers.
 
 ## Using streaming protocols
 
@@ -72,19 +74,22 @@ For example:
 
 For example, [you could implement MPEG-DASH using JavaScript while offloading the decoding to MSE](https://web.archive.org/web/20170504035455/https://msopentech.com/blog/2014/01/03/streaming_video_player/).
 
-> **Note:** Time Shifting is the process of consuming a live stream sometime after it happened.
+> [!NOTE]
+> Time Shifting is the process of consuming a live stream sometime after it happened.
 
 ## Video Streaming File Formats
 
 A couple of HTTP-based livestreaming video formats are beginning to see support across browsers.
 
-> **Note:** You can find a guide to encoding HLS and MPEG-DASH for use on the web at [Setting up adaptive streaming media sources](/en-US/docs/Web/Media/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources).
+> [!NOTE]
+> You can find a guide to encoding HLS and MPEG-DASH for use on the web at [Setting up adaptive streaming media sources](/en-US/docs/Web/Media/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources).
 
 ### MPEG-DASH
 
 DASH stands for Dynamic Adaptive Streaming over HTTP. It is supported via Media Source Extensions which are used by JavaScript libraries such as [DASH.js](https://github.com/Dash-Industry-Forum/dash.js/). This approach allows us to download chunks of the video stream using XHR and "append" the chunks to the stream that's played by the {{ htmlelement("video") }} element. So for example, if we detect that the network is slow, we can start requesting lower quality (smaller) chunks for the next segment. This technology also allows an advertising segment to be appended/inserted into the stream.
 
-> **Note:** You can also [use WebM with the MPEG DASH adaptive streaming system](http://wiki.webmproject.org/adaptive-streaming/webm-dash-specification).
+> [!NOTE]
+> You can also [use WebM with the MPEG DASH adaptive streaming system](https://wiki.webmproject.org/adaptive-streaming/webm-dash-specification).
 
 ### HLS
 
@@ -120,7 +125,7 @@ In order to stream live audio and video, you will need to run specific streaming
 
 [GStreamer](https://gstreamer.freedesktop.org/) is an open source cross-platform multimedia framework that allows you to create a variety of media-handling components, including streaming components. Through its plugin system, GStreamer provides support for more than a hundred codecs (including MPEG-1, MPEG-2, MPEG-4, H.261, H.263, H.264, RealVideo, MP3, WMV, and FLV.)
 
-GStreamer plugins such as [souphttpclientsink](https://gstreamer.freedesktop.org/documentation/soup/souphttpclientsink.html?gi-language=c) and [shout2send](https://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-good/html/gst-plugins-good-plugins-shout2send.html) exist to stream media over HTTP or you can also integrate with Python's Twisted framework.
+GStreamer plugins such as [souphttpclientsink](https://gstreamer.freedesktop.org/documentation/soup/souphttpclientsink.html?gi-language=c) and [shout2send](https://gstreamer.freedesktop.org/documentation/shout2/index.html?gi-language=c#shout2send-page) exist to stream media over HTTP or you can also integrate with Python's Twisted framework.
 
 For RTMP transfer you can use the [Nginx RTMP Module](https://github.com/arut/nginx-rtmp-module).
 
@@ -134,7 +139,8 @@ For RTMP transfer you can use the [Nginx RTMP Module](https://github.com/arut/ng
 
 The [Icecast](https://www.icecast.org/) server is an open source technology for streaming media. Maintained by the [Xiph.org Foundation](https://www.xiph.org/), it streams Ogg Vorbis/Theora as well as MP3 and AAC format via the SHOUTcast protocol.
 
-> **Note:** SHOUTcast and Icecast are among the most established and popular technologies, but there are many [more streaming media systems available](https://en.wikipedia.org/wiki/List_of_streaming_media_systems#Servers).
+> [!NOTE]
+> SHOUTcast and Icecast are among the most established and popular technologies, but there are many [more streaming media systems available](https://en.wikipedia.org/wiki/List_of_streaming_media_systems#Servers).
 
 ### Streaming Services
 
@@ -143,7 +149,7 @@ Although you can install software like GStreamer, SHOUTcast and Icecast you will
 ## See also
 
 - [HTTP Live Streaming](https://en.wikipedia.org/wiki/HTTP_Live_Streaming)
-- [HLS Browser Support](https://www.jwplayer.com/blog/hls-in-html5)
+- [HLS Browser Support](https://jwplayer.com/blog/http-live-streaming/)
 - [HTTP Live Streaming JavaScript player](https://github.com/RReverser/mpegts)
 - [The Basics of HTTP Live Streaming](https://larryjordan.com/articles/basics-of-http-live-streaming/)
 - [DASH Adaptive Streaming for HTML 5 Video](/en-US/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video)

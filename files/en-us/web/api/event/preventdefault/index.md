@@ -21,6 +21,8 @@ non-cancelable event, such as one dispatched via
 {{domxref("EventTarget.dispatchEvent()")}}, without specifying
 `cancelable: true` has no effect.
 
+If a passive listener calls `preventDefault()`, nothing will happen and a console warning may be generated.
+
 ## Syntax
 
 ```js-nolint
@@ -68,7 +70,7 @@ function checkboxClick(event) {
 ### Stopping keystrokes from reaching an edit field
 
 The following example demonstrates how invalid text input can be stopped from reaching
-the input field with `preventDefault()`. Nowadays, you should usually use [native HTML form validation](/en-US/docs/Learn/Forms/Form_validation)
+the input field with `preventDefault()`. Nowadays, you should usually use [native HTML form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)
 instead.
 
 #### HTML

@@ -20,7 +20,7 @@ The `::-webkit-scrollbar` CSS pseudo-element affects the style of an element's s
 
 The {{cssxref("scrollbar-color")}} and {{cssxref("scrollbar-width")}} standard properties may be used as alternatives for browsers that do not support this pseudo-element and the related `::-webkit-scrollbar-*` pseudo-elements (see [Browser compatibility](#browser_compatibility)).
 
-> **Note:**
+> [!NOTE]
 > If {{cssxref("scrollbar-color")}} and {{cssxref("scrollbar-width")}} are supported and have any value other than `auto` set, they will override `::-webkit-scrollbar-*` styling.
 > See [Adding a fallback for scrollbar styles](#adding_a_fallback_for_scrollbar_styles) for more details.
 
@@ -30,17 +30,17 @@ You can use the following pseudo-elements to customize various parts of the scro
 
 - `::-webkit-scrollbar` — the entire scrollbar.
 - `::-webkit-scrollbar-button` — the buttons on the scrollbar (arrows pointing upwards and downwards that scroll one line at a time).
-- `::-webkit-scrollbar:horizontal{}` — the horizontal scrollbar.
+- `::-webkit-scrollbar:horizontal` — the horizontal scrollbar.
 - `::-webkit-scrollbar-thumb` — the draggable scrolling handle.
 - `::-webkit-scrollbar-track` — the track (progress bar) of the scrollbar, where there is a gray bar on top of a white bar.
 - `::-webkit-scrollbar-track-piece` — the part of the track (progress bar) not covered by the handle.
-- `::-webkit-scrollbar:vertical{}` — the vertical scrollbar.
+- `::-webkit-scrollbar:vertical` — the vertical scrollbar.
 - `::-webkit-scrollbar-corner` — the bottom corner of the scrollbar, where both horizontal and vertical scrollbars meet. This is often the bottom-right corner of the browser window.
 - `::-webkit-resizer` — the draggable resizing handle that appears at the bottom corner of some elements.
 
-## Accessibility concerns
+## Accessibility
 
-Authors should avoid styling scrollbars, as changing the appearance of scrollbars away from the default [breaks external consistency](https://inclusivedesignprinciples.org/#be-consistent) which negatively impacts usability. If styling scrollbars, ensure there is enough color contrast and touch targets are at least 44px wide and tall. See [Techniques for WCAG 2.0: G183: Using a contrast ratio of 3:1](https://www.w3.org/TR/WCAG20-TECHS/G183.html) and [Understanding WCAG 2.1 : Target Size](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html).
+Authors should avoid styling scrollbars, as changing the appearance of scrollbars away from the default [breaks external consistency](https://inclusivedesignprinciples.info/#be-consistent) which negatively impacts usability. If styling scrollbars, ensure there is enough color contrast and touch targets are at least 44px wide and tall. See [Techniques for WCAG 2.0: G183: Using a contrast ratio of 3:1](https://www.w3.org/TR/WCAG20-TECHS/G183.html) and [Understanding WCAG 2.1 : Target Size](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html).
 
 ## Examples
 
@@ -128,7 +128,7 @@ The following example shows how to apply colors to scrollbars using {{cssxref("s
 #### HTML
 
 ```html
-<div class="scrollbox">
+<div class="scroll-box">
   <h1>Yoshi</h1>
   <p>
     Yoshi is a fictional dinosaur who appears in video games published by
@@ -149,7 +149,7 @@ The following example shows how to apply colors to scrollbars using {{cssxref("s
 #### CSS
 
 ```css hidden
-.scrollbox {
+.scroll-box {
   overflow: auto;
   width: 20rem;
   height: 5rem;
@@ -162,17 +162,17 @@ The following example shows how to apply colors to scrollbars using {{cssxref("s
 ```css
 /* For browsers that support `scrollbar-*` properties */
 @supports (scrollbar-color: auto) {
-  .scrollbox {
+  .scroll-box {
     scrollbar-color: aquamarine cornflowerblue;
   }
 }
 
 /* Otherwise, use `::-webkit-scrollbar-*` pseudo-elements */
 @supports selector(::-webkit-scrollbar) {
-  .scrollbox::-webkit-scrollbar {
+  .scroll-box::-webkit-scrollbar {
     background: aquamarine;
   }
-  .scrollbox::-webkit-scrollbar-thumb {
+  .scroll-box::-webkit-scrollbar-thumb {
     background: cornflowerblue;
   }
 }

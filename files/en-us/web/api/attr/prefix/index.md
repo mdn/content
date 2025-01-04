@@ -12,7 +12,8 @@ The read-only **`prefix`** property of the {{domxref("Attr")}} returns the names
 
 The prefix is always in lower case, whatever case is used at the attribute creation.
 
-> **Note:** Only XML supports namespaces. HTML does not. That means that the prefix of an attribute of an HTML element will always be `null`.
+> [!NOTE]
+> Only XML supports namespaces. HTML does not. That means that the prefix of an attribute of an HTML element will always be `null`.
 
 Also, only the `xml` (for the `xml:lang` attribute), `xlink` (for the `xlink:href`, `xlink:show`, `xlink:target` and `xlink:title` attributes) and `xpath` namespaces are supported, and only on SVG and MathML elements.
 

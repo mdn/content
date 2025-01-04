@@ -31,7 +31,8 @@ The following table shows the return values for different types of nodes.
 | {{domxref("ProcessingInstruction")}} | Entire content excluding the target |
 | {{domxref("Text")}}                  | Content of the text node            |
 
-> **Note:** When `nodeValue` is defined to be `null`, setting it has no effect.
+> [!NOTE]
+> When `nodeValue` is defined to be `null`, setting it has no effect.
 
 ## Example
 

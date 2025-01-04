@@ -40,7 +40,7 @@ The `rgb()` color function is not the only color function that can represent the
 
 - `display-p3` color space
 
-  - : Defined by Apple, the **Display P3** color space combines the DCI-P3 color gamut, the D65 whitepoint, and sRGB gamma curve. It is a wide gamut space typical of current wide-gamut monitors, enabling more vibrant greens and reds than the sRGB color gamut. The `display-p3` is based on `r`, `g`, and `b`, with in-gamut values ranging from `0` to `1`. The whitepoint is D65.
+  - : Defined by Apple, the [**Display P3**](https://www.color.org/chardata/rgb/DisplayP3.xalter), color space combines the DCI-P3 color gamut, the D65 whitepoint, and sRGB gamma curve. It is a wide gamut space typical of current wide-gamut monitors, enabling more vibrant greens and reds than the sRGB color gamut. The `display-p3` is based on `r`, `g`, and `b`, with in-gamut values ranging from `0` to `1`. The whitepoint is D65.
 
 - `a98-rgb` color space
 
@@ -54,7 +54,8 @@ The `rgb()` color function is not the only color function that can represent the
 
   - : `rec2020` is a broadcast industry standard for ultra-high definition 4k and 8k televisions. The ultra-wide gamut space is capable of representing almost all visible real-world colors, beyond the capabilities of most current displays. Coverage is expected to increase over time as displays improve. In-gamut `r`, `g`, and `b` values range from `0` to `1`. The whitepoint is D65.
 
-> **Note:** Additional cylindrical RGB spaces that are not in the CSS specification include: `HSI` (hue, saturation, and intensity), `Okhsv`, `Okhsl`, `HSLuv`, `HPLuv`, and `Cubehelix`.
+> [!NOTE]
+> Additional cylindrical RGB spaces that are not in the CSS specification include: `HSI` (hue, saturation, and intensity), `Okhsv`, `Okhsl`, `HSLuv`, `HPLuv`, and `Cubehelix`.
 
 ### CIELAB color spaces
 
@@ -64,7 +65,8 @@ Lab is a rectangular coordinate system, with a central lightness `L` axis. Posit
 
 CIELab color functions include {{CSSXref("color_value/lab", "lab()")}} (lightness, a-axis, b-axis) and {{CSSXref("color_value/lch", "lch()")}} (lightness, chroma, hue) as well as {{CSSXref("color_value/oklab", "oklab()")}} and {{CSSXref("color_value/oklch", "oklch()")}}. The lightness values are the same, but `lch()` and `oklch` are polar, cylindrical coordinate systems, that use polar coordinates `C` (chroma) and `H` (hue) rather than axes.
 
-> **Note:** The hue and lightness in `lch()` and `oklch` are different from the same-named values in {{cssxref("color_value/hsl", "hsl()")}} or other sRGB color spaces.
+> [!NOTE]
+> The hue and lightness in `lch()` and `oklch` are different from the same-named values in {{cssxref("color_value/hsl", "hsl()")}} or other sRGB color spaces.
 
 CIELab color spaces, including Lab, Lch, Oklab, and Oklch, are device-independent color spaces.
 
@@ -98,7 +100,7 @@ People with normal vision have three kinds of cone cells that sense light, havin
 
 - {{cssxref("@media/color-gamut", "color-gamut")}} `@media` feature
 - [CSS data type: `<color>`](/en-US/docs/Web/CSS/color_value)
-- [sRGB color space](https://webstore.iec.ch/publication/6168)
+- [sRGB color space](https://webstore.iec.ch/en/publication/6168)
 - [CIELAB color space](https://en.wikipedia.org/wiki/CIELAB_color_space) on Wikipedia
 - [CIE 1931 color space](https://en.wikipedia.org/wiki/CIE_1931_color_space) on Wikipedia
 - [Oklab color space](https://bottosson.github.io/posts/oklab/)

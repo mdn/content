@@ -20,13 +20,14 @@ There are several mechanisms for speculative loading:
 - **Prerendering** goes a step further, and actually renders the content ready to be shown when required. Depending on how this is done, this can result in an instant navigation from old page to new page.
 - **Preconnecting** involves speeding up future loads from a given origin by preemptively performing part or all of the connection handshake (i.e. DNS + TCP + TLS).
 
-> **Note:** The above descriptions are high-level and general. Exactly what browsers will do to achieve prefetching and prerendering depends on the features used. More exact feature descriptions are provided in the [Speculative loading features](#speculative_loading_features) section below.
+> [!NOTE]
+> The above descriptions are high-level and general. Exactly what browsers will do to achieve prefetching and prerendering depends on the features used. More exact feature descriptions are provided in the [Speculative loading features](#speculative_loading_features) section below.
 
 ## How is speculative loading achieved?
 
 Speculative loading is achieved in two main ways.
 
-First, some browsers will automatically prerender pages based on various heuristics to provide automatic performance improvements. Exactly how this is done depends on the browser implementation. Chrome, for example, automatically prerenders pages when matching strings are typed into the address bar — if it has a high confidence that you will visit that page (see [Viewing Chrome's address bar predictions](https://developer.chrome.com/blog/prerender-pages/#viewing-chromes-address-bar-predictions) for more details). In addition, it may automatically prerender search results pages when search terms are typed into the address bar, when instructed to do so by the search engine. It does this using the same mechanism as the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API).
+First, some browsers will automatically prerender pages based on various heuristics to provide automatic performance improvements. Exactly how this is done depends on the browser implementation. Chrome, for example, automatically prerenders pages when matching strings are typed into the address bar — if it has a high confidence that you will visit that page (see [Viewing Chrome's address bar predictions](https://developer.chrome.com/docs/web-platform/prerender-pages#view_chromes_address_bar_predictions) for more details). In addition, it may automatically prerender search results pages when search terms are typed into the address bar, when instructed to do so by the search engine. It does this using the same mechanism as the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API).
 
 Second, there are several different platform features that developers can use to provide instructions on what speculative loading they want the browser to perform. These are reviewed in the next section.
 
@@ -64,7 +65,8 @@ For example:
 <link rel="dns-prefetch" href="https://example.com" />
 ```
 
-> **Note:** See [Using dns-prefetch](/en-US/docs/Web/Performance/dns-prefetch) for more details.
+> [!NOTE]
+> See [Using dns-prefetch](/en-US/docs/Web/Performance/dns-prefetch) for more details.
 
 ### `<link rel="preload">`
 
@@ -128,7 +130,7 @@ Prefetching can be used to fetch both HTML and sub-resources for a possible next
 
 The result is kept in the HTTP cache on disk. Because of this it is useful for prefetching subresources, even if they are not used by the current page. You could also use it to prefetch the next document the user will likely visit on the site. However, as a result you need to be careful with headers — for example certain [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) headers could block prefetching (for example `no-cache` or `no-store`).
 
-Many browsers now implement some form of [cache partitioning](https://developer.chrome.com/en/blog/http-cache-partitioning/), which makes `<link rel="prefetch">` useless for resources intended for use by different top-level sites. This includes the main document when navigating cross-site. So, for example, the following prefetch:
+Many browsers now implement some form of [cache partitioning](https://developer.chrome.com/blog/http-cache-partitioning), which makes `<link rel="prefetch">` useless for resources intended for use by different top-level sites. This includes the main document when navigating cross-site. So, for example, the following prefetch:
 
 ```html
 <link rel="prefetch" href="https://news.example/article" />
@@ -136,16 +138,18 @@ Many browsers now implement some form of [cache partitioning](https://developer.
 
 Would not be accessible from `https://aggregator.example/`.
 
-> **Note:** `<link rel="prefetch">` is functionally equivalent to a {{domxref("fetch()")}} call with a `priority: "low"` option set on it, except that the former will generally have an even lower priority, and it will have a [`Sec-Purpose: prefetch`](/en-US/docs/Web/HTTP/Headers/Sec-Purpose) header set on the request.
+> **Note:** `<link rel="prefetch">` is functionally equivalent to a {{domxref("Window/fetch", "fetch()")}} call with a `priority: "low"` option set on it, except that the former will generally have an even lower priority, and it will have a [`Sec-Purpose: prefetch`](/en-US/docs/Web/HTTP/Headers/Sec-Purpose) header set on the request.
 
-> **Note:** The fetch request for a `prefetch` operation results in an HTTP Request that includes the HTTP header [`Sec-Purpose: prefetch`](/en-US/docs/Web/HTTP/Headers/Sec-Purpose). A server might use this header to change the cache timeouts for the resources, or perform other special handling.
+> [!NOTE]
+> The fetch request for a `prefetch` operation results in an HTTP Request that includes the HTTP header [`Sec-Purpose: prefetch`](/en-US/docs/Web/HTTP/Headers/Sec-Purpose). A server might use this header to change the cache timeouts for the resources, or perform other special handling.
 > The request will also include the {{HTTPHeader("Sec-Fetch-Dest")}} header with the value set to `empty`.
 > The {{HTTPHeader("Accept")}} header in the request will match the value used for normal navigation requests. This allows the browser to find the matching cached resources following navigation.
 > If a response is returned, it gets cached with the request in the HTTP cache.
 
 ### `<link rel="prerender">` {{deprecated_inline}}{{non-standard_inline}}
 
-> **Note:** This technology was only ever available in Chrome, and is now deprecated. You should use the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) instead, which supercedes this.
+> [!NOTE]
+> This technology was only ever available in Chrome, and is now deprecated. You should use the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) instead, which supersedes this.
 
 [`<link rel="prerender">`](/en-US/docs/Web/HTML/Attributes/rel/prerender) provides a hint to browsers that the user might need the target resource for the next navigation, and therefore the browser can likely improve performance by prerendering the resource. `prerender` is used for future navigations, same-site only, and as such makes sense for multi-page applications (MPAs), not single-page applications (SPAs).
 
@@ -155,7 +159,7 @@ For example:
 <link rel="prerender" href="/next-page" />
 ```
 
-It will fetch the referenced document, then fetch any linked resources that are statically findable and fetch them too, storing the result in the HTTP cache on disk with a five-minute timeout. The exception is subresources loaded via JavaScript — it does not find these. It has other problems too — like `<link rel="prefetch">` it can also be blocked by [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) headers, and be rendered useless for resources intended for use by different top-level sites by browser [cache partitioning](https://developer.chrome.com/en/blog/http-cache-partitioning/).
+It will fetch the referenced document, then fetch any linked resources that are statically findable and fetch them too, storing the result in the HTTP cache on disk with a five-minute timeout. The exception is subresources loaded via JavaScript — it does not find these. It has other problems too — like `<link rel="prefetch">` it can also be blocked by [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) headers, and be rendered useless for resources intended for use by different top-level sites by browser [cache partitioning](https://developer.chrome.com/blog/http-cache-partitioning).
 
 ### Speculation Rules API
 
@@ -178,4 +182,4 @@ The following table summarizes the features detailed above, and provides guidanc
 
 ## See also
 
-- [Prerender pages in Chrome for instant page navigations](https://developer.chrome.com/blog/prerender-pages/) on developer.chrome.com (2023)
+- [Prerender pages in Chrome for instant page navigations](https://developer.chrome.com/docs/web-platform/prerender-pages) on developer.chrome.com (2023)

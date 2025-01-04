@@ -50,7 +50,7 @@ The `grid` role is a composite widget containing a collection of one or more row
 
 A grid widget contains one or more rows with one or more cells of thematically related interactive content. While it does not imply a specific visual presentation, it implies a relationship among elements. Uses fall into two categories: presenting tabular information (data grids) and grouping other widgets (layout grids). Even though both data grids and layout grids employ the same ARIA roles, states, and properties, differences in their content and purpose surface factors that are important to consider in keyboard interaction design. See [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/patterns/grid/) for more details.
 
-Cell elements have the role [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role), unless they are a row or column header. Then the elements are [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role) and [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role), respectively. Cell elements need to be owned by elements with a [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) role. Rows can be grouped using `rowgroups`.
+Cell elements have the role [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role), unless they are a row or column header, in which case, the elements are [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role) and [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role), respectively. Cell elements need to be owned by elements with a [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) role. Rows can be grouped using the [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role) role.
 
 If the grid is used as an interactive widget, [keyboard interactions](#keyboard_interactions) need to be implemented.
 
@@ -74,7 +74,8 @@ If the grid is used as an interactive widget, [keyboard interactions](#keyboard_
 - [aria-readonly](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly)
   - : If the user can navigate the grid but not change the value or values of the grid, the [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) should be set to `true`. The default value is `false`.
 
-> **Note:** For many use cases, an HTML {{HTMLElement('table')}} element is sufficient as it and the various table elements already include many ARIA roles.
+> [!NOTE]
+> For many use cases, an HTML {{HTMLElement('table')}} element is sufficient as it and the various table elements already include many ARIA roles.
 
 ### Keyboard interactions
 
@@ -234,27 +235,27 @@ const selectables = document.querySelectorAll('table td[role="gridcell"]');
 selectables[0].setAttribute("tabindex", 0);
 
 const trs = document.querySelectorAll("table tbody tr");
-let row = 0;
-let col = 0;
-let maxrow = trs.length - 1;
-let maxcol = 0;
+let rowIndex = 0;
+let colIndex = 0;
+let maxRow = trs.length - 1;
+let maxCol = 0;
 
-trs.forEach((gridrow) => {
-  gridrow.querySelectorAll("td").forEach((el) => {
-    el.dataset.row = row;
-    el.dataset.col = col;
-    col++;
+trs.forEach((row) => {
+  row.querySelectorAll("td").forEach((el) => {
+    el.dataset.row = rowIndex;
+    el.dataset.col = colIndex;
+    rowIndex++;
   });
-  if (col > maxcol) {
-    maxcol = col - 1;
+  if (colIndex > maxCol) {
+    maxCol = colIndex - 1;
   }
-  col = 0;
-  row++;
+  colIndex = 0;
+  rowIndex++;
 });
 
-function moveto(newrow, newcol) {
+function moveTo(newRow, newCol) {
   const tgt = document.querySelector(
-    `[data-row="${newrow}"][data-col="${newcol}"]`,
+    `[data-row="${newRow}"][data-col="${newCol}"]`,
   );
   if (tgt?.getAttribute("role") === "gridcell") {
     document.querySelectorAll("[role=gridcell]").forEach((el) => {
@@ -273,22 +274,22 @@ document.querySelector("table").addEventListener("keydown", (event) => {
   const row = parseInt(event.target.dataset.row, 10);
   switch (event.key) {
     case "ArrowRight": {
-      const newrow = col === 6 ? row + 1 : row;
-      const newcol = col === 6 ? 0 : col + 1;
-      moveto(newrow, newcol);
+      const newRow = col === 6 ? row + 1 : row;
+      const newCol = col === 6 ? 0 : col + 1;
+      moveTo(newRow, newCol);
       break;
     }
     case "ArrowLeft": {
-      const newrow = col === 0 ? row - 1 : row;
-      const newcol = col === 0 ? 6 : col - 1;
-      moveto(newrow, newcol);
+      const newRow = col === 0 ? row - 1 : row;
+      const newCol = col === 0 ? 6 : col - 1;
+      moveTo(newRow, newCol);
       break;
     }
     case "ArrowDown":
-      moveto(row + 1, col);
+      moveTo(row + 1, col);
       break;
     case "ArrowUp":
-      moveto(row - 1, col);
+      moveTo(row - 1, col);
       break;
     case "Home": {
       if (event.ctrlKey) {
@@ -297,30 +298,30 @@ document.querySelector("table").addEventListener("keydown", (event) => {
         do {
           let j = 0;
           do {
-            result = moveto(i, j);
+            result = moveTo(i, j);
             j++;
           } while (!result);
           i++;
         } while (!result);
       } else {
-        moveto(row, 0);
+        moveTo(row, 0);
       }
       break;
     }
     case "End": {
       if (event.ctrlKey) {
-        let i = maxrow;
+        let i = maxRow;
         let result;
         do {
-          let j = maxcol;
+          let j = maxCol;
           do {
-            result = moveto(i, j);
+            result = moveTo(i, j);
             j--;
           } while (!result);
           i--;
         } while (!result);
       } else {
-        moveto(
+        moveTo(
           row,
           document.querySelector(
             `[data-row="${event.target.dataset.row}"]:last-of-type`,
@@ -333,16 +334,16 @@ document.querySelector("table").addEventListener("keydown", (event) => {
       let i = 0;
       let result;
       do {
-        result = moveto(i, col);
+        result = moveTo(i, col);
         i++;
       } while (!result);
       break;
     }
     case "PageDown": {
-      let i = maxrow;
+      let i = maxRow;
       let result;
       do {
-        result = moveto(i, col);
+        result = moveTo(i, col);
         i--;
       } while (!result);
       break;

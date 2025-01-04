@@ -7,9 +7,10 @@ browser-compat: svg.elements.ellipse
 
 {{SVGRef}}
 
-The **`<ellipse>`** element is an SVG basic shape, used to create ellipses based on a center coordinate, and both their x and y radius.
+The **`<ellipse>`** [SVG](/en-US/docs/Web/SVG) element is an SVG basic shape, used to create ellipses based on a center coordinate, and both their x and y radius.
 
-> **Note:** Ellipses are unable to specify the exact orientation of the ellipse (if, for example, you wanted to draw an ellipse tilted at a 45 degree angle), but it can be rotated by using the {{SVGAttr("transform")}} attribute.
+> [!NOTE]
+> Ellipses are unable to specify the exact orientation of the ellipse (if, for example, you wanted to draw an ellipse tilted at a 45 degree angle), but it can be rotated by using the {{SVGAttr("transform")}} attribute.
 
 ## Example
 
@@ -47,7 +48,8 @@ svg {
   - : This attribute lets specify the total length for the path, in user units.
     _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number) ; _Default value_: _none_; _Animatable_: **yes**
 
-> **Note:** Starting with SVG2 `cx`, `cy`, `rx` and `ry` are _Geometry Properties_, meaning those attributes can also be used as CSS properties for that element.
+> [!NOTE]
+> Starting with SVG2 `cx`, `cy`, `rx` and `ry` are _Geometry Properties_, meaning those attributes can also be used as CSS properties for that element.
 
 ## Usage context
 

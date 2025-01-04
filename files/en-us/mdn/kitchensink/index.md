@@ -5,7 +5,8 @@ page-type: guide
 browser-compat: html.elements.video
 ---
 
-> **Warning:** Don't delete this page. It's used by [mdn/yari](https://github.com/mdn/yari) for its automation.
+> [!WARNING]
+> Don't delete this page. It's used by [mdn/yari](https://github.com/mdn/yari) for its automation.
 
 ## About this page
 
@@ -16,9 +17,11 @@ Let's start with some notes…
 
 Text that uses the `<kbd>` tag: <kbd>Shift</kbd>
 
-> **Note:** Here's a block indicator note.
+> [!NOTE]
+> Here's a block indicator note.
 
-> **Warning:** Here's a block indicator warning.
+> [!WARNING]
+> Here's a block indicator warning.
 
 ## Prev/Next buttons
 
@@ -300,13 +303,13 @@ this.color("blue");
 
 {{EmbedLiveSample('Rect_code', '700', '300') }}
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 {{WebExtAPIRef("tabs.mutedInfo")}}
 
 ### Obsolete CSSOM interfaces {{deprecated_inline}}
 
-{{InheritanceDiagram}}
+{{InheritanceDiagram("WheelEvent")}}
 
 {{EmbedGHLiveSample("web-tech-games/index.html", '100%', 820)}}
 
@@ -343,7 +346,7 @@ The [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macr
   - {{Glossary("XMLHttpRequest", "XHR")}}
 
 - [AJAX](https://en.wikipedia.org/wiki/AJAX) on Wikipedia
-- [Ajax](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+- [Learn: Making network requests with JavaScript](/en-US/docs/Learn_web_development/Core/Scripting/Network_requests)
 - {{DOMxRef("XMLHttpRequest")}}
 - {{DOMxRef("Fetch API")}}
 - [Using Fetch API](/en-US/docs/Web/API/Fetch_API/Using_Fetch)

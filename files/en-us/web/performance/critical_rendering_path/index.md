@@ -33,7 +33,7 @@ CSS has its own set of rules for identifying valid tokens. Remember the C in CSS
 
 In terms of selector performance, less specific selectors are faster than more specific ones. For example, `.foo {}` is faster than `.bar .foo {}` because when the browser finds `.foo`, in the second scenario, it has to walk up the DOM to check if `.foo` has an ancestor `.bar`. The more specific tag requires more work from the browser, but this penalty is not likely worth optimizing around.
 
-If you measure the time it takes to parse CSS, you'll be amazed at how fast browsers truly are. The more specific rule is more expensive because it has to traverse more nodes in the DOM tree - but that extra expense is generally minimal. Measure first. Optimize as needed. Specificity is likely not your lowest hanging fruit. When it comes to CSS, selector performance optimization improvements will only be in microseconds. There are other [ways to optimize CSS](/en-US/docs/Learn/Performance/CSS), such as minification, and separating deferred CSS into non-blocking requests by using media queries.
+If you measure the time it takes to parse CSS, you'll be amazed at how fast browsers truly are. The more specific rule is more expensive because it has to traverse more nodes in the DOM tree - but that extra expense is generally minimal. Measure first. Optimize as needed. Specificity is likely not your lowest hanging fruit. When it comes to CSS, selector performance optimization improvements will only be in microseconds. There are other [ways to optimize CSS](/en-US/docs/Learn_web_development/Extensions/Performance/CSS), such as minification, and separating deferred CSS into non-blocking requests by using media queries.
 
 ### Render Tree
 

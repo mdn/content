@@ -13,7 +13,8 @@ The arc is automatically connected to the path's latest point with a straight li
 
 This method is commonly used for making rounded corners.
 
-> **Note:** You may get unexpected results when using a
+> [!NOTE]
+> You may get unexpected results when using a
 > relatively large radius: the arc's connecting line will go in whatever direction it
 > must to meet the specified radius.
 
@@ -630,7 +631,7 @@ can be used to change an underlined element that is in focus.
     return [-1]; // no hit
   }
 
-  /* Handle a mouse move for either a mousemove event or mouseentry */
+  /* Handle a mouse move for either a mousemove event or mouseenter */
   function doMouseMove(pointCursor, rBtnDown) {
     /* Test for active move. If so, move accordingly based on the
      * cursor position. The right button down flag handles the case
@@ -723,7 +724,7 @@ can be used to change an underlined element that is in focus.
   function drawCanvas() {
     const rPoint = 4;
     const colorConstruction = "#080";
-    const colorDragable = "#00F";
+    const colorDraggable = "#00F";
     const [P0, P1, P2] = state.controlPoints;
 
     ctx.font = "italic 14pt sans-serif";
@@ -782,7 +783,7 @@ can be used to change an underlined element that is in focus.
     state.controlPoints.forEach((value) => {
       ctx.beginPath();
       ctx.arc(value.x, value.y, rPoint, 0, 2 * Math.PI);
-      ctx.fillStyle = colorDragable;
+      ctx.fillStyle = colorDraggable;
       ctx.fill();
     });
     ctx.fillStyle = "#000";

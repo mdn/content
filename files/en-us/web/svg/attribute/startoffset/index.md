@@ -83,7 +83,8 @@ svg {
 - `<number>`
   - : This value indicates a distance along the path measured in the current user coordinate system for the `<textPath>` element.
 
-> **Note:** Negative values and values larger than the path length (e.g. `150%`) are allowed.
+> [!NOTE]
+> Negative values and values larger than the path length (e.g. `150%`) are allowed.
 
 ## Specifications
 

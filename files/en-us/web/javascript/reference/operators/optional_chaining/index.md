@@ -86,7 +86,8 @@ const result = someInterface.customMethod?.();
 
 However, if there is a property with such a name which is not a function, using `?.` will still raise a {{jsxref("TypeError")}} exception "someInterface.customMethod is not a function".
 
-> **Note:** If `someInterface` itself is `null` or
+> [!NOTE]
+> If `someInterface` itself is `null` or
 > `undefined`, a {{jsxref("TypeError")}} exception will still be
 > raised ("someInterface is null"). If you expect that
 > `someInterface` itself may be `null` or `undefined`,
@@ -191,14 +192,14 @@ Except the `temp` variable isn't created.
 ### Basic example
 
 This example looks for the value of the `name` property for the member
-`bar` in a map when there is no such member. The result is therefore
+`CSS` in a map when there is no such member. The result is therefore
 `undefined`.
 
 ```js
 const myMap = new Map();
-myMap.set("foo", { name: "baz", desc: "inga" });
+myMap.set("JS", { name: "Josh", desc: "I maintain things" });
 
-const nameBar = myMap.get("bar")?.name;
+const nameBar = myMap.get("CSS")?.name;
 ```
 
 ### Dealing with optional callbacks or event handlers

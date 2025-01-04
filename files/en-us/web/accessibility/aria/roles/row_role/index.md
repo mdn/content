@@ -38,7 +38,7 @@ An element with `role="row"` is a row of cells within a tabular structure. A row
 
 ## Description
 
-The element `role="row"` is a row within a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role) or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role), and optionally within a [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role), that is a container for one or more [`cells`](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role), [`gridcells`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role), [`columnheaders`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role), or [`rowheaders`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role) within a static tabular structure. Using native [HTML `<tr>`](/en-US/docs/Web/HTML/Element/tr) elements, whenever possible, is strongly encouraged.
+The element with `role="row"` is a row within a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role), or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role), and optionally within a [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role) that contains one or more [`cell`](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role), [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role), [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role), or [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role) elements within a static tabular structure. Using native [HTML `<tr>`](/en-US/docs/Web/HTML/Element/tr) elements, whenever possible, is strongly encouraged.
 
 To create an ARIA row, add `role="row"` to the container element. That row should be nested within a grid, table or treegrid. A group of rows can be nested within a grid, table or treegrid directly, or within a rowgroup in one of those containers. Each row contains child cells. These cells can be of different types, depending on whether they are column or row headers, or grid or regular cells.
 
@@ -48,7 +48,8 @@ If the row is within a treegrid, rows can include the [`aria-expanded`](/en-US/d
 
 To create an interactive widget that has a tabular structure, use the grid pattern instead. If the interaction provides for the selection state of individual cells, if left to right and top to bottom navigation is provided, or if the user interface allows the rearranging of cell order or otherwise changing individual cell order such as through drag and drop, use [grid](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role) or [treegrid](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role) instead.
 
-> **Note:** Using the native HTML table element ({{HTMLElement('table')}}) along with the table row element ({{HTMLElement('tr')}}) whenever possible is strongly encouraged.
+> [!NOTE]
+> Using the native HTML table element ({{HTMLElement('table')}}) along with the table row element ({{HTMLElement('tr')}}) whenever possible is strongly encouraged.
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -80,7 +81,7 @@ To create an interactive widget that has a tabular structure, use the grid patte
 
   - : The `aria-expanded` attribute, which defines the state of the row, can take one of three values, or be omitted:
 
-    - `aria-expanded="true`: Row is currently expanded.
+    - `aria-expanded="true"`: Row is currently expanded.
     - `aria-expanded="false"`: Row is currently collapsed.
     - `aria-expanded="undefined"` or the attribute is missing: The row is neither expandable nor collapsible.
 
@@ -90,7 +91,7 @@ To create an interactive widget that has a tabular structure, use the grid patte
 
   - : Only relevant if the row is in an interactive container, such as a grid or treegrid, but not relevant if the row is in a table. The `aria-selected` attribute can take one of three values, or be omitted:
 
-    - `aria-selected="true`: Row is currently selected
+    - `aria-selected="true"`: Row is currently selected
     - `aria-selected="false"`: Row is not currently selected.
     - `aria-selected="undefined"` or the attribute is missing: The row is not selectable.
 
@@ -118,7 +119,8 @@ None
 
 None. For sortable columns, see the [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role) aria role.
 
-> **Note:** The first rule of ARIA use is you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. Employ the HTML {{HTMLElement('table')}} element instead of the ARIA role of table whenever possible.
+> [!NOTE]
+> The first rule of ARIA use is you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. Employ the HTML {{HTMLElement('table')}} element instead of the ARIA role of table whenever possible.
 
 ## Examples
 
@@ -200,7 +202,7 @@ Only use {{HTMLElement('table')}}, {{HTMLElement('tbody')}}, {{HTMLElement('thea
 </table>
 ```
 
-Above is the semantic way of writing a table. The ARIA roles are only necessary if the native semantics of the table, and therefore the table rows, are obliterated, such as via setting the [display property to flex or grid](/en-US/docs/Web/CSS/display#accessibility_concerns).
+Above is the semantic way of writing a table. The ARIA roles are only necessary if the native semantics of the table, and therefore the table rows, are obliterated, such as via setting the [display property to flex or grid](/en-US/docs/Web/CSS/display#accessibility).
 
 ### Added benefits
 

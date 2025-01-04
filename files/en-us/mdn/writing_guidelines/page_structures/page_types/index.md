@@ -90,7 +90,8 @@ In such a case, it would make more sense in terms of repetition and findability 
 
 ### API reference page
 
-> **Note:** Also known as an _Interface landing page_.
+> [!NOTE]
+> Also known as an _Interface landing page_.
 
 An **API reference page** lists all the methods, properties, events, and so forth that are members of a particular interface or class.
 It provides an overview of what the class or interface does or is used for, and gives links to the documentation for each of these members.
@@ -174,9 +175,9 @@ A **CSS reference page** lists all the available syntax for a CSS feature such a
 
 #### Examples
 
-- [background-color property](/en-US/docs/Web/CSS/background-color)
-- [:hover pseudo-class](/en-US/docs/Web/CSS/:hover)
-- [@media at-rule](/en-US/docs/Web/CSS/@media)
+- [`background-color` property](/en-US/docs/Web/CSS/background-color)
+- [`:hover` pseudo-class](/en-US/docs/Web/CSS/:hover)
+- [`@media` at-rule](/en-US/docs/Web/CSS/@media)
 
 #### Templates
 
@@ -207,7 +208,7 @@ An extended discussion of a topic might be spread across multiple conceptual pag
 
 - [Using the WebVR API](/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API)
 - [Visualizations with Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
-- [Cascade and inheritance in CSS](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [Handling conflicts](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 
 ### Glossary page
 
@@ -232,7 +233,7 @@ A **landing page** serves as a menu, of sorts, for its subpages, and is therefor
 A landing page layout is typically used for the root page of a tree of pages about a particular topic.
 It opens with a brief summary of the topic, then presents a structured list of links to its subpages, and optionally, additional material that be useful to the reader.
 
-The list of subpages can be generated automatically using the templates [`SubpagesWithSummaries`](https://github.com/mdn/yari/blob/main/kumascript/macros/SubpagesWithSummaries.ejs), and [`LandingPageListSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/LandingPageListSubpages.ejs). However, in more complex cases, the list may need to be created (and maintained!) by hand.
+The list of subpages can be generated automatically using the [`SubpagesWithSummaries`](https://github.com/mdn/yari/blob/main/kumascript/macros/SubpagesWithSummaries.ejs) template. However, in more complex cases, the list may need to be created (and maintained) by hand.
 
 ### Examples
 
@@ -240,7 +241,7 @@ The list of subpages can be generated automatically using the templates [`Subpag
 - [CSS](/en-US/docs/Web/CSS)
 - [Web APIs](/en-US/docs/Web/API)
 - [JavaScript](/en-US/docs/Web/JavaScript)
-- [Learning area](/en-US/docs/Learn)
+- [Learn web development](/en-US/docs/Learn_web_development)
 - [Contributing to MDN](/en-US/docs/MDN/Community/Contributing)
 
 ## See also

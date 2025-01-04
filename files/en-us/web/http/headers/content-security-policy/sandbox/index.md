@@ -70,9 +70,10 @@ where `<value>` can optionally be one of the following values:
 - `allow-top-navigation-by-user-activation`
   - : Lets the resource navigate the top-level browsing context, but only if initiated by a user gesture.
 - `allow-top-navigation-to-custom-protocols`
-  - : Allows navigations to non-`http` protocols built into browser or [registered by a website](/en-US/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers). This feature is also activated by `allow-popups` or `allow-top-navigation` keyword.
+  - : Allows navigations to non-`http` protocols built into browser or [registered by a website](/en-US/docs/Web/API/Navigator/registerProtocolHandler). This feature is also activated by `allow-popups` or `allow-top-navigation` keyword.
 
-> **Note:** The `allow-top-navigation` and related values only make sense for embedded documents (such as child iframes). For standalone documents, these values have no effect, as the top-level browsing context is the document itself.
+> [!NOTE]
+> The `allow-top-navigation` and related values only make sense for embedded documents (such as child iframes). For standalone documents, these values have no effect, as the top-level browsing context is the document itself.
 
 ## Examples
 

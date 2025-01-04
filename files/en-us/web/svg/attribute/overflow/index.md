@@ -9,21 +9,22 @@ browser-compat: svg.global_attributes.overflow
 
 The **`overflow`** attribute sets what to do when an element's content is too big to fit in its block formatting context. **This feature is not widely implemented yet**.
 
-This attribute has the same parameter values and meaning as the {{cssxref("overflow", "CSS overflow property")}}, however, the following additional points apply:
+This attribute has the same parameter values and meaning as the CSS {{cssxref("overflow")}} property, however, the following additional points apply:
 
 - If it has a value of `visible`, the attribute has no effect (i.e., a clipping rectangle is not created).
 - If the `overflow` property has the value `hidden` or `scroll`, a clip of the exact size of the SVG viewport is applied.
 - When `scroll` is specified on an {{SVGElement("svg")}} element, a scrollbar or panner is normally shown for the SVG viewport whether or not any of its content is clipped.
 - Within SVG content, the value `auto` implies that all rendered content for child elements must be visible, either through a scrolling mechanism, or by rendering with no clip.
 
-> **Note:** Although the initial value for overflow is `auto`, it is overwritten in the User Agent style sheet for the {{SVGElement("svg")}} element when it is not the root element of a stand-alone document, the {{SVGElement("pattern")}} element, and the {{SVGElement("marker")}} element to be hidden by default.
+> [!NOTE]
+> Although the initial value for overflow is `auto`, it is overwritten in the User Agent style sheet for the {{SVGElement("svg")}} element when it is not the root element of a stand-alone document, the {{SVGElement("pattern")}} element, and the {{SVGElement("marker")}} element to be hidden by default.
 
-> **Note:** As a presentation attribute, `overflow` can be used as a CSS property. See the CSS {{cssxref("overflow")}} property for more information.
+> [!NOTE]
+> As a presentation attribute, `overflow` can be used as a CSS property. See the CSS {{cssxref("overflow")}} property for more information.
 
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("foreignObject")}}
-- {{SVGElement("iframe")}}
 - {{SVGElement("image")}}
 - {{SVGElement("marker")}}
 - {{SVGElement("pattern")}}
@@ -73,7 +74,7 @@ svg {
   </tbody>
 </table>
 
-For a description of the values, please see the {{cssxref("overflow", "CSS overflow")}} property.
+For a description of the values, please see the CSS {{cssxref("overflow")}} property.
 
 ## Specifications
 
@@ -85,4 +86,4 @@ For a description of the values, please see the {{cssxref("overflow", "CSS overf
 
 ## See also
 
-- {{cssxref("overflow", "CSS overflow")}}
+- {{cssxref("overflow")}}

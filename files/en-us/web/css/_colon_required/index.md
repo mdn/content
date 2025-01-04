@@ -13,7 +13,8 @@ The **`:required`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CS
 
 This pseudo-class is useful for highlighting fields that must have valid data before a form can be submitted.
 
-> **Note:** The {{cssxref(":optional")}} pseudo-class selects _optional_ form fields.
+> [!NOTE]
+> The {{cssxref(":optional")}} pseudo-class selects _optional_ form fields.
 
 ## Syntax
 
@@ -22,6 +23,15 @@ This pseudo-class is useful for highlighting fields that must have valid data be
   /* ... */
 }
 ```
+
+## Accessibility
+
+Mandatory {{htmlelement("input")}}s should have the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute applied to them. This will ensure that people navigating with the aid of assistive technology such as a screen reader will be able to understand which inputs need valid content to ensure a successful submission.
+
+If the form also contains [optional](/en-US/docs/Web/CSS/:optional) inputs, required inputs should be indicated visually using a treatment that does not rely solely on color to convey meaning. Typically, descriptive text and/or an icon are used.
+
+- [MDN Understanding WCAG, Guideline 3.3 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.3_%e2%80%94_input_assistance_help_users_avoid_and_correct_mistakes)
+- [Understanding Success Criterion 3.3.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html)
 
 ## Examples
 
@@ -71,15 +81,6 @@ input:required:invalid {
 
 {{EmbedLiveSample('Examples', 600, 120)}}
 
-## Accessibility concerns
-
-Mandatory {{htmlelement("input")}}s should have the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute applied to them. This will ensure that people navigating with the aid of assistive technology such as a screen reader will be able to understand which inputs need valid content to ensure a successful submission.
-
-If the form also contains [optional](/en-US/docs/Web/CSS/:optional) inputs, required inputs should be indicated visually using a treatment that does not rely solely on color to convey meaning. Typically, descriptive text and/or an icon are used.
-
-- [MDN Understanding WCAG, Guideline 3.3 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.3_%e2%80%94_input_assistance_help_users_avoid_and_correct_mistakes)
-- [Understanding Success Criterion 3.3.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html)
-
 ## Specifications
 
 {{Specifications}}
@@ -91,4 +92,4 @@ If the form also contains [optional](/en-US/docs/Web/CSS/:optional) inputs, requ
 ## See also
 
 - Other validation-related pseudo-classes: {{ cssxref(":optional") }}, {{ cssxref(":invalid") }}, {{ cssxref(":valid") }}
-- [Form data validation](/en-US/docs/Learn/Forms/Form_validation)
+- [Form data validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation)

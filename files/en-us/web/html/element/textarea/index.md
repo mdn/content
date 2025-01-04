@@ -16,7 +16,9 @@ The above example demonstrates a number of features of `<textarea>`:
 - An `id` attribute to allow the `<textarea>` to be associated with a {{htmlelement("label")}} element for accessibility purposes
 - A `name` attribute to set the name of the associated data point submitted to the server when the form is submitted.
 - `rows` and `cols` attributes to allow you to specify an exact size for the `<textarea>` to take. Setting these is a good idea for consistency, as browser defaults can differ.
-- Default content entered between the opening and closing tags. `<textarea>` does not support the `value` attribute.
+- The `<textarea>` element specifies its content differently in HTML and JavaScript contexts:
+  - In HTML, the initial content of a `<textarea>` is specified between its opening and closing tags, not as a `value` attribute.
+  - In JavaScript, `<textarea>` elements have a [`value`](/en-US/docs/Web/API/HTMLTextAreaElement/value) property that can be used to get or set the current content, and [`defaultValue`](/en-US/docs/Web/API/HTMLTextAreaElement/defaultValue) to get and set its initial value (equivalent to accessing the HTML element's text content).
 
 The `<textarea>` element also accepts several attributes common to form `<input>`s, such as `autocapitalize`, `autocomplete`, `autofocus`, `disabled`, `placeholder`, `readonly`, and `required`.
 
@@ -24,29 +26,31 @@ The `<textarea>` element also accepts several attributes common to form `<input>
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- `autocapitalize`
+- [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize)
 
-  - : Controls whether inputted text is automatically capitalized and, if so, in what manner. See the [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize) global attribute page for more information.
+  - : Controls whether inputted text is automatically capitalized and, if so, in what manner.
 
 - [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete)
 
-  - : This attribute indicates whether the value of the control can be automatically completed by the browser. Possible values are:
+  - : Controls whether entered text can be automatically completed by the browser. Possible values are:
 
     - `off`: The user must explicitly enter a value into this field for every use, or the document provides its own auto-completion method; the browser does not automatically complete the entry.
     - `on`: The browser can automatically complete the value based on values that the user has entered during previous uses.
+    - [`<token-list>`](/en-US/docs/Web/HTML/Attributes/autocomplete#token_list_tokens): An ordered set of space-separated autofill detail tokens, optionally preceded by a sectioning token, a billing or shipping grouping token, and/or a token identifying the type of recipient.
 
-    If the `autocomplete` attribute is not specified on a `<textarea>` element, then the browser uses the `autocomplete` attribute value of the `<textarea>` element's form owner. The form owner is either the {{HTMLElement("form")}} element that this `<textarea>` element is a descendant of or the form element whose `id` is specified by the `form` attribute of the input element. For more information, see the [`autocomplete`](/en-US/docs/Web/HTML/Element/form#autocomplete) attribute in {{HTMLElement("form")}}.
+    `<textarea>` elements that don't specify the `autocomplete` attribute inherit the `autocomplete` `on` or `off` status set on the `<textarea>`'s form owner. The form owner is either the {{HTMLElement("form")}} element that this `<textarea>` element is a descendant of or the form element whose `id` is specified by the `form` attribute of the input element. For more information, see the [`autocomplete`](/en-US/docs/Web/HTML/Element/form#autocomplete) attribute in {{HTMLElement("form")}}.
 
-- `autocorrect` {{non-standard_inline}}
+- [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect)
 
-  - : A string which indicates whether to activate automatic spelling correction and processing of text substitutions (if any are configured) while the user is editing this `textarea`. Permitted values are:
+  - : Controls whether automatic spelling correction and processing of text is enabled while the user is editing this `textarea`.
+    Permitted values are:
 
     - `on`
       - : Enable automatic spelling correction and text substitutions.
     - `off`
       - : Disable automatic spelling correction and text substitutions.
 
-- `autofocus`
+- [`autofocus`](/en-US/docs/Web/HTML/Global_attributes/autofocus)
   - : This Boolean attribute lets you specify that a form control should have input focus when the page loads. Only one form-associated element in a document can have this attribute specified.
 - `cols`
   - : The visible width of the text control, in average character widths. If it is specified, it must be a positive integer. If it is not specified, the default value is `20`.
@@ -67,7 +71,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : A hint to the user of what can be entered in the control. Carriage returns or line-feeds within the placeholder text must be treated as line breaks when rendering the hint.
 
-    > **Note:** Placeholders should only be used to show an example of the type of data that should be entered into a form; they are _not_ a substitute for a proper {{HTMLElement("label")}} element tied to the input. See [`<input>` labels](/en-US/docs/Web/HTML/Element/input#labels) for a full explanation.
+    > [!NOTE]
+    > Placeholders should only be used to show an example of the type of data that should be entered into a form; they are _not_ a substitute for a proper {{HTMLElement("label")}} element tied to the input. See [`<input>` labels](/en-US/docs/Web/HTML/Element/input#labels) for a full explanation.
 
 - [`readonly`](/en-US/docs/Web/HTML/Attributes/readonly)
   - : This Boolean attribute indicates that the user cannot modify the value of the control. Unlike the `disabled` attribute, the `readonly` attribute does not prevent the user from clicking or selecting in the control. The value of a read-only control is still submitted with the form.
@@ -75,13 +80,13 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : This attribute specifies that the user must fill in a value before submitting a form.
 - `rows`
   - : The number of visible text lines for the control. If it is specified, it must be a positive integer. If it is not specified, the default value is 2.
-- `spellcheck`
+- [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck)
 
-  - : Specifies whether the `<textarea>` is subject to spell checking by the underlying browser/OS. The value can be:
+  - : Specifies whether the `<textarea>` is subject to spell-checking by the underlying browser/OS. The value can be:
 
     - `true`: Indicates that the element needs to have its spelling and grammar checked.
     - `default` : Indicates that the element is to act according to a default behavior, possibly based on the parent element's own `spellcheck` value.
-    - `false` : Indicates that the element should not be spell checked.
+    - `false` : Indicates that the element should not be spell-checked.
 
 - `wrap`
 
@@ -97,11 +102,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 `<textarea>` is a [replaced element](/en-US/docs/Web/CSS/Replaced_element) — it has intrinsic dimensions, like a raster image. By default, its {{cssxref("display")}} value is `inline-block`. Compared to other form elements it is relatively easy to style, with its box model, fonts, color scheme, etc. being easily manipulable using regular CSS.
 
-[Styling HTML forms](/en-US/docs/Learn/Forms/Styling_web_forms) provides some useful tips on styling `<textarea>`s.
+[Styling HTML forms](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms) provides some useful tips on styling `<textarea>`s.
 
 ### Baseline inconsistency
 
-The HTML specification doesn't define where the baseline of a `<textarea>` is, so different browsers set it to different positions. For Gecko, the `<textarea>` baseline is set on the baseline of the first line of the textarea, on another browser it may be set on the bottom of the `<textarea>` box. Don't use {{cssxref("vertical-align")}}`: baseline` on it; the behavior is unpredictable.
+The HTML specification doesn't define where the baseline of a `<textarea>` is, so different browsers set it to different positions. For Gecko, the `<textarea>` baseline is set on the baseline of the first line of the textarea, on another browser it may be set on the bottom of the `<textarea>` box. Don't use {{cssxref("vertical-align", "vertical-align: baseline")}} on it; the behavior is unpredictable.
 
 ### Controlling whether a textarea is resizable
 
@@ -194,9 +199,10 @@ textarea {
 
 {{EmbedLiveSample('Example using "placeholder"')}}
 
-> **Note:** Placeholders should only be used to show an example of the type of data that should be entered into a form; they are _not_ a substitute for a proper {{HTMLElement("label")}} element tied to the input. See [`<input>` labels](/en-US/docs/Web/HTML/Element/input#labels) for a full explanation.
+> [!NOTE]
+> Placeholders should only be used to show an example of the type of data that should be entered into a form; they are _not_ a substitute for a proper {{HTMLElement("label")}} element tied to the input. See [`<input>` labels](/en-US/docs/Web/HTML/Element/input#labels) for a full explanation.
 
-### Disabled and readonly textareas
+### Disabled and readonly text areas
 
 This example shows two `<textarea>`s — one is [`readonly`](/en-US/docs/Web/HTML/Attributes/readonly) and one is [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled).
 You cannot edit the contents of either element, but the `readonly` element is focusable and its value is submitted in forms.
@@ -221,7 +227,7 @@ textarea {
 
 #### Result
 
-{{EmbedLiveSample('disabled_and_readonly_textareas', '', '230')}}
+{{EmbedLiveSample('disabled_and_readonly_text_areas', '', '230')}}
 
 ## Technical summary
 

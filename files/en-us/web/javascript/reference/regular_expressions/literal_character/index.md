@@ -173,7 +173,8 @@ console.log(
 );
 -->
 
-> **Note:** The characters that can both be escaped and unescaped in `v`-mode character classes are exactly those forbidden as "double punctuators". See [`v`-mode character classes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v-mode_character_class) for more information.
+> [!NOTE]
+> The characters that can both be escaped and unescaped in `v`-mode character classes are exactly those forbidden as "double punctuators". See [`v`-mode character classes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v-mode_character_class) for more information.
 
 Whenever you want to match a syntax character literally, you need to [escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape) it with a backslash (`\`). For example, to match a literal `*` in a pattern, you need to write `\*` in the pattern. Using syntax characters as literal characters either leads to unexpected results or causes syntax errors — for example, `/*/` is not a valid regular expression because the quantifier is not preceded by a pattern. In [Unicode-unaware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode), `]`, `{`, and `}` may appear literally if it's not possible to parse them as the end of a character class or quantifier delimiters. This is a [deprecated syntax for web compatibility](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp), and you should not rely on it.
 

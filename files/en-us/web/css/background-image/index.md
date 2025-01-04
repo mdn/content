@@ -17,14 +17,15 @@ The [borders](/en-US/docs/Web/CSS/border) of the element are then drawn on top o
 
 If a specified image cannot be drawn (for example, when the file denoted by the specified URI cannot be loaded), browsers handle it as they would a `none` value.
 
-> **Note:** Even if the images are opaque and the color won't be displayed in normal circumstances, web developers should always specify a {{cssxref("background-color")}}. If the images cannot be loaded—for instance, when the network is down—the background color will be used as a fallback.
+> [!NOTE]
+> Even if the images are opaque and the color won't be displayed in normal circumstances, web developers should always specify a {{cssxref("background-color")}}. If the images cannot be loaded—for instance, when the network is down—the background color will be used as a fallback.
 
 ## Syntax
 
 ```css
 /* single image */
 background-image: linear-gradient(black, white);
-background-image: url("catfront.png");
+background-image: url("cat-front.png");
 
 /* multiple images */
 background-image: radial-gradient(circle, #0000 45%, #000f 48%),
@@ -49,7 +50,7 @@ To specify multiple background images, supply multiple values, separated by a co
 - `<image>`
   - : Is an {{cssxref("&lt;image&gt;")}} denoting the image to display. There can be several of them, separated by commas, as [multiple backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds) are supported.
 
-## Accessibility concerns
+## Accessibility
 
 Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
 
@@ -82,9 +83,9 @@ Note that the star image is partially transparent and is layered over the cat im
 
 ```html
 <div>
-  <p class="catsandstars">This paragraph is full of cats<br />and stars.</p>
+  <p class="cats-and-stars">This paragraph is full of cats<br />and stars.</p>
   <p>This paragraph is not.</p>
-  <p class="catsandstars">Here are more cats for you.<br />Look at them!</p>
+  <p class="cats-and-stars">Here are more cats for you.<br />Look at them!</p>
   <p>And no more.</p>
 </div>
 ```
@@ -105,8 +106,8 @@ div {
   background-image: url("mdn_logo_only_color.png");
 }
 
-.catsandstars {
-  background-image: url("startransparent.gif"), url("catfront.png");
+.cats-and-stars {
+  background-image: url("star-transparent.gif"), url("cat-front.png");
   background-color: transparent;
 }
 ```
@@ -133,7 +134,7 @@ div {
   - {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}
   - {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
   - {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
-  - {{cssxref("url", "url()")}}
+  - {{cssxref("url_value", "&lt;url&gt;")}}
 - [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - [Implementing image sprites in CSS](/en-US/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS)
 - [CSS images](/en-US/docs/Web/CSS/CSS_images) module
@@ -147,7 +148,7 @@ div {
   - {{cssxref("background-repeat")}}
   - {{cssxref("background-size")}}
   - {{cssxref("background")}} shorthand
-- [Learn CSS: background and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [Learn: Backgrounds and borders](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
 - [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
 - [Resizing background images](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
 - [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module

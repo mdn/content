@@ -9,7 +9,7 @@ browser-compat: api.Element.scroll_event
 {{APIRef}}
 
 The **`scroll`** event fires when an element has been scrolled.
-To detect when scrolling has completed, see the {{domxref("Element/scrollend_event", "Element: scrollend event")}}.
+To detect when scrolling has completed, see the {{domxref("Element/scrollend_event", "scrollend")}} event of `Element`.
 
 ## Syntax
 
@@ -28,8 +28,8 @@ A generic {{domxref("Event")}}.
 ## Examples
 
 The following examples show how to use the `scroll` event with an event listener and with the `onscroll` event handler property.
-The {{DOMxRef("setTimeout()")}} method is used to throttle the event handler because `scroll` events can fire at a high rate.
-For additional examples that use {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}, see the {{domxref("Document/scroll_event", "Document: scroll event")}} page.
+The {{DOMxRef("Window.setTimeout", "setTimeout()")}} method is used to {{glossary("throttle")}} the event handler because `scroll` events can fire at a high rate.
+For additional examples that use {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}, see the `Document` {{domxref("Document/scroll_event", "scroll")}} event page.
 
 ### Using `scroll` with an event listener
 

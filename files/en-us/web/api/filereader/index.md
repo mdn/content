@@ -11,7 +11,7 @@ The **`FileReader`** interface lets web applications asynchronously read the con
 
 File objects may be obtained from a {{domxref("FileList")}} object returned as a result of a user selecting files using the {{HTMLElement("input")}} element, or from a drag and drop operation's {{domxref("DataTransfer")}} object.
 
-`FileReader` can only access the contents of files that the user has explicitly selected, either using an HTML `<input type="file">` element or by drag and drop. It cannot be used to read a file by pathname from the user's file system. To read files on the client's file system by pathname, use the [File System Access API](/en-US/docs/Web/API/File_System_API). To read server-side files, use {{domxref("fetch()")}}, with [CORS](/en-US/docs/Web/HTTP/CORS) permission if reading cross-origin.
+`FileReader` can only access the contents of files that the user has explicitly selected, either using an HTML `<input type="file">` element or by drag and drop. It cannot be used to read a file by pathname from the user's file system. To read files on the client's file system by pathname, use the [File System Access API](/en-US/docs/Web/API/File_System_API). To read server-side files, use {{domxref("Window/fetch", "fetch()")}}, with [CORS](/en-US/docs/Web/HTTP/CORS) permission if reading cross-origin.
 
 {{InheritanceDiagram}}
 

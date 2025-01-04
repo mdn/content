@@ -62,14 +62,14 @@ The `SVGAnimatedTransformList` interface is used for attributes which take a lis
   </thead>
   <tbody>
     <tr>
-      <td><code>baseVal</code></td>
+      <td><code>{{domxref("SVGAnimatedTransformList.baseVal", "baseVal")}}</code></td>
       <td>{{ domxref("SVGTransformList") }}</td>
       <td>
         The base value of the given attribute before applying any animations.
       </td>
     </tr>
     <tr>
-      <td><code>animVal</code></td>
+      <td><code>{{domxref("SVGAnimatedTransformList.animVal", "animVal")}}</code></td>
       <td>{{ domxref("SVGTransformList") }}</td>
       <td>
         A read only {{ domxref("SVGTransformList") }} representing
@@ -87,6 +87,10 @@ The `SVGAnimatedTransformList` interface is used for attributes which take a lis
 ## Instance methods
 
 The `SVGAnimatedTransformList` interface doesn't provide any specific methods.
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

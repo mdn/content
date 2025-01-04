@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.origin
 ---
 
-{{APIRef("Web Workers API")}}
+{{APIRef("Web Workers API")}}{{AvailableInWorkers("worker")}}
 
 The **`origin`** read-only property of the {{domxref("WorkerGlobalScope")}} interface returns the origin of the global scope, serialized as a string.
 

@@ -14,7 +14,8 @@ If your add-on is distributed on [addons.mozilla.org](https://addons.mozilla.org
 
 So you should start by visiting AMO and looking to see if your add-on needs any work done at all.
 
-> **Note:** You should still test your add-on on Firefox 5, even if it's been automatically upgraded. There are edge cases that may not be automatically detected.
+> [!NOTE]
+> You should still test your add-on on Firefox 5, even if it's been automatically upgraded. There are edge cases that may not be automatically detected.
 
 Once you've confirmed that you need to make changes, come on back to this page and read on.
 
@@ -28,7 +29,7 @@ In the past, the {{ domxref("Navigator.language", "window.navigator.language") }
 
 ## DOM changes
 
-The behaviors of {{ domxref("setTimeout()") }} and {{ domxref("setInterval()") }} have changed; the minimum allowed time has changed, and [varies depending on the situation](/en-US/docs/Web/API/setTimeout#minimum_delay_and_timeout_nesting). In addition, timeouts and intervals are clamped to one per second in inactive tabs (that is, tabs the user isn't currently looking at).
+The behaviors of {{domxref("Window.setTimeout()")}}, {{domxref("WorkerGlobalScope.setTimeout()")}}, {{domxref("Window.setInterval()")}} and {{domxref("WorkerGlobalScope.setInterval()")}} have changed; the minimum allowed time has changed, and [varies depending on the situation](/en-US/docs/Web/API/Window/setTimeout#minimum_delay_and_timeout_nesting). In addition, timeouts and intervals are clamped to one per second in inactive tabs (that is, tabs the user isn't currently looking at).
 
 ## JavaScript changes
 
@@ -43,11 +44,12 @@ The following keywords are now reserved in JavaScript, even when you're not in [
 
 Don't use those keywords anywhere in your code, even as object property names.
 
-> **Note:** This is one of those things that AMO's automatically upgrade tool may not always catch, so check your code for these if your add-on was automatically upgraded but is still not working properly.
+> [!NOTE]
+> This is one of those things that AMO's automatically upgrade tool may not always catch, so check your code for these if your add-on was automatically upgraded but is still not working properly.
 
 ## Interface changes
 
-Instantiating certain services, including the `nsICertOverrideService`, at startup can make Firefox unusable ([Firefox bug 650858](https://bugzil.la/650858). This happens only if you try to instantiate a service before the `load` event is fired.
+Instantiating certain services, including the `nsICertOverrideService`, at startup can make Firefox unusable ([Firefox bug 650858](https://bugzil.la/650858)). This happens only if you try to instantiate a service before the `load` event is fired.
 
 To fix this, move your instantiation of these services into your `load` event handler:
 

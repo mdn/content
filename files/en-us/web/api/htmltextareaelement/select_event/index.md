@@ -64,3 +64,7 @@ textarea.onselect = logSelection;
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("HTMLTextAreaElement.select()")}}

@@ -23,7 +23,8 @@ index or the element's `name` or `id` attributes.
 Prior to HTML 5, the returned object was an {{domxref("HTMLCollection")}}, on which
 `HTMLFormControlsCollection` is based.
 
-> **Note:** Similarly, you can get a list of all of the forms contained within a given document using the document's {{domxref("Document.forms", "forms")}} property.
+> [!NOTE]
+> Similarly, you can get a list of all of the forms contained within a given document using the document's {{domxref("Document.forms", "forms")}} property.
 
 ## Value
 

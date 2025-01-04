@@ -80,7 +80,7 @@ These "powerful features" are controlled in the following ways:
 
 ## High-level security considerations
 
-There are many aspects of web security that need to be thought about on the server- and client-side. This section focuses mainly on client-side security considerations. You can find a useful summary of security from a server-side perspective, which also includes descriptions of common attacks to watch out for, at [Website security](/en-US/docs/Learn/Server-side/First_steps/Website_security) (part of our [Server-side website programming](/en-US/docs/Learn/Server-side) learning module).
+There are many aspects of web security that need to be thought about on the server- and client-side. This section focuses mainly on client-side security considerations. You can find a useful summary of security from a server-side perspective, which also includes descriptions of common attacks to watch out for, at [Website security](/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security) (part of our [Server-side website programming](/en-US/docs/Learn_web_development/Extensions/Server-side) learning module).
 
 ### Store client-side data responsibly
 
@@ -99,9 +99,10 @@ Here are some other tips for providing secure logins:
 - When collecting user login information, enforce strong passwords so that your user's account details cannot be easily guessed. Weak passwords are one of the main causes of security breaches. In addition, encourage your users to use a password manager so that they can use more complex passwords, don't need to worry about remembering them, and won't create a security risk by writing them down. See also our article on [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords).
 - You should also educate your users about **phishing**. Phishing is the act of sending a message to a user (for example, an email or an SMS) containing a link to a site that looks like a site they use every day but isn't. The link is accompanied by a message designed to trick users into entering their username and password on the site so it can be stolen and then used by an attacker for malicious purposes.
 
-  > **Note:** Some phishing sites can be very sophisticated and hard to distinguish from a real website. You should therefore educate your users to not trust random links in emails and SMS messages. If they receive a message along the lines of "Urgent, you need to log in now to resolve an issue", they should go to the site directly in a new tab and try logging in directly rather than clicking the link in the message. Or they could phone or email you to discuss the message they received.
+  > [!NOTE]
+  > Some phishing sites can be very sophisticated and hard to distinguish from a real website. You should therefore educate your users to not trust random links in emails and SMS messages. If they receive a message along the lines of "Urgent, you need to log in now to resolve an issue", they should go to the site directly in a new tab and try logging in directly rather than clicking the link in the message. Or they could phone or email you to discuss the message they received.
 
-- Protect against brute force attacks on login pages with [rate limiting](https://www.cloudflare.com/en-gb/learning/bots/what-is-rate-limiting/), account lockouts after a certain number of unsuccessful attempts, and [CAPTCHA challenges](https://en.wikipedia.org/wiki/CAPTCHA).
+- Protect against brute force attacks on login pages with {{glossary("rate limit", "rate limiting")}}, account lockouts after a certain number of unsuccessful attempts, and [CAPTCHA challenges](https://en.wikipedia.org/wiki/CAPTCHA).
 - Manage user login sessions with unique [session IDs](https://en.wikipedia.org/wiki/Session_ID), and automatically log out users after periods of inactivity.
 
 ### Don't include sensitive data in URL query strings
@@ -110,7 +111,8 @@ As a general rule, you shouldn't [include sensitive data in URL query strings](h
 
 Use `POST` requests rather than `GET` requests to avoid these issues. Our article [Referer header policy: Privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) describes in more detail the privacy and security risks associated with the `Referer` header, and offers advice on mitigating those risks.
 
-> **Note:** Steering away from transmitting sensitive data in URLs via `GET` requests can also help protect against {{glossary("CSRF", "cross-site request forgery")}} and [replay attacks](https://en.wikipedia.org/wiki/Replay_attack).
+> [!NOTE]
+> Steering away from transmitting sensitive data in URLs via `GET` requests can also help protect against {{glossary("CSRF", "cross-site request forgery")}} and [replay attacks](https://en.wikipedia.org/wiki/Replay_attack).
 
 ### Enforce usage policies
 
@@ -120,7 +122,8 @@ CSP allows you to add a layer of security by, for example, allowing images or sc
 
 Permissions policy works in a similar way, except that it is more concerned with allowing or blocking access to specific "powerful features" ([as mentioned earlier](#secure_contexts_and_feature_permissions)).
 
-> **Note:** Such policies are very useful to help keep sites secure, especially when you are using a lot of third-party code on your site. However, keep in mind that if you block usage of a feature that a third-party script relies on to work, you may end up breaking your site's functionality.
+> [!NOTE]
+> Such policies are very useful to help keep sites secure, especially when you are using a lot of third-party code on your site. However, keep in mind that if you block usage of a feature that a third-party script relies on to work, you may end up breaking your site's functionality.
 
 ### Maintain data integrity
 
@@ -133,15 +136,15 @@ Related topics:
 - [HTTP Access-Control-Allow-Origin](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
   - : The **`Access-Control-Allow-Origin`** response header indicates whether the response can be shared with requesting code from the given {{glossary("origin")}}.
 - [HTTP X-Content-Type-Options](/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options)
-  - : The **`X-Content-Type-Options`** response header is a marker used by the server to indicate that the [MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) advertised in the {{HTTPHeader("Content-Type")}} headers should not be changed and must be followed. This header is a way to opt out of [MIME type sniffing](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#mime_sniffing), or, in other words, to specify that the MIME types are deliberately configured.
+  - : The **`X-Content-Type-Options`** response header is a marker used by the server to indicate that the [MIME types](/en-US/docs/Web/HTTP/MIME_types) advertised in the {{HTTPHeader("Content-Type")}} headers should not be changed and must be followed. This header is a way to opt out of [MIME type sniffing](/en-US/docs/Web/HTTP/MIME_types#mime_sniffing), or, in other words, to specify that the MIME types are deliberately configured.
 
 ### Sanitize form input
 
-As a general rule, don't trust anything that users enter into forms. Filling out forms online is complicated and tedious, and it is easy for users to enter incorrect data or data in the wrong format. In addition, malicious folks are skilled in the art of entering specific strings of executable code into form fields (for example, SQL or JavaScript). If you're not careful about handling such inputs, they could either execute harmful code on your site or delete your databases. See [SQL injection](/en-US/docs/Learn/Server-side/First_steps/Website_security#sql_injection) for a good example of how this could happen.
+As a general rule, don't trust anything that users enter into forms. Filling out forms online is complicated and tedious, and it is easy for users to enter incorrect data or data in the wrong format. In addition, malicious folks are skilled in the art of entering specific strings of executable code into form fields (for example, SQL or JavaScript). If you're not careful about handling such inputs, they could either execute harmful code on your site or delete your databases. See [SQL injection](/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security#sql_injection) for a good example of how this could happen.
 
 To protect against this, you should thoroughly sanitize data entered into your forms:
 
-- You should implement client-side validation to inform users when they have entered data in the wrong format. You can do this using built-in HTML form validation features, or you can write your own validation code. See [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation) for more information.
+- You should implement client-side validation to inform users when they have entered data in the wrong format. You can do this using built-in HTML form validation features, or you can write your own validation code. See [Client-side form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation) for more information.
 - You should use output encoding when displaying user input in an application UI to safely display data exactly as a user typed it in and avoid it being executed as code. See [Output encoding](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html#output-encoding) for more information.
 
 You can't rely on client-side validation alone for security — it should be combined with server-side validation. Client-side validation enhances the user experience by providing instant validation feedback without having to wait for a round trip to the server. However, client-side validation is easy for a malicious party to bypass (for example, by turning off JavaScript in the browser to bypass JavaScript-based validation).
@@ -150,12 +153,12 @@ Any reputable server-side framework will provide functionality for validating fo
 
 ### Protect against clickjacking
 
-In a [clickjacking](/en-US/docs/Glossary/Clickjacking) attack, a user is fooled into clicking a UI element that performs an action different from what the user expects, often resulting in the user's confidential information being passed to a malicious third party. This risk is inherent in embedded third-party content, so make sure you trust what is being embedded into your site. Additionally, be aware that clickjacking can be combined with phishing techniques. You can read about phishing in the previous section [Protect user identity and manage logins](#protect_user_identity_and_manage_logins).
+In a [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) attack, a user is fooled into clicking a UI element that performs an action different from what the user expects, often resulting in the user's confidential information being passed to a malicious third party. This risk is inherent in embedded third-party content, so make sure you trust what is being embedded into your site. Additionally, be aware that clickjacking can be combined with phishing techniques. You can read about phishing in the previous section [Protect user identity and manage logins](#protect_user_identity_and_manage_logins).
 
 The following features can help guard against clickjacking:
 
 - [HTTP X-Frame-Options](/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
-  - : The **`X-Frame-Options`** [HTTP](/en-US/docs/Web/HTTP) response header can be used to indicate whether a browser should be allowed to render a page in a [`<frame>`](/en-US/docs/Web/HTML/Element/frame), [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), [`<embed>`](/en-US/docs/Web/HTML/Element/embed) or [`<object>`](/en-US/docs/Web/HTML/Element/object). Sites can use this to avoid [clickjacking](/en-US/docs/Glossary/Clickjacking) attacks, by ensuring that their content is not embedded into other sites.
+  - : The **`X-Frame-Options`** [HTTP](/en-US/docs/Web/HTTP) response header can be used to indicate whether a browser should be allowed to render a page in a [`<frame>`](/en-US/docs/Web/HTML/Element/frame), [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), [`<embed>`](/en-US/docs/Web/HTML/Element/embed) or [`<object>`](/en-US/docs/Web/HTML/Element/object). Sites can use this to avoid clickjacking attacks, by ensuring that their content is not embedded into other sites.
 - [CSP: frame-ancestors](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors)
   - : The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`frame-ancestors`** directive specifies valid parents that may embed a page using {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, or {{HTMLElement("embed")}}.
 
@@ -168,7 +171,7 @@ Some of these guides are directly related to the [HTTP Observatory](/en-US/obser
 ## See also
 
 - [Privacy on the web](/en-US/docs/Web/Privacy)
-- [Learn: Website security](/en-US/docs/Learn/Server-side/First_steps/Website_security)
+- [Learn: Website security](/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)
 - [Mozilla Security Blog](https://blog.mozilla.org/security/)
 - [OWASP Cheat Sheet series](https://cheatsheetseries.owasp.org/index.html)
 

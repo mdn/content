@@ -48,7 +48,7 @@ The `<blend-mode>` data type is defined using a keyword value chosen from the li
 - `soft-light`
   - : The final color is similar to `hard-light`, but softer.
     This blend mode behaves similar to `hard-light`.
-    The effect is similar to shining a _diffused_ spotlight on the backdrop*.*
+    The effect is similar to shining a _diffused_ spotlight on the backdrop.
 - `difference`
   - : The final color is the result of subtracting the darker of the two colors from the lighter one.
     A black layer has no effect, while a white layer inverts the other layer's color.

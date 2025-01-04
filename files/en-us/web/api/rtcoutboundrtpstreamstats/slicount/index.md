@@ -28,7 +28,8 @@ an indication of an unreliable network.
 
 This is a very technical part of how video codecs work. For details, see {{RFC(4585, "6.3.2")}}.
 
-> **Note:** This value is only present for video media.
+> [!NOTE]
+> This value is only present for video media.
 
 ## Specifications
 

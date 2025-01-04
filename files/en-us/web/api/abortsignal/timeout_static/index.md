@@ -27,6 +27,7 @@ AbortSignal.timeout(time)
 
 - `time`
   - : The "active" time in milliseconds before the returned {{domxref("AbortSignal")}} will abort.
+    The value must be within range of 0 and {{jsxref("Number.MAX_SAFE_INTEGER")}}.
 
 ### Return value
 
@@ -36,7 +37,7 @@ The signal will abort with its {{domxref("AbortSignal.reason")}} property set to
 
 ## Examples
 
-Below is a simple example showing a fetch operation that will timeout if unsuccessful after 5 seconds.
+Below is an example showing a fetch operation that will timeout if unsuccessful after 5 seconds.
 Note that this may also fail if the method is not supported, if a browser "stop" button is pressed, or for another reason.
 
 ```js

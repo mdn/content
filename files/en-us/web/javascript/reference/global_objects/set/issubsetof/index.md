@@ -36,9 +36,10 @@ In mathematical notation, _subset_ is defined as:
 
 And using Venn diagram:
 
-![A Venn diragram with two circles. A is a subset of B because A is completely contained in B.](diagram.svg)
+![A Venn diagram with two circles. A is a subset of B because A is completely contained in B.](diagram.svg)
 
-> **Note:** The _subset_ relationship is not _proper subset_, which means `isSubsetOf()` returns `true` if `this` and `other` contain the same elements.
+> [!NOTE]
+> The _subset_ relationship is not _proper subset_, which means `isSubsetOf()` returns `true` if `this` and `other` contain the same elements.
 
 `isSubsetOf()` accepts [set-like](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects) objects as the `other` parameter. It requires {{jsxref("Operators/this", "this")}} to be an actual {{jsxref("Set")}} instance, because it directly retrieves the underlying data stored in `this` without invoking any user code. Then, its behavior depends on the sizes of `this` and `other`:
 

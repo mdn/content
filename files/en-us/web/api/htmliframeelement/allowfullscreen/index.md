@@ -10,7 +10,8 @@ browser-compat: api.HTMLIFrameElement.allowFullscreen
 
 The **`allowFullscreen`** property of the {{domxref("HTMLIFrameElement")}} interface is a boolean value that reflects the `allowfullscreen` attribute of the {{HTMLElement("iframe")}} element, indicating whether to allow the iframe's contents to use {{domxref("Element.requestFullscreen", "requestFullscreen()")}}.
 
-> **Note:** This property is considered a legacy property. Use `allow="fullscreen"` and {{domxref("HTMLIFrameElement.allow")}} instead.
+> [!NOTE]
+> This property is considered a legacy property. Use `allow="fullscreen"` and {{domxref("HTMLIFrameElement.allow")}} instead.
 
 ## Value
 

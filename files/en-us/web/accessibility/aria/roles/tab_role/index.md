@@ -53,7 +53,7 @@ From the assistive technology user's perspective, the heading does not exist sin
   - : boolean
 - [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
   - : `id` of element with `tabpanel` role
-- [id](/en-US/docs/Web/HTML/Global_attributes#id)
+- [id](/en-US/docs/Web/HTML/Global_attributes/id)
   - : content
 
 ### Keyboard interactions
@@ -67,7 +67,8 @@ From the assistive technology user's perspective, the heading does not exist sin
 
 ### Required JavaScript features
 
-> **Note:** While there are ways to build tab-like functionality without JavaScript, there is no substitute combination using only HTML and CSS that will provide the same set of functionality that's required above for accessible tabs with content.
+> [!NOTE]
+> While there are ways to build tab-like functionality without JavaScript, there is no substitute combination using only HTML and CSS that will provide the same set of functionality that's required above for accessible tabs with content.
 
 ## Example
 

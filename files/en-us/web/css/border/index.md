@@ -15,9 +15,9 @@ The **`border`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en
 
 This property is a shorthand for the following CSS properties:
 
-- [`border-color`](/en-US/docs/Web/CSS/border-color)
-- [`border-style`](/en-US/docs/Web/CSS/border-style)
 - [`border-width`](/en-US/docs/Web/CSS/border-width)
+- [`border-style`](/en-US/docs/Web/CSS/border-style)
+- [`border-color`](/en-US/docs/Web/CSS/border-color)
 
 ## Syntax
 
@@ -44,7 +44,8 @@ border: unset;
 
 The `border` property may be specified using one, two, or three of the values listed below. The order of the values does not matter.
 
-> **Note:** The border will be invisible if its style is not defined. This is because the style defaults to `none`.
+> [!NOTE]
+> The border will be invisible if its style is not defined. This is because the style defaults to `none`.
 
 ### Values
 
@@ -120,4 +121,4 @@ div {
 - {{Cssxref("border-color")}}
 - {{Cssxref("outline")}}
 - [Backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders)
-- [Learn CSS: Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [Learn CSS: Backgrounds and borders](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)

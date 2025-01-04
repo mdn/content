@@ -2,12 +2,10 @@
 title: JSON.rawJSON()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/rawJSON
 page-type: javascript-static-method
-status:
-  - experimental
 browser-compat: javascript.builtins.JSON.rawJSON
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{JSRef}}
 
 The **`JSON.rawJSON()`** static method creates a "raw JSON" object containing a piece of JSON text. When serialized to JSON, the raw JSON object is treated as if it is already a piece of JSON. This text is required to be valid JSON.
 
@@ -47,7 +45,7 @@ JSON.stringify({ value: 12345678901234567890 });
 
 The value is not exactly equivalent to the original number any more! This is because JavaScript uses floating point representation for all numbers, so it cannot represent all integers exactly. The number literal `12345678901234567890` itself is already rounded to the nearest representable number when it is parsed by JavaScript.
 
-Without `JSON.rawJSON`, there is no way to tell `JSON.stringify` to produce the number literal `12345678901234567000`, because there is simply no corresponding JavaScript number value. With raw JSON, you can directly tell `JSON.stringify()` what a particular value should be stringified as:
+Without `JSON.rawJSON`, there is no way to tell `JSON.stringify` to produce the number literal `12345678901234567890`, because there is simply no corresponding JavaScript number value. With raw JSON, you can directly tell `JSON.stringify()` what a particular value should be stringified as:
 
 ```js
 const rawJSON = JSON.rawJSON("12345678901234567890");
@@ -116,14 +114,11 @@ This may not be desirable, because the receiver of this string may handle Unicod
 ```js
 const rawJSON = JSON.rawJSON('"\\ud83d\\ude04"');
 const objStr = JSON.stringify({ value: rawJSON });
+console.log(objStr); // {"value":"\ud83d\ude04"}
 console.log(JSON.parse(objStr).value); // 😄
 ```
 
-Note that the double backslashes in the `rawJSON` actually represents a single slash character, so the JSON text looks like:
-
-```json-nolint
-{"value":"\ud83d\ude04"}
-```
+Note that the double backslashes in the `rawJSON` actually represents a single slash character.
 
 ## Specifications
 

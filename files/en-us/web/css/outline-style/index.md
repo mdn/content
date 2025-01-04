@@ -244,5 +244,5 @@ The `auto` value indicates a custom outline style, described in [the specificati
 ## See also
 
 - {{cssxref("outline")}}
-- {{cssxref("outline-color")}}
 - {{cssxref("outline-width")}}
+- {{cssxref("outline-color")}}

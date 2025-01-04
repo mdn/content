@@ -73,15 +73,15 @@ elements from two different namespaces within a single document:
 
 <script type="application/javascript"><![CDATA[
  let container;
- let newdiv;
- let txtnode;
+ let newDiv;
+ let textNode;
 
  function init(){
    container = document.getElementById("ContainerBox");
-   newdiv = document.createElementNS("http://www.w3.org/1999/xhtml", "div");
-   txtnode = document.createTextNode("This is text that was constructed dynamically with createElementNS and createTextNode then inserted into the document using appendChild.");
-   newdiv.appendChild(txtnode);
-   container.appendChild(newdiv);
+   newDiv = document.createElementNS("http://www.w3.org/1999/xhtml", "div");
+   textNode = document.createTextNode("This is text that was constructed dynamically with createElementNS and createTextNode then inserted into the document using appendChild.");
+   newDiv.appendChild(textNode);
+   container.appendChild(newDiv);
  }
 
 ]]></script>
@@ -95,7 +95,8 @@ elements from two different namespaces within a single document:
 </page>
 ```
 
-> **Note:** The example given above uses inline script which is not recommended in XHTML
+> [!NOTE]
+> The example given above uses inline script which is not recommended in XHTML
 > documents. This particular example is actually an XUL document with embedded XHTML,
 > however, the recommendation still applies.
 

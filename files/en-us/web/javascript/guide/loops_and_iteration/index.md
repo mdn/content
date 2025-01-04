@@ -331,30 +331,30 @@ If you comment out the `continue;`, the loop would run till the end and you woul
 
 ### Example 2
 
-A statement labeled `checkiandj` contains a statement labeled
-`checkj`. If `continue` is encountered, the program
-terminates the current iteration of `checkj` and begins the next
-iteration. Each time `continue` is encountered, `checkj`
+A statement labeled `checkIandJ` contains a statement labeled
+`checkJ`. If `continue` is encountered, the program
+terminates the current iteration of `checkJ` and begins the next
+iteration. Each time `continue` is encountered, `checkJ`
 reiterates until its condition returns `false`. When `false` is
-returned, the remainder of the `checkiandj` statement is completed,
-and `checkiandj` reiterates until its condition returns
+returned, the remainder of the `checkIandJ` statement is completed,
+and `checkIandJ` reiterates until its condition returns
 `false`. When `false` is returned, the program continues at the
-statement following `checkiandj`.
+statement following `checkIandJ`.
 
-If `continue` had a label of `checkiandj`, the program
-would continue at the top of the `checkiandj` statement.
+If `continue` had a label of `checkIandJ`, the program
+would continue at the top of the `checkIandJ` statement.
 
 ```js
 let i = 0;
 let j = 10;
-checkiandj: while (i < 4) {
+checkIandJ: while (i < 4) {
   console.log(i);
   i += 1;
-  checkj: while (j > 4) {
+  checkJ: while (j > 4) {
     console.log(j);
     j -= 1;
     if (j % 2 === 0) {
-      continue checkj;
+      continue checkJ;
     }
     console.log(j, "is odd.");
   }
@@ -419,7 +419,7 @@ over [iterable objects](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols
 iteration hook with statements to be executed for the value of each distinct property.
 
 ```js-nolint
-for (variable of object)
+for (variable of iterable)
   statement
 ```
 

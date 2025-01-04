@@ -2,7 +2,7 @@
 title: linear-gradient()
 slug: Web/CSS/gradient/linear-gradient
 page-type: css-function
-browser-compat: css.types.image.gradient.linear-gradient
+browser-compat: css.types.gradient.linear-gradient
 ---
 
 {{CSSRef}}
@@ -64,7 +64,8 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%)
 - `<color-hint>`
   - : An {{glossary("interpolation")}} hint defining how the gradient progresses between adjacent color stops. The length defines at which point between two color stops the gradient color should reach the midpoint of the color transition. If omitted, the midpoint of the color transition is the midpoint between two color stops.
 
-> **Note:** Rendering of [color stops in CSS gradients](#composition_of_a_linear_gradient) follows the same rules as color stops in [SVG gradients](/en-US/docs/Web/SVG/Tutorial/Gradients).
+> [!NOTE]
+> Rendering of [color stops in CSS gradients](#composition_of_a_linear_gradient) follows the same rules as color stops in [SVG gradients](/en-US/docs/Web/SVG/Tutorial/Gradients).
 
 ## Description
 

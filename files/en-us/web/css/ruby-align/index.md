@@ -2,12 +2,10 @@
 title: ruby-align
 slug: Web/CSS/ruby-align
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.ruby-align
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`ruby-align`** [CSS](/en-US/docs/Web/CSS) property defines the distribution of the different ruby elements over the base.
 

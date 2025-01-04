@@ -68,14 +68,14 @@ APIs or websites not intended for public access should entirely disable the use 
 
 To fix the "different hosts" problem:
 
-1. First, redirect from http://example.com/ to https://example.com/.
-2. Next, redirect from https://example.com/ to https://example.org/.
+1. First, redirect from http\://example.com/ to https\://example.com/.
+2. Next, redirect from https\://example.com/ to https\://example.org/.
 
 ### Examples
 
 Redirect all incoming HTTP requests to the same site and URI on HTTPS, using NGINX:
 
-```text
+```nginx
 server {
   listen 80;
 
@@ -85,7 +85,7 @@ server {
 
 Redirect `site.example.org` from HTTP to HTTPS, using Apache:
 
-```text
+```apacheconf
 <VirtualHost *:80>
   ServerName site.example.org
   Redirect permanent / https://site.example.org/

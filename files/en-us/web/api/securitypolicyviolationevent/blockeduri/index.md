@@ -6,11 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.SecurityPolicyViolationEvent.blockedURI
 ---
 
-{{HTTPSidebar}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}
 
-The **`blockedURI`** read-only property of the
-{{domxref("SecurityPolicyViolationEvent")}} interface is a string
-representing the URI of the resource that was blocked because it violates a policy.
+The **`blockedURI`** read-only property of the {{domxref("SecurityPolicyViolationEvent")}} interface is a string representing the URI of the resource that was blocked because it violates a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP).
 
 ## Value
 
@@ -34,4 +32,4 @@ document.addEventListener("securitypolicyviolation", (e) => {
 
 ## See also
 
-- [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP)
+- {{domxref("CSPViolationReportBody.blockedURL")}}

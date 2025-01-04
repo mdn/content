@@ -49,7 +49,8 @@ To convert an ordinary object that's not iterable or array-like to an array (by 
 
 `Array.from()` has an optional parameter `mapFn`, which allows you to execute a function on each element of the array being created, similar to {{jsxref("Array/map", "map()")}}. More clearly, `Array.from(obj, mapFn, thisArg)` has the same result as `Array.from(obj).map(mapFn, thisArg)`, except that it does not create an intermediate array, and `mapFn` only receives two arguments (`element`, `index`) without the whole array, because the array is still under construction.
 
-> **Note:** This behavior is more important for [typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays), since the intermediate array would necessarily have values truncated to fit into the appropriate type. `Array.from()` is implemented to have the same signature as {{jsxref("TypedArray.from()")}}.
+> [!NOTE]
+> This behavior is more important for [typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays), since the intermediate array would necessarily have values truncated to fit into the appropriate type. `Array.from()` is implemented to have the same signature as {{jsxref("TypedArray.from()")}}.
 
 The `Array.from()` method is a generic factory method. For example, if a subclass of `Array` inherits the `from()` method, the inherited `from()` method will return new instances of the subclass instead of `Array` instances. In fact, the `this` value can be any constructor function that accepts a single argument representing the length of the new array. When an iterable is passed as `arrayLike`, the constructor is called with no arguments; when an array-like object is passed, the constructor is called with the [normalized length](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#normalization_of_the_length_property) of the array-like object. The final `length` will be set again when iteration finishes. If the `this` value is not a constructor function, the plain `Array` constructor is used instead.
 
@@ -131,20 +132,23 @@ Array.from({ length: 5 }, (v, i) => i);
 ### Sequence generator (range)
 
 ```js
-// Sequence generator function (commonly referred to as "range", e.g. Clojure, PHP, etc.)
+// Sequence generator function (commonly referred to as "range", cf. Python, Clojure, etc.)
 const range = (start, stop, step) =>
-  Array.from({ length: (stop - start) / step + 1 }, (_, i) => start + i * step);
+  Array.from(
+    { length: Math.ceil((stop - start) / step) },
+    (_, i) => start + i * step,
+  );
 
-// Generate numbers range 0..4
-range(0, 4, 1);
+// Generate a sequence of numbers from 0 (inclusive) to 5 (exclusive), incrementing by 1
+range(0, 5, 1);
 // [0, 1, 2, 3, 4]
 
-// Generate numbers range 1..10 with step of 2
+// Generate a sequence of numbers from 1 (inclusive) to 10 (exclusive), incrementing by 2
 range(1, 10, 2);
 // [1, 3, 5, 7, 9]
 
-// Generate the alphabet using Array.from making use of it being ordered as a sequence
-range("A".charCodeAt(0), "Z".charCodeAt(0), 1).map((x) =>
+// Generate the Latin alphabet making use of it being ordered as a sequence
+range("A".charCodeAt(0), "Z".charCodeAt(0) + 1, 1).map((x) =>
   String.fromCharCode(x),
 );
 // ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]

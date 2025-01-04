@@ -16,6 +16,13 @@ A boolean value which is `true` if the `RTCDTMFSender` is capable of sending DTM
 
 ## Examples
 
+### Using canInsertDTMF to check DTMF support
+
+This example shows how to use the `canInsertDTMF` property to check DTMF support in a WebRTC connection and then send tones if supported.
+
+The code first checks if the `canInsertDTMF` property is defined, and if so, uses it to check whether inserting DTMF tones is supported.
+If the feature is supported, {{domxref("RTCDTMFSender.insertDTMF()")}} is called to insert a tone.
+
 ```js
 if (sender.dtmf.canInsertDTMF) {
   const duration = 500;

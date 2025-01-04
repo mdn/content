@@ -42,13 +42,13 @@ _Inherits methods from its ancestor {{domxref('CSSStyleValue')}}._
 
 - {{domxref("CSSTransformValue.toMatrix()")}}
   - : Returns a new {{domxref('DOMMatrix')}} object.
-- {{domxref('CSSUnparsedValue.entries()')}}
+- {{domxref('CSSTransformValue.entries()')}}
   - : Returns an array of a given object's own enumerable property `[key, value]` pairs in the same order as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop (the difference being that a for-in loop enumerates properties in the prototype chain as well).
-- {{domxref('CSSUnparsedValue.forEach()')}}
+- {{domxref('CSSTransformValue.forEach()')}}
   - : Executes a provided function once for each element of the `CSSTransformValue` object.
-- {{domxref('CSSUnparsedValue.keys()')}}
+- {{domxref('CSSTransformValue.keys()')}}
   - : Returns a new _array iterator_ object that contains the keys for each index in the `CSSTransformValue` object.
-- {{domxref('CSSUnparsedValue.values()')}}
+- {{domxref('CSSTransformValue.values()')}}
   - : Returns a new _array iterator_ object that contains the values for each index in the `CSSTransformValue` object.
 
 ## Examples

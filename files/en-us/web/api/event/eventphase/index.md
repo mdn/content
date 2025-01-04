@@ -17,9 +17,9 @@ being evaluated.
 Returns an integer value which specifies the current evaluation phase of the event
 flow. Possible values are:
 
-- `Event.NONE (0)`
+- `Event.NONE` (0)
   - : The event is not being processed at this time.
-- `Event.CAPTURING_PHASE (1)`
+- `Event.CAPTURING_PHASE` (1)
   - : The event is being propagated through the target's ancestor objects.
     This process starts with the {{domxref("Window")}}, then {{domxref("Document")}},
     then the {{domxref("HTMLHtmlElement")}}, and so on through the elements
@@ -27,13 +27,13 @@ flow. Possible values are:
     {{domxref("EventTarget/addEventListener", "Event listeners", "", 1)}}
     registered for capture mode when {{domxref("EventTarget.addEventListener()")}} was
     called are triggered during this phase.
-- `Event.AT_TARGET (2)`
+- `Event.AT_TARGET` (2)
   - : The event has arrived at
     {{domxref("EventTarget", "the event's target", "", 1)}}.
     Event listeners registered for this phase are called at this time. If
     {{domxref("Event.bubbles")}} is `false`, processing
     the event is finished after this phase is complete.
-- `Event.BUBBLING_PHASE (3)`
+- `Event.BUBBLING_PHASE` (3)
   - : The event is propagating back up through the target's ancestors in reverse order,
     starting with the parent, and eventually reaching the containing {{domxref("Window")}}.
     This is known as _bubbling_, and occurs only if {{domxref("Event.bubbles")}} is

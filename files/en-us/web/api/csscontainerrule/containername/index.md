@@ -64,7 +64,7 @@ The CSS for the container element specifies the type of the container, and may a
 The card has a default font size, which is overridden for the `@container` named `sidebar` if the minimum width is greater than 700px.
 
 ```html
-<style id="examplestyles">
+<style id="example-styles">
   .post {
     container-type: inline-size;
     container-name: sidebar;
@@ -89,7 +89,7 @@ Since we added the `@container` as the third rule above, we can access the assoc
 Last of all, we log the container name and query properties (the code that does the logging is not shown).
 
 ```js
-const exampleStylesheet = document.getElementById("examplestyles").sheet;
+const exampleStylesheet = document.getElementById("example-styles").sheet;
 const exampleRules = exampleStylesheet.cssRules;
 const containerRule = exampleRules[2]; // a CSSContainerRule representing the container rule.
 log(`CSSContainerRule.containerName: "${containerRule.containerName}"`);

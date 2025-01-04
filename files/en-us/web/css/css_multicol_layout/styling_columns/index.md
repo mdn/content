@@ -16,7 +16,38 @@ The initial value of `column-gap` is `1em`, which prevents columns from running 
 
 You can change the gap by using any {{cssxref("length")}} value. In the example below, the `column-gap` is set to `40px`.
 
-{{EmbedGHLiveSample("css-examples/multicol/styling/column-gap.html", '100%', 750)}}
+```html live-sample___column-gap
+<div class="container">
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+  <p>
+    Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+    kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter
+    purslane kale. Celery potato scallion desert raisin horseradish spinach
+    carrot soko.
+  </p>
+</div>
+```
+
+```css live-sample___column-gap
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.container {
+  column-count: 3;
+  column-gap: 40px;
+}
+```
+
+{{EmbedLiveSample("column-gap", "", "300px")}}
 
 The allowed value for `column-gap` is a {{cssxref("length-percentage")}}, meaning percentages are allowed. Percentage values for `column-gap` are calculated as a percentage of the width of the multicol container.
 
@@ -28,13 +59,78 @@ These properties are applied to the element, which is the multicol container, an
 
 In this next example, a 5px-dotted rule with a color of `rebeccapurple` has been created using the longhand values.
 
-{{EmbedGHLiveSample("css-examples/multicol/styling/column-rule.html", '100%', 550)}}
+```html hidden live-sample___column-rule
+<div class="container">
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+  <p>
+    Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+    kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter
+    purslane kale. Celery potato scallion desert raisin horseradish spinach
+    carrot soko.
+  </p>
+</div>
+```
+
+```css live-sample___column-rule
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.container {
+  column-count: 3;
+  column-rule-width: 5px;
+  column-rule-style: dotted;
+  column-rule-color: rebeccapurple;
+}
+```
+
+{{EmbedLiveSample("column-rule", "", "300px")}}
 
 Note that the rule itself does not take up any space: a wide rule will not push the columns apart to make space for the rule. Instead, the rule overlays the gap.
 
 The example below uses a very wide rule of `40px` and a `10px` gap. The rule displays under the column content. To make space on both sides of the rule, the gap would need to be increased to be larger than `40px`.
 
-{{EmbedGHLiveSample("css-examples/multicol/styling/column-rule-wide.html", '100%', 550)}}
+```html hidden live-sample___column-rule-wide
+<div class="container">
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+  <p>
+    Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+    kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter
+    purslane kale. Celery potato scallion desert raisin horseradish spinach
+    carrot soko.
+  </p>
+</div>
+```
+
+```css live-sample___column-rule-wide
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.container {
+  column-count: 3;
+  column-gap: 10px;
+  column-rule: 40px solid rebeccapurple;
+}
+```
+
+{{EmbedLiveSample("column-rule-wide", "", "300px")}}
 
 ## Next steps
 

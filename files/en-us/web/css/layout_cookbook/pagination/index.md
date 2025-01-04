@@ -18,11 +18,90 @@ Typically, the pagination component will be centered horizontally underneath the
 
 ## Recipe
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/pagination.html", '100%', 720)}}
+Click "Play" in the code blocks below to edit the example in the MDN Playground:
 
-> **Callout:**
->
-> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/pagination--download.html)
+```html live-sample___pagination-example
+<nav aria-label="pagination">
+  <ul class="pagination">
+    <li>
+      <a href="">
+        <span aria-hidden="true">&laquo;</span>
+        <span class="visuallyhidden">previous set of pages</span>
+      </a>
+    </li>
+    <li>
+      <a href=""><span class="visuallyhidden">page </span>1</a>
+    </li>
+    <li>
+      <a href="" aria-current="page">
+        <span class="visuallyhidden">page </span>2
+      </a>
+    </li>
+    <li>
+      <a href=""> <span class="visuallyhidden">page </span>3 </a>
+    </li>
+    <li>
+      <a href=""> <span class="visuallyhidden">page </span>4 </a>
+    </li>
+    <li>
+      <a href="">
+        <span class="visuallyhidden">next set of pages</span
+        ><span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+```
+
+```css live-sample___pagination-example
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+nav {
+  border-top: 1px solid #eee;
+  margin-top: 1em;
+  padding-top: 0.5em;
+  font: 1.2em sans-serif;
+
+  display: flex;
+  justify-content: center;
+}
+
+.pagination {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.pagination li {
+  margin: 0 1px;
+}
+
+.pagination a {
+  display: block;
+  padding: 0.5em 1em;
+  border: 1px solid #999;
+  border-radius: 0.2em;
+  text-decoration: none;
+}
+
+.pagination a[aria-current="page"] {
+  background-color: #333;
+  color: #fff;
+}
+```
+
+{{EmbedLiveSample("pagination-example")}}
 
 ## Choices made
 

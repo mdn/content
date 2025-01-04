@@ -6,7 +6,8 @@ page-type: guide
 
 {{AddonSidebar}}
 
-> **Note:** This feature is available since Firefox 54.
+> [!NOTE]
+> This feature is available since Firefox 54.
 
 When an extension provides tools that are of use to developers, it's possible to add a UI for them to the browser's developer tools as a new panel.
 
@@ -57,11 +58,11 @@ The extension can now run code in the inspected window using [`devtools.inspecte
 
 ## Developer panel design
 
-For details on how to design your developer panel's web page to match the style of Firefox, see the [Acorn Design System](https://acorn.firefox.com/latest/) documentation.
+For details on how to design your developer panel's web page to match the style of Firefox, see the [Acorn Design System](https://acorn.firefox.com/latest) documentation.
 
 ## Icons
 
-For details on how to create icons to use with your developer tools panel, see [Iconography](https://acorn.firefox.com/latest/styles/iconography-q7JqGl5H) in the [Acorn Design System](https://acorn.firefox.com/latest/) documentation.
+For details on how to create icons to use with your developer tools panel, see [Iconography](https://acorn.firefox.com/latest/styles/iconography-q7JqGl5H) in the [Acorn Design System](https://acorn.firefox.com/latest) documentation.
 
 ## Examples
 

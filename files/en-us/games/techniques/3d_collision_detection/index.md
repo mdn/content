@@ -18,7 +18,8 @@ The **axis-aligned constraint** is there because of performance reasons. The ove
 
 ![Animated rotating knot showing the virtual rectangular box shrink and grow as the knots rotates within it. The box does not rotate.](rotating_knot.gif)
 
-> **Note:** Check out the [Bounding Volumes with Three.js](/en-US/docs/Games/Techniques/3D_collision_detection/Bounding_volume_collision_detection_with_THREE.js) article to see a practical implementation of this technique.
+> [!NOTE]
+> Check out the [Bounding Volumes with Three.js](/en-US/docs/Games/Techniques/3D_collision_detection/Bounding_volume_collision_detection_with_THREE.js) article to see a practical implementation of this technique.
 
 ### Point vs. AABB
 
@@ -106,7 +107,8 @@ function isPointInsideSphere(point, sphere) {
 }
 ```
 
-> **Note:** The code above features a square root, which can be expensive to calculate. An easy optimization to avoid it consists of comparing the squared distance with the squared radius, so the optimized equation would instead involve `distanceSqr < sphere.radius * sphere.radius`.
+> [!NOTE]
+> The code above features a square root, which can be expensive to calculate. An easy optimization to avoid it consists of comparing the squared distance with the squared radius, so the optimized equation would instead involve `distanceSqr < sphere.radius * sphere.radius`.
 
 ### Sphere vs. sphere
 
@@ -177,5 +179,5 @@ Related articles on MDN:
 
 External resources:
 
-- [Simple intersection tests for games](https://www.gamedeveloper.com/disciplines/simple-intersection-tests-for-games) on Game Developer
+- [Simple intersection tests for games](https://www.gamedeveloper.com/game-platforms/simple-intersection-tests-for-games) on Game Developer
 - [Bounding volume](https://en.wikipedia.org/wiki/Bounding_volume) on Wikipedia

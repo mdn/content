@@ -25,7 +25,7 @@ The following attributes are deprecated and should not be used. They are documen
 
 - `bgcolor` {{deprecated_inline}}
 
-  - : Defines the background color of each row cell. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a '`#`', or a [color keyword](/en-US/docs/Web/CSS/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
+  - : Defines the background color of each row cell. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a `#`, or a [color keyword](/en-US/docs/Web/CSS/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
 
 - `char` {{deprecated_inline}}
 
@@ -61,26 +61,28 @@ Four `<tr>` elements are used to create four table rows. Each row contains three
 
 ```html
 <table>
-  <tr>
-    <th scope="row">A</th>
-    <td>Alfa</td>
-    <td>AL fah</td>
-  </tr>
-  <tr>
-    <th scope="row">B</th>
-    <td>Bravo</td>
-    <td>BRAH voh</td>
-  </tr>
-  <tr>
-    <th scope="row">C</th>
-    <td>Charlie</td>
-    <td>CHAR lee</td>
-  </tr>
-  <tr>
-    <th scope="row">D</th>
-    <td>Delta</td>
-    <td>DELL tah</td>
-  </tr>
+  <tbody>
+    <tr>
+      <th scope="row">A</th>
+      <td>Alfa</td>
+      <td>AL fah</td>
+    </tr>
+    <tr>
+      <th scope="row">B</th>
+      <td>Bravo</td>
+      <td>BRAH voh</td>
+    </tr>
+    <tr>
+      <th scope="row">C</th>
+      <td>Charlie</td>
+      <td>CHAR lee</td>
+    </tr>
+    <tr>
+      <th scope="row">D</th>
+      <td>Delta</td>
+      <td>DELL tah</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -128,31 +130,35 @@ An additional table row (`<tr>`) is added as the first row of the table with col
 
 ```html
 <table>
-  <tr>
-    <th scope="col">Symbol</th>
-    <th scope="col">Code word</th>
-    <th scope="col">Pronunciation</th>
-  </tr>
-  <tr>
-    <th scope="row">A</th>
-    <td>Alfa</td>
-    <td>AL fah</td>
-  </tr>
-  <tr>
-    <th scope="row">B</th>
-    <td>Bravo</td>
-    <td>BRAH voh</td>
-  </tr>
-  <tr>
-    <th scope="row">C</th>
-    <td>Charlie</td>
-    <td>CHAR lee</td>
-  </tr>
-  <tr>
-    <th scope="row">D</th>
-    <td>Delta</td>
-    <td>DELL tah</td>
-  </tr>
+  <thead>
+    <tr>
+      <th scope="col">Symbol</th>
+      <th scope="col">Code word</th>
+      <th scope="col">Pronunciation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">A</th>
+      <td>Alfa</td>
+      <td>AL fah</td>
+    </tr>
+    <tr>
+      <th scope="row">B</th>
+      <td>Bravo</td>
+      <td>BRAH voh</td>
+    </tr>
+    <tr>
+      <th scope="row">C</th>
+      <td>Charlie</td>
+      <td>CHAR lee</td>
+    </tr>
+    <tr>
+      <th scope="row">D</th>
+      <td>Delta</td>
+      <td>DELL tah</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -201,7 +207,7 @@ There are no native methods for sorting the rows (`<tr>` elements) of a {{HTMLEl
 
 #### HTML
 
-A {{HTMLElement("tbody")}} element is used in this basic table to mark the body section of the table and to include three rows ({{HTMLElement("tr")}} elements) with data ({{HTMLElement("td")}} elements), creating one column with numbers in descending order.
+A {{HTMLElement("tbody")}} element is used in this basic table to mark the body section of the table and to include three rows (`<tr>` elements) with data ({{HTMLElement("td")}} elements), creating one column with numbers in descending order.
 
 ```html
 <table>
@@ -291,7 +297,8 @@ An additional data cell ({{HTMLElement("td")}} element) is added to each row (`<
 
 A click event handler is added to each table header ({{HTMLElement("th")}} element) of each {{HTMLElement("table")}} in the {{domxref("HTMLDocument", "document")}}; it sorts all the rows (`<tr>` elements) of the {{HTMLElement("tbody")}} based on the contents of the data cells ({{HTMLElement("td")}} elements) contained in the rows.
 
-> **Note:** This solution assumes that the {{HTMLElement("td")}} elements are populated by raw text with no descendant elements.
+> [!NOTE]
+> This solution assumes that the {{HTMLElement("td")}} elements are populated by raw text with no descendant elements.
 
 ```js
 const allTables = document.querySelectorAll("table");
@@ -343,7 +350,8 @@ th {
 
 {{EmbedLiveSample('Sorting_rows_with_a_click_on_header_cells', '650', '100')}}
 
-> **Note:** To be usable and accessible, the header cell of each sortable column must be identifiable as a sorting button and each must define whether the column is currently sorted in ascending or descending order visually and with the [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-sort) attribute. See the [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/)'s [sortable table example](https://www.w3.org/WAI/ARIA/apg/patterns/table/examples/sortable-table/) for more information.
+> [!NOTE]
+> To be usable and accessible, the header cell of each sortable column must be identifiable as a sorting button and each must define whether the column is currently sorted in ascending or descending order visually and with the [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-sort) attribute. See the [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/)'s [sortable table example](https://www.w3.org/WAI/ARIA/apg/patterns/table/examples/sortable-table/) for more information.
 
 ## Technical summary
 
@@ -371,8 +379,8 @@ th {
       <th scope="row">Tag omission</th>
       <td>
         Start tag is mandatory. End tag may be omitted if the
-        {{HTMLElement("tr")}} element is immediately followed by a
-        {{HTMLElement("tr")}} element, or if the row is the last element
+        <code>&lt;tr&gt;</code> element is immediately followed by a
+        <code>&lt;tr&gt;</code> element, or if the row is the last element
         in its parent table group ({{HTMLElement("thead")}},
         {{HTMLElement("tbody")}} or {{HTMLElement("tfoot")}})
         element.
@@ -421,7 +429,7 @@ th {
 
 ## See also
 
-- [Learn: HTML tables](/en-US/docs/Learn/HTML/Tables)
+- [Learn: HTML table basics](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 - {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}: Other table-related elements
 - {{cssxref("background-color")}}: CSS property to set the background color of each row cell
 - {{cssxref("border")}}: CSS property to control borders of row cells

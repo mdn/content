@@ -12,5 +12,5 @@ First released in November 2004, Firefox is completely customizable with themes,
 
 ## See also
 
-- [Mozilla Firefox official website](https://www.mozilla.org/firefox)
+- [Mozilla Firefox official website](https://www.mozilla.org/en-US/firefox/)
 - [Firefox developer documentations](/en-US/docs/Mozilla/Firefox) on MDN

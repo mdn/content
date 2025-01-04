@@ -14,19 +14,20 @@ The **`<img>`** [HTML](/en-US/docs/Web/HTML) element embeds an image into the do
 The above example shows usage of the `<img>` element:
 
 - The `src` attribute is **required**, and contains the path to the image you want to embed.
-- The `alt` attribute holds a textual replacement for the image, which is mandatory and **incredibly useful** for accessibility — screen readers read the attribute value out to their users so they know what the image means. Alt text is also displayed on the page if the image can't be loaded for some reason: for example, network errors, content blocking, or linkrot.
+- The `alt` attribute holds a textual replacement for the image, which is mandatory and **incredibly useful** for accessibility — screen readers read the attribute value out to their users so they know what the image means. Alt text is also displayed on the page if the image can't be loaded for some reason: for example, network errors, content blocking, or link rot.
 
 There are many other attributes to achieve various purposes:
 
 - [Referrer](/en-US/docs/Web/HTTP/Headers/Referrer-Policy)/{{glossary("CORS")}} control for security and privacy: see [`crossorigin`](#crossorigin) and [`referrerpolicy`](#referrerpolicy).
 - Use both [`width`](#width) and [`height`](#height) to set the intrinsic size of the image, allowing it to take up space before it loads, to mitigate content layout shifts.
-- Responsive image hints with [`sizes`](#sizes) and [`srcset`](#srcset) (see also the {{htmlelement("picture")}} element and our [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) tutorial).
+- Responsive image hints with [`sizes`](#sizes) and [`srcset`](#srcset) (see also the {{htmlelement("picture")}} element and our [Responsive images](/en-US/docs/Web/HTML/Responsive_images) tutorial).
 
 ## Supported image formats
 
 The HTML standard doesn't list what image formats to support, so {{glossary("user agent","user agents")}} may support different formats.
 
-> **Note:** The [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types) provides comprehensive information about image formats and their web browser support.
+> [!NOTE]
+> The [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types) provides comprehensive information about image formats and their web browser support.
 > This section is just a summary!
 
 The image file formats that are most commonly used on the web are:
@@ -61,7 +62,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : Defines text that can replace the image in the page.
 
-    > **Note:** Browsers do not always display images. There are a number of situations in which a browser might not display images, such as:
+    > [!NOTE]
+    > Browsers do not always display images. There are a number of situations in which a browser might not display images, such as:
     >
     > - Non-visual browsers (such as those used by people with visual impairments)
     > - The user chooses not to display images (saving bandwidth, privacy reasons)
@@ -69,7 +71,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     >
     > In these cases, the browser may replace the image with the text in the element's `alt` attribute. For these reasons and others, provide a useful value for `alt` whenever possible.
 
-    Setting this attribute to an empty string (`alt=""`) indicates that this image is _not_ a key part of the content (it's decoration or a tracking pixel), and that non-visual browsers may omit it from {{glossary("Rendering engine", "rendering")}}. Visual browsers will also hide the broken image icon if the `alt` attribute is empty and the image failed to display.
+    Setting this attribute to an empty string (`alt=""`) indicates that this image is _not_ a key part of the content (it's decoration or a tracking pixel), and that non-visual browsers may omit it from {{glossary("Engine/Rendering", "rendering")}}. Visual browsers will also hide the broken image icon if the `alt` attribute is empty and the image failed to display.
 
     This attribute is also used when copying and pasting the image to text, or saving a linked image to a bookmark.
 
@@ -81,7 +83,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     The corresponding source or trigger event is set off once the browser receives the response containing the image file.
 
-    > **Note:** See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
+    > [!NOTE]
+    > See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 
     There are two versions of this attribute that you can set:
 
@@ -98,7 +101,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     This is useful in cases where the requested resource is not on a server you control, or you just want to handle registering the attribution source on a different server. In this case, you can specify one or more URLs as the value of `attributionsrc`. When the resource request occurs the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URL(s) specified in `attributionSrc` in addition to the resource origin. These URLs can then respond with a {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header as appropriate to complete registration.
 
-    > **Note:** Specifying multiple URLs means that multiple attribution sources can be registered on the same feature. You might for example have different campaigns that you are trying to measure the success of, which involve generating different reports on different data.
+    > [!NOTE]
+    > Specifying multiple URLs means that multiple attribution sources can be registered on the same feature. You might for example have different campaigns that you are trying to measure the success of, which involve generating different reports on different data.
 
 - [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin)
 
@@ -140,26 +144,33 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `fetchpriority`
 
-  - : Provides a hint of the relative priority to use when fetching the image. Allowed values:
+  - : Provides a hint of the relative priority to use when fetching the image.
+    Allowed values:
 
     - `high`
-      - : Signals a high-priority fetch relative to other images.
+      - : Fetch the image at a high priority relative to other images.
     - `low`
-      - : Signals a low-priority fetch relative to other images.
+      - : Fetch the image at a low priority relative to other images.
     - `auto`
-      - : Default: Signals automatic determination of fetch priority relative to other images.
+      - : Don't set a preference for the fetch priority.
+        This is the default.
+        It is used if no value or an invalid value is set.
+
+    See {{domxref("HTMLImageElement.fetchPriority")}} for more information.
 
 - `height`
 
   - : The intrinsic height of the image, in pixels. Must be an integer without a unit.
 
-    > **Note:** Including `height` and [`width`](#width) enables the {{glossary("aspect ratio")}} of the image to be calculated by the browser prior to the image being loaded. This aspect ratio is used to reserve the space needed to display the image, reducing or even preventing a layout shift when the image is downloaded and painted to the screen. Reducing layout shift is a major component of good user experience and web performance.
+    > [!NOTE]
+    > Including `height` and [`width`](#width) enables the {{glossary("aspect ratio")}} of the image to be calculated by the browser prior to the image being loaded. This aspect ratio is used to reserve the space needed to display the image, reducing or even preventing a layout shift when the image is downloaded and painted to the screen. Reducing layout shift is a major component of good user experience and web performance.
 
 - `ismap`
 
   - : This Boolean attribute indicates that the image is part of a [server-side map](https://en.wikipedia.org/wiki/Image_map#Server-side). If so, the coordinates where the user clicked on the image are sent to the server.
 
-    > **Note:** This attribute is allowed only if the `<img>` element is a descendant of an {{htmlelement("a")}} element with a valid [`href`](/en-US/docs/Web/HTML/Element/a#href) attribute. This gives users without pointing devices a fallback destination.
+    > [!NOTE]
+    > This attribute is allowed only if the `<img>` element is a descendant of an {{htmlelement("a")}} element with a valid [`href`](/en-US/docs/Web/HTML/Element/a#href) attribute. This gives users without pointing devices a fallback destination.
 
 - `loading`
 
@@ -170,8 +181,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `lazy`
       - : Defers loading the image until it reaches a calculated distance from the viewport, as defined by the browser. The intent is to avoid the network and storage bandwidth needed to handle the image until it's reasonably certain that it will be needed. This generally improves the performance of the content in most typical use cases.
 
-    > **Note:** Loading is only deferred when JavaScript is enabled. This is an anti-tracking measure, because if a user agent supported lazy loading when scripting is disabled, it would still be possible for a site to track a user's approximate scroll position throughout a session, by strategically placing images in a page's markup such that a server can track how many images are requested and when.
-    > **Note:** Images with `loading` set to `lazy` will never be loaded if they do not intersect a visible part of an element, even if loading them would change that as unloaded images have a `width` and `height` of `0`. Putting `width` and `height` on lazyloaded images fixes this issue and is a best practice, [recommended by the specification](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element). Doing so also helps prevent layout shifts.
+    > [!NOTE]
+    > Loading is only deferred when JavaScript is enabled. This is an anti-tracking measure, because if a user agent supported lazy loading when scripting is disabled, it would still be possible for a site to track a user's approximate scroll position throughout a session, by strategically placing images in a page's markup such that a server can track how many images are requested and when.
+
+    > [!NOTE]
+    > Images with `loading` set to `lazy` will never be loaded if they do not intersect a visible part of an element, even if loading them would change that as unloaded images have a `width` and `height` of `0`. Putting `width` and `height` on lazy-loaded images fixes this issue and is a best practice, [recommended by the specification](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element). Doing so also helps prevent layout shifts.
 
 - `referrerpolicy`
 
@@ -179,7 +193,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     - `no-referrer`: The {{HTTPHeader("Referer")}} header will not be sent.
     - `no-referrer-when-downgrade`: The {{HTTPHeader("Referer")}} header will not be sent to {{Glossary("origin")}}s without {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
-    - `origin`: The sent referrer will be limited to the origin of the referring page: its [scheme](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, and {{Glossary("port")}}.
+    - `origin`: The sent referrer will be limited to the origin of the referring page: its [scheme](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, and {{Glossary("port")}}.
     - `origin-when-cross-origin`: The referrer sent to other origins will be limited to the scheme, the host, and the port. Navigations on the same origin will still include the path.
     - `same-origin`: A referrer will be sent for {{Glossary("Same-origin policy", "same origin")}}, but cross-origin requests will contain no referrer information.
     - `strict-origin`: Only send the origin of the document as the referrer when the protocol security level stays the same (HTTPS→HTTPS), but don't send it to a less secure destination (HTTPS→HTTP).
@@ -215,7 +229,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     If the `srcset` attribute uses width descriptors, the `sizes` attribute must also be present, or the `srcset` itself will be ignored.
 
-    The user agent selects any of the available sources at its discretion. This provides them with significant leeway to tailor their selection based on things like user preferences or {{glossary("bandwidth")}} conditions. See our [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) tutorial for an example.
+    The user agent selects any of the available sources at its discretion. This provides them with significant leeway to tailor their selection based on things like user preferences or {{glossary("bandwidth")}} conditions. See our [Responsive images](/en-US/docs/Web/HTML/Responsive_images) tutorial for an example.
 
 - `width`
   - : The intrinsic width of the image in pixels. Must be an integer without a unit.
@@ -223,7 +237,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : The partial {{glossary("URL")}} (starting with `#`) of an [image map](/en-US/docs/Web/HTML/Element/map) associated with the element.
 
-    > **Note:** You cannot use this attribute if the `<img>` element is inside an {{htmlelement("a")}} or {{HTMLElement("button")}} element.
+    > [!NOTE]
+    > You cannot use this attribute if the `<img>` element is inside an {{htmlelement("a")}} or {{HTMLElement("button")}} element.
 
 ### Deprecated attributes
 
@@ -248,12 +263,13 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : The number of pixels of white space on the left and right of the image. Use the {{cssxref('margin')}} CSS property instead.
 - `longdesc` {{deprecated_inline}}
 
-  - : A link to a more detailed description of the image. Possible values are a {{glossary("URL")}} or an element [`id`](/en-US/docs/Web/HTML/Global_attributes#id).
+  - : A link to a more detailed description of the image. Possible values are a {{glossary("URL")}} or an element [`id`](/en-US/docs/Web/HTML/Global_attributes/id).
 
-    > **Note:** This attribute is mentioned in the latest {{glossary("W3C")}} version, [HTML 5.2](https://html.spec.whatwg.org/multipage/obsolete.html#element-attrdef-img-longdesc), but has been removed from the {{glossary("WHATWG")}}'s [HTML Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element). It has an uncertain future; authors should use a {{glossary("WAI")}}-{{glossary("ARIA")}} alternative such as [`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) or [`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details).
+    > [!NOTE]
+    > This attribute is mentioned in the latest {{glossary("W3C")}} version, [HTML 5.2](https://html.spec.whatwg.org/multipage/obsolete.html#element-attrdef-img-longdesc), but has been removed from the {{glossary("WHATWG")}}'s [HTML Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element). It has an uncertain future; authors should use a {{glossary("WAI")}}-{{glossary("ARIA")}} alternative such as [`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) or [`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details).
 
 - `name` {{deprecated_inline}}
-  - : A name for the element. Use the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) attribute instead.
+  - : A name for the element. Use the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute instead.
 - `vspace` {{deprecated_inline}}
   - : The number of pixels of white space above and below the image. Use the {{cssxref('margin')}} CSS property instead.
 
@@ -261,7 +277,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 `<img>` is a [replaced element](/en-US/docs/Web/CSS/Replaced_element); it has a {{cssxref("display")}} value of `inline` by default, but its default dimensions are defined by the embedded image's intrinsic values, like it were `inline-block`. You can set properties like {{cssxref("border")}}/{{cssxref("border-radius")}}, {{cssxref("padding")}}/{{cssxref("margin")}}, {{cssxref("width")}}, {{cssxref("height")}}, etc. on an image.
 
-`<img>` has no baseline, so when images are used in an inline formatting context with {{cssxref("vertical-align")}}`: baseline`, the bottom of the image will be placed on the text baseline.
+`<img>` has no baseline, so when images are used in an inline formatting context with {{cssxref("vertical-align", "vertical-align: baseline")}}, the bottom of the image will be placed on the text baseline.
 
 You can use the {{cssxref("object-position")}} property to position the image within the element's box, and the {{cssxref("object-fit")}} property to adjust the sizing of the image within the box (for example, whether the image should fit the box or fill it even if clipping is required).
 
@@ -282,8 +298,12 @@ An `alt` attribute's value should provide a clear and concise text replacement f
 #### Do
 
 ```html example-good
-<img alt="A Rockhopper Penguin is standing on a beach." src="penguin.jpg" />
+<img alt="A Penguin on a beach." src="penguin.jpg" />
 ```
+
+An important accessibility test is to read the `alt` attribute content together with preceding textual content to see if it conveys the same meaning as the image. For example, if the image was preceded by the sentence "On my travels, I saw a cute little animal:", the _Don't_ example could be read by a screen reader as "On my travels, I saw a cute little animal: image", which doesn't make sense. The _Do_ example could be read by a screen reader as "On my travels, I saw a cute little animal: A Penguin on a beach.", which does make sense.
+
+For images used to trigger an action, for example, images nested inside an {{htmlelement("a")}} or {{htmlelement("button")}} element, consider describing the triggered action inside the `alt` attribute value. For example, you could write `alt="next page"` instead of `alt="arrow right"`. You could also consider adding an optional further description inside a `title` attribute; this may be read by screen readers if requested by the user.
 
 When an `alt` attribute is not present on an image, some screen readers may announce the image's file name instead. This can be a confusing experience if the file name isn't representative of the image's contents.
 
@@ -303,7 +323,7 @@ Due to a [VoiceOver bug](https://webkit.org/b/216364), VoiceOver does not correc
 
 ### The title attribute
 
-The [`title`](/en-US/docs/Web/HTML/Global_attributes#title) attribute is not an acceptable substitute for the `alt` attribute. Additionally, avoid duplicating the `alt` attribute's value in a `title` attribute declared on the same image. Doing so may cause some screen readers to announce the same text twice, creating a confusing experience.
+The [`title`](/en-US/docs/Web/HTML/Global_attributes/title) attribute is not an acceptable substitute for the `alt` attribute. Additionally, avoid duplicating the `alt` attribute's value in a `title` attribute declared on the same image. Doing so may cause some screen readers to announce the same text twice, creating a confusing experience.
 
 The `title` attribute should also not be used as supplemental captioning information to accompany an image's `alt` description. If an image needs a caption, use the [`figure`](/en-US/docs/Web/HTML/Element/figure) and [`figcaption`](/en-US/docs/Web/HTML/Element/figcaption) elements.
 
@@ -359,7 +379,8 @@ The `src` attribute is ignored in {{glossary("User agent", "user agents")}} that
 
 {{EmbedLiveSample("Using_the_srcset_and_sizes_attributes", "100%", 350)}}
 
-> **Note:** To see the resizing in action, {{LiveSampleLink('Using_the_srcset_and_sizes_attributes', 'view the example on a separate page')}}, so you can actually resize the content area.
+> [!NOTE]
+> To see the resizing in action, {{LiveSampleLink('Using_the_srcset_and_sizes_attributes', 'view the example on a separate page')}}, so you can actually resize the content area.
 
 ## Security and privacy concerns
 
@@ -505,6 +526,6 @@ Although `<img>` elements have innocent uses, they can have undesirable conseque
 - {{HTMLElement("picture")}}, {{HTMLElement("object")}}, and {{HTMLElement("embed")}} elements
 - {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, and {{cssxref("image-resolution")}}: Image-related CSS properties.
 - {{domxref("HTMLImageElement")}} interface for this element
-- [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [HTML images](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_images)
 - [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types)
-- [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [Responsive images](/en-US/docs/Web/HTML/Responsive_images)

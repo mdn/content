@@ -7,15 +7,10 @@ browser-compat: api.CookieChangeEvent
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}}
 
-The **`CookieChangeEvent`** interface of the {{domxref("Cookie Store API", "", "", "nocode")}} is the event type of the {{domxref("CookieStore/change_event", "change")}} event fired at a {{domxref("CookieStore")}} when any cookie changes occur. A cookie change consists of a cookie and a type (either "changed" or "deleted").
+The **`CookieChangeEvent`** interface of the {{domxref("Cookie Store API", "", "", "nocode")}} is the event type of the {{domxref("CookieStore/change_event", "change")}} event fired at a {{domxref("CookieStore")}} when any cookies are created or deleted.
 
-Cookie changes that will cause the `CookieChangeEvent` to be dispatched are:
-
-- A cookie is newly created and not immediately removed. In this case `type` is "changed".
-- A cookie is newly created and immediately removed. In this case `type` is "deleted".
-- A cookie is removed. In this case `type` is "deleted".
-
-> **Note:** A cookie that is replaced due to the insertion of another cookie with the same name, domain, and path, is ignored and does not trigger a change event.
+> [!NOTE]
+> A cookie that is replaced due to the insertion of another cookie with the same name, domain, and path, is ignored and does not trigger a change event.
 
 {{InheritanceDiagram}}
 
@@ -29,9 +24,9 @@ Cookie changes that will cause the `CookieChangeEvent` to be dispatched are:
 _This interface also inherits properties from {{domxref("Event")}}._
 
 - {{domxref("CookieChangeEvent.changed")}} {{ReadOnlyInline}}
-  - : Returns an array containing one or more changed cookies.
+  - : An array listing all newly-created cookies. Note that this will exclude cookies which were created with an expiry date in the past, as these cookies are immediately deleted.
 - {{domxref("CookieChangeEvent.deleted")}} {{ReadOnlyInline}}
-  - : Returns an array containing one or more deleted cookies.
+  - : An array listing all cookies which were removed, either because they expired or because they were explicitly deleted. Note that this will include cookies which were created with an expiry date in the past.
 
 ## Instance methods
 

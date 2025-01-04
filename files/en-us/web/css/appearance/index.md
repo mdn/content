@@ -13,7 +13,8 @@ The **`appearance`** [CSS](/en-US/docs/Web/CSS) property is used to display UI e
 
 Before standardization, this property allowed elements to be shown as widgets, such as buttons or check boxes. It was considered a misfeature and authors are encouraged to use only standard keywords now.
 
-> **Note:** If you wish to use this property on websites, you should test it very carefully. Although it is supported in most modern browsers, its implementation varies. In older browsers, even the keyword `none` does not have the same effect on all form elements across different browsers, and some do not support it at all. The differences are smaller in the newest browsers.
+> [!NOTE]
+> If you wish to use this property on websites, you should test it very carefully. Although it is supported in most modern browsers, its implementation varies. In older browsers, even the keyword `none` does not have the same effect on all form elements across different browsers, and some do not support it at all. The differences are smaller in the newest browsers.
 
 ## Syntax
 
@@ -43,7 +44,7 @@ Some examples are provided, but the list is not exhaustive.
 
 - `none`
 
-  - : Hides certain features of widgets, such as arrow displayed in select element, indicating that list can be expanded.
+  - : If the element is a widget (native form control), it will be forced to use a standardized primitive appearance instead of a platform-native or operating system specific appearance, supporting the usual rules of CSS. This value has no effect on non-widget elements, including replaced elements like {{htmlelement("img")}} and {{htmlelement("video")}}.
 
 - `auto`
 

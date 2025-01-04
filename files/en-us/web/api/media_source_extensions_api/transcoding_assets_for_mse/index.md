@@ -32,7 +32,8 @@ Get these installed successfully before moving to the next step.
 
 Sample media should be placed in the Bento4 `utils` directory and worked here.
 
-> **Note:** The prebuilt ffmpeg does not include libfdk_aac due to licensing reasons. Bento4 uses this by default, so you need to compile ffmpeg if necessary. If you don't need it, add `--audio-codec=aac` to the `mp4-dash-encode.py` command line.
+> [!NOTE]
+> The prebuilt ffmpeg does not include libfdk_aac due to licensing reasons. Bento4 uses this by default, so you need to compile ffmpeg if necessary. If you don't need it, add `--audio-codec=aac` to the `mp4-dash-encode.py` command line.
 
 ### Container and Codec Support
 
@@ -62,7 +63,8 @@ In order to properly stream MP4, we need the asset to be an [ISO BMF](https://ww
 
 To check whether an MP4 file is a proper MP4 stream, you can again use the [mp4info](https://nickdesaulniers.github.io/mp4info/) utility to list the atoms of an MP4.
 
-> **Note:** The fragmented version is slightly larger than the original, due to additional metadata spread throughout the file. This is usually a file size increase of 1 percent or less.
+> [!NOTE]
+> The fragmented version is slightly larger than the original, due to additional metadata spread throughout the file. This is usually a file size increase of 1 percent or less.
 
 ### Fragmenting
 
@@ -114,7 +116,8 @@ output
 
 > **Note:** `mp4-dash-encode.py` does not display ffmpeg error messages. You can see it by specifying the `-d` option.
 
-> **Note:** If `"Invalid duration specification for force_key_frames: 'expr:eq(mod(n"` is displayed as an error message, modify `mp4-dash-encode.py` and remove two `"'"` from `"-force_key_frames 'expr:eq(mod(n,%d),0)'"`.
+> [!NOTE]
+> If `"Invalid duration specification for force_key_frames: 'expr:eq(mod(n"` is displayed as an error message, modify `mp4-dash-encode.py` and remove two `"'"` from `"-force_key_frames 'expr:eq(mod(n,%d),0)'"`.
 
 ## Summary
 

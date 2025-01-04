@@ -42,15 +42,11 @@ Content-Security-Policy: fenced-frame-src <source>;
 Content-Security-Policy: fenced-frame-src <source> <source>;
 ```
 
-### Sources
+A space-separated list of _source expression_ values. Resources of this type may be loaded if they match any of the given source expressions. For this directive, the following source expression values are applicable:
 
-`<source>`s for `fenced-frame-src` are more limited than for {{CSP("frame-src")}}. Only the following source expressions can be used:
-
-- The scheme-source `"https:"`
-- The host-source `"https://*:*"`
+- The [`<host-source>`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#host-source) value `"https:"`
+- The [`<scheme-source>`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#scheme-source) value `"https:"`
 - The string `"*"`
-
-> **Note:** See the full list of [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
 
 ## Examples
 

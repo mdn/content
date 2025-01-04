@@ -18,7 +18,8 @@ The axis of rotation passes through an origin, defined by the {{ cssxref("transf
 > `rotate(a)` or
 > `rotate3d(0, 0, 1, a)`.
 
-> **Note:** Unlike rotations in the 2D plane, the composition of 3D rotations is usually
+> [!NOTE]
+> Unlike rotations in the 2D plane, the composition of 3D rotations is usually
 > not commutative. In other words, the order in which the rotations are applied impacts the result.
 
 ## Syntax
@@ -63,6 +64,10 @@ rotateZ(a)
     </tr>
   </tbody>
 </table>
+
+## Formal syntax
+
+{{CSSSyntax}}
 
 ## Examples
 

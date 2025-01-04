@@ -33,7 +33,7 @@ browser-compat: webextensions.manifest.browser_specific_settings
 "browser_specific_settings": {
   "gecko": {
     "id": "addon@example.com",
-    "strict_min_version": "42.0"
+    "strict_min_version": "58.0"
   }
 }
 </pre
@@ -73,6 +73,8 @@ The `gecko_android` subkey supports these properties:
   - : Maximum version of Gecko to support on Android. If the Firefox version on which the extension is being installed or run is above this version, the extension is not installed or not run. Defaults to the version determined by `gecko.strict_max_version`.
 
 See the list of [valid Gecko versions](https://addons.mozilla.org/api/v5/applications/firefox/).
+
+To support Firefox for Android without specifying a version range, the `gecko_android` subkey must be an empty object, i.e. `"gecko_android": {}`. Otherwise, the extension is only made available on desktop Firefox.
 
 #### Extension ID format
 

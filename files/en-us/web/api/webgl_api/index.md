@@ -7,7 +7,7 @@ browser-compat:
   - api.WebGL2RenderingContext
 ---
 
-{{DefaultAPISidebar("WebGL")}}
+{{DefaultAPISidebar("WebGL")}}{{AvailableInWorkers}}
 
 **WebGL** (Web Graphics Library) is a JavaScript API for rendering high-performance interactive 3D and 2D graphics within any compatible web browser without the use of plug-ins. WebGL does so by introducing an API that closely conforms to OpenGL ES 2.0 that can be used in HTML {{HTMLElement("canvas")}} elements. This conformance makes it possible for the API to take advantage of hardware graphics acceleration provided by the user's device.
 
@@ -141,19 +141,18 @@ Below, you'll find an assortment of guides to help you learn WebGL concepts and 
 - [Khronos WebGL site](https://www.khronos.org/webgl/) The main website for WebGL at the Khronos Group.
 - [WebGL Fundamentals](https://web.dev/articles/webgl-fundamentals) A basic tutorial with fundamentals of WebGL.
 - [Raw WebGL: An introduction to WebGL](https://www.youtube.com/embed/H4c8t6myAWU/?feature=player_detailpage) A talk by Nick Desaulniers that introduces the basics of WebGL.
-- [WebGL playground](http://webglplayground.net) An online tool for creating and sharing WebGL projects. Good for quick prototyping and experimenting.
-- [WebGL Academy](http://www.webglacademy.com) An HTML/JavaScript editor with tutorials to learn basics of webgl programming.
+- [WebGL Academy](http://www.webglacademy.com/) An HTML/JavaScript editor with tutorials to learn basics of webgl programming.
 - [WebGL Stats](https://webglreport.com/) A site with statistics about WebGL capabilities in browsers on different platforms.
 
 ### Libraries
 
 - [three.js](https://threejs.org/) is an open-source, fully featured 3D WebGL library.
-- [Babylon.js](https://www.babylonjs.com) is a powerful, simple, and open game and 3D rendering engine packed into a friendly JavaScript framework.
+- [Babylon.js](https://www.babylonjs.com/) is a powerful, simple, and open game and 3D rendering engine packed into a friendly JavaScript framework.
 - [Pixi.js](https://pixijs.com/) is a fast, open-source 2D WebGL renderer.
 - [Phaser](https://phaser.io/) is a fast, free and fun open source framework for Canvas and WebGL powered browser games.
 - [PlayCanvas](https://playcanvas.com/) is an open-source game engine.
 - [glMatrix](https://github.com/toji/gl-matrix) is a JavaScript matrix and vector library for high-performance WebGL apps.
-- [twgl](https://twgljs.org) is a library for making webgl less verbose.
+- [twgl](https://twgljs.org/) is a library for making webgl less verbose.
 - [RedGL](https://github.com/redcamel/RedGL2) is an open-source 3D WebGL library.
 - [vtk.js](https://kitware.github.io/vtk-js/) is a JavaScript library for scientific visualization in your browser.
 - [webgl-lint](https://greggman.github.io/webgl-lint/) will help find errors in your WebGL code and provide useful info

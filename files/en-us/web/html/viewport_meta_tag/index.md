@@ -21,7 +21,7 @@ However, this mechanism is not so good for pages that are optimized for narrow s
 
 ## Viewport basics
 
-A typical mobile-optimized site contains something like the following:
+The viewport is a comma-separated list of feature and value pairs. A typical mobile-optimized site contains something like the following:
 
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -46,7 +46,8 @@ The basic attributes of the "viewport" `<meta>` element include:
 - `interactive-widget`
   - : Specifies the effect that interactive UI widgets, such as a virtual keyboard, have on the page's viewports. Valid values: `resizes-visual`, `resizes-content`, or `overlays-content`. Default: `resizes-visual`.
 
-> **Warning:** Usage of `user-scalable=no` can cause accessibility issues to users with visual impairments such as low vision. [WCAG](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) requires a minimum of 2× scaling; however, the best practice is to enable a 5× zoom.
+> [!WARNING]
+> Usage of `user-scalable=no` can cause accessibility issues to users with visual impairments such as low vision. [WCAG](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) requires a minimum of 2× scaling; however, the best practice is to enable a 5× zoom.
 
 ## Screen density
 
@@ -81,11 +82,15 @@ Allowed values are:
 - `overlays-content`
   - : Neither the {{Glossary("viewport")}} nor the {{Glossary("visual viewport")}} gets resized by the interactive widget.
 
+```html
+<meta name="viewport" content="interactive-widget=resizes-content" />
+```
+
 When the {{Glossary("viewport")}} gets resized, the initial [containing block](/en-US/docs/Web/CSS/Containing_block) also gets resized, thereby affecting the computed size of [viewport units](/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport).
 
 ## Common viewport sizes for mobile and tablet devices
 
-If you want to know what mobile and tablet devices have which viewport widths, there is a comprehensive list of [mobile and tablet viewport sizes here](https://experienceleague.adobe.com/docs/target/using/experiences/vec/mobile-viewports.html). This gives information such as viewport width on portrait and landscape orientation as well as physical screen size, operating system and the pixel density of the device.
+If you want to know what mobile and tablet devices have which viewport widths, there is a comprehensive list of [mobile and tablet viewport sizes here](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/mobile-viewports). This gives information such as viewport width on portrait and landscape orientation as well as physical screen size, operating system and the pixel density of the device.
 
 ## Specifications
 

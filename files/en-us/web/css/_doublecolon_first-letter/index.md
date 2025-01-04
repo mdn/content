@@ -17,7 +17,8 @@ The first letter of an element is not always trivial to identify:
 - Some languages have digraphs that are always capitalized together, like the `IJ` in Dutch. In these cases, both letters of the digraph should be matched by the `::first-letter` pseudo-element.
 - A combination of the {{ cssxref("::before") }} pseudo-element and the {{ cssxref("content") }} property may inject some text at the beginning of the element. In that case, `::first-letter` will match the first letter of this generated content.
 
-> **Note:** CSS introduced the `::first-letter` notation (with two colons) to distinguish [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) from [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements). For backward compatibility, browsers also accept `:first-letter`, introduced earlier.
+> [!NOTE]
+> CSS introduced the `::first-letter` notation (with two colons) to distinguish [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) from [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements). For backward compatibility, browsers also accept `:first-letter`, introduced earlier.
 >
 > Browser support for digraphs such as `IJ` in Dutch is poor. Check the compatibility table below to see the current state of support.
 
@@ -43,9 +44,9 @@ Only a small subset of CSS properties can be used with the `::first-letter` pseu
 
 ## Examples
 
-### Simple drop cap
+### Basic drop cap
 
-In this example we will use the `::first-letter` pseudo-element to create a simple drop cap effect on the first letter of the paragraph coming right after the `<h2>`.
+In this example we will use the `::first-letter` pseudo-element to create a drop cap effect on the first letter of the paragraph coming right after the `<h2>`.
 
 #### HTML
 
@@ -85,7 +86,7 @@ h2 + p::first-letter {
 
 #### Result
 
-{{ EmbedLiveSample('Simple_drop_cap', '100%', 350) }}
+{{ EmbedLiveSample('Basic_drop_cap', '100%', 350) }}
 
 ### Effect on special punctuation and non-Latin characters
 
@@ -126,7 +127,8 @@ p::first-letter {
 
 In this example, we use the `::first-letter` pseudo-element to style the first letter of a SVG {{SVGElement("text")}} element.
 
-> **Note:** At time of writing this feature has [limited support](#browser_compatibility).
+> [!NOTE]
+> At time of writing this feature has [limited support](#browser_compatibility).
 
 #### HTML
 

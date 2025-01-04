@@ -9,7 +9,8 @@ browser-compat: css.properties.text-wrap-mode
 
 The **`text-wrap-mode`** [CSS](/en-US/docs/Web/CSS) property controls whether the text inside an element is wrapped. The different values provide alternate ways of wrapping the content of a block element. It can also be set, and reset, using the {{CSSXRef("text-wrap")}} shorthand.
 
-> **Note:** The name of this property is a placeholder, pending the CSSWG finding a better name.
+> [!NOTE]
+> The name of this property is a placeholder, pending the CSSWG finding a better name.
 
 {{EmbedInteractiveExample("pages/css/text-wrap-mode.html")}}
 
@@ -47,7 +48,8 @@ This property specifies whether lines may wrap at unforced soft wrap opportuniti
 
 ## Examples
 
-> **Note:** Check the browser support for this property.
+> [!NOTE]
+> Check the browser support for this property.
 
 ### Wrapping content
 
@@ -78,7 +80,7 @@ The default setting is to wrap the content so the `text-wrap-mode` property is n
 
 {{EmbedLiveSample("wrapping_content", "100%", 250)}}
 
-### Nowrapping content
+### Not wrapping content
 
 In this example the content will **not** flow over to the next line so that it fits in the box as the content has been specifically told not to wrap with `text-wrap-mode: nowrap;`, the content is longer that the containing box so overflows.
 
@@ -105,7 +107,7 @@ In this example the content will **not** flow over to the next line so that it f
 
 #### Result
 
-{{EmbedLiveSample("nowrapping_content", "100%",100)}}
+{{EmbedLiveSample("not_wrapping_content", "100%",100)}}
 
 ## Specifications
 

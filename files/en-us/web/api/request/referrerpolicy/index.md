@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Request.referrerPolicy
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`referrerPolicy`** read-only property of the
 {{domxref("Request")}} interface returns the referrer policy, which governs what

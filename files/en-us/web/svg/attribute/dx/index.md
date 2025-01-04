@@ -108,7 +108,8 @@ For {{SVGElement('feOffset')}}, `dx` defines the x offset of the filter input gr
 
 ## glyphRef
 
-> **Warning:** As of SVG2 {{SVGElement('glyphRef')}} is deprecated and shouldn't be used.
+> [!WARNING]
+> As of SVG2 {{SVGElement('glyphRef')}} is deprecated and shouldn't be used.
 
 For {{SVGElement('glyphRef')}}, `dx` defines the x offset of the glyph, in the font metric system.
 
@@ -209,7 +210,8 @@ line {
 
 ## tref
 
-> **Warning:** As of SVG2 {{SVGElement('tref')}} is deprecated and shouldn't be used.
+> [!WARNING]
+> As of SVG2 {{SVGElement('tref')}} is deprecated and shouldn't be used.
 
 For {{SVGElement('tref')}}, if it contains a single value, `dx` defines a shift along the x-axis for all glyphs.
 

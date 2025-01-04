@@ -18,7 +18,8 @@ In its simplest form, a popover is created by adding the [`popover`](/en-US/docs
 <div id="mypopover" popover>Popover content</div>
 ```
 
-> **Note:** Setting the `popover` attribute with no value is equivalent to setting `popover="auto"`.
+> [!NOTE]
+> Setting the `popover` attribute with no value is equivalent to setting `popover="auto"`.
 
 Adding this attribute causes the element to be hidden on page load by having {{cssxref("display", "display: none")}} set on it. To show/hide the popover, you need to add some control buttons. You can set a {{htmlelement("button")}} (or {{htmlelement("input")}} of `type="button"`) as a popover control button by giving it a [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) attribute, the value of which should be the ID of the popover to control:
 
@@ -43,7 +44,8 @@ If you want to change that behavior, you can use the [`popovertargetaction`](/en
 
 You can see how the previous code snippet renders in our [Basic declarative popover example](https://mdn.github.io/dom-examples/popover-api/basic-declarative/) ([source](https://github.com/mdn/dom-examples/tree/main/popover-api/basic-declarative)).
 
-> **Note:** If the `popovertargetaction` attribute is omitted, `"toggle"` is the default action that will be performed by a control button.
+> [!NOTE]
+> If the `popovertargetaction` attribute is omitted, `"toggle"` is the default action that will be performed by a control button.
 
 When a popover is shown, it has `display: none` removed from it and it is put into the {{glossary("top layer")}} so it will sit on top of all other page content.
 
@@ -186,7 +188,7 @@ There are three different ways to create nested popovers:
    <div popover anchor="foo">Child</div>
    ```
 
-See our [Nested popover menu example](https://mdn.github.io/dom-examples/popover-api/nested-popovers/) ([source](https://github.com/mdn/dom-examples/tree/main/popover-api/nested-popovers)) for an example. You'll notice that quite a few event handlers have been used to display and hide the subpopover appropriately during mouse and keyboard access, and also to hide both menus when an option is selected from either. Depending on how you handle loading of new content , either in an SPA or multi-page website, some of all of these may not be necessary, but they have been included in this demo for illustrative purposes.
+See our [Nested popover menu example](https://mdn.github.io/dom-examples/popover-api/nested-popovers/) ([source](https://github.com/mdn/dom-examples/tree/main/popover-api/nested-popovers)) for an example. You'll notice that quite a few event handlers have been used to display and hide the subpopover appropriately during mouse and keyboard access, and also to hide both menus when an option is selected from either. Depending on how you handle loading of new content, either in an SPA or multi-page website, some of all of these may not be necessary, but they have been included in this demo for illustrative purposes.
 
 ## Styling popovers
 
@@ -244,7 +246,8 @@ Popovers are set to `display: none;` when hidden and `display: block;` when show
 - When animating `display` from `none` to `block` (or another visible `display` value), the value will flip to `block` at `0%` of the animation duration so it is visible throughout.
 - When animating `display` from `block` (or another visible `display` value) to `none`, the value will flip to `none` at `100%` of the animation duration so it is visible throughout.
 
-> **Note:** When animating using [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) needs to be set to enable the above behavior. When animating with [CSS animations](/en-US/docs/Web/CSS/CSS_animations), the above behavior is available by default; an equivalent step is not required.
+> [!NOTE]
+> When animating using [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) needs to be set to enable the above behavior. When animating with [CSS animations](/en-US/docs/Web/CSS/CSS_animations), the above behavior is available by default; an equivalent step is not required.
 
 ### Transitioning a popover
 
@@ -353,7 +356,8 @@ The code renders as follows:
 
 {{ EmbedLiveSample("Transitioning a popover", "100%", "200") }}
 
-> **Note:** Because popovers change from `display: none` to `display: block` each time they are shown, the popover transitions from its `@starting-style` styles to its `[popover]:popover-open` styles every time the entry transition occurs. When the popover closes, it transitions from its `[popover]:popover-open` state to the default `[popover]` state.
+> [!NOTE]
+> Because popovers change from `display: none` to `display: block` each time they are shown, the popover transitions from its `@starting-style` styles to its `[popover]:popover-open` styles every time the entry transition occurs. When the popover closes, it transitions from its `[popover]:popover-open` state to the default `[popover]` state.
 >
 > It is possible for the style transition on entry and exit to be different in such cases. See our [Demonstration of when starting styles are used](/en-US/docs/Web/CSS/@starting-style#demonstration_of_when_starting_styles_are_used) example for a proof of this.
 

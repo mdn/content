@@ -12,26 +12,27 @@ This document describes the user agent string used in Firefox 4 and later and ap
 
 The UA string of Firefox itself is broken down into four components:
 
-`Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion`
+`Mozilla/5.0 (platform; rv:gecko-version) Gecko/gecko-trail Firefox/firefox-version`
 
 - `Mozilla/5.0` is the general token that says the browser is Mozilla compatible, and is common to almost every browser today.
-- `platform` describes the native platform the browser is running on (e.g. Windows, Mac, Linux or Android), and whether or not it's a mobile phone. Firefox OS phones say "`Mobile`"; the web is the platform. Note that `platform` can consist of multiple "; "-separated tokens. See below for further details and examples.
+- `platform` describes the native platform the browser is running on (e.g. Windows, Mac, Linux or Android), and whether or not it's a mobile phone. Firefox OS phones say `Mobile`; the web is the platform. Note that `platform` can consist of multiple `;`-separated tokens. See below for further details and examples.
 
-- `rv:geckoversion` indicates the release version of Gecko (such as "`17.0`").
-- `Gecko/geckotrail` indicates that the browser is based on Gecko.
-- On Desktop, `geckotrail` is the fixed string "`20100101`"
-- `Firefox/firefoxversion` indicates the browser is Firefox, and provides the version (such as "`17.0`").
-- From Firefox 10 on mobile, `geckotrail` is the same as `firefoxversion`.
+- `rv:gecko-version` indicates the release version of Gecko (such as `17.0`).
+- `Gecko/gecko-trail` indicates that the browser is based on Gecko.
+- On Desktop, `gecko-trail` is the fixed string `20100101`.
+- `Firefox/firefox-version` indicates the browser is Firefox, and provides the version (such as `17.0`).
+- From Firefox 10 on mobile, `gecko-trail` is the same as `firefox-version`.
 
-> **Note:** The recommended way of sniffing for Gecko-based browsers (if you _have to_ sniff for the browser engine instead of using feature detection) is by the presence of the "`Gecko`" and "`rv:`" strings, since some other browsers include a "`like Gecko`" token.
+> [!NOTE]
+> The recommended way of sniffing for Gecko-based browsers (if you _have to_ sniff for the browser engine instead of using feature detection) is by the presence of the `Gecko` and `rv:` strings, since some other browsers include a `like Gecko` token.
 
 For other products based on Gecko, the string can take one of two forms, where the tokens have the same meaning except those noted below:
 
-`Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail appname/appversion`
-`Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion appname/appversion`
+`Mozilla/5.0 (platform; rv:gecko-version) Gecko/gecko-trail appname/appversion`
+`Mozilla/5.0 (platform; rv:gecko-version) Gecko/gecko-trail Firefox/firefox-version appname/appversion`
 
-- `appname/appversion` indicates the application name and version. For instance, this could be "`Camino/2.1.1`", or "`SeaMonkey/2.7.1`".
-- `Firefox/firefoxversion` is an optional compatibility token that some Gecko-based browsers may choose to incorporate, to achieve maximum compatibility with websites that expect Firefox. `firefoxversion` will generally represent the equivalent Firefox release corresponding to the given Gecko version. Some Gecko-based browsers may not opt into using this token; for this reason, sniffers should be looking for Gecko — not Firefox!
+- `appname/appversion` indicates the application name and version. For instance, this could be `Camino/2.1.1`, or `SeaMonkey/2.7.1`.
+- `Firefox/firefox-version` is an optional compatibility token that some Gecko-based browsers may choose to incorporate, to achieve maximum compatibility with websites that expect Firefox. `firefox-version` will generally represent the equivalent Firefox release corresponding to the given Gecko version. Some Gecko-based browsers may not opt into using this token; for this reason, sniffers should be looking for Gecko — not Firefox!
 
 ## Mobile and Tablet indicators
 
@@ -42,11 +43,13 @@ Mozilla/5.0 (Android 4.4; Mobile; rv:41.0) Gecko/41.0 Firefox/41.0
 Mozilla/5.0 (Android 4.4; Tablet; rv:41.0) Gecko/41.0 Firefox/41.0
 ```
 
-> **Note:** The version numbers are not relevant. Avoid inferring materials based on these.
+> [!NOTE]
+> The version numbers are not relevant. Avoid inferring materials based on these.
 
 The preferred way to target content to a device form factor is to use CSS Media Queries. However, if you use UA sniffing to target content to a device form factor, please look for **Mobi** (to include Opera Mobile, which uses "Mobi") for the phone form factor and do **not** assume any correlation between "Android" and the device form factor. This way, your code will work if/when Firefox ships on other phone/tablet operating systems or Android is used for laptops. Also, please use touch detection to find touch devices rather than looking for "Mobi" or "Tablet", since there may be touch devices which are not tablets.
 
-> **Note:** Firefox OS devices identify themselves without any operating system indication; for example: "Mozilla/5.0 (Mobile; rv:15.0) Gecko/15.0 Firefox/15.0". The web is the platform.
+> [!NOTE]
+> Firefox OS devices identify themselves without any operating system indication; for example: "Mozilla/5.0 (Mobile; rv:15.0) Gecko/15.0 Firefox/15.0". The web is the platform.
 
 ## Windows
 
@@ -57,7 +60,7 @@ Windows user agents have the following variations, where _x.y_ is the Windows NT
 | Windows NT on x86 or aarch64 CPU | Mozilla/5.0 (Windows NT _x_._y_; rv:10.0) Gecko/20100101 Firefox/10.0             |
 | Windows NT on x64 CPU            | Mozilla/5.0 (Windows NT _x_._y_; Win64; x64; rv:10.0) Gecko/20100101 Firefox/10.0 |
 
-## MacOS
+## macOS
 
 Here, _x.y_ is the version of macOS (for instance, macOS 10.15). Starting in Firefox 87, Firefox caps the reported macOS version number to 10.15, so macOS 11.0 Big Sur and later will be reported as "10.15" in the User-Agent string. ARM-based Macs will be reported as "Intel" in the User-Agent string.
 
@@ -89,7 +92,7 @@ Firefox for Android contains the Android version as part of the _platform_ token
 From version 1, Focus is powered by Android WebView and uses the following user agent string format:
 
 ```plain
-Mozilla/5.0 (Linux; <Android Version> <Build Tag etc.>) AppleWebKit/<WebKit Rev> (KHTML, like Gecko) Version/4.0 Focus/<focusversion> Chrome/<Chrome Rev> Mobile Safari/<WebKit Rev>
+Mozilla/5.0 (Linux; <Android Version> <Build Tag etc.>) AppleWebKit/<WebKit Rev> (KHTML, like Gecko) Version/4.0 Focus/<focus version> Chrome/<Chrome Rev> Mobile Safari/<WebKit Rev>
 ```
 
 Tablet versions on WebView mirror mobile, but do not contain a `Mobile` token.
@@ -106,7 +109,7 @@ The Klar user agent is the same as [Focus](#focus_for_ios).
 
 ## Firefox for iOS
 
-Firefox for iOS uses the default Mobile Safari UA string, with an additional **FxiOS/\<version>** token on iPod and iPhone, similar to how [Chrome for iOS identifies itself](https://developer.chrome.com/docs/multidevice/user-agent/#chrome_for_ios_user_agent).
+Firefox for iOS uses the default Mobile Safari UA string, with an additional **FxiOS/\<version>** token on iPod and iPhone, similar to how [Chrome for iOS identifies itself](https://chromium.googlesource.com/chromium/src/+/HEAD/docs/ios/user_agent.md).
 
 | Form factor | Firefox for iOS user agent string                                                                                                           |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -131,7 +134,7 @@ Note: this user agent was retrieved from an iPhone XR simulator and may be diffe
 Version 3 (and probably earlier) of Firefox for Fire TV use a user agent string with the following format:
 
 ```plain
-Mozilla/5.0 (Linux; <Android version>) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/<firefoxversion> Chrome/<Chrome Rev> Safari/<WebKit Rev>
+Mozilla/5.0 (Linux; <Android version>) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/<firefox-version> Chrome/<Chrome Rev> Safari/<WebKit Rev>
 ```
 
 | Firefox TV version | User Agent string                                                                                                                  |
@@ -143,7 +146,7 @@ Mozilla/5.0 (Linux; <Android version>) AppleWebKit/537.36 (KHTML, like Gecko) Ve
 From version 1.1, Firefox for Echo Show uses a user agent string with the following format:
 
 ```plain
-Mozilla/5.0 (Linux; <Android version>) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/<firefoxversion> Chrome/<Chrome Rev> Safari/<WebKit Rev>
+Mozilla/5.0 (Linux; <Android version>) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/<firefox-version> Chrome/<Chrome Rev> Safari/<WebKit Rev>
 ```
 
 | Firefox for Echo Show version | User agent string                                                                                                                  |
@@ -187,7 +190,8 @@ While the version number for Firefox OS is not included in the UA string, it is 
 | 2.2                       | 37                   |
 | 2.5                       | 44                   |
 
-> **Note:** It's easy to find the correspondences by looking at the [Mercurial repository names](https://hg.mozilla.org/releases): repositories starting by `mozilla-b2g` are the release repositories for Firefox OS, and have both Firefox OS and Gecko versions in their names.
+> [!NOTE]
+> It's easy to find the correspondences by looking at the [Mercurial repository names](https://hg.mozilla.org/releases): repositories starting by `mozilla-b2g` are the release repositories for Firefox OS, and have both Firefox OS and Gecko versions in their names.
 
 Firefox OS has a four-digit version number: `X.X.X.Y`. The first two digits are owned by the Mozilla product team and denote versions with new features (eg: v1.1, 1.2, etc.). The third digit is incremented with regular version tags (about every 6 weeks) for security updates, and the fourth is owned by the OEM.
 

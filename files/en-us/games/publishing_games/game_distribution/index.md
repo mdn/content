@@ -56,7 +56,7 @@ If you're working on a side project just for fun, then leaving the source open w
 
 As the name may suggest, publishers can handle the publishing of your game for you. Whether you should go that way or not depends on what your plan is for having your game distributed: Do you want to send it wherever possible, or do you want to restrict its presence to those who've bought an [exclusive license](/en-US/docs/Games/Publishing_games/Game_monetization)? It's up to you. Consider various options, experiment and conclude. Publishers will be explained in more detail in the [monetization](/en-US/docs/Games/Publishing_games/Game_monetization) article.
 
-There are also independent portals collecting interesting games like [HTML5Games.com](https://html5games.com/), [GameArter.com](https://www.gamearter.com/), [MarketJS.com](https://www.marketjs.com/), [GameFlare](https://distribution.gameflare.com/), [GameDistribution.com](https://gamedistribution.com/), [Poki](https://developers.poki.com/), or [CrazyGames](https://developer.crazygames.com) where you can send your game in and it will get some natural promotion because of the big traffic those sites attract. Some of these take your files and host them on their server, whereas others only link to your website or embed your game on their site. Such exposure may just provide [promotion](/en-US/docs/Games/Publishing_games/Game_promotion) for your game, or if you have adverts shown beside your game (or other money making options) it may also provide monetization.
+There are also independent portals collecting interesting games like [HTML5Games.com](https://html5games.com/), [GameArter.com](https://www.gamearter.com/), [MarketJS.com](https://www.marketjs.com/), [GameFlare](https://distribution.gameflare.com/), [GameDistribution.com](https://gamedistribution.com/), [GameSaturn.com](https://gamesaturn.com/), [Playmox.com](https://www.playmox.com/), [Poki](https://developers.poki.com/), or [CrazyGames](https://developer.crazygames.com/) where you can send your game in and it will get some natural promotion because of the big traffic those sites attract. Some of these take your files and host them on their server, whereas others only link to your website or embed your game on their site. Such exposure may just provide [promotion](/en-US/docs/Games/Publishing_games/Game_promotion) for your game, or if you have adverts shown beside your game (or other money making options) it may also provide monetization.
 
 ### Web and native stores
 
@@ -66,13 +66,14 @@ You can also upload and publish your game directly to different types of stores,
 
 Let's see what the available options are regarding the marketplaces/stores available for different platforms and operating systems.
 
-> **Note:** These are the most popular distribution platforms, but this is not to say these are the only options. Instead of trying to add your game to the thousands of others in the iOS store say, you can also try to find a niche and promote directly to the audience who would be interested in your games. Your creativity is critical here.
+> [!NOTE]
+> These are the most popular distribution platforms, but this is not to say these are the only options. Instead of trying to add your game to the thousands of others in the iOS store say, you can also try to find a niche and promote directly to the audience who would be interested in your games. Your creativity is critical here.
 
 ### Web stores
 
 The best platforms for HTML games are Web-based stores. You can prepare games for web stores by adding a manifest file and other data, such as resources, in a zipped package. Not many modifications of the game itself are required.
 
-- [The Chrome Web Store](https://chrome.google.com/webstore/) is also an attractive option — again, having a manifest file ready, zipping your game and filling in the online submission form is about all that's required.
+- [The Chrome Web Store](https://chromewebstore.google.com/) is also an attractive option — again, having a manifest file ready, zipping your game and filling in the online submission form is about all that's required.
 
 ### Native mobile stores
 
@@ -92,14 +93,14 @@ After you've covered Steam, there's plenty of buzz around initiatives like [Humb
 
 ## Packaging games
 
-The web is the first and the best choice for HTML games, but if you want to reach a broader audience and distribute your game in a closed ecosystem, you still can do that by packaging it. The good thing is that you don't need a few separate teams working on the same game for different platforms — you can build it once and use tools like [Phonegap](https://phonegap.com/) or [CocoonIO](http://cocoon.io/) to package the game for native stores. The resulting packages are usually pretty reliable, but you should still test them and be on the lookout for small issues or bugs to fix.
+The web is the first and the best choice for HTML games, but if you want to reach a broader audience and distribute your game in a closed ecosystem, you still can do that by packaging it. The good thing is that you don't need a few separate teams working on the same game for different platforms — you can build it once and use tools to package the game for native stores. The resulting packages are usually pretty reliable, but you should still test them and be on the lookout for small issues or bugs to fix.
 
 ### Available tools
 
 There are various tools to choose from depending on your skills, preferred frameworks or target platforms. It's all about picking the best tool for your particular task.
 
 - [Ejecta](https://impactjs.com/ejecta) — a tool specifically for packaging games created with [the ImpactJS](https://impactjs.com/) framework for iOS, built by the ImpactJS author. It provides seamless integration with ImpactJS, but it supports only one framework and app store.
-- [NW.js](https://nwjs.io/) — formerly known as Node-Webkit, this is the first choice when it comes to building a desktop game that works on Windows, Mac and Linux. The distributions are packaged with the WebKit engine to provide rendering on any platform.
+- [NW.js](https://nwjs.io/) — formerly known as Node-WebKit, this is the first choice when it comes to building a desktop game that works on Windows, Mac and Linux. The distributions are packaged with the WebKit engine to provide rendering on any platform.
 
 Other alternative tools are:
 

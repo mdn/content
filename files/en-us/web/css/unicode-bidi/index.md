@@ -13,7 +13,8 @@ The **`unicode-bidi`** [CSS](/en-US/docs/Web/CSS) property, together with the {{
 
 The `unicode-bidi` and {{cssxref("direction")}} properties are the only properties that are not affected by the {{cssxref("all")}} shorthand.
 
-> **Warning:** This property is intended for Document Type Definition (DTD) designers. Web designers and similar authors **should not** override it.
+> [!WARNING]
+> This property is intended for Document Type Definition (DTD) designers. Web designers and similar authors **should not** override it.
 
 ## Syntax
 

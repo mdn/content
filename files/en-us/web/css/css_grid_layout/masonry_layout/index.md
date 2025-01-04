@@ -17,10 +17,33 @@ Masonry layout is a layout method where one axis uses a typical strict grid layo
 
 ## Creating a masonry layout
 
-To create the most common masonry layout, your columns will be the grid axis and the rows the masonry axis. Define this layout with `grid-template-columns` and `grid-template-rows`:
+To create the most common masonry layout, your columns will be the grid axis and the rows the masonry axis, defined with `grid-template-columns` and `grid-template-rows`.
+The child elements of this container will now lay out item by item along the rows, as they would with regular grid layout automatic placement.
 
-```css
-.container {
+As the items move onto new rows, they will display according to the masonry algorithm. Items will load into the column with the most room, causing a tightly packed layout without strict row tracks.
+
+```css hidden live-sample___block-axis
+* {
+  box-sizing: border-box;
+}
+
+.grid {
+  padding: 10px;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+}
+
+.item {
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  color: #d9480f;
+}
+```
+
+```css live-sample___block-axis
+.grid {
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
@@ -28,13 +51,70 @@ To create the most common masonry layout, your columns will be the grid axis and
 }
 ```
 
-The child elements of this container will now lay out item by item along the rows, as they would with regular grid layout automatic placement. However, as they move onto a new row the items will display according to the masonry algorithm. Items will load into the column with the most room causing a tightly packed layout without strict row tracks.
+```html live-sample___block-axis
+<div class="grid">
+  <div class="item" style="block-size: 2em;"></div>
+  <div class="item" style="block-size: 3em;"></div>
+  <div class="item" style="block-size: 1.6em;"></div>
+  <div class="item" style="block-size: 4em;"></div>
+  <div class="item" style="block-size: 2.2em;"></div>
+  <div class="item" style="block-size: 3em;"></div>
+  <div class="item" style="block-size: 4.5em;"></div>
+  <div class="item" style="block-size: 1em;"></div>
+  <div class="item" style="block-size: 3.5em;"></div>
+  <div class="item" style="block-size: 2.8em;"></div>
+</div>
+```
 
-{{EmbedGHLiveSample("css-examples/grid/masonry/block-axis.html", '100%', 800)}}
+{{EmbedLiveSample("block-axis", "", "250px")}}
 
 It is also possible to create a masonry layout with items loading into rows.
 
-{{EmbedGHLiveSample("css-examples/grid/masonry/inline-axis.html", '100%', 1000)}}
+```html hidden live-sample___inline-axis
+<div class="grid">
+  <div class="item" style="inline-size: 2em;"></div>
+  <div class="item" style="inline-size: 3em;"></div>
+  <div class="item" style="inline-size: 1.6em;"></div>
+  <div class="item" style="inline-size: 4em;"></div>
+  <div class="item" style="inline-size: 2.2em;"></div>
+  <div class="item" style="inline-size: 3em;"></div>
+  <div class="item" style="inline-size: 4.5em;"></div>
+  <div class="item" style="inline-size: 1em;"></div>
+  <div class="item" style="inline-size: 3.5em;"></div>
+  <div class="item" style="inline-size: 2.8em;"></div>
+</div>
+```
+
+```css hidden live-sample___inline-axis
+* {
+  box-sizing: border-box;
+}
+
+.grid {
+  padding: 10px;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+}
+
+.item {
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  color: #d9480f;
+}
+```
+
+```css live-sample___inline-axis
+.grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: masonry;
+  grid-template-rows: repeat(3, 100px);
+}
+```
+
+{{EmbedLiveSample("inline-axis", "", "350px")}}
 
 ## Controlling the grid axis
 
@@ -44,19 +124,110 @@ On the grid axis, things will work just as you expect them to in grid layout. Yo
 
 In this example two of the items span two tracks, and the masonry items work around them.
 
-{{EmbedGHLiveSample("css-examples/grid/masonry/spanners.html", '100%', 800)}}
+```html live-sample___spanners
+<div class="grid">
+  <div class="item" style="block-size: 2em;"></div>
+  <div class="item" style="block-size: 3em; grid-column-end: span 2;"></div>
+  <div class="item" style="block-size: 1.6em;"></div>
+  <div class="item" style="block-size: 4em;"></div>
+  <div class="item" style="block-size: 2.2em; grid-column-end: span 2"></div>
+  <div class="item" style="block-size: 3em;"></div>
+  <div class="item" style="block-size: 4.5em;"></div>
+  <div class="item" style="block-size: 1em;"></div>
+  <div class="item" style="block-size: 3.5em;"></div>
+  <div class="item" style="block-size: 2.8em;"></div>
+</div>
+```
+
+```css hidden live-sample___spanners
+* {
+  box-sizing: border-box;
+}
+
+.grid {
+  padding: 10px;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+}
+
+.item {
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  color: #d9480f;
+}
+```
+
+```css live-sample___spanners
+.grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-rows: masonry;
+}
+```
+
+{{EmbedLiveSample("spanners", "", "220px")}}
 
 This example includes an item which has positioning for columns. Items with definite placement are placed before the masonry layout happens.
 
-{{EmbedGHLiveSample("css-examples/grid/masonry/positioned.html", '100%', 1000)}}
+```html live-sample___positioned
+<div class="grid">
+  <div class="item" style="block-size: 2em;"></div>
+  <div class="item" style="block-size: 3em;"></div>
+  <div class="item" style="block-size: 1.6em;"></div>
+  <div class="item" style="block-size: 4em;"></div>
+  <div class="item positioned" style="block-size: 3.2em;">positioned.</div>
+  <div class="item" style="block-size: 3em;"></div>
+  <div class="item" style="block-size: 4.5em;"></div>
+  <div class="item" style="block-size: 1em;"></div>
+  <div class="item" style="block-size: 3.5em;"></div>
+  <div class="item" style="block-size: 2.8em;"></div>
+</div>
+```
 
-## masonry-auto-flow
+```css hidden live-sample___positioned
+* {
+  box-sizing: border-box;
+}
 
-The `masonry-auto-flow` property gives you a way to change how the masonry algorithm behaves. Give it a value of `next` and items will display in order on the grid axis, rather than going into whichever track has the most free space. The value `positioned` will ignore items with definite placement and place items in order-modified document order.
+body {
+  font: 1.2em sans-serif;
+}
 
-{{EmbedGHLiveSample("css-examples/grid/masonry/masonry-auto-flow.html", '100%', 1000)}}
+.grid {
+  padding: 10px;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+}
 
-## Fallback
+.item {
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  color: #d9480f;
+}
+```
+
+```css live-sample___positioned
+.grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-rows: masonry;
+}
+
+.positioned {
+  padding: 1em;
+  grid-column: 2 / 4;
+}
+```
+
+{{EmbedLiveSample("positioned", "", "260px")}}
+
+## Fallbacks for masonry layout
 
 In browsers [that do not support masonry](#browser_compatibility), regular grid auto-placement will be used instead.
 
@@ -66,4 +237,5 @@ In browsers [that do not support masonry](#browser_compatibility), regular grid 
 
 ## See also
 
+- {{cssxref("grid-auto-flow")}} for controlling grid auto-placement
 - [Native CSS masonry layout in CSS grid](https://www.smashingmagazine.com/native-css-masonry-layout-css-grid/)

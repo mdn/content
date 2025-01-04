@@ -10,13 +10,15 @@ browser-compat: api.Node.appendChild
 
 The **`appendChild()`** method of the {{domxref("Node")}} interface adds a node to the end of the list of children of a specified parent node.
 
-> **Note:** If the given child is a reference to an existing node in the document, `appendChild()` moves it from its current position to the new position.
+> [!NOTE]
+> If the given child is a reference to an existing node in the document, `appendChild()` moves it from its current position to the new position.
 
 If the given child is a {{domxref("DocumentFragment")}}, the entire contents of the {{domxref("DocumentFragment")}} are moved into the child list of the specified parent node.
 
 `appendChild()` returns the newly appended node, or if the child is a {{domxref("DocumentFragment")}}, the emptied fragment.
 
-> **Note:** Unlike this method, the {{domxref("Element.append()")}} method supports multiple arguments and appending strings. You can prefer using it if your node is an element.
+> [!NOTE]
+> Unlike this method, the {{domxref("Element.append()")}} method supports multiple arguments and appending strings. You can prefer using it if your node is an element.
 
 ## Syntax
 
@@ -57,7 +59,7 @@ const paragraph = document.body.appendChild(document.createElement("p"));
 // You can append more elements to the paragraph later
 ```
 
-On the other hand, you cannot use `appendChild()` in a [fluent API](https://en.wikipedia.org/wiki/Fluent_interface) fashion (like JQuery).
+On the other hand, you cannot use `appendChild()` in a [fluent API](https://en.wikipedia.org/wiki/Fluent_interface) fashion (like jQuery).
 
 ```js example-bad
 // This doesn't append three paragraphs:

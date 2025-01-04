@@ -76,7 +76,8 @@ The replacement string can include the following special replacement patterns:
 
 You can specify a function as the second parameter. In this case, the function will be invoked after the match has been performed. The function's result (return value) will be used as the replacement string.
 
-> **Note:** The above-mentioned special replacement patterns do _not_ apply for strings returned from the replacer function.
+> [!NOTE]
+> The above-mentioned special replacement patterns do _not_ apply for strings returned from the replacer function.
 
 The function has the following signature:
 
@@ -90,7 +91,7 @@ The arguments to the function are as follows:
 
 - `match`
   - : The matched substring. (Corresponds to `$&` above.)
-- `p1, p2, …, pN`
+- `p1`, `p2`, …, `pN`
   - : The `n`th string found by a capture group (including named capturing groups), provided the first argument to `replace()` is a {{jsxref("RegExp")}} object. (Corresponds to `$1`, `$2`, etc. above.) For example, if the `pattern` is `/(\a+)(\b+)/`, then `p1` is the match for `\a+`, and `p2` is the match for `\b+`. If the group is part of a disjunction (e.g. `"abc".replace(/(a)|(b)/, replacer)`), the unmatched alternative will be `undefined`.
 - `offset`
   - : The offset of the matched substring within the whole string being examined. For example, if the whole string was `'abcd'`, and the matched substring was `'bc'`, then this argument will be `1`.
@@ -128,7 +129,8 @@ console.log(newstr); // Twas the night before Christmas...
 
 This logs `'Twas the night before Christmas...'`.
 
-> **Note:** See [the regular expression guide](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) for more explanations about regular expressions.
+> [!NOTE]
+> See [the regular expression guide](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) for more explanations about regular expressions.
 
 ### Using the global and ignoreCase flags with replace()
 

@@ -2,7 +2,10 @@
 title: Popover API
 slug: Web/API/Popover_API
 page-type: web-api-overview
-browser-compat: api.HTMLElement.popover
+browser-compat:
+  - api.HTMLElement.popover
+  - api.HTMLElement.beforetoggle_event.popover_elements
+  - api.HTMLElement.toggle_event.popover_elements
 ---
 
 {{DefaultAPISidebar("Popover API")}}
@@ -78,10 +81,11 @@ See [Using the popover API](/en-US/docs/Web/API/Popover_API/Using) for a detaile
 
 ### Events
 
-- `HTMLElement` {{domxref("HTMLElement.beforetoggle_event", "beforetoggle")}} event
+- {{domxref("HTMLElement.beforetoggle_event","HTMLElement.beforetoggle")}} event
   - : Fired just before a popover element's state changes between showing and hidden, or vice versa.
-- `HTMLElement` {{domxref("HTMLElement.toggle_event", "toggle")}} event
-  - : Fired just after a popover element's state changes between showing and hidden, or vice versa. This event already existed to signal state changes on {{htmlelement("details")}} elements, and it seemed logical to extend it for popover elements.
+    Can be used to prevent a popover from opening, or to update other elements that need to be triggered by popover state.
+- {{domxref("HTMLElement.toggle_event", "HTMLElement.toggle")}} event
+  - : Fired just after a popover element's state changes between showing and hidden, or vice versa.
 
 ## Examples
 

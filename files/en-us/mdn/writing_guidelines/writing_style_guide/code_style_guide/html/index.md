@@ -20,7 +20,8 @@ Prettier formats all the code and keeps the style consistent. Nevertheless, ther
 
 ## Complete HTML document
 
-> **Note:** The guidelines in this section apply only when you need to show a complete HTML document. A snippet is usually enough to demonstrate a feature. When using the [EmbedLiveSample macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples#traditional_live_samples), just include the HTML snippet; it will automatically be inserted into a full HTML document when displayed.
+> [!NOTE]
+> The guidelines in this section apply only when you need to show a complete HTML document. A snippet is usually enough to demonstrate a feature. When using the [EmbedLiveSample macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples#traditional_live_samples), just include the HTML snippet; it will automatically be inserted into a full HTML document when displayed.
 
 ### Doctype
 
@@ -32,7 +33,7 @@ You should use the HTML5 doctype. It is short, easy to remember, and backwards c
 
 ### Document language
 
-Set the document language using the [`lang`](/en-US/docs/Web/HTML/Global_attributes#lang) attribute on your {{htmlelement("html")}} element:
+Set the document language using the [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attribute on your {{htmlelement("html")}} element:
 
 ```html example-good
 <html lang="en-US"></html>
@@ -40,9 +41,9 @@ Set the document language using the [`lang`](/en-US/docs/Web/HTML/Global_attribu
 
 This is good for accessibility and search engines, helps with localizing content, and reminds people to use best practices.
 
-### Document characterset
+### Document character set
 
-You should also define your document's characterset like so:
+You should also define your document's character set like so:
 
 ```html example-good
 <meta charset="utf-8" />

@@ -12,14 +12,16 @@ In this demonstration, we build upon the previous example by replacing our stati
 
 The first step is to create the {{ HTMLElement("video") }} element that we'll use to retrieve the video frames.
 
-> **Note:** Add this declaration to that start of your "webgl-demo.js" script:
+> [!NOTE]
+> Add this declaration to that start of your "webgl-demo.js" script:
 
 ```js
 // will set to true when video can be copied to texture
 let copyVideo = false;
 ```
 
-> **Note:** Add this function your "webgl-demo.js" script:
+> [!NOTE]
+> Add this function your "webgl-demo.js" script:
 
 ```js
 function setupVideo(url) {
@@ -70,13 +72,14 @@ First we create a video element. We set it to autoplay, mute the sound, and loop
 
 And finally, we set the `src` attribute to start and call `play` to start loading and playing the video.
 
-The video must be loaded from a secure source in order to be used to provide texture data to WebGL. That means that you'll not only need to deploy code like using a secure web server, but you'll need a secure server to test with as well. See [How do you set up a local testing server?](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server) for help.
+The video must be loaded from a secure source in order to be used to provide texture data to WebGL. That means that you'll not only need to deploy code like using a secure web server, but you'll need a secure server to test with as well. See [How do you set up a local testing server?](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server) for help.
 
 ## Using the video frames as a texture
 
 The next change is to initialize the texture, which becomes much simpler, since we no longer need to load an image file. Instead, we create an empty texture object, put a single pixel in it, and set its filtering for later use.
 
-> **Note:** Replace the `loadTexture()` function in "webgl-demo.js" with the following code:
+> [!NOTE]
+> Replace the `loadTexture()` function in "webgl-demo.js" with the following code:
 
 ```js
 function initTexture(gl) {
@@ -117,7 +120,8 @@ function initTexture(gl) {
 }
 ```
 
-> **Note:** Add the following function to "webgl-demo.js":
+> [!NOTE]
+> Add the following function to "webgl-demo.js":
 
 ```js
 function updateTexture(gl, texture, video) {
@@ -141,16 +145,19 @@ You've seen this code before. It's nearly identical to the image onload function
 
 Next, we need to call these new functions from our `main()` function.
 
-> **Note:** In your `main()` function, replace the call to `loadTexture()` with this code:
+> [!NOTE]
+> In your `main()` function, replace the call to `loadTexture()` with this code:
 
 ```js
 const texture = initTexture(gl);
 const video = setupVideo("Firefox.mp4");
 ```
 
-> **Note:** You'll also need to download the [Firefox.mp4](https://github.com/mdn/dom-examples/blob/main/webgl-examples/tutorial/sample8/Firefox.mp4) file to the same local directory as your JavaScript files.
+> [!NOTE]
+> You'll also need to download the [Firefox.mp4](https://github.com/mdn/dom-examples/blob/main/webgl-examples/tutorial/sample8/Firefox.mp4) file to the same local directory as your JavaScript files.
 
-> **Note:** In your `main()` function, replace the `render()` function with this:
+> [!NOTE]
+> In your `main()` function, replace the `render()` function with this:
 
 ```js
 // Draw the scene repeatedly
@@ -180,6 +187,6 @@ That's all there is to it!
 
 ## See also
 
-- [Using audio and video in Firefox](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 
 {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}

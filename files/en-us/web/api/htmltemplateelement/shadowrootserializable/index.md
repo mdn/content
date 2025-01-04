@@ -1,6 +1,6 @@
 ---
 title: "HTMLTemplateElement: shadowRootSerializable property"
-short-title: content
+short-title: shadowRootSerializable
 slug: Web/API/HTMLTemplateElement/shadowRootSerializable
 page-type: web-api-instance-property
 browser-compat: api.HTMLTemplateElement.shadowRootSerializable

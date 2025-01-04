@@ -11,7 +11,8 @@ browser-compat: css.properties.-webkit-mask-composite
 
 The **`-webkit-mask-composite`** property specifies the manner in which multiple mask images applied to the same element are composited with one another. Mask images are composited in the opposite order that they are declared with the {{CSSxRef("mask-image", "-webkit-mask-image")}} property.
 
-> **Note:** There is a standardized {{CSSxRef("mask-composite")}} property covering parts of this non-standard property using different keywords.
+> [!NOTE]
+> There is a standardized {{CSSxRef("mask-composite")}} property covering parts of this non-standard property using different keywords.
 
 ## Syntax
 

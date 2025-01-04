@@ -14,7 +14,8 @@ The **`span`** read-only property of the {{domxref("HTMLTableColElement")}} inte
 
 A positive number representing the number of columns.
 
-> **Note:** When setting a new value, the value is _clamped_ to the nearest strictly positive number (up to 1000).
+> [!NOTE]
+> When setting a new value, the value is _clamped_ to the nearest strictly positive number (up to 1000).
 
 ## Examples
 

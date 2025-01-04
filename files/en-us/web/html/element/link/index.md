@@ -18,7 +18,7 @@ To link an external stylesheet, you'd include a `<link>` element inside your {{H
 <link href="main.css" rel="stylesheet" />
 ```
 
-This simple example provides the path to the stylesheet inside an `href` attribute, and a [`rel`](/en-US/docs/Web/HTML/Attributes/rel) attribute with a value of `stylesheet`. The `rel` stands for "relationship", and is one of the key features of the `<link>` element — the value denotes how the item being linked to is related to the containing document.
+This example provides the path to the stylesheet inside an `href` attribute and a [`rel`](/en-US/docs/Web/HTML/Attributes/rel) attribute with a value of `stylesheet`. The `rel` stands for "relationship", and is one of the key features of the `<link>` element — the value denotes how the item being linked to is related to the containing document.
 
 There are a number of other common types you'll come across. For example, a link to the site's favicon:
 
@@ -170,7 +170,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
       </tbody>
     </table>
 
-- `blocking` {{Experimental_Inline}}
+- `blocking`
 
   - : This attribute explicitly indicates that certain operations should be blocked on the fetching of an external resource. It must only be used when the `rel` attribute contains `expect` or `stylesheet` keywords. The operations that are to be blocked must be a space-separated list of blocking tokens listed below.
     - `render`: The rendering of content on the screen is blocked.
@@ -201,14 +201,19 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `fetchpriority`
 
-  - : Provides a hint of the relative priority to use when fetching a preloaded resource. Allowed values:
+  - : Provides a hint of the relative priority to use when fetching a resource of a particular type.
+    Allowed values:
 
     - `high`
-      - : Signals a high-priority fetch relative to other resources of the same type.
+      - : Fetch the resource at a high priority relative to other resources of the same type.
     - `low`
-      - : Signals a low-priority fetch relative to other resources of the same type.
+      - : Fetch the resource at a low priority relative to other resources of the same type.
     - `auto`
-      - : Default: Signals automatic determination of fetch priority relative to other resources of the same type.
+      - : Don't set a preference for the fetch priority.
+        This is the default.
+        It is used if no value or an invalid value is set.
+
+    See {{domxref("HTMLLinkElement.fetchPriority")}} for more information.
 
 - `href`
   - : This attribute specifies the {{glossary("URL")}} of the linked resource. A URL can be absolute or relative.
@@ -218,9 +223,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     Allowed values are specified by {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
     Use this attribute only if the [`href`](/en-US/docs/Web/HTML/Element/a#href) attribute is present.
 - `imagesizes`
-  - : For `rel="preload"` and `as="image"` only, the `imagesizes` attribute is [a sizes attribute](https://html.spec.whatwg.org/multipage/images.html#sizes-attribute) that indicates to preload the appropriate resource used by an `img` element with corresponding values for its `srcset` and `sizes` attributes.
+  - : For `rel="preload"` and `as="image"` only, the `imagesizes` attribute has similar syntax and semantics as the [`sizes`](/en-US/docs/Web/HTML/Element/img#sizes) attribute that indicates to preload the appropriate resource used by an `img` element with corresponding values for its `srcset` and `sizes` attributes.
 - `imagesrcset`
-  - : For `rel="preload"` and `as="image"` only, the `imagesrcset` attribute is [a sourceset attribute](https://html.spec.whatwg.org/multipage/images.html#srcset-attribute) that indicates to preload the appropriate resource used by an `img` element with corresponding values for its `srcset` and `sizes` attributes.
+  - : For `rel="preload"` and `as="image"` only, the `imagesrcset` attribute has similar syntax and semantics as the [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute that indicates to preload the appropriate resource used by an `img` element with corresponding values for its `srcset` and `sizes` attributes.
 - `integrity`
   - : Contains inline metadata — a base64-encoded cryptographic hash of the resource (file) you're telling the browser to fetch.
     The browser can use this to verify that the fetched resource has been delivered without unexpected manipulation.
@@ -254,7 +259,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `any`, meaning that the icon can be scaled to any size as it is in a vector format, like `image/svg+xml`.
     - a white-space separated list of sizes, each in the format `<width in pixels>x<height in pixels>` or `<width in pixels>X<height in pixels>`. Each of these sizes must be contained in the resource.
 
-    > **Note:** Most icon formats are only able to store one single icon; therefore, most of the time, the [`sizes`](#sizes) attribute contains only one entry.
+    > [!NOTE]
+    > Most icon formats are only able to store one single icon; therefore, most of the time, the [`sizes`](#sizes) attribute contains only one entry.
     > Microsoft's ICO format and Apple's ICNS format can store multiple icon sizes in a single file. ICO has better browser support, so you should use this format if cross-browser support is a concern.
 
 - `title`
@@ -279,7 +285,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     The value is a space- and/or comma-delimited list of character sets as defined in {{rfc(2045)}}.
     The default value is `iso-8859-1`.
 
-    > **Note:** To produce the same effect as this obsolete attribute, use the {{HTTPHeader("Content-Type")}} HTTP header on the linked resource.
+    > [!NOTE]
+    > To produce the same effect as this obsolete attribute, use the {{HTTPHeader("Content-Type")}} HTTP header on the linked resource.
 
 - `rev` {{deprecated_inline}}
 
@@ -287,7 +294,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     The attribute thus defines the reverse relationship compared to the value of the `rel` attribute.
     [Link type values](/en-US/docs/Web/HTML/Attributes/rel) for the attribute are similar to the possible values for [`rel`](#rel).
 
-    > **Note:** Instead of `rev`, you should use the [`rel`](#rel) attribute with the opposite [link type value](/en-US/docs/Web/HTML/Attributes/rel).
+    > [!NOTE]
+    > Instead of `rev`, you should use the [`rel`](#rel) attribute with the opposite [link type value](/en-US/docs/Web/HTML/Attributes/rel).
     > For example, to establish the reverse link for `made`, specify `author`. Also, this attribute doesn't stand for "revision" and must not be used with a version number, even though many sites misuse it in this way.
 
 ## Examples
@@ -381,7 +389,8 @@ You can determine when a style sheet has been loaded by watching for a `load` ev
 </script>
 ```
 
-> **Note:** The `load` event fires once the stylesheet and all of its imported content has been loaded and parsed, and immediately before the styles start being applied to the content.
+> [!NOTE]
+> The `load` event fires once the stylesheet and all of its imported content has been loaded and parsed, and immediately before the styles start being applied to the content.
 
 ### Preload examples
 
@@ -453,4 +462,3 @@ the rendering of the page will be blocked till the resource is fetched. For exam
 ## See also
 
 - {{HTTPHeader("Link")}} HTTP header
-- [The `integrity` attribute](https://150daysofhtml.com/book/day010/) on 150daysofhtml.com (2021)

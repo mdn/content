@@ -9,7 +9,7 @@ browser-compat: webextensions.api.browsingData.removeCache
 
 Clears the browser's cache.
 
-Note that although this function can take a {{WebExtAPIRef("browsingData.RemovalOptions")}} object, it will be ignored. The entire cache is always cleared when using this function.
+Note that this function requires a {{WebExtAPIRef("browsingData.RemovalOptions")}} object, but all options are ignored. The entire cache is always cleared when using this function.
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
@@ -23,8 +23,8 @@ let removing = browser.browsingData.removeCache(
 
 ### Parameters
 
-- `removalOptions` {{optional_inline}}
-  - : `object`. A {{WebExtAPIRef("browsingData.RemovalOptions")}} object. This parameter has no effect.
+- `removalOptions`
+  - : `object`. A {{WebExtAPIRef("browsingData.RemovalOptions")}} object. This parameter must be set but has no effect.
 
 ### Return value
 
@@ -52,7 +52,8 @@ browser.browsingData.removeCache({}).then(onRemoved, onError);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/browsingData/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -10,7 +10,7 @@ The [Content Security Policy](/en-US/docs/Web/HTTP/CSP) [`frame-ancestors`](/en-
 
 ## Problem
 
-[Clickjacking](/en-US/docs/Glossary/Clickjacking) is an attack whereby malicious sites trick users into clicking links or UI elements by making them appear like a trusted site the user is familiar with. This is usually done by embedding part or all of the trusted site into the malicious site via an `<iframe>`. A button, link, or other UI feature is then positioned on top of that content to make the user think they are interacting with their trusted site, when in fact they are interacting with the malicious site.
+[Clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) is an attack whereby malicious sites trick users into clicking links or UI elements by making them appear like a trusted site the user is familiar with. This is usually done by embedding part or all of the trusted site into the malicious site via an `<iframe>`. A button, link, or other UI feature is then positioned on top of that content to make the user think they are interacting with their trusted site, when in fact they are interacting with the malicious site.
 
 ## Solution
 
@@ -31,9 +31,11 @@ The equivalent options for each setting are as follows:
 | `frame-ancestors 'self'`              | `SAMEORIGIN`                    | Allow only same-origin embedding attempts.          |
 | `frame-ancestors https://example.org` | `ALLOWFROM https://example.org` | Allow embedding attempts from the specified domain. |
 
-> **Note:** The `X-Frame-Options: ALLOWFROM https://example.org` syntax is deprecated, and most browsers ignore it. You are recommend to set `DENY` in such cases instead, and/or rely on the CSP equivalent.
+> [!NOTE]
+> The `X-Frame-Options: ALLOWFROM https://example.org` syntax is deprecated, and most browsers ignore it. You are recommend to set `DENY` in such cases instead, and/or rely on the CSP equivalent.
 
-> **Note:** Setting cookies with the [`SameSite`](/en-US/docs/Web/Security/Practical_implementation_guides/Cookies#samesite) directive is also useful in clickjacking cases that rely on the user being authenticated.
+> [!NOTE]
+> Setting cookies with the [`SameSite`](/en-US/docs/Web/Security/Practical_implementation_guides/Cookies#samesite) directive is also useful in clickjacking cases that rely on the user being authenticated.
 
 ## Examples
 

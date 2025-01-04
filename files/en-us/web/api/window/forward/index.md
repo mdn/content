@@ -12,7 +12,8 @@ status:
 
 Moves the window one document forward in history. This was a Firefox-specific method and was removed in Firefox 31.
 
-> **Note:** Use the standard {{domxref("History.forward", "history.forward()")}} method instead.
+> [!NOTE]
+> Use the standard {{domxref("History.forward", "history.forward()")}} method instead.
 
 ## Syntax
 

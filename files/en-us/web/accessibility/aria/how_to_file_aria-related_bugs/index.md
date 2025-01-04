@@ -20,8 +20,8 @@ The state of ARIA technology has always depended on the community. If you notice
  </thead>
  <tbody>
   <tr>
-   <td><a href="https://www.freedomscientific.com/products/fs/jaws-product-page.asp">Freedom Scientific JAWS</a></td>
-   <td><a href="https://www.freedomscientific.com/Forms/TechSupport">JAWS technical support form</a></td>
+   <td><a href="https://www.freedomscientific.com/products/software/jaws/">Freedom Scientific JAWS</a></td>
+   <td><a href="https://support.freedomscientific.com/Forms/TechSupport">JAWS technical support form</a></td>
    <td></td>
   </tr>
   <tr>
@@ -30,8 +30,8 @@ The state of ARIA technology has always depended on the community. If you notice
    <td></td>
   </tr>
   <tr>
-   <td><a href="http://www.nvda-project.org/">Non Visual Desktop Access (NVDA)</a></td>
-   <td><a href="http://www.nvda-project.org/wiki/ReportingIssues">File NVDA bugs</a></td>
+   <td><a href="https://www.nvaccess.org/">Non Visual Desktop Access (NVDA)</a></td>
+   <td><a href="https://github.com/nvaccess/nvda">File NVDA bugs</a></td>
    <td>Discuss NVDA issues</td>
   </tr>
   </tbody>
@@ -50,12 +50,12 @@ The state of ARIA technology has always depended on the community. If you notice
  <tbody>
   <tr>
    <td>Apple Safari</td>
-   <td><a href="https://www.webkit.org/quality/reporting.html">File WebKit.org bugs</a></td>
+   <td><a href="https://www.webkit.org/reporting-bugs/">File WebKit.org bugs</a></td>
    <td></td>
   </tr>
   <tr>
    <td>Google Chrome</td>
-   <td><a href="https://code.google.com/p/chromium/issues/list">File Chromium bugs</a></td>
+   <td><a href="https://issues.chromium.org/issues">File Chromium bugs</a></td>
    <td></td>
   </tr>
   <tr>

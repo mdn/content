@@ -11,7 +11,8 @@ browser-compat: api.Plugin
 
 The `Plugin` interface provides information about a browser plugin.
 
-> **Note:** Own properties of `Plugin` objects are no longer enumerable in the latest browser versions.
+> [!NOTE]
+> Own properties of `Plugin` objects are no longer enumerable in the latest browser versions.
 
 ## Instance properties
 

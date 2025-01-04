@@ -13,7 +13,7 @@ browser-compat: javascript.builtins.Error
 
 Runtime errors result in new `Error` objects being created and thrown.
 
-`Error` is a {{Glossary("serializable object")}}, so it can be cloned with {{domxref("structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker/postMessage()", "postMessage()")}}.
+`Error` is a {{Glossary("serializable object")}}, so it can be cloned with {{DOMxRef("Window.structuredClone", "structuredClone()")}} or copied between [Workers](/en-US/docs/Web/API/Worker) using {{domxref("Worker/postMessage()", "postMessage()")}}.
 
 ### Error types
 
@@ -48,7 +48,7 @@ Besides the generic `Error` constructor, there are other core error constructors
 - `Error.stackTraceLimit` {{non-standard_inline}}
   - : A non-standard V8 numerical property that limits how many stack frames to include in an error stacktrace.
 - `Error.prepareStackTrace()` {{non-standard_inline}} {{optional_inline}}
-  - : A non-standard V8 function that, if provided by usercode, is called by the V8 JavaScript engine for thrown exceptions, allowing the user to provide custom formatting for stacktraces.
+  - : A non-standard V8 function that, if provided by user code, is called by the V8 JavaScript engine for thrown exceptions, allowing the user to provide custom formatting for stacktraces.
 
 ## Instance properties
 
@@ -152,7 +152,8 @@ try {
 }
 ```
 
-> **Note:** If you are making a library, you should prefer to use error cause to discriminate between different errors emitted — rather than asking your consumers to parse the error message. See the [error cause page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/cause#providing_structured_data_as_the_error_cause) for an example.
+> [!NOTE]
+> If you are making a library, you should prefer to use error cause to discriminate between different errors emitted — rather than asking your consumers to parse the error message. See the [error cause page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/cause#providing_structured_data_as_the_error_cause) for an example.
 
 [Custom error types](#custom_error_types) can also use the `cause` property, provided the subclasses' constructor passes the `options` parameter when calling `super()`. The `Error()` base class constructor will read `options.cause` and define the `cause` property on the new error instance.
 
@@ -172,11 +173,13 @@ console.log(new MyError("test", { cause: new Error("cause") }).cause);
 
 You might want to define your own error types deriving from `Error` to be able to `throw new MyError()` and use `instanceof MyError` to check the kind of error in the exception handler. This results in cleaner and more consistent error handling code.
 
-See ["What's a good way to extend Error in JavaScript?"](https://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript) on StackOverflow for an in-depth discussion.
+See ["What's a good way to extend Error in JavaScript?"](https://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript) on Stack Overflow for an in-depth discussion.
 
-> **Warning:** Builtin subclassing cannot be reliably transpiled to pre-ES6 code, because there's no way to construct the base class with a particular `new.target` without {{jsxref("Reflect.construct()")}}. You need [additional configuration](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend) or manually call {{jsxref("Object/setPrototypeOf", "Object.setPrototypeOf(this, CustomError.prototype)")}} at the end of the constructor; otherwise, the constructed instance will not be a `CustomError` instance. See [the TypeScript FAQ](https://github.com/microsoft/TypeScript/wiki/FAQ#why-doesnt-extending-built-ins-like-error-array-and-map-work) for more information.
+> [!WARNING]
+> Builtin subclassing cannot be reliably transpiled to pre-ES6 code, because there's no way to construct the base class with a particular `new.target` without {{jsxref("Reflect.construct()")}}. You need [additional configuration](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend) or manually call {{jsxref("Object/setPrototypeOf", "Object.setPrototypeOf(this, CustomError.prototype)")}} at the end of the constructor; otherwise, the constructed instance will not be a `CustomError` instance. See [the TypeScript FAQ](https://github.com/microsoft/TypeScript/wiki/FAQ#why-doesnt-extending-built-ins-like-error-array-and-map-work) for more information.
 
-> **Note:** Some browsers include the `CustomError` constructor in the stack trace when using ES2015 classes.
+> [!NOTE]
+> Some browsers include the `CustomError` constructor in the stack trace when using ES2015 classes.
 
 ```js
 class CustomError extends Error {

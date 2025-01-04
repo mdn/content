@@ -13,7 +13,8 @@ returns the full text of all {{domxref("Text")}} nodes logically adjacent to the
 The text is concatenated in document order.
 This allows specifying any text node and obtaining all adjacent text as a single string.
 
-> **Note:** This is similar to call {{domxref("Node.normalize()")}} followed by reading the text value,
+> [!NOTE]
+> This is similar to calling {{domxref("Node.normalize()")}} followed by reading the text value,
 > but without modifying the tree.
 
 ## Value

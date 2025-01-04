@@ -8,12 +8,13 @@ status:
 browser-compat: api.GPURenderBundleEncoder.setBindGroup
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`setBindGroup()`** method of the
 {{domxref("GPURenderBundleEncoder")}} interface sets the {{domxref("GPUBindGroup")}} to use for subsequent render bundle commands, for a given index.
 
-> **Note:** This method is functionally identical to its equivalent on {{domxref("GPURenderPassEncoder")}} — {{domxref("GPURenderPassEncoder.setBindGroup", "setBindGroup()")}}.
+> [!NOTE]
+> This method is functionally identical to its equivalent on {{domxref("GPURenderPassEncoder")}} — {{domxref("GPURenderPassEncoder.setBindGroup", "setBindGroup()")}}.
 
 ## Syntax
 
@@ -29,7 +30,7 @@ setBindGroup(index, bindGroup, dynamicOffsets, dynamicOffsetsStart,
 - `index`
   - : The index to set the bind group at. This matches the `n` index value of the corresponding [`@group(n)`](https://gpuweb.github.io/gpuweb/wgsl/#attribute-group) attribute in the shader code ({{domxref("GPUShaderModule")}}) used in the related pipeline.
 - `bindGroup`
-  - : The {{domxref("GPUBindGroup")}} to use for subsequent render bundle commands.
+  - : The {{domxref("GPUBindGroup")}} to use for subsequent render bundle commands, or `null`, in which case any previously-set bind group in the given slot is unset.
 - `dynamicOffsets` {{optional_inline}}
   - : A value specifying the offset, in bytes, for each entry in `bindGroup` with `hasDynamicOffset: true` set (i.e. in the descriptor of the {{domxref("GPUDevice.createBindGroupLayout()")}} call that created the {{domxref("GPUBindGroupLayout")}} object that the `bindGroup` is based on). This value can be:
     - An array of numbers specifying the different offsets.
@@ -65,6 +66,8 @@ The following criteria must be met when calling **`setBindGroup()`**, otherwise 
 
 ## Examples
 
+### Set bind group
+
 ```js
 function recordRenderPass(passEncoder) {
   if (settings.dynamicOffsets) {
@@ -87,7 +90,17 @@ function recordRenderPass(passEncoder) {
 }
 ```
 
-The above snippet is taken from the WebGPU Samples [Animometer example](https://webgpu.github.io/webgpu-samples/samples/animometer).
+The above snippet is taken from the WebGPU Samples [Animometer example](https://webgpu.github.io/webgpu-samples/samples/animometer/).
+
+### Unset bind group
+
+```js
+// Set bind group in slot 0
+passEncoder.setBindGroup(0, timeBindGroup);
+
+// Later, unset bind group in slot 0
+passEncoder.setBindGroup(0, null);
+```
 
 ## Specifications
 

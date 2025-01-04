@@ -1,7 +1,7 @@
 ---
 title: "console: groupCollapsed() static method"
 short-title: groupCollapsed()
-slug: Web/API/console/groupcollapsed_static
+slug: Web/API/console/groupCollapsed_static
 page-type: web-api-instance-method
 browser-compat: api.console.groupCollapsed_static
 ---
@@ -17,8 +17,8 @@ See [Using groups in the console](/en-US/docs/Web/API/console#using_groups_in_th
 ## Syntax
 
 ```js-nolint
-groupCollapsed()
-groupCollapsed(label)
+console.groupCollapsed()
+console.groupCollapsed(label)
 ```
 
 ### Parameters
@@ -43,5 +43,5 @@ None ({{jsxref("undefined")}}).
 - {{domxref("console/group_static", "console.group()")}}
 - {{domxref("console/groupEnd_static", "console.groupEnd()")}}
 - [Microsoft Edge's documentation for `console.groupCollapsed()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#groupcollapsed)
-- [Node.JS documentation for `console.groupCollapsed()`](https://nodejs.org/docs/latest/api/console.html#consolegroupcollapsed)
+- [Node.js documentation for `console.groupCollapsed()`](https://nodejs.org/docs/latest/api/console.html#consolegroupcollapsed)
 - [Google Chrome's documentation for `console.groupCollapsed()`](https://developer.chrome.com/docs/devtools/console/api/#groupcollapsed)

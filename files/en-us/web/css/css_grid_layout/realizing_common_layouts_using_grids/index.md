@@ -500,7 +500,7 @@ This is all looking fairly complete now, however we sometimes have these cards w
 
 ![The layout has gaps as there is not space to lay out a two track item.](11-grid-auto-flow-sparse.png)
 
-We can cause a grid to backfill those gaps by setting {{cssxref("grid-auto-flow")}}`: dense` on the grid container. Take care when doing this however as it does take items away from their logical source order. You should only do this if your items do not have a set order – and be aware of the [issues](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility#visual_not_logical_re-ordering) of the tab order following the source and not your reordered display.
+We can cause a grid to backfill those gaps by setting {{cssxref("grid-auto-flow", "grid-auto-flow: dense")}} on the grid container. Take care when doing this however as it does take items away from their logical source order. You should only do this if your items do not have a set order – and be aware of the [issues](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility#visual_not_logical_re-ordering) of the tab order following the source and not your reordered display.
 
 ```html hidden
 <ul class="listing">
@@ -605,7 +605,7 @@ This technique of using auto-placement with some rules applied to certain items 
 The best way to learn to use grid layout is to continue to build examples like the ones we have covered here. Pick something that you normally build using your framework of choice, or using floats, and see if you can build it using grid. Don't forget to find examples that are impossible to build with current methods. That might mean taking inspiration from magazines or other non-web sources. Grid Layout opens up possibilities that we have not had before, we don't need to be tied to the same old layouts to use it.
 
 - [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout)
-- [CSS Layout: Grids](/en-US/docs/Learn/CSS/CSS_layout/Grids)
+- [CSS Layout: Grids](/en-US/docs/Learn_web_development/Core/CSS_layout/Grids)
 - [A complete guide to CSS grid](https://css-tricks.com/snippets/css/complete-guide-grid/) on CSS-Tricks (2023)
-- [Grid by example](https://gridbyexample.com)
+- [Grid by example](https://gridbyexample.com/)
 - [CSS grid website layout examples](https://www.quackit.com/css/grid/examples/css_grid_website_layout_examples.cfm) on quackit.com

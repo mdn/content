@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.atob
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers("worker")}}
 
 The **`atob()`** method of the {{domxref("WorkerGlobalScope")}} interface decodes a
 string of data which has been encoded using {{glossary("Base64")}} encoding. You can use
@@ -14,8 +14,6 @@ the {{domxref("WorkerGlobalScope.btoa()")}} method to encode and transmit
 data which may otherwise cause communication problems, then transmit it and use the
 `atob()` method to decode the data again. For example, you can encode,
 transmit, and decode control characters such as {{Glossary("ASCII")}} values 0 through 31.
-
-For use with arbitrary Unicode strings, see _The "Unicode Problem"_ section in {{Glossary("Base64")}} glossary entry.
 
 ## Syntax
 
@@ -55,6 +53,7 @@ const decodedData = self.atob(encodedData); // decode the string
 ## See also
 
 - [A polyfill of `atob`](https://github.com/zloirock/core-js#base64-utility-methods) is available in [`core-js`](https://github.com/zloirock/core-js)
-- [`data` URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
+- [`data` URLs](/en-US/docs/Web/URI/Schemes/data)
 - {{domxref("Window.atob()")}}: the same method, but in window scopes.
 - {{domxref("WorkerGlobalScope.btoa()")}}
+- {{jsxref("Uint8Array.fromBase64()")}}

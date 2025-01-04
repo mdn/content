@@ -7,7 +7,12 @@ browser-compat: css.properties.scrollbar-width
 
 {{CSSRef}}
 
-The **`scrollbar-width`** property allows the author to set the maximum thickness of an element's scrollbars when they are shown.
+The **`scrollbar-width`** property allows the author to set the desired thickness of an element's scrollbars when they are shown.
+
+The purpose of the `scrollbar-width` is to optimize the space occupied by the scrollbar on a page or element; the purpose is not related to scrollbar aesthetics. The `scrollbar-width` predefined keyword values indicate to the user agent whether a normal or smaller scrollbar should be rendered. Avoid using `none`, as hiding a scrollbar negatively impacts [accessibility](#accessibility).
+
+> [!NOTE]
+> For elements that are scrollable only via programmatic means and not by direct user interaction, use the {{cssxref("overflow")}} property with a value of `hidden` rather than `scrollbar-width: none`.
 
 ## Syntax
 
@@ -27,33 +32,17 @@ scrollbar-width: unset;
 
 ### Values
 
-- `<scrollbar-width>`
+- `auto`
+  - : The default scrollbar width for the platform.
+- `thin`
+  - : A thin scrollbar width variant on platforms that provide that option, or a thinner scrollbar than the default platform scrollbar width.
+- `none`
+  - : No scrollbar shown, however the element will still be scrollable.
 
-  - : Defines the width of the scrollbar as a keyword. It must be one of the following values:
+> [!NOTE]
+> User Agents must apply any `scrollbar-width` value set on the root element to the viewport.
 
-    <table class="standard-table">
-      <tbody>
-        <tr>
-          <td><code>auto</code></td>
-          <td>The default scrollbar width for the platform.</td>
-        </tr>
-        <tr>
-          <td><code>thin</code></td>
-          <td>
-            A thin scrollbar width variant on platforms that provide that option, or
-            a thinner scrollbar than the default platform scrollbar width.
-          </td>
-        </tr>
-        <tr>
-          <td><code>none</code></td>
-          <td>No scrollbar shown, however the element will still be scrollable.</td>
-        </tr>
-      </tbody>
-    </table>
-
-> **Note:** User Agents must apply any `scrollbar-width` value set on the root element to the viewport.
-
-## Accessibility concerns
+## Accessibility
 
 Use this property with caution — setting `scrollbar-width` to `thin` or `none` can make content hard or impossible to scroll if the author does not provide an alternative scrolling mechanism. While swiping gestures or mouse wheels can enable scrolling on such content, some devices have no scroll alternative.
 

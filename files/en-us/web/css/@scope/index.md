@@ -78,7 +78,8 @@ This is where `@scope` is useful. It allows you to define a precise scope inside
 
 The `.article-body` scope root selector defines the upper bound of the DOM tree scope in which the ruleset will be applied, and the `figure` scope limit selector defines the lower bound. As a result, only {{htmlelement("img")}} elements inside a `<section>` with a class of `article-body`, but not inside {{htmlelement("figure")}} elements, will be selected.
 
-> **Note:** This kind of scoping — with an upper and lower bound — is commonly referred to as a **donut scope**.
+> [!NOTE]
+> This kind of scoping — with an upper and lower bound — is commonly referred to as a **donut scope**.
 
 If you want to select all images inside a `<section>` with a class of `article-body`, you can omit the scope limit:
 
@@ -108,7 +109,8 @@ Or you could include your `@scope` block inline inside a `<style>` element, whic
 </section>
 ```
 
-> **Note:** It is important to understand that, while `@scope` allows you to isolate the application of selectors to specific DOM subtrees, it does not completely isolate the applied styles to within those subtrees. This is most noticeable with inheritance — properties that are inherited by children (for example {{cssxref("color")}} or {{cssxref("font-family")}}) will still be inherited, beyond any set scope limit.
+> [!NOTE]
+> It is important to understand that, while `@scope` allows you to isolate the application of selectors to specific DOM subtrees, it does not completely isolate the applied styles to within those subtrees. This is most noticeable with inheritance — properties that are inherited by children (for example {{cssxref("color")}} or {{cssxref("font-family")}}) will still be inherited, beyond any set scope limit.
 
 ### The `:scope` pseudo-class
 
@@ -275,7 +277,8 @@ To fix this, you can use `@scope` as follows:
 
 Now the innermost paragraph is correctly colored black. This is because it is only one DOM tree hierarchy level away from the `.light-theme` scope root, but two levels away from the `.dark-theme` scope root. Therefore, the light style wins.
 
-> **Note:** Scoping proximity overrules source order but is itself overridden by other, higher-priority criteria such as [importance](/en-US/docs/Web/CSS/important), [layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers), and [specificity](/en-US/docs/Web/CSS/Specificity).
+> [!NOTE]
+> Scoping proximity overrules source order but is itself overridden by other, higher-priority criteria such as [importance](/en-US/docs/Web/CSS/important), [layers](/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers), and [specificity](/en-US/docs/Web/CSS/Specificity).
 
 ## Formal syntax
 
@@ -420,8 +423,8 @@ img {
 
 In our CSS, we have two `@scope` blocks:
 
-- The first `@scope` block defines its scope root as elements with a class of `.feature` (in this case, the outer `<div>` only), demonstrating how `@scope` can be used to theme a specific HTML subset.
-- The second `@scope` block also defines its scope root as elements with a class of `.feature`, but in addition defines a scope limit of `figure`. This ensures that contained rulesets will only be applied to matching elements within the scope root (`<div class="figure"> ... </div>` in this case) that **are not** nested inside descendant `<figure>` elements. This `@scope` block contains a single ruleset that styles `<img>` elements with a thick black border and a golden background color.
+- The first `@scope` block defines its scope root as elements with a class of `.feature` (in this case, the outer `<article>` only), demonstrating how `@scope` can be used to theme a specific HTML subset.
+- The second `@scope` block also defines its scope root as elements with a class of `.feature`, but also defines a scope limit of `figure`. This ensures that contained rulesets will only be applied to matching elements within the scope root (`<article class="feature"> ... </article>` in this case) that **are not** nested inside descendant `<figure>` elements. This `@scope` block contains a single ruleset that styles `<img>` elements with a thick black border and a golden background color.
 
 ```css
 /* Scoped CSS */

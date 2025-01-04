@@ -4,6 +4,8 @@ slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas/ed
 page-type: guide
 ---
 
+{{GamesSidebar}}
+
 Instead of coding everything from scratch you can also use the online **PlayCanvas editor**. This can be a more pleasant working environment if you are not someone who likes to code.
 
 ## Creating an account
@@ -56,7 +58,8 @@ Click on your new material in the assets tab and its entity inspector will appea
 
 To change its color we'll use the _Diffuse_ option in the entity inspector. Click _Diffuse_, then select the colored box next to the Color label — it will open a {{glossary("color wheel")}}. From here you can click your desired color or enter it in the bottom text field as a hex value. We've chosen a blue color with a hex value of `0095DD` — enter this code in the text field and press return for it to be accepted.
 
-> **Note:** Yes, you read that right — you need to enter the hex value without the hash/pound symbol.
+> [!NOTE]
+> Yes, you read that right — you need to enter the hex value without the hash/pound symbol.
 
 ![PlayCanvas Editor - Diffuse color](playcanvas-editor-diffusecolor.png)
 
@@ -74,7 +77,7 @@ Now click on the play arrow in the top right corner of the scene to launch and r
 
 This looks great! Let's add more shapes to the scene to make it look more interesting.
 
-![PlayCanvas Editor - Boxrender](playcanvas-editor-boxrender.png)
+![PlayCanvas Editor - Box render](playcanvas-editor-boxrender.png)
 
 ## Adding more shapes
 
@@ -94,7 +97,7 @@ Now follow the same steps as we did before when coloring the cube:
 
 ![PlayCanvas Editor - Cylinder material](playcanvas-editor-cylindermaterial.png)
 
-Follow the same approach again to add a cone to the scene, giving it a grayish color (we used EAEFF2.) You should now have three shapes on your scene, something like the below screenshot.
+Follow the same approach again to add a cone to the scene, giving it a grayish color (we used `#EAEFF2`.) You should now have three shapes on your scene, something like the below screenshot.
 
 ![PlayCanvas Editor - Cone](playcanvas-editor-cone.png)
 

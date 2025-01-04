@@ -13,7 +13,8 @@ the device, in [meters per second squared (m/s²)](https://en.wikipedia.org/wiki
 The acceleration value does not include the effect of
 the gravity force, in contrast to {{DOMxRef("DeviceMotionEvent.accelerationIncludingGravity")}}.
 
-> **Note:** If the hardware doesn't know how to remove gravity from the
+> [!NOTE]
+> If the hardware doesn't know how to remove gravity from the
 > acceleration data, this value may not be present in the
 > {{DOMxRef("DeviceMotionEvent")}}. In this situation, you'll need to use
 > {{DOMxRef("DeviceMotionEvent.accelerationIncludingGravity")}} instead.

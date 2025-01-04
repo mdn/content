@@ -1,5 +1,6 @@
 ---
 title: "HTML attribute: rel"
+short-title: rel
 slug: Web/HTML/Attributes/rel
 page-type: html-attribute
 browser-compat:
@@ -36,7 +37,7 @@ The following table lists some of the most important existing keywords. Every ke
 | [`nofollow`](#nofollow)                                              | Indicates that the current document's original author or publisher does not endorse the referenced document.                                                                                                                                                                            | Not allowed             | Annotation                                       | Annotation              |
 | [`noopener`](/en-US/docs/Web/HTML/Attributes/rel/noopener)           | Creates a top-level browsing context that is not an auxiliary browsing context if the hyperlink would create either of those, to begin with (i.e., has an appropriate `target` attribute value).                                                                                        | Not allowed             | Annotation                                       | Annotation              |
 | [`noreferrer`](/en-US/docs/Web/HTML/Attributes/rel/noreferrer)       | No `Referer` header will be included. Additionally, has the same effect as `noopener`.                                                                                                                                                                                                  | Not allowed             | Annotation                                       | Annotation              |
-| [`opener`](#opener)                                                  | Creates an auxiliary browsing context if the hyperlink would otherwise create a top-level browsing context that is not an auxiliary browsing context (i.e., has "`_blank`" as `target` attribute value).                                                                                | Not allowed             | Annotation                                       | Annotation              |
+| [`opener`](#opener)                                                  | Creates an auxiliary browsing context if the hyperlink would otherwise create a top-level browsing context that is not an auxiliary browsing context (i.e., has `"_blank"` as `target` attribute value).                                                                                | Not allowed             | Annotation                                       | Annotation              |
 | [`pingback`](#pingback)                                              | Gives the address of the pingback server that handles pingbacks to the current document.                                                                                                                                                                                                | External Resource       | Not allowed                                      | Not allowed             |
 | [`preconnect`](/en-US/docs/Web/HTML/Attributes/rel/preconnect)       | Specifies that the user agent should preemptively connect to the target resource's origin.                                                                                                                                                                                              | External Resource       | Not allowed                                      | Not allowed             |
 | [`prefetch`](/en-US/docs/Web/HTML/Attributes/rel/prefetch)           | Specifies that the user agent should preemptively fetch and cache the target resource as it is likely to be required for a followup navigation.                                                                                                                                         | External Resource       | Not allowed                                      | Not allowed             |
@@ -72,7 +73,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
       ```
 
     - With an [`hreflang`](/en-US/docs/Web/HTML/Element/link#hreflang) attribute that differs from the document language, it indicates a translation.
-    - With the [`type`](/en-US/docs/Web/HTML/Element/link#type) attribute value of `"application/rss+xml"`or `"application/atom+xml"`, it creates a hyperlink referencing a syndication feed.
+    - With the [`type`](/en-US/docs/Web/HTML/Element/link#type) attribute value of `"application/rss+xml"` or `"application/atom+xml"`, it creates a hyperlink referencing a syndication feed.
 
       ```html
       <link
@@ -112,7 +113,8 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 
     With {{htmlelement('link')}}, it represents the author of the entire document.
 
-    > **Note:** For historical reasons, the obsolete attribute value `rev="made"` is treated as `rel="author"`.
+    > [!NOTE]
+    > For historical reasons, the obsolete attribute value `rev="made"` is treated as `rel="author"`.
 
 - `bookmark`
   - : Relevant as the `rel` attribute value for the {{htmlelement('a')}} and {{htmlelement('area')}} elements. Gives a permalink for the nearest ancestor {{htmlelement('article')}} element, if there is one. If there is no ancestor `<article>` element, gives a permalink for the section the linking element is most closely associated with.
@@ -126,7 +128,8 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 
   - : Allows the page to be [render-blocked](/en-US/docs/Glossary/Render_blocking) until the essential parts of the document are parsed so it will render consistently. Note that render-blocking occurs only when supplemented with the [`blocking="render"`](/en-US/docs/Web/HTML/Element/link#blocking) attribute.
 
-    > **Note:** See [Stabilizing page state to make cross-document transitions consistent](/en-US/docs/Web/API/View_Transitions_API/Using#stabilizing_page_state_to_make_cross-document_transitions_consistent) for more information on its use.
+    > [!NOTE]
+    > See [Stabilizing page state to make cross-document transitions consistent](/en-US/docs/Web/API/View_Transition_API/Using#stabilizing_page_state_to_make_cross-document_transitions_consistent) for more information on its use.
 
 - `help`
   - : Relevant to {{htmlelement('form')}}, {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, the `help` keyword indicates that the linked to content provides context-sensitive help, providing information for the parent of the element defining the hyperlink, and its children. When used within `<link>`, the help is for the whole document. When included with {{htmlelement('a')}} and {{htmlelement('area')}} and supported, the default {{cssxref('cursor')}} will be `help` instead of `pointer`.
@@ -142,12 +145,15 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 
     If there are multiple `<link rel="icon">`s, the browser uses their [`media`](/en-US/docs/Web/HTML/Element/link#media), [`type`](/en-US/docs/Web/HTML/Element/link#type), and [`sizes`](/en-US/docs/Web/HTML/Element/link#sizes) attributes to select the most appropriate icon. If several icons are equally appropriate, the last one is used. If the most appropriate icon is later found to be inappropriate, for example because it uses an unsupported format, the browser proceeds to the next-most appropriate, and so on.
 
-    > **Note:** The [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute is not supported for `rel="icon"` in Chromium-based browsers. See the [open Chromium issue](https://crbug.com/1121645).
+    > [!NOTE]
+    > The [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute is not supported for `rel="icon"` in Chromium-based browsers. See the [open Chromium issue](https://crbug.com/1121645).
 
-    > **Note:** Apple's iOS does not use this link type, nor the [`sizes`](/en-US/docs/Web/HTML/Element/link#sizes) attribute, like others mobile browsers do, to select a webpage icon for Web Clip or a start-up placeholder.
+    > [!NOTE]
+    > Apple's iOS does not use this link type, nor the [`sizes`](/en-US/docs/Web/HTML/Element/link#sizes) attribute, like others mobile browsers do, to select a webpage icon for Web Clip or a start-up placeholder.
     > Instead it uses the non-standard [`apple-touch-icon`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) and [`apple-touch-startup-image`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6) respectively.
 
-    > **Note:** The `shortcut` link type is often seen before `icon`, but this link type is non-conforming, ignored and **web authors must not use it anymore**.
+    > [!NOTE]
+    > The `shortcut` link type is often seen before `icon`, but this link type is non-conforming, ignored and **web authors must not use it anymore**.
 
 - `license`
 
@@ -157,7 +163,8 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
     <link rel="license" href="#license" />
     ```
 
-    > **Note:** Although recognized, the synonym `copyright` is incorrect and must be avoided.
+    > [!NOTE]
+    > Although recognized, the synonym `copyright` is incorrect and must be avoided.
 
 - `manifest`
   - : [Web app manifest](/en-US/docs/Web/Manifest). Requires the use of the CORS protocol for cross-origin fetching.
@@ -176,7 +183,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 - `noreferrer`
   - : Relevant to {{htmlelement('form')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, including this value makes the referrer unknown (no `Referer` header will be included), and creates a top-level browsing context as if `noopener` were also set.
 - `opener`
-  - : Creates an auxiliary browsing context if the hyperlink would otherwise create a top-level browsing context that is not an auxiliary browsing context (i.e., has "`_blank`" as `target` attribute value). Effectively, the opposite of [noopener](#noopener).
+  - : Creates an auxiliary browsing context if the hyperlink would otherwise create a top-level browsing context that is not an auxiliary browsing context (i.e., has `"_blank"` as `target` attribute value). Effectively, the opposite of [noopener](#noopener).
 - `pingback`
   - : Gives the address of the pingback server that handles pingbacks to the current document. See the [Pingback specification](https://www.hixie.ch/specs/pingback/pingback).
 - `preconnect`

@@ -31,6 +31,18 @@ The `:focus` pseudo-class always matches the currently-focused element. The `:fo
 
 When the [`:focus`](/en-US/docs/Web/CSS/:focus) pseudo-class is used, it always targets the currently focused element. This means that when a user employs a pointing device, a visible focus ring appears around the focused element, which some consider obtrusive. The `:focus-visible` pseudo-class respects user agents' selective focus indication behavior while still allowing focus indicator customization.
 
+## Accessibility
+
+### Low vision
+
+Make sure the visual focus indicator can be seen by people with low vision. This will also benefit anyone use a screen in a brightly lit space (like outside in the sun). [WCAG 2.1 SC 1.4.11 Non-Text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) requires that the visual focus indicator be at least 3 to 1.
+
+- Accessible Visual Focus Indicators: [Give Your Site Some Focus! Tips for Designing Useful and Usable Focus Indicators](https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/)
+
+### Cognition
+
+It may not be obvious as to why the focus indicator is appearing and disappearing if a person is using mixed forms of input. For users with cognitive concerns, or who are less technologically literate, this lack of consistent behavior for interactive elements may be confusing.
+
 ## Examples
 
 ### Comparing :focus and :focus-visible
@@ -39,7 +51,7 @@ This example presents three pairs of controls. Each pair consists of a [`text`](
 
 - The first pair does not add any custom styles for focus states, and shows the default case.
 - The second pair adds styles using the `:focus` pseudo-class.
-- The third pair add styles using the `:focus-visible` pseudo-class.
+- The third pair adds styles using the `:focus-visible` pseudo-class.
 
 ```html
 <input type="text" value="Default styles" /><br />
@@ -109,18 +121,6 @@ If your code has to work in old browser versions that do not support `:focus-vis
 ```
 
 {{EmbedLiveSample("Selectively_showing_the_focus_indicator", "100%", 72)}}
-
-## Accessibility concerns
-
-### Low vision
-
-Make sure the visual focus indicator can be seen by people with low vision. This will also benefit anyone use a screen in a brightly lit space (like outside in the sun). [WCAG 2.1 SC 1.4.11 Non-Text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) requires that the visual focus indicator be at least 3 to 1.
-
-- Accessible Visual Focus Indicators: [Give Your Site Some Focus! Tips for Designing Useful and Usable Focus Indicators](https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/)
-
-### Cognition
-
-It may not be obvious as to why the focus indicator is appearing and disappearing if a person is using mixed forms of input. For users with cognitive concerns, or who are less technologically literate, this lack of consistent behavior for interactive elements may be confusing.
 
 ## Specifications
 

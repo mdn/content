@@ -10,6 +10,9 @@ spec-urls:
 
 {{CSSRef}}
 
+> [!NOTE]
+> The `rgba()` functional notation is an alias for `rgb()`. They are exactly equivalent. It is recommended to use `rgb()`.
+
 The **`rgb()`** functional notation expresses a color in the {{glossary("RGB", "sRGB")}} {{glossary("color space")}} according to its red, green, and blue components. An optional alpha component represents the color's transparency.
 
 {{EmbedInteractiveExample("pages/css/function-rgb.html")}}
@@ -25,11 +28,17 @@ rgb(255 255 255 / 50%)
 rgb(from green r g b / 0.5)
 rgb(from #0000FF calc(r + 40) calc(g + 40) b)
 rgb(from hwb(120deg 10% 20%) r g calc(b + 200))
+
+/* Legacy 'rgba()' alias */
+rgba(0 255 255)
+
+/* Legacy format */
+rgb(0, 255, 255)
+rgb(0, 255, 255, 50%)
 ```
 
-The `rgba()` function can also be used to express sRGB colors. This is an alias for `rgb()` that accepts the same parameters.
-
-> **Note:** `rgb()`/`rgba()` can also be written in a legacy form in which all values are separated with commas, for example `rgb(255, 0, 0)`. Mixing number and percent value types is not valid in the comma-separated legacy syntax (i.e. the `R`, `G`, and `B` values must be either all numbers or all percentages), and the `none` value is also not permitted.
+> [!NOTE]
+> For compatibility reasons, [Web API](/en-US/docs/Web/API/Window/getComputedStyle)-serialized color values are expressed as `rgb()` colors if the alpha channel value is exactly 1, and `rgba()` colors otherwise. In both cases, legacy syntax is used, with commas as separators (for example `rgb(255, 0, 0)`).
 
 ### Values
 
@@ -37,7 +46,7 @@ Below are descriptions of the allowed values for both absolute and [relative col
 
 #### Absolute value syntax
 
-```text
+```plain
 rgb(R G B[ / A])
 ```
 
@@ -48,11 +57,12 @@ The parameters are as follows:
 - `A` {{optional_inline}}
   - : An {{CSSXref("&lt;alpha-value&gt;")}} representing the alpha channel value of the color, where the number `0` corresponds to `0%` (fully transparent) and `1` corresponds to `100%` (fully opaque). Additionally, the keyword `none` can be used to explicitly specify no alpha channel. If the `A` channel value is not explicitly specified, it defaults to 100%. If included, the value is preceded by a slash (`/`).
 
-> **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for more information on the effect of `none`.
+> [!NOTE]
+> See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for more information on the effect of `none`.
 
 #### Relative value syntax
 
-```text
+```plain
 rgb(from <color> R G B[ / A])
 ```
 
@@ -65,9 +75,8 @@ The parameters are as follows:
 - `A` {{optional_inline}}
   - : An {{CSSXref("&lt;alpha-value&gt;")}} representing the alpha channel value of the output color, where the number `0` corresponds to `0%` (fully transparent) and `1` corresponds to `100%` (fully opaque). Additionally, the keyword `none` can be used to explicitly specify no alpha channel. If the `A` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color. If included, the value is preceded by a slash (`/`).
 
-> **Note:** The `rgba()` alias can also be used to output relative colors, and to specify origin colors. When using `rgba()` to output a relative color, you must use the comma-less modern syntax.
-
-> **Note:** To fully enable the representation of the full spectrum of visible colors, the output of relative `rgb()` color functions is serialized to `color(srgb)`. That means that querying the output color value via the {{DOMxRef("HTMLElement.style")}} property or the {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} method returns the output color as a [`color(srgb ...)`](/en-US/docs/Web/CSS/color_value/color) value.
+> [!NOTE]
+> To fully enable the representation of the full spectrum of visible colors, the output of relative `rgb()` color functions is serialized to `color(srgb)`. That means that querying the output color value via the {{DOMxRef("HTMLElement.style")}} property or the {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} method returns the output color as a [`color(srgb ...)`](/en-US/docs/Web/CSS/color_value/color) value.
 
 #### Defining relative color output channel components
 
@@ -110,7 +119,8 @@ This example:
 
 The final output color is the equivalent of `rgb(255 80 80)` in the sRGB color space — `color(srgb 1 0.313726 0.313726)`.
 
-> **Note:** As mentioned above, if the output color is using a different color model to the origin color, the origin color is converted to the same model or space as the output color in the background so that it can be represented in a way that is compatible (i.e. using the same channels).
+> [!NOTE]
+> As mentioned above, if the output color is using a different color model to the origin color, the origin color is converted to the same model or space as the output color in the background so that it can be represented in a way that is compatible (i.e. using the same channels).
 
 In the examples we've seen so far in this section, the alpha channels have not been explicitly specified for either the origin or output colors. When the output color alpha channel is not specified, it defaults to the same value as the origin color alpha channel. When the origin color alpha channel is not specified (and it is not a relative color), it defaults to `1`. Therefore, the origin and output alpha channel values are `1` for the above examples.
 
@@ -124,17 +134,18 @@ rgb(from hsl(0 100% 50% / 0.8) r g b / 0.5)
 /* Computed output color: color(srgb 1 0 0 / 0.5) */
 ```
 
-In the following example, the `hsl()` origin color is again converted into an `rgb()` representation — `rgb(255 0 0)`. {{cssxref("calc")}} calculations are applied to the `R`, `G`, `B`, and `A` values. After calculating, the R, G, B and A values are `127.5`, `25`, `175`, and`0.9` respectively. The final output color is the equivalent of `rgb(127.5 25 175 / 0.9)` in the sRGB color space: `color(srgb 0.5 0.0980392 0.686275 / 0.9)`.
+In the following example, the `hsl()` origin color is again converted into an `rgb()` representation — `rgb(255 0 0)`. {{cssxref("calc")}} calculations are applied to the `R`, `G`, `B`, and `A` values. After calculating, the R, G, B and A values are `127.5`, `25`, `175`, and `0.9` respectively. The final output color is the equivalent of `rgb(127.5 25 175 / 0.9)` in the sRGB color space: `color(srgb 0.5 0.0980392 0.686275 / 0.9)`.
 
 ```css
 rgb(from hsl(0 100% 50%) calc(r/2) calc(g + 25) calc(b + 175) / calc(alpha - 0.1))
 ```
 
-> **Note:** Because the origin color channel values are resolved to `<number>` values, you have to add numbers to them when using them in calculations, even in cases where a channel would normally accept `<percentage>`, `<angle>`, or other value types. Adding a `<percentage>` to a `<number>`, for example, doesn't work.
+> [!NOTE]
+> Because the origin color channel values are resolved to `<number>` values, you have to add numbers to them when using them in calculations, even in cases where a channel would normally accept `<percentage>`, `<angle>`, or other value types. Adding a `<percentage>` to a `<number>`, for example, doesn't work.
 
-### Formal syntax
+## Formal syntax
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Examples
 
@@ -291,39 +302,6 @@ div.comma-separated {
 #### Result
 
 {{EmbedLiveSample('Legacy syntax: comma-separated values', '100%', '150px')}}
-
-### rgba() syntax
-
-The `rgba()` syntax is an alias for `rgb()`.
-
-#### HTML
-
-```html
-<div class="rgb"></div>
-<div class="rgba"></div>
-```
-
-#### CSS
-
-```css
-div {
-  width: 100px;
-  height: 50px;
-  margin: 1rem;
-}
-
-div.rgb {
-  background-color: rgb(255 0 0 / 50%);
-}
-
-div.rgba {
-  background-color: rgba(255 0 0 / 0.5);
-}
-```
-
-#### Result
-
-{{EmbedLiveSample('rgba() syntax', '100%', '150px')}}
 
 ## Specifications
 

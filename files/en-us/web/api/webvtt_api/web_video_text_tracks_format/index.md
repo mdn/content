@@ -16,7 +16,8 @@ These can be used, for example, to add closed captions and subtitle text overlay
 The WebVTT files associated with a media element are added using the {{HTMLElement("track")}} element — see [Displaying VTT content defined in a file](/en-US/docs/Web/API/WebVTT_API#displaying_vtt_content_defined_in_a_file).
 A media element can be associated with a number of files, each representing different kinds of timed data, such as closed captions, subtitles, or chapter headings, translated into different locales.
 
-> **Note:** WebVTT content can also be created and managed programmatically using the [WebVTT API](/en-US/docs/Web/API/WebVTT_API).
+> [!NOTE]
+> WebVTT content can also be created and managed programmatically using the [WebVTT API](/en-US/docs/Web/API/WebVTT_API).
 
 ## Overview
 
@@ -25,7 +26,7 @@ The content must be encoded using {{Glossary("UTF-8")}}.
 
 The structure of a WebVTT consists of the following components, some of them optional, in this order:
 
-- A header, consisting of an optional byte order mark (BOM) — the string "`WEBVTT`" — followed by an optional text header separated by one or more space or tab characters (in WebVTT files, tabs and spaces are interchangeable).
+- A header, consisting of an optional byte order mark (BOM) — the string `WEBVTT` — followed by an optional text header separated by one or more space or tab characters (in WebVTT files, tabs and spaces are interchangeable).
 - One or more blank lines, each which is equivalent to two consecutive newlines.
 - Zero or more `STYLE`, `REGION`, or `NOTE` blocks, separated by one or more blank lines.
 - Zero or more cue or `NOTE` blocks, separated by one or more blank lines.
@@ -55,12 +56,12 @@ The following sections explain the parts of the file, including those not used i
 WebVTT files start with a header block containing the following:
 
 - An optional byte order mark (BOM), which is Unicode character `U+FEFF`.
-- The string "`WEBVTT`".
+- The string `WEBVTT`.
 - An optional text header to the right of `WEBVTT`.
 
   - There must be at least one space after `WEBVTT`.
   - You could use this header to add a description to the file.
-  - You may use anything in the text header except newlines or the string "`-->`".
+  - You may use anything in the text header except newlines or the string `-->`.
 
 The `WEBVTT` string is the only required part of the WebVTT file, so the simplest possible WebVTT file would look like this:
 
@@ -87,7 +88,7 @@ Each cue consists of three or more lines:
 - The cue payload text, which may span multiple lines, and will be terminated by an empty line.
 
 Here is an example of a simple cue.
-The first line specifies the cue's display start and end times, separated using the string "`-->`".
+The first line specifies the cue's display start and end times, separated using the string `-->`.
 The second line defines the text to be displayed.
 
 ```plain
@@ -96,7 +97,7 @@ Never drink liquid nitrogen.
 ```
 
 The next cue is slightly more complicated.
-It starts with a cue identifier — "`1 - Title Crawl`" — which may be used to reference the cue in JavaScript and CSS.
+It starts with a cue identifier — `1 - Title Crawl` — which may be used to reference the cue in JavaScript and CSS.
 It also has cue settings after the cue timings to set the cue position.
 
 ```plain
@@ -117,7 +118,7 @@ Each part of the cue is explained in more detail in the following sections.
 
 ### Cue identifier
 
-The identifier is a name that identifies the cue. It can be used to reference the cue from JavaScript or CSS. It must not contain a newline and cannot contain the string "`-->`". It must end with a single new line. Identifiers do not have to be unique, although it is common to number them (e.g., 1, 2, 3).
+The identifier is a name that identifies the cue. It can be used to reference the cue from JavaScript or CSS. It must not contain a newline and cannot contain the string `-->`. It must end with a single new line. Identifiers do not have to be unique, although it is common to number them (e.g., 1, 2, 3).
 
 The example below shows a file with several cues that include identifiers:
 
@@ -147,7 +148,7 @@ Each cue timing contains five components:
 
 - A timestamp for the start time.
 - At least one space.
-- The string "`-->`".
+- The string `-->`.
 - At least one space.
 - A timestamp for the end time, which must be greater than the start time.
 
@@ -377,7 +378,7 @@ Text marked up with these tags can be formatted in [`STYLE` blocks](#style_block
   - : Used to highlight text that has been marked up as belonging to a particular language or language variant using the format defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
 
     ```xml
-    <lang en-GB>Engish text as spoken in Great Britain!</lang>
+    <lang en-GB>English text as spoken in Great Britain!</lang>
     ```
 
 ## NOTE blocks
@@ -423,7 +424,8 @@ NOTE TODO I might add a line to indicate work that still has to be done.
 `STYLE` blocks are optional sections that can be used to embed CSS styling of cues within a WebVTT file.
 Note that these are used to style the appearance and size of the cues, but not their position and layout, which are controlled by the [Cue settings](#cue_settings).
 
-> **Note:** WebVTT cues can also be matched by CSS styles loaded by the associated [document embedding the video/audio element](/en-US/docs/Web/API/WebVTT_API#styling_webvtt_in_html_or_a_stylesheet).
+> [!NOTE]
+> WebVTT cues can also be matched by CSS styles loaded by the associated [document embedding the video/audio element](/en-US/docs/Web/API/WebVTT_API#styling_webvtt_in_html_or_a_stylesheet).
 
 `STYLE` blocks must appear before any cue blocks in the file.
 
@@ -461,7 +463,8 @@ STYLE
 NOTE style blocks cannot appear after the first cue.
 ```
 
-> **Note:** There are live examples demonstrating many of the following cases in [More cue styling examples](/en-US/docs/Web/API/WebVTT_API#more_cue_styling_examples) in _WebVTT API_.
+> [!NOTE]
+> There are live examples demonstrating many of the following cases in [More cue styling examples](/en-US/docs/Web/API/WebVTT_API#more_cue_styling_examples) in _WebVTT API_.
 
 ### Match all cue payload text
 
@@ -471,7 +474,7 @@ For example, the following `STYLE` block would match all cue text and color it y
 
 ```plain
 STYLE
-cue {
+::cue {
   color: yellow;
 }
 ```
@@ -484,16 +487,16 @@ For example, the following block would match cue payload text marked up with `la
 
 ```plain
 STYLE
-cue(c),
-cue(i),
-cue(b),
-cue(u),
-cue(ruby),
-cue(rt),
-cue(v) {
+::cue(c),
+::cue(i),
+::cue(b),
+::cue(u),
+::cue(ruby),
+::cue(rt),
+::cue(v) {
   color: red;
 }
-cue(lang) {
+::cue(lang) {
   color: yellow;
 }
 ```
@@ -593,7 +596,8 @@ Other pseudo-classes such as `link`, `nth-last-child`, and `nth-child` should wo
 
 Match against a particular cue `id` by specifying the `id` inside {{cssxref("::cue()")}}.
 
-> **Note:** At time of writing this does not appear to be supported in any of the main browsers.
+> [!NOTE]
+> At time of writing this does not appear to be supported in any of the main browsers.
 
 For example, the following WebVTT file should style the cue with identifier `cue1` in green.
 
@@ -615,13 +619,13 @@ Note that escape sequences are used in WebVTT CSS in the same way as HTML pages.
 WEBVTT
 
 STYLE
-::cue(#crédit\ de\ transcription) {
+::cue(#transcription\ credits) {
   color: red;
 }
 
-crédit de transcription
+transcription credits
 00:04.000 --> 00:05.000
-Transcrit par Célestes™
+Transcribed by Célestes™
 ```
 
 ## Specifications

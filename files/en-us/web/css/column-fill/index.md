@@ -35,6 +35,8 @@ The `column-fill` property is specified as one of the keyword values listed belo
 - `balance`
   - : Content is equally divided between columns. In fragmented contexts, such as [paged media](/en-US/docs/Web/CSS/CSS_paged_media), only the last fragment is balanced. Therefore in paged media, only the last page would be balanced.
 
+The specification defines a `balance-all` value, in which content is equally divided between columns in fragmented contexts, such as [paged media](/en-US/docs/Web/CSS/CSS_paged_media). This value is not yet supported in any browser.
+
 ## Formal definition
 
 {{cssinfo}}
@@ -91,12 +93,13 @@ p.fill-balance {
 
 {{Compat}}
 
-> **Warning:** There are some interoperability issues and bugs with `column-fill` across browsers, due to unresolved issues in the specification.
+> [!WARNING]
+> There are some interoperability issues and bugs with `column-fill` across browsers, due to unresolved issues in the specification.
 >
 > In particular, when using `column-fill: auto` to fill columns sequentially, Chrome will only consult this property if the multicol container has a size in the block dimension (e.g., height in a horizontal writing mode). Firefox will always consult this property, therefore filling the first column with all of the content in cases where there is no size.
 
 ## See also
 
-- [Multiple-column Layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- [Learn: Multiple-column Layout](/en-US/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
 - {{CSSXref("column-count")}}
 - {{CSSXref("column-width")}}

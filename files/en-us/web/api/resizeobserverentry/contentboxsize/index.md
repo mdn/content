@@ -26,8 +26,9 @@ The array is necessary to support elements that have multiple fragments, which o
     with a horizontal {{cssxref("writing-mode")}}, this is the horizontal dimension, or
     width; if the writing-mode is vertical, this is the vertical dimension, or height.
 
-> **Note:** For more explanation of writing modes and block and inline
-> dimensions, read [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
+> [!NOTE]
+> For more explanation of writing modes and block and inline
+> dimensions, read [Handling different text directions](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions).
 
 ## Examples
 

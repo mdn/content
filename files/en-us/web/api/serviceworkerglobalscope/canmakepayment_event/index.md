@@ -10,7 +10,7 @@ browser-compat: api.ServiceWorkerGlobalScope.canmakepayment_event
 
 {{APIRef("Payment Handler API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
 
-The **`canmakepayment`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired on a payment app's service worker to check whether it is ready to handle a payment. Specifically, it is fired when the merchant website calls {{domxref("PaymentRequest.PaymentRequest", "new PaymentRequest()")}}.
+The **`canmakepayment`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired on a payment app's service worker to check whether it is ready to handle a payment. Specifically, it is fired when the merchant website calls the {{domxref("PaymentRequest.PaymentRequest", "PaymentRequest()")}} constructor.
 
 ## Syntax
 
@@ -30,7 +30,7 @@ A {{domxref("CanMakePaymentEvent")}}. Inherits from {{domxref("ExtendableEvent")
 
 ## Examples
 
-The `canmakepayment` event is fired on a payment app's service worker to check whether it is ready to handle a payment. Specifically, it is fired when the merchant website calls {{domxref("PaymentRequest.PaymentRequest", "new PaymentRequest()")}}. The service worker can then use the {{domxref("CanMakePaymentEvent.respondWith()")}} method to respond appropriately:
+The `canmakepayment` event is fired on a payment app's service worker to check whether it is ready to handle a payment. Specifically, it is fired when the merchant website calls the {{domxref("PaymentRequest.PaymentRequest", "PaymentRequest()")}} constructor. The service worker can then use the {{domxref("CanMakePaymentEvent.respondWith()")}} method to respond appropriately:
 
 ```js
 self.addEventListener("canmakepayment", (e) => {

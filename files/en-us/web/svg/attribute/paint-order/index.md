@@ -9,7 +9,8 @@ browser-compat: svg.global_attributes.paint-order
 
 The **`paint-order`** attribute specifies the order that the fill, stroke, and markers of a given shape or text element are painted.
 
-> **Note:** As a presentation attribute, `paint-order` can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute, `paint-order` can be used as a CSS property.
 
 You can use this attribute with the following SVG elements:
 

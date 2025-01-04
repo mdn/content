@@ -9,9 +9,9 @@ browser-compat: html.elements.input.type_color
 
 {{HTMLElement("input")}} elements of type **`color`** provide a user interface element that lets a user specify a color, either by using a visual color picker interface or by entering the color into a text field in `#rrggbb` hexadecimal format.
 
-Only simple colors (without alpha channel) are allowed though CSS colors has more formats, e.g. color names, functional notations and a hexadecimal format with an alpha channel.
+Only basic hexadecimal colors (without alpha channel) are allowed though CSS colors has more formats, e.g. color names, functional notations and a hexadecimal format with an alpha channel.
 
-The element's presentation may vary substantially from one browser and/or platform to another—it might be a simple textual input that automatically validates to ensure that the color information is entered in the proper format, or a platform-standard color picker, or some kind of custom color picker window.
+The element's presentation may vary substantially from one browser and/or platform to another—it might be a basic textual input that automatically validates to ensure that the color information is entered in the proper format, or a platform-standard color picker, or some kind of custom color picker window.
 
 {{EmbedInteractiveExample("pages/tabbed/input-color.html", "tabbed-standard")}}
 
@@ -19,7 +19,8 @@ The element's presentation may vary substantially from one browser and/or platfo
 
 The [`value`](/en-US/docs/Web/HTML/Element/input#value) of an {{HTMLElement("input")}} element of type `color` is always a string which contains a 7-character string specifying an RGB color in hexadecimal format. While you can input the color in either upper- or lower-case, it will be stored in lower-case form. The value is never in any other form, and is never empty.
 
-> **Note:** Setting the value to anything that isn't a valid, fully-opaque, RGB color _in hexadecimal notation_ will result in the value being set to `#000000`. In particular, you can't use CSS's standardized color names, or any CSS function syntax, to set the value. This makes sense when you keep in mind that HTML and CSS are separate languages and specifications. In addition, colors with an alpha channel are not supported; specifying a color in 9-character hexadecimal notation (e.g. `#009900aa`) will also result in the color being set to `#000000`.
+> [!NOTE]
+> Setting the value to anything that isn't a valid, fully-opaque, RGB color _in hexadecimal notation_ will result in the value being set to `#000000`. In particular, you can't use CSS's standardized color names, or any CSS function syntax, to set the value. This makes sense when you keep in mind that HTML and CSS are separate languages and specifications. In addition, colors with an alpha channel are not supported; specifying a color in 9-character hexadecimal notation (e.g. `#009900aa`) will also result in the color being set to `#000000`.
 
 ## Using color inputs
 
@@ -27,7 +28,7 @@ Inputs of type `color` are simple, due to the limited number of attributes they 
 
 ### Providing a default color
 
-You can update the simple example above to set a default value, so that the color picker is pre-filled with the default color and the color picker (if any) will also default to that color:
+You can update the example above to set a default value, so that the color picker is pre-filled with the default color and the color picker (if any) will also default to that color:
 
 ```html
 <input type="color" value="#ff0000" />
@@ -195,7 +196,7 @@ The final result looks like this:
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>
-      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>no corresponding role</code></a></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">no corresponding role</a></td>
     </tr>
   </tbody>
 </table>
@@ -207,7 +208,3 @@ The final result looks like this:
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

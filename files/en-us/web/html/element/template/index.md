@@ -26,11 +26,13 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
       - : Hides the internal shadow root DOM from JavaScript.
 
-    > **Note:** The HTML parser creates a {{domxref("ShadowRoot")}} object in the DOM for the first `<template>` in a node with this attribute set to an allowed value.
+    > [!NOTE]
+    > The HTML parser creates a {{domxref("ShadowRoot")}} object in the DOM for the first `<template>` in a node with this attribute set to an allowed value.
     > If the attribute is not set, or not set to an allowed value — or if a `ShadowRoot` has already been declaratively created in the same parent — then an {{domxref("HTMLTemplateElement")}} is constructed.
     > A {{domxref("HTMLTemplateElement")}} cannot subsequently be changed into a shadow root after parsing, for example, by setting {{domxref("HTMLTemplateElement.shadowRootMode")}}.
 
-    > **Note:** You may find the non-standard `shadowroot` attribute in older tutorials and examples that used to be supported in Chrome 90-110. This attribute has since been removed and replaced by the standard `shadowrootmode` attribute.
+    > [!NOTE]
+    > You may find the non-standard `shadowroot` attribute in older tutorials and examples that used to be supported in Chrome 90-110. This attribute has since been removed and replaced by the standard `shadowrootmode` attribute.
 
 - `shadowrootclonable`
 
@@ -250,7 +252,7 @@ For the shadow root that does not have `shadowrootdelegatesfocus` set you can cl
 ![Screenshot of code with no focus set](template_with_no_focus.png)
 
 For the shadow root with `shadowrootdelegatesfocus` set, clicking on the text (which is non-focusable) selects the `<input>` element, as this is the first focusable element in the tree.
-This also focusses the parent element as shown below.
+This also focuses the parent element as shown below.
 
 ![Screenshot of the code where the element has focus](template_with_focus.png)
 
@@ -376,12 +378,12 @@ Since `firstClone` is a `DocumentFragment`, only its children are added to `cont
 
 ## See also
 
-- [`part`](/en-US/docs/Web/HTML/Global_attributes#part) and [`exportparts`](/en-US/docs/Web/HTML/Global_attributes#exportparts) HTML attributes
+- [`part`](/en-US/docs/Web/HTML/Global_attributes/part) and [`exportparts`](/en-US/docs/Web/HTML/Global_attributes/exportparts) HTML attributes
 - {{HTMLElement("slot")}} HTML element
-- {{CSSXref(":host")}}, {{CSSXref(":host_function", ":host()")}}, and {{CSSXref(":host-context", ":host-context()")}} CSS pseudo-classes
+- {{CSSXref(":has-slotted")}}, {{CSSXref(":host")}}, {{CSSXref(":host_function", ":host()")}}, and {{CSSXref(":host-context", ":host-context()")}} CSS pseudo-classes
 - {{CSSXref("::part")}} and {{CSSXref("::slotted")}} CSS pseudo-elements
 - [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) interface
 - [Using templates and slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots)
 - [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
 - [Declarative Shadow DOM (with html)](/en-US/docs/Web/API/Web_components/Using_shadow_DOM#declaratively_with_html) in _Using Shadow DOM_
-- [Declarative shadow DOM](https://developer.chrome.com/docs/css-ui/declarative-shadow-dom) on developer.chrome.com (2023)
+- [Declarative shadow DOM](https://web.dev/articles/declarative-shadow-dom) on web.dev (2023)

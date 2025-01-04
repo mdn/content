@@ -31,18 +31,18 @@ The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`script-src`** direct
 
 ## Syntax
 
-One or more sources can be allowed for the `script-src` policy:
-
 ```http
-Content-Security-Policy: script-src <source>;
-Content-Security-Policy: script-src <source> <source>;
+Content-Security-Policy: script-src 'none';
+Content-Security-Policy: script-src <source-expression-list>;
 ```
 
-### Sources
+This directive may have one of the following values:
 
-`<source>` can be any one of the values listed in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
+- `'none'`
+  - : No resources of this type may be loaded. The single quotes are mandatory.
+- `<source-expression-list>`
 
-Note that this same set of values can be used in all {{Glossary("fetch directive", "fetch directives")}} (and a [number of other directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#relevant_directives)).
+  - : A space-separated list of _source expression_ values. Resources of this type may be loaded if they match any of the given source expressions. For this directive, any of the source expression values listed in [Fetch directive syntax](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax) are applicable.
 
 ## Examples
 
@@ -127,7 +127,7 @@ Values that are not recognized as hashes by the browser are ignored, so the foll
 
 ### Unsafe inline script
 
-> **Note:**
+> [!NOTE]
 > Disallowing inline styles and inline scripts is one of the biggest security wins CSP provides.
 > If you absolutely have to use them, there are a few mechanisms that will allow them.
 > Hashes apply to inline scripts and styles, but not event handlers.
@@ -218,9 +218,9 @@ If a page has a CSP header and `'unsafe-eval'` isn't specified with the `script-
 - {{jsxref("Function", "Function()")}}
 - When passing a string literal like to methods like: `setTimeout("alert(\"Hello World!\");", 500);`
 
-  - {{domxref("setTimeout()")}}
-  - {{domxref("setInterval()")}}
-  - {{domxref("window.setImmediate")}}
+  - {{domxref("Window.setTimeout", "setTimeout()")}}
+  - {{domxref("Window.setInterval", "setInterval()")}}
+  - {{domxref("Window.setImmediate", "setImmediate()")}}
 
 - `window.execScript()` {{non-standard_inline}} (IE < 11 only)
 
@@ -263,10 +263,10 @@ will act like `'unsafe-inline' https:` in browsers that support CSP1, `https: 'n
 
 ### Allowing speculation rules
 
-To include [speculation rules](/en-US/docs/Web/API/Speculation_Rules_API) in scripts (see also [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/type/speculationrules)), you need to use the `script-src` directive along with the `'inline-speculation-rules'` source and a hash- or nonce-source. For example:
+To include [speculation rules](/en-US/docs/Web/API/Speculation_Rules_API) in a script element (see also [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/type/speculationrules)), you need to use the `script-src` directive with one of the `'inline-speculation-rules'` source, a hash-source, or nonce-source. For example:
 
 ```http
-Content-Security-Policy: script-src 'inline-speculation-rules' 'sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC'
+Content-Security-Policy: script-src 'inline-speculation-rules'
 ```
 
 ## Specifications

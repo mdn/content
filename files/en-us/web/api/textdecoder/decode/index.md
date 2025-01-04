@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.TextDecoder.decode
 ---
 
-{{APIRef("Encoding API")}}
+{{APIRef("Encoding API")}}{{AvailableInWorkers}}
 
 The **`TextDecoder.decode()`** method returns a string containing text decoded from the buffer passed as a parameter.
 

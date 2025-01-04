@@ -62,7 +62,8 @@ Your verification code is 123456.
   - Followed by a space.
   - Followed by the OTP, preceded by a pound sign (`#`).
 
-> **Note:** The provided domain value must not include a URL schema, port, or other URL features not shown above.
+> [!NOTE]
+> The provided domain value must not include a URL schema, port, or other URL features not shown above.
 
 If the `get()` method is invoked by a third-party site embedded in an {{htmlelement("iframe")}}, the SMS structure should be:
 
@@ -96,7 +97,8 @@ Or you could specify it directly on the `<iframe>` like this:
 <iframe src="https://embedded.com/..." allow="otp-credentials"> ... </iframe>
 ```
 
-> **Note:** Where a policy forbids use of WebOTP `get()`, {{jsxref("Promise", "promises")}} returned by it will reject with a `SecurityError` {{domxref("DOMException")}}.
+> [!NOTE]
+> Where a policy forbids use of WebOTP `get()`, {{jsxref("Promise", "promises")}} returned by it will reject with a `SecurityError` {{domxref("DOMException")}}.
 
 ## Interfaces
 

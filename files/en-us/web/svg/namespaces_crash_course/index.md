@@ -88,7 +88,8 @@ As an aside, it's useful to know that namespace prefixes can also be used for el
 </html>
 ```
 
-> **Note:** This is an {{Glossary("XHTML")}} file, not an HTML file. XML namespaces are not valid in HTML. To try this example, you have to save your file as `.xhtml`.
+> [!NOTE]
+> This is an {{Glossary("XHTML")}} file, not an HTML file. XML namespaces are not valid in HTML. To try this example, you have to save your file as `.xhtml`.
 
 Note that because a namespace prefix is used for the `<svg:svg>` element and its child `<svg:circle>`, it wasn't necessary to redeclare the default namespace. In general, it is better to redeclare the default namespace rather than prefix lots of elements in this way.
 
@@ -165,7 +166,7 @@ The [DOM Level 1](https://www.w3.org/TR/REC-DOM-Level-1/) recommendation was cre
       <td>
         <a href="/en-US/docs/Web/API/Document/getElementsByTagNameNS"><code>getElementsByTagNameNS()</code></a
         >
-        (also<a href="/en-US/docs/Web/API/Element/getElementsByTagNameNS">added to Element</a>)
+        (also <a href="/en-US/docs/Web/API/Element/getElementsByTagNameNS">added to Element</a>)
       </td>
     </tr>
     <tr>
@@ -283,7 +284,7 @@ For setting parameters that have a namespace, it is recommended (but not require
 elt.setAttributeNS(
   "http://www.w3.org/1999/xlink",
   "xlink:href",
-  "otherdoc.svg",
+  "other-doc.svg",
 );
 ```
 

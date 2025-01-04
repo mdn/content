@@ -3,12 +3,10 @@ title: "Element: currentCSSZoom property"
 short-title: currentCSSZoom
 slug: Web/API/Element/currentCSSZoom
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.Element.currentCSSZoom
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("DOM")}}
 
 The **`currentCSSZoom`** read-only property of the {{domxref("Element")}} interface provides the "effective" [CSS `zoom`](/en-US/docs/Web/CSS/zoom) of an element, taking into account the zoom applied to the element and all its parent elements.
 
@@ -40,8 +38,8 @@ The "child2" element contains two nested elements, one of which is not rendered,
     <div style="zoom: 3" id="child2">
       child2 (zoom: 3)
       <div id="child3_rendered">child3_rendered</div>
-      <div style="display: none" id="child3_notrendered">
-        child3_notrendered
+      <div style="display: none" id="child3_not-rendered">
+        child3_not-rendered
       </div>
     </div>
   </div>
@@ -83,9 +81,9 @@ if ("currentCSSZoom" in Element.prototype) {
   log(
     `child3_rendered (unzoomed). currentCSSZoom: ${child3_rendered.currentCSSZoom}`,
   );
-  const top_child3_notrendered = document.querySelector("#child3_notrendered");
+  const top_child3_notRendered = document.querySelector("#child3_not-rendered");
   log(
-    `child3_notrendered (not rendered): ${child3_notrendered.currentCSSZoom}`,
+    `child3_notRendered (not rendered): ${child3_notRendered.currentCSSZoom}`,
   );
 } else {
   log("Element.currentCSSZoom not supported in this browser");

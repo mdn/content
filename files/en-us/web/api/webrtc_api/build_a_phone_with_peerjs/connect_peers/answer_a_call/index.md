@@ -22,7 +22,8 @@ Now our users can make a call, but they can't answer one. Let's add the next pie
 
    ![A browser prompt that asks "Do you want to answer?" with two options: "Cancel" and "Ok"](confirm_prompt.png)
 
-   > **Warning:** Since we're using a `confirm` prompt to ask the user if they want to answer the call, it's important that the browser and tab that's being called is "active", which means the window shouldn't be minimized, and the tab should be on screen and have the mouse's focus somewhere inside it. Ideally, in a production version of this app you'd create your own modal window in HTML which wouldn't have these limitations.
+   > [!WARNING]
+   > Since we're using a `confirm` prompt to ask the user if they want to answer the call, it's important that the browser and tab that's being called is "active", which means the window shouldn't be minimized, and the tab should be on screen and have the mouse's focus somewhere inside it. Ideally, in a production version of this app you'd create your own modal window in HTML which wouldn't have these limitations.
 
 2. Let's flesh out this event listener. Update it as follows:
 

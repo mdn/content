@@ -44,6 +44,10 @@ window.onappinstalled = () => {
 };
 ```
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

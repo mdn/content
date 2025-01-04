@@ -16,7 +16,8 @@ Animations have a **playback rate** that provides a scaling factor from the rate
 
 Takes a number that can be 0, negative, or positive. Negative values reverse the animation. The value is a scaling factor, so for example a value of 2 would double the playback rate.
 
-> **Note:** Setting an animation's `playbackRate` to `0` effectively pauses the animation (however, its {{domxref("Animation.playstate", "playstate")}} does not necessarily become `paused`).
+> [!NOTE]
+> Setting an animation's `playbackRate` to `0` effectively pauses the animation (however, its {{domxref("Animation.playState", "playState")}} does not necessarily become `paused`).
 
 ## Examples
 

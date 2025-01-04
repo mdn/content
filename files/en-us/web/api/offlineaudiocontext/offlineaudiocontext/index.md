@@ -44,7 +44,7 @@ as either the same set of parameters as are inputs into the
     by CD audio.
 
 It is important to note that, whereas you can create a new {{domxref("AudioContext")}}
-using the {{domxref("AudioContext.AudioContext()", "new AudioContext()")}} constructor
+using the {{domxref("AudioContext.AudioContext()", "AudioContext()")}} constructor
 with no arguments, the `OfflineAudioContext()` constructor requires three
 arguments, since it needs to create an `AudioBuffer`. This works in exactly
 the same way as when you create a new {{domxref("AudioBuffer")}} with the

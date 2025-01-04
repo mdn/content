@@ -2,20 +2,24 @@
 title: cx
 slug: Web/SVG/Attribute/cx
 page-type: svg-attribute
-spec-urls:
-  - https://svgwg.org/svg2-draft/geometry.html#CX
-  - https://svgwg.org/svg2-draft/pservers.html#RadialGradientElementCXAttribute
+browser-compat:
+  - svg.elements.circle.cx
+  - svg.elements.ellipse.cx
+  - svg.elements.radialGradient.cx
 ---
 
 {{SVGRef}}
 
-The **`cx`** attribute define the x-axis coordinate of a center point.
+The **`cx`** attribute defines the x-axis coordinate of a center point.
 
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("circle")}}
 - {{SVGElement("ellipse")}}
 - {{SVGElement("radialGradient")}}
+
+> [!NOTE]
+> As a _geometry property_, {{cssxref("cx")}} can also be used as CSS property for `<circle>` and `<ellipse>`.
 
 ## Example
 
@@ -63,7 +67,8 @@ For {{SVGElement('circle')}}, `cx` defines the x-axis coordinate of the center o
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2 `cx`, is a _Geometry Property_, meaning this attribute can also be used as CSS property for circles.
+> [!NOTE]
+> The x-axis coordinate of the center of the `<circle>` can also be defined with the {{cssxref("cx")}} _geometry property_. If set in CSS, the `cx` property value overrides the `cx` attribute value.
 
 ## ellipse
 
@@ -86,7 +91,8 @@ For {{SVGElement('ellipse')}}, `cx` defines the x-axis coordinate of the center 
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2 `cx`, is a _Geometry Property_, meaning this attribute can also be used as CSS property for ellipses.
+> [!NOTE]
+> The x-axis coordinate of the center of the `<ellipse>` can also be defined with the {{cssxref("cx")}} _geometry property_. If set in CSS, the `cx` property value overrides the `cx` attribute value.
 
 ## radialGradient
 
@@ -96,7 +102,9 @@ For {{SVGElement('radialGradient')}}, `cx` defines the x-axis coordinate of the 
   <tbody>
     <tr>
       <th scope="row">Value</th>
-      <td>{{cssxref("length-percentage")}}</td>
+      <td>
+        <strong><a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a></strong>
+      </td>
     </tr>
     <tr>
       <th scope="row">Default value</th>
@@ -171,7 +179,14 @@ svg {
 
 {{Specifications}}
 
+## Browser compatibility
+
+{{Compat}}
+
 ## See also
 
 - {{SVGAttr("cy")}}
 - {{SVGAttr("r")}}
+- {{SVGAttr("rx")}}
+- {{SVGAttr("ry")}}
+- Geometry properties: {{cssxref("cx")}}, {{cssxref("cy")}}, {{cssxref("r")}}, {{cssxref("rx")}}, {{cssxref("ry")}}, {{cssxref("x")}}, {{cssxref("y")}}, {{cssxref("width")}}, {{cssxref("height")}}

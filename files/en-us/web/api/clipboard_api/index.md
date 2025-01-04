@@ -12,9 +12,11 @@ browser-compat:
 
 The **Clipboard API** provides the ability to respond to clipboard commands (cut, copy, and paste), as well as to asynchronously read from and write to the system clipboard.
 
-> **Note:** Use this API in preference to the deprecated {{domxref("document.execCommand()")}} method for accessing the clipboard.
+> [!NOTE]
+> Use this API in preference to the deprecated {{domxref("document.execCommand()")}} method for accessing the clipboard.
 
-> **Note:** This API is _not available_ in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (not exposed via {{domxref("WorkerNavigator")}}).
+> [!NOTE]
+> This API is _not available_ in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (not exposed via {{domxref("WorkerNavigator")}}).
 
 ## Concepts and usage
 
@@ -25,7 +27,7 @@ The Clipboard API allows users to programmatically read and write text and other
 
 Events are fired as the result of {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}, and {{domxref("Element/paste_event", "paste")}} operations modifying the clipboard.
 The events have a default action, for example the `copy` action copies the current selection to the system clipboard by default.
-The default action can be overriden by the event handler — see each of the events for more information.
+The default action can be overridden by the event handler — see each of the events for more information.
 
 ## Interfaces
 
@@ -44,11 +46,11 @@ The Clipboard API extends the following APIs, adding the listed features.
 
 - {{domxref("Navigator.clipboard")}} {{readonlyinline}} {{securecontext_inline}}
   - : Returns a {{domxref("Clipboard")}} object that provides read and write access to the system clipboard.
-- [`Element: copy`](/en-US/docs/Web/API/Element/copy_event) event
+- `Element` [`copy`](/en-US/docs/Web/API/Element/copy_event) event
   - : An event fired whenever the user initiates a copy action.
-- [`Element: cut`](/en-US/docs/Web/API/Element/cut_event) event
+- `Element` [`cut`](/en-US/docs/Web/API/Element/cut_event) event
   - : An event fired whenever the user initiates a cut action.
-- [`Element: paste`](/en-US/docs/Web/API/Element/paste_event) event
+- `Element` [`paste`](/en-US/docs/Web/API/Element/paste_event) event
   - : An event fired whenever the user initiates a paste action.
 
 <!-- Note `Window: clipboardchange` event is in spec but not implemented -->

@@ -2,10 +2,12 @@
 title: shape()
 slug: Web/CSS/basic-shape/shape
 page-type: css-function
+status:
+  - experimental
 browser-compat: css.types.basic-shape.shape
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`shape()`** [CSS function](/en-US/docs/Web/CSS/CSS_Functions) is used to define a shape for the {{cssxref("clip-path")}} and {{cssxref("offset-path")}} properties. It combines an initial starting point with a series of shape commands that define the path of the shape. The `shape()` function is a member of the {{cssxref("&lt;basic-shape&gt;")}} data type.
 
@@ -78,7 +80,8 @@ clip-path: shape(
 
     `to`: Indicates that the `<coordinate-pair>` is relative to the top-left corner of the reference box (an "absolute" value).
 
-    > **Note:** If a coordinate in a `<coordinate-pair>` is specified as a percentage, the value is calculated relative to the respective width or height of the reference box.
+    > [!NOTE]
+    > If a coordinate in a `<coordinate-pair>` is specified as a percentage, the value is calculated relative to the respective width or height of the reference box.
 
     The following `<shape-command>`s can be specified: `<move-command>`, `<line-command>`, `<hv-line-command>`, `<curve-command>`, `<smooth-command>`, `<arc-command>`, and `close`.
 

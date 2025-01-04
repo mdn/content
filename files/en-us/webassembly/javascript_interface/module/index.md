@@ -9,7 +9,8 @@ browser-compat: webassembly.api.Module
 
 A **`WebAssembly.Module`** object contains stateless WebAssembly code that has already been compiled by the browser — this can be efficiently [shared with Workers](/en-US/docs/Web/API/Worker/postMessage), and instantiated multiple times.
 
-> **Note:** The `WebAssembly.Module` object is unrelated to the [`Module`](https://emscripten.org/docs/api_reference/module.html) object used in Emscripten.
+> [!NOTE]
+> The `WebAssembly.Module` object is unrelated to the [`Module`](https://emscripten.org/docs/api_reference/module.html) object used in Emscripten.
 
 ## Constructor
 

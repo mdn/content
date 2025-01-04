@@ -18,16 +18,16 @@ The **`grid-column-start`** [CSS](/en-US/docs/Web/CSS) property specifies a grid
 grid-column-start: auto;
 
 /* <custom-ident> value */
-grid-column-start: somegridarea;
+grid-column-start: some-grid-area;
 
 /* <integer> + <custom-ident> values */
 grid-column-start: 2;
-grid-column-start: somegridarea 4;
+grid-column-start: some-grid-area 4;
 
 /* span + <integer> + <custom-ident> values */
 grid-column-start: span 3;
-grid-column-start: span somegridarea;
-grid-column-start: span somegridarea 5;
+grid-column-start: span some-grid-area;
+grid-column-start: span some-grid-area 5;
 
 /* Global values */
 grid-column-start: inherit;
@@ -53,7 +53,8 @@ This property is specified as a single `<grid-line>` value. A `<grid-line>` valu
 
   - : If there is a named line with the name `<custom-ident>-start`, it contributes the first such line to the grid item's placement.
 
-    > **Note:** Named grid areas automatically generate implicit named lines of this form, so specifying `grid-column-start: foo;` will choose the start edge of that named grid area (unless another line named `foo-start` was explicitly specified before it).
+    > [!NOTE]
+    > Named grid areas automatically generate implicit named lines of this form, so specifying `grid-column-start: foo;` will choose the start edge of that named grid area (unless another line named `foo-start` was explicitly specified before it).
 
     Otherwise, this is treated as if the integer `1` had been specified along with the `<custom-ident>`.
 

@@ -19,7 +19,8 @@ The main benefit of containment is that the browser does not have to re-render t
 
 Using the `contain` property is useful on pages with groups of elements that are supposed to be independent, as it can prevent element internals from having side effects outside of its bounding-box.
 
-> **Note:** using `layout`, `paint`, `strict` or `content` values for this property creates:
+> [!NOTE]
+> Using `layout`, `paint`, `strict` or `content` values for this property creates:
 >
 > 1. A new [containing block](/en-US/docs/Web/CSS/Containing_block) (for the descendants whose {{cssxref("position")}} property is `absolute` or `fixed`).
 > 2. A new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context).

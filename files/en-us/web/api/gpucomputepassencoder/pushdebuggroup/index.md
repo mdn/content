@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUComputePassEncoder.pushDebugGroup
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`pushDebugGroup()`** method of the
 {{domxref("GPUComputePassEncoder")}} interface begins a compute pass debug group, which is marked with a specified label, and will contain all subsequent encoded commands up until a {{domxref("GPUComputePassEncoder.popDebugGroup", "popDebugGroup()")}} method is invoked.
@@ -37,7 +37,7 @@ None ({{jsxref("Undefined")}}).
 
 const passEncoder = commandEncoder.beginComputePass();
 
-passEncoder.pushDebugGroup("mygroupmarker"); // Start labeled debug group
+passEncoder.pushDebugGroup("my_group_marker"); // Start labeled debug group
 
 passEncoder.setPipeline(computePipeline);
 passEncoder.setBindGroup(0, bindGroup);

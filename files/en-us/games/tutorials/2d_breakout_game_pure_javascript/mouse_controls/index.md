@@ -224,7 +224,8 @@ document.getElementById("runButton").addEventListener("click", function () {
 
 {{embedlivesample("compare_your_code", 600, 360)}}
 
-> **Note:** Try adjusting the boundaries of the paddle movement, so the whole paddle will be visible on both edges of the Canvas instead of only half of it.
+> [!NOTE]
+> Try adjusting the boundaries of the paddle movement, so the whole paddle will be visible on both edges of the Canvas instead of only half of it.
 
 ## Next steps
 

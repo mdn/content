@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPURenderPassEncoder.insertDebugMarker
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`insertDebugMarker()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface marks a specific point in a series of encoded render pass commands with a label.
@@ -35,7 +35,7 @@ None ({{jsxref("Undefined")}}).
 ```js
 // ...
 
-passEncoder.insertDebugMarker("mymarker");
+passEncoder.insertDebugMarker("my_marker");
 
 // ...
 ```

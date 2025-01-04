@@ -8,7 +8,8 @@ page-type: firefox-release-notes
 
 This article provides information about the changes in Firefox 88 that will affect developers. Firefox 88 was released on April 19, 2021.
 
-> **Note:** See also [Never too late for Firefox 88](https://hacks.mozilla.org/2021/04/never-too-late-for-firefox-88/) on Mozilla Hacks.
+> [!NOTE]
+> See also [Never too late for Firefox 88](https://hacks.mozilla.org/2021/04/never-too-late-for-firefox-88/) on Mozilla Hacks.
 
 ## Changes for web developers
 
@@ -24,7 +25,7 @@ _No changes._
 
 - The {{cssxref(":user-valid")}} and {{cssxref(":user-invalid")}} pseudo-classes have been implemented ([Firefox bug 1694141](https://bugzil.la/1694141)).
 - The {{cssxref("image/image-set")}} functional notation is now enabled ([Firefox bug 1698133](https://bugzil.la/1698133)), and was made available for {{cssxref("content")}} and {{cssxref("cursor")}} in [Firefox bug 1695402](https://bugzil.la/1695402) and [Firefox bug 1695403](https://bugzil.la/1695403).
-- The default `monospace` font for MacOS has been changed to Menlo ([Firefox bug 1342741](https://bugzil.la/1342741)).
+- The default `monospace` font for macOS has been changed to Menlo ([Firefox bug 1342741](https://bugzil.la/1342741)).
 - The `collapse` value of {{cssxref("visibility")}} is now implemented for ruby annotations ([Firefox bug 1697529](https://bugzil.la/1697529)).
 - The `alternate` value for {{cssxref("ruby-position")}} has been implemented, and is the new initial value for the property ([Firefox bug 1694748](https://bugzil.la/1694748)).
 - The {{cssxref("outline")}} CSS property has been updated to follow the outline created by {{cssxref("border-radius")}}. As part of this work the non-standard `-moz-outline-radius` property has been removed. ([Firefox bug 315209](https://bugzil.la/315209) and [Firefox bug 1694146](https://bugzil.la/1694146).)
@@ -37,7 +38,7 @@ _No changes._
 ### JavaScript
 
 - Added support for [RegExp match indices](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) ([Firefox bug 1519483](https://bugzil.la/1519483)).
-- [`Intl.DisplayNames()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames) and [`Intl.ListFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat) now have stricter checking that `options` passed to the constructor are [objects](/en-US/docs/Learn/JavaScript/Objects), and will throw an exception if a string or other primitive is used instead ([Firefox bug 1696881](https://bugzil.la/1696881)).
+- [`Intl.DisplayNames()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames) and [`Intl.ListFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat) now have stricter checking that `options` passed to the constructor are [objects](/en-US/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects), and will throw an exception if a string or other primitive is used instead ([Firefox bug 1696881](https://bugzil.la/1696881)).
 
 ### HTTP
 

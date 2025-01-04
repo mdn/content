@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUCanvasContext.configure
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`configure()`** method of the
 {{domxref("GPUCanvasContext")}} interface configures the context to use for rendering with a given {{domxref("GPUDevice")}}. When called the canvas will initially be cleared to transparent black.
@@ -34,7 +34,19 @@ configure(configuration)
     - `device`
       - : The {{domxref("GPUDevice")}} that the rendering information for the context will come from.
     - `format`
+
       - : The format that textures returned by `getCurrentTexture()` will have. This can be `bgra8unorm`, `rgba8unorm`, or `rgba16float`. The optimal canvas texture format for the current system can be returned by {{domxref("GPU.getPreferredCanvasFormat()")}}. Using this is recommended — if you don't use the preferred format when configuring the canvas context, you may incur additional overhead, such as additional texture copies, depending on the platform.
+
+    - `toneMapping` {{optional_inline}}
+
+      - : An object specifying parameters that define the tone mapping for the context — how the content of associated textures are to be displayed. This allows WebGPU to draw colors brighter than `white` (`#FFFFFF`). Possible properties are:
+        - `mode` {{optional_inline}}
+          - : An enumerated value specifying the tone mapping mode for the canvas. Possible values include:
+            - `standard`
+              - : The default value. Restricts rendered content to the Standard Dynamic Range (SDR) of the display. This mode is accomplished by clamping all color values in the color space of the screen to the `[0, 1]` interval.
+            - `extended`
+              - : Allows content to be rendered in the full High Dynamic Range (HDR) of the display, where available. HDR mode allows a wider range of colors and brightness levels to be displayed, with more precise instructions as to what color should be displayed in each case. This mode matches `"standard"` in the `[0, 1]` range of the screen. Clamping or projection is done to the extended dynamic range of the screen but not `[0, 1]`.
+
     - `usage` {{optional_inline}}
 
       - : {{glossary("Bitwise flags")}} specifying the allowed usage for textures returned by `getCurrentTexture()`. Possible values are:
@@ -56,6 +68,8 @@ None (`undefined`).
 
 ## Examples
 
+### Basic usage
+
 ```js
 const canvas = document.querySelector("#gpuCanvas");
 const context = canvas.getContext("webgpu");
@@ -66,6 +80,10 @@ context.configure({
   alphaMode: "premultiplied",
 });
 ```
+
+### HDR `toneMapping` demos
+
+See the [Particles (HDR)](https://webgpu.github.io/webgpu-samples/?sample=particles) sample and [HDR support](https://ccameron-chromium.github.io/webgpu-hdr/example.html) test.
 
 ## Specifications
 

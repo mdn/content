@@ -30,13 +30,15 @@ The sub-properties of the {{cssxref("animation")}} property are:
   - : Specifies the length of time in which an animation completes one cycle.
 - {{cssxref("animation-fill-mode")}}
   - : Specifies how an animation applies styles to its target before and after it runs.
+    > [!NOTE]
+    > In the case of animation [forwards](/en-US/docs/Web/CSS/animation-fill-mode#forwards) fill mode, animated properties behave as if included in a set [`will-change`](/en-US/docs/Web/CSS/will-change) property value. If a new stacking context was created during the animation, the target element retains the stacking context after the animation has finished.
 - {{cssxref("animation-iteration-count")}}
   - : Specifies the number of times an animation should repeat.
 - {{cssxref("animation-name")}}
   - : Specifies the name of the {{cssxref("@keyframes")}} at-rule describing an animation's keyframes.
 - {{cssxref("animation-play-state")}}
   - : Specifies whether to pause or play an animation sequence.
-- {{cssxref("animation-timeline")}} {{experimental_inline}}
+- {{cssxref("animation-timeline")}}
   - : Specifies the timeline that is used to control the progress of a CSS animation.
 - {{cssxref("animation-timing-function")}}
   - : Specifies how an animation transitions through keyframes by establishing acceleration curves.
@@ -56,7 +58,7 @@ The {{cssxref("animation")}} shorthand is useful for saving space. As an example
 ```css
 p {
   animation-duration: 3s;
-  animation-name: slidein;
+  animation-name: slide-in;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
@@ -66,7 +68,7 @@ p {
 
 ```css
 p {
-  animation: 3s infinite alternate slidein;
+  animation: 3s infinite alternate slide-in;
 }
 ```
 
@@ -104,7 +106,8 @@ If the mismatch in the number of animations and animation property values is inv
 
 ## Examples
 
-> **Note:** Some older browsers (pre-2017) may need prefixes; the live examples you can click to see in your browser include the `-webkit` prefixed syntax.
+> [!NOTE]
+> Some older browsers (pre-2017) may need prefixes; the live examples you can click to see in your browser include the `-webkit` prefixed syntax.
 
 ### Making text slide across the browser window
 
@@ -113,10 +116,10 @@ This basic example styles a {{HTMLElement("p")}} element using the {{cssxref("tr
 ```css
 p {
   animation-duration: 3s;
-  animation-name: slidein;
+  animation-name: slide-in;
 }
 
-@keyframes slidein {
+@keyframes slide-in {
   from {
     translate: 150vw 0;
     scale: 200% 1;
@@ -129,7 +132,7 @@ p {
 }
 ```
 
-In this example, the style for the {{HTMLElement("p")}} element specifies that the animation should take 3 seconds to execute from start to finish, using the {{cssxref("animation-duration")}} property and that the name of the {{ cssxref("@keyframes")}} at-rule defining the keyframes for the animation sequence is `slidein`.
+In this example, the style for the {{HTMLElement("p")}} element specifies that the animation should take 3 seconds to execute from start to finish, using the {{cssxref("animation-duration")}} property and that the name of the {{ cssxref("@keyframes")}} at-rule defining the keyframes for the animation sequence is `slide-in`.
 
 In this case, we have just two keyframes. The first occurs at `0%` (using the alias `from`). Here, we configure the {{cssxref("translate")}} property of the element to be at `150vw` (that is, beyond the far right edge of the containing element), and the {{cssxref("scale")}} of the element to be 200% (or two times its default inline size), causing the paragraph to be twice as wide as its `<body>` containing block. This causes the first frame of the animation to have the header drawn off the right edge of the browser window.
 
@@ -143,7 +146,8 @@ The second keyframe occurs at `100%` (using the alias `to`). The {{cssxref("tran
 </p>
 ```
 
-> **Note:** Reload page to see the animation.
+> [!NOTE]
+> Reload page to see the animation.
 
 {{EmbedLiveSample("Making_text_slide_across_the_browser_window","100%","250")}}
 
@@ -152,7 +156,7 @@ The second keyframe occurs at `100%` (using the alias `to`). The {{cssxref("tran
 Let's add another keyframe to the previous example's animation. Let's say we want Alice's name to turn pink and grow and then shrink back to its original size and color as it moves from right to left. While we could change the {{cssxref("font-size")}}, changing any properties that impact the box model negatively impacts performance. Instead, we wrap her name in a {{htmlelement("span")}} and then scale and assign a color to that separately. That requires adding a second animation impacting only the `<span>`:
 
 ```css
-@keyframes growshrink {
+@keyframes grow-shrink {
   25%,
   75% {
     scale: 100%;
@@ -170,15 +174,15 @@ The full code now looks like this:
 ```css
 p {
   animation-duration: 3s;
-  animation-name: slidein;
+  animation-name: slide-in;
 }
 p span {
   display: inline-block;
   animation-duration: 3s;
-  animation-name: growshrink;
+  animation-name: grow-shrink;
 }
 
-@keyframes slidein {
+@keyframes slide-in {
   from {
     translate: 150vw 0;
     scale: 200% 1;
@@ -190,7 +194,7 @@ p span {
   }
 }
 
-@keyframes growshrink {
+@keyframes grow-shrink {
   25%,
   75% {
     scale: 100%;
@@ -215,7 +219,8 @@ We've added a {{htmlelement("span")}} around "Alice":
 
 This tells the browser the name should be normal for the first and last 25% of the animation, but turn pink while being scaled up and back again in the middle. We set the spans's {{cssxref("display")}} property to `inline-block` as the `transform` properties do not affect non-replaced {{glossary("inline-level content")}}.
 
-> **Note:** Reload page to see the animation.
+> [!NOTE]
+> Reload page to see the animation.
 
 {{EmbedLiveSample("Adding_another_keyframe","100%","250")}}
 
@@ -226,13 +231,13 @@ To make the animation repeat itself, use the {{cssxref("animation-iteration-coun
 ```css
 p {
   animation-duration: 3s;
-  animation-name: slidein;
+  animation-name: slide-in;
   animation-iteration-count: infinite;
 }
 ```
 
 ```css hidden
-@keyframes slidein {
+@keyframes slide-in {
   from {
     translate: 150vw 0;
     scale: 200% 1;
@@ -262,14 +267,14 @@ That made it repeat, but it's very odd having it jump back to the start each tim
 ```css
 p {
   animation-duration: 3s;
-  animation-name: slidein;
+  animation-name: slide-in;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
 ```
 
 ```css hidden
-@keyframes slidein {
+@keyframes slide-in {
   from {
     translate: 150vw 0;
     scale: 200% 1;
@@ -298,19 +303,19 @@ You can get additional control over animations — as well as useful information
 
 We'll modify the sliding text example to output some information about each animation event when it occurs, so we can get a look at how they work.
 
-We've included the same keyframe animation as the previous example. This animation will last 3 seconds, be called "slidein", repeat 3 times, and travel in an alternate direction each time. In the {{cssxref("@keyframes")}}, the scale and translation are manipulated along the x-axis to make the element slide across the screen.
+We've included the same keyframe animation as the previous example. This animation will last 3 seconds, be called "slide-in", repeat 3 times, and travel in an alternate direction each time. In the {{cssxref("@keyframes")}}, the scale and translation are manipulated along the x-axis to make the element slide across the screen.
 
 ```css
-.slidein {
+.slide-in {
   animation-duration: 3s;
-  animation-name: slidein;
+  animation-name: slide-in;
   animation-iteration-count: 3;
   animation-direction: alternate;
 }
 ```
 
 ```css hidden
-@keyframes slidein {
+@keyframes slide-in {
   from {
     translate: 150vw 0;
     scale: 200% 1;
@@ -328,15 +333,15 @@ We've included the same keyframe animation as the previous example. This animati
 We'll use JavaScript code to listen for all three possible animation events. This code configures our event listeners; we call it when the document is first loaded in order to set things up.
 
 ```js
-const element = document.getElementById("watchme");
+const element = document.getElementById("watch-me");
 element.addEventListener("animationstart", listener, false);
 element.addEventListener("animationend", listener, false);
 element.addEventListener("animationiteration", listener, false);
 
-element.className = "slidein";
+element.className = "slide-in";
 ```
 
-This is pretty standard code; you can get details on how it works in the documentation for {{domxref("eventTarget.addEventListener()")}}. The last thing this code does is set the `class` on the element we'll be animating to "slidein"; we do this to start the animation.
+This is pretty standard code; you can get details on how it works in the documentation for {{domxref("eventTarget.addEventListener()")}}. The last thing this code does is set the `class` on the element we'll be animating to "slide-in"; we do this to start the animation.
 
 Why? Because the `animationstart` event fires as soon as the animation starts, and in our case, that happens before our code runs. So we'll start the animation ourselves by setting the class of the element to the style that gets animated after the fact.
 
@@ -376,7 +381,7 @@ Note that the times are very close to, but not exactly, those expected given the
 Just for the sake of completeness, here's the HTML that displays the page content, including the list into which the script inserts information about the received events:
 
 ```html
-<h1 id="watchme">Watch me move</h1>
+<h1 id="watch-me">Watch me move</h1>
 <p>
   This example shows how to use CSS animations to make <code>H1</code>
   elements move across the page.
@@ -390,7 +395,8 @@ Just for the sake of completeness, here's the HTML that displays the page conten
 
 And here's the live output.
 
-> **Note:** Reload page to see the animation.
+> [!NOTE]
+> Reload page to see the animation.
 
 {{EmbedLiveSample('Using_animation_events', '600', '300')}}
 
@@ -424,7 +430,7 @@ The HTML contains two {{htmlelement("p")}} elements with a {{htmlelement("div")}
 </div>
 
 <p>
-  This is another paragraph to show that <code>display: none; </code> is being
+  This is another paragraph to show that <code>display: none;</code> is being
   applied and removed on the above <code>&lt;div&gt; </code>. If only its
   <code>opacity</code> was being changed, it would always take up the space in
   the DOM.
@@ -519,5 +525,5 @@ The code renders as follows:
 ## See also
 
 - {{domxref("AnimationEvent", "AnimationEvent")}}
-- [CSS animation tips and tricks](/en-US/docs/Web/CSS/CSS_animations/Tips)
 - [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [Using the Web Animations API](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API)

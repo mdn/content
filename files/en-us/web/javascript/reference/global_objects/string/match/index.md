@@ -36,7 +36,7 @@ An {{jsxref("Array")}} whose contents depend on the presence or absence of the g
 
 ## Description
 
-The implementation of `String.prototype.match` itself is very simple — it simply calls the `Symbol.match` method of the argument with the string as the first parameter. The actual implementation comes from [`RegExp.prototype[Symbol.match]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match).
+The implementation of `String.prototype.match` doesn't do much other than calling the `Symbol.match` method of the argument with the string as the first parameter. The actual implementation comes from [`RegExp.prototype[Symbol.match]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match).
 
 - If you need to know if a string matches a regular expression {{jsxref("RegExp")}}, use {{jsxref("RegExp.prototype.test()")}}.
 - If you only want the first match found, you might want to use {{jsxref("RegExp.prototype.exec()")}} instead.
@@ -83,7 +83,8 @@ console.log(matches);
 // ['A', 'B', 'C', 'D', 'E', 'a', 'b', 'c', 'd', 'e']
 ```
 
-> **Note:** See also {{jsxref("String.prototype.matchAll()")}} and [Advanced searching with flags](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags).
+> [!NOTE]
+> See also {{jsxref("String.prototype.matchAll()")}} and [Advanced searching with flags](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags).
 
 ### Using named capturing groups
 

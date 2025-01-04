@@ -20,9 +20,10 @@ Photosensitive seizures may be caused by static images as well as animation. The
 
 Stripes and patterns are typical of the kinds of images that create problems, and stripes have been studied most closely. There's the potential for causing harm if there are more than five light-dark pairs of stripes in any orientation. They can be parallel, radial, curved or straight, and may be formed by rows of repeating elements.
 
-In 2005, Arnold Wilkins, John Emmett, and Graham Harding evaluated the guidelines for characterizing patterned images that could precipitate seizures. They revised the guidelines to their fundamental core, and came up with a surprisingly simple, but powerful [test](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1528-1167.2005.01405.x). which they published in the paper, **[Characterizing the Patterned Images That Precipitate Seizures and Optimizing Guidelines To Prevent Them](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1528-1167.2005.01405.x)**
+In 2005, Arnold Wilkins, John Emmett, and Graham Harding evaluated the guidelines for characterizing patterned images that could precipitate seizures. They revised the guidelines to their fundamental core, and came up with a surprisingly simple, but powerful [test](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1528-1167.2005.01405.x), which they published in the paper, **[Characterizing the Patterned Images That Precipitate Seizures and Optimizing Guidelines To Prevent Them](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1528-1167.2005.01405.x)**
 
-> **Note:** The steps necessary to evaluate material reduce to the following:
+> [!NOTE]
+> The steps necessary to evaluate material reduce to the following:
 >
 > Look at the screen:
 >
@@ -71,7 +72,7 @@ The nature of space can change depending upon what MIME type is being used, and 
 
 ### Math
 
-- [Spatial Reasoning: Why Math Talk is About More Than Numbers](https://dreme.stanford.edu/news/spatial-reasoning-why-math-talk-about-more-numbers)
+- [Spatial Reasoning: Why Math Talk is About More Than Numbers](https://dreme.stanford.edu/news/spatial-reasoning-why-math-talk-is-about-more-than-numbers/)
 
 ### Scientific Literature
 

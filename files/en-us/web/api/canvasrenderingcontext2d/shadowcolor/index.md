@@ -17,7 +17,8 @@ Be aware that the shadow's rendered opacity will be affected by the opacity of t
 of the {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} color when
 stroking.
 
-> **Note:** Shadows are only drawn if the `shadowColor`
+> [!NOTE]
+> Shadows are only drawn if the `shadowColor`
 > property is set to a non-transparent value. One of the
 > {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}},
 > {{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}, or

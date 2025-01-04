@@ -35,7 +35,8 @@ From that time forward, the best matching pair of candidates will always be avai
 
 As ICE negotiation continues, any time a pair of candidates is discovered that is better than the currently-selected pair, the new pair is selected, replacing the previous pairing, and the `selectedcandidatepairchange` event is fired again.
 
-> **Note:** It's possible for one of the configurations in the selected candidate pair to remain unchanged when a new pairing is chosen.
+> [!NOTE]
+> It's possible for one of the configurations in the selected candidate pair to remain unchanged when a new pairing is chosen.
 
 ## Examples
 

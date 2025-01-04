@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.WorkerNavigator.permissions
 ---
 
-{{APIRef("Permissions API")}}
+{{APIRef("Permissions API")}}{{AvailableInWorkers("worker")}}
 
 The **`permissions`** read-only property of the {{domxref("WorkerNavigator")}} interface
 returns a {{domxref("Permissions")}} object that can be used to query and update

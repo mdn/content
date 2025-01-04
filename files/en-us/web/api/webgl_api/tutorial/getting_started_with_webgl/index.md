@@ -35,7 +35,7 @@ The "index.html" file should contain the following:
   </head>
 
   <body>
-    <canvas id="glcanvas" width="640" height="480"></canvas>
+    <canvas id="gl-canvas" width="640" height="480"></canvas>
   </body>
 </html>
 ```
@@ -53,7 +53,7 @@ main();
 // start here
 //
 function main() {
-  const canvas = document.querySelector("#glcanvas");
+  const canvas = document.querySelector("#gl-canvas");
   // Initialize the GL context
   const gl = canvas.getContext("webgl");
 
@@ -88,7 +88,6 @@ At this point, you have enough code that the WebGL context should successfully i
 
 ## See also
 
-- [An introduction to WebGL](https://dev.opera.com/articles/introduction-to-webgl-part-1/): Written by Luz Caballero, published at dev.opera.com. This article addresses what WebGL is, explains how WebGL works (including the rendering pipeline concept), and introduces some WebGL libraries.
 - [WebGL Fundamentals](https://webglfundamentals.org/)
 - [An intro to modern OpenGL:](https://duriansoftware.com/joe/an-intro-to-modern-opengl.-table-of-contents) A series of nice articles about OpenGL written by Joe Groff, providing a clear introduction to OpenGL from its history to the important graphics pipeline concept, and also includes some examples to demonstrate how OpenGL works. If you have no idea what OpenGL is, this is a good place to start.
 

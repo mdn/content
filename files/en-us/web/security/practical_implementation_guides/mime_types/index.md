@@ -19,7 +19,7 @@ All sites must set the `X-Content-Type-Options` header with a value of `nosniff`
 `nosniff` blocks a request if the request destination:
 
 - is of type `style` and the MIME type is not `text/css`.
-- is of type `script` and the MIME type is not a valid [JavaScript MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript).
+- is of type `script` and the MIME type is not a valid [JavaScript MIME type](/en-US/docs/Web/HTTP/MIME_types#textjavascript).
 
 ## Examples
 
@@ -31,5 +31,5 @@ X-Content-Type-Options: nosniff
 
 ## See also
 
-- [MIME types (IANA media types): MIME sniffing](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#mime_sniffing)
-- [Properly configuring server MIME types](/en-US/docs/Learn/Server-side/Configuring_server_MIME_types)
+- [MIME types (IANA media types): MIME sniffing](/en-US/docs/Web/HTTP/MIME_types#mime_sniffing)
+- [Properly configuring server MIME types](/en-US/docs/Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types)

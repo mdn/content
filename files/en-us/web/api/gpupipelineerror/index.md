@@ -7,7 +7,7 @@ status:
 browser-compat: api.GPUPipelineError
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`GPUPipelineError`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} describes a pipeline failure. This is the value received when a {{jsxref("Promise")}} returned by a {{domxref("GPUDevice.createComputePipelineAsync()")}} or {{domxref("GPUDevice.createRenderPipelineAsync()")}} call rejects.
 
@@ -26,6 +26,8 @@ _Inherits properties from its parent, {{domxref("DOMException")}}._
   - : An enumerated value that defines the reason the pipeline creation failed in a machine-readable way.
 
 ## Examples
+
+<!-- cSpell:ignore maijn -->
 
 In the following snippet we are attempting to create a {{domxref("GPUComputePipeline")}} using {{domxref("GPUDevice.createComputePipelineAsync()")}}. However, we have misspelt our compute pipeline `entryPoint` as `"maijn"` (it should be `"main"`), therefore pipeline creation fails, and our `catch` block prints the resulting reason and error message to the console.
 

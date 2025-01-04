@@ -32,7 +32,7 @@ configure(config)
       - : An integer representing the horizontal dimension of the {{domxref("VideoFrame")}} in pixels when displayed.
     - `displayAspectHeight` {{optional_inline}}
       - : An integer representing the vertical dimension of the {{domxref("VideoFrame")}} in pixels when displayed.
-    - `colorSpace`
+    - `colorSpace` {{optional_inline}}
       - : An object representing a {{domxref("VideoColorSpace")}}, containing the following members:
         - `primaries`
           - : A string representing the color {{glossary("gamut")}} of the video sample. One of:
@@ -50,15 +50,16 @@ configure(config)
             - `"bt709"`
             - `"bt470bg"`
             - `"smpte170m"`
-    - `hardwareAcceleration`
+    - `hardwareAcceleration` {{optional_inline}}
       - : A hint as to the hardware acceleration method to use. One of:
         - `"no-preference"`
         - `"prefer-hardware"`
         - `"prefer-software"`
-    - `optimizeForLatency`
+    - `optimizeForLatency` {{optional_inline}}
       - : A boolean. If `true` this is a hint that the selected decoder should be optimized to minimize the number of {{domxref("EncodedVideoChunk")}} objects that have to be decoded before a {{domxref("VideoFrame")}} is output.
 
-> **Note:** The registrations in the [WebCodecs Codec Registry](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry) link to a specification detailing whether and how to populate the optional `description` member.
+> [!NOTE]
+> The registrations in the [WebCodecs Codec Registry](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry) link to a specification detailing whether and how to populate the optional `description` member.
 
 ### Return value
 

@@ -867,11 +867,13 @@ For {{SVGElement('foreignObject')}}, `y` defines the y coordinate of the upper l
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `y` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for `<foreignObject>`.
+> [!NOTE]
+> The y-axis coordinate of the `<foreignObject>` can also be defined with the {{cssxref("y")}} _geometry property_. If set in CSS, the `y` property value overrides the `y` attribute value.
 
 ### `<glyphRef>`
 
-> **Warning:** As of SVG2 {{SVGElement('glyphRef')}} is deprecated and shouldn't be used.
+> [!WARNING]
+> As of SVG2 {{SVGElement('glyphRef')}} is deprecated and shouldn't be used.
 
 For {{SVGElement('glyphRef')}}, `y` defines the y-axis coordinate of the glyph.
 
@@ -931,7 +933,8 @@ For {{SVGElement('image')}}, `y` defines the y coordinate of the upper left corn
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `y` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for images.
+> [!NOTE]
+> The y-axis coordinate of the `<image>` can also be defined with the {{cssxref("y")}} _geometry property_. If set in CSS, the `y` property value overrides the `y` attribute value.
 
 ### `<mask>`
 
@@ -1026,7 +1029,8 @@ For {{SVGElement('rect')}}, `y` defines the y coordinate of the upper left corne
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `y` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for rectangles.
+> [!NOTE]
+> The y-axis coordinate of the `<rect>` can also be defined with the {{cssxref("y")}} _geometry property_. If set in CSS, the `y` property value overrides the `y` attribute value.
 
 ### `<svg>`
 
@@ -1061,7 +1065,8 @@ For {{SVGElement('svg')}}, `y` defines the y coordinate of the upper left corner
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `y` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for `<svg>`.
+> [!NOTE]
+> The y-axis coordinate of the `<svg>` can also be defined with the {{cssxref("y")}} _geometry property_. If set in CSS, the `y` property value overrides the `y` attribute value.
 
 ### `<text>`
 
@@ -1142,7 +1147,8 @@ line {
 
 ### `<tref>`
 
-> **Warning:** As of SVG2 {{SVGElement('tref')}} is deprecated and shouldn't be used.
+> [!WARNING]
+> As of SVG2 {{SVGElement('tref')}} is deprecated and shouldn't be used.
 
 For {{SVGElement('tref')}}, if it contains a single value, `y` defines the y coordinate where the _content text position_ must be placed. The _content text position_ is usually a point on the baseline of the first line of text. The exact _content text position_ is influenced by other properties, such as {{SVGAttr('text-anchor')}} or {{cssxref('direction')}}.
 
@@ -1289,7 +1295,8 @@ For {{SVGElement('use')}}, `y` defines the y coordinate of the upper left corner
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `y` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for used elements.
+> [!NOTE]
+> Declaring a `<length>` or `<percentage>` value in CSS using the {{cssxref("y")}} _geometry property_ overrides the y-axis coordinate of the `<use>` set by the `y` attribute in some browsers. This behavior is at-risk.
 
 ## Examples
 

@@ -10,7 +10,8 @@ This writing style guide describes how content should be written, organized, spe
 
 These guidelines are for ensuring language and style consistency across the website. That said, we are more interested in content rather than its formatting, so don't feel obligated to learn the entire writing style guide before contributing. Do not be upset or surprised, however, if another contributor later edits your work to conform to this guide. The reviewers might also point you to this style guide when you submit a content pull request.
 
-> **Note:** The language aspects of this guide apply primarily to English-language documentation. Other languages may have (and are welcome to create) their own style guides. These should be published as subpages of the respective localization team's page. However, this guide should still be consulted for formatting and organizing content.
+> [!NOTE]
+> The language aspects of this guide apply primarily to English-language documentation. Other languages may have (and are welcome to create) their own style guides. These should be published as subpages of the respective localization team's page. However, this guide should still be consulted for formatting and organizing content.
 
 After listing the general writing guidelines, this guide describes the recommended writing style for MDN Web Docs and then how to format different components on a page, such as lists and titles.
 
@@ -82,7 +83,7 @@ In a guide or tutorial, the introductory paragraph(s) should inform the reader a
   > The {{domxref("CanvasRenderingContext2D")}} method **`strokeText()`**, part of the [Canvas 2D API](/en-US/docs/Web/API/Canvas_API), strokes (draws the outlines of) the characters of a specified string, anchored at the position indicated by the given X and Y coordinates.
   > The text is drawn using the context's current {{domxref("CanvasRenderingContext2D.font", "font")}}, and is justified and aligned according to the {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, and {{domxref("CanvasRenderingContext2D.direction", "direction")}} properties.
   >
-  > For more details and examples, see the [Text](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics#text) section on the Drawing graphics page as well as our main article on the subject, [Drawing text](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
+  > For more details and examples, see the [Text](/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics#text) section on the Drawing graphics page as well as our main article on the subject, [Drawing text](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
 ### Use inclusive language
 
@@ -108,7 +109,8 @@ Both versions are gender-specific. To fix this, use gender-neutral pronouns like
 
 - **Correct**: "A confirmation dialog asks the user if they want to allow the web page to make use of their webcam."
 
-> **Note:** MDN Web Docs allows the use of third-person plural, commonly known as "[singular 'they'](https://en.wikipedia.org/wiki/Singular_they).". The gender-neutral pronouns include "they," "them", "their," and "theirs".
+> [!NOTE]
+> MDN Web Docs allows the use of third-person plural, commonly known as "[singular 'they'](https://en.wikipedia.org/wiki/Singular_they).". The gender-neutral pronouns include "they," "them", "their," and "theirs".
 
 Another option is to make the users plural, like so:
 
@@ -153,9 +155,11 @@ The following checklist is good to keep in mind while writing and reviewing cont
   - **Add examples**: There should be examples covering all parameters or at least the parameters (or properties, or attributes) that users from the beginner-through-intermediate range are likely to use, as well as any advanced ones that require extra explanation. Each example should be preceded with an overview of what the example will do, what additional knowledge might be needed to understand it, and so forth. After the example (or interspersed among pieces of the example) should be text explaining how the code works. Don't skimp on the details or the handling of errors in examples. Keep in mind that users _will_ copy and paste your example to use in their own projects, and your code _will_ wind up used on production sites! See our [code example guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide) for more useful information.
   - **Explain use cases**: If there are particularly common use cases for the feature being described, talk about them! Instead of assuming that a user will figure out that the method being documented can be used to solve a common development problem, actually add a section about that use case with an example and text explaining how the example works.
   - **Add image information**: Include proper [`alt`](/en-US/docs/Web/HTML/Element/img#alt) text on all images and diagrams. This text, as well as captions on tables and other figures, counts because spiders can't crawl images, and so `alt` text tells search engine crawlers what content the embedded media contains.
-    > **Note:** It is not recommended to include too many keywords or keywords not related to the feature in an attempt to manipulate search engine rankings; this type of behavior is easy to spot and tends to be penalized.
+    > [!NOTE]
+    > It is not recommended to include too many keywords or keywords not related to the feature in an attempt to manipulate search engine rankings; this type of behavior is easy to spot and tends to be penalized.
     > Likewise, **do not** add repetitive, unhelpful material or blobs of keywords within the actual page, in an attempt to improve the page's size and search ranking. This does more harm than good, both to content readability and to our search results.
-  - **Focus on topic content**: It is far better to write content around the topic of the page than a specific keyword. It is highly likely that there will be many keywords you could include for a given topic; in fact, many SEOs compile a list of 5-100 different keywords (varying between short, medium, and long-tail keywords) to include within their article, depending on the length. Doing so will diversify your wording, leading to less repetition.
+
+- **Focus on topic content**: It is far better to write content around the topic of the page than a specific keyword. It is highly likely that there will be many keywords you could include for a given topic; in fact, many SEOs compile a list of 5-100 different keywords (varying between short, medium, and long-tail keywords) to include within their article, depending on the length. Doing so will diversify your wording, leading to less repetition.
 
 ## Writing style
 
@@ -214,7 +218,8 @@ An abbreviation is a shortened version of a longer word, while an acronym is a n
   | N.B.   | _nota bene_      | note well               |
   | P.S.   | _post scriptum_  | postscript              |
 
-  > **Note:** Always consider whether it's truly beneficial to use a Latin abbreviation. Some of these are used so rarely that many readers will either confuse or fail to understand their meanings.
+  > [!NOTE]
+  > Always consider whether it's truly beneficial to use a Latin abbreviation. Some of these are used so rarely that many readers will either confuse or fail to understand their meanings.
   >
   > Also, be sure that _you_ use them correctly if you choose to do so. For example, be careful not to confuse "e.g." with "i.e.", which is a common error.
 
@@ -233,7 +238,8 @@ An abbreviation is a shortened version of a longer word, while an acronym is a n
 
 Use standard English capitalization rules in body text, and capitalize "World Wide Web." It is acceptable to use lower case for "web" (used alone or as a modifier) and "internet".
 
-> **Note:** This guideline is a change from a previous version of this guide, so you may find many instances of "Web" and "Internet" on MDN.
+> [!NOTE]
+> This guideline is a change from a previous version of this guide, so you may find many instances of "Web" and "Internet" on MDN.
 > Feel free to change these as you are making other changes, but editing an article just to change capitalization is not necessary.
 
 Keyboard keys should use sentence-style capitalization, not all-caps capitalization.
@@ -359,11 +365,21 @@ Compound words should be hyphenated only when the last letter of the prefix is a
 Use American-English spelling.
 
 In general, use the first entry at [Dictionary.com](https://www.dictionary.com/), unless that entry is listed as a variant spelling or as being primarily used in a non-American form of English.
-For example, if you [look up "behaviour"](https://www.dictionary.com/browse/behaviour)(with an additional _u_ added to the American standard form), you find the phrase "Chiefly British" followed by a link to the American standard form, ["behavior"](https://www.dictionary.com/browse/behavior).
+For example, if you [look up "behaviour"](https://www.dictionary.com/browse/behaviour) (with an additional _u_ added to the American standard form), you find the phrase "Chiefly British" followed by a link to the American standard form, ["behavior"](https://www.dictionary.com/browse/behavior).
 Do not use variant spelling.
+
+<!-- cSpell:ignore localise behaviour colour -->
 
 - **Correct**: localize, behavior, color
 - **Incorrect**: localise, behaviour, colour
+
+We have [cSpell](https://cspell.org/) installed to catch spelling errors. It runs every week and generates [a report of spelling errors](https://github.com/mdn/content/issues?q=Weekly+spelling+check+is%3Aissue+in%3Atitle) in the repository. You can also run it locally via the following command:
+
+```bash
+npx cspell --no-progress --gitignore --config .vscode/cspell.json "**/*.md"
+```
+
+In the repository, we maintain several word lists, located at [`.vscode/dictionaries`](https://github.com/mdn/content/tree/main/.vscode/dictionaries), that contain sanctioned words not in the default dictionaries. You can add more words to these lists if they are valid but reported by the spell checker. Read [`.vscode/cspell.json`](https://github.com/mdn/content/blob/main/.vscode/cspell.json) to understand what each dictionary contains and the details of our spell-checking configuration.
 
 ### Terminology
 
@@ -377,7 +393,7 @@ These are our recommendations for using certain technical terms:
   On MDN, you can optionally specify the HTML element in the [`HTMLElement` macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references), which will style the element, add the angle brackets "<>", as well as add a link to its reference page.
 
   - **Using backticks**: `<span>`
-  - **Using the macro**: {{HTMLElement("span")}} (source in markdown: \\{{HTMLElement("span")\}})
+  - **Using the macro**: {{HTMLElement("span")}} (source in markdown: `\{{HTMLElement("span")}}`)
 
 - **Parameters vs. arguments**: The preferred term on MDN Web Docs is **parameters**. Please avoid the term "arguments" for consistency whenever possible.
 
@@ -434,7 +450,7 @@ Follow similar style when linking to a section on a page, as shown below:
 
 If the section you're linking to is on the same page, you can hint at the location of the section using the words "above" or "below".
 
-- **Correct**: "This concept is described in more detail in the [Accessibility concerns](/en-US/docs/Web/CSS/gradient/repeating-conic-gradient#accessibility_concerns) section below."
+- **Correct**: "This concept is described in more detail in the [Accessibility](/en-US/docs/Web/CSS/gradient/repeating-conic-gradient#accessibility) section below."
 
 You can link part of a sentence to an article or the section of an article. Be mindful to use descriptive phrases as link texts to provide enough context for the page being linked.
 
@@ -457,7 +473,8 @@ In general, if you're considering adding an external link, you need to ensure th
 - Attempt to use MDN Web Docs to distribute spam
 - Shortlinks that obfuscate the link destination
 
-> **Note:** Before adding an external link, consider cross-referencing content within MDN Web Docs. Internal links are easier to maintain and make the entirety of MDN Web Docs more valuable to readers.
+> [!NOTE]
+> Before adding an external link, consider cross-referencing content within MDN Web Docs. Internal links are easier to maintain and make the entirety of MDN Web Docs more valuable to readers.
 
 - **Good external links**: Good external links take readers to resources that are relevant, durable, and widely trusted. You should prefer adding links to external content that is:
 
@@ -476,7 +493,8 @@ In general, if you're considering adding an external link, you need to ensure th
 
 - **Links that are self-promotional or spam**: While a personal blog post, conference talk, or GitHub repository has value, linking to your own resources can create the appearance of a conflict of interest. Think twice before linking to resources that you have a business or personal connection with.
 
-  > **Note:** If you have a business or personal relationship with the target of a link, you must disclose that relationship in your pull request. Failure to do so may imperil your continued participation with MDN Web Docs.
+  > [!NOTE]
+  > If you have a business or personal relationship with the target of a link, you must disclose that relationship in your pull request. Failure to do so may imperil your continued participation with MDN Web Docs.
 
   Sometimes such links are relevant and appropriate. For example, if you're the editor of a specification and you're contributing to documentation related to that specification, then linking to that specification is expected and acceptable. But you must disclose the relationship between you and the link.
 
@@ -508,7 +526,7 @@ Keep the following dos and don'ts in mind while creating headings for subsection
 
 If you include images or other media on a page, follow these guidelines:
 
-- Make sure the media license allows you to use them. Try to use media that has a very permissive license such as [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/) or at least one that is compatible with our general content license — [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA).
+- Make sure the media license allows you to use them. Try to use media that has a very permissive license such as [CC0](https://creativecommons.org/public-domain/cc0/) or at least one that is compatible with our general content license — [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA).
 - For images, run them through <https://tinypng.com> or <https://imageoptim.com> to reduce the page weight.
 - For `SVG`, run the code through [SVGOMG](https://jakearchibald.github.io/svgomg/), and ensure that the `SVG` file has an empty line at the end of the file.
 - Every image must [include descriptive `alt` text](/en-US/docs/MDN/Writing_guidelines/Howto/Images_media#adding_alternative_text_to_images).
@@ -559,7 +577,7 @@ However, depending on the type of list you are creating, you will want to adjust
 
 Most of the guides, reference pages, and even glossary pages on MDN Web Docs contain a _See also_ section at the end of the article. This section contains [cross-references](#cross-references_linking) to related topics within MDN and sometimes links to related external articles. For example, this is the [See also section](/en-US/docs/Web/CSS/@layer#see_also) for the `@layer` page.
 
-In general, present the links in a See also section in a [bulleted list](#lists) format with each item in the list as a phrase. In the [Learn web development](/en-US/docs/Learn) area on MDN, however, the See also section follows the [definition list](/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#definition_lists) format.
+In general, present the links in a See also section in a [bulleted list](#lists) format with each item in the list as a phrase. In the [Learn web development](/en-US/docs/Learn_web_development) section on MDN, however, the See also section follows the [definition list](/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#definition_lists) format.
 
 To maintain consistency across MDN Web Docs, keep the following guidelines in mind while adding or updating a See also section.
 
@@ -614,8 +632,8 @@ Try to avoid putting your article at the top of the hierarchy, which slows the s
 The page title, which is displayed at the top of the page, can be different from the page "slug", which is the portion of the page's URL following `<locale>/docs/`. Keep the following guidelines in mind when defining a slug:
 
 - Slugs should be kept short. When creating a new level of hierarchy, the new level's component in the slug should just be a word or two.
-- Slugs should use an underscore for a multi-word component, such as `Getting_started` in `/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started`.
-- Follow sentence casing in slugs as well for each component, such as `Getting_started` in the previous example.
+- Slugs should use an underscore for a multi-word component, such as `Basic_HTML_syntax` in `/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax`.
+- Follow sentence casing in slugs as well for each component, such as `Basic_HTML_syntax` in the previous example.
 
 ### Titles
 
@@ -656,16 +674,15 @@ Keep the following guidelines in mind when writing titles:
 
 ### Other style guides
 
-If you have questions about usage and style not covered here, we recommend referring to the [Microsoft Writing Style Guide](https://docs.microsoft.com/style-guide/welcome/) or the [Chicago Manual of Style](https://www.chicagomanualofstyle.org).
-An [unofficial crib sheet for the Chicago Manual of Style](https://faculty.cascadia.edu/cma/HIST148/cmscrib.pdf) is available online.
+If you have questions about usage and style not covered here, we recommend referring to the [Microsoft Writing Style Guide](https://learn.microsoft.com/en-us/style-guide/welcome/) or the [Chicago Manual of Style](https://www.chicagomanualofstyle.org/).
 
 ### Language, grammar, and spelling
 
 If you're interested in improving your writing and editing skills, you may find the following resources to be helpful.
 
 - [Common errors in English usage](https://brians.wsu.edu/common-errors-in-english-usage/) on brians.wsu.edu
-- [English grammar FAQ](https://www-personal.umich.edu/~jlawler/aue.html) on alt-usage-english.org
+- [English grammar FAQ](https://websites.umich.edu/~jlawler/aue.html) on alt-usage-english.org
 - [English language and usage](https://english.stackexchange.com/) on english.stackexchange.com: Question and answer site for English language usage
-- [Merriam-Webster's Concise Dictionary of English Usage](https://www.google.com/books/edition/Merriam_Webster_s_Dictionary_of_English/UDIjAQAAIAAJ) on google.com/books (published 2002): Scholarly but user-friendly, evidence-based advice; very good for non-native speakers, especially for preposition usage
+- [Merriam-Webster's Concise Dictionary of English Usage](https://books.google.com/books?id=UDIjAQAAIAAJ) on google.com/books (published 2002): Scholarly but user-friendly, evidence-based advice; very good for non-native speakers, especially for preposition usage
 - [On Writing Well](https://www.harpercollins.com/products/on-writing-well-william-zinsser) by William Zinsser on harpercollins.com (published 2016)
-- [Style: Lessons in Clarity and Grace](https://www.google.ca/books/edition/Style/QjskvgEACAAJ) by Joseph Williams and Gregory Colomb on google.com/books (published 2019)
+- [Style: Lessons in Clarity and Grace](https://books.google.com/books?id=QjskvgEACAAJ) by Joseph Williams and Gregory Colomb on google.com/books (published 2019)

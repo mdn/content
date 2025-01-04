@@ -38,7 +38,8 @@ Note: the URL type is `uri-list` with an _I_, not an _L_.
 
 To drag multiple links, separate each link inside the `text/uri-list` data with a CRLF linebreak. Lines that begin with a number sign (`#`) are comments, and should not be considered URLs. You can use comments to indicate the purpose of a URL, the title associated with a URL, or other data.
 
-> **Warning:** The `text/plain` fallback for multiple links should include all URLs, but no comments.
+> [!WARNING]
+> The `text/plain` fallback for multiple links should include all URLs, but no comments.
 
 For example, this sample `text/uri-list` data contains two links and a comment:
 
@@ -50,7 +51,8 @@ http://www.example.com
 
 When retrieving a dropped link, ensure you handle when multiple links are dragged, including any comments. For convenience, the special type `URL` may be used to refer to the first valid link within data for the `text/uri-list` type.
 
-> **Warning:** Do not add data with the `URL` type — attempting to do so will set the value of the `text/uri-list` type instead.
+> [!WARNING]
+> Do not add data with the `URL` type — attempting to do so will set the value of the `text/uri-list` type instead.
 
 ```js
 const url = event.dataTransfer.getData("URL");
@@ -95,7 +97,7 @@ You could use feature detection to determine which method is supported on `types
 
 ## Dragging Images
 
-Direct image dragging is not common. In fact, Mozilla does not support direct image dragging on Mac or Linux. Instead, images are usually dragged only by their URLs. To do this, use the `text/uri-list` type as with other URLs. The data should be the URL of the image, or a [`data:` URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) if the image is not stored on a website or disk.
+Direct image dragging is not common. In fact, Mozilla does not support direct image dragging on Mac or Linux. Instead, images are usually dragged only by their URLs. To do this, use the `text/uri-list` type as with other URLs. The data should be the URL of the image, or a [`data:` URL](/en-US/docs/Web/URI/Schemes/data) if the image is not stored on a website or disk.
 
 As with links, the data for the `text/plain` type should also contain the URL. However, a `data:` URL is not usually useful in a text context, so you may wish to exclude the `text/plain` data in this situation.
 
@@ -107,8 +109,8 @@ It is important to set the data in the right order, from most-specific to least-
 
 ```js
 const dt = event.dataTransfer;
-dt.setData("text/uri-list", imageurl);
-dt.setData("text/plain", imageurl);
+dt.setData("text/uri-list", imageURL);
+dt.setData("text/plain", imageURL);
 ```
 
 ## Dragging Nodes

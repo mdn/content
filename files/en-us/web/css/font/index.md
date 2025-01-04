@@ -63,10 +63,10 @@ If `font` is specified as a shorthand for several font-related properties, then:
   - {{cssxref("&lt;font-stretch&gt;")}}
   - {{cssxref("&lt;line-height&gt;")}}
 
-- `font-style`, `font-variant` and `font-weight` must precede `font-size`
-- `font-variant` may only specify the values defined in CSS 2.1, that is `normal` and `small-caps`
+- `font-style`, `font-variant` and `font-weight` must precede `font-size`.
+- `font-variant` may only specify the values defined in CSS 2.1, that is `normal` and `small-caps`.
 - `font-stretch` may only be a single keyword value.
-- `line-height` must immediately follow `font-size`, preceded by "/", like this: "`16px/3`"
+- `line-height` must immediately follow `font-size`, preceded by "/", like this: `16px/3`.
 - `font-family` must be the last value specified.
 
 ### Values
@@ -504,4 +504,4 @@ setCss();
 
 - {{cssxref("font-style")}}
 - {{cssxref("font-weight")}}
-- [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
+- [Learn: Fundamental text and font styling](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals)

@@ -13,7 +13,7 @@ The **`<fencedframe>`** [HTML](/en-US/docs/Web/HTML) element represents a nested
 
 - Communication is restricted between the `<fencedframe>` content and its embedding site.
 - A `<fencedframe>` can access cross-site data, but only in a very specific set of controlled circumstances that preserve user privacy.
-- A `<fencedframes>` cannot be manipulated or have its data accessed via regular scripting (for example reading or setting the source URL). `<fencedframe>` content can only be embedded via [specific APIs](/en-US/docs/Web/API/Fenced_frame_API#use_cases).
+- A `<fencedframe>` cannot be manipulated or have its data accessed via regular scripting (for example reading or setting the source URL). `<fencedframe>` content can only be embedded via [specific APIs](/en-US/docs/Web/API/Fenced_frame_API#use_cases).
 - A `<fencedframe>` cannot access the embedding context's DOM, nor can the embedding context access the `<fencedframe>`'s DOM.
 
 The `<fencedframe>` element is a type of `<iframe>` with more native privacy features built in. It addresses shortcomings of `<iframe>`s such as reliance on third-party cookies and other privacy risks. See [Fenced frame API](/en-US/docs/Web/API/Fenced_frame_API) for more details.
@@ -39,7 +39,7 @@ Permissions delegated from the top-level context to a fenced frame for allowing 
 
 The only features that can be enabled by a policy inside fenced frames are the specific features designed to be used inside fenced frames:
 
-- [Protected Audience API](https://developer.chrome.com/docs/privacy-sandbox/fledge/)
+- [Protected Audience API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience)
   - `attribution-reporting`
   - `private-aggregation`
   - `shared-storage`
@@ -69,7 +69,7 @@ The size of the embedded content may be set by internal `contentWidth` and `cont
 
 ## Accessibility
 
-People navigating with assistive technology such as a screen reader can use the [`title` attribute](/en-US/docs/Web/HTML/Global_attributes/title) on an `<fencedframe>` to label its content. The title's value should concisely describe the embedded content:
+People navigating with assistive technology, such as a screen reader, can use the [`title` attribute](/en-US/docs/Web/HTML/Global_attributes/title) on a `<fencedframe>` to label its content. The title's value should concisely describe the embedded content:
 
 ```html
 <fencedframe
@@ -78,11 +78,11 @@ People navigating with assistive technology such as a screen reader can use the 
   height="320"></fencedframe>
 ```
 
-Without this title, they have to navigate into the `<iframe>` to determine what its embedded content is. This context shift can be confusing and time-consuming, especially for pages with multiple `<iframe>`s and/or if embeds contain interactive content like video or audio.
+Without this title, they have to navigate into the `<fencedframe>` to determine what its embedded content is. This context shift can be confusing and time-consuming, especially for pages with multiple `<fencedframe>`s and/or if embeds contain interactive content like video or audio.
 
 ## Examples
 
-To set what content will be shown in a `<fencedframe>`, a utilizing API (such as [Protected Audience](https://developer.chrome.com/docs/privacy-sandbox/fledge/) or [Shared Storage](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/)) generates a {{domxref("FencedFrameConfig")}} object, which is then set as the value of the `<fencedframe>`'s `config` property.
+To set what content will be shown in a `<fencedframe>`, a utilizing API (such as [Protected Audience](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience) or [Shared Storage](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage)) generates a {{domxref("FencedFrameConfig")}} object, which is then set as the value of the `<fencedframe>`'s `config` property.
 
 The following example gets a `FencedFrameConfig` from a Protected Audience API's ad auction, which is then used to display the winning ad in a `<fencedframe>`:
 
@@ -167,5 +167,5 @@ frame.config = frameConfig;
 ## See also
 
 - [Fenced Frame API](/en-US/docs/Web/API/Fenced_frame_API)
-- [Fenced frames](https://developer.chrome.com/docs/privacy-sandbox/fenced-frame/) on developer.chrome.com
-- [The Privacy Sandbox](https://developer.chrome.com/docs/privacy-sandbox/) on developer.chrome.com
+- [Fenced frames](https://developers.google.com/privacy-sandbox/private-advertising/fenced-frame) on developers.google.com
+- [The Privacy Sandbox](https://developers.google.com/privacy-sandbox) on developers.google.com

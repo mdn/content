@@ -23,7 +23,8 @@ For detailed information on anchor features and position try fallback usage, see
 }
 ```
 
-> **Note:** The `--try-option-name` is a {{cssxref("dashed-ident")}} specifying an identifying name for the custom position option, which can then be used to add that fallback option to the {{cssxref("position-try-fallbacks")}} list.
+> [!NOTE]
+> The `--try-option-name` is a {{cssxref("dashed-ident")}} specifying an identifying name for the custom position option, which can then be used to add that fallback option to the {{cssxref("position-try-fallbacks")}} list.
 
 ### Descriptors
 
@@ -31,8 +32,8 @@ The descriptors specify property values that define the behavior of the custom p
 
 - `position-anchor`
   - : Specifies a {{cssxref("position-anchor")}} property value that defines the anchor element that the positioned element is tethered to, by specifying a {{cssxref("dashed-ident")}} value equal to the anchor element's {{cssxref("anchor-name")}} property value.
-- `inset-area`
-  - : Specifies an {{cssxref("inset-area")}} property value that defines the position of the anchor-positioned element relative to the anchor.
+- `position-area`
+  - : Specifies a {{cssxref("position-area")}} property value that defines the position of the anchor-positioned element relative to the anchor.
 - [Inset property](/en-US/docs/Glossary/Inset_properties) descriptors
   - : Specify [`anchor()`](/en-US/docs/Web/CSS/anchor) function values that define the position of the anchor-positioned element's edges relative to the anchor element's edge. Inset property descriptors can be set that represent the following properties:
     - {{cssxref("top")}}
@@ -76,7 +77,8 @@ The descriptors specify property values that define the behavior of the custom p
 - Self-alignment property descriptors
   - : Specify the [`anchor-center`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center) value to align the anchor-positioned element relative to the anchor element's center, in the block or inline direction. {{cssxref("align-self")}} and {{cssxref("justify-self")}} property descriptors can take the `anchor-center` value.
 
-> **Note:** When a custom position option is applied to an element, the property values defined in the `@position-try` at-rule descriptor takes precedence over the values set on the element via standard CSS properties.
+> [!NOTE]
+> When a custom position option is applied to an element, the property values defined in the `@position-try` at-rule descriptor takes precedence over the values set on the element via standard CSS properties.
 
 ## Formal syntax
 
@@ -148,7 +150,7 @@ The anchor is given an {{cssxref("anchor-name")}} and has a {{cssxref("position"
 
 Next, we use the `@position-try` at-rule to define four custom position options, with descriptive {{cssxref("dashed-ident")}} names to identify them and describe their purpose. Each one places the positioned element in a specific position around the anchor element and gives it an appropriate `10px` margin between the positioned element and its anchor. The positioning is handled in a variety of ways, to demonstrate the different techniques available:
 
-- The first and last position options use an {{cssxref("inset-area")}}.
+- The first and last position options use a {{cssxref("position-area")}}.
 - The second position option uses {{cssxref("top")}} with an {{cssxref("anchor()")}} value and {{cssxref("justify-self", "justify-self: anchor-center")}} to center the positioned element on the anchor in the inline direction.
 - The third position option uses {{cssxref("left")}} with an {{cssxref("anchor()")}} value, wrapped inside a {{cssxref("calc()")}} function that adds `10px` of spacing (rather than creating the spacing with {{cssxref("margin")}} like the other options do). It then uses {{cssxref("align-self", "align-self: anchor-center")}} to center the positioned element on the anchor in the block direction.
 
@@ -156,7 +158,7 @@ Finally, the left and right position options are given a narrower {{cssxref("wid
 
 ```css
 @position-try --custom-left {
-  inset-area: left;
+  position-area: left;
   width: 100px;
   margin: 0 10px 0 0;
 }
@@ -165,29 +167,29 @@ Finally, the left and right position options are given a narrower {{cssxref("wid
   top: anchor(bottom);
   justify-self: anchor-center;
   margin: 10px 0 0 0;
-  inset-area: none;
+  position-area: none;
 }
 
 @position-try --custom-right {
   left: calc(anchor(right) + 10px);
   align-self: anchor-center;
   width: 100px;
-  inset-area: none;
+  position-area: none;
 }
 
 @position-try --custom-bottom-right {
-  inset-area: bottom right;
+  position-area: bottom right;
   margin: 10px 0 0 10px;
 }
 ```
 
-The infobox is given fixed positioning, a {{cssxref("position-anchor")}} property that references the anchor's `anchor-name`, to associate the two together, and it is tethered to the anchor's top edge using an {{cssxref("inset-area")}}. We also give it a fixed {{cssxref("width")}} and some bottom {{cssxref("margin")}}. The custom position options are then referenced in the {{cssxref("position-try-fallbacks")}} property to prevent the positioned element from overflowing, or being scrolled out of view, when the anchor gets near the edge of the viewport.
+The infobox is given fixed positioning, a {{cssxref("position-anchor")}} property that references the anchor's `anchor-name` to associate the two together, and it is tethered to the anchor's top edge using an {{cssxref("position-area")}}. We also give it a fixed {{cssxref("width")}} and some bottom {{cssxref("margin")}}. The custom position options are then referenced in the {{cssxref("position-try-fallbacks")}} property to prevent the positioned element from overflowing, or being scrolled out of view, when the anchor gets near the edge of the viewport.
 
 ```css-nolint
 .infobox {
   position: fixed;
   position-anchor: --myAnchor;
-  inset-area: top;
+  position-area: top;
   width: 200px;
   margin: 0 0 10px 0;
   position-try-fallbacks:
@@ -204,15 +206,15 @@ Scroll the page and notice the change in the positioned element's placement as t
 
 Let's talk through how these position options work:
 
-- First of all, note that our default position is defined by `inset-area: top`. When the infobox isn't overflowing the page in any direction, the infobox sits above the anchor, and the position try fallback options set in the `position-try-fallbacks` property are ignored. Also note that the infobox has a fixed width and bottom margin set. These values will change as different position try fallback options are applied.
-- If the infobox starts to overflow, the browser first tries the `--custom-left` position. This moves the infobox to the left of the anchor using `inset-area: left`, adjusts the margin to suit, and also gives the infobox a different width.
-- Next, the browser tries the `--custom-bottom` position. This moves the infobox to the bottom of the anchor using `top` and `justify-self` instead of an `inset-area`, and sets an appropriate margin. It doesn't include a `width` descriptor, so the infobox returns to its default width of `200px` set by the `width` property.
-- The browser next tries the `--custom-right` position. This works much the same as the `--custom-left` position, with the same `width` descriptor value applied. However, we are using `left` and `align-self` to place the positioned element instead of an `inset-area`. And we are wrapping the `left` value in a `calc()` function inside which we are adding `10px` to create spacing, instead of using `margin`.
-- If none of the other try fallback options succeed in stopping the positioned element from overflowing, the browser tries the `--custom-bottom-right` position as a last resort. This places the positioned element to the bottom-right of the anchor using `inset-area: bottom right`.
+- First of all, note that our default position is defined by `position-area: top`. When the infobox isn't overflowing the page in any direction, the infobox sits above the anchor, and the position try fallback options set in the `position-try-fallbacks` property are ignored. Also note that the infobox has a fixed width and bottom margin set. These values will change as different position try fallback options are applied.
+- If the infobox starts to overflow, the browser first tries the `--custom-left` position. This moves the infobox to the left of the anchor using `position-area: left`, adjusts the margin to suit, and also gives the infobox a different width.
+- Next, the browser tries the `--custom-bottom` position. This moves the infobox to the bottom of the anchor using `top` and `justify-self` instead of a `position-area`, and sets an appropriate margin. It doesn't include a `width` descriptor, so the infobox returns to its default width of `200px` set by the `width` property.
+- The browser next tries the `--custom-right` position. This works much the same as the `--custom-left` position, with the same `width` descriptor value applied. However, we are using `left` and `align-self` to place the positioned element instead of a `position-area`. And we are wrapping the `left` value in a `calc()` function inside which we are adding `10px` to create spacing, instead of using `margin`.
+- If none of the other try fallback options succeed in stopping the positioned element from overflowing, the browser tries the `--custom-bottom-right` position as a last resort. This places the positioned element to the bottom-right of the anchor using `position-area: bottom right`.
 
 When a position option is applied, its values override the initial values set on the positioned element. For example, the `width` initially set on the positioned element is `200px`, but when the `--custom-right` position option is applied, its width is set to `100px`.
 
-In some cases, we need to set values inside the custom position options to turn off the initial values. The `--custom-bottom` and `--custom-right` options use inset property and `*-self: anchor-center` values to place the positioned element, therefore we remove the previously-set `inset-area` value in each case by setting `inset-area: none`. If we didn't do this, the initially set `inset-area: top` value would still take effect and interfere with the other positioning information.
+In some cases, we need to set values inside the custom position options to turn off the initial values. The `--custom-bottom` and `--custom-right` options use inset property and `*-self: anchor-center` values to place the positioned element, therefore we remove the previously-set `position-area` value in each case by setting `position-area: none`. If we didn't do this, the initially set `position-area: top` value would still take effect and interfere with the other positioning information.
 
 ## Specifications
 
@@ -224,7 +226,7 @@ In some cases, we need to set values inside the custom position options to turn 
 
 ## See also
 
-- {{cssxref("inset-area")}}
+- {{cssxref("position-area")}}
 - {{cssxref("position-anchor")}}
 - {{cssxref("position-try-fallbacks")}}
 - {{cssxref("position-try")}}
@@ -233,3 +235,4 @@ In some cases, we need to set values inside the custom position options to turn 
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide
 - [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide
+- {{domxref("CSSPositionTryRule")}}

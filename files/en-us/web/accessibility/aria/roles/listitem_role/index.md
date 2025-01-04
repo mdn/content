@@ -23,7 +23,8 @@ Any content that consists of an outer container with a list of elements inside i
 
 There are no hard and fast rules about which elements you should use to mark up the list and list items, but you should make sure that the list items make sense in the context of a list, e.g. a shopping list, recipe steps, driving directions.
 
-> **Note:** If at all possible in your work, you should use the appropriate semantic HTML elements to mark up a list and its listitems — {{HTMLElement("ul")}}/{{HTMLElement("ol")}} and {{HTMLElement("li")}}. See [Best practices](#best_practices) for a full example.
+> [!NOTE]
+> If at all possible in your work, you should use the appropriate semantic HTML elements to mark up a list and its listitems — {{HTMLElement("ul")}}/{{HTMLElement("ol")}} and {{HTMLElement("li")}}. See [Best practices](#best_practices) for a full example.
 
 ### Associated WAI-ARIA Roles, States, and Properties
 
@@ -56,11 +57,14 @@ or use an ordered list if the order of the list items matters:
 </ol>
 ```
 
-> **Note:** The ARIA `list` / `listitem` roles don't distinguish between ordered and unordered lists.
+> [!NOTE]
+> The ARIA `list` / `listitem` roles don't distinguish between ordered and unordered lists.
 
-> **Note:** Styling a list with `list-style: none;` in CSS removes the list semantics. Adding `role="listitem"` returns the semantics.
+> [!NOTE]
+> Styling a list with `list-style: none;` in CSS removes the list semantics. Adding `role="listitem"` returns the semantics.
 
-> **Note:** If you are marking up a list of items that will function as a tabbed interface, you should instead use the [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role), [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role), and [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role) roles.
+> [!NOTE]
+> If you are marking up a list of items that will function as a tabbed interface, you should instead use the [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role), [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role), and [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role) roles.
 
 ## Specifications
 

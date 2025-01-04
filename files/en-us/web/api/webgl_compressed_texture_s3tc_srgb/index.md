@@ -14,7 +14,8 @@ Compressed textures reduce the amount of memory needed to store a texture on the
 
 WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-> **Note:** This extension is available to both {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts.
+> [!NOTE]
+> This extension is available to both {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts.
 
 ## Constants
 
@@ -23,7 +24,7 @@ The compressed texture formats are exposed by four constants and can be used in 
 - `ext.COMPRESSED_SRGB_S3TC_DXT1_EXT`
   - : A DXT1-compressed image in an sRGB image format.
 - `ext.COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT`
-  - : A DXT1-compressed image in an sRGB image format with a simple on/off alpha value.
+  - : A DXT1-compressed image in an sRGB image format with an on/off alpha value.
 - `ext.COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT`
   - : A DXT3-compressed image in an sRGBA image format.
 - `ext.COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT`

@@ -25,7 +25,8 @@ registerProcessor(name, processorCtor)
 - `processorCtor`
   - : The constructor of a class derived from {{domxref("AudioWorkletProcessor")}}.
 
-> **Note:** A key-value pair `{ name: constructor }`
+> [!NOTE]
+> A key-value pair `{ name: constructor }`
 > is saved internally in the {{domxref("AudioWorkletGlobalScope")}} once the processor
 > is registered. The _name_ is to be referred to when creating an
 > {{domxref("AudioWorkletNode")}} based on the registered processor. A new processor by

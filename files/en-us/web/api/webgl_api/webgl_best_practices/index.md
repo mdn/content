@@ -204,7 +204,7 @@ for (const [vs, fs, prog] of programs) {
 
 ## Prefer KHR_parallel_shader_compile
 
-While we've described a pattern to allow browsers to compile and link in parallel, normally checking `COMPILE_STATUS` or `LINK_STATUS` blocks until the compile or link completes. In browsers where it's available, the [KHR_parallel_shader_compile](https://www.khronos.org/registry/webgl/extensions/KHR_parallel_shader_compile/) extension provides a _non-blocking_ `COMPLETION_STATUS` query. Prefer to enable and use this extension.
+While we've described a pattern to allow browsers to compile and link in parallel, normally checking `COMPILE_STATUS` or `LINK_STATUS` blocks until the compile or link completes. In browsers where it's available, the [KHR_parallel_shader_compile](https://registry.khronos.org/webgl/extensions/KHR_parallel_shader_compile/) extension provides a _non-blocking_ `COMPLETION_STATUS` query. Prefer to enable and use this extension.
 
 Example usage:
 
@@ -233,7 +233,7 @@ This technique may not work in all applications, for example those which require
 
 ## Don't check shader compile status unless linking fails
 
-There are very few errors that are guaranteed to cause shader compilation failure, but cannot be deferred to link time. The [ESSL3 spec](https://www.khronos.org/registry/OpenGL/specs/es/3.0/GLSL_ES_Specification_3.00.pdf) says this under "Error Handling":
+There are very few errors that are guaranteed to cause shader compilation failure, but cannot be deferred to link time. The [ESSL3 spec](https://registry.khronos.org/OpenGL/specs/es/3.0/GLSL_ES_Specification_3.00.pdf) says this under "Error Handling":
 
 > The implementation should report errors as early a possible but in any case must satisfy the following:
 >
@@ -428,7 +428,7 @@ Depth and stencil attachments and formats are actually inseparable on many devic
 
 ## texImage/texSubImage uploads (esp. videos) can cause pipeline flushes
 
-Most texture uploads from DOM elements will incur a processing pass that will temporarily switch GL Programs internally, causing a pipeline flush. (Pipelines are formalized explicitly in Vulkan\[[1](https://www.khronos.org/registry/vulkan/specs/1.2/html/chap9.html#VkGraphicsPipelineCreateInfo)] et al, but are implicit behind-the-scenes in OpenGL and WebGL. Pipelines are more or less the tuple of shader program, depth/stencil/multisample/blend/rasterization state)
+Most texture uploads from DOM elements will incur a processing pass that will temporarily switch GL Programs internally, causing a pipeline flush. (Pipelines are formalized explicitly in [Vulkan](https://registry.khronos.org/vulkan/specs/1.2/html/chap9.html#VkGraphicsPipelineCreateInfo) et al, but are implicit behind-the-scenes in OpenGL and WebGL. Pipelines are more or less the tuple of shader program, depth/stencil/multisample/blend/rasterization state)
 
 In WebGL:
 
@@ -512,7 +512,7 @@ The WebGL 2.0 `texImage*` API lets you define each mip level independently and a
 
 Further, some drivers might unconditionally allocate the whole mip-chain (+30% memory!) even if you only want a single level.
 
-So, prefer `texStorage`+`texSubImage` for textures in WebGL 2
+So, prefer `texStorage` + `texSubImage` for textures in WebGL 2.
 
 ## Use invalidateFramebuffer
 

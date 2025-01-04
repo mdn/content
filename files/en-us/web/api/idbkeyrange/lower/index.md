@@ -29,7 +29,8 @@ its optional key range value.
 After declaring the key range, we log its `lower` property value to the
 console, which should appear as "F".
 
-> **Note:** For a more complete example allowing you to experiment with
+> [!NOTE]
+> For a more complete example allowing you to experiment with
 > key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) repo.
 > (View the example [live](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/) too.
 

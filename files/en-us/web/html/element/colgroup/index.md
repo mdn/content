@@ -19,7 +19,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : Specifies the number of consecutive columns the `<colgroup>` element spans. The value must be a positive integer greater than zero. If not present, its default value is `1`.
 
-    > **Note:** The `span` attribute is not permitted if there are one or more {{HTMLElement("col")}} elements within the `<colgroup>`.
+    > [!NOTE]
+    > The `span` attribute is not permitted if there are one or more {{HTMLElement("col")}} elements within the `<colgroup>`.
 
 ### Deprecated attributes
 
@@ -29,7 +30,8 @@ The following attributes are deprecated and should not be used. They are documen
 
   - : Specifies the horizontal alignment of each column group cell. The possible {{Glossary("enumerated")}} values are `left`, `center`, `right`, `justify`, and `char`. When supported, the `char` value aligns the textual content on the character defined in the [`char`](#char) attribute and the offset defined by the [`charoff`](#charoff) attribute. Note that the descendant {{HTMLElement("col")}} elements may override this value using their own [`align`](/en-US/docs/Web/HTML/Element/col#align) attribute. Use the {{cssxref("text-align")}} CSS property on the {{htmlelement("td")}} and {{htmlelement("th")}} elements instead, as this attribute is deprecated.
 
-    > **Note:** Setting `text-align` on the `<colgroup>` element has no effect as {{HTMLElement("td")}} and {{HTMLElement("th")}} elements are not descendants of the `<colgroup>` element, and therefore they do not inherit from it.
+    > [!NOTE]
+    > Setting `text-align` on the `<colgroup>` element has no effect as {{HTMLElement("td")}} and {{HTMLElement("th")}} elements are not descendants of the `<colgroup>` element, and therefore they do not inherit from it.
     >
     > If the table does not use a [`colspan`](/en-US/docs/Web/HTML/Element/td#colspan) attribute, use the `td:nth-of-type(an+b)` CSS selector per column, where `a` is the total number of the columns in the table and `b` is the ordinal position of the column in the table, e.g. `td:nth-of-type(7n+2) { text-align: right; }` to right-align the second column cells.
     >
@@ -37,7 +39,7 @@ The following attributes are deprecated and should not be used. They are documen
 
 - `bgcolor` {{deprecated_inline}}
 
-  - : Defines the background color of each column group cell. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a '`#`', or a [color keyword](/en-US/docs/Web/CSS/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
+  - : Defines the background color of each column group cell. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a `#`, or a [color keyword](/en-US/docs/Web/CSS/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
 
 - `char` {{deprecated_inline}}
 
@@ -51,7 +53,8 @@ The following attributes are deprecated and should not be used. They are documen
 
   - : Specifies the vertical alignment of each column group cell. The possible {{Glossary("enumerated")}} values are `baseline`, `bottom`, `middle`, and `top`. Note that the descendant {{HTMLElement("col")}} elements may override this value using their own [`valign`](/en-US/docs/Web/HTML/Element/col#valign) attribute. Use the {{cssxref("vertical-align")}} CSS property on the {{htmlelement("td")}} and {{htmlelement("th")}} elements instead, as this attribute is deprecated.
 
-    > **Note:** Setting `vertical-align` on the `<colgroup>` element has no effect as {{HTMLElement("td")}} and {{HTMLElement("th")}} elements are not descendants of the `<colgroup>` element, and therefore they do not inherit from it.
+    > [!NOTE]
+    > Setting `vertical-align` on the `<colgroup>` element has no effect as {{HTMLElement("td")}} and {{HTMLElement("th")}} elements are not descendants of the `<colgroup>` element, and therefore they do not inherit from it.
     >
     > If the table does not use a [`colspan`](/en-US/docs/Web/HTML/Element/td#colspan) attribute, use the [`td:nth-of-type()`](/en-US/docs/Web/CSS/:nth-of-type) CSS selector per column, e.g. `td:nth-of-type(2) { vertical-align: middle; }` to center the second column cells vertically.
     >
@@ -186,7 +189,7 @@ table {
       <td>
         The start tag may be omitted, if it has a {{HTMLElement("col")}}
         element as its first child and if it is not preceded by a
-        {{HTMLElement("colgroup")}} whose end tag has been omitted.<br />The
+        <code>&lt;colgroup&gt;</code> whose end tag has been omitted.<br />The
         end tag may be omitted, if it is not followed by a space or a comment.
       </td>
     </tr>
@@ -194,7 +197,7 @@ table {
       <th scope="row">Permitted parents</th>
       <td>
         A {{HTMLElement("table")}} element. The
-        {{HTMLElement("colgroup")}} must appear after any
+        <code>&lt;colgroup&gt;</code> must appear after any
         {{HTMLElement("caption")}} element, but before any
         {{HTMLElement("thead")}}, {{HTMLElement("tbody")}},
         {{HTMLElement("tfoot")}}, and
@@ -230,7 +233,7 @@ table {
 
 ## See also
 
-- [Learn: HTML tables](/en-US/docs/Learn/HTML/Tables)
+- [Learn: HTML table basics](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 - {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}}: Other table-related elements
 - {{cssxref("background-color")}}: CSS property to set the background color of each column group cell
 - {{cssxref("border")}}: CSS property to control borders of column group cells

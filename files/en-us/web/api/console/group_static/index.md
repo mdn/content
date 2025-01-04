@@ -8,13 +8,13 @@ browser-compat: api.console.group_static
 
 {{APIRef("Console API")}} {{AvailableInWorkers}}
 
-The **`console.group()`** static method creates a new inline group in the [Web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) log, causing any subsequent console messages to be indented by an additional level, until {{domxref("console/groupend_static", "console.groupEnd()")}} is called.
+The **`console.group()`** static method creates a new inline group in the [Web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) log, causing any subsequent console messages to be indented by an additional level, until {{domxref("console/groupEnd_static", "console.groupEnd()")}} is called.
 
 ## Syntax
 
 ```js-nolint
-group()
-group(label)
+console.group()
+console.group(label)
 ```
 
 ### Parameters
@@ -64,5 +64,5 @@ See [Using groups in the console](/en-US/docs/Web/API/console#using_groups_in_th
 - {{domxref("console/groupEnd_static", "console.groupEnd()")}}
 - {{domxref("console/groupCollapsed_static", "console.groupCollapsed()")}}
 - [Microsoft Edge's documentation for `console.group()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#group)
-- [Node.JS documentation for `console.group()`](https://nodejs.org/docs/latest/api/console.html#consolegrouplabel)
+- [Node.js documentation for `console.group()`](https://nodejs.org/docs/latest/api/console.html#consolegrouplabel)
 - [Google Chrome's documentation for `console.group()`](https://developer.chrome.com/docs/devtools/console/api/#group)

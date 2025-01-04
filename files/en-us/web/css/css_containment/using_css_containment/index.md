@@ -71,7 +71,8 @@ In addition:
 - The layout container is a [containing block](/en-US/docs/Web/CSS/Containing_block) for `absolute`- and `fixed`-positioned descendants.
 - The containing box creates a [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context), therefore {{cssxref("z-index")}} can be used.
 
-> **Note:** The `style` and `layout` values of `contain` are automatically applied when using the {{cssxref("container-type")}} and {{cssxref("container-name")}} properties.
+> [!NOTE]
+> The `style` and `layout` values of `contain` are automatically applied when using the {{cssxref("container-type")}} and {{cssxref("container-name")}} properties.
 
 #### Paint containment
 
@@ -185,12 +186,13 @@ When an element skips its contents:
 
 This happens in both the cases mentioned above, but with `content-visibility: auto` the content can be searched, receive focus, and otherwise move from not relevant to relevant. This is not the case for `content-visibility: hidden`.
 
-> **Note:** To animate the transition from `content-visibility: hidden` to a visible value, you will need to set {{cssxref("transition-behavior", "transition-behavior:&nbsp;allow-discrete")}} and {{cssxref("@starting-style")}} styles. See [transitioning `display` and `content-visibility`](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions#transitioning_display_and_content-visibility) to learn more.
+> [!NOTE]
+> To animate the transition from `content-visibility: hidden` to a visible value, you will need to set {{cssxref("transition-behavior", "transition-behavior:&nbsp;allow-discrete")}} and {{cssxref("@starting-style")}} styles. See [transitioning `display` and `content-visibility`](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions#transitioning_display_and_content-visibility) to learn more.
 
 ## See also
 
 - [CSS containment module](/en-US/docs/Web/CSS/CSS_containment)
-- [Learn: CSS performance optimization](/en-US/docs/Learn/Performance/CSS)
+- [Learn: CSS performance optimization](/en-US/docs/Learn_web_development/Extensions/Performance/CSS)
 - [CSS container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)
 - [An Introduction to CSS Containment](https://blogs.igalia.com/mrego/2019/01/11/an-introduction-to-css-containment/) via Igalia.com (2019)
 - The {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} event

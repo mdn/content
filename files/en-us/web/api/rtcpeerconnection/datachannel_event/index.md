@@ -10,7 +10,8 @@ browser-compat: api.RTCPeerConnection.datachannel_event
 
 A **`datachannel`** event is sent to an {{domxref("RTCPeerConnection")}} instance when an {{domxref("RTCDataChannel")}} has been added to the connection, as a result of the remote peer calling {{domxref("RTCPeerConnection.createDataChannel()")}}.
 
-> **Note:** This event is _not_ dispatched when the local end of the connection creates the channel.
+> [!NOTE]
+> This event is _not_ dispatched when the local end of the connection creates the channel.
 
 This event is not cancelable and does not bubble.
 

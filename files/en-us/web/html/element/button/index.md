@@ -7,7 +7,7 @@ browser-compat: html.elements.button
 
 {{HTMLSidebar}}
 
-The **`<button>`** [HTML](/en-US/docs/Web/HTML) element is an interactive element activated by a user with a mouse, keyboard, finger, voice command, or other assistive technology. Once activated, it then performs an action, such as submitting a [form](/en-US/docs/Learn/Forms) or opening a dialog.
+The **`<button>`** [HTML](/en-US/docs/Web/HTML) element is an interactive element activated by a user with a mouse, keyboard, finger, voice command, or other assistive technology. Once activated, it then performs an action, such as submitting a [form](/en-US/docs/Learn_web_development/Extensions/Forms) or opening a dialog.
 
 By default, HTML buttons are presented in a style resembling the platform the {{Glossary("user agent")}} runs on, but you can change buttons' appearance with [CSS](/en-US/docs/Web/CSS).
 
@@ -18,7 +18,28 @@ By default, HTML buttons are presented in a style resembling the platform the {{
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
 - `autofocus`
+
   - : This Boolean attribute specifies that the button should have input [focus](/en-US/docs/Web/API/HTMLElement/focus) when the page loads. **Only one element in a document can have this attribute.**
+
+- `command` {{experimental_inline}}
+
+  - : Specifies the action to be performed on an element being controlled by a control `<button>`, specified via the `commandfor` attribute. The possible values are:
+
+    - `"show-modal"`
+      - : The button will show a {{htmlelement("dialog")}} as modal. If the dialog is already modal, no action will be taken.
+    - `"close"`
+      - : The button will close a {{htmlelement("dialog")}} element. If the dialog is already closed, no action will be taken.
+    - `"show-popover"`
+      - : The button will show a hidden popover. If you try to show an already showing popover, no action will be taken. See {{domxref("Popover API", "Popover API", "", "nocode")}} for more details.
+    - `"hide-popover"`
+      - : The button will hide a showing popover. If you try to hide an already hidden popover, no action will be taken. See {{domxref("Popover API", "Popover API", "", "nocode")}} for more details.
+    - `"toggle-popover"`
+      - : The button will toggle a popover between showing and hidden. If the popover is hidden, it will be shown; if the popover is showing, it will be hidden. See {{domxref("Popover API", "Popover API", "", "nocode")}} for more details.
+    - Custom values
+      - : This attribute can represent custom values that are prefixed with a two hyphen characters (`--`). Buttons with a custom value will dispatch the {{domxref("CommandEvent")}} on the controlled element.
+
+- `commandfor` {{experimental_inline}}
+  - : Turns a {{htmlelement("button")}} element into a button, controlling the given interactive element; takes the ID of the element to control as its value.
 - [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled)
   - : This Boolean attribute prevents the user from interacting with the button: it cannot be pressed or focused.
 - `form`
@@ -51,7 +72,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 - `formnovalidate`
 
-  - : If the button is a submit button, this Boolean attribute specifies that the form is not to be [validated](/en-US/docs/Learn/Forms/Form_validation) when it is submitted. If this attribute is specified, it overrides the [`novalidate`](/en-US/docs/Web/HTML/Element/form#novalidate) attribute of the button's form owner.
+  - : If the button is a submit button, this Boolean attribute specifies that the form is not to be [validated](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation) when it is submitted. If this attribute is specified, it overrides the [`novalidate`](/en-US/docs/Web/HTML/Element/form#novalidate) attribute of the button's form owner.
 
     This attribute is also available on [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) and [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit) elements.
 
@@ -102,7 +123,7 @@ A submit button with the attribute `formaction` set, but without an associated f
 
 If your buttons are not for submitting form data to a server, be sure to set their `type` attribute to `button`. Otherwise, they will try to submit form data and to load the (nonexistent) response, possibly destroying the current state of the document.
 
-While `<button type="button">` has no default behavior, event handlers can be scripted to trigger behaviors. An activated button can perform programmable actions using [JavaScript](/en-US/docs/Learn/JavaScript), such as removing an item from a list.
+While `<button type="button">` has no default behavior, event handlers can be scripted to trigger behaviors. An activated button can perform programmable actions using [JavaScript](/en-US/docs/Learn_web_development/Core/Scripting), such as removing an item from a list.
 
 By default, user agents style buttons as `display: flow-root`, which establishes a new [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) and centers the button's children both horizontally and vertically as long as they do not overflow. If the button is defined as a flex or grid container, the children will behave as flex or grid items. A button set to `display: inline` will be styled as if the value were set to `display: inline-block`.
 
@@ -110,7 +131,7 @@ By default, user agents style buttons as `display: flow-root`, which establishes
 
 ### Icon buttons
 
-Buttons that only display an icon do not have an _{{glossary("accessible name")}}_. Accessible names provide information for assistive technology, such as screen readers, to access when they parse the document and generate [an accessibility tree](/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis). Assistive technology then uses the accessibility tree to navigate and manipulate page content.
+Buttons that only display an icon do not have an _{{glossary("accessible name")}}_. Accessible names provide information for assistive technology, such as screen readers, to access when they parse the document and generate [an accessibility tree](/en-US/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis). Assistive technology then uses the accessibility tree to navigate and manipulate page content.
 
 To give an icon button an accessible name, put text in the `<button>` element that concisely describes the button's functionality.
 
@@ -118,8 +139,11 @@ To give an icon button an accessible name, put text in the `<button>` element th
 
 ```html
 <button name="favorite">
-  <svg aria-hidden="true" viewBox="0 0 10 10">
-    <path d="M7 9L5 8 3 9V6L1 4h3l1-3 1 3h3L7 6z" />
+  <svg fill="#000000" viewBox="0 0 42 42">
+    <path
+      d="M21,1c1.081,0,5.141,12.315,6.201,13.126s13.461,1.053,13.791,2.137 c0.34,1.087-9.561,8.938-9.961,10.252c-0.409,1.307,
+      3.202,13.769,2.331,14.442c-0.879,0.673-11.05-6.79-12.361-6.79 c-1.311,0-11.481,7.463-12.36,6.79c-0.871-0.674,2.739-13.136,
+      2.329-14.442c-0.399-1.313-10.3-9.165-9.96-10.252 c0.33-1.084,12.731-1.326,13.791-2.137S19.91,1,21,1z"></path>
   </svg>
   Add to favorites
 </button>
@@ -173,7 +197,7 @@ Color contrast ratio is determined by comparing the luminosity of the button tex
 
 ### Clicking and focus
 
-Whether clicking on a {{HTMLElement("button")}} or {{HTMLElement("input")}} button types causes it to (by default) become focused varies by browser and OS. Most browsers do give focus to a button being clicked, but [Safari does not, by design](https://webkit.org/b/22261).
+Whether clicking on a `<button>` or {{HTMLElement("input")}} button types causes it to (by default) become focused varies by browser and OS. Most browsers do give focus to a button being clicked, but [Safari does not, by design](https://webkit.org/b/22261#c68).
 
 ## Examples
 

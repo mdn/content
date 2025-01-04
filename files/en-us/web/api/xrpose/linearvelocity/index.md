@@ -29,4 +29,4 @@ if the user agent can't populate this value.
 
 ## See also
 
-- {{domxref("XRPose.linearVelocity")}}
+- {{domxref("XRPose.angularVelocity")}}

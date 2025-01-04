@@ -20,21 +20,28 @@ Broadly, one window may obtain a reference to another (_e.g.,_ via `targetWindow
 
 ```js-nolint
 postMessage(message)
-postMessage(message, options)
 postMessage(message, targetOrigin)
 postMessage(message, targetOrigin, transfer)
+
+postMessage(message, options)
 ```
 
 ### Parameters
 
 - `message`
   - : Data to be dispatched to the other window. The data is serialized using the {{domxref("Web_Workers_API/Structured_clone_algorithm", "structured clone algorithm", "", 1)}}. This means you can pass a broad variety of data objects safely to the destination window without having to serialize them yourself.
-- `options` {{optional_Inline}}
-  - : An optional object containing a `transfer` field with a sequence of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to transfer ownership of, and an optional `targetOrigin` field with a string which restricts the message to the intended target only.
 - `targetOrigin` {{optional_Inline}}
-  - : Specifies what the origin of the intended recipient window's document must be for the event to be dispatched, either as the literal string `"*"` (indicating no preference) or as a URI. If at the time the event is scheduled to be dispatched the scheme, hostname, or port of this window's document does not match that provided in `targetOrigin`, the event will not be dispatched; only if all three match will the event be dispatched. This mechanism provides control over where messages are sent; for example, if `postMessage()` was used to transmit a password, it would be absolutely critical that this argument be a URI whose origin is the same as the intended receiver of the message containing the password, to prevent interception of the password by a malicious third party. **Always provide a specific `targetOrigin`, not `*`, if you know where the other window's document should be located. Failing to provide a specific target could disclose the data you send to a malicious site.**
-- `transfer` {{optional_Inline}}
-  - : A sequence of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) that are transferred with the message. The ownership of these objects is given to the destination side and they are no longer usable on the sending side.
+  - : Specifies the [origin](/en-US/docs/Glossary/Origin) the recipient window must have in order to receive the event. In order for the event to be dispatched, the origin must match exactly (including scheme, hostname, and port). If omitted, then defaults to the origin that is calling the method. This mechanism provides control over where messages are sent; for example, if `postMessage()` was used to transmit a password, it would be absolutely critical that this argument be a URI whose origin is the same as the intended receiver of the message containing the password, to prevent interception of the password by a malicious third party. `*` may also be provided, which means the message can be dispatched to a listener with any origin.
+    > [!NOTE]
+    > Always provide a specific `targetOrigin`, not `*`, if you know where the other window's document should be located. Failing to provide a specific target could disclose data to a malicious site.
+- `transfer` {{optional_inline}}
+  - : An optional [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to transfer ownership of. The ownership of these objects is given to the destination side and they are no longer usable on the sending side. These transferable objects should be attached to the message; otherwise they would be moved but not actually accessible on the receiving end.
+- `options` {{optional_inline}}
+  - : An optional object containing the following properties:
+    - `transfer` {{optional_inline}}
+      - : Has the same meaning as the `transfer` parameter.
+    - `targetOrigin` {{optional_inline}}
+      - : Has the same meaning as the `targetOrigin` parameter.
 
 ### Return value
 
@@ -69,7 +76,7 @@ The properties of the dispatched message are:
 
 **If you do not expect to receive messages from other sites, _do not_ add any event listeners for `message` events.** This is a completely foolproof way to avoid security problems.
 
-If you do expect to receive messages from other sites, **always verify the sender's identity** using the `origin` and possibly `source` properties. Any window (including, for example, http://evil.example.com) can send a message to any other window within the iframe hierarchy from top to every iframe below of the current document. Having verified identity, however, you still should **always verify the syntax of the received message**. Otherwise, a security hole in the site you trusted to send only trusted messages could then open a cross-site scripting hole in your site.
+If you do expect to receive messages from other sites, **always verify the sender's identity** using the `origin` and possibly `source` properties. Any window (including, for example, `http://evil.example.com`) can send a message to any other window within the iframe hierarchy from top to every iframe below of the current document. Having verified identity, however, you still should **always verify the syntax of the received message**. Otherwise, a security hole in the site you trusted to send only trusted messages could then open a cross-site scripting hole in your site.
 
 **Always specify an exact target origin, not `*`, when you use `postMessage` to dispatch data to other windows.** A malicious site can change the location of the window without your knowledge, and therefore it can intercept the data sent using `postMessage`.
 
@@ -170,7 +177,7 @@ The value of the `origin` property of the dispatched event is not affected by th
 
 For IDN host names only, the value of the `origin` property is not consistently Unicode or punycode; for greatest compatibility check for both the IDN and punycode values when using this property if you expect messages from IDN sites. This value will eventually be consistently IDN, but for now you should handle both IDN and punycode forms.
 
-The value of the `origin` property when the sending window contains a `javascript:` or `data:` URL is the origin of the script that loaded the URL.
+The value of the `origin` property when the sending window contains a [`javascript:`](/en-US/docs/Web/URI/Schemes/javascript) or [`data:`](/en-US/docs/Web/URI/Schemes/data) URL is the origin of the script that loaded the URL.
 
 ### Using window\.postMessage in extensions {{Non-standard_inline}}
 

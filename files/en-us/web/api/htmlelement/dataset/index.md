@@ -13,7 +13,8 @@ of the {{DOMxRef("HTMLElement")}} interface provides read/write access to [custo
 (`data-*`) on elements. It exposes a map of strings
 ({{domxref("DOMStringMap")}}) with an entry for each `data-*` attribute.
 
-> **Note:** The `dataset` property itself can be read, but not directly written.
+> [!NOTE]
+> The `dataset` property itself can be read, but not directly written.
 > Instead, all writes must be to the individual properties within the
 > `dataset`, which in turn represent the data attributes.
 
@@ -28,11 +29,13 @@ they are read or written:
     `Z`) are converted to lowercase.
 - In JavaScript
   - : The property name of a custom data attribute is the same as the HTML attribute
-    without the `data-` prefix, and removes single dashes (`-`) for
-    when to capitalize the property's "{{Glossary("camel_case", "camel-cased")}}" name.
+    without the `data-` prefix. Single dashes (`-`) are removed, and the next ASCII
+    character after a removed dash is capitalized to form the property's camel-cased name.
+
+Details and examples of converting between the HTML and JavaScript forms is described in more detail in the next section.
 
 In addition to the information below, you'll find a how-to guide for using HTML data
-attributes in our article [_Using data attributes_](/en-US/docs/Learn/HTML/Howto/Use_data_attributes).
+attributes in our article [_Using data attributes_](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes).
 
 ### Name conversion
 
@@ -129,5 +132,5 @@ if (el.dataset.someDataAttr === undefined) {
 
 - The HTML [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*) class
   of global attributes
-- [Using data attributes](/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
+- [Using data attributes](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)
 - {{DOMxRef("Element.getAttribute()")}} and {{DOMxRef("Element.setAttribute()")}}

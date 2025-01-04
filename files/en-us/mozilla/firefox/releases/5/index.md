@@ -12,7 +12,7 @@ Firefox 5, based on Gecko 5.0, was released on June 21, 2011. This article provi
 
 ### HTML
 
-- All HTML elements now have the {{ domxref("HTMLElement/accessKey", "accessKey") }} attribute, as well as the {{ domxref("element.blur()", "blur()") }}, {{ domxref("element.click()", "click()") }}, and {{ domxref("element.focus()", "focus()") }} methods. These are specified in the {{ domxref("HTMLElement") }} interface.
+- All HTML elements now have the {{ domxref("HTMLElement.accessKey", "accessKey") }} attribute, as well as the {{ domxref("HTMLElement.blur()", "blur()") }}, {{ domxref("HTMLElement.click()", "click()") }}, and {{ domxref("HTMLElement.focus()", "focus()") }} methods. These are specified in the {{ domxref("HTMLElement") }} interface.
 - In order to comply with the HTML5 specification, support for the UTF-7 and UTF-32 [character sets](/en-US/docs/Character_Sets_Supported_by_Gecko) has been removed.
 - When in quirks mode, empty {{ HTMLElement("map") }}s are no longer skipped over in favor of non-empty ones when matching. See the [Gecko notes](/en-US/docs/Web/HTML/Element/map#gecko_notes) on the {{ HTMLElement("map") }} element for details.
 - Firefox mobile on Android now supports WOFF fonts for {{ cssxref("@font-face") }}.
@@ -41,19 +41,19 @@ Firefox 5, based on Gecko 5.0, was released on June 21, 2011. This article provi
 
 ### DOM
 
-- The {{ domxref("selection") }} object's [`modify()`](/en-US/docs/Web/API/Selection/modify) method has been changed so that the "word" selection granularity no longer includes trailing spaces; this makes it more consistent across platforms and matches the behavior of WebKit's implementation.
-- The {{ domxref("setTimeout()") }} method now clamps to send no more than one timeout per second in inactive tabs. In addition, it now clamps nested timeouts to the smallest value allowed by the HTML5 specification: 4 ms (instead of the 10 ms it used to clamp to).
-- Similarly, the {{ domxref("setInterval()") }} method now clamps to no more than one interval per second in inactive tabs.
+- The {{domxref("Selection")}} object's {{domxref("Selection.modify", "modify()")}} method has been changed so that the "word" selection granularity no longer includes trailing spaces; this makes it more consistent across platforms and matches the behavior of WebKit's implementation.
+- The {{domxref("Window.setTimeout", "setTimeout()")}} and {{domxref("WorkerGlobalScope.setTimeout", "setTimeout()")}} methods are now clamped to send no more than one timeout per second in inactive tabs. In addition, it now clamps nested timeouts to the smallest value allowed by the HTML5 specification: 4 ms (instead of the 10 ms it used to clamp to).
+- Similarly, the {{domxref("Window.setInterval()")}} and {{domxref("WorkerGlobalScope.setInterval()")}} method now clamps to no more than one interval per second in inactive tabs.
 - [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) now [supports the `loadend` event](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#detecting_any_load_end_condition) for progress listeners. This is sent after any transfer is finished (that is, after the `abort`, `error`, or `load` event). You can use this to handle any tasks that need to be performed regardless of success or failure of a transfer.
 - The {{ domxref("Blob") }} and, by extension, the {{ domxref("File") }} objects' `slice()` method has been removed and replaced with a new, proposed syntax that makes it more consistent with [`Array.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) and [`String.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice) methods in JavaScript. This method is named `mozSlice()` for now.
-- The value of {{ domxref("window.navigator.language") }} is now determined by looking at the value of the `Accept-Language` [HTTP header](/en-US/docs/Web/HTTP/Headers).
+- The value of {{ domxref("Navigator.language") }} is now determined by looking at the value of the `Accept-Language` [HTTP header](/en-US/docs/Web/HTTP/Headers).
 - The {{ domxref("Element.prefix") }} property is now read only, as required by the DOM specification.
 - The {{ domxref("HTMLVideoElement") }} now supports experimental properties to get information about video paint statistics like frame rates.
 
 ### JavaScript
 
-- Regular expressions are no longer callable as if they were functions; this change has been made in concert with the WebKit team to ensure compatibility (see [Webkit bug 28285](https://webkit.org/b/28285). This feature had existed for a long time but was never documented (at least, not here on MDC).
-- The [`Function.prototype.isGenerator()`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/isGenerator) method is now supported; this lets you determine if a function is a [generator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators#generator_functions).
+- Regular expressions are no longer callable as if they were functions; this change has been made in concert with the WebKit team to ensure compatibility (see [WebKit bug 28285](https://webkit.org/b/28285)). This feature had existed for a long time but was never documented (at least, not here on MDC).
+- The `Function.prototype.isGenerator()` method is now supported; this lets you determine if a function is a [generator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators#generator_functions).
 - The following [reserved words](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords) were previously only treated as reserved when in strict mode; now they're always treated as reserved: `class`, `enum`, `export`, `extends`, `import`, and `super`.
 - DOM documents created in chrome code may no longer be exposed to sandboxed scripts.
 - The JSON parser has been re-written for improved speed and compliance. This includes a fix for [Firefox bug 572279](https://bugzil.la/572279).
@@ -79,9 +79,10 @@ Firefox 5, based on Gecko 5.0, was released on June 21, 2011. This article provi
 
 ## Changes for Mozilla and add-on developers
 
-For a guide to updating your add-on for Firefox 5, please see [Updating add-ons for Firefox 5](/en-US/docs/Mozilla/Firefox/Updating_add-ons_for_Firefox_5).
+For a guide to updating your add-on for Firefox 5, please see [Updating add-ons for Firefox 5](/en-US/docs/Mozilla/Firefox/Updating_add-ons).
 
-> **Note:** Firefox 5 requires that binary components be recompiled, as do all major releases of Firefox. See [Binary Interfaces](/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces) for details.
+> [!NOTE]
+> Firefox 5 requires that binary components be recompiled, as do all major releases of Firefox. See [Binary Interfaces](/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces) for details.
 
 ### Changes to JavaScript code modules
 

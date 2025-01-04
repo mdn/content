@@ -12,7 +12,8 @@ Alternatively, in some situations it may be preferable to just hide overflowing 
 
 This guide explains how to use CSS anchor positioning mechanisms to manage these issues — **position-try fallback options** and **conditional hiding**. Position-try fallback options provide alternative positions for the browser to try placing positioned elements in as they start to overflow, to keep them on-screen. Conditional hiding allows conditions to be specified under which the anchor or a positioned element will be hidden.
 
-> **Note:** For information on the basic fundamentals of CSS anchor positioning, see [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using).
+> [!NOTE]
+> For information on the basic fundamentals of CSS anchor positioning, see [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using).
 
 ## Feature summary
 
@@ -21,7 +22,7 @@ If a tooltip is fixed to the top-right of a UI element, when the user scrolls th
 Position-try fallback options can be specified using:
 
 - [Predefined fallback options](#predefined_fallback_options).
-- [`inset-area` values](#using-inset-area_try_fallbacks).
+- [`position-area` values](#using_position-area_try_fallback_options).
 - [Custom options](#custom_fallback_options) defined using the {{cssxref("@position-try")}} at-rule.
 
 In addition, the {{cssxref("position-try-order")}} property allows you to specify various options that result in an available position try option being set in preference to the element's initial positioning. For example, you might want to initially display the element in a space that has more available height or width.
@@ -55,7 +56,7 @@ body {
 }
 ```
 
-For illustrative purposes, we absolutely position the anchor so that it appears somewhere near the center of the initial `<body>` rendering:
+For illustrative purposes, we absolutely position the anchor so that it appears near the center of the initial `<body>` rendering:
 
 ```css hidden
 .anchor {
@@ -77,7 +78,7 @@ For illustrative purposes, we absolutely position the anchor so that it appears 
 }
 ```
 
-The anchor-positioned element is given fixed positioning and tethered to the anchor's top-left corner using an `inset-area`. It is given `position-try-fallbacks: flip-block, flip-inline;` to provide it with some fallback options for moving the positioned element to stop it from overflowing when the anchor gets near the edge of the viewport.
+The anchor-positioned element is given fixed positioning and tethered to the anchor's top-left corner using a `position-area`. It is given `position-try-fallbacks: flip-block, flip-inline;` to provide it with some fallback options for moving the positioned element to stop it from overflowing when the anchor gets near the edge of the viewport.
 
 ```css hidden
 .infobox {
@@ -94,12 +95,12 @@ The anchor-positioned element is given fixed positioning and tethered to the anc
 .infobox {
   position: fixed;
   position-anchor: --myAnchor;
-  inset-area: top left;
+  position-area: top left;
   position-try-fallbacks: flip-block, flip-inline;
 }
 ```
 
-> ![NOTE]
+> [!NOTE]
 > When multiple position try fallback options are specified, they are separated by commas, and tried in the order they are specified.
 
 Try scrolling the demo so that the anchor starts to get near the edges:
@@ -111,7 +112,7 @@ Try scrolling the demo so that the anchor starts to get near the edges:
 
 If you move the anchor towards the top-left corner of the viewport, you'll notice a problem — as the positioned element starts to overflow in the block and inline direction, it flips back to its default top-left position and overflows in both directions, which is not what we want.
 
-This happens because we only gave the browser position options of `flip-block` _or_ `flip-inline`. We didn't give it the option of trying both at the same time. The browser tries the fallback options, looking for one that causes the positioned element to be rendered completely inside the viewport or containing block. If it doesn't find one, it renders the positioned element in its originally defined rendering position, with no position fallback options applied.
+This happens because we only gave the browser position options of `flip-block` _or_ `flip-inline`. We didn't give it the option of trying both at the same time. The browser tries the fallback options, looking for one that causes the positioned element to be rendered completely inside the viewport or containing block. If it doesn't find one, it renders the positioned element in its originally-defined rendering position, with no position fallback options applied.
 
 The next section demonstrates how to fix this issue.
 
@@ -167,7 +168,7 @@ body {
 .infobox {
   position: fixed;
   position-anchor: --myAnchor;
-  inset-area: top left;
+  position-area: top left;
   position-try-fallbacks:
     flip-block,
     flip-inline,
@@ -179,13 +180,13 @@ This means that the browser will first try `flip-block` and then try `flip-inlin
 
 {{ EmbedLiveSample("Combining multiple values into one option", "100%", "250") }}
 
-## Using `inset-area` try fallbacks
+## Using `position-area` try fallback options
 
 The predefined `<try-tactic>` try fallback options are useful but limited, as they only allow positioned element placement to be flipped across axes. What if you had an anchor-positioned element positioned to the top left of its anchor, and wanted to change its position to directly below the anchor if it started to overflow?
 
-To achieve this, you can use an {{cssxref("inset-area")}} value as a position-try fallback option, including it in the `position-try-fallbacks` list. This automatically creates a try fallback option based on that inset area. In effect, it is a shortcut for creating a [custom position option](#custom_fallback_options) that contains only that `inset-area` property value.
+To achieve this, you can use a {{cssxref("position-area")}} value as a position-try fallback option, including it in the `position-try-fallbacks` list. This automatically creates a try fallback option based on that position area. In effect, it is a shortcut for creating a [custom position option](#custom_fallback_options) that contains only that `position-area` property value.
 
-The following example shows `inset-area` position try fallback options in use. We use the same HTML and CSS, except for the infobox positioning. In this case, our position-try fallback options are `inset-area` values — `top`, `top-right`, `right`, `bottom-right`, `bottom`, `bottom-left`, and `left`. The positioned element will be reasonably positioned no matter which viewport edge the anchor approaches. This verbose approach is more granular and flexible than the predefined values approach.
+The following example shows `position-area` position try fallback options in use. We use the same HTML and CSS, except for the infobox positioning. In this case, our position-try fallback options are `position-area` values — `top`, `top-right`, `right`, `bottom-right`, `bottom`, `bottom-left`, and `left`. The positioned element will be reasonably positioned no matter which viewport edge the anchor approaches. This verbose approach is more granular and flexible than the predefined values approach.
 
 ```html hidden
 <div class="anchor">⚓︎</div>
@@ -233,7 +234,7 @@ body {
 .infobox {
   position: fixed;
   position-anchor: --myAnchor;
-  inset-area: top left;
+  position-area: top left;
   position-try-fallbacks:
     top, top right, right,
     bottom right, bottom,
@@ -241,17 +242,18 @@ body {
 }
 ```
 
-> **Note:** `inset-area` try fallback options can't be added into a space-separated combined position option within a position-try fallback list.
+> [!NOTE]
+> You can't add `position-area` try fallback options into a space-separated combined position option within a position-try fallback list.
 
 Scroll the page and check out the effect of these position-try fallback options as the anchor nears the edge of the viewport:
 
-{{ EmbedLiveSample("Using `inset-area` try fallbacks", "100%", "250") }}
+{{ EmbedLiveSample("Using `position-area` try fallback options", "100%", "250") }}
 
 ## Custom fallback options
 
 To use custom position fallback options that aren't available via the above mechanisms, you can create your own with the {{cssxref("@position-try")}} at-rule. The syntax is:
 
-```text
+```plain
 @position-try --try-fallback-name {
   descriptor-list
 }
@@ -261,7 +263,7 @@ The `--try-fallback-name` is a developer-defined name for the position try fallb
 
 The `descriptor-list` defines the property values for that individual custom try fallback option, including how the positioned element should be placed and sized, and any margins. The limited list of property descriptors allowed includes:
 
-- {{cssxref("inset-area")}}
+- {{cssxref("position-area")}}
 - [Inset properties](/en-US/docs/Glossary/Inset_properties)
 - Margin properties (e.g. {{cssxref("margin-left")}}, {{cssxref("margin-block-start")}})
 - [self-alignment](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center) properties
@@ -318,24 +320,24 @@ body {
 
 ```css
 @position-try --custom-left {
-  inset-area: left;
+  position-area: left;
   width: 100px;
   margin: 0 10px 0 0;
 }
 
 @position-try --custom-bottom {
-  inset-area: bottom;
+  position-area: bottom;
   margin: 10px 0 0 0;
 }
 
 @position-try --custom-right {
-  inset-area: right;
+  position-area: right;
   width: 100px;
   margin: 0 0 0 10px;
 }
 
 @position-try --custom-bottom-right {
-  inset-area: bottom right;
+  position-area: bottom right;
   margin: 10px 0 0 10px;
 }
 ```
@@ -346,7 +348,7 @@ Once our custom try fallback options are created, we can include them in the pos
 .infobox {
   position: fixed;
   position-anchor: --myAnchor;
-  inset-area: top;
+  position-area: top;
   width: 200px;
   margin: 0 0 10px 0;
   position-try-fallbacks:
@@ -355,18 +357,19 @@ Once our custom try fallback options are created, we can include them in the pos
 }
 ```
 
-Note that our default position is defined by `inset-area: top`. When the infobox isn't overflowing the page in any direction, the infobox sits above the anchor, and the position-try fallback options set in the `position-try-fallbacks` property are ignored. Also, note that the infobox has a fixed width and bottom margin set. These values will change as different position-try fallback options are applied.
+Note that our default position is defined by `position-area: top`. When the infobox isn't overflowing the page in any direction, the infobox sits above the anchor, and the position-try fallback options set in the `position-try-fallbacks` property are ignored. Also, note that the infobox has a fixed width and bottom margin set. These values will change as different position-try fallback options are applied.
 
 If the infobox starts to overflow, the browser tries the position options listed in the `position-try-fallbacks` property:
 
 - The browser first tries the `--custom-left` fallback position. This moves the infobox to the left of the anchor, adjusts the margin to suit, and also gives the infobox a different width.
 - Next, the browser tries the `--custom-bottom` position. This moves the infobox to the bottom of the anchor, and sets an appropriate margin. It doesn't include a `width` descriptor, so the infobox returns to its default width of `200px` set by the `width` property.
-- The browser next tries the `--custom-right` position. This works much the same as the `--custom-left` position, with the same `width` descriptor value applied, but the `inset-area` and `margin` values are mirrored to place the infobox appropriately to the right.
+- The browser next tries the `--custom-right` position. This works much the same as the `--custom-left` position, with the same `width` descriptor value applied, but the `position-area` and `margin` values are mirrored to place the infobox appropriately to the right.
 - If none of the other fallbacks succeed in stopping the positioned element from overflowing, the browser tries the `--custom-bottom-right` position as a last resort. This works in much the same way as the other fallback options, but it places the positioned element to the bottom-right of the anchor.
 
-If none of the fallbacks succeed in stopping the positioned element from overflowing, the position will revert to the initial `inset-area: top;` value.
+If none of the fallbacks succeed in stopping the positioned element from overflowing, the position will revert to the initial `position-area: top;` value.
 
-> **Note:** When a position try fallback option is applied, its values will override the default values set on the positioned element. For example, the default `width` set on the positioned element is `200px`, but when the `--custom-right` position try fallback option is applied, its width is set to `100px`.
+> [!NOTE]
+> When a position try fallback option is applied, its values will override the default values set on the positioned element. For example, the default `width` set on the positioned element is `200px`, but when the `--custom-right` position try fallback option is applied, its width is set to `100px`.
 
 Scroll the page and check out the effect of these position-try fallback options as the anchor nears the edge of the viewport:
 
@@ -579,7 +582,7 @@ body {
   position: fixed;
   position-anchor: --myAnchor;
   margin-bottom: 5px;
-  inset-area: top span-all;
+  position-area: top span-all;
   position-visibility: no-overflow;
 }
 ```
@@ -592,6 +595,6 @@ Scroll down the page and note how the positioned element is hidden once it reach
 
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using)
-- [Learn: CSS positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning)
+- [Learn: CSS positioning](/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning)
 - [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module
-- [Sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+- [Learn: Sizing items in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Sizing)

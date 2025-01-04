@@ -9,13 +9,14 @@ browser-compat: svg.elements.pattern.patternContentUnits
 
 The **`patternContentUnits`** attribute indicates which coordinate system to use for the contents of the {{ SVGElement("pattern") }} element.
 
-> **Note:** That this attribute has no effect if attribute {{ SVGAttr("viewBox") }} is specified on the {{ SVGElement("pattern") }} element.
+> [!NOTE]
+> That this attribute has no effect if attribute {{ SVGAttr("viewBox") }} is specified on the {{ SVGElement("pattern") }} element.
 
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement('pattern')}}
 
-## Example
+## Examples
 
 ```css hidden
 html,
@@ -63,9 +64,13 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('Example', 150, '100%')}}
+{{EmbedLiveSample('Examples', 150, '100%')}}
 
-## pattern
+## Elements
+
+You can use this attribute with the SVG elements described in the sections below.
+
+### `<pattern>`
 
 For {{SVGElement('pattern')}}, `patternContentUnits` defines the coordinate system in use for the content of the element.
 
@@ -89,7 +94,7 @@ For {{SVGElement('pattern')}}, `patternContentUnits` defines the coordinate syst
 - `userSpaceOnUse`
   - : This value indicates that all coordinates inside the {{SVGElement('pattern')}} element refer to the user coordinate system as defined when the pattern tile was created.
 - `objectBoundingBox`
-  - : This value indicates that all coordinates inside the {{SVGElement('pattern')}} element are relative to the bounding box of the element the pattern is applied to. A bounding box could be considered the same as if the content of the {{ SVGElement("pattern") }} were bound to a "`0 0 1 1`" {{ SVGAttr("viewBox") }} for a pattern tile of width and height of 100%.
+  - : This value indicates that all coordinates inside the {{SVGElement('pattern')}} element are relative to the bounding box of the element the pattern is applied to. A bounding box could be considered the same as if the content of the {{ SVGElement("pattern") }} were bound to a `"0 0 1 1"` {{ SVGAttr("viewBox") }} for a pattern tile of width and height of 100%.
 
 ## Specifications
 

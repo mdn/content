@@ -78,7 +78,8 @@ If the exact weight given is unavailable, then the following rule is used to det
 
 - If a weight greater than `500` is given, look for available weights greater than the target, in ascending order. If no match is found, look for available weights less than the target, in descending order.
 
-> **Note:** The fallback weight algorithm is only used for rendering. The computed value of the property is still the specified value.
+> [!NOTE]
+> The fallback weight algorithm is only used for rendering. The computed value of the property is still the specified value.
 
 ### Meaning of relative weights
 
@@ -145,20 +146,20 @@ Note that when using relative weights, only four font weights are considered —
 
 ### Common weight name mapping
 
-The numerical values `100` to `900` roughly correspond to the following common weight names (see the [OpenType specification](https://docs.microsoft.com/typography/opentype/spec/os2#usweightclass)):
+The numerical values `100` to `900` roughly correspond to the following common weight names (see the [OpenType specification](https://learn.microsoft.com/en-us/typography/opentype/spec/os2#usweightclass)):
 
-| Value | Common weight name                                                                                                          |
-| ----- | --------------------------------------------------------------------------------------------------------------------------- |
-| 100   | Thin (Hairline)                                                                                                             |
-| 200   | Extra Light (Ultra Light)                                                                                                   |
-| 300   | Light                                                                                                                       |
-| 400   | Normal (Regular)                                                                                                            |
-| 500   | Medium                                                                                                                      |
-| 600   | Semi Bold (Demi Bold)                                                                                                       |
-| 700   | Bold                                                                                                                        |
-| 800   | Extra Bold (Ultra Bold)                                                                                                     |
-| 900   | Black (Heavy)                                                                                                               |
-| 950   | [Extra Black (Ultra Black)](https://docs.microsoft.com/dotnet/api/system.windows.fontweights?view=netframework-4.8#remarks) |
+| Value | Common weight name                                                                                                                 |
+| ----- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| 100   | Thin (Hairline)                                                                                                                    |
+| 200   | Extra Light (Ultra Light)                                                                                                          |
+| 300   | Light                                                                                                                              |
+| 400   | Normal (Regular)                                                                                                                   |
+| 500   | Medium                                                                                                                             |
+| 600   | Semi Bold (Demi Bold)                                                                                                              |
+| 700   | Bold                                                                                                                               |
+| 800   | Extra Bold (Ultra Bold)                                                                                                            |
+| 900   | Black (Heavy)                                                                                                                      |
+| 950   | [Extra Black (Ultra Black)](https://learn.microsoft.com/en-us/dotnet/api/system.windows.fontweights?view=netframework-4.8#remarks) |
 
 ### Variable fonts
 
@@ -166,13 +167,37 @@ While many fonts have a particular weight corresponding to one of the numbers in
 
 For TrueType or OpenType variable fonts, the "wght" variation is used to implement varying widths.
 
-This demo loads with `font-weight: 500;` set. Change the value of the `font-weight` property to see the weight of the text change.
+This demo loads with `font-weight: 500;` set. Change the value of the `font-weight` property in the `.sample` selector to see the weight of the text change (e.g., 200, 700). Click "Play" in the code blocks below to edit the example in the MDN Playground:
 
-{{EmbedGHLiveSample("css-examples/variable-fonts/font-weight.html", '100%', 860)}}
+```html live-sample___font-weight-example
+<p class="sample">
+  ...it would not be wonderful to meet a Megalosaurus, forty feet long or so,
+  waddling like an elephantine lizard up Holborn Hill.
+</p>
+```
 
-## Accessibility concerns
+```css live-sample___font-weight-example
+@font-face {
+  src: url("https://mdn.github.io/shared-assets/fonts/variable-fonts/MutatorSans.ttf");
+  font-family: "MutatorSans";
+  font-style: normal;
+  font-weight: 1 1000;
+}
 
-People experiencing low vision conditions may have difficulty reading text set with a `font-weight` value of `100` (Thin/Hairline) or `200` (Extra Light), especially if the font has a [low contrast color ratio](/en-US/docs/Web/CSS/color#accessibility_concerns).
+.sample {
+  text-transform: uppercase;
+  font-weight: 500;
+  font:
+    1.5rem "MutatorSans",
+    sans-serif;
+}
+```
+
+{{EmbedLiveSample("font-weight-example", "", "200px")}}
+
+## Accessibility
+
+People experiencing low vision conditions may have difficulty reading text set with a `font-weight` value of `100` (Thin/Hairline) or `200` (Extra Light), especially if the font has a [low contrast color ratio](/en-US/docs/Web/CSS/color#accessibility).
 
 - [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
@@ -242,5 +267,5 @@ span {
 
 - {{cssxref("font-family")}}
 - {{cssxref("font-style")}}
-- [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
+- [Learn: Fundamental text and font styling](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals)
 - [CSS fonts](/en-US/docs/Web/CSS/CSS_fonts) module

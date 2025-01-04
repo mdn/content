@@ -7,7 +7,8 @@ browser-compat: webextensions.api.extension.onRequest
 
 {{AddonSidebar}}
 
-> **Warning:** This is not implemented in Firefox because it has been deprecated since Chrome 33. Please use [runtime.onMessage](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage) instead.
+> [!WARNING]
+> This is not implemented in Firefox because it has been deprecated since Chrome 33. Please use [runtime.onMessage](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage) instead.
 
 Fired when a request is sent from either an extension process or a content script.
 
@@ -53,7 +54,8 @@ Events have three functions:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/extension/#event-onRequest) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension#event-onRequest) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

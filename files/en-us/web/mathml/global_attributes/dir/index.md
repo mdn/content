@@ -9,11 +9,24 @@ browser-compat: mathml.global_attributes.dir
 
 The **`dir`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) is an [enumerated](/en-US/docs/Glossary/Enumerated) attribute that indicates the directionality of the MathML element.
 
-## Syntax
+## Example
+
+```css hidden
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+}
+```
 
 ```html
 <!-- Moroccan style -->
-<math dir="ltr">
+<math display="block" dir="ltr">
   <msqrt>
     <mi>س</mi>
   </msqrt>
@@ -25,7 +38,7 @@ The **`dir`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) is an
 </math>
 
 <!-- Maghreb/Machrek style -->
-<math dir="rtl">
+<math display="block" dir="rtl">
   <msqrt>
     <mi>س</mi>
   </msqrt>
@@ -37,12 +50,21 @@ The **`dir`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) is an
 </math>
 ```
 
+{{ EmbedLiveSample("Example", "", 150) }}
+
+## Syntax
+
+```html-nolint
+<math dir="ltr">
+<math dir="rtl">
+```
+
 ### Values
 
 - `ltr`, which means _left to right_ and is used to render mathematical expressions from the left to the right (e.g. English or Moroccan style);
 - `rtl`, which means _right to left_ and is used to render mathematical expressions from the right to the left (e.g. Maghreb or Machrek style);
 
-> **Note:**
+> [!NOTE]
 >
 > - This attribute can be overridden by the CSS property {{ cssxref("direction") }}, if a CSS page is active and the element supports these properties.
 > - As the directionality of mathematics is semantically related to its content and not to its presentation, it is recommended that web developers use this attribute instead of the related CSS properties when possible. That way, the formulas will display correctly even on a browser that doesn't support CSS or has the CSS deactivated.
@@ -60,4 +82,4 @@ The **`dir`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) is an
 
 - All [global attributes](/en-US/docs/Web/MathML/Global_attributes).
 - {{cssxref("direction")}}
-- The HTML [`dir`](/en-US/docs/Web/HTML/Global_attributes#dir) global attribute
+- The HTML [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir) global attribute

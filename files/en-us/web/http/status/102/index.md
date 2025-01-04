@@ -7,11 +7,12 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc2518.html#section-10.1
 
 {{HTTPSidebar}}{{deprecated_header}}
 
-The HTTP **`102 Processing`** informational status response code indicates to client that a full request has been received and the server is working on it.
+The HTTP **`102 Processing`** [informational response](/en-US/docs/Web/HTTP/Status#informational_responses) status code indicates to client that a full request has been received and the server is working on it.
+This status code is only sent if the server expects the request to take significant time.
 
-This status code is only sent if the server expects the request to take significant time. It tells the client that your request is not dead yet.
-
-> **Note:** This status code is deprecated and shouldn't be sent any more. Clients may still accept it, but simply ignore them.
+> [!NOTE]
+> Regular web servers do not return this response.
+> This status code was first introduced in Web Distributed Authoring and Versioning ({{Glossary("WebDAV")}}) {{RFC("2518")}}, but it was removed from WebDAV in {{RFC("4918")}}.
 
 ## Status
 
@@ -29,5 +30,6 @@ This feature is deprecated and browsers will ignore this response header.
 
 ## See also
 
-- {{HTTPHeader("Expect")}}
+- [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
 - {{HTTPStatus("100")}}
+- [rfc4918 '102 Processing' removal notes](https://www.rfc-editor.org/rfc/rfc4918#section-21.4)

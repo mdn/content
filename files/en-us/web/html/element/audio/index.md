@@ -11,7 +11,7 @@ The **`<audio>`** [HTML](/en-US/docs/Web/HTML) element is used to embed sound co
 
 {{EmbedInteractiveExample("pages/tabbed/audio.html","tabbed-standard")}}
 
-The above example shows simple usage of the `<audio>` element. In a similar manner to the {{htmlelement("img")}} element, we include a path to the media we want to embed inside the `src` attribute; we can include other attributes to specify information such as whether we want it to autoplay and loop, whether we want to show the browser's default audio controls, etc.
+The above example shows basic usage of the `<audio>` element. In a similar manner to the {{htmlelement("img")}} element, we include a path to the media we want to embed inside the `src` attribute; we can include other attributes to specify information such as whether we want it to autoplay and loop, whether we want to show the browser's default audio controls, etc.
 
 The content inside the opening and closing `<audio></audio>` tags is shown as a fallback in browsers that don't support the element.
 
@@ -23,7 +23,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
   - : A Boolean attribute: if specified, the audio will automatically begin playback as soon as it can do so, without waiting for the entire audio file to finish downloading.
 
-    > **Note:** Sites that automatically play audio (or videos with an audio track) can be an unpleasant experience for users, so should be avoided when possible. If you must offer autoplay functionality, you should make it opt-in (requiring a user to specifically enable it). However, this can be useful when creating media elements whose source will be set at a later time, under user control. See our [autoplay guide](/en-US/docs/Web/Media/Autoplay_guide) for additional information about how to properly use autoplay.
+    > [!NOTE]
+    > Sites that automatically play audio (or videos with an audio track) can be an unpleasant experience for users, so should be avoided when possible. If you must offer autoplay functionality, you should make it opt-in (requiring a user to specifically enable it). However, this can be useful when creating media elements whose source will be set at a later time, under user control. See our [autoplay guide](/en-US/docs/Web/Media/Autoplay_guide) for additional information about how to properly use autoplay.
 
 - `controls`
 
@@ -67,7 +68,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
     The default value is different for each browser. The spec advises it to be set to `metadata`.
 
-    > **Note:**
+    > [!NOTE]
     >
     > - The `autoplay` attribute has precedence over `preload`. If `autoplay` is specified, the browser would obviously need to start downloading the audio for playback.
     > - The browser is not forced by the specification to follow the value of this attribute; it is a mere hint.
@@ -252,17 +253,34 @@ Browsers don't all support the same [file types](/en-US/docs/Web/Media/Formats/C
 </audio>
 ```
 
+The audio source can be set to any valid [URL](/en-US/docs/Web/URI), including HTTP(S) URLs and [Data URLs](/en-US/docs/Web/URI/Schemes/data). When using HTTP(S) URLs, be aware that the browser's caching behavior will affect how often the file is requested from the server. Data URLs embed the audio data directly in the HTML, which can be useful for small audio files but isn't recommended for larger files as it increases the HTML file size.
+
+You can also use the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) to directly generate and manipulate audio streams from JavaScript code rather than streaming pre-existing audio files. You can set the [`srcObject`](/en-US/docs/Web/API/HTMLMediaElement/srcObject) in JavaScript to a {{domxref("MediaStream")}} object. This is commonly used for live audio streams or real-time audio processing.
+
+```js
+const audioElement = document.querySelector("audio");
+navigator.mediaDevices
+  .getUserMedia({ audio: true })
+  .then((stream) => {
+    audioElement.srcObject = stream;
+  })
+  .catch((error) => {
+    console.error("Error accessing the microphone", error);
+  });
+```
+
+Note that `MediaStream` sources have limitations: they are not seekable and only support a limited set of codecs.
+
 We offer a substantive and thorough [guide to media file types](/en-US/docs/Web/Media/Formats) and the [audio codecs that can be used within them](/en-US/docs/Web/Media/Formats/Audio_codecs). Also available is [a guide to the codecs supported for video](/en-US/docs/Web/Media/Formats/Video_codecs).
 
 Other usage notes:
 
 - If you don't specify the `controls` attribute, the audio player won't include the browser's default controls. You can, however, create your own custom controls using JavaScript and the {{domxref("HTMLMediaElement")}} API.
 - To allow precise control over your audio content, `HTMLMediaElement`s fire many different [events](/en-US/docs/Web/API/HTMLMediaElement#events). This also provides a way to monitor the audio's fetching process so you can watch for errors or detect when enough is available to begin to play or manipulate it.
-- You can also use the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) to directly generate and manipulate audio streams from JavaScript code rather than streaming pre-existing audio files.
 - `<audio>` elements can't have subtitles or captions associated with them in the same way that `<video>` elements can. See [WebVTT and Audio](https://www.iandevlin.com/blog/2015/12/html5/webvtt-and-audio/) by Ian Devlin for some useful information and workarounds.
 - To test the fallback content on browsers that support the element, you can replace `<audio>` with a non-existing element like `<notanaudio>`.
 
-A good general source of information on using HTML `<audio>` is the [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) beginner's tutorial.
+A good general source of information on using HTML `<audio>` is the [HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio) beginner's tutorial.
 
 ### Styling with CSS
 
@@ -287,7 +305,8 @@ You can detect when tracks are added to and removed from an `<audio>` element us
 - {{domxref("HTMLMediaElement.textTracks")}}
   - : Add an `addtrack` event listener to this {{domxref("TextTrackList")}} to be notified when new text tracks are added to the element.
 
-> **Note:** Even though it's an `<audio>` element, it still has video and text track lists, and can in fact be used to present video, although the user interface implications can be odd.
+> [!NOTE]
+> Even though it's an `<audio>` element, it still has video and text track lists, and can in fact be used to present video, although the user interface implications can be odd.
 
 For example, to detect when audio tracks are added to or removed from an `<audio>` element, you can use code like this:
 
@@ -316,6 +335,8 @@ If automatic captioning services are used, it is important to review the generat
 The `<audio>` element doesn't directly support WebVTT. You will have to find a library or framework that provides the capability for you, or write the code to display captions yourself. One option is to play your audio using a {{HTMLElement("video")}} element, which does support WebVTT.
 
 In addition to spoken dialog, subtitles and transcripts should also identify music and sound effects that communicate important information. This includes emotion and tone. For example, in the WebVTT below, note the use of square brackets to provide tone and emotional insight to the viewer; this can help establish the mood otherwise provided using music, nonverbal sounds and crucial sound effects, and so forth.
+
+<!-- cSpell:ignore switchwatch Swisswatch -->
 
 ```plain
 1
@@ -354,10 +375,10 @@ Also it's a good practice to provide some content (such as the direct download l
 
 ### Basic usage
 
-The following example shows simple usage of the `<audio>` element to play an OGG file. It will autoplay due to the `autoplay` attribute—if the page has permission to do so—and also includes fallback content.
+The following example shows basic usage of the `<audio>` element to play an OGG file. It will autoplay due to the `autoplay` attribute—if the page has permission to do so—and also includes fallback content.
 
 ```html
-<!-- Simple audio playback -->
+<!-- Basic audio playback -->
 <audio src="AudioTest.ogg" autoplay>
   <a href="AudioTest.ogg" download="AudioTest.ogg">Download OGG audio</a>.
 </audio>
@@ -412,11 +433,11 @@ This example includes multiple `<source>` elements. The browser tries to load th
         If the element has a <a href="#src"><code>src</code></a>
         attribute: zero or more {{HTMLElement("track")}} elements
         followed by transparent content that contains no
-        {{HTMLElement("audio")}} or {{HTMLElement("video")}}
+        <code>&lt;audio&gt;</code> or {{HTMLElement("video")}}
         media elements.<br />Else: zero or more {{HTMLElement("source")}}
         elements followed by zero or more {{HTMLElement("track")}}
         elements followed by transparent content that contains no
-        {{HTMLElement("audio")}} or {{HTMLElement("video")}}
+        <code>&lt;audio&gt;</code> or {{HTMLElement("video")}}
         media elements.
       </td>
     </tr>
@@ -466,5 +487,5 @@ This example includes multiple `<source>` elements. The browser tries to load th
 - {{domxref("HTMLAudioElement")}}
 - {{htmlelement("source")}}
 - {{htmlelement("video")}}
-- [Learning area: Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [Learning area: HTML video and audio](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [Cross-browser audio basics](/en-US/docs/Web/Media/Audio_and_video_delivery/Cross-browser_audio_basics)

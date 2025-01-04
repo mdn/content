@@ -14,7 +14,8 @@ method of the Canvas 2D API multiplies the current transformation with the matri
 described by the arguments of this method. This lets you scale, rotate, translate
 (move), and skew the context.
 
-> **Note:** See also the
+> [!NOTE]
+> See also the
 > {{domxref("CanvasRenderingContext2D.setTransform()", "setTransform()")}} method, which
 > resets the current transform to the identity matrix and then invokes
 > `transform()`.

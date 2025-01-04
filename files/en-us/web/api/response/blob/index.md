@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Response.blob
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 The **`blob()`** method of the {{domxref("Response")}} interface takes
 a {{domxref("Response")}} stream and reads it to completion. It returns a promise that
@@ -22,7 +22,8 @@ blob()
 
 None.
 
-> **Note:** If the {{domxref("Response")}} has a
+> [!NOTE]
+> If the {{domxref("Response")}} has a
 > {{domxref("Response.type")}} of `"opaque"`, the resulting {{domxref("Blob")}}
 > will have a {{domxref("Blob.size")}} of `0` and a {{domxref("Blob.type")}} of
 > empty string `""`, which renders it _useless_ for methods like

@@ -51,9 +51,16 @@ image-set(
 - `type(<string>)` {{optional_inline}}
   - : A valid MIME type string, for example "image/jpeg".
 
-### Formal syntax
+## Formal syntax
 
-{{csssyntax}}
+{{CSSSyntax}}
+
+## Accessibility
+
+Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
+
+- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## Examples
 
@@ -61,36 +68,53 @@ image-set(
 
 This example shows how to use [`image-set()`](https://drafts.csswg.org/css-images-4/#funcdef-image-set) to provide two alternative {{cssxref("background-image")}} options, chosen depending on the resolution needed: a normal version and a high-resolution version.
 
-{{EmbedGHLiveSample("css-examples/images/image-set.html", '100%', 600)}}
+```html live-sample___image-set-example
+<div class="box"></div>
+```
 
-> **Note:** In the above example, the `-webkit` prefixed version is also used to support Chrome and Safari. In Firefox 90, support was added for `-webkit-image-set()` as an alias to `image-set()` (in order to provide compat where developers had not added the standard property).
+```css live-sample___image-set-example
+.box {
+  width: 400px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-image: image-set(
+    url("https://mdn.github.io/shared-assets/images/examples/balloons-small.jpg")
+      1x,
+    url("https://mdn.github.io/shared-assets/images/examples/balloons-landscape.jpg")
+      2x
+  );
+}
+```
+
+{{EmbedLiveSample("image-set-example", "", "250px")}}
 
 ### Using image-set() to provide alternative image formats
 
 In the next example the `type()` function is used to serve the image in AVIF and JPEG formats. If the browser supports avif, it will choose that version. Otherwise it will use the jpeg version.
 
-{{EmbedGHLiveSample("css-examples/images/image-set-type.html", '100%', 600)}}
+```html live-sample___image-set-type-example
+<div class="box"></div>
+```
 
-#### Providing a fallback
-
-There is no inbuilt fallback for `image-set()`; therefore to include a {{cssxref("background-image")}} for those browsers that do not support the function, a separate declaration is required before the line using `image-set()`.
-
-```css
+```css live-sample___image-set-type-example
 .box {
-  background-image: url("large-balloons.jpg");
+  width: 400px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   background-image: image-set(
-    "large-balloons.avif" type("image/avif"),
-    "large-balloons.jpg" type("image/jpeg")
+    "https://mdn.github.io/shared-assets/images/examples/balloons-landscape.avif"
+      type("image/avif"),
+    "https://mdn.github.io/shared-assets/images/examples/balloons-landscape.jpg"
+      type("image/jpeg")
   );
 }
 ```
 
-## Accessibility concerns
-
-Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
-
-- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
-- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+{{EmbedLiveSample("image-set-type-example", "", "250px")}}
 
 ## Specifications
 
@@ -105,6 +129,6 @@ Browsers do not provide any special information on background images to assistiv
 - {{cssxref("image")}}
 - {{cssxref("image/image", "image()")}}
 - {{cssxref("element", "element()")}}
-- {{cssxref("url", "url()")}}
+- {{cssxref("url_value", "&lt;url&gt;")}}
 - {{cssxref("&lt;gradient&gt;")}}
 - {{cssxref("cross-fade", "cross-fade()")}}

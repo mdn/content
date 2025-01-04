@@ -15,7 +15,7 @@ You can access `CacheStorage` through the {{domxref("Window.caches")}} property 
 
 `Cache` objects are searched in creation order.
 
-> **Note:** {{domxref("CacheStorage.match()", "caches.match()")}} is a convenience method.
+> **Note:** `caches.match()` is a convenience method.
 > Equivalent functionality is to call {{domxref("cache.match()")}} on each cache (in the order returned by {{domxref("CacheStorage.keys()", "caches.keys()")}}) until a {{domxref("Response")}} is returned.
 
 ## Syntax
@@ -48,7 +48,7 @@ match(request, options)
         and `HEAD` are allowed.) It defaults to `false`.
     - `ignoreVary`
       - : A boolean value that, when set to
-        `true,` tells the matching operation not to perform `VARY`
+        `true`, tells the matching operation not to perform `VARY`
         header matching. In other words, if the URL matches you will get a match
         regardless of whether the {{domxref("Response")}} object has a `VARY`
         header or not. It defaults to `false`.
@@ -69,7 +69,7 @@ Here we wait for a {{domxref("FetchEvent")}} to fire. We construct a custom resp
 like so:
 
 1. Check whether a match for the request is found in the {{domxref("CacheStorage")}}
-   using {{domxref("CacheStorage.match","CacheStorage.match()")}}. If so, serve that.
+   using `CacheStorage.match()`. If so, serve that.
 2. If not, open the `v1` cache using `open()`, put the default
    network request in the cache using {{domxref("Cache.put","Cache.put()")}} and return a
    clone of the default network request using `return response.clone()`. The

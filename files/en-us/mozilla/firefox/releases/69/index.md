@@ -84,16 +84,16 @@ This article provides information about the changes in Firefox 69 that will affe
 #### New APIs
 
 - The [Resize Observer API](/en-US/docs/Web/API/Resize_Observer_API) is supported by default ([Firefox bug 1543839](https://bugzil.la/1543839)).
-- The Microtask API ({{domxref("queueMicrotask()")}}) has been implemented ([Firefox bug 1480236](https://bugzil.la/1480236)).
+- The Microtask API ({{domxref("Window.queueMicrotask()")}} and {{domxref("WorkerGlobalScope.queueMicrotask()")}}) has been implemented ([Firefox bug 1480236](https://bugzil.la/1480236)).
 
 #### DOM
 
 - The {{domxref("DOMMatrix")}}, {{domxref("DOMPoint")}}, and related objects are now supported in workers ([Firefox bug 1420580](https://bugzil.la/1420580)).
 - The `pageX` and `pageY` properties have been moved from {{domxref("UIEvent")}} to {{domxref("MouseEvent")}}, for better spec compliance ([Firefox bug 1178763](https://bugzil.la/1178763)). These properties are no longer exposed to the {{domxref("CompositionEvent")}}, {{domxref("FocusEvent")}}, {{domxref("InputEvent")}}, {{domxref("KeyboardEvent")}}, and {{domxref("TouchEvent")}} interfaces, which all inherit from `UIEvent`.
 - The {{domxref("Blob.text()")}}, {{domxref("Blob.arrayBuffer()")}}, and {{domxref("Blob.stream()")}} methods are now implemented ([Firefox bug 1557121](https://bugzil.la/1557121)).
-- {{domxref("DOMMatrix.fromMatrix()")}} has been implemented ([Firefox bug 1560462](https://bugzil.la/1560462)).
-- We now support the six-parameter version of the {{domxref("DOMMatrix.scale()")}} method ([Firefox bug 1397945](https://bugzil.la/1397945)).
-- The arguments for {{domxref("DOMMatrix.translate()")}}, {{domxref("DOMMatrix.skewX()")}}, and {{domxref("DOMMatrix.skewY()")}} are now all optional, as per spec ([Firefox bug 1397949](https://bugzil.la/1397949)).
+- {{domxref("DOMMatrixReadOnly.fromMatrix()")}} has been implemented ([Firefox bug 1560462](https://bugzil.la/1560462)).
+- We now support the six-parameter version of the {{domxref("DOMMatrixReadOnly.scale()")}} method ([Firefox bug 1397945](https://bugzil.la/1397945)).
+- The arguments for {{domxref("DOMMatrixReadOnly.translate()")}}, {{domxref("DOMMatrixReadOnly.skewX()")}}, and {{domxref("DOMMatrixReadOnly.skewY()")}} are now all optional, as per spec ([Firefox bug 1397949](https://bugzil.la/1397949)).
 - The {{domxref("Navigator.userAgent")}}, {{domxref("Navigator.platform")}}, and {{domxref("Navigator.oscpu")}} properties no longer reveal whether a user is running 32-bit Firefox on a 64-bit OS ([Firefox bug 1559747](https://bugzil.la/1559747)). They now say `Linux x86_64` instead of `Linux i686 on x86_64`, and `Win64` instead of `WOW64`.
 - The remaining methods of {{domxref("HTMLDocument")}} have been moved to {{domxref("Document")}}. This should have no appreciable impact on your work in most cases. In particular, the {{domxref("document.close", "close()")}}, {{domxref("document.open", "open()")}}, and {{domxref("document.write", "write()")}} methods have been moved. So have the various editor related methods, including {{domxref("document.execCommand", "execCommand()")}} as well as various properties ([Firefox bug 1549560](https://bugzil.la/1549560)).
 - We have implemented {{domxref("AbstractRange")}} and {{domxref("StaticRange")}} ([Firefox bug 1444847](https://bugzil.la/1444847)).
@@ -107,7 +107,7 @@ This article provides information about the changes in Firefox 69 that will affe
 
 #### Removals
 
-- The {{domxref("DOMMatrix.scaleNonUniformSelf()")}} method has been removed ([Firefox bug 1560119](https://bugzil.la/1560119)).
+- The `DOMMatrix.scaleNonUniformSelf()` method has been removed ([Firefox bug 1560119](https://bugzil.la/1560119)).
 
 ### WebDriver conformance (Marionette)
 

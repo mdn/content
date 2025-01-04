@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Element.ariaHasPopup
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
 The **`ariaHasPopup`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-haspopup`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) attribute, which indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.
 
@@ -29,11 +29,12 @@ A string with one of the following values:
 - `"dialog"`
   - : The element has a popup that is a dialog.
 
-> **Warning:** Be aware that support for the different `aria-haspopup` values can vary depending on the element to which the attribute is specified. Ensure that when using `aria-haspopup`, it is done in accordance to the ARIA specification, and that it behaves as expected when testing with necessary browsers and assistive technologies.
+> [!WARNING]
+> Be aware that support for the different `aria-haspopup` values can vary depending on the element to which the attribute is specified. Ensure that when using `aria-haspopup`, it is done in accordance to the ARIA specification, and that it behaves as expected when testing with necessary browsers and assistive technologies.
 
 ## Examples
 
-In this example, the `aria-haspopup` attribute on the element with an ID of `animal` is set to "`true`". Using `ariaHasPopup`, we update the value to "`listbox`", which is the expected value for a combobox that invokes a `listbox` popup.
+In this example, the `aria-haspopup` attribute on the element with an ID of `animal` is set to `"true"`. Using `ariaHasPopup`, we update the value to `"listbox"`, which is the expected value for a combobox that invokes a `listbox` popup.
 
 ```html
 <div class="animals-combobox">
