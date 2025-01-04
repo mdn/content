@@ -38,11 +38,14 @@ Previously, we told you to install a code editor, as you'll need one to work thr
 
 Binary file editors like Microsoft Word are unsuitable for editing code. You need something that cleanly handles and outputs plain text.
 
-Default OS plain text editors can be OK, for example, TextEdit on macOS, or Notepad on Windows, but they also have limitations.
+You probably already have a basic text editor on your computer. By default Windows includes [Notepad](https://en.wikipedia.org/wiki/Microsoft_Notepad) and macOS comes with [TextEdit](https://en.wikipedia.org/wiki/TextEdit). Linux distros vary; the Ubuntu 22.04 LTS release comes with [GNOME Text Editor](https://en.wikipedia.org/wiki/GNOME_Text_Editor) by default. Default OS plain text editors can be OK, but they also have limitations: They don't come with much of the functionality described below.
 
-You are better off with a fully-fledged code editor like [Visual Studio Code](https://code.visualstudio.com/) (multiplatform, free), Sublime Text (multiplatform, not free) or Notepad++ (Windows, free). We would recommend Visual Studio Code, as it is the editor we mostly use. If you want to use another code editor, that's fine. It won't work exactly the same way as Visual Studio Code, but many of the core features will probably be similar.
+You are better off with a fully-fledged code editor like [Visual Studio Code](https://code.visualstudio.com/) (multiplatform, free), [Sublime Text](https://www.sublimetext.com/) (multiplatform, not free) or [Notepad++](https://notepad-plus-plus.org/) (Windows, free).
 
-Integrated Development Environments (IDEs) such as Visual Studio (Windows, not free), NetBeans (multiplatform, free), and WebStorm (multiplatform, not free) tend to have more features than simple code editors but tend to be more complex than what you need at this stage in your learning journey.
+We would recommend Visual Studio Code, as it is the editor we mostly use. If you do not already have Visual Studio Code (or another code editor) installed, [install it now](https://code.visualstudio.com/).
+
+> [!NOTE]
+> Integrated Development Environments (IDEs) such as [NetBeans](https://netbeans.apache.org/front/main/index.html) (multiplatform, free), and [WebStorm](https://www.jetbrains.com/webstorm/) (multiplatform, not free) tend to have more features than simple code editors but tend to be more complex than what you need at this stage in your learning journey.
 
 ## Basic code editor functionality
 

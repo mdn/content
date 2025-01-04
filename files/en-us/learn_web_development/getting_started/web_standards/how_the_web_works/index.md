@@ -8,7 +8,7 @@ page-type: tutorial-chapter
 
 {{NextMenu("Learn_web_development/Getting_started/Web_standards/The_Web_standards_model", "Learn_web_development/Getting_started/Web_standards")}}
 
-_How the web works_ provides a simplified view of what happens when you view a webpage in a web browser on your computer or phone.
+_How the web works_ provides a description of what happens when you view a webpage in a web browser on your computer or phone.
 
 This theory is not essential to writing web code in the short term, but before long you'll really start to benefit from understanding what's happening in the background.
 
