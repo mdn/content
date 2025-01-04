@@ -7,7 +7,7 @@ browser-compat: css.properties.text-wrap-mode
 
 {{CSSRef}}
 
-The **`text-wrap-mode`** [CSS](/en-US/docs/Web/CSS) property controls whether the text inside an element is wrapped. The different values provide alternate ways of wrapping the content of a block element. It can also be set, and reset, using the {{CSSXRef("text-wrap")}} shorthand or the {{CSSXRef("text-wrap-mode")}} shorthand.
+The **`text-wrap-mode`** [CSS](/en-US/docs/Web/CSS) property controls whether the text inside an element is wrapped. The different values provide alternate ways of wrapping the content of a block element. It can also be set, and reset, using the {{CSSXRef("text-wrap")}} shorthand or the {{CSSXRef("white-space")}} shorthand.
 
 > [!NOTE]
 > The {{CSSxRef("white-space-collapse")}} and `text-wrap-mode` properties can be declared together using the {{CSSxRef("white-space")}} shorthand property.
@@ -21,15 +21,15 @@ The **`text-wrap-mode`** [CSS](/en-US/docs/Web/CSS) property controls whether th
 
 ```css
 /* Keyword values */
-text-wrap-style: wrap;
-text-wrap-style: nowrap;
+text-wrap-mode: wrap;
+text-wrap-mode: nowrap;
 
 /* Global values */
-text-wrap-style: inherit;
-text-wrap-style: initial;
-text-wrap-style: revert;
-text-wrap-style: revert-layer;
-text-wrap-style: unset;
+text-wrap-mode: inherit;
+text-wrap-mode: initial;
+text-wrap-mode: revert;
+text-wrap-mode: revert-layer;
+text-wrap-mode: unset;
 ```
 
 ## Values
