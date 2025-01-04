@@ -1,6 +1,6 @@
 ---
 title: Escape Character
-slug: Glossary/Escape Character
+slug: Glossary/Escape_Character
 page-type: glossary-definition
 ---
 
