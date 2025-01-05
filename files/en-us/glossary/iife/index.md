@@ -34,7 +34,7 @@ IIFEs are a common pattern used to execute arbitrarily many statements in their 
 
 Use cases of IIFEs include:
 
-- Avoiding polluting the global namespace by creating a new {{glossary("scope")}}).
+- Avoiding polluting the global namespace by creating a new {{glossary("scope")}}.
 - Creating a new async context to use {{jsxref("Operators/await", "await")}} in a non-async context.
 - Computing values with complex logic, such as using multiple statements as a single expression.
 
