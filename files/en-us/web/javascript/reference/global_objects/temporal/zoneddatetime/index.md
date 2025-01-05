@@ -47,22 +47,34 @@ As input, named identifiers are matched case-insensitively. Internally, they are
 When a `Temporal` API accepts a _time zone identifier_, in addition to primary time zone identifiers and non-primary time zone identifiers, it also accepts an _offset time zone identifier_, which is in the same form as the offset, except subminute precision is not allowed. For example, `+05:30`, `-08`, `+0600` are all valid offsets identifiers. Internally, offset identifiers are stored in the `±HH:mm` form.
 
 > [!NOTE]
-> Avoid using offset identifiers if there is a unique region to use. Even if a region has always used a single offset, it is better to use the named identifier to guard against past and future political changes to the offset.
+> Avoid using offset identifiers if there is a named time zone you can use instead. Even if a region has always used a single offset, it is better to use the named identifier to guard against future political changes to the offset.
+>
+> If a region uses (or has used) multiple offsets, then using its named time zone is even more important. This is because `Temporal.ZonedDateTime` can use methods like `add` or `with` to create new instances at a different instant. If those derived instances correspond to an instant that uses a different offset (for example, after a Daylight Saving Time transition) then your calculations will have an incorrect local time. Using a named time zone ensures that local dates and times are always adjusted for the correct offset for that instant.
 
-For most APIs, when providing a time zone identifier, you can also provide another `ZonedDateTime` instance, whose `timeZoneId` will get used. You can also provide a full ISO 8601 date/time string, which must contain a time zone annotation, or an offset (as `Z` or `±HH:mm`).
+When providing a time zone identifier to `Temporal` APIs, you can also provide another `ZonedDateTime` instance, whose `timeZoneId` will be used. 
 
-While the IANA database changes from time to time, [the Unicode CLDR database (which browsers use) keeps old time zone names for stability purposes](https://unicode.org/reports/tr35/#Time_Zone_Identifiers). For example, here are a few notable name changes:
+You can also use an [RFC 9557](https://datatracker.ietf.org/doc/html/rfc9557) string like `2022-07-08T00:14:07[Europe/Paris]` that contains a time zone annotation in square brackets. These strings can be used in place of a time zone identifier (the bracketed identifier will be used) or can be used for parsing and creating an entire `Temporal.ZonedDateTime` instance using `Temporal.ZonedDateTime.from`. Note that `Temporal.ZonedDateTime.from` will reject ISO 8601 or RFC 3339 date/time strings like `2024-03-10T02:30:00-04:00` or `2024-03-10T06:30Z`. This is because ISO 8601 strings only describe the time zone offset, not the IANA time zone. 
 
-| Current IANA primary identifier  | CLDR database          |
-| -------------------------------- | ---------------------- |
-| `America/Argentina/Buenos_Aires` | `America/Buenos_Aires` |
-| `Asia/Kolkata`                   | `Asia/Calcutta`        |
-| `Asia/Ho_Chi_Minh`               | `Asia/Saigon`          |
-| `Europe/Kyiv`                    | `Europe/Kiev`          |
+You can, in rare circumstances, use an ISO 8601 / RFC 3339 string in place of an offset time zone identifier in two APIs only: `Temporal.ZonedDateTime.prototype.withTimeZone` and in the `timeZoneId` option when using `Temporal.ZonedDateTime.from` to create an instance from a property bag. This usage is generally not recommended, because as discussed above it will create a `Temporal.ZonedDateTime` instance that lacks the ability to safely derive other `Temporal.ZonedDateTime` instances across an offset transition like when Daylight Saving Time starts or ends. Instead, consider just using `Temporal.Instant` or fetching the user's actual named time zone.
 
-For more information, check the [CLDR database](https://github.com/unicode-org/cldr-json/blob/main/cldr-json/cldr-bcp47/bcp47/timezone.json). (IANA names are marked with `"_iana"`, if different.)
+The IANA time zone database changes from time to time, usually to add new time zones in response to political changes. However, in rare occasions, IANA time zone identifiers can be renamed to match updated English translation of a city name or to update outdated naming conventions. For example, here are a few notable name changes:
 
-To eliminate redundancy, JavaScript APIs that return time zone identifiers may choose to canonicalize non-primary time zone identifiers to their primary time zone identifiers. Such cases include:
+| Current IANA primary identifier  | Old, now non-primary identifier |
+| -------------------------------- | ------------------------------- |
+| `America/Argentina/Buenos_Aires` | `America/Buenos_Aires`          |
+| `Asia/Kolkata`                   | `Asia/Calcutta`                 |
+| `Asia/Ho_Chi_Minh`               | `Asia/Saigon`                   |
+| `Europe/Kyiv`                    | `Europe/Kiev`                   |
+
+Historically, these renames caused problems for programmers because the the Unicode [CLDR database](https://github.com/unicode-org/cldr-json/blob/main/cldr-json/cldr-bcp47/bcp47/timezone.json) (a library used by browsers rely on to supply time zone identifiers and data) did not follow IANA's renaming for [stability reasons](https://unicode.org/reports/tr35/#Time_Zone_Identifiers). As a result, some browsers like Chrome and Safari reported CLDR's outdated identifiers, while other browsers like Firefox overrode CLDR's defaults and reported the up-to-date primary identifiers.
+
+With the introduction of Temporal, this behavior is now more standardized:
+
+- [CLDR data](https://github.com/unicode-org/cldr-json/blob/main/cldr-json/cldr-bcp47/bcp47/timezone.json) now includes an `"_iana"` attribute that indicates the most up-to-date identifier if the older, stable identifier has been renamed. Browsers can use this new attribute to provide up-to-date identifiers to callers.
+- Time zone identifiers provided by the programmer will never be replaced with an alias. For example, if the caller provides `Asia/Calcutta` or `Asia/Kolkata` as the identifier input to `Temporal.ZonedDateTime.from()`, then the same identifier is returned in the resulting instance's `timeZoneId`. Note that the letter case of outputs will be normalized to match IANA, so that `ASIA/calCuTTa` as input generates a `timeZoneId` of `Asia/Calcutta` as output.
+- When a time zone identifier is not provided by a caller but is instead sourced from the system itself (for example, when using `Temporal.Now.timeZoneId`) then modern identifiers are returned in all browsers. Note that for future city renames, there will be a two-year lag before these system-provided-identifier APIs expose the new name, thereby giving other components (like a Node server) time to update their copies of the IANA database to recognize the new name.
+
+To eliminate redundancy, JavaScript APIs that return time zone identifiers only return primary time zone identifiers. These APIs include:
 
 - {{jsxref("Temporal/Now/timeZoneId", "Temporal.Now.timeZoneId()")}}
 - {{jsxref("Intl/Locale/getTimeZones", "Intl.Locale.prototype.getTimeZones()")}}
@@ -138,20 +150,20 @@ There are several cases where there's no ambiguity when constructing a `ZonedDat
 
 ### Offset ambiguity
 
-We already demonstrated how ambiguity may arise from interpreting a local time in a time zone, without providing an explicit offset. However, if you provide an explicit offset, then another conflict arises: between the offset as specified, and the offset as calculated from the time zone and the local time. This is an unavoidable real-world issue: if you store a time in the future, with an anticipated offset, then before that time comes, the time zone definition may have changed due to political reasons. For example, suppose in 2018, I set a reminder at the time `2019-12-23T12:00:00-02:00[America/Sao_Paulo]` (which is a daylight saving time; Brazil is in the southern hemisphere, so it enters DST in October and exits in February). But before that time comes, in early 2019, Brazil decides to stop observing DST, so the real offset becomes `-03:00`. Should the reminder now still fire at noon (respect time zone identifier), or should it fire at 11:00 AM (respect offset)?
+We already demonstrated how ambiguity may arise from interpreting a local time in a time zone, without providing an explicit offset. However, if you provide an explicit offset, then another conflict arises: between the offset as specified, and the offset as calculated from the time zone and the local time. This is an unavoidable real-world issue: if you store a time in the future, with an anticipated offset, then before that time comes, the time zone definition may have changed due to political reasons. For example, suppose in 2018, I set a reminder at the time `2019-12-23T12:00:00-02:00[America/Sao_Paulo]` (which is a daylight saving time; Brazil is in the southern hemisphere, so it enters DST in October and exits in February). But before that time comes, in early 2019, Brazil decides to stop observing DST, so the real offset becomes `-03:00`. Should the reminder now still fire at noon (keeping the local time), or should it fire at 11:00 AM (keeping the exact time)?
 
 When constructing a `ZonedDateTime` from an ISO 8601 string or when updating it using the {{jsxref("Temporal/ZonedDateTime/with", "with()")}} method, the behavior for offset ambiguity is configurable via the `offset` option:
 
 - `use`
-  - : Use the offset to calculate the exact time. This keeps the same exact time as originally calculated when we stored the time. The time zone identifier is still used to then infer the correct offset and convert the exact time to local time.
+  - : Use the offset to calculate the exact time. This option "uses" the offset when determining the instant represented by the string, which will be the same instant originally calculated when we stored the time, even if the offset at that instant has changed. The time zone identifier is still used to then infer the (possibly updated) offset and use that offset to convert the exact time to local time.
 - `ignore`
-  - : Use the time zone identifier to re-calculate the offset, ignoring what's specified. This keeps the same local time as originally calculated when we stored the time. Note that this causes the same local time interpretation ambiguity as demonstrated above, which is resolved using the `disambiguation` option.
+  - : Use the time zone identifier to re-calculate the offset, ignoring the offset that's specified in the string. This option keeps the same local time as originally calculated when we stored the time, but may correspond to a different instant. Note that this option may cause the same local time interpretation ambiguity as demonstrated above, which is resolved using the `disambiguation` option.
 - `reject`
   - : Throw a `RangeError` whenever there is a conflict between the offset and the time zone identifier. This is the default for {{jsxref("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}}.
 - `prefer`
   - : Use the offset if it's valid, otherwise calculate the offset from the time zone identifier. This is the default for {{jsxref("Temporal/ZonedDateTime/with", "Temporal.ZonedDateTime.prototype.with()")}} (see the method for more details). This is different from `ignore` because in the case of local time ambiguity, the offset is used to resolve it rather than the `disambiguation` option.
 
-Note that the `Z` offset does not mean `+00:00`; it is always considered valid regardless of the time zone. The time is interpreted as a UTC time, and the time zone identifier is then used to convert it to local time.
+Note that the `Z` offset does not mean `+00:00`; it is always considered valid regardless of the time zone. The time is interpreted as a UTC time, and the time zone identifier is then used to convert it to local time. In other words, `Z` enforces the same behavior as the `ignore` option and its results can never be ambiguous.
 
 > [!NOTE]
 > Although {{jsxref("Temporal/Instant/from", "Temporal.Instant.from()")}} also takes an ISO 8601 string in the same form, there is no ambiguity because it always ignores the time zone identifier and reads the offset only.
