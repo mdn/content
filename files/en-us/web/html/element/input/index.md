@@ -1225,12 +1225,14 @@ Firefox uses the following heuristics to determine the locale to validate the us
 
 When including inputs, it is an accessibility requirement to add labels alongside. This is needed so those who use assistive technologies can tell what the input is for. Also, clicking or touching a label gives focus to the label's associated form control. This improves the accessibility and usability for sighted users, increases the area a user can click or touch to activate the form control. This is especially useful (and even needed) for radio buttons and checkboxes, which are tiny. For more information about labels in general see [Labels](#labels).
 
-The following is an example of how to associate the `<label>` with an `<input>` element in the above style. You need to give the `<input>` an `id` attribute. The `<label>` then needs a `for` attribute whose value is the same as the input's `id`.
+The following are two examples of how to associate the `<label>` with an `<input>` element in the above style. For one, you need to give the `<input>` an `id` attribute. The `<label>` then needs a `for` attribute whose value is the same as the input's `id`. For the other, just enclose the input in the label.
 
 ```html
-<label>
-  Do you like peas?
-  <input type="checkbox" name="peas" />
+<label for="peas">Do you like peas?</label>
+<input type="checkbox" name="peas" id="peas" />
+<label for="carrotsCheck">
+  Do you like carrots?
+  <input type="checkbox" id="carrotsCheck" name="carrots" />
 </label>
 ```
 

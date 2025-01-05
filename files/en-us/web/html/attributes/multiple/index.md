@@ -62,7 +62,7 @@ Setting `size="1"` on a multiple select can make it appear as a single select in
 
 ```html
 <label>
-  Who do you want to email?
+  Who do you want to email? Separate them with commas.
   <input
     type="email"
     multiple

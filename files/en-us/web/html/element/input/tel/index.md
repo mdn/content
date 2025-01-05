@@ -204,8 +204,8 @@ You can make it so that an empty input is invalid and won't be submitted to the 
     <label>
       Enter a telephone number (required):
       <input name="telNo" type="tel" required />
+      <span class="validity"></span>
     </label>
-    <span class="validity"></span>
   </div>
   <div>
     <button>Submit</button>

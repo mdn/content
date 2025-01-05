@@ -117,8 +117,8 @@ You can use the [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-
   <label>
     What week would you like to start?
     <input type="week" name="week" min="2017-W01" max="2017-W52" />
+    <span class="validity"></span>
   </label>
-  <span class="validity"></span>
 </form>
 ```
 
@@ -153,7 +153,7 @@ input:valid + span::after {
 }
 ```
 
-The result here is that only weeks between W01 and W52 in 2017 will be seen as valid and be selectable in supporting browsers.
+The result here is that only weeks between W01 and W52 in 2017 will be seen as valid and be selectable in supporting browsers. Some browsers that have implemented `type=week` actually prohibit you from making it invalid, so you can't demo that validity checkbox. Too bad. Try a different browser, or different machine.
 
 ### Making week values required
 
@@ -167,8 +167,8 @@ Let's look at an example; here we've set minimum and maximum weeks, and also mad
     <label>
       What week would you like to start?
       <input type="week" name="week" min="2017-W01" max="2017-W52" required />
+      <span class="validity"></span>
     </label>
-    <span class="validity"></span>
   </div>
   <div>
     <input type="submit" value="Submit form" />
@@ -220,19 +220,21 @@ The HTML looks like so:
     <label>
       What week would you like to start?
       <input type="week" name="week" min="2017-W01" max="2018-W52" required />
+      <span class="validity"></span>
     </label>
-    <span class="validity"></span>
   </div>
   <p class="fallbackLabel">What week would you like to start?</p>
   <div class="fallbackWeekPicker">
     <div>
       <span>
-        <label>Week:</label>
+        <label
+          >Week:
           <select id="fallbackWeek" name="week"></select>
         </label>
       </span>
       <span>
-        <label>Year:
+        <label
+          >Year:
           <select id="year" name="year">
             <option value="2017" selected>2017</option>
             <option value="2018">2018</option>

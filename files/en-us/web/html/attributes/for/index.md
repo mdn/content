@@ -19,7 +19,7 @@ The **`for`** attribute is an allowed attribute for {{htmlelement("label")}} and
 When used as an attribute of `<label>`, the `for` attribute has a value which is the `id` of the form element it relates to.
 
 ```html
-<label>Your name <input type="text" /> </label>
+<label for="username">Your name</label> <input type="text" id="username" />
 ```
 
 When used as an attribute of `<output>`, the `for` attribute has a value which is a space separated list of the `id` values of the elements which are used to create the output.

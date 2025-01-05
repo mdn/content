@@ -103,13 +103,14 @@ The example below restricts the value to 4-8 characters and requires that it con
       Choose a username:
       <input
         type="text"
+        id="uname"
         name="name"
         required
         size="45"
         pattern="[a-z]{4,8}"
         title="4 to 8 lowercase letters" />
+      <span class="validity"></span>
     </label>
-    <span class="validity"></span>
     <p>Usernames must be lowercase and 4-8 characters in length.</p>
   </div>
   <div>
@@ -146,9 +147,11 @@ input:valid + span::after {
 }
 ```
 
+Notice that the `span` has to come immediately after the `input` element, in order for the `input + span` css selector to work.
+
 This renders like so:
 
-{{ EmbedLiveSample('Specifying_a_pattern', 600, 110) }}
+{{ EmbedLiveSample('Specifying_a_pattern', 600, 130) }}
 
 ## Specifications
 

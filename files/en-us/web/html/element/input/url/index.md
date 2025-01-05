@@ -107,14 +107,14 @@ It's important, however, to note that this is not enough to ensure that the spec
 This element is implemented as a standard text input field with basic validation features. In its most basic form, a URL input can be implemented like this:
 
 ```html
-<input id="myURL" name="myURL" type="url" />
+<input id="myURL" name="myURL" type="url" value="https://mozilla.org" />
 ```
 
 {{ EmbedLiveSample('A_basic_URL_input', 600, 40) }}
 
-Notice that it's considered valid when empty and when a single validly-formatted URL address is entered, but is otherwise not considered valid. By adding the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute, only properly-formed URLs are allowed; the input is no longer considered valid when empty.
+As always, you can provide a default value for a `url` input box by setting its [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute.
 
-There is nothing magical going on here. Submitting this form would cause the following data to be sent to the server: `myURL=http%3A%2F%2Fwww.example.com`. Note how characters are escaped as necessary.
+There is nothing magical going on here. Submitting this form would cause the following data to be sent to the server: `myURL=https%3A%2F%2Fmozilla.org`. Note how characters are escaped as necessary.
 
 ### Placeholders
 
@@ -138,10 +138,15 @@ You can control both the physical length of the input box and the minimum and ma
 
 #### Physical input element size
 
-The physical size of the input box can be controlled using the [`size`](/en-US/docs/Web/HTML/Element/input#size) attribute. With it, you can specify the number of characters the input box can display at a time. In this example, for instance, the `url` edit box is 30 characters wide:
+The physical size of the input box can be controlled using the [`size`](/en-US/docs/Web/HTML/Element/input#size) attribute. With it, you can specify the number of characters the input box can display at a time. In this example, for instance, the `url` edit box is 60 characters wide:
 
 ```html
-<input id="myURL" name="myURL" type="url" size="30" />
+<input
+  id="myURL"
+  name="myURL"
+  type="url"
+  size="60"
+  value="https://mozilla.org" />
 ```
 
 {{ EmbedLiveSample('Physical_input_element_size', 600, 40) }}
@@ -159,25 +164,32 @@ The example below creates a 30-character wide URL address entry box, requiring t
   type="url"
   size="30"
   minlength="10"
-  maxlength="80" />
+  maxlength="80"
+  value="http://8" />
+```
+
+```html hidden
+<span class="validity"> Invalid</span>
+```
+
+```css hidden
+.validity {
+  display: none;
+}
+input:invalid + .validity {
+  display: inline;
+}
 ```
 
 {{EmbedLiveSample("Element_value_length", 600, 40) }}
 
-> [!NOTE]
-> These attributes also affect validation; a value shorter or longer than the specified minimum/maximum lengths will be classified as invalid; in addition most browsers will refuse to let the user enter a value longer than the specified maximum length.
+These attributes also affect validation; a value shorter or longer than the specified minimum/maximum lengths will be classified as invalid; in addition most browsers will refuse to let the user enter a value longer than the specified maximum length.
+
+Notice that it's considered valid when empty and when a single validly-formatted URL address is entered, but is otherwise not considered valid. By adding the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute, only properly-formed URLs are allowed; the input is no longer considered valid when empty.
 
 ### Providing default options
 
-#### Providing a single default using the value attribute
-
-As always, you can provide a default value for a `url` input box by setting its [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute:
-
-```html
-<input id="myURL" name="myURL" type="url" value="http://www.example.com" />
-```
-
-{{EmbedLiveSample("Providing_a_single_default_using_the_value_attribute", 600, 40)}}
+As always, you can provide a default value for a `url` input box by setting its [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute. To leave it empty, use an empty string `""` or just omit the attribute.
 
 #### Offering suggested values
 
@@ -237,19 +249,32 @@ As mentioned earlier, to make a URL entry required before the form can be submit
 ```html
 <form>
   <input id="myURL" name="myURL" type="url" required />
+  <span class="validity"> Invalid!!</span>
   <button>Submit</button>
 </form>
 ```
 
+```css hidden
+.validity {
+  display: none;
+}
+input:invalid + .validity {
+  display: inline;
+}
+button {
+  display: block;
+}
+```
+
 {{EmbedLiveSample("Making_a_URL_required", 600, 40)}}
 
-Try submitting the above form with no value entered to see what happens.
+By default, it's empty and therefore invalid. But it's also a URL input, so you need to type in a valid URL before the 'invalid' will go away. "scp:" qualifies as a URL and is short.
 
 ### Pattern validation
 
 If you need the entered URL to be restricted further than just "any string that looks like a URL," you can use the [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) attribute to specify a {{Glossary("regular expression")}} the value must match for the value to be valid.
 
-For example, let's say you're building a support page for employees of Myco, Inc. which will let them contact their IT department for help if one of their pages has a problem. In our simplified form, the user needs to enter the URL of the page that has a problem, and a message describing what is wrong. But we want the URL to only successfully validate if the entered URL is in a Myco domain.
+For example, let's say you're building a support page for employees of Myco, Inc. which will let them contact their IT department for help if one of their pages has a problem. In our simplified form, the user needs to enter the URL of the page that has a problem, and a message describing what is wrong. But we want the URL to only successfully validate if the entered URL is in a Myco domain - `something.myco.com` or `myco.mx` for the mexico office.
 
 Since inputs of type `url` validate against both the standard URL validation _and_ the specified [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern), you can implement this with a regular expression. Let's see how:
 
@@ -289,17 +314,17 @@ input:valid + span::after {
         name="myURL"
         type="url"
         required
-        pattern=".*\.myco\..*"
+        pattern=".*[/.]myco\.\w+"
         title="The URL must be in a Myco domain" />
+      <span class="validity"></span>
     </label>
-    <span class="validity"></span>
   </div>
   <div>
     <label>
       What is the problem?
       <input name="myComment" type="text" required />
+      <span class="validity"></span>
     </label>
-    <span class="validity"></span>
   </div>
   <div>
     <button>Submit</button>
@@ -311,7 +336,7 @@ input:valid + span::after {
 
 First of all, the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute is specified, making it mandatory that a valid URL be provided.
 
-Second, in the `url` input, we set `pattern` to `".*\.myco\..*"`. This regular expression requests a string that has any number of characters, followed by a dot, followed by "myco", followed by a dot, followed by any number of characters. Because the browser runs both the standard URL filter _and_ our custom pattern against the specified text, we wind up with a validation that says "make sure this is a valid URL, and also in a Myco domain."
+Second, in the `url` input, we set `pattern` to `".*[/.]myco\.\w+"`. This regular expression requests a string that has any number of characters, followed by a dot or slash, followed by "myco", followed by a dot, followed by some alphanumericsq. Because the browser runs both the standard URL filter _and_ our custom pattern against the specified text, we wind up with a validation that says "make sure this is a valid URL, and also in a Myco domain."
 
 This isn't perfect, but it is good enough for this basic demo's requirements.
 
@@ -323,8 +348,6 @@ That's why, instead, we specify the string "The URL must be in a myco domain". B
 > If you run into trouble while writing your validation regular expressions and they're not working properly, check your browser's console; there may be helpful error messages there to aid you in solving the problem.
 
 ## Examples
-
-There's not much else to say about `url` type inputs; check the [Pattern validation](#pattern_validation) and [Using URL inputs](#using_url_inputs) sections for numerous examples.
 
 You can also find our [pattern validation example on GitHub](https://github.com/mdn/learning-area/blob/main/html/forms/url-example/index.html) (see it [running live also](https://mdn.github.io/learning-area/html/forms/url-example/)).
 

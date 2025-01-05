@@ -62,6 +62,14 @@ Provide an indication to users informing them the form control is required. Ensu
 </form>
 ```
 
+This CSS colors the box red if there's no text inside.
+
+```css
+input[required]:invalid {
+  background: #f00;
+}
+```
+
 ### Result
 
 {{EmbedLiveSample('Example')}}

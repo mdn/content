@@ -143,7 +143,7 @@ input.addEventListener("input", (event) => {
 
 {{EmbedLiveSample("Setting_step_to_any", 600, 75)}}
 
-This example lets the user select any value between 0 and π without any restriction on the fractional part of the value selected. JavaScript is used to show how the value changes as the user interacts with the range.
+This example lets the user select any value between 0 and π without any restriction on the fractional part of the value selected. JavaScript is used to show how the value changes as the user interacts with the range. (If you want to round it off to a fixed number of decimal places, use .toFixed() on event.target.value .)
 
 ### Adding tick marks
 
@@ -152,8 +152,10 @@ To add tick marks to a range control, include the `list` attribute, giving it th
 #### HTML
 
 ```html
-<label for="temp">Choose a comfortable temperature:</label><br />
-<input type="range" id="temp" name="temp" list="markers" />
+<label
+  >Choose a comfortable temperature:<br />
+  <input type="range" id="temp" name="temp" list="markers" />
+</label>
 
 <datalist id="markers">
   <option value="0"></option>
@@ -218,9 +220,11 @@ You can label tick marks by giving the `<option>` elements `label` attributes. H
 #### HTML
 
 ```html
-<label for="tempB">Choose a comfortable temperature:</label><br />
-<input type="range" id="tempB" name="temp" list="values" />
-
+<label>
+  Choose a comfortable temperature:
+  <br />
+  <input type="range" name="temp" list="values" />
+</label>
 <datalist id="values">
   <option value="0" label="very cold!"></option>
   <option value="25" label="cool"></option>

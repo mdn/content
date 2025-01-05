@@ -151,7 +151,7 @@ If your recommended (or required) password syntax rules would benefit from an al
 
 ### Setting length requirements
 
-As usual, you can use the [`minlength`](/en-US/docs/Web/HTML/Element/input#minlength) and [`maxlength`](/en-US/docs/Web/HTML/Element/input#maxlength) attributes to establish minimum and maximum acceptable lengths for the password. This example expands on the previous one by specifying that the user's PIN must be at least four and no more than eight digits. The [`size`](/en-US/docs/Web/HTML/Element/input#size) attribute is used to ensure that the password entry control is eight characters wide.
+As usual, you can use the [`minlength`](/en-US/docs/Web/HTML/Element/input#minlength) and [`maxlength`](/en-US/docs/Web/HTML/Element/input#maxlength) attributes to establish minimum and maximum acceptable lengths for the password. This example expands on the previous one by specifying that the user's PIN must be at least four and no more than eight digits. The [`size`](/en-US/docs/Web/HTML/Element/input#size) attribute is used to ensure that the password entry control has room for eight characters, plus 4 for extra room.
 
 ```html
 <label>
@@ -162,8 +162,28 @@ As usual, you can use the [`minlength`](/en-US/docs/Web/HTML/Element/input#minle
     inputmode="numeric"
     minlength="4"
     maxlength="8"
-    size="8" />
+    required
+    size="12" />
+  <span class="validity"></span>
 </label>
+```
+
+```css
+input + span {
+  padding-right: 30px;
+}
+
+input:invalid + span::after {
+  position: absolute;
+  content: "✖";
+  padding-left: 5px;
+}
+
+input:valid + span::after {
+  position: absolute;
+  content: "✓";
+  padding-left: 5px;
+}
 ```
 
 {{EmbedLiveSample("Setting_length_requirements", 600, 40)}}
@@ -209,8 +229,28 @@ In this example, only values consisting of at least four and no more than eight 
     type="password"
     pattern="[0-9a-fA-F]{4,8}"
     title="Enter an ID consisting of 4-8 hexadecimal digits"
+    required
     autocomplete="new-password" />
+  <span class="validity"></span>
 </label>
+```
+
+```css hidden
+input + span {
+  padding-right: 30px;
+}
+
+input:invalid + span::after {
+  position: absolute;
+  content: "✖";
+  padding-left: 5px;
+}
+
+input:valid + span::after {
+  position: absolute;
+  content: "✓";
+  padding-left: 5px;
+}
 ```
 
 {{EmbedLiveSample("Validation", 600, 40)}}
@@ -235,10 +275,31 @@ This example only accepts input which matches the format for a [valid United Sta
     pattern="(?!000)([0-6]\d{2}|7([0-6]\d|7[012]))([ -])?(?!00)\d\d\3(?!0000)\d{4}"
     required
     autocomplete="off" />
+  <span class="validity"></span>
 </label>
 <br />
-<label for="ssn">Value:</label>
-<span id="current"></span>
+<label
+  >Value:
+  <span id="current"></span>
+</label>
+```
+
+```css hidden
+input + span {
+  padding-right: 30px;
+}
+
+input:invalid + span::after {
+  position: absolute;
+  content: "✖";
+  padding-left: 5px;
+}
+
+input:valid + span::after {
+  position: absolute;
+  content: "✓";
+  padding-left: 5px;
+}
 ```
 
 This uses a [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) which limits the entered value to strings representing legal Social Security numbers. Obviously, this regexp doesn't guarantee a valid SSN (since we don't have access to the Social Security Administration's database), but it does ensure the number could be one; it generally avoids values that cannot be valid. In addition, it allows the three groups of digits to be separated by a space, a dash ("-"), or nothing.

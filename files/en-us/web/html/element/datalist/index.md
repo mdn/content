@@ -62,11 +62,14 @@ Predefined values can be shown there, allowing the user to quickly fill the cont
 > When these types are not supported, a basic `text` type will be rendered instead, creating a text field. That field will correctly recognize recommended values and display them to the user in a drop-down menu.
 
 ```html
+choose when you can come in for your appointment:
 <input type="time" list="popularHours" />
 <datalist id="popularHours">
-  <option value="12:00"></option>
-  <option value="13:00"></option>
-  <option value="14:00"></option>
+  <option value="10:00 am"></option>
+  <option value="11:00 am"></option>
+  <option value="12:00 pm"></option>
+  <option value="13:00 pm"></option>
+  <option value="14:00 pm"></option>
 </datalist>
 ```
 
@@ -85,7 +88,8 @@ The recommended values in the {{HTMLElement("input/range", "range")}} type will 
   <option value="0"></option>
   <option value="10"></option>
   <option value="20"></option>
-  <option value="30"></option>
+  <option value="60"></option>
+  <option value="90"></option>
 </datalist>
 ```
 

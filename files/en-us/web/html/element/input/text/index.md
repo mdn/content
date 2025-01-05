@@ -209,8 +209,8 @@ You can use the [`required`](/en-US/docs/Web/HTML/Element/input#required) attrib
     <label>
       Choose a username:
       <input type="text" name="name" required />
+      <span class="validity"></span>
     </label>
-    <span class="validity"></span>
   </div>
   <div>
     <button>Submit</button>
@@ -263,8 +263,8 @@ The example below requires that the entered value be 4–8 characters in length.
         placeholder="Username"
         minlength="4"
         maxlength="8" />
+      <span class="validity"></span>
     </label>
-    <span class="validity"></span>
   </div>
   <div>
     <button>Submit</button>
@@ -313,8 +313,8 @@ The example below restricts the value to 4-8 characters and requires that it con
     <label>
       Choose a username:
       <input type="text" name="name" required size="45" pattern="[a-z]{4,8}" />
+      <span class="validity"></span>
     </label>
-    <span class="validity"></span>
     <p>Usernames must be lowercase and 4-8 characters in length.</p>
   </div>
   <div>

@@ -32,7 +32,7 @@ The form control that a label is labeling is called the _labeled control_ of the
 ```html
 <label>
   Enter your username:
-  <input name="username" type="text" />
+  <input id="username" name="username" type="text" />
 </label>
 <label for="username">Forgot your username?</label>
 ```
@@ -121,7 +121,10 @@ An {{HTMLElement("input")}} element with a `type="button"` declaration and a val
 ### Defining an implicit label
 
 ```html
-<label>Click me <input type="text" /></label>
+<label>
+  Click me before typing
+  <input type="text" />
+</label>
 ```
 
 {{EmbedLiveSample('Defining an implicit label', '200', '50')}}
@@ -129,10 +132,8 @@ An {{HTMLElement("input")}} element with a `type="button"` declaration and a val
 ### Defining an explicit label with the "for" attribute
 
 ```html
-<label>
-  Click me to focus on the input field
-  <input type="text" />
-</label>
+<label for="username">Click me to focus on the input field</label>
+<input type="text" id="username" />
 ```
 
 {{EmbedLiveSample('Using_the_for_attribute', '200', '50')}}

@@ -11,13 +11,13 @@ browser-compat: html.elements.input.type_datetime-local
 
 {{EmbedInteractiveExample("pages/tabbed/input-datetime-local.html", "tabbed-shorter")}}
 
-The control's UI varies in general from browser to browser. In browsers with no support, these degrade gracefully as if [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text) were set.
+The control's UI varies in general from browser to browser. In browsers with no support, these degrade gracefully as if [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text) were set. More modern implementations have an icon on the side that brings up a calendar panel where the user can select a date and time. Also, the user can often just enter numbers by clicking and typing.
 
 The control is intended to represent _a local date and time_, not necessarily _the user's local date and time_. In other words, the input allows any valid combination of year, month, day, hour, and minute—even if such a combination is invalid in the user's local time zone (such as the one hour within a daylight saving time spring-forward transition gap).
 
 ## Value
 
-A string representing the value of the date entered into the input. The format of the date and time value used by this input type is described in [Local date and time strings](/en-US/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings).
+A string representing the value of the date entered into the input. The format of the date and time value used by this input type is described in [Local date and time strings](/en-US/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings). It's similar to [ISO8601](<https://en.wikipedia.org/wiki/ISO_8601#Local_time_(unqualified)>).
 
 You can set a default value for the input by including a date and time inside the [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute, like so:
 
@@ -114,18 +114,18 @@ Let's look at an example; here we've set minimum and maximum date/time values, a
 ```html
 <form>
   <div>
-    <label for="party">
+    <label>
       Choose your preferred party date and time (required, June 1st 8.30am to
       June 30th 4.30pm):
+      <input
+        id="party"
+        type="datetime-local"
+        name="party-date"
+        min="2017-06-01T08:30"
+        max="2017-06-30T16:30"
+        required />
+      <span class="validity"></span>
     </label>
-    <input
-      id="party"
-      type="datetime-local"
-      name="party-date"
-      min="2017-06-01T08:30"
-      max="2017-06-30T16:30"
-      required />
-    <span class="validity"></span>
   </div>
   <div>
     <input type="submit" value="Book party!" />
@@ -204,9 +204,9 @@ You can use the [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-
 
 {{ EmbedLiveSample('Setting_maximum_and_minimum_dates_and_times', 600, 40) }}
 
-Only days in June 2024 can be selected. Depending on what browser you are using, times outside the specified values might not be selectable. In other browsers, invalid dates and times are selectable but will match {{CSSXref(":invalid")}} and {{CSSXref(":out-of-range")}} and will fail [validation](#validation).
+Only days in June 2024 can be selected. Depending on what browser you are using, times outside the specified values might not be selectable or enterable. In other browsers, invalid dates and times are selectable but will match {{CSSXref(":invalid")}} and {{CSSXref(":out-of-range")}} and will fail [validation](#validation).
 
-In some browsers (Chrome and Edge), only the "days" part of the date value will be editable, and dates outside June can't be scrolled. In others (Safari), the date picker will appear to allow any date, but the value will be clamped to the valid range when a date is selected.
+In some browsers (Chrome and Edge as of this writing), only the "days" part of the date value will be editable, and dates outside June can't be scrolled. In others (Safari, Firefox), the date picker will appear to allow any date, but the value will be clamped to the valid range when a date is selected.
 
 The valid range included all times between the `min` and `max` values; the time of day is only constrained on the first and last dates in the range.
 

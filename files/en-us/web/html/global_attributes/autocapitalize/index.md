@@ -86,20 +86,18 @@ Possible values are:
     </label>
   </div>
   <div>
-    <label for="characters-ta">autocapitalize="characters" on textarea</label>
-    <textarea
-      type="text"
-      id="characters-ta"
-      name="characters-ta"
-      autocapitalize="characters">
-    </textarea>
+    <label>
+      autocapitalize="characters" on textarea
+      <textarea name="characters-ta" autocapitalize="characters"></textarea>
+    </label>
   </div>
 </form>
 
 <hr />
 
 <p contenteditable autocapitalize="characters">
-  This content is editable and has autocapitalize="characters" set on it
+  This is a `&lt;p&gt;' with content that is editable and has
+  autocapitalize="characters" set on it
 </p>
 ```
 

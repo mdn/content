@@ -120,6 +120,8 @@ Here, we have an `number` input with the placeholder "Multiple of 10". Note how 
 
 {{EmbedLiveSample('Placeholders', 600, 40)}}
 
+Of course, the user can still type in any number they want.
+
 ### Controlling step size
 
 By default, the up and down buttons provided for you to step the number up and down will step the value up and down by 1. You can change this by providing a [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute, which takes as its value a number specifying the step amount. Our above example contains a placeholder saying that the value should be a multiple of 10, so it makes sense to add a `step` value of `10`:
@@ -134,27 +136,42 @@ In this example, you should find that the up and down step arrows will increase 
 
 ### Specifying minimum and maximum values
 
-You can use the [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-US/docs/Web/HTML/Element/input#max) attributes to specify a minimum and maximum value that the field can have. For example, let's give our example a minimum of `0`, and a maximum of `100`:
+You can use the [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-US/docs/Web/HTML/Element/input#max) attributes to specify a minimum and maximum value that the field can have. For example, we can give our example a minimum of `0`, and a maximum of `100`. If we give it a min that's not a multiple of the step, it'll still go up by the step size:
 
 ```html
 <input type="number" placeholder="multiple of 10" step="10" min="0" max="100" />
+<p></p>
+<input
+  type="number"
+  placeholder="4 + multiple of 10"
+  step="10"
+  min="4"
+  max="107" />
+```
+
+```css hidden
+input[type="number"] {
+  width: 12em;
+}
 ```
 
 {{EmbedLiveSample('Specifying_minimum_and_maximum_values', 600, 40)}}
 
-In this updated version, you should find that the up and down step buttons will not allow you to go below 0 or above 100. You can still manually enter a number outside these bounds, but it will be considered invalid.
+In this updated version, you should find that the up and down step buttons will not allow you to go below 0 (or 4) or above 100 (or 107). You can still manually enter a number outside these bounds, but it will be considered invalid.
 
 ### Allowing decimal values
 
-One issue with number inputs is that their step size is 1 by default. If you try to enter a number with a decimal (such as "1.0"), it will be considered invalid. If you want to enter a value that requires decimals, you'll need to reflect this in the `step` value (e.g. `step="0.01"` to allow decimals to two decimal places). Here's a basic example:
+One issue with number inputs is that their step size is 1 by default. If you try to enter a number with a decimal (such as "1.0"), it will be considered invalid. If you want to enter a value that requires decimals, you'll need to reflect this in the `step` value (e.g. `step="0.01"` or `step="0.05"` to allow decimals to two decimal places). Here's a basic example:
 
 ```html
-<input type="number" placeholder="1.0" step="0.01" min="0" max="10" />
+<input type="number" placeholder="0.0" step="0.01" min="0" max="10" />
+<p></p>
+<input type="number" placeholder="0.0" step="0.05" min="0" max="10" />
 ```
 
 {{EmbedLiveSample("Allowing_decimal_values", 600, 40)}}
 
-See that this example allows any value between `0.0` and `10.0`, with decimals to two places. For example, "9.52" is valid, but "9.521" is not.
+See that the first example allows any value between `0.0` and `10.0`, with decimals to two places. For example, "9.52" is valid, but "9.521" is not.
 
 If you want to allow arbitrary decimal values, you can set the `step` value to `"any"`.
 
@@ -182,7 +199,7 @@ Then we add some CSS to narrow the width of the element with the `id` selector `
 }
 ```
 
-The result looks like this:
+`em`s should be about twice the width of a digit character, or approximately double the average of 'all character' widths. But, it's always nice to add more space so the user doesn't feel cramped. The result looks like this:
 
 {{EmbedLiveSample('Controlling_input_size', 600, 40)}}
 
@@ -228,8 +245,8 @@ The following example exhibits all of the above features, as well as using some 
         min="0"
         max="100"
         required />
+      <span class="validity"></span>
     </label>
-    <span class="validity"></span>
   </div>
   <div>
     <input type="submit" />
@@ -305,16 +322,16 @@ The HTML looks like this:
         min="0"
         placeholder="e.g. 1.78"
         required />
+      <span class="validity"></span>
     </label>
-    <span class="validity"></span>
   </div>
   <div class="feetInputGroup" style="display: none;">
     <span>Enter your height — </span>
     <label>
       feet:
       <input type="number" id="feet" name="feet" min="0" step="1" />
+      <span class="validity"></span>
     </label>
-    <span class="validity"></span>
     <label>
       inches:
       <input
@@ -324,14 +341,15 @@ The HTML looks like this:
         min="0"
         max="11"
         step="1" />
+      <span class="validity"></span>
     </label>
-    <span class="validity"></span>
   </div>
   <div>
     <input
       type="button"
       class="meters"
-      value="Enter height in feet and inches" />
+      value="Enter height in feet and inches, instead" />
+    <output for="inches, meters"></output>
   </div>
   <div>
     <input type="submit" value="Submit form" />
@@ -383,9 +401,11 @@ const inchesInput = document.querySelector("#inches");
 const switchBtn = document.querySelector('input[type="button"]');
 
 switchBtn.addEventListener("click", () => {
-  if (switchBtn.getAttribute("class") === "meters") {
-    switchBtn.setAttribute("class", "feet");
-    switchBtn.value = "Enter height in meters";
+  if (switchBtn.classList.contains("meters")) {
+    // switch to feet and inches
+    switchBtn.classList.add("feet");
+    switchBtn.classList.remove("meters");
+    switchBtn.value = "Enter height in meters, instead";
 
     metersInputGroup.style.display = "none";
     feetInputGroup.style.display = "block";
@@ -396,8 +416,10 @@ switchBtn.addEventListener("click", () => {
 
     metersInput.value = "";
   } else {
-    switchBtn.setAttribute("class", "meters");
-    switchBtn.value = "Enter height in feet and inches";
+    // switch to meters
+    switchBtn.classList.add("meters");
+    switchBtn.classList.remove("feet");
+    switchBtn.value = "Enter height in feet and inches, instead";
 
     metersInputGroup.style.display = "block";
     feetInputGroup.style.display = "none";
@@ -410,6 +432,22 @@ switchBtn.addEventListener("click", () => {
     inchesInput.value = "";
   }
 });
+```
+
+And then the _boring_ part, actually doing the calculation. The extra `+` signs convert strings to numbers:
+
+```js
+function figureItOut(inches) {
+  const output = document.querySelector("output");
+  let inch = inches % 12;
+  let ft = Math.floor(inches / 12);
+  let m = inches / 39.37;
+  output.textContent = `${m.toFixed(2)} meters, or ${ft} feet ${inch.toFixed(0)} inches`;
+}
+
+metersInput.oninput = (ev) => figureItOut(+metersInput.value * 39.37);
+feetInput.oninput = inchesInput.oninput = (ev) =>
+  figureItOut(+feetInput.value * 12 + +inchesInput.value);
 ```
 
 After declaring a few variables, an event listener is added to the `button` to control the switching mechanism. This involves changing over the button's `class` and {{HTMLElement("label")}}, and updating the display values of the two sets of inputs when the button is pressed.

@@ -117,7 +117,7 @@ Let's look at a basic example that includes all the essential features you'd nee
 
 ```html
 <input
-  id="image"
+  id="loginImageButton"
   type="image"
   width="100"
   height="30"
@@ -207,7 +207,7 @@ The following example shows the same button as before, but included in the conte
   </div>
   <div>
     <input
-      id="image"
+      id="loginImageButton"
       type="image"
       src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png"
       alt="Login"
@@ -258,7 +258,7 @@ In this example, we adapt the previous example to set aside more space for the i
   </div>
   <div>
     <input
-      id="image"
+      id="loginImageButton"
       type="image"
       src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png"
       alt="Login"
@@ -282,7 +282,7 @@ label {
   padding-right: 10px;
 }
 
-#image {
+#loginImageButton {
   object-position: right top;
   object-fit: contain;
   background-color: #ddd;

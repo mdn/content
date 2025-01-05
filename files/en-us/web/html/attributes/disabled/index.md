@@ -120,7 +120,7 @@ When form controls are disabled, many browsers will display them in a lighter, g
 </fieldset>
 ```
 
-{{EmbedLiveSample('Examples', 500, 450)}}
+{{EmbedLiveSample('Examples', 500, 560)}}
 
 ## Specifications
 

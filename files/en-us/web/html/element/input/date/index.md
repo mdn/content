@@ -83,14 +83,15 @@ The most basic use of `<input type="date">` involves one `<input>` combined with
 <form action="https://example.com">
   <label>
     Enter your birthday:
-    <input type="date" name="bday" />
+    <input type="date" name="bday" value="1995-01-01" max="2006-12-26" />
+    <br />You must be 18 or older to use this site!
   </label>
 
   <p><button>Submit</button></p>
 </form>
 ```
 
-{{EmbedLiveSample('Basic_uses_of_date', 600, 40)}}
+{{EmbedLiveSample('Basic_uses_of_date', 600, 100)}}
 
 This HTML submits the entered date under the key `bday` to `https://example.com` — resulting in a URL like `https://example.com/?bday=1955-06-08`.
 
@@ -109,7 +110,7 @@ You can use the [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-
 
 {{EmbedLiveSample('Setting_maximum_and_minimum_dates', 600, 40)}}
 
-The result is that only days in April 2017 can be selected — the month and year parts of the textbox will be uneditable, and dates outside April 2017 can't be selected in the picker widget.
+The result is that only days in April 2017 can be selected — the month and year parts of the textbox will be uneditable, and dates outside April 2017 can't be selected in the picker widget. (The user might be able to click and type in day, month and year, depending on the browser.)
 
 You can use the [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute to vary the number of days jumped each time the date is incremented (e.g. to only make Saturdays selectable).
 
@@ -130,7 +131,8 @@ Let's look at an example of minimum and maximum dates, and also made a field req
 ```html
 <form>
   <label>
-    Choose your preferred party date (required, April 1st to 20th):
+    Choose your preferred party date <br />
+    must be April 1st to 20th:
     <input
       type="date"
       name="party"
@@ -148,7 +150,7 @@ Let's look at an example of minimum and maximum dates, and also made a field req
 
 If you try to submit the form with an incomplete date (or with a date outside the set bounds), the browser displays an error. Try playing with the example now:
 
-{{EmbedLiveSample('Validation', 600, 100)}}
+{{EmbedLiveSample('Validation', 600, 120)}}
 
 Here's the CSS used in the above example. We make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) to add an icon next to the input, based on whether the current value is valid. We had to put the icon on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome at least the input's generated content is placed inside the form control, and can't be styled or shown effectively.
 
@@ -158,16 +160,20 @@ label {
   align-items: center;
 }
 
-span::after {
+span::before {
   padding-left: 5px;
 }
 
-input:invalid + span::after {
+input:invalid + span::before {
   content: "✖";
 }
 
-input:valid + span::after {
+input:valid + span::before {
   content: "✓";
+}
+
+input {
+  padding-left: 20px;
 }
 ```
 
@@ -187,9 +193,9 @@ The HTML looks like so:
   <div class="nativeDatePicker">
     <label>
       Enter your birthday:
-      <input type="date" name="bday" />
+      <input type="date" name="bday" value="1995-01-01" />
+      <span class="validity"></span>
     </label>
-    <span class="validity"></span>
   </div>
 </form>
 ```
@@ -210,7 +216,7 @@ input:valid + span::after {
 
 ### Results
 
-{{EmbedLiveSample('Examples', 600, 100)}}
+{{EmbedLiveSample('Examples', 600, 120)}}
 
 ## Technical summary
 

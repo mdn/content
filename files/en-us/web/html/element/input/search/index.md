@@ -261,8 +261,8 @@ You can use the [`required`](/en-US/docs/Web/HTML/Element/input#required) attrib
       name="q"
       placeholder="Search the site…"
       required />
-    <button>Search</button>
     <span class="validity"></span>
+    <button>Search</button>
   </div>
 </form>
 ```
@@ -314,9 +314,9 @@ The example below requires that the entered value be 4–8 characters in length.
         size="30"
         minlength="4"
         maxlength="8" />
+      <span class="validity"></span>
     </label>
     <button>Search</button>
-    <span class="validity"></span>
   </div>
 </form>
 ```
@@ -336,6 +336,10 @@ input:valid ~ span::after {
   content: "✓";
   padding-left: 5px;
   position: absolute;
+}
+
+button {
+  margin-left: 5em;
 }
 ```
 
@@ -363,9 +367,9 @@ Let's look at an example. Say we wanted to provide a product ID search form, and
         required
         size="30"
         pattern="[A-z]{2}[0-9]{4}" />
+      <span class="validity"></span>
     </label>
     <button>Search</button>
-    <span class="validity"></span>
   </div>
 </form>
 ```
