@@ -13,9 +13,9 @@ The **`Temporal.PlainMonthDay`** object represents the month and day of a calend
 
 A `PlainMonthDay` is essentially the month-day part of a {{jsxref("Temporal.PlainDate")}} object, without the year. Because the meaning of a month-day can change from year to year (for example, whether it exists, or what the month-day of the next day is), this object doesn't provide much functionality on its own, such as comparison, addition, or subtraction. It doesn't even have a {{jsxref("Temporal/PlainDate/month", "month")}} property, because the month index is not meaningful without a year (for example, two months from two years with the same index can have different names in the case of leap months).
 
-### ISO 8601 format
+### RFC 9557 format
 
-`PlainMonthDay` objects can be serialized and parsed using the [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601) (with some extensions specified by ECMAScript). The string has the following form (spaces are only for readability and should not be present in the actual string):
+`PlainMonthDay` objects can be serialized and parsed using the [RFC 9557](https://datatracker.ietf.org/doc/html/rfc9557) format, an extension to the [ISO 8601 / RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339) format. The string has the following form (spaces are only for readability and should not be present in the actual string):
 
 ```plain
 YYYY-MM-DD [u-ca=calendar_id]
@@ -30,7 +30,7 @@ YYYY-MM-DD [u-ca=calendar_id]
 - `[u-ca=calendar_id]` {{optional_inline}}
   - : Replace `calendar_id` with the calendar to use. May have a _critical flag_ by prefixing the key with `!`: e.g., `[!u-ca=iso8601]`. This flag generally tells other systems that it cannot be ignored if they don't support it. The `Temporal` parser will throw an error if the annotations contain two or more calendar annotations and one of them is critical. Defaults to `[u-ca=iso8601]`. Note that the `YYYY-MM-DD` is always interpreted in ISO and then converted to the specified calendar.
 
-As an input, you may optionally include the time, offset, and time zone identifier, in the same format as [`PlainDateTime`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime#iso_8601_format), but they will be ignored. Other annotations in the `[key=value]` format are also ignored, and they must not have the critical flag.
+As an input, you may optionally include the time, offset, and time zone identifier, in the same format as [`PlainDateTime`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime#rfc_9557_format), but they will be ignored. Other annotations in the `[key=value]` format are also ignored, and they must not have the critical flag.
 
 When serializing, you can configure whether to display the calendar ID, and whether to add a critical flag for it.
 
@@ -42,7 +42,7 @@ When serializing, you can configure whether to display the calendar ID, and whet
 ## Static methods
 
 - {{jsxref("Temporal/PlainMonthDay/from", "Temporal.PlainMonthDay.from()")}}
-  - : Creates a new `Temporal.PlainMonthDay` object from another `Temporal.PlainMonthDay` object, an object with month and day properties, or an ISO 8601 string.
+  - : Creates a new `Temporal.PlainMonthDay` object from another `Temporal.PlainMonthDay` object, an object with month and day properties, or an RFC 9557 string.
 
 ## Instance properties
 
@@ -64,13 +64,13 @@ These properties are defined on `Temporal.PlainMonthDay.prototype` and shared by
 - {{jsxref("Temporal/PlainMonthDay/equals", "Temporal.PlainMonthDay.prototype.equals()")}}
   - : Returns `true` if this month-day is equivalent in value to another month-day (in a form convertible by {{jsxref("Temporal/PlainMonthDay/from", "Temporal.PlainMonthDay.from()")}}), and `false` otherwise. They are compared both by their date values and their calendars.
 - {{jsxref("Temporal/PlainMonthDay/toJSON", "Temporal.PlainMonthDay.prototype.toJSON()")}}
-  - : Returns a string representing this month-day in the same [ISO 8601 format](#iso_8601_format) as calling {{jsxref("Temporal/PlainMonthDay/toString", "toString()")}}.
+  - : Returns a string representing this month-day in the same [RFC 9557 format](#rfc_9557_format) as calling {{jsxref("Temporal/PlainMonthDay/toString", "toString()")}}.
 - {{jsxref("Temporal/PlainMonthDay/toLocaleString", "Temporal.PlainMonthDay.prototype.toLocaleString()")}}
   - : Returns a string with a language-sensitive representation of this month-day.
 - {{jsxref("Temporal/PlainMonthDay/toPlainDate", "Temporal.PlainMonthDay.prototype.toPlainDate()")}}
   - : Returns a new {{jsxref("Temporal.PlainDate")}} object representing this month-day and a supplied year in the same calendar system.
 - {{jsxref("Temporal/PlainMonthDay/toString", "Temporal.PlainMonthDay.prototype.toString()")}}
-  - : Returns a string representing this month-day in the [ISO 8601 format](#iso_8601_format).
+  - : Returns a string representing this month-day in the [RFC 9557 format](#rfc_9557_format).
 - {{jsxref("Temporal/PlainMonthDay/valueOf", "Temporal.PlainMonthDay.prototype.valueOf()")}}
   - : Throws a {{jsxref("TypeError")}}, which prevents `Temporal.PlainMonthDay` instances from being [implicitly converted to primitives](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion) when used in arithmetic or comparison operations.
 - {{jsxref("Temporal/PlainMonthDay/with", "Temporal.PlainMonthDay.prototype.with()")}}

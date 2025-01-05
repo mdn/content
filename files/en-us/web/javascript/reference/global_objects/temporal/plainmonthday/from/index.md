@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainMonthDay.from
 
 {{JSRef}}
 
-The **`Temporal.PlainMonthDay.from()`** static method creates a new `Temporal.PlainMonthDay` object from another `Temporal.PlainMonthDay` object, an object with month and day properties, or an ISO 8601 string.
+The **`Temporal.PlainMonthDay.from()`** static method creates a new `Temporal.PlainMonthDay` object from another `Temporal.PlainMonthDay` object, an object with month and day properties, or an RFC 9557 string.
 
 ## Syntax
 
@@ -23,7 +23,7 @@ Temporal.PlainMonthDay.from(info, options)
   - : One of the following:
 
     - A {{jsxref("Temporal.PlainMonthDay")}} instance, which creates a copy of the instance.
-    - An [ISO 8601](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainMonthDay#iso_8601_format) string containing a date and optionally a calendar. If the calendar is not `iso8601`, a year is required.
+    - An [RFC 9557](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainMonthDay#rfc_9557_format) string containing a date and optionally a calendar. If the calendar is not `iso8601`, a year is required.
     - An object containing the following properties (in the order they are retrieved and validated):
 
       - `calendar` {{optional_inline}}

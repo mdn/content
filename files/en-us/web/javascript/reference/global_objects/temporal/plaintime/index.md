@@ -13,9 +13,9 @@ The **`Temporal.PlainTime`** object represents a time without a date or time zon
 
 A `PlainTime` is essentially the time part of a {{jsxref("Temporal.PlainDateTime")}} object, with the date information removed. Because the date and time information don't have much interaction, all general information about time properties is documented here.
 
-### ISO 8601 format
+### RFC 9557 format
 
-`PlainTime` objects can be serialized and parsed using the [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601) (with some extensions specified by ECMAScript). The string has the following form (spaces are only for readability and should not be present in the actual string):
+`PlainTime` objects can be serialized and parsed using the [RFC 9557](https://datatracker.ietf.org/doc/html/rfc9557) format, an extension to the [ISO 8601 / RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339) format. The string has the following form (spaces are only for readability and should not be present in the actual string):
 
 ```plain
 HH:mm:ss.sssssssss
@@ -28,7 +28,7 @@ HH:mm:ss.sssssssss
 - `ss.sssssssss` {{optional_inline}}
   - : A two-digit number from `00` to `59`. May optionally be followed by a `.` or `,` and one to nine digits. Defaults to `00`. The `HH`, `mm`, and `ss` components can be separated by `:` or nothing. You can omit either just `ss` or both `ss` and `mm`, so the time can be one of three forms: `HH`, `HH:mm`, or `HH:mm:ss.sssssssss`.
 
-As an input, you may optionally include the date, offset, time zone identifier, and calendar, in the same format as [`PlainDateTime`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime#iso_8601_format), but they will be ignored. A date-only string will be rejected. Other annotations in the `[key=value]` format are also ignored, and they must not have the critical flag.
+As an input, you may optionally include the date, offset, time zone identifier, and calendar, in the same format as [`PlainDateTime`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime#rfc_9557_format), but they will be ignored. A date-only string will be rejected. Other annotations in the `[key=value]` format are also ignored, and they must not have the critical flag.
 
 When serializing, you can configure the fractional second digits.
 
@@ -42,7 +42,7 @@ When serializing, you can configure the fractional second digits.
 - {{jsxref("Temporal/PlainTime/compare", "Temporal.PlainTime.compare()")}}
   - : Returns a number (-1, 0, 1) indicating whether the first time comes before, is the same as, or comes after the second time. Equivalent to comparing the hour, minute, second, millisecond, microsecond, and nanosecond fields one by one.
 - {{jsxref("Temporal/PlainTime/from", "Temporal.PlainTime.from()")}}
-  - : Creates a new `Temporal.PlainTime` object from another `Temporal.PlainTime` object, an object with time properties, or an ISO 8601 string.
+  - : Creates a new `Temporal.PlainTime` object from another `Temporal.PlainTime` object, an object with time properties, or an RFC 9557 string.
 
 ## Instance properties
 
@@ -78,11 +78,11 @@ These properties are defined on `Temporal.PlainTime.prototype` and shared by all
 - {{jsxref("Temporal/PlainTime/subtract", "Temporal.PlainTime.prototype.subtract()")}}
   - : Returns a new `Temporal.PlainTime` object representing this time moved backward by a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}), wrapping around the clock if necessary.
 - {{jsxref("Temporal/PlainTime/toJSON", "Temporal.PlainTime.prototype.toJSON()")}}
-  - : Returns a string representing this time in the same [ISO 8601 format](#iso_8601_format) as calling {{jsxref("Temporal/PlainTime/toString", "toString()")}}.
+  - : Returns a string representing this time in the same [RFC 9557 format](#rfc_9557_format) as calling {{jsxref("Temporal/PlainTime/toString", "toString()")}}.
 - {{jsxref("Temporal/PlainTime/toLocaleString", "Temporal.PlainTime.prototype.toLocaleString()")}}
   - : Returns a string with a language-sensitive representation of this time.
 - {{jsxref("Temporal/PlainTime/toString", "Temporal.PlainTime.prototype.toString()")}}
-  - : Returns a string representing this time in the [ISO 8601 format](#iso_8601_format).
+  - : Returns a string representing this time in the [RFC 9557 format](#rfc_9557_format).
 - {{jsxref("Temporal/PlainTime/until", "Temporal.PlainTime.prototype.until()")}}
   - : Returns a new {{jsxref("Temporal.Duration")}} object representing the duration from this time to another time (in a form convertible by {{jsxref("Temporal/PlainTime/from", "Temporal.PlainTime.from()")}}). The duration is positive if the other time is after this time, and negative if before.
 - {{jsxref("Temporal/PlainTime/valueOf", "Temporal.PlainTime.prototype.valueOf()")}}

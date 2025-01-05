@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainTime.from
 
 {{JSRef}}
 
-The **`Temporal.PlainTime.from()`** static method creates a new `Temporal.PlainTime` object from another `Temporal.PlainTime` object, an object with time properties, or an ISO 8601 string.
+The **`Temporal.PlainTime.from()`** static method creates a new `Temporal.PlainTime` object from another `Temporal.PlainTime` object, an object with time properties, or an RFC 9557 string.
 
 ## Syntax
 
@@ -25,7 +25,7 @@ Temporal.PlainTime.from(info, options)
     - A {{jsxref("Temporal.PlainTime")}} instance, which creates a copy of the instance.
     - A {{jsxref("Temporal.PlainDateTime")}} instance, which provides the time in the same fashion as {{jsxref("Temporal/PlainDateTime/toPlainDate", "Temporal.PlainDateTime.prototype.toPlainTime()")}}.
     - A {{jsxref("Temporal.ZonedDateTime")}} instance, which provides the time in the same fashion as {{jsxref("Temporal/ZonedDateTime/toPlainDate", "Temporal.ZonedDateTime.prototype.toPlainTime()")}}.
-    - An [ISO 8601](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime#iso_8601_format) string containing a time.
+    - An [RFC 9557](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime#rfc_9557_format) string containing a time.
     - An object containing at least one of the following properties (in the order they are retrieved and validated):
 
       - {{jsxref("Temporal/PlainTime/hour", "hour")}}

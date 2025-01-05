@@ -26,6 +26,9 @@ None.
 
 An array of strings representing supported time zones for the associated `Locale`, where each value is an [IANA time zone canonical name](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets), sorted in alphabetical order. If the locale identifier does not contain a region subtag, the returned value is `undefined`.
 
+> [!NOTE]
+> The standardization of `Temporal` requires browsers to always return the primary identifier in the IANA database, which may change over time. See [time zones and offsets](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets) for more information.
+
 ## Examples
 
 ### Obtaining supported time zones

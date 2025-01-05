@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.ZonedDateTime.toJSON
 
 {{JSRef}}
 
-The **`toJSON()`** method of {{jsxref("Temporal.ZonedDateTime")}} instances returns a string representing this date-time in the same [ISO 8601 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#iso_8601_format) as calling {{jsxref("Temporal/ZonedDateTime/toString", "toString()")}}.
+The **`toJSON()`** method of {{jsxref("Temporal.ZonedDateTime")}} instances returns a string representing this date-time in the same [RFC 9557 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#rfc_9557_format) as calling {{jsxref("Temporal/ZonedDateTime/toString", "toString()")}}.
 
 ## Syntax
 
@@ -21,7 +21,7 @@ None.
 
 ### Return value
 
-A string representing the given date-time in the [ISO 8601 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#iso_8601_format), with the calendar annotation included if it is not ISO 8601, and the offset and time zone annotation always included.
+A string representing the given date-time in the [RFC 9557 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#rfc_9557_format), with the calendar annotation included if it is not `"iso8601"`, and the offset and time zone annotation always included.
 
 ## Description
 

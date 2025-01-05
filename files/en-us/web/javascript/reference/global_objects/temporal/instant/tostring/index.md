@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.Instant.toString
 
 {{JSRef}}
 
-The **`toString()`** method of {{jsxref("Temporal.Instant")}} instances returns a string representing this instant in the [ISO 8601 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Instant#iso_8601_format) using the specified time zone.
+The **`toString()`** method of {{jsxref("Temporal.Instant")}} instances returns a string representing this instant in the [RFC 9557 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Instant#rfc_9557_format) using the specified time zone.
 
 ## Syntax
 
@@ -31,7 +31,7 @@ toString(options)
 
 ### Return value
 
-A string in the [ISO 8601 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Instant#iso_8601_format) representing this instant using the specified time zone. No annotations, such as time zone names, are included.
+A string in the [RFC 9557 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Instant#rfc_9557_format) representing this instant using the specified time zone. No annotations, such as time zone names, are included.
 
 ### Exceptions
 

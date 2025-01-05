@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.ZonedDateTime.from
 
 {{JSRef}}
 
-The **`Temporal.ZonedDateTime.from()`** static method creates a new `Temporal.ZonedDateTime` object from another `Temporal.ZonedDateTime` object, an object with date, time, and time zone properties, or an ISO 8601 string.
+The **`Temporal.ZonedDateTime.from()`** static method creates a new `Temporal.ZonedDateTime` object from another `Temporal.ZonedDateTime` object, an object with date, time, and time zone properties, or an RFC 9557 string.
 
 ## Syntax
 
@@ -21,12 +21,12 @@ Temporal.ZonedDateTime.from(info, options)
 - `info`
   - : One of the following:
     - A {{jsxref("Temporal.ZonedDateTime")}} instance, which creates a copy of the instance.
-    - An [ISO 8601](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#iso_8601_format) string containing a date, optionally a time, optionally an offset, a time zone annotation, and optionally a calendar.
+    - An [RFC 9557 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#rfc_9557_format) string containing a date, optionally a time, optionally an offset, a time zone annotation, and optionally a calendar.
     - An object containing properties that are accepted by either {{jsxref("Temporal/PlainDate/from", "Temporal.PlainDate.from()")}} (`calendar`, `era`, `eraYear`, `year`, `month`, `monthCode`, `day`) or {{jsxref("Temporal/PlainTime/from", "Temporal.PlainTime.from()")}} (`hour`, `minute`, `second`, `millisecond`, `microsecond`, `nanosecond`). The info should explicitly specify a year (as `year` or `era` and `eraYear`), a month (as `month` or `monthCode`), and a day; others are optional and will be set to their default values. The following properties should be provided too:
       - `timeZone`
         - : Either a string or a {{jsxref("Temporal.ZonedDateTime")}} instance representing the time zone to use. If a `Temporal.ZonedDateTime` instance, its time zone is used. If a string, it must be a valid [time zone identifier](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets). The time properties are interpreted in this time zone.
       - `offset` {{optional_inline}}
-        - : A offset string, in the same format as the [ISO 8601](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#iso_8601_format) offset, representing the offset from UTC. If omitted, it will be calculated from the time zone and the date-time. `"Z"` is not allowed.
+        - : A offset string, in the same format as the [RFC 9557](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#rfc_9557_format) offset, representing the offset from UTC. If omitted, it will be calculated from the time zone and the date-time. `"Z"` is not allowed.
 - `options` {{optional_inline}}
   - : An object containing some or all of the following properties (in the order they are retrieved and validated):
     - `disambiguation` {{optional_inline}}

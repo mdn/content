@@ -13,9 +13,9 @@ The **`Temporal.PlainDate`** object represents a date without a time or time zon
 
 A `PlainDate` is essentially the date part of a {{jsxref("Temporal.PlainDateTime")}} object, with the time information removed. Because the date and time information don't have much interaction, all general information about date properties is documented here.
 
-### ISO 8601 format
+### RFC 9557 format
 
-`PlainDate` objects can be serialized and parsed using the [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601) (with some extensions specified by ECMAScript). The string has the following form (spaces are only for readability and should not be present in the actual string):
+`PlainDate` objects can be serialized and parsed using the [RFC 9557](https://datatracker.ietf.org/doc/html/rfc9557) format, an extension to the [ISO 8601 / RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339) format.. The string has the following form (spaces are only for readability and should not be present in the actual string):
 
 ```plain
 YYYY-MM-DD [u-ca=calendar_id]
@@ -30,7 +30,7 @@ YYYY-MM-DD [u-ca=calendar_id]
 - `[u-ca=calendar_id]` {{optional_inline}}
   - : Replace `calendar_id` with the calendar to use. May have a _critical flag_ by prefixing the key with `!`: e.g., `[!u-ca=iso8601]`. This flag generally tells other systems that it cannot be ignored if they don't support it. The `Temporal` parser will throw an error if the annotations contain two or more calendar annotations and one of them is critical. Defaults to `[u-ca=iso8601]`. Note that the `YYYY-MM-DD` is always interpreted in ISO and then converted to the specified calendar.
 
-As an input, you may optionally include the time, offset, and time zone identifier, in the same format as [`PlainDateTime`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime#iso_8601_format), but they will be ignored. Other annotations in the `[key=value]` format are also ignored, and they must not have the critical flag.
+As an input, you may optionally include the time, offset, and time zone identifier, in the same format as [`PlainDateTime`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime#rfc_9557_format), but they will be ignored. Other annotations in the `[key=value]` format are also ignored, and they must not have the critical flag.
 
 When serializing, you can configure whether to display the calendar ID, and whether to add a critical flag for it.
 
@@ -53,7 +53,7 @@ The {{jsxref("Temporal/PlainDate/from", "Temporal.PlainDate.from()")}}, {{jsxref
 - {{jsxref("Temporal/PlainDate/compare", "Temporal.PlainDate.compare()")}}
   - : Returns a number (-1, 0, 1) indicating whether the first date comes before, is the same as, or comes after the second date. Equivalent to comparing the year, month, and day fields of the underlying ISO 8601 dates.
 - {{jsxref("Temporal/PlainDate/from", "Temporal.PlainDate.from()")}}
-  - : Creates a new `Temporal.PlainDate` object from another `Temporal.PlainDate` object, an object with date properties, or an ISO 8601 string.
+  - : Creates a new `Temporal.PlainDate` object from another `Temporal.PlainDate` object, an object with date properties, or an RFC 9557 string.
 
 ## Instance properties
 
@@ -107,7 +107,7 @@ These properties are defined on `Temporal.PlainDate.prototype` and shared by all
 - {{jsxref("Temporal/PlainDate/subtract", "Temporal.PlainDate.prototype.subtract()")}}
   - : Returns a new `Temporal.PlainDate` object representing this date moved backward by a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}).
 - {{jsxref("Temporal/PlainDate/toJSON", "Temporal.PlainDate.prototype.toJSON()")}}
-  - : Returns a string representing this date in the same [ISO 8601 format](#iso_8601_format) as calling {{jsxref("Temporal/PlainDate/toString", "toString()")}}.
+  - : Returns a string representing this date in the same [RFC 9557 format](#rfc_9557_format) as calling {{jsxref("Temporal/PlainDate/toString", "toString()")}}.
 - {{jsxref("Temporal/PlainDate/toLocaleString", "Temporal.PlainDate.prototype.toLocaleString()")}}
   - : Returns a string with a language-sensitive representation of this date.
 - {{jsxref("Temporal/PlainDate/toPlainDateTime", "Temporal.PlainDate.prototype.toPlainDateTime()")}}
@@ -117,7 +117,7 @@ These properties are defined on `Temporal.PlainDate.prototype` and shared by all
 - {{jsxref("Temporal/PlainDate/toPlainYearMonth", "Temporal.PlainDate.prototype.toPlainYearMonth()")}}
   - : Returns a new {{jsxref("Temporal.PlainYearMonth")}} object representing the {{jsxref("Temporal/PlainDate/year", "year")}} and {{jsxref("Temporal/PlainDate/month", "month")}} of this date in the same calendar system.
 - {{jsxref("Temporal/PlainDate/toString", "Temporal.PlainDate.prototype.toString()")}}
-  - : Returns a string representing this date in the [ISO 8601 format](#iso_8601_format).
+  - : Returns a string representing this date in the [RFC 9557 format](#rfc_9557_format).
 - {{jsxref("Temporal/PlainDate/toZonedDateTime", "Temporal.PlainDate.prototype.toZonedDateTime()")}}
   - : Returns a new {{jsxref("Temporal.ZonedDateTime")}} object representing this date, a supplied time, and a supplied time zone, in the same calendar system.
 - {{jsxref("Temporal/PlainDate/until", "Temporal.PlainDate.prototype.until()")}}

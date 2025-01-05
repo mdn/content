@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainTime.toString
 
 {{JSRef}}
 
-The **`toString()`** method of {{jsxref("Temporal.PlainTime")}} instances returns a string representing this time in the [ISO 8601 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime#iso_8601_format).
+The **`toString()`** method of {{jsxref("Temporal.PlainTime")}} instances returns a string representing this time in the [RFC 9557 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime#rfc_9557_format).
 
 ## Syntax
 
@@ -29,7 +29,7 @@ toString(options)
 
 ### Return value
 
-A string in the [ISO 8601 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime#iso_8601_format) representing this time.
+A string in the [RFC 9557 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime#rfc_9557_format) representing this time.
 
 ### Exceptions
 

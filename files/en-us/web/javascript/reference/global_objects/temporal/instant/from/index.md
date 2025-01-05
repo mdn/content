@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.Instant.from
 
 {{JSRef}}
 
-The **`Temporal.Instant.from()`** static method creates a new `Temporal.Instant` object from another `Temporal.Instant` object, or an ISO 8601 string.
+The **`Temporal.Instant.from()`** static method creates a new `Temporal.Instant` object from another `Temporal.Instant` object, or an RFC 9557 string.
 
 ## Syntax
 
@@ -20,7 +20,7 @@ Temporal.Instant.from(info)
 - `info`
   - : One of the following:
     - A {{jsxref("Temporal.Instant")}} instance, which creates a copy of the instance.
-    - An [ISO 8601](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Instant#iso_8601_format) string containing a date, time, and time zone offset. The time zone name is ignored; only the offset is used.
+    - An [RFC 9557](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Instant#rfc_9557_format) string containing a date, time, and time zone offset. The time zone name is ignored; only the offset is used.
 
 ### Return value
 
@@ -31,7 +31,7 @@ A new `Temporal.Instant` object representing the instant in time specified by `i
 - {{jsxref("TypeError")}}
   - : Thrown if `info` is not a `Temporal.Instant` instance or a string.
 - {{jsxref("RangeError")}}
-  - : Thrown if the string is not a valid ISO 8601 string, or if the date and time are outside the range of representable instants (±10<sup>8</sup> days).
+  - : Thrown if the string is not a valid RFC 9557 string, or if the date and time are outside the range of representable instants (±10<sup>8</sup> days).
 
 ## Examples
 

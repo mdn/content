@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainTime.toJSON
 
 {{JSRef}}
 
-The **`toJSON()`** method of {{jsxref("Temporal.PlainTime")}} instances returns a string representing this time in the same [ISO 8601 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime#iso_8601_format) as calling {{jsxref("Temporal/PlainTime/toString", "toString()")}}.
+The **`toJSON()`** method of {{jsxref("Temporal.PlainTime")}} instances returns a string representing this time in the same [RFC 9557 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime#rfc_9557_format) as calling {{jsxref("Temporal/PlainTime/toString", "toString()")}}.
 
 ## Syntax
 
@@ -21,7 +21,7 @@ None.
 
 ### Return value
 
-A string representing the given time in the [ISO 8601 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime#iso_8601_format).
+A string representing the given time in the [RFC 9557 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime#rfc_9557_format).
 
 ## Description
 

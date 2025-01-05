@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainDate.toString
 
 {{JSRef}}
 
-The **`toString()`** method of {{jsxref("Temporal.PlainDate")}} instances returns a string representing this date in the [ISO 8601 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate#iso_8601_format).
+The **`toString()`** method of {{jsxref("Temporal.PlainDate")}} instances returns a string representing this date in the [RFC 9557 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate#rfc_9557_format).
 
 ## Syntax
 
@@ -33,7 +33,7 @@ toString(options)
 
 ### Return value
 
-A string in the [ISO 8601 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate#iso_8601_format) representing this date. The calendar annotation is included as specified.
+A string in the [RFC 9557 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate#rfc_9557_format) representing this date. The calendar annotation is included as specified.
 
 ### Exceptions
 

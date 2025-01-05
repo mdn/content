@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainDateTime.from
 
 {{JSRef}}
 
-The **`Temporal.PlainDateTime.from()`** static method creates a new `Temporal.PlainDateTime` object from another `Temporal.PlainDateTime` object, an object with date and time properties, or an ISO 8601 string.
+The **`Temporal.PlainDateTime.from()`** static method creates a new `Temporal.PlainDateTime` object from another `Temporal.PlainDateTime` object, an object with date and time properties, or an RFC 9557 string.
 
 ## Syntax
 
@@ -21,7 +21,7 @@ Temporal.PlainDateTime.from(info, options)
 - `info`
   - : One of the following:
     - A {{jsxref("Temporal.PlainDateTime")}} instance, which creates a copy of the instance.
-    - An [ISO 8601](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime#iso_8601_format) string containing a date, optionally a time, and optionally a calendar.
+    - An [RFC 9557](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime#rfc_9557_format) string containing a date, optionally a time, and optionally a calendar.
     - An object containing properties that are recognized by either {{jsxref("Temporal/PlainDate/from", "Temporal.PlainDate.from()")}} (`calendar`, `era`, `eraYear`, `year`, `month`, `monthCode`, `day`) or {{jsxref("Temporal/PlainTime/from", "Temporal.PlainTime.from()")}} (`hour`, `minute`, `second`, `millisecond`, `microsecond`, `nanosecond`). The info should explicitly specify a year (as `year` or `era` and `eraYear`), a month (as `month` or `monthCode`), and a day; others are optional and will be set to their default values.
 - `options` {{optional_inline}}
   - : An object containing the following property:

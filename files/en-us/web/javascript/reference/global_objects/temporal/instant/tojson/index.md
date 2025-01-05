@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.Instant.toJSON
 
 {{JSRef}}
 
-The **`toJSON()`** method of {{jsxref("Temporal.Instant")}} instances returns a string representing this instant in the same [ISO 8601 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Instant#iso_8601_format) as calling {{jsxref("Temporal/Instant/toString", "toString()")}}.
+The **`toJSON()`** method of {{jsxref("Temporal.Instant")}} instances returns a string representing this instant in the same [RFC 9557 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Instant#rfc_9557_format) as calling {{jsxref("Temporal/Instant/toString", "toString()")}}.
 
 ## Syntax
 
@@ -21,7 +21,7 @@ None.
 
 ### Return value
 
-A string representing the given instant in the [ISO 8601 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Instant#iso_8601_format), with as much subsecond precision as necessary to represent the duration accurately, and with the UTC time zone designator `Z`.
+A string representing the given instant in the [RFC 9557 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Instant#rfc_9557_format), with as much subsecond precision as necessary to represent the duration accurately, and with the UTC time zone designator `Z`.
 
 ## Description
 

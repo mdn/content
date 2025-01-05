@@ -273,7 +273,7 @@ With these tables, you should have a basic idea of how to navigate the `Temporal
 
 ### Calendars
 
-A calendar is a way to organize days, typically into periods of weeks, months, years, and eras. Most of the world uses the Gregorian calendar, but there are many other calendars in use, especially in religious and cultural contexts. {{jsxref("Intl/Locale/getCalendars", "Intl.Locale.prototype.getCalendars()")}} lists most of the calendars likely to be supported by browsers. Here we provide a brief overview of how calendar systems are formed to help you internalize what factors may vary between calendars.
+A calendar is a way to organize days, typically into periods of weeks, months, years, and eras. Most of the world uses the Gregorian calendar, but there are many other calendars in use, especially in religious and cultural contexts. By default, all calendar-aware `Temporal` objects use the ISO 8601 calendar system, which is based on the Gregorian calendar and defines additional week-numbering rules. {{jsxref("Intl/Locale/getCalendars", "Intl.Locale.prototype.getCalendars()")}} lists most of the calendars likely to be supported by browsers. Here we provide a brief overview of how calendar systems are formed to help you internalize what factors may vary between calendars.
 
 There are three most prominent periodic events on Earth: its rotation around the sun (365.242 days for one revolution), the moon's rotation around Earth (29.5 days from new moon to new moon), and its rotation around its axis (24 hours from sunrise to sunrise). Every culture has the same measure of a "day", which is 24 hours. Occasional changes such as daylight saving time are not part of the calendar, but are part of the [time zone](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#time_zones_and_offsets)'s information.
 
@@ -320,6 +320,18 @@ The concept of a "week" is not connected with any astronomical event, but is a c
 > - Don't assume that `weekOfYear` and `yearOfWeek` are always present; they may be `undefined`.
 > - Don't assume that weeks are always 7 days long; use `daysInWeek` instead.
 > - Note that the current `Temporal` API does not support year-week dates, so you can't construct dates using these properties or serialize dates to year-week representations. They are only informational properties.
+
+### RFC 9557 format
+
+All `Temporal` classes can be serialized and deserialized using the format specified in [RFC 9557](https://datatracker.ietf.org/doc/html/rfc9557), which is based on [ISO 8601 / RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339). The format, in its full form, is as follows (spaces are only for readability and should not be present in the actual string):
+
+```plain
+YYYY-MM-DD T HH:mm:ss.sssssssss Z/±HH:mm:ss.sssssssss [time_zone_id] [u-ca=calendar_id]
+```
+
+Different classes have different requirements for the presence of each component, so you will find a section titled "RFC 9557 format" in each class's documentation, which specifies the format recognized by that class.
+
+This is very similar to the [date time string format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format) used by {{jsxref("Date")}}, which is also based on ISO 8601. The main addition is the ability to specify micro- and nanosecond components, and the ability to specify the time zone and calendar system.
 
 ## Static properties
 

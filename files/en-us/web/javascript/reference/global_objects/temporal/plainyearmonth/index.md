@@ -13,9 +13,9 @@ The **`Temporal.PlainYearMonth`** object represents the year and month of a cale
 
 A `PlainYearMonth` is essentially the year-month part of a {{jsxref("Temporal.PlainDate")}} object, without the day.
 
-### ISO 8601 format
+### RFC 9557 format
 
-`PlainYearMonth` objects can be serialized and parsed using the [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601) (with some extensions specified by ECMAScript). The string has the following form (spaces are only for readability and should not be present in the actual string):
+`PlainYearMonth` objects can be serialized and parsed using the [RFC 9557](https://datatracker.ietf.org/doc/html/rfc9557) format, an extension to the [ISO 8601 / RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339) format. The string has the following form (spaces are only for readability and should not be present in the actual string):
 
 ```plain
 YYYY-MM-DD [u-ca=calendar_id]
@@ -30,7 +30,7 @@ YYYY-MM-DD [u-ca=calendar_id]
 - `[u-ca=calendar_id]` {{optional_inline}}
   - : Replace `calendar_id` with the calendar to use. May have a _critical flag_ by prefixing the key with `!`: e.g., `[!u-ca=iso8601]`. This flag generally tells other systems that it cannot be ignored if they don't support it. The `Temporal` parser will throw an error if the annotations contain two or more calendar annotations and one of them is critical. Defaults to `[u-ca=iso8601]`. Note that the `YYYY-MM-DD` is always interpreted in ISO and then converted to the specified calendar.
 
-As an input, you may optionally include the time, offset, and time zone identifier, in the same format as [`PlainDateTime`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime#iso_8601_format), but they will be ignored. Other annotations in the `[key=value]` format are also ignored, and they must not have the critical flag.
+As an input, you may optionally include the time, offset, and time zone identifier, in the same format as [`PlainDateTime`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime#rfc_9557_format), but they will be ignored. Other annotations in the `[key=value]` format are also ignored, and they must not have the critical flag.
 
 When serializing, you can configure whether to display the calendar ID, and whether to add a critical flag for it.
 
@@ -44,7 +44,7 @@ When serializing, you can configure whether to display the calendar ID, and whet
 - {{jsxref("Temporal/PlainYearMonth/compare", "Temporal.PlainYearMonth.compare()")}}
   - : Returns a number (-1, 0, 1) indicating whether the first year-month comes before, is the same as, or comes after the second year-month. Equivalent to comparing their underlying ISO 8601 dates. Two year-months from different calendars may be considered equal if they start on the same ISO date.
 - {{jsxref("Temporal/PlainYearMonth/from", "Temporal.PlainYearMonth.from()")}}
-  - : Creates a new `Temporal.PlainYearMonth` object from another `Temporal.PlainYearMonth` object, an object with year and month properties, or an ISO 8601 string.
+  - : Creates a new `Temporal.PlainYearMonth` object from another `Temporal.PlainYearMonth` object, an object with year and month properties, or an RFC 9557 string.
 
 ## Instance properties
 
@@ -86,13 +86,13 @@ These properties are defined on `Temporal.PlainYearMonth.prototype` and shared b
 - {{jsxref("Temporal/PlainYearMonth/subtract", "Temporal.PlainYearMonth.prototype.subtract()")}}
   - : Returns a new `Temporal.PlainYearMonth` object representing this year-month moved backward by a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}).
 - {{jsxref("Temporal/PlainYearMonth/toJSON", "Temporal.PlainYearMonth.prototype.toJSON()")}}
-  - : Returns a string representing this year-month in the same [ISO 8601 format](#iso_8601_format) as calling {{jsxref("Temporal/PlainYearMonth/toString", "toString()")}}.
+  - : Returns a string representing this year-month in the same [RFC 9557 format](#rfc_9557_format) as calling {{jsxref("Temporal/PlainYearMonth/toString", "toString()")}}.
 - {{jsxref("Temporal/PlainYearMonth/toLocaleString", "Temporal.PlainYearMonth.prototype.toLocaleString()")}}
   - : Returns a string with a language-sensitive representation of this year-month.
 - {{jsxref("Temporal/PlainYearMonth/toPlainDate", "Temporal.PlainYearMonth.prototype.toPlainDate()")}}
   - : Returns a new {{jsxref("Temporal.PlainDate")}} object representing this year-month and a supplied day in the same calendar system.
 - {{jsxref("Temporal/PlainYearMonth/toString", "Temporal.PlainYearMonth.prototype.toString()")}}
-  - : Returns a string representing this year-month in the [ISO 8601 format](#iso_8601_format).
+  - : Returns a string representing this year-month in the [RFC 9557 format](#rfc_9557_format).
 - {{jsxref("Temporal/PlainYearMonth/until", "Temporal.PlainYearMonth.prototype.until()")}}
   - : Returns a new {{jsxref("Temporal.Duration")}} object representing the duration from this year-month to another year-month (in a form convertible by {{jsxref("Temporal/PlainYearMonth/from", "Temporal.PlainYearMonth.from()")}}). The duration is positive if the other month is after this month, and negative if before.
 - {{jsxref("Temporal/PlainYearMonth/valueOf", "Temporal.PlainYearMonth.prototype.valueOf()")}}

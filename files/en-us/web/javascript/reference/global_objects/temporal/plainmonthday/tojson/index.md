@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainMonthDay.toJSON
 
 {{JSRef}}
 
-The **`toJSON()`** method of {{jsxref("Temporal.PlainMonthDay")}} instances returns a string representing this month-day in the same [ISO 8601 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainMonthDay#iso_8601_format) as calling {{jsxref("Temporal/PlainMonthDay/toString", "toString()")}}.
+The **`toJSON()`** method of {{jsxref("Temporal.PlainMonthDay")}} instances returns a string representing this month-day in the same [RFC 9557 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainMonthDay#rfc_9557_format) as calling {{jsxref("Temporal/PlainMonthDay/toString", "toString()")}}.
 
 ## Syntax
 
@@ -21,7 +21,7 @@ None.
 
 ### Return value
 
-A string representing the given month-day in the [ISO 8601 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainMonthDay#iso_8601_format), with the year and calendar annotation included if it is not ISO 8601.
+A string representing the given month-day in the [RFC 9557 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainMonthDay#rfc_9557_format), with the year and calendar annotation included if it is not `"iso8601"`.
 
 ## Description
 

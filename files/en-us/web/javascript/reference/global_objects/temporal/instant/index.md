@@ -15,9 +15,9 @@ The **`Temporal.Instant`** object represents a unique point in history, with nan
 
 You can convert from `Date` to `Temporal.Instant` using the {{jsxref("Date.prototype.toTemporalInstant()")}} method, which should be preferred over other methods such as `Temporal.Instant.fromEpochMilliseconds()` because the former involves less user code and may be more optimized. You can also convert from `Temporal.Instant` to `Date` using its epoch milliseconds, such as `new Date(instant.epochMilliseconds)`.
 
-### ISO 8601 format
+### RFC 9557 format
 
-`Instant` objects can be serialized and parsed using the [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601) (with some extensions specified by ECMAScript). The string has the following form (spaces are only for readability and should not be present in the actual string):
+`Instant` objects can be serialized and parsed using the [RFC 9557](https://datatracker.ietf.org/doc/html/rfc9557) format, an extension to the [ISO 8601 / RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339) format. The string has the following form (spaces are only for readability and should not be present in the actual string):
 
 ```plain
 YYYY-MM-DD T HH:mm:ss.sssssssss Z/±HH:mm:ss.sssssssss
@@ -40,7 +40,7 @@ YYYY-MM-DD T HH:mm:ss.sssssssss Z/±HH:mm:ss.sssssssss
 - `Z/±HH:mm:ss.sssssssss`
   - : Either the UTC designator `Z` or `z`, or an offset from UTC in the form `+` or `-` followed by the same format as the time component. Note that subminute precision may be unsupported by other systems. If an offset is provided, the time is interpreted in the specified offset.
 
-As an input, you may optionally include the time zone identifier and calendar, in the same format as [`ZonedDateTime`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#iso_8601_format), but they will be ignored. Other annotations in the `[key=value]` format are also ignored, and they must not have the critical flag.
+As an input, you may optionally include the time zone identifier and calendar, in the same format as [`ZonedDateTime`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#rfc_9557_format), but they will be ignored. Other annotations in the `[key=value]` format are also ignored, and they must not have the critical flag.
 
 When serializing, you can configure the fractional second digits and offset.
 
@@ -54,7 +54,7 @@ When serializing, you can configure the fractional second digits and offset.
 - {{jsxref("Temporal/Instant/compare", "Temporal.Instant.compare()")}}
   - : Returns a number (-1, 0, 1) indicating whether the first instant comes before, is the same as, or comes after the second instant. Equivalent to comparing the {{jsxref("Temporal/Instant/epochNanoseconds", "epochNanoseconds")}} of the two instants.
 - {{jsxref("Temporal/Instant/from", "Temporal.Instant.from()")}}
-  - : Creates a new `Temporal.Instant` object from another `Temporal.Instant` object, or an ISO 8601 string.
+  - : Creates a new `Temporal.Instant` object from another `Temporal.Instant` object, or an RFC 9557 string.
 - {{jsxref("Temporal/Instant/fromEpochMilliseconds", "Temporal.Instant.fromEpochMilliseconds()")}}
   - : Creates a new `Temporal.Instant` object from the number of milliseconds since the Unix epoch (midnight at the beginning of January 1, 1970, UTC).
 - {{jsxref("Temporal/Instant/fromEpochNanoseconds", "Temporal.Instant.fromEpochNanoseconds()")}}
@@ -86,11 +86,11 @@ These properties are defined on `Temporal.Instant.prototype` and shared by all `
 - {{jsxref("Temporal/Instant/subtract", "Temporal.Instant.prototype.subtract()")}}
   - : Returns a new `Temporal.Instant` object representing this instant moved backward by a given duration (in a form convertible by {{jsxref("Temporal/Duration/from", "Temporal.Duration.from()")}}).
 - {{jsxref("Temporal/Instant/toJSON", "Temporal.Instant.prototype.toJSON()")}}
-  - : Returns a string representing this instant in the same [ISO 8601 format](#iso_8601_format) as calling {{jsxref("Temporal/Instant/toString", "toString()")}}.
+  - : Returns a string representing this instant in the same [RFC 9557 format](#rfc_9557_format) as calling {{jsxref("Temporal/Instant/toString", "toString()")}}.
 - {{jsxref("Temporal/Instant/toLocaleString", "Temporal.Instant.prototype.toLocaleString()")}}
   - : Returns a string with a language-sensitive representation of this instant. In implementations with [`Intl.DateTimeFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) support, this method simply calls `Intl.DateTimeFormat`.
 - {{jsxref("Temporal/Instant/toString", "Temporal.Instant.prototype.toString()")}}
-  - : Returns a string representing this instant in the [ISO 8601 format](#iso_8601_format) using the specified time zone.
+  - : Returns a string representing this instant in the [RFC 9557 format](#rfc_9557_format) using the specified time zone.
 - {{jsxref("Temporal/Instant/toZonedDateTimeISO", "Temporal.Instant.prototype.toZonedDateTimeISO()")}}
   - : Returns a new {{jsxref("Temporal.ZonedDateTime")}} object representing this instant in the specified time zone using the ISO 8601 calendar system.
 - {{jsxref("Temporal/Instant/until", "Temporal.Instant.prototype.until()")}}

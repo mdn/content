@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Temporal.PlainYearMonth.toString
 
 {{JSRef}}
 
-The **`toString()`** method of {{jsxref("Temporal.PlainYearMonth")}} instances returns a string representing this year-month in the [ISO 8601 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth#iso_8601_format).
+The **`toString()`** method of {{jsxref("Temporal.PlainYearMonth")}} instances returns a string representing this year-month in the [RFC 9557 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth#rfc_9557_format).
 
 ## Syntax
 
@@ -33,7 +33,7 @@ toString(options)
 
 ### Return value
 
-A string in the [ISO 8601 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth#iso_8601_format) representing this year-month. The calendar annotation is included as specified. The reference day is included if a calendar annotation is included or if the calendar is not `"iso8601"`.
+A string in the [RFC 9557 format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth#rfc_9557_format) representing this year-month. The calendar annotation is included as specified. The reference day is included if a calendar annotation is included or if the calendar is not `"iso8601"`.
 
 ### Exceptions
 
